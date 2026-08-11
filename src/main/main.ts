@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import squirrelStartup from 'electron-squirrel-startup';
 import path from 'node:path';
+import { blockNavigationAndWindows } from './windowSecurity';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -17,6 +18,8 @@ const createWindow = (): void => {
       webSecurity: true,
     },
   });
+
+  blockNavigationAndWindows(mainWindow.webContents);
 
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     void mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
