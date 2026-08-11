@@ -1,4 +1,5 @@
 import type { Board, Category, Clue, Difficulty, GameConfig, Language } from './types';
+import { hasLocalizedText, isLocalizedClueComplete } from '../content/localizedCompleteness';
 
 const CATEGORIES_PER_BOARD = 6;
 const MAX_MACRO_TOPIC_PER_BOARD = 2;
@@ -189,17 +190,6 @@ function eligibleFinalClues(
   );
 
   return rankWithSeed(eligible, input.seed, seedScope);
-}
-
-function hasLocalizedText(text: Category['name'], language: Language): boolean {
-  return typeof text[language] === 'string' && text[language]!.trim().length > 0;
-}
-
-function isLocalizedClueComplete(clue: Clue, language: Language): boolean {
-  return hasLocalizedText(clue.prompt, language)
-    && hasLocalizedText(clue.response, language)
-    && hasLocalizedText(clue.explanation, language)
-    && (clue.acceptedResponses === undefined || hasLocalizedText(clue.acceptedResponses, language));
 }
 
 function rankWithSeed<T extends { id: string; lastSeenAt?: number | string | null }>(

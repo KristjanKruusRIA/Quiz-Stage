@@ -5,11 +5,14 @@ interface PackListProps {
   onEditCategory: (pack: EditorPack, categoryId: string) => void;
   onEditFinal: (pack: EditorPack, clueId: string) => void;
   onAddCategory: (pack: EditorPack) => void;
+  onAddFinal: (pack: EditorPack) => void;
   onDeletePack: (pack: EditorPack) => void;
   onExport: (pack: EditorPack) => void;
+  pendingActions?: ReadonlySet<string>;
 }
+const NO_PENDING_ACTIONS: ReadonlySet<string> = new Set();
 
-export function PackList({ packs, onEditCategory, onEditFinal, onAddCategory, onDeletePack, onExport }: PackListProps) {
+export function PackList({ packs, onEditCategory, onEditFinal, onAddCategory, onAddFinal, onDeletePack, onExport, pendingActions = NO_PENDING_ACTIONS }: PackListProps) {
   return (
     <div className="pack-list">
       {packs.map((pack) => (
@@ -17,9 +20,10 @@ export function PackList({ packs, onEditCategory, onEditFinal, onAddCategory, on
           <div className="section-heading">
             <div><h2 id={`pack-${pack.id}`}>{pack.name}</h2><p className="muted">{pack.ownership}</p></div>
             <div className="editor-actions">
-              <button type="button" onClick={() => onExport(pack)}>Export CSV</button>
+              <button type="button" disabled={pendingActions.has(`export:${pack.id}`)} onClick={() => onExport(pack)}>Export CSV</button>
               {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddCategory(pack)}>Add category set</button> : null}
-              {pack.ownership === 'custom' ? <button type="button" onClick={() => onDeletePack(pack)}>Delete pack</button> : null}
+              {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddFinal(pack)}>Add Final clue</button> : null}
+              {pack.ownership === 'custom' ? <button type="button" disabled={pendingActions.has(`delete:${pack.id}`)} onClick={() => onDeletePack(pack)}>Delete pack</button> : null}
             </div>
           </div>
           <ul className="content-record-list">

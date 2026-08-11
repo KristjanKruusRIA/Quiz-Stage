@@ -2,6 +2,7 @@ import { constants, copyFileSync, mkdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import type { DatabaseConnection } from './database';
 import initialMigration from './sql/001_initial.sql?raw';
+import categorySetOverridesMigration from './sql/002_category_set_overrides.sql?raw';
 
 interface Migration {
   version: number;
@@ -19,7 +20,10 @@ export interface MigrationOptions {
   now?: () => Date;
 }
 
-const migrations: Migration[] = [{ version: 1, sql: initialMigration }];
+const migrations: Migration[] = [
+  { version: 1, sql: initialMigration },
+  { version: 2, sql: categorySetOverridesMigration },
+];
 
 export function readSchemaVersion(database: DatabaseConnection): number {
   const exists = database.prepare(

@@ -479,12 +479,55 @@ describe('transactional CSV pack import and export', () => {
     });
 
     const preview = workflow.previewFile('C:\\dialog-selected.csv');
+    if (!preview.valid) throw new Error('Expected a valid preview');
 
     expect(preview).toMatchObject({ previewId: 'preview-workflow-1', issues: [], conflict: false });
     expect(readFile).toHaveBeenCalledWith('C:\\dialog-selected.csv');
     expect(database.prepare('SELECT COUNT(*) FROM content_packs').pluck().get()).toBe(before);
     expect(workflow.importPreview({ previewId: preview.previewId })).toMatchObject({ packId: 'import-pack' });
     expect(() => workflow.importPreview({ previewId: preview.previewId })).toThrow(/expired/i);
+  });
+
+  it('bounds, expires, host-binds, discards, and consumes preview tokens on every commit attempt', () => {
+    const { database, repository } = openCopy();
+    let now = 10;
+    let id = 0;
+    const workflow = new CsvPackWorkflow(database, repository, {
+      createPreviewId: () => `preview-${++id}`, readFile: () => packCsv(), now: () => now,
+      previewTtlMs: 5, maxPreviews: 2,
+    });
+    const first = workflow.previewFile('one.csv', 11);
+    if (!first.valid) throw new Error('Expected a valid preview');
+    expect(() => workflow.importPreview({ previewId: first.previewId }, 12)).toThrow(/host|expired/i);
+    expect(workflow.discardPreview(first.previewId, 11)).toBe(true);
+    expect(() => workflow.importPreview({ previewId: first.previewId }, 11)).toThrow(/expired/i);
+    const expired = workflow.previewFile('two.csv', 11);
+    if (!expired.valid) throw new Error('Expected a valid preview');
+    now = 16;
+    expect(() => workflow.importPreview({ previewId: expired.previewId }, 11)).toThrow(/expired/i);
+    now = 20;
+    const evicted = workflow.previewFile('three.csv', 11);
+    if (!evicted.valid) throw new Error('Expected a valid preview');
+    workflow.previewFile('four.csv', 11);
+    workflow.previewFile('five.csv', 11);
+    expect(() => workflow.importPreview({ previewId: evicted.previewId }, 11)).toThrow(/expired/i);
+    const failed = workflow.previewFile('six.csv', 11);
+    if (!failed.valid) throw new Error('Expected a valid preview');
+    database.prepare("INSERT INTO content_packs (id,name,version,source,enabled) VALUES ('import-pack','race','1','custom-csv',1)").run();
+    expect(() => workflow.importPreview({ previewId: failed.previewId }, 11)).toThrow();
+    expect(() => workflow.importPreview({ previewId: failed.previewId }, 11)).toThrow(/expired/i);
+    workflow.discardOwner(11);
+    workflow.dispose();
+  });
+
+  it('returns every invalid pack-level issue without minting a commit token', () => {
+    const { database, repository } = openCopy();
+    const invalid = packCsv({ pack_id: '', pack_name: '' });
+    const workflow = new CsvPackWorkflow(database, repository, { readFile: () => invalid });
+    const preview = workflow.previewFile('invalid.csv', 1);
+    expect(preview).toMatchObject({ valid: false, packId: null, packName: null, rowCount: 5 });
+    expect(preview).not.toHaveProperty('previewId');
+    expect(preview.issues.map((issue) => issue.column)).toEqual(expect.arrayContaining(['pack_id', 'pack_name']));
   });
 
   it('serializes writers with the repository immediate transaction while readers see no partial pack', () => {
@@ -661,7 +704,7 @@ describe('transactional CSV pack import and export', () => {
     };
     const contentCsv = {
       previewFile: vi.fn(() => ({
-        previewId: 'preview-1', packId: 'import-pack', packName: 'Imported Pack',
+        valid: true as const, previewId: 'preview-1', packId: 'import-pack', packName: 'Imported Pack',
         rowCount: 5, conflict: false, issues: [],
       })),
       importPreview: vi.fn(() => ({
@@ -691,7 +734,7 @@ describe('transactional CSV pack import and export', () => {
     await expect(preview({ sender: { id: 10 } }, undefined)).resolves.toMatchObject({
       cancelled: false, previewId: 'preview-1', packId: 'import-pack',
     });
-    expect(contentCsv.previewFile).toHaveBeenCalledWith('C:\\chosen\\pack.csv');
+    expect(contentCsv.previewFile).toHaveBeenCalledWith('C:\\chosen\\pack.csv', 10);
 
     await expect(commitImport({ sender: { id: 10 } }, {
       previewId: 'preview-1', conflict: 'replace-existing', extra: true,
@@ -746,7 +789,7 @@ describe('transactional CSV pack import and export', () => {
     };
     const contentCsv = {
       previewFile: vi.fn(() => ({
-        previewId: 'preview-stale', packId: 'import-pack', packName: 'Imported Pack',
+        valid: true as const, previewId: 'preview-stale', packId: 'import-pack', packName: 'Imported Pack',
         rowCount: 5, conflict: false, issues: [],
       })),
       importPreview: vi.fn(),

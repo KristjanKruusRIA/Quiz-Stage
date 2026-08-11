@@ -22,7 +22,7 @@ export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProp
   };
   return (
     <section className="import-preview" aria-labelledby="import-preview-title">
-      <h2 id="import-preview-title">Import preview: {preview.packName}</h2>
+      <h2 id="import-preview-title">Import preview: {preview.packName ?? 'Invalid pack'}</h2>
       <p>{preview.rowCount} rows · no changes have been written.</p>
       {preview.issues.length > 0 ? (
         <ul aria-label="Import validation issues">
@@ -35,13 +35,13 @@ export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProp
       ) : <p role="status">All rows are valid.</p>}
       {preview.conflict ? (
         <fieldset><legend>Pack ID conflict</legend>
-          <label><input type="radio" checked={strategy === 'keep-both'} onChange={() => setStrategy('keep-both')} />Keep both</label>
-          <label><input type="radio" checked={strategy === 'replace-existing'} onChange={() => setStrategy('replace-existing')} />Replace existing</label>
+          <label><input type="radio" name="import-conflict" checked={strategy === 'keep-both'} onChange={() => setStrategy('keep-both')} />Keep both</label>
+          <label><input type="radio" name="import-conflict" checked={strategy === 'replace-existing'} onChange={() => setStrategy('replace-existing')} />Replace existing</label>
         </fieldset>
       ) : null}
       {failed ? <p role="alert">Import failed. The library was not changed.</p> : null}
       <div className="editor-actions">
-        <button className="primary-action" type="button" disabled={pending || preview.issues.length > 0} onClick={() => void commit()}>Import pack</button>
+        <button className="primary-action" type="button" disabled={pending || !preview.valid || preview.issues.length > 0} onClick={() => void commit()}>Import pack</button>
         <button type="button" disabled={pending} onClick={onCancel}>Cancel import</button>
       </div>
     </section>

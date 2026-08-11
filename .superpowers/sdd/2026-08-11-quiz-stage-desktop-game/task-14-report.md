@@ -95,3 +95,50 @@ Components remain module-level, async bridge work is isolated at the external bo
 ## Remaining release concern
 
 `npm run make:installer` reaches the Squirrel maker but fails because the repository's existing `package.json` has an empty `author` value (`Authors is required`). Task 14 does not change unrelated release metadata; installer configuration remains owned by the later release-packaging task. Package and portable ZIP are verified.
+
+## Important-findings fix round (2026-08-12)
+
+The follow-up review findings are resolved:
+
+- Bundled category and Final metadata now use schema-version-2 `category_set_overrides`. Reads merge the stable-ID override with current seed rows, so local names, difficulty, macro-topic, and enabled state survive restarts and seed upgrades without mutating bundled rows. Metadata-only saves do not create clue overrides.
+- Editor eligibility and gameplay selection share one localized-completeness predicate. A language requires localized prompt, response, explanation, and accepted responses when variants exist.
+- Editor reports expose only their safe ID/timestamp on clues. Report and resolve commands carry the authoritative editor revision; resolve additionally carries the exact report ID. Both validate under an immediate transaction, preventing stale corrections and ABA report resolution.
+- Custom packs have complete R1, R2, and Final creation flows. Category and Final forms expose bilingual accepted variants, complete source provenance, translation status, classification, and enabled state. Main-generated stable IDs remain immutable.
+- CSV preview has strict valid/invalid wire variants. Invalid pack-level previews return every issue without minting a commit token. Valid tokens are host-bound, TTL-limited, capacity-bounded, explicitly discardable, consumed before every commit attempt, discarded on replacement/unmount, and cleared on IPC disposal.
+- Create/import/delete/report/resolve/export actions use synchronous action-key latches. Import conflict radios share a name; editor headings receive focus; dirty drafts require discard confirmation.
+
+Fix-round RED: 4 files, 46 tests; seven new regressions failed for the mapped findings while 39 existing tests passed.
+
+Fix-round verification:
+
+```text
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm test -- --run
+Test Files 48 passed (48)
+Tests 319 passed (319)
+
+npx playwright test tests/e2e/content-editor.spec.ts
+1 passed (33.3s total; 15.7s workflow)
+
+npx playwright test tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts
+2 passed (1.1m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+The strengthened editor E2E creates six complete bilingual R1 sets, six complete bilingual R2 sets, and a complete bilingual Final through the UI. It exports, deletes, reimports, reports, corrects and re-enables content, selects only the custom pack, waits for authoritative availability, starts a match, and opens the corrected custom clue on the board. Its BrowserContext aborts and records non-local HTTP(S); the recorded list is empty. The exact isolated Electron app closes and its profile/export directory is removed.
+
+Updated artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,751,536 bytes, SHA-256 `2E10E43745510D759A2429E5E3DBAA25492103E1876C6126DBDB05EB493463C7`.
+- Packaged executable: 225,442,304 bytes.
+- Packaged seed: 196,608 bytes; SQLite `integrity_check=ok`; schema 2; 1 pack, 39 categories, 183 clues.

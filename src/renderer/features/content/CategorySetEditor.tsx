@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { EditorCategorySet, EditorClue } from '../../../shared/content/editor';
 import { ValidationPanel } from './ValidationPanel';
 
@@ -15,6 +15,7 @@ interface CategorySetEditorProps {
   onSave: (value: EditorCategorySet | CategorySetDraft) => Promise<unknown>;
   onCancel: () => void;
   onReport?: (clueId: string, note: string) => Promise<unknown>;
+  reportPending?: boolean;
 }
 
 function validate(value: EditorCategorySet | CategorySetDraft): string[] {
@@ -36,13 +37,19 @@ function validate(value: EditorCategorySet | CategorySetDraft): string[] {
   return issues;
 }
 
-export function CategorySetEditor({ value, onSave, onCancel, onReport }: CategorySetEditorProps) {
+export function CategorySetEditor({ value, onSave, onCancel, onReport, reportPending = false }: CategorySetEditorProps) {
   const [draft, setDraft] = useState(() => structuredClone(value));
   const [validationAttempted, setValidationAttempted] = useState(false);
   const [saveError, setSaveError] = useState(false);
   const [pending, setPending] = useState(false);
   const [reportNotes, setReportNotes] = useState<Record<number, string>>({});
   const inFlight = useRef(false);
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { heading.current?.focus(); }, []);
+  const cancel = () => {
+    if (JSON.stringify(draft) !== JSON.stringify(value) && !window.confirm('Discard unsaved category changes?')) return;
+    onCancel();
+  };
   const updateClue = (index: number, update: (clue: CategorySetDraft['clues'][number]) => void) => {
     setDraft((current) => {
       const next = structuredClone(current) as CategorySetDraft;
@@ -71,6 +78,7 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport }: Categor
 
   return (
     <form className="content-editor" onSubmit={(event) => void submit(event)}>
+      <h1 ref={heading} tabIndex={-1}>{draft.id === null ? 'Add category set' : `Edit ${draft.name.en}`}</h1>
       <div className="bilingual-grid">
         <label>Category name — English
           <input value={draft.name.en} onChange={(event) => setDraft({ ...draft, name: { ...draft.name, en: event.target.value } })} />
@@ -117,6 +125,18 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport }: Categor
             <label>Tier {clue.tier} explanation — Estonian
               <textarea value={clue.explanation.et ?? ''} onChange={(event) => updateClue(index, (next) => { next.explanation.et = event.target.value || undefined; })} />
             </label>
+            <label>Tier {clue.tier} accepted responses — English
+              <input value={clue.acceptedResponses?.en ?? ''} onChange={(event) => updateClue(index, (next) => {
+                const en = event.target.value; const et = next.acceptedResponses?.et;
+                next.acceptedResponses = !en && et === undefined ? undefined : { en, ...(et === undefined ? {} : { et }) };
+              })} />
+            </label>
+            <label>Tier {clue.tier} accepted responses — Estonian
+              <input value={clue.acceptedResponses?.et ?? ''} onChange={(event) => updateClue(index, (next) => {
+                const en = next.acceptedResponses?.en ?? ''; const et = event.target.value || undefined;
+                next.acceptedResponses = !en && et === undefined ? undefined : { en, ...(et === undefined ? {} : { et }) };
+              })} />
+            </label>
           </div>
           <div className="source-summary">
             <strong>{clue.source.title}</strong>
@@ -147,7 +167,7 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport }: Categor
           {clue.id !== null && onReport !== undefined ? (
             <div className="editor-actions">
               <label>Report note for tier {clue.tier}<input value={reportNotes[clue.tier] ?? ''} onChange={(event) => setReportNotes((current) => ({ ...current, [clue.tier]: event.target.value }))} /></label>
-              <button type="button" disabled={clue.reported || !(reportNotes[clue.tier] ?? '').trim()} onClick={() => void onReport(clue.id!, reportNotes[clue.tier]!.trim())}>{clue.reported ? `Tier ${clue.tier} is reported` : `Report tier ${clue.tier}`}</button>
+              <button type="button" disabled={reportPending || clue.reported || !(reportNotes[clue.tier] ?? '').trim()} onClick={() => void onReport(clue.id!, reportNotes[clue.tier]!.trim())}>{clue.reported ? `Tier ${clue.tier} is reported` : `Report tier ${clue.tier}`}</button>
             </div>
           ) : null}
         </fieldset>
@@ -156,7 +176,7 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport }: Categor
       {saveError ? <p role="alert">The category set could not be saved. Refresh and try again.</p> : null}
       <div className="editor-actions">
         <button className="primary-action" type="submit" disabled={pending}>Save category set</button>
-        <button type="button" onClick={onCancel} disabled={pending}>Cancel</button>
+        <button type="button" onClick={cancel} disabled={pending}>Cancel</button>
       </div>
     </form>
   );

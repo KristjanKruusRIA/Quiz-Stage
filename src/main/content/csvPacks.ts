@@ -104,7 +104,12 @@ export interface ExportPackOptions {
 export interface CsvPackWorkflowOptions {
   createPreviewId?: () => string;
   readFile?: (path: string) => string;
+  now?: () => number;
+  previewTtlMs?: number;
+  maxPreviews?: number;
 }
+
+interface StoredPreview { preview: PackImportPreview; ownerId: number; createdAt: number }
 
 interface CsvFileEntry {
   dev: number | bigint;
@@ -132,9 +137,12 @@ const NODE_CSV_FILE_READ_PORT: CsvFileReadPort = {
 };
 
 export class CsvPackWorkflow {
-  private readonly previews = new Map<string, PackImportPreview>();
+  private readonly previews = new Map<string, StoredPreview>();
   private readonly createPreviewId: () => string;
   private readonly readFile: (path: string) => string;
+  private readonly now: () => number;
+  private readonly previewTtlMs: number;
+  private readonly maxPreviews: number;
 
   constructor(
     private readonly database: DatabaseConnection,
@@ -143,10 +151,22 @@ export class CsvPackWorkflow {
   ) {
     this.createPreviewId = options.createPreviewId ?? randomUUID;
     this.readFile = options.readFile ?? readPackCsvFile;
+    this.now = options.now ?? Date.now;
+    this.previewTtlMs = options.previewTtlMs ?? 5 * 60_000;
+    this.maxPreviews = options.maxPreviews ?? 4;
   }
 
-  previewFile(path: string) {
+  previewFile(path: string, ownerId = 0) {
+    this.prune();
     const preview = previewPackImport({ database: this.database, text: this.readFile(path) });
+    if (preview.issues.length > 0) return {
+      valid: false as const,
+      packId: contentIdSchema.safeParse(preview.packId).success ? preview.packId : null,
+      packName: preview.packName.trim() === '' ? null : preview.packName,
+      rowCount: preview.rowCount,
+      conflict: preview.conflict,
+      issues: preview.issues,
+    };
     let previewId = '';
     for (let attempt = 0; attempt < 100; attempt += 1) {
       const candidate = contentIdSchema.parse(this.createPreviewId());
@@ -156,8 +176,10 @@ export class CsvPackWorkflow {
       }
     }
     if (previewId === '') throw new Error('Could not generate a unique CSV preview ID');
-    this.previews.set(previewId, preview);
+    while (this.previews.size >= this.maxPreviews) this.previews.delete(this.previews.keys().next().value!);
+    this.previews.set(previewId, { preview, ownerId, createdAt: this.now() });
     return {
+      valid: true as const,
       previewId,
       packId: preview.packId,
       packName: preview.packName,
@@ -167,17 +189,37 @@ export class CsvPackWorkflow {
     };
   }
 
-  importPreview(input: { previewId: string; conflict?: ImportConflictStrategy }) {
-    const preview = this.previews.get(input.previewId);
-    if (preview === undefined) throw new Error('Unknown or expired CSV import preview');
+  importPreview(input: { previewId: string; conflict?: ImportConflictStrategy }, ownerId = 0) {
+    this.prune();
+    const stored = this.previews.get(input.previewId);
+    if (stored === undefined) throw new Error('Unknown or expired CSV import preview');
+    if (stored.ownerId !== ownerId) throw new Error('CSV import preview belongs to a different host');
+    this.previews.delete(input.previewId);
     const result = importPack({
       database: this.database,
       repository: this.repository,
-      preview,
+      preview: stored.preview,
       ...(input.conflict === undefined ? {} : { conflict: input.conflict }),
     });
-    this.previews.delete(input.previewId);
     return result;
+  }
+
+  discardPreview(previewId: string, ownerId = 0): boolean {
+    this.prune();
+    const stored = this.previews.get(previewId);
+    if (stored === undefined || stored.ownerId !== ownerId) return false;
+    return this.previews.delete(previewId);
+  }
+
+  discardOwner(ownerId: number): void {
+    for (const [id, stored] of this.previews) if (stored.ownerId === ownerId) this.previews.delete(id);
+  }
+
+  dispose(): void { this.previews.clear(); }
+
+  private prune(): void {
+    const cutoff = this.now() - this.previewTtlMs;
+    for (const [id, stored] of this.previews) if (stored.createdAt < cutoff) this.previews.delete(id);
   }
 
   exportToFile(packId: string, destination: string) {
@@ -203,6 +245,7 @@ interface ExportRow {
   difficulty: Difficulty;
   macro_topic: string;
   category_name_json: string;
+  category_override_json: string | null;
   category_enabled: number;
   clue_id: string;
   clue_round: BoardRound | 'final' | 'tiebreaker';
@@ -924,6 +967,7 @@ function loadExportRecords(database: DatabaseConnection, packId: string): CsvPac
       category_sets.difficulty,
       category_sets.macro_topic,
       category_sets.name_json AS category_name_json,
+      category_set_overrides.override_json AS category_override_json,
       category_sets.enabled AS category_enabled,
       clues.id AS clue_id,
       clues.round AS clue_round,
@@ -939,6 +983,7 @@ function loadExportRecords(database: DatabaseConnection, packId: string): CsvPac
     JOIN category_sets ON category_sets.pack_id = content_packs.id
     JOIN clues ON clues.category_set_id = category_sets.id
     LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+    LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
     WHERE content_packs.id = ?
     ORDER BY category_sets.round, category_sets.id, clues.tier, clues.id
   `).all(packId) as ExportRow[];
@@ -946,7 +991,10 @@ function loadExportRecords(database: DatabaseConnection, packId: string): CsvPac
 }
 
 function exportRowToRecord(row: ExportRow): CsvPackRecord {
-  const categoryName = parseLocalized(row.category_name_json);
+  const categoryMetadata = row.category_override_json === null ? undefined : JSON.parse(row.category_override_json) as {
+    difficulty: Difficulty; macroTopic: string; name: { en: string; et?: string }; enabled: boolean;
+  };
+  const categoryName = categoryMetadata?.name ?? parseLocalized(row.category_name_json);
   const override = row.override_json === null ? undefined : JSON.parse(row.override_json) as Record<string, unknown>;
   const prompt = override?.prompt as { en: string; et?: string } | undefined ?? parseLocalized(row.prompt_json);
   const response = override?.response as { en: string; et?: string } | undefined ?? parseLocalized(row.response_json);
@@ -972,8 +1020,8 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
     contentKind: row.clue_round === 'final' ? 'final' : 'board',
     round: row.clue_round as BoardRound | 'final',
     tier: row.tier,
-    difficulty: row.difficulty,
-    macroTopic: row.macro_topic,
+    difficulty: categoryMetadata?.difficulty ?? row.difficulty,
+    macroTopic: categoryMetadata?.macroTopic ?? row.macro_topic,
     categoryNameEn: finalCategory?.en ?? categoryName.en,
     ...((finalCategory?.et ?? categoryName.et) === undefined ? {} : { categoryNameEt: finalCategory?.et ?? categoryName.et }),
     clueEn: prompt.en,

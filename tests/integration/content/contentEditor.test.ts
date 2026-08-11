@@ -50,6 +50,66 @@ describe('content editor service', () => {
     expect(repository.listReported()).toEqual([]);
   });
 
+  it('persists bundled category metadata as an override without manufacturing clue overrides', () => {
+    const { database, editor } = openEditor();
+    const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+    const set = structuredClone(bundled.categorySets[0]);
+    set.name = { en: 'Locally corrected category', et: 'Kohalik parandus' };
+    set.difficulty = 'hard';
+    set.macroTopic = 'corrected-topic';
+
+    const saved = editor.saveCategorySet({ expectedRevision: set.revision, categorySet: set });
+
+    expect(saved).toMatchObject({ name: set.name, difficulty: 'hard', macroTopic: 'corrected-topic' });
+    expect(database.prepare('SELECT COUNT(*) FROM content_overrides WHERE clue_id IN (SELECT id FROM clues WHERE category_set_id = ?)').pluck().get(set.id)).toBe(0);
+    expect(database.prepare('SELECT COUNT(*) FROM category_set_overrides WHERE category_set_id = ?').pluck().get(set.id)).toBe(1);
+    database.prepare("UPDATE category_sets SET name_json = ?, difficulty = 'easy', macro_topic = 'seed-upgrade' WHERE id = ?")
+      .run(JSON.stringify({ en: 'Seed upgrade' }), set.id);
+    const restartedDatabase = openDatabase({ filePath: database.name });
+    connections.push(restartedDatabase);
+    const restarted = new ContentEditorService(restartedDatabase, new ContentRepository(restartedDatabase), { now: () => 501 });
+    expect(restarted.list().packs.find((pack) => pack.id === bundled.id)!.categorySets.find((candidate) => candidate.id === set.id))
+      .toMatchObject({ name: set.name, difficulty: 'hard', macroTopic: 'corrected-topic' });
+  });
+
+  it('uses accepted responses in bilingual eligibility for board and Final content', () => {
+    const { editor } = openEditor();
+    const pack = editor.createPack({ name: 'Eligibility Pack' });
+    const category = editor.saveCategorySet({ expectedRevision: pack.revision, categorySet: {
+      id: null, packId: pack.id, round: 'round-one', difficulty: 'easy', macroTopic: 'language',
+      name: { en: 'Words', et: 'Sõnad' }, enabled: true,
+      clues: [1, 2, 3, 4, 5].map((tier) => ({ id: null, tier, value: tier * 200,
+        prompt: { en: `P${tier}`, et: `K${tier}` }, response: { en: `R${tier}`, et: `V${tier}` },
+        explanation: { en: `E${tier}`, et: `S${tier}` }, acceptedResponses: { en: 'alias' },
+        source: { title: 'S', url: `https://example.com/${tier}`, license: 'CC0', retrievedAt: '2026-08-12', translationStatus: 'reviewed' },
+        enabled: true, reported: false })),
+    } });
+    expect(category.eligibility).toEqual({ en: true, et: false });
+    const freshPack = editor.list().packs.find((candidate) => candidate.id === pack.id)!;
+    const final = editor.saveFinalClue({ expectedRevision: freshPack.revision, finalClue: {
+      id: null, packId: pack.id, categoryId: null, difficulty: 'easy', macroTopic: 'language', enabled: true,
+      categoryName: { en: 'Final', et: 'Finaal' }, clue: { id: null, tier: 0, value: 0,
+        prompt: { en: 'P', et: 'K' }, response: { en: 'R', et: 'V' }, explanation: { en: 'E', et: 'S' },
+        acceptedResponses: { en: 'alias' }, source: { title: 'S', url: 'https://example.com/final', license: 'CC0', retrievedAt: '2026-08-12', translationStatus: 'reviewed' }, enabled: true, reported: false },
+    } });
+    expect(final.eligibility).toEqual({ en: true, et: false });
+  });
+
+  it('rejects stale report and exact-report resolution snapshots including ABA reports', () => {
+    const { editor } = openEditor();
+    const set = editor.list().packs[0].categorySets[0];
+    const clue = set.clues[0];
+    const report = editor.reportClue({ clueId: clue.id, note: 'First', expectedRevision: set.revision });
+    expect(() => editor.reportClue({ clueId: clue.id, note: 'Stale', expectedRevision: set.revision })).toThrow(/stale/i);
+    const reported = editor.list().packs[0].categorySets.find((candidate) => candidate.id === set.id)!;
+    expect(editor.resolveReport({ clueId: clue.id, reportId: report.id, expectedRevision: reported.revision })).toEqual({ resolved: true });
+    const clean = editor.list().packs[0].categorySets.find((candidate) => candidate.id === set.id)!;
+    const replacement = editor.reportClue({ clueId: clue.id, note: 'Replacement', expectedRevision: clean.revision });
+    const replacementSet = editor.list().packs[0].categorySets.find((candidate) => candidate.id === set.id)!;
+    expect(() => editor.resolveReport({ clueId: clue.id, reportId: report.id, expectedRevision: replacementSet.revision })).toThrow(/stale|report/i);
+    expect(editor.list().reports[0].id).toBe(replacement.id);
+  });
+
   it('creates and directly edits a complete English-only custom set with immutable identities', () => {
     const { database, editor } = openEditor();
     const pack = editor.createPack({ name: 'My Pack' });
@@ -101,7 +161,10 @@ describe('content editor service', () => {
     expect(listed.reports[0]).toMatchObject({ clueId: first.id, note: 'Verify source' });
     expect(listed.packs[0].categorySets[0].clues.some((clue) => clue.id === first.id)).toBe(true);
     expect(listed.packs[0].categorySets[0].clues[0].source).toEqual(expect.objectContaining({ title: expect.any(String) }));
-    editor.resolveReport({ clueId: first.id! });
+    const reportedEditor = editor.list().packs.flatMap((pack) => pack.categorySets)
+      .find((category) => category.clues.some((clue) => clue.id === first.id))!;
+    const reportedClue = reportedEditor.clues.find((clue) => clue.id === first.id)!;
+    editor.resolveReport({ clueId: first.id!, reportId: reportedClue.report!.id, expectedRevision: reportedEditor.revision });
     expect(editor.list().reports).toEqual([]);
 
     const custom = editor.createPack({ name: 'Protected Pack' });

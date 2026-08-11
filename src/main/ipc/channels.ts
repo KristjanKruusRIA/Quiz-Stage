@@ -8,6 +8,7 @@ export const IPC_CHANNELS = {
   listHistory: 'quiz-stage:list-history',
   contentImportPreview: 'quiz-stage:content:import-preview',
   contentImportCommit: 'quiz-stage:content:import-commit',
+  contentImportDiscard: 'quiz-stage:content:import-discard',
   contentExport: 'quiz-stage:content:export',
   contentList: 'quiz-stage:content:list',
   contentSaveCategory: 'quiz-stage:content:save-category',

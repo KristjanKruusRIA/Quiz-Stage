@@ -26,6 +26,7 @@ export const editorClueSchema = z.strictObject({
   source: editorSourceSchema,
   enabled: z.boolean(),
   reported: z.boolean(),
+  report: z.strictObject({ id: z.number().int().positive(), createdAt: z.number().int().nonnegative() }).nullable().optional(),
 });
 
 export const editorCategorySetSchema = z.strictObject({
@@ -109,8 +110,12 @@ export const deleteContentPackRequestSchema = z.strictObject({
   packId: contentIdSchema,
   expectedRevision: revisionSchema,
 });
-export const contentClueActionSchema = z.strictObject({ clueId: contentIdSchema });
-export const reportContentClueRequestSchema = contentClueActionSchema.extend({ note: text });
+export const contentClueActionSchema = z.strictObject({
+  clueId: contentIdSchema, reportId: z.number().int().positive(), expectedRevision: revisionSchema,
+});
+export const reportContentClueRequestSchema = z.strictObject({
+  clueId: contentIdSchema, note: text, expectedRevision: revisionSchema,
+});
 
 export const contentImportIssueSchema = z.strictObject({
   code: text,
@@ -118,14 +123,19 @@ export const contentImportIssueSchema = z.strictObject({
   row: z.number().int().positive().optional(),
   column: z.enum(CSV_COLUMNS).optional(),
 });
-export const contentImportPreviewSchema = z.discriminatedUnion('cancelled', [
+export const contentImportPreviewSchema = z.union([
   z.strictObject({ cancelled: z.literal(true) }),
   z.strictObject({
-    cancelled: z.literal(false), previewId: contentIdSchema, packId: contentIdSchema,
+    cancelled: z.literal(false), valid: z.literal(true), previewId: contentIdSchema, packId: contentIdSchema,
     packName: text, rowCount: z.number().int().positive(), conflict: z.boolean(),
-    issues: z.array(contentImportIssueSchema),
+    issues: z.array(contentImportIssueSchema).length(0),
+  }), z.strictObject({
+    cancelled: z.literal(false), valid: z.literal(false), packId: contentIdSchema.nullable(),
+    packName: text.nullable(), rowCount: z.number().int().nonnegative(), conflict: z.boolean(),
+    issues: z.array(contentImportIssueSchema).min(1),
   }),
 ]);
+export const contentImportDiscardRequestSchema = z.strictObject({ previewId: contentIdSchema });
 export const contentImportCommitRequestSchema = z.strictObject({
   previewId: contentIdSchema,
   conflict: z.enum(['replace-existing', 'keep-both']).optional(),

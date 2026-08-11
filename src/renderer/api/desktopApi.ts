@@ -31,6 +31,7 @@ export type HostDesktopApi = {
       resolveContentReport?: (input: unknown) => Promise<{ resolved: boolean }>;
       previewContentImport?: () => Promise<ContentImportPreview>;
       commitContentImport?: (input: unknown) => Promise<ContentImportResult>;
+      discardContentImport?: (input: unknown) => Promise<{ discarded: boolean }>;
       exportContentPack?: (input: unknown) => Promise<ContentExportResult>;
       subscribeToState?: (listener: (view: HostGameView) => void) => () => void;
     };
@@ -76,6 +77,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     resolveContentReport: (input) => hostBridge.resolveContentReport(input),
     previewContentImport: () => hostBridge.previewContentImport(),
     commitContentImport: (input) => hostBridge.commitContentImport(input),
+    discardContentImport: (input) => hostBridge.discardContentImport(input),
     exportContentPack: (input) => hostBridge.exportContentPack(input),
     dispatch: (command) => dispatch(command),
     startMatch: async (config) => {

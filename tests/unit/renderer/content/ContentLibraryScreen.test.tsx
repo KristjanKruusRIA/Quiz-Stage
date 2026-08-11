@@ -48,6 +48,28 @@ describe('ContentLibraryScreen', () => {
     expect(onBack).toHaveBeenCalledOnce();
   });
 
+  it('latches create/import actions synchronously and offers a reachable custom Final workflow', async () => {
+    const custom = structuredClone(library());
+    custom.packs[0].ownership = 'custom';
+    const create = vi.fn(() => new Promise<never>(() => {}));
+    const preview = vi.fn(() => new Promise<never>(() => {}));
+    const bridge = api(vi.fn(async () => custom));
+    bridge.createContentPack = create as never;
+    bridge.previewContentImport = preview as never;
+    render(<ContentLibraryScreen api={bridge} onBack={vi.fn()} />);
+    await screen.findByText('Pack One');
+    await userEvent.type(screen.getByLabelText('Custom pack name'), 'New');
+    const createButton = screen.getByRole('button', { name: 'Create custom pack' });
+    await Promise.all([userEvent.click(createButton), userEvent.click(createButton)]);
+    expect(create).toHaveBeenCalledOnce();
+    expect(createButton).toBeDisabled();
+    const importButton = screen.getByRole('button', { name: 'Import CSV' });
+    await Promise.all([userEvent.click(importButton), userEvent.click(importButton)]);
+    expect(preview).toHaveBeenCalledOnce();
+    expect(importButton).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Add Final clue' })).toBeEnabled();
+  });
+
   it('suppresses a stale load response after a newer refresh and recovers from failures', async () => {
     let resolveOld!: (value: EditorLibrary) => void;
     const old = new Promise<EditorLibrary>((resolve) => { resolveOld = resolve; });

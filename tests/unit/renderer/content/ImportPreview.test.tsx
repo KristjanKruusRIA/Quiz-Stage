@@ -3,11 +3,11 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { ImportPreview } from '../../../../src/renderer/features/content/ImportPreview';
 
-describe('ImportPreview', () => {
+  describe('ImportPreview', () => {
   it('renders every row issue and blocks commit until validation succeeds', async () => {
     const commit = vi.fn();
     render(<ImportPreview preview={{
-      cancelled: false, previewId: 'token-1', packId: 'pack', packName: 'Pack', rowCount: 5, conflict: false,
+      cancelled: false, valid: false, packId: 'pack', packName: 'Pack', rowCount: 5, conflict: false,
       issues: [
         { code: 'missing', message: 'clue is required', row: 2, column: 'clue_en' },
         { code: 'url', message: 'source URL is invalid', row: 4, column: 'source_url' },

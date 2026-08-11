@@ -20,6 +20,7 @@ import {
   contentExportRequestSchema,
   contentExportResultSchema,
   contentImportCommitRequestSchema,
+  contentImportDiscardRequestSchema,
   contentImportPreviewSchema,
   contentImportResultSchema,
   createContentPackRequestSchema,
@@ -56,8 +57,11 @@ export interface CsvDialogPort {
 }
 
 interface ContentCsvPort {
-  previewFile(path: string): ReturnType<CsvPackWorkflow['previewFile']>;
-  importPreview(input: Parameters<CsvPackWorkflow['importPreview']>[0]): ReturnType<CsvPackWorkflow['importPreview']>;
+  previewFile(path: string, ownerId?: number): ReturnType<CsvPackWorkflow['previewFile']>;
+  importPreview(input: Parameters<CsvPackWorkflow['importPreview']>[0], ownerId?: number): ReturnType<CsvPackWorkflow['importPreview']>;
+  discardPreview?(previewId: string, ownerId?: number): boolean;
+  discardOwner?(ownerId: number): void;
+  dispose?(): void;
   exportToFile(packId: string, destination: string): ReturnType<CsvPackWorkflow['exportToFile']>;
 }
 
@@ -115,10 +119,13 @@ export function registerIpc({
   applyDisplayMode,
   getWindows,
 }: RegisterIpcOptions): () => void {
+  let activeHostId: number | null = null;
   const requireHost = (senderId: number) => {
     const hostWindow = getWindows().hostWindow;
     if (hostWindow === null || hostWindow.webContents.isDestroyed()) throw new Error('HOST_SENDER_REQUIRED');
     validateHostSender(senderId, hostWindow.webContents.id);
+    if (activeHostId !== null && activeHostId !== senderId) contentCsv?.discardOwner?.(activeHostId);
+    activeHostId = senderId;
   };
   ipcMain.handle(IPC_CHANNELS.dispatch, async (event, command) => {
     requireHost(event.sender.id);
@@ -181,11 +188,16 @@ export function registerIpc({
       const path = await csvDialogs.chooseImportFile();
       requireHost(event.sender.id);
       if (path === null) return contentImportPreviewSchema.parse({ cancelled: true as const });
-      return contentImportPreviewSchema.parse({ cancelled: false as const, ...contentCsv.previewFile(path) });
+      return contentImportPreviewSchema.parse({ cancelled: false as const, ...contentCsv.previewFile(path, event.sender.id) });
     });
     ipcMain.handle(IPC_CHANNELS.contentImportCommit, async (event, input) => {
       requireHost(event.sender.id);
-      return contentImportResultSchema.parse(contentCsv.importPreview(contentImportCommitRequestSchema.parse(input)));
+      return contentImportResultSchema.parse(contentCsv.importPreview(contentImportCommitRequestSchema.parse(input), event.sender.id));
+    });
+    ipcMain.handle(IPC_CHANNELS.contentImportDiscard, async (event, input) => {
+      requireHost(event.sender.id);
+      const { previewId } = contentImportDiscardRequestSchema.parse(input);
+      return z.strictObject({ discarded: z.boolean() }).parse({ discarded: contentCsv.discardPreview?.(previewId, event.sender.id) ?? false });
     });
     ipcMain.handle(IPC_CHANNELS.contentExport, async (event, input) => {
       requireHost(event.sender.id);
@@ -198,6 +210,7 @@ export function registerIpc({
     csvChannels.push(
       IPC_CHANNELS.contentImportPreview,
       IPC_CHANNELS.contentImportCommit,
+      IPC_CHANNELS.contentImportDiscard,
       IPC_CHANNELS.contentExport,
     );
   }
@@ -295,5 +308,6 @@ export function registerIpc({
     ipcMain.removeListener(IPC_CHANNELS.publicReady, bootstrapPublic);
     unsubscribeHost();
     unsubscribePublic();
+    contentCsv?.dispose?.();
   };
 }

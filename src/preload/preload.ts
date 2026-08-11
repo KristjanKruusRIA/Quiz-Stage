@@ -21,6 +21,7 @@ import {
   contentExportRequestSchema,
   contentExportResultSchema,
   contentImportCommitRequestSchema,
+  contentImportDiscardRequestSchema,
   contentImportPreviewSchema,
   contentImportResultSchema,
   createContentPackRequestSchema,
@@ -113,6 +114,9 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     ),
     commitContentImport: async (input) => contentImportResultSchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentImportCommit, contentImportCommitRequestSchema.parse(input)),
+    ),
+    discardContentImport: async (input) => z.strictObject({ discarded: z.boolean() }).parse(
+      await ipc.invoke(IPC_CHANNELS.contentImportDiscard, contentImportDiscardRequestSchema.parse(input)),
     ),
     exportContentPack: async (input) => contentExportResultSchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentExport, contentExportRequestSchema.parse(input)),

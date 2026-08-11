@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { HostDesktopApi } from '../../api/desktopApi';
 import type { EditorCategorySet, EditorFinalClue, EditorLibrary, EditorPack } from '../../../shared/content/editor';
 import { CategorySetEditor, type CategorySetDraft } from './CategorySetEditor';
-import { FinalClueEditor } from './FinalClueEditor';
+import { FinalClueEditor, type FinalClueDraft } from './FinalClueEditor';
 import { ImportPreview } from './ImportPreview';
 import { PackList } from './PackList';
 
@@ -19,13 +19,30 @@ function blankCategory(pack: EditorPack): CategorySetDraft {
   };
 }
 
+function blankFinal(pack: EditorPack): FinalClueDraft {
+  return { id: null, packId: pack.id, categoryId: null, difficulty: 'easy', categoryName: { en: '' },
+    macroTopic: '', enabled: true, clue: { id: null, tier: 0, value: 0, prompt: { en: '' }, response: { en: '' },
+      explanation: { en: '' }, source: { title: '', url: null, license: null, retrievedAt: null, translationStatus: null },
+      enabled: true, reported: false } };
+}
+
 export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps) {
   const [library, setLibrary] = useState<EditorLibrary | null>(null);
-  const [selected, setSelected] = useState<EditorCategorySet | CategorySetDraft | EditorFinalClue | null>(null);
+  const [selected, setSelected] = useState<EditorCategorySet | CategorySetDraft | EditorFinalClue | FinalClueDraft | null>(null);
   const [preview, setPreview] = useState<Awaited<ReturnType<NonNullable<HostDesktopApi['previewContentImport']>>> | null>(null);
   const [error, setError] = useState(false);
   const [newPackName, setNewPackName] = useState('');
   const generation = useRef(0);
+  const previewRef = useRef(preview);
+  const actions = useRef(new Set<string>());
+  const [pendingActions, setPendingActions] = useState<ReadonlySet<string>>(new Set());
+  useEffect(() => { previewRef.current = preview; }, [preview]);
+  const runAction = async <T,>(key: string, action: () => Promise<T>): Promise<T | undefined> => {
+    if (actions.current.has(key)) return undefined;
+    actions.current.add(key); setPendingActions(new Set(actions.current));
+    try { return await action(); }
+    finally { actions.current.delete(key); setPendingActions(new Set(actions.current)); }
+  };
   const load = useCallback(async () => {
     if (api.listContent === undefined) return;
     const request = ++generation.current;
@@ -50,7 +67,13 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
     }, () => {
       if (request === generation.current) setError(true);
     });
-    return () => { generation.current += 1; };
+    return () => {
+      generation.current += 1;
+      const currentPreview = previewRef.current;
+      if (currentPreview !== null && !currentPreview.cancelled && currentPreview.valid) {
+        void api.discardContentImport?.({ previewId: currentPreview.previewId });
+      }
+    };
   }, [api]);
 
   const saveCategory = async (category: EditorCategorySet | CategorySetDraft) => {
@@ -62,50 +85,60 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
     setSelected(null);
     await load();
   };
-  const saveFinal = async (final: EditorFinalClue) => {
+  const saveFinal = async (final: EditorFinalClue | FinalClueDraft) => {
     if (api.saveFinalClue === undefined) throw new Error('Content editing is unavailable');
-    await api.saveFinalClue({ expectedRevision: final.revision, finalClue: final });
+    const expectedRevision = final.id === null ? library!.packs.find((pack) => pack.id === final.packId)!.revision : final.revision;
+    await api.saveFinalClue({ expectedRevision, finalClue: final });
     setSelected(null);
     await load();
   };
   const createPack = async () => {
     const name = newPackName.trim();
     if (!name || api.createContentPack === undefined) return;
-    try {
-      await api.createContentPack({ name });
+    const create = api.createContentPack;
+    await runAction('create', async () => { try {
+      await create({ name });
       setNewPackName('');
       await load();
     } catch {
       setError(true);
-    }
+    } });
   };
   const deletePack = async (pack: EditorPack) => {
     if (api.deleteContentPack === undefined || !window.confirm(`Delete ${pack.name}?`)) return;
-    try { await api.deleteContentPack({ packId: pack.id, expectedRevision: pack.revision }); await load(); }
+    try { await runAction(`delete:${pack.id}`, async () => { await api.deleteContentPack!({ packId: pack.id, expectedRevision: pack.revision }); await load(); }); }
     catch { setError(true); }
   };
   const startImport = async () => {
     if (api.previewContentImport === undefined) return;
-    try {
-      const result = await api.previewContentImport();
-      if (!result.cancelled) setPreview(result);
+    const openPreview = api.previewContentImport;
+    await runAction('preview', async () => { try {
+      const result = await openPreview();
+      if (!result.cancelled) {
+        if (preview !== null && !preview.cancelled && preview.valid) void api.discardContentImport?.({ previewId: preview.previewId });
+        setPreview(result);
+      }
     } catch { setError(true); }
+    });
   };
   const commitImport = async (conflict?: 'replace-existing' | 'keep-both') => {
-    if (preview === null || preview.cancelled || api.commitContentImport === undefined) return;
+    if (preview === null || preview.cancelled || !preview.valid || api.commitContentImport === undefined) return;
     await api.commitContentImport({ previewId: preview.previewId, ...(conflict === undefined ? {} : { conflict }) });
     setPreview(null);
     await load();
   };
 
   if (selected !== null) {
-    if ('clues' in selected) return <main className="page-shell"><CategorySetEditor value={selected} onSave={saveCategory} onCancel={() => setSelected(null)} onReport={async (clueId, note) => {
+    if ('clues' in selected) return <main className="page-shell"><CategorySetEditor value={selected} onSave={saveCategory} onCancel={() => setSelected(null)} reportPending={selected.clues.some((clue) => pendingActions.has(`report:${clue.id}`))} onReport={async (clueId, note) => {
       if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
-      await api.reportContentClue({ clueId, note });
+      await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
       setSelected(null);
       await load();
     }} /></main>;
-    return <main className="page-shell"><FinalClueEditor value={selected} onSave={saveFinal} onCancel={() => setSelected(null)} /></main>;
+    return <main className="page-shell"><FinalClueEditor value={selected} onSave={saveFinal} onCancel={() => setSelected(null)} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
+      if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
+      await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision })); setSelected(null); await load();
+    }} /></main>;
   }
   return (
     <main className="page-shell content-library-screen">
@@ -113,23 +146,28 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
       <div className="editor-actions">
         <button type="button" onClick={() => void load()}>Refresh content</button>
         <label>Custom pack name<input value={newPackName} onChange={(event) => setNewPackName(event.target.value)} /></label>
-        <button type="button" disabled={!newPackName.trim()} onClick={() => void createPack()}>Create custom pack</button>
-        <button type="button" onClick={() => void startImport()}>Import CSV</button>
+        <button type="button" disabled={!newPackName.trim() || pendingActions.has('create')} onClick={() => void createPack()}>Create custom pack</button>
+        <button type="button" disabled={pendingActions.has('preview')} onClick={() => void startImport()}>Import CSV</button>
       </div>
       {error ? <p role="alert">The content library action failed. No unconfirmed changes were applied.</p> : null}
-      {preview !== null && !preview.cancelled ? <ImportPreview preview={preview} onCommit={commitImport} onCancel={() => setPreview(null)} /> : null}
+      {preview !== null && !preview.cancelled ? <ImportPreview preview={preview} onCommit={commitImport} onCancel={() => { if (preview.valid) void api.discardContentImport?.({ previewId: preview.previewId }); setPreview(null); }} /> : null}
       {library === null && !error ? <p role="status">Loading content library</p> : null}
       {library !== null ? (
         <>
           <section aria-labelledby="reported-clues-title"><h2 id="reported-clues-title">Reported clues</h2>
-            {library.reports.length === 0 ? <p>No unresolved reports.</p> : <ul>{library.reports.map((report) => <li key={report.id}>{report.note} <span className="muted">{report.clueId}</span> <button type="button" onClick={() => void api.resolveContentReport?.({ clueId: report.clueId }).then(load).catch(() => setError(true))}>Resolve without change</button></li>)}</ul>}
+            {library.reports.length === 0 ? <p>No unresolved reports.</p> : <ul>{library.reports.map((report) => {
+              const editor = library.packs.flatMap((pack) => [...pack.categorySets, ...pack.finalClues]).find((item) => 'clues' in item ? item.clues.some((clue) => clue.id === report.clueId) : item.clue.id === report.clueId);
+              return <li key={report.id}>{report.note} <span className="muted">{report.clueId}</span> <button type="button" disabled={pendingActions.has(`resolve:${report.id}`)} onClick={() => void runAction(`resolve:${report.id}`, async () => { await api.resolveContentReport?.({ clueId: report.clueId, reportId: report.id, expectedRevision: editor!.revision }); await load(); }).catch(() => setError(true))}>Resolve without change</button></li>;
+            })}</ul>}
           </section>
           <PackList packs={library.packs}
+            pendingActions={pendingActions}
             onEditCategory={(pack, id) => setSelected(pack.categorySets.find((set) => set.id === id)!)}
             onEditFinal={(pack, id) => setSelected(pack.finalClues.find((final) => final.id === id)!)}
             onAddCategory={(pack) => setSelected(blankCategory(pack))}
+            onAddFinal={(pack) => setSelected(blankFinal(pack))}
             onDeletePack={(pack) => void deletePack(pack)}
-            onExport={(pack) => void api.exportContentPack?.({ packId: pack.id }).catch(() => setError(true))}
+            onExport={(pack) => void runAction(`export:${pack.id}`, async () => { await api.exportContentPack?.({ packId: pack.id }); }).catch(() => setError(true))}
           />
         </>
       ) : null}

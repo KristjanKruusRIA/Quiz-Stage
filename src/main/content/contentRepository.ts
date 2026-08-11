@@ -34,6 +34,7 @@ interface CategoryRow {
   name_json: string;
   macro_topic: string;
   category_enabled: number;
+  category_override_json: string | null;
   category_last_seen_at: number | null;
   clue_id: string;
   clue_round: 'round-one' | 'round-two';
@@ -66,6 +67,7 @@ interface FinalRow {
   last_seen_at: number | null;
   override_json: string | null;
   has_unresolved_report: number;
+  category_override_json: string | null;
 }
 
 interface ReportRow {
@@ -98,6 +100,12 @@ interface ClueLookupRow {
   last_seen_at: number | null;
   override_json: string | null;
   has_unresolved_report: number;
+  category_override_json: string | null;
+}
+
+interface CategoryMetadataOverride {
+  id: string; packId: string; round: string; difficulty: 'easy' | 'medium' | 'hard';
+  name: { en: string; et?: string }; macroTopic: string; enabled: boolean;
 }
 
 export interface PersistedContentLibrary {
@@ -135,7 +143,8 @@ export class ContentRepository {
     const lookup = this.lookupClue(clueId);
     if (lookup === null) return null;
     const { bundled, row } = lookup;
-    const parentEnabled = row.pack_enabled === 1 && row.category_enabled === 1;
+    const metadata = this.categoryMetadata(row.category_override_json, row.category_id, row.pack_id, row.category_round);
+    const parentEnabled = row.pack_enabled === 1 && (metadata?.enabled ?? row.category_enabled === 1);
     if (row.override_json === null) {
       return { ...bundled, enabled: bundled.enabled && parentEnabled && row.has_unresolved_report === 0 };
     }
@@ -209,6 +218,17 @@ export class ContentRepository {
     });
   }
 
+  resolveReportById(clueIdInput: unknown, reportIdInput: unknown, resolvedAt = this.now()): boolean {
+    const clueId = contentIdSchema.parse(clueIdInput);
+    const reportId = contentReportRecordSchema.shape.id.parse(reportIdInput);
+    const timestamp = contentReportInputSchema.shape.createdAt.parse(resolvedAt);
+    const result = this.database.prepare(`
+      UPDATE content_reports SET resolved_at = ?
+      WHERE id = ? AND clue_id = ? AND resolved_at IS NULL
+    `).run(timestamp, reportId, clueId);
+    return result.changes === 1;
+  }
+
   listReported(): ContentReportRecord[] {
     const rows = this.database.prepare(`
       SELECT id, clue_id, match_id, note, created_at, resolved_at
@@ -248,6 +268,7 @@ export class ContentRepository {
         category_sets.name_json,
         category_sets.macro_topic,
         category_sets.enabled AS category_enabled,
+        category_set_overrides.override_json AS category_override_json,
         (
           SELECT MAX(seen_clues.seen_at)
           FROM seen_clues
@@ -274,6 +295,7 @@ export class ContentRepository {
       JOIN content_packs ON content_packs.id = category_sets.pack_id
       JOIN clues ON clues.category_set_id = category_sets.id
       LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+      LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
       WHERE content_packs.enabled = 1
         AND category_sets.round IN ('round-one', 'round-two')
       ORDER BY category_sets.id, clues.tier, clues.id
@@ -286,17 +308,20 @@ export class ContentRepository {
       grouped.set(row.category_id, group);
     }
 
-    return [...grouped.values()].map(({ row, clues }) => contentCategorySetSchema.parse({
+    return [...grouped.values()].map(({ row, clues }) => {
+      const metadata = this.categoryMetadata(row.category_override_json, row.category_id, row.pack_id, row.category_round);
+      return contentCategorySetSchema.parse({
       id: row.category_id,
       packId: row.pack_id,
       round: row.category_round,
-      difficulty: row.difficulty,
-      name: this.parseLocalized(row.name_json),
-      macroTopic: row.macro_topic,
-      enabled: row.category_enabled === 1,
+      difficulty: metadata?.difficulty ?? row.difficulty,
+      name: metadata?.name ?? this.parseLocalized(row.name_json),
+      macroTopic: metadata?.macroTopic ?? row.macro_topic,
+      enabled: metadata?.enabled ?? row.category_enabled === 1,
       clues,
       lastSeenAt: row.category_last_seen_at,
-    }));
+      });
+    });
   }
 
   private loadFinalClues(applyUserState = true): ContentFinalClueRecord[] {
@@ -317,6 +342,7 @@ export class ContentRepository {
         clues.source,
         MAX(seen_clues.seen_at) AS last_seen_at,
         content_overrides.override_json,
+        category_set_overrides.override_json AS category_override_json,
         EXISTS (
           SELECT 1 FROM content_reports
           WHERE content_reports.clue_id = clues.id
@@ -327,6 +353,7 @@ export class ContentRepository {
       JOIN content_packs ON content_packs.id = category_sets.pack_id
       LEFT JOIN seen_clues ON seen_clues.clue_id = clues.id
       LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+      LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
       WHERE content_packs.enabled = 1
         AND category_sets.enabled = 1
         AND category_sets.round = 'final'
@@ -336,13 +363,14 @@ export class ContentRepository {
     `).all() as FinalRow[];
 
     return rows.map((row) => {
+      const metadata = this.categoryMetadata(row.category_override_json, row.category_id, row.pack_id, 'final');
       const bundled = contentFinalClueSchema.parse({
       id: row.clue_id,
       packId: row.pack_id,
       enabled: row.clue_enabled === 1,
-      difficulty: row.difficulty,
+      difficulty: metadata?.difficulty ?? row.difficulty,
       categoryId: row.category_id,
-      categoryName: this.parseLocalized(row.category_name_json),
+      categoryName: metadata?.name ?? this.parseLocalized(row.category_name_json),
       round: 'final',
       tier: row.tier,
       value: row.value,
@@ -423,6 +451,7 @@ export class ContentRepository {
         clues.enabled AS clue_enabled,
         MAX(seen_clues.seen_at) AS last_seen_at,
         content_overrides.override_json,
+        category_set_overrides.override_json AS category_override_json,
         EXISTS (
           SELECT 1 FROM content_reports
           WHERE content_reports.clue_id = clues.id
@@ -433,10 +462,12 @@ export class ContentRepository {
       JOIN content_packs ON content_packs.id = category_sets.pack_id
       LEFT JOIN seen_clues ON seen_clues.clue_id = clues.id
       LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+      LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
       WHERE clues.id = ?
       GROUP BY clues.id
     `).get(clueId) as ClueLookupRow | undefined;
     if (row === undefined) return null;
+    const metadata = this.categoryMetadata(row.category_override_json, row.category_id, row.pack_id, row.category_round);
     if (row.category_round === 'final' && row.clue_round === 'final') {
       return {
         row,
@@ -444,9 +475,9 @@ export class ContentRepository {
           id: row.clue_id,
           packId: row.pack_id,
           enabled: row.clue_enabled === 1,
-          difficulty: row.difficulty,
+          difficulty: metadata?.difficulty ?? row.difficulty,
           categoryId: row.category_id,
-          categoryName: this.parseLocalized(row.category_name_json),
+          categoryName: metadata?.name ?? this.parseLocalized(row.category_name_json),
           round: 'final',
           tier: row.tier,
           value: row.value,
@@ -489,6 +520,15 @@ export class ContentRepository {
 
   private clueExists(clueId: string): boolean {
     return this.database.prepare('SELECT 1 FROM clues WHERE id = ?').pluck().get(clueId) === 1;
+  }
+
+  private categoryMetadata(value: string | null, id: string, packId: string, round: string): CategoryMetadataOverride | null {
+    if (value === null) return null;
+    const parsed = JSON.parse(value) as CategoryMetadataOverride;
+    if (parsed.id !== id || parsed.packId !== packId || parsed.round !== round) {
+      throw new Error(`Invalid category metadata override identity: ${id}`);
+    }
+    return parsed;
   }
 
   private resolveReports(clueId: string, resolvedAt: number): boolean {

@@ -15,6 +15,7 @@ const expectedTables = [
   'category_sets',
   'clues',
   'content_overrides',
+  'category_set_overrides',
   'content_reports',
   'seen_clues',
 ];
@@ -40,13 +41,13 @@ describe('database migrations', () => {
     return connection;
   }
 
-  it('creates schema version 1 with the required tables and connection pragmas', () => {
+  it('creates the current schema with the required tables and connection pragmas', () => {
     const directory = temporaryDirectory();
     const database = open(join(directory, 'quiz.sqlite'));
 
     migrateDatabase(database, join(directory, 'backups'));
 
-    expect(readSchemaVersion(database)).toBe(1);
+    expect(readSchemaVersion(database)).toBe(2);
     const tables = database.prepare("SELECT name FROM sqlite_master WHERE type = 'table'").pluck().all();
     expect(tables).toEqual(expect.arrayContaining(expectedTables));
     expect(database.pragma('foreign_keys', { simple: true })).toBe(1);

@@ -20,17 +20,20 @@ import {
 } from '../../shared/content/editor';
 import { contentOverrideSchema, localizedTextSchema } from '../../shared/content/schema';
 import type { ContentRepository } from './contentRepository';
+import { isLocalizedClueComplete } from '../../shared/content/localizedCompleteness';
 
 interface PackRow { id: string; name: string; version: string; source: string; enabled: number }
 interface CategoryRow {
   id: string; pack_id: string; round: 'round-one' | 'round-two' | 'final' | 'tiebreaker';
   difficulty: 'easy' | 'medium' | 'hard'; name_json: string; macro_topic: string; enabled: number;
+  category_override_json: string | null;
 }
 interface ClueRow {
   id: string; category_set_id: string; round: 'round-one' | 'round-two' | 'final' | 'tiebreaker';
   tier: number; value: number; prompt_json: string; response_json: string; explanation_json: string;
   accepted_responses_json: string | null; source: string; enabled: number; override_json: string | null;
   reported: number;
+  report_id: number | null; report_created_at: number | null;
 }
 
 interface StoredSource {
@@ -81,8 +84,7 @@ function languageEligible(name: { en: string; et?: string }, clues: readonly Edi
   const enabled = clues.every((clue) => clue.enabled && !clue.reported);
   return {
     en: enabled && clues.length > 0,
-    et: enabled && name.et !== undefined && clues.every((clue) =>
-      clue.prompt.et !== undefined && clue.response.et !== undefined && clue.explanation.et !== undefined),
+    et: enabled && name.et !== undefined && clues.every((clue) => isLocalizedClueComplete(clue, 'et')),
   };
 }
 
@@ -106,15 +108,23 @@ export class ContentEditorService {
       'SELECT id, name, version, source, enabled FROM content_packs ORDER BY id',
     ).all() as PackRow[];
     const categoryRows = this.database.prepare(`
-      SELECT id, pack_id, round, difficulty, name_json, macro_topic, enabled
-      FROM category_sets ORDER BY id
+      SELECT category_sets.id, category_sets.pack_id, category_sets.round, category_sets.difficulty,
+        category_sets.name_json, category_sets.macro_topic, category_sets.enabled,
+        category_set_overrides.override_json AS category_override_json
+      FROM category_sets LEFT JOIN category_set_overrides
+        ON category_set_overrides.category_set_id = category_sets.id
+      ORDER BY category_sets.id
     `).all() as CategoryRow[];
     const clueRows = this.database.prepare(`
       SELECT clues.id, clues.category_set_id, clues.round, clues.tier, clues.value,
         clues.prompt_json, clues.response_json, clues.explanation_json, clues.accepted_responses_json,
         clues.source, clues.enabled, content_overrides.override_json,
         EXISTS (SELECT 1 FROM content_reports
-          WHERE content_reports.clue_id = clues.id AND content_reports.resolved_at IS NULL) AS reported
+          WHERE content_reports.clue_id = clues.id AND content_reports.resolved_at IS NULL) AS reported,
+        (SELECT id FROM content_reports WHERE content_reports.clue_id = clues.id
+          AND resolved_at IS NULL ORDER BY id DESC LIMIT 1) AS report_id,
+        (SELECT created_at FROM content_reports WHERE content_reports.clue_id = clues.id
+          AND resolved_at IS NULL ORDER BY id DESC LIMIT 1) AS report_created_at
       FROM clues LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
       ORDER BY clues.category_set_id, clues.tier, clues.id
     `).all() as ClueRow[];
@@ -211,8 +221,19 @@ export class ContentEditorService {
       if (current.revision !== parsed.expectedRevision) throw new Error('STALE_CONTENT_REVISION');
       this.assertCategoryIdentity(current, draft);
       if (current.ownership === 'bundled') {
+        const metadata = {
+          id: draft.id, packId: draft.packId, round: draft.round, difficulty: draft.difficulty,
+          name: draft.name, macroTopic: draft.macroTopic, enabled: draft.enabled,
+        };
+        this.database.prepare(`
+          INSERT INTO category_set_overrides (category_set_id, override_json, updated_at) VALUES (?, ?, ?)
+          ON CONFLICT(category_set_id) DO UPDATE SET override_json = excluded.override_json,
+            updated_at = excluded.updated_at WHERE override_json <> excluded.override_json
+        `).run(draft.id, JSON.stringify(metadata), this.now());
         for (const clue of draft.clues) {
           if (clue.id === null) throw new Error('Bundled clue identity is required');
+          const oldClue = current.clues.find((candidate) => candidate.id === clue.id)!;
+          if (JSON.stringify(clue) === JSON.stringify(oldClue)) continue;
           contentOverrideSchema.parse({
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
@@ -279,7 +300,14 @@ export class ContentEditorService {
         throw new Error('Stable Final identity cannot change');
       }
       if (current.ownership === 'bundled') {
-        this.repository.saveOverride({
+        const metadata = { id: draft.categoryId, packId: draft.packId, round: 'final', difficulty: draft.difficulty,
+          name: draft.categoryName, macroTopic: draft.macroTopic, enabled: draft.enabled };
+        this.database.prepare(`
+          INSERT INTO category_set_overrides (category_set_id, override_json, updated_at) VALUES (?, ?, ?)
+          ON CONFLICT(category_set_id) DO UPDATE SET override_json = excluded.override_json,
+            updated_at = excluded.updated_at WHERE override_json <> excluded.override_json
+        `).run(draft.categoryId, JSON.stringify(metadata), this.now());
+        if (JSON.stringify(draft.clue) !== JSON.stringify(current.clue)) this.repository.saveOverride({
           id: draft.clue.id, packId: draft.packId, categoryId: draft.categoryId,
           categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
           prompt: draft.clue.prompt, response: draft.clue.response, explanation: draft.clue.explanation,
@@ -304,12 +332,22 @@ export class ContentEditorService {
 
   reportClue(input: unknown) {
     const parsed = reportContentClueRequestSchema.parse(input);
-    return this.repository.reportClue({ clueId: parsed.clueId, matchId: null, note: parsed.note, createdAt: this.now() });
+    return this.repository.runTransaction(() => {
+      const current = this.findEditorForClue(parsed.clueId);
+      if (current.revision !== parsed.expectedRevision) throw new Error('STALE_CONTENT_REVISION');
+      return this.repository.reportClue({ clueId: parsed.clueId, matchId: null, note: parsed.note, createdAt: this.now() });
+    });
   }
 
   resolveReport(input: unknown): { resolved: boolean } {
-    const { clueId } = contentClueActionSchema.parse(input);
-    return { resolved: this.repository.resolveReport(clueId, this.now()) };
+    const parsed = contentClueActionSchema.parse(input);
+    return this.repository.runTransaction(() => {
+      const current = this.findEditorForClue(parsed.clueId);
+      if (current.revision !== parsed.expectedRevision) throw new Error('STALE_CONTENT_REVISION');
+      const clue = 'clues' in current ? current.clues.find((candidate) => candidate.id === parsed.clueId) : current.clue;
+      if (clue?.report?.id !== parsed.reportId) throw new Error('STALE_CONTENT_REPORT');
+      return { resolved: this.repository.resolveReportById(parsed.clueId, parsed.reportId, this.now()) };
+    });
   }
 
   private mapPack(pack: PackRow, categories: CategoryRow[], cluesByCategory: Map<string, ClueRow[]>): EditorPack {
@@ -317,26 +355,37 @@ export class ContentEditorService {
     const categorySets: EditorCategorySet[] = [];
     const finalClues: EditorFinalClue[] = [];
     for (const category of categories) {
+      const metadata = category.category_override_json === null ? null : JSON.parse(category.category_override_json) as {
+        id: string; packId: string; round: string; difficulty: CategoryRow['difficulty'];
+        name: { en: string; et?: string }; macroTopic: string; enabled: boolean;
+      };
+      if (metadata !== null && (metadata.id !== category.id || metadata.packId !== pack.id || metadata.round !== category.round)) {
+        throw new Error(`Invalid category metadata override identity: ${category.id}`);
+      }
+      const categoryName = metadata?.name ?? parseLocalized(category.name_json);
+      const categoryDifficulty = metadata?.difficulty ?? category.difficulty;
+      const categoryMacroTopic = metadata?.macroTopic ?? category.macro_topic;
+      const categoryEnabled = metadata?.enabled ?? category.enabled === 1;
       const clues = (cluesByCategory.get(category.id) ?? []).map((row) => this.mapClue(row));
       if (category.round === 'round-one' || category.round === 'round-two') {
-        const eligible = languageEligible(parseLocalized(category.name_json), clues);
+        const eligible = languageEligible(categoryName, clues);
         categorySets.push(editorCategorySetSchema.parse({
-          id: category.id, packId: pack.id, revision: revision({ category, clues }), ownership,
-          round: category.round, difficulty: category.difficulty, macroTopic: category.macro_topic,
-          name: parseLocalized(category.name_json), enabled: category.enabled === 1,
-          eligibility: { en: pack.enabled === 1 && category.enabled === 1 && clues.length === 5 && eligible.en,
-            et: pack.enabled === 1 && category.enabled === 1 && clues.length === 5 && eligible.et }, clues,
+          id: category.id, packId: pack.id, revision: revision({ category, metadata, clues }), ownership,
+          round: category.round, difficulty: categoryDifficulty, macroTopic: categoryMacroTopic,
+          name: categoryName, enabled: categoryEnabled,
+          eligibility: { en: pack.enabled === 1 && categoryEnabled && clues.length === 5 && eligible.en,
+            et: pack.enabled === 1 && categoryEnabled && clues.length === 5 && eligible.et }, clues,
         }));
       } else if (category.round === 'final' && clues.length === 1) {
         const clue = clues[0];
-        const eligible = languageEligible(parseLocalized(category.name_json), [clue]);
+        const eligible = languageEligible(categoryName, [clue]);
         finalClues.push(editorFinalClueSchema.parse({
           id: clue.id, packId: pack.id, categoryId: category.id,
-          revision: revision({ category, clue }), ownership, difficulty: category.difficulty,
-          categoryName: parseLocalized(category.name_json), macroTopic: category.macro_topic,
-          enabled: category.enabled === 1, eligibility: {
-            en: pack.enabled === 1 && category.enabled === 1 && eligible.en,
-            et: pack.enabled === 1 && category.enabled === 1 && eligible.et,
+          revision: revision({ category, metadata, clue }), ownership, difficulty: categoryDifficulty,
+          categoryName, macroTopic: categoryMacroTopic,
+          enabled: categoryEnabled, eligibility: {
+            en: pack.enabled === 1 && categoryEnabled && eligible.en,
+            et: pack.enabled === 1 && categoryEnabled && eligible.et,
           }, clue,
         }));
       }
@@ -372,6 +421,7 @@ export class ContentEditorService {
       source: parseSource(row.source, override?.source),
       enabled: override?.enabled ?? base.enabled,
       reported: row.reported === 1,
+      report: row.report_id === null || row.report_created_at === null ? null : { id: row.report_id, createdAt: row.report_created_at },
     };
   }
 
@@ -379,6 +429,15 @@ export class ContentEditorService {
     const pack = this.list().packs.find((candidate) => candidate.id === id);
     if (pack === undefined) throw new Error(`Unknown content pack: ${id}`);
     return pack;
+  }
+
+  private findEditorForClue(clueId: string): EditorCategorySet | EditorFinalClue {
+    for (const pack of this.list().packs) {
+      for (const category of pack.categorySets) if (category.clues.some((clue) => clue.id === clueId)) return category;
+      const final = pack.finalClues.find((candidate) => candidate.clue.id === clueId);
+      if (final !== undefined) return final;
+    }
+    throw new Error(`Unknown content clue: ${clueId}`);
   }
 
   private requireCategory(id: string): EditorCategorySet {

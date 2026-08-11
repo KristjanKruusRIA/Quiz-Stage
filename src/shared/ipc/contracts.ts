@@ -435,6 +435,7 @@ export interface HostQuizStageApi extends StateSubscriptionApi {
   resolveContentReport(input: unknown): Promise<{ resolved: boolean }>;
   previewContentImport(): Promise<ContentImportPreview>;
   commitContentImport(input: unknown): Promise<ContentImportResult>;
+  discardContentImport(input: unknown): Promise<{ discarded: boolean }>;
   exportContentPack(input: unknown): Promise<ContentExportResult>;
 }
 
