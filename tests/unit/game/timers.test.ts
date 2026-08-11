@@ -106,11 +106,13 @@ describe('game timers', () => {
 
   it('emits expiry once and records the expired timer state', () => {
     const opened = apply(createGame(config, selectedBoards, 0), { type: 'SelectClue', clueId: 'clue' });
+    const sequenceBeforeExpiry = opened.eventSequence;
 
     expect(tickTimer(opened, 1_000)).toEqual([]);
     expect(tickTimer(opened, 15_999)).toEqual([]);
     expect(tickTimer(opened, 16_000)).toHaveLength(1);
     expect(opened.timer).toMatchObject({ remainingMs: 0, startedAt: null, status: 'expired' });
+    expect(opened.eventSequence).toBe(sequenceBeforeExpiry + 1);
     expect(tickTimer(opened, 20_000)).toEqual([]);
   });
 

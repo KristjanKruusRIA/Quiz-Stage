@@ -47,6 +47,7 @@ interface SnapshotRow {
   match_id: string;
   sequence: number;
   event_sequence: number;
+  created_at: number;
   state_json: string;
 }
 
@@ -72,12 +73,19 @@ interface HistoryRow extends SnapshotRow {
 export class MatchRepository {
   constructor(private readonly database: DatabaseConnection) {}
 
-  persistTransition(matchId: string, events: GameEvent[], state: GameState): void {
+  persistTransition(matchId: string, events: GameEvent[], state: GameState, completedAt?: number): void {
     const validatedState = gameStateSchema.parse(state) as GameState;
     const validatedEvents = events.map((event) => gameEventSchema.parse(event) as GameEvent);
     if (validatedState.id !== matchId) throw new Error('Snapshot match ID does not match the transition match ID');
     if (validatedEvents.some((event) => event.matchId !== matchId)) {
       throw new Error('Event match ID does not match the transition match ID');
+    }
+    if (validatedState.phase === 'complete') {
+      if (typeof completedAt !== 'number' || !Number.isInteger(completedAt) || completedAt < 0) {
+        throw new Error('A terminal transition requires a nonnegative integer completion time');
+      }
+    } else if (completedAt !== undefined) {
+      throw new Error('Only a terminal transition can include a completion time');
     }
 
     const stateJson = JSON.stringify(validatedState);
@@ -113,6 +121,15 @@ export class MatchRepository {
         INSERT INTO match_snapshots (match_id, sequence, event_sequence, created_at, state_json)
         VALUES (?, ?, ?, ?, ?)
       `).run(matchId, snapshotSequence, eventSequence - 1, persistedAt, stateJson);
+
+      if (validatedState.phase === 'complete') {
+        const result = this.database.prepare(`
+          UPDATE matches
+          SET completed_at = ?, ended_incomplete = ?, winner_team_id = ?
+          WHERE id = ? AND completed_at IS NULL
+        `).run(completedAt, validatedState.endedIncomplete ? 1 : 0, validatedState.winnerTeamId, matchId);
+        if (result.changes !== 1) throw new Error(`Match ${matchId} is missing or already complete`);
+      }
     })();
   }
 
@@ -133,7 +150,8 @@ export class MatchRepository {
 
   recoverLatest(): RecoveredMatch | null {
     const rows = this.database.prepare(`
-      SELECT snapshots.match_id, snapshots.sequence, snapshots.event_sequence, snapshots.state_json
+      SELECT snapshots.match_id, snapshots.sequence, snapshots.event_sequence,
+             snapshots.created_at, snapshots.state_json
       FROM match_snapshots AS snapshots
       JOIN matches ON matches.id = snapshots.match_id
       WHERE matches.completed_at IS NULL
@@ -141,15 +159,23 @@ export class MatchRepository {
     `).all() as SnapshotRow[];
 
     let candidateMatchId: string | null = null;
+    let skipCandidateMatch = false;
     let skippedInvalidSnapshotSequences: number[] = [];
     for (const row of rows) {
       if (candidateMatchId !== row.match_id) {
         candidateMatchId = row.match_id;
+        skipCandidateMatch = false;
         skippedInvalidSnapshotSequences = [];
       }
+      if (skipCandidateMatch) continue;
       const state = this.parseSnapshot(row);
       const replay = state === null ? null : this.readEventsAfter(row);
       if (state !== null && replay !== null) {
+        if (state.phase === 'complete') {
+          this.completeMatch(row.match_id, row.created_at);
+          skipCandidateMatch = true;
+          continue;
+        }
         return {
           matchId: row.match_id,
           snapshotSequence: row.sequence,
@@ -183,7 +209,7 @@ export class MatchRepository {
   listHistory(): MatchHistoryEntry[] {
     const rows = this.database.prepare(`
       SELECT matches.id AS match_id, matches.started_at, matches.completed_at,
-             snapshots.sequence, snapshots.event_sequence, snapshots.state_json
+             snapshots.sequence, snapshots.event_sequence, snapshots.created_at, snapshots.state_json
       FROM matches
       JOIN match_snapshots AS snapshots ON snapshots.match_id = matches.id
       WHERE matches.completed_at IS NOT NULL
@@ -217,7 +243,7 @@ export class MatchRepository {
 
   private latestValidSnapshot(matchId: string): ResumableMatch | null {
     const rows = this.database.prepare(`
-      SELECT match_id, sequence, event_sequence, state_json
+      SELECT match_id, sequence, event_sequence, created_at, state_json
       FROM match_snapshots
       WHERE match_id = ?
       ORDER BY sequence DESC
@@ -241,7 +267,7 @@ export class MatchRepository {
   private parseSnapshot(row: SnapshotRow): GameState | null {
     try {
       const state = gameStateSchema.parse(JSON.parse(row.state_json)) as GameState;
-      return state.id === row.match_id ? state : null;
+      return state.id === row.match_id && state.eventSequence === row.event_sequence ? state : null;
     } catch {
       return null;
     }

@@ -124,9 +124,11 @@ export function tickTimer(state: GameState, now: number): GameEvent[] {
     throw new GameRuleError('INVALID_TIMESTAMP', 'Timer ticks must move forward in time');
   }
   if (now - timer.startedAt < timer.remainingMs) return [];
+  const eventSequence = state.eventSequence;
   state.timer = { ...timer, remainingMs: 0, startedAt: null, status: 'expired' };
+  state.eventSequence = eventSequence + 1;
   return [{
-    id: `${state.id}:${state.eventSequence}:TimerExpired:${now}`,
+    id: `${state.id}:${eventSequence}:TimerExpired:${now}`,
     matchId: state.id,
     at: now,
     type: 'TimerExpired',

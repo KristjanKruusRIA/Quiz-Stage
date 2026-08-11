@@ -47,7 +47,7 @@ export interface CoordinatorRecoveredMatch extends CoordinatorResumableMatch {
 }
 
 export interface CoordinatorMatchRepository {
-  persistTransition(matchId: string, events: GameEvent[], state: GameState): void;
+  persistTransition(matchId: string, events: GameEvent[], state: GameState, completedAt?: number): void;
   loadResumable(): CoordinatorResumableMatch | null;
   recoverLatest(): CoordinatorRecoveredMatch | null;
   completeMatch(matchId: string, completedAt?: number): void;
@@ -120,21 +120,24 @@ export class GameCoordinator {
   async dispatch(input: unknown): Promise<HostGameView> {
     const command = gameCommandSchema.parse(input) as GameCommand;
     if (this.state === null) throw new Error('MATCH_REQUIRED');
+    const occurrenceAt = this.now();
 
     let baseState = structuredClone(this.state);
     let transition: { state: GameState; events: GameEvent[] };
     try {
-      transition = applyGameCommand(baseState, command, this.now());
+      transition = applyGameCommand(baseState, command, occurrenceAt);
     } catch (error) {
       if (!(error instanceof GameRuleError) || error.code !== 'TIEBREAKER_CLUE_REQUIRED') throw error;
       baseState = this.persistNextTiebreaker(baseState);
-      transition = applyGameCommand(baseState, command, this.now());
+      transition = applyGameCommand(baseState, command, occurrenceAt);
     }
 
-    this.options.repository.persistTransition(baseState.id, transition.events, transition.state);
-    if (transition.state.phase === 'complete') {
-      this.options.repository.completeMatch(baseState.id, this.now());
-    }
+    this.options.repository.persistTransition(
+      baseState.id,
+      transition.events,
+      transition.state,
+      transition.state.phase === 'complete' ? occurrenceAt : undefined,
+    );
     this.state = transition.state;
     this.revision += 1;
     this.scheduleTimer();
@@ -160,7 +163,7 @@ export class GameCoordinator {
   private adoptRecovered(
     resumable: CoordinatorResumableMatch,
     recovery: RecoveryMetadata | null,
-  ): HostGameView {
+  ): HostGameView | null {
     let state = structuredClone(resumable.state);
     let replayIssue = resumable.replayIssue;
 
@@ -171,6 +174,11 @@ export class GameCoordinator {
         replayIssue = { sequence: resumable.eventSequence + index + 1, reason: 'invalid-event' };
         break;
       }
+    }
+
+    if (state.phase === 'complete') {
+      this.options.repository.completeMatch(state.id, this.now());
+      return null;
     }
 
     if (state.timer.status === 'running' && state.timer.startedAt === null) {
@@ -184,7 +192,6 @@ export class GameCoordinator {
     this.replayIssue = replayIssue;
     this.recovery = recovery;
     this.revision += 1;
-    if (state.phase === 'complete') this.options.repository.completeMatch(state.id, this.now());
     this.scheduleTimer();
     this.publish();
     return this.getHostView()!;
@@ -337,9 +344,9 @@ function replayEvent(state: GameState, event: GameEvent): GameState {
     const replayState = structuredClone(state);
     transition = { state: replayState, events: tickTimer(replayState, event.at) };
   } else if (event.type === 'ActionUndone') {
-    transition = applyGameCommand(state, { type: 'UndoLast' });
+    transition = applyGameCommand(state, { type: 'UndoLast' }, event.at);
   } else {
-    transition = applyGameCommand(state, { type: 'EndIncompleteMatch' });
+    transition = applyGameCommand(state, { type: 'EndIncompleteMatch' }, event.at);
   }
   if (transition.events.length !== 1 || JSON.stringify(transition.events[0]) !== JSON.stringify(event)) {
     throw new Error('Persisted replay event does not match the authoritative engine transition');

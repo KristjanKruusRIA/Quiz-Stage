@@ -204,9 +204,7 @@ describe('MatchRepository', () => {
   it('completes matches, excludes them from resume, and lists validated history', () => {
     const initial = { ...createGame(config, selectedBoards, 0), id: 'match-1' };
     const ended = applyGameCommand(initial, { type: 'EndIncompleteMatch' });
-    repository.persistTransition('match-1', ended.events, ended.state);
-
-    repository.completeMatch('match-1', 5_000);
+    repository.persistTransition('match-1', ended.events, ended.state, 5_000);
 
     expect(repository.loadResumable()).toBeNull();
     expect(repository.listHistory()).toEqual([expect.objectContaining({

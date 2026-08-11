@@ -326,10 +326,10 @@ describe('GameCoordinator', () => {
     const beforeReveal: GameState = {
       ...base,
       phase: 'final-clue',
-      scores: { 'team-1': 100, 'team-2': 0 },
-      finalEligibleTeamIds: ['team-1'],
-      finalRevealOrder: ['team-1'],
-      finalWagers: { 'team-1': 50 },
+      scores: { 'team-1': 100, 'team-2': 50 },
+      finalEligibleTeamIds: ['team-1', 'team-2'],
+      finalRevealOrder: ['team-1', 'team-2'],
+      finalWagers: { 'team-1': 50, 'team-2': 25 },
       activeClue: { clueId: selected.finalClue.id, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
       timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' },
     };
@@ -415,16 +415,57 @@ describe('GameCoordinator', () => {
     expect(repository.persistTransition).not.toHaveBeenCalled();
   });
 
-  it('marks a terminal snapshot complete after persistence and before publishing', async () => {
-    const { coordinator, persistenceOrder } = dependencies();
+  it('persists terminal state and completion metadata atomically before publishing', async () => {
+    const { coordinator, repository, persistenceOrder } = dependencies();
     await coordinator.startMatch(selectionInput().config);
     persistenceOrder.length = 0;
+    vi.mocked(repository.persistTransition).mockClear();
+    vi.mocked(repository.completeMatch).mockClear();
     coordinator.subscribe('host', () => persistenceOrder.push('publish'));
     persistenceOrder.length = 0;
 
-    await coordinator.dispatch({ type: 'EndIncompleteMatch' });
+    const ended = await coordinator.dispatch({ type: 'EndIncompleteMatch' });
 
-    expect(persistenceOrder).toEqual(['persist', 'complete', 'publish']);
+    expect(repository.persistTransition).toHaveBeenCalledWith(
+      ended.state.id,
+      expect.arrayContaining([expect.objectContaining({ type: 'MatchEnded', at: 42 })]),
+      ended.state,
+      42,
+    );
+    expect(repository.completeMatch).not.toHaveBeenCalled();
+    expect(persistenceOrder).toEqual(['persist', 'publish']);
+  });
+
+  it('uses the same atomic persistence path when normal play resolves a winner', async () => {
+    const { coordinator, repository, selected, setResumable } = dependencies();
+    const base = createGame(selectionInput().config, selected, 42);
+    const beforeWinner: GameState = {
+      ...base,
+      phase: 'final-clue',
+      scores: { 'team-1': 100, 'team-2': 0 },
+      finalEligibleTeamIds: ['team-1'],
+      finalRevealOrder: ['team-1'],
+      finalWagers: { 'team-1': 50 },
+      activeClue: { clueId: selected.finalClue.id, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
+      timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' },
+    };
+    setResumable({
+      matchId: base.id,
+      snapshotSequence: 1,
+      eventSequence: 0,
+      state: beforeWinner,
+      events: [],
+      replayIssue: null,
+    });
+    await coordinator.resume();
+    vi.mocked(repository.persistTransition).mockClear();
+    vi.mocked(repository.completeMatch).mockClear();
+
+    const winner = await coordinator.dispatch({ type: 'RevealFinalTeam', teamId: 'team-1', correct: true });
+
+    expect(winner.state).toMatchObject({ phase: 'complete', winnerTeamId: 'team-1', endedIncomplete: false });
+    expect(repository.persistTransition).toHaveBeenCalledWith(base.id, expect.any(Array), winner.state, 42);
+    expect(repository.completeMatch).not.toHaveBeenCalled();
   });
 
   it('isolates a throwing listener after commit and continues publishing both projections', async () => {
