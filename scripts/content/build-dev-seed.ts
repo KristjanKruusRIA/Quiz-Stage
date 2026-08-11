@@ -66,14 +66,16 @@ function assertSafeOutput(fixturePath: string, outputPath: string): void {
     throw new Error(`Unsafe seed output target: expected a .sqlite file, received ${outputPath}`);
   }
   const fixtureRealPath = realpathSync(fixturePath);
-  if (outputPath === fixturePath || (existsSync(outputPath) && realpathSync(outputPath) === fixtureRealPath)) {
+  if (outputPath === fixturePath) {
     throw new Error('Unsafe seed output target: output aliases the input fixture');
   }
-  if (!existsSync(outputPath)) return;
-
-  const outputStats = lstatSync(outputPath);
+  const outputStats = lstatSync(outputPath, { throwIfNoEntry: false });
+  if (outputStats === undefined) return;
   if (outputStats.isSymbolicLink() || !outputStats.isFile()) {
     throw new Error(`Unsafe seed output target: expected a regular SQLite file, received ${outputPath}`);
+  }
+  if (realpathSync(outputPath) === fixtureRealPath) {
+    throw new Error('Unsafe seed output target: output aliases the input fixture');
   }
   const sqliteHeader = readFileSync(outputPath).subarray(0, 16).toString('utf8');
   if (sqliteHeader !== 'SQLite format 3\0') {

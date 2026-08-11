@@ -1,11 +1,13 @@
 import {
   copyFileSync,
   existsSync,
+  lstatSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
   readdirSync,
   rmSync,
+  symlinkSync,
   writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -93,6 +95,17 @@ describe('development seed builder', () => {
 
     expect(readFileSync(invalidSqliteTarget, 'utf8')).toBe('not sqlite');
     expect(sha256(fixtureAlias)).toBe(sha256(fixturePath));
+  });
+
+  it('rejects a dangling destination symlink without following or replacing it', () => {
+    const directory = temporaryDirectory();
+    const outputPath = join(directory, 'dangling.sqlite');
+    symlinkSync(join(directory, 'missing-target.sqlite'), outputPath, 'file');
+
+    expect(() => buildDevelopmentSeed(fixturePath, outputPath)).toThrow(/unsafe seed output/i);
+
+    expect(lstatSync(outputPath).isSymbolicLink()).toBe(true);
+    expect(existsSync(join(directory, 'missing-target.sqlite'))).toBe(false);
   });
 
   it('uses repository-anchored defaults when launched from another working directory', () => {
