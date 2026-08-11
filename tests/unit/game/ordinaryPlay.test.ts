@@ -74,6 +74,10 @@ describe('ordinary clue play', () => {
 
     expect(scoreOf(judged, 't2')).toBe(600);
     expect(judged.controllingTeamId).toBe('t2');
+    expect(judged).toMatchObject({ phase: 'clue-reveal', activeClue: { responseRevealed: true } });
+
+    const advanced = command(judged, { type: 'AdvanceAfterReveal' });
+    expect(advanced.phase).toBe('round-one-board');
   });
 
   it('subtracts value, locks the team out, and preserves remaining time', () => {
@@ -104,7 +108,7 @@ describe('ordinary clue play', () => {
     );
 
     expect(allLocked.activeClue?.responseRevealed).toBe(true);
-    expect(allLocked.phase).toBe('round-one-board');
+    expect(allLocked.phase).toBe('clue-reveal');
   });
 
   it('rejects selecting a second clue before the active clue resolves', () => {

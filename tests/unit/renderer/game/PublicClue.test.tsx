@@ -32,4 +32,14 @@ describe('PublicClue', () => {
     rerender(<PublicClue view={{ ...paused, timer: { durationMs: 15_000, remainingMs: 15_000, startedAt: 5_000, status: 'running' } }} now={() => 5_000} />);
     expect(screen.getByRole('timer')).toHaveTextContent('15');
   });
+
+  it('shows the canonical response, explanation, and source during clue reveal', () => {
+    render(<PublicClue view={publicView({
+      phase: 'clue-reveal',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: true },
+    })} />);
+    expect(screen.getByText('Response 1-2')).toBeInTheDocument();
+    expect(screen.getByText('Explanation 1-2')).toBeInTheDocument();
+    expect(screen.getByText('Source 1-2')).toBeInTheDocument();
+  });
 });

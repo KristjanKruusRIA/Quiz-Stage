@@ -10,7 +10,7 @@ export function PublicClue({ view, now }: PublicClueProps) {
     <p className="clue-prompt">{view.activeClue.prompt}</p>
     <p role="timer" aria-label="Time remaining">{Math.ceil(remainingMs / 1000)}</p>
     {view.activeClue.responseRevealed ? <div className="public-response">
-      <p>{view.activeClue.response}</p><p>{view.activeClue.explanation}</p>
+      <p>{view.activeClue.response}</p><p>{view.activeClue.explanation}</p><p>{view.activeClue.source}</p>
     </div> : null}
   </section>;
 }

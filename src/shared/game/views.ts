@@ -24,10 +24,13 @@ export function toPublicGameView(state: GameState): PublicGameView {
   const board = activeBoard(state);
   const showActiveClue = state.phase === 'ordinary-clue'
     || state.phase === 'daily-double-clue'
+    || state.phase === 'clue-reveal'
     || state.phase === 'final-clue'
     || state.phase === 'final-reveal'
     || state.phase === 'tiebreaker'
     || (state.phase === 'complete' && state.winnerTeamId !== null && state.activeClue?.responseRevealed === true);
+  const responseIsPublic = state.activeClue?.responseRevealed === true
+    && ['clue-reveal', 'final-reveal', 'complete'].includes(state.phase);
 
   return {
     appVersion: APP_VERSION,
@@ -41,20 +44,21 @@ export function toPublicGameView(state: GameState): PublicGameView {
     })),
     board: board === null ? null : toPublicBoard(board, state, language),
     timer: { ...state.timer },
-    controllingTeamId: ['round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager', 'daily-double-clue'].includes(state.phase)
+    controllingTeamId: ['round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager', 'daily-double-clue', 'clue-reveal'].includes(state.phase)
       ? state.controllingTeamId : null,
     winnerTeamId: state.phase === 'complete' ? state.winnerTeamId : null,
     tiebreakerTeamIds: state.phase === 'tiebreaker' ? [...state.tiebreakerTeamIds] : [],
     final: publicFinal(state, language),
     activeClue: !showActiveClue || activeClue === null || state.activeClue === null
       ? null
-      : state.activeClue.responseRevealed
+      : responseIsPublic
       ? {
           id: 'active-clue',
           prompt: localize(activeClue.prompt, language),
           responseRevealed: true,
           response: localize(activeClue.response, language),
           explanation: localize(activeClue.explanation, language),
+          source: activeClue.source,
         }
       : {
           id: 'active-clue',

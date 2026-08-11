@@ -81,7 +81,7 @@ describe('game view projections', () => {
 
   it('reveals only the active response after the canonical reveal flag is set', () => {
     const state = hiddenAnswerState();
-    state.phase = 'daily-double-clue';
+    state.phase = 'clue-reveal';
     state.activeClue = { ...state.activeClue!, responseRevealed: true };
 
     const serialized = JSON.stringify(toPublicGameView(state));

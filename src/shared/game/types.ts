@@ -60,6 +60,7 @@ export type GamePhase =
   | 'round-two-board'
   | 'daily-double-wager'
   | 'daily-double-clue'
+  | 'clue-reveal'
   | 'final-category'
   | 'final-wagers'
   | 'final-clue'
@@ -190,6 +191,7 @@ export type PublicActiveClue =
       responseRevealed: true;
       response: string;
       explanation: string;
+      source: string;
     };
 
 export type PublicGamePhase = Exclude<GamePhase, 'daily-double-wager' | 'daily-double-clue'>;

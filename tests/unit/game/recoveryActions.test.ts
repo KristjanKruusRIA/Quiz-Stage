@@ -3,6 +3,7 @@ import { applyGameCommand, createCompensatingEvent, createGame, type SelectedBoa
 import type { GameEvent } from '../../../src/shared/game/events';
 import { GameRuleError } from '../../../src/shared/game/reducer';
 import { gameStateSchema } from '../../../src/shared/ipc/contracts';
+import { toPublicGameView } from '../../../src/shared/game/views';
 import type { GameConfig, GameState } from '../../../src/shared/game/types';
 
 const config: GameConfig = {
@@ -46,6 +47,7 @@ describe('host recovery actions', () => {
     let state = createGame(config, selectedBoards, 0);
     state = apply(state, { type: 'SelectClue', clueId: 'clue-200' }).state;
     state = apply(state, { type: 'RevealResponse' }).state;
+    state = apply(state, { type: 'AdvanceAfterReveal' }).state;
     expect(apply(state, { type: 'ReopenClue' }).state.usedClueIds).toEqual([]);
 
     state = apply(state, { type: 'SelectClue', clueId: 'clue-400' }).state;
@@ -75,7 +77,14 @@ describe('host recovery actions', () => {
     const controlBeforeClose = state.controllingTeamId;
     state = apply(state, { type: 'SelectClue', clueId: 'last-r1' }).state;
     state = apply(state, { type: 'RevealResponse' }).state;
+    const revealed = structuredClone(state);
+    expect(state.phase).toBe('clue-reveal');
+    expect(state.activeClue?.responseRevealed).toBe(true);
+    state = apply(state, { type: 'AdvanceAfterReveal' }).state;
     expect(state.phase).toBe('round-two-board');
+
+    const undoneAdvance = apply(state, { type: 'UndoLast' }).state;
+    expect({ ...undoneAdvance, eventSequence: revealed.eventSequence }).toEqual(revealed);
 
     state = apply(state, { type: 'ReopenClue' }).state;
     expect(state.phase).toBe('round-one-board');
@@ -93,6 +102,7 @@ describe('host recovery actions', () => {
     };
     state = apply(state, { type: 'SelectClue', clueId: 'last-r2' }).state;
     state = apply(state, { type: 'RevealResponse' }).state;
+    state = apply(state, { type: 'AdvanceAfterReveal' }).state;
     expect(state.phase).toBe('final-category');
 
     state = apply(state, { type: 'ReopenClue' }).state;
@@ -178,12 +188,17 @@ describe('host recovery actions', () => {
     let state = createGame(config, selectedBoards, 0);
     expect(() => apply(state, { type: 'ReportClue', clueId: 'clue-200', reason: ' ' })).toThrow(GameRuleError);
 
+    state = apply(state, { type: 'SelectClue', clueId: 'clue-200' }).state;
     state = apply(state, { type: 'ReportClue', clueId: 'clue-200', reason: 'Duplicate clue' }).state;
     expect(state.disabledClueIds).toContain('clue-200');
     expect(state.usedClueIds).toContain('clue-200');
+    expect(state.phase).toBe('round-one-board');
+    expect(state.activeClue).toBeNull();
+    expect(JSON.stringify(toPublicGameView(state))).not.toContain('Response');
 
     state = apply(state, { type: 'SelectClue', clueId: 'clue-400' }).state;
     state = apply(state, { type: 'RevealResponse' }).state;
+    state = apply(state, { type: 'AdvanceAfterReveal' }).state;
     expect(state.phase).toBe('round-two-board');
   });
 

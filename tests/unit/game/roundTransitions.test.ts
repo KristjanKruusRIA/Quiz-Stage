@@ -47,7 +47,8 @@ const selectedBoards: SelectedBoards = {
 function playCorrect(state: ReturnType<typeof createGame>, clueId: string, teamId: string, at: number) {
   const opened = applyGameCommand(state, { type: 'SelectClue', clueId }).state;
   const locked = applyGameCommand(opened, { type: 'LockTeam', teamId, at }).state;
-  return applyGameCommand(locked, { type: 'JudgeResponse', correct: true, at: at + 1 }).state;
+  const revealed = applyGameCommand(locked, { type: 'JudgeResponse', correct: true, at: at + 1 }).state;
+  return applyGameCommand(revealed, { type: 'AdvanceAfterReveal' }).state;
 }
 
 function playEveryClueCorrect(state: ReturnType<typeof createGame>, boardIndex: number, teamId: string, firstAt: number) {
@@ -67,7 +68,8 @@ function revealEveryClue(state: ReturnType<typeof createGame>, boardIndex: numbe
   for (const category of state.boards[boardIndex].categories) {
     for (const clue of category.clues) {
       const opened = applyGameCommand(nextState, { type: 'SelectClue', clueId: clue.id }).state;
-      nextState = applyGameCommand(opened, { type: 'RevealResponse' }).state;
+      const revealed = applyGameCommand(opened, { type: 'RevealResponse' }).state;
+      nextState = applyGameCommand(revealed, { type: 'AdvanceAfterReveal' }).state;
     }
   }
   return nextState;

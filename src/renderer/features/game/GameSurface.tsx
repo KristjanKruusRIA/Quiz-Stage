@@ -13,7 +13,7 @@ type GameSurfaceProps =
 
 function presentation(view: PublicGameView, now?: () => number, onSelect?: (tileId: string) => void) {
   if (view.phase === 'round-one-board' || view.phase === 'round-two-board') return <PublicBoard view={view} onSelect={onSelect} />;
-  if (['ordinary-clue'].includes(view.phase)) return <PublicClue view={view} now={now} />;
+  if (view.phase === 'ordinary-clue' || view.phase === 'clue-reveal') return <PublicClue view={view} now={now} />;
   return <PublicFinal view={view} now={now} />;
 }
 

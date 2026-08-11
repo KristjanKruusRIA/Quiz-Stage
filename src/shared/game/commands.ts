@@ -9,6 +9,7 @@ export type GameCommand =
   | { type: 'ResumeTimer'; at: number }
   | { type: 'ResetTimer'; at: number }
   | { type: 'RevealResponse' }
+  | { type: 'AdvanceAfterReveal' }
   | { type: 'UndoLast' }
   | { type: 'ReopenClue' }
   | { type: 'EndIncompleteMatch' }

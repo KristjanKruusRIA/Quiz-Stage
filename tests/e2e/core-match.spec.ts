@@ -55,6 +55,11 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
     }
     await page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first().click();
     await page.getByRole('button', { name: 'Correct', exact: true }).click();
+    await expect(page.locator('.public-response p')).toHaveCount(3);
+    if (clueNumber === 30 || clueNumber === 60) {
+      await expect(page.getByRole('grid')).toHaveCount(0);
+    }
+    await page.getByRole('button', { name: 'Continue' }).click();
   }
   expect(dailyDoubles).toBe(3);
   expect(tileIdentities.size).toBe(60);

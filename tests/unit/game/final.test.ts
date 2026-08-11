@@ -135,6 +135,7 @@ describe('Final', () => {
     let state: GameState = { ...createGame(config, selectedBoards, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: -100, negative: -200 } };
     state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
     state = apply(state, { type: 'RevealResponse' });
+    state = apply(state, { type: 'AdvanceAfterReveal' });
 
     expect(state.phase).toBe('complete');
     expect(state.winnerTeamId).toBe('positive-only');
@@ -144,6 +145,7 @@ describe('Final', () => {
     let state: GameState = { ...createGame(config, selectedBoards, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
     state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
     state = apply(state, { type: 'RevealResponse' });
+    state = apply(state, { type: 'AdvanceAfterReveal' });
     expect(state.phase).toBe('tiebreaker');
     expect(state.activeClue?.clueId).toBe('tiebreaker-1');
     expect(state.tiebreakerClues.find((candidate) => candidate.id === state.activeClue?.clueId)).toMatchObject({
@@ -173,6 +175,7 @@ describe('Final', () => {
     let state: GameState = { ...createGame(config, selectedBoards, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
     state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
     state = apply(state, { type: 'RevealResponse' });
+    state = apply(state, { type: 'AdvanceAfterReveal' });
     const firstClueId = state.activeClue?.clueId;
 
     state = apply(state, { type: 'RevealResponse' });
@@ -184,6 +187,7 @@ describe('Final', () => {
     let state: GameState = { ...createGame(config, selectedBoards, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
     state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
     state = apply(state, { type: 'RevealResponse' });
+    state = apply(state, { type: 'AdvanceAfterReveal' });
     const scoresBeforeReport = { ...state.scores };
 
     state = apply(state, { type: 'ReportClue', clueId: 'tiebreaker-1', reason: 'Ambiguous wording' });
@@ -199,6 +203,7 @@ describe('Final', () => {
     let state: GameState = { ...createGame(config, oneTiebreaker, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
     state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
     state = apply(state, { type: 'RevealResponse' });
+    state = apply(state, { type: 'AdvanceAfterReveal' });
     const beforeReport = structuredClone(state);
 
     expect(() => apply(state, { type: 'ReportClue', clueId: 'tiebreaker-1', reason: 'Ambiguous wording' })).toThrow(GameRuleError);

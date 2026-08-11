@@ -99,4 +99,50 @@ describe('HostConsole', () => {
     await user.click(screen.getByRole('button', { name: 'Commit wager' }));
     expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'SubmitDailyDoubleWager', wager: 1200 });
   });
+
+  it('continues an authoritative clue reveal from the button and R shortcut', async () => {
+    const desktopApi = api();
+    render(<HostConsole view={hostView({
+      phase: 'clue-reveal',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: true },
+    })} api={desktopApi} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }));
+    expect(desktopApi.dispatch).toHaveBeenLastCalledWith({ type: 'AdvanceAfterReveal' });
+    vi.mocked(desktopApi.dispatch).mockClear();
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'r' }));
+    await vi.waitFor(() => expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'AdvanceAfterReveal' }));
+  });
+
+  it('uses R to reveal a hidden ordinary response before Continue is legal', async () => {
+    const desktopApi = api();
+    render(<HostConsole view={hostView({
+      phase: 'ordinary-clue',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
+    })} api={desktopApi} />);
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'r' }));
+    await vi.waitFor(() => expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'RevealResponse' }));
+    expect(desktopApi.dispatch).not.toHaveBeenCalledWith({ type: 'AdvanceAfterReveal' });
+  });
+
+  it('refreshes score correction defaults from authoritative rerenders and hides recovery controls when complete', async () => {
+    const desktopApi = api();
+    const user = userEvent.setup();
+    const { rerender } = render(<HostConsole view={hostView()} api={desktopApi} />);
+    await user.type(screen.getByRole('textbox', { name: 'Score adjustment reason' }), 'Current correction');
+    await user.clear(screen.getByRole('spinbutton', { name: 'Score for Beta' }));
+    await user.type(screen.getByRole('spinbutton', { name: 'Score for Beta' }), '900');
+    rerender(<HostConsole view={hostView({ scores: { 'team-1': 1800, 'team-2': 800 } })} api={desktopApi} />);
+    expect(screen.getByRole('spinbutton', { name: 'Score for Alpha' })).toHaveValue(1800);
+    expect(screen.getByRole('spinbutton', { name: 'Score for Beta' })).toHaveValue(900);
+    expect(screen.getByRole('textbox', { name: 'Score adjustment reason' })).toHaveValue('Current correction');
+    await user.click(screen.getByRole('button', { name: 'Set Alpha score' }));
+    expect(desktopApi.dispatch).toHaveBeenCalledWith({
+      type: 'AdjustScore', teamId: 'team-1', score: 1800, reason: 'Current correction',
+    });
+
+    rerender(<HostConsole view={hostView({ phase: 'complete', endedIncomplete: true })} api={desktopApi} />);
+    expect(screen.queryByRole('region', { name: 'Current match corrections' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Undo' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Reopen clue' })).not.toBeInTheDocument();
+  });
 });

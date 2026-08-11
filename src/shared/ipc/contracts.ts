@@ -51,6 +51,7 @@ export const gameCommandSchema = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('ResumeTimer'), at: timestampSchema }),
   z.strictObject({ type: z.literal('ResetTimer'), at: timestampSchema }),
   z.strictObject({ type: z.literal('RevealResponse') }),
+  z.strictObject({ type: z.literal('AdvanceAfterReveal') }),
   z.strictObject({ type: z.literal('UndoLast') }),
   z.strictObject({ type: z.literal('ReopenClue') }),
   z.strictObject({ type: z.literal('EndIncompleteMatch') }),
@@ -111,6 +112,7 @@ const activeClueSchema = z.strictObject({
 const gamePhaseSchema = z.enum([
   'round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager',
   'daily-double-clue', 'final-category', 'final-wagers', 'final-clue',
+  'clue-reveal',
   'final-reveal', 'tiebreaker', 'complete',
 ]);
 
@@ -228,6 +230,7 @@ const publicActiveClueSchema = z.discriminatedUnion('responseRevealed', [
     responseRevealed: z.literal(true),
     response: z.string(),
     explanation: z.string(),
+    source: z.string().trim().min(1),
   }),
 ]);
 
@@ -248,7 +251,7 @@ const publicBoardSchema = z.strictObject({
 export const publicGameViewSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   phase: z.enum([
-    'round-one-board', 'ordinary-clue', 'round-two-board', 'final-category',
+    'round-one-board', 'ordinary-clue', 'round-two-board', 'clue-reveal', 'final-category',
     'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete',
   ]),
   displayMode: z.enum(['single', 'dual']),
@@ -298,7 +301,11 @@ export const publicGameViewSchema = z.strictObject({
   if (view.board !== null) add('Board is only public during a board phase');
 
   if (view.phase === 'ordinary-clue') {
-    if (view.final !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid ordinary clue projection');
+    if (view.activeClue?.responseRevealed === true || view.final !== null || view.winnerTeamId !== null
+      || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid ordinary clue projection');
+  } else if (view.phase === 'clue-reveal') {
+    if (view.activeClue === null || !view.activeClue.responseRevealed || view.final !== null
+      || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid clue reveal projection');
   } else if (view.phase === 'final-category' || view.phase === 'final-wagers') {
     if (view.activeClue !== null || view.final === null || view.final.revealed.length !== 0
       || view.controllingTeamId !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0) add('Invalid Final wager projection');

@@ -30,4 +30,22 @@ describe('publicGameViewSchema privacy semantics', () => {
     expect(publicGameViewSchema.safeParse({ ...valid, tiebreakerTeamIds: ['team-1', 'team-1'] }).success).toBe(false);
     expect(publicGameViewSchema.safeParse({ ...valid, winnerTeamId: 'team-1' }).success).toBe(false);
   });
+
+  it('rejects revealed ordinary clues and requires complete reveal content in clue-reveal', () => {
+    const hiddenOrdinary = publicView({
+      phase: 'ordinary-clue',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: true },
+    });
+    const ordinary = {
+      ...hiddenOrdinary,
+      activeClue: { id: 'active-clue', prompt: 'Prompt', responseRevealed: true as const, response: 'Response', explanation: 'Explanation', source: 'Source' },
+    };
+    expect(publicGameViewSchema.safeParse(ordinary).success).toBe(false);
+    expect(publicGameViewSchema.safeParse({ ...ordinary, phase: 'clue-reveal' }).success).toBe(true);
+    expect(publicGameViewSchema.safeParse({
+      ...ordinary,
+      phase: 'clue-reveal',
+      activeClue: { ...ordinary.activeClue!, source: undefined },
+    }).success).toBe(false);
+  });
 });

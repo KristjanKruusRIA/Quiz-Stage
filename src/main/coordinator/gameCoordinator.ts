@@ -52,6 +52,7 @@ export interface GameCoordinatorOptions {
   createSeed?: () => string;
   setTimeout?: (callback: () => void, delayMs: number) => unknown;
   clearTimeout?: (handle: unknown) => void;
+  expiryRetryDelayMs?: number;
 }
 
 type HostSubscriber = (view: HostGameView, revision: number) => void;
@@ -69,6 +70,7 @@ export class GameCoordinator {
   private readonly createSeed: () => string;
   private readonly setTimeout: (callback: () => void, delayMs: number) => unknown;
   private readonly clearTimeout: (handle: unknown) => void;
+  private readonly expiryRetryDelayMs: number;
   private timerHandle: unknown | null = null;
   private timerGeneration = 0;
   private disposed = false;
@@ -82,6 +84,10 @@ export class GameCoordinator {
       return handle;
     });
     this.clearTimeout = options.clearTimeout ?? ((handle) => globalThis.clearTimeout(handle as ReturnType<typeof setTimeout>));
+    const retryDelay = options.expiryRetryDelayMs ?? 1_000;
+    this.expiryRetryDelayMs = Number.isFinite(retryDelay)
+      ? Math.max(100, Math.min(10_000, Math.trunc(retryDelay)))
+      : 1_000;
   }
 
   async startMatch(input: unknown): Promise<HostGameView> {
@@ -247,6 +253,11 @@ export class GameCoordinator {
     try {
       this.options.repository.persistTransition(candidate.id, events, candidate);
     } catch {
+      if (!this.disposed && generation === this.timerGeneration) {
+        this.timerHandle = this.setTimeout(() => {
+          void this.expireTimer(generation);
+        }, this.expiryRetryDelayMs);
+      }
       return;
     }
     if (this.disposed || generation !== this.timerGeneration) return;

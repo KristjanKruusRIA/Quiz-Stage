@@ -45,6 +45,8 @@ export function reduceGameState(state: GameState, command: GameCommand): GameSta
       return resetActiveTimer(state, command.at);
     case 'RevealResponse':
       return revealResponse(state);
+    case 'AdvanceAfterReveal':
+      return advanceAfterReveal(state);
     case 'ReopenClue':
       return reopenClue(state);
     case 'EndIncompleteMatch':
@@ -343,23 +345,40 @@ function completeClue(state: GameState, clue: Clue): GameState {
   const usedClueIds = state.usedClueIds.includes(clue.id) ? state.usedClueIds : [...state.usedClueIds, clue.id];
   const completedState = {
     ...state,
+    phase: 'clue-reveal' as const,
     usedClueIds,
     dailyDoubleWager: null,
     lastClosedClueId: clue.id,
     lastClosedPhase: clue.round === 'round-one' ? 'round-one-board' as const : 'round-two-board' as const,
     lastClosedControllingTeamId: state.controllingTeamId,
   };
+  return completedState;
+}
+
+function advanceAfterReveal(state: GameState): GameState {
+  if (
+    state.phase !== 'clue-reveal'
+    || state.activeClue === null
+    || !state.activeClue.responseRevealed
+    || state.lastClosedClueId !== state.activeClue.clueId
+  ) {
+    throw new GameRuleError('REVEAL_REQUIRED', 'A revealed closed clue is required before continuing');
+  }
+  return advanceClosedClue(state, findClue(state, state.lastClosedClueId));
+}
+
+function advanceClosedClue(state: GameState, clue: Clue): GameState {
   const roundComplete = state.boards
     .find((board) => board.round === clue.round)
-    ?.categories.every((category) => category.clues.every((candidate) => usedClueIds.includes(candidate.id))) ?? false;
+    ?.categories.every((category) => category.clues.every((candidate) => state.usedClueIds.includes(candidate.id))) ?? false;
 
   if (clue.round === 'round-one' && roundComplete) {
-    return { ...completedState, phase: 'round-two-board', controllingTeamId: lowestScoringTeam(completedState) };
+    return { ...state, phase: 'round-two-board', controllingTeamId: lowestScoringTeam(state), activeClue: null };
   }
   if (clue.round === 'round-two' && roundComplete) {
-    return beginFinalOrResolve(completedState);
+    return beginFinalOrResolve(state);
   }
-  return { ...completedState, phase: clue.round === 'round-one' ? 'round-one-board' : 'round-two-board' };
+  return { ...state, phase: clue.round === 'round-one' ? 'round-one-board' : 'round-two-board', activeClue: null };
 }
 
 function beginFinalOrResolve(state: GameState): GameState {
@@ -508,18 +527,16 @@ function reportClue(state: GameState, clueId: string, reason: string): GameState
       state.suddenDeathClueNumber + 1,
     );
   }
-  const usedClueIds = state.usedClueIds.includes(clueId) ? state.usedClueIds : [...state.usedClueIds, clueId];
-  if (state.activeClue?.clueId === clueId && !state.activeClue.responseRevealed) {
-    return completeClue({
-      ...state,
-      disabledClueIds,
-      usedClueIds,
-      activeClue: { ...state.activeClue, lockedTeamId: null, responseRevealed: true },
-      timer: { ...state.timer, startedAt: null, status: 'paused' },
-    }, clue);
-  }
-  const reportedState = { ...state, disabledClueIds, usedClueIds };
-  return boardRoundForPhase(state.phase) === clue.round ? completeClue(reportedState, clue) : reportedState;
+  const activeClue = state.activeClue?.clueId === clueId
+    ? { ...state.activeClue, lockedTeamId: null, responseRevealed: false }
+    : { clueId, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false };
+  const reportedState = completeClue({
+    ...state,
+    disabledClueIds,
+    activeClue,
+    timer: { ...state.timer, startedAt: null, status: 'paused' },
+  }, clue);
+  return advanceClosedClue(reportedState, clue);
 }
 
 function boardRoundForPhase(phase: GameState['phase']): BoardRound | null {

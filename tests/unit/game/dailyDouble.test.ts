@@ -69,6 +69,7 @@ describe('Daily Double', () => {
     const judged = apply(locked, { type: 'JudgeResponse', correct: false, at: 1100 });
     expect(judged.scores[controllingTeamId]).toBe(-300);
     expect(judged.controllingTeamId).toBe(controllingTeamId);
+    expect(judged.phase).toBe('clue-reveal');
   });
 
   it('closes a timed-out Daily Double with no score change and retained control', () => {
@@ -82,5 +83,6 @@ describe('Daily Double', () => {
     expect(closed.scores[controllingTeamId]).toBe(200);
     expect(closed.controllingTeamId).toBe(controllingTeamId);
     expect(closed.usedClueIds).toContain('dd');
+    expect(closed.phase).toBe('clue-reveal');
   });
 });
