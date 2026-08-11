@@ -33,6 +33,8 @@ function coordinatorHarness() {
   const contentService: CoordinatorContentService = {
     selectForMatch: vi.fn(() => selected),
     selectNextTiebreaker: vi.fn(() => ({ ...input.finalClues[1], round: 'tiebreaker' as const })),
+    reportClue: vi.fn((report) => ({ id: 1, ...report, resolvedAt: null })),
+    runTransaction: (action) => action(),
   };
   return {
     config: input.config,

@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import type { SelectedMatchContent } from '../../shared/game/boardSelector';
+import type { ContentReportInput, ContentReportRecord } from '../../shared/content/schema';
 import type { GameCommand } from '../../shared/game/commands';
 import { applyGameCommand, createGame, tickTimer, type SelectedBoards } from '../../shared/game/engine';
 import type { GameEvent } from '../../shared/game/events';
@@ -29,6 +30,8 @@ export interface CoordinatorContentService {
     excludedIds: readonly string[],
     tieIndex: number,
   ): Clue;
+  reportClue(input: ContentReportInput): ContentReportRecord;
+  runTransaction<T>(action: () => T): T;
 }
 
 export interface CoordinatorResumableMatch {
@@ -132,12 +135,25 @@ export class GameCoordinator {
       transition = applyGameCommand(baseState, command, occurrenceAt);
     }
 
-    this.options.repository.persistTransition(
+    const persist = () => this.options.repository.persistTransition(
       baseState.id,
       transition.events,
       transition.state,
       transition.state.phase === 'complete' ? occurrenceAt : undefined,
     );
+    if (command.type === 'ReportClue') {
+      this.options.contentService.runTransaction(() => {
+        this.options.contentService.reportClue({
+          clueId: command.clueId,
+          matchId: baseState.id,
+          note: command.reason,
+          createdAt: occurrenceAt,
+        });
+        persist();
+      });
+    } else {
+      persist();
+    }
     this.state = transition.state;
     this.revision += 1;
     this.scheduleTimer();

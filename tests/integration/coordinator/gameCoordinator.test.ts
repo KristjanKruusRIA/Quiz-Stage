@@ -26,6 +26,8 @@ function dependencies() {
       ...input.finalClues[1],
       round: 'tiebreaker' as const,
     })),
+    reportClue: vi.fn((report) => ({ id: 1, ...report, resolvedAt: null })),
+    runTransaction: (action) => action(),
   };
   const coordinator = new GameCoordinator({
     repository,
@@ -54,6 +56,8 @@ function timerDependencies() {
     contentService: {
       selectForMatch: () => selected,
       selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+      reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+      runTransaction: (action) => action(),
     },
     now: () => now,
     createSeed: () => 'authoritative-seed',

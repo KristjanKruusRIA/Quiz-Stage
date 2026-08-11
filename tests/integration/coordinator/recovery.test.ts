@@ -33,6 +33,8 @@ describe('GameCoordinator resumeLatest', () => {
       contentService: {
         selectForMatch: () => selected,
         selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+        reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+        runTransaction: (action) => action(),
       },
       now: () => 300,
     });
@@ -76,6 +78,8 @@ describe('GameCoordinator resumeLatest', () => {
       contentService: {
         selectForMatch: () => selected,
         selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+        reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+        runTransaction: (action) => action(),
       },
       now: () => 999,
     });
@@ -114,6 +118,8 @@ describe('GameCoordinator resumeLatest', () => {
       contentService: {
         selectForMatch: () => selected,
         selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+        reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+        runTransaction: (action) => action(),
       },
       now: () => 999,
     });
@@ -153,6 +159,8 @@ describe('GameCoordinator resumeLatest', () => {
       contentService: {
         selectForMatch: () => selected,
         selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+        reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+        runTransaction: (action) => action(),
       },
       now: () => 999,
     });
@@ -193,6 +201,8 @@ describe('GameCoordinator resumeLatest', () => {
       contentService: {
         selectForMatch: () => selected,
         selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+        reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
+        runTransaction: (action) => action(),
       },
       now: () => 600,
       setTimeout: (callback, delayMs) => {
