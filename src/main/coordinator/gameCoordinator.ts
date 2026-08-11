@@ -50,7 +50,7 @@ export interface CoordinatorMatchRepository {
   persistTransition(matchId: string, events: GameEvent[], state: GameState, completedAt?: number): void;
   loadResumable(): CoordinatorResumableMatch | null;
   recoverLatest(): CoordinatorRecoveredMatch | null;
-  completeMatch(matchId: string, completedAt?: number): void;
+  completeMatch(matchId: string, completedAt?: number, recoveredState?: GameState): void;
 }
 
 export interface GameCoordinatorOptions {
@@ -166,10 +166,13 @@ export class GameCoordinator {
   ): HostGameView | null {
     let state = structuredClone(resumable.state);
     let replayIssue = resumable.replayIssue;
+    let terminalEventAt: number | null = null;
 
     for (const [index, event] of resumable.events.entries()) {
       try {
-        state = replayEvent(structuredClone(state), event);
+        const replayed = replayEvent(structuredClone(state), event);
+        if (state.phase !== 'complete' && replayed.phase === 'complete') terminalEventAt = event.at;
+        state = replayed;
       } catch {
         replayIssue = { sequence: resumable.eventSequence + index + 1, reason: 'invalid-event' };
         break;
@@ -177,7 +180,7 @@ export class GameCoordinator {
     }
 
     if (state.phase === 'complete') {
-      this.options.repository.completeMatch(state.id, this.now());
+      this.options.repository.completeMatch(state.id, terminalEventAt ?? this.now(), state);
       return null;
     }
 

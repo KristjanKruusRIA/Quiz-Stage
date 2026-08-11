@@ -122,10 +122,17 @@ describe('GameCoordinator resumeLatest', () => {
     expect(ended.events).toMatchObject([{ type: 'MatchEnded', at: 456 }]);
     expect(recovered).toBeNull();
     expect(coordinator.getHostStateUpdate()).toBeNull();
-    expect(repository.completeMatch).toHaveBeenCalledWith(snapshot.id, 999);
+    expect(repository.completeMatch).toHaveBeenCalledWith(snapshot.id, 456, ended.state);
   });
 
-  it('leaves state, revision, subscribers, and timers unchanged when terminal reconciliation fails', async () => {
+  it.each([
+    'wrong match ID',
+    'nonterminal state',
+    'cursor mismatch',
+    'invalid schema',
+    'snapshot insertion failure',
+    'completion update failure',
+  ])('leaves state, revision, subscribers, and timers unchanged when reconciliation rejects %s', async (reason) => {
     const input = selectionInput();
     const selected = selectMatchContent(input);
     if (!selected.ok) throw new Error('fixture selection failed');
@@ -174,10 +181,11 @@ describe('GameCoordinator resumeLatest', () => {
     coordinator.subscribe('host', (view, revision) => published.push({ view, revision }));
     coordinator.subscribe('public', (view, revision) => published.push({ view, revision }));
     published.length = 0;
-    repository.completeMatch.mockImplementationOnce(() => { throw new Error('legacy reconciliation failed'); });
+    repository.completeMatch.mockImplementationOnce(() => { throw new Error(reason); });
 
-    await expect(coordinator.resumeLatest()).rejects.toThrow('legacy reconciliation failed');
+    await expect(coordinator.resumeLatest()).rejects.toThrow(reason);
 
+    expect(repository.completeMatch).toHaveBeenCalledWith(ended.state.id, 600, ended.state);
     expect(coordinator.getHostStateUpdate()).toEqual(before);
     expect([...callbacks.entries()]).toEqual(scheduledBefore);
     expect(published).toEqual([]);

@@ -192,8 +192,37 @@ export class MatchRepository {
     return null;
   }
 
-  completeMatch(matchId: string, completedAt = Date.now()): void {
+  completeMatch(matchId: string, completedAt = Date.now(), recoveredState?: GameState): void {
     if (!Number.isInteger(completedAt) || completedAt < 0) throw new Error('Completion time must be a nonnegative integer');
+    if (recoveredState !== undefined) {
+      const state = gameStateSchema.parse(recoveredState) as GameState;
+      if (state.id !== matchId) throw new Error('Recovered state match ID does not match the completed match ID');
+      if (state.phase !== 'complete') throw new Error('Only a complete recovered state can be reconciled');
+      const stateJson = JSON.stringify(state);
+      this.database.transaction(() => {
+        const latestEventSequence = this.database.prepare(
+          'SELECT COALESCE(MAX(sequence), 0) FROM match_events WHERE match_id = ?',
+        ).pluck().get(matchId) as number;
+        if (state.eventSequence !== latestEventSequence) {
+          throw new Error('Recovered state cursor does not match the persisted event cursor');
+        }
+        const previousPersistenceTime = this.database.prepare(
+          'SELECT COALESCE(MAX(updated_at), 0) FROM matches',
+        ).pluck().get() as number;
+        const persistedAt = Math.max(Date.now(), previousPersistenceTime + 1);
+        this.database.prepare(`
+          INSERT INTO match_snapshots (match_id, sequence, event_sequence, created_at, state_json)
+          VALUES (?, ?, ?, ?, ?)
+        `).run(matchId, this.nextSequence('match_snapshots', matchId), state.eventSequence, persistedAt, stateJson);
+        const result = this.database.prepare(`
+          UPDATE matches
+          SET completed_at = ?, ended_incomplete = ?, winner_team_id = ?, updated_at = ?
+          WHERE id = ? AND completed_at IS NULL
+        `).run(completedAt, state.endedIncomplete ? 1 : 0, state.winnerTeamId, persistedAt, matchId);
+        if (result.changes !== 1) throw new Error(`Match ${matchId} is missing or already complete`);
+      })();
+      return;
+    }
     const snapshot = this.latestValidSnapshot(matchId);
     if (snapshot === null) throw new Error(`Match ${matchId} has no valid snapshot`);
     if (snapshot.state.phase !== 'complete') throw new Error('Only a complete game state can be added to match history');

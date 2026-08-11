@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { applyGameCommand } from '../../../src/shared/game/engine';
+import { GameCoordinator } from '../../../src/main/coordinator/gameCoordinator';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { migrateDatabase } from '../../../src/main/persistence/migrations';
 import { MatchRepository } from '../../../src/main/persistence/matchRepository';
@@ -154,6 +155,152 @@ describe('MatchRepository recovery', () => {
         winnerTeamId: 'team-1',
       }),
     ]);
+  });
+
+  it('materializes a replay-validated incomplete ending when the terminal snapshot is corrupt', async () => {
+    const initial = game('corrupt-incomplete-terminal');
+    repository.persistTransition(initial.id, [], initial);
+    const ended = applyGameCommand(initial, { type: 'EndIncompleteMatch' }, 700);
+    repository.persistTransition(initial.id, ended.events, ended.state, 700);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{}', initial.id, 2);
+    database.prepare(`
+      UPDATE matches SET completed_at = NULL, ended_incomplete = 0, winner_team_id = NULL WHERE id = ?
+    `).run(initial.id);
+
+    const recovered = repository.recoverLatest();
+    expect(recovered).toEqual(expect.objectContaining({
+      matchId: initial.id,
+      recoveredFromSnapshotSequence: 1,
+      skippedInvalidSnapshotSequences: [2],
+      eventSequence: 0,
+      events: ended.events,
+      replayIssue: null,
+    }));
+
+    const coordinator = new GameCoordinator({ repository, contentService: {} as never, now: () => 800 });
+    await expect(coordinator.resumeLatest()).resolves.toBeNull();
+    expect(repository.recoverLatest()).toBeNull();
+    expect(repository.listHistory()).toEqual([
+      expect.objectContaining({
+        id: initial.id,
+        completedAt: 700,
+        completionState: 'incomplete',
+        winnerTeamId: null,
+      }),
+    ]);
+  });
+
+  it('materializes a replay-validated normal winner when the terminal snapshot is corrupt', async () => {
+    const initial = game('corrupt-winner-terminal');
+    const beforeWinner = {
+      ...initial,
+      phase: 'final-clue' as const,
+      scores: { 'team-1': 100, 'team-2': 0 },
+      finalEligibleTeamIds: ['team-1'],
+      finalRevealOrder: ['team-1'],
+      finalWagers: { 'team-1': 50 },
+      activeClue: {
+        clueId: initial.finalClue!.id,
+        lockedOutTeamIds: [],
+        lockedTeamId: null,
+        responseRevealed: false,
+      },
+      timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' as const },
+    };
+    repository.persistTransition(initial.id, [], beforeWinner);
+    const won = applyGameCommand(beforeWinner, { type: 'RevealFinalTeam', teamId: 'team-1', correct: true }, 900);
+    repository.persistTransition(initial.id, won.events, won.state, 900);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{}', initial.id, 2);
+    database.prepare(`
+      UPDATE matches SET completed_at = NULL, ended_incomplete = 0, winner_team_id = NULL WHERE id = ?
+    `).run(initial.id);
+
+    const recovered = repository.recoverLatest();
+    expect(recovered).toEqual(expect.objectContaining({
+      matchId: initial.id,
+      recoveredFromSnapshotSequence: 1,
+      skippedInvalidSnapshotSequences: [2],
+      eventSequence: 0,
+      events: won.events,
+      replayIssue: null,
+    }));
+
+    const coordinator = new GameCoordinator({ repository, contentService: {} as never, now: () => 1_000 });
+    await expect(coordinator.resumeLatest()).resolves.toBeNull();
+    expect(repository.recoverLatest()).toBeNull();
+    expect(repository.listHistory()).toEqual([
+      expect.objectContaining({
+        id: initial.id,
+        completedAt: 900,
+        completionState: 'complete',
+        winnerTeamId: 'team-1',
+      }),
+    ]);
+  });
+
+  it('rejects an invalid recovered terminal state without changing snapshots or completion metadata', () => {
+    const initial = game('rejected-terminal-state');
+    repository.persistTransition(initial.id, [], initial);
+    const ended = applyGameCommand(initial, { type: 'EndIncompleteMatch' }, 1_100);
+    repository.persistTransition(initial.id, ended.events, ended.state, 1_100);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{}', initial.id, 2);
+    database.prepare('UPDATE matches SET completed_at = NULL, ended_incomplete = 0 WHERE id = ?').run(initial.id);
+
+    const invalidStates = [
+      { state: { ...ended.state, id: 'other-match' }, error: /match ID/ },
+      { state: initial, error: /complete recovered state/ },
+      { state: { ...ended.state, eventSequence: ended.state.eventSequence + 1 }, error: /cursor/ },
+      { state: { ...ended.state, unexpectedPrivateField: 'must not persist' }, error: /unrecognized|unexpected/i },
+    ];
+    for (const invalid of invalidStates) {
+      expect(() => repository.completeMatch(initial.id, 1_200, invalid.state as never)).toThrow(invalid.error);
+      expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(initial.id)).toBe(2);
+      expect(database.prepare('SELECT completed_at FROM matches WHERE id = ?').pluck().get(initial.id)).toBeNull();
+    }
+    expect(repository.recoverLatest()).toEqual(expect.objectContaining({
+      matchId: initial.id,
+      recoveredFromSnapshotSequence: 1,
+      skippedInvalidSnapshotSequences: [2],
+      events: ended.events,
+      replayIssue: null,
+    }));
+    expect(repository.listHistory()).toEqual([]);
+  });
+
+  it.each(['snapshot insertion', 'completion update'])('rolls back recovered terminal %s failures', (failure) => {
+    const initial = game(`reconciliation-${failure.replace(' ', '-')}`);
+    repository.persistTransition(initial.id, [], initial);
+    const ended = applyGameCommand(initial, { type: 'EndIncompleteMatch' }, 1_300);
+    repository.persistTransition(initial.id, ended.events, ended.state, 1_300);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{}', initial.id, 2);
+    database.prepare('UPDATE matches SET completed_at = NULL, ended_incomplete = 0 WHERE id = ?').run(initial.id);
+    database.exec(failure === 'snapshot insertion' ? `
+      CREATE TRIGGER fail_reconciliation_snapshot
+      BEFORE INSERT ON match_snapshots
+      WHEN NEW.match_id = '${initial.id}'
+      BEGIN SELECT RAISE(ABORT, 'forced reconciliation snapshot failure'); END;
+    ` : `
+      CREATE TRIGGER fail_reconciliation_completion
+      BEFORE UPDATE OF completed_at ON matches
+      WHEN NEW.id = '${initial.id}' AND NEW.completed_at IS NOT NULL
+      BEGIN SELECT RAISE(ABORT, 'forced reconciliation completion failure'); END;
+    `);
+
+    expect(() => repository.completeMatch(initial.id, 1_400, ended.state)).toThrow(/forced reconciliation/);
+
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(initial.id)).toBe(2);
+    expect(database.prepare('SELECT completed_at FROM matches WHERE id = ?').pluck().get(initial.id)).toBeNull();
+    expect(repository.recoverLatest()).toEqual(expect.objectContaining({
+      matchId: initial.id,
+      recoveredFromSnapshotSequence: 1,
+      skippedInvalidSnapshotSequences: [2],
+      events: ended.events,
+    }));
+    expect(repository.listHistory()).toEqual([]);
   });
 
   it('chooses the latest incomplete match with a valid snapshot and never offers completed matches', () => {
