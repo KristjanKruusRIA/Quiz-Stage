@@ -62,6 +62,7 @@ if (squirrelStartup) {
   app.on('before-quit', () => {
     disposeIpc?.();
     disposeIpc = null;
+    windowManager?.dispose();
     windowManager = null;
     application?.close();
     application = null;

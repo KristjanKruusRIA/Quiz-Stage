@@ -40,6 +40,7 @@ function harness() {
       destroyed[index] = true;
       closeListeners[index]?.();
     },
+    destroy: (index: number) => { destroyed[index] = true; },
   };
 }
 
@@ -76,19 +77,64 @@ describe('WindowManager', () => {
     expect(windows[1].webContents.setWindowOpenHandler).toHaveBeenCalled();
   });
 
-  it('clears closed surface references and recreates only the missing dual window', () => {
+  it('automatically recreates a closed host while preserving the live public window', async () => {
     const { manager, windows, close } = harness();
     const first = manager.create('dual');
 
     close(0);
-    expect(manager.getWindows()).toEqual({ hostWindow: null, publicWindow: first.publicWindow });
-    const afterHostClose = manager.create('dual');
+    await Promise.resolve();
+
+    const afterHostClose = manager.getWindows();
     expect(afterHostClose).toEqual({ hostWindow: windows[2], publicWindow: first.publicWindow });
+    expect(windows).toHaveLength(3);
+  });
+
+  it('automatically recreates a closed public window while preserving the live host', async () => {
+    const { manager, windows, close } = harness();
+    const first = manager.create('dual');
 
     close(1);
-    expect(manager.getWindows()).toEqual({ hostWindow: windows[2], publicWindow: null });
-    const afterPublicClose = manager.create('dual');
-    expect(afterPublicClose).toEqual({ hostWindow: windows[2], publicWindow: windows[3] });
+    await Promise.resolve();
+
+    const afterPublicClose = manager.getWindows();
+    expect(afterPublicClose).toEqual({ hostWindow: first.hostWindow, publicWindow: windows[2] });
+    expect(windows).toHaveLength(3);
+  });
+
+  it('recreates both surfaces once when both dual windows close together', async () => {
+    const { manager, windows, close } = harness();
+    manager.create('dual');
+
+    close(0);
+    close(1);
+    await Promise.resolve();
+
+    expect(manager.getWindows()).toEqual({ hostWindow: windows[2], publicWindow: windows[3] });
     expect(windows).toHaveLength(4);
+  });
+
+  it('recovers a destroyed surface discovered by a live window lookup', async () => {
+    const { manager, windows, destroy } = harness();
+    const first = manager.create('dual');
+
+    destroy(0);
+    expect(manager.getWindows()).toEqual({ hostWindow: null, publicWindow: first.publicWindow });
+    await Promise.resolve();
+
+    expect(manager.getWindows()).toEqual({ hostWindow: windows[2], publicWindow: first.publicWindow });
+    expect(windows).toHaveLength(3);
+  });
+
+  it('does not recreate closed windows after shutdown begins', async () => {
+    const { manager, windows, close } = harness();
+    manager.create('dual');
+
+    manager.dispose();
+    close(0);
+    close(1);
+    await Promise.resolve();
+
+    expect(manager.getWindows()).toEqual({ hostWindow: null, publicWindow: null });
+    expect(windows).toHaveLength(2);
   });
 });

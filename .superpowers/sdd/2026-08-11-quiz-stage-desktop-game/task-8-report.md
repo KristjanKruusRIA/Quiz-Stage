@@ -137,3 +137,54 @@ PACKAGED_NATIVE_OK bytes=1989632
 - Lifecycle/authentication: host authorization reads the live host webContents ID on each call, so a replaced host invalidates the old sender immediately. Closing host/public clears only that reference; the other display continues, destroyed public sends are non-fatal, and recreated windows retain all Task 1 security settings.
 - Recovery: a failed replay candidate is discarded byte-for-byte, while prior validated prefix state and deterministic `replayIssue` remain authoritative.
 - Boundary validation: subscription cleanup still removes the exact wrapped listener. Valid host dispatch and valid public subscription paths remain accepted; malformed results and cross-surface state are rejected before user listeners receive them.
+
+## Fix round 2: automatic partial-window recovery
+
+### RED evidence
+
+The dual-window lifecycle test previously called `WindowManager.create()` manually after each close, masking that Windows emits no application `activate` event to restore a missing surface. Replacing that manual step with automatic recovery expectations produced the intended three failures:
+
+```text
+npm run test:run -- tests/integration/windows/windowManager.test.ts
+Test Files 1 failed (1); Tests 3 failed | 2 passed; exit 1
+```
+
+The failures showed a closed host remaining `null` while public stayed live, a closed public surface remaining `null` while host stayed live, and the absence of a shutdown lifecycle guard.
+
+An additional destroy-before-`closed` regression then failed 1/7 focused tests, proving that a live IPC lookup could clear a destroyed reference before the close callback and suppress recovery. Recovery is therefore scheduled from both the close callback and destroyed-reference cleanup through the same deduplicated path.
+
+### Fix
+
+`WindowManager` now retains the intended display mode and schedules missing-surface recovery in a microtask after a close. Recovery reuses the normal secure surface factory, preserves the unaffected surface, and coalesces per-surface requests so simultaneous closes create one replacement pair without loops or duplicates. `dispose()` permanently disables recovery, and main calls it during `before-quit` before dropping the manager reference or closing application resources.
+
+### GREEN verification
+
+```text
+npm run test:run -- tests/integration/windows/windowManager.test.ts tests/integration/ipc/registerIpc.test.ts
+Test Files 2 passed (2); Tests 9 passed (9); exit 0
+
+npm run test:run
+Test Files 20 passed (20); Tests 123 passed (123); exit 0
+
+npm run lint
+eslint .; exit 0
+
+npm run typecheck
+tsc --noEmit; exit 0
+
+npm run build
+Electron Forge packaged x64 on win32; exit 0
+
+PACKAGED_SEED_OK bytes=188416
+PACKAGED_NATIVE_OK win32-x64.node bytes=1989632
+
+git diff --check
+exit 0
+```
+
+### Fix-round self-review
+
+- Runtime recovery: a host close in dual mode restores the authoritative host without replacing the live public window; a public close restores only the display while the coordinator remains untouched. Simultaneous closes create exactly two replacements.
+- Shutdown: `before-quit` disposes the manager before Electron closes windows. Already queued recovery callbacks and later close notifications both observe the guard and cannot create new windows during teardown.
+- Authorization/subscriptions: IPC still resolves current manager references for every sender check and publish, so the former host ID becomes unauthorized and replacements receive existing coordinator publications without re-registering listeners.
+- Security/offline packaging: every replacement goes through the existing sandboxed, context-isolated, navigation-blocked factory with its explicit surface argument. The packaged seed and Windows x64 SQLite native prebuild remain present; no network path was added.
