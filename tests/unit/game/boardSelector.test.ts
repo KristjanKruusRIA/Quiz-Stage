@@ -84,6 +84,30 @@ describe('deterministic board selection', () => {
     ]);
   });
 
+  it('applies Round Two ranking independently when names also occur in Round One', () => {
+    const roundOne = [
+      { ...namedSet('r1-high-name', 'round-one', 'High overlap'), lastSeenAt: null },
+      { ...namedSet('r1-low-name', 'round-one', 'Low overlap'), lastSeenAt: 10 },
+      ...Array.from({ length: 5 }, (_, index) => ({
+        ...namedSet(`r1-required-${index}`, 'round-one', `Round One ${index}`),
+        lastSeenAt: 20 + index,
+      })),
+    ];
+    const roundTwo = [
+      { ...namedSet('r2-high', 'round-two', 'High overlap'), lastSeenAt: null },
+      ...Array.from({ length: 5 }, (_, index) => ({
+        ...namedSet(`r2-required-${index}`, 'round-two', `Round Two ${index}`),
+        lastSeenAt: 10 + index,
+      })),
+      { ...namedSet('r2-low', 'round-two', 'Low overlap'), lastSeenAt: 60 },
+    ];
+
+    const result = requireMatch(selectMatchContent(selectionInput({ categorySets: [...roundOne, ...roundTwo] })));
+
+    expect(result.roundTwo.categories.map((category) => category.id)).toContain('r2-high');
+    expect(result.roundTwo.categories.map((category) => category.id)).not.toContain('r2-low');
+  });
+
   it('filters disabled packs and content, wrong difficulty and round, incomplete language, and malformed tiers', () => {
     const validRoundOne = Array.from({ length: 5 }, (_, index) => categorySet(`valid-r1-${index}`, 'round-one'));
     const validRoundTwo = Array.from({ length: 4 }, (_, index) => categorySet(`valid-r2-${index}`, 'round-two'));
@@ -149,27 +173,32 @@ describe('deterministic board selection', () => {
     expect(result).toEqual({ ok: false, roundOneMissing: 2, roundTwoMissing: 4, finalMissing: 0 });
   });
 
-  it('bounds conflict search after pruning hundreds of dominated candidates', () => {
-    let normalizedNameReads = 0;
-    const candidates = Array.from({ length: 400 }, (_, index) => {
-      const round = index < 200 ? 'round-one' as const : 'round-two' as const;
-      const name = `Shared ${index % 5}`;
-      const localizedName = { et: name } as { en: string; et: string };
-      Object.defineProperty(localizedName, 'en', {
-        enumerable: true,
-        get() {
-          normalizedNameReads += 1;
-          if (normalizedNameReads > 2_000) throw new Error('Joint search exceeded the deterministic name-read bound');
-          return name;
-        },
-      });
-      return categorySet(`stress-${index}`, round, { name: localizedName, macroTopic: 'one-topic' });
-    });
+  it('bounds exact allocation work for hundreds of distinct names and macro options', () => {
+    const candidates = Array.from({ length: 150 }, (_, nameIndex) =>
+      (['round-one', 'round-two'] as const).flatMap((round) =>
+        [0, 1].map((macroVariant) => namedSet(
+          `stress-${round}-${nameIndex}-${macroVariant}`,
+          round,
+          `Distinct ${nameIndex}`,
+          `topic-${(nameIndex + macroVariant) % 30}`,
+        )),
+      )).flat();
+    const diagnostics = {
+      targetChecks: 0,
+      maxAugmentationsPerCheck: 0,
+      maxEdgeScansPerCheck: 0,
+      nodeCount: 0,
+      directedEdgeCount: 0,
+    };
+    const result = selectMatchContent(selectionInput({ categorySets: candidates }), diagnostics);
 
-    const result = selectMatchContent(selectionInput({ categorySets: candidates }));
-
-    expect(result).toEqual({ ok: false, roundOneMissing: 4, roundTwoMissing: 4, finalMissing: 0 });
-    expect(normalizedNameReads).toBeLessThanOrEqual(2_000);
+    expect(result.ok).toBe(true);
+    expect(diagnostics.targetChecks).toBeGreaterThan(0);
+    expect(diagnostics.targetChecks).toBeLessThanOrEqual(8);
+    expect(diagnostics.maxAugmentationsPerCheck).toBeLessThanOrEqual(12);
+    expect(diagnostics.maxEdgeScansPerCheck).toBeLessThanOrEqual(
+      12 * diagnostics.nodeCount * diagnostics.directedEdgeCount,
+    );
   });
 
   it('returns byte-equivalent selected content for byte-equivalent input and seed', () => {

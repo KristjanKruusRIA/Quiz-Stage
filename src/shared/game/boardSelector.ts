@@ -55,6 +55,14 @@ export interface SelectionShortage {
 
 export type SelectedMatchContent = SelectedMatch | SelectionShortage;
 
+export interface SelectionFlowDiagnostics {
+  targetChecks: number;
+  maxAugmentationsPerCheck: number;
+  maxEdgeScansPerCheck: number;
+  nodeCount: number;
+  directedEdgeCount: number;
+}
+
 export function createSeededRandom(seed: string): () => number {
   let state = 0x811c9dc5;
   for (let index = 0; index < seed.length; index += 1) {
@@ -71,11 +79,19 @@ export function createSeededRandom(seed: string): () => number {
   };
 }
 
-export function selectMatchContent(input: SelectionInput): SelectedMatchContent {
+export function selectMatchContent(
+  input: SelectionInput,
+  diagnostics?: SelectionFlowDiagnostics,
+): SelectedMatchContent {
   const roundOneCandidates = eligibleCategorySets(input, 'round-one');
   const roundTwoCandidates = eligibleCategorySets(input, 'round-two');
   const finals = eligibleFinalClues(input);
-  const allocation = findBestJointAllocation(roundOneCandidates, roundTwoCandidates, input.config.language);
+  const allocation = findBestJointAllocation(
+    roundOneCandidates,
+    roundTwoCandidates,
+    input.config.language,
+    diagnostics,
+  );
   const hasCompleteBoards = allocation.roundOne.length === CATEGORIES_PER_BOARD
     && allocation.roundTwo.length === CATEGORIES_PER_BOARD;
 
@@ -231,6 +247,7 @@ interface CategoryOption {
 }
 
 interface NameGroup {
+  name: string;
   options: CategoryOption[];
 }
 
@@ -239,39 +256,58 @@ interface JointAllocation {
   roundTwo: SelectableCategorySet[];
 }
 
-interface JointSearchIndex {
-  groups: NameGroup[];
-  roundOneSuffixCounts: number[];
-  roundTwoSuffixCounts: number[];
-  roundOneTopicPositions: Map<string, number[]>;
-  roundTwoTopicPositions: Map<string, number[]>;
+interface FlowEdge {
+  to: number;
+  reverseIndex: number;
+  capacity: number;
+  cost: number;
+}
+
+interface FlowRun {
+  allocation: JointAllocation;
+  flow: number;
+  augmentations: number;
+  edgeScans: number;
+  nodeCount: number;
+  directedEdgeCount: number;
 }
 
 function findBestJointAllocation(
   roundOne: readonly SelectableCategorySet[],
   roundTwo: readonly SelectableCategorySet[],
   language: Language,
+  diagnostics?: SelectionFlowDiagnostics,
 ): JointAllocation {
-  const searchIndex = buildJointSearchIndex(roundOne, roundTwo, language);
-
-  // Shortages maximize total fill, then prefer filling Round One before Round Two.
-  for (let total = CATEGORIES_PER_BOARD * 2; total >= 0; total -= 1) {
-    const maximumRoundOne = Math.min(CATEGORIES_PER_BOARD, total);
-    const minimumRoundOne = Math.max(0, total - CATEGORIES_PER_BOARD);
-    for (let roundOneSize = maximumRoundOne; roundOneSize >= minimumRoundOne; roundOneSize -= 1) {
-      const allocation = findJointAllocation(searchIndex, roundOneSize, total - roundOneSize);
-      if (allocation !== null) return allocation;
-    }
+  const groups = buildNameGroups(roundOne, roundTwo, language);
+  if (diagnostics !== undefined) {
+    diagnostics.targetChecks = 0;
+    diagnostics.maxAugmentationsPerCheck = 0;
+    diagnostics.maxEdgeScansPerCheck = 0;
+    diagnostics.nodeCount = 0;
+    diagnostics.directedEdgeCount = 0;
   }
 
-  return { roundOne: [], roundTwo: [] };
+  const maximum = runFlow(groups, CATEGORIES_PER_BOARD, CATEGORIES_PER_BOARD);
+  recordFlowDiagnostics(diagnostics, maximum);
+  if (maximum.flow === CATEGORIES_PER_BOARD * 2) return maximum.allocation;
+
+  // Shortages maximize total fill, then prefer filling Round One before Round Two.
+  const maximumRoundOne = Math.min(CATEGORIES_PER_BOARD, maximum.flow);
+  const minimumRoundOne = Math.max(0, maximum.flow - CATEGORIES_PER_BOARD);
+  for (let roundOneSize = maximumRoundOne; roundOneSize >= minimumRoundOne; roundOneSize -= 1) {
+    const run = runFlow(groups, roundOneSize, maximum.flow - roundOneSize);
+    recordFlowDiagnostics(diagnostics, run);
+    if (run.flow === maximum.flow) return run.allocation;
+  }
+
+  throw new Error('Maximum joint board flow could not be reproduced by an exact round allocation');
 }
 
-function buildJointSearchIndex(
+function buildNameGroups(
   roundOne: readonly SelectableCategorySet[],
   roundTwo: readonly SelectableCategorySet[],
   language: Language,
-): JointSearchIndex {
+): NameGroup[] {
   const groupsByName = new Map<string, Map<string, CategoryOption>>();
 
   function addCandidates(candidates: readonly SelectableCategorySet[], round: Board['round']): void {
@@ -287,19 +323,9 @@ function buildJointSearchIndex(
   addCandidates(roundOne, 'round-one');
   addCandidates(roundTwo, 'round-two');
 
-  const groups = [...groupsByName.values()].map((options) => ({
-    options: [...options.values()].sort(compareOptions),
-  }));
-  const roundOneSuffixCounts = buildSuffixCounts(groups, 'round-one');
-  const roundTwoSuffixCounts = buildSuffixCounts(groups, 'round-two');
-
-  return {
-    groups,
-    roundOneSuffixCounts,
-    roundTwoSuffixCounts,
-    roundOneTopicPositions: buildTopicPositions(groups, 'round-one'),
-    roundTwoTopicPositions: buildTopicPositions(groups, 'round-two'),
-  };
+  return [...groupsByName.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([name, options]) => ({ name, options: [...options.values()].sort(compareOptions) }));
 }
 
 function compareOptions(left: CategoryOption, right: CategoryOption): number {
@@ -307,153 +333,144 @@ function compareOptions(left: CategoryOption, right: CategoryOption): number {
   return left.rank - right.rank || left.category.id.localeCompare(right.category.id);
 }
 
-function buildSuffixCounts(groups: readonly NameGroup[], round: Board['round']): number[] {
-  const result = Array.from({ length: groups.length + 1 }, () => 0);
-  for (let index = groups.length - 1; index >= 0; index -= 1) {
-    result[index] = result[index + 1] + (groups[index].options.some((option) => option.round === round) ? 1 : 0);
-  }
-  return result;
-}
-
-function buildTopicPositions(groups: readonly NameGroup[], round: Board['round']): Map<string, number[]> {
-  const result = new Map<string, number[]>();
-  groups.forEach((group, groupIndex) => {
-    const topics = new Set(group.options
-      .filter((option) => option.round === round)
-      .map((option) => option.category.macroTopic));
-    for (const topic of topics) {
-      const positions = result.get(topic) ?? [];
-      positions.push(groupIndex);
-      result.set(topic, positions);
-    }
-  });
-  return result;
-}
-
-function findJointAllocation(
-  searchIndex: JointSearchIndex,
+function runFlow(
+  groups: readonly NameGroup[],
   targetRoundOne: number,
   targetRoundTwo: number,
-): JointAllocation | null {
-  const selectedRoundOne: CategoryOption[] = [];
-  const selectedRoundTwo: CategoryOption[] = [];
-  const roundOneMacroCounts = new Map<string, number>();
-  const roundTwoMacroCounts = new Map<string, number>();
-  const failedStates = new Set<string>();
+): FlowRun {
+  const source = 0;
+  const nameNodes = new Map(groups.map((group, index) => [group.name, index + 1]));
+  const roundOneTopics = uniqueSortedTopics(groups, 'round-one');
+  const roundTwoTopics = uniqueSortedTopics(groups, 'round-two');
+  let nextNode = groups.length + 1;
+  const roundOneTopicNodes = new Map(roundOneTopics.map((topic) => [topic, nextNode++]));
+  const roundTwoTopicNodes = new Map(roundTwoTopics.map((topic) => [topic, nextNode++]));
+  const roundOneNode = nextNode++;
+  const roundTwoNode = nextNode++;
+  const sink = nextNode++;
+  const graph: FlowEdge[][] = Array.from({ length: nextNode }, () => []);
+  const optionEdges: Array<{ option: CategoryOption; edge: FlowEdge }> = [];
 
-  function visit(groupIndex: number, roundOneRemaining: number, roundTwoRemaining: number): boolean {
-    if (roundOneRemaining === 0 && roundTwoRemaining === 0) return true;
-    if (!canStillFill(
-      searchIndex,
-      groupIndex,
-      roundOneRemaining,
-      roundTwoRemaining,
-      roundOneMacroCounts,
-      roundTwoMacroCounts,
-    )) return false;
-
-    const stateKey = selectionStateKey(
-      groupIndex,
-      roundOneRemaining,
-      roundTwoRemaining,
-      roundOneMacroCounts,
-      roundTwoMacroCounts,
-    );
-    if (failedStates.has(stateKey)) return false;
-
-    const group = searchIndex.groups[groupIndex];
+  for (const group of groups) {
+    const nameNode = nameNodes.get(group.name)!;
+    addFlowEdge(graph, source, nameNode, 1, 0);
     for (const option of group.options) {
-      const remaining = option.round === 'round-one' ? roundOneRemaining : roundTwoRemaining;
-      const macroCounts = option.round === 'round-one' ? roundOneMacroCounts : roundTwoMacroCounts;
-      const selected = option.round === 'round-one' ? selectedRoundOne : selectedRoundTwo;
-      const macroCount = macroCounts.get(option.category.macroTopic) ?? 0;
-      if (remaining === 0 || macroCount >= MAX_MACRO_TOPIC_PER_BOARD) continue;
-
-      selected.push(option);
-      macroCounts.set(option.category.macroTopic, macroCount + 1);
-      const found = visit(
-        groupIndex + 1,
-        roundOneRemaining - (option.round === 'round-one' ? 1 : 0),
-        roundTwoRemaining - (option.round === 'round-two' ? 1 : 0),
-      );
-      if (found) return true;
-      selected.pop();
-      restoreMacroCount(macroCounts, option.category.macroTopic, macroCount);
+      const topicNodes = option.round === 'round-one' ? roundOneTopicNodes : roundTwoTopicNodes;
+      const edge = addFlowEdge(graph, nameNode, topicNodes.get(option.category.macroTopic)!, 1, option.rank);
+      optionEdges.push({ option, edge });
     }
-
-    if (visit(groupIndex + 1, roundOneRemaining, roundTwoRemaining)) return true;
-    failedStates.add(stateKey);
-    return false;
   }
+  for (const topicNode of roundOneTopicNodes.values()) {
+    addFlowEdge(graph, topicNode, roundOneNode, MAX_MACRO_TOPIC_PER_BOARD, 0);
+  }
+  for (const topicNode of roundTwoTopicNodes.values()) {
+    addFlowEdge(graph, topicNode, roundTwoNode, MAX_MACRO_TOPIC_PER_BOARD, 0);
+  }
+  addFlowEdge(graph, roundOneNode, sink, targetRoundOne, 0);
+  addFlowEdge(graph, roundTwoNode, sink, targetRoundTwo, 0);
 
-  if (!visit(0, targetRoundOne, targetRoundTwo)) return null;
+  const directedEdgeCount = graph.reduce((total, edges) => total + edges.length, 0);
+  const result = minCostMaximumFlow(graph, source, sink, targetRoundOne + targetRoundTwo);
+  const selected = optionEdges.filter(({ edge }) => edge.capacity === 0).map(({ option }) => option);
+
   return {
-    roundOne: selectedRoundOne.sort((left, right) => left.rank - right.rank).map((option) => option.category),
-    roundTwo: selectedRoundTwo.sort((left, right) => left.rank - right.rank).map((option) => option.category),
+    allocation: {
+      roundOne: selected
+        .filter((option) => option.round === 'round-one')
+        .sort(compareOptions)
+        .map((option) => option.category),
+      roundTwo: selected
+        .filter((option) => option.round === 'round-two')
+        .sort(compareOptions)
+        .map((option) => option.category),
+    },
+    flow: result.flow,
+    augmentations: result.augmentations,
+    edgeScans: result.edgeScans,
+    nodeCount: graph.length,
+    directedEdgeCount,
   };
 }
 
-function canStillFill(
-  searchIndex: JointSearchIndex,
-  groupIndex: number,
-  roundOneRemaining: number,
-  roundTwoRemaining: number,
-  roundOneMacroCounts: ReadonlyMap<string, number>,
-  roundTwoMacroCounts: ReadonlyMap<string, number>,
-): boolean {
-  if (searchIndex.groups.length - groupIndex < roundOneRemaining + roundTwoRemaining) return false;
-  if (searchIndex.roundOneSuffixCounts[groupIndex] < roundOneRemaining) return false;
-  if (searchIndex.roundTwoSuffixCounts[groupIndex] < roundTwoRemaining) return false;
-  return macroCapacity(searchIndex.roundOneTopicPositions, groupIndex, roundOneMacroCounts) >= roundOneRemaining
-    && macroCapacity(searchIndex.roundTwoTopicPositions, groupIndex, roundTwoMacroCounts) >= roundTwoRemaining;
+function uniqueSortedTopics(groups: readonly NameGroup[], round: Board['round']): string[] {
+  return [...new Set(groups.flatMap((group) => group.options
+    .filter((option) => option.round === round)
+    .map((option) => option.category.macroTopic)))]
+    .sort((left, right) => left.localeCompare(right));
 }
 
-function macroCapacity(
-  topicPositions: ReadonlyMap<string, number[]>,
-  groupIndex: number,
-  macroCounts: ReadonlyMap<string, number>,
-): number {
-  let capacity = 0;
-  for (const [topic, positions] of topicPositions) {
-    const available = positions.length - lowerBound(positions, groupIndex);
-    capacity += Math.min(
-      available,
-      Math.max(0, MAX_MACRO_TOPIC_PER_BOARD - (macroCounts.get(topic) ?? 0)),
-    );
+function addFlowEdge(
+  graph: FlowEdge[][],
+  from: number,
+  to: number,
+  capacity: number,
+  cost: number,
+): FlowEdge {
+  const forward: FlowEdge = { to, reverseIndex: graph[to].length, capacity, cost };
+  const reverse: FlowEdge = { to: from, reverseIndex: graph[from].length, capacity: 0, cost: -cost };
+  graph[from].push(forward);
+  graph[to].push(reverse);
+  return forward;
+}
+
+function minCostMaximumFlow(
+  graph: FlowEdge[][],
+  source: number,
+  sink: number,
+  maximumFlow: number,
+): { flow: number; augmentations: number; edgeScans: number } {
+  let flow = 0;
+  let augmentations = 0;
+  let edgeScans = 0;
+
+  while (flow < maximumFlow) {
+    const distances = Array.from({ length: graph.length }, () => Number.POSITIVE_INFINITY);
+    const previousNodes = Array.from({ length: graph.length }, () => -1);
+    const previousEdges = Array.from({ length: graph.length }, () => -1);
+    distances[source] = 0;
+
+    for (let iteration = 0; iteration < graph.length - 1; iteration += 1) {
+      let changed = false;
+      for (let from = 0; from < graph.length; from += 1) {
+        if (!Number.isFinite(distances[from])) continue;
+        for (let edgeIndex = 0; edgeIndex < graph[from].length; edgeIndex += 1) {
+          edgeScans += 1;
+          const edge = graph[from][edgeIndex];
+          const distance = distances[from] + edge.cost;
+          if (edge.capacity === 0 || distance >= distances[edge.to]) continue;
+          distances[edge.to] = distance;
+          previousNodes[edge.to] = from;
+          previousEdges[edge.to] = edgeIndex;
+          changed = true;
+        }
+      }
+      if (!changed) break;
+    }
+
+    if (previousNodes[sink] === -1) break;
+    let amount = maximumFlow - flow;
+    for (let node = sink; node !== source; node = previousNodes[node]) {
+      amount = Math.min(amount, graph[previousNodes[node]][previousEdges[node]].capacity);
+    }
+    for (let node = sink; node !== source; node = previousNodes[node]) {
+      const edge = graph[previousNodes[node]][previousEdges[node]];
+      edge.capacity -= amount;
+      graph[node][edge.reverseIndex].capacity += amount;
+    }
+    flow += amount;
+    augmentations += 1;
   }
-  return capacity;
+
+  return { flow, augmentations, edgeScans };
 }
 
-function lowerBound(values: readonly number[], target: number): number {
-  let low = 0;
-  let high = values.length;
-  while (low < high) {
-    const middle = Math.floor((low + high) / 2);
-    if (values[middle] < target) low = middle + 1;
-    else high = middle;
-  }
-  return low;
-}
-
-function selectionStateKey(
-  groupIndex: number,
-  roundOneRemaining: number,
-  roundTwoRemaining: number,
-  roundOneMacroCounts: ReadonlyMap<string, number>,
-  roundTwoMacroCounts: ReadonlyMap<string, number>,
-): string {
-  return JSON.stringify([
-    groupIndex,
-    roundOneRemaining,
-    roundTwoRemaining,
-    [...roundOneMacroCounts].sort(([left], [right]) => left.localeCompare(right)),
-    [...roundTwoMacroCounts].sort(([left], [right]) => left.localeCompare(right)),
-  ]);
-}
-
-function restoreMacroCount(macroCounts: Map<string, number>, topic: string, previousCount: number): void {
-  if (previousCount === 0) macroCounts.delete(topic);
-  else macroCounts.set(topic, previousCount);
+function recordFlowDiagnostics(diagnostics: SelectionFlowDiagnostics | undefined, run: FlowRun): void {
+  if (diagnostics === undefined) return;
+  diagnostics.targetChecks += 1;
+  diagnostics.maxAugmentationsPerCheck = Math.max(diagnostics.maxAugmentationsPerCheck, run.augmentations);
+  diagnostics.maxEdgeScansPerCheck = Math.max(diagnostics.maxEdgeScansPerCheck, run.edgeScans);
+  diagnostics.nodeCount = Math.max(diagnostics.nodeCount, run.nodeCount);
+  diagnostics.directedEdgeCount = Math.max(diagnostics.directedEdgeCount, run.directedEdgeCount);
 }
 
 function normalizedName(category: SelectableCategorySet, language: Language): string {
