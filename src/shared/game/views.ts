@@ -21,7 +21,13 @@ export function toHostGameView(state: GameState, replayIssue: RecoveryIssue | nu
 export function toPublicGameView(state: GameState): PublicGameView {
   const language = state.config.language;
   const activeClue = state.activeClue === null ? null : findClue(state, state.activeClue.clueId);
-  const board = activeBoard(state, activeClue);
+  const board = activeBoard(state);
+  const showActiveClue = state.phase === 'ordinary-clue'
+    || state.phase === 'daily-double-clue'
+    || state.phase === 'final-clue'
+    || state.phase === 'final-reveal'
+    || state.phase === 'tiebreaker'
+    || (state.phase === 'complete' && state.winnerTeamId !== null && state.activeClue?.responseRevealed === true);
 
   return {
     appVersion: APP_VERSION,
@@ -40,7 +46,7 @@ export function toPublicGameView(state: GameState): PublicGameView {
     winnerTeamId: state.phase === 'complete' ? state.winnerTeamId : null,
     tiebreakerTeamIds: state.phase === 'tiebreaker' ? [...state.tiebreakerTeamIds] : [],
     final: publicFinal(state, language),
-    activeClue: activeClue === null || state.activeClue === null || state.phase === 'daily-double-wager'
+    activeClue: !showActiveClue || activeClue === null || state.activeClue === null
       ? null
       : state.activeClue.responseRevealed
       ? {
@@ -60,6 +66,8 @@ export function toPublicGameView(state: GameState): PublicGameView {
 
 function publicFinal(state: GameState, language: GameState['config']['language']): PublicGameView['final'] {
   if (
+    state.endedIncomplete
+    ||
     state.finalClue === null
     || state.finalEligibleTeamIds.length === 0
     || !['final-category', 'final-wagers', 'final-clue', 'final-reveal', 'complete'].includes(state.phase)
@@ -83,12 +91,9 @@ function publicPhase(state: GameState): PublicGameView['phase'] {
     : state.phase;
 }
 
-function activeBoard(state: GameState, activeClue: Clue | null): Board | null {
+function activeBoard(state: GameState): Board | null {
   if (state.phase === 'round-one-board') return state.boards.find((board) => board.round === 'round-one') ?? null;
   if (state.phase === 'round-two-board') return state.boards.find((board) => board.round === 'round-two') ?? null;
-  if (activeClue?.round === 'round-one' || activeClue?.round === 'round-two') {
-    return state.boards.find((board) => board.round === activeClue.round) ?? null;
-  }
   return null;
 }
 

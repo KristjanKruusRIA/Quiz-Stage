@@ -5,6 +5,7 @@ import { HostConsole } from './HostConsole';
 import { PublicBoard } from './PublicBoard';
 import { PublicClue } from './PublicClue';
 import { PublicFinal } from './PublicFinal';
+import { useState } from 'react';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number }
@@ -26,6 +27,19 @@ function scores(view: PublicGameView) {
 
 export function GameSurface(props: GameSurfaceProps) {
   if (props.surface === 'public') return <main className="game-surface public-surface">{scores(props.view)}{presentation(props.view, props.now)}</main>;
+  return <HostGameSurface {...props} />;
+}
+
+function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) {
+  const viewKey = `${props.view.state.id}:${props.view.state.eventSequence}:${props.view.state.phase}`;
+  const [selection, setSelection] = useState({ viewKey, request: 0, status: 'idle' as 'idle' | 'pending' | 'error' });
+  if (selection.viewKey !== viewKey) {
+    setSelection({ viewKey, request: selection.request + 1, status: 'idle' });
+  }
+  const selectionPending = selection.viewKey === viewKey && selection.status === 'pending';
+  const selectionError = selection.viewKey === viewKey && selection.status === 'error';
+  let selectingThisRender = selectionPending;
+
   const publicView = toPublicGameView(props.view.state);
   const tileMap = new Map<string, string>();
   const board = props.view.state.boards.find((candidate) => candidate.round === publicView.board?.round);
@@ -37,10 +51,26 @@ export function GameSurface(props: GameSurfaceProps) {
   });
   const onSelect = (tileId: string) => {
     const clueId = tileMap.get(tileId);
-    if (clueId !== undefined) void props.api.dispatch({ type: 'SelectClue', clueId });
+    if (clueId === undefined || selectingThisRender) return;
+    selectingThisRender = true;
+    const request = selection.request + 1;
+    const startingViewKey = viewKey;
+    setSelection({ viewKey, request, status: 'pending' });
+    void props.api.dispatch({ type: 'SelectClue', clueId }).then(() => {
+      setSelection((current) => current.request === request && current.viewKey === startingViewKey
+        ? { ...current, status: 'idle' }
+        : current);
+    }, () => {
+      setSelection((current) => current.request === request && current.viewKey === startingViewKey
+        ? { ...current, status: 'error' }
+        : current);
+    });
   };
   return <main className="game-surface host-surface">
-    <section className="public-presentation">{scores(publicView)}{presentation(publicView, props.now, onSelect)}</section>
+    <section className="public-presentation">
+      {selectionError ? <p role="alert">The clue could not be selected. Try again.</p> : null}
+      {scores(publicView)}{presentation(publicView, props.now, selectionPending ? undefined : onSelect)}
+    </section>
     <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} />
   </main>;
 }

@@ -7,6 +7,10 @@ describe('PublicBoard', () => {
   it('renders an accessible six-column, five-row board without answers', () => {
     render(<PublicBoard view={publicView()} />);
     const board = screen.getByRole('grid', { name: 'Round One board' });
+    const rows = within(board).getAllByRole('row');
+    expect(rows).toHaveLength(6);
+    expect(within(rows[0]).getAllByRole('columnheader')).toHaveLength(6);
+    for (const row of rows.slice(1)) expect(within(row).getAllByRole('gridcell')).toHaveLength(6);
     expect(within(board).getAllByRole('columnheader')).toHaveLength(6);
     expect(within(board).getAllByRole('gridcell')).toHaveLength(30);
     expect(screen.getByText('Category 1')).toBeInTheDocument();

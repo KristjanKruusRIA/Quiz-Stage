@@ -18,11 +18,11 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
   const app = await electron.launch({
     cwd: process.cwd(),
     executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
-    args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`],
+    args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'],
   });
   const page = await app.firstWindow();
   const externalRequests: string[] = [];
-  page.on('request', (request) => {
+  app.context().on('request', (request) => {
     const url = new URL(request.url());
     if ((url.protocol === 'http:' || url.protocol === 'https:') && !['127.0.0.1', 'localhost'].includes(url.hostname)) {
       externalRequests.push(url.href);
@@ -37,9 +37,15 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
   await page.getByRole('button', { name: 'Start match' }).click();
 
   let dailyDoubles = 0;
+  const tileIdentities = new Set<string>();
+  await expect(page.getByRole('grid', { name: 'Round One board' })).toBeVisible();
   for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
+    if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
     const tile = page.locator('.public-board button:not([disabled])').first();
     await expect(tile).toBeEnabled();
+    const identity = await tile.getAttribute('aria-label');
+    expect(identity).not.toBeNull();
+    tileIdentities.add(identity!);
     await tile.click();
     const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
     if (await wager.isVisible()) {
@@ -51,6 +57,7 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
     await page.getByRole('button', { name: 'Correct', exact: true }).click();
   }
   expect(dailyDoubles).toBe(3);
+  expect(tileIdentities.size).toBe(60);
 
   for (const input of await page.getByRole('spinbutton', { name: /Final wager for/ }).all()) {
     if (await input.isEnabled()) {
@@ -59,13 +66,7 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
     }
   }
   await expect(page.locator('.public-clue .clue-prompt')).not.toBeEmpty();
-  await page.getByRole('button', { name: 'Pause timer' }).click();
-  await page.getByRole('button', { name: 'Resume timer' }).click();
-  await page.evaluate(() => {
-    const original = Date.now();
-    Date.now = () => original + 31_000;
-  });
-  await page.getByRole('button', { name: 'Pause timer' }).click();
+  await expect(page.getByRole('timer')).toHaveText('0');
   while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
     await page.getByRole('button', { name: /Reveal .* correct/ }).first().click();
   }

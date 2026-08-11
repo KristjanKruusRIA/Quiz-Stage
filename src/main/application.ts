@@ -5,9 +5,11 @@ import type { DatabaseConnection } from './persistence/database';
 import { MatchRepository } from './persistence/matchRepository';
 import type { DisplayMode, GameConfig } from '../shared/game/types';
 
-interface ApplicationOptions {
+export interface ApplicationOptions {
   now?: () => number;
   createSeed?: () => string;
+  setTimeout?: (callback: () => void, delayMs: number) => unknown;
+  clearTimeout?: (handle: unknown) => void;
 }
 
 export function createApplication(database: DatabaseConnection, options: ApplicationOptions = {}) {
@@ -19,6 +21,8 @@ export function createApplication(database: DatabaseConnection, options: Applica
     contentService,
     now: options.now,
     createSeed: options.createSeed,
+    setTimeout: options.setTimeout,
+    clearTimeout: options.clearTimeout,
   });
 
   return {
@@ -32,6 +36,9 @@ export function createApplication(database: DatabaseConnection, options: Applica
         .map(({ id, name, enabled }) => ({ id, name, enabled })),
       automaticDisplayMode,
     }),
-    close: () => database.close(),
+    close: () => {
+      coordinator.dispose();
+      database.close();
+    },
   };
 }

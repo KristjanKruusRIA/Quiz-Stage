@@ -45,11 +45,13 @@ export interface CoordinatorMatchRepository {
   completeMatch(matchId: string, completedAt?: number): void;
 }
 
-interface GameCoordinatorOptions {
+export interface GameCoordinatorOptions {
   repository: CoordinatorMatchRepository;
   contentService: CoordinatorContentService;
   now?: () => number;
   createSeed?: () => string;
+  setTimeout?: (callback: () => void, delayMs: number) => unknown;
+  clearTimeout?: (handle: unknown) => void;
 }
 
 type HostSubscriber = (view: HostGameView, revision: number) => void;
@@ -65,10 +67,21 @@ export class GameCoordinator {
   private revision = 0;
   private readonly now: () => number;
   private readonly createSeed: () => string;
+  private readonly setTimeout: (callback: () => void, delayMs: number) => unknown;
+  private readonly clearTimeout: (handle: unknown) => void;
+  private timerHandle: unknown | null = null;
+  private timerGeneration = 0;
+  private disposed = false;
 
   constructor(private readonly options: GameCoordinatorOptions) {
     this.now = options.now ?? Date.now;
     this.createSeed = options.createSeed ?? randomUUID;
+    this.setTimeout = options.setTimeout ?? ((callback, delayMs) => {
+      const handle = globalThis.setTimeout(callback, delayMs);
+      handle.unref();
+      return handle;
+    });
+    this.clearTimeout = options.clearTimeout ?? ((handle) => globalThis.clearTimeout(handle as ReturnType<typeof setTimeout>));
   }
 
   async startMatch(input: unknown): Promise<HostGameView> {
@@ -83,6 +96,7 @@ export class GameCoordinator {
     this.state = nextState;
     this.replayIssue = null;
     this.revision += 1;
+    this.scheduleTimer();
     this.publish();
     return this.getHostView()!;
   }
@@ -94,11 +108,11 @@ export class GameCoordinator {
     let baseState = structuredClone(this.state);
     let transition: { state: GameState; events: GameEvent[] };
     try {
-      transition = applyGameCommand(baseState, command);
+      transition = applyGameCommand(baseState, command, this.now());
     } catch (error) {
       if (!(error instanceof GameRuleError) || error.code !== 'TIEBREAKER_CLUE_REQUIRED') throw error;
       baseState = this.persistNextTiebreaker(baseState);
-      transition = applyGameCommand(baseState, command);
+      transition = applyGameCommand(baseState, command, this.now());
     }
 
     this.options.repository.persistTransition(baseState.id, transition.events, transition.state);
@@ -107,6 +121,7 @@ export class GameCoordinator {
     }
     this.state = transition.state;
     this.revision += 1;
+    this.scheduleTimer();
     this.publish();
     return this.getHostView()!;
   }
@@ -126,10 +141,18 @@ export class GameCoordinator {
       }
     }
 
+    if (state.timer.status === 'running' && state.timer.startedAt === null) {
+      const anchored = structuredClone(state);
+      anchored.timer.startedAt = this.now();
+      this.options.repository.persistTransition(anchored.id, [], anchored);
+      state = anchored;
+    }
+
     this.state = state;
     this.replayIssue = replayIssue;
     this.revision += 1;
     if (state.phase === 'complete') this.options.repository.completeMatch(state.id, this.now());
+    this.scheduleTimer();
     this.publish();
     return this.getHostView();
   }
@@ -169,6 +192,11 @@ export class GameCoordinator {
     return view === null ? null : { revision: this.revision, view };
   }
 
+  dispose(): void {
+    this.disposed = true;
+    this.cancelTimer();
+  }
+
   private persistNextTiebreaker(state: GameState): GameState {
     const excludedIds = [
       ...state.boards.flatMap((board) => board.categories.flatMap((category) => category.clues.map((clue) => clue.id))),
@@ -185,8 +213,47 @@ export class GameCoordinator {
     ));
     const augmented = { ...state, tiebreakerClues: [...state.tiebreakerClues, clue] };
     this.options.repository.persistTransition(state.id, [], augmented);
-    this.state = augmented;
     return augmented;
+  }
+
+  private cancelTimer(): void {
+    this.timerGeneration += 1;
+    if (this.timerHandle !== null) {
+      this.clearTimeout(this.timerHandle);
+      this.timerHandle = null;
+    }
+  }
+
+  private scheduleTimer(): void {
+    this.cancelTimer();
+    if (this.disposed || this.state?.timer.status !== 'running' || this.state.timer.startedAt === null) return;
+    const generation = this.timerGeneration;
+    const deadline = this.state.timer.startedAt + this.state.timer.remainingMs;
+    const delayMs = Math.max(0, deadline - this.now());
+    this.timerHandle = this.setTimeout(() => {
+      void this.expireTimer(generation);
+    }, delayMs);
+  }
+
+  private async expireTimer(generation: number): Promise<void> {
+    if (this.disposed || generation !== this.timerGeneration || this.state === null) return;
+    this.timerHandle = null;
+    const candidate = structuredClone(this.state);
+    const events = tickTimer(candidate, this.now());
+    if (events.length === 0) {
+      this.scheduleTimer();
+      return;
+    }
+    try {
+      this.options.repository.persistTransition(candidate.id, events, candidate);
+    } catch {
+      return;
+    }
+    if (this.disposed || generation !== this.timerGeneration) return;
+    this.state = candidate;
+    this.revision += 1;
+    this.scheduleTimer();
+    this.publish();
   }
 
   private publish(): void {
@@ -227,7 +294,7 @@ export class GameCoordinator {
 function replayEvent(state: GameState, event: GameEvent): GameState {
   let transition: { state: GameState; events: GameEvent[] };
   if (event.type === 'CommandApplied') {
-    transition = applyGameCommand(state, event.command);
+    transition = applyGameCommand(state, event.command, event.at);
   } else if (event.type === 'TimerExpired') {
     const replayState = structuredClone(state);
     transition = { state: replayState, events: tickTimer(replayState, event.at) };

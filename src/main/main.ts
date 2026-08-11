@@ -3,6 +3,7 @@ import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { createApplication } from './application';
+import { acceleratedE2eTimerOptions } from './e2eTimerOptions';
 import { automaticDisplayMode } from './displayMode';
 import { registerIpc } from './ipc/registerIpc';
 import { openDatabase } from './persistence/database';
@@ -49,7 +50,10 @@ async function initialize(): Promise<void> {
   }
   const database = openDatabase({ filePath: databasePath });
   migrateDatabase(database, path.join(userDataDirectory, 'backups'));
-  application = createApplication(database);
+  application = createApplication(database, acceleratedE2eTimerOptions(
+    process.argv.includes('--quiz-stage-e2e-clock'),
+    app.isPackaged,
+  ));
   await application.coordinator.resume();
   await createWindows();
 }

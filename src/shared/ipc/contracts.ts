@@ -241,8 +241,8 @@ const publicBoardSchema = z.strictObject({
       id: identifierSchema,
       value: z.number().int().nonnegative(),
       selected: z.boolean(),
-    })),
-  })),
+    })).length(5),
+  })).length(6),
 });
 
 export const publicGameViewSchema = z.strictObject({
@@ -266,13 +266,57 @@ export const publicGameViewSchema = z.strictObject({
   tiebreakerTeamIds: z.array(identifierSchema),
   final: z.strictObject({
     category: z.string().trim().min(1),
-    eligibleTeamIds: z.array(identifierSchema),
+    eligibleTeamIds: z.array(identifierSchema).min(1),
     revealed: z.array(z.strictObject({
       teamId: identifierSchema,
       wager: z.number().int().nonnegative(),
       correct: z.boolean(),
     })),
   }).nullable(),
+}).superRefine((view, context) => {
+  const teamIds = new Set(view.teams.map((team) => team.id));
+  const add = (message: string) => context.addIssue({ code: 'custom', message });
+  const unique = (ids: readonly string[]) => new Set(ids).size === ids.length;
+  if (!unique(view.teams.map((team) => team.id))) add('Team ids must be unique');
+  if (view.controllingTeamId !== null && !teamIds.has(view.controllingTeamId)) add('Unknown controlling team');
+  if (view.winnerTeamId !== null && !teamIds.has(view.winnerTeamId)) add('Unknown winner team');
+  if (!unique(view.tiebreakerTeamIds) || view.tiebreakerTeamIds.some((id) => !teamIds.has(id))) add('Invalid tiebreaker teams');
+  if (view.final !== null) {
+    const eligible = new Set(view.final.eligibleTeamIds);
+    if (!unique(view.final.eligibleTeamIds) || view.final.eligibleTeamIds.some((id) => !teamIds.has(id))) add('Invalid Final eligible teams');
+    if (!unique(view.final.revealed.map((entry) => entry.teamId))
+      || view.final.revealed.some((entry) => !eligible.has(entry.teamId))) add('Invalid Final reveals');
+  }
+
+  const boardPhase = view.phase === 'round-one-board' || view.phase === 'round-two-board';
+  if (boardPhase) {
+    const expectedRound = view.phase === 'round-one-board' ? 'round-one' : 'round-two';
+    if (view.board?.round !== expectedRound || view.activeClue !== null || view.final !== null
+      || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid board projection');
+    return;
+  }
+  if (view.board !== null) add('Board is only public during a board phase');
+
+  if (view.phase === 'ordinary-clue') {
+    if (view.final !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid ordinary clue projection');
+  } else if (view.phase === 'final-category' || view.phase === 'final-wagers') {
+    if (view.activeClue !== null || view.final === null || view.final.revealed.length !== 0
+      || view.controllingTeamId !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0) add('Invalid Final wager projection');
+  } else if (view.phase === 'final-clue') {
+    if (view.activeClue === null || view.activeClue.responseRevealed || view.final === null || view.final.revealed.length !== 0
+      || view.controllingTeamId !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0) add('Invalid Final clue projection');
+  } else if (view.phase === 'final-reveal') {
+    if (view.activeClue === null || !view.activeClue.responseRevealed || view.final === null || view.final.revealed.length === 0
+      || view.controllingTeamId !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0) add('Invalid Final reveal projection');
+  } else if (view.phase === 'tiebreaker') {
+    if (view.activeClue === null || view.activeClue.responseRevealed || view.final !== null
+      || view.controllingTeamId !== null || view.winnerTeamId !== null || view.tiebreakerTeamIds.length < 2) add('Invalid tiebreaker projection');
+  } else if (view.phase === 'complete') {
+    if (view.controllingTeamId !== null || view.tiebreakerTeamIds.length !== 0
+      || (view.activeClue !== null && !view.activeClue.responseRevealed)
+      || (view.winnerTeamId === null && (view.activeClue !== null || view.final !== null))
+      || (view.final !== null && view.activeClue === null)) add('Invalid completed projection');
+  }
 });
 
 export const hostStateUpdateSchema = z.strictObject({

@@ -19,6 +19,14 @@ const selectedBoards: SelectedBoards = {
       }],
     }],
   }],
+  finalClue: {
+    id: 'final', categoryId: 'final-category', categoryName: { en: 'Final' }, round: 'final', tier: 0, value: 0,
+    prompt: { en: 'Final prompt' }, response: { en: 'Final response' }, explanation: { en: 'Final explanation' }, source: 'Source',
+  },
+  tiebreakerClues: [{
+    id: 'tie', categoryId: 'tie-category', round: 'tiebreaker', tier: 0, value: 0,
+    prompt: { en: 'Tie prompt' }, response: { en: 'Tie response' }, explanation: { en: 'Tie explanation' }, source: 'Source',
+  }],
 };
 
 function apply(state: ReturnType<typeof createGame>, command: Parameters<typeof applyGameCommand>[1]) {
@@ -26,6 +34,56 @@ function apply(state: ReturnType<typeof createGame>, command: Parameters<typeof 
 }
 
 describe('game timers', () => {
+  it('anchors a timestamp-free timed transition at its authoritative occurrence time', () => {
+    const transition = applyGameCommand(
+      createGame(config, selectedBoards, 0),
+      { type: 'SelectClue', clueId: 'clue' },
+      1_000,
+    );
+
+    expect(transition.events[0].at).toBe(1_000);
+    expect(transition.state.timer).toMatchObject({ status: 'running', startedAt: 1_000 });
+  });
+
+  it('keeps legacy zero-time transitions resumable instead of inventing a replay timestamp', () => {
+    const transition = applyGameCommand(
+      createGame(config, selectedBoards, 0),
+      { type: 'SelectClue', clueId: 'clue' },
+      0,
+    );
+
+    expect(transition.events[0].at).toBe(0);
+    expect(transition.state.timer).toMatchObject({ status: 'running', startedAt: null });
+  });
+
+  it('anchors Daily Double, Final, and tiebreaker timers at their live transition time', () => {
+    const dailyBase = createGame(config, { ...selectedBoards, dailyDoubleClueIds: ['clue'] }, 0);
+    const dailyWager = applyGameCommand(dailyBase, { type: 'SelectClue', clueId: 'clue' }, 1_000).state;
+    const dailyClue = applyGameCommand(dailyWager, { type: 'SubmitDailyDoubleWager', wager: 5 }, 2_000);
+    expect(dailyClue.state.timer).toMatchObject({ status: 'running', startedAt: 2_000 });
+    expect(dailyClue.events[0].at).toBe(2_000);
+
+    const finalBase = {
+      ...createGame(config, selectedBoards, 0),
+      phase: 'final-category' as const,
+      scores: { t1: 100, t2: 100 },
+      finalEligibleTeamIds: ['t1', 't2'],
+    };
+    const firstWager = applyGameCommand(finalBase, { type: 'SubmitFinalWager', teamId: 't1', wager: 0 }, 2_500).state;
+    const finalClue = applyGameCommand(firstWager, { type: 'SubmitFinalWager', teamId: 't2', wager: 0 }, 3_000);
+    expect(finalClue.state.timer).toMatchObject({ status: 'running', startedAt: 3_000 });
+    expect(finalClue.events[0].at).toBe(3_000);
+
+    const tieBase = {
+      ...finalClue.state,
+      timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' as const },
+    };
+    const firstReveal = applyGameCommand(tieBase, { type: 'RevealFinalTeam', teamId: 't1', correct: true }, 3_500).state;
+    const tie = applyGameCommand(firstReveal, { type: 'RevealFinalTeam', teamId: 't2', correct: true }, 4_000);
+    expect(tie.state).toMatchObject({ phase: 'tiebreaker', timer: { status: 'running', startedAt: 4_000 } });
+    expect(tie.events[0].at).toBe(4_000);
+  });
+
   it('subtracts only running time across pause and resume', () => {
     const opened = apply(createGame(config, selectedBoards, 0), { type: 'SelectClue', clueId: 'clue' });
     expect(tickTimer(opened, 1_000)).toEqual([]);

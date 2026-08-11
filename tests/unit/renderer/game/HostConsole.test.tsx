@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../../src/renderer/api/desktopApi';
@@ -12,7 +12,53 @@ function api(): HostDesktopApi {
   };
 }
 
+function deferred<T>() {
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((_resolve, rejectPromise) => { reject = rejectPromise; });
+  return { promise, reject };
+}
+
 describe('HostConsole', () => {
+  it('dispatches validated current-match score, report, and confirmed incomplete-match intents', async () => {
+    const desktopApi = api();
+    const user = userEvent.setup();
+    render(<HostConsole view={hostView({
+      phase: 'ordinary-clue',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
+    })} api={desktopApi} />);
+
+    await user.clear(screen.getByRole('spinbutton', { name: 'Score for Alpha' }));
+    await user.type(screen.getByRole('spinbutton', { name: 'Score for Alpha' }), '1400');
+    await user.type(screen.getByRole('textbox', { name: 'Score adjustment reason' }), 'Host correction');
+    await user.click(screen.getByRole('button', { name: 'Set Alpha score' }));
+    expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'AdjustScore', teamId: 'team-1', score: 1400, reason: 'Host correction' });
+
+    await user.type(screen.getByRole('textbox', { name: 'Clue report reason' }), 'Ambiguous wording');
+    await user.click(screen.getByRole('button', { name: 'Report current clue' }));
+    expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'ReportClue', clueId: 'round-one-clue-1-2', reason: 'Ambiguous wording' });
+
+    expect(screen.getByRole('button', { name: 'End match incomplete' })).toBeDisabled();
+    await user.click(screen.getByRole('checkbox', { name: 'I understand this ends the current match' }));
+    await user.click(screen.getByRole('button', { name: 'End match incomplete' }));
+    expect(desktopApi.dispatch).toHaveBeenCalledWith({ type: 'EndIncompleteMatch' });
+  });
+
+  it('permits only one in-flight host intent and shows a safe localized rejection', async () => {
+    const pending = deferred<Awaited<ReturnType<HostDesktopApi['dispatch']>>>();
+    const desktopApi = api();
+    desktopApi.dispatch = vi.fn(() => pending.promise);
+    const user = userEvent.setup();
+    render(<HostConsole view={hostView({ config: { ...hostView().state.config, language: 'et' } })} api={desktopApi} />);
+    await user.type(screen.getByRole('textbox', { name: 'Score adjustment reason' }), 'Parandus');
+    await user.click(screen.getByRole('button', { name: 'Set Alpha score' }));
+
+    expect(screen.getByRole('button', { name: 'Set Beta score' })).toBeDisabled();
+    expect(desktopApi.dispatch).toHaveBeenCalledTimes(1);
+    await act(async () => { pending.reject(new Error('SECRET_DISK_DETAIL')); });
+    expect(screen.getByRole('alert')).toHaveTextContent('Seda toimingut ei saanud');
+    expect(screen.getByRole('alert')).not.toHaveTextContent('SECRET_DISK_DETAIL');
+  });
+
   it('shows private answer context and dispatches a valid incorrect judgment intent', async () => {
     const desktopApi = api();
     const view = hostView({

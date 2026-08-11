@@ -35,7 +35,121 @@ function dependencies() {
   return { coordinator, repository, contentService, selected, persistenceOrder, setResumable: (value: typeof resumable) => { resumable = value; } };
 }
 
+function timerDependencies() {
+  const input = selectionInput();
+  const selected = selectMatchContent(input);
+  if (!selected.ok) throw new Error('fixture selection failed');
+  let now = 1_000;
+  let nextHandle = 1;
+  const callbacks = new Map<number, () => void>();
+  const repository: CoordinatorMatchRepository = {
+    persistTransition: vi.fn(),
+    loadResumable: vi.fn(() => null),
+    completeMatch: vi.fn(),
+  };
+  const coordinator = new GameCoordinator({
+    repository,
+    contentService: {
+      selectForMatch: () => selected,
+      selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+    },
+    now: () => now,
+    createSeed: () => 'authoritative-seed',
+    setTimeout: (callback) => {
+      const handle = nextHandle++;
+      callbacks.set(handle, callback);
+      return handle;
+    },
+    clearTimeout: (handle) => typeof handle === 'number' && callbacks.delete(handle),
+  });
+  return {
+    coordinator,
+    repository,
+    callbacks,
+    setNow: (value: number) => { now = value; },
+    runNext: async () => {
+      const entry = callbacks.entries().next().value as [number, () => void] | undefined;
+      if (entry === undefined) throw new Error('no scheduled timer');
+      callbacks.delete(entry[0]);
+      entry[1]();
+      await Promise.resolve();
+      await Promise.resolve();
+    },
+  };
+}
+
 describe('GameCoordinator', () => {
+  it('anchors, persists, and expires an ordinary clue exactly once at the authoritative deadline', async () => {
+    const { coordinator, repository, callbacks, setNow, runNext } = timerDependencies();
+    await coordinator.startMatch(selectionInput().config);
+    vi.mocked(repository.persistTransition).mockClear();
+    const clueId = coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id;
+
+    const opened = await coordinator.dispatch({ type: 'SelectClue', clueId });
+    expect(opened.state.timer.startedAt).toBe(1_000);
+    expect(callbacks).toHaveLength(1);
+
+    setNow(16_000);
+    await runNext();
+    await vi.waitFor(() => expect(coordinator.getHostView()!.state.timer.status).toBe('expired'));
+
+    const calls = vi.mocked(repository.persistTransition).mock.calls;
+    expect(calls).toHaveLength(2);
+    expect(calls[1][1]).toMatchObject([{ type: 'TimerExpired', at: 16_000 }]);
+    expect(callbacks).toHaveLength(0);
+  });
+
+  it('does not publish or adopt an expiry when persistence fails', async () => {
+    const { coordinator, repository, setNow, runNext } = timerDependencies();
+    await coordinator.startMatch(selectionInput().config);
+    const clueId = coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id;
+    await coordinator.dispatch({ type: 'SelectClue', clueId });
+    const before = coordinator.getHostView();
+    const published: unknown[] = [];
+    coordinator.subscribe('public', (view) => published.push(view));
+    published.length = 0;
+    vi.mocked(repository.persistTransition).mockImplementationOnce(() => { throw new Error('disk full'); });
+
+    setNow(16_000);
+    await runNext();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    expect(coordinator.getHostView()).toEqual(before);
+    expect(published).toEqual([]);
+  });
+
+  it('cancels and reschedules timers for pause, resume, reset, undo, and disposal', async () => {
+    const { coordinator, callbacks, setNow } = timerDependencies();
+    await coordinator.startMatch(selectionInput().config);
+    const clueId = coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id;
+    await coordinator.dispatch({ type: 'SelectClue', clueId });
+    expect(callbacks).toHaveLength(1);
+
+    setNow(2_000);
+    await coordinator.dispatch({ type: 'PauseTimer', at: 2_000 });
+    expect(callbacks).toHaveLength(0);
+    await coordinator.dispatch({ type: 'ResumeTimer', at: 3_000 });
+    expect(callbacks).toHaveLength(1);
+    await coordinator.dispatch({ type: 'ResetTimer', at: 4_000 });
+    expect(callbacks).toHaveLength(1);
+    await coordinator.dispatch({ type: 'UndoLast' });
+    expect(callbacks).toHaveLength(1);
+    coordinator.dispose();
+    expect(callbacks).toHaveLength(0);
+  });
+
+  it('reschedules an early scheduler callback instead of expiring authority early', async () => {
+    const { coordinator, callbacks, setNow, runNext } = timerDependencies();
+    await coordinator.startMatch(selectionInput().config);
+    const clueId = coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id;
+    await coordinator.dispatch({ type: 'SelectClue', clueId });
+
+    setNow(15_999);
+    await runNext();
+
+    expect(coordinator.getHostView()!.state.timer.status).toBe('running');
+    expect(callbacks).toHaveLength(1);
+  });
   it('validates setup, selects content, persists the initial snapshot, then publishes both projections', async () => {
     const { coordinator, contentService, persistenceOrder, selected } = dependencies();
     const published: string[] = [];
@@ -262,7 +376,10 @@ describe('GameCoordinator', () => {
 
     const recovered = await coordinator.resume();
 
-    expect(recovered?.state).toEqual(before);
+    expect(recovered?.state).toEqual({
+      ...before,
+      timer: { ...before.timer, startedAt: 42 },
+    });
     expect(recovered?.replayIssue).toEqual({ sequence: 2, reason: 'invalid-event' });
   });
 });

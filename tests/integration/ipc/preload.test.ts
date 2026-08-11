@@ -10,7 +10,7 @@ import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 
 const publicView = {
   appVersion: '0.1.0' as const,
-  phase: 'round-one-board' as const,
+  phase: 'ordinary-clue' as const,
   displayMode: 'single' as const,
   teams: [
     { id: 'a', name: 'Alpha', color: '#E3B341', score: 0 },
@@ -134,6 +134,27 @@ describe('preload quizStage surface', () => {
     createQuizStageApi('public', ipc).subscribeToState(listener);
 
     expect(() => wrapped?.({}, { revision: 1, view: hostView })).toThrow();
+    expect(listener).not.toHaveBeenCalled();
+  });
+
+  it('rejects phase-incoherent private response and Final judgment probes on the public channel', () => {
+    let wrapped: ((event: unknown, value: unknown) => void) | undefined;
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(),
+      on: vi.fn((_channel, listener) => { wrapped = listener; }),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const listener = vi.fn();
+    createQuizStageApi('public', ipc).subscribeToState(listener);
+    const probe = {
+      ...publicView,
+      phase: 'round-one-board',
+      activeClue: { id: 'active-clue', prompt: 'Private prompt', responseRevealed: true, response: 'Private answer', explanation: 'Private explanation' },
+      final: { category: 'Future Final', eligibleTeamIds: ['a'], revealed: [{ teamId: 'a', wager: 500, correct: true }] },
+    };
+
+    expect(() => wrapped?.({}, { revision: 1, view: probe })).toThrow();
     expect(listener).not.toHaveBeenCalled();
   });
 

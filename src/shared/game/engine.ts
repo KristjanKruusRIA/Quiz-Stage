@@ -57,8 +57,12 @@ export function createGame(config: GameConfig, selectedBoards: SelectedBoards, n
   };
 }
 
-export function applyGameCommand(state: GameState, command: GameCommand): { state: GameState; events: GameEvent[] } {
-  const at = 'at' in command ? command.at : 0;
+export function applyGameCommand(
+  state: GameState,
+  command: GameCommand,
+  occurrenceAt = 0,
+): { state: GameState; events: GameEvent[] } {
+  const at = 'at' in command ? command.at : occurrenceAt;
   const eventId = commandEventId(state, command, at);
 
   if (command.type === 'LockTeam') {
@@ -87,8 +91,14 @@ export function applyGameCommand(state: GameState, command: GameCommand): { stat
   }
 
   const reducedState = reduceGameState(state, command);
+  const timer = reducedState.timer.status === 'running'
+    && reducedState.timer.startedAt === null
+    && at > 0
+    ? { ...reducedState.timer, startedAt: at }
+    : reducedState.timer;
   const nextState: GameState = {
     ...reducedState,
+    timer,
     eventSequence: state.eventSequence + 1,
     undoStack: command.type === 'EndIncompleteMatch'
       ? []
