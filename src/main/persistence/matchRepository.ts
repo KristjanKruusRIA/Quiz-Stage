@@ -232,10 +232,6 @@ export class MatchRepository {
 
   private readEventsAfter(snapshot: SnapshotRow): ReplayEvents | null {
     if (!Number.isInteger(snapshot.event_sequence) || snapshot.event_sequence < 0) return null;
-    const maxSequence = this.database.prepare(
-      'SELECT COALESCE(MAX(sequence), 0) FROM match_events WHERE match_id = ?',
-    ).pluck().get(snapshot.match_id) as number;
-    if (snapshot.event_sequence > maxSequence) return null;
     const rows = this.database.prepare(`
       SELECT id, match_id, sequence, occurred_at, event_type, event_json
       FROM match_events

@@ -170,6 +170,19 @@ describe('MatchRepository', () => {
     expect(resumed?.replayIssue).toEqual({ sequence: 2, reason: 'missing-sequence' });
   });
 
+  it('loads a valid snapshot after events represented by its cursor are pruned', () => {
+    const selected = selectedTransition();
+    repository.persistTransition('match-1', selected.events, selected.state);
+    database.prepare('DELETE FROM match_events WHERE match_id = ? AND sequence <= ?').run('match-1', 1);
+
+    const resumed = repository.loadResumable();
+
+    expect(resumed?.eventSequence).toBe(1);
+    expect(resumed?.state).toEqual(selected.state);
+    expect(resumed?.events).toEqual([]);
+    expect(resumed?.replayIssue).toBeNull();
+  });
+
   it('orders resumable matches by persistence even when engine event timestamps tie', () => {
     const older = selectedTransition('z-older-match');
     const newer = selectedTransition('a-newer-match');
