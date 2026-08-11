@@ -1,0 +1,47 @@
+{
+  "name": "quiz-stage-desktop-game",
+  "version": "0.1.0",
+  "description": "Offline host-operated quiz game",
+  "main": ".vite/build/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --configLoader runner",
+    "test:run": "vitest run --configLoader runner",
+    "build": "electron-forge package",
+    "make:installer": "electron-forge make --targets=@electron-forge/maker-squirrel",
+    "make:portable": "electron-forge make --targets=@electron-forge/maker-zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "1.0.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "7.11.2",
+    "@electron-forge/maker-squirrel": "7.11.2",
+    "@electron-forge/maker-zip": "7.11.2",
+    "@electron-forge/plugin-vite": "7.11.2",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "electron": "43.3.0",
+    "eslint": "10.8.1",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "typescript-eslint": "8.67.0",
+    "vite": "8.2.1",
+    "vitest": "4.1.10"
+  }
+}
