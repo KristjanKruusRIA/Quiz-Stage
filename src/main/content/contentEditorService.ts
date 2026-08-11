@@ -17,6 +17,8 @@ import {
   type EditorLibrary,
   type EditorPack,
   type EditorSource,
+  type WritableCategorySet,
+  type WritableEditorClue,
 } from '../../shared/content/editor';
 import { contentOverrideSchema, localizedTextSchema } from '../../shared/content/schema';
 import type { ContentRepository } from './contentRepository';
@@ -43,10 +45,8 @@ interface StoredSource {
 
 const isCustom = (source: string) => source === 'custom-csv' || source === 'custom-editor';
 const revision = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-type WritableClue = Omit<EditorClue, 'id'> & { id: string | null };
-
-function clueContentChanged(current: EditorClue, submitted: WritableClue): boolean {
-  const content = (clue: EditorClue | WritableClue) => ({
+function clueContentChanged(current: EditorClue, submitted: WritableEditorClue): boolean {
+  const content = (clue: EditorClue | WritableEditorClue) => ({
     prompt: clue.prompt,
     response: clue.response,
     explanation: clue.explanation,
@@ -245,7 +245,7 @@ export class ContentEditorService {
         for (const clue of draft.clues) {
           if (clue.id === null) throw new Error('Bundled clue identity is required');
           const oldClue = current.clues.find((candidate) => candidate.id === clue.id)!;
-          if (JSON.stringify(clue) === JSON.stringify(oldClue)) continue;
+          if (!clueContentChanged(oldClue, clue)) continue;
           contentOverrideSchema.parse({
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
@@ -258,7 +258,7 @@ export class ContentEditorService {
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
             source: clue.source.title, enabled: clue.enabled,
           });
-          this.repository.resolveReport(clue.id, this.now());
+          if (oldClue.reported) this.repository.resolveReport(clue.id, this.now());
         }
       } else {
         this.validateCustomCategory(draft);
@@ -322,7 +322,7 @@ export class ContentEditorService {
           ON CONFLICT(category_set_id) DO UPDATE SET override_json = excluded.override_json,
             updated_at = excluded.updated_at WHERE override_json <> excluded.override_json
         `).run(draft.categoryId, JSON.stringify(metadata), this.now());
-        if (JSON.stringify(draft.clue) !== JSON.stringify(current.clue)) {
+        if (clueContentChanged(current.clue, draft.clue)) {
           this.repository.saveOverride({
             id: draft.clue.id, packId: draft.packId, categoryId: draft.categoryId,
             categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
@@ -330,7 +330,7 @@ export class ContentEditorService {
             ...(draft.clue.acceptedResponses === undefined ? {} : { acceptedResponses: draft.clue.acceptedResponses }),
             source: draft.clue.source.title, enabled: draft.clue.enabled,
           });
-          this.repository.resolveReport(draft.clue.id, this.now());
+          if (current.clue.reported) this.repository.resolveReport(draft.clue.id, this.now());
         }
       } else {
         const resolvesReport = current.clue.reported && clueContentChanged(current.clue, draft.clue);
@@ -487,7 +487,7 @@ export class ContentEditorService {
     throw new Error('Could not generate a unique content ID');
   }
 
-  private validateCustomCategory(category: { round: 'round-one' | 'round-two'; clues: readonly WritableClue[] }) {
+  private validateCustomCategory(category: { round: 'round-one' | 'round-two'; clues: readonly WritableEditorClue[] }) {
     const tiers = category.clues.map((clue) => clue.tier).sort((left, right) => left - right);
     if (tiers.join(',') !== '1,2,3,4,5') throw new Error('A category set must contain tiers 1 through 5');
     for (const clue of category.clues) {
@@ -497,7 +497,7 @@ export class ContentEditorService {
     }
   }
 
-  private insertCustomClue(categoryId: string, round: 'round-one' | 'round-two', clue: WritableClue) {
+  private insertCustomClue(categoryId: string, round: 'round-one' | 'round-two', clue: WritableEditorClue) {
     const id = this.newId('clue');
     this.database.prepare(`
       INSERT INTO clues (id, category_set_id, round, tier, value, prompt_json, response_json,
@@ -508,7 +508,7 @@ export class ContentEditorService {
       storeSource(clue.source), Number(clue.enabled));
   }
 
-  private assertCategoryIdentity(current: EditorCategorySet, draft: EditorCategorySet) {
+  private assertCategoryIdentity(current: EditorCategorySet, draft: WritableCategorySet) {
     if (draft.packId !== current.packId || draft.round !== current.round || draft.clues.length !== 5) {
       throw new Error('Stable category identity cannot change');
     }

@@ -77,38 +77,85 @@ export const editorLibrarySchema = z.strictObject({
   reports: z.array(contentReportRecordSchema),
 });
 
-const draftClueSchema = editorClueSchema.extend({ id: contentIdSchema.nullable() });
-const createCategorySetSchema = z.strictObject({
-  id: z.null(),
+export const writableEditorClueSchema = z.strictObject({
+  id: contentIdSchema.nullable(),
+  tier: z.number().int().min(0).max(5),
+  value: z.number().int().nonnegative(),
+  prompt: localizedTextSchema,
+  response: localizedTextSchema,
+  explanation: localizedTextSchema,
+  acceptedResponses: localizedTextSchema.refine((value) =>
+    hasValidAcceptedResponseEscapes(value.en)
+      && (value.et === undefined || hasValidAcceptedResponseEscapes(value.et)),
+  'Accepted responses contain an invalid escape').optional(),
+  source: editorSourceSchema,
+  enabled: z.boolean(),
+});
+
+export const writableCategorySetSchema = z.strictObject({
+  id: contentIdSchema.nullable(),
   packId: contentIdSchema,
   round: z.enum(['round-one', 'round-two']),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   macroTopic: text,
   name: localizedTextSchema,
   enabled: z.boolean(),
-  clues: z.array(draftClueSchema).length(5),
+  clues: z.array(writableEditorClueSchema).length(5),
 });
 
 export const saveCategorySetRequestSchema = z.strictObject({
   expectedRevision: revisionSchema,
-  categorySet: z.union([editorCategorySetSchema, createCategorySetSchema]),
+  categorySet: writableCategorySetSchema,
 });
 
-const createFinalClueSchema = z.strictObject({
-  id: z.null(),
+export const writableFinalClueSchema = z.strictObject({
+  id: contentIdSchema.nullable(),
   packId: contentIdSchema,
-  categoryId: z.null(),
+  categoryId: contentIdSchema.nullable(),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   categoryName: localizedTextSchema,
   macroTopic: text,
   enabled: z.boolean(),
-  clue: draftClueSchema,
+  clue: writableEditorClueSchema,
 });
 
 export const saveFinalClueRequestSchema = z.strictObject({
   expectedRevision: revisionSchema,
-  finalClue: z.union([editorFinalClueSchema, createFinalClueSchema]),
+  finalClue: writableFinalClueSchema,
 });
+
+export type WritableEditorClue = z.infer<typeof writableEditorClueSchema>;
+export type WritableCategorySet = z.infer<typeof writableCategorySetSchema>;
+export type WritableFinalClue = z.infer<typeof writableFinalClueSchema>;
+export type SaveCategorySetRequest = z.infer<typeof saveCategorySetRequestSchema>;
+export type SaveFinalClueRequest = z.infer<typeof saveFinalClueRequestSchema>;
+
+function toWritableClue(clue: EditorClue | WritableEditorClue): WritableEditorClue {
+  return {
+    id: clue.id, tier: clue.tier, value: clue.value,
+    prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
+    ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
+    source: clue.source, enabled: clue.enabled,
+  };
+}
+
+export function toWritableCategorySet(categorySet: EditorCategorySet | WritableCategorySet): WritableCategorySet {
+  return {
+    id: categorySet.id, packId: categorySet.packId, round: categorySet.round,
+    difficulty: categorySet.difficulty, macroTopic: categorySet.macroTopic,
+    name: categorySet.name, enabled: categorySet.enabled,
+    clues: categorySet.clues.map(toWritableClue),
+  };
+}
+
+export function toWritableFinalClue(finalClue: EditorFinalClue | WritableFinalClue): WritableFinalClue {
+  return {
+    id: finalClue.id, packId: finalClue.packId, categoryId: finalClue.categoryId,
+    difficulty: finalClue.difficulty, categoryName: finalClue.categoryName,
+    macroTopic: finalClue.macroTopic, enabled: finalClue.enabled,
+    clue: toWritableClue(finalClue.clue),
+  };
+}
 
 export const createContentPackRequestSchema = z.strictObject({ name: text });
 export const deleteContentPackRequestSchema = z.strictObject({

@@ -8,6 +8,7 @@ import { ContentEditorService } from '../../../src/main/content/contentEditorSer
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { developmentContentFixtureSchema } from '../../../src/shared/content/schema';
 import type { GameConfig } from '../../../src/shared/game/types';
+import { toWritableFinalClue } from '../../../src/shared/content/editor';
 
 const seedPath = resolve('resources/content/dev-seed.sqlite');
 const mediumEnglish: GameConfig = {
@@ -95,7 +96,7 @@ describe('ContentService', () => {
     const final = structuredClone(editor.list().packs.find((pack) => pack.ownership === 'bundled')!
       .finalClues.find((clue) => clue.difficulty === 'medium')!);
     final.enabled = false;
-    editor.saveFinalClue({ expectedRevision: final.revision, finalClue: final });
+    editor.saveFinalClue({ expectedRevision: final.revision, finalClue: toWritableFinalClue(final) });
 
     expect(service.checkAvailability(mediumEnglish)).toEqual({
       ok: false,
@@ -108,7 +109,7 @@ describe('ContentService', () => {
     const fresh = structuredClone(editor.list().packs.find((pack) => pack.ownership === 'bundled')!
       .finalClues.find((clue) => clue.id === final.id)!);
     fresh.enabled = true;
-    editor.saveFinalClue({ expectedRevision: fresh.revision, finalClue: fresh });
+    editor.saveFinalClue({ expectedRevision: fresh.revision, finalClue: toWritableFinalClue(fresh) });
 
     expect(new ContentService(new ContentRepository(database)).checkAvailability(mediumEnglish).ok).toBe(true);
   });

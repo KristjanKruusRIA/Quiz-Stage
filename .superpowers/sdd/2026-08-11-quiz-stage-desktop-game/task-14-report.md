@@ -232,3 +232,56 @@ Final round-three artifacts:
 - Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,752,754 bytes, SHA-256 `AB58412751E91E1568824B31945D50C9488709293831EE963BA32BDBE2C09B64`.
 - Packaged executable: 225,442,304 bytes, SHA-256 `42633609392515F3E8691D743C0C97666E016F00DBB9C7064E5C9E02504D2552`.
 - Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
+
+## Editor save trust-boundary fix round (2026-08-12)
+
+The fourth review round removes renderer-derived editor state from both save contracts:
+
+- Category and Final save commands now use strict writable DTOs. Read-only `reported`, `report`, `eligibility`, `ownership`, and embedded revision fields are rejected before persistence; renderer save code explicitly projects drafts to the writable contract.
+- Bundled and custom board/Final paths compare the same canonical writable clue fields: localized prompt/response/explanation, accepted responses, source, and enabled state. Report eligibility comes only from the authoritative repository record loaded inside the existing immediate transaction.
+- Status-only hostile payloads cannot create category/clue overrides, resolve reports, or change the editor revision. Metadata-only and unrelated-tier saves preserve reports. A real accepted-response/source/enabled correction resolves only its exact reported clue and may leave the clue disabled.
+- Stable identity and bundled/custom ownership remain main-owned: create paths generate IDs, update paths validate persisted identities, and persisted pack ownership selects the write path.
+
+Round-four RED:
+
+```text
+npm run test:run -- tests/integration/content/contentEditor.test.ts tests/integration/ipc/contentEditorIpc.test.ts
+Test Files 2 failed (2)
+Tests 6 failed, 11 passed (17)
+```
+
+The six intended failures covered hostile bundled/custom board and Final service payloads plus bundled board and Final IPC payloads. Each failure showed the old command resolving instead of rejecting.
+
+Round-four verification:
+
+```text
+Focused editor/report/IPC/preload/renderer suite
+Test Files 8 passed (8)
+Tests 61 passed (61)
+
+npm run test:run
+Test Files 50 passed (50)
+Tests 357 passed (357)
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npx playwright test tests/e2e/content-editor.spec.ts tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts --workers=1
+3 passed (1.7m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+Final round-four artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,754,393 bytes, SHA-256 `66401998B26D3E2D82116A6FBB04A88B464604E99CEF6EBCDF56C759F68B0070`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `C07B049205E3524315C19C982F78BD975BBC9E6D14EA55F00A56C942CC657CEF`.
+- Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
+- The ZIP contains the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the `better-sqlite3` win32-x64 prebuild.

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import type {
   ContentExportResult, ContentImportPreview, ContentImportResult, EditorCategorySet,
-  EditorFinalClue, EditorLibrary, EditorPack,
+  EditorFinalClue, EditorLibrary, EditorPack, SaveCategorySetRequest, SaveFinalClueRequest,
 } from '../content/editor';
 import type { ContentReportRecord } from '../content/schema';
 import { APP_VERSION } from '../appMeta';
@@ -427,8 +427,8 @@ export interface HostQuizStageApi extends StateSubscriptionApi {
   resumeMatch(): Promise<HostGameView | null>;
   listHistory(): Promise<MatchHistoryEntry[]>;
   listContent(): Promise<EditorLibrary>;
-  saveCategorySet(input: unknown): Promise<EditorCategorySet>;
-  saveFinalClue(input: unknown): Promise<EditorFinalClue>;
+  saveCategorySet(input: SaveCategorySetRequest): Promise<EditorCategorySet>;
+  saveFinalClue(input: SaveFinalClueRequest): Promise<EditorFinalClue>;
   createContentPack(input: unknown): Promise<EditorPack>;
   deleteContentPack(input: unknown): Promise<{ packId: string }>;
   reportContentClue(input: unknown): Promise<ContentReportRecord>;

@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { HostDesktopApi } from '../../api/desktopApi';
-import type { EditorCategorySet, EditorFinalClue, EditorLibrary, EditorPack } from '../../../shared/content/editor';
+import {
+  toWritableCategorySet, toWritableFinalClue,
+  type EditorCategorySet, type EditorFinalClue, type EditorLibrary, type EditorPack,
+} from '../../../shared/content/editor';
 import { CategorySetEditor, type CategorySetDraft } from './CategorySetEditor';
 import { FinalClueEditor, type FinalClueDraft } from './FinalClueEditor';
 import { ImportPreview } from './ImportPreview';
@@ -85,14 +88,14 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
     const expectedRevision = category.id === null
       ? library!.packs.find((pack) => pack.id === category.packId)!.revision
       : category.revision!;
-    await api.saveCategorySet({ expectedRevision, categorySet: category });
+    await api.saveCategorySet({ expectedRevision, categorySet: toWritableCategorySet(category) });
     closeEditor();
     await load();
   };
   const saveFinal = async (final: EditorFinalClue | FinalClueDraft) => {
     if (api.saveFinalClue === undefined) throw new Error('Content editing is unavailable');
     const expectedRevision = final.id === null ? library!.packs.find((pack) => pack.id === final.packId)!.revision : final.revision;
-    await api.saveFinalClue({ expectedRevision, finalClue: final });
+    await api.saveFinalClue({ expectedRevision, finalClue: toWritableFinalClue(final) });
     closeEditor();
     await load();
   };

@@ -9,7 +9,7 @@ import type {
 } from '../../shared/ipc/contracts';
 import type {
   ContentExportResult, ContentImportPreview, ContentImportResult, EditorCategorySet,
-  EditorFinalClue, EditorLibrary, EditorPack,
+  EditorFinalClue, EditorLibrary, EditorPack, SaveCategorySetRequest, SaveFinalClueRequest,
 } from '../../shared/content/editor';
 import type { ContentReportRecord } from '../../shared/content/schema';
 
@@ -23,8 +23,8 @@ export type HostDesktopApi = {
       listHistory(): Promise<MatchHistoryEntry[]>;
       dispatch(command: GameCommand): Promise<HostGameView>;
       listContent?: () => Promise<EditorLibrary>;
-      saveCategorySet?: (input: unknown) => Promise<EditorCategorySet>;
-      saveFinalClue?: (input: unknown) => Promise<EditorFinalClue>;
+      saveCategorySet?: (input: SaveCategorySetRequest) => Promise<EditorCategorySet>;
+      saveFinalClue?: (input: SaveFinalClueRequest) => Promise<EditorFinalClue>;
       createContentPack?: (input: unknown) => Promise<EditorPack>;
       deleteContentPack?: (input: unknown) => Promise<{ packId: string }>;
       reportContentClue?: (input: unknown) => Promise<ContentReportRecord>;
