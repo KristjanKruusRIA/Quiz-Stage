@@ -15,6 +15,7 @@ import type {
   RecoveryIssue,
 } from '../../shared/game/types';
 import { toHostGameView, toPublicGameView } from '../../shared/game/views';
+import { sourceCitation } from '../../shared/content/sourceCitation';
 import {
   gameCommandSchema,
   gameConfigSchema,
@@ -422,7 +423,7 @@ function toCanonicalClue(clue: Clue): Clue {
     prompt: { ...clue.prompt },
     response: { ...clue.response },
     explanation: { ...clue.explanation },
-    source: clue.source,
+    source: sourceCitation(clue.source),
     ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: { ...clue.acceptedResponses } }),
     ...(clue.categoryName === undefined ? {} : { categoryName: { ...clue.categoryName } }),
   };

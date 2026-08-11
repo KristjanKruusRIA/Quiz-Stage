@@ -9,6 +9,7 @@ import { registerIpc } from './ipc/registerIpc';
 import { openDatabase } from './persistence/database';
 import { migrateDatabase } from './persistence/migrations';
 import { WindowManager, type ManagedWindow } from './windows/windowManager';
+import { shouldInstallE2eNetworkGuard } from './e2eNetworkGuard';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -19,7 +20,10 @@ let disposeIpc: (() => void) | null = null;
 const e2eExternalRequests: string[] = [];
 
 function installE2eNetworkGuard(): void {
-  if (!process.argv.includes('--quiz-stage-e2e-network-guard')) return;
+  if (!shouldInstallE2eNetworkGuard({
+    requested: process.argv.includes('--quiz-stage-e2e-network-guard'),
+    isPackaged: app.isPackaged,
+  })) return;
   Object.assign(globalThis, { __quizStageExternalRequests: e2eExternalRequests });
   session.defaultSession.webRequest.onBeforeRequest(
     { urls: ['http://*/*', 'https://*/*'] },

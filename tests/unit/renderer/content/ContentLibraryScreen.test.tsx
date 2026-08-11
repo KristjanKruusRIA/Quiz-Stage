@@ -118,5 +118,10 @@ describe('ContentLibraryScreen', () => {
     expect(note).toHaveValue('Check source');
     expect(report).toBeEnabled();
     expect(screen.queryByText(/STALE_CONTENT_REVISION|private/)).not.toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(screen.queryByText('The report could not be saved. Refresh content and try again.')).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: /Edit reported clue/ }));
+    expect(screen.queryByText('The report could not be saved. Refresh content and try again.')).not.toBeInTheDocument();
   });
 });

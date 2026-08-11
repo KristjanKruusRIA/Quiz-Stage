@@ -4,6 +4,7 @@ import { applyGameCommand, createGame } from '../../../src/shared/game/engine';
 import type { GameCommand } from '../../../src/shared/game/commands';
 import type { GameState } from '../../../src/shared/game/types';
 import { GameCoordinator, type CoordinatorContentService, type CoordinatorMatchRepository } from '../../../src/main/coordinator/gameCoordinator';
+import { toPublicGameView } from '../../../src/shared/game/views';
 import { selectionInput } from '../../fixtures/contentFactory';
 
 function dependencies() {
@@ -85,6 +86,39 @@ function timerDependencies() {
 }
 
 describe('GameCoordinator', () => {
+  it('projects structured custom board and Final sources as safe citations while preserving legacy text', async () => {
+    const { coordinator, selected } = dependencies();
+    const boardClue = selected.boards.flatMap((board) => board.categories.flatMap((category) => category.clues))
+      .find((clue) => !selected.dailyDoubleClueIds.includes(clue.id))!;
+    const legacyClue = selected.boards[0].categories[0].clues.find((clue) => clue.id !== boardClue.id)!;
+    boardClue.source = JSON.stringify({ format: 'quiz-stage-csv-v1', title: 'Open board facts',
+      url: 'https://example.com/board', license: 'CC0', retrievedAt: '2026-08-12', translationStatus: 'reviewed' });
+    selected.finalClue.source = JSON.stringify({ format: 'quiz-stage-csv-v1', title: 'Open Final facts',
+      url: 'https://example.com/final', license: 'CC BY 4.0', retrievedAt: '2026-08-12', translationStatus: 'reviewed' });
+    legacyClue.source = '{malformed local source';
+
+    const host = await coordinator.startMatch(selectionInput().config);
+    const canonicalBoard = host.state.boards.flatMap((board) => board.categories.flatMap((category) => category.clues));
+    expect(canonicalBoard.find((clue) => clue.id === boardClue.id)?.source).toBe('Open board facts');
+    expect(canonicalBoard.find((clue) => clue.id === legacyClue.id)?.source).toBe('{malformed local source');
+    expect(host.state.finalClue?.source).toBe('Open Final facts');
+    expect(JSON.stringify(host)).not.toContain('quiz-stage-csv-v1');
+
+    await coordinator.dispatch({ type: 'SelectClue', clueId: boardClue.id });
+    await coordinator.dispatch({ type: 'RevealResponse' });
+    expect(coordinator.getPublicView()?.activeClue).toMatchObject({ source: 'Open board facts' });
+
+    const finalState = structuredClone(host.state);
+    finalState.phase = 'final-reveal';
+    finalState.finalEligibleTeamIds = ['team-1'];
+    finalState.finalWagers = { 'team-1': 0 };
+    finalState.finalRevealOrder = ['team-1'];
+    finalState.finalRevealedTeamIds = ['team-1'];
+    finalState.finalJudgments = { 'team-1': true };
+    finalState.activeClue = { clueId: finalState.finalClue!.id, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: true };
+    expect(toPublicGameView(finalState).activeClue).toMatchObject({ source: 'Open Final facts' });
+  });
+
   it('does not persist, publish, or adopt rejected clue reports', async () => {
     const { coordinator, repository } = dependencies();
     await coordinator.startMatch(selectionInput().config);

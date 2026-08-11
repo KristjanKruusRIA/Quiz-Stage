@@ -129,7 +129,14 @@ test('creates, exports, deletes, imports, reports, corrects, and re-enables bili
     await host.getByRole('button', { name: 'Start match' }).click();
     await expect(host.getByRole('grid', { name: 'Round One board' })).toBeVisible();
     await host.getByRole('button', { name: 'E2E R1 1 for 200' }).click();
-    await expect(host.locator('.public-clue .clue-prompt')).toHaveText('Corrected English clue 1');
+    const correctedPrompt = host.locator('.public-clue .clue-prompt');
+    const dailyDoubleWager = host.getByRole('spinbutton', { name: 'Daily Double wager' });
+    await expect(correctedPrompt.or(dailyDoubleWager)).toBeVisible();
+    if (await dailyDoubleWager.isVisible()) {
+      await dailyDoubleWager.fill('5');
+      await host.getByRole('button', { name: 'Commit wager' }).click();
+    }
+    await expect(correctedPrompt).toHaveText('Corrected English clue 1');
     expect(externalRequests).toEqual([]);
     expect(await application.evaluate(() =>
       (globalThis as typeof globalThis & { __quizStageExternalRequests?: string[] }).__quizStageExternalRequests,

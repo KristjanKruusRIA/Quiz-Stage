@@ -38,6 +38,8 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
   const previewRef = useRef(preview);
   const actions = useRef(new Set<string>());
   const [pendingActions, setPendingActions] = useState<ReadonlySet<string>>(new Set());
+  const closeEditor = () => { setSelected(null); setActionError(null); };
+  const openEditor = (editor: NonNullable<typeof selected>) => { setActionError(null); setSelected(editor); };
   useEffect(() => { previewRef.current = preview; }, [preview]);
   const runAction = async <T,>(key: string, action: () => Promise<T>): Promise<{ ran: true; value: T } | { ran: false }> => {
     if (actions.current.has(key)) return { ran: false };
@@ -84,14 +86,14 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
       ? library!.packs.find((pack) => pack.id === category.packId)!.revision
       : category.revision!;
     await api.saveCategorySet({ expectedRevision, categorySet: category });
-    setSelected(null);
+    closeEditor();
     await load();
   };
   const saveFinal = async (final: EditorFinalClue | FinalClueDraft) => {
     if (api.saveFinalClue === undefined) throw new Error('Content editing is unavailable');
     const expectedRevision = final.id === null ? library!.packs.find((pack) => pack.id === final.packId)!.revision : final.revision;
     await api.saveFinalClue({ expectedRevision, finalClue: final });
-    setSelected(null);
+    closeEditor();
     await load();
   };
   const createPack = async () => {
@@ -135,28 +137,28 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
   };
 
   if (selected !== null) {
-    if ('clues' in selected) return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<CategorySetEditor value={selected} onSave={saveCategory} onCancel={() => setSelected(null)} reportPending={selected.clues.some((clue) => pendingActions.has(`report:${clue.id}`))} onReport={async (clueId, note) => {
+    if ('clues' in selected) return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<CategorySetEditor value={selected} onSave={saveCategory} reportPending={selected.clues.some((clue) => pendingActions.has(`report:${clue.id}`))} onReport={async (clueId, note) => {
       setActionError(null);
       try {
         if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
         const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
         if (!result.ran) return;
-        setSelected(null); await load();
+        closeEditor(); await load();
       } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
-    }} /></main>;
-    return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<FinalClueEditor value={selected} onSave={saveFinal} onCancel={() => setSelected(null)} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
+    }} onCancel={closeEditor} /></main>;
+    return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<FinalClueEditor value={selected} onSave={saveFinal} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
       setActionError(null);
       try {
         if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
         const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
         if (!result.ran) return;
-        setSelected(null); await load();
+        closeEditor(); await load();
       } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
-    }} /></main>;
+    }} onCancel={closeEditor} /></main>;
   }
   return (
     <main className="page-shell content-library-screen">
-      <header className="setup-header"><div><p className="eyebrow">Quiz Stage</p><h1>Content Library</h1></div><button type="button" onClick={onBack}>Back to Home</button></header>
+      <header className="setup-header"><div><p className="eyebrow">Quiz Stage</p><h1>Content Library</h1></div><button type="button" onClick={() => { setActionError(null); onBack(); }}>Back to Home</button></header>
       <div className="editor-actions">
         <button type="button" onClick={() => void load()}>Refresh content</button>
         <label>Custom pack name<input value={newPackName} onChange={(event) => setNewPackName(event.target.value)} /></label>
@@ -177,10 +179,10 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
           </section>
           <PackList packs={library.packs}
             pendingActions={pendingActions}
-            onEditCategory={(pack, id) => setSelected(pack.categorySets.find((set) => set.id === id)!)}
-            onEditFinal={(pack, id) => setSelected(pack.finalClues.find((final) => final.id === id)!)}
-            onAddCategory={(pack) => setSelected(blankCategory(pack))}
-            onAddFinal={(pack) => setSelected(blankFinal(pack))}
+            onEditCategory={(pack, id) => openEditor(pack.categorySets.find((set) => set.id === id)!)}
+            onEditFinal={(pack, id) => openEditor(pack.finalClues.find((final) => final.id === id)!)}
+            onAddCategory={(pack) => openEditor(blankCategory(pack))}
+            onAddFinal={(pack) => openEditor(blankFinal(pack))}
             onDeletePack={(pack) => void deletePack(pack)}
             onExport={(pack) => void runAction(`export:${pack.id}`, async () => { await api.exportContentPack?.({ packId: pack.id }); }).catch(() => setError(true))}
           />

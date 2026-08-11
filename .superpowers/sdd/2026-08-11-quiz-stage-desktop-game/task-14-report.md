@@ -188,3 +188,47 @@ Final round-two artifacts:
 - Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,752,599 bytes, SHA-256 `9B4A78B7C92DE643F6BCDC36635481AAF7E4A6D47825FD028A3738B4E6FF98BF`.
 - Packaged executable: 225,442,304 bytes, SHA-256 `16E859AEE63926984E2F1E87FDE0285F83181608702A67AF24A8917C20DB804E`.
 - Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
+
+## Report and citation preservation fix round (2026-08-12)
+
+The third review round closes four runtime-integrity gaps and one navigation-state issue:
+
+- Custom category and Final saves compare each authoritative pre-save clue with the strict-schema-normalized submitted content inside the existing immediate transaction. Only a reported clue whose localized content, accepted variants, provenance, or enabled state changed is resolved. Category metadata, unchanged saves, and corrections to other tiers preserve the original report; a real correction can remain disabled and still resolve its own report.
+- The E2E network guard now requires both the explicit test flag and an unpackaged Electron runtime. Packaged applications cannot install the web-request listener, attach the test global, or alter requests under any argv. The compiled main bundle was audited and retains the `requested && !isPackaged` gate directly before all guard side effects.
+- The content-editor E2E waits for either the corrected prompt or the authoritative Daily Double wager phase. If the corrected tile is a Daily Double, it commits a valid wager before checking the prompt. Three independent repeated runs passed.
+- Recognized `quiz-stage-csv-v1` source metadata is converted to its validated human-readable title only at the content-to-game canonical boundary. Editor and CSV storage retain the full structured metadata. Board and Final host/public projections contain the citation title rather than JSON; malformed, unknown, and plain legacy source strings remain inert text.
+- Leaving, saving, or reopening an editor and returning Home clears any prior report-action alert, so unrelated navigation cannot resurrect a stale error.
+
+Round-three RED ran 39 focused tests: five intended regressions failed while 34 existing tests passed. Failures were the two custom report-preservation cases, raw structured source projection, packaged guard activation, and stale alert reappearance.
+
+Round-three verification:
+
+```text
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm test
+Test Files 50 passed (50)
+Tests 351 passed (351)
+
+npx playwright test tests/e2e/content-editor.spec.ts --repeat-each=3 --workers=1
+3 passed (1.7m)
+
+npx playwright test tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts --workers=1
+2 passed (1.1m)
+
+npm run build
+Electron Forge package win32/x64; exit 0; compiled guard predicate audited
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+Final round-three artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,752,754 bytes, SHA-256 `AB58412751E91E1568824B31945D50C9488709293831EE963BA32BDBE2C09B64`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `42633609392515F3E8691D743C0C97666E016F00DBB9C7064E5C9E02504D2552`.
+- Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.

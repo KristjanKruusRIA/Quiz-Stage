@@ -45,6 +45,18 @@ const isCustom = (source: string) => source === 'custom-csv' || source === 'cust
 const revision = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 type WritableClue = Omit<EditorClue, 'id'> & { id: string | null };
 
+function clueContentChanged(current: EditorClue, submitted: WritableClue): boolean {
+  const content = (clue: EditorClue | WritableClue) => ({
+    prompt: clue.prompt,
+    response: clue.response,
+    explanation: clue.explanation,
+    acceptedResponses: clue.acceptedResponses ?? null,
+    source: clue.source,
+    enabled: clue.enabled,
+  });
+  return JSON.stringify(content(current)) !== JSON.stringify(content(submitted));
+}
+
 function parseLocalized(value: string) {
   return localizedTextSchema.parse(JSON.parse(value));
 }
@@ -254,6 +266,8 @@ export class ContentEditorService {
           UPDATE category_sets SET difficulty = ?, name_json = ?, macro_topic = ?, enabled = ? WHERE id = ?
         `).run(draft.difficulty, JSON.stringify(draft.name), draft.macroTopic, Number(draft.enabled), draft.id);
         for (const clue of draft.clues) {
+          const currentClue = current.clues.find((candidate) => candidate.id === clue.id)!;
+          const resolvesReport = currentClue.reported && clueContentChanged(currentClue, clue);
           this.database.prepare(`
             UPDATE clues SET prompt_json = ?, response_json = ?, explanation_json = ?, accepted_responses_json = ?,
               source = ?, enabled = ? WHERE id = ? AND category_set_id = ?
@@ -262,7 +276,7 @@ export class ContentEditorService {
             clue.acceptedResponses === undefined ? null : JSON.stringify(clue.acceptedResponses),
             storeSource(clue.source), Number(clue.enabled), clue.id, draft.id,
           );
-          if (clue.id !== null) this.repository.resolveReport(clue.id, this.now());
+          if (resolvesReport && clue.id !== null) this.repository.resolveReport(clue.id, this.now());
         }
       }
       return this.requireCategory(draft.id);
@@ -319,6 +333,7 @@ export class ContentEditorService {
           this.repository.resolveReport(draft.clue.id, this.now());
         }
       } else {
+        const resolvesReport = current.clue.reported && clueContentChanged(current.clue, draft.clue);
         storeSource(draft.clue.source);
         this.database.prepare('UPDATE category_sets SET difficulty = ?, name_json = ?, macro_topic = ?, enabled = ? WHERE id = ?')
           .run(draft.difficulty, JSON.stringify(draft.categoryName), draft.macroTopic, Number(draft.enabled), draft.categoryId);
@@ -328,7 +343,7 @@ export class ContentEditorService {
           draft.clue.acceptedResponses === undefined ? null : JSON.stringify(draft.clue.acceptedResponses),
           storeSource(draft.clue.source), Number(draft.clue.enabled), draft.clue.id,
         );
-        this.repository.resolveReport(draft.clue.id, this.now());
+        if (resolvesReport) this.repository.resolveReport(draft.clue.id, this.now());
       }
       return this.requireFinal(draft.id);
     });
