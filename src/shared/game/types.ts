@@ -93,10 +93,13 @@ export interface UndoMutableState {
   finalRevealOrder: string[];
   finalRevealedTeamIds: string[];
   tiebreakerTeamIds: string[];
+  usedTiebreakerClueIds: string[];
   suddenDeathClueNumber: number;
   winnerTeamId: string | null;
   endedIncomplete: boolean;
   lastClosedClueId: string | null;
+  lastClosedPhase: Extract<GamePhase, 'round-one-board' | 'round-two-board'> | null;
+  lastClosedControllingTeamId: string | null;
   disabledClueIds: string[];
 }
 
@@ -124,11 +127,15 @@ export interface GameState {
   finalEligibleTeamIds: string[];
   finalRevealOrder: string[];
   finalRevealedTeamIds: string[];
+  tiebreakerClues: Clue[];
   tiebreakerTeamIds: string[];
+  usedTiebreakerClueIds: string[];
   suddenDeathClueNumber: number;
   winnerTeamId: string | null;
   endedIncomplete: boolean;
   lastClosedClueId: string | null;
+  lastClosedPhase: Extract<GamePhase, 'round-one-board' | 'round-two-board'> | null;
+  lastClosedControllingTeamId: string | null;
   disabledClueIds: string[];
   eventSequence: number;
   undoStack: UndoFrame[];

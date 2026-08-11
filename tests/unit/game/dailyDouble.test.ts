@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyGameCommand, createGame, maxDailyDoubleWager, type SelectedBoards } from '../../../src/shared/game/engine';
+import { applyGameCommand, createGame, maxDailyDoubleWager, tickTimer, type SelectedBoards } from '../../../src/shared/game/engine';
 import { GameRuleError } from '../../../src/shared/game/reducer';
 import type { GameConfig } from '../../../src/shared/game/types';
 
@@ -15,6 +15,9 @@ const selectedBoards: SelectedBoards = {
     id: 'r1', round: 'round-one', categories: [{
       id: 'cat', name: { en: 'Category' }, macroTopic: 'topic', clues: [{
         id: 'dd', categoryId: 'cat', round: 'round-one', tier: 2, value: 400,
+        prompt: { en: 'Prompt' }, response: { en: 'Response' }, explanation: { en: 'Explanation' }, source: 'Source',
+      }, {
+        id: 'ordinary', categoryId: 'cat', round: 'round-one', tier: 3, value: 600,
         prompt: { en: 'Prompt' }, response: { en: 'Response' }, explanation: { en: 'Explanation' }, source: 'Source',
       }],
     }],
@@ -66,5 +69,18 @@ describe('Daily Double', () => {
     const judged = apply(locked, { type: 'JudgeResponse', correct: false, at: 1100 });
     expect(judged.scores[controllingTeamId]).toBe(-300);
     expect(judged.controllingTeamId).toBe(controllingTeamId);
+  });
+
+  it('closes a timed-out Daily Double with no score change and retained control', () => {
+    const { game, controllingTeamId } = dailyDoubleGame(200);
+    const selected = apply(game, { type: 'SelectClue', clueId: 'dd' });
+    const wagered = apply(selected, { type: 'SubmitDailyDoubleWager', wager: 500 });
+    tickTimer(wagered, 1_000);
+    expect(tickTimer(wagered, 16_000)[0].type).toBe('TimerExpired');
+
+    const closed = apply(wagered, { type: 'RevealResponse' });
+    expect(closed.scores[controllingTeamId]).toBe(200);
+    expect(closed.controllingTeamId).toBe(controllingTeamId);
+    expect(closed.usedClueIds).toContain('dd');
   });
 });

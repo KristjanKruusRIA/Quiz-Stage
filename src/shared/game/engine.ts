@@ -15,6 +15,7 @@ export interface SelectedBoards {
   boards: Board[];
   dailyDoubleClueIds: string[];
   finalClue?: Clue | null;
+  tiebreakerClues?: Clue[];
 }
 
 export function createGame(config: GameConfig, selectedBoards: SelectedBoards, now: number): GameState {
@@ -40,11 +41,15 @@ export function createGame(config: GameConfig, selectedBoards: SelectedBoards, n
     finalEligibleTeamIds: [],
     finalRevealOrder: [],
     finalRevealedTeamIds: [],
+    tiebreakerClues: selectedBoards.tiebreakerClues ?? [],
     tiebreakerTeamIds: [],
+    usedTiebreakerClueIds: [],
     suddenDeathClueNumber: 0,
     winnerTeamId: null,
     endedIncomplete: false,
     lastClosedClueId: null,
+    lastClosedPhase: null,
+    lastClosedControllingTeamId: null,
     disabledClueIds: [],
     eventSequence: 0,
     undoStack: [],
@@ -55,7 +60,15 @@ export function applyGameCommand(state: GameState, command: GameCommand): { stat
   const at = 'at' in command ? command.at : 0;
   const eventId = commandEventId(state, command, at);
 
+  if (command.type === 'LockTeam') {
+    const expiryEvents = tickTimer(state, command.at);
+    if (expiryEvents.length > 0) return { state, events: expiryEvents };
+  }
+
   if (command.type === 'UndoLast') {
+    if (state.phase === 'complete') {
+      throw new GameRuleError('MATCH_COMPLETE', 'A completed match cannot be changed');
+    }
     const frame = state.undoStack.at(-1);
     if (frame === undefined) {
       throw new GameRuleError('NOTHING_TO_UNDO', 'There is no reversible host action to undo');
@@ -76,7 +89,9 @@ export function applyGameCommand(state: GameState, command: GameCommand): { stat
   const nextState: GameState = {
     ...reducedState,
     eventSequence: state.eventSequence + 1,
-    undoStack: isReversibleCommand(command)
+    undoStack: command.type === 'EndIncompleteMatch'
+      ? []
+      : isReversibleCommand(command)
       ? [...state.undoStack, { eventId, state: captureMutableState(state) }]
       : state.undoStack,
   };
@@ -108,6 +123,9 @@ export function tickTimer(state: GameState, now: number): GameEvent[] {
 }
 
 export function createCompensatingEvent(events: readonly GameEvent[]): GameEvent {
+  if (events.some((event) => event.type === 'MatchEnded')) {
+    throw new GameRuleError('MATCH_COMPLETE', 'A completed match cannot be changed');
+  }
   const undoneEventIds = new Set(events.flatMap((event) => event.type === 'ActionUndone' ? [event.eventId] : []));
   let target: Extract<GameEvent, { type: 'CommandApplied' }> | undefined;
   for (let index = events.length - 1; index >= 0; index -= 1) {
@@ -157,10 +175,13 @@ function cloneMutableState(state: UndoMutableState): UndoMutableState {
     finalRevealOrder: [...state.finalRevealOrder],
     finalRevealedTeamIds: [...state.finalRevealedTeamIds],
     tiebreakerTeamIds: [...state.tiebreakerTeamIds],
+    usedTiebreakerClueIds: [...state.usedTiebreakerClueIds],
     suddenDeathClueNumber: state.suddenDeathClueNumber,
     winnerTeamId: state.winnerTeamId,
     endedIncomplete: state.endedIncomplete,
     lastClosedClueId: state.lastClosedClueId,
+    lastClosedPhase: state.lastClosedPhase,
+    lastClosedControllingTeamId: state.lastClosedControllingTeamId,
     disabledClueIds: [...state.disabledClueIds],
   };
 }

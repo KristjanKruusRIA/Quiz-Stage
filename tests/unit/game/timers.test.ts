@@ -61,4 +61,22 @@ describe('game timers', () => {
     expect(() => apply(game, { type: 'PauseTimer', at: 1 })).toThrow(GameRuleError);
     expect(() => apply(game, { type: 'ResetTimer', at: 1 })).toThrow(GameRuleError);
   });
+
+  it.each([16_000, 16_001])('expires instead of locking a team at or past the deadline (%i)', (at) => {
+    const opened = apply(createGame(config, selectedBoards, 0), { type: 'SelectClue', clueId: 'clue' });
+    tickTimer(opened, 1_000);
+
+    const lateLock = applyGameCommand(opened, { type: 'LockTeam', teamId: 't1', at });
+    expect(lateLock.state.activeClue?.lockedTeamId).toBeNull();
+    expect(lateLock.state.timer.status).toBe('expired');
+    expect(lateLock.events).toHaveLength(1);
+    expect(lateLock.events[0].type).toBe('TimerExpired');
+    expect(tickTimer(lateLock.state, at + 1)).toEqual([]);
+  });
+
+  it('rejects resetting before the current timer anchor', () => {
+    const opened = apply(createGame(config, selectedBoards, 0), { type: 'SelectClue', clueId: 'clue' });
+    tickTimer(opened, 1_000);
+    expect(() => apply(opened, { type: 'ResetTimer', at: 999 })).toThrow(GameRuleError);
+  });
 });

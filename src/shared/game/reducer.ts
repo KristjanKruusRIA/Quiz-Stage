@@ -84,6 +84,8 @@ function selectClue(state: GameState, clueId: string): GameState {
       activeClue,
       dailyDoubleWager: null,
       lastClosedClueId: null,
+      lastClosedPhase: null,
+      lastClosedControllingTeamId: null,
       timer: { durationMs, remainingMs: durationMs, startedAt: null, status: 'idle' },
     };
   }
@@ -93,6 +95,8 @@ function selectClue(state: GameState, clueId: string): GameState {
     phase: 'ordinary-clue',
     activeClue,
     lastClosedClueId: null,
+    lastClosedPhase: null,
+    lastClosedControllingTeamId: null,
     timer: { durationMs, remainingMs: durationMs, startedAt: null, status: 'running' },
   };
 }
@@ -230,6 +234,9 @@ function revealFinalTeam(state: GameState, teamId: string, correct: boolean): Ga
   if (state.phase !== 'final-clue' && state.phase !== 'final-reveal') {
     throw new GameRuleError('INVALID_PHASE', 'Final teams can only be revealed after the Final clue');
   }
+  if (state.phase === 'final-clue' && state.timer.status !== 'expired') {
+    throw new GameRuleError('FINAL_TIMER_RUNNING', 'Final teams cannot be revealed before the fixed timer expires');
+  }
   const nextTeamId = state.finalRevealOrder[state.finalRevealedTeamIds.length];
   if (teamId !== nextTeamId) {
     throw new GameRuleError('INVALID_REVEAL_ORDER', 'Final teams must be revealed from lowest to highest pre-Final score');
@@ -280,6 +287,19 @@ function judgeTiebreaker(state: GameState, correct: boolean, at: number): GameSt
 }
 
 function revealResponse(state: GameState): GameState {
+  if (state.phase === 'daily-double-clue') {
+    if (state.timer.status !== 'expired' || state.activeClue === null) {
+      throw new GameRuleError('INVALID_PHASE', 'A Daily Double may be revealed without judgment only after time expires');
+    }
+    if (state.activeClue.lockedTeamId !== null) {
+      throw new GameRuleError('TEAM_ALREADY_LOCKED', 'Judge the locked team before revealing the response');
+    }
+    const clue = findClue(state, state.activeClue.clueId);
+    return completeClue({
+      ...state,
+      activeClue: { ...state.activeClue, responseRevealed: true },
+    }, clue);
+  }
   if (state.phase === 'tiebreaker') {
     if (state.activeClue?.lockedTeamId !== null) {
       throw new GameRuleError('TEAM_ALREADY_LOCKED', 'Judge the locked team before revealing the response');
@@ -300,7 +320,14 @@ function revealResponse(state: GameState): GameState {
 
 function completeClue(state: GameState, clue: Clue): GameState {
   const usedClueIds = state.usedClueIds.includes(clue.id) ? state.usedClueIds : [...state.usedClueIds, clue.id];
-  const completedState = { ...state, usedClueIds, dailyDoubleWager: null, lastClosedClueId: clue.id };
+  const completedState = {
+    ...state,
+    usedClueIds,
+    dailyDoubleWager: null,
+    lastClosedClueId: clue.id,
+    lastClosedPhase: clue.round === 'round-one' ? 'round-one-board' as const : 'round-two-board' as const,
+    lastClosedControllingTeamId: state.controllingTeamId,
+  };
   const roundComplete = state.boards
     .find((board) => board.round === clue.round)
     ?.categories.every((category) => category.clues.every((candidate) => usedClueIds.includes(candidate.id))) ?? false;
@@ -347,6 +374,10 @@ function resolveWinnerOrTiebreaker(state: GameState, participantIds: string[]): 
 }
 
 function startTiebreaker(state: GameState, teamIds: string[], clueNumber: number): GameState {
+  const clue = state.tiebreakerClues[state.usedTiebreakerClueIds.length];
+  if (clue === undefined || clue.round !== 'tiebreaker') {
+    throw new GameRuleError('TIEBREAKER_CLUE_REQUIRED', 'A preselected canonical tiebreaker clue is required');
+  }
   const durationMs = state.config.clueSeconds * 1000;
   return {
     ...state,
@@ -354,8 +385,9 @@ function startTiebreaker(state: GameState, teamIds: string[], clueNumber: number
     tiebreakerTeamIds: teamIds,
     suddenDeathClueNumber: clueNumber,
     winnerTeamId: null,
+    usedTiebreakerClueIds: [...state.usedTiebreakerClueIds, clue.id],
     activeClue: {
-      clueId: `tiebreaker-${clueNumber}`,
+      clueId: clue.id,
       lockedOutTeamIds: [],
       lockedTeamId: null,
       responseRevealed: false,
@@ -382,18 +414,37 @@ function resumeActiveTimer(state: GameState, at: number): GameState {
 
 function resetActiveTimer(state: GameState, at: number): GameState {
   requireTimedPhase(state);
+  if (state.timer.startedAt !== null && at < state.timer.startedAt) {
+    throw new GameRuleError('INVALID_TIMESTAMP', 'Timer commands must move forward in time');
+  }
   return { ...state, timer: { ...state.timer, remainingMs: state.timer.durationMs, startedAt: at, status: 'running' } };
 }
 
 function reopenClue(state: GameState): GameState {
-  if (boardRoundForPhase(state.phase) === null || state.lastClosedClueId === null) {
+  if (
+    !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)
+    || state.lastClosedClueId === null
+    || state.lastClosedPhase === null
+  ) {
     throw new GameRuleError('CLUE_NOT_REOPENABLE', 'Only the most recently closed clue may be reopened before another selection');
   }
   return {
     ...state,
+    phase: state.lastClosedPhase,
+    controllingTeamId: state.lastClosedControllingTeamId,
     activeClue: null,
     usedClueIds: state.usedClueIds.filter((id) => id !== state.lastClosedClueId),
     lastClosedClueId: null,
+    lastClosedPhase: null,
+    lastClosedControllingTeamId: null,
+    finalEligibleTeamIds: [],
+    finalWagers: {},
+    finalRevealOrder: [],
+    finalRevealedTeamIds: [],
+    tiebreakerTeamIds: [],
+    usedTiebreakerClueIds: [],
+    suddenDeathClueNumber: 0,
+    winnerTeamId: null,
     timer: idleTimer(state.config.clueSeconds * 1000),
   };
 }
@@ -412,6 +463,7 @@ function endIncompleteMatch(state: GameState): GameState {
 }
 
 function adjustScore(state: GameState, teamId: string, score: number, reason: string): GameState {
+  requireIncompleteMatch(state);
   requireKnownTeam(state, teamId);
   if (!reason.trim()) {
     throw new GameRuleError('ADJUSTMENT_REASON_REQUIRED', 'A score adjustment requires a reason');
@@ -420,6 +472,7 @@ function adjustScore(state: GameState, teamId: string, score: number, reason: st
 }
 
 function reportClue(state: GameState, clueId: string, reason: string): GameState {
+  requireIncompleteMatch(state);
   if (!reason.trim()) {
     throw new GameRuleError('REPORT_REASON_REQUIRED', 'Reporting a clue requires a reason');
   }
@@ -475,10 +528,17 @@ function requireKnownTeam(state: GameState, teamId: string): void {
   }
 }
 
+function requireIncompleteMatch(state: GameState): void {
+  if (state.phase === 'complete') {
+    throw new GameRuleError('MATCH_COMPLETE', 'A completed match cannot be changed');
+  }
+}
+
 function findClue(state: GameState, clueId: string): Clue {
   const clue = [
     ...state.boards.flatMap((board) => board.categories).flatMap((category) => category.clues),
     ...(state.finalClue === null ? [] : [state.finalClue]),
+    ...state.tiebreakerClues,
   ].find((candidate) => candidate.id === clueId);
   if (clue === undefined) {
     throw new GameRuleError('UNKNOWN_CLUE', 'The selected clue is not part of this match');

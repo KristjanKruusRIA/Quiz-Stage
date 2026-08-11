@@ -20,6 +20,16 @@ const selectedBoards: SelectedBoards = {
   boards: [{ id: 'r1', round: 'round-one', categories: [{ id: 'cat', name: { en: 'Category' }, macroTopic: 'topic', clues }] }],
 };
 
+const boundaryBoards: SelectedBoards = {
+  seed: 'boundary-seed', dailyDoubleClueIds: [], finalClue: {
+    ...clues[0], id: 'final', round: 'final',
+  },
+  boards: [
+    { id: 'r1', round: 'round-one', categories: [{ id: 'r1-cat', name: { en: 'R1' }, macroTopic: 'r1', clues: [{ ...clues[0], id: 'last-r1', categoryId: 'r1-cat' }] }] },
+    { id: 'r2', round: 'round-two', categories: [{ id: 'r2-cat', name: { en: 'R2' }, macroTopic: 'r2', clues: [{ ...clues[1], id: 'last-r2', categoryId: 'r2-cat', round: 'round-two' }] }] },
+  ],
+};
+
 function apply(state: GameState, command: Parameters<typeof applyGameCommand>[1]) {
   return applyGameCommand(state, command);
 }
@@ -46,6 +56,50 @@ describe('host recovery actions', () => {
     const ended = apply(createGame(config, selectedBoards, 0), { type: 'EndIncompleteMatch' });
     expect(ended.state).toMatchObject({ phase: 'complete', endedIncomplete: true, winnerTeamId: null });
     expect(ended.events[0].type).toBe('MatchEnded');
+  });
+
+  it('makes an incomplete ending terminal even when older undo frames exist', () => {
+    const game = createGame(config, selectedBoards, 0);
+    const selected = apply(game, { type: 'SelectClue', clueId: 'clue-200' });
+    const ended = apply(selected.state, { type: 'EndIncompleteMatch' });
+
+    expect(ended.state.undoStack).toEqual([]);
+    expect(() => apply(ended.state, { type: 'UndoLast' })).toThrow(GameRuleError);
+    const history = [...selected.events, ...ended.events];
+    expect(history).toHaveLength(2);
+    expect(() => createCompensatingEvent(history)).toThrow(GameRuleError);
+  });
+
+  it('reopens the last Round One clue into the Round One board', () => {
+    let state = createGame(config, boundaryBoards, 0);
+    const controlBeforeClose = state.controllingTeamId;
+    state = apply(state, { type: 'SelectClue', clueId: 'last-r1' }).state;
+    state = apply(state, { type: 'RevealResponse' }).state;
+    expect(state.phase).toBe('round-two-board');
+
+    state = apply(state, { type: 'ReopenClue' }).state;
+    expect(state.phase).toBe('round-one-board');
+    expect(state.controllingTeamId).toBe(controlBeforeClose);
+    expect(state.usedClueIds).not.toContain('last-r1');
+  });
+
+  it('reopens the last Double Round clue out of Final', () => {
+    let state: GameState = {
+      ...createGame(config, boundaryBoards, 0),
+      phase: 'round-two-board',
+      scores: { t1: 100, t2: 50 },
+      controllingTeamId: 't1',
+      usedClueIds: ['last-r1'],
+    };
+    state = apply(state, { type: 'SelectClue', clueId: 'last-r2' }).state;
+    state = apply(state, { type: 'RevealResponse' }).state;
+    expect(state.phase).toBe('final-category');
+
+    state = apply(state, { type: 'ReopenClue' }).state;
+    expect(state.phase).toBe('round-two-board');
+    expect(state.controllingTeamId).toBe('t1');
+    expect(state.finalEligibleTeamIds).toEqual([]);
+    expect(state.usedClueIds).not.toContain('last-r2');
   });
 
   it('undoes the most recent reversible host action with an appended compensating event', () => {
@@ -103,5 +157,11 @@ describe('host recovery actions', () => {
     state = apply(state, { type: 'SelectClue', clueId: 'clue-400' }).state;
     state = apply(state, { type: 'RevealResponse' }).state;
     expect(state.phase).toBe('round-two-board');
+  });
+
+  it('rejects score adjustment and clue reporting after completion', () => {
+    const ended = apply(createGame(config, selectedBoards, 0), { type: 'EndIncompleteMatch' }).state;
+    expect(() => apply(ended, { type: 'AdjustScore', teamId: 't1', score: 10, reason: 'Late change' })).toThrow(GameRuleError);
+    expect(() => apply(ended, { type: 'ReportClue', clueId: 'clue-200', reason: 'Late report' })).toThrow(GameRuleError);
   });
 });
