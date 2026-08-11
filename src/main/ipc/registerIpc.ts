@@ -181,6 +181,7 @@ export function registerIpc({
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       const path = await csvDialogs.chooseImportFile();
+      requireHost(event.sender.id);
       if (path === null) return { cancelled: true as const };
       return { cancelled: false as const, ...previewSchema.parse(contentCsv.previewFile(path)) };
     });
@@ -192,6 +193,7 @@ export function registerIpc({
       requireHost(event.sender.id);
       const { packId } = exportRequestSchema.parse(input);
       const path = await csvDialogs.chooseExportFile(packId);
+      requireHost(event.sender.id);
       if (path === null) return { cancelled: true as const };
       return { cancelled: false as const, ...exportResultSchema.parse(contentCsv.exportToFile(packId, path)) };
     });

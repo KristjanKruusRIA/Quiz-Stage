@@ -92,3 +92,70 @@ better-sqlite3 win32-x64.node: 1989632 bytes
 - Direct filesystem paths exist only in the main process after an explicit Electron dialog or in the direct main-process service used by integration tests.
 - Export ordering, newline form, encoding, escaped variants, and structured source metadata are deterministic; re-import produces byte-equivalent normalized custom-pack records.
 - No migration, seed content, renderer UI, preload bridge, public projection, media, match state, or network path changed.
+
+## Fix round 1: hardened import and export boundaries
+
+### Confirmed findings and fixes
+
+- Fresh imports now check pack, category, board clue, and Final identities against all three persisted ID namespaces inside the existing immediate transaction. Incoming IDs also cannot be reused across pack/category/clue namespaces. Only a same-pack Replace Existing may retain identities already owned by that custom pack; create uses plain `INSERT` statements and cannot update a conflicting row.
+- Replace Existing retains the prior stable clue/category scope and now rejects cross-pack or cross-namespace identities before any base-table write. Keep Both continues to allocate every pack/category/board/Final ID against the global namespace and rewrites all references in memory before its transaction writes.
+- Export now parses, validates, and compares its normalized in-memory output before creating a temporary file. Bundled legacy source strings lack authoritative URL/license/retrieval metadata, so bundled export fails closed with an actionable validation error and does not create, replace, or truncate a destination.
+- A Task 12 display-source override changes only the exported source title when the base clue has structured CSV metadata; URL, license, retrieval date, and translation status continue to come from that authoritative base metadata.
+- Import-preview and export IPC re-authorize the current host immediately after their asynchronous file dialogs resolve, including cancellation, before any selected-path I/O.
+- Accepted-variant decoding permits only `\;` and `\\`; dangling and unknown escapes are validation errors rather than lossy transformations.
+- Synchronous CSV work is bounded to 16 MiB per file, 10,000 data rows, 128 Ki characters per record, and 32 Ki characters per field. The selected file is checked by path and opened descriptor before bounded chunked reading, and the parser independently enforces the same byte cap.
+- Export prefixes every data cell with one apostrophe and import removes that layer only from a fully encoded row. This prevents emitted cells from beginning with `=`, `+`, `-`, or `@`, while preserving formula-looking domain text and every original leading-apostrophe combination exactly on re-import.
+- No renderer UI, preload/shared bridge, public-window capability, arbitrary renderer path, network behavior, schema migration, or bundled seed content changed.
+
+### Fix-round TDD evidence
+
+The first corrected focused RED exercised production paths and produced 10 expected failures with 26 existing passes: six fresh/Final identity-collision imports succeeded, legacy export published invalid CSV, an ordinary source-title override lost structured metadata, a replaced host resumed import I/O after its dialog, and `\q` was accepted as a variant escape. A second RED added three failures for absent caps and formula neutralization, and a final RED covered incoming cross-namespace ID reuse.
+
+Focused GREEN after the fixes:
+
+```text
+npx vitest --configLoader runner tests/unit/content/csvValidation.test.ts tests/integration/content/csvRoundTrip.test.ts
+Test Files 2 passed (2)
+Tests 41 passed (41)
+exit 0
+```
+
+### Fix-round verification
+
+```text
+Affected content/IPC/privacy/persistence/coordinator/game/application suite:
+Test Files 28 passed (28)
+Tests 236 passed (236)
+exit 0
+
+npm run test:run
+Test Files 42 passed (42)
+Tests 292 passed (292)
+exit 0
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm run build
+Electron Forge packaged x64 on win32
+exit 0
+
+npm run make:portable
+ZIP maker completed for win32/x64
+exit 0
+```
+
+Packaged production checks:
+
+```text
+quiz-stage-desktop-game-win32-x64-0.1.0.zip: 155740128 bytes
+dev-seed.sqlite: 188416 bytes
+SHA-256: CAF759B94CE16CF2B2A06E0BCB4920A995CEEEA55F30A64BC5D08A4D24375FDC
+SQLite integrity_check: ok
+Inventory: 183 clues, 36 board category sets, 3 Finals
+better-sqlite3 win32-x64.node: 1989632 bytes
+csv-parse@7.0.2 and csv-stringify@6.8.3 confirmed at depth 0
+```

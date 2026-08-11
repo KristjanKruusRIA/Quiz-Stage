@@ -1,5 +1,7 @@
 import { randomUUID } from 'node:crypto';
-import { existsSync, lstatSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
+import {
+  closeSync, existsSync, fstatSync, lstatSync, openSync, readSync, renameSync, unlinkSync, writeFileSync,
+} from 'node:fs';
 import { dirname, extname, join } from 'node:path';
 import type { DatabaseConnection } from '../persistence/database';
 import type { ContentRepository } from './contentRepository';
@@ -12,6 +14,14 @@ const BOARD_ROUNDS = ['round-one', 'round-two'] as const;
 const DIFFICULTIES = ['easy', 'medium', 'hard'] as const;
 const TRANSLATION_STATUSES = ['untranslated', 'machine', 'reviewed'] as const;
 const CSV_SOURCE_FORMAT = 'quiz-stage-csv-v1';
+
+// These bounds comfortably exceed the bundled library while keeping synchronous main-process work finite.
+export const CSV_PACK_LIMITS = {
+  maxFileBytes: 16 * 1024 * 1024,
+  maxRows: 10_000,
+  maxRecordCharacters: 128 * 1024,
+  maxFieldCharacters: 32 * 1024,
+} as const;
 
 type BoardRound = (typeof BOARD_ROUNDS)[number];
 type Difficulty = (typeof DIFFICULTIES)[number];
@@ -181,6 +191,9 @@ interface ExportRow {
 }
 
 export function parsePackCsv(text: string): ParsedPack {
+  if (Buffer.byteLength(text, 'utf8') > CSV_PACK_LIMITS.maxFileBytes) {
+    throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+  }
   const withoutInitialBom = text.startsWith('\uFEFF') ? text.slice(1) : text;
   if (withoutInitialBom.includes('\uFEFF')) {
     throw new Error('A UTF-8 BOM is allowed only at the start of the CSV file');
@@ -192,24 +205,50 @@ export function parsePackCsv(text: string): ParsedPack {
     record_delimiter: ['\r\n', '\n'],
     relax_quotes: false,
     skip_empty_lines: true,
+    max_record_size: CSV_PACK_LIMITS.maxRecordCharacters,
   };
-  const header = parse(withoutInitialBom, {
-    ...parseOptions,
-    relax_column_count: true,
-    to_line: 1,
-  }) as string[][];
+  let header: string[][];
+  try {
+    header = parse(withoutInitialBom, {
+      ...parseOptions,
+      relax_column_count: true,
+      to_line: 1,
+    }) as string[][];
+  } catch (error) {
+    if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
+      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordCharacters}-character limit`);
+    }
+    throw error;
+  }
   if (header.length === 0) throw new Error('CSV header is missing');
   if (!sameColumns(header[0])) {
     throw new Error(`CSV header must exactly match: ${CSV_COLUMNS.join(',')}`);
   }
-  const parsed = parse(withoutInitialBom, { ...parseOptions, relax_column_count: false }) as string[][];
+  let parsed: string[][];
+  try {
+    parsed = parse(withoutInitialBom, { ...parseOptions, relax_column_count: false }) as string[][];
+  } catch (error) {
+    if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
+      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordCharacters}-character limit`);
+    }
+    throw error;
+  }
+  if (parsed.length - 1 > CSV_PACK_LIMITS.maxRows) {
+    throw new Error(`CSV row count exceeds the ${CSV_PACK_LIMITS.maxRows}-row limit`);
+  }
 
   return {
     rows: parsed.slice(1).map((cells, index) => {
+      const decodedCells = decodeSpreadsheetRow(cells);
       const fields = Object.fromEntries(CSV_COLUMNS.map((column, cellIndex) => [
         column,
-        normalizeNewlines(cells[cellIndex] ?? ''),
+        normalizeNewlines(decodedCells[cellIndex] ?? ''),
       ])) as CsvFields;
+      for (const [column, value] of Object.entries(fields) as Array<[CsvColumn, string]>) {
+        if (value.length > CSV_PACK_LIMITS.maxFieldCharacters) {
+          throw new Error(`CSV field ${column} exceeds the ${CSV_PACK_LIMITS.maxFieldCharacters}-character limit`);
+        }
+      }
       const en = decodeVariants(fields.accepted_variants_en);
       const et = decodeVariants(fields.accepted_variants_et);
       return {
@@ -239,6 +278,7 @@ export function validatePack(pack: ParsedPack): ValidationIssue[] {
   const clueTexts = new Map<string, ParsedCsvRow>();
   const categoryGroups = new Map<string, ParsedCsvRow[]>();
   const categoryNames = new Map<string, { id: string; row: ParsedCsvRow }>();
+  const incomingCategoryIds = new Set(pack.rows.map((row) => row.category_set_id));
 
   for (const row of pack.rows) {
     for (const column of [
@@ -255,6 +295,12 @@ export function validatePack(pack: ParsedPack): ValidationIssue[] {
     }
     if (row.pack_id !== first.pack_id) add(row, 'multiple-pack-id', 'Every row must use one pack ID', 'pack_id');
     if (row.pack_name !== first.pack_name) add(row, 'inconsistent-pack-name', 'Every row must use one pack name', 'pack_name');
+    if (row.category_set_id === row.pack_id) {
+      add(row, 'duplicate-content-id', 'A category ID cannot reuse the pack ID', 'category_set_id');
+    }
+    if (row.clue_id === row.pack_id || incomingCategoryIds.has(row.clue_id)) {
+      add(row, 'duplicate-content-id', 'A clue ID cannot reuse a pack or category ID', 'clue_id');
+    }
     if (row.content_kind !== 'board' && row.content_kind !== 'final') {
       add(row, 'invalid-content-kind', 'content_kind must be board or final', 'content_kind');
     }
@@ -390,6 +436,8 @@ export function importPack({
       const rewritten = rewritePackIdentities(database, records, createId);
       records = rewritten.records;
       packId = rewritten.packId;
+    } else {
+      assertNoIdentityCollisions(database, preview.packId, records, false);
     }
 
     writePack(database, records, exists && conflict === 'replace-existing');
@@ -418,7 +466,7 @@ export function exportPack({
   }
   const records = loadExportRecords(database, packId);
   if (records.length === 0) throw new Error(`Unknown or empty content pack: ${packId}`);
-  const csvText = stringify(records.map(recordToCsvFields), {
+  const csvText = stringify(records.map((record) => encodeSpreadsheetRow(recordToCsvFields(record))), {
     bom: true,
     header: true,
     columns: [...CSV_COLUMNS],
@@ -426,6 +474,15 @@ export function exportPack({
     record_delimiter: '\r\n',
     eof: true,
   });
+  const exportedPack = parsePackCsv(csvText);
+  const exportIssues = validatePack(exportedPack);
+  if (exportIssues.length > 0 || JSON.stringify(normalizeRecords(exportedPack)) !== JSON.stringify(records)) {
+    const firstIssue = exportIssues[0];
+    const detail = firstIssue === undefined
+      ? 'exported records did not preserve their normalized content'
+      : `${firstIssue.message}${firstIssue.row === undefined ? '' : ` at row ${firstIssue.row}`}`;
+    throw new Error(`CSV export validation failed: ${detail}`);
+  }
   const bytes = Buffer.from(csvText, 'utf8');
   const temporaryPath = join(dirname(destination), `.${randomUUID()}.csv.tmp`);
   try {
@@ -438,7 +495,34 @@ export function exportPack({
 }
 
 export function readPackCsvFile(path: string): string {
-  return readFileSync(path, 'utf8');
+  const entry = lstatSync(path);
+  if (entry.isSymbolicLink() || !entry.isFile()) throw new Error('CSV import source must be a regular file');
+  if (entry.size > CSV_PACK_LIMITS.maxFileBytes) {
+    throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+  }
+  const descriptor = openSync(path, 'r');
+  try {
+    const openedEntry = fstatSync(descriptor);
+    if (!openedEntry.isFile()) throw new Error('CSV import source must be a regular file');
+    if (openedEntry.size > CSV_PACK_LIMITS.maxFileBytes) {
+      throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+    }
+    const chunks: Buffer[] = [];
+    let total = 0;
+    while (total <= CSV_PACK_LIMITS.maxFileBytes) {
+      const chunk = Buffer.allocUnsafe(Math.min(64 * 1024, CSV_PACK_LIMITS.maxFileBytes + 1 - total));
+      const bytesRead = readSync(descriptor, chunk, 0, chunk.length, null);
+      if (bytesRead === 0) break;
+      chunks.push(chunk.subarray(0, bytesRead));
+      total += bytesRead;
+    }
+    if (total > CSV_PACK_LIMITS.maxFileBytes) {
+      throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+    }
+    return Buffer.concat(chunks, total).toString('utf8');
+  } finally {
+    closeSync(descriptor);
+  }
 }
 
 function sameColumns(header: readonly string[]): boolean {
@@ -449,13 +533,25 @@ function normalizeNewlines(value: string): string {
   return value.replace(/\r\n?/g, '\n');
 }
 
+function encodeSpreadsheetRow(fields: CsvFields): CsvFields {
+  return Object.fromEntries(CSV_COLUMNS.map((column) => [column, `'${fields[column]}`])) as CsvFields;
+}
+
+function decodeSpreadsheetRow(cells: readonly string[]): readonly string[] {
+  return cells.length === CSV_COLUMNS.length && cells.every((cell) => cell.startsWith("'"))
+    ? cells.map((cell) => cell.slice(1))
+    : cells;
+}
+
 function decodeVariants(value: string): { values: string[]; valid: boolean } {
   if (value === '') return { values: [], valid: true };
   const values: string[] = [];
   let current = '';
   let escaped = false;
+  let valid = true;
   for (const character of value) {
     if (escaped) {
+      if (character !== '\\' && character !== ';') valid = false;
       current += character;
       escaped = false;
     } else if (character === '\\') escaped = true;
@@ -465,7 +561,7 @@ function decodeVariants(value: string): { values: string[]; valid: boolean } {
     } else current += character;
   }
   values.push(current);
-  return { values, valid: !escaped && values.every((variant) => variant.trim() !== '') };
+  return { values, valid: valid && !escaped && values.every((variant) => variant.trim() !== '') };
 }
 
 function encodeVariants(values: readonly string[]): string {
@@ -571,26 +667,43 @@ function assertReplaceAllowed(
       || replacement.tier !== row.tier
     )) throw new Error(`Replace Existing cannot change stable clue identity: ${row.id}`);
   }
-  assertNoForeignIdentityCollisions(database, packId, records);
+  assertNoIdentityCollisions(database, packId, records, true);
 }
 
-function assertNoForeignIdentityCollisions(
+function assertNoIdentityCollisions(
   database: DatabaseConnection,
   packId: string,
   records: readonly CsvPackRecord[],
+  allowSamePack: boolean,
 ): void {
+  const packMatches = findIdentityMatches(database, packId);
+  if (packMatches.some((match) => match.kind !== 'pack' || !allowSamePack || match.owner !== packId)) {
+    throw new Error(`Content ID collision for pack: ${packId}`);
+  }
   for (const categoryId of new Set(records.map((record) => record.categorySetId))) {
-    const owner = database.prepare('SELECT pack_id FROM category_sets WHERE id = ?').pluck().get(categoryId);
-    if (owner !== undefined && owner !== packId) throw new Error(`Category ID belongs to another pack: ${categoryId}`);
+    const matches = findIdentityMatches(database, categoryId);
+    if (matches.some((match) => match.kind !== 'category' || !allowSamePack || match.owner !== packId)) {
+      throw new Error(`Content ID collision for category: ${categoryId}`);
+    }
   }
   for (const record of records) {
-    const owner = database.prepare(`
-      SELECT category_sets.pack_id
-      FROM clues JOIN category_sets ON category_sets.id = clues.category_set_id
-      WHERE clues.id = ?
-    `).pluck().get(record.clueId);
-    if (owner !== undefined && owner !== packId) throw new Error(`Clue ID belongs to another pack: ${record.clueId}`);
+    const matches = findIdentityMatches(database, record.clueId);
+    if (matches.some((match) => match.kind !== 'clue' || !allowSamePack || match.owner !== packId)) {
+      throw new Error(`Content ID collision for clue: ${record.clueId}`);
+    }
   }
+}
+
+function findIdentityMatches(
+  database: DatabaseConnection,
+  id: string,
+): Array<{ kind: 'pack' | 'category' | 'clue'; owner: string }> {
+  return database.prepare(`
+    SELECT 'pack' AS kind, id AS owner FROM content_packs WHERE id = ?
+    UNION ALL SELECT 'category', pack_id FROM category_sets WHERE id = ?
+    UNION ALL SELECT 'clue', category_sets.pack_id
+      FROM clues JOIN category_sets ON category_sets.id = clues.category_set_id WHERE clues.id = ?
+  `).all(id, id, id) as Array<{ kind: 'pack' | 'category' | 'clue'; owner: string }>;
 }
 
 function rewritePackIdentities(
@@ -651,37 +764,27 @@ function writePack(
   const categoryRecords = new Map<string, CsvPackRecord>();
   for (const record of records) categoryRecords.set(record.categorySetId, record);
   for (const category of [...categoryRecords.values()].sort((left, right) => left.categorySetId.localeCompare(right.categorySetId))) {
-    database.prepare(`
-      INSERT INTO category_sets (id, pack_id, round, difficulty, name_json, macro_topic, enabled)
-      VALUES (?, ?, ?, ?, ?, ?, 1)
-      ON CONFLICT (id) DO UPDATE SET
-        round = excluded.round,
-        difficulty = excluded.difficulty,
-        name_json = excluded.name_json,
-        macro_topic = excluded.macro_topic
-    `).run(
+    const categoryValues = [
       category.categorySetId,
       category.packId,
       category.round,
       category.difficulty,
       localizedJson(category.categoryNameEn, category.categoryNameEt),
       category.macroTopic,
-    );
+    ] as const;
+    if (replacing && database.prepare('SELECT 1 FROM category_sets WHERE id = ?').pluck().get(category.categorySetId) === 1) {
+      database.prepare(`
+        UPDATE category_sets SET round = ?, difficulty = ?, name_json = ?, macro_topic = ? WHERE id = ? AND pack_id = ?
+      `).run(category.round, category.difficulty, categoryValues[4], category.macroTopic, category.categorySetId, category.packId);
+    } else {
+      database.prepare(`
+        INSERT INTO category_sets (id, pack_id, round, difficulty, name_json, macro_topic, enabled)
+        VALUES (?, ?, ?, ?, ?, ?, 1)
+      `).run(...categoryValues);
+    }
   }
   for (const record of records) {
-    database.prepare(`
-      INSERT INTO clues (
-        id, category_set_id, round, tier, value, prompt_json, response_json,
-        explanation_json, accepted_responses_json, source, enabled
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT (id) DO UPDATE SET
-        prompt_json = excluded.prompt_json,
-        response_json = excluded.response_json,
-        explanation_json = excluded.explanation_json,
-        accepted_responses_json = excluded.accepted_responses_json,
-        source = excluded.source,
-        enabled = excluded.enabled
-    `).run(
+    const clueValues = [
       record.clueId,
       record.categorySetId,
       record.round,
@@ -693,7 +796,22 @@ function writePack(
       localizedVariantsJson(record.acceptedVariantsEn, record.acceptedVariantsEt),
       storedSource(record),
       Number(record.enabled),
-    );
+    ] as const;
+    if (replacing && database.prepare('SELECT 1 FROM clues WHERE id = ?').pluck().get(record.clueId) === 1) {
+      database.prepare(`
+        UPDATE clues SET prompt_json = ?, response_json = ?, explanation_json = ?,
+          accepted_responses_json = ?, source = ?, enabled = ?
+        WHERE id = ? AND category_set_id = ?
+      `).run(clueValues[5], clueValues[6], clueValues[7], clueValues[8], clueValues[9], clueValues[10],
+        record.clueId, record.categorySetId);
+    } else {
+      database.prepare(`
+        INSERT INTO clues (
+          id, category_set_id, round, tier, value, prompt_json, response_json,
+          explanation_json, accepted_responses_json, source, enabled
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).run(...clueValues);
+    }
   }
   if (replacing) {
     const clueIds = records.map((record) => record.clueId);
@@ -780,8 +898,9 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
   const explanation = override?.explanation as { en: string; et?: string } | undefined ?? parseLocalized(row.explanation_json);
   const accepted = override?.acceptedResponses as { en?: string; et?: string } | undefined
     ?? (row.accepted_responses_json === null ? undefined : JSON.parse(row.accepted_responses_json) as { en?: string; et?: string });
-  const sourceText = typeof override?.source === 'string' ? override.source : row.source;
-  const source = parseStoredSource(sourceText, prompt.et === undefined ? 'untranslated' : 'reviewed');
+  const baseSource = parseStoredSource(row.source, prompt.et === undefined ? 'untranslated' : 'reviewed');
+  const overrideSource = typeof override?.source === 'string' ? override.source : undefined;
+  const source = overrideSource === undefined ? baseSource : { ...baseSource, title: overrideSource };
   const finalCategory = override?.categoryName as { en: string; et?: string } | undefined;
   return {
     clueId: row.clue_id,
@@ -816,7 +935,10 @@ function parseLocalized(value: string): { en: string; et?: string } {
   return JSON.parse(value) as { en: string; et?: string };
 }
 
-function parseStoredSource(value: string, fallbackStatus: TranslationStatus): StoredCsvSource {
+function parseStoredSource(
+  value: string,
+  fallbackStatus: TranslationStatus,
+): StoredCsvSource {
   try {
     const parsed = JSON.parse(value) as Partial<StoredCsvSource>;
     if (parsed.format === CSV_SOURCE_FORMAT

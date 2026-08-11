@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parsePackCsv, validatePack } from '../../../src/main/content/csvPacks';
+import { CSV_PACK_LIMITS, parsePackCsv, validatePack } from '../../../src/main/content/csvPacks';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 
 type Row = Record<(typeof CSV_COLUMNS)[number], string>;
@@ -113,6 +113,17 @@ describe('CSV pack parsing and validation', () => {
     ]));
   });
 
+  it('rejects unknown accepted-variant escapes instead of silently changing clue data', () => {
+    const rows = validRows();
+    rows[0] = boardRow(1, { accepted_variants_en: String.raw`alpha\q` });
+
+    expect(validatePack(parsePackCsv(csv(rows)))).toContainEqual(expect.objectContaining({
+      row: 2,
+      code: 'invalid-accepted-variants',
+      column: 'accepted_variants_en',
+    }));
+  });
+
   it.each([
     ['missing', CSV_COLUMNS.slice(0, -1).join(',')],
     ['extra', [...CSV_COLUMNS, 'unexpected'].join(',')],
@@ -179,6 +190,23 @@ describe('CSV pack parsing and validation', () => {
     ]));
   });
 
+  it('rejects IDs reused between incoming pack, category, board clue, and Final namespaces', () => {
+    const rows = validRows().map((item) => ({ ...item, category_set_id: 'custom-pack' }));
+    rows.push(boardRow(0, {
+      clue_id: 'custom-pack',
+      category_set_id: 'final-category',
+      content_kind: 'final',
+      round: 'final',
+      tier: '0',
+      macro_topic: 'final',
+      category_name_en: 'Final Category',
+      clue_en: 'Final prompt',
+    }));
+
+    expect(validatePack(parsePackCsv(csv(rows))).map((issue) => issue.code))
+      .toContain('duplicate-content-id');
+  });
+
   it('requires complete, internally consistent five-tier board category sets and stable Final shape', () => {
     const incomplete = validRows().slice(0, 4);
     incomplete[1] = boardRow(2, { macro_topic: 'changed' });
@@ -198,5 +226,36 @@ describe('CSV pack parsing and validation', () => {
     expect(codes).toEqual(expect.arrayContaining([
       'incomplete-category-set', 'inconsistent-category-set', 'invalid-final-shape',
     ]));
+  });
+
+  it('enforces documented row, record, and field limits at their boundaries', () => {
+    const fieldAtLimit = 'x'.repeat(CSV_PACK_LIMITS.maxFieldCharacters);
+    expect(parsePackCsv(csv(validRows().map((item, index) => index === 0
+      ? { ...item, clue_en: fieldAtLimit }
+      : item))).rows[0].clue_en).toHaveLength(CSV_PACK_LIMITS.maxFieldCharacters);
+
+    const fieldOverLimit = 'x'.repeat(CSV_PACK_LIMITS.maxFieldCharacters + 1);
+    expect(() => parsePackCsv(csv(validRows().map((item, index) => index === 0
+      ? { ...item, clue_en: fieldOverLimit }
+      : item)))).toThrow(/field.*limit/i);
+
+    const rowTemplate = boardRow(1);
+    const atRowLimit = Array.from({ length: CSV_PACK_LIMITS.maxRows }, (_, index) => ({
+      ...rowTemplate,
+      clue_id: `limit-${index}`,
+    }));
+    expect(parsePackCsv(csv(atRowLimit)).rows).toHaveLength(CSV_PACK_LIMITS.maxRows);
+    expect(() => parsePackCsv(csv([...atRowLimit, { ...rowTemplate, clue_id: 'limit-over' }])))
+      .toThrow(/row.*limit/i);
+
+    const recordPart = 'y'.repeat(CSV_PACK_LIMITS.maxFieldCharacters - 1);
+    expect(() => parsePackCsv(csv(validRows().map((item, index) => index === 0 ? {
+      ...item,
+      clue_en: recordPart,
+      response_en: recordPart,
+      explanation_en: recordPart,
+      source_title: recordPart,
+      source_license: recordPart,
+    } : item)))).toThrow(/record.*limit/i);
   });
 });

@@ -1,12 +1,16 @@
-import { copyFileSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
+import {
+  copyFileSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, truncateSync, writeFileSync,
+} from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
+  CSV_PACK_LIMITS,
   exportPack,
   importPack,
   previewPackImport,
   CsvPackWorkflow,
+  readPackCsvFile,
   type ImportConflictStrategy,
 } from '../../../src/main/content/csvPacks';
 import { ContentRepository } from '../../../src/main/content/contentRepository';
@@ -14,6 +18,7 @@ import { openDatabase, type DatabaseConnection } from '../../../src/main/persist
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 import { registerIpc, type IpcMainPort } from '../../../src/main/ipc/registerIpc';
+import { parse as parseCsv } from 'csv-parse/sync';
 
 type Row = Record<(typeof CSV_COLUMNS)[number], string>;
 const seedPath = resolve('resources/content/dev-seed.sqlite');
@@ -61,6 +66,14 @@ function row(tier: number, overrides: Partial<Row> = {}): Row {
 
 function packCsv(overrides: Partial<Row> = {}): string {
   return csv([1, 2, 3, 4, 5].map((tier) => row(tier, overrides)));
+}
+
+function identityState(database: DatabaseConnection) {
+  return {
+    packs: database.prepare('SELECT * FROM content_packs ORDER BY id').all(),
+    categories: database.prepare('SELECT * FROM category_sets ORDER BY id').all(),
+    clues: database.prepare('SELECT * FROM clues ORDER BY id').all(),
+  };
 }
 
 describe('transactional CSV pack import and export', () => {
@@ -144,6 +157,34 @@ describe('transactional CSV pack import and export', () => {
     );
   });
 
+  it('neutralizes every spreadsheet formula prefix reversibly, including leading apostrophes', () => {
+    const { directory, database, repository } = openCopy();
+    const dangerous = csv([1, 2, 3, 4, 5].map((tier) => row(tier, {
+      pack_name: '=Formula Pack',
+      macro_topic: '+science',
+      category_name_en: '-Formula Category',
+      clue_en: ['=one', '+two', '-three', '@four', "'=five"][tier - 1],
+      response_en: ['+one', '-two', '@three', '=four', "''=five"][tier - 1],
+      explanation_en: ['-one', '@two', '=three', '+four', "'plain"][tier - 1],
+      accepted_variants_en: ['=alias', '+alias', '-alias', '@alias', "'=alias"][tier - 1],
+      source_title: '@Formula Source',
+    })));
+    const normalizedBefore = previewPackImport({ database, text: dangerous }).records;
+    expect(previewPackImport({ database, text: dangerous }).issues).toEqual([]);
+    commit(database, repository, dangerous);
+    const destination = join(directory, 'formula-safe.csv');
+
+    exportPack({ database, packId: 'import-pack', destination });
+
+    const text = readFileSync(destination, 'utf8');
+    const rawRows = parseCsv(text, { bom: true, columns: false }) as string[][];
+    expect(rawRows.slice(1).flat().every((cell) => !/^[=+\-@]/.test(cell))).toBe(true);
+    expect(rawRows.slice(1).every((cells) => cells.every((cell) => cell.startsWith("'")))).toBe(true);
+    const reimported = previewPackImport({ database, text });
+    expect(reimported.issues).toEqual([]);
+    expect(reimported.records).toEqual(normalizedBefore);
+  });
+
   it('replaces only the existing custom pack while preserving stable reports, overrides, and identity', () => {
     const { directory, database, repository } = openCopy();
     commit(database, repository, packCsv());
@@ -193,6 +234,32 @@ describe('transactional CSV pack import and export', () => {
       .toBe(0);
   });
 
+  it('limits Replace Existing to identities already owned by that same custom pack', () => {
+    const { database, repository } = openCopy();
+    commit(database, repository, packCsv());
+    commit(database, repository, csv([1, 2, 3, 4, 5].map((tier) => row(tier, {
+      clue_id: `foreign-clue-${tier}`,
+      pack_id: 'foreign-pack',
+      pack_name: 'Foreign Pack',
+      category_set_id: 'foreign-category',
+      category_name_en: 'Foreign Category',
+      clue_en: `Foreign prompt ${tier}`,
+    }))));
+    const before = identityState(database);
+    const replacement = previewPackImport({
+      database,
+      text: csv([1, 2, 3, 4, 5].map((tier) => row(tier, tier === 1
+        ? { clue_id: 'foreign-clue-1' }
+        : {}))),
+    });
+    expect(replacement.issues).toEqual([]);
+
+    expect(() => importPack({
+      database, repository, preview: replacement, conflict: 'replace-existing',
+    })).toThrow(/collision|another pack/i);
+    expect(identityState(database)).toEqual(before);
+  });
+
   it('Keep Both rewrites pack, category, board, and Final identities and every reference collision-free', () => {
     const { database, repository } = openCopy();
     const final = row(0, {
@@ -225,6 +292,47 @@ describe('transactional CSV pack import and export', () => {
       'copy-clue-1:copy-category', 'copy-clue-2:copy-category', 'copy-clue-3:copy-category',
       'copy-clue-4:copy-category', 'copy-clue-5:copy-category', 'copy-final:copy-final-category',
     ]);
+  });
+
+  it.each([
+    ['incoming pack ID matches an existing clue ID', { pack_id: 'easy-r1-01-t1' }, true],
+    ['incoming category ID matches an existing pack ID', { category_set_id: 'dev-library' }, true],
+    ['incoming category ID matches an existing category ID', { category_set_id: 'easy-r1-01' }, true],
+    ['incoming clue ID matches an existing category ID', { clue_id: 'easy-r1-01' }, false],
+    ['incoming clue ID matches an existing clue ID', { clue_id: 'easy-r1-01-t1' }, false],
+  ])('rejects fresh-pack identity collisions across every namespace: %s', (_name, overrides, applyToEveryRow) => {
+    const { database, repository } = openCopy();
+    const before = identityState(database);
+    const incoming = [1, 2, 3, 4, 5].map((tier) => row(tier, applyToEveryRow || tier === 1 ? overrides : {}));
+    const preview = previewPackImport({ database, text: csv(incoming) });
+    expect(preview.issues).toEqual([]);
+    expect(preview.conflict).toBe(false);
+
+    expect(() => importPack({ database, repository, preview })).toThrow(/identity|ID.*(exists|belongs|collision)/i);
+    expect(identityState(database)).toEqual(before);
+  });
+
+  it('rejects fresh-pack Final identity collisions without mutating the existing Final or partial new pack', () => {
+    const { database, repository } = openCopy();
+    const before = identityState(database);
+    const final = row(0, {
+      clue_id: 'easy-final-01',
+      category_set_id: 'fresh-final-category',
+      content_kind: 'final',
+      round: 'final',
+      tier: '0',
+      macro_topic: 'final',
+      category_name_en: 'Fresh Final',
+      clue_en: 'Incoming Final prompt',
+    });
+    const preview = previewPackImport({
+      database,
+      text: csv([...Array.from({ length: 5 }, (_, index) => row(index + 1)), final]),
+    });
+    expect(preview.issues).toEqual([]);
+
+    expect(() => importPack({ database, repository, preview })).toThrow(/identity|ID.*(exists|belongs|collision)/i);
+    expect(identityState(database)).toEqual(before);
   });
 
   it('rejects one invalid row before writing and rolls back an injected late database failure', () => {
@@ -337,6 +445,58 @@ describe('transactional CSV pack import and export', () => {
     expect(readdirSync(directory).filter((name) => name.includes('.tmp'))).toEqual([]);
   });
 
+  it('rejects an oversized selected file by stat size before parsing or writing', () => {
+    const { directory } = openCopy();
+    const oversized = join(directory, 'oversized.csv');
+    writeFileSync(oversized, '');
+    truncateSync(oversized, CSV_PACK_LIMITS.maxFileBytes + 1);
+
+    expect(() => readPackCsvFile(oversized)).toThrow(/file.*limit/i);
+  });
+
+  it('fails closed before publishing legacy bundled metadata and preserves an existing destination', () => {
+    const { directory, database } = openCopy();
+    const missingDestination = join(directory, 'legacy-missing.csv');
+    const existingDestination = join(directory, 'legacy-existing.csv');
+    const original = Buffer.from('existing user file', 'utf8');
+    writeFileSync(existingDestination, original);
+
+    expect(() => exportPack({ database, packId: 'dev-library', destination: missingDestination }))
+      .toThrow(/metadata|validation/i);
+    expect(existsSync(missingDestination)).toBe(false);
+    expect(() => exportPack({ database, packId: 'dev-library', destination: existingDestination }))
+      .toThrow(/metadata|validation/i);
+    expect(readFileSync(existingDestination)).toEqual(original);
+    expect(readdirSync(directory).filter((name) => name.includes('.tmp'))).toEqual([]);
+  });
+
+  it('merges an ordinary source-title override with authoritative stored CSV metadata before export', () => {
+    const { directory, database, repository } = openCopy();
+    commit(database, repository, packCsv());
+    const clue = repository.getClue('import-clue-1')!;
+    repository.saveOverride({
+      ...clue,
+      prompt: { en: clue.prompt.en, et: 'Küsimus' },
+      response: { en: clue.response.en, et: 'Vastus' },
+      explanation: { en: clue.explanation.en, et: 'Selgitus' },
+      acceptedResponses: { en: clue.acceptedResponses!.en, et: 'Variant' },
+      source: 'Editorial source title',
+    });
+    const destination = join(directory, 'override.csv');
+
+    exportPack({ database, packId: 'import-pack', destination });
+
+    const preview = previewPackImport({ database, text: readFileSync(destination, 'utf8') });
+    expect(preview.issues).toEqual([]);
+    expect(preview.records.find((record) => record.clueId === 'import-clue-1')).toMatchObject({
+      sourceTitle: 'Editorial source title',
+      sourceUrl: 'https://example.com/1',
+      sourceLicense: 'CC BY 4.0',
+      sourceRetrievedAt: '2026-08-11',
+      translationStatus: 'untranslated',
+    });
+  });
+
   it('keeps import/export file paths behind current-host dialogs with strict cancellation-safe IPC', async () => {
     const handlers = new Map<string, (event: { sender: { id: number } }, input: unknown) => unknown>();
     const ipcMain: IpcMainPort = {
@@ -426,5 +586,56 @@ describe('transactional CSV pack import and export', () => {
       .rejects.toThrow('read denied');
     await expect(handlers.get(IPC_CHANNELS.contentExport)!({ sender: { id: 1 } }, { packId: 'pack' }))
       .rejects.toThrow();
+  });
+
+  it('re-authorizes the current host after import/export dialogs before any selected-path I/O', async () => {
+    const handlers = new Map<string, (event: { sender: { id: number } }, input: unknown) => unknown>();
+    const ipcMain: IpcMainPort = {
+      handle: (channel, handler) => handlers.set(channel, handler), removeHandler: vi.fn(),
+      on: vi.fn(), removeListener: vi.fn(),
+    };
+    const contentCsv = {
+      previewFile: vi.fn(() => ({
+        previewId: 'preview-stale', packId: 'import-pack', packName: 'Imported Pack',
+        rowCount: 5, conflict: false, issues: [],
+      })),
+      importPreview: vi.fn(),
+      exportToFile: vi.fn(() => ({ packId: 'import-pack', rowCount: 5, bytes: 100 })),
+    };
+    let resolveImport!: (path: string | null) => void;
+    let resolveExport!: (path: string | null) => void;
+    const importDialog = new Promise<string | null>((resolveDialog) => { resolveImport = resolveDialog; });
+    const exportDialog = new Promise<string | null>((resolveDialog) => { resolveExport = resolveDialog; });
+    let currentHostId = 10;
+    let hostDestroyed = false;
+    registerIpc({
+      ipcMain,
+      coordinator: {
+        dispatch: vi.fn(), subscribe: vi.fn(() => () => undefined),
+        getHostStateUpdate: vi.fn(() => null), getPublicStateUpdate: vi.fn(() => null),
+      },
+      contentCsv,
+      csvDialogs: {
+        chooseImportFile: () => importDialog,
+        chooseExportFile: () => exportDialog,
+      },
+      getWindows: () => ({
+        hostWindow: { webContents: { id: currentHostId, send: vi.fn(), isDestroyed: () => hostDestroyed } },
+        publicWindow: null,
+      }),
+    });
+
+    const importRequest = handlers.get(IPC_CHANNELS.contentImportPreview)!({ sender: { id: 10 } }, undefined);
+    currentHostId = 11;
+    resolveImport('C:\\chosen\\stale-import.csv');
+    await expect(importRequest).rejects.toThrow('HOST_SENDER_REQUIRED');
+    expect(contentCsv.previewFile).not.toHaveBeenCalled();
+
+    currentHostId = 10;
+    const exportRequest = handlers.get(IPC_CHANNELS.contentExport)!({ sender: { id: 10 } }, { packId: 'import-pack' });
+    hostDestroyed = true;
+    resolveExport('C:\\chosen\\stale-export.csv');
+    await expect(exportRequest).rejects.toThrow('HOST_SENDER_REQUIRED');
+    expect(contentCsv.exportToFile).not.toHaveBeenCalled();
   });
 });
