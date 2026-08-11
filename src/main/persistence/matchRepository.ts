@@ -9,6 +9,12 @@ export interface ResumableMatch {
   eventSequence: number;
   state: GameState;
   events: GameEvent[];
+  replayIssue: ReplayIssue | null;
+}
+
+export interface ReplayIssue {
+  sequence: number;
+  reason: 'missing-sequence' | 'invalid-event' | 'match-mismatch' | 'row-mismatch';
 }
 
 export interface MatchStanding {
@@ -42,9 +48,17 @@ interface SnapshotRow {
 }
 
 interface EventRow {
+  id: string;
   match_id: string;
   sequence: number;
+  occurred_at: number;
+  event_type: string;
   event_json: string;
+}
+
+interface ReplayEvents {
+  events: GameEvent[];
+  replayIssue: ReplayIssue | null;
 }
 
 interface HistoryRow extends SnapshotRow {
@@ -121,14 +135,14 @@ export class MatchRepository {
 
     for (const row of rows) {
       const state = this.parseSnapshot(row);
-      const events = this.readEventsAfter(row);
-      if (state !== null && events !== null) {
+      const replay = this.readEventsAfter(row);
+      if (state !== null && replay !== null) {
         return {
           matchId: row.match_id,
           snapshotSequence: row.sequence,
           eventSequence: row.event_sequence,
           state,
-          events,
+          ...replay,
         };
       }
     }
@@ -200,6 +214,7 @@ export class MatchRepository {
           eventSequence: row.event_sequence,
           state,
           events: [],
+          replayIssue: null,
         };
       }
     }
@@ -215,26 +230,40 @@ export class MatchRepository {
     }
   }
 
-  private readEventsAfter(snapshot: SnapshotRow): GameEvent[] | null {
+  private readEventsAfter(snapshot: SnapshotRow): ReplayEvents | null {
     if (!Number.isInteger(snapshot.event_sequence) || snapshot.event_sequence < 0) return null;
+    const maxSequence = this.database.prepare(
+      'SELECT COALESCE(MAX(sequence), 0) FROM match_events WHERE match_id = ?',
+    ).pluck().get(snapshot.match_id) as number;
+    if (snapshot.event_sequence > maxSequence) return null;
     const rows = this.database.prepare(`
-      SELECT match_id, sequence, event_json
+      SELECT id, match_id, sequence, occurred_at, event_type, event_json
       FROM match_events
-      WHERE match_id = ?
+      WHERE match_id = ? AND sequence > ?
       ORDER BY sequence ASC
-    `).all(snapshot.match_id) as EventRow[];
+    `).all(snapshot.match_id, snapshot.event_sequence) as EventRow[];
     const validLaterEvents: GameEvent[] = [];
-    for (const [index, row] of rows.entries()) {
-      if (row.match_id !== snapshot.match_id || row.sequence !== index + 1) return null;
-      if (row.sequence <= snapshot.event_sequence) continue;
-      try {
-        const event = gameEventSchema.parse(JSON.parse(row.event_json)) as GameEvent;
-        if (event.matchId === snapshot.match_id) validLaterEvents.push(event);
-      } catch {
-        // Invalid events are not replayable.
+    let expectedSequence = snapshot.event_sequence + 1;
+    for (const row of rows) {
+      if (row.sequence !== expectedSequence) {
+        return { events: validLaterEvents, replayIssue: { sequence: expectedSequence, reason: 'missing-sequence' } };
       }
+      let event: GameEvent;
+      try {
+        event = gameEventSchema.parse(JSON.parse(row.event_json)) as GameEvent;
+      } catch {
+        return { events: validLaterEvents, replayIssue: { sequence: expectedSequence, reason: 'invalid-event' } };
+      }
+      if (row.match_id !== snapshot.match_id || event.matchId !== snapshot.match_id) {
+        return { events: validLaterEvents, replayIssue: { sequence: expectedSequence, reason: 'match-mismatch' } };
+      }
+      if (row.id !== event.id || row.occurred_at !== event.at || row.event_type !== event.type) {
+        return { events: validLaterEvents, replayIssue: { sequence: expectedSequence, reason: 'row-mismatch' } };
+      }
+      validLaterEvents.push(event);
+      expectedSequence += 1;
     }
-    return snapshot.event_sequence <= rows.length ? validLaterEvents : null;
+    return { events: validLaterEvents, replayIssue: null };
   }
 
   private nextSequence(table: 'match_events' | 'match_snapshots', matchId: string): number {

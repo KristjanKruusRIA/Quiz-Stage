@@ -58,6 +58,19 @@ describe('MatchRepository', () => {
     return applyGameCommand(initial, { type: 'SelectClue', clueId: clue.id });
   }
 
+  function persistCorruptNewestSnapshotWithLaterEvents() {
+    const selected = selectedTransition();
+    repository.persistTransition('match-1', selected.events, selected.state);
+    repository.persistTransition('match-1', [], selected.state);
+    repository.persistTransition('match-1', [
+      { id: 'later-timer', matchId: 'match-1', at: 100, type: 'TimerExpired' },
+      { id: 'later-undo', matchId: 'match-1', at: 101, type: 'ActionUndone', eventId: selected.events[0].id },
+    ], selected.state);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{"invalid":true}', 'match-1', 3);
+    return selected;
+  }
+
   it('commits validated events and a snapshot in one transaction', () => {
     const transition = selectedTransition();
 
@@ -111,15 +124,7 @@ describe('MatchRepository', () => {
   });
 
   it('returns precisely the later events when the newest snapshot is corrupt', () => {
-    const selected = selectedTransition();
-    repository.persistTransition('match-1', selected.events, selected.state);
-    repository.persistTransition('match-1', [], selected.state);
-    repository.persistTransition('match-1', [
-      { id: 'later-timer', matchId: 'match-1', at: 100, type: 'TimerExpired' },
-      { id: 'later-undo', matchId: 'match-1', at: 101, type: 'ActionUndone', eventId: selected.events[0].id },
-    ], selected.state);
-    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
-      .run('{"invalid":true}', 'match-1', 3);
+    const selected = persistCorruptNewestSnapshotWithLaterEvents();
 
     const resumed = repository.loadResumable();
 
@@ -130,6 +135,39 @@ describe('MatchRepository', () => {
       { id: 'later-timer', matchId: 'match-1', at: 100, type: 'TimerExpired' },
       { id: 'later-undo', matchId: 'match-1', at: 101, type: 'ActionUndone', eventId: selected.events[0].id },
     ]);
+    expect(resumed?.replayIssue).toBeNull();
+  });
+
+  it('stops replay before an invalid event and does not return a later valid event', () => {
+    persistCorruptNewestSnapshotWithLaterEvents();
+    database.prepare('UPDATE match_events SET event_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{"type":"unknown"}', 'match-1', 2);
+
+    const resumed = repository.loadResumable();
+
+    expect(resumed?.events).toEqual([]);
+    expect(resumed?.replayIssue).toEqual({ sequence: 2, reason: 'invalid-event' });
+  });
+
+  it('stops replay before a wrong-match payload and does not return a later same-match event', () => {
+    persistCorruptNewestSnapshotWithLaterEvents();
+    database.prepare('UPDATE match_events SET event_json = ? WHERE match_id = ? AND sequence = ?')
+      .run(JSON.stringify({ id: 'later-timer', matchId: 'other-match', at: 100, type: 'TimerExpired' }), 'match-1', 2);
+
+    const resumed = repository.loadResumable();
+
+    expect(resumed?.events).toEqual([]);
+    expect(resumed?.replayIssue).toEqual({ sequence: 2, reason: 'match-mismatch' });
+  });
+
+  it('stops replay at a missing event sequence and does not return events beyond the gap', () => {
+    persistCorruptNewestSnapshotWithLaterEvents();
+    database.prepare('DELETE FROM match_events WHERE match_id = ? AND sequence = ?').run('match-1', 2);
+
+    const resumed = repository.loadResumable();
+
+    expect(resumed?.events).toEqual([]);
+    expect(resumed?.replayIssue).toEqual({ sequence: 2, reason: 'missing-sequence' });
   });
 
   it('orders resumable matches by persistence even when engine event timestamps tie', () => {
