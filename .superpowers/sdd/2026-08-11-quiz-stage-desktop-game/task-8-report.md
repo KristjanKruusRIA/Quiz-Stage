@@ -188,3 +188,61 @@ exit 0
 - Shutdown: `before-quit` disposes the manager before Electron closes windows. Already queued recovery callbacks and later close notifications both observe the guard and cannot create new windows during teardown.
 - Authorization/subscriptions: IPC still resolves current manager references for every sender check and publish, so the former host ID becomes unauthorized and replacements receive existing coordinator publications without re-registering listeners.
 - Security/offline packaging: every replacement goes through the existing sandboxed, context-isolated, navigation-blocked factory with its explicit surface argument. The packaged seed and Windows x64 SQLite native prebuild remain present; no network path was added.
+
+## Fix round 3: recovered-surface state bootstrap
+
+### Verified root cause
+
+The coordinator's host/public subscriptions emit the current state when they are first registered, but main registers them only once at application startup. Replacement windows reuse those long-lived subscriptions and receive nothing until a later game transition. Because preload exposed only dispatch and future state events, a replacement could remain blank indefinitely.
+
+### RED evidence
+
+```text
+npm run test:run -- tests/integration/ipc/preload.test.ts tests/integration/ipc/registerIpc.test.ts
+Test Files 2 failed (2); Tests 4 failed | 5 passed; exit 1
+
+npm run test:run -- tests/integration/ipc/windowRecoveryBootstrap.test.ts
+Test Files 1 failed (1); Tests 1 failed; exit 1
+```
+
+The focused failures showed no surface-ready handler, no readiness announcement after preload listener registration, strict view schemas rejecting an unvalidated revision envelope, no stale-bootstrap suppression, and both real replacement surfaces receiving zero states after a match had advanced to an unrevealed Daily Double. Follow-up RED checks demonstrated that throwing from an unauthorized one-way readiness event could escape into Electron main and that long-lived coordinator publications could send before a renderer announced readiness. The final behavior silently ignores stale/unauthorized readiness and gates every send by the current ready webContents ID.
+
+### Fix
+
+- Preload registers its strict state listener first, then sends a surface-specific readiness event.
+- Main validates readiness against the current live host/public webContents ID and sends only that surface's current coordinator projection. All live publication is also gated by that ready ID, so main never sends state before the renderer subscription exists. Replaced, destroyed, missing, and cross-surface senders receive nothing.
+- Coordinator publications and current projections carry a process-monotonic revision. Preload validates the complete `{ revision, view }` envelope and delivers only revisions newer than the last accepted state, so a delayed bootstrap cannot overwrite a newer live publication. The monotonic counter also remains ordered when a new match resets its persisted event sequence.
+- IPC disposal removes the exact readiness listeners in addition to the dispatch handler and coordinator subscriptions.
+
+### GREEN verification
+
+```text
+npm run test:run -- tests/integration/ipc tests/integration/windows/windowManager.test.ts tests/integration/coordinator/gameCoordinator.test.ts
+Test Files 5 passed (5); Tests 27 passed (27); exit 0
+
+npm run test:run
+Test Files 21 passed (21); Tests 127 passed (127); exit 0
+
+npm run lint
+eslint .; exit 0
+
+npm run typecheck
+tsc --noEmit; exit 0
+
+npm run build
+Electron Forge packaged x64 on win32; exit 0
+
+PACKAGED_SEED_OK bytes=188416
+PACKAGED_NATIVE_OK win32-x64.node bytes=1989632
+
+git diff --check
+exit 0
+```
+
+### Fix-round self-review
+
+- Bootstrap timing: readiness is sent only after `ipcRenderer.on` installs the wrapped listener. Current projection lookup and revision capture are synchronous in the authoritative coordinator, while preload's revision gate handles either transport arrival order.
+- Privacy: the recovered host receives the complete host projection. The recovered public surface receives the independently derived strict public projection; integration coverage at `daily-double-wager` excludes the private phase, clue prompt/response/explanation, Final response, and an unselected future tiebreaker candidate.
+- Authorization and cleanup: both ready channels resolve current manager references on every event, so former window IDs are ignored immediately after replacement. Main listener disposal and renderer unsubscribe retain exact callback identity.
+- Publication/transactions: revisions advance only after authoritative state adoption and before publication. Persistence and engine failures still escape without state adoption, revision advancement, or publish; renderer/listener failures remain isolated after commit.
+- Shutdown/offline: recovery and readiness add no network path. Manager disposal still blocks recreation during quit, and packaged seed/native SQLite artifacts remain present.

@@ -251,6 +251,19 @@ export const publicGameViewSchema = z.strictObject({
   activeClue: publicActiveClueSchema.nullable(),
 });
 
+export const hostStateUpdateSchema = z.strictObject({
+  revision: z.number().int().nonnegative(),
+  view: hostGameViewSchema,
+});
+
+export const publicStateUpdateSchema = z.strictObject({
+  revision: z.number().int().nonnegative(),
+  view: publicGameViewSchema,
+});
+
+export type HostStateUpdate = z.infer<typeof hostStateUpdateSchema>;
+export type PublicStateUpdate = z.infer<typeof publicStateUpdateSchema>;
+
 export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
 export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameCommand;
 export type ValidatedGameState = z.infer<typeof gameStateSchema> & GameState;

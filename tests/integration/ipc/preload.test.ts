@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 vi.mock('electron', () => ({
   contextBridge: { exposeInMainWorld: vi.fn() },
-  ipcRenderer: { invoke: vi.fn(), on: vi.fn(), removeListener: vi.fn() },
+  ipcRenderer: { invoke: vi.fn(), on: vi.fn(), removeListener: vi.fn(), send: vi.fn() },
 }));
 
 import { createQuizStageApi, type PreloadIpcPort } from '../../../src/preload/preload';
@@ -50,6 +50,7 @@ describe('preload quizStage surface', () => {
       invoke: vi.fn(async () => hostView),
       on: vi.fn(),
       removeListener: vi.fn(),
+      send: vi.fn(),
     };
     const host = createQuizStageApi('host', ipc);
     const publicApi = createQuizStageApi('public', ipc);
@@ -69,15 +70,53 @@ describe('preload quizStage surface', () => {
       invoke: vi.fn(),
       on: vi.fn((_channel, listener) => { wrapped = listener; }),
       removeListener: vi.fn(),
+      send: vi.fn(),
     };
     const listener = vi.fn();
     const api = createQuizStageApi('public', ipc);
     const unsubscribe = api.subscribeToState(listener);
-    wrapped?.({}, publicView);
+    wrapped?.({}, { revision: 1, view: publicView });
     unsubscribe();
 
     expect(listener).toHaveBeenCalledWith(publicView);
     expect(ipc.removeListener).toHaveBeenCalledWith(IPC_CHANNELS.publicState, wrapped);
+  });
+
+  it('registers the state listener before announcing surface readiness', () => {
+    const order: string[] = [];
+    const ipc = {
+      invoke: vi.fn(),
+      on: vi.fn(() => { order.push('listen'); }),
+      removeListener: vi.fn(),
+      send: vi.fn(() => { order.push('ready'); }),
+    };
+
+    createQuizStageApi('public', ipc).subscribeToState(vi.fn());
+
+    expect(order).toEqual(['listen', 'ready']);
+    expect(ipc.send).toHaveBeenCalledWith(IPC_CHANNELS.publicReady);
+  });
+
+  it('does not deliver an older bootstrap after a newer live projection', () => {
+    let wrapped: ((event: unknown, value: unknown) => void) | undefined;
+    const ipc = {
+      invoke: vi.fn(),
+      on: vi.fn((_channel: string, listener: (event: unknown, value: unknown) => void) => { wrapped = listener; }),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const listener = vi.fn();
+    createQuizStageApi('host', ipc).subscribeToState(listener);
+    const newer = structuredClone(hostView);
+    newer.state.eventSequence = 2;
+    const older = structuredClone(hostView);
+    older.state.eventSequence = 1;
+
+    wrapped?.({}, { revision: 2, view: newer });
+    wrapped?.({}, { revision: 1, view: older });
+
+    expect(listener).toHaveBeenCalledTimes(1);
+    expect(listener).toHaveBeenCalledWith(newer);
   });
 
   it('rejects host-shaped data on the public channel before invoking the listener', () => {
@@ -86,11 +125,12 @@ describe('preload quizStage surface', () => {
       invoke: vi.fn(),
       on: vi.fn((_channel, listener) => { wrapped = listener; }),
       removeListener: vi.fn(),
+      send: vi.fn(),
     };
     const listener = vi.fn();
     createQuizStageApi('public', ipc).subscribeToState(listener);
 
-    expect(() => wrapped?.({}, hostView)).toThrow();
+    expect(() => wrapped?.({}, { revision: 1, view: hostView })).toThrow();
     expect(listener).not.toHaveBeenCalled();
   });
 
@@ -99,6 +139,7 @@ describe('preload quizStage surface', () => {
       invoke: vi.fn(async () => ({ appVersion: '0.1.0', state: { id: 'incomplete' }, replayIssue: null })),
       on: vi.fn(),
       removeListener: vi.fn(),
+      send: vi.fn(),
     };
 
     await expect(createQuizStageApi('host', ipc).dispatch!({ type: 'SelectClue', clueId: 'c1' })).rejects.toThrow();

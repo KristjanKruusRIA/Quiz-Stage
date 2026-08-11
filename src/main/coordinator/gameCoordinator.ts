@@ -13,7 +13,12 @@ import type {
   RecoveryIssue,
 } from '../../shared/game/types';
 import { toHostGameView, toPublicGameView } from '../../shared/game/views';
-import { gameCommandSchema, gameConfigSchema } from '../../shared/ipc/contracts';
+import {
+  gameCommandSchema,
+  gameConfigSchema,
+  type HostStateUpdate,
+  type PublicStateUpdate,
+} from '../../shared/ipc/contracts';
 
 export interface CoordinatorContentService {
   selectForMatch(config: GameConfig, seed: string): SelectedMatchContent;
@@ -47,8 +52,8 @@ interface GameCoordinatorOptions {
   createSeed?: () => string;
 }
 
-type HostSubscriber = (view: HostGameView) => void;
-type PublicSubscriber = (view: PublicGameView) => void;
+type HostSubscriber = (view: HostGameView, revision: number) => void;
+type PublicSubscriber = (view: PublicGameView, revision: number) => void;
 
 export class GameCoordinator {
   private state: GameState | null = null;
@@ -57,6 +62,7 @@ export class GameCoordinator {
   private readonly publicSubscribers = new Set<PublicSubscriber>();
   private publishing = false;
   private publicationPending = false;
+  private revision = 0;
   private readonly now: () => number;
   private readonly createSeed: () => string;
 
@@ -76,6 +82,7 @@ export class GameCoordinator {
     this.options.repository.persistTransition(nextState.id, [], nextState);
     this.state = nextState;
     this.replayIssue = null;
+    this.revision += 1;
     this.publish();
     return this.getHostView()!;
   }
@@ -99,6 +106,7 @@ export class GameCoordinator {
       this.options.repository.completeMatch(baseState.id, this.now());
     }
     this.state = transition.state;
+    this.revision += 1;
     this.publish();
     return this.getHostView()!;
   }
@@ -120,6 +128,7 @@ export class GameCoordinator {
 
     this.state = state;
     this.replayIssue = replayIssue;
+    this.revision += 1;
     if (state.phase === 'complete') this.options.repository.completeMatch(state.id, this.now());
     this.publish();
     return this.getHostView();
@@ -132,13 +141,13 @@ export class GameCoordinator {
       const hostSubscriber = subscriber as HostSubscriber;
       this.hostSubscribers.add(hostSubscriber);
       const view = this.getHostView();
-      if (view !== null) this.notify(hostSubscriber, view);
+      if (view !== null) this.notify(hostSubscriber, view, this.revision);
       return () => this.hostSubscribers.delete(hostSubscriber);
     }
     const publicSubscriber = subscriber as PublicSubscriber;
     this.publicSubscribers.add(publicSubscriber);
     const view = this.getPublicView();
-    if (view !== null) this.notify(publicSubscriber, view);
+    if (view !== null) this.notify(publicSubscriber, view, this.revision);
     return () => this.publicSubscribers.delete(publicSubscriber);
   }
 
@@ -148,6 +157,16 @@ export class GameCoordinator {
 
   getPublicView(): PublicGameView | null {
     return this.state === null ? null : toPublicGameView(this.state);
+  }
+
+  getHostStateUpdate(): HostStateUpdate | null {
+    const view = this.getHostView();
+    return view === null ? null : { revision: this.revision, view };
+  }
+
+  getPublicStateUpdate(): PublicStateUpdate | null {
+    const view = this.getPublicView();
+    return view === null ? null : { revision: this.revision, view };
   }
 
   private persistNextTiebreaker(state: GameState): GameState {
@@ -178,15 +197,16 @@ export class GameCoordinator {
       while (this.publicationPending) {
         this.publicationPending = false;
         if (this.state === null) continue;
+        const revision = this.revision;
         const hostView = toHostGameView(this.state, this.replayIssue);
         const publicView = toPublicGameView(this.state);
         for (const subscriber of [...this.hostSubscribers]) {
-          this.notify(subscriber, hostView);
+          this.notify(subscriber, hostView, revision);
           if (this.publicationPending) break;
         }
         if (this.publicationPending) continue;
         for (const subscriber of [...this.publicSubscribers]) {
-          this.notify(subscriber, publicView);
+          this.notify(subscriber, publicView, revision);
           if (this.publicationPending) break;
         }
       }
@@ -195,9 +215,9 @@ export class GameCoordinator {
     }
   }
 
-  private notify<T>(subscriber: (view: T) => void, view: T): void {
+  private notify<T>(subscriber: (view: T, revision: number) => void, view: T, revision: number): void {
     try {
-      subscriber(view);
+      subscriber(view, revision);
     } catch {
       // Renderer/listener failures cannot roll back or reject an already committed state.
     }
