@@ -76,6 +76,18 @@ function identityState(database: DatabaseConnection) {
   };
 }
 
+function replaceBytes(text: string, marker: string, replacement: Uint8Array): Buffer {
+  const source = Buffer.from(text, 'utf8');
+  const markerBytes = Buffer.from(marker, 'utf8');
+  const index = source.indexOf(markerBytes);
+  if (index < 0) throw new Error(`Missing test marker: ${marker}`);
+  return Buffer.concat([
+    source.subarray(0, index),
+    replacement,
+    source.subarray(index + markerBytes.length),
+  ]);
+}
+
 describe('transactional CSV pack import and export', () => {
   const directories: string[] = [];
   const connections: DatabaseConnection[] = [];
@@ -183,6 +195,76 @@ describe('transactional CSV pack import and export', () => {
     const reimported = previewPackImport({ database, text });
     expect(reimported.issues).toEqual([]);
     expect(reimported.records).toEqual(normalizedBefore);
+  });
+
+  it.each([
+    ['unknown escape', String.raw`alpha\q`],
+    ['dangling escape', 'alpha\\'],
+  ])('rejects an ordinary override with an invalid accepted-response %s before export publication', (_name, invalid) => {
+    const { directory, database, repository } = openCopy();
+    commit(database, repository, packCsv());
+    const clue = repository.getClue('import-clue-1')!;
+    repository.saveOverride({
+      ...clue,
+      prompt: { en: clue.prompt.en, et: 'Küsimus' },
+      response: { en: clue.response.en, et: 'Vastus' },
+      explanation: { en: clue.explanation.en, et: 'Selgitus' },
+      acceptedResponses: { en: invalid, et: 'Variant' },
+    });
+    const destination = join(directory, 'invalid-override.csv');
+    const original = Buffer.from('existing export', 'utf8');
+    writeFileSync(destination, original);
+
+    expect(() => exportPack({ database, packId: 'import-pack', destination }))
+      .toThrow(/accepted.*escape.*import-clue-1/i);
+    expect(readFileSync(destination)).toEqual(original);
+    expect(readdirSync(directory).filter((name) => name.includes('.tmp'))).toEqual([]);
+  });
+
+  it('rejects invalid base accepted responses even when a valid override would hide them', () => {
+    const { directory, database, repository } = openCopy();
+    commit(database, repository, packCsv());
+    database.prepare('UPDATE clues SET accepted_responses_json = ? WHERE id = ?')
+      .run(JSON.stringify({ en: String.raw`base\q` }), 'import-clue-1');
+    const clue = repository.getClue('import-clue-1')!;
+    repository.saveOverride({
+      ...clue,
+      prompt: { en: clue.prompt.en, et: 'Küsimus' },
+      response: { en: clue.response.en, et: 'Vastus' },
+      explanation: { en: clue.explanation.en, et: 'Selgitus' },
+      acceptedResponses: { en: String.raw`valid\;variant`, et: 'Variant' },
+    });
+    const destination = join(directory, 'invalid-base.csv');
+
+    expect(() => exportPack({ database, packId: 'import-pack', destination }))
+      .toThrow(/accepted.*escape.*import-clue-1/i);
+    expect(existsSync(destination)).toBe(false);
+  });
+
+  it('round-trips strictly valid escaped semicolons and backslashes from an ordinary override', () => {
+    const { directory, database, repository } = openCopy();
+    commit(database, repository, packCsv());
+    const clue = repository.getClue('import-clue-1')!;
+    repository.saveOverride({
+      ...clue,
+      prompt: { en: clue.prompt.en, et: 'Küsimus' },
+      response: { en: clue.response.en, et: 'Vastus' },
+      explanation: { en: clue.explanation.en, et: 'Selgitus' },
+      acceptedResponses: {
+        en: String.raw`alpha\;beta;path\\name`,
+        et: String.raw`alfa\;beeta;tee\\nimi`,
+      },
+    });
+    const destination = join(directory, 'valid-override.csv');
+
+    exportPack({ database, packId: 'import-pack', destination });
+
+    expect(previewPackImport({ database, text: readFileSync(destination, 'utf8') }).records)
+      .toContainEqual(expect.objectContaining({
+        clueId: 'import-clue-1',
+        acceptedVariantsEn: ['alpha;beta', String.raw`path\name`],
+        acceptedVariantsEt: ['alfa;beeta', String.raw`tee\nimi`],
+      }));
   });
 
   it('replaces only the existing custom pack while preserving stable reports, overrides, and identity', () => {
@@ -452,6 +534,74 @@ describe('transactional CSV pack import and export', () => {
     truncateSync(oversized, CSV_PACK_LIMITS.maxFileBytes + 1);
 
     expect(() => readPackCsvFile(oversized)).toThrow(/file.*limit/i);
+  });
+
+  it.each([
+    ['invalid header byte', 'clue_id', Uint8Array.from([0x63, 0xff])],
+    ['overlong cell sequence', 'Prompt 2', Uint8Array.from([0xc0, 0xaf])],
+    ['surrogate cell sequence', 'Prompt 2', Uint8Array.from([0xed, 0xa0, 0x80])],
+    ['truncated cell sequence', 'Prompt 2', Uint8Array.from([0xe2, 0x82])],
+  ])('rejects malformed UTF-8 in %s before creating a preview or writing content', (_name, marker, malformed) => {
+    const { directory, database, repository } = openCopy();
+    const source = join(directory, 'malformed.csv');
+    writeFileSync(source, replaceBytes(packCsv(), marker, malformed));
+    const before = identityState(database);
+    const workflow = new CsvPackWorkflow(database, repository, { createPreviewId: () => 'malformed-preview' });
+
+    expect(() => workflow.previewFile(source)).toThrow(/UTF-8/i);
+    expect(identityState(database)).toEqual(before);
+    expect(() => workflow.importPreview({ previewId: 'malformed-preview' })).toThrow(/unknown|expired/i);
+  });
+
+  it('accepts a BOM and valid multibyte Estonian UTF-8 through preview and commit', () => {
+    const { directory, database, repository } = openCopy();
+    const source = join(directory, 'estonian.csv');
+    const text = packCsv({
+      category_name_et: 'Õigekeelsuse sõnaraamat',
+      clue_et: 'Jäääärne küsimus',
+      response_et: 'Võõrsõna vastus',
+      explanation_et: 'Täielik selgitus',
+      translation_status: 'reviewed',
+    });
+    writeFileSync(source, Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), Buffer.from(text, 'utf8')]));
+    const workflow = new CsvPackWorkflow(database, repository, { createPreviewId: () => 'estonian-preview' });
+
+    expect(workflow.previewFile(source)).toMatchObject({ previewId: 'estonian-preview', issues: [] });
+    workflow.importPreview({ previewId: 'estonian-preview' });
+    expect(repository.getClue('import-clue-1')).toMatchObject({
+      prompt: { en: expect.any(String), et: 'Jäääärne küsimus' },
+    });
+  });
+
+  it('rejects a path entry swapped to a symlink between validation and open before reading bytes', () => {
+    const { directory } = openCopy();
+    const source = join(directory, 'swapped.csv');
+    writeFileSync(source, packCsv());
+    const regularEntry = {
+      dev: 1, ino: 10, size: 100,
+      isFile: () => true,
+      isSymbolicLink: () => false,
+    };
+    const openedTarget = { ...regularEntry, ino: 20 };
+    const swappedLink = {
+      ...regularEntry,
+      ino: 30,
+      isFile: () => false,
+      isSymbolicLink: () => true,
+    };
+    const read = vi.fn(() => 0);
+    const fileSystem = {
+      lstat: vi.fn()
+        .mockReturnValueOnce(regularEntry)
+        .mockReturnValueOnce(swappedLink),
+      open: vi.fn(() => 7),
+      fstat: vi.fn(() => openedTarget),
+      read,
+      close: vi.fn(),
+    };
+
+    expect(() => readPackCsvFile(source, fileSystem)).toThrow(/changed|symbolic|regular file/i);
+    expect(read).not.toHaveBeenCalled();
   });
 
   it('fails closed before publishing legacy bundled metadata and preserves an existing destination', () => {

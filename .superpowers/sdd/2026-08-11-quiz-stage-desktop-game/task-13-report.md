@@ -159,3 +159,67 @@ Inventory: 183 clues, 36 board category sets, 3 Finals
 better-sqlite3 win32-x64.node: 1989632 bytes
 csv-parse@7.0.2 and csv-stringify@6.8.3 confirmed at depth 0
 ```
+
+## Fix round 2: reject unsafe CSV input
+
+### Confirmed findings and fixes
+
+- Export now strictly decodes and validates stored accepted responses for both the base clue and an ordinary Task 12 override before selecting which value is exported. Unknown escapes, dangling escapes, non-string language values, and unexpected language keys fail with the clue ID and storage origin before any temporary or destination write. Valid `\;` and `\\` values remain byte-for-byte reversible through export and re-import.
+- Bounded file bytes are decoded with a fatal UTF-8 decoder. Invalid bytes, overlong encodings, surrogate encodings, and truncated multibyte sequences fail before preview creation; one valid leading BOM and valid multibyte Estonian data remain accepted, while the existing interior-BOM rejection remains intact.
+- The 10,000-data-row cap is enforced inside `csv-parse` through its record callback. The parser throws on data record 10,001 and never reaches a deliberately malformed trailing sentinel; quoted multiline fields still count as one record. Field length remains a separate 32 Ki-character check in that callback.
+- The parser's 128 Ki record-buffer cap is now named and reported as bytes, matching `csv-parse`'s `CSV_MAX_RECORD_SIZE` contract, while the independent field limit continues to measure decoded JavaScript characters.
+- Selected import paths are validated before open, compared with the opened descriptor, and revalidated after open by device/inode identity. A path changed to a different file or symbolic link is rejected before reading. The injectable seam is a narrow main-process filesystem port used only to deterministically exercise the swap; it is not exposed through IPC, preload, renderer, or shared APIs.
+- Formula neutralization/decoding, collision checks, transactions, current-host authorization, source-metadata handling, bundled seed content, and all Task 12 override/report constraints remain unchanged.
+
+### Fix-round TDD evidence
+
+The focused RED produced nine expected failures with 42 existing passes: three invalid stored-variant exports published, four malformed UTF-8 inputs reached preview parsing, the 10,001st row continued into a malformed tail instead of aborting, and a simulated path-to-symlink swap read the original path because the filesystem seam was ignored. Valid escaped variants and valid multibyte Estonian controls already passed.
+
+Focused GREEN:
+
+```text
+npx vitest --configLoader runner tests/unit/content/csvValidation.test.ts tests/integration/content/csvRoundTrip.test.ts
+Test Files 2 passed (2)
+Tests 51 passed (51)
+exit 0
+```
+
+### Fix-round verification
+
+```text
+Affected content/IPC/privacy/persistence/coordinator/game/application suite:
+Test Files 28 passed (28)
+Tests 246 passed (246)
+exit 0
+
+npm run test:run
+Test Files 42 passed (42)
+Tests 302 passed (302)
+exit 0
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm run build
+Electron Forge packaged x64 on win32
+exit 0
+
+npm run make:portable
+ZIP maker completed for win32/x64
+exit 0
+```
+
+Packaged production checks:
+
+```text
+quiz-stage-desktop-game-win32-x64-0.1.0.zip: 155740491 bytes
+dev-seed.sqlite: 188416 bytes
+SHA-256: CAF759B94CE16CF2B2A06E0BCB4920A995CEEEA55F30A64BC5D08A4D24375FDC
+SQLite integrity_check: ok
+Inventory: 183 clues, 36 board category sets, 3 Finals
+better-sqlite3 win32-x64.node: 1989632 bytes
+csv-parse@7.0.2 and csv-stringify@6.8.3 confirmed at depth 0
+```

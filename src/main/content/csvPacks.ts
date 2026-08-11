@@ -3,6 +3,7 @@ import {
   closeSync, existsSync, fstatSync, lstatSync, openSync, readSync, renameSync, unlinkSync, writeFileSync,
 } from 'node:fs';
 import { dirname, extname, join } from 'node:path';
+import { TextDecoder } from 'node:util';
 import type { DatabaseConnection } from '../persistence/database';
 import type { ContentRepository } from './contentRepository';
 import { parse } from 'csv-parse/sync';
@@ -19,7 +20,7 @@ const CSV_SOURCE_FORMAT = 'quiz-stage-csv-v1';
 export const CSV_PACK_LIMITS = {
   maxFileBytes: 16 * 1024 * 1024,
   maxRows: 10_000,
-  maxRecordCharacters: 128 * 1024,
+  maxRecordBytes: 128 * 1024,
   maxFieldCharacters: 32 * 1024,
 } as const;
 
@@ -104,6 +105,31 @@ export interface CsvPackWorkflowOptions {
   createPreviewId?: () => string;
   readFile?: (path: string) => string;
 }
+
+interface CsvFileEntry {
+  dev: number | bigint;
+  ino: number | bigint;
+  size: number;
+  isFile(): boolean;
+  isSymbolicLink(): boolean;
+}
+
+export interface CsvFileReadPort {
+  lstat(path: string): CsvFileEntry;
+  open(path: string): number;
+  fstat(descriptor: number): CsvFileEntry;
+  read(descriptor: number, buffer: Buffer, offset: number, length: number, position: null): number;
+  close(descriptor: number): void;
+}
+
+const NODE_CSV_FILE_READ_PORT: CsvFileReadPort = {
+  lstat: (path) => lstatSync(path),
+  open: (path) => openSync(path, 'r'),
+  fstat: (descriptor) => fstatSync(descriptor),
+  read: (descriptor, buffer, offset, length, position) =>
+    readSync(descriptor, buffer, offset, length, position),
+  close: (descriptor) => closeSync(descriptor),
+};
 
 export class CsvPackWorkflow {
   private readonly previews = new Map<string, PackImportPreview>();
@@ -205,7 +231,7 @@ export function parsePackCsv(text: string): ParsedPack {
     record_delimiter: ['\r\n', '\n'],
     relax_quotes: false,
     skip_empty_lines: true,
-    max_record_size: CSV_PACK_LIMITS.maxRecordCharacters,
+    max_record_size: CSV_PACK_LIMITS.maxRecordBytes,
   };
   let header: string[][];
   try {
@@ -216,7 +242,7 @@ export function parsePackCsv(text: string): ParsedPack {
     }) as string[][];
   } catch (error) {
     if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
-      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordCharacters}-character limit`);
+      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordBytes}-byte limit`);
     }
     throw error;
   }
@@ -225,30 +251,32 @@ export function parsePackCsv(text: string): ParsedPack {
     throw new Error(`CSV header must exactly match: ${CSV_COLUMNS.join(',')}`);
   }
   let parsed: string[][];
+  let parsedRecordCount = 0;
   try {
-    parsed = parse(withoutInitialBom, { ...parseOptions, relax_column_count: false }) as string[][];
+    parsed = parse(withoutInitialBom, {
+      ...parseOptions,
+      relax_column_count: false,
+      on_record: (record: string[]) => {
+        parsedRecordCount += 1;
+        if (parsedRecordCount > CSV_PACK_LIMITS.maxRows + 1) {
+          throw new Error(`CSV row count exceeds the ${CSV_PACK_LIMITS.maxRows}-row limit`);
+        }
+        return parsedRecordCount === 1 ? record : validateParsedDataCells(record);
+      },
+    }) as string[][];
   } catch (error) {
     if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
-      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordCharacters}-character limit`);
+      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordBytes}-byte limit`);
     }
     throw error;
-  }
-  if (parsed.length - 1 > CSV_PACK_LIMITS.maxRows) {
-    throw new Error(`CSV row count exceeds the ${CSV_PACK_LIMITS.maxRows}-row limit`);
   }
 
   return {
     rows: parsed.slice(1).map((cells, index) => {
-      const decodedCells = decodeSpreadsheetRow(cells);
       const fields = Object.fromEntries(CSV_COLUMNS.map((column, cellIndex) => [
         column,
-        normalizeNewlines(decodedCells[cellIndex] ?? ''),
+        normalizeNewlines(cells[cellIndex] ?? ''),
       ])) as CsvFields;
-      for (const [column, value] of Object.entries(fields) as Array<[CsvColumn, string]>) {
-        if (value.length > CSV_PACK_LIMITS.maxFieldCharacters) {
-          throw new Error(`CSV field ${column} exceeds the ${CSV_PACK_LIMITS.maxFieldCharacters}-character limit`);
-        }
-      }
       const en = decodeVariants(fields.accepted_variants_en);
       const et = decodeVariants(fields.accepted_variants_et);
       return {
@@ -494,16 +522,23 @@ export function exportPack({
   return { packId, rowCount: records.length, bytes: bytes.length };
 }
 
-export function readPackCsvFile(path: string): string {
-  const entry = lstatSync(path);
+export function readPackCsvFile(path: string, fileSystem: CsvFileReadPort = NODE_CSV_FILE_READ_PORT): string {
+  const entry = fileSystem.lstat(path);
   if (entry.isSymbolicLink() || !entry.isFile()) throw new Error('CSV import source must be a regular file');
   if (entry.size > CSV_PACK_LIMITS.maxFileBytes) {
     throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
   }
-  const descriptor = openSync(path, 'r');
+  const descriptor = fileSystem.open(path);
   try {
-    const openedEntry = fstatSync(descriptor);
+    const openedEntry = fileSystem.fstat(descriptor);
+    const currentEntry = fileSystem.lstat(path);
+    if (currentEntry.isSymbolicLink() || !currentEntry.isFile()) {
+      throw new Error('CSV import source path changed or became a symbolic link');
+    }
     if (!openedEntry.isFile()) throw new Error('CSV import source must be a regular file');
+    if (!sameFileIdentity(entry, openedEntry) || !sameFileIdentity(openedEntry, currentEntry)) {
+      throw new Error('CSV import source path changed before it could be read');
+    }
     if (openedEntry.size > CSV_PACK_LIMITS.maxFileBytes) {
       throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
     }
@@ -511,7 +546,7 @@ export function readPackCsvFile(path: string): string {
     let total = 0;
     while (total <= CSV_PACK_LIMITS.maxFileBytes) {
       const chunk = Buffer.allocUnsafe(Math.min(64 * 1024, CSV_PACK_LIMITS.maxFileBytes + 1 - total));
-      const bytesRead = readSync(descriptor, chunk, 0, chunk.length, null);
+      const bytesRead = fileSystem.read(descriptor, chunk, 0, chunk.length, null);
       if (bytesRead === 0) break;
       chunks.push(chunk.subarray(0, bytesRead));
       total += bytesRead;
@@ -519,10 +554,18 @@ export function readPackCsvFile(path: string): string {
     if (total > CSV_PACK_LIMITS.maxFileBytes) {
       throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
     }
-    return Buffer.concat(chunks, total).toString('utf8');
+    try {
+      return new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(Buffer.concat(chunks, total));
+    } catch {
+      throw new Error('CSV import source is not valid UTF-8');
+    }
   } finally {
-    closeSync(descriptor);
+    fileSystem.close(descriptor);
   }
+}
+
+function sameFileIdentity(left: CsvFileEntry, right: CsvFileEntry): boolean {
+  return left.dev === right.dev && left.ino === right.ino;
 }
 
 function sameColumns(header: readonly string[]): boolean {
@@ -541,6 +584,18 @@ function decodeSpreadsheetRow(cells: readonly string[]): readonly string[] {
   return cells.length === CSV_COLUMNS.length && cells.every((cell) => cell.startsWith("'"))
     ? cells.map((cell) => cell.slice(1))
     : cells;
+}
+
+function validateParsedDataCells(cells: readonly string[]): string[] {
+  const decodedCells = [...decodeSpreadsheetRow(cells)];
+  for (const [index, value] of decodedCells.entries()) {
+    if (value.length > CSV_PACK_LIMITS.maxFieldCharacters) {
+      throw new Error(
+        `CSV field ${CSV_COLUMNS[index] ?? index} exceeds the ${CSV_PACK_LIMITS.maxFieldCharacters}-character limit`,
+      );
+    }
+  }
+  return decodedCells;
 }
 
 function decodeVariants(value: string): { values: string[]; valid: boolean } {
@@ -896,8 +951,15 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
   const prompt = override?.prompt as { en: string; et?: string } | undefined ?? parseLocalized(row.prompt_json);
   const response = override?.response as { en: string; et?: string } | undefined ?? parseLocalized(row.response_json);
   const explanation = override?.explanation as { en: string; et?: string } | undefined ?? parseLocalized(row.explanation_json);
-  const accepted = override?.acceptedResponses as { en?: string; et?: string } | undefined
-    ?? (row.accepted_responses_json === null ? undefined : JSON.parse(row.accepted_responses_json) as { en?: string; et?: string });
+  const baseAccepted = decodeStoredAcceptedResponses(
+    row.accepted_responses_json === null ? undefined : JSON.parse(row.accepted_responses_json),
+    row.clue_id,
+    'base',
+  );
+  const overrideAccepted = override?.acceptedResponses === undefined
+    ? undefined
+    : decodeStoredAcceptedResponses(override.acceptedResponses, row.clue_id, 'override');
+  const accepted = overrideAccepted ?? baseAccepted;
   const baseSource = parseStoredSource(row.source, prompt.et === undefined ? 'untranslated' : 'reviewed');
   const overrideSource = typeof override?.source === 'string' ? override.source : undefined;
   const source = overrideSource === undefined ? baseSource : { ...baseSource, title: overrideSource };
@@ -918,8 +980,8 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
     ...(prompt.et === undefined ? {} : { clueEt: prompt.et }),
     responseEn: response.en,
     ...(response.et === undefined ? {} : { responseEt: response.et }),
-    acceptedVariantsEn: accepted?.en === undefined ? [] : decodeVariants(accepted.en).values,
-    acceptedVariantsEt: accepted?.et === undefined ? [] : decodeVariants(accepted.et).values,
+    acceptedVariantsEn: accepted.en,
+    acceptedVariantsEt: accepted.et,
     explanationEn: explanation.en,
     ...(explanation.et === undefined ? {} : { explanationEt: explanation.et }),
     sourceTitle: source.title,
@@ -929,6 +991,34 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
     translationStatus: source.translationStatus,
     enabled: typeof override?.enabled === 'boolean' ? override.enabled : row.clue_enabled === 1,
   };
+}
+
+function decodeStoredAcceptedResponses(
+  input: unknown,
+  clueId: string,
+  origin: 'base' | 'override',
+): { en: string[]; et: string[] } {
+  if (input === undefined) return { en: [], et: [] };
+  if (typeof input !== 'object' || input === null || Array.isArray(input)) {
+    throw new Error(`Accepted response escape data for ${clueId} is invalid in ${origin}`);
+  }
+  const stored = input as Record<string, unknown>;
+  if (Object.keys(stored).some((language) => language !== 'en' && language !== 'et')) {
+    throw new Error(`Accepted response escape data for ${clueId} is invalid in ${origin}`);
+  }
+  const decodeLanguage = (language: 'en' | 'et') => {
+    const value = stored[language];
+    if (value === undefined) return [];
+    if (typeof value !== 'string') {
+      throw new Error(`Accepted response escape data for ${clueId} is invalid in ${origin}.${language}`);
+    }
+    const decoded = decodeVariants(value);
+    if (!decoded.valid) {
+      throw new Error(`Accepted response escape for ${clueId} is invalid in ${origin}.${language}`);
+    }
+    return decoded.values;
+  };
+  return { en: decodeLanguage('en'), et: decodeLanguage('et') };
 }
 
 function parseLocalized(value: string): { en: string; et?: string } {

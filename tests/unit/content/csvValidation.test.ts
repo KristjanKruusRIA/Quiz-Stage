@@ -244,8 +244,13 @@ describe('CSV pack parsing and validation', () => {
       ...rowTemplate,
       clue_id: `limit-${index}`,
     }));
+    atRowLimit[0] = { ...atRowLimit[0], clue_en: 'quoted line one\nquoted line two' };
     expect(parsePackCsv(csv(atRowLimit)).rows).toHaveLength(CSV_PACK_LIMITS.maxRows);
-    expect(() => parsePackCsv(csv([...atRowLimit, { ...rowTemplate, clue_id: 'limit-over' }])))
+    const overLimitBeforeMalformedTail = `${csv([
+      ...atRowLimit,
+      { ...rowTemplate, clue_id: 'limit-over' },
+    ])}\r\n"unterminated`;
+    expect(() => parsePackCsv(overLimitBeforeMalformedTail))
       .toThrow(/row.*limit/i);
 
     const recordPart = 'y'.repeat(CSV_PACK_LIMITS.maxFieldCharacters - 1);
