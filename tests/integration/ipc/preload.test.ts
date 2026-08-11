@@ -144,4 +144,51 @@ describe('preload quizStage surface', () => {
 
     await expect(createQuizStageApi('host', ipc).dispatch!({ type: 'SelectClue', clueId: 'c1' })).rejects.toThrow();
   });
+
+  it('exposes strictly validated setup and start methods only to the host', async () => {
+    const config = hostView.state.config;
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(async (channel) => {
+        if (channel === IPC_CHANNELS.setupOptions) {
+          return {
+            packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+            automaticDisplayMode: 'dual',
+          };
+        }
+        if (channel === IPC_CHANNELS.contentAvailability) return { ok: true };
+        if (channel === IPC_CHANNELS.startMatch) return hostView;
+        throw new Error(`Unexpected channel: ${channel}`);
+      }),
+      on: vi.fn(),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const host = createQuizStageApi('host', ipc);
+    const publicApi = createQuizStageApi('public', ipc);
+
+    expect(publicApi).not.toHaveProperty('startMatch');
+    expect(publicApi).not.toHaveProperty('checkContentAvailability');
+    expect(publicApi).not.toHaveProperty('getSetupOptions');
+    await expect(host.getSetupOptions!()).resolves.toEqual({
+      packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+      automaticDisplayMode: 'dual',
+    });
+    await expect(host.checkContentAvailability!(config)).resolves.toEqual({ ok: true });
+    await expect(host.startMatch!(config)).resolves.toEqual(hostView);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.contentAvailability, config);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.startMatch, config);
+  });
+
+  it('rejects malformed setup boundary responses before renderer use', async () => {
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(async () => ({ ok: false, roundOneMissing: -1 })),
+      on: vi.fn(),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+
+    await expect(
+      createQuizStageApi('host', ipc).checkContentAvailability!(hostView.state.config),
+    ).rejects.toThrow();
+  });
 });

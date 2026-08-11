@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
-import type { GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
+import type { DisplayMode, GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
 
 const identifierSchema = z.string().trim().min(1);
 const timestampSchema = z.number().int().nonnegative();
@@ -261,8 +261,29 @@ export const publicStateUpdateSchema = z.strictObject({
   view: publicGameViewSchema,
 });
 
+export const contentAvailabilitySchema = z.discriminatedUnion('ok', [
+  z.strictObject({ ok: z.literal(true) }),
+  z.strictObject({
+    ok: z.literal(false),
+    roundOneMissing: z.number().int().nonnegative(),
+    roundTwoMissing: z.number().int().nonnegative(),
+    finalMissing: z.union([z.literal(0), z.literal(1)]),
+  }),
+]);
+
+export const setupOptionsSchema = z.strictObject({
+  packs: z.array(z.strictObject({
+    id: identifierSchema,
+    name: z.string().trim().min(1),
+    enabled: z.boolean(),
+  })),
+  automaticDisplayMode: z.enum(['single', 'dual']),
+});
+
 export type HostStateUpdate = z.infer<typeof hostStateUpdateSchema>;
 export type PublicStateUpdate = z.infer<typeof publicStateUpdateSchema>;
+export type ContentAvailabilityResponse = z.infer<typeof contentAvailabilitySchema>;
+export type SetupOptions = z.infer<typeof setupOptionsSchema> & { automaticDisplayMode: DisplayMode };
 
 export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
 export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameCommand;
@@ -271,6 +292,9 @@ export type ValidatedGameEvent = z.infer<typeof gameEventSchema> & GameEvent;
 
 export interface QuizStageApi {
   dispatch?: (command: GameCommand) => Promise<HostGameView>;
+  startMatch?: (config: GameConfig) => Promise<HostGameView>;
+  checkContentAvailability?: (config: GameConfig) => Promise<ContentAvailabilityResponse>;
+  getSetupOptions?: () => Promise<SetupOptions>;
   subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
 }
 

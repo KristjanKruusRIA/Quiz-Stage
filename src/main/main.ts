@@ -1,8 +1,9 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, screen } from 'electron';
 import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { createApplication } from './application';
+import { automaticDisplayMode } from './displayMode';
 import { registerIpc } from './ipc/registerIpc';
 import { openDatabase } from './persistence/database';
 import { migrateDatabase } from './persistence/migrations';
@@ -28,6 +29,9 @@ async function createWindows(): Promise<void> {
   disposeIpc ??= registerIpc({
     ipcMain,
     coordinator: application.coordinator,
+    setup: application,
+    getAutomaticDisplayMode: () => automaticDisplayMode(screen.getAllDisplays().length),
+    applyDisplayMode: (displayMode) => windowManager?.create(displayMode),
     getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
   });
 }

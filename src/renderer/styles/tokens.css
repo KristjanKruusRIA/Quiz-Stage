@@ -1,0 +1,16 @@
+:root {
+  --color-canvas: #0b1020;
+  --color-surface: #171f35;
+  --color-surface-raised: #202b47;
+  --color-text: #f7f8fc;
+  --color-muted: #aeb9d5;
+  --color-accent: #e3b341;
+  --color-focus: #79c8ff;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --radius: 0.75rem;
+  color-scheme: dark;
+}

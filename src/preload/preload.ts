@@ -3,10 +3,13 @@ import { IPC_CHANNELS } from '../main/ipc/channels';
 import type { GameCommand } from '../shared/game/commands';
 import type { HostGameView, PublicGameView } from '../shared/game/types';
 import {
+  contentAvailabilitySchema,
   gameCommandSchema,
+  gameConfigSchema,
   hostGameViewSchema,
   hostStateUpdateSchema,
   publicStateUpdateSchema,
+  setupOptionsSchema,
   type QuizStageApi,
 } from '../shared/ipc/contracts';
 
@@ -37,6 +40,15 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
   return {
     dispatch: async (command: GameCommand) => hostGameViewSchema.parse(
       await ipc.invoke(IPC_CHANNELS.dispatch, gameCommandSchema.parse(command)),
+    ),
+    startMatch: async (config) => hostGameViewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.startMatch, gameConfigSchema.parse(config)),
+    ),
+    checkContentAvailability: async (config) => contentAvailabilitySchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentAvailability, gameConfigSchema.parse(config)),
+    ),
+    getSetupOptions: async () => setupOptionsSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.setupOptions, undefined),
     ),
     subscribeToState,
   };
