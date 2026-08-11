@@ -12,8 +12,29 @@ import {
   matchHistorySchema,
   publicStateUpdateSchema,
   setupOptionsSchema,
+  type HostQuizStageApi,
+  type PublicQuizStageApi,
   type QuizStageApi,
 } from '../shared/ipc/contracts';
+import {
+  contentClueActionSchema,
+  contentExportRequestSchema,
+  contentExportResultSchema,
+  contentImportCommitRequestSchema,
+  contentImportPreviewSchema,
+  contentImportResultSchema,
+  createContentPackRequestSchema,
+  deleteContentPackRequestSchema,
+  editorCategorySetSchema,
+  editorFinalClueSchema,
+  editorLibrarySchema,
+  editorPackSchema,
+  reportContentClueRequestSchema,
+  saveCategorySetRequestSchema,
+  saveFinalClueRequestSchema,
+} from '../shared/content/editor';
+import { contentReportRecordSchema } from '../shared/content/schema';
+import { z } from 'zod';
 
 export interface PreloadIpcPort {
   invoke(channel: string, value: unknown): Promise<unknown>;
@@ -22,6 +43,8 @@ export interface PreloadIpcPort {
   send(channel: string): void;
 }
 
+export function createQuizStageApi(surface: 'host', ipc: PreloadIpcPort): HostQuizStageApi;
+export function createQuizStageApi(surface: 'public', ipc: PreloadIpcPort): PublicQuizStageApi;
 export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPort): QuizStageApi {
   const stateChannel = surface === 'host' ? IPC_CHANNELS.hostState : IPC_CHANNELS.publicState;
   const readyChannel = surface === 'host' ? IPC_CHANNELS.hostReady : IPC_CHANNELS.publicReady;
@@ -39,6 +62,8 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     return () => ipc.removeListener(stateChannel, wrapped);
   };
   if (surface === 'public') return { subscribeToState };
+  const resolvedSchema = z.strictObject({ resolved: z.boolean() });
+  const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
     dispatch: async (command: GameCommand) => hostGameViewSchema.parse(
       await ipc.invoke(IPC_CHANNELS.dispatch, gameCommandSchema.parse(command)),
@@ -62,9 +87,41 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     listHistory: async () => matchHistorySchema.parse(
       await ipc.invoke(IPC_CHANNELS.listHistory, undefined),
     ),
+    listContent: async () => editorLibrarySchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentList, undefined),
+    ),
+    saveCategorySet: async (input) => editorCategorySetSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentSaveCategory, saveCategorySetRequestSchema.parse(input)),
+    ),
+    saveFinalClue: async (input) => editorFinalClueSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentSaveFinal, saveFinalClueRequestSchema.parse(input)),
+    ),
+    createContentPack: async (input) => editorPackSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentCreatePack, createContentPackRequestSchema.parse(input)),
+    ),
+    deleteContentPack: async (input) => deletedSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentDeletePack, deleteContentPackRequestSchema.parse(input)),
+    ),
+    reportContentClue: async (input) => contentReportRecordSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentReportClue, reportContentClueRequestSchema.parse(input)),
+    ),
+    resolveContentReport: async (input) => resolvedSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentResolveReport, contentClueActionSchema.parse(input)),
+    ),
+    previewContentImport: async () => contentImportPreviewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentImportPreview, undefined),
+    ),
+    commitContentImport: async (input) => contentImportResultSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentImportCommit, contentImportCommitRequestSchema.parse(input)),
+    ),
+    exportContentPack: async (input) => contentExportResultSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.contentExport, contentExportRequestSchema.parse(input)),
+    ),
     subscribeToState,
   };
 }
 
 const surface = process.argv.includes('--surface=host') ? 'host' : 'public';
-contextBridge.exposeInMainWorld('quizStage', createQuizStageApi(surface, ipcRenderer));
+contextBridge.exposeInMainWorld('quizStage', surface === 'host'
+  ? createQuizStageApi('host', ipcRenderer)
+  : createQuizStageApi('public', ipcRenderer));

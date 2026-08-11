@@ -33,6 +33,7 @@ async function createWindows(): Promise<void> {
     setup: application,
     matchAccess: application,
     contentCsv: application.contentCsv,
+    contentEditor: application.contentEditor,
     csvDialogs: {
       chooseImportFile: async () => {
         const result = await dialog.showOpenDialog({

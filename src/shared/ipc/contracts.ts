@@ -1,4 +1,9 @@
 import { z } from 'zod';
+import type {
+  ContentExportResult, ContentImportPreview, ContentImportResult, EditorCategorySet,
+  EditorFinalClue, EditorLibrary, EditorPack,
+} from '../content/editor';
+import type { ContentReportRecord } from '../content/schema';
 import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
@@ -409,16 +414,32 @@ export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameComma
 export type ValidatedGameState = z.infer<typeof gameStateSchema> & GameState;
 export type ValidatedGameEvent = z.infer<typeof gameEventSchema> & GameEvent;
 
-export interface QuizStageApi {
-  dispatch?: (command: GameCommand) => Promise<HostGameView>;
-  startMatch?: (config: GameConfig) => Promise<HostGameView>;
-  checkContentAvailability?: (config: GameConfig) => Promise<ContentAvailabilityResponse>;
-  getSetupOptions?: () => Promise<SetupOptions>;
-  hasResumableMatch?: () => Promise<boolean>;
-  resumeMatch?: () => Promise<HostGameView | null>;
-  listHistory?: () => Promise<MatchHistoryEntry[]>;
+interface StateSubscriptionApi {
   subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
 }
+
+export interface HostQuizStageApi extends StateSubscriptionApi {
+  dispatch(command: GameCommand): Promise<HostGameView>;
+  startMatch(config: GameConfig): Promise<HostGameView>;
+  checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
+  getSetupOptions(): Promise<SetupOptions>;
+  hasResumableMatch(): Promise<boolean>;
+  resumeMatch(): Promise<HostGameView | null>;
+  listHistory(): Promise<MatchHistoryEntry[]>;
+  listContent(): Promise<EditorLibrary>;
+  saveCategorySet(input: unknown): Promise<EditorCategorySet>;
+  saveFinalClue(input: unknown): Promise<EditorFinalClue>;
+  createContentPack(input: unknown): Promise<EditorPack>;
+  deleteContentPack(input: unknown): Promise<{ packId: string }>;
+  reportContentClue(input: unknown): Promise<ContentReportRecord>;
+  resolveContentReport(input: unknown): Promise<{ resolved: boolean }>;
+  previewContentImport(): Promise<ContentImportPreview>;
+  commitContentImport(input: unknown): Promise<ContentImportResult>;
+  exportContentPack(input: unknown): Promise<ContentExportResult>;
+}
+
+export type PublicQuizStageApi = StateSubscriptionApi;
+export type QuizStageApi = HostQuizStageApi | PublicQuizStageApi;
 
 declare global {
   interface Window {

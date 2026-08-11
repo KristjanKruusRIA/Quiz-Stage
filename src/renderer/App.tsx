@@ -6,6 +6,7 @@ import { HomeScreen } from './features/home/HomeScreen';
 import { SetupScreen } from './features/setup/SetupScreen';
 import { GameSurface } from './features/game/GameSurface';
 import { HistoryScreen } from './features/history/HistoryScreen';
+import { ContentLibraryScreen } from './features/content/ContentLibraryScreen';
 
 interface AppProps {
   api?: DesktopApi;
@@ -13,7 +14,7 @@ interface AppProps {
 
 export default function App({ api }: AppProps) {
   const desktopApi = useMemo(() => api ?? getDesktopApi(), [api]);
-  const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history'>('home');
+  const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history' | 'content'>('home');
   const [hostView, setHostView] = useState<HostGameView | null>(null);
   const [publicView, setPublicView] = useState<PublicGameView | null>(null);
   const [resumableAvailability, setResumableAvailability] = useState<{
@@ -25,7 +26,7 @@ export default function App({ api }: AppProps) {
   const navigationGeneration = useRef(0);
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
-  const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history') => {
+  const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content') => {
     navigationGeneration.current += 1;
     setResumePending(false);
     setResumeError(false);
@@ -59,6 +60,9 @@ export default function App({ api }: AppProps) {
   }
   if (route === 'history') {
     return <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
+  }
+  if (route === 'content') {
+    return <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
   }
   if (route === 'match') {
     return hostView === null
@@ -94,6 +98,7 @@ export default function App({ api }: AppProps) {
     onNewMatch={() => navigate('setup')}
     onResume={() => void resume()}
     onHistory={() => navigate('history')}
+    onContent={() => navigate('content')}
     hasResumableMatch={hasResumableMatch}
     resumePending={resumePending}
     resumeError={resumeError}

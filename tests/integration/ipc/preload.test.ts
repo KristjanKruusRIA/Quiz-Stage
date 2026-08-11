@@ -67,6 +67,10 @@ describe('preload quizStage surface', () => {
     expect(publicApi).not.toHaveProperty('hasResumableMatch');
     expect(publicApi).not.toHaveProperty('resumeMatch');
     expect(publicApi).not.toHaveProperty('listHistory');
+    expect(host.listContent).toBeTypeOf('function');
+    expect(host.previewContentImport).toBeTypeOf('function');
+    expect(publicApi).not.toHaveProperty('listContent');
+    expect(publicApi).not.toHaveProperty('previewContentImport');
     expect(host.subscribeToState).toBeTypeOf('function');
     expect(publicApi.subscribeToState).toBeTypeOf('function');
 
@@ -246,5 +250,21 @@ describe('preload quizStage surface', () => {
     await expect(
       createQuizStageApi('host', ipc).checkContentAvailability!(hostView.state.config),
     ).rejects.toThrow();
+  });
+
+  it('strictly rejects extra editor response fields and never sends renderer paths', async () => {
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(async (channel) => {
+        if (channel === IPC_CHANNELS.contentList) return { packs: [], reports: [], extra: true };
+        if (channel === IPC_CHANNELS.contentImportPreview) return { cancelled: true };
+        throw new Error(`Unexpected channel: ${channel}`);
+      }),
+      on: vi.fn(), removeListener: vi.fn(), send: vi.fn(),
+    };
+    const host = createQuizStageApi('host', ipc);
+
+    await expect(host.listContent()).rejects.toThrow();
+    await expect(host.previewContentImport()).resolves.toEqual({ cancelled: true });
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.contentImportPreview, undefined);
   });
 });

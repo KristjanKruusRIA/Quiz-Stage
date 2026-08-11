@@ -5,7 +5,13 @@ import type {
   MatchHistoryEntry,
   QuizStageApi,
   SetupOptions,
+  HostQuizStageApi,
 } from '../../shared/ipc/contracts';
+import type {
+  ContentExportResult, ContentImportPreview, ContentImportResult, EditorCategorySet,
+  EditorFinalClue, EditorLibrary, EditorPack,
+} from '../../shared/content/editor';
+import type { ContentReportRecord } from '../../shared/content/schema';
 
 export type HostDesktopApi = {
       surface: 'host';
@@ -16,6 +22,16 @@ export type HostDesktopApi = {
       resumeMatch(): Promise<HostGameView | null>;
       listHistory(): Promise<MatchHistoryEntry[]>;
       dispatch(command: GameCommand): Promise<HostGameView>;
+      listContent?: () => Promise<EditorLibrary>;
+      saveCategorySet?: (input: unknown) => Promise<EditorCategorySet>;
+      saveFinalClue?: (input: unknown) => Promise<EditorFinalClue>;
+      createContentPack?: (input: unknown) => Promise<EditorPack>;
+      deleteContentPack?: (input: unknown) => Promise<{ packId: string }>;
+      reportContentClue?: (input: unknown) => Promise<ContentReportRecord>;
+      resolveContentReport?: (input: unknown) => Promise<{ resolved: boolean }>;
+      previewContentImport?: () => Promise<ContentImportPreview>;
+      commitContentImport?: (input: unknown) => Promise<ContentImportResult>;
+      exportContentPack?: (input: unknown) => Promise<ContentExportResult>;
       subscribeToState?: (listener: (view: HostGameView) => void) => () => void;
     };
 
@@ -27,6 +43,13 @@ export type PublicDesktopApi = {
 export type DesktopApi = PublicDesktopApi | HostDesktopApi;
 
 export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
+  if (!('dispatch' in bridge)) return {
+    surface: 'public',
+    subscribeToState: (listener) => bridge.subscribeToState((view) => {
+      if (!('state' in view)) listener(view);
+    }),
+  };
+  const hostBridge: HostQuizStageApi = bridge;
   const {
     startMatch,
     dispatch,
@@ -35,21 +58,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch,
     resumeMatch,
     listHistory,
-  } = bridge;
-  if (
-    startMatch === undefined
-    || dispatch === undefined
-    || checkContentAvailability === undefined
-    || getSetupOptions === undefined
-    || hasResumableMatch === undefined
-    || resumeMatch === undefined
-    || listHistory === undefined
-  ) return {
-    surface: 'public',
-    subscribeToState: (listener) => bridge.subscribeToState((view) => {
-      if (!('state' in view)) listener(view);
-    }),
-  };
+  } = hostBridge;
 
   return {
     surface: 'host',
@@ -58,6 +67,16 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch: () => hasResumableMatch(),
     resumeMatch: () => resumeMatch(),
     listHistory: () => listHistory(),
+    listContent: () => hostBridge.listContent(),
+    saveCategorySet: (input) => hostBridge.saveCategorySet(input),
+    saveFinalClue: (input) => hostBridge.saveFinalClue(input),
+    createContentPack: (input) => hostBridge.createContentPack(input),
+    deleteContentPack: (input) => hostBridge.deleteContentPack(input),
+    reportContentClue: (input) => hostBridge.reportContentClue(input),
+    resolveContentReport: (input) => hostBridge.resolveContentReport(input),
+    previewContentImport: () => hostBridge.previewContentImport(),
+    commitContentImport: (input) => hostBridge.commitContentImport(input),
+    exportContentPack: (input) => hostBridge.exportContentPack(input),
     dispatch: (command) => dispatch(command),
     startMatch: async (config) => {
       await startMatch(config);

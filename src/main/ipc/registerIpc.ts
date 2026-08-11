@@ -13,10 +13,27 @@ import {
 } from '../../shared/ipc/contracts';
 import { IPC_CHANNELS } from './channels';
 import { validateHostSender } from './validateSender';
-import { z } from 'zod';
-import { contentIdSchema } from '../../shared/content/schema';
-import { CSV_COLUMNS } from '../../shared/content/csvColumns';
 import type { CsvPackWorkflow } from '../content/csvPacks';
+import type { ContentEditorService } from '../content/contentEditorService';
+import {
+  contentClueActionSchema,
+  contentExportRequestSchema,
+  contentExportResultSchema,
+  contentImportCommitRequestSchema,
+  contentImportPreviewSchema,
+  contentImportResultSchema,
+  createContentPackRequestSchema,
+  deleteContentPackRequestSchema,
+  editorCategorySetSchema,
+  editorFinalClueSchema,
+  editorLibrarySchema,
+  editorPackSchema,
+  reportContentClueRequestSchema,
+  saveCategorySetRequestSchema,
+  saveFinalClueRequestSchema,
+} from '../../shared/content/editor';
+import { contentReportRecordSchema } from '../../shared/content/schema';
+import { z } from 'zod';
 
 export interface IpcMainPort {
   handle(channel: string, handler: (event: { sender: { id: number } }, value: unknown) => unknown): void;
@@ -44,6 +61,16 @@ interface ContentCsvPort {
   exportToFile(packId: string, destination: string): ReturnType<CsvPackWorkflow['exportToFile']>;
 }
 
+interface ContentEditorPort {
+  list(): ReturnType<ContentEditorService['list']>;
+  saveCategorySet(input: unknown): ReturnType<ContentEditorService['saveCategorySet']>;
+  saveFinalClue(input: unknown): ReturnType<ContentEditorService['saveFinalClue']>;
+  createPack(input: unknown): ReturnType<ContentEditorService['createPack']>;
+  deletePack(input: unknown): ReturnType<ContentEditorService['deletePack']>;
+  reportClue(input: unknown): ReturnType<ContentEditorService['reportClue']>;
+  resolveReport(input: unknown): ReturnType<ContentEditorService['resolveReport']>;
+}
+
 interface RegisterIpcOptions {
   ipcMain: IpcMainPort;
   coordinator: CoordinatorPort;
@@ -58,6 +85,7 @@ interface RegisterIpcOptions {
     listHistory(): unknown;
   };
   contentCsv?: ContentCsvPort;
+  contentEditor?: ContentEditorPort;
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
@@ -81,6 +109,7 @@ export function registerIpc({
   setup,
   matchAccess,
   contentCsv,
+  contentEditor,
   csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
@@ -146,62 +175,66 @@ export function registerIpc({
 
   const csvChannels: string[] = [];
   if (contentCsv !== undefined && csvDialogs !== undefined) {
-    const issueSchema = z.strictObject({
-      code: z.string().min(1),
-      message: z.string().min(1),
-      row: z.number().int().positive().optional(),
-      column: z.enum(CSV_COLUMNS).optional(),
-    });
-    const previewSchema = z.strictObject({
-      previewId: contentIdSchema,
-      packId: z.string(),
-      packName: z.string(),
-      rowCount: z.number().int().positive(),
-      conflict: z.boolean(),
-      issues: z.array(issueSchema),
-    });
-    const importRequestSchema = z.strictObject({
-      previewId: contentIdSchema,
-      conflict: z.enum(['replace-existing', 'keep-both']).optional(),
-    });
-    const importResultSchema = z.strictObject({
-      packId: contentIdSchema,
-      replaced: z.boolean(),
-      keptBoth: z.boolean(),
-      rowCount: z.number().int().positive(),
-    });
-    const exportRequestSchema = z.strictObject({ packId: contentIdSchema });
-    const exportResultSchema = z.strictObject({
-      packId: contentIdSchema,
-      rowCount: z.number().int().positive(),
-      bytes: z.number().int().positive(),
-    });
-
     ipcMain.handle(IPC_CHANNELS.contentImportPreview, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       const path = await csvDialogs.chooseImportFile();
       requireHost(event.sender.id);
-      if (path === null) return { cancelled: true as const };
-      return { cancelled: false as const, ...previewSchema.parse(contentCsv.previewFile(path)) };
+      if (path === null) return contentImportPreviewSchema.parse({ cancelled: true as const });
+      return contentImportPreviewSchema.parse({ cancelled: false as const, ...contentCsv.previewFile(path) });
     });
     ipcMain.handle(IPC_CHANNELS.contentImportCommit, async (event, input) => {
       requireHost(event.sender.id);
-      return importResultSchema.parse(contentCsv.importPreview(importRequestSchema.parse(input)));
+      return contentImportResultSchema.parse(contentCsv.importPreview(contentImportCommitRequestSchema.parse(input)));
     });
     ipcMain.handle(IPC_CHANNELS.contentExport, async (event, input) => {
       requireHost(event.sender.id);
-      const { packId } = exportRequestSchema.parse(input);
+      const { packId } = contentExportRequestSchema.parse(input);
       const path = await csvDialogs.chooseExportFile(packId);
       requireHost(event.sender.id);
-      if (path === null) return { cancelled: true as const };
-      return { cancelled: false as const, ...exportResultSchema.parse(contentCsv.exportToFile(packId, path)) };
+      if (path === null) return contentExportResultSchema.parse({ cancelled: true as const });
+      return contentExportResultSchema.parse({ cancelled: false as const, ...contentCsv.exportToFile(packId, path) });
     });
     csvChannels.push(
       IPC_CHANNELS.contentImportPreview,
       IPC_CHANNELS.contentImportCommit,
       IPC_CHANNELS.contentExport,
     );
+  }
+
+  const editorChannels: string[] = [];
+  if (contentEditor !== undefined) {
+    const resolvedSchema = z.strictObject({ resolved: z.boolean() });
+    const deletedSchema = z.strictObject({ packId: z.string().min(1) });
+    const addEditorHandler = (channel: string, handler: (input: unknown) => unknown) => {
+      ipcMain.handle(channel, async (event, input) => {
+        requireHost(event.sender.id);
+        return handler(input);
+      });
+      editorChannels.push(channel);
+    };
+    addEditorHandler(IPC_CHANNELS.contentList, (input) => {
+      noArgsSchema.parse(input);
+      return editorLibrarySchema.parse(contentEditor.list());
+    });
+    addEditorHandler(IPC_CHANNELS.contentSaveCategory, (input) => editorCategorySetSchema.parse(
+      contentEditor.saveCategorySet(saveCategorySetRequestSchema.parse(input)),
+    ));
+    addEditorHandler(IPC_CHANNELS.contentSaveFinal, (input) => editorFinalClueSchema.parse(
+      contentEditor.saveFinalClue(saveFinalClueRequestSchema.parse(input)),
+    ));
+    addEditorHandler(IPC_CHANNELS.contentCreatePack, (input) => editorPackSchema.parse(
+      contentEditor.createPack(createContentPackRequestSchema.parse(input)),
+    ));
+    addEditorHandler(IPC_CHANNELS.contentDeletePack, (input) => deletedSchema.parse(
+      contentEditor.deletePack(deleteContentPackRequestSchema.parse(input)),
+    ));
+    addEditorHandler(IPC_CHANNELS.contentReportClue, (input) => contentReportRecordSchema.parse(
+      contentEditor.reportClue(reportContentClueRequestSchema.parse(input)),
+    ));
+    addEditorHandler(IPC_CHANNELS.contentResolveReport, (input) => resolvedSchema.parse(
+      contentEditor.resolveReport(contentClueActionSchema.parse(input)),
+    ));
   }
 
   let readyHostWebContentsId: number | null = null;
@@ -257,6 +290,7 @@ export function registerIpc({
     for (const channel of setupChannels) ipcMain.removeHandler(channel);
     for (const channel of matchAccessChannels) ipcMain.removeHandler(channel);
     for (const channel of csvChannels) ipcMain.removeHandler(channel);
+    for (const channel of editorChannels) ipcMain.removeHandler(channel);
     ipcMain.removeListener(IPC_CHANNELS.hostReady, bootstrapHost);
     ipcMain.removeListener(IPC_CHANNELS.publicReady, bootstrapPublic);
     unsubscribeHost();

@@ -26,10 +26,12 @@ describe('HomeScreen', () => {
   it('offers current Home actions while clearly disabling features owned by later tasks', async () => {
     const onNewMatch = vi.fn();
     const onHistory = vi.fn();
+    const onContent = vi.fn();
     render(<HomeScreen
       onNewMatch={onNewMatch}
       onResume={vi.fn()}
       onHistory={onHistory}
+      onContent={onContent}
       hasResumableMatch={false}
     />);
 
@@ -38,7 +40,9 @@ describe('HomeScreen', () => {
     expect(onNewMatch).toHaveBeenCalledOnce();
     await userEvent.click(screen.getByRole('button', { name: 'Match History' }));
     expect(onHistory).toHaveBeenCalledOnce();
-    for (const name of ['Resume Match', 'Content Library', 'Settings']) {
+    await userEvent.click(screen.getByRole('button', { name: 'Content Library' }));
+    expect(onContent).toHaveBeenCalledOnce();
+    for (const name of ['Resume Match', 'Settings']) {
       expect(screen.getByRole('button', { name })).toBeDisabled();
     }
   });
