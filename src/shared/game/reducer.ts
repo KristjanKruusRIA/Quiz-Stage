@@ -478,6 +478,13 @@ function reportClue(state: GameState, clueId: string, reason: string): GameState
   }
   const clue = findClue(state, clueId);
   const disabledClueIds = state.disabledClueIds.includes(clueId) ? state.disabledClueIds : [...state.disabledClueIds, clueId];
+  if (state.phase === 'tiebreaker' && state.activeClue?.clueId === clueId && clue.round === 'tiebreaker') {
+    return startTiebreaker(
+      { ...state, disabledClueIds },
+      state.tiebreakerTeamIds,
+      state.suddenDeathClueNumber + 1,
+    );
+  }
   const usedClueIds = state.usedClueIds.includes(clueId) ? state.usedClueIds : [...state.usedClueIds, clueId];
   if (state.activeClue?.clueId === clueId && !state.activeClue.responseRevealed) {
     return completeClue({

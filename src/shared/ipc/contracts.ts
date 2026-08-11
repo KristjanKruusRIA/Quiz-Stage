@@ -118,13 +118,13 @@ const undoMutableStateSchema = z.strictObject({
   finalRevealOrder: z.array(identifierSchema),
   finalRevealedTeamIds: z.array(identifierSchema),
   tiebreakerTeamIds: z.array(identifierSchema),
-  usedTiebreakerClueIds: z.array(identifierSchema),
+  usedTiebreakerClueIds: z.array(identifierSchema).default([]),
   suddenDeathClueNumber: z.number().int().nonnegative(),
   winnerTeamId: identifierSchema.nullable(),
   endedIncomplete: z.boolean(),
   lastClosedClueId: identifierSchema.nullable(),
-  lastClosedPhase: z.enum(['round-one-board', 'round-two-board']).nullable(),
-  lastClosedControllingTeamId: identifierSchema.nullable(),
+  lastClosedPhase: z.enum(['round-one-board', 'round-two-board']).nullable().default(null),
+  lastClosedControllingTeamId: identifierSchema.nullable().default(null),
   disabledClueIds: z.array(identifierSchema),
 });
 

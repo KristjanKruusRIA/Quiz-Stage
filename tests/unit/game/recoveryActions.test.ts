@@ -146,6 +146,30 @@ describe('host recovery actions', () => {
     expect(gameStateSchema.safeParse(invalidFrame).success).toBe(false);
   });
 
+  it('loads a pre-fix snapshot whose undo frame predates the new nested fields', () => {
+    const game = createGame(config, selectedBoards, 0);
+    const selected = apply(game, { type: 'SelectClue', clueId: 'clue-200' }).state;
+    const previousSnapshot = JSON.parse(JSON.stringify(selected)) as Record<string, unknown>;
+    delete previousSnapshot.tiebreakerClues;
+    delete previousSnapshot.usedTiebreakerClueIds;
+    delete previousSnapshot.lastClosedPhase;
+    delete previousSnapshot.lastClosedControllingTeamId;
+    const frameState = (previousSnapshot.undoStack as Array<{ state: Record<string, unknown> }>)[0].state;
+    delete frameState.usedTiebreakerClueIds;
+    delete frameState.lastClosedPhase;
+    delete frameState.lastClosedControllingTeamId;
+
+    const result = gameStateSchema.safeParse(previousSnapshot);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.undoStack[0].state).toMatchObject({
+        usedTiebreakerClueIds: [],
+        lastClosedPhase: null,
+        lastClosedControllingTeamId: null,
+      });
+    }
+  });
+
   it('requires a reason and closes a reported bad clue so the board can finish', () => {
     let state = createGame(config, selectedBoards, 0);
     expect(() => apply(state, { type: 'ReportClue', clueId: 'clue-200', reason: ' ' })).toThrow(GameRuleError);

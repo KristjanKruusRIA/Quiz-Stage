@@ -158,4 +158,29 @@ describe('Final', () => {
     expect(state.phase).toBe('tiebreaker');
     expect(state.activeClue?.clueId).not.toBe(firstClueId);
   });
+
+  it('reports an active bad tiebreaker clue and advances with scores unchanged', () => {
+    let state: GameState = { ...createGame(config, selectedBoards, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
+    state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
+    state = apply(state, { type: 'RevealResponse' });
+    const scoresBeforeReport = { ...state.scores };
+
+    state = apply(state, { type: 'ReportClue', clueId: 'tiebreaker-1', reason: 'Ambiguous wording' });
+    expect(state.phase).toBe('tiebreaker');
+    expect(state.activeClue?.clueId).toBe('tiebreaker-2');
+    expect(state.usedTiebreakerClueIds).toEqual(['tiebreaker-1', 'tiebreaker-2']);
+    expect(state.disabledClueIds).toContain('tiebreaker-1');
+    expect(state.scores).toEqual(scoresBeforeReport);
+  });
+
+  it('rejects reporting the last supplied tiebreaker clue without corrupting state', () => {
+    const oneTiebreaker: SelectedBoards = { ...selectedBoards, tiebreakerClues: [tiebreakerClues[0]] };
+    let state: GameState = { ...createGame(config, oneTiebreaker, 0), phase: 'round-two-board', scores: { 'positive-only': 0, zero: 0, negative: -100 } };
+    state = apply(state, { type: 'SelectClue', clueId: 'r2-clue' });
+    state = apply(state, { type: 'RevealResponse' });
+    const beforeReport = structuredClone(state);
+
+    expect(() => apply(state, { type: 'ReportClue', clueId: 'tiebreaker-1', reason: 'Ambiguous wording' })).toThrow(GameRuleError);
+    expect(state).toEqual(beforeReport);
+  });
 });
