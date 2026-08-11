@@ -128,3 +128,43 @@ npm run build: Electron Forge packaged x64 on win32; exit 0
 - Disabled pack/category state participates only in effective eligibility. An enabled corrected override clears its report but still returns `enabled: false` while either parent is disabled.
 - Selection loaders retain their prior filtering/balancing behavior; the new direct lookup is used only for stable record identity/get/edit operations.
 - No migration, renderer, preload, IPC, public projection, filesystem scope, or network path changed.
+
+## Fix round 2: serialized tiebreaker replacement selection
+
+### Finding addressed
+
+Replacement eligibility was previously read before the coordinator opened the report transaction. A second SQLite connection could therefore commit a report for the selected replacement in the read-to-transaction gap, after which the coordinator durably adopted that now-ineligible clue. Report-command preparation now runs inside the existing synchronous content transaction, and `ContentRepository.runTransaction` uses `BEGIN IMMEDIATE` so the write reservation is acquired before replacement selection. The selection read, cloned-state augmentation, unresolved current report, command event, and snapshot consequently share one SQLite ordering and rollback boundary.
+
+The ordering is explicit across instances: a report committed before `BEGIN IMMEDIATE` is visible to selection and excluded; after `BEGIN IMMEDIATE`, another report/resolve/override transaction cannot commit until the coordinator transaction ends (or receives `SQLITE_BUSY` under a zero busy timeout). A writer retry after commit affects future eligibility without rewriting the already-current canonical match clue.
+
+### RED and GREEN evidence
+
+The deterministic regression uses two production connections to the same WAL database. Its selection interleaving hook obtains the real selected clue, then makes the second repository attempt a report before returning it to the coordinator. Before the fix, the competing report committed and the observed error code was `null` instead of `SQLITE_BUSY`:
+
+```text
+npm run test:run -- tests/integration/content/reportClue.test.ts
+Test Files 1 failed (1)
+Tests 1 failed | 10 passed
+exit 1
+```
+
+After the fix, the competing write receives `SQLITE_BUSY`; retrying after the coordinator commit succeeds while the current and restarted match remain exactly equal to the published canonical state. A separate two-connection case proves a report committed before the coordinator transaction causes deterministic selection of a different eligible clue. Selection failure, transition rejection, report failure, and late snapshot failure leave no report/event/snapshot additions and recover the exact pre-command state.
+
+```text
+Focused concurrency/report suite: 1 file; 12 tests passed
+Affected content/selector/coordinator/persistence/game: 18 files; 171 tests passed
+npm run test:run: 40 files; 251 tests passed
+npm run lint: exit 0
+npm run typecheck: exit 0
+npm run build: Electron Forge packaged x64 on win32; exit 0
+Packaged dev-seed.sqlite: 188416 bytes
+Packaged better-sqlite3 win32-x64.node: 1989632 bytes
+```
+
+### Fix-round self-review
+
+- The coordinator callback remains synchronous; no async work was introduced inside better-sqlite3 transactions.
+- Nested report and match repository transactions remain savepoint-scoped on the same production connection, while the outer immediate transaction owns cross-connection ordering.
+- Tiebreaker ranking, exclusion order, canonical copying, non-reuse, Task 10 live progression, report privacy, event sequencing, snapshot count, restart recovery, and post-commit publication remain unchanged.
+- All content writers already use the same repository transaction function, so report, resolution, and corrected-override commits observe the same immediate-writer serialization.
+- No migration, renderer, preload, IPC, public projection, filesystem scope, or network path changed.

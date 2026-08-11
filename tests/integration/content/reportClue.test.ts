@@ -105,6 +105,7 @@ describe('clue reporting', () => {
     const { database, repository: contentRepository, service } = openCopy();
     insertAdditionalMediumFinal(database, 'one');
     insertAdditionalMediumFinal(database, 'two');
+    insertAdditionalMediumFinal(database, 'three');
     const selected = service.selectForMatch(config, 'tiebreaker-report-seed');
     if (!selected.ok) throw new Error('Expected complete match content');
     const boardIds = selected.boards.flatMap((board) =>
@@ -155,6 +156,7 @@ describe('clue reporting', () => {
     return {
       database,
       contentRepository,
+      service,
       coordinator,
       matchRepository,
       initialState: persistedState,
@@ -260,13 +262,22 @@ describe('clue reporting', () => {
   it('keeps Final reporting rejected without creating a content report', async () => {
     const { database, repository } = openCopy();
     const application = createApplication(database, { now: () => 100, createSeed: () => 'final-report-seed' });
-    await application.startMatch(config);
-    const finalClueId = application.coordinator.getHostView()!.state.finalClue!.id;
+    const started = await application.startMatch(config);
+    const finalClueId = started.state.finalClue!.id;
+    const snapshotCount = database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?')
+      .pluck().get(started.state.id);
+    const eventCount = database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?')
+      .pluck().get(started.state.id);
 
     await expect(application.coordinator.dispatch({
       type: 'ReportClue', clueId: finalClueId, reason: 'No Final replacement policy',
     })).rejects.toThrowError(expect.objectContaining({ code: 'NO_ACTIVE_CLUE' }));
     expect(repository.listReported()).toEqual([]);
+    expect(application.coordinator.getHostView()!.state).toEqual(started.state);
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(started.state.id))
+      .toBe(snapshotCount);
+    expect(database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?').pluck().get(started.state.id))
+      .toBe(eventCount);
     application.close();
   });
 
@@ -328,6 +339,39 @@ describe('clue reporting', () => {
     expect((await restart.resume())?.state).toEqual(before.state);
   });
 
+  it('rolls back the report transaction when replacement selection fails', async () => {
+    const { database, contentRepository, service, coordinator, matchRepository, reportedClueId } =
+      tiebreakerDependencies();
+    await coordinator.resume();
+    const before = coordinator.getHostView()!;
+    const snapshotCount = database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?')
+      .pluck().get(before.state.id);
+    const eventCount = database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?')
+      .pluck().get(before.state.id);
+    vi.spyOn(service, 'selectNextTiebreaker').mockImplementationOnce(() => {
+      throw new Error('forced replacement selection failure');
+    });
+
+    await expect(coordinator.dispatch({
+      type: 'ReportClue', clueId: reportedClueId, reason: 'Ambiguous tiebreaker',
+    })).rejects.toThrow('forced replacement selection failure');
+
+    expect(coordinator.getHostView()).toEqual(before);
+    expect(contentRepository.listReported()).toEqual([]);
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(before.state.id))
+      .toBe(snapshotCount);
+    expect(database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?').pluck().get(before.state.id))
+      .toBe(eventCount);
+    const restart = new GameCoordinator({
+      repository: matchRepository,
+      contentService: service,
+      now: () => 2_000,
+      setTimeout: () => 1,
+      clearTimeout: () => undefined,
+    });
+    expect((await restart.resume())?.state).toEqual(before.state);
+  });
+
   it('commits one tiebreaker report snapshot atomically and recovers the exact published state', async () => {
     const { database, contentRepository, coordinator, matchRepository, reportedClueId } = tiebreakerDependencies();
     await coordinator.resume();
@@ -354,6 +398,128 @@ describe('clue reporting', () => {
     const restart = new GameCoordinator({
       repository: matchRepository,
       contentService: new ContentService(contentRepository),
+      now: () => 2_000,
+      setTimeout: () => 1,
+      clearTimeout: () => undefined,
+    });
+    expect((await restart.resume())?.state).toEqual(reported.state);
+  });
+
+  it('excludes a replacement reported on another connection before the report transaction starts', async () => {
+    const {
+      database,
+      contentRepository,
+      service,
+      coordinator,
+      matchRepository,
+      initialState,
+      reportedClueId,
+    } = tiebreakerDependencies();
+    const competingDatabase = openDatabase({ filePath: database.name });
+    connections.push(competingDatabase);
+    const competingRepository = new ContentRepository(competingDatabase);
+    const excludedIds = [
+      ...initialState.boards.flatMap((board) =>
+        board.categories.flatMap((category) => category.clues.map((clue) => clue.id))),
+      initialState.finalClue!.id,
+      ...initialState.tiebreakerClues.map((clue) => clue.id),
+      ...initialState.usedClueIds,
+      ...initialState.usedTiebreakerClueIds,
+    ];
+    const preReportedReplacement = service.selectNextTiebreaker(
+      initialState.config,
+      initialState.seed,
+      excludedIds,
+      initialState.tiebreakerClues.length,
+    );
+    competingRepository.reportClue({
+      clueId: preReportedReplacement.id,
+      matchId: null,
+      note: 'Committed before coordinator transaction',
+      createdAt: 900,
+    });
+    await coordinator.resume();
+
+    const reported = await coordinator.dispatch({
+      type: 'ReportClue', clueId: reportedClueId, reason: 'Ambiguous tiebreaker',
+    });
+
+    expect(reported.state.activeClue?.clueId).not.toBe(preReportedReplacement.id);
+    expect(contentRepository.isEligible(preReportedReplacement.id)).toBe(false);
+    expect(contentRepository.listReported()).toHaveLength(2);
+    const restart = new GameCoordinator({
+      repository: matchRepository,
+      contentService: service,
+      now: () => 2_000,
+      setTimeout: () => 1,
+      clearTimeout: () => undefined,
+    });
+    expect((await restart.resume())?.state).toEqual(reported.state);
+  });
+
+  it('serializes replacement selection against a report attempted from another connection', async () => {
+    const {
+      database,
+      contentRepository,
+      service,
+      coordinator,
+      matchRepository,
+      reportedClueId,
+    } = tiebreakerDependencies();
+    const competingDatabase = openDatabase({ filePath: database.name });
+    competingDatabase.pragma('busy_timeout = 0');
+    connections.push(competingDatabase);
+    const competingRepository = new ContentRepository(competingDatabase);
+    const selectNextTiebreaker = service.selectNextTiebreaker.bind(service);
+    let racedClueId: string | null = null;
+    let competingWriteCode: string | null = null;
+    vi.spyOn(service, 'selectNextTiebreaker').mockImplementation((...args) => {
+      const clue = selectNextTiebreaker(...args);
+      racedClueId = clue.id;
+      try {
+        competingRepository.reportClue({
+          clueId: clue.id,
+          matchId: null,
+          note: 'Attempted during coordinator transaction',
+          createdAt: 950,
+        });
+      } catch (error) {
+        competingWriteCode = (error as { code?: string }).code ?? null;
+      }
+      return clue;
+    });
+    await coordinator.resume();
+    const before = coordinator.getHostView()!;
+    const snapshotCount = database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?')
+      .pluck().get(before.state.id) as number;
+    const eventCount = database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?')
+      .pluck().get(before.state.id) as number;
+
+    const reported = await coordinator.dispatch({
+      type: 'ReportClue', clueId: reportedClueId, reason: 'Ambiguous tiebreaker',
+    });
+
+    expect(racedClueId).not.toBeNull();
+    expect(competingWriteCode).toBe('SQLITE_BUSY');
+    expect(contentRepository.listReported()).toMatchObject([{ clueId: reportedClueId }]);
+    expect(reported.state.activeClue?.clueId).toBe(racedClueId);
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(before.state.id))
+      .toBe(snapshotCount + 1);
+    expect(database.prepare('SELECT COUNT(*) FROM match_events WHERE match_id = ?').pluck().get(before.state.id))
+      .toBe(eventCount + 1);
+
+    competingRepository.reportClue({
+      clueId: racedClueId!,
+      matchId: null,
+      note: 'Retry after coordinator commit',
+      createdAt: 1_050,
+    });
+    expect(contentRepository.isEligible(racedClueId!)).toBe(false);
+    expect(coordinator.getHostView()!.state).toEqual(reported.state);
+    coordinator.dispose();
+    const restart = new GameCoordinator({
+      repository: matchRepository,
+      contentService: service,
       now: () => 2_000,
       setTimeout: () => 1,
       clearTimeout: () => undefined,

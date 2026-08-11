@@ -220,7 +220,7 @@ export class ContentRepository {
   }
 
   runTransaction<T>(action: () => T): T {
-    return this.database.transaction(action)();
+    return this.database.transaction(action).immediate();
   }
 
   private loadPacks(): ContentPackRecord[] {

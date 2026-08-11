@@ -122,37 +122,50 @@ export class GameCoordinator {
 
   async dispatch(input: unknown): Promise<HostGameView> {
     const command = gameCommandSchema.parse(input) as GameCommand;
-    if (this.state === null) throw new Error('MATCH_REQUIRED');
+    const currentState = this.state;
+    if (currentState === null) throw new Error('MATCH_REQUIRED');
     const occurrenceAt = this.now();
 
-    let baseState = structuredClone(this.state);
+    const prepareTransition = (): {
+      baseState: GameState;
+      transition: { state: GameState; events: GameEvent[] };
+    } => {
+      let baseState = structuredClone(currentState);
+      let transition: { state: GameState; events: GameEvent[] };
+      try {
+        transition = applyGameCommand(baseState, command, occurrenceAt);
+      } catch (error) {
+        if (!(error instanceof GameRuleError) || error.code !== 'TIEBREAKER_CLUE_REQUIRED') throw error;
+        baseState = this.appendNextTiebreaker(baseState);
+        transition = applyGameCommand(baseState, command, occurrenceAt);
+      }
+      return { baseState, transition };
+    };
+    const persistTransition = ({ baseState, transition }: ReturnType<typeof prepareTransition>): void => {
+      this.options.repository.persistTransition(
+        baseState.id,
+        transition.events,
+        transition.state,
+        transition.state.phase === 'complete' ? occurrenceAt : undefined,
+      );
+    };
     let transition: { state: GameState; events: GameEvent[] };
-    try {
-      transition = applyGameCommand(baseState, command, occurrenceAt);
-    } catch (error) {
-      if (!(error instanceof GameRuleError) || error.code !== 'TIEBREAKER_CLUE_REQUIRED') throw error;
-      baseState = this.appendNextTiebreaker(baseState);
-      transition = applyGameCommand(baseState, command, occurrenceAt);
-    }
-
-    const persist = () => this.options.repository.persistTransition(
-      baseState.id,
-      transition.events,
-      transition.state,
-      transition.state.phase === 'complete' ? occurrenceAt : undefined,
-    );
     if (command.type === 'ReportClue') {
-      this.options.contentService.runTransaction(() => {
+      transition = this.options.contentService.runTransaction(() => {
+        const prepared = prepareTransition();
         this.options.contentService.reportClue({
           clueId: command.clueId,
-          matchId: baseState.id,
+          matchId: prepared.baseState.id,
           note: command.reason,
           createdAt: occurrenceAt,
         });
-        persist();
+        persistTransition(prepared);
+        return prepared.transition;
       });
     } else {
-      persist();
+      const prepared = prepareTransition();
+      persistTransition(prepared);
+      transition = prepared.transition;
     }
     this.state = transition.state;
     this.revision += 1;
