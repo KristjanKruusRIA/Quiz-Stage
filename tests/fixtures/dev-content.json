@@ -1,0 +1,4380 @@
+{
+  "packs": [
+    {
+      "id": "dev-library",
+      "name": "Quiz Stage Development Library",
+      "version": "1.0.0",
+      "source": "Bundled deterministic development fixture",
+      "enabled": true
+    }
+  ],
+  "categorySets": [
+    {
+      "id": "easy-r1-01",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 1",
+        "et": "Lihtne Esimene voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-01-t1",
+          "categoryId": "easy-r1-01",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 1, clue 1?",
+            "et": "Lihtne esimene voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-1-1",
+            "et": "Lihtne vastus r1-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-1-1.",
+            "et": "Arendusselgitus küsimusele easy r1-1-1."
+          },
+          "source": "Development source: easy/r1/1/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-01-t2",
+          "categoryId": "easy-r1-01",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 1, clue 2?",
+            "et": "Lihtne esimene voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-1-2",
+            "et": "Lihtne vastus r1-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-1-2.",
+            "et": "Arendusselgitus küsimusele easy r1-1-2."
+          },
+          "source": "Development source: easy/r1/1/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-01-t3",
+          "categoryId": "easy-r1-01",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 1, clue 3?",
+            "et": "Lihtne esimene voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-1-3",
+            "et": "Lihtne vastus r1-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-1-3.",
+            "et": "Arendusselgitus küsimusele easy r1-1-3."
+          },
+          "source": "Development source: easy/r1/1/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-01-t4",
+          "categoryId": "easy-r1-01",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 1, clue 4?",
+            "et": "Lihtne esimene voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-1-4",
+            "et": "Lihtne vastus r1-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-1-4.",
+            "et": "Arendusselgitus küsimusele easy r1-1-4."
+          },
+          "source": "Development source: easy/r1/1/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-01-t5",
+          "categoryId": "easy-r1-01",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 1, clue 5?",
+            "et": "Lihtne esimene voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-1-5",
+            "et": "Lihtne vastus r1-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-1-5.",
+            "et": "Arendusselgitus küsimusele easy r1-1-5."
+          },
+          "source": "Development source: easy/r1/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r1-02",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 2",
+        "et": "Lihtne Esimene voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-02-t1",
+          "categoryId": "easy-r1-02",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 2, clue 1?",
+            "et": "Lihtne esimene voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-2-1",
+            "et": "Lihtne vastus r1-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-2-1.",
+            "et": "Arendusselgitus küsimusele easy r1-2-1."
+          },
+          "source": "Development source: easy/r1/2/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-02-t2",
+          "categoryId": "easy-r1-02",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 2, clue 2?",
+            "et": "Lihtne esimene voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-2-2",
+            "et": "Lihtne vastus r1-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-2-2.",
+            "et": "Arendusselgitus küsimusele easy r1-2-2."
+          },
+          "source": "Development source: easy/r1/2/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-02-t3",
+          "categoryId": "easy-r1-02",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 2, clue 3?",
+            "et": "Lihtne esimene voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-2-3",
+            "et": "Lihtne vastus r1-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-2-3.",
+            "et": "Arendusselgitus küsimusele easy r1-2-3."
+          },
+          "source": "Development source: easy/r1/2/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-02-t4",
+          "categoryId": "easy-r1-02",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 2, clue 4?",
+            "et": "Lihtne esimene voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-2-4",
+            "et": "Lihtne vastus r1-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-2-4.",
+            "et": "Arendusselgitus küsimusele easy r1-2-4."
+          },
+          "source": "Development source: easy/r1/2/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-02-t5",
+          "categoryId": "easy-r1-02",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 2, clue 5?",
+            "et": "Lihtne esimene voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-2-5",
+            "et": "Lihtne vastus r1-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-2-5.",
+            "et": "Arendusselgitus küsimusele easy r1-2-5."
+          },
+          "source": "Development source: easy/r1/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r1-03",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 3",
+        "et": "Lihtne Esimene voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-03-t1",
+          "categoryId": "easy-r1-03",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 3, clue 1?",
+            "et": "Lihtne esimene voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-3-1",
+            "et": "Lihtne vastus r1-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-3-1.",
+            "et": "Arendusselgitus küsimusele easy r1-3-1."
+          },
+          "source": "Development source: easy/r1/3/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-03-t2",
+          "categoryId": "easy-r1-03",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 3, clue 2?",
+            "et": "Lihtne esimene voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-3-2",
+            "et": "Lihtne vastus r1-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-3-2.",
+            "et": "Arendusselgitus küsimusele easy r1-3-2."
+          },
+          "source": "Development source: easy/r1/3/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-03-t3",
+          "categoryId": "easy-r1-03",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 3, clue 3?",
+            "et": "Lihtne esimene voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-3-3",
+            "et": "Lihtne vastus r1-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-3-3.",
+            "et": "Arendusselgitus küsimusele easy r1-3-3."
+          },
+          "source": "Development source: easy/r1/3/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-03-t4",
+          "categoryId": "easy-r1-03",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 3, clue 4?",
+            "et": "Lihtne esimene voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-3-4",
+            "et": "Lihtne vastus r1-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-3-4.",
+            "et": "Arendusselgitus küsimusele easy r1-3-4."
+          },
+          "source": "Development source: easy/r1/3/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-03-t5",
+          "categoryId": "easy-r1-03",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 3, clue 5?",
+            "et": "Lihtne esimene voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-3-5",
+            "et": "Lihtne vastus r1-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-3-5.",
+            "et": "Arendusselgitus küsimusele easy r1-3-5."
+          },
+          "source": "Development source: easy/r1/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r1-04",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 4",
+        "et": "Lihtne Esimene voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-04-t1",
+          "categoryId": "easy-r1-04",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 4, clue 1?",
+            "et": "Lihtne esimene voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-4-1",
+            "et": "Lihtne vastus r1-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-4-1.",
+            "et": "Arendusselgitus küsimusele easy r1-4-1."
+          },
+          "source": "Development source: easy/r1/4/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-04-t2",
+          "categoryId": "easy-r1-04",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 4, clue 2?",
+            "et": "Lihtne esimene voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-4-2",
+            "et": "Lihtne vastus r1-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-4-2.",
+            "et": "Arendusselgitus küsimusele easy r1-4-2."
+          },
+          "source": "Development source: easy/r1/4/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-04-t3",
+          "categoryId": "easy-r1-04",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 4, clue 3?",
+            "et": "Lihtne esimene voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-4-3",
+            "et": "Lihtne vastus r1-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-4-3.",
+            "et": "Arendusselgitus küsimusele easy r1-4-3."
+          },
+          "source": "Development source: easy/r1/4/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-04-t4",
+          "categoryId": "easy-r1-04",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 4, clue 4?",
+            "et": "Lihtne esimene voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-4-4",
+            "et": "Lihtne vastus r1-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-4-4.",
+            "et": "Arendusselgitus küsimusele easy r1-4-4."
+          },
+          "source": "Development source: easy/r1/4/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-04-t5",
+          "categoryId": "easy-r1-04",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 4, clue 5?",
+            "et": "Lihtne esimene voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-4-5",
+            "et": "Lihtne vastus r1-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-4-5.",
+            "et": "Arendusselgitus küsimusele easy r1-4-5."
+          },
+          "source": "Development source: easy/r1/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r1-05",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 5",
+        "et": "Lihtne Esimene voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-05-t1",
+          "categoryId": "easy-r1-05",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 5, clue 1?",
+            "et": "Lihtne esimene voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-5-1",
+            "et": "Lihtne vastus r1-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-5-1.",
+            "et": "Arendusselgitus küsimusele easy r1-5-1."
+          },
+          "source": "Development source: easy/r1/5/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-05-t2",
+          "categoryId": "easy-r1-05",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 5, clue 2?",
+            "et": "Lihtne esimene voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-5-2",
+            "et": "Lihtne vastus r1-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-5-2.",
+            "et": "Arendusselgitus küsimusele easy r1-5-2."
+          },
+          "source": "Development source: easy/r1/5/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-05-t3",
+          "categoryId": "easy-r1-05",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 5, clue 3?",
+            "et": "Lihtne esimene voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-5-3",
+            "et": "Lihtne vastus r1-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-5-3.",
+            "et": "Arendusselgitus küsimusele easy r1-5-3."
+          },
+          "source": "Development source: easy/r1/5/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-05-t4",
+          "categoryId": "easy-r1-05",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 5, clue 4?",
+            "et": "Lihtne esimene voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-5-4",
+            "et": "Lihtne vastus r1-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-5-4.",
+            "et": "Arendusselgitus küsimusele easy r1-5-4."
+          },
+          "source": "Development source: easy/r1/5/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-05-t5",
+          "categoryId": "easy-r1-05",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 5, clue 5?",
+            "et": "Lihtne esimene voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-5-5",
+            "et": "Lihtne vastus r1-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-5-5.",
+            "et": "Arendusselgitus küsimusele easy r1-5-5."
+          },
+          "source": "Development source: easy/r1/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r1-06",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round One Category 6",
+        "et": "Lihtne Esimene voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r1-06-t1",
+          "categoryId": "easy-r1-06",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Easy Round One category 6, clue 1?",
+            "et": "Lihtne esimene voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r1-6-1",
+            "et": "Lihtne vastus r1-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-6-1.",
+            "et": "Arendusselgitus küsimusele easy r1-6-1."
+          },
+          "source": "Development source: easy/r1/6/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-06-t2",
+          "categoryId": "easy-r1-06",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round One category 6, clue 2?",
+            "et": "Lihtne esimene voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r1-6-2",
+            "et": "Lihtne vastus r1-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-6-2.",
+            "et": "Arendusselgitus küsimusele easy r1-6-2."
+          },
+          "source": "Development source: easy/r1/6/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-06-t3",
+          "categoryId": "easy-r1-06",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Easy Round One category 6, clue 3?",
+            "et": "Lihtne esimene voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r1-6-3",
+            "et": "Lihtne vastus r1-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-6-3.",
+            "et": "Arendusselgitus küsimusele easy r1-6-3."
+          },
+          "source": "Development source: easy/r1/6/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-06-t4",
+          "categoryId": "easy-r1-06",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round One category 6, clue 4?",
+            "et": "Lihtne esimene voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r1-6-4",
+            "et": "Lihtne vastus r1-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-6-4.",
+            "et": "Arendusselgitus küsimusele easy r1-6-4."
+          },
+          "source": "Development source: easy/r1/6/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r1-06-t5",
+          "categoryId": "easy-r1-06",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Easy Round One category 6, clue 5?",
+            "et": "Lihtne esimene voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r1-6-5",
+            "et": "Lihtne vastus r1-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r1-6-5.",
+            "et": "Arendusselgitus küsimusele easy r1-6-5."
+          },
+          "source": "Development source: easy/r1/6/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-01",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 1",
+        "et": "Lihtne Teine voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-01-t1",
+          "categoryId": "easy-r2-01",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 1, clue 1?",
+            "et": "Lihtne teine voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-1-1",
+            "et": "Lihtne vastus r2-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-1-1.",
+            "et": "Arendusselgitus küsimusele easy r2-1-1."
+          },
+          "source": "Development source: easy/r2/1/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-01-t2",
+          "categoryId": "easy-r2-01",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 1, clue 2?",
+            "et": "Lihtne teine voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-1-2",
+            "et": "Lihtne vastus r2-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-1-2.",
+            "et": "Arendusselgitus küsimusele easy r2-1-2."
+          },
+          "source": "Development source: easy/r2/1/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-01-t3",
+          "categoryId": "easy-r2-01",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 1, clue 3?",
+            "et": "Lihtne teine voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-1-3",
+            "et": "Lihtne vastus r2-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-1-3.",
+            "et": "Arendusselgitus küsimusele easy r2-1-3."
+          },
+          "source": "Development source: easy/r2/1/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-01-t4",
+          "categoryId": "easy-r2-01",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 1, clue 4?",
+            "et": "Lihtne teine voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-1-4",
+            "et": "Lihtne vastus r2-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-1-4.",
+            "et": "Arendusselgitus küsimusele easy r2-1-4."
+          },
+          "source": "Development source: easy/r2/1/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-01-t5",
+          "categoryId": "easy-r2-01",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 1, clue 5?",
+            "et": "Lihtne teine voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-1-5",
+            "et": "Lihtne vastus r2-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-1-5.",
+            "et": "Arendusselgitus küsimusele easy r2-1-5."
+          },
+          "source": "Development source: easy/r2/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-02",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 2",
+        "et": "Lihtne Teine voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-02-t1",
+          "categoryId": "easy-r2-02",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 2, clue 1?",
+            "et": "Lihtne teine voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-2-1",
+            "et": "Lihtne vastus r2-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-2-1.",
+            "et": "Arendusselgitus küsimusele easy r2-2-1."
+          },
+          "source": "Development source: easy/r2/2/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-02-t2",
+          "categoryId": "easy-r2-02",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 2, clue 2?",
+            "et": "Lihtne teine voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-2-2",
+            "et": "Lihtne vastus r2-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-2-2.",
+            "et": "Arendusselgitus küsimusele easy r2-2-2."
+          },
+          "source": "Development source: easy/r2/2/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-02-t3",
+          "categoryId": "easy-r2-02",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 2, clue 3?",
+            "et": "Lihtne teine voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-2-3",
+            "et": "Lihtne vastus r2-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-2-3.",
+            "et": "Arendusselgitus küsimusele easy r2-2-3."
+          },
+          "source": "Development source: easy/r2/2/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-02-t4",
+          "categoryId": "easy-r2-02",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 2, clue 4?",
+            "et": "Lihtne teine voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-2-4",
+            "et": "Lihtne vastus r2-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-2-4.",
+            "et": "Arendusselgitus küsimusele easy r2-2-4."
+          },
+          "source": "Development source: easy/r2/2/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-02-t5",
+          "categoryId": "easy-r2-02",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 2, clue 5?",
+            "et": "Lihtne teine voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-2-5",
+            "et": "Lihtne vastus r2-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-2-5.",
+            "et": "Arendusselgitus küsimusele easy r2-2-5."
+          },
+          "source": "Development source: easy/r2/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-03",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 3",
+        "et": "Lihtne Teine voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-03-t1",
+          "categoryId": "easy-r2-03",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 3, clue 1?",
+            "et": "Lihtne teine voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-3-1",
+            "et": "Lihtne vastus r2-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-3-1.",
+            "et": "Arendusselgitus küsimusele easy r2-3-1."
+          },
+          "source": "Development source: easy/r2/3/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-03-t2",
+          "categoryId": "easy-r2-03",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 3, clue 2?",
+            "et": "Lihtne teine voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-3-2",
+            "et": "Lihtne vastus r2-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-3-2.",
+            "et": "Arendusselgitus küsimusele easy r2-3-2."
+          },
+          "source": "Development source: easy/r2/3/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-03-t3",
+          "categoryId": "easy-r2-03",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 3, clue 3?",
+            "et": "Lihtne teine voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-3-3",
+            "et": "Lihtne vastus r2-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-3-3.",
+            "et": "Arendusselgitus küsimusele easy r2-3-3."
+          },
+          "source": "Development source: easy/r2/3/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-03-t4",
+          "categoryId": "easy-r2-03",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 3, clue 4?",
+            "et": "Lihtne teine voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-3-4",
+            "et": "Lihtne vastus r2-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-3-4.",
+            "et": "Arendusselgitus küsimusele easy r2-3-4."
+          },
+          "source": "Development source: easy/r2/3/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-03-t5",
+          "categoryId": "easy-r2-03",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 3, clue 5?",
+            "et": "Lihtne teine voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-3-5",
+            "et": "Lihtne vastus r2-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-3-5.",
+            "et": "Arendusselgitus küsimusele easy r2-3-5."
+          },
+          "source": "Development source: easy/r2/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-04",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 4",
+        "et": "Lihtne Teine voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-04-t1",
+          "categoryId": "easy-r2-04",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 4, clue 1?",
+            "et": "Lihtne teine voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-4-1",
+            "et": "Lihtne vastus r2-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-4-1.",
+            "et": "Arendusselgitus küsimusele easy r2-4-1."
+          },
+          "source": "Development source: easy/r2/4/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-04-t2",
+          "categoryId": "easy-r2-04",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 4, clue 2?",
+            "et": "Lihtne teine voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-4-2",
+            "et": "Lihtne vastus r2-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-4-2.",
+            "et": "Arendusselgitus küsimusele easy r2-4-2."
+          },
+          "source": "Development source: easy/r2/4/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-04-t3",
+          "categoryId": "easy-r2-04",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 4, clue 3?",
+            "et": "Lihtne teine voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-4-3",
+            "et": "Lihtne vastus r2-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-4-3.",
+            "et": "Arendusselgitus küsimusele easy r2-4-3."
+          },
+          "source": "Development source: easy/r2/4/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-04-t4",
+          "categoryId": "easy-r2-04",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 4, clue 4?",
+            "et": "Lihtne teine voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-4-4",
+            "et": "Lihtne vastus r2-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-4-4.",
+            "et": "Arendusselgitus küsimusele easy r2-4-4."
+          },
+          "source": "Development source: easy/r2/4/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-04-t5",
+          "categoryId": "easy-r2-04",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 4, clue 5?",
+            "et": "Lihtne teine voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-4-5",
+            "et": "Lihtne vastus r2-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-4-5.",
+            "et": "Arendusselgitus küsimusele easy r2-4-5."
+          },
+          "source": "Development source: easy/r2/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-05",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 5",
+        "et": "Lihtne Teine voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-05-t1",
+          "categoryId": "easy-r2-05",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 5, clue 1?",
+            "et": "Lihtne teine voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-5-1",
+            "et": "Lihtne vastus r2-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-5-1.",
+            "et": "Arendusselgitus küsimusele easy r2-5-1."
+          },
+          "source": "Development source: easy/r2/5/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-05-t2",
+          "categoryId": "easy-r2-05",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 5, clue 2?",
+            "et": "Lihtne teine voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-5-2",
+            "et": "Lihtne vastus r2-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-5-2.",
+            "et": "Arendusselgitus küsimusele easy r2-5-2."
+          },
+          "source": "Development source: easy/r2/5/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-05-t3",
+          "categoryId": "easy-r2-05",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 5, clue 3?",
+            "et": "Lihtne teine voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-5-3",
+            "et": "Lihtne vastus r2-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-5-3.",
+            "et": "Arendusselgitus küsimusele easy r2-5-3."
+          },
+          "source": "Development source: easy/r2/5/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-05-t4",
+          "categoryId": "easy-r2-05",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 5, clue 4?",
+            "et": "Lihtne teine voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-5-4",
+            "et": "Lihtne vastus r2-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-5-4.",
+            "et": "Arendusselgitus küsimusele easy r2-5-4."
+          },
+          "source": "Development source: easy/r2/5/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-05-t5",
+          "categoryId": "easy-r2-05",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 5, clue 5?",
+            "et": "Lihtne teine voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-5-5",
+            "et": "Lihtne vastus r2-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-5-5.",
+            "et": "Arendusselgitus küsimusele easy r2-5-5."
+          },
+          "source": "Development source: easy/r2/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "easy-r2-06",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "easy",
+      "name": {
+        "en": "Easy Round Two Category 6",
+        "et": "Lihtne Teine voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "easy-r2-06-t1",
+          "categoryId": "easy-r2-06",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Easy Round Two category 6, clue 1?",
+            "et": "Lihtne teine voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Easy answer r2-6-1",
+            "et": "Lihtne vastus r2-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-6-1.",
+            "et": "Arendusselgitus küsimusele easy r2-6-1."
+          },
+          "source": "Development source: easy/r2/6/1",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-06-t2",
+          "categoryId": "easy-r2-06",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Easy Round Two category 6, clue 2?",
+            "et": "Lihtne teine voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Easy answer r2-6-2",
+            "et": "Lihtne vastus r2-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-6-2.",
+            "et": "Arendusselgitus küsimusele easy r2-6-2."
+          },
+          "source": "Development source: easy/r2/6/2",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-06-t3",
+          "categoryId": "easy-r2-06",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Easy Round Two category 6, clue 3?",
+            "et": "Lihtne teine voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Easy answer r2-6-3",
+            "et": "Lihtne vastus r2-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-6-3.",
+            "et": "Arendusselgitus küsimusele easy r2-6-3."
+          },
+          "source": "Development source: easy/r2/6/3",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-06-t4",
+          "categoryId": "easy-r2-06",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Easy Round Two category 6, clue 4?",
+            "et": "Lihtne teine voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Easy answer r2-6-4",
+            "et": "Lihtne vastus r2-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-6-4.",
+            "et": "Arendusselgitus küsimusele easy r2-6-4."
+          },
+          "source": "Development source: easy/r2/6/4",
+          "enabled": true
+        },
+        {
+          "id": "easy-r2-06-t5",
+          "categoryId": "easy-r2-06",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Easy Round Two category 6, clue 5?",
+            "et": "Lihtne teine voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Easy answer r2-6-5",
+            "et": "Lihtne vastus r2-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for easy r2-6-5.",
+            "et": "Arendusselgitus küsimusele easy r2-6-5."
+          },
+          "source": "Development source: easy/r2/6/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-01",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 1",
+        "et": "Keskmine Esimene voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-01-t1",
+          "categoryId": "medium-r1-01",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 1, clue 1?",
+            "et": "Keskmine esimene voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-1-1",
+            "et": "Keskmine vastus r1-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-1-1.",
+            "et": "Arendusselgitus küsimusele medium r1-1-1."
+          },
+          "source": "Development source: medium/r1/1/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-01-t2",
+          "categoryId": "medium-r1-01",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 1, clue 2?",
+            "et": "Keskmine esimene voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-1-2",
+            "et": "Keskmine vastus r1-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-1-2.",
+            "et": "Arendusselgitus küsimusele medium r1-1-2."
+          },
+          "source": "Development source: medium/r1/1/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-01-t3",
+          "categoryId": "medium-r1-01",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 1, clue 3?",
+            "et": "Keskmine esimene voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-1-3",
+            "et": "Keskmine vastus r1-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-1-3.",
+            "et": "Arendusselgitus küsimusele medium r1-1-3."
+          },
+          "source": "Development source: medium/r1/1/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-01-t4",
+          "categoryId": "medium-r1-01",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 1, clue 4?",
+            "et": "Keskmine esimene voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-1-4",
+            "et": "Keskmine vastus r1-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-1-4.",
+            "et": "Arendusselgitus küsimusele medium r1-1-4."
+          },
+          "source": "Development source: medium/r1/1/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-01-t5",
+          "categoryId": "medium-r1-01",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 1, clue 5?",
+            "et": "Keskmine esimene voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-1-5",
+            "et": "Keskmine vastus r1-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-1-5.",
+            "et": "Arendusselgitus küsimusele medium r1-1-5."
+          },
+          "source": "Development source: medium/r1/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-02",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 2",
+        "et": "Keskmine Esimene voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-02-t1",
+          "categoryId": "medium-r1-02",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 2, clue 1?",
+            "et": "Keskmine esimene voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-2-1",
+            "et": "Keskmine vastus r1-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-2-1.",
+            "et": "Arendusselgitus küsimusele medium r1-2-1."
+          },
+          "source": "Development source: medium/r1/2/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-02-t2",
+          "categoryId": "medium-r1-02",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 2, clue 2?",
+            "et": "Keskmine esimene voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-2-2",
+            "et": "Keskmine vastus r1-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-2-2.",
+            "et": "Arendusselgitus küsimusele medium r1-2-2."
+          },
+          "source": "Development source: medium/r1/2/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-02-t3",
+          "categoryId": "medium-r1-02",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 2, clue 3?",
+            "et": "Keskmine esimene voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-2-3",
+            "et": "Keskmine vastus r1-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-2-3.",
+            "et": "Arendusselgitus küsimusele medium r1-2-3."
+          },
+          "source": "Development source: medium/r1/2/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-02-t4",
+          "categoryId": "medium-r1-02",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 2, clue 4?",
+            "et": "Keskmine esimene voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-2-4",
+            "et": "Keskmine vastus r1-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-2-4.",
+            "et": "Arendusselgitus küsimusele medium r1-2-4."
+          },
+          "source": "Development source: medium/r1/2/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-02-t5",
+          "categoryId": "medium-r1-02",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 2, clue 5?",
+            "et": "Keskmine esimene voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-2-5",
+            "et": "Keskmine vastus r1-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-2-5.",
+            "et": "Arendusselgitus küsimusele medium r1-2-5."
+          },
+          "source": "Development source: medium/r1/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-03",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 3",
+        "et": "Keskmine Esimene voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-03-t1",
+          "categoryId": "medium-r1-03",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 3, clue 1?",
+            "et": "Keskmine esimene voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-3-1",
+            "et": "Keskmine vastus r1-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-3-1.",
+            "et": "Arendusselgitus küsimusele medium r1-3-1."
+          },
+          "source": "Development source: medium/r1/3/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-03-t2",
+          "categoryId": "medium-r1-03",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 3, clue 2?",
+            "et": "Keskmine esimene voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-3-2",
+            "et": "Keskmine vastus r1-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-3-2.",
+            "et": "Arendusselgitus küsimusele medium r1-3-2."
+          },
+          "source": "Development source: medium/r1/3/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-03-t3",
+          "categoryId": "medium-r1-03",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 3, clue 3?",
+            "et": "Keskmine esimene voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-3-3",
+            "et": "Keskmine vastus r1-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-3-3.",
+            "et": "Arendusselgitus küsimusele medium r1-3-3."
+          },
+          "source": "Development source: medium/r1/3/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-03-t4",
+          "categoryId": "medium-r1-03",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 3, clue 4?",
+            "et": "Keskmine esimene voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-3-4",
+            "et": "Keskmine vastus r1-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-3-4.",
+            "et": "Arendusselgitus küsimusele medium r1-3-4."
+          },
+          "source": "Development source: medium/r1/3/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-03-t5",
+          "categoryId": "medium-r1-03",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 3, clue 5?",
+            "et": "Keskmine esimene voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-3-5",
+            "et": "Keskmine vastus r1-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-3-5.",
+            "et": "Arendusselgitus küsimusele medium r1-3-5."
+          },
+          "source": "Development source: medium/r1/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-04",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 4",
+        "et": "Keskmine Esimene voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-04-t1",
+          "categoryId": "medium-r1-04",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 4, clue 1?",
+            "et": "Keskmine esimene voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-4-1",
+            "et": "Keskmine vastus r1-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-4-1.",
+            "et": "Arendusselgitus küsimusele medium r1-4-1."
+          },
+          "source": "Development source: medium/r1/4/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-04-t2",
+          "categoryId": "medium-r1-04",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 4, clue 2?",
+            "et": "Keskmine esimene voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-4-2",
+            "et": "Keskmine vastus r1-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-4-2.",
+            "et": "Arendusselgitus küsimusele medium r1-4-2."
+          },
+          "source": "Development source: medium/r1/4/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-04-t3",
+          "categoryId": "medium-r1-04",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 4, clue 3?",
+            "et": "Keskmine esimene voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-4-3",
+            "et": "Keskmine vastus r1-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-4-3.",
+            "et": "Arendusselgitus küsimusele medium r1-4-3."
+          },
+          "source": "Development source: medium/r1/4/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-04-t4",
+          "categoryId": "medium-r1-04",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 4, clue 4?",
+            "et": "Keskmine esimene voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-4-4",
+            "et": "Keskmine vastus r1-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-4-4.",
+            "et": "Arendusselgitus küsimusele medium r1-4-4."
+          },
+          "source": "Development source: medium/r1/4/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-04-t5",
+          "categoryId": "medium-r1-04",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 4, clue 5?",
+            "et": "Keskmine esimene voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-4-5",
+            "et": "Keskmine vastus r1-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-4-5.",
+            "et": "Arendusselgitus küsimusele medium r1-4-5."
+          },
+          "source": "Development source: medium/r1/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-05",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 5",
+        "et": "Keskmine Esimene voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-05-t1",
+          "categoryId": "medium-r1-05",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 5, clue 1?",
+            "et": "Keskmine esimene voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-5-1",
+            "et": "Keskmine vastus r1-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-5-1.",
+            "et": "Arendusselgitus küsimusele medium r1-5-1."
+          },
+          "source": "Development source: medium/r1/5/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-05-t2",
+          "categoryId": "medium-r1-05",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 5, clue 2?",
+            "et": "Keskmine esimene voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-5-2",
+            "et": "Keskmine vastus r1-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-5-2.",
+            "et": "Arendusselgitus küsimusele medium r1-5-2."
+          },
+          "source": "Development source: medium/r1/5/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-05-t3",
+          "categoryId": "medium-r1-05",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 5, clue 3?",
+            "et": "Keskmine esimene voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-5-3",
+            "et": "Keskmine vastus r1-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-5-3.",
+            "et": "Arendusselgitus küsimusele medium r1-5-3."
+          },
+          "source": "Development source: medium/r1/5/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-05-t4",
+          "categoryId": "medium-r1-05",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 5, clue 4?",
+            "et": "Keskmine esimene voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-5-4",
+            "et": "Keskmine vastus r1-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-5-4.",
+            "et": "Arendusselgitus küsimusele medium r1-5-4."
+          },
+          "source": "Development source: medium/r1/5/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-05-t5",
+          "categoryId": "medium-r1-05",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 5, clue 5?",
+            "et": "Keskmine esimene voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-5-5",
+            "et": "Keskmine vastus r1-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-5-5.",
+            "et": "Arendusselgitus küsimusele medium r1-5-5."
+          },
+          "source": "Development source: medium/r1/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r1-06",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round One Category 6",
+        "et": "Keskmine Esimene voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r1-06-t1",
+          "categoryId": "medium-r1-06",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Medium Round One category 6, clue 1?",
+            "et": "Keskmine esimene voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r1-6-1",
+            "et": "Keskmine vastus r1-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-6-1.",
+            "et": "Arendusselgitus küsimusele medium r1-6-1."
+          },
+          "source": "Development source: medium/r1/6/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-06-t2",
+          "categoryId": "medium-r1-06",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round One category 6, clue 2?",
+            "et": "Keskmine esimene voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r1-6-2",
+            "et": "Keskmine vastus r1-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-6-2.",
+            "et": "Arendusselgitus küsimusele medium r1-6-2."
+          },
+          "source": "Development source: medium/r1/6/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-06-t3",
+          "categoryId": "medium-r1-06",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Medium Round One category 6, clue 3?",
+            "et": "Keskmine esimene voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r1-6-3",
+            "et": "Keskmine vastus r1-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-6-3.",
+            "et": "Arendusselgitus küsimusele medium r1-6-3."
+          },
+          "source": "Development source: medium/r1/6/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-06-t4",
+          "categoryId": "medium-r1-06",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round One category 6, clue 4?",
+            "et": "Keskmine esimene voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r1-6-4",
+            "et": "Keskmine vastus r1-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-6-4.",
+            "et": "Arendusselgitus küsimusele medium r1-6-4."
+          },
+          "source": "Development source: medium/r1/6/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r1-06-t5",
+          "categoryId": "medium-r1-06",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Medium Round One category 6, clue 5?",
+            "et": "Keskmine esimene voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r1-6-5",
+            "et": "Keskmine vastus r1-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r1-6-5.",
+            "et": "Arendusselgitus küsimusele medium r1-6-5."
+          },
+          "source": "Development source: medium/r1/6/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-01",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 1",
+        "et": "Keskmine Teine voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-01-t1",
+          "categoryId": "medium-r2-01",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 1, clue 1?",
+            "et": "Keskmine teine voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-1-1",
+            "et": "Keskmine vastus r2-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-1-1.",
+            "et": "Arendusselgitus küsimusele medium r2-1-1."
+          },
+          "source": "Development source: medium/r2/1/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-01-t2",
+          "categoryId": "medium-r2-01",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 1, clue 2?",
+            "et": "Keskmine teine voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-1-2",
+            "et": "Keskmine vastus r2-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-1-2.",
+            "et": "Arendusselgitus küsimusele medium r2-1-2."
+          },
+          "source": "Development source: medium/r2/1/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-01-t3",
+          "categoryId": "medium-r2-01",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 1, clue 3?",
+            "et": "Keskmine teine voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-1-3",
+            "et": "Keskmine vastus r2-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-1-3.",
+            "et": "Arendusselgitus küsimusele medium r2-1-3."
+          },
+          "source": "Development source: medium/r2/1/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-01-t4",
+          "categoryId": "medium-r2-01",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 1, clue 4?",
+            "et": "Keskmine teine voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-1-4",
+            "et": "Keskmine vastus r2-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-1-4.",
+            "et": "Arendusselgitus küsimusele medium r2-1-4."
+          },
+          "source": "Development source: medium/r2/1/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-01-t5",
+          "categoryId": "medium-r2-01",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 1, clue 5?",
+            "et": "Keskmine teine voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-1-5",
+            "et": "Keskmine vastus r2-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-1-5.",
+            "et": "Arendusselgitus küsimusele medium r2-1-5."
+          },
+          "source": "Development source: medium/r2/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-02",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 2",
+        "et": "Keskmine Teine voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-02-t1",
+          "categoryId": "medium-r2-02",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 2, clue 1?",
+            "et": "Keskmine teine voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-2-1",
+            "et": "Keskmine vastus r2-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-2-1.",
+            "et": "Arendusselgitus küsimusele medium r2-2-1."
+          },
+          "source": "Development source: medium/r2/2/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-02-t2",
+          "categoryId": "medium-r2-02",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 2, clue 2?",
+            "et": "Keskmine teine voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-2-2",
+            "et": "Keskmine vastus r2-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-2-2.",
+            "et": "Arendusselgitus küsimusele medium r2-2-2."
+          },
+          "source": "Development source: medium/r2/2/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-02-t3",
+          "categoryId": "medium-r2-02",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 2, clue 3?",
+            "et": "Keskmine teine voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-2-3",
+            "et": "Keskmine vastus r2-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-2-3.",
+            "et": "Arendusselgitus küsimusele medium r2-2-3."
+          },
+          "source": "Development source: medium/r2/2/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-02-t4",
+          "categoryId": "medium-r2-02",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 2, clue 4?",
+            "et": "Keskmine teine voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-2-4",
+            "et": "Keskmine vastus r2-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-2-4.",
+            "et": "Arendusselgitus küsimusele medium r2-2-4."
+          },
+          "source": "Development source: medium/r2/2/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-02-t5",
+          "categoryId": "medium-r2-02",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 2, clue 5?",
+            "et": "Keskmine teine voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-2-5",
+            "et": "Keskmine vastus r2-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-2-5.",
+            "et": "Arendusselgitus küsimusele medium r2-2-5."
+          },
+          "source": "Development source: medium/r2/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-03",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 3",
+        "et": "Keskmine Teine voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-03-t1",
+          "categoryId": "medium-r2-03",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 3, clue 1?",
+            "et": "Keskmine teine voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-3-1",
+            "et": "Keskmine vastus r2-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-3-1.",
+            "et": "Arendusselgitus küsimusele medium r2-3-1."
+          },
+          "source": "Development source: medium/r2/3/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-03-t2",
+          "categoryId": "medium-r2-03",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 3, clue 2?",
+            "et": "Keskmine teine voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-3-2",
+            "et": "Keskmine vastus r2-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-3-2.",
+            "et": "Arendusselgitus küsimusele medium r2-3-2."
+          },
+          "source": "Development source: medium/r2/3/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-03-t3",
+          "categoryId": "medium-r2-03",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 3, clue 3?",
+            "et": "Keskmine teine voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-3-3",
+            "et": "Keskmine vastus r2-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-3-3.",
+            "et": "Arendusselgitus küsimusele medium r2-3-3."
+          },
+          "source": "Development source: medium/r2/3/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-03-t4",
+          "categoryId": "medium-r2-03",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 3, clue 4?",
+            "et": "Keskmine teine voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-3-4",
+            "et": "Keskmine vastus r2-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-3-4.",
+            "et": "Arendusselgitus küsimusele medium r2-3-4."
+          },
+          "source": "Development source: medium/r2/3/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-03-t5",
+          "categoryId": "medium-r2-03",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 3, clue 5?",
+            "et": "Keskmine teine voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-3-5",
+            "et": "Keskmine vastus r2-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-3-5.",
+            "et": "Arendusselgitus küsimusele medium r2-3-5."
+          },
+          "source": "Development source: medium/r2/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-04",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 4",
+        "et": "Keskmine Teine voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-04-t1",
+          "categoryId": "medium-r2-04",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 4, clue 1?",
+            "et": "Keskmine teine voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-4-1",
+            "et": "Keskmine vastus r2-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-4-1.",
+            "et": "Arendusselgitus küsimusele medium r2-4-1."
+          },
+          "source": "Development source: medium/r2/4/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-04-t2",
+          "categoryId": "medium-r2-04",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 4, clue 2?",
+            "et": "Keskmine teine voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-4-2",
+            "et": "Keskmine vastus r2-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-4-2.",
+            "et": "Arendusselgitus küsimusele medium r2-4-2."
+          },
+          "source": "Development source: medium/r2/4/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-04-t3",
+          "categoryId": "medium-r2-04",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 4, clue 3?",
+            "et": "Keskmine teine voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-4-3",
+            "et": "Keskmine vastus r2-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-4-3.",
+            "et": "Arendusselgitus küsimusele medium r2-4-3."
+          },
+          "source": "Development source: medium/r2/4/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-04-t4",
+          "categoryId": "medium-r2-04",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 4, clue 4?",
+            "et": "Keskmine teine voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-4-4",
+            "et": "Keskmine vastus r2-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-4-4.",
+            "et": "Arendusselgitus küsimusele medium r2-4-4."
+          },
+          "source": "Development source: medium/r2/4/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-04-t5",
+          "categoryId": "medium-r2-04",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 4, clue 5?",
+            "et": "Keskmine teine voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-4-5",
+            "et": "Keskmine vastus r2-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-4-5.",
+            "et": "Arendusselgitus küsimusele medium r2-4-5."
+          },
+          "source": "Development source: medium/r2/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-05",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 5",
+        "et": "Keskmine Teine voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-05-t1",
+          "categoryId": "medium-r2-05",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 5, clue 1?",
+            "et": "Keskmine teine voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-5-1",
+            "et": "Keskmine vastus r2-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-5-1.",
+            "et": "Arendusselgitus küsimusele medium r2-5-1."
+          },
+          "source": "Development source: medium/r2/5/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-05-t2",
+          "categoryId": "medium-r2-05",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 5, clue 2?",
+            "et": "Keskmine teine voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-5-2",
+            "et": "Keskmine vastus r2-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-5-2.",
+            "et": "Arendusselgitus küsimusele medium r2-5-2."
+          },
+          "source": "Development source: medium/r2/5/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-05-t3",
+          "categoryId": "medium-r2-05",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 5, clue 3?",
+            "et": "Keskmine teine voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-5-3",
+            "et": "Keskmine vastus r2-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-5-3.",
+            "et": "Arendusselgitus küsimusele medium r2-5-3."
+          },
+          "source": "Development source: medium/r2/5/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-05-t4",
+          "categoryId": "medium-r2-05",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 5, clue 4?",
+            "et": "Keskmine teine voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-5-4",
+            "et": "Keskmine vastus r2-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-5-4.",
+            "et": "Arendusselgitus küsimusele medium r2-5-4."
+          },
+          "source": "Development source: medium/r2/5/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-05-t5",
+          "categoryId": "medium-r2-05",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 5, clue 5?",
+            "et": "Keskmine teine voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-5-5",
+            "et": "Keskmine vastus r2-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-5-5.",
+            "et": "Arendusselgitus küsimusele medium r2-5-5."
+          },
+          "source": "Development source: medium/r2/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "medium-r2-06",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "medium",
+      "name": {
+        "en": "Medium Round Two Category 6",
+        "et": "Keskmine Teine voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "medium-r2-06-t1",
+          "categoryId": "medium-r2-06",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Medium Round Two category 6, clue 1?",
+            "et": "Keskmine teine voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Medium answer r2-6-1",
+            "et": "Keskmine vastus r2-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-6-1.",
+            "et": "Arendusselgitus küsimusele medium r2-6-1."
+          },
+          "source": "Development source: medium/r2/6/1",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-06-t2",
+          "categoryId": "medium-r2-06",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Medium Round Two category 6, clue 2?",
+            "et": "Keskmine teine voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Medium answer r2-6-2",
+            "et": "Keskmine vastus r2-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-6-2.",
+            "et": "Arendusselgitus küsimusele medium r2-6-2."
+          },
+          "source": "Development source: medium/r2/6/2",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-06-t3",
+          "categoryId": "medium-r2-06",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Medium Round Two category 6, clue 3?",
+            "et": "Keskmine teine voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Medium answer r2-6-3",
+            "et": "Keskmine vastus r2-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-6-3.",
+            "et": "Arendusselgitus küsimusele medium r2-6-3."
+          },
+          "source": "Development source: medium/r2/6/3",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-06-t4",
+          "categoryId": "medium-r2-06",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Medium Round Two category 6, clue 4?",
+            "et": "Keskmine teine voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Medium answer r2-6-4",
+            "et": "Keskmine vastus r2-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-6-4.",
+            "et": "Arendusselgitus küsimusele medium r2-6-4."
+          },
+          "source": "Development source: medium/r2/6/4",
+          "enabled": true
+        },
+        {
+          "id": "medium-r2-06-t5",
+          "categoryId": "medium-r2-06",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Medium Round Two category 6, clue 5?",
+            "et": "Keskmine teine voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Medium answer r2-6-5",
+            "et": "Keskmine vastus r2-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for medium r2-6-5.",
+            "et": "Arendusselgitus küsimusele medium r2-6-5."
+          },
+          "source": "Development source: medium/r2/6/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-01",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 1",
+        "et": "Raske Esimene voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-01-t1",
+          "categoryId": "hard-r1-01",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 1, clue 1?",
+            "et": "Raske esimene voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-1-1",
+            "et": "Raske vastus r1-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-1-1.",
+            "et": "Arendusselgitus küsimusele hard r1-1-1."
+          },
+          "source": "Development source: hard/r1/1/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-01-t2",
+          "categoryId": "hard-r1-01",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 1, clue 2?",
+            "et": "Raske esimene voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-1-2",
+            "et": "Raske vastus r1-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-1-2.",
+            "et": "Arendusselgitus küsimusele hard r1-1-2."
+          },
+          "source": "Development source: hard/r1/1/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-01-t3",
+          "categoryId": "hard-r1-01",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 1, clue 3?",
+            "et": "Raske esimene voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-1-3",
+            "et": "Raske vastus r1-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-1-3.",
+            "et": "Arendusselgitus küsimusele hard r1-1-3."
+          },
+          "source": "Development source: hard/r1/1/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-01-t4",
+          "categoryId": "hard-r1-01",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 1, clue 4?",
+            "et": "Raske esimene voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-1-4",
+            "et": "Raske vastus r1-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-1-4.",
+            "et": "Arendusselgitus küsimusele hard r1-1-4."
+          },
+          "source": "Development source: hard/r1/1/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-01-t5",
+          "categoryId": "hard-r1-01",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 1, clue 5?",
+            "et": "Raske esimene voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-1-5",
+            "et": "Raske vastus r1-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-1-5.",
+            "et": "Arendusselgitus küsimusele hard r1-1-5."
+          },
+          "source": "Development source: hard/r1/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-02",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 2",
+        "et": "Raske Esimene voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-02-t1",
+          "categoryId": "hard-r1-02",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 2, clue 1?",
+            "et": "Raske esimene voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-2-1",
+            "et": "Raske vastus r1-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-2-1.",
+            "et": "Arendusselgitus küsimusele hard r1-2-1."
+          },
+          "source": "Development source: hard/r1/2/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-02-t2",
+          "categoryId": "hard-r1-02",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 2, clue 2?",
+            "et": "Raske esimene voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-2-2",
+            "et": "Raske vastus r1-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-2-2.",
+            "et": "Arendusselgitus küsimusele hard r1-2-2."
+          },
+          "source": "Development source: hard/r1/2/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-02-t3",
+          "categoryId": "hard-r1-02",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 2, clue 3?",
+            "et": "Raske esimene voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-2-3",
+            "et": "Raske vastus r1-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-2-3.",
+            "et": "Arendusselgitus küsimusele hard r1-2-3."
+          },
+          "source": "Development source: hard/r1/2/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-02-t4",
+          "categoryId": "hard-r1-02",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 2, clue 4?",
+            "et": "Raske esimene voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-2-4",
+            "et": "Raske vastus r1-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-2-4.",
+            "et": "Arendusselgitus küsimusele hard r1-2-4."
+          },
+          "source": "Development source: hard/r1/2/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-02-t5",
+          "categoryId": "hard-r1-02",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 2, clue 5?",
+            "et": "Raske esimene voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-2-5",
+            "et": "Raske vastus r1-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-2-5.",
+            "et": "Arendusselgitus küsimusele hard r1-2-5."
+          },
+          "source": "Development source: hard/r1/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-03",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 3",
+        "et": "Raske Esimene voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-03-t1",
+          "categoryId": "hard-r1-03",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 3, clue 1?",
+            "et": "Raske esimene voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-3-1",
+            "et": "Raske vastus r1-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-3-1.",
+            "et": "Arendusselgitus küsimusele hard r1-3-1."
+          },
+          "source": "Development source: hard/r1/3/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-03-t2",
+          "categoryId": "hard-r1-03",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 3, clue 2?",
+            "et": "Raske esimene voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-3-2",
+            "et": "Raske vastus r1-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-3-2.",
+            "et": "Arendusselgitus küsimusele hard r1-3-2."
+          },
+          "source": "Development source: hard/r1/3/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-03-t3",
+          "categoryId": "hard-r1-03",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 3, clue 3?",
+            "et": "Raske esimene voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-3-3",
+            "et": "Raske vastus r1-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-3-3.",
+            "et": "Arendusselgitus küsimusele hard r1-3-3."
+          },
+          "source": "Development source: hard/r1/3/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-03-t4",
+          "categoryId": "hard-r1-03",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 3, clue 4?",
+            "et": "Raske esimene voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-3-4",
+            "et": "Raske vastus r1-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-3-4.",
+            "et": "Arendusselgitus küsimusele hard r1-3-4."
+          },
+          "source": "Development source: hard/r1/3/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-03-t5",
+          "categoryId": "hard-r1-03",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 3, clue 5?",
+            "et": "Raske esimene voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-3-5",
+            "et": "Raske vastus r1-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-3-5.",
+            "et": "Arendusselgitus küsimusele hard r1-3-5."
+          },
+          "source": "Development source: hard/r1/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-04",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 4",
+        "et": "Raske Esimene voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-04-t1",
+          "categoryId": "hard-r1-04",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 4, clue 1?",
+            "et": "Raske esimene voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-4-1",
+            "et": "Raske vastus r1-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-4-1.",
+            "et": "Arendusselgitus küsimusele hard r1-4-1."
+          },
+          "source": "Development source: hard/r1/4/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-04-t2",
+          "categoryId": "hard-r1-04",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 4, clue 2?",
+            "et": "Raske esimene voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-4-2",
+            "et": "Raske vastus r1-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-4-2.",
+            "et": "Arendusselgitus küsimusele hard r1-4-2."
+          },
+          "source": "Development source: hard/r1/4/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-04-t3",
+          "categoryId": "hard-r1-04",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 4, clue 3?",
+            "et": "Raske esimene voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-4-3",
+            "et": "Raske vastus r1-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-4-3.",
+            "et": "Arendusselgitus küsimusele hard r1-4-3."
+          },
+          "source": "Development source: hard/r1/4/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-04-t4",
+          "categoryId": "hard-r1-04",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 4, clue 4?",
+            "et": "Raske esimene voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-4-4",
+            "et": "Raske vastus r1-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-4-4.",
+            "et": "Arendusselgitus küsimusele hard r1-4-4."
+          },
+          "source": "Development source: hard/r1/4/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-04-t5",
+          "categoryId": "hard-r1-04",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 4, clue 5?",
+            "et": "Raske esimene voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-4-5",
+            "et": "Raske vastus r1-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-4-5.",
+            "et": "Arendusselgitus küsimusele hard r1-4-5."
+          },
+          "source": "Development source: hard/r1/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-05",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 5",
+        "et": "Raske Esimene voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-05-t1",
+          "categoryId": "hard-r1-05",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 5, clue 1?",
+            "et": "Raske esimene voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-5-1",
+            "et": "Raske vastus r1-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-5-1.",
+            "et": "Arendusselgitus küsimusele hard r1-5-1."
+          },
+          "source": "Development source: hard/r1/5/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-05-t2",
+          "categoryId": "hard-r1-05",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 5, clue 2?",
+            "et": "Raske esimene voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-5-2",
+            "et": "Raske vastus r1-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-5-2.",
+            "et": "Arendusselgitus küsimusele hard r1-5-2."
+          },
+          "source": "Development source: hard/r1/5/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-05-t3",
+          "categoryId": "hard-r1-05",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 5, clue 3?",
+            "et": "Raske esimene voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-5-3",
+            "et": "Raske vastus r1-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-5-3.",
+            "et": "Arendusselgitus küsimusele hard r1-5-3."
+          },
+          "source": "Development source: hard/r1/5/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-05-t4",
+          "categoryId": "hard-r1-05",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 5, clue 4?",
+            "et": "Raske esimene voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-5-4",
+            "et": "Raske vastus r1-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-5-4.",
+            "et": "Arendusselgitus küsimusele hard r1-5-4."
+          },
+          "source": "Development source: hard/r1/5/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-05-t5",
+          "categoryId": "hard-r1-05",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 5, clue 5?",
+            "et": "Raske esimene voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-5-5",
+            "et": "Raske vastus r1-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-5-5.",
+            "et": "Arendusselgitus küsimusele hard r1-5-5."
+          },
+          "source": "Development source: hard/r1/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r1-06",
+      "packId": "dev-library",
+      "round": "round-one",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round One Category 6",
+        "et": "Raske Esimene voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r1-06-t1",
+          "categoryId": "hard-r1-06",
+          "round": "round-one",
+          "tier": 1,
+          "value": 200,
+          "prompt": {
+            "en": "Hard Round One category 6, clue 1?",
+            "et": "Raske esimene voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r1-6-1",
+            "et": "Raske vastus r1-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-6-1.",
+            "et": "Arendusselgitus küsimusele hard r1-6-1."
+          },
+          "source": "Development source: hard/r1/6/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-06-t2",
+          "categoryId": "hard-r1-06",
+          "round": "round-one",
+          "tier": 2,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round One category 6, clue 2?",
+            "et": "Raske esimene voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r1-6-2",
+            "et": "Raske vastus r1-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-6-2.",
+            "et": "Arendusselgitus küsimusele hard r1-6-2."
+          },
+          "source": "Development source: hard/r1/6/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-06-t3",
+          "categoryId": "hard-r1-06",
+          "round": "round-one",
+          "tier": 3,
+          "value": 600,
+          "prompt": {
+            "en": "Hard Round One category 6, clue 3?",
+            "et": "Raske esimene voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r1-6-3",
+            "et": "Raske vastus r1-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-6-3.",
+            "et": "Arendusselgitus küsimusele hard r1-6-3."
+          },
+          "source": "Development source: hard/r1/6/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-06-t4",
+          "categoryId": "hard-r1-06",
+          "round": "round-one",
+          "tier": 4,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round One category 6, clue 4?",
+            "et": "Raske esimene voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r1-6-4",
+            "et": "Raske vastus r1-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-6-4.",
+            "et": "Arendusselgitus küsimusele hard r1-6-4."
+          },
+          "source": "Development source: hard/r1/6/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r1-06-t5",
+          "categoryId": "hard-r1-06",
+          "round": "round-one",
+          "tier": 5,
+          "value": 1000,
+          "prompt": {
+            "en": "Hard Round One category 6, clue 5?",
+            "et": "Raske esimene voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r1-6-5",
+            "et": "Raske vastus r1-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r1-6-5.",
+            "et": "Arendusselgitus küsimusele hard r1-6-5."
+          },
+          "source": "Development source: hard/r1/6/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-01",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 1",
+        "et": "Raske Teine voor kategooria 1"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-01-t1",
+          "categoryId": "hard-r2-01",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 1, clue 1?",
+            "et": "Raske teine voor kategooria 1, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-1-1",
+            "et": "Raske vastus r2-1-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-1-1.",
+            "et": "Arendusselgitus küsimusele hard r2-1-1."
+          },
+          "source": "Development source: hard/r2/1/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-01-t2",
+          "categoryId": "hard-r2-01",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 1, clue 2?",
+            "et": "Raske teine voor kategooria 1, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-1-2",
+            "et": "Raske vastus r2-1-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-1-2.",
+            "et": "Arendusselgitus küsimusele hard r2-1-2."
+          },
+          "source": "Development source: hard/r2/1/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-01-t3",
+          "categoryId": "hard-r2-01",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 1, clue 3?",
+            "et": "Raske teine voor kategooria 1, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-1-3",
+            "et": "Raske vastus r2-1-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-1-3.",
+            "et": "Arendusselgitus küsimusele hard r2-1-3."
+          },
+          "source": "Development source: hard/r2/1/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-01-t4",
+          "categoryId": "hard-r2-01",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 1, clue 4?",
+            "et": "Raske teine voor kategooria 1, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-1-4",
+            "et": "Raske vastus r2-1-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-1-4.",
+            "et": "Arendusselgitus küsimusele hard r2-1-4."
+          },
+          "source": "Development source: hard/r2/1/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-01-t5",
+          "categoryId": "hard-r2-01",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 1, clue 5?",
+            "et": "Raske teine voor kategooria 1, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-1-5",
+            "et": "Raske vastus r2-1-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-1-5.",
+            "et": "Arendusselgitus küsimusele hard r2-1-5."
+          },
+          "source": "Development source: hard/r2/1/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-02",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 2",
+        "et": "Raske Teine voor kategooria 2"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-02-t1",
+          "categoryId": "hard-r2-02",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 2, clue 1?",
+            "et": "Raske teine voor kategooria 2, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-2-1",
+            "et": "Raske vastus r2-2-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-2-1.",
+            "et": "Arendusselgitus küsimusele hard r2-2-1."
+          },
+          "source": "Development source: hard/r2/2/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-02-t2",
+          "categoryId": "hard-r2-02",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 2, clue 2?",
+            "et": "Raske teine voor kategooria 2, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-2-2",
+            "et": "Raske vastus r2-2-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-2-2.",
+            "et": "Arendusselgitus küsimusele hard r2-2-2."
+          },
+          "source": "Development source: hard/r2/2/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-02-t3",
+          "categoryId": "hard-r2-02",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 2, clue 3?",
+            "et": "Raske teine voor kategooria 2, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-2-3",
+            "et": "Raske vastus r2-2-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-2-3.",
+            "et": "Arendusselgitus küsimusele hard r2-2-3."
+          },
+          "source": "Development source: hard/r2/2/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-02-t4",
+          "categoryId": "hard-r2-02",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 2, clue 4?",
+            "et": "Raske teine voor kategooria 2, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-2-4",
+            "et": "Raske vastus r2-2-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-2-4.",
+            "et": "Arendusselgitus küsimusele hard r2-2-4."
+          },
+          "source": "Development source: hard/r2/2/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-02-t5",
+          "categoryId": "hard-r2-02",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 2, clue 5?",
+            "et": "Raske teine voor kategooria 2, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-2-5",
+            "et": "Raske vastus r2-2-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-2-5.",
+            "et": "Arendusselgitus küsimusele hard r2-2-5."
+          },
+          "source": "Development source: hard/r2/2/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-03",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 3",
+        "et": "Raske Teine voor kategooria 3"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-03-t1",
+          "categoryId": "hard-r2-03",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 3, clue 1?",
+            "et": "Raske teine voor kategooria 3, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-3-1",
+            "et": "Raske vastus r2-3-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-3-1.",
+            "et": "Arendusselgitus küsimusele hard r2-3-1."
+          },
+          "source": "Development source: hard/r2/3/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-03-t2",
+          "categoryId": "hard-r2-03",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 3, clue 2?",
+            "et": "Raske teine voor kategooria 3, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-3-2",
+            "et": "Raske vastus r2-3-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-3-2.",
+            "et": "Arendusselgitus küsimusele hard r2-3-2."
+          },
+          "source": "Development source: hard/r2/3/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-03-t3",
+          "categoryId": "hard-r2-03",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 3, clue 3?",
+            "et": "Raske teine voor kategooria 3, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-3-3",
+            "et": "Raske vastus r2-3-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-3-3.",
+            "et": "Arendusselgitus küsimusele hard r2-3-3."
+          },
+          "source": "Development source: hard/r2/3/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-03-t4",
+          "categoryId": "hard-r2-03",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 3, clue 4?",
+            "et": "Raske teine voor kategooria 3, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-3-4",
+            "et": "Raske vastus r2-3-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-3-4.",
+            "et": "Arendusselgitus küsimusele hard r2-3-4."
+          },
+          "source": "Development source: hard/r2/3/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-03-t5",
+          "categoryId": "hard-r2-03",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 3, clue 5?",
+            "et": "Raske teine voor kategooria 3, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-3-5",
+            "et": "Raske vastus r2-3-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-3-5.",
+            "et": "Arendusselgitus küsimusele hard r2-3-5."
+          },
+          "source": "Development source: hard/r2/3/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-04",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 4",
+        "et": "Raske Teine voor kategooria 4"
+      },
+      "macroTopic": "topic-1",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-04-t1",
+          "categoryId": "hard-r2-04",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 4, clue 1?",
+            "et": "Raske teine voor kategooria 4, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-4-1",
+            "et": "Raske vastus r2-4-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-4-1.",
+            "et": "Arendusselgitus küsimusele hard r2-4-1."
+          },
+          "source": "Development source: hard/r2/4/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-04-t2",
+          "categoryId": "hard-r2-04",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 4, clue 2?",
+            "et": "Raske teine voor kategooria 4, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-4-2",
+            "et": "Raske vastus r2-4-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-4-2.",
+            "et": "Arendusselgitus küsimusele hard r2-4-2."
+          },
+          "source": "Development source: hard/r2/4/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-04-t3",
+          "categoryId": "hard-r2-04",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 4, clue 3?",
+            "et": "Raske teine voor kategooria 4, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-4-3",
+            "et": "Raske vastus r2-4-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-4-3.",
+            "et": "Arendusselgitus küsimusele hard r2-4-3."
+          },
+          "source": "Development source: hard/r2/4/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-04-t4",
+          "categoryId": "hard-r2-04",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 4, clue 4?",
+            "et": "Raske teine voor kategooria 4, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-4-4",
+            "et": "Raske vastus r2-4-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-4-4.",
+            "et": "Arendusselgitus küsimusele hard r2-4-4."
+          },
+          "source": "Development source: hard/r2/4/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-04-t5",
+          "categoryId": "hard-r2-04",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 4, clue 5?",
+            "et": "Raske teine voor kategooria 4, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-4-5",
+            "et": "Raske vastus r2-4-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-4-5.",
+            "et": "Arendusselgitus küsimusele hard r2-4-5."
+          },
+          "source": "Development source: hard/r2/4/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-05",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 5",
+        "et": "Raske Teine voor kategooria 5"
+      },
+      "macroTopic": "topic-2",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-05-t1",
+          "categoryId": "hard-r2-05",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 5, clue 1?",
+            "et": "Raske teine voor kategooria 5, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-5-1",
+            "et": "Raske vastus r2-5-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-5-1.",
+            "et": "Arendusselgitus küsimusele hard r2-5-1."
+          },
+          "source": "Development source: hard/r2/5/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-05-t2",
+          "categoryId": "hard-r2-05",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 5, clue 2?",
+            "et": "Raske teine voor kategooria 5, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-5-2",
+            "et": "Raske vastus r2-5-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-5-2.",
+            "et": "Arendusselgitus küsimusele hard r2-5-2."
+          },
+          "source": "Development source: hard/r2/5/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-05-t3",
+          "categoryId": "hard-r2-05",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 5, clue 3?",
+            "et": "Raske teine voor kategooria 5, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-5-3",
+            "et": "Raske vastus r2-5-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-5-3.",
+            "et": "Arendusselgitus küsimusele hard r2-5-3."
+          },
+          "source": "Development source: hard/r2/5/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-05-t4",
+          "categoryId": "hard-r2-05",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 5, clue 4?",
+            "et": "Raske teine voor kategooria 5, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-5-4",
+            "et": "Raske vastus r2-5-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-5-4.",
+            "et": "Arendusselgitus küsimusele hard r2-5-4."
+          },
+          "source": "Development source: hard/r2/5/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-05-t5",
+          "categoryId": "hard-r2-05",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 5, clue 5?",
+            "et": "Raske teine voor kategooria 5, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-5-5",
+            "et": "Raske vastus r2-5-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-5-5.",
+            "et": "Arendusselgitus küsimusele hard r2-5-5."
+          },
+          "source": "Development source: hard/r2/5/5",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "hard-r2-06",
+      "packId": "dev-library",
+      "round": "round-two",
+      "difficulty": "hard",
+      "name": {
+        "en": "Hard Round Two Category 6",
+        "et": "Raske Teine voor kategooria 6"
+      },
+      "macroTopic": "topic-3",
+      "enabled": true,
+      "clues": [
+        {
+          "id": "hard-r2-06-t1",
+          "categoryId": "hard-r2-06",
+          "round": "round-two",
+          "tier": 1,
+          "value": 400,
+          "prompt": {
+            "en": "Hard Round Two category 6, clue 1?",
+            "et": "Raske teine voor kategooria 6, küsimus 1?"
+          },
+          "response": {
+            "en": "Hard answer r2-6-1",
+            "et": "Raske vastus r2-6-1"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-6-1.",
+            "et": "Arendusselgitus küsimusele hard r2-6-1."
+          },
+          "source": "Development source: hard/r2/6/1",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-06-t2",
+          "categoryId": "hard-r2-06",
+          "round": "round-two",
+          "tier": 2,
+          "value": 800,
+          "prompt": {
+            "en": "Hard Round Two category 6, clue 2?",
+            "et": "Raske teine voor kategooria 6, küsimus 2?"
+          },
+          "response": {
+            "en": "Hard answer r2-6-2",
+            "et": "Raske vastus r2-6-2"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-6-2.",
+            "et": "Arendusselgitus küsimusele hard r2-6-2."
+          },
+          "source": "Development source: hard/r2/6/2",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-06-t3",
+          "categoryId": "hard-r2-06",
+          "round": "round-two",
+          "tier": 3,
+          "value": 1200,
+          "prompt": {
+            "en": "Hard Round Two category 6, clue 3?",
+            "et": "Raske teine voor kategooria 6, küsimus 3?"
+          },
+          "response": {
+            "en": "Hard answer r2-6-3",
+            "et": "Raske vastus r2-6-3"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-6-3.",
+            "et": "Arendusselgitus küsimusele hard r2-6-3."
+          },
+          "source": "Development source: hard/r2/6/3",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-06-t4",
+          "categoryId": "hard-r2-06",
+          "round": "round-two",
+          "tier": 4,
+          "value": 1600,
+          "prompt": {
+            "en": "Hard Round Two category 6, clue 4?",
+            "et": "Raske teine voor kategooria 6, küsimus 4?"
+          },
+          "response": {
+            "en": "Hard answer r2-6-4",
+            "et": "Raske vastus r2-6-4"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-6-4.",
+            "et": "Arendusselgitus küsimusele hard r2-6-4."
+          },
+          "source": "Development source: hard/r2/6/4",
+          "enabled": true
+        },
+        {
+          "id": "hard-r2-06-t5",
+          "categoryId": "hard-r2-06",
+          "round": "round-two",
+          "tier": 5,
+          "value": 2000,
+          "prompt": {
+            "en": "Hard Round Two category 6, clue 5?",
+            "et": "Raske teine voor kategooria 6, küsimus 5?"
+          },
+          "response": {
+            "en": "Hard answer r2-6-5",
+            "et": "Raske vastus r2-6-5"
+          },
+          "explanation": {
+            "en": "Development explanation for hard r2-6-5.",
+            "et": "Arendusselgitus küsimusele hard r2-6-5."
+          },
+          "source": "Development source: hard/r2/6/5",
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "finals": [
+    {
+      "id": "easy-final-01",
+      "packId": "dev-library",
+      "enabled": true,
+      "difficulty": "easy",
+      "categoryId": "easy-final-category",
+      "categoryName": {
+        "en": "Easy Final",
+        "et": "Lihtne finaal"
+      },
+      "round": "final",
+      "tier": 0,
+      "value": 0,
+      "prompt": {
+        "en": "Easy Final clue?",
+        "et": "Lihtne finaalküsimus?"
+      },
+      "response": {
+        "en": "Easy Final answer",
+        "et": "Lihtne finaalvastus"
+      },
+      "explanation": {
+        "en": "Development explanation for the easy Final.",
+        "et": "Arendusselgitus easy finaalile."
+      },
+      "source": "Development source: easy/final"
+    },
+    {
+      "id": "medium-final-01",
+      "packId": "dev-library",
+      "enabled": true,
+      "difficulty": "medium",
+      "categoryId": "medium-final-category",
+      "categoryName": {
+        "en": "Medium Final",
+        "et": "Keskmine finaal"
+      },
+      "round": "final",
+      "tier": 0,
+      "value": 0,
+      "prompt": {
+        "en": "Medium Final clue?",
+        "et": "Keskmine finaalküsimus?"
+      },
+      "response": {
+        "en": "Medium Final answer",
+        "et": "Keskmine finaalvastus"
+      },
+      "explanation": {
+        "en": "Development explanation for the medium Final.",
+        "et": "Arendusselgitus medium finaalile."
+      },
+      "source": "Development source: medium/final"
+    },
+    {
+      "id": "hard-final-01",
+      "packId": "dev-library",
+      "enabled": true,
+      "difficulty": "hard",
+      "categoryId": "hard-final-category",
+      "categoryName": {
+        "en": "Hard Final",
+        "et": "Raske finaal"
+      },
+      "round": "final",
+      "tier": 0,
+      "value": 0,
+      "prompt": {
+        "en": "Hard Final clue?",
+        "et": "Raske finaalküsimus?"
+      },
+      "response": {
+        "en": "Hard Final answer",
+        "et": "Raske finaalvastus"
+      },
+      "explanation": {
+        "en": "Development explanation for the hard Final.",
+        "et": "Arendusselgitus hard finaalile."
+      },
+      "source": "Development source: hard/final"
+    }
+  ]
+}
