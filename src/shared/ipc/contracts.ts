@@ -82,6 +82,13 @@ const boardSchema = z.strictObject({
   })),
 });
 
+const gameTimerSchema = z.strictObject({
+  durationMs: z.number().int().positive(),
+  remainingMs: z.number().int().nonnegative(),
+  startedAt: timestampSchema.nullable(),
+  status: z.enum(['idle', 'running', 'paused', 'expired']),
+});
+
 export const gameStateSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   id: identifierSchema,
@@ -99,12 +106,22 @@ export const gameStateSchema = z.strictObject({
   activeClue: z.strictObject({
     clueId: identifierSchema,
     lockedOutTeamIds: z.array(identifierSchema),
+    lockedTeamId: identifierSchema.nullable().default(null),
     responseRevealed: z.boolean(),
   }).nullable(),
+  timer: gameTimerSchema.optional(),
   usedClueIds: z.array(identifierSchema),
   dailyDoubleClueIds: z.array(identifierSchema),
   finalWagers: z.record(identifierSchema, z.number().int().nonnegative()),
-});
+}).transform((state) => ({
+  ...state,
+  timer: state.timer ?? {
+    durationMs: state.config.clueSeconds * 1000,
+    remainingMs: state.config.clueSeconds * 1000,
+    startedAt: null,
+    status: 'idle' as const,
+  },
+}));
 
 export const gameEventSchema = z.discriminatedUnion('type', [
   z.strictObject({

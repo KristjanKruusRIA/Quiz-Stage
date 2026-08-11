@@ -69,7 +69,15 @@ export type GamePhase =
 export interface ActiveClue {
   clueId: string;
   lockedOutTeamIds: string[];
+  lockedTeamId: string | null;
   responseRevealed: boolean;
+}
+
+export interface GameTimer {
+  durationMs: number;
+  remainingMs: number;
+  startedAt: number | null;
+  status: 'idle' | 'running' | 'paused' | 'expired';
 }
 
 export interface GameState {
@@ -83,6 +91,7 @@ export interface GameState {
   scores: Record<string, number>;
   controllingTeamId: string | null;
   activeClue: ActiveClue | null;
+  timer: GameTimer;
   usedClueIds: string[];
   dailyDoubleClueIds: string[];
   finalWagers: Record<string, number>;

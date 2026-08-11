@@ -30,6 +30,7 @@ describe('IPC contracts', () => {
       scores: { t1: 0, t2: 0 },
       controllingTeamId: 't1',
       activeClue: null,
+      timer: { durationMs: 15000, remainingMs: 15000, startedAt: null, status: 'idle' },
       usedClueIds: [],
       finalWagers: {},
       seed: 'fixed-seed',
@@ -37,5 +38,33 @@ describe('IPC contracts', () => {
     });
 
     expect(result.success).toBe(true);
+  });
+
+  it('loads a prior snapshot with the new timer and active-lock defaults', () => {
+    const result = gameStateSchema.safeParse({
+      appVersion: '0.1.0',
+      id: 'match-legacy',
+      config: {
+        language: 'en', difficulty: 'easy', clueSeconds: 15,
+        teams: [{ id: 't1', name: 'Alpha', color: '#E3B341' }, { id: 't2', name: 'Beta', color: '#50A7F5' }],
+        packIds: ['bundled'], displayMode: 'single',
+      },
+      phase: 'ordinary-clue',
+      boards: [],
+      finalClue: null,
+      scores: { t1: 0, t2: 0 },
+      controllingTeamId: 't1',
+      activeClue: { clueId: 'legacy-clue', lockedOutTeamIds: [], responseRevealed: false },
+      usedClueIds: [],
+      finalWagers: {},
+      seed: 'fixed-seed',
+      dailyDoubleClueIds: ['r1-c1-600'],
+    });
+
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.timer).toEqual({ durationMs: 15000, remainingMs: 15000, startedAt: null, status: 'idle' });
+      expect(result.data.activeClue?.lockedTeamId).toBeNull();
+    }
   });
 });
