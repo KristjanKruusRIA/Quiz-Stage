@@ -4,6 +4,7 @@ import { GameCoordinator } from './coordinator/gameCoordinator';
 import type { DatabaseConnection } from './persistence/database';
 import { MatchRepository } from './persistence/matchRepository';
 import type { DisplayMode, GameConfig } from '../shared/game/types';
+import { CsvPackWorkflow } from './content/csvPacks';
 
 export interface ApplicationOptions {
   now?: () => number;
@@ -16,6 +17,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
   const repository = new MatchRepository(database);
   const contentRepository = new ContentRepository(database);
   const contentService = new ContentService(contentRepository);
+  const contentCsv = new CsvPackWorkflow(database, contentRepository);
   const coordinator = new GameCoordinator({
     repository,
     contentService,
@@ -28,6 +30,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
   return {
     coordinator,
     repository,
+    contentCsv,
     startMatch: (config: GameConfig) => coordinator.startMatch(config),
     hasResumableMatch: () => repository.recoverLatest() !== null,
     resumeMatch: () => coordinator.resumeLatest(),

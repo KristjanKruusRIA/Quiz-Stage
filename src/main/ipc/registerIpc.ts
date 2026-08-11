@@ -13,6 +13,10 @@ import {
 } from '../../shared/ipc/contracts';
 import { IPC_CHANNELS } from './channels';
 import { validateHostSender } from './validateSender';
+import { z } from 'zod';
+import { contentIdSchema } from '../../shared/content/schema';
+import { CSV_COLUMNS } from '../../shared/content/csvColumns';
+import type { CsvPackWorkflow } from '../content/csvPacks';
 
 export interface IpcMainPort {
   handle(channel: string, handler: (event: { sender: { id: number } }, value: unknown) => unknown): void;
@@ -29,6 +33,17 @@ interface CoordinatorPort {
   getPublicStateUpdate(): PublicStateUpdate | null;
 }
 
+export interface CsvDialogPort {
+  chooseImportFile(): Promise<string | null>;
+  chooseExportFile(packId: string): Promise<string | null>;
+}
+
+interface ContentCsvPort {
+  previewFile(path: string): ReturnType<CsvPackWorkflow['previewFile']>;
+  importPreview(input: Parameters<CsvPackWorkflow['importPreview']>[0]): ReturnType<CsvPackWorkflow['importPreview']>;
+  exportToFile(packId: string, destination: string): ReturnType<CsvPackWorkflow['exportToFile']>;
+}
+
 interface RegisterIpcOptions {
   ipcMain: IpcMainPort;
   coordinator: CoordinatorPort;
@@ -42,6 +57,8 @@ interface RegisterIpcOptions {
     resumeMatch(): Promise<unknown>;
     listHistory(): unknown;
   };
+  contentCsv?: ContentCsvPort;
+  csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
   getWindows: () => {
@@ -63,6 +80,8 @@ export function registerIpc({
   coordinator,
   setup,
   matchAccess,
+  contentCsv,
+  csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
   getWindows,
@@ -125,6 +144,64 @@ export function registerIpc({
     );
   }
 
+  const csvChannels: string[] = [];
+  if (contentCsv !== undefined && csvDialogs !== undefined) {
+    const issueSchema = z.strictObject({
+      code: z.string().min(1),
+      message: z.string().min(1),
+      row: z.number().int().positive().optional(),
+      column: z.enum(CSV_COLUMNS).optional(),
+    });
+    const previewSchema = z.strictObject({
+      previewId: contentIdSchema,
+      packId: z.string(),
+      packName: z.string(),
+      rowCount: z.number().int().positive(),
+      conflict: z.boolean(),
+      issues: z.array(issueSchema),
+    });
+    const importRequestSchema = z.strictObject({
+      previewId: contentIdSchema,
+      conflict: z.enum(['replace-existing', 'keep-both']).optional(),
+    });
+    const importResultSchema = z.strictObject({
+      packId: contentIdSchema,
+      replaced: z.boolean(),
+      keptBoth: z.boolean(),
+      rowCount: z.number().int().positive(),
+    });
+    const exportRequestSchema = z.strictObject({ packId: contentIdSchema });
+    const exportResultSchema = z.strictObject({
+      packId: contentIdSchema,
+      rowCount: z.number().int().positive(),
+      bytes: z.number().int().positive(),
+    });
+
+    ipcMain.handle(IPC_CHANNELS.contentImportPreview, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      const path = await csvDialogs.chooseImportFile();
+      if (path === null) return { cancelled: true as const };
+      return { cancelled: false as const, ...previewSchema.parse(contentCsv.previewFile(path)) };
+    });
+    ipcMain.handle(IPC_CHANNELS.contentImportCommit, async (event, input) => {
+      requireHost(event.sender.id);
+      return importResultSchema.parse(contentCsv.importPreview(importRequestSchema.parse(input)));
+    });
+    ipcMain.handle(IPC_CHANNELS.contentExport, async (event, input) => {
+      requireHost(event.sender.id);
+      const { packId } = exportRequestSchema.parse(input);
+      const path = await csvDialogs.chooseExportFile(packId);
+      if (path === null) return { cancelled: true as const };
+      return { cancelled: false as const, ...exportResultSchema.parse(contentCsv.exportToFile(packId, path)) };
+    });
+    csvChannels.push(
+      IPC_CHANNELS.contentImportPreview,
+      IPC_CHANNELS.contentImportCommit,
+      IPC_CHANNELS.contentExport,
+    );
+  }
+
   let readyHostWebContentsId: number | null = null;
   let readyPublicWebContentsId: number | null = null;
   const unsubscribeHost = coordinator.subscribe('host', (view, revision) => {
@@ -177,6 +254,7 @@ export function registerIpc({
     ipcMain.removeHandler(IPC_CHANNELS.dispatch);
     for (const channel of setupChannels) ipcMain.removeHandler(channel);
     for (const channel of matchAccessChannels) ipcMain.removeHandler(channel);
+    for (const channel of csvChannels) ipcMain.removeHandler(channel);
     ipcMain.removeListener(IPC_CHANNELS.hostReady, bootstrapHost);
     ipcMain.removeListener(IPC_CHANNELS.publicReady, bootstrapPublic);
     unsubscribeHost();

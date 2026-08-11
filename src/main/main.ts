@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, screen } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, screen } from 'electron';
 import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
@@ -32,6 +32,23 @@ async function createWindows(): Promise<void> {
     coordinator: application.coordinator,
     setup: application,
     matchAccess: application,
+    contentCsv: application.contentCsv,
+    csvDialogs: {
+      chooseImportFile: async () => {
+        const result = await dialog.showOpenDialog({
+          properties: ['openFile'],
+          filters: [{ name: 'CSV packs', extensions: ['csv'] }],
+        });
+        return result.canceled ? null : result.filePaths[0] ?? null;
+      },
+      chooseExportFile: async (packId) => {
+        const result = await dialog.showSaveDialog({
+          defaultPath: `${packId}.csv`,
+          filters: [{ name: 'CSV packs', extensions: ['csv'] }],
+        });
+        return result.canceled ? null : result.filePath ?? null;
+      },
+    },
     getAutomaticDisplayMode: () => automaticDisplayMode(screen.getAllDisplays().length),
     applyDisplayMode: (displayMode) => windowManager?.create(displayMode),
     getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
