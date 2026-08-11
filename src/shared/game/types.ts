@@ -144,6 +144,12 @@ export interface GameState {
 export interface HostGameView {
   appVersion: typeof APP_VERSION;
   state: GameState;
+  replayIssue: RecoveryIssue | null;
+}
+
+export interface RecoveryIssue {
+  sequence: number;
+  reason: 'missing-sequence' | 'invalid-event' | 'match-mismatch' | 'row-mismatch';
 }
 
 export interface PublicTeamScore {

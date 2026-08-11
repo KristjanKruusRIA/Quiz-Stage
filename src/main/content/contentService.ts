@@ -1,5 +1,7 @@
 import {
+  selectNextTiebreakerClue,
   selectMatchContent,
+  type FinalClue,
   type SelectedMatchContent,
   type SelectionInput,
   type SelectionShortage,
@@ -19,6 +21,15 @@ export class ContentService {
 
   selectForMatch(config: GameConfig, seed: string): SelectedMatchContent {
     return selectMatchContent(this.loadSelectionInput(config, seed));
+  }
+
+  selectNextTiebreaker(
+    config: GameConfig,
+    seed: string,
+    excludedIds: readonly string[],
+    tieIndex: number,
+  ): FinalClue {
+    return selectNextTiebreakerClue(this.loadSelectionInput(config, seed), excludedIds, tieIndex);
   }
 
   private loadSelectionInput(config: GameConfig, seed: string): SelectionInput {

@@ -5,6 +5,7 @@ process.env.VITE_CONFIG_NATIVE_IGNORE_WARNING = 'true';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    extraResource: ['resources/content/dev-seed.sqlite'],
     ignore: (file) => {
       if (!file) return false;
       return !(

@@ -1,5 +1,5 @@
 import type { GameEvent } from '../../shared/game/events';
-import type { GameState, Team } from '../../shared/game/types';
+import type { GameState, RecoveryIssue, Team } from '../../shared/game/types';
 import { gameEventSchema, gameStateSchema } from '../../shared/ipc/contracts';
 import type { DatabaseConnection } from './database';
 
@@ -12,10 +12,7 @@ export interface ResumableMatch {
   replayIssue: ReplayIssue | null;
 }
 
-export interface ReplayIssue {
-  sequence: number;
-  reason: 'missing-sequence' | 'invalid-event' | 'match-mismatch' | 'row-mismatch';
-}
+export type ReplayIssue = RecoveryIssue;
 
 export interface MatchStanding {
   teamId: string;

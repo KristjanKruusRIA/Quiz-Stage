@@ -3,6 +3,7 @@ import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
 import type { GameConfig, GameState } from '../game/types';
+import type { HostGameView, PublicGameView } from '../game/types';
 
 const identifierSchema = z.string().trim().min(1);
 const timestampSchema = z.number().int().nonnegative();
@@ -62,13 +63,21 @@ const clueSchema = z.strictObject({
   id: identifierSchema,
   categoryId: identifierSchema,
   round: z.enum(['round-one', 'round-two', 'final', 'tiebreaker']),
-  tier: z.number().int().min(1).max(5),
-  value: z.number().int().positive(),
+  tier: z.number().int().min(0).max(5),
+  value: z.number().int().nonnegative(),
   prompt: localizedTextSchema,
   response: localizedTextSchema,
   explanation: localizedTextSchema,
   source: z.string().trim().min(1),
   acceptedResponses: localizedTextSchema.optional(),
+}).superRefine((clue, context) => {
+  const isBoardClue = clue.round === 'round-one' || clue.round === 'round-two';
+  if (isBoardClue && clue.tier === 0) {
+    context.addIssue({ code: 'custom', message: 'Board clue tiers must be 1 through 5', path: ['tier'] });
+  }
+  if (isBoardClue && clue.value === 0) {
+    context.addIssue({ code: 'custom', message: 'Board clue values must be positive', path: ['value'] });
+  }
 });
 
 const boardSchema = z.strictObject({
@@ -191,3 +200,14 @@ export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
 export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameCommand;
 export type ValidatedGameState = z.infer<typeof gameStateSchema> & GameState;
 export type ValidatedGameEvent = z.infer<typeof gameEventSchema> & GameEvent;
+
+export interface QuizStageApi {
+  dispatch?: (command: GameCommand) => Promise<HostGameView>;
+  subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
+}
+
+declare global {
+  interface Window {
+    quizStage: QuizStageApi;
+  }
+}
