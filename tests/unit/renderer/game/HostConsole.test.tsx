@@ -145,4 +145,16 @@ describe('HostConsole', () => {
     expect(screen.queryByRole('button', { name: 'Undo' })).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'Reopen clue' })).not.toBeInTheDocument();
   });
+
+  it.each(['final-category', 'final-wagers', 'final-clue', 'final-reveal', 'complete'] as const)(
+    'does not offer clue reporting during %s',
+    (phase) => {
+      const finalActive = phase === 'final-clue' || phase === 'final-reveal'
+        ? { clueId: 'final-clue', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: phase === 'final-reveal' }
+        : null;
+      render(<HostConsole view={hostView({ phase, activeClue: finalActive })} api={api()} />);
+      expect(screen.queryByRole('textbox', { name: 'Clue report reason' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'Report current clue' })).not.toBeInTheDocument();
+    },
+  );
 });

@@ -79,6 +79,35 @@ function timerDependencies() {
 }
 
 describe('GameCoordinator', () => {
+  it('does not persist, publish, or adopt rejected clue reports', async () => {
+    const { coordinator, repository } = dependencies();
+    await coordinator.startMatch(selectionInput().config);
+    const published: string[] = [];
+    coordinator.subscribe('host', (view) => published.push(JSON.stringify(view)));
+    const boardClues = coordinator.getHostView()!.state.boards[0].categories.flatMap((category) => category.clues);
+    vi.mocked(repository.persistTransition).mockClear();
+    published.length = 0;
+
+    let before = JSON.stringify(coordinator.getHostView());
+    await expect(coordinator.dispatch({
+      type: 'ReportClue', clueId: boardClues[0].id, reason: 'No active clue',
+    })).rejects.toThrowError(expect.objectContaining({ code: 'NO_ACTIVE_CLUE' }));
+    expect(JSON.stringify(coordinator.getHostView())).toBe(before);
+    expect(repository.persistTransition).not.toHaveBeenCalled();
+    expect(published).toEqual([]);
+
+    await coordinator.dispatch({ type: 'SelectClue', clueId: boardClues[0].id });
+    vi.mocked(repository.persistTransition).mockClear();
+    published.length = 0;
+    before = JSON.stringify(coordinator.getHostView());
+    await expect(coordinator.dispatch({
+      type: 'ReportClue', clueId: boardClues[1].id, reason: 'Wrong active clue',
+    })).rejects.toThrowError(expect.objectContaining({ code: 'INVALID_CLUE' }));
+    expect(JSON.stringify(coordinator.getHostView())).toBe(before);
+    expect(repository.persistTransition).not.toHaveBeenCalled();
+    expect(published).toEqual([]);
+  });
+
   it('anchors, persists, and expires an ordinary clue exactly once at the authoritative deadline', async () => {
     const { coordinator, repository, callbacks, setNow, runNext } = timerDependencies();
     await coordinator.startMatch(selectionInput().config);

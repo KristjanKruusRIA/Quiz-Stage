@@ -61,6 +61,8 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
   const revealable = state.activeClue !== null && state.activeClue.lockedTeamId === null
     && (state.phase === 'ordinary-clue' || state.phase === 'tiebreaker' || (state.phase === 'daily-double-clue' && state.timer.status === 'expired'));
   const clueRevealed = state.phase === 'clue-reveal' && state.activeClue?.responseRevealed === true;
+  const reportable = clue !== null
+    && ['ordinary-clue', 'daily-double-wager', 'daily-double-clue', 'clue-reveal', 'tiebreaker'].includes(state.phase);
   const lockTeam = (teamId: string) => dispatch({ type: 'LockTeam', teamId, at: now() });
   const teamAt = (index: number) => state.config.teams[index];
 
@@ -163,13 +165,13 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
           <button type="submit" disabled={pending || scoreReason.trim() === ''}>Set {team.name} score</button>
         </form>;
       })}
-      <form onSubmit={(event) => {
+      {reportable ? <form onSubmit={(event) => {
         event.preventDefault();
         if (clue !== null && reportReason.trim() !== '') dispatch({ type: 'ReportClue', clueId: clue.id, reason: reportReason.trim() });
       }}>
         <label>Clue report reason<input value={reportReason} onChange={(event) => setReportReason(event.target.value)} /></label>
         <button type="submit" disabled={pending || clue === null || reportReason.trim() === ''}>Report current clue</button>
-      </form>
+      </form> : null}
       <label><input type="checkbox" checked={confirmIncomplete} onChange={(event) => setConfirmIncomplete(event.target.checked)} />I understand this ends the current match</label>
       <button type="button" disabled={pending || !confirmIncomplete}
         onClick={() => dispatch({ type: 'EndIncompleteMatch' })}>End match incomplete</button>

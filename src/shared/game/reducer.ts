@@ -518,18 +518,37 @@ function reportClue(state: GameState, clueId: string, reason: string): GameState
   if (!reason.trim()) {
     throw new GameRuleError('REPORT_REASON_REQUIRED', 'Reporting a clue requires a reason');
   }
+  if (state.activeClue === null) {
+    throw new GameRuleError('NO_ACTIVE_CLUE', 'Only the active clue may be reported');
+  }
+  if (state.activeClue.clueId !== clueId) {
+    throw new GameRuleError('INVALID_CLUE', 'Only the active clue may be reported');
+  }
+  if (!['ordinary-clue', 'daily-double-wager', 'daily-double-clue', 'clue-reveal', 'tiebreaker'].includes(state.phase)) {
+    throw new GameRuleError('INVALID_PHASE', 'A clue cannot be reported during this game phase');
+  }
   const clue = findClue(state, clueId);
   const disabledClueIds = state.disabledClueIds.includes(clueId) ? state.disabledClueIds : [...state.disabledClueIds, clueId];
-  if (state.phase === 'tiebreaker' && state.activeClue?.clueId === clueId && clue.round === 'tiebreaker') {
+  if (state.phase === 'tiebreaker') {
+    if (clue.round !== 'tiebreaker') {
+      throw new GameRuleError('INVALID_CLUE', 'The active clue is not a tiebreaker clue');
+    }
     return startTiebreaker(
       { ...state, disabledClueIds },
       state.tiebreakerTeamIds,
       state.suddenDeathClueNumber + 1,
     );
   }
-  const activeClue = state.activeClue?.clueId === clueId
-    ? { ...state.activeClue, lockedTeamId: null, responseRevealed: false }
-    : { clueId, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false };
+  if (clue.round !== 'round-one' && clue.round !== 'round-two') {
+    throw new GameRuleError('INVALID_CLUE', 'The active clue is not a board clue');
+  }
+  if (state.phase === 'clue-reveal') {
+    if (!state.activeClue.responseRevealed || state.lastClosedClueId !== clueId) {
+      throw new GameRuleError('INVALID_PHASE', 'Only a closed revealed clue may be reported during reveal');
+    }
+    return advanceClosedClue({ ...state, disabledClueIds }, clue);
+  }
+  const activeClue = { ...state.activeClue, lockedTeamId: null, responseRevealed: false };
   const reportedState = completeClue({
     ...state,
     disabledClueIds,

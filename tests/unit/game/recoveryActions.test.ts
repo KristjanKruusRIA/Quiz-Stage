@@ -202,6 +202,76 @@ describe('host recovery actions', () => {
     expect(state.phase).toBe('round-two-board');
   });
 
+  it('rejects inactive, mismatched, and Final clue reports without mutating state', () => {
+    const roundOneBoard = { ...createGame(config, boundaryBoards, 0), scores: { t1: 100, t2: 50 } };
+    const activeRoundOne = apply(roundOneBoard, { type: 'SelectClue', clueId: 'last-r1' }).state;
+    let finalClue = apply(activeRoundOne, { type: 'RevealResponse' }).state;
+    finalClue = apply(finalClue, { type: 'AdvanceAfterReveal' }).state;
+    finalClue = apply(finalClue, { type: 'SelectClue', clueId: 'last-r2' }).state;
+    finalClue = apply(finalClue, { type: 'RevealResponse' }).state;
+    finalClue = apply(finalClue, { type: 'AdvanceAfterReveal' }).state;
+    finalClue = apply(finalClue, { type: 'SubmitFinalWager', teamId: 't1', wager: 0 }).state;
+    finalClue = apply(finalClue, { type: 'SubmitFinalWager', teamId: 't2', wager: 0 }).state;
+
+    const cases = [
+      { name: 'inactive Round Two clue during Round One', state: roundOneBoard, clueId: 'last-r2', code: 'NO_ACTIVE_CLUE' },
+      { name: 'no active clue on a board', state: roundOneBoard, clueId: 'last-r1', code: 'NO_ACTIVE_CLUE' },
+      { name: 'wrong active clue ID', state: activeRoundOne, clueId: 'last-r2', code: 'INVALID_CLUE' },
+      { name: 'active Final clue', state: finalClue, clueId: 'final', code: 'INVALID_PHASE' },
+    ];
+
+    for (const item of cases) {
+      const before = JSON.stringify(item.state);
+      expect(
+        () => apply(item.state, { type: 'ReportClue', clueId: item.clueId, reason: item.name }),
+        item.name,
+      ).toThrowError(expect.objectContaining({ code: item.code }));
+      expect(JSON.stringify(item.state), item.name).toBe(before);
+    }
+  });
+
+  it('reports an already revealed clue once and preserves replay and undo state', () => {
+    const initial = createGame(config, selectedBoards, 0);
+    const selected = apply(initial, { type: 'SelectClue', clueId: 'clue-200' });
+    const revealed = apply(selected.state, { type: 'RevealResponse' });
+    const reported = apply(revealed.state, { type: 'ReportClue', clueId: 'clue-200', reason: 'Bad source' });
+
+    expect(reported.state).toMatchObject({
+      phase: 'round-one-board',
+      activeClue: null,
+      usedClueIds: ['clue-200'],
+      disabledClueIds: ['clue-200'],
+    });
+    expect(reported.state.scores).toEqual(revealed.state.scores);
+    expect(reported.state.controllingTeamId).toBe(revealed.state.controllingTeamId);
+    expect(reported.events[0]).toMatchObject({
+      type: 'CommandApplied',
+      command: { type: 'ReportClue', clueId: 'clue-200', reason: 'Bad source' },
+    });
+
+    const replayed = apply(revealed.state, { type: 'ReportClue', clueId: 'clue-200', reason: 'Bad source' });
+    expect(replayed).toEqual(reported);
+    const undone = apply(reported.state, { type: 'UndoLast' }).state;
+    expect({ ...undone, eventSequence: revealed.state.eventSequence }).toEqual(revealed.state);
+  });
+
+  it('reports an active Daily Double before or after wager entry without scoring or revealing content', () => {
+    const dailyDoubleBoards = { ...selectedBoards, dailyDoubleClueIds: ['clue-200'] };
+    const initial = createGame(config, dailyDoubleBoards, 0);
+
+    const wagerEntry = apply(initial, { type: 'SelectClue', clueId: 'clue-200' }).state;
+    const reportedWager = apply(wagerEntry, { type: 'ReportClue', clueId: 'clue-200', reason: 'Bad clue' }).state;
+    expect(reportedWager).toMatchObject({ phase: 'round-one-board', activeClue: null, usedClueIds: ['clue-200'] });
+    expect(reportedWager.scores).toEqual(initial.scores);
+    expect(JSON.stringify(toPublicGameView(reportedWager))).not.toContain('Response');
+
+    const dailyClue = apply(wagerEntry, { type: 'SubmitDailyDoubleWager', wager: 5 }).state;
+    const reportedClue = apply(dailyClue, { type: 'ReportClue', clueId: 'clue-200', reason: 'Bad clue' }).state;
+    expect(reportedClue).toMatchObject({ phase: 'round-one-board', activeClue: null, usedClueIds: ['clue-200'] });
+    expect(reportedClue.scores).toEqual(initial.scores);
+    expect(JSON.stringify(toPublicGameView(reportedClue))).not.toContain('Response');
+  });
+
   it('rejects score adjustment and clue reporting after completion', () => {
     const ended = apply(createGame(config, selectedBoards, 0), { type: 'EndIncompleteMatch' }).state;
     expect(() => apply(ended, { type: 'AdjustScore', teamId: 't1', score: 10, reason: 'Late change' })).toThrow(GameRuleError);
