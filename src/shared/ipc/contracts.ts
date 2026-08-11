@@ -92,30 +92,71 @@ const gameTimerSchema = z.strictObject({
   path: ['remainingMs'],
 });
 
+const activeClueSchema = z.strictObject({
+  clueId: identifierSchema,
+  lockedOutTeamIds: z.array(identifierSchema),
+  lockedTeamId: identifierSchema.nullable().default(null),
+  responseRevealed: z.boolean(),
+});
+
+const gamePhaseSchema = z.enum([
+  'round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager',
+  'daily-double-clue', 'final-category', 'final-wagers', 'final-clue',
+  'final-reveal', 'tiebreaker', 'complete',
+]);
+
+const undoMutableStateSchema = z.strictObject({
+  phase: gamePhaseSchema,
+  scores: z.record(identifierSchema, z.number().int()),
+  controllingTeamId: identifierSchema.nullable(),
+  activeClue: activeClueSchema.nullable(),
+  timer: gameTimerSchema,
+  usedClueIds: z.array(identifierSchema),
+  dailyDoubleWager: z.number().int().nullable(),
+  finalEligibleTeamIds: z.array(identifierSchema),
+  finalWagers: z.record(identifierSchema, z.number().int().nonnegative()),
+  finalRevealOrder: z.array(identifierSchema),
+  finalRevealedTeamIds: z.array(identifierSchema),
+  tiebreakerTeamIds: z.array(identifierSchema),
+  suddenDeathClueNumber: z.number().int().nonnegative(),
+  winnerTeamId: identifierSchema.nullable(),
+  endedIncomplete: z.boolean(),
+  lastClosedClueId: identifierSchema.nullable(),
+  disabledClueIds: z.array(identifierSchema),
+});
+
+const undoFrameSchema = z.strictObject({
+  eventId: identifierSchema,
+  state: undoMutableStateSchema,
+});
+
 export const gameStateSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   id: identifierSchema,
   config: gameConfigSchema,
   seed: z.string(),
-  phase: z.enum([
-    'round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager',
-    'daily-double-clue', 'final-category', 'final-wagers', 'final-clue',
-    'final-reveal', 'tiebreaker', 'complete',
-  ]),
+  phase: gamePhaseSchema,
   boards: z.array(boardSchema),
   finalClue: clueSchema.nullable(),
   scores: z.record(identifierSchema, z.number().int()),
   controllingTeamId: identifierSchema.nullable(),
-  activeClue: z.strictObject({
-    clueId: identifierSchema,
-    lockedOutTeamIds: z.array(identifierSchema),
-    lockedTeamId: identifierSchema.nullable().default(null),
-    responseRevealed: z.boolean(),
-  }).nullable(),
+  activeClue: activeClueSchema.nullable(),
   timer: gameTimerSchema.optional(),
   usedClueIds: z.array(identifierSchema),
   dailyDoubleClueIds: z.array(identifierSchema),
+  dailyDoubleWager: z.number().int().nullable().default(null),
   finalWagers: z.record(identifierSchema, z.number().int().nonnegative()),
+  finalEligibleTeamIds: z.array(identifierSchema).default([]),
+  finalRevealOrder: z.array(identifierSchema).default([]),
+  finalRevealedTeamIds: z.array(identifierSchema).default([]),
+  tiebreakerTeamIds: z.array(identifierSchema).default([]),
+  suddenDeathClueNumber: z.number().int().nonnegative().default(0),
+  winnerTeamId: identifierSchema.nullable().default(null),
+  endedIncomplete: z.boolean().default(false),
+  lastClosedClueId: identifierSchema.nullable().default(null),
+  disabledClueIds: z.array(identifierSchema).default([]),
+  eventSequence: z.number().int().nonnegative().default(0),
+  undoStack: z.array(undoFrameSchema).default([]),
 }).transform((state) => ({
   ...state,
   timer: state.timer ?? {

@@ -80,6 +80,31 @@ export interface GameTimer {
   status: 'idle' | 'running' | 'paused' | 'expired';
 }
 
+export interface UndoMutableState {
+  phase: GamePhase;
+  scores: Record<string, number>;
+  controllingTeamId: string | null;
+  activeClue: ActiveClue | null;
+  timer: GameTimer;
+  usedClueIds: string[];
+  dailyDoubleWager: number | null;
+  finalEligibleTeamIds: string[];
+  finalWagers: Record<string, number>;
+  finalRevealOrder: string[];
+  finalRevealedTeamIds: string[];
+  tiebreakerTeamIds: string[];
+  suddenDeathClueNumber: number;
+  winnerTeamId: string | null;
+  endedIncomplete: boolean;
+  lastClosedClueId: string | null;
+  disabledClueIds: string[];
+}
+
+export interface UndoFrame {
+  eventId: string;
+  state: UndoMutableState;
+}
+
 export interface GameState {
   appVersion: typeof GAME_STATE_VERSION;
   id: string;
@@ -94,7 +119,19 @@ export interface GameState {
   timer: GameTimer;
   usedClueIds: string[];
   dailyDoubleClueIds: string[];
+  dailyDoubleWager: number | null;
   finalWagers: Record<string, number>;
+  finalEligibleTeamIds: string[];
+  finalRevealOrder: string[];
+  finalRevealedTeamIds: string[];
+  tiebreakerTeamIds: string[];
+  suddenDeathClueNumber: number;
+  winnerTeamId: string | null;
+  endedIncomplete: boolean;
+  lastClosedClueId: string | null;
+  disabledClueIds: string[];
+  eventSequence: number;
+  undoStack: UndoFrame[];
 }
 
 export interface HostGameView {
