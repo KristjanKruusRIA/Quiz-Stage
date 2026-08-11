@@ -75,3 +75,65 @@ exit 0
 ## Concerns
 
 None. The current main entry creates a single host surface when no resumable match exists and restores the persisted single/dual display mode when a match is resumed; later setup UI can call the coordinator start seam and apply its chosen display mode without changing the security contracts added here.
+
+## Fix round 1: privacy, publication, recovery, lifecycle, and preload validation
+
+### Verified root causes
+
+1. The public projection redacted clue fields during the wager but copied the private `daily-double-*` phase unchanged, directly leaking Daily Double status.
+2. Publication invoked mutable listener sets synchronously without an isolation or monotonicity boundary. A listener exception escaped after commit, while a reentrant dispatch published a newer view inside an older publication whose remaining listeners then received stale state.
+3. The window manager returned one-time local references. Closed windows were never cleared, main recreated only when every BrowserWindow was gone, and IPC captured the original windows instead of authorizing/sending against current live surfaces.
+4. Recovery cloned only once before the replay loop. A schema-valid but semantically mismatched `LockTeam` event let `tickTimer` mutate that shared recovery candidate before reproduced-event validation threw.
+5. Preload trusted `unknown` IPC values through TypeScript casts. It neither distinguished host/public state shapes at runtime nor validated the host dispatch result.
+
+### RED evidence
+
+The focused fix-round command initially produced 10 expected failures across all five suites:
+
+```text
+npm run test:run -- tests/unit/game/views.test.ts tests/integration/coordinator/gameCoordinator.test.ts tests/integration/windows/windowManager.test.ts tests/integration/ipc
+Test Files 5 failed (5); Tests 10 failed | 12 passed; exit 1
+```
+
+The failures demonstrated public JSON containing `daily-double-wager`/`daily-double-clue`, a committed dispatch rejecting with `renderer listener failed`, stale host order `[2, 1]`, recovery changing `timer.startedAt` from `null` to `100`, missing lifecycle/current-window behavior, host data crossing the public preload channel, and an invalid dispatch result resolving.
+
+### Fixes
+
+- Introduced a public-only phase type and map both private Daily Double phases to the safe `ordinary-clue` presentation. Pre-wager prompt/response/ID and all future content remain absent.
+- Added queued, snapshotted publication. A reentrant commit invalidates the in-progress older delivery and restarts from the newest canonical state; listener errors are isolated without enclosing engine or persistence work.
+- Made `WindowManager` own live per-surface references, clear them on close/destroy, and recreate only missing surfaces. IPC resolves the current windows for every authorization/send, rejects missing/destroyed host senders, and skips missing/destroyed displays.
+- Clone the last valid recovery state independently for every replay attempt, adopting the candidate only after authoritative event reproduction succeeds.
+- Added strict host/public view schemas. Preload validates commands, dispatch results, and every subscription value before crossing the context bridge; public schema rejects host/private shapes.
+
+### GREEN verification
+
+```text
+npm run test:run -- tests/unit/game/views.test.ts tests/integration/coordinator/gameCoordinator.test.ts tests/integration/windows/windowManager.test.ts tests/integration/ipc
+Test Files 5 passed (5); Tests 22 passed (22); exit 0
+
+npm run test:run
+Test Files 20 passed (20); Tests 119 passed (119); exit 0
+
+npm run lint
+eslint .; exit 0
+
+npm run typecheck
+tsc --noEmit; exit 0
+
+npm run build
+Electron Forge packaged x64 on win32; exit 0
+
+npx electron-forge package --platform win32 --arch x64
+Electron Forge packaged x64 on win32; exit 0
+
+PACKAGED_SEED_OK bytes=188416
+PACKAGED_NATIVE_OK bytes=1989632
+```
+
+### Fix-round self-review
+
+- Privacy bypass review: neither public phase nor strict public schema contains a Daily Double variant. Wager state has no active clue; committed DD clue state presents as an ordinary clue and still obeys canonical response reveal. Host-only recovery and private game fields remain structurally rejected by the public schema.
+- Publication ordering: persistence/engine failures still escape before state adoption or publication. Only subscriber failures are isolated. Reentrant publication aborts the older listener snapshot at the first newer commit and gives every remaining host/public subscriber the newest projection.
+- Lifecycle/authentication: host authorization reads the live host webContents ID on each call, so a replaced host invalidates the old sender immediately. Closing host/public clears only that reference; the other display continues, destroyed public sends are non-fatal, and recreated windows retain all Task 1 security settings.
+- Recovery: a failed replay candidate is discarded byte-for-byte, while prior validated prefix state and deterministic `replayIssue` remain authoritative.
+- Boundary validation: subscription cleanup still removes the exact wrapped listener. Valid host dispatch and valid public subscription paths remain accepted; malformed results and cross-surface state are rejected before user listeners receive them.

@@ -66,6 +66,7 @@ describe('game view projections', () => {
   it('redacts an unrevealed response, Daily Double identity, and future tiebreaker content', () => {
     const serialized = JSON.stringify(toPublicGameView(hiddenAnswerState()));
 
+    expect(serialized).not.toContain('daily-double');
     expect(serialized).not.toContain(hiddenResponse);
     expect(serialized).not.toContain('uncertainty principle');
     expect(serialized).not.toContain(hiddenDailyDoubleId);
@@ -79,6 +80,7 @@ describe('game view projections', () => {
     state.activeClue = { ...state.activeClue!, responseRevealed: true };
 
     const serialized = JSON.stringify(toPublicGameView(state));
+    expect(serialized).not.toContain('daily-double');
     expect(serialized).toContain(hiddenResponse);
     expect(serialized).not.toContain(futureTiebreakerResponse);
   });

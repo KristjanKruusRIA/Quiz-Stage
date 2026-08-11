@@ -2,8 +2,7 @@ import { z } from 'zod';
 import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
-import type { GameConfig, GameState } from '../game/types';
-import type { HostGameView, PublicGameView } from '../game/types';
+import type { GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
 
 const identifierSchema = z.string().trim().min(1);
 const timestampSchema = z.number().int().nonnegative();
@@ -195,6 +194,62 @@ export const gameEventSchema = z.discriminatedUnion('type', [
   z.strictObject({ id: identifierSchema, matchId: identifierSchema, at: timestampSchema, type: z.literal('ActionUndone'), eventId: identifierSchema }),
   z.strictObject({ id: identifierSchema, matchId: identifierSchema, at: timestampSchema, type: z.literal('MatchEnded') }),
 ]);
+
+const recoveryIssueSchema = z.strictObject({
+  sequence: z.number().int().nonnegative(),
+  reason: z.enum(['missing-sequence', 'invalid-event', 'match-mismatch', 'row-mismatch']),
+});
+
+export const hostGameViewSchema = z.strictObject({
+  appVersion: z.literal(APP_VERSION),
+  state: gameStateSchema,
+  replayIssue: recoveryIssueSchema.nullable(),
+});
+
+const publicActiveClueSchema = z.discriminatedUnion('responseRevealed', [
+  z.strictObject({
+    id: identifierSchema,
+    prompt: z.string(),
+    responseRevealed: z.literal(false),
+  }),
+  z.strictObject({
+    id: identifierSchema,
+    prompt: z.string(),
+    responseRevealed: z.literal(true),
+    response: z.string(),
+    explanation: z.string(),
+  }),
+]);
+
+const publicBoardSchema = z.strictObject({
+  id: identifierSchema,
+  round: z.enum(['round-one', 'round-two']),
+  categories: z.array(z.strictObject({
+    id: identifierSchema,
+    name: z.string(),
+    clues: z.array(z.strictObject({
+      id: identifierSchema,
+      value: z.number().int().nonnegative(),
+      selected: z.boolean(),
+    })),
+  })),
+});
+
+export const publicGameViewSchema = z.strictObject({
+  appVersion: z.literal(APP_VERSION),
+  phase: z.enum([
+    'round-one-board', 'ordinary-clue', 'round-two-board', 'final-category',
+    'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete',
+  ]),
+  teams: z.array(z.strictObject({
+    id: identifierSchema,
+    name: z.string().trim().min(1),
+    color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
+    score: z.number().int(),
+  })).min(2).max(8),
+  board: publicBoardSchema.nullable(),
+  activeClue: publicActiveClueSchema.nullable(),
+});
 
 export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
 export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameCommand;

@@ -189,9 +189,11 @@ export type PublicActiveClue =
       explanation: string;
     };
 
+export type PublicGamePhase = Exclude<GamePhase, 'daily-double-wager' | 'daily-double-clue'>;
+
 export interface PublicGameView {
   appVersion: typeof APP_VERSION;
-  phase: GamePhase;
+  phase: PublicGamePhase;
   teams: PublicTeamScore[];
   board: PublicBoard | null;
   activeClue: PublicActiveClue | null;

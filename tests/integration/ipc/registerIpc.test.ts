@@ -13,15 +13,20 @@ describe('main IPC registration', () => {
       dispatch: vi.fn(async () => ({ kind: 'host' })),
       subscribe: vi.fn(() => () => undefined),
     };
-    const hostWindow = { webContents: { id: 10, send: vi.fn() } };
-    const publicWindow = { webContents: { id: 20, send: vi.fn() } };
-    registerIpc({ ipcMain, coordinator, windows: { hostWindow, publicWindow } });
+    const hostWindow = { webContents: { id: 10, send: vi.fn(), isDestroyed: () => false } };
+    const publicWindow = { webContents: { id: 20, send: vi.fn(), isDestroyed: () => false } };
+    let windows = { hostWindow, publicWindow };
+    registerIpc({ ipcMain, coordinator, getWindows: () => windows });
     const invoke = handlers.get(IPC_CHANNELS.dispatch)!;
     const command = { type: 'SelectClue', clueId: 'clue-1' };
 
     await expect(invoke({ sender: { id: 20 } }, command)).rejects.toThrow('HOST_SENDER_REQUIRED');
     await expect(invoke({ sender: { id: 10 } }, command)).resolves.toEqual({ kind: 'host' });
-    expect(coordinator.dispatch).toHaveBeenCalledOnce();
+    const replacementHost = { webContents: { id: 30, send: vi.fn(), isDestroyed: () => false } };
+    windows = { hostWindow: replacementHost, publicWindow };
+    await expect(invoke({ sender: { id: 10 } }, command)).rejects.toThrow('HOST_SENDER_REQUIRED');
+    await expect(invoke({ sender: { id: 30 } }, command)).resolves.toEqual({ kind: 'host' });
+    expect(coordinator.dispatch).toHaveBeenCalledTimes(2);
   });
 
   it('routes independently projected state to its intended window and cleans listeners up', () => {
@@ -36,14 +41,19 @@ describe('main IPC registration', () => {
     };
     const removed: string[] = [];
     const ipcMain: IpcMainPort = { handle: vi.fn(), removeHandler: (channel) => removed.push(channel) };
-    const hostWindow = { webContents: { id: 1, send: vi.fn() } };
-    const publicWindow = { webContents: { id: 2, send: vi.fn() } };
-    const dispose = registerIpc({ ipcMain, coordinator, windows: { hostWindow, publicWindow } });
+    const hostWindow = { webContents: { id: 1, send: vi.fn(), isDestroyed: () => false } };
+    let publicDestroyed = false;
+    const publicWindow = { webContents: { id: 2, send: vi.fn(), isDestroyed: () => publicDestroyed } };
+    const dispose = registerIpc({ ipcMain, coordinator, getWindows: () => ({ hostWindow, publicWindow }) });
 
     subscriptions.get('host')?.({ private: true });
     subscriptions.get('public')?.({ public: true });
     expect(hostWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.hostState, { private: true });
     expect(publicWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.publicState, { public: true });
+
+    publicDestroyed = true;
+    expect(() => subscriptions.get('public')?.({ public: 'newer' })).not.toThrow();
+    expect(publicWindow.webContents.send).toHaveBeenCalledTimes(1);
 
     dispose();
     expect(removed).toEqual([IPC_CHANNELS.dispatch]);

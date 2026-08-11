@@ -158,4 +158,84 @@ describe('GameCoordinator', () => {
 
     expect(persistenceOrder).toEqual(['persist', 'complete', 'publish']);
   });
+
+  it('isolates a throwing listener after commit and continues publishing both projections', async () => {
+    const { coordinator } = dependencies();
+    await coordinator.startMatch(selectionInput().config);
+    let shouldThrow = false;
+    coordinator.subscribe('host', () => {
+      if (shouldThrow) throw new Error('renderer listener failed');
+    });
+    const hostStates: number[] = [];
+    const publicStates: string[] = [];
+    coordinator.subscribe('host', (view) => hostStates.push(view.state.eventSequence));
+    coordinator.subscribe('public', (view) => publicStates.push(view.phase));
+    hostStates.length = 0;
+    publicStates.length = 0;
+    shouldThrow = true;
+
+    const view = await coordinator.dispatch({
+      type: 'SelectClue',
+      clueId: coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id,
+    });
+
+    expect(view.state.eventSequence).toBe(1);
+    expect(hostStates).toEqual([1]);
+    expect(publicStates).toEqual(['ordinary-clue']);
+  });
+
+  it('does not deliver an older publication after a listener dispatches a newer state', async () => {
+    const { coordinator } = dependencies();
+    await coordinator.startMatch(selectionInput().config);
+    let reentrantDispatch: Promise<unknown> | undefined;
+    coordinator.subscribe('host', (view) => {
+      if (view.state.eventSequence === 1 && reentrantDispatch === undefined) {
+        reentrantDispatch = coordinator.dispatch({ type: 'EndIncompleteMatch' });
+      }
+    });
+    const hostStates: number[] = [];
+    const publicStates: string[] = [];
+    coordinator.subscribe('host', (view) => hostStates.push(view.state.eventSequence));
+    coordinator.subscribe('public', (view) => publicStates.push(view.phase));
+    hostStates.length = 0;
+    publicStates.length = 0;
+
+    await coordinator.dispatch({
+      type: 'SelectClue',
+      clueId: coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id,
+    });
+    await reentrantDispatch;
+
+    expect(hostStates).toEqual([2]);
+    expect(publicStates).toEqual(['complete']);
+  });
+
+  it('keeps the last valid recovery state byte-equivalent when a replay event mutates then fails validation', async () => {
+    const { coordinator, selected, setResumable } = dependencies();
+    const initial = createGame(selectionInput().config, selected, 42);
+    const selectedState = applyGameCommand(initial, {
+      type: 'SelectClue',
+      clueId: selected.boards[0].categories[0].clues[0].id,
+    }).state;
+    const before = structuredClone(selectedState);
+    setResumable({
+      matchId: selectedState.id,
+      snapshotSequence: 1,
+      eventSequence: 1,
+      state: selectedState,
+      events: [{
+        id: 'semantic-mismatch',
+        matchId: selectedState.id,
+        at: 100,
+        type: 'CommandApplied',
+        command: { type: 'LockTeam', teamId: 'team-1', at: 100 },
+      }],
+      replayIssue: null,
+    });
+
+    const recovered = await coordinator.resume();
+
+    expect(recovered?.state).toEqual(before);
+    expect(recovered?.replayIssue).toEqual({ sequence: 2, reason: 'invalid-event' });
+  });
 });

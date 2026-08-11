@@ -25,7 +25,7 @@ export function toPublicGameView(state: GameState): PublicGameView {
 
   return {
     appVersion: APP_VERSION,
-    phase: state.phase,
+    phase: publicPhase(state),
     teams: state.config.teams.map((team) => ({
       id: team.id,
       name: team.name,
@@ -49,6 +49,12 @@ export function toPublicGameView(state: GameState): PublicGameView {
           responseRevealed: false,
         },
   };
+}
+
+function publicPhase(state: GameState): PublicGameView['phase'] {
+  return state.phase === 'daily-double-wager' || state.phase === 'daily-double-clue'
+    ? 'ordinary-clue'
+    : state.phase;
 }
 
 function activeBoard(state: GameState, activeClue: Clue | null): Board | null {

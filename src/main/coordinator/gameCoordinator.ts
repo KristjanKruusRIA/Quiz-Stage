@@ -55,6 +55,8 @@ export class GameCoordinator {
   private replayIssue: RecoveryIssue | null = null;
   private readonly hostSubscribers = new Set<HostSubscriber>();
   private readonly publicSubscribers = new Set<PublicSubscriber>();
+  private publishing = false;
+  private publicationPending = false;
   private readonly now: () => number;
   private readonly createSeed: () => string;
 
@@ -109,7 +111,7 @@ export class GameCoordinator {
 
     for (const [index, event] of resumable.events.entries()) {
       try {
-        state = replayEvent(state, event);
+        state = replayEvent(structuredClone(state), event);
       } catch {
         replayIssue = { sequence: resumable.eventSequence + index + 1, reason: 'invalid-event' };
         break;
@@ -130,13 +132,13 @@ export class GameCoordinator {
       const hostSubscriber = subscriber as HostSubscriber;
       this.hostSubscribers.add(hostSubscriber);
       const view = this.getHostView();
-      if (view !== null) hostSubscriber(view);
+      if (view !== null) this.notify(hostSubscriber, view);
       return () => this.hostSubscribers.delete(hostSubscriber);
     }
     const publicSubscriber = subscriber as PublicSubscriber;
     this.publicSubscribers.add(publicSubscriber);
     const view = this.getPublicView();
-    if (view !== null) publicSubscriber(view);
+    if (view !== null) this.notify(publicSubscriber, view);
     return () => this.publicSubscribers.delete(publicSubscriber);
   }
 
@@ -169,11 +171,36 @@ export class GameCoordinator {
   }
 
   private publish(): void {
-    if (this.state === null) return;
-    const hostView = toHostGameView(this.state, this.replayIssue);
-    const publicView = toPublicGameView(this.state);
-    for (const subscriber of this.hostSubscribers) subscriber(hostView);
-    for (const subscriber of this.publicSubscribers) subscriber(publicView);
+    this.publicationPending = true;
+    if (this.publishing) return;
+    this.publishing = true;
+    try {
+      while (this.publicationPending) {
+        this.publicationPending = false;
+        if (this.state === null) continue;
+        const hostView = toHostGameView(this.state, this.replayIssue);
+        const publicView = toPublicGameView(this.state);
+        for (const subscriber of [...this.hostSubscribers]) {
+          this.notify(subscriber, hostView);
+          if (this.publicationPending) break;
+        }
+        if (this.publicationPending) continue;
+        for (const subscriber of [...this.publicSubscribers]) {
+          this.notify(subscriber, publicView);
+          if (this.publicationPending) break;
+        }
+      }
+    } finally {
+      this.publishing = false;
+    }
+  }
+
+  private notify<T>(subscriber: (view: T) => void, view: T): void {
+    try {
+      subscriber(view);
+    } catch {
+      // Renderer/listener failures cannot roll back or reject an already committed state.
+    }
   }
 }
 

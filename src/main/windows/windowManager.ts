@@ -4,12 +4,15 @@ import { blockNavigationAndWindows, type WindowSecurityPort } from '../windowSec
 export interface ManagedWebContents extends WindowSecurityPort {
   id: number;
   send(channel: string, value: unknown): void;
+  isDestroyed(): boolean;
 }
 
 export interface ManagedWindow {
   webContents: ManagedWebContents;
   loadURL(url: string): Promise<unknown> | void;
   loadFile(path: string): Promise<unknown> | void;
+  on(event: 'closed', listener: () => void): unknown;
+  isDestroyed(): boolean;
 }
 
 interface ManagedWindowOptions {
@@ -28,7 +31,7 @@ interface ManagedWindowOptions {
 export type WindowFactory = (options: ManagedWindowOptions) => ManagedWindow;
 
 export interface ManagedWindows {
-  hostWindow: ManagedWindow;
+  hostWindow: ManagedWindow | null;
   publicWindow: ManagedWindow | null;
 }
 
@@ -40,12 +43,21 @@ interface WindowManagerOptions {
 }
 
 export class WindowManager {
+  private hostWindow: ManagedWindow | null = null;
+  private publicWindow: ManagedWindow | null = null;
+
   constructor(private readonly options: WindowManagerOptions) {}
 
   create(displayMode: DisplayMode): ManagedWindows {
-    const hostWindow = this.createSurface('host');
-    const publicWindow = displayMode === 'dual' ? this.createSurface('public') : null;
-    return { hostWindow, publicWindow };
+    this.clearDestroyedReferences();
+    this.hostWindow ??= this.createSurface('host');
+    if (displayMode === 'dual') this.publicWindow ??= this.createSurface('public');
+    return this.getWindows();
+  }
+
+  getWindows(): ManagedWindows {
+    this.clearDestroyedReferences();
+    return { hostWindow: this.hostWindow, publicWindow: this.publicWindow };
   }
 
   private createSurface(surface: 'host' | 'public'): ManagedWindow {
@@ -61,6 +73,10 @@ export class WindowManager {
         additionalArguments: [`--surface=${surface}`],
       },
     });
+    window.on('closed', () => {
+      if (surface === 'host' && this.hostWindow === window) this.hostWindow = null;
+      if (surface === 'public' && this.publicWindow === window) this.publicWindow = null;
+    });
     blockNavigationAndWindows(window.webContents);
     if (this.options.devServerUrl === undefined) {
       void window.loadFile(this.options.rendererHtmlPath);
@@ -68,5 +84,10 @@ export class WindowManager {
       void window.loadURL(this.options.devServerUrl);
     }
     return window;
+  }
+
+  private clearDestroyedReferences(): void {
+    if (this.hostWindow?.isDestroyed() || this.hostWindow?.webContents.isDestroyed()) this.hostWindow = null;
+    if (this.publicWindow?.isDestroyed() || this.publicWindow?.webContents.isDestroyed()) this.publicWindow = null;
   }
 }

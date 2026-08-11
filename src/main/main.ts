@@ -6,27 +6,30 @@ import { createApplication } from './application';
 import { registerIpc } from './ipc/registerIpc';
 import { openDatabase } from './persistence/database';
 import { migrateDatabase } from './persistence/migrations';
-import { WindowManager, type ManagedWindow, type ManagedWindows } from './windows/windowManager';
+import { WindowManager, type ManagedWindow } from './windows/windowManager';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
 
 let application: ReturnType<typeof createApplication> | null = null;
-let windows: ManagedWindows | null = null;
+let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
 
 async function createWindows(): Promise<void> {
   if (application === null) return;
   const displayMode = application.coordinator.getHostView()?.state.config.displayMode ?? 'single';
-  const manager = new WindowManager({
+  windowManager ??= new WindowManager({
     createWindow: (options) => new BrowserWindow(options) as unknown as ManagedWindow,
     preloadPath: path.join(__dirname, 'preload.js'),
     rendererHtmlPath: path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
     ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
   });
-  disposeIpc?.();
-  windows = manager.create(displayMode);
-  disposeIpc = registerIpc({ ipcMain, coordinator: application.coordinator, windows });
+  windowManager.create(displayMode);
+  disposeIpc ??= registerIpc({
+    ipcMain,
+    coordinator: application.coordinator,
+    getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
+  });
 }
 
 async function initialize(): Promise<void> {
@@ -53,13 +56,13 @@ if (squirrelStartup) {
   app.whenReady().then(initialize);
 
   app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) void createWindows();
+    void createWindows();
   });
 
   app.on('before-quit', () => {
     disposeIpc?.();
     disposeIpc = null;
-    windows = null;
+    windowManager = null;
     application?.close();
     application = null;
   });

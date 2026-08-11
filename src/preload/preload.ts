@@ -2,7 +2,12 @@ import { contextBridge, ipcRenderer } from 'electron';
 import { IPC_CHANNELS } from '../main/ipc/channels';
 import type { GameCommand } from '../shared/game/commands';
 import type { HostGameView, PublicGameView } from '../shared/game/types';
-import type { QuizStageApi } from '../shared/ipc/contracts';
+import {
+  gameCommandSchema,
+  hostGameViewSchema,
+  publicGameViewSchema,
+  type QuizStageApi,
+} from '../shared/ipc/contracts';
 
 export interface PreloadIpcPort {
   invoke(channel: string, value: unknown): Promise<unknown>;
@@ -12,14 +17,17 @@ export interface PreloadIpcPort {
 
 export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPort): QuizStageApi {
   const stateChannel = surface === 'host' ? IPC_CHANNELS.hostState : IPC_CHANNELS.publicState;
+  const stateSchema = surface === 'host' ? hostGameViewSchema : publicGameViewSchema;
   const subscribeToState = (listener: (view: HostGameView | PublicGameView) => void) => {
-    const wrapped = (_event: unknown, value: unknown) => listener(value as HostGameView | PublicGameView);
+    const wrapped = (_event: unknown, value: unknown) => listener(stateSchema.parse(value));
     ipc.on(stateChannel, wrapped);
     return () => ipc.removeListener(stateChannel, wrapped);
   };
   if (surface === 'public') return { subscribeToState };
   return {
-    dispatch: (command: GameCommand) => ipc.invoke(IPC_CHANNELS.dispatch, command) as Promise<HostGameView>,
+    dispatch: async (command: GameCommand) => hostGameViewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.dispatch, gameCommandSchema.parse(command)),
+    ),
     subscribeToState,
   };
 }
