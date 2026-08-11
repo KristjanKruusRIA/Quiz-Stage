@@ -1,5 +1,16 @@
-import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { randomUUID } from 'node:crypto';
+import {
+  existsSync,
+  lstatSync,
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  realpathSync,
+  renameSync,
+  unlinkSync,
+} from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { basename, dirname, extname, join, parse, resolve } from 'node:path';
 import type { DatabaseConnection } from '../../src/main/persistence/database';
 import { openDatabase } from '../../src/main/persistence/database';
 import {
@@ -7,32 +18,72 @@ import {
   type DevelopmentContentFixture,
 } from '../../src/shared/content/schema';
 
-const defaultFixturePath = resolve('tests/fixtures/dev-content.json');
-const defaultOutputPath = resolve('resources/content/dev-seed.sqlite');
-const migrationsDirectory = resolve('src/main/persistence/sql');
+const repositoryRoot = resolve(fileURLToPath(new URL('../../', import.meta.url)));
+const defaultFixturePath = join(repositoryRoot, 'tests/fixtures/dev-content.json');
+const defaultOutputPath = join(repositoryRoot, 'resources/content/dev-seed.sqlite');
+const migrationsDirectory = join(repositoryRoot, 'src/main/persistence/sql');
 
 export function buildDevelopmentSeed(
   fixturePath = defaultFixturePath,
   outputPath = defaultOutputPath,
 ): { clues: number; categorySets: number; finals: number } {
-  const fixture = developmentContentFixtureSchema.parse(
-    JSON.parse(readFileSync(resolve(fixturePath), 'utf8')),
-  );
+  const explicitFixturePath = resolve(fixturePath);
   const explicitOutputPath = resolve(outputPath);
+  assertSafeOutput(explicitFixturePath, explicitOutputPath);
+  const fixture = developmentContentFixtureSchema.parse(
+    JSON.parse(readFileSync(explicitFixturePath, 'utf8')),
+  );
   mkdirSync(dirname(explicitOutputPath), { recursive: true });
-  if (existsSync(explicitOutputPath)) unlinkSync(explicitOutputPath);
+  const temporaryOutputPath = join(
+    dirname(explicitOutputPath),
+    `.${basename(explicitOutputPath)}.${process.pid}-${randomUUID()}.tmp.sqlite`,
+  );
 
-  const database = openDatabase({ filePath: explicitOutputPath });
+  let database: DatabaseConnection | undefined;
   try {
+    database = openDatabase({ filePath: temporaryOutputPath });
     runMigrations(database);
     importFixture(database, fixture);
     const counts = readCounts(database);
     database.pragma('wal_checkpoint(TRUNCATE)');
     database.pragma('journal_mode = DELETE');
     database.exec('VACUUM');
+    database.close();
+    database = undefined;
+    renameSync(temporaryOutputPath, explicitOutputPath);
     return counts;
   } finally {
-    database.close();
+    if (database?.open) database.close();
+    removeTemporaryArtifacts(temporaryOutputPath);
+  }
+}
+
+function assertSafeOutput(fixturePath: string, outputPath: string): void {
+  if (outputPath === parse(outputPath).root) {
+    throw new Error(`Unsafe seed output target: filesystem root ${outputPath}`);
+  }
+  if (extname(outputPath).toLowerCase() !== '.sqlite') {
+    throw new Error(`Unsafe seed output target: expected a .sqlite file, received ${outputPath}`);
+  }
+  const fixtureRealPath = realpathSync(fixturePath);
+  if (outputPath === fixturePath || (existsSync(outputPath) && realpathSync(outputPath) === fixtureRealPath)) {
+    throw new Error('Unsafe seed output target: output aliases the input fixture');
+  }
+  if (!existsSync(outputPath)) return;
+
+  const outputStats = lstatSync(outputPath);
+  if (outputStats.isSymbolicLink() || !outputStats.isFile()) {
+    throw new Error(`Unsafe seed output target: expected a regular SQLite file, received ${outputPath}`);
+  }
+  const sqliteHeader = readFileSync(outputPath).subarray(0, 16).toString('utf8');
+  if (sqliteHeader !== 'SQLite format 3\0') {
+    throw new Error(`Unsafe seed output target: existing file is not SQLite: ${outputPath}`);
+  }
+}
+
+function removeTemporaryArtifacts(temporaryOutputPath: string): void {
+  for (const path of [temporaryOutputPath, `${temporaryOutputPath}-wal`, `${temporaryOutputPath}-shm`]) {
+    if (existsSync(path)) unlinkSync(path);
   }
 }
 
@@ -141,7 +192,9 @@ function byId<T extends { id: string }>(left: T, right: T): number {
   return left.id.localeCompare(right.id);
 }
 
-if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(import.meta.filename)) {
-  const counts = buildDevelopmentSeed(defaultFixturePath, defaultOutputPath);
+if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {
+  const outputPath = process.argv[2] ?? defaultOutputPath;
+  const fixturePath = process.argv[3] ?? defaultFixturePath;
+  const counts = buildDevelopmentSeed(fixturePath, outputPath);
   console.log(`${counts.clues} clues, ${counts.categorySets} category sets, ${counts.finals} Finals`);
 }
