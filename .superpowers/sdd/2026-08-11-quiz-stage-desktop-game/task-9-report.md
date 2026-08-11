@@ -106,3 +106,45 @@ Electron Forge packaged x64 on win32; exit 0
 ```
 
 The final lint, package artifact, and diff/working-tree evidence was re-run at the commit gate after the test-only lint correction.
+
+## Fix round 2: current-config availability ownership
+
+### RED evidence
+
+```text
+npm run test:run -- tests/unit/renderer/SetupScreen.test.tsx
+Test Files 1 failed (1); Tests 2 failed | 9 passed; exit 1
+```
+
+The deferred regressions reproduced both response orderings: an edited setup whose normal availability completed before the pending start failed was left disabled, while a superseded edited-setup response could overwrite the post-failure refresh.
+
+### Fix
+
+- Availability checks now have one owner identified by the validated config key and refresh generation. Results and errors are accepted only while that owner is current.
+- A rejected start increments the refresh generation, so the normal pipeline revalidates the latest edited setup instead of directly storing availability for the setup submitted earlier.
+- The localized start error remains config-keyed and appears only after the latest availability check settles. Exact authoritative shortages continue to take precedence, while stale responses cannot disable or misreport the current setup.
+
+### GREEN verification
+
+```text
+npm run test:run -- tests/unit/renderer/SetupScreen.test.tsx
+Test Files 1 passed (1); Tests 11 passed (11); exit 0
+
+npm run lint
+eslint .; exit 0
+
+npm run typecheck
+tsc --noEmit; exit 0
+
+npm run test:run
+Test Files 25 passed (25); Tests 146 passed (146); exit 0
+
+npm run build
+Electron Forge packaged x64 on win32; exit 0
+
+PACKAGED_SEED_OK bytes=188416
+PACKAGED_NATIVE_OK win32-x64.node bytes=1989632
+
+git diff --check
+exit 0
+```

@@ -86,8 +86,10 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   const [loadFailed, setLoadFailed] = useState(false);
   const [availability, setAvailability] = useState<{
     key: string;
+    generation: number;
     result: ContentAvailabilityResponse | 'checking' | 'error';
   } | null>(null);
+  const [availabilityGeneration, setAvailabilityGeneration] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [startErrorKey, setStartErrorKey] = useState<string | null>(null);
   const startInFlight = useRef(false);
@@ -118,26 +120,48 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   }), [clueSeconds, difficulty, displayMode, language, packIds, teams]);
   const localMessage = options === null ? null : localValidationMessage(teams, packIds, language);
   const parsed = useMemo(() => gameConfigSchema.safeParse(candidate), [candidate]);
+  const configKey = JSON.stringify(candidate);
   const availabilityKey = parsed.success ? JSON.stringify(parsed.data) : null;
-  const currentAvailability = availability?.key === availabilityKey ? availability.result : null;
-  const showStartError = startErrorKey !== null && startErrorKey === availabilityKey;
+  const currentConfigKey = useRef(configKey);
+  const availabilityOwner = useRef<{ key: string | null; generation: number }>({
+    key: availabilityKey,
+    generation: availabilityGeneration,
+  });
+  const currentAvailability = availability?.key === availabilityKey
+    && availability.generation === availabilityGeneration
+    ? availability.result
+    : null;
+  const hasCurrentAvailabilityResult = currentAvailability === 'error'
+    || (currentAvailability !== null && currentAvailability !== 'checking' && currentAvailability.ok);
+  const showStartError = startErrorKey !== null
+    && startErrorKey === configKey
+    && hasCurrentAvailabilityResult;
 
   useEffect(() => {
+    currentConfigKey.current = configKey;
+  }, [configKey]);
+
+  useEffect(() => {
+    availabilityOwner.current = { key: availabilityKey, generation: availabilityGeneration };
     if (options === null || localMessage !== null || !parsed.success) {
       return;
     }
     let active = true;
     const key = JSON.stringify(parsed.data);
+    const generation = availabilityGeneration;
+    const ownsRequest = () => active
+      && availabilityOwner.current.key === key
+      && availabilityOwner.current.generation === generation;
     queueMicrotask(() => {
-      if (active) setAvailability({ key, result: 'checking' });
+      if (ownsRequest()) setAvailability({ key, generation, result: 'checking' });
     });
     void api.checkContentAvailability(parsed.data).then((value) => {
-      if (active) setAvailability({ key, result: value });
+      if (ownsRequest()) setAvailability({ key, generation, result: value });
     }).catch(() => {
-      if (active) setAvailability({ key, result: 'error' });
+      if (ownsRequest()) setAvailability({ key, generation, result: 'error' });
     });
     return () => { active = false; };
-  }, [api, options, localMessage, parsed]);
+  }, [api, options, localMessage, parsed, availabilityKey, availabilityGeneration]);
 
   const updateTeam = (index: number, team: Team) => {
     setTeams((current) => current.map((value, teamIndex) => teamIndex === index ? team : value));
@@ -157,7 +181,6 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
     event.preventDefault();
     const validated = gameConfigSchema.safeParse(candidate);
     if (startInFlight.current || !canStart || !validated.success) return;
-    const key = JSON.stringify(validated.data);
     startInFlight.current = true;
     setSubmitting(true);
     setStartErrorKey(null);
@@ -165,13 +188,8 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
       await api.startMatch(validated.data);
       onStarted?.();
     } catch {
-      try {
-        const refreshed = await api.checkContentAvailability(validated.data);
-        setAvailability({ key, result: refreshed });
-        if (refreshed.ok) setStartErrorKey(key);
-      } catch {
-        setStartErrorKey(key);
-      }
+      setStartErrorKey(currentConfigKey.current);
+      setAvailabilityGeneration((current) => current + 1);
     } finally {
       startInFlight.current = false;
       setSubmitting(false);
@@ -254,7 +272,7 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
         {loadFailed ? <p role="alert">{text.loadError}</p> : null}
         {localMessage !== null ? <p role="alert">{localMessage}</p> : null}
         {currentAvailability === 'checking' ? <p role="status">{text.checking}</p> : null}
-        {currentAvailability === 'error' ? <p role="alert">{text.availabilityError}</p> : null}
+        {currentAvailability === 'error' && !showStartError ? <p role="alert">{text.availabilityError}</p> : null}
         {showStartError ? <p role="alert">{text.startFailed}</p> : null}
         {currentAvailability !== null && currentAvailability !== 'checking' && currentAvailability !== 'error' && !currentAvailability.ok
           ? <p role="alert">{shortageMessage(currentAvailability, language)}</p>

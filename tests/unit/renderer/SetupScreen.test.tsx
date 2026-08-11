@@ -20,6 +20,16 @@ function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
   };
 }
 
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise;
+    reject = rejectPromise;
+  });
+  return { promise, resolve, reject };
+}
+
 describe('SetupScreen', () => {
   it('adds and removes teams only within the 2 to 8 team boundary', async () => {
     const user = userEvent.setup();
@@ -222,5 +232,77 @@ describe('SetupScreen', () => {
     expect(startMatch).toHaveBeenCalledOnce();
     resolveStart();
     await waitFor(() => expect(start).toBeEnabled());
+  });
+
+  it('revalidates the edited config when its availability resolved before the pending start fails', async () => {
+    const initial = deferred<{ ok: true }>();
+    const edited = deferred<{ ok: true }>();
+    const refreshed = deferred<{ ok: true }>();
+    const pendingStart = deferred<void>();
+    const check = vi.fn()
+      .mockImplementationOnce(() => initial.promise)
+      .mockImplementationOnce(() => edited.promise)
+      .mockImplementationOnce(() => refreshed.promise);
+    const desktopApi = api({
+      checkContentAvailability: check,
+      startMatch: vi.fn(() => pendingStart.promise),
+    });
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} onBack={vi.fn()} />);
+    const start = await screen.findByRole('button', { name: 'Start match' });
+    initial.resolve({ ok: true });
+    await waitFor(() => expect(start).toBeEnabled());
+
+    await user.click(start);
+    await user.click(screen.getByRole('radio', { name: 'Hard' }));
+    edited.resolve({ ok: true });
+    await waitFor(() => expect(check).toHaveBeenCalledTimes(2));
+    pendingStart.reject(new Error('persistence failed'));
+    await waitFor(() => expect(check).toHaveBeenCalledTimes(3));
+    refreshed.resolve({ ok: true });
+
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      'Match could not be started. Check your setup and try again.',
+    );
+    await waitFor(() => expect(start).toBeEnabled());
+    expect(check.mock.calls[2][0]).toEqual(expect.objectContaining({ difficulty: 'hard' }));
+  });
+
+  it('ignores the superseded edited-config response when the post-failure refresh resolves first', async () => {
+    const initial = deferred<{ ok: true }>();
+    const superseded = deferred<{
+      ok: false;
+      roundOneMissing: number;
+      roundTwoMissing: number;
+      finalMissing: 0;
+    }>();
+    const refreshed = deferred<{ ok: true }>();
+    const pendingStart = deferred<void>();
+    const check = vi.fn()
+      .mockImplementationOnce(() => initial.promise)
+      .mockImplementationOnce(() => superseded.promise)
+      .mockImplementationOnce(() => refreshed.promise);
+    const user = userEvent.setup();
+    render(<SetupScreen
+      api={api({ checkContentAvailability: check, startMatch: vi.fn(() => pendingStart.promise) })}
+      onBack={vi.fn()}
+    />);
+    const start = await screen.findByRole('button', { name: 'Start match' });
+    initial.resolve({ ok: true });
+    await waitFor(() => expect(start).toBeEnabled());
+
+    await user.click(start);
+    await user.click(screen.getByRole('radio', { name: 'Hard' }));
+    await waitFor(() => expect(check).toHaveBeenCalledTimes(2));
+    pendingStart.reject(new Error('persistence failed'));
+    await waitFor(() => expect(check).toHaveBeenCalledTimes(3));
+    refreshed.resolve({ ok: true });
+    await waitFor(() => expect(start).toBeEnabled());
+    superseded.resolve({ ok: false, roundOneMissing: 6, roundTwoMissing: 6, finalMissing: 0 });
+    await Promise.resolve();
+
+    expect(start).toBeEnabled();
+    expect(screen.queryByText(/6 category sets missing/)).not.toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveTextContent('Match could not be started.');
   });
 });
