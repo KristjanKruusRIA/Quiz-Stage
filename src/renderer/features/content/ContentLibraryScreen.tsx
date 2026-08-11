@@ -31,16 +31,18 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
   const [selected, setSelected] = useState<EditorCategorySet | CategorySetDraft | EditorFinalClue | FinalClueDraft | null>(null);
   const [preview, setPreview] = useState<Awaited<ReturnType<NonNullable<HostDesktopApi['previewContentImport']>>> | null>(null);
   const [error, setError] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [importFailure, setImportFailure] = useState(false);
   const [newPackName, setNewPackName] = useState('');
   const generation = useRef(0);
   const previewRef = useRef(preview);
   const actions = useRef(new Set<string>());
   const [pendingActions, setPendingActions] = useState<ReadonlySet<string>>(new Set());
   useEffect(() => { previewRef.current = preview; }, [preview]);
-  const runAction = async <T,>(key: string, action: () => Promise<T>): Promise<T | undefined> => {
-    if (actions.current.has(key)) return undefined;
+  const runAction = async <T,>(key: string, action: () => Promise<T>): Promise<{ ran: true; value: T } | { ran: false }> => {
+    if (actions.current.has(key)) return { ran: false };
     actions.current.add(key); setPendingActions(new Set(actions.current));
-    try { return await action(); }
+    try { return { ran: true, value: await action() }; }
     finally { actions.current.delete(key); setPendingActions(new Set(actions.current)); }
   };
   const load = useCallback(async () => {
@@ -117,27 +119,39 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
       if (!result.cancelled) {
         if (preview !== null && !preview.cancelled && preview.valid) void api.discardContentImport?.({ previewId: preview.previewId });
         setPreview(result);
+        setImportFailure(false);
       }
     } catch { setError(true); }
     });
   };
   const commitImport = async (conflict?: 'replace-existing' | 'keep-both') => {
     if (preview === null || preview.cancelled || !preview.valid || api.commitContentImport === undefined) return;
-    await api.commitContentImport({ previewId: preview.previewId, ...(conflict === undefined ? {} : { conflict }) });
-    setPreview(null);
-    await load();
+    try {
+      await api.commitContentImport({ previewId: preview.previewId, ...(conflict === undefined ? {} : { conflict }) });
+      setPreview(null); setImportFailure(false); await load();
+    } catch {
+      setPreview(null); setImportFailure(true);
+    }
   };
 
   if (selected !== null) {
-    if ('clues' in selected) return <main className="page-shell"><CategorySetEditor value={selected} onSave={saveCategory} onCancel={() => setSelected(null)} reportPending={selected.clues.some((clue) => pendingActions.has(`report:${clue.id}`))} onReport={async (clueId, note) => {
-      if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
-      await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
-      setSelected(null);
-      await load();
+    if ('clues' in selected) return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<CategorySetEditor value={selected} onSave={saveCategory} onCancel={() => setSelected(null)} reportPending={selected.clues.some((clue) => pendingActions.has(`report:${clue.id}`))} onReport={async (clueId, note) => {
+      setActionError(null);
+      try {
+        if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
+        const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
+        if (!result.ran) return;
+        setSelected(null); await load();
+      } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
     }} /></main>;
-    return <main className="page-shell"><FinalClueEditor value={selected} onSave={saveFinal} onCancel={() => setSelected(null)} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
-      if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
-      await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision })); setSelected(null); await load();
+    return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<FinalClueEditor value={selected} onSave={saveFinal} onCancel={() => setSelected(null)} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
+      setActionError(null);
+      try {
+        if (api.reportContentClue === undefined) throw new Error('Reporting is unavailable');
+        const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
+        if (!result.ran) return;
+        setSelected(null); await load();
+      } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
     }} /></main>;
   }
   return (
@@ -150,6 +164,7 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
         <button type="button" disabled={pendingActions.has('preview')} onClick={() => void startImport()}>Import CSV</button>
       </div>
       {error ? <p role="alert">The content library action failed. No unconfirmed changes were applied.</p> : null}
+      {importFailure ? <p role="alert">Import failed. The preview was consumed; choose the file again to retry.</p> : null}
       {preview !== null && !preview.cancelled ? <ImportPreview preview={preview} onCommit={commitImport} onCancel={() => { if (preview.valid) void api.discardContentImport?.({ previewId: preview.previewId }); setPreview(null); }} /> : null}
       {library === null && !error ? <p role="status">Loading content library</p> : null}
       {library !== null ? (

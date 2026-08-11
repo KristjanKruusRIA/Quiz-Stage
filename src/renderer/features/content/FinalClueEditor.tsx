@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import type { EditorFinalClue } from '../../../shared/content/editor';
+import { ValidationPanel } from './ValidationPanel';
+import { isHttpSourceUrl } from '../../../shared/content/sourceUrl';
+import { hasValidAcceptedResponseEscapes } from '../../../shared/content/acceptedResponses';
 
 export type FinalClueDraft = Omit<EditorFinalClue, 'id' | 'categoryId' | 'revision' | 'ownership' | 'eligibility' | 'clue'> & {
   id: null; categoryId: null; clue: Omit<EditorFinalClue['clue'], 'id'> & { id: null };
@@ -11,6 +14,26 @@ interface FinalClueEditorProps {
   onCancel: () => void;
   onReport?: (clueId: string, note: string) => Promise<unknown>;
   reportPending?: boolean;
+}
+
+function validate(value: EditorFinalClue | FinalClueDraft): string[] {
+  const issues: string[] = [];
+  if (!value.categoryName.en.trim()) issues.push('English Final category is required');
+  if (!value.clue.prompt.en.trim()) issues.push('English Final clue is required');
+  if (!value.clue.response.en.trim()) issues.push('English Final response is required');
+  if (!value.clue.explanation.en.trim()) issues.push('English Final explanation is required');
+  if (!value.macroTopic.trim()) issues.push('Macro-topic is required');
+  if (!value.clue.source.title.trim()) issues.push('Source title is required');
+  for (const [language, accepted] of [['English', value.clue.acceptedResponses?.en], ['Estonian', value.clue.acceptedResponses?.et]] as const) {
+    if (accepted !== undefined && !hasValidAcceptedResponseEscapes(accepted)) issues.push(`${language} accepted responses contain an invalid escape`);
+  }
+  if (!('ownership' in value) || value.ownership !== 'bundled') {
+    if (value.clue.source.url === null || !isHttpSourceUrl(value.clue.source.url)) issues.push('HTTP(S) source URL is required');
+    if (value.clue.source.license === null || !value.clue.source.license.trim()) issues.push('Source license is required');
+    if (value.clue.source.retrievedAt === null) issues.push('Retrieval date is required');
+    if (value.clue.source.translationStatus === null) issues.push('Translation status is required');
+  }
+  return issues;
 }
 
 export function FinalClueEditor({ value, onSave, onCancel, onReport, reportPending = false }: FinalClueEditorProps) {
@@ -28,10 +51,7 @@ export function FinalClueEditor({ value, onSave, onCancel, onReport, reportPendi
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (inFlight.current) return;
-    if (!draft.categoryName.en.trim() || !draft.clue.prompt.en.trim()
-      || !draft.clue.response.en.trim() || !draft.clue.explanation.en.trim()) {
-      setError('English category, clue, response, and explanation are required.'); return;
-    }
+    if (validate(draft).length > 0) return;
     inFlight.current = true; setPending(true); setError(null);
     try { await onSave(draft); } catch { setError('The Final clue could not be saved. Refresh and try again.'); }
     finally { inFlight.current = false; setPending(false); }
@@ -47,6 +67,7 @@ export function FinalClueEditor({ value, onSave, onCancel, onReport, reportPendi
       else target.et = text || undefined;
       if (field === 'acceptedResponses' && !target.en && target.et === undefined) clue.acceptedResponses = undefined;
     });
+  const issues = validate(draft);
   return <form className="content-editor" onSubmit={(event) => void submit(event)}>
     <h1 ref={heading} tabIndex={-1}>{draft.id === null ? 'Add Final clue' : 'Edit Final clue'}</h1>
     <div className="bilingual-grid">
@@ -64,7 +85,8 @@ export function FinalClueEditor({ value, onSave, onCancel, onReport, reportPendi
       <label>Final enabled<input type="checkbox" checked={draft.enabled && draft.clue.enabled} onChange={(event) => { const enabled = event.target.checked; setDraft((current) => { const next = structuredClone(current); next.enabled = enabled; next.clue.enabled = enabled; return next; }); }} /></label>
     </div>
     {draft.clue.id !== null && onReport !== undefined ? <div className="editor-actions"><label>Report note for Final<input value={reportNote} onChange={(event) => setReportNote(event.target.value)} /></label><button type="button" disabled={reportPending || draft.clue.reported || !reportNote.trim()} onClick={() => void onReport(draft.clue.id!, reportNote.trim())}>{draft.clue.reported ? 'Final is reported' : 'Report Final clue'}</button></div> : null}
+    <ValidationPanel issues={issues} />
     {error ? <p role="alert">{error}</p> : null}
-    <div className="editor-actions"><button className="primary-action" type="submit" disabled={pending}>Save Final clue</button><button type="button" disabled={pending} onClick={cancel}>Cancel</button></div>
+    <div className="editor-actions"><button className="primary-action" type="submit" disabled={pending || issues.length > 0}>Save Final clue</button><button type="button" disabled={pending} onClick={cancel}>Cancel</button></div>
   </form>;
 }

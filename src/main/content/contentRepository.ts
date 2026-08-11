@@ -56,6 +56,7 @@ interface FinalRow {
   clue_enabled: number;
   difficulty: 'easy' | 'medium' | 'hard';
   category_id: string;
+  category_enabled: number;
   category_name_json: string;
   tier: number;
   value: number;
@@ -332,6 +333,7 @@ export class ContentRepository {
         clues.enabled AS clue_enabled,
         category_sets.difficulty,
         category_sets.id AS category_id,
+        category_sets.enabled AS category_enabled,
         category_sets.name_json AS category_name_json,
         clues.tier,
         clues.value,
@@ -355,7 +357,6 @@ export class ContentRepository {
       LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
       LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
       WHERE content_packs.enabled = 1
-        AND category_sets.enabled = 1
         AND category_sets.round = 'final'
         AND clues.round = 'final'
       GROUP BY clues.id
@@ -364,6 +365,7 @@ export class ContentRepository {
 
     return rows.map((row) => {
       const metadata = this.categoryMetadata(row.category_override_json, row.category_id, row.pack_id, 'final');
+      const categoryEnabled = metadata?.enabled ?? row.category_enabled === 1;
       const bundled = contentFinalClueSchema.parse({
       id: row.clue_id,
       packId: row.pack_id,
@@ -383,15 +385,15 @@ export class ContentRepository {
       source: row.source,
       lastSeenAt: row.last_seen_at,
       });
-      if (!applyUserState) return bundled;
+      if (!applyUserState) return { ...bundled, enabled: bundled.enabled && row.category_enabled === 1 };
       if (row.override_json === null) {
-        return { ...bundled, enabled: bundled.enabled && row.has_unresolved_report === 0 };
+        return { ...bundled, enabled: bundled.enabled && categoryEnabled && row.has_unresolved_report === 0 };
       }
       const override = validateContentOverride(JSON.parse(row.override_json), bundled);
       if (override.round !== 'final') throw new Error(`Invalid Final override kind: ${bundled.id}`);
       return contentFinalClueSchema.parse({
         ...override,
-        enabled: override.enabled && row.has_unresolved_report === 0,
+        enabled: override.enabled && categoryEnabled && row.has_unresolved_report === 0,
         lastSeenAt: bundled.lastSeenAt,
       });
     });

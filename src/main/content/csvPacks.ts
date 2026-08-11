@@ -10,6 +10,7 @@ import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { contentIdSchema } from '../../shared/content/schema';
 import { CSV_COLUMNS, type CsvColumn } from '../../shared/content/csvColumns';
+import { isHttpSourceUrl } from '../../shared/content/sourceUrl';
 
 const BOARD_ROUNDS = ['round-one', 'round-two'] as const;
 const DIFFICULTIES = ['easy', 'medium', 'hard'] as const;
@@ -389,7 +390,7 @@ export function validatePack(pack: ParsedPack): ValidationIssue[] {
     if (row.enabled !== 'true' && row.enabled !== 'false') {
       add(row, 'invalid-enabled', 'enabled must be true or false', 'enabled');
     }
-    if (!isHttpUrl(row.source_url)) add(row, 'invalid-source-url', 'source_url must be an HTTP(S) URL', 'source_url');
+    if (!isHttpSourceUrl(row.source_url)) add(row, 'invalid-source-url', 'source_url must be an HTTP(S) URL', 'source_url');
     if (!isIsoDate(row.source_retrieved_at)) {
       add(row, 'invalid-source-date', 'source_retrieved_at must be a real YYYY-MM-DD date', 'source_retrieved_at');
     }
@@ -668,15 +669,6 @@ function encodeVariants(values: readonly string[]): string {
 
 function normalizeForDuplicate(value: string): string {
   return value.normalize('NFKC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('en');
-}
-
-function isHttpUrl(value: string): boolean {
-  try {
-    const url = new URL(value);
-    return url.protocol === 'http:' || url.protocol === 'https:';
-  } catch {
-    return false;
-  }
 }
 
 function isIsoDate(value: string): boolean {

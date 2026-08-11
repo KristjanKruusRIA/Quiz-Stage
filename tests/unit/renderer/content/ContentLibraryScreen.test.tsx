@@ -84,4 +84,39 @@ describe('ContentLibraryScreen', () => {
     expect(screen.queryByText('Pack One')).not.toBeInTheDocument();
     await waitFor(() => expect(screen.getByRole('button', { name: 'Refresh content' })).toBeEnabled());
   });
+
+  it('clears a consumed failed import preview and requires choosing the file again', async () => {
+    const bridge = api();
+    bridge.previewContentImport = vi.fn(async () => ({ cancelled: false as const, valid: true as const, previewId: 'token-1',
+      packId: 'new-pack', packName: 'New Pack', rowCount: 5, conflict: false, issues: [] }));
+    bridge.commitContentImport = vi.fn(async () => { throw new Error('commit race'); });
+    render(<ContentLibraryScreen api={bridge} onBack={vi.fn()} />);
+    await screen.findByText('Pack One');
+    await userEvent.click(screen.getByRole('button', { name: 'Import CSV' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Import pack' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent(/choose.*file.*again/i);
+    expect(screen.queryByRole('button', { name: 'Import pack' })).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Import CSV' }));
+    expect(bridge.previewContentImport).toHaveBeenCalledTimes(2);
+  });
+
+  it('owns report failures, retains the draft note, releases the latch, and renders a safe alert', async () => {
+    const bridge = api();
+    let rejectReport!: (reason: Error) => void;
+    const pending = new Promise<never>((_resolve, reject) => { rejectReport = reject; });
+    bridge.reportContentClue = vi.fn(() => pending);
+    render(<ContentLibraryScreen api={bridge} onBack={vi.fn()} />);
+    await userEvent.click(await screen.findByRole('button', { name: /Edit reported clue/ }));
+    const note = screen.getByLabelText('Report note for tier 1');
+    await userEvent.type(note, 'Check source');
+    const report = screen.getByRole('button', { name: 'Report tier 1' });
+    await Promise.all([userEvent.click(report), userEvent.click(report)]);
+    expect(bridge.reportContentClue).toHaveBeenCalledOnce();
+    expect(report).toBeDisabled();
+    rejectReport(new Error('STALE_CONTENT_REVISION private'));
+    expect(await screen.findByRole('alert')).toHaveTextContent('The report could not be saved');
+    expect(note).toHaveValue('Check source');
+    expect(report).toBeEnabled();
+    expect(screen.queryByText(/STALE_CONTENT_REVISION|private/)).not.toBeInTheDocument();
+  });
 });

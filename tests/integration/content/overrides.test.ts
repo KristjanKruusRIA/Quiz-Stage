@@ -152,7 +152,7 @@ describe('local content overrides', () => {
 
     expect(corrected).toMatchObject({ explanation: { en: 'Corrected hidden explanation' }, enabled: false });
     expect(repository.getClue(final.id)).toEqual(corrected);
-    expect(repository.loadLibrary().finalClues).not.toContainEqual(expect.objectContaining({ id: final.id }));
+    expect(repository.loadLibrary().finalClues).toContainEqual(expect.objectContaining({ id: final.id, enabled: false }));
   });
 
   it('treats a deleted stable base as missing and keeps persisted overrides FK-protected', () => {

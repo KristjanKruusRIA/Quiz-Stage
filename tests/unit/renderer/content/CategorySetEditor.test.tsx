@@ -30,6 +30,19 @@ describe('CategorySetEditor', () => {
     expect(screen.getAllByText('reviewed').length).toBeGreaterThan(0);
   });
 
+  it('exposes category and per-tier enabled controls and preserves disabled saves', async () => {
+    const user = userEvent.setup();
+    const onSave = vi.fn(async () => undefined);
+    render(<CategorySetEditor value={categorySet()} onSave={onSave} onCancel={vi.fn()} />);
+    await user.click(screen.getByLabelText('Category enabled'));
+    await user.click(screen.getByLabelText('Tier 3 enabled'));
+    await user.click(screen.getByRole('button', { name: 'Save category set' }));
+    expect(onSave).toHaveBeenCalledWith(expect.objectContaining({
+      enabled: false,
+      clues: expect.arrayContaining([expect.objectContaining({ tier: 3, enabled: false })]),
+    }));
+  });
+
   it('keeps drafts local, labels validation errors, and latches a single submit', async () => {
     let release!: () => void;
     const pending = new Promise<void>((resolve) => { release = resolve; });

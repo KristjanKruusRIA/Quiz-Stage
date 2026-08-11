@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import type { EditorCategorySet, EditorClue } from '../../../shared/content/editor';
 import { ValidationPanel } from './ValidationPanel';
+import { isHttpSourceUrl } from '../../../shared/content/sourceUrl';
+import { hasValidAcceptedResponseEscapes } from '../../../shared/content/acceptedResponses';
 
 export type CategorySetDraft = Omit<EditorCategorySet, 'id' | 'revision' | 'ownership' | 'eligibility' | 'clues'> & {
   id: string | null;
@@ -27,8 +29,11 @@ function validate(value: EditorCategorySet | CategorySetDraft): string[] {
     if (!clue.response.en.trim()) issues.push(`Tier ${clue.tier} English response is required`);
     if (!clue.explanation.en.trim()) issues.push(`Tier ${clue.tier} English explanation is required`);
     if (!clue.source.title.trim()) issues.push(`Tier ${clue.tier} source title is required`);
+    for (const [language, accepted] of [['English', clue.acceptedResponses?.en], ['Estonian', clue.acceptedResponses?.et]] as const) {
+      if (accepted !== undefined && !hasValidAcceptedResponseEscapes(accepted)) issues.push(`Tier ${clue.tier} ${language} accepted responses contain an invalid escape`);
+    }
     if (value.ownership !== 'bundled') {
-      if (clue.source.url === null || !/^https?:\/\//.test(clue.source.url)) issues.push(`Tier ${clue.tier} source URL is required`);
+      if (clue.source.url === null || !isHttpSourceUrl(clue.source.url)) issues.push(`Tier ${clue.tier} source URL is required`);
       if (clue.source.license === null || !clue.source.license.trim()) issues.push(`Tier ${clue.tier} source license is required`);
       if (clue.source.retrievedAt === null) issues.push(`Tier ${clue.tier} retrieval date is required`);
       if (clue.source.translationStatus === null) issues.push(`Tier ${clue.tier} translation status is required`);
@@ -102,6 +107,9 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport, reportPen
         <label>Macro-topic
           <input value={draft.macroTopic} onChange={(event) => setDraft({ ...draft, macroTopic: event.target.value })} />
         </label>
+        <label>Category enabled
+          <input type="checkbox" checked={draft.enabled} onChange={(event) => setDraft({ ...draft, enabled: event.target.checked })} />
+        </label>
       </div>
       {draft.clues.map((clue, index) => (
         <fieldset className="tier-editor" key={clue.id ?? clue.tier} aria-label={`Tier ${clue.tier}`}>
@@ -146,6 +154,9 @@ export function CategorySetEditor({ value, onSave, onCancel, onReport, reportPen
             <span>{clue.source.translationStatus ?? 'Translation status unavailable'}</span>
           </div>
           <div className="content-metadata-grid">
+            <label>Tier {clue.tier} enabled
+              <input type="checkbox" checked={clue.enabled} onChange={(event) => updateClue(index, (next) => { next.enabled = event.target.checked; })} />
+            </label>
             <label>Tier {clue.tier} source title
               <input value={clue.source.title} onChange={(event) => updateClue(index, (next) => { next.source.title = event.target.value; })} />
             </label>

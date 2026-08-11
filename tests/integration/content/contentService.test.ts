@@ -4,6 +4,7 @@ import { join, resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ContentRepository } from '../../../src/main/content/contentRepository';
 import { ContentService } from '../../../src/main/content/contentService';
+import { ContentEditorService } from '../../../src/main/content/contentEditorService';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { developmentContentFixtureSchema } from '../../../src/shared/content/schema';
 import type { GameConfig } from '../../../src/shared/game/types';
@@ -86,6 +87,30 @@ describe('ContentService', () => {
       roundTwoMissing: 0,
       finalMissing: 0,
     });
+  });
+
+  it('uses effective Final category enable overrides for Setup availability in both directions', () => {
+    const { database, service } = openWritableSeedCopy();
+    const editor = new ContentEditorService(database, new ContentRepository(database), { now: () => 500 });
+    const final = structuredClone(editor.list().packs.find((pack) => pack.ownership === 'bundled')!
+      .finalClues.find((clue) => clue.difficulty === 'medium')!);
+    final.enabled = false;
+    editor.saveFinalClue({ expectedRevision: final.revision, finalClue: final });
+
+    expect(service.checkAvailability(mediumEnglish)).toEqual({
+      ok: false,
+      roundOneMissing: 0,
+      roundTwoMissing: 0,
+      finalMissing: 1,
+    });
+
+    database.prepare('UPDATE category_sets SET enabled = 0 WHERE id = ?').run(final.categoryId);
+    const fresh = structuredClone(editor.list().packs.find((pack) => pack.ownership === 'bundled')!
+      .finalClues.find((clue) => clue.id === final.id)!);
+    fresh.enabled = true;
+    editor.saveFinalClue({ expectedRevision: fresh.revision, finalClue: fresh });
+
+    expect(new ContentService(new ContentRepository(database)).checkAvailability(mediumEnglish).ok).toBe(true);
   });
 
   it('aggregates persisted clue history into category and Final last-seen values', () => {

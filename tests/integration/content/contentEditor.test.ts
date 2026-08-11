@@ -1,10 +1,11 @@
-import { copyFileSync, mkdtempSync, rmSync } from 'node:fs';
+import { copyFileSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ContentEditorService } from '../../../src/main/content/contentEditorService';
 import { ContentRepository } from '../../../src/main/content/contentRepository';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
+import { exportPack, previewPackImport } from '../../../src/main/content/csvPacks';
 
 const seedPath = resolve('resources/content/dev-seed.sqlite');
 
@@ -73,7 +74,7 @@ describe('content editor service', () => {
   });
 
   it('uses accepted responses in bilingual eligibility for board and Final content', () => {
-    const { editor } = openEditor();
+    const { database, repository, editor } = openEditor();
     const pack = editor.createPack({ name: 'Eligibility Pack' });
     const category = editor.saveCategorySet({ expectedRevision: pack.revision, categorySet: {
       id: null, packId: pack.id, round: 'round-one', difficulty: 'easy', macroTopic: 'language',
@@ -93,6 +94,14 @@ describe('content editor service', () => {
         acceptedResponses: { en: 'alias' }, source: { title: 'S', url: 'https://example.com/final', license: 'CC0', retrievedAt: '2026-08-12', translationStatus: 'reviewed' }, enabled: true, reported: false },
     } });
     expect(final.eligibility).toEqual({ en: true, et: false });
+    const destination = join(dirname(database.name), 'url-roundtrip.csv');
+    exportPack({ database, packId: pack.id, destination });
+    const exported = previewPackImport({ database, text: readFileSync(destination, 'utf8') });
+    expect(exported.issues).toEqual([]);
+    expect(exported.records.find((record) => record.contentKind === 'final')?.sourceUrl).toBe('https://example.com/final');
+    const invalid = structuredClone(final); invalid.clue.source.url = 'mailto:source@example.com';
+    expect(() => editor.saveFinalClue({ expectedRevision: final.revision, finalClue: invalid })).toThrow(/HTTP|source URL/i);
+    expect(repository.getClue(final.id)?.source).toContain('https://example.com/final');
   });
 
   it('rejects stale report and exact-report resolution snapshots including ABA reports', () => {
@@ -108,6 +117,37 @@ describe('content editor service', () => {
     const replacementSet = editor.list().packs[0].categorySets.find((candidate) => candidate.id === set.id)!;
     expect(() => editor.resolveReport({ clueId: clue.id, reportId: report.id, expectedRevision: replacementSet.revision })).toThrow(/stale|report/i);
     expect(editor.list().reports[0].id).toBe(replacement.id);
+  });
+
+  it('applies Final category enabled overrides in both directions across repository and editor reads', () => {
+    const { database, repository, editor } = openEditor();
+    const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+    const final = structuredClone(bundled.finalClues[0]);
+    final.enabled = false;
+    const disabled = editor.saveFinalClue({ expectedRevision: final.revision, finalClue: final });
+    expect(disabled.enabled).toBe(false);
+    expect(repository.loadLibrary().finalClues.find((clue) => clue.id === final.id)).toMatchObject({ enabled: false });
+
+    database.prepare('UPDATE category_sets SET enabled = 0 WHERE id = ?').run(final.categoryId);
+    const disabledBase = editor.list().packs.find((pack) => pack.id === bundled.id)!.finalClues.find((clue) => clue.id === final.id)!;
+    disabledBase.enabled = true;
+    const enabled = editor.saveFinalClue({ expectedRevision: disabledBase.revision, finalClue: disabledBase });
+    expect(enabled.enabled).toBe(true);
+    expect(repository.loadLibrary().finalClues.find((clue) => clue.id === final.id)).toMatchObject({ enabled: true });
+  });
+
+  it('resolves a corrected report while preserving an intentionally disabled clue', () => {
+    const { repository, editor } = openEditor();
+    const set = editor.list().packs.find((pack) => pack.ownership === 'bundled')!.categorySets[0];
+    repository.reportClue({ clueId: set.clues[0].id, matchId: null, note: 'Correct this', createdAt: 10 });
+    const reported = editor.list().packs.flatMap((pack) => pack.categorySets).find((candidate) => candidate.id === set.id)!;
+    reported.clues[0].prompt.en = 'Corrected but disabled';
+    reported.clues[0].enabled = false;
+    const saved = editor.saveCategorySet({ expectedRevision: reported.revision, categorySet: reported });
+    expect(saved.clues[0]).toMatchObject({ enabled: false, reported: false });
+    expect(repository.getClue(saved.clues[0].id)).toMatchObject({ enabled: false });
+    expect(editor.list().reports).toEqual([]);
+    expect(saved.eligibility).toEqual({ en: false, et: false });
   });
 
   it('creates and directly edits a complete English-only custom set with immutable identities', () => {

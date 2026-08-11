@@ -142,3 +142,49 @@ Updated artifacts:
 - Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,751,536 bytes, SHA-256 `2E10E43745510D759A2429E5E3DBAA25492103E1876C6126DBDB05EB493463C7`.
 - Packaged executable: 225,442,304 bytes.
 - Packaged seed: 196,608 bytes; SQLite `integrity_check=ok`; schema 2; 1 pack, 39 categories, 183 clues.
+
+## Runtime-rules alignment fix round (2026-08-12)
+
+The second review round aligns the editor and runtime at their remaining seams:
+
+- Final loading now applies effective category enabled metadata before selection, including base-disabled/override-enabled and base-enabled/override-disabled cases. Setup availability, editor eligibility, direct clue reads, and gameplay selection consequently agree.
+- Category forms expose both the category enabled control and an enabled control for every tier. Correcting a report resolves that report without silently re-enabling content the host intentionally left disabled.
+- Failed import commits clear their consumed preview and instruct the host to choose the file again. A fresh preview remains available; the consumed token never appears as retryable.
+- Report actions own stale/service failures, keep the note and draft visible, render only a safe alert, release their synchronous latch, and prevent a duplicate callback from following the success path.
+- Final validation is continuous and field-specific for localized content, accepted variants, classification, provenance, translation status, and enabled state. Invalid drafts never reach the bridge.
+- One shared HTTP(S)-only source URL rule is enforced by renderer validation, strict editor DTOs, main persistence, and CSV import. Non-HTTP schemes and credential-bearing URLs are rejected; valid URLs survive save/export/preview roundtrips.
+- The content E2E installs a main-process HTTP(S) observer before creating any window and an immediate Playwright context route after launch. Both cancel or record non-local requests, and both recorded lists are empty.
+
+Round-two RED exercised 49 focused tests: 17 expected regressions failed and two deliberately rejected report promises exposed unhandled errors before the fixes. Round-two focused GREEN passed 61 tests, followed by explicit Setup/selector coverage for both Final enabled override directions.
+
+Round-two verification:
+
+```text
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm test
+Test Files 49 passed (49)
+Tests 346 passed (346)
+
+npx playwright test tests/e2e/content-editor.spec.ts --workers=1
+1 passed (34.4s)
+
+npx playwright test tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts --workers=1
+2 passed (1.1m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+Final round-two artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,752,599 bytes, SHA-256 `9B4A78B7C92DE643F6BCDC36635481AAF7E4A6D47825FD028A3738B4E6FF98BF`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `16E859AEE63926984E2F1E87FDE0285F83181608702A67AF24A8917C20DB804E`.
+- Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.

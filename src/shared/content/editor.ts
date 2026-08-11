@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import { CSV_COLUMNS } from './csvColumns';
 import { contentIdSchema, contentReportRecordSchema, localizedTextSchema } from './schema';
+import { sourceUrlSchema } from './sourceUrl';
+import { hasValidAcceptedResponseEscapes } from './acceptedResponses';
 
 const text = z.string().trim().min(1);
 const revisionSchema = z.string().min(1);
@@ -9,7 +11,7 @@ const eligibilitySchema = z.strictObject({ en: z.boolean(), et: z.boolean() });
 
 export const editorSourceSchema = z.strictObject({
   title: text,
-  url: z.string().url().nullable(),
+  url: sourceUrlSchema.nullable(),
   license: text.nullable(),
   retrievedAt: z.string().date().nullable(),
   translationStatus: z.enum(['untranslated', 'machine', 'reviewed']).nullable(),
@@ -22,7 +24,10 @@ export const editorClueSchema = z.strictObject({
   prompt: localizedTextSchema,
   response: localizedTextSchema,
   explanation: localizedTextSchema,
-  acceptedResponses: localizedTextSchema.optional(),
+  acceptedResponses: localizedTextSchema.refine((value) =>
+    hasValidAcceptedResponseEscapes(value.en)
+      && (value.et === undefined || hasValidAcceptedResponseEscapes(value.et)),
+  'Accepted responses contain an invalid escape').optional(),
   source: editorSourceSchema,
   enabled: z.boolean(),
   reported: z.boolean(),

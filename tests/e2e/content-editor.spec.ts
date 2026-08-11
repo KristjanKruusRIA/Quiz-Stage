@@ -23,7 +23,7 @@ test('creates, exports, deletes, imports, reports, corrects, and re-enables bili
     application = await electron.launch({
       cwd: process.cwd(),
       executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
-      args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'],
+      args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock', '--quiz-stage-e2e-network-guard'],
     });
     const externalRequests: string[] = [];
     await application.context().route('**/*', async (route) => {
@@ -131,6 +131,9 @@ test('creates, exports, deletes, imports, reports, corrects, and re-enables bili
     await host.getByRole('button', { name: 'E2E R1 1 for 200' }).click();
     await expect(host.locator('.public-clue .clue-prompt')).toHaveText('Corrected English clue 1');
     expect(externalRequests).toEqual([]);
+    expect(await application.evaluate(() =>
+      (globalThis as typeof globalThis & { __quizStageExternalRequests?: string[] }).__quizStageExternalRequests,
+    )).toEqual([]);
   } finally {
     if (application !== null) await application.close();
     rmSync(isolated, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 });

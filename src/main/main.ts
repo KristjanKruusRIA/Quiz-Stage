@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, screen } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, screen, session } from 'electron';
 import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
@@ -16,6 +16,21 @@ declare const MAIN_WINDOW_VITE_NAME: string;
 let application: ReturnType<typeof createApplication> | null = null;
 let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
+const e2eExternalRequests: string[] = [];
+
+function installE2eNetworkGuard(): void {
+  if (!process.argv.includes('--quiz-stage-e2e-network-guard')) return;
+  Object.assign(globalThis, { __quizStageExternalRequests: e2eExternalRequests });
+  session.defaultSession.webRequest.onBeforeRequest(
+    { urls: ['http://*/*', 'https://*/*'] },
+    (details, callback) => {
+      const url = new URL(details.url);
+      const external = !['127.0.0.1', 'localhost'].includes(url.hostname);
+      if (external) e2eExternalRequests.push(url.href);
+      callback({ cancel: external });
+    },
+  );
+}
 
 async function createWindows(): Promise<void> {
   if (application === null) return;
@@ -79,7 +94,10 @@ async function initialize(): Promise<void> {
 if (squirrelStartup) {
   app.quit();
 } else {
-  app.whenReady().then(initialize);
+  app.whenReady().then(() => {
+    installE2eNetworkGuard();
+    return initialize();
+  });
 
   app.on('activate', () => {
     void createWindows();

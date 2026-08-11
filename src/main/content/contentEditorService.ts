@@ -246,6 +246,7 @@ export class ContentEditorService {
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
             source: clue.source.title, enabled: clue.enabled,
           });
+          this.repository.resolveReport(clue.id, this.now());
         }
       } else {
         this.validateCustomCategory(draft);
@@ -261,7 +262,7 @@ export class ContentEditorService {
             clue.acceptedResponses === undefined ? null : JSON.stringify(clue.acceptedResponses),
             storeSource(clue.source), Number(clue.enabled), clue.id, draft.id,
           );
-          if (clue.enabled && clue.id !== null) this.repository.resolveReport(clue.id, this.now());
+          if (clue.id !== null) this.repository.resolveReport(clue.id, this.now());
         }
       }
       return this.requireCategory(draft.id);
@@ -307,13 +308,16 @@ export class ContentEditorService {
           ON CONFLICT(category_set_id) DO UPDATE SET override_json = excluded.override_json,
             updated_at = excluded.updated_at WHERE override_json <> excluded.override_json
         `).run(draft.categoryId, JSON.stringify(metadata), this.now());
-        if (JSON.stringify(draft.clue) !== JSON.stringify(current.clue)) this.repository.saveOverride({
-          id: draft.clue.id, packId: draft.packId, categoryId: draft.categoryId,
-          categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
-          prompt: draft.clue.prompt, response: draft.clue.response, explanation: draft.clue.explanation,
-          ...(draft.clue.acceptedResponses === undefined ? {} : { acceptedResponses: draft.clue.acceptedResponses }),
-          source: draft.clue.source.title, enabled: draft.clue.enabled,
-        });
+        if (JSON.stringify(draft.clue) !== JSON.stringify(current.clue)) {
+          this.repository.saveOverride({
+            id: draft.clue.id, packId: draft.packId, categoryId: draft.categoryId,
+            categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
+            prompt: draft.clue.prompt, response: draft.clue.response, explanation: draft.clue.explanation,
+            ...(draft.clue.acceptedResponses === undefined ? {} : { acceptedResponses: draft.clue.acceptedResponses }),
+            source: draft.clue.source.title, enabled: draft.clue.enabled,
+          });
+          this.repository.resolveReport(draft.clue.id, this.now());
+        }
       } else {
         storeSource(draft.clue.source);
         this.database.prepare('UPDATE category_sets SET difficulty = ?, name_json = ?, macro_topic = ?, enabled = ? WHERE id = ?')
@@ -324,7 +328,7 @@ export class ContentEditorService {
           draft.clue.acceptedResponses === undefined ? null : JSON.stringify(draft.clue.acceptedResponses),
           storeSource(draft.clue.source), Number(draft.clue.enabled), draft.clue.id,
         );
-        if (draft.clue.enabled) this.repository.resolveReport(draft.clue.id, this.now());
+        this.repository.resolveReport(draft.clue.id, this.now());
       }
       return this.requireFinal(draft.id);
     });

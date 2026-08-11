@@ -156,6 +156,12 @@ describe('CSV pack parsing and validation', () => {
     ]));
   });
 
+  it.each(['javascript:alert(1)', 'file:///tmp/source', 'mailto:a@example.com', 'https://user:pass@example.com/source'])
+    ('rejects non-policy source URL %s', (sourceUrl) => {
+      const rows = validRows(); rows[0] = boardRow(1, { source_url: sourceUrl });
+      expect(validatePack(parsePackCsv(csv(rows)))).toContainEqual(expect.objectContaining({ row: 2, column: 'source_url' }));
+    });
+
   it('allows English-only custom content while requiring complete translated rows when marked translated', () => {
     expect(validatePack(parsePackCsv(csv(validRows())))).toEqual([]);
     const translated = validRows();
