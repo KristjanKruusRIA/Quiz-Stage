@@ -87,6 +87,9 @@ const gameTimerSchema = z.strictObject({
   remainingMs: z.number().int().nonnegative(),
   startedAt: timestampSchema.nullable(),
   status: z.enum(['idle', 'running', 'paused', 'expired']),
+}).refine((timer) => timer.remainingMs <= timer.durationMs, {
+  message: 'Timer remaining time cannot exceed its duration',
+  path: ['remainingMs'],
 });
 
 export const gameStateSchema = z.strictObject({

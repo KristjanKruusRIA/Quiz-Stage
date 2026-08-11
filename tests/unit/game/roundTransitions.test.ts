@@ -50,6 +50,29 @@ function playCorrect(state: ReturnType<typeof createGame>, clueId: string, teamI
   return applyGameCommand(locked, { type: 'JudgeResponse', correct: true, at: at + 1 }).state;
 }
 
+function playEveryClueCorrect(state: ReturnType<typeof createGame>, boardIndex: number, teamId: string, firstAt: number) {
+  let nextState = state;
+  let at = firstAt;
+  for (const category of state.boards[boardIndex].categories) {
+    for (const clue of category.clues) {
+      nextState = playCorrect(nextState, clue.id, teamId, at);
+      at += 1000;
+    }
+  }
+  return nextState;
+}
+
+function revealEveryClue(state: ReturnType<typeof createGame>, boardIndex: number) {
+  let nextState = state;
+  for (const category of state.boards[boardIndex].categories) {
+    for (const clue of category.clues) {
+      const opened = applyGameCommand(nextState, { type: 'SelectClue', clueId: clue.id }).state;
+      nextState = applyGameCommand(opened, { type: 'RevealResponse' }).state;
+    }
+  }
+  return nextState;
+}
+
 describe('round transitions', () => {
   it('uses the 200 through 1,000 Round One value ladder', () => {
     const game = createGame(config, selectedBoards, 0);
@@ -75,16 +98,25 @@ describe('round transitions', () => {
   });
 
   it('gives Round Two control to the lowest-scoring team', () => {
-    let game = createGame(config, selectedBoards, 0);
-    let commandIndex = 1;
-    for (const category of game.boards[0].categories) {
-      for (const clue of category.clues) {
-        game = playCorrect(game, clue.id, 't1', commandIndex * 1000);
-        commandIndex += 1;
-      }
-    }
+    const game = playEveryClueCorrect(createGame(config, selectedBoards, 0), 0, 't1', 1000);
 
     expect(game.phase).toBe('round-two-board');
     expect(game.controllingTeamId).toBe('t2');
+  });
+
+  it('breaks a tied-lowest Round Two start with the persisted seed', () => {
+    const game = revealEveryClue(createGame(config, selectedBoards, 0), 0);
+
+    expect(game.scores).toEqual({ t1: 0, t2: 0 });
+    expect(game.phase).toBe('round-two-board');
+    expect(game.controllingTeamId).toBe('t2');
+  });
+
+  it('moves to the Final category after every Double Round clue resolves', () => {
+    const afterRoundOne = playEveryClueCorrect(createGame(config, selectedBoards, 0), 0, 't1', 1000);
+    const afterRoundTwo = playEveryClueCorrect(afterRoundOne, 1, 't1', 100000);
+
+    expect(afterRoundTwo.phase).toBe('final-category');
+    expect(afterRoundTwo.usedClueIds).toHaveLength(60);
   });
 });
