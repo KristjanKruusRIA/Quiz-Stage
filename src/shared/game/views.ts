@@ -26,6 +26,7 @@ export function toPublicGameView(state: GameState): PublicGameView {
   return {
     appVersion: APP_VERSION,
     phase: publicPhase(state),
+    displayMode: state.config.displayMode,
     teams: state.config.teams.map((team) => ({
       id: team.id,
       name: team.name,
@@ -33,6 +34,12 @@ export function toPublicGameView(state: GameState): PublicGameView {
       score: state.scores[team.id],
     })),
     board: board === null ? null : toPublicBoard(board, state, language),
+    timer: { ...state.timer },
+    controllingTeamId: ['round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager', 'daily-double-clue'].includes(state.phase)
+      ? state.controllingTeamId : null,
+    winnerTeamId: state.phase === 'complete' ? state.winnerTeamId : null,
+    tiebreakerTeamIds: state.phase === 'tiebreaker' ? [...state.tiebreakerTeamIds] : [],
+    final: publicFinal(state, language),
     activeClue: activeClue === null || state.activeClue === null || state.phase === 'daily-double-wager'
       ? null
       : state.activeClue.responseRevealed
@@ -48,6 +55,25 @@ export function toPublicGameView(state: GameState): PublicGameView {
           prompt: localize(activeClue.prompt, language),
           responseRevealed: false,
         },
+  };
+}
+
+function publicFinal(state: GameState, language: GameState['config']['language']): PublicGameView['final'] {
+  if (
+    state.finalClue === null
+    || state.finalEligibleTeamIds.length === 0
+    || !['final-category', 'final-wagers', 'final-clue', 'final-reveal', 'complete'].includes(state.phase)
+  ) return null;
+  return {
+    category: state.finalClue.categoryName === undefined
+      ? language === 'et' ? 'Finaal' : 'Final'
+      : localize(state.finalClue.categoryName, language),
+    eligibleTeamIds: [...state.finalEligibleTeamIds],
+    revealed: state.finalRevealedTeamIds.flatMap((teamId) => {
+      const wager = state.finalWagers[teamId];
+      const correct = state.finalJudgments[teamId];
+      return wager === undefined || correct === undefined ? [] : [{ teamId, wager, correct }];
+    }),
   };
 }
 

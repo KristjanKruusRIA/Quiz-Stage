@@ -38,6 +38,7 @@ export interface Clue {
   explanation: LocalizedText;
   source: string;
   acceptedResponses?: LocalizedText;
+  categoryName?: LocalizedText;
 }
 
 export interface Category {
@@ -92,6 +93,7 @@ export interface UndoMutableState {
   finalWagers: Record<string, number>;
   finalRevealOrder: string[];
   finalRevealedTeamIds: string[];
+  finalJudgments: Record<string, boolean>;
   tiebreakerTeamIds: string[];
   usedTiebreakerClueIds: string[];
   suddenDeathClueNumber: number;
@@ -127,6 +129,7 @@ export interface GameState {
   finalEligibleTeamIds: string[];
   finalRevealOrder: string[];
   finalRevealedTeamIds: string[];
+  finalJudgments: Record<string, boolean>;
   tiebreakerClues: Clue[];
   tiebreakerTeamIds: string[];
   usedTiebreakerClueIds: string[];
@@ -194,7 +197,17 @@ export type PublicGamePhase = Exclude<GamePhase, 'daily-double-wager' | 'daily-d
 export interface PublicGameView {
   appVersion: typeof APP_VERSION;
   phase: PublicGamePhase;
+  displayMode: DisplayMode;
   teams: PublicTeamScore[];
   board: PublicBoard | null;
   activeClue: PublicActiveClue | null;
+  timer: GameTimer;
+  controllingTeamId: string | null;
+  winnerTeamId: string | null;
+  tiebreakerTeamIds: string[];
+  final: null | {
+    category: string;
+    eligibleTeamIds: string[];
+    revealed: Array<{ teamId: string; wager: number; correct: boolean }>;
+  };
 }

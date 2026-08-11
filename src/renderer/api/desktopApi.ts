@@ -1,4 +1,5 @@
-import type { GameConfig, HostGameView } from '../../shared/game/types';
+import type { GameCommand } from '../../shared/game/commands';
+import type { GameConfig, HostGameView, PublicGameView } from '../../shared/game/types';
 import type {
   ContentAvailabilityResponse,
   QuizStageApi,
@@ -10,24 +11,38 @@ export type HostDesktopApi = {
       getSetupOptions(): Promise<SetupOptions>;
       checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
       startMatch(config: GameConfig): Promise<void>;
+      dispatch(command: GameCommand): Promise<HostGameView>;
       subscribeToState?: (listener: (view: HostGameView) => void) => () => void;
     };
 
-export type DesktopApi = { surface: 'public' } | HostDesktopApi;
+export type PublicDesktopApi = {
+  surface: 'public';
+  subscribeToState(listener: (view: PublicGameView) => void): () => void;
+};
+
+export type DesktopApi = PublicDesktopApi | HostDesktopApi;
 
 export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
+  const { startMatch, dispatch, checkContentAvailability, getSetupOptions } = bridge;
   if (
-    bridge.startMatch === undefined
-    || bridge.checkContentAvailability === undefined
-    || bridge.getSetupOptions === undefined
-  ) return { surface: 'public' };
+    startMatch === undefined
+    || dispatch === undefined
+    || checkContentAvailability === undefined
+    || getSetupOptions === undefined
+  ) return {
+    surface: 'public',
+    subscribeToState: (listener) => bridge.subscribeToState((view) => {
+      if (!('state' in view)) listener(view);
+    }),
+  };
 
   return {
     surface: 'host',
-    getSetupOptions: () => bridge.getSetupOptions!(),
-    checkContentAvailability: (config) => bridge.checkContentAvailability!(config),
+    getSetupOptions: () => getSetupOptions(),
+    checkContentAvailability: (config) => checkContentAvailability(config),
+    dispatch: (command) => dispatch(command),
     startMatch: async (config) => {
-      await bridge.startMatch!(config);
+      await startMatch(config);
     },
     subscribeToState: (listener) => bridge.subscribeToState((view) => {
       if ('state' in view) listener(view);

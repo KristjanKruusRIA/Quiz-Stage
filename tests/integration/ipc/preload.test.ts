@@ -11,12 +11,15 @@ import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 const publicView = {
   appVersion: '0.1.0' as const,
   phase: 'round-one-board' as const,
+  displayMode: 'single' as const,
   teams: [
     { id: 'a', name: 'Alpha', color: '#E3B341', score: 0 },
     { id: 'b', name: 'Beta', color: '#50A7F5', score: 0 },
   ],
   board: null,
   activeClue: null,
+  timer: { durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle' as const },
+  controllingTeamId: 'a', winnerTeamId: null, tiebreakerTeamIds: [], final: null,
 };
 
 const hostView = {
@@ -36,7 +39,7 @@ const hostView = {
     scores: { a: 0, b: 0 }, controllingTeamId: 'a', activeClue: null,
     timer: { durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle' as const },
     usedClueIds: [], dailyDoubleClueIds: [], dailyDoubleWager: null, finalWagers: {}, finalEligibleTeamIds: [],
-    finalRevealOrder: [], finalRevealedTeamIds: [], tiebreakerClues: [], tiebreakerTeamIds: [],
+    finalRevealOrder: [], finalRevealedTeamIds: [], finalJudgments: {}, tiebreakerClues: [], tiebreakerTeamIds: [],
     usedTiebreakerClueIds: [], suddenDeathClueNumber: 0, winnerTeamId: null, endedIncomplete: false,
     lastClosedClueId: null, lastClosedPhase: null, lastClosedControllingTeamId: null, disabledClueIds: [],
     eventSequence: 0, undoStack: [],

@@ -79,6 +79,9 @@ describe('Final', () => {
     const wagered = apply(state, { type: 'SubmitFinalWager', teamId: 'positive-only', wager: 500 });
     expect(wagered.phase).toBe('final-clue');
     expect(wagered.timer).toEqual({ durationMs: 30_000, remainingMs: 30_000, startedAt: null, status: 'running' });
+    expect(wagered.activeClue).toEqual({
+      clueId: 'final', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+    });
   });
 
   it('rejects an early Final reveal and accepts it after the fixed clock expires', () => {
@@ -103,11 +106,29 @@ describe('Final', () => {
 
     expect(() => apply(state, { type: 'RevealFinalTeam', teamId: 'positive-only', correct: true })).toThrow(GameRuleError);
     state = apply(state, { type: 'RevealFinalTeam', teamId: 'zero', correct: false });
+    expect(state.activeClue?.responseRevealed).toBe(true);
+    expect(state.finalJudgments).toEqual({ zero: false });
     state = apply(state, { type: 'RevealFinalTeam', teamId: 'negative', correct: true });
+    expect(state.finalJudgments).toEqual({ zero: false, negative: true });
     state = apply(state, { type: 'RevealFinalTeam', teamId: 'positive-only', correct: false });
 
     expect(state.phase).toBe('complete');
     expect(state.winnerTeamId).toBe('negative');
+  });
+
+  it('undoes the first Final reveal back to the hidden canonical clue', () => {
+    let state = baseFinalState({ 'positive-only': 3000, zero: 1000, negative: 2000 });
+    state = apply(state, { type: 'SubmitFinalWager', teamId: 'positive-only', wager: 1000 });
+    state = apply(state, { type: 'SubmitFinalWager', teamId: 'zero', wager: 1000 });
+    state = apply(state, { type: 'SubmitFinalWager', teamId: 'negative', wager: 1000 });
+    tickTimer(state, 1_000); tickTimer(state, 31_000);
+    state = apply(state, { type: 'RevealFinalTeam', teamId: 'zero', correct: false });
+
+    const undone = apply(state, { type: 'UndoLast' });
+    expect(undone.phase).toBe('final-clue');
+    expect(undone.finalRevealedTeamIds).toEqual([]);
+    expect(undone.finalJudgments).toEqual({});
+    expect(undone.activeClue?.responseRevealed).toBe(false);
   });
 
   it('skips Final when nobody is eligible and selects the unique high score', () => {

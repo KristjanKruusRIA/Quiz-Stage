@@ -69,6 +69,7 @@ const clueSchema = z.strictObject({
   explanation: localizedTextSchema,
   source: z.string().trim().min(1),
   acceptedResponses: localizedTextSchema.optional(),
+  categoryName: localizedTextSchema.optional(),
 }).superRefine((clue, context) => {
   const isBoardClue = clue.round === 'round-one' || clue.round === 'round-two';
   if (isBoardClue && clue.tier === 0) {
@@ -125,6 +126,7 @@ const undoMutableStateSchema = z.strictObject({
   finalWagers: z.record(identifierSchema, z.number().int().nonnegative()),
   finalRevealOrder: z.array(identifierSchema),
   finalRevealedTeamIds: z.array(identifierSchema),
+  finalJudgments: z.record(identifierSchema, z.boolean()).default({}),
   tiebreakerTeamIds: z.array(identifierSchema),
   usedTiebreakerClueIds: z.array(identifierSchema).default([]),
   suddenDeathClueNumber: z.number().int().nonnegative(),
@@ -160,6 +162,7 @@ export const gameStateSchema = z.strictObject({
   finalEligibleTeamIds: z.array(identifierSchema).default([]),
   finalRevealOrder: z.array(identifierSchema).default([]),
   finalRevealedTeamIds: z.array(identifierSchema).default([]),
+  finalJudgments: z.record(identifierSchema, z.boolean()).default({}),
   tiebreakerClues: z.array(clueSchema).default([]),
   tiebreakerTeamIds: z.array(identifierSchema).default([]),
   usedTiebreakerClueIds: z.array(identifierSchema).default([]),
@@ -172,6 +175,13 @@ export const gameStateSchema = z.strictObject({
   disabledClueIds: z.array(identifierSchema).default([]),
   eventSequence: z.number().int().nonnegative().default(0),
   undoStack: z.array(undoFrameSchema).default([]),
+}).superRefine((state, context) => {
+  const teamIds = new Set(state.config.teams.map((team) => team.id));
+  for (const teamId of Object.keys(state.finalJudgments)) {
+    if (!teamIds.has(teamId) || !state.finalRevealedTeamIds.includes(teamId)) {
+      context.addIssue({ code: 'custom', message: 'Final judgments must belong to already revealed match teams', path: ['finalJudgments', teamId] });
+    }
+  }
 }).transform((state) => ({
   ...state,
   timer: state.timer ?? {
@@ -241,6 +251,7 @@ export const publicGameViewSchema = z.strictObject({
     'round-one-board', 'ordinary-clue', 'round-two-board', 'final-category',
     'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete',
   ]),
+  displayMode: z.enum(['single', 'dual']),
   teams: z.array(z.strictObject({
     id: identifierSchema,
     name: z.string().trim().min(1),
@@ -249,6 +260,19 @@ export const publicGameViewSchema = z.strictObject({
   })).min(2).max(8),
   board: publicBoardSchema.nullable(),
   activeClue: publicActiveClueSchema.nullable(),
+  timer: gameTimerSchema,
+  controllingTeamId: identifierSchema.nullable(),
+  winnerTeamId: identifierSchema.nullable(),
+  tiebreakerTeamIds: z.array(identifierSchema),
+  final: z.strictObject({
+    category: z.string().trim().min(1),
+    eligibleTeamIds: z.array(identifierSchema),
+    revealed: z.array(z.strictObject({
+      teamId: identifierSchema,
+      wager: z.number().int().nonnegative(),
+      correct: z.boolean(),
+    })),
+  }).nullable(),
 });
 
 export const hostStateUpdateSchema = z.strictObject({

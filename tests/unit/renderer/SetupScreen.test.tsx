@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
 import { SetupScreen } from '../../../src/renderer/features/setup/SetupScreen';
+import { hostView } from './game/fixtures';
 
 function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
   return {
@@ -17,6 +18,7 @@ function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
     startMatch: vi.fn(async () => undefined),
     ...overrides,
+    dispatch: overrides.dispatch ?? vi.fn(async () => hostView()),
   };
 }
 

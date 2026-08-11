@@ -218,12 +218,21 @@ function submitFinalWager(state: GameState, teamId: string, wager: number): Game
   const finalRevealOrder = state.finalRevealOrder.length > 0 ? state.finalRevealOrder : sortByScore(state, eligibleIds);
   const finalWagers = { ...state.finalWagers, [teamId]: wager };
   const allCommitted = eligibleIds.every((id) => id in finalWagers);
+  if (allCommitted && state.finalClue === null) {
+    throw new GameRuleError('FINAL_CLUE_REQUIRED', 'A canonical Final clue is required before Final can begin');
+  }
   return {
     ...state,
     phase: allCommitted ? 'final-clue' : 'final-wagers',
     finalEligibleTeamIds: eligibleIds,
     finalRevealOrder,
     finalWagers,
+    activeClue: allCommitted && state.finalClue !== null ? {
+      clueId: state.finalClue.id,
+      lockedOutTeamIds: [],
+      lockedTeamId: null,
+      responseRevealed: false,
+    } : null,
     timer: allCommitted
       ? { durationMs: 30_000, remainingMs: 30_000, startedAt: null, status: 'running' }
       : state.timer,
@@ -246,12 +255,24 @@ function revealFinalTeam(state: GameState, teamId: string, correct: boolean): Ga
     throw new GameRuleError('MISSING_WAGER', 'The revealed team has no committed Final wager');
   }
   const scores = { ...state.scores, [teamId]: applyFinalJudgment(state.scores[teamId], wager, correct) };
+  const finalActiveClue = state.activeClue ?? (state.finalClue === null ? null : {
+    clueId: state.finalClue.id,
+    lockedOutTeamIds: [],
+    lockedTeamId: null,
+    responseRevealed: false,
+  });
+  if (finalActiveClue === null) {
+    throw new GameRuleError('FINAL_CLUE_REQUIRED', 'A canonical Final clue is required before Final can be revealed');
+  }
   const finalRevealedTeamIds = [...state.finalRevealedTeamIds, teamId];
+  const finalJudgments = { ...state.finalJudgments, [teamId]: correct };
   const revealedState = {
     ...state,
     phase: 'final-reveal' as const,
     scores,
     finalRevealedTeamIds,
+    finalJudgments,
+    activeClue: { ...finalActiveClue, responseRevealed: true },
     timer: { ...state.timer, startedAt: null, status: 'paused' as const },
   };
   return finalRevealedTeamIds.length === state.finalRevealOrder.length
@@ -353,6 +374,7 @@ function beginFinalOrResolve(state: GameState): GameState {
     finalEligibleTeamIds: eligibleIds,
     finalRevealOrder: sortByScore(state, eligibleIds),
     finalRevealedTeamIds: [],
+    finalJudgments: {},
     finalWagers: {},
     timer: idleTimer(state.config.clueSeconds * 1000),
   };
@@ -366,7 +388,7 @@ function resolveWinnerOrTiebreaker(state: GameState, participantIds: string[]): 
       ...state,
       phase: 'complete',
       winnerTeamId: leaders[0],
-      activeClue: null,
+      activeClue: state.phase === 'final-reveal' ? state.activeClue : null,
       timer: idleTimer(state.config.clueSeconds * 1000),
     };
   }
@@ -441,6 +463,7 @@ function reopenClue(state: GameState): GameState {
     finalWagers: {},
     finalRevealOrder: [],
     finalRevealedTeamIds: [],
+    finalJudgments: {},
     tiebreakerTeamIds: [],
     usedTiebreakerClueIds: [],
     suddenDeathClueNumber: 0,

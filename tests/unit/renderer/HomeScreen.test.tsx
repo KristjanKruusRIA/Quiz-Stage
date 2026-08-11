@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import App from '../../../src/renderer/App';
 import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
-import type { HostGameView } from '../../../src/shared/game/types';
 import { HomeScreen } from '../../../src/renderer/features/home/HomeScreen';
+import { hostView } from './game/fixtures';
 
 function hostApi(): HostDesktopApi {
   return {
@@ -15,6 +15,7 @@ function hostApi(): HostDesktopApi {
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
     startMatch: vi.fn(async () => undefined),
+    dispatch: vi.fn(async () => hostView()),
   };
 }
 
@@ -37,7 +38,7 @@ describe('HomeScreen', () => {
     await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
     expect(await screen.findByRole('heading', { name: 'New Match' })).toBeInTheDocument();
 
-    rerender(<App api={{ surface: 'public' }} />);
+    rerender(<App api={{ surface: 'public', subscribeToState: vi.fn(() => vi.fn()) }} />);
     expect(screen.getByRole('status')).toHaveTextContent('Waiting for the host');
     expect(screen.queryByRole('button', { name: 'New Match' })).not.toBeInTheDocument();
   });
@@ -46,12 +47,12 @@ describe('HomeScreen', () => {
     const api = hostApi();
     const unsubscribe = vi.fn();
     api.subscribeToState = vi.fn((listener) => {
-      listener({} as HostGameView);
+      listener(hostView());
       return unsubscribe;
     });
     const { unmount } = render(<App api={api} />);
 
-    expect(await screen.findByRole('status')).toHaveTextContent('Match started');
+    expect(await screen.findByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'New Match' })).not.toBeInTheDocument();
     unmount();
     expect(unsubscribe).toHaveBeenCalledOnce();

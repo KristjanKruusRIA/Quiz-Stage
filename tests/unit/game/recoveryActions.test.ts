@@ -99,6 +99,7 @@ describe('host recovery actions', () => {
     expect(state.phase).toBe('round-two-board');
     expect(state.controllingTeamId).toBe('t1');
     expect(state.finalEligibleTeamIds).toEqual([]);
+    expect(state.finalJudgments).toEqual({});
     expect(state.usedClueIds).not.toContain('last-r2');
   });
 
@@ -154,10 +155,12 @@ describe('host recovery actions', () => {
     delete previousSnapshot.usedTiebreakerClueIds;
     delete previousSnapshot.lastClosedPhase;
     delete previousSnapshot.lastClosedControllingTeamId;
+    delete previousSnapshot.finalJudgments;
     const frameState = (previousSnapshot.undoStack as Array<{ state: Record<string, unknown> }>)[0].state;
     delete frameState.usedTiebreakerClueIds;
     delete frameState.lastClosedPhase;
     delete frameState.lastClosedControllingTeamId;
+    delete frameState.finalJudgments;
 
     const result = gameStateSchema.safeParse(previousSnapshot);
     expect(result.success).toBe(true);
@@ -166,6 +169,7 @@ describe('host recovery actions', () => {
         usedTiebreakerClueIds: [],
         lastClosedPhase: null,
         lastClosedControllingTeamId: null,
+        finalJudgments: {},
       });
     }
   });

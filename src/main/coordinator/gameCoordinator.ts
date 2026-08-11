@@ -243,6 +243,9 @@ function replayEvent(state: GameState, event: GameEvent): GameState {
 }
 
 function toCanonicalBoards(selected: Extract<SelectedMatchContent, { ok: true }>): SelectedBoards {
+  if (selected.finalClue.categoryName.en.trim() === '') {
+    throw new Error('FINAL_CATEGORY_REQUIRED');
+  }
   return {
     seed: selected.seed,
     dailyDoubleClueIds: [...selected.dailyDoubleClueIds],
@@ -273,5 +276,6 @@ function toCanonicalClue(clue: Clue): Clue {
     explanation: { ...clue.explanation },
     source: clue.source,
     ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: { ...clue.acceptedResponses } }),
+    ...(clue.categoryName === undefined ? {} : { categoryName: { ...clue.categoryName } }),
   };
 }

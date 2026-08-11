@@ -37,16 +37,18 @@ function dependencies() {
 
 describe('GameCoordinator', () => {
   it('validates setup, selects content, persists the initial snapshot, then publishes both projections', async () => {
-    const { coordinator, contentService, persistenceOrder } = dependencies();
+    const { coordinator, contentService, persistenceOrder, selected } = dependencies();
     const published: string[] = [];
     coordinator.subscribe('host', () => published.push('host'));
     coordinator.subscribe('public', () => published.push('public'));
 
-    await coordinator.startMatch(selectionInput().config);
+    const started = await coordinator.startMatch(selectionInput().config);
 
     expect(contentService.selectForMatch).toHaveBeenCalledWith(selectionInput().config, 'authoritative-seed');
     expect(persistenceOrder).toEqual(['persist']);
     expect(published).toEqual(['host', 'public']);
+    expect(started.state.finalClue?.categoryName).toEqual(selected.finalClue.categoryName);
+    expect(JSON.stringify(coordinator.getPublicView())).not.toContain(selected.finalClue.categoryName.en);
     await expect(coordinator.startMatch({ ...selectionInput().config, teams: [] })).rejects.toThrow();
   });
 
@@ -98,6 +100,31 @@ describe('GameCoordinator', () => {
     expect(recovered?.state.phase).toBe('ordinary-clue');
     expect(recovered?.replayIssue).toEqual({ sequence: 2, reason: 'missing-sequence' });
     expect(JSON.stringify(coordinator.getPublicView())).not.toContain('replayIssue');
+  });
+
+  it('replays a persisted first Final reveal with its canonical response and judgment', async () => {
+    const { coordinator, selected, setResumable } = dependencies();
+    const base = createGame(selectionInput().config, selected, 42);
+    const beforeReveal: GameState = {
+      ...base,
+      phase: 'final-clue',
+      scores: { 'team-1': 100, 'team-2': 0 },
+      finalEligibleTeamIds: ['team-1'],
+      finalRevealOrder: ['team-1'],
+      finalWagers: { 'team-1': 50 },
+      activeClue: { clueId: selected.finalClue.id, lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
+      timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' },
+    };
+    const reveal = applyGameCommand(beforeReveal, { type: 'RevealFinalTeam', teamId: 'team-1', correct: true });
+    setResumable({
+      matchId: beforeReveal.id, snapshotSequence: 1, eventSequence: 0,
+      state: beforeReveal, events: reveal.events, replayIssue: null,
+    });
+
+    const recovered = await coordinator.resume();
+    expect(recovered?.state.finalJudgments).toEqual({ 'team-1': true });
+    expect(recovered?.state.activeClue?.responseRevealed).toBe(true);
+    expect(recovered?.state).toEqual(reveal.state);
   });
 
   it('persists a newly selected canonical tiebreaker before a command can display it publicly', async () => {
