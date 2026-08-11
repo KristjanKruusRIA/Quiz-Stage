@@ -93,19 +93,20 @@ describe('GameCoordinator resumeLatest', () => {
     if (!selected.ok) throw new Error('fixture selection failed');
     const snapshot = createGame(input.config, selected, 100);
     const ended = applyGameCommand(snapshot, { type: 'EndIncompleteMatch' }, 456);
+    const candidate = {
+      matchId: snapshot.id,
+      snapshotSequence: snapshot.eventSequence,
+      recoveredFromSnapshotSequence: snapshot.eventSequence,
+      skippedInvalidSnapshotSequence: null,
+      skippedInvalidSnapshotSequences: [],
+      eventSequence: snapshot.eventSequence,
+      state: snapshot,
+      events: ended.events,
+      replayIssue: null,
+    };
     const repository = {
       persistTransition: vi.fn(),
-      recoverLatest: vi.fn(() => ({
-        matchId: snapshot.id,
-        snapshotSequence: snapshot.eventSequence,
-        recoveredFromSnapshotSequence: snapshot.eventSequence,
-        skippedInvalidSnapshotSequence: null,
-        skippedInvalidSnapshotSequences: [],
-        eventSequence: snapshot.eventSequence,
-        state: snapshot,
-        events: ended.events,
-        replayIssue: null,
-      })),
+      recoverLatest: vi.fn().mockReturnValueOnce(candidate).mockReturnValue(null),
       completeMatch: vi.fn(),
     };
     const coordinator = new GameCoordinator({
@@ -123,6 +124,48 @@ describe('GameCoordinator resumeLatest', () => {
     expect(recovered).toBeNull();
     expect(coordinator.getHostStateUpdate()).toBeNull();
     expect(repository.completeMatch).toHaveBeenCalledWith(snapshot.id, 456, ended.state);
+  });
+
+  it('fails closed without duplicate reconciliation when a repository repeats the same terminal candidate', async () => {
+    const input = selectionInput();
+    const selected = selectMatchContent(input);
+    if (!selected.ok) throw new Error('fixture selection failed');
+    const snapshot = createGame(input.config, selected, 100);
+    const ended = applyGameCommand(snapshot, { type: 'EndIncompleteMatch' }, 456);
+    const candidate = {
+      matchId: snapshot.id,
+      snapshotSequence: snapshot.eventSequence,
+      recoveredFromSnapshotSequence: snapshot.eventSequence,
+      skippedInvalidSnapshotSequence: null,
+      skippedInvalidSnapshotSequences: [],
+      eventSequence: snapshot.eventSequence,
+      state: snapshot,
+      events: ended.events,
+      replayIssue: null,
+    };
+    const repository = {
+      persistTransition: vi.fn(),
+      recoverLatest: vi.fn(() => candidate),
+      completeMatch: vi.fn(),
+    };
+    const coordinator = new GameCoordinator({
+      repository: repository as never,
+      contentService: {
+        selectForMatch: () => selected,
+        selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
+      },
+      now: () => 999,
+    });
+    const published: unknown[] = [];
+    coordinator.subscribe('host', (view) => published.push(view));
+    coordinator.subscribe('public', (view) => published.push(view));
+
+    await expect(coordinator.resumeLatest()).rejects.toThrow('RECOVERY_DID_NOT_PROGRESS');
+
+    expect(repository.recoverLatest).toHaveBeenCalledTimes(2);
+    expect(repository.completeMatch).toHaveBeenCalledTimes(1);
+    expect(coordinator.getHostStateUpdate()).toBeNull();
+    expect(published).toEqual([]);
   });
 
   it.each([

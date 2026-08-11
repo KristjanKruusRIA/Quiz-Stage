@@ -152,12 +152,18 @@ export class GameCoordinator {
   }
 
   async resumeLatest(): Promise<HostGameView | null> {
-    const resumable = this.options.repository.recoverLatest();
-    if (resumable === null) return null;
-    return this.adoptRecovered(resumable, {
-      recoveredFromSnapshotSequence: resumable.recoveredFromSnapshotSequence,
-      skippedInvalidSnapshotSequences: [...resumable.skippedInvalidSnapshotSequences],
-    });
+    const durablyReconciledMatchIds = new Set<string>();
+    while (true) {
+      const resumable = this.options.repository.recoverLatest();
+      if (resumable === null) return null;
+      if (durablyReconciledMatchIds.has(resumable.matchId)) throw new Error('RECOVERY_DID_NOT_PROGRESS');
+      const recovered = this.adoptRecovered(resumable, {
+        recoveredFromSnapshotSequence: resumable.recoveredFromSnapshotSequence,
+        skippedInvalidSnapshotSequences: [...resumable.skippedInvalidSnapshotSequences],
+      });
+      if (recovered !== null) return recovered;
+      durablyReconciledMatchIds.add(resumable.matchId);
+    }
   }
 
   private adoptRecovered(

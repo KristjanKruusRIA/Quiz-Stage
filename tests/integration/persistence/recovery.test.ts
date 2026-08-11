@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { applyGameCommand } from '../../../src/shared/game/engine';
-import { GameCoordinator } from '../../../src/main/coordinator/gameCoordinator';
+import { createApplication } from '../../../src/main/application';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { migrateDatabase } from '../../../src/main/persistence/migrations';
 import { MatchRepository } from '../../../src/main/persistence/matchRepository';
@@ -178,8 +178,12 @@ describe('MatchRepository recovery', () => {
       replayIssue: null,
     }));
 
-    const coordinator = new GameCoordinator({ repository, contentService: {} as never, now: () => 800 });
-    await expect(coordinator.resumeLatest()).resolves.toBeNull();
+    const application = createApplication(database, { now: () => 800 });
+    expect(application.hasResumableMatch()).toBe(true);
+    await expect(application.resumeMatch()).resolves.toBeNull();
+    expect(application.hasResumableMatch()).toBe(false);
+    expect(application.coordinator.getHostStateUpdate()).toBeNull();
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(initial.id)).toBe(3);
     expect(repository.recoverLatest()).toBeNull();
     expect(repository.listHistory()).toEqual([
       expect.objectContaining({
@@ -227,8 +231,12 @@ describe('MatchRepository recovery', () => {
       replayIssue: null,
     }));
 
-    const coordinator = new GameCoordinator({ repository, contentService: {} as never, now: () => 1_000 });
-    await expect(coordinator.resumeLatest()).resolves.toBeNull();
+    const application = createApplication(database, { now: () => 1_000 });
+    expect(application.hasResumableMatch()).toBe(true);
+    await expect(application.resumeMatch()).resolves.toBeNull();
+    expect(application.hasResumableMatch()).toBe(false);
+    expect(application.coordinator.getHostStateUpdate()).toBeNull();
+    expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(initial.id)).toBe(3);
     expect(repository.recoverLatest()).toBeNull();
     expect(repository.listHistory()).toEqual([
       expect.objectContaining({
@@ -239,6 +247,68 @@ describe('MatchRepository recovery', () => {
       }),
     ]);
   });
+
+  it.each(['incomplete', 'winner'] as const)(
+    'reconciles the newest corrupt %s terminal and adopts the older resumable match in the same call',
+    async (terminalKind) => {
+      const older = game(`older-after-${terminalKind}`);
+      const newest = game(`newest-corrupt-${terminalKind}`);
+      repository.persistTransition(older.id, [], older);
+      const beforeTerminal = terminalKind === 'incomplete' ? newest : {
+        ...newest,
+        phase: 'final-clue' as const,
+        scores: { 'team-1': 100, 'team-2': 0 },
+        finalEligibleTeamIds: ['team-1'],
+        finalRevealOrder: ['team-1'],
+        finalWagers: { 'team-1': 50 },
+        activeClue: {
+          clueId: newest.finalClue!.id,
+          lockedOutTeamIds: [],
+          lockedTeamId: null,
+          responseRevealed: false,
+        },
+        timer: { durationMs: 30_000, remainingMs: 0, startedAt: null, status: 'expired' as const },
+      };
+      repository.persistTransition(newest.id, [], beforeTerminal);
+      const terminalAt = terminalKind === 'incomplete' ? 1_500 : 1_600;
+      const terminal = terminalKind === 'incomplete'
+        ? applyGameCommand(beforeTerminal, { type: 'EndIncompleteMatch' }, terminalAt)
+        : applyGameCommand(beforeTerminal, { type: 'RevealFinalTeam', teamId: 'team-1', correct: true }, terminalAt);
+      repository.persistTransition(newest.id, terminal.events, terminal.state, terminalAt);
+      database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+        .run('{}', newest.id, 2);
+      database.prepare(`
+        UPDATE matches SET completed_at = NULL, ended_incomplete = 0, winner_team_id = NULL WHERE id = ?
+      `).run(newest.id);
+      const application = createApplication(database, { now: () => 2_000 });
+      const hostPublications: string[] = [];
+      const publicPublications: string[] = [];
+      application.coordinator.subscribe('host', (view) => hostPublications.push(view.state.id));
+      application.coordinator.subscribe('public', (view) => publicPublications.push(view.phase));
+
+      expect(application.hasResumableMatch()).toBe(true);
+      const resumed = await application.resumeMatch();
+
+      expect(resumed?.state.id).toBe(older.id);
+      expect(application.coordinator.getHostView()?.state.id).toBe(older.id);
+      expect(hostPublications).toEqual([older.id]);
+      expect(publicPublications).toEqual([older.phase]);
+      expect(resumed?.recovery).toEqual({
+        recoveredFromSnapshotSequence: 1,
+        skippedInvalidSnapshotSequences: [],
+      });
+      expect(application.hasResumableMatch()).toBe(true);
+      expect(database.prepare('SELECT COUNT(*) FROM match_snapshots WHERE match_id = ?').pluck().get(newest.id)).toBe(3);
+      expect(application.listHistory()).toEqual([
+        expect.objectContaining({
+          id: newest.id,
+          completedAt: terminalAt,
+          completionState: terminalKind === 'incomplete' ? 'incomplete' : 'complete',
+          winnerTeamId: terminalKind === 'incomplete' ? null : 'team-1',
+        }),
+      ]);
+    },
+  );
 
   it('rejects an invalid recovered terminal state without changing snapshots or completion metadata', () => {
     const initial = game('rejected-terminal-state');
