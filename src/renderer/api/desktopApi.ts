@@ -2,6 +2,7 @@ import type { GameCommand } from '../../shared/game/commands';
 import type { GameConfig, HostGameView, PublicGameView } from '../../shared/game/types';
 import type {
   ContentAvailabilityResponse,
+  MatchHistoryEntry,
   QuizStageApi,
   SetupOptions,
 } from '../../shared/ipc/contracts';
@@ -11,6 +12,9 @@ export type HostDesktopApi = {
       getSetupOptions(): Promise<SetupOptions>;
       checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
       startMatch(config: GameConfig): Promise<void>;
+      hasResumableMatch(): Promise<boolean>;
+      resumeMatch(): Promise<HostGameView | null>;
+      listHistory(): Promise<MatchHistoryEntry[]>;
       dispatch(command: GameCommand): Promise<HostGameView>;
       subscribeToState?: (listener: (view: HostGameView) => void) => () => void;
     };
@@ -23,12 +27,23 @@ export type PublicDesktopApi = {
 export type DesktopApi = PublicDesktopApi | HostDesktopApi;
 
 export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
-  const { startMatch, dispatch, checkContentAvailability, getSetupOptions } = bridge;
+  const {
+    startMatch,
+    dispatch,
+    checkContentAvailability,
+    getSetupOptions,
+    hasResumableMatch,
+    resumeMatch,
+    listHistory,
+  } = bridge;
   if (
     startMatch === undefined
     || dispatch === undefined
     || checkContentAvailability === undefined
     || getSetupOptions === undefined
+    || hasResumableMatch === undefined
+    || resumeMatch === undefined
+    || listHistory === undefined
   ) return {
     surface: 'public',
     subscribeToState: (listener) => bridge.subscribeToState((view) => {
@@ -40,6 +55,9 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     surface: 'host',
     getSetupOptions: () => getSetupOptions(),
     checkContentAvailability: (config) => checkContentAvailability(config),
+    hasResumableMatch: () => hasResumableMatch(),
+    resumeMatch: () => resumeMatch(),
+    listHistory: () => listHistory(),
     dispatch: (command) => dispatch(command),
     startMatch: async (config) => {
       await startMatch(config);

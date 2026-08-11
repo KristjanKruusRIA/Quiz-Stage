@@ -16,18 +16,29 @@ function hostApi(): HostDesktopApi {
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
     startMatch: vi.fn(async () => undefined),
     dispatch: vi.fn(async () => hostView()),
+    hasResumableMatch: vi.fn(async () => false),
+    resumeMatch: vi.fn(async () => null),
+    listHistory: vi.fn(async () => []),
   };
 }
 
 describe('HomeScreen', () => {
-  it('offers New Match while clearly disabling features owned by later tasks', async () => {
+  it('offers current Home actions while clearly disabling features owned by later tasks', async () => {
     const onNewMatch = vi.fn();
-    render(<HomeScreen onNewMatch={onNewMatch} />);
+    const onHistory = vi.fn();
+    render(<HomeScreen
+      onNewMatch={onNewMatch}
+      onResume={vi.fn()}
+      onHistory={onHistory}
+      hasResumableMatch={false}
+    />);
 
     await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
 
     expect(onNewMatch).toHaveBeenCalledOnce();
-    for (const name of ['Resume Match', 'Content Library', 'Match History', 'Settings']) {
+    await userEvent.click(screen.getByRole('button', { name: 'Match History' }));
+    expect(onHistory).toHaveBeenCalledOnce();
+    for (const name of ['Resume Match', 'Content Library', 'Settings']) {
       expect(screen.getByRole('button', { name })).toBeDisabled();
     }
   });

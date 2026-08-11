@@ -27,6 +27,7 @@ function coordinatorHarness() {
   const repository: CoordinatorMatchRepository = {
     persistTransition: vi.fn(),
     loadResumable: vi.fn(() => null),
+    recoverLatest: vi.fn(() => null),
     completeMatch: vi.fn(),
   };
   const contentService: CoordinatorContentService = {

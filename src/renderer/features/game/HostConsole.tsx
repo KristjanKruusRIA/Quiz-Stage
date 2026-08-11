@@ -4,6 +4,7 @@ import type { GameCommand } from '../../../shared/game/commands';
 import type { Clue, HostGameView } from '../../../shared/game/types';
 import { HostTeamControls } from './HostTeamControls';
 import { useGameShortcuts } from './useGameShortcuts';
+import { RecoveryNotice } from '../history/RecoveryNotice';
 
 interface HostConsoleProps {
   view: HostGameView;
@@ -97,7 +98,9 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
 
   return <aside className="host-console" aria-label="Host console">
     <header><h2>Host console</h2><p data-testid="controlling-team">In control: {controlling?.name ?? 'None'}</p></header>
-    {view.replayIssue === null ? null : <p role="alert">Recovered through event {view.replayIssue.sequence}; later data could not be replayed.</p>}
+    {view.recovery === null
+      ? view.replayIssue === null ? null : <p role="alert">Recovered through event {view.replayIssue.sequence}; later data could not be replayed.</p>
+      : <RecoveryNotice {...view.recovery} replayIssue={view.replayIssue} />}
     {error === null ? null : <p role="alert">{error}</p>}
     {clue === null ? null : <section aria-label="Private clue details">
       <p><strong>Response:</strong> {text(clue, 'response', view)}</p>

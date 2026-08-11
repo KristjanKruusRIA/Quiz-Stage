@@ -29,6 +29,9 @@ export function createApplication(database: DatabaseConnection, options: Applica
     coordinator,
     repository,
     startMatch: (config: GameConfig) => coordinator.startMatch(config),
+    hasResumableMatch: () => repository.recoverLatest() !== null,
+    resumeMatch: () => coordinator.resumeLatest(),
+    listHistory: () => repository.listHistory(),
     checkContentAvailability: (config: GameConfig) => contentService.checkAvailability(config),
     getSetupOptions: (automaticDisplayMode: DisplayMode) => ({
       packs: contentRepository.loadLibrary().packs

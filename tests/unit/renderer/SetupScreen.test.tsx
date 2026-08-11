@@ -17,6 +17,9 @@ function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
     startMatch: vi.fn(async () => undefined),
+    hasResumableMatch: vi.fn(async () => false),
+    resumeMatch: vi.fn(async () => null),
+    listHistory: vi.fn(async () => []),
     ...overrides,
     dispatch: overrides.dispatch ?? vi.fn(async () => hostView()),
   };

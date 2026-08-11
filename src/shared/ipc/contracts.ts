@@ -216,6 +216,10 @@ export const hostGameViewSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   state: gameStateSchema,
   replayIssue: recoveryIssueSchema.nullable(),
+  recovery: z.strictObject({
+    recoveredFromSnapshotSequence: z.number().int().positive(),
+    skippedInvalidSnapshotSequences: z.array(z.number().int().positive()),
+  }).nullable(),
 });
 
 const publicActiveClueSchema = z.discriminatedUnion('responseRevealed', [
@@ -355,10 +359,50 @@ export const setupOptionsSchema = z.strictObject({
   automaticDisplayMode: z.enum(['single', 'dual']),
 });
 
+export const noArgsSchema = z.undefined();
+export const hasResumableMatchSchema = z.boolean();
+
+const matchStandingSchema = z.strictObject({
+  teamId: identifierSchema,
+  name: z.string().trim().min(1),
+  color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
+  score: z.number().int(),
+  rank: z.number().int().positive(),
+});
+
+export const matchHistoryEntrySchema = z.strictObject({
+  id: identifierSchema,
+  startedAt: timestampSchema,
+  completedAt: timestampSchema,
+  durationMs: timestampSchema,
+  completionState: z.enum(['complete', 'incomplete']),
+  language: z.enum(['en', 'et']),
+  difficulty: z.enum(['easy', 'medium', 'hard']),
+  packIds: z.array(identifierSchema).min(1),
+  seed: z.string(),
+  teams: z.array(teamSchema).min(2).max(8),
+  standings: z.array(matchStandingSchema).min(2).max(8),
+  winnerTeamId: identifierSchema.nullable(),
+}).superRefine((entry, context) => {
+  const teamIds = new Set(entry.teams.map((team) => team.id));
+  const standingIds = entry.standings.map((standing) => standing.teamId);
+  if (new Set(standingIds).size !== standingIds.length
+    || standingIds.some((teamId) => !teamIds.has(teamId))
+    || standingIds.length !== teamIds.size) {
+    context.addIssue({ code: 'custom', message: 'History standings must contain every match team exactly once' });
+  }
+  if (entry.winnerTeamId !== null && !teamIds.has(entry.winnerTeamId)) {
+    context.addIssue({ code: 'custom', message: 'History winner must be a match team' });
+  }
+});
+
+export const matchHistorySchema = z.array(matchHistoryEntrySchema);
+
 export type HostStateUpdate = z.infer<typeof hostStateUpdateSchema>;
 export type PublicStateUpdate = z.infer<typeof publicStateUpdateSchema>;
 export type ContentAvailabilityResponse = z.infer<typeof contentAvailabilitySchema>;
 export type SetupOptions = z.infer<typeof setupOptionsSchema> & { automaticDisplayMode: DisplayMode };
+export type MatchHistoryEntry = z.infer<typeof matchHistoryEntrySchema>;
 
 export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
 export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameCommand;
@@ -370,6 +414,9 @@ export interface QuizStageApi {
   startMatch?: (config: GameConfig) => Promise<HostGameView>;
   checkContentAvailability?: (config: GameConfig) => Promise<ContentAvailabilityResponse>;
   getSetupOptions?: () => Promise<SetupOptions>;
+  hasResumableMatch?: () => Promise<boolean>;
+  resumeMatch?: () => Promise<HostGameView | null>;
+  listHistory?: () => Promise<MatchHistoryEntry[]>;
   subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
 }
 

@@ -7,14 +7,23 @@ import type {
   LocalizedText,
   PublicBoard,
   PublicGameView,
+  RecoveryMetadata,
   RecoveryIssue,
 } from './types';
 
-export function toHostGameView(state: GameState, replayIssue: RecoveryIssue | null): HostGameView {
+export function toHostGameView(
+  state: GameState,
+  replayIssue: RecoveryIssue | null,
+  recovery: RecoveryMetadata | null = null,
+): HostGameView {
   return {
     appVersion: APP_VERSION,
     state: structuredClone(state),
     replayIssue: replayIssue === null ? null : { ...replayIssue },
+    recovery: recovery === null ? null : {
+      recoveredFromSnapshotSequence: recovery.recoveredFromSnapshotSequence,
+      skippedInvalidSnapshotSequences: [...recovery.skippedInvalidSnapshotSequences],
+    },
   };
 }
 

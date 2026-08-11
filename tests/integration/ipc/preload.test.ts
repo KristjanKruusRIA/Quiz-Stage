@@ -45,6 +45,7 @@ const hostView = {
     eventSequence: 0, undoStack: [],
   },
   replayIssue: null,
+  recovery: null,
 };
 
 describe('preload quizStage surface', () => {
@@ -60,11 +61,42 @@ describe('preload quizStage surface', () => {
 
     expect(host.dispatch).toBeTypeOf('function');
     expect(publicApi).not.toHaveProperty('dispatch');
+    expect(host.hasResumableMatch).toBeTypeOf('function');
+    expect(host.resumeMatch).toBeTypeOf('function');
+    expect(host.listHistory).toBeTypeOf('function');
+    expect(publicApi).not.toHaveProperty('hasResumableMatch');
+    expect(publicApi).not.toHaveProperty('resumeMatch');
+    expect(publicApi).not.toHaveProperty('listHistory');
     expect(host.subscribeToState).toBeTypeOf('function');
     expect(publicApi.subscribeToState).toBeTypeOf('function');
 
     await host.dispatch!({ type: 'SelectClue', clueId: 'c1' });
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.dispatch, { type: 'SelectClue', clueId: 'c1' });
+  });
+
+  it('strictly parses no-argument recovery and history responses', async () => {
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(async (channel) => {
+        if (channel === IPC_CHANNELS.hasResumableMatch) return true;
+        if (channel === IPC_CHANNELS.resumeMatch) return hostView;
+        if (channel === IPC_CHANNELS.listHistory) return [];
+        throw new Error(`Unexpected channel: ${channel}`);
+      }),
+      on: vi.fn(),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const host = createQuizStageApi('host', ipc);
+
+    await expect(host.hasResumableMatch!()).resolves.toBe(true);
+    await expect(host.resumeMatch!()).resolves.toEqual(hostView);
+    await expect(host.listHistory!()).resolves.toEqual([]);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.hasResumableMatch, undefined);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.resumeMatch, undefined);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.listHistory, undefined);
+
+    vi.mocked(ipc.invoke).mockResolvedValueOnce([{ id: 'invalid-history' }]);
+    await expect(host.listHistory!()).rejects.toThrow();
   });
 
   it('returns an unsubscribe callback that removes exactly its wrapped listener', () => {

@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number }
-  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; now?: () => number; onMute?: () => void };
+  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; now?: () => number; onMute?: () => void; onHome?: () => void };
 
 function presentation(view: PublicGameView, now?: () => number, onSelect?: (tileId: string) => void) {
   if (view.phase === 'round-one-board' || view.phase === 'round-two-board') return <PublicBoard view={view} onSelect={onSelect} />;
@@ -72,5 +72,6 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
       {scores(publicView)}{presentation(publicView, props.now, selectionPending ? undefined : onSelect)}
     </section>
     <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} />
+    {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>Back to Home</button>}
   </main>;
 }

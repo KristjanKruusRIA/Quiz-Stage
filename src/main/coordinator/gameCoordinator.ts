@@ -10,6 +10,7 @@ import type {
   GameState,
   HostGameView,
   PublicGameView,
+  RecoveryMetadata,
   RecoveryIssue,
 } from '../../shared/game/types';
 import { toHostGameView, toPublicGameView } from '../../shared/game/views';
@@ -39,9 +40,16 @@ export interface CoordinatorResumableMatch {
   replayIssue: RecoveryIssue | null;
 }
 
+export interface CoordinatorRecoveredMatch extends CoordinatorResumableMatch {
+  recoveredFromSnapshotSequence: number;
+  skippedInvalidSnapshotSequence: number | null;
+  skippedInvalidSnapshotSequences: number[];
+}
+
 export interface CoordinatorMatchRepository {
   persistTransition(matchId: string, events: GameEvent[], state: GameState): void;
   loadResumable(): CoordinatorResumableMatch | null;
+  recoverLatest(): CoordinatorRecoveredMatch | null;
   completeMatch(matchId: string, completedAt?: number): void;
 }
 
@@ -61,6 +69,7 @@ type PublicSubscriber = (view: PublicGameView, revision: number) => void;
 export class GameCoordinator {
   private state: GameState | null = null;
   private replayIssue: RecoveryIssue | null = null;
+  private recovery: RecoveryMetadata | null = null;
   private readonly hostSubscribers = new Set<HostSubscriber>();
   private readonly publicSubscribers = new Set<PublicSubscriber>();
   private publishing = false;
@@ -101,6 +110,7 @@ export class GameCoordinator {
     this.options.repository.persistTransition(nextState.id, [], nextState);
     this.state = nextState;
     this.replayIssue = null;
+    this.recovery = null;
     this.revision += 1;
     this.scheduleTimer();
     this.publish();
@@ -135,6 +145,22 @@ export class GameCoordinator {
   async resume(): Promise<HostGameView | null> {
     const resumable = this.options.repository.loadResumable();
     if (resumable === null) return null;
+    return this.adoptRecovered(resumable, null);
+  }
+
+  async resumeLatest(): Promise<HostGameView | null> {
+    const resumable = this.options.repository.recoverLatest();
+    if (resumable === null) return null;
+    return this.adoptRecovered(resumable, {
+      recoveredFromSnapshotSequence: resumable.recoveredFromSnapshotSequence,
+      skippedInvalidSnapshotSequences: [...resumable.skippedInvalidSnapshotSequences],
+    });
+  }
+
+  private adoptRecovered(
+    resumable: CoordinatorResumableMatch,
+    recovery: RecoveryMetadata | null,
+  ): HostGameView {
     let state = structuredClone(resumable.state);
     let replayIssue = resumable.replayIssue;
 
@@ -156,11 +182,12 @@ export class GameCoordinator {
 
     this.state = state;
     this.replayIssue = replayIssue;
+    this.recovery = recovery;
     this.revision += 1;
     if (state.phase === 'complete') this.options.repository.completeMatch(state.id, this.now());
     this.scheduleTimer();
     this.publish();
-    return this.getHostView();
+    return this.getHostView()!;
   }
 
   subscribe(surface: 'host', subscriber: HostSubscriber): () => void;
@@ -181,7 +208,7 @@ export class GameCoordinator {
   }
 
   getHostView(): HostGameView | null {
-    return this.state === null ? null : toHostGameView(this.state, this.replayIssue);
+    return this.state === null ? null : toHostGameView(this.state, this.replayIssue, this.recovery);
   }
 
   getPublicView(): PublicGameView | null {
@@ -276,7 +303,7 @@ export class GameCoordinator {
         this.publicationPending = false;
         if (this.state === null) continue;
         const revision = this.revision;
-        const hostView = toHostGameView(this.state, this.replayIssue);
+        const hostView = toHostGameView(this.state, this.replayIssue, this.recovery);
         const publicView = toPublicGameView(this.state);
         for (const subscriber of [...this.hostSubscribers]) {
           this.notify(subscriber, hostView, revision);

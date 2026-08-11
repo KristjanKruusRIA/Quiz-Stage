@@ -12,6 +12,12 @@ export interface ResumableMatch {
   replayIssue: ReplayIssue | null;
 }
 
+export interface RecoveredMatch extends ResumableMatch {
+  recoveredFromSnapshotSequence: number;
+  skippedInvalidSnapshotSequence: number | null;
+  skippedInvalidSnapshotSequences: number[];
+}
+
 export type ReplayIssue = RecoveryIssue;
 
 export interface MatchStanding {
@@ -122,6 +128,10 @@ export class MatchRepository {
   }
 
   loadResumable(): ResumableMatch | null {
+    return this.recoverLatest();
+  }
+
+  recoverLatest(): RecoveredMatch | null {
     const rows = this.database.prepare(`
       SELECT snapshots.match_id, snapshots.sequence, snapshots.event_sequence, snapshots.state_json
       FROM match_snapshots AS snapshots
@@ -130,18 +140,28 @@ export class MatchRepository {
       ORDER BY matches.updated_at DESC, snapshots.sequence DESC, snapshots.match_id DESC
     `).all() as SnapshotRow[];
 
+    let candidateMatchId: string | null = null;
+    let skippedInvalidSnapshotSequences: number[] = [];
     for (const row of rows) {
+      if (candidateMatchId !== row.match_id) {
+        candidateMatchId = row.match_id;
+        skippedInvalidSnapshotSequences = [];
+      }
       const state = this.parseSnapshot(row);
-      const replay = this.readEventsAfter(row);
+      const replay = state === null ? null : this.readEventsAfter(row);
       if (state !== null && replay !== null) {
         return {
           matchId: row.match_id,
           snapshotSequence: row.sequence,
+          recoveredFromSnapshotSequence: row.sequence,
+          skippedInvalidSnapshotSequence: skippedInvalidSnapshotSequences[0] ?? null,
+          skippedInvalidSnapshotSequences: [...skippedInvalidSnapshotSequences],
           eventSequence: row.event_sequence,
           state,
           ...replay,
         };
       }
+      skippedInvalidSnapshotSequences.push(row.sequence);
     }
     return null;
   }

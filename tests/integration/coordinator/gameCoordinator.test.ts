@@ -17,6 +17,7 @@ function dependencies() {
       persistenceOrder.push('persist');
     }),
     loadResumable: vi.fn(() => resumable),
+    recoverLatest: vi.fn(() => null),
     completeMatch: vi.fn(() => persistenceOrder.push('complete')),
   };
   const contentService: CoordinatorContentService = {
@@ -45,6 +46,7 @@ function timerDependencies() {
   const repository: CoordinatorMatchRepository = {
     persistTransition: vi.fn(),
     loadResumable: vi.fn(() => null),
+    recoverLatest: vi.fn(() => null),
     completeMatch: vi.fn(),
   };
   const coordinator = new GameCoordinator({

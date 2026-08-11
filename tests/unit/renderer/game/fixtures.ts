@@ -54,7 +54,7 @@ export function gameState(overrides: Partial<GameState> = {}): GameState {
 }
 
 export function hostView(overrides: Partial<GameState> = {}): HostGameView {
-  return { appVersion: APP_VERSION, state: gameState(overrides), replayIssue: null };
+  return { appVersion: APP_VERSION, state: gameState(overrides), replayIssue: null, recovery: null };
 }
 
 export function publicView(overrides: Partial<GameState> = {}): PublicGameView {

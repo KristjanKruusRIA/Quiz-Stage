@@ -4,6 +4,9 @@ import {
   contentAvailabilitySchema,
   gameConfigSchema,
   hostGameViewSchema,
+  hasResumableMatchSchema,
+  matchHistorySchema,
+  noArgsSchema,
   setupOptionsSchema,
   type HostStateUpdate,
   type PublicStateUpdate,
@@ -34,6 +37,11 @@ interface RegisterIpcOptions {
     checkContentAvailability(config: GameConfig): unknown;
     getSetupOptions(automaticDisplayMode: DisplayMode): unknown;
   };
+  matchAccess?: {
+    hasResumableMatch(): unknown;
+    resumeMatch(): Promise<unknown>;
+    listHistory(): unknown;
+  };
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
   getWindows: () => {
@@ -54,6 +62,7 @@ export function registerIpc({
   ipcMain,
   coordinator,
   setup,
+  matchAccess,
   getAutomaticDisplayMode,
   applyDisplayMode,
   getWindows,
@@ -86,6 +95,34 @@ export function registerIpc({
       return setupOptionsSchema.parse(await setup.getSetupOptions(getAutomaticDisplayMode()));
     });
     setupChannels.push(IPC_CHANNELS.startMatch, IPC_CHANNELS.contentAvailability, IPC_CHANNELS.setupOptions);
+  }
+
+  const matchAccessChannels: string[] = [];
+  if (matchAccess !== undefined) {
+    ipcMain.handle(IPC_CHANNELS.hasResumableMatch, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      return hasResumableMatchSchema.parse(await matchAccess.hasResumableMatch());
+    });
+    ipcMain.handle(IPC_CHANNELS.resumeMatch, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      const value = await matchAccess.resumeMatch();
+      if (value === null) return null;
+      const view = hostGameViewSchema.parse(value);
+      applyDisplayMode?.(view.state.config.displayMode);
+      return view;
+    });
+    ipcMain.handle(IPC_CHANNELS.listHistory, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      return matchHistorySchema.parse(await matchAccess.listHistory());
+    });
+    matchAccessChannels.push(
+      IPC_CHANNELS.hasResumableMatch,
+      IPC_CHANNELS.resumeMatch,
+      IPC_CHANNELS.listHistory,
+    );
   }
 
   let readyHostWebContentsId: number | null = null;
@@ -139,6 +176,7 @@ export function registerIpc({
   return () => {
     ipcMain.removeHandler(IPC_CHANNELS.dispatch);
     for (const channel of setupChannels) ipcMain.removeHandler(channel);
+    for (const channel of matchAccessChannels) ipcMain.removeHandler(channel);
     ipcMain.removeListener(IPC_CHANNELS.hostReady, bootstrapHost);
     ipcMain.removeListener(IPC_CHANNELS.publicReady, bootstrapPublic);
     unsubscribeHost();

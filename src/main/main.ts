@@ -31,6 +31,7 @@ async function createWindows(): Promise<void> {
     ipcMain,
     coordinator: application.coordinator,
     setup: application,
+    matchAccess: application,
     getAutomaticDisplayMode: () => automaticDisplayMode(screen.getAllDisplays().length),
     applyDisplayMode: (displayMode) => windowManager?.create(displayMode),
     getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
@@ -54,7 +55,6 @@ async function initialize(): Promise<void> {
     process.argv.includes('--quiz-stage-e2e-clock'),
     app.isPackaged,
   ));
-  await application.coordinator.resume();
   await createWindows();
 }
 

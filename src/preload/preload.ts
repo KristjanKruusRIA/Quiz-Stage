@@ -7,7 +7,9 @@ import {
   gameCommandSchema,
   gameConfigSchema,
   hostGameViewSchema,
+  hasResumableMatchSchema,
   hostStateUpdateSchema,
+  matchHistorySchema,
   publicStateUpdateSchema,
   setupOptionsSchema,
   type QuizStageApi,
@@ -49,6 +51,16 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     ),
     getSetupOptions: async () => setupOptionsSchema.parse(
       await ipc.invoke(IPC_CHANNELS.setupOptions, undefined),
+    ),
+    hasResumableMatch: async () => hasResumableMatchSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.hasResumableMatch, undefined),
+    ),
+    resumeMatch: async () => {
+      const value = await ipc.invoke(IPC_CHANNELS.resumeMatch, undefined);
+      return value === null ? null : hostGameViewSchema.parse(value);
+    },
+    listHistory: async () => matchHistorySchema.parse(
+      await ipc.invoke(IPC_CHANNELS.listHistory, undefined),
     ),
     subscribeToState,
   };

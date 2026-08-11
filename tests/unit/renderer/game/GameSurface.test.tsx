@@ -14,6 +14,7 @@ function api(dispatch: HostDesktopApi['dispatch']): HostDesktopApi {
   return {
     surface: 'host', dispatch,
     getSetupOptions: vi.fn(), checkContentAvailability: vi.fn(), startMatch: vi.fn(),
+    hasResumableMatch: vi.fn(), resumeMatch: vi.fn(), listHistory: vi.fn(),
   };
 }
 

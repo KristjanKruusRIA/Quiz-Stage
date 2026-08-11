@@ -9,6 +9,7 @@ function api(): HostDesktopApi {
   return {
     surface: 'host', dispatch: vi.fn(async () => hostView()),
     getSetupOptions: vi.fn(), checkContentAvailability: vi.fn(), startMatch: vi.fn(),
+    hasResumableMatch: vi.fn(), resumeMatch: vi.fn(), listHistory: vi.fn(),
   };
 }
 
