@@ -75,26 +75,20 @@ export function selectMatchContent(input: SelectionInput): SelectedMatchContent 
   const roundOneCandidates = eligibleCategorySets(input, 'round-one');
   const roundTwoCandidates = eligibleCategorySets(input, 'round-two');
   const finals = eligibleFinalClues(input);
-  const boards = findCompleteBoards(roundOneCandidates, roundTwoCandidates, input.config.language);
+  const allocation = findBestJointAllocation(roundOneCandidates, roundTwoCandidates, input.config.language);
+  const hasCompleteBoards = allocation.roundOne.length === CATEGORIES_PER_BOARD
+    && allocation.roundTwo.length === CATEGORIES_PER_BOARD;
 
-  if (boards === null || finals.length === 0) {
-    const roundOneAvailable = maximumBoardSize(roundOneCandidates, input.config.language);
-    const roundTwoAvailable = maximumBoardSize(roundTwoCandidates, input.config.language);
-    let roundTwoMissing = CATEGORIES_PER_BOARD - roundTwoAvailable;
-
-    if (roundOneAvailable === CATEGORIES_PER_BOARD && roundTwoAvailable === CATEGORIES_PER_BOARD && boards === null) {
-      roundTwoMissing = crossRoundMissing(roundOneCandidates, roundTwoCandidates, input.config.language);
-    }
-
+  if (!hasCompleteBoards || finals.length === 0) {
     return {
       ok: false,
-      roundOneMissing: CATEGORIES_PER_BOARD - roundOneAvailable,
-      roundTwoMissing,
+      roundOneMissing: CATEGORIES_PER_BOARD - allocation.roundOne.length,
+      roundTwoMissing: CATEGORIES_PER_BOARD - allocation.roundTwo.length,
       finalMissing: finals.length === 0 ? 1 : 0,
     };
   }
 
-  const [roundOneSets, roundTwoSets] = boards;
+  const { roundOne: roundOneSets, roundTwo: roundTwoSets } = allocation;
   const roundOne = createBoard('round-one', input.seed, roundOneSets);
   const roundTwo = createBoard('round-two', input.seed, roundTwoSets);
   const final = finals[0];
@@ -230,95 +224,236 @@ function seededShuffle<T>(values: readonly T[], seed: string): T[] {
   return result;
 }
 
-function findCompleteBoards(
+interface CategoryOption {
+  category: SelectableCategorySet;
+  rank: number;
+  round: Board['round'];
+}
+
+interface NameGroup {
+  options: CategoryOption[];
+}
+
+interface JointAllocation {
+  roundOne: SelectableCategorySet[];
+  roundTwo: SelectableCategorySet[];
+}
+
+interface JointSearchIndex {
+  groups: NameGroup[];
+  roundOneSuffixCounts: number[];
+  roundTwoSuffixCounts: number[];
+  roundOneTopicPositions: Map<string, number[]>;
+  roundTwoTopicPositions: Map<string, number[]>;
+}
+
+function findBestJointAllocation(
   roundOne: readonly SelectableCategorySet[],
   roundTwo: readonly SelectableCategorySet[],
   language: Language,
-): [SelectableCategorySet[], SelectableCategorySet[]] | null {
-  let result: [SelectableCategorySet[], SelectableCategorySet[]] | null = null;
-  visitBoardSelections(roundOne, CATEGORIES_PER_BOARD, language, new Set(), (selectedRoundOne) => {
-    const usedNames = new Set(selectedRoundOne.map((category) => normalizedName(category, language)));
-    const selectedRoundTwo = firstBoardSelection(roundTwo, CATEGORIES_PER_BOARD, language, usedNames);
-    if (selectedRoundTwo === null) return false;
-    result = [selectedRoundOne, selectedRoundTwo];
-    return true;
-  });
-  return result;
-}
+): JointAllocation {
+  const searchIndex = buildJointSearchIndex(roundOne, roundTwo, language);
 
-function firstBoardSelection(
-  candidates: readonly SelectableCategorySet[],
-  size: number,
-  language: Language,
-  excludedNames: ReadonlySet<string>,
-): SelectableCategorySet[] | null {
-  let result: SelectableCategorySet[] | null = null;
-  visitBoardSelections(candidates, size, language, excludedNames, (selection) => {
-    result = selection;
-    return true;
-  });
-  return result;
-}
-
-function visitBoardSelections(
-  candidates: readonly SelectableCategorySet[],
-  size: number,
-  language: Language,
-  excludedNames: ReadonlySet<string>,
-  visitor: (selection: SelectableCategorySet[]) => boolean,
-): boolean {
-  const selected: SelectableCategorySet[] = [];
-  const selectedNames = new Set(excludedNames);
-  const macroCounts = new Map<string, number>();
-
-  function visit(startIndex: number): boolean {
-    if (selected.length === size) return visitor([...selected]);
-    if (candidates.length - startIndex < size - selected.length) return false;
-
-    for (let index = startIndex; index < candidates.length; index += 1) {
-      if (candidates.length - index < size - selected.length) return false;
-      const candidate = candidates[index];
-      const name = normalizedName(candidate, language);
-      const macroCount = macroCounts.get(candidate.macroTopic) ?? 0;
-      if (selectedNames.has(name) || macroCount >= MAX_MACRO_TOPIC_PER_BOARD) continue;
-
-      selected.push(candidate);
-      selectedNames.add(name);
-      macroCounts.set(candidate.macroTopic, macroCount + 1);
-      if (visit(index + 1)) return true;
-      selected.pop();
-      selectedNames.delete(name);
-      if (macroCount === 0) macroCounts.delete(candidate.macroTopic);
-      else macroCounts.set(candidate.macroTopic, macroCount);
+  // Shortages maximize total fill, then prefer filling Round One before Round Two.
+  for (let total = CATEGORIES_PER_BOARD * 2; total >= 0; total -= 1) {
+    const maximumRoundOne = Math.min(CATEGORIES_PER_BOARD, total);
+    const minimumRoundOne = Math.max(0, total - CATEGORIES_PER_BOARD);
+    for (let roundOneSize = maximumRoundOne; roundOneSize >= minimumRoundOne; roundOneSize -= 1) {
+      const allocation = findJointAllocation(searchIndex, roundOneSize, total - roundOneSize);
+      if (allocation !== null) return allocation;
     }
+  }
+
+  return { roundOne: [], roundTwo: [] };
+}
+
+function buildJointSearchIndex(
+  roundOne: readonly SelectableCategorySet[],
+  roundTwo: readonly SelectableCategorySet[],
+  language: Language,
+): JointSearchIndex {
+  const groupsByName = new Map<string, Map<string, CategoryOption>>();
+
+  function addCandidates(candidates: readonly SelectableCategorySet[], round: Board['round']): void {
+    candidates.forEach((category, rank) => {
+      const name = normalizedName(category, language);
+      const options = groupsByName.get(name) ?? new Map<string, CategoryOption>();
+      const dominanceKey = `${round}\u0000${category.macroTopic}`;
+      if (!options.has(dominanceKey)) options.set(dominanceKey, { category, rank, round });
+      groupsByName.set(name, options);
+    });
+  }
+
+  addCandidates(roundOne, 'round-one');
+  addCandidates(roundTwo, 'round-two');
+
+  const groups = [...groupsByName.values()].map((options) => ({
+    options: [...options.values()].sort(compareOptions),
+  }));
+  const roundOneSuffixCounts = buildSuffixCounts(groups, 'round-one');
+  const roundTwoSuffixCounts = buildSuffixCounts(groups, 'round-two');
+
+  return {
+    groups,
+    roundOneSuffixCounts,
+    roundTwoSuffixCounts,
+    roundOneTopicPositions: buildTopicPositions(groups, 'round-one'),
+    roundTwoTopicPositions: buildTopicPositions(groups, 'round-two'),
+  };
+}
+
+function compareOptions(left: CategoryOption, right: CategoryOption): number {
+  if (left.round !== right.round) return left.round === 'round-one' ? -1 : 1;
+  return left.rank - right.rank || left.category.id.localeCompare(right.category.id);
+}
+
+function buildSuffixCounts(groups: readonly NameGroup[], round: Board['round']): number[] {
+  const result = Array.from({ length: groups.length + 1 }, () => 0);
+  for (let index = groups.length - 1; index >= 0; index -= 1) {
+    result[index] = result[index + 1] + (groups[index].options.some((option) => option.round === round) ? 1 : 0);
+  }
+  return result;
+}
+
+function buildTopicPositions(groups: readonly NameGroup[], round: Board['round']): Map<string, number[]> {
+  const result = new Map<string, number[]>();
+  groups.forEach((group, groupIndex) => {
+    const topics = new Set(group.options
+      .filter((option) => option.round === round)
+      .map((option) => option.category.macroTopic));
+    for (const topic of topics) {
+      const positions = result.get(topic) ?? [];
+      positions.push(groupIndex);
+      result.set(topic, positions);
+    }
+  });
+  return result;
+}
+
+function findJointAllocation(
+  searchIndex: JointSearchIndex,
+  targetRoundOne: number,
+  targetRoundTwo: number,
+): JointAllocation | null {
+  const selectedRoundOne: CategoryOption[] = [];
+  const selectedRoundTwo: CategoryOption[] = [];
+  const roundOneMacroCounts = new Map<string, number>();
+  const roundTwoMacroCounts = new Map<string, number>();
+  const failedStates = new Set<string>();
+
+  function visit(groupIndex: number, roundOneRemaining: number, roundTwoRemaining: number): boolean {
+    if (roundOneRemaining === 0 && roundTwoRemaining === 0) return true;
+    if (!canStillFill(
+      searchIndex,
+      groupIndex,
+      roundOneRemaining,
+      roundTwoRemaining,
+      roundOneMacroCounts,
+      roundTwoMacroCounts,
+    )) return false;
+
+    const stateKey = selectionStateKey(
+      groupIndex,
+      roundOneRemaining,
+      roundTwoRemaining,
+      roundOneMacroCounts,
+      roundTwoMacroCounts,
+    );
+    if (failedStates.has(stateKey)) return false;
+
+    const group = searchIndex.groups[groupIndex];
+    for (const option of group.options) {
+      const remaining = option.round === 'round-one' ? roundOneRemaining : roundTwoRemaining;
+      const macroCounts = option.round === 'round-one' ? roundOneMacroCounts : roundTwoMacroCounts;
+      const selected = option.round === 'round-one' ? selectedRoundOne : selectedRoundTwo;
+      const macroCount = macroCounts.get(option.category.macroTopic) ?? 0;
+      if (remaining === 0 || macroCount >= MAX_MACRO_TOPIC_PER_BOARD) continue;
+
+      selected.push(option);
+      macroCounts.set(option.category.macroTopic, macroCount + 1);
+      const found = visit(
+        groupIndex + 1,
+        roundOneRemaining - (option.round === 'round-one' ? 1 : 0),
+        roundTwoRemaining - (option.round === 'round-two' ? 1 : 0),
+      );
+      if (found) return true;
+      selected.pop();
+      restoreMacroCount(macroCounts, option.category.macroTopic, macroCount);
+    }
+
+    if (visit(groupIndex + 1, roundOneRemaining, roundTwoRemaining)) return true;
+    failedStates.add(stateKey);
     return false;
   }
 
-  return visit(0);
+  if (!visit(0, targetRoundOne, targetRoundTwo)) return null;
+  return {
+    roundOne: selectedRoundOne.sort((left, right) => left.rank - right.rank).map((option) => option.category),
+    roundTwo: selectedRoundTwo.sort((left, right) => left.rank - right.rank).map((option) => option.category),
+  };
 }
 
-function maximumBoardSize(candidates: readonly SelectableCategorySet[], language: Language): number {
-  for (let size = CATEGORIES_PER_BOARD; size > 0; size -= 1) {
-    if (firstBoardSelection(candidates, size, language, new Set()) !== null) return size;
-  }
-  return 0;
+function canStillFill(
+  searchIndex: JointSearchIndex,
+  groupIndex: number,
+  roundOneRemaining: number,
+  roundTwoRemaining: number,
+  roundOneMacroCounts: ReadonlyMap<string, number>,
+  roundTwoMacroCounts: ReadonlyMap<string, number>,
+): boolean {
+  if (searchIndex.groups.length - groupIndex < roundOneRemaining + roundTwoRemaining) return false;
+  if (searchIndex.roundOneSuffixCounts[groupIndex] < roundOneRemaining) return false;
+  if (searchIndex.roundTwoSuffixCounts[groupIndex] < roundTwoRemaining) return false;
+  return macroCapacity(searchIndex.roundOneTopicPositions, groupIndex, roundOneMacroCounts) >= roundOneRemaining
+    && macroCapacity(searchIndex.roundTwoTopicPositions, groupIndex, roundTwoMacroCounts) >= roundTwoRemaining;
 }
 
-function crossRoundMissing(
-  roundOne: readonly SelectableCategorySet[],
-  roundTwo: readonly SelectableCategorySet[],
-  language: Language,
+function macroCapacity(
+  topicPositions: ReadonlyMap<string, number[]>,
+  groupIndex: number,
+  macroCounts: ReadonlyMap<string, number>,
 ): number {
-  for (let roundTwoSize = CATEGORIES_PER_BOARD - 1; roundTwoSize > 0; roundTwoSize -= 1) {
-    let found = false;
-    visitBoardSelections(roundOne, CATEGORIES_PER_BOARD, language, new Set(), (selectedRoundOne) => {
-      const usedNames = new Set(selectedRoundOne.map((category) => normalizedName(category, language)));
-      found = firstBoardSelection(roundTwo, roundTwoSize, language, usedNames) !== null;
-      return found;
-    });
-    if (found) return CATEGORIES_PER_BOARD - roundTwoSize;
+  let capacity = 0;
+  for (const [topic, positions] of topicPositions) {
+    const available = positions.length - lowerBound(positions, groupIndex);
+    capacity += Math.min(
+      available,
+      Math.max(0, MAX_MACRO_TOPIC_PER_BOARD - (macroCounts.get(topic) ?? 0)),
+    );
   }
-  return CATEGORIES_PER_BOARD;
+  return capacity;
+}
+
+function lowerBound(values: readonly number[], target: number): number {
+  let low = 0;
+  let high = values.length;
+  while (low < high) {
+    const middle = Math.floor((low + high) / 2);
+    if (values[middle] < target) low = middle + 1;
+    else high = middle;
+  }
+  return low;
+}
+
+function selectionStateKey(
+  groupIndex: number,
+  roundOneRemaining: number,
+  roundTwoRemaining: number,
+  roundOneMacroCounts: ReadonlyMap<string, number>,
+  roundTwoMacroCounts: ReadonlyMap<string, number>,
+): string {
+  return JSON.stringify([
+    groupIndex,
+    roundOneRemaining,
+    roundTwoRemaining,
+    [...roundOneMacroCounts].sort(([left], [right]) => left.localeCompare(right)),
+    [...roundTwoMacroCounts].sort(([left], [right]) => left.localeCompare(right)),
+  ]);
+}
+
+function restoreMacroCount(macroCounts: Map<string, number>, topic: string, previousCount: number): void {
+  if (previousCount === 0) macroCounts.delete(topic);
+  else macroCounts.set(topic, previousCount);
 }
 
 function normalizedName(category: SelectableCategorySet, language: Language): string {

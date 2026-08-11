@@ -28,6 +28,15 @@ function maxMacroTopicCount(match: SelectedMatch, boardIndex: number): number {
   return Math.max(...Object.values(counts));
 }
 
+function namedSet(
+  id: string,
+  round: 'round-one' | 'round-two',
+  name: string,
+  macroTopic = `topic-${name}`,
+) {
+  return categorySet(id, round, { name: { en: name, et: name }, macroTopic });
+}
+
 describe('deterministic board selection', () => {
   it('produces repeatable random values for the same persisted seed', () => {
     const first = createSeededRandom('persisted-seed');
@@ -114,6 +123,53 @@ describe('deterministic board selection', () => {
     }));
 
     expect(result).toEqual({ ok: false, roundOneMissing: 3, roundTwoMissing: 1, finalMissing: 1 });
+  });
+
+  it('reports jointly feasible shortages when category names overlap across rounds', () => {
+    const result = selectMatchContent(selectionInput({
+      categorySets: [
+        ...['A', 'B', 'C', 'D', 'E'].map((name) => namedSet(`r1-${name}`, 'round-one', name)),
+        ...['A', 'B', 'C', 'D', 'E', 'F'].map((name) => namedSet(`r2-${name}`, 'round-two', name)),
+      ],
+    }));
+
+    expect(result).toEqual({ ok: false, roundOneMissing: 1, roundTwoMissing: 5, finalMissing: 0 });
+    expect(result).not.toHaveProperty('boards');
+  });
+
+  it('computes joint shortage counts under both macro caps and cross-round name conflicts', () => {
+    const result = selectMatchContent(selectionInput({
+      categorySets: [
+        ...['A', 'B', 'C'].map((name) => namedSet(`r1-${name}`, 'round-one', name, 'shared-one')),
+        ...['D', 'E'].map((name) => namedSet(`r1-${name}`, 'round-one', name, 'shared-two')),
+        ...['A', 'B', 'C', 'D', 'E', 'F'].map((name) => namedSet(`r2-${name}`, 'round-two', name)),
+      ],
+    }));
+
+    expect(result).toEqual({ ok: false, roundOneMissing: 2, roundTwoMissing: 4, finalMissing: 0 });
+  });
+
+  it('bounds conflict search after pruning hundreds of dominated candidates', () => {
+    let normalizedNameReads = 0;
+    const candidates = Array.from({ length: 400 }, (_, index) => {
+      const round = index < 200 ? 'round-one' as const : 'round-two' as const;
+      const name = `Shared ${index % 5}`;
+      const localizedName = { et: name } as { en: string; et: string };
+      Object.defineProperty(localizedName, 'en', {
+        enumerable: true,
+        get() {
+          normalizedNameReads += 1;
+          if (normalizedNameReads > 2_000) throw new Error('Joint search exceeded the deterministic name-read bound');
+          return name;
+        },
+      });
+      return categorySet(`stress-${index}`, round, { name: localizedName, macroTopic: 'one-topic' });
+    });
+
+    const result = selectMatchContent(selectionInput({ categorySets: candidates }));
+
+    expect(result).toEqual({ ok: false, roundOneMissing: 4, roundTwoMissing: 4, finalMissing: 0 });
+    expect(normalizedNameReads).toBeLessThanOrEqual(2_000);
   });
 
   it('returns byte-equivalent selected content for byte-equivalent input and seed', () => {
