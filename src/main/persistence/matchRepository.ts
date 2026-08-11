@@ -6,7 +6,9 @@ import type { DatabaseConnection } from './database';
 export interface ResumableMatch {
   matchId: string;
   snapshotSequence: number;
+  eventSequence: number;
   state: GameState;
+  events: GameEvent[];
 }
 
 export interface MatchStanding {
@@ -35,7 +37,14 @@ export interface MatchHistoryEntry {
 interface SnapshotRow {
   match_id: string;
   sequence: number;
+  event_sequence: number;
   state_json: string;
+}
+
+interface EventRow {
+  match_id: string;
+  sequence: number;
+  event_json: string;
 }
 
 interface HistoryRow extends SnapshotRow {
@@ -84,9 +93,9 @@ export class MatchRepository {
 
       const snapshotSequence = this.nextSequence('match_snapshots', matchId);
       this.database.prepare(`
-        INSERT INTO match_snapshots (match_id, sequence, created_at, state_json)
-        VALUES (?, ?, ?, ?)
-      `).run(matchId, snapshotSequence, persistedAt, stateJson);
+        INSERT INTO match_snapshots (match_id, sequence, event_sequence, created_at, state_json)
+        VALUES (?, ?, ?, ?, ?)
+      `).run(matchId, snapshotSequence, eventSequence - 1, persistedAt, stateJson);
     })();
   }
 
@@ -103,7 +112,7 @@ export class MatchRepository {
 
   loadResumable(): ResumableMatch | null {
     const rows = this.database.prepare(`
-      SELECT snapshots.match_id, snapshots.sequence, snapshots.state_json
+      SELECT snapshots.match_id, snapshots.sequence, snapshots.event_sequence, snapshots.state_json
       FROM match_snapshots AS snapshots
       JOIN matches ON matches.id = snapshots.match_id
       WHERE matches.completed_at IS NULL
@@ -112,7 +121,16 @@ export class MatchRepository {
 
     for (const row of rows) {
       const state = this.parseSnapshot(row);
-      if (state !== null) return { matchId: row.match_id, snapshotSequence: row.sequence, state };
+      const events = this.readEventsAfter(row);
+      if (state !== null && events !== null) {
+        return {
+          matchId: row.match_id,
+          snapshotSequence: row.sequence,
+          eventSequence: row.event_sequence,
+          state,
+          events,
+        };
+      }
     }
     return null;
   }
@@ -134,7 +152,7 @@ export class MatchRepository {
   listHistory(): MatchHistoryEntry[] {
     const rows = this.database.prepare(`
       SELECT matches.id AS match_id, matches.started_at, matches.completed_at,
-             snapshots.sequence, snapshots.state_json
+             snapshots.sequence, snapshots.event_sequence, snapshots.state_json
       FROM matches
       JOIN match_snapshots AS snapshots ON snapshots.match_id = matches.id
       WHERE matches.completed_at IS NOT NULL
@@ -168,14 +186,22 @@ export class MatchRepository {
 
   private latestValidSnapshot(matchId: string): ResumableMatch | null {
     const rows = this.database.prepare(`
-      SELECT match_id, sequence, state_json
+      SELECT match_id, sequence, event_sequence, state_json
       FROM match_snapshots
       WHERE match_id = ?
       ORDER BY sequence DESC
     `).all(matchId) as SnapshotRow[];
     for (const row of rows) {
       const state = this.parseSnapshot(row);
-      if (state !== null) return { matchId, snapshotSequence: row.sequence, state };
+      if (state !== null) {
+        return {
+          matchId,
+          snapshotSequence: row.sequence,
+          eventSequence: row.event_sequence,
+          state,
+          events: [],
+        };
+      }
     }
     return null;
   }
@@ -187,6 +213,28 @@ export class MatchRepository {
     } catch {
       return null;
     }
+  }
+
+  private readEventsAfter(snapshot: SnapshotRow): GameEvent[] | null {
+    if (!Number.isInteger(snapshot.event_sequence) || snapshot.event_sequence < 0) return null;
+    const rows = this.database.prepare(`
+      SELECT match_id, sequence, event_json
+      FROM match_events
+      WHERE match_id = ?
+      ORDER BY sequence ASC
+    `).all(snapshot.match_id) as EventRow[];
+    const validLaterEvents: GameEvent[] = [];
+    for (const [index, row] of rows.entries()) {
+      if (row.match_id !== snapshot.match_id || row.sequence !== index + 1) return null;
+      if (row.sequence <= snapshot.event_sequence) continue;
+      try {
+        const event = gameEventSchema.parse(JSON.parse(row.event_json)) as GameEvent;
+        if (event.matchId === snapshot.match_id) validLaterEvents.push(event);
+      } catch {
+        // Invalid events are not replayable.
+      }
+    }
+    return snapshot.event_sequence <= rows.length ? validLaterEvents : null;
   }
 
   private nextSequence(table: 'match_events' | 'match_snapshots', matchId: string): number {

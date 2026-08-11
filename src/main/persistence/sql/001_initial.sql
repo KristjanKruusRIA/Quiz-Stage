@@ -25,6 +25,7 @@ CREATE TABLE match_events (
 CREATE TABLE match_snapshots (
   match_id TEXT NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
   sequence INTEGER NOT NULL,
+  event_sequence INTEGER NOT NULL,
   created_at INTEGER NOT NULL,
   state_json TEXT NOT NULL,
   PRIMARY KEY (match_id, sequence)
@@ -69,14 +70,14 @@ CREATE TABLE clues (
 );
 
 CREATE TABLE content_overrides (
-  clue_id TEXT PRIMARY KEY REFERENCES clues(id) ON DELETE CASCADE,
+  clue_id TEXT PRIMARY KEY REFERENCES clues(id) ON DELETE RESTRICT,
   override_json TEXT NOT NULL,
   updated_at INTEGER NOT NULL
 );
 
 CREATE TABLE content_reports (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  clue_id TEXT NOT NULL REFERENCES clues(id) ON DELETE CASCADE,
+  clue_id TEXT NOT NULL REFERENCES clues(id) ON DELETE RESTRICT,
   match_id TEXT REFERENCES matches(id) ON DELETE SET NULL,
   note TEXT NOT NULL,
   created_at INTEGER NOT NULL,
@@ -84,7 +85,7 @@ CREATE TABLE content_reports (
 );
 
 CREATE TABLE seen_clues (
-  clue_id TEXT NOT NULL REFERENCES clues(id) ON DELETE CASCADE,
+  clue_id TEXT NOT NULL REFERENCES clues(id) ON DELETE RESTRICT,
   match_id TEXT NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
   seen_at INTEGER NOT NULL,
   PRIMARY KEY (clue_id, match_id)

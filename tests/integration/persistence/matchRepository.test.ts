@@ -110,6 +110,28 @@ describe('MatchRepository', () => {
     expect(repository.loadResumable()?.state.id).toBe('older-match');
   });
 
+  it('returns precisely the later events when the newest snapshot is corrupt', () => {
+    const selected = selectedTransition();
+    repository.persistTransition('match-1', selected.events, selected.state);
+    repository.persistTransition('match-1', [], selected.state);
+    repository.persistTransition('match-1', [
+      { id: 'later-timer', matchId: 'match-1', at: 100, type: 'TimerExpired' },
+      { id: 'later-undo', matchId: 'match-1', at: 101, type: 'ActionUndone', eventId: selected.events[0].id },
+    ], selected.state);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{"invalid":true}', 'match-1', 3);
+
+    const resumed = repository.loadResumable();
+
+    expect(resumed?.snapshotSequence).toBe(2);
+    expect(resumed?.eventSequence).toBe(1);
+    expect(resumed?.state).toEqual(selected.state);
+    expect(resumed?.events).toEqual([
+      { id: 'later-timer', matchId: 'match-1', at: 100, type: 'TimerExpired' },
+      { id: 'later-undo', matchId: 'match-1', at: 101, type: 'ActionUndone', eventId: selected.events[0].id },
+    ]);
+  });
+
   it('orders resumable matches by persistence even when engine event timestamps tie', () => {
     const older = selectedTransition('z-older-match');
     const newer = selectedTransition('a-newer-match');
