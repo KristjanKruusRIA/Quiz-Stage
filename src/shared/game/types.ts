@@ -76,6 +76,7 @@ export interface GameState {
   appVersion: typeof GAME_STATE_VERSION;
   id: string;
   config: GameConfig;
+  seed: string;
   phase: GamePhase;
   boards: Board[];
   finalClue: Clue | null;
@@ -83,6 +84,7 @@ export interface GameState {
   controllingTeamId: string | null;
   activeClue: ActiveClue | null;
   usedClueIds: string[];
+  dailyDoubleClueIds: string[];
   finalWagers: Record<string, number>;
 }
 

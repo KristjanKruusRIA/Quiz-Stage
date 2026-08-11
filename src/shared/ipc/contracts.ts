@@ -86,6 +86,7 @@ export const gameStateSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   id: identifierSchema,
   config: gameConfigSchema,
+  seed: z.string(),
   phase: z.enum([
     'round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager',
     'daily-double-clue', 'final-category', 'final-wagers', 'final-clue',
@@ -101,6 +102,7 @@ export const gameStateSchema = z.strictObject({
     responseRevealed: z.boolean(),
   }).nullable(),
   usedClueIds: z.array(identifierSchema),
+  dailyDoubleClueIds: z.array(identifierSchema),
   finalWagers: z.record(identifierSchema, z.number().int().nonnegative()),
 });
 
