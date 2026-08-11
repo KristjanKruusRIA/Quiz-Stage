@@ -71,3 +71,38 @@ exit 0
 ## Concerns
 
 `npm install` reports pre-existing transitive audit findings (3 low, 21 high, 1 critical). Task 9 did not run an unrelated dependency upgrade or audit fix.
+
+## Fix round 1: add-after-remove colors and start failure handling
+
+### RED evidence
+
+```text
+npm run test:run -- tests/unit/renderer/SetupScreen.test.tsx
+Test Files 1 failed (1); Tests 4 failed | 5 passed; Errors 2; exit 1
+```
+
+The regressions proved that add/remove/add selected `#57C785` twice, both persistence and `CONTENT_SHORTAGE` start failures escaped as unhandled rejections without an alert, and a deliberately reentrant form submission invoked `startMatch` twice before React committed the disabled state.
+
+### Fix
+
+- New teams now receive a fresh UUID, the first currently unused palette color, and an unused default team name. Existing team colors and identities are never rewritten.
+- Submit uses a synchronous in-flight ref before calling the desktop API, closing the reentrant gap while retaining the visible submitting state.
+- Rejected starts remain on Setup and re-check authoritative availability. A refreshed shortage replaces the previous availability result and renders its exact counts; an available or failed refresh renders concise English/Estonian guidance without exception details. Config-keyed errors disappear on meaningful edits and every new attempt clears the prior error.
+
+### GREEN verification
+
+```text
+npm run test:run -- tests/unit/renderer/SetupScreen.test.tsx
+Test Files 1 passed (1); Tests 9 passed (9); exit 0
+
+npm run test:run
+Test Files 25 passed (25); Tests 144 passed (144); exit 0
+
+npm run typecheck
+tsc --noEmit; exit 0
+
+npm run build
+Electron Forge packaged x64 on win32; exit 0
+```
+
+The final lint, package artifact, and diff/working-tree evidence was re-run at the commit gate after the test-only lint correction.

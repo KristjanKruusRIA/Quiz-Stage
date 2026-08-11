@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { HostDesktopApi } from '../../api/desktopApi';
 import type { DisplayMode, GameConfig, Team } from '../../../shared/game/types';
 import { gameConfigSchema, type ContentAvailabilityResponse, type SetupOptions } from '../../../shared/ipc/contracts';
@@ -23,6 +23,7 @@ const copy = {
     emptyNames: 'Enter a name for every team.', duplicateNames: 'Team names must be unique.',
     duplicateColors: 'Team colors must be unique.', choosePack: 'Select at least one content pack.',
     loadError: 'Setup options could not be loaded.', availabilityError: 'Content availability could not be checked.',
+    startFailed: 'Match could not be started. Check your setup and try again.',
   },
   et: {
     title: 'Uus mäng', back: 'Tagasi', teams: 'Võistkonnad', addTeam: 'Lisa võistkond',
@@ -34,15 +35,26 @@ const copy = {
     emptyNames: 'Sisesta igale võistkonnale nimi.', duplicateNames: 'Võistkondade nimed peavad olema erinevad.',
     duplicateColors: 'Võistkondade värvid peavad olema erinevad.', choosePack: 'Vali vähemalt üks sisupakett.',
     loadError: 'Seadistusvalikuid ei saanud laadida.', availabilityError: 'Sisu saadavust ei saanud kontrollida.',
+    startFailed: 'Mängu ei saanud alustada. Kontrolli seadeid ja proovi uuesti.',
   },
 } as const;
 
-function createTeam(index: number): Team {
+function createTeam(currentTeams: readonly Team[]): Team {
+  const usedColors = new Set(currentTeams.map((team) => team.color.toLowerCase()));
+  const color = TEAM_COLORS.find((candidate) => !usedColors.has(candidate.toLowerCase())) ?? TEAM_COLORS[0];
+  const usedNames = new Set(currentTeams.map((team) => team.name.trim().toLocaleLowerCase()));
+  const number = Array.from({ length: 8 }, (_, index) => index + 1)
+    .find((candidate) => !usedNames.has(`team ${candidate}`)) ?? currentTeams.length + 1;
   return {
     id: crypto.randomUUID(),
-    name: `Team ${index + 1}`,
-    color: TEAM_COLORS[index],
+    name: `Team ${number}`,
+    color,
   };
+}
+
+function initialTeams(): Team[] {
+  const first = createTeam([]);
+  return [first, createTeam([first])];
 }
 
 function localValidationMessage(teams: Team[], packIds: string[], language: 'en' | 'et'): string | null {
@@ -64,7 +76,7 @@ function shortageMessage(shortage: Exclude<ContentAvailabilityResponse, { ok: tr
 }
 
 export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
-  const [teams, setTeams] = useState<Team[]>(() => [createTeam(0), createTeam(1)]);
+  const [teams, setTeams] = useState<Team[]>(initialTeams);
   const [language, setLanguage] = useState<'en' | 'et'>('en');
   const [difficulty, setDifficulty] = useState<GameConfig['difficulty']>('medium');
   const [clueSeconds, setClueSeconds] = useState(15);
@@ -77,6 +89,8 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
     result: ContentAvailabilityResponse | 'checking' | 'error';
   } | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [startErrorKey, setStartErrorKey] = useState<string | null>(null);
+  const startInFlight = useRef(false);
   const text = copy[language];
 
   useEffect(() => {
@@ -106,6 +120,7 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   const parsed = useMemo(() => gameConfigSchema.safeParse(candidate), [candidate]);
   const availabilityKey = parsed.success ? JSON.stringify(parsed.data) : null;
   const currentAvailability = availability?.key === availabilityKey ? availability.result : null;
+  const showStartError = startErrorKey !== null && startErrorKey === availabilityKey;
 
   useEffect(() => {
     if (options === null || localMessage !== null || !parsed.success) {
@@ -141,12 +156,24 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
     const validated = gameConfigSchema.safeParse(candidate);
-    if (!canStart || !validated.success) return;
+    if (startInFlight.current || !canStart || !validated.success) return;
+    const key = JSON.stringify(validated.data);
+    startInFlight.current = true;
     setSubmitting(true);
+    setStartErrorKey(null);
     try {
       await api.startMatch(validated.data);
       onStarted?.();
+    } catch {
+      try {
+        const refreshed = await api.checkContentAvailability(validated.data);
+        setAvailability({ key, result: refreshed });
+        if (refreshed.ok) setStartErrorKey(key);
+      } catch {
+        setStartErrorKey(key);
+      }
     } finally {
+      startInFlight.current = false;
       setSubmitting(false);
     }
   };
@@ -164,7 +191,7 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
             <button
               type="button"
               disabled={teams.length >= 8}
-              onClick={() => setTeams((current) => [...current, createTeam(current.length)])}
+              onClick={() => setTeams((current) => [...current, createTeam(current)])}
             >
               {text.addTeam}
             </button>
@@ -228,6 +255,7 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
         {localMessage !== null ? <p role="alert">{localMessage}</p> : null}
         {currentAvailability === 'checking' ? <p role="status">{text.checking}</p> : null}
         {currentAvailability === 'error' ? <p role="alert">{text.availabilityError}</p> : null}
+        {showStartError ? <p role="alert">{text.startFailed}</p> : null}
         {currentAvailability !== null && currentAvailability !== 'checking' && currentAvailability !== 'error' && !currentAvailability.ok
           ? <p role="alert">{shortageMessage(currentAvailability, language)}</p>
           : null}
