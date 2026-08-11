@@ -131,7 +131,7 @@ export class GameCoordinator {
       transition = applyGameCommand(baseState, command, occurrenceAt);
     } catch (error) {
       if (!(error instanceof GameRuleError) || error.code !== 'TIEBREAKER_CLUE_REQUIRED') throw error;
-      baseState = this.persistNextTiebreaker(baseState);
+      baseState = this.appendNextTiebreaker(baseState);
       transition = applyGameCommand(baseState, command, occurrenceAt);
     }
 
@@ -262,7 +262,7 @@ export class GameCoordinator {
     this.cancelTimer();
   }
 
-  private persistNextTiebreaker(state: GameState): GameState {
+  private appendNextTiebreaker(state: GameState): GameState {
     const excludedIds = [
       ...state.boards.flatMap((board) => board.categories.flatMap((category) => category.clues.map((clue) => clue.id))),
       ...(state.finalClue === null ? [] : [state.finalClue.id]),
@@ -276,9 +276,7 @@ export class GameCoordinator {
       excludedIds,
       state.tiebreakerClues.length,
     ));
-    const augmented = { ...state, tiebreakerClues: [...state.tiebreakerClues, clue] };
-    this.options.repository.persistTransition(state.id, [], augmented);
-    return augmented;
+    return { ...state, tiebreakerClues: [...state.tiebreakerClues, clue] };
   }
 
   private cancelTimer(): void {

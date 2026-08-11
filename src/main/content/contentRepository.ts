@@ -77,6 +77,29 @@ interface ReportRow {
   resolved_at: number | null;
 }
 
+interface ClueLookupRow {
+  clue_id: string;
+  category_id: string;
+  pack_id: string;
+  category_round: 'round-one' | 'round-two' | 'final' | 'tiebreaker';
+  difficulty: 'easy' | 'medium' | 'hard';
+  category_name_json: string;
+  category_enabled: number;
+  pack_enabled: number;
+  clue_round: 'round-one' | 'round-two' | 'final' | 'tiebreaker';
+  tier: number;
+  value: number;
+  prompt_json: string;
+  response_json: string;
+  explanation_json: string;
+  accepted_responses_json: string | null;
+  source: string;
+  clue_enabled: number;
+  last_seen_at: number | null;
+  override_json: string | null;
+  has_unresolved_report: number;
+}
+
 export interface PersistedContentLibrary {
   packs: ContentPackRecord[];
   categorySets: ContentCategorySetRecord[];
@@ -109,10 +132,21 @@ export class ContentRepository {
 
   getClue(input: unknown): PersistedClue | null {
     const clueId = contentIdSchema.parse(input);
-    const library = this.loadLibrary();
-    return library.categorySets.flatMap((set) => set.clues).find((clue) => clue.id === clueId)
-      ?? library.finalClues.find((clue) => clue.id === clueId)
-      ?? null;
+    const lookup = this.lookupClue(clueId);
+    if (lookup === null) return null;
+    const { bundled, row } = lookup;
+    const parentEnabled = row.pack_enabled === 1 && row.category_enabled === 1;
+    if (row.override_json === null) {
+      return { ...bundled, enabled: bundled.enabled && parentEnabled && row.has_unresolved_report === 0 };
+    }
+    const override = validateContentOverride(JSON.parse(row.override_json), bundled);
+    const enabled = override.enabled && parentEnabled && row.has_unresolved_report === 0;
+    if (override.round === 'final') {
+      if (bundled.round !== 'final') throw new Error(`Invalid Final override target: ${bundled.id}`);
+      return contentFinalClueSchema.parse({ ...override, enabled, lastSeenAt: bundled.lastSeenAt });
+    }
+    if (bundled.round === 'final') throw new Error(`Invalid board override target: ${bundled.id}`);
+    return contentClueSchema.parse({ ...override, enabled });
   }
 
   isEligible(input: unknown): boolean {
@@ -364,9 +398,93 @@ export class ContentRepository {
   }
 
   private getBundledClue(clueId: string): PersistedClue | null {
-    return this.loadCategorySets(false).flatMap((set) => set.clues).find((clue) => clue.id === clueId)
-      ?? this.loadFinalClues(false).find((clue) => clue.id === clueId)
-      ?? null;
+    return this.lookupClue(clueId)?.bundled ?? null;
+  }
+
+  private lookupClue(clueId: string): { bundled: PersistedClue; row: ClueLookupRow } | null {
+    const row = this.database.prepare(`
+      SELECT
+        clues.id AS clue_id,
+        category_sets.id AS category_id,
+        category_sets.pack_id,
+        category_sets.round AS category_round,
+        category_sets.difficulty,
+        category_sets.name_json AS category_name_json,
+        category_sets.enabled AS category_enabled,
+        content_packs.enabled AS pack_enabled,
+        clues.round AS clue_round,
+        clues.tier,
+        clues.value,
+        clues.prompt_json,
+        clues.response_json,
+        clues.explanation_json,
+        clues.accepted_responses_json,
+        clues.source,
+        clues.enabled AS clue_enabled,
+        MAX(seen_clues.seen_at) AS last_seen_at,
+        content_overrides.override_json,
+        EXISTS (
+          SELECT 1 FROM content_reports
+          WHERE content_reports.clue_id = clues.id
+            AND content_reports.resolved_at IS NULL
+        ) AS has_unresolved_report
+      FROM clues
+      JOIN category_sets ON category_sets.id = clues.category_set_id
+      JOIN content_packs ON content_packs.id = category_sets.pack_id
+      LEFT JOIN seen_clues ON seen_clues.clue_id = clues.id
+      LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+      WHERE clues.id = ?
+      GROUP BY clues.id
+    `).get(clueId) as ClueLookupRow | undefined;
+    if (row === undefined) return null;
+    if (row.category_round === 'final' && row.clue_round === 'final') {
+      return {
+        row,
+        bundled: contentFinalClueSchema.parse({
+          id: row.clue_id,
+          packId: row.pack_id,
+          enabled: row.clue_enabled === 1,
+          difficulty: row.difficulty,
+          categoryId: row.category_id,
+          categoryName: this.parseLocalized(row.category_name_json),
+          round: 'final',
+          tier: row.tier,
+          value: row.value,
+          prompt: this.parseLocalized(row.prompt_json),
+          response: this.parseLocalized(row.response_json),
+          explanation: this.parseLocalized(row.explanation_json),
+          acceptedResponses: row.accepted_responses_json === null
+            ? undefined
+            : this.parseLocalized(row.accepted_responses_json),
+          source: row.source,
+          lastSeenAt: row.last_seen_at,
+        }),
+      };
+    }
+    if (
+      (row.category_round !== 'round-one' && row.category_round !== 'round-two')
+      || row.clue_round !== row.category_round
+    ) {
+      throw new Error(`Unsupported bundled clue structure: ${clueId}`);
+    }
+    return {
+      row,
+      bundled: contentClueSchema.parse({
+        id: row.clue_id,
+        categoryId: row.category_id,
+        round: row.clue_round,
+        tier: row.tier,
+        value: row.value,
+        prompt: this.parseLocalized(row.prompt_json),
+        response: this.parseLocalized(row.response_json),
+        explanation: this.parseLocalized(row.explanation_json),
+        acceptedResponses: row.accepted_responses_json === null
+          ? undefined
+          : this.parseLocalized(row.accepted_responses_json),
+        source: row.source,
+        enabled: row.clue_enabled === 1,
+      }),
+    };
   }
 
   private clueExists(clueId: string): boolean {

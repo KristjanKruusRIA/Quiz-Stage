@@ -372,7 +372,7 @@ describe('GameCoordinator', () => {
     expect(recovered?.state).toEqual(advanced.state);
   });
 
-  it('persists a newly selected canonical tiebreaker before a command can display it publicly', async () => {
+  it('atomically persists a newly selected canonical tiebreaker with the command before public display', async () => {
     const { coordinator, repository, contentService, selected, setResumable } = dependencies();
     const base = createGame(selectionInput().config, selected, 42);
     const tiedFinal: GameState = {
@@ -403,10 +403,9 @@ describe('GameCoordinator', () => {
       0,
     );
     const calls = vi.mocked(repository.persistTransition).mock.calls;
-    expect(calls).toHaveLength(2);
-    expect(calls[0][1]).toEqual([]);
-    expect(calls[0][2].tiebreakerClues).toHaveLength(1);
-    expect(calls[1][2].phase).toBe('tiebreaker');
+    expect(calls).toHaveLength(1);
+    expect(calls[0][1]).toMatchObject([{ type: 'CommandApplied' }]);
+    expect(calls[0][2]).toMatchObject({ phase: 'tiebreaker', tiebreakerClues: [expect.any(Object)] });
     expect(publicStates.at(-1)).not.toContain('Final response final-2');
   });
 

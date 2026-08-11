@@ -86,3 +86,45 @@ exit 0
 ## Concern
 
 Task 12 intentionally adds no editor or IPC surface. The repository/service contracts are ready for the later approved content editor task, which must retain host-only authorization and strict IPC parsing when it exposes them.
+
+## Fix round 1: atomic tiebreaker reports and stable base lookup
+
+### Findings addressed
+
+1. Removed the separately committed tiebreaker-augmentation snapshot. Replacement selection remains canonical and deterministic in coordinator memory, then the replacement clue, `ReportClue` event/final snapshot, and unresolved content report commit inside the existing shared SQLite transaction before one adoption/publication. The same single-snapshot rule now applies whenever a command needs a newly sourced tiebreaker, while retaining the rule that persistence completes before display.
+2. Replaced override/get lookup through selection-filtered library loaders with a direct strict base-row lookup by stable clue ID. The lookup joins the base clue, category, pack, history, override, and report state without filtering disabled parents. It validates board/Final structure and computes effective eligibility separately, so corrections remain possible behind disabled packs/categories but cannot re-enable those parents or enter board/Final/tiebreaker selection.
+3. Made the missing-base policy explicit: a deleted base row returns `null` and rejects a later override as unknown; an existing override keeps its base row protected by the original `ON DELETE RESTRICT` foreign key.
+
+### RED evidence
+
+```text
+npm run test:run -- tests/integration/content/overrides.test.ts tests/integration/content/reportClue.test.ts
+Test Files 2 failed (2)
+Tests 5 failed | 10 passed
+exit 1
+```
+
+- Disabled-pack board and disabled-category Final overrides failed as `Unknown bundled clue`.
+- Forced early content-report and late reported-snapshot failures each left two snapshots instead of one.
+- Successful tiebreaker reporting left three snapshots instead of the required two total snapshots (initial plus one atomic report transition).
+
+### GREEN and rollback evidence
+
+The real production-database tests install two SQLite abort triggers: one before the report insert and one before the final reported-state snapshot. Both prove byte-equivalent coordinator state, zero report/event/snapshot additions, and restart recovery of the exact pre-command state. The success path proves one event, one new snapshot, one publication, no replacement reuse, and restart equality with the published state.
+
+```text
+Focused reviewed suite: 2 files; 15 tests passed
+Affected content/selector/coordinator/persistence/game: 18 files; 168 tests passed
+npm run test:run: 40 files; 248 tests passed
+npm run lint: exit 0
+npm run typecheck: exit 0
+npm run build: Electron Forge packaged x64 on win32; exit 0
+```
+
+### Fix-round self-review
+
+- Tiebreaker sourcing, exclusion order, canonical copying, score behavior, event cursor, timer anchoring, report privacy, and host/public publication ordering remain unchanged.
+- No intermediate replacement snapshot is durable. The final self-sufficient snapshot contains the exact replacement clue and report result before publication.
+- Disabled pack/category state participates only in effective eligibility. An enabled corrected override clears its report but still returns `enabled: false` while either parent is disabled.
+- Selection loaders retain their prior filtering/balancing behavior; the new direct lookup is used only for stable record identity/get/edit operations.
+- No migration, renderer, preload, IPC, public projection, filesystem scope, or network path changed.
