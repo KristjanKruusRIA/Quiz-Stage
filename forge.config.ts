@@ -5,6 +5,14 @@ process.env.VITE_CONFIG_NATIVE_IGNORE_WARNING = 'true';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    ignore: (file) => {
+      if (!file) return false;
+      return !(
+        file.startsWith('/.vite')
+        || file === '/node_modules'
+        || file.startsWith('/node_modules/better-sqlite3')
+      );
+    },
   },
   makers: [
     {
@@ -18,6 +26,10 @@ const config: ForgeConfig = {
     },
   ],
   plugins: [
+    {
+      name: '@electron-forge/plugin-auto-unpack-natives',
+      config: {},
+    },
     {
       name: '@electron-forge/plugin-vite',
       config: {

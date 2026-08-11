@@ -1,0 +1,215 @@
+import type { GameEvent } from '../../shared/game/events';
+import type { GameState, Team } from '../../shared/game/types';
+import { gameEventSchema, gameStateSchema } from '../../shared/ipc/contracts';
+import type { DatabaseConnection } from './database';
+
+export interface ResumableMatch {
+  matchId: string;
+  snapshotSequence: number;
+  state: GameState;
+}
+
+export interface MatchStanding {
+  teamId: string;
+  name: string;
+  color: string;
+  score: number;
+  rank: number;
+}
+
+export interface MatchHistoryEntry {
+  id: string;
+  startedAt: number;
+  completedAt: number;
+  durationMs: number;
+  completionState: 'complete' | 'incomplete';
+  language: GameState['config']['language'];
+  difficulty: GameState['config']['difficulty'];
+  packIds: string[];
+  seed: string;
+  teams: Team[];
+  standings: MatchStanding[];
+  winnerTeamId: string | null;
+}
+
+interface SnapshotRow {
+  match_id: string;
+  sequence: number;
+  state_json: string;
+}
+
+interface HistoryRow extends SnapshotRow {
+  started_at: number;
+  completed_at: number;
+}
+
+export class MatchRepository {
+  constructor(private readonly database: DatabaseConnection) {}
+
+  persistTransition(matchId: string, events: GameEvent[], state: GameState): void {
+    const validatedState = gameStateSchema.parse(state) as GameState;
+    const validatedEvents = events.map((event) => gameEventSchema.parse(event) as GameEvent);
+    if (validatedState.id !== matchId) throw new Error('Snapshot match ID does not match the transition match ID');
+    if (validatedEvents.some((event) => event.matchId !== matchId)) {
+      throw new Error('Event match ID does not match the transition match ID');
+    }
+
+    const stateJson = JSON.stringify(validatedState);
+    const eventRows = validatedEvents.map((event) => ({
+      event,
+      json: JSON.stringify(event),
+    }));
+    const occurredAt = eventRows.map(({ event }) => event.at);
+    const startedAt = occurredAt.length === 0 ? Date.now() : Math.min(...occurredAt);
+
+    this.database.transaction(() => {
+      const previousPersistenceTime = this.database.prepare(
+        'SELECT COALESCE(MAX(updated_at), 0) FROM matches',
+      ).pluck().get() as number;
+      const persistedAt = Math.max(Date.now(), previousPersistenceTime + 1);
+      this.database.prepare(`
+        INSERT INTO matches (id, started_at, updated_at)
+        VALUES (?, ?, ?)
+        ON CONFLICT(id) DO UPDATE SET updated_at = excluded.updated_at
+      `).run(matchId, startedAt, persistedAt);
+
+      let eventSequence = this.nextSequence('match_events', matchId);
+      const insertEvent = this.database.prepare(`
+        INSERT INTO match_events (id, match_id, sequence, occurred_at, event_type, event_json)
+        VALUES (?, ?, ?, ?, ?, ?)
+      `);
+      for (const { event, json } of eventRows) {
+        insertEvent.run(event.id, matchId, eventSequence++, event.at, event.type, json);
+      }
+
+      const snapshotSequence = this.nextSequence('match_snapshots', matchId);
+      this.database.prepare(`
+        INSERT INTO match_snapshots (match_id, sequence, created_at, state_json)
+        VALUES (?, ?, ?, ?)
+      `).run(matchId, snapshotSequence, persistedAt, stateJson);
+    })();
+  }
+
+  readEvents(matchId: string): GameEvent[] {
+    const rows = this.database.prepare(
+      'SELECT event_json FROM match_events WHERE match_id = ? ORDER BY sequence ASC',
+    ).all(matchId) as Array<{ event_json: string }>;
+    return rows.map(({ event_json }) => {
+      const event = gameEventSchema.parse(JSON.parse(event_json)) as GameEvent;
+      if (event.matchId !== matchId) throw new Error('Persisted event match ID does not match its row');
+      return event;
+    });
+  }
+
+  loadResumable(): ResumableMatch | null {
+    const rows = this.database.prepare(`
+      SELECT snapshots.match_id, snapshots.sequence, snapshots.state_json
+      FROM match_snapshots AS snapshots
+      JOIN matches ON matches.id = snapshots.match_id
+      WHERE matches.completed_at IS NULL
+      ORDER BY matches.updated_at DESC, snapshots.sequence DESC, snapshots.match_id DESC
+    `).all() as SnapshotRow[];
+
+    for (const row of rows) {
+      const state = this.parseSnapshot(row);
+      if (state !== null) return { matchId: row.match_id, snapshotSequence: row.sequence, state };
+    }
+    return null;
+  }
+
+  completeMatch(matchId: string, completedAt = Date.now()): void {
+    if (!Number.isInteger(completedAt) || completedAt < 0) throw new Error('Completion time must be a nonnegative integer');
+    const snapshot = this.latestValidSnapshot(matchId);
+    if (snapshot === null) throw new Error(`Match ${matchId} has no valid snapshot`);
+    if (snapshot.state.phase !== 'complete') throw new Error('Only a complete game state can be added to match history');
+
+    const result = this.database.prepare(`
+      UPDATE matches
+      SET completed_at = ?, ended_incomplete = ?, winner_team_id = ?
+      WHERE id = ? AND completed_at IS NULL
+    `).run(completedAt, snapshot.state.endedIncomplete ? 1 : 0, snapshot.state.winnerTeamId, matchId);
+    if (result.changes !== 1) throw new Error(`Match ${matchId} is missing or already complete`);
+  }
+
+  listHistory(): MatchHistoryEntry[] {
+    const rows = this.database.prepare(`
+      SELECT matches.id AS match_id, matches.started_at, matches.completed_at,
+             snapshots.sequence, snapshots.state_json
+      FROM matches
+      JOIN match_snapshots AS snapshots ON snapshots.match_id = matches.id
+      WHERE matches.completed_at IS NOT NULL
+        AND snapshots.sequence = (
+          SELECT MAX(latest.sequence) FROM match_snapshots AS latest WHERE latest.match_id = matches.id
+        )
+      ORDER BY matches.completed_at DESC, matches.id DESC
+    `).all() as HistoryRow[];
+
+    const history: MatchHistoryEntry[] = [];
+    for (const row of rows) {
+      const state = this.parseSnapshot(row);
+      if (state === null) continue;
+      history.push({
+        id: row.match_id,
+        startedAt: row.started_at,
+        completedAt: row.completed_at,
+        durationMs: Math.max(0, row.completed_at - row.started_at),
+        completionState: state.endedIncomplete ? 'incomplete' : 'complete',
+        language: state.config.language,
+        difficulty: state.config.difficulty,
+        packIds: state.config.packIds,
+        seed: state.seed,
+        teams: state.config.teams,
+        standings: standings(state),
+        winnerTeamId: state.winnerTeamId,
+      });
+    }
+    return history;
+  }
+
+  private latestValidSnapshot(matchId: string): ResumableMatch | null {
+    const rows = this.database.prepare(`
+      SELECT match_id, sequence, state_json
+      FROM match_snapshots
+      WHERE match_id = ?
+      ORDER BY sequence DESC
+    `).all(matchId) as SnapshotRow[];
+    for (const row of rows) {
+      const state = this.parseSnapshot(row);
+      if (state !== null) return { matchId, snapshotSequence: row.sequence, state };
+    }
+    return null;
+  }
+
+  private parseSnapshot(row: SnapshotRow): GameState | null {
+    try {
+      const state = gameStateSchema.parse(JSON.parse(row.state_json)) as GameState;
+      return state.id === row.match_id ? state : null;
+    } catch {
+      return null;
+    }
+  }
+
+  private nextSequence(table: 'match_events' | 'match_snapshots', matchId: string): number {
+    const current = this.database.prepare(
+      `SELECT COALESCE(MAX(sequence), 0) FROM ${table} WHERE match_id = ?`,
+    ).pluck().get(matchId) as number;
+    return current + 1;
+  }
+}
+
+function standings(state: GameState): MatchStanding[] {
+  const ordered = state.config.teams
+    .map((team, teamIndex) => ({ team, teamIndex, score: state.scores[team.id] }))
+    .sort((left, right) => right.score - left.score || left.teamIndex - right.teamIndex);
+  const ranked: MatchStanding[] = [];
+  for (const [index, { team, score }] of ordered.entries()) {
+    ranked.push({
+      teamId: team.id,
+      name: team.name,
+      color: team.color,
+      score,
+      rank: index > 0 && ordered[index - 1].score === score ? ranked[index - 1].rank : index + 1,
+    });
+  }
+  return ranked;
+}
