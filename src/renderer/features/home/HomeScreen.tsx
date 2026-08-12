@@ -3,6 +3,7 @@ interface HomeScreenProps {
   onResume: () => void;
   onHistory: () => void;
   onContent?: () => void;
+  onSettings?: () => void;
   hasResumableMatch: boolean;
   resumePending?: boolean;
   resumeError?: boolean;
@@ -13,6 +14,7 @@ export function HomeScreen({
   onResume,
   onHistory,
   onContent,
+  onSettings,
   hasResumableMatch,
   resumePending = false,
   resumeError = false,
@@ -29,7 +31,7 @@ export function HomeScreen({
         <button type="button" disabled={!hasResumableMatch || resumePending} onClick={onResume}>{t('home.resumeMatch')}</button>
         <button type="button" disabled={onContent === undefined} onClick={onContent}>{t('home.contentLibrary')}</button>
         <button type="button" onClick={onHistory}>{t('home.matchHistory')}</button>
-        <button type="button" disabled>{t('home.settings')}</button>
+        <button type="button" disabled={onSettings === undefined} onClick={onSettings}>{t('home.settings')}</button>
       </nav>
       {resumeError ? <p role="alert">{t('home.resumeError')}</p> : null}
       <p className="muted">{t('home.later')}</p>

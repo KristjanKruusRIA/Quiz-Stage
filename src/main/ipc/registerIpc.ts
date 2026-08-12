@@ -1,6 +1,7 @@
 import type { HostGameView, PublicGameView } from '../../shared/game/types';
 import type { DisplayMode, GameConfig } from '../../shared/game/types';
 import {
+  audioSettingsSchema,
   contentAvailabilitySchema,
   gameConfigSchema,
   hostGameViewSchema,
@@ -11,8 +12,10 @@ import {
   type HostStateUpdate,
   type PublicStateUpdate,
 } from '../../shared/ipc/contracts';
+import { audioSettingsInputSchema } from '../../shared/media/contracts';
 import { IPC_CHANNELS } from './channels';
 import { validateHostSender } from './validateSender';
+import type { AudioSettings } from '../../shared/media/contracts';
 import type { CsvPackWorkflow } from '../content/csvPacks';
 import type { ContentEditorService } from '../content/contentEditorService';
 import {
@@ -90,6 +93,10 @@ interface RegisterIpcOptions {
   };
   contentCsv?: ContentCsvPort;
   contentEditor?: ContentEditorPort;
+  audioSettings?: {
+    read(): AudioSettings;
+    save(input: unknown): AudioSettings;
+  };
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
@@ -114,6 +121,7 @@ export function registerIpc({
   matchAccess,
   contentCsv,
   contentEditor,
+  audioSettings,
   csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
@@ -131,6 +139,20 @@ export function registerIpc({
     requireHost(event.sender.id);
     return coordinator.dispatch(command);
   });
+
+  const audioChannels: string[] = [];
+  if (audioSettings !== undefined) {
+    ipcMain.handle(IPC_CHANNELS.audioSettingsGet, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      return audioSettingsSchema.parse(audioSettings.read());
+    });
+    ipcMain.handle(IPC_CHANNELS.audioSettingsUpdate, async (event, input) => {
+      requireHost(event.sender.id);
+      return audioSettingsSchema.parse(audioSettings.save(audioSettingsInputSchema.parse(input)));
+    });
+    audioChannels.push(IPC_CHANNELS.audioSettingsGet, IPC_CHANNELS.audioSettingsUpdate);
+  }
 
   const setupChannels: string[] = [];
   if (setup !== undefined && getAutomaticDisplayMode !== undefined) {
@@ -300,6 +322,7 @@ export function registerIpc({
 
   return () => {
     ipcMain.removeHandler(IPC_CHANNELS.dispatch);
+    for (const channel of audioChannels) ipcMain.removeHandler(channel);
     for (const channel of setupChannels) ipcMain.removeHandler(channel);
     for (const channel of matchAccessChannels) ipcMain.removeHandler(channel);
     for (const channel of csvChannels) ipcMain.removeHandler(channel);

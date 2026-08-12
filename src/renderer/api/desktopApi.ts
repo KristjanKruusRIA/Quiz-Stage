@@ -12,6 +12,7 @@ import type {
   EditorFinalClue, EditorLibrary, EditorPack, SaveCategorySetRequest, SaveFinalClueRequest,
 } from '../../shared/content/editor';
 import type { ContentReportRecord } from '../../shared/content/schema';
+import type { AudioSettings, MediaWarning } from '../../shared/media/contracts';
 
 export type HostDesktopApi = {
       surface: 'host';
@@ -21,6 +22,9 @@ export type HostDesktopApi = {
       hasResumableMatch(): Promise<boolean>;
       resumeMatch(): Promise<HostGameView | null>;
       listHistory(): Promise<MatchHistoryEntry[]>;
+      getAudioSettings?: () => Promise<AudioSettings>;
+      updateAudioSettings?: (settings: AudioSettings) => Promise<AudioSettings>;
+      subscribeToMediaWarnings?: (listener: (warning: MediaWarning) => void) => () => void;
       dispatch(command: GameCommand): Promise<HostGameView>;
       listContent?: () => Promise<EditorLibrary>;
       saveCategorySet?: (input: SaveCategorySetRequest) => Promise<EditorCategorySet>;
@@ -59,6 +63,9 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch,
     resumeMatch,
     listHistory,
+    getAudioSettings,
+    updateAudioSettings,
+    subscribeToMediaWarnings,
   } = hostBridge;
 
   return {
@@ -68,6 +75,9 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch: () => hasResumableMatch(),
     resumeMatch: () => resumeMatch(),
     listHistory: () => listHistory(),
+    getAudioSettings: () => getAudioSettings(),
+    updateAudioSettings: (settings) => updateAudioSettings(settings),
+    subscribeToMediaWarnings: (listener) => subscribeToMediaWarnings(listener),
     listContent: () => hostBridge.listContent(),
     saveCategorySet: (input) => hostBridge.saveCategorySet(input),
     saveFinalClue: (input) => hostBridge.saveFinalClue(input),

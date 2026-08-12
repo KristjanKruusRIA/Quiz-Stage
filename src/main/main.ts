@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, screen, session } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, protocol, screen, session } from 'electron';
 import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
@@ -6,10 +6,13 @@ import { createApplication } from './application';
 import { acceleratedE2eTimerOptions } from './e2eTimerOptions';
 import { automaticDisplayMode } from './displayMode';
 import { registerIpc } from './ipc/registerIpc';
+import { IPC_CHANNELS } from './ipc/channels';
 import { openDatabase } from './persistence/database';
 import { migrateDatabase } from './persistence/migrations';
 import { WindowManager, type ManagedWindow } from './windows/windowManager';
 import { shouldInstallE2eNetworkGuard } from './e2eNetworkGuard';
+import { MediaService, parseMediaByteRange, parseMediaRequest } from './media/mediaService';
+import { bundledMediaDirectory, mediaOverrideDirectory } from './media/mediaPaths';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -18,6 +21,11 @@ let application: ReturnType<typeof createApplication> | null = null;
 let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
 const e2eExternalRequests: string[] = [];
+
+protocol.registerSchemesAsPrivileged([{
+  scheme: 'quiz-stage-media',
+  privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true },
+}]);
 
 function installE2eNetworkGuard(): void {
   if (!shouldInstallE2eNetworkGuard({
@@ -53,6 +61,7 @@ async function createWindows(): Promise<void> {
     matchAccess: application,
     contentCsv: application.contentCsv,
     contentEditor: application.contentEditor,
+    audioSettings: application.audioSettings,
     csvDialogs: {
       chooseImportFile: async () => {
         const result = await dialog.showOpenDialog({
@@ -92,6 +101,39 @@ async function initialize(): Promise<void> {
     process.argv.includes('--quiz-stage-e2e-clock'),
     app.isPackaged,
   ));
+  const mediaDirectory = bundledMediaDirectory({
+    isPackaged: app.isPackaged,
+    resourcesPath: process.resourcesPath,
+    workingDirectory: process.cwd(),
+  });
+  const portable = app.isPackaged && lstatSync(path.join(process.resourcesPath, 'portable.flag'), { throwIfNoEntry: false })?.isFile() === true;
+  const media = new MediaService({
+    bundledDirectory: mediaDirectory,
+    overrideDirectory: mediaOverrideDirectory({ userDataDirectory, executablePath: app.getPath('exe'), portable }),
+    onWarning: (warning) => windowManager?.getWindows().hostWindow?.webContents.send(IPC_CHANNELS.mediaWarning, warning),
+  });
+  protocol.handle('quiz-stage-media', (request) => {
+    try {
+      const resolved = media.resolve(parseMediaRequest(request.url));
+      let range;
+      try {
+        range = parseMediaByteRange(request.headers.get('Range'), resolved.bytes.length);
+      } catch {
+        return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${resolved.bytes.length}` } });
+      }
+      const bytes = range === null ? resolved.bytes : resolved.bytes.subarray(range.start, range.end + 1);
+      const headers: Record<string, string> = {
+        'Accept-Ranges': 'bytes',
+        'Cache-Control': 'no-store',
+        'Content-Length': String(bytes.length),
+        'Content-Type': resolved.mime,
+      };
+      if (range !== null) headers['Content-Range'] = `bytes ${range.start}-${range.end}/${resolved.bytes.length}`;
+      return new Response(new Uint8Array(bytes), { status: range === null ? 200 : 206, headers });
+    } catch {
+      return new Response(null, { status: 404 });
+    }
+  });
   await createWindows();
 }
 

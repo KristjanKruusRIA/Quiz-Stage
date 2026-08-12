@@ -23,15 +23,17 @@ function hostApi(): HostDesktopApi {
 }
 
 describe('HomeScreen', () => {
-  it('offers current Home actions while clearly disabling features owned by later tasks', async () => {
+  it('offers current Home actions including Settings', async () => {
     const onNewMatch = vi.fn();
     const onHistory = vi.fn();
     const onContent = vi.fn();
+    const onSettings = vi.fn();
     render(<HomeScreen
       onNewMatch={onNewMatch}
       onResume={vi.fn()}
       onHistory={onHistory}
       onContent={onContent}
+      onSettings={onSettings}
       hasResumableMatch={false}
     />);
 
@@ -42,9 +44,9 @@ describe('HomeScreen', () => {
     expect(onHistory).toHaveBeenCalledOnce();
     await userEvent.click(screen.getByRole('button', { name: 'Content Library' }));
     expect(onContent).toHaveBeenCalledOnce();
-    for (const name of ['Resume Match', 'Settings']) {
-      expect(screen.getByRole('button', { name })).toBeDisabled();
-    }
+    expect(screen.getByRole('button', { name: 'Resume Match' })).toBeDisabled();
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    expect(onSettings).toHaveBeenCalledOnce();
   });
 
   it('routes the host from Home to Setup and keeps the public surface neutral', async () => {
@@ -56,6 +58,16 @@ describe('HomeScreen', () => {
     rerender(<App api={{ surface: 'public', subscribeToState: vi.fn(() => vi.fn()) }} />);
     expect(screen.getByRole('status')).toHaveTextContent('Waiting for the host');
     expect(screen.queryByRole('button', { name: 'New Match' })).not.toBeInTheDocument();
+  });
+
+  it('routes Home to live Settings when the host bridge owns audio settings', async () => {
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => ({ master: 0.8, music: 0.7, effects: 0.8, crowd: 0.8, muted: false }));
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    render(<App api={api} />);
+    await userEvent.click(await screen.findByRole('button', { name: 'Settings' }));
+    expect(screen.getByRole('heading', { name: 'Settings' })).toBeInTheDocument();
+    expect(screen.getByRole('slider', { name: 'Master volume' })).toHaveValue('0.8');
   });
 
   it('preserves Estonian setup and generated names after Back and reopen', async () => {

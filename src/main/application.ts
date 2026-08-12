@@ -6,6 +6,7 @@ import { MatchRepository } from './persistence/matchRepository';
 import type { DisplayMode, GameConfig } from '../shared/game/types';
 import { CsvPackWorkflow } from './content/csvPacks';
 import { ContentEditorService } from './content/contentEditorService';
+import { AudioSettingsRepository } from './persistence/audioSettingsRepository';
 
 export interface ApplicationOptions {
   now?: () => number;
@@ -20,6 +21,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
   const contentService = new ContentService(contentRepository);
   const contentCsv = new CsvPackWorkflow(database, contentRepository);
   const contentEditor = new ContentEditorService(database, contentRepository, { now: options.now });
+  const audioSettings = new AudioSettingsRepository(database, options.now);
   const coordinator = new GameCoordinator({
     repository,
     contentService,
@@ -34,6 +36,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
     repository,
     contentCsv,
     contentEditor,
+    audioSettings,
     startMatch: (config: GameConfig) => coordinator.startMatch(config),
     hasResumableMatch: () => repository.recoverLatest() !== null,
     resumeMatch: () => coordinator.resumeLatest(),

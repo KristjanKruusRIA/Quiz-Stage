@@ -9,6 +9,8 @@ import { HistoryScreen } from './features/history/HistoryScreen';
 import { ContentLibraryScreen } from './features/content/ContentLibraryScreen';
 import { I18nProvider, translate } from './i18n';
 import type { Language } from '../shared/game/types';
+import { SettingsScreen } from './features/settings/SettingsScreen';
+import { defaultAudioSettings, type AudioSettings } from '../shared/media/contracts';
 
 interface AppProps {
   api?: DesktopApi;
@@ -16,7 +18,7 @@ interface AppProps {
 
 export default function App({ api }: AppProps) {
   const desktopApi = useMemo(() => api ?? getDesktopApi(), [api]);
-  const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history' | 'content'>('home');
+  const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history' | 'content' | 'settings'>('home');
   const [hostView, setHostView] = useState<HostGameView | null>(null);
   const [publicView, setPublicView] = useState<PublicGameView | null>(null);
   const [locale, setLocale] = useState<Language>('en');
@@ -26,10 +28,13 @@ export default function App({ api }: AppProps) {
   } | null>(null);
   const [resumePending, setResumePending] = useState(false);
   const [resumeError, setResumeError] = useState(false);
+  const [audioSettings, setAudioSettings] = useState<AudioSettings>(defaultAudioSettings);
+  const [playOpening, setPlayOpening] = useState(false);
+  const [mediaWarning, setMediaWarning] = useState(false);
   const navigationGeneration = useRef(0);
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
-  const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content') => {
+  const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content' | 'settings') => {
     navigationGeneration.current += 1;
     setResumePending(false);
     setResumeError(false);
@@ -53,6 +58,18 @@ export default function App({ api }: AppProps) {
     return () => { active = false; };
   }, [desktopApi, route]);
 
+  useEffect(() => {
+    if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
+    let active = true;
+    void desktopApi.getAudioSettings().then((settings) => { if (active) setAudioSettings(settings); }, () => undefined);
+    return () => { active = false; };
+  }, [desktopApi]);
+
+  useEffect(() => {
+    if (desktopApi.surface !== 'host' || desktopApi.subscribeToMediaWarnings === undefined) return;
+    return desktopApi.subscribeToMediaWarnings(() => setMediaWarning(true));
+  }, [desktopApi]);
+
   if (desktopApi.surface === 'public') {
     const publicLocale = publicView?.language ?? 'en';
     return <I18nProvider locale={publicLocale}>{publicView === null
@@ -62,11 +79,17 @@ export default function App({ api }: AppProps) {
   let content: React.ReactNode;
   if (route === 'setup') {
     content = <SetupScreen api={desktopApi} initialLanguage={locale} onLanguageChange={setLocale}
-      onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
+      onBack={() => navigate('home')} onStarted={() => { setPlayOpening(true); navigate('match'); }} />;
   } else if (route === 'history') {
     content = <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
   } else if (route === 'content') {
     content = <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
+  } else if (route === 'settings') {
+    content = <SettingsScreen settings={audioSettings} onBack={() => navigate('home')} onSave={async (settings) => {
+      if (desktopApi.updateAudioSettings === undefined) return;
+      const saved = await desktopApi.updateAudioSettings(settings);
+      setAudioSettings(saved);
+    }} />;
   } else if (route === 'match') {
     const matchLocale = hostView?.state.config.language ?? locale;
     content = hostView === null
@@ -75,6 +98,14 @@ export default function App({ api }: AppProps) {
         surface="host"
         view={hostView}
         api={desktopApi}
+        audioSettings={audioSettings}
+        playOpening={playOpening}
+        onAudioWarning={() => setMediaWarning(true)}
+        onMute={() => {
+          const next = { ...audioSettings, muted: !audioSettings.muted };
+          setAudioSettings(next);
+          void desktopApi.updateAudioSettings?.(next).then(setAudioSettings, () => setAudioSettings(audioSettings));
+        }}
         onHome={hostView.state.phase === 'complete' ? () => navigate('home') : undefined}
       />;
   } else {
@@ -91,6 +122,7 @@ export default function App({ api }: AppProps) {
         return;
       }
       setHostView(view);
+      setPlayOpening(false);
       setLocale(view.state.config.language);
       navigate('match');
     } catch {
@@ -104,13 +136,17 @@ export default function App({ api }: AppProps) {
       onResume={() => void resume()}
       onHistory={() => navigate('history')}
       onContent={() => navigate('content')}
+      onSettings={desktopApi.getAudioSettings === undefined ? undefined : () => navigate('settings')}
       hasResumableMatch={hasResumableMatch}
       resumePending={resumePending}
       resumeError={resumeError}
     />;
   }
   const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
-  return <I18nProvider locale={activeLocale}>{content}</I18nProvider>;
+  return <I18nProvider locale={activeLocale}>
+    {mediaWarning ? <p role="alert">{translate(activeLocale, 'settings.mediaWarning')}</p> : null}
+    {content}
+  </I18nProvider>;
 }
 
 function HistoryRoute({ api, onBack }: { api: Extract<DesktopApi, { surface: 'host' }>; onBack: () => void }) {

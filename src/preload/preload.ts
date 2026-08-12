@@ -4,6 +4,7 @@ import type { GameCommand } from '../shared/game/commands';
 import type { HostGameView, PublicGameView } from '../shared/game/types';
 import {
   contentAvailabilitySchema,
+  audioSettingsSchema,
   gameCommandSchema,
   gameConfigSchema,
   hostGameViewSchema,
@@ -36,6 +37,7 @@ import {
 } from '../shared/content/editor';
 import { contentReportRecordSchema } from '../shared/content/schema';
 import { z } from 'zod';
+import { audioSettingsInputSchema, mediaWarningSchema } from '../shared/media/contracts';
 
 export interface PreloadIpcPort {
   invoke(channel: string, value: unknown): Promise<unknown>;
@@ -66,6 +68,11 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
   const resolvedSchema = z.strictObject({ resolved: z.boolean() });
   const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
+    subscribeToMediaWarnings: (listener) => {
+      const wrapped = (_event: unknown, value: unknown) => listener(mediaWarningSchema.parse(value));
+      ipc.on(IPC_CHANNELS.mediaWarning, wrapped);
+      return () => ipc.removeListener(IPC_CHANNELS.mediaWarning, wrapped);
+    },
     dispatch: async (command: GameCommand) => hostGameViewSchema.parse(
       await ipc.invoke(IPC_CHANNELS.dispatch, gameCommandSchema.parse(command)),
     ),
@@ -87,6 +94,12 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     },
     listHistory: async () => matchHistorySchema.parse(
       await ipc.invoke(IPC_CHANNELS.listHistory, undefined),
+    ),
+    getAudioSettings: async () => audioSettingsSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.audioSettingsGet, undefined),
+    ),
+    updateAudioSettings: async (settings) => audioSettingsSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.audioSettingsUpdate, audioSettingsInputSchema.parse(settings)),
     ),
     listContent: async () => editorLibrarySchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentList, undefined),

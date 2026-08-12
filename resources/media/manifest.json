@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "assets": {
+    "opening": {
+      "file": "audio/opening.wav",
+      "mime": "audio/wav",
+      "sha256": "389a858a5b16d072909329fa877ba01410c23ced80f36042c61a28b3f533c128",
+      "durationMs": 2500,
+      "channel": "music"
+    },
+    "round-transition": {
+      "file": "audio/round-transition.wav",
+      "mime": "audio/wav",
+      "sha256": "2db3c813c9661040380f076293b5db513b3886874e7706b8d48d519964630f84",
+      "durationMs": 1800,
+      "channel": "music"
+    },
+    "daily-double": {
+      "file": "audio/daily-double.wav",
+      "mime": "audio/wav",
+      "sha256": "e0456acf47d745695560ddd7ea0992778255974d5e2b03b9d758f024e105f4bf",
+      "durationMs": 900,
+      "channel": "effects"
+    },
+    "final-tension": {
+      "file": "audio/final-tension.wav",
+      "mime": "audio/wav",
+      "sha256": "d25b0d90a387391197a5e0f8bf910e5ac8a19318b3a1bad6d3b45cf9217cbaf6",
+      "durationMs": 5000,
+      "channel": "music"
+    },
+    "correct-applause": {
+      "file": "audio/correct-applause.wav",
+      "mime": "audio/wav",
+      "sha256": "3463996f282b1a9125cb54b237a81edeae26a33b724174a3b9bad327a9c82ff0",
+      "durationMs": 1800,
+      "channel": "crowd"
+    },
+    "incorrect-crowd": {
+      "file": "audio/incorrect-crowd.wav",
+      "mime": "audio/wav",
+      "sha256": "a7e2ebb22d7f8b89fe4996deed43bd7becd4b96197ade6c2cf1616343b8af13d",
+      "durationMs": 1400,
+      "channel": "crowd"
+    },
+    "time-expired": {
+      "file": "audio/time-expired.wav",
+      "mime": "audio/wav",
+      "sha256": "68a6ae8f1b4793e5ea1a165011fb755cdf0169fc62639247ce8212194733eb8f",
+      "durationMs": 600,
+      "channel": "effects"
+    },
+    "winner": {
+      "file": "audio/winner.wav",
+      "mime": "audio/wav",
+      "sha256": "fb989aa0895145007efb2ad3e5c2ddcc3ce9ccaa3c3069f1efde653d004ada58",
+      "durationMs": 2500,
+      "channel": "effects"
+    }
+  }
+}

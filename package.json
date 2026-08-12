@@ -10,6 +10,7 @@
     "test": "vitest --configLoader runner",
     "test:run": "vitest run --configLoader runner",
     "content:build-dev-seed": "tsx scripts/content/build-dev-seed.ts",
+    "media:generate": "tsx scripts/generate-placeholder-audio.ts",
     "build": "electron-forge package",
     "make:installer": "electron-forge make --targets=@electron-forge/maker-squirrel",
     "make:portable": "electron-forge make --targets=@electron-forge/maker-zip"

@@ -7,10 +7,12 @@ import { PublicClue } from './PublicClue';
 import { PublicFinal } from './PublicFinal';
 import { useState } from 'react';
 import { createTranslator, formatNumber } from '../../i18n';
+import type { AudioSettings } from '../../../shared/media/contracts';
+import { useGameAudio } from './useGameAudio';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number }
-  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; now?: () => number; onMute?: () => void; onHome?: () => void };
+  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; playOpening?: boolean; now?: () => number; onMute?: () => void; onAudioWarning?: () => void; onHome?: () => void };
 
 function presentation(view: PublicGameView, now?: () => number, onSelect?: (tileId: string) => void) {
   if (view.phase === 'round-one-board' || view.phase === 'round-two-board') return <PublicBoard view={view} onSelect={onSelect} />;
@@ -33,6 +35,12 @@ export function GameSurface(props: GameSurfaceProps) {
 }
 
 function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) {
+  useGameAudio(
+    props.view,
+    props.audioSettings ?? { master: 0, music: 0, effects: 0, crowd: 0, muted: true },
+    props.playOpening ?? false,
+    props.onAudioWarning,
+  );
   const viewKey = `${props.view.state.id}:${props.view.state.eventSequence}:${props.view.state.phase}`;
   const [selection, setSelection] = useState({ viewKey, request: 0, status: 'idle' as 'idle' | 'pending' | 'error' });
   if (selection.viewKey !== viewKey) {
