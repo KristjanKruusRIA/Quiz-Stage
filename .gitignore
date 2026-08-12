@@ -1,5 +1,6 @@
 .superpowers/
 .worktrees/
+.cache/
 .vite/
 node_modules/
 out/

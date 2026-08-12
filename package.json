@@ -13,6 +13,7 @@
     "content:fetch-opentdb": "tsx scripts/content/fetchOpenTdb.ts",
     "verify:product": "npm run lint && npm run typecheck && npm run test:run && npm run build && npm run test:product-e2e",
     "content:build-dev-seed": "tsx scripts/content/build-dev-seed.ts",
+    "content:translation-diagnostics": "tsx scripts/content/translationDiagnostics.ts",
     "content:validate": "tsx scripts/content/validate.ts",
     "content:source-check": "tsx scripts/content/sourceCheck.ts",
     "content:fetch-wikidata": "tsx scripts/content/fetchWikidata.ts",

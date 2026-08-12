@@ -16,3 +16,12 @@
 - Retrieval method: SPARQL query cache via `npm run content:fetch-wikidata`
 - Source IDs and facts are retained in `content/imports/wikidata-candidates.jsonl` as reusable factual sources
   for draft authoring.
+
+## Helsinki-NLP Opus-MT English→Estonian translation model
+
+- Source: https://huggingface.co/Helsinki-NLP/opus-mt-en-et
+- License: Apache License 2.0
+- Build-time dependency only (not packaged with the application).
+- Retrieval method: `pip install -r scripts/content/requirements-translate.txt`
+- Model artifacts are cached locally under `.cache/translation/` when running
+  `python scripts/content/translate_en_et.py`.
