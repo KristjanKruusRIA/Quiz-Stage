@@ -1,0 +1,46 @@
+<h2>Architecture: one game engine, several control surfaces</h2>
+<p class="subtitle">The game rules remain independent from the desktop UI, so phone buzzers can be attached later without rewriting scoring or round logic.</p>
+
+<div class="mockup" style="background:#071b55;color:white;border-color:#315fc1">
+  <div class="mockup-header" style="background:#041136;color:#f9ce61;border-bottom-color:#315fc1">ELECTRON DESKTOP APPLICATION</div>
+  <div class="mockup-body" style="padding:24px">
+    <div style="display:grid;grid-template-columns:1fr 80px 1.2fr;gap:14px;align-items:stretch">
+      <div style="background:#123da0;border:1px solid #5478d8;border-radius:10px;padding:16px">
+        <div class="label" style="color:#f9ce61">REACT RENDERER</div>
+        <h3 style="color:white;margin-top:6px">Host interface</h3>
+        <p style="color:#dbe6ff">Setup · Board · Clue · Scores · Wagers · Final · Pack editor · History</p>
+        <div style="margin-top:14px;background:#092a80;border-radius:7px;padding:10px;color:#f9ce61;text-align:center">Mouse + keyboard controls</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;justify-content:center;text-align:center;color:#f9ce61;font-size:12px">
+        <div>Typed</div><div style="font-size:26px">⇄</div><div>IPC</div>
+      </div>
+
+      <div style="background:#101a3e;border:1px solid #5478d8;border-radius:10px;padding:16px">
+        <div class="label" style="color:#f9ce61">ELECTRON MAIN PROCESS</div>
+        <h3 style="color:white;margin-top:6px">Trusted application core</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;font-size:12px">
+          <div style="background:#19295d;padding:10px;border-radius:6px"><strong>Game engine</strong><br><span style="color:#b9c7eb">Rounds, turns, scoring, wagers, timers</span></div>
+          <div style="background:#19295d;padding:10px;border-radius:6px"><strong>Content service</strong><br><span style="color:#b9c7eb">Selection, difficulty, repeats, validation</span></div>
+          <div style="background:#19295d;padding:10px;border-radius:6px"><strong>Persistence</strong><br><span style="color:#b9c7eb">Autosaves, packs, settings, history</span></div>
+          <div style="background:#19295d;padding:10px;border-radius:6px"><strong>Media service</strong><br><span style="color:#b9c7eb">Placeholder and override assets</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px">
+      <div style="background:#061333;border:1px solid #315fc1;border-radius:8px;padding:12px;text-align:center"><strong style="color:#f9ce61">SQLite</strong><br><span style="font-size:12px;color:#c7d4f5">Questions · translations · saves · history</span></div>
+      <div style="background:#061333;border:1px solid #315fc1;border-radius:8px;padding:12px;text-align:center"><strong style="color:#f9ce61">Local files</strong><br><span style="font-size:12px;color:#c7d4f5">CSV packs · exports · media overrides</span></div>
+      <div style="background:#061333;border:1px dashed #f9ce61;border-radius:8px;padding:12px;text-align:center"><strong style="color:#f9ce61">Future buzzer gateway</strong><br><span style="font-size:12px;color:#c7d4f5">Local Wi-Fi clients plug into the same game engine</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="options" style="margin-top:20px">
+  <div class="option" data-choice="architecture-approved" onclick="toggleSelect(this)">
+    <div class="letter">✓</div><div class="content"><h3>Approve this structure</h3><p>Keep the main process as the single source of truth.</p></div>
+  </div>
+  <div class="option" data-choice="architecture-change" onclick="toggleSelect(this)">
+    <div class="letter">↺</div><div class="content"><h3>Request a change</h3><p>Tell me in the conversation what should work differently.</p></div>
+  </div>
+</div>

@@ -131,7 +131,7 @@ async function initialize(): Promise<void> {
   if (databaseEntry === undefined) {
     mkdirSync(userDataDirectory, { recursive: true });
     const seedPath = app.isPackaged
-      ? path.join(process.resourcesPath, 'dev-seed.sqlite')
+      ? path.join(process.resourcesPath, 'seed.sqlite')
       : path.join(app.getAppPath(), 'resources', 'content', 'dev-seed.sqlite');
     copyFileSync(seedPath, databasePath, constants.COPYFILE_EXCL);
   }

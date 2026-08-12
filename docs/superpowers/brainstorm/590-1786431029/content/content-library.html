@@ -1,0 +1,67 @@
+<h2>Offline bilingual content system</h2>
+<p class="subtitle">English is the authoritative source text; Estonian is prepared before release and bundled beside it. The game never needs an internet connection.</p>
+
+<div style="display:grid;grid-template-columns:1fr 58px 1fr 58px 1fr;gap:10px;align-items:stretch;margin:22px 0">
+  <div style="background:#f4f6fb;border:1px solid #c9d3ea;border-radius:10px;padding:15px"><div class="label">BUILD-TIME SOURCES</div><h3>Facts and references</h3><p>CC0/open factual data, compatible trivia sources, and original clue writing.</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:26px">→</div>
+  <div style="background:#f4f6fb;border:1px solid #c9d3ea;border-radius:10px;padding:15px"><div class="label">CONTENT PIPELINE</div><h3>Write, translate, validate</h3><p>Difficulty tiering, Estonian pretranslation, duplicate checks, source checks, and review status.</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:26px">→</div>
+  <div style="background:#123da0;color:white;border:1px solid #5478d8;border-radius:10px;padding:15px"><div class="label" style="color:#f9ce61">BUNDLED SQLITE</div><h3 style="color:white">Ready offline</h3><p style="color:#dbe6ff">Questions, answers, accepted variants, explanations, translations, sources, tags, and status.</p></div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <div class="card-body"><div class="label">RELEASE TARGET</div><h3>6,150+ bilingual clues</h3><p>6,000 board clues plus at least 150 Final clues—roughly 100 full matches before any individual clue must repeat.</p></div>
+  </div>
+  <div class="card">
+    <div class="card-body"><div class="label">CATEGORY DEPTH</div><h3>600+ named categories</h3><p>Each playable category set contains exactly five clues. Category names may recur only with a different validated set.</p></div>
+  </div>
+  <div class="card">
+    <div class="card-body"><div class="label">DIFFICULTY</div><h3>Two dimensions</h3><p>The match filters Easy, Medium, or Hard; within that pool, clue tiers 1–5 still rise in difficulty and point value.</p></div>
+  </div>
+</div>
+
+<div class="split" style="margin-top:20px">
+  <div class="mockup">
+    <div class="mockup-header">Random board selection</div>
+    <div class="mockup-body">
+      <ul>
+        <li>Choose 12 valid category sets plus one Final clue.</li>
+        <li>No repeated category name within a match.</li>
+        <li>Balance broad subject tags so one board is not dominated by a single topic.</li>
+        <li>Avoid previously seen clues until the eligible pool is exhausted; then prefer least-recently used content.</li>
+        <li>Place one and two Daily Doubles randomly after board selection.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mockup">
+    <div class="mockup-header">Quality and disputes</div>
+    <div class="mockup-body">
+      <ul>
+        <li>Every bundled clue requires a source reference and both languages.</li>
+        <li>Validator checks five-clue completeness, duplicates, answer variants, required fields, and translation presence.</li>
+        <li>Time-sensitive facts are excluded or explicitly dated.</li>
+        <li>Host can report and disable a bad clue immediately, then repair it in the editor.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:20px">
+  <div class="label">CUSTOM PACKS</div>
+  <p>The editor shows English and Estonian side by side. CSV import is validated transactionally before anything is saved; invalid rows receive precise errors. English-only custom packs remain usable in English games but are excluded from Estonian selection until translated. CSV export supports backup and sharing.</p>
+</div>
+
+<div class="section">
+  <div class="label">FAILURE BEHAVIOR</div>
+  <p>If selected packs cannot supply 12 valid categories and a Final clue at the chosen difficulty/language, setup blocks with the exact shortage. Database upgrades create a backup first; a failed import or migration leaves the previous library unchanged.</p>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="content-approved" onclick="toggleSelect(this)">
+    <div class="letter">✓</div><div class="content"><h3>Approve content system</h3><p>Adopt this size, bilingual model, validation, and randomization behavior.</p></div>
+  </div>
+  <div class="option" data-choice="content-change" onclick="toggleSelect(this)">
+    <div class="letter">↺</div><div class="content"><h3>Request a change</h3><p>Tell me what should be larger, smaller, or handled differently.</p></div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<h2>Gameplay flow and scoring</h2>
+<p class="subtitle">A full classic match, controlled privately by the host and presented cleanly to the room.</p>
+
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:stretch;margin:20px 0">
+  <div style="background:#123da0;color:white;border-radius:9px;padding:14px"><div class="label" style="color:#f9ce61">1 · SETUP</div><strong>Teams &amp; rules</strong><p style="font-size:12px;color:#dbe6ff">2–8 teams, colors, English/Estonian, one difficulty, timer, packs</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:24px">→</div>
+  <div style="background:#123da0;color:white;border-radius:9px;padding:14px"><div class="label" style="color:#f9ce61">2 · ROUND ONE</div><strong>6 × 5 board</strong><p style="font-size:12px;color:#dbe6ff">200–1,000 points, one Daily Double</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:24px">→</div>
+  <div style="background:#123da0;color:white;border-radius:9px;padding:14px"><div class="label" style="color:#f9ce61">3 · DOUBLE ROUND</div><strong>Fresh 6 × 5 board</strong><p style="font-size:12px;color:#dbe6ff">400–2,000 points, two Daily Doubles</p></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 65px 1fr 65px 1fr;gap:8px;align-items:stretch;margin-bottom:24px">
+  <div style="background:#f4f6fb;border:1px solid #c9d3ea;border-radius:9px;padding:14px"><div class="label">4 · FINAL</div><strong>Category → wager → clue</strong><p style="font-size:12px">Positive-score teams participate; 30-second response timer</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:24px">→</div>
+  <div style="background:#f4f6fb;border:1px solid #c9d3ea;border-radius:9px;padding:14px"><div class="label">5 · RESULT</div><strong>Winner and standings</strong><p style="font-size:12px">Sudden-death tiebreaker if first place is tied</p></div>
+  <div style="display:flex;align-items:center;justify-content:center;color:#315fc1;font-size:24px">→</div>
+  <div style="background:#f4f6fb;border:1px solid #c9d3ea;border-radius:9px;padding:14px"><div class="label">6 · HISTORY</div><strong>Saved locally</strong><p style="font-size:12px">Final scores, difficulty, packs, date, and completion status</p></div>
+</div>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">Ordinary clue</div>
+    <div class="mockup-body">
+      <ol style="margin:0;padding-left:20px">
+        <li>Controlling team selects a tile.</li>
+        <li>Clue appears publicly; configurable timer defaults to 15 seconds.</li>
+        <li>Host clicks a team or presses its number key.</li>
+        <li><strong>Correct:</strong> add tile value, play applause, and give that team control.</li>
+        <li><strong>Incorrect:</strong> subtract tile value, play the miss cue, lock that team out, and allow another team to answer.</li>
+        <li>When time expires or nobody remains, reveal the accepted response, explanation, and source.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="mockup">
+    <div class="mockup-header">Daily Double and Final</div>
+    <div class="mockup-body">
+      <p><strong>Daily Double:</strong> only the selecting team answers. Its wager may be up to its score or the round’s highest clue value, whichever is greater. Correct adds; incorrect subtracts.</p>
+      <p><strong>Final:</strong> reveal category, collect private written wagers and answers, run a 30-second timer, then reveal teams from lowest to highest pre-Final score. Correct adds the wager; incorrect subtracts it.</p>
+      <p><strong>Tie:</strong> one sudden-death clue; first correct response wins.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:20px">
+  <div class="label">HOST SAFETY NET</div>
+  <p><strong>Autosave after every action · Undo last action · Manual score adjustment with reason · Pause/reset timer · Reopen an accidentally closed clue · Skip/report a bad clue.</strong></p>
+</div>
+
+<div class="section">
+  <div class="label">TWO DISPLAY MODES</div>
+  <p><strong>Dual-screen:</strong> laptop shows answers, sources, timers, and controls; projector shows only the game. <strong>Single-screen fallback:</strong> host controls appear in a collapsible lower panel.</p>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="gameplay-approved" onclick="toggleSelect(this)">
+    <div class="letter">✓</div><div class="content"><h3>Approve gameplay flow</h3><p>Use these classic scoring and recovery rules.</p></div>
+  </div>
+  <div class="option" data-choice="gameplay-change" onclick="toggleSelect(this)">
+    <div class="letter">↺</div><div class="content"><h3>Request a change</h3><p>Describe the rule or flow that should be different.</p></div>
+  </div>
+</div>
