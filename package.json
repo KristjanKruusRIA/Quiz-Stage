@@ -10,6 +10,7 @@
     "test": "vitest --configLoader runner",
     "test:run": "vitest run --configLoader runner",
     "test:product-e2e": "tsx scripts/verify-product-e2e.ts",
+    "content:fetch-opentdb": "tsx scripts/content/fetchOpenTdb.ts",
     "verify:product": "npm run lint && npm run typecheck && npm run test:run && npm run build && npm run test:product-e2e",
     "content:build-dev-seed": "tsx scripts/content/build-dev-seed.ts",
     "content:validate": "tsx scripts/content/validate.ts",
