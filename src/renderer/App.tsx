@@ -11,6 +11,7 @@ import { I18nProvider, translate } from './i18n';
 import type { Language } from '../shared/game/types';
 import { SettingsScreen, SettingsStatusScreen } from './features/settings/SettingsScreen';
 import { type AudioAssetKey, type AudioSettings, type MediaWarning } from '../shared/media/contracts';
+import type { AppearanceSettings } from '../shared/settings/appearance';
 
 const audioAssetLabelKeys = {
   opening: 'settings.asset.opening',
@@ -45,6 +46,7 @@ export default function App({ api }: AppProps) {
     | { status: 'ready'; settings: AudioSettings; revision: number }
   >({ status: 'loading' });
   const [playOpening, setPlayOpening] = useState(false);
+  const [appearance, setAppearance] = useState<AppearanceSettings>({ reducedMotion: false });
   const [mediaWarnings, setMediaWarnings] = useState<Map<AudioAssetKey, MediaWarning>>(new Map());
   const navigationGeneration = useRef(0);
   const audioLoadSequence = useRef(0);
@@ -83,6 +85,13 @@ export default function App({ api }: AppProps) {
       (settings) => { if (sequence === audioLoadSequence.current) setAudioState((state) => ({ status: 'ready', settings, revision: state.status === 'ready' ? state.revision + 1 : 1 })); },
       () => { if (sequence === audioLoadSequence.current) setAudioState({ status: 'error' }); },
     );
+  }, [desktopApi]);
+
+  useEffect(() => {
+    if (desktopApi.surface !== 'host' || desktopApi.getAppearanceSettings === undefined) return;
+    let active = true;
+    void desktopApi.getAppearanceSettings().then((value) => { if (active) setAppearance(value); }, () => undefined);
+    return () => { active = false; };
   }, [desktopApi]);
 
   useEffect(() => {
@@ -136,6 +145,10 @@ export default function App({ api }: AppProps) {
   } else if (route === 'settings') {
     content = audioState.status === 'ready'
       ? <SettingsScreen settings={audioState.settings} settingsRevision={audioState.revision}
+        appearance={appearance} onSaveAppearance={async (value) => {
+          if (desktopApi.updateAppearanceSettings === undefined) return;
+          const saved = await desktopApi.updateAppearanceSettings(value); setAppearance(saved);
+        }}
         onBack={() => navigate('home')} onSave={saveAudioSettings} />
       : <SettingsStatusScreen status={audioState.status} onRetry={loadAudioSettings} onBack={() => navigate('home')} />;
   } else if (route === 'match') {
@@ -190,13 +203,13 @@ export default function App({ api }: AppProps) {
     />;
   }
   const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
-  return <I18nProvider locale={activeLocale}>
+  return <I18nProvider locale={activeLocale}><div data-reduced-motion={appearance.reducedMotion}>
     {[...mediaWarnings.values()].map((warning) => {
       const asset = translate(activeLocale, audioAssetLabelKeys[warning.assetKey]);
       return <p role="alert" key={warning.assetKey} aria-label={asset}>{translate(activeLocale, 'settings.mediaWarning', { asset })}</p>;
     })}
     {content}
-  </I18nProvider>;
+  </div></I18nProvider>;
 }
 
 function HistoryRoute({ api, onBack }: { api: Extract<DesktopApi, { surface: 'host' }>; onBack: () => void }) {

@@ -1,11 +1,14 @@
 import { useRef, useState } from 'react';
 import type { AudioSettings } from '../../../shared/media/contracts';
+import type { AppearanceSettings } from '../../../shared/settings/appearance';
 import { useI18n } from '../../i18n';
 
 interface SettingsScreenProps {
   settings: AudioSettings;
+  appearance?: AppearanceSettings;
   settingsRevision?: number;
   onSave: (settings: AudioSettings) => Promise<void>;
+  onSaveAppearance?: (settings: AppearanceSettings) => Promise<void>;
   onBack: () => void;
 }
 
@@ -16,7 +19,7 @@ const volumeFields = [
   ['crowd', 'settings.crowd'],
 ] as const;
 
-export function SettingsScreen({ settings, settingsRevision = 0, onSave, onBack }: SettingsScreenProps) {
+export function SettingsScreen({ settings, appearance = { reducedMotion: false }, settingsRevision = 0, onSave, onSaveAppearance, onBack }: SettingsScreenProps) {
   const { t } = useI18n();
   const [draft, setDraft] = useState({ current: settings, revision: settingsRevision, dirty: false, pending: null as AudioSettings | null });
   const [error, setError] = useState(false);
@@ -52,6 +55,11 @@ export function SettingsScreen({ settings, settingsRevision = 0, onSave, onBack 
       </div>)}
       <label><input type="checkbox" checked={current.muted}
         onChange={(event) => save({ ...current, muted: event.target.checked })} />{t('settings.mute')}</label>
+    </section>
+    <section aria-label={t('settings.appearance')}>
+      <h2>{t('settings.appearance')}</h2>
+      <label><input type="checkbox" checked={appearance.reducedMotion}
+        onChange={(event) => { void onSaveAppearance?.({ reducedMotion: event.target.checked }); }} />{t('settings.reducedMotion')}</label>
     </section>
     {error ? <p role="alert">{t('settings.saveError')}</p> : null}
     <button type="button" onClick={onBack}>{t('common.back')}</button>

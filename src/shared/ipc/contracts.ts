@@ -10,6 +10,7 @@ import type { GameEvent } from '../game/events';
 import type { DisplayMode, GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
 import { normalizeTeamName } from '../game/teamNames';
 import { audioSettingsSchema, type AudioSettings, type MediaStatusEvent } from '../media/contracts';
+import type { AppearanceSettings } from '../settings/appearance';
 
 const identifierSchema = z.string().trim().min(1);
 const timestampSchema = z.number().int().nonnegative();
@@ -443,6 +444,8 @@ export interface HostQuizStageApi extends StateSubscriptionApi {
   exportContentPack(input: unknown): Promise<ContentExportResult>;
   getAudioSettings(): Promise<AudioSettings>;
   updateAudioSettings(settings: AudioSettings): Promise<AudioSettings>;
+  getAppearanceSettings(): Promise<AppearanceSettings>;
+  updateAppearanceSettings(settings: AppearanceSettings): Promise<AppearanceSettings>;
   subscribeToMediaWarnings(listener: (event: MediaStatusEvent) => void): () => void;
 }
 

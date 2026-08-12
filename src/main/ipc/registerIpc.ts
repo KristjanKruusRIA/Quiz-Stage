@@ -38,6 +38,7 @@ import {
 } from '../../shared/content/editor';
 import { contentReportRecordSchema } from '../../shared/content/schema';
 import { z } from 'zod';
+import { appearanceSettingsSchema, type AppearanceSettings } from '../../shared/settings/appearance';
 
 export interface IpcMainPort {
   handle(channel: string, handler: (event: { sender: { id: number } }, value: unknown) => unknown): void;
@@ -97,6 +98,7 @@ interface RegisterIpcOptions {
     read(): AudioSettings;
     save(input: unknown): AudioSettings;
   };
+  appearanceSettings?: { read(): AppearanceSettings; save(input: unknown): AppearanceSettings };
   mediaWarnings?: { activeWarnings(): MediaWarning[] };
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
@@ -123,6 +125,7 @@ export function registerIpc({
   contentCsv,
   contentEditor,
   audioSettings,
+  appearanceSettings,
   mediaWarnings,
   csvDialogs,
   getAutomaticDisplayMode,
@@ -154,6 +157,15 @@ export function registerIpc({
       return audioSettingsSchema.parse(audioSettings.save(audioSettingsInputSchema.parse(input)));
     });
     audioChannels.push(IPC_CHANNELS.audioSettingsGet, IPC_CHANNELS.audioSettingsUpdate);
+  }
+  if (appearanceSettings !== undefined) {
+    ipcMain.handle(IPC_CHANNELS.appearanceSettingsGet, async (event, input) => {
+      requireHost(event.sender.id); noArgsSchema.parse(input); return appearanceSettingsSchema.parse(appearanceSettings.read());
+    });
+    ipcMain.handle(IPC_CHANNELS.appearanceSettingsUpdate, async (event, input) => {
+      requireHost(event.sender.id); return appearanceSettingsSchema.parse(appearanceSettings.save(appearanceSettingsSchema.parse(input)));
+    });
+    audioChannels.push(IPC_CHANNELS.appearanceSettingsGet, IPC_CHANNELS.appearanceSettingsUpdate);
   }
   if (mediaWarnings !== undefined) {
     ipcMain.handle(IPC_CHANNELS.mediaWarningsGet, async (event, input) => {

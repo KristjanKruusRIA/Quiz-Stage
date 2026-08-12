@@ -29,6 +29,8 @@ export const en = {
   'home.later': 'Additional areas will become available in later releases.',
   'settings.title': 'Settings',
   'settings.audio': 'Audio',
+  'settings.appearance': 'Appearance',
+  'settings.reducedMotion': 'Reduce motion',
   'settings.master': 'Master volume',
   'settings.music': 'Music volume',
   'settings.effects': 'Effects volume',

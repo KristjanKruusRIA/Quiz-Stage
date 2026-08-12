@@ -7,6 +7,7 @@ import type { DisplayMode, GameConfig } from '../shared/game/types';
 import { CsvPackWorkflow } from './content/csvPacks';
 import { ContentEditorService } from './content/contentEditorService';
 import { AudioSettingsRepository } from './persistence/audioSettingsRepository';
+import { AppearanceSettingsRepository } from './persistence/appearanceSettingsRepository';
 
 export interface ApplicationOptions {
   now?: () => number;
@@ -22,6 +23,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
   const contentCsv = new CsvPackWorkflow(database, contentRepository);
   const contentEditor = new ContentEditorService(database, contentRepository, { now: options.now });
   const audioSettings = new AudioSettingsRepository(database, options.now);
+  const appearanceSettings = new AppearanceSettingsRepository(database, options.now);
   const coordinator = new GameCoordinator({
     repository,
     contentService,
@@ -37,6 +39,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
     contentCsv,
     contentEditor,
     audioSettings,
+    appearanceSettings,
     startMatch: (config: GameConfig) => coordinator.startMatch(config),
     hasResumableMatch: () => repository.recoverLatest() !== null,
     resumeMatch: () => coordinator.resumeLatest(),

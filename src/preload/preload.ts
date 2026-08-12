@@ -38,6 +38,7 @@ import {
 import { contentReportRecordSchema } from '../shared/content/schema';
 import { z } from 'zod';
 import { audioSettingsInputSchema, mediaStatusEventSchema, mediaWarningSchema } from '../shared/media/contracts';
+import { appearanceSettingsSchema } from '../shared/settings/appearance';
 
 export interface PreloadIpcPort {
   invoke(channel: string, value: unknown): Promise<unknown>;
@@ -113,6 +114,12 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     ),
     updateAudioSettings: async (settings) => audioSettingsSchema.parse(
       await ipc.invoke(IPC_CHANNELS.audioSettingsUpdate, audioSettingsInputSchema.parse(settings)),
+    ),
+    getAppearanceSettings: async () => appearanceSettingsSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.appearanceSettingsGet, undefined),
+    ),
+    updateAppearanceSettings: async (settings) => appearanceSettingsSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.appearanceSettingsUpdate, appearanceSettingsSchema.parse(settings)),
     ),
     listContent: async () => editorLibrarySchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentList, undefined),

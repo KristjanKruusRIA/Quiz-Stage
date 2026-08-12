@@ -31,6 +31,8 @@ export const et = {
   'home.later': 'Lisajaotised muutuvad kättesaadavaks tulevastes versioonides.',
   'settings.title': 'Seaded',
   'settings.audio': 'Heli',
+  'settings.appearance': 'Välimus',
+  'settings.reducedMotion': 'Vähenda liikumist',
   'settings.master': 'Põhihelitugevus',
   'settings.music': 'Muusika helitugevus',
   'settings.effects': 'Efektide helitugevus',

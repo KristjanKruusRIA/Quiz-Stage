@@ -19,6 +19,8 @@ export const IPC_CHANNELS = {
   contentResolveReport: 'quiz-stage:content:resolve-report',
   audioSettingsGet: 'quiz-stage:audio-settings:get',
   audioSettingsUpdate: 'quiz-stage:audio-settings:update',
+  appearanceSettingsGet: 'quiz-stage:appearance-settings:get',
+  appearanceSettingsUpdate: 'quiz-stage:appearance-settings:update',
   mediaWarning: 'quiz-stage:media-warning',
   mediaWarningsGet: 'quiz-stage:media-warnings:get',
   hostState: 'quiz-stage:state:host',

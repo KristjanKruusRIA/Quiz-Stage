@@ -13,6 +13,7 @@ import type {
 } from '../../shared/content/editor';
 import type { ContentReportRecord } from '../../shared/content/schema';
 import type { AudioSettings, MediaStatusEvent } from '../../shared/media/contracts';
+import type { AppearanceSettings } from '../../shared/settings/appearance';
 
 export type HostDesktopApi = {
       surface: 'host';
@@ -24,6 +25,8 @@ export type HostDesktopApi = {
       listHistory(): Promise<MatchHistoryEntry[]>;
       getAudioSettings?: () => Promise<AudioSettings>;
       updateAudioSettings?: (settings: AudioSettings) => Promise<AudioSettings>;
+      getAppearanceSettings?: () => Promise<AppearanceSettings>;
+      updateAppearanceSettings?: (settings: AppearanceSettings) => Promise<AppearanceSettings>;
       subscribeToMediaWarnings?: (listener: (event: MediaStatusEvent) => void) => () => void;
       dispatch(command: GameCommand): Promise<HostGameView>;
       listContent?: () => Promise<EditorLibrary>;
@@ -66,6 +69,8 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     getAudioSettings,
     updateAudioSettings,
     subscribeToMediaWarnings,
+    getAppearanceSettings,
+    updateAppearanceSettings,
   } = hostBridge;
 
   return {
@@ -77,6 +82,8 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     listHistory: () => listHistory(),
     getAudioSettings: () => getAudioSettings(),
     updateAudioSettings: (settings) => updateAudioSettings(settings),
+    getAppearanceSettings: () => getAppearanceSettings(),
+    updateAppearanceSettings: (settings) => updateAppearanceSettings(settings),
     subscribeToMediaWarnings: (listener) => subscribeToMediaWarnings(listener),
     listContent: () => hostBridge.listContent(),
     saveCategorySet: (input) => hostBridge.saveCategorySet(input),

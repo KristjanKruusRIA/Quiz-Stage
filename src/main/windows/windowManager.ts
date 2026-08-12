@@ -13,11 +13,18 @@ export interface ManagedWindow {
   loadFile(path: string): Promise<unknown> | void;
   on(event: 'closed', listener: () => void): unknown;
   isDestroyed(): boolean;
+  getBounds?(): DisplayBounds;
+  setBounds?(bounds: DisplayBounds): void;
+  setFullScreen?(fullscreen: boolean): void;
+  show?(): void;
 }
 
 interface ManagedWindowOptions {
   width: number;
   height: number;
+  x?: number;
+  y?: number;
+  fullscreen?: boolean;
   webPreferences: {
     contextIsolation: true;
     nodeIntegration: false;
@@ -35,11 +42,35 @@ export interface ManagedWindows {
   publicWindow: ManagedWindow | null;
 }
 
+export interface DisplayBounds {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface DisplaySnapshot {
+  id: number;
+  bounds: DisplayBounds;
+  workArea: DisplayBounds;
+}
+
+type DisplayEvent = 'display-removed' | 'display-metrics-changed';
+
+export interface DisplayPort {
+  getAllDisplays(): DisplaySnapshot[];
+  getPrimaryDisplay(): DisplaySnapshot;
+  on(event: DisplayEvent, listener: (display: DisplaySnapshot) => void): void;
+  removeListener(event: DisplayEvent, listener: (display: DisplaySnapshot) => void): void;
+}
+
 interface WindowManagerOptions {
   createWindow: WindowFactory;
   preloadPath: string;
   rendererHtmlPath: string;
   devServerUrl?: string;
+  displayPort?: DisplayPort;
+  confirmPublicRecovery?: (hostWindow: ManagedWindow) => Promise<boolean>;
 }
 
 export class WindowManager {
@@ -48,21 +79,30 @@ export class WindowManager {
   private displayMode: DisplayMode = 'single';
   private shuttingDown = false;
   private readonly recoveryPending = new Set<'host' | 'public'>();
+  private displayRecoveryPending = false;
+  private readonly onDisplayRemoved = (display: DisplaySnapshot) => { this.handleDisplayChange(display); };
+  private readonly onDisplayMetricsChanged = (display: DisplaySnapshot) => { this.handleDisplayChange(display); };
 
-  constructor(private readonly options: WindowManagerOptions) {}
+  constructor(private readonly options: WindowManagerOptions) {
+    options.displayPort?.on('display-removed', this.onDisplayRemoved);
+    options.displayPort?.on('display-metrics-changed', this.onDisplayMetricsChanged);
+  }
 
   create(displayMode: DisplayMode): ManagedWindows {
     if (this.shuttingDown) return this.getWindows();
     this.displayMode = displayMode;
     this.clearDestroyedReferences();
-    this.hostWindow ??= this.createSurface('host');
-    if (displayMode === 'dual') this.publicWindow ??= this.createSurface('public');
+    this.hostWindow ??= this.createSurface('host', this.hostTarget());
+    if (displayMode === 'dual') this.publicWindow ??= this.createSurface('public', this.publicTarget());
     return this.getWindows();
   }
 
   dispose(): void {
     this.shuttingDown = true;
     this.recoveryPending.clear();
+    this.displayRecoveryPending = false;
+    this.options.displayPort?.removeListener('display-removed', this.onDisplayRemoved);
+    this.options.displayPort?.removeListener('display-metrics-changed', this.onDisplayMetricsChanged);
   }
 
   getWindows(): ManagedWindows {
@@ -70,10 +110,12 @@ export class WindowManager {
     return { hostWindow: this.hostWindow, publicWindow: this.publicWindow };
   }
 
-  private createSurface(surface: 'host' | 'public'): ManagedWindow {
+  private createSurface(surface: 'host' | 'public', target?: DisplayBounds): ManagedWindow {
     const window = this.options.createWindow({
-      width: 1280,
-      height: 720,
+      width: target?.width ?? 1280,
+      height: target?.height ?? 720,
+      ...(target === undefined ? {} : { x: target.x, y: target.y }),
+      ...(surface === 'public' && target !== undefined ? { fullscreen: true } : {}),
       webPreferences: {
         contextIsolation: true,
         nodeIntegration: false,
@@ -122,5 +164,78 @@ export class WindowManager {
       this.publicWindow = null;
       this.scheduleRecovery('public');
     }
+  }
+
+  private hostTarget(): DisplayBounds | undefined {
+    return this.options.displayPort?.getPrimaryDisplay().workArea;
+  }
+
+  private publicTarget(): DisplayBounds | undefined {
+    const displays = this.options.displayPort?.getAllDisplays();
+    if (displays === undefined || displays.length === 0) return undefined;
+    const primaryId = this.options.displayPort?.getPrimaryDisplay().id;
+    return (displays.find((display) => display.id !== primaryId) ?? displays[0])?.bounds;
+  }
+
+  private handleDisplayChange(changedDisplay: DisplaySnapshot): void {
+    if (this.shuttingDown || this.options.displayPort === undefined) return;
+    const displays = this.options.displayPort.getAllDisplays();
+    if (displays.length === 0) return;
+    const host = this.hostWindow;
+    const publicWindow = this.publicWindow;
+    const hostAffected = host !== null && !host.isDestroyed()
+      && this.windowMatchesDisplay(host, changedDisplay)
+      && !this.windowMatchesAnyDisplay(host, displays);
+    const publicAffected = publicWindow !== null
+      && !this.windowMatchesAnyDisplay(publicWindow, displays)
+      && (this.windowMatchesDisplay(publicWindow, changedDisplay) || displays.length > 0);
+
+    if (hostAffected) {
+      const target = this.options.displayPort.getPrimaryDisplay().workArea;
+      host.setFullScreen?.(false);
+      host.setBounds?.(target);
+      host.show?.();
+    }
+    if (publicAffected) this.requestPublicRecovery();
+  }
+
+  private requestPublicRecovery(): void {
+    if (this.displayRecoveryPending || this.shuttingDown || this.displayMode !== 'dual') return;
+    const host = this.hostWindow;
+    const publicWindow = this.publicWindow;
+    const confirm = this.options.confirmPublicRecovery;
+    if (host === null || host.isDestroyed() || publicWindow === null || confirm === undefined) return;
+    this.displayRecoveryPending = true;
+    void confirm(host).then((accepted) => {
+      this.displayRecoveryPending = false;
+      if (!accepted || this.shuttingDown || this.displayMode !== 'dual') return;
+      const target = this.publicTarget();
+      if (target === undefined) return;
+      const current = this.publicWindow;
+      if (current === null || current.isDestroyed() || current.webContents.isDestroyed()) {
+        if (this.publicWindow === current) this.publicWindow = null;
+        this.publicWindow = this.createSurface('public', target);
+      } else {
+        current.setFullScreen?.(false);
+        current.setBounds?.(target);
+        current.setFullScreen?.(true);
+        current.show?.();
+      }
+    }).catch(() => { this.displayRecoveryPending = false; });
+  }
+
+  private windowMatchesAnyDisplay(window: ManagedWindow, displays: DisplaySnapshot[]): boolean {
+    return displays.some((display) => this.windowMatchesDisplay(window, display));
+  }
+
+  private windowMatchesDisplay(window: ManagedWindow, display: DisplaySnapshot): boolean {
+    const bounds = window.getBounds?.();
+    if (bounds === undefined) return false;
+    const centerX = bounds.x + bounds.width / 2;
+    const centerY = bounds.y + bounds.height / 2;
+    return centerX >= display.bounds.x
+      && centerX < display.bounds.x + display.bounds.width
+      && centerY >= display.bounds.y
+      && centerY < display.bounds.y + display.bounds.height;
   }
 }

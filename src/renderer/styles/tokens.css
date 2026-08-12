@@ -12,5 +12,9 @@
   --space-4: 1.5rem;
   --space-5: 2rem;
   --radius: 0.75rem;
+  --type-score: clamp(0.72rem, 1.1vmin + 0.35rem, 2.25rem);
+  --type-category: clamp(0.68rem, 1.5vmin, 2.75rem);
+  --type-value: clamp(1rem, 2.7vmin, 4.5rem);
+  --type-clue: clamp(1.5rem, 4.7vmin, 7rem);
   color-scheme: dark;
 }
