@@ -3,7 +3,7 @@
 ## Status
 
 Implemented one authoritative `npm run verify:product` milestone gate before production content work. The gate runs lint,
-typecheck, all unit/integration tests, a Win32 x64 Forge package build, and every Milestone 1–2 Electron E2E, visual,
+typecheck, all unit/integration tests, a current-platform/current-architecture Forge package build, and every Milestone 1–2 Electron E2E, visual,
 responsive, localization, audio, recovery, content-editor, and keyboard-only test. Its Playwright runner rejects focused
 tests, fails when no tests are discovered, and parses the JSON report to fail on any skipped test.
 
@@ -27,9 +27,9 @@ apart from guarded E2E clock/network observation and Electron dialog selection:
 - Audits renderer console/page errors and the main blocked-request observer, then closes the exact application and
   recursively removes the isolated run directory in `finally`.
 
-The scenario contains no database, private preload, raw IPC, game-coordinator, or filesystem-state shortcut. The CSV
-fixture is data selected through the product import dialog; gameplay, reporting, scoring, undo, recovery, History,
-export, and re-import are all exercised through visible product surfaces.
+The scenario contains no private preload, raw IPC, game-coordinator, or filesystem-state action shortcut. Product
+actions remain UI-driven; test-owned read-only SQLite connections assert the exact durable snapshots, event payloads,
+report identity, generated Keep Both identities, and selected-match configuration after those visible actions.
 
 ## Production offline policy
 
@@ -103,3 +103,55 @@ overall exit: 0
 Final audit found no `test.skip`, `test.only`, `describe.skip`, `describe.only`, or `test.fixme` markers in milestone
 specs, no Electron process whose command line referenced this worktree, no remaining isolated durable run directory,
 and no `git diff --check` errors. No dependency version or production content changed.
+
+## Task 18 review fix round 1
+
+The production file policy now canonicalizes the existing renderer root once and canonicalizes/stats each requested
+existing file before containment is accepted. Packaged-shaped `resources/app.asar/.vite/renderer` fixtures prove an
+owned file remains allowed while a junction/symlink escape and broken link are cancelled without reading the outside
+target. Missing roots, UNC/device URLs, encoded traversal, case/lookalike roots, non-files, HTTP(S), WS(S), `data:`,
+and `blob:` remain denied; the pathless local audio protocol remains allowed. Electron's ASAR-aware filesystem is the
+intentional production canonicalization boundary, while the integration fixture exercises the equivalent directory
+shape without requiring Node/Vitest to mount a real ASAR archive.
+
+The durable scenario now proves exact identities and durable effects rather than presence of headings. It binds the
+reported clue's stable ID and bilingual fields to the imported fixture, verifies the report closes that clue and makes
+the sole pack unavailable for a subsequent match, then corrects it through Content Library and verifies it becomes
+eligible again. Read-only persistence assertions cover the exact `AdjustScore` reason and team/score, judgment delta,
+`ActionUndone` target, exact score restoration, rejudgment, paused timer anchor/remaining state, crash/relaunch identity,
+and exact resumed host-private/public-redacted fields. History assertions compare all eight names, competition ranks,
+scores, completion state, pack, and seed with the completed durable snapshot.
+
+The exported CSV is parsed independently with `parsePackCsv`/`validatePack`; all 61 exact rows, stable IDs, bilingual
+board/Final fields, corrected enabled clue, and deterministic source metadata are compared. Keep Both is asserted to
+produce a main-generated pack ID, 13 rewritten category IDs, 61 rewritten clue IDs, and zero collisions. The test then
+selects only that generated pack through Setup, proves Estonian/Hard availability, starts a match, and verifies its
+persisted pack ID and 60-clue board.
+
+The public environment skip flag was removed. The product runner now creates a mode-`wx`, per-run random-token stamp
+containing SHA-256 fingerprints of all source/test/config inputs, required Vite outputs, the current-platform packaged
+executable, and packaged `app.asar`. Every Playwright worker recomputes and validates it; missing, mismatched, inherited,
+or stale stamps fail closed. Standalone specs still build normally. Forge arguments, Electron/package/archive paths,
+and exact tree termination are platform-specific for Windows, Linux, and macOS; Windows uses exact `taskkill /PID /T /F`
+and POSIX uses the exact negative PID process group. Stamp directories are removed both after the child and on runner
+exit, including stamp-creation failures.
+
+Review RED/GREEN evidence:
+
+```text
+Initial focused RED: 2 files failed, 10 failures (junction allowed, missing root accepted, eight gate APIs absent)
+Canonical containment/gate focused GREEN: 2 files, 26/26 tests
+Durable runtime RED: locale-specific Hard label after switching to Estonian
+Durable runtime GREEN: 1/1 passed (50.2s)
+First fresh gate RED after 486/486 tests/build: nonexistent vite.renderer.config.mts stamp input
+Cross-platform package-path RED: 2/26 tests (host path.join leaked Windows separators for Linux/macOS)
+Final exact npm run verify:product: exit 0
+  lint: exit 0
+  typecheck: exit 0
+  Vitest: 65/65 files, 489/489 tests
+  electron-forge package: current win32 x64, exit 0
+  Playwright: 10/10 passed (2.1m), 0 skipped
+```
+
+Final cleanup found no Electron process referencing this worktree, no remaining `quiz-stage-product-gate-*` stamp
+directory, no skipped/focused Milestone tests, and no diff whitespace errors.

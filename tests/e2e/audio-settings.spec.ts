@@ -2,7 +2,7 @@ import { _electron as electron, expect, test } from '@playwright/test';
 import { copyFileSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { prepareE2eApplication } from './productHarness';
+import { electronExecutablePath, prepareE2eApplication } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
@@ -14,7 +14,7 @@ test('persists audio settings and serves bundled fallback through the pathless p
   writeFileSync(path.join(media, 'winner.wav'), 'malformed personal replacement');
   const launch = () => electron.launch({
     cwd: process.cwd(),
-    executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
+    executablePath: electronExecutablePath(),
     args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-network-guard'],
   });
   let application = await launch();

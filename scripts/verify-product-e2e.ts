@@ -1,7 +1,14 @@
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, rmSync } from 'node:fs';
+import { randomBytes } from 'node:crypto';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { prepareE2eApplication, PRODUCT_BUILD_READY } from '../tests/e2e/productHarness';
+import {
+  createProductBuildStamp,
+  productBuildInputs,
+  PRODUCT_BUILD_STAMP_PATH,
+  PRODUCT_BUILD_STAMP_TOKEN,
+} from '../tests/e2e/productHarness';
 
 interface JsonSuite { suites?: JsonSuite[]; specs?: JsonSpec[] }
 interface JsonSpec { tests?: Array<{ status?: string; results?: Array<{ status?: string }> }> }
@@ -12,23 +19,37 @@ const reportPath = path.join(resultDirectory, 'product-playwright-report.json');
 mkdirSync(resultDirectory, { recursive: true });
 if (existsSync(reportPath)) rmSync(reportPath);
 
-process.env[PRODUCT_BUILD_READY] = '1';
-prepareE2eApplication();
+const stampDirectory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-product-gate-'));
+const stampPath = path.join(stampDirectory, 'build-stamp.json');
+const token = randomBytes(32).toString('hex');
+const removeStamp = () => rmSync(stampDirectory, { recursive: true, force: true });
+process.once('exit', removeStamp);
+createProductBuildStamp({ stampPath, token, ...productBuildInputs() });
 
 const playwright = path.join(process.cwd(), 'node_modules', '@playwright', 'test', 'cli.js');
-const run = spawnSync(process.execPath, [
-  playwright,
-  'test',
-  'tests/e2e',
-  'tests/visual',
-  '--workers=1',
-  '--reporter=line,json',
-  '--forbid-only',
-], {
-  cwd: process.cwd(),
-  env: { ...process.env, PLAYWRIGHT_JSON_OUTPUT_NAME: reportPath },
-  stdio: 'inherit',
-});
+let run: ReturnType<typeof spawnSync>;
+try {
+  run = spawnSync(process.execPath, [
+    playwright,
+    'test',
+    'tests/e2e',
+    'tests/visual',
+    '--workers=1',
+    '--reporter=line,json',
+    '--forbid-only',
+  ], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      [PRODUCT_BUILD_STAMP_PATH]: stampPath,
+      [PRODUCT_BUILD_STAMP_TOKEN]: token,
+      PLAYWRIGHT_JSON_OUTPUT_NAME: reportPath,
+    },
+    stdio: 'inherit',
+  });
+} finally {
+  removeStamp();
+}
 
 if (run.error !== undefined) throw run.error;
 if (run.status !== 0) process.exit(run.status ?? 1);

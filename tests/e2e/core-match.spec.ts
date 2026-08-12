@@ -2,7 +2,7 @@ import { _electron as electron, expect, test } from '@playwright/test';
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { prepareE2eApplication } from './productHarness';
+import { electronExecutablePath, prepareE2eApplication } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
@@ -10,7 +10,7 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
   const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-e2e-'));
   const app = await electron.launch({
     cwd: process.cwd(),
-    executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
+    executablePath: electronExecutablePath(),
     args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'],
   });
   const page = await app.firstWindow();

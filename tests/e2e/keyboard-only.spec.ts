@@ -2,7 +2,7 @@ import { _electron as electron, expect, test, type Page } from '@playwright/test
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { prepareE2eApplication } from './productHarness';
+import { electronExecutablePath, prepareE2eApplication } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
@@ -23,7 +23,7 @@ async function tabTo(page: Page, role: string, name: RegExp | string) {
 
 test('plays a complete match with keyboard input and visible focus only', async () => {
   const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-keyboard-'));
-  const app = await electron.launch({ cwd: process.cwd(), executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'] });
+  const app = await electron.launch({ cwd: process.cwd(), executablePath: electronExecutablePath(), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'] });
   const page = await app.firstWindow();
   await tabTo(page, 'button', 'New Match'); await page.keyboard.press('Enter');
   await tabTo(page, 'button', 'Start match');

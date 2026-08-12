@@ -2,13 +2,13 @@ import { _electron as electron, expect, test, type ElectronApplication, type Pag
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { prepareE2eApplication } from '../e2e/productHarness';
+import { electronExecutablePath, prepareE2eApplication } from '../e2e/productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
 async function launch(teamCount: 2 | 8, longEstonianNames = false): Promise<{ app: ElectronApplication; page: Page }> {
   const userData = mkdtempSync(path.join(tmpdir(), `quiz-stage-visual-${teamCount}-`));
-  const app = await electron.launch({ cwd: process.cwd(), executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`] });
+  const app = await electron.launch({ cwd: process.cwd(), executablePath: electronExecutablePath(), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`] });
   const page = await app.firstWindow();
   await page.getByRole('button', { name: 'New Match' }).click();
   for (let count = 2; count < teamCount; count += 1) await page.getByRole('button', { name: 'Add team' }).click();

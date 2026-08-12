@@ -1,4 +1,5 @@
 import path from 'node:path';
+import { realpathSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 interface RequestDetails {
@@ -54,12 +55,17 @@ function viteOrigin(value: string | undefined): URL | null {
 }
 
 function isOwnedFile(url: URL, rendererRoot: string): boolean {
-  if (url.protocol !== 'file:' || url.search !== '' || url.hash !== '') return false;
+  if (url.protocol !== 'file:' || url.hostname !== '' || url.search !== '' || url.hash !== '') return false;
   try {
-    const root = path.resolve(rendererRoot);
-    const candidate = path.resolve(fileURLToPath(url));
-    const relative = path.relative(root, candidate);
-    return relative !== '' && relative !== '..' && !relative.startsWith(`..${path.sep}`) && !path.isAbsolute(relative);
+    const requested = fileURLToPath(url);
+    if (/^(?:\\\\|\\\\[?.]\\)/.test(requested)) return false;
+    const candidate = realpathSync.native(requested);
+    const relative = path.relative(rendererRoot, candidate);
+    return relative !== ''
+      && relative !== '..'
+      && !relative.startsWith(`..${path.sep}`)
+      && !path.isAbsolute(relative)
+      && statSync(candidate).isFile();
   } catch {
     return false;
   }
@@ -85,11 +91,18 @@ function isViteRequest(url: URL, origin: URL | null): boolean {
 
 export function registerOfflineRendererPolicy(session: SessionPort, options: OfflineRendererOptions): () => void {
   const devOrigin = options.isPackaged ? null : viteOrigin(options.devServerUrl);
+  let rendererRoot: string;
+  try {
+    rendererRoot = realpathSync.native(options.rendererRoot);
+    if (!statSync(rendererRoot).isDirectory()) throw new Error('not-directory');
+  } catch {
+    throw new Error('INVALID_RENDERER_ROOT');
+  }
   const listener: BeforeRequestListener = (details, callback) => {
     let allowed = false;
     try {
       const url = new URL(details.url);
-      allowed = isOwnedFile(url, options.rendererRoot)
+      allowed = isOwnedFile(url, rendererRoot)
         || isMediaRequest(url)
         || isViteRequest(url, devOrigin);
     } catch {

@@ -1,17 +1,16 @@
 import { _electron as electron, expect, test, type ElectronApplication, type Page } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
 import { mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { openDatabase } from '../../src/main/persistence/database';
 import { gameStateSchema } from '../../src/shared/ipc/contracts';
-import { prepareE2eApplication } from './productHarness';
+import { electronExecutablePath, prepareE2eApplication, terminateExactProcessTree } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
 function launch(userData: string) {
   return electron.launch({
     cwd: process.cwd(),
-    executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
+    executablePath: electronExecutablePath(),
     args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock'],
   });
 }
@@ -78,7 +77,7 @@ test('recovers an interrupted Round One match through Resume and records its com
 
     const child = application.process();
     if (child.pid === undefined) throw new Error('Electron process ID is unavailable');
-    execFileSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore' });
+    terminateExactProcessTree(child.pid);
     application = null;
 
     application = await launch(userData);

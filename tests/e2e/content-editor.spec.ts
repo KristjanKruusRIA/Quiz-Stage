@@ -1,7 +1,7 @@
 import { _electron as electron, expect, test, type ElectronApplication } from '@playwright/test';
 import { existsSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import path from 'node:path';
-import { prepareE2eApplication } from './productHarness';
+import { electronExecutablePath, prepareE2eApplication } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
 
@@ -15,7 +15,7 @@ test('creates, exports, deletes, imports, reports, corrects, and re-enables bili
   try {
     application = await electron.launch({
       cwd: process.cwd(),
-      executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'),
+      executablePath: electronExecutablePath(),
       args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock', '--quiz-stage-e2e-network-guard'],
     });
     const externalRequests: string[] = [];

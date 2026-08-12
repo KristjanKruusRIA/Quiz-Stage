@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { describe, expect, it, vi } from 'vitest';
@@ -27,15 +28,52 @@ function harness(options: Parameters<typeof registerOfflineRendererPolicy>[1]) {
   return { dispose, onBeforeRequest, request };
 }
 
-const rendererRoot = path.resolve('out', 'quiz-stage-desktop-game-win32-x64', 'resources', 'app.asar', '.vite', 'renderer');
-const rendererFile = pathToFileURL(path.join(rendererRoot, 'main_window', 'index.html')).href;
+const rendererRoot = path.resolve('src', 'renderer');
+const rendererFile = pathToFileURL(path.join(rendererRoot, 'index.html')).href;
 
 describe('offline renderer session policy', () => {
+  it('canonicalizes a packaged-shaped renderer root and rejects junction escapes and broken links', () => {
+    const fixture = mkdtempSync(path.join(tmpdir(), 'quiz-stage-offline-policy-'));
+    try {
+      const root = path.join(fixture, 'resources', 'app.asar', '.vite', 'renderer', 'main_window');
+      const outside = path.join(fixture, 'outside');
+      mkdirSync(root, { recursive: true });
+      mkdirSync(outside);
+      writeFileSync(path.join(root, 'index.html'), '<main>owned</main>');
+      writeFileSync(path.join(outside, 'secret.html'), 'must-not-load');
+      const escape = path.join(root, 'escape');
+      symlinkSync(outside, escape, process.platform === 'win32' ? 'junction' : 'dir');
+      const broken = path.join(root, 'broken.html');
+      symlinkSync(path.join(outside, 'missing.html'), broken, 'file');
+      const blocked = vi.fn();
+      const policy = harness({ isPackaged: true, rendererRoot: root, onBlockedRequest: blocked });
+
+      expect(policy.request(pathToFileURL(path.join(root, 'index.html')).href, 'mainFrame')).toBe(false);
+      expect(policy.request(pathToFileURL(path.join(escape, 'secret.html')).href, 'script')).toBe(true);
+      expect(policy.request(pathToFileURL(broken).href, 'script')).toBe(true);
+      expect(readFileSync(path.join(outside, 'secret.html'), 'utf8')).toBe('must-not-load');
+      expect(blocked).toHaveBeenCalledTimes(2);
+    } finally {
+      rmSync(fixture, { recursive: true, force: true });
+    }
+  });
+
+  it('rejects missing renderer roots, UNC/device paths, encoded traversal, and case lookalikes', () => {
+    expect(() => harness({ isPackaged: true, rendererRoot: path.join(tmpdir(), 'missing-renderer-root') }))
+      .toThrow('INVALID_RENDERER_ROOT');
+    const policy = harness({ isPackaged: true, rendererRoot });
+    for (const url of [
+      'file://server/share/app.js',
+      'file:///\\\\?\\C:\\private\\app.js',
+      `${rendererFile}/%2e%2e/%2e%2e/private.js`,
+      rendererFile.replace('renderer', 'renderer-lookalike'),
+    ]) expect(policy.request(url, 'script')).toBe(true);
+  });
   it('allows only owned packaged renderer resources and the pathless media protocol in production', () => {
     const policy = harness({ isPackaged: true, rendererRoot });
 
     expect(policy.request(rendererFile, 'mainFrame')).toBe(false);
-    expect(policy.request(pathToFileURL(path.join(rendererRoot, 'main_window', 'assets', 'app.js')).href, 'script')).toBe(false);
+    expect(policy.request(pathToFileURL(path.join(rendererRoot, 'main.tsx')).href, 'script')).toBe(false);
     expect(policy.request('quiz-stage-media://asset/opening', 'media')).toBe(false);
 
     for (const [url, type] of [
