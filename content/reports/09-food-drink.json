@@ -1,0 +1,3518 @@
+{
+  "validation": {
+    "mode": "batch",
+    "blocking": true,
+    "summary": {
+      "boardClues": 500,
+      "categorySets": 100,
+      "distinctCategoryNames": 100,
+      "finalClues": 0,
+      "easySets": 33,
+      "mediumSets": 33,
+      "hardSets": 34
+    },
+    "issues": [
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 2,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 3,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 4,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 5,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 6,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 7,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 8,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 9,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 10,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 11,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 12,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 13,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 14,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 15,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 16,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 17,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 18,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 19,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 20,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 21,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 22,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 23,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 24,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 25,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 26,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 27,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 28,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 29,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 30,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 31,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 32,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 33,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 34,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 35,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 36,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 37,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 38,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 39,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 40,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 41,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 42,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 43,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 44,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 45,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 46,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 47,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 48,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 49,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 50,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 51,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 52,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 53,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 54,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 55,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 56,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 57,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 58,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 59,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 60,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 61,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 62,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 63,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 64,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 65,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 66,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 67,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 68,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 69,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 70,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 71,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 72,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 73,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 74,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 75,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 76,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 77,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 78,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 79,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 80,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 81,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 82,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 83,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 84,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 85,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 86,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 87,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 88,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 89,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 90,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 91,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 92,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 93,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 94,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 95,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 96,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 97,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 98,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 99,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 100,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 101,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 102,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 103,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 104,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 105,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 106,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 107,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 108,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 109,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 110,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 111,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 112,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 113,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 114,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 115,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 116,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 117,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 118,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 119,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 120,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 121,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 122,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 123,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 124,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 125,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 126,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 127,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 128,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 129,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 130,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 131,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 132,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 133,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 134,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 135,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 136,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 137,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 138,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 139,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 140,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 141,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 142,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 143,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 144,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 145,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 146,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 147,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 148,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 149,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 150,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 151,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 152,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 153,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 154,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 155,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 156,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 157,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 158,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 159,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 160,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 161,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 162,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 163,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 164,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 165,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 166,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 167,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 168,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 169,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 170,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 171,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 172,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 173,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 174,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 175,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 176,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 177,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 178,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 179,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 180,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 181,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 182,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 183,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 184,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 185,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 186,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 187,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 188,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 189,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 190,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 191,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 192,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 193,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 194,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 195,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 196,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 197,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 198,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 199,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 200,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 201,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 202,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 203,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 204,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 205,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 206,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 207,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 208,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 209,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 210,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 211,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 212,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 213,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 214,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 215,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 216,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 217,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 218,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 219,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 220,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 221,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 222,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 223,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 224,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 225,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 226,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 227,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 228,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 229,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 230,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 231,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 232,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 233,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 234,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 235,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 236,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 237,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 238,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 239,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 240,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 241,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 242,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 243,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 244,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 245,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 246,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 247,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 248,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 249,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 250,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 251,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 252,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 253,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 254,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 255,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 256,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 257,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 258,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 259,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 260,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 261,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 262,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 263,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 264,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 265,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 266,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 267,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 268,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 269,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 270,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 271,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 272,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 273,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 274,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 275,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 276,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 277,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 278,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 279,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 280,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 281,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 282,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 283,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 284,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 285,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 286,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 287,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 288,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 289,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 290,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 291,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 292,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 293,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 294,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 295,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 296,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 297,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 298,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 299,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 300,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 301,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 302,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 303,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 304,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 305,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 306,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 307,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 308,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 309,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 310,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 311,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 312,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 313,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 314,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 315,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 316,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 317,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 318,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 319,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 320,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 321,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 322,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 323,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 324,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 325,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 326,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 327,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 328,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 329,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 330,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 331,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 332,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 333,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 334,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 335,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 336,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 337,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 338,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 339,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 340,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 341,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 342,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 343,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 344,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 345,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 346,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 347,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 348,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 349,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 350,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 351,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 352,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 353,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 354,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 355,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 356,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 357,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 358,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 359,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 360,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 361,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 362,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 363,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 364,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 365,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 366,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 367,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 368,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 369,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 370,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 371,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 372,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 373,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 374,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 375,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 376,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 377,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 378,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 379,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 380,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 381,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 382,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 383,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 384,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 385,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 386,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 387,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 388,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 389,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 390,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 391,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 392,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 393,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 394,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 395,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 396,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 397,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 398,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 399,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 400,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 401,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 402,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 403,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 404,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 405,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 406,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 407,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 408,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 409,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 410,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 411,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 412,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 413,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 414,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 415,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 416,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 417,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 418,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 419,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 420,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 421,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 422,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 423,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 424,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 425,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 426,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 427,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 428,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 429,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 430,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 431,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 432,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 433,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 434,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 435,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 436,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 437,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 438,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 439,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 440,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 441,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 442,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 443,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 444,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 445,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 446,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 447,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 448,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 449,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 450,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 451,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 452,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 453,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 454,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 455,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 456,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 457,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 458,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 459,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 460,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 461,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 462,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 463,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 464,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 465,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 466,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 467,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 468,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 469,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 470,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 471,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 472,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 473,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 474,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 475,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 476,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 477,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 478,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 479,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 480,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 481,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 482,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 483,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 484,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 485,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 486,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 487,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 488,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 489,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 490,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 491,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 492,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 493,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 494,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 495,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 496,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 497,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 498,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 499,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 500,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      },
+      {
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
+        "row": 501,
+        "code": "NUMBER_DRIFT",
+        "severity": "error",
+        "message": "English and Estonian numeric facts differ"
+      }
+    ],
+    "exceptions": []
+  }
+}

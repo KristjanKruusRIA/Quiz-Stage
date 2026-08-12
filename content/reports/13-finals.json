@@ -1,0 +1,25 @@
+{
+  "validation": {
+    "mode": "batch",
+    "blocking": true,
+    "summary": {
+      "boardClues": 0,
+      "categorySets": 0,
+      "distinctCategoryNames": 0,
+      "finalClues": 150,
+      "easySets": 0,
+      "mediumSets": 0,
+      "hardSets": 0
+    },
+    "issues": [
+      {
+        "file": "<inventory>",
+        "row": 0,
+        "code": "MATCH_CATEGORY_NAMES_SHORTAGE",
+        "severity": "error",
+        "message": "At least 12 distinct board category names are required; found 0"
+      }
+    ],
+    "exceptions": []
+  }
+}
