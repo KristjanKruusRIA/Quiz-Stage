@@ -2,7 +2,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../../src/renderer/api/desktopApi';
 import { GameSurface } from '../../../../src/renderer/features/game/GameSurface';
-import { hostView } from './fixtures';
+import { hostView, publicView } from './fixtures';
 
 function deferred<T>() {
   let reject!: (reason?: unknown) => void;
@@ -19,6 +19,17 @@ function api(dispatch: HostDesktopApi['dispatch']): HostDesktopApi {
 }
 
 describe('GameSurface board selection', () => {
+  it('renders a legacy long Unicode team name exactly on host and public scoreboards', () => {
+    const legacyName = 'Pärandvõistkond 🧠 — väga pikk nimi 1234567890';
+    const view = hostView();
+    view.state.config.teams[0].name = legacyName;
+    const { rerender } = render(<GameSurface surface="host" view={view} api={api(vi.fn())} />);
+    expect(screen.getByText(new RegExp(legacyName), { selector: '.scoreboard li' })).toBeInTheDocument();
+
+    rerender(<GameSurface surface="public" view={publicView({ config: view.state.config })} />);
+    expect(screen.getByText(new RegExp(legacyName), { selector: '.scoreboard li' })).toBeInTheDocument();
+  });
+
   it('synchronously prevents duplicate selection while the authoritative dispatch is pending', () => {
     const pending = deferred<Awaited<ReturnType<HostDesktopApi['dispatch']>>>();
     const dispatch = vi.fn(() => pending.promise);

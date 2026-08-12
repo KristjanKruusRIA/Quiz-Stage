@@ -25,14 +25,15 @@ const teamSchema = z.strictObject({
 });
 const authoredTeamSchema = teamSchema.extend({ name: z.string().trim().min(1).max(TEAM_NAME_MAX_LENGTH) });
 
-export const gameConfigSchema = z.strictObject({
+const gameConfigShape = {
   language: z.enum(['en', 'et']),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   clueSeconds: z.number().int().min(5).max(60).multipleOf(5),
-  teams: z.array(authoredTeamSchema).min(2).max(8),
   packIds: z.array(identifierSchema).min(1),
   displayMode: z.enum(['single', 'dual']),
-}).superRefine((config, context) => {
+};
+
+const validateGameConfig = (config: { teams: Array<{ id: string; name: string; color: string }>; packIds: string[] }, context: z.RefinementCtx) => {
   const unique = (values: string[]) => new Set(values).size === values.length;
 
   if (!unique(config.teams.map((team) => team.id))) {
@@ -47,7 +48,17 @@ export const gameConfigSchema = z.strictObject({
   if (!unique(config.packIds)) {
     context.addIssue({ code: 'custom', message: 'Pack IDs must be unique', path: ['packIds'] });
   }
-});
+};
+
+export const gameConfigSchema = z.strictObject({
+  ...gameConfigShape,
+  teams: z.array(authoredTeamSchema).min(2).max(8),
+}).superRefine(validateGameConfig);
+
+const persistedGameConfigSchema = z.strictObject({
+  ...gameConfigShape,
+  teams: z.array(teamSchema).min(2).max(8),
+}).superRefine(validateGameConfig);
 
 export const gameCommandSchema = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('SelectClue'), clueId: identifierSchema }),
@@ -157,7 +168,7 @@ const undoFrameSchema = z.strictObject({
 export const gameStateSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   id: identifierSchema,
-  config: gameConfigSchema,
+  config: persistedGameConfigSchema,
   seed: z.string(),
   phase: gamePhaseSchema,
   boards: z.array(boardSchema),

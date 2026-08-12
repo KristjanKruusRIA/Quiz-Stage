@@ -192,6 +192,27 @@ describe('preload quizStage surface', () => {
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsGet, undefined);
   });
 
+  it('tears down an appearance subscription before a delayed bootstrap can publish', async () => {
+    const bootstrap = deferred<unknown>();
+    let wrapped: ((event: unknown, value: unknown) => void) | undefined;
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(() => bootstrap.promise),
+      on: vi.fn((_channel, listener) => { wrapped = listener; }),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const listener = vi.fn();
+    const unsubscribe = createQuizStageApi('public', ipc).subscribeToAppearance(listener);
+    unsubscribe();
+    wrapped?.({}, { version: 1, reducedMotion: true, revision: 2 });
+    bootstrap.resolve({ version: 1, reducedMotion: false, revision: 1 });
+    await bootstrap.promise;
+    await Promise.resolve();
+
+    expect(listener).not.toHaveBeenCalled();
+    expect(ipc.removeListener).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, wrapped);
+  });
+
   it('rejects host-shaped data on the public channel before invoking the listener', () => {
     let wrapped: ((event: unknown, value: unknown) => void) | undefined;
     const ipc: PreloadIpcPort = {

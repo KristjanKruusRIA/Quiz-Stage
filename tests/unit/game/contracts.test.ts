@@ -23,6 +23,26 @@ describe('IPC contracts', () => {
     expect(result.success).toBe(false);
   });
 
+  it('rejects newly authored names over 32 characters but parses legacy persisted Unicode names exactly', () => {
+    const legacyName = 'Pärandvõistkond 🧠 — väga pikk nimi 1234567890';
+    const config = {
+      language: 'et' as const, difficulty: 'medium' as const, clueSeconds: 15,
+      teams: [{ id: 't1', name: legacyName, color: '#E3B341' }, { id: 't2', name: 'Beta', color: '#50A7F5' }],
+      packIds: ['bundled'], displayMode: 'single' as const,
+    };
+    expect(gameConfigSchema.safeParse(config).success).toBe(false);
+
+    const parsed = gameStateSchema.parse({
+      ...gameStateSchema.parse({
+        appVersion: '0.1.0', id: 'legacy-long-name', config: { ...config, teams: [{ ...config.teams[0], name: 'Alpha' }, config.teams[1]] },
+        phase: 'round-one-board', boards: [], finalClue: null, scores: { t1: 0, t2: 0 }, controllingTeamId: 't1',
+        activeClue: null, usedClueIds: [], finalWagers: {}, seed: 'fixed-seed', dailyDoubleClueIds: [],
+      }),
+      config,
+    });
+    expect(parsed.config.teams[0].name).toBe(legacyName);
+  });
+
   it('rejects an extra renderer-supplied score delta on a valid command', () => {
     expect(gameCommandSchema.safeParse({ type: 'SelectClue', clueId: 'c1', delta: 99999 }).success).toBe(false);
   });

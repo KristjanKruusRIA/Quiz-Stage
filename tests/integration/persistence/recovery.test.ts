@@ -43,6 +43,34 @@ describe('MatchRepository recovery', () => {
     }));
   });
 
+  it('recovers, replays, commands, and histories a persisted long Unicode team name exactly', async () => {
+    const legacyName = 'Pärandvõistkond 🧠 — väga pikk nimi 1234567890';
+    const initial = game('legacy-long-name');
+    initial.config.teams[0].name = legacyName;
+    repository.persistTransition(initial.id, [], initial);
+    const clue = initial.boards[0].categories.flatMap((category) => category.clues)
+      .find((candidate) => !initial.dailyDoubleClueIds.includes(candidate.id))!;
+    const selected = applyGameCommand(initial, {
+      type: 'SelectClue', clueId: clue.id,
+    }, 200);
+    repository.persistTransition(initial.id, selected.events, selected.state);
+    database.prepare('UPDATE match_snapshots SET state_json = ? WHERE match_id = ? AND sequence = ?')
+      .run('{}', initial.id, 2);
+
+    const recovered = repository.recoverLatest();
+    expect(recovered?.state.config.teams[0].name).toBe(legacyName);
+    expect(recovered?.events).toEqual(selected.events);
+
+    const application = createApplication(database, { now: () => 300 });
+    const resumed = await application.resumeMatch();
+    expect(resumed?.state.config.teams[0].name).toBe(legacyName);
+    const revealed = await application.coordinator.dispatch({ type: 'RevealResponse' });
+    expect(revealed.state.config.teams[0].name).toBe(legacyName);
+    await application.coordinator.dispatch({ type: 'EndIncompleteMatch' });
+    expect(application.listHistory()[0].standings[0].name).toBe(legacyName);
+    application.coordinator.dispose();
+  });
+
   it('falls back from corrupt newer snapshots and replays only the validated contiguous later prefix', () => {
     const initial = game('match-1');
     repository.persistTransition(initial.id, [], initial);

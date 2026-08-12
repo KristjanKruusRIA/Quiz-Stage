@@ -57,4 +57,22 @@ describe('game shortcuts', () => {
     document.body.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
     expect(callbacks.onToggleTimer).toHaveBeenCalledOnce();
   });
+
+  it('keeps non-Space shortcuts global on non-editable native and ARIA controls', () => {
+    const callbacks = handlers(); render(<Harness handlers={callbacks} />);
+    for (const selector of ['button', 'a', '[role="button"]']) {
+      const target = document.querySelector(selector)!;
+      for (const key of ['1', 'c', 'x', 'r', 'u', 'm']) {
+        target.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true }));
+      }
+    }
+
+    expect(callbacks.onTeam).toHaveBeenCalledTimes(3);
+    expect(callbacks.onCorrect).toHaveBeenCalledTimes(3);
+    expect(callbacks.onIncorrect).toHaveBeenCalledTimes(3);
+    expect(callbacks.onReveal).toHaveBeenCalledTimes(3);
+    expect(callbacks.onUndo).toHaveBeenCalledTimes(3);
+    expect(callbacks.onMute).toHaveBeenCalledTimes(3);
+    expect(callbacks.onToggleTimer).not.toHaveBeenCalled();
+  });
 });

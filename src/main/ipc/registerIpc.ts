@@ -170,8 +170,11 @@ export function registerIpc({
     ipcMain.handle(IPC_CHANNELS.appearanceSettingsUpdate, async (event, input) => {
       requireHost(event.sender.id);
       const saved = appearanceSettingsSchema.parse(appearanceSettings.save(appearanceSettingsSchema.parse(input)));
-      for (const window of [getWindows().hostWindow, getWindows().publicWindow]) {
-        if (window !== null && !window.webContents.isDestroyed()) window.webContents.send(IPC_CHANNELS.appearanceSettingsChanged, saved);
+      for (const surface of ['hostWindow', 'publicWindow'] as const) {
+        try {
+          const window = getWindows()[surface];
+          if (window !== null && !window.webContents.isDestroyed()) window.webContents.send(IPC_CHANNELS.appearanceSettingsChanged, saved);
+        } catch { /* a durable settings save is independent of renderer notification lifetime */ }
       }
       return saved;
     });

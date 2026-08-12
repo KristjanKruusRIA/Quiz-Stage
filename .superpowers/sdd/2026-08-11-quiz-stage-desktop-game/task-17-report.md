@@ -148,3 +148,53 @@ Updated artifacts:
 
 - Portable ZIP: 157,100,206 bytes, SHA-256 `DD47038DE78178294935D45869A368804FD64CBB7E0E499916845CBD887D13DD`.
 - Packaged executable: 225,442,304 bytes, SHA-256 `7BA623EC8E68132A54DD6FF92295351408771A0BE9CD0A54CC6E7A6FF4FB5877`.
+
+## Fix round 2 (2026-08-12)
+
+- Shortcut policy is now key-specific. Space always yields to native and ARIA interactive controls so it cannot
+  double-activate a focused button. Team-number, C, X, R, U, and M shortcuts remain global while non-editable buttons,
+  links, and ARIA controls hold focus. Character shortcuts yield only to typing contexts (text/number inputs, textarea,
+  select, contenteditable, textbox, and spinbutton); modifier and repeat protections remain unchanged.
+- New-match authoring continues through the 32-character `gameConfigSchema`, while persisted `GameState` uses an
+  otherwise identical backward-compatible config schema with unbounded nonempty team names. A 40+ character Unicode
+  name is verified through snapshot fallback, event replay, a later command, match history, host rendering, and public
+  rendering without normalization or truncation. This does not widen start-match or command IPC inputs.
+- Appearance persistence completes before best-effort renderer notification. Host and public window references are
+  re-read separately; destroyed or throwing web contents are isolated so one surface cannot reject the durable save or
+  prevent the other current surface receiving it. Replacement surfaces still obtain the current revision through their
+  validated bootstrap, and delayed bootstrap is inert after subscription teardown.
+
+### Fix-round verification
+
+```text
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm run test:run
+Test Files 63 passed (63)
+Tests 463 passed (463)
+
+npx playwright test tests/e2e/keyboard-only.spec.ts tests/visual/game-layout.spec.ts --reporter=line
+4 passed
+
+Existing E2Es serialized with exact worktree-executable cleanup checks:
+audio-settings, content-editor, core-match, i18n, keyboard-only, resume-match
+6/6 passed
+
+npm run build
+exit 0
+
+npm run make:portable
+exit 0
+```
+
+React review: no production TSX changed in this round. The added renderer assertion uses existing top-level components
+and authoritative fixtures; no nested component, derived-state effect, or new render authority was introduced.
+
+Updated artifacts:
+
+- Portable ZIP: 157,100,411 bytes, SHA-256 `0CD7B45DA624DFB1750086FEDAA76BDC33E263BADB8D6516208D3512AD14E1D0`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `FE7AA21C5B8F72A443C390C0BD7D71719E015E151A9ED7EDF8799A32636EE20A`.

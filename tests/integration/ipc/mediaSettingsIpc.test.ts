@@ -8,6 +8,7 @@ import { registerIpc, type IpcMainPort } from '../../../src/main/ipc/registerIpc
 import { createQuizStageApi, type PreloadIpcPort } from '../../../src/preload/preload';
 import { defaultAudioSettings } from '../../../src/shared/media/contracts';
 import { defaultAppearanceSettings } from '../../../src/shared/settings/appearance';
+import type { AppearanceSettings } from '../../../src/shared/settings/appearance';
 
 describe('audio settings IPC', () => {
   it('projects appearance read-only to the current public sender and broadcasts revisioned host saves', async () => {
@@ -28,6 +29,31 @@ describe('audio settings IPC', () => {
     await expect(handlers.get(IPC_CHANNELS.appearanceSettingsUpdate)!({ sender: { id: 1 } }, defaultAppearanceSettings)).resolves.toEqual({ version: 1, reducedMotion: true, revision: 1 });
     expect(hostWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, { version: 1, reducedMotion: true, revision: 1 });
     expect(publicWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, { version: 1, reducedMotion: true, revision: 1 });
+  });
+
+  it('returns a durable appearance save when one notification throws and still notifies the other current surface', async () => {
+    const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
+    const ipcMain: IpcMainPort = { handle: (channel, handler) => handlers.set(channel, handler), removeHandler: vi.fn(), on: vi.fn(), removeListener: vi.fn() };
+    let durable: AppearanceSettings = defaultAppearanceSettings;
+    const appearanceSettings = {
+      read: vi.fn(() => durable),
+      save: vi.fn(() => (durable = { version: 1 as const, reducedMotion: true, revision: 1 })),
+    };
+    const coordinator = { dispatch: vi.fn(), subscribe: vi.fn(() => vi.fn()), getHostStateUpdate: vi.fn(() => null), getPublicStateUpdate: vi.fn(() => null) };
+    const stalePublicSend = vi.fn();
+    const publicSend = vi.fn();
+    const replacementPublic = { webContents: { id: 3, send: publicSend, isDestroyed: () => false } };
+    let publicWindow = { webContents: { id: 2, send: stalePublicSend, isDestroyed: () => false } };
+    const hostWindow = { webContents: { id: 1, send: vi.fn(() => { publicWindow = replacementPublic; throw new Error('renderer gone'); }), isDestroyed: () => false } };
+    registerIpc({ ipcMain, coordinator, appearanceSettings, getWindows: () => ({ hostWindow, publicWindow }) });
+
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsUpdate)!({ sender: { id: 1 } }, defaultAppearanceSettings))
+      .resolves.toEqual({ version: 1, reducedMotion: true, revision: 1 });
+    expect(publicSend).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, durable);
+    expect(stalePublicSend).not.toHaveBeenCalled();
+
+    publicWindow = { webContents: { id: 4, send: vi.fn(), isDestroyed: () => false } };
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsGet)!({ sender: { id: 4 } }, undefined)).resolves.toEqual(durable);
   });
 
   it('strictly authorizes host reads/writes and never adds settings methods to public preload', async () => {
