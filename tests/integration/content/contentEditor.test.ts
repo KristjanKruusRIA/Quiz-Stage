@@ -17,6 +17,13 @@ const BASE_SOURCE: EditorSource = {
   retrievedAt: '2026-08-01',
   translationStatus: 'reviewed',
 };
+const UPGRADED_SOURCE: EditorSource = {
+  title: 'Upgraded seed source',
+  url: 'https://example.com/upgraded',
+  license: 'ODC-BY-1.0',
+  retrievedAt: '2026-08-13',
+  translationStatus: 'untranslated',
+};
 
 function storedSource(source: EditorSource): string {
   return JSON.stringify({ format: 'quiz-stage-csv-v1', ...source });
@@ -74,6 +81,12 @@ describe('content editor service', () => {
 
   function installStructuredBundledSources(database: DatabaseConnection): void {
     database.prepare('UPDATE clues SET source = ?').run(storedSource(BASE_SOURCE));
+  }
+
+  function rawOverrideSource(database: DatabaseConnection, clueId: string): string {
+    const raw = database.prepare('SELECT override_json FROM content_overrides WHERE clue_id = ?')
+      .pluck().get(clueId) as string;
+    return (JSON.parse(raw) as { source: string }).source;
   }
 
   const sourceChanges: { field: keyof EditorSource; value: string }[] = [
@@ -210,6 +223,97 @@ describe('content editor service', () => {
     expect(database.prepare('SELECT override_json FROM content_overrides WHERE clue_id = ?').pluck().get(draft.clues[0].id))
       .toContain('Corrected legacy title');
   });
+
+  it.each(['board', 'final'] as const)(
+    'preserves a legacy bundled %s title overlay when unrelated content changes',
+    (kind) => {
+      const { database, repository, editor } = openEditor();
+      installStructuredBundledSources(database);
+      const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+      const initial = kind === 'board' ? bundled.categorySets[0] : bundled.finalClues[0];
+      const clueId = 'clues' in initial ? initial.clues[0].id : initial.clue.id;
+      const override = structuredClone(repository.getClue(clueId)!);
+      delete (override as { lastSeenAt?: number | null }).lastSeenAt;
+      repository.saveOverride({ ...override, source: 'Legacy title overlay' });
+
+      const currentPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+      const draft = structuredClone(kind === 'board'
+        ? currentPack.categorySets.find((category) => category.id === initial.id)!
+        : currentPack.finalClues.find((final) => final.id === initial.id)!);
+      const clue = 'clues' in draft ? draft.clues[0] : draft.clue;
+      expect(clue.source).toEqual({
+        title: 'Legacy title overlay', url: 'https://example.com/seed', license: 'CC0',
+        retrievedAt: '2026-08-01', translationStatus: 'reviewed',
+      });
+      clue.prompt.en = `${clue.prompt.en} corrected`;
+      const savedClue = 'clues' in draft
+        ? editor.saveCategorySet({ expectedRevision: draft.revision, categorySet: toWritableCategorySet(draft) }).clues[0]
+        : editor.saveFinalClue({ expectedRevision: draft.revision, finalClue: toWritableFinalClue(draft) }).clue;
+
+      expect(savedClue.source).toEqual({
+        title: 'Legacy title overlay', url: 'https://example.com/seed', license: 'CC0',
+        retrievedAt: '2026-08-01', translationStatus: 'reviewed',
+      });
+      expect(rawOverrideSource(database, clueId)).toBe('Legacy title overlay');
+      database.prepare('UPDATE clues SET source = ? WHERE id = ?').run(storedSource(UPGRADED_SOURCE), clueId);
+      const upgradedPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+      const upgradedClue = kind === 'board'
+        ? upgradedPack.categorySets.find((category) => category.id === initial.id)!.clues[0]
+        : upgradedPack.finalClues.find((final) => final.id === initial.id)!.clue;
+      expect(upgradedClue.source).toEqual({
+        title: 'Legacy title overlay', url: 'https://example.com/upgraded', license: 'ODC-BY-1.0',
+        retrievedAt: '2026-08-13', translationStatus: 'untranslated',
+      });
+      expect(rawOverrideSource(database, clueId)).toBe('Legacy title overlay');
+    },
+  );
+
+  it.each(['board', 'final'] as const)(
+    'converts a changed legacy bundled %s source to a stable structured override',
+    (kind) => {
+      const { database, repository, editor } = openEditor();
+      installStructuredBundledSources(database);
+      const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+      const initial = kind === 'board' ? bundled.categorySets[0] : bundled.finalClues[0];
+      const clueId = 'clues' in initial ? initial.clues[0].id : initial.clue.id;
+      const override = structuredClone(repository.getClue(clueId)!);
+      delete (override as { lastSeenAt?: number | null }).lastSeenAt;
+      repository.saveOverride({ ...override, source: 'Legacy title overlay' });
+
+      const currentPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+      const draft = structuredClone(kind === 'board'
+        ? currentPack.categorySets.find((category) => category.id === initial.id)!
+        : currentPack.finalClues.find((final) => final.id === initial.id)!);
+      ('clues' in draft ? draft.clues[0] : draft.clue).source.url = 'https://example.com/intentional-edit';
+      const saved = 'clues' in draft
+        ? editor.saveCategorySet({ expectedRevision: draft.revision, categorySet: toWritableCategorySet(draft) })
+        : editor.saveFinalClue({ expectedRevision: draft.revision, finalClue: toWritableFinalClue(draft) });
+      const structuredRawSource = rawOverrideSource(database, clueId);
+      expect(JSON.parse(structuredRawSource)).toEqual({
+        format: 'quiz-stage-csv-v1', title: 'Legacy title overlay',
+        url: 'https://example.com/intentional-edit', license: 'CC0',
+        retrievedAt: '2026-08-01', translationStatus: 'reviewed',
+      });
+
+      const unrelatedDraft = structuredClone(saved);
+      ('clues' in unrelatedDraft ? unrelatedDraft.clues[0] : unrelatedDraft.clue).response.en += ' corrected';
+      if ('clues' in unrelatedDraft) {
+        editor.saveCategorySet({ expectedRevision: unrelatedDraft.revision, categorySet: toWritableCategorySet(unrelatedDraft) });
+      } else {
+        editor.saveFinalClue({ expectedRevision: unrelatedDraft.revision, finalClue: toWritableFinalClue(unrelatedDraft) });
+      }
+      expect(rawOverrideSource(database, clueId)).toBe(structuredRawSource);
+      database.prepare('UPDATE clues SET source = ? WHERE id = ?').run(storedSource(UPGRADED_SOURCE), clueId);
+      const upgradedPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+      const upgradedClue = kind === 'board'
+        ? upgradedPack.categorySets.find((category) => category.id === initial.id)!.clues[0]
+        : upgradedPack.finalClues.find((final) => final.id === initial.id)!.clue;
+      expect(upgradedClue.source).toEqual({
+        title: 'Legacy title overlay', url: 'https://example.com/intentional-edit', license: 'CC0',
+        retrievedAt: '2026-08-01', translationStatus: 'reviewed',
+      });
+    },
+  );
 
   it('routes bundled corrections through overrides and rejects stale saves', () => {
     const { database, repository, editor } = openEditor();

@@ -339,3 +339,53 @@ Final round-five artifacts:
 - Packaged executable: 225,442,304 bytes, SHA-256 `7722FE89090D1CE0E894362279C20C932E48B909E575FB24ADFFC8FD84C45BCF`.
 - Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
 - The ZIP contains the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the `better-sqlite3` win32-x64 prebuild.
+
+### Round-five correction: preserve legacy title overlays
+
+The round-five implementation initially rewrote an existing plain title-only override as a full structured source whenever any other clue field changed. That changed the older overlay contract: after a later seed upgrade, the title remained local but URL, license, retrieval date, and translation status incorrectly stayed frozen to the pre-upgrade base.
+
+Bundled board and Final saves now compare submitted source fields with the authoritative effective source loaded inside the existing immediate transaction. If those fields are unchanged, the save copies the exact raw source string from the existing override, or the exact raw base source when creating a new field-complete override. Only an intentional source-field change uses the structured encoder. This preserves plain title-overlay inheritance, avoids renderer authority and double encoding, and keeps already-structured overrides byte-stable across unrelated edits.
+
+Correction RED:
+
+```text
+npm run test:run -- tests/integration/content/contentEditor.test.ts
+Test Files 1 failed (1)
+Tests 2 failed, 30 passed (32)
+```
+
+Both failures showed a board or Final prompt-only correction replacing raw `Legacy title overlay` with structured base-A metadata. The added controls prove an intentional provenance edit converts to a full structured override and stays frozen after a seed upgrade, while a later unrelated edit preserves that structured source byte-for-byte.
+
+Correction verification:
+
+```text
+Focused editor/overrides/CSV/source-projection/IPC/preload/renderer suite
+Test Files 9 passed (9)
+Tests 120 passed (120)
+
+npm run test:run
+Test Files 50 passed (50)
+Tests 375 passed (375)
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npx playwright test tests/e2e/content-editor.spec.ts tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts --workers=1
+3 passed (1.7m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+Corrected round-five artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,754,515 bytes, SHA-256 `A3A83EB8B55B685845D104E336A85CFBB01543E4DE93393DA844924257282077`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `03CB83D7EB3A79608CA3A36CC61979738FF3C16B467D6D82B52AE48E0CC7AD26`.
+- Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
+- The ZIP contains the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the `better-sqlite3` win32-x64 prebuild.

@@ -38,6 +38,7 @@ interface ClueRow {
   reported: number;
   report_id: number | null; report_created_at: number | null;
 }
+interface RawClueSourceRow { source: string; override_json: string | null }
 
 const isCustom = (source: string) => source === 'custom-csv' || source === 'custom-editor';
 const revision = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -51,6 +52,14 @@ function clueContentChanged(current: EditorClue, submitted: WritableEditorClue):
     enabled: clue.enabled,
   });
   return JSON.stringify(content(current)) !== JSON.stringify(content(submitted));
+}
+
+function sourceChanged(current: EditorSource, submitted: EditorSource): boolean {
+  return current.title !== submitted.title
+    || current.url !== submitted.url
+    || current.license !== submitted.license
+    || current.retrievedAt !== submitted.retrievedAt
+    || current.translationStatus !== submitted.translationStatus;
 }
 
 function parseLocalized(value: string) {
@@ -242,17 +251,18 @@ export class ContentEditorService {
           if (clue.id === null) throw new Error('Bundled clue identity is required');
           const oldClue = current.clues.find((candidate) => candidate.id === clue.id)!;
           if (!clueContentChanged(oldClue, clue)) continue;
+          const source = this.bundledOverrideSource(clue.id, oldClue.source, clue.source);
           contentOverrideSchema.parse({
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
-            source: storeBundledSource(clue.source), enabled: clue.enabled,
+            source, enabled: clue.enabled,
           });
           this.repository.saveOverride({
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
-            source: storeBundledSource(clue.source), enabled: clue.enabled,
+            source, enabled: clue.enabled,
           });
           if (oldClue.reported) this.repository.resolveReport(clue.id, this.now());
         }
@@ -319,12 +329,13 @@ export class ContentEditorService {
             updated_at = excluded.updated_at WHERE override_json <> excluded.override_json
         `).run(draft.categoryId, JSON.stringify(metadata), this.now());
         if (clueContentChanged(current.clue, draft.clue)) {
+          const source = this.bundledOverrideSource(draft.clue.id, current.clue.source, draft.clue.source);
           this.repository.saveOverride({
             id: draft.clue.id, packId: draft.packId, categoryId: draft.categoryId,
             categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
             prompt: draft.clue.prompt, response: draft.clue.response, explanation: draft.clue.explanation,
             ...(draft.clue.acceptedResponses === undefined ? {} : { acceptedResponses: draft.clue.acceptedResponses }),
-            source: storeBundledSource(draft.clue.source), enabled: draft.clue.enabled,
+            source, enabled: draft.clue.enabled,
           });
           if (current.clue.reported) this.repository.resolveReport(draft.clue.id, this.now());
         }
@@ -438,6 +449,23 @@ export class ContentEditorService {
       reported: row.reported === 1,
       report: row.report_id === null || row.report_created_at === null ? null : { id: row.report_id, createdAt: row.report_created_at },
     };
+  }
+
+  private bundledOverrideSource(
+    clueId: string,
+    current: EditorSource,
+    submitted: EditorSource,
+  ): string {
+    if (sourceChanged(current, submitted)) return storeBundledSource(submitted);
+    const row = this.database.prepare(`
+      SELECT clues.source, content_overrides.override_json
+      FROM clues
+      LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
+      WHERE clues.id = ?
+    `).get(clueId) as RawClueSourceRow | undefined;
+    if (row === undefined) throw new Error(`Unknown bundled clue: ${clueId}`);
+    if (row.override_json === null) return row.source;
+    return contentOverrideSchema.parse(JSON.parse(row.override_json)).source;
   }
 
   private requirePack(id: string): EditorPack {
