@@ -111,3 +111,79 @@ audio task. The required packaged application and portable ZIP both complete suc
 Static field definitions remain module-level, host-only state stays above the route boundary, and the public surface is
 unchanged. Effects own subscriptions, live audio mutation, and cleanup; transient warning callbacks use a current ref;
 async persistence remains nonblocking; controls retain native labels and values. No runtime dependency was added.
+
+## Fix round 1: synchronized transitions, settings, warnings, and protocol hardening
+
+The review fix round closes four runtime synchronization findings and several adjacent validation gaps:
+
+- Tiebreaker response audio now derives from the authoritative locked-team/lockout/next-clue/completion transition,
+  never score deltas. Incorrect responses play one crowd cue, correct completion plays one applause cue followed by one
+  winner cue, and stale/repeated/bootstrap/resume publications remain silent. Tests cover same-clue lockout, all-teams-
+  locked next tiebreaker, correct completion, and duplicate prevention.
+- Every live audio object is tracked with its allowlisted key, channel, and current music-duck state. Settings changes
+  immediately recompute music/effects/crowd gains; mute zeros all active audio and unmute restores remembered values
+  without losing the duck multiplier. Muted settings do not create new Audio objects. End/error/stop/unmount paths still
+  remove listeners, timers, and tracked objects, and the `M` shortcut remains ignored in editable controls.
+- App audio state is explicitly `loading`, `error`, or versioned `ready`. No controller or editable Settings draft exists
+  before the authoritative read resolves. Load failure is localized and fail-closed with Retry. Optimistic saves carry
+  monotonic request sequences, so a late older response cannot overwrite a newer choice; the Settings draft accepts a
+  newer authoritative revision only while untouched and defers it while an edit is pending.
+- Media warnings are keyed structured status events. Main publishes strict warning/recovery messages, preload remains
+  host-only and isolates subscriber exceptions, and a strict snapshot IPC restores current warnings after window
+  recreation. Snapshot/live ordering suppresses stale replay after recovery or unsubscribe. App clears only the
+  recovered key and preserves other warnings; messages are localized and expose only a safe asset label.
+- The protocol is now an independently tested disposable registrar. It serves only exact-scheme/host allowlisted GET and
+  bodyless HEAD requests, rejects other methods with `405`, emits complete `416` range/MIME/length headers, and calls
+  `unhandle` during application teardown. A real packaged Chromium probe verifies finite Audio duration plus GET/HEAD,
+  `405`, `416`, two simultaneous fallback warnings, and one-key recovery.
+- WAV parsing validates RIFF size, PCM format, byte rate, block alignment, bits, data size, and sample-frame alignment.
+  The manifest is bound to an immutable per-key filename/channel/duration table; only generated hashes vary from those
+  static values. The generator consumes the same table and remains byte-identical.
+- Portable documentation now states accurately that Task 16 recognizes the marker but Task 41 is responsible for
+  creating it. Until then the package intentionally uses the installed-build per-user media directory.
+
+Fix-round RED reproduced 11 focused failures: missing tiebreaker cues, stale active channel gains, muted Audio creation,
+editable default settings before a delayed read, absent failure/retry state, stale save overwrite, unkeyed warnings,
+stale Settings draft, permissive manifest/RIFF parsing, and the absent protocol registrar.
+
+Fix-round verification:
+
+```text
+Focused audio/settings/media/IPC suite
+Test Files 9 passed (9)
+Tests 53 passed (53)
+
+npm run test
+Test Files 61 passed (61)
+Tests 443 passed (443)
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npx playwright test --workers=1
+5 passed (2.3m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+Electron Forge ZIP win32/x64; exit 0
+```
+
+Two generator reruns again changed zero of nine files. Final packaged inspection found the manifest and all eight WAVs,
+with `8` hashes checked and `0` failures.
+
+Fix-round artifacts:
+
+- Portable ZIP: 157,097,754 bytes, SHA-256
+  `80120F5023359C5C9F5A11BB24B50B9ADACBA470CCD9233E6E9A0059FB51A0DC`.
+- Packaged executable: 225,442,304 bytes, SHA-256
+  `9103D68B49E9C59D7553B9DA5CF9A987CFC86BCCCAA435D3B286F5AC5414A35C`.
+
+Fix-round React review keeps external subscriptions and initial async loads in effects, user retry/save actions in event
+handlers, static maps at module scope, and settings ownership in App. Audio lifecycle mounts only after authoritative
+settings become ready. Draft reconciliation is version-based and preserves active user edits; no render-time I/O or new
+runtime dependency was introduced.

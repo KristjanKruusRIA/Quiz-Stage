@@ -3,27 +3,27 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import {
   AUDIO_ASSET_KEYS,
-  audioChannelForAsset,
+  AUDIO_ASSET_SPEC,
   type AudioAssetKey,
   type MediaManifest,
 } from '../src/shared/media/contracts';
 
 const SAMPLE_RATE = 44_100;
 
-const definitions: Record<AudioAssetKey, { durationMs: number; frequencies: number[]; noise: number }> = {
-  opening: { durationMs: 2_500, frequencies: [220, 277.18, 329.63], noise: 0 },
-  'round-transition': { durationMs: 1_800, frequencies: [293.66, 369.99, 440], noise: 0 },
-  'daily-double': { durationMs: 900, frequencies: [392, 523.25, 783.99], noise: 0 },
-  'final-tension': { durationMs: 5_000, frequencies: [110, 138.59, 164.81], noise: 0.02 },
-  'correct-applause': { durationMs: 1_800, frequencies: [659.25, 783.99], noise: 0.16 },
-  'incorrect-crowd': { durationMs: 1_400, frequencies: [196, 174.61], noise: 0.12 },
-  'time-expired': { durationMs: 600, frequencies: [880, 440], noise: 0 },
-  winner: { durationMs: 2_500, frequencies: [523.25, 659.25, 783.99, 1046.5], noise: 0.04 },
+const definitions: Record<AudioAssetKey, { frequencies: number[]; noise: number }> = {
+  opening: { frequencies: [220, 277.18, 329.63], noise: 0 },
+  'round-transition': { frequencies: [293.66, 369.99, 440], noise: 0 },
+  'daily-double': { frequencies: [392, 523.25, 783.99], noise: 0 },
+  'final-tension': { frequencies: [110, 138.59, 164.81], noise: 0.02 },
+  'correct-applause': { frequencies: [659.25, 783.99], noise: 0.16 },
+  'incorrect-crowd': { frequencies: [196, 174.61], noise: 0.12 },
+  'time-expired': { frequencies: [880, 440], noise: 0 },
+  winner: { frequencies: [523.25, 659.25, 783.99, 1046.5], noise: 0.04 },
 };
 
 function wavFor(key: AudioAssetKey): Buffer {
   const definition = definitions[key];
-  const sampleCount = Math.round(SAMPLE_RATE * definition.durationMs / 1_000);
+  const sampleCount = Math.round(SAMPLE_RATE * AUDIO_ASSET_SPEC[key].durationMs / 1_000);
   const dataSize = sampleCount * 2;
   const wav = Buffer.alloc(44 + dataSize);
   wav.write('RIFF', 0); wav.writeUInt32LE(36 + dataSize, 4); wav.write('WAVE', 8);
@@ -57,14 +57,14 @@ export function generatePlaceholderAudio(outputDirectory = resolve('resources/me
   const assets = {} as MediaManifest['assets'];
   for (const key of AUDIO_ASSET_KEYS) {
     const bytes = wavFor(key);
-    const file = `audio/${key}.wav` as const;
+    const { file, durationMs, channel } = AUDIO_ASSET_SPEC[key];
     writeFileSync(join(outputDirectory, file), bytes);
     assets[key] = {
       file,
       mime: 'audio/wav',
       sha256: createHash('sha256').update(bytes).digest('hex'),
-      durationMs: definitions[key].durationMs,
-      channel: audioChannelForAsset(key),
+      durationMs,
+      channel,
     };
   }
   const manifest: MediaManifest = { version: 1, assets };

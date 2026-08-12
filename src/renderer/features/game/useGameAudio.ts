@@ -19,6 +19,22 @@ export function audioActionsForTransition(previous: HostGameView | null, current
   const after = current.state;
   if (after.undoStack.length < before.undoStack.length) return [];
   const actions: GameAudioAction[] = [];
+  const tiebreakerTeam = before.phase === 'tiebreaker' ? before.activeClue?.lockedTeamId : null;
+  if (tiebreakerTeam !== null && tiebreakerTeam !== undefined) {
+    const correct = after.phase === 'complete'
+      && after.winnerTeamId === tiebreakerTeam
+      && after.activeClue?.responseRevealed === true;
+    const sameClueLockout = after.phase === 'tiebreaker'
+      && after.activeClue !== null
+      && after.activeClue.clueId === before.activeClue?.clueId
+      && after.activeClue.lockedTeamId === null
+      && after.activeClue.lockedOutTeamIds.includes(tiebreakerTeam);
+    const nextTiebreaker = after.phase === 'tiebreaker'
+      && after.suddenDeathClueNumber > before.suddenDeathClueNumber
+      && after.activeClue?.clueId !== before.activeClue?.clueId;
+    if (correct) actions.push({ type: 'play', key: 'correct-applause' });
+    else if (sameClueLockout || nextTiebreaker) actions.push({ type: 'play', key: 'incorrect-crowd' });
+  }
   if (before.phase === 'final-clue' && after.phase !== 'final-clue') actions.push({ type: 'stop-music' });
   if (before.timer.status !== 'expired' && after.timer.status === 'expired') actions.push({ type: 'play', key: 'time-expired' });
   if (before.phase !== after.phase) {
@@ -61,7 +77,7 @@ interface AudioControllerOptions {
 export class AudioController {
   private settings: AudioSettings;
   private music: AudioLike | null = null;
-  private active = new Set<AudioLike>();
+  private active = new Map<AudioLike, { key: AudioAssetKey; channel: ReturnType<typeof audioChannelForAsset>; ducked: boolean }>();
   private endedListeners = new Map<AudioLike, () => void>();
   private duckTimer: unknown = null;
   private readonly createAudio: (url: string) => AudioLike;
@@ -77,24 +93,24 @@ export class AudioController {
 
   setSettings(settings: AudioSettings): void {
     this.settings = settings;
-    if (this.music !== null) this.music.volume = effectiveAudioGain(settings, 'music');
+    for (const [audio, playback] of this.active) this.applyVolume(audio, playback);
   }
 
   play(key: AudioAssetKey): void {
+    if (this.settings.muted) return;
     const audio = this.createAudio(mediaAssetUrl(key));
-    audio.volume = effectiveAudioGain(this.settings, audioChannelForAsset(key));
-    this.track(audio);
+    this.track(audio, key);
     void audio.play().catch(() => { this.release(audio); this.options.onPlaybackWarning?.(key); });
     if (this.music !== null && key !== 'final-tension') this.duckMusic();
   }
 
   startMusic(key: Extract<AudioAssetKey, 'opening' | 'round-transition' | 'final-tension'>): void {
     this.stopMusic();
+    if (this.settings.muted) return;
     const audio = this.createAudio(mediaAssetUrl(key));
-    audio.volume = effectiveAudioGain(this.settings, 'music');
     audio.loop = key === 'final-tension';
     this.music = audio;
-    this.track(audio, () => { if (this.music === audio) this.music = null; });
+    this.track(audio, key, () => { if (this.music === audio) this.music = null; });
     void audio.play().catch(() => {
       this.release(audio);
       if (this.music === audio) this.music = null;
@@ -118,13 +134,15 @@ export class AudioController {
   dispose(): void {
     if (this.duckTimer !== null) this.cancel(this.duckTimer);
     this.duckTimer = null;
-    for (const audio of [...this.active]) { audio.pause(); this.release(audio); }
+    for (const audio of [...this.active.keys()]) { audio.pause(); this.release(audio); }
     this.music = null;
   }
 
-  private track(audio: AudioLike, onEnded?: () => void): void {
+  private track(audio: AudioLike, key: AudioAssetKey, onEnded?: () => void): void {
     const ended = () => { this.release(audio); onEnded?.(); };
-    this.active.add(audio);
+    const playback = { key, channel: audioChannelForAsset(key), ducked: false };
+    this.active.set(audio, playback);
+    this.applyVolume(audio, playback);
     this.endedListeners.set(audio, ended);
     audio.addEventListener?.('ended', ended, { once: true });
   }
@@ -139,11 +157,22 @@ export class AudioController {
   private duckMusic(): void {
     if (this.music === null) return;
     if (this.duckTimer !== null) this.cancel(this.duckTimer);
-    this.music.volume = effectiveAudioGain(this.settings, 'music') * 0.25;
+    const playback = this.active.get(this.music);
+    if (playback === undefined) return;
+    playback.ducked = true;
+    this.applyVolume(this.music, playback);
     this.duckTimer = this.schedule(() => {
       this.duckTimer = null;
-      if (this.music !== null) this.music.volume = effectiveAudioGain(this.settings, 'music');
+      if (this.music === null) return;
+      const current = this.active.get(this.music);
+      if (current === undefined) return;
+      current.ducked = false;
+      this.applyVolume(this.music, current);
     }, 1_200);
+  }
+
+  private applyVolume(audio: AudioLike, playback: { channel: ReturnType<typeof audioChannelForAsset>; ducked: boolean }): void {
+    audio.volume = effectiveAudioGain(this.settings, playback.channel) * (playback.ducked ? 0.25 : 1);
   }
 }
 

@@ -34,6 +34,7 @@ describe('game shortcuts', () => {
     for (const selector of ['input', 'textarea', 'select', '[contenteditable="true"]']) {
       const target = document.querySelector(selector)!;
       target.dispatchEvent(new KeyboardEvent('keydown', { key: '1', bubbles: true }));
+      target.dispatchEvent(new KeyboardEvent('keydown', { key: 'm', bubbles: true }));
     }
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'c', altKey: true }));
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'x', metaKey: true }));
@@ -42,6 +43,7 @@ describe('game shortcuts', () => {
     expect(callbacks.onCorrect).not.toHaveBeenCalled();
     expect(callbacks.onIncorrect).not.toHaveBeenCalled();
     expect(callbacks.onToggleTimer).not.toHaveBeenCalled();
+    expect(callbacks.onMute).not.toHaveBeenCalled();
     unmount(); window.dispatchEvent(new KeyboardEvent('keydown', { key: 'm' }));
     expect(callbacks.onMute).not.toHaveBeenCalled();
   });

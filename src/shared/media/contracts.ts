@@ -13,11 +13,26 @@ export const AUDIO_ASSET_KEYS = [
 
 export type AudioAssetKey = typeof AUDIO_ASSET_KEYS[number];
 export type AudioChannel = 'music' | 'effects' | 'crowd';
+export const AUDIO_ASSET_SPEC = {
+  opening: { file: 'audio/opening.wav', durationMs: 2_500, channel: 'music' },
+  'round-transition': { file: 'audio/round-transition.wav', durationMs: 1_800, channel: 'music' },
+  'daily-double': { file: 'audio/daily-double.wav', durationMs: 900, channel: 'effects' },
+  'final-tension': { file: 'audio/final-tension.wav', durationMs: 5_000, channel: 'music' },
+  'correct-applause': { file: 'audio/correct-applause.wav', durationMs: 1_800, channel: 'crowd' },
+  'incorrect-crowd': { file: 'audio/incorrect-crowd.wav', durationMs: 1_400, channel: 'crowd' },
+  'time-expired': { file: 'audio/time-expired.wav', durationMs: 600, channel: 'effects' },
+  winner: { file: 'audio/winner.wav', durationMs: 2_500, channel: 'effects' },
+} as const satisfies Record<AudioAssetKey, { file: `audio/${string}.wav`; durationMs: number; channel: AudioChannel }>;
 export const audioAssetKeySchema = z.enum(AUDIO_ASSET_KEYS);
 export const mediaWarningReasonSchema = z.enum(['invalid-extension', 'unsafe-file', 'unreadable', 'too-large', 'malformed-wav', 'missing-bundled', 'invalid-bundled']);
 export type MediaWarningReason = z.infer<typeof mediaWarningReasonSchema>;
 export const mediaWarningSchema = z.strictObject({ assetKey: audioAssetKeySchema, reason: mediaWarningReasonSchema });
 export type MediaWarning = z.infer<typeof mediaWarningSchema>;
+export const mediaStatusEventSchema = z.discriminatedUnion('status', [
+  mediaWarningSchema.extend({ status: z.literal('warning') }),
+  z.strictObject({ status: z.literal('recovered'), assetKey: audioAssetKeySchema }),
+]);
+export type MediaStatusEvent = z.infer<typeof mediaStatusEventSchema>;
 
 export const audioSettingsInputSchema = z.strictObject({
   master: z.number().finite(),
@@ -59,6 +74,13 @@ export const mediaManifestSchema = z.strictObject({
   const keys = Object.keys(manifest.assets);
   if (keys.length !== AUDIO_ASSET_KEYS.length || AUDIO_ASSET_KEYS.some((key) => !(key in manifest.assets))) {
     context.addIssue({ code: 'custom', message: 'Manifest must contain exactly the supported media keys' });
+  }
+  for (const key of AUDIO_ASSET_KEYS) {
+    const entry = manifest.assets[key];
+    const expected = AUDIO_ASSET_SPEC[key];
+    if (entry !== undefined && (entry.file !== expected.file || entry.durationMs !== expected.durationMs || entry.channel !== expected.channel)) {
+      context.addIssue({ code: 'custom', path: ['assets', key], message: 'Manifest asset metadata does not match the static contract' });
+    }
   }
 });
 

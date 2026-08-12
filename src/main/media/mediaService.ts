@@ -25,7 +25,7 @@ interface MediaServiceOptions {
 
 export class MediaService {
   private readonly manifest: MediaManifest;
-  private readonly warningKeys = new Set<AudioAssetKey>();
+  private readonly warnings = new Map<AudioAssetKey, MediaWarningReason>();
 
   constructor(private readonly options: MediaServiceOptions) {
     this.manifest = mediaManifestSchema.parse(JSON.parse(readFileSync(join(options.bundledDirectory, 'manifest.json'), 'utf8')));
@@ -51,6 +51,10 @@ export class MediaService {
     } catch {
       return this.failBundled(key, 'missing-bundled');
     }
+  }
+
+  activeWarnings(): MediaWarning[] {
+    return [...this.warnings].map(([assetKey, reason]) => ({ assetKey, reason }));
   }
 
   private failBundled(key: AudioAssetKey, reason: MediaWarningReason): never {
@@ -92,26 +96,31 @@ export class MediaService {
   }
 
   private warn(assetKey: AudioAssetKey, reason: MediaWarningReason): void {
-    if (this.warningKeys.has(assetKey)) return;
-    this.warningKeys.add(assetKey);
-    this.options.onWarning?.({ assetKey, reason });
+    if (this.warnings.has(assetKey)) return;
+    this.warnings.set(assetKey, reason);
+    try { this.options.onWarning?.({ assetKey, reason }); } catch { /* warning delivery must not block fallback */ }
   }
 
   private recover(key: AudioAssetKey): void {
-    if (!this.warningKeys.delete(key)) return;
-    this.options.onRecovery?.(key);
+    if (!this.warnings.delete(key)) return;
+    try { this.options.onRecovery?.(key); } catch { /* recovery delivery must not block playback */ }
   }
 }
 
 export function isValidWav(bytes: Buffer): boolean {
   if (bytes.length < 44 || bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WAVE') return false;
+  if (bytes.readUInt32LE(4) !== bytes.length - 8) return false;
   if (bytes.toString('ascii', 12, 16) !== 'fmt ' || bytes.readUInt32LE(16) !== 16 || bytes.readUInt16LE(20) !== 1) return false;
   const channels = bytes.readUInt16LE(22);
   const sampleRate = bytes.readUInt32LE(24);
-  if ((channels !== 1 && channels !== 2) || sampleRate < 8_000 || sampleRate > 192_000 || bytes.readUInt16LE(34) !== 16) return false;
+  const byteRate = bytes.readUInt32LE(28);
+  const blockAlign = bytes.readUInt16LE(32);
+  const bitsPerSample = bytes.readUInt16LE(34);
+  if ((channels !== 1 && channels !== 2) || sampleRate < 8_000 || sampleRate > 192_000 || bitsPerSample !== 16) return false;
+  if (blockAlign !== channels * bitsPerSample / 8 || byteRate !== sampleRate * blockAlign) return false;
   if (bytes.toString('ascii', 36, 40) !== 'data') return false;
   const dataSize = bytes.readUInt32LE(40);
-  return dataSize > 0 && dataSize === bytes.length - 44 && dataSize % (channels * 2) === 0;
+  return dataSize > 0 && dataSize === bytes.length - 44 && dataSize % blockAlign === 0;
 }
 
 export function supportedMediaKeys(): readonly AudioAssetKey[] { return AUDIO_ASSET_KEYS; }

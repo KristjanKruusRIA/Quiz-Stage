@@ -37,7 +37,7 @@ import {
 } from '../shared/content/editor';
 import { contentReportRecordSchema } from '../shared/content/schema';
 import { z } from 'zod';
-import { audioSettingsInputSchema, mediaWarningSchema } from '../shared/media/contracts';
+import { audioSettingsInputSchema, mediaStatusEventSchema, mediaWarningSchema } from '../shared/media/contracts';
 
 export interface PreloadIpcPort {
   invoke(channel: string, value: unknown): Promise<unknown>;
@@ -69,9 +69,22 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
   const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
     subscribeToMediaWarnings: (listener) => {
-      const wrapped = (_event: unknown, value: unknown) => listener(mediaWarningSchema.parse(value));
+      const liveKeys = new Set<string>();
+      let active = true;
+      const wrapped = (_event: unknown, value: unknown) => {
+        const status = mediaStatusEventSchema.parse(value);
+        liveKeys.add(status.assetKey);
+        try { listener(status); } catch { /* renderer subscriber failures are isolated */ }
+      };
       ipc.on(IPC_CHANNELS.mediaWarning, wrapped);
-      return () => ipc.removeListener(IPC_CHANNELS.mediaWarning, wrapped);
+      void ipc.invoke(IPC_CHANNELS.mediaWarningsGet, undefined).then((value) => {
+        if (!active) return;
+        for (const warning of z.array(mediaWarningSchema).parse(value)) {
+          if (liveKeys.has(warning.assetKey)) continue;
+          try { listener({ status: 'warning', ...warning }); } catch { /* renderer subscriber failures are isolated */ }
+        }
+      }, () => undefined);
+      return () => { active = false; ipc.removeListener(IPC_CHANNELS.mediaWarning, wrapped); };
     },
     dispatch: async (command: GameCommand) => hostGameViewSchema.parse(
       await ipc.invoke(IPC_CHANNELS.dispatch, gameCommandSchema.parse(command)),

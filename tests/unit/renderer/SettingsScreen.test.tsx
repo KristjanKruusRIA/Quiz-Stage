@@ -18,4 +18,24 @@ describe('SettingsScreen', () => {
     await userEvent.click(screen.getByRole('checkbox', { name: labels[5] }));
     expect(save).toHaveBeenCalledWith({ ...defaultAudioSettings, muted: true });
   });
+
+  it('refreshes an untouched draft for a newer authoritative revision but preserves an in-progress edit', async () => {
+    let finishSave!: () => void;
+    const save = vi.fn(() => new Promise<void>((resolve) => { finishSave = resolve; }));
+    const { rerender } = render(<I18nProvider locale="en"><SettingsScreen
+      settings={defaultAudioSettings} settingsRevision={1} onSave={save} onBack={vi.fn()}
+    /></I18nProvider>);
+    rerender(<I18nProvider locale="en"><SettingsScreen
+      settings={{ ...defaultAudioSettings, master: 0.6 }} settingsRevision={2} onSave={save} onBack={vi.fn()}
+    /></I18nProvider>);
+    expect(screen.getByRole('slider', { name: 'Master volume' })).toHaveValue('0.6');
+
+    await userEvent.click(screen.getByRole('checkbox', { name: 'Mute all audio' }));
+    rerender(<I18nProvider locale="en"><SettingsScreen
+      settings={{ ...defaultAudioSettings, master: 0.3 }} settingsRevision={3} onSave={save} onBack={vi.fn()}
+    /></I18nProvider>);
+    expect(screen.getByRole('slider', { name: 'Master volume' })).toHaveValue('0.6');
+    expect(screen.getByRole('checkbox', { name: 'Mute all audio' })).toBeChecked();
+    finishSave();
+  });
 });

@@ -9,8 +9,19 @@ import { HistoryScreen } from './features/history/HistoryScreen';
 import { ContentLibraryScreen } from './features/content/ContentLibraryScreen';
 import { I18nProvider, translate } from './i18n';
 import type { Language } from '../shared/game/types';
-import { SettingsScreen } from './features/settings/SettingsScreen';
-import { defaultAudioSettings, type AudioSettings } from '../shared/media/contracts';
+import { SettingsScreen, SettingsStatusScreen } from './features/settings/SettingsScreen';
+import { type AudioAssetKey, type AudioSettings, type MediaWarning } from '../shared/media/contracts';
+
+const audioAssetLabelKeys = {
+  opening: 'settings.asset.opening',
+  'round-transition': 'settings.asset.round-transition',
+  'daily-double': 'settings.asset.daily-double',
+  'final-tension': 'settings.asset.final-tension',
+  'correct-applause': 'settings.asset.correct-applause',
+  'incorrect-crowd': 'settings.asset.incorrect-crowd',
+  'time-expired': 'settings.asset.time-expired',
+  winner: 'settings.asset.winner',
+} as const;
 
 interface AppProps {
   api?: DesktopApi;
@@ -28,10 +39,16 @@ export default function App({ api }: AppProps) {
   } | null>(null);
   const [resumePending, setResumePending] = useState(false);
   const [resumeError, setResumeError] = useState(false);
-  const [audioSettings, setAudioSettings] = useState<AudioSettings>(defaultAudioSettings);
+  const [audioState, setAudioState] = useState<
+    | { status: 'loading' }
+    | { status: 'error' }
+    | { status: 'ready'; settings: AudioSettings; revision: number }
+  >({ status: 'loading' });
   const [playOpening, setPlayOpening] = useState(false);
-  const [mediaWarning, setMediaWarning] = useState(false);
+  const [mediaWarnings, setMediaWarnings] = useState<Map<AudioAssetKey, MediaWarning>>(new Map());
   const navigationGeneration = useRef(0);
+  const audioLoadSequence = useRef(0);
+  const audioSaveSequence = useRef(0);
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
   const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content' | 'settings') => {
@@ -58,17 +75,49 @@ export default function App({ api }: AppProps) {
     return () => { active = false; };
   }, [desktopApi, route]);
 
+  const loadAudioSettings = useCallback(() => {
+    if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
+    const sequence = ++audioLoadSequence.current;
+    setAudioState({ status: 'loading' });
+    void desktopApi.getAudioSettings().then(
+      (settings) => { if (sequence === audioLoadSequence.current) setAudioState((state) => ({ status: 'ready', settings, revision: state.status === 'ready' ? state.revision + 1 : 1 })); },
+      () => { if (sequence === audioLoadSequence.current) setAudioState({ status: 'error' }); },
+    );
+  }, [desktopApi]);
+
   useEffect(() => {
     if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
+    const sequence = ++audioLoadSequence.current;
     let active = true;
-    void desktopApi.getAudioSettings().then((settings) => { if (active) setAudioSettings(settings); }, () => undefined);
+    void desktopApi.getAudioSettings().then(
+      (settings) => { if (active && sequence === audioLoadSequence.current) setAudioState({ status: 'ready', settings, revision: 1 }); },
+      () => { if (active && sequence === audioLoadSequence.current) setAudioState({ status: 'error' }); },
+    );
     return () => { active = false; };
   }, [desktopApi]);
 
   useEffect(() => {
     if (desktopApi.surface !== 'host' || desktopApi.subscribeToMediaWarnings === undefined) return;
-    return desktopApi.subscribeToMediaWarnings(() => setMediaWarning(true));
+    return desktopApi.subscribeToMediaWarnings((event) => setMediaWarnings((warnings) => {
+      const next = new Map(warnings);
+      if (event.status === 'warning') next.set(event.assetKey, event);
+      else next.delete(event.assetKey);
+      return next;
+    }));
   }, [desktopApi]);
+
+  const saveAudioSettings = useCallback(async (settings: AudioSettings) => {
+    if (desktopApi.surface !== 'host' || desktopApi.updateAudioSettings === undefined) return;
+    const sequence = ++audioSaveSequence.current;
+    setAudioState((state) => ({ status: 'ready', settings, revision: state.status === 'ready' ? state.revision + 1 : 1 }));
+    try {
+      const saved = await desktopApi.updateAudioSettings(settings);
+      if (sequence === audioSaveSequence.current) setAudioState((state) => ({ status: 'ready', settings: saved, revision: state.status === 'ready' ? state.revision + 1 : 1 }));
+    } catch (error) {
+      if (sequence === audioSaveSequence.current) loadAudioSettings();
+      throw error;
+    }
+  }, [desktopApi, loadAudioSettings]);
 
   if (desktopApi.surface === 'public') {
     const publicLocale = publicView?.language ?? 'en';
@@ -85,11 +134,10 @@ export default function App({ api }: AppProps) {
   } else if (route === 'content') {
     content = <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
   } else if (route === 'settings') {
-    content = <SettingsScreen settings={audioSettings} onBack={() => navigate('home')} onSave={async (settings) => {
-      if (desktopApi.updateAudioSettings === undefined) return;
-      const saved = await desktopApi.updateAudioSettings(settings);
-      setAudioSettings(saved);
-    }} />;
+    content = audioState.status === 'ready'
+      ? <SettingsScreen settings={audioState.settings} settingsRevision={audioState.revision}
+        onBack={() => navigate('home')} onSave={saveAudioSettings} />
+      : <SettingsStatusScreen status={audioState.status} onRetry={loadAudioSettings} onBack={() => navigate('home')} />;
   } else if (route === 'match') {
     const matchLocale = hostView?.state.config.language ?? locale;
     content = hostView === null
@@ -98,13 +146,12 @@ export default function App({ api }: AppProps) {
         surface="host"
         view={hostView}
         api={desktopApi}
-        audioSettings={audioSettings}
+        audioSettings={audioState.status === 'ready' ? audioState.settings : undefined}
         playOpening={playOpening}
-        onAudioWarning={() => setMediaWarning(true)}
+        onAudioWarning={(assetKey) => setMediaWarnings((warnings) => new Map(warnings).set(assetKey, { assetKey, reason: 'unreadable' }))}
         onMute={() => {
-          const next = { ...audioSettings, muted: !audioSettings.muted };
-          setAudioSettings(next);
-          void desktopApi.updateAudioSettings?.(next).then(setAudioSettings, () => setAudioSettings(audioSettings));
+          if (audioState.status !== 'ready') return;
+          void saveAudioSettings({ ...audioState.settings, muted: !audioState.settings.muted }).catch(() => undefined);
         }}
         onHome={hostView.state.phase === 'complete' ? () => navigate('home') : undefined}
       />;
@@ -144,7 +191,10 @@ export default function App({ api }: AppProps) {
   }
   const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
   return <I18nProvider locale={activeLocale}>
-    {mediaWarning ? <p role="alert">{translate(activeLocale, 'settings.mediaWarning')}</p> : null}
+    {[...mediaWarnings.values()].map((warning) => {
+      const asset = translate(activeLocale, audioAssetLabelKeys[warning.assetKey]);
+      return <p role="alert" key={warning.assetKey} aria-label={asset}>{translate(activeLocale, 'settings.mediaWarning', { asset })}</p>;
+    })}
     {content}
   </I18nProvider>;
 }

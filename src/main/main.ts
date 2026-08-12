@@ -11,8 +11,10 @@ import { openDatabase } from './persistence/database';
 import { migrateDatabase } from './persistence/migrations';
 import { WindowManager, type ManagedWindow } from './windows/windowManager';
 import { shouldInstallE2eNetworkGuard } from './e2eNetworkGuard';
-import { MediaService, parseMediaByteRange, parseMediaRequest } from './media/mediaService';
+import { MediaService } from './media/mediaService';
 import { bundledMediaDirectory, mediaOverrideDirectory } from './media/mediaPaths';
+import { registerMediaProtocol } from './media/mediaProtocol';
+import type { MediaStatusEvent } from '../shared/media/contracts';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -20,6 +22,8 @@ declare const MAIN_WINDOW_VITE_NAME: string;
 let application: ReturnType<typeof createApplication> | null = null;
 let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
+let disposeMediaProtocol: (() => void) | null = null;
+let mediaService: MediaService | null = null;
 const e2eExternalRequests: string[] = [];
 
 protocol.registerSchemesAsPrivileged([{
@@ -62,6 +66,7 @@ async function createWindows(): Promise<void> {
     contentCsv: application.contentCsv,
     contentEditor: application.contentEditor,
     audioSettings: application.audioSettings,
+    ...(mediaService === null ? {} : { mediaWarnings: mediaService }),
     csvDialogs: {
       chooseImportFile: async () => {
         const result = await dialog.showOpenDialog({
@@ -107,33 +112,18 @@ async function initialize(): Promise<void> {
     workingDirectory: process.cwd(),
   });
   const portable = app.isPackaged && lstatSync(path.join(process.resourcesPath, 'portable.flag'), { throwIfNoEntry: false })?.isFile() === true;
-  const media = new MediaService({
+  const sendMediaStatus = (event: MediaStatusEvent) => {
+    const webContents = windowManager?.getWindows().hostWindow?.webContents;
+    if (webContents === undefined || webContents.isDestroyed()) return;
+    try { webContents.send(IPC_CHANNELS.mediaWarning, event); } catch { /* window teardown must not block media */ }
+  };
+  mediaService = new MediaService({
     bundledDirectory: mediaDirectory,
     overrideDirectory: mediaOverrideDirectory({ userDataDirectory, executablePath: app.getPath('exe'), portable }),
-    onWarning: (warning) => windowManager?.getWindows().hostWindow?.webContents.send(IPC_CHANNELS.mediaWarning, warning),
+    onWarning: (warning) => sendMediaStatus({ status: 'warning', ...warning }),
+    onRecovery: (assetKey) => sendMediaStatus({ status: 'recovered', assetKey }),
   });
-  protocol.handle('quiz-stage-media', (request) => {
-    try {
-      const resolved = media.resolve(parseMediaRequest(request.url));
-      let range;
-      try {
-        range = parseMediaByteRange(request.headers.get('Range'), resolved.bytes.length);
-      } catch {
-        return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${resolved.bytes.length}` } });
-      }
-      const bytes = range === null ? resolved.bytes : resolved.bytes.subarray(range.start, range.end + 1);
-      const headers: Record<string, string> = {
-        'Accept-Ranges': 'bytes',
-        'Cache-Control': 'no-store',
-        'Content-Length': String(bytes.length),
-        'Content-Type': resolved.mime,
-      };
-      if (range !== null) headers['Content-Range'] = `bytes ${range.start}-${range.end}/${resolved.bytes.length}`;
-      return new Response(new Uint8Array(bytes), { status: range === null ? 200 : 206, headers });
-    } catch {
-      return new Response(null, { status: 404 });
-    }
-  });
+  disposeMediaProtocol = registerMediaProtocol(protocol, mediaService);
   await createWindows();
 }
 
@@ -152,6 +142,9 @@ if (squirrelStartup) {
   app.on('before-quit', () => {
     disposeIpc?.();
     disposeIpc = null;
+    disposeMediaProtocol?.();
+    disposeMediaProtocol = null;
+    mediaService = null;
     windowManager?.dispose();
     windowManager = null;
     application?.close();

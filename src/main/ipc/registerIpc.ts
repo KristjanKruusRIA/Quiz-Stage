@@ -12,7 +12,7 @@ import {
   type HostStateUpdate,
   type PublicStateUpdate,
 } from '../../shared/ipc/contracts';
-import { audioSettingsInputSchema } from '../../shared/media/contracts';
+import { audioSettingsInputSchema, mediaWarningSchema, type MediaWarning } from '../../shared/media/contracts';
 import { IPC_CHANNELS } from './channels';
 import { validateHostSender } from './validateSender';
 import type { AudioSettings } from '../../shared/media/contracts';
@@ -97,6 +97,7 @@ interface RegisterIpcOptions {
     read(): AudioSettings;
     save(input: unknown): AudioSettings;
   };
+  mediaWarnings?: { activeWarnings(): MediaWarning[] };
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
@@ -122,6 +123,7 @@ export function registerIpc({
   contentCsv,
   contentEditor,
   audioSettings,
+  mediaWarnings,
   csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
@@ -152,6 +154,14 @@ export function registerIpc({
       return audioSettingsSchema.parse(audioSettings.save(audioSettingsInputSchema.parse(input)));
     });
     audioChannels.push(IPC_CHANNELS.audioSettingsGet, IPC_CHANNELS.audioSettingsUpdate);
+  }
+  if (mediaWarnings !== undefined) {
+    ipcMain.handle(IPC_CHANNELS.mediaWarningsGet, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      return mediaWarnings.activeWarnings().map((warning) => mediaWarningSchema.parse(warning));
+    });
+    audioChannels.push(IPC_CHANNELS.mediaWarningsGet);
   }
 
   const setupChannels: string[] = [];

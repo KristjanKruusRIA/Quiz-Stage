@@ -1,10 +1,18 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import App from '../../../src/renderer/App';
 import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
 import { HomeScreen } from '../../../src/renderer/features/home/HomeScreen';
 import { hostView } from './game/fixtures';
+import { defaultAudioSettings } from '../../../src/shared/media/contracts';
+
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((onResolve, onReject) => { resolve = onResolve; reject = onReject; });
+  return { promise, resolve, reject };
+}
 
 function hostApi(): HostDesktopApi {
   return {
@@ -68,6 +76,69 @@ describe('HomeScreen', () => {
     await userEvent.click(await screen.findByRole('button', { name: 'Settings' }));
     expect(screen.getByRole('heading', { name: 'Settings' })).toBeInTheDocument();
     expect(screen.getByRole('slider', { name: 'Master volume' })).toHaveValue('0.8');
+  });
+
+  it('shows localized loading before settings resolve and exposes no editable defaults', async () => {
+    const pending = deferred<typeof defaultAudioSettings>();
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(() => pending.promise);
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    render(<App api={api} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    expect(screen.getByRole('status')).toHaveTextContent('Loading audio settings');
+    expect(screen.queryByRole('slider')).not.toBeInTheDocument();
+    await act(async () => pending.resolve({ ...defaultAudioSettings, muted: true }));
+    expect(await screen.findByRole('checkbox', { name: 'Mute all audio' })).toBeChecked();
+  });
+
+  it('fails closed on settings load and retries without enabling a default draft', async () => {
+    const api = hostApi();
+    api.getAudioSettings = vi.fn()
+      .mockRejectedValueOnce(new Error('database unavailable'))
+      .mockResolvedValueOnce(defaultAudioSettings);
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    render(<App api={api} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent('Audio settings could not be loaded');
+    expect(screen.queryByRole('slider')).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Retry' }));
+    expect(await screen.findByRole('slider', { name: 'Master volume' })).toHaveValue('0.8');
+  });
+
+  it('keeps the newest concurrent save authoritative when older responses arrive later', async () => {
+    const saves: Array<{ settings: typeof defaultAudioSettings; resolve: (value: typeof defaultAudioSettings) => void }> = [];
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => defaultAudioSettings);
+    api.updateAudioSettings = vi.fn((settings) => new Promise<typeof defaultAudioSettings>((resolve) => saves.push({ settings, resolve })));
+    render(<App api={api} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    const mute = await screen.findByRole('checkbox', { name: 'Mute all audio' });
+    await userEvent.click(mute);
+    await userEvent.click(mute);
+    expect(saves).toHaveLength(2);
+    await act(async () => saves[1].resolve(saves[1].settings));
+    await act(async () => saves[0].resolve(saves[0].settings));
+    await userEvent.click(screen.getByRole('button', { name: 'Back' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    expect(await screen.findByRole('checkbox', { name: 'Mute all audio' })).not.toBeChecked();
+  });
+
+  it('tracks warning and recovery by sanitized asset key without clearing another warning', async () => {
+    let mediaListener: ((event: never) => void) | undefined;
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => defaultAudioSettings);
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    api.subscribeToMediaWarnings = vi.fn((listener) => { mediaListener = listener as (event: never) => void; return vi.fn(); });
+    render(<App api={api} />);
+    act(() => {
+      mediaListener?.({ status: 'warning', assetKey: 'opening', reason: 'malformed-wav' } as never);
+      mediaListener?.({ status: 'warning', assetKey: 'winner', reason: 'unsafe-file' } as never);
+    });
+    expect(screen.getByRole('alert', { name: /Opening/ })).toBeInTheDocument();
+    expect(screen.getByRole('alert', { name: /Winner/ })).toBeInTheDocument();
+    act(() => mediaListener?.({ status: 'recovered', assetKey: 'opening' } as never));
+    expect(screen.queryByRole('alert', { name: /Opening/ })).not.toBeInTheDocument();
+    expect(screen.getByRole('alert', { name: /Winner/ })).toBeInTheDocument();
   });
 
   it('preserves Estonian setup and generated names after Back and reopen', async () => {

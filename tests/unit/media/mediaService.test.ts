@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
 import { generatePlaceholderAudio } from '../../../scripts/generate-placeholder-audio';
-import { MediaService, parseMediaByteRange, parseMediaRequest } from '../../../src/main/media/mediaService';
+import { isValidWav, MediaService, parseMediaByteRange, parseMediaRequest } from '../../../src/main/media/mediaService';
 
 function fixture() {
   const root = mkdtempSync(join(tmpdir(), 'quiz-stage-service-'));
@@ -80,6 +80,38 @@ describe('MediaService', () => {
     writeFileSync(join(overrides, 'opening.wav'), readFileSync(join(bundled, 'audio', 'opening.wav')));
     expect(service.resolve('opening').source).toBe('override');
     expect(recoveries).toHaveBeenCalledWith('opening');
+  });
+
+  it('retains independent warning snapshots and isolates warning/recovery subscriber exceptions', () => {
+    const { bundled, overrides } = fixture();
+    writeFileSync(join(overrides, 'opening.wav'), 'bad');
+    writeFileSync(join(overrides, 'winner.wav'), 'bad');
+    const service = new MediaService({
+      bundledDirectory: bundled,
+      overrideDirectory: overrides,
+      onWarning: () => { throw new Error('subscriber failed'); },
+      onRecovery: () => { throw new Error('subscriber failed'); },
+    });
+    expect(service.resolve('opening').source).toBe('bundled');
+    expect(service.resolve('winner').source).toBe('bundled');
+    expect(service.activeWarnings().map((warning) => warning.assetKey)).toEqual(['opening', 'winner']);
+    writeFileSync(join(overrides, 'opening.wav'), readFileSync(join(bundled, 'audio', 'opening.wav')));
+    expect(service.resolve('opening').source).toBe('override');
+    expect(service.activeWarnings().map((warning) => warning.assetKey)).toEqual(['winner']);
+  });
+
+  it('rejects internally inconsistent PCM and RIFF length fields', () => {
+    const { bundled } = fixture();
+    const original = readFileSync(join(bundled, 'audio', 'opening.wav'));
+    for (const mutate of [
+      (wav: Buffer) => wav.writeUInt32LE(wav.length, 4),
+      (wav: Buffer) => wav.writeUInt32LE(1, 28),
+      (wav: Buffer) => wav.writeUInt16LE(4, 32),
+      (wav: Buffer) => wav.writeUInt32LE(wav.length - 45, 40),
+    ]) {
+      const changed = Buffer.from(original); mutate(changed);
+      expect(isValidWav(changed)).toBe(false);
+    }
   });
 
   it('does not expose raw paths or raw errors in warnings', () => {

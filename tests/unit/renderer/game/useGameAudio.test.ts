@@ -35,6 +35,35 @@ describe('game audio mapping', () => {
     expect(audioActionsForTransition(before, correction)).toEqual([]);
   });
 
+  it('maps tiebreaker judgments from authoritative clue state without score deltas or duplicates', () => {
+    const before = hostView({ eventSequence: 10, phase: 'tiebreaker', tiebreakerTeamIds: ['team-1', 'team-2'], suddenDeathClueNumber: 1 });
+    before.state.activeClue = { clueId: 'tie-1', lockedOutTeamIds: [], lockedTeamId: 'team-1', responseRevealed: false };
+    const incorrect = structuredClone(before);
+    incorrect.state.eventSequence = 11;
+    incorrect.state.activeClue = { ...incorrect.state.activeClue!, lockedTeamId: null, lockedOutTeamIds: ['team-1'] };
+    expect(audioActionsForTransition(before, incorrect)).toEqual([{ type: 'play', key: 'incorrect-crowd' }]);
+
+    const repeated = structuredClone(incorrect);
+    repeated.state.activeClue = { ...repeated.state.activeClue!, lockedTeamId: 'team-2' };
+    const nextClue = structuredClone(repeated);
+    nextClue.state.eventSequence = 12;
+    nextClue.state.suddenDeathClueNumber = 2;
+    nextClue.state.activeClue = { clueId: 'tie-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false };
+    expect(audioActionsForTransition(repeated, nextClue)).toEqual([{ type: 'play', key: 'incorrect-crowd' }]);
+
+    const correct = structuredClone(before);
+    correct.state.eventSequence = 11;
+    correct.state.phase = 'complete';
+    correct.state.winnerTeamId = 'team-1';
+    correct.state.activeClue = { ...correct.state.activeClue!, lockedTeamId: null, responseRevealed: true };
+    expect(audioActionsForTransition(before, correct)).toEqual([
+      { type: 'play', key: 'correct-applause' },
+      { type: 'play', key: 'winner' },
+    ]);
+    expect(audioActionsForTransition(correct, correct)).toEqual([]);
+    expect(audioActionsForTransition(null, correct)).toEqual([]);
+  });
+
   it('plays nonblocking, swallows rejected autoplay, applies gain, ducks music, and cleans up', async () => {
     const rejected = Promise.reject(new Error('autoplay blocked')); rejected.catch(() => undefined);
     const audios: Array<{
@@ -73,5 +102,40 @@ describe('game audio mapping', () => {
     await Promise.resolve();
     expect(warning).toHaveBeenCalled();
     expect(audios.every((audio) => audio.removeEventListener.mock.calls.length === 1)).toBe(true);
+  });
+
+  it('recomputes every active channel immediately while preserving music ducking across mute and sliders', () => {
+    const audios: Array<{ volume: number; loop: boolean; currentTime: number; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }> = [];
+    let restoreMusic: (() => void) | undefined;
+    const controller = new AudioController({
+      createAudio: () => {
+        const audio = { volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() };
+        audios.push(audio);
+        return audio;
+      },
+      settings: { ...defaultAudioSettings, master: 0.5, music: 0.8, effects: 0.6, crowd: 0.4 },
+      setTimeout: (callback) => { restoreMusic = callback; return 1; },
+      clearTimeout: vi.fn(),
+    });
+    controller.startMusic('final-tension');
+    controller.play('daily-double');
+    controller.play('correct-applause');
+    expect(audios.map((audio) => audio.volume)).toEqual([0.1, 0.3, 0.2]);
+
+    controller.setSettings({ ...defaultAudioSettings, muted: true });
+    expect(audios.map((audio) => audio.volume)).toEqual([0, 0, 0]);
+    controller.setSettings({ ...defaultAudioSettings, master: 1, music: 0.6, effects: 0.5, crowd: 0.25, muted: false });
+    expect(audios.map((audio) => audio.volume)).toEqual([0.15, 0.5, 0.25]);
+    restoreMusic?.();
+    expect(audios[0].volume).toBe(0.6);
+    controller.dispose();
+  });
+
+  it('does not start new audio while authoritative settings are muted', () => {
+    const createAudio = vi.fn(() => ({ volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() }));
+    const controller = new AudioController({ createAudio, settings: { ...defaultAudioSettings, muted: true } });
+    controller.startMusic('opening');
+    controller.play('daily-double');
+    expect(createAudio).not.toHaveBeenCalled();
   });
 });
