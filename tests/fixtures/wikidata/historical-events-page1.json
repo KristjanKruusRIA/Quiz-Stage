@@ -1,0 +1,22 @@
+{
+  "results": {
+    "bindings": [
+      {
+        "item": { "value": "http://www.wikidata.org/entity/Q1" },
+        "itemLabel": { "value": "Apollo 11" },
+        "property": { "value": "http://www.wikidata.org/entity/P31" },
+        "propertyLabel": { "value": "instance of" },
+        "value": { "type": "uri", "value": "http://www.wikidata.org/entity/Q2" },
+        "valueLabel": { "value": "moon mission" }
+      },
+      {
+        "item": { "value": "http://www.wikidata.org/entity/Q3" },
+        "itemLabel": { "value": "Apollo 11 second stage" },
+        "property": { "value": "http://www.wikidata.org/entity/P31" },
+        "propertyLabel": { "value": "instance of" },
+        "value": { "type": "literal", "value": "1969" },
+        "valueLabel": { "value": "1969" }
+      }
+    ]
+  }
+}

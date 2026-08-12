@@ -1,0 +1,12 @@
+{
+  "results": {
+    "bindings": [
+      {
+        "item": { "value": "http://www.wikidata.org/entity/Q900" },
+        "property": { "value": "http://www.wikidata.org/entity/P31" },
+        "propertyLabel": { "value": "instance of" },
+        "value": { "type": "uri", "value": "http://www.wikidata.org/entity/Q901" }
+      }
+    ]
+  }
+}

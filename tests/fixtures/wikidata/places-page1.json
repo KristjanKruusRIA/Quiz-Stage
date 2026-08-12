@@ -1,0 +1,14 @@
+{
+  "results": {
+    "bindings": [
+      {
+        "item": { "value": "http://www.wikidata.org/entity/Q10" },
+        "itemLabel": { "value": "Tallinn" },
+        "property": { "value": "http://www.wikidata.org/entity/P36" },
+        "propertyLabel": { "value": "capital" },
+        "value": { "type": "uri", "value": "http://www.wikidata.org/entity/Q11" },
+        "valueLabel": { "value": "Estonia" }
+      }
+    ]
+  }
+}

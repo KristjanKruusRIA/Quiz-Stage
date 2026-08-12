@@ -15,6 +15,7 @@
     "content:build-dev-seed": "tsx scripts/content/build-dev-seed.ts",
     "content:validate": "tsx scripts/content/validate.ts",
     "content:source-check": "tsx scripts/content/sourceCheck.ts",
+    "content:fetch-wikidata": "tsx scripts/content/fetchWikidata.ts",
     "media:generate": "tsx scripts/generate-placeholder-audio.ts",
     "build": "electron-forge package",
     "make:installer": "electron-forge make --targets=@electron-forge/maker-squirrel",
