@@ -7,6 +7,8 @@ import { SetupScreen } from './features/setup/SetupScreen';
 import { GameSurface } from './features/game/GameSurface';
 import { HistoryScreen } from './features/history/HistoryScreen';
 import { ContentLibraryScreen } from './features/content/ContentLibraryScreen';
+import { I18nProvider, translate } from './i18n';
+import type { Language } from '../shared/game/types';
 
 interface AppProps {
   api?: DesktopApi;
@@ -17,6 +19,7 @@ export default function App({ api }: AppProps) {
   const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history' | 'content'>('home');
   const [hostView, setHostView] = useState<HostGameView | null>(null);
   const [publicView, setPublicView] = useState<PublicGameView | null>(null);
+  const [locale, setLocale] = useState<Language>('en');
   const [resumableAvailability, setResumableAvailability] = useState<{
     api: DesktopApi;
     available: boolean;
@@ -51,30 +54,31 @@ export default function App({ api }: AppProps) {
   }, [desktopApi, route]);
 
   if (desktopApi.surface === 'public') {
-    return publicView === null
-      ? <main className="waiting-screen" role="status">Waiting for the host</main>
-      : <GameSurface surface="public" view={publicView} />;
+    const publicLocale = publicView?.language ?? 'en';
+    return <I18nProvider locale={publicLocale}>{publicView === null
+      ? <main className="waiting-screen" role="status">{translate(publicLocale, 'app.waitingHost')}</main>
+      : <GameSurface surface="public" view={publicView} />}</I18nProvider>;
   }
+  let content: React.ReactNode;
   if (route === 'setup') {
-    return <SetupScreen api={desktopApi} onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
-  }
-  if (route === 'history') {
-    return <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
-  }
-  if (route === 'content') {
-    return <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
-  }
-  if (route === 'match') {
-    return hostView === null
-      ? <main className="waiting-screen" role="status">Starting match</main>
+    content = <SetupScreen api={desktopApi} initialLanguage={locale} onLanguageChange={setLocale}
+      onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
+  } else if (route === 'history') {
+    content = <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
+  } else if (route === 'content') {
+    content = <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
+  } else if (route === 'match') {
+    const matchLocale = hostView?.state.config.language ?? locale;
+    content = hostView === null
+      ? <main className="waiting-screen" role="status">{translate(matchLocale, 'app.startingMatch')}</main>
       : <GameSurface
         surface="host"
         view={hostView}
         api={desktopApi}
         onHome={hostView.state.phase === 'complete' ? () => navigate('home') : undefined}
       />;
-  }
-  const resume = async () => {
+  } else {
+    const resume = async () => {
     if (resumePending || !hasResumableMatch) return;
     const generation = navigationGeneration.current;
     setResumePending(true);
@@ -87,22 +91,26 @@ export default function App({ api }: AppProps) {
         return;
       }
       setHostView(view);
+      setLocale(view.state.config.language);
       navigate('match');
     } catch {
       if (generation === navigationGeneration.current) setResumeError(true);
     } finally {
       if (generation === navigationGeneration.current) setResumePending(false);
     }
-  };
-  return <HomeScreen
-    onNewMatch={() => navigate('setup')}
-    onResume={() => void resume()}
-    onHistory={() => navigate('history')}
-    onContent={() => navigate('content')}
-    hasResumableMatch={hasResumableMatch}
-    resumePending={resumePending}
-    resumeError={resumeError}
-  />;
+    };
+    content = <HomeScreen
+      onNewMatch={() => navigate('setup')}
+      onResume={() => void resume()}
+      onHistory={() => navigate('history')}
+      onContent={() => navigate('content')}
+      hasResumableMatch={hasResumableMatch}
+      resumePending={resumePending}
+      resumeError={resumeError}
+    />;
+  }
+  const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
+  return <I18nProvider locale={activeLocale}>{content}</I18nProvider>;
 }
 
 function HistoryRoute({ api, onBack }: { api: Extract<DesktopApi, { surface: 'host' }>; onBack: () => void }) {

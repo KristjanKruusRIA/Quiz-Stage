@@ -1,4 +1,5 @@
 import type { Team } from '../../../shared/game/types';
+import { translate } from '../../i18n';
 
 export const TEAM_COLORS = [
   '#E3B341', '#50A7F5', '#57C785', '#F07878',
@@ -23,10 +24,10 @@ export function TeamEditor({
   onRemove,
 }: TeamEditorProps) {
   const number = index + 1;
-  const teamLabel = language === 'et' ? `Võistkond ${number}` : `Team ${number}`;
-  const nameLabel = language === 'et' ? `${teamLabel} nimi` : `${teamLabel} name`;
-  const colorLabel = language === 'et' ? `${teamLabel} värv` : `${teamLabel} color`;
-  const removeLabel = language === 'et' ? `Eemalda ${teamLabel}` : `Remove ${teamLabel}`;
+  const teamLabel = translate(language, 'team.label', { number });
+  const nameLabel = translate(language, 'team.name', { number });
+  const colorLabel = translate(language, 'team.color', { number });
+  const removeLabel = translate(language, 'team.removeLabel', { number });
 
   return (
     <fieldset className="team-editor" aria-label={teamLabel}>
@@ -46,13 +47,13 @@ export function TeamEditor({
           onChange={(event) => onChange({ ...team, color: event.target.value })}
         >
           {TEAM_COLORS.map((color, colorIndex) => (
-            <option key={color} value={color}>{language === 'et' ? 'Värv' : 'Color'} {colorIndex + 1}</option>
+            <option key={color} value={color}>{translate(language, 'team.colorOption', { number: colorIndex + 1 })}</option>
           ))}
         </select>
       </label>
       <span className="team-swatch" style={{ backgroundColor: team.color }} aria-hidden="true" />
       <button type="button" disabled={!canRemove} onClick={onRemove} aria-label={removeLabel}>
-        {language === 'et' ? 'Eemalda' : 'Remove'}
+        {translate(language, 'team.remove')}
       </button>
     </fieldset>
   );

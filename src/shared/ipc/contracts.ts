@@ -259,6 +259,7 @@ const publicBoardSchema = z.strictObject({
 
 export const publicGameViewSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
+  language: z.enum(['en', 'et']),
   phase: z.enum([
     'round-one-board', 'ordinary-clue', 'round-two-board', 'clue-reveal', 'final-category',
     'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete',

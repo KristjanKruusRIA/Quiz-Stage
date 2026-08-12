@@ -204,6 +204,7 @@ export type PublicGamePhase = Exclude<GamePhase, 'daily-double-wager' | 'daily-d
 
 export interface PublicGameView {
   appVersion: typeof APP_VERSION;
+  language: Language;
   phase: PublicGamePhase;
   displayMode: DisplayMode;
   teams: PublicTeamScore[];

@@ -6,6 +6,7 @@ import { PublicBoard } from './PublicBoard';
 import { PublicClue } from './PublicClue';
 import { PublicFinal } from './PublicFinal';
 import { useState } from 'react';
+import { createTranslator, formatNumber } from '../../i18n';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number }
@@ -18,10 +19,11 @@ function presentation(view: PublicGameView, now?: () => number, onSelect?: (tile
 }
 
 function scores(view: PublicGameView) {
+  const t = createTranslator(view.language);
   if (view.phase === 'final-wagers' && view.displayMode === 'single') return null;
   if (['final-category', 'final-wagers', 'complete'].includes(view.phase)) return null;
-  return <ul className="scoreboard" aria-label="Team scores">{view.teams.map((team, index) => <li key={team.id}>
-    Team {index + 1}: {team.name} <strong>{team.score}</strong>
+  return <ul className="scoreboard" aria-label={t('game.teamScores')}>{view.teams.map((team, index) => <li key={team.id}>
+    {t('game.teamScore', { number: index + 1, name: team.name })} <strong>{formatNumber(view.language, team.score)}</strong>
   </li>)}</ul>;
 }
 
@@ -68,10 +70,10 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
   };
   return <main className="game-surface host-surface">
     <section className="public-presentation">
-      {selectionError ? <p role="alert">The clue could not be selected. Try again.</p> : null}
+      {selectionError ? <p role="alert">{createTranslator(publicView.language)('game.selectionError')}</p> : null}
       {scores(publicView)}{presentation(publicView, props.now, selectionPending ? undefined : onSelect)}
     </section>
     <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} />
-    {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>Back to Home</button>}
+    {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>{createTranslator(publicView.language)('common.backHome')}</button>}
   </main>;
 }

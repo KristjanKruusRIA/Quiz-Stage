@@ -1,4 +1,5 @@
 import type { RecoveryIssue } from '../../../shared/game/types';
+import { useI18n } from '../../i18n';
 
 interface RecoveryNoticeProps {
   recoveredFromSnapshotSequence: number;
@@ -11,11 +12,12 @@ export function RecoveryNotice({
   skippedInvalidSnapshotSequences,
   replayIssue,
 }: RecoveryNoticeProps) {
+  const { t } = useI18n();
   return <p role="status" className="recovery-notice">
-    Recovered from snapshot {recoveredFromSnapshotSequence}.
+    {t('recovery.recovered', { sequence: recoveredFromSnapshotSequence })}
     {skippedInvalidSnapshotSequences.length === 0
       ? null
-      : ` Skipped invalid snapshots ${skippedInvalidSnapshotSequences.join(', ')}.`}
-    {replayIssue === null ? null : ` Replay stopped before event ${replayIssue.sequence}.`}
+      : ` ${t('recovery.skipped', { sequences: skippedInvalidSnapshotSequences.join(', ') })}`}
+    {replayIssue === null ? null : ` ${t('recovery.stopped', { sequence: replayIssue.sequence })}`}
   </p>;
 }

@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import type { ContentImportPreview } from '../../../shared/content/editor';
+import { useI18n } from '../../i18n';
 
 interface ImportPreviewProps {
   preview: Exclude<ContentImportPreview, { cancelled: true }>;
@@ -8,6 +9,7 @@ interface ImportPreviewProps {
 }
 
 export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProps) {
+  const { t } = useI18n();
   const [strategy, setStrategy] = useState<'replace-existing' | 'keep-both'>('keep-both');
   const [pending, setPending] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -22,27 +24,32 @@ export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProp
   };
   return (
     <section className="import-preview" aria-labelledby="import-preview-title">
-      <h2 id="import-preview-title">Import preview: {preview.packName ?? 'Invalid pack'}</h2>
-      <p>{preview.rowCount} rows · no changes have been written.</p>
+      <h2 id="import-preview-title">{t('import.preview', { pack: preview.packName ?? t('import.invalidPack') })}</h2>
+      <p>{t('import.rows', { count: preview.rowCount })}</p>
       {preview.issues.length > 0 ? (
-        <ul aria-label="Import validation issues">
+        <ul aria-label={t('import.issues')}>
           {preview.issues.map((issue, index) => (
             <li key={`${issue.row ?? 0}-${issue.column ?? ''}-${issue.code}-${index}`}>
-              {issue.row === undefined ? '' : `Row ${issue.row}${issue.column === undefined ? '' : `, ${issue.column}`}: `}{issue.message}
+              {issue.row === undefined ? '' : `${issue.column === undefined
+                ? t('import.row', { row: issue.row })
+                : t('import.rowColumn', { row: issue.row, column: issue.column })}: `}
+              {issue.code === 'empty-pack'
+                ? t('import.issue.empty-pack')
+                : t('import.issue.generic', { code: /^[a-z0-9-]+$/.test(issue.code) ? issue.code : 'unknown' })}
             </li>
           ))}
         </ul>
-      ) : <p role="status">All rows are valid.</p>}
+      ) : <p role="status">{t('import.allValid')}</p>}
       {preview.conflict ? (
-        <fieldset><legend>Pack ID conflict</legend>
-          <label><input type="radio" name="import-conflict" checked={strategy === 'keep-both'} onChange={() => setStrategy('keep-both')} />Keep both</label>
-          <label><input type="radio" name="import-conflict" checked={strategy === 'replace-existing'} onChange={() => setStrategy('replace-existing')} />Replace existing</label>
+        <fieldset><legend>{t('import.conflict')}</legend>
+          <label><input type="radio" name="import-conflict" checked={strategy === 'keep-both'} onChange={() => setStrategy('keep-both')} />{t('import.keepBoth')}</label>
+          <label><input type="radio" name="import-conflict" checked={strategy === 'replace-existing'} onChange={() => setStrategy('replace-existing')} />{t('import.replace')}</label>
         </fieldset>
       ) : null}
-      {failed ? <p role="alert">Import failed. The library was not changed.</p> : null}
+      {failed ? <p role="alert">{t('import.failed')}</p> : null}
       <div className="editor-actions">
-        <button className="primary-action" type="button" disabled={pending || !preview.valid || preview.issues.length > 0} onClick={() => void commit()}>Import pack</button>
-        <button type="button" disabled={pending} onClick={onCancel}>Cancel import</button>
+        <button className="primary-action" type="button" disabled={pending || !preview.valid || preview.issues.length > 0} onClick={() => void commit()}>{t('import.commit')}</button>
+        <button type="button" disabled={pending} onClick={onCancel}>{t('import.cancel')}</button>
       </div>
     </section>
   );

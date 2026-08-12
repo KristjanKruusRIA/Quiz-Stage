@@ -15,8 +15,9 @@ import { ImportPreview } from '../../../../src/renderer/features/content/ImportP
     }} onCommit={commit} onCancel={vi.fn()} />);
 
     expect(screen.getAllByRole('listitem')).toHaveLength(2);
-    expect(screen.getByText(/Row 2.*clue is required/)).toBeInTheDocument();
-    expect(screen.getByText(/Row 4.*source URL is invalid/)).toBeInTheDocument();
+    expect(screen.getByText(/Row 2.*could not be imported \(missing\)/)).toBeInTheDocument();
+    expect(screen.getByText(/Row 4.*could not be imported \(url\)/)).toBeInTheDocument();
+    expect(screen.queryByText(/clue is required|source URL is invalid/)).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Import pack' })).toBeDisabled();
     await userEvent.click(screen.getByRole('button', { name: 'Cancel import' }));
     expect(commit).not.toHaveBeenCalled();

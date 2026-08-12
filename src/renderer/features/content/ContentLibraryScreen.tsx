@@ -8,6 +8,7 @@ import { CategorySetEditor, type CategorySetDraft } from './CategorySetEditor';
 import { FinalClueEditor, type FinalClueDraft } from './FinalClueEditor';
 import { ImportPreview } from './ImportPreview';
 import { PackList } from './PackList';
+import { useI18n } from '../../i18n';
 
 interface ContentLibraryScreenProps { api: HostDesktopApi; onBack: () => void }
 
@@ -30,6 +31,7 @@ function blankFinal(pack: EditorPack): FinalClueDraft {
 }
 
 export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps) {
+  const { t } = useI18n();
   const [library, setLibrary] = useState<EditorLibrary | null>(null);
   const [selected, setSelected] = useState<EditorCategorySet | CategorySetDraft | EditorFinalClue | FinalClueDraft | null>(null);
   const [preview, setPreview] = useState<Awaited<ReturnType<NonNullable<HostDesktopApi['previewContentImport']>>> | null>(null);
@@ -112,7 +114,7 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
     } });
   };
   const deletePack = async (pack: EditorPack) => {
-    if (api.deleteContentPack === undefined || !window.confirm(`Delete ${pack.name}?`)) return;
+    if (api.deleteContentPack === undefined || !window.confirm(t('content.deleteConfirm', { pack: pack.name }))) return;
     try { await runAction(`delete:${pack.id}`, async () => { await api.deleteContentPack!({ packId: pack.id, expectedRevision: pack.revision }); await load(); }); }
     catch { setError(true); }
   };
@@ -147,7 +149,7 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
         const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
         if (!result.ran) return;
         closeEditor(); await load();
-      } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
+      } catch { setActionError(t('content.reportError')); }
     }} onCancel={closeEditor} /></main>;
     return <main className="page-shell">{actionError ? <p role="alert">{actionError}</p> : null}<FinalClueEditor value={selected} onSave={saveFinal} reportPending={selected.clue.id !== null && pendingActions.has(`report:${selected.clue.id}`)} onReport={selected.id === null ? undefined : async (clueId, note) => {
       setActionError(null);
@@ -156,28 +158,28 @@ export function ContentLibraryScreen({ api, onBack }: ContentLibraryScreenProps)
         const result = await runAction(`report:${clueId}`, () => api.reportContentClue!({ clueId, note, expectedRevision: selected.revision }));
         if (!result.ran) return;
         closeEditor(); await load();
-      } catch { setActionError('The report could not be saved. Refresh content and try again.'); }
+      } catch { setActionError(t('content.reportError')); }
     }} onCancel={closeEditor} /></main>;
   }
   return (
     <main className="page-shell content-library-screen">
-      <header className="setup-header"><div><p className="eyebrow">Quiz Stage</p><h1>Content Library</h1></div><button type="button" onClick={() => { setActionError(null); onBack(); }}>Back to Home</button></header>
+      <header className="setup-header"><div><p className="eyebrow">{t('common.productName')}</p><h1>{t('content.title')}</h1></div><button type="button" onClick={() => { setActionError(null); onBack(); }}>{t('common.backHome')}</button></header>
       <div className="editor-actions">
-        <button type="button" onClick={() => void load()}>Refresh content</button>
-        <label>Custom pack name<input value={newPackName} onChange={(event) => setNewPackName(event.target.value)} /></label>
-        <button type="button" disabled={!newPackName.trim() || pendingActions.has('create')} onClick={() => void createPack()}>Create custom pack</button>
-        <button type="button" disabled={pendingActions.has('preview')} onClick={() => void startImport()}>Import CSV</button>
+        <button type="button" onClick={() => void load()}>{t('content.refresh')}</button>
+        <label>{t('content.customPackName')}<input value={newPackName} onChange={(event) => setNewPackName(event.target.value)} /></label>
+        <button type="button" disabled={!newPackName.trim() || pendingActions.has('create')} onClick={() => void createPack()}>{t('content.createPack')}</button>
+        <button type="button" disabled={pendingActions.has('preview')} onClick={() => void startImport()}>{t('content.importCsv')}</button>
       </div>
-      {error ? <p role="alert">The content library action failed. No unconfirmed changes were applied.</p> : null}
-      {importFailure ? <p role="alert">Import failed. The preview was consumed; choose the file again to retry.</p> : null}
+      {error ? <p role="alert">{t('content.actionError')}</p> : null}
+      {importFailure ? <p role="alert">{t('content.importConsumed')}</p> : null}
       {preview !== null && !preview.cancelled ? <ImportPreview preview={preview} onCommit={commitImport} onCancel={() => { if (preview.valid) void api.discardContentImport?.({ previewId: preview.previewId }); setPreview(null); }} /> : null}
-      {library === null && !error ? <p role="status">Loading content library</p> : null}
+      {library === null && !error ? <p role="status">{t('content.loading')}</p> : null}
       {library !== null ? (
         <>
-          <section aria-labelledby="reported-clues-title"><h2 id="reported-clues-title">Reported clues</h2>
-            {library.reports.length === 0 ? <p>No unresolved reports.</p> : <ul>{library.reports.map((report) => {
+          <section aria-labelledby="reported-clues-title"><h2 id="reported-clues-title">{t('content.reportedClues')}</h2>
+            {library.reports.length === 0 ? <p>{t('content.noReports')}</p> : <ul>{library.reports.map((report) => {
               const editor = library.packs.flatMap((pack) => [...pack.categorySets, ...pack.finalClues]).find((item) => 'clues' in item ? item.clues.some((clue) => clue.id === report.clueId) : item.clue.id === report.clueId);
-              return <li key={report.id}>{report.note} <span className="muted">{report.clueId}</span> <button type="button" disabled={pendingActions.has(`resolve:${report.id}`)} onClick={() => void runAction(`resolve:${report.id}`, async () => { await api.resolveContentReport?.({ clueId: report.clueId, reportId: report.id, expectedRevision: editor!.revision }); await load(); }).catch(() => setError(true))}>Resolve without change</button></li>;
+              return <li key={report.id}>{report.note} <span className="muted">{report.clueId}</span> <button type="button" disabled={pendingActions.has(`resolve:${report.id}`)} onClick={() => void runAction(`resolve:${report.id}`, async () => { await api.resolveContentReport?.({ clueId: report.clueId, reportId: report.id, expectedRevision: editor!.revision }); await load(); }).catch(() => setError(true))}>{t('content.resolveWithoutChange')}</button></li>;
             })}</ul>}
           </section>
           <PackList packs={library.packs}

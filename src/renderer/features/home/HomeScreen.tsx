@@ -17,21 +17,23 @@ export function HomeScreen({
   resumePending = false,
   resumeError = false,
 }: HomeScreenProps) {
+  const { t } = useI18n();
   return (
     <main className="page-shell home-screen">
       <header>
-        <p className="eyebrow">Quiz Stage</p>
-        <h1>Home</h1>
+        <p className="eyebrow">{t('common.productName')}</p>
+        <h1>{t('home.title')}</h1>
       </header>
-      <nav className="home-actions" aria-label="Main menu">
-        <button className="primary-action" type="button" onClick={onNewMatch}>New Match</button>
-        <button type="button" disabled={!hasResumableMatch || resumePending} onClick={onResume}>Resume Match</button>
-        <button type="button" disabled={onContent === undefined} onClick={onContent}>Content Library</button>
-        <button type="button" onClick={onHistory}>Match History</button>
-        <button type="button" disabled>Settings</button>
+      <nav className="home-actions" aria-label={t('home.menu')}>
+        <button className="primary-action" type="button" onClick={onNewMatch}>{t('home.newMatch')}</button>
+        <button type="button" disabled={!hasResumableMatch || resumePending} onClick={onResume}>{t('home.resumeMatch')}</button>
+        <button type="button" disabled={onContent === undefined} onClick={onContent}>{t('home.contentLibrary')}</button>
+        <button type="button" onClick={onHistory}>{t('home.matchHistory')}</button>
+        <button type="button" disabled>{t('home.settings')}</button>
       </nav>
-      {resumeError ? <p role="alert">The saved match could not be resumed.</p> : null}
-      <p className="muted">Additional areas will become available in later releases.</p>
+      {resumeError ? <p role="alert">{t('home.resumeError')}</p> : null}
+      <p className="muted">{t('home.later')}</p>
     </main>
   );
 }
+import { useI18n } from '../../i18n';

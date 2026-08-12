@@ -10,6 +10,7 @@ import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 
 const publicView = {
   appVersion: '0.1.0' as const,
+  language: 'en' as const,
   phase: 'ordinary-clue' as const,
   displayMode: 'single' as const,
   teams: [

@@ -37,8 +37,8 @@ describe('HistoryScreen', () => {
     expect(screen.getByText(/42 minutes/i)).toBeInTheDocument();
     expect(screen.getByText(/history-pack, science-pack/i)).toBeInTheDocument();
     expect(screen.getByText(/durable-seed-42/i)).toBeInTheDocument();
-    expect(screen.getByText(/1\. Beta — 2400/)).toBeInTheDocument();
-    expect(screen.getByText(/2\. Alpha — 1200/)).toBeInTheDocument();
+    expect(screen.getByText(/1\. Beta — 2,400/)).toBeInTheDocument();
+    expect(screen.getByText(/2\. Alpha — 1,200/)).toBeInTheDocument();
     expect(screen.queryByText(/prompt|response|answer/i)).not.toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button', { name: 'Back' }));

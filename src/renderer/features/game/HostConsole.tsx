@@ -5,6 +5,8 @@ import type { Clue, HostGameView } from '../../../shared/game/types';
 import { HostTeamControls } from './HostTeamControls';
 import { useGameShortcuts } from './useGameShortcuts';
 import { RecoveryNotice } from '../history/RecoveryNotice';
+import { selectLocalizedClue } from '../../../shared/content/localization';
+import { createTranslator } from '../../i18n';
 
 interface HostConsoleProps {
   view: HostGameView;
@@ -26,11 +28,6 @@ function activeClue(view: HostGameView): Clue | null {
   return view.state.tiebreakerClues.find((clue) => clue.id === clueId) ?? null;
 }
 
-function text(clue: Clue, field: 'prompt' | 'response' | 'explanation', view: HostGameView): string {
-  const language = view.state.config.language;
-  return clue[field][language] ?? clue[field].en;
-}
-
 export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleProps) {
   const [dailyWager, setDailyWager] = useState('5');
   const [finalWagers, setFinalWagers] = useState<Record<string, string>>({});
@@ -42,15 +39,15 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
   const [error, setError] = useState<string | null>(null);
   const clue = activeClue(view);
   const state = view.state;
+  const t = createTranslator(state.config.language);
+  const localizedClue = clue === null ? null : selectLocalizedClue(clue, state.config.language, 'host');
   const dispatch = (command: GameCommand): boolean => {
     if (pendingRef.current) return false;
     pendingRef.current = true;
     setPending(true);
     void api.dispatch(command).then(
       () => setError(null),
-      () => setError(state.config.language === 'et'
-        ? 'Seda toimingut ei saanud praeguses mänguolukorras teha.'
-        : 'That action could not be completed in the current game state.'),
+      () => setError(t('host.actionError')),
     ).finally(() => {
       pendingRef.current = false;
       setPending(false);
@@ -96,26 +93,34 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
   const nextFinalTeamId = state.finalRevealOrder[state.finalRevealedTeamIds.length];
   const nextFinalTeam = state.config.teams.find((team) => team.id === nextFinalTeamId);
 
-  return <aside className="host-console" aria-label="Host console">
-    <header><h2>Host console</h2><p data-testid="controlling-team">In control: {controlling?.name ?? 'None'}</p></header>
+  return <aside className="host-console" aria-label={t('host.console')}>
+    <header><h2>{t('host.console')}</h2><p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p></header>
     {view.recovery === null
-      ? view.replayIssue === null ? null : <p role="alert">Recovered through event {view.replayIssue.sequence}; later data could not be replayed.</p>
+      ? view.replayIssue === null ? null : <p role="alert">{t('host.replayError', { sequence: view.replayIssue.sequence })}</p>
       : <RecoveryNotice {...view.recovery} replayIssue={view.replayIssue} />}
     {error === null ? null : <p role="alert">{error}</p>}
-    {clue === null ? null : <section aria-label="Private clue details">
-      <p><strong>Response:</strong> {text(clue, 'response', view)}</p>
-      <p><strong>Explanation:</strong> {text(clue, 'explanation', view)}</p>
-      <p><strong>Source:</strong> {clue.source}</p>
+    {localizedClue === null ? null : <section aria-label={t('host.privateDetails')}>
+      <p><strong>{t('host.response')}</strong> {localizedClue.response}</p>
+      {localizedClue.acceptedResponses === undefined ? null : <p><strong>{t('host.acceptedResponses')}</strong> {localizedClue.acceptedResponses}</p>}
+      <p><strong>{t('host.explanation')}</strong> {localizedClue.explanation}</p>
+      <p><strong>{t('host.source')}</strong> {localizedClue.source}</p>
+    </section>}
+    {localizedClue?.englishOriginal === undefined ? null : <section aria-label={t('host.englishOriginal')}>
+      <h3>{t('host.englishOriginal')}</h3>
+      <p><strong>{t('host.englishPrompt')}</strong> {localizedClue.englishOriginal.prompt}</p>
+      <p><strong>{t('host.englishResponse')}</strong> {localizedClue.englishOriginal.response}</p>
+      {localizedClue.englishOriginal.acceptedResponses === undefined ? null : <p><strong>{t('host.englishAcceptedResponses')}</strong> {localizedClue.englishOriginal.acceptedResponses}</p>}
+      <p><strong>{t('host.englishExplanation')}</strong> {localizedClue.englishOriginal.explanation}</p>
     </section>}
 
     {state.phase === 'daily-double-wager' ? <form onSubmit={(event) => {
       event.preventDefault(); if (dailyValid) dispatch({ type: 'SubmitDailyDoubleWager', wager: dailyValue });
     }}>
-      <label>Daily Double wager <input type="number" min={5} max={dailyMaximum} value={dailyWager} onChange={(event) => setDailyWager(event.target.value)} /></label>
-      <button type="submit" disabled={!dailyValid || pending}>Commit wager</button>
+      <label>{t('host.dailyWager')} <input type="number" min={5} max={dailyMaximum} value={dailyWager} onChange={(event) => setDailyWager(event.target.value)} /></label>
+      <button type="submit" disabled={!dailyValid || pending}>{t('host.commitWager')}</button>
     </form> : null}
 
-    {state.phase === 'final-category' || state.phase === 'final-wagers' ? <section aria-label="Final wagers">
+    {state.phase === 'final-category' || state.phase === 'final-wagers' ? <section aria-label={t('host.finalWagers')}>
       {state.finalEligibleTeamIds.map((teamId) => {
         const team = state.config.teams.find((candidate) => candidate.id === teamId);
         const committed = teamId in state.finalWagers;
@@ -124,38 +129,38 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
         return <form key={teamId} onSubmit={(event) => {
           event.preventDefault(); if (!committed && valid) dispatch({ type: 'SubmitFinalWager', teamId, wager: value });
         }}>
-          <label>Final wager for {team?.name}<input type="number" min={0} max={state.scores[teamId]} disabled={committed}
+          <label>{t('host.finalWagerFor', { team: team?.name ?? '' })}<input type="number" min={0} max={state.scores[teamId]} disabled={committed}
             value={finalWagers[teamId] ?? '0'} onChange={(event) => setFinalWagers((values) => ({ ...values, [teamId]: event.target.value }))} /></label>
-          <button type="submit" disabled={committed || !valid || pending}>Commit {team?.name} wager</button>
+          <button type="submit" disabled={committed || !valid || pending}>{t('host.commitTeamWager', { team: team?.name ?? '' })}</button>
         </form>;
       })}
     </section> : null}
 
     {state.phase === 'complete' ? null : <>
     <HostTeamControls view={view} onLock={lockTeam} />
-    <section className="judgment-controls" aria-label="Judgment controls">
-      <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: true, at: now() })}>Correct</button>
-      <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: false, at: now() })}>Incorrect</button>
-      <button type="button" disabled={!revealable || pending} onClick={() => dispatch({ type: 'RevealResponse' })}>Reveal response</button>
-      {clueRevealed ? <button type="button" disabled={pending} onClick={() => dispatch({ type: 'AdvanceAfterReveal' })}>Continue</button> : null}
+    <section className="judgment-controls" aria-label={t('host.judgmentControls')}>
+      <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: true, at: now() })}>{t('game.correct')}</button>
+      <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: false, at: now() })}>{t('game.incorrect')}</button>
+      <button type="button" disabled={!revealable || pending} onClick={() => dispatch({ type: 'RevealResponse' })}>{t('host.revealResponse')}</button>
+      {clueRevealed ? <button type="button" disabled={pending} onClick={() => dispatch({ type: 'AdvanceAfterReveal' })}>{t('host.continue')}</button> : null}
     </section>
-    <section className="timer-controls" aria-label="Timer controls">
+    <section className="timer-controls" aria-label={t('host.timerControls')}>
       <button type="button" disabled={pending || !timed || !['running', 'paused'].includes(state.timer.status)} onClick={() => dispatch({
         type: state.timer.status === 'running' ? 'PauseTimer' : 'ResumeTimer', at: now(),
-      })}>{state.timer.status === 'running' ? 'Pause timer' : 'Resume timer'}</button>
-      <button type="button" disabled={pending || !timed} onClick={() => dispatch({ type: 'ResetTimer', at: now() })}>Reset timer</button>
+      })}>{t(state.timer.status === 'running' ? 'host.pauseTimer' : 'host.resumeTimer')}</button>
+      <button type="button" disabled={pending || !timed} onClick={() => dispatch({ type: 'ResetTimer', at: now() })}>{t('host.resetTimer')}</button>
     </section>
-    {nextFinalTeam === undefined || !['final-clue', 'final-reveal'].includes(state.phase) ? null : <section aria-label="Final reveal">
-      <p>Reveal {nextFinalTeam.name}</p>
-      <button type="button" disabled={pending || (state.timer.status !== 'expired' && state.phase === 'final-clue')} onClick={() => dispatch({ type: 'RevealFinalTeam', teamId: nextFinalTeam.id, correct: true })}>Reveal {nextFinalTeam.name} correct</button>
-      <button type="button" disabled={pending || (state.timer.status !== 'expired' && state.phase === 'final-clue')} onClick={() => dispatch({ type: 'RevealFinalTeam', teamId: nextFinalTeam.id, correct: false })}>Reveal {nextFinalTeam.name} incorrect</button>
+    {nextFinalTeam === undefined || !['final-clue', 'final-reveal'].includes(state.phase) ? null : <section aria-label={t('host.finalReveal')}>
+      <p>{t('host.revealTeam', { team: nextFinalTeam.name })}</p>
+      <button type="button" disabled={pending || (state.timer.status !== 'expired' && state.phase === 'final-clue')} onClick={() => dispatch({ type: 'RevealFinalTeam', teamId: nextFinalTeam.id, correct: true })}>{t('host.revealTeamCorrect', { team: nextFinalTeam.name })}</button>
+      <button type="button" disabled={pending || (state.timer.status !== 'expired' && state.phase === 'final-clue')} onClick={() => dispatch({ type: 'RevealFinalTeam', teamId: nextFinalTeam.id, correct: false })}>{t('host.revealTeamIncorrect', { team: nextFinalTeam.name })}</button>
     </section>}
-    <section className="recovery-controls" aria-label="Recovery controls">
-      <button type="button" disabled={pending || state.undoStack.length === 0} onClick={() => dispatch({ type: 'UndoLast' })}>Undo</button>
-      <button type="button" disabled={pending || state.lastClosedClueId === null || !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)} onClick={() => dispatch({ type: 'ReopenClue' })}>Reopen clue</button>
+    <section className="recovery-controls" aria-label={t('host.recoveryControls')}>
+      <button type="button" disabled={pending || state.undoStack.length === 0} onClick={() => dispatch({ type: 'UndoLast' })}>{t('host.undo')}</button>
+      <button type="button" disabled={pending || state.lastClosedClueId === null || !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)} onClick={() => dispatch({ type: 'ReopenClue' })}>{t('host.reopenClue')}</button>
     </section>
-    <section aria-label="Current match corrections">
-      <label>Score adjustment reason<input value={scoreReason} onChange={(event) => setScoreReason(event.target.value)} /></label>
+    <section aria-label={t('host.corrections')}>
+      <label>{t('host.scoreReason')}<input value={scoreReason} onChange={(event) => setScoreReason(event.target.value)} /></label>
       {state.config.teams.map((team) => {
         return <form key={team.id} onSubmit={(event) => {
           event.preventDefault();
@@ -164,20 +169,20 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
             dispatch({ type: 'AdjustScore', teamId: team.id, score, reason: scoreReason.trim() });
           }
         }}>
-          <label>Score for {team.name}<input key={`${team.id}:${state.scores[team.id]}`} name="score" type="number" step="1" required defaultValue={state.scores[team.id]} /></label>
-          <button type="submit" disabled={pending || scoreReason.trim() === ''}>Set {team.name} score</button>
+          <label>{t('host.scoreFor', { team: team.name })}<input key={`${team.id}:${state.scores[team.id]}`} name="score" type="number" step="1" required defaultValue={state.scores[team.id]} /></label>
+          <button type="submit" disabled={pending || scoreReason.trim() === ''}>{t('host.setScore', { team: team.name })}</button>
         </form>;
       })}
       {reportable ? <form onSubmit={(event) => {
         event.preventDefault();
         if (clue !== null && reportReason.trim() !== '') dispatch({ type: 'ReportClue', clueId: clue.id, reason: reportReason.trim() });
       }}>
-        <label>Clue report reason<input value={reportReason} onChange={(event) => setReportReason(event.target.value)} /></label>
-        <button type="submit" disabled={pending || clue === null || reportReason.trim() === ''}>Report current clue</button>
+        <label>{t('host.reportReason')}<input value={reportReason} onChange={(event) => setReportReason(event.target.value)} /></label>
+        <button type="submit" disabled={pending || clue === null || reportReason.trim() === ''}>{t('host.reportClue')}</button>
       </form> : null}
-      <label><input type="checkbox" checked={confirmIncomplete} onChange={(event) => setConfirmIncomplete(event.target.checked)} />I understand this ends the current match</label>
+      <label><input type="checkbox" checked={confirmIncomplete} onChange={(event) => setConfirmIncomplete(event.target.checked)} />{t('host.endConfirm')}</label>
       <button type="button" disabled={pending || !confirmIncomplete}
-        onClick={() => dispatch({ type: 'EndIncompleteMatch' })}>End match incomplete</button>
+        onClick={() => dispatch({ type: 'EndIncompleteMatch' })}>{t('host.endIncomplete')}</button>
     </section>
     </>}
   </aside>;

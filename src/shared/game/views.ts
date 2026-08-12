@@ -1,10 +1,10 @@
 import { APP_VERSION } from '../appMeta';
+import { selectLocalizedClue, selectLocalizedText } from '../content/localization';
 import type {
   Board,
   Clue,
   GameState,
   HostGameView,
-  LocalizedText,
   PublicBoard,
   PublicGameView,
   RecoveryMetadata,
@@ -40,9 +40,11 @@ export function toPublicGameView(state: GameState): PublicGameView {
     || (state.phase === 'complete' && state.winnerTeamId !== null && state.activeClue?.responseRevealed === true);
   const responseIsPublic = state.activeClue?.responseRevealed === true
     && ['clue-reveal', 'final-reveal', 'complete'].includes(state.phase);
+  const localizedClue = activeClue === null ? null : selectLocalizedClue(activeClue, language, 'public');
 
   return {
     appVersion: APP_VERSION,
+    language,
     phase: publicPhase(state),
     displayMode: state.config.displayMode,
     teams: state.config.teams.map((team) => ({
@@ -58,20 +60,20 @@ export function toPublicGameView(state: GameState): PublicGameView {
     winnerTeamId: state.phase === 'complete' ? state.winnerTeamId : null,
     tiebreakerTeamIds: state.phase === 'tiebreaker' ? [...state.tiebreakerTeamIds] : [],
     final: publicFinal(state, language),
-    activeClue: !showActiveClue || activeClue === null || state.activeClue === null
+    activeClue: !showActiveClue || localizedClue === null || state.activeClue === null
       ? null
       : responseIsPublic
       ? {
           id: 'active-clue',
-          prompt: localize(activeClue.prompt, language),
+          prompt: localizedClue.prompt,
           responseRevealed: true,
-          response: localize(activeClue.response, language),
-          explanation: localize(activeClue.explanation, language),
-          source: activeClue.source,
+          response: localizedClue.response,
+          explanation: localizedClue.explanation,
+          source: localizedClue.source,
         }
       : {
           id: 'active-clue',
-          prompt: localize(activeClue.prompt, language),
+          prompt: localizedClue.prompt,
           responseRevealed: false,
         },
   };
@@ -88,7 +90,7 @@ function publicFinal(state: GameState, language: GameState['config']['language']
   return {
     category: state.finalClue.categoryName === undefined
       ? language === 'et' ? 'Finaal' : 'Final'
-      : localize(state.finalClue.categoryName, language),
+      : selectLocalizedText(state.finalClue.categoryName, language),
     eligibleTeamIds: [...state.finalEligibleTeamIds],
     revealed: state.finalRevealedTeamIds.flatMap((teamId) => {
       const wager = state.finalWagers[teamId];
@@ -116,7 +118,7 @@ function toPublicBoard(board: Board, state: GameState, language: GameState['conf
     round: board.round,
     categories: board.categories.map((category, categoryIndex) => ({
       id: `${board.id}:category:${categoryIndex}`,
-      name: localize(category.name, language),
+      name: selectLocalizedText(category.name, language),
       clues: category.clues.map((clue, clueIndex) => ({
         id: `${board.id}:tile:${categoryIndex}:${clueIndex}`,
         value: clue.value,
@@ -135,8 +137,4 @@ function findClue(state: GameState, clueId: string): Clue | null {
   }
   if (state.finalClue?.id === clueId) return state.finalClue;
   return state.tiebreakerClues.find((clue) => clue.id === clueId) ?? null;
-}
-
-function localize(text: LocalizedText, language: GameState['config']['language']): string {
-  return text[language] ?? text.en;
 }

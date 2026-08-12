@@ -1,4 +1,5 @@
 import type { EditorPack } from '../../../shared/content/editor';
+import { useI18n } from '../../i18n';
 
 interface PackListProps {
   packs: readonly EditorPack[];
@@ -13,33 +14,34 @@ interface PackListProps {
 const NO_PENDING_ACTIONS: ReadonlySet<string> = new Set();
 
 export function PackList({ packs, onEditCategory, onEditFinal, onAddCategory, onAddFinal, onDeletePack, onExport, pendingActions = NO_PENDING_ACTIONS }: PackListProps) {
+  const { t } = useI18n();
   return (
     <div className="pack-list">
       {packs.map((pack) => (
         <section className="pack-card" key={pack.id} aria-labelledby={`pack-${pack.id}`}>
           <div className="section-heading">
-            <div><h2 id={`pack-${pack.id}`}>{pack.name}</h2><p className="muted">{pack.ownership}</p></div>
+            <div><h2 id={`pack-${pack.id}`}>{pack.name}</h2><p className="muted">{t(pack.ownership === 'custom' ? 'content.custom' : 'content.bundled')}</p></div>
             <div className="editor-actions">
-              <button type="button" disabled={pendingActions.has(`export:${pack.id}`)} onClick={() => onExport(pack)}>Export CSV</button>
-              {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddCategory(pack)}>Add category set</button> : null}
-              {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddFinal(pack)}>Add Final clue</button> : null}
-              {pack.ownership === 'custom' ? <button type="button" disabled={pendingActions.has(`delete:${pack.id}`)} onClick={() => onDeletePack(pack)}>Delete pack</button> : null}
+              <button type="button" disabled={pendingActions.has(`export:${pack.id}`)} onClick={() => onExport(pack)}>{t('content.exportCsv')}</button>
+              {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddCategory(pack)}>{t('content.addCategory')}</button> : null}
+              {pack.ownership === 'custom' ? <button type="button" onClick={() => onAddFinal(pack)}>{t('content.addFinal')}</button> : null}
+              {pack.ownership === 'custom' ? <button type="button" disabled={pendingActions.has(`delete:${pack.id}`)} onClick={() => onDeletePack(pack)}>{t('content.deletePack')}</button> : null}
             </div>
           </div>
           <ul className="content-record-list">
             {pack.categorySets.map((set) => (
               <li key={set.id} className={set.clues.some((clue) => clue.reported) ? 'reported-record' : ''}>
-                <span>{set.name.en} / {set.name.et ?? 'ET missing'} · {set.round} · {set.difficulty}</span>
-                <span>EN {set.eligibility.en ? 'eligible' : 'blocked'} · ET {set.eligibility.et ? 'eligible' : 'blocked'}</span>
+                <span>{t('common.english')}: {set.name.en} / {t('common.estonian')}: {set.name.et ?? t('content.missing')} · {t('content.roundDifficulty', { round: t(set.round === 'round-one' ? 'common.roundOne' : 'common.doubleRound'), difficulty: t(`common.${set.difficulty}`) })}</span>
+                <span>{t('content.languageEligibility', { english: t(set.eligibility.en ? 'content.eligible' : 'content.blocked'), estonian: t(set.eligibility.et ? 'content.eligible' : 'content.blocked') })}</span>
                 <button type="button" onClick={() => onEditCategory(pack, set.id)}>
-                  Edit {set.clues.some((clue) => clue.reported) ? 'reported clue' : 'category set'} {set.name.en}
+                  {t(set.clues.some((clue) => clue.reported) ? 'content.editReportedCategory' : 'content.editCategory', { category: set.name.en })}
                 </button>
               </li>
             ))}
             {pack.finalClues.map((final) => (
               <li key={final.id} className={final.clue.reported ? 'reported-record' : ''}>
-                <span>Final: {final.categoryName.en} / {final.categoryName.et ?? 'ET missing'}</span>
-                <button type="button" onClick={() => onEditFinal(pack, final.id)}>Edit {final.clue.reported ? 'reported clue' : 'Final'} {final.categoryName.en}</button>
+                <span>{t('content.finalRecord', { english: final.categoryName.en, estonian: final.categoryName.et ?? t('content.missing') })}</span>
+                <button type="button" onClick={() => onEditFinal(pack, final.id)}>{t(final.clue.reported ? 'content.editReportedFinal' : 'content.editFinal', { category: final.categoryName.en })}</button>
               </li>
             ))}
           </ul>

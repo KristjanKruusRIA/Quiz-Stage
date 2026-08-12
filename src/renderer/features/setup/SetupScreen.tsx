@@ -3,41 +3,18 @@ import type { HostDesktopApi } from '../../api/desktopApi';
 import type { DisplayMode, GameConfig, Team } from '../../../shared/game/types';
 import { gameConfigSchema, type ContentAvailabilityResponse, type SetupOptions } from '../../../shared/ipc/contracts';
 import { TEAM_COLORS, TeamEditor } from './TeamEditor';
+import { createTranslator, pluralKey, translate, useI18n } from '../../i18n';
+import type { Language } from '../../../shared/game/types';
 
 interface SetupScreenProps {
   api: HostDesktopApi;
   onBack: () => void;
   onStarted?: () => void;
+  initialLanguage?: Language;
+  onLanguageChange?: (language: Language) => void;
 }
 
 type DisplayChoice = DisplayMode | 'automatic';
-
-const copy = {
-  en: {
-    title: 'New Match', back: 'Back', teams: 'Teams', addTeam: 'Add team',
-    language: 'Language', english: 'English', estonian: 'Estonian',
-    difficulty: 'Difficulty', easy: 'Easy', medium: 'Medium', hard: 'Hard',
-    clueTime: 'Clue time', seconds: 'seconds', packs: 'Content packs',
-    display: 'Display mode', automatic: 'Automatic', single: 'Single screen', dual: 'Dual screen',
-    start: 'Start match', checking: 'Checking content availability…',
-    emptyNames: 'Enter a name for every team.', duplicateNames: 'Team names must be unique.',
-    duplicateColors: 'Team colors must be unique.', choosePack: 'Select at least one content pack.',
-    loadError: 'Setup options could not be loaded.', availabilityError: 'Content availability could not be checked.',
-    startFailed: 'Match could not be started. Check your setup and try again.',
-  },
-  et: {
-    title: 'Uus mäng', back: 'Tagasi', teams: 'Võistkonnad', addTeam: 'Lisa võistkond',
-    language: 'Keel', english: 'Inglise', estonian: 'Eesti',
-    difficulty: 'Raskus', easy: 'Lihtne', medium: 'Keskmine', hard: 'Raske',
-    clueTime: 'Vihje aeg', seconds: 'sekundit', packs: 'Sisupaketid',
-    display: 'Kuvarežiim', automatic: 'Automaatne', single: 'Üks ekraan', dual: 'Kaks ekraani',
-    start: 'Alusta mängu', checking: 'Kontrollin sisu saadavust…',
-    emptyNames: 'Sisesta igale võistkonnale nimi.', duplicateNames: 'Võistkondade nimed peavad olema erinevad.',
-    duplicateColors: 'Võistkondade värvid peavad olema erinevad.', choosePack: 'Vali vähemalt üks sisupakett.',
-    loadError: 'Seadistusvalikuid ei saanud laadida.', availabilityError: 'Sisu saadavust ei saanud kontrollida.',
-    startFailed: 'Mängu ei saanud alustada. Kontrolli seadeid ja proovi uuesti.',
-  },
-} as const;
 
 function createTeam(currentTeams: readonly Team[]): Team {
   const usedColors = new Set(currentTeams.map((team) => team.color.toLowerCase()));
@@ -58,26 +35,28 @@ function initialTeams(): Team[] {
 }
 
 function localValidationMessage(teams: Team[], packIds: string[], language: 'en' | 'et'): string | null {
-  const text = copy[language];
   const normalizedNames = teams.map((team) => team.name.trim().toLocaleLowerCase());
-  if (normalizedNames.some((name) => name.length === 0)) return text.emptyNames;
-  if (new Set(normalizedNames).size !== normalizedNames.length) return text.duplicateNames;
-  if (new Set(teams.map((team) => team.color.toLowerCase())).size !== teams.length) return text.duplicateColors;
-  if (packIds.length === 0) return text.choosePack;
+  if (normalizedNames.some((name) => name.length === 0)) return translate(language, 'setup.emptyNames');
+  if (new Set(normalizedNames).size !== normalizedNames.length) return translate(language, 'setup.duplicateNames');
+  if (new Set(teams.map((team) => team.color.toLowerCase())).size !== teams.length) return translate(language, 'setup.duplicateColors');
+  if (packIds.length === 0) return translate(language, 'setup.choosePack');
   return null;
 }
 
 function shortageMessage(shortage: Exclude<ContentAvailabilityResponse, { ok: true }>, language: 'en' | 'et') {
-  if (language === 'et') {
-    return `Esimene voor: puudu ${shortage.roundOneMissing} kategooriakomplekti. Teine voor: puudu ${shortage.roundTwoMissing} kategooriakomplekti. Finaal: ${shortage.finalMissing === 1 ? 'pole saadaval' : 'saadaval'}.`;
-  }
-  const sets = (count: number) => count === 1 ? 'category set' : 'category sets';
-  return `Round One: ${shortage.roundOneMissing} ${sets(shortage.roundOneMissing)} missing. Round Two: ${shortage.roundTwoMissing} ${sets(shortage.roundTwoMissing)} missing. Final: ${shortage.finalMissing === 1 ? 'unavailable' : 'available'}.`;
+  const roundOneKey = pluralKey(shortage.roundOneMissing, {
+    one: 'setup.shortageRoundOne.one', other: 'setup.shortageRoundOne.other',
+  });
+  const roundTwoKey = pluralKey(shortage.roundTwoMissing, {
+    one: 'setup.shortageRoundTwo.one', other: 'setup.shortageRoundTwo.other',
+  });
+  return `${translate(language, roundOneKey, { count: shortage.roundOneMissing })} ${translate(language, roundTwoKey, { count: shortage.roundTwoMissing })} ${translate(language, shortage.finalMissing === 1 ? 'setup.finalUnavailable' : 'setup.finalAvailable')}`;
 }
 
-export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
+export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguageChange }: SetupScreenProps) {
+  const { locale } = useI18n();
   const [teams, setTeams] = useState<Team[]>(initialTeams);
-  const [language, setLanguage] = useState<'en' | 'et'>('en');
+  const [language, setLanguage] = useState<Language>(initialLanguage ?? locale);
   const [difficulty, setDifficulty] = useState<GameConfig['difficulty']>('medium');
   const [clueSeconds, setClueSeconds] = useState(15);
   const [packIds, setPackIds] = useState<string[]>([]);
@@ -93,7 +72,8 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   const [submitting, setSubmitting] = useState(false);
   const [startErrorKey, setStartErrorKey] = useState<string | null>(null);
   const startInFlight = useRef(false);
-  const text = copy[language];
+  const t = createTranslator(language);
+  const changeLanguage = (next: Language) => { setLanguage(next); onLanguageChange?.(next); };
 
   useEffect(() => {
     let active = true;
@@ -199,19 +179,19 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
   return (
     <main className="page-shell setup-screen">
       <header className="setup-header">
-        <button type="button" onClick={onBack}>{text.back}</button>
-        <h1>{text.title}</h1>
+        <button type="button" onClick={onBack}>{t('common.back')}</button>
+        <h1>{t('setup.title')}</h1>
       </header>
       <form onSubmit={(event) => void submit(event)}>
         <section aria-labelledby="teams-heading">
           <div className="section-heading">
-            <h2 id="teams-heading">{text.teams}</h2>
+            <h2 id="teams-heading">{t('setup.teams')}</h2>
             <button
               type="button"
               disabled={teams.length >= 8}
               onClick={() => setTeams((current) => [...current, createTeam(current)])}
             >
-              {text.addTeam}
+              {t('setup.addTeam')}
             </button>
           </div>
           <div className="team-grid">
@@ -231,28 +211,28 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
 
         <div className="settings-grid">
           <fieldset>
-            <legend>{text.language}</legend>
-            <label><input type="radio" name="language" checked={language === 'en'} onChange={() => setLanguage('en')} /> {text.english}</label>
-            <label><input type="radio" name="language" checked={language === 'et'} onChange={() => setLanguage('et')} /> {text.estonian}</label>
+            <legend>{t('setup.language')}</legend>
+            <label><input type="radio" name="language" checked={language === 'en'} onChange={() => changeLanguage('en')} /> {t('common.english')}</label>
+            <label><input type="radio" name="language" checked={language === 'et'} onChange={() => changeLanguage('et')} /> {t('common.estonian')}</label>
           </fieldset>
           <fieldset>
-            <legend>{text.difficulty}</legend>
+            <legend>{t('setup.difficulty')}</legend>
             {(['easy', 'medium', 'hard'] as const).map((value) => (
               <label key={value}>
-                <input type="radio" name="difficulty" checked={difficulty === value} onChange={() => setDifficulty(value)} /> {text[value]}
+                <input type="radio" name="difficulty" checked={difficulty === value} onChange={() => setDifficulty(value)} /> {t(`common.${value}`)}
               </label>
             ))}
           </fieldset>
           <label>
-            <span>{text.clueTime}</span>
+            <span>{t('setup.clueTime')}</span>
             <select value={clueSeconds} onChange={(event) => setClueSeconds(Number(event.target.value))}>
               {Array.from({ length: 12 }, (_, index) => (index + 1) * 5).map((seconds) => (
-                <option key={seconds} value={seconds}>{seconds} {text.seconds}</option>
+                <option key={seconds} value={seconds}>{seconds} {t('setup.seconds')}</option>
               ))}
             </select>
           </label>
           <fieldset>
-            <legend>{text.packs}</legend>
+            <legend>{t('setup.packs')}</legend>
             {options?.packs.filter((pack) => pack.enabled).map((pack) => (
               <label key={pack.id}>
                 <input type="checkbox" checked={packIds.includes(pack.id)} onChange={() => togglePack(pack.id)} /> {pack.name}
@@ -260,24 +240,24 @@ export function SetupScreen({ api, onBack, onStarted }: SetupScreenProps) {
             ))}
           </fieldset>
           <fieldset>
-            <legend>{text.display}</legend>
+            <legend>{t('setup.display')}</legend>
             {(['automatic', 'single', 'dual'] as const).map((value) => (
               <label key={value}>
-                <input type="radio" name="display" checked={displayChoice === value} onChange={() => setDisplayChoice(value)} /> {text[value]}
+                <input type="radio" name="display" checked={displayChoice === value} onChange={() => setDisplayChoice(value)} /> {t(`setup.${value}`)}
               </label>
             ))}
           </fieldset>
         </div>
 
-        {loadFailed ? <p role="alert">{text.loadError}</p> : null}
+        {loadFailed ? <p role="alert">{t('setup.loadError')}</p> : null}
         {localMessage !== null ? <p role="alert">{localMessage}</p> : null}
-        {currentAvailability === 'checking' ? <p role="status">{text.checking}</p> : null}
-        {currentAvailability === 'error' && !showStartError ? <p role="alert">{text.availabilityError}</p> : null}
-        {showStartError ? <p role="alert">{text.startFailed}</p> : null}
+        {currentAvailability === 'checking' ? <p role="status">{t('setup.checking')}</p> : null}
+        {currentAvailability === 'error' && !showStartError ? <p role="alert">{t('setup.availabilityError')}</p> : null}
+        {showStartError ? <p role="alert">{t('setup.startFailed')}</p> : null}
         {currentAvailability !== null && currentAvailability !== 'checking' && currentAvailability !== 'error' && !currentAvailability.ok
           ? <p role="alert">{shortageMessage(currentAvailability, language)}</p>
           : null}
-        <button className="primary-action" type="submit" disabled={!canStart}>{text.start}</button>
+        <button className="primary-action" type="submit" disabled={!canStart}>{t('setup.start')}</button>
       </form>
     </main>
   );

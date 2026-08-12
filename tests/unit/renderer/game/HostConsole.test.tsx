@@ -50,10 +50,10 @@ describe('HostConsole', () => {
     desktopApi.dispatch = vi.fn(() => pending.promise);
     const user = userEvent.setup();
     render(<HostConsole view={hostView({ config: { ...hostView().state.config, language: 'et' } })} api={desktopApi} />);
-    await user.type(screen.getByRole('textbox', { name: 'Score adjustment reason' }), 'Parandus');
-    await user.click(screen.getByRole('button', { name: 'Set Alpha score' }));
+    await user.type(screen.getByRole('textbox', { name: 'Punktiparanduse põhjus' }), 'Parandus');
+    await user.click(screen.getByRole('button', { name: 'Määra võistkonna Alpha punktid' }));
 
-    expect(screen.getByRole('button', { name: 'Set Beta score' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Määra võistkonna Beta punktid' })).toBeDisabled();
     expect(desktopApi.dispatch).toHaveBeenCalledTimes(1);
     await act(async () => { pending.reject(new Error('SECRET_DISK_DETAIL')); });
     expect(screen.getByRole('alert')).toHaveTextContent('Seda toimingut ei saanud');

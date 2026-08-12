@@ -1,4 +1,5 @@
 import type { PublicGameView } from '../../../shared/game/types';
+import { createTranslator, formatNumber } from '../../i18n';
 
 interface PublicBoardProps {
   view: PublicGameView;
@@ -8,7 +9,8 @@ interface PublicBoardProps {
 export function PublicBoard({ view, onSelect }: PublicBoardProps) {
   const board = view.board;
   if (board === null) return null;
-  const label = board.round === 'round-one' ? 'Round One board' : 'Double Round board';
+  const t = createTranslator(view.language);
+  const label = t(board.round === 'round-one' ? 'game.roundOneBoard' : 'game.doubleRoundBoard');
   return <section className="public-board" role="grid" aria-label={label}>
     <div role="rowgroup" className="board-rowgroup">
       <div role="row" className="board-row board-header-row">
@@ -23,9 +25,9 @@ export function PublicBoard({ view, onSelect }: PublicBoardProps) {
             <button
               type="button"
               disabled={clue.selected || onSelect === undefined}
-              aria-label={`${category.name} for ${clue.value}`}
+              aria-label={t('game.tileLabel', { category: category.name, value: formatNumber(view.language, clue.value) })}
               onClick={() => onSelect?.(clue.id)}
-            >{clue.selected ? '—' : clue.value}</button>
+            >{clue.selected ? '—' : formatNumber(view.language, clue.value)}</button>
           </div>;
         })}
       </div>)}
