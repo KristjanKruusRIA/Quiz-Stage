@@ -6,9 +6,21 @@ import { ContentEditorService } from '../../../src/main/content/contentEditorSer
 import { ContentRepository } from '../../../src/main/content/contentRepository';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { exportPack, previewPackImport } from '../../../src/main/content/csvPacks';
-import { toWritableCategorySet, toWritableFinalClue } from '../../../src/shared/content/editor';
+import { toWritableCategorySet, toWritableFinalClue, type EditorSource } from '../../../src/shared/content/editor';
+import { sourceCitation } from '../../../src/shared/content/sourceCitation';
 
 const seedPath = resolve('resources/content/dev-seed.sqlite');
+const BASE_SOURCE: EditorSource = {
+  title: 'Structured seed source',
+  url: 'https://example.com/seed',
+  license: 'CC0',
+  retrievedAt: '2026-08-01',
+  translationStatus: 'reviewed',
+};
+
+function storedSource(source: EditorSource): string {
+  return JSON.stringify({ format: 'quiz-stage-csv-v1', ...source });
+}
 
 describe('content editor service', () => {
   const directories: string[] = [];
@@ -59,6 +71,145 @@ describe('content editor service', () => {
       },
     }) });
   }
+
+  function installStructuredBundledSources(database: DatabaseConnection): void {
+    database.prepare('UPDATE clues SET source = ?').run(storedSource(BASE_SOURCE));
+  }
+
+  const sourceChanges: { field: keyof EditorSource; value: string }[] = [
+    { field: 'title', value: 'Corrected source title' },
+    { field: 'url', value: 'https://example.com/corrected' },
+    { field: 'license', value: 'CC BY 4.0' },
+    { field: 'retrievedAt', value: '2026-08-12' },
+    { field: 'translationStatus', value: 'machine' },
+  ];
+
+  it.each(['board', 'final'].flatMap((kind) => sourceChanges.map((change) => ({ kind, ...change }))))(
+    'preserves the complete bundled $kind provenance when only $field changes',
+    ({ kind, field, value }) => {
+      const { database, repository, editor } = openEditor();
+      installStructuredBundledSources(database);
+      const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+      const initial = kind === 'board' ? bundled.categorySets[0] : bundled.finalClues[0];
+      const clueId = 'clues' in initial ? initial.clues[0].id : initial.clue.id;
+      repository.reportClue({ clueId, matchId: null, note: `Correct ${field}`, createdAt: 499 });
+
+      const reportedPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+      const draft = structuredClone(kind === 'board'
+        ? reportedPack.categorySets.find((category) => category.id === initial.id)!
+        : reportedPack.finalClues.find((final) => final.id === initial.id)!);
+      const clue = 'clues' in draft ? draft.clues[0] : draft.clue;
+      Object.assign(clue.source, { [field]: value });
+      const expectedSource = { ...BASE_SOURCE, [field]: value };
+      const savedClue = 'clues' in draft
+        ? editor.saveCategorySet({ expectedRevision: draft.revision, categorySet: toWritableCategorySet(draft) }).clues[0]
+        : editor.saveFinalClue({ expectedRevision: draft.revision, finalClue: toWritableFinalClue(draft) }).clue;
+
+      expect(savedClue.source).toEqual(expectedSource);
+      expect(repository.listReported().some((report) => report.clueId === clueId)).toBe(false);
+      const rawOverride = database.prepare('SELECT override_json FROM content_overrides WHERE clue_id = ?')
+        .pluck().get(clueId) as string;
+      const overrideSource = (JSON.parse(rawOverride) as { source: string }).source;
+      expect(JSON.parse(overrideSource)).toEqual({ format: 'quiz-stage-csv-v1', ...expectedSource });
+      expect(sourceCitation(overrideSource)).toBe(expectedSource.title);
+
+      database.prepare('UPDATE clues SET source = ? WHERE id = ?').run(storedSource({
+        title: 'Upgraded seed source',
+        url: 'https://example.com/upgraded',
+        license: 'ODC-BY-1.0',
+        retrievedAt: '2026-08-13',
+        translationStatus: 'untranslated',
+      }), clueId);
+      database.close();
+      const restartedDatabase = openDatabase({ filePath: database.name });
+      connections.push(restartedDatabase);
+      const restartedRepository = new ContentRepository(restartedDatabase, { now: () => 501 });
+      const restarted = new ContentEditorService(restartedDatabase, restartedRepository, { now: () => 501 });
+      const restartedPack = restarted.list().packs.find((pack) => pack.id === bundled.id)!;
+      const restartedClue = kind === 'board'
+        ? restartedPack.categorySets.find((category) => category.id === initial.id)!.clues[0]
+        : restartedPack.finalClues.find((final) => final.id === initial.id)!.clue;
+      expect(restartedClue.source).toEqual(expectedSource);
+      expect(sourceCitation(restartedRepository.getClue(clueId)!.source)).toBe(expectedSource.title);
+
+      const destination = join(dirname(database.name), `${kind}-${field}.csv`);
+      exportPack({ database: restartedDatabase, packId: bundled.id, destination });
+      const preview = previewPackImport({ database: restartedDatabase, text: readFileSync(destination, 'utf8') });
+      expect(preview.issues).toEqual([]);
+      expect(preview.records.find((record) => record.clueId === clueId)).toMatchObject({
+        sourceTitle: expectedSource.title,
+        sourceUrl: expectedSource.url,
+        sourceLicense: expectedSource.license,
+        sourceRetrievedAt: expectedSource.retrievedAt,
+        translationStatus: expectedSource.translationStatus,
+      });
+    },
+  );
+
+  it('keeps bundled reports and skips clue overrides when structured sources do not change', () => {
+    const { database, repository, editor } = openEditor();
+    installStructuredBundledSources(database);
+    const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+    const board = bundled.categorySets[0];
+    const final = bundled.finalClues[0];
+    repository.reportClue({ clueId: board.clues[0].id, matchId: null, note: 'Board report', createdAt: 10 });
+    repository.reportClue({ clueId: final.clue.id, matchId: null, note: 'Final report', createdAt: 11 });
+
+    const reportedPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+    const reportedBoard = reportedPack.categorySets.find((category) => category.id === board.id)!;
+    editor.saveCategorySet({ expectedRevision: reportedBoard.revision, categorySet: toWritableCategorySet(reportedBoard) });
+    const reportedFinal = editor.list().packs.find((pack) => pack.id === bundled.id)!.finalClues
+      .find((candidate) => candidate.id === final.id)!;
+    editor.saveFinalClue({ expectedRevision: reportedFinal.revision, finalClue: toWritableFinalClue(reportedFinal) });
+
+    expect(database.prepare('SELECT COUNT(*) FROM content_overrides WHERE clue_id IN (?, ?)').pluck()
+      .get(board.clues[0].id, final.clue.id)).toBe(0);
+    expect(repository.listReported().map((report) => report.clueId).sort())
+      .toEqual([board.clues[0].id, final.clue.id].sort());
+  });
+
+  it.each(['board', 'final'] as const)('rolls back a failed bundled %s source save without resolving its report', (kind) => {
+    const { database, repository, editor } = openEditor();
+    installStructuredBundledSources(database);
+    const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+    const initial = kind === 'board' ? bundled.categorySets[0] : bundled.finalClues[0];
+    const clueId = 'clues' in initial ? initial.clues[0].id : initial.clue.id;
+    repository.reportClue({ clueId, matchId: null, note: 'Must survive rollback', createdAt: 10 });
+    const reportedPack = editor.list().packs.find((pack) => pack.id === bundled.id)!;
+    const draft = structuredClone(kind === 'board'
+      ? reportedPack.categorySets.find((category) => category.id === initial.id)!
+      : reportedPack.finalClues.find((final) => final.id === initial.id)!);
+    ('clues' in draft ? draft.clues[0] : draft.clue).source.url = 'https://example.com/rollback';
+    database.exec(`CREATE TRIGGER reject_source_override BEFORE INSERT ON content_overrides
+      BEGIN SELECT RAISE(ABORT, 'forced source override failure'); END`);
+
+    expect(() => {
+      if ('clues' in draft) {
+        editor.saveCategorySet({ expectedRevision: draft.revision, categorySet: toWritableCategorySet(draft) });
+      } else {
+        editor.saveFinalClue({ expectedRevision: draft.revision, finalClue: toWritableFinalClue(draft) });
+      }
+    }).toThrow('forced source override failure');
+    expect(database.prepare('SELECT COUNT(*) FROM content_overrides WHERE clue_id = ?').pluck().get(clueId)).toBe(0);
+    expect(repository.listReported()).toEqual([expect.objectContaining({ clueId, note: 'Must survive rollback' })]);
+  });
+
+  it('keeps a legacy bundled source as plain text when only its title is corrected', () => {
+    const { database, repository, editor } = openEditor();
+    const bundled = editor.list().packs.find((pack) => pack.ownership === 'bundled')!;
+    const draft = structuredClone(bundled.categorySets[0]);
+    expect(draft.clues[0].source).toMatchObject({ url: null, license: null, retrievedAt: null, translationStatus: null });
+    draft.clues[0].source.title = 'Corrected legacy title';
+
+    const saved = editor.saveCategorySet({ expectedRevision: draft.revision, categorySet: toWritableCategorySet(draft) });
+
+    expect(saved.clues[0].source).toEqual({
+      title: 'Corrected legacy title', url: null, license: null, retrievedAt: null, translationStatus: null,
+    });
+    expect(repository.getClue(draft.clues[0].id)!.source).toBe('Corrected legacy title');
+    expect(database.prepare('SELECT override_json FROM content_overrides WHERE clue_id = ?').pluck().get(draft.clues[0].id))
+      .toContain('Corrected legacy title');
+  });
 
   it('routes bundled corrections through overrides and rejects stale saves', () => {
     const { database, repository, editor } = openEditor();

@@ -11,11 +11,11 @@ import { stringify } from 'csv-stringify/sync';
 import { contentIdSchema } from '../../shared/content/schema';
 import { CSV_COLUMNS, type CsvColumn } from '../../shared/content/csvColumns';
 import { isHttpSourceUrl } from '../../shared/content/sourceUrl';
+import { parseStoredSource, serializeStoredSource, type StoredSource } from '../../shared/content/sourceCitation';
 
 const BOARD_ROUNDS = ['round-one', 'round-two'] as const;
 const DIFFICULTIES = ['easy', 'medium', 'hard'] as const;
 const TRANSLATION_STATUSES = ['untranslated', 'machine', 'reviewed'] as const;
-const CSV_SOURCE_FORMAT = 'quiz-stage-csv-v1';
 
 // These bounds comfortably exceed the bundled library while keeping synchronous main-process work finite.
 export const CSV_PACK_LIMITS = {
@@ -226,15 +226,6 @@ export class CsvPackWorkflow {
   exportToFile(packId: string, destination: string) {
     return exportPack({ database: this.database, packId, destination });
   }
-}
-
-interface StoredCsvSource {
-  format: typeof CSV_SOURCE_FORMAT;
-  title: string;
-  url: string;
-  license: string;
-  retrievedAt: string;
-  translationStatus: TranslationStatus;
 }
 
 interface ExportRow {
@@ -937,15 +928,14 @@ function localizedVariantsJson(en: readonly string[], et: readonly string[]): st
 }
 
 function storedSource(record: CsvPackRecord): string {
-  const source: StoredCsvSource = {
-    format: CSV_SOURCE_FORMAT,
+  return serializeStoredSource({
+    format: 'quiz-stage-csv-v1',
     title: record.sourceTitle,
     url: record.sourceUrl,
     license: record.sourceLicense,
     retrievedAt: record.sourceRetrievedAt,
     translationStatus: record.translationStatus,
-  };
-  return JSON.stringify(source);
+  });
 }
 
 function loadExportRecords(database: DatabaseConnection, packId: string): CsvPackRecord[] {
@@ -1000,9 +990,11 @@ function exportRowToRecord(row: ExportRow): CsvPackRecord {
     ? undefined
     : decodeStoredAcceptedResponses(override.acceptedResponses, row.clue_id, 'override');
   const accepted = overrideAccepted ?? baseAccepted;
-  const baseSource = parseStoredSource(row.source, prompt.et === undefined ? 'untranslated' : 'reviewed');
+  const baseSource = exportSource(row.source, prompt.et === undefined ? 'untranslated' : 'reviewed');
   const overrideSource = typeof override?.source === 'string' ? override.source : undefined;
-  const source = overrideSource === undefined ? baseSource : { ...baseSource, title: overrideSource };
+  const source = overrideSource === undefined
+    ? baseSource
+    : parseStoredSource(overrideSource) ?? { ...baseSource, title: overrideSource };
   const finalCategory = override?.categoryName as { en: string; et?: string } | undefined;
   return {
     clueId: row.clue_id,
@@ -1065,25 +1057,14 @@ function parseLocalized(value: string): { en: string; et?: string } {
   return JSON.parse(value) as { en: string; et?: string };
 }
 
-function parseStoredSource(
+function exportSource(
   value: string,
   fallbackStatus: TranslationStatus,
-): StoredCsvSource {
-  try {
-    const parsed = JSON.parse(value) as Partial<StoredCsvSource>;
-    if (parsed.format === CSV_SOURCE_FORMAT
-      && typeof parsed.title === 'string'
-      && typeof parsed.url === 'string'
-      && typeof parsed.license === 'string'
-      && typeof parsed.retrievedAt === 'string'
-      && TRANSLATION_STATUSES.includes(parsed.translationStatus as TranslationStatus)) {
-      return parsed as StoredCsvSource;
-    }
-  } catch {
-    // Legacy bundled source strings predate CSV metadata.
-  }
+): StoredSource {
+  const parsed = parseStoredSource(value);
+  if (parsed !== null) return parsed;
   return {
-    format: CSV_SOURCE_FORMAT,
+    format: 'quiz-stage-csv-v1',
     title: value,
     url: '',
     license: '',

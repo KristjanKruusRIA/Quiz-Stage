@@ -23,6 +23,7 @@ import {
 import { contentOverrideSchema, localizedTextSchema } from '../../shared/content/schema';
 import type { ContentRepository } from './contentRepository';
 import { isLocalizedClueComplete } from '../../shared/content/localizedCompleteness';
+import { parseStoredSource, serializeStoredSource } from '../../shared/content/sourceCitation';
 
 interface PackRow { id: string; name: string; version: string; source: string; enabled: number }
 interface CategoryRow {
@@ -36,11 +37,6 @@ interface ClueRow {
   accepted_responses_json: string | null; source: string; enabled: number; override_json: string | null;
   reported: number;
   report_id: number | null; report_created_at: number | null;
-}
-
-interface StoredSource {
-  format: 'quiz-stage-csv-v1'; title: string; url: string; license: string;
-  retrievedAt: string; translationStatus: 'untranslated' | 'machine' | 'reviewed';
 }
 
 const isCustom = (source: string) => source === 'custom-csv' || source === 'custom-editor';
@@ -62,34 +58,34 @@ function parseLocalized(value: string) {
 }
 
 function parseSource(value: string, overrideTitle?: string): EditorSource {
-  try {
-    const parsed = JSON.parse(value) as Partial<StoredSource>;
-    if (parsed.format === 'quiz-stage-csv-v1'
-      && typeof parsed.title === 'string' && typeof parsed.url === 'string'
-      && typeof parsed.license === 'string' && typeof parsed.retrievedAt === 'string'
-      && (parsed.translationStatus === 'untranslated' || parsed.translationStatus === 'machine'
-        || parsed.translationStatus === 'reviewed')) {
-      return {
-        title: overrideTitle ?? parsed.title,
-        url: parsed.url,
-        license: parsed.license,
-        retrievedAt: parsed.retrievedAt,
-        translationStatus: parsed.translationStatus,
-      };
-    }
-  } catch {
-    // Legacy bundled sources are plain authoring titles.
+  if (overrideTitle !== undefined) {
+    const override = parseStoredSource(overrideTitle);
+    if (override !== null) return {
+      title: override.title, url: override.url, license: override.license,
+      retrievedAt: override.retrievedAt, translationStatus: override.translationStatus,
+    };
   }
+  const parsed = parseStoredSource(value);
+  if (parsed !== null) return {
+    title: overrideTitle ?? parsed.title, url: parsed.url, license: parsed.license,
+    retrievedAt: parsed.retrievedAt, translationStatus: parsed.translationStatus,
+  };
   return { title: overrideTitle ?? value, url: null, license: null, retrievedAt: null, translationStatus: null };
 }
 
 function storeSource(source: EditorSource): string {
   if (source.url === null || source.license === null || source.retrievedAt === null
     || source.translationStatus === null) throw new Error('Custom clues require complete source metadata');
-  return JSON.stringify({
+  return serializeStoredSource({
     format: 'quiz-stage-csv-v1', title: source.title, url: source.url, license: source.license,
     retrievedAt: source.retrievedAt, translationStatus: source.translationStatus,
-  } satisfies StoredSource);
+  });
+}
+
+function storeBundledSource(source: EditorSource): string {
+  if (source.url === null && source.license === null && source.retrievedAt === null
+    && source.translationStatus === null) return source.title;
+  return storeSource(source);
 }
 
 function languageEligible(name: { en: string; et?: string }, clues: readonly EditorClue[]) {
@@ -250,13 +246,13 @@ export class ContentEditorService {
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
-            source: clue.source.title, enabled: clue.enabled,
+            source: storeBundledSource(clue.source), enabled: clue.enabled,
           });
           this.repository.saveOverride({
             id: clue.id, categoryId: draft.id, round: draft.round, tier: clue.tier, value: clue.value,
             prompt: clue.prompt, response: clue.response, explanation: clue.explanation,
             ...(clue.acceptedResponses === undefined ? {} : { acceptedResponses: clue.acceptedResponses }),
-            source: clue.source.title, enabled: clue.enabled,
+            source: storeBundledSource(clue.source), enabled: clue.enabled,
           });
           if (oldClue.reported) this.repository.resolveReport(clue.id, this.now());
         }
@@ -328,7 +324,7 @@ export class ContentEditorService {
             categoryName: draft.categoryName, difficulty: draft.difficulty, round: 'final', tier: 0, value: 0,
             prompt: draft.clue.prompt, response: draft.clue.response, explanation: draft.clue.explanation,
             ...(draft.clue.acceptedResponses === undefined ? {} : { acceptedResponses: draft.clue.acceptedResponses }),
-            source: draft.clue.source.title, enabled: draft.clue.enabled,
+            source: storeBundledSource(draft.clue.source), enabled: draft.clue.enabled,
           });
           if (current.clue.reported) this.repository.resolveReport(draft.clue.id, this.now());
         }

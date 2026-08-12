@@ -285,3 +285,57 @@ Final round-four artifacts:
 - Packaged executable: 225,442,304 bytes, SHA-256 `C07B049205E3524315C19C982F78BD975BBC9E6D14EA55F00A56C942CC657CEF`.
 - Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
 - The ZIP contains the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the `better-sqlite3` win32-x64 prebuild.
+
+## Bundled structured-provenance fix round (2026-08-12)
+
+The fifth review round preserves every source field when the editor corrects bundled board or Final content:
+
+- The loss occurred after strict DTO parsing and change detection: the bundled save path wrote only `source.title` into the field-complete Task 12 clue override. URL, license, retrieval date, and translation status consequently fell back to the bundled row and changed again after a seed upgrade.
+- The existing strict `quiz-stage-csv-v1` source schema is now one shared codec used by editor reads/writes, CSV persistence/projection, and the canonical gameplay citation boundary. New complete bundled provenance edits store the full structured value once; merged reads decode that exact override, CSV export prefers it, and gameplay still exposes only its safe title.
+- Existing plain bundled sources and older plain-title overrides remain compatible. A plain title over a structured base retains the base provenance fallback, while a legacy source with no metadata remains plain text rather than being fabricated or double encoded.
+- Board and Final regression matrices independently change only title, URL, license, retrieval date, or translation status. Every case proves the exact complete override, immediate readback, restart and simulated seed-upgrade precedence, CSV export/re-preview, safe citation, and report resolution.
+- Unchanged structured-source saves create no clue override and preserve reports. Injected board and Final override failures roll back the category write, leave no clue override, and preserve the unresolved report. The existing HTTP(S)-only editor and CSV validation remains authoritative.
+
+Round-five RED:
+
+```text
+npm run test:run -- tests/integration/content/contentEditor.test.ts
+Test Files 1 failed (1)
+Tests 10 failed, 18 passed (28)
+```
+
+The ten intended failures showed bundled board and Final URL/license/retrieval/status edits immediately reading back the base values, while title-only edits persisted a plain string instead of the full structured source.
+
+Round-five verification:
+
+```text
+Focused editor/overrides/CSV/source-projection/IPC/preload/renderer suite
+Test Files 9 passed (9)
+Tests 116 passed (116)
+
+npm run test:run
+Test Files 50 passed (50)
+Tests 371 passed (371)
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npx playwright test tests/e2e/content-editor.spec.ts tests/e2e/core-match.spec.ts tests/e2e/resume-match.spec.ts --workers=1
+3 passed (1.7m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+Final round-five artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,754,357 bytes, SHA-256 `446B24BE278C650E960983F33EDE7F9F33E6A72657041FAC00E8DE2D8C5C24B4`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `7722FE89090D1CE0E894362279C20C932E48B909E575FB24ADFFC8FD84C45BCF`.
+- Packaged seed: 196,608 bytes, SHA-256 `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite `integrity_check=ok`; 1 pack, 39 categories, 183 clues.
+- The ZIP contains the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the `better-sqlite3` win32-x64 prebuild.
