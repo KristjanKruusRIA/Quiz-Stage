@@ -1,17 +1,10 @@
 import { _electron as electron, expect, test } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync } from 'node:fs';
+import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { prepareE2eApplication } from './productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], {
-    cwd: process.cwd(), stdio: 'inherit',
-  });
-  const fixtureResource = path.join(process.cwd(), '.vite', 'build', 'resources', 'content');
-  mkdirSync(fixtureResource, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(fixtureResource, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner offline', async () => {
   const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-e2e-'));

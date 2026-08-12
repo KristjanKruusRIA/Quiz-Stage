@@ -1,16 +1,9 @@
 import { _electron as electron, expect, test, type ElectronApplication } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
-import { copyFileSync, existsSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import path from 'node:path';
+import { prepareE2eApplication } from './productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], {
-    cwd: process.cwd(), stdio: 'inherit',
-  });
-  const fixtureResource = path.join(process.cwd(), '.vite', 'build', 'resources', 'content');
-  mkdirSync(fixtureResource, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(fixtureResource, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 test('creates, exports, deletes, imports, reports, corrects, and re-enables bilingual content', async () => {
   const root = path.join(process.cwd(), 'test-results', 'content-editor');

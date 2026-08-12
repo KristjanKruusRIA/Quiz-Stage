@@ -15,6 +15,7 @@ import { MediaService } from './media/mediaService';
 import { bundledMediaDirectory, mediaOverrideDirectory } from './media/mediaPaths';
 import { registerMediaProtocol } from './media/mediaProtocol';
 import type { MediaStatusEvent } from '../shared/media/contracts';
+import { registerOfflineRendererPolicy } from './offlineRenderer';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -23,6 +24,7 @@ let application: ReturnType<typeof createApplication> | null = null;
 let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
 let disposeMediaProtocol: (() => void) | null = null;
+let disposeOfflineRendererPolicy: (() => void) | null = null;
 let mediaService: MediaService | null = null;
 const e2eExternalRequests: string[] = [];
 const displayListeners = new Map<(display: DisplaySnapshot) => void, (_event: Electron.Event, display: Electron.Display) => void>();
@@ -38,15 +40,6 @@ function installE2eNetworkGuard(): void {
     isPackaged: app.isPackaged,
   })) return;
   Object.assign(globalThis, { __quizStageExternalRequests: e2eExternalRequests });
-  session.defaultSession.webRequest.onBeforeRequest(
-    { urls: ['http://*/*', 'https://*/*'] },
-    (details, callback) => {
-      const url = new URL(details.url);
-      const external = !['127.0.0.1', 'localhost'].includes(url.hostname);
-      if (external) e2eExternalRequests.push(url.href);
-      callback({ cancel: external });
-    },
-  );
 }
 
 async function createWindows(): Promise<void> {
@@ -122,6 +115,16 @@ async function createWindows(): Promise<void> {
 }
 
 async function initialize(): Promise<void> {
+  const rendererRoot = path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}`);
+  disposeOfflineRendererPolicy = registerOfflineRendererPolicy(session.defaultSession, {
+    isPackaged: app.isPackaged,
+    rendererRoot,
+    ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
+    ...(shouldInstallE2eNetworkGuard({
+      requested: process.argv.includes('--quiz-stage-e2e-network-guard'),
+      isPackaged: app.isPackaged,
+    }) ? { onBlockedRequest: (url: string) => e2eExternalRequests.push(url) } : {}),
+  });
   const userDataDirectory = app.getPath('userData');
   const databasePath = path.join(userDataDirectory, 'quiz-stage.sqlite');
   const databaseEntry = lstatSync(databasePath, { throwIfNoEntry: false });
@@ -176,6 +179,8 @@ if (squirrelStartup) {
     disposeIpc = null;
     disposeMediaProtocol?.();
     disposeMediaProtocol = null;
+    disposeOfflineRendererPolicy?.();
+    disposeOfflineRendererPolicy = null;
     mediaService = null;
     windowManager?.dispose();
     windowManager = null;

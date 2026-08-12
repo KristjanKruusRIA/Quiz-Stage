@@ -1,15 +1,10 @@
 import { _electron as electron, expect, test, type ElectronApplication, type Page } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync } from 'node:fs';
+import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { prepareE2eApplication } from '../e2e/productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], { cwd: process.cwd(), stdio: 'inherit' });
-  const target = path.join(process.cwd(), '.vite', 'build', 'resources', 'content');
-  mkdirSync(target, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(target, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 async function launch(teamCount: 2 | 8, longEstonianNames = false): Promise<{ app: ElectronApplication; page: Page }> {
   const userData = mkdtempSync(path.join(tmpdir(), `quiz-stage-visual-${teamCount}-`));
@@ -91,6 +86,12 @@ test('eight maximum-length Estonian names and signed scores fit board and clue p
   }
 
   await page.getByRole('button', { name: / punkti$/ }).first().press('Space');
+  const wager = page.getByRole('spinbutton', { name: 'Duubli panus' });
+  await expect.poll(async () => await wager.isVisible() || await page.locator('.public-clue').isVisible()).toBe(true);
+  if (await wager.isVisible()) {
+    await wager.fill('5');
+    await page.getByRole('button', { name: 'Kinnita panus' }).click();
+  }
   await expect(page.locator('.public-clue')).toBeVisible();
   for (const size of [{ width: 1280, height: 720 }, { width: 3840, height: 2160 }]) {
     await page.setViewportSize(size);

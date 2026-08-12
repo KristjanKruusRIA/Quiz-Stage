@@ -1,18 +1,10 @@
 import { _electron as electron, expect, test } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
-import { copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { prepareE2eApplication } from './productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], {
-    cwd: process.cwd(), stdio: 'inherit', env: { ...process.env, NODE_ENV: 'production' },
-  });
-  cpSync(path.join(process.cwd(), 'resources', 'media'), path.join(process.cwd(), '.vite', 'build', 'resources', 'media'), { recursive: true });
-  const content = path.join(process.cwd(), '.vite', 'build', 'resources', 'content');
-  mkdirSync(content, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(content, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 test('persists audio settings and serves bundled fallback through the pathless protocol', async () => {
   const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-audio-e2e-'));

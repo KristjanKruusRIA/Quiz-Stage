@@ -9,6 +9,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest --configLoader runner",
     "test:run": "vitest run --configLoader runner",
+    "test:product-e2e": "tsx scripts/verify-product-e2e.ts",
+    "verify:product": "npm run lint && npm run typecheck && npm run test:run && npm run build && npm run test:product-e2e",
     "content:build-dev-seed": "tsx scripts/content/build-dev-seed.ts",
     "media:generate": "tsx scripts/generate-placeholder-audio.ts",
     "build": "electron-forge package",

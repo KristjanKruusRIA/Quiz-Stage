@@ -1,18 +1,12 @@
 import { _electron as electron, expect, test, type ElectronApplication, type Page } from '@playwright/test';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { openDatabase } from '../../src/main/persistence/database';
 import { gameStateSchema } from '../../src/shared/ipc/contracts';
+import { prepareE2eApplication } from './productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], {
-    cwd: process.cwd(), stdio: 'inherit',
-  });
-  const fixtureResource = path.join(process.cwd(), '.vite', 'build', 'resources', 'content');
-  mkdirSync(fixtureResource, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(fixtureResource, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 function launch(userData: string) {
   return electron.launch({

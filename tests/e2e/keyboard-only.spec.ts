@@ -1,14 +1,10 @@
 import { _electron as electron, expect, test, type Page } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync } from 'node:fs';
+import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { prepareE2eApplication } from './productHarness';
 
-test.beforeAll(() => {
-  execFileSync(process.execPath, ['node_modules/@electron-forge/cli/dist/electron-forge.js', 'package', '--platform=win32', '--arch=x64'], { cwd: process.cwd(), stdio: 'inherit' });
-  const target = path.join(process.cwd(), '.vite', 'build', 'resources', 'content'); mkdirSync(target, { recursive: true });
-  copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(target, 'dev-seed.sqlite'));
-});
+test.beforeAll(prepareE2eApplication);
 
 async function tabTo(page: Page, role: string, name: RegExp | string) {
   for (let attempt = 0; attempt < 250; attempt += 1) {
@@ -69,7 +65,10 @@ test('plays a complete match with keyboard input and visible focus only', async 
       nativeButtonFlowCovered = true;
       continue;
     }
-    await page.keyboard.press('1');
+    const lockButtons = page.getByRole('region', { name: 'Team controls' }).getByRole('button');
+    const lockIndex = await lockButtons.evaluateAll((buttons) => buttons.findIndex((button) => !(button as HTMLButtonElement).disabled));
+    expect(lockIndex).toBeGreaterThanOrEqual(0);
+    await page.keyboard.press(String(lockIndex + 1));
     await expect(page.getByRole('button', { name: 'Correct', exact: true })).toBeEnabled();
     await page.keyboard.press('c');
     await expect(page.locator('.public-response p')).toHaveCount(3);
