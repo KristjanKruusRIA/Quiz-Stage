@@ -36,6 +36,42 @@ function deferred<T>() {
 }
 
 describe('SetupScreen', () => {
+  it('localizes only untouched generated team names across language changes and additions', async () => {
+    const desktopApi = api();
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} onBack={vi.fn()} />);
+    await screen.findByRole('checkbox', { name: 'Pack One' });
+    await waitFor(() => expect(desktopApi.checkContentAvailability).toHaveBeenCalled());
+    const initialIdentity = vi.mocked(desktopApi.checkContentAvailability).mock.calls.at(-1)![0].teams
+      .map(({ id, color }) => ({ id, color }));
+
+    const first = screen.getByRole('textbox', { name: 'Team 1 name' });
+    await user.clear(first);
+    await user.type(first, 'Team 01 custom');
+    await user.click(screen.getByRole('radio', { name: 'Estonian' }));
+
+    expect(screen.getByRole('textbox', { name: 'Võistkonna 1 nimi' })).toHaveValue('Team 01 custom');
+    expect(screen.getByRole('textbox', { name: 'Võistkonna 2 nimi' })).toHaveValue('Võistkond 2');
+    await waitFor(() => expect(vi.mocked(desktopApi.checkContentAvailability).mock.calls.at(-1)![0].language).toBe('et'));
+    expect(vi.mocked(desktopApi.checkContentAvailability).mock.calls.at(-1)![0].teams
+      .map(({ id, color }) => ({ id, color }))).toEqual(initialIdentity);
+    await user.click(screen.getByRole('button', { name: 'Lisa võistkond' }));
+    expect(screen.getByRole('textbox', { name: 'Võistkonna 3 nimi' })).toHaveValue('Võistkond 3');
+
+    await user.click(screen.getByRole('radio', { name: 'Inglise' }));
+    expect(screen.getByRole('textbox', { name: 'Team 1 name' })).toHaveValue('Team 01 custom');
+    expect(screen.getByRole('textbox', { name: 'Team 2 name' })).toHaveValue('Team 2');
+    expect(screen.getByRole('textbox', { name: 'Team 3 name' })).toHaveValue('Team 3');
+  });
+
+  it('uses the active locale for initial names when setup is reopened', async () => {
+    const { unmount } = render(<SetupScreen api={api()} initialLanguage="et" onBack={vi.fn()} />);
+    expect(await screen.findByRole('textbox', { name: 'Võistkonna 1 nimi' })).toHaveValue('Võistkond 1');
+    unmount();
+    render(<SetupScreen api={api()} initialLanguage="en" onBack={vi.fn()} />);
+    expect(await screen.findByRole('textbox', { name: 'Team 1 name' })).toHaveValue('Team 1');
+  });
+
   it('adds and removes teams only within the 2 to 8 team boundary', async () => {
     const user = userEvent.setup();
     render(<SetupScreen api={api()} onBack={vi.fn()} />);
@@ -88,6 +124,15 @@ describe('SetupScreen', () => {
     await user.type(firstName, 'ALPHA');
     await user.clear(secondName);
     await user.type(secondName, ' alpha ');
+    expect(start).toBeDisabled();
+    expect(screen.getByText('Team names must be unique.')).toBeInTheDocument();
+
+    await user.clear(secondName);
+    await user.type(secondName, 'Beta');
+    await user.clear(firstName);
+    await user.type(firstName, 'ÕUN');
+    await user.clear(secondName);
+    await user.type(secondName, 'O\u0303un');
     expect(start).toBeDisabled();
     expect(screen.getByText('Team names must be unique.')).toBeInTheDocument();
 

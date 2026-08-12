@@ -109,3 +109,74 @@ remains at existing boundaries, and no new third-party runtime dependency was ad
   `integrity_check=ok`; schema 2; 1 pack, 39 category sets, 183 clues.
 - ZIP inspection confirms the executable, `resources/app.asar`, `resources/dev-seed.sqlite`, and the
   `better-sqlite3` win32-x64 native prebuild.
+
+## Fix round 1: setup defaults, import diagnostics, and document language
+
+The first review fix round closes three localization details:
+
+- CSV columns and every validator/parser/file diagnostic now derive from shared literal catalogs. The main validator
+  can emit only a known typed code; the renderer has compile-time-exhaustive code and column maps. English and
+  Estonian messages are actionable and retain safe row context, but never render the raw validator message, code, or
+  developer column identifier. Unknown or hostile code/column values use generic localized text and `unknown field`
+  without interpolating any untrusted value. Parser failures for file/record/row/field limits, BOM, header, row shape,
+  and UTF-8 become the same safe structured preview issues instead of raw exceptions.
+- Initial and newly added team names use localized `team.defaultName`. The language-change event atomically renames
+  only still-owned generated defaults recognized in either locale. User edits, including similar names such as
+  `Team 01 custom`, opt that team out permanently; IDs and colors do not change. Back/reopen preserves the selected
+  locale. Renderer and strict IPC validation share NFKC plus explicit `en-US` case normalization, so canonically
+  equivalent duplicate names are rejected deterministically.
+- The English HTML default remains in `index.html` for pre-hydration. Each `I18nProvider` synchronizes the external
+  document language with an owner token and restores the preceding owner/original language on cleanup, preventing an
+  older provider unmount from overwriting a current provider. Host setup, resumed/live matches, and public windows
+  therefore expose their active locale to assistive technology.
+
+Fix-round RED:
+
+```text
+Focused renderer/contracts run: 4 files failed; 7 intended failures, 29 existing tests passed
+Parser/file structured-code run: 2 files failed; 9 intended failures, 49 existing tests passed
+```
+
+The failures reproduced generic/raw import diagnostics, Unicode-equivalent names passing validation, English defaults
+surviving Estonian switch/reopen, and `<html lang>` remaining English with unsafe multi-provider cleanup semantics.
+
+Fix-round verification:
+
+```text
+Focused i18n/setup/import/privacy/IPC suite
+Test Files 10 passed (10)
+Tests 116 passed (116)
+
+npm run test:run
+Test Files 52 passed (52)
+Tests 400 passed (400)
+
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npx playwright test --workers=1
+4 passed (2.0m)
+
+npm run build
+Electron Forge package win32/x64; exit 0
+
+npm run make:portable
+ZIP maker win32/x64; exit 0
+```
+
+The Estonian Electron flow now verifies `lang="en"` before the setup switch and `lang="et"` on both the host and
+public documents after starting the dual-window match, in addition to the existing host-original/public-privacy
+assertions.
+
+Fix-round artifacts:
+
+- Portable ZIP: `quiz-stage-desktop-game-win32-x64-0.1.0.zip`, 155,765,625 bytes, SHA-256
+  `85B87E33C7AD1483F9880A288E907831D2B2082AB36929F851A11B6FE493131B`.
+- Packaged executable: 225,442,304 bytes, SHA-256
+  `094EB80E6C08ED9B8FECAD6105E692F1AE370E1A57DA70603657E1189DEA418F`.
+- Packaged seed remains 196,608 bytes with SHA-256
+  `C09CF55C4813771E70D6EC1A3A2E2CBB3E834383A4A313222314DF889AAA815C`; SQLite
+  `integrity_check=ok`; schema 2; 1 pack, 39 category sets, 183 clues.

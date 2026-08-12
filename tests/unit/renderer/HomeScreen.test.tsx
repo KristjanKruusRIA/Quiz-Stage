@@ -58,6 +58,17 @@ describe('HomeScreen', () => {
     expect(screen.queryByRole('button', { name: 'New Match' })).not.toBeInTheDocument();
   });
 
+  it('preserves Estonian setup and generated names after Back and reopen', async () => {
+    render(<App api={hostApi()} />);
+    await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
+    await userEvent.click(await screen.findByRole('radio', { name: 'Estonian' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Tagasi' }));
+    expect(screen.getByRole('heading', { name: 'Avaleht' })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Uus mäng' }));
+    expect(await screen.findByRole('textbox', { name: 'Võistkonna 1 nimi' })).toHaveValue('Võistkond 1');
+    expect(document.documentElement.lang).toBe('et');
+  });
+
   it('does not show Home when the authoritative host subscription has an active match', async () => {
     const api = hostApi();
     const unsubscribe = vi.fn();

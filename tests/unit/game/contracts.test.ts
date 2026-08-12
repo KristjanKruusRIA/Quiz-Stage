@@ -11,6 +11,18 @@ describe('IPC contracts', () => {
     expect(result.success).toBe(true);
   });
 
+  it('rejects Unicode-equivalent duplicate team names deterministically', () => {
+    const result = gameConfigSchema.safeParse({
+      language: 'et', difficulty: 'medium', clueSeconds: 15,
+      teams: [
+        { id: 't1', name: 'ÕUN', color: '#E3B341' },
+        { id: 't2', name: 'O\u0303un', color: '#50A7F5' },
+      ],
+      packIds: ['bundled'], displayMode: 'single',
+    });
+    expect(result.success).toBe(false);
+  });
+
   it('rejects an extra renderer-supplied score delta on a valid command', () => {
     expect(gameCommandSchema.safeParse({ type: 'SelectClue', clueId: 'c1', delta: 99999 }).success).toBe(false);
   });

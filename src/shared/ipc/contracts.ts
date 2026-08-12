@@ -8,6 +8,7 @@ import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
 import type { DisplayMode, GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
+import { normalizeTeamName } from '../game/teamNames';
 
 const identifierSchema = z.string().trim().min(1);
 const timestampSchema = z.number().int().nonnegative();
@@ -34,7 +35,7 @@ export const gameConfigSchema = z.strictObject({
   if (!unique(config.teams.map((team) => team.id))) {
     context.addIssue({ code: 'custom', message: 'Team IDs must be unique', path: ['teams'] });
   }
-  if (!unique(config.teams.map((team) => team.name.toLocaleLowerCase()))) {
+  if (!unique(config.teams.map((team) => normalizeTeamName(team.name)))) {
     context.addIssue({ code: 'custom', message: 'Team names must be unique', path: ['teams'] });
   }
   if (!unique(config.teams.map((team) => team.color.toLowerCase()))) {

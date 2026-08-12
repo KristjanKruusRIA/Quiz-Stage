@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useRef, type ReactNode } from 'react';
 import type { Language } from '../../shared/game/types';
 import { en, type TranslationKey } from './en';
 import { et } from './et';
@@ -66,11 +66,39 @@ const defaultValue: I18nValue = {
 
 const I18nContext = createContext<I18nValue>(defaultValue);
 
+interface DocumentLocaleOwner { token: symbol; locale: Language }
+const documentLocaleOwners = new WeakMap<Document, DocumentLocaleOwner[]>();
+const documentOriginalLanguages = new WeakMap<Document, string>();
+
 export function I18nProvider({ locale, children }: { locale: Language; children: ReactNode }) {
+  const owner = useRef(Symbol('i18n-provider'));
   const value = useMemo<I18nValue>(() => ({
     locale,
     t: createTranslator(locale),
   }), [locale]);
+  useEffect(() => {
+    const documentObject = document;
+    const owners = documentLocaleOwners.get(documentObject) ?? [];
+    if (owners.length === 0) {
+      documentOriginalLanguages.set(documentObject, documentObject.documentElement.lang || 'en');
+    }
+    const entry = { token: owner.current, locale };
+    owners.push(entry);
+    documentLocaleOwners.set(documentObject, owners);
+    documentObject.documentElement.lang = locale;
+    return () => {
+      const current = documentLocaleOwners.get(documentObject) ?? [];
+      const remaining = current.filter((candidate) => candidate.token !== entry.token);
+      if (remaining.length > 0) {
+        documentLocaleOwners.set(documentObject, remaining);
+        documentObject.documentElement.lang = remaining.at(-1)!.locale;
+      } else {
+        documentObject.documentElement.lang = documentOriginalLanguages.get(documentObject) ?? 'en';
+        documentLocaleOwners.delete(documentObject);
+        documentOriginalLanguages.delete(documentObject);
+      }
+    };
+  }, [locale]);
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 

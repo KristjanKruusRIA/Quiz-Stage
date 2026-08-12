@@ -23,8 +23,10 @@ test('runs an Estonian dual-screen clue with a host-only English comparison', as
       args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`, '--quiz-stage-e2e-clock', '--quiz-stage-e2e-network-guard'],
     });
     const host = await application.firstWindow();
+    await expect(host.locator('html')).toHaveAttribute('lang', 'en');
     await host.getByRole('button', { name: 'New Match' }).click();
     await host.getByRole('radio', { name: 'Estonian' }).check();
+    await expect(host.locator('html')).toHaveAttribute('lang', 'et');
     await host.getByRole('radio', { name: 'Kaks ekraani' }).check();
     await expect(host.getByRole('button', { name: 'Alusta mängu' })).toBeEnabled();
     await host.getByRole('button', { name: 'Alusta mängu' }).click();
@@ -33,6 +35,8 @@ test('runs an Estonian dual-screen clue with a host-only English comparison', as
     const publicWindow = application.windows().find((window) => window !== host)!;
     await expect(host.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
     await expect(publicWindow.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
+    await expect(host.locator('html')).toHaveAttribute('lang', 'et');
+    await expect(publicWindow.locator('html')).toHaveAttribute('lang', 'et');
 
     await host.locator('.public-board button:not([disabled])').first().click();
     const wager = host.getByRole('spinbutton', { name: 'Duubli panus' });

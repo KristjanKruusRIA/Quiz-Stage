@@ -76,6 +76,27 @@ describe('English and Estonian interface localization', () => {
     expect(document.querySelector('img')).toBeNull();
   });
 
+  it('owns and restores the document language across switches and unmounts', () => {
+    document.documentElement.lang = 'en';
+    const rendered = render(withLocale('et', <p>ET</p>));
+    expect(document.documentElement.lang).toBe('et');
+    rendered.rerender(withLocale('en', <p>EN</p>));
+    expect(document.documentElement.lang).toBe('en');
+    rendered.unmount();
+    expect(document.documentElement.lang).toBe('en');
+  });
+
+  it('does not let an older provider cleanup overwrite the current provider language', () => {
+    document.documentElement.lang = 'en';
+    const older = render(withLocale('et', <p>older</p>));
+    const current = render(withLocale('et', <p>current</p>));
+    expect(document.documentElement.lang).toBe('et');
+    older.unmount();
+    expect(document.documentElement.lang).toBe('et');
+    current.unmount();
+    expect(document.documentElement.lang).toBe('en');
+  });
+
   it('localizes the reachable Home and Settings placeholder without changing the product name', () => {
     render(withLocale('et', <HomeScreen onNewMatch={vi.fn()} onResume={vi.fn()} onHistory={vi.fn()}
       hasResumableMatch={false} />));

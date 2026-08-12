@@ -9,7 +9,10 @@ import type { ContentRepository } from './contentRepository';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { contentIdSchema } from '../../shared/content/schema';
-import { CSV_COLUMNS, type CsvColumn } from '../../shared/content/csvColumns';
+import {
+  CSV_COLUMNS, CsvValidationError,
+  type CsvColumn, type CsvValidationIssueCode,
+} from '../../shared/content/csvColumns';
 import { isHttpSourceUrl } from '../../shared/content/sourceUrl';
 import { parseStoredSource, serializeStoredSource, type StoredSource } from '../../shared/content/sourceCitation';
 
@@ -42,7 +45,7 @@ export interface ParsedPack {
 }
 
 export interface ValidationIssue {
-  code: string;
+  code: CsvValidationIssueCode;
   message: string;
   row?: number;
   column?: CsvColumn;
@@ -159,7 +162,16 @@ export class CsvPackWorkflow {
 
   previewFile(path: string, ownerId = 0) {
     this.prune();
-    const preview = previewPackImport({ database: this.database, text: this.readFile(path) });
+    let preview: PackImportPreview;
+    try {
+      preview = previewPackImport({ database: this.database, text: this.readFile(path) });
+    } catch (error) {
+      if (!(error instanceof CsvValidationError)) throw error;
+      return {
+        valid: false as const, packId: null, packName: null, rowCount: 0, conflict: false,
+        issues: [{ code: error.code, message: error.code }],
+      };
+    }
     if (preview.issues.length > 0) return {
       valid: false as const,
       packId: contentIdSchema.safeParse(preview.packId).success ? preview.packId : null,
@@ -253,11 +265,11 @@ interface ExportRow {
 
 export function parsePackCsv(text: string): ParsedPack {
   if (Buffer.byteLength(text, 'utf8') > CSV_PACK_LIMITS.maxFileBytes) {
-    throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+    throw new CsvValidationError('file-too-large');
   }
   const withoutInitialBom = text.startsWith('\uFEFF') ? text.slice(1) : text;
   if (withoutInitialBom.includes('\uFEFF')) {
-    throw new Error('A UTF-8 BOM is allowed only at the start of the CSV file');
+    throw new CsvValidationError('misplaced-bom');
   }
   const parseOptions = {
     bom: false,
@@ -277,13 +289,13 @@ export function parsePackCsv(text: string): ParsedPack {
     }) as string[][];
   } catch (error) {
     if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
-      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordBytes}-byte limit`);
+      throw new CsvValidationError('record-too-large');
     }
-    throw error;
+    throw new CsvValidationError('invalid-csv-shape');
   }
-  if (header.length === 0) throw new Error('CSV header is missing');
+  if (header.length === 0) throw new CsvValidationError('missing-header');
   if (!sameColumns(header[0])) {
-    throw new Error(`CSV header must exactly match: ${CSV_COLUMNS.join(',')}`);
+    throw new CsvValidationError('invalid-header');
   }
   let parsed: string[][];
   let parsedRecordCount = 0;
@@ -294,16 +306,17 @@ export function parsePackCsv(text: string): ParsedPack {
       on_record: (record: string[]) => {
         parsedRecordCount += 1;
         if (parsedRecordCount > CSV_PACK_LIMITS.maxRows + 1) {
-          throw new Error(`CSV row count exceeds the ${CSV_PACK_LIMITS.maxRows}-row limit`);
+          throw new CsvValidationError('too-many-rows');
         }
         return parsedRecordCount === 1 ? record : validateParsedDataCells(record);
       },
     }) as string[][];
   } catch (error) {
     if (error instanceof Error && /max(?:imum)? record|record.*size/i.test(error.message)) {
-      throw new Error(`CSV record exceeds the ${CSV_PACK_LIMITS.maxRecordBytes}-byte limit`);
+      throw new CsvValidationError('record-too-large');
     }
-    throw error;
+    if (error instanceof CsvValidationError) throw error;
+    throw new CsvValidationError('invalid-csv-shape');
   }
 
   return {
@@ -333,7 +346,7 @@ export function validatePack(pack: ParsedPack): ValidationIssue[] {
   if (pack.rows.length === 0) {
     return [{ code: 'empty-pack', message: 'A CSV pack must contain at least one clue row' }];
   }
-  const add = (row: ParsedCsvRow, code: string, message: string, column?: CsvColumn) => {
+  const add = (row: ParsedCsvRow, code: CsvValidationIssueCode, message: string, column?: CsvColumn) => {
     issues.push({ code, message, row: row.rowNumber, ...(column === undefined ? {} : { column }) });
   };
   const first = pack.rows[0];
@@ -561,7 +574,7 @@ export function readPackCsvFile(path: string, fileSystem: CsvFileReadPort = NODE
   const entry = fileSystem.lstat(path);
   if (entry.isSymbolicLink() || !entry.isFile()) throw new Error('CSV import source must be a regular file');
   if (entry.size > CSV_PACK_LIMITS.maxFileBytes) {
-    throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+    throw new CsvValidationError('file-too-large');
   }
   const descriptor = fileSystem.open(path);
   try {
@@ -575,7 +588,7 @@ export function readPackCsvFile(path: string, fileSystem: CsvFileReadPort = NODE
       throw new Error('CSV import source path changed before it could be read');
     }
     if (openedEntry.size > CSV_PACK_LIMITS.maxFileBytes) {
-      throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+      throw new CsvValidationError('file-too-large');
     }
     const chunks: Buffer[] = [];
     let total = 0;
@@ -587,12 +600,12 @@ export function readPackCsvFile(path: string, fileSystem: CsvFileReadPort = NODE
       total += bytesRead;
     }
     if (total > CSV_PACK_LIMITS.maxFileBytes) {
-      throw new Error(`CSV file exceeds the ${CSV_PACK_LIMITS.maxFileBytes}-byte limit`);
+      throw new CsvValidationError('file-too-large');
     }
     try {
       return new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(Buffer.concat(chunks, total));
     } catch {
-      throw new Error('CSV import source is not valid UTF-8');
+      throw new CsvValidationError('invalid-utf8');
     }
   } finally {
     fileSystem.close(descriptor);
@@ -623,11 +636,9 @@ function decodeSpreadsheetRow(cells: readonly string[]): readonly string[] {
 
 function validateParsedDataCells(cells: readonly string[]): string[] {
   const decodedCells = [...decodeSpreadsheetRow(cells)];
-  for (const [index, value] of decodedCells.entries()) {
+  for (const value of decodedCells) {
     if (value.length > CSV_PACK_LIMITS.maxFieldCharacters) {
-      throw new Error(
-        `CSV field ${CSV_COLUMNS[index] ?? index} exceeds the ${CSV_PACK_LIMITS.maxFieldCharacters}-character limit`,
-      );
+      throw new CsvValidationError('field-too-long');
     }
   }
   return decodedCells;

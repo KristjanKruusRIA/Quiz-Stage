@@ -5,6 +5,7 @@ import { gameConfigSchema, type ContentAvailabilityResponse, type SetupOptions }
 import { TEAM_COLORS, TeamEditor } from './TeamEditor';
 import { createTranslator, pluralKey, translate, useI18n } from '../../i18n';
 import type { Language } from '../../../shared/game/types';
+import { normalizeTeamName } from '../../../shared/game/teamNames';
 
 interface SetupScreenProps {
   api: HostDesktopApi;
@@ -16,26 +17,43 @@ interface SetupScreenProps {
 
 type DisplayChoice = DisplayMode | 'automatic';
 
-function createTeam(currentTeams: readonly Team[]): Team {
+function defaultTeamName(language: Language, number: number): string {
+  return translate(language, 'team.defaultName', { number });
+}
+
+function defaultTeamNumber(name: string): number | null {
+  for (let number = 1; number <= 8; number += 1) {
+    if (name === defaultTeamName('en', number) || name === defaultTeamName('et', number)) return number;
+  }
+  return null;
+}
+
+function createTeam(currentTeams: readonly Team[], language: Language): Team {
   const usedColors = new Set(currentTeams.map((team) => team.color.toLowerCase()));
   const color = TEAM_COLORS.find((candidate) => !usedColors.has(candidate.toLowerCase())) ?? TEAM_COLORS[0];
-  const usedNames = new Set(currentTeams.map((team) => team.name.trim().toLocaleLowerCase()));
-  const number = Array.from({ length: 8 }, (_, index) => index + 1)
-    .find((candidate) => !usedNames.has(`team ${candidate}`)) ?? currentTeams.length + 1;
+  const usedNames = new Set(currentTeams.map((team) => normalizeTeamName(team.name)));
+  const preferred = currentTeams.length + 1;
+  const candidateNumbers = [
+    ...Array.from({ length: 8 - currentTeams.length }, (_, index) => preferred + index),
+    ...Array.from({ length: currentTeams.length }, (_, index) => index + 1),
+  ];
+  const number = candidateNumbers
+    .find((candidate) => !(['en', 'et'] as const).some((locale) =>
+      usedNames.has(normalizeTeamName(defaultTeamName(locale, candidate))))) ?? currentTeams.length + 1;
   return {
     id: crypto.randomUUID(),
-    name: `Team ${number}`,
+    name: defaultTeamName(language, number),
     color,
   };
 }
 
-function initialTeams(): Team[] {
-  const first = createTeam([]);
-  return [first, createTeam([first])];
+function initialTeams(language: Language): Team[] {
+  const first = createTeam([], language);
+  return [first, createTeam([first], language)];
 }
 
 function localValidationMessage(teams: Team[], packIds: string[], language: 'en' | 'et'): string | null {
-  const normalizedNames = teams.map((team) => team.name.trim().toLocaleLowerCase());
+  const normalizedNames = teams.map((team) => normalizeTeamName(team.name));
   if (normalizedNames.some((name) => name.length === 0)) return translate(language, 'setup.emptyNames');
   if (new Set(normalizedNames).size !== normalizedNames.length) return translate(language, 'setup.duplicateNames');
   if (new Set(teams.map((team) => team.color.toLowerCase())).size !== teams.length) return translate(language, 'setup.duplicateColors');
@@ -55,8 +73,10 @@ function shortageMessage(shortage: Exclude<ContentAvailabilityResponse, { ok: tr
 
 export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguageChange }: SetupScreenProps) {
   const { locale } = useI18n();
-  const [teams, setTeams] = useState<Team[]>(initialTeams);
-  const [language, setLanguage] = useState<Language>(initialLanguage ?? locale);
+  const initialLocale = initialLanguage ?? locale;
+  const [teams, setTeams] = useState<Team[]>(() => initialTeams(initialLocale));
+  const generatedTeamIds = useRef(new Set(teams.map((team) => team.id)));
+  const [language, setLanguage] = useState<Language>(initialLocale);
   const [difficulty, setDifficulty] = useState<GameConfig['difficulty']>('medium');
   const [clueSeconds, setClueSeconds] = useState(15);
   const [packIds, setPackIds] = useState<string[]>([]);
@@ -73,7 +93,15 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
   const [startErrorKey, setStartErrorKey] = useState<string | null>(null);
   const startInFlight = useRef(false);
   const t = createTranslator(language);
-  const changeLanguage = (next: Language) => { setLanguage(next); onLanguageChange?.(next); };
+  const changeLanguage = (next: Language) => {
+    setTeams((current) => current.map((team) => {
+      if (!generatedTeamIds.current.has(team.id)) return team;
+      const number = defaultTeamNumber(team.name);
+      return number === null ? team : { ...team, name: defaultTeamName(next, number) };
+    }));
+    setLanguage(next);
+    onLanguageChange?.(next);
+  };
 
   useEffect(() => {
     let active = true;
@@ -144,10 +172,13 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
   }, [api, options, localMessage, parsed, availabilityKey, availabilityGeneration]);
 
   const updateTeam = (index: number, team: Team) => {
+    if (team.name !== teams[index]?.name) generatedTeamIds.current.delete(team.id);
     setTeams((current) => current.map((value, teamIndex) => teamIndex === index ? team : value));
   };
   const removeTeam = (index: number) => {
-    setTeams((current) => current.length <= 2 ? current : current.filter((_, teamIndex) => teamIndex !== index));
+    if (teams.length <= 2) return;
+    generatedTeamIds.current.delete(teams[index].id);
+    setTeams((current) => current.filter((_, teamIndex) => teamIndex !== index));
   };
   const togglePack = (packId: string) => {
     setPackIds((current) => current.includes(packId)
@@ -189,7 +220,11 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
             <button
               type="button"
               disabled={teams.length >= 8}
-              onClick={() => setTeams((current) => [...current, createTeam(current)])}
+              onClick={() => {
+                const team = createTeam(teams, language);
+                generatedTeamIds.current.add(team.id);
+                setTeams((current) => [...current, team]);
+              }}
             >
               {t('setup.addTeam')}
             </button>

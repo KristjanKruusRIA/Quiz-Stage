@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import type { ContentImportPreview } from '../../../shared/content/editor';
 import { useI18n } from '../../i18n';
+import { formatImportIssue } from './importDiagnostics';
 
 interface ImportPreviewProps {
   preview: Exclude<ContentImportPreview, { cancelled: true }>;
@@ -9,7 +10,7 @@ interface ImportPreviewProps {
 }
 
 export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProps) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const [strategy, setStrategy] = useState<'replace-existing' | 'keep-both'>('keep-both');
   const [pending, setPending] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -30,12 +31,7 @@ export function ImportPreview({ preview, onCommit, onCancel }: ImportPreviewProp
         <ul aria-label={t('import.issues')}>
           {preview.issues.map((issue, index) => (
             <li key={`${issue.row ?? 0}-${issue.column ?? ''}-${issue.code}-${index}`}>
-              {issue.row === undefined ? '' : `${issue.column === undefined
-                ? t('import.row', { row: issue.row })
-                : t('import.rowColumn', { row: issue.row, column: issue.column })}: `}
-              {issue.code === 'empty-pack'
-                ? t('import.issue.empty-pack')
-                : t('import.issue.generic', { code: /^[a-z0-9-]+$/.test(issue.code) ? issue.code : 'unknown' })}
+              {formatImportIssue(locale, issue)}
             </li>
           ))}
         </ul>

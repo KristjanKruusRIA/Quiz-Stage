@@ -132,7 +132,14 @@ describe('CSV pack parsing and validation', () => {
   ])('rejects %s headers', (_name, header) => {
     const lines = csv(validRows()).split('\r\n');
     lines[0] = header;
-    expect(() => parsePackCsv(lines.join('\r\n'))).toThrow(/header/i);
+    expect(() => parsePackCsv(lines.join('\r\n'))).toThrow(expect.objectContaining({ code: 'invalid-header' }));
+  });
+
+  it('classifies parser limits and malformed row shape without exposing parser messages', () => {
+    expect(() => parsePackCsv('x'.repeat(CSV_PACK_LIMITS.maxFileBytes + 1)))
+      .toThrow(expect.objectContaining({ code: 'file-too-large' }));
+    expect(() => parsePackCsv(`${CSV_COLUMNS.join(',')}\r\n"unterminated`))
+      .toThrow(expect.objectContaining({ code: 'invalid-csv-shape' }));
   });
 
   it('reports every invalid type, enum, URL, date, and translation combination by row', () => {

@@ -591,7 +591,10 @@ describe('transactional CSV pack import and export', () => {
     const before = identityState(database);
     const workflow = new CsvPackWorkflow(database, repository, { createPreviewId: () => 'malformed-preview' });
 
-    expect(() => workflow.previewFile(source)).toThrow(/UTF-8/i);
+    expect(workflow.previewFile(source)).toMatchObject({
+      valid: false,
+      issues: [{ code: 'invalid-utf8' }],
+    });
     expect(identityState(database)).toEqual(before);
     expect(() => workflow.importPreview({ previewId: 'malformed-preview' })).toThrow(/unknown|expired/i);
   });
