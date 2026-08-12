@@ -12,9 +12,9 @@ export interface GameShortcutHandlers {
   onMute: Handled;
 }
 
-function isEditable(target: EventTarget | null): boolean {
+function isInteractive(target: EventTarget | null): boolean {
   if (!(target instanceof Element)) return false;
-  return target.closest('input, textarea, select, [contenteditable="true"]') !== null;
+  return target.closest('button, a[href], input, textarea, select, [contenteditable="true"], [role="button"], [role="checkbox"], [role="radio"], [role="slider"], [role="spinbutton"]') !== null;
 }
 
 export function useGameShortcuts(handlers: GameShortcutHandlers): void {
@@ -22,7 +22,7 @@ export function useGameShortcuts(handlers: GameShortcutHandlers): void {
   current.current = handlers;
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.repeat || isEditable(event.target) || event.altKey || event.metaKey || event.shiftKey) return;
+      if (event.repeat || isInteractive(event.target) || event.altKey || event.metaKey || event.shiftKey) return;
       const key = event.key.toLowerCase();
       let handled = false;
       if (/^[1-8]$/.test(key) && !event.ctrlKey) handled = current.current.onTeam(Number(key) - 1);

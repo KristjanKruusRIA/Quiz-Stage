@@ -18,7 +18,7 @@ const publicDisplay: DisplaySnapshot = {
   workArea: { x: 1280, y: 0, width: 1920, height: 1040 },
 };
 
-function harness(confirmResult = true) {
+function harness(confirmResult: boolean | Promise<boolean> = true) {
   let displays = [hostDisplay, publicDisplay];
   const displayListeners = new Map<string, Set<(display: DisplaySnapshot) => void>>();
   const displayPort: DisplayPort = {
@@ -132,12 +132,13 @@ describe('display recovery', () => {
     expect(h.confirmPublicRecovery).toHaveBeenCalledTimes(2);
   });
 
-  it('recreates an already destroyed public surface on the remaining display after acceptance', async () => {
+  it('lets the existing Task 8 recovery recreate an already destroyed public surface without stale confirmation', async () => {
     const h = harness(true);
     h.manager.create('dual');
     h.destroy(1);
 
     h.removeDisplay(publicDisplay);
+    h.manager.getWindows();
     await Promise.resolve();
     await Promise.resolve();
 
@@ -145,6 +146,7 @@ describe('display recovery', () => {
     expect(h.manager.getWindows().publicWindow).toBe(h.windows[2]);
     expect(h.windows[2]!.bounds).toEqual(hostDisplay.bounds);
     expect(h.windows[2]!.fullscreen).toBe(true);
+    expect(h.confirmPublicRecovery).toHaveBeenCalledTimes(1);
   });
 
   it('moves a host from a removed display without prompting or recreating the public window', async () => {
@@ -172,5 +174,23 @@ describe('display recovery', () => {
 
     expect(h.confirmPublicRecovery).not.toHaveBeenCalled();
     expect(h.windows).toHaveLength(2);
+  });
+
+  it('does not let an old confirmation move a replacement public window', async () => {
+    let resolve!: (accepted: boolean) => void;
+    const confirmation = new Promise<boolean>((done) => { resolve = done; });
+    const h = harness(confirmation);
+    h.manager.create('dual');
+    const original = h.windows[1]!;
+    h.removeDisplay(publicDisplay);
+    h.close(1);
+    await Promise.resolve();
+    expect(h.manager.getWindows().publicWindow).toBe(h.windows[2]);
+
+    resolve(true);
+    await Promise.resolve(); await Promise.resolve();
+
+    expect(original.setBounds).not.toHaveBeenCalled();
+    expect(h.windows[2]!.setBounds).not.toHaveBeenCalled();
   });
 });

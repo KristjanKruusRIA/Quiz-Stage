@@ -9,8 +9,10 @@
 .clue-prompt { font-size: var(--type-clue); line-height: 1.08; max-width: 26ch; margin: auto; text-wrap: balance; overflow-wrap: anywhere; }
 .public-response { font-size: clamp(.85rem, 1.8vmin, 2.25rem); max-width: 58rem; }
 [role="timer"] { font-size: clamp(1.25rem, 3vmin, 4rem); margin: .35em; }
-.scoreboard { min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(10rem, 42vw), 1fr)); gap: clamp(.2rem, .7vmin, .8rem); justify-content: center; list-style: none; padding: clamp(.25rem, .7vmin, .75rem); margin: 0; font-size: var(--type-score); }
-.scoreboard li { min-width: 0; text-align: center; overflow-wrap: anywhere; border: 1px solid #6387df; background: #0d2d78; padding: clamp(.18rem, .6vmin, .65rem); border-radius: .35rem; }
+.scoreboard { min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(8rem, 30vw), 1fr)); gap: clamp(.2rem, .7vmin, .8rem); justify-content: center; list-style: none; padding: clamp(.25rem, .7vmin, .75rem); margin: 0; font-size: var(--type-score); }
+.scoreboard li { min-width: 0; min-height: 2.1em; display: flex; gap: .3em; align-items: center; justify-content: center; text-align: center; border: 1px solid #6387df; background: #0d2d78; padding: clamp(.18rem, .6vmin, .65rem); border-radius: .35rem; }
+.scoreboard li { overflow-wrap: anywhere; }
+.scoreboard li strong { flex: 0 0 auto; white-space: nowrap; }
 .host-console { min-height: 0; background: #101a32; padding: clamp(.45rem, 1vmin, 1.25rem); display: grid; gap: clamp(.35rem, .65vmin, .8rem); overflow: auto; overscroll-behavior: contain; font-size: clamp(.875rem, 1.15vmin, 1.75rem); }
 .host-console header, .host-teams, .judgment-controls, .timer-controls, .recovery-controls { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
 .host-console h2, .host-console p { margin: 0; }

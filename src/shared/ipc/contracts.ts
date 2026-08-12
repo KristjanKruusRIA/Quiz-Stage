@@ -8,7 +8,7 @@ import { APP_VERSION } from '../appMeta';
 import type { GameCommand } from '../game/commands';
 import type { GameEvent } from '../game/events';
 import type { DisplayMode, GameConfig, GameState, HostGameView, PublicGameView } from '../game/types';
-import { normalizeTeamName } from '../game/teamNames';
+import { normalizeTeamName, TEAM_NAME_MAX_LENGTH } from '../game/teamNames';
 import { audioSettingsSchema, type AudioSettings, type MediaStatusEvent } from '../media/contracts';
 import type { AppearanceSettings } from '../settings/appearance';
 
@@ -23,12 +23,13 @@ const teamSchema = z.strictObject({
   name: z.string().trim().min(1),
   color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
 });
+const authoredTeamSchema = teamSchema.extend({ name: z.string().trim().min(1).max(TEAM_NAME_MAX_LENGTH) });
 
 export const gameConfigSchema = z.strictObject({
   language: z.enum(['en', 'et']),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   clueSeconds: z.number().int().min(5).max(60).multipleOf(5),
-  teams: z.array(teamSchema).min(2).max(8),
+  teams: z.array(authoredTeamSchema).min(2).max(8),
   packIds: z.array(identifierSchema).min(1),
   displayMode: z.enum(['single', 'dual']),
 }).superRefine((config, context) => {
@@ -421,6 +422,7 @@ export type ValidatedGameEvent = z.infer<typeof gameEventSchema> & GameEvent;
 
 interface StateSubscriptionApi {
   subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
+  subscribeToAppearance(listener: (settings: AppearanceSettings) => void, onError?: () => void): () => void;
 }
 
 export interface HostQuizStageApi extends StateSubscriptionApi {

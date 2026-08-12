@@ -8,6 +8,13 @@ vi.mock('electron', () => ({
 import { createQuizStageApi, type PreloadIpcPort } from '../../../src/preload/preload';
 import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((onResolve, onReject) => { resolve = onResolve; reject = onReject; });
+  return { promise, resolve, reject };
+}
+
 const publicView = {
   appVersion: '0.1.0' as const,
   language: 'en' as const,
@@ -74,6 +81,8 @@ describe('preload quizStage surface', () => {
     expect(publicApi).not.toHaveProperty('previewContentImport');
     expect(host.subscribeToState).toBeTypeOf('function');
     expect(publicApi.subscribeToState).toBeTypeOf('function');
+    expect(publicApi.subscribeToAppearance).toBeTypeOf('function');
+    expect(publicApi).not.toHaveProperty('updateAppearanceSettings');
 
     await host.dispatch!({ type: 'SelectClue', clueId: 'c1' });
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.dispatch, { type: 'SelectClue', clueId: 'c1' });
@@ -157,6 +166,30 @@ describe('preload quizStage surface', () => {
 
     expect(listener).toHaveBeenCalledTimes(1);
     expect(listener).toHaveBeenCalledWith(newer);
+  });
+
+  it('does not deliver an older appearance bootstrap after a newer public live update', async () => {
+    const bootstrap = deferred<unknown>();
+    let wrapped: ((event: unknown, value: unknown) => void) | undefined;
+    const ipc: PreloadIpcPort = {
+      invoke: vi.fn(() => bootstrap.promise),
+      on: vi.fn((channel, listener) => {
+        if (channel === IPC_CHANNELS.appearanceSettingsChanged) wrapped = listener;
+      }),
+      removeListener: vi.fn(),
+      send: vi.fn(),
+    };
+    const listener = vi.fn();
+    createQuizStageApi('public', ipc).subscribeToAppearance(listener);
+
+    wrapped?.({}, { version: 1, reducedMotion: true, revision: 2 });
+    bootstrap.resolve({ version: 1, reducedMotion: false, revision: 1 });
+    await bootstrap.promise;
+    await Promise.resolve();
+
+    expect(listener).toHaveBeenCalledTimes(1);
+    expect(listener).toHaveBeenCalledWith({ version: 1, reducedMotion: true, revision: 2 });
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsGet, undefined);
   });
 
   it('rejects host-shaped data on the public channel before invoking the listener', () => {

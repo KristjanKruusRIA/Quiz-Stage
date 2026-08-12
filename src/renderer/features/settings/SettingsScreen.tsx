@@ -19,7 +19,7 @@ const volumeFields = [
   ['crowd', 'settings.crowd'],
 ] as const;
 
-export function SettingsScreen({ settings, appearance = { reducedMotion: false }, settingsRevision = 0, onSave, onSaveAppearance, onBack }: SettingsScreenProps) {
+export function SettingsScreen({ settings, appearance = { version: 1, reducedMotion: false, revision: 0 }, settingsRevision = 0, onSave, onSaveAppearance, onBack }: SettingsScreenProps) {
   const { t } = useI18n();
   const [draft, setDraft] = useState({ current: settings, revision: settingsRevision, dirty: false, pending: null as AudioSettings | null });
   const [error, setError] = useState(false);
@@ -59,7 +59,10 @@ export function SettingsScreen({ settings, appearance = { reducedMotion: false }
     <section aria-label={t('settings.appearance')}>
       <h2>{t('settings.appearance')}</h2>
       <label><input type="checkbox" checked={appearance.reducedMotion}
-        onChange={(event) => { void onSaveAppearance?.({ reducedMotion: event.target.checked }); }} />{t('settings.reducedMotion')}</label>
+        onChange={(event) => {
+          setError(false);
+          void onSaveAppearance?.({ ...appearance, reducedMotion: event.target.checked }).catch(() => setError(true));
+        }} />{t('settings.reducedMotion')}</label>
     </section>
     {error ? <p role="alert">{t('settings.saveError')}</p> : null}
     <button type="button" onClick={onBack}>{t('common.back')}</button>

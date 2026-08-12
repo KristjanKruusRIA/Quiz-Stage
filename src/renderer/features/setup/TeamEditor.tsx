@@ -1,5 +1,6 @@
 import type { Team } from '../../../shared/game/types';
 import { translate } from '../../i18n';
+import { TEAM_NAME_MAX_LENGTH } from '../../../shared/game/teamNames';
 
 export const TEAM_COLORS = [
   '#E3B341', '#50A7F5', '#57C785', '#F07878',
@@ -36,6 +37,7 @@ export function TeamEditor({
         <span>{nameLabel}</span>
         <input
           type="text"
+          maxLength={TEAM_NAME_MAX_LENGTH}
           value={team.name}
           onChange={(event) => onChange({ ...team, name: event.target.value })}
         />

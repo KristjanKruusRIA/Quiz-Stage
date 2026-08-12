@@ -4,7 +4,7 @@ import { useGameShortcuts, type GameShortcutHandlers } from '../../../../src/ren
 
 function Harness({ handlers }: { handlers: GameShortcutHandlers }) {
   useGameShortcuts(handlers);
-  return <><input aria-label="input" /><textarea aria-label="textarea" /><select aria-label="select"><option>A</option></select><div contentEditable suppressContentEditableWarning>editable</div></>;
+  return <><button type="button">button</button><a href="#target">link</a><div role="button" tabIndex={0}>role button</div><input aria-label="input" /><textarea aria-label="textarea" /><select aria-label="select"><option>A</option></select><div contentEditable suppressContentEditableWarning>editable</div></>;
 }
 
 function handlers(): GameShortcutHandlers {
@@ -46,5 +46,15 @@ describe('game shortcuts', () => {
     expect(callbacks.onMute).not.toHaveBeenCalled();
     unmount(); window.dispatchEvent(new KeyboardEvent('keydown', { key: 'm' }));
     expect(callbacks.onMute).not.toHaveBeenCalled();
+  });
+
+  it('leaves Space to native and ARIA interactive controls while body Space toggles the timer', () => {
+    const callbacks = handlers(); render(<Harness handlers={callbacks} />);
+    for (const selector of ['button', 'a', '[role="button"]', 'input', 'select']) {
+      document.querySelector(selector)!.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
+    }
+    expect(callbacks.onToggleTimer).not.toHaveBeenCalled();
+    document.body.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
+    expect(callbacks.onToggleTimer).toHaveBeenCalledOnce();
   });
 });

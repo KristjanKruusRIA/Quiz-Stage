@@ -36,6 +36,10 @@ function deferred<T>() {
 }
 
 describe('SetupScreen', () => {
+  it('constrains authored team names to the shared 32-character layout limit', async () => {
+    render(<SetupScreen api={api()} onBack={vi.fn()} />);
+    expect(await screen.findByRole('textbox', { name: 'Team 1 name' })).toHaveAttribute('maxlength', '32');
+  });
   it('localizes only untouched generated team names across language changes and additions', async () => {
     const desktopApi = api();
     const user = userEvent.setup();

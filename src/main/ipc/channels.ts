@@ -21,6 +21,7 @@ export const IPC_CHANNELS = {
   audioSettingsUpdate: 'quiz-stage:audio-settings:update',
   appearanceSettingsGet: 'quiz-stage:appearance-settings:get',
   appearanceSettingsUpdate: 'quiz-stage:appearance-settings:update',
+  appearanceSettingsChanged: 'quiz-stage:appearance-settings:changed',
   mediaWarning: 'quiz-stage:media-warning',
   mediaWarningsGet: 'quiz-stage:media-warnings:get',
   hostState: 'quiz-stage:state:host',

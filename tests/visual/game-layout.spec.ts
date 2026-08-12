@@ -11,13 +11,20 @@ test.beforeAll(() => {
   copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(target, 'dev-seed.sqlite'));
 });
 
-async function launch(teamCount: 2 | 8): Promise<{ app: ElectronApplication; page: Page }> {
+async function launch(teamCount: 2 | 8, longEstonianNames = false): Promise<{ app: ElectronApplication; page: Page }> {
   const userData = mkdtempSync(path.join(tmpdir(), `quiz-stage-visual-${teamCount}-`));
   const app = await electron.launch({ cwd: process.cwd(), executablePath: path.join(process.cwd(), 'node_modules', 'electron', 'dist', 'electron.exe'), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`] });
   const page = await app.firstWindow();
   await page.getByRole('button', { name: 'New Match' }).click();
   for (let count = 2; count < teamCount; count += 1) await page.getByRole('button', { name: 'Add team' }).click();
-  await page.getByRole('button', { name: 'Start match' }).click();
+  if (longEstonianNames) {
+    await page.getByRole('radio', { name: 'Estonian' }).click();
+    const names = page.locator('.team-editor input[type="text"]');
+    for (let index = 0; index < teamCount; index += 1) {
+      await names.nth(index).fill(`Pikk võistkonnanimi number ${index + 1} xxxx`.slice(0, 32));
+    }
+  }
+  await page.getByRole('button', { name: longEstonianNames ? 'Alusta mängu' : 'Start match' }).click();
   await expect(page.getByRole('grid')).toBeVisible();
   return { app, page };
 }
@@ -53,3 +60,48 @@ for (const teamCount of [2, 8] as const) {
     await app.close();
   });
 }
+
+test('eight maximum-length Estonian names and signed scores fit board and clue phases at 720p and 4K', async ({}, testInfo) => {
+  const { app, page } = await launch(8, true);
+  await page.locator('.host-console input:not([type="number"]):not([type="checkbox"])').first().fill('Visuaalne kontroll');
+  const scoreInputs = page.locator('.host-console input[name="score"]');
+  for (let index = 0; index < 8; index += 1) {
+    await scoreInputs.nth(index).fill(index % 2 === 0 ? '999999' : '-999999');
+    await scoreInputs.nth(index).press('Enter');
+  }
+
+  for (const size of [{ width: 1280, height: 720 }, { width: 3840, height: 2160 }]) {
+    await page.setViewportSize(size);
+    await page.getByRole('button', { name: / punkti$/ }).first().focus();
+    const layout = await page.evaluate(() => {
+      const root = document.documentElement;
+      const cards = [...document.querySelectorAll('.scoreboard li')];
+      const rectangles = cards.map((element) => element.getBoundingClientRect());
+      const focus = document.activeElement?.getBoundingClientRect();
+      return {
+        overflowX: root.scrollWidth > root.clientWidth,
+        overflowY: root.scrollHeight > root.clientHeight,
+        cardContentFits: cards.every((element) => element.scrollHeight <= element.clientHeight + 1 && element.scrollWidth <= element.clientWidth + 1),
+        cardOverlap: rectangles.some((left, index) => rectangles.slice(index + 1).some((right) => left.left < right.right && left.right > right.left && left.top < right.bottom && left.bottom > right.top)),
+        focusClipped: focus === undefined || focus.left < 3 || focus.top < 3 || focus.right > innerWidth - 3 || focus.bottom > innerHeight - 3,
+      };
+    });
+    expect(layout).toEqual({ overflowX: false, overflowY: false, cardContentFits: true, cardOverlap: false, focusClipped: false });
+    await page.screenshot({ path: testInfo.outputPath(`long-et-board-8-${size.width}x${size.height}.png`), fullPage: true });
+  }
+
+  await page.getByRole('button', { name: / punkti$/ }).first().press('Space');
+  await expect(page.locator('.public-clue')).toBeVisible();
+  for (const size of [{ width: 1280, height: 720 }, { width: 3840, height: 2160 }]) {
+    await page.setViewportSize(size);
+    const phaseLayout = await page.evaluate(() => ({
+      overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+      overflowY: document.documentElement.scrollHeight > document.documentElement.clientHeight,
+      clipped: [...document.querySelectorAll('.scoreboard li, .public-clue, .host-console button:not([disabled])')]
+        .some((element) => element.scrollHeight > element.clientHeight + 1 || element.scrollWidth > element.clientWidth + 1),
+    }));
+    expect(phaseLayout).toEqual({ overflowX: false, overflowY: false, clipped: false });
+    await page.screenshot({ path: testInfo.outputPath(`long-et-clue-8-${size.width}x${size.height}.png`), fullPage: true });
+  }
+  await app.close();
+});

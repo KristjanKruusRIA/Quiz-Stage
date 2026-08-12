@@ -140,6 +140,11 @@ export function registerIpc({
     if (activeHostId !== null && activeHostId !== senderId) contentCsv?.discardOwner?.(activeHostId);
     activeHostId = senderId;
   };
+  const requireCurrentSurface = (senderId: number) => {
+    const { hostWindow, publicWindow } = getWindows();
+    if ([hostWindow, publicWindow].some((window) => window !== null && !window.webContents.isDestroyed() && window.webContents.id === senderId)) return;
+    throw new Error('CURRENT_SURFACE_REQUIRED');
+  };
   ipcMain.handle(IPC_CHANNELS.dispatch, async (event, command) => {
     requireHost(event.sender.id);
     return coordinator.dispatch(command);
@@ -160,10 +165,15 @@ export function registerIpc({
   }
   if (appearanceSettings !== undefined) {
     ipcMain.handle(IPC_CHANNELS.appearanceSettingsGet, async (event, input) => {
-      requireHost(event.sender.id); noArgsSchema.parse(input); return appearanceSettingsSchema.parse(appearanceSettings.read());
+      requireCurrentSurface(event.sender.id); noArgsSchema.parse(input); return appearanceSettingsSchema.parse(appearanceSettings.read());
     });
     ipcMain.handle(IPC_CHANNELS.appearanceSettingsUpdate, async (event, input) => {
-      requireHost(event.sender.id); return appearanceSettingsSchema.parse(appearanceSettings.save(appearanceSettingsSchema.parse(input)));
+      requireHost(event.sender.id);
+      const saved = appearanceSettingsSchema.parse(appearanceSettings.save(appearanceSettingsSchema.parse(input)));
+      for (const window of [getWindows().hostWindow, getWindows().publicWindow]) {
+        if (window !== null && !window.webContents.isDestroyed()) window.webContents.send(IPC_CHANNELS.appearanceSettingsChanged, saved);
+      }
+      return saved;
     });
     audioChannels.push(IPC_CHANNELS.appearanceSettingsGet, IPC_CHANNELS.appearanceSettingsUpdate);
   }

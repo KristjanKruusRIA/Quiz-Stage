@@ -46,11 +46,18 @@ export default function App({ api }: AppProps) {
     | { status: 'ready'; settings: AudioSettings; revision: number }
   >({ status: 'loading' });
   const [playOpening, setPlayOpening] = useState(false);
-  const [appearance, setAppearance] = useState<AppearanceSettings>({ reducedMotion: false });
+  const [appearanceState, setAppearanceState] = useState<
+    | { status: 'loading' }
+    | { status: 'error' }
+    | { status: 'ready'; settings: AppearanceSettings }
+  >({ status: 'loading' });
   const [mediaWarnings, setMediaWarnings] = useState<Map<AudioAssetKey, MediaWarning>>(new Map());
   const navigationGeneration = useRef(0);
   const audioLoadSequence = useRef(0);
   const audioSaveSequence = useRef(0);
+  const appearanceLoadSequence = useRef(0);
+  const appearanceSaveSequence = useRef(0);
+  const appearance = appearanceState.status === 'ready' ? appearanceState.settings : { version: 1 as const, reducedMotion: false, revision: 0 };
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
   const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content' | 'settings') => {
@@ -87,12 +94,44 @@ export default function App({ api }: AppProps) {
     );
   }, [desktopApi]);
 
+  const applyAppearanceSettings = useCallback((settings: AppearanceSettings) => {
+    setAppearanceState((state) => state.status === 'ready' && state.settings.revision > settings.revision
+      ? state
+      : { status: 'ready', settings });
+  }, []);
+
   useEffect(() => {
+    if (desktopApi.subscribeToAppearance === undefined) return;
+    return desktopApi.subscribeToAppearance(
+      (settings) => {
+        appearanceLoadSequence.current += 1;
+        applyAppearanceSettings(settings);
+      },
+      () => setAppearanceState((state) => state.status === 'ready' ? state : { status: 'error' }),
+    );
+  }, [applyAppearanceSettings, desktopApi]);
+
+  useEffect(() => {
+    document.documentElement.dataset.reducedMotion = String(appearance.reducedMotion);
+    return () => { delete document.documentElement.dataset.reducedMotion; };
+  }, [appearance.reducedMotion]);
+
+  const loadAppearanceSettings = useCallback(() => {
     if (desktopApi.surface !== 'host' || desktopApi.getAppearanceSettings === undefined) return;
-    let active = true;
-    void desktopApi.getAppearanceSettings().then((value) => { if (active) setAppearance(value); }, () => undefined);
-    return () => { active = false; };
-  }, [desktopApi]);
+    const sequence = ++appearanceLoadSequence.current;
+    setAppearanceState({ status: 'loading' });
+    void desktopApi.getAppearanceSettings().then(
+      (settings) => { if (sequence === appearanceLoadSequence.current) applyAppearanceSettings(settings); },
+      () => { if (sequence === appearanceLoadSequence.current) setAppearanceState({ status: 'error' }); },
+    );
+  }, [applyAppearanceSettings, desktopApi]);
+
+  const saveAppearanceSettings = useCallback(async (settings: AppearanceSettings) => {
+    if (desktopApi.surface !== 'host' || desktopApi.updateAppearanceSettings === undefined) return;
+    const sequence = ++appearanceSaveSequence.current;
+    const saved = await desktopApi.updateAppearanceSettings(settings);
+    if (sequence === appearanceSaveSequence.current) applyAppearanceSettings(saved);
+  }, [applyAppearanceSettings, desktopApi]);
 
   useEffect(() => {
     if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
@@ -130,9 +169,9 @@ export default function App({ api }: AppProps) {
 
   if (desktopApi.surface === 'public') {
     const publicLocale = publicView?.language ?? 'en';
-    return <I18nProvider locale={publicLocale}>{publicView === null
+    return <I18nProvider locale={publicLocale}><div data-reduced-motion={appearance.reducedMotion}>{publicView === null
       ? <main className="waiting-screen" role="status">{translate(publicLocale, 'app.waitingHost')}</main>
-      : <GameSurface surface="public" view={publicView} />}</I18nProvider>;
+      : <GameSurface surface="public" view={publicView} />}</div></I18nProvider>;
   }
   let content: React.ReactNode;
   if (route === 'setup') {
@@ -143,14 +182,13 @@ export default function App({ api }: AppProps) {
   } else if (route === 'content') {
     content = <ContentLibraryScreen api={desktopApi} onBack={() => navigate('home')} />;
   } else if (route === 'settings') {
-    content = audioState.status === 'ready'
+    content = audioState.status === 'ready' && appearanceState.status === 'ready'
       ? <SettingsScreen settings={audioState.settings} settingsRevision={audioState.revision}
         appearance={appearance} onSaveAppearance={async (value) => {
-          if (desktopApi.updateAppearanceSettings === undefined) return;
-          const saved = await desktopApi.updateAppearanceSettings(value); setAppearance(saved);
+          await saveAppearanceSettings(value);
         }}
         onBack={() => navigate('home')} onSave={saveAudioSettings} />
-      : <SettingsStatusScreen status={audioState.status} onRetry={loadAudioSettings} onBack={() => navigate('home')} />;
+      : <SettingsStatusScreen status={audioState.status === 'error' || appearanceState.status === 'error' ? 'error' : 'loading'} onRetry={() => { loadAudioSettings(); loadAppearanceSettings(); }} onBack={() => navigate('home')} />;
   } else if (route === 'match') {
     const matchLocale = hostView?.state.config.language ?? locale;
     content = hostView === null

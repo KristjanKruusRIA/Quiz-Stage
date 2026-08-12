@@ -6,6 +6,7 @@ import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
 import { HomeScreen } from '../../../src/renderer/features/home/HomeScreen';
 import { hostView } from './game/fixtures';
 import { defaultAudioSettings } from '../../../src/shared/media/contracts';
+import { defaultAppearanceSettings } from '../../../src/shared/settings/appearance';
 
 function deferred<T>() {
   let resolve!: (value: T) => void;
@@ -27,6 +28,12 @@ function hostApi(): HostDesktopApi {
     hasResumableMatch: vi.fn(async () => false),
     resumeMatch: vi.fn(async () => null),
     listHistory: vi.fn(async () => []),
+    getAppearanceSettings: vi.fn(async () => defaultAppearanceSettings),
+    updateAppearanceSettings: vi.fn(async (settings) => ({ ...settings, revision: settings.revision + 1 })),
+    subscribeToAppearance: vi.fn((listener) => {
+      listener(defaultAppearanceSettings);
+      return vi.fn();
+    }),
   };
 }
 
@@ -63,7 +70,7 @@ describe('HomeScreen', () => {
     await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
     expect(await screen.findByRole('heading', { name: 'New Match' })).toBeInTheDocument();
 
-    rerender(<App api={{ surface: 'public', subscribeToState: vi.fn(() => vi.fn()) }} />);
+    rerender(<App api={{ surface: 'public', subscribeToState: vi.fn(() => vi.fn()), subscribeToAppearance: vi.fn(() => vi.fn()) }} />);
     expect(screen.getByRole('status')).toHaveTextContent('Waiting for the host');
     expect(screen.queryByRole('button', { name: 'New Match' })).not.toBeInTheDocument();
   });
@@ -99,7 +106,7 @@ describe('HomeScreen', () => {
     api.updateAudioSettings = vi.fn(async (settings) => settings);
     render(<App api={api} />);
     await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
-    expect(await screen.findByRole('alert')).toHaveTextContent('Audio settings could not be loaded');
+    expect(await screen.findByRole('alert')).toHaveTextContent('Settings could not be loaded');
     expect(screen.queryByRole('slider')).not.toBeInTheDocument();
     await userEvent.click(screen.getByRole('button', { name: 'Retry' }));
     expect(await screen.findByRole('slider', { name: 'Master volume' })).toHaveValue('0.8');
@@ -121,6 +128,30 @@ describe('HomeScreen', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Back' }));
     await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
     expect(await screen.findByRole('checkbox', { name: 'Mute all audio' })).not.toBeChecked();
+  });
+
+  it('does not let a delayed appearance retry replace a newer live revision', async () => {
+    const pending = deferred<Awaited<ReturnType<NonNullable<HostDesktopApi['getAppearanceSettings']>>>>();
+    let appearanceListener: ((settings: typeof defaultAppearanceSettings) => void) | undefined;
+    let appearanceError: (() => void) | undefined;
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => defaultAudioSettings);
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    api.getAppearanceSettings = vi.fn(() => pending.promise);
+    api.subscribeToAppearance = vi.fn((listener, onError) => {
+      appearanceListener = listener;
+      appearanceError = onError;
+      return vi.fn();
+    });
+    render(<App api={api} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Settings' }));
+    act(() => appearanceError?.());
+    await userEvent.click(await screen.findByRole('button', { name: 'Retry' }));
+    act(() => appearanceListener?.({ version: 1, reducedMotion: true, revision: 2 }));
+    await act(async () => pending.resolve({ version: 1, reducedMotion: false, revision: 1 }));
+
+    expect(document.documentElement).toHaveAttribute('data-reduced-motion', 'true');
+    expect(await screen.findByRole('checkbox', { name: 'Reduce motion' })).toBeChecked();
   });
 
   it('tracks warning and recovery by sanitized asset key without clearing another warning', async () => {

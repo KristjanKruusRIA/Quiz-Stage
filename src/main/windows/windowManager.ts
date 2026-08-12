@@ -203,24 +203,22 @@ export class WindowManager {
     if (this.displayRecoveryPending || this.shuttingDown || this.displayMode !== 'dual') return;
     const host = this.hostWindow;
     const publicWindow = this.publicWindow;
+    const publicWebContentsId = publicWindow?.webContents.id;
     const confirm = this.options.confirmPublicRecovery;
     if (host === null || host.isDestroyed() || publicWindow === null || confirm === undefined) return;
     this.displayRecoveryPending = true;
     void confirm(host).then((accepted) => {
       this.displayRecoveryPending = false;
       if (!accepted || this.shuttingDown || this.displayMode !== 'dual') return;
+      if (this.publicWindow !== publicWindow || publicWindow.isDestroyed()
+        || publicWindow.webContents.isDestroyed() || publicWindow.webContents.id !== publicWebContentsId) return;
+      if (this.windowMatchesAnyDisplay(publicWindow, this.options.displayPort?.getAllDisplays() ?? [])) return;
       const target = this.publicTarget();
       if (target === undefined) return;
-      const current = this.publicWindow;
-      if (current === null || current.isDestroyed() || current.webContents.isDestroyed()) {
-        if (this.publicWindow === current) this.publicWindow = null;
-        this.publicWindow = this.createSurface('public', target);
-      } else {
-        current.setFullScreen?.(false);
-        current.setBounds?.(target);
-        current.setFullScreen?.(true);
-        current.show?.();
-      }
+      publicWindow.setFullScreen?.(false);
+      publicWindow.setBounds?.(target);
+      publicWindow.setFullScreen?.(true);
+      publicWindow.show?.();
     }).catch(() => { this.displayRecoveryPending = false; });
   }
 

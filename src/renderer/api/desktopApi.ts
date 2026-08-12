@@ -28,6 +28,7 @@ export type HostDesktopApi = {
       getAppearanceSettings?: () => Promise<AppearanceSettings>;
       updateAppearanceSettings?: (settings: AppearanceSettings) => Promise<AppearanceSettings>;
       subscribeToMediaWarnings?: (listener: (event: MediaStatusEvent) => void) => () => void;
+      subscribeToAppearance?: (listener: (settings: AppearanceSettings) => void, onError?: () => void) => () => void;
       dispatch(command: GameCommand): Promise<HostGameView>;
       listContent?: () => Promise<EditorLibrary>;
       saveCategorySet?: (input: SaveCategorySetRequest) => Promise<EditorCategorySet>;
@@ -46,6 +47,7 @@ export type HostDesktopApi = {
 export type PublicDesktopApi = {
   surface: 'public';
   subscribeToState(listener: (view: PublicGameView) => void): () => void;
+  subscribeToAppearance(listener: (settings: AppearanceSettings) => void, onError?: () => void): () => void;
 };
 
 export type DesktopApi = PublicDesktopApi | HostDesktopApi;
@@ -56,6 +58,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     subscribeToState: (listener) => bridge.subscribeToState((view) => {
       if (!('state' in view)) listener(view);
     }),
+    subscribeToAppearance: (listener, onError) => bridge.subscribeToAppearance(listener, onError),
   };
   const hostBridge: HostQuizStageApi = bridge;
   const {
@@ -69,6 +72,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     getAudioSettings,
     updateAudioSettings,
     subscribeToMediaWarnings,
+    subscribeToAppearance,
     getAppearanceSettings,
     updateAppearanceSettings,
   } = hostBridge;
@@ -85,6 +89,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     getAppearanceSettings: () => getAppearanceSettings(),
     updateAppearanceSettings: (settings) => updateAppearanceSettings(settings),
     subscribeToMediaWarnings: (listener) => subscribeToMediaWarnings(listener),
+    subscribeToAppearance: (listener, onError) => subscribeToAppearance(listener, onError),
     listContent: () => hostBridge.listContent(),
     saveCategorySet: (input) => hostBridge.saveCategorySet(input),
     saveFinalClue: (input) => hostBridge.saveFinalClue(input),

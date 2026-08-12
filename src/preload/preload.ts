@@ -65,10 +65,27 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     ipc.send(readyChannel);
     return () => ipc.removeListener(stateChannel, wrapped);
   };
-  if (surface === 'public') return { subscribeToState };
+  const subscribeToAppearance = (listener: (settings: import('../shared/settings/appearance').AppearanceSettings) => void, onError?: () => void) => {
+    let latestRevision = -1;
+    let active = true;
+    const deliver = (value: unknown) => {
+      const settings = appearanceSettingsSchema.parse(value);
+      if (!active || settings.revision <= latestRevision) return;
+      latestRevision = settings.revision;
+      listener(settings);
+    };
+    const wrapped = (_event: unknown, value: unknown) => deliver(value);
+    ipc.on(IPC_CHANNELS.appearanceSettingsChanged, wrapped);
+    void ipc.invoke(IPC_CHANNELS.appearanceSettingsGet, undefined).then(deliver).catch(() => {
+      if (active && latestRevision < 0) onError?.();
+    });
+    return () => { active = false; ipc.removeListener(IPC_CHANNELS.appearanceSettingsChanged, wrapped); };
+  };
+  if (surface === 'public') return { subscribeToState, subscribeToAppearance };
   const resolvedSchema = z.strictObject({ resolved: z.boolean() });
   const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
+    subscribeToAppearance,
     subscribeToMediaWarnings: (listener) => {
       const liveKeys = new Set<string>();
       let active = true;

@@ -7,8 +7,29 @@ import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 import { registerIpc, type IpcMainPort } from '../../../src/main/ipc/registerIpc';
 import { createQuizStageApi, type PreloadIpcPort } from '../../../src/preload/preload';
 import { defaultAudioSettings } from '../../../src/shared/media/contracts';
+import { defaultAppearanceSettings } from '../../../src/shared/settings/appearance';
 
 describe('audio settings IPC', () => {
+  it('projects appearance read-only to the current public sender and broadcasts revisioned host saves', async () => {
+    const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
+    const ipcMain: IpcMainPort = { handle: (channel, handler) => handlers.set(channel, handler), removeHandler: vi.fn(), on: vi.fn(), removeListener: vi.fn() };
+    const appearanceSettings = {
+      read: vi.fn(() => defaultAppearanceSettings),
+      save: vi.fn(() => ({ version: 1 as const, reducedMotion: true, revision: 1 })),
+    };
+    const coordinator = { dispatch: vi.fn(), subscribe: vi.fn(() => vi.fn()), getHostStateUpdate: vi.fn(() => null), getPublicStateUpdate: vi.fn(() => null) };
+    const hostWindow = { webContents: { id: 1, send: vi.fn(), isDestroyed: () => false } };
+    const publicWindow = { webContents: { id: 2, send: vi.fn(), isDestroyed: () => false } };
+    registerIpc({ ipcMain, coordinator, appearanceSettings, getWindows: () => ({ hostWindow, publicWindow }) });
+
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsGet)!({ sender: { id: 2 } }, undefined)).resolves.toEqual(defaultAppearanceSettings);
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsGet)!({ sender: { id: 3 } }, undefined)).rejects.toThrow('CURRENT_SURFACE_REQUIRED');
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsUpdate)!({ sender: { id: 2 } }, defaultAppearanceSettings)).rejects.toThrow('HOST_SENDER_REQUIRED');
+    await expect(handlers.get(IPC_CHANNELS.appearanceSettingsUpdate)!({ sender: { id: 1 } }, defaultAppearanceSettings)).resolves.toEqual({ version: 1, reducedMotion: true, revision: 1 });
+    expect(hostWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, { version: 1, reducedMotion: true, revision: 1 });
+    expect(publicWindow.webContents.send).toHaveBeenCalledWith(IPC_CHANNELS.appearanceSettingsChanged, { version: 1, reducedMotion: true, revision: 1 });
+  });
+
   it('strictly authorizes host reads/writes and never adds settings methods to public preload', async () => {
     const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
     const ipcMain: IpcMainPort = { handle: (channel, handler) => handlers.set(channel, handler), removeHandler: vi.fn(), on: vi.fn(), removeListener: vi.fn() };

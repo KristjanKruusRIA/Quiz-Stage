@@ -84,3 +84,67 @@ game, and media states retain separate ownership; no runtime dependency was adde
 
 - Portable ZIP: 157,099,625 bytes, SHA-256 `322906399C6DC6B65623DD3009ADF03EB64BF3590670C51C4A61C17E4B2A5D58`.
 - Packaged executable: 225,442,304 bytes, SHA-256 `EE4777567F254CC96304D179E3F91E713D67944E08316FEB7C09818BB51C4CB4`.
+
+## Fix round 1 (2026-08-12)
+
+- Display confirmation is now bound to the triggering public `BrowserWindow` and web-contents generation. A stale
+  confirmation cannot move a replacement, a recovered/non-orphaned window, a destroyed window, or a disposed manager.
+- Appearance is a strict, persisted version-1 record with monotonic revision conflict detection and lossless migration
+  of the earlier unversioned boolean. The current public sender receives only a read-only validated projection, with
+  live-listener-before-bootstrap ordering and stale-revision suppression. Host and public apply the explicit preference
+  to the document root; OS preference remains an independent CSS reduced-motion trigger.
+- Settings fail closed until both audio and appearance are ready, expose localized load/save errors and Retry, and use
+  load/save sequence plus revision ownership so delayed reads and stale saves cannot overwrite newer live settings.
+- Authored team names are capped at 32 characters in the shared start-match schema and native input. Persisted legacy
+  game-state parsing remains unbounded so old long-name snapshots still resume. Score cards constrain their flex content,
+  allow predictable name wrapping, and keep signed six-digit scores on one line.
+- Global Space now ignores native and ARIA interactive controls; body/surface Space retains the timer shortcut. The
+  complete keyboard E2E now uses native Space for setup, Lock, Correct, Continue, Daily Double and Final actions, tests
+  Shift+Tab/focus restoration, exercises Undo recovery, and remains mouse-free.
+
+### Fix-round TDD and verification
+
+RED first reproduced all five reviewer findings: stale display confirmation moved a replacement; public preload lacked
+appearance; appearance had no revision/version; setup names had no maximum; and interactive Space invoked the timer.
+Additional RED tests reproduced delayed appearance read reversal and swallowed appearance-save errors.
+
+```text
+npm run lint
+exit 0
+
+npm run typecheck
+exit 0
+
+npm run test:run
+Test Files 63 passed (63)
+Tests 457 passed (457)
+
+npx playwright test tests/visual/game-layout.spec.ts --reporter=line
+3 passed (ten screenshot artifacts: six 2/8-team board sizes plus max-name/signed-score ET board+clue at 720p/4K)
+
+npx playwright test tests/e2e/{audio-settings,content-editor,core-match,i18n,keyboard-only,resume-match}.spec.ts
+Each isolated spec passed (6/6 total). A combined run's immediate inter-spec Forge repack reproduced a Windows EBUSY
+release delay after the first pass; exact executable inspection found no persistent worktree process, and every isolated
+subsequent package completed.
+
+npm run make:portable
+exit 0
+
+npm run make:installer
+Squirrel packaging completed, but distributable creation failed on the repository's pre-existing empty `author` field
+(`Authors is required`). Task 17 does not change product publishing metadata.
+```
+
+The final screenshots were inspected directly. At 1280x720 and 3840x2160, maximum-length Estonian team names wrap
+inside their cards, ±999999 scores remain intact, focus is visibly separated from the viewport edge, category/value
+tracks align, and board/clue content stays within the gameplay viewport. Host controls remain intentionally scrollable
+inside the dedicated console rather than creating document scrollbars.
+
+React review found no component definitions nested in render, no duplicated game authority, and no effect-driven user
+actions. Appearance bootstrap remains an external subscription effect; writes remain event-driven; memoized API and
+callbacks have complete dependencies.
+
+Updated artifacts:
+
+- Portable ZIP: 157,100,206 bytes, SHA-256 `DD47038DE78178294935D45869A368804FD64CBB7E0E499916845CBD887D13DD`.
+- Packaged executable: 225,442,304 bytes, SHA-256 `7BA623EC8E68132A54DD6FF92295351408771A0BE9CD0A54CC6E7A6FF4FB5877`.
