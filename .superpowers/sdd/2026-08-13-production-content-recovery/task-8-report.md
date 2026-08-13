@@ -83,3 +83,26 @@ The full prescribed citation/production command currently reports 17 passing tes
 ## Remaining concern
 
 Release readiness is intentionally blocked until Tasks 9-22 provide accepted evidence/content and rebuild the committed production seed. No v1 production fallback exists.
+
+## Review fix round 1
+
+Controller ruling made report placement explicit: `publishValidationReport` now accepts typed `placement: 'validation' | 'top-level'`, with nested validation as the default. Build, verify, and translation diagnostics deliberately select top-level merging; the prior key-sniffing heuristic remains uncommitted user WIP.
+
+Verification now owns an exclusively created temporary report. It runs release validation with the exact preloaded evidence map, source checks, strict staged-report parsing, every SQLite v2/evidence binding, seed SHA-256, and exact validation/report inventory comparisons before a single atomic top-level publication. It removes only that owned temporary.
+
+RED evidence:
+
+- The new default-placement unit test failed because the dirty heuristic incorrectly hoisted a report-shaped payload.
+- The initial run-level atomicity test entered the real source checker because `runVerifySeed` had no injectable boundary and had already published the report; the focused run was terminated after exceeding 70 seconds. The regression now supplies a typed source-check dependency.
+
+GREEN evidence:
+
+- Focused report, translation, and integration selection: 3 files passed, 26 tests passed (43 filtered).
+- Infrastructure gate: 15 files passed, 218 tests passed.
+- Main-worktree `npm run typecheck` and focused ESLint exited `0`.
+- Detached exact revision `d888194`: validator/translation unit files passed 56 tests; Task 8 integration passed 11 tests with the two filler-corpus tests intentionally skipped.
+- Detached whole typecheck remains blocked by unrelated committed errors in `fetchOpenTdb.ts`, `mapWikidataCandidates.ts`, and `translationDiagnostics.test.ts` that other unstaged WIP currently fixes. Detached focused lint also reports the two pre-existing base-revision unused imports in `buildSeed.ts`; their removal belongs to the explicitly excluded cross-volume fallback WIP. Neither failure is in the Task 8 review diff.
+
+New adversarial run-level cases prove exact pre-existing report bytes survive source failure, validation/evidence batch mismatch, a v1 seed citation, a mismatched v2 citation, a forged report hash, and mismatched SQLite/report inventory. The success case proves top-level `validation.blocking/summary` is readable by `readReleaseInventoryReport`, preserves report siblings, and publishes only after all gates pass.
+
+Review-fix commit: `d888194 fix(content): publish verified reports atomically`.
