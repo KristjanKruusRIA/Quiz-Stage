@@ -10,7 +10,7 @@ import {
 import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { validatePack, type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { readCsvInputs } from './readCsv';
-import { readEvidenceInputs, type ContentEvidence } from './evidence';
+import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
 import { findNearDuplicatePairs } from './nearDuplicate';
 import {
   FINAL_BATCH, PRODUCTION_BATCHES, getProductionBatch, type ProductionBatchDefinition,
@@ -149,11 +149,6 @@ function hasSpecificSupportingSource(evidence: ContentEvidence): boolean {
     return !new Set(['opentdb.com', 'www.opentdb.com']).has(url.hostname.toLowerCase());
   }
   return true;
-}
-
-function hasApprovedReview(value: unknown): boolean {
-  return value !== null && typeof value === 'object'
-    && (value as { decision?: unknown }).decision === 'approved';
 }
 
 const ALL_PRODUCTION_BATCHES: readonly ProductionBatchDefinition[] = [...PRODUCTION_BATCHES, FINAL_BATCH];
@@ -314,24 +309,66 @@ export function validateProductionContent(
     || options.batch !== undefined
     || options.evidenceByClueId !== undefined;
   const rowIds = new Set(located.map(({ row }) => row.clue_id));
+  const rowLocations = new Map(located.map((item) => [item.row.clue_id, item]));
+  const parsedEvidenceByClueId = new Map<string, ContentEvidence>();
+  const invalidEvidenceKeys = new Set<string>();
+  for (const [mapKey, rawEvidence] of options.evidenceByClueId ?? []) {
+    const parsed = contentEvidenceSchema.safeParse(rawEvidence);
+    const rawClueId = rawEvidence !== null && typeof rawEvidence === 'object'
+      && typeof (rawEvidence as { clueId?: unknown }).clueId === 'string'
+      ? (rawEvidence as { clueId: string }).clueId
+      : undefined;
+    const keyMismatch = rawClueId !== undefined && mapKey !== rawClueId;
+    if (keyMismatch) {
+      const location = rowLocations.get(mapKey);
+      add({
+        file: location?.file ?? '<evidence>',
+        row: location?.row.rowNumber ?? 0,
+        code: 'SOURCE_MISMATCH', severity: 'error',
+        message: `Evidence map key ${mapKey} does not match clue ID ${rawClueId}`,
+      });
+    }
+    if (!parsed.success) {
+      invalidEvidenceKeys.add(mapKey);
+      const location = rowLocations.get(mapKey);
+      add({
+        file: location?.file ?? '<evidence>',
+        row: location?.row.rowNumber ?? 0,
+        code: 'MISSING_EVIDENCE',
+        severity: 'error',
+        message: `Evidence at key ${mapKey} is invalid: ${parsed.error.issues[0].message}`,
+      });
+      continue;
+    }
+    if (keyMismatch) continue;
+    if (!rowIds.has(parsed.data.clueId)) {
+      add({
+        file: '<evidence>', row: 0, code: 'SOURCE_MISMATCH', severity: 'error',
+        message: `Evidence for ${parsed.data.clueId} has no CSV row`,
+      });
+      continue;
+    }
+    parsedEvidenceByClueId.set(mapKey, parsed.data);
+  }
+
+  const boundEvidenceByClueId = new Map<string, ContentEvidence>();
   const factOwners = new Map<string, { kinds: Set<string>; located: LocatedRow }>();
   for (const item of located) {
     const { file, row } = item;
-    const evidence = options.evidenceByClueId?.get(row.clue_id);
+    const evidence = parsedEvidenceByClueId.get(row.clue_id);
     if (evidence === undefined) {
-      if (evidenceRequired) add({
+      if (evidenceRequired && !invalidEvidenceKeys.has(row.clue_id)) add({
         file, row: row.rowNumber, code: 'MISSING_EVIDENCE', severity: 'error',
         message: `Clue ${row.clue_id} requires approved evidence`,
       });
       continue;
     }
 
-    if (!hasApprovedReview(evidence.factualReview)
-      || !hasApprovedReview(evidence.editorialReview)
-      || (options.mode === 'release' && !hasApprovedReview(evidence.translationReview))) {
+    const missingTranslationReview = options.mode === 'release' && evidence.translationReview === null;
+    if (missingTranslationReview) {
       add({
         file, row: row.rowNumber, code: 'MISSING_EVIDENCE', severity: 'error',
-        message: `Clue ${row.clue_id} requires approved factual, editorial, and release translation review`,
+        message: `Clue ${row.clue_id} requires approved release translation review`,
       });
     }
 
@@ -341,20 +378,25 @@ export function validateProductionContent(
       && evidence.supportingSource.url.trim() === row.source_url.trim()
       && evidence.supportingSource.license.trim() === row.source_license.trim()
       && evidence.supportingSource.retrievedAt.trim() === row.source_retrieved_at.trim();
-    if (evidence.clueId !== row.clue_id
+    const sourceMismatch = evidence.clueId !== row.clue_id
       || expectedBatch === undefined
       || evidence.batchId !== expectedBatch.id
       || !sourceMatches
-      || normalizeText(evidence.assertion) !== normalizeText(canonicalAssertion)) {
+      || normalizeText(evidence.assertion) !== normalizeText(canonicalAssertion);
+    if (sourceMismatch) {
       add({
         file, row: row.rowNumber, code: 'SOURCE_MISMATCH', severity: 'error',
         message: `Evidence for ${row.clue_id} does not match its CSV identity, batch, source, or assertion`,
       });
     }
-    if (!hasSpecificSupportingSource(evidence)) add({
+    const genericSource = !hasSpecificSupportingSource(evidence);
+    if (genericSource) add({
       file, row: row.rowNumber, code: 'GENERIC_SOURCE', severity: 'error',
       message: `Evidence for ${row.clue_id} requires a specific independent source URL`,
     });
+
+    if (missingTranslationReview || sourceMismatch || genericSource) continue;
+    boundEvidenceByClueId.set(row.clue_id, evidence);
 
     const priorFact = factOwners.get(evidence.factKey);
     if (priorFact === undefined) {
@@ -369,15 +411,6 @@ export function validateProductionContent(
         message: `Fact key ${evidence.factKey} is shared by board and Final content`,
       });
       priorFact.kinds.add(row.content_kind);
-    }
-  }
-
-  if (options.evidenceByClueId !== undefined) {
-    for (const evidence of options.evidenceByClueId.values()) {
-      if (!rowIds.has(evidence.clueId)) add({
-        file: '<evidence>', row: 0, code: 'SOURCE_MISMATCH', severity: 'error',
-        message: `Evidence for ${evidence.clueId} has no CSV row`,
-      });
     }
   }
 
@@ -486,7 +519,7 @@ export function validateProductionContent(
       message: `${batch.id} does not match its required pack, kind, count, set, subtheme, or difficulty allocation`,
     });
 
-    const openTdbCount = [...(options.evidenceByClueId?.values() ?? [])]
+    const openTdbCount = [...boundEvidenceByClueId.values()]
       .filter((evidence) => evidence.batchId === batch.id && evidence.origin === 'openTdbInspired').length;
     if (openTdbCount !== batch.requiredOpenTdbClues) add({
       file: location, row: 0, code: 'OPENTDB_COMPOSITION', severity: 'error',
@@ -499,7 +532,7 @@ export function validateProductionContent(
   } else if (options.mode === 'release') {
     for (const batch of ALL_PRODUCTION_BATCHES) {
       enforceBatchComposition(batch, located.filter(({ row }) =>
-        options.evidenceByClueId?.get(row.clue_id)?.batchId === batch.id));
+        boundEvidenceByClueId.get(row.clue_id)?.batchId === batch.id));
     }
   }
 

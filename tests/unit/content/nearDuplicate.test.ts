@@ -13,6 +13,13 @@ describe('near-duplicate clue detection', () => {
       .toBe('café');
     expect(normalizeForNearDuplicate('prefix abcdefab-cdef-abcd-efab-cdefabcdefab suffix'))
       .toBe('prefix suffix');
+    expect(normalizeForNearDuplicate('Q٤٢: In ١٩٦٩, ref٧ mission landed'))
+      .toBe('in mission landed');
+  });
+
+  it('preserves meaningful symbol tokens instead of collapsing distinct wording', () => {
+    expect(normalizeForNearDuplicate('C++ and Na⁺ notation')).toBe('c++ and na+ notation');
+    expect(nearDuplicateSimilarity('C++ language', 'C language')).toBe(0);
   });
 
   it('uses exact normalized equality when both clues contain fewer than five tokens', () => {

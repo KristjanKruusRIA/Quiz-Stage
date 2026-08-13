@@ -510,6 +510,90 @@ describe('production content validation', () => {
     ]));
   });
 
+  it('rejects evidence-map aliases without counting them toward OpenTDB composition', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      origin: index < 99 ? 'openTdbInspired' : 'compatibleOpen',
+    }));
+    const evidence = new Map(records.map((record) => [record.clueId, record]));
+    evidence.set('spoofed-alias', records[0]);
+
+    const result = validateProductionContent([input('history.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidence,
+    });
+
+    expect(result.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ row: 0, code: 'SOURCE_MISMATCH', severity: 'error' }),
+      expect.objectContaining({
+        row: 0,
+        code: 'OPENTDB_COMPOSITION',
+        message: expect.stringContaining('found 99'),
+      }),
+    ]));
+  });
+
+  it('strictly parses direct evidence-map values before trusting them', () => {
+    const rows = Array.from({ length: 5 }, (_, index) => boardRow(index, 1, {
+      pack_id: 'built-in-history', macro_topic: 'ancient',
+    }));
+    const valid = rows.map((row) => evidenceFor(row, '01-history'));
+    const missingReview = Object.fromEntries(
+      Object.entries(valid[0]).filter(([key]) => key !== 'factualReview'),
+    );
+    const malformed = [
+      missingReview,
+      {
+        ...valid[1],
+        factualReview: { ...valid[1].factualReview, reviewer: valid[1].authoring.author },
+      },
+      {
+        ...valid[2],
+        editorialReview: { ...valid[2].editorialReview, reviewedAt: valid[2].authoring.authoredAt },
+      },
+      {
+        ...valid[3],
+        supportingSource: { ...valid[3].supportingSource, url: 'http://example.com/not-https' },
+      },
+      { ...valid[4], origin: 'openTdbInspired', inspiration: null },
+    ];
+    const runtimeMap = new Map(malformed.map((record, index) => [
+      rows[index].clue_id,
+      record as unknown as ContentEvidence,
+    ]));
+
+    const result = validateProductionContent([input('malformed-evidence.csv', rows)], {
+      mode: 'batch', evidenceByClueId: runtimeMap,
+    });
+
+    expect(result.issues.filter((issue) => issue.code === 'MISSING_EVIDENCE').map((issue) => issue.row))
+      .toEqual([2, 3, 4, 5, 6]);
+  });
+
+  it('excludes schema-invalid evidence from OpenTDB composition', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      origin: index < 100 ? 'openTdbInspired' : 'compatibleOpen',
+    }));
+    records[0] = {
+      ...records[0],
+      factualReview: { ...records[0].factualReview, reviewer: records[0].authoring.author },
+    };
+
+    const result = validateProductionContent([input('history.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE' }),
+      expect.objectContaining({
+        code: 'OPENTDB_COMPOSITION',
+        message: expect.stringContaining('found 99'),
+      }),
+    ]));
+  });
+
   it('enforces Final allocation and zero OpenTDB-inspired evidence', () => {
     const rows = finalBatchRows();
     const validate = (candidateRows: readonly Row[], records = candidateRows.map((row) => evidenceFor(row, FINAL_BATCH.id))) =>

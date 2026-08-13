@@ -12,9 +12,9 @@ function compareCodeUnits(left: string, right: string): number {
 export function normalizeForNearDuplicate(text: string): string {
   return text.normalize('NFKC').toLowerCase()
     .replace(UUID, ' ')
-    .replace(/[\p{P}\p{S}]+/gu, ' ')
+    .replace(/\p{P}+/gu, ' ')
     .split(/\s+/u)
-    .filter((token) => token !== '' && !/\d/u.test(token))
+    .filter((token) => token !== '' && !/\p{N}/u.test(token))
     .join(' ');
 }
 
