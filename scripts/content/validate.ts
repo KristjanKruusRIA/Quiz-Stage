@@ -71,6 +71,8 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set([
 
 const CHANGING_FACT = /\b(current(?:ly)?|latest|today|now|incumbent|president|prime minister|population|rank(?:ed|ing)?|record holder|largest|highest|most populous)\b/i;
 const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:\d{4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]+\s+\d{1,2},\s+\d{4})\b/i;
+const PLACEHOLDER_CLUE = /\b(?:topic\s+\d+\s+tier\s+\d+\s+asks\s+for|final clue\s+\d+\s+for\s+(?:easy|medium|hard)\s+difficulty)\b/iu;
+const PLACEHOLDER_RESPONSE = /\b(?:generated answer|answer for .+ topic\s+\d+)\b/iu;
 
 function normalizeText(value: string): string {
   return value.normalize('NFKC').trim().toLocaleLowerCase('en').replace(/\s+/g, ' ');
@@ -212,6 +214,10 @@ export function validateProductionContent(
     if (CHANGING_FACT.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)
       && !EXPLICIT_DATE.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
       add({ file, row: row.rowNumber, code: 'UNDATED_CHANGING_FACT', severity: 'error', message: 'Time-sensitive wording requires an explicit date or as-of period' });
+    }
+    if (PLACEHOLDER_CLUE.test(row.clue_en)
+      || PLACEHOLDER_RESPONSE.test(row.response_en)) {
+      add({ file, row: row.rowNumber, code: 'PLACEHOLDER_CONTENT', severity: 'error', message: 'Generated placeholder records cannot be bundled as production content' });
     }
 
     const missingEt = [row.category_name_et, row.clue_et, row.response_et, row.explanation_et].some((value) => value.trim() === '')

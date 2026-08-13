@@ -51,8 +51,13 @@ describe('deterministic board selection', () => {
     expect(new Set(result.categorySets.map((set) => set.name.en)).size).toBe(12);
     expect(result.roundOne.categories).toHaveLength(6);
     expect(result.roundTwo.categories).toHaveLength(6);
-    expect(maxMacroTopicCount(result, 0)).toBeLessThanOrEqual(2);
-    expect(maxMacroTopicCount(result, 1)).toBeLessThanOrEqual(2);
+    for (const board of [result.roundOne, result.roundTwo]) {
+      const counts = new Map<string, number>();
+      for (const category of board.categories) {
+        counts.set(category.macroTopic, (counts.get(category.macroTopic) ?? 0) + 1);
+      }
+      expect(Math.max(...counts.values())).toBeLessThanOrEqual(2);
+    }
     expect(result.final.difficulty).toBe('medium');
     expect(result.finalClue).toEqual(result.final);
     expect(result.dailyDoubleClueIds).toHaveLength(3);

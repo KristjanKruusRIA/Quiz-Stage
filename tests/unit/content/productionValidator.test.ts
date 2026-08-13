@@ -164,6 +164,25 @@ describe('production content validation', () => {
     expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([3]);
   });
 
+  it('rejects generated placeholder records from production batches', () => {
+    const rows = twelveValidSets();
+    rows[0] = {
+      ...rows[0],
+      clue_en: 'History topic 1 tier 1 asks for a generated reference.',
+      clue_et: 'Ajaloo teema 1 tase 1 küsib genereeritud viidet.',
+      response_en: 'The generated answer for History topic 1 tier 1',
+      response_et: 'Genereeritud vastus ajaloo teemale 1 tasemel 1',
+    };
+
+    const result = validateProductionContent([input('placeholder.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues).toContainEqual(expect.objectContaining({
+      row: 2,
+      code: 'PLACEHOLDER_CONTENT',
+      severity: 'error',
+    }));
+  });
+
   it('emits every release threshold shortage independently', () => {
     const rows = twelveValidSets();
     const result = validateProductionContent([input('short.csv', rows)], { mode: 'release' });
