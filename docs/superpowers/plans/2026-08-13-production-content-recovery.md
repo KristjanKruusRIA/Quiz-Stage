@@ -424,8 +424,8 @@ expect(codesFor(pair({
 }))).toContain('NUMBER_DRIFT');
 
 expect(codesFor(pair({
-  answerEn: 'Lake Peipus',
-  answerEt: 'Võrtsjärv',
+  answerEn: 'Mission Q123 landed in 1969.',
+  answerEt: 'Missioon Q456 maandus 1970. aastal.',
 }))).toContain('ANSWER_DRIFT');
 
 expect(codesFor(pair({
@@ -442,7 +442,7 @@ Expected: FAIL for the new answer/qualifier codes.
 
 - [ ] **Step 3: Expose the callable diagnostic and add conservative drift rules**
 
-Export the diagnostic function, preserve the existing CLI, compare normalized canonical answers and accepted variants, and maintain a small explicit qualifier dictionary for opposites such as north/south, east/west, before/after, first/last, more/less, and largest/smallest. Proper names and stable identifiers may be documented exceptions; numbers, answers, and semantic qualifiers remain blocking.
+Export the diagnostic function, preserve the existing CLI, compare canonical answer numbers and stable identifiers, compare normalized accepted variants, and maintain a small explicit qualifier dictionary for opposites such as north/south, east/west, before/after, first/last, more/less, and largest/smallest. Translated natural-language answers are not compared for literal equality; proper-name diagnostics plus mandatory fluent semantic review cover them. Matching stable identifiers are allowed, while conflicting stable identifiers and numbers are blocking. The Estonian compass tokens include both the named base forms and the four approved locatives `põhjas`, `lõunas`, `idas`, and `läänes`.
 
 Require a non-null approved `translationReview` for every evidence record in release mode. A `translationStatus` of `machine` cannot satisfy that requirement or serialize as reviewed.
 
