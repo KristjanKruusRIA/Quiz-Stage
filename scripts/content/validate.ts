@@ -682,13 +682,16 @@ function reviewedIdsFromReport(path: string): string[] {
     && (item as { reviewerReason: string }).reviewerReason.trim() !== '').map((item) => item.id);
 }
 
-export async function runValidationCli(argv = process.argv.slice(2)): Promise<number> {
+export async function runValidationCli(
+  argv = process.argv.slice(2),
+  preloadedEvidence?: ReadonlyMap<string, ContentEvidence>,
+): Promise<number> {
   const options = parseCli(argv);
   if (options.allowMissingEt && options.mode === 'release') throw new Error('--allow-missing-et is permitted only in batch mode');
   const inputs = await readCsvInputs(options.inputs);
-  const evidenceByClueId = options.evidence.length === 0
+  const evidenceByClueId = preloadedEvidence ?? (options.evidence.length === 0
     ? undefined
-    : await readEvidenceInputs(options.evidence);
+    : await readEvidenceInputs(options.evidence));
   const result = validateProductionContent(inputs, {
     mode: options.mode, allowMissingEt: options.allowMissingEt,
     reviewedExceptionIds: reviewedIdsFromReport(options.report),

@@ -1,12 +1,14 @@
-import { lstatSync, readFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
+import { copyFileSync, lstatSync, readFileSync, unlinkSync } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import type { ReleaseSummary } from './releaseThresholds';
 import { openDatabase, type DatabaseConnection } from '../../src/main/persistence/database';
+import { parseStoredSource } from '../../src/shared/content/sourceCitation';
 import { RELEASE_THRESHOLDS } from './releaseThresholds';
+import { readEvidenceInputs, type ContentEvidence } from './evidence';
 import { runSourceCheckCli } from './sourceCheck';
-import { runValidationCli } from './validate';
+import { publishValidationReport, runValidationCli } from './validate';
 
 const repositoryRoot = resolve(fileURLToPath(new URL('../../', import.meta.url)));
 const defaultInputGlob = resolve(repositoryRoot, 'content/generated/*.en-et.csv');
@@ -16,6 +18,7 @@ const defaultSourceCachePath = resolve(repositoryRoot, 'content/reports/source-c
 
 interface VerifySeedOptions {
   inputs: string[];
+  evidence: string[];
   report: string;
   seed: string;
   sourceCache: string;
@@ -35,13 +38,14 @@ interface ReleaseInventoryReport {
 
 function parseCli(argv: readonly string[]): VerifySeedOptions {
   const inputs: string[] = [];
+  const evidence: string[] = [];
   let report = defaultReportPath;
   let seed = defaultSeedPath;
   let sourceCache = defaultSourceCachePath;
 
   if (argv.length > 0 && !argv.some((argument) => argument.startsWith('--'))) {
     inputs.push(...argv);
-    return { inputs, report, seed, sourceCache };
+    return { inputs, evidence, report, seed, sourceCache };
   }
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -50,6 +54,11 @@ function parseCli(argv: readonly string[]): VerifySeedOptions {
       const next = argv[index + 1];
       if (next === undefined || next === '') throw new Error('--input is required');
       inputs.push(next);
+      index += 1;
+    } else if (argument === '--evidence') {
+      const next = argv[index + 1];
+      if (next === undefined || next === '') throw new Error('--evidence is required');
+      evidence.push(next);
       index += 1;
     } else if (argument === '--report') {
       const next = argv[index + 1];
@@ -72,7 +81,7 @@ function parseCli(argv: readonly string[]): VerifySeedOptions {
   }
 
   if (inputs.length === 0) inputs.push(defaultInputGlob);
-  return { inputs, report, seed, sourceCache };
+  return { inputs, evidence, report, seed, sourceCache };
 }
 
 function readReleaseInventoryReport(path: string): ReleaseInventoryReport {
@@ -106,7 +115,10 @@ interface SeedInventory {
   hardSets: number;
 }
 
-function inspectSeed(databasePath: string): { fileSha256: string; inventory: SeedInventory } {
+export function inspectSeed(
+  databasePath: string,
+  evidenceByClueId: ReadonlyMap<string, ContentEvidence>,
+): { fileSha256: string; inventory: SeedInventory } {
   const stat = lstatSync(databasePath, { throwIfNoEntry: false });
   if (stat === undefined || !stat.isFile()) throw new Error(`Seed database must exist: ${databasePath}`);
   const fileHash = createHash('sha256').update(readFileSync(databasePath)).digest('hex');
@@ -116,6 +128,26 @@ function inspectSeed(databasePath: string): { fileSha256: string; inventory: See
     const checks = database.pragma('integrity_check') as Array<{ integrity_check: string }>;
     if (checks.length === 0 || checks[0]?.integrity_check !== 'ok') {
       throw new Error(`SQLite integrity check failed: ${JSON.stringify(checks[0])}`);
+    }
+    const storedSources = database.prepare('SELECT id, source FROM clues').all() as Array<{ id: string; source: string }>;
+    const consumedEvidence = new Set<string>();
+    for (const row of storedSources) {
+      const evidence = evidenceByClueId.get(row.id);
+      const source = parseStoredSource(row.source);
+      if (evidence === undefined || source?.format !== 'quiz-stage-csv-v2'
+        || source.title !== evidence.supportingSource.title
+        || source.url !== evidence.supportingSource.url
+        || source.license !== evidence.supportingSource.license
+        || source.retrievedAt !== evidence.supportingSource.retrievedAt
+        || source.translationStatus !== 'reviewed'
+        || source.sourceId !== evidence.supportingSource.sourceId
+        || source.factualVerifiedAt !== evidence.factualReview.reviewedAt) {
+        throw new Error(`Seed clue ${row.id} does not contain its exact v2 evidence citation`);
+      }
+      consumedEvidence.add(row.id);
+    }
+    if (consumedEvidence.size !== evidenceByClueId.size) {
+      throw new Error(`Seed evidence bindings are not one-to-one: ${consumedEvidence.size}/${evidenceByClueId.size}`);
     }
     return {
       fileSha256: fileHash,
@@ -151,12 +183,23 @@ function ensureSeedInventoryMatchesReport(seedInventory: SeedInventory, releaseS
 
 export async function runVerifySeed(argv: readonly string[] = process.argv.slice(2)): Promise<number> {
   const options = parseCli(argv);
-  const validation = await runValidationCli([
-    ...options.inputs.flatMap((input) => ['--input', input]),
-    '--mode', 'release',
-    '--report', options.report,
-  ]);
-  if (validation !== 0) return validation;
+  const evidenceByClueId = await readEvidenceInputs(options.evidence);
+  const temporaryReport = `${options.report}.${process.pid}-${randomUUID()}.verify.tmp`;
+  try {
+    if (lstatSync(options.report, { throwIfNoEntry: false })?.isFile()) {
+      copyFileSync(options.report, temporaryReport);
+    }
+    const validation = await runValidationCli([
+      ...options.inputs.flatMap((input) => ['--input', input]),
+      ...options.evidence.flatMap((evidence) => ['--evidence', evidence]),
+      '--mode', 'release',
+      '--report', temporaryReport,
+    ], evidenceByClueId);
+    if (validation !== 0) return validation;
+    publishValidationReport(options.report, JSON.parse(readFileSync(temporaryReport, 'utf8')) as object);
+  } finally {
+    try { unlinkSync(temporaryReport); } catch { /* absent when validation failed before report creation */ }
+  }
 
   const sourceChecks = await runSourceCheckCli([
     ...options.inputs.flatMap((input) => ['--input', input]),
@@ -165,7 +208,7 @@ export async function runVerifySeed(argv: readonly string[] = process.argv.slice
   if (sourceChecks !== 0) return sourceChecks;
 
   const releaseInventory = readReleaseInventoryReport(options.report);
-  const { fileSha256, inventory: seedInventory } = inspectSeed(options.seed);
+  const { fileSha256, inventory: seedInventory } = inspectSeed(options.seed, evidenceByClueId);
   const reportedSha256 = releaseInventory.output?.sha256;
   if (reportedSha256 !== undefined && reportedSha256 !== fileSha256) {
     throw new Error(`Seed SHA-256 mismatch: report has ${reportedSha256}, file has ${fileSha256}`);
