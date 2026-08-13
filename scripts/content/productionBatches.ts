@@ -56,19 +56,19 @@ const DISTRIBUTIONS = {
 type DifficultyRounds = readonly [number, number];
 
 function toDistribution(rounds: readonly [DifficultyRounds, DifficultyRounds, DifficultyRounds]): BatchDistribution {
-  return {
-    easy: { roundOne: rounds[0][0], roundTwo: rounds[0][1] },
-    medium: { roundOne: rounds[1][0], roundTwo: rounds[1][1] },
-    hard: { roundOne: rounds[2][0], roundTwo: rounds[2][1] },
-  };
+  return Object.freeze({
+    easy: Object.freeze({ roundOne: rounds[0][0], roundTwo: rounds[0][1] }),
+    medium: Object.freeze({ roundOne: rounds[1][0], roundTwo: rounds[1][1] }),
+    hard: Object.freeze({ roundOne: rounds[2][0], roundTwo: rounds[2][1] }),
+  });
 }
 
 export const PRODUCTION_BATCHES: readonly ProductionBatchDefinition[] = Object.freeze(
-  TOPIC_DEFINITIONS.map(([id, packId, topicFamily, subthemes]) => ({
+  TOPIC_DEFINITIONS.map(([id, packId, topicFamily, subthemes]) => Object.freeze({
     id,
     packId,
     topicFamily,
-    subthemes,
+    subthemes: Object.freeze([...subthemes]),
     maxSetsPerSubtheme: 15,
     requiredOpenTdbClues: 100,
     distribution: toDistribution(DISTRIBUTIONS[id]),
@@ -81,7 +81,7 @@ export const FINAL_BATCH: ProductionBatchDefinition = Object.freeze({
   id: '13-finals',
   packId: 'built-in-finals',
   topicFamily: 'finals',
-  subthemes: TOPIC_DEFINITIONS.map(([, , topicFamily]) => topicFamily),
+  subthemes: Object.freeze(TOPIC_DEFINITIONS.map(([, , topicFamily]) => topicFamily)),
   maxSetsPerSubtheme: 15,
   requiredOpenTdbClues: 0,
   distribution: null,

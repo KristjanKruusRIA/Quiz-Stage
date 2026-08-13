@@ -22,6 +22,22 @@ const expectedBatches = [
   ['12-mythology-religion-philosophy', 'built-in-mythology-religion-philosophy', 'mythology-religion-philosophy', ['greek-roman', 'norse', 'egyptian', 'baltic-finnic', 'asian', 'african', 'american', 'world-religions', 'ancient-philosophy', 'early-modern-philosophy', 'modern-philosophy'], [[16, 17], [17, 16], [17, 17]]],
 ] as const;
 
+const expectedPaths = [
+  ['01-history', 'content/authored/01-history.csv', 'content/generated/01-history.en-et.csv', 'content/evidence/01-history.jsonl', 'content/reports/01-history.json'],
+  ['02-geography', 'content/authored/02-geography.csv', 'content/generated/02-geography.en-et.csv', 'content/evidence/02-geography.jsonl', 'content/reports/02-geography.json'],
+  ['03-science-nature', 'content/authored/03-science-nature.csv', 'content/generated/03-science-nature.en-et.csv', 'content/evidence/03-science-nature.jsonl', 'content/reports/03-science-nature.json'],
+  ['04-literature-language', 'content/authored/04-literature-language.csv', 'content/generated/04-literature-language.en-et.csv', 'content/evidence/04-literature-language.jsonl', 'content/reports/04-literature-language.json'],
+  ['05-art-architecture', 'content/authored/05-art-architecture.csv', 'content/generated/05-art-architecture.en-et.csv', 'content/evidence/05-art-architecture.jsonl', 'content/reports/05-art-architecture.json'],
+  ['06-music', 'content/authored/06-music.csv', 'content/generated/06-music.en-et.csv', 'content/evidence/06-music.jsonl', 'content/reports/06-music.json'],
+  ['07-film-television', 'content/authored/07-film-television.csv', 'content/generated/07-film-television.en-et.csv', 'content/evidence/07-film-television.jsonl', 'content/reports/07-film-television.json'],
+  ['08-sports-games', 'content/authored/08-sports-games.csv', 'content/generated/08-sports-games.en-et.csv', 'content/evidence/08-sports-games.jsonl', 'content/reports/08-sports-games.json'],
+  ['09-food-drink', 'content/authored/09-food-drink.csv', 'content/generated/09-food-drink.en-et.csv', 'content/evidence/09-food-drink.jsonl', 'content/reports/09-food-drink.json'],
+  ['10-technology-inventions', 'content/authored/10-technology-inventions.csv', 'content/generated/10-technology-inventions.en-et.csv', 'content/evidence/10-technology-inventions.jsonl', 'content/reports/10-technology-inventions.json'],
+  ['11-politics-economics-society', 'content/authored/11-politics-economics-society.csv', 'content/generated/11-politics-economics-society.en-et.csv', 'content/evidence/11-politics-economics-society.jsonl', 'content/reports/11-politics-economics-society.json'],
+  ['12-mythology-religion-philosophy', 'content/authored/12-mythology-religion-philosophy.csv', 'content/generated/12-mythology-religion-philosophy.en-et.csv', 'content/evidence/12-mythology-religion-philosophy.jsonl', 'content/reports/12-mythology-religion-philosophy.json'],
+  ['13-finals', 'content/authored/13-finals.csv', 'content/generated/13-finals.en-et.csv', 'content/evidence/13-finals.jsonl', 'content/reports/13-finals.json'],
+] as const;
+
 function countSets(distribution: BatchDistribution): number {
   return Object.values(distribution).reduce(
     (sum, rounds) => sum + rounds.roundOne + rounds.roundTwo,
@@ -93,19 +109,24 @@ describe('production batch catalog', () => {
     expect(getProductionBatch('13-finals')).toBe(FINAL_BATCH);
   });
 
-  it('resolves every accepted repository-relative batch path', () => {
-    expect(acceptedBatchPaths('01-history')).toEqual({
-      authored: 'content/authored/01-history.csv',
-      generated: 'content/generated/01-history.en-et.csv',
-      evidence: 'content/evidence/01-history.jsonl',
-      report: 'content/reports/01-history.json',
-    });
-    expect(acceptedBatchPaths('13-finals')).toEqual({
-      authored: 'content/authored/13-finals.csv',
-      generated: 'content/generated/13-finals.en-et.csv',
-      evidence: 'content/evidence/13-finals.jsonl',
-      report: 'content/reports/13-finals.json',
-    });
+  it('deeply freezes every public catalog value', () => {
+    expect(Object.isFrozen(PRODUCTION_BATCHES)).toBe(true);
+    for (const batch of PRODUCTION_BATCHES) {
+      expect(Object.isFrozen(batch)).toBe(true);
+      expect(Object.isFrozen(batch.subthemes)).toBe(true);
+      expect(Object.isFrozen(batch.distribution)).toBe(true);
+      for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+        expect(Object.isFrozen(batch.distribution![difficulty])).toBe(true);
+      }
+    }
+    expect(Object.isFrozen(FINAL_BATCH)).toBe(true);
+    expect(Object.isFrozen(FINAL_BATCH.subthemes)).toBe(true);
+  });
+
+  it('resolves every accepted repository-relative batch path exactly', () => {
+    for (const [id, authored, generated, evidence, report] of expectedPaths) {
+      expect(acceptedBatchPaths(id)).toEqual({ authored, generated, evidence, report });
+    }
   });
 
   it('rejects unknown batch IDs for both lookups', () => {
