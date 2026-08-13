@@ -84,6 +84,29 @@ export const contentEvidenceSchema = z.object({
 
 export type ContentEvidence = z.infer<typeof contentEvidenceSchema>;
 
+export function parseEvidenceJsonl(text: string, location = '<evidence>'): ReadonlyMap<string, ContentEvidence> {
+  const records = new Map<string, ContentEvidence>();
+  const lines = text.split(/\r?\n/);
+  if (lines.at(-1) === '') lines.pop();
+  if (lines.length === 0) throw new Error(`Evidence input contains no records: ${location}`);
+
+  for (const [index, line] of lines.entries()) {
+    const lineLocation = `${location}:${index + 1}`;
+    if (line.trim() === '') throw new Error(`Blank evidence line: ${lineLocation}`);
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(line);
+    } catch {
+      throw new Error(`Malformed evidence JSON: ${lineLocation}`);
+    }
+    const result = contentEvidenceSchema.safeParse(parsed);
+    if (!result.success) throw new Error(`Invalid evidence at ${lineLocation}: ${result.error.issues[0].message}`);
+    if (records.has(result.data.clueId)) throw new Error(`Duplicate evidence for clue ID: ${result.data.clueId}`);
+    records.set(result.data.clueId, result.data);
+  }
+  return new Map([...records].sort(([left], [right]) => compareCodeUnits(left, right)));
+}
+
 async function resolveEvidenceInputs(patterns: readonly string[]): Promise<string[]> {
   if (patterns.length === 0) throw new Error('At least one evidence input glob is required');
 
@@ -121,24 +144,9 @@ export async function readEvidenceInputs(patterns: readonly string[]): Promise<R
       await handle.close();
     }
 
-    const lines = text.split(/\r?\n/);
-    if (lines.at(-1) === '') lines.pop();
-    if (lines.length === 0) throw new Error(`Evidence input contains no records: ${file}`);
-
-    for (const [index, line] of lines.entries()) {
-      const location = `${file}:${index + 1}`;
-      if (line.trim() === '') throw new Error(`Blank evidence line: ${location}`);
-      let parsed: unknown;
-      try {
-        parsed = JSON.parse(line);
-      } catch {
-        throw new Error(`Malformed evidence JSON: ${location}`);
-      }
-
-      const result = contentEvidenceSchema.safeParse(parsed);
-      if (!result.success) throw new Error(`Invalid evidence at ${location}: ${result.error.issues[0].message}`);
-      if (records.has(result.data.clueId)) throw new Error(`Duplicate evidence for clue ID: ${result.data.clueId}`);
-      records.set(result.data.clueId, result.data);
+    for (const [clueId, evidence] of parseEvidenceJsonl(text, file)) {
+      if (records.has(clueId)) throw new Error(`Duplicate evidence for clue ID: ${clueId}`);
+      records.set(clueId, evidence);
     }
   }
 

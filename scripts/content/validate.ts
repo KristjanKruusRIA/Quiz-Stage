@@ -364,7 +364,9 @@ export function validateProductionContent(
       continue;
     }
 
-    const translationReviewAgrees = (row.translation_status === 'reviewed') === (evidence.translationReview !== null);
+    const authoredMissingEtAllowed = options.allowMissingEt === true && row.translation_status === 'untranslated';
+    const translationReviewAgrees = authoredMissingEtAllowed
+      || (row.translation_status === 'reviewed') === (evidence.translationReview !== null);
     const translationReviewRequired = options.mode === 'release'
       && (row.translation_status !== 'reviewed' || evidence.translationReview === null);
     const invalidTranslationReview = !translationReviewAgrees || translationReviewRequired;

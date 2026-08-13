@@ -417,6 +417,19 @@ describe('production content validation', () => {
     expect(reviewedRelease.issues).toContainEqual(expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE', severity: 'error' }));
   });
 
+  it('accepts already-reviewed evidence while authored Estonian fields are still missing', () => {
+    const authored = boardRow(0, 1, {
+      pack_id: 'built-in-history', macro_topic: 'ancient', translation_status: 'untranslated',
+      category_name_et: '', clue_et: '', response_et: '', accepted_variants_et: '', explanation_et: '',
+    });
+    const result = validateProductionContent([input('authored.csv', [authored])], {
+      mode: 'batch', allowMissingEt: true,
+      evidenceByClueId: evidenceMap([evidenceFor(authored, '01-history')]),
+    });
+
+    expect(result.issues).not.toContainEqual(expect.objectContaining({ code: 'MISSING_EVIDENCE' }));
+  });
+
   it('excludes batch translation-review disagreements from fact ownership and composition', () => {
     const batch = getProductionBatch('01-history');
     const machine = boardRow(0, 1, {

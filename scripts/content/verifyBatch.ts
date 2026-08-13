@@ -1,10 +1,11 @@
-import { createHash } from 'node:crypto';
-import { lstatSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { createHash, randomUUID } from 'node:crypto';
+import { lstatSync, mkdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
+import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { TextDecoder } from 'node:util';
 import { z } from 'zod';
 import { parsePackCsv, type ParsedPack } from '../../src/main/content/csvPacks';
-import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
+import { parseEvidenceJsonl, type ContentEvidence } from './evidence';
 import { getProductionBatch } from './productionBatches';
 import {
   checkSourceUrls, type SourceCache, type SourceCheckDependencies, type SourceCheckOptions,
@@ -23,6 +24,12 @@ export interface VerifyBatchOptions {
   sourceCache?: SourceCache;
   sourceDependencies?: SourceCheckDependencies;
   sourceCheckOptions?: Omit<SourceCheckOptions, 'cache'>;
+  reportDependencies?: BatchReportDependencies;
+}
+
+export interface BatchReportDependencies {
+  rename?(source: string, destination: string): void;
+  createTemporaryId?(): string;
 }
 
 export interface BatchArtifactHashes {
@@ -38,9 +45,10 @@ export interface BatchUnresolvedIssue {
   message: string;
 }
 
-export interface BatchVerificationReport {
+export interface FullBatchVerificationReport {
   version: 1;
   batchId: string;
+  kind: 'verification';
   blocking: boolean;
   artifactHashes: BatchArtifactHashes;
   validations: {
@@ -52,6 +60,22 @@ export interface BatchVerificationReport {
   samples: Record<string, string[]>;
   unresolvedIssues: BatchUnresolvedIssue[];
 }
+
+export interface BatchPreflightIssue {
+  artifact: 'authored' | 'generated' | 'evidence';
+  code: 'MISSING_ARTIFACT' | 'UNREADABLE_ARTIFACT' | 'UNPARSEABLE_ARTIFACT';
+  message: string;
+}
+
+export interface BatchPreflightFailureReport {
+  version: 1;
+  batchId: string;
+  kind: 'preflight-failure';
+  blocking: true;
+  fatalIssues: BatchPreflightIssue[];
+}
+
+export type BatchVerificationReport = FullBatchVerificationReport | BatchPreflightFailureReport;
 
 const issueSchema = z.object({
   file: z.string(), row: z.number(), code: z.string(), severity: z.enum(['error', 'warning']),
@@ -66,6 +90,7 @@ const validationSchema = z.object({
   mode: z.enum(['batch', 'release']), blocking: z.boolean(), summary: summarySchema,
   issues: z.array(issueSchema), exceptions: z.array(exceptionSchema),
 }).strict();
+const batchValidationSchema = validationSchema.extend({ mode: z.literal('batch') });
 const translationIssueSchema = z.object({
   file: z.string(), row: z.number(), clueId: z.string(), field: z.string(), code: z.string(),
   message: z.string(), severity: z.enum(['error', 'warning']),
@@ -87,17 +112,31 @@ const unresolvedSchema = z.object({
   code: z.string(), clueId: z.string().nullable(), message: z.string(),
 }).strict();
 
-export const batchVerificationReportSchema = z.object({
-  version: z.literal(1), batchId: z.string().trim().min(1), blocking: z.boolean(),
+const fullBatchVerificationReportSchema = z.object({
+  version: z.literal(1), batchId: z.string().trim().min(1), kind: z.literal('verification'), blocking: z.boolean(),
   artifactHashes: z.object({
     authored: z.string().regex(/^[a-f0-9]{64}$/), generated: z.string().regex(/^[a-f0-9]{64}$/),
     evidence: z.string().regex(/^[a-f0-9]{64}$/),
   }).strict(),
-  validations: z.object({ authored: validationSchema, generated: validationSchema }).strict(),
+  validations: z.object({ authored: batchValidationSchema, generated: batchValidationSchema }).strict(),
   translationDiagnostics: translationSchema,
   sources: z.array(sourceSchema), samples: z.record(z.string(), z.array(z.string())),
   unresolvedIssues: z.array(unresolvedSchema),
 }).strict();
+
+const preflightFailureReportSchema = z.object({
+  version: z.literal(1), batchId: z.string().trim().min(1), kind: z.literal('preflight-failure'),
+  blocking: z.literal(true),
+  fatalIssues: z.array(z.object({
+    artifact: z.enum(['authored', 'generated', 'evidence']),
+    code: z.enum(['MISSING_ARTIFACT', 'UNREADABLE_ARTIFACT', 'UNPARSEABLE_ARTIFACT']),
+    message: z.string().trim().min(1),
+  }).strict()),
+}).strict();
+
+export const batchVerificationReportSchema = z.discriminatedUnion('kind', [
+  fullBatchVerificationReportSchema, preflightFailureReportSchema,
+]);
 
 function compareCodeUnits(left: string, right: string): number {
   if (left < right) return -1;
@@ -121,16 +160,82 @@ function safeRead(path: string): Buffer {
   return bytes;
 }
 
-function evidenceFromBytes(bytes: Buffer): ReadonlyMap<string, ContentEvidence> {
-  const records = new Map<string, ContentEvidence>();
-  const lines = bytes.toString('utf8').split(/\r?\n/);
-  if (lines.at(-1) === '') lines.pop();
-  for (const line of lines) {
-    const evidence = contentEvidenceSchema.parse(JSON.parse(line));
-    if (records.has(evidence.clueId)) throw new Error(`Duplicate evidence for clue ID: ${evidence.clueId}`);
-    records.set(evidence.clueId, evidence);
+function within(root: string, path: string): boolean {
+  const child = relative(root, path);
+  return child !== '' && !isAbsolute(child) && child !== '..' && !child.startsWith(`..${sep}`);
+}
+
+function assertNoSymlinkAncestors(path: string): void {
+  let current = resolve(path);
+  while (true) {
+    const stat = lstatSync(current, { throwIfNoEntry: false });
+    if (stat?.isSymbolicLink()) throw new Error(`Batch report path must not traverse a symlink: ${current}`);
+    const parent = dirname(current);
+    if (parent === current) return;
+    current = parent;
   }
-  return new Map([...records].sort(([left], [right]) => compareCodeUnits(left, right)));
+}
+
+function prepareReportPath(workRoot: string, batchId: string): { directory: string; report: string } {
+  const root = resolve(workRoot);
+  const directory = resolve(root, batchId);
+  const report = resolve(directory, 'report.json');
+  if (!within(root, directory) || !within(root, report)) throw new Error('Batch report path escapes or prefix-collides with work root');
+  assertNoSymlinkAncestors(root);
+  assertNoSymlinkAncestors(directory);
+  mkdirSync(directory, { recursive: true });
+  assertNoSymlinkAncestors(directory);
+  const stat = lstatSync(report, { throwIfNoEntry: false });
+  if (stat?.isSymbolicLink()) throw new Error('Batch report destination must not be a symlink');
+  if (stat !== undefined && !stat.isFile()) throw new Error('Batch report destination must be a regular file');
+  return { directory, report };
+}
+
+function writeReportAtomically(
+  path: string,
+  report: BatchVerificationReport,
+  dependencies: BatchReportDependencies = {},
+): void {
+  const bytes = `${JSON.stringify(report, null, 2)}\n`;
+  const createTemporaryId = dependencies.createTemporaryId ?? randomUUID;
+  let temporary: string | undefined;
+  for (let attempt = 0; attempt < 100; attempt += 1) {
+    const candidate = `${path}.${createTemporaryId()}.tmp`;
+    try {
+      writeFileSync(candidate, bytes, { encoding: 'utf8', flag: 'wx' });
+      temporary = candidate;
+      break;
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
+    }
+  }
+  if (temporary === undefined) throw new Error('Could not allocate a unique batch report temporary file');
+  try {
+    (dependencies.rename ?? renameSync)(temporary, path);
+    temporary = undefined;
+  } finally {
+    if (temporary !== undefined) {
+      try { unlinkSync(temporary); } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      }
+    }
+  }
+}
+
+function decodeUtf8(bytes: Buffer): string {
+  return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+}
+
+function preflightIssue(
+  artifact: BatchPreflightIssue['artifact'],
+  code: BatchPreflightIssue['code'],
+): BatchPreflightIssue {
+  const descriptions: Record<BatchPreflightIssue['code'], string> = {
+    MISSING_ARTIFACT: 'is missing',
+    UNREADABLE_ARTIFACT: 'is unreadable or unsafe',
+    UNPARSEABLE_ARTIFACT: 'cannot be parsed',
+  };
+  return { artifact, code, message: `${artifact} ${descriptions[code]}` };
 }
 
 function stableValidation(result: ProductionValidationResult): ProductionValidationResult {
@@ -177,22 +282,48 @@ export function parseBatchVerificationReport(value: unknown): BatchVerificationR
 
 export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVerificationReport> {
   const batch = getProductionBatch(options.batchId);
-  const directory = resolve(options.workRoot, batch.id);
+  const { directory, report: reportPath } = prepareReportPath(options.workRoot, batch.id);
   const paths = {
     authored: join(directory, 'authored.csv'), generated: join(directory, 'generated.en-et.csv'),
-    evidence: join(directory, 'evidence.jsonl'), report: join(directory, 'report.json'),
+    evidence: join(directory, 'evidence.jsonl'),
   };
 
-  await readEvidenceInputs([paths.evidence]);
-  const bytes = { authored: safeRead(paths.authored), generated: safeRead(paths.generated), evidence: safeRead(paths.evidence) };
-  const evidence = evidenceFromBytes(bytes.evidence);
-  const authoredEvidence = new Map([...evidence].map(([clueId, record]) => [
-    clueId, { ...record, translationReview: null },
-  ]));
-  const authoredPack = parsePackCsv(bytes.authored.toString('utf8'));
-  const generatedPack = parsePackCsv(bytes.generated.toString('utf8'));
+  const bytes: Partial<Record<keyof typeof paths, Buffer>> = {};
+  const fatalIssues: BatchPreflightIssue[] = [];
+  let authoredPack: ParsedPack | undefined;
+  let generatedPack: ParsedPack | undefined;
+  let evidence: ReadonlyMap<string, ContentEvidence> | undefined;
+  for (const artifact of ['authored', 'generated', 'evidence'] as const) {
+    try {
+      bytes[artifact] = safeRead(paths[artifact]);
+    } catch {
+      const missing = lstatSync(paths[artifact], { throwIfNoEntry: false }) === undefined;
+      fatalIssues.push(preflightIssue(artifact, missing ? 'MISSING_ARTIFACT' : 'UNREADABLE_ARTIFACT'));
+      continue;
+    }
+    try {
+      const text = decodeUtf8(bytes[artifact]!);
+      if (artifact === 'authored') authoredPack = parsePackCsv(text);
+      else if (artifact === 'generated') generatedPack = parsePackCsv(text);
+      else evidence = parseEvidenceJsonl(text, 'evidence.jsonl');
+    } catch {
+      fatalIssues.push(preflightIssue(artifact, 'UNPARSEABLE_ARTIFACT'));
+    }
+  }
+  if (fatalIssues.length > 0 || authoredPack === undefined || generatedPack === undefined || evidence === undefined) {
+    const failure: BatchPreflightFailureReport = {
+      version: 1, batchId: batch.id, kind: 'preflight-failure', blocking: true,
+      fatalIssues: fatalIssues.sort((left, right) => compareCodeUnits(
+        `${left.artifact}\0${left.code}\0${left.message}`,
+        `${right.artifact}\0${right.code}\0${right.message}`,
+      )),
+    };
+    writeReportAtomically(reportPath, failure, options.reportDependencies);
+    return failure;
+  }
+
   const authored = stableValidation(validateProductionContent([{ file: 'authored.csv', pack: authoredPack }], {
-    mode: 'batch', allowMissingEt: true, evidenceByClueId: authoredEvidence, batch,
+    mode: 'batch', allowMissingEt: true, evidenceByClueId: evidence, batch,
   }));
   const generated = stableValidation(validateProductionContent([{ file: 'generated.en-et.csv', pack: generatedPack }], {
     mode: 'batch', evidenceByClueId: evidence, batch,
@@ -234,15 +365,15 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   unresolvedIssues.push(...sampled.issues);
   unresolvedIssues.sort(issueOrder);
 
-  const report: BatchVerificationReport = {
-    version: 1, batchId: batch.id,
+  const report: FullBatchVerificationReport = {
+    version: 1, batchId: batch.id, kind: 'verification',
     blocking: authored.blocking || generated.blocking || translationDiagnostics.blocking
       || sources.some((source) => !source.ok) || unresolvedIssues.some((issue) => issue.scope === 'evidence' || issue.scope === 'samples'),
-    artifactHashes: { authored: hash(bytes.authored), generated: hash(bytes.generated), evidence: hash(bytes.evidence) },
+    artifactHashes: { authored: hash(bytes.authored!), generated: hash(bytes.generated!), evidence: hash(bytes.evidence!) },
     validations: { authored, generated }, translationDiagnostics, sources, samples: sampled.samples, unresolvedIssues,
   };
   const parsed = parseBatchVerificationReport(report);
-  writeFileSync(paths.report, `${JSON.stringify(parsed, null, 2)}\n`, { encoding: 'utf8' });
+  writeReportAtomically(reportPath, parsed, options.reportDependencies);
   return parsed;
 }
 
