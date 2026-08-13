@@ -2,7 +2,12 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
-import { CANDIDATE_ROOT, assertCandidateOutputPath } from './candidatePaths';
+import {
+  CANDIDATE_ROOT,
+  THIRD_PARTY_NOTICE_PATH,
+  assertCandidateOutputPath,
+  assertThirdPartyNoticeOutputPath,
+} from './candidatePaths';
 import {
   adaptOpenTdbQuestion, buildOpenTdbDuplicateKey, type OpenTdbAdaptedCandidate,
   type OpenTdbDecodedQuestion, type OpenTdbRawQuestion, OPEN_TDB_SOURCE_LICENSE, OPEN_TDB_SOURCE_TITLE,
@@ -346,6 +351,7 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
   }
 
   assertCandidateOutputPath(options.output);
+  assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
   assertCandidateOutputPath(options.checkpoint);
   assertCandidateOutputPath(options.output);
   mkdirSync(dirname(options.output), { recursive: true });
@@ -363,15 +369,16 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
     tokenExhausted: result.tokenExhausted,
   }, null, 2));
 
-  const notice = resolve('content/THIRD_PARTY_NOTICES.md');
   const line = `- OpenTDB fetch: ${result.totalWritten} draft candidates on ${dependencies.now().toISOString()} from OpenTDB (retrieved ${new Date().toISOString()})\n`;
-  appendIfNotPresent(notice, line);
+  appendIfNotPresent(THIRD_PARTY_NOTICE_PATH, line);
   return 0;
 }
 
-function appendIfNotPresent(path: string, line: string): void {
+export function appendIfNotPresent(path: string, line: string): void {
+  assertThirdPartyNoticeOutputPath(path);
   const existing = existsSync(path) ? readFileSync(path, 'utf8') : '';
   if (existing.includes(line.trim())) return;
+  assertThirdPartyNoticeOutputPath(path);
   writeFileSync(path, `${existing}${existing.endsWith('\n') || existing === '' ? '' : '\n'}${line}`);
 }
 

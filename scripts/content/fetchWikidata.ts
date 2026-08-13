@@ -2,7 +2,12 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
-import { CANDIDATE_ROOT, assertCandidateOutputPath } from './candidatePaths';
+import {
+  CANDIDATE_ROOT,
+  THIRD_PARTY_NOTICE_PATH,
+  assertCandidateOutputPath,
+  assertThirdPartyNoticeOutputPath,
+} from './candidatePaths';
 import {
   WIKIDATA_RECIPE_NAMES,
   buildWikidataRecipeQuery,
@@ -198,10 +203,12 @@ function writeCandidates(path: string, candidates: readonly WikidataMappedCandid
   appendFileSync(path, payload);
 }
 
-function appendIfNotPresent(path: string, line: string): void {
+export function appendIfNotPresent(path: string, line: string): void {
+  assertThirdPartyNoticeOutputPath(path);
   const existing = existsSync(path) ? readFileSync(path, 'utf8') : '';
   if (existing.includes(line.trim())) return;
   const separator = existing === '' || existing.endsWith('\n') ? '' : '\n';
+  assertThirdPartyNoticeOutputPath(path);
   writeFileSync(path, `${existing}${separator}${line}`, { flag: 'w' });
 }
 
@@ -210,6 +217,7 @@ export async function fetchWikidataCandidates(
 ): Promise<FetchWikidataResult> {
   assertCandidateOutputPath(options.output);
   assertCandidateOutputPath(options.cache);
+  assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
   const dependencies = options.dependencies ?? defaultDependencies();
   const outputCandidates = options.resume ? loadSeenCandidateKeys(options.output) : new Set<string>();
   const seenSourceIds = new Set<string>(outputCandidates);
@@ -248,9 +256,8 @@ export async function fetchWikidataCandidates(
 
   cache.publish();
   const result = { totalWritten, totalSkipped };
-  const notice = resolve('content/THIRD_PARTY_NOTICES.md');
   const line = `- Wikidata fetch: ${result.totalWritten} draft candidates on ${now.toISOString()} from Wikidata CC0-1.0 (SPARQL, source CC0)\n`;
-  appendIfNotPresent(notice, line);
+  appendIfNotPresent(THIRD_PARTY_NOTICE_PATH, line);
   return result;
 }
 
@@ -308,6 +315,7 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
 
   assertCandidateOutputPath(options.output);
   assertCandidateOutputPath(options.cache);
+  assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
   if (!options.resume && existsSync(options.output)) {
     assertCandidateOutputPath(options.output);
     writeFileSync(options.output, '', { flag: 'w' });

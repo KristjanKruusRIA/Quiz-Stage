@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -11,7 +11,10 @@ import {
   mapWikidataCandidates,
   parseWikidataResponse,
 } from '../../../scripts/content/mapWikidataCandidates';
-import { fetchWikidataCandidates } from '../../../scripts/content/fetchWikidata';
+import {
+  appendIfNotPresent as appendWikidataNoticeIfNotPresent,
+  fetchWikidataCandidates,
+} from '../../../scripts/content/fetchWikidata';
 
 interface MockResponse {
   status: number;
@@ -268,5 +271,22 @@ describe('Wikidata recipes and mapping contracts', () => {
       },
     })).rejects.toThrow(/symbolic link/i);
     expect(existsSync(resolve(outsideDirectory, 'wikidata-candidates.jsonl'))).toBe(false);
+  });
+
+  it('rejects a swapped foreign notice ancestor without changing its outside target', async () => {
+    const foreignDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-notice-'));
+    const outsideDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-notice-outside-'));
+    temporaryDirectories.push(foreignDirectory, outsideDirectory);
+    const linkedDirectory = resolve(foreignDirectory, 'content');
+    const outsideNotice = resolve(outsideDirectory, 'THIRD_PARTY_NOTICES.md');
+    writeFileSync(outsideNotice, 'unchanged\n');
+
+    await Promise.resolve();
+    symlinkSync(outsideDirectory, linkedDirectory, 'junction');
+    expect(() => appendWikidataNoticeIfNotPresent(
+      resolve(linkedDirectory, 'THIRD_PARTY_NOTICES.md'),
+      '- unexpected Wikidata notice\n',
+    )).toThrow(/THIRD_PARTY_NOTICES|repository/i);
+    expect(readFileSync(outsideNotice, 'utf8')).toBe('unchanged\n');
   });
 });

@@ -5,14 +5,9 @@ import { fileURLToPath } from 'node:url';
 const REPOSITORY_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const CANDIDATE_ROOT = resolve(REPOSITORY_ROOT, 'content/imports');
 export const WORK_ROOT = resolve(REPOSITORY_ROOT, 'content/work');
+export const THIRD_PARTY_NOTICE_PATH = resolve(REPOSITORY_ROOT, 'content/THIRD_PARTY_NOTICES.md');
 
-function assertSafeDescendant(path: string, root: string): string {
-  const destination = resolve(path);
-  const relativePath = relative(root, destination);
-  if (relativePath === '' || isAbsolute(relativePath) || relativePath === '..' || relativePath.startsWith(`..${sep}`)) {
-    throw new Error(`Destination must be under ${root}: ${destination}`);
-  }
-
+function assertNoSymlinks(destination: string): void {
   let current = destination;
   while (true) {
     const metadata = lstatSync(current, { throwIfNoEntry: false });
@@ -23,6 +18,16 @@ function assertSafeDescendant(path: string, root: string): string {
     if (parent === current) break;
     current = parent;
   }
+}
+
+function assertSafeDescendant(path: string, root: string): string {
+  const destination = resolve(path);
+  const relativePath = relative(root, destination);
+  if (relativePath === '' || isAbsolute(relativePath) || relativePath === '..' || relativePath.startsWith(`..${sep}`)) {
+    throw new Error(`Destination must be under ${root}: ${destination}`);
+  }
+
+  assertNoSymlinks(destination);
   return destination;
 }
 
@@ -32,4 +37,13 @@ export function assertCandidateOutputPath(path: string): string {
 
 export function assertWorkOutputPath(path: string): string {
   return assertSafeDescendant(path, WORK_ROOT);
+}
+
+export function assertThirdPartyNoticeOutputPath(path: string): string {
+  const destination = resolve(path);
+  if (relative(THIRD_PARTY_NOTICE_PATH, destination) !== '') {
+    throw new Error(`Legal notice destination must be ${THIRD_PARTY_NOTICE_PATH}: ${destination}`);
+  }
+  assertNoSymlinks(destination);
+  return destination;
 }

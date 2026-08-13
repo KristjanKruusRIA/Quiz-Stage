@@ -13,6 +13,7 @@ import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
+  THIRD_PARTY_NOTICE_PATH,
   assertCandidateOutputPath,
   assertWorkOutputPath,
 } from '../../../scripts/content/candidatePaths';
@@ -111,6 +112,19 @@ describe('candidate and authoring-work destination boundaries', () => {
     expect(result.status).toBe(2);
     expect(result.stderr).toMatch(/content[\\/]work/i);
     expect(existsSync(output)).toBe(false);
+  });
+
+  it('keeps the legal-notice destination repository-anchored from a foreign CWD', () => {
+    const foreignDirectory = foreignTemporaryDirectory();
+    const moduleUrl = pathToFileURL(resolve('scripts/content/candidatePaths.ts')).href;
+    const result = spawnSync(process.execPath, [
+      '--import', tsxImportUrl(), '--input-type=module', '--eval',
+      `import { THIRD_PARTY_NOTICE_PATH } from ${JSON.stringify(moduleUrl)}; process.stdout.write(THIRD_PARTY_NOTICE_PATH);`,
+    ], { cwd: foreignDirectory, encoding: 'utf8' });
+
+    expect(result.status).toBe(0);
+    expect(result.stdout).toBe(THIRD_PARTY_NOTICE_PATH);
+    expect(result.stdout).toBe(resolve('content/THIRD_PARTY_NOTICES.md'));
   });
 });
 
