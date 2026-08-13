@@ -21,6 +21,7 @@ export interface WikidataResponse {
 }
 
 export interface WikidataMappedCandidate {
+  candidateId: string;
   sourceSystem: 'Wikidata';
   sourceId: string;
   sourceTitle: typeof WIKIDATA_SOURCE_TITLE;
@@ -97,9 +98,11 @@ export function mapWikidataCandidates(
     const ids = new Set<string>([itemId, propertyId]);
     if (valueEntityId !== undefined) ids.add(valueEntityId);
     const normalizedFactKey = buildWikidataFactKey(itemId, propertyId, value);
+    const candidateId = buildWikidataSourceId(normalizedFactKey);
     candidates.push({
+      candidateId,
       sourceSystem: 'Wikidata',
-      sourceId: buildWikidataSourceId(normalizedFactKey),
+      sourceId: candidateId,
       sourceTitle: WIKIDATA_SOURCE_TITLE,
       sourceUrl: `${WIKIDATA_SOURCE_URL}/wiki/${itemId}`,
       sourceLicense: WIKIDATA_SOURCE_LICENSE,

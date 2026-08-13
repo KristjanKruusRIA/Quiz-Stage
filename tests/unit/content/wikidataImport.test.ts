@@ -1,5 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
@@ -39,7 +38,9 @@ afterEach(() => {
 });
 
 function temporaryDirectory(): string {
-  const directory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-'));
+  const root = resolve('content/imports');
+  mkdirSync(root, { recursive: true });
+  const directory = mkdtempSync(resolve(root, '.quiz-stage-wikidata-'));
   temporaryDirectories.push(directory);
   return directory;
 }
@@ -115,6 +116,7 @@ describe('Wikidata recipes and mapping contracts', () => {
     expect(firstCandidate).toBeDefined();
     expect(firstCandidate!.sourceSystem).toBe('Wikidata');
     expect(firstCandidate!.sourceLicense).toBe('CC0-1.0');
+    expect(firstCandidate!.candidateId).toBe(firstCandidate!.sourceId);
     expect(firstCandidate!.sourceUrl).toBe('https://www.wikidata.org/wiki/Q1');
     expect(firstCandidate!.sourceRecipe).toBe('historical-events');
     expect(firstCandidate!.factSourceIds).toEqual(['P31', 'Q1', 'Q2']);
@@ -214,5 +216,24 @@ describe('Wikidata recipes and mapping contracts', () => {
     expect(result.totalWritten).toBe(2);
     expect(mock.sleeps).toContain(2000);
     expect(mock.calls).toHaveLength(2);
+  });
+
+  it('rejects an unsafe cache before requesting data or creating output', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'wikidata-candidates.jsonl');
+    const cache = resolve('content/reports/.task-6-wikidata-cache.json');
+    const mock = createMockFetcher([]);
+
+    await expect(fetchWikidataCandidates({
+      output, cache, recipes: ['historical-events'], resume: false, pageSize: 1, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: mock.request,
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/content[\\/]imports/i);
+    expect(mock.calls).toHaveLength(0);
+    expect(existsSync(output)).toBe(false);
+    expect(existsSync(cache)).toBe(false);
   });
 });

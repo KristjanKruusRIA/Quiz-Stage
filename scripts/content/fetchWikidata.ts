@@ -2,6 +2,7 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
+import { assertCandidateOutputPath } from './candidatePaths';
 import {
   WIKIDATA_RECIPE_NAMES,
   buildWikidataRecipeQuery,
@@ -196,6 +197,8 @@ function appendIfNotPresent(path: string, line: string): void {
 export async function fetchWikidataCandidates(
   options: FetchWikidataOptions,
 ): Promise<FetchWikidataResult> {
+  assertCandidateOutputPath(options.output);
+  assertCandidateOutputPath(options.cache);
   const dependencies = options.dependencies ?? defaultDependencies();
   const outputCandidates = options.resume ? loadSeenCandidateKeys(options.output) : new Set<string>();
   const seenSourceIds = new Set<string>(outputCandidates);
@@ -292,6 +295,8 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
     throw new Error('No recipes selected. Use --all-recipes or --recipes');
   }
 
+  assertCandidateOutputPath(options.output);
+  assertCandidateOutputPath(options.cache);
   if (!options.resume && existsSync(options.output)) {
     writeFileSync(options.output, '', { flag: 'w' });
   }

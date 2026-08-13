@@ -2,6 +2,7 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
+import { assertCandidateOutputPath } from './candidatePaths';
 import {
   adaptOpenTdbQuestion, buildOpenTdbDuplicateKey, type OpenTdbAdaptedCandidate,
   type OpenTdbDecodedQuestion, type OpenTdbRawQuestion, OPEN_TDB_SOURCE_LICENSE, OPEN_TDB_SOURCE_TITLE,
@@ -235,6 +236,8 @@ function writeCandidates(output: string, candidates: OpenTdbAdaptedCandidate[]):
 }
 
 async function fetchOpenTdbCandidates(options: OpenTdbFetchOptions): Promise<OpenTdbFetchResult> {
+  assertCandidateOutputPath(options.output);
+  assertCandidateOutputPath(options.checkpoint);
   const dependencies = options.dependencies ?? defaultDependencies();
   ensureRegularDirectory(options.output);
   if (options.resume && !existsSync(options.output)) {
@@ -335,6 +338,8 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
     }
   }
 
+  assertCandidateOutputPath(options.output);
+  assertCandidateOutputPath(options.checkpoint);
   mkdirSync(dirname(options.output), { recursive: true });
   mkdirSync(dirname(options.checkpoint), { recursive: true });
 
