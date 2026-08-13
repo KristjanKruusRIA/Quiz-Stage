@@ -1,4 +1,4 @@
-import { lstat, readFile } from 'node:fs/promises';
+import { lstat, open } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { glob } from 'glob';
 import { z } from 'zod';
@@ -7,12 +7,27 @@ import { sourceUrlSchema } from '../../src/shared/content/sourceUrl';
 const nonEmptyString = z.string().trim().min(1);
 const dateTimeSchema = z.iso.datetime({ offset: true });
 
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+}
+
+function hasSameIdentity(left: Awaited<ReturnType<typeof lstat>>, right: Awaited<ReturnType<typeof lstat>>): boolean {
+  return left.isFile() && right.isFile()
+    && !left.isSymbolicLink() && !right.isSymbolicLink()
+    && left.dev === right.dev && left.ino === right.ino
+    && left.size === right.size && left.mtimeMs === right.mtimeMs && left.ctimeMs === right.ctimeMs;
+}
+
 const reviewDecisionSchema = z.object({
   reviewer: nonEmptyString,
   reviewedAt: dateTimeSchema,
   decision: z.literal('approved'),
   notes: nonEmptyString.optional(),
 }).strict();
+
+export type ReviewDecision = z.infer<typeof reviewDecisionSchema>;
 
 const supportingSourceSchema = z.object({
   sourceId: nonEmptyString,
@@ -85,7 +100,7 @@ async function resolveEvidenceInputs(patterns: readonly string[]): Promise<strin
     files.push(...found.map((file) => resolve(file)));
   }
 
-  return files.sort((left, right) => left.localeCompare(right, 'en'));
+  return files.sort(compareCodeUnits);
 }
 
 export async function readEvidenceInputs(patterns: readonly string[]): Promise<ReadonlyMap<string, ContentEvidence>> {
@@ -94,11 +109,16 @@ export async function readEvidenceInputs(patterns: readonly string[]): Promise<R
   for (const file of await resolveEvidenceInputs(patterns)) {
     const before = await lstat(file);
     if (before.isSymbolicLink() || !before.isFile()) throw new Error(`Evidence input is not a safe regular file: ${file}`);
-    const text = await readFile(file, 'utf8');
-    const after = await lstat(file);
-    if (after.isSymbolicLink() || !after.isFile()
-      || before.dev !== after.dev || before.ino !== after.ino || before.size !== after.size) {
-      throw new Error(`Evidence input changed while reading: ${file}`);
+    const handle = await open(file, 'r');
+    let text: string;
+    try {
+      const opened = await handle.stat();
+      if (!hasSameIdentity(before, opened)) throw new Error(`Evidence input changed while opening: ${file}`);
+      text = await handle.readFile({ encoding: 'utf8' });
+      const after = await handle.stat();
+      if (!hasSameIdentity(opened, after)) throw new Error(`Evidence input changed while reading: ${file}`);
+    } finally {
+      await handle.close();
     }
 
     const lines = text.split(/\r?\n/);
@@ -122,13 +142,13 @@ export async function readEvidenceInputs(patterns: readonly string[]): Promise<R
     }
   }
 
-  return new Map([...records].sort(([left], [right]) => left.localeCompare(right, 'en')));
+  return new Map([...records].sort(([left], [right]) => compareCodeUnits(left, right)));
 }
 
 export function serializeEvidence(records: readonly ContentEvidence[]): string {
   return [...records]
     .map((record) => contentEvidenceSchema.parse(record))
-    .sort((left, right) => left.clueId.localeCompare(right.clueId, 'en'))
+    .sort((left, right) => compareCodeUnits(left.clueId, right.clueId))
     .map((record) => `${JSON.stringify(record)}\n`)
     .join('');
 }
