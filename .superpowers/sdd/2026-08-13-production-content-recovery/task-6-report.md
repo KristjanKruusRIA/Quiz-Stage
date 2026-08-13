@@ -125,3 +125,55 @@ Exit code: 0
 
 - The reviewer clarification confirms that the source answer within OpenTDB `rawFact` is allowed immutable candidate material. The worklist still emits no authored/release answer field or generated answer prose.
 - All pre-existing dirty WIP remains present and unstaged. No reset, stash, or discard operation was used.
+
+## Fix round 2/5: repository-anchored legal notices
+
+### Reviewer finding addressed
+
+- Added the single repository-anchored `THIRD_PARTY_NOTICE_PATH` contract beside the existing candidate/work roots.
+- Added an exact-destination guard for the legal notice that rejects foreign paths, existing target symlinks, and symlinked ancestors.
+- Both fetchers perform an initial notice guard before network/filesystem side effects, use the anchored notice path, and revalidate immediately before the notice write. The existing notice text and deduplication behavior are unchanged.
+- Foreign-CWD coverage confirms the notice constant remains anchored to this repository. Windows junction regressions exercise both fetcher notice writers and prove a foreign target remains byte-unchanged.
+
+### TDD evidence
+
+RED:
+
+```text
+npm run test:run -- tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Test Files  3 failed (3)
+Tests       3 failed | 22 passed (25)
+```
+
+The failures were the missing anchored notice constant and the two unavailable guarded notice-writer seams.
+
+GREEN:
+
+```text
+npm run test:run -- tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Test Files  3 passed (3)
+Tests       25 passed (25)
+Exit code: 0
+```
+
+```text
+npm run typecheck
+Exit code: 0
+```
+
+```text
+npx eslint scripts/content/candidatePaths.ts scripts/content/fetchOpenTdb.ts scripts/content/fetchWikidata.ts tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Exit code: 0
+```
+
+### Selective staging and commit
+
+- Fully staged fix-only files: `candidatePaths.ts`, `candidatePaths.test.ts`, and `openTdbImport.test.ts`.
+- Used hunk staging for both fetchers and `wikidataImport.test.ts`; inspected the staged snapshot to exclude the pre-existing OpenTDB cleanup and Wikidata timeout, pagination, fixture, and call-count WIP.
+- `git diff --cached --check` passed before commit.
+- Commit: `9771ed3 fix(content): secure legal notice writes`.
+
+### Concerns
+
+- The guard closes the requested asynchronous check-to-write gap by checking at the writer boundary; the previously documented unavoidable syscall-level race remains out of scope.
+- All unrelated dirty WIP remains present and unstaged. No reset, stash, discard, authored clue generation, or approval mutation occurred.
