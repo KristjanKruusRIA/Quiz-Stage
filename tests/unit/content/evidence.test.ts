@@ -88,7 +88,7 @@ describe('content evidence', () => {
   it('indexes sorted strict evidence and rejects duplicate clue IDs', async () => {
     const evidence = await readEvidenceInputs([fixture('evidence-valid.jsonl')]);
 
-    expect([...evidence]).toEqual([...evidence].sort(([a], [b]) => a.localeCompare(b)));
+    expect([...evidence].map(([clueId]) => clueId)).toEqual(['clue-100', 'clue-200']);
     await expect(readEvidenceInputs([fixture('evidence-valid.jsonl'), fixture('evidence-valid.jsonl')]))
       .rejects.toThrow(/duplicate evidence.*clue/i);
   });
