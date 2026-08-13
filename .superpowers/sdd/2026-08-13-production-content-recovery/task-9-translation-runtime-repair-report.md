@@ -62,3 +62,42 @@ The isolated CPU environment emits its existing warning that CUDA was not found;
 - Evidence: this report
 - The header-only failed work artifact remains at `content/work/01-history/generated.en-et.csv`; it was neither staged nor regenerated.
 - No accepted content, evidence approvals, model choice, or translation review state changed.
+
+## Review fix round 1 of 5: malformed variants branch
+
+The first independent review found that the original regression covered an empty `accepted_variants_en` value but did not drive `decode_variants(...)->valid=False`. The test now also supplies the malformed literal `alpha;;beta` through the real `run()` and CSV serialization path.
+
+Targeted RED procedure: after adding only the test change, the two fixed target assignments were temporarily restored to their pre-fix expressions. Production was not otherwise changed.
+
+```powershell
+content/work/01-history/.venv-translate/Scripts/python.exe -m unittest tests.unit.content.test_translate_en_et.TranslateEnEtTest.test_malformed_accepted_variants_serializes_to_declared_estonian_column -v
+```
+
+RED result: exit 1; the test failed in 0.018 seconds with:
+
+```text
+AssertionError: Production CSV serialization raised ValueError: dict contains fields not in fieldnames: 'accepted_variantset'
+
+Ran 1 test in 0.018s
+FAILED (failures=1)
+```
+
+The committed production fix was then restored exactly; `git diff -- scripts/content/translate_en_et.py` was empty before GREEN.
+
+Targeted GREEN result for the same command: exit 0; one test passed in 0.021 seconds.
+
+Fresh focused regression run:
+
+```powershell
+content/work/01-history/.venv-translate/Scripts/python.exe -m unittest tests.unit.content.test_translate_en_et -v
+```
+
+Result: exit 0; both the empty and malformed variants tests passed in 0.043 seconds.
+
+Fresh existing diagnostic check:
+
+```powershell
+npm run test:run -- tests/unit/content/translationDiagnostics.test.ts
+```
+
+Result: exit 0; one test file and all five tests passed. No production change was required in this review round, and the full Helsinki translation was not rerun.

@@ -15,7 +15,7 @@ SPEC.loader.exec_module(translator)
 
 
 class TranslateEnEtTest(unittest.TestCase):
-    def test_empty_accepted_variants_serializes_to_declared_estonian_column(self):
+    def translate_row(self, accepted_variants):
         headers = [
             'clue_id', 'pack_id', 'pack_name', 'category_set_id', 'content_kind', 'round', 'tier',
             'difficulty', 'macro_topic', 'category_name_en', 'category_name_et', 'clue_en', 'clue_et',
@@ -25,11 +25,11 @@ class TranslateEnEtTest(unittest.TestCase):
         ]
         row = dict.fromkeys(headers, '')
         row.update({
-            'clue_id': 'clue-empty-variants',
+            'clue_id': 'clue-variants',
             'category_name_en': 'A Category',
             'clue_en': 'Who did this?',
             'response_en': 'A Person',
-            'accepted_variants_en': '',
+            'accepted_variants_en': accepted_variants,
             'explanation_en': 'Useful context.',
         })
 
@@ -65,9 +65,19 @@ class TranslateEnEtTest(unittest.TestCase):
             self.assertEqual(exit_code, 0)
             with output_path.open('r', encoding='utf-8', newline='') as handle:
                 output_rows = list(csv.DictReader(handle))
-            self.assertEqual(output_rows[0]['accepted_variants_et'], '')
-            self.assertNotIn('accepted_variantset', output_rows[0])
-            self.assertEqual(output_rows[0]['translation_status'], 'machine')
+            return output_rows[0]
+
+    def test_empty_accepted_variants_serializes_to_declared_estonian_column(self):
+        output_row = self.translate_row('')
+        self.assertEqual(output_row['accepted_variants_et'], '')
+        self.assertNotIn('accepted_variantset', output_row)
+        self.assertEqual(output_row['translation_status'], 'machine')
+
+    def test_malformed_accepted_variants_serializes_to_declared_estonian_column(self):
+        output_row = self.translate_row('alpha;;beta')
+        self.assertEqual(output_row['accepted_variants_et'], '')
+        self.assertNotIn('accepted_variantset', output_row)
+        self.assertEqual(output_row['translation_status'], 'machine')
 
 
 if __name__ == '__main__':
