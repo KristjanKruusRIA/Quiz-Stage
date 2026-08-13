@@ -150,6 +150,12 @@ function isStableIdentifier(value: string): boolean {
     || /\d/.test(trimmed);
 }
 
+function isSameStableIdentifier(left: string, right: string): boolean {
+  return isStableIdentifier(left)
+    && isStableIdentifier(right)
+    && normalizeText(left) === normalizeText(right);
+}
+
 function extractProperNouns(value: string): string[] {
   const acronyms = value.match(/\b[A-Z]{2,}\b/g) ?? [];
   const phrases = value.match(/\b(?:[A-Z][\p{L}'’-]+\s+){1,}[A-Z][\p{L}'’-]+\b/gu) ?? [];
@@ -203,9 +209,10 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
   }
 
   if (item.field === 'response_en'
-    && normalizeText(item.en) !== normalizeText(item.et)
-    && !isStableIdentifier(item.en)
-    && !isStableIdentifier(item.et)) {
+    && (differsNumerically(item.en, item.et)
+      || (isStableIdentifier(item.en)
+        && isStableIdentifier(item.et)
+        && normalizeText(item.en) !== normalizeText(item.et)))) {
     issues.push(buildIssue(
       { file, row: item.row, clueId: item.clueId, field: item.field },
       'ANSWER_DRIFT', 'Canonical answers differ between English and Estonian', 'error',
@@ -264,7 +271,7 @@ function diagnoseVariantDrift(row: ParsedCsvRow, file: string, issues: Translati
     || enItems.some((english, index) => {
       const estonian = etItems[index] ?? '';
       return normalizeText(english) !== normalizeText(estonian)
-        && !(isStableIdentifier(english) && isStableIdentifier(estonian));
+        && !isSameStableIdentifier(english, estonian);
     });
   if (!mismatched) return;
   issues.push(buildIssue(
@@ -325,7 +332,8 @@ function stableIssueSort(left: TranslationDiagnosticIssue, right: TranslationDia
   return left.file.localeCompare(right.file, 'en')
     || left.row - right.row
     || left.field.localeCompare(right.field, 'en')
-    || left.code.localeCompare(right.code, 'en');
+    || left.code.localeCompare(right.code, 'en')
+    || left.clueId.localeCompare(right.clueId, 'en');
 }
 
 export function diagnoseTranslations(inputs: readonly TranslationDiagnosticInput[]): TranslationDiagnosticReport {

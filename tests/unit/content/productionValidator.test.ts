@@ -417,6 +417,34 @@ describe('production content validation', () => {
     expect(reviewedRelease.issues).toContainEqual(expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE', severity: 'error' }));
   });
 
+  it('excludes batch translation-review disagreements from fact ownership and composition', () => {
+    const batch = getProductionBatch('01-history');
+    const machine = boardRow(0, 1, {
+      pack_id: batch.packId, macro_topic: 'ancient', translation_status: 'machine',
+    });
+    const machineWithReview = boardRow(1, 1, {
+      pack_id: batch.packId, macro_topic: 'ancient', translation_status: 'machine',
+    });
+    const reviewedWithoutReview = boardRow(2, 1, {
+      pack_id: batch.packId, macro_topic: 'ancient', translation_status: 'reviewed',
+    });
+    const result = validateProductionContent([input('translation-batch.csv', [machine, machineWithReview, reviewedWithoutReview])], {
+      mode: 'batch',
+      batch,
+      evidenceByClueId: evidenceMap([
+        evidenceFor(machine, batch.id, { factKey: 'fact:shared', translationReview: null }),
+        evidenceFor(machineWithReview, batch.id, { factKey: 'fact:shared', origin: 'openTdbInspired' }),
+        evidenceFor(reviewedWithoutReview, batch.id, { translationReview: null }),
+      ]),
+    });
+
+    expect(result.issues.filter((issue) => issue.code === 'MISSING_EVIDENCE').map((issue) => issue.row)).toEqual([3, 4]);
+    expect(result.issues).not.toContainEqual(expect.objectContaining({ code: 'DUPLICATE_FACT' }));
+    expect(result.issues).toContainEqual(expect.objectContaining({
+      code: 'OPENTDB_COMPOSITION', message: expect.stringContaining('found 0'),
+    }));
+  });
+
   it('rejects generic, non-entity Wikidata, and OpenTDB supporting URLs', () => {
     const generic = qualityFixture('generic-source.csv');
     const wikidataRow = boardRow(1, 1, {
