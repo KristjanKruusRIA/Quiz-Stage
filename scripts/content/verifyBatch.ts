@@ -191,19 +191,54 @@ function prepareReportPath(workRoot: string, batchId: string): { directory: stri
   return { directory, report };
 }
 
+function assertReportPathRemainsSafe(workRoot: string, directory: string, report: string): void {
+  const root = resolve(workRoot);
+  if (!within(root, directory) || !within(root, report) || dirname(report) !== directory) {
+    throw new Error('Batch report path escapes or prefix-collides with work root');
+  }
+  assertNoSymlinkAncestors(root);
+  assertNoSymlinkAncestors(directory);
+  const directoryStat = lstatSync(directory, { throwIfNoEntry: false });
+  if (directoryStat === undefined || !directoryStat.isDirectory()) {
+    throw new Error('Batch report parent must be a safe directory');
+  }
+  const reportStat = lstatSync(report, { throwIfNoEntry: false });
+  if (reportStat?.isSymbolicLink()) throw new Error('Batch report destination must not be a symlink');
+  if (reportStat !== undefined && !reportStat.isFile()) throw new Error('Batch report destination must be a regular file');
+}
+
+function removeOwnedReportTemporary(
+  temporary: string,
+  identity: { dev: number; ino: number } | undefined,
+  assertSafePath: () => void,
+): void {
+  try { assertSafePath(); } catch { return; }
+  const stat = lstatSync(temporary, { throwIfNoEntry: false });
+  if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()
+    || stat.dev !== identity?.dev || stat.ino !== identity.ino) return;
+  try { unlinkSync(temporary); } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+  }
+}
+
 function writeReportAtomically(
   path: string,
   report: BatchVerificationReport,
+  assertSafePath: () => void,
   dependencies: BatchReportDependencies = {},
 ): void {
   const bytes = `${JSON.stringify(report, null, 2)}\n`;
   const createTemporaryId = dependencies.createTemporaryId ?? randomUUID;
   let temporary: string | undefined;
+  let temporaryIdentity: { dev: number; ino: number } | undefined;
   for (let attempt = 0; attempt < 100; attempt += 1) {
     const candidate = `${path}.${createTemporaryId()}.tmp`;
     try {
+      assertSafePath();
       writeFileSync(candidate, bytes, { encoding: 'utf8', flag: 'wx' });
       temporary = candidate;
+      const stat = lstatSync(candidate);
+      temporaryIdentity = { dev: stat.dev, ino: stat.ino };
       break;
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
@@ -211,14 +246,11 @@ function writeReportAtomically(
   }
   if (temporary === undefined) throw new Error('Could not allocate a unique batch report temporary file');
   try {
+    assertSafePath();
     (dependencies.rename ?? renameSync)(temporary, path);
     temporary = undefined;
   } finally {
-    if (temporary !== undefined) {
-      try { unlinkSync(temporary); } catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-      }
-    }
+    if (temporary !== undefined) removeOwnedReportTemporary(temporary, temporaryIdentity, assertSafePath);
   }
 }
 
@@ -283,6 +315,7 @@ export function parseBatchVerificationReport(value: unknown): BatchVerificationR
 export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVerificationReport> {
   const batch = getProductionBatch(options.batchId);
   const { directory, report: reportPath } = prepareReportPath(options.workRoot, batch.id);
+  const assertSafeReportPath = (): void => assertReportPathRemainsSafe(options.workRoot, directory, reportPath);
   const paths = {
     authored: join(directory, 'authored.csv'), generated: join(directory, 'generated.en-et.csv'),
     evidence: join(directory, 'evidence.jsonl'),
@@ -318,7 +351,7 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
         `${right.artifact}\0${right.code}\0${right.message}`,
       )),
     };
-    writeReportAtomically(reportPath, failure, options.reportDependencies);
+    writeReportAtomically(reportPath, failure, assertSafeReportPath, options.reportDependencies);
     return failure;
   }
 
@@ -373,7 +406,7 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
     validations: { authored, generated }, translationDiagnostics, sources, samples: sampled.samples, unresolvedIssues,
   };
   const parsed = parseBatchVerificationReport(report);
-  writeReportAtomically(reportPath, parsed, options.reportDependencies);
+  writeReportAtomically(reportPath, parsed, assertSafeReportPath, options.reportDependencies);
   return parsed;
 }
 

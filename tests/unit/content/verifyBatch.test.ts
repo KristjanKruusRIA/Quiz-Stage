@@ -204,6 +204,37 @@ describe('batch publication boundary', () => {
     expect(readFileSync(outside, 'utf8')).toBe('outside bytes');
   }, 30_000);
 
+  test('rejects a batch directory swapped to a junction during source checks without writing outside workRoot', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-batch-'));
+    const fixture = createPassingWork(root);
+    const directory = join(fixture.workRoot, '01-history');
+    const displaced = join(root, 'displaced-batch');
+    const outside = join(root, 'outside');
+    const outsideReport = join(outside, 'report.json');
+    mkdirSync(outside);
+    writeFileSync(outsideReport, 'outside sentinel');
+    let swapped = false;
+
+    await expect(verifyBatch({
+      batchId: '01-history',
+      workRoot: fixture.workRoot,
+      sourceDependencies: {
+        ...fixture.sourceDependencies,
+        fetch: async () => {
+          if (!swapped) {
+            renameSync(directory, displaced);
+            symlinkSync(outside, directory, 'junction');
+            swapped = true;
+          }
+          return { status: 200, headers: new Headers() };
+        },
+      },
+    })).rejects.toThrow(/symlink/i);
+
+    expect(readFileSync(outsideReport, 'utf8')).toBe('outside sentinel');
+    expect(readdirSync(outside)).toEqual(['report.json']);
+  }, 30_000);
+
   test('writes a deterministic passing report and checks each distinct supporting URL once', async () => {
     const root = mkdtempSync(join(tmpdir(), 'quiz-stage-batch-'));
     const fixture = createPassingWork(root);
