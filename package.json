@@ -21,6 +21,8 @@
     "verify:content": "npm run content:verify-seed -- --input content/generated/*.en-et.csv --report content/reports/release-inventory.json --source-cache content/reports/source-check-cache.json",
     "content:fetch-wikidata": "tsx scripts/content/fetchWikidata.ts",
     "content:build-worklist": "tsx scripts/content/buildAuthoringWorklist.ts",
+    "content:verify-batch": "tsx scripts/content/verifyBatch.ts",
+    "content:publish-batch": "tsx scripts/content/publishBatch.ts",
     "media:generate": "tsx scripts/generate-placeholder-audio.ts",
     "build": "electron-forge package",
     "make:installer": "electron-forge make --targets=@electron-forge/maker-squirrel",

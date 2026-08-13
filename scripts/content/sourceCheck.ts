@@ -14,6 +14,12 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set(['j-archive.com', 'www.j-archive.com', 'j
 const CACHE_VERSION = 1;
 const DEFAULT_EXPIRY_MS = 7 * 24 * 60 * 60_000;
 
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+}
+
 export interface SourceFetchResponse { status: number; headers: Headers }
 export interface SourceCheckDependencies {
   fetch(url: string, init?: RequestInit): Promise<SourceFetchResponse>;
@@ -200,7 +206,7 @@ export async function checkSourceUrls(
     cacheExpiryMs: Math.max(1, inputOptions.cacheExpiryMs ?? DEFAULT_EXPIRY_MS),
     ...(inputOptions.cache === undefined ? {} : { cache: inputOptions.cache }),
   };
-  const unique = [...new Set(urls)].sort((a, b) => a.localeCompare(b, 'en'));
+  const unique = [...new Set(urls)].sort(compareCodeUnits);
   const results = new Map<string, SourceCheckResult>();
   let next = 0;
   await Promise.all(Array.from({ length: Math.min(options.concurrency, unique.length) }, async () => {
@@ -219,7 +225,7 @@ export function buildWikidataBatchUrls(
 ): string[] {
   const maxEntities = Math.max(1, Math.min(limits.maxEntities ?? 50, 50));
   const maxUrlLength = Math.max(200, limits.maxUrlLength ?? 1_800);
-  const ids = [...new Set(entityIds)].sort((a, b) => a.localeCompare(b, 'en'));
+  const ids = [...new Set(entityIds)].sort(compareCodeUnits);
   const urls: string[] = [];
   let batch: string[] = [];
   const make = (values: string[]) => {
