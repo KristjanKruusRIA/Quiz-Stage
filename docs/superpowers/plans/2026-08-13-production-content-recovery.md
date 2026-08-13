@@ -158,7 +158,7 @@ Replace the three-per-topic selector expectation with:
 for (const board of [selected.roundOne, selected.roundTwo]) {
   const counts = new Map<string, number>();
   for (const category of board.categories) {
-    counts.set(category.topicFamily, (counts.get(category.topicFamily) ?? 0) + 1);
+    counts.set(category.macroTopic, (counts.get(category.macroTopic) ?? 0) + 1);
   }
   expect(Math.max(...counts.values())).toBeLessThanOrEqual(2);
 }
