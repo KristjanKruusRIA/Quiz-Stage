@@ -165,3 +165,60 @@ Clean detached-revision typecheck is not green, but the same unrelated diagnosti
 - Rechecked all seven findings against code and focused regressions: strict report semantics, exact-byte parsing, exhaustive rollback, ownership-aware cleanup, safe atomic report publication, fatal preflight invalidation, and preserved authored review evidence.
 - Accepted artifacts remain untouched by verification. A failed safe report invalidation throws before publication is possible.
 - The unrelated dirty worktree was neither reset nor included in the implementation commit.
+
+## Fix round 2/5: report-parent swap race
+
+### Review finding and TDD
+
+The verifier initially checked the report path only before reading and validating the work artifacts. An injected source check could rename the real batch directory and replace it with a junction while `verifyBatch` was awaiting network work, causing atomic report staging and replacement to follow the junction outside `workRoot`.
+
+Focused RED against `c15d1e6`:
+
+```text
+npx vitest run --configLoader runner tests/unit/content/verifyBatch.test.ts -t "batch directory swapped"
+Test Files  1 failed (1)
+Tests       1 failed | 25 passed (26)
+AssertionError: promise resolved instead of rejecting
+```
+
+The regression swaps `<workRoot>/01-history` to an outside junction inside the injected source fetch, then requires verification to reject while the outside `report.json` sentinel and outside directory listing remain unchanged.
+
+### Implementation
+
+- Revalidate lexical containment, symlink/junction-free ancestors, the batch-directory type, and report-destination type immediately before each exclusive temporary-file staging attempt.
+- Revalidate the same invariants immediately before the temporary-to-report rename.
+- Route both full verification and `preflight-failure` reports through the hardened writer.
+- Record the exclusively created temporary's device/inode identity. Cleanup unlinks it only while the report path remains safe and the identity still matches, so a swapped parent cannot redirect cleanup outside `workRoot`.
+
+### GREEN and isolated evidence
+
+Dirty-worktree verification:
+
+```text
+npm run test:run -- tests/unit/content/verifyBatch.test.ts tests/unit/content/productionValidator.test.ts
+Test Files  2 passed (2)
+Tests       75 passed (75)
+Exit code: 0
+
+npm run typecheck
+Exit code: 0
+
+npx eslint scripts/content/verifyBatch.ts tests/unit/content/verifyBatch.test.ts
+Exit code: 0
+```
+
+Detached worktree at implementation commit `bf2b9c0` with independent lockfile-installed dependencies:
+
+```text
+Test Files  2 passed (2)
+Tests       75 passed (75)
+Focused ESLint exit code: 0
+```
+
+The implementation commit contains only `scripts/content/verifyBatch.ts` and `tests/unit/content/verifyBatch.test.ts`; `git diff --cached --check` passed before commit.
+
+During verification-worktree setup, cleanup of a shared junction removed the derived main-worktree `node_modules` contents. Dependencies were restored with `npm ci --ignore-scripts`; the pre-existing `package-lock.json` SHA-256 remained exactly `1152DCAA9D6F5E86449B424866C40920423320222C4FAAD0E6E0228FC240B4E5`, and no source or unrelated WIP was changed. Detached verification was then rerun using an independent, non-linked dependency directory.
+
+### Commit
+
+- `bf2b9c0 fix(content): revalidate batch report path`
