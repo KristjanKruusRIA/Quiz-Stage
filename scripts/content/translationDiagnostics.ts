@@ -95,6 +95,12 @@ function normalizeText(value: string): string {
   return value.normalize('NFKC').trim().toLocaleLowerCase('en').replace(/\s+/g, ' ');
 }
 
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+}
+
 function canonicalNumbers(value: string): string[] {
   const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml))?/giu) ?? [];
   return matches.map((raw) => {
@@ -333,7 +339,7 @@ function stableIssueSort(left: TranslationDiagnosticIssue, right: TranslationDia
     || left.row - right.row
     || left.field.localeCompare(right.field, 'en')
     || left.code.localeCompare(right.code, 'en')
-    || left.clueId.localeCompare(right.clueId, 'en');
+    || compareCodeUnits(left.clueId, right.clueId);
 }
 
 export function diagnoseTranslations(inputs: readonly TranslationDiagnosticInput[]): TranslationDiagnosticReport {

@@ -250,10 +250,13 @@ describe('translation diagnostics', () => {
         response_et: 'Q456',
       })[column])).join(','),
     ].join('\n'));
-    const first = { file: 'same.csv', pack: packFor('alpha') };
-    const second = { file: 'same.csv', pack: packFor('beta') };
+    const first = { file: 'same.csv', pack: packFor('ä') };
+    const second = { file: 'same.csv', pack: packFor('a\u0308') };
+    const inForwardOrder = diagnoseTranslations([first, second]).issues;
 
-    expect(diagnoseTranslations([first, second]).issues).toEqual(diagnoseTranslations([second, first]).issues);
+    expect(inForwardOrder).toEqual(diagnoseTranslations([second, first]).issues);
+    expect(inForwardOrder.filter((issue) => issue.code === 'ANSWER_DRIFT').map((issue) => issue.clueId))
+      .toEqual(['a\u0308', 'ä']);
   });
 
   it('flags translation regressions and keeps stable identifiers/url text allowed', async () => {
