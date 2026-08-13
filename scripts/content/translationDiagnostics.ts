@@ -1,4 +1,4 @@
-import { type ParsedCsvRow } from '../../src/main/content/csvPacks';
+import { type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { publishValidationReport } from './validate';
 import { readCsvInputs } from './readCsv';
 
@@ -28,6 +28,11 @@ export interface TranslationDiagnosticReport {
   exceptions: TranslationDiagnosticException[];
 }
 
+export interface TranslationDiagnosticInput {
+  file: string;
+  pack: ParsedPack;
+}
+
 interface CliOptions {
   input: string[];
   report: string;
@@ -47,6 +52,15 @@ const FIELD_PAIRS = [
   { en: 'response_en', et: 'response_et' },
   { en: 'accepted_variants_en', et: 'accepted_variants_et' },
   { en: 'explanation_en', et: 'explanation_et' },
+] as const;
+
+const QUALIFIER_OPPOSITES = [
+  { en: ['north'], et: ['põhi', 'põhjas'], oppositeEn: ['south'], oppositeEt: ['lõuna', 'lõunas'] },
+  { en: ['east'], et: ['ida', 'idas'], oppositeEn: ['west'], oppositeEt: ['lääs', 'läänes'] },
+  { en: ['before'], et: ['enne'], oppositeEn: ['after'], oppositeEt: ['pärast'] },
+  { en: ['first'], et: ['esimene'], oppositeEn: ['last'], oppositeEt: ['viimane'] },
+  { en: ['more'], et: ['rohkem'], oppositeEn: ['less'], oppositeEt: ['vähem'] },
+  { en: ['largest'], et: ['suurim'], oppositeEn: ['smallest'], oppositeEt: ['väikseim'] },
 ] as const;
 
 function parseCli(argv: readonly string[]): CliOptions {
@@ -150,6 +164,22 @@ function isUnchangedCandidate(english: string, et: string): boolean {
   return !isStableIdentifier(english);
 }
 
+function containsAnyToken(value: string, candidates: readonly string[]): boolean {
+  const tokens = new Set(value.normalize('NFKC').toLocaleLowerCase('en').match(/\p{L}+/gu) ?? []);
+  return candidates.some((candidate) => tokens.has(candidate));
+}
+
+function hasQualifierDrift(english: string, estonian: string): boolean {
+  return QUALIFIER_OPPOSITES.some(({ en, et, oppositeEn, oppositeEt }) => {
+    const englishFirst = containsAnyToken(english, en);
+    const englishSecond = containsAnyToken(english, oppositeEn);
+    const estonianFirst = containsAnyToken(estonian, et);
+    const estonianSecond = containsAnyToken(estonian, oppositeEt);
+    return (englishFirst && !englishSecond && estonianSecond && !estonianFirst)
+      || (englishSecond && !englishFirst && estonianFirst && !estonianSecond);
+  });
+}
+
 function buildIssue(base: {
   file: string;
   row: number;
@@ -169,6 +199,24 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
     issues.push(buildIssue(
       { file, row: item.row, clueId: item.clueId, field: item.field },
       'NUMBER_DRIFT', `Numeric values differ for ${item.field}`, 'error',
+    ));
+  }
+
+  if (item.field === 'response_en'
+    && normalizeText(item.en) !== normalizeText(item.et)
+    && !isStableIdentifier(item.en)
+    && !isStableIdentifier(item.et)) {
+    issues.push(buildIssue(
+      { file, row: item.row, clueId: item.clueId, field: item.field },
+      'ANSWER_DRIFT', 'Canonical answers differ between English and Estonian', 'error',
+    ));
+  }
+
+  if (['clue_en', 'response_en', 'accepted_variants_en', 'explanation_en'].includes(item.field)
+    && hasQualifierDrift(item.en, item.et)) {
+    issues.push(buildIssue(
+      { file, row: item.row, clueId: item.clueId, field: item.field },
+      'QUALIFIER_DRIFT', `Opposite qualifier detected for ${item.field}`, 'error',
     ));
   }
 
@@ -207,6 +255,22 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
       issues.push(buildIssue({ file, row: item.row, clueId: item.clueId, field: item.field }, 'SUSPICIOUS_PROPER_NOUN_CHANGE', `Proper noun "${noun}" is missing from ${item.field} translation`, 'warning'));
     }
   }
+}
+
+function diagnoseVariantDrift(row: ParsedCsvRow, file: string, issues: TranslationDiagnosticIssue[]): void {
+  const enItems = splitEscapedItems(row.accepted_variants_en);
+  const etItems = splitEscapedItems(row.accepted_variants_et);
+  const mismatched = enItems.length !== etItems.length
+    || enItems.some((english, index) => {
+      const estonian = etItems[index] ?? '';
+      return normalizeText(english) !== normalizeText(estonian)
+        && !(isStableIdentifier(english) && isStableIdentifier(estonian));
+    });
+  if (!mismatched) return;
+  issues.push(buildIssue(
+    { file, row: row.rowNumber, clueId: row.clue_id, field: 'accepted_variants_en' },
+    'VARIANT_DRIFT', 'Accepted variants differ between English and Estonian', 'error',
+  ));
 }
 
 function extractPairs(row: ParsedCsvRow): TranslationPair[] {
@@ -264,11 +328,7 @@ function stableIssueSort(left: TranslationDiagnosticIssue, right: TranslationDia
     || left.code.localeCompare(right.code, 'en');
 }
 
-export async function runTranslationDiagnostics(
-  argv: readonly string[] = process.argv.slice(2),
-): Promise<number> {
-  const options = parseCli(argv);
-  const inputs = await readCsvInputs(options.input);
+export function diagnoseTranslations(inputs: readonly TranslationDiagnosticInput[]): TranslationDiagnosticReport {
   const issues: TranslationDiagnosticIssue[] = [];
 
   for (const { file, pack } of inputs) {
@@ -276,15 +336,24 @@ export async function runTranslationDiagnostics(
       for (const pair of extractPairs(row)) {
         diagnosePair(pair, file, issues);
       }
+      diagnoseVariantDrift(row, file, issues);
     }
   }
 
-  const report: TranslationDiagnosticReport = {
+  return {
     blocking: issues.some((issue) => issue.severity === 'error'),
     checkedRows: inputs.reduce((count, input) => count + input.pack.rows.length, 0),
     issues: issues.sort(stableIssueSort),
     exceptions: buildExceptions(issues),
   };
+}
+
+export async function runTranslationDiagnostics(
+  argv: readonly string[] = process.argv.slice(2),
+): Promise<number> {
+  const options = parseCli(argv);
+  const inputs = await readCsvInputs(options.input);
+  const report = diagnoseTranslations(inputs);
 
   publishValidationReport(options.report, { translation: report });
   return report.blocking ? 1 : 0;

@@ -3,7 +3,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
-import { runTranslationDiagnostics } from '../../../scripts/content/translationDiagnostics';
+import { parsePackCsv } from '../../../src/main/content/csvPacks';
+import { diagnoseTranslations, runTranslationDiagnostics } from '../../../scripts/content/translationDiagnostics';
 
 type CsvRow = Record<(typeof CSV_COLUMNS)[number], string>;
 
@@ -32,7 +33,11 @@ function toCsvValue(value: string): string {
 
 function writeCsv(path: string, rows: readonly CsvRow[]): void {
   const body = [CSV_COLUMNS, ...rows]
-    .map((cells) => CSV_COLUMNS.map((column) => toCsvValue(cells[column])).join(','))
+    .map((cells, index) => (
+      index === 0
+        ? CSV_COLUMNS.join(',')
+        : CSV_COLUMNS.map((column) => toCsvValue((cells as CsvRow)[column])).join(','))
+    )
     .join('\n');
   writeFileSync(path, `${body}\n`, 'utf8');
 }
@@ -68,7 +73,73 @@ function row(overrides: Partial<CsvRow>): CsvRow {
   return { ...base, ...overrides };
 }
 
+function diagnosticsFor(rows: readonly CsvRow[]) {
+  const csv = [CSV_COLUMNS.join(','), ...rows.map((item) => CSV_COLUMNS.map((column) => toCsvValue(item[column])).join(','))]
+    .join('\n');
+  return diagnoseTranslations([{ file: 'translations.csv', pack: parsePackCsv(csv) }]);
+}
+
 describe('translation diagnostics', () => {
+  it('detects numeric, canonical-answer, variant, and qualifier drift without file output', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'numeric-drift',
+        clue_en: 'In 1991 Estonia restored its independence from the Soviet Union.',
+        clue_et: 'Eesti taastas iseseisvuse Nõukogude Liidust.',
+      }),
+      row({
+        clue_id: 'answer-drift',
+        response_en: 'Lake Peipus',
+        response_et: 'Võrtsjärv',
+      }),
+      row({
+        clue_id: 'variant-drift',
+        accepted_variants_en: 'Lake Peipus;Peipsi järv',
+        accepted_variants_et: 'Võrtsjärv;Peipsi järv',
+      }),
+      row({
+        clue_id: 'variant-count-drift',
+        accepted_variants_en: 'Q123;P456',
+        accepted_variants_et: 'Q123;P456;Q789',
+      }),
+      row({
+        clue_id: 'qualifier-drift',
+        clue_en: 'Which country borders Estonia to the south?',
+        clue_et: 'Milline riik piirneb Eestiga põhjas?',
+      }),
+      row({
+        clue_id: 'reverse-qualifier-drift',
+        clue_en: 'Which country borders Estonia to the north?',
+        clue_et: 'Milline riik piirneb Eestiga lõunas?',
+      }),
+      row({
+        clue_id: 'paired-qualifiers',
+        clue_en: 'Estonia has north and south borders.',
+        clue_et: 'Eestil on põhi ja lõuna piirid.',
+      }),
+      row({
+        clue_id: 'stable-answer',
+        response_en: 'Q123',
+        response_et: 'Q123',
+        accepted_variants_en: 'https://example.com/Q123',
+        accepted_variants_et: 'https://example.com/Q123',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('numeric-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('variant-count-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('qualifier-drift')).toContain('QUALIFIER_DRIFT');
+    expect(codesFor('reverse-qualifier-drift')).toContain('QUALIFIER_DRIFT');
+    expect(codesFor('paired-qualifiers')).not.toContain('QUALIFIER_DRIFT');
+    expect(codesFor('stable-answer')).not.toEqual(expect.arrayContaining(['ANSWER_DRIFT', 'VARIANT_DRIFT']));
+    expect(report.blocking).toBe(true);
+  });
+
   it('flags translation regressions and keeps stable identifiers/url text allowed', async () => {
     const root = withTemporaryRoot();
     const input = join(root, 'translated.csv');
@@ -161,7 +232,7 @@ describe('translation diagnostics', () => {
 
     await runTranslationDiagnostics(['--input', input, '--report', report]);
     const parsed = JSON.parse(readFileSync(report, 'utf8'));
-    const exception = (parsed.translation.exceptions ?? [])[0] as
+    const exception = (parsed.translation.exceptions ?? []).find((item: { code: string }) => item.code === 'UNCHANGED_TRANSLATION') as
       { id: string; clueId: string; code: string; status: string; reviewerReason: string; correctedText: string } | undefined;
 
     expect(exception).toMatchObject({

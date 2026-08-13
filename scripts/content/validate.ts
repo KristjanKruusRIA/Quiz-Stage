@@ -364,11 +364,14 @@ export function validateProductionContent(
       continue;
     }
 
-    const missingTranslationReview = options.mode === 'release' && evidence.translationReview === null;
-    if (missingTranslationReview) {
+    const translationReviewAgrees = (row.translation_status === 'reviewed') === (evidence.translationReview !== null);
+    const translationReviewRequired = options.mode === 'release'
+      && (row.translation_status !== 'reviewed' || evidence.translationReview === null);
+    const invalidTranslationReview = !translationReviewAgrees || translationReviewRequired;
+    if (invalidTranslationReview) {
       add({
         file, row: row.rowNumber, code: 'MISSING_EVIDENCE', severity: 'error',
-        message: `Clue ${row.clue_id} requires approved release translation review`,
+        message: `Clue ${row.clue_id} requires matching reviewed translation status and evidence`,
       });
     }
 
@@ -395,7 +398,7 @@ export function validateProductionContent(
       message: `Evidence for ${row.clue_id} requires a specific independent source URL`,
     });
 
-    if (missingTranslationReview || sourceMismatch || genericSource) continue;
+    if (invalidTranslationReview || sourceMismatch || genericSource) continue;
     boundEvidenceByClueId.set(row.clue_id, evidence);
 
     const priorFact = factOwners.get(evidence.factKey);

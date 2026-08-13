@@ -392,6 +392,31 @@ describe('production content validation', () => {
       .toEqual([2, 3, 4]);
   });
 
+  it('requires CSV translation status and evidence review to agree before trusting evidence', () => {
+    const machineRow = boardRow(0, 1, {
+      pack_id: 'built-in-history', macro_topic: 'ancient', translation_status: 'machine',
+    });
+    const reviewedRow = boardRow(1, 1, {
+      pack_id: 'built-in-history', macro_topic: 'ancient', translation_status: 'reviewed',
+    });
+    const machineEvidence = evidenceFor(machineRow, '01-history');
+    const unreviewedEvidence = evidenceFor(reviewedRow, '01-history', { translationReview: null });
+
+    const machineRelease = validateProductionContent([input('machine.csv', [machineRow])], {
+      mode: 'release', evidenceByClueId: evidenceMap([machineEvidence]),
+    });
+    const reviewedBatch = validateProductionContent([input('reviewed.csv', [reviewedRow])], {
+      mode: 'batch', evidenceByClueId: evidenceMap([unreviewedEvidence]),
+    });
+    const reviewedRelease = validateProductionContent([input('reviewed.csv', [reviewedRow])], {
+      mode: 'release', evidenceByClueId: evidenceMap([unreviewedEvidence]),
+    });
+
+    expect(machineRelease.issues).toContainEqual(expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE', severity: 'error' }));
+    expect(reviewedBatch.issues).toContainEqual(expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE', severity: 'error' }));
+    expect(reviewedRelease.issues).toContainEqual(expect.objectContaining({ row: 2, code: 'MISSING_EVIDENCE', severity: 'error' }));
+  });
+
   it('rejects generic, non-entity Wikidata, and OpenTDB supporting URLs', () => {
     const generic = qualityFixture('generic-source.csv');
     const wikidataRow = boardRow(1, 1, {
