@@ -584,6 +584,8 @@ Expected: FAIL because verification/publication modules do not exist.
 - include five deterministic sample clues per difficulty/round cell (or 15 per Final difficulty), all unresolved issues, and SHA-256 hashes of the three work artifacts;
 - write a report only after all checks finish, with `blocking: true` on failure.
 
+If an artifact is missing, unreadable, or cannot be parsed early enough to construct the full report (including all three hashes and both validation results), atomically replace any prior report with a strict discriminated `preflight-failure` report. That report contains the version, batch ID, `kind: 'preflight-failure'`, `blocking: true`, and deterministically ordered fatal issues. It is never accepted by `publishBatch`. No failed verification attempt may leave an older passing report publishable.
+
 - [ ] **Step 4: Implement atomic publication**
 
 Re-read and hash all artifacts, require `blocking: false`, then write temporary files beside accepted destinations using exclusive creation and rename them into place. If any write/rename fails, remove only the publisher's own temporary files and preserve every prior accepted artifact. Publish the report last.
