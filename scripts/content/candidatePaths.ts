@@ -1,13 +1,15 @@
 import { lstatSync } from 'node:fs';
-import { isAbsolute, relative, resolve } from 'node:path';
+import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const CANDIDATE_ROOT = resolve('content/imports');
-const WORK_ROOT = resolve('content/work');
+const REPOSITORY_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+export const CANDIDATE_ROOT = resolve(REPOSITORY_ROOT, 'content/imports');
+export const WORK_ROOT = resolve(REPOSITORY_ROOT, 'content/work');
 
 function assertSafeDescendant(path: string, root: string): string {
   const destination = resolve(path);
   const relativePath = relative(root, destination);
-  if (relativePath === '' || isAbsolute(relativePath) || relativePath === '..' || relativePath.startsWith(`..${process.platform === 'win32' ? '\\' : '/'}`)) {
+  if (relativePath === '' || isAbsolute(relativePath) || relativePath === '..' || relativePath.startsWith(`..${sep}`)) {
     throw new Error(`Destination must be under ${root}: ${destination}`);
   }
 

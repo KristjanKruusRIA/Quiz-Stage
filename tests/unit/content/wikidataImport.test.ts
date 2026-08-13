@@ -1,4 +1,5 @@
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
@@ -235,5 +236,37 @@ describe('Wikidata recipes and mapping contracts', () => {
     expect(mock.calls).toHaveLength(0);
     expect(existsSync(output)).toBe(false);
     expect(existsSync(cache)).toBe(false);
+  });
+
+  it('rechecks the output ancestor after network activity before appending candidates', async () => {
+    const directory = temporaryDirectory();
+    const outputDirectory = resolve(directory, 'mutable-output');
+    const outsideDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-outside-'));
+    temporaryDirectories.push(outsideDirectory);
+    mkdirSync(outputDirectory);
+    const output = resolve(outputDirectory, 'wikidata-candidates.jsonl');
+    const cache = resolve(directory, 'wikidata-cache.json');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('historical-events-page1.json') },
+    ]);
+    let swapped = false;
+
+    await expect(fetchWikidataCandidates({
+      output, cache, recipes: ['historical-events'], resume: false, pageSize: 500, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: async (url, init) => {
+          const response = await mock.request(url, init);
+          if (!swapped) {
+            rmSync(outputDirectory, { recursive: true });
+            symlinkSync(outsideDirectory, outputDirectory, 'junction');
+            swapped = true;
+          }
+          return response;
+        },
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/symbolic link/i);
+    expect(existsSync(resolve(outsideDirectory, 'wikidata-candidates.jsonl'))).toBe(false);
   });
 });

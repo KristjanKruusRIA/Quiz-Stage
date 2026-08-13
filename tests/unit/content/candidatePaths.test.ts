@@ -7,7 +7,10 @@ import {
   symlinkSync,
   writeFileSync,
 } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { spawnSync } from 'node:child_process';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   assertCandidateOutputPath,
@@ -32,6 +35,16 @@ function temporaryDirectory(root: 'imports' | 'work'): string {
   const directory = mkdtempSync(resolve(parent, '.task-6-test-'));
   temporaryDirectories.push(directory);
   return directory;
+}
+
+function foreignTemporaryDirectory(): string {
+  const directory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-task-6-foreign-'));
+  temporaryDirectories.push(directory);
+  return directory;
+}
+
+function tsxImportUrl(): string {
+  return pathToFileURL(resolve('node_modules/tsx/dist/loader.mjs')).href;
 }
 
 describe('candidate and authoring-work destination boundaries', () => {
@@ -68,6 +81,36 @@ describe('candidate and authoring-work destination boundaries', () => {
       .toBe(resolve('content/imports/opentdb-candidates.jsonl'));
     expect(assertWorkOutputPath(resolve('content/work/01-history/worklist.jsonl')))
       .toBe(resolve('content/work/01-history/worklist.jsonl'));
+  });
+
+  it('rejects a foreign content tree when the exported guards run from that CWD', () => {
+    const foreignDirectory = foreignTemporaryDirectory();
+    const moduleUrl = pathToFileURL(resolve('scripts/content/candidatePaths.ts')).href;
+    const script = [
+      `import { assertCandidateOutputPath } from ${JSON.stringify(moduleUrl)};`,
+      `process.chdir(${JSON.stringify(foreignDirectory)});`,
+      "assertCandidateOutputPath(resolve('content/imports/candidates.jsonl'));",
+    ].join('\n');
+    const result = spawnSync(process.execPath, ['--import', tsxImportUrl(), '--input-type=module', '--eval', `import { resolve } from 'node:path';\n${script}`], {
+      cwd: foreignDirectory,
+      encoding: 'utf8',
+    });
+
+    expect(result.status).not.toBe(0);
+    expect(result.stderr).toMatch(/content[\\/]imports/i);
+  });
+
+  it('rejects a foreign content/work output through the CLI', () => {
+    const foreignDirectory = foreignTemporaryDirectory();
+    const script = resolve('scripts/content/buildAuthoringWorklist.ts');
+    const output = resolve(foreignDirectory, 'content/work/01-history/worklist.jsonl');
+    const result = spawnSync(process.execPath, [
+      '--import', tsxImportUrl(), script, '--batch', '01-history', '--output', output,
+    ], { cwd: foreignDirectory, encoding: 'utf8' });
+
+    expect(result.status).toBe(2);
+    expect(result.stderr).toMatch(/content[\\/]work/i);
+    expect(existsSync(output)).toBe(false);
   });
 });
 

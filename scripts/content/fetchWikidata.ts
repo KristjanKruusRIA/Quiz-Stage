@@ -2,7 +2,7 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
-import { assertCandidateOutputPath } from './candidatePaths';
+import { CANDIDATE_ROOT, assertCandidateOutputPath } from './candidatePaths';
 import {
   WIKIDATA_RECIPE_NAMES,
   buildWikidataRecipeQuery,
@@ -17,8 +17,8 @@ import {
 } from './mapWikidataCandidates';
 
 const USER_AGENT = 'Quiz Stage content fetcher/0.1 (+Wikidata candidate ingestion)';
-const DEFAULT_OUTPUT_PATH = resolve('content/imports/wikidata-candidates.jsonl');
-const DEFAULT_CACHE_PATH = resolve('content/imports/wikidata-cache.json');
+const DEFAULT_OUTPUT_PATH = resolve(CANDIDATE_ROOT, 'wikidata-candidates.jsonl');
+const DEFAULT_CACHE_PATH = resolve(CANDIDATE_ROOT, 'wikidata-cache.json');
 const DEFAULT_PAGE_SIZE = WIKIDATA_MAX_ROWS;
 const DEFAULT_MAX_ATTEMPTS = 5;
 const DEFAULT_MIN_DELAY_MS = 1_000;
@@ -114,12 +114,22 @@ function buildCache(path: string): WikidataCache {
     get: (url) => document.entries[url],
     set: (url, body) => { document.entries[url] = body; },
     publish: () => {
+      assertCandidateOutputPath(path);
       ensureRegularDirectory(path);
       const temporary = `${path}.${randomUUID()}.tmp`;
       try {
-        writeFileSync(temporary, `${JSON.stringify(document, null, 2)}\n`, { flag: 'w' });
+        assertCandidateOutputPath(path);
+        assertCandidateOutputPath(temporary);
+        writeFileSync(temporary, `${JSON.stringify(document, null, 2)}\n`, { flag: 'wx' });
+        assertCandidateOutputPath(path);
+        assertCandidateOutputPath(temporary);
         renameSync(temporary, path);
-      } finally { try { unlinkSync(temporary); } catch { /* already renamed */ } }
+      } finally {
+        try {
+          assertCandidateOutputPath(temporary);
+          unlinkSync(temporary);
+        } catch { /* already renamed or no longer safe */ }
+      }
     },
   };
 }
@@ -184,6 +194,7 @@ function loadSeenCandidateKeys(path: string): Set<string> {
 function writeCandidates(path: string, candidates: readonly WikidataMappedCandidate[]): void {
   if (candidates.length === 0) return;
   const payload = `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
+  assertCandidateOutputPath(path);
   appendFileSync(path, payload);
 }
 
@@ -298,9 +309,12 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
   assertCandidateOutputPath(options.output);
   assertCandidateOutputPath(options.cache);
   if (!options.resume && existsSync(options.output)) {
+    assertCandidateOutputPath(options.output);
     writeFileSync(options.output, '', { flag: 'w' });
   }
+  assertCandidateOutputPath(options.output);
   mkdirSync(dirname(options.output), { recursive: true });
+  assertCandidateOutputPath(options.cache);
   mkdirSync(dirname(options.cache), { recursive: true });
   const result = await fetchWikidataCandidates({ ...options, dependencies });
   process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);

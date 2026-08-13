@@ -2,7 +2,7 @@ import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, exis
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
-import { assertCandidateOutputPath } from './candidatePaths';
+import { CANDIDATE_ROOT, assertCandidateOutputPath } from './candidatePaths';
 import {
   adaptOpenTdbQuestion, buildOpenTdbDuplicateKey, type OpenTdbAdaptedCandidate,
   type OpenTdbDecodedQuestion, type OpenTdbRawQuestion, OPEN_TDB_SOURCE_LICENSE, OPEN_TDB_SOURCE_TITLE,
@@ -10,8 +10,8 @@ import {
 } from './adaptOpenTdb';
 
 const USER_AGENT = 'Quiz Stage content fetcher/0.1 (+OpenTDB candidate ingestion)';
-const DEFAULT_OUTPUT_PATH = resolve('content/imports/opentdb-candidates.jsonl');
-const DEFAULT_CHECKPOINT_PATH = resolve('content/imports/opentdb-checkpoint.json');
+const DEFAULT_OUTPUT_PATH = resolve(CANDIDATE_ROOT, 'opentdb-candidates.jsonl');
+const DEFAULT_CHECKPOINT_PATH = resolve(CANDIDATE_ROOT, 'opentdb-checkpoint.json');
 const DEFAULT_PAGE_SIZE = 50;
 const DEFAULT_MIN_REQUEST_DELAY_MS = 5_000;
 const DEFAULT_MAX_ATTEMPTS = 5;
@@ -210,10 +210,15 @@ function loadCheckpoint(path: string): OpenTdbCheckpointState | null {
 
 function writeCheckpoint(path: string, state: OpenTdbCheckpointState): void {
   const destination = resolve(path);
+  assertCandidateOutputPath(destination);
   ensureRegularDirectory(destination);
   const temporary = `${destination}.${randomUUID()}.tmp`;
   const payload = `${JSON.stringify(state)}\n`;
+  assertCandidateOutputPath(destination);
+  assertCandidateOutputPath(temporary);
   writeFileSync(temporary, payload, { flag: 'wx' });
+  assertCandidateOutputPath(destination);
+  assertCandidateOutputPath(temporary);
   renameSync(temporary, destination);
 }
 
@@ -232,6 +237,7 @@ function loadExistingDuplicateKeys(output: string): Set<string> {
 function writeCandidates(output: string, candidates: OpenTdbAdaptedCandidate[]): void {
   if (candidates.length === 0) return;
   const payload = `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
+  assertCandidateOutputPath(output);
   appendFileSync(output, payload);
 }
 
@@ -241,6 +247,7 @@ async function fetchOpenTdbCandidates(options: OpenTdbFetchOptions): Promise<Ope
   const dependencies = options.dependencies ?? defaultDependencies();
   ensureRegularDirectory(options.output);
   if (options.resume && !existsSync(options.output)) {
+    assertCandidateOutputPath(options.output);
     writeFileSync(options.output, '', { flag: 'wx' });
   }
   const outputCandidates = options.resume ? loadExistingDuplicateKeys(options.output) : new Set<string>();
@@ -340,10 +347,13 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
 
   assertCandidateOutputPath(options.output);
   assertCandidateOutputPath(options.checkpoint);
+  assertCandidateOutputPath(options.output);
   mkdirSync(dirname(options.output), { recursive: true });
+  assertCandidateOutputPath(options.checkpoint);
   mkdirSync(dirname(options.checkpoint), { recursive: true });
 
   if (!options.resume && existsSync(options.output)) {
+    assertCandidateOutputPath(options.output);
     writeFileSync(options.output, '', { flag: 'w' });
   }
   const result = await fetchOpenTdbCandidates({ ...options, dependencies });

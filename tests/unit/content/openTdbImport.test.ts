@@ -1,4 +1,5 @@
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
@@ -259,5 +260,38 @@ describe('OpenTDB candidate fetcher', () => {
     expect(mock.calls).toHaveLength(0);
     expect(existsSync(output)).toBe(false);
     expect(existsSync(checkpoint)).toBe(false);
+  });
+
+  it('rechecks the output ancestor after network activity before appending candidates', async () => {
+    const directory = temporaryDirectory();
+    const outputDirectory = resolve(directory, 'mutable-output');
+    const outsideDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-openTdb-outside-'));
+    temporaryDirectories.push(outsideDirectory);
+    mkdirSync(outputDirectory);
+    const output = resolve(outputDirectory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('page.json') },
+    ]);
+    let swapped = false;
+
+    await expect(fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: 1, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: async (url, init) => {
+          if (!swapped) {
+            rmSync(outputDirectory, { recursive: true });
+            symlinkSync(outsideDirectory, outputDirectory, 'junction');
+            swapped = true;
+          }
+          return mock.request(url, init);
+        },
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/symbolic link/i);
+    expect(existsSync(resolve(outsideDirectory, 'opentdb-candidates.jsonl'))).toBe(false);
   });
 });

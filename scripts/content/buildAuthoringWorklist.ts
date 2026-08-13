@@ -3,12 +3,17 @@ import { mkdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from '
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { OpenTdbAdaptedCandidate } from './adaptOpenTdb';
-import { assertCandidateOutputPath, assertWorkOutputPath } from './candidatePaths';
+import {
+  CANDIDATE_ROOT,
+  WORK_ROOT,
+  assertCandidateOutputPath,
+  assertWorkOutputPath,
+} from './candidatePaths';
 import type { WikidataMappedCandidate } from './mapWikidataCandidates';
 import { getProductionBatch } from './productionBatches';
 
-const DEFAULT_OPEN_TDB_INPUT = resolve('content/imports/opentdb-candidates.jsonl');
-const DEFAULT_WIKIDATA_INPUT = resolve('content/imports/wikidata-candidates.jsonl');
+const DEFAULT_OPEN_TDB_INPUT = resolve(CANDIDATE_ROOT, 'opentdb-candidates.jsonl');
+const DEFAULT_WIKIDATA_INPUT = resolve(CANDIDATE_ROOT, 'wikidata-candidates.jsonl');
 
 export type AuthoringWorkItem = {
   batchId: string;
@@ -87,13 +92,21 @@ export function buildAuthoringWorklist(options: BuildAuthoringWorklistOptions): 
   ].sort(compareWorkItems);
   const payload = `${workItems.map((item) => JSON.stringify(item)).join('\n')}\n`;
 
+  assertWorkOutputPath(output);
   mkdirSync(dirname(output), { recursive: true });
   const temporary = `${output}.${randomUUID()}.tmp`;
   try {
+    assertWorkOutputPath(output);
+    assertWorkOutputPath(temporary);
     writeFileSync(temporary, payload, { flag: 'wx' });
+    assertWorkOutputPath(output);
+    assertWorkOutputPath(temporary);
     renameSync(temporary, output);
   } finally {
-    try { unlinkSync(temporary); } catch { /* already renamed */ }
+    try {
+      assertWorkOutputPath(temporary);
+      unlinkSync(temporary);
+    } catch { /* already renamed or no longer safe */ }
   }
   return workItems;
 }
@@ -121,7 +134,7 @@ export function runBuildAuthoringWorklist(argv: string[] = process.argv.slice(2)
     batchId: batch.id,
     openTdbInput: DEFAULT_OPEN_TDB_INPUT,
     wikidataInput: DEFAULT_WIKIDATA_INPUT,
-    output: resolve(output ?? `content/work/${batch.id}/worklist.jsonl`),
+    output: output === undefined ? resolve(WORK_ROOT, batch.id, 'worklist.jsonl') : resolve(output),
   });
   return 0;
 }
