@@ -352,8 +352,8 @@ git commit -m "feat(content): encode production batch allocations"
 expect(normalizeForNearDuplicate('Q42: In 1969, which mission landed?'))
   .toBe('in which mission landed');
 expect(nearDuplicateSimilarity(
-  'This painter created the ceiling of the Sistine Chapel',
-  'Which painter created the ceiling of the Sistine Chapel?',
+  'This painter created the famous ceiling frescoes inside the Sistine Chapel in Vatican City',
+  'Which painter created the famous ceiling frescoes inside the Sistine Chapel in Vatican City?',
 )).toBeGreaterThanOrEqual(0.8);
 expect(nearDuplicateSimilarity('Red Planet', 'red planet')).toBe(1);
 ```
@@ -374,7 +374,7 @@ Extend options exactly as follows:
 export interface ProductionValidationOptions {
   mode: ValidationMode;
   allowMissingEt?: boolean;
-  reviewedIds?: readonly string[];
+  reviewedExceptionIds?: readonly string[];
   evidenceByClueId?: ReadonlyMap<string, ContentEvidence>;
   batch?: ProductionBatchDefinition;
 }
