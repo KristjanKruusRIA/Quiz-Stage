@@ -1,6 +1,7 @@
 import {
-  mkdtempSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync,
+  copyFileSync, mkdtempSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync,
 } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -16,7 +17,7 @@ import {
   FINAL_BATCH, PRODUCTION_BATCHES, type ProductionBatchDefinition,
 } from '../../../scripts/content/productionBatches';
 import { RELEASE_THRESHOLDS, type ReleaseSummary } from '../../../scripts/content/releaseThresholds';
-import { inspectSeed, runVerifySeed } from '../../../scripts/content/verifySeed';
+import { inspectSeed, readReleaseInventoryReport, runVerifySeed } from '../../../scripts/content/verifySeed';
 
 interface InventoryReport {
   validation: {
@@ -214,6 +215,10 @@ function oneRowFixture(root: string): { input: string; evidence: ContentEvidence
   return { input, evidence, evidencePath };
 }
 
+function sha256(path: string): string {
+  return createHash('sha256').update(readFileSync(path)).digest('hex');
+}
+
 function openSeed() {
   const database = openDatabase({ filePath: seedPath, readonly: true });
   const repository = new ContentRepository(database);
@@ -383,6 +388,13 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(readFileSync(secondOutput)).toEqual(readFileSync(firstOutput));
     expect(first.input.sha256).toBe(second.input.sha256);
     expect(first.input.evidence).toMatchObject({ records: 6150, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
+    const firstReportData = JSON.parse(readFileSync(firstReport, 'utf8'));
+    expect(firstReportData.validation).toMatchObject({
+      mode: 'release', blocking: false,
+      summary: { boardClues: 6000, categorySets: 1200, finalClues: 150 },
+    });
+    expect(firstReportData.validation).not.toHaveProperty('validation');
+    expect(readReleaseInventoryReport(firstReport).validation.summary).toEqual(firstReportData.validation.summary);
 
     const database = openDatabase({ filePath: firstOutput, readonly: true });
     connections.push(database);
@@ -418,6 +430,97 @@ describe('evidence-bound production seed infrastructure', () => {
     connections.splice(connections.indexOf(tampered), 1);
     expect(() => inspectSeed(firstOutput, fixture.evidenceByClueId)).toThrow(/v2 evidence citation/i);
   }, 120_000);
+
+  it('publishes verification reports only after validation, sources, citations, hash, and inventory pass', async () => {
+    const directory = temporaryDirectory();
+    const fixture = writeReleaseFixture(directory);
+    const baseSeed = join(directory, 'base.sqlite');
+    const report = join(directory, 'release.json');
+    const seed = join(directory, 'candidate.sqlite');
+    await buildProductionSeed({ inputs: fixture.inputs, evidence: fixture.evidence, output: baseSeed, report });
+    const reportData = JSON.parse(readFileSync(report, 'utf8'));
+    reportData.sentinel = 'preserve until every gate passes';
+    const writeReport = (value = reportData) => writeFileSync(report, `${JSON.stringify(value, null, 2)}\n`);
+    const verify = (runSourceCheck: () => Promise<number>) => runVerifySeed([
+      ...fixture.inputs.flatMap((input) => ['--input', input]),
+      ...fixture.evidence.flatMap((evidence) => ['--evidence', evidence]),
+      '--report', report, '--seed', seed, '--source-cache', join(directory, 'source-cache.json'),
+    ], { runSourceCheck });
+    const expectPreserved = async (run: () => Promise<unknown>, expectedBytes: Buffer) => {
+      await expect(run()).rejects.toThrow();
+      expect(readFileSync(report)).toEqual(expectedBytes);
+      expect(readdirSync(directory).filter((name) => name.includes('.verify.tmp'))).toEqual([]);
+    };
+
+    copyFileSync(baseSeed, seed);
+    writeReport();
+    const sourceFailureBytes = readFileSync(report);
+    await expect(verify(async () => 1)).resolves.toBe(1);
+    expect(readFileSync(report)).toEqual(sourceFailureBytes);
+    expect(readdirSync(directory).filter((name) => name.includes('.verify.tmp'))).toEqual([]);
+
+    const firstEvidencePath = join(directory, 'evidence', `${PRODUCTION_BATCHES[0].id}.jsonl`);
+    const originalEvidence = readFileSync(firstEvidencePath, 'utf8');
+    const evidenceLines = originalEvidence.trimEnd().split('\n');
+    const mismatchedEvidence = JSON.parse(evidenceLines[0]);
+    mismatchedEvidence.batchId = PRODUCTION_BATCHES[1].id;
+    evidenceLines[0] = JSON.stringify(mismatchedEvidence);
+    writeFileSync(firstEvidencePath, `${evidenceLines.join('\n')}\n`);
+    writeReport();
+    const validationFailureBytes = readFileSync(report);
+    await expect(verify(async () => 0)).resolves.toBe(1);
+    expect(readFileSync(report)).toEqual(validationFailureBytes);
+    expect(readdirSync(directory).filter((name) => name.includes('.verify.tmp'))).toEqual([]);
+    writeFileSync(firstEvidencePath, originalEvidence);
+
+    for (const tamperedSource of [
+      {
+        format: 'quiz-stage-csv-v1', title: fixture.sample.supportingSource.title,
+        url: fixture.sample.supportingSource.url, license: fixture.sample.supportingSource.license,
+        retrievedAt: fixture.sample.supportingSource.retrievedAt, translationStatus: 'reviewed',
+      },
+      {
+        format: 'quiz-stage-csv-v2', title: fixture.sample.supportingSource.title,
+        url: fixture.sample.supportingSource.url, license: fixture.sample.supportingSource.license,
+        retrievedAt: fixture.sample.supportingSource.retrievedAt, translationStatus: 'reviewed',
+        sourceId: 'source:mismatch', factualVerifiedAt: fixture.sample.factualReview.reviewedAt,
+      },
+    ]) {
+      copyFileSync(baseSeed, seed);
+      const database = openDatabase({ filePath: seed });
+      database.prepare('UPDATE clues SET source = ? WHERE id = ?')
+        .run(JSON.stringify(tamperedSource), fixture.sample.clueId);
+      database.close();
+      writeReport();
+      await expectPreserved(() => verify(async () => 0), readFileSync(report));
+    }
+
+    copyFileSync(baseSeed, seed);
+    const badHashReport = structuredClone(reportData);
+    badHashReport.output.sha256 = '0'.repeat(64);
+    writeReport(badHashReport);
+    await expectPreserved(() => verify(async () => 0), readFileSync(report));
+
+    copyFileSync(baseSeed, seed);
+    const inventoryDatabase = openDatabase({ filePath: seed });
+    inventoryDatabase.prepare(
+      "UPDATE category_sets SET difficulty = 'medium' WHERE id = (SELECT id FROM category_sets WHERE difficulty = 'easy' LIMIT 1)",
+    ).run();
+    inventoryDatabase.close();
+    const inventoryReport = structuredClone(reportData);
+    inventoryReport.output.sha256 = sha256(seed);
+    writeReport(inventoryReport);
+    await expectPreserved(() => verify(async () => 0), readFileSync(report));
+
+    copyFileSync(baseSeed, seed);
+    writeReport();
+    await expect(verify(async () => 0)).resolves.toBe(0);
+    const published = JSON.parse(readFileSync(report, 'utf8'));
+    expect(published.validation).toMatchObject({ mode: 'release', blocking: false });
+    expect(published.validation).not.toHaveProperty('validation');
+    expect(published.output.sha256).toBe(sha256(seed));
+    expect(published.sentinel).toBe('preserve until every gate passes');
+  }, 180_000);
 });
 
 describe('production seed', () => {

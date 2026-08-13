@@ -113,7 +113,7 @@ export async function buildProductionSeed(
       },
       inventory,
     };
-    publishValidationReport(args.report, report);
+    publishValidationReport(args.report, report, { placement: 'top-level' });
 
     return {
       ...inventory,

@@ -577,6 +577,7 @@ export function validateProductionContent(
 export interface ReportPublicationOptions {
   rename?: (from: string, to: string) => void;
   createTemporaryId?: () => string;
+  placement?: 'validation' | 'top-level';
 }
 
 function assertNoSymlinkAncestors(path: string): void {
@@ -611,8 +612,16 @@ export function publishValidationReport(path: string, validation: unknown, optio
     if (lstatSync(candidate, { throwIfNoEntry: false }) === undefined) { temporary = candidate; break; }
   }
   if (temporary === '') throw new Error('Could not allocate a unique validation report temporary file');
+  if (options.placement === 'top-level'
+    && (validation === null || typeof validation !== 'object' || Array.isArray(validation))) {
+    throw new Error('Top-level report publication requires a JSON object');
+  }
+  const merged = options.placement === 'top-level'
+    ? { ...existing, ...(validation as Record<string, unknown>) }
+    : { ...existing, validation };
+
   try {
-    writeFileSync(temporary, `${JSON.stringify({ ...existing, validation }, null, 2)}\n`, { flag: 'wx' });
+    writeFileSync(temporary, `${JSON.stringify(merged, null, 2)}\n`, { flag: 'wx' });
     (options.rename ?? renameSync)(temporary, destination);
   } finally {
     try { unlinkSync(temporary); } catch { /* absent after successful rename */ }

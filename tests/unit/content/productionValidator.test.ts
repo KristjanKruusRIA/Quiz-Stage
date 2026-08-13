@@ -841,6 +841,38 @@ describe('validator CLI boundaries and report publication', () => {
     expect(JSON.parse(readFileSync(report, 'utf8')).translation.retained).toBe(true);
   });
 
+  it('publishes a complete report at top level only when explicitly requested', () => {
+    const directory = temporaryDirectory();
+    const report = join(directory, 'release.json');
+    writeFileSync(report, JSON.stringify({ translation: { retained: true }, stale: true }));
+    const release = {
+      generatedAt: '2026-08-13T12:00:00.000Z',
+      mode: 'release',
+      validation: { mode: 'release', blocking: false, summary: { boardClues: 6000 } },
+      input: { sha256: 'input' }, output: { sha256: 'seed' }, inventory: { boardClues: 6000 },
+    };
+
+    publishValidationReport(report, release, { placement: 'top-level' });
+
+    expect(JSON.parse(readFileSync(report, 'utf8'))).toEqual({
+      translation: { retained: true }, stale: true, ...release,
+    });
+  });
+
+  it('keeps nested placement as the default even for report-shaped payloads', () => {
+    const directory = temporaryDirectory();
+    const report = join(directory, 'validation.json');
+    const reportShapedValidation = {
+      generatedAt: '2026-08-13T12:00:00.000Z',
+      input: { sha256: 'not-a-release-report' },
+      mode: 'batch', blocking: false, summary: {}, issues: [], exceptions: [],
+    };
+
+    publishValidationReport(report, reportShapedValidation);
+
+    expect(JSON.parse(readFileSync(report, 'utf8'))).toEqual({ validation: reportShapedValidation });
+  });
+
   it('preserves the prior report when temporary write or rename fails', () => {
     const directory = temporaryDirectory();
     const report = join(directory, 'report.json');

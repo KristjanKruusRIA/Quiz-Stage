@@ -381,7 +381,7 @@ export async function runTranslationDiagnostics(
   const inputs = await readCsvInputs(options.input);
   const report = diagnoseTranslations(inputs);
 
-  publishValidationReport(options.report, { translation: report });
+  publishValidationReport(options.report, { translation: report }, { placement: 'top-level' });
   return report.blocking ? 1 : 0;
 }
 
