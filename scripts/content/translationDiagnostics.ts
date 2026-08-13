@@ -304,6 +304,7 @@ function extractPairs(row: ParsedCsvRow): TranslationPair[] {
     const english = row[field.en];
     const estonian = row[field.et];
     if (field.en === 'accepted_variants_en') {
+      if (english === '' && estonian === '') continue;
       const enItems = splitEscapedItems(english);
       const etItems = splitEscapedItems(estonian);
       const count = Math.max(enItems.length, etItems.length, 1);

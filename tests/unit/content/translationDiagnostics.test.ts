@@ -80,6 +80,30 @@ function diagnosticsFor(rows: readonly CsvRow[]) {
 }
 
 describe('translation diagnostics', () => {
+  it('skips absent variants while keeping missing Estonian variants blocking', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'no-variants',
+        accepted_variants_en: '',
+        accepted_variants_et: '',
+      }),
+      row({
+        clue_id: 'missing-estonian-variant',
+        accepted_variants_en: 'Alternative',
+        accepted_variants_et: '',
+      }),
+    ]);
+    const issuesFor = (clueId: string) => report.issues.filter((issue) => issue.clueId === clueId);
+
+    expect(issuesFor('no-variants')).toEqual([]);
+    expect(report.exceptions.filter((item) => item.clueId === 'no-variants')).toEqual([]);
+    expect(issuesFor('missing-estonian-variant')).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'BLANK_TRANSLATION', field: 'accepted_variants_en', severity: 'error' }),
+      expect.objectContaining({ code: 'VARIANT_DRIFT', field: 'accepted_variants_en', severity: 'error' }),
+    ]));
+    expect(report.blocking).toBe(true);
+  });
+
   it('detects numeric, canonical-answer, variant, and qualifier drift without file output', () => {
     const report = diagnosticsFor([
       row({
