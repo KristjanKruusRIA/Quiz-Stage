@@ -73,3 +73,55 @@ Exit code: 0
 - Existing retry, rate-limit, resume/deduplication, cache/checkpoint, timeout, pagination, and atomic-write logic was not replaced. Focused regression tests stayed green.
 - Pre-existing dirty WIP in `package.json`, both fetchers, the Wikidata mapper, and `wikidataImport.test.ts` remains unstaged and was not reset, stashed, or included. Other repository WIP remains untouched.
 - No public-contract ambiguity remains. No full-suite claim is made beyond the requested focused tests, typecheck, and focused ESLint.
+
+## Fix round 1/5: repository anchoring and mutation-time revalidation
+
+### Reviewer findings addressed
+
+- Anchored `CANDIDATE_ROOT` and `WORK_ROOT` to `candidatePaths.ts`'s repository location instead of `process.cwd()`. Fetcher/worklist defaults now use those anchored roots; explicit relative CLI paths still resolve normally and are rejected when they land in a foreign `content` tree.
+- Retained the initial pre-side-effect guards and added immediate revalidation of the exact constrained destination and its ancestors before each output/checkpoint/cache/worklist `mkdir`, append, write, temporary creation, and rename.
+- Revalidated temporary paths as well as final paths before atomic rename, retained OpenTDB/worklist exclusive temporary creation, and changed the Wikidata cache temporary write from `w` to `wx`.
+- No native `openat` abstraction was added; the obvious asynchronous network-to-write gap is closed while the unavoidable syscall-level race remains explicitly out of scope.
+
+### TDD evidence
+
+RED:
+
+```text
+npm run test:run -- tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Test Files  3 failed (3)
+Tests       4 failed | 18 passed (22)
+```
+
+The foreign-CWD exported guard returned success and the CLI reached foreign candidate inputs. Both Windows junction-swap fixtures also proved the race by allowing the fetchers to complete and create candidate files outside the trusted tree.
+
+GREEN:
+
+```text
+npm run test:run -- tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Test Files  3 passed (3)
+Tests       22 passed (22)
+Exit code: 0
+```
+
+```text
+npm run typecheck
+Exit code: 0
+```
+
+```text
+npx eslint scripts/content/candidatePaths.ts scripts/content/buildAuthoringWorklist.ts scripts/content/fetchOpenTdb.ts scripts/content/fetchWikidata.ts tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts
+Exit code: 0
+```
+
+### Selective staging and commit
+
+- Fully staged fix-only files: `candidatePaths.ts`, `buildAuthoringWorklist.ts`, `candidatePaths.test.ts`, and `openTdbImport.test.ts`.
+- Applied index-only patches for both fetchers and `wikidataImport.test.ts` so the pre-existing OpenTDB import cleanup, Wikidata timeout/pagination changes, and Wikidata fixture/call-count changes stayed unstaged.
+- `git diff --cached --check` passed before commit.
+- Commit: `3b2b500 fix(content): close candidate path races`.
+
+### Concerns
+
+- The reviewer clarification confirms that the source answer within OpenTDB `rawFact` is allowed immutable candidate material. The worklist still emits no authored/release answer field or generated answer prose.
+- All pre-existing dirty WIP remains present and unstaged. No reset, stash, or discard operation was used.
