@@ -183,6 +183,26 @@ describe('production content validation', () => {
     }));
   });
 
+  it('does not waive generated placeholder records in release mode', () => {
+    const rows = twelveValidSets();
+    rows[0] = {
+      ...rows[0],
+      clue_en: 'History topic 1 tier 1 asks for a generated reference.',
+      response_en: 'The generated answer for History topic 1 tier 1',
+    };
+
+    const result = validateProductionContent([input('placeholder.csv', rows)], {
+      mode: 'release',
+      reviewedExceptionIds: ['placeholder:clue-0-1'],
+    });
+
+    expect(result.issues).toContainEqual(expect.objectContaining({
+      row: 2,
+      code: 'PLACEHOLDER_CONTENT',
+      severity: 'error',
+    }));
+  });
+
   it('emits every release threshold shortage independently', () => {
     const rows = twelveValidSets();
     const result = validateProductionContent([input('short.csv', rows)], { mode: 'release' });

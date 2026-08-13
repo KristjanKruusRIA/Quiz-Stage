@@ -20,14 +20,6 @@ function requireMatch(result: ReturnType<typeof selectMatchContent>): SelectedMa
   return result;
 }
 
-function maxMacroTopicCount(match: SelectedMatch, boardIndex: number): number {
-  const counts = match.boards[boardIndex].categories.reduce<Record<string, number>>((result, category) => {
-    result[category.macroTopic] = (result[category.macroTopic] ?? 0) + 1;
-    return result;
-  }, {});
-  return Math.max(...Object.values(counts));
-}
-
 function namedSet(
   id: string,
   round: 'round-one' | 'round-two',

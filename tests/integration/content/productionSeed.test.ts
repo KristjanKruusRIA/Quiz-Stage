@@ -79,6 +79,7 @@ describe('production seed', () => {
     const report = loadInventoryReport();
     const summary = report.validation.summary;
     expect(report.validation.mode).toBe('release');
+    expect(report.validation.blocking).toBe(false);
     expect(report.validation.issues.filter((issue) => issue.severity === 'error')).toEqual([]);
     expect(summary).toEqual(expect.objectContaining(RELEASE_THRESHOLDS));
 
