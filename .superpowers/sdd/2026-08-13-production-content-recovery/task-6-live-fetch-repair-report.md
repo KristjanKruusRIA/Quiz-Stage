@@ -51,3 +51,4 @@ Base: `b545b05`
 
 - `npm run content:fetch-opentdb -- --output ...` was rejected by the installed Windows npm argument parser before the script ran; the direct `npx tsx` command above was used instead. No candidate file was created by the rejected command.
 - The pre-existing 500-line Wikidata file remains partial unpublished output. It was neither manually deleted nor staged.
+- A post-commit typecheck exposed a duplicated `response_message` declaration introduced while preserving overlapping WIP. The duplicate was removed in a separate corrective commit and the complete verification set was rerun.

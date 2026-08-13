@@ -10,8 +10,7 @@ import {
 } from './candidatePaths';
 import {
   adaptOpenTdbQuestion, buildOpenTdbDuplicateKey, type OpenTdbAdaptedCandidate,
-  type OpenTdbDecodedQuestion, type OpenTdbRawQuestion, OPEN_TDB_SOURCE_LICENSE, OPEN_TDB_SOURCE_TITLE,
-  OPEN_TDB_SOURCE_URL, sanitizeOpenTdbText,
+  type OpenTdbDecodedQuestion, type OpenTdbRawQuestion,
 } from './adaptOpenTdb';
 
 const USER_AGENT = 'Quiz Stage content fetcher/0.1 (+OpenTDB candidate ingestion)';
@@ -60,7 +59,6 @@ interface OpenTdbRawQuestionResponse {
   response_code: number;
   response_message: string;
   results: OpenTdbRawQuestion[];
-  response_message?: string;
 }
 
 interface OpenTdbCheckpointState {
