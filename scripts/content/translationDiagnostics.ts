@@ -152,8 +152,22 @@ function isStableIdentifier(value: string): boolean {
   if (trimmed === '') return false;
   return /^https?:\/\//.test(trimmed)
     || /^[QqPp]\d+$/.test(trimmed)
-    || /^[A-Z]{2,}$/.test(trimmed)
-    || /\d/.test(trimmed);
+    || /^[A-Z]{2,}$/.test(trimmed);
+}
+
+function stableIdentifierTokens(value: string): string[] {
+  const urls = value.match(/https?:\/\/[^\s]+/giu) ?? [];
+  const entityIds = value.match(/\b[QqPp]\d+\b/g) ?? [];
+  const acronyms = value.match(/\b[A-Z]{2,}\b/g) ?? [];
+  return [...new Set([...urls, ...entityIds, ...acronyms].map(normalizeText))].sort(compareCodeUnits);
+}
+
+function hasConflictingStableIdentifiers(left: string, right: string): boolean {
+  const leftTokens = stableIdentifierTokens(left);
+  const rightTokens = stableIdentifierTokens(right);
+  return leftTokens.length > 0
+    && rightTokens.length > 0
+    && (leftTokens.length !== rightTokens.length || leftTokens.some((token, index) => token !== rightTokens[index]));
 }
 
 function isSameStableIdentifier(left: string, right: string): boolean {
@@ -216,9 +230,7 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
 
   if (item.field === 'response_en'
     && (differsNumerically(item.en, item.et)
-      || (isStableIdentifier(item.en)
-        && isStableIdentifier(item.et)
-        && normalizeText(item.en) !== normalizeText(item.et)))) {
+      || hasConflictingStableIdentifiers(item.en, item.et))) {
     issues.push(buildIssue(
       { file, row: item.row, clueId: item.clueId, field: item.field },
       'ANSWER_DRIFT', 'Canonical answers differ between English and Estonian', 'error',

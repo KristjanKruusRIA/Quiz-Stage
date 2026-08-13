@@ -98,6 +98,11 @@ describe('translation diagnostics', () => {
         response_et: '101',
       }),
       row({
+        clue_id: 'equal-number-prose-answer',
+        response_en: 'The 1991 revolution',
+        response_et: '1991. aasta revolutsioon',
+      }),
+      row({
         clue_id: 'identifier-answer-drift',
         response_en: 'Q123',
         response_et: 'Q456',
@@ -152,6 +157,7 @@ describe('translation diagnostics', () => {
     expect(codesFor('numeric-drift')).toContain('NUMBER_DRIFT');
     expect(codesFor('natural-language-answer')).not.toContain('ANSWER_DRIFT');
     expect(codesFor('numeric-answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('equal-number-prose-answer')).not.toContain('ANSWER_DRIFT');
     expect(codesFor('identifier-answer-drift')).toContain('ANSWER_DRIFT');
     expect(codesFor('variant-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('variant-count-drift')).toContain('VARIANT_DRIFT');
