@@ -78,6 +78,26 @@ function parseJsonl(path: string): Array<Record<string, unknown>> {
   return content.split(/\r?\n/).map((line) => JSON.parse(line));
 }
 
+function encodedQuestion(index: number) {
+  const encode = (value: string): string => Buffer.from(value, 'utf8').toString('base64');
+  return {
+    category: encode('History'),
+    type: encode('multiple'),
+    difficulty: encode(index % 3 === 0 ? 'hard' : index % 2 === 0 ? 'medium' : 'easy'),
+    question: encode(`Which event is identified by history candidate ${index}?`),
+    correct_answer: encode(`History answer ${index}`),
+    incorrect_answers: [encode(`Distractor ${index}`)],
+  };
+}
+
+function questionPage(start: number, count: number): string {
+  return JSON.stringify({
+    response_code: 0,
+    response_message: 'Success',
+    results: Array.from({ length: count }, (_, offset) => encodedQuestion(start + offset)),
+  });
+}
+
 describe('OpenTDB HTML/base64 normalization', () => {
   it('strips HTML tags and decodes entities', () => {
     expect(sanitizeOpenTdbText('What does <b>HTML</b> stand for?')).toBe('What does HTML stand for?');
@@ -86,6 +106,93 @@ describe('OpenTDB HTML/base64 normalization', () => {
 });
 
 describe('OpenTDB candidate fetcher', () => {
+  it('requests only the finite remainder so a target-then-resume run does not consume unseen questions', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const firstRun = createMockFetcher([
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('count.json') },
+      { status: 200, body: questionPage(1, 1) },
+    ]);
+
+    await fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: 1, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: firstRun.request,
+        sleep: firstRun.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    const secondRun = createMockFetcher([
+      { status: 200, body: fixture('count.json') },
+      { status: 200, body: questionPage(2, 1) },
+    ]);
+    await fetchOpenTdbCandidates({
+      output, checkpoint, resume: true, target: 1, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: secondRun.request,
+        sleep: secondRun.sleep,
+        now: () => new Date('2026-08-12T12:01:00.000Z'),
+      },
+    });
+
+    expect(firstRun.calls.find((url) => url.includes('/api.php?'))).toContain('amount=1');
+    expect(secondRun.calls.find((url) => url.includes('/api.php?'))).toContain('amount=1');
+    expect(parseJsonl(output).map((row) => row.answer)).toEqual(['History answer 1', 'History answer 2']);
+  });
+
+  it('requests one exact remainder after a full page when the target crosses a page boundary', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('count.json') },
+      { status: 200, body: questionPage(1, 50) },
+      { status: 200, body: questionPage(51, 1) },
+    ]);
+
+    const result = await fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: 51, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: mock.request,
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    const questionCalls = mock.calls.filter((url) => url.includes('/api.php?'));
+    expect(questionCalls.map((url) => new URL(url).searchParams.get('amount'))).toEqual(['50', '1']);
+    expect(result.totalWritten).toBe(51);
+    expect(parseJsonl(output)).toHaveLength(51);
+  });
+
+  it('retains the full page size for an unbounded fetch', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('count.json') },
+      { status: 200, body: questionPage(1, 1) },
+      { status: 200, body: fixture('exhausted.json') },
+    ]);
+
+    await fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: null, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: mock.request,
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    const questionCalls = mock.calls.filter((url) => url.includes('/api.php?'));
+    expect(questionCalls.map((url) => new URL(url).searchParams.get('amount'))).toEqual(['50', '50']);
+  });
+
   it('writes decoded candidates with stable IDs, attribution, and duplicate keys', async () => {
     const directory = temporaryDirectory();
     const output = resolve(directory, 'opentdb-candidates.jsonl');

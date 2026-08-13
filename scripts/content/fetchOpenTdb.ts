@@ -192,8 +192,16 @@ async function requestToken(dependencies: OpenTdbHttpDependencies, maxAttempts: 
   return parseTokenResponse(body).token!;
 }
 
-async function requestQuestions(token: string, dependencies: OpenTdbHttpDependencies, attempts: number): Promise<OpenTdbRawQuestionResponse> {
-  const url = `https://opentdb.com/api.php?amount=${DEFAULT_PAGE_SIZE}&encode=base64&token=${token}`;
+async function requestQuestions(
+  token: string,
+  amount: number,
+  dependencies: OpenTdbHttpDependencies,
+  attempts: number,
+): Promise<OpenTdbRawQuestionResponse> {
+  if (!Number.isInteger(amount) || amount < 1 || amount > DEFAULT_PAGE_SIZE) {
+    throw new Error(`OpenTDB question amount must be an integer from 1 to ${DEFAULT_PAGE_SIZE}`);
+  }
+  const url = `https://opentdb.com/api.php?amount=${amount}&encode=base64&token=${token}`;
   const body = await requestWithRetries(url, { dependencies, maxAttempts: attempts });
   return parseQuestionResponse(body);
 }
@@ -300,7 +308,10 @@ async function fetchOpenTdbCandidates(options: OpenTdbFetchOptions): Promise<Ope
 
   while (options.target === null || totalWritten < options.target) {
     await dependencies.sleep(options.delayMs);
-    const page = await requestQuestions(token, dependencies, options.maxAttempts);
+    const amount = options.target === null
+      ? DEFAULT_PAGE_SIZE
+      : Math.min(DEFAULT_PAGE_SIZE, options.target - totalWritten);
+    const page = await requestQuestions(token, amount, dependencies, options.maxAttempts);
     if (page.response_code === 4) {
       tokenExhausted = true;
       break;

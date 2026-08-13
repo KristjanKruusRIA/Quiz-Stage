@@ -52,3 +52,13 @@ Base: `b545b05`
 - `npm run content:fetch-opentdb -- --output ...` was rejected by the installed Windows npm argument parser before the script ran; the direct `npx tsx` command above was used instead. No candidate file was created by the rejected command.
 - The pre-existing 500-line Wikidata file remains partial unpublished output. It was neither manually deleted nor staged.
 - A post-commit typecheck exposed a duplicated `response_message` declaration introduced while preserving overlapping WIP. The duplicate was removed in a separate corrective commit and the complete verification set was rerun.
+
+## Review fix: finite OpenTDB page sizing
+
+- Review identified that a finite target smaller than 50 still requested `amount=50`. Because an OpenTDB token advances by the returned page, stopping after the target could consume unseen candidates and make a later resume skip them.
+- Red: `npm run test:run -- tests/unit/content/openTdbImport.test.ts` -> 14 tests, 2 failed. The target/resume regression observed `amount=50` instead of `amount=1`; the cross-page regression observed `['50', '50']` instead of `['50', '1']`.
+- Fix: `requestQuestions` now accepts and validates an integer amount from 1 through 50. Each finite request uses `min(50, target - totalWritten)`; an unbounded run still requests 50.
+- Green: `npm run test:run -- tests/unit/content/candidatePaths.test.ts tests/unit/content/openTdbImport.test.ts tests/unit/content/wikidataImport.test.ts` -> 3 files, 33 tests passed.
+- `npm run typecheck` -> exit 0.
+- `npx eslint scripts/content/fetchOpenTdb.ts tests/unit/content/openTdbImport.test.ts` -> exit 0.
+- `git diff --check -- scripts/content/fetchOpenTdb.ts tests/unit/content/openTdbImport.test.ts` -> exit 0.
