@@ -207,15 +207,15 @@ def run() -> int:
 
     for index in range(start_row, total_rows):
         row = source_rows[index]
-        for source, _target in TRANSLATE_FIELD_PAIRS:
+        for source, target in TRANSLATE_FIELD_PAIRS:
             english = row.get(source, '').strip()
             if english == '':
-                row_translations[index][f'{source[:-3]}et'] = ''
+                row_translations[index][target] = ''
                 continue
             if source == 'accepted_variants_en':
                 variants, valid = decode_variants(english)
                 if not valid:
-                    row_translations[index][f'{source[:-3]}et'] = ''
+                    row_translations[index][target] = ''
                     continue
                 for variant_index, value in enumerate(variants):
                     if value == '':
