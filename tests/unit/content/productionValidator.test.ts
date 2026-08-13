@@ -534,28 +534,32 @@ describe('production content validation', () => {
   });
 
   it('strictly parses direct evidence-map values before trusting them', () => {
-    const rows = Array.from({ length: 5 }, (_, index) => boardRow(index, 1, {
+    const rows = Array.from({ length: 6 }, (_, index) => boardRow(index, 1, {
       pack_id: 'built-in-history', macro_topic: 'ancient',
     }));
     const valid = rows.map((row) => evidenceFor(row, '01-history'));
-    const missingReview = Object.fromEntries(
-      Object.entries(valid[0]).filter(([key]) => key !== 'factualReview'),
+    const missingReviewer = Object.fromEntries(
+      Object.entries(valid[0].factualReview).filter(([key]) => key !== 'reviewer'),
+    );
+    const missingReviewTime = Object.fromEntries(
+      Object.entries(valid[1].editorialReview).filter(([key]) => key !== 'reviewedAt'),
     );
     const malformed = [
-      missingReview,
-      {
-        ...valid[1],
-        factualReview: { ...valid[1].factualReview, reviewer: valid[1].authoring.author },
-      },
+      { ...valid[0], factualReview: missingReviewer },
+      { ...valid[1], editorialReview: missingReviewTime },
       {
         ...valid[2],
-        editorialReview: { ...valid[2].editorialReview, reviewedAt: valid[2].authoring.authoredAt },
+        factualReview: { ...valid[2].factualReview, reviewer: valid[2].authoring.author },
       },
       {
         ...valid[3],
-        supportingSource: { ...valid[3].supportingSource, url: 'http://example.com/not-https' },
+        editorialReview: { ...valid[3].editorialReview, reviewedAt: valid[3].authoring.authoredAt },
       },
-      { ...valid[4], origin: 'openTdbInspired', inspiration: null },
+      {
+        ...valid[4],
+        supportingSource: { ...valid[4].supportingSource, url: 'http://example.com/not-https' },
+      },
+      { ...valid[5], origin: 'openTdbInspired', inspiration: null },
     ];
     const runtimeMap = new Map(malformed.map((record, index) => [
       rows[index].clue_id,
@@ -567,7 +571,7 @@ describe('production content validation', () => {
     });
 
     expect(result.issues.filter((issue) => issue.code === 'MISSING_EVIDENCE').map((issue) => issue.row))
-      .toEqual([2, 3, 4, 5, 6]);
+      .toEqual([2, 3, 4, 5, 6, 7]);
   });
 
   it('excludes schema-invalid evidence from OpenTDB composition', () => {
