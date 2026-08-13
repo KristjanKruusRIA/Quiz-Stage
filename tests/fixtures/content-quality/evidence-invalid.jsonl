@@ -1,0 +1,3 @@
+{"version":1,"clueId":"clue-invalid","batchId":"batch-2026-08","factKey":"fact-invalid","assertion":"Invalid evidence fixture.","origin":"wikidata","authoring":{"author":"Ada Author","authoredAt":"2026-08-01T09:00:00Z"},"supportingSource":{"sourceId":"wikidata:invalid","title":"Invalid","url":"https://www.wikidata.org/wiki/Q1","license":"CC0","retrievedAt":"2026-08-01"},"inspiration":null,"factualReview":{"reviewer":"Ada Author","reviewedAt":"2026-08-01T10:00:00Z","decision":"approved"},"editorialReview":{"reviewer":"Ed Editor","reviewedAt":"2026-08-01T11:00:00Z","decision":"approved"},"translationReview":null}
+
+{not-json}
