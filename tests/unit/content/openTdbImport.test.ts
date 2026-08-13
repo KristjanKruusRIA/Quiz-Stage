@@ -92,7 +92,7 @@ describe('OpenTDB candidate fetcher', () => {
     const checkpoint = resolve(directory, 'opentdb-state.json');
     const mock = createMockFetcher([
       { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
-      { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
+      { status: 200, body: fixture('count.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('page.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('exhausted.json'), headers: { 'content-type': 'application/json' } },
     ]);
@@ -136,7 +136,7 @@ describe('OpenTDB candidate fetcher', () => {
     const checkpoint = resolve(directory, 'opentdb-state.json');
     const firstRun = createMockFetcher([
       { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
-      { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
+      { status: 200, body: fixture('count.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('page.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('exhausted.json'), headers: { 'content-type': 'application/json' } },
     ]);
@@ -151,7 +151,7 @@ describe('OpenTDB candidate fetcher', () => {
     });
 
     const secondRun = createMockFetcher([
-      { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
+      { status: 200, body: fixture('count.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('page.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('exhausted.json'), headers: { 'content-type': 'application/json' } },
     ]);
@@ -174,7 +174,7 @@ describe('OpenTDB candidate fetcher', () => {
     const checkpoint = resolve(directory, 'opentdb-state.json');
     const mock = createMockFetcher([
       { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
-      { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
+      { status: 200, body: fixture('count.json'), headers: { 'content-type': 'application/json' } },
       { status: 429, headers: { 'retry-after': '2' }, body: fixture('rate-limited.json') },
       { status: 200, body: fixture('page.json'), headers: { 'content-type': 'application/json' } },
       { status: 200, body: fixture('exhausted.json'), headers: { 'content-type': 'application/json' } },
@@ -193,23 +193,79 @@ describe('OpenTDB candidate fetcher', () => {
     expect(mock.sleeps).toContain(2000);
   });
 
+  it('retries rejected requests within maxAttempts', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const successful = createMockFetcher([
+      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('count.json') },
+      { status: 200, body: fixture('page.json') },
+    ]);
+    let attempts = 0;
+
+    const result = await fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: 2, delayMs: 0, maxAttempts: 3,
+      dependencies: {
+        request: async (url, init) => {
+          attempts += 1;
+          if (attempts === 1) throw new TypeError('network unavailable');
+          return successful.request(url, init);
+        },
+        sleep: successful.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    expect(result.totalWritten).toBe(2);
+    expect(attempts).toBe(4);
+    expect(successful.sleeps).toEqual([250, 0]);
+  });
+
+  it('leaves output and checkpoint bytes unchanged when a later page exhausts retries', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'opentdb-candidates.jsonl');
+    const checkpoint = resolve(directory, 'opentdb-state.json');
+    const originalOutput = 'pre-run candidate bytes\n';
+    const originalCheckpoint = 'pre-run checkpoint bytes\n';
+    writeFileSync(output, originalOutput);
+    writeFileSync(checkpoint, originalCheckpoint);
+    const successfulBodies = [fixture('token.json'), fixture('count.json'), fixture('page.json')];
+    let attempts = 0;
+
+    await expect(fetchOpenTdbCandidates({
+      output, checkpoint, resume: false, target: null, delayMs: 0, maxAttempts: 3,
+      dependencies: {
+        request: async () => {
+          attempts += 1;
+          const body = successfulBodies.shift();
+          if (body !== undefined) return { status: 200, headers: { get: () => null }, body };
+          throw new DOMException('request timed out', 'AbortError');
+        },
+        sleep: async () => undefined,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/request timed out/);
+
+    expect(attempts).toBe(6);
+    expect(readFileSync(output, 'utf8')).toBe(originalOutput);
+    expect(readFileSync(checkpoint, 'utf8')).toBe(originalCheckpoint);
+  });
+
   it('throws on non-transient API status code and reports malformed responses', async () => {
     const directory = temporaryDirectory();
     const output = resolve(directory, 'opentdb-candidates.jsonl');
     const checkpoint = resolve(directory, 'opentdb-state.json');
     const queue: MockResponse[] = [
       { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
-      { status: 200, body: fixture('token.json'), headers: { 'content-type': 'application/json' } },
+      { status: 200, body: fixture('count.json'), headers: { 'content-type': 'application/json' } },
       {
         status: 200,
-        body: Buffer.from(
-          JSON.stringify({
-            response_code: 2,
-            response_message: 'Invalid parameter',
-            results: [],
-          }),
-          'utf8',
-        ).toString('base64'),
+        body: JSON.stringify({
+          response_code: 2,
+          response_message: 'Invalid parameter',
+          results: [],
+        }),
         headers: { 'content-type': 'application/json' },
       },
     ];
@@ -275,7 +331,7 @@ describe('OpenTDB candidate fetcher', () => {
     const checkpoint = resolve(directory, 'opentdb-state.json');
     const mock = createMockFetcher([
       { status: 200, body: fixture('token.json') },
-      { status: 200, body: fixture('token.json') },
+      { status: 200, body: fixture('count.json') },
       { status: 200, body: fixture('page.json') },
     ]);
     let swapped = false;

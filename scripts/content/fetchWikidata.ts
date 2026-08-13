@@ -1,4 +1,4 @@
-import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, existsSync, renameSync, unlinkSync } from 'node:fs';
+import { lstatSync, mkdirSync, readFileSync, writeFileSync, existsSync, renameSync, unlinkSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
@@ -27,6 +27,8 @@ const DEFAULT_CACHE_PATH = resolve(CANDIDATE_ROOT, 'wikidata-cache.json');
 const DEFAULT_PAGE_SIZE = WIKIDATA_MAX_ROWS;
 const DEFAULT_MAX_ATTEMPTS = 5;
 const DEFAULT_MIN_DELAY_MS = 1_000;
+// WDQS can legitimately need longer than 30 seconds for a bounded recipe page.
+const DEFAULT_REQUEST_TIMEOUT_MS = 120_000;
 
 interface RawResponse {
   status: number;
@@ -53,6 +55,7 @@ interface FetchWikidataOptions {
   cache: string;
   recipes: readonly string[];
   resume: boolean;
+  target: number | null;
   pageSize: number;
   delayMs: number;
   maxAttempts: number;
@@ -80,20 +83,30 @@ function parseRetryAfter(value: string | null): number | null {
 function defaultDependencies(): WikidataDependencies {
   return {
     request: async (url, init) => {
-      const response = await fetch(url, {
-        headers: {
-          accept: 'application/sparql-results+json',
-          'user-agent': USER_AGENT,
-          ...(init?.headers as Record<string, string> | undefined),
-        },
-      });
-      return {
-        status: response.status,
-        headers: {
-          get: (name) => response.headers.get(name) ?? null,
-        },
-        body: await response.text(),
-      };
+      const controller = new AbortController();
+      const timeout = setTimeout(() => {
+        controller.abort();
+      }, DEFAULT_REQUEST_TIMEOUT_MS);
+      try {
+        const response = await fetch(url, {
+          ...init,
+          signal: init?.signal ?? controller.signal,
+          headers: {
+            accept: 'application/sparql-results+json',
+            'user-agent': USER_AGENT,
+            ...(init?.headers as Record<string, string> | undefined),
+          },
+        });
+        return {
+          status: response.status,
+          headers: {
+            get: (name) => response.headers.get(name) ?? null,
+          },
+          body: await response.text(),
+        };
+      } finally {
+        clearTimeout(timeout);
+      }
     },
     sleep: (milliseconds) => new Promise((done) => setTimeout(done, milliseconds)),
     now: () => new Date(),
@@ -152,7 +165,15 @@ async function requestWithRetries(
   options: { maxAttempts: number; },
   attempt = 1,
 ): Promise<string> {
-  const response = await dependencies.request(url, { headers: { accept: 'application/sparql-results+json', 'user-agent': USER_AGENT } });
+  let response: RawResponse;
+  try {
+    response = await dependencies.request(url, { headers: { accept: 'application/sparql-results+json', 'user-agent': USER_AGENT } });
+  } catch (error) {
+    if (attempt >= options.maxAttempts) throw error;
+    const backoff = Math.min(250 * 2 ** (attempt - 1), 60_000);
+    await dependencies.sleep(Math.max(200, backoff));
+    return requestWithRetries(url, dependencies, options, attempt + 1);
+  }
   if ((response.status === 429 || response.status >= 500) && attempt < options.maxAttempts) {
     const retryAfter = parseRetryAfter(response.headers.get('retry-after'));
     const backoff = retryAfter !== null ? Math.min(retryAfter * 1000, 60_000) : Math.min(250 * 2 ** (attempt - 1), 60_000);
@@ -196,11 +217,31 @@ function loadSeenCandidateKeys(path: string): Set<string> {
   return keys;
 }
 
-function writeCandidates(path: string, candidates: readonly WikidataMappedCandidate[]): void {
-  if (candidates.length === 0) return;
-  const payload = `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
-  assertCandidateOutputPath(path);
-  appendFileSync(path, payload);
+function publishCandidates(
+  path: string,
+  existing: string,
+  candidates: readonly WikidataMappedCandidate[],
+): void {
+  const separator = candidates.length > 0 && existing !== '' && !existing.endsWith('\n') ? '\n' : '';
+  const appended = candidates.length === 0
+    ? ''
+    : `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
+  const payload = `${existing}${separator}${appended}`;
+  const temporary = `${path}.${randomUUID()}.tmp`;
+  try {
+    assertCandidateOutputPath(path);
+    ensureRegularDirectory(path);
+    assertCandidateOutputPath(temporary);
+    writeFileSync(temporary, payload, { flag: 'wx' });
+    assertCandidateOutputPath(path);
+    assertCandidateOutputPath(temporary);
+    renameSync(temporary, path);
+  } finally {
+    try {
+      assertCandidateOutputPath(temporary);
+      unlinkSync(temporary);
+    } catch { /* already renamed or no longer safe */ }
+  }
 }
 
 export function appendIfNotPresent(path: string, line: string): void {
@@ -220,14 +261,17 @@ export async function fetchWikidataCandidates(
   assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
   const dependencies = options.dependencies ?? defaultDependencies();
   const outputCandidates = options.resume ? loadSeenCandidateKeys(options.output) : new Set<string>();
+  const existingOutput = options.resume && existsSync(options.output) ? readFileSync(options.output, 'utf8') : '';
   const seenSourceIds = new Set<string>(outputCandidates);
   const cache = buildCache(options.cache);
   const now = dependencies.now();
   let totalWritten = 0;
   let totalSkipped = 0;
+  const stagedCandidates: WikidataMappedCandidate[] = [];
 
-  for (const recipe of options.recipes) {
+  recipeLoop: for (const recipe of options.recipes) {
     let afterCursor: string | undefined = undefined;
+    let previousAfterCursor: string | null | undefined = undefined;
     while (true) {
       await dependencies.sleep(options.delayMs);
       const query = buildWikidataRecipeQuery(recipe, { after: afterCursor, limit: options.pageSize });
@@ -236,7 +280,6 @@ export async function fetchWikidataCandidates(
       const bindings = parseWikidataResponse(body);
       if (bindings.length === 0) break;
       const mapped = mapWikidataCandidates(recipe, bindings, now.toISOString());
-      const unique: WikidataMappedCandidate[] = [];
       for (const candidate of mapped.candidates) {
         if (seenSourceIds.has(candidate.normalizedFactKey)) {
           totalSkipped += 1;
@@ -244,16 +287,20 @@ export async function fetchWikidataCandidates(
         }
         seenSourceIds.add(candidate.normalizedFactKey);
         totalWritten += 1;
-        unique.push(candidate);
+        stagedCandidates.push(candidate);
+        if (options.target !== null && totalWritten >= options.target) break;
       }
       totalSkipped += mapped.skipped;
-      writeCandidates(options.output, unique);
+      if (options.target !== null && totalWritten >= options.target) break recipeLoop;
       if (bindings.length < options.pageSize) break;
-      afterCursor = extractWikidataLastItemId(bindings) ?? undefined;
-      if (afterCursor === undefined) break;
+      const nextCursor = extractWikidataLastItemId(bindings) ?? undefined;
+      if (nextCursor === undefined || nextCursor === previousAfterCursor) break;
+      previousAfterCursor = nextCursor;
+      afterCursor = nextCursor;
     }
   }
 
+  publishCandidates(options.output, existingOutput, stagedCandidates);
   cache.publish();
   const result = { totalWritten, totalSkipped };
   const line = `- Wikidata fetch: ${result.totalWritten} draft candidates on ${now.toISOString()} from Wikidata CC0-1.0 (SPARQL, source CC0)\n`;
@@ -268,6 +315,7 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
     cache: DEFAULT_CACHE_PATH,
     recipes: [],
     resume: false,
+    target: null,
     pageSize: DEFAULT_PAGE_SIZE,
     delayMs: DEFAULT_MIN_DELAY_MS,
     maxAttempts: DEFAULT_MAX_ATTEMPTS,
@@ -290,6 +338,11 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
       index += 1;
     } else if (argument === '--resume') {
       options.resume = true;
+    } else if (argument === '--target') {
+      const target = Number.parseInt(argv[index + 1] ?? '', 10);
+      if (!Number.isInteger(target) || target <= 0) throw new Error('--target must be a positive integer');
+      options.target = target;
+      index += 1;
     } else if (argument === '--page-size') {
       const pageSize = Number.parseInt(argv[index + 1] ?? '', 10);
       if (!Number.isInteger(pageSize) || pageSize <= 0) throw new Error('--page-size must be a positive integer');
@@ -316,10 +369,6 @@ export async function runWikidataFetch(argv: string[] = process.argv.slice(2)): 
   assertCandidateOutputPath(options.output);
   assertCandidateOutputPath(options.cache);
   assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
-  if (!options.resume && existsSync(options.output)) {
-    assertCandidateOutputPath(options.output);
-    writeFileSync(options.output, '', { flag: 'w' });
-  }
   assertCandidateOutputPath(options.output);
   mkdirSync(dirname(options.output), { recursive: true });
   assertCandidateOutputPath(options.cache);
