@@ -75,3 +75,21 @@ Exit 0: 3 passed, 52 skipped. The dirty-worktree full-file run had 54 passing an
 A standalone detached snapshot with its own dependency installation ran the full production-validator file at 55/55 passing and focused ESLint at exit 0. Exact-revision typecheck retained only the same four inherited errors listed above.
 
 The dependency directory removed by a prior temporary-worktree junction cleanup was restored with `npm ci --ignore-scripts`; `package-lock.json` remained at SHA-256 `b365be9f3ea32ed118ce1cd96ffddf51362bdb252e8534706d9f131db70bbe89`, and neither package file is part of this repair.
+
+## Fix round 2: calendar-aware date recognition
+
+Review identified remaining prefix acceptance for Month-Year suffixes `/13`, `.13`, and `- 13`, plus acceptance of calendar-invalid full and ISO dates. The new real-validator regression was run before production changes and exited 1: it returned only the four previously rejected rows rather than all ten malformed/calendar-invalid rows, proving that all six new cases were falsely accepted.
+
+The regex now extracts only the four supported reader-visible formats after an allowed preposition: bare year, ISO `YYYY-MM-DD`, English `Month YYYY`, and English `Month D, YYYY`. A small helper rejects numeric `-`, `/`, or `.` continuations and validates ISO/full dates through a UTC calendar round trip. `CHANGING_FACT`, source metadata handling, and all other validation rules remain unchanged.
+
+Focused GREEN:
+
+```text
+npx vitest run tests/unit/content/productionValidator.test.ts -t "reader-visible|calendar-invalid explicit dates" --reporter=dot
+```
+
+Exit 0: 3 passed, 52 skipped. Positive coverage includes leap-day/full-date and ISO leap-day boundaries, Month-Year, bare year, ordinary full date, and ordinary ISO date. Negative coverage includes both prior malformed cases and all newly reported suffix/calendar cases. The dirty-worktree full-file run had 54 passing and the same unrelated report-placement failure. Main-worktree typecheck and focused ESLint both exited 0.
+
+The corpus replay remained exactly 23 `UNDATED_CHANGING_FACT` blockers at the same row IDs, 500 translation exceptions, no other issue codes, and report SHA-256 `fe978c084f6778d32340517c42db605c52f1a16c515c1910b4ee5de86e29661a`.
+
+The detached commit snapshot passed all 55 production-validator tests and focused ESLint. Exact-revision typecheck retained only the same four inherited errors in `mapWikidataCandidates.ts` and `translationDiagnostics.test.ts`; the unrelated dirty main worktree typechecked successfully.

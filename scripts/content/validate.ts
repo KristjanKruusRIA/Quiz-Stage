@@ -78,9 +78,33 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set([
 ]);
 
 const CHANGING_FACT = /\b(current(?:ly)?|latest|today|now|incumbent|president|prime minister|population|rank(?:ed|ing)?|record holder|largest|highest|most populous)\b/i;
-const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:\d{4}(?:-\d{2}-\d{2})?|(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:(?:0?[1-9]|[12]\d|3[01]),\s+)?\d{4}(?!-\d))\b/i;
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] as const;
+const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:(?<isoYear>\d{4})-(?<isoMonth>\d{2})-(?<isoDay>\d{2})|(?<month>January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:(?<monthDay>0?[1-9]|[12]\d|3[01]),\s+)?(?<monthYear>\d{4})|(?<year>\d{4}))(?!\s*[-/.]\s*\d)\b/gi;
 const PLACEHOLDER_CLUE = /\b(?:topic\s+\d+\s+tier\s+\d+\s+asks\s+for|final clue\s+\d+\s+for\s+(?:easy|medium|hard)\s+difficulty)\b/iu;
 const PLACEHOLDER_RESPONSE = /\b(?:generated answer|answer for .+ topic\s+\d+)\b/iu;
+
+function isValidCalendarDate(year: number, month: number, day: number): boolean {
+  const date = new Date(0);
+  date.setUTCFullYear(year, month - 1, day);
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+}
+
+function hasExplicitDate(value: string): boolean {
+  for (const match of value.matchAll(EXPLICIT_DATE)) {
+    const groups = match.groups ?? {};
+    if (groups.isoYear !== undefined) {
+      if (isValidCalendarDate(Number(groups.isoYear), Number(groups.isoMonth), Number(groups.isoDay))) return true;
+      continue;
+    }
+    if (groups.monthDay !== undefined) {
+      const month = MONTHS.findIndex((name) => name.toLowerCase() === groups.month?.toLowerCase()) + 1;
+      if (isValidCalendarDate(Number(groups.monthYear), month, Number(groups.monthDay))) return true;
+      continue;
+    }
+    return true;
+  }
+  return false;
+}
 
 export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'MISSING_EVIDENCE',
@@ -264,7 +288,7 @@ export function validateProductionContent(
       add({ file, row: row.rowNumber, code: 'OFFICIAL_ARCHIVE_HOST', severity: 'error', message: 'Official-show clue archive sources are forbidden' });
     }
     if (CHANGING_FACT.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)
-      && !EXPLICIT_DATE.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
+      && !hasExplicitDate(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
       add({ file, row: row.rowNumber, code: 'UNDATED_CHANGING_FACT', severity: 'error', message: 'Time-sensitive wording requires an explicit date or as-of period' });
     }
     if (PLACEHOLDER_CLUE.test(row.clue_en)
