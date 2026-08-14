@@ -697,7 +697,7 @@ For Tasks 9–20, create the work directory first, never edit the accepted files
 npm run content:verify-batch -- --batch <batch-id> --work-root content/work --source-cache content/reports/source-check-cache.json
 npm run content:publish-batch -- --batch <batch-id> --work-root content/work
 npm run content:validate -- --input content/generated/<batch-id>.en-et.csv --evidence content/evidence/<batch-id>.jsonl --batch <batch-id> --mode batch --report content/reports/<batch-id>.json
-npm run content:source-check -- --input content/generated/<batch-id>.en-et.csv --report content/reports/<batch-id>.json --cache content/reports/source-check-cache.json
+npm run content:source-check -- --input content/generated/<batch-id>.en-et.csv --report content/reports/<batch-id>.json --source-cache content/reports/source-check-cache.json
 ```
 
 Expected for every command: exit `0`, zero blocking issues, exact counts, and no reviewed exception for a non-waivable code. Each task commits only its four accepted artifacts plus any source-cache entries actually used by that batch.
@@ -1092,7 +1092,7 @@ git commit -m "content(finals): replace filler with reviewed production clues"
 
 ```powershell
 npm run content:validate -- --input "content/generated/*.en-et.csv" --evidence "content/evidence/*.jsonl" --mode release --report content/reports/release-inventory.json
-npm run content:source-check -- --input "content/generated/*.en-et.csv" --report content/reports/release-inventory.json --cache content/reports/source-check-cache.json
+npm run content:source-check -- --input "content/generated/*.en-et.csv" --report content/reports/release-inventory.json --source-cache content/reports/source-check-cache.json
 ```
 
 Expected: both exit `0`; summary is exactly 6,000 board clues, 1,200 sets, 1,200 distinct category names, 150 Finals, 400 sets/difficulty, 200 sets/difficulty/round, 50 Finals/difficulty, and 1,200 OpenTDB-inspired clues with independent evidence.

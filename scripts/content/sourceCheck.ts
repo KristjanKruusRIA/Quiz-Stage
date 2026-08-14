@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { readCsvInputs } from './readCsv';
 import { validatePack } from '../../src/main/content/csvPacks';
+import { publishValidationReport } from './validate';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 const USER_AGENT = 'Quiz Stage content source checker/0.1 (+offline desktop content validation)';
 const OFFICIAL_ARCHIVE_HOSTS = new Set(['j-archive.com', 'www.j-archive.com', 'jeopardyarchive.com', 'www.jeopardyarchive.com']);
@@ -246,11 +248,12 @@ export function buildWikidataBatchUrls(
   return urls;
 }
 
-function fileCache(path: string): SourceCache & { publish(): void } {
+export function openFileSourceCache(path: string): SourceCache & { publish(): void } {
   const destination = resolve(path);
   let document: { version: number; entries: Record<string, SourceCacheEntry> } = { version: CACHE_VERSION, entries: {} };
   const stat = lstatSync(destination, { throwIfNoEntry: false });
   if (stat?.isSymbolicLink()) throw new Error('Source cache must not be a symlink');
+  if (stat !== undefined && !stat.isFile()) throw new Error('Source cache must be a regular file');
   if (stat?.isFile()) {
     const parsed = JSON.parse(readFileSync(destination, 'utf8')) as typeof document;
     if (parsed.version === CACHE_VERSION && parsed.entries !== null && typeof parsed.entries === 'object') document = parsed;
@@ -267,29 +270,55 @@ function fileCache(path: string): SourceCache & { publish(): void } {
   };
 }
 
+function assertReportCanBePublished(path: string): void {
+  const destination = resolve(path);
+  let current = dirname(destination);
+  while (true) {
+    const ancestor = lstatSync(current, { throwIfNoEntry: false });
+    if (ancestor?.isSymbolicLink()) throw new Error('Source report path must not traverse a symlink');
+    const parent = dirname(current);
+    if (parent === current) break;
+    current = parent;
+  }
+  const parent = lstatSync(dirname(destination));
+  if (!parent.isDirectory() || parent.isSymbolicLink()) throw new Error('Source report parent must be a real directory');
+  const stat = lstatSync(destination, { throwIfNoEntry: false });
+  if (stat?.isSymbolicLink()) throw new Error('Source report must not be a symlink');
+  if (stat !== undefined && !stat.isFile()) throw new Error('Source report must be a regular file');
+  if (stat?.isFile()) {
+    const parsed: unknown = JSON.parse(readFileSync(destination, 'utf8'));
+    if (parsed === null || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      throw new Error('Existing source report must be a JSON object');
+    }
+  }
+}
+
 export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<number> {
+  argv = restoreNpmRunArgs(argv, ['--input', '--report', '--source-cache']);
   const inputs: string[] = [];
   let cachePath = resolve('content/reports/source-check-cache.json');
+  let reportPath: string | undefined;
   if (argv.length > 0 && !argv.some((argument) => argument.startsWith('--'))) {
     inputs.push(...argv);
-    if (process.env.npm_config_cache !== undefined && process.env.npm_config_cache !== '') {
-      cachePath = resolve(process.env.npm_config_cache);
-    }
   } else {
   for (let index = 0; index < argv.length; index += 1) {
     if (argv[index] === '--input') inputs.push(argv[++index] ?? '');
-    else if (argv[index] === '--cache') cachePath = resolve(argv[++index] ?? '');
+    else if (argv[index] === '--cache' || argv[index] === '--source-cache') cachePath = resolve(argv[++index] ?? '');
+    else if (argv[index] === '--report') reportPath = resolve(argv[++index] ?? '');
     else throw new Error(`Unknown argument: ${argv[index]}`);
   }
   }
   if (inputs.length === 0 || inputs.some((value) => value === '')) throw new Error('--input is required');
+  if (reportPath === '') throw new Error('--report requires a path');
+  if (reportPath !== undefined) assertReportCanBePublished(reportPath);
   const parsed = await readCsvInputs(inputs);
   const validationIssues = parsed.flatMap(({ file, pack }) => validatePack(pack).map((issue) => ({ file, ...issue })));
   if (validationIssues.length > 0) throw new Error(`Source input failed CSV validation: ${JSON.stringify(validationIssues)}`);
   const urls = parsed.flatMap(({ pack }) => pack.rows.map((row) => row.source_url));
-  const cache = fileCache(cachePath);
+  const cache = openFileSourceCache(cachePath);
   const results = await checkSourceUrls(urls, DEFAULT_DEPENDENCIES, { cache });
   cache.publish();
+  if (reportPath !== undefined) publishValidationReport(reportPath, { sources: results }, { placement: 'top-level' });
   process.stdout.write(`${JSON.stringify({ sources: results }, null, 2)}\n`);
   return results.some((result) => !result.ok) ? 1 : 0;
 }

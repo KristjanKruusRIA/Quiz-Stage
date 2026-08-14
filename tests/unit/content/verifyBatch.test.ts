@@ -1,9 +1,10 @@
 import {
-  appendFileSync, existsSync, mkdtempSync, mkdirSync, readFileSync, readdirSync, renameSync,
+  appendFileSync, existsSync, lstatSync, mkdtempSync, mkdirSync, readFileSync, readdirSync, renameSync,
   symlinkSync, writeFileSync,
 } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
+import { spawnSync } from 'node:child_process';
 import { describe, expect, test } from 'vitest';
 import { stringify } from 'csv-stringify/sync';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
@@ -121,6 +122,57 @@ async function passingReport(root: string): Promise<{
 }
 
 describe('batch publication boundary', () => {
+  test('documented npm verify command restores flags and persists the named source cache', () => {
+    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-verify-cli-'));
+    const fixture = createPassingWork(root);
+    const cachePath = join(root, 'source-cache.json');
+    const sourceUrl = 'https://example.test/specific/history';
+    writeFileSync(cachePath, `${JSON.stringify({
+      version: 1,
+      entries: {
+        [sourceUrl]: {
+          version: 1,
+          expiresAt: '2099-01-01T00:00:00.000Z',
+          result: {
+            url: sourceUrl, ok: true, status: 200,
+            retrievedAt: '2026-08-13T12:00:00.000Z', code: null, finalUrl: sourceUrl,
+          },
+        },
+      },
+    }, null, 2)}\n`);
+    const command = `npm run content:verify-batch -- --batch 01-history --work-root '${fixture.workRoot}' --source-cache '${cachePath}'`;
+    const result = spawnSync('powershell.exe', ['-NoProfile', '-Command', command], {
+      cwd: process.cwd(), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024,
+    });
+
+    expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
+    expect(lstatSync(cachePath).isFile()).toBe(true);
+    const cache = JSON.parse(readFileSync(cachePath, 'utf8'));
+    expect(cache.entries[sourceUrl].result.ok).toBe(true);
+    const report = JSON.parse(readFileSync(join(fixture.workRoot, '01-history', 'report.json'), 'utf8'));
+    expect(report.sources).toEqual([cache.entries[sourceUrl].result]);
+  }, 30_000);
+
+  test('documented npm publish command targets only an explicit temporary accepted root', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-publish-cli-'));
+    const { fixture } = await passingReport(root);
+    const acceptedRoot = join(root, 'accepted');
+    const command = `npm run content:publish-batch -- --batch 01-history --work-root '${fixture.workRoot}' --accepted-root '${acceptedRoot}'`;
+    const result = spawnSync('powershell.exe', ['-NoProfile', '-Command', command], {
+      cwd: process.cwd(), encoding: 'utf8',
+    });
+
+    expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
+    expect(readFileSync(join(acceptedRoot, 'content/authored/01-history.csv')))
+      .toEqual(readFileSync(join(fixture.workRoot, '01-history/authored.csv')));
+    expect(readFileSync(join(acceptedRoot, 'content/generated/01-history.en-et.csv')))
+      .toEqual(readFileSync(join(fixture.workRoot, '01-history/generated.en-et.csv')));
+    expect(readFileSync(join(acceptedRoot, 'content/evidence/01-history.jsonl')))
+      .toEqual(readFileSync(join(fixture.workRoot, '01-history/evidence.jsonl')));
+    expect(readFileSync(join(acceptedRoot, 'content/reports/01-history.json')))
+      .toEqual(readFileSync(join(fixture.workRoot, '01-history/report.json')));
+  }, 30_000);
+
   test('source result order is UTF-16 code-unit total order', async () => {
     const dependencies: SourceCheckDependencies = {
       fetch: async () => ({ status: 200, headers: new Headers() }),

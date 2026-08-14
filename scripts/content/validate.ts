@@ -16,6 +16,7 @@ import {
   FINAL_BATCH, PRODUCTION_BATCHES, getProductionBatch, type ProductionBatchDefinition,
 } from './productionBatches';
 import { RELEASE_COMPOSITION_THRESHOLDS, RELEASE_THRESHOLDS, type ReleaseSummary } from './releaseThresholds';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 export type ValidationMode = 'batch' | 'release';
 export type ValidationSeverity = 'error' | 'warning';
@@ -638,6 +639,11 @@ interface CliOptions {
 }
 
 function parseCli(argv: readonly string[]): CliOptions {
+  argv = restoreNpmRunArgs(
+    argv,
+    ['--input', '--evidence', '--batch', '--mode', '--report'],
+    ['--allow-missing-et'],
+  );
   if (argv.length >= 3 && !argv.some((argument) => argument.startsWith('--'))) {
     const modeIndex = argv.findIndex((argument) => argument === 'batch' || argument === 'release');
     if (modeIndex < 1 || modeIndex !== argv.length - 2) throw new Error('Expected input glob(s), mode, and report path');

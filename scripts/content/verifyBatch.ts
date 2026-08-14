@@ -8,9 +8,10 @@ import { parsePackCsv, type ParsedPack } from '../../src/main/content/csvPacks';
 import { parseEvidenceJsonl, type ContentEvidence } from './evidence';
 import { getProductionBatch } from './productionBatches';
 import {
-  checkSourceUrls, type SourceCache, type SourceCheckDependencies, type SourceCheckOptions,
+  checkSourceUrls, openFileSourceCache, type SourceCache, type SourceCheckDependencies, type SourceCheckOptions,
   type SourceCheckResult,
 } from './sourceCheck';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 import {
   diagnoseTranslations, type TranslationDiagnosticReport,
 } from './translationDiagnostics';
@@ -411,11 +412,18 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
 }
 
 async function runCli(argv = process.argv.slice(2)): Promise<number> {
-  const value = (name: string) => argv[argv.indexOf(name) + 1];
+  argv = restoreNpmRunArgs(argv, ['--batch', '--work-root', '--source-cache']);
+  const value = (name: string) => {
+    const index = argv.indexOf(name);
+    return index < 0 ? undefined : argv[index + 1];
+  };
   const batchId = value('--batch');
   if (batchId === undefined) throw new Error('--batch is required');
   const workRoot = value('--work-root') ?? resolve('content/work');
-  const report = await verifyBatch({ batchId, workRoot });
+  const sourceCachePath = value('--source-cache');
+  const sourceCache = sourceCachePath === undefined ? undefined : openFileSourceCache(sourceCachePath);
+  const report = await verifyBatch({ batchId, workRoot, ...(sourceCache === undefined ? {} : { sourceCache }) });
+  sourceCache?.publish();
   process.stdout.write(`${JSON.stringify(report)}\n`);
   return report.blocking ? 1 : 0;
 }

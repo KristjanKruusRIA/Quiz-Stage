@@ -14,6 +14,7 @@ import { parseBatchVerificationReport } from './verifyBatch';
 import type { FullBatchVerificationReport } from './verifyBatch';
 import { diagnoseTranslations } from './translationDiagnostics';
 import { validateProductionContent } from './validate';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 export interface PublishBatchDependencies {
   rename?(source: string, destination: string): void;
@@ -284,7 +285,11 @@ export async function publishBatch(options: PublishBatchOptions): Promise<void> 
 }
 
 async function runCli(argv = process.argv.slice(2)): Promise<void> {
-  const value = (name: string) => argv[argv.indexOf(name) + 1];
+  argv = restoreNpmRunArgs(argv, ['--batch', '--work-root', '--accepted-root']);
+  const value = (name: string) => {
+    const index = argv.indexOf(name);
+    return index < 0 ? undefined : argv[index + 1];
+  };
   const batchId = value('--batch');
   if (batchId === undefined) throw new Error('--batch is required');
   await publishBatch({
