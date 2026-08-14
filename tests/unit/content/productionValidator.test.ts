@@ -252,6 +252,36 @@ describe('production content validation', () => {
     expect(result.issues.map((issue) => issue.code)).toContain(code);
   });
 
+  it('recognizes reader-visible month-year dates for changing facts', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'As of August 2026, which city was the largest?' };
+    rows[1] = {
+      ...rows[1],
+      clue_en: 'Which city was the largest?',
+      explanation_en: 'In July 2026, it was the largest by population.',
+    };
+
+    const result = validateProductionContent([input('month-year-dates.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT')).toEqual([]);
+  });
+
+  it('requires reader-visible dates while preserving existing explicit date formats', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'Who is the current president?' };
+    rows[1] = {
+      ...rows[1],
+      clue_en: 'Who is the current president?',
+      source_url: 'https://example.com/source?oldid=12345',
+    };
+    rows[2] = { ...rows[2], clue_en: 'As of 2026, which city was the largest?' };
+    rows[3] = { ...rows[3], clue_en: 'On August 14, 2026, which city was the largest?' };
+
+    const result = validateProductionContent([input('explicit-date-formats.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT').map((issue) => issue.row)).toEqual([2, 3]);
+  });
+
   it('finds duplicate identities and normalized content across files in stable byte order', () => {
     const rows = twelveValidSets();
     const duplicate = boardRow(99, 1, {

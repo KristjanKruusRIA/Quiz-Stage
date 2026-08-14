@@ -78,7 +78,7 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set([
 ]);
 
 const CHANGING_FACT = /\b(current(?:ly)?|latest|today|now|incumbent|president|prime minister|population|rank(?:ed|ing)?|record holder|largest|highest|most populous)\b/i;
-const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:\d{4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]+\s+\d{1,2},\s+\d{4})\b/i;
+const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:\d{4}(?:-\d{2}-\d{2})?|(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:\d{1,2},\s+)?\d{4})\b/i;
 const PLACEHOLDER_CLUE = /\b(?:topic\s+\d+\s+tier\s+\d+\s+asks\s+for|final clue\s+\d+\s+for\s+(?:easy|medium|hard)\s+difficulty)\b/iu;
 const PLACEHOLDER_RESPONSE = /\b(?:generated answer|answer for .+ topic\s+\d+)\b/iu;
 
