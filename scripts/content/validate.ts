@@ -99,7 +99,7 @@ function normalizeText(value: string): string {
 }
 
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml))?/giu) ?? [];
+  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');

@@ -296,6 +296,23 @@ describe('production content validation', () => {
     expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([3]);
   });
 
+  it('treats numeric units as complete tokens across localized dates and era notation', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'The war ended on 8 May.', clue_et: 'Sõda lõppes 8. mail.' };
+    rows[1] = { ...rows[1], clue_en: 'Apollo 11 lunar module landed.', clue_et: 'Apollo 11 kuumoodul maandus.' };
+    rows[2] = { ...rows[2], clue_en: 'The attack came on 20 March.', clue_et: 'Rünnak toimus 20. märtsil.' };
+    rows[3] = { ...rows[3], accepted_variants_en: 'AD 79;79 AD', accepted_variants_et: '79 pKr;79 m.a.j.' };
+    rows[4] = { ...rows[4], accepted_variants_en: 'BC 44;44 BC', accepted_variants_et: '44 eKr;44 e.m.a.' };
+    rows[5] = { ...rows[5], clue_en: 'The armistice took effect on November 11, 1918.', clue_et: 'Vaherahu jõustus 11. novembril 1918.' };
+    rows[6] = { ...rows[6], clue_en: 'The total was 1,234.5.', clue_et: 'Kogusumma oli 1 234,5.' };
+    rows[7] = { ...rows[7], clue_en: 'The length is 8 m.', clue_et: 'Pikkus on 8 l.' };
+    rows[8] = { ...rows[8], clue_en: 'The mission carried 11 people.', clue_et: 'Missioonil oli 12 inimest.' };
+
+    const result = validateProductionContent([input('numeric-token-boundaries.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([9, 10]);
+  });
+
   it('rejects generated placeholder records from production batches', () => {
     const rows = twelveValidSets();
     rows[0] = {
