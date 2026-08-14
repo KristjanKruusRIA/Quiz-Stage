@@ -105,6 +105,7 @@ async function safeHttpsFetch(url: string, init: RequestInit = {}): Promise<Sour
           if (safe.length !== addresses.length || safe.length === 0) {
             callback(new Error('SOURCE_PRIVATE_ADDRESS'), '', 0); return;
           }
+          if (options.all) { callback(null, safe); return; }
           callback(null, safe[0].address, safe[0].family);
         });
       },
