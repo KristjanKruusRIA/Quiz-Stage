@@ -57,3 +57,21 @@ npm run content:validate -- --input content/work/02-geography/authored.csv --evi
 The command exited 1 as expected because the corpus still contains genuine content blockers. The exact `UNDATED_CHANGING_FACT` count fell from 48 to 23, matching the diagnosis; it did not fall to zero. Remaining CSV rows are `24,51,161,183,190,219,236,251,266,273,274,300,305,381,386,402,413,433,434,438,440,456,493`. The report contains 500 board clues, 100 category sets, 500 expected `MISSING_TRANSLATION` issues recorded as 500 exceptions, no other issue code, and `blocking=true` due solely to those 23 changing-fact rows. Replay report SHA-256: `fe978c084f6778d32340517c42db605c52f1a16c515c1910b4ee5de86e29661a`.
 
 No content, evidence, approval, translation, or accepted artifact was edited by this repair.
+
+## Fix round 1: malformed lexical dates
+
+Review reproduced two false acceptances: `On August 99, 2026` and the valid-prefix match in `As of August 2026-13`. Before production changes, the focused real-validator regression exited 1: it emitted blockers only for the misspelled/numeric-month controls at rows 4 and 5 instead of the expected malformed rows 2 through 5.
+
+The minimum follow-up constrains a lexical day to `01` through `31` and prevents a lexical Month-Year match when followed by another numeric date fragment. `CHANGING_FACT` and the pre-existing numeric year/ISO grammar are unchanged. The same test also preserves valid Month-Year, Month D, YYYY, bare YYYY, and ISO YYYY-MM-DD behavior, plus the metadata/oldid non-exception.
+
+Focused GREEN:
+
+```text
+npx vitest run tests/unit/content/productionValidator.test.ts -t "reader-visible|malformed lexical dates" --reporter=dot
+```
+
+Exit 0: 3 passed, 52 skipped. The dirty-worktree full-file run had 54 passing and the same one unrelated report-placement failure documented above. The corpus replay remained exactly 23 `UNDATED_CHANGING_FACT` blockers at the same row IDs, with 500 translation exceptions and no other issue code; its deterministic report hash remained `fe978c084f6778d32340517c42db605c52f1a16c515c1910b4ee5de86e29661a`.
+
+A standalone detached snapshot with its own dependency installation ran the full production-validator file at 55/55 passing and focused ESLint at exit 0. Exact-revision typecheck retained only the same four inherited errors listed above.
+
+The dependency directory removed by a prior temporary-worktree junction cleanup was restored with `npm ci --ignore-scripts`; `package-lock.json` remained at SHA-256 `b365be9f3ea32ed118ce1cd96ffddf51362bdb252e8534706d9f131db70bbe89`, and neither package file is part of this repair.

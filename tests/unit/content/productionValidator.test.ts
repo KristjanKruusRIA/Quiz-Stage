@@ -266,6 +266,18 @@ describe('production content validation', () => {
     expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT')).toEqual([]);
   });
 
+  it('rejects malformed lexical dates for changing facts', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'On August 99, 2026, which city was the largest?' };
+    rows[1] = { ...rows[1], clue_en: 'As of August 2026-13, which city was the largest?' };
+    rows[2] = { ...rows[2], clue_en: 'As of Auguust 2026, which city was the largest?' };
+    rows[3] = { ...rows[3], clue_en: 'As of 08 2026, which city was the largest?' };
+
+    const result = validateProductionContent([input('malformed-lexical-dates.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT').map((issue) => issue.row)).toEqual([2, 3, 4, 5]);
+  });
+
   it('requires reader-visible dates while preserving existing explicit date formats', () => {
     const rows = twelveValidSets();
     rows[0] = { ...rows[0], clue_en: 'Who is the current president?' };
@@ -276,6 +288,7 @@ describe('production content validation', () => {
     };
     rows[2] = { ...rows[2], clue_en: 'As of 2026, which city was the largest?' };
     rows[3] = { ...rows[3], clue_en: 'On August 14, 2026, which city was the largest?' };
+    rows[4] = { ...rows[4], clue_en: 'As of 2026-08-14, which city was the largest?' };
 
     const result = validateProductionContent([input('explicit-date-formats.csv', rows)], { mode: 'batch' });
 
