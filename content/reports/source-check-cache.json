@@ -1,0 +1,1325 @@
+{
+  "version": 1,
+  "entries": {
+    "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.468Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.468Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami"
+      }
+    },
+    "https://en.wikipedia.org/wiki/2013_enlargement_of_the_European_Union": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/2013_enlargement_of_the_European_Union",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.469Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/2013_enlargement_of_the_European_Union"
+      }
+    },
+    "https://en.wikipedia.org/wiki/1812_Overture": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/1812_Overture",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.470Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/1812_Overture"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Abraham_Lincoln": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.471Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.471Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Abraham_Lincoln"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Adolf_Hitler": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.589Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Adolf_Hitler",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.589Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Adolf_Hitler"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anselm_of_Canterbury": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.594Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anselm_of_Canterbury",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.594Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anselm_of_Canterbury"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Apollo_11": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.595Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Apollo_11",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.595Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Apollo_11"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Arab_Spring": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.598Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Arab_Spring",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.598Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Arab_Spring"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Augustus": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.711Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Augustus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.711Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Augustus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Agincourt": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.718Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Agincourt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.718Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Agincourt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Adrianople": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.719Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Adrianople",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.719Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Adrianople"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Antietam": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.720Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Antietam",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.720Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Antietam"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.833Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.833Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Marj_Dabiq": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.835Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Marj_Dabiq",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.835Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Marj_Dabiq"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Ridaniya": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.835Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Ridaniya",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.835Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Ridaniya"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Trafalgar": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.841Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.841Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Buffalo_Bill": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.951Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Buffalo_Bill",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.951Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Buffalo_Bill"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Burning_of_Washington": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.952Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Burning_of_Washington",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.952Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Burning_of_Washington"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Battle_of_Waterloo": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.958Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Waterloo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.958Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Battle_of_Waterloo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Central_Powers": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:25.962Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Central_Powers",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:25.962Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Central_Powers"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Constitution_of_San_Marino": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.072Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Constitution_of_San_Marino",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.072Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Constitution_of_San_Marino"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Constitution_of_Norway": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.074Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Constitution_of_Norway",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.074Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Constitution_of_Norway"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chernobyl_disaster": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.075Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chernobyl_disaster",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.075Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Culper_Ring": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.083Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Culper_Ring",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.083Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Culper_Ring"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Discovery_of_Brazil": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.197Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Discovery_of_Brazil",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.197Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Discovery_of_Brazil"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Daughters_of_Bilitis": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.198Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Daughters_of_Bilitis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.198Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Daughters_of_Bilitis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Doolittle_Raid": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.198Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Doolittle_Raid",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.198Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Doolittle_Raid"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dummy_tank": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.205Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dummy_tank",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.205Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dummy_tank"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.317Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.317Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fall_of_Saigon": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.327Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fall_of_Saigon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.327Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fall_of_Saigon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.329Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.329Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fork": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.329Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fork",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.329Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fork"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Founding_of_Rome": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.439Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Founding_of_Rome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.439Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Founding_of_Rome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.445Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.445Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fourth_Crusade": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.450Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fourth_Crusade",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.450Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fourth_Crusade"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Genghis_Khan": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.452Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.452Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Genghis_Khan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Fire_of_London": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.561Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Fire_of_London",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.561Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Fire_of_London"
+      }
+    },
+    "https://en.wikipedia.org/wiki/George_Washington": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.562Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/George_Washington",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.562Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/George_Washington"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Northern_War": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.567Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Northern_War",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.567Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Northern_War"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Migration_(African_American)": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.575Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Migration_(African_American)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.574Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Migration_(African_American)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Stink": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Stink",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Stink"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.684Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.684Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hagia_Sophia": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.688Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hagia_Sophia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.688Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hagia_Sophia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hampton_Court_Palace": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.695Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hampton_Court_Palace",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.695Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hampton_Court_Palace"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.798Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.798Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hannibal%27s_crossing_of_the_Alps": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.800Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hannibal%27s_crossing_of_the_Alps",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.800Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hannibal%27s_crossing_of_the_Alps"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harlem_Renaissance": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.811Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harlem_Renaissance",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.811Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harlem_Renaissance"
+      }
+    },
+    "https://en.wikipedia.org/wiki/History_of_Google": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.816Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/History_of_Google",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.816Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/History_of_Google"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hundred_Years%27_War": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.922Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hundred_Years%27_War",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.922Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hundred_Years%27_War"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Illyrians": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.923Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Illyrians",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.923Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Illyrians"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Invasions_of_Afghanistan": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.927Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Invasions_of_Afghanistan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.927Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Invasions_of_Afghanistan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jean-Jacques_Dessalines": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:26.937Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jean-Jacques_Dessalines",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:26.937Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jean-Jacques_Dessalines"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jethro_Tull_(agriculturist)": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.038Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jethro_Tull_(agriculturist)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.038Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jethro_Tull_(agriculturist)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_Adams": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.044Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_Adams",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.044Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_Adams"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_R._Brinkley": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.049Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_R._Brinkley",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.049Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_R._Brinkley"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kentucky": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.061Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kentucky",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.061Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kentucky"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kingdom_of_Navarre": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.161Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kingdom_of_Navarre",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.161Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kingdom_of_Navarre"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Knock_Shrine": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.166Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Knock_Shrine",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.166Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Knock_Shrine"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kublai_Khan": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.171Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kublai_Khan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.171Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kublai_Khan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lan_Xang": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.185Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lan_Xang",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.185Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lan_Xang"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lobster_War": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.282Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lobster_War",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.282Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lobster_War"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Magellan_expedition": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.289Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Magellan_expedition",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.289Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Magellan_expedition"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Moon_landing": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.292Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Moon_landing",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.292Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Moon_landing"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_Security_Agency": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.308Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_Security_Agency",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.308Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_Security_Agency"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Neo-Assyrian_Empire": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.403Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Neo-Assyrian_Empire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.403Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Neo-Assyrian_Empire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/New_Amsterdam": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.412Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/New_Amsterdam",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.412Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/New_Amsterdam"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Norman_Conquest": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.413Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Norman_Conquest",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.413Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Norman_Conquest"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Normandy_landings": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.429Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.429Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Normandy_landings"
+      }
+    },
+    "https://en.wikipedia.org/wiki/O_Canada": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.527Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/O_Canada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.527Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/O_Canada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Operation_Dragoon": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.535Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Operation_Dragoon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.535Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Operation_Dragoon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Operation_Downfall": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.536Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Operation_Downfall",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.536Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Operation_Downfall"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paintings_by_Adolf_Hitler": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.549Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paintings_by_Adolf_Hitler",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.549Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paintings_by_Adolf_Hitler"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Panama_Canal": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.648Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Panama_Canal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.648Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Panama_Canal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paralytic_illness_of_Franklin_D._Roosevelt": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.658Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paralytic_illness_of_Franklin_D._Roosevelt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.658Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paralytic_illness_of_Franklin_D._Roosevelt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paubrasilia_echinata": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.670Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paubrasilia_echinata",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.670Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paubrasilia_echinata"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peace_of_Westphalia": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.771Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peace_of_Westphalia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.771Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peace_of_Westphalia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peasants%27_Revolt": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.778Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peasants%27_Revolt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.778Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peasants%27_Revolt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Philip_V_of_Spain": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.790Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Philip_V_of_Spain",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.790Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Philip_V_of_Spain"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pizza_Hut": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.892Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pizza_Hut",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.892Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pizza_Hut"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pope_Alexander_VI": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.899Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pope_Alexander_VI",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.899Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pope_Alexander_VI"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Potsdam_Conference": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.912Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Potsdam_Conference",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.912Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Potsdam_Conference"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pantheon,_Rome": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:27.973Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:27.973Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pantheon,_Rome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Potsdam_Declaration": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.014Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Potsdam_Declaration",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.014Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Potsdam_Declaration"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.019Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.019Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sandra_Day_O%27Connor": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.035Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sandra_Day_O%27Connor",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.035Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sandra_Day_O%27Connor"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shamshi-Adad_III": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.096Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shamshi-Adad_III",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.096Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shamshi-Adad_III"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shangdu": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.137Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shangdu",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.137Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shangdu"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Silk_Road": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.141Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Silk_Road",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.141Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Silk_Road"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.156Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.156Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Smallpox": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.217Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Smallpox",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.217Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Smallpox"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Statue_of_Liberty": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.261Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.261Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Statue_of_Liberty"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sumer": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.262Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sumer",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.262Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sumer"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Surrender_of_Japan": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.278Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Surrender_of_Japan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.278Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Surrender_of_Japan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Switzerland_during_the_World_Wars": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.332Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Switzerland_during_the_World_Wars",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.332Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Switzerland_during_the_World_Wars"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Texas_Revolution": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.377Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Texas_Revolution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.377Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Texas_Revolution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sword_Beach": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.383Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sword_Beach",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.383Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sword_Beach"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Friends_of_Voltaire": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.400Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Friends_of_Voltaire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.400Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Friends_of_Voltaire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Trajan": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.499Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Trajan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.499Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Trajan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.504Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.504Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Unua_Libro": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.522Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Unua_Libro",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.522Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Unua_Libro"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Victory_in_Europe_Day": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.616Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Victory_in_Europe_Day",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.616Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Victory_in_Europe_Day"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wars_of_the_Roses": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.626Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wars_of_the_Roses",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.626Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wars_of_the_Roses"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Winter_War": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.737Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Winter_War",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.737Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Winter_War"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wives_of_Henry_VIII": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.747Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wives_of_Henry_VIII",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.747Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wives_of_Henry_VIII"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Warsaw_Uprising": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.757Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Warsaw_Uprising",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.757Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Warsaw_Uprising"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.858Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.858Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_War_I": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.859Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_War_I",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.859Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_War_I"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_War_II": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.869Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_War_II",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.869Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_War_II"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Year_Without_a_Summer": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.872Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.872Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Year_of_the_Four_Emperors": {
+      "version": 1,
+      "expiresAt": "2026-08-21T03:02:28.972Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Year_of_the_Four_Emperors",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-14T03:02:28.972Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Year_of_the_Four_Emperors"
+      }
+    }
+  }
+}
