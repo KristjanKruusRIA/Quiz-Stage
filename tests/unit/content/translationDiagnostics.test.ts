@@ -157,9 +157,44 @@ describe('translation diagnostics', () => {
         accepted_variants_et: 'Q456',
       }),
       row({
+        clue_id: 'identifier-variant-loss',
+        accepted_variants_en: 'Q123',
+        accepted_variants_et: 'tundmatu',
+      }),
+      row({
+        clue_id: 'identifier-variant-addition',
+        accepted_variants_en: 'unknown',
+        accepted_variants_et: 'Q123',
+      }),
+      row({
         clue_id: 'url-variant-drift',
         accepted_variants_en: 'https://example.com/a',
         accepted_variants_et: 'https://example.com/b',
+      }),
+      row({
+        clue_id: 'url-variant-loss',
+        accepted_variants_en: 'https://example.com/a',
+        accepted_variants_et: 'näide',
+      }),
+      row({
+        clue_id: 'url-variant-addition',
+        accepted_variants_en: 'example',
+        accepted_variants_et: 'https://example.com/a',
+      }),
+      row({
+        clue_id: 'unsupported-acronym-substitution',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'UN',
+      }),
+      row({
+        clue_id: 'acronym-loss',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'liit',
+      }),
+      row({
+        clue_id: 'literal-acronym',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'NATO',
       }),
       row({
         clue_id: 'qualifier-drift',
@@ -198,7 +233,14 @@ describe('translation diagnostics', () => {
     expect(codesFor('numeric-variant-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('variant-count-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('identifier-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('unsupported-acronym-substitution')).toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('acronym-loss')).toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('literal-acronym')).not.toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('identifier-variant-loss')).toContain('VARIANT_DRIFT');
+    expect(codesFor('identifier-variant-addition')).toContain('VARIANT_DRIFT');
     expect(codesFor('url-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-variant-loss')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-variant-addition')).toContain('VARIANT_DRIFT');
     expect(codesFor('qualifier-drift')).toContain('QUALIFIER_DRIFT');
     expect(codesFor('reverse-qualifier-drift')).toContain('QUALIFIER_DRIFT');
     expect(codesFor('paired-qualifiers')).not.toContain('QUALIFIER_DRIFT');
@@ -238,6 +280,21 @@ describe('translation diagnostics', () => {
         accepted_variants_en: 'AD 79;79 AD',
         accepted_variants_et: '79 pKr;79 m.a.j.',
       }),
+      row({
+        clue_id: 'alternate-dotted-abbreviation',
+        accepted_variants_en: 'BC 44;44 BC',
+        accepted_variants_et: '44 eKr;44 e.m.a.',
+      }),
+      row({
+        clue_id: 'localized-decimal-and-thousands',
+        clue_en: 'The total was 1,234.5.',
+        clue_et: 'Kogusumma oli 1 234,5.',
+      }),
+      row({
+        clue_id: 'reordered-date',
+        clue_en: 'The armistice took effect on November 11, 1918.',
+        clue_et: 'Vaherahu jõustus 11. novembril 1918.',
+      }),
     ]);
     const codesFor = (clueId: string) => report.issues
       .filter((issue) => issue.clueId === clueId)
@@ -249,6 +306,9 @@ describe('translation diagnostics', () => {
     expect(codesFor('real-unit-drift')).toContain('NUMBER_DRIFT');
     expect(codesFor('real-number-drift')).toContain('NUMBER_DRIFT');
     expect(codesFor('dotted-abbreviation')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('alternate-dotted-abbreviation')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('localized-decimal-and-thousands')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('reordered-date')).not.toContain('NUMBER_DRIFT');
   });
 
   it('checks every fixed qualifier pair in every required field without flagging correct translations', () => {

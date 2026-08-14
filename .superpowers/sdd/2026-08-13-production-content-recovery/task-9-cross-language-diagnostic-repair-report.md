@@ -70,3 +70,54 @@ Exact-commit verification is reported in the Task 9 handoff after the selective 
 - this report
 
 No diagnostic exception, semantic waiver, content edit, translation status change, or approval was introduced.
+
+## Fix round 1: strict identifier presence and acronym review
+
+- Completed at: `2026-08-14T00:18:12Z`
+- Parent repair commit: `bf28597252d8b01fe4a2a4f03cffbfda14004cc6`
+- Scope remained diagnostic infrastructure only; the pinned CSV SHA-256 remained `56ad6969947f35566e24dd8afff9efd6a71d5b69cf5781ea92278b50f0012425`.
+
+Reviewer findings were reproduced against the real diagnostic entry point:
+
+1. One-sided URL/Q/P identifier loss or addition passed because stable-token comparison required both sides to contain a token.
+2. `isStableIdentifier` classified every all-caps acronym as stable, suppressing the proper-noun warning even for unsupported substitutions such as `NATO` to `UN`.
+
+Strict RED commands:
+
+`npx vitest run --configLoader runner tests/unit/content/translationDiagnostics.test.ts`
+
+- Identifier RED: exit 1; 7 tests, 1 failed. `url-variant-loss` emitted no `VARIANT_DRIFT`.
+- Acronym RED after moving that independent assertion first: exit 1; 7 tests, 1 failed. `unsupported-acronym-substitution` emitted no `SUSPICIOUS_PROPER_NOUN_CHANGE`.
+- An earlier invocation failed during runner startup because the shared ignored `node_modules` directory had been emptied. It was not counted as RED evidence; dependencies were restored with `npm install --ignore-scripts --no-audit --no-fund` before the behavioral REDs.
+
+Minimum production repair:
+
+- Stable URL and Q/P token arrays must now agree exactly, including zero-versus-one token presence.
+- Arbitrary all-caps acronyms are no longer treated as stable identifiers. Literal-equal acronyms remain naturally clean; changed or removed English acronyms enter the existing `SUSPICIOUS_PROPER_NOUN_CHANGE` semantic-review warning path.
+- No localization dictionary or semantic equivalence heuristic was added.
+
+Focused GREEN:
+
+`npx vitest run --configLoader runner tests/unit/content/translationDiagnostics.test.ts`
+
+- Result: exit 0; 7 tests passed.
+- Added coverage includes URL and Q/P change/loss/addition, `NATO` to `UN`, acronym loss, literal-equal acronym, `e.m.a.`, localized decimal/thousands separators, reordered dates, and retained real number/unit drift.
+- The minor numeric cases were already handled correctly; they required tests only, not further production logic.
+
+Pinned corpus command:
+
+`npx tsx scripts/content/translationDiagnostics.ts --input content/work/01-history/generated.en-et.csv --report $env:TEMP/jeopardy-task9-diagnostic-repair-r1/corpus-after.json`
+
+- Result: exit 0; 500 rows checked; `blocking=false`; zero blockers.
+- Warnings: `SUSPICIOUS_PROPER_NOUN_CHANGE=1108`, `UNCHANGED_TRANSLATION=159`, total 1,267.
+- The 47-warning increase consists solely of newly visible acronym review items (notably era abbreviations, localized state/organization abbreviations, and Roman numeral forms). These remain pending for independent semantic review; no warning was waived.
+
+Shared-worktree verification retained the known isolation caveats:
+
+- Four focused suites: 97 passed, 1 unrelated `validate.ts` placement failure.
+- `npm run typecheck`: exit 0 in the shared worktree, where unrelated WIP fixes base type errors.
+- `npx eslint scripts/content/translationDiagnostics.ts`: exit 0.
+- Test-file lint: the same inherited unchanged `oppositeEnglish` unused-variable error.
+- Owned diff check: exit 0.
+
+Exact-commit clean-snapshot results are supplied in the fix-round handoff after selective commit.

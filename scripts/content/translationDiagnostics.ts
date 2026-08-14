@@ -151,8 +151,7 @@ function isStableIdentifier(value: string): boolean {
   const trimmed = value.trim();
   if (trimmed === '') return false;
   return /^https?:\/\//.test(trimmed)
-    || /^[QqPp]\d+$/.test(trimmed)
-    || /^[A-Z]{2,}$/.test(trimmed);
+    || /^[QqPp]\d+$/.test(trimmed);
 }
 
 function stableIdentifierTokens(value: string): string[] {
@@ -164,9 +163,8 @@ function stableIdentifierTokens(value: string): string[] {
 function hasConflictingStableIdentifiers(left: string, right: string): boolean {
   const leftTokens = stableIdentifierTokens(left);
   const rightTokens = stableIdentifierTokens(right);
-  return leftTokens.length > 0
-    && rightTokens.length > 0
-    && (leftTokens.length !== rightTokens.length || leftTokens.some((token, index) => token !== rightTokens[index]));
+  return leftTokens.length !== rightTokens.length
+    || leftTokens.some((token, index) => token !== rightTokens[index]);
 }
 
 function extractProperNouns(value: string): string[] {
