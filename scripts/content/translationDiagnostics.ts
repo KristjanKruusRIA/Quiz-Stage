@@ -157,7 +157,7 @@ function isStableIdentifier(value: string): boolean {
 function stableIdentifierTokens(value: string): string[] {
   const urls = value.match(/https?:\/\/[^\s]+/giu) ?? [];
   const entityIds = value.match(/\b[QqPp]\d+\b/g) ?? [];
-  return [...new Set([...urls, ...entityIds].map(normalizeText))].sort(compareCodeUnits);
+  return [...new Set([...urls, ...entityIds.map(normalizeText)])].sort(compareCodeUnits);
 }
 
 function hasConflictingStableIdentifiers(left: string, right: string): boolean {

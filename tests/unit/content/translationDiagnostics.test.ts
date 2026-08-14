@@ -172,6 +172,21 @@ describe('translation diagnostics', () => {
         accepted_variants_et: 'https://example.com/b',
       }),
       row({
+        clue_id: 'url-case-variant-drift',
+        accepted_variants_en: 'https://example.com/Archive?item=Alpha',
+        accepted_variants_et: 'https://example.com/archive?item=alpha',
+      }),
+      row({
+        clue_id: 'url-case-answer-drift',
+        response_en: 'https://example.com/Archive?item=Alpha',
+        response_et: 'https://example.com/Archive?item=alpha',
+      }),
+      row({
+        clue_id: 'entity-id-case-equivalent',
+        accepted_variants_en: 'Q123',
+        accepted_variants_et: 'q123',
+      }),
+      row({
         clue_id: 'url-variant-loss',
         accepted_variants_en: 'https://example.com/a',
         accepted_variants_et: 'näide',
@@ -239,6 +254,9 @@ describe('translation diagnostics', () => {
     expect(codesFor('identifier-variant-loss')).toContain('VARIANT_DRIFT');
     expect(codesFor('identifier-variant-addition')).toContain('VARIANT_DRIFT');
     expect(codesFor('url-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-case-answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('url-case-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('entity-id-case-equivalent')).not.toContain('VARIANT_DRIFT');
     expect(codesFor('url-variant-loss')).toContain('VARIANT_DRIFT');
     expect(codesFor('url-variant-addition')).toContain('VARIANT_DRIFT');
     expect(codesFor('qualifier-drift')).toContain('QUALIFIER_DRIFT');

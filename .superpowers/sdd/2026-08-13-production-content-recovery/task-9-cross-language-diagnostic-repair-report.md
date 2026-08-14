@@ -121,3 +121,39 @@ Shared-worktree verification retained the known isolation caveats:
 - Owned diff check: exit 0.
 
 Exact-commit clean-snapshot results are supplied in the fix-round handoff after selective commit.
+
+## Fix round 2: case-sensitive URL identity
+
+- Completed at: `2026-08-14T00:24:57.4957163Z`
+- Parent repair commit: `9b8beea4f57dc98f30dc9b6f4484fbe3a1b3778f`
+- Scope remained diagnostic infrastructure only; the pinned CSV SHA-256 remained `56ad6969947f35566e24dd8afff9efd6a71d5b69cf5781ea92278b50f0012425`.
+
+Root cause: `stableIdentifierTokens` sent extracted URLs and Q/P identifiers through `normalizeText`, which lowercased both. That made case-sensitive URL path or query changes compare equal in accepted variants and canonical responses.
+
+Strict behavioral REDs used the real diagnostic entry point:
+
+`npx vitest run --configLoader runner tests/unit/content/translationDiagnostics.test.ts`
+
+- Variant RED: exit 1; 7 tests, 1 failed. `https://example.com/Archive?item=Alpha` versus `https://example.com/archive?item=alpha` emitted no `VARIANT_DRIFT`.
+- Response RED after independently moving that assertion first: exit 1; 7 tests, 1 failed. Query-value case change emitted no `ANSWER_DRIFT`.
+- A preceding invocation failed during runner startup after another shared dependency-tree removal. It was not counted as RED evidence; dependencies were restored before both behavioral runs.
+
+Minimum production repair: extracted URL tokens now retain exact spelling and case. Q/P entity identifiers alone still pass through lowercase normalization, preserving `Q123`/`q123` equivalence. Exact-string deduplication and deterministic code-unit sorting remain in place; no URL canonicalization was introduced.
+
+Focused GREEN:
+
+`npx vitest run --configLoader runner tests/unit/content/translationDiagnostics.test.ts`
+
+- Result: exit 0; 7 tests passed.
+- Coverage includes URL path/query case changes in accepted variants and canonical responses plus Q/P case equivalence.
+
+Pinned corpus command:
+
+`npx tsx scripts/content/translationDiagnostics.ts --input content/work/01-history/generated.en-et.csv --report $env:TEMP/jeopardy-task9-diagnostic-repair-r2/corpus-after.json`
+
+- Result: exit 0; 500 rows checked; `blocking=false`; zero blockers.
+- Warnings unchanged from fix round 1: `SUSPICIOUS_PROPER_NOUN_CHANGE=1108`, `UNCHANGED_TRANSLATION=159`, total 1,267.
+- `npx eslint scripts/content/translationDiagnostics.ts`: exit 0.
+- Owned diff check: exit 0.
+
+Exact-commit 98-test verification is supplied in the fix-round handoff after selective commit.
