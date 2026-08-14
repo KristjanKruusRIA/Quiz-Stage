@@ -1,4 +1,4 @@
-import { mkdirSync, mkdtempSync, readFileSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -30,6 +30,35 @@ function writePrivateSourceInput(path: string): void {
 }
 
 describe('npm 11 content CLI compatibility', () => {
+  test('worklist builder reconstructs the documented batch and output arguments', () => {
+    mkdirSync(resolve('content/work'), { recursive: true });
+    const directory = mkdtempSync(resolve('content/work/quiz-stage-worklist-cli-'));
+    const output = join(directory, 'worklist.jsonl');
+
+    try {
+      const result = runNpm('content:build-worklist', [
+        '--batch', '02-geography', '--output', output,
+      ]);
+
+      const inputs = ['content/imports/opentdb-candidates.jsonl', 'content/imports/wikidata-candidates.jsonl'];
+      if (inputs.every((path) => existsSync(path))) {
+        expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
+        const expectedRows = inputs.reduce((sum, path) => (
+          sum + readFileSync(path, 'utf8').trim().split(/\r?\n/).length
+        ), 0);
+        const rows = readFileSync(output, 'utf8').trim().split(/\r?\n/).map((line) => JSON.parse(line));
+        expect(rows).toHaveLength(expectedRows);
+        expect(rows.every((row) => row.batchId === '02-geography')).toBe(true);
+      } else {
+        expect(result.status).not.toBe(0);
+        expect(result.stderr).not.toMatch(/unknown argument/i);
+        expect(result.stderr).toMatch(/ENOENT|no such file/i);
+      }
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  }, 20_000);
+
   test('validator reconstructs the documented batch input, evidence, batch, mode, and report', () => {
     const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-validate-cli-'));
     const report = join(directory, 'report.json');

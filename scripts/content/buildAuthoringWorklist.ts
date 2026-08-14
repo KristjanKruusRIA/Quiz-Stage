@@ -10,6 +10,7 @@ import {
   assertWorkOutputPath,
 } from './candidatePaths';
 import type { WikidataMappedCandidate } from './mapWikidataCandidates';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 import { getProductionBatch } from './productionBatches';
 
 const DEFAULT_OPEN_TDB_INPUT = resolve(CANDIDATE_ROOT, 'opentdb-candidates.jsonl');
@@ -112,16 +113,17 @@ export function buildAuthoringWorklist(options: BuildAuthoringWorklistOptions): 
 }
 
 export function runBuildAuthoringWorklist(argv: string[] = process.argv.slice(2)): number {
+  const restoredArgv = restoreNpmRunArgs(argv, ['--batch', '--output']);
   let batchId: string | undefined;
   let output: string | undefined;
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
+  for (let index = 0; index < restoredArgv.length; index += 1) {
+    const argument = restoredArgv[index];
     if (argument === '--batch') {
-      batchId = argv[index + 1];
+      batchId = restoredArgv[index + 1];
       if (batchId === undefined || batchId === '') throw new Error('--batch requires an ID');
       index += 1;
     } else if (argument === '--output') {
-      output = argv[index + 1];
+      output = restoredArgv[index + 1];
       if (output === undefined || output === '') throw new Error('--output requires a path');
       index += 1;
     } else {
