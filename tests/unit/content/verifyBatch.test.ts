@@ -242,6 +242,25 @@ describe('batch publication boundary', () => {
     expect(readFileSync(reportPath, 'utf8')).toBe(stale);
   }, 30_000);
 
+  test('preserves the prior authorizing report when cache publication fails before report commit', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-batch-cache-commit-'));
+    const fixture = createPassingWork(root);
+    const reportPath = join(fixture.workRoot, '01-history/report.json');
+    const prior = '{"prior":"authorizing report"}\n';
+    writeFileSync(reportPath, prior);
+
+    await expect(verifyBatch({
+      batchId: '01-history', workRoot: fixture.workRoot,
+      sourceDependencies: fixture.sourceDependencies,
+      reportDependencies: {
+        beforeRename: () => { throw new Error('cache publish failed'); },
+      } as never,
+    })).rejects.toThrow(/cache publish failed/i);
+
+    expect(readFileSync(reportPath, 'utf8')).toBe(prior);
+    expect(readdirSync(join(fixture.workRoot, '01-history')).filter((name) => name.endsWith('.tmp'))).toEqual([]);
+  }, 30_000);
+
   test('rejects a symlinked work report without changing its external target', async () => {
     const root = mkdtempSync(join(tmpdir(), 'quiz-stage-batch-'));
     const fixture = createPassingWork(root);

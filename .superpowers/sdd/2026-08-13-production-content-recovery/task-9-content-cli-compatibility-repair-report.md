@@ -69,3 +69,47 @@ The detached candidate and its exact parent both exit `2` with the same four inh
 - Actual publish coverage targets only a temporary accepted root.
 - Source completed-failure coverage uses `https://127.0.0.1/source`, which is rejected before network access.
 - The staged `validate.ts` diff contains only the compatibility import and parser call; unrelated work remains unstaged.
+
+## Fix round 1: cache path and authorization atomicity
+
+Recorded: 2026-08-14T05:54:29.8888412+03:00
+
+Reviewer findings required file-cache ancestor hardening and atomic coupling between cache publication and the verification report that authorizes batch publication.
+
+### RED
+
+```powershell
+npm run test:run -- tests/unit/content/sourceCacheSafety.test.ts tests/unit/content/verifyBatch.test.ts
+```
+
+Result before production changes: exit `1`; 4 intended failures and 29 passes. An existing junction ancestor was followed far enough to read malformed outside JSON; a nested ancestor swap could redirect cache publication outside; there was no post-staging hook to exercise the second revalidation; and a cache-commit failure hook was ignored while the prior authorizing report was replaced.
+
+### Fix
+
+- Cache open validates every existing ancestor plus the real parent/destination before reading and verifies the same file identity after reading.
+- Cache publish revalidates before exclusive temporary creation and again immediately before rename.
+- Temporary cleanup checks the exact captured file identity and refuses to traverse an ancestor that became a symlink or junction. In that hostile swap case the owned temporary remains safely in the displaced original directory.
+- Batch report publication invokes an optional `beforeRename` hook after staging its owned temporary and before final path validation/rename.
+- Verify CLI publishes its file cache through that hook. A cache publication failure therefore removes only the owned report temporary and preserves prior report bytes exactly.
+
+### GREEN
+
+Focused main-worktree run: exit `0`; 33/33 tests passed.
+
+Prospective staged tree: `2954121d2272123ab3375ea630e38d3038277fb6`
+Detached candidate: `bdb49ea1badeede9101383d46f4f1101526e91ac`
+
+```powershell
+npm run test:run -- tests/unit/content/contentCliCompatibility.test.ts tests/unit/content/sourceCacheSafety.test.ts tests/unit/content/verifyBatch.test.ts tests/unit/content/productionValidator.test.ts
+```
+
+Detached result: exit `0`; 4 files and 90 tests passed.
+
+```powershell
+npm run test:run -- tests/unit/content/sourceCheck.test.ts tests/unit/content/evidence.test.ts
+npx eslint scripts/content/sourceCheck.ts scripts/content/verifyBatch.ts tests/unit/content/sourceCacheSafety.test.ts tests/unit/content/verifyBatch.test.ts
+```
+
+Detached results: 19/19 tests passed; focused ESLint exited `0`.
+
+Detached candidate and parent `cdf0bc9` typecheck both exit `2` with the same four inherited errors in `mapWikidataCandidates.ts` and `translationDiagnostics.test.ts`. The dirty main worktree typecheck exits `0` due unrelated unstaged fixes.

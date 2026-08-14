@@ -31,6 +31,7 @@ export interface VerifyBatchOptions {
 export interface BatchReportDependencies {
   rename?(source: string, destination: string): void;
   createTemporaryId?(): string;
+  beforeRename?(): void;
 }
 
 export interface BatchArtifactHashes {
@@ -247,6 +248,7 @@ function writeReportAtomically(
   }
   if (temporary === undefined) throw new Error('Could not allocate a unique batch report temporary file');
   try {
+    dependencies.beforeRename?.();
     assertSafePath();
     (dependencies.rename ?? renameSync)(temporary, path);
     temporary = undefined;
@@ -422,8 +424,13 @@ async function runCli(argv = process.argv.slice(2)): Promise<number> {
   const workRoot = value('--work-root') ?? resolve('content/work');
   const sourceCachePath = value('--source-cache');
   const sourceCache = sourceCachePath === undefined ? undefined : openFileSourceCache(sourceCachePath);
-  const report = await verifyBatch({ batchId, workRoot, ...(sourceCache === undefined ? {} : { sourceCache }) });
-  sourceCache?.publish();
+  const report = await verifyBatch({
+    batchId, workRoot,
+    ...(sourceCache === undefined ? {} : {
+      sourceCache,
+      reportDependencies: { beforeRename: () => sourceCache.publish() },
+    }),
+  });
   process.stdout.write(`${JSON.stringify(report)}\n`);
   return report.blocking ? 1 : 0;
 }
