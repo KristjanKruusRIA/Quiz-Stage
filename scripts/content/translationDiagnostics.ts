@@ -102,7 +102,7 @@ function compareCodeUnits(left: string, right: string): number {
 }
 
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml))?/giu) ?? [];
+  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
@@ -158,8 +158,7 @@ function isStableIdentifier(value: string): boolean {
 function stableIdentifierTokens(value: string): string[] {
   const urls = value.match(/https?:\/\/[^\s]+/giu) ?? [];
   const entityIds = value.match(/\b[QqPp]\d+\b/g) ?? [];
-  const acronyms = value.match(/\b[A-Z]{2,}\b/g) ?? [];
-  return [...new Set([...urls, ...entityIds, ...acronyms].map(normalizeText))].sort(compareCodeUnits);
+  return [...new Set([...urls, ...entityIds].map(normalizeText))].sort(compareCodeUnits);
 }
 
 function hasConflictingStableIdentifiers(left: string, right: string): boolean {
@@ -168,12 +167,6 @@ function hasConflictingStableIdentifiers(left: string, right: string): boolean {
   return leftTokens.length > 0
     && rightTokens.length > 0
     && (leftTokens.length !== rightTokens.length || leftTokens.some((token, index) => token !== rightTokens[index]));
-}
-
-function isSameStableIdentifier(left: string, right: string): boolean {
-  return isStableIdentifier(left)
-    && isStableIdentifier(right)
-    && normalizeText(left) === normalizeText(right);
 }
 
 function extractProperNouns(value: string): string[] {
@@ -283,13 +276,13 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
 }
 
 function diagnoseVariantDrift(row: ParsedCsvRow, file: string, issues: TranslationDiagnosticIssue[]): void {
-  const enItems = splitEscapedItems(row.accepted_variants_en);
-  const etItems = splitEscapedItems(row.accepted_variants_et);
+  const enItems = row.accepted_variants_en === '' ? [] : splitEscapedItems(row.accepted_variants_en);
+  const etItems = row.accepted_variants_et === '' ? [] : splitEscapedItems(row.accepted_variants_et);
   const mismatched = enItems.length !== etItems.length
     || enItems.some((english, index) => {
       const estonian = etItems[index] ?? '';
-      return normalizeText(english) !== normalizeText(estonian)
-        && !isSameStableIdentifier(english, estonian);
+      return differsNumerically(english, estonian)
+        || hasConflictingStableIdentifiers(english, estonian);
     });
   if (!mismatched) return;
   issues.push(buildIssue(

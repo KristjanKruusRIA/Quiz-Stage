@@ -132,9 +132,19 @@ describe('translation diagnostics', () => {
         response_et: 'Q456',
       }),
       row({
-        clue_id: 'variant-drift',
-        accepted_variants_en: 'Lake Peipus;Peipsi järv',
-        accepted_variants_et: 'Võrtsjärv;Peipsi järv',
+        clue_id: 'translated-variants',
+        accepted_variants_en: 'False;November 11;Eighty Years War;Dutch Revolt',
+        accepted_variants_et: 'Vale;11. november;Kaheksakümneaastane sõda;Madalmaade ülestõus',
+      }),
+      row({
+        clue_id: 'localized-acronym-variants',
+        accepted_variants_en: 'US Seventh Army;China;PRC;the Second World War;WWII',
+        accepted_variants_et: 'USA seitsmes armee;Hiina;HRV;Teine maailmasõda;II maailmasõda',
+      }),
+      row({
+        clue_id: 'numeric-variant-drift',
+        accepted_variants_en: '8 m;Q123',
+        accepted_variants_et: '8 l;Q123',
       }),
       row({
         clue_id: 'variant-count-drift',
@@ -183,7 +193,9 @@ describe('translation diagnostics', () => {
     expect(codesFor('numeric-answer-drift')).toContain('ANSWER_DRIFT');
     expect(codesFor('equal-number-prose-answer')).not.toContain('ANSWER_DRIFT');
     expect(codesFor('identifier-answer-drift')).toContain('ANSWER_DRIFT');
-    expect(codesFor('variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('translated-variants')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('localized-acronym-variants')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('numeric-variant-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('variant-count-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('identifier-variant-drift')).toContain('VARIANT_DRIFT');
     expect(codesFor('url-variant-drift')).toContain('VARIANT_DRIFT');
@@ -192,6 +204,51 @@ describe('translation diagnostics', () => {
     expect(codesFor('paired-qualifiers')).not.toContain('QUALIFIER_DRIFT');
     expect(codesFor('stable-answer')).not.toEqual(expect.arrayContaining(['ANSWER_DRIFT', 'VARIANT_DRIFT']));
     expect(report.blocking).toBe(true);
+  });
+
+  it('does not parse the initial of a following word as a numeric unit', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'may-date',
+        clue_en: 'The war ended on 8 May.',
+        clue_et: 'Sõda lõppes 8. mail.',
+      }),
+      row({
+        clue_id: 'lunar-module',
+        clue_en: 'Apollo 11 lunar module landed.',
+        clue_et: 'Apollo 11 kuumoodul maandus.',
+      }),
+      row({
+        clue_id: 'march-date',
+        clue_en: 'The attack came on 20 March.',
+        clue_et: 'Rünnak toimus 20. märtsil.',
+      }),
+      row({
+        clue_id: 'real-unit-drift',
+        clue_en: 'The length is 8 m.',
+        clue_et: 'Pikkus on 8 l.',
+      }),
+      row({
+        clue_id: 'real-number-drift',
+        clue_en: 'The mission carried 11 people.',
+        clue_et: 'Missioonil oli 12 inimest.',
+      }),
+      row({
+        clue_id: 'dotted-abbreviation',
+        accepted_variants_en: 'AD 79;79 AD',
+        accepted_variants_et: '79 pKr;79 m.a.j.',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('may-date')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('lunar-module')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('march-date')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('real-unit-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('real-number-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('dotted-abbreviation')).not.toContain('VARIANT_DRIFT');
   });
 
   it('checks every fixed qualifier pair in every required field without flagging correct translations', () => {
