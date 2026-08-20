@@ -52,3 +52,4 @@ Task 9 cross-language diagnostic repair: complete (commits 71e619f..b090430, rev
 Task 9 validator numeric repair: minor (deferred): productionValidator regression covers word-initial and dotted-era boundaries but not the explicit numeric boundary or a no-space supported-unit form.
 Task 9 validator numeric repair: complete (commits b090430..521675b, review clean; exact validator 52/52 and diagnostics 7/7, approved corpus NUMBER_DRIFT 10→0)
 Task 9 Node24 source-check repair: complete (commits 521675b..d2f4db2, review clean; source tests 5/5, verifyBatch 26/26, live History source gate 110/110 and batch blocking=false)
+Task 10: complete (commits 2844286..665c0ee, independent factual/publication and specification/quality reviews clean; accepted authored cff81c0f, generated 811e75bc, evidence 77958cdd, report 2718b67e, source cache 494797cb; 500 clues/100 sets, exact E 17/17 M 16/17 H 17/16, 188/188 sources, zero filler/placeholder/template content, no waivers)
