@@ -6,7 +6,7 @@ Date: 2026-08-20
 
 Task 10 replaced the accepted `02-geography` filler batch with 100 independently authored, reviewed, bilingual Geography category sets containing 500 board clues. The final corpus has exactly 100 OpenTDB-inspired rows and 400 compatible-open rows, 10 subthemes with 10 sets each, and the required allocation: Easy 17/17, Medium 16/17, Hard 17/16 across rounds one/two.
 
-The accepted files were changed only by the atomic publisher and committed as `665c0ee1fcbef2d8c84e059f00e553c228b472dc` (`content(geography): replace filler with reviewed production clues`). Final verification is nonblocking, all 188 distinct sources pass, all 500 evidence records contain three distinct approvals, and an independent scan found zero filler, placeholder, or template content. No waivers were used.
+The atomic publisher replaced the accepted authored/generated/evidence/report quartet from the verified work batch. The prescribed post-publication validation and source-check commands then refreshed the accepted report and merged the accepted source cache; those checks did not alter accepted authored, generated, or evidence bytes. The five final accepted paths were committed as `665c0ee1fcbef2d8c84e059f00e553c228b472dc` (`content(geography): replace filler with reviewed production clues`). Final verification is nonblocking, all 188 distinct sources pass, all 500 evidence records contain three distinct approvals, and an independent scan found zero filler, placeholder, or template content. No waivers were used.
 
 ## Accepted RED and worklist
 
@@ -74,7 +74,9 @@ npm run content:validate -- --input content/generated/02-geography.en-et.csv --e
 npm run content:source-check -- --input content/generated/02-geography.en-et.csv --report content/reports/02-geography.json --source-cache content/reports/source-check-cache.json
 ```
 
-The final report is `kind=verification`, `blocking=false`, with 500 clues, 100 sets, exact allocation, zero errors, and 188/188 source responses at HTTP 200. Its retained verification sample covers six cells and 30 clues. All 500 evidence rows carry approvals from the three distinct identities above. Warning-only translation diagnostics were independently adjudicated; there are no exceptions or waivers.
+The work-only verification report/cache were SHA-256 `67f959714547168cfca24c4406b32881603c86d4c452cf8aac3f1d13b85b169d` and `ab5a72d665af22eea3a0f797fff7dc0f381a954e7e9e11c007c7b2409a0f9e80`. The post-publication validation and source-check commands produced the different final accepted report/cache hashes listed below while preserving the report's hash-bound verification fields, nested validation, and retained sample.
+
+The final report is `kind=verification`, `blocking=false`, with 500 clues, 100 sets, exact allocation, zero errors, and 188/188 source responses at HTTP 200. Its retained verification sample covers six cells and 30 clues. All 500 evidence rows carry approvals from the three distinct identities above. The report records 500 expected authored `MISSING_TRANSLATION` exceptions under `--allow-missing-et`. Translation diagnostics contain 1,413 warning findings (`SUSPICIOUS_PROPER_NOUN_CHANGE=1341`, `UNCHANGED_TRANSLATION=72`), all independently adjudicated by the semantic reviewer, plus 1,172 corresponding pending-warning exception/bookkeeping records (`1104` and `68`). These records are not waivers; no waiver was used.
 
 Final accepted SHA-256 values:
 
@@ -84,7 +86,7 @@ Final accepted SHA-256 values:
 - `content/reports/02-geography.json`: `2718b67efcbe457bf258898be8820b870532306e25ef2b36ad513cf066438497`
 - `content/reports/source-check-cache.json`: `494797cbda82e1e6a23b03e9705c6fe878757f13f0386cf2958b005e75ea4611`
 
-Commit `665c0ee1fcbef2d8c84e059f00e553c228b472dc` has parent `8cfdba25714683abd2f82dfa858f006b29f056fa` and contains exactly those five accepted paths. The main branch was fast-forwarded only after target-path and index revalidation; the detached worktree was unregistered and removed. Independent post-publication factual/publication and specification/quality reviews were both clean with no findings and authorized this closure.
+Commit `665c0ee1fcbef2d8c84e059f00e553c228b472dc` has parent `8cfdba25714683abd2f82dfa858f006b29f056fa` and contains exactly those five accepted paths. The primary checkout's `codex/finish-quiz-stage` branch was fast-forwarded only after target-path and index revalidation; the detached worktree was unregistered and removed. Independent post-publication factual/publication and specification/quality reviews were both clean with no findings and authorized this closure.
 
 ## Concerns and closure
 
