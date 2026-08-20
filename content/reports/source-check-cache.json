@@ -1320,6 +1320,2262 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/wiki/Year_of_the_Four_Emperors"
       }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Alaska_Range&oldid=1356107791": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:52.915Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Alaska_Range&oldid=1356107791",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:52.915Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alaska_Range&oldid=1356107791"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Albertine_Rift&oldid=1367019085": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:52.917Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Albertine_Rift&oldid=1367019085",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:52.917Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Albertine_Rift&oldid=1367019085"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Aleutian_Range&oldid=1356107806": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:52.918Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Aleutian_Range&oldid=1356107806",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:52.918Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Aleutian_Range&oldid=1356107806"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Baltic_Sea&oldid=1365870921": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:52.918Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Baltic_Sea&oldid=1365870921",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:52.918Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Baltic_Sea&oldid=1365870921"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Berbice_River&oldid=1367376556": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.160Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Berbice_River&oldid=1367376556",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.160Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Berbice_River&oldid=1367376556"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Banda_Sea&oldid=1365871031": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.164Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Banda_Sea&oldid=1365871031",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.164Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Banda_Sea&oldid=1365871031"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Belfast&oldid=1369190820": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.193Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Belfast&oldid=1369190820",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.193Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Belfast&oldid=1369190820"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Borders_of_Russia&oldid=1358433194": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.409Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Borders_of_Russia&oldid=1358433194",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.409Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Borders_of_Russia&oldid=1358433194"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Brazil&oldid=1368385827": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.423Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Brazil&oldid=1368385827",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.423Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Brazil&oldid=1368385827"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Brooks_Range&oldid=1368620646": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.440Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Brooks_Range&oldid=1368620646",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.440Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Brooks_Range&oldid=1368620646"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Cambrian_Mountains&oldid=1368623208": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.683Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Cambrian_Mountains&oldid=1368623208",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.683Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Cambrian_Mountains&oldid=1368623208"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Calgary&oldid=1368836748": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.693Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Calgary&oldid=1368836748",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.693Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Calgary&oldid=1368836748"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Caledon_River&oldid=1368118879": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.707Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Caledon_River&oldid=1368118879",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.707Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Caledon_River&oldid=1368118879"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Cape_Dezhnyov&oldid=1357706236": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.918Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Cape_Dezhnyov&oldid=1357706236",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.918Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Cape_Dezhnyov&oldid=1357706236"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Colombia&oldid=1369117378": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.956Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Colombia&oldid=1369117378",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.956Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Colombia&oldid=1369117378"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Dead_Sea&oldid=1368100043": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:53.957Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Dead_Sea&oldid=1368100043",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:53.957Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dead_Sea&oldid=1368100043"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Demerara_River&oldid=1367400118": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.184Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Demerara_River&oldid=1367400118",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.184Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Demerara_River&oldid=1367400118"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Demographics_of_Liechtenstein&oldid=1368076078": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.188Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Demographics_of_Liechtenstein&oldid=1368076078",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.188Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Demographics_of_Liechtenstein&oldid=1368076078"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Denali&oldid=1368791828": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.197Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Denali&oldid=1368791828",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.197Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Denali&oldid=1368791828"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Denmark_Strait&oldid=1364312685": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.428Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Denmark_Strait&oldid=1364312685",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.428Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Denmark_Strait&oldid=1364312685"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Dhaka&oldid=1368491587": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.431Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Dhaka&oldid=1368491587",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.431Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dhaka&oldid=1368491587"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Disputed_status_of_the_isthmus_between_Gibraltar_and_Spain&oldid=1359363101": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.441Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Disputed_status_of_the_isthmus_between_Gibraltar_and_Spain&oldid=1359363101",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.441Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Disputed_status_of_the_isthmus_between_Gibraltar_and_Spain&oldid=1359363101"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Dzongkha&oldid=1367365850": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.667Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Dzongkha&oldid=1367365850",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.667Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dzongkha&oldid=1367365850"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Edmonton&oldid=1368377712": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Edmonton&oldid=1368377712",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Edmonton&oldid=1368377712"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Flag_of_Nepal&oldid=1368344329": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.679Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_Nepal&oldid=1368344329",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.679Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_Nepal&oldid=1368344329"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Fort_Zeelandia_%28Paramaribo%29&oldid=1364984378": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.902Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Fort_Zeelandia_%28Paramaribo%29&oldid=1364984378",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.902Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Fort_Zeelandia_%28Paramaribo%29&oldid=1364984378"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Friesland&oldid=1367919742": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:54.940Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Friesland&oldid=1367919742",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:54.940Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Friesland&oldid=1367919742"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Geography_of_Ecuador&oldid=1336372484": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.200Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Geography_of_Ecuador&oldid=1336372484",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.200Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Geography_of_Ecuador&oldid=1336372484"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Geography_of_Prince_Edward_Island&oldid=1367718066": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.444Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Geography_of_Prince_Edward_Island&oldid=1367718066",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.444Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Geography_of_Prince_Edward_Island&oldid=1367718066"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Franco-Brazilian_Binational_Bridge&oldid=1357682200": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.478Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Franco-Brazilian_Binational_Bridge&oldid=1357682200",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.478Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Franco-Brazilian_Binational_Bridge&oldid=1357682200"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Geography_of_Vatican_City&oldid=1360316868": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.689Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Geography_of_Vatican_City&oldid=1360316868",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.689Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Geography_of_Vatican_City&oldid=1360316868"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Guapor%C3%A9_River&oldid=1367431778": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.726Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Guapor%C3%A9_River&oldid=1367431778",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.726Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Guapor%C3%A9_River&oldid=1367431778"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=H%C5%ABnua_Falls&oldid=1362221913": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.809Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=H%C5%ABnua_Falls&oldid=1362221913",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.809Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=H%C5%ABnua_Falls&oldid=1362221913"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Geography_of_Norway&oldid=1362794522": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.812Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Geography_of_Norway&oldid=1362794522",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.812Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Geography_of_Norway&oldid=1362794522"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Halmahera&oldid=1365649259": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:55.967Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Halmahera&oldid=1365649259",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:55.967Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Halmahera&oldid=1365649259"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Iron_Gates&oldid=1364863178": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.061Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Iron_Gates&oldid=1364863178",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.061Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Iron_Gates&oldid=1364863178"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Japan_National_Route_1&oldid=1319533524": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.230Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Japan_National_Route_1&oldid=1319533524",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.230Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Japan_National_Route_1&oldid=1319533524"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Japanese_units_of_measurement&oldid=1348030386": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.311Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Japanese_units_of_measurement&oldid=1348030386",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.311Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Japanese_units_of_measurement&oldid=1348030386"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Jefferson_City%2C_Missouri&oldid=1368392652": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.477Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Jefferson_City%2C_Missouri&oldid=1368392652",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.477Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Jefferson_City%2C_Missouri&oldid=1368392652"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Jewish_Neo-Aramaic_dialect_of_Zakho&oldid=1349569197": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.566Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Jewish_Neo-Aramaic_dialect_of_Zakho&oldid=1349569197",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.566Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Jewish_Neo-Aramaic_dialect_of_Zakho&oldid=1349569197"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Jura_Mountains&oldid=1362881483": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.804Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Jura_Mountains&oldid=1362881483",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.804Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Jura_Mountains&oldid=1362881483"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Jordan_Rift_Valley&oldid=1368011091": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.927Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Jordan_Rift_Valley&oldid=1368011091",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.927Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Jordan_Rift_Valley&oldid=1368011091"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Harvard_University&oldid=1367091197": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:56.956Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Harvard_University&oldid=1367091197",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:56.956Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harvard_University&oldid=1367091197"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Kluane_National_Park_and_Reserve&oldid=1368468641": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.064Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Kluane_National_Park_and_Reserve&oldid=1368468641",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.064Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kluane_National_Park_and_Reserve&oldid=1368468641"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=List_of_Australian_capital_cities&oldid=1349503380": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.079Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_Australian_capital_cities&oldid=1349503380",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.079Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_Australian_capital_cities&oldid=1349503380"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=List_of_countries_and_dependencies_by_area&oldid=1369051991": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.188Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_countries_and_dependencies_by_area&oldid=1369051991",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.188Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_countries_and_dependencies_by_area&oldid=1369051991"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Lithuania&oldid=1368845192": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.334Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Lithuania&oldid=1368845192",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.334Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lithuania&oldid=1368845192"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=M%C4%81ori_language&oldid=1368442657": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.443Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=M%C4%81ori_language&oldid=1368442657",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.442Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=M%C4%81ori_language&oldid=1368442657"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Left-_and_right-hand_traffic&oldid=1368750158": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.487Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Left-_and_right-hand_traffic&oldid=1368750158",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.487Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Left-_and_right-hand_traffic&oldid=1368750158"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Maloti_Mountains&oldid=1355471106": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.612Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Maloti_Mountains&oldid=1355471106",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.612Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Maloti_Mountains&oldid=1355471106"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Mercator_projection&oldid=1366857020": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.751Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Mercator_projection&oldid=1366857020",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.751Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Mercator_projection&oldid=1366857020"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Moka_Range&oldid=1236029252": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:57.858Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Moka_Range&oldid=1236029252",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:57.858Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moka_Range&oldid=1236029252"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Mount_Fuji&oldid=1365907476": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.027Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Mount_Fuji&oldid=1365907476",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.027Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Mount_Fuji&oldid=1365907476"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=National_Baseball_Hall_of_Fame_and_Museum&oldid=1369135475": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.150Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=National_Baseball_Hall_of_Fame_and_Museum&oldid=1369135475",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.150Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=National_Baseball_Hall_of_Fame_and_Museum&oldid=1369135475"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Mount_Ossa_(Tasmania)&oldid=1355905099": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.279Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Mount_Ossa_(Tasmania)&oldid=1355905099",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.279Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Mount_Ossa_(Tasmania)&oldid=1355905099"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Nazca_lines&oldid=1367501840": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.398Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Nazca_lines&oldid=1367501840",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.398Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nazca_lines&oldid=1367501840"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=North_American_plate&oldid=1321969986": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.551Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=North_American_plate&oldid=1321969986",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.551Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=North_American_plate&oldid=1321969986"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Norway%E2%80%93Russia_border&oldid=1358676201": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.678Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Norway%E2%80%93Russia_border&oldid=1358676201",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.678Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Norway%E2%80%93Russia_border&oldid=1358676201"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Pa%C5%BEaislis_Monastery&oldid=1349108619": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.817Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Pa%C5%BEaislis_Monastery&oldid=1349108619",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.817Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Pa%C5%BEaislis_Monastery&oldid=1349108619"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Rh%C3%B4ne&oldid=1367777239": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:58.934Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Rh%C3%B4ne&oldid=1367777239",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:58.934Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rh%C3%B4ne&oldid=1367777239"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=River_Taff&oldid=1367781305": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=River_Taff&oldid=1367781305",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=River_Taff&oldid=1367781305"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Saarland&oldid=1365856657": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.181Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Saarland&oldid=1365856657",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.181Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Saarland&oldid=1365856657"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Saint_Elias_Mountains&oldid=1365745327": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.396Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Saint_Elias_Mountains&oldid=1365745327",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.396Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Saint_Elias_Mountains&oldid=1365745327"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Scotland&oldid=1369233966": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.438Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Scotland&oldid=1369233966",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.438Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scotland&oldid=1369233966"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Senate_Square%2C_Helsinki&oldid=1325955500": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.670Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Senate_Square%2C_Helsinki&oldid=1325955500",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.670Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Senate_Square%2C_Helsinki&oldid=1325955500"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Seram_Island&oldid=1364199078": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.684Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Seram_Island&oldid=1364199078",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.684Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Seram_Island&oldid=1364199078"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Shuto_Expressway&oldid=1367869271": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.898Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Shuto_Expressway&oldid=1367869271",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.898Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shuto_Expressway&oldid=1367869271"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Sotho_language&oldid=1365789729": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:56:59.919Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Sotho_language&oldid=1365789729",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:56:59.919Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sotho_language&oldid=1365789729"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=South_Africa&oldid=1369211547": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.144Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=South_Africa&oldid=1369211547",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.144Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=South_Africa&oldid=1369211547"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Suchiate_River&oldid=1367948128": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.260Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Suchiate_River&oldid=1367948128",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.260Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Suchiate_River&oldid=1367948128"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Sugarloaf_Mountain&oldid=1367409853": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.503Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Sugarloaf_Mountain&oldid=1367409853",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.503Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sugarloaf_Mountain&oldid=1367409853"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Suriname&oldid=1368853712": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.750Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Suriname&oldid=1368853712",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.750Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Suriname&oldid=1368853712"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Sri_Lanka&oldid=1369016834": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.957Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Sri_Lanka&oldid=1369016834",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.957Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sri_Lanka&oldid=1369016834"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tasmania&oldid=1368341274": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:00.982Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tasmania&oldid=1368341274",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:00.982Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tasmania&oldid=1368341274"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Torkham&oldid=1304963184": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.097Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Torkham&oldid=1304963184",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.097Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Torkham&oldid=1304963184"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tijuca_National_Park&oldid=1365740914": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.195Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tijuca_National_Park&oldid=1365740914",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.195Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tijuca_National_Park&oldid=1365740914"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tsugaru_Strait&oldid=1366777049": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.358Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tsugaru_Strait&oldid=1366777049",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.358Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tsugaru_Strait&oldid=1366777049"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Ukerewe_Island&oldid=1367240056": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.442Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Ukerewe_Island&oldid=1367240056",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.442Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ukerewe_Island&oldid=1367240056"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Vientiane&oldid=1367314887": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.563Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Vientiane&oldid=1367314887",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.563Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Vientiane&oldid=1367314887"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Vaduz&oldid=1367017063": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.590Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Vaduz&oldid=1367017063",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.590Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Vaduz&oldid=1367017063"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=William_Edmond_Logan&oldid=1366730800": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.824Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=William_Edmond_Logan&oldid=1366730800",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.824Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=William_Edmond_Logan&oldid=1366730800"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Yukon&oldid=1367058269": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:01.848Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Yukon&oldid=1367058269",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:01.848Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Yukon&oldid=1367058269"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Zakho&oldid=1367186864": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.075Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Zakho&oldid=1367186864",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.075Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Zakho&oldid=1367186864"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Zytglogge&oldid=1365399547": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.095Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Zytglogge&oldid=1365399547",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.095Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Zytglogge&oldid=1365399547"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anatolia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.197Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anatolia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.197Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anatolia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Andorra": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.218Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Andorra",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.218Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Andorra"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Baffin_Island": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.321Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Baffin_Island",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.321Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Baffin_Island"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Basque_language": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.341Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Basque_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.341Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Basque_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bern": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.444Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bern",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.444Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bern"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bikini_Atoll": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.463Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bikini_Atoll",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.463Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bikini_Atoll"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Borders_of_Brazil": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.560Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Borders_of_Brazil",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.560Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Borders_of_Brazil"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Borders_of_Mexico": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.586Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Borders_of_Mexico",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.586Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Borders_of_Mexico"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Borders_of_Suriname": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.682Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Borders_of_Suriname",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.682Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Borders_of_Suriname"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bras%C3%ADlia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.710Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bras%C3%ADlia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.710Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Brazil%E2%80%93France_border": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.807Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Brazil%E2%80%93France_border",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.807Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Brazil%E2%80%93France_border"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bunny_Man": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.832Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bunny_Man",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.832Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bunny_Man"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.933Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.933Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Canadian_Shield": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:02.956Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Canadian_Shield",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:02.956Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Canadian_Shield"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Castle_Bravo": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.072Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Castle_Bravo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.072Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Castle_Bravo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Colombo": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.094Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Colombo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.094Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Colombo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cook_Islands": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.194Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cook_Islands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.194Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cook_Islands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cook_Islands_dollar": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.218Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cook_Islands_dollar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.218Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cook_Islands_dollar"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Bangladesh&oldid=1369055246": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.303Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Bangladesh&oldid=1369055246",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.303Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Bangladesh&oldid=1369055246"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.318Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.318Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cyprus": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.343Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cyprus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.343Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cyprus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dhaka": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.427Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dhaka",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.427Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dhaka"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Elizabeth_Castle": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.441Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_Castle",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.441Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Elizabeth_Castle"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Four_Corners": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.466Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Four_Corners",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.466Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Four_Corners"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Alaska": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.551Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Alaska",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.551Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Alaska"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Alberta": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.563Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Alberta",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.563Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Alberta"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Angola": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.588Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Angola",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.588Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Angola"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Australia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.674Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Australia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.674Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Australia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Bhutan": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.686Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Bhutan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.686Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Bhutan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Colombia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.711Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Colombia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.711Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Colombia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Guyana": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.796Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Guyana",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.796Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Guyana"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Liechtenstein": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.807Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Liechtenstein",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.807Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Liechtenstein"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Nepal": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.843Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Nepal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.843Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Nepal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Russia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.953Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Russia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.953Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Russia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Serbia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:03.968Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Serbia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:03.968Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Serbia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Switzerland": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.089Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Switzerland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.089Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Switzerland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Vatican_City": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.099Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Vatican_City",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.099Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Vatican_City"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_the_Democratic_Republic_of_the_Congo": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.212Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_the_Democratic_Republic_of_the_Congo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.212Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_the_Democratic_Republic_of_the_Congo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Georgian_language": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.223Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Georgian_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.223Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Georgian_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Georgian_scripts": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.333Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Georgian_scripts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.333Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Georgian_scripts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gibraltar": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.339Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gibraltar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.339Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gibraltar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gotland": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.453Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gotland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.453Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gotland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Golden_Horn": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.454Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Golden_Horn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.454Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Golden_Horn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Greenland": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.577Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Greenland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.577Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Greenland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hadrian%27s_Wall": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.578Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hadrian%27s_Wall",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.578Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hadrian%27s_Wall"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geography_of_Norway": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.668Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geography_of_Norway",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.668Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geography_of_Norway"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Helsinki": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.693Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Helsinki",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.693Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Helsinki"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Honshu": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.700Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Honshu",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.700Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Honshu"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hunua_Ranges": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.790Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hunua_Ranges",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.790Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hunua_Ranges"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Istanbul": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.815Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Istanbul",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.815Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Istanbul"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jordan_River": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.907Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jordan_River",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.907Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jordan_River"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kaunas": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:04.933Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kaunas",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:04.933Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kaunas"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Isar": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.010Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Isar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.010Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Isar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Khyber_Pass": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.029Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Khyber_Pass",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.029Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Khyber_Pass"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kuala_Lumpur": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.054Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kuala_Lumpur",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.054Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kuala_Lumpur"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lake_Baikal": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.125Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.125Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lake_Baikal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lake_Titicaca": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.151Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lake_Titicaca",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.151Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lake_Titicaca"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lake_Victoria": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.170Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lake_Victoria",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.170Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lake_Victoria"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Languages_of_Costa_Rica": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.247Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Languages_of_Costa_Rica",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.247Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Languages_of_Costa_Rica"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lesotho": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.272Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lesotho",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.272Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lesotho"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Luxembourg": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.292Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Luxembourg",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.292Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Luxembourg"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Maluku_Islands": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.368Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Maluku_Islands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.368Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Maluku_Islands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Memphis,_Tennessee": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.387Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Memphis,_Tennessee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.387Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Memphis,_Tennessee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Montreal": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.407Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Montreal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.407Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Montreal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mount_Logan": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.490Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mount_Logan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.490Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mount_Logan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_Baseball_Hall_of_Fame_and_Museum": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.508Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_Baseball_Hall_of_Fame_and_Museum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.508Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_Baseball_Hall_of_Fame_and_Museum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/New_Delhi": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.521Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/New_Delhi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.521Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/New_Delhi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/New_Zealand": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.611Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/New_Zealand",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.611Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/New_Zealand"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Okinawa_Prefecture": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.623Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Okinawa_Prefecture",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.623Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Okinawa_Prefecture"
+      }
+    },
+    "https://en.wikipedia.org/wiki/One_World_Trade_Center": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.635Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/One_World_Trade_Center",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.635Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/One_World_Trade_Center"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ottawa": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.732Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ottawa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.732Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ottawa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paramaribo": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.744Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paramaribo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.744Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paramaribo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Plate_tectonics": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.756Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Plate_tectonics",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.756Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Plate_tectonics"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Port_Louis": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.855Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Port_Louis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.855Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Port_Louis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prefectures_of_Japan": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.866Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prefectures_of_Japan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.866Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prefectures_of_Japan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prince_Edward_Island": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.877Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prince_Edward_Island",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.877Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prince_Edward_Island"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Provinces_of_the_Netherlands": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.977Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Provinces_of_the_Netherlands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.977Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Provinces_of_the_Netherlands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Quito": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:05.989Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Quito",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:05.989Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Quito"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rio_de_Janeiro": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.000Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.000Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rio_de_Janeiro"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Road_transport_in_Japan": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.099Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Road_transport_in_Japan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.099Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Road_transport_in_Japan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Scandinavian_Peninsula": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.110Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Scandinavian_Peninsula",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.110Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Scandinavian_Peninsula"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sonoran_Desert": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.222Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sonoran_Desert",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.222Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sonoran_Desert"
+      }
+    },
+    "https://en.wikipedia.org/wiki/South_China_Sea": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.231Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/South_China_Sea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.231Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/South_China_Sea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Space_Needle": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.344Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Space_Needle",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.344Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Space_Needle"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Spanish_Steps": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.351Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Spanish_Steps",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.351Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Spanish_Steps"
+      }
+    },
+    "https://en.wikipedia.org/wiki/St._Louis": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.466Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/St._Louis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.466Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/St._Louis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/States_and_territories_of_Australia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.472Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/States_and_territories_of_Australia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.472Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/States_and_territories_of_Australia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/States_of_Germany": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.590Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/States_of_Germany",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.590Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/States_of_Germany"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Stonehenge": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.594Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Stonehenge",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.594Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sea_of_Galilee": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.679Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sea_of_Galilee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.679Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sea_of_Galilee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Suez_Canal": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.711Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Suez_Canal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.711Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Suez_Canal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Svalbard": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.717Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Svalbard",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.717Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Svalbard"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Massachusetts_Institute_of_Technology&oldid=1369215129": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.768Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Massachusetts_Institute_of_Technology&oldid=1369215129",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.768Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Massachusetts_Institute_of_Technology&oldid=1369215129"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Taj_Mahal": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.802Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Taj_Mahal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.802Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Taj_Mahal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tallinn": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.836Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tallinn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.836Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tallinn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tasmania": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.840Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tasmania",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.840Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tasmania"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Time_in_Russia": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Time_in_Russia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Time_in_Russia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Toronto": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.925Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Toronto",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.925Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Toronto"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Transylvania": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.957Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Transylvania",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.957Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Transylvania"
+      }
+    },
+    "https://en.wikipedia.org/wiki/U.S._Route_66": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:06.962Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/U.S._Route_66",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:06.962Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/U.S._Route_66"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vatican_City": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:07.013Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vatican_City",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:07.013Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vatican_City"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vientiane": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:07.046Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vientiane",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:07.046Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vientiane"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Volga": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:07.084Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Volga",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:07.084Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Volga"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Volgograd": {
+      "version": 1,
+      "expiresAt": "2026-08-27T16:57:07.090Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Volgograd",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-20T16:57:07.090Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Volgograd"
+      }
     }
   }
 }
