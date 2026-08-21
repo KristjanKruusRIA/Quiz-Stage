@@ -3576,6 +3576,1362 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/wiki/Volgograd"
       }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Frank_Jobe&oldid=1361633133": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:04.884Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Frank_Jobe&oldid=1361633133",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:04.884Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Frank_Jobe&oldid=1361633133"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Capillary&oldid=1342754630": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:04.886Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Capillary&oldid=1342754630",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:04.886Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Capillary&oldid=1342754630"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Christiaan_Barnard&oldid=1361661941": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:04.887Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Christiaan_Barnard&oldid=1361661941",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:04.887Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Christiaan_Barnard&oldid=1361661941"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Chandra_X-ray_Observatory&oldid=1366825860": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:04.887Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Chandra_X-ray_Observatory&oldid=1366825860",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:04.887Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Chandra_X-ray_Observatory&oldid=1366825860"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Gray%27s_Anatomy&oldid=1368245580": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.005Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Gray%27s_Anatomy&oldid=1368245580",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.005Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gray%27s_Anatomy&oldid=1368245580"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=History_of_anatomy&oldid=1365093065": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.007Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=History_of_anatomy&oldid=1365093065",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.007Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=History_of_anatomy&oldid=1365093065"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=History_of_computed_tomography&oldid=1369639024": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.014Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=History_of_computed_tomography&oldid=1369639024",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.014Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=History_of_computed_tomography&oldid=1369639024"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Magnetic_resonance_imaging&oldid=1369650837": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.015Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Magnetic_resonance_imaging&oldid=1369650837",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.015Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Magnetic_resonance_imaging&oldid=1369650837"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Pulmonary_circulation&oldid=1364832374": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.125Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Pulmonary_circulation&oldid=1364832374",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.125Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Pulmonary_circulation&oldid=1364832374"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=STS-93&oldid=1313039223": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.132Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=STS-93&oldid=1313039223",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.132Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=STS-93&oldid=1313039223"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Stethoscope&oldid=1364481103": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.133Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Stethoscope&oldid=1364481103",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.133Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Stethoscope&oldid=1364481103"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tennis_elbow&oldid=1367524365": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.134Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tennis_elbow&oldid=1367524365",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.134Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tennis_elbow&oldid=1367524365"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Willem_Einthoven&oldid=1342403562": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.243Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Willem_Einthoven&oldid=1342403562",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.243Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Willem_Einthoven&oldid=1342403562"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Age_of_Earth": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.385Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Age_of_Earth",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.385Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Age_of_Earth"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Albert_Einstein": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.386Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.386Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Albert_Einstein"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Alzheimer%27s_disease": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.387Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.387Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Age_of_the_universe": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.392Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Age_of_the_universe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.392Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Age_of_the_universe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anomalocaris": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.509Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anomalocaris",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.509Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anomalocaris"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Arm": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.511Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Arm",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.511Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Arm"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Asteroid_belt": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.512Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Asteroid_belt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.512Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Asteroid_belt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Base_pair": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.513Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Base_pair",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.513Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Base_pair"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Centipede": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.638Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Centipede",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.638Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Centipede"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Candela": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.639Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Candela",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.639Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Candela"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Capillary": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.640Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Capillary",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.640Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Capillary"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Capsaicin": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.640Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Capsaicin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.640Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Capsaicin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chihuahua_(dog_breed)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.761Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chihuahua_(dog_breed)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.761Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chihuahua_(dog_breed)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Classical_conditioning": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.764Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Classical_conditioning",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.764Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Classical_conditioning"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chlorophyll": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.765Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chlorophyll",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.765Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chlorophyll"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chondrichthyes": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.766Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chondrichthyes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.766Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chondrichthyes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Coeliac_disease": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.884Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Coeliac_disease",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.884Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Coeliac_disease"
+      }
+    },
+    "https://en.wikipedia.org/wiki/DNA": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/DNA",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/DNA"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dolly_(sheep)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.891Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dolly_(sheep)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.891Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dolly_(sheep)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Doppler_effect": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:05.891Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Doppler_effect",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:05.891Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Doppler_effect"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Down_syndrome": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.010Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Down_syndrome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.010Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Down_syndrome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dry_ice": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.015Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dry_ice",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.015Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dry_ice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Earth%27s_crust": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.016Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Earth%27s_crust",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.016Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Earth%27s_crust"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Elbow": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.016Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Elbow",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.016Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Elbow"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fahrenheit": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.131Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fahrenheit",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.131Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fahrenheit"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Foucault_pendulum": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.139Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Foucault_pendulum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.139Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Foucault_pendulum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Farad": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.140Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Farad",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.140Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Farad"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Figure_of_the_Earth": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.141Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Figure_of_the_Earth",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.141Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Figure_of_the_Earth"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fujita_scale": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.256Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fujita_scale",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.256Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fujita_scale"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ganymede_(moon)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.262Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ganymede_(moon)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.262Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ganymede_(moon)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gauss%27s_law": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.263Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gauss%27s_law",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.263Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gauss%27s_law"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Glaucoma": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.264Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Glaucoma",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.264Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Glaucoma"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Glucose": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.377Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Glucose",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.377Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Glucose"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gray_(unit)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.383Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gray_(unit)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.383Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gray_(unit)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_white_shark": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.385Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_white_shark",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.385Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_white_shark"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Heart": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.386Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Heart",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.386Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Heart"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Helium": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.500Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Helium",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.500Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Helium"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_mitochondrial_DNA_haplogroup": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.503Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_mitochondrial_DNA_haplogroup",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.503Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_mitochondrial_DNA_haplogroup"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Henry_(unit)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.507Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Henry_(unit)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.507Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Henry_(unit)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Histology": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.510Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Histology",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.510Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Histology"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_skeleton": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.616Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_skeleton",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.616Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_skeleton"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Insulin": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.621Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Insulin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.621Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Insulin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hurricane_Katrina": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.625Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hurricane_Katrina",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.625Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hurricane_Katrina"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Interphase": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.630Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Interphase",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.630Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Interphase"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jonas_Salk": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.736Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jonas_Salk",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.736Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jonas_Salk"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Iron": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.738Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Iron",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.738Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Iron"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kelvin": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.749Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kelvin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.749Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kelvin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Landsat_6": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.752Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Landsat_6",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.752Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Landsat_6"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Laws_of_thermodynamics": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.859Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Laws_of_thermodynamics",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.859Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Laws_of_thermodynamics"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Light-year": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.860Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Light-year",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.860Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Light-year"
+      }
+    },
+    "https://en.wikipedia.org/wiki/List_of_chemical_elements_named_after_people": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.863Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/List_of_chemical_elements_named_after_people",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.863Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/List_of_chemical_elements_named_after_people"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lucy_(hominid)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.866Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lucy_(hominid)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.866Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lucy_(hominid)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lung": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.983Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lung",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.983Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lung"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mercury_(planet)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.984Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.984Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mercury_(planet)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ming_(clam)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.984Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ming_(clam)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.984Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ming_(clam)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mitochondria": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:06.986Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mitochondria",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:06.986Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mitochondria"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mole_(unit)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.102Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mole_(unit)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.102Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mole_(unit)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mitosis": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.108Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mitosis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.108Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mitosis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Moon": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.109Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Moon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.109Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Moon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Moons_of_Uranus": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.111Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Moons_of_Uranus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.111Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Moons_of_Uranus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Navel": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.217Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Navel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.217Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Navel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Neanderthal": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.228Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Neanderthal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.228Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Neanderthal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Neon": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.232Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Neon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.232Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Neon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ocean": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.233Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ocean",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.233Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ocean"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Oxygen": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.338Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Oxygen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.338Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Oxygen"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Patella": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.348Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Patella",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.348Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Patella"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pancreas": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.350Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pancreas",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.350Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pancreas"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Perennial": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.354Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Perennial",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.354Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Perennial"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Periodic_table": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.461Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Periodic_table",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.461Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Periodic_table"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Planet": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.464Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Planet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.464Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Planet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Polaris": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Polaris",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.470Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Polaris"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Psychoanalysis": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.474Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Psychoanalysis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.474Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Psychoanalysis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Psychology": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.577Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Psychology",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.577Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Psychology"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pulmonary_artery": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.584Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pulmonary_artery",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.584Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pulmonary_artery"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Quark": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.591Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Quark",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.591Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Quark"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Quercus_robur": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.596Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Quercus_robur",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.596Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Quercus_robur"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sagittarius_A*": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.693Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.693Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sagittarius_A*"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shrimp": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.705Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shrimp",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.705Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shrimp"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Soil_horizon": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.706Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Soil_horizon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.706Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Soil_horizon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Solar_System": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.716Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Solar_System",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.716Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Solar_System"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.815Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.815Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Speed_of_light": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.827Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Speed_of_light",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.827Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Speed_of_light"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Star": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.828Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Star",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.828Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Star"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Stop_codon": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.837Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Stop_codon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.837Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Stop_codon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Strawberry": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.936Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Strawberry",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.936Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Strawberry"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sunlight": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.943Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sunlight",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.943Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sunlight"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sunburn": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.949Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sunburn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.949Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sunburn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Talc": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:07.958Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Talc",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:07.958Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Talc"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tibia": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.057Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tibia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.057Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tibia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tin": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.060Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.060Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Titan_(moon)": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.069Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Titan_(moon)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.069Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Titan_(moon)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Trapezius": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.078Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Trapezius",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.078Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Trapezius"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Upwelling": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.178Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Upwelling",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.178Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Upwelling"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Uranium-238": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.181Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Uranium-238",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.181Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Uranium-238"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Venus": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.191Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Venus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.191Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Venus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Volt": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.200Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Volt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.200Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Volt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/W%C3%B6hler_synthesis": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.300Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/W%C3%B6hler_synthesis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.300Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/W%C3%B6hler_synthesis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Water": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.302Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Water",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.302Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Water"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Western_lowland_gorilla": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.305Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Western_lowland_gorilla",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.305Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Western_lowland_gorilla"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen": {
+      "version": 1,
+      "expiresAt": "2026-08-28T04:39:08.322Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T04:39:08.322Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen"
+      }
     }
   }
 }
