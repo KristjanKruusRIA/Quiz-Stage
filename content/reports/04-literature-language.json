@@ -6,7 +6,7 @@
   "artifactHashes": {
     "authored": "0b7178ebd1130461f18f553c636a92fd1645cfc0facfb5e6121ab1c662c78803",
     "generated": "7fe39037544e2e06b35cc92951233f0260130505797bc12899f079a172aee789",
-    "evidence": "92d82ab279b296e8e4b1c4453a864810fe6e75b4fae41173c8f999d20982c757"
+    "evidence": "320bf1e37808bb1f10837e49a20d8f6fe19bcc5b27b80d961a4068aa22a1b9b7"
   },
   "validations": {
     "authored": {
@@ -40414,7 +40414,7 @@
     },
     "issues": [
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 2,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40422,7 +40422,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0001"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 2,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40430,7 +40430,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0001"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 6,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40438,7 +40438,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0005"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 7,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40446,7 +40446,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0006"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 8,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40454,7 +40454,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0007"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 9,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40462,7 +40462,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0008"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 10,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40470,7 +40470,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0009"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 10,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40478,7 +40478,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0009"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 11,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40486,7 +40486,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0010"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 12,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40494,7 +40494,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0011"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 12,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40502,7 +40502,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0011"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 13,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40510,7 +40510,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0012"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 14,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40518,7 +40518,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0013"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 15,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40526,7 +40526,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0014"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 16,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40534,7 +40534,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0015"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 16,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40542,7 +40542,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0015"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 17,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40550,7 +40550,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0016"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 17,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40558,7 +40558,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0016"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 18,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40566,7 +40566,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0017"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 19,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40574,7 +40574,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0018"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 20,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40582,7 +40582,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0019"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 22,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40590,7 +40590,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0021"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 22,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40598,7 +40598,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0021"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 23,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40606,7 +40606,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0022"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 25,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40614,7 +40614,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0024"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 27,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40622,7 +40622,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0026"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 28,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40630,7 +40630,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0027"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 29,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40638,7 +40638,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0028"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 29,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40646,7 +40646,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0028"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 30,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40654,7 +40654,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0029"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 31,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40662,7 +40662,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0030"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 31,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40670,7 +40670,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0030"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 32,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40678,7 +40678,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0031"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 34,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40686,7 +40686,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0033"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 36,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40694,7 +40694,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0035"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 38,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40702,7 +40702,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0037"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 41,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40710,7 +40710,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0040"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 41,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40718,7 +40718,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0040"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 42,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40726,7 +40726,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0041"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 43,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40734,7 +40734,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0042"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 47,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40742,7 +40742,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0046"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 47,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40750,7 +40750,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0046"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 48,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40758,7 +40758,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0047"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 50,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40766,7 +40766,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0049"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 51,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40774,7 +40774,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0050"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 52,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40782,7 +40782,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0051"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 53,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40790,7 +40790,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0052"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 54,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40798,7 +40798,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0053"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 55,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40806,7 +40806,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0054"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 56,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40814,7 +40814,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0055"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 57,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40822,7 +40822,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0056"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 57,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40830,7 +40830,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0056"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 58,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40838,7 +40838,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0057"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 59,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40846,7 +40846,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0058"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 60,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40854,7 +40854,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0059"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 60,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40862,7 +40862,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0059"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 61,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40870,7 +40870,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0060"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 62,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40878,7 +40878,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0061"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 64,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40886,7 +40886,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0063"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 66,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40894,7 +40894,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0065"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 67,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40902,7 +40902,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0066"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 67,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40910,7 +40910,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0066"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 68,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40918,7 +40918,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0067"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 69,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40926,7 +40926,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0068"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 72,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40934,7 +40934,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0071"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 75,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40942,7 +40942,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0074"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 76,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40950,7 +40950,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0075"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 76,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40958,7 +40958,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0075"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 77,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40966,7 +40966,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0076"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 78,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -40974,7 +40974,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0077"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 78,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40982,7 +40982,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0077"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 79,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40990,7 +40990,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0078"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 80,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -40998,7 +40998,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0079"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 81,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41006,7 +41006,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0080"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 82,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41014,7 +41014,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0081"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 83,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41022,7 +41022,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0082"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 84,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41030,7 +41030,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0083"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 85,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41038,7 +41038,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0084"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 85,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41046,7 +41046,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0084"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 86,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41054,7 +41054,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0085"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 87,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41062,7 +41062,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0086"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 88,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41070,7 +41070,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0087"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 89,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41078,7 +41078,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0088"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 91,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41086,7 +41086,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0090"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 92,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41094,7 +41094,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0091"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 93,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41102,7 +41102,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0092"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 96,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41110,7 +41110,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0095"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 97,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41118,7 +41118,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0096"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 98,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41126,7 +41126,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0097"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 99,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41134,7 +41134,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0098"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 100,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41142,7 +41142,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0099"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 101,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41150,7 +41150,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0100"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 102,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41158,7 +41158,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0101"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 102,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41166,7 +41166,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0101"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 103,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41174,7 +41174,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0102"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 103,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41182,7 +41182,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0102"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 105,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41190,7 +41190,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0104"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 106,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41198,7 +41198,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0105"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 106,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41206,7 +41206,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0105"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 108,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41214,7 +41214,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0107"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 109,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41222,7 +41222,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0108"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 111,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41230,7 +41230,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0110"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 113,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41238,7 +41238,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0112"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 114,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41246,7 +41246,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0113"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 117,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41254,7 +41254,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0116"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 118,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41262,7 +41262,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0117"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 118,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41270,7 +41270,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0117"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 119,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41278,7 +41278,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0118"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 121,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41286,7 +41286,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0120"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 122,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41294,7 +41294,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0121"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 124,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41302,7 +41302,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0123"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 125,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41310,7 +41310,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0124"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 126,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41318,7 +41318,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0125"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 127,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41326,7 +41326,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0126"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 127,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41334,7 +41334,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0126"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 130,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41342,7 +41342,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0129"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 131,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41350,7 +41350,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0130"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 133,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41358,7 +41358,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0132"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 135,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41366,7 +41366,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0134"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 137,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41374,7 +41374,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0136"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 139,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41382,7 +41382,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0138"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 141,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41390,7 +41390,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0140"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 142,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41398,7 +41398,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0141"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 145,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41406,7 +41406,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0144"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 146,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41414,7 +41414,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0145"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 147,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41422,7 +41422,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0146"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 150,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41430,7 +41430,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0149"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 151,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41438,7 +41438,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0150"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 153,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41446,7 +41446,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0152"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 154,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41454,7 +41454,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0153"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 155,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41462,7 +41462,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0154"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 155,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41470,7 +41470,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0154"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 156,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41478,7 +41478,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0155"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 157,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41486,7 +41486,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0156"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 157,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41494,7 +41494,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0156"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 158,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41502,7 +41502,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0157"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 158,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41510,7 +41510,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0157"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 162,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41518,7 +41518,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0161"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 163,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41526,7 +41526,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0162"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 166,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41534,7 +41534,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0165"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 166,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41542,7 +41542,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0165"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 167,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41550,7 +41550,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0166"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 168,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41558,7 +41558,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0167"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 169,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41566,7 +41566,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0168"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 169,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41574,7 +41574,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0168"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 172,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41582,7 +41582,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0171"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 172,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41590,7 +41590,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0171"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 173,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41598,7 +41598,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0172"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 174,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41606,7 +41606,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0173"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 174,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41614,7 +41614,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0173"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 175,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41622,7 +41622,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0174"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 175,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41630,7 +41630,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0174"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 176,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41638,7 +41638,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0175"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 181,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41646,7 +41646,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0180"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 182,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41654,7 +41654,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0181"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 183,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41662,7 +41662,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0182"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 184,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41670,7 +41670,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0183"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 185,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41678,7 +41678,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0184"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 189,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41686,7 +41686,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0188"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 191,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41694,7 +41694,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0190"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 192,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41702,7 +41702,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0191"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 192,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41710,7 +41710,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0191"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 193,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41718,7 +41718,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0192"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 193,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41726,7 +41726,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0192"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 195,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41734,7 +41734,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0194"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 197,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41742,7 +41742,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0196"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 198,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41750,7 +41750,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0197"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 199,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41758,7 +41758,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0198"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 201,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41766,7 +41766,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0200"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 202,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41774,7 +41774,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0201"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 202,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41782,7 +41782,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0201"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 203,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41790,7 +41790,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0202"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 205,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41798,7 +41798,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0204"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 207,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41806,7 +41806,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0206"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 208,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41814,7 +41814,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0207"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 208,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41822,7 +41822,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0207"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 209,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41830,7 +41830,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0208"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 210,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41838,7 +41838,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0209"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 211,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41846,7 +41846,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0210"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 212,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41854,7 +41854,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0211"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 213,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41862,7 +41862,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0212"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 213,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41870,7 +41870,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0212"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 217,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41878,7 +41878,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0216"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 217,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41886,7 +41886,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0216"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 218,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41894,7 +41894,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0217"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 219,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41902,7 +41902,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0218"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 222,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41910,7 +41910,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0221"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 223,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41918,7 +41918,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0222"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 224,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41926,7 +41926,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0223"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 225,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41934,7 +41934,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0224"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 225,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41942,7 +41942,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0224"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 226,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41950,7 +41950,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0225"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 226,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41958,7 +41958,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0225"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 227,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41966,7 +41966,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0226"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 227,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41974,7 +41974,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0226"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 228,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41982,7 +41982,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0227"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 229,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -41990,7 +41990,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0228"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 230,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -41998,7 +41998,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0229"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 231,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42006,7 +42006,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0230"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 233,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42014,7 +42014,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0232"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 235,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42022,7 +42022,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0234"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 239,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42030,7 +42030,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0238"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 241,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42038,7 +42038,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0240"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 242,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42046,7 +42046,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0241"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 246,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42054,7 +42054,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0245"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 248,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42062,7 +42062,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0247"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 249,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42070,7 +42070,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0248"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 250,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42078,7 +42078,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0249"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 252,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42086,7 +42086,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0251"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 255,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42094,7 +42094,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0254"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 256,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42102,7 +42102,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0255"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 257,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42110,7 +42110,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0256"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 257,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42118,7 +42118,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0256"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 261,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42126,7 +42126,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0260"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 267,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42134,7 +42134,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0266"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 272,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42142,7 +42142,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0271"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 274,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42150,7 +42150,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0273"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 275,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42158,7 +42158,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0274"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 276,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42166,7 +42166,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0275"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 277,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42174,7 +42174,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0276"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 279,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42182,7 +42182,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0278"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 280,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42190,7 +42190,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0279"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 280,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42198,7 +42198,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0279"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 285,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42206,7 +42206,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0284"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 286,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42214,7 +42214,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0285"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 289,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42222,7 +42222,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0288"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 290,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42230,7 +42230,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0289"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 291,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42238,7 +42238,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0290"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 292,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42246,7 +42246,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0291"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 294,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42254,7 +42254,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0293"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 294,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42262,7 +42262,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0293"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 295,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42270,7 +42270,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0294"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 296,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42278,7 +42278,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0295"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 298,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42286,7 +42286,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0297"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 300,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42294,7 +42294,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0299"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 301,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42302,7 +42302,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0300"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 303,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42310,7 +42310,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0302"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 306,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42318,7 +42318,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0305"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 313,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42326,7 +42326,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0312"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 323,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42334,7 +42334,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0322"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 326,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42342,7 +42342,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0325"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 327,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42350,7 +42350,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0326"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 331,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42358,7 +42358,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0330"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 336,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42366,7 +42366,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0335"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 337,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42374,7 +42374,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0336"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 338,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42382,7 +42382,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0337"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 339,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42390,7 +42390,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0338"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 340,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42398,7 +42398,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0339"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 341,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42406,7 +42406,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0340"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 350,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42414,7 +42414,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0349"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 361,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42422,7 +42422,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0360"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 362,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42430,7 +42430,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0361"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 365,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42438,7 +42438,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0364"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 365,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42446,7 +42446,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0364"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 377,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42454,7 +42454,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0376"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 377,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42462,7 +42462,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0376"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 381,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42470,7 +42470,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0380"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 385,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42478,7 +42478,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0384"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 387,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42486,7 +42486,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0386"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 388,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42494,7 +42494,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0387"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 388,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42502,7 +42502,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0387"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 389,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42510,7 +42510,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0388"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 390,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42518,7 +42518,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0389"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 390,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42526,7 +42526,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0389"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 392,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42534,7 +42534,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0391"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 392,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42542,7 +42542,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0391"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 393,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42550,7 +42550,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0392"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 395,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42558,7 +42558,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0394"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 396,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42566,7 +42566,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0395"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 397,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42574,7 +42574,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0396"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 400,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42582,7 +42582,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0399"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 403,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42590,7 +42590,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0402"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 405,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42598,7 +42598,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0404"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 406,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42606,7 +42606,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0405"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 407,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42614,7 +42614,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0406"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 407,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42622,7 +42622,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0406"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 408,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42630,7 +42630,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0407"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 410,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42638,7 +42638,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0409"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 411,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42646,7 +42646,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0410"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 411,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42654,7 +42654,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0410"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 412,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42662,7 +42662,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0411"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 414,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42670,7 +42670,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0413"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 415,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42678,7 +42678,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0414"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 415,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42686,7 +42686,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0414"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 416,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42694,7 +42694,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0415"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 417,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42702,7 +42702,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0416"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 422,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42710,7 +42710,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0421"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 422,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42718,7 +42718,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0421"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 423,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42726,7 +42726,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0422"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 426,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42734,7 +42734,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0425"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 427,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42742,7 +42742,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0426"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 428,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42750,7 +42750,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0427"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 428,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42758,7 +42758,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0427"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 429,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42766,7 +42766,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0428"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 434,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42774,7 +42774,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0433"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 435,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42782,7 +42782,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0434"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 436,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42790,7 +42790,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0435"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 436,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42798,7 +42798,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0435"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 438,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42806,7 +42806,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0437"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 439,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42814,7 +42814,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0438"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 440,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42822,7 +42822,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0439"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 440,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42830,7 +42830,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0439"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 444,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42838,7 +42838,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0443"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 444,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42846,7 +42846,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0443"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 445,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42854,7 +42854,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0444"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 446,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42862,7 +42862,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0445"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 450,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42870,7 +42870,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0449"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 451,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42878,7 +42878,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0450"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 459,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42886,7 +42886,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0458"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 462,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42894,7 +42894,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0461"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 465,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42902,7 +42902,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0464"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 466,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42910,7 +42910,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0465"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 467,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42918,7 +42918,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0466"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 468,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42926,7 +42926,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0467"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 470,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -42934,7 +42934,7 @@
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-clue-0469"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 485,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -42942,7 +42942,7 @@
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-clue-0484"
       },
       {
-        "file": "E:\\git\\jeopardy-task12-publish-wt\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy-task12-chronology-wt\\content\\work\\04-literature-language\\generated.en-et.csv",
         "row": 494,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
