@@ -4932,6 +4932,1410 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen"
       }
+    },
+    "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.149Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.149Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929"
+      }
+    },
+    "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.155Z",
+      "result": {
+        "url": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.155Z",
+        "code": null,
+        "finalUrl": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json"
+      }
+    },
+    "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.162Z",
+      "result": {
+        "url": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.162Z",
+        "code": null,
+        "finalUrl": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.272Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.272Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.276Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.276Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.301Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.301Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.411Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.411Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=All_the_worlds_a_stage&oldid=1368617198": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.504Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=All_the_worlds_a_stage&oldid=1368617198",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.504Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=All_the_worlds_a_stage&oldid=1368617198"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.521Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.521Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.542Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.542Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.646Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.646Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.740Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.740Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.801Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.801Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Epistolary_novel&oldid=1369579857": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.917Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Epistolary_novel&oldid=1369579857",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.917Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Epistolary_novel&oldid=1369579857"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:24.993Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:24.993Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.045Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.045Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Frankenstein&oldid=1370223019": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.125Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Frankenstein&oldid=1370223019",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.125Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Frankenstein&oldid=1370223019"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.153Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.153Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.168Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.168Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.276Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.276Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.354Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.354Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Greek_alphabet&oldid=1368989840": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.398Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Greek_alphabet&oldid=1368989840",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.398Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Greek_alphabet&oldid=1368989840"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.416Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.416Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.430Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.430Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Haiku&oldid=1367671616": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.662Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Haiku&oldid=1367671616",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.662Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Haiku&oldid=1367671616"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Hamilton_musical&oldid=1369484734": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.734Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Hamilton_musical&oldid=1369484734",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.734Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hamilton_musical&oldid=1369484734"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Green_Eggs_and_Ham&oldid=1355064860": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.744Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Green_Eggs_and_Ham&oldid=1355064860",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.744Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Green_Eggs_and_Ham&oldid=1355064860"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Hamlet&oldid=1368693685": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.784Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Hamlet&oldid=1368693685",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.784Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hamlet&oldid=1368693685"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.906Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.906Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Gregorian_calendar&oldid=1369292790": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.937Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Gregorian_calendar&oldid=1369292790",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.937Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gregorian_calendar&oldid=1369292790"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.957Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.957Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Harry_Potter_and_the_Philosopher%27s_Stone&oldid=1369899225": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:25.989Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Harry_Potter_and_the_Philosopher%27s_Stone&oldid=1369899225",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:25.989Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harry_Potter_and_the_Philosopher%27s_Stone&oldid=1369899225"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.080Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.080Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.172Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.172Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Internationalization_and_localization&oldid=1358864211": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.236Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Internationalization_and_localization&oldid=1358864211",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.236Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Internationalization_and_localization&oldid=1358864211"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.272Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.272Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.286Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.286Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.357Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.357Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.358Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.358Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=J._K._Rowling&oldid=1369864405": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.407Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=J._K._Rowling&oldid=1369864405",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.407Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=J._K._Rowling&oldid=1369864405"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.482Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.482Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Italian_language&oldid=1370308262": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.509Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Italian_language&oldid=1370308262",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.509Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Italian_language&oldid=1370308262"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.586Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.586Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.632Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.632Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=John_Steinbeck&oldid=1370452338": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.658Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=John_Steinbeck&oldid=1370452338",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.658Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=John_Steinbeck&oldid=1370452338"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=List_of_English_words_of_Hindi_or_Urdu_origin&oldid=1366638717": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.709Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_English_words_of_Hindi_or_Urdu_origin&oldid=1366638717",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.709Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_English_words_of_Hindi_or_Urdu_origin&oldid=1366638717"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.720Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.720Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.754Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.754Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.842Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.842Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.876Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.876Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Loanword&oldid=1369688690": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.903Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Loanword&oldid=1369688690",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.903Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Loanword&oldid=1369688690"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Magical_creatures_in_Harry_Potter&oldid=1370123804": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.964Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Magical_creatures_in_Harry_Potter&oldid=1370123804",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.964Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Magical_creatures_in_Harry_Potter&oldid=1370123804"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:26.969Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:26.969Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Mary_Shelley&oldid=1362405646": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.119Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Mary_Shelley&oldid=1362405646",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.119Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Mary_Shelley&oldid=1362405646"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Moby-Dick&oldid=1361356191": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.192Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Moby-Dick&oldid=1361356191",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.192Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moby-Dick&oldid=1361356191"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.200Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.200Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.209Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.209Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.322Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.322Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=No_Exit&oldid=1368224378": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.331Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=No_Exit&oldid=1368224378",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.331Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=No_Exit&oldid=1368224378"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=NATO_phonetic_alphabet&oldid=1368490609": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.360Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=NATO_phonetic_alphabet&oldid=1368490609",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.360Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=NATO_phonetic_alphabet&oldid=1368490609"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.421Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.421Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Oliver_Twist&oldid=1368858874": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.560Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Oliver_Twist&oldid=1368858874",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.560Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Oliver_Twist&oldid=1368858874"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=One_Piece&oldid=1370415518": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.585Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=One_Piece&oldid=1370415518",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.585Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=One_Piece&oldid=1370415518"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.611Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.611Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Pinyin&oldid=1368340257": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.812Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Pinyin&oldid=1368340257",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.812Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Pinyin&oldid=1368340257"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Paddington_Bear&oldid=1361307789": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.816Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Paddington_Bear&oldid=1361307789",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.816Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Paddington_Bear&oldid=1361307789"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.840Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.840Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.848Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.848Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Rent_(musical)&oldid=1369921145": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:27.935Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Rent_(musical)&oldid=1369921145",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:27.935Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rent_(musical)&oldid=1369921145"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Rhyme_scheme&oldid=1368372501": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.052Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Rhyme_scheme&oldid=1368372501",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.052Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rhyme_scheme&oldid=1368372501"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Romance_of_the_Three_Kingdoms&oldid=1370207459": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.072Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Romance_of_the_Three_Kingdoms&oldid=1370207459",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.072Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romance_of_the_Three_Kingdoms&oldid=1370207459"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.095Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.095Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.179Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.179Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.297Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.297Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.301Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.301Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.323Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.323Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.326Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.326Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Sodium&oldid=1357207766": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.440Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Sodium&oldid=1357207766",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.440Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sodium&oldid=1357207766"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.550Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.550Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.551Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.551Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Ternary_conditional_operator&oldid=1362355697": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.674Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Ternary_conditional_operator&oldid=1362355697",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.674Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ternary_conditional_operator&oldid=1362355697"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.915Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.915Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Stephen_King_bibliography&oldid=1370401937": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:28.976Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Stephen_King_bibliography&oldid=1370401937",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:28.976Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Stephen_King_bibliography&oldid=1370401937"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.060Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.060Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.069Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.069Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.109Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.109Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.183Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.183Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Dresden_Files&oldid=1366141529": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.190Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Dresden_Files&oldid=1366141529",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.190Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Dresden_Files&oldid=1366141529"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.379Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.379Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Catcher_in_the_Rye&oldid=1370273428": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.414Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Catcher_in_the_Rye&oldid=1370273428",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.414Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Catcher_in_the_Rye&oldid=1370273428"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.445Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.445Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.493Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.493Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.560Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.560Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Prince_and_the_Pauper&oldid=1364427191": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.751Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Prince_and_the_Pauper&oldid=1364427191",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.751Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Prince_and_the_Pauper&oldid=1364427191"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Outsiders_(novel)&oldid=1365316776": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.752Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Outsiders_(novel)&oldid=1365316776",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.752Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Outsiders_(novel)&oldid=1365316776"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.798Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.798Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Little_Match_Girl&oldid=1369282167": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.825Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Little_Match_Girl&oldid=1369282167",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.825Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Little_Match_Girl&oldid=1369282167"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.874Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.874Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.920Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.920Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:29.947Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:29.947Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.068Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.068Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.132Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.132Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.143Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.143Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.180Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.180Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.314Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.314Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596"
+      }
+    },
+    "https://en.wikisource.org/w/index.php?title=Macbeth_(1918)_Yale%2FText%2FAct_IV&oldid=11177216": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.327Z",
+      "result": {
+        "url": "https://en.wikisource.org/w/index.php?title=Macbeth_(1918)_Yale%2FText%2FAct_IV&oldid=11177216",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.327Z",
+        "code": null,
+        "finalUrl": "https://en.wikisource.org/w/index.php?title=Macbeth_(1918)_Yale%2FText%2FAct_IV&oldid=11177216"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.388Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.388Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.450Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.450Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=%E9%A3%9B%E6%A9%9F&oldid=89965738": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.462Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%A3%9B%E6%A9%9F&oldid=89965738",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.462Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=%E9%A3%9B%E6%A9%9F&oldid=89965738"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=bungalow&oldid=91247677": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.522Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=bungalow&oldid=91247677",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.522Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=bungalow&oldid=91247677"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.572Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.572Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.575Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.575Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=pomodoro&oldid=87923759": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.585Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=pomodoro&oldid=87923759",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.585Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=pomodoro&oldid=87923759"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=shampoo&oldid=91805940": {
+      "version": 1,
+      "expiresAt": "2026-08-28T14:28:30.646Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=shampoo&oldid=91805940",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T14:28:30.646Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=shampoo&oldid=91805940"
+      }
+    },
+    "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861": {
+      "version": 1,
+      "expiresAt": "2026-08-28T17:22:15.033Z",
+      "result": {
+        "url": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T17:22:15.033Z",
+        "code": null,
+        "finalUrl": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699": {
+      "version": 1,
+      "expiresAt": "2026-08-28T17:22:15.035Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-21T17:22:15.035Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699"
+      }
     }
   }
 }
