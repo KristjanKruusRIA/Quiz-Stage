@@ -365,6 +365,29 @@ describe('production content validation', () => {
     expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([9, 10]);
   });
 
+  it('recognizes localized Genesis numbering and hyphenated alternatives without hiding signed-number drift', () => {
+    const rows = twelveValidSets();
+    rows[0] = {
+      ...rows[0],
+      explanation_en: 'The figures are drawn from Genesis and classical prophecy.',
+      explanation_et: 'Figuurid pärinevad 1. Moosese raamatust ja antiiksetest ettekuulutustest.',
+    };
+    rows[1] = {
+      ...rows[1],
+      explanation_en: 'The proposed 1503-or-1504 start is narrower than the 1503–1506 span.',
+      explanation_et: 'Pakutud algusaeg 1503 või 1504 on kitsam kui vahemik 1503–1506.',
+    };
+    rows[2] = {
+      ...rows[2],
+      explanation_en: 'The offset is -1504.',
+      explanation_et: 'Nihe on 1504.',
+    };
+
+    const result = validateProductionContent([input('localized-number-boundaries.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([4]);
+  });
+
   it('rejects generated placeholder records from production batches', () => {
     const rows = twelveValidSets();
     rows[0] = {

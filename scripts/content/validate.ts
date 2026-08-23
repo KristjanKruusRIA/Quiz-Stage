@@ -124,7 +124,7 @@ function normalizeText(value: string): string {
 }
 
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
+  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
@@ -142,7 +142,20 @@ function canonicalNumbers(value: string): string[] {
 }
 
 function differsNumerically(en: string, et: string): boolean {
-  return canonicalNumbers(en).join('|') !== canonicalNumbers(et).join('|');
+  const enNumbers = canonicalNumbers(en);
+  const etNumbers = canonicalNumbers(et);
+  const enNormalized = normalizeText(en);
+  const etNormalized = normalizeText(et);
+  if (/\bgenesis\b/u.test(enNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(etNormalized)) {
+    const ordinal = etNumbers.indexOf('1');
+    if (ordinal >= 0) etNumbers.splice(ordinal, 1);
+  } else if (/\bgenesis\b/u.test(etNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(enNormalized)) {
+    const ordinal = enNumbers.indexOf('1');
+    if (ordinal >= 0) enNumbers.splice(ordinal, 1);
+  }
+  return enNumbers.join('|') !== etNumbers.join('|');
 }
 
 function stableIssueSort(left: ProductionValidationIssue, right: ProductionValidationIssue): number {
