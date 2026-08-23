@@ -102,7 +102,7 @@ function compareCodeUnits(left: string, right: string): number {
 }
 
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
+  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
@@ -122,7 +122,20 @@ function canonicalNumbers(value: string): string[] {
 }
 
 function differsNumerically(left: string, right: string): boolean {
-  return canonicalNumbers(left).join('|') !== canonicalNumbers(right).join('|');
+  const leftNumbers = canonicalNumbers(left);
+  const rightNumbers = canonicalNumbers(right);
+  const leftNormalized = normalizeText(left);
+  const rightNormalized = normalizeText(right);
+  if (/\bgenesis\b/u.test(leftNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(rightNormalized)) {
+    const ordinal = rightNumbers.indexOf('1');
+    if (ordinal >= 0) rightNumbers.splice(ordinal, 1);
+  } else if (/\bgenesis\b/u.test(rightNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(leftNormalized)) {
+    const ordinal = leftNumbers.indexOf('1');
+    if (ordinal >= 0) leftNumbers.splice(ordinal, 1);
+  }
+  return leftNumbers.join('|') !== rightNumbers.join('|');
 }
 
 function splitEscapedItems(value: string): string[] {

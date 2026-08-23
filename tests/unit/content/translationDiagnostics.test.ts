@@ -329,6 +329,33 @@ describe('translation diagnostics', () => {
     expect(codesFor('reordered-date')).not.toContain('NUMBER_DRIFT');
   });
 
+  it('recognizes localized Genesis numbering and hyphenated alternatives without hiding signed-number drift', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'localized-genesis-name',
+        explanation_en: 'The figures are drawn from Genesis and classical prophecy.',
+        explanation_et: 'Figuurid pärinevad 1. Moosese raamatust ja antiiksetest ettekuulutustest.',
+      }),
+      row({
+        clue_id: 'hyphenated-year-alternatives',
+        explanation_en: 'The proposed 1503-or-1504 start is narrower than the 1503–1506 span.',
+        explanation_et: 'Pakutud algusaeg 1503 või 1504 on kitsam kui vahemik 1503–1506.',
+      }),
+      row({
+        clue_id: 'signed-number-drift',
+        explanation_en: 'The offset is -1504.',
+        explanation_et: 'Nihe on 1504.',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('localized-genesis-name')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('hyphenated-year-alternatives')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('signed-number-drift')).toContain('NUMBER_DRIFT');
+  });
+
   it('checks every fixed qualifier pair in every required field without flagging correct translations', () => {
     const pairs = [
       ['north', 'põhi', 'south', 'lõuna'],
