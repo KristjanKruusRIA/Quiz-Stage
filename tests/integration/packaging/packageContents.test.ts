@@ -80,7 +80,7 @@ describe('package contents', () => {
     expect(readFileSync('vite.main.config.ts', 'utf8')).not.toContain('electron-squirrel-startup');
   });
 
-  it.skipIf(process.platform !== 'win32')('produces both installer and portable package outputs', () => {
+  it.skipIf(!packagePayloadsPresent)('produces both installer and portable package outputs', () => {
     expect(fileExists(expectedInstaller)).toBe(true);
     expect(fileExists(expectedPortableZip)).toBe(true);
   });
