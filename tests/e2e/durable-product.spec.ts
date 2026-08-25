@@ -174,6 +174,8 @@ async function chooseExport(application: ElectronApplication, destination: strin
 
 async function commitDailyDoubleIfNeeded(host: Page): Promise<void> {
   const wager = host.getByRole('spinbutton', { name: 'Duubli panus' });
+  const clue = host.locator('.public-clue .clue-prompt');
+  await expect.poll(async () => (await wager.isVisible()) || (await clue.isVisible())).toBe(true);
   if (await wager.isVisible()) {
     await wager.fill('5');
     await host.getByRole('button', { name: 'Kinnita panus' }).click();
