@@ -503,7 +503,9 @@ export function validateProductionContent(
     mediumSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'medium').length,
     hardSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'hard').length,
   };
-  if (distinctBoardNames.size < 12) add({ file: '<inventory>', row: 0, code: 'MATCH_CATEGORY_NAMES_SHORTAGE', severity: 'error', message: `At least 12 distinct board category names are required; found ${distinctBoardNames.size}` });
+  if (distinctBoardNames.size < 12 && (options.mode === 'release' || summary.boardClues > 0)) {
+    add({ file: '<inventory>', row: 0, code: 'MATCH_CATEGORY_NAMES_SHORTAGE', severity: 'error', message: `At least 12 distinct board category names are required; found ${distinctBoardNames.size}` });
+  }
 
   const enforceBatchComposition = (batch: ProductionBatchDefinition, batchRows: readonly LocatedRow[]) => {
     const location = `<batch:${batch.id}>`;

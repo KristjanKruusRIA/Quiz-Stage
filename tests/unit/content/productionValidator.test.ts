@@ -763,9 +763,9 @@ describe('production content validation', () => {
         mode: 'batch', batch: FINAL_BATCH, evidenceByClueId: evidenceMap(records),
       });
 
-    expect(validate(rows).issues.map((issue) => issue.code)).not.toEqual(expect.arrayContaining([
-      'BATCH_ALLOCATION', 'OPENTDB_COMPOSITION',
-    ]));
+    const validCodes = validate(rows).issues.map((issue) => issue.code);
+    expect(validCodes).not.toEqual(expect.arrayContaining(['BATCH_ALLOCATION', 'OPENTDB_COMPOSITION']));
+    expect(validCodes).not.toContain('MATCH_CATEGORY_NAMES_SHORTAGE');
 
     const invalidFamilies = rows.map((row) => ({ ...row }));
     invalidFamilies[1] = { ...invalidFamilies[1], macro_topic: FINAL_BATCH.subthemes[0] };
