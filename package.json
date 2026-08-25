@@ -5,6 +5,7 @@
   "description": "Offline host-operated quiz game",
   "main": ".vite/build/main.js",
   "scripts": {
+    "postinstall": "node node_modules/electron/install.js",
     "start": "electron-forge start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -27,7 +28,7 @@
     "content:verify-batch": "tsx scripts/content/verifyBatch.ts",
     "content:publish-batch": "tsx scripts/content/publishBatch.ts",
     "media:generate": "tsx scripts/generate-placeholder-audio.ts",
-    "build": "electron-forge package",
+    "build": "tsx scripts/prepare-electron-zip.ts && electron-forge package",
     "make:installer": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-installer.ts",
     "make:portable": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-portable.ts",
     "release:checksums": "pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make",
@@ -43,7 +44,7 @@
     "node": ">=24.15.0 <25"
   },
   "dependencies": {
-    "better-sqlite3": "12.8.0",
+    "better-sqlite3": "13.0.3",
     "csv-parse": "7.0.2",
     "csv-stringify": "6.8.3",
     "electron-log": "5.4.4",
@@ -82,5 +83,10 @@
     "typescript-eslint": "8.67.0",
     "vite": "8.2.1",
     "vitest": "4.1.10"
+  },
+  "allowScripts": {
+    "better-sqlite3": false,
+    "electron-winstaller@5.4.4": true,
+    "esbuild@0.28.2": true
   }
 }

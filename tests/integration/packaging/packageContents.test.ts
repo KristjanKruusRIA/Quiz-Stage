@@ -72,6 +72,7 @@ describe('package contents', () => {
 
     expect(forgeConfig).toContain('electronZipDir');
     expect(packageJson).toContain('scripts/prepare-electron-zip.ts');
+    expect(JSON.parse(packageJson).scripts.build).toContain('prepare-electron-zip.ts');
     expect(packageJson).toContain('"productName": "Quiz Stage"');
   });
 
