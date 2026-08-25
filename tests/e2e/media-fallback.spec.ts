@@ -21,3 +21,17 @@ test('serves bundled audio when a personal replacement is malformed', async () =
     await closeFastMatch(match);
   }
 });
+
+test('returns a controlled response for missing media without crashing the match', async () => {
+  const match = await launchFastMatch({ teams: 2, difficulty: 'easy', language: 'en', displayMode: 'single' });
+  try {
+    const response = await match.host.evaluate(async () => {
+      const result = await fetch('quiz-stage-media://asset/missing-audio');
+      return { status: result.status, body: await result.text() };
+    });
+    expect(response).toEqual({ status: 404, body: '' });
+    await expect(match.host.getByRole('grid')).toBeVisible();
+  } finally {
+    await closeFastMatch(match);
+  }
+});

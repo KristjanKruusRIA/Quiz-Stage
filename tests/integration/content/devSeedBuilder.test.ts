@@ -117,7 +117,7 @@ describe('development seed builder', () => {
     });
 
     expect(result.status, result.stderr).toBe(0);
-    expect(result.stdout).toContain('183 clues, 36 category sets, 3 Finals');
+    expect(result.stdout).toContain('194 clues, 36 category sets, 14 Finals');
     expect(existsSync(outputPath)).toBe(true);
   }, 30_000);
 
@@ -126,9 +126,9 @@ describe('development seed builder', () => {
     const outputPath = join(directory, 'deterministic.sqlite');
 
     expect(buildDevelopmentSeed(fixturePath, outputPath)).toEqual({
-      clues: 183,
+      clues: 194,
       categorySets: 36,
-      finals: 3,
+      finals: 14,
     });
     const firstHash = sha256(outputPath);
     buildDevelopmentSeed(fixturePath, outputPath);

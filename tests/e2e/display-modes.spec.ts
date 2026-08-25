@@ -15,6 +15,14 @@ test('creates only the host window in single-screen mode and a public window in 
   const dual = await launchFastMatch({ teams: 2, difficulty: 'medium', language: 'en', displayMode: 'dual' });
   try {
     await expect.poll(() => dual.application.windows().length).toBe(2);
+    const publicWindow = dual.application.windows().find((window) => window !== dual.host);
+    expect(publicWindow).toBeDefined();
+    await publicWindow!.close();
+    await expect.poll(() => dual.application.windows().length).toBe(2);
+    const recoveredPublicWindow = dual.application.windows().find((window) => window !== dual.host);
+    expect(recoveredPublicWindow).toBeDefined();
+    expect(recoveredPublicWindow).not.toBe(publicWindow);
+    await expect(recoveredPublicWindow!.getByRole('grid')).toBeVisible();
   } finally {
     await closeFastMatch(dual);
   }

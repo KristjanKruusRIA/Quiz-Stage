@@ -117,12 +117,13 @@ export const developmentContentFixtureSchema = z.object({
         context.addIssue({ code: 'custom', message: `Expected 6 ${difficulty} ${round} category sets` });
       }
     }
-    if (fixture.finals.filter((clue) => clue.difficulty === difficulty).length !== 1) {
-      context.addIssue({ code: 'custom', message: `Expected 1 ${difficulty} Final` });
+    const expectedFinals = difficulty === 'hard' ? 12 : 1;
+    if (fixture.finals.filter((clue) => clue.difficulty === difficulty).length !== expectedFinals) {
+      context.addIssue({ code: 'custom', message: `Expected ${expectedFinals} ${difficulty} Finals` });
     }
   }
-  if (fixture.categorySets.length !== 36 || fixture.finals.length !== 3) {
-    context.addIssue({ code: 'custom', message: 'Development fixture must contain 36 category sets and 3 Finals' });
+  if (fixture.categorySets.length !== 36 || fixture.finals.length !== 14) {
+    context.addIssue({ code: 'custom', message: 'Development fixture must contain 36 category sets and 14 Finals' });
   }
 });
 
