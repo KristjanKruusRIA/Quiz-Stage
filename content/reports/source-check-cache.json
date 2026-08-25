@@ -17556,6 +17556,18 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Zeus&oldid=1370031676"
       }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869": {
+      "version": 1,
+      "expiresAt": "2026-09-01T22:37:14.863Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-25T22:37:14.863Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869"
+      }
     }
   }
 }

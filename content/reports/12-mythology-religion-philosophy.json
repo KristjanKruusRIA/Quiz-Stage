@@ -4,9 +4,9 @@
   "kind": "verification",
   "blocking": false,
   "artifactHashes": {
-    "authored": "a6a0284ce22e0e186030a8f1888f4c530448f5d860790c2162fe8bb55623378a",
-    "generated": "486af5170867b6d8b950be953924863534bda422b92ffb8fcbd297aaa5d1ba46",
-    "evidence": "01864936de57f5ec0686ba86b902a5e0c2ad301315a211745d815d2664c226c4"
+    "authored": "62076e82e76741afca7834107fd2deaff8787a90e46899f96ab570a8e8a3d974",
+    "generated": "0f0455fb98df58382649c04dea151bb620a8017afb6758f25cb2b2d0f77c9b51",
+    "evidence": "1048bd7b965489c08e3cba03ebad19e0e3114125a722742f53f765ec4296c144"
   },
   "validations": {
     "authored": {
@@ -11098,20 +11098,20 @@
       },
       {
         "file": "generated.en-et.csv",
-        "row": 471,
-        "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-        "field": "accepted_variants_en",
+        "row": 470,
+        "clueId": "built-in-mythology-religion-philosophy-clue-0469",
+        "field": "explanation_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Communist League\" is missing from accepted variant translation",
+        "message": "Proper noun \"Hannah Arendt's\" is missing from explanation_en translation",
         "severity": "warning"
       },
       {
         "file": "generated.en-et.csv",
         "row": 471,
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-        "field": "accepted_variants_en",
+        "field": "clue_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"International Workingmen's Association\" is missing from accepted variant translation",
+        "message": "Proper noun \"Hannah Arendt's\" is missing from clue_en translation",
         "severity": "warning"
       },
       {
@@ -11120,16 +11120,7 @@
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
         "field": "explanation_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Communist Correspondence Committee\" is missing from explanation_en translation",
-        "severity": "warning"
-      },
-      {
-        "file": "generated.en-et.csv",
-        "row": 471,
-        "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-        "field": "response_en",
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Communist Correspondence Committee\" is missing from response_en translation",
+        "message": "Proper noun \"Hannah Arendt's\" is missing from explanation_en translation",
         "severity": "warning"
       },
       {
@@ -14358,24 +14349,6 @@
         "file": "generated.en-et.csv",
         "row": 467,
         "clueId": "built-in-mythology-religion-philosophy-clue-0466",
-        "field": "accepted_variants_en",
-        "code": "UNCHANGED_TRANSLATION",
-        "message": "Accepted variants were unchanged across multiple words",
-        "severity": "warning"
-      },
-      {
-        "file": "generated.en-et.csv",
-        "row": 467,
-        "clueId": "built-in-mythology-religion-philosophy-clue-0466",
-        "field": "accepted_variants_en",
-        "code": "UNCHANGED_TRANSLATION",
-        "message": "Accepted variants were unchanged across multiple words",
-        "severity": "warning"
-      },
-      {
-        "file": "generated.en-et.csv",
-        "row": 467,
-        "clueId": "built-in-mythology-religion-philosophy-clue-0466",
         "field": "category_name_en",
         "code": "UNCHANGED_TRANSLATION",
         "message": "category_name_en appears unchanged from English",
@@ -14428,20 +14401,20 @@
       },
       {
         "file": "generated.en-et.csv",
-        "row": 470,
-        "clueId": "built-in-mythology-religion-philosophy-clue-0469",
-        "field": "response_en",
+        "row": 471,
+        "clueId": "built-in-mythology-religion-philosophy-clue-0470",
+        "field": "category_name_en",
         "code": "UNCHANGED_TRANSLATION",
-        "message": "response_en appears unchanged from English",
+        "message": "category_name_en appears unchanged from English",
         "severity": "warning"
       },
       {
         "file": "generated.en-et.csv",
         "row": 471,
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-        "field": "category_name_en",
+        "field": "response_en",
         "code": "UNCHANGED_TRANSLATION",
-        "message": "category_name_en appears unchanged from English",
+        "message": "response_en appears unchanged from English",
         "severity": "warning"
       },
       {
@@ -16068,7 +16041,15 @@
         "correctedText": ""
       },
       {
-        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-clue-0470:accepted_variants_en",
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-clue-0469:explanation_en",
+        "clueId": "built-in-mythology-religion-philosophy-clue-0469",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-clue-0470:clue_en",
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "status": "pending",
@@ -16077,14 +16058,6 @@
       },
       {
         "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-clue-0470:explanation_en",
-        "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "status": "pending",
-        "reviewerReason": "pending-review",
-        "correctedText": ""
-      },
-      {
-        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-clue-0470:response_en",
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "status": "pending",
@@ -18732,14 +18705,6 @@
         "correctedText": ""
       },
       {
-        "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0466:accepted_variants_en",
-        "clueId": "built-in-mythology-religion-philosophy-clue-0466",
-        "code": "UNCHANGED_TRANSLATION",
-        "status": "pending",
-        "reviewerReason": "pending-review",
-        "correctedText": ""
-      },
-      {
         "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0466:category_name_en",
         "clueId": "built-in-mythology-religion-philosophy-clue-0466",
         "code": "UNCHANGED_TRANSLATION",
@@ -18788,15 +18753,15 @@
         "correctedText": ""
       },
       {
-        "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0469:response_en",
-        "clueId": "built-in-mythology-religion-philosophy-clue-0469",
+        "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0470:category_name_en",
+        "clueId": "built-in-mythology-religion-philosophy-clue-0470",
         "code": "UNCHANGED_TRANSLATION",
         "status": "pending",
         "reviewerReason": "pending-review",
         "correctedText": ""
       },
       {
-        "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0470:category_name_en",
+        "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-clue-0470:response_en",
         "clueId": "built-in-mythology-religion-philosophy-clue-0470",
         "code": "UNCHANGED_TRANSLATION",
         "status": "pending",
@@ -19471,6 +19436,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hades&oldid=1369592444"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-25T22:37:14.863Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Hera&oldid=1370478240",
       "ok": true,
       "status": 200,
@@ -19581,14 +19554,6 @@
       "retrievedAt": "2026-08-25T17:03:13.214Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kalevala&oldid=1368445058"
-    },
-    {
-      "url": "https://en.wikipedia.org/w/index.php?title=Karl_Marx&oldid=1370801679",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-25T22:00:54.703Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Karl_Marx&oldid=1370801679"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=Krishna&oldid=1370257363",
@@ -25963,26 +25928,20 @@
     {
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-      "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-      "message": "generated.en-et.csv:471:accepted_variants_en: Proper noun \"Communist League\" is missing from accepted variant translation"
+      "clueId": "built-in-mythology-religion-philosophy-clue-0469",
+      "message": "generated.en-et.csv:470:explanation_en: Proper noun \"Hannah Arendt's\" is missing from explanation_en translation"
     },
     {
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-      "message": "generated.en-et.csv:471:accepted_variants_en: Proper noun \"International Workingmen's Association\" is missing from accepted variant translation"
+      "message": "generated.en-et.csv:471:clue_en: Proper noun \"Hannah Arendt's\" is missing from clue_en translation"
     },
     {
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-      "message": "generated.en-et.csv:471:explanation_en: Proper noun \"Communist Correspondence Committee\" is missing from explanation_en translation"
-    },
-    {
-      "scope": "translation",
-      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-      "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-      "message": "generated.en-et.csv:471:response_en: Proper noun \"Communist Correspondence Committee\" is missing from response_en translation"
+      "message": "generated.en-et.csv:471:explanation_en: Proper noun \"Hannah Arendt's\" is missing from explanation_en translation"
     },
     {
       "scope": "translation",
@@ -28136,18 +28095,6 @@
       "scope": "translation",
       "code": "UNCHANGED_TRANSLATION",
       "clueId": "built-in-mythology-religion-philosophy-clue-0466",
-      "message": "generated.en-et.csv:467:accepted_variants_en: Accepted variants were unchanged across multiple words"
-    },
-    {
-      "scope": "translation",
-      "code": "UNCHANGED_TRANSLATION",
-      "clueId": "built-in-mythology-religion-philosophy-clue-0466",
-      "message": "generated.en-et.csv:467:accepted_variants_en: Accepted variants were unchanged across multiple words"
-    },
-    {
-      "scope": "translation",
-      "code": "UNCHANGED_TRANSLATION",
-      "clueId": "built-in-mythology-religion-philosophy-clue-0466",
       "message": "generated.en-et.csv:467:category_name_en: category_name_en appears unchanged from English"
     },
     {
@@ -28183,14 +28130,14 @@
     {
       "scope": "translation",
       "code": "UNCHANGED_TRANSLATION",
-      "clueId": "built-in-mythology-religion-philosophy-clue-0469",
-      "message": "generated.en-et.csv:470:response_en: response_en appears unchanged from English"
+      "clueId": "built-in-mythology-religion-philosophy-clue-0470",
+      "message": "generated.en-et.csv:471:category_name_en: category_name_en appears unchanged from English"
     },
     {
       "scope": "translation",
       "code": "UNCHANGED_TRANSLATION",
       "clueId": "built-in-mythology-religion-philosophy-clue-0470",
-      "message": "generated.en-et.csv:471:category_name_en: category_name_en appears unchanged from English"
+      "message": "generated.en-et.csv:471:response_en: response_en appears unchanged from English"
     },
     {
       "scope": "translation",
