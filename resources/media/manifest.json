@@ -57,5 +57,34 @@
       "durationMs": 2500,
       "channel": "effects"
     }
+  },
+  "branding": {
+    "appName": "Quiz Stage",
+    "logo": {
+      "file": "logo.png",
+      "mime": "image/png",
+      "width": 2048,
+      "height": 1024,
+      "sha256": "9854781b1a533fe2af0806bcbcbc688dd3b4a3bcdcc45e44bfbaea4a4886f50f"
+    },
+    "stageBackground": {
+      "file": "classic-stage-background.png",
+      "mime": "image/png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "3420db36b44c4e5a45f4f351aadf10b28909674391822b9168171652bf05ea20"
+    },
+    "iconSource": {
+      "file": "icon-source.png",
+      "mime": "image/png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7cb27548d5790bc5cdcb556be4f713ca99dd4a6eb05fcb530bf497dedf17731f"
+    },
+    "icon": {
+      "file": "icon.ico",
+      "mime": "image/vnd.microsoft.icon",
+      "sha256": "c1263ca62cdafbcc0948b90e5ac23e0d2dba2311418892936ced76951688ed9a"
+    }
   }
 }

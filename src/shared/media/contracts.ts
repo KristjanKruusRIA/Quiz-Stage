@@ -67,9 +67,26 @@ export const mediaManifestEntrySchema = z.strictObject({
   channel: z.enum(['music', 'effects', 'crowd']),
 });
 
+const mediaBrandingPngSchema = z.strictObject({
+  file: z.string().regex(/^[A-Za-z0-9._-]+\.png$/),
+  mime: z.literal('image/png'),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+});
+
+const mediaBrandingIconSchema = z.strictObject({
+  file: z.literal('icon.ico'),
+  mime: z.literal('image/vnd.microsoft.icon'),
+  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+});
+
 export const mediaBrandingSchema = z.strictObject({
-  appName: z.string().trim().min(1),
-  logo: z.string().regex(/^images\/[A-Za-z0-9._-]+\.png$/).optional(),
+  appName: z.literal('Quiz Stage'),
+  logo: mediaBrandingPngSchema,
+  stageBackground: mediaBrandingPngSchema,
+  iconSource: mediaBrandingPngSchema,
+  icon: mediaBrandingIconSchema,
 });
 
 export const mediaManifestSchema = z.strictObject({
