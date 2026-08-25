@@ -95,3 +95,4 @@ Task 33: complete (tracked in `cded0ea`, content(tasks 23-35) draft bilingual ba
 Task 34: complete (tracked in `cded0ea`, content(tasks 23-35) draft bilingual batch: 12-mythology-religion-philosophy)
 Task 35: complete (tracked in `cded0ea`, content(tasks 23-35) draft bilingual batch: 13-finals)
 Task 36: review step — build and verify the production seed database (not yet complete; in-progress scripts/seed/test integration pending)
+Task 37: complete (commit `9d2005e`; original Classic Stage wordmark/background/icon, deterministic seven-size ICO, manifest hashes, 30/30 media tests)
