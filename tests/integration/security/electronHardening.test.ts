@@ -20,7 +20,7 @@ describe('Electron hardening', () => {
     const forgeConfig = readFileSync('forge.config.ts', 'utf8');
 
     expect(packageJson.dependencies['electron-log']).toBe('5.4.4');
-    expect(packageJson.devDependencies['@electron/fuses']).toBe('2.1.3');
+    expect(packageJson.devDependencies['@electron/fuses']).toBe('1.8.0');
     expect(packageJson.devDependencies['@electron-forge/plugin-fuses']).toBe('7.11.2');
     expect(forgeConfig).toContain('asar: true');
     expect(forgeConfig).toContain('[FuseV1Options.RunAsNode]: false');

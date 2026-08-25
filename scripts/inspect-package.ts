@@ -2,11 +2,15 @@ import { existsSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { extractFile, listPackage } from '@electron/asar';
 import {
-  FuseState,
   FuseV1Options,
   getCurrentFuseWire,
 } from '@electron/fuses';
 import { globSync } from 'glob';
+
+const fuseState = {
+  disabled: '0'.charCodeAt(0),
+  enabled: '1'.charCodeAt(0),
+} as const;
 
 function argumentValue(name: string): string | undefined {
   const index = process.argv.indexOf(name);
@@ -31,7 +35,7 @@ function packagedExecutable(): string {
 function assertFuse(
   wire: Awaited<ReturnType<typeof getCurrentFuseWire>>,
   option: FuseV1Options,
-  expected: FuseState,
+  expected: number,
 ): void {
   if (wire[option] !== expected) {
     throw new Error(`INVALID_FUSE:${FuseV1Options[option]}`);
@@ -74,11 +78,11 @@ async function main(): Promise<void> {
     throw new Error('PACKAGED_ASAR_MISSING');
   }
   const wire = await getCurrentFuseWire(executablePath);
-  assertFuse(wire, FuseV1Options.RunAsNode, FuseState.DISABLE);
-  assertFuse(wire, FuseV1Options.EnableNodeOptionsEnvironmentVariable, FuseState.DISABLE);
-  assertFuse(wire, FuseV1Options.EnableNodeCliInspectArguments, FuseState.DISABLE);
-  assertFuse(wire, FuseV1Options.EnableEmbeddedAsarIntegrityValidation, FuseState.ENABLE);
-  assertFuse(wire, FuseV1Options.OnlyLoadAppFromAsar, FuseState.ENABLE);
+  assertFuse(wire, FuseV1Options.RunAsNode, fuseState.disabled);
+  assertFuse(wire, FuseV1Options.EnableNodeOptionsEnvironmentVariable, fuseState.disabled);
+  assertFuse(wire, FuseV1Options.EnableNodeCliInspectArguments, fuseState.disabled);
+  assertFuse(wire, FuseV1Options.EnableEmbeddedAsarIntegrityValidation, fuseState.enabled);
+  assertFuse(wire, FuseV1Options.OnlyLoadAppFromAsar, fuseState.enabled);
   const renderer = assertOfflineRenderer(archivePath);
   console.log(JSON.stringify({
     executablePath,

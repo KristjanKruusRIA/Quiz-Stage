@@ -372,7 +372,7 @@ describe('translation diagnostics', () => {
       ['explanation_en', 'explanation_et'],
     ] as const;
     const rows: CsvRow[] = [];
-    for (const [index, [english, estonian, oppositeEnglish, oppositeEstonian]] of pairs.entries()) {
+    for (const [index, [english, estonian, , oppositeEstonian]] of pairs.entries()) {
       for (const [fieldIndex, [enField, etField]] of fields.entries()) {
         rows.push(row({
           clue_id: `mismatch-${index}-${fieldIndex}`,
@@ -484,7 +484,6 @@ describe('translation diagnostics', () => {
         clue_id: 'stable-id',
         category_name_en: 'Q123',
         category_name_et: 'Q123',
-        clue_id: 'Q123',
         clue_en: 'US',
         clue_et: 'US',
         response_en: 'US',
@@ -506,7 +505,7 @@ describe('translation diagnostics', () => {
       blocking: boolean;
       checkedRows: number;
       issues: Array<{ clueId: string; code: string; field: string; row: number; file: string }>;
-      exceptions: Array<{ status: string; clueId: string; code: string; correctedText: string; reviewerReason: string }>;
+      exceptions: Array<{ id: string; status: string; clueId: string; code: string; correctedText: string; reviewerReason: string }>;
     };
 
     const issuesByClue = (clueId: string) => reportData.issues.filter((issue) => issue.clueId === clueId).map((issue) => issue.code);
