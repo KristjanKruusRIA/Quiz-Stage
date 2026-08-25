@@ -85,6 +85,16 @@ function isMediaRequest(url: URL): boolean {
     && url.hash === '';
 }
 
+function isAppRequest(url: URL, requestUrl: string): boolean {
+  return url.protocol === 'app:'
+    && url.hostname === 'renderer'
+    && url.username === ''
+    && url.password === ''
+    && url.search === ''
+    && url.hash === ''
+    && !/%(?:2e|2f|5c)/i.test(requestUrl);
+}
+
 function isViteRequest(url: URL, origin: URL | null): boolean {
   if (origin === null || url.username !== '' || url.password !== '') return false;
   if (url.protocol === 'http:') return url.origin === origin.origin;
@@ -107,6 +117,7 @@ export function registerOfflineRendererPolicy(session: SessionPort, options: Off
     try {
       const url = new URL(details.url);
       allowed = isOwnedFile(url, rendererRoot)
+        || isAppRequest(url, details.url)
         || isMediaRequest(url)
         || isViteRequest(url, devOrigin);
     } catch {

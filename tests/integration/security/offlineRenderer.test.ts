@@ -74,6 +74,7 @@ describe('offline renderer session policy', () => {
 
     expect(policy.request(rendererFile, 'mainFrame')).toBe(false);
     expect(policy.request(pathToFileURL(path.join(rendererRoot, 'main.tsx')).href, 'script')).toBe(false);
+    expect(policy.request('app://renderer/index.html', 'mainFrame')).toBe(false);
     expect(policy.request('quiz-stage-media://asset/opening', 'media')).toBe(false);
     expect(policy.request('quiz-stage-media://branding/logo', 'image')).toBe(false);
     expect(policy.request('quiz-stage-media://branding/stage-background', 'image')).toBe(false);
@@ -86,6 +87,9 @@ describe('offline renderer session policy', () => {
       ['file:///C:/Windows/System32/drivers/etc/hosts', 'xhr'],
       ['data:text/html,private', 'mainFrame'],
       ['blob:https://example.com/private', 'xhr'],
+      ['app://other/index.html', 'mainFrame'],
+      ['app://renderer/%2e%2e/private.html', 'script'],
+      ['app://renderer/index.html?remote=https://example.com', 'script'],
       ['quiz-stage-media://asset/opening?path=C:/private', 'media'],
       ['quiz-stage-media://other/opening', 'media'],
       ['quiz-stage-media://branding/icon-source', 'image'],

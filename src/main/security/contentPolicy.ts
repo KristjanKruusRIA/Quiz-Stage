@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, realpathSync, statSync } from 'node:fs';
+import path from 'node:path';
 import { registerOfflineRendererPolicy } from '../offlineRenderer';
 
 export interface ContentPolicySession {
@@ -18,7 +19,54 @@ export interface ContentPolicyOptions {
   onBlockedRequest?: (url: string, resourceType: string) => void;
 }
 
+export interface AppProtocolPort<ResponseType = unknown> {
+  handle(scheme: string, handler: (request: { url: string }) => Promise<ResponseType>): void;
+  unhandle(scheme: string): void;
+}
+
 const REMOTE_SOURCE = /(https?:\/\/|wss?:\/\/|data:|blob:)/i;
+
+function invalidAppProtocolRequest(): never {
+  throw new Error('INVALID_APP_PROTOCOL_REQUEST');
+}
+
+export function resolveAppProtocolPath(rendererRoot: string, requestUrl: string): string {
+  if (/%(?:2e|2f|5c)/i.test(requestUrl)) invalidAppProtocolRequest();
+  try {
+    const url = new URL(requestUrl);
+    if (
+      url.protocol !== 'app:'
+      || url.hostname !== 'renderer'
+      || url.username !== ''
+      || url.password !== ''
+      || url.search !== ''
+      || url.hash !== ''
+    ) invalidAppProtocolRequest();
+    const root = realpathSync.native(rendererRoot);
+    const candidate = realpathSync.native(path.resolve(root, `.${url.pathname}`));
+    const relative = path.relative(root, candidate);
+    if (
+      relative === ''
+      || relative === '..'
+      || relative.startsWith(`..${path.sep}`)
+      || path.isAbsolute(relative)
+      || !statSync(candidate).isFile()
+    ) invalidAppProtocolRequest();
+    return candidate;
+  } catch (error) {
+    if (error instanceof Error && error.message === 'INVALID_APP_PROTOCOL_REQUEST') throw error;
+    return invalidAppProtocolRequest();
+  }
+}
+
+export function registerAppProtocol<ResponseType>(
+  protocol: AppProtocolPort<ResponseType>,
+  rendererRoot: string,
+  loadFile: (filePath: string) => Promise<ResponseType>,
+): () => void {
+  protocol.handle('app', async (request) => loadFile(resolveAppProtocolPath(rendererRoot, request.url)));
+  return () => protocol.unhandle('app');
+}
 
 function loadContentSecurityPolicy(filePath: string): string {
   const html = readFileSync(filePath, 'utf8');
@@ -39,4 +87,3 @@ export function registerContentPolicy(session: ContentPolicySession, options: Co
     onBlockedRequest: options.onBlockedRequest,
   });
 }
-

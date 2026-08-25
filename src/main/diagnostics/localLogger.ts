@@ -1,33 +1,37 @@
-import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
-import { basename, dirname, join } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
+import { basename, dirname, extname, join } from 'node:path';
 import log from 'electron-log/main';
+import type { ValidatedGameCommand } from '../../shared/ipc/contracts';
+
+export interface DiagnosticMetadata {
+  appVersion: string;
+  schemaVersion: number;
+}
 
 export interface LocalLogger {
-  exportDiagnostics: (outputPath?: string) => string;
+  recordGameCommand(command: ValidatedGameCommand): void;
+  exportDiagnostics(outputPath: string, metadata: DiagnosticMetadata): string;
 }
 
 export interface LocalLoggerOptions {
   fileName?: string;
+  logDirectory?: string;
   maxSize?: number;
-  maxArchiveLogs?: number;
+  maxFiles?: number;
   redactKeys?: string[];
 }
 
 const DEFAULT_FILE_NAME = 'quiz-stage-main.log';
-const DEFAULT_MAX_SIZE = 2 * 1024 * 1024;
-const DEFAULT_MAX_ARCHIVE_LOGS = 3;
+const DEFAULT_MAX_SIZE = 1 * 1024 * 1024;
+const DEFAULT_MAX_FILES = 3;
 const LOG_MESSAGE_REDIRECT = '[REDACTED]';
 
 function redactSecrets(value: unknown, redactKeys: Set<string>, visited = new Set<object>()): unknown {
   if (value === null || typeof value === 'number' || typeof value === 'boolean') return value;
   if (typeof value === 'string') return value;
   if (typeof value === 'bigint' || typeof value === 'symbol' || typeof value === 'function') return value;
-  if (value instanceof Error) {
-    return `${value.name}: ${value.message}`;
-  }
-  if (Array.isArray(value)) {
-    return value.map((entry) => redactSecrets(entry, redactKeys, visited));
-  }
+  if (value instanceof Error) return value.name;
+  if (Array.isArray(value)) return value.map((entry) => redactSecrets(entry, redactKeys, visited));
   if (typeof value === 'object') {
     if (visited.has(value as object)) return '[Circular]';
     visited.add(value as object);
@@ -41,71 +45,87 @@ function redactSecrets(value: unknown, redactKeys: Set<string>, visited = new Se
 }
 
 function redactLine(value: string): string {
-  return value
-    .replace(/"prompt"\s*:\s*"[^"]*"/gi, '"prompt":"[REDACTED]"')
-    .replace(/"response"\s*:\s*"[^"]*"/gi, '"response":"[REDACTED]"')
-    .replace(/"explanation"\s*:\s*"[^"]*"/gi, '"explanation":"[REDACTED]"');
+  return value.replace(
+    /"(?:prompt|clue|clueText|response|explanation|reason)"\s*:\s*"[^"]*"/gi,
+    (match) => `${match.slice(0, match.indexOf(':') + 1)}"${LOG_MESSAGE_REDIRECT}"`,
+  );
 }
 
-function pruneArchivedLogs(root: string, maxArchiveLogs: number): void {
-  const existing = readdirSync(root)
-    .filter((file) => file.startsWith('quiz-stage-main.') && file.endsWith('.log'))
-    .sort((left, right) => right.localeCompare(left));
-  while (existing.length > maxArchiveLogs) {
-    const candidate = existing.pop();
-    if (candidate !== undefined) {
-      try {
-        if (existsSync(join(root, candidate))) {
-          rmSync(join(root, candidate), { force: true });
-        }
-      } catch {
-        // best-effort cleanup of stale archive logs
-      }
+function archivePath(activePath: string, index: number): string {
+  const extension = extname(activePath);
+  return join(dirname(activePath), `${basename(activePath, extension)}.${index}${extension}`);
+}
+
+function rotateLogFiles(activePath: string, maxFiles: number): void {
+  for (let index = maxFiles - 1; index >= 1; index -= 1) {
+    const destination = archivePath(activePath, index);
+    const source = index === 1 ? activePath : archivePath(activePath, index - 1);
+    try {
+      rmSync(destination, { force: true });
+      if (existsSync(source)) renameSync(source, destination);
+    } catch {
+      // Rotation is best effort; electron-log will still reset the active file.
     }
   }
 }
 
-function buildDefaultExportPath(): string {
-  const current = log.transports.file.getFile();
-  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  return join(dirname(current.path), `quiz-stage-diagnostics-${timestamp}.json`);
-}
-
 export function initializeLocalLogger(options: LocalLoggerOptions = {}): LocalLogger {
-  const maxArchiveLogs = options.maxArchiveLogs ?? DEFAULT_MAX_ARCHIVE_LOGS;
-  const maxSize = options.maxSize ?? DEFAULT_MAX_SIZE;
-  const redactKeys = new Set(options.redactKeys ?? ['prompt', 'response', 'explanation']);
+  const fileName = options.fileName ?? DEFAULT_FILE_NAME;
+  const maxFiles = options.maxFiles ?? DEFAULT_MAX_FILES;
+  const redactKeys = new Set(options.redactKeys ?? [
+    'prompt', 'clue', 'clueText', 'response', 'explanation', 'reason',
+  ]);
   log.initialize();
+  log.transports.console.level = false;
   log.transports.file.level = 'info';
-  log.transports.file.fileName = options.fileName ?? DEFAULT_FILE_NAME;
-  log.transports.file.maxSize = maxSize;
+  log.transports.file.fileName = fileName;
+  log.transports.file.maxSize = options.maxSize ?? DEFAULT_MAX_SIZE;
   log.transports.file.format = '{y}-{m}-{d} {h}:{i}:{s}.{ms} [{level}] {scope} {text}';
   log.transports.file.writeOptions = { ...log.transports.file.writeOptions, flag: 'a' };
-  log.transports.file.archiveLogFn = (oldLogFile) => {
-    const outputDirectory = dirname(oldLogFile.path);
-    mkdirSync(outputDirectory, { recursive: true });
-    pruneArchivedLogs(outputDirectory, maxArchiveLogs);
-  };
+  if (options.logDirectory !== undefined) {
+    mkdirSync(options.logDirectory, { recursive: true });
+    log.transports.file.resolvePathFn = () => join(options.logDirectory!, fileName);
+  }
+  log.transports.file.archiveLogFn = (oldLogFile) => rotateLogFiles(oldLogFile.path, maxFiles);
   log.hooks.push((message) => ({
     ...message,
     data: message.data.map((value) => redactSecrets(value, redactKeys)),
   }));
+  const runtimeLog = log.scope('runtime');
 
   return {
-    exportDiagnostics: (outputPath = buildDefaultExportPath()) => {
+    recordGameCommand: (command) => {
+      runtimeLog.info('game-command', {
+        type: command.type,
+        ...('clueId' in command && typeof command.clueId === 'string' ? { clueId: command.clueId } : {}),
+      });
+    },
+    exportDiagnostics: (outputPath, metadata) => {
       mkdirSync(dirname(outputPath), { recursive: true });
-      const logSnapshot = log.transports.file.readAllLogs().map((entry) => ({
-        path: entry.path,
-        lines: entry.lines.map(redactLine),
-      }));
-      const payload = {
-        generatedAt: new Date().toISOString(),
-        fileName: basename(log.transports.file.getFile().path),
-        filePath: log.transports.file.getFile().path,
-        logs: logSnapshot,
-      };
-      writeFileSync(outputPath, JSON.stringify(payload, null, 2), 'utf8');
+      const archivePattern = new RegExp(`^${fileName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\.log$/, '')}(?:\\.\\d+)?\\.log$`);
+      const logDirectory = dirname(log.transports.file.getFile().path);
+      const logs = readdirSync(logDirectory)
+        .filter((candidate) => archivePattern.test(candidate))
+        .sort()
+        .map((candidate) => ({
+          fileName: candidate,
+          lines: readFileSync(join(logDirectory, candidate), 'utf8').split(/\r?\n/).map(redactLine),
+        }));
+      writeFileSync(outputPath, JSON.stringify({
+        appVersion: metadata.appVersion,
+        schemaVersion: metadata.schemaVersion,
+        logs,
+      }, null, 2), 'utf8');
       return outputPath;
     },
   };
+}
+
+export async function exportDiagnosticsAfterUserChoice(
+  chooseDestination: () => Promise<string | null>,
+  logger: LocalLogger,
+  metadata: DiagnosticMetadata,
+): Promise<string | null> {
+  const destination = await chooseDestination();
+  return destination === null ? null : logger.exportDiagnostics(destination, metadata);
 }

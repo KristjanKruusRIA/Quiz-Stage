@@ -68,6 +68,7 @@ interface WindowManagerOptions {
   createWindow: WindowFactory;
   preloadPath: string;
   rendererHtmlPath: string;
+  rendererUrl?: string;
   devServerUrl?: string;
   displayPort?: DisplayPort;
   confirmPublicRecovery?: (hostWindow: ManagedWindow) => Promise<boolean>;
@@ -136,10 +137,12 @@ export class WindowManager {
       }
     });
     blockNavigationAndWindows(window.webContents);
-    if (this.options.devServerUrl === undefined) {
-      void window.loadFile(this.options.rendererHtmlPath);
-    } else {
+    if (this.options.devServerUrl !== undefined) {
       void window.loadURL(this.options.devServerUrl);
+    } else if (this.options.rendererUrl !== undefined) {
+      void window.loadURL(this.options.rendererUrl);
+    } else {
+      void window.loadFile(this.options.rendererHtmlPath);
     }
     return window;
   }
