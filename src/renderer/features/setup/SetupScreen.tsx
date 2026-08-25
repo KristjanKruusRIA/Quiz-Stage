@@ -270,7 +270,7 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
             <legend>{t('setup.packs')}</legend>
             {options?.packs.filter((pack) => pack.enabled).map((pack) => (
               <label key={pack.id}>
-                <input type="checkbox" checked={packIds.includes(pack.id)} onChange={() => togglePack(pack.id)} /> {pack.name}
+                <input type="checkbox" value={pack.id} checked={packIds.includes(pack.id)} onChange={() => togglePack(pack.id)} /> {pack.name}
               </label>
             ))}
           </fieldset>

@@ -459,6 +459,7 @@ test('survives a private Estonian eight-team match, restart, completion, history
     await host.getByRole('button', { name: `Edit reported clue ${firstClue.category_name_en}` }).click();
     await host.getByLabel(`Tier ${tier} clue — English`).fill(`${firstClue.clue_en}${CORRECTED_SUFFIX}`);
     await host.getByLabel(`Tier ${tier} clue — Estonian`).fill(`${firstClue.clue_et}${CORRECTED_SUFFIX}`);
+    await host.getByRole('checkbox', { name: `Tier ${tier} enabled` }).check();
     await host.getByRole('button', { name: 'Save category set' }).click();
     await expect(host.getByRole('heading', { name: 'Content Library' })).toBeVisible();
     await expect(host.getByText(REPORT_NOTE)).toHaveCount(0);
@@ -504,10 +505,8 @@ test('survives a private Estonian eight-team match, restart, completion, history
     await host.getByRole('button', { name: 'New Match' }).click();
     await host.getByRole('radio', { name: 'Hard' }).check();
     const availablePackGroup = host.getByRole('group', { name: 'Content packs' });
-    const namedPackCheckboxes = availablePackGroup.locator('label', { hasText: PACK_NAME }).locator('input[type="checkbox"]');
-    const keptIndex = importedPacks.findIndex((pack) => pack.id === keptPack.id);
     for (const checkbox of await availablePackGroup.getByRole('checkbox').all()) await checkbox.uncheck();
-    await namedPackCheckboxes.nth(keptIndex).check();
+    await availablePackGroup.locator(`input[type="checkbox"][value="${keptPack.id}"]`).check();
     await host.getByRole('radio', { name: 'Estonian' }).check();
     await expect(host.getByRole('button', { name: 'Alusta mängu' })).toBeEnabled();
     await host.getByRole('button', { name: 'Alusta mängu' }).click();

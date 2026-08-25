@@ -94,7 +94,7 @@ export function mapWikidataCandidates(
       skipped += 1;
       continue;
     }
-    const valueEntityId = binding.value?.type === 'uri' ? extractWikidataId(rawValue) : undefined;
+    const valueEntityId = binding.value?.type === 'uri' ? extractWikidataId(rawValue) ?? undefined : undefined;
     const ids = new Set<string>([itemId, propertyId]);
     if (valueEntityId !== undefined) ids.add(valueEntityId);
     const normalizedFactKey = buildWikidataFactKey(itemId, propertyId, value);

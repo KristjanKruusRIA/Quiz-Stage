@@ -1,5 +1,4 @@
 import { app, BrowserWindow, dialog, ipcMain, protocol, screen, session } from 'electron';
-import squirrelStartup from 'electron-squirrel-startup';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { createApplication } from './application';
@@ -15,7 +14,13 @@ import { MediaService } from './media/mediaService';
 import { bundledMediaDirectory, mediaOverrideDirectory } from './media/mediaPaths';
 import { registerMediaProtocol } from './media/mediaProtocol';
 import type { MediaStatusEvent } from '../shared/media/contracts';
-import { registerOfflineRendererPolicy } from './offlineRenderer';
+import { resolveDevRendererRoot } from './offlineRenderer';
+import { registerContentPolicy } from './security/contentPolicy';
+import {
+  ensurePortableDataWritable,
+  portableDirectoryPermissionError,
+  userDataDirectoryForMode,
+} from './persistence/userDataPath';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -27,7 +32,12 @@ let disposeMediaProtocol: (() => void) | null = null;
 let disposeOfflineRendererPolicy: (() => void) | null = null;
 let mediaService: MediaService | null = null;
 const e2eExternalRequests: string[] = [];
+const squirrelStartup = process.argv.some((argument) => argument.startsWith('--squirrel-'));
 const displayListeners = new Map<(display: DisplaySnapshot) => void, (_event: Electron.Event, display: Electron.Display) => void>();
+const isDevRenderer = () => Boolean(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+const rendererHtmlPath = isDevRenderer()
+  ? path.join(app.getAppPath(), 'src', 'renderer', 'index.html')
+  : path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`);
 
 protocol.registerSchemesAsPrivileged([{
   scheme: 'quiz-stage-media',
@@ -48,8 +58,8 @@ async function createWindows(): Promise<void> {
   windowManager ??= new WindowManager({
     createWindow: (options) => new BrowserWindow(options) as unknown as ManagedWindow,
     preloadPath: path.join(__dirname, 'preload.js'),
-    rendererHtmlPath: path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
-    ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
+    rendererHtmlPath,
+    ...(isDevRenderer() ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
     displayPort: {
       getAllDisplays: () => screen.getAllDisplays(),
       getPrimaryDisplay: () => screen.getPrimaryDisplay(),
@@ -115,17 +125,35 @@ async function createWindows(): Promise<void> {
 }
 
 async function initialize(): Promise<void> {
-  const rendererRoot = path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}`);
-  disposeOfflineRendererPolicy = registerOfflineRendererPolicy(session.defaultSession, {
+  const rendererRoot = isDevRenderer()
+    ? resolveDevRendererRoot(app.getAppPath(), process.cwd())
+    : path.dirname(rendererHtmlPath);
+  const contentSecurityPolicyPath = isDevRenderer()
+    ? path.join(process.cwd(), 'src', 'renderer', 'index.html')
+    : rendererHtmlPath;
+  disposeOfflineRendererPolicy = registerContentPolicy(session.defaultSession, {
     isPackaged: app.isPackaged,
     rendererRoot,
-    ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
+    contentSecurityPolicyPath,
+    ...(isDevRenderer() ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
     ...(shouldInstallE2eNetworkGuard({
       requested: process.argv.includes('--quiz-stage-e2e-network-guard'),
       isPackaged: app.isPackaged,
     }) ? { onBlockedRequest: (url: string) => e2eExternalRequests.push(url) } : {}),
   });
-  const userDataDirectory = app.getPath('userData');
+  const { portable, userDataDirectory } = userDataDirectoryForMode({
+    isPackaged: app.isPackaged,
+    resourcesPath: process.resourcesPath,
+    appUserDataDirectory: app.getPath('userData'),
+    executablePath: app.getPath('exe'),
+  });
+  if (portable) {
+    try {
+      ensurePortableDataWritable({ userDataDirectory });
+    } catch {
+      throw portableDirectoryPermissionError();
+    }
+  }
   const databasePath = path.join(userDataDirectory, 'quiz-stage.sqlite');
   const databaseEntry = lstatSync(databasePath, { throwIfNoEntry: false });
   if (databaseEntry === undefined) {
@@ -146,7 +174,6 @@ async function initialize(): Promise<void> {
     resourcesPath: process.resourcesPath,
     workingDirectory: process.cwd(),
   });
-  const portable = app.isPackaged && lstatSync(path.join(process.resourcesPath, 'portable.flag'), { throwIfNoEntry: false })?.isFile() === true;
   const sendMediaStatus = (event: MediaStatusEvent) => {
     const webContents = windowManager?.getWindows().hostWindow?.webContents;
     if (webContents === undefined || webContents.isDestroyed()) return;

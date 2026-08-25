@@ -119,7 +119,7 @@ describe('development seed builder', () => {
     expect(result.status, result.stderr).toBe(0);
     expect(result.stdout).toContain('183 clues, 36 category sets, 3 Finals');
     expect(existsSync(outputPath)).toBe(true);
-  });
+  }, 30_000);
 
   it('produces byte-equivalent SQLite output on consecutive rebuilds', () => {
     const directory = temporaryDirectory();

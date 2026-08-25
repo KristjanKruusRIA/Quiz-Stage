@@ -30,6 +30,10 @@ interface OfflineRendererOptions {
 
 const REQUEST_FILTER = { urls: ['<all_urls>'] };
 
+export function resolveDevRendererRoot(_appPath: string, workingDirectory: string): string {
+  return path.join(workingDirectory, 'src', 'renderer');
+}
+
 function viteOrigin(value: string | undefined): URL | null {
   if (value === undefined) return null;
   try {

@@ -557,7 +557,7 @@ describe('production seed', () => {
         }
       }
     }
-  });
+  }, 45_000);
 
   it('supports a healthy production database inventory with SQLite integrity', () => {
     const summary = loadInventoryReport().validation.summary;

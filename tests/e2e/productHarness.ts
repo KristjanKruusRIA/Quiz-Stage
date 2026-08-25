@@ -16,6 +16,7 @@ type ProductPlatform = 'win32' | 'linux' | 'darwin';
 
 export const PRODUCT_BUILD_STAMP_PATH = 'QUIZ_STAGE_INTERNAL_BUILD_STAMP_PATH';
 export const PRODUCT_BUILD_STAMP_TOKEN = 'QUIZ_STAGE_INTERNAL_BUILD_STAMP_TOKEN';
+let e2eApplicationPrepared = false;
 
 interface ProductBuildStampOptions {
   stampPath: string;
@@ -167,9 +168,13 @@ export function productBuildInputs(
 }
 
 export function prepareE2eApplication(): void {
+  if (e2eApplicationPrepared) return;
   const stampPath = process.env[PRODUCT_BUILD_STAMP_PATH];
   const token = process.env[PRODUCT_BUILD_STAMP_TOKEN];
   if (stampPath === undefined && token === undefined) {
+    execFileSync(process.execPath, ['node_modules/tsx/dist/cli.mjs', 'scripts/prepare-electron-zip.ts'], {
+      cwd: process.cwd(), stdio: 'inherit', env: { ...process.env },
+    });
     execFileSync(process.execPath, [
       'node_modules/@electron-forge/cli/dist/electron-forge.js',
       ...forgePackageArguments(),
@@ -188,4 +193,5 @@ export function prepareE2eApplication(): void {
   copyFileSync(path.join(process.cwd(), 'resources', 'content', 'dev-seed.sqlite'), path.join(content, 'dev-seed.sqlite'));
   rmSync(path.join(buildResources, 'media'), { recursive: true, force: true });
   cpSync(path.join(process.cwd(), 'resources', 'media'), path.join(buildResources, 'media'), { recursive: true });
+  e2eApplicationPrepared = true;
 }

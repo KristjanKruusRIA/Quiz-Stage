@@ -2,13 +2,13 @@ import { createHash, randomUUID } from 'node:crypto';
 import {
   lstatSync,
   readFileSync,
+  copyFileSync,
   renameSync,
   unlinkSync,
-  writeFileSync,
 } from 'node:fs';
 import { readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, parse, resolve } from 'node:path';
+import { parse, resolve } from 'node:path';
 import { TextDecoder } from 'node:util';
 import { glob } from 'glob';
 import type { DatabaseConnection } from '../../src/main/persistence/database';
@@ -92,7 +92,11 @@ export async function buildProductionSeed(
     database.close();
     database = undefined;
 
-    renameSync(temporaryOutputPath, explicitOutputPath);
+    try {
+      renameSync(temporaryOutputPath, explicitOutputPath);
+    } catch {
+      copyFileSync(temporaryOutputPath, explicitOutputPath);
+    }
     const inventory = readSeedInventory(explicitOutputPath);
     const evidenceManifest = createEvidenceManifest(evidenceByClueId);
     const inputHash = createSeedInputManifest(inputs, evidenceManifest.sha256);

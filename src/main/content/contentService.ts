@@ -8,12 +8,14 @@ import {
 } from '../../shared/game/boardSelector';
 import type { GameConfig } from '../../shared/game/types';
 import type { ContentReportInput, ContentReportRecord } from '../../shared/content/schema';
+import type { PersistedContentLibrary } from './contentRepository';
 import type { ContentRepository } from './contentRepository';
 
 export type ContentAvailability = { ok: true } | SelectionShortage;
 
 export class ContentService {
   constructor(private readonly repository: ContentRepository) {}
+  private cachedLibrary: PersistedContentLibrary | null = null;
 
   checkAvailability(config: GameConfig): ContentAvailability {
     const selected = selectMatchContent(this.loadSelectionInput(config, 'availability'));
@@ -34,10 +36,12 @@ export class ContentService {
   }
 
   reportClue(input: ContentReportInput): ContentReportRecord {
+    this.invalidateSelectionCache();
     return this.repository.reportClue(input);
   }
 
   resolveReport(clueId: string, resolvedAt?: number): boolean {
+    this.invalidateSelectionCache();
     return this.repository.resolveReport(clueId, resolvedAt);
   }
 
@@ -46,16 +50,28 @@ export class ContentService {
   }
 
   runTransaction<T>(action: () => T): T {
+    this.invalidateSelectionCache();
     return this.repository.runTransaction(action);
   }
 
   private loadSelectionInput(config: GameConfig, seed: string): SelectionInput {
-    const library = this.repository.loadLibrary();
+    const library = this.loadSelectionLibrary();
     return {
       config,
       seed,
       categorySets: library.categorySets.map((set) => ({ ...set })),
       finalClues: library.finalClues.map((clue) => ({ ...clue })),
     };
+  }
+
+  private loadSelectionLibrary(): PersistedContentLibrary {
+    if (this.cachedLibrary !== null) return this.cachedLibrary;
+    const loaded = this.repository.loadLibrary();
+    this.cachedLibrary = loaded;
+    return loaded;
+  }
+
+  invalidateSelectionCache(): void {
+    this.cachedLibrary = null;
   }
 }

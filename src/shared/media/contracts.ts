@@ -67,9 +67,15 @@ export const mediaManifestEntrySchema = z.strictObject({
   channel: z.enum(['music', 'effects', 'crowd']),
 });
 
+export const mediaBrandingSchema = z.strictObject({
+  appName: z.string().trim().min(1),
+  logo: z.string().regex(/^images\/[A-Za-z0-9._-]+\.png$/).optional(),
+});
+
 export const mediaManifestSchema = z.strictObject({
   version: z.literal(1),
   assets: z.record(audioAssetKeySchema, mediaManifestEntrySchema),
+  branding: mediaBrandingSchema.optional(),
 }).superRefine((manifest, context) => {
   const keys = Object.keys(manifest.assets);
   if (keys.length !== AUDIO_ASSET_KEYS.length || AUDIO_ASSET_KEYS.some((key) => !(key in manifest.assets))) {

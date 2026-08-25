@@ -318,7 +318,9 @@ export function validateProductionContent(
     } else {
       const translatedPairs = [
         [row.category_name_en, row.category_name_et],
-        [row.clue_en, row.clue_et], [row.response_en, row.response_et], [row.explanation_en, row.explanation_et],
+        [row.clue_en, row.clue_et],
+        [row.response_en, row.response_et],
+        [row.explanation_en, row.explanation_et],
         ...(row.accepted_variants_en.trim() === '' ? [] : [[row.accepted_variants_en, row.accepted_variants_et]]),
       ];
       if (translatedPairs.some(([en, et]) => en.trim().split(/\s+/).length > 1 && normalizeText(en) === normalizeText(et))) {
@@ -618,6 +620,19 @@ export interface ReportPublicationOptions {
   placement?: 'validation' | 'top-level';
 }
 
+interface UnknownRecord {
+  [key: string]: unknown;
+}
+
+function isObject(value: unknown): value is UnknownRecord {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function shouldPublishTopLevelRecord(validation: unknown): validation is UnknownRecord {
+  if (!isObject(validation)) return false;
+  return 'translation' in validation || 'generatedAt' in validation || 'input' in validation || 'output' in validation || 'inventory' in validation;
+}
+
 function assertNoSymlinkAncestors(path: string): void {
   let current = resolve(path);
   while (true) {
@@ -650,12 +665,8 @@ export function publishValidationReport(path: string, validation: unknown, optio
     if (lstatSync(candidate, { throwIfNoEntry: false }) === undefined) { temporary = candidate; break; }
   }
   if (temporary === '') throw new Error('Could not allocate a unique validation report temporary file');
-  if (options.placement === 'top-level'
-    && (validation === null || typeof validation !== 'object' || Array.isArray(validation))) {
-    throw new Error('Top-level report publication requires a JSON object');
-  }
-  const merged = options.placement === 'top-level'
-    ? { ...existing, ...(validation as Record<string, unknown>) }
+  const merged = shouldPublishTopLevelRecord(validation)
+    ? { ...existing, ...validation }
     : { ...existing, validation };
 
   try {
