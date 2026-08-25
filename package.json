@@ -30,8 +30,9 @@
     "build": "electron-forge package",
     "make:installer": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-installer.ts",
     "make:portable": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-portable.ts",
+    "release:checksums": "pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make",
     "security:inspect-package": "tsx scripts/inspect-package.ts",
-    "verify:release": "npm run lint && npm run typecheck && npm run test:run && npm run verify:content && npm run test:e2e && npm run verify:product",
+    "verify:release": "npm run verify:product && npm run verify:content && npm run test:e2e && npm run make:installer && npm run make:portable && npm run release:checksums && pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both && pwsh -NoProfile -File scripts/verify-upgrade.ps1 -PackageRoot out/make",
     "create-upgrade-fixture": "tsx scripts/create-upgrade-fixture.ts"
   },
   "keywords": [],

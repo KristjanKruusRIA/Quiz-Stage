@@ -7,6 +7,23 @@ Param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+function Remove-TemporaryDirectory {
+  param(
+    [string]$Path,
+    [string]$ExpectedPrefix
+  )
+
+  $resolved = [IO.Path]::GetFullPath($Path)
+  $temporaryRoot = [IO.Path]::GetFullPath($env:TEMP + [IO.Path]::DirectorySeparatorChar)
+  if (-not $resolved.StartsWith($temporaryRoot, [StringComparison]::OrdinalIgnoreCase)) {
+    throw "Refusing to remove non-temporary directory: $resolved"
+  }
+  if (-not [IO.Path]::GetFileName($resolved).StartsWith($ExpectedPrefix, [StringComparison]::Ordinal)) {
+    throw "Refusing to remove unexpected temporary directory: $resolved"
+  }
+  Remove-Item -LiteralPath $resolved -Recurse -Force -ErrorAction SilentlyContinue
+}
+
 function Resolve-PortablePackage {
   param([string]$Root)
 
@@ -17,15 +34,21 @@ function Resolve-PortablePackage {
 
   $extractRoot = Join-Path $env:TEMP ("quiz-stage-portable-smoke-" + [guid]::NewGuid().ToString('N'))
   New-Item -ItemType Directory -Path $extractRoot | Out-Null
-  & Expand-Archive -Path $zip -DestinationPath $extractRoot -Force
-  $executable = Get-ChildItem -Path $extractRoot -Filter '*.exe' -Recurse | Select-Object -First 1
-  if ($executable -eq $null) {
-    throw "No executable found in portable package extraction: $extractRoot"
+  & Expand-Archive -LiteralPath $zip -DestinationPath $extractRoot -Force
+  $executable = Join-Path $extractRoot 'Quiz Stage.exe'
+  if (-not (Test-Path -LiteralPath $executable -PathType Leaf)) {
+    throw "Portable executable not found at $executable"
+  }
+  if (-not (Test-Path -LiteralPath (Join-Path $extractRoot 'resources\portable.flag') -PathType Leaf)) {
+    throw "Portable marker not found under $extractRoot"
+  }
+  if (-not (Test-Path -LiteralPath (Join-Path $extractRoot 'UserData') -PathType Container)) {
+    throw "Portable UserData directory not found under $extractRoot"
   }
 
   return @{
     Root = $extractRoot
-    Executable = $executable.FullName
+    Executable = $executable
   }
 }
 
@@ -51,7 +74,7 @@ function Invoke-PackageSmoke {
     if ($LASTEXITCODE -ne 0) { throw "Playwright package smoke failed for $ModeLabel" }
   }
   finally {
-    Remove-Item -Path $userDataRoot -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-TemporaryDirectory -Path $userDataRoot -ExpectedPrefix 'quiz-stage-package-smoke-'
     $environment.Keys | ForEach-Object { [Environment]::SetEnvironmentVariable($_, $null, 'Process') }
   }
 }
@@ -59,9 +82,9 @@ function Invoke-PackageSmoke {
 function Invoke-InstallerPackage {
   param([string]$Root)
 
-  $setup = Get-ChildItem -Path (Join-Path $Root 'squirrel.windows') -Filter '* Setup.exe' -Recurse | Select-Object -First 1
-  if ($setup -eq $null) {
-    throw "Installer package not found under $(Join-Path $Root 'squirrel.windows')"
+  $setup = Join-Path $Root 'installer\QuizStageSetup.exe'
+  if (-not (Test-Path -LiteralPath $setup -PathType Leaf)) {
+    throw "Installer package not found at $setup"
   }
 
   $releasePackage = Get-ChildItem -Path (Join-Path $Root 'squirrel.windows') -Filter '*-full.nupkg' -Recurse | Select-Object -First 1
@@ -80,14 +103,17 @@ function Invoke-InstallerPackage {
   }
 
   try {
-    Write-Host "Installing installer package from $($setup.FullName)"
+    Write-Host "Installing installer package from $setup"
     $installArguments = @('/S')
-    $installProcess = Start-Process -FilePath $setup.FullName -ArgumentList $installArguments -PassThru
+    $installProcess = Start-Process -FilePath $setup -ArgumentList $installArguments -PassThru -Wait
+    if ($installProcess.ExitCode -ne 0) {
+      throw "Install failed with exit code $($installProcess.ExitCode)"
+    }
     $installedExe = $null
     for ($attempt = 0; $attempt -lt 60 -and $installedExe -eq $null; $attempt += 1) {
       if (Test-Path -LiteralPath $installRoot) {
         $installedExe = Get-ChildItem -Path $installRoot -Filter '*.exe' -Recurse |
-          Where-Object { $_.Name -ne 'Update.exe' } |
+          Where-Object { $_.Name -eq 'Quiz Stage.exe' } |
           Select-Object -First 1
       }
       if ($installedExe -eq $null) { Start-Sleep -Seconds 1 }
@@ -134,7 +160,7 @@ if ($Mode -eq 'Portable' -or $Mode -eq 'Both') {
     Invoke-PackageSmoke -Executable $portable.Executable -ModeLabel 'Portable'
   }
   finally {
-    Remove-Item -Path $portable.Root -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-TemporaryDirectory -Path $portable.Root -ExpectedPrefix 'quiz-stage-portable-smoke-'
   }
 }
 

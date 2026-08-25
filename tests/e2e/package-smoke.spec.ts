@@ -43,6 +43,7 @@ async function launchPackaged(executable: string, userData: string): Promise<{ b
     `--remote-debugging-port=${port}`,
     `--user-data-dir=${userData}`,
     '--quiz-stage-e2e-clock',
+    '--quiz-stage-e2e-network-guard',
   ], { cwd: path.dirname(executable), stdio: 'ignore', windowsHide: true });
   for (let attempt = 0; attempt < 100; attempt += 1) {
     if (process.exitCode !== null) throw new Error(`PACKAGED_APP_EXITED:${process.exitCode}`);
@@ -97,8 +98,15 @@ test('runs a complete two-team win sequence without external requests', async ()
     await page.getByRole('radio', { name: 'English' }).check();
     await page.getByRole('radio', { name: 'Medium' }).check();
     await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
-    await expect(page.getByRole('button', { name: 'Start match' })).toBeEnabled();
-    await page.getByRole('button', { name: 'Start match' }).click();
+    const startButton = page.getByRole('button', { name: 'Start match' });
+    await expect.poll(async () => ({
+      enabled: await startButton.isEnabled(),
+      alerts: await page.getByRole('alert').allTextContents(),
+    }), { message: 'Packaged content must support an English/Medium match', timeout: 30_000 }).toEqual({
+      enabled: true,
+      alerts: [],
+    });
+    await startButton.click();
 
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();

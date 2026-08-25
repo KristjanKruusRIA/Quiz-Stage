@@ -17,8 +17,15 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Cache Playwright browser
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/AppData/Local/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install chromium
       - name: Run CI gate
         run: |
           npm run lint
@@ -37,10 +44,7 @@ jobs:
         run: |
           pwsh -File scripts/verify-upgrade.ps1 -PackageRoot out/make
       - name: Generate release checksums
-        shell: pwsh
-        run: |
-          Get-FileHash -Path "out/make/installer/QuizStageSetup.exe","out/make/portable/QuizStage-win32-x64.zip" -Algorithm SHA256 |
-          ForEach-Object { "{0} {1}" -f $_.Hash, $_.Path } | Out-File -FilePath "out/make/release-checksums.txt"
+        run: pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make
       - name: Upload release artifacts
         uses: actions/upload-artifact@v4
         with:
