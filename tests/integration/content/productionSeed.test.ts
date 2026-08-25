@@ -431,6 +431,33 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(() => inspectSeed(firstOutput, fixture.evidenceByClueId)).toThrow(/v2 evidence citation/i);
   }, 120_000);
 
+  it('honors reviewed translation warning IDs already sealed in the release report', async () => {
+    const directory = temporaryDirectory();
+    const fixture = writeReleaseFixture(directory);
+    const output = join(directory, 'seed.sqlite');
+    const report = join(directory, 'release.json');
+    const firstInput = join(directory, 'generated', `${PRODUCTION_BATCHES[0].id}.en-et.csv`);
+    const input = readFileSync(firstInput, 'utf8');
+    const prior = 'Allikas dokumenteerib vastuse 0-1';
+    const next = 'The source documents response 0-1';
+    expect(input).toContain(prior);
+    writeFileSync(firstInput, input.replace(prior, next));
+    writeFileSync(report, `${JSON.stringify({
+      translation: {
+        exceptions: [{
+          id: 'translation:UNCHANGED_TRANSLATION:01-history-clue-0-1',
+          status: 'reviewed',
+          reviewerReason: 'The independent semantic reviewer approved this intentional unchanged text.',
+        }],
+      },
+    }, null, 2)}\n`);
+
+    await expect(buildProductionSeed({
+      inputs: fixture.inputs, evidence: fixture.evidence, output, report,
+    })).resolves.toMatchObject({ boardClues: 6000, categorySets: 1200, finalClues: 150 });
+    expect(JSON.parse(readFileSync(report, 'utf8')).translation.exceptions).toHaveLength(1);
+  }, 120_000);
+
   it('publishes verification reports only after validation, sources, citations, hash, and inventory pass', async () => {
     const directory = temporaryDirectory();
     const fixture = writeReleaseFixture(directory);

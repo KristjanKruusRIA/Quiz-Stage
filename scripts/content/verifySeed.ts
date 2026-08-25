@@ -29,6 +29,7 @@ interface ReleaseInventoryReport {
   generatedAt: string;
   mode: 'release';
   validation: {
+    [key: string]: unknown;
     mode: 'release';
     blocking: boolean;
     summary: ReleaseSummary;
@@ -132,7 +133,7 @@ export function readReleaseInventoryReport(path: string): ReleaseInventoryReport
     ...parsed,
     generatedAt: parsed.generatedAt,
     mode: 'release',
-    validation: { mode: 'release', blocking: false, summary },
+    validation: { ...(validation as Record<string, unknown>), mode: 'release', blocking: false, summary },
     input: input as Record<string, unknown>,
     output: output as { sha256: string },
     inventory: inventory as unknown as SeedInventory,

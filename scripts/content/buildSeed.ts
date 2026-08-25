@@ -16,7 +16,7 @@ import { openDatabase } from '../../src/main/persistence/database';
 import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { parsePackCsv, type ParsedPack, type ParsedCsvRow } from '../../src/main/content/csvPacks';
 import { readEvidenceInputs, type ContentEvidence } from './evidence';
-import { publishValidationReport, validateProductionContent } from './validate';
+import { publishValidationReport, reviewedIdsFromReport, validateProductionContent } from './validate';
 
 export interface SeedBuildArgs {
   inputs: string[];
@@ -70,7 +70,7 @@ export async function buildProductionSeed(
   const inputs = await readProductionInputs(args.inputs);
   const validation = validateProductionContent(
     inputs.map((input) => ({ file: input.file, pack: input.pack })),
-    { mode: 'release', evidenceByClueId },
+    { mode: 'release', evidenceByClueId, reviewedExceptionIds: reviewedIdsFromReport(args.report) },
   );
   if (validation.blocking) {
     throw new Error('Production validation failed');

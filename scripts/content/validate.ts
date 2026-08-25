@@ -630,11 +630,6 @@ function isObject(value: unknown): value is UnknownRecord {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-function shouldPublishTopLevelRecord(validation: unknown): validation is UnknownRecord {
-  if (!isObject(validation)) return false;
-  return 'translation' in validation || 'generatedAt' in validation || 'input' in validation || 'output' in validation || 'inventory' in validation;
-}
-
 function assertNoSymlinkAncestors(path: string): void {
   let current = resolve(path);
   while (true) {
@@ -667,8 +662,11 @@ export function publishValidationReport(path: string, validation: unknown, optio
     if (lstatSync(candidate, { throwIfNoEntry: false }) === undefined) { temporary = candidate; break; }
   }
   if (temporary === '') throw new Error('Could not allocate a unique validation report temporary file');
-  const merged = shouldPublishTopLevelRecord(validation)
-    ? { ...existing, ...validation }
+  if (options.placement === 'top-level' && !isObject(validation)) {
+    throw new Error('Top-level report publication requires an object');
+  }
+  const merged = options.placement === 'top-level'
+    ? { ...existing, ...(validation as UnknownRecord) }
     : { ...existing, validation };
 
   try {
@@ -730,7 +728,7 @@ function parseCli(argv: readonly string[]): CliOptions {
   return { inputs, evidence, mode, allowMissingEt, report, ...(batchId === undefined ? {} : { batchId }) };
 }
 
-function reviewedIdsFromReport(path: string): string[] {
+export function reviewedIdsFromReport(path: string): string[] {
   const stat = lstatSync(resolve(path), { throwIfNoEntry: false });
   if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()) return [];
   const report: unknown = JSON.parse(readFileSync(path, 'utf8'));
