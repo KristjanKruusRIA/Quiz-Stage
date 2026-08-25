@@ -48,6 +48,15 @@ describe('Windows release workflow', () => {
     expect(upgradeData).toContain("media', 'logo.png");
   });
 
+  it('runs packaged smoke only from the post-package smoke gate', () => {
+    const packagedSmoke = readFileSync('tests/e2e/package-smoke.spec.ts', 'utf8');
+    const smoke = readFileSync('scripts/smoke-package.ps1', 'utf8');
+
+    expect(packagedSmoke).not.toContain('test.skip(');
+    expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
+    expect(smoke).toContain('playwright test tests/e2e/package-smoke.spec.ts');
+  });
+
   it('contains every previous-version preservation fixture', () => {
     const userData = path.join(process.cwd(), 'tests', 'fixtures', 'previous-version', 'UserData');
     const database = new Database(path.join(userData, 'quiz-stage.sqlite'), { readonly: true });

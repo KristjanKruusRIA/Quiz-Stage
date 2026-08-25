@@ -6,7 +6,8 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { openDatabase } from '../../src/main/persistence/database';
 
-test.skip(process.platform !== 'win32' || process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE === undefined, 'Packaged smoke requires a win32 executable supplied by the package smoke script');
+const packagedSmokeEnabled = process.platform === 'win32'
+  && process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
 test.setTimeout(300_000);
 
 function packagedExecutable(): string {
@@ -73,7 +74,7 @@ async function playTileCorrect(page: Page): Promise<void> {
   await page.getByRole('button', { name: 'Continue' }).click();
 }
 
-test('runs a complete two-team win sequence without external requests', async () => {
+if (packagedSmokeEnabled) test('runs a complete two-team win sequence without external requests', async () => {
   const executable = packagedExecutable();
   const userData = packagedUserData(executable);
   const shouldCleanupUserData = process.env.QUIZ_STAGE_PACKAGED_USER_DATA === undefined
