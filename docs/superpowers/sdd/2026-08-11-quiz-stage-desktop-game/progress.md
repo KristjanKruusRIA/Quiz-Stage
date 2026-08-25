@@ -99,3 +99,4 @@ Task 37: complete (commit `9d2005e`; original Classic Stage wordmark/background/
 Task 38: complete (commit `cffcc60`; hash-verified Classic Stage presentation, 81/81 focused tests, 5/5 visual tests, 24 screenshots inspected across 720p/1080p/4K)
 Task 39: complete (commit `77ecb27`; privileged local renderer protocol, strict IPC boundaries, bounded redacted diagnostics, final Win32 ASAR/fuse inspection passed)
 Task 40: complete (commit `005db45`; 24/24 full bilingual match combinations, focused 32/32 and repository-wide Playwright 44 pass/1 intentional skip)
+Task 41: complete (commit `bc7946d`; exact installer and deterministic true-portable outputs, focused 19/19, final package/fuse inspection pass; complete-match smoke remains at the deferred Task 36 content boundary)
