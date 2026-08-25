@@ -1,5 +1,6 @@
 {
   "name": "quiz-stage-desktop-game",
+  "productName": "Quiz Stage",
   "version": "0.1.0",
   "description": "Offline host-operated quiz game",
   "main": ".vite/build/main.js",

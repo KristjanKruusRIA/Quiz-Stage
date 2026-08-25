@@ -5,6 +5,8 @@ import path from 'node:path';
 const root = process.cwd();
 const vendorDirectory = path.join(root, 'node_modules', 'electron-winstaller', 'vendor');
 const squirrelTemp = path.join(root, '.cache', 'squirrel-temp');
+const installerDirectory = path.join(root, 'out', 'make', 'installer');
+const installerName = 'QuizStageSetup.exe';
 const helpers = [
   ['7z-x64.exe', '7z.exe'],
   ['7z-x64.dll', '7z.dll'],
@@ -22,3 +24,8 @@ execFileSync(process.execPath, [path.join(root, 'node_modules', '@electron-forge
   env: { ...process.env, SQUIRREL_TEMP: squirrelTemp },
   stdio: 'inherit',
 });
+
+const squirrelInstaller = path.join(root, 'out', 'make', 'squirrel.windows', 'x64', installerName);
+if (!existsSync(squirrelInstaller)) throw new Error(`SQUIRREL_INSTALLER_MISSING:${squirrelInstaller}`);
+mkdirSync(installerDirectory, { recursive: true });
+copyFileSync(squirrelInstaller, path.join(installerDirectory, installerName));

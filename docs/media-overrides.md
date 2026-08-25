@@ -7,9 +7,8 @@ You may replace a placeholder with a legally obtained personal-use WAV file. Rep
 ## Override folder
 
 - Installed build: open the Quiz Stage per-user data folder and create `media` inside it.
-- Portable build: once the portable marker is added by the deferred Task 41 packaging work, create `UserData/media`
-  beside `Quiz Stage.exe`. Task 16 recognizes that marker but does not invent or ship it; without the marker, the
-  current package intentionally continues to use the installed-build per-user data folder.
+- Portable build: create `UserData/media` beside `Quiz Stage.exe`. The portable package includes the
+  `resources/portable.flag` marker that makes the app use this adjacent data directory.
 - Development: use the Electron user-data folder's `media` directory.
 
 Do not place replacement files inside the application installation or `app.asar`; upgrades may replace those files.

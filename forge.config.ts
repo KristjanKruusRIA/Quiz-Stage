@@ -20,7 +20,13 @@ const fuseConfig = {
 
 const squirrelMaker = {
   name: '@electron-forge/maker-squirrel',
-  config: {},
+  config: {
+    name: 'QuizStage',
+    title: 'Quiz Stage',
+    exe: 'Quiz Stage.exe',
+    setupExe: 'QuizStageSetup.exe',
+    ...(iconPath === undefined ? {} : { setupIcon: iconPath }),
+  },
 };
 
 const zipMaker = {

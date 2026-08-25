@@ -81,10 +81,10 @@ export function packagedExecutablePath(
   platform: ProductPlatform = process.platform as ProductPlatform,
   arch = process.arch,
 ): string {
-  if (platform === 'win32') return path.win32.join(cwd, 'out', `quiz-stage-desktop-game-${platform}-${arch}`, 'quiz-stage-desktop-game.exe');
-  const root = path.posix.join(cwd, 'out', `quiz-stage-desktop-game-${platform}-${arch}`);
-  if (platform === 'darwin') return path.posix.join(root, 'quiz-stage-desktop-game.app', 'Contents', 'MacOS', 'quiz-stage-desktop-game');
-  return path.posix.join(root, 'quiz-stage-desktop-game');
+  if (platform === 'win32') return path.win32.join(cwd, 'out', `Quiz Stage-${platform}-${arch}`, 'Quiz Stage.exe');
+  const root = path.posix.join(cwd, 'out', `Quiz Stage-${platform}-${arch}`);
+  if (platform === 'darwin') return path.posix.join(root, 'Quiz Stage.app', 'Contents', 'MacOS', 'Quiz Stage');
+  return path.posix.join(root, 'Quiz Stage');
 }
 
 export function packagedResourcesPath(
@@ -92,9 +92,9 @@ export function packagedResourcesPath(
   platform: ProductPlatform = process.platform as ProductPlatform,
   arch = process.arch,
 ): string {
-  if (platform === 'win32') return path.win32.join(cwd, 'out', `quiz-stage-desktop-game-${platform}-${arch}`, 'resources', 'app.asar');
-  const root = path.posix.join(cwd, 'out', `quiz-stage-desktop-game-${platform}-${arch}`);
-  if (platform === 'darwin') return path.posix.join(root, 'quiz-stage-desktop-game.app', 'Contents', 'Resources', 'app.asar');
+  if (platform === 'win32') return path.win32.join(cwd, 'out', `Quiz Stage-${platform}-${arch}`, 'resources', 'app.asar');
+  const root = path.posix.join(cwd, 'out', `Quiz Stage-${platform}-${arch}`);
+  if (platform === 'darwin') return path.posix.join(root, 'Quiz Stage.app', 'Contents', 'Resources', 'app.asar');
   return path.posix.join(root, 'resources', 'app.asar');
 }
 

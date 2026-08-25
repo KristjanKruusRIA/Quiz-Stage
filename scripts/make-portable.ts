@@ -1,4 +1,4 @@
-import { execSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -7,6 +7,7 @@ const ROOT = process.cwd();
 const PORTABLE_OUT = path.join(ROOT, 'out', 'make', 'portable');
 const ZIP_OUT = path.join(ROOT, 'out', 'make', 'zip', 'win32', 'x64');
 const PORTABLE_ARCHIVE = path.join(PORTABLE_OUT, 'QuizStage-win32-x64.zip');
+const FORGE_ARCHIVE_PREFIX = 'Quiz Stage-';
 
 interface DirectoryEntry {
   name: string;
@@ -27,7 +28,7 @@ function runForgeZipBuild(): string {
   });
 
   const zipCandidates = readdirSync(ZIP_OUT)
-    .filter((entry) => entry.endsWith('.zip'))
+    .filter((entry) => entry.startsWith(FORGE_ARCHIVE_PREFIX) && entry.endsWith('.zip'))
     .sort()
     .map((entry) => path.join(ZIP_OUT, entry));
   if (zipCandidates.length === 0) throw new Error('PORTABLE_ZIP_MISSING');
@@ -35,28 +36,29 @@ function runForgeZipBuild(): string {
 }
 
 function extractZip(zipPath: string, stageDirectory: string): string {
-  const command = [
-    'Expand-Archive',
-    `-Path "${zipPath}"`,
-    `-DestinationPath "${stageDirectory}"`,
-    '-Force',
-  ].join(' ');
-  execSync(`powershell -NoProfile -ExecutionPolicy Bypass -Command "${command}"`);
+  const archive = zipPath.replaceAll("'", "''");
+  const destination = stageDirectory.replaceAll("'", "''");
+  execFileSync('powershell.exe', [
+    '-NoProfile',
+    '-NonInteractive',
+    '-Command',
+    `Expand-Archive -LiteralPath '${archive}' -DestinationPath '${destination}' -Force`,
+  ]);
   const entries = readdirSync(stageDirectory, { withFileTypes: true }) as unknown as DirectoryEntry[];
   const directories = entries.filter((entry) => entry.isDirectory());
   return directories.length === 1 ? path.join(stageDirectory, directories[0]?.name ?? '') : stageDirectory;
 }
 
 function rezipPortable(root: string): void {
-  const command = [
-    'Compress-Archive',
-    `-Path "${root}"`,
-    `-DestinationPath "${PORTABLE_ARCHIVE}"`,
-    '-CompressionLevel Optimal',
-    '-Force',
-  ].join(' ');
   mkdirSync(PORTABLE_OUT, { recursive: true });
-  execSync(`powershell -NoProfile -ExecutionPolicy Bypass -Command "${command}"`);
+  const source = path.join(root, '*').replaceAll("'", "''");
+  const destination = PORTABLE_ARCHIVE.replaceAll("'", "''");
+  execFileSync('powershell.exe', [
+    '-NoProfile',
+    '-NonInteractive',
+    '-Command',
+    `Compress-Archive -Path '${source}' -DestinationPath '${destination}' -CompressionLevel Optimal -Force`,
+  ]);
 }
 
 function addPortableArtifacts(applicationRoot: string): void {
@@ -74,10 +76,14 @@ function main(): void {
   const zipPath = runForgeZipBuild();
   const stageDirectory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-portable-extracted-'));
   rmSync(stageDirectory, { recursive: true, force: true });
-  const applicationRoot = extractZip(zipPath, stageDirectory);
-  addPortableArtifacts(applicationRoot);
-  rmSync(PORTABLE_ARCHIVE, { force: true });
-  rezipPortable(applicationRoot);
+  try {
+    const applicationRoot = extractZip(zipPath, stageDirectory);
+    addPortableArtifacts(applicationRoot);
+    rmSync(PORTABLE_ARCHIVE, { force: true });
+    rezipPortable(applicationRoot);
+  } finally {
+    rmSync(stageDirectory, { recursive: true, force: true });
+  }
 }
 
 main();
