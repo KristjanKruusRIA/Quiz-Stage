@@ -4,9 +4,9 @@
   "kind": "verification",
   "blocking": false,
   "artifactHashes": {
-    "authored": "5805a4b8ffbefad8ae672ca3a5e19c1dda34308a77e97dacd6146f00898f1b1d",
-    "generated": "58b4ea30f89083d4e19d43a484ab48366f73c3ca8bcfc5354ddda58aa67bcb68",
-    "evidence": "66cd243a5ad0ce4f6f8a6f89f6bb364dabd9d9ac40f44d01f91b1bf99b6ca5ce"
+    "authored": "b58621e9e2e2fad80c8119cb26bd3bb109b1e1d0252ef3c626162e9a85d48c6d",
+    "generated": "f224763d59d4097c64cf71e3f619d3233282c3ebd08089b5edb648a9e5a451e0",
+    "evidence": "32d7c35e85a4ad1dd6342875bc6af9b9d9967000ffd2dcb1f3b0cbf182d56b0b"
   },
   "validations": {
     "authored": {
@@ -14529,7 +14529,7 @@
         "clueId": "built-in-film-television-clue-0361",
         "field": "clue_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"American Office\" is missing from clue_en translation",
+        "message": "Proper noun \"Scranton-set American\" is missing from clue_en translation",
         "severity": "warning"
       },
       {
@@ -14547,7 +14547,7 @@
         "clueId": "built-in-film-television-clue-0362",
         "field": "clue_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"The American Office\" is missing from clue_en translation",
+        "message": "Proper noun \"Dunder Mifflin’s Scranton\" is missing from clue_en translation",
         "severity": "warning"
       },
       {
@@ -35123,7 +35123,7 @@
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-film-television-clue-0361",
-      "message": "generated.en-et.csv:362:clue_en: Proper noun \"American Office\" is missing from clue_en translation"
+      "message": "generated.en-et.csv:362:clue_en: Proper noun \"Scranton-set American\" is missing from clue_en translation"
     },
     {
       "scope": "translation",
@@ -35135,7 +35135,7 @@
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-film-television-clue-0362",
-      "message": "generated.en-et.csv:363:clue_en: Proper noun \"The American Office\" is missing from clue_en translation"
+      "message": "generated.en-et.csv:363:clue_en: Proper noun \"Dunder Mifflin’s Scranton\" is missing from clue_en translation"
     },
     {
       "scope": "translation",
