@@ -97,3 +97,4 @@ Task 35: complete (tracked in `cded0ea`, content(tasks 23-35) draft bilingual ba
 Task 36: review step — build and verify the production seed database (not yet complete; in-progress scripts/seed/test integration pending)
 Task 37: complete (commit `9d2005e`; original Classic Stage wordmark/background/icon, deterministic seven-size ICO, manifest hashes, 30/30 media tests)
 Task 38: complete (commit `cffcc60`; hash-verified Classic Stage presentation, 81/81 focused tests, 5/5 visual tests, 24 screenshots inspected across 720p/1080p/4K)
+Task 39: complete (commit `77ecb27`; privileged local renderer protocol, strict IPC boundaries, bounded redacted diagnostics, final Win32 ASAR/fuse inspection passed)
