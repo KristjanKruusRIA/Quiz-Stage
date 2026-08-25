@@ -77,8 +77,8 @@ function isOwnedFile(url: URL, rendererRoot: string): boolean {
 
 function isMediaRequest(url: URL): boolean {
   return url.protocol === 'quiz-stage-media:'
-    && url.hostname === 'asset'
-    && /^\/[a-z-]+$/.test(url.pathname)
+    && ((url.hostname === 'asset' && /^\/[a-z-]+$/.test(url.pathname))
+      || (url.hostname === 'branding' && /^\/(?:logo|stage-background)$/.test(url.pathname)))
     && url.username === ''
     && url.password === ''
     && url.search === ''

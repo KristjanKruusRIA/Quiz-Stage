@@ -75,6 +75,8 @@ describe('offline renderer session policy', () => {
     expect(policy.request(rendererFile, 'mainFrame')).toBe(false);
     expect(policy.request(pathToFileURL(path.join(rendererRoot, 'main.tsx')).href, 'script')).toBe(false);
     expect(policy.request('quiz-stage-media://asset/opening', 'media')).toBe(false);
+    expect(policy.request('quiz-stage-media://branding/logo', 'image')).toBe(false);
+    expect(policy.request('quiz-stage-media://branding/stage-background', 'image')).toBe(false);
 
     for (const [url, type] of [
       ['https://example.com/main', 'mainFrame'],
@@ -86,6 +88,8 @@ describe('offline renderer session policy', () => {
       ['blob:https://example.com/private', 'xhr'],
       ['quiz-stage-media://asset/opening?path=C:/private', 'media'],
       ['quiz-stage-media://other/opening', 'media'],
+      ['quiz-stage-media://branding/icon-source', 'image'],
+      ['quiz-stage-media://branding/logo?path=C:/private', 'image'],
     ] as const) {
       expect(policy.request(url, type)).toBe(true);
     }
@@ -147,6 +151,6 @@ describe('offline renderer session policy', () => {
     const html = readFileSync(path.join(process.cwd(), 'src', 'renderer', 'index.html'), 'utf8');
     const value = /http-equiv="Content-Security-Policy"\s+content="([^"]+)"/.exec(html)?.[1];
 
-    expect(value).toBe("default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self' quiz-stage-media:; font-src 'self'; connect-src 'self' quiz-stage-media:");
+    expect(value).toBe("default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' quiz-stage-media:; media-src 'self' quiz-stage-media:; font-src 'self'; connect-src 'self' quiz-stage-media:");
   });
 });

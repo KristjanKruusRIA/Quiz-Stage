@@ -6,8 +6,10 @@ import { basename, extname, join, parse, resolve, sep } from 'node:path';
 import {
   AUDIO_ASSET_KEYS,
   audioAssetKeySchema,
+  brandingAssetKeySchema,
   mediaManifestSchema,
   type AudioAssetKey,
+  type BrandingAssetKey,
   type MediaManifest,
   type MediaWarning,
   type MediaWarningReason,
@@ -15,6 +17,12 @@ import {
 
 const MAX_OVERRIDE_BYTES = 10 * 1024 * 1024;
 export interface ResolvedMedia { key: AudioAssetKey; source: 'override' | 'bundled'; mime: 'audio/wav'; bytes: Buffer }
+export interface ResolvedBranding { key: BrandingAssetKey; source: 'bundled'; mime: 'image/png'; bytes: Buffer }
+
+const brandingManifestKey = {
+  logo: 'logo',
+  'stage-background': 'stageBackground',
+} as const satisfies Record<BrandingAssetKey, 'logo' | 'stageBackground'>;
 
 interface MediaServiceOptions {
   bundledDirectory: string;
@@ -50,6 +58,23 @@ export class MediaService {
       return { key, source: 'bundled', mime: 'audio/wav', bytes };
     } catch {
       return this.failBundled(key, 'missing-bundled');
+    }
+  }
+
+  resolveBranding(input: unknown): ResolvedBranding {
+    const key = brandingAssetKeySchema.parse(input);
+    const branding = this.manifest.branding;
+    if (branding === undefined) throw new Error('BRANDING_UNAVAILABLE');
+    const entry = branding[brandingManifestKey[key]];
+    const expectedPath = resolve(this.options.bundledDirectory, entry.file);
+    const bundledRoot = `${resolve(this.options.bundledDirectory)}${sep}`;
+    if (!expectedPath.startsWith(bundledRoot)) throw new Error('BRANDING_UNAVAILABLE');
+    try {
+      const bytes = readFileSync(expectedPath);
+      if (createHash('sha256').update(bytes).digest('hex') !== entry.sha256) throw new Error('invalid');
+      return { key, source: 'bundled', mime: 'image/png', bytes };
+    } catch {
+      throw new Error('BRANDING_UNAVAILABLE');
     }
   }
 
@@ -154,4 +179,16 @@ export function parseMediaRequest(requestUrl: string): AudioAssetKey {
   const path = decodeURIComponent(url.pathname);
   if (!/^\/[a-z-]+$/.test(path)) throw new Error('INVALID_MEDIA_REQUEST');
   try { return audioAssetKeySchema.parse(path.slice(1)); } catch { throw new Error('INVALID_MEDIA_REQUEST'); }
+}
+
+export function parseBrandingRequest(requestUrl: string): BrandingAssetKey {
+  if (!/^quiz-stage-media:\/\/branding\/(?:logo|stage-background)$/.test(requestUrl)) throw new Error('INVALID_BRANDING_REQUEST');
+  let url: URL;
+  try { url = new URL(requestUrl); } catch { throw new Error('INVALID_BRANDING_REQUEST'); }
+  if (url.protocol !== 'quiz-stage-media:' || url.hostname !== 'branding' || url.search !== '' || url.hash !== '') {
+    throw new Error('INVALID_BRANDING_REQUEST');
+  }
+  const path = decodeURIComponent(url.pathname);
+  if (!/^\/(?:logo|stage-background)$/.test(path)) throw new Error('INVALID_BRANDING_REQUEST');
+  try { return brandingAssetKeySchema.parse(path.slice(1)); } catch { throw new Error('INVALID_BRANDING_REQUEST'); }
 }

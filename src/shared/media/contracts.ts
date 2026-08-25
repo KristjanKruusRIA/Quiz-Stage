@@ -13,6 +13,9 @@ export const AUDIO_ASSET_KEYS = [
 
 export type AudioAssetKey = typeof AUDIO_ASSET_KEYS[number];
 export type AudioChannel = 'music' | 'effects' | 'crowd';
+export const BRANDING_ASSET_KEYS = ['logo', 'stage-background'] as const;
+export type BrandingAssetKey = typeof BRANDING_ASSET_KEYS[number];
+export const brandingAssetKeySchema = z.enum(BRANDING_ASSET_KEYS);
 export const AUDIO_ASSET_SPEC = {
   opening: { file: 'audio/opening.wav', durationMs: 2_500, channel: 'music' },
   'round-transition': { file: 'audio/round-transition.wav', durationMs: 1_800, channel: 'music' },
@@ -131,6 +134,10 @@ export function effectiveAudioGain(settings: AudioSettings, channel: AudioChanne
 
 export function mediaAssetUrl(key: AudioAssetKey): string {
   return `quiz-stage-media://asset/${key}`;
+}
+
+export function brandingAssetUrl(key: BrandingAssetKey): string {
+  return `quiz-stage-media://branding/${key}`;
 }
 
 export function audioChannelForAsset(key: AudioAssetKey): AudioChannel {

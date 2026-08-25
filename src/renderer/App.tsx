@@ -10,7 +10,7 @@ import { ContentLibraryScreen } from './features/content/ContentLibraryScreen';
 import { I18nProvider, translate } from './i18n';
 import type { Language } from '../shared/game/types';
 import { SettingsScreen, SettingsStatusScreen } from './features/settings/SettingsScreen';
-import { type AudioAssetKey, type AudioSettings, type MediaWarning } from '../shared/media/contracts';
+import { brandingAssetUrl, type AudioAssetKey, type AudioSettings, type MediaWarning } from '../shared/media/contracts';
 import type { AppearanceSettings } from '../shared/settings/appearance';
 
 const audioAssetLabelKeys = {
@@ -65,6 +65,11 @@ export default function App({ api }: AppProps) {
     setResumePending(false);
     setResumeError(false);
     setRoute(next);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--stage-background-image', `url("${brandingAssetUrl('stage-background')}")`);
+    return () => { document.documentElement.style.removeProperty('--stage-background-image'); };
   }, []);
 
   useEffect(() => {

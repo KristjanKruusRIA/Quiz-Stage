@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   AUDIO_ASSET_KEYS,
+  BRANDING_ASSET_KEYS,
   audioSettingsSchema,
+  brandingAssetUrl,
   defaultAudioSettings,
   effectiveAudioGain,
   mediaAssetUrl,
@@ -19,6 +21,13 @@ describe('media contracts', () => {
       'correct-applause', 'incorrect-crowd', 'time-expired', 'winner',
     ]);
     for (const key of AUDIO_ASSET_KEYS) expect(mediaAssetUrl(key)).toBe(`quiz-stage-media://asset/${key}`);
+  });
+
+  it('owns exact pathless branding asset URLs', () => {
+    expect(BRANDING_ASSET_KEYS).toEqual(['logo', 'stage-background']);
+    for (const key of BRANDING_ASSET_KEYS) {
+      expect(brandingAssetUrl(key)).toBe(`quiz-stage-media://branding/${key}`);
+    }
   });
 
   it('strictly validates finite settings and clamps effective gain', () => {

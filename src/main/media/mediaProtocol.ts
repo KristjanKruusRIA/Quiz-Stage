@@ -1,11 +1,11 @@
-import { parseMediaByteRange, parseMediaRequest, type MediaService } from './mediaService';
+import { parseBrandingRequest, parseMediaByteRange, parseMediaRequest, type MediaService } from './mediaService';
 
 interface ProtocolPort {
   handle(scheme: string, handler: (request: Request) => Response | Promise<Response>): void;
   unhandle(scheme: string): void;
 }
 
-type MediaResolver = Pick<MediaService, 'resolve'>;
+type MediaResolver = Pick<MediaService, 'resolve' | 'resolveBranding'>;
 
 const SCHEME = 'quiz-stage-media';
 
@@ -15,7 +15,9 @@ export function registerMediaProtocol(protocol: ProtocolPort, media: MediaResolv
       return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD', 'Content-Length': '0' } });
     }
     try {
-      const resolved = media.resolve(parseMediaRequest(request.url));
+      const resolved = new URL(request.url).hostname === 'branding'
+        ? media.resolveBranding(parseBrandingRequest(request.url))
+        : media.resolve(parseMediaRequest(request.url));
       let range;
       try {
         range = parseMediaByteRange(request.headers.get('Range'), resolved.bytes.length);

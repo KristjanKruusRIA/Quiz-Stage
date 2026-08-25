@@ -23,6 +23,7 @@ export function HomeScreen({
   return (
     <main className="page-shell home-screen">
       <header>
+        <img className="brand-logo" src={brandingAssetUrl('logo')} alt="" aria-hidden="true" />
         <p className="eyebrow">{t('common.productName')}</p>
         <h1>{t('home.title')}</h1>
       </header>
@@ -39,3 +40,4 @@ export function HomeScreen({
   );
 }
 import { useI18n } from '../../i18n';
+import { brandingAssetUrl } from '../../../shared/media/contracts';

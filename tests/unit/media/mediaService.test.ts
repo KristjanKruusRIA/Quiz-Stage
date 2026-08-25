@@ -1,9 +1,9 @@
-import { linkSync, mkdirSync, mkdtempSync, readFileSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, linkSync, mkdirSync, mkdtempSync, readFileSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
 import { generatePlaceholderAudio } from '../../../scripts/generate-placeholder-audio';
-import { isValidWav, MediaService, parseMediaByteRange, parseMediaRequest } from '../../../src/main/media/mediaService';
+import { isValidWav, MediaService, parseBrandingRequest, parseMediaByteRange, parseMediaRequest } from '../../../src/main/media/mediaService';
 
 function fixture() {
   const root = mkdtempSync(join(tmpdir(), 'quiz-stage-service-'));
@@ -31,6 +31,29 @@ describe('MediaService', () => {
     for (const url of ['file:///secret.wav', 'quiz-stage-media://asset/../opening', 'quiz-stage-media://asset/opening?path=C:/secret', 'quiz-stage-media://other/opening']) {
       expect(() => parseMediaRequest(url)).toThrow('INVALID_MEDIA_REQUEST');
     }
+  });
+
+  it('serves only hash-verified bundled branding images through exact URLs', () => {
+    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-branding-service-'));
+    const bundled = join(root, 'bundled');
+    const overrides = join(root, 'overrides');
+    cpSync(join(process.cwd(), 'resources', 'media'), bundled, { recursive: true });
+    mkdirSync(overrides);
+    const service = new MediaService({ bundledDirectory: bundled, overrideDirectory: overrides });
+
+    expect(parseBrandingRequest('quiz-stage-media://branding/logo')).toBe('logo');
+    expect(parseBrandingRequest('quiz-stage-media://branding/stage-background')).toBe('stage-background');
+    expect(service.resolveBranding('logo')).toMatchObject({ key: 'logo', source: 'bundled', mime: 'image/png' });
+    expect(service.resolveBranding('stage-background').bytes.length).toBeGreaterThan(0);
+    for (const url of [
+      'quiz-stage-media://branding/icon-source',
+      'quiz-stage-media://branding/../logo',
+      'quiz-stage-media://branding/logo?path=C:/secret',
+      'quiz-stage-media://asset/logo',
+    ]) expect(() => parseBrandingRequest(url)).toThrow('INVALID_BRANDING_REQUEST');
+
+    writeFileSync(join(bundled, 'logo.png'), 'tampered');
+    expect(() => service.resolveBranding('logo')).toThrow('BRANDING_UNAVAILABLE');
   });
   it('uses independently validated case-insensitive WAV overrides and falls back per key', () => {
     const { bundled, overrides } = fixture();
