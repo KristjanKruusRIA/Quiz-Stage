@@ -3,6 +3,9 @@ import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:f
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import { expectedNativeModuleSuffix, packagedResourcesDirectory } from '../../../scripts/release/packageLayout';
+import { normalizedArtifactPath } from '../../../scripts/release/artifacts';
+import { releaseTargetFor } from '../../../scripts/release/targets';
 
 function fileExists(candidate: string): boolean {
   try {
@@ -21,49 +24,38 @@ function listAllFiles(directory: string): string[] {
   });
 }
 
-function installerPayloadPath(): string {
-  try {
-    return listAllFiles(path.join(process.cwd(), 'out', 'make', 'squirrel.windows'))
-      .find((file) => file.endsWith('-full.nupkg')) ?? '';
-  } catch {
-    return '';
-  }
-}
-
 function extractArchive(archivePath: string, prefix: string): string {
   const extractionRoot = mkdtempSync(path.join(tmpdir(), prefix));
-  const escapedArchivePath = archivePath.replace(/'/g, "''");
-  const escapedExtractionRoot = extractionRoot.replace(/'/g, "''");
-  execFileSync('powershell.exe', [
-    '-NoProfile', '-NonInteractive', '-Command',
-    `Expand-Archive -LiteralPath '${escapedArchivePath}' -DestinationPath '${escapedExtractionRoot}' -Force`,
-  ]);
+  if (process.platform === 'win32') {
+    const escapedArchivePath = archivePath.replace(/'/g, "''");
+    const escapedExtractionRoot = extractionRoot.replace(/'/g, "''");
+    execFileSync('powershell.exe', [
+      '-NoProfile', '-NonInteractive', '-Command',
+      `Expand-Archive -LiteralPath '${escapedArchivePath}' -DestinationPath '${escapedExtractionRoot}' -Force`,
+    ]);
+  } else {
+    execFileSync('unzip', ['-q', archivePath, '-d', extractionRoot]);
+  }
   return extractionRoot;
 }
 
-function applicationExecutables(files: string[]): string[] {
-  return files.filter((file) => {
-    const executable = path.basename(file).toLowerCase();
-    return executable.endsWith('.exe')
-      && executable !== 'squirrel.exe'
-      && !executable.endsWith('_executionstub.exe');
-  });
+function packagedExecutable(root: string, executableName: string): string {
+  const matches = listAllFiles(root).filter((file) => path.basename(file) === executableName);
+  if (matches.length !== 1) throw new Error('PACKAGED_EXECUTABLE_NOT_UNIQUE');
+  return matches[0]!;
 }
 
 describe('package contents', () => {
-  const expectedInstaller = path.join(process.cwd(), 'out', 'make', 'installer', 'QuizStageSetup.exe');
-  const expectedInstallerPayload = installerPayloadPath();
-  const expectedPortableZip = path.join(process.cwd(), 'out', 'make', 'portable', 'QuizStage-win32-x64.zip');
-  const packagePayloadsPresent = process.platform === 'win32'
-    && fileExists(expectedInstallerPayload) && fileExists(expectedPortableZip);
+  const target = releaseTargetFor(process.platform, process.arch);
+  const portable = target.artifacts.find((artifact) => artifact.kind === 'portable');
+  if (portable === undefined) throw new Error('PORTABLE_ARTIFACT_MISSING');
+  const portableArchive = normalizedArtifactPath(process.cwd(), target, portable);
+  const packagePayloadPresent = fileExists(portableArchive);
   let extractedPortable = '';
-  let extractedInstaller = '';
 
   afterEach(() => {
     if (extractedPortable) rmSync(extractedPortable, { recursive: true, force: true });
-    if (extractedInstaller) rmSync(extractedInstaller, { recursive: true, force: true });
     extractedPortable = '';
-    extractedInstaller = '';
   });
 
   it('uses the locally installed Electron archive for every Forge package command', () => {
@@ -102,30 +94,38 @@ describe('package contents', () => {
     expect(readFileSync('vite.main.config.ts', 'utf8')).not.toContain('electron-squirrel-startup');
   });
 
-  it.skipIf(!packagePayloadsPresent)('produces both installer and portable package outputs', () => {
-    expect(fileExists(expectedInstaller)).toBe(true);
-    expect(fileExists(expectedPortableZip)).toBe(true);
-  });
+  it.skipIf(!packagePayloadPresent)('inspects the current platform portable package layout', () => {
+    extractedPortable = extractArchive(portableArchive, 'quiz-stage-portable-contents-');
+    const executablePath = packagedExecutable(
+      extractedPortable,
+      target.forgePlatform === 'win32' ? `${target.executableName}.exe` : target.executableName,
+    );
+    const resourcesPath = packagedResourcesDirectory(executablePath, target);
+    const files = listAllFiles(extractedPortable);
+    const report = JSON.parse(execFileSync(process.execPath, [
+      path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs'),
+      path.join(process.cwd(), 'scripts', 'inspect-package.ts'),
+      '--target', target.id,
+      '--app', executablePath,
+    ], { encoding: 'utf8' })) as { target: string; executablePath: string; archivePath: string };
 
-  it.skipIf(!packagePayloadsPresent)('separates installer and portable markers while retaining required assets', () => {
-    extractedInstaller = extractArchive(expectedInstallerPayload, 'quiz-stage-installer-contents-');
-    extractedPortable = extractArchive(expectedPortableZip, 'quiz-stage-portable-contents-');
-    const installerFiles = listAllFiles(extractedInstaller);
-    const portableFiles = listAllFiles(extractedPortable);
+    expect(report.target).toBe(target.id);
+    expect(report.executablePath).toBe(executablePath);
+    expect(report.archivePath).toBe(path.join(resourcesPath, 'app.asar'));
+    expect(files).toContain(path.join(resourcesPath, 'seed.sqlite'));
+    expect(files).toContain(path.join(resourcesPath, 'media', 'manifest.json'));
+    expect(files).toContain(path.join(resourcesPath, 'app.asar'));
+    expect(files).toContain(path.join(
+      resourcesPath,
+      'app.asar.unpacked',
+      'node_modules',
+      'better-sqlite3',
+      expectedNativeModuleSuffix(target),
+    ));
 
-    for (const files of [installerFiles, portableFiles]) {
-      const executables = applicationExecutables(files);
-      expect(executables).toHaveLength(1);
-      expect(path.basename(executables[0] ?? '')).toBe('Quiz Stage.exe');
-      expect(files.some((file) => file.endsWith('seed.sqlite'))).toBe(true);
-      expect(files.some((file) => file.endsWith('manifest.json'))).toBe(true);
-      expect(files.some((file) => file.endsWith('app.asar'))).toBe(true);
-      expect(files.some((file) => file.endsWith(path.join('better-sqlite3', 'prebuilds', 'win32-x64.node')))).toBe(true);
-    }
-
-    expect(installerFiles.some((file) => file.endsWith(path.join('resources', 'portable.flag')))).toBe(false);
-    expect(portableFiles).toContain(path.join(extractedPortable, 'Quiz Stage.exe'));
-    expect(portableFiles).toContain(path.join(extractedPortable, 'resources', 'portable.flag'));
-    expect(portableFiles).toContain(path.join(extractedPortable, 'UserData', '.keep'));
+    const portableFlag = path.join(resourcesPath, 'portable.flag');
+    const portableUserData = path.join(path.dirname(executablePath), 'UserData', '.keep');
+    expect(files.includes(portableFlag)).toBe(target.id === 'windows-x64');
+    expect(files.includes(portableUserData)).toBe(target.id === 'windows-x64');
   }, 120_000);
 });
