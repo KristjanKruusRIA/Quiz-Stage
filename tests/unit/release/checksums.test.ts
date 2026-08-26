@@ -127,6 +127,22 @@ describe('release checksums', () => {
     );
   });
 
+  it('emits the declared artifact path for an in-root symbolic link', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    const canonicalArtifact = path.join(packageRoot, 'storage', 'actual.zip');
+    const declaredArtifact = path.join(packageRoot, 'portable', 'QuizStage-darwin-arm64.zip');
+    createFile(canonicalArtifact, 'portable');
+    mkdirSync(path.dirname(declaredArtifact), { recursive: true });
+    symlinkSync(canonicalArtifact, declaredArtifact, 'file');
+
+    const destination = writeReleaseChecksums(releaseTargetForId('macos-arm64'), packageRoot);
+
+    expect(readFileSync(destination, 'utf8')).toBe(
+      `${hash('portable')}  portable/QuizStage-darwin-arm64.zip\n`,
+    );
+  });
+
   it.each([
     'portable/./QuizStage-win32-x64.zip',
     'portable\\QuizStage-win32-x64.zip',

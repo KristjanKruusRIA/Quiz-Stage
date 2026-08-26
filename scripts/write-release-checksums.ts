@@ -79,18 +79,18 @@ export function writeReleaseChecksums(target: ReleaseTarget, packageRoot: string
     if (!isWithin(canonicalPackageRoot, canonicalFilePath)) {
       throw new Error(`RELEASE_ARTIFACT_OUTSIDE_PACKAGE_ROOT:${target.id}:${artifact.relativePath}`);
     }
-    const displayPath = path.relative(canonicalPackageRoot, canonicalFilePath).replaceAll('\\', '/');
+    const canonicalDisplayPath = path.relative(canonicalPackageRoot, canonicalFilePath).replaceAll('\\', '/');
     if (expectedPaths.has(canonicalFilePath)) {
-      throw new Error(`DUPLICATE_RELEASE_ARTIFACT:${target.id}:${displayPath}`);
+      throw new Error(`DUPLICATE_RELEASE_ARTIFACT:${target.id}:${canonicalDisplayPath}`);
     }
     if (canonicalFilePath === canonicalDestination) {
-      throw new Error(`RELEASE_ARTIFACT_IS_CHECKSUM_FILE:${target.id}:${displayPath}`);
+      throw new Error(`RELEASE_ARTIFACT_IS_CHECKSUM_FILE:${target.id}:${canonicalDisplayPath}`);
     }
     if (!statSync(canonicalFilePath).isFile()) {
       throw new Error(`RELEASE_ARTIFACT_NOT_FILE:${target.id}:${artifact.relativePath}`);
     }
     expectedPaths.add(canonicalFilePath);
-    return { filePath: canonicalFilePath, displayPath };
+    return { filePath: canonicalFilePath, displayPath: declaredDisplayPath };
   });
 
   mkdirSync(path.dirname(destination), { recursive: true });
