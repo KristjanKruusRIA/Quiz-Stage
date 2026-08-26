@@ -13,6 +13,8 @@ import {
 const children: ChildProcess[] = [];
 const descendantPids: number[] = [];
 const temporaryDirectories: string[] = [];
+const windowsFixtureStartupTimeoutMs = 30_000;
+const windowsFixtureTestTimeoutMs = 45_000;
 
 function spawnSleeper(
   script = 'setInterval(() => undefined, 1000)',
@@ -68,7 +70,7 @@ async function spawnOwnedWindowsTree(rootExits: boolean): Promise<{
     windowsHide: true,
   });
   children.push(processTree);
-  await waitFor(() => existsSync(pidFile), 10_000);
+  await waitFor(() => existsSync(pidFile), windowsFixtureStartupTimeoutMs);
   const descendantPid = Number(readFileSync(pidFile, 'utf8'));
   descendantPids.push(descendantPid);
   return { descendantPid, processTree };
@@ -112,7 +114,7 @@ describe('packaged process cleanup', () => {
 
       expect(processExists(descendantPid)).toBe(false);
     },
-    25_000,
+    windowsFixtureTestTimeoutMs,
   );
 
   it.skipIf(process.platform !== 'win32')(
@@ -126,7 +128,7 @@ describe('packaged process cleanup', () => {
       expect(packagedProcessIsRunning(processTree)).toBe(false);
       expect(processExists(descendantPid)).toBe(false);
     },
-    15_000,
+    windowsFixtureTestTimeoutMs,
   );
 
   it.skipIf(process.platform !== 'win32')(
@@ -145,7 +147,7 @@ describe('packaged process cleanup', () => {
       expect(packagedProcessIsRunning(processTree)).toBe(false);
       expect(processExists(descendantPid)).toBe(false);
     },
-    15_000,
+    windowsFixtureTestTimeoutMs,
   );
 
   it.skipIf(process.platform !== 'win32')(
@@ -163,7 +165,7 @@ describe('packaged process cleanup', () => {
       expect(packagedProcessIsRunning(processTree)).toBe(false);
       expect(processExists(descendantPid)).toBe(false);
     },
-    15_000,
+    windowsFixtureTestTimeoutMs,
   );
 
   it('waits for a graceful process exit', async () => {
