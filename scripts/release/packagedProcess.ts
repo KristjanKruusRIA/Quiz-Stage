@@ -1,4 +1,42 @@
-import { execFile, type ChildProcess } from 'node:child_process';
+import {
+  execFile,
+  spawn,
+  type ChildProcess,
+  type SpawnOptions,
+} from 'node:child_process';
+import path from 'node:path';
+
+const windowsJobProcesses = new WeakSet<ChildProcess>();
+
+export function spawnPackagedProcess(
+  executable: string,
+  args: string[],
+  options: SpawnOptions,
+): ChildProcess {
+  if (globalThis.process.platform === 'win32') {
+    const child = spawn('pwsh', [
+      '-NoProfile',
+      '-File',
+      path.join(__dirname, 'windows-job.ps1'),
+    ], {
+      ...options,
+      detached: false,
+      env: {
+        ...options.env,
+        QUIZ_STAGE_JOB_ARGUMENTS: JSON.stringify(args),
+        QUIZ_STAGE_JOB_EXECUTABLE: executable,
+        QUIZ_STAGE_JOB_WORKING_DIRECTORY: options.cwd?.toString() ?? globalThis.process.cwd(),
+      },
+      stdio: ['pipe', 'ignore', 'ignore'],
+    });
+    windowsJobProcesses.add(child);
+    return child;
+  }
+  return spawn(executable, args, {
+    ...options,
+    detached: true,
+  });
+}
 
 export interface StopPackagedProcessOptions {
   timeoutMs?: number;
@@ -62,6 +100,12 @@ async function terminateProcessTree(child: ChildProcess, force: boolean): Promis
 
   if (globalThis.process.platform === 'win32') {
     if (!packagedProcessIsRunning(child)) return;
+    if (windowsJobProcesses.has(child) && child.stdin !== null) {
+      await new Promise<void>((resolve) => {
+        child.stdin?.write(`${force ? 'force' : 'stop'}\n`, () => resolve());
+      });
+      return;
+    }
     await runTaskkill(pid, force);
     if (packagedProcessIsRunning(child) && force) child.kill('SIGKILL');
     return;

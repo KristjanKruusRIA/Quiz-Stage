@@ -5,11 +5,13 @@ import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   packagedProcessIsRunning,
+  spawnPackagedProcess,
   stopPackagedProcess,
   waitForPackagedConnection,
 } from '../../../scripts/release/packagedProcess';
 
 const children: ChildProcess[] = [];
+const descendantPids: number[] = [];
 const temporaryDirectories: string[] = [];
 
 function spawnSleeper(
@@ -42,6 +44,36 @@ function processExists(pid: number): boolean {
   }
 }
 
+async function spawnOwnedWindowsTree(rootExits: boolean): Promise<{
+  descendantPid: number;
+  processTree: ChildProcess;
+}> {
+  const directory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-process-fixture-'));
+  temporaryDirectories.push(directory);
+  const pidFile = path.join(directory, 'child.pid');
+  const processTree = spawnPackagedProcess(process.execPath, ['-e', `
+    const { spawn } = require('node:child_process');
+    const { writeFileSync } = require('node:fs');
+    const child = spawn(process.execPath, ['-e', 'setInterval(() => undefined, 1000)'], {
+      detached: true,
+      stdio: 'ignore',
+      windowsHide: true,
+    });
+    child.unref();
+    writeFileSync(process.argv[1], String(child.pid));
+    ${rootExits ? 'process.exit(0);' : 'setInterval(() => undefined, 1000);'}
+  `, pidFile], {
+    cwd: process.cwd(),
+    stdio: 'ignore',
+    windowsHide: true,
+  });
+  children.push(processTree);
+  await waitFor(() => existsSync(pidFile), 10_000);
+  const descendantPid = Number(readFileSync(pidFile, 'utf8'));
+  descendantPids.push(descendantPid);
+  return { descendantPid, processTree };
+}
+
 afterEach(async () => {
   for (const child of children.splice(0)) {
     if (process.platform !== 'win32' && child.pid !== undefined) {
@@ -54,12 +86,86 @@ afterEach(async () => {
       await new Promise((resolve) => setTimeout(resolve, 50));
     }
   }
+  for (const pid of descendantPids.splice(0)) {
+    if (processExists(pid)) {
+      process.kill(pid, 'SIGKILL');
+      await waitFor(() => !processExists(pid));
+    }
+  }
   for (const directory of temporaryDirectories.splice(0)) {
     rmSync(directory, { recursive: true, force: true });
   }
 });
 
 describe('packaged process cleanup', () => {
+  it.skipIf(process.platform !== 'win32')(
+    'owns a detached descendant after the packaged root exits',
+    async () => {
+      const { descendantPid, processTree } = await spawnOwnedWindowsTree(true);
+      await waitFor(() => !packagedProcessIsRunning(processTree), 15_000);
+
+      await expect(waitForPackagedConnection(
+        processTree,
+        async () => { throw new Error('CDP_NOT_READY'); },
+        { attempts: 1, intervalMs: 0, stopTimeoutMs: 5_000 },
+      )).rejects.toThrow('PACKAGED_APP_EXITED:0');
+
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    25_000,
+  );
+
+  it.skipIf(process.platform !== 'win32')(
+    'closes Windows job ownership after a normal stop',
+    async () => {
+      const { descendantPid, processTree } = await spawnOwnedWindowsTree(false);
+      expect(processExists(descendantPid)).toBe(true);
+
+      await stopPackagedProcess(processTree, { timeoutMs: 5_000 });
+
+      expect(packagedProcessIsRunning(processTree)).toBe(false);
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    15_000,
+  );
+
+  it.skipIf(process.platform !== 'win32')(
+    'closes Windows job ownership after a forced stop command',
+    async () => {
+      const { descendantPid, processTree } = await spawnOwnedWindowsTree(false);
+      expect(processExists(descendantPid)).toBe(true);
+      const jobInput = processTree.stdin;
+      if (jobInput === null) throw new Error('PACKAGED_JOB_INPUT_UNAVAILABLE');
+
+      await new Promise<void>((resolve, reject) => {
+        jobInput.write('force\n', (error) => error === undefined || error === null ? resolve() : reject(error));
+      });
+      await waitFor(() => !packagedProcessIsRunning(processTree), 10_000);
+
+      expect(packagedProcessIsRunning(processTree)).toBe(false);
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    15_000,
+  );
+
+  it.skipIf(process.platform !== 'win32')(
+    'closes Windows job ownership before reporting a CDP timeout',
+    async () => {
+      const { descendantPid, processTree } = await spawnOwnedWindowsTree(false);
+      expect(processExists(descendantPid)).toBe(true);
+
+      await expect(waitForPackagedConnection(
+        processTree,
+        async () => { throw new Error('CDP_NOT_READY'); },
+        { attempts: 1, intervalMs: 0, stopTimeoutMs: 5_000 },
+      )).rejects.toThrow('PACKAGED_APP_CDP_TIMEOUT');
+
+      expect(packagedProcessIsRunning(processTree)).toBe(false);
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    15_000,
+  );
+
   it('waits for a graceful process exit', async () => {
     const child = spawnSleeper();
 

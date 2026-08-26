@@ -1,11 +1,15 @@
 import { chromium, expect, test, type Browser, type Page } from '@playwright/test';
-import { spawn, type ChildProcess } from 'node:child_process';
+import type { ChildProcess } from 'node:child_process';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { packagedResourcesDirectory } from '../../scripts/release/packageLayout';
-import { stopPackagedProcess, waitForPackagedConnection } from '../../scripts/release/packagedProcess';
+import {
+  spawnPackagedProcess,
+  stopPackagedProcess,
+  waitForPackagedConnection,
+} from '../../scripts/release/packagedProcess';
 import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
 
@@ -45,7 +49,7 @@ async function availablePort(): Promise<number> {
 
 async function launchPackaged(executable: string, userData: string): Promise<{ browser: Browser; page: Page; process: ChildProcess }> {
   const port = await availablePort();
-  const applicationProcess = spawn(executable, [
+  const applicationProcess = spawnPackagedProcess(executable, [
     `--remote-debugging-port=${port}`,
     `--user-data-dir=${userData}`,
     '--quiz-stage-e2e-clock',
