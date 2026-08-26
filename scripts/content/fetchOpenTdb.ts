@@ -1,16 +1,21 @@
-import { lstatSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, existsSync, renameSync } from 'node:fs';
+import { lstatSync, mkdirSync, readFileSync, writeFileSync, existsSync, renameSync, unlinkSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import {
+  CANDIDATE_ROOT,
+  THIRD_PARTY_NOTICE_PATH,
+  assertCandidateOutputPath,
+  assertThirdPartyNoticeOutputPath,
+} from './candidatePaths';
+import {
   adaptOpenTdbQuestion, buildOpenTdbDuplicateKey, type OpenTdbAdaptedCandidate,
-  type OpenTdbDecodedQuestion, type OpenTdbRawQuestion, OPEN_TDB_SOURCE_LICENSE, OPEN_TDB_SOURCE_TITLE,
-  OPEN_TDB_SOURCE_URL, sanitizeOpenTdbText,
+  type OpenTdbDecodedQuestion, type OpenTdbRawQuestion,
 } from './adaptOpenTdb';
 
 const USER_AGENT = 'Quiz Stage content fetcher/0.1 (+OpenTDB candidate ingestion)';
-const DEFAULT_OUTPUT_PATH = resolve('content/imports/opentdb-candidates.jsonl');
-const DEFAULT_CHECKPOINT_PATH = resolve('content/imports/opentdb-checkpoint.json');
+const DEFAULT_OUTPUT_PATH = resolve(CANDIDATE_ROOT, 'opentdb-candidates.jsonl');
+const DEFAULT_CHECKPOINT_PATH = resolve(CANDIDATE_ROOT, 'opentdb-checkpoint.json');
 const DEFAULT_PAGE_SIZE = 50;
 const DEFAULT_MIN_REQUEST_DELAY_MS = 5_000;
 const DEFAULT_MAX_ATTEMPTS = 5;
@@ -54,7 +59,6 @@ interface OpenTdbRawQuestionResponse {
   response_code: number;
   response_message: string;
   results: OpenTdbRawQuestion[];
-  response_message?: string;
 }
 
 interface OpenTdbCheckpointState {
@@ -142,7 +146,7 @@ function parseOpenTdbResponse<T>(body: string): T {
 }
 
 function parseTokenResponse(body: string): OpenTdbRawTokenResponse {
-  const parsed = parseOpenTdbResponse<OpenTdbRawTokenResponse>(decodeBase64Json(body));
+  const parsed = parseOpenTdbResponse<OpenTdbRawTokenResponse>(body);
   if (parsed.response_code !== 0 || typeof parsed.token !== 'string' || parsed.token === '') {
     throw new Error(`OpenTDB token request failed: ${parsed.response_message}`);
   }
@@ -154,7 +158,15 @@ async function requestWithRetries(
   options: { dependencies: OpenTdbHttpDependencies; maxAttempts: number; },
   attempt = 1,
 ): Promise<string> {
-  const response = await options.dependencies.request(url, { headers: { 'user-agent': USER_AGENT } });
+  let response: ResponseLike;
+  try {
+    response = await options.dependencies.request(url, { headers: { 'user-agent': USER_AGENT } });
+  } catch (error) {
+    if (attempt >= options.maxAttempts) throw error;
+    const backoff = Math.min(250 * 2 ** (attempt - 1), 60_000);
+    await options.dependencies.sleep(Math.max(200, backoff));
+    return requestWithRetries(url, options, attempt + 1);
+  }
   if ((response.status === 429 || response.status >= 500) && attempt < options.maxAttempts) {
     const retryAfter = parseRetryAfter(response.headers.get('retry-after'));
     const backoff = retryAfter !== null
@@ -168,27 +180,35 @@ async function requestWithRetries(
 }
 
 function parseQuestionResponse(text: string): OpenTdbRawQuestionResponse {
-  const response = parseOpenTdbResponse<OpenTdbRawQuestionResponse>(decodeBase64Json(text));
+  const response = parseOpenTdbResponse<OpenTdbRawQuestionResponse>(text);
   if (!Array.isArray(response.results)) {
     throw new Error(`OpenTDB page response is malformed: results missing`);
   }
   return response;
 }
 
-async function requestToken(dependencies: OpenTdbHttpDependencies): Promise<string> {
-  const body = await requestWithRetries('https://opentdb.com/api_token.php?command=request', { dependencies, maxAttempts: DEFAULT_MAX_ATTEMPTS });
+async function requestToken(dependencies: OpenTdbHttpDependencies, maxAttempts: number): Promise<string> {
+  const body = await requestWithRetries('https://opentdb.com/api_token.php?command=request', { dependencies, maxAttempts });
   return parseTokenResponse(body).token!;
 }
 
-async function requestQuestions(token: string, dependencies: OpenTdbHttpDependencies, attempts: number): Promise<OpenTdbRawQuestionResponse> {
-  const url = `https://opentdb.com/api.php?amount=${DEFAULT_PAGE_SIZE}&encode=base64&token=${token}`;
+async function requestQuestions(
+  token: string,
+  amount: number,
+  dependencies: OpenTdbHttpDependencies,
+  attempts: number,
+): Promise<OpenTdbRawQuestionResponse> {
+  if (!Number.isInteger(amount) || amount < 1 || amount > DEFAULT_PAGE_SIZE) {
+    throw new Error(`OpenTDB question amount must be an integer from 1 to ${DEFAULT_PAGE_SIZE}`);
+  }
+  const url = `https://opentdb.com/api.php?amount=${amount}&encode=base64&token=${token}`;
   const body = await requestWithRetries(url, { dependencies, maxAttempts: attempts });
   return parseQuestionResponse(body);
 }
 
-async function requestCategoryCount(dependencies: OpenTdbHttpDependencies): Promise<OpenTdbRawCountResponse> {
-  const response = await requestWithRetries('https://opentdb.com/api_count_global.php', { dependencies, maxAttempts: DEFAULT_MAX_ATTEMPTS });
-  return parseOpenTdbResponse<OpenTdbRawCountResponse>(decodeBase64Json(response));
+async function requestCategoryCount(dependencies: OpenTdbHttpDependencies, maxAttempts = DEFAULT_MAX_ATTEMPTS): Promise<OpenTdbRawCountResponse> {
+  const response = await requestWithRetries('https://opentdb.com/api_count_global.php', { dependencies, maxAttempts });
+  return parseOpenTdbResponse<OpenTdbRawCountResponse>(response);
 }
 
 function loadCheckpoint(path: string): OpenTdbCheckpointState | null {
@@ -209,11 +229,23 @@ function loadCheckpoint(path: string): OpenTdbCheckpointState | null {
 
 function writeCheckpoint(path: string, state: OpenTdbCheckpointState): void {
   const destination = resolve(path);
+  assertCandidateOutputPath(destination);
   ensureRegularDirectory(destination);
   const temporary = `${destination}.${randomUUID()}.tmp`;
   const payload = `${JSON.stringify(state)}\n`;
-  writeFileSync(temporary, payload, { flag: 'wx' });
-  renameSync(temporary, destination);
+  assertCandidateOutputPath(destination);
+  assertCandidateOutputPath(temporary);
+  try {
+    writeFileSync(temporary, payload, { flag: 'wx' });
+    assertCandidateOutputPath(destination);
+    assertCandidateOutputPath(temporary);
+    renameSync(temporary, destination);
+  } finally {
+    try {
+      assertCandidateOutputPath(temporary);
+      unlinkSync(temporary);
+    } catch { /* already renamed or no longer safe */ }
+  }
 }
 
 function loadExistingDuplicateKeys(output: string): Set<string> {
@@ -228,33 +260,58 @@ function loadExistingDuplicateKeys(output: string): Set<string> {
   return keys;
 }
 
-function writeCandidates(output: string, candidates: OpenTdbAdaptedCandidate[]): void {
-  if (candidates.length === 0) return;
-  const payload = `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
-  appendFileSync(output, payload);
+function publishCandidates(
+  output: string,
+  existing: string,
+  candidates: readonly OpenTdbAdaptedCandidate[],
+): void {
+  const separator = candidates.length > 0 && existing !== '' && !existing.endsWith('\n') ? '\n' : '';
+  const appended = candidates.length === 0
+    ? ''
+    : `${candidates.map((candidate) => JSON.stringify(candidate)).join('\n')}\n`;
+  const payload = `${existing}${separator}${appended}`;
+  const temporary = `${output}.${randomUUID()}.tmp`;
+  try {
+    assertCandidateOutputPath(output);
+    ensureRegularDirectory(output);
+    assertCandidateOutputPath(temporary);
+    writeFileSync(temporary, payload, { flag: 'wx' });
+    assertCandidateOutputPath(output);
+    assertCandidateOutputPath(temporary);
+    renameSync(temporary, output);
+  } finally {
+    try {
+      assertCandidateOutputPath(temporary);
+      unlinkSync(temporary);
+    } catch { /* already renamed or no longer safe */ }
+  }
 }
 
 async function fetchOpenTdbCandidates(options: OpenTdbFetchOptions): Promise<OpenTdbFetchResult> {
+  assertCandidateOutputPath(options.output);
+  assertCandidateOutputPath(options.checkpoint);
   const dependencies = options.dependencies ?? defaultDependencies();
   ensureRegularDirectory(options.output);
-  if (options.resume && !existsSync(options.output)) {
-    writeFileSync(options.output, '', { flag: 'wx' });
-  }
+  const existingOutput = options.resume && existsSync(options.output) ? readFileSync(options.output, 'utf8') : '';
   const outputCandidates = options.resume ? loadExistingDuplicateKeys(options.output) : new Set<string>();
   const checkpoint = options.resume ? loadCheckpoint(options.checkpoint) : null;
   const seenSourceIds = checkpoint === null ? new Set<string>() : new Set(checkpoint.seenSourceIds);
-  const token = checkpoint?.token ?? await requestToken(dependencies);
+  const token = checkpoint?.token ?? await requestToken(dependencies, options.maxAttempts);
   const fetchedAt = dependencies.now().toISOString();
 
   let totalWritten = 0;
   let totalSkipped = 0;
   let tokenExhausted = false;
+  const stagedCandidates: OpenTdbAdaptedCandidate[] = [];
 
-  await requestCategoryCount(dependencies).catch(() => undefined);
+  await requestCategoryCount(dependencies, options.maxAttempts).catch(() => undefined);
 
   while (options.target === null || totalWritten < options.target) {
     await dependencies.sleep(options.delayMs);
-    const page = await requestQuestions(token, dependencies, options.maxAttempts);
+    const amount = options.target === null
+      ? DEFAULT_PAGE_SIZE
+      : Math.min(DEFAULT_PAGE_SIZE, options.target - totalWritten);
+    const page = await requestQuestions(token, amount, dependencies, options.maxAttempts);
     if (page.response_code === 4) {
       tokenExhausted = true;
       break;
@@ -267,27 +324,28 @@ async function fetchOpenTdbCandidates(options: OpenTdbFetchOptions): Promise<Ope
     }
 
     const pageCandidates = page.results.map((row) => adaptOpenTdbQuestion(decodeQuestion(row), fetchedAt));
-    const uniqueCandidates = pageCandidates.filter((candidate) => {
+    for (const candidate of pageCandidates) {
       if (outputCandidates.has(candidate.normalizedDuplicateKey) || seenSourceIds.has(candidate.sourceId)) {
         totalSkipped += 1;
-        return false;
+        continue;
       }
       outputCandidates.add(candidate.normalizedDuplicateKey);
       seenSourceIds.add(candidate.sourceId);
-      return true;
-    });
-    writeCandidates(options.output, uniqueCandidates);
-    totalWritten += uniqueCandidates.length;
-    writeCheckpoint(options.checkpoint, {
-      version: 1,
-      token,
-      seenKeys: [...outputCandidates],
-      seenSourceIds: [...seenSourceIds],
-      fetchedAt,
-    });
+      stagedCandidates.push(candidate);
+      totalWritten += 1;
+      if (options.target !== null && totalWritten >= options.target) break;
+    }
     if (options.target !== null && totalWritten >= options.target) break;
   }
 
+  publishCandidates(options.output, existingOutput, stagedCandidates);
+  writeCheckpoint(options.checkpoint, {
+    version: 1,
+    token,
+    seenKeys: [...outputCandidates],
+    seenSourceIds: [...seenSourceIds],
+    fetchedAt,
+  });
   return { totalWritten, totalSkipped, tokenExhausted };
 }
 
@@ -335,12 +393,14 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
     }
   }
 
+  assertCandidateOutputPath(options.output);
+  assertThirdPartyNoticeOutputPath(THIRD_PARTY_NOTICE_PATH);
+  assertCandidateOutputPath(options.checkpoint);
+  assertCandidateOutputPath(options.output);
   mkdirSync(dirname(options.output), { recursive: true });
+  assertCandidateOutputPath(options.checkpoint);
   mkdirSync(dirname(options.checkpoint), { recursive: true });
 
-  if (!options.resume && existsSync(options.output)) {
-    writeFileSync(options.output, '', { flag: 'w' });
-  }
   const result = await fetchOpenTdbCandidates({ ...options, dependencies });
   process.stdout.write(JSON.stringify({
     candidates: result.totalWritten,
@@ -348,15 +408,16 @@ export async function runOpenTdbFetch(argv: string[] = process.argv.slice(2)): P
     tokenExhausted: result.tokenExhausted,
   }, null, 2));
 
-  const notice = resolve('content/THIRD_PARTY_NOTICES.md');
   const line = `- OpenTDB fetch: ${result.totalWritten} draft candidates on ${dependencies.now().toISOString()} from OpenTDB (retrieved ${new Date().toISOString()})\n`;
-  appendIfNotPresent(notice, line);
+  appendIfNotPresent(THIRD_PARTY_NOTICE_PATH, line);
   return 0;
 }
 
-function appendIfNotPresent(path: string, line: string): void {
+export function appendIfNotPresent(path: string, line: string): void {
+  assertThirdPartyNoticeOutputPath(path);
   const existing = existsSync(path) ? readFileSync(path, 'utf8') : '';
   if (existing.includes(line.trim())) return;
+  assertThirdPartyNoticeOutputPath(path);
   writeFileSync(path, `${existing}${existing.endsWith('\n') || existing === '' ? '' : '\n'}${line}`);
 }
 

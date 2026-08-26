@@ -8,3 +8,5 @@ test-results/
 playwright-report/
 .codebase-memory/
 *.diff
+.tmp
+content/work/**

@@ -3,7 +3,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
-import { runTranslationDiagnostics } from '../../../scripts/content/translationDiagnostics';
+import { parsePackCsv } from '../../../src/main/content/csvPacks';
+import { diagnoseTranslations, runTranslationDiagnostics } from '../../../scripts/content/translationDiagnostics';
 
 type CsvRow = Record<(typeof CSV_COLUMNS)[number], string>;
 
@@ -32,7 +33,11 @@ function toCsvValue(value: string): string {
 
 function writeCsv(path: string, rows: readonly CsvRow[]): void {
   const body = [CSV_COLUMNS, ...rows]
-    .map((cells) => CSV_COLUMNS.map((column) => toCsvValue(cells[column])).join(','))
+    .map((cells, index) => (
+      index === 0
+        ? CSV_COLUMNS.join(',')
+        : CSV_COLUMNS.map((column) => toCsvValue((cells as CsvRow)[column])).join(','))
+    )
     .join('\n');
   writeFileSync(path, `${body}\n`, 'utf8');
 }
@@ -68,7 +73,384 @@ function row(overrides: Partial<CsvRow>): CsvRow {
   return { ...base, ...overrides };
 }
 
+function diagnosticsFor(rows: readonly CsvRow[]) {
+  const csv = [CSV_COLUMNS.join(','), ...rows.map((item) => CSV_COLUMNS.map((column) => toCsvValue(item[column])).join(','))]
+    .join('\n');
+  return diagnoseTranslations([{ file: 'translations.csv', pack: parsePackCsv(csv) }]);
+}
+
 describe('translation diagnostics', () => {
+  it('skips absent variants while keeping missing Estonian variants blocking', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'no-variants',
+        accepted_variants_en: '',
+        accepted_variants_et: '',
+      }),
+      row({
+        clue_id: 'missing-estonian-variant',
+        accepted_variants_en: 'Alternative',
+        accepted_variants_et: '',
+      }),
+    ]);
+    const issuesFor = (clueId: string) => report.issues.filter((issue) => issue.clueId === clueId);
+
+    expect(issuesFor('no-variants')).toEqual([]);
+    expect(report.exceptions.filter((item) => item.clueId === 'no-variants')).toEqual([]);
+    expect(issuesFor('missing-estonian-variant')).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'BLANK_TRANSLATION', field: 'accepted_variants_en', severity: 'error' }),
+      expect.objectContaining({ code: 'VARIANT_DRIFT', field: 'accepted_variants_en', severity: 'error' }),
+    ]));
+    expect(report.blocking).toBe(true);
+  });
+
+  it('detects numeric, canonical-answer, variant, and qualifier drift without file output', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'numeric-drift',
+        clue_en: 'In 1991 Estonia restored its independence from the Soviet Union.',
+        clue_et: 'Eesti taastas iseseisvuse Nõukogude Liidust.',
+      }),
+      row({
+        clue_id: 'natural-language-answer',
+        response_en: 'Lake Peipus',
+        response_et: 'Võrtsjärv',
+      }),
+      row({
+        clue_id: 'numeric-answer-drift',
+        response_en: '100',
+        response_et: '101',
+      }),
+      row({
+        clue_id: 'equal-number-prose-answer',
+        response_en: 'The 1991 revolution',
+        response_et: '1991. aasta revolutsioon',
+      }),
+      row({
+        clue_id: 'identifier-answer-drift',
+        response_en: 'Q123',
+        response_et: 'Q456',
+      }),
+      row({
+        clue_id: 'translated-variants',
+        accepted_variants_en: 'False;November 11;Eighty Years War;Dutch Revolt',
+        accepted_variants_et: 'Vale;11. november;Kaheksakümneaastane sõda;Madalmaade ülestõus',
+      }),
+      row({
+        clue_id: 'localized-acronym-variants',
+        accepted_variants_en: 'US Seventh Army;China;PRC;the Second World War;WWII',
+        accepted_variants_et: 'USA seitsmes armee;Hiina;HRV;Teine maailmasõda;II maailmasõda',
+      }),
+      row({
+        clue_id: 'numeric-variant-drift',
+        accepted_variants_en: '8 m;Q123',
+        accepted_variants_et: '8 l;Q123',
+      }),
+      row({
+        clue_id: 'variant-count-drift',
+        accepted_variants_en: 'Q123;P456',
+        accepted_variants_et: 'Q123;P456;Q789',
+      }),
+      row({
+        clue_id: 'identifier-variant-drift',
+        accepted_variants_en: 'Q123',
+        accepted_variants_et: 'Q456',
+      }),
+      row({
+        clue_id: 'identifier-variant-loss',
+        accepted_variants_en: 'Q123',
+        accepted_variants_et: 'tundmatu',
+      }),
+      row({
+        clue_id: 'identifier-variant-addition',
+        accepted_variants_en: 'unknown',
+        accepted_variants_et: 'Q123',
+      }),
+      row({
+        clue_id: 'url-variant-drift',
+        accepted_variants_en: 'https://example.com/a',
+        accepted_variants_et: 'https://example.com/b',
+      }),
+      row({
+        clue_id: 'url-case-variant-drift',
+        accepted_variants_en: 'https://example.com/Archive?item=Alpha',
+        accepted_variants_et: 'https://example.com/archive?item=alpha',
+      }),
+      row({
+        clue_id: 'url-case-answer-drift',
+        response_en: 'https://example.com/Archive?item=Alpha',
+        response_et: 'https://example.com/Archive?item=alpha',
+      }),
+      row({
+        clue_id: 'entity-id-case-equivalent',
+        accepted_variants_en: 'Q123',
+        accepted_variants_et: 'q123',
+      }),
+      row({
+        clue_id: 'url-variant-loss',
+        accepted_variants_en: 'https://example.com/a',
+        accepted_variants_et: 'näide',
+      }),
+      row({
+        clue_id: 'url-variant-addition',
+        accepted_variants_en: 'example',
+        accepted_variants_et: 'https://example.com/a',
+      }),
+      row({
+        clue_id: 'unsupported-acronym-substitution',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'UN',
+      }),
+      row({
+        clue_id: 'acronym-loss',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'liit',
+      }),
+      row({
+        clue_id: 'literal-acronym',
+        accepted_variants_en: 'NATO',
+        accepted_variants_et: 'NATO',
+      }),
+      row({
+        clue_id: 'qualifier-drift',
+        clue_en: 'Which country borders Estonia to the south?',
+        clue_et: 'Milline riik piirneb Eestiga põhjas?',
+      }),
+      row({
+        clue_id: 'reverse-qualifier-drift',
+        clue_en: 'Which country borders Estonia to the north?',
+        clue_et: 'Milline riik piirneb Eestiga lõunas?',
+      }),
+      row({
+        clue_id: 'paired-qualifiers',
+        clue_en: 'Estonia has north and south borders.',
+        clue_et: 'Eestil on põhi ja lõuna piirid.',
+      }),
+      row({
+        clue_id: 'stable-answer',
+        response_en: 'Q123',
+        response_et: 'Q123',
+        accepted_variants_en: 'https://example.com/Q123',
+        accepted_variants_et: 'https://example.com/Q123',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('numeric-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('natural-language-answer')).not.toContain('ANSWER_DRIFT');
+    expect(codesFor('numeric-answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('equal-number-prose-answer')).not.toContain('ANSWER_DRIFT');
+    expect(codesFor('identifier-answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('translated-variants')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('localized-acronym-variants')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('numeric-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('variant-count-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('identifier-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('unsupported-acronym-substitution')).toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('acronym-loss')).toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('literal-acronym')).not.toContain('SUSPICIOUS_PROPER_NOUN_CHANGE');
+    expect(codesFor('identifier-variant-loss')).toContain('VARIANT_DRIFT');
+    expect(codesFor('identifier-variant-addition')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-case-answer-drift')).toContain('ANSWER_DRIFT');
+    expect(codesFor('url-case-variant-drift')).toContain('VARIANT_DRIFT');
+    expect(codesFor('entity-id-case-equivalent')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('url-variant-loss')).toContain('VARIANT_DRIFT');
+    expect(codesFor('url-variant-addition')).toContain('VARIANT_DRIFT');
+    expect(codesFor('qualifier-drift')).toContain('QUALIFIER_DRIFT');
+    expect(codesFor('reverse-qualifier-drift')).toContain('QUALIFIER_DRIFT');
+    expect(codesFor('paired-qualifiers')).not.toContain('QUALIFIER_DRIFT');
+    expect(codesFor('stable-answer')).not.toEqual(expect.arrayContaining(['ANSWER_DRIFT', 'VARIANT_DRIFT']));
+    expect(report.blocking).toBe(true);
+  });
+
+  it('does not parse the initial of a following word as a numeric unit', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'may-date',
+        clue_en: 'The war ended on 8 May.',
+        clue_et: 'Sõda lõppes 8. mail.',
+      }),
+      row({
+        clue_id: 'lunar-module',
+        clue_en: 'Apollo 11 lunar module landed.',
+        clue_et: 'Apollo 11 kuumoodul maandus.',
+      }),
+      row({
+        clue_id: 'march-date',
+        clue_en: 'The attack came on 20 March.',
+        clue_et: 'Rünnak toimus 20. märtsil.',
+      }),
+      row({
+        clue_id: 'real-unit-drift',
+        clue_en: 'The length is 8 m.',
+        clue_et: 'Pikkus on 8 l.',
+      }),
+      row({
+        clue_id: 'real-number-drift',
+        clue_en: 'The mission carried 11 people.',
+        clue_et: 'Missioonil oli 12 inimest.',
+      }),
+      row({
+        clue_id: 'dotted-abbreviation',
+        accepted_variants_en: 'AD 79;79 AD',
+        accepted_variants_et: '79 pKr;79 m.a.j.',
+      }),
+      row({
+        clue_id: 'alternate-dotted-abbreviation',
+        accepted_variants_en: 'BC 44;44 BC',
+        accepted_variants_et: '44 eKr;44 e.m.a.',
+      }),
+      row({
+        clue_id: 'localized-decimal-and-thousands',
+        clue_en: 'The total was 1,234.5.',
+        clue_et: 'Kogusumma oli 1 234,5.',
+      }),
+      row({
+        clue_id: 'reordered-date',
+        clue_en: 'The armistice took effect on November 11, 1918.',
+        clue_et: 'Vaherahu jõustus 11. novembril 1918.',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('may-date')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('lunar-module')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('march-date')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('real-unit-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('real-number-drift')).toContain('NUMBER_DRIFT');
+    expect(codesFor('dotted-abbreviation')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('alternate-dotted-abbreviation')).not.toContain('VARIANT_DRIFT');
+    expect(codesFor('localized-decimal-and-thousands')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('reordered-date')).not.toContain('NUMBER_DRIFT');
+  });
+
+  it('recognizes localized Genesis numbering and hyphenated alternatives without hiding signed-number drift', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'localized-genesis-name',
+        explanation_en: 'The figures are drawn from Genesis and classical prophecy.',
+        explanation_et: 'Figuurid pärinevad 1. Moosese raamatust ja antiiksetest ettekuulutustest.',
+      }),
+      row({
+        clue_id: 'hyphenated-year-alternatives',
+        explanation_en: 'The proposed 1503-or-1504 start is narrower than the 1503–1506 span.',
+        explanation_et: 'Pakutud algusaeg 1503 või 1504 on kitsam kui vahemik 1503–1506.',
+      }),
+      row({
+        clue_id: 'signed-number-drift',
+        explanation_en: 'The offset is -1504.',
+        explanation_et: 'Nihe on 1504.',
+      }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    expect(codesFor('localized-genesis-name')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('hyphenated-year-alternatives')).not.toContain('NUMBER_DRIFT');
+    expect(codesFor('signed-number-drift')).toContain('NUMBER_DRIFT');
+  });
+
+  it('checks every fixed qualifier pair in every required field without flagging correct translations', () => {
+    const pairs = [
+      ['north', 'põhi', 'south', 'lõuna'],
+      ['east', 'ida', 'west', 'lääs'],
+      ['before', 'enne', 'after', 'pärast'],
+      ['first', 'esimene', 'last', 'viimane'],
+      ['more', 'rohkem', 'less', 'vähem'],
+      ['largest', 'suurim', 'smallest', 'väikseim'],
+    ] as const;
+    const fields = [
+      ['clue_en', 'clue_et'],
+      ['response_en', 'response_et'],
+      ['accepted_variants_en', 'accepted_variants_et'],
+      ['explanation_en', 'explanation_et'],
+    ] as const;
+    const rows: CsvRow[] = [];
+    for (const [index, [english, estonian, , oppositeEstonian]] of pairs.entries()) {
+      for (const [fieldIndex, [enField, etField]] of fields.entries()) {
+        rows.push(row({
+          clue_id: `mismatch-${index}-${fieldIndex}`,
+          [enField]: enField === 'accepted_variants_en' ? `same\\;value;${english}` : english,
+          [etField]: etField === 'accepted_variants_et' ? `sama\\;väärtus;${oppositeEstonian}` : oppositeEstonian,
+        }));
+        rows.push(row({
+          clue_id: `match-${index}-${fieldIndex}`,
+          [enField]: enField === 'accepted_variants_en' ? `same\\;value;${english}` : english,
+          [etField]: etField === 'accepted_variants_et' ? `sama\\;väärtus;${estonian}` : estonian,
+          clue_en: fieldIndex === 0 ? english : 'Neutral clue',
+          clue_et: fieldIndex === 0 ? estonian : 'Neutraalne vihje',
+          response_en: fieldIndex === 1 ? english : 'Neutral answer',
+          response_et: fieldIndex === 1 ? estonian : 'Neutraalne vastus',
+          explanation_en: fieldIndex === 3 ? english : 'Neutral explanation',
+          explanation_et: fieldIndex === 3 ? estonian : 'Neutraalne selgitus',
+        }));
+      }
+    }
+    const report = diagnosticsFor(rows);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    for (const [index] of pairs.entries()) {
+      for (const [fieldIndex] of fields.entries()) {
+        expect(codesFor(`mismatch-${index}-${fieldIndex}`)).toContain('QUALIFIER_DRIFT');
+        expect(codesFor(`match-${index}-${fieldIndex}`)).not.toContain('QUALIFIER_DRIFT');
+      }
+    }
+
+    const directionalForms = [
+      ['north', 'põhjas', 'south', 'lõunas'],
+      ['east', 'idas', 'west', 'läänes'],
+    ] as const;
+    const formRows: CsvRow[] = [];
+    for (const [index, [english, estonian, oppositeEnglish, oppositeEstonian]] of directionalForms.entries()) {
+      for (const [fieldIndex, [enField, etField]] of fields.entries()) {
+        formRows.push(
+          row({ clue_id: `form-forward-${index}-${fieldIndex}`, [enField]: english, [etField]: oppositeEstonian }),
+          row({ clue_id: `form-reverse-${index}-${fieldIndex}`, [enField]: oppositeEnglish, [etField]: estonian }),
+          row({ clue_id: `form-match-${index}-${fieldIndex}`, [enField]: english, [etField]: estonian }),
+        );
+      }
+    }
+    const formReport = diagnosticsFor(formRows);
+    const formCodesFor = (clueId: string) => formReport.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+    for (const [index] of directionalForms.entries()) {
+      for (const [fieldIndex] of fields.entries()) {
+        expect(formCodesFor(`form-forward-${index}-${fieldIndex}`)).toContain('QUALIFIER_DRIFT');
+        expect(formCodesFor(`form-reverse-${index}-${fieldIndex}`)).toContain('QUALIFIER_DRIFT');
+        expect(formCodesFor(`form-match-${index}-${fieldIndex}`)).not.toContain('QUALIFIER_DRIFT');
+      }
+    }
+    expect(diagnosticsFor([row({ clue_id: 'unsupported-form', clue_en: 'north', clue_et: 'põhjast' })]).issues)
+      .not.toContainEqual(expect.objectContaining({ code: 'QUALIFIER_DRIFT' }));
+  });
+
+  it('sorts otherwise identical public issues by clue ID independently of input order', () => {
+    const packFor = (clueId: string) => parsePackCsv([
+      CSV_COLUMNS.join(','),
+      CSV_COLUMNS.map((column) => toCsvValue(row({
+        clue_id: clueId,
+        response_en: 'Q123',
+        response_et: 'Q456',
+      })[column])).join(','),
+    ].join('\n'));
+    const first = { file: 'same.csv', pack: packFor('ä') };
+    const second = { file: 'same.csv', pack: packFor('a\u0308') };
+    const inForwardOrder = diagnoseTranslations([first, second]).issues;
+
+    expect(inForwardOrder).toEqual(diagnoseTranslations([second, first]).issues);
+    expect(inForwardOrder.filter((issue) => issue.code === 'ANSWER_DRIFT').map((issue) => issue.clueId))
+      .toEqual(['a\u0308', 'ä']);
+  });
+
   it('flags translation regressions and keeps stable identifiers/url text allowed', async () => {
     const root = withTemporaryRoot();
     const input = join(root, 'translated.csv');
@@ -102,7 +484,6 @@ describe('translation diagnostics', () => {
         clue_id: 'stable-id',
         category_name_en: 'Q123',
         category_name_et: 'Q123',
-        clue_id: 'Q123',
         clue_en: 'US',
         clue_et: 'US',
         response_en: 'US',
@@ -124,7 +505,7 @@ describe('translation diagnostics', () => {
       blocking: boolean;
       checkedRows: number;
       issues: Array<{ clueId: string; code: string; field: string; row: number; file: string }>;
-      exceptions: Array<{ status: string; clueId: string; code: string; correctedText: string; reviewerReason: string }>;
+      exceptions: Array<{ id: string; status: string; clueId: string; code: string; correctedText: string; reviewerReason: string }>;
     };
 
     const issuesByClue = (clueId: string) => reportData.issues.filter((issue) => issue.clueId === clueId).map((issue) => issue.code);
@@ -161,7 +542,7 @@ describe('translation diagnostics', () => {
 
     await runTranslationDiagnostics(['--input', input, '--report', report]);
     const parsed = JSON.parse(readFileSync(report, 'utf8'));
-    const exception = (parsed.translation.exceptions ?? [])[0] as
+    const exception = (parsed.translation.exceptions ?? []).find((item: { code: string }) => item.code === 'UNCHANGED_TRANSLATION') as
       { id: string; clueId: string; code: string; status: string; reviewerReason: string; correctedText: string } | undefined;
 
     expect(exception).toMatchObject({

@@ -5,7 +5,12 @@
   --color-text: #f7f8fc;
   --color-muted: #aeb9d5;
   --color-accent: #e3b341;
+  --color-stage-blue: #123a9c;
+  --color-stage-blue-deep: #061542;
+  --color-stage-gold: #f0c85a;
   --color-focus: #79c8ff;
+  --stage-background-image: none;
+  --motion-stage-enter: 420ms;
   --space-1: 0.5rem;
   --space-2: 0.75rem;
   --space-3: 1rem;

@@ -111,6 +111,7 @@ export interface CsvPackWorkflowOptions {
   now?: () => number;
   previewTtlMs?: number;
   maxPreviews?: number;
+  onImported?: () => void;
 }
 
 interface StoredPreview { preview: PackImportPreview; ownerId: number; createdAt: number }
@@ -147,6 +148,7 @@ export class CsvPackWorkflow {
   private readonly now: () => number;
   private readonly previewTtlMs: number;
   private readonly maxPreviews: number;
+  private readonly onImported: () => void;
 
   constructor(
     private readonly database: DatabaseConnection,
@@ -158,6 +160,7 @@ export class CsvPackWorkflow {
     this.now = options.now ?? Date.now;
     this.previewTtlMs = options.previewTtlMs ?? 5 * 60_000;
     this.maxPreviews = options.maxPreviews ?? 4;
+    this.onImported = options.onImported ?? (() => undefined);
   }
 
   previewFile(path: string, ownerId = 0) {
@@ -214,6 +217,7 @@ export class CsvPackWorkflow {
       preview: stored.preview,
       ...(input.conflict === undefined ? {} : { conflict: input.conflict }),
     });
+    this.onImported();
     return result;
   }
 

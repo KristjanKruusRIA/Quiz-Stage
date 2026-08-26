@@ -8,11 +8,19 @@ import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { readCsvInputs } from './readCsv';
 import { validatePack } from '../../src/main/content/csvPacks';
+import { publishValidationReport } from './validate';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 const USER_AGENT = 'Quiz Stage content source checker/0.1 (+offline desktop content validation)';
 const OFFICIAL_ARCHIVE_HOSTS = new Set(['j-archive.com', 'www.j-archive.com', 'jeopardyarchive.com', 'www.jeopardyarchive.com']);
 const CACHE_VERSION = 1;
 const DEFAULT_EXPIRY_MS = 7 * 24 * 60 * 60_000;
+
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+}
 
 export interface SourceFetchResponse { status: number; headers: Headers }
 export interface SourceCheckDependencies {
@@ -35,6 +43,11 @@ export interface SourceCacheEntry { version: number; expiresAt: string; result: 
 export interface SourceCache {
   get(url: string): SourceCacheEntry | undefined;
   set(url: string, entry: SourceCacheEntry): void;
+}
+
+export interface FileSourceCachePublicationDependencies {
+  beforeRename?(): void;
+  createTemporaryId?(): string;
 }
 
 export interface SourceCheckOptions {
@@ -99,6 +112,7 @@ async function safeHttpsFetch(url: string, init: RequestInit = {}): Promise<Sour
           if (safe.length !== addresses.length || safe.length === 0) {
             callback(new Error('SOURCE_PRIVATE_ADDRESS'), '', 0); return;
           }
+          if (options.all) { callback(null, safe); return; }
           callback(null, safe[0].address, safe[0].family);
         });
       },
@@ -200,7 +214,7 @@ export async function checkSourceUrls(
     cacheExpiryMs: Math.max(1, inputOptions.cacheExpiryMs ?? DEFAULT_EXPIRY_MS),
     ...(inputOptions.cache === undefined ? {} : { cache: inputOptions.cache }),
   };
-  const unique = [...new Set(urls)].sort((a, b) => a.localeCompare(b, 'en'));
+  const unique = [...new Set(urls)].sort(compareCodeUnits);
   const results = new Map<string, SourceCheckResult>();
   let next = 0;
   await Promise.all(Array.from({ length: Math.min(options.concurrency, unique.length) }, async () => {
@@ -219,7 +233,7 @@ export function buildWikidataBatchUrls(
 ): string[] {
   const maxEntities = Math.max(1, Math.min(limits.maxEntities ?? 50, 50));
   const maxUrlLength = Math.max(200, limits.maxUrlLength ?? 1_800);
-  const ids = [...new Set(entityIds)].sort((a, b) => a.localeCompare(b, 'en'));
+  const ids = [...new Set(entityIds)].sort(compareCodeUnits);
   const urls: string[] = [];
   let batch: string[] = [];
   const make = (values: string[]) => {
@@ -239,50 +253,147 @@ export function buildWikidataBatchUrls(
   return urls;
 }
 
-function fileCache(path: string): SourceCache & { publish(): void } {
+function assertNoCacheSymlinkAncestors(path: string): void {
+  let current = resolve(path);
+  while (true) {
+    const stat = lstatSync(current, { throwIfNoEntry: false });
+    if (stat?.isSymbolicLink()) throw new Error(`Source cache path must not traverse a symlink or junction: ${current}`);
+    const parent = dirname(current);
+    if (parent === current) return;
+    current = parent;
+  }
+}
+
+function assertSafeCachePath(destination: string): void {
+  const parentPath = dirname(destination);
+  assertNoCacheSymlinkAncestors(parentPath);
+  const parent = lstatSync(parentPath);
+  if (!parent.isDirectory() || parent.isSymbolicLink()) throw new Error('Source cache parent must be a real directory');
+  const stat = lstatSync(destination, { throwIfNoEntry: false });
+  if (stat?.isSymbolicLink()) throw new Error('Source cache must not be a symlink or junction');
+  if (stat !== undefined && !stat.isFile()) throw new Error('Source cache must be a regular file');
+}
+
+function removeOwnedCacheTemporary(
+  temporary: string,
+  identity: { dev: number; ino: number } | undefined,
+  destination: string,
+): void {
+  try { assertSafeCachePath(destination); } catch { return; }
+  const stat = lstatSync(temporary, { throwIfNoEntry: false });
+  if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()
+    || stat.dev !== identity?.dev || stat.ino !== identity.ino) return;
+  try { unlinkSync(temporary); } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+  }
+}
+
+export function openFileSourceCache(
+  path: string,
+  dependencies: FileSourceCachePublicationDependencies = {},
+): SourceCache & { publish(): void } {
   const destination = resolve(path);
   let document: { version: number; entries: Record<string, SourceCacheEntry> } = { version: CACHE_VERSION, entries: {} };
+  assertSafeCachePath(destination);
   const stat = lstatSync(destination, { throwIfNoEntry: false });
-  if (stat?.isSymbolicLink()) throw new Error('Source cache must not be a symlink');
   if (stat?.isFile()) {
-    const parsed = JSON.parse(readFileSync(destination, 'utf8')) as typeof document;
+    const bytes = readFileSync(destination, 'utf8');
+    assertSafeCachePath(destination);
+    const after = lstatSync(destination);
+    if (!after.isFile() || after.isSymbolicLink() || stat.dev !== after.dev || stat.ino !== after.ino
+      || stat.size !== after.size || stat.mtimeMs !== after.mtimeMs || stat.ctimeMs !== after.ctimeMs) {
+      throw new Error('Source cache changed while reading');
+    }
+    const parsed = JSON.parse(bytes) as typeof document;
     if (parsed.version === CACHE_VERSION && parsed.entries !== null && typeof parsed.entries === 'object') document = parsed;
   }
   return {
     get: (url) => document.entries[url], set: (url, entry) => { document.entries[url] = entry; },
     publish: () => {
-      const parent = lstatSync(dirname(destination));
-      if (!parent.isDirectory() || parent.isSymbolicLink()) throw new Error('Source cache parent must be a real directory');
-      const temporary = `${destination}.${randomUUID()}.tmp`;
-      try { writeFileSync(temporary, `${JSON.stringify(document, null, 2)}\n`, { flag: 'wx' }); renameSync(temporary, destination); }
-      finally { try { unlinkSync(temporary); } catch { /* renamed or absent */ } }
+      assertSafeCachePath(destination);
+      let temporary: string | undefined;
+      let temporaryIdentity: { dev: number; ino: number } | undefined;
+      const createTemporaryId = dependencies.createTemporaryId ?? randomUUID;
+      for (let attempt = 0; attempt < 100; attempt += 1) {
+        const candidate = `${destination}.${createTemporaryId()}.tmp`;
+        try {
+          assertSafeCachePath(destination);
+          writeFileSync(candidate, `${JSON.stringify(document, null, 2)}\n`, { flag: 'wx' });
+          temporary = candidate;
+          const temporaryStat = lstatSync(candidate);
+          temporaryIdentity = { dev: temporaryStat.dev, ino: temporaryStat.ino };
+          break;
+        } catch (error) {
+          if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
+        }
+      }
+      if (temporary === undefined) throw new Error('Could not allocate a unique source cache temporary file');
+      try {
+        dependencies.beforeRename?.();
+        assertSafeCachePath(destination);
+        const temporaryStat = lstatSync(temporary);
+        if (!temporaryStat.isFile() || temporaryStat.isSymbolicLink()
+          || temporaryStat.dev !== temporaryIdentity?.dev || temporaryStat.ino !== temporaryIdentity.ino) {
+          throw new Error('Source cache temporary file changed before publication');
+        }
+        renameSync(temporary, destination);
+        temporary = undefined;
+      } finally {
+        if (temporary !== undefined) removeOwnedCacheTemporary(temporary, temporaryIdentity, destination);
+      }
     },
   };
 }
 
+function assertReportCanBePublished(path: string): void {
+  const destination = resolve(path);
+  let current = dirname(destination);
+  while (true) {
+    const ancestor = lstatSync(current, { throwIfNoEntry: false });
+    if (ancestor?.isSymbolicLink()) throw new Error('Source report path must not traverse a symlink');
+    const parent = dirname(current);
+    if (parent === current) break;
+    current = parent;
+  }
+  const parent = lstatSync(dirname(destination));
+  if (!parent.isDirectory() || parent.isSymbolicLink()) throw new Error('Source report parent must be a real directory');
+  const stat = lstatSync(destination, { throwIfNoEntry: false });
+  if (stat?.isSymbolicLink()) throw new Error('Source report must not be a symlink');
+  if (stat !== undefined && !stat.isFile()) throw new Error('Source report must be a regular file');
+  if (stat?.isFile()) {
+    const parsed: unknown = JSON.parse(readFileSync(destination, 'utf8'));
+    if (parsed === null || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      throw new Error('Existing source report must be a JSON object');
+    }
+  }
+}
+
 export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<number> {
+  argv = restoreNpmRunArgs(argv, ['--input', '--report', '--source-cache']);
   const inputs: string[] = [];
   let cachePath = resolve('content/reports/source-check-cache.json');
+  let reportPath: string | undefined;
   if (argv.length > 0 && !argv.some((argument) => argument.startsWith('--'))) {
     inputs.push(...argv);
-    if (process.env.npm_config_cache !== undefined && process.env.npm_config_cache !== '') {
-      cachePath = resolve(process.env.npm_config_cache);
-    }
   } else {
   for (let index = 0; index < argv.length; index += 1) {
     if (argv[index] === '--input') inputs.push(argv[++index] ?? '');
-    else if (argv[index] === '--cache') cachePath = resolve(argv[++index] ?? '');
+    else if (argv[index] === '--cache' || argv[index] === '--source-cache') cachePath = resolve(argv[++index] ?? '');
+    else if (argv[index] === '--report') reportPath = resolve(argv[++index] ?? '');
     else throw new Error(`Unknown argument: ${argv[index]}`);
   }
   }
   if (inputs.length === 0 || inputs.some((value) => value === '')) throw new Error('--input is required');
+  if (reportPath === '') throw new Error('--report requires a path');
+  if (reportPath !== undefined) assertReportCanBePublished(reportPath);
   const parsed = await readCsvInputs(inputs);
   const validationIssues = parsed.flatMap(({ file, pack }) => validatePack(pack).map((issue) => ({ file, ...issue })));
   if (validationIssues.length > 0) throw new Error(`Source input failed CSV validation: ${JSON.stringify(validationIssues)}`);
   const urls = parsed.flatMap(({ pack }) => pack.rows.map((row) => row.source_url));
-  const cache = fileCache(cachePath);
+  const cache = openFileSourceCache(cachePath);
   const results = await checkSourceUrls(urls, DEFAULT_DEPENDENCIES, { cache });
   cache.publish();
+  if (reportPath !== undefined) publishValidationReport(reportPath, { sources: results }, { placement: 'top-level' });
   process.stdout.write(`${JSON.stringify({ sources: results }, null, 2)}\n`);
   return results.some((result) => !result.ok) ? 1 : 0;
 }

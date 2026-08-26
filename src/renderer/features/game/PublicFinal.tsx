@@ -18,7 +18,7 @@ export function PublicFinal({ view, now }: PublicFinalProps) {
     return <section className="final-waiting" role="status">{t('game.waitingFinalWagers')}</section>;
   }
   if (view.phase === 'final-category' || view.phase === 'final-wagers') {
-    return <section><h1>{t('game.finalCategory')}</h1><p>{view.final.category}</p><Scores view={view} /></section>;
+    return <section className="public-final"><h1>{t('game.finalCategory')}</h1><p>{view.final.category}</p><Scores view={view} /></section>;
   }
   return <section className="public-final">
     <h1>{t('game.final')}</h1>

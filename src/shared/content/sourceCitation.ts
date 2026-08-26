@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { sourceUrlSchema } from './sourceUrl';
 
-export const storedSourceSchema = z.strictObject({
+export const storedSourceV1Schema = z.strictObject({
   format: z.literal('quiz-stage-csv-v1'),
   title: z.string().trim().min(1),
   url: sourceUrlSchema,
@@ -10,6 +10,16 @@ export const storedSourceSchema = z.strictObject({
   translationStatus: z.enum(['untranslated', 'machine', 'reviewed']),
 });
 
+export const storedSourceV2Schema = storedSourceV1Schema.extend({
+  format: z.literal('quiz-stage-csv-v2'),
+  sourceId: z.string().trim().min(1),
+  factualVerifiedAt: z.string().datetime({ offset: true }),
+});
+
+export const storedSourceSchema = z.discriminatedUnion('format', [storedSourceV1Schema, storedSourceV2Schema]);
+
+export type StoredSourceV1 = z.infer<typeof storedSourceV1Schema>;
+export type StoredSourceV2 = z.infer<typeof storedSourceV2Schema>;
 export type StoredSource = z.infer<typeof storedSourceSchema>;
 
 export function parseStoredSource(value: string): StoredSource | null {

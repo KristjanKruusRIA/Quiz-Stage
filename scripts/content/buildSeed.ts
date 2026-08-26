@@ -2,23 +2,25 @@ import { createHash, randomUUID } from 'node:crypto';
 import {
   lstatSync,
   readFileSync,
+  copyFileSync,
   renameSync,
   unlinkSync,
-  writeFileSync,
 } from 'node:fs';
 import { readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, parse, resolve } from 'node:path';
+import { parse, resolve } from 'node:path';
 import { TextDecoder } from 'node:util';
 import { glob } from 'glob';
 import type { DatabaseConnection } from '../../src/main/persistence/database';
 import { openDatabase } from '../../src/main/persistence/database';
 import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { parsePackCsv, type ParsedPack, type ParsedCsvRow } from '../../src/main/content/csvPacks';
-import { publishValidationReport, validateProductionContent } from './validate';
+import { readEvidenceInputs, type ContentEvidence } from './evidence';
+import { publishValidationReport, reviewedIdsFromReport, validateProductionContent } from './validate';
 
-interface SeedBuildArgs {
+export interface SeedBuildArgs {
   inputs: string[];
+  evidence: string[];
   output: string;
   report: string;
 }
@@ -48,6 +50,7 @@ interface BuildSeedResult extends SeedInventory {
   seedSha256: string;
   input: {
     files: ReadonlyArray<{ file: string; rowCount: number; sha256: string }>;
+    evidence: { records: number; sha256: string };
     sha256: string;
   };
 }
@@ -56,12 +59,19 @@ const repositoryRoot = resolve(fileURLToPath(new URL('../../', import.meta.url))
 const defaultInputGlob = resolve(repositoryRoot, 'content/generated/*.en-et.csv');
 const defaultOutputPath = resolve(repositoryRoot, 'resources/content/seed.sqlite');
 const defaultReportPath = resolve(repositoryRoot, 'content/reports/release-inventory.json');
+const migrationAppliedAt = 0;
 
 export async function buildProductionSeed(
-  args: SeedBuildArgs = { inputs: [defaultInputGlob], output: defaultOutputPath, report: defaultReportPath },
+  args: SeedBuildArgs = {
+    inputs: [defaultInputGlob], evidence: [], output: defaultOutputPath, report: defaultReportPath,
+  },
 ): Promise<BuildSeedResult> {
+  const evidenceByClueId = await readEvidenceInputs(args.evidence);
   const inputs = await readProductionInputs(args.inputs);
-  const validation = validateProductionContent(inputs.map((input) => ({ file: input.file, pack: input.pack })), { mode: 'release' });
+  const validation = validateProductionContent(
+    inputs.map((input) => ({ file: input.file, pack: input.pack })),
+    { mode: 'release', evidenceByClueId, reviewedExceptionIds: reviewedIdsFromReport(args.report) },
+  );
   if (validation.blocking) {
     throw new Error('Production validation failed');
   }
@@ -74,7 +84,7 @@ export async function buildProductionSeed(
   try {
     database = openDatabase({ filePath: temporaryOutputPath });
     runMigrations(database);
-    importProductionRows(database, sortRows(inputs));
+    importProductionRows(database, sortRows(inputs), evidenceByClueId);
     verifyIntegrity(database);
     database.pragma('wal_checkpoint(TRUNCATE)');
     database.pragma('journal_mode = DELETE');
@@ -82,9 +92,14 @@ export async function buildProductionSeed(
     database.close();
     database = undefined;
 
-    renameSync(temporaryOutputPath, explicitOutputPath);
+    try {
+      renameSync(temporaryOutputPath, explicitOutputPath);
+    } catch {
+      copyFileSync(temporaryOutputPath, explicitOutputPath);
+    }
     const inventory = readSeedInventory(explicitOutputPath);
-    const inputHash = createSeedInputManifest(inputs);
+    const evidenceManifest = createEvidenceManifest(evidenceByClueId);
+    const inputHash = createSeedInputManifest(inputs, evidenceManifest.sha256);
     const seedSha256 = sha256File(explicitOutputPath);
 
     const report = {
@@ -93,6 +108,7 @@ export async function buildProductionSeed(
       validation,
       input: {
         files: inputs.map((input) => ({ file: input.file, rowCount: input.pack.rows.length, sha256: input.sha256 })),
+        evidence: evidenceManifest,
         sha256: inputHash,
       },
       output: {
@@ -101,13 +117,14 @@ export async function buildProductionSeed(
       },
       inventory,
     };
-    publishValidationReport(args.report, report);
+    publishValidationReport(args.report, report, { placement: 'top-level' });
 
     return {
       ...inventory,
       seedSha256,
       input: {
         files: report.input.files,
+        evidence: report.input.evidence,
         sha256: report.input.sha256,
       },
     };
@@ -147,7 +164,7 @@ function readProductionInputs(patterns: readonly string[]): Promise<readonly See
         files.set(process.platform === 'win32' ? absolute.toLowerCase() : absolute, absolute);
       }
     }
-    const sortedFiles = [...files.values()].sort((left, right) => left.localeCompare(right, 'en'));
+    const sortedFiles = [...files.values()].sort(compareCodeUnits);
     if (sortedFiles.length === 0) throw new Error(`Input glob matched no files: ${patterns.join(', ')}`);
     return sortedFiles.map((file) => {
       const before = lstatSync(file);
@@ -176,29 +193,29 @@ function sortRows(inputs: readonly SeedBuildInput[]): ParsedSeedRow[] {
   return rows.sort((left, right) => {
     const leftPack = left.row.pack_id;
     const rightPack = right.row.pack_id;
-    if (leftPack !== rightPack) return leftPack.localeCompare(rightPack, 'en');
+    if (leftPack !== rightPack) return compareCodeUnits(leftPack, rightPack);
     if (left.row.category_set_id !== right.row.category_set_id) {
-      return left.row.category_set_id.localeCompare(right.row.category_set_id, 'en');
+      return compareCodeUnits(left.row.category_set_id, right.row.category_set_id);
     }
-    if (left.row.round !== right.row.round) return left.row.round.localeCompare(right.row.round, 'en');
+    if (left.row.round !== right.row.round) return compareCodeUnits(left.row.round, right.row.round);
     const leftTier = Number(left.row.tier);
     const rightTier = Number(right.row.tier);
     if (leftTier !== rightTier) return leftTier - rightTier;
-    return left.row.clue_id.localeCompare(right.row.clue_id, 'en');
+    return compareCodeUnits(left.row.clue_id, right.row.clue_id);
   });
 }
 
 function runMigrations(database: DatabaseConnection): void {
   const migrationDirectory = resolve(repositoryRoot, 'src/main/persistence/sql');
   const migrationFiles = readdirSync(migrationDirectory)
-    .filter((fileName) => /^\\d+_.+\\.sql$/.test(fileName))
-    .sort((left, right) => left.localeCompare(right, 'en'));
+    .filter((fileName) => /^\d+_.+\.sql$/.test(fileName))
+    .sort(compareCodeUnits);
   for (const fileName of migrationFiles) {
     const version = Number.parseInt(fileName.slice(0, fileName.indexOf('_')), 10);
     const migrationSql = readFileSync(resolve(migrationDirectory, fileName), 'utf8');
     const applyMigration = database.transaction(() => {
       database.exec(migrationSql);
-      database.prepare('INSERT INTO schema_version (version, applied_at) VALUES (?, ?)').run(version, Date.now());
+      database.prepare('INSERT INTO schema_version (version, applied_at) VALUES (?, ?)').run(version, migrationAppliedAt);
     });
     applyMigration();
   }
@@ -218,7 +235,16 @@ function stableJson(value: { en: string; et?: string }): string {
   return JSON.stringify(value.et === undefined ? { en: value.en } : { en: value.en, et: value.et });
 }
 
-function importProductionRows(database: DatabaseConnection, rows: readonly ParsedSeedRow[]): void {
+function translationStatus(value: string): 'untranslated' | 'machine' | 'reviewed' {
+  if (value === 'untranslated' || value === 'machine' || value === 'reviewed') return value;
+  throw new Error(`Unsupported translation status: ${value}`);
+}
+
+function importProductionRows(
+  database: DatabaseConnection,
+  rows: readonly ParsedSeedRow[],
+  evidenceByClueId: ReadonlyMap<string, ContentEvidence>,
+): void {
   const insertPack = database.prepare(`
     INSERT INTO content_packs (id, name, version, source, enabled)
     VALUES (?, ?, ?, ?, ?)
@@ -236,9 +262,15 @@ function importProductionRows(database: DatabaseConnection, rows: readonly Parse
 
   const seenPacks = new Set<string>();
   const seenCategorySets = new Set<string>();
+  const consumedEvidence = new Set<string>();
 
   const importAll = database.transaction(() => {
     for (const { row } of rows) {
+      const evidence = evidenceByClueId.get(row.clue_id);
+      if (evidence === undefined || consumedEvidence.has(row.clue_id)) {
+        throw new Error(`Validated evidence binding is missing or reused for clue ${row.clue_id}`);
+      }
+      consumedEvidence.add(row.clue_id);
       if (!seenPacks.has(row.pack_id)) {
         insertPack.run(
           row.pack_id,
@@ -272,15 +304,20 @@ function importProductionRows(database: DatabaseConnection, rows: readonly Parse
         stableJson({ en: row.explanation_en, et: row.explanation_et }),
         encodeAcceptedResponses(row),
         serializeStoredSource({
-          format: 'quiz-stage-csv-v1',
-          title: row.source_title,
-          url: row.source_url,
-          license: row.source_license,
-          retrievedAt: row.source_retrieved_at,
-          translationStatus: row.translation_status,
+          format: 'quiz-stage-csv-v2',
+          title: evidence.supportingSource.title,
+          url: evidence.supportingSource.url,
+          license: evidence.supportingSource.license,
+          retrievedAt: evidence.supportingSource.retrievedAt,
+          translationStatus: translationStatus(row.translation_status),
+          sourceId: evidence.supportingSource.sourceId,
+          factualVerifiedAt: evidence.factualReview.reviewedAt,
         }),
         Number(row.enabled === 'true'),
       );
+    }
+    if (consumedEvidence.size !== evidenceByClueId.size) {
+      throw new Error(`Validated evidence was not consumed one-to-one: ${consumedEvidence.size}/${evidenceByClueId.size}`);
     }
   });
   importAll();
@@ -318,12 +355,34 @@ function readSeedInventory(seedPath: string): SeedInventory {
   }
 }
 
-function createSeedInputManifest(inputs: readonly SeedBuildInput[]): string {
+function createEvidenceManifest(evidenceByClueId: ReadonlyMap<string, ContentEvidence>): {
+  records: number;
+  sha256: string;
+} {
+  const hasher = createHash('sha256');
+  const entries = [...evidenceByClueId].sort(([left], [right]) => compareCodeUnits(left, right));
+  for (const [clueId, evidence] of entries) {
+    hasher.update(clueId);
+    hasher.update('\0');
+    hasher.update(JSON.stringify(evidence));
+    hasher.update('\n');
+  }
+  return { records: entries.length, sha256: hasher.digest('hex') };
+}
+
+function createSeedInputManifest(inputs: readonly SeedBuildInput[], evidenceSha256: string): string {
   const hasher = createHash('sha256');
   for (const input of inputs) {
     hasher.update(input.sha256);
   }
+  hasher.update(evidenceSha256);
   return hasher.digest('hex');
+}
+
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
 }
 
 function sha256File(path: string): string {
@@ -332,6 +391,7 @@ function sha256File(path: string): string {
 
 function parseCli(argv: readonly string[]): SeedBuildArgs {
   const inputs: string[] = [];
+  const evidence: string[] = [];
   let output = defaultOutputPath;
   let report = defaultReportPath;
   for (let index = 0; index < argv.length; index += 1) {
@@ -340,6 +400,11 @@ function parseCli(argv: readonly string[]): SeedBuildArgs {
       const next = argv[index + 1];
       if (next === undefined || next === '') throw new Error('--input is required');
       inputs.push(next);
+      index += 1;
+    } else if (argument === '--evidence') {
+      const next = argv[index + 1];
+      if (next === undefined || next === '') throw new Error('--evidence is required');
+      evidence.push(next);
       index += 1;
     } else if (argument === '--output') {
       const next = argv[index + 1];
@@ -355,7 +420,7 @@ function parseCli(argv: readonly string[]): SeedBuildArgs {
       throw new Error(`Unknown argument: ${argument}`);
     }
   }
-  return { inputs: inputs.length === 0 ? [defaultInputGlob] : inputs, output, report };
+  return { inputs: inputs.length === 0 ? [defaultInputGlob] : inputs, evidence, output, report };
 }
 
 if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {
@@ -367,4 +432,3 @@ if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(fileUR
     process.exitCode = 1;
   });
 }
-

@@ -30,6 +30,10 @@ interface OfflineRendererOptions {
 
 const REQUEST_FILTER = { urls: ['<all_urls>'] };
 
+export function resolveDevRendererRoot(_appPath: string, workingDirectory: string): string {
+  return path.join(workingDirectory, 'src', 'renderer');
+}
+
 function viteOrigin(value: string | undefined): URL | null {
   if (value === undefined) return null;
   try {
@@ -73,12 +77,22 @@ function isOwnedFile(url: URL, rendererRoot: string): boolean {
 
 function isMediaRequest(url: URL): boolean {
   return url.protocol === 'quiz-stage-media:'
-    && url.hostname === 'asset'
-    && /^\/[a-z-]+$/.test(url.pathname)
+    && ((url.hostname === 'asset' && /^\/[a-z-]+$/.test(url.pathname))
+      || (url.hostname === 'branding' && /^\/(?:logo|stage-background)$/.test(url.pathname)))
     && url.username === ''
     && url.password === ''
     && url.search === ''
     && url.hash === '';
+}
+
+function isAppRequest(url: URL, requestUrl: string): boolean {
+  return url.protocol === 'app:'
+    && url.hostname === 'renderer'
+    && url.username === ''
+    && url.password === ''
+    && url.search === ''
+    && url.hash === ''
+    && !/%(?:2e|2f|5c)/i.test(requestUrl);
 }
 
 function isViteRequest(url: URL, origin: URL | null): boolean {
@@ -103,6 +117,7 @@ export function registerOfflineRendererPolicy(session: SessionPort, options: Off
     try {
       const url = new URL(details.url);
       allowed = isOwnedFile(url, rendererRoot)
+        || isAppRequest(url, details.url)
         || isMediaRequest(url)
         || isViteRequest(url, devOrigin);
     } catch {

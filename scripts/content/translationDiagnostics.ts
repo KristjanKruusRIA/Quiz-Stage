@@ -1,4 +1,4 @@
-import { type ParsedCsvRow } from '../../src/main/content/csvPacks';
+import { type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { publishValidationReport } from './validate';
 import { readCsvInputs } from './readCsv';
 
@@ -28,6 +28,11 @@ export interface TranslationDiagnosticReport {
   exceptions: TranslationDiagnosticException[];
 }
 
+export interface TranslationDiagnosticInput {
+  file: string;
+  pack: ParsedPack;
+}
+
 interface CliOptions {
   input: string[];
   report: string;
@@ -47,6 +52,15 @@ const FIELD_PAIRS = [
   { en: 'response_en', et: 'response_et' },
   { en: 'accepted_variants_en', et: 'accepted_variants_et' },
   { en: 'explanation_en', et: 'explanation_et' },
+] as const;
+
+const QUALIFIER_OPPOSITES = [
+  { en: ['north'], et: ['põhi', 'põhjas'], oppositeEn: ['south'], oppositeEt: ['lõuna', 'lõunas'] },
+  { en: ['east'], et: ['ida', 'idas'], oppositeEn: ['west'], oppositeEt: ['lääs', 'läänes'] },
+  { en: ['before'], et: ['enne'], oppositeEn: ['after'], oppositeEt: ['pärast'] },
+  { en: ['first'], et: ['esimene'], oppositeEn: ['last'], oppositeEt: ['viimane'] },
+  { en: ['more'], et: ['rohkem'], oppositeEn: ['less'], oppositeEt: ['vähem'] },
+  { en: ['largest'], et: ['suurim'], oppositeEn: ['smallest'], oppositeEt: ['väikseim'] },
 ] as const;
 
 function parseCli(argv: readonly string[]): CliOptions {
@@ -81,8 +95,14 @@ function normalizeText(value: string): string {
   return value.normalize('NFKC').trim().toLocaleLowerCase('en').replace(/\s+/g, ' ');
 }
 
+function compareCodeUnits(left: string, right: string): number {
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+}
+
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml))?/giu) ?? [];
+  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
@@ -102,7 +122,20 @@ function canonicalNumbers(value: string): string[] {
 }
 
 function differsNumerically(left: string, right: string): boolean {
-  return canonicalNumbers(left).join('|') !== canonicalNumbers(right).join('|');
+  const leftNumbers = canonicalNumbers(left);
+  const rightNumbers = canonicalNumbers(right);
+  const leftNormalized = normalizeText(left);
+  const rightNormalized = normalizeText(right);
+  if (/\bgenesis\b/u.test(leftNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(rightNormalized)) {
+    const ordinal = rightNumbers.indexOf('1');
+    if (ordinal >= 0) rightNumbers.splice(ordinal, 1);
+  } else if (/\bgenesis\b/u.test(rightNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(leftNormalized)) {
+    const ordinal = leftNumbers.indexOf('1');
+    if (ordinal >= 0) leftNumbers.splice(ordinal, 1);
+  }
+  return leftNumbers.join('|') !== rightNumbers.join('|');
 }
 
 function splitEscapedItems(value: string): string[] {
@@ -131,9 +164,20 @@ function isStableIdentifier(value: string): boolean {
   const trimmed = value.trim();
   if (trimmed === '') return false;
   return /^https?:\/\//.test(trimmed)
-    || /^[QqPp]\d+$/.test(trimmed)
-    || /^[A-Z]{2,}$/.test(trimmed)
-    || /\d/.test(trimmed);
+    || /^[QqPp]\d+$/.test(trimmed);
+}
+
+function stableIdentifierTokens(value: string): string[] {
+  const urls = value.match(/https?:\/\/[^\s]+/giu) ?? [];
+  const entityIds = value.match(/\b[QqPp]\d+\b/g) ?? [];
+  return [...new Set([...urls, ...entityIds.map(normalizeText)])].sort(compareCodeUnits);
+}
+
+function hasConflictingStableIdentifiers(left: string, right: string): boolean {
+  const leftTokens = stableIdentifierTokens(left);
+  const rightTokens = stableIdentifierTokens(right);
+  return leftTokens.length !== rightTokens.length
+    || leftTokens.some((token, index) => token !== rightTokens[index]);
 }
 
 function extractProperNouns(value: string): string[] {
@@ -148,6 +192,22 @@ function isUnchangedCandidate(english: string, et: string): boolean {
   if (normalizedEnglish === '' || normalizedEnglish !== normalizedEstonian) return false;
   if (normalizedEnglish.split(' ').length <= 1) return false;
   return !isStableIdentifier(english);
+}
+
+function containsAnyToken(value: string, candidates: readonly string[]): boolean {
+  const tokens = new Set(value.normalize('NFKC').toLocaleLowerCase('en').match(/\p{L}+/gu) ?? []);
+  return candidates.some((candidate) => tokens.has(candidate));
+}
+
+function hasQualifierDrift(english: string, estonian: string): boolean {
+  return QUALIFIER_OPPOSITES.some(({ en, et, oppositeEn, oppositeEt }) => {
+    const englishFirst = containsAnyToken(english, en);
+    const englishSecond = containsAnyToken(english, oppositeEn);
+    const estonianFirst = containsAnyToken(estonian, et);
+    const estonianSecond = containsAnyToken(estonian, oppositeEt);
+    return (englishFirst && !englishSecond && estonianSecond && !estonianFirst)
+      || (englishSecond && !englishFirst && estonianFirst && !estonianSecond);
+  });
 }
 
 function buildIssue(base: {
@@ -169,6 +229,23 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
     issues.push(buildIssue(
       { file, row: item.row, clueId: item.clueId, field: item.field },
       'NUMBER_DRIFT', `Numeric values differ for ${item.field}`, 'error',
+    ));
+  }
+
+  if (item.field === 'response_en'
+    && (differsNumerically(item.en, item.et)
+      || hasConflictingStableIdentifiers(item.en, item.et))) {
+    issues.push(buildIssue(
+      { file, row: item.row, clueId: item.clueId, field: item.field },
+      'ANSWER_DRIFT', 'Canonical answers differ between English and Estonian', 'error',
+    ));
+  }
+
+  if (['clue_en', 'response_en', 'accepted_variants_en', 'explanation_en'].includes(item.field)
+    && hasQualifierDrift(item.en, item.et)) {
+    issues.push(buildIssue(
+      { file, row: item.row, clueId: item.clueId, field: item.field },
+      'QUALIFIER_DRIFT', `Opposite qualifier detected for ${item.field}`, 'error',
     ));
   }
 
@@ -209,12 +286,29 @@ function diagnosePair(item: TranslationPair, file: string, issues: TranslationDi
   }
 }
 
+function diagnoseVariantDrift(row: ParsedCsvRow, file: string, issues: TranslationDiagnosticIssue[]): void {
+  const enItems = row.accepted_variants_en === '' ? [] : splitEscapedItems(row.accepted_variants_en);
+  const etItems = row.accepted_variants_et === '' ? [] : splitEscapedItems(row.accepted_variants_et);
+  const mismatched = enItems.length !== etItems.length
+    || enItems.some((english, index) => {
+      const estonian = etItems[index] ?? '';
+      return differsNumerically(english, estonian)
+        || hasConflictingStableIdentifiers(english, estonian);
+    });
+  if (!mismatched) return;
+  issues.push(buildIssue(
+    { file, row: row.rowNumber, clueId: row.clue_id, field: 'accepted_variants_en' },
+    'VARIANT_DRIFT', 'Accepted variants differ between English and Estonian', 'error',
+  ));
+}
+
 function extractPairs(row: ParsedCsvRow): TranslationPair[] {
   const items: TranslationPair[] = [];
   for (const field of FIELD_PAIRS) {
     const english = row[field.en];
     const estonian = row[field.et];
     if (field.en === 'accepted_variants_en') {
+      if (english === '' && estonian === '') continue;
       const enItems = splitEscapedItems(english);
       const etItems = splitEscapedItems(estonian);
       const count = Math.max(enItems.length, etItems.length, 1);
@@ -261,14 +355,11 @@ function stableIssueSort(left: TranslationDiagnosticIssue, right: TranslationDia
   return left.file.localeCompare(right.file, 'en')
     || left.row - right.row
     || left.field.localeCompare(right.field, 'en')
-    || left.code.localeCompare(right.code, 'en');
+    || left.code.localeCompare(right.code, 'en')
+    || compareCodeUnits(left.clueId, right.clueId);
 }
 
-export async function runTranslationDiagnostics(
-  argv: readonly string[] = process.argv.slice(2),
-): Promise<number> {
-  const options = parseCli(argv);
-  const inputs = await readCsvInputs(options.input);
+export function diagnoseTranslations(inputs: readonly TranslationDiagnosticInput[]): TranslationDiagnosticReport {
   const issues: TranslationDiagnosticIssue[] = [];
 
   for (const { file, pack } of inputs) {
@@ -276,17 +367,26 @@ export async function runTranslationDiagnostics(
       for (const pair of extractPairs(row)) {
         diagnosePair(pair, file, issues);
       }
+      diagnoseVariantDrift(row, file, issues);
     }
   }
 
-  const report: TranslationDiagnosticReport = {
+  return {
     blocking: issues.some((issue) => issue.severity === 'error'),
     checkedRows: inputs.reduce((count, input) => count + input.pack.rows.length, 0),
     issues: issues.sort(stableIssueSort),
     exceptions: buildExceptions(issues),
   };
+}
 
-  publishValidationReport(options.report, { translation: report });
+export async function runTranslationDiagnostics(
+  argv: readonly string[] = process.argv.slice(2),
+): Promise<number> {
+  const options = parseCli(argv);
+  const inputs = await readCsvInputs(options.input);
+  const report = diagnoseTranslations(inputs);
+
+  publishValidationReport(options.report, { translation: report }, { placement: 'top-level' });
   return report.blocking ? 1 : 0;
 }
 

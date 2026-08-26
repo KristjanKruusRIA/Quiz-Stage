@@ -31,9 +31,9 @@ describe('product gate harness', () => {
   });
 
   it.each([
-    ['win32', 'x64', 'C:\\repo\\out\\quiz-stage-desktop-game-win32-x64\\quiz-stage-desktop-game.exe', 'C:\\repo\\out\\quiz-stage-desktop-game-win32-x64\\resources\\app.asar'],
-    ['linux', 'arm64', '/repo/out/quiz-stage-desktop-game-linux-arm64/quiz-stage-desktop-game', '/repo/out/quiz-stage-desktop-game-linux-arm64/resources/app.asar'],
-    ['darwin', 'x64', '/repo/out/quiz-stage-desktop-game-darwin-x64/quiz-stage-desktop-game.app/Contents/MacOS/quiz-stage-desktop-game', '/repo/out/quiz-stage-desktop-game-darwin-x64/quiz-stage-desktop-game.app/Contents/Resources/app.asar'],
+    ['win32', 'x64', 'C:\\repo\\out\\Quiz Stage-win32-x64\\Quiz Stage.exe', 'C:\\repo\\out\\Quiz Stage-win32-x64\\resources\\app.asar'],
+    ['linux', 'arm64', '/repo/out/Quiz Stage-linux-arm64/Quiz Stage', '/repo/out/Quiz Stage-linux-arm64/resources/app.asar'],
+    ['darwin', 'x64', '/repo/out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/MacOS/Quiz Stage', '/repo/out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/Resources/app.asar'],
   ] as const)('resolves packaged executable and application archive on %s', (platform, arch, executable, resources) => {
     const root = platform === 'win32' ? 'C:\\repo' : '/repo';
     expect(packagedExecutablePath(root, platform, arch)).toBe(executable);

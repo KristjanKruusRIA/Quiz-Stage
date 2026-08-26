@@ -13,15 +13,18 @@ export const AUDIO_ASSET_KEYS = [
 
 export type AudioAssetKey = typeof AUDIO_ASSET_KEYS[number];
 export type AudioChannel = 'music' | 'effects' | 'crowd';
+export const BRANDING_ASSET_KEYS = ['logo', 'stage-background'] as const;
+export type BrandingAssetKey = typeof BRANDING_ASSET_KEYS[number];
+export const brandingAssetKeySchema = z.enum(BRANDING_ASSET_KEYS);
 export const AUDIO_ASSET_SPEC = {
-  opening: { file: 'audio/opening.wav', durationMs: 2_500, channel: 'music' },
-  'round-transition': { file: 'audio/round-transition.wav', durationMs: 1_800, channel: 'music' },
-  'daily-double': { file: 'audio/daily-double.wav', durationMs: 900, channel: 'effects' },
-  'final-tension': { file: 'audio/final-tension.wav', durationMs: 5_000, channel: 'music' },
-  'correct-applause': { file: 'audio/correct-applause.wav', durationMs: 1_800, channel: 'crowd' },
-  'incorrect-crowd': { file: 'audio/incorrect-crowd.wav', durationMs: 1_400, channel: 'crowd' },
-  'time-expired': { file: 'audio/time-expired.wav', durationMs: 600, channel: 'effects' },
-  winner: { file: 'audio/winner.wav', durationMs: 2_500, channel: 'effects' },
+  opening: { file: 'audio/opening.wav', durationMs: 8_022, channel: 'music' },
+  'round-transition': { file: 'audio/round-transition.wav', durationMs: 1_995, channel: 'music' },
+  'daily-double': { file: 'audio/daily-double.wav', durationMs: 3_833, channel: 'effects' },
+  'final-tension': { file: 'audio/final-tension.wav', durationMs: 59_726, channel: 'music' },
+  'correct-applause': { file: 'audio/correct-applause.wav', durationMs: 4_310, channel: 'crowd' },
+  'incorrect-crowd': { file: 'audio/incorrect-crowd.wav', durationMs: 2_113, channel: 'crowd' },
+  'time-expired': { file: 'audio/time-expired.wav', durationMs: 1_530, channel: 'effects' },
+  winner: { file: 'audio/winner.wav', durationMs: 3_381, channel: 'effects' },
 } as const satisfies Record<AudioAssetKey, { file: `audio/${string}.wav`; durationMs: number; channel: AudioChannel }>;
 export const audioAssetKeySchema = z.enum(AUDIO_ASSET_KEYS);
 export const mediaWarningReasonSchema = z.enum(['invalid-extension', 'unsafe-file', 'unreadable', 'too-large', 'malformed-wav', 'missing-bundled', 'invalid-bundled']);
@@ -59,17 +62,67 @@ export const defaultAudioSettings: AudioSettings = Object.freeze({
   muted: false,
 });
 
+const MEDIA_LICENSE_URLS = {
+  'CC0-1.0': 'https://creativecommons.org/publicdomain/zero/1.0/',
+  'CC-BY-4.0': 'https://creativecommons.org/licenses/by/4.0/',
+} as const;
+
+const mediaAudioSourceSchema = z.strictObject({
+  title: z.string().min(1),
+  creator: z.string().min(1),
+  sourcePage: z.string().regex(/^https:\/\/freesound\.org\/people\/[A-Za-z0-9._-]+\/sounds\/\d+\/$/),
+  downloadUrl: z.string().regex(/^https:\/\/cdn\.freesound\.org\/previews\/\d+\/\d+_[A-Za-z0-9]+-hq\.mp3$/),
+  license: z.enum(['CC0-1.0', 'CC-BY-4.0']),
+  licenseUrl: z.string().regex(/^https:\/\/creativecommons\.org\/(?:publicdomain\/zero\/1\.0|licenses\/by\/4\.0)\/$/),
+  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+  modifications: z.literal('Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized.'),
+}).superRefine((source, context) => {
+  if (source.licenseUrl !== MEDIA_LICENSE_URLS[source.license]) {
+    context.addIssue({ code: 'custom', path: ['licenseUrl'], message: 'License URL does not match the license identifier' });
+  }
+
+  const sourcePageSoundId = source.sourcePage.match(/\/sounds\/(\d+)\/$/)?.[1];
+  const downloadSoundId = source.downloadUrl.match(/\/previews\/\d+\/(\d+)_/)?.[1];
+  if (sourcePageSoundId !== downloadSoundId) {
+    context.addIssue({ code: 'custom', path: ['downloadUrl'], message: 'Preview URL does not match the source page sound' });
+  }
+});
+
 export const mediaManifestEntrySchema = z.strictObject({
   file: z.string().regex(/^audio\/[a-z-]+\.wav$/),
   mime: z.literal('audio/wav'),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
   durationMs: z.number().int().positive(),
   channel: z.enum(['music', 'effects', 'crowd']),
+  source: mediaAudioSourceSchema,
+});
+
+const mediaBrandingPngSchema = z.strictObject({
+  file: z.string().regex(/^[A-Za-z0-9._-]+\.png$/),
+  mime: z.literal('image/png'),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+});
+
+const mediaBrandingIconSchema = z.strictObject({
+  file: z.literal('icon.ico'),
+  mime: z.literal('image/vnd.microsoft.icon'),
+  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+});
+
+export const mediaBrandingSchema = z.strictObject({
+  appName: z.literal('Quiz Stage'),
+  logo: mediaBrandingPngSchema,
+  stageBackground: mediaBrandingPngSchema,
+  iconSource: mediaBrandingPngSchema,
+  icon: mediaBrandingIconSchema,
 });
 
 export const mediaManifestSchema = z.strictObject({
   version: z.literal(1),
   assets: z.record(audioAssetKeySchema, mediaManifestEntrySchema),
+  branding: mediaBrandingSchema.optional(),
 }).superRefine((manifest, context) => {
   const keys = Object.keys(manifest.assets);
   if (keys.length !== AUDIO_ASSET_KEYS.length || AUDIO_ASSET_KEYS.some((key) => !(key in manifest.assets))) {
@@ -108,6 +161,10 @@ export function effectiveAudioGain(settings: AudioSettings, channel: AudioChanne
 
 export function mediaAssetUrl(key: AudioAssetKey): string {
   return `quiz-stage-media://asset/${key}`;
+}
+
+export function brandingAssetUrl(key: BrandingAssetKey): string {
+  return `quiz-stage-media://branding/${key}`;
 }
 
 export function audioChannelForAsset(key: AudioAssetKey): AudioChannel {

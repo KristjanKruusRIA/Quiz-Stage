@@ -3,6 +3,7 @@ import type { DisplayMode, GameConfig } from '../../shared/game/types';
 import {
   audioSettingsSchema,
   contentAvailabilitySchema,
+  gameCommandSchema,
   gameConfigSchema,
   hostGameViewSchema,
   hasResumableMatchSchema,
@@ -11,10 +12,11 @@ import {
   setupOptionsSchema,
   type HostStateUpdate,
   type PublicStateUpdate,
+  type ValidatedGameCommand,
 } from '../../shared/ipc/contracts';
 import { audioSettingsInputSchema, mediaWarningSchema, type MediaWarning } from '../../shared/media/contracts';
 import { IPC_CHANNELS } from './channels';
-import { validateHostSender } from './validateSender';
+import { assertIpcPayloadSize, validateHostSender } from './validateSender';
 import type { AudioSettings } from '../../shared/media/contracts';
 import type { CsvPackWorkflow } from '../content/csvPacks';
 import type { ContentEditorService } from '../content/contentEditorService';
@@ -43,8 +45,8 @@ import { appearanceSettingsSchema, type AppearanceSettings } from '../../shared/
 export interface IpcMainPort {
   handle(channel: string, handler: (event: { sender: { id: number } }, value: unknown) => unknown): void;
   removeHandler(channel: string): void;
-  on(channel: string, listener: (event: { sender: { id: number } }) => void): void;
-  removeListener(channel: string, listener: (event: { sender: { id: number } }) => void): void;
+  on(channel: string, listener: (event: { sender: { id: number } }, value?: unknown) => void): void;
+  removeListener(channel: string, listener: (event: { sender: { id: number } }, value?: unknown) => void): void;
 }
 
 interface CoordinatorPort {
@@ -100,6 +102,7 @@ interface RegisterIpcOptions {
   };
   appearanceSettings?: { read(): AppearanceSettings; save(input: unknown): AppearanceSettings };
   mediaWarnings?: { activeWarnings(): MediaWarning[] };
+  diagnostics?: { recordGameCommand(command: ValidatedGameCommand): void };
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
@@ -127,12 +130,22 @@ export function registerIpc({
   audioSettings,
   appearanceSettings,
   mediaWarnings,
+  diagnostics,
   csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
   getWindows,
 }: RegisterIpcOptions): () => void {
   let activeHostId: number | null = null;
+  const handle = (
+    channel: string,
+    handler: (event: { sender: { id: number } }, input: unknown) => unknown,
+  ) => {
+    ipcMain.handle(channel, async (event, input) => {
+      assertIpcPayloadSize(input);
+      return handler(event, input);
+    });
+  };
   const requireHost = (senderId: number) => {
     const hostWindow = getWindows().hostWindow;
     if (hostWindow === null || hostWindow.webContents.isDestroyed()) throw new Error('HOST_SENDER_REQUIRED');
@@ -145,29 +158,31 @@ export function registerIpc({
     if ([hostWindow, publicWindow].some((window) => window !== null && !window.webContents.isDestroyed() && window.webContents.id === senderId)) return;
     throw new Error('CURRENT_SURFACE_REQUIRED');
   };
-  ipcMain.handle(IPC_CHANNELS.dispatch, async (event, command) => {
+  handle(IPC_CHANNELS.dispatch, async (event, command) => {
     requireHost(event.sender.id);
-    return coordinator.dispatch(command);
+    const parsedCommand = gameCommandSchema.parse(command);
+    diagnostics?.recordGameCommand(parsedCommand);
+    return coordinator.dispatch(parsedCommand);
   });
 
   const audioChannels: string[] = [];
   if (audioSettings !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.audioSettingsGet, async (event, input) => {
+    handle(IPC_CHANNELS.audioSettingsGet, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       return audioSettingsSchema.parse(audioSettings.read());
     });
-    ipcMain.handle(IPC_CHANNELS.audioSettingsUpdate, async (event, input) => {
+    handle(IPC_CHANNELS.audioSettingsUpdate, async (event, input) => {
       requireHost(event.sender.id);
       return audioSettingsSchema.parse(audioSettings.save(audioSettingsInputSchema.parse(input)));
     });
     audioChannels.push(IPC_CHANNELS.audioSettingsGet, IPC_CHANNELS.audioSettingsUpdate);
   }
   if (appearanceSettings !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.appearanceSettingsGet, async (event, input) => {
+    handle(IPC_CHANNELS.appearanceSettingsGet, async (event, input) => {
       requireCurrentSurface(event.sender.id); noArgsSchema.parse(input); return appearanceSettingsSchema.parse(appearanceSettings.read());
     });
-    ipcMain.handle(IPC_CHANNELS.appearanceSettingsUpdate, async (event, input) => {
+    handle(IPC_CHANNELS.appearanceSettingsUpdate, async (event, input) => {
       requireHost(event.sender.id);
       const saved = appearanceSettingsSchema.parse(appearanceSettings.save(appearanceSettingsSchema.parse(input)));
       for (const surface of ['hostWindow', 'publicWindow'] as const) {
@@ -181,7 +196,7 @@ export function registerIpc({
     audioChannels.push(IPC_CHANNELS.appearanceSettingsGet, IPC_CHANNELS.appearanceSettingsUpdate);
   }
   if (mediaWarnings !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.mediaWarningsGet, async (event, input) => {
+    handle(IPC_CHANNELS.mediaWarningsGet, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       return mediaWarnings.activeWarnings().map((warning) => mediaWarningSchema.parse(warning));
@@ -191,19 +206,20 @@ export function registerIpc({
 
   const setupChannels: string[] = [];
   if (setup !== undefined && getAutomaticDisplayMode !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.startMatch, async (event, input) => {
+    handle(IPC_CHANNELS.startMatch, async (event, input) => {
       requireHost(event.sender.id);
       const config = gameConfigSchema.parse(input);
       const view = hostGameViewSchema.parse(await setup.startMatch(config));
       applyDisplayMode?.(config.displayMode);
       return view;
     });
-    ipcMain.handle(IPC_CHANNELS.contentAvailability, async (event, input) => {
+    handle(IPC_CHANNELS.contentAvailability, async (event, input) => {
       requireHost(event.sender.id);
       return contentAvailabilitySchema.parse(await setup.checkContentAvailability(gameConfigSchema.parse(input)));
     });
-    ipcMain.handle(IPC_CHANNELS.setupOptions, async (event) => {
+    handle(IPC_CHANNELS.setupOptions, async (event, input) => {
       requireHost(event.sender.id);
+      noArgsSchema.parse(input);
       return setupOptionsSchema.parse(await setup.getSetupOptions(getAutomaticDisplayMode()));
     });
     setupChannels.push(IPC_CHANNELS.startMatch, IPC_CHANNELS.contentAvailability, IPC_CHANNELS.setupOptions);
@@ -211,12 +227,12 @@ export function registerIpc({
 
   const matchAccessChannels: string[] = [];
   if (matchAccess !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.hasResumableMatch, async (event, input) => {
+    handle(IPC_CHANNELS.hasResumableMatch, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       return hasResumableMatchSchema.parse(await matchAccess.hasResumableMatch());
     });
-    ipcMain.handle(IPC_CHANNELS.resumeMatch, async (event, input) => {
+    handle(IPC_CHANNELS.resumeMatch, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       const value = await matchAccess.resumeMatch();
@@ -225,7 +241,7 @@ export function registerIpc({
       applyDisplayMode?.(view.state.config.displayMode);
       return view;
     });
-    ipcMain.handle(IPC_CHANNELS.listHistory, async (event, input) => {
+    handle(IPC_CHANNELS.listHistory, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       return matchHistorySchema.parse(await matchAccess.listHistory());
@@ -239,7 +255,7 @@ export function registerIpc({
 
   const csvChannels: string[] = [];
   if (contentCsv !== undefined && csvDialogs !== undefined) {
-    ipcMain.handle(IPC_CHANNELS.contentImportPreview, async (event, input) => {
+    handle(IPC_CHANNELS.contentImportPreview, async (event, input) => {
       requireHost(event.sender.id);
       noArgsSchema.parse(input);
       const path = await csvDialogs.chooseImportFile();
@@ -247,16 +263,16 @@ export function registerIpc({
       if (path === null) return contentImportPreviewSchema.parse({ cancelled: true as const });
       return contentImportPreviewSchema.parse({ cancelled: false as const, ...contentCsv.previewFile(path, event.sender.id) });
     });
-    ipcMain.handle(IPC_CHANNELS.contentImportCommit, async (event, input) => {
+    handle(IPC_CHANNELS.contentImportCommit, async (event, input) => {
       requireHost(event.sender.id);
       return contentImportResultSchema.parse(contentCsv.importPreview(contentImportCommitRequestSchema.parse(input), event.sender.id));
     });
-    ipcMain.handle(IPC_CHANNELS.contentImportDiscard, async (event, input) => {
+    handle(IPC_CHANNELS.contentImportDiscard, async (event, input) => {
       requireHost(event.sender.id);
       const { previewId } = contentImportDiscardRequestSchema.parse(input);
       return z.strictObject({ discarded: z.boolean() }).parse({ discarded: contentCsv.discardPreview?.(previewId, event.sender.id) ?? false });
     });
-    ipcMain.handle(IPC_CHANNELS.contentExport, async (event, input) => {
+    handle(IPC_CHANNELS.contentExport, async (event, input) => {
       requireHost(event.sender.id);
       const { packId } = contentExportRequestSchema.parse(input);
       const path = await csvDialogs.chooseExportFile(packId);
@@ -277,7 +293,7 @@ export function registerIpc({
     const resolvedSchema = z.strictObject({ resolved: z.boolean() });
     const deletedSchema = z.strictObject({ packId: z.string().min(1) });
     const addEditorHandler = (channel: string, handler: (input: unknown) => unknown) => {
-      ipcMain.handle(channel, async (event, input) => {
+      handle(channel, async (event, input) => {
         requireHost(event.sender.id);
         return handler(input);
       });
@@ -330,7 +346,9 @@ export function registerIpc({
     }
   });
 
-  const bootstrapHost = (event: { sender: { id: number } }) => {
+  const bootstrapHost = (event: { sender: { id: number } }, input: unknown) => {
+    assertIpcPayloadSize(input);
+    noArgsSchema.parse(input);
     const hostWindow = getWindows().hostWindow;
     if (
       hostWindow === null
@@ -341,7 +359,9 @@ export function registerIpc({
     const update = coordinator.getHostStateUpdate();
     if (update !== null) hostWindow.webContents.send(IPC_CHANNELS.hostState, update);
   };
-  const bootstrapPublic = (event: { sender: { id: number } }) => {
+  const bootstrapPublic = (event: { sender: { id: number } }, input: unknown) => {
+    assertIpcPayloadSize(input);
+    noArgsSchema.parse(input);
     const publicWindow = getWindows().publicWindow;
     if (
       publicWindow === null

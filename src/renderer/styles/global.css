@@ -6,7 +6,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   min-height: 100dvh;
-  background: var(--color-canvas);
+  background-color: var(--color-canvas);
+  background-image: linear-gradient(rgb(3 11 34 / 78%), rgb(4 16 52 / 88%)), var(--stage-background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: system-ui, sans-serif;
 }
@@ -20,14 +24,25 @@ button, input, select, textarea {
   padding: var(--space-1) var(--space-2);
 }
 button { cursor: pointer; }
+button { transition: transform 140ms ease, border-color 140ms ease, background-color 140ms ease; }
+button:not(:disabled):active { transform: translateY(1px); }
 button:disabled { cursor: not-allowed; opacity: 0.5; }
 :focus-visible { outline: max(3px, .18rem) solid var(--color-focus); outline-offset: max(2px, .12rem); box-shadow: 0 0 0 max(2px, .12rem) #071a55; }
 label { display: grid; gap: 0.35rem; }
 fieldset { border: 1px solid #465572; border-radius: var(--radius); padding: var(--space-3); }
 fieldset > label { display: flex; align-items: center; gap: var(--space-1); }
 .page-shell { width: min(72rem, 100%); margin: 0 auto; padding: var(--space-5); }
+.home-screen { min-height: 100vh; min-height: 100dvh; display: grid; align-content: center; gap: var(--space-4); }
+.home-screen > header, .home-actions, .home-screen > .muted, .home-screen > [role='alert'] {
+  width: min(31rem, 100%);
+  margin-inline: auto;
+}
+.home-screen > header { text-align: center; }
+.home-screen > header h1 { margin-block: .25rem 0; font-size: clamp(2rem, 5vw, 4.5rem); letter-spacing: .035em; text-shadow: 0 .12em .45em rgb(0 0 0 / 65%); }
+.brand-logo { display: block; width: min(24rem, 78vw); max-height: 32dvh; object-fit: contain; margin: 0 auto var(--space-2); filter: drop-shadow(0 .8rem 1.4rem rgb(0 0 0 / 55%)); }
+.home-actions { padding: var(--space-4); border: 1px solid rgb(121 200 255 / 38%); border-radius: calc(var(--radius) * 1.4); background: linear-gradient(145deg, rgb(7 26 85 / 92%), rgb(12 25 61 / 88%)); box-shadow: 0 1.4rem 3rem rgb(0 0 0 / 38%); }
 .eyebrow, .muted { color: var(--color-muted); }
-.home-actions { display: grid; gap: var(--space-2); max-width: 28rem; }
+.home-actions { display: grid; gap: var(--space-2); max-width: 31rem; }
 .primary-action { background: var(--color-accent); border-color: var(--color-accent); color: #111827; font-weight: 700; }
 .setup-header, .section-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
 .team-grid, .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: var(--space-3); margin-block: var(--space-3); }
@@ -48,10 +63,37 @@ fieldset > label { display: flex; align-items: center; gap: var(--space-1); }
 .source-summary { display: flex; flex-wrap: wrap; gap: var(--space-2); color: var(--color-muted); }
 .source-summary strong { color: var(--color-text); }
 [role='alert'] { color: #ffb4b4; }
+
+@keyframes stage-rise {
+  from { opacity: 0; transform: translateY(.75rem) scale(.992); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.home-screen > header, .home-actions, .public-clue, .public-final, .winner-screen, .final-waiting {
+  animation: stage-rise var(--motion-stage-enter) cubic-bezier(.2, .72, .2, 1) both;
+}
+.home-actions { animation-delay: 70ms; }
 @media (max-width: 40rem) {
   .page-shell { padding: var(--space-3); }
   .setup-header, .section-heading { align-items: stretch; flex-direction: column; }
   .bilingual-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-height: 50rem) {
+  .home-screen { gap: var(--space-1); padding-block: var(--space-2); }
+  .brand-logo { width: min(18rem, 62vw); max-height: 20dvh; margin-bottom: 0; }
+  .home-screen > header h1 { font-size: clamp(1.8rem, 5vh, 3rem); }
+  .home-screen > header p, .home-screen > .muted { margin-block: .25rem; text-align: center; }
+  .home-actions { gap: var(--space-1); padding: var(--space-2); }
+  .home-actions button { min-height: 2.35rem; }
+}
+
+@media (min-width: 137.5rem) and (min-height: 75rem) {
+  .home-screen > header, .home-actions, .home-screen > .muted, .home-screen > [role='alert'] { width: min(44rem, 100%); }
+  .brand-logo { width: min(34rem, 72vw); }
+  .home-actions { max-width: 44rem; padding: var(--space-5); gap: var(--space-3); font-size: 1.35rem; }
+  .home-actions button { min-height: 4rem; }
+  .home-screen > .muted { font-size: 1.2rem; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

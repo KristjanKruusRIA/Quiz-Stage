@@ -9,12 +9,19 @@ describe('media protocol', () => {
       unhandle: vi.fn(),
     };
     const resolve = vi.fn(() => ({ key: 'opening' as const, source: 'bundled' as const, mime: 'audio/wav' as const, bytes: Buffer.from('RIFF') }));
-    const dispose = registerMediaProtocol(protocol, { resolve });
+    const resolveBranding = vi.fn(() => ({ key: 'logo' as const, source: 'bundled' as const, mime: 'image/png' as const, bytes: Buffer.from('PNG') }));
+    const dispose = registerMediaProtocol(protocol, { resolve, resolveBranding });
 
     const get = await handler!(new Request('quiz-stage-media://asset/opening'));
     expect(get.status).toBe(200);
     expect(get.headers.get('Content-Length')).toBe('4');
     expect(Buffer.from(await get.arrayBuffer()).toString()).toBe('RIFF');
+
+    const logo = await handler!(new Request('quiz-stage-media://branding/logo'));
+    expect(logo.status).toBe(200);
+    expect(logo.headers.get('Content-Type')).toBe('image/png');
+    expect(Buffer.from(await logo.arrayBuffer()).toString()).toBe('PNG');
+    expect(resolveBranding).toHaveBeenCalledWith('logo');
 
     const head = await handler!(new Request('quiz-stage-media://asset/opening', { method: 'HEAD' }));
     expect(head.status).toBe(200);
@@ -42,13 +49,17 @@ describe('media protocol', () => {
     let handler: ((request: Request) => Response | Promise<Response>) | undefined;
     const protocol = { handle: (_scheme: string, next: typeof handler) => { handler = next; }, unhandle: vi.fn() };
     const resolve = vi.fn();
-    registerMediaProtocol(protocol, { resolve });
+    const resolveBranding = vi.fn();
+    registerMediaProtocol(protocol, { resolve, resolveBranding });
     for (const url of [
       'https://asset/opening',
       'quiz-stage-media://other/opening',
       'quiz-stage-media://asset/opening?path=secret',
       'quiz-stage-media://asset/opening#secret',
+      'quiz-stage-media://branding/icon-source',
+      'quiz-stage-media://branding/logo?path=secret',
     ]) expect((await handler!(new Request(url))).status).toBe(404);
     expect(resolve).not.toHaveBeenCalled();
+    expect(resolveBranding).not.toHaveBeenCalled();
   });
 });

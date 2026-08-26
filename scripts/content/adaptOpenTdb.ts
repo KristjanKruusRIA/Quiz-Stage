@@ -25,17 +25,20 @@ export interface OpenTdbDecodedQuestion {
 }
 
 export interface OpenTdbAdaptedCandidate {
+  candidateId: string;
   sourceSystem: 'OpenTDB';
   sourceId: string;
   sourceTitle: typeof OPEN_TDB_SOURCE_TITLE;
   sourceUrl: typeof OPEN_TDB_SOURCE_URL;
   sourceLicense: typeof OPEN_TDB_SOURCE_LICENSE;
+  license: typeof OPEN_TDB_SOURCE_LICENSE;
   category: string;
   difficulty: OpenTdbDifficulty;
   question: string;
   answer: string;
   questionType: 'multiple' | 'boolean';
   requiresFactualSource: true;
+  inspirationOnly: true;
   normalizedDuplicateKey: string;
   requiresFactualSourceReason: 'OpenTDB questions are used for draft inspiration only';
   fetchedAt: string;
@@ -91,18 +94,22 @@ export function adaptOpenTdbQuestion(raw: OpenTdbDecodedQuestion, fetchedAt: str
   const question = sanitizeOpenTdbText(raw.question);
   const answer = sanitizeOpenTdbText(raw.correct_answer);
   const duplicateKey = buildOpenTdbDuplicateKey(question, answer, category, raw.difficulty);
+  const candidateId = buildOpenTdbSourceId(duplicateKey);
   return {
+    candidateId,
     sourceSystem: 'OpenTDB',
-    sourceId: buildOpenTdbSourceId(duplicateKey),
+    sourceId: candidateId,
     sourceTitle: OPEN_TDB_SOURCE_TITLE,
     sourceUrl: OPEN_TDB_SOURCE_URL,
     sourceLicense: OPEN_TDB_SOURCE_LICENSE,
+    license: OPEN_TDB_SOURCE_LICENSE,
     category,
     difficulty: raw.difficulty,
     question,
     answer,
     questionType: raw.type,
     requiresFactualSource: true,
+    inspirationOnly: true,
     requiresFactualSourceReason: 'OpenTDB questions are used for draft inspiration only',
     normalizedDuplicateKey: duplicateKey,
     fetchedAt,

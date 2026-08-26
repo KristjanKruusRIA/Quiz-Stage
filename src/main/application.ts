@@ -20,7 +20,9 @@ export function createApplication(database: DatabaseConnection, options: Applica
   const repository = new MatchRepository(database);
   const contentRepository = new ContentRepository(database);
   const contentService = new ContentService(contentRepository);
-  const contentCsv = new CsvPackWorkflow(database, contentRepository);
+  const contentCsv = new CsvPackWorkflow(database, contentRepository, {
+    onImported: () => contentService.invalidateSelectionCache(),
+  });
   const contentEditor = new ContentEditorService(database, contentRepository, { now: options.now });
   const audioSettings = new AudioSettingsRepository(database, options.now);
   const appearanceSettings = new AppearanceSettingsRepository(database, options.now);

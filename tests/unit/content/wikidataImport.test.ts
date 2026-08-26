@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -11,7 +11,10 @@ import {
   mapWikidataCandidates,
   parseWikidataResponse,
 } from '../../../scripts/content/mapWikidataCandidates';
-import { fetchWikidataCandidates } from '../../../scripts/content/fetchWikidata';
+import {
+  appendIfNotPresent as appendWikidataNoticeIfNotPresent,
+  fetchWikidataCandidates,
+} from '../../../scripts/content/fetchWikidata';
 
 interface MockResponse {
   status: number;
@@ -39,7 +42,9 @@ afterEach(() => {
 });
 
 function temporaryDirectory(): string {
-  const directory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-'));
+  const root = resolve('content/imports');
+  mkdirSync(root, { recursive: true });
+  const directory = mkdtempSync(resolve(root, '.quiz-stage-wikidata-'));
   temporaryDirectories.push(directory);
   return directory;
 }
@@ -115,6 +120,7 @@ describe('Wikidata recipes and mapping contracts', () => {
     expect(firstCandidate).toBeDefined();
     expect(firstCandidate!.sourceSystem).toBe('Wikidata');
     expect(firstCandidate!.sourceLicense).toBe('CC0-1.0');
+    expect(firstCandidate!.candidateId).toBe(firstCandidate!.sourceId);
     expect(firstCandidate!.sourceUrl).toBe('https://www.wikidata.org/wiki/Q1');
     expect(firstCandidate!.sourceRecipe).toBe('historical-events');
     expect(firstCandidate!.factSourceIds).toEqual(['P31', 'Q1', 'Q2']);
@@ -133,7 +139,7 @@ describe('Wikidata recipes and mapping contracts', () => {
             property: { value: 'http://www.wikidata.org/entity/P31' },
             propertyLabel: { value: 'instance of' },
             value: { type: 'uri', value: 'http://www.wikidata.org/entity/Q2' },
-            valueLabel: { value: 'mission' },
+            valueLabel: { value: 'moon mission' },
           },
           {
             item: { value: 'http://www.wikidata.org/entity/Q3' },
@@ -156,6 +162,7 @@ describe('Wikidata recipes and mapping contracts', () => {
       cache,
       recipes: ['historical-events'],
       resume: false,
+      target: null,
       pageSize: 2,
       delayMs: 0,
       maxAttempts: 5,
@@ -168,6 +175,7 @@ describe('Wikidata recipes and mapping contracts', () => {
 
     expect(result.totalWritten).toBe(3);
     expect(result.totalSkipped).toBe(1);
+    expect(mock.calls).toHaveLength(2);
     expect(mock.sleeps.every((value) => value === 0)).toBe(true);
     const secondRequest = new URL(mock.calls[1]!);
     const secondQuery = secondRequest.searchParams.get('query') ?? '';
@@ -201,6 +209,7 @@ describe('Wikidata recipes and mapping contracts', () => {
       cache,
       recipes: ['historical-events'],
       resume: false,
+      target: null,
       pageSize: 500,
       delayMs: 0,
       maxAttempts: 3,
@@ -214,5 +223,183 @@ describe('Wikidata recipes and mapping contracts', () => {
     expect(result.totalWritten).toBe(2);
     expect(mock.sleeps).toContain(2000);
     expect(mock.calls).toHaveLength(2);
+  });
+
+  it('retries rejected requests within maxAttempts using bounded backoff', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'wikidata-candidates.jsonl');
+    const cache = resolve(directory, 'wikidata-cache.json');
+    let attempts = 0;
+    const sleeps: number[] = [];
+
+    const result = await fetchWikidataCandidates({
+      output,
+      cache,
+      recipes: ['historical-events'],
+      resume: false,
+      target: 1,
+      pageSize: 500,
+      delayMs: 0,
+      maxAttempts: 3,
+      dependencies: {
+        request: async () => {
+          attempts += 1;
+          if (attempts === 1) throw new DOMException('request timed out', 'AbortError');
+          return {
+            status: 200,
+            headers: { get: () => null },
+            body: fixture('historical-events-page1.json'),
+          };
+        },
+        sleep: async (milliseconds) => { sleeps.push(milliseconds); },
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    expect(result.totalWritten).toBe(1);
+    expect(attempts).toBe(2);
+    expect(sleeps).toEqual([0, 250]);
+    expect(readFileSync(output, 'utf8').trim().split(/\r?\n/)).toHaveLength(1);
+  });
+
+  it('leaves output and cache bytes unchanged when a later page exhausts retries', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'wikidata-candidates.jsonl');
+    const cache = resolve(directory, 'wikidata-cache.json');
+    const originalOutput = 'pre-run candidate bytes\n';
+    const originalCache = '{"version":1,"entries":{}}\n';
+    writeFileSync(output, originalOutput);
+    writeFileSync(cache, originalCache);
+    let attempts = 0;
+
+    await expect(fetchWikidataCandidates({
+      output,
+      cache,
+      recipes: ['historical-events'],
+      resume: false,
+      target: null,
+      pageSize: 2,
+      delayMs: 0,
+      maxAttempts: 3,
+      dependencies: {
+        request: async () => {
+          attempts += 1;
+          if (attempts === 1) {
+            return {
+              status: 200,
+              headers: { get: () => null },
+              body: fixture('historical-events-page1.json'),
+            };
+          }
+          throw new TypeError('network unavailable');
+        },
+        sleep: async () => undefined,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/network unavailable/);
+
+    expect(attempts).toBe(4);
+    expect(readFileSync(output, 'utf8')).toBe(originalOutput);
+    expect(readFileSync(cache, 'utf8')).toBe(originalCache);
+  });
+
+  it('replaces a non-resume output atomically and stops exactly at target', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'wikidata-candidates.jsonl');
+    const cache = resolve(directory, 'wikidata-cache.json');
+    writeFileSync(output, 'stale partial output\n');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('historical-events-page1.json') },
+    ]);
+
+    const result = await fetchWikidataCandidates({
+      output,
+      cache,
+      recipes: ['historical-events'],
+      resume: false,
+      target: 1,
+      pageSize: 500,
+      delayMs: 0,
+      maxAttempts: 3,
+      dependencies: {
+        request: mock.request,
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    });
+
+    const lines = readFileSync(output, 'utf8').trim().split(/\r?\n/);
+    expect(result.totalWritten).toBe(1);
+    expect(mock.calls).toHaveLength(1);
+    expect(lines).toHaveLength(1);
+    expect(JSON.parse(lines[0]!).sourceSystem).toBe('Wikidata');
+  });
+
+  it('rejects an unsafe cache before requesting data or creating output', async () => {
+    const directory = temporaryDirectory();
+    const output = resolve(directory, 'wikidata-candidates.jsonl');
+    const cache = resolve('content/reports/.task-6-wikidata-cache.json');
+    const mock = createMockFetcher([]);
+
+    await expect(fetchWikidataCandidates({
+      output, cache, recipes: ['historical-events'], resume: false, target: null, pageSize: 1, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: mock.request,
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/content[\\/]imports/i);
+    expect(mock.calls).toHaveLength(0);
+    expect(existsSync(output)).toBe(false);
+    expect(existsSync(cache)).toBe(false);
+  });
+
+  it('rechecks the output ancestor after network activity before appending candidates', async () => {
+    const directory = temporaryDirectory();
+    const outputDirectory = resolve(directory, 'mutable-output');
+    const outsideDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-outside-'));
+    temporaryDirectories.push(outsideDirectory);
+    mkdirSync(outputDirectory);
+    const output = resolve(outputDirectory, 'wikidata-candidates.jsonl');
+    const cache = resolve(directory, 'wikidata-cache.json');
+    const mock = createMockFetcher([
+      { status: 200, body: fixture('historical-events-page1.json') },
+    ]);
+    let swapped = false;
+
+    await expect(fetchWikidataCandidates({
+      output, cache, recipes: ['historical-events'], resume: false, target: null, pageSize: 500, delayMs: 0, maxAttempts: 1,
+      dependencies: {
+        request: async (url, init) => {
+          const response = await mock.request(url, init);
+          if (!swapped) {
+            rmSync(outputDirectory, { recursive: true });
+            symlinkSync(outsideDirectory, outputDirectory, 'junction');
+            swapped = true;
+          }
+          return response;
+        },
+        sleep: mock.sleep,
+        now: () => new Date('2026-08-12T12:00:00.000Z'),
+      },
+    })).rejects.toThrow(/symbolic link/i);
+    expect(existsSync(resolve(outsideDirectory, 'wikidata-candidates.jsonl'))).toBe(false);
+  });
+
+  it('rejects a swapped foreign notice ancestor without changing its outside target', async () => {
+    const foreignDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-notice-'));
+    const outsideDirectory = mkdtempSync(resolve(tmpdir(), 'quiz-stage-wikidata-notice-outside-'));
+    temporaryDirectories.push(foreignDirectory, outsideDirectory);
+    const linkedDirectory = resolve(foreignDirectory, 'content');
+    const outsideNotice = resolve(outsideDirectory, 'THIRD_PARTY_NOTICES.md');
+    writeFileSync(outsideNotice, 'unchanged\n');
+
+    await Promise.resolve();
+    symlinkSync(outsideDirectory, linkedDirectory, 'junction');
+    expect(() => appendWikidataNoticeIfNotPresent(
+      resolve(linkedDirectory, 'THIRD_PARTY_NOTICES.md'),
+      '- unexpected Wikidata notice\n',
+    )).toThrow(/THIRD_PARTY_NOTICES|repository/i);
+    expect(readFileSync(outsideNotice, 'utf8')).toBe('unchanged\n');
   });
 });

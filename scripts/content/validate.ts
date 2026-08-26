@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto';
 import {
   lstatSync, readFileSync, renameSync, unlinkSync, writeFileSync,
 } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   contentCategorySetSchema, contentClueSchema, contentFinalClueSchema,
@@ -10,7 +10,13 @@ import {
 import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { validatePack, type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { readCsvInputs } from './readCsv';
+import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
+import { findNearDuplicatePairs } from './nearDuplicate';
+import {
+  FINAL_BATCH, PRODUCTION_BATCHES, getProductionBatch, type ProductionBatchDefinition,
+} from './productionBatches';
 import { RELEASE_COMPOSITION_THRESHOLDS, RELEASE_THRESHOLDS, type ReleaseSummary } from './releaseThresholds';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 export type ValidationMode = 'batch' | 'release';
 export type ValidationSeverity = 'error' | 'warning';
@@ -45,6 +51,8 @@ export interface ProductionValidationOptions {
   mode: ValidationMode;
   allowMissingEt?: boolean;
   reviewedExceptionIds?: readonly string[];
+  evidenceByClueId?: ReadonlyMap<string, ContentEvidence>;
+  batch?: ProductionBatchDefinition;
 }
 
 interface LocatedRow { file: string; row: ParsedCsvRow }
@@ -70,14 +78,53 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set([
 ]);
 
 const CHANGING_FACT = /\b(current(?:ly)?|latest|today|now|incumbent|president|prime minister|population|rank(?:ed|ing)?|record holder|largest|highest|most populous)\b/i;
-const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:\d{4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]+\s+\d{1,2},\s+\d{4})\b/i;
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] as const;
+const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:(?<isoYear>\d{4})-(?<isoMonth>\d{2})-(?<isoDay>\d{2})|(?<month>January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:(?<monthDay>0?[1-9]|[12]\d|3[01]),\s+)?(?<monthYear>\d{4})|(?<year>\d{4}))(?!\s*[-/.]\s*\d)\b/gi;
+const PLACEHOLDER_CLUE = /\b(?:topic\s+\d+\s+tier\s+\d+\s+asks\s+for|final clue\s+\d+\s+for\s+(?:easy|medium|hard)\s+difficulty)\b/iu;
+const PLACEHOLDER_RESPONSE = /\b(?:generated answer|answer for .+ topic\s+\d+)\b/iu;
+
+function isValidCalendarDate(year: number, month: number, day: number): boolean {
+  const date = new Date(0);
+  date.setUTCFullYear(year, month - 1, day);
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+}
+
+function hasExplicitDate(value: string): boolean {
+  for (const match of value.matchAll(EXPLICIT_DATE)) {
+    const groups = match.groups ?? {};
+    if (groups.isoYear !== undefined) {
+      if (isValidCalendarDate(Number(groups.isoYear), Number(groups.isoMonth), Number(groups.isoDay))) return true;
+      continue;
+    }
+    if (groups.monthDay !== undefined) {
+      const month = MONTHS.findIndex((name) => name.toLowerCase() === groups.month?.toLowerCase()) + 1;
+      if (isValidCalendarDate(Number(groups.monthYear), month, Number(groups.monthDay))) return true;
+      continue;
+    }
+    return true;
+  }
+  return false;
+}
+
+export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
+  'MISSING_EVIDENCE',
+  'SOURCE_MISMATCH',
+  'GENERIC_SOURCE',
+  'DUPLICATE_FACT',
+  'NEAR_DUPLICATE_CLUE',
+  'BOARD_FINAL_FACT_REUSE',
+  'SUBTHEME_LIMIT',
+  'BATCH_ALLOCATION',
+  'OPENTDB_COMPOSITION',
+  'PLACEHOLDER_CONTENT',
+]);
 
 function normalizeText(value: string): string {
   return value.normalize('NFKC').trim().toLocaleLowerCase('en').replace(/\s+/g, ' ');
 }
 
 function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml))?/giu) ?? [];
+  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
   return matches.map((raw) => {
     const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
     let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
@@ -95,7 +142,20 @@ function canonicalNumbers(value: string): string[] {
 }
 
 function differsNumerically(en: string, et: string): boolean {
-  return canonicalNumbers(en).join('|') !== canonicalNumbers(et).join('|');
+  const enNumbers = canonicalNumbers(en);
+  const etNumbers = canonicalNumbers(et);
+  const enNormalized = normalizeText(en);
+  const etNormalized = normalizeText(et);
+  if (/\bgenesis\b/u.test(enNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(etNormalized)) {
+    const ordinal = etNumbers.indexOf('1');
+    if (ordinal >= 0) etNumbers.splice(ordinal, 1);
+  } else if (/\bgenesis\b/u.test(etNormalized)
+    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(enNormalized)) {
+    const ordinal = enNumbers.indexOf('1');
+    if (ordinal >= 0) enNumbers.splice(ordinal, 1);
+  }
+  return enNumbers.join('|') !== etNumbers.join('|');
 }
 
 function stableIssueSort(left: ProductionValidationIssue, right: ProductionValidationIssue): number {
@@ -114,6 +174,25 @@ function isHttpsSource(value: string): boolean {
 
 function sourceHost(value: string): string | null {
   try { return new URL(value).hostname.toLowerCase(); } catch { return null; }
+}
+
+function hasSpecificSupportingSource(evidence: ContentEvidence): boolean {
+  let url: URL;
+  try { url = new URL(evidence.supportingSource.url); } catch { return false; }
+  if ((url.pathname === '' || url.pathname === '/') && url.search === '' && url.hash === '') return false;
+  if (evidence.origin === 'wikidata') {
+    return url.hostname.toLowerCase() === 'www.wikidata.org' && /^\/wiki\/Q[1-9]\d*$/.test(url.pathname);
+  }
+  if (evidence.origin === 'openTdbInspired') {
+    return !new Set(['opentdb.com', 'www.opentdb.com']).has(url.hostname.toLowerCase());
+  }
+  return true;
+}
+
+const ALL_PRODUCTION_BATCHES: readonly ProductionBatchDefinition[] = [...PRODUCTION_BATCHES, FINAL_BATCH];
+
+function batchForPack(packId: string): ProductionBatchDefinition | undefined {
+  return ALL_PRODUCTION_BATCHES.find((batch) => batch.packId === packId);
 }
 
 function validateSharedSchema(row: ParsedCsvRow): boolean {
@@ -157,7 +236,19 @@ export function validateProductionContent(
   const issues: ProductionValidationIssue[] = [];
   const exceptionMap = new Map<string, ValidationException>();
   const located: LocatedRow[] = [];
-  const add = (issue: ProductionValidationIssue) => issues.push(issue);
+  const add = (issue: ProductionValidationIssue) => {
+    if (!NON_WAIVABLE_CODES.has(issue.code)) {
+      issues.push(issue);
+      return;
+    }
+    issues.push({
+      file: issue.file,
+      row: issue.row,
+      code: issue.code,
+      severity: 'error',
+      message: issue.message,
+    });
+  };
 
   for (const input of [...inputs].sort((a, b) => a.file.localeCompare(b.file, 'en'))) {
     for (const issue of validatePack(input.pack)) {
@@ -210,8 +301,12 @@ export function validateProductionContent(
       add({ file, row: row.rowNumber, code: 'OFFICIAL_ARCHIVE_HOST', severity: 'error', message: 'Official-show clue archive sources are forbidden' });
     }
     if (CHANGING_FACT.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)
-      && !EXPLICIT_DATE.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
+      && !hasExplicitDate(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
       add({ file, row: row.rowNumber, code: 'UNDATED_CHANGING_FACT', severity: 'error', message: 'Time-sensitive wording requires an explicit date or as-of period' });
+    }
+    if (PLACEHOLDER_CLUE.test(row.clue_en)
+      || PLACEHOLDER_RESPONSE.test(row.response_en)) {
+      add({ file, row: row.rowNumber, code: 'PLACEHOLDER_CONTENT', severity: 'error', message: 'Generated placeholder records cannot be bundled as production content' });
     }
 
     const missingEt = [row.category_name_et, row.clue_et, row.response_et, row.explanation_et].some((value) => value.trim() === '')
@@ -223,7 +318,9 @@ export function validateProductionContent(
     } else {
       const translatedPairs = [
         [row.category_name_en, row.category_name_et],
-        [row.clue_en, row.clue_et], [row.response_en, row.response_et], [row.explanation_en, row.explanation_et],
+        [row.clue_en, row.clue_et],
+        [row.response_en, row.response_et],
+        [row.explanation_en, row.explanation_et],
         ...(row.accepted_variants_en.trim() === '' ? [] : [[row.accepted_variants_en, row.accepted_variants_et]]),
       ];
       if (translatedPairs.some(([en, et]) => en.trim().split(/\s+/).length > 1 && normalizeText(en) === normalizeText(et))) {
@@ -246,6 +343,131 @@ export function validateProductionContent(
     if (!validateSharedSchema(row)) {
       add({ file, row: row.rowNumber, code: 'SHARED_SCHEMA_INVALID', severity: 'error', message: 'Row does not satisfy the shared content schema' });
     }
+  }
+
+  const evidenceRequired = options.mode === 'release'
+    || options.batch !== undefined
+    || options.evidenceByClueId !== undefined;
+  const rowIds = new Set(located.map(({ row }) => row.clue_id));
+  const rowLocations = new Map(located.map((item) => [item.row.clue_id, item]));
+  const parsedEvidenceByClueId = new Map<string, ContentEvidence>();
+  const invalidEvidenceKeys = new Set<string>();
+  for (const [mapKey, rawEvidence] of options.evidenceByClueId ?? []) {
+    const parsed = contentEvidenceSchema.safeParse(rawEvidence);
+    const rawClueId = rawEvidence !== null && typeof rawEvidence === 'object'
+      && typeof (rawEvidence as { clueId?: unknown }).clueId === 'string'
+      ? (rawEvidence as { clueId: string }).clueId
+      : undefined;
+    const keyMismatch = rawClueId !== undefined && mapKey !== rawClueId;
+    if (keyMismatch) {
+      const location = rowLocations.get(mapKey);
+      add({
+        file: location?.file ?? '<evidence>',
+        row: location?.row.rowNumber ?? 0,
+        code: 'SOURCE_MISMATCH', severity: 'error',
+        message: `Evidence map key ${mapKey} does not match clue ID ${rawClueId}`,
+      });
+    }
+    if (!parsed.success) {
+      invalidEvidenceKeys.add(mapKey);
+      const location = rowLocations.get(mapKey);
+      add({
+        file: location?.file ?? '<evidence>',
+        row: location?.row.rowNumber ?? 0,
+        code: 'MISSING_EVIDENCE',
+        severity: 'error',
+        message: `Evidence at key ${mapKey} is invalid: ${parsed.error.issues[0].message}`,
+      });
+      continue;
+    }
+    if (keyMismatch) continue;
+    if (!rowIds.has(parsed.data.clueId)) {
+      add({
+        file: '<evidence>', row: 0, code: 'SOURCE_MISMATCH', severity: 'error',
+        message: `Evidence for ${parsed.data.clueId} has no CSV row`,
+      });
+      continue;
+    }
+    parsedEvidenceByClueId.set(mapKey, parsed.data);
+  }
+
+  const boundEvidenceByClueId = new Map<string, ContentEvidence>();
+  const factOwners = new Map<string, { kinds: Set<string>; located: LocatedRow }>();
+  for (const item of located) {
+    const { file, row } = item;
+    const evidence = parsedEvidenceByClueId.get(row.clue_id);
+    if (evidence === undefined) {
+      if (evidenceRequired && !invalidEvidenceKeys.has(row.clue_id)) add({
+        file, row: row.rowNumber, code: 'MISSING_EVIDENCE', severity: 'error',
+        message: `Clue ${row.clue_id} requires approved evidence`,
+      });
+      continue;
+    }
+
+    const authoredMissingEtAllowed = options.allowMissingEt === true && row.translation_status === 'untranslated';
+    const translationReviewAgrees = authoredMissingEtAllowed
+      || (row.translation_status === 'reviewed') === (evidence.translationReview !== null);
+    const translationReviewRequired = options.mode === 'release'
+      && (row.translation_status !== 'reviewed' || evidence.translationReview === null);
+    const invalidTranslationReview = !translationReviewAgrees || translationReviewRequired;
+    if (invalidTranslationReview) {
+      add({
+        file, row: row.rowNumber, code: 'MISSING_EVIDENCE', severity: 'error',
+        message: `Clue ${row.clue_id} requires matching reviewed translation status and evidence`,
+      });
+    }
+
+    const expectedBatch = options.batch ?? batchForPack(row.pack_id);
+    const canonicalAssertion = `${row.response_en.trim()} — ${row.explanation_en.trim()}`;
+    const sourceMatches = evidence.supportingSource.title.trim() === row.source_title.trim()
+      && evidence.supportingSource.url.trim() === row.source_url.trim()
+      && evidence.supportingSource.license.trim() === row.source_license.trim()
+      && evidence.supportingSource.retrievedAt.trim() === row.source_retrieved_at.trim();
+    const sourceMismatch = evidence.clueId !== row.clue_id
+      || expectedBatch === undefined
+      || evidence.batchId !== expectedBatch.id
+      || !sourceMatches
+      || normalizeText(evidence.assertion) !== normalizeText(canonicalAssertion);
+    if (sourceMismatch) {
+      add({
+        file, row: row.rowNumber, code: 'SOURCE_MISMATCH', severity: 'error',
+        message: `Evidence for ${row.clue_id} does not match its CSV identity, batch, source, or assertion`,
+      });
+    }
+    const genericSource = !hasSpecificSupportingSource(evidence);
+    if (genericSource) add({
+      file, row: row.rowNumber, code: 'GENERIC_SOURCE', severity: 'error',
+      message: `Evidence for ${row.clue_id} requires a specific independent source URL`,
+    });
+
+    if (invalidTranslationReview || sourceMismatch || genericSource) continue;
+    boundEvidenceByClueId.set(row.clue_id, evidence);
+
+    const priorFact = factOwners.get(evidence.factKey);
+    if (priorFact === undefined) {
+      factOwners.set(evidence.factKey, { kinds: new Set([row.content_kind]), located: item });
+    } else {
+      add({
+        file, row: row.rowNumber, code: 'DUPLICATE_FACT', severity: 'error',
+        message: `Fact key ${evidence.factKey} repeats ${priorFact.located.row.clue_id}`,
+      });
+      if (!priorFact.kinds.has(row.content_kind)) add({
+        file, row: row.rowNumber, code: 'BOARD_FINAL_FACT_REUSE', severity: 'error',
+        message: `Fact key ${evidence.factKey} is shared by board and Final content`,
+      });
+      priorFact.kinds.add(row.content_kind);
+    }
+  }
+
+  const clueLocations = new Map(located.map((item) => [item.row.clue_id, item]));
+  for (const pair of findNearDuplicatePairs(located
+    .filter(({ row }) => row.clue_en.trim() !== '')
+    .map(({ row }) => ({ id: row.clue_id, text: row.clue_en })))) {
+    const second = clueLocations.get(pair.secondId);
+    if (second !== undefined) add({
+      file: second.file, row: second.row.rowNumber, code: 'NEAR_DUPLICATE_CLUE', severity: 'error',
+      message: `Clue ${pair.secondId} is near-duplicate wording of ${pair.firstId} (${pair.similarity.toFixed(3)})`,
+    });
   }
 
   for (const [categoryId, group] of categoryRows) {
@@ -281,7 +503,86 @@ export function validateProductionContent(
     mediumSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'medium').length,
     hardSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'hard').length,
   };
-  if (distinctBoardNames.size < 12) add({ file: '<inventory>', row: 0, code: 'MATCH_CATEGORY_NAMES_SHORTAGE', severity: 'error', message: `At least 12 distinct board category names are required; found ${distinctBoardNames.size}` });
+  if (distinctBoardNames.size < 12 && (options.mode === 'release' || summary.boardClues > 0)) {
+    add({ file: '<inventory>', row: 0, code: 'MATCH_CATEGORY_NAMES_SHORTAGE', severity: 'error', message: `At least 12 distinct board category names are required; found ${distinctBoardNames.size}` });
+  }
+
+  const enforceBatchComposition = (batch: ProductionBatchDefinition, batchRows: readonly LocatedRow[]) => {
+    const location = `<batch:${batch.id}>`;
+    let allocationMismatch = batchRows.some(({ row }) => row.pack_id !== batch.packId);
+    const groups = new Map<string, LocatedRow[]>();
+    for (const item of batchRows) {
+      const group = groups.get(item.row.category_set_id) ?? [];
+      group.push(item);
+      groups.set(item.row.category_set_id, group);
+    }
+
+    if (batch.distribution !== null) {
+      allocationMismatch ||= batchRows.length !== batch.boardClues
+        || batchRows.some(({ row }) => row.content_kind !== 'board')
+        || groups.size !== batch.boardClues / 5
+        || batchRows.some(({ row }) => !batch.subthemes.includes(row.macro_topic));
+
+      const setRows = [...groups.values()];
+      for (const group of setRows) {
+        const tiers = group.map(({ row }) => Number(row.tier)).sort((left, right) => left - right).join(',');
+        const metadata = new Set(group.map(({ row }) => [
+          row.pack_id, row.content_kind, row.round, row.difficulty, row.macro_topic,
+        ].join('|')));
+        if (group.length !== 5 || tiers !== '1,2,3,4,5' || metadata.size !== 1) allocationMismatch = true;
+      }
+
+      for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+        for (const round of ['round-one', 'round-two'] as const) {
+          const actual = setRows.filter((group) => group[0]?.row.difficulty === difficulty
+            && group[0]?.row.round === round).length;
+          const expected = batch.distribution[difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
+          if (actual !== expected) allocationMismatch = true;
+        }
+      }
+
+      for (const subtheme of batch.subthemes) {
+        const count = setRows.filter((group) => group[0]?.row.macro_topic === subtheme).length;
+        if (count > batch.maxSetsPerSubtheme) add({
+          file: location, row: 0, code: 'SUBTHEME_LIMIT', severity: 'error',
+          message: `${batch.id} subtheme ${subtheme} has ${count} sets; maximum is ${batch.maxSetsPerSubtheme}`,
+        });
+      }
+    } else {
+      allocationMismatch ||= batchRows.length !== batch.finalClues
+        || batchRows.some(({ row }) => row.content_kind !== 'final')
+        || batchRows.some(({ row }) => !batch.subthemes.includes(row.macro_topic));
+      for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+        if (batchRows.filter(({ row }) => row.difficulty === difficulty).length !== 50) allocationMismatch = true;
+      }
+      for (const family of batch.subthemes) {
+        const count = batchRows.filter(({ row }) => row.macro_topic === family).length;
+        if (count !== 12 && count !== 13) allocationMismatch = true;
+      }
+    }
+
+    if (allocationMismatch) add({
+      file: location, row: 0, code: 'BATCH_ALLOCATION', severity: 'error',
+      message: `${batch.id} does not match its required pack, kind, count, set, subtheme, or difficulty allocation`,
+    });
+
+    const openTdbCount = [...boundEvidenceByClueId.values()]
+      .filter((evidence) => evidence.batchId === batch.id && evidence.origin === 'openTdbInspired').length;
+    if (openTdbCount !== batch.requiredOpenTdbClues) add({
+      file: location, row: 0, code: 'OPENTDB_COMPOSITION', severity: 'error',
+      message: `${batch.id} requires ${batch.requiredOpenTdbClues} OpenTDB-inspired evidence records; found ${openTdbCount}`,
+    });
+  };
+
+  if (options.batch !== undefined) {
+    enforceBatchComposition(options.batch, located);
+  } else if (options.mode === 'release') {
+    for (const batch of ALL_PRODUCTION_BATCHES) {
+      enforceBatchComposition(batch, located.filter(({ row }) =>
+        boundEvidenceByClueId.get(row.clue_id)?.batchId === batch.id));
+    }
+  }
+
   if (options.mode === 'release') {
     const codes: Record<keyof ReleaseSummary, string> = {
       boardClues: 'RELEASE_BOARD_CLUES_SHORTAGE', categorySets: 'RELEASE_CATEGORY_SETS_SHORTAGE',
@@ -318,6 +619,15 @@ export function validateProductionContent(
 export interface ReportPublicationOptions {
   rename?: (from: string, to: string) => void;
   createTemporaryId?: () => string;
+  placement?: 'validation' | 'top-level';
+}
+
+interface UnknownRecord {
+  [key: string]: unknown;
+}
+
+function isObject(value: unknown): value is UnknownRecord {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
 function assertNoSymlinkAncestors(path: string): void {
@@ -352,32 +662,56 @@ export function publishValidationReport(path: string, validation: unknown, optio
     if (lstatSync(candidate, { throwIfNoEntry: false }) === undefined) { temporary = candidate; break; }
   }
   if (temporary === '') throw new Error('Could not allocate a unique validation report temporary file');
+  if (options.placement === 'top-level' && !isObject(validation)) {
+    throw new Error('Top-level report publication requires an object');
+  }
+  const merged = options.placement === 'top-level'
+    ? { ...existing, ...(validation as UnknownRecord) }
+    : { ...existing, validation };
+
   try {
-    writeFileSync(temporary, `${JSON.stringify({ ...existing, validation }, null, 2)}\n`, { flag: 'wx' });
+    writeFileSync(temporary, `${JSON.stringify(merged, null, 2)}\n`, { flag: 'wx' });
     (options.rename ?? renameSync)(temporary, destination);
   } finally {
     try { unlinkSync(temporary); } catch { /* absent after successful rename */ }
   }
 }
 
-interface CliOptions { inputs: string[]; mode: ValidationMode; allowMissingEt: boolean; report: string }
+interface CliOptions {
+  inputs: string[];
+  evidence: string[];
+  mode: ValidationMode;
+  allowMissingEt: boolean;
+  report: string;
+  batchId?: string;
+}
 
 function parseCli(argv: readonly string[]): CliOptions {
+  argv = restoreNpmRunArgs(
+    argv,
+    ['--input', '--evidence', '--batch', '--mode', '--report'],
+    ['--allow-missing-et'],
+  );
   if (argv.length >= 3 && !argv.some((argument) => argument.startsWith('--'))) {
     const modeIndex = argv.findIndex((argument) => argument === 'batch' || argument === 'release');
     if (modeIndex < 1 || modeIndex !== argv.length - 2) throw new Error('Expected input glob(s), mode, and report path');
     return {
       inputs: argv.slice(0, modeIndex), mode: argv[modeIndex] as ValidationMode,
-      report: argv[modeIndex + 1], allowMissingEt: process.env.npm_config_allow_missing_et === 'true',
+      evidence: [], report: argv[modeIndex + 1],
+      allowMissingEt: process.env.npm_config_allow_missing_et === 'true',
     };
   }
   const inputs: string[] = [];
+  const evidence: string[] = [];
   let mode: ValidationMode | undefined;
   let report: string | undefined;
+  let batchId: string | undefined;
   let allowMissingEt = false;
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === '--input') inputs.push(argv[++index] ?? '');
+    else if (argument === '--evidence') evidence.push(argv[++index] ?? '');
+    else if (argument === '--batch') batchId = argv[++index] ?? '';
     else if (argument === '--mode') {
       const value = argv[++index];
       if (value !== 'batch' && value !== 'release') throw new Error('--mode must be batch or release');
@@ -389,10 +723,12 @@ function parseCli(argv: readonly string[]): CliOptions {
   if (inputs.length === 0 || inputs.some((value) => value === '')) throw new Error('--input is required');
   if (mode === undefined) throw new Error('--mode is required');
   if (report === undefined || report === '') throw new Error('--report is required');
-  return { inputs, mode, allowMissingEt, report };
+  if (evidence.some((value) => value === '')) throw new Error('--evidence requires a glob');
+  if (batchId === '') throw new Error('--batch requires an ID');
+  return { inputs, evidence, mode, allowMissingEt, report, ...(batchId === undefined ? {} : { batchId }) };
 }
 
-function reviewedIdsFromReport(path: string): string[] {
+export function reviewedIdsFromReport(path: string): string[] {
   const stat = lstatSync(resolve(path), { throwIfNoEntry: false });
   if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()) return [];
   const report: unknown = JSON.parse(readFileSync(path, 'utf8'));
@@ -409,17 +745,34 @@ function reviewedIdsFromReport(path: string): string[] {
     && (item as { reviewerReason: string }).reviewerReason.trim() !== '').map((item) => item.id);
 }
 
-export async function runValidationCli(argv = process.argv.slice(2)): Promise<number> {
+export async function runValidationCli(
+  argv = process.argv.slice(2),
+  preloadedEvidence?: ReadonlyMap<string, ContentEvidence>,
+): Promise<number> {
   const options = parseCli(argv);
   if (options.allowMissingEt && options.mode === 'release') throw new Error('--allow-missing-et is permitted only in batch mode');
-  const inputs = await readCsvInputs(options.inputs);
+  const inputs = (await readCsvInputs(options.inputs)).map((input) => ({
+    ...input,
+    file: reportInputPath(input.file),
+  }));
+  const evidenceByClueId = preloadedEvidence ?? (options.evidence.length === 0
+    ? undefined
+    : await readEvidenceInputs(options.evidence));
   const result = validateProductionContent(inputs, {
     mode: options.mode, allowMissingEt: options.allowMissingEt,
     reviewedExceptionIds: reviewedIdsFromReport(options.report),
+    ...(evidenceByClueId === undefined ? {} : { evidenceByClueId }),
+    ...(options.batchId === undefined ? {} : { batch: getProductionBatch(options.batchId) }),
   });
   publishValidationReport(options.report, result);
   process.stdout.write(`${JSON.stringify(result.summary)}\n`);
   return result.blocking ? 1 : 0;
+}
+
+function reportInputPath(file: string): string {
+  const local = relative(process.cwd(), file);
+  if (local === '' || local === '..' || local.startsWith(`..${sep}`) || isAbsolute(local)) return file;
+  return local.split(sep).join('/');
 }
 
 if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {

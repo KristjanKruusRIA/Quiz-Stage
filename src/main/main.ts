@@ -1,21 +1,33 @@
-import { app, BrowserWindow, dialog, ipcMain, protocol, screen, session } from 'electron';
-import squirrelStartup from 'electron-squirrel-startup';
+import { app, BrowserWindow, dialog, ipcMain, Menu, net, protocol, screen, session } from 'electron';
 import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { createApplication } from './application';
 import { acceleratedE2eTimerOptions } from './e2eTimerOptions';
 import { automaticDisplayMode } from './displayMode';
 import { registerIpc } from './ipc/registerIpc';
 import { IPC_CHANNELS } from './ipc/channels';
 import { openDatabase } from './persistence/database';
-import { migrateDatabase } from './persistence/migrations';
+import { migrateDatabase, readSchemaVersion } from './persistence/migrations';
 import { WindowManager, type DisplaySnapshot, type ManagedWindow } from './windows/windowManager';
 import { shouldInstallE2eNetworkGuard } from './e2eNetworkGuard';
 import { MediaService } from './media/mediaService';
 import { bundledMediaDirectory, mediaOverrideDirectory } from './media/mediaPaths';
 import { registerMediaProtocol } from './media/mediaProtocol';
 import type { MediaStatusEvent } from '../shared/media/contracts';
-import { registerOfflineRendererPolicy } from './offlineRenderer';
+import { resolveDevRendererRoot } from './offlineRenderer';
+import { registerAppProtocol, registerContentPolicy } from './security/contentPolicy';
+import {
+  exportDiagnosticsAfterUserChoice,
+  initializeLocalLogger,
+  type DiagnosticMetadata,
+  type LocalLogger,
+} from './diagnostics/localLogger';
+import {
+  ensurePortableDataWritable,
+  portableDirectoryPermissionError,
+  userDataDirectoryForMode,
+} from './persistence/userDataPath';
 
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
@@ -25,14 +37,43 @@ let windowManager: WindowManager | null = null;
 let disposeIpc: (() => void) | null = null;
 let disposeMediaProtocol: (() => void) | null = null;
 let disposeOfflineRendererPolicy: (() => void) | null = null;
+let disposeAppProtocol: (() => void) | null = null;
 let mediaService: MediaService | null = null;
+let localLogger: LocalLogger | null = null;
 const e2eExternalRequests: string[] = [];
+const squirrelStartup = process.argv.some((argument) => argument.startsWith('--squirrel-'));
 const displayListeners = new Map<(display: DisplaySnapshot) => void, (_event: Electron.Event, display: Electron.Display) => void>();
+const isDevRenderer = () => Boolean(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+const rendererHtmlPath = isDevRenderer()
+  ? path.join(app.getAppPath(), 'src', 'renderer', 'index.html')
+  : path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`);
 
 protocol.registerSchemesAsPrivileged([{
+  scheme: 'app',
+  privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true },
+}, {
   scheme: 'quiz-stage-media',
   privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true },
 }]);
+
+function installDiagnosticsMenu(logger: LocalLogger, metadata: DiagnosticMetadata): void {
+  const menu = Menu.buildFromTemplate([{
+    label: 'File',
+    submenu: [{
+      label: 'Export diagnostics…',
+      click: () => {
+        void exportDiagnosticsAfterUserChoice(async () => {
+          const result = await dialog.showSaveDialog({
+            defaultPath: 'quiz-stage-diagnostics.json',
+            filters: [{ name: 'Quiz Stage diagnostics', extensions: ['json'] }],
+          });
+          return result.canceled ? null : result.filePath ?? null;
+        }, logger, metadata);
+      },
+    }, { type: 'separator' }, { role: 'quit' }],
+  }]);
+  Menu.setApplicationMenu(menu);
+}
 
 function installE2eNetworkGuard(): void {
   if (!shouldInstallE2eNetworkGuard({
@@ -48,8 +89,9 @@ async function createWindows(): Promise<void> {
   windowManager ??= new WindowManager({
     createWindow: (options) => new BrowserWindow(options) as unknown as ManagedWindow,
     preloadPath: path.join(__dirname, 'preload.js'),
-    rendererHtmlPath: path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
-    ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
+    rendererHtmlPath,
+    ...(app.isPackaged ? { rendererUrl: 'app://renderer/index.html' } : {}),
+    ...(isDevRenderer() ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
     displayPort: {
       getAllDisplays: () => screen.getAllDisplays(),
       getPrimaryDisplay: () => screen.getPrimaryDisplay(),
@@ -92,6 +134,7 @@ async function createWindows(): Promise<void> {
     audioSettings: application.audioSettings,
     appearanceSettings: application.appearanceSettings,
     ...(mediaService === null ? {} : { mediaWarnings: mediaService }),
+    ...(localLogger === null ? {} : { diagnostics: localLogger }),
     csvDialogs: {
       chooseImportFile: async () => {
         const result = await dialog.showOpenDialog({
@@ -115,17 +158,41 @@ async function createWindows(): Promise<void> {
 }
 
 async function initialize(): Promise<void> {
-  const rendererRoot = path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}`);
-  disposeOfflineRendererPolicy = registerOfflineRendererPolicy(session.defaultSession, {
+  const rendererRoot = isDevRenderer()
+    ? resolveDevRendererRoot(app.getAppPath(), process.cwd())
+    : path.dirname(rendererHtmlPath);
+  const contentSecurityPolicyPath = isDevRenderer()
+    ? path.join(process.cwd(), 'src', 'renderer', 'index.html')
+    : rendererHtmlPath;
+  disposeAppProtocol = registerAppProtocol(
+    protocol,
+    rendererRoot,
+    async (filePath) => net.fetch(pathToFileURL(filePath).href),
+  );
+  disposeOfflineRendererPolicy = registerContentPolicy(session.defaultSession, {
     isPackaged: app.isPackaged,
     rendererRoot,
-    ...(MAIN_WINDOW_VITE_DEV_SERVER_URL ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
+    contentSecurityPolicyPath,
+    ...(isDevRenderer() ? { devServerUrl: MAIN_WINDOW_VITE_DEV_SERVER_URL } : {}),
     ...(shouldInstallE2eNetworkGuard({
       requested: process.argv.includes('--quiz-stage-e2e-network-guard'),
       isPackaged: app.isPackaged,
     }) ? { onBlockedRequest: (url: string) => e2eExternalRequests.push(url) } : {}),
   });
-  const userDataDirectory = app.getPath('userData');
+  const { portable, userDataDirectory } = userDataDirectoryForMode({
+    isPackaged: app.isPackaged,
+    resourcesPath: process.resourcesPath,
+    appUserDataDirectory: app.getPath('userData'),
+    executablePath: app.getPath('exe'),
+  });
+  if (portable) {
+    try {
+      ensurePortableDataWritable({ userDataDirectory });
+    } catch {
+      throw portableDirectoryPermissionError();
+    }
+  }
+  localLogger = initializeLocalLogger({ logDirectory: path.join(userDataDirectory, 'logs') });
   const databasePath = path.join(userDataDirectory, 'quiz-stage.sqlite');
   const databaseEntry = lstatSync(databasePath, { throwIfNoEntry: false });
   if (databaseEntry === undefined) {
@@ -137,6 +204,10 @@ async function initialize(): Promise<void> {
   }
   const database = openDatabase({ filePath: databasePath });
   migrateDatabase(database, path.join(userDataDirectory, 'backups'));
+  installDiagnosticsMenu(localLogger, {
+    appVersion: app.getVersion(),
+    schemaVersion: readSchemaVersion(database),
+  });
   application = createApplication(database, acceleratedE2eTimerOptions(
     process.argv.includes('--quiz-stage-e2e-clock'),
     app.isPackaged,
@@ -146,7 +217,6 @@ async function initialize(): Promise<void> {
     resourcesPath: process.resourcesPath,
     workingDirectory: process.cwd(),
   });
-  const portable = app.isPackaged && lstatSync(path.join(process.resourcesPath, 'portable.flag'), { throwIfNoEntry: false })?.isFile() === true;
   const sendMediaStatus = (event: MediaStatusEvent) => {
     const webContents = windowManager?.getWindows().hostWindow?.webContents;
     if (webContents === undefined || webContents.isDestroyed()) return;
@@ -181,7 +251,10 @@ if (squirrelStartup) {
     disposeMediaProtocol = null;
     disposeOfflineRendererPolicy?.();
     disposeOfflineRendererPolicy = null;
+    disposeAppProtocol?.();
+    disposeAppProtocol = null;
     mediaService = null;
+    localLogger = null;
     windowManager?.dispose();
     windowManager = null;
     application?.close();

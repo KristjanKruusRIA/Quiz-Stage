@@ -1,0 +1,55 @@
+name: release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  windows-release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.15.0
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Cache Playwright browser
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/AppData/Local/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install chromium
+      - name: Run CI gate
+        run: |
+          npm run lint
+          npm run typecheck
+          npm run test:run
+          npm run verify:content
+          npm run test:e2e
+      - name: Build installer and portable packages
+        run: |
+          npm run make:installer
+          npm run make:portable
+      - name: Run packaged smoke checks
+        run: |
+          pwsh -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both
+      - name: Verify upgrade fixture migration
+        run: |
+          pwsh -File scripts/verify-upgrade.ps1 -PackageRoot out/make
+      - name: Generate release checksums
+        run: pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts
+          path: |
+            out/make/installer/QuizStageSetup.exe
+            out/make/portable/QuizStage-win32-x64.zip
+            out/make/release-checksums.txt

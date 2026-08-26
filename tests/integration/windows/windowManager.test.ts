@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { WindowManager, type ManagedWindow, type WindowFactory } from '../../../src/main/windows/windowManager';
 
-function harness() {
+function harness(rendererUrl?: string) {
   const options: unknown[] = [];
   let nextId = 1;
   const windows: ManagedWindow[] = [];
@@ -31,6 +31,7 @@ function harness() {
     createWindow: factory,
     preloadPath: 'C:/app/preload.js',
     rendererHtmlPath: 'C:/app/index.html',
+    ...(rendererUrl === undefined ? {} : { rendererUrl }),
   });
   return {
     manager,
@@ -75,6 +76,14 @@ describe('WindowManager', () => {
     ]);
     expect(windows[0].webContents.setWindowOpenHandler).toHaveBeenCalled();
     expect(windows[1].webContents.setWindowOpenHandler).toHaveBeenCalled();
+  });
+
+  it('loads the privileged renderer URL when packaged', () => {
+    const { manager, windows } = harness('app://renderer/index.html');
+    manager.create('single');
+
+    expect(windows[0].loadURL).toHaveBeenCalledWith('app://renderer/index.html');
+    expect(windows[0].loadFile).not.toHaveBeenCalled();
   });
 
   it('automatically recreates a closed host while preserving the live public window', async () => {

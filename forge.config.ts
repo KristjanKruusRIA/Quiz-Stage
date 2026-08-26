@@ -1,10 +1,51 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { FuseVersion, FuseV1Options } from '@electron/fuses';
 import type { ForgeConfig } from '@electron-forge/shared-types';
 
 process.env.VITE_CONFIG_NATIVE_IGNORE_WARNING = 'true';
+const packageProfile = process.env.QUIZ_STAGE_PACKAGE_PROFILE ?? 'both';
+const iconPath = existsSync(join(process.cwd(), 'resources', 'icon.ico'))
+  ? join(process.cwd(), 'resources', 'icon.ico')
+  : undefined;
+
+const fuseConfig = {
+  version: FuseVersion.V1,
+  [FuseV1Options.RunAsNode]: false,
+  [FuseV1Options.EnableNodeOptionsEnvironmentVariable]: false,
+  [FuseV1Options.EnableNodeCliInspectArguments]: false,
+  [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
+  [FuseV1Options.OnlyLoadAppFromAsar]: true,
+};
+
+const squirrelMaker = {
+  name: '@electron-forge/maker-squirrel',
+  config: {
+    name: 'QuizStage',
+    title: 'Quiz Stage',
+    exe: 'Quiz Stage.exe',
+    setupExe: 'QuizStageSetup.exe',
+    ...(iconPath === undefined ? {} : { setupIcon: iconPath }),
+  },
+};
+
+const zipMaker = {
+  name: '@electron-forge/maker-zip',
+  config: {},
+  platforms: ['win32'],
+};
+
+const makers = packageProfile === 'installer'
+  ? [squirrelMaker]
+  : packageProfile === 'portable'
+    ? [zipMaker]
+    : [squirrelMaker, zipMaker];
 
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
+    ...(iconPath === undefined ? {} : { icon: iconPath }),
     extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media'],
     ignore: (file) => {
       if (!file) return false;
@@ -15,18 +56,12 @@ const config: ForgeConfig = {
       );
     },
   },
-  makers: [
-    {
-      name: '@electron-forge/maker-squirrel',
-      config: {},
-    },
-    {
-      name: '@electron-forge/maker-zip',
-      config: {},
-      platforms: ['win32'],
-    },
-  ],
+  makers,
   plugins: [
+    {
+      name: '@electron-forge/plugin-fuses',
+      config: fuseConfig,
+    },
     {
       name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
