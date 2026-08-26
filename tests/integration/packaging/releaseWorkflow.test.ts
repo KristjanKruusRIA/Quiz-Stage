@@ -42,7 +42,6 @@ describe('Windows release workflow', () => {
     const upgradeData = readFileSync('scripts/verify-upgrade-data.ts', 'utf8');
 
     expect(smoke).toContain("installer\\QuizStageSetup.exe");
-    expect(smoke).toContain("$_.Name -eq 'Quiz Stage.exe'");
     expect(upgrade).toContain("portable\\QuizStage-win32-x64.zip");
     expect(upgrade).toContain('Start-Process -FilePath $executable');
     expect(upgrade).toContain("Join-Path $fixtureCopy 'backups'");

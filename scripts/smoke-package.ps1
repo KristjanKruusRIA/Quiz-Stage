@@ -72,12 +72,21 @@ function Invoke-InstallerPackage {
     throw "Installer package not found at $setup"
   }
 
-  $releasePackage = Get-ChildItem -Path (Join-Path $Root 'squirrel.windows') -Filter '*-full.nupkg' -Recurse | Select-Object -First 1
-  if ($releasePackage -eq $null) {
-    throw "Installer release package not found under $(Join-Path $Root 'squirrel.windows')"
+  $releasePackages = @(Get-ChildItem -Path (Join-Path $Root 'squirrel.windows') -Filter '*-full.nupkg' -Recurse)
+  if ($releasePackages.Count -ne 1) {
+    throw "Expected exactly one Squirrel release package under $(Join-Path $Root 'squirrel.windows'); found $($releasePackages.Count)"
   }
-  $applicationId = $releasePackage.BaseName -replace '-\d+\.\d+\.\d+-full$', ''
+  $releasePackage = $releasePackages[0]
+  $packageNameMatch = [regex]::Match($releasePackage.BaseName, '^(?<ApplicationId>.+)-\d+\.\d+\.\d+-full$')
+  if (-not $packageNameMatch.Success) {
+    throw "Invalid Squirrel release package name: $($releasePackage.Name)"
+  }
+  $applicationId = $packageNameMatch.Groups['ApplicationId'].Value
   $installRoot = Join-Path $env:LOCALAPPDATA $applicationId
+  $resolver = Join-Path $PSScriptRoot 'resolve-installer-executable.ps1'
+  if (-not (Test-Path -LiteralPath $resolver -PathType Leaf)) {
+    throw "Installer executable resolver not found at $resolver"
+  }
   if (Test-Path -LiteralPath $installRoot) {
     if (Test-Path -LiteralPath (Join-Path $installRoot '.dead')) {
       Remove-Item -Path $installRoot -Recurse -Force
@@ -95,19 +104,22 @@ function Invoke-InstallerPackage {
       throw "Install failed with exit code $($installProcess.ExitCode)"
     }
     $installedExe = $null
+    $resolveError = $null
     for ($attempt = 0; $attempt -lt 60 -and $installedExe -eq $null; $attempt += 1) {
-      if (Test-Path -LiteralPath $installRoot) {
-        $installedExe = Get-ChildItem -Path $installRoot -Filter '*.exe' -Recurse |
-          Where-Object { $_.Name -eq 'Quiz Stage.exe' } |
-          Select-Object -First 1
+      try {
+        $installedExe = & $resolver -InstallRoot $installRoot -ReleasePackageName $releasePackage.Name
       }
-      if ($installedExe -eq $null) { Start-Sleep -Seconds 1 }
+      catch {
+        if ($_.Exception.Message -notlike 'INSTALLED_EXECUTABLE_MISSING:*') { throw }
+        $resolveError = $_
+        Start-Sleep -Seconds 1
+      }
     }
     if ($installedExe -eq $null) {
-      throw "No installed executable found under $installRoot"
+      throw $resolveError
     }
 
-    Invoke-PackageSmoke -Executable $installedExe.FullName -ModeLabel 'Installer'
+    Invoke-PackageSmoke -Executable $installedExe -ModeLabel 'Installer'
 
     Get-Process | Where-Object { $_.Path -like "$installRoot*" } | Stop-Process -Force
     $updater = Join-Path $installRoot 'Update.exe'

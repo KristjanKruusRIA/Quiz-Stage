@@ -41,7 +41,7 @@ export const et = {
   'settings.saveError': 'Seadeid ei saanud salvestada.',
   'settings.loading': 'Laadin heliseadeid…',
   'settings.loadError': 'Seadeid ei saanud laadida.',
-  'settings.mediaWarning': 'Heli „{asset}“ asendust ei saanud kasutada. Selle asemel mängib algne näidisheli.',
+  'settings.mediaWarning': 'Heli „{asset}“ asendust ei saanud kasutada. Selle asemel mängib rakendusega kaasas olev heli.',
   'settings.asset.opening': 'avamisheli',
   'settings.asset.round-transition': 'vooruvahetuse heli',
   'settings.asset.daily-double': 'Daily Double’i heli',

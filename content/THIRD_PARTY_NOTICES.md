@@ -1,5 +1,9 @@
 # Third Party Notices
 
+## Freesound audio
+
+The bundled audio notice ships beside the media manifest at `resources/media/THIRD_PARTY_NOTICES.md`.
+
 ## Open Trivia Database (OpenTDB)
 
 - Source: https://opentdb.com/

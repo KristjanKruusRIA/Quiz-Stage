@@ -28,9 +28,9 @@ test('persists audio settings and serves bundled fallback through the pathless p
       const value = await fetch('quiz-stage-media://asset/opening');
       await fetch('quiz-stage-media://asset/winner');
       const head = await fetch('quiz-stage-media://asset/opening', { method: 'HEAD' });
-      const invalidRange = await fetch('quiz-stage-media://asset/opening', { headers: { Range: 'bytes=999999-' } });
       const rejectedMethod = await fetch('quiz-stage-media://asset/opening', { method: 'POST' });
       const bytes = new Uint8Array(await value.arrayBuffer());
+      const invalidRange = await fetch('quiz-stage-media://asset/opening', { headers: { Range: `bytes=${bytes.length}-` } });
       const audio = new Audio('quiz-stage-media://asset/opening');
       const duration = await new Promise<number>((resolve, reject) => {
         audio.addEventListener('loadedmetadata', () => resolve(audio.duration), { once: true });
@@ -53,9 +53,9 @@ test('persists audio settings and serves bundled fallback through the pathless p
       range: { status: 416, accept: 'bytes', length: '0', mime: 'audio/wav' },
       method: { status: 405, allow: 'GET, HEAD' },
     });
-    expect(response.duration).toBeCloseTo(2.5, 1);
-    await expect(page.getByRole('alert', { name: 'Opening audio' })).toContainText('original placeholder');
-    await expect(page.getByRole('alert', { name: 'Winner audio' })).toContainText('original placeholder');
+    expect(response.duration).toBeCloseTo(8.022, 1);
+    await expect(page.getByRole('alert', { name: 'Opening audio' })).toContainText('bundled audio');
+    await expect(page.getByRole('alert', { name: 'Winner audio' })).toContainText('bundled audio');
     copyFileSync(path.join(process.cwd(), 'resources', 'media', 'audio', 'opening.wav'), path.join(media, 'opening.wav'));
     await page.evaluate(() => fetch('quiz-stage-media://asset/opening').then((result) => result.arrayBuffer()));
     await expect(page.getByRole('alert', { name: 'Opening audio' })).toHaveCount(0);
