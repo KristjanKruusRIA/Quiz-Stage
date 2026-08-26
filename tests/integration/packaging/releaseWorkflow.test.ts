@@ -24,7 +24,7 @@ describe('release workflow', () => {
 
     for (const workflow of [ci, release]) {
       expect(workflow).toContain('quality:');
-      expect(workflow).toContain('runs-on: windows-latest');
+      expect(workflow).toContain('runs-on: windows-2022');
       expect(workflow).toContain('node-version: 24.15.0');
       for (const command of [
         'npm ci',
@@ -50,7 +50,7 @@ describe('release workflow', () => {
     const release = readFileSync('.github/workflows/release.yml', 'utf8');
 
     for (const [runner, target] of [
-      ['windows-latest', 'windows-x64'],
+      ['windows-2022', 'windows-x64'],
       ['macos-15', 'macos-arm64'],
       ['macos-15-intel', 'macos-x64'],
       ['ubuntu-24.04', 'ubuntu-x64'],

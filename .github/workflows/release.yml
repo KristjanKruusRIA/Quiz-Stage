@@ -8,7 +8,7 @@ on:
 
 jobs:
   quality:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,7 +38,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: windows-latest
+          - runner: windows-2022
             target: windows-x64
             artifactName: quiz-stage-windows-x64
           - runner: macos-15
