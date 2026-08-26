@@ -1,8 +1,21 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
+const hashTest = vi.hoisted(() => ({ forbiddenPath: '' }));
+
+vi.mock('node:fs', async (importOriginal) => {
+  const fs = await importOriginal<typeof import('node:fs')>();
+  return {
+    ...fs,
+    readFileSync: (...args: Parameters<typeof fs.readFileSync>) => {
+      if (args[0] === hashTest.forbiddenPath) throw new Error('WHOLE_FILE_READ_FORBIDDEN');
+      return fs.readFileSync(...args);
+    },
+  };
+});
 import { checksumLines, writeReleaseChecksums } from '../../../scripts/write-release-checksums';
 import { releaseTargetForId, type ReleaseTarget } from '../../../scripts/release/targets';
 
@@ -73,6 +86,7 @@ describe('release checksums', () => {
     const root = temporaryRoot();
     const packageRoot = path.join(root, 'out', 'make');
     const target = releaseTargetForId('windows-x64');
+    createFile(path.join(packageRoot, 'installer', 'QuizStageSetup.exe'), 'installer');
     const duplicateTarget: ReleaseTarget = {
       ...target,
       artifacts: [target.artifacts[0]!, target.artifacts[0]!],
@@ -86,6 +100,7 @@ describe('release checksums', () => {
   it('rejects an expected artifact that resolves outside the package root', () => {
     const root = temporaryRoot();
     const packageRoot = path.join(root, 'out', 'make');
+    mkdirSync(packageRoot, { recursive: true });
     createFile(path.join(root, 'out', 'outside.exe'), 'outside');
     const target: ReleaseTarget = {
       ...releaseTargetForId('windows-x64'),
@@ -95,6 +110,89 @@ describe('release checksums', () => {
     expect(() => writeReleaseChecksums(target, packageRoot)).toThrow(
       'RELEASE_ARTIFACT_OUTSIDE_PACKAGE_ROOT:windows-x64:../outside.exe',
     );
+  });
+
+  it('rejects a symbolic-link artifact whose canonical path escapes the package root', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    const outside = path.join(root, 'outside.exe');
+    const installer = path.join(packageRoot, 'installer', 'QuizStageSetup.exe');
+    createFile(outside, 'outside');
+    mkdirSync(path.dirname(installer), { recursive: true });
+    symlinkSync(outside, installer, 'file');
+    createFile(path.join(packageRoot, 'portable', 'QuizStage-win32-x64.zip'), 'portable');
+
+    expect(() => writeReleaseChecksums(releaseTargetForId('windows-x64'), packageRoot)).toThrow(
+      'RELEASE_ARTIFACT_OUTSIDE_PACKAGE_ROOT:windows-x64:installer/QuizStageSetup.exe',
+    );
+  });
+
+  it.each([
+    'portable/./QuizStage-win32-x64.zip',
+    'portable\\QuizStage-win32-x64.zip',
+  ])('rejects duplicate expected artifacts after resolving %s aliases', (alias) => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    const artifactPath = path.join(packageRoot, 'portable', 'QuizStage-win32-x64.zip');
+    createFile(artifactPath, 'portable');
+    const target: ReleaseTarget = {
+      ...releaseTargetForId('windows-x64'),
+      artifacts: [
+        { kind: 'installer', relativePath: 'portable/QuizStage-win32-x64.zip' },
+        { kind: 'portable', relativePath: alias },
+      ],
+    };
+
+    expect(() => writeReleaseChecksums(target, packageRoot)).toThrow(
+      'DUPLICATE_RELEASE_ARTIFACT:windows-x64:portable/QuizStage-win32-x64.zip',
+    );
+  });
+
+  it('rejects the generated checksum file and leaves it unchanged across repeated calls', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    createFile(destination, 'previous checksum\n');
+    const target: ReleaseTarget = {
+      ...releaseTargetForId('windows-x64'),
+      artifacts: [{ kind: 'installer', relativePath: 'release-checksums-windows-x64.txt' }],
+    };
+
+    const write = () => writeReleaseChecksums(target, packageRoot);
+    expect(write).toThrow('RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:release-checksums-windows-x64.txt');
+    expect(write).toThrow('RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:release-checksums-windows-x64.txt');
+    expect(readFileSync(destination, 'utf8')).toBe('previous checksum\n');
+  });
+
+  it('rejects an absent generated checksum file before creating it', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    mkdirSync(packageRoot, { recursive: true });
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    const target: ReleaseTarget = {
+      ...releaseTargetForId('windows-x64'),
+      artifacts: [{ kind: 'installer', relativePath: 'release-checksums-windows-x64.txt' }],
+    };
+
+    const write = () => writeReleaseChecksums(target, packageRoot);
+    expect(write).toThrow('RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:release-checksums-windows-x64.txt');
+    expect(write).toThrow('RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:release-checksums-windows-x64.txt');
+    expect(existsSync(destination)).toBe(false);
+  });
+
+  it('hashes multi-chunk binary artifacts without reading the whole file', () => {
+    const root = temporaryRoot();
+    const artifact = path.join(root, 'large.zip');
+    const contents = Buffer.alloc(3 * 64 * 1024 + 17);
+    for (let index = 0; index < contents.length; index += 1) contents[index] = index % 251;
+    writeFileSync(artifact, contents);
+    hashTest.forbiddenPath = artifact;
+
+    try {
+      expect(checksumLines([artifact])).toEqual([`${createHash('sha256').update(contents).digest('hex')}  large.zip`]);
+    } finally {
+      hashTest.forbiddenPath = '';
+    }
   });
 
   it('keeps the Windows alias and PowerShell wrapper on the shared TypeScript command', () => {
