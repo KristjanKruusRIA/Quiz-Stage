@@ -1,6 +1,6 @@
 # Quiz Stage
 
-Quiz Stage is a Windows desktop Jeopardy-style quiz host app built with Electron, React, and TypeScript. It runs offline, supports English + Estonian matches, and supports one-screen and dual-screen hosting.
+Quiz Stage is a desktop Jeopardy-style quiz host app built with Electron, React, and TypeScript. It runs offline, supports English + Estonian matches, and supports one-screen and dual-screen hosting.
 
 ## Run from source
 
@@ -24,6 +24,36 @@ These personal-use Windows x64 artifacts are unsigned, so Windows SmartScreen ma
 npm run make:installer
 npm run make:portable
 ```
+
+## macOS packages
+
+- Apple Silicon Macs use the arm64 `QuizStage-darwin-arm64.zip` download.
+- Intel Macs use the x64 `QuizStage-darwin-x64.zip` download.
+
+Double-click the ZIP to extract `Quiz Stage.app`, then optionally move the app to `/Applications`. These macOS ZIPs are unsigned and unnotarized. For the one-time first launch, try to open the app, then open **System Settings** > **Privacy & Security**, click **Open Anyway**, authenticate, and confirm the launch. See Apple's [Open an app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) guidance.
+
+macOS stores Quiz Stage data in the standard per-user `~/Library/Application Support/Quiz Stage` location. The extracted application has no adjacent portable marker or data directory.
+
+## Ubuntu packages
+
+Ubuntu x64 downloads are available as `quiz-stage_0.1.0_amd64.deb` and `QuizStage-linux-x64.zip`.
+
+Install or remove the Debian package with:
+
+```bash
+sudo apt install ./quiz-stage_0.1.0_amd64.deb
+sudo apt remove quiz-stage
+```
+
+To run the ZIP package, extract it and launch its executable:
+
+```bash
+unzip QuizStage-linux-x64.zip
+cd Quiz\ Stage-linux-x64
+./quiz-stage
+```
+
+Linux stores Quiz Stage data in the standard per-user `~/.config/Quiz Stage` location. The extracted application has no adjacent portable marker or data directory.
 
 ## Run checks
 
@@ -55,13 +85,13 @@ If a second display is available, quiz board and host controls split into public
 - Use **Content Library** for bilingual CSV import, export, report/re-enable, and edits.
 - Place override `.wav` files under user media folder:
   - Installed: per-user app data `media` directory
-  - Portable: `<package>/UserData/media`
+  - Windows portable: `<package>/UserData/media`
 - See `docs/media-overrides.md` for exact filenames, durations, and supported format.
 
 ## Upgrades
 
 - Installer upgrades reuse the same installed app-data directory.
-- Portable upgrades require copying previous `UserData` into the new extracted package.
+- Windows portable upgrades require copying previous `UserData` into the new extracted package.
 - Portable upgrade steps are documented in `docs/portable-upgrades.md`.
 
 ## Offline behavior

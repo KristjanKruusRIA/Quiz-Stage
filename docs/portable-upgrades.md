@@ -1,6 +1,6 @@
 # Portable Upgrade Guide
 
-Portable releases write user data in `<extracted executable>/UserData` and rely on an adjacent
+Windows portable releases write user data in `<extracted executable>/UserData` and rely on an adjacent
 `resources/portable.flag` marker to switch from per-user data mode.
 
 ## Upgrade procedure
@@ -17,3 +17,7 @@ Portable releases write user data in `<extracted executable>/UserData` and rely 
 6. Keep the old folder untouched until migration is verified.
 
 If verification fails, restore the old folder and retry from a clean extract.
+
+## macOS and Linux ZIP upgrades
+
+macOS and Linux ZIPs keep user data in Electron's standard per-user location outside the extracted application. Replace the extracted application files to upgrade; no data migration is needed. These ZIPs do not use an adjacent `UserData` directory or `portable.flag` marker.
