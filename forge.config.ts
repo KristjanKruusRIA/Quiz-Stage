@@ -48,6 +48,7 @@ const debMaker = {
   config: {
     options: {
       name: 'quiz-stage',
+      bin: 'quiz-stage',
       productName: 'Quiz Stage',
       genericName: 'Quiz game',
       categories: ['Game'],

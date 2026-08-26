@@ -121,6 +121,12 @@ describe('package contents', () => {
     expect(main).toContain("path.join(process.resourcesPath, 'media', 'icon-source.png')");
   });
 
+  it('points the Debian launcher at the packaged Linux executable', () => {
+    const forgeConfig = readFileSync('forge.config.ts', 'utf8');
+
+    expect(forgeConfig).toContain("bin: 'quiz-stage'");
+  });
+
   it('exposes the native platform build entry points', () => {
     const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
 
