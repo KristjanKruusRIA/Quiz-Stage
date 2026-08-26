@@ -50,11 +50,14 @@ describe('Windows release workflow', () => {
 
   it('runs packaged smoke only from the post-package smoke gate', () => {
     const packagedSmoke = readFileSync('tests/e2e/package-smoke.spec.ts', 'utf8');
+    const portableSmoke = readFileSync('scripts/smoke-portable.ts', 'utf8');
     const smoke = readFileSync('scripts/smoke-package.ps1', 'utf8');
 
     expect(packagedSmoke).not.toContain('test.skip(');
     expect(packagedSmoke).not.toContain("process.platform === 'win32'");
     expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
+    expect(portableSmoke).not.toContain('portableSmokeCliArguments');
+    expect(smoke).toContain('npm.cmd run smoke:portable -- -- --target windows-x64 --archive');
     expect(smoke).toContain('playwright test tests/e2e/package-smoke.spec.ts');
   });
 

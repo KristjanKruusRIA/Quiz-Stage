@@ -5,6 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { packagedResourcesDirectory } from '../../scripts/release/packageLayout';
+import { stopPackagedProcess, waitForPackagedConnection } from '../../scripts/release/packagedProcess';
 import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
 
@@ -44,38 +45,27 @@ async function availablePort(): Promise<number> {
 
 async function launchPackaged(executable: string, userData: string): Promise<{ browser: Browser; page: Page; process: ChildProcess }> {
   const port = await availablePort();
-  const process = spawn(executable, [
+  const applicationProcess = spawn(executable, [
     `--remote-debugging-port=${port}`,
     `--user-data-dir=${userData}`,
     '--quiz-stage-e2e-clock',
     '--quiz-stage-e2e-network-guard',
-  ], { cwd: path.dirname(executable), stdio: 'ignore', windowsHide: true });
-  for (let attempt = 0; attempt < 100; attempt += 1) {
-    if (process.exitCode !== null) throw new Error(`PACKAGED_APP_EXITED:${process.exitCode}`);
-    try {
-      const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
-      const page = browser.contexts().flatMap((context) => context.pages()).at(-1);
-      if (page !== undefined) return { browser, page, process };
+  ], {
+    cwd: path.dirname(executable),
+    detached: process.platform !== 'win32',
+    stdio: 'ignore',
+    windowsHide: true,
+  });
+  const connected = await waitForPackagedConnection(applicationProcess, async () => {
+    const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
+    const page = browser.contexts().flatMap((context) => context.pages()).at(-1);
+    if (page === undefined) {
       await browser.close();
-    } catch { /* Chromium has not exposed the CDP endpoint yet. */ }
-    await new Promise((resolve) => setTimeout(resolve, 100));
-  }
-  process.kill();
-  throw new Error('PACKAGED_APP_CDP_TIMEOUT');
-}
-
-async function stopPackaged(process: ChildProcess): Promise<void> {
-  if (process.exitCode !== null) return;
-  const exited = new Promise<void>((resolve) => process.once('exit', () => resolve()));
-  process.kill();
-  const stopped = await Promise.race([
-    exited.then(() => true),
-    new Promise<false>((resolve) => setTimeout(() => resolve(false), 5_000)),
-  ]);
-  if (!stopped && process.exitCode === null) {
-    process.kill('SIGKILL');
-    await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 5_000))]);
-  }
+      throw new Error('PACKAGED_PAGE_NOT_READY');
+    }
+    return { browser, page };
+  });
+  return { ...connected, process: applicationProcess };
 }
 
 async function playTileCorrect(page: Page): Promise<void> {
@@ -158,8 +148,8 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
 
     expect(externalRequests).toEqual([]);
   } finally {
+    if (applicationProcess !== null) await stopPackagedProcess(applicationProcess);
     await browser?.close().catch(() => undefined);
-    if (applicationProcess !== null) await stopPackaged(applicationProcess);
     if (shouldCleanupUserData) rmSync(userData, { recursive: true, force: true });
   }
 });

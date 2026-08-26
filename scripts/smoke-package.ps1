@@ -129,7 +129,7 @@ if ($packageRoot -eq $null) {
 if ($Mode -eq 'Portable' -or $Mode -eq 'Both') {
   $portableArchive = Join-Path $packageRoot 'portable\QuizStage-win32-x64.zip'
   Write-Host "Running portable package smoke against $portableArchive"
-  & npm.cmd run smoke:portable -- --target windows-x64 --archive $portableArchive
+  & npm.cmd run smoke:portable -- -- --target windows-x64 --archive $portableArchive
   if ($LASTEXITCODE -ne 0) { throw 'Portable package smoke failed' }
 }
 

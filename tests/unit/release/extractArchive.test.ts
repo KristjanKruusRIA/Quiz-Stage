@@ -1,11 +1,25 @@
-import { mkdtempSync, rmSync } from 'node:fs';
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  renameSync,
+  rmSync,
+  symlinkSync,
+  writeFileSync,
+} from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { archiveExtractionCommand } from '../../../scripts/release/extractArchive';
 import {
+  archiveExtractionCommand,
+  createPackageTemporaryDirectory,
+  removePackageTemporaryDirectory,
+} from '../../../scripts/release/extractArchive';
+import {
+  createPackageTemporaryDirectories,
   parsePortableSmokeArguments,
-  portableSmokeCliArguments,
+  validatedPackagedExecutable,
 } from '../../../scripts/smoke-portable';
 
 const temporaryDirectories: string[] = [];
@@ -86,21 +100,78 @@ describe('portable smoke arguments', () => {
   it.each([
     { args: [] },
     { args: ['--target', 'windows-x64'] },
+    { args: ['windows-x64', 'package.zip'] },
     { args: ['--target', 'windows-x64', '--archive', 'package.zip', '--extra'] },
     { args: ['--archive', 'package.zip', '--target', 'windows-x64'] },
   ])('rejects malformed arguments: $args', ({ args }) => {
     expect(() => parsePortableSmokeArguments(args)).toThrow('EXPECTED_PORTABLE_SMOKE_ARGUMENTS');
   });
 
-  it('restores named arguments consumed by npm 11 for the smoke lifecycle only', () => {
-    const positional = ['windows-x64', 'out/make/portable/Quiz Stage-win32-x64.zip'];
-
-    expect(portableSmokeCliArguments(positional, 'smoke:portable')).toEqual([
+  it('retains named arguments through npm without deprecated config warnings', () => {
+    const npmCli = process.env.npm_execpath;
+    expect(npmCli).toBeDefined();
+    const result = spawnSync(process.execPath, [
+      npmCli!,
+      'run',
+      'smoke:portable',
+      '--',
+      '--',
       '--target',
-      positional[0],
+      'definitely-invalid',
       '--archive',
-      positional[1],
-    ]);
-    expect(portableSmokeCliArguments(positional, undefined)).toEqual(positional);
+      'definitely-missing.zip',
+    ], { cwd: process.cwd(), encoding: 'utf8' });
+    const output = `${result.stdout}${result.stderr}`;
+
+    expect(result.status).toBe(1);
+    expect(output).toContain('UNKNOWN_RELEASE_TARGET:definitely-invalid');
+    expect(output).not.toContain('Unknown cli config');
+  }, 15_000);
+});
+
+describe('portable executable containment', () => {
+  it('rejects an executable reached through a symlink outside the extraction directory', () => {
+    const extractionDirectory = packageTemporaryDirectory();
+    const outsideDirectory = packageTemporaryDirectory();
+    const outsideExecutable = path.join(outsideDirectory, 'quiz-stage');
+    writeFileSync(outsideExecutable, 'outside');
+    const linkedDirectory = path.join(extractionDirectory, 'linked-application');
+    mkdirSync(path.dirname(linkedDirectory), { recursive: true });
+    symlinkSync(outsideDirectory, linkedDirectory, process.platform === 'win32' ? 'junction' : 'dir');
+
+    expect(() => validatedPackagedExecutable(
+      extractionDirectory,
+      path.join(linkedDirectory, 'quiz-stage'),
+    )).toThrow('UNSAFE_PACKAGED_EXECUTABLE');
+  });
+});
+
+describe('owned package temporary directories', () => {
+  it('refuses to remove a replacement at an owned pathname', () => {
+    const owned = createPackageTemporaryDirectory('quiz-stage-package-test-owned-');
+    const original = `${owned.path}-original`;
+    renameSync(owned.path, original);
+    mkdirSync(owned.path);
+    temporaryDirectories.push(owned.path, original);
+
+    expect(() => removePackageTemporaryDirectory(owned))
+      .toThrow('PACKAGE_TEMP_DIRECTORY_IDENTITY_CHANGED');
+    expect(existsSync(owned.path)).toBe(true);
+  });
+
+  it('removes the first directory when creation of the second fails', () => {
+    let firstDirectory: string | undefined;
+    let creationCount = 0;
+
+    expect(() => createPackageTemporaryDirectories((prefix) => {
+      creationCount += 1;
+      if (creationCount === 2) throw new Error('SECOND_TEMP_DIRECTORY_FAILED');
+      const owned = createPackageTemporaryDirectory(prefix);
+      firstDirectory = owned.path;
+      return owned;
+    })).toThrow('SECOND_TEMP_DIRECTORY_FAILED');
+
+    expect(firstDirectory).toBeDefined();
+    expect(existsSync(firstDirectory!)).toBe(false);
   });
 });
