@@ -1,4 +1,3 @@
-import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { FuseVersion, FuseV1Options } from '@electron/fuses';
 import type { ForgeConfig } from '@electron-forge/shared-types';
@@ -10,9 +9,12 @@ const packageProfile: PackageProfile = process.env.QUIZ_STAGE_PACKAGE_PROFILE ==
   : process.env.QUIZ_STAGE_PACKAGE_PROFILE === 'portable'
     ? 'portable'
     : 'all';
-const iconPath = process.platform === 'win32' && existsSync(join(process.cwd(), 'resources', 'media', 'icon.ico'))
-  ? join(process.cwd(), 'resources', 'media', 'icon.ico')
-  : undefined;
+const windowsIconPath = join(process.cwd(), 'resources', 'media', 'icon.ico');
+const packagerIconPath = process.platform === 'win32'
+  ? windowsIconPath
+  : process.platform === 'darwin'
+    ? join(process.cwd(), '.cache', 'icons', 'QuizStage.icns')
+    : undefined;
 
 const fuseConfig = {
   version: FuseVersion.V1,
@@ -30,7 +32,7 @@ const squirrelMaker = {
     title: 'Quiz Stage',
     exe: 'Quiz Stage.exe',
     setupExe: 'QuizStageSetup.exe',
-    ...(iconPath === undefined ? {} : { setupIcon: iconPath }),
+    setupIcon: windowsIconPath,
   },
   platforms: ['win32'],
 };
@@ -68,7 +70,7 @@ const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
     electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
-    ...(iconPath === undefined ? {} : { icon: iconPath }),
+    ...(packagerIconPath === undefined ? {} : { icon: packagerIconPath }),
     extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media'],
     ignore: (file) => {
       if (!file) return false;

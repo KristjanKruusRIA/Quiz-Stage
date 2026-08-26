@@ -76,6 +76,27 @@ describe('package contents', () => {
     expect(packageJson).toContain('"productName": "Quiz Stage"');
   });
 
+  it('selects native package and runtime icons for each platform', () => {
+    const forgeConfig = readFileSync('forge.config.ts', 'utf8');
+    const main = readFileSync('src/main/main.ts', 'utf8');
+
+    expect(forgeConfig).toContain("'.cache', 'icons', 'QuizStage.icns'");
+    expect(forgeConfig).toContain("'resources', 'media', 'icon.ico'");
+    expect(forgeConfig).toContain("'resources', 'media', 'icon-source.png'");
+    expect(main).toContain("path.join(process.resourcesPath, 'media', 'icon-source.png')");
+  });
+
+  it('exposes the native platform build entry points', () => {
+    const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
+
+    expect(scripts['make:platform']).toBe('tsx scripts/make-platform.ts');
+    expect(scripts['make:macos-arm64']).toBe('npm run make:platform -- --target macos-arm64');
+    expect(scripts['make:macos-x64']).toBe('npm run make:platform -- --target macos-x64');
+    expect(scripts['make:ubuntu-x64']).toBe('npm run make:platform -- --target ubuntu-x64');
+    expect(scripts['make:installer']).toContain('scripts/make-installer.ts');
+    expect(scripts['make:portable']).toContain('scripts/make-portable.ts');
+  });
+
   it('does not require an installer-only startup module at packaged runtime', () => {
     expect(readFileSync('src/main/main.ts', 'utf8')).not.toContain('electron-squirrel-startup');
     expect(readFileSync('vite.main.config.ts', 'utf8')).not.toContain('electron-squirrel-startup');
