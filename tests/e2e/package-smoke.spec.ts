@@ -5,6 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { openDatabase } from '../../src/main/persistence/database';
+import { terminatePackagedProcess } from './support/packagedProcess';
 
 const packagedSmokeEnabled = process.platform === 'win32'
   && process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
@@ -56,7 +57,7 @@ async function launchPackaged(executable: string, userData: string): Promise<{ b
     } catch { /* Chromium has not exposed the CDP endpoint yet. */ }
     await new Promise((resolve) => setTimeout(resolve, 100));
   }
-  process.kill();
+  terminatePackagedProcess(process);
   throw new Error('PACKAGED_APP_CDP_TIMEOUT');
 }
 
@@ -144,7 +145,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     await browser?.close().catch(() => undefined);
     if (applicationProcess !== null && applicationProcess.exitCode === null) {
       const exited = new Promise<void>((resolve) => applicationProcess?.once('exit', () => resolve()));
-      applicationProcess.kill();
+      terminatePackagedProcess(applicationProcess);
       await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 5_000))]);
     }
     if (shouldCleanupUserData) rmSync(userData, { recursive: true, force: true });
