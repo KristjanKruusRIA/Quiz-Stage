@@ -1,4 +1,4 @@
-import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, realpathSync, rmSync, symlinkSync, writeFileSync, mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
@@ -51,19 +51,22 @@ describe('Electron hardening', () => {
   it('resolves only owned renderer files through app://renderer', async () => {
     const fixture = mkdtempSync(path.join(tmpdir(), 'quiz-stage-app-protocol-'));
     const rendererRoot = path.join(fixture, 'renderer');
+    const rendererAlias = path.join(fixture, 'renderer-alias');
     const outside = path.join(fixture, 'outside.txt');
     mkdirSync(rendererRoot);
     writeFileSync(path.join(rendererRoot, 'index.html'), '<main>Quiz Stage</main>');
+    symlinkSync(rendererRoot, rendererAlias, process.platform === 'win32' ? 'junction' : 'dir');
+    const rendererEntry = realpathSync.native(path.join(rendererAlias, 'index.html'));
     writeFileSync(outside, 'private');
     try {
-      expect(resolveAppProtocolPath(rendererRoot, 'app://renderer/index.html'))
-        .toBe(path.join(rendererRoot, 'index.html'));
+      expect(resolveAppProtocolPath(rendererAlias, 'app://renderer/index.html'))
+        .toBe(rendererEntry);
       for (const url of [
         'https://renderer/index.html',
         'app://other/index.html',
         'app://renderer/%2e%2e/outside.txt',
         'app://renderer/index.html?source=https://example.com',
-      ]) expect(() => resolveAppProtocolPath(rendererRoot, url)).toThrow('INVALID_APP_PROTOCOL_REQUEST');
+      ]) expect(() => resolveAppProtocolPath(rendererAlias, url)).toThrow('INVALID_APP_PROTOCOL_REQUEST');
 
       let handler: ((request: { url: string }) => Promise<unknown>) | undefined;
       const protocol = {
@@ -71,9 +74,9 @@ describe('Electron hardening', () => {
         unhandle: vi.fn(),
       };
       const loadFile = vi.fn(async (filePath: string) => filePath);
-      const dispose = registerAppProtocol(protocol, rendererRoot, loadFile);
+      const dispose = registerAppProtocol(protocol, rendererAlias, loadFile);
       expect(protocol.handle).toHaveBeenCalledWith('app', expect.any(Function));
-      await expect(handler?.({ url: 'app://renderer/index.html' })).resolves.toBe(path.join(rendererRoot, 'index.html'));
+      await expect(handler?.({ url: 'app://renderer/index.html' })).resolves.toBe(rendererEntry);
       dispose();
       expect(protocol.unhandle).toHaveBeenCalledWith('app');
     } finally {
