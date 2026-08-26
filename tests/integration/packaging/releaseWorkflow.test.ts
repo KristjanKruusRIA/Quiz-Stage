@@ -40,11 +40,13 @@ describe('Windows release workflow', () => {
     const smoke = readFileSync('scripts/smoke-package.ps1', 'utf8');
     const upgrade = readFileSync('scripts/verify-upgrade.ps1', 'utf8');
     const upgradeData = readFileSync('scripts/verify-upgrade-data.ts', 'utf8');
+    const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
 
     expect(smoke).toContain("installer\\QuizStageSetup.exe");
     expect(upgrade).toContain("portable\\QuizStage-win32-x64.zip");
-    expect(upgrade).toContain('Start-Process -FilePath $executable');
-    expect(upgrade).toContain("Join-Path $fixtureCopy 'backups'");
+    expect(upgrade).toContain('& npm.cmd run verify-upgrade -- --target windows-x64 --archive $portableArchive');
+    expect(upgrade).not.toContain('Start-Process');
+    expect(scripts['verify-upgrade']).toBe('tsx scripts/verify-upgrade.ts');
     expect(upgradeData).toContain("media', 'logo.png");
   });
 
