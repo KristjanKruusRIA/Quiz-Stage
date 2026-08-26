@@ -4,7 +4,7 @@ import path from 'node:path';
 import Database from 'better-sqlite3';
 import { describe, expect, it } from 'vitest';
 
-describe('Windows release workflow', () => {
+describe('release workflow', () => {
   it('runs the complete local release gate', () => {
     const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
     const release = scripts['verify:release'] ?? '';
@@ -18,22 +18,90 @@ describe('Windows release workflow', () => {
     expect(release).toContain('verify-upgrade.ps1 -PackageRoot out/make');
   });
 
-  it('pins Windows CI and release artifact checks', () => {
+  it('keeps ordinary CI and release quality gates focused', () => {
     const ci = readFileSync('.github/workflows/ci.yml', 'utf8');
     const release = readFileSync('.github/workflows/release.yml', 'utf8');
 
-    expect(ci).toContain('runs-on: windows-latest');
-    expect(ci).toContain('node-version: 24.15.0');
-    expect(ci).toContain('~/AppData/Local/ms-playwright');
-    expect(ci).toContain('npm run verify:content');
-    expect(ci).toContain('if: failure()');
+    for (const workflow of [ci, release]) {
+      expect(workflow).toContain('quality:');
+      expect(workflow).toContain('runs-on: windows-latest');
+      expect(workflow).toContain('node-version: 24.15.0');
+      for (const command of [
+        'npm ci',
+        'npm run lint',
+        'npm run typecheck',
+        'npm run test:run',
+        'npm run verify:content',
+      ]) {
+        expect(workflow).toContain(`- run: ${command}`);
+      }
+      expect(workflow).toContain('npm run test:e2e');
+      expect(workflow).toContain('if: failure()');
+      expect(workflow).toContain('actions/upload-artifact@v4');
+    }
+
+    expect(ci).not.toContain('make:platform');
+    expect(ci).not.toContain('strategy:');
     expect(release).toContain('workflow_dispatch:');
-    expect(release).toContain('~/AppData/Local/ms-playwright');
     expect(release).toContain("- 'v*'");
+  });
+
+  it('defines the exact native release matrix and package gates', () => {
+    const release = readFileSync('.github/workflows/release.yml', 'utf8');
+
+    for (const [runner, target] of [
+      ['windows-latest', 'windows-x64'],
+      ['macos-15', 'macos-arm64'],
+      ['macos-15-intel', 'macos-x64'],
+      ['ubuntu-24.04', 'ubuntu-x64'],
+    ] as const) {
+      expect(release).toContain(`runner: ${runner}`);
+      expect(release).toContain(`target: ${target}`);
+    }
+
+    expect(release).toContain('needs: quality');
+    expect(release).toContain('fail-fast: false');
+    expect(release).toContain('artifactName:');
+    expect(release).toContain('runs-on: ${{ matrix.runner }}');
+    expect(release).toContain('npm run make:platform');
+    expect(release).toContain('npm run security:inspect-package');
+    expect(release).toContain('scripts/smoke-portable.ts');
     expect(release).toContain('scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both');
-    expect(release).toContain('scripts/verify-upgrade.ps1 -PackageRoot out/make');
-    expect(release).toContain('out/make/release-checksums.txt');
-    expect(release).toContain('scripts/write-release-checksums.ps1');
+    expect(release).toContain('npm run verify-upgrade');
+    expect(release).toContain('scripts/write-release-checksums.ts');
+    expect(release).toContain('actions/upload-artifact@v4');
+
+    expect(release).toContain('sudo apt-get install -y fakeroot dpkg zip unzip');
+    expect(release).toContain('npx playwright install --with-deps chromium');
+    expect(release).toContain('xvfb-run -a npm run make:platform');
+    expect(release).toContain('xvfb-run -a npx tsx scripts/smoke-portable.ts');
+    expect(release).toContain('xvfb-run -a npm run verify-upgrade');
+    expect(release).toContain('sudo dpkg -i');
+    expect(release).toContain('sudo dpkg --remove');
+    expect(release).toContain('QUIZ_STAGE_PACKAGED_EXECUTABLE=/usr/bin/quiz-stage');
+    expect(release).toContain('test ! -e /usr/bin/quiz-stage');
+
+    expect(release).toContain('file "out/Quiz Stage-darwin-arm64/Quiz Stage.app/Contents/MacOS/Quiz Stage"');
+    expect(release).toContain('file "out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/MacOS/Quiz Stage"');
+    expect(release).toContain('arm64');
+    expect(release).toContain('x86_64');
+
+    for (const artifactPath of [
+      'out/make/installer/QuizStageSetup.exe',
+      'out/make/portable/QuizStage-win32-x64.zip',
+      'out/make/portable/QuizStage-darwin-arm64.zip',
+      'out/make/portable/QuizStage-darwin-x64.zip',
+      'out/make/installer/quiz-stage_0.1.0_amd64.deb',
+      'out/make/portable/QuizStage-linux-x64.zip',
+      'out/make/release-checksums-windows-x64.txt',
+      'out/make/release-checksums-macos-arm64.txt',
+      'out/make/release-checksums-macos-x64.txt',
+      'out/make/release-checksums-ubuntu-x64.txt',
+    ]) {
+      expect(release).toContain(artifactPath);
+    }
+
+    expect(release).not.toMatch(/softprops\/action-gh-release|actions\/create-release|\bgh release\b/);
   });
 
   it('targets the exact packages and exercises automatic packaged migration', () => {
