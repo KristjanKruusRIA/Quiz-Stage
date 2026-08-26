@@ -15,6 +15,7 @@ import { openDatabase } from '../../src/main/persistence/database';
 
 const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
 test.setTimeout(300_000);
+test.use({ trace: 'off', screenshot: 'off' });
 
 function packagedExecutable(): string {
   const executable = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE;
@@ -151,6 +152,9 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
 
     expect(externalRequests).toEqual([]);
+  } catch (error: unknown) {
+    console.error('PACKAGED_SMOKE_ORIGINAL_ERROR', error);
+    throw error;
   } finally {
     if (applicationProcess !== null) await stopPackagedProcess(applicationProcess);
     await browser?.close().catch(() => undefined);

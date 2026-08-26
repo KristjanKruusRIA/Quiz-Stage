@@ -126,6 +126,8 @@ describe('release workflow', () => {
     expect(packagedSmoke).not.toContain('test.skip(');
     expect(packagedSmoke).not.toContain("process.platform === 'win32'");
     expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
+    expect(packagedSmoke).toContain("test.use({ trace: 'off', screenshot: 'off' });");
+    expect(packagedSmoke).toMatch(/catch \(error: unknown\) \{\s+console\.error\('PACKAGED_SMOKE_ORIGINAL_ERROR', error\);\s+throw error;\s+\}/);
     expect(portableSmoke).not.toContain('portableSmokeCliArguments');
     expect(smoke).toContain('npm.cmd run smoke:portable -- -- --target windows-x64 --archive');
     expect(smoke).toContain('playwright test tests/e2e/package-smoke.spec.ts');
