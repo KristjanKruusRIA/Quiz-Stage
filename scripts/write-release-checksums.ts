@@ -48,8 +48,12 @@ export function writeReleaseChecksums(target: ReleaseTarget, packageRoot: string
   const resolvedPackageRoot = path.resolve(packageRoot);
   const canonicalPackageRoot = realpathSync.native(resolvedPackageRoot);
   const destination = path.join(resolvedPackageRoot, `release-checksums-${target.id}.txt`);
-  if (lstatSync(destination, { throwIfNoEntry: false })?.isSymbolicLink()) {
+  const destinationStat = lstatSync(destination, { throwIfNoEntry: false });
+  if (destinationStat?.isSymbolicLink()) {
     throw new Error(`RELEASE_CHECKSUM_DESTINATION_IS_SYMLINK:${target.id}`);
+  }
+  if (destinationStat !== undefined && destinationStat.nlink > 1) {
+    throw new Error(`RELEASE_CHECKSUM_DESTINATION_IS_HARD_LINK:${target.id}`);
   }
   const canonicalDestination = path.join(
     realpathSync.native(path.dirname(destination)),

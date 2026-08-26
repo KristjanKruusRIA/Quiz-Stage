@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, linkSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
@@ -199,6 +199,51 @@ describe('release checksums', () => {
 
     expect(received).toMatchObject({ message: 'RELEASE_CHECKSUM_DESTINATION_IS_SYMLINK:windows-x64' });
     expect(readFileSync(sentinel, 'utf8')).toBe('sentinel\n');
+  });
+
+  it('rejects a hard-linked checksum destination without changing its outside target', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    createFile(path.join(packageRoot, 'installer', 'QuizStageSetup.exe'), 'installer');
+    createFile(path.join(packageRoot, 'portable', 'QuizStage-win32-x64.zip'), 'portable');
+    const sentinel = path.join(root, 'outside-sentinel.txt');
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    createFile(sentinel, 'sentinel\n');
+    linkSync(sentinel, destination);
+    const original = readFileSync(sentinel);
+
+    let received: unknown;
+    try {
+      writeReleaseChecksums(releaseTargetForId('windows-x64'), packageRoot);
+    } catch (error) {
+      received = error;
+    }
+
+    expect.soft(received).toMatchObject({ message: 'RELEASE_CHECKSUM_DESTINATION_IS_HARD_LINK:windows-x64' });
+    expect.soft(readFileSync(sentinel)).toEqual(original);
+    expect(readFileSync(destination)).toEqual(original);
+  });
+
+  it('rejects a checksum destination hard-linked to an expected artifact without rewriting either path', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    createFile(path.join(packageRoot, 'installer', 'QuizStageSetup.exe'), 'installer');
+    const portable = path.join(packageRoot, 'portable', 'QuizStage-win32-x64.zip');
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    createFile(portable, 'portable');
+    linkSync(portable, destination);
+    const original = readFileSync(portable);
+
+    let received: unknown;
+    try {
+      writeReleaseChecksums(releaseTargetForId('windows-x64'), packageRoot);
+    } catch (error) {
+      received = error;
+    }
+
+    expect.soft(received).toMatchObject({ message: 'RELEASE_CHECKSUM_DESTINATION_IS_HARD_LINK:windows-x64' });
+    expect.soft(readFileSync(portable)).toEqual(original);
+    expect(readFileSync(destination)).toEqual(original);
   });
 
   it('hashes multi-chunk binary artifacts without reading the whole file', () => {
