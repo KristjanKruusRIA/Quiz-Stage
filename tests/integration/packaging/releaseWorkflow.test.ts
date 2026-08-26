@@ -76,7 +76,8 @@ describe('release workflow', () => {
     expect(release).toContain('xvfb-run -a npm run make:platform');
     expect(release).toContain('xvfb-run -a npx tsx scripts/smoke-portable.ts');
     expect(release).toContain('xvfb-run -a npm run verify-upgrade');
-    expect(release).toContain('sudo dpkg -i');
+    expect(release).toContain('sudo apt-get install -y "./$deb_path"');
+    expect(release).not.toContain('sudo dpkg -i');
     expect(release).toContain('sudo dpkg --remove');
     expect(release).toContain('QUIZ_STAGE_PACKAGED_EXECUTABLE=/usr/bin/quiz-stage');
     expect(release).toContain('test ! -e /usr/bin/quiz-stage');
@@ -126,6 +127,11 @@ describe('release workflow', () => {
     expect(packagedSmoke).not.toContain('test.skip(');
     expect(packagedSmoke).not.toContain("process.platform === 'win32'");
     expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
+    expect(packagedSmoke).toContain("process.platform === 'darwin' && process.arch === 'x64' ? 600_000 : 300_000");
+    expect(packagedSmoke).toContain('test.setTimeout(packagedSmokeTimeout);');
+    expect(packagedSmoke).toContain('page.setDefaultTimeout(30_000);');
+    expect(packagedSmoke).toContain('PACKAGED_SMOKE_PROGRESS:${phase}');
+    expect(packagedSmoke).toContain("reportPackagedSmokeProgress('clues', clueNumber);");
     expect(packagedSmoke).toContain("test.use({ trace: 'off', screenshot: 'off' });");
     expect(packagedSmoke).toMatch(/catch \(error: unknown\) \{\s+console\.error\('PACKAGED_SMOKE_ORIGINAL_ERROR', error\);\s+throw error;\s+\}/);
     expect(portableSmoke).not.toContain('portableSmokeCliArguments');

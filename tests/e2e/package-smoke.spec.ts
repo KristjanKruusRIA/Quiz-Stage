@@ -14,8 +14,13 @@ import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
 
 const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
-test.setTimeout(300_000);
+const packagedSmokeTimeout = process.platform === 'darwin' && process.arch === 'x64' ? 600_000 : 300_000;
+test.setTimeout(packagedSmokeTimeout);
 test.use({ trace: 'off', screenshot: 'off' });
+
+function reportPackagedSmokeProgress(phase: string, detail?: number): void {
+  console.log(`PACKAGED_SMOKE_PROGRESS:${phase}${detail === undefined ? '' : `:${detail}`}`);
+}
 
 function packagedExecutable(): string {
   const executable = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE;
@@ -96,10 +101,13 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
   const externalRequests: string[] = [];
 
   try {
+    reportPackagedSmokeProgress('launch');
     const launched = await launchPackaged(executable, userData);
     browser = launched.browser;
     applicationProcess = launched.process;
     const page = launched.page;
+    page.setDefaultTimeout(30_000);
+    reportPackagedSmokeProgress('connected');
     page.on('request', (request) => {
       const url = new URL(request.url());
       if (url.protocol === 'http:' || url.protocol === 'https:') {
@@ -107,6 +115,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
       }
     });
 
+    reportPackagedSmokeProgress('match-setup');
     await page.getByRole('button', { name: 'New Match' }).click();
     await page.getByRole('radio', { name: 'English' }).check();
     await page.getByRole('radio', { name: 'Medium' }).check();
@@ -124,8 +133,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
       await playTileCorrect(page);
+      if (clueNumber % 10 === 0) reportPackagedSmokeProgress('clues', clueNumber);
     }
 
+    reportPackagedSmokeProgress('final');
     for (const input of await page.getByRole('spinbutton', { name: /Final wager for/ }).all()) {
       if (await input.isVisible()) {
         await input.fill('0');
@@ -143,6 +154,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     await expect(page.getByRole('heading', { name: 'Match History' })).toBeVisible();
     await expect(page.getByText('Complete')).toBeVisible();
 
+    reportPackagedSmokeProgress('persistence');
     const database = openDatabase({ filePath: path.join(userData, 'quiz-stage.sqlite'), readonly: true });
     try {
       const completeMatchCount = database.prepare('SELECT COUNT(*) FROM matches WHERE completed_at IS NOT NULL').pluck().get() as number;
@@ -152,6 +164,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
 
     expect(externalRequests).toEqual([]);
+    reportPackagedSmokeProgress('complete');
   } catch (error: unknown) {
     console.error('PACKAGED_SMOKE_ORIGINAL_ERROR', error);
     throw error;

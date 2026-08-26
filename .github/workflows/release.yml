@@ -112,7 +112,7 @@ jobs:
             rm -rf -- "$user_data"
           }
           trap cleanup EXIT
-          sudo dpkg -i "$deb_path"
+          sudo apt-get install -y "./$deb_path"
           test -x /usr/bin/quiz-stage
           QUIZ_STAGE_PACKAGED_EXECUTABLE=/usr/bin/quiz-stage \
             QUIZ_STAGE_PACKAGED_USER_DATA="$user_data" \
