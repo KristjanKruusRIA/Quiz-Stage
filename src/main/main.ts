@@ -17,7 +17,6 @@ import { registerMediaProtocol } from './media/mediaProtocol';
 import type { MediaStatusEvent } from '../shared/media/contracts';
 import { resolveDevRendererRoot } from './offlineRenderer';
 import { registerAppProtocol, registerContentPolicy } from './security/contentPolicy';
-import { requiredLinuxSandboxSwitch } from './security/linuxSandbox';
 import {
   exportDiagnosticsAfterUserChoice,
   initializeLocalLogger,
@@ -48,13 +47,6 @@ const isDevRenderer = () => Boolean(MAIN_WINDOW_VITE_DEV_SERVER_URL);
 const rendererHtmlPath = isDevRenderer()
   ? path.join(app.getAppPath(), 'src', 'renderer', 'index.html')
   : path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`);
-
-const linuxSandboxSwitch = requiredLinuxSandboxSwitch({
-  platform: process.platform,
-  isPackaged: app.isPackaged,
-  executablePath: process.execPath,
-});
-if (linuxSandboxSwitch !== null) app.commandLine.appendSwitch(linuxSandboxSwitch);
 
 protocol.registerSchemesAsPrivileged([{
   scheme: 'app',

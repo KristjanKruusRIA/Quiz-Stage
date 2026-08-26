@@ -1,6 +1,7 @@
 import { join } from 'node:path';
 import { FuseVersion, FuseV1Options } from '@electron/fuses';
 import type { ForgeConfig } from '@electron-forge/shared-types';
+import { installLinuxLauncher } from './scripts/release/linuxLauncher';
 import { makerNamesFor, releaseTargetFor, type MakerName, type PackageProfile } from './scripts/release/targets';
 
 process.env.VITE_CONFIG_NATIVE_IGNORE_WARNING = 'true';
@@ -71,7 +72,7 @@ const makers = makerNamesFor(releaseTarget, packageProfile)
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
-    executableName: releaseTarget.executableName,
+    executableName: releaseTarget.applicationExecutableName,
     electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
     ...(packagerIconPath === undefined ? {} : { icon: packagerIconPath }),
     extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media'],
@@ -82,6 +83,11 @@ const config: ForgeConfig = {
         || file === '/node_modules'
         || file.startsWith('/node_modules/better-sqlite3')
       );
+    },
+  },
+  hooks: {
+    postPackage: async (_forgeConfig, packageResult) => {
+      installLinuxLauncher(packageResult, releaseTarget);
     },
   },
   makers,

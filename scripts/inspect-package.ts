@@ -9,7 +9,7 @@ import { globSync } from 'glob';
 import {
   expectedNativeModuleSuffix,
   packagedResourcesDirectory,
-  resolvePackagedExecutable,
+  resolvePackagedApplicationBinary,
 } from './release/packageLayout';
 import { releaseTargetForId, type ReleaseTarget } from './release/targets';
 
@@ -40,7 +40,10 @@ function defaultApplicationPath(target: ReleaseTarget): string {
 
 function packagedExecutable(target: ReleaseTarget): string {
   const requested = argumentValue('--app');
-  return resolvePackagedExecutable(requested === undefined ? defaultApplicationPath(target) : path.resolve(requested), target);
+  return resolvePackagedApplicationBinary(
+    requested === undefined ? defaultApplicationPath(target) : path.resolve(requested),
+    target,
+  );
 }
 
 function assertFuse(

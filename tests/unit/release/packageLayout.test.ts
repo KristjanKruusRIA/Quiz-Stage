@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   expectedNativeModuleSuffix,
   packagedResourcesDirectory,
+  resolvePackagedApplicationBinary,
   resolvePackagedExecutable,
 } from '../../../scripts/release/packageLayout';
 import { releaseTargetForId } from '../../../scripts/release/targets';
@@ -26,5 +27,17 @@ describe('package layouts', () => {
     const executablePath = 'C:/release/Quiz Stage-win32-x64/Quiz Stage.exe';
 
     expect(resolvePackagedExecutable(executablePath, target)).toBe(path.normalize(executablePath));
+  });
+
+  it('resolves the public Linux launcher separately from the Electron application binary', () => {
+    const target = releaseTargetForId('ubuntu-x64');
+    const applicationPath = '/tmp/Quiz Stage-linux-x64';
+
+    expect(resolvePackagedExecutable(applicationPath, target)).toBe(
+      path.normalize('/tmp/Quiz Stage-linux-x64/quiz-stage'),
+    );
+    expect(resolvePackagedApplicationBinary(applicationPath, target)).toBe(
+      path.normalize('/tmp/Quiz Stage-linux-x64/quiz-stage-bin'),
+    );
   });
 });

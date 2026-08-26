@@ -4,7 +4,11 @@ import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:f
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { expectedNativeModuleSuffix, packagedResourcesDirectory } from '../../../scripts/release/packageLayout';
+import {
+  expectedNativeModuleSuffix,
+  packagedResourcesDirectory,
+  resolvePackagedApplicationBinary,
+} from '../../../scripts/release/packageLayout';
 import { normalizedArtifactPath } from '../../../scripts/release/artifacts';
 import { releaseTargetFor } from '../../../scripts/release/targets';
 import { AUDIO_ASSET_KEYS, mediaManifestSchema } from '../../../src/shared/media/contracts';
@@ -140,12 +144,13 @@ describe('package contents', () => {
     expect(main).toContain("path.join(process.resourcesPath, 'media', 'icon-source.png')");
   });
 
-  it('keeps the Linux packager executable aligned with the Debian launcher', () => {
+  it('keeps the Linux application binary behind the public Debian launcher', () => {
     const target = releaseTargetFor('linux', 'x64');
     const executableContract = linuxForgeExecutableContract();
 
-    expect(executableContract.packagerExecutableName).toBe(target.executableName);
+    expect(executableContract.packagerExecutableName).toBe(target.applicationExecutableName);
     expect(executableContract.debBin).toBe(target.executableName);
+    expect(target.applicationExecutableName).not.toBe(target.executableName);
   });
 
   it('exposes the native platform build entry points', () => {
@@ -179,7 +184,8 @@ describe('package contents', () => {
       extractedPortable,
       target.forgePlatform === 'win32' ? `${target.executableName}.exe` : target.executableName,
     );
-    const resourcesPath = packagedResourcesDirectory(executablePath, target);
+    const applicationBinary = resolvePackagedApplicationBinary(executablePath, target);
+    const resourcesPath = packagedResourcesDirectory(applicationBinary, target);
     const files = listAllFiles(extractedPortable);
     const report = JSON.parse(execFileSync(process.execPath, [
       path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs'),
@@ -189,7 +195,7 @@ describe('package contents', () => {
     ], { encoding: 'utf8' })) as { target: string; executablePath: string; archivePath: string };
 
     expect(report.target).toBe(target.id);
-    expect(report.executablePath).toBe(executablePath);
+    expect(report.executablePath).toBe(applicationBinary);
     expect(report.archivePath).toBe(path.join(resourcesPath, 'app.asar'));
     expect(files).toContain(path.join(resourcesPath, 'seed.sqlite'));
     expect(files).toContain(path.join(resourcesPath, 'media', 'manifest.json'));

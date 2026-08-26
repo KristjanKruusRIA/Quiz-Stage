@@ -12,6 +12,7 @@ export interface ReleaseTarget {
   forgePlatform: 'win32' | 'darwin' | 'linux';
   forgeArch: 'x64' | 'arm64';
   executableName: string;
+  applicationExecutableName: string;
   artifacts: readonly ReleaseArtifact[];
 }
 
@@ -20,6 +21,7 @@ function target(
   forgePlatform: ReleaseTarget['forgePlatform'],
   forgeArch: ReleaseTarget['forgeArch'],
   executableName: string,
+  applicationExecutableName: string,
   artifacts: ReleaseArtifact[],
 ): ReleaseTarget {
   return Object.freeze({
@@ -27,22 +29,23 @@ function target(
     forgePlatform,
     forgeArch,
     executableName,
+    applicationExecutableName,
     artifacts: Object.freeze(artifacts.map((artifact) => Object.freeze(artifact))),
   });
 }
 
 const targets = [
-  target('windows-x64', 'win32', 'x64', 'Quiz Stage', [
+  target('windows-x64', 'win32', 'x64', 'Quiz Stage', 'Quiz Stage', [
     { kind: 'installer', relativePath: 'installer/QuizStageSetup.exe' },
     { kind: 'portable', relativePath: 'portable/QuizStage-win32-x64.zip' },
   ]),
-  target('macos-arm64', 'darwin', 'arm64', 'Quiz Stage', [
+  target('macos-arm64', 'darwin', 'arm64', 'Quiz Stage', 'Quiz Stage', [
     { kind: 'portable', relativePath: 'portable/QuizStage-darwin-arm64.zip' },
   ]),
-  target('macos-x64', 'darwin', 'x64', 'Quiz Stage', [
+  target('macos-x64', 'darwin', 'x64', 'Quiz Stage', 'Quiz Stage', [
     { kind: 'portable', relativePath: 'portable/QuizStage-darwin-x64.zip' },
   ]),
-  target('ubuntu-x64', 'linux', 'x64', 'quiz-stage', [
+  target('ubuntu-x64', 'linux', 'x64', 'quiz-stage', 'quiz-stage-bin', [
     { kind: 'installer', relativePath: 'installer/quiz-stage_0.1.0_amd64.deb' },
     { kind: 'portable', relativePath: 'portable/QuizStage-linux-x64.zip' },
   ]),
