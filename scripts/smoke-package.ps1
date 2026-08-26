@@ -24,34 +24,6 @@ function Remove-TemporaryDirectory {
   Remove-Item -LiteralPath $resolved -Recurse -Force -ErrorAction SilentlyContinue
 }
 
-function Resolve-PortablePackage {
-  param([string]$Root)
-
-  $zip = Join-Path $Root 'portable\QuizStage-win32-x64.zip'
-  if (-not (Test-Path -LiteralPath $zip)) {
-    throw "Portable package not found at $zip"
-  }
-
-  $extractRoot = Join-Path $env:TEMP ("quiz-stage-portable-smoke-" + [guid]::NewGuid().ToString('N'))
-  New-Item -ItemType Directory -Path $extractRoot | Out-Null
-  & Expand-Archive -LiteralPath $zip -DestinationPath $extractRoot -Force
-  $executable = Join-Path $extractRoot 'Quiz Stage.exe'
-  if (-not (Test-Path -LiteralPath $executable -PathType Leaf)) {
-    throw "Portable executable not found at $executable"
-  }
-  if (-not (Test-Path -LiteralPath (Join-Path $extractRoot 'resources\portable.flag') -PathType Leaf)) {
-    throw "Portable marker not found under $extractRoot"
-  }
-  if (-not (Test-Path -LiteralPath (Join-Path $extractRoot 'UserData') -PathType Container)) {
-    throw "Portable UserData directory not found under $extractRoot"
-  }
-
-  return @{
-    Root = $extractRoot
-    Executable = $executable
-  }
-}
-
 function Invoke-PackageSmoke {
   param(
     [string]$Executable,
@@ -155,13 +127,10 @@ if ($packageRoot -eq $null) {
 }
 
 if ($Mode -eq 'Portable' -or $Mode -eq 'Both') {
-  $portable = Resolve-PortablePackage -Root $packageRoot
-  try {
-    Invoke-PackageSmoke -Executable $portable.Executable -ModeLabel 'Portable'
-  }
-  finally {
-    Remove-TemporaryDirectory -Path $portable.Root -ExpectedPrefix 'quiz-stage-portable-smoke-'
-  }
+  $portableArchive = Join-Path $packageRoot 'portable\QuizStage-win32-x64.zip'
+  Write-Host "Running portable package smoke against $portableArchive"
+  & npm.cmd run smoke:portable -- --target windows-x64 --archive $portableArchive
+  if ($LASTEXITCODE -ne 0) { throw 'Portable package smoke failed' }
 }
 
 if ($Mode -eq 'Installer' -or $Mode -eq 'Both') {

@@ -53,6 +53,7 @@ describe('Windows release workflow', () => {
     const smoke = readFileSync('scripts/smoke-package.ps1', 'utf8');
 
     expect(packagedSmoke).not.toContain('test.skip(');
+    expect(packagedSmoke).not.toContain("process.platform === 'win32'");
     expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
     expect(smoke).toContain('playwright test tests/e2e/package-smoke.spec.ts');
   });

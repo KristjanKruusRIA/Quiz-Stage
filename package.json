@@ -35,6 +35,7 @@
     "make:ubuntu-x64": "npm run make:platform -- --target ubuntu-x64",
     "make:installer": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-installer.ts",
     "make:portable": "tsx scripts/prepare-electron-zip.ts && tsx scripts/make-portable.ts",
+    "smoke:portable": "tsx scripts/smoke-portable.ts",
     "release:checksums": "pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make",
     "security:inspect-package": "tsx scripts/inspect-package.ts",
     "verify:release": "npm run verify:product && npm run verify:content && npm run test:e2e && npm run make:installer && npm run make:portable && npm run release:checksums && pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both && pwsh -NoProfile -File scripts/verify-upgrade.ps1 -PackageRoot out/make",

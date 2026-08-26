@@ -4,10 +4,11 @@ import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { packagedResourcesDirectory } from '../../scripts/release/packageLayout';
+import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
 
-const packagedSmokeEnabled = process.platform === 'win32'
-  && process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
+const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
 test.setTimeout(300_000);
 
 function packagedExecutable(): string {
@@ -17,8 +18,11 @@ function packagedExecutable(): string {
 }
 
 function packagedUserData(executable: string): string {
-  const portableMarker = path.join(path.dirname(executable), 'resources', 'portable.flag');
-  if (existsSync(portableMarker)) return path.join(path.dirname(executable), 'UserData');
+  const target = releaseTargetFor(process.platform, process.arch);
+  const portableMarker = path.join(packagedResourcesDirectory(executable, target), 'portable.flag');
+  if (target.forgePlatform === 'win32' && existsSync(portableMarker)) {
+    return path.join(path.dirname(executable), 'UserData');
+  }
   return process.env.QUIZ_STAGE_PACKAGED_USER_DATA?.trim() || mkdtempSync(path.join(tmpdir(), 'quiz-stage-package-smoke-'));
 }
 
@@ -60,6 +64,20 @@ async function launchPackaged(executable: string, userData: string): Promise<{ b
   throw new Error('PACKAGED_APP_CDP_TIMEOUT');
 }
 
+async function stopPackaged(process: ChildProcess): Promise<void> {
+  if (process.exitCode !== null) return;
+  const exited = new Promise<void>((resolve) => process.once('exit', () => resolve()));
+  process.kill();
+  const stopped = await Promise.race([
+    exited.then(() => true),
+    new Promise<false>((resolve) => setTimeout(() => resolve(false), 5_000)),
+  ]);
+  if (!stopped && process.exitCode === null) {
+    process.kill('SIGKILL');
+    await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 5_000))]);
+  }
+}
+
 async function playTileCorrect(page: Page): Promise<void> {
   const tile = page.locator('.public-board button:not([disabled])').first();
   await expect(tile).toBeEnabled();
@@ -77,8 +95,7 @@ async function playTileCorrect(page: Page): Promise<void> {
 if (packagedSmokeEnabled) test('runs a complete two-team win sequence without external requests', async () => {
   const executable = packagedExecutable();
   const userData = packagedUserData(executable);
-  const shouldCleanupUserData = process.env.QUIZ_STAGE_PACKAGED_USER_DATA === undefined
-    || process.env.QUIZ_STAGE_PACKAGED_USER_DATA.trim() === userData;
+  const shouldCleanupUserData = process.env.QUIZ_STAGE_PACKAGED_USER_DATA === undefined;
   let browser: Browser | null = null;
   let applicationProcess: ChildProcess | null = null;
   const externalRequests: string[] = [];
@@ -142,11 +159,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     expect(externalRequests).toEqual([]);
   } finally {
     await browser?.close().catch(() => undefined);
-    if (applicationProcess !== null && applicationProcess.exitCode === null) {
-      const exited = new Promise<void>((resolve) => applicationProcess?.once('exit', () => resolve()));
-      applicationProcess.kill();
-      await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 5_000))]);
-    }
+    if (applicationProcess !== null) await stopPackaged(applicationProcess);
     if (shouldCleanupUserData) rmSync(userData, { recursive: true, force: true });
   }
 });
