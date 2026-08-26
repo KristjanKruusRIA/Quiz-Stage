@@ -180,6 +180,27 @@ describe('release checksums', () => {
     expect(existsSync(destination)).toBe(false);
   });
 
+  it('rejects a symbolic-link checksum destination without changing its outside target', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    createFile(path.join(packageRoot, 'installer', 'QuizStageSetup.exe'), 'installer');
+    createFile(path.join(packageRoot, 'portable', 'QuizStage-win32-x64.zip'), 'portable');
+    const sentinel = path.join(root, 'outside-sentinel.txt');
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    createFile(sentinel, 'sentinel\n');
+    symlinkSync(sentinel, destination, 'file');
+
+    let received: unknown;
+    try {
+      writeReleaseChecksums(releaseTargetForId('windows-x64'), packageRoot);
+    } catch (error) {
+      received = error;
+    }
+
+    expect(received).toMatchObject({ message: 'RELEASE_CHECKSUM_DESTINATION_IS_SYMLINK:windows-x64' });
+    expect(readFileSync(sentinel, 'utf8')).toBe('sentinel\n');
+  });
+
   it('hashes multi-chunk binary artifacts without reading the whole file', () => {
     const root = temporaryRoot();
     const artifact = path.join(root, 'large.zip');

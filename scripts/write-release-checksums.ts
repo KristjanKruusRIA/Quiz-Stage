@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { closeSync, existsSync, mkdirSync, openSync, readSync, realpathSync, statSync, writeFileSync } from 'node:fs';
+import { closeSync, existsSync, lstatSync, mkdirSync, openSync, readSync, realpathSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { releaseTargetForId, type ReleaseTarget } from './release/targets';
@@ -45,6 +45,9 @@ export function writeReleaseChecksums(target: ReleaseTarget, packageRoot: string
   const resolvedPackageRoot = path.resolve(packageRoot);
   const canonicalPackageRoot = realpathSync.native(resolvedPackageRoot);
   const destination = path.join(resolvedPackageRoot, `release-checksums-${target.id}.txt`);
+  if (lstatSync(destination, { throwIfNoEntry: false })?.isSymbolicLink()) {
+    throw new Error(`RELEASE_CHECKSUM_DESTINATION_IS_SYMLINK:${target.id}`);
+  }
   const canonicalDestination = path.join(
     realpathSync.native(path.dirname(destination)),
     path.basename(destination),
