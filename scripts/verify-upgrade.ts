@@ -54,18 +54,8 @@ interface FixtureHashes {
   media: string;
 }
 
-export function parseUpgradeArguments(
-  args: string[],
-  lifecycleEvent = process.env.npm_lifecycle_event,
-): UpgradeArguments {
-  let normalizedArgs = args[0] === '--' ? args.slice(1) : args;
-  if (
-    lifecycleEvent === 'verify-upgrade'
-    && normalizedArgs.length === 2
-    && normalizedArgs.every((argument) => !argument.startsWith('--'))
-  ) {
-    normalizedArgs = ['--target', normalizedArgs[0]!, '--archive', normalizedArgs[1]!];
-  }
+export function parseUpgradeArguments(args: string[]): UpgradeArguments {
+  const normalizedArgs = args[0] === '--' ? args.slice(1) : args;
   if (
     normalizedArgs.length !== 4
     || normalizedArgs[0] !== '--target'
@@ -146,19 +136,23 @@ function copyFixtureContents(fixtureRoot: string, userDataDirectory: string): vo
   }
 }
 
-async function waitForBackup(child: ChildProcess, backupDirectory: string): Promise<string> {
+function backupPaths(backupDirectory: string): string[] {
+  return existsSync(backupDirectory)
+    ? readdirSync(backupDirectory)
+      .filter((name) => name.endsWith('.bak'))
+      .map((name) => path.join(backupDirectory, name))
+    : [];
+}
+
+async function waitForBackup(child: ChildProcess, backupDirectory: string): Promise<void> {
   const deadline = Date.now() + backupTimeoutMs;
   while (true) {
     if (child.exitCode !== null || child.signalCode !== null) {
       throw new Error(`PACKAGED_APP_EXITED:${child.exitCode ?? child.signalCode ?? 'unknown'}`);
     }
-    const backups = existsSync(backupDirectory)
-      ? readdirSync(backupDirectory)
-        .filter((name) => name.endsWith('.bak'))
-        .map((name) => path.join(backupDirectory, name))
-      : [];
+    const backups = backupPaths(backupDirectory);
     if (backups.length > 1) throw new Error(`UPGRADE_BACKUP_NOT_UNIQUE:${backups.length}`);
-    if (backups.length === 1) return backups[0]!;
+    if (backups.length === 1) return;
     if (Date.now() >= deadline) throw new Error(`UPGRADE_BACKUP_TIMEOUT:${backupDirectory}`);
     await new Promise((resolve) => setTimeout(resolve, backupPollIntervalMs));
   }
@@ -225,12 +219,15 @@ export async function verifyUpgrade(options: VerifyUpgradeOptions): Promise<void
       windowsHide: true,
     });
 
-    let backupPath: string;
     try {
-      backupPath = await waitForBackup(child, backupDirectory);
+      await waitForBackup(child, backupDirectory);
     } finally {
       await stopApplication(child);
     }
+
+    const backups = backupPaths(backupDirectory);
+    if (backups.length !== 1) throw new Error(`UPGRADE_BACKUP_NOT_UNIQUE:${backups.length}`);
+    const backupPath = backups[0]!;
 
     const runDataCheck = options.runDataCheck
       ?? ((database, backup, fixture) => runUpgradeDataCheck(root, database, backup, fixture));

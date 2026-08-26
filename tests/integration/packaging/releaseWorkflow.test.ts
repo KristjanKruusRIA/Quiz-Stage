@@ -44,7 +44,7 @@ describe('Windows release workflow', () => {
 
     expect(smoke).toContain("installer\\QuizStageSetup.exe");
     expect(upgrade).toContain("portable\\QuizStage-win32-x64.zip");
-    expect(upgrade).toContain('& npm.cmd run verify-upgrade -- --target windows-x64 --archive $portableArchive');
+    expect(upgrade).toContain('& npm.cmd run verify-upgrade -- -- --target windows-x64 --archive $portableArchive');
     expect(upgrade).not.toContain('Start-Process');
     expect(scripts['verify-upgrade']).toBe('tsx scripts/verify-upgrade.ts');
     expect(upgradeData).toContain("media', 'logo.png");

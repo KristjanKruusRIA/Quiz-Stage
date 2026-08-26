@@ -1,4 +1,4 @@
-import type { ChildProcess } from 'node:child_process';
+import { spawnSync, type ChildProcess } from 'node:child_process';
 import {
   copyFileSync,
   cpSync,
@@ -86,29 +86,58 @@ afterEach(() => {
 });
 
 describe('upgrade verification arguments', () => {
-  it('accepts exactly one target and archive', () => {
-    expect(parseUpgradeArguments([
+  it.each([
+    [
       '--target',
       'macos-arm64',
       '--archive',
       'out/make/portable/QuizStage-darwin-arm64.zip',
-    ])).toEqual({
+    ],
+    [
+      '--',
+      '--target',
+      'macos-arm64',
+      '--archive',
+      'out/make/portable/QuizStage-darwin-arm64.zip',
+    ],
+  ])('accepts one target and archive after at most one sentinel: %j', (...args) => {
+    expect(parseUpgradeArguments(args)).toEqual({
       target: expect.objectContaining({ id: 'macos-arm64' }),
       archive: path.resolve('out/make/portable/QuizStage-darwin-arm64.zip'),
     });
   });
 
-  it('accepts npm 11 positional forwarding only for the verify-upgrade lifecycle', () => {
-    expect(parseUpgradeArguments([
-      'windows-x64',
-      'out/make/portable/QuizStage-win32-x64.zip',
-    ], 'verify-upgrade')).toEqual({
-      target: expect.objectContaining({ id: 'windows-x64' }),
-      archive: path.resolve('out/make/portable/QuizStage-win32-x64.zip'),
-    });
+  it('rejects positional arguments even during the npm lifecycle', () => {
+    const previousLifecycleEvent = process.env.npm_lifecycle_event;
+    process.env.npm_lifecycle_event = 'verify-upgrade';
+    try {
+      expect(() => parseUpgradeArguments(['windows-x64', 'package.zip']))
+        .toThrow('EXPECTED_UPGRADE_ARGUMENTS');
+    } finally {
+      if (previousLifecycleEvent === undefined) delete process.env.npm_lifecycle_event;
+      else process.env.npm_lifecycle_event = previousLifecycleEvent;
+    }
+  });
 
-    expect(() => parseUpgradeArguments(['windows-x64', 'package.zip']))
-      .toThrow('EXPECTED_UPGRADE_ARGUMENTS');
+  it('retains named arguments through npm without deprecated config warnings', () => {
+    const npmCli = process.env.npm_execpath;
+    expect(npmCli).toBeDefined();
+    const result = spawnSync(process.execPath, [
+      npmCli!,
+      'run',
+      'verify-upgrade',
+      '--',
+      '--',
+      '--target',
+      'definitely-invalid',
+      '--archive',
+      'definitely-missing.zip',
+    ], { cwd: process.cwd(), encoding: 'utf8' });
+    const output = `${result.stdout}${result.stderr}`;
+
+    expect(result.status).toBe(1);
+    expect(output).toContain('UNKNOWN_RELEASE_TARGET:definitely-invalid');
+    expect(output).not.toContain('Unknown cli config');
   });
 });
 
@@ -196,6 +225,30 @@ describe('package upgrade verification', () => {
         return runningChild();
       },
     }))).rejects.toThrow('UPGRADE_BACKUP_NOT_UNIQUE:2');
+  });
+
+  it('rejects when stopping the application creates a second backup', async () => {
+    const target = releaseTargetForId('windows-x64');
+    let backupDirectory = '';
+    let dataChecked = false;
+
+    await expect(verifyUpgrade(workflowOptions(target, copiedFixture(), {
+      spawnApplication: (_executable, args) => {
+        const userDataDirectory = args[0]!.slice('--user-data-dir='.length);
+        backupDirectory = path.join(userDataDirectory, 'backups');
+        mkdirSync(backupDirectory, { recursive: true });
+        writeFileSync(path.join(backupDirectory, 'one.bak'), 'one');
+        return runningChild();
+      },
+      stopApplication: async () => {
+        writeFileSync(path.join(backupDirectory, 'two.bak'), 'two');
+      },
+      runDataCheck: () => {
+        dataChecked = true;
+      },
+    }))).rejects.toThrow('UPGRADE_BACKUP_NOT_UNIQUE:2');
+
+    expect(dataChecked).toBe(false);
   });
 
   it('rejects when the source fixture is mutated during verification', async () => {
