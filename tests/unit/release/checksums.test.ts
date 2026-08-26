@@ -54,7 +54,7 @@ describe('release checksums', () => {
     ]);
   });
 
-  it('writes only the exact target artifacts with sorted relative paths', () => {
+  it('writes only exact target artifacts sorted by basename rather than directory', () => {
     const root = temporaryRoot();
     const packageRoot = path.join(root, 'out', 'make');
     const installer = path.join(packageRoot, 'installer', 'QuizStageSetup.exe');
@@ -68,7 +68,7 @@ describe('release checksums', () => {
 
     expect(destination).toBe(path.join(packageRoot, 'release-checksums-windows-x64.txt'));
     expect(readFileSync(destination, 'utf8')).toBe(
-      `${hash('installer')}  installer/QuizStageSetup.exe\n${hash('portable')}  portable/QuizStage-win32-x64.zip\n`,
+      `${hash('portable')}  portable/QuizStage-win32-x64.zip\n${hash('installer')}  installer/QuizStageSetup.exe\n`,
     );
   });
 

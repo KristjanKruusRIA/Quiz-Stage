@@ -25,7 +25,10 @@ function hashFile(filePath: string): string {
 
 function checksumLinesForPaths(files: readonly { filePath: string; displayPath: string }[]): string[] {
   return [...files]
-    .sort((left, right) => comparePaths(left.displayPath, right.displayPath))
+    .sort((left, right) => (
+      comparePaths(path.basename(left.displayPath), path.basename(right.displayPath))
+      || comparePaths(left.displayPath, right.displayPath)
+    ))
     .map(({ filePath, displayPath }) => `${hashFile(filePath)}  ${displayPath}`);
 }
 
