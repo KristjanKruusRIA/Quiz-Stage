@@ -164,6 +164,38 @@ describe('release checksums', () => {
     expect(readFileSync(destination, 'utf8')).toBe('previous checksum\n');
   });
 
+  it.skipIf(process.platform !== 'win32')('rejects an existing checksum file through a Windows case-variant alias without changing it', () => {
+    const root = temporaryRoot();
+    const packageRoot = path.join(root, 'out', 'make');
+    const destination = path.join(packageRoot, 'release-checksums-windows-x64.txt');
+    const caseVariant = path.join(packageRoot, 'RELEASE-CHECKSUMS-Windows-X64.TXT');
+    createFile(caseVariant, 'previous checksum\n');
+    const original = readFileSync(caseVariant);
+    const target: ReleaseTarget = {
+      ...releaseTargetForId('windows-x64'),
+      artifacts: [{ kind: 'installer', relativePath: path.basename(caseVariant) }],
+    };
+
+    const errors: unknown[] = [];
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        writeReleaseChecksums(target, packageRoot);
+      } catch (error) {
+        errors.push(error);
+      }
+    }
+
+    expect.soft(errors).toHaveLength(2);
+    expect.soft(errors[0]).toMatchObject({
+      message: 'RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:RELEASE-CHECKSUMS-Windows-X64.TXT',
+    });
+    expect.soft(errors[1]).toMatchObject({
+      message: 'RELEASE_ARTIFACT_IS_CHECKSUM_FILE:windows-x64:RELEASE-CHECKSUMS-Windows-X64.TXT',
+    });
+    expect.soft(readFileSync(caseVariant)).toEqual(original);
+    expect(readFileSync(destination)).toEqual(original);
+  });
+
   it('rejects an absent generated checksum file before creating it', () => {
     const root = temporaryRoot();
     const packageRoot = path.join(root, 'out', 'make');

@@ -55,10 +55,9 @@ export function writeReleaseChecksums(target: ReleaseTarget, packageRoot: string
   if (destinationStat !== undefined && destinationStat.nlink > 1) {
     throw new Error(`RELEASE_CHECKSUM_DESTINATION_IS_HARD_LINK:${target.id}`);
   }
-  const canonicalDestination = path.join(
-    realpathSync.native(path.dirname(destination)),
-    path.basename(destination),
-  );
+  const canonicalDestination = destinationStat === undefined
+    ? path.join(realpathSync.native(path.dirname(destination)), path.basename(destination))
+    : realpathSync.native(destination);
   if (!isWithin(canonicalPackageRoot, canonicalDestination)) {
     throw new Error(`RELEASE_CHECKSUM_DESTINATION_OUTSIDE_PACKAGE_ROOT:${target.id}`);
   }
