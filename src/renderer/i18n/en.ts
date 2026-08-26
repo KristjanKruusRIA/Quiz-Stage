@@ -39,7 +39,7 @@ export const en = {
   'settings.saveError': 'Settings could not be saved.',
   'settings.loading': 'Loading audio settings…',
   'settings.loadError': 'Settings could not be loaded.',
-  'settings.mediaWarning': '{asset} replacement could not be used. The original placeholder is playing instead.',
+  'settings.mediaWarning': '{asset} replacement could not be used. The bundled audio is playing instead.',
   'settings.asset.opening': 'Opening audio',
   'settings.asset.round-transition': 'Round transition audio',
   'settings.asset.daily-double': 'Daily Double audio',

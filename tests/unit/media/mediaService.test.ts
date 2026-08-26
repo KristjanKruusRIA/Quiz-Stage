@@ -1,20 +1,30 @@
-import { cpSync, linkSync, mkdirSync, mkdtempSync, readFileSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, linkSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { describe, expect, it, vi } from 'vitest';
-import { generatePlaceholderAudio } from '../../../scripts/generate-placeholder-audio';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { isValidWav, MediaService, parseBrandingRequest, parseMediaByteRange, parseMediaRequest } from '../../../src/main/media/mediaService';
 
+const temporaryRoots: string[] = [];
+
+function temporaryRoot(prefix: string): string {
+  const root = mkdtempSync(join(tmpdir(), prefix));
+  temporaryRoots.push(root);
+  return root;
+}
+
 function fixture() {
-  const root = mkdtempSync(join(tmpdir(), 'quiz-stage-service-'));
-  const bundled = join(root, 'bundled');
+  const root = temporaryRoot('quiz-stage-service-');
+  const bundled = join(process.cwd(), 'resources', 'media');
   const overrides = join(root, 'overrides');
-  generatePlaceholderAudio(bundled);
   mkdirSync(overrides);
   return { root, bundled, overrides };
 }
 
 describe('MediaService', () => {
+  afterEach(() => {
+    for (const root of temporaryRoots.splice(0)) rmSync(root, { recursive: true, force: true });
+  });
+
   it('parses bounded, open-ended, and suffix media byte ranges', () => {
     expect(parseMediaByteRange(null, 100)).toBeNull();
     expect(parseMediaByteRange('bytes=0-9', 100)).toEqual({ start: 0, end: 9 });
@@ -34,10 +44,14 @@ describe('MediaService', () => {
   });
 
   it('serves only hash-verified bundled branding images through exact URLs', () => {
-    const root = mkdtempSync(join(tmpdir(), 'quiz-stage-branding-service-'));
+    const root = temporaryRoot('quiz-stage-branding-service-');
     const bundled = join(root, 'bundled');
     const overrides = join(root, 'overrides');
-    cpSync(join(process.cwd(), 'resources', 'media'), bundled, { recursive: true });
+    const sourceMedia = join(process.cwd(), 'resources', 'media');
+    mkdirSync(bundled);
+    for (const file of ['manifest.json', 'logo.png', 'classic-stage-background.png']) {
+      cpSync(join(sourceMedia, file), join(bundled, file));
+    }
     mkdirSync(overrides);
     const service = new MediaService({ bundledDirectory: bundled, overrideDirectory: overrides });
 
@@ -129,7 +143,7 @@ describe('MediaService', () => {
     for (const mutate of [
       (wav: Buffer) => wav.writeUInt32LE(wav.length, 4),
       (wav: Buffer) => wav.writeUInt32LE(1, 28),
-      (wav: Buffer) => wav.writeUInt16LE(4, 32),
+      (wav: Buffer) => wav.writeUInt16LE(wav.readUInt16LE(32) + 1, 32),
       (wav: Buffer) => wav.writeUInt32LE(wav.length - 45, 40),
     ]) {
       const changed = Buffer.from(original); mutate(changed);

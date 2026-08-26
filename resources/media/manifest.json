@@ -4,58 +4,138 @@
     "opening": {
       "file": "audio/opening.wav",
       "mime": "audio/wav",
-      "sha256": "389a858a5b16d072909329fa877ba01410c23ced80f36042c61a28b3f533c128",
-      "durationMs": 2500,
-      "channel": "music"
+      "sha256": "ab40a9e737a8bfa4dc888817aef6ef0aef402142dc392aef16ca54eb2310f4a1",
+      "durationMs": 8022,
+      "channel": "music",
+      "source": {
+        "title": "Talk Show Background Music 02.wav",
+        "creator": "LilMati",
+        "sourcePage": "https://freesound.org/people/LilMati/sounds/657753/",
+        "downloadUrl": "https://cdn.freesound.org/previews/657/657753_6142149-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "9244833d736dbd477ced929934827bc6b44360e46c52d80cf18fd93142603557",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "round-transition": {
       "file": "audio/round-transition.wav",
       "mime": "audio/wav",
-      "sha256": "2db3c813c9661040380f076293b5db513b3886874e7706b8d48d519964630f84",
-      "durationMs": 1800,
-      "channel": "music"
+      "sha256": "2e1d6580e71026aa3ee7e343fcc290ff4b7b147df385573b4400e940f4583c03",
+      "durationMs": 1995,
+      "channel": "music",
+      "source": {
+        "title": "Stinger 3.wav",
+        "creator": "AudioPapkin",
+        "sourcePage": "https://freesound.org/people/AudioPapkin/sounds/441342/",
+        "downloadUrl": "https://cdn.freesound.org/previews/441/441342_8698658-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "528e286aae8acdfe56fe7981993ed74571dfe709dc6bee1cef54d22e5b4601fd",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "daily-double": {
       "file": "audio/daily-double.wav",
       "mime": "audio/wav",
-      "sha256": "e0456acf47d745695560ddd7ea0992778255974d5e2b03b9d758f024e105f4bf",
-      "durationMs": 900,
-      "channel": "effects"
+      "sha256": "19331aab5239a6ab5b4cba52c00d9064f22879833c18a6c07b8dee4a0e46f42b",
+      "durationMs": 3833,
+      "channel": "effects",
+      "source": {
+        "title": "SFX Thrilling Build-Up and Hit 4 (Made at Paradise AIR).wav",
+        "creator": "RutgerMuller",
+        "sourcePage": "https://freesound.org/people/RutgerMuller/sounds/367667/",
+        "downloadUrl": "https://cdn.freesound.org/previews/367/367667_179538-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "a96fa9ec30d287d3f97b12f7628eb0b2bcfd5dabd101c743a7e35af5be492090",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "final-tension": {
       "file": "audio/final-tension.wav",
       "mime": "audio/wav",
-      "sha256": "d25b0d90a387391197a5e0f8bf910e5ac8a19318b3a1bad6d3b45cf9217cbaf6",
-      "durationMs": 5000,
-      "channel": "music"
+      "sha256": "b42c57d770d003fc7a0b367bbcdaf4357a1270cc106800eca46d775f43ee68af",
+      "durationMs": 59726,
+      "channel": "music",
+      "source": {
+        "title": "tention-mounts-ticking-clock-loop-dread.ogg",
+        "creator": "Gerent",
+        "sourcePage": "https://freesound.org/people/Gerent/sounds/558256/",
+        "downloadUrl": "https://cdn.freesound.org/previews/558/558256_556505-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "e7e471ec0da569afba14e166fa9277117a66c4fc828835d97262439c6e4c7809",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "correct-applause": {
       "file": "audio/correct-applause.wav",
       "mime": "audio/wav",
-      "sha256": "3463996f282b1a9125cb54b237a81edeae26a33b724174a3b9bad327a9c82ff0",
-      "durationMs": 1800,
-      "channel": "crowd"
+      "sha256": "6bea83f5dc03f3660946a3a3b657d2bc27e98c4c108428cac2551cc781b5335d",
+      "durationMs": 4310,
+      "channel": "crowd",
+      "source": {
+        "title": "Small Crowd Applause with cheer in a Small Room 02.wav",
+        "creator": "AudioSea",
+        "sourcePage": "https://freesound.org/people/AudioSea/sounds/581617/",
+        "downloadUrl": "https://cdn.freesound.org/previews/581/581617_6549161-hq.mp3",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "430a9eae74e80575815f176a06833c86d749b9f731b4128ec636922377da6bd6",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "incorrect-crowd": {
       "file": "audio/incorrect-crowd.wav",
       "mime": "audio/wav",
-      "sha256": "a7e2ebb22d7f8b89fe4996deed43bd7becd4b96197ade6c2cf1616343b8af13d",
-      "durationMs": 1400,
-      "channel": "crowd"
+      "sha256": "ec26d1f1fded46e5f98d0b364e11536fdd7c2b49a09d367b9013bb13ef470c36",
+      "durationMs": 2113,
+      "channel": "crowd",
+      "source": {
+        "title": "crowdbooing_01.wav",
+        "creator": "xtrgamr",
+        "sourcePage": "https://freesound.org/people/xtrgamr/sounds/239595/",
+        "downloadUrl": "https://cdn.freesound.org/previews/239/239595_4157918-hq.mp3",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "7580e2058c23bdf0b053adec39466474a99225a2a6d165ef57972bbd94c267b0",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "time-expired": {
       "file": "audio/time-expired.wav",
       "mime": "audio/wav",
-      "sha256": "68a6ae8f1b4793e5ea1a165011fb755cdf0169fc62639247ce8212194733eb8f",
-      "durationMs": 600,
-      "channel": "effects"
+      "sha256": "279cf90bb184d09878bf8770018c6ecacdf6d0bc4a5f931419957f421b3faf3c",
+      "durationMs": 1530,
+      "channel": "effects",
+      "source": {
+        "title": "buzzer.wav",
+        "creator": "hypocore",
+        "sourcePage": "https://freesound.org/people/hypocore/sounds/164090/",
+        "downloadUrl": "https://cdn.freesound.org/previews/164/164090_2975503-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "1b47be66c76979f72122a09a7835a8d5dec2dc0302f54660452b25c860968981",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     },
     "winner": {
       "file": "audio/winner.wav",
       "mime": "audio/wav",
-      "sha256": "fb989aa0895145007efb2ad3e5c2ddcc3ce9ccaa3c3069f1efde653d004ada58",
-      "durationMs": 2500,
-      "channel": "effects"
+      "sha256": "4ad0cf79803def5152a04d93e3c3ce92d8fa54658aa2ddc62a7b7d84e0995872",
+      "durationMs": 3381,
+      "channel": "effects",
+      "source": {
+        "title": "Game Success Fanfare",
+        "creator": "el_boss",
+        "sourcePage": "https://freesound.org/people/el_boss/sounds/677859/",
+        "downloadUrl": "https://cdn.freesound.org/previews/677/677859_9129912-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "2a1a0b7d7af0dcad7014298042126a63e936f3b598202e8d45ae3c55ec98f752",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
     }
   },
   "branding": {

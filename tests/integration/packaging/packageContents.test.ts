@@ -1,8 +1,10 @@
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import { AUDIO_ASSET_KEYS, mediaManifestSchema } from '../../../src/shared/media/contracts';
 
 function fileExists(candidate: string): boolean {
   try {
@@ -50,6 +52,21 @@ function applicationExecutables(files: string[]): string[] {
   });
 }
 
+function expectLicensedMedia(files: string[]): void {
+  const manifestPath = files.find((file) => file.endsWith(path.join('media', 'manifest.json')));
+  expect(manifestPath).toBeDefined();
+  if (manifestPath === undefined) return;
+
+  const mediaDirectory = path.dirname(manifestPath);
+  const manifest = mediaManifestSchema.parse(JSON.parse(readFileSync(manifestPath, 'utf8')));
+  expect(files).toContain(path.join(mediaDirectory, 'THIRD_PARTY_NOTICES.md'));
+  for (const key of AUDIO_ASSET_KEYS) {
+    const entry = manifest.assets[key];
+    const digest = createHash('sha256').update(readFileSync(path.join(mediaDirectory, entry.file))).digest('hex');
+    expect(digest).toBe(entry.sha256);
+  }
+}
+
 describe('package contents', () => {
   const expectedInstaller = path.join(process.cwd(), 'out', 'make', 'installer', 'QuizStageSetup.exe');
   const expectedInstallerPayload = installerPayloadPath();
@@ -81,6 +98,10 @@ describe('package contents', () => {
     expect(readFileSync('vite.main.config.ts', 'utf8')).not.toContain('electron-squirrel-startup');
   });
 
+  it('keeps the bundled audio attribution notice beside the media manifest', () => {
+    expect(fileExists(path.join(process.cwd(), 'resources', 'media', 'THIRD_PARTY_NOTICES.md'))).toBe(true);
+  });
+
   it.skipIf(!packagePayloadsPresent)('produces both installer and portable package outputs', () => {
     expect(fileExists(expectedInstaller)).toBe(true);
     expect(fileExists(expectedPortableZip)).toBe(true);
@@ -100,6 +121,7 @@ describe('package contents', () => {
       expect(files.some((file) => file.endsWith('manifest.json'))).toBe(true);
       expect(files.some((file) => file.endsWith('app.asar'))).toBe(true);
       expect(files.some((file) => file.endsWith(path.join('better-sqlite3', 'prebuilds', 'win32-x64.node')))).toBe(true);
+      expectLicensedMedia(files);
     }
 
     expect(installerFiles.some((file) => file.endsWith(path.join('resources', 'portable.flag')))).toBe(false);

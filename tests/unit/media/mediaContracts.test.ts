@@ -9,10 +9,8 @@ import {
   mediaAssetUrl,
   mediaManifestSchema,
 } from '../../../src/shared/media/contracts';
-import { generatePlaceholderAudio } from '../../../scripts/generate-placeholder-audio';
 import { join } from 'node:path';
-import { mkdtempSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { readFileSync } from 'node:fs';
 
 describe('media contracts', () => {
   it('owns exactly the eight documented pathless WAV asset keys', () => {
@@ -40,16 +38,28 @@ describe('media contracts', () => {
   });
 
   it('binds every manifest key to its exact filename, channel, and duration', () => {
-    const manifest = generatePlaceholderAudio(mkdtempSync(join(tmpdir(), 'quiz-stage-manifest-')));
+    const manifest = JSON.parse(readFileSync(join(process.cwd(), 'resources', 'media', 'manifest.json'), 'utf8'));
     expect(mediaManifestSchema.parse(manifest)).toEqual(manifest);
     for (const tamper of [
       { file: 'audio/winner.wav' },
       { channel: 'effects' as const },
-      { durationMs: 2_499 },
+      { durationMs: 8_021 },
     ]) {
       const changed = structuredClone(manifest);
       Object.assign(changed.assets.opening, tamper);
       expect(() => mediaManifestSchema.parse(changed)).toThrow();
     }
+  });
+
+  it('binds each source license identifier to its canonical license URL', () => {
+    const manifest = JSON.parse(readFileSync(join(process.cwd(), 'resources', 'media', 'manifest.json'), 'utf8'));
+    manifest.assets.opening.source.licenseUrl = 'https://creativecommons.org/licenses/by/4.0/';
+    expect(() => mediaManifestSchema.parse(manifest)).toThrow();
+  });
+
+  it('requires the Freesound page and preview URL to identify the same sound', () => {
+    const manifest = JSON.parse(readFileSync(join(process.cwd(), 'resources', 'media', 'manifest.json'), 'utf8'));
+    manifest.assets.opening.source.downloadUrl = 'https://cdn.freesound.org/previews/999/999999_6142149-hq.mp3';
+    expect(() => mediaManifestSchema.parse(manifest)).toThrow();
   });
 });
