@@ -53,7 +53,7 @@ cd Quiz\ Stage-linux-x64
 ./quiz-stage
 ```
 
-Linux stores Quiz Stage data in the standard per-user `~/.config/Quiz Stage` location. The extracted application has no adjacent portable marker or data directory.
+Linux stores Quiz Stage data in `$XDG_CONFIG_HOME/Quiz Stage` when `XDG_CONFIG_HOME` is set; otherwise its default location is `~/.config/Quiz Stage`. The extracted application has no adjacent portable marker or data directory.
 
 ## Run checks
 

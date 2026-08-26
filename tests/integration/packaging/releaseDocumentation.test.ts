@@ -18,18 +18,21 @@ describe('release documentation', () => {
       expect(readme).toContain(artifact);
     }
 
-    expect(readme).toContain('Apple Silicon');
-    expect(readme).toContain('Intel');
-    expect(readme).toContain('arm64');
-    expect(readme).toContain('x64');
-    expect(readme).toContain('unsigned and unnotarized');
-    expect(readme).toContain('Open Anyway');
+    expect(readme).toContain('Apple Silicon Macs use the arm64 `QuizStage-darwin-arm64.zip` download.');
+    expect(readme).toContain('Intel Macs use the x64 `QuizStage-darwin-x64.zip` download.');
+    expect(readme).toContain('These macOS ZIPs are unsigned and unnotarized.');
+    expect(readme).toContain(
+      'For the one-time first launch, try to open the app, then open **System Settings** > **Privacy & Security**, click **Open Anyway**, authenticate, and confirm the launch.',
+    );
     expect(readme).toContain('https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac');
-    expect(readme).toContain('apt install');
-    expect(readme).toContain('apt remove');
-    expect(readme).toContain('unzip');
-    expect(readme).toContain('~/Library/Application Support');
-    expect(readme).toContain('~/.config');
+    expect(readme).toContain('`~/Library/Application Support/Quiz Stage`');
+    expect(readme).toContain('sudo apt install ./quiz-stage_0.1.0_amd64.deb');
+    expect(readme).toContain('sudo apt remove quiz-stage');
+    expect(readme).toContain('unzip QuizStage-linux-x64.zip');
+    expect(readme).toContain('cd Quiz\\ Stage-linux-x64');
+    expect(readme).toContain('./quiz-stage');
+    expect(readme).toMatch(/\$XDG_CONFIG_HOME\/Quiz Stage.*~\/\.config\/Quiz Stage/s);
+    expect(readme).toMatch(/\$XDG_CONFIG_HOME.*when.*set.*otherwise.*default.*~\/\.config\/Quiz Stage/s);
     expect(readme).toContain('Windows portable upgrades require copying previous `UserData`');
     expect(readme).not.toContain('- Portable upgrades require copying previous `UserData`');
   });
@@ -38,7 +41,7 @@ describe('release documentation', () => {
     expect(limitations).toContain('unsigned and unnotarized');
     expect(limitations).toContain('Ubuntu ARM64');
 
-    for (const format of ['DMG', 'AppImage', 'RPM', 'Flatpak']) {
+    for (const format of ['DMG', 'AppImage', 'RPM', 'Snap', 'Flatpak']) {
       expect(limitations).toContain(format);
     }
 
@@ -46,11 +49,12 @@ describe('release documentation', () => {
   });
 
   it('limits adjacent UserData migration to the Windows portable package', () => {
-    expect(upgrades).toContain('QuizStage-win32-x64.zip');
-    expect(upgrades).toContain('UserData');
-    expect(upgrades).toContain('macOS and Linux ZIPs');
-    expect(upgrades).toContain('outside the extracted application');
-    expect(upgrades).toContain('do not use an adjacent `UserData` directory');
-    expect(upgrades.split('## macOS and Linux ZIP upgrades')[1]).not.toMatch(/copy/i);
+    const [windows, macosAndLinux] = upgrades.split('## macOS and Linux ZIP upgrades');
+
+    expect(windows).toContain('QuizStage-win32-x64.zip');
+    expect(windows).toContain('Copy the previous `UserData` directory');
+    expect(macosAndLinux).toContain('outside the extracted application');
+    expect(macosAndLinux).toContain('do not use an adjacent `UserData` directory or `portable.flag` marker');
+    expect(macosAndLinux).not.toMatch(/copy/i);
   });
 });
