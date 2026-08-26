@@ -3,7 +3,6 @@ import {
   chmodSync,
   existsSync,
   lstatSync,
-  readdirSync,
   realpathSync,
   statSync,
 } from 'node:fs';
@@ -16,6 +15,7 @@ import {
   type OwnedPackageTemporaryDirectory,
 } from './release/extractArchive';
 import {
+  extractedApplicationPath,
   packagedResourcesDirectory,
   resolvePackagedExecutable,
 } from './release/packageLayout';
@@ -61,15 +61,6 @@ export function validatedPackagedExecutable(extractionDirectory: string, executa
     throw new Error(`UNSAFE_PACKAGED_EXECUTABLE:${executable}`);
   }
   return resolvedExecutable;
-}
-
-function extractedApplicationPath(extractionDirectory: string, target: ReleaseTarget): string {
-  if (target.forgePlatform !== 'darwin') return extractionDirectory;
-
-  const applications = readdirSync(extractionDirectory, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && entry.name.endsWith('.app'));
-  if (applications.length !== 1) throw new Error('PACKAGED_APPLICATION_NOT_UNIQUE');
-  return path.join(extractionDirectory, applications[0]!.name);
 }
 
 export function createPackageTemporaryDirectories(

@@ -22,7 +22,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { extractArchive } from './release/extractArchive';
 import { spawnPackagedProcess, stopPackagedProcess } from './release/packagedProcess';
-import { resolvePackagedExecutable } from './release/packageLayout';
+import { extractedApplicationPath, resolvePackagedExecutable } from './release/packageLayout';
 import { releaseTargetForId, type ReleaseTarget } from './release/targets';
 import { validatedPackagedExecutable } from './smoke-portable';
 
@@ -119,14 +119,6 @@ function assertFixtureUnchanged(fixtureRoot: string, expected: FixtureHashes): v
   if (actual.database !== expected.database || actual.media !== expected.media) {
     throw new Error('COMMITTED_UPGRADE_FIXTURE_CHANGED');
   }
-}
-
-function extractedApplicationPath(extractionDirectory: string, target: ReleaseTarget): string {
-  if (target.forgePlatform !== 'darwin') return extractionDirectory;
-  const applications = readdirSync(extractionDirectory, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && entry.name.endsWith('.app'));
-  if (applications.length !== 1) throw new Error('PACKAGED_APPLICATION_NOT_UNIQUE');
-  return path.join(extractionDirectory, applications[0]!.name);
 }
 
 function copyFixtureContents(fixtureRoot: string, userDataDirectory: string): void {

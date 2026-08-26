@@ -45,7 +45,9 @@ function archiveFile(): string {
 function writeExtractedApplication(destination: string, target: ReleaseTarget): string {
   const applicationPath = target.forgePlatform === 'darwin'
     ? path.join(destination, 'Quiz Stage.app')
-    : destination;
+    : target.forgePlatform === 'linux'
+      ? path.join(destination, `Quiz Stage-linux-${target.forgeArch}`)
+      : destination;
   const executable = resolvePackagedExecutable(applicationPath, target);
   mkdirSync(path.dirname(executable), { recursive: true });
   writeFileSync(executable, 'test executable');
@@ -142,6 +144,46 @@ describe('upgrade verification arguments', () => {
 });
 
 describe('package upgrade verification', () => {
+  it('runs the Linux package from the Maker ZIP top-level directory', async () => {
+    const target = releaseTargetForId('ubuntu-x64');
+    let expectedExecutable = '';
+    let spawnedExecutable = '';
+
+    await verifyUpgrade(workflowOptions(target, copiedFixture(), {
+      extractPackage: (_platform, _archive, destination) => {
+        expectedExecutable = writeExtractedApplication(destination, target);
+      },
+      spawnApplication: (executable, args) => {
+        spawnedExecutable = executable;
+        const userDataDirectory = args[0]!.slice('--user-data-dir='.length);
+        const backupDirectory = path.join(userDataDirectory, 'backups');
+        mkdirSync(backupDirectory, { recursive: true });
+        copyFileSync(
+          path.join(userDataDirectory, 'quiz-stage.sqlite'),
+          path.join(backupDirectory, 'pre-migration.bak'),
+        );
+        return runningChild();
+      },
+    }));
+
+    expect(spawnedExecutable).toBe(expectedExecutable);
+    expect(path.basename(path.dirname(spawnedExecutable))).toBe('Quiz Stage-linux-x64');
+  });
+
+  it('rejects ambiguous Linux Maker ZIP top-level directories', async () => {
+    const target = releaseTargetForId('ubuntu-x64');
+
+    await expect(verifyUpgrade(workflowOptions(target, copiedFixture(), {
+      extractPackage: (_platform, _archive, destination) => {
+        writeExtractedApplication(destination, target);
+        const duplicate = path.join(destination, 'Duplicate-linux-x64');
+        const executable = resolvePackagedExecutable(duplicate, target);
+        mkdirSync(path.dirname(executable), { recursive: true });
+        writeFileSync(executable, 'duplicate executable');
+      },
+    }))).rejects.toThrow('PACKAGED_APPLICATION_NOT_UNIQUE');
+  });
+
   it.each([
     'windows-x64',
     'macos-arm64',
