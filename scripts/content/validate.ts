@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto';
 import {
   lstatSync, readFileSync, renameSync, unlinkSync, writeFileSync,
 } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   contentCategorySetSchema, contentClueSchema, contentFinalClueSchema,
@@ -751,7 +751,10 @@ export async function runValidationCli(
 ): Promise<number> {
   const options = parseCli(argv);
   if (options.allowMissingEt && options.mode === 'release') throw new Error('--allow-missing-et is permitted only in batch mode');
-  const inputs = await readCsvInputs(options.inputs);
+  const inputs = (await readCsvInputs(options.inputs)).map((input) => ({
+    ...input,
+    file: reportInputPath(input.file),
+  }));
   const evidenceByClueId = preloadedEvidence ?? (options.evidence.length === 0
     ? undefined
     : await readEvidenceInputs(options.evidence));
@@ -764,6 +767,12 @@ export async function runValidationCli(
   publishValidationReport(options.report, result);
   process.stdout.write(`${JSON.stringify(result.summary)}\n`);
   return result.blocking ? 1 : 0;
+}
+
+function reportInputPath(file: string): string {
+  const local = relative(process.cwd(), file);
+  if (local === '' || local === '..' || local.startsWith(`..${sep}`) || isAbsolute(local)) return file;
+  return local.split(sep).join('/');
 }
 
 if (process.argv[1] !== undefined && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {

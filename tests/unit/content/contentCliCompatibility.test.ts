@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { isAbsolute, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { describe, expect, test } from 'vitest';
 import { runSourceCheckCli } from '../../../scripts/content/sourceCheck';
@@ -75,6 +75,7 @@ describe('npm 11 content CLI compatibility', () => {
     expect(parsed.validation.issues).toEqual(expect.arrayContaining([
       expect.objectContaining({ code: 'BATCH_ALLOCATION' }),
     ]));
+    expect(parsed.validation.issues.every((issue: { file: string }) => !isAbsolute(issue.file))).toBe(true);
   }, 20_000);
 
   test('source checker merges completed failures into the report and writes the exact source-cache file', () => {
