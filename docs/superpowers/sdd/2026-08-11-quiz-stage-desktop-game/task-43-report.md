@@ -1,0 +1,44 @@
+# Task 43 report: Execute and record final acceptance
+
+Date: 2026-08-26
+
+## Outcome
+
+The Quiz Stage Windows x64 release candidate is verified at baseline `1c02fc75897cd1a0ff50a9418a06174010ca482d`. A clean install completed the full release workflow, the production seed passed every inventory and source gate, and both the installer and portable package completed a full match with outbound network access blocked. The final package rebuild, package hardening inspection, visual suite, checksum generation, and upgrade-preservation run all pass.
+
+Acceptance is complete for the tested Windows 11 x64 host. The plan also requires a separate Windows 10 x64 manual run; that host was not available, so Task 43 retains that one external cross-version sign-off rather than claiming unobserved evidence.
+
+## Release-hardening changes
+
+- `35175db` — restored a clean release installation with the Electron-compatible fuses API and clean TypeScript/lint state.
+- `6104f92` — separated pre-package test registration from the mandatory later packaged smoke gate.
+- `7aa0b95` — prepared clean Electron packaging, including the Electron-compatible `better-sqlite3` native module and explicit package script permissions.
+- `6943837` — prevented the strict product gate from reporting an intentional pre-package package-smoke skip.
+- `4478fa3` — removed the Daily Double E2E synchronization race by waiting for either wager or clue state.
+- `1c02fc7` — made release-report paths checkout-independent while preserving every inventory count, source result, reviewed warning, and seed byte.
+
+Every fix was driven by a failing focused regression or a clean-worktree release failure. The clean `npm ci && npm run verify:release` at `4478fa3` completed in 1,435.6 seconds. Unit/integration tests passed 705 assertions in 86 files; strict Electron product E2E passed 44/44 with zero skips; general Playwright passed 44/44; `npm run verify:content` passed; and installer/portable full-match smoke plus upgrade preservation passed. After the checkout-independent report-path regression was added and final artifacts were rebuilt at `1c02fc7`, the documentation-baseline gate passed 707/707 tests in the same 86 files, plus lint, typecheck, content verification, and diff checks.
+
+## Production content
+
+The deterministic production database contains 6,000 board clues, 1,200 complete category sets, 1,200 distinct category names, and 150 Finals. Difficulty allocation is exactly 400/400/400; each difficulty/round cell contains 200 sets. All 1,464 source checks pass. The 4,171 conservative translation warnings have reviewed evidence exceptions, with zero errors and zero waivers.
+
+The final seed SHA-256 is `50223d05453c369aa71d996c8d9b7488af2f795c89259520bea9502fb5ce9ed4`.
+
+## Package evidence
+
+- Installer: `out/make/installer/QuizStageSetup.exe`; 159,518,720 bytes; SHA-256 `da6d9fb17de07486b7e2118eac4d0b616fe1bea323cfd70af9a3ef859d47c029`.
+- Portable ZIP: `out/make/portable/QuizStage-win32-x64.zip`; 164,529,802 bytes; SHA-256 `2f331a853562547cf85957a0cb964d7b41b35e65e1ec8272a852f21cf3e023d1`.
+- Checksum manifest: `out/make/release-checksums.txt`; 196 bytes; SHA-256 `a0dd61b9a3758be97997a7b65758de93a297738029addbb37f149c85378788d7`.
+
+The package inspector confirms ASAR integrity and app-only-from-ASAR fuses are enabled while RunAsNode, Node options environment variables, and Node CLI inspection are disabled. Both packages are intentionally unsigned and report `NotSigned`, so SmartScreen warnings are expected. The shipped dependency audit reports zero vulnerabilities. The full development tree retains 28 Electron Forge/package-tooling advisories that are not present in shipped runtime dependencies and have no nonbreaking fix at this baseline.
+
+## User-facing verification
+
+The visual Playwright suite passed 5/5 and produced 34 screenshots across 1280×720, 1920×1080, and 3840×2160. Representative 2-team and 8-team boards, a long Estonian clue with extreme scores, the 720p host console, and the 4K 8-team board were inspected manually. Text remained readable, gameplay surfaces were not clipped, and long host forms remained usable by intended vertical scrolling. Keyboard and reduced-motion paths are covered by the product/visual suites.
+
+Installer and portable package smoke each completed an offline match on Windows 11 Pro Insider Preview 10.0.26300.9032 x64. Installer cleanup left no `%LOCALAPPDATA%\QuizStage` directory; task-specific temporary roots were removed. The real application upgrade preserved custom content, reports, settings, history, incomplete autosave, and media overrides.
+
+## Remaining sign-off
+
+Windows 10 x64 was not available. Its fresh installer install/launch/uninstall, portable extract/launch, and offline complete-match pass remain the sole unexecuted Task 43 requirement. No other product, content, package, security, upgrade, visual, or documentation blocker remains.

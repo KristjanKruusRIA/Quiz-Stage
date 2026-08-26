@@ -18,6 +18,8 @@ The app is packaged as:
 - `out/make/installer/QuizStageSetup.exe`
 - `out/make/portable/QuizStage-win32-x64.zip`
 
+These personal-use Windows x64 artifacts are unsigned, so Windows SmartScreen may warn on first launch. Exact release evidence, hashes, and tested-platform status are recorded in [`docs/release-acceptance.md`](docs/release-acceptance.md).
+
 ```powershell
 npm run make:installer
 npm run make:portable
