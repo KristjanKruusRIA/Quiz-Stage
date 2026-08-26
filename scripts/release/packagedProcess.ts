@@ -2,10 +2,11 @@ import { execFile, type ChildProcess } from 'node:child_process';
 
 export interface StopPackagedProcessOptions {
   timeoutMs?: number;
+  processTreeIsRunning?: (child: ChildProcess) => boolean;
   terminate?: (child: ChildProcess, force: boolean) => Promise<void> | void;
 }
 
-export interface PackagedConnectionOptions {
+export interface PackagedConnectionOptions extends Omit<StopPackagedProcessOptions, 'timeoutMs'> {
   attempts?: number;
   intervalMs?: number;
   stopTimeoutMs?: number;
@@ -15,19 +16,32 @@ export function packagedProcessIsRunning(child: ChildProcess): boolean {
   return child.pid !== undefined && child.exitCode === null && child.signalCode === null;
 }
 
-function waitForExit(child: ChildProcess, timeoutMs: number): Promise<boolean> {
-  if (!packagedProcessIsRunning(child)) return Promise.resolve(true);
-  return new Promise((resolve) => {
-    const onExit = () => finish(true);
-    const timer = setTimeout(() => finish(false), timeoutMs);
-    const finish = (exited: boolean) => {
-      clearTimeout(timer);
-      child.off('exit', onExit);
-      resolve(exited || !packagedProcessIsRunning(child));
-    };
-    child.once('exit', onExit);
-    if (!packagedProcessIsRunning(child)) finish(true);
-  });
+function packagedProcessTreeIsRunning(child: ChildProcess): boolean {
+  if (globalThis.process.platform === 'win32') return packagedProcessIsRunning(child);
+  if (child.pid === undefined) return false;
+  try {
+    globalThis.process.kill(-child.pid, 0);
+    return true;
+  } catch (error: unknown) {
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code === 'ESRCH') return false;
+    if (code === 'EPERM') return true;
+    throw error;
+  }
+}
+
+async function waitForProcessTreeExit(
+  child: ChildProcess,
+  timeoutMs: number,
+  processTreeIsRunning: (child: ChildProcess) => boolean,
+): Promise<boolean> {
+  const deadline = Date.now() + timeoutMs;
+  while (processTreeIsRunning(child)) {
+    const remainingMs = deadline - Date.now();
+    if (remainingMs <= 0) return false;
+    await new Promise((resolve) => setTimeout(resolve, Math.min(25, remainingMs)));
+  }
+  return true;
 }
 
 function runTaskkill(pid: number, force: boolean): Promise<void> {
@@ -42,12 +56,12 @@ function runTaskkill(pid: number, force: boolean): Promise<void> {
 }
 
 async function terminateProcessTree(child: ChildProcess, force: boolean): Promise<void> {
-  if (!packagedProcessIsRunning(child)) return;
   const signal = force ? 'SIGKILL' : 'SIGTERM';
   const pid = child.pid;
   if (pid === undefined) return;
 
   if (globalThis.process.platform === 'win32') {
+    if (!packagedProcessIsRunning(child)) return;
     await runTaskkill(pid, force);
     if (packagedProcessIsRunning(child) && force) child.kill('SIGKILL');
     return;
@@ -64,14 +78,15 @@ export async function stopPackagedProcess(
   child: ChildProcess,
   options: StopPackagedProcessOptions = {},
 ): Promise<void> {
-  if (!packagedProcessIsRunning(child)) return;
   const timeoutMs = options.timeoutMs ?? 5_000;
+  const processTreeIsRunning = options.processTreeIsRunning ?? packagedProcessTreeIsRunning;
   const terminate = options.terminate ?? terminateProcessTree;
+  if (!processTreeIsRunning(child)) return;
 
   await terminate(child, false);
-  if (await waitForExit(child, timeoutMs)) return;
+  if (await waitForProcessTreeExit(child, timeoutMs, processTreeIsRunning)) return;
   await terminate(child, true);
-  if (await waitForExit(child, timeoutMs)) return;
+  if (await waitForProcessTreeExit(child, timeoutMs, processTreeIsRunning)) return;
   throw new Error(`PACKAGED_PROCESS_STILL_RUNNING:${child.pid ?? 'unknown'}`);
 }
 
@@ -82,9 +97,16 @@ export async function waitForPackagedConnection<T>(
 ): Promise<T> {
   const attempts = options.attempts ?? 100;
   const intervalMs = options.intervalMs ?? 100;
+  const stopOptions: StopPackagedProcessOptions = {
+    timeoutMs: options.stopTimeoutMs,
+    processTreeIsRunning: options.processTreeIsRunning,
+    terminate: options.terminate,
+  };
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     if (!packagedProcessIsRunning(child)) {
-      throw new Error(`PACKAGED_APP_EXITED:${child.exitCode ?? child.signalCode ?? 'unknown'}`);
+      const exitStatus = child.exitCode ?? child.signalCode ?? 'unknown';
+      await stopPackagedProcess(child, stopOptions);
+      throw new Error(`PACKAGED_APP_EXITED:${exitStatus}`);
     }
     try {
       return await connect();
@@ -93,6 +115,6 @@ export async function waitForPackagedConnection<T>(
       await new Promise((resolve) => setTimeout(resolve, intervalMs));
     }
   }
-  await stopPackagedProcess(child, { timeoutMs: options.stopTimeoutMs });
+  await stopPackagedProcess(child, stopOptions);
   throw new Error('PACKAGED_APP_CDP_TIMEOUT');
 }

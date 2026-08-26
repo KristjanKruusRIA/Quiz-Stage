@@ -21,7 +21,20 @@ function Remove-TemporaryDirectory {
   if (-not [IO.Path]::GetFileName($resolved).StartsWith($ExpectedPrefix, [StringComparison]::Ordinal)) {
     throw "Refusing to remove unexpected temporary directory: $resolved"
   }
-  Remove-Item -LiteralPath $resolved -Recurse -Force -ErrorAction SilentlyContinue
+  $maximumAttempts = 10
+  for ($attempt = 1; $attempt -le $maximumAttempts; $attempt += 1) {
+    if (-not (Test-Path -LiteralPath $resolved)) { return }
+    try {
+      Remove-Item -LiteralPath $resolved -Recurse -Force -ErrorAction Stop
+    } catch {
+      if ($attempt -eq $maximumAttempts) {
+        throw "PACKAGED_SMOKE_CLEANUP_FAILED:$resolved ($($_.Exception.Message))"
+      }
+    }
+    if (-not (Test-Path -LiteralPath $resolved)) { return }
+    if ($attempt -lt $maximumAttempts) { Start-Sleep -Milliseconds 200 }
+  }
+  throw "PACKAGED_SMOKE_CLEANUP_FAILED:$resolved"
 }
 
 function Invoke-PackageSmoke {

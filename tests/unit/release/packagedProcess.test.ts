@@ -44,6 +44,11 @@ function processExists(pid: number): boolean {
 
 afterEach(async () => {
   for (const child of children.splice(0)) {
+    if (process.platform !== 'win32' && child.pid !== undefined) {
+      try {
+        process.kill(-child.pid, 'SIGKILL');
+      } catch { /* The process group is already gone. */ }
+    }
     if (packagedProcessIsRunning(child)) {
       child.kill('SIGKILL');
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -79,6 +84,24 @@ describe('packaged process cleanup', () => {
     expect(packagedProcessIsRunning(child)).toBe(false);
   });
 
+  it('forces a surviving process tree after its leader exits', async () => {
+    const child = spawnSleeper();
+    let processTreeIsRunning = true;
+    const forceAttempts: boolean[] = [];
+
+    await stopPackagedProcess(child, {
+      timeoutMs: 20,
+      processTreeIsRunning: () => processTreeIsRunning,
+      terminate: (process, force) => {
+        forceAttempts.push(force);
+        if (force) processTreeIsRunning = false;
+        else process.kill();
+      },
+    });
+
+    expect(forceAttempts).toEqual([false, true]);
+  });
+
   it('fails explicitly if forced termination leaves the process alive', async () => {
     const child = spawnSleeper();
 
@@ -100,6 +123,28 @@ describe('packaged process cleanup', () => {
     expect(packagedProcessIsRunning(child)).toBe(false);
   }, 10_000);
 
+  it('cleans a surviving process tree before reporting an early root exit', async () => {
+    const child = spawnSleeper('process.exit(23)');
+    await waitFor(() => !packagedProcessIsRunning(child));
+    let processTreeIsRunning = true;
+    const forceAttempts: boolean[] = [];
+
+    await expect(waitForPackagedConnection(
+      child,
+      async () => undefined,
+      {
+        attempts: 1,
+        stopTimeoutMs: 20,
+        processTreeIsRunning: () => processTreeIsRunning,
+        terminate: (_process, force) => {
+          forceAttempts.push(force);
+          if (force) processTreeIsRunning = false;
+        },
+      },
+    )).rejects.toThrow('PACKAGED_APP_EXITED:23');
+    expect(forceAttempts).toEqual([false, true]);
+  });
+
   it('terminates descendants in the packaged process tree', async () => {
     const directory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-process-fixture-'));
     temporaryDirectories.push(directory);
@@ -119,4 +164,56 @@ describe('packaged process cleanup', () => {
     expect(packagedProcessIsRunning(processTree)).toBe(false);
     expect(processExists(descendantPid)).toBe(false);
   }, 10_000);
+
+  it.skipIf(process.platform === 'win32')(
+    'force-kills a descendant that ignores SIGTERM after its leader exits',
+    async () => {
+      const directory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-process-fixture-'));
+      temporaryDirectories.push(directory);
+      const pidFile = path.join(directory, 'child.pid');
+      const processTree = spawnSleeper(`
+        const { spawn } = require('node:child_process');
+        const { writeFileSync } = require('node:fs');
+        const child = spawn(process.execPath, ['-e', \"process.on('SIGTERM', () => {}); setInterval(() => undefined, 1000)\"], { stdio: 'ignore' });
+        child.unref();
+        writeFileSync(process.argv[1], String(child.pid));
+        process.on('SIGTERM', () => process.exit(0));
+        setInterval(() => undefined, 1000);
+      `, [pidFile]);
+      await waitFor(() => existsSync(pidFile));
+      const descendantPid = Number(readFileSync(pidFile, 'utf8'));
+
+      await stopPackagedProcess(processTree, { timeoutMs: 250 });
+
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    10_000,
+  );
+
+  it.skipIf(process.platform === 'win32')(
+    'cleans descendants after the root exits before the connection attempt',
+    async () => {
+      const directory = mkdtempSync(path.join(tmpdir(), 'quiz-stage-process-fixture-'));
+      temporaryDirectories.push(directory);
+      const pidFile = path.join(directory, 'child.pid');
+      const processTree = spawnSleeper(`
+        const { spawn } = require('node:child_process');
+        const { writeFileSync } = require('node:fs');
+        const child = spawn(process.execPath, ['-e', \"process.on('SIGTERM', () => {}); setInterval(() => undefined, 1000)\"], { stdio: 'ignore' });
+        child.unref();
+        writeFileSync(process.argv[1], String(child.pid));
+      `, [pidFile]);
+      await waitFor(() => existsSync(pidFile));
+      const descendantPid = Number(readFileSync(pidFile, 'utf8'));
+      await waitFor(() => !packagedProcessIsRunning(processTree));
+
+      await expect(waitForPackagedConnection(
+        processTree,
+        async () => undefined,
+        { attempts: 1, stopTimeoutMs: 250 },
+      )).rejects.toThrow('PACKAGED_APP_EXITED:0');
+      expect(processExists(descendantPid)).toBe(false);
+    },
+    10_000,
+  );
 });

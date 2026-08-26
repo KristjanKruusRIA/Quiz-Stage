@@ -1,3 +1,4 @@
+import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 import Database from 'better-sqlite3';
@@ -60,6 +61,88 @@ describe('Windows release workflow', () => {
     expect(smoke).toContain('npm.cmd run smoke:portable -- -- --target windows-x64 --archive');
     expect(smoke).toContain('playwright test tests/e2e/package-smoke.spec.ts');
   });
+
+  it.skipIf(process.platform !== 'win32')(
+    'retries temporary profile cleanup until the exact directory is absent',
+    () => {
+      const cleanupProbe = `
+$source = Get-Content -Raw scripts/smoke-package.ps1
+$tokens = $null
+$errors = $null
+$ast = [System.Management.Automation.Language.Parser]::ParseInput($source, [ref]$tokens, [ref]$errors)
+$functionAst = $ast.Find({
+  param($node)
+  $node -is [System.Management.Automation.Language.FunctionDefinitionAst] -and $node.Name -eq 'Remove-TemporaryDirectory'
+}, $true)
+if ($null -eq $functionAst) { throw 'REMOVE_TEMPORARY_DIRECTORY_NOT_FOUND' }
+Invoke-Expression $functionAst.Extent.Text
+
+$target = Join-Path $env:TEMP ('quiz-stage-package-smoke-regression-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $target | Out-Null
+$script:removeAttempts = 0
+function Remove-Item {
+  [CmdletBinding()]
+  param(
+    [Parameter(Mandatory = $true)][string]$LiteralPath,
+    [switch]$Recurse,
+    [switch]$Force
+  )
+  $script:removeAttempts += 1
+  if ($script:removeAttempts -eq 1) { return }
+  Microsoft.PowerShell.Management\\Remove-Item -LiteralPath $LiteralPath -Recurse:$Recurse -Force:$Force -ErrorAction Stop
+}
+
+try {
+  Remove-TemporaryDirectory -Path $target -ExpectedPrefix 'quiz-stage-package-smoke-'
+  if (Test-Path -LiteralPath $target) { throw 'TEMPORARY_DIRECTORY_STILL_EXISTS' }
+  if ($script:removeAttempts -ne 2) { throw "UNEXPECTED_REMOVE_ATTEMPTS:$script:removeAttempts" }
+  Write-Output "REMOVE_ATTEMPTS=$script:removeAttempts"
+} finally {
+  if (Test-Path -LiteralPath $target) {
+    Microsoft.PowerShell.Management\\Remove-Item -LiteralPath $target -Recurse -Force -ErrorAction Stop
+  }
+}
+
+$stubbornTarget = Join-Path $env:TEMP ('quiz-stage-package-smoke-regression-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $stubbornTarget | Out-Null
+$script:removeAttempts = 0
+function Remove-Item {
+  [CmdletBinding()]
+  param(
+    [Parameter(Mandatory = $true)][string]$LiteralPath,
+    [switch]$Recurse,
+    [switch]$Force
+  )
+  $script:removeAttempts += 1
+}
+
+try {
+  $cleanupError = $null
+  try {
+    Remove-TemporaryDirectory -Path $stubbornTarget -ExpectedPrefix 'quiz-stage-package-smoke-'
+  } catch {
+    $cleanupError = $_.Exception.Message
+  }
+  if ($cleanupError -notlike 'PACKAGED_SMOKE_CLEANUP_FAILED:*') {
+    throw "EXPECTED_CLEANUP_FAILURE:$cleanupError"
+  }
+  if ($script:removeAttempts -ne 10) { throw "UNEXPECTED_FINAL_REMOVE_ATTEMPTS:$script:removeAttempts" }
+  Write-Output "FINAL_REMOVE_ATTEMPTS=$script:removeAttempts"
+} finally {
+  Microsoft.PowerShell.Management\\Remove-Item -LiteralPath $stubbornTarget -Recurse -Force -ErrorAction Stop
+}
+`;
+      const result = spawnSync('pwsh', ['-NoProfile', '-Command', cleanupProbe], {
+        cwd: process.cwd(),
+        encoding: 'utf8',
+      });
+
+      expect(result.status, result.stderr || result.stdout).toBe(0);
+      expect(result.stdout).toContain('REMOVE_ATTEMPTS=2');
+      expect(result.stdout).toContain('FINAL_REMOVE_ATTEMPTS=10');
+    },
+    10_000,
+  );
 
   it('contains every previous-version preservation fixture', () => {
     const userData = path.join(process.cwd(), 'tests', 'fixtures', 'previous-version', 'UserData');
