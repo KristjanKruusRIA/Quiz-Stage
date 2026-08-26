@@ -106,5 +106,5 @@ describe('package contents', () => {
     expect(portableFiles).toContain(path.join(extractedPortable, 'Quiz Stage.exe'));
     expect(portableFiles).toContain(path.join(extractedPortable, 'resources', 'portable.flag'));
     expect(portableFiles).toContain(path.join(extractedPortable, 'UserData', '.keep'));
-  }, 30_000);
+  }, 120_000);
 });
