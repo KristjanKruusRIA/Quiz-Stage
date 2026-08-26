@@ -14,7 +14,7 @@ The first release intentionally defers these items:
 Release-specific limitations:
 
 - The installer and portable executable are unsigned personal-use builds. Windows SmartScreen may warn on first launch.
-- Final package acceptance was performed on Windows 11 x64. The separate Windows 10 x64 install, portable, offline-match, and uninstall pass required by the release plan remains unexecuted.
+- The Squirrel installer attempts a nonblocking uninstall-icon fetch from `raw.githubusercontent.com`. Installation and uninstall succeed while disconnected, and the installed application and portable package make zero HTTP(S) requests during the accepted offline matches.
 - The shipped/runtime dependency audit is clean. The full development dependency tree has 28 advisories in Electron Forge packaging tooling (3 low, 24 high, 1 critical) with no nonbreaking upgrade available at this baseline.
 
 These items may be considered in future versions after release validation.

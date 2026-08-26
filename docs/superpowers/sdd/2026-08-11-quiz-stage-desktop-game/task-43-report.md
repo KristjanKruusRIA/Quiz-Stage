@@ -4,9 +4,9 @@ Date: 2026-08-26
 
 ## Outcome
 
-The Quiz Stage Windows x64 release candidate is verified at baseline `1c02fc75897cd1a0ff50a9418a06174010ca482d`. A clean install completed the full release workflow, the production seed passed every inventory and source gate, and both the installer and portable package completed a full match with outbound network access blocked. The final package rebuild, package hardening inspection, visual suite, checksum generation, and upgrade-preservation run all pass.
+The Quiz Stage Windows x64 release candidate is verified at baseline `cc4fe45874e10405065cb49612d5d8e71c297c23`. A clean install completed the full release workflow, the production seed passed every inventory and source gate, and both the installer and portable package completed a full match with outbound network access blocked. The final package rebuild, package hardening inspection, visual suite, checksum generation, and upgrade-preservation run all pass.
 
-Acceptance is complete for the tested Windows 11 x64 host. The plan also requires a separate Windows 10 x64 manual run; that host was not available, so Task 43 retains that one external cross-version sign-off rather than claiming unobserved evidence.
+Acceptance is complete on Windows 11 x64 and Windows 10 x64. The Windows 10 run used Microsoft Windows 10 Pro 22H2 build 19045 in a disposable Hyper-V guest with its network adapter disconnected.
 
 ## Release-hardening changes
 
@@ -39,6 +39,10 @@ The visual Playwright suite passed 5/5 and produced 34 screenshots across 1280×
 
 Installer and portable package smoke each completed an offline match on Windows 11 Pro Insider Preview 10.0.26300.9032 x64. Installer cleanup left no `%LOCALAPPDATA%\QuizStage` directory; task-specific temporary roots were removed. The real application upgrade preserved custom content, reports, settings, history, incomplete autosave, and media overrides.
 
-## Remaining sign-off
+## Windows 10 x64 sign-off
 
-Windows 10 x64 was not available. Its fresh installer install/launch/uninstall, portable extract/launch, and offline complete-match pass remain the sole unexecuted Task 43 requirement. No other product, content, package, security, upgrade, visual, or documentation blocker remains.
+The exact final installer and portable ZIP were copied into a Windows 10 Pro 22H2 10.0.19045 x64 guest and independently rehashed. With the guest network adapter disconnected, each package completed a 60-clue English/Medium two-team match through Final, displayed a winner, and recorded a `Complete` Match History entry. The application recorded zero HTTP(S) requests in both runs. Setup, board, and winner screenshots from both package forms were manually inspected.
+
+The installer uninstalled with exit code 0. The installed executable and desktop/Start Menu shortcuts were removed; only Squirrel's `.dead` tombstone/bootstrap residue remained inside the disposable guest. Squirrel logged one failed nonblocking attempt to fetch an uninstall icon from `raw.githubusercontent.com` while offline. This did not affect installation, gameplay, or uninstall and is recorded in Known Limitations.
+
+The Windows 10 evidence record is `task-43-windows10-evidence.json`. No product, content, package, security, upgrade, visual, documentation, or cross-version blocker remains. Task 43 is complete.

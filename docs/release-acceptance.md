@@ -1,14 +1,15 @@
 # Quiz Stage release acceptance (Task 43)
 
 - Evidence date: 2026-08-26 (Europe/Tallinn)
-- Verified baseline: `1c02fc75897cd1a0ff50a9418a06174010ca482d`
-- Host: Windows 11 Pro Insider Preview 10.0.26300.9032 x64, Node.js 24.15.0, npm 11.16.0
+- Verified baseline: `cc4fe45874e10405065cb49612d5d8e71c297c23`
+- Primary host: Windows 11 Pro Insider Preview 10.0.26300.9032 x64, Node.js 24.15.0, npm 11.16.0
+- Compatibility guest: Windows 10 Pro 22H2 10.0.19045 x64, Node.js 24.15.0
 
 ## Decision
 
 The Windows x64 release candidate passes the clean automated release gate and both the installer and portable package complete a full match with outbound access blocked. Content, package hardening, upgrade preservation, visual layouts, and shipped-dependency security checks pass.
 
-The release is accepted on the tested Windows 11 x64 host. The plan's separate Windows 10 x64 manual install/play/uninstall run was not available in this environment and remains the only open cross-version sign-off. It is not represented as tested.
+The release is accepted on both tested Windows 11 x64 and Windows 10 x64 environments. On Windows 10, the exact final installer and portable ZIP each completed a 60-clue match through Final and Match History while the VM network adapter was disconnected; the installer then uninstalled successfully.
 
 ## Requirements checklist
 
@@ -100,8 +101,10 @@ The installer and packaged executable are intentionally unsigned (`NotSigned`), 
 | Platform | Installer | Portable | Offline match | Uninstall/cleanup | Status |
 |---|---:|---:|---:|---:|---|
 | Windows 11 Pro Insider Preview 10.0.26300.9032 x64 | Pass | Pass | Pass in both packages | Pass; no `%LOCALAPPDATA%\QuizStage` or task temp residue | Accepted |
-| Windows 10 x64 | Not run | Not run | Not run | Not run | Open external sign-off |
+| Windows 10 Pro 22H2 10.0.19045 x64 | Pass | Pass | Pass in both packages; guest adapter disconnected and app HTTP(S) requests 0 | Pass; executable and shortcuts removed, Squirrel `.dead` tombstone only | Accepted |
+
+The Windows 10 run used the final artifact hashes listed above. The portable match completed 60 clues from `2026-08-26T01:06:05.283Z` to `01:07:09.481Z`; the installed match completed from `01:08:57.526Z` to `01:10:04.248Z`. Both reached a visible winner and a `Complete` Match History entry, and both recorded zero HTTP(S) requests. Setup, board, and winner captures for each package were manually inspected. The Squirrel installer completed offline but logged one nonblocking failed attempt to fetch its uninstall icon from `raw.githubusercontent.com`; application execution did not require or attempt network access. Exact hashes and run evidence are recorded in `docs/superpowers/sdd/2026-08-11-quiz-stage-desktop-game/task-43-windows10-evidence.json`.
 
 ## Final status
 
-All implementation, content, deterministic seed, package, Windows 11, offline-match, upgrade, visual, and documentation gates available in this environment pass. The only unclosed Task 43 checklist item is the independent Windows 10 x64 manual package run. See `docs/known-limitations.md` for release boundaries.
+All implementation, content, deterministic seed, package, Windows 11, Windows 10, offline-match, upgrade, visual, and documentation gates pass. Task 43 is complete. See `docs/known-limitations.md` for the intentionally deferred product and release boundaries.

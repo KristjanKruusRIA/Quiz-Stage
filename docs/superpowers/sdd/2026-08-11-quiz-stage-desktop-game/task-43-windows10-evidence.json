@@ -1,0 +1,67 @@
+{
+  "kind": "task43-windows10-package-acceptance",
+  "capturedAt": "2026-08-26T01:11:49.4074182Z",
+  "verifiedRepositoryCommit": "cc4fe45874e10405065cb49612d5d8e71c297c23",
+  "artifactBuildBaseline": "1c02fc75897cd1a0ff50a9418a06174010ca482d",
+  "guest": {
+    "caption": "Microsoft Windows 10 Pro",
+    "version": "10.0.19045",
+    "displayVersion": "22H2",
+    "architecture": "64-bit",
+    "computerName": "QUIZSTAGE-W10",
+    "networkStatusDuringRuns": "Disconnected",
+    "nodeVersion": "v24.15.0",
+    "nodeArchitecture": "x64",
+    "playwrightVersion": "1.62.1"
+  },
+  "media": {
+    "name": "Windows 10 22H2 English x64 ISO",
+    "sha256": "a6f470ca6d331eb353b815c043e327a347f594f37ff525f17764738fe812852e"
+  },
+  "artifacts": {
+    "installerSha256": "da6d9fb17de07486b7e2118eac4d0b616fe1bea323cfd70af9a3ef859d47c029",
+    "portableSha256": "2f331a853562547cf85957a0cb964d7b41b35e65e1ec8272a852f21cf3e023d1",
+    "installedExecutableSha256": "2c37b37e31962584129cede98ce138019b105f249055a897678fd1d03030208a",
+    "smokeHarnessSha256": "d97fd6d61092fc5f815d1b1be9b128e0b130a63a989735293e4c883dd056cc00"
+  },
+  "runs": {
+    "portable": {
+      "startedAt": "2026-08-26T01:06:05.283Z",
+      "completedAt": "2026-08-26T01:07:09.481Z",
+      "cluesPlayed": 60,
+      "matchHistoryComplete": true,
+      "externalRequests": [],
+      "exitCode": 0
+    },
+    "installer": {
+      "startedAt": "2026-08-26T01:08:57.526Z",
+      "completedAt": "2026-08-26T01:10:04.248Z",
+      "cluesPlayed": 60,
+      "matchHistoryComplete": true,
+      "externalRequests": [],
+      "exitCode": 0
+    }
+  },
+  "uninstall": {
+    "exitCode": 0,
+    "installedExecutableExists": false,
+    "desktopShortcutExists": false,
+    "startMenuShortcutExists": false,
+    "runningQuizStageProcesses": 0,
+    "squirrelDeadMarkerExists": true
+  },
+  "screenshots": {
+    "Portable-setup.png": "4f3e4a016ccfb7d1422bbe140cbd087ec74d127617d8c1816be71bba93bf6de6",
+    "Portable-board.png": "19b80c9254a741195c2035a65be41c6b0472795053ca3eeca339d69a92d39a4c",
+    "Portable-winner.png": "5247bbd9a108b5505d3cde88bb6cc00651b4a631f11cb29e1cf88a676bc76c20",
+    "Installer-setup.png": "4f3e4a016ccfb7d1422bbe140cbd087ec74d127617d8c1816be71bba93bf6de6",
+    "Installer-board.png": "75160afdbcdb140da59094a3b28289da68bcf34048e6fd71227780cd91c6de62",
+    "Installer-winner.png": "7f525cfb0b6add36664a3cadc189fe918ca321699fd0b6f5a7a49bde45d6c69f"
+  },
+  "observations": [
+    "Both final package hashes matched after transfer into the guest.",
+    "Both accepted runs completed while the Hyper-V network adapter was disconnected.",
+    "The Squirrel installer logged a failed nonblocking uninstall-icon fetch from raw.githubusercontent.com while offline.",
+    "Setup, board, and winner screenshots from both package forms were manually inspected."
+  ]
+}
