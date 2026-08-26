@@ -64,12 +64,14 @@ const makersByName: Record<MakerName, typeof squirrelMaker | typeof zipMaker | t
   zip: zipMaker,
   deb: debMaker,
 };
-const makers = makerNamesFor(releaseTargetFor(process.platform, process.arch), packageProfile)
+const releaseTarget = releaseTargetFor(process.platform, process.arch);
+const makers = makerNamesFor(releaseTarget, packageProfile)
   .map((makerName) => makersByName[makerName]);
 
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    executableName: releaseTarget.executableName,
     electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
     ...(packagerIconPath === undefined ? {} : { icon: packagerIconPath }),
     extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media'],

@@ -56,6 +56,25 @@ function packagedExecutable(root: string, executableName: string): string {
   return matches[0]!;
 }
 
+function linuxForgeExecutableContract(): { packagerExecutableName?: string; debBin?: string } {
+  const probe = [
+    "Object.defineProperty(process, 'platform', { value: 'linux' });",
+    "Object.defineProperty(process, 'arch', { value: 'x64' });",
+    "(async () => { const imported = await import('./forge.config.ts');",
+    'const config = imported.default?.default ?? imported.default;',
+    "const deb = config.makers.find((maker) => maker.name === '@electron-forge/maker-deb');",
+    'console.log(JSON.stringify({',
+    'packagerExecutableName: config.packagerConfig?.executableName,',
+    'debBin: deb?.config?.options?.bin,',
+    '})); })();',
+  ].join(' ');
+  return JSON.parse(execFileSync(process.execPath, [
+    path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs'),
+    '-e',
+    probe,
+  ], { encoding: 'utf8' })) as { packagerExecutableName?: string; debBin?: string };
+}
+
 function applicationExecutables(files: string[]): string[] {
   return files.filter((file) => {
     const executable = path.basename(file).toLowerCase();
@@ -121,10 +140,12 @@ describe('package contents', () => {
     expect(main).toContain("path.join(process.resourcesPath, 'media', 'icon-source.png')");
   });
 
-  it('points the Debian launcher at the packaged Linux executable', () => {
-    const forgeConfig = readFileSync('forge.config.ts', 'utf8');
+  it('keeps the Linux packager executable aligned with the Debian launcher', () => {
+    const target = releaseTargetFor('linux', 'x64');
+    const executableContract = linuxForgeExecutableContract();
 
-    expect(forgeConfig).toContain("bin: 'quiz-stage'");
+    expect(executableContract.packagerExecutableName).toBe(target.executableName);
+    expect(executableContract.debBin).toBe(target.executableName);
   });
 
   it('exposes the native platform build entry points', () => {
