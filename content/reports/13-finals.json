@@ -4,9 +4,9 @@
   "kind": "verification",
   "blocking": false,
   "artifactHashes": {
-    "authored": "a2f299ba389624f48f3d2118dc0ed4ae0958085d5ff00385ffc47eab5da0191f",
-    "generated": "878cd6d03111c3b12fc8d321e2a97a9aedbe3d6e11ac0cee9786d4c57ab5477d",
-    "evidence": "d9c6a74abe73aa51654d2781f21dbcc3628339a37806168887f5708f2942070c"
+    "authored": "fe0968d7e9763cca914837de1c9e2f8f7b49a8d7e7992b78175a3e799c5d17f1",
+    "generated": "f1b9034832a53096d9e6352511af983403a5634423d49f7c98ae67f933753ed9",
+    "evidence": "ff3ba88a90e32bea0f0ea9076cfe7fc8cd61462528997473c74dec58bbfcaa1d"
   },
   "validations": {
     "authored": {
@@ -3707,7 +3707,16 @@
         "clueId": "built-in-adult-final-0001",
         "field": "category_name_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Kinsey's Two Reports\" is missing from category_name_en translation",
+        "message": "Proper noun \"Early Studies\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 152,
+        "clueId": "built-in-adult-final-0001",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Human Sexuality\" is missing from category_name_en translation",
         "severity": "warning"
       },
       {
@@ -3798,6 +3807,15 @@
         "field": "explanation_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "message": "Proper noun \"The United States\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 156,
+        "clueId": "built-in-adult-final-0005",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Early British Sexology\" is missing from category_name_en translation",
         "severity": "warning"
       },
       {
@@ -4310,7 +4328,7 @@
         "clueId": "built-in-estonia-final-0012",
         "field": "category_name_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Virtual Residency\" is missing from category_name_en translation",
+        "message": "Proper noun \"Estonia's Digital Public Services\" is missing from category_name_en translation",
         "severity": "warning"
       },
       {
@@ -8385,6 +8403,14 @@
       {
         "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0004:explanation_en",
         "clueId": "built-in-adult-final-0004",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0005:category_name_en",
+        "clueId": "built-in-adult-final-0005",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "status": "pending",
         "reviewerReason": "pending-review",
@@ -15472,7 +15498,13 @@
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-adult-final-0001",
-      "message": "generated.en-et.csv:152:category_name_en: Proper noun \"Kinsey's Two Reports\" is missing from category_name_en translation"
+      "message": "generated.en-et.csv:152:category_name_en: Proper noun \"Early Studies\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0001",
+      "message": "generated.en-et.csv:152:category_name_en: Proper noun \"Human Sexuality\" is missing from category_name_en translation"
     },
     {
       "scope": "translation",
@@ -15533,6 +15565,12 @@
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-adult-final-0004",
       "message": "generated.en-et.csv:155:explanation_en: Proper noun \"The United States\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0005",
+      "message": "generated.en-et.csv:156:category_name_en: Proper noun \"Early British Sexology\" is missing from category_name_en translation"
     },
     {
       "scope": "translation",
@@ -15874,7 +15912,7 @@
       "scope": "translation",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-estonia-final-0012",
-      "message": "generated.en-et.csv:175:category_name_en: Proper noun \"Virtual Residency\" is missing from category_name_en translation"
+      "message": "generated.en-et.csv:175:category_name_en: Proper noun \"Estonia's Digital Public Services\" is missing from category_name_en translation"
     },
     {
       "scope": "translation",
