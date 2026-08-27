@@ -23,6 +23,7 @@ export type HostDesktopApi = {
       hasResumableMatch(): Promise<boolean>;
       resumeMatch(): Promise<HostGameView | null>;
       listHistory(): Promise<MatchHistoryEntry[]>;
+      saveAndQuit?: () => Promise<void>;
       getAudioSettings?: () => Promise<AudioSettings>;
       updateAudioSettings?: (settings: AudioSettings) => Promise<AudioSettings>;
       getAppearanceSettings?: () => Promise<AppearanceSettings>;
@@ -69,6 +70,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch,
     resumeMatch,
     listHistory,
+    saveAndQuit,
     getAudioSettings,
     updateAudioSettings,
     subscribeToMediaWarnings,
@@ -84,6 +86,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     hasResumableMatch: () => hasResumableMatch(),
     resumeMatch: () => resumeMatch(),
     listHistory: () => listHistory(),
+    saveAndQuit: () => saveAndQuit(),
     getAudioSettings: () => getAudioSettings(),
     updateAudioSettings: (settings) => updateAudioSettings(settings),
     getAppearanceSettings: () => getAppearanceSettings(),

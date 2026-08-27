@@ -126,6 +126,9 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     listHistory: async () => matchHistorySchema.parse(
       await ipc.invoke(IPC_CHANNELS.listHistory, undefined),
     ),
+    saveAndQuit: async () => {
+      z.undefined().parse(await ipc.invoke(IPC_CHANNELS.saveAndQuit, undefined));
+    },
     getAudioSettings: async () => audioSettingsSchema.parse(
       await ipc.invoke(IPC_CHANNELS.audioSettingsGet, undefined),
     ),

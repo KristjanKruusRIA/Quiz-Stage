@@ -59,7 +59,7 @@ const hostView = {
 describe('preload quizStage surface', () => {
   it('exposes dispatch only to the host and subscriptions to both surfaces', async () => {
     const ipc: PreloadIpcPort = {
-      invoke: vi.fn(async () => hostView),
+      invoke: vi.fn(async (channel) => channel === IPC_CHANNELS.saveAndQuit ? undefined : hostView),
       on: vi.fn(),
       removeListener: vi.fn(),
       send: vi.fn(),
@@ -72,9 +72,11 @@ describe('preload quizStage surface', () => {
     expect(host.hasResumableMatch).toBeTypeOf('function');
     expect(host.resumeMatch).toBeTypeOf('function');
     expect(host.listHistory).toBeTypeOf('function');
+    expect(host.saveAndQuit).toBeTypeOf('function');
     expect(publicApi).not.toHaveProperty('hasResumableMatch');
     expect(publicApi).not.toHaveProperty('resumeMatch');
     expect(publicApi).not.toHaveProperty('listHistory');
+    expect(publicApi).not.toHaveProperty('saveAndQuit');
     expect(host.listContent).toBeTypeOf('function');
     expect(host.previewContentImport).toBeTypeOf('function');
     expect(publicApi).not.toHaveProperty('listContent');
@@ -86,6 +88,8 @@ describe('preload quizStage surface', () => {
 
     await host.dispatch!({ type: 'SelectClue', clueId: 'c1' });
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.dispatch, { type: 'SelectClue', clueId: 'c1' });
+    await host.saveAndQuit();
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.saveAndQuit, undefined);
   });
 
   it('strictly parses no-argument recovery and history responses', async () => {

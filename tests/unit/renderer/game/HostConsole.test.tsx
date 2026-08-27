@@ -20,6 +20,15 @@ function deferred<T>() {
 }
 
 describe('HostConsole', () => {
+  it('offers an explicit save-and-quit action for an incomplete match', async () => {
+    const onSaveAndQuit = vi.fn(async () => undefined);
+    render(<HostConsole view={hostView()} api={api()} onSaveAndQuit={onSaveAndQuit} />);
+
+    await userEvent.click(screen.getByRole('button', { name: 'Save match and quit' }));
+
+    expect(onSaveAndQuit).toHaveBeenCalledOnce();
+  });
+
   it('dispatches validated current-match score, report, and confirmed incomplete-match intents', async () => {
     const desktopApi = api();
     const user = userEvent.setup();

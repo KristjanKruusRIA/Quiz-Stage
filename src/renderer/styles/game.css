@@ -19,10 +19,17 @@
 .host-console { min-height: 0; background: #101a32; padding: clamp(.45rem, 1vmin, 1.25rem); display: grid; gap: clamp(.35rem, .65vmin, .8rem); overflow: auto; overscroll-behavior: contain; font-size: clamp(.875rem, 1.15vmin, 1.75rem); }
 .host-console header, .host-teams, .judgment-controls, .timer-controls, .recovery-controls { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
 .host-console h2, .host-console p { margin: 0; }
-.host-console button, .host-console input { font: inherit; min-height: 2.5rem; }
+.host-console button, .host-console input:not([type='checkbox']):not([type='radio']) { font: inherit; min-height: 2.25rem; padding: .35rem .65rem; }
+.host-console .save-quit { margin-left: auto; }
+.correction-controls { display: flex; flex-wrap: wrap; align-items: end; gap: .5rem; }
+.correction-controls > label { flex: 1 1 16rem; }
+.correction-controls form { display: flex; align-items: end; gap: .5rem; }
+.correction-controls form label { width: min(13rem, 100%); }
+.correction-controls input[type='number'] { width: 8rem; }
+.correction-controls > label:has(input[type='checkbox']) { flex-basis: 100%; display: flex; align-items: center; gap: .4rem; }
 @media (max-width: 900px), (max-height: 760px) { .host-surface { grid-template-rows: minmax(0, 1fr) minmax(9rem, 42dvh); } .shortcut { display: none; } }
 
 @media (min-width: 2200px) {
   .scoreboard { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
-  .host-console button, .host-console input { min-height: 3.5rem; }
+  .host-console button, .host-console input:not([type='checkbox']):not([type='radio']) { min-height: 3.5rem; }
 }

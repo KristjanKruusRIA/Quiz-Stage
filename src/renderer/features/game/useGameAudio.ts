@@ -14,11 +14,15 @@ export type GameAudioAction =
   | { type: 'stop-music' };
 
 export function audioActionsForTransition(previous: HostGameView | null, current: HostGameView): GameAudioAction[] {
-  if (previous === null || previous.state.id !== current.state.id || current.state.eventSequence <= previous.state.eventSequence) return [];
+  const boardPhases = ['round-one-board', 'round-two-board'];
+  if (previous === null) return boardPhases.includes(current.state.phase) ? [{ type: 'music', key: 'opening' }] : [];
+  if (previous.state.id !== current.state.id || current.state.eventSequence <= previous.state.eventSequence) return [];
   const before = previous.state;
   const after = current.state;
   if (after.undoStack.length < before.undoStack.length) return [];
   const actions: GameAudioAction[] = [];
+  const leftBoard = boardPhases.includes(before.phase) && !boardPhases.includes(after.phase);
+  const enteredBoard = !boardPhases.includes(before.phase) && boardPhases.includes(after.phase);
   const tiebreakerTeam = before.phase === 'tiebreaker' ? before.activeClue?.lockedTeamId : null;
   if (tiebreakerTeam !== null && tiebreakerTeam !== undefined) {
     const correct = after.phase === 'complete'
@@ -35,7 +39,7 @@ export function audioActionsForTransition(previous: HostGameView | null, current
     if (correct) actions.push({ type: 'play', key: 'correct-applause' });
     else if (sameClueLockout || nextTiebreaker) actions.push({ type: 'play', key: 'incorrect-crowd' });
   }
-  if (before.phase === 'final-clue' && after.phase !== 'final-clue') actions.push({ type: 'stop-music' });
+  if (leftBoard || (before.phase === 'final-clue' && after.phase !== 'final-clue')) actions.push({ type: 'stop-music' });
   if (before.timer.status !== 'expired' && after.timer.status === 'expired') actions.push({ type: 'play', key: 'time-expired' });
   if (before.phase !== after.phase) {
     if (after.phase === 'daily-double-wager') actions.push({ type: 'play', key: 'daily-double' });
@@ -43,6 +47,7 @@ export function audioActionsForTransition(previous: HostGameView | null, current
     else if (after.phase === 'final-clue') actions.push({ type: 'music', key: 'final-tension' });
     else if (after.phase === 'complete' && after.winnerTeamId !== null) actions.push({ type: 'play', key: 'winner' });
   }
+  if (enteredBoard) actions.push({ type: 'music', key: 'opening' });
   const newJudgment = Object.keys(after.finalJudgments).find((teamId) => !(teamId in before.finalJudgments));
   if (newJudgment !== undefined) actions.push({ type: 'play', key: after.finalJudgments[newJudgment] ? 'correct-applause' : 'incorrect-crowd' });
   else if (before.activeClue?.clueId === after.activeClue?.clueId) {
@@ -71,6 +76,8 @@ interface AudioControllerOptions {
   settings: AudioSettings;
   setTimeout?: (callback: () => void, delay: number) => unknown;
   clearTimeout?: (handle: unknown) => void;
+  setInterval?: (callback: () => void, delay: number) => unknown;
+  clearInterval?: (handle: unknown) => void;
   onPlaybackWarning?: (key: AudioAssetKey) => void;
 }
 
@@ -80,15 +87,20 @@ export class AudioController {
   private active = new Map<AudioLike, { key: AudioAssetKey; channel: ReturnType<typeof audioChannelForAsset>; ducked: boolean }>();
   private endedListeners = new Map<AudioLike, () => void>();
   private duckTimer: unknown = null;
+  private countdownTimer: unknown = null;
   private readonly createAudio: (url: string) => AudioLike;
   private readonly schedule: (callback: () => void, delay: number) => unknown;
   private readonly cancel: (handle: unknown) => void;
+  private readonly repeat: (callback: () => void, delay: number) => unknown;
+  private readonly cancelRepeat: (handle: unknown) => void;
 
   constructor(private readonly options: AudioControllerOptions) {
     this.settings = options.settings;
     this.createAudio = options.createAudio ?? ((url) => new Audio(url) as AudioLike);
     this.schedule = options.setTimeout ?? ((callback, delay) => window.setTimeout(callback, delay));
     this.cancel = options.clearTimeout ?? ((handle) => window.clearTimeout(handle as number));
+    this.repeat = options.setInterval ?? ((callback, delay) => window.setInterval(callback, delay));
+    this.cancelRepeat = options.clearInterval ?? ((handle) => window.clearInterval(handle as number));
   }
 
   setSettings(settings: AudioSettings): void {
@@ -108,7 +120,7 @@ export class AudioController {
     this.stopMusic();
     if (this.settings.muted) return;
     const audio = this.createAudio(mediaAssetUrl(key));
-    audio.loop = key === 'final-tension';
+    audio.loop = key === 'opening' || key === 'final-tension';
     this.music = audio;
     this.track(audio, key, () => { if (this.music === audio) this.music = null; });
     void audio.play().catch(() => {
@@ -131,9 +143,19 @@ export class AudioController {
     else this.stopMusic();
   }
 
+  setCountdownRunning(running: boolean): void {
+    if (running && this.countdownTimer === null) {
+      this.countdownTimer = this.repeat(() => this.play('countdown-tick'), 1_000);
+    } else if (!running && this.countdownTimer !== null) {
+      this.cancelRepeat(this.countdownTimer);
+      this.countdownTimer = null;
+    }
+  }
+
   dispose(): void {
     if (this.duckTimer !== null) this.cancel(this.duckTimer);
     this.duckTimer = null;
+    this.setCountdownRunning(false);
     for (const audio of [...this.active.keys()]) { audio.pause(); this.release(audio); }
     this.music = null;
   }
@@ -179,12 +201,10 @@ export class AudioController {
 export function useGameAudio(
   view: HostGameView,
   settings: AudioSettings,
-  playOpening: boolean,
   onPlaybackWarning?: (key: AudioAssetKey) => void,
 ): void {
   const controller = useRef<AudioController | null>(null);
   const previous = useRef<HostGameView | null>(null);
-  const openingPlayed = useRef(false);
   const playbackWarning = useRef(onPlaybackWarning);
   playbackWarning.current = onPlaybackWarning;
   controller.current ??= new AudioController({ settings, onPlaybackWarning: (key) => playbackWarning.current?.(key) });
@@ -192,9 +212,9 @@ export function useGameAudio(
   useEffect(() => {
     const audio = controller.current;
     if (audio === null) return;
-    if (playOpening && !openingPlayed.current) { openingPlayed.current = true; audio.startMusic('opening'); }
     for (const action of audioActionsForTransition(previous.current, view)) audio.apply(action);
+    audio.setCountdownRunning(view.state.timer.status === 'running');
     previous.current = view;
-  }, [playOpening, view]);
+  }, [view]);
   useEffect(() => () => controller.current?.dispose(), []);
 }

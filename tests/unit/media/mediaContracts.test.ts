@@ -13,10 +13,10 @@ import { join } from 'node:path';
 import { readFileSync } from 'node:fs';
 
 describe('media contracts', () => {
-  it('owns exactly the eight documented pathless WAV asset keys', () => {
+  it('owns exactly the nine documented pathless WAV asset keys', () => {
     expect(AUDIO_ASSET_KEYS).toEqual([
       'opening', 'round-transition', 'daily-double', 'final-tension',
-      'correct-applause', 'incorrect-crowd', 'time-expired', 'winner',
+      'correct-applause', 'incorrect-crowd', 'countdown-tick', 'time-expired', 'winner',
     ]);
     for (const key of AUDIO_ASSET_KEYS) expect(mediaAssetUrl(key)).toBe(`quiz-stage-media://asset/${key}`);
   });

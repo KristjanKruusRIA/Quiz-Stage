@@ -106,6 +106,7 @@ interface RegisterIpcOptions {
   csvDialogs?: CsvDialogPort;
   getAutomaticDisplayMode?: () => DisplayMode;
   applyDisplayMode?: (displayMode: DisplayMode) => void;
+  quit?: () => void;
   getWindows: () => {
     hostWindow: WindowPort | null;
     publicWindow: WindowPort | null;
@@ -134,6 +135,7 @@ export function registerIpc({
   csvDialogs,
   getAutomaticDisplayMode,
   applyDisplayMode,
+  quit,
   getWindows,
 }: RegisterIpcOptions): () => void {
   let activeHostId: number | null = null;
@@ -164,6 +166,16 @@ export function registerIpc({
     diagnostics?.recordGameCommand(parsedCommand);
     return coordinator.dispatch(parsedCommand);
   });
+
+  const applicationChannels: string[] = [];
+  if (quit !== undefined) {
+    handle(IPC_CHANNELS.saveAndQuit, async (event, input) => {
+      requireHost(event.sender.id);
+      noArgsSchema.parse(input);
+      quit();
+    });
+    applicationChannels.push(IPC_CHANNELS.saveAndQuit);
+  }
 
   const audioChannels: string[] = [];
   if (audioSettings !== undefined) {
@@ -377,6 +389,7 @@ export function registerIpc({
 
   return () => {
     ipcMain.removeHandler(IPC_CHANNELS.dispatch);
+    for (const channel of applicationChannels) ipcMain.removeHandler(channel);
     for (const channel of audioChannels) ipcMain.removeHandler(channel);
     for (const channel of setupChannels) ipcMain.removeHandler(channel);
     for (const channel of matchAccessChannels) ipcMain.removeHandler(channel);

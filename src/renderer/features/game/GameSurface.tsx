@@ -12,7 +12,7 @@ import { useGameAudio } from './useGameAudio';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number }
-  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; playOpening?: boolean; now?: () => number; onMute?: () => void; onAudioWarning?: (key: AudioAssetKey) => void; onHome?: () => void };
+  | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; now?: () => number; onMute?: () => void; onAudioWarning?: (key: AudioAssetKey) => void; onHome?: () => void; onSaveAndQuit?: () => Promise<void> };
 
 function presentation(view: PublicGameView, now?: () => number, onSelect?: (tileId: string) => void) {
   if (view.phase === 'round-one-board' || view.phase === 'round-two-board') return <PublicBoard view={view} onSelect={onSelect} />;
@@ -72,22 +72,21 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
   };
   return <main className="game-surface host-surface">
     {props.audioSettings === undefined ? null : <GameAudioLifecycle view={props.view} settings={props.audioSettings}
-      playOpening={props.playOpening ?? false} onWarning={props.onAudioWarning} />}
+      onWarning={props.onAudioWarning} />}
     <section className="public-presentation">
       {selectionError ? <p role="alert">{createTranslator(publicView.language)('game.selectionError')}</p> : null}
       {scores(publicView)}{presentation(publicView, props.now, selectionPending ? undefined : onSelect)}
     </section>
-    <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} />
+    <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} onSaveAndQuit={props.onSaveAndQuit} />
     {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>{createTranslator(publicView.language)('common.backHome')}</button>}
   </main>;
 }
 
-function GameAudioLifecycle({ view, settings, playOpening, onWarning }: {
+function GameAudioLifecycle({ view, settings, onWarning }: {
   view: HostGameView;
   settings: AudioSettings;
-  playOpening: boolean;
   onWarning?: (key: AudioAssetKey) => void;
 }) {
-  useGameAudio(view, settings, playOpening, onWarning);
+  useGameAudio(view, settings, onWarning);
   return null;
 }

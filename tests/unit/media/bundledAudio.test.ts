@@ -24,6 +24,7 @@ const EXPECTED_SOURCES = {
   'final-tension': { title: 'tention-mounts-ticking-clock-loop-dread.ogg', creator: 'Gerent', sourcePage: 'https://freesound.org/people/Gerent/sounds/558256/', license: 'CC0-1.0' },
   'correct-applause': { title: 'Small Crowd Applause with cheer in a Small Room 02.wav', creator: 'AudioSea', sourcePage: 'https://freesound.org/people/AudioSea/sounds/581617/', license: 'CC-BY-4.0' },
   'incorrect-crowd': { title: 'crowdbooing_01.wav', creator: 'xtrgamr', sourcePage: 'https://freesound.org/people/xtrgamr/sounds/239595/', license: 'CC-BY-4.0' },
+  'countdown-tick': { title: 'single-tick.wav', creator: 'DeltaCode', sourcePage: 'https://freesound.org/people/DeltaCode/sounds/668355/', license: 'CC0-1.0' },
   'time-expired': { title: 'buzzer.wav', creator: 'hypocore', sourcePage: 'https://freesound.org/people/hypocore/sounds/164090/', license: 'CC0-1.0' },
   winner: { title: 'Game Success Fanfare', creator: 'el_boss', sourcePage: 'https://freesound.org/people/el_boss/sounds/677859/', license: 'CC0-1.0' },
 } as const;
