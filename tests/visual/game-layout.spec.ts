@@ -64,6 +64,7 @@ for (const teamCount of [2, 8] as const) {
         const categories = [...document.querySelectorAll('.board-header-row h2')];
         const scores = [...document.querySelectorAll('.scoreboard li')];
         const controls = [...document.querySelectorAll('.host-console button:not([disabled])')];
+        const hostConsole = document.querySelector<HTMLElement>('.host-console')!;
         const inViewport = (element: Element) => { const r = element.getBoundingClientRect(); return r.left >= 0 && r.top >= 0 && r.right <= innerWidth && r.bottom <= innerHeight; };
         return {
           documentOverflowX: root.scrollWidth > root.clientWidth,
@@ -72,11 +73,13 @@ for (const teamCount of [2, 8] as const) {
           categories: categories.every(inViewport),
           scores: scores.every(inViewport),
           controls: controls.every((element) => element.getBoundingClientRect().width > 0),
+          hostConsoleOverflowY: hostConsole.scrollHeight > hostConsole.clientHeight + 1,
           categoryFont: Number.parseFloat(getComputedStyle(categories[0]!).fontSize),
           scoreFont: Number.parseFloat(getComputedStyle(scores[0]!).fontSize),
         };
       });
       expect(layout).toEqual(expect.objectContaining({ documentOverflowX: false, documentOverflowY: false, board: true, categories: true, scores: true, controls: true }));
+      if (size.width === 1920) expect(layout.hostConsoleOverflowY).toBe(false);
       expect(layout.categoryFont).toBeGreaterThanOrEqual(size.width === 3840 ? 24 : 10);
       expect(layout.scoreFont).toBeGreaterThanOrEqual(size.width === 3840 ? 20 : 10);
       await page.screenshot({ path: testInfo.outputPath(`board-${teamCount}-${size.width}x${size.height}.png`), fullPage: true });

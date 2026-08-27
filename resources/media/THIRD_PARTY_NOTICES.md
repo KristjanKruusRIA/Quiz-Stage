@@ -1,10 +1,10 @@
 # Bundled Audio Notices
 
-The clips below were downloaded from Freesound's public high-quality previews and converted to normalized 16-bit PCM WAV files. The source-preview and bundled-file SHA-256 hashes, direct preview URLs, and conversion details are recorded in `manifest.json`.
+Except for the private-use opening theme noted below, the clips were downloaded from Freesound's public high-quality previews and converted to normalized 16-bit PCM WAV files. Source and bundled-file hashes and conversion details are recorded in `manifest.json`.
 
 | Quiz Stage cue | Work and creator | License | Source |
 | --- | --- | --- | --- |
-| Opening | “Talk Show Background Music 02.wav” by LilMati | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Freesound 657753](https://freesound.org/people/LilMati/sounds/657753/) |
+| Opening | “Jeopardy theme song” (user-provided file; creator unknown) | Private use only | User-provided file |
 | Round transition | “Stinger 3.wav” by AudioPapkin | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Freesound 441342](https://freesound.org/people/AudioPapkin/sounds/441342/) |
 | Daily Double | “SFX Thrilling Build-Up and Hit 4 (Made at Paradise AIR).wav” by RutgerMuller | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Freesound 367667](https://freesound.org/people/RutgerMuller/sounds/367667/) |
 | Final tension | “tention-mounts-ticking-clock-loop-dread.ogg” by Gerent | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Freesound 558256](https://freesound.org/people/Gerent/sounds/558256/) |

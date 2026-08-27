@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
@@ -111,6 +111,20 @@ describe('SetupScreen', () => {
     expect(colors).toEqual(['#E3B341', '#57C785', '#50A7F5']);
     expect(new Set(colors).size).toBe(3);
     await waitFor(() => expect(screen.getByRole('button', { name: 'Start match' })).toBeEnabled());
+  });
+
+  it('labels team colors with localized color names', async () => {
+    const user = userEvent.setup();
+    render(<SetupScreen api={api()} onBack={vi.fn()} />);
+
+    const color = await screen.findByRole('combobox', { name: 'Team 1 color' });
+    expect(color).toHaveAccessibleName('Team 1 color');
+    expect(within(color).getByRole('option', { name: 'Gold' })).toHaveValue('#E3B341');
+    expect(within(color).getByRole('option', { name: 'Teal' })).toHaveValue('#45C4B0');
+
+    await user.click(screen.getByRole('radio', { name: 'Estonian' }));
+    expect(within(color).getByRole('option', { name: 'Kuldne' })).toHaveValue('#E3B341');
+    expect(within(color).getByRole('option', { name: 'Türkiissinine' })).toHaveValue('#45C4B0');
   });
 
   it('rejects empty and case-insensitive duplicate team names and requires distinct colors', async () => {

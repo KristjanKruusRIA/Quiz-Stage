@@ -18,7 +18,7 @@ export const BRANDING_ASSET_KEYS = ['logo', 'stage-background'] as const;
 export type BrandingAssetKey = typeof BRANDING_ASSET_KEYS[number];
 export const brandingAssetKeySchema = z.enum(BRANDING_ASSET_KEYS);
 export const AUDIO_ASSET_SPEC = {
-  opening: { file: 'audio/opening.wav', durationMs: 8_022, channel: 'music' },
+  opening: { file: 'audio/opening.wav', durationMs: 33_202, channel: 'music' },
   'round-transition': { file: 'audio/round-transition.wav', durationMs: 1_995, channel: 'music' },
   'daily-double': { file: 'audio/daily-double.wav', durationMs: 3_833, channel: 'effects' },
   'final-tension': { file: 'audio/final-tension.wav', durationMs: 59_726, channel: 'music' },
@@ -69,7 +69,7 @@ const MEDIA_LICENSE_URLS = {
   'CC-BY-4.0': 'https://creativecommons.org/licenses/by/4.0/',
 } as const;
 
-const mediaAudioSourceSchema = z.strictObject({
+const publicMediaAudioSourceSchema = z.strictObject({
   title: z.string().min(1),
   creator: z.string().min(1),
   sourcePage: z.string().regex(/^https:\/\/freesound\.org\/people\/[A-Za-z0-9._-]+\/sounds\/\d+\/$/),
@@ -90,13 +90,21 @@ const mediaAudioSourceSchema = z.strictObject({
   }
 });
 
+const privateUseAudioSourceSchema = z.strictObject({
+  kind: z.literal('private-use'),
+  title: z.string().min(1),
+  creator: z.string().min(1),
+  providedFileSha256: z.string().regex(/^[a-f0-9]{64}$/),
+  modifications: z.string().min(1),
+});
+
 export const mediaManifestEntrySchema = z.strictObject({
   file: z.string().regex(/^audio\/[a-z-]+\.wav$/),
   mime: z.literal('audio/wav'),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
   durationMs: z.number().int().positive(),
   channel: z.enum(['music', 'effects', 'crowd']),
-  source: mediaAudioSourceSchema,
+  source: z.union([publicMediaAudioSourceSchema, privateUseAudioSourceSchema]),
 });
 
 const mediaBrandingPngSchema = z.strictObject({

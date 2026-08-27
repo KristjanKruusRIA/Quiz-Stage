@@ -107,13 +107,16 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
   const nextFinalTeam = state.config.teams.find((team) => team.id === nextFinalTeamId);
 
   return <aside className="host-console" aria-label={t('host.console')}>
-    <header><h2>{t('host.console')}</h2><p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p></header>
+    <header>
+      <h2>{t('host.console')}</h2>
+      <p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p>
+      {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
+        onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
+    </header>
     {view.recovery === null
       ? view.replayIssue === null ? null : <p role="alert">{t('host.replayError', { sequence: view.replayIssue.sequence })}</p>
       : <RecoveryNotice {...view.recovery} replayIssue={view.replayIssue} />}
     {error === null ? null : <p role="alert">{error}</p>}
-    {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
-      onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
     {localizedClue === null ? null : <section aria-label={t('host.privateDetails')}>
       <p><strong>{t('host.response')}</strong> {localizedClue.response}</p>
       {localizedClue.acceptedResponses === undefined ? null : <p><strong>{t('host.acceptedResponses')}</strong> {localizedClue.acceptedResponses}</p>}
@@ -152,6 +155,7 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
     </section> : null}
 
     {state.phase === 'complete' ? null : <>
+    <div className="host-action-controls">
     <HostTeamControls view={view} onLock={lockTeam} />
     <section className="judgment-controls" aria-label={t('host.judgmentControls')}>
       <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: true, at: now() })}>{t('game.correct')}</button>
@@ -174,6 +178,7 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
       <button type="button" disabled={pending || state.undoStack.length === 0} onClick={() => dispatch({ type: 'UndoLast' })}>{t('host.undo')}</button>
       <button type="button" disabled={pending || state.lastClosedClueId === null || !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)} onClick={() => dispatch({ type: 'ReopenClue' })}>{t('host.reopenClue')}</button>
     </section>
+    </div>
     <section className="correction-controls" aria-label={t('host.corrections')}>
       <label>{t('host.scoreReason')}<input value={scoreReason} onChange={(event) => setScoreReason(event.target.value)} /></label>
       {state.config.teams.map((team) => {

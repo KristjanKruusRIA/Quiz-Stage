@@ -7,6 +7,11 @@ export const TEAM_COLORS = [
   '#B28DFF', '#FF9F43', '#45C4B0', '#F368E0',
 ] as const;
 
+const TEAM_COLOR_KEYS = [
+  'team.color.gold', 'team.color.blue', 'team.color.green', 'team.color.red',
+  'team.color.purple', 'team.color.orange', 'team.color.teal', 'team.color.pink',
+] as const;
+
 interface TeamEditorProps {
   index: number;
   team: Team;
@@ -49,7 +54,7 @@ export function TeamEditor({
           onChange={(event) => onChange({ ...team, color: event.target.value })}
         >
           {TEAM_COLORS.map((color, colorIndex) => (
-            <option key={color} value={color}>{translate(language, 'team.colorOption', { number: colorIndex + 1 })}</option>
+            <option key={color} value={color}>{translate(language, TEAM_COLOR_KEYS[colorIndex])}</option>
           ))}
         </select>
       </label>
