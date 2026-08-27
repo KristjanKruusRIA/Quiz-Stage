@@ -17856,6 +17856,5490 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676"
       }
+    },
+    "https://en.wikipedia.org/wiki/.xxx": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.304Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/.xxx",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.304Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/.xxx"
+      }
+    },
+    "https://en.wikipedia.org/wiki/ARTICLE_19": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.307Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/ARTICLE_19",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.307Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/ARTICLE_19"
+      }
+    },
+    "https://en.wikipedia.org/wiki/AVN_Awards": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.430Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/AVN_Awards",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.430Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/AVN_Awards"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Affirmative_consent": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.669Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Affirmative_consent",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.669Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Affirmative_consent"
+      }
+    },
+    "https://en.wikipedia.org/wiki/21_Club": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.712Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/21_Club",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.712Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/21_Club"
+      }
+    },
+    "https://en.wikipedia.org/wiki/ACT_UP": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.813Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/ACT_UP",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.813Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/ACT_UP"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Age_of_consent": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.934Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Age_of_consent",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.934Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Age_of_consent"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Afterhours_club": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:33.949Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Afterhours_club",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:33.948Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Afterhours_club"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Adult_Film_Association_of_America": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.040Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Adult_Film_Association_of_America",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.040Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Adult_Film_Association_of_America"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Age_verification_system": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.050Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Age_verification_system",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.050Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Age_verification_system"
+      }
+    },
+    "https://en.wikipedia.org/wiki/African_clawed_frog": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.143Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/African_clawed_frog",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.143Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/African_clawed_frog"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Alberto_Vargas": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.301Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Alberto_Vargas",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.301Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Alberto_Vargas"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Albert_Moll": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.313Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Albert_Moll",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.313Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Albert_Moll"
+      }
+    },
+    "https://en.wikipedia.org/wiki/American_Library_Association": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.379Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/American_Library_Association",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.379Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/American_Library_Association"
+      }
+    },
+    "https://en.wikipedia.org/wiki/American_Temperance_Society": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.550Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/American_Temperance_Society",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.550Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/American_Temperance_Society"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anne_Brigman": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.662Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anne_Brigman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.662Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anne_Brigman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anti-discrimination_law": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.779Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anti-discrimination_law",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.779Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anti-discrimination_law"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Apollo_Theater": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.901Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Apollo_Theater",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.901Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Apollo_Theater"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ananga_Ranga": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.907Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ananga_Ranga",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.907Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ananga_Ranga"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anthony_Comstock": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:34.979Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anthony_Comstock",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:34.979Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anthony_Comstock"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Asexuality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.029Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Asexuality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.029Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Asexuality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Attachment_theory": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.100Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Attachment_theory",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.100Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Attachment_theory"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Anti-Saloon_League": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.220Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Anti-Saloon_League",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.220Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Anti-Saloon_League"
+      }
+    },
+    "https://en.wikipedia.org/wiki/April_Love_(painting)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.463Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/April_Love_(painting)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.463Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/April_Love_(painting)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/August_von_Wassermann": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.475Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/August_von_Wassermann",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.475Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/August_von_Wassermann"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Baby_Face_(film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.494Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Baby_Face_(film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.494Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Baby_Face_(film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Banns_of_marriage": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.584Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Banns_of_marriage",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.584Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Banns_of_marriage"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Behind_the_Green_Door": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.596Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Behind_the_Green_Door",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.596Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Behind_the_Green_Door"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bem_Sex-Role_Inventory": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.621Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bem_Sex-Role_Inventory",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.621Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bem_Sex-Role_Inventory"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bergen_County%2C_New_Jersey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.707Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bergen_County%2C_New_Jersey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.707Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bergen_County%2C_New_Jersey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Band_of_Hope": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.708Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Band_of_Hope",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.708Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Band_of_Hope"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Betamax": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.717Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Betamax",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.717Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Betamax"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Betty_Grable": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.745Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Betty_Grable",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.745Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Betty_Grable"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bingo_(American_version)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.830Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bingo_(American_version)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.830Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bingo_(American_version)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Birth_control": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.831Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Birth_control",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.831Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Birth_control"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bisexual_flag": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.839Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bisexual_flag",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.839Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bisexual_flag"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bisexuality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.869Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bisexuality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.869Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bisexuality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Blue_law": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:35.965Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Blue_law",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:35.965Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Blue_law"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bostock_v._Clayton_County": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.003Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bostock_v._Clayton_County",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.003Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bostock_v._Clayton_County"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bottle_service": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.088Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bottle_service",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.088Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bottle_service"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bodily_integrity": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.092Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bodily_integrity",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.092Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bodily_integrity"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bouncer_(doorman)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.125Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bouncer_(doorman)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.125Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bouncer_(doorman)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bourbon_Street": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.211Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bourbon_Street",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.211Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bourbon_Street"
+      }
+    },
+    "https://en.wikipedia.org/wiki/British_Board_of_Film_Classification": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.246Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/British_Board_of_Film_Classification",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.246Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/British_Board_of_Film_Classification"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bride_price": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.324Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bride_price",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.324Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bride_price"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Brothel": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.335Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Brothel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.335Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Brothel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Buck_v._Bell": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.373Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Buck_v._Bell",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.373Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Buck_v._Bell"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Buffer_zone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.380Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Buffer_zone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.380Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Buffer_zone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bulletin_board_system": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.446Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bulletin_board_system",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.446Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bulletin_board_system"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Burlesque_Hall_of_Fame": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.457Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Burlesque_Hall_of_Fame",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.457Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Burlesque_Hall_of_Fame"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cabaret_Voltaire_(Zurich)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.494Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cabaret_Voltaire_(Zurich)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.494Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cabaret_Voltaire_(Zurich)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Caf%C3%A9_Society": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.569Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Caf%C3%A9_Society",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.569Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Caf%C3%A9_Society"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Celibacy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.690Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Celibacy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.690Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Celibacy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/COYOTE": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.776Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/COYOTE",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.776Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/COYOTE"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cervical_cap": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.814Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cervical_cap",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.814Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cervical_cap"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Carey_v._Population_Services_International": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.904Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Carey_v._Population_Services_International",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.904Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Carey_v._Population_Services_International"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Carol_Leigh": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:36.993Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Carol_Leigh",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:36.993Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Carol_Leigh"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chilling_effect": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.039Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chilling_effect",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.039Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chilling_effect"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chlamydia_trachomatis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.129Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chlamydia_trachomatis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.129Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chlamydia_trachomatis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cisgender": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.161Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cisgender",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.161Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cisgender"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Civil_union": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.282Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Civil_union",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.282Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Civil_union"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Charleston_(dance)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.337Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Charleston_(dance)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.337Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Charleston_(dance)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Civil_solidarity_pact": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.402Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Civil_solidarity_pact",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.402Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Civil_solidarity_pact"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Coming_out": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.460Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Coming_out",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.460Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Coming_out"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Committee_of_Fourteen": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.531Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Committee_of_Fourteen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.531Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Committee_of_Fourteen"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Common-law_marriage": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.583Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Common-law_marriage",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.583Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Common-law_marriage"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Comprehensive_sex_education": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.705Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Comprehensive_sex_education",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.705Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Comprehensive_sex_education"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Condom": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.826Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Condom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.826Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Condom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Community_standards": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.905Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Community_standards",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.905Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Community_standards"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Contagious_Diseases_Acts": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:37.941Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Contagious_Diseases_Acts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:37.941Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Contagious_Diseases_Acts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Content-control_software": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.026Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Content-control_software",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.026Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Content-control_software"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Controlled_Substances_Act": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.064Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Controlled_Substances_Act",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.064Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Controlled_Substances_Act"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Comics_Code_Authority": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.122Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Comics_Code_Authority",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.122Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Comics_Code_Authority"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cotton_Club": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.149Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cotton_Club",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.149Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cotton_Club"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Couples_(novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.190Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Couples_(novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.190Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Couples_(novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Courtesan": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.244Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Courtesan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.244Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Courtesan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cover_charge": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.264Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cover_charge",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.264Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cover_charge"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Consent": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.267Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Consent",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.267Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Consent"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Customs": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.390Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Customs",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.390Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Customs"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Crazy_Horse_(cabaret)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.442Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Crazy_Horse_(cabaret)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.442Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Crazy_Horse_(cabaret)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dangerous_Drugs_Act_1920": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.512Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dangerous_Drugs_Act_1920",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.512Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dangerous_Drugs_Act_1920"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dana%C3%AB_(Titian_series)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.536Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dana%C3%AB_(Titian_series)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.536Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dana%C3%AB_(Titian_series)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Data_anonymization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.564Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Data_anonymization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.564Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Data_anonymization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/De_Wallen": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.657Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/De_Wallen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.657Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/De_Wallen"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Deep_Throat_(film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.779Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Deep_Throat_(film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.778Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Deep_Throat_(film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Defence_of_the_Realm_Act_1914": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.911Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Defence_of_the_Realm_Act_1914",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.911Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Defence_of_the_Realm_Act_1914"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Criminal_Law_Amendment_Act%2C_1968%E2%80%9369": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.913Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Criminal_Law_Amendment_Act%2C_1968%E2%80%9369",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.913Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Criminal_Law_Amendment_Act%2C_1968%E2%80%9369"
+      }
+    },
+    "https://en.wikipedia.org/wiki/De_Rode_Draad": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:38.913Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/De_Rode_Draad",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:38.913Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/De_Rode_Draad"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Delta_of_Venus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.034Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Delta_of_Venus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.034Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Delta_of_Venus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Design_for_Living_(film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.038Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Design_for_Living_(film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.038Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Design_for_Living_(film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Disco_Demolition_Night": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.156Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.156Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Disco_Demolition_Night"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Diaphragm_(birth_control)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.161Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Diaphragm_(birth_control)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.161Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Diaphragm_(birth_control)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Decriminalization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.173Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Decriminalization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.173Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Decriminalization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dita_Von_Teese": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.278Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dita_Von_Teese",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.278Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dita_Von_Teese"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dowry": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.401Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dowry",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.401Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dowry"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Divorce_in_Islam": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.410Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Divorce_in_Islam",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.410Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Divorce_in_Islam"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Domestic_partnership": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.419Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Domestic_partnership",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.419Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Domestic_partnership"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Drag_king": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.532Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Drag_king",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.532Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Drag_king"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Divorce_Reform_Act_1969": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.779Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Divorce_Reform_Act_1969",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.779Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Divorce_Reform_Act_1969"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dudgeon_v_United_Kingdom": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.900Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dudgeon_v_United_Kingdom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.900Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dudgeon_v_United_Kingdom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Drag_ball": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:39.919Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Drag_ball",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:39.919Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Drag_ball"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Durbar_Mahila_Samanwaya_Committee": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.008Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Durbar_Mahila_Samanwaya_Committee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.008Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Durbar_Mahila_Samanwaya_Committee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Edo_period": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.023Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Edo_period",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.023Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Edo_period"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eighteenth_Amendment_to_the_United_States_Constitution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.044Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eighteenth_Amendment_to_the_United_States_Constitution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.044Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eighteenth_Amendment_to_the_United_States_Constitution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Endogamy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.177Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Endogamy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.177Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Endogamy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Els_Quatre_Gats": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.466Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Els_Quatre_Gats",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.466Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Els_Quatre_Gats"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Engagement": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.501Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Engagement",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.501Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Engagement"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eisenstadt_v._Baird": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.505Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eisenstadt_v._Baird",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.505Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eisenstadt_v._Baird"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Engagement_ring": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.587Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Engagement_ring",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.587Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Engagement_ring"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Epistolary_novel": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.630Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Epistolary_novel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.630Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Epistolary_novel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ernst_Gr%C3%A4fenberg": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.710Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ernst_Gr%C3%A4fenberg",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.710Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ernst_Gr%C3%A4fenberg"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Erotic_art_in_Pompeii_and_Herculaneum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.831Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Erotic_art_in_Pompeii_and_Herculaneum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.831Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Erotic_art_in_Pompeii_and_Herculaneum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Esquire_(magazine)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.953Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Esquire_(magazine)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.953Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Esquire_(magazine)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/English_Collective_of_Prostitutes": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:40.966Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/English_Collective_of_Prostitutes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:40.966Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/English_Collective_of_Prostitutes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/EuroPride": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.076Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/EuroPride",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.076Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/EuroPride"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Earle_Haas": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.130Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Earle_Haas",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.130Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Earle_Haas"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Exogamy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.213Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Exogamy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.213Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Exogamy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fanny_Hill": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.338Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fanny_Hill",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.338Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fanny_Hill"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fear_of_Flying_(novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.384Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fear_of_Flying_(novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.384Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fear_of_Flying_(novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Foxtrot": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.460Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Foxtrot",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.460Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Foxtrot"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Folies_Berg%C3%A8re": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.609Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Folies_Berg%C3%A8re",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.609Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Folies_Berg%C3%A8re"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Freedom_to_Read_Foundation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.713Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Freedom_to_Read_Foundation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.713Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Freedom_to_Read_Foundation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Free_Speech_Coalition": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.776Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Free_Speech_Coalition",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.776Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Free_Speech_Coalition"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gambling_Act_2005": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.835Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gambling_Act_2005",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.835Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gambling_Act_2005"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gabriele_Falloppio": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gabriele_Falloppio",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gabriele_Falloppio"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gambling_in_Macau": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.898Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gambling_in_Macau",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.898Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gambling_in_Macau"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Floridita": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:41.987Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Floridita",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:41.987Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Floridita"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Geisha": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.115Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Geisha",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.115Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Geisha"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gender_expression": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.362Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gender_expression",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.362Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gender_expression"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gender_identity": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.484Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gender_identity",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.484Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gender_identity"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gaming_Act_1845": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.486Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gaming_Act_1845",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.486Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gaming_Act_1845"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gambling_in_Nevada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.601Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gambling_in_Nevada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.601Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gambling_in_Nevada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/General_Social_Survey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:42.748Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/General_Social_Survey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:42.748Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/General_Social_Survey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Get_(divorce_document)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.023Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Get_(divorce_document)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.023Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Get_(divorce_document)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gestation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.025Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gestation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.025Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gestation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gender_role": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.084Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gender_role",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.084Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gender_role"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gambling_in_New_Jersey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.132Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gambling_in_New_Jersey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.132Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gambling_in_New_Jersey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gibson_Girl": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.139Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gibson_Girl",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.139Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gibson_Girl"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Global_Network_of_Sex_Work_Projects": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.205Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Global_Network_of_Sex_Work_Projects",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.205Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Global_Network_of_Sex_Work_Projects"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Golden_Age_of_Porn": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.253Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Golden_Age_of_Porn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.253Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Golden_Age_of_Porn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Giovanni's_Room": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.270Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Giovanni's_Room",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.270Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Giovanni's_Room"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gregory_Goodwin_Pincus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.376Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gregory_Goodwin_Pincus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.376Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gregory_Goodwin_Pincus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Green_Mill_Cocktail_Lounge": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.441Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Green_Mill_Cocktail_Lounge",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.441Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Green_Mill_Cocktail_Lounge"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Groomsman": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.497Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Groomsman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.497Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Groomsman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Goodridge_v._Department_of_Public_Health": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.609Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Goodridge_v._Department_of_Public_Health",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.609Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Goodridge_v._Department_of_Public_Health"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Guttmacher_Institute": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.625Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Guttmacher_Institute",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.625Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Guttmacher_Institute"
+      }
+    },
+    "https://en.wikipedia.org/wiki/HBO": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.731Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/HBO",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.731Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/HBO"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Handfasting": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.746Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Handfasting",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.746Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Handfasting"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Handyside_v_United_Kingdom": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.853Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Handyside_v_United_Kingdom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.853Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Handyside_v_United_Kingdom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Griswold_v._Connecticut": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:43.930Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Griswold_v._Connecticut",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:43.930Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Griswold_v._Connecticut"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Havelock_Ellis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.094Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Havelock_Ellis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.094Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Havelock_Ellis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hays_Code": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.216Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hays_Code",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.216Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hays_Code"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harrison_Narcotics_Tax_Act": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.240Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harrison_Narcotics_Tax_Act",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.240Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harrison_Narcotics_Tax_Act"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Helmut_Newton": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.331Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Helmut_Newton",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.331Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Helmut_Newton"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harm_reduction": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.355Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harm_reduction",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.355Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harm_reduction"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Heterosexuality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.453Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Heterosexuality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.453Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Heterosexuality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/History_of_syphilis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.575Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/History_of_syphilis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.575Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/History_of_syphilis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harry's_New_York_Bar": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.578Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harry's_New_York_Bar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.578Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harry's_New_York_Bar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hicklin_test": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.600Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hicklin_test",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.600Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hicklin_test"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Homogamy_(sociology)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.700Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Homogamy_(sociology)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.700Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Homogamy_(sociology)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Homosexuality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.722Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Homosexuality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.722Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Homosexuality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hetaira": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.775Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hetaira",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.775Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hetaira"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hokusai": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.801Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hokusai",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.801Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hokusai"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Howl_(poem)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.823Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Howl_(poem)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.823Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Howl_(poem)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hugs_and_kisses": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.836Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.836Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hugs_and_kisses"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_chorionic_gonadotropin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.945Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_chorionic_gonadotropin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.945Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_chorionic_gonadotropin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_fertilization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:44.959Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_fertilization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:44.959Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_fertilization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_Sexual_Inadequacy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.028Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_Sexual_Inadequacy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.028Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_Sexual_Inadequacy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hustler": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.069Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hustler",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.069Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hustler"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Human_Sexual_Response": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.112Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Human_Sexual_Response",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.112Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Human_Sexual_Response"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Imogen_Cunningham": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.190Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Imogen_Cunningham",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.190Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Imogen_Cunningham"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Immunoassay": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.284Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Immunoassay",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.284Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Immunoassay"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.315Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.315Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Index_on_Censorship": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.417Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Index_on_Censorship",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.417Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Index_on_Censorship"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Day_Against_Homophobia%2C_Biphobia_and_Transphobia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.539Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Day_Against_Homophobia%2C_Biphobia_and_Transphobia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.539Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Day_Against_Homophobia%2C_Biphobia_and_Transphobia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/ILGA_World": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.551Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/ILGA_World",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.551Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/ILGA_World"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Indecent_Displays_(Control)_Act_1981": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.739Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Indecent_Displays_(Control)_Act_1981",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.739Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Indecent_Displays_(Control)_Act_1981"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Federation_of_Gynecology_and_Obstetrics": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.832Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Federation_of_Gynecology_and_Obstetrics",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.832Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Federation_of_Gynecology_and_Obstetrics"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Intersectionality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.860Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Intersectionality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.860Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Intersectionality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Intimate_relationship": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.953Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Intimate_relationship",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.953Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Intimate_relationship"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Intrauterine_device": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:45.982Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Intrauterine_device",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:45.982Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Intrauterine_device"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Informed_consent": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.040Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Informed_consent",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.040Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Informed_consent"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Planned_Parenthood_Federation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.151Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Planned_Parenthood_Federation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.151Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Planned_Parenthood_Federation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Iwan_Bloch": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.489Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Iwan_Bloch",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.489Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Iwan_Bloch"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_Gottman": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.612Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_Gottman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.612Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_Gottman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jacobellis_v._Ohio": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.624Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jacobellis_v._Ohio",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.624Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jacobellis_v._Ohio"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Josephine_Butler": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.747Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Josephine_Butler",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.747Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Josephine_Butler"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_Rock_(American_scientist)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:46.961Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_Rock_(American_scientist)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:46.961Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_Rock_(American_scientist)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jean_Purdy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:47.830Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jean_Purdy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:47.830Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jean_Purdy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kama": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:47.965Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kama",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:47.965Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kama"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kama_Sutra": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:48.087Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kama_Sutra",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:48.087Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kama_Sutra"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Julian_Eltinge": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:49.235Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Julian_Eltinge",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:49.235Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Julian_Eltinge"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jenkins_v._Georgia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:49.307Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jenkins_v._Georgia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:49.307Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jenkins_v._Georgia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:49.422Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:49.422Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Katharine_McCormick": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:50.483Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Katharine_McCormick",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:50.483Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Katharine_McCormick"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Karl_Ernst_von_Baer": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:50.567Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Karl_Ernst_von_Baer",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:50.567Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Karl_Ernst_von_Baer"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kinsey_scale": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:50.605Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kinsey_scale",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:50.605Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kinsey_scale"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kinetoscope": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:51.823Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kinetoscope",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:51.823Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kinetoscope"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kinsey_Institute": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:51.910Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kinsey_Institute",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:51.910Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kinsey_Institute"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kotex": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:51.938Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kotex",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:51.938Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kotex"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Klein_Sexual_Orientation_Grid": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:53.809Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Klein_Sexual_Orientation_Grid",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:53.809Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Klein_Sexual_Orientation_Grid"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kitagawa_Utamaro": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.046Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kitagawa_Utamaro",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.046Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kitagawa_Utamaro"
+      }
+    },
+    "https://en.wikipedia.org/wiki/LGBT_rights_in_France": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.077Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/LGBT_rights_in_France",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.077Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/LGBT_rights_in_France"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Las_Vegas_Strip": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.387Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.387Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip"
+      }
+    },
+    "https://en.wikipedia.org/wiki/LaserDisc": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.421Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/LaserDisc",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.421Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/LaserDisc"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lawrence_v._Texas": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.544Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lawrence_v._Texas",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.544Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lawrence_v._Texas"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Last_call_(bar_term)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:54.645Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Last_call_(bar_term)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:54.645Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Last_call_(bar_term)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/La_Maja_desnuda": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:55.968Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/La_Maja_desnuda",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:55.968Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/La_Maja_desnuda"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Le_Chat_Noir": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:56.066Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Le_Chat_Noir",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:56.066Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Le_Chat_Noir"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Le_Sommeil": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:56.090Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Le_Sommeil",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:56.090Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Le_Sommeil"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Les_Liaisons_dangereuses": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:56.212Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Les_Liaisons_dangereuses",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:56.212Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Les_Liaisons_dangereuses"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lexow_Committee": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:56.443Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lexow_Committee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:56.443Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lexow_Committee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Libido": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:56.564Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Libido",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:56.564Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Libido"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l'herbe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:57.164Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l'herbe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:57.164Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l'herbe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Licensing_Act_2003": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:57.691Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Licensing_Act_2003",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:57.691Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Licensing_Act_2003"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lord_Chamberlain": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:58.536Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lord_Chamberlain",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:58.536Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lord_Chamberlain"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Louise_Brown": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:58.659Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Louise_Brown",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:58.659Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Louise_Brown"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Longitudinal_study": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:59.241Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Longitudinal_study",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:59.241Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Longitudinal_study"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lysistrata": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:59.364Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lysistrata",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:59.364Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lysistrata"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Magnus_Hirschfeld": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:59.487Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Magnus_Hirschfeld",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:59.487Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Magnus_Hirschfeld"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mail_order": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:04:59.987Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mail_order",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:04:59.987Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mail_order"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Margaret_Sanger": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:00.534Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Margaret_Sanger",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:00.534Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Margaret_Sanger"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Marie_Stopes": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:00.781Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Marie_Stopes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:00.781Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Marie_Stopes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Marina_Bay_Sands": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:00.902Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Marina_Bay_Sands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:00.902Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Marina_Bay_Sands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mambo_(dance)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:01.369Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mambo_(dance)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:01.369Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mambo_(dance)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Match.com": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:01.419Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Match.com",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:01.419Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Match.com"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Matchmaking": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:01.491Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Matchmaking",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:01.491Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Matchmaking"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mattachine_Society": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:01.540Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mattachine_Society",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:01.540Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mattachine_Society"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Marriage_proposal": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:02.285Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Marriage_proposal",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:02.285Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Marriage_proposal"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Menopause": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:02.409Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Menopause",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:02.409Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Menopause"
+      }
+    },
+    "https://en.wikipedia.org/wiki/McGowan_v._Maryland": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:03.256Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/McGowan_v._Maryland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:03.256Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/McGowan_v._Maryland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Masters_and_Johnson": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:03.382Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Masters_and_Johnson",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:03.382Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Masters_and_Johnson"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Miai": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:03.503Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Miai",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:03.503Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Miai"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Memoirs_v._Massachusetts": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:04.370Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Memoirs_v._Massachusetts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:04.370Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Memoirs_v._Massachusetts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Menstrual_cup": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:04.850Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Menstrual_cup",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:04.850Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Menstrual_cup"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Minority_stress": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:04.886Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Minority_stress",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:04.886Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Minority_stress"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Monogamy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.001Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Monogamy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.001Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Monogamy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Monte_Carlo": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.116Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Monte_Carlo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.116Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Monte_Carlo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Monte_Carlo_Casino": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.237Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.237Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Motion_Picture_Association_film_rating_system": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.353Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Motion_Picture_Association_film_rating_system",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.353Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Motion_Picture_Association_film_rating_system"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Museum_of_Sex": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.482Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Museum_of_Sex",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.482Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Museum_of_Sex"
+      }
+    },
+    "https://en.wikipedia.org/wiki/NC-17": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:05.970Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/NC-17",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:05.970Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/NC-17"
+      }
+    },
+    "https://en.wikipedia.org/wiki/NYC_Pride_March": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:06.090Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/NYC_Pride_March",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:06.090Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/NYC_Pride_March"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Naked_Lunch": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:06.212Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Naked_Lunch",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:06.212Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Naked_Lunch"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Minsky's_Burlesque": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:06.519Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Minsky's_Burlesque",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:06.519Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Minsky's_Burlesque"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_Lottery_(United_Kingdom)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:06.641Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_Lottery_(United_Kingdom)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:06.641Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_Lottery_(United_Kingdom)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mutoscope": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:07.094Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mutoscope",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:07.094Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mutoscope"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Neisseria_gonorrhoeae": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:07.216Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Neisseria_gonorrhoeae",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:07.216Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Neisseria_gonorrhoeae"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Neo-Burlesque": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:07.339Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Neo-Burlesque",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:07.339Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Neo-Burlesque"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Navtej_Singh_Johar_v._Union_of_India": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.088Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Navtej_Singh_Johar_v._Union_of_India",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.088Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Navtej_Singh_Johar_v._Union_of_India"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nickelodeon_(movie_theater)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.168Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nickelodeon_(movie_theater)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.168Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nickelodeon_(movie_theater)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Non-binary_gender": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.291Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Non-binary_gender",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.291Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Non-binary_gender"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nordic_model_approach_to_prostitution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.415Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nordic_model_approach_to_prostitution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.415Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nordic_model_approach_to_prostitution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nose_art": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.547Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nose_art",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.547Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nose_art"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Numbers_game": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:08.670Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Numbers_game",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:08.670Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Numbers_game"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Obergefell_v._Hodges": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:09.128Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Obergefell_v._Hodges",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:09.128Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Obergefell_v._Hodges"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1857": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:09.703Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1857",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:09.703Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1857"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1959": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:09.824Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1959",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:09.824Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Obscene_Publications_Act_1959"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Office_of_Film_and_Literature_Classification_(New_Zealand)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:10.566Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Office_of_Film_and_Literature_Classification_(New_Zealand)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:10.566Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Office_of_Film_and_Literature_Classification_(New_Zealand)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/No-fault_divorce": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:10.659Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/No-fault_divorce",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:10.659Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/No-fault_divorce"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Orlando%3A_A_Biography": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:10.783Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Orlando%3A_A_Biography",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:10.783Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Orlando%3A_A_Biography"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nye_County%2C_Nevada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:11.173Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nye_County%2C_Nevada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:11.173Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nye_County%2C_Nevada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ovulation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:11.296Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ovulation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:11.296Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ovulation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/PEN_America": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:11.418Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/PEN_America",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:11.418Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/PEN_America"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Operation_Match": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:12.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Operation_Match",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:12.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Operation_Match"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pansexuality": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:12.223Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pansexuality",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:12.223Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pansexuality"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paradise_Garage": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:12.346Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paradise_Garage",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:12.346Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paradise_Garage"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Parimutuel_betting": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:12.605Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Parimutuel_betting",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:12.605Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Parimutuel_betting"
+      }
+    },
+    "https://en.wikipedia.org/wiki/PFLAG": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:14.203Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/PFLAG",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:14.203Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/PFLAG"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pay-per-view": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:14.340Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pay-per-view",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:14.340Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pay-per-view"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pay_television": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:14.462Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pay_television",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:14.462Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pay_television"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paris_Adult_Theatre_I_v._Slaton": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:15.370Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paris_Adult_Theatre_I_v._Slaton",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:15.370Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paris_Adult_Theatre_I_v._Slaton"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Penthouse_(magazine)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:15.491Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Penthouse_(magazine)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:15.491Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Penthouse_(magazine)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Personal_advertisement": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.000Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Personal_advertisement",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.000Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Personal_advertisement"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pink_triangle": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.123Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pink_triangle",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.123Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pink_triangle"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Patrick_Steptoe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.228Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Patrick_Steptoe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.228Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Patrick_Steptoe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Playboy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.238Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Playboy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.238Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Playboy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Playgirl": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.350Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Playgirl",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.350Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Playgirl"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Polygyny": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.466Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Polygyny",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.466Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Polygyny"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peep_show": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:16.941Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peep_show",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:16.941Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peep_show"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Polyandry": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:17.612Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Polyandry",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:17.612Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Polyandry"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pride_in_London": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:17.735Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pride_in_London",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:17.735Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pride_in_London"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prior_restraint": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:17.856Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prior_restraint",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:17.856Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prior_restraint"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Private_(magazine)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:17.978Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Private_(magazine)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:17.978Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Private_(magazine)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Production_Code_Administration": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:18.218Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Production_Code_Administration",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:18.218Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Production_Code_Administration"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Postal_inspector": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:19.056Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Postal_inspector",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:19.056Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Postal_inspector"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Iceland": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:19.416Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Iceland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:19.416Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Iceland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Nevada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:19.422Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Nevada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:19.422Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Nevada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Norway": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:19.545Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Norway",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:19.545Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Norway"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_ancient_Rome": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:20.701Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_ancient_Rome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:20.701Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_ancient_Rome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Amsterdam": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:21.019Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Amsterdam",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:21.019Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Amsterdam"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_the_Netherlands": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:21.143Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_the_Netherlands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:21.143Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_the_Netherlands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Puberty": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:21.266Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Puberty",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:21.266Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Puberty"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pure_Food_and_Drug_Act": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:21.816Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pure_Food_and_Drug_Act",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:21.816Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pure_Food_and_Drug_Act"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rainbow_flag_(LGBTQ)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:21.942Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rainbow_flag_(LGBTQ)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:21.942Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rainbow_flag_(LGBTQ)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Quartier_Pigalle": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:22.026Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Quartier_Pigalle",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:22.026Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Quartier_Pigalle"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Red-Headed_Woman": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:23.200Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Red-Headed_Woman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:23.200Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Red-Headed_Woman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Red-light_district": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:23.326Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Red-light_district",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:23.326Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Red-light_district"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Reeperbahn": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:23.450Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Reeperbahn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:23.450Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Reeperbahn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ratirahasya": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:23.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ratirahasya",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:23.470Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ratirahasya"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Reproductive_health": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:23.593Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Reproductive_health",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:23.593Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Reproductive_health"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:24.057Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:24.057Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Robert_Edwards_(physiologist)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:24.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Robert_Edwards_(physiologist)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:24.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Robert_Edwards_(physiologist)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Robert_Mapplethorpe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:25.011Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Robert_Mapplethorpe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:25.011Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Robert_Mapplethorpe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Royal_Oldham_Hospital": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:25.912Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Royal_Oldham_Hospital",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:25.912Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Royal_Oldham_Hospital"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Roth_v._United_States": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:25.931Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Roth_v._United_States",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:25.931Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Roth_v._United_States"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ruth_Bernhard": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:26.035Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ruth_Bernhard",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:26.035Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ruth_Bernhard"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sabbath": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:26.052Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sabbath",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:26.052Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sabbath"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Salsa_(dance)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:26.174Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Salsa_(dance)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:26.174Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Salsa_(dance)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rum-running": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.259Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rum-running",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.259Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rum-running"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Belgium": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.267Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Belgium",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.267Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Belgium"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Same-sex_marriage_in_South_Africa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.375Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_South_Africa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.375Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_South_Africa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.388Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.388Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.496Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.496Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sappho": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:27.511Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sappho",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:27.511Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sappho"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Savoy_Ballroom": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:28.140Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Savoy_Ballroom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:28.140Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Savoy_Ballroom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Screening_(medicine)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:29.059Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Screening_(medicine)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:29.059Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Screening_(medicine)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Canada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:29.364Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Canada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:29.364Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_Canada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Secret_Museum%2C_Naples": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:29.947Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Secret_Museum%2C_Naples",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:29.947Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Secret_Museum%2C_Naples"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Self-report_study": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:29.983Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Self-report_study",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:29.983Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Self-report_study"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sex_education": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:30.106Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sex_education",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:30.106Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sex_education"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sensate_focus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:30.356Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sensate_focus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:30.356Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sensate_focus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sealed_with_a_kiss": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:31.059Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sealed_with_a_kiss",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:31.059Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sealed_with_a_kiss"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexual_health": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:32.016Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexual_health",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:32.016Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexual_health"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexual_orientation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:32.140Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexual_orientation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:32.140Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexual_orientation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexual_Offences_Act_1967": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:32.685Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexual_Offences_Act_1967",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:32.685Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexual_Offences_Act_1967"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexually_transmitted_infection": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:32.855Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexually_transmitted_infection",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:32.855Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexually_transmitted_infection"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexuality_Information_and_Education_Council_of_the_United_States": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:33.500Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexuality_Information_and_Education_Council_of_the_United_States",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:33.500Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexuality_Information_and_Education_Council_of_the_United_States"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shunga": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:34.982Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shunga",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:34.982Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shunga"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Single_Convention_on_Narcotic_Drugs": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:35.851Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Single_Convention_on_Narcotic_Drugs",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:35.851Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Single_Convention_on_Narcotic_Drugs"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Smoot%E2%80%93Hawley_Tariff_Act": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:35.974Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Smoot%E2%80%93Hawley_Tariff_Act",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:35.974Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Smoot%E2%80%93Hawley_Tariff_Act"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Simple_random_sample": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:36.586Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Simple_random_sample",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:36.586Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Simple_random_sample"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Social_stigma": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:36.707Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Social_stigma",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:36.707Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Social_stigma"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Soho": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:36.823Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Soho",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:36.823Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Soho"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Six_o'clock_swill": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:37.614Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Six_o'clock_swill",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:37.614Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Six_o'clock_swill"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sons_of_Temperance": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:38.160Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sons_of_Temperance",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:38.160Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sons_of_Temperance"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Southwark": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:38.281Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Southwark",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:38.281Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Southwark"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Speakeasy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:38.328Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Speakeasy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:38.328Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Speakeasy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Social_purity_movement": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:38.828Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Social_purity_movement",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:38.828Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Social_purity_movement"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Straight_ally": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.308Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Straight_ally",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.308Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Straight_ally"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Storey_County%2C_Nevada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.328Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Storey_County%2C_Nevada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.328Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Storey_County%2C_Nevada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Striptease": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.449Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Striptease",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.449Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Striptease"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Studio_54": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.570Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Studio_54",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.570Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Studio_54"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Speed_dating": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.668Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Speed_dating",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.668Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Speed_dating"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sumptuary_law": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.693Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sumptuary_law",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.693Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sumptuary_law"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sunday_shopping": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.783Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sunday_shopping",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.783Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sunday_shopping"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sweepstakes": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:39.814Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sweepstakes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:39.814Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sweepstakes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Strict_scrutiny": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:40.911Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Strict_scrutiny",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:40.911Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Strict_scrutiny"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Spermicide": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:40.963Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Spermicide",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:40.963Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Spermicide"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Syphilis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.085Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Syphilis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.085Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Syphilis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tango": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.206Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tango",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.206Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tango"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tarzan_and_His_Mate": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.328Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tarzan_and_His_Mate",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.328Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tarzan_and_His_Mate"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Birth_of_Venus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.450Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Birth_of_Venus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.450Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Birth_of_Venus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Canterbury_Tales": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.566Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Canterbury_Tales",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.566Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Canterbury_Tales"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Decameron": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.688Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Decameron",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.688Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Decameron"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Five_Love_Languages": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.804Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Five_Love_Languages",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.804Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Five_Love_Languages"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Ha%C3%A7ienda": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:41.919Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Ha%C3%A7ienda",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:41.919Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Ha%C3%A7ienda"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sydney_Gay_and_Lesbian_Mardi_Gras": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:42.645Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sydney_Gay_and_Lesbian_Mardi_Gras",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:42.645Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sydney_Gay_and_Lesbian_Mardi_Gras"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:42.776Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:42.776Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Lover_(Duras_novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:42.904Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Lover_(Duras_novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:42.904Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Lover_(Duras_novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Theatres_Act_1968": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:43.025Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Theatres_Act_1968",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:43.025Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Theatres_Act_1968"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Symbolic_speech": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:43.676Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Symbolic_speech",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:43.676Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Symbolic_speech"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Time%2C_place%2C_and_manner": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:44.558Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Time%2C_place%2C_and_manner",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:44.558Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Time%2C_place%2C_and_manner"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Loft_(New_York_City)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:44.661Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Loft_(New_York_City)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:44.661Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Loft_(New_York_City)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Toxic_shock_syndrome": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:44.680Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Toxic_shock_syndrome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:44.680Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Toxic_shock_syndrome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Transgender_flag": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:44.782Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Transgender_flag",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:44.782Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Transgender_flag"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Triangular_theory_of_love": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:44.802Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Triangular_theory_of_love",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:44.802Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Triangular_theory_of_love"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tyrian_purple": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:45.508Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tyrian_purple",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:45.508Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tyrian_purple"
+      }
+    },
+    "https://en.wikipedia.org/wiki/UNESCO": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:45.630Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/UNESCO",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:45.630Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/UNESCO"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ukiyo-e": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:45.700Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ukiyo-e",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:45.700Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ukiyo-e"
+      }
+    },
+    "https://en.wikipedia.org/wiki/United_Nations_Population_Fund": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:46.023Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/United_Nations_Population_Fund",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:46.023Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/United_Nations_Population_Fund"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tropic_of_Cancer_(novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:47.530Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tropic_of_Cancer_(novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:47.530Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tropic_of_Cancer_(novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/VHS": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:47.651Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/VHS",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:47.651Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/VHS"
+      }
+    },
+    "https://en.wikipedia.org/wiki/United_States_v._One_Book_Called_Ulysses": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:47.681Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/United_States_v._One_Book_Called_Ulysses",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:47.681Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/United_States_v._One_Book_Called_Ulysses"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Venus_of_Urbino": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:47.801Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Venus_of_Urbino",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:47.801Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Venus_of_Urbino"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Valentine's_Day": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:47.907Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Valentine's_Day",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:47.907Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Valentine's_Day"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Usenet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:48.507Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Usenet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:48.507Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Usenet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Video_dating": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.191Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Video_dating",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.191Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Video_dating"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Videocassette_recorder": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.312Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Videocassette_recorder",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.312Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Videocassette_recorder"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Victorian_burlesque": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.413Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Victorian_burlesque",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.413Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Victorian_burlesque"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vogue_(dance)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.427Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vogue_(dance)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.427Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vogue_(dance)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Warren_Cup": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.549Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Warren_Cup",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.549Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Warren_Cup"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Watershed_(broadcasting)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.665Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Watershed_(broadcasting)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.665Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Watershed_(broadcasting)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wedding_anniversary": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.780Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wedding_anniversary",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.780Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wedding_anniversary"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Video_rental_shop": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.870Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Video_rental_shop",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.870Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Video_rental_shop"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wedding_ring": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.900Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wedding_ring",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.900Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wedding_ring"
+      }
+    },
+    "https://en.wikipedia.org/wiki/William_Harvey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:50.992Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/William_Harvey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:50.992Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/William_Harvey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Volstead_Act": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:51.657Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Volstead_Act",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:51.657Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Volstead_Act"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Woman's_Christian_Temperance_Union": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:52.588Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Woman's_Christian_Temperance_Union",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:52.588Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Woman's_Christian_Temperance_Union"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_Health_Organization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.343Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_Health_Organization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.343Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_Health_Organization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/XBIZ_Awards": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.381Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/XBIZ_Awards",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.381Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/XBIZ_Awards"
+      }
+    },
+    "https://en.wikipedia.org/wiki/WorldPride": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.446Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/WorldPride",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.446Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/WorldPride"
+      }
+    },
+    "https://en.wikipedia.org/wiki/XRCO_Award": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.477Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/XRCO_Award",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.477Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/XRCO_Award"
+      }
+    },
+    "https://en.wikipedia.org/wiki/X_rating": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.502Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/X_rating",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.502Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/X_rating"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Yoshiwara": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.599Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Yoshiwara",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.599Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Yoshiwara"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Zami%3A_A_New_Spelling_of_My_Name": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:53.721Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Zami%3A_A_New_Spelling_of_My_Name",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:53.721Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Zami%3A_A_New_Spelling_of_My_Name"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Yogyakarta_Principles": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:54.834Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Yogyakarta_Principles",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:54.834Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Yogyakarta_Principles"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Young_v._American_Mini_Theatres%2C_Inc.": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:05:55.058Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Young_v._American_Mini_Theatres%2C_Inc.",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:05:55.058Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Young_v._American_Mini_Theatres%2C_Inc."
+      }
+    },
+    "https://en.wikipedia.org/wiki/Article_10_of_the_European_Convention_on_Human_Rights": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:47.651Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Article_10_of_the_European_Convention_on_Human_Rights",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:47.651Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Article_10_of_the_European_Convention_on_Human_Rights"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Indian_Matchmaking": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:47.654Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Indian_Matchmaking",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:47.653Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Indian_Matchmaking"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Beate_Uhse_Erotic_Museum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:47.764Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Beate_Uhse_Erotic_Museum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:47.764Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Beate_Uhse_Erotic_Museum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kurhaus_of_Baden-Baden": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:47.782Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kurhaus_of_Baden-Baden",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:47.782Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kurhaus_of_Baden-Baden"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kabukich%C5%8D%2C_Tokyo": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:47.900Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kabukich%C5%8D%2C_Tokyo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:47.900Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kabukich%C5%8D%2C_Tokyo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/LGBTQ_symbols": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.028Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/LGBTQ_symbols",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.028Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/LGBTQ_symbols"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ladies_National_Association_for_the_Repeal_of_the_Contagious_Diseases_Acts": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.236Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ladies_National_Association_for_the_Repeal_of_the_Contagious_Diseases_Acts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.236Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ladies_National_Association_for_the_Repeal_of_the_Contagious_Diseases_Acts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Love_letter": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.285Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Love_letter",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.285Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Love_letter"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lock_hospital": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.332Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lock_hospital",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.332Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lock_hospital"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lupanar": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.370Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lupanar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.370Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lupanar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Leda_and_the_Swan_(Leonardo)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.445Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Leda_and_the_Swan_(Leonardo)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.445Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Leda_and_the_Swan_(Leonardo)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Miller_test": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Miller_test",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Miller_test"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Menstrual_Hygiene_Day": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.793Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Menstrual_Hygiene_Day",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.793Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Menstrual_Hygiene_Day"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_Survey_of_Sexual_Attitudes_and_Lifestyles": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.928Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_Survey_of_Sexual_Attitudes_and_Lifestyles",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.928Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_Survey_of_Sexual_Attitudes_and_Lifestyles"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lydia_Thompson": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:48.974Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lydia_Thompson",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:48.974Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lydia_Thompson"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nightclub": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:49.097Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nightclub",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:49.097Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nightclub"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Miller_v._California": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:49.187Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Miller_v._California",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:49.187Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Miller_v._California"
+      }
+    },
+    "https://en.wikipedia.org/wiki/New_Zealand_Prostitutes'_Collective": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:49.344Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/New_Zealand_Prostitutes'_Collective",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:49.344Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/New_Zealand_Prostitutes'_Collective"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peer_education": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:49.836Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peer_education",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:49.836Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peer_education"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pantomime_dame": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:49.984Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pantomime_dame",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:49.984Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pantomime_dame"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pottery_of_ancient_Greece": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.060Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pottery_of_ancient_Greece",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.060Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pottery_of_ancient_Greece"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pregnancy_test": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.087Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pregnancy_test",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.087Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pregnancy_test"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Europe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Europe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Europe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_Sweden": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.223Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_Sweden",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.223Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_Sweden"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_in_New_Zealand": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.309Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_in_New_Zealand",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.309Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_in_New_Zealand"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Raffles_Hotel": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.345Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Raffles_Hotel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.345Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Raffles_Hotel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prostitution_Reform_Act_2003": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.538Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prostitution_Reform_Act_2003",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.538Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prostitution_Reform_Act_2003"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Prurient_interest": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.850Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Prurient_interest",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.850Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Prurient_interest"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Regnier_de_Graaf": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:50.934Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Regnier_de_Graaf",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:50.934Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Regnier_de_Graaf"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Savoy_Hotel": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:51.049Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Savoy_Hotel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:51.049Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Savoy_Hotel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Safe_sex": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:51.087Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Safe_sex",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:51.087Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Safe_sex"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Scrambler": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:51.434Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Scrambler",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:51.434Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Scrambler"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ritz_Paris": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:51.554Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ritz_Paris",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:51.554Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ritz_Paris"
+      }
+    },
+    "https://en.wikipedia.org/wiki/She_Done_Him_Wrong": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:51.768Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/She_Done_Him_Wrong",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:51.768Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/She_Done_Him_Wrong"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shanghai_Marriage_Market": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.013Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shanghai_Marriage_Market",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.013Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shanghai_Marriage_Market"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Female": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.014Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Female",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.014Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Female"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Male": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.019Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Male",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.019Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sexual_Behavior_in_the_Human_Male"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shidduch": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.229Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shidduch",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.229Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shidduch"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shimabara%2C_Kyoto": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.301Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shimabara%2C_Kyoto",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.301Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shimabara%2C_Kyoto"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Solicitation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.341Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Solicitation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.341Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Solicitation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Skinner_v._Oklahoma": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.408Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Skinner_v._Oklahoma",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.408Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Skinner_v._Oklahoma"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Three_Graces_(Raphael)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Three_Graces_(Raphael)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.470Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Three_Graces_(Raphael)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Twenty-first_Amendment_to_the_United_States_Constitution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.724Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Twenty-first_Amendment_to_the_United_States_Constitution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.724Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Twenty-first_Amendment_to_the_United_States_Constitution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/V%C4%81tsy%C4%81yana": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.852Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/V%C4%81tsy%C4%81yana",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.852Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/V%C4%81tsy%C4%81yana"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Hite_Report": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:52.885Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Hite_Report",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:52.885Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Hite_Report"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tim_Barnett_(politician)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.014Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tim_Barnett_(politician)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.014Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tim_Barnett_(politician)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sydney_lockout_laws": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.154Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sydney_lockout_laws",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.154Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sydney_lockout_laws"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_Erotic_Art_Museum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.283Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_Erotic_Art_Museum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.283Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_Erotic_Art_Museum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/What_the_Butler_Saw_(film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.407Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/What_the_Butler_Saw_(film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.407Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/What_the_Butler_Saw_(film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Video_Recordings_Act_1984": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.615Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Video_Recordings_Act_1984",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.615Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Video_Recordings_Act_1984"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Window_prostitution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:07:53.782Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Window_prostitution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:07:53.782Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Window_prostitution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Edward_Laumann": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.053Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Edward_Laumann",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.053Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Edward_Laumann"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Reno%2C_Nevada": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.055Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Reno%2C_Nevada",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.055Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Reno%2C_Nevada"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_Survey_of_Family_Growth": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.160Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_Survey_of_Family_Growth",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.160Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_Survey_of_Family_Growth"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Henri_Gervex": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.323Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Henri_Gervex",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.323Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Henri_Gervex"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Voyeur_Dorm%2C_L.C._v._City_of_Tampa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.506Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Voyeur_Dorm%2C_L.C._v._City_of_Tampa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.506Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Voyeur_Dorm%2C_L.C._v._City_of_Tampa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Renton_v._Playtime_Theatres%2C_Inc.": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.522Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Renton_v._Playtime_Theatres%2C_Inc.",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.522Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Renton_v._Playtime_Theatres%2C_Inc."
+      }
+    },
+    "https://www.law.cornell.edu/gender-justice/resource/open_door_and_dublin_well_woman_v._ireland": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:39.914Z",
+      "result": {
+        "url": "https://www.law.cornell.edu/gender-justice/resource/open_door_and_dublin_well_woman_v._ireland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:39.914Z",
+        "code": null,
+        "finalUrl": "https://www.law.cornell.edu/gender-justice/resource/open_door_and_dublin_well_woman_v._ireland"
+      }
+    },
+    "https://hudoc.echr.coe.int/eng?i=001-57897": {
+      "version": 1,
+      "expiresAt": "2026-09-03T11:09:41.459Z",
+      "result": {
+        "url": "https://hudoc.echr.coe.int/eng?i=001-57897",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T11:09:41.459Z",
+        "code": null,
+        "finalUrl": "https://hudoc.echr.coe.int/eng?i=001-57897"
+      }
     }
   }
 }
