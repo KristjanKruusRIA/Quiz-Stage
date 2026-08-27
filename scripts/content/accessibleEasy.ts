@@ -822,6 +822,7 @@ export function applyAccessibleEasyQuestions(
           reviewedAt: '2026-08-27T21:00:00.000Z',
           decision: 'approved',
         },
+        adultPolicyReview: null,
       });
     }
   }
