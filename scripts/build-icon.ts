@@ -6,6 +6,10 @@ import { PNG } from 'pngjs';
 
 export const WINDOWS_ICON_SIZES = [16, 24, 32, 48, 64, 128, 256] as const;
 
+export function iconSourcePath(root: string): string {
+  return join(root, 'resources', 'media', 'icon-source.png');
+}
+
 function resizeSquare(source: PNG, size: number): Buffer {
   const target = new PNG({ width: size, height: size });
   for (let y = 0; y < size; y += 1) {
@@ -30,8 +34,8 @@ export async function buildWindowsIcon(sourcePath: string, outputPath: string): 
 
 const scriptPath = fileURLToPath(import.meta.url);
 if (process.argv[1] !== undefined && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  const mediaRoot = join(dirname(scriptPath), '..', 'resources', 'media');
-  buildWindowsIcon(join(mediaRoot, 'icon-source.png'), join(mediaRoot, 'icon.ico')).catch((error: unknown) => {
+  const root = join(dirname(scriptPath), '..');
+  buildWindowsIcon(iconSourcePath(root), join(root, 'resources', 'media', 'icon.ico')).catch((error: unknown) => {
     console.error(error);
     process.exitCode = 1;
   });

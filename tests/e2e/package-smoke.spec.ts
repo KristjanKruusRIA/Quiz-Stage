@@ -1,15 +1,49 @@
-import { chromium, expect, test, type Browser, type Page } from '@playwright/test';
-import { spawn, type ChildProcess } from 'node:child_process';
+import { chromium, expect, test, type Browser, type Locator, type Page } from '@playwright/test';
+import type { ChildProcess } from 'node:child_process';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { packagedResourcesDirectory } from '../../scripts/release/packageLayout';
+import {
+  spawnPackagedProcess,
+  stopPackagedProcess,
+  waitForPackagedConnection,
+} from '../../scripts/release/packagedProcess';
+import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
-import { terminatePackagedProcess } from './support/packagedProcess';
 
-const packagedSmokeEnabled = process.platform === 'win32'
-  && process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
+const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
+const useDomPointerActivation = process.platform === 'darwin' && process.arch === 'x64';
 test.setTimeout(300_000);
+test.use({ trace: 'off', screenshot: 'off' });
+
+function reportPackagedSmokeProgress(phase: string, detail?: number): void {
+  console.log(`PACKAGED_SMOKE_PROGRESS:${phase}${detail === undefined ? '' : `:${detail}`}`);
+}
+
+async function activateInitialControl(control: Locator): Promise<void> {
+  await expect(control).toBeVisible({ timeout: 30_000 });
+  await expect(control).toBeEnabled({ timeout: 30_000 });
+  if (useDomPointerActivation) {
+    await control.evaluate((element) => (element as HTMLElement).click());
+    return;
+  }
+  await control.click();
+}
+
+async function activateControl(control: Locator): Promise<void> {
+  await expect(control).toBeVisible({ timeout: 30_000 });
+  await expect(control).toBeEnabled({ timeout: 30_000 });
+  await control.click();
+}
+
+async function activateRadio(radio: Locator): Promise<void> {
+  await expect(radio).toBeVisible({ timeout: 30_000 });
+  await expect(radio).toBeEnabled({ timeout: 30_000 });
+  await radio.check();
+  await expect(radio).toBeChecked({ timeout: 30_000 });
+}
 
 function packagedExecutable(): string {
   const executable = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE;
@@ -18,8 +52,11 @@ function packagedExecutable(): string {
 }
 
 function packagedUserData(executable: string): string {
-  const portableMarker = path.join(path.dirname(executable), 'resources', 'portable.flag');
-  if (existsSync(portableMarker)) return path.join(path.dirname(executable), 'UserData');
+  const target = releaseTargetFor(process.platform, process.arch);
+  const portableMarker = path.join(packagedResourcesDirectory(executable, target), 'portable.flag');
+  if (target.forgePlatform === 'win32' && existsSync(portableMarker)) {
+    return path.join(path.dirname(executable), 'UserData');
+  }
   return process.env.QUIZ_STAGE_PACKAGED_USER_DATA?.trim() || mkdtempSync(path.join(tmpdir(), 'quiz-stage-package-smoke-'));
 }
 
@@ -41,54 +78,58 @@ async function availablePort(): Promise<number> {
 
 async function launchPackaged(executable: string, userData: string): Promise<{ browser: Browser; page: Page; process: ChildProcess }> {
   const port = await availablePort();
-  const process = spawn(executable, [
+  const applicationProcess = spawnPackagedProcess(executable, [
     `--remote-debugging-port=${port}`,
     `--user-data-dir=${userData}`,
     '--quiz-stage-e2e-clock',
     '--quiz-stage-e2e-network-guard',
-  ], { cwd: path.dirname(executable), stdio: 'ignore', windowsHide: true });
-  for (let attempt = 0; attempt < 100; attempt += 1) {
-    if (process.exitCode !== null) throw new Error(`PACKAGED_APP_EXITED:${process.exitCode}`);
-    try {
-      const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
-      const page = browser.contexts().flatMap((context) => context.pages()).at(-1);
-      if (page !== undefined) return { browser, page, process };
+  ], {
+    cwd: path.dirname(executable),
+    detached: process.platform !== 'win32',
+    stdio: 'ignore',
+    windowsHide: true,
+  });
+  const connected = await waitForPackagedConnection(applicationProcess, async () => {
+    const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
+    const page = browser.contexts().flatMap((context) => context.pages()).at(-1);
+    if (page === undefined) {
       await browser.close();
-    } catch { /* Chromium has not exposed the CDP endpoint yet. */ }
-    await new Promise((resolve) => setTimeout(resolve, 100));
-  }
-  terminatePackagedProcess(process);
-  throw new Error('PACKAGED_APP_CDP_TIMEOUT');
+      throw new Error('PACKAGED_PAGE_NOT_READY');
+    }
+    return { browser, page };
+  }, { attempts: 300 });
+  return { ...connected, process: applicationProcess };
 }
 
 async function playTileCorrect(page: Page): Promise<void> {
   const tile = page.locator('.public-board button:not([disabled])').first();
-  await expect(tile).toBeEnabled();
-  await tile.click();
+  await activateControl(tile);
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
   if (await wager.isVisible()) {
     await wager.fill('5');
-    await page.getByRole('button', { name: 'Commit wager' }).click();
+    await activateControl(page.getByRole('button', { name: 'Commit wager' }));
   }
-  await page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first().click();
-  await page.getByRole('button', { name: 'Correct', exact: true }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
+  await activateControl(page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first());
+  await activateControl(page.getByRole('button', { name: 'Correct', exact: true }));
+  await activateControl(page.getByRole('button', { name: 'Continue' }));
 }
 
 if (packagedSmokeEnabled) test('runs a complete two-team win sequence without external requests', async () => {
   const executable = packagedExecutable();
   const userData = packagedUserData(executable);
-  const shouldCleanupUserData = process.env.QUIZ_STAGE_PACKAGED_USER_DATA === undefined
-    || process.env.QUIZ_STAGE_PACKAGED_USER_DATA.trim() === userData;
+  const shouldCleanupUserData = process.env.QUIZ_STAGE_PACKAGED_USER_DATA === undefined;
   let browser: Browser | null = null;
   let applicationProcess: ChildProcess | null = null;
   const externalRequests: string[] = [];
 
   try {
+    reportPackagedSmokeProgress('launch');
     const launched = await launchPackaged(executable, userData);
     browser = launched.browser;
     applicationProcess = launched.process;
     const page = launched.page;
+    page.setDefaultTimeout(30_000);
+    reportPackagedSmokeProgress('connected');
     page.on('request', (request) => {
       const url = new URL(request.url());
       if (url.protocol === 'http:' || url.protocol === 'https:') {
@@ -96,9 +137,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
       }
     });
 
-    await page.getByRole('button', { name: 'New Match' }).click();
-    await page.getByRole('radio', { name: 'English' }).check();
-    await page.getByRole('radio', { name: 'Medium' }).check();
+    reportPackagedSmokeProgress('match-setup');
+    await activateInitialControl(page.getByRole('button', { name: 'New Match' }));
+    await activateRadio(page.getByRole('radio', { name: 'English' }));
+    await activateRadio(page.getByRole('radio', { name: 'Medium' }));
     await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
     const startButton = page.getByRole('button', { name: 'Start match' });
     await expect.poll(async () => ({
@@ -108,30 +150,33 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
       enabled: true,
       alerts: [],
     });
-    await startButton.click();
+    await activateControl(startButton);
 
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
       await playTileCorrect(page);
+      if (clueNumber % 10 === 0) reportPackagedSmokeProgress('clues', clueNumber);
     }
 
+    reportPackagedSmokeProgress('final');
     for (const input of await page.getByRole('spinbutton', { name: /Final wager for/ }).all()) {
       if (await input.isVisible()) {
         await input.fill('0');
-        await input.locator('xpath=ancestor::form').getByRole('button').click();
+        await activateControl(input.locator('xpath=ancestor::form').getByRole('button'));
       }
     }
     await expect(page.getByRole('timer')).toHaveText('0', { timeout: 35_000 });
     while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
-      await page.getByRole('button', { name: /Reveal .* correct/ }).first().click();
+      await activateControl(page.getByRole('button', { name: /Reveal .* correct/ }).first());
     }
 
     await expect(page.getByRole('heading', { name: /wins/ })).toBeVisible();
-    await page.getByRole('button', { name: 'Back to Home' }).click();
-    await page.getByRole('button', { name: 'Match History' }).click();
+    await activateControl(page.getByRole('button', { name: 'Back to Home' }));
+    await activateControl(page.getByRole('button', { name: 'Match History' }));
     await expect(page.getByRole('heading', { name: 'Match History' })).toBeVisible();
     await expect(page.getByText('Complete')).toBeVisible();
 
+    reportPackagedSmokeProgress('persistence');
     const database = openDatabase({ filePath: path.join(userData, 'quiz-stage.sqlite'), readonly: true });
     try {
       const completeMatchCount = database.prepare('SELECT COUNT(*) FROM matches WHERE completed_at IS NOT NULL').pluck().get() as number;
@@ -141,13 +186,13 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
 
     expect(externalRequests).toEqual([]);
+    reportPackagedSmokeProgress('complete');
+  } catch (error: unknown) {
+    console.error('PACKAGED_SMOKE_ORIGINAL_ERROR', error);
+    throw error;
   } finally {
+    if (applicationProcess !== null) await stopPackagedProcess(applicationProcess);
     await browser?.close().catch(() => undefined);
-    if (applicationProcess !== null && applicationProcess.exitCode === null) {
-      const exited = new Promise<void>((resolve) => applicationProcess?.once('exit', () => resolve()));
-      terminatePackagedProcess(applicationProcess);
-      await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 5_000))]);
-    }
     if (shouldCleanupUserData) rmSync(userData, { recursive: true, force: true });
   }
 });

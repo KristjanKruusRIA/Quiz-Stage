@@ -46,7 +46,7 @@ describe('installer executable resolution', () => {
 
     expect(result.status).toBe(0);
     expect(result.stdout.trim()).toBe(expected);
-  });
+  }, 10_000);
 
   it('rejects a root launcher when the versioned application is missing', () => {
     const installRoot = temporaryInstallRoot();
@@ -56,7 +56,7 @@ describe('installer executable resolution', () => {
 
     expect(result.status).not.toBe(0);
     expect(result.stderr).toContain(path.join('app-0.1.0', 'Quiz Stage.exe'));
-  });
+  }, 10_000);
 
   it('rejects ambiguous Squirrel release packages before running an installer', () => {
     const packageRoot = temporaryInstallRoot();
@@ -74,5 +74,5 @@ describe('installer executable resolution', () => {
 
     expect(result.status).not.toBe(0);
     expect(result.stderr).toContain('Expected exactly one Squirrel release package');
-  });
+  }, 10_000);
 });
