@@ -15,6 +15,10 @@ function normalize(value: string): string {
     .trim();
 }
 
+function containsNormalizedPhrase(value: string, phrase: string): boolean {
+  return ` ${normalize(value)} `.includes(` ${normalize(phrase)} `);
+}
+
 function isNonEmpty(value: unknown): value is string {
   return typeof value === 'string' && normalize(value) !== '';
 }
@@ -85,11 +89,11 @@ function validateQuestionText(question: AccessibleQuestion, category: Accessible
     if (isBinaryPrompt(question.clue[language], language)) {
       throw new Error(`Question ${question.key} uses a binary ${label} prompt`);
     }
-    const response = normalize(question.response[language]);
-    if (normalize(question.clue[language]).includes(response)) {
+    const response = question.response[language];
+    if (containsNormalizedPhrase(question.clue[language], response)) {
       throw new Error(`Question ${question.key} leaks its ${label} response in the clue`);
     }
-    if (normalize(category.name[language]).includes(response)) {
+    if (containsNormalizedPhrase(category.name[language], response)) {
       throw new Error(
         `Question ${question.key} leaks its ${label} response in the category title`,
       );
