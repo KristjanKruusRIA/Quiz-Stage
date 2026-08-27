@@ -90,6 +90,7 @@ function evidenceFor(row: CsvRow, batchId: string, origin: ContentEvidence['orig
     clueId: row.clue_id,
     batchId,
     factKey: `fact:${row.clue_id}`,
+    subjectKey: `subject:${row.clue_id}`,
     assertion: `${row.response_en} — ${row.explanation_en}`,
     origin,
     authoring: { author: 'Content Author', authoredAt: '2026-08-13T08:00:00.000Z' },
