@@ -144,6 +144,14 @@ describe('upgrade verification arguments', () => {
 });
 
 describe('package upgrade verification', () => {
+  it('keeps a bounded extended retry window for transient workspace locks', () => {
+    const source = readFileSync('scripts/verify-upgrade.ts', 'utf8');
+
+    expect(source).toContain(
+      'rmSync(resolved, { recursive: true, force: true, maxRetries: 20, retryDelay: 200 });',
+    );
+  });
+
   it('runs the Linux package from the Maker ZIP top-level directory', async () => {
     const target = releaseTargetForId('ubuntu-x64');
     let expectedExecutable = '';

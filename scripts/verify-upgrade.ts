@@ -95,7 +95,7 @@ function removeUpgradeWorkspace(owned: OwnedUpgradeWorkspace): void {
   ) {
     throw new Error(`UNSAFE_UPGRADE_WORKSPACE:${owned.path}`);
   }
-  rmSync(resolved, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 });
+  rmSync(resolved, { recursive: true, force: true, maxRetries: 20, retryDelay: 200 });
 }
 
 function fixtureHashes(fixtureRoot: string): FixtureHashes {
