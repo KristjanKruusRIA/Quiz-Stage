@@ -33,7 +33,7 @@
 - Do not add a database migration or persistent Adult preference.
 - Use the existing content/work, content/authored, content/generated, content/evidence, content/reports, publisher, and seed-builder boundaries.
 - A failed verification or publication must not replace accepted artifacts or leave a stale passing report.
-- Finish and publish the complete 174-row 13-finals batch before beginning 14-adult; finish Adult before beginning 15-estonia.
+- Finish and publish the complete 174-row 13-finals batch before beginning board authoring. Adult and Estonia may be drafted concurrently in their isolated work directories, but publish and accept Adult before Estonia.
 - Do not dispatch, rerun, or otherwise trigger the GitHub release workflow. Do not run gh workflow run, create a release tag, or claim refreshed macOS or Ubuntu artifacts.
 - Local validation, Windows packaging, and packaged smoke checks are allowed. Keep all documentation and evidence under docs/superpowers.
 
@@ -44,6 +44,20 @@
 - scripts/content/validate.ts binds each row to its batch, checks pack identity, evidence, five distinct primary subjects, allocation, duplicates, and exact release counts.
 - scripts/content/evidence.ts owns optional `subjectKey` parsing, required board-category diversity, and the optional-on-old-records but required-for-Adult policy review attestation.
 - scripts/content/regroupBroadCategories.ts is reference infrastructure from the committed 01-12 regrouping. Adult and Estonia must use curated coherent category plans rather than its generic title generator.
+
+### High-throughput execution override
+
+At the user's request, do not serialize the remaining work into ten-category author/review handoffs. Preserve exact IDs, allocations, evidence, and quality gates while using this faster execution model:
+
+- keep the frozen Adult 001-010 review lane independent;
+- author Adult 011-100 in one pack-local mutable pass;
+- author Estonia 001-100 concurrently in its separate pack-local work directory;
+- review completed content in disjoint read-only lanes of roughly 25-30 category sets, concurrently where capacity allows;
+- consolidate findings into one pack-local correction pass rather than cycling each small slice separately;
+- rebuild evidence, run network/source checks, publish, and commit only after the whole pack freezes;
+- publish Adult before Estonia so accepted-artifact sequencing remains deterministic.
+
+This section supersedes later instructions that require ten-set delivery order. It does not relax factual, translation, policy, subject-diversity, self-containment, accessibility, source, or independent-review requirements.
 - scripts/content/buildSeed.ts and scripts/content/verifySeed.ts produce and read back the exact seed inventory.
 - scripts/content/verifyBatch.ts parses batch reports containing the expanded ReleaseSummary.
 - src/shared/ipc/contracts.ts carries selectedByDefault across IPC.
@@ -935,7 +949,7 @@ git commit -m "test(content): make subject diversity non-waivable"
 **Interfaces:**
 - Consumes: batch 14-adult, the merged `subjectKey` validator contract, Adult policy evidence, and the accepted 174-row Final batch.
 - Produces: 100 reviewed bilingual Adult category sets and 500 reviewed bilingual Adult board clues.
-- Task 8 must not start until the accepted 14-adult report is freshly passing.
+- Estonia drafting may run concurrently in `content/work/15-estonia`; Estonia publication must not start until the accepted 14-adult report is freshly passing.
 
 - [ ] **Step 1: Create canonical work artifacts**
 
@@ -1064,7 +1078,7 @@ git commit -m "feat(content): add reviewed Adult board pack"
 - Work only, ignored: content/work/15-estonia/category-plan.json
 
 **Interfaces:**
-- Consumes: batch 15-estonia, the merged `subjectKey` validator contract, and accepted Final/Adult batches.
+- Consumes while drafting: batch 15-estonia, the merged `subjectKey` validator contract, and accepted Finals. Publication additionally consumes the accepted Adult batch.
 - Produces: 100 reviewed bilingual Estonia category sets and 500 reviewed bilingual Estonia board clues.
 
 - [ ] **Step 1: Create canonical work artifacts and IDs**
