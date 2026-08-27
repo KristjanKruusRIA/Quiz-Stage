@@ -138,6 +138,7 @@ function evidenceFor(
     clueId: row.clue_id,
     batchId,
     factKey: `fact:${row.clue_id}`,
+    subjectKey: `subject:${row.clue_id}`,
     assertion: `${row.response_en.trim()} — ${row.explanation_en.trim()}`,
     origin,
     authoring: { author: 'Content Author', authoredAt: '2026-08-12T10:00:00Z' },
@@ -332,6 +333,24 @@ describe('production content validation', () => {
     ], { mode: fixture === 'release-shortage.csv' ? 'release' : 'batch' });
 
     expect(result.issues.map((issue) => issue.code)).toContain(code);
+  });
+
+  it('rejects a board category whose five clues cover fewer than five primary subjects', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch);
+    const records = rows.map((row, index) => ({
+      ...evidenceFor(row, batch.id, {
+        origin: index < batch.requiredOpenTdbClues ? 'openTdbInspired' : 'compatibleOpen',
+      }),
+      subjectKey: index < 5 ? 'subject:shawarma' : `subject:${row.clue_id}`,
+    })) as unknown as ContentEvidence[];
+
+    const result = validateProductionContent([input('single-subject-category.csv', rows)], {
+      mode: 'batch', batch,
+      evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
   });
 
   it('recognizes reader-visible month-year dates for changing facts', () => {

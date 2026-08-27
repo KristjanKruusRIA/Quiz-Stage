@@ -4,18 +4,15 @@
     "opening": {
       "file": "audio/opening.wav",
       "mime": "audio/wav",
-      "sha256": "ab40a9e737a8bfa4dc888817aef6ef0aef402142dc392aef16ca54eb2310f4a1",
-      "durationMs": 8022,
+      "sha256": "d94ae59f3afbac2c12a180edd80ebd91f438bc4b6c78639a19bc0a664369456e",
+      "durationMs": 33202,
       "channel": "music",
       "source": {
-        "title": "Talk Show Background Music 02.wav",
-        "creator": "LilMati",
-        "sourcePage": "https://freesound.org/people/LilMati/sounds/657753/",
-        "downloadUrl": "https://cdn.freesound.org/previews/657/657753_6142149-hq.mp3",
-        "license": "CC0-1.0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "sha256": "9244833d736dbd477ced929934827bc6b44360e46c52d80cf18fd93142603557",
-        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+        "kind": "private-use",
+        "title": "Jeopardy theme song",
+        "creator": "Unknown",
+        "providedFileSha256": "27dec23808ecf0f63ce9eed03c52e3fead354ff8be13d1e0530ebaaf7b5403bb",
+        "modifications": "Converted from the user-provided MP3 to PCM WAV; sample rate, bit depth, and channels normalized."
       }
     },
     "round-transition": {
@@ -100,6 +97,23 @@
         "license": "CC-BY-4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "sha256": "7580e2058c23bdf0b053adec39466474a99225a2a6d165ef57972bbd94c267b0",
+        "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
+      }
+    },
+    "countdown-tick": {
+      "file": "audio/countdown-tick.wav",
+      "mime": "audio/wav",
+      "sha256": "205cbcfa26e319d70d93ec685edc674bb857c05f30b4bfa0f35a911d6f21f139",
+      "durationMs": 79,
+      "channel": "effects",
+      "source": {
+        "title": "single-tick.wav",
+        "creator": "DeltaCode",
+        "sourcePage": "https://freesound.org/people/DeltaCode/sounds/668355/",
+        "downloadUrl": "https://cdn.freesound.org/previews/668/668355_3271378-hq.mp3",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sha256": "7096474f8a3d39b94c8368c978d9746c0ce1015ccc2302a87f012d1027719444",
         "modifications": "Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized."
       }
     },

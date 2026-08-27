@@ -61,6 +61,12 @@ describe('setup IPC registration', () => {
       tiebreakerClues: [],
     };
     const startedView = toHostGameView(createGame(config, selectedBoards, 1), null);
+    const configuredPreview = {
+      draftId: 'draft-1',
+      roundOne: selected.roundOne.categories.map((category) => ({ name: category.name.en, canReroll: true })),
+      roundTwo: selected.roundTwo.categories.map((category) => ({ name: category.name.en, canReroll: true })),
+      final: { name: selected.final.categoryName.en, canReroll: true },
+    };
     const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
     const removed: string[] = [];
     const ipcMain: IpcMainPort = {
@@ -77,6 +83,9 @@ describe('setup IPC registration', () => {
     };
     const setup = {
       startMatch: vi.fn(async () => startedView),
+      configureMatch: vi.fn(() => configuredPreview),
+      rerollConfiguredTopic: vi.fn(() => configuredPreview),
+      startConfiguredMatch: vi.fn(async () => ({ view: startedView, displayMode: 'single' as const })),
       checkContentAvailability: vi.fn(() => ({ ok: true })),
       getSetupOptions: vi.fn((automaticDisplayMode: 'single' | 'dual') => ({
         packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
@@ -94,7 +103,14 @@ describe('setup IPC registration', () => {
       getWindows: () => ({ hostWindow, publicWindow }),
     });
 
-    for (const channel of [IPC_CHANNELS.startMatch, IPC_CHANNELS.contentAvailability, IPC_CHANNELS.setupOptions]) {
+    for (const channel of [
+      IPC_CHANNELS.startMatch,
+      IPC_CHANNELS.configureMatch,
+      IPC_CHANNELS.rerollConfiguredTopic,
+      IPC_CHANNELS.startConfiguredMatch,
+      IPC_CHANNELS.contentAvailability,
+      IPC_CHANNELS.setupOptions,
+    ]) {
       await expect(handlers.get(channel)!({ sender: { id: 20 } }, config)).rejects.toThrow('HOST_SENDER_REQUIRED');
     }
     hostWindow = { webContents: { id: 30, send: vi.fn(), isDestroyed: () => false } };
@@ -109,14 +125,27 @@ describe('setup IPC registration', () => {
       });
     await expect(handlers.get(IPC_CHANNELS.startMatch)!({ sender: { id: 30 } }, config))
       .resolves.toEqual(startedView);
+    await expect(handlers.get(IPC_CHANNELS.configureMatch)!({ sender: { id: 30 } }, config))
+      .resolves.toEqual(configuredPreview);
+    const rerollRequest = { draftId: 'draft-1', target: { round: 'round-two' as const, index: 4 } };
+    await expect(handlers.get(IPC_CHANNELS.rerollConfiguredTopic)!({ sender: { id: 30 } }, rerollRequest))
+      .resolves.toEqual(configuredPreview);
+    await expect(handlers.get(IPC_CHANNELS.startConfiguredMatch)!({ sender: { id: 30 } }, { draftId: 'draft-1' }))
+      .resolves.toEqual(startedView);
     expect(setup.checkContentAvailability).toHaveBeenCalledWith(config);
     expect(setup.startMatch).toHaveBeenCalledWith(config);
+    expect(setup.configureMatch).toHaveBeenCalledWith(config);
+    expect(setup.rerollConfiguredTopic).toHaveBeenCalledWith(rerollRequest);
+    expect(setup.startConfiguredMatch).toHaveBeenCalledWith('draft-1');
     expect(setup.getSetupOptions).toHaveBeenCalledWith('dual');
 
     dispose();
     expect(removed).toEqual(expect.arrayContaining([
       IPC_CHANNELS.dispatch,
       IPC_CHANNELS.startMatch,
+      IPC_CHANNELS.configureMatch,
+      IPC_CHANNELS.rerollConfiguredTopic,
+      IPC_CHANNELS.startConfiguredMatch,
       IPC_CHANNELS.contentAvailability,
       IPC_CHANNELS.setupOptions,
     ]));
@@ -132,6 +161,9 @@ describe('setup IPC registration', () => {
     };
     const setup = {
       startMatch: vi.fn(),
+      configureMatch: vi.fn(),
+      rerollConfiguredTopic: vi.fn(),
+      startConfiguredMatch: vi.fn(),
       checkContentAvailability: vi.fn(),
       getSetupOptions: vi.fn(),
     };

@@ -316,7 +316,8 @@ test('survives a private Estonian eight-team match, restart, completion, history
       .flatMap((board) => board.categories.flatMap((category) => category.clues))
       .find((clue) => clue.id === beforeJudgment.state.activeClue?.clueId);
     if (judgedClue === undefined) throw new Error('Judged clue value was not persisted');
-    expect(afterJudgment.state.scores[judgedTeamId]).toBe(beforeJudgment.state.scores[judgedTeamId] + judgedClue.value);
+    const judgedScoreDelta = beforeJudgment.state.dailyDoubleWager ?? judgedClue.value;
+    expect(afterJudgment.state.scores[judgedTeamId]).toBe(beforeJudgment.state.scores[judgedTeamId] + judgedScoreDelta);
     const judgmentEvent = [...readEvents(userData, persisted.id)].reverse().find(({ event }) => event.type === 'CommandApplied'
       && event.command.type === 'JudgeResponse');
     if (judgmentEvent === undefined) throw new Error('Judgment event was not persisted');

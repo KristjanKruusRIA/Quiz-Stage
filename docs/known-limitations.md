@@ -8,12 +8,14 @@ The first release intentionally defers these items:
 - Automatic application updates.
 - Official television branding, archived clues from shows, recordings, or other show content.
 - Windows ARM64 and 32-bit Windows packages.
-- macOS and Linux support.
+- Ubuntu ARM64 and other non-x64 Ubuntu packages.
+- DMG, AppImage, RPM, Snap, and Flatpak packages.
 - Persistent team profiles and all-time leaderboard features beyond match history.
 
 Release-specific limitations:
 
 - The installer and portable executable are unsigned personal-use builds. Windows SmartScreen may warn on first launch.
+- The macOS ZIPs are unsigned and unnotarized. Follow the documented one-time Apple **Open Anyway** first-launch flow.
 - The Squirrel installer attempts a nonblocking uninstall-icon fetch from `raw.githubusercontent.com`. Installation and uninstall succeed while disconnected, and the installed application and portable package make zero HTTP(S) requests during the accepted offline matches.
 - The shipped/runtime dependency audit is clean. The full development dependency tree has 28 advisories in Electron Forge packaging tooling (3 low, 24 high, 1 critical) with no nonbreaking upgrade available at this baseline.
 

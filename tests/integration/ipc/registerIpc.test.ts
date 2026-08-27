@@ -3,6 +3,31 @@ import { IPC_CHANNELS } from '../../../src/main/ipc/channels';
 import { registerIpc, type IpcMainPort } from '../../../src/main/ipc/registerIpc';
 
 describe('main IPC registration', () => {
+  it('allows only the current host to request an orderly save-and-quit', async () => {
+    const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
+    const ipcMain: IpcMainPort = {
+      handle: (channel, handler) => handlers.set(channel, handler),
+      removeHandler: vi.fn(), on: vi.fn(), removeListener: vi.fn(),
+    };
+    const quit = vi.fn();
+    const hostWindow = { webContents: { id: 10, send: vi.fn(), isDestroyed: () => false } };
+    const publicWindow = { webContents: { id: 20, send: vi.fn(), isDestroyed: () => false } };
+    registerIpc({
+      ipcMain,
+      coordinator: {
+        dispatch: vi.fn(), subscribe: vi.fn(() => () => undefined),
+        getHostStateUpdate: vi.fn(() => null), getPublicStateUpdate: vi.fn(() => null),
+      },
+      getWindows: () => ({ hostWindow, publicWindow }),
+      quit,
+    });
+
+    const invoke = handlers.get(IPC_CHANNELS.saveAndQuit)!;
+    await expect(invoke({ sender: { id: 20 } }, undefined)).rejects.toThrow('HOST_SENDER_REQUIRED');
+    await expect(invoke({ sender: { id: 10 } }, undefined)).resolves.toBeUndefined();
+    expect(quit).toHaveBeenCalledOnce();
+  });
+
   it('rejects a valid command from the public sender and accepts it from the independently verified host sender', async () => {
     const handlers = new Map<string, (event: { sender: { id: number } }, value: unknown) => unknown>();
     const ipcMain: IpcMainPort = {

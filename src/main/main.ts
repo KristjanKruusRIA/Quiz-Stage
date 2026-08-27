@@ -87,7 +87,12 @@ async function createWindows(): Promise<void> {
   if (application === null) return;
   const displayMode = application.coordinator.getHostView()?.state.config.displayMode ?? 'single';
   windowManager ??= new WindowManager({
-    createWindow: (options) => new BrowserWindow(options) as unknown as ManagedWindow,
+    createWindow: (options) => new BrowserWindow({
+      ...options,
+      ...(process.platform === 'linux'
+        ? { icon: path.join(process.resourcesPath, 'media', 'icon-source.png') }
+        : {}),
+    }) as unknown as ManagedWindow,
     preloadPath: path.join(__dirname, 'preload.js'),
     rendererHtmlPath,
     ...(app.isPackaged ? { rendererUrl: 'app://renderer/index.html' } : {}),
@@ -153,6 +158,7 @@ async function createWindows(): Promise<void> {
     },
     getAutomaticDisplayMode: () => automaticDisplayMode(screen.getAllDisplays().length),
     applyDisplayMode: (displayMode) => windowManager?.create(displayMode),
+    quit: () => app.quit(),
     getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
   });
 }

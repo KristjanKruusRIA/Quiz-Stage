@@ -69,7 +69,7 @@ function createPassingWork(root: string): { workRoot: string; sourceDependencies
         explanation_et: `vastus${clueWord} tuleneb dokumenteeritud ${clueWord} tõendist`, translation_status: 'reviewed',
       })[column] ?? ''));
       evidence.push({
-        version: 1, clueId, batchId: batch.id, factKey: `fact-${clueWord}`,
+        version: 1, clueId, batchId: batch.id, factKey: `fact-${clueWord}`, subjectKey: `subject-${clueWord}`,
         assertion: `${response} — ${explanation}`,
         origin: evidence.length < batch.requiredOpenTdbClues ? 'openTdbInspired' : 'compatibleOpen',
         authoring: { author: 'author', authoredAt: '2026-08-13T08:00:00.000Z' },

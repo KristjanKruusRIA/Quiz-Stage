@@ -1,11 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
-import { selectMatchContent } from '../../../src/shared/game/boardSelector';
+import { rerollMatchTopic, selectMatchContent } from '../../../src/shared/game/boardSelector';
 import { applyGameCommand, createGame } from '../../../src/shared/game/engine';
 import type { GameCommand } from '../../../src/shared/game/commands';
 import type { GameState } from '../../../src/shared/game/types';
 import { GameCoordinator, type CoordinatorContentService, type CoordinatorMatchRepository } from '../../../src/main/coordinator/gameCoordinator';
 import { toPublicGameView } from '../../../src/shared/game/views';
-import { selectionInput } from '../../fixtures/contentFactory';
+import { categorySet, selectionInput } from '../../fixtures/contentFactory';
 
 function dependencies() {
   const input = selectionInput();
@@ -23,6 +23,9 @@ function dependencies() {
   };
   const contentService: CoordinatorContentService = {
     selectForMatch: vi.fn(() => selected),
+    rerollMatchTopic: vi.fn((config, current, seed, target) => rerollMatchTopic(
+      { ...input, config, seed }, current, target,
+    )),
     selectNextTiebreaker: vi.fn(() => ({
       ...input.finalClues[1],
       round: 'tiebreaker' as const,
@@ -56,6 +59,9 @@ function timerDependencies() {
     repository,
     contentService: {
       selectForMatch: () => selected,
+      rerollMatchTopic: (config, current, seed, target) => rerollMatchTopic(
+        { ...input, config, seed }, current, target,
+      ),
       selectNextTiebreaker: () => ({ ...input.finalClues[1], round: 'tiebreaker' as const }),
       reportClue: (report) => ({ id: 1, ...report, resolvedAt: null }),
       runTransaction: (action) => action(),
@@ -86,6 +92,50 @@ function timerDependencies() {
 }
 
 describe('GameCoordinator', () => {
+  it('previews all match topics, re-rolls one draft slot, and starts that exact configured selection', async () => {
+    const { coordinator, contentService, repository, selected } = dependencies();
+    const preview = coordinator.configureMatch(selectionInput().config);
+
+    expect(preview.roundOne.map((topic) => topic.name)).toEqual(
+      selected.roundOne.categories.map((category) => category.name.en),
+    );
+    expect(preview.roundTwo.map((topic) => topic.name)).toEqual(
+      selected.roundTwo.categories.map((category) => category.name.en),
+    );
+    expect(preview.final.name).toBe(selected.final.categoryName.en);
+
+    const rerollInput = selectionInput();
+    const replacement = rerollMatchTopic(
+      {
+        ...rerollInput,
+        seed: 'authoritative-seed',
+        categorySets: [
+          ...rerollInput.categorySets,
+          categorySet('reroll-only', 'round-one', { macroTopic: selected.categorySets[0].macroTopic }),
+        ],
+      },
+      selected,
+      { round: 'round-one', index: 0 },
+    );
+    expect(replacement).not.toBeNull();
+    vi.mocked(contentService.rerollMatchTopic!).mockReturnValueOnce(replacement!);
+    const rerolled = coordinator.rerollConfiguredTopic({
+      draftId: preview.draftId,
+      target: { round: 'round-one', index: 0 },
+    });
+
+    expect(rerolled.roundOne[0].name).toBe(replacement!.roundOne.categories[0].name.en);
+    expect(rerolled.roundOne.slice(1).map((topic) => topic.name))
+      .toEqual(preview.roundOne.slice(1).map((topic) => topic.name));
+    vi.mocked(repository.persistTransition).mockClear();
+    const started = await coordinator.startConfiguredMatch(preview.draftId);
+    expect(started.displayMode).toBe('single');
+    expect(started.view.state.boards[0].categories[0].id).toBe(replacement!.roundOne.categories[0].id);
+    expect(repository.persistTransition).toHaveBeenCalledOnce();
+    expect(contentService.selectForMatch).toHaveBeenCalledOnce();
+    await expect(coordinator.startConfiguredMatch(preview.draftId)).rejects.toThrow('MATCH_CONFIGURATION_REQUIRED');
+  });
+
   it('projects structured custom board and Final sources as safe citations while preserving legacy text', async () => {
     const { coordinator, selected } = dependencies();
     const boardClue = selected.boards.flatMap((board) => board.categories.flatMap((category) => category.clues))

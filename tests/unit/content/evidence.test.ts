@@ -171,7 +171,7 @@ describe('content evidence', () => {
     const input = resolve(directory, 'input.jsonl');
     await fs.writeFile(input, `${JSON.stringify(validEvidence)}\n`);
     globalThis.evidenceInputOpenHook = async () => {
-      await fs.writeFile(input, `${JSON.stringify({ ...validEvidence, assertion: 'The answer is 43.' })}\n`);
+      await fs.writeFile(input, `${JSON.stringify({ ...validEvidence, assertion: 'The answer is forty-three.' })}\n`);
     };
 
     await expect(readEvidenceInputs([input])).rejects.toThrow(/changed while/i);

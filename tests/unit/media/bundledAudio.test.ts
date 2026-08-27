@@ -18,12 +18,12 @@ const SYNTHESIZED_PLACEHOLDER_HASHES = new Set([
 ]);
 
 const EXPECTED_SOURCES = {
-  opening: { title: 'Talk Show Background Music 02.wav', creator: 'LilMati', sourcePage: 'https://freesound.org/people/LilMati/sounds/657753/', license: 'CC0-1.0' },
   'round-transition': { title: 'Stinger 3.wav', creator: 'AudioPapkin', sourcePage: 'https://freesound.org/people/AudioPapkin/sounds/441342/', license: 'CC0-1.0' },
   'daily-double': { title: 'SFX Thrilling Build-Up and Hit 4 (Made at Paradise AIR).wav', creator: 'RutgerMuller', sourcePage: 'https://freesound.org/people/RutgerMuller/sounds/367667/', license: 'CC0-1.0' },
   'final-tension': { title: 'tention-mounts-ticking-clock-loop-dread.ogg', creator: 'Gerent', sourcePage: 'https://freesound.org/people/Gerent/sounds/558256/', license: 'CC0-1.0' },
   'correct-applause': { title: 'Small Crowd Applause with cheer in a Small Room 02.wav', creator: 'AudioSea', sourcePage: 'https://freesound.org/people/AudioSea/sounds/581617/', license: 'CC-BY-4.0' },
   'incorrect-crowd': { title: 'crowdbooing_01.wav', creator: 'xtrgamr', sourcePage: 'https://freesound.org/people/xtrgamr/sounds/239595/', license: 'CC-BY-4.0' },
+  'countdown-tick': { title: 'single-tick.wav', creator: 'DeltaCode', sourcePage: 'https://freesound.org/people/DeltaCode/sounds/668355/', license: 'CC0-1.0' },
   'time-expired': { title: 'buzzer.wav', creator: 'hypocore', sourcePage: 'https://freesound.org/people/hypocore/sounds/164090/', license: 'CC0-1.0' },
   winner: { title: 'Game Success Fanfare', creator: 'el_boss', sourcePage: 'https://freesound.org/people/el_boss/sounds/677859/', license: 'CC0-1.0' },
 } as const;
@@ -60,7 +60,7 @@ describe('bundled audio', () => {
       assets: Record<string, { source?: Record<string, unknown> }>;
     };
 
-    for (const key of AUDIO_ASSET_KEYS) {
+    for (const key of AUDIO_ASSET_KEYS.filter((key) => key !== 'opening')) {
       const source = manifest.assets[key].source;
       expect(source).toMatchObject(EXPECTED_SOURCES[key]);
       expect(source?.downloadUrl).toMatch(/^https:\/\/cdn\.freesound\.org\/previews\/.+-hq\.mp3$/);
@@ -68,5 +68,19 @@ describe('bundled audio', () => {
       expect(source?.sha256).toMatch(/^[a-f0-9]{64}$/);
       expect(source?.modifications).toBe('Converted from MP3 preview to PCM WAV; sample rate, bit depth, channels, and loudness normalized.');
     }
+  });
+
+  it('records the opening theme as user-provided for private use', () => {
+    const manifest = JSON.parse(readFileSync(join(process.cwd(), 'resources', 'media', 'manifest.json'), 'utf8')) as {
+      assets: Record<string, { source?: Record<string, unknown> }>;
+    };
+
+    expect(manifest.assets.opening.source).toEqual({
+      kind: 'private-use',
+      title: 'Jeopardy theme song',
+      creator: 'Unknown',
+      providedFileSha256: '27dec23808ecf0f63ce9eed03c52e3fead354ff8be13d1e0530ebaaf7b5403bb',
+      modifications: 'Converted from the user-provided MP3 to PCM WAV; sample rate, bit depth, and channels normalized.',
+    });
   });
 });

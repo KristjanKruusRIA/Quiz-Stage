@@ -7,49 +7,172 @@ on:
       - 'v*'
 
 jobs:
-  windows-release:
-    runs-on: windows-latest
+  quality:
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
           cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Cache Playwright browser
-        id: playwright-cache
-        uses: actions/cache@v4
-        with:
-          path: ~/AppData/Local/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-      - name: Install Playwright browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install chromium
-      - name: Run CI gate
-        run: |
-          npm run lint
-          npm run typecheck
-          npm run test:run
-          npm run verify:content
-          npm run test:e2e
-      - name: Build installer and portable packages
-        run: |
-          npm run make:installer
-          npm run make:portable
-      - name: Run packaged smoke checks
-        run: |
-          pwsh -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both
-      - name: Verify upgrade fixture migration
-        run: |
-          pwsh -File scripts/verify-upgrade.ps1 -PackageRoot out/make
-      - name: Generate release checksums
-        run: pwsh -NoProfile -File scripts/write-release-checksums.ps1 -PackageRoot out/make
-      - name: Upload release artifacts
+      - run: npm ci
+      - run: npx playwright install chromium
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:run
+      - run: npm run verify:content
+      - run: npm run test:e2e
+      - name: Upload test artifacts on failure
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: release-artifacts
+          name: test-artifacts
+          path: |
+            test-results/
+            tests/**/artifacts/
+          if-no-files-found: ignore
+
+  package:
+    needs: quality
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            target: windows-x64
+            artifactName: quiz-stage-windows-x64
+          - runner: macos-15
+            target: macos-arm64
+            artifactName: quiz-stage-macos-arm64
+          - runner: macos-15-intel
+            target: macos-x64
+            artifactName: quiz-stage-macos-x64
+          - runner: ubuntu-24.04
+            target: ubuntu-x64
+            artifactName: quiz-stage-ubuntu-x64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.15.0
+          cache: npm
+      - run: npm ci
+
+      - name: Install Ubuntu packaging dependencies
+        if: matrix.target == 'ubuntu-x64'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fakeroot dpkg zip unzip
+      - name: Install Playwright browser
+        if: matrix.target != 'ubuntu-x64'
+        run: npx playwright install chromium
+      - name: Install Playwright browser and Ubuntu dependencies
+        if: matrix.target == 'ubuntu-x64'
+        run: npx playwright install --with-deps chromium
+
+      - name: Build native packages
+        if: matrix.target != 'ubuntu-x64'
+        run: npm run make:platform -- --target ${{ matrix.target }}
+      - name: Build Ubuntu packages under Xvfb
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npm run make:platform -- --target ${{ matrix.target }}
+      - name: Inspect native package
+        run: npm run security:inspect-package -- --target ${{ matrix.target }}
+
+      - name: Verify macOS arm64 executable architecture
+        if: matrix.target == 'macos-arm64'
+        run: file "out/Quiz Stage-darwin-arm64/Quiz Stage.app/Contents/MacOS/Quiz Stage" | grep -F arm64
+      - name: Verify macOS x64 executable architecture
+        if: matrix.target == 'macos-x64'
+        run: file "out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/MacOS/Quiz Stage" | grep -F x86_64
+
+      - name: Smoke Windows installer and portable packages
+        if: matrix.target == 'windows-x64'
+        run: pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both
+      - name: Smoke macOS arm64 portable package
+        if: matrix.target == 'macos-arm64'
+        run: npx tsx scripts/smoke-portable.ts --target macos-arm64 --archive out/make/portable/QuizStage-darwin-arm64.zip
+      - name: Smoke macOS x64 portable package
+        if: matrix.target == 'macos-x64'
+        run: npx tsx scripts/smoke-portable.ts --target macos-x64 --archive out/make/portable/QuizStage-darwin-x64.zip
+      - name: Smoke Ubuntu portable package
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npx tsx scripts/smoke-portable.ts --target ubuntu-x64 --archive out/make/portable/QuizStage-linux-x64.zip
+      - name: Install, smoke, and remove Ubuntu DEB
+        if: matrix.target == 'ubuntu-x64'
+        shell: bash
+        run: |
+          set -euo pipefail
+          deb_path=out/make/installer/quiz-stage_0.1.0_amd64.deb
+          package_name="$(dpkg-deb -f "$deb_path" Package)"
+          user_data="$(mktemp -d "${RUNNER_TEMP}/quiz-stage-package-smoke-XXXXXX")"
+          cleanup() {
+            sudo dpkg --remove "$package_name" >/dev/null 2>&1 || true
+            rm -rf -- "$user_data"
+          }
+          trap cleanup EXIT
+          sudo apt-get install -y "./$deb_path"
+          test -x /usr/bin/quiz-stage
+          QUIZ_STAGE_PACKAGED_EXECUTABLE=/usr/bin/quiz-stage \
+            QUIZ_STAGE_PACKAGED_USER_DATA="$user_data" \
+            xvfb-run -a npx playwright test tests/e2e/package-smoke.spec.ts
+          sudo dpkg --remove "$package_name"
+          test ! -e /usr/bin/quiz-stage
+          rm -rf -- "$user_data"
+          trap - EXIT
+
+      - name: Verify Windows package upgrade
+        if: matrix.target == 'windows-x64'
+        run: npm run verify-upgrade -- -- --target windows-x64 --archive out/make/portable/QuizStage-win32-x64.zip
+      - name: Verify macOS arm64 package upgrade
+        if: matrix.target == 'macos-arm64'
+        run: npm run verify-upgrade -- -- --target macos-arm64 --archive out/make/portable/QuizStage-darwin-arm64.zip
+      - name: Verify macOS x64 package upgrade
+        if: matrix.target == 'macos-x64'
+        run: npm run verify-upgrade -- -- --target macos-x64 --archive out/make/portable/QuizStage-darwin-x64.zip
+      - name: Verify Ubuntu package upgrade
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npm run verify-upgrade -- -- --target ubuntu-x64 --archive out/make/portable/QuizStage-linux-x64.zip
+
+      - name: Generate target checksums
+        run: npx tsx scripts/write-release-checksums.ts --target ${{ matrix.target }} --package-root out/make
+
+      - name: Upload Windows artifacts
+        if: matrix.target == 'windows-x64'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifactName }}
           path: |
             out/make/installer/QuizStageSetup.exe
             out/make/portable/QuizStage-win32-x64.zip
-            out/make/release-checksums.txt
+            out/make/release-checksums-windows-x64.txt
+          if-no-files-found: error
+      - name: Upload macOS arm64 artifacts
+        if: matrix.target == 'macos-arm64'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifactName }}
+          path: |
+            out/make/portable/QuizStage-darwin-arm64.zip
+            out/make/release-checksums-macos-arm64.txt
+          if-no-files-found: error
+      - name: Upload macOS x64 artifacts
+        if: matrix.target == 'macos-x64'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifactName }}
+          path: |
+            out/make/portable/QuizStage-darwin-x64.zip
+            out/make/release-checksums-macos-x64.txt
+          if-no-files-found: error
+      - name: Upload Ubuntu artifacts
+        if: matrix.target == 'ubuntu-x64'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifactName }}
+          path: |
+            out/make/installer/quiz-stage_0.1.0_amd64.deb
+            out/make/portable/QuizStage-linux-x64.zip
+            out/make/release-checksums-ubuntu-x64.txt
+          if-no-files-found: error

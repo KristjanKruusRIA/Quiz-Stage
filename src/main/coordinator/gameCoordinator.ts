@@ -1,5 +1,9 @@
 import { randomUUID } from 'node:crypto';
-import type { SelectedMatchContent } from '../../shared/game/boardSelector';
+import type {
+  MatchTopicTarget,
+  SelectedMatch,
+  SelectedMatchContent,
+} from '../../shared/game/boardSelector';
 import type { ContentReportInput, ContentReportRecord } from '../../shared/content/schema';
 import type { GameCommand } from '../../shared/game/commands';
 import { applyGameCommand, createGame, tickTimer, type SelectedBoards } from '../../shared/game/engine';
@@ -25,6 +29,12 @@ import {
 
 export interface CoordinatorContentService {
   selectForMatch(config: GameConfig, seed: string): SelectedMatchContent;
+  rerollMatchTopic?(
+    config: GameConfig,
+    selected: SelectedMatch,
+    seed: string,
+    target: MatchTopicTarget,
+  ): SelectedMatch | null;
   selectNextTiebreaker(
     config: GameConfig,
     seed: string,
@@ -33,6 +43,18 @@ export interface CoordinatorContentService {
   ): Clue;
   reportClue(input: ContentReportInput): ContentReportRecord;
   runTransaction<T>(action: () => T): T;
+}
+
+export interface MatchTopicPreview {
+  name: string;
+  canReroll: boolean;
+}
+
+export interface MatchConfigurationPreview {
+  draftId: string;
+  roundOne: MatchTopicPreview[];
+  roundTwo: MatchTopicPreview[];
+  final: MatchTopicPreview;
 }
 
 export interface CoordinatorResumableMatch {
@@ -87,6 +109,11 @@ export class GameCoordinator {
   private timerHandle: unknown | null = null;
   private timerGeneration = 0;
   private disposed = false;
+  private pendingConfiguration: {
+    id: string;
+    config: GameConfig;
+    selected: SelectedMatch;
+  } | null = null;
 
   constructor(private readonly options: GameCoordinatorOptions) {
     this.now = options.now ?? Date.now;
@@ -110,6 +137,43 @@ export class GameCoordinator {
     if (!selected.ok) {
       throw new Error(`CONTENT_SHORTAGE:${selected.roundOneMissing}:${selected.roundTwoMissing}:${selected.finalMissing}`);
     }
+    this.pendingConfiguration = null;
+    return this.commitMatch(config, selected);
+  }
+
+  configureMatch(input: unknown): MatchConfigurationPreview {
+    const config = gameConfigSchema.parse(input) as GameConfig;
+    const selected = this.options.contentService.selectForMatch(config, this.createSeed());
+    if (!selected.ok) {
+      throw new Error(`CONTENT_SHORTAGE:${selected.roundOneMissing}:${selected.roundTwoMissing}:${selected.finalMissing}`);
+    }
+    this.pendingConfiguration = { id: randomUUID(), config, selected };
+    return this.configurationPreview(this.pendingConfiguration);
+  }
+
+  rerollConfiguredTopic(input: { draftId: string; target: MatchTopicTarget }): MatchConfigurationPreview {
+    const draft = this.pendingConfiguration;
+    if (draft === null || draft.id !== input.draftId) throw new Error('MATCH_CONFIGURATION_REQUIRED');
+    const selected = this.options.contentService.rerollMatchTopic?.(
+      draft.config,
+      draft.selected,
+      this.createSeed(),
+      input.target,
+    );
+    if (selected === undefined || selected === null) throw new Error('MATCH_TOPIC_ALTERNATIVE_REQUIRED');
+    this.pendingConfiguration = { ...draft, selected };
+    return this.configurationPreview(this.pendingConfiguration);
+  }
+
+  async startConfiguredMatch(draftId: string): Promise<{ view: HostGameView; displayMode: GameConfig['displayMode'] }> {
+    const draft = this.pendingConfiguration;
+    if (draft === null || draft.id !== draftId) throw new Error('MATCH_CONFIGURATION_REQUIRED');
+    const view = this.commitMatch(draft.config, draft.selected);
+    this.pendingConfiguration = null;
+    return { view, displayMode: draft.config.displayMode };
+  }
+
+  private commitMatch(config: GameConfig, selected: SelectedMatch): HostGameView {
     const nextState = createGame(config, toCanonicalBoards(selected), this.now());
     this.options.repository.persistTransition(nextState.id, [], nextState);
     this.state = nextState;
@@ -119,6 +183,31 @@ export class GameCoordinator {
     this.scheduleTimer();
     this.publish();
     return this.getHostView()!;
+  }
+
+  private configurationPreview(draft: NonNullable<GameCoordinator['pendingConfiguration']>): MatchConfigurationPreview {
+    const { config, selected } = draft;
+    const canReroll = (target: MatchTopicTarget) => this.options.contentService.rerollMatchTopic?.(
+      config,
+      selected,
+      selected.seed,
+      target,
+    ) !== null && this.options.contentService.rerollMatchTopic !== undefined;
+    return {
+      draftId: draft.id,
+      roundOne: selected.roundOne.categories.map((category, index) => ({
+        name: category.name[config.language]!,
+        canReroll: canReroll({ round: 'round-one', index }),
+      })),
+      roundTwo: selected.roundTwo.categories.map((category, index) => ({
+        name: category.name[config.language]!,
+        canReroll: canReroll({ round: 'round-two', index }),
+      })),
+      final: {
+        name: selected.final.categoryName[config.language]!,
+        canReroll: canReroll({ round: 'final' }),
+      },
+    };
   }
 
   async dispatch(input: unknown): Promise<HostGameView> {

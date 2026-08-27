@@ -30,6 +30,7 @@ function api(): HostDesktopApi {
       automaticDisplayMode: 'single' as const,
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
+    configureMatch: vi.fn(), rerollConfiguredTopic: vi.fn(), startConfiguredMatch: vi.fn(),
     startMatch: vi.fn(), hasResumableMatch: vi.fn(), resumeMatch: vi.fn(), listHistory: vi.fn(), dispatch: vi.fn(),
   };
 }

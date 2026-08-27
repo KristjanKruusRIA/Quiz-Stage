@@ -6,6 +6,35 @@ import { electronExecutablePath, prepareE2eApplication } from '../e2e/productHar
 
 test.beforeAll(prepareE2eApplication);
 
+test('setup and settings controls fit and retain native control sizing at 1920x1080', async ({}, testInfo) => {
+  const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-visual-shells-'));
+  const app = await electron.launch({ cwd: process.cwd(), executablePath: electronExecutablePath(), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`] });
+  const page = await app.firstWindow();
+  await page.setViewportSize({ width: 1920, height: 1000 });
+
+  await page.getByRole('button', { name: 'New Match' }).click();
+  const setup = await page.evaluate(() => ({
+    overflowY: document.documentElement.scrollHeight > innerHeight,
+    startVisible: document.querySelector<HTMLButtonElement>('.setup-screen .primary-action')!.getBoundingClientRect().bottom <= innerHeight,
+    checkboxSize: document.querySelector<HTMLInputElement>('.setup-screen input[type="checkbox"]')!.getBoundingClientRect().width,
+  }));
+  expect(setup).toEqual({ overflowY: false, startVisible: true, checkboxSize: expect.any(Number) });
+  expect(setup.checkboxSize).toBeLessThanOrEqual(24);
+  await page.screenshot({ path: testInfo.outputPath('setup-1920x1080.png') });
+
+  await page.getByRole('button', { name: 'Back' }).click();
+  await page.getByRole('button', { name: 'Settings' }).click();
+  const settings = await page.evaluate(() => ({
+    overflowY: document.documentElement.scrollHeight > innerHeight,
+    checkboxSize: document.querySelector<HTMLInputElement>('.settings-screen input[type="checkbox"]')!.getBoundingClientRect().width,
+    backVisible: document.querySelector<HTMLButtonElement>('.settings-screen button')!.getBoundingClientRect().bottom <= innerHeight,
+  }));
+  expect(settings).toEqual({ overflowY: false, checkboxSize: expect.any(Number), backVisible: true });
+  expect(settings.checkboxSize).toBeLessThanOrEqual(24);
+  await page.screenshot({ path: testInfo.outputPath('settings-1920x1080.png') });
+  await app.close();
+});
+
 async function launch(teamCount: 2 | 8, longEstonianNames = false): Promise<{ app: ElectronApplication; page: Page }> {
   const userData = mkdtempSync(path.join(tmpdir(), `quiz-stage-visual-${teamCount}-`));
   const app = await electron.launch({ cwd: process.cwd(), executablePath: electronExecutablePath(), args: [path.join(process.cwd(), '.vite', 'build', 'main.js'), `--user-data-dir=${userData}`] });
@@ -35,6 +64,7 @@ for (const teamCount of [2, 8] as const) {
         const categories = [...document.querySelectorAll('.board-header-row h2')];
         const scores = [...document.querySelectorAll('.scoreboard li')];
         const controls = [...document.querySelectorAll('.host-console button:not([disabled])')];
+        const hostConsole = document.querySelector<HTMLElement>('.host-console')!;
         const inViewport = (element: Element) => { const r = element.getBoundingClientRect(); return r.left >= 0 && r.top >= 0 && r.right <= innerWidth && r.bottom <= innerHeight; };
         return {
           documentOverflowX: root.scrollWidth > root.clientWidth,
@@ -43,11 +73,13 @@ for (const teamCount of [2, 8] as const) {
           categories: categories.every(inViewport),
           scores: scores.every(inViewport),
           controls: controls.every((element) => element.getBoundingClientRect().width > 0),
+          hostConsoleOverflowY: hostConsole.scrollHeight > hostConsole.clientHeight + 1,
           categoryFont: Number.parseFloat(getComputedStyle(categories[0]!).fontSize),
           scoreFont: Number.parseFloat(getComputedStyle(scores[0]!).fontSize),
         };
       });
       expect(layout).toEqual(expect.objectContaining({ documentOverflowX: false, documentOverflowY: false, board: true, categories: true, scores: true, controls: true }));
+      if (size.width === 1920) expect(layout.hostConsoleOverflowY).toBe(false);
       expect(layout.categoryFont).toBeGreaterThanOrEqual(size.width === 3840 ? 24 : 10);
       expect(layout.scoreFont).toBeGreaterThanOrEqual(size.width === 3840 ? 20 : 10);
       await page.screenshot({ path: testInfo.outputPath(`board-${teamCount}-${size.width}x${size.height}.png`), fullPage: true });

@@ -13,6 +13,7 @@ interface HostConsoleProps {
   api: HostDesktopApi;
   now?: () => number;
   onMute?: () => void;
+  onSaveAndQuit?: () => Promise<void>;
 }
 
 const systemNow = () => Date.now();
@@ -28,7 +29,7 @@ function activeClue(view: HostGameView): Clue | null {
   return view.state.tiebreakerClues.find((clue) => clue.id === clueId) ?? null;
 }
 
-export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleProps) {
+export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit }: HostConsoleProps) {
   const [dailyWager, setDailyWager] = useState('5');
   const [finalWagers, setFinalWagers] = useState<Record<string, string>>({});
   const [scoreReason, setScoreReason] = useState('');
@@ -53,6 +54,18 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
       setPending(false);
     });
     return true;
+  };
+  const saveAndQuit = async () => {
+    if (pendingRef.current || onSaveAndQuit === undefined) return;
+    pendingRef.current = true;
+    setPending(true);
+    try {
+      await onSaveAndQuit();
+    } catch {
+      pendingRef.current = false;
+      setPending(false);
+      setError(t('host.actionError'));
+    }
   };
   const canJudge = state.activeClue?.lockedTeamId !== null && state.activeClue?.lockedTeamId !== undefined;
   const timed = ['ordinary-clue', 'daily-double-clue', 'final-clue', 'tiebreaker'].includes(state.phase);
@@ -94,7 +107,10 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
   const nextFinalTeam = state.config.teams.find((team) => team.id === nextFinalTeamId);
 
   return <aside className="host-console" aria-label={t('host.console')}>
-    <header><h2>{t('host.console')}</h2><p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p></header>
+    <header>
+      <h2>{t('host.console')}</h2>
+      <p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p>
+    </header>
     {view.recovery === null
       ? view.replayIssue === null ? null : <p role="alert">{t('host.replayError', { sequence: view.replayIssue.sequence })}</p>
       : <RecoveryNotice {...view.recovery} replayIssue={view.replayIssue} />}
@@ -137,6 +153,7 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
     </section> : null}
 
     {state.phase === 'complete' ? null : <>
+    <div className="host-action-controls">
     <HostTeamControls view={view} onLock={lockTeam} />
     <section className="judgment-controls" aria-label={t('host.judgmentControls')}>
       <button type="button" disabled={!canJudge || pending} onClick={() => dispatch({ type: 'JudgeResponse', correct: true, at: now() })}>{t('game.correct')}</button>
@@ -159,7 +176,8 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
       <button type="button" disabled={pending || state.undoStack.length === 0} onClick={() => dispatch({ type: 'UndoLast' })}>{t('host.undo')}</button>
       <button type="button" disabled={pending || state.lastClosedClueId === null || !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)} onClick={() => dispatch({ type: 'ReopenClue' })}>{t('host.reopenClue')}</button>
     </section>
-    <section aria-label={t('host.corrections')}>
+    </div>
+    <section className="correction-controls" aria-label={t('host.corrections')}>
       <label>{t('host.scoreReason')}<input value={scoreReason} onChange={(event) => setScoreReason(event.target.value)} /></label>
       {state.config.teams.map((team) => {
         return <form key={team.id} onSubmit={(event) => {
@@ -180,9 +198,13 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
         <label>{t('host.reportReason')}<input value={reportReason} onChange={(event) => setReportReason(event.target.value)} /></label>
         <button type="submit" disabled={pending || clue === null || reportReason.trim() === ''}>{t('host.reportClue')}</button>
       </form> : null}
+    </section>
+    <section className="match-actions" aria-label={t('host.matchActions')}>
       <label><input type="checkbox" checked={confirmIncomplete} onChange={(event) => setConfirmIncomplete(event.target.checked)} />{t('host.endConfirm')}</label>
       <button type="button" disabled={pending || !confirmIncomplete}
         onClick={() => dispatch({ type: 'EndIncompleteMatch' })}>{t('host.endIncomplete')}</button>
+      {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
+        onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
     </section>
     </>}
   </aside>;

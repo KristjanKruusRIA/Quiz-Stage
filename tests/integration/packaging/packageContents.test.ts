@@ -4,6 +4,13 @@ import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:f
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import {
+  expectedNativeModuleSuffix,
+  packagedResourcesDirectory,
+  resolvePackagedApplicationBinary,
+} from '../../../scripts/release/packageLayout';
+import { normalizedArtifactPath } from '../../../scripts/release/artifacts';
+import { releaseTargetFor } from '../../../scripts/release/targets';
 import { AUDIO_ASSET_KEYS, mediaManifestSchema } from '../../../src/shared/media/contracts';
 
 function fileExists(candidate: string): boolean {
@@ -34,13 +41,42 @@ function installerPayloadPath(): string {
 
 function extractArchive(archivePath: string, prefix: string): string {
   const extractionRoot = mkdtempSync(path.join(tmpdir(), prefix));
-  const escapedArchivePath = archivePath.replace(/'/g, "''");
-  const escapedExtractionRoot = extractionRoot.replace(/'/g, "''");
-  execFileSync('powershell.exe', [
-    '-NoProfile', '-NonInteractive', '-Command',
-    `Expand-Archive -LiteralPath '${escapedArchivePath}' -DestinationPath '${escapedExtractionRoot}' -Force`,
-  ]);
+  if (process.platform === 'win32') {
+    const escapedArchivePath = archivePath.replace(/'/g, "''");
+    const escapedExtractionRoot = extractionRoot.replace(/'/g, "''");
+    execFileSync('powershell.exe', [
+      '-NoProfile', '-NonInteractive', '-Command',
+      `Expand-Archive -LiteralPath '${escapedArchivePath}' -DestinationPath '${escapedExtractionRoot}' -Force`,
+    ]);
+  } else {
+    execFileSync('unzip', ['-q', archivePath, '-d', extractionRoot]);
+  }
   return extractionRoot;
+}
+
+function packagedExecutable(root: string, executableName: string): string {
+  const matches = listAllFiles(root).filter((file) => path.basename(file) === executableName);
+  if (matches.length !== 1) throw new Error('PACKAGED_EXECUTABLE_NOT_UNIQUE');
+  return matches[0]!;
+}
+
+function linuxForgeExecutableContract(): { packagerExecutableName?: string; debBin?: string } {
+  const probe = [
+    "Object.defineProperty(process, 'platform', { value: 'linux' });",
+    "Object.defineProperty(process, 'arch', { value: 'x64' });",
+    "(async () => { const imported = await import('./forge.config.ts');",
+    'const config = imported.default?.default ?? imported.default;',
+    "const deb = config.makers.find((maker) => maker.name === '@electron-forge/maker-deb');",
+    'console.log(JSON.stringify({',
+    'packagerExecutableName: config.packagerConfig?.executableName,',
+    'debBin: deb?.config?.options?.bin,',
+    '})); })();',
+  ].join(' ');
+  return JSON.parse(execFileSync(process.execPath, [
+    path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs'),
+    '-e',
+    probe,
+  ], { encoding: 'utf8' })) as { packagerExecutableName?: string; debBin?: string };
 }
 
 function applicationExecutables(files: string[]): string[] {
@@ -68,10 +104,15 @@ function expectLicensedMedia(files: string[]): void {
 }
 
 describe('package contents', () => {
+  const target = releaseTargetFor(process.platform, process.arch);
+  const portable = target.artifacts.find((artifact) => artifact.kind === 'portable');
+  if (portable === undefined) throw new Error('PORTABLE_ARTIFACT_MISSING');
+  const portableArchive = normalizedArtifactPath(process.cwd(), target, portable);
+  const packagePayloadPresent = fileExists(portableArchive);
   const expectedInstaller = path.join(process.cwd(), 'out', 'make', 'installer', 'QuizStageSetup.exe');
   const expectedInstallerPayload = installerPayloadPath();
   const expectedPortableZip = path.join(process.cwd(), 'out', 'make', 'portable', 'QuizStage-win32-x64.zip');
-  const packagePayloadsPresent = process.platform === 'win32'
+  const windowsPackagePayloadsPresent = process.platform === 'win32'
     && fileExists(expectedInstallerPayload) && fileExists(expectedPortableZip);
   let extractedPortable = '';
   let extractedInstaller = '';
@@ -93,6 +134,36 @@ describe('package contents', () => {
     expect(packageJson).toContain('"productName": "Quiz Stage"');
   });
 
+  it('selects native package and runtime icons for each platform', () => {
+    const forgeConfig = readFileSync('forge.config.ts', 'utf8');
+    const main = readFileSync('src/main/main.ts', 'utf8');
+
+    expect(forgeConfig).toContain("'.cache', 'icons', 'QuizStage.icns'");
+    expect(forgeConfig).toContain("'resources', 'media', 'icon.ico'");
+    expect(forgeConfig).toContain("'resources', 'media', 'icon-source.png'");
+    expect(main).toContain("path.join(process.resourcesPath, 'media', 'icon-source.png')");
+  });
+
+  it('keeps the Linux application binary behind the public Debian launcher', () => {
+    const target = releaseTargetFor('linux', 'x64');
+    const executableContract = linuxForgeExecutableContract();
+
+    expect(executableContract.packagerExecutableName).toBe(target.applicationExecutableName);
+    expect(executableContract.debBin).toBe(target.executableName);
+    expect(target.applicationExecutableName).not.toBe(target.executableName);
+  });
+
+  it('exposes the native platform build entry points', () => {
+    const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
+
+    expect(scripts['make:platform']).toBe('tsx scripts/make-platform.ts');
+    expect(scripts['make:macos-arm64']).toBe('npm run make:platform -- --target macos-arm64');
+    expect(scripts['make:macos-x64']).toBe('npm run make:platform -- --target macos-x64');
+    expect(scripts['make:ubuntu-x64']).toBe('npm run make:platform -- --target ubuntu-x64');
+    expect(scripts['make:installer']).toContain('scripts/make-installer.ts');
+    expect(scripts['make:portable']).toContain('scripts/make-portable.ts');
+  });
+
   it('does not require an installer-only startup module at packaged runtime', () => {
     expect(readFileSync('src/main/main.ts', 'utf8')).not.toContain('electron-squirrel-startup');
     expect(readFileSync('vite.main.config.ts', 'utf8')).not.toContain('electron-squirrel-startup');
@@ -102,12 +173,49 @@ describe('package contents', () => {
     expect(fileExists(path.join(process.cwd(), 'resources', 'media', 'THIRD_PARTY_NOTICES.md'))).toBe(true);
   });
 
-  it.skipIf(!packagePayloadsPresent)('produces both installer and portable package outputs', () => {
+  it.skipIf(!windowsPackagePayloadsPresent)('produces both Windows installer and portable package outputs', () => {
     expect(fileExists(expectedInstaller)).toBe(true);
     expect(fileExists(expectedPortableZip)).toBe(true);
   });
 
-  it.skipIf(!packagePayloadsPresent)('separates installer and portable markers while retaining required assets', () => {
+  it.skipIf(!packagePayloadPresent)('inspects the current platform portable package layout', () => {
+    extractedPortable = extractArchive(portableArchive, 'quiz-stage-portable-contents-');
+    const executablePath = packagedExecutable(
+      extractedPortable,
+      target.forgePlatform === 'win32' ? `${target.executableName}.exe` : target.executableName,
+    );
+    const applicationBinary = resolvePackagedApplicationBinary(executablePath, target);
+    const resourcesPath = packagedResourcesDirectory(applicationBinary, target);
+    const files = listAllFiles(extractedPortable);
+    const report = JSON.parse(execFileSync(process.execPath, [
+      path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs'),
+      path.join(process.cwd(), 'scripts', 'inspect-package.ts'),
+      '--target', target.id,
+      '--app', executablePath,
+    ], { encoding: 'utf8' })) as { target: string; executablePath: string; archivePath: string };
+
+    expect(report.target).toBe(target.id);
+    expect(report.executablePath).toBe(applicationBinary);
+    expect(report.archivePath).toBe(path.join(resourcesPath, 'app.asar'));
+    expect(files).toContain(path.join(resourcesPath, 'seed.sqlite'));
+    expect(files).toContain(path.join(resourcesPath, 'media', 'manifest.json'));
+    expect(files).toContain(path.join(resourcesPath, 'app.asar'));
+    expect(files).toContain(path.join(
+      resourcesPath,
+      'app.asar.unpacked',
+      'node_modules',
+      'better-sqlite3',
+      expectedNativeModuleSuffix(target),
+    ));
+    expectLicensedMedia(files);
+
+    const portableFlag = path.join(resourcesPath, 'portable.flag');
+    const portableUserData = path.join(path.dirname(executablePath), 'UserData', '.keep');
+    expect(files.includes(portableFlag)).toBe(target.id === 'windows-x64');
+    expect(files.includes(portableUserData)).toBe(target.id === 'windows-x64');
+  }, 120_000);
+
+  it.skipIf(!windowsPackagePayloadsPresent)('separates Windows installer and portable markers while retaining required assets', () => {
     extractedInstaller = extractArchive(expectedInstallerPayload, 'quiz-stage-installer-contents-');
     extractedPortable = extractArchive(expectedPortableZip, 'quiz-stage-portable-contents-');
     const installerFiles = listAllFiles(extractedInstaller);

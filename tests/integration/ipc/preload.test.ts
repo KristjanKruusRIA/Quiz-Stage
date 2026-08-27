@@ -59,7 +59,7 @@ const hostView = {
 describe('preload quizStage surface', () => {
   it('exposes dispatch only to the host and subscriptions to both surfaces', async () => {
     const ipc: PreloadIpcPort = {
-      invoke: vi.fn(async () => hostView),
+      invoke: vi.fn(async (channel) => channel === IPC_CHANNELS.saveAndQuit ? undefined : hostView),
       on: vi.fn(),
       removeListener: vi.fn(),
       send: vi.fn(),
@@ -72,9 +72,11 @@ describe('preload quizStage surface', () => {
     expect(host.hasResumableMatch).toBeTypeOf('function');
     expect(host.resumeMatch).toBeTypeOf('function');
     expect(host.listHistory).toBeTypeOf('function');
+    expect(host.saveAndQuit).toBeTypeOf('function');
     expect(publicApi).not.toHaveProperty('hasResumableMatch');
     expect(publicApi).not.toHaveProperty('resumeMatch');
     expect(publicApi).not.toHaveProperty('listHistory');
+    expect(publicApi).not.toHaveProperty('saveAndQuit');
     expect(host.listContent).toBeTypeOf('function');
     expect(host.previewContentImport).toBeTypeOf('function');
     expect(publicApi).not.toHaveProperty('listContent');
@@ -86,6 +88,8 @@ describe('preload quizStage surface', () => {
 
     await host.dispatch!({ type: 'SelectClue', clueId: 'c1' });
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.dispatch, { type: 'SelectClue', clueId: 'c1' });
+    await host.saveAndQuit();
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.saveAndQuit, undefined);
   });
 
   it('strictly parses no-argument recovery and history responses', async () => {
@@ -272,6 +276,15 @@ describe('preload quizStage surface', () => {
         }
         if (channel === IPC_CHANNELS.contentAvailability) return { ok: true };
         if (channel === IPC_CHANNELS.startMatch) return hostView;
+        if (channel === IPC_CHANNELS.configureMatch || channel === IPC_CHANNELS.rerollConfiguredTopic) {
+          return {
+            draftId: 'draft-1',
+            roundOne: Array.from({ length: 6 }, (_, index) => ({ name: `Round One ${index + 1}`, canReroll: true })),
+            roundTwo: Array.from({ length: 6 }, (_, index) => ({ name: `Round Two ${index + 1}`, canReroll: true })),
+            final: { name: 'Final topic', canReroll: false },
+          };
+        }
+        if (channel === IPC_CHANNELS.startConfiguredMatch) return hostView;
         throw new Error(`Unexpected channel: ${channel}`);
       }),
       on: vi.fn(),
@@ -284,14 +297,27 @@ describe('preload quizStage surface', () => {
     expect(publicApi).not.toHaveProperty('startMatch');
     expect(publicApi).not.toHaveProperty('checkContentAvailability');
     expect(publicApi).not.toHaveProperty('getSetupOptions');
+    expect(publicApi).not.toHaveProperty('configureMatch');
     await expect(host.getSetupOptions!()).resolves.toEqual({
       packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
       automaticDisplayMode: 'dual',
     });
     await expect(host.checkContentAvailability!(config)).resolves.toEqual({ ok: true });
     await expect(host.startMatch!(config)).resolves.toEqual(hostView);
+    const preview = await host.configureMatch(config);
+    expect(preview).toMatchObject({ draftId: 'draft-1', final: { name: 'Final topic', canReroll: false } });
+    await expect(host.rerollConfiguredTopic({
+      draftId: preview.draftId,
+      target: { round: 'round-one', index: 3 },
+    })).resolves.toMatchObject({ draftId: 'draft-1' });
+    await expect(host.startConfiguredMatch(preview.draftId)).resolves.toEqual(hostView);
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.contentAvailability, config);
     expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.startMatch, config);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.configureMatch, config);
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.rerollConfiguredTopic, {
+      draftId: 'draft-1', target: { round: 'round-one', index: 3 },
+    });
+    expect(ipc.invoke).toHaveBeenCalledWith(IPC_CHANNELS.startConfiguredMatch, { draftId: 'draft-1' });
   });
 
   it('rejects malformed setup boundary responses before renderer use', async () => {

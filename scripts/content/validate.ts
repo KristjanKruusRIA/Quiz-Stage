@@ -493,6 +493,26 @@ export function validateProductionContent(
     }
   }
 
+  if (options.evidenceByClueId !== undefined) {
+    for (const items of categoryRows.values()) {
+      if (items.length !== 5 || items.some(({ row }) => row.content_kind !== 'board')) continue;
+      const subjects = new Set(items.flatMap(({ row }) => {
+        const subjectKey = boundEvidenceByClueId.get(row.clue_id)?.subjectKey;
+        return subjectKey === undefined ? [] : [subjectKey];
+      }));
+      if (subjects.size < 5) {
+        const first = items[0];
+        add({
+          file: first.file,
+          row: first.row.rowNumber,
+          code: 'CATEGORY_SUBJECT_DIVERSITY',
+          severity: 'error',
+          message: `Board category ${first.row.category_set_id} requires five distinct primary subjects; found ${subjects.size}`,
+        });
+      }
+    }
+  }
+
   const clueLocations = new Map(located.map((item) => [item.row.clue_id, item]));
   for (const pair of findNearDuplicatePairs(located
     .filter(({ row }) => row.clue_en.trim() !== '')

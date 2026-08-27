@@ -8,11 +8,14 @@ import {
   gameCommandSchema,
   gameConfigSchema,
   hostGameViewSchema,
+  matchConfigurationPreviewSchema,
   hasResumableMatchSchema,
   hostStateUpdateSchema,
   matchHistorySchema,
   publicStateUpdateSchema,
+  rerollConfiguredTopicRequestSchema,
   setupOptionsSchema,
+  startConfiguredMatchRequestSchema,
   type HostQuizStageApi,
   type PublicQuizStageApi,
   type QuizStageApi,
@@ -110,6 +113,15 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     startMatch: async (config) => hostGameViewSchema.parse(
       await ipc.invoke(IPC_CHANNELS.startMatch, gameConfigSchema.parse(config)),
     ),
+    configureMatch: async (config) => matchConfigurationPreviewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.configureMatch, gameConfigSchema.parse(config)),
+    ),
+    rerollConfiguredTopic: async (input) => matchConfigurationPreviewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.rerollConfiguredTopic, rerollConfiguredTopicRequestSchema.parse(input)),
+    ),
+    startConfiguredMatch: async (draftId) => hostGameViewSchema.parse(
+      await ipc.invoke(IPC_CHANNELS.startConfiguredMatch, startConfiguredMatchRequestSchema.parse({ draftId })),
+    ),
     checkContentAvailability: async (config) => contentAvailabilitySchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentAvailability, gameConfigSchema.parse(config)),
     ),
@@ -126,6 +138,9 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     listHistory: async () => matchHistorySchema.parse(
       await ipc.invoke(IPC_CHANNELS.listHistory, undefined),
     ),
+    saveAndQuit: async () => {
+      z.undefined().parse(await ipc.invoke(IPC_CHANNELS.saveAndQuit, undefined));
+    },
     getAudioSettings: async () => audioSettingsSchema.parse(
       await ipc.invoke(IPC_CHANNELS.audioSettingsGet, undefined),
     ),
