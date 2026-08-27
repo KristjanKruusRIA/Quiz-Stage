@@ -158,6 +158,7 @@ async function createWindows(): Promise<void> {
     },
     getAutomaticDisplayMode: () => automaticDisplayMode(screen.getAllDisplays().length),
     applyDisplayMode: (displayMode) => windowManager?.create(displayMode),
+    quit: () => app.quit(),
     getWindows: () => windowManager?.getWindows() ?? { hostWindow: null, publicWindow: null },
   });
 }

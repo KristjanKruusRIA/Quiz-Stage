@@ -7,6 +7,7 @@ export const AUDIO_ASSET_KEYS = [
   'final-tension',
   'correct-applause',
   'incorrect-crowd',
+  'countdown-tick',
   'time-expired',
   'winner',
 ] as const;
@@ -23,6 +24,7 @@ export const AUDIO_ASSET_SPEC = {
   'final-tension': { file: 'audio/final-tension.wav', durationMs: 59_726, channel: 'music' },
   'correct-applause': { file: 'audio/correct-applause.wav', durationMs: 4_310, channel: 'crowd' },
   'incorrect-crowd': { file: 'audio/incorrect-crowd.wav', durationMs: 2_113, channel: 'crowd' },
+  'countdown-tick': { file: 'audio/countdown-tick.wav', durationMs: 79, channel: 'effects' },
   'time-expired': { file: 'audio/time-expired.wav', durationMs: 1_530, channel: 'effects' },
   winner: { file: 'audio/winner.wav', durationMs: 3_381, channel: 'effects' },
 } as const satisfies Record<AudioAssetKey, { file: `audio/${string}.wav`; durationMs: number; channel: AudioChannel }>;

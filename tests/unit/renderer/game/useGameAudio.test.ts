@@ -6,10 +6,22 @@ import { hostView } from './fixtures';
 describe('game audio mapping', () => {
   it('baselines bootstrap/resume and maps forward phases and judgments exactly once', () => {
     const board = hostView({ eventSequence: 1, phase: 'round-one-board' });
-    expect(audioActionsForTransition(null, board)).toEqual([]);
-    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'daily-double-wager' }))).toEqual([{ type: 'play', key: 'daily-double' }]);
-    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'round-two-board' }))).toEqual([{ type: 'play', key: 'round-transition' }]);
-    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'final-clue' }))).toEqual([{ type: 'music', key: 'final-tension' }]);
+    expect(audioActionsForTransition(null, board)).toEqual([{ type: 'music', key: 'opening' }]);
+    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'daily-double-wager' }))).toEqual([
+      { type: 'stop-music' },
+      { type: 'play', key: 'daily-double' },
+    ]);
+    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'round-two-board' }))).toEqual([
+      { type: 'play', key: 'round-transition' },
+    ]);
+    expect(audioActionsForTransition(
+      hostView({ eventSequence: 1, phase: 'clue-reveal' }),
+      hostView({ eventSequence: 2, phase: 'round-one-board' }),
+    )).toContainEqual({ type: 'music', key: 'opening' });
+    expect(audioActionsForTransition(board, hostView({ eventSequence: 2, phase: 'final-clue' }))).toEqual([
+      { type: 'stop-music' },
+      { type: 'music', key: 'final-tension' },
+    ]);
     expect(audioActionsForTransition(hostView({ eventSequence: 1, phase: 'final-clue' }), hostView({ eventSequence: 2, phase: 'complete', winnerTeamId: 'team-1' }))).toEqual([{ type: 'stop-music' }, { type: 'play', key: 'winner' }]);
     expect(audioActionsForTransition(hostView({ eventSequence: 3 }), hostView({ eventSequence: 3, phase: 'round-two-board' }))).toEqual([]);
   });
@@ -137,5 +149,33 @@ describe('game audio mapping', () => {
     controller.startMusic('opening');
     controller.play('daily-double');
     expect(createAudio).not.toHaveBeenCalled();
+  });
+
+  it('loops board music and ticks once per second only while a clue timer runs', () => {
+    const intervals: Array<() => void> = [];
+    const clearInterval = vi.fn();
+    const audios: Array<{ url: string; loop: boolean; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn>; volume: number; currentTime: number }> = [];
+    const controller = new AudioController({
+      createAudio: (url) => {
+        const audio = { url, loop: false, play: vi.fn(async () => undefined), pause: vi.fn(), volume: 1, currentTime: 0 };
+        audios.push(audio);
+        return audio;
+      },
+      settings: defaultAudioSettings,
+      setInterval: (callback) => { intervals.push(callback); return intervals.length; },
+      clearInterval,
+    });
+
+    controller.startMusic('opening');
+    expect(audios[0].loop).toBe(true);
+    controller.stopMusic();
+    controller.setCountdownRunning(true);
+    intervals[0]!();
+    intervals[0]!();
+    expect(audios.filter((audio) => audio.url.includes('countdown-tick')).length).toBe(2);
+
+    controller.setCountdownRunning(false);
+    expect(clearInterval).toHaveBeenCalledWith(1);
+    controller.dispose();
   });
 });

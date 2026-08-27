@@ -444,6 +444,7 @@ export interface HostQuizStageApi extends StateSubscriptionApi {
   hasResumableMatch(): Promise<boolean>;
   resumeMatch(): Promise<HostGameView | null>;
   listHistory(): Promise<MatchHistoryEntry[]>;
+  saveAndQuit(): Promise<void>;
   listContent(): Promise<EditorLibrary>;
   saveCategorySet(input: SaveCategorySetRequest): Promise<EditorCategorySet>;
   saveFinalClue(input: SaveFinalClueRequest): Promise<EditorFinalClue>;

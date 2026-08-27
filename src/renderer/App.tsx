@@ -20,6 +20,7 @@ const audioAssetLabelKeys = {
   'final-tension': 'settings.asset.final-tension',
   'correct-applause': 'settings.asset.correct-applause',
   'incorrect-crowd': 'settings.asset.incorrect-crowd',
+  'countdown-tick': 'settings.asset.countdown-tick',
   'time-expired': 'settings.asset.time-expired',
   winner: 'settings.asset.winner',
 } as const;
@@ -45,7 +46,6 @@ export default function App({ api }: AppProps) {
     | { status: 'error' }
     | { status: 'ready'; settings: AudioSettings; revision: number }
   >({ status: 'loading' });
-  const [playOpening, setPlayOpening] = useState(false);
   const [appearanceState, setAppearanceState] = useState<
     | { status: 'loading' }
     | { status: 'error' }
@@ -181,7 +181,7 @@ export default function App({ api }: AppProps) {
   let content: React.ReactNode;
   if (route === 'setup') {
     content = <SetupScreen api={desktopApi} initialLanguage={locale} onLanguageChange={setLocale}
-      onBack={() => navigate('home')} onStarted={() => { setPlayOpening(true); navigate('match'); }} />;
+      onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
   } else if (route === 'history') {
     content = <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
   } else if (route === 'content') {
@@ -203,12 +203,12 @@ export default function App({ api }: AppProps) {
         view={hostView}
         api={desktopApi}
         audioSettings={audioState.status === 'ready' ? audioState.settings : undefined}
-        playOpening={playOpening}
         onAudioWarning={(assetKey) => setMediaWarnings((warnings) => new Map(warnings).set(assetKey, { assetKey, reason: 'unreadable' }))}
         onMute={() => {
           if (audioState.status !== 'ready') return;
           void saveAudioSettings({ ...audioState.settings, muted: !audioState.settings.muted }).catch(() => undefined);
         }}
+        onSaveAndQuit={desktopApi.saveAndQuit === undefined ? undefined : () => desktopApi.saveAndQuit!()}
         onHome={hostView.state.phase === 'complete' ? () => navigate('home') : undefined}
       />;
   } else {
@@ -225,7 +225,6 @@ export default function App({ api }: AppProps) {
         return;
       }
       setHostView(view);
-      setPlayOpening(false);
       setLocale(view.state.config.language);
       navigate('match');
     } catch {

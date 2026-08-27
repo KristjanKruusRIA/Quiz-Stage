@@ -13,6 +13,7 @@ interface HostConsoleProps {
   api: HostDesktopApi;
   now?: () => number;
   onMute?: () => void;
+  onSaveAndQuit?: () => Promise<void>;
 }
 
 const systemNow = () => Date.now();
@@ -28,7 +29,7 @@ function activeClue(view: HostGameView): Clue | null {
   return view.state.tiebreakerClues.find((clue) => clue.id === clueId) ?? null;
 }
 
-export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleProps) {
+export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit }: HostConsoleProps) {
   const [dailyWager, setDailyWager] = useState('5');
   const [finalWagers, setFinalWagers] = useState<Record<string, string>>({});
   const [scoreReason, setScoreReason] = useState('');
@@ -53,6 +54,18 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
       setPending(false);
     });
     return true;
+  };
+  const saveAndQuit = async () => {
+    if (pendingRef.current || onSaveAndQuit === undefined) return;
+    pendingRef.current = true;
+    setPending(true);
+    try {
+      await onSaveAndQuit();
+    } catch {
+      pendingRef.current = false;
+      setPending(false);
+      setError(t('host.actionError'));
+    }
   };
   const canJudge = state.activeClue?.lockedTeamId !== null && state.activeClue?.lockedTeamId !== undefined;
   const timed = ['ordinary-clue', 'daily-double-clue', 'final-clue', 'tiebreaker'].includes(state.phase);
@@ -99,6 +112,8 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
       ? view.replayIssue === null ? null : <p role="alert">{t('host.replayError', { sequence: view.replayIssue.sequence })}</p>
       : <RecoveryNotice {...view.recovery} replayIssue={view.replayIssue} />}
     {error === null ? null : <p role="alert">{error}</p>}
+    {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
+      onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
     {localizedClue === null ? null : <section aria-label={t('host.privateDetails')}>
       <p><strong>{t('host.response')}</strong> {localizedClue.response}</p>
       {localizedClue.acceptedResponses === undefined ? null : <p><strong>{t('host.acceptedResponses')}</strong> {localizedClue.acceptedResponses}</p>}
@@ -159,7 +174,7 @@ export function HostConsole({ view, api, now = systemNow, onMute }: HostConsoleP
       <button type="button" disabled={pending || state.undoStack.length === 0} onClick={() => dispatch({ type: 'UndoLast' })}>{t('host.undo')}</button>
       <button type="button" disabled={pending || state.lastClosedClueId === null || !['round-one-board', 'round-two-board', 'final-category'].includes(state.phase)} onClick={() => dispatch({ type: 'ReopenClue' })}>{t('host.reopenClue')}</button>
     </section>
-    <section aria-label={t('host.corrections')}>
+    <section className="correction-controls" aria-label={t('host.corrections')}>
       <label>{t('host.scoreReason')}<input value={scoreReason} onChange={(event) => setScoreReason(event.target.value)} /></label>
       {state.config.teams.map((team) => {
         return <form key={team.id} onSubmit={(event) => {
