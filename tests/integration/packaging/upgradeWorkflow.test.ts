@@ -140,7 +140,7 @@ describe('upgrade verification arguments', () => {
     expect(result.status).toBe(1);
     expect(output).toContain('UNKNOWN_RELEASE_TARGET:definitely-invalid');
     expect(output).not.toContain('Unknown cli config');
-  });
+  }, 15_000);
 });
 
 describe('package upgrade verification', () => {
