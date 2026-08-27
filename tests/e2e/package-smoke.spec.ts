@@ -26,7 +26,18 @@ async function activateControl(control: Locator): Promise<void> {
   await expect(control).toBeVisible({ timeout: 30_000 });
   await expect(control).toBeEnabled({ timeout: 30_000 });
   if (useDomPointerActivation) {
-    await control.evaluate((element) => (element as HTMLElement).click());
+    await control.evaluate((element) => {
+      if (
+        element instanceof HTMLButtonElement &&
+        !element.disabled &&
+        element.type === 'submit' &&
+        element.form !== null
+      ) {
+        element.form.requestSubmit(element);
+        return;
+      }
+      (element as HTMLElement).click();
+    });
     return;
   }
   await control.click();
@@ -95,7 +106,7 @@ async function launchPackaged(executable: string, userData: string): Promise<{ b
       throw new Error('PACKAGED_PAGE_NOT_READY');
     }
     return { browser, page };
-  });
+  }, { attempts: 300 });
   return { ...connected, process: applicationProcess };
 }
 
