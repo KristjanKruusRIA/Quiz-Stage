@@ -102,6 +102,13 @@ describe('content evidence', () => {
     })).toThrow(/inspiration/i);
   });
 
+  it('parses optional subject keys and Final-compatible evidence without one', () => {
+    expect(contentEvidenceSchema.parse({ ...validEvidence, subjectKey: 'subject:galaxy' }).subjectKey)
+      .toBe('subject:galaxy');
+    const { subjectKey: _subjectKey, ...finalEvidence } = validEvidence;
+    expect(contentEvidenceSchema.parse(finalEvidence).subjectKey).toBeUndefined();
+  });
+
   it('rejects non-independent or premature factual and editorial reviews', () => {
     expect(() => contentEvidenceSchema.parse({
       ...validEvidence,

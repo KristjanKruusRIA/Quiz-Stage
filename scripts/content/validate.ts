@@ -119,6 +119,7 @@ export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'ADULT_POLICY_REVIEW_MISSING',
   'OPENTDB_COMPOSITION',
   'PLACEHOLDER_CONTENT',
+  'CATEGORY_SUBJECT_DIVERSITY',
 ]);
 
 function normalizeText(value: string): string {

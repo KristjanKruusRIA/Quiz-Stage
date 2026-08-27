@@ -353,6 +353,50 @@ describe('production content validation', () => {
     expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
   });
 
+  it('treats subject diversity as explicitly non-waivable', () => {
+    expect(NON_WAIVABLE_CODES.has('CATEGORY_SUBJECT_DIVERSITY')).toBe(true);
+  });
+
+  it('rejects a five-row board category with missing subject keys', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row) => evidenceFor(row, batch.id, { subjectKey: undefined }));
+
+    const result = validateProductionContent([input('missing-subject-keys.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
+  it('rejects a five-row board category with a repeated subject key', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      subjectKey: index === 4 ? 'subject:history-1' : `subject:history-${index}`,
+    }));
+
+    const result = validateProductionContent([input('repeated-subject-key.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
+  it('accepts a five-row board category with five distinct subject keys', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      subjectKey: `subject:history-${index}`,
+    }));
+
+    const result = validateProductionContent([input('distinct-subject-keys.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
   it('recognizes reader-visible month-year dates for changing facts', () => {
     const rows = twelveValidSets();
     rows[0] = { ...rows[0], clue_en: 'As of August 2026, which city was the largest?' };
