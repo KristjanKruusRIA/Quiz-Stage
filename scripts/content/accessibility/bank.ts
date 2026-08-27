@@ -55,10 +55,10 @@ function isBinaryPrompt(value: string, language: 'en' | 'et'): boolean {
   const prompt = normalize(value);
   if (language === 'en') {
     return /^(?:am|are|can|could|did|do|does|had|has|have|is|should|was|were|will|would)\b/u.test(prompt)
-      || /\b(?:true or false|yes or no)\b/u.test(prompt);
+      || /\b(?:true\s*(?:or\s*)?false|yes\s*(?:or\s*)?no)\b/u.test(prompt);
   }
   return /^(?:kas|on|olid|oli|saab|võib)\b/u.test(prompt)
-    || /\b(?:jah või ei|tõene või väär)\b/u.test(prompt);
+    || /\b(?:jah\s*(?:või\s*)?ei|tõene\s*(?:või\s*)?väär)\b/u.test(prompt);
 }
 
 function validateAcceptedVariants(question: AccessibleQuestion): void {

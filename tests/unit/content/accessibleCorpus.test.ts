@@ -36,10 +36,20 @@ type AcceptedRow = Readonly<{
   category_set_id: string;
   content_kind: string;
   difficulty: string;
+  response_en: string;
+  response_et: string;
 }>;
 
-function acceptedEasySets(): Map<string, Readonly<{ batchId: string; clueIds: readonly string[] }>> {
-  const sets = new Map<string, { batchId: string; clueIds: string[] }>();
+function acceptedEasySets(): Map<string, Readonly<{
+  batchId: string;
+  clueIds: readonly string[];
+  responses: readonly Readonly<{ en: string; et: string }>[];
+}>> {
+  const sets = new Map<string, {
+    batchId: string;
+    clueIds: string[];
+    responses: Array<{ en: string; et: string }>;
+  }>();
   for (const batchId of ACCEPTED_BATCHES) {
     const path = resolve('content', 'generated', `${batchId}.en-et.csv`);
     const rows = parse(readFileSync(path, 'utf8'), {
@@ -48,8 +58,9 @@ function acceptedEasySets(): Map<string, Readonly<{ batchId: string; clueIds: re
     }) as AcceptedRow[];
     for (const row of rows) {
       if (row.content_kind !== 'board' || row.difficulty !== 'easy') continue;
-      const existing = sets.get(row.category_set_id) ?? { batchId, clueIds: [] };
+      const existing = sets.get(row.category_set_id) ?? { batchId, clueIds: [], responses: [] };
       existing.clueIds.push(row.clue_id);
+      existing.responses.push({ en: row.response_en, et: row.response_et });
       sets.set(row.category_set_id, existing);
     }
   }
@@ -159,6 +170,76 @@ describe('accessible corpus ledgers', () => {
       expect(normalized(title.name.et), title.categorySetId).not.toBe('');
       expect(normalized(title.name.en), title.categorySetId).not.toMatch(genericTitle);
       expect(normalized(title.name.et), title.categorySetId).not.toMatch(genericTitle);
+    }
+  });
+
+  it('never distinguishes title themes with Roman-numeral or numeric suffixes', () => {
+    const numericVariant = /(?:\b[IVXLCDM]+|\d+)$/u;
+    const variants = ACCESSIBLE_CATEGORY_TITLES.filter(({ name }) =>
+      numericVariant.test(name.en.trim()) || numericVariant.test(name.et.trim()));
+
+    expect(variants).toEqual([]);
+  });
+
+  it('uses truthful umbrellas for retained five-clue sets', () => {
+    const titleById = new Map(ACCESSIBLE_CATEGORY_TITLES.map((title) => [title.categorySetId, title]));
+    const retainedTitleIds = ACCESSIBLE_CATEGORY_TITLES
+      .filter(({ categorySetId }) => ACCESSIBLE_EASY_SET_IDS.includes(
+        categorySetId as (typeof ACCESSIBLE_EASY_SET_IDS)[number],
+      ))
+      .map(({ categorySetId }) => categorySetId);
+
+    expect(retainedTitleIds).toHaveLength(80);
+    expect(titleById.get('built-in-history-set-019')?.name).toEqual({
+      en: 'History: Places That Witnessed History',
+      et: 'Ajalugu: Ajaloo tunnistajaks olnud paigad',
+    });
+    expect(titleById.get('built-in-literature-language-set-003')?.name).toEqual({
+      en: 'Literature & Language: Classic Books and Their Connections',
+      et: 'Kirjandus ja keel: Klassikalised raamatud ja nende seosed',
+    });
+    expect(titleById.get('built-in-geography-set-013')?.name).toEqual({
+      en: 'Geography: Seas, Oceans, and Great Rivers',
+      et: 'Geograafia: Mered, ookeanid ja suured jõed',
+    });
+    expect(titleById.get('built-in-science-nature-set-010')?.name).toEqual({
+      en: 'Science & Nature: Remarkable Animals from Ocean to Ice',
+      et: 'Teadus ja loodus: Tähelepanuväärsed loomad ookeanist jääväljadeni',
+    });
+    expect(titleById.get('built-in-sports-games-set-008')?.name).toEqual({
+      en: 'Sports & Games: Games from Cards to Consoles',
+      et: 'Sport ja mängud: Mängud kaartidest konsoolideni',
+    });
+    expect(titleById.get('built-in-history-set-013')?.name).toEqual({
+      en: 'History: Reformers, Monarchs, and Wartime Leaders',
+      et: 'Ajalugu: Uuendajad, monarhid ja sõjaaegsed juhid',
+    });
+    expect(titleById.get('built-in-sports-games-set-003')?.name).toEqual({
+      en: 'Sports & Games: Global Sports Stars Across Stadiums, Courts, and Tracks',
+      et: 'Sport ja mängud: Maailma sporditähed staadionidel, väljakutel ja radadel',
+    });
+    expect(titleById.get('built-in-technology-inventions-set-001')?.name).toEqual({
+      en: 'Technology & Inventions: Companies Behind Phones, Software, Games, and E-Readers',
+      et: 'Tehnoloogia ja leiutised: Telefonide, tarkvara, mängude ja e-lugerite ettevõtted',
+    });
+    expect(titleById.get('built-in-technology-inventions-set-002')?.name).toEqual({
+      en: 'Technology & Inventions: Makers Behind Mobiles, Consoles, and Mini Computers',
+      et: 'Tehnoloogia ja leiutised: Mobiilide, konsoolide ja miniarvutite loojad',
+    });
+  });
+
+  it('keeps every retained bilingual response out of its category title', () => {
+    const accepted = acceptedEasySets();
+    const retainedIds = new Set<string>(ACCESSIBLE_EASY_SET_IDS);
+
+    for (const title of ACCESSIBLE_CATEGORY_TITLES) {
+      if (!retainedIds.has(title.categorySetId)) continue;
+      for (const response of accepted.get(title.categorySetId)!.responses) {
+        expect(normalized(title.name.en), `${title.categorySetId} English: ${response.en}`)
+          .not.toContain(normalized(response.en));
+        expect(normalized(title.name.et), `${title.categorySetId} Estonian: ${response.et}`)
+          .not.toContain(normalized(response.et));
+      }
     }
   });
 });
@@ -312,6 +393,20 @@ describe('validateAccessibleCorpus', () => {
     const invalid = withQuestion(original, 0, {
       ...original.questions[0]!,
       clue: { ...original.questions[0]!.clue, en: 'Is this landmark in Europe?' },
+    });
+    expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
+      'Question target-a-question-1 uses a binary English prompt',
+    );
+  });
+
+  it.each([
+    'True/False: this landmark is in Europe.',
+    'Yes/No: this landmark is in Europe.',
+  ])('rejects the explicit binary prompt %s', (clue) => {
+    const original = category('target-a');
+    const invalid = withQuestion(original, 0, {
+      ...original.questions[0]!,
+      clue: { ...original.questions[0]!.clue, en: clue },
     });
     expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
       'Question target-a-question-1 uses a binary English prompt',
