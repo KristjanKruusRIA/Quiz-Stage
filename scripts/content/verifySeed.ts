@@ -148,6 +148,7 @@ interface SeedInventory {
   easySets: number;
   mediumSets: number;
   hardSets: number;
+  builtInPacks: number;
 }
 
 export function inspectSeed(
@@ -200,6 +201,7 @@ export function inspectSeed(
         hardSets: database.prepare(
           "SELECT COUNT(*) FROM category_sets WHERE round IN ('round-one', 'round-two') AND difficulty = 'hard'",
         ).pluck().get() as number,
+        builtInPacks: database.prepare("SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'").pluck().get() as number,
       },
     };
   } finally {

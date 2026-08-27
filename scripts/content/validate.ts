@@ -115,6 +115,7 @@ export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'BOARD_FINAL_FACT_REUSE',
   'SUBTHEME_LIMIT',
   'BATCH_ALLOCATION',
+  'PACK_IDENTITY_MISMATCH',
   'OPENTDB_COMPOSITION',
   'PLACEHOLDER_CONTENT',
 ]);
@@ -191,8 +192,9 @@ function hasSpecificSupportingSource(evidence: ContentEvidence): boolean {
 
 const ALL_PRODUCTION_BATCHES: readonly ProductionBatchDefinition[] = [...PRODUCTION_BATCHES, FINAL_BATCH];
 
-function batchForPack(packId: string): ProductionBatchDefinition | undefined {
-  return ALL_PRODUCTION_BATCHES.find((batch) => batch.packId === packId);
+function batchForRow(row: ParsedCsvRow): ProductionBatchDefinition | undefined {
+  if (row.content_kind === 'final') return FINAL_BATCH;
+  return PRODUCTION_BATCHES.find((batch) => batch.packId === row.pack_id);
 }
 
 function validateSharedSchema(row: ParsedCsvRow): boolean {
@@ -275,8 +277,18 @@ export function validateProductionContent(
   const clueTexts = new Map<string, LocatedRow>();
   const categoryNames = new Map<string, { id: string; located: LocatedRow }>();
   const categoryRows = new Map<string, LocatedRow[]>();
+  const packNames = new Map<string, string>();
   for (const item of located) {
     const { file, row } = item;
+    const priorPackName = packNames.get(row.pack_id);
+    if (priorPackName !== undefined && priorPackName !== row.pack_name) {
+      add({
+        file, row: row.rowNumber, code: 'PACK_IDENTITY_MISMATCH', severity: 'error',
+        message: `Pack ${row.pack_id} uses both ${priorPackName} and ${row.pack_name}`,
+      });
+    } else {
+      packNames.set(row.pack_id, row.pack_name);
+    }
     for (const [id, namespace] of [[row.pack_id, 'pack'], [row.category_set_id, 'category'], [row.clue_id, 'clue']] as const) {
       const prior = idOwners.get(id);
       if (prior !== undefined && (prior.namespace !== namespace
@@ -417,7 +429,7 @@ export function validateProductionContent(
       });
     }
 
-    const expectedBatch = options.batch ?? batchForPack(row.pack_id);
+    const expectedBatch = options.batch ?? batchForRow(row);
     const canonicalAssertion = `${row.response_en.trim()} — ${row.explanation_en.trim()}`;
     const sourceMatches = evidence.supportingSource.title.trim() === row.source_title.trim()
       && evidence.supportingSource.url.trim() === row.source_url.trim()
@@ -502,6 +514,7 @@ export function validateProductionContent(
     easySets: validBoardGroups.filter((group) => group[0].row.difficulty === 'easy').length,
     mediumSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'medium').length,
     hardSets: validBoardGroups.filter((group) => group[0].row.difficulty === 'hard').length,
+    builtInPacks: new Set(located.map(({ row }) => row.pack_id).filter((packId) => packId.startsWith('built-in-'))).size,
   };
   if (distinctBoardNames.size < 12 && (options.mode === 'release' || summary.boardClues > 0)) {
     add({ file: '<inventory>', row: 0, code: 'MATCH_CATEGORY_NAMES_SHORTAGE', severity: 'error', message: `At least 12 distinct board category names are required; found ${distinctBoardNames.size}` });
@@ -509,7 +522,8 @@ export function validateProductionContent(
 
   const enforceBatchComposition = (batch: ProductionBatchDefinition, batchRows: readonly LocatedRow[]) => {
     const location = `<batch:${batch.id}>`;
-    let allocationMismatch = batchRows.some(({ row }) => row.pack_id !== batch.packId);
+    let allocationMismatch = batch.distribution !== null
+      && batchRows.some(({ row }) => row.pack_id !== batch.packId || row.pack_name !== batch.packName);
     const groups = new Map<string, LocatedRow[]>();
     for (const item of batchRows) {
       const group = groups.get(item.row.category_set_id) ?? [];
@@ -552,12 +566,12 @@ export function validateProductionContent(
       allocationMismatch ||= batchRows.length !== batch.finalClues
         || batchRows.some(({ row }) => row.content_kind !== 'final')
         || batchRows.some(({ row }) => !batch.subthemes.includes(row.macro_topic));
-      for (const difficulty of ['easy', 'medium', 'hard'] as const) {
-        if (batchRows.filter(({ row }) => row.difficulty === difficulty).length !== 50) allocationMismatch = true;
-      }
-      for (const family of batch.subthemes) {
-        const count = batchRows.filter(({ row }) => row.macro_topic === family).length;
-        if (count !== 12 && count !== 13) allocationMismatch = true;
+      for (const [macroTopic, allocation] of Object.entries(batch.finalTopicAllocations ?? {})) {
+        const topicRows = batchRows.filter(({ row }) => row.macro_topic === macroTopic);
+        for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+          if (topicRows.filter(({ row }) => row.difficulty === difficulty).length !== allocation[difficulty]) allocationMismatch = true;
+        }
+        if (topicRows.some(({ row }) => row.pack_id !== allocation.packId || row.pack_name !== allocation.packName)) allocationMismatch = true;
       }
     }
 
@@ -588,27 +602,38 @@ export function validateProductionContent(
       boardClues: 'RELEASE_BOARD_CLUES_SHORTAGE', categorySets: 'RELEASE_CATEGORY_SETS_SHORTAGE',
       distinctCategoryNames: 'RELEASE_CATEGORY_NAMES_SHORTAGE', finalClues: 'RELEASE_FINAL_CLUES_SHORTAGE',
       easySets: 'RELEASE_EASY_SETS_SHORTAGE', mediumSets: 'RELEASE_MEDIUM_SETS_SHORTAGE', hardSets: 'RELEASE_HARD_SETS_SHORTAGE',
+      builtInPacks: 'RELEASE_BUILT_IN_PACKS_SHORTAGE',
     };
     for (const key of Object.keys(RELEASE_THRESHOLDS) as (keyof ReleaseSummary)[]) {
-      if (summary[key] < RELEASE_THRESHOLDS[key]) add({ file: '<inventory>', row: 0, code: codes[key], severity: 'error', message: `${key} requires ${RELEASE_THRESHOLDS[key]}; found ${summary[key]}` });
+      if (summary[key] !== RELEASE_THRESHOLDS[key]) add({
+        file: '<inventory>', row: 0,
+        code: summary[key] < RELEASE_THRESHOLDS[key] ? codes[key] : codes[key].replace('_SHORTAGE', '_EXCESS'),
+        severity: 'error', message: `${key} requires exactly ${RELEASE_THRESHOLDS[key]}; found ${summary[key]}`,
+      });
     }
     for (const difficulty of ['easy', 'medium', 'hard'] as const) {
       const boardClues = located.filter(({ row }) => row.content_kind === 'board' && row.difficulty === difficulty).length;
-      if (boardClues < RELEASE_COMPOSITION_THRESHOLDS.boardCluesPerDifficulty) add({
-        file: '<inventory>', row: 0, code: `RELEASE_${difficulty.toUpperCase()}_BOARD_CLUES_SHORTAGE`, severity: 'error',
-        message: `${difficulty} board clues require ${RELEASE_COMPOSITION_THRESHOLDS.boardCluesPerDifficulty}; found ${boardClues}`,
+      const requiredBoardClues = RELEASE_COMPOSITION_THRESHOLDS.boardClues[difficulty];
+      if (boardClues !== requiredBoardClues) add({
+        file: '<inventory>', row: 0,
+        code: `RELEASE_${difficulty.toUpperCase()}_BOARD_CLUES_${boardClues < requiredBoardClues ? 'SHORTAGE' : 'EXCESS'}`,
+        severity: 'error', message: `${difficulty} board clues requires exactly ${requiredBoardClues}; found ${boardClues}`,
       });
       for (const round of ['round-one', 'round-two'] as const) {
         const sets = validBoardGroups.filter((group) => group[0].row.difficulty === difficulty && group[0].row.round === round).length;
-        if (sets < RELEASE_COMPOSITION_THRESHOLDS.categorySetsPerDifficultyRound) add({
-          file: '<inventory>', row: 0, code: `RELEASE_${difficulty.toUpperCase()}_${round === 'round-one' ? 'ROUND_ONE' : 'ROUND_TWO'}_SETS_SHORTAGE`, severity: 'error',
-          message: `${difficulty} ${round} sets require ${RELEASE_COMPOSITION_THRESHOLDS.categorySetsPerDifficultyRound}; found ${sets}`,
+        const requiredSets = RELEASE_COMPOSITION_THRESHOLDS.categorySets[difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
+        if (sets !== requiredSets) add({
+          file: '<inventory>', row: 0,
+          code: `RELEASE_${difficulty.toUpperCase()}_${round === 'round-one' ? 'ROUND_ONE' : 'ROUND_TWO'}_SETS_${sets < requiredSets ? 'SHORTAGE' : 'EXCESS'}`,
+          severity: 'error', message: `${difficulty} ${round} sets requires exactly ${requiredSets}; found ${sets}`,
         });
       }
       const finals = located.filter(({ row }) => row.content_kind === 'final' && row.difficulty === difficulty).length;
-      if (finals < RELEASE_COMPOSITION_THRESHOLDS.finalCluesPerDifficulty) add({
-        file: '<inventory>', row: 0, code: `RELEASE_${difficulty.toUpperCase()}_FINAL_CLUES_SHORTAGE`, severity: 'error',
-        message: `${difficulty} Final clues require ${RELEASE_COMPOSITION_THRESHOLDS.finalCluesPerDifficulty}; found ${finals}`,
+      const requiredFinals = RELEASE_COMPOSITION_THRESHOLDS.finalClues[difficulty];
+      if (finals !== requiredFinals) add({
+        file: '<inventory>', row: 0,
+        code: `RELEASE_${difficulty.toUpperCase()}_FINAL_CLUES_${finals < requiredFinals ? 'SHORTAGE' : 'EXCESS'}`,
+        severity: 'error', message: `${difficulty} Final clues requires exactly ${requiredFinals}; found ${finals}`,
       });
     }
   }
