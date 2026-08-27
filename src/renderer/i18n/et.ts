@@ -148,6 +148,7 @@ export const et = {
   'host.undo': 'Võta tagasi',
   'host.reopenClue': 'Ava vihje uuesti',
   'host.corrections': 'Praeguse mängu parandused',
+  'host.matchActions': 'Mängu toimingud',
   'host.scoreReason': 'Punktiparanduse põhjus',
   'host.scoreFor': 'Võistkonna {team} punktid',
   'host.setScore': 'Määra võistkonna {team} punktid',

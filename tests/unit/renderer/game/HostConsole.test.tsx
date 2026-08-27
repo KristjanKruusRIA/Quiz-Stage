@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react';
+import { act, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../../src/renderer/api/desktopApi';
@@ -27,6 +27,15 @@ describe('HostConsole', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Save match and quit' }));
 
     expect(onSaveAndQuit).toHaveBeenCalledOnce();
+  });
+
+  it('groups match exit actions separately from gameplay controls', () => {
+    render(<HostConsole view={hostView()} api={api()} onSaveAndQuit={vi.fn(async () => undefined)} />);
+
+    const actions = screen.getByRole('region', { name: 'Match actions' });
+    expect(within(actions).getByRole('button', { name: 'Save match and quit' })).toBeInTheDocument();
+    expect(within(actions).getByRole('button', { name: 'End match incomplete' })).toBeInTheDocument();
+    expect(within(actions).queryByRole('button', { name: 'Correct' })).not.toBeInTheDocument();
   });
 
   it('dispatches validated current-match score, report, and confirmed incomplete-match intents', async () => {

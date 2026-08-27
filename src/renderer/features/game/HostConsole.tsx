@@ -110,8 +110,6 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
     <header>
       <h2>{t('host.console')}</h2>
       <p data-testid="controlling-team">{t('host.inControl', { team: controlling?.name ?? t('common.none') })}</p>
-      {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
-        onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
     </header>
     {view.recovery === null
       ? view.replayIssue === null ? null : <p role="alert">{t('host.replayError', { sequence: view.replayIssue.sequence })}</p>
@@ -200,9 +198,13 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
         <label>{t('host.reportReason')}<input value={reportReason} onChange={(event) => setReportReason(event.target.value)} /></label>
         <button type="submit" disabled={pending || clue === null || reportReason.trim() === ''}>{t('host.reportClue')}</button>
       </form> : null}
+    </section>
+    <section className="match-actions" aria-label={t('host.matchActions')}>
       <label><input type="checkbox" checked={confirmIncomplete} onChange={(event) => setConfirmIncomplete(event.target.checked)} />{t('host.endConfirm')}</label>
       <button type="button" disabled={pending || !confirmIncomplete}
         onClick={() => dispatch({ type: 'EndIncompleteMatch' })}>{t('host.endIncomplete')}</button>
+      {onSaveAndQuit === undefined ? null : <button className="save-quit" type="button" disabled={pending}
+        onClick={() => void saveAndQuit()}>{t('host.saveAndQuit')}</button>}
     </section>
     </>}
   </aside>;
