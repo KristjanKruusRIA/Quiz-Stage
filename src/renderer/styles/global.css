@@ -72,6 +72,18 @@ input[type='range'] {
 .team-grid, .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); align-items: start; gap: var(--space-3); margin-block: var(--space-2); }
 .team-editor { position: relative; display: grid; gap: var(--space-2); background: var(--color-surface); }
 .team-swatch { position: absolute; right: var(--space-3); top: var(--space-3); width: 1rem; height: 1rem; border: 2px solid white; border-radius: 50%; }
+.configure-match-screen { width: min(90rem, 100%); display: grid; gap: var(--space-3); }
+.configure-match-screen > p { margin-block: 0; color: var(--color-muted); }
+.match-topic-rounds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.match-topic-rounds section { padding: var(--space-3); border: 1px solid #465572; border-radius: var(--radius); background: var(--color-surface); }
+.match-topic-rounds section:last-child { grid-column: 1 / -1; }
+.match-topic-rounds h2 { margin-block: 0 var(--space-2); }
+.match-topic-rounds ol { display: grid; gap: var(--space-2); margin: 0; padding-left: 1.5rem; }
+.match-topic-rounds li { padding-left: var(--space-1); }
+.match-topic-rounds li::marker { color: var(--color-muted); }
+.match-topic-rounds li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-2); }
+.match-topic-rounds li span { overflow-wrap: anywhere; }
+.configure-match-screen > .primary-action { justify-self: stretch; }
 .waiting-screen { min-height: 100vh; display: grid; place-items: center; color: var(--color-muted); }
 .editor-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-block: var(--space-2); }
 .pack-list, .content-editor, .content-record-list { display: grid; gap: var(--space-3); }
@@ -101,6 +113,8 @@ input[type='range'] {
   .page-shell { padding: var(--space-3); }
   .setup-header, .section-heading { align-items: stretch; flex-direction: column; }
   .bilingual-grid { grid-template-columns: 1fr; }
+  .match-topic-rounds { grid-template-columns: 1fr; }
+  .match-topic-rounds section:last-child { grid-column: auto; }
 }
 
 @media (min-width: 75rem) {

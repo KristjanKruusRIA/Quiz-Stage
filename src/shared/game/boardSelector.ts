@@ -56,6 +56,10 @@ export interface SelectionShortage {
 
 export type SelectedMatchContent = SelectedMatch | SelectionShortage;
 
+export type MatchTopicTarget =
+  | { round: Board['round']; index: number }
+  | { round: 'final' };
+
 export interface SelectionFlowDiagnostics {
   targetChecks: number;
   maxAugmentationsPerCheck: number;
@@ -122,6 +126,65 @@ export function selectMatchContent(
     final,
     finalClue: final,
     tiebreakerClues: [],
+  };
+}
+
+export function rerollMatchTopic(
+  input: SelectionInput,
+  selected: SelectedMatch,
+  target: MatchTopicTarget,
+): SelectedMatch | null {
+  if (target.round === 'final') {
+    const language = input.config.language;
+    const locale = language === 'et' ? 'et' : 'en';
+    const currentName = selected.final.categoryName[language]!.trim().toLocaleLowerCase(locale);
+    const final = eligibleFinalClues(input, new Set([selected.final.id]), 'final-reroll')
+      .find((candidate) => candidate.categoryName[language]!.trim().toLocaleLowerCase(locale) !== currentName);
+    return final === undefined ? null : {
+      ...selected,
+      seed: input.seed,
+      final,
+      finalClue: final,
+    };
+  }
+
+  if (!Number.isInteger(target.index) || target.index < 0 || target.index >= CATEGORIES_PER_BOARD) {
+    return null;
+  }
+  const offset = target.round === 'round-one' ? 0 : CATEGORIES_PER_BOARD;
+  const selectedIndex = offset + target.index;
+  const current = selected.categorySets[selectedIndex];
+  if (current === undefined || current.round !== target.round) return null;
+
+  const remaining = selected.categorySets.filter((_, index) => index !== selectedIndex);
+  const usedIds = new Set(remaining.map((category) => category.id));
+  const usedNames = new Set(remaining.map((category) => normalizedName(category, input.config.language)));
+  const currentName = normalizedName(current, input.config.language);
+  const macroTopicCounts = new Map<string, number>();
+  for (const category of remaining.filter((candidate) => candidate.round === target.round)) {
+    macroTopicCounts.set(category.macroTopic, (macroTopicCounts.get(category.macroTopic) ?? 0) + 1);
+  }
+  const replacement = eligibleCategorySets(input, target.round).find((candidate) =>
+    candidate.id !== current.id
+    && !usedIds.has(candidate.id)
+    && normalizedName(candidate, input.config.language) !== currentName
+    && !usedNames.has(normalizedName(candidate, input.config.language))
+    && (macroTopicCounts.get(candidate.macroTopic) ?? 0) < MAX_MACRO_TOPIC_PER_BOARD
+  );
+  if (replacement === undefined) return null;
+
+  const categorySets = [...selected.categorySets];
+  categorySets[selectedIndex] = replacement;
+  const roundOne = createBoard('round-one', input.seed, categorySets.slice(0, CATEGORIES_PER_BOARD));
+  const roundTwo = createBoard('round-two', input.seed, categorySets.slice(CATEGORIES_PER_BOARD));
+  return {
+    ...selected,
+    seed: input.seed,
+    boards: [roundOne, roundTwo],
+    roundOne,
+    roundTwo,
+    categorySets,
+    dailyDoubleClueIds: selectDailyDoubles(roundOne, roundTwo, input.seed),
   };
 }
 

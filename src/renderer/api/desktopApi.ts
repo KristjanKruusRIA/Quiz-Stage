@@ -6,6 +6,8 @@ import type {
   QuizStageApi,
   SetupOptions,
   HostQuizStageApi,
+  MatchConfigurationPreview,
+  RerollConfiguredTopicRequest,
 } from '../../shared/ipc/contracts';
 import type {
   ContentExportResult, ContentImportPreview, ContentImportResult, EditorCategorySet,
@@ -20,6 +22,9 @@ export type HostDesktopApi = {
       getSetupOptions(): Promise<SetupOptions>;
       checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
       startMatch(config: GameConfig): Promise<void>;
+      configureMatch(config: GameConfig): Promise<MatchConfigurationPreview>;
+      rerollConfiguredTopic(input: RerollConfiguredTopicRequest): Promise<MatchConfigurationPreview>;
+      startConfiguredMatch(draftId: string): Promise<void>;
       hasResumableMatch(): Promise<boolean>;
       resumeMatch(): Promise<HostGameView | null>;
       listHistory(): Promise<MatchHistoryEntry[]>;
@@ -64,6 +69,9 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
   const hostBridge: HostQuizStageApi = bridge;
   const {
     startMatch,
+    configureMatch,
+    rerollConfiguredTopic,
+    startConfiguredMatch,
     dispatch,
     checkContentAvailability,
     getSetupOptions,
@@ -83,6 +91,11 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
     surface: 'host',
     getSetupOptions: () => getSetupOptions(),
     checkContentAvailability: (config) => checkContentAvailability(config),
+    configureMatch: (config) => configureMatch(config),
+    rerollConfiguredTopic: (input) => rerollConfiguredTopic(input),
+    startConfiguredMatch: async (draftId) => {
+      await startConfiguredMatch(draftId);
+    },
     hasResumableMatch: () => hasResumableMatch(),
     resumeMatch: () => resumeMatch(),
     listHistory: () => listHistory(),

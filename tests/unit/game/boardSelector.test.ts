@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   createSeededRandom,
+  rerollMatchTopic,
   selectMatchContent,
   selectNextTiebreakerClue,
   type SelectedMatch,
@@ -30,6 +31,73 @@ function namedSet(
 }
 
 describe('deterministic board selection', () => {
+  it('re-rolls only the requested board topic while preserving a valid match selection', () => {
+    const input = selectionInput();
+    const selected = requireMatch(selectMatchContent(input));
+    const beforeIds = selected.categorySets.map((set) => set.id);
+
+    const rerolled = rerollMatchTopic(
+      { ...input, seed: 'round-one-reroll' },
+      selected,
+      { round: 'round-one', index: 2 },
+    );
+
+    expect(rerolled).not.toBeNull();
+    expect(rerolled!.categorySets[2].id).not.toBe(beforeIds[2]);
+    expect(rerolled!.categorySets.map((set) => set.id).filter((_, index) => index !== 2))
+      .toEqual(beforeIds.filter((_, index) => index !== 2));
+    expect(new Set(rerolled!.categorySets.map((set) => set.name.en)).size).toBe(12);
+    const clueIds = rerolled!.boards.flatMap((board) => board.categories)
+      .flatMap((category) => category.clues)
+      .map((clue) => clue.id);
+    expect(rerolled!.dailyDoubleClueIds.every((id) => clueIds.includes(id))).toBe(true);
+  });
+
+  it('re-rolls only the Final topic and reports when no alternative exists', () => {
+    const input = selectionInput();
+    const selected = requireMatch(selectMatchContent(input));
+
+    const rerolled = rerollMatchTopic(
+      { ...input, seed: 'final-reroll' },
+      selected,
+      { round: 'final' },
+    );
+
+    expect(rerolled).not.toBeNull();
+    expect(rerolled!.final.id).not.toBe(selected.final.id);
+    expect(rerolled!.categorySets.map((set) => set.id)).toEqual(selected.categorySets.map((set) => set.id));
+    expect(rerollMatchTopic(
+      { ...input, seed: 'no-final-alternative', finalClues: [selected.final] },
+      selected,
+      { round: 'final' },
+    )).toBeNull();
+    expect(rerollMatchTopic(
+      {
+        ...input,
+        seed: 'same-final-name',
+        finalClues: [selected.final, finalClue('duplicate-final', 'medium', { categoryName: selected.final.categoryName })],
+      },
+      selected,
+      { round: 'final' },
+    )).toBeNull();
+  });
+
+  it('does not treat a different category record with the same displayed name as a re-roll', () => {
+    const input = selectionInput();
+    const selected = requireMatch(selectMatchContent(input));
+    const current = selected.categorySets[0];
+    const duplicateName = categorySet('duplicate-name', 'round-one', {
+      name: current.name,
+      macroTopic: current.macroTopic,
+    });
+
+    expect(rerollMatchTopic(
+      { ...input, seed: 'same-name-reroll', categorySets: [...selected.categorySets, duplicateName] },
+      selected,
+      { round: 'round-one', index: 0 },
+    )).toBeNull();
+  });
+
   it('produces repeatable random values for the same persisted seed', () => {
     const first = createSeededRandom('persisted-seed');
     const second = createSeededRandom('persisted-seed');
