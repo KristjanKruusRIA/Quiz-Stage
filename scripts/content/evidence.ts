@@ -42,6 +42,7 @@ export const contentEvidenceSchema = z.object({
   clueId: nonEmptyString,
   batchId: nonEmptyString,
   factKey: nonEmptyString,
+  subjectKey: nonEmptyString.optional(),
   assertion: nonEmptyString,
   origin: z.enum(['openTdbInspired', 'wikidata', 'compatibleOpen']),
   authoring: z.object({
