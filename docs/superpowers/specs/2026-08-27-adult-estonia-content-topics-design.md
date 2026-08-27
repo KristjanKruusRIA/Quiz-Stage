@@ -49,6 +49,24 @@ Combined with the existing twelve topics, the final board distribution is:
 
 Each new topic contributes exactly 12 Finals: four Easy, four Medium, and four Hard. The existing 150 Final records and their stable IDs remain unchanged.
 
+### 2.1 Board-category experience and subject diversity
+
+The original twelve board packs retain the broad-category regrouping already committed on their branch. This feature does not rewrite those accepted packs again. The rules below apply to `14-adult`, `15-estonia`, and every future board batch. Final clues are exempt because they are single-clue categories.
+
+Every new five-clue board category must:
+
+- use a broad, casual-trivia category name that tells players the shared theme;
+- contain exactly five distinct primary subjects, represented by five distinct evidence `subjectKey` values;
+- reuse the same canonical `subjectKey` whenever the same primary subject appears elsewhere in the pack;
+- keep each clue self-contained rather than relying on a source-title prefix or another clue in the category;
+- increase difficulty through clue accessibility, specificity, and wording while keeping the primary answers plausible for general-trivia players;
+- never create a ladder by asking increasingly obscure details about one subject; and
+- preserve complete bilingual wording, evidence, citations, and sensible tier progression.
+
+For example, a category named `Street Food Around the World` may cover `shawarma`, `taco`, `banh-mi`, `poutine`, and `currywurst`, one primary subject per tier. Generic generated titles such as `Quick Mix`, `Grab Bag`, or `Sampler` are not acceptable substitutes for a coherent category theme in Adult or Estonia.
+
+`CATEGORY_SUBJECT_DIVERSITY` is a non-waivable production validation error. Batch verification must fail when a five-clue board category has a missing subject key or fewer than five distinct keys. Editorial review separately verifies that the keys are truthful, the category is coherent and entertaining, and the tier ladder changes clue accessibility rather than subject obscurity.
+
 ## 3. Adult topic boundary
 
 The Adult pack is mature, factual, and non-graphic. It covers at least eight of these subthemes, with no more than 15 category sets assigned to one subtheme:

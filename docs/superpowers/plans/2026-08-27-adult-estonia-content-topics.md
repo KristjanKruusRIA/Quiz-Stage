@@ -4,7 +4,7 @@
 
 **Goal:** Add complete, reviewed Adult and Estonia built-in content packs, keep Adult opt-in per game, finish the expanded Final batch first, and prove the exact 7,174-clue production inventory locally without triggering GitHub release.
 
-**Architecture:** Extend the existing production-batch catalog so quotas, pack display names, exact board allocations, and per-topic Final ownership are data rather than validator constants. Keep one validation, publication, and seed path; add an explicit Adult-policy review attestation to evidence; and expose a separate setup default-selection flag without changing database enabled semantics. Publish the 174-clue Final batch atomically before Adult and Estonia board batches, then rebuild and inspect one deterministic production seed.
+**Architecture:** Extend the existing production-batch catalog so quotas, pack display names, exact board allocations, and per-topic Final ownership are data rather than validator constants. Keep one validation, publication, and seed path; use evidence `subjectKey` values plus a non-waivable five-distinct-subject gate for every new board category; add an explicit Adult-policy review attestation; and expose a separate setup default-selection flag without changing database enabled semantics. Preserve the already-committed broad regrouping of batches 01-12, publish the 174-clue Final batch atomically, then build Adult and Estonia from curated broad category plans before rebuilding one deterministic production seed.
 
 **Tech Stack:** Electron 43.3.0, TypeScript 6.0.3, React 19, Zod 4, SQLite through better-sqlite3 13.0.3, Vitest 4.1.10, Playwright 1.62.1, Electron Forge 7.11.2, PowerShell 7
 
@@ -17,6 +17,11 @@
 - Adult uses pack ID built-in-adult and display name Adult (Mature) / Täiskasvanutele.
 - Estonia uses pack ID built-in-estonia and display name Estonia / Eesti.
 - Each new board pack contains exactly 100 category sets and 500 clues, with one complete tier 1-5 set per category.
+- Every Adult and Estonia category has exactly five distinct canonical evidence `subjectKey` values, one primary subject per clue. The same primary subject reuses the same key throughout its pack.
+- Adult and Estonia category names are broad, casual, and coherent. Do not use generic generated names such as Quick Mix, Grab Bag, or Sampler.
+- Difficulty increases through clue accessibility, specificity, and wording, not increasingly obscure details about one subject. Every clue remains self-contained.
+- `CATEGORY_SUBJECT_DIVERSITY` is non-waivable. Finals are exempt because they are single-clue categories.
+- Preserve the committed broad-category changes in batches 01-12; do not rewrite those accepted packs in Tasks 7-9.
 - Adult distribution is Easy 17/16, Medium 17/17, Hard 16/17 across Round One/Double Round.
 - Estonia distribution is Easy 17/17, Medium 16/17, Hard 17/16 across Round One/Double Round.
 - The release contains exactly 1,400 board sets, 7,000 board clues, 174 Finals, 7,174 clues, and 15 built-in packs.
@@ -36,8 +41,9 @@
 
 - scripts/content/productionBatches.ts owns batch IDs, pack identity, per-batch source quotas, board distributions, and per-topic Final allocations.
 - scripts/content/releaseThresholds.ts owns exact release and difficulty/round inventory requirements.
-- scripts/content/validate.ts binds each row to its batch, checks pack identity, evidence, allocation, duplicates, and exact release counts.
-- scripts/content/evidence.ts owns the optional-on-old-records but required-for-Adult policy review attestation.
+- scripts/content/validate.ts binds each row to its batch, checks pack identity, evidence, five distinct primary subjects, allocation, duplicates, and exact release counts.
+- scripts/content/evidence.ts owns optional `subjectKey` parsing, required board-category diversity, and the optional-on-old-records but required-for-Adult policy review attestation.
+- scripts/content/regroupBroadCategories.ts is reference infrastructure from the committed 01-12 regrouping. Adult and Estonia must use curated coherent category plans rather than its generic title generator.
 - scripts/content/buildSeed.ts and scripts/content/verifySeed.ts produce and read back the exact seed inventory.
 - scripts/content/verifyBatch.ts parses batch reports containing the expanded ReleaseSummary.
 - src/shared/ipc/contracts.ts carries selectedByDefault across IPC.
@@ -842,6 +848,76 @@ git commit -m "feat(content): add Adult and Estonia Finals"
 
 ---
 
+### Task 6A: Adopt and harden the merged subject-diversity contract
+
+**Files:**
+- Modify: `scripts/content/validate.ts`
+- Test: `tests/unit/content/productionValidator.test.ts`
+- Test: `tests/unit/content/evidence.test.ts`
+- Verify only: `scripts/content/regroupBroadCategories.ts`
+- Verify only: `tests/unit/content/regroupBroadCategories.test.ts`
+
+**Interfaces:**
+- Consumes: optional `ContentEvidence.subjectKey` and the merged five-subject category check.
+- Produces: explicit non-waivable `CATEGORY_SUBJECT_DIVERSITY` enforcement for any five-row board category validated with evidence.
+- Tasks 7 and 8 must attach one truthful canonical `subjectKey` to every board evidence record.
+
+- [ ] **Step 1: Write failing hard-gate tests**
+
+Add focused tests equivalent to:
+
+~~~typescript
+expect(NON_WAIVABLE_CODES).toContain('CATEGORY_SUBJECT_DIVERSITY');
+
+const missingKeys = validBoardEvidence.map(({ subjectKey: _subjectKey, ...record }) => record);
+expect(validateWithEvidence(rows, missingKeys).issues.map(({ code }) => code))
+  .toContain('CATEGORY_SUBJECT_DIVERSITY');
+
+const repeated = validBoardEvidence.map((record, index) => ({
+  ...record,
+  subjectKey: index < 5 ? 'shawarma' : record.subjectKey,
+}));
+expect(validateWithEvidence(rows, repeated).issues.map(({ code }) => code))
+  .toContain('CATEGORY_SUBJECT_DIVERSITY');
+
+expect(validateWithEvidence(rows, validBoardEvidence).issues.map(({ code }) => code))
+  .not.toContain('CATEGORY_SUBJECT_DIVERSITY');
+~~~
+
+Also prove Final evidence remains valid without `subjectKey` and that the committed 01-12 evidence parses unchanged.
+
+- [ ] **Step 2: Run the focused tests and verify RED**
+
+Run: `npx vitest run tests/unit/content/evidence.test.ts tests/unit/content/productionValidator.test.ts tests/unit/content/regroupBroadCategories.test.ts --configLoader runner`
+
+Expected: the explicit non-waivable assertion fails before the minimal implementation.
+
+- [ ] **Step 3: Make the existing diversity error explicitly non-waivable**
+
+Add `CATEGORY_SUBJECT_DIVERSITY` to `NON_WAIVABLE_CODES`. Keep `subjectKey` optional in the Zod schema so Final evidence remains backward-compatible; board validation with evidence is the boundary that requires all five keys.
+
+Do not infer keys from answer strings, fact keys, source titles, or category IDs. The content author supplies the primary subject, and independent editorial review verifies that the key truthfully describes the clue.
+
+- [ ] **Step 4: Run focused and accepted-content verification**
+
+Run:
+
+~~~powershell
+npx vitest run tests/unit/content/evidence.test.ts tests/unit/content/productionValidator.test.ts tests/unit/content/regroupBroadCategories.test.ts tests/unit/content/verifyBatch.test.ts --configLoader runner
+npm run verify:content
+~~~
+
+Expected: focused tests pass. `verify:content` must preserve the already-committed 01-12 broad-category/evidence behavior; only the known unfinished Adult/Estonia inventory may block release validation.
+
+- [ ] **Step 5: Commit the hard gate**
+
+~~~bash
+git add scripts/content/validate.ts tests/unit/content/evidence.test.ts tests/unit/content/productionValidator.test.ts tests/unit/content/regroupBroadCategories.test.ts
+git commit -m "test(content): make subject diversity non-waivable"
+~~~
+
+---
+
 ### Task 7: Author, review, verify, and publish the Adult board batch
 
 **Files:**
@@ -854,9 +930,10 @@ git commit -m "feat(content): add Adult and Estonia Finals"
 - Work only, ignored: content/work/14-adult/generated.en-et.csv
 - Work only, ignored: content/work/14-adult/evidence.jsonl
 - Work only, ignored: content/work/14-adult/report.json
+- Work only, ignored: content/work/14-adult/category-plan.json
 
 **Interfaces:**
-- Consumes: batch 14-adult, Adult policy evidence, and the accepted 174-row Final batch.
+- Consumes: batch 14-adult, the merged `subjectKey` validator contract, Adult policy evidence, and the accepted 174-row Final batch.
 - Produces: 100 reviewed bilingual Adult category sets and 500 reviewed bilingual Adult board clues.
 - Task 8 must not start until the accepted 14-adult report is freshly passing.
 
@@ -869,6 +946,21 @@ clue_id,pack_id,pack_name,category_set_id,content_kind,round,tier,difficulty,mac
 ~~~
 
 Use category IDs built-in-adult-set-001 through built-in-adult-set-100. For set N and tier T, use clue number (N - 1) * 5 + T, formatted as built-in-adult-clue-0001 through built-in-adult-clue-0500.
+
+Create `category-plan.json` as an array of exactly 100 records with this shape:
+
+~~~json
+{
+  "categorySetId": "built-in-adult-set-001",
+  "nameEn": "Customs of Courtship",
+  "nameEt": "Kurameerimistavad",
+  "subjects": [
+    { "clueId": "built-in-adult-clue-0001", "subjectKey": "love-spoon", "tier": 1, "accessibilityRationale": "The object and country are directly signposted." }
+  ]
+}
+~~~
+
+Each record has exactly five subject entries, tiers 1-5, five distinct canonical keys, and a non-empty accessibility rationale per tier. The category name states one broad casual theme. Do not use `Quick Mix`, `Grab Bag`, `Sampler`, source-title prefixes, or five clues about one subject.
 
 - [ ] **Step 2: Apply the exact round/difficulty ledger**
 
@@ -902,12 +994,14 @@ Assign ten sets to each subtheme in catalog order:
 | 081-090 | vice-moral-regulation |
 | 091-100 | landmark-research-terminology |
 
-- [ ] **Step 4: Author and review English content in ten ledger slices**
+- [ ] **Step 4: Recompose, author, and review English content in ten ledger slices**
 
-Complete set ranges 001-010, 011-020, 021-030, 031-040, 041-050, 051-060, 061-070, 071-080, 081-090, and 091-100 in order. After each slice, verify:
+The existing Adult draft predates the broad-category requirement. Preserve source-backed factual, translation, and policy repairs where they remain useful, but do not treat any earlier category or ladder approval as current acceptance. Recompose set ranges 001-010, 011-020, 021-030, 031-040, 041-050, 051-060, 061-070, 071-080, 081-090, and 091-100 in order from the category plan. After each slice, verify:
 
-- ten unique, coherent category names;
-- five escalating but answerable tiers per category;
+- ten unique, coherent, broad casual-trivia category names;
+- exactly five truthful, distinct primary `subjectKey` values per category and canonical key reuse across the pack;
+- five escalating but answerable tiers per category, with difficulty coming from clue accessibility and wording rather than subject obscurity;
+- every clue is self-contained and does not depend on another clue or a source-title prefix;
 - 50 distinct facts and fact keys;
 - no duplicated or near-duplicated clue wording against accepted board and Final content;
 - original wording rather than source paraphrase too close to the source;
@@ -927,6 +1021,7 @@ For each completed slice, add all Estonian fields, set translation_status review
 Assert exactly:
 
 - 500 CSV rows and 500 one-to-one evidence records;
+- 500 non-empty evidence `subjectKey` values and exactly five distinct keys in every category;
 - 100 category IDs and 100 unique English category names;
 - 17/16, 17/17, 16/17 set allocation;
 - ten sets per subtheme;
@@ -943,7 +1038,7 @@ npm run content:verify-batch -- --batch 14-adult --work-root content/work --sour
 npm run content:publish-batch -- --batch 14-adult --work-root content/work --accepted-root .
 ~~~
 
-Expected: both commands exit 0; report blocking false; authored and generated summaries show 500 board clues, 100 sets, and zero Finals; every source check succeeds; no unresolved evidence, translation, sample, policy, duplicate, or allocation issue remains.
+Expected: both commands exit 0; report blocking false; authored and generated summaries show 500 board clues, 100 sets, and zero Finals; every source check succeeds; no `CATEGORY_SUBJECT_DIVERSITY` or unresolved evidence, translation, sample, policy, duplicate, or allocation issue remains.
 
 - [ ] **Step 8: Commit the Adult batch**
 
@@ -966,14 +1061,15 @@ git commit -m "feat(content): add reviewed Adult board pack"
 - Work only, ignored: content/work/15-estonia/generated.en-et.csv
 - Work only, ignored: content/work/15-estonia/evidence.jsonl
 - Work only, ignored: content/work/15-estonia/report.json
+- Work only, ignored: content/work/15-estonia/category-plan.json
 
 **Interfaces:**
-- Consumes: batch 15-estonia and accepted Final/Adult batches.
+- Consumes: batch 15-estonia, the merged `subjectKey` validator contract, and accepted Final/Adult batches.
 - Produces: 100 reviewed bilingual Estonia category sets and 500 reviewed bilingual Estonia board clues.
 
 - [ ] **Step 1: Create canonical work artifacts and IDs**
 
-Use the same canonical CSV header as Task 7. Use category IDs built-in-estonia-set-001 through built-in-estonia-set-100 and clue IDs built-in-estonia-clue-0001 through built-in-estonia-clue-0500, with the same set/tier formula.
+Use the same canonical CSV header as Task 7. Use category IDs built-in-estonia-set-001 through built-in-estonia-set-100 and clue IDs built-in-estonia-clue-0001 through built-in-estonia-clue-0500, with the same set/tier formula. Create `category-plan.json` with the exact Task 7 shape: 100 broad bilingual category names, five distinct canonical subject keys and tiers 1-5 per category, and an accessibility rationale per tier.
 
 - [ ] **Step 2: Apply the exact round/difficulty ledger**
 
@@ -1005,7 +1101,7 @@ Use the same canonical CSV header as Task 7. Use category IDs built-in-estonia-s
 
 - [ ] **Step 4: Author and independently review English content in ten-set slices**
 
-Complete 001-010 through 091-100 in ascending ten-set slices. Each slice must have unique categories, five coherent tiers, distinct facts and fact keys, original wording, specific sources, factual approval, editorial approval, and zero OpenTDB inspiration.
+Complete 001-010 through 091-100 in ascending ten-set slices. Each slice must have unique broad casual-trivia categories, five distinct truthful primary subject keys per category, five coherent accessibility-based tiers, self-contained clues, distinct facts and fact keys, original wording, specific sources, factual approval, editorial approval, and zero OpenTDB inspiration. Do not create generic `Quick Mix`, `Grab Bag`, or `Sampler` titles, and do not make later tiers difficult merely by selecting obscure Estonia-specific answers.
 
 Prefer official Estonian institutions, Statistics Estonia, Riigi Teataja, archives, museums, the Estonian Language Institute, universities, and stable compatible open references. Date changing statistics, officeholders, laws, rankings, and records. Attribute disputed historical or cultural claims. Reject unsupported nationalist framing, tourism-copy generalizations, and facts that are merely Baltic rather than meaningfully Estonian.
 
@@ -1019,7 +1115,7 @@ Write natural Estonian category, clue, response, accepted variants when present,
 
 - [ ] **Step 7: Verify the exact local structure**
 
-Assert exactly 500 rows, 500 evidence records, 100 sets, 100 unique category names, the approved 17/17, 16/17, 17/16 distribution, four subthemes with nine sets, eight subthemes with eight sets, zero OpenTDB evidence, and no IDs outside the declared ranges.
+Assert exactly 500 rows, 500 evidence records with non-empty subject keys, five distinct subject keys in every category, 100 sets, 100 unique category names, the approved 17/17, 16/17, 17/16 distribution, four subthemes with nine sets, eight subthemes with eight sets, zero OpenTDB evidence, and no IDs outside the declared ranges.
 
 - [ ] **Step 8: Verify and publish the batch**
 
@@ -1030,7 +1126,7 @@ npm run content:verify-batch -- --batch 15-estonia --work-root content/work --so
 npm run content:publish-batch -- --batch 15-estonia --work-root content/work --accepted-root .
 ~~~
 
-Expected: both commands exit 0; report blocking false; authored and generated summaries show 500 board clues and 100 sets; all evidence, translation, source, duplicate, pack-identity, subtheme, and allocation gates pass.
+Expected: both commands exit 0; report blocking false; authored and generated summaries show 500 board clues and 100 sets; `CATEGORY_SUBJECT_DIVERSITY` is absent; all evidence, translation, source, duplicate, pack-identity, subtheme, and allocation gates pass.
 
 - [ ] **Step 9: Commit the Estonia batch**
 
