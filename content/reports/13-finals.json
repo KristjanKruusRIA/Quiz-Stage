@@ -4,9 +4,9 @@
   "kind": "verification",
   "blocking": false,
   "artifactHashes": {
-    "authored": "4337a135fdb7c3b6b115b6fd0192d7f1710ff0829ec407b59dd6c984e0583afd",
-    "generated": "d2c9f0f4f2d24a7f35ecac5d07b85cca5a881ece06bbe5233556331ac9032bb2",
-    "evidence": "f931d9549969289a83fef54e16ae80ccd14be308c5e7b6fce6567b57add6683e"
+    "authored": "45a9f0771438eed1fe76387f4a1a3ac623ff01d2b7782e94c716e24bf701b6a3",
+    "generated": "bc87d0f35feaab0ed984d02a57963a13404b2938a1c7a8b2ecc59198ef18bb0b",
+    "evidence": "135f9ab47a6454000ad0cb869166244ea0854f0d9356ce5621ffaae18d0593ef"
   },
   "validations": {
     "authored": {
@@ -16,10 +16,11 @@
         "boardClues": 0,
         "categorySets": 0,
         "distinctCategoryNames": 0,
-        "finalClues": 150,
+        "finalClues": 174,
         "easySets": 0,
         "mediumSets": 0,
-        "hardSets": 0
+        "hardSets": 0,
+        "builtInPacks": 3
       },
       "issues": [
         {
@@ -1221,9 +1222,345 @@
           "severity": "warning",
           "message": "Required Estonian content is missing",
           "exceptionId": "missing-et:built-in-finals-final-0150"
+        },
+        {
+          "file": "authored.csv",
+          "row": 152,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0001"
+        },
+        {
+          "file": "authored.csv",
+          "row": 153,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0002"
+        },
+        {
+          "file": "authored.csv",
+          "row": 154,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0003"
+        },
+        {
+          "file": "authored.csv",
+          "row": 155,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0004"
+        },
+        {
+          "file": "authored.csv",
+          "row": 156,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0005"
+        },
+        {
+          "file": "authored.csv",
+          "row": 157,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0006"
+        },
+        {
+          "file": "authored.csv",
+          "row": 158,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0007"
+        },
+        {
+          "file": "authored.csv",
+          "row": 159,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0008"
+        },
+        {
+          "file": "authored.csv",
+          "row": 160,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0009"
+        },
+        {
+          "file": "authored.csv",
+          "row": 161,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0010"
+        },
+        {
+          "file": "authored.csv",
+          "row": 162,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0011"
+        },
+        {
+          "file": "authored.csv",
+          "row": 163,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-adult-final-0012"
+        },
+        {
+          "file": "authored.csv",
+          "row": 164,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0001"
+        },
+        {
+          "file": "authored.csv",
+          "row": 165,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0002"
+        },
+        {
+          "file": "authored.csv",
+          "row": 166,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0003"
+        },
+        {
+          "file": "authored.csv",
+          "row": 167,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0004"
+        },
+        {
+          "file": "authored.csv",
+          "row": 168,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0005"
+        },
+        {
+          "file": "authored.csv",
+          "row": 169,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0006"
+        },
+        {
+          "file": "authored.csv",
+          "row": 170,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0007"
+        },
+        {
+          "file": "authored.csv",
+          "row": 171,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0008"
+        },
+        {
+          "file": "authored.csv",
+          "row": 172,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0009"
+        },
+        {
+          "file": "authored.csv",
+          "row": 173,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0010"
+        },
+        {
+          "file": "authored.csv",
+          "row": 174,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0011"
+        },
+        {
+          "file": "authored.csv",
+          "row": 175,
+          "code": "MISSING_TRANSLATION",
+          "severity": "warning",
+          "message": "Required Estonian content is missing",
+          "exceptionId": "missing-et:built-in-estonia-final-0012"
         }
       ],
       "exceptions": [
+        {
+          "id": "missing-et:built-in-adult-final-0001",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0001",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0002",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0002",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0003",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0003",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0004",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0004",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0005",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0005",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0006",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0006",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0007",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0007",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0008",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0008",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0009",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0009",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0010",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0010",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0011",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0011",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-adult-final-0012",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-adult-final-0012",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0001",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0001",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0002",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0002",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0003",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0003",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0004",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0004",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0005",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0005",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0006",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0006",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0007",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0007",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0008",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0008",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0009",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0009",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0010",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0010",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0011",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0011",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
+        {
+          "id": "missing-et:built-in-estonia-final-0012",
+          "code": "MISSING_TRANSLATION",
+          "clueId": "built-in-estonia-final-0012",
+          "reason": "Batch authoring exception requested by --allow-missing-et"
+        },
         {
           "id": "missing-et:built-in-finals-final-0001",
           "code": "MISSING_TRANSLATION",
@@ -2133,10 +2470,11 @@
         "boardClues": 0,
         "categorySets": 0,
         "distinctCategoryNames": 0,
-        "finalClues": 150,
+        "finalClues": 174,
         "easySets": 0,
         "mediumSets": 0,
-        "hardSets": 0
+        "hardSets": 0,
+        "builtInPacks": 3
       },
       "issues": [
         {
@@ -3170,6 +3508,190 @@
           "severity": "warning",
           "message": "A stable acronym or proper name changed in translation",
           "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0150"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 152,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0001"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 152,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-adult-final-0001"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 153,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0002"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 154,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0003"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 155,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0004"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 156,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0005"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 156,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-adult-final-0005"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 157,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 158,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0007"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 158,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-adult-final-0007"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 159,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0008"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 160,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0009"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 160,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-adult-final-0009"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 161,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0010"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 162,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0011"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 164,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0001"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 165,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0002"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 166,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0003"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 170,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0007"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 171,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0008"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 172,
+          "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+          "severity": "warning",
+          "message": "A stable acronym or proper name changed in translation",
+          "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 173,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-estonia-final-0010"
+        },
+        {
+          "file": "generated.en-et.csv",
+          "row": 174,
+          "code": "UNCHANGED_TRANSLATION",
+          "severity": "warning",
+          "message": "Multiword Estonian text is unchanged from English",
+          "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-estonia-final-0011"
         }
       ],
       "exceptions": []
@@ -3177,8 +3699,611 @@
   },
   "translationDiagnostics": {
     "blocking": false,
-    "checkedRows": 150,
+    "checkedRows": 174,
     "issues": [
+      {
+        "file": "generated.en-et.csv",
+        "row": 152,
+        "clueId": "built-in-adult-final-0001",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Kinsey's Two Reports\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 152,
+        "clueId": "built-in-adult-final-0001",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"This Indiana University\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 152,
+        "clueId": "built-in-adult-final-0001",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Kinsey Reports\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 153,
+        "clueId": "built-in-adult-final-0002",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"An Uprising\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 153,
+        "clueId": "built-in-adult-final-0002",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The June\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 153,
+        "clueId": "built-in-adult-final-0002",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Stonewall Inn\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 154,
+        "clueId": "built-in-adult-final-0003",
+        "field": "accepted_variants_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Lady Chatterley\" is missing from accepted variant translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 154,
+        "clueId": "built-in-adult-final-0003",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Lady Chatterley's Lover\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 154,
+        "clueId": "built-in-adult-final-0003",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Lady Chatterley's Lover\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 155,
+        "clueId": "built-in-adult-final-0004",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"United States\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 155,
+        "clueId": "built-in-adult-final-0004",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The United States\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 156,
+        "clueId": "built-in-adult-final-0005",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"This English\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 157,
+        "clueId": "built-in-adult-final-0006",
+        "field": "accepted_variants_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Comstock Act\" is missing from accepted variant translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 157,
+        "clueId": "built-in-adult-final-0006",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"United States\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 157,
+        "clueId": "built-in-adult-final-0006",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Comstock Act\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 157,
+        "clueId": "built-in-adult-final-0006",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Comstock Act\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 158,
+        "clueId": "built-in-adult-final-0007",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Red Windmill\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 158,
+        "clueId": "built-in-adult-final-0007",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Moulin Rouge\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 159,
+        "clueId": "built-in-adult-final-0008",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Novel Judged Obscene\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 159,
+        "clueId": "built-in-adult-final-0008",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Radclyffe Hall's\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 159,
+        "clueId": "built-in-adult-final-0008",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Well\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 159,
+        "clueId": "built-in-adult-final-0008",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Well\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Berlin Sexology Pioneer\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Scientific-Humanitarian Committee\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Sexual Reform\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"This German\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"World League\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Scientific-Humanitarian Committee\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Sexual Reform\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"World League\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 161,
+        "clueId": "built-in-adult-final-0010",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Salon\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 161,
+        "clueId": "built-in-adult-final-0010",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Paris Salon\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 161,
+        "clueId": "built-in-adult-final-0010",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Manet's Olympia\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 161,
+        "clueId": "built-in-adult-final-0010",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Paris Salon\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 162,
+        "clueId": "built-in-adult-final-0011",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Committee Named\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 162,
+        "clueId": "built-in-adult-final-0011",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Its Chair\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 162,
+        "clueId": "built-in-adult-final-0011",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"United Kingdom\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 162,
+        "clueId": "built-in-adult-final-0011",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Wolfenden\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 162,
+        "clueId": "built-in-adult-final-0011",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Wolfenden\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 163,
+        "clueId": "built-in-adult-final-0012",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Folk Devils\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 163,
+        "clueId": "built-in-adult-final-0012",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Social Fear\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 164,
+        "clueId": "built-in-estonia-final-0001",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"This Estonian\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 165,
+        "clueId": "built-in-estonia-final-0002",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Republic Proclaimed\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 165,
+        "clueId": "built-in-estonia-final-0002",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Manifesto\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 165,
+        "clueId": "built-in-estonia-final-0002",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Estonian Declaration\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 166,
+        "clueId": "built-in-estonia-final-0003",
+        "field": "accepted_variants_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Estonian Song Celebration\" is missing from accepted variant translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 166,
+        "clueId": "built-in-estonia-final-0003",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Singing Since\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 166,
+        "clueId": "built-in-estonia-final-0003",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Estonian Song Festival\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 166,
+        "clueId": "built-in-estonia-final-0003",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Estonian Song Festival\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 167,
+        "clueId": "built-in-estonia-final-0004",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Estonia's Largest Island\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 168,
+        "clueId": "built-in-estonia-final-0005",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Son\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 169,
+        "clueId": "built-in-estonia-final-0006",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Four Estonian Developers\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 170,
+        "clueId": "built-in-estonia-final-0007",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Estonia’s Supreme Council\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 170,
+        "clueId": "built-in-estonia-final-0007",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Supreme Council\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 171,
+        "clueId": "built-in-estonia-final-0008",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Soviet Union\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 171,
+        "clueId": "built-in-estonia-final-0008",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Soviet Union\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 171,
+        "clueId": "built-in-estonia-final-0008",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Soviet Union\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 171,
+        "clueId": "built-in-estonia-final-0008",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Lahemaa National Park\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 172,
+        "clueId": "built-in-estonia-final-0009",
+        "field": "accepted_variants_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Tartu University\" is missing from accepted variant translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 172,
+        "clueId": "built-in-estonia-final-0009",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"An Academy Founded\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 172,
+        "clueId": "built-in-estonia-final-0009",
+        "field": "clue_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"King Gustavus Adolphus\" is missing from clue_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 172,
+        "clueId": "built-in-estonia-final-0009",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Gustavus Adolphus\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 172,
+        "clueId": "built-in-estonia-final-0009",
+        "field": "response_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The University\" is missing from response_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 173,
+        "clueId": "built-in-estonia-final-0010",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Brief Instruction\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 174,
+        "clueId": "built-in-estonia-final-0011",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Czar's Madman\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 174,
+        "clueId": "built-in-estonia-final-0011",
+        "field": "explanation_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"The Czar’s Madman\" is missing from explanation_en translation",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 175,
+        "clueId": "built-in-estonia-final-0012",
+        "field": "category_name_en",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "message": "Proper noun \"Virtual Residency\" is missing from category_name_en translation",
+        "severity": "warning"
+      },
       {
         "file": "generated.en-et.csv",
         "row": 2,
@@ -6727,6 +7852,78 @@
       },
       {
         "file": "generated.en-et.csv",
+        "row": 152,
+        "clueId": "built-in-adult-final-0001",
+        "field": "response_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "response_en appears unchanged from English",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 156,
+        "clueId": "built-in-adult-final-0005",
+        "field": "accepted_variants_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "Accepted variants were unchanged across multiple words",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 156,
+        "clueId": "built-in-adult-final-0005",
+        "field": "response_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "response_en appears unchanged from English",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 158,
+        "clueId": "built-in-adult-final-0007",
+        "field": "accepted_variants_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "Accepted variants were unchanged across multiple words",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 160,
+        "clueId": "built-in-adult-final-0009",
+        "field": "response_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "response_en appears unchanged from English",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 173,
+        "clueId": "built-in-estonia-final-0010",
+        "field": "accepted_variants_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "Accepted variants were unchanged across multiple words",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 173,
+        "clueId": "built-in-estonia-final-0010",
+        "field": "response_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "response_en appears unchanged from English",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
+        "row": 174,
+        "clueId": "built-in-estonia-final-0011",
+        "field": "response_en",
+        "code": "UNCHANGED_TRANSLATION",
+        "message": "response_en appears unchanged from English",
+        "severity": "warning"
+      },
+      {
+        "file": "generated.en-et.csv",
         "row": 3,
         "clueId": "built-in-finals-final-0002",
         "field": "response_en",
@@ -7096,6 +8293,470 @@
       }
     ],
     "exceptions": [
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0001:category_name_en",
+        "clueId": "built-in-adult-final-0001",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0001:clue_en",
+        "clueId": "built-in-adult-final-0001",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0001:explanation_en",
+        "clueId": "built-in-adult-final-0001",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0002:category_name_en",
+        "clueId": "built-in-adult-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0002:explanation_en",
+        "clueId": "built-in-adult-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0002:response_en",
+        "clueId": "built-in-adult-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0003:accepted_variants_en",
+        "clueId": "built-in-adult-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0003:explanation_en",
+        "clueId": "built-in-adult-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0003:response_en",
+        "clueId": "built-in-adult-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0004:clue_en",
+        "clueId": "built-in-adult-final-0004",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0004:explanation_en",
+        "clueId": "built-in-adult-final-0004",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0005:clue_en",
+        "clueId": "built-in-adult-final-0005",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006:accepted_variants_en",
+        "clueId": "built-in-adult-final-0006",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006:clue_en",
+        "clueId": "built-in-adult-final-0006",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006:explanation_en",
+        "clueId": "built-in-adult-final-0006",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006:response_en",
+        "clueId": "built-in-adult-final-0006",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0007:category_name_en",
+        "clueId": "built-in-adult-final-0007",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0007:response_en",
+        "clueId": "built-in-adult-final-0007",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0008:category_name_en",
+        "clueId": "built-in-adult-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0008:explanation_en",
+        "clueId": "built-in-adult-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0008:response_en",
+        "clueId": "built-in-adult-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0009:category_name_en",
+        "clueId": "built-in-adult-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0009:clue_en",
+        "clueId": "built-in-adult-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0009:explanation_en",
+        "clueId": "built-in-adult-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0010:category_name_en",
+        "clueId": "built-in-adult-final-0010",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0010:clue_en",
+        "clueId": "built-in-adult-final-0010",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0010:explanation_en",
+        "clueId": "built-in-adult-final-0010",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0011:category_name_en",
+        "clueId": "built-in-adult-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0011:clue_en",
+        "clueId": "built-in-adult-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0011:explanation_en",
+        "clueId": "built-in-adult-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0011:response_en",
+        "clueId": "built-in-adult-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0012:category_name_en",
+        "clueId": "built-in-adult-final-0012",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0001:clue_en",
+        "clueId": "built-in-estonia-final-0001",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0002:category_name_en",
+        "clueId": "built-in-estonia-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0002:clue_en",
+        "clueId": "built-in-estonia-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0002:explanation_en",
+        "clueId": "built-in-estonia-final-0002",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0003:accepted_variants_en",
+        "clueId": "built-in-estonia-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0003:category_name_en",
+        "clueId": "built-in-estonia-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0003:explanation_en",
+        "clueId": "built-in-estonia-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0003:response_en",
+        "clueId": "built-in-estonia-final-0003",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0004:category_name_en",
+        "clueId": "built-in-estonia-final-0004",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0005:category_name_en",
+        "clueId": "built-in-estonia-final-0005",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0006:category_name_en",
+        "clueId": "built-in-estonia-final-0006",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0007:clue_en",
+        "clueId": "built-in-estonia-final-0007",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0007:explanation_en",
+        "clueId": "built-in-estonia-final-0007",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0008:category_name_en",
+        "clueId": "built-in-estonia-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0008:clue_en",
+        "clueId": "built-in-estonia-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0008:explanation_en",
+        "clueId": "built-in-estonia-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0008:response_en",
+        "clueId": "built-in-estonia-final-0008",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009:accepted_variants_en",
+        "clueId": "built-in-estonia-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009:category_name_en",
+        "clueId": "built-in-estonia-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009:clue_en",
+        "clueId": "built-in-estonia-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009:explanation_en",
+        "clueId": "built-in-estonia-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0009:response_en",
+        "clueId": "built-in-estonia-final-0009",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0010:category_name_en",
+        "clueId": "built-in-estonia-final-0010",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0011:category_name_en",
+        "clueId": "built-in-estonia-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0011:explanation_en",
+        "clueId": "built-in-estonia-final-0011",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-final-0012:category_name_en",
+        "clueId": "built-in-estonia-final-0012",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
       {
         "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0001:category_name_en",
         "clueId": "built-in-finals-final-0001",
@@ -10025,6 +11686,70 @@
         "correctedText": ""
       },
       {
+        "id": "UNCHANGED_TRANSLATION:built-in-adult-final-0001:response_en",
+        "clueId": "built-in-adult-final-0001",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-adult-final-0005:accepted_variants_en",
+        "clueId": "built-in-adult-final-0005",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-adult-final-0005:response_en",
+        "clueId": "built-in-adult-final-0005",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-adult-final-0007:accepted_variants_en",
+        "clueId": "built-in-adult-final-0007",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-adult-final-0009:response_en",
+        "clueId": "built-in-adult-final-0009",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-estonia-final-0010:accepted_variants_en",
+        "clueId": "built-in-estonia-final-0010",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-estonia-final-0010:response_en",
+        "clueId": "built-in-estonia-final-0010",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
+        "id": "UNCHANGED_TRANSLATION:built-in-estonia-final-0011:response_en",
+        "clueId": "built-in-estonia-final-0011",
+        "code": "UNCHANGED_TRANSLATION",
+        "status": "pending",
+        "reviewerReason": "pending-review",
+        "correctedText": ""
+      },
+      {
         "id": "UNCHANGED_TRANSLATION:built-in-finals-final-0002:response_en",
         "clueId": "built-in-finals-final-0002",
         "code": "UNCHANGED_TRANSLATION",
@@ -10548,6 +12273,22 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Citizen_Kane&oldid=1369935656"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Combined_oral_contraceptive_pill&oldid=1369910395",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:28.961Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Combined_oral_contraceptive_pill&oldid=1369910395"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Comstock_Act_of_1873&oldid=1367376129",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:28.943Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Comstock_Act_of_1873&oldid=1367376129"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Containerization&oldid=1367509279",
       "ok": true,
       "status": 200,
@@ -10652,6 +12393,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Duckworth%E2%80%93Lewis%E2%80%93Stern_method&oldid=1359822158"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=E-Residency_of_Estonia&oldid=1369007253",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:28.907Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=E-Residency_of_Estonia&oldid=1369007253"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=ENIAC&oldid=1369893192",
       "ok": true,
       "status": 200,
@@ -10690,6 +12439,30 @@
       "retrievedAt": "2026-08-25T17:03:12.484Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Espresso&oldid=1369844273"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Declaration_of_Independence&oldid=1354083674",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:29.029Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Declaration_of_Independence&oldid=1354083674"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Restoration_of_Independence&oldid=1331554284",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:29.508Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Restoration_of_Independence&oldid=1331554284"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Song_Festival&oldid=1362408824",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:29.730Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Song_Festival&oldid=1362408824"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=Euro&oldid=1370833660",
@@ -10852,6 +12625,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Haitian_Revolution&oldid=1370881344"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Havelock_Ellis&oldid=1365634561",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:29.319Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Havelock_Ellis&oldid=1365634561"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Human_Development_Index&oldid=1369417898",
       "ok": true,
       "status": 200,
@@ -10884,6 +12665,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kalevala&oldid=1368445058"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Kalevipoeg&oldid=1358231115",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:29.737Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kalevipoeg&oldid=1358231115"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Kimchi&oldid=1371160012",
       "ok": true,
       "status": 200,
@@ -10908,6 +12697,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kinescope&oldid=1368521750"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Kinsey_Reports&oldid=1371492438",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.058Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kinsey_Reports&oldid=1371492438"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Kuleshov_effect&oldid=1368734272",
       "ok": true,
       "status": 200,
@@ -10916,12 +12713,36 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kuleshov_effect&oldid=1368734272"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=L%C3%BChhike_%C3%B6ppetus&oldid=1358131591",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.233Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=L%C3%BChhike_%C3%B6ppetus&oldid=1358131591"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Lady_Chatterley%27s_Lover&oldid=1370151934",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.328Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lady_Chatterley%27s_Lover&oldid=1370151934"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Lagrange_point&oldid=1369974731",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-25T17:03:13.348Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lagrange_point&oldid=1369974731"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Lahemaa_National_Park&oldid=1362783548",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.086Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lahemaa_National_Park&oldid=1362783548"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=Lake_Baikal&oldid=1369917146",
@@ -10972,6 +12793,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Magna_Carta&oldid=1368452958"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Magnus_Hirschfeld&oldid=1369436552",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.775Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Magnus_Hirschfeld&oldid=1369436552"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Maillard_reaction&oldid=1369475738",
       "ok": true,
       "status": 200,
@@ -11020,6 +12849,22 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Mona_Lisa&oldid=1370187675"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Moral_panic&oldid=1371531550",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.784Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moral_panic&oldid=1371531550"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Moulin_Rouge&oldid=1367400599",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.867Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moulin_Rouge&oldid=1367400599"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Mount_Everest&oldid=1371041797",
       "ok": true,
       "status": 200,
@@ -11066,6 +12911,14 @@
       "retrievedAt": "2026-08-25T17:03:13.834Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Oklo&oldid=1348631550"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Olympia_(Manet)&oldid=1361580203",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:30.754Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Olympia_(Manet)&oldid=1361580203"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=One_Hundred_Years_of_Solitude&oldid=1371043130",
@@ -11188,6 +13041,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rules_of_Go&oldid=1361726571"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Saaremaa&oldid=1365844908",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.101Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Saaremaa&oldid=1365844908"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Sagrada_Fam%C3%ADlia&oldid=1371239728",
       "ok": true,
       "status": 200,
@@ -11252,6 +13113,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Silk_Road&oldid=1370211457"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Skype&oldid=1367686665",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.020Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Skype&oldid=1367686665"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Spirited_Away&oldid=1370076052",
       "ok": true,
       "status": 200,
@@ -11274,6 +13143,14 @@
       "retrievedAt": "2026-08-25T17:03:14.672Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Stoicism&oldid=1370300298"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Stonewall_riots&oldid=1370935939",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.324Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Stonewall_riots&oldid=1370935939"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=Strait_of_Malacca&oldid=1366875529",
@@ -11308,6 +13185,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Taiping_Rebellion&oldid=1370759826"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Tallinn&oldid=1371216176",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.617Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tallinn&oldid=1371216176"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Tardigrade&oldid=1370671354",
       "ok": true,
       "status": 200,
@@ -11338,6 +13223,14 @@
       "retrievedAt": "2026-08-25T17:03:14.909Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Cenotaph&oldid=1370656571"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=The_Czar%27s_Madman&oldid=1304567808",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.607Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Czar%27s_Madman&oldid=1304567808"
     },
     {
       "url": "https://en.wikipedia.org/w/index.php?title=The_Federalist_Papers&oldid=1369902230",
@@ -11412,6 +13305,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Well-Tempered_Clavier&oldid=1362460129"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=The_Well_of_Loneliness&oldid=1365426631",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.632Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Well_of_Loneliness&oldid=1365426631"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Theremin&oldid=1369339724",
       "ok": true,
       "status": 200,
@@ -11484,6 +13385,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Universal_suffrage&oldid=1357310178"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=University_of_Tartu&oldid=1361397408",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:31.805Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=University_of_Tartu&oldid=1361397408"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=Watt_steam_engine&oldid=1369665392",
       "ok": true,
       "status": 200,
@@ -11516,6 +13425,14 @@
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wimbledon_Championships&oldid=1369687468"
     },
     {
+      "url": "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-27T09:38:32.243Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676"
+    },
+    {
       "url": "https://en.wikipedia.org/w/index.php?title=World_Wide_Web&oldid=1369656827",
       "ok": true,
       "status": 200,
@@ -11534,55 +13451,55 @@
   ],
   "samples": {
     "easy": [
+      "built-in-adult-final-0001",
+      "built-in-adult-final-0002",
+      "built-in-adult-final-0003",
+      "built-in-adult-final-0004",
+      "built-in-estonia-final-0001",
+      "built-in-estonia-final-0002",
+      "built-in-estonia-final-0003",
+      "built-in-estonia-final-0004",
       "built-in-finals-final-0001",
       "built-in-finals-final-0002",
       "built-in-finals-final-0003",
       "built-in-finals-final-0004",
       "built-in-finals-final-0005",
       "built-in-finals-final-0014",
-      "built-in-finals-final-0015",
-      "built-in-finals-final-0016",
-      "built-in-finals-final-0017",
-      "built-in-finals-final-0018",
-      "built-in-finals-final-0027",
-      "built-in-finals-final-0028",
-      "built-in-finals-final-0029",
-      "built-in-finals-final-0030",
-      "built-in-finals-final-0040"
+      "built-in-finals-final-0015"
     ],
     "hard": [
+      "built-in-adult-final-0009",
+      "built-in-adult-final-0010",
+      "built-in-adult-final-0011",
+      "built-in-adult-final-0012",
+      "built-in-estonia-final-0009",
+      "built-in-estonia-final-0010",
+      "built-in-estonia-final-0011",
+      "built-in-estonia-final-0012",
       "built-in-finals-final-0010",
       "built-in-finals-final-0011",
       "built-in-finals-final-0012",
       "built-in-finals-final-0013",
       "built-in-finals-final-0023",
       "built-in-finals-final-0024",
-      "built-in-finals-final-0025",
-      "built-in-finals-final-0026",
-      "built-in-finals-final-0036",
-      "built-in-finals-final-0037",
-      "built-in-finals-final-0038",
-      "built-in-finals-final-0039",
-      "built-in-finals-final-0049",
-      "built-in-finals-final-0050",
-      "built-in-finals-final-0051"
+      "built-in-finals-final-0025"
     ],
     "medium": [
+      "built-in-adult-final-0005",
+      "built-in-adult-final-0006",
+      "built-in-adult-final-0007",
+      "built-in-adult-final-0008",
+      "built-in-estonia-final-0005",
+      "built-in-estonia-final-0006",
+      "built-in-estonia-final-0007",
+      "built-in-estonia-final-0008",
       "built-in-finals-final-0006",
       "built-in-finals-final-0007",
       "built-in-finals-final-0008",
       "built-in-finals-final-0009",
       "built-in-finals-final-0019",
       "built-in-finals-final-0020",
-      "built-in-finals-final-0021",
-      "built-in-finals-final-0022",
-      "built-in-finals-final-0031",
-      "built-in-finals-final-0032",
-      "built-in-finals-final-0033",
-      "built-in-finals-final-0034",
-      "built-in-finals-final-0035",
-      "built-in-finals-final-0044",
-      "built-in-finals-final-0045"
+      "built-in-finals-final-0021"
     ]
   },
   "unresolvedIssues": [
@@ -11932,13 +13849,157 @@
       "scope": "authored",
       "code": "MISSING_TRANSLATION",
       "clueId": null,
+      "message": "authored.csv:152: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:153: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:154: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:155: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:156: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:157: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:158: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:159: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
       "message": "authored.csv:15: Required Estonian content is missing"
     },
     {
       "scope": "authored",
       "code": "MISSING_TRANSLATION",
       "clueId": null,
+      "message": "authored.csv:160: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:161: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:162: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:163: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:164: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:165: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:166: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:167: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:168: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:169: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
       "message": "authored.csv:16: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:170: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:171: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:172: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:173: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:174: Required Estonian content is missing"
+    },
+    {
+      "scope": "authored",
+      "code": "MISSING_TRANSLATION",
+      "clueId": null,
+      "message": "authored.csv:175: Required Estonian content is missing"
     },
     {
       "scope": "authored",
@@ -12688,7 +14749,109 @@
       "scope": "generated",
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": null,
+      "message": "generated.en-et.csv:152: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:153: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:154: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:155: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:156: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:157: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:158: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:159: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
       "message": "generated.en-et.csv:15: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:160: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:161: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:162: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:164: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:165: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:166: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:170: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:171: A stable acronym or proper name changed in translation"
+    },
+    {
+      "scope": "generated",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": null,
+      "message": "generated.en-et.csv:172: A stable acronym or proper name changed in translation"
     },
     {
       "scope": "generated",
@@ -13108,7 +15271,43 @@
       "scope": "generated",
       "code": "UNCHANGED_TRANSLATION",
       "clueId": null,
+      "message": "generated.en-et.csv:152: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
+      "message": "generated.en-et.csv:156: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
+      "message": "generated.en-et.csv:158: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
+      "message": "generated.en-et.csv:160: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
       "message": "generated.en-et.csv:16: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
+      "message": "generated.en-et.csv:173: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "generated",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": null,
+      "message": "generated.en-et.csv:174: Multiword Estonian text is unchanged from English"
     },
     {
       "scope": "generated",
@@ -13259,6 +15458,408 @@
       "code": "UNCHANGED_TRANSLATION",
       "clueId": null,
       "message": "generated.en-et.csv:98: Multiword Estonian text is unchanged from English"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0001",
+      "message": "generated.en-et.csv:152:category_name_en: Proper noun \"Kinsey's Two Reports\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0001",
+      "message": "generated.en-et.csv:152:clue_en: Proper noun \"This Indiana University\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0001",
+      "message": "generated.en-et.csv:152:explanation_en: Proper noun \"Kinsey Reports\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0002",
+      "message": "generated.en-et.csv:153:category_name_en: Proper noun \"An Uprising\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0002",
+      "message": "generated.en-et.csv:153:explanation_en: Proper noun \"The June\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0002",
+      "message": "generated.en-et.csv:153:response_en: Proper noun \"The Stonewall Inn\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0003",
+      "message": "generated.en-et.csv:154:accepted_variants_en: Proper noun \"Lady Chatterley\" is missing from accepted variant translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0003",
+      "message": "generated.en-et.csv:154:explanation_en: Proper noun \"Lady Chatterley's Lover\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0003",
+      "message": "generated.en-et.csv:154:response_en: Proper noun \"Lady Chatterley's Lover\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0004",
+      "message": "generated.en-et.csv:155:clue_en: Proper noun \"United States\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0004",
+      "message": "generated.en-et.csv:155:explanation_en: Proper noun \"The United States\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0005",
+      "message": "generated.en-et.csv:156:clue_en: Proper noun \"This English\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0006",
+      "message": "generated.en-et.csv:157:accepted_variants_en: Proper noun \"Comstock Act\" is missing from accepted variant translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0006",
+      "message": "generated.en-et.csv:157:clue_en: Proper noun \"United States\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0006",
+      "message": "generated.en-et.csv:157:explanation_en: Proper noun \"The Comstock Act\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0006",
+      "message": "generated.en-et.csv:157:response_en: Proper noun \"The Comstock Act\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0007",
+      "message": "generated.en-et.csv:158:category_name_en: Proper noun \"Red Windmill\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0007",
+      "message": "generated.en-et.csv:158:response_en: Proper noun \"The Moulin Rouge\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0008",
+      "message": "generated.en-et.csv:159:category_name_en: Proper noun \"Novel Judged Obscene\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0008",
+      "message": "generated.en-et.csv:159:explanation_en: Proper noun \"Radclyffe Hall's\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0008",
+      "message": "generated.en-et.csv:159:explanation_en: Proper noun \"The Well\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0008",
+      "message": "generated.en-et.csv:159:response_en: Proper noun \"The Well\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:category_name_en: Proper noun \"Berlin Sexology Pioneer\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:clue_en: Proper noun \"Scientific-Humanitarian Committee\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:clue_en: Proper noun \"Sexual Reform\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:clue_en: Proper noun \"This German\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:clue_en: Proper noun \"World League\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:explanation_en: Proper noun \"Scientific-Humanitarian Committee\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:explanation_en: Proper noun \"Sexual Reform\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:explanation_en: Proper noun \"World League\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0010",
+      "message": "generated.en-et.csv:161:category_name_en: Proper noun \"The Salon\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0010",
+      "message": "generated.en-et.csv:161:clue_en: Proper noun \"Paris Salon\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0010",
+      "message": "generated.en-et.csv:161:explanation_en: Proper noun \"Manet's Olympia\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0010",
+      "message": "generated.en-et.csv:161:explanation_en: Proper noun \"Paris Salon\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0011",
+      "message": "generated.en-et.csv:162:category_name_en: Proper noun \"Committee Named\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0011",
+      "message": "generated.en-et.csv:162:category_name_en: Proper noun \"Its Chair\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0011",
+      "message": "generated.en-et.csv:162:clue_en: Proper noun \"United Kingdom\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0011",
+      "message": "generated.en-et.csv:162:explanation_en: Proper noun \"The Wolfenden\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0011",
+      "message": "generated.en-et.csv:162:response_en: Proper noun \"The Wolfenden\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0012",
+      "message": "generated.en-et.csv:163:category_name_en: Proper noun \"Folk Devils\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-adult-final-0012",
+      "message": "generated.en-et.csv:163:category_name_en: Proper noun \"Social Fear\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0001",
+      "message": "generated.en-et.csv:164:clue_en: Proper noun \"This Estonian\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0002",
+      "message": "generated.en-et.csv:165:category_name_en: Proper noun \"Republic Proclaimed\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0002",
+      "message": "generated.en-et.csv:165:clue_en: Proper noun \"The Manifesto\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0002",
+      "message": "generated.en-et.csv:165:explanation_en: Proper noun \"The Estonian Declaration\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0003",
+      "message": "generated.en-et.csv:166:accepted_variants_en: Proper noun \"Estonian Song Celebration\" is missing from accepted variant translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0003",
+      "message": "generated.en-et.csv:166:category_name_en: Proper noun \"Singing Since\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0003",
+      "message": "generated.en-et.csv:166:explanation_en: Proper noun \"The Estonian Song Festival\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0003",
+      "message": "generated.en-et.csv:166:response_en: Proper noun \"The Estonian Song Festival\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0004",
+      "message": "generated.en-et.csv:167:category_name_en: Proper noun \"Estonia's Largest Island\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0005",
+      "message": "generated.en-et.csv:168:category_name_en: Proper noun \"The Son\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0006",
+      "message": "generated.en-et.csv:169:category_name_en: Proper noun \"Four Estonian Developers\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0007",
+      "message": "generated.en-et.csv:170:clue_en: Proper noun \"Estonia’s Supreme Council\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0007",
+      "message": "generated.en-et.csv:170:explanation_en: Proper noun \"The Supreme Council\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0008",
+      "message": "generated.en-et.csv:171:category_name_en: Proper noun \"Soviet Union\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0008",
+      "message": "generated.en-et.csv:171:clue_en: Proper noun \"Soviet Union\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0008",
+      "message": "generated.en-et.csv:171:explanation_en: Proper noun \"Soviet Union\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0008",
+      "message": "generated.en-et.csv:171:response_en: Proper noun \"Lahemaa National Park\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0009",
+      "message": "generated.en-et.csv:172:accepted_variants_en: Proper noun \"Tartu University\" is missing from accepted variant translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0009",
+      "message": "generated.en-et.csv:172:category_name_en: Proper noun \"An Academy Founded\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0009",
+      "message": "generated.en-et.csv:172:clue_en: Proper noun \"King Gustavus Adolphus\" is missing from clue_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0009",
+      "message": "generated.en-et.csv:172:explanation_en: Proper noun \"Gustavus Adolphus\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0009",
+      "message": "generated.en-et.csv:172:response_en: Proper noun \"The University\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0010",
+      "message": "generated.en-et.csv:173:category_name_en: Proper noun \"Brief Instruction\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0011",
+      "message": "generated.en-et.csv:174:category_name_en: Proper noun \"The Czar's Madman\" is missing from category_name_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0011",
+      "message": "generated.en-et.csv:174:explanation_en: Proper noun \"The Czar’s Madman\" is missing from explanation_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+      "clueId": "built-in-estonia-final-0012",
+      "message": "generated.en-et.csv:175:category_name_en: Proper noun \"Virtual Residency\" is missing from category_name_en translation"
     },
     {
       "scope": "translation",
@@ -15623,6 +18224,54 @@
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-finals-final-0150",
       "message": "generated.en-et.csv:151:response_en: Proper noun \"The Ship\" is missing from response_en translation"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-adult-final-0001",
+      "message": "generated.en-et.csv:152:response_en: response_en appears unchanged from English"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-adult-final-0005",
+      "message": "generated.en-et.csv:156:accepted_variants_en: Accepted variants were unchanged across multiple words"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-adult-final-0005",
+      "message": "generated.en-et.csv:156:response_en: response_en appears unchanged from English"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-adult-final-0007",
+      "message": "generated.en-et.csv:158:accepted_variants_en: Accepted variants were unchanged across multiple words"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-adult-final-0009",
+      "message": "generated.en-et.csv:160:response_en: response_en appears unchanged from English"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-estonia-final-0010",
+      "message": "generated.en-et.csv:173:accepted_variants_en: Accepted variants were unchanged across multiple words"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-estonia-final-0010",
+      "message": "generated.en-et.csv:173:response_en: response_en appears unchanged from English"
+    },
+    {
+      "scope": "translation",
+      "code": "UNCHANGED_TRANSLATION",
+      "clueId": "built-in-estonia-final-0011",
+      "message": "generated.en-et.csv:174:response_en: response_en appears unchanged from English"
     },
     {
       "scope": "translation",

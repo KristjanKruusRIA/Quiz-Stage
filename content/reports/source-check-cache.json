@@ -17568,6 +17568,294 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869"
       }
+    },
+    "https://en.wikipedia.org/w/index.php?title=E-Residency_of_Estonia&oldid=1369007253": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:28.907Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=E-Residency_of_Estonia&oldid=1369007253",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:28.907Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=E-Residency_of_Estonia&oldid=1369007253"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Comstock_Act_of_1873&oldid=1367376129": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:28.943Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Comstock_Act_of_1873&oldid=1367376129",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:28.943Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Comstock_Act_of_1873&oldid=1367376129"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Combined_oral_contraceptive_pill&oldid=1369910395": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:28.961Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Combined_oral_contraceptive_pill&oldid=1369910395",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:28.961Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Combined_oral_contraceptive_pill&oldid=1369910395"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Estonian_Declaration_of_Independence&oldid=1354083674": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:29.029Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Declaration_of_Independence&oldid=1354083674",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:29.029Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Declaration_of_Independence&oldid=1354083674"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Havelock_Ellis&oldid=1365634561": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:29.319Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Havelock_Ellis&oldid=1365634561",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:29.319Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Havelock_Ellis&oldid=1365634561"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Estonian_Restoration_of_Independence&oldid=1331554284": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:29.508Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Restoration_of_Independence&oldid=1331554284",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:29.508Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Restoration_of_Independence&oldid=1331554284"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Estonian_Song_Festival&oldid=1362408824": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:29.730Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Estonian_Song_Festival&oldid=1362408824",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:29.730Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Estonian_Song_Festival&oldid=1362408824"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Kalevipoeg&oldid=1358231115": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:29.737Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Kalevipoeg&oldid=1358231115",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:29.737Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kalevipoeg&oldid=1358231115"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Kinsey_Reports&oldid=1371492438": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.058Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Kinsey_Reports&oldid=1371492438",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.058Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kinsey_Reports&oldid=1371492438"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Lahemaa_National_Park&oldid=1362783548": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.086Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Lahemaa_National_Park&oldid=1362783548",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.086Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lahemaa_National_Park&oldid=1362783548"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=L%C3%BChhike_%C3%B6ppetus&oldid=1358131591": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.233Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=L%C3%BChhike_%C3%B6ppetus&oldid=1358131591",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.233Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=L%C3%BChhike_%C3%B6ppetus&oldid=1358131591"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Lady_Chatterley%27s_Lover&oldid=1370151934": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.328Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Lady_Chatterley%27s_Lover&oldid=1370151934",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.328Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Lady_Chatterley%27s_Lover&oldid=1370151934"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Olympia_(Manet)&oldid=1361580203": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.754Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Olympia_(Manet)&oldid=1361580203",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.754Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Olympia_(Manet)&oldid=1361580203"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Magnus_Hirschfeld&oldid=1369436552": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.776Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Magnus_Hirschfeld&oldid=1369436552",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.775Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Magnus_Hirschfeld&oldid=1369436552"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Moral_panic&oldid=1371531550": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.784Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Moral_panic&oldid=1371531550",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.784Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moral_panic&oldid=1371531550"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Moulin_Rouge&oldid=1367400599": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:30.867Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Moulin_Rouge&oldid=1367400599",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:30.867Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Moulin_Rouge&oldid=1367400599"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Skype&oldid=1367686665": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.020Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Skype&oldid=1367686665",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.020Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Skype&oldid=1367686665"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Saaremaa&oldid=1365844908": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Saaremaa&oldid=1365844908",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Saaremaa&oldid=1365844908"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Stonewall_riots&oldid=1370935939": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.325Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Stonewall_riots&oldid=1370935939",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.324Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Stonewall_riots&oldid=1370935939"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Czar%27s_Madman&oldid=1304567808": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.607Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Czar%27s_Madman&oldid=1304567808",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.607Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Czar%27s_Madman&oldid=1304567808"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Tallinn&oldid=1371216176": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.617Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Tallinn&oldid=1371216176",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.617Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tallinn&oldid=1371216176"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=The_Well_of_Loneliness&oldid=1365426631": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.632Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=The_Well_of_Loneliness&oldid=1365426631",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.632Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Well_of_Loneliness&oldid=1365426631"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=University_of_Tartu&oldid=1361397408": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:31.805Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=University_of_Tartu&oldid=1361397408",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:31.805Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=University_of_Tartu&oldid=1361397408"
+      }
+    },
+    "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676": {
+      "version": 1,
+      "expiresAt": "2026-09-03T09:38:32.243Z",
+      "result": {
+        "url": "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T09:38:32.243Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wolfenden_report&oldid=1341227676"
+      }
     }
   }
 }
