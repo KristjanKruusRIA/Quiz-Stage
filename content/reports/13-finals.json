@@ -4,9 +4,9 @@
   "kind": "verification",
   "blocking": false,
   "artifactHashes": {
-    "authored": "fe0968d7e9763cca914837de1c9e2f8f7b49a8d7e7992b78175a3e799c5d17f1",
-    "generated": "f1b9034832a53096d9e6352511af983403a5634423d49f7c98ae67f933753ed9",
-    "evidence": "ff3ba88a90e32bea0f0ea9076cfe7fc8cd61462528997473c74dec58bbfcaa1d"
+    "authored": "649f184e03290bb704eafd4a0478c3c1b0dd3e081c9e1f04c6d54042584003b2",
+    "generated": "0a1d2010b7fd3a4ed3a40a27bc0567ce16292a604d443df6a16c03388a453212",
+    "evidence": "b4599e2e58a047198dd2ffe1bae8303909bde31530b5f03bb810e1102dc25e3f"
   },
   "validations": {
     "authored": {
@@ -3861,15 +3861,6 @@
         "field": "response_en",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "message": "Proper noun \"The Comstock Act\" is missing from response_en translation",
-        "severity": "warning"
-      },
-      {
-        "file": "generated.en-et.csv",
-        "row": 158,
-        "clueId": "built-in-adult-final-0007",
-        "field": "category_name_en",
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "message": "Proper noun \"Red Windmill\" is missing from category_name_en translation",
         "severity": "warning"
       },
       {
@@ -8451,14 +8442,6 @@
       {
         "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0006:response_en",
         "clueId": "built-in-adult-final-0006",
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "status": "pending",
-        "reviewerReason": "pending-review",
-        "correctedText": ""
-      },
-      {
-        "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-final-0007:category_name_en",
-        "clueId": "built-in-adult-final-0007",
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "status": "pending",
         "reviewerReason": "pending-review",
@@ -15601,12 +15584,6 @@
       "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
       "clueId": "built-in-adult-final-0006",
       "message": "generated.en-et.csv:157:response_en: Proper noun \"The Comstock Act\" is missing from response_en translation"
-    },
-    {
-      "scope": "translation",
-      "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-      "clueId": "built-in-adult-final-0007",
-      "message": "generated.en-et.csv:158:category_name_en: Proper noun \"Red Windmill\" is missing from category_name_en translation"
     },
     {
       "scope": "translation",
