@@ -95,20 +95,6 @@ function boardRow(setIndex: number, tier: number, overrides: Partial<Row> = {}):
   };
 }
 
-function finalRow(index: number): Row {
-  return boardRow(20_000 + index, 0, {
-    clue_id: `final-${index}`,
-    category_set_id: `final-set-${index}`,
-    content_kind: 'final',
-    round: 'final',
-    tier: '0',
-    difficulty: (['easy', 'medium', 'hard'] as const)[index % 3],
-    macro_topic: `final-topic-${index % 12}`,
-    category_name_en: `Final Category ${index}`,
-    category_name_et: `Finaalkategooria ${index}`,
-  });
-}
-
 const approvedReview = {
   reviewer: 'Independent Reviewer',
   reviewedAt: '2026-08-12T11:00:00Z',
@@ -267,7 +253,8 @@ function twelveValidSets(): Row[] {
 describe('production content validation', () => {
   it('defaults older non-Adult evidence to no Adult policy review', () => {
     const row = boardRow(0, 1);
-    const { adultPolicyReview: _adultPolicyReview, ...olderEvidence } = evidenceFor(row, '01-history');
+    const olderEvidence: Partial<ContentEvidence> = { ...evidenceFor(row, '01-history') };
+    delete olderEvidence.adultPolicyReview;
 
     expect(contentEvidenceSchema.parse(olderEvidence).adultPolicyReview).toBeNull();
   });

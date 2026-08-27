@@ -105,7 +105,8 @@ describe('content evidence', () => {
   it('parses optional subject keys and Final-compatible evidence without one', () => {
     expect(contentEvidenceSchema.parse({ ...validEvidence, subjectKey: 'subject:galaxy' }).subjectKey)
       .toBe('subject:galaxy');
-    const { subjectKey: _subjectKey, ...finalEvidence } = validEvidence;
+    const finalEvidence: Partial<typeof validEvidence> = { ...validEvidence };
+    delete finalEvidence.subjectKey;
     expect(contentEvidenceSchema.parse(finalEvidence).subjectKey).toBeUndefined();
   });
 
