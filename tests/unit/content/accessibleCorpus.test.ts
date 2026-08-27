@@ -98,6 +98,10 @@ function normalized(value: string): string {
     .trim();
 }
 
+function containsNormalizedPhrase(value: string, phrase: string): boolean {
+  return ` ${normalized(value)} `.includes(` ${normalized(phrase)} `);
+}
+
 function question(categoryKey: string, tier: 1 | 2 | 3 | 4 | 5): AccessibleQuestion {
   return {
     key: `${categoryKey}-question-${tier}`,
@@ -483,10 +487,14 @@ describe('accessible corpus ledgers', () => {
     for (const title of ACCESSIBLE_CATEGORY_TITLES) {
       if (!retainedIds.has(title.categorySetId)) continue;
       for (const response of accepted.get(title.categorySetId)!.responses) {
-        expect(normalized(title.name.en), `${title.categorySetId} English: ${response.en}`)
-          .not.toContain(normalized(response.en));
-        expect(normalized(title.name.et), `${title.categorySetId} Estonian: ${response.et}`)
-          .not.toContain(normalized(response.et));
+        expect(
+          containsNormalizedPhrase(title.name.en, response.en),
+          `${title.categorySetId} English: ${response.en}`,
+        ).toBe(false);
+        expect(
+          containsNormalizedPhrase(title.name.et, response.et),
+          `${title.categorySetId} Estonian: ${response.et}`,
+        ).toBe(false);
       }
     }
   });
@@ -633,6 +641,71 @@ describe('validateAccessibleCorpus', () => {
     };
     expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
       'Question target-a-question-1 leaks its English response in the category title',
+    );
+  });
+
+  it.each([
+    {
+      response: 'Moon',
+      clue: 'Name Earth\'s familiar natural satellite.',
+      title: 'Moons of the Solar System',
+    },
+    {
+      response: 'euro',
+      clue: 'Name the currency used across many European countries.',
+      title: 'Currencies of Europe',
+    },
+  ])('does not treat $response inside a longer token as an answer leak', ({
+    response,
+    clue,
+    title,
+  }) => {
+    const original = category('target-a');
+    const candidate = withQuestion(
+      { ...original, name: { ...original.name, en: title } },
+      0,
+      {
+        ...original.questions[0]!,
+        clue: { ...original.questions[0]!.clue, en: clue },
+        response: { ...original.questions[0]!.response, en: response },
+      },
+    );
+
+    expect(() => validateAccessibleCorpus([candidate], targets.slice(0, 1))).not.toThrow();
+  });
+
+  it.each([
+    {
+      response: 'Moon',
+      clue: 'Name Earth\'s familiar natural satellite.',
+      title: 'Facts about the Moon',
+      location: 'category title',
+    },
+    {
+      response: 'euro',
+      clue: 'Name the euro used across many countries.',
+      title: 'Currencies of Europe',
+      location: 'clue',
+    },
+  ])('still rejects the exact $response token in the $location', ({
+    response,
+    clue,
+    title,
+    location,
+  }) => {
+    const original = category('target-a');
+    const invalid = withQuestion(
+      { ...original, name: { ...original.name, en: title } },
+      0,
+      {
+        ...original.questions[0]!,
+        clue: { ...original.questions[0]!.clue, en: clue },
+        response: { ...original.questions[0]!.response, en: response },
+      },
+    );
+
+    expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
+      `Question target-a-question-1 leaks its English response in the ${location}`,
     );
   });
 
