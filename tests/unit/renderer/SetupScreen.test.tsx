@@ -10,8 +10,8 @@ function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
     surface: 'host',
     getSetupOptions: vi.fn(async () => ({
       packs: [
-        { id: 'pack-one', name: 'Pack One', enabled: true },
-        { id: 'pack-two', name: 'Pack Two', enabled: true },
+        { id: 'pack-one', name: 'Pack One', enabled: true, selectedByDefault: true },
+        { id: 'pack-two', name: 'Pack Two', enabled: true, selectedByDefault: true },
       ],
       automaticDisplayMode: 'dual' as const,
     })),
@@ -36,6 +36,52 @@ function deferred<T>() {
 }
 
 describe('SetupScreen', () => {
+  it('leaves Adult opt-in while retaining other available packs by default', async () => {
+    const checkContentAvailability = vi.fn(async () => ({ ok: true as const }));
+    const desktopApi = api({
+      getSetupOptions: vi.fn(async () => ({
+        packs: [
+          { id: 'built-in-adult', name: 'Adult (Mature) / T\u00e4iskasvanutele', enabled: true, selectedByDefault: false },
+          { id: 'built-in-estonia', name: 'Estonia / Eesti', enabled: true, selectedByDefault: true },
+          { id: 'built-in-finals', name: 'Finals Pack', enabled: true, selectedByDefault: true },
+        ],
+        automaticDisplayMode: 'dual' as const,
+      })),
+      checkContentAvailability,
+    });
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} onBack={vi.fn()} />);
+
+    const adult = await screen.findByRole('checkbox', { name: 'Adult (Mature) / T\u00e4iskasvanutele' });
+    const estonia = screen.getByRole('checkbox', { name: 'Estonia / Eesti' });
+    const finals = screen.getByRole('checkbox', { name: 'Finals Pack' });
+    expect(adult).not.toBeChecked();
+    expect(estonia).toBeChecked();
+    expect(finals).toBeChecked();
+    await waitFor(() => expect(checkContentAvailability).toHaveBeenLastCalledWith(expect.objectContaining({
+      packIds: ['built-in-estonia', 'built-in-finals'],
+    })));
+
+    await user.click(adult);
+    await waitFor(() => expect(checkContentAvailability).toHaveBeenLastCalledWith(expect.objectContaining({
+      packIds: ['built-in-estonia', 'built-in-finals', 'built-in-adult'],
+    })));
+
+    await user.click(estonia);
+    await waitFor(() => expect(checkContentAvailability).toHaveBeenLastCalledWith(expect.objectContaining({
+      packIds: ['built-in-finals', 'built-in-adult'],
+    })));
+
+    await user.click(estonia);
+    await waitFor(() => expect(checkContentAvailability).toHaveBeenLastCalledWith(expect.objectContaining({
+      packIds: ['built-in-finals', 'built-in-adult', 'built-in-estonia'],
+    })));
+    await user.click(screen.getByRole('button', { name: 'Start match' }));
+    await waitFor(() => expect(desktopApi.startMatch).toHaveBeenCalledWith(expect.objectContaining({
+      packIds: ['built-in-finals', 'built-in-adult', 'built-in-estonia'],
+    })));
+  });
+
   it('constrains authored team names to the shared 32-character layout limit', async () => {
     render(<SetupScreen api={api()} onBack={vi.fn()} />);
     expect(await screen.findByRole('textbox', { name: 'Team 1 name' })).toHaveAttribute('maxlength', '32');

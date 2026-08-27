@@ -376,6 +376,7 @@ export const setupOptionsSchema = z.strictObject({
     id: identifierSchema,
     name: z.string().trim().min(1),
     enabled: z.boolean(),
+    selectedByDefault: z.boolean(),
   })),
   automaticDisplayMode: z.enum(['single', 'dual']),
 });

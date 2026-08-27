@@ -266,7 +266,7 @@ describe('preload quizStage surface', () => {
       invoke: vi.fn(async (channel) => {
         if (channel === IPC_CHANNELS.setupOptions) {
           return {
-            packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+            packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
             automaticDisplayMode: 'dual',
           };
         }
@@ -285,7 +285,7 @@ describe('preload quizStage surface', () => {
     expect(publicApi).not.toHaveProperty('checkContentAvailability');
     expect(publicApi).not.toHaveProperty('getSetupOptions');
     await expect(host.getSetupOptions!()).resolves.toEqual({
-      packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+      packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
       automaticDisplayMode: 'dual',
     });
     await expect(host.checkContentAvailability!(config)).resolves.toEqual({ ok: true });

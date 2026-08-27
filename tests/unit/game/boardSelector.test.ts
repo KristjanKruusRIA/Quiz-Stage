@@ -134,6 +134,33 @@ describe('deterministic board selection', () => {
     expect(result).not.toHaveProperty('dailyDoubleClueIds');
   });
 
+  it('keeps all selected categories and the Final in the configured pack', () => {
+    const categorySets = ['built-in-estonia', 'built-in-adult'].flatMap((packId) => [
+      ...Array.from({ length: 6 }, (_, index) => categorySet(`${packId}-r1-${index}`, 'round-one', {
+        packId,
+        name: { en: `${packId} Round One ${index}`, et: `${packId} Round One ${index}` },
+        macroTopic: `${packId}-r1-${index}`,
+      })),
+      ...Array.from({ length: 6 }, (_, index) => categorySet(`${packId}-r2-${index}`, 'round-two', {
+        packId,
+        name: { en: `${packId} Round Two ${index}`, et: `${packId} Round Two ${index}` },
+        macroTopic: `${packId}-r2-${index}`,
+      })),
+    ]);
+    const finalClues = ['built-in-estonia', 'built-in-adult'].map((packId) => finalClue(`${packId}-final`, 'medium', { packId }));
+
+    for (const packId of ['built-in-estonia', 'built-in-adult']) {
+      const result = requireMatch(selectMatchContent(selectionInput({
+        config: gameConfig({ packIds: [packId] }),
+        categorySets,
+        finalClues,
+      })));
+
+      expect(result.categorySets.every((set) => set.packId === packId)).toBe(true);
+      expect(result.final.packId).toBe(packId);
+    }
+  });
+
   it('returns exact atomic shortages rather than a partial match', () => {
     const result = selectMatchContent(selectionInput({
       categorySets: [

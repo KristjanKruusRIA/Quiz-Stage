@@ -19,7 +19,7 @@ function hostApi(): HostDesktopApi {
   return {
     surface: 'host',
     getSetupOptions: vi.fn(async () => ({
-      packs: [{ id: 'pack-one', name: 'Pack One', enabled: true }],
+      packs: [{ id: 'pack-one', name: 'Pack One', enabled: true, selectedByDefault: true }],
       automaticDisplayMode: 'single' as const,
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
