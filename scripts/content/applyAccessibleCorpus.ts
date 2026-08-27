@@ -16,7 +16,7 @@ import { parsePackCsv } from '../../src/main/content/csvPacks';
 import { CSV_COLUMNS } from '../../src/shared/content/csvColumns';
 import { ACCESSIBLE_CATEGORY_TITLES } from './accessibility/categoryNames';
 import { applyAccessibleCorpus } from './accessibility/apply';
-import { LEGACY_EASY_TARGET_IDS } from './accessibility/targets';
+import { LEGACY_EASY_TARGETS, type LegacyEasyTarget } from './accessibility/targets';
 import type { AccessibleCategory, CategoryTitle } from './accessibility/types';
 import { parseEvidenceJsonl, serializeEvidence, type ContentEvidence } from './evidence';
 import { PRODUCTION_BATCHES } from './productionBatches';
@@ -33,7 +33,7 @@ type StageOptions = Readonly<{
   acceptedRoot: string;
   outputRoot: string;
   categories: readonly AccessibleCategory[];
-  targetCategorySetIds: ReadonlySet<string>;
+  targets: readonly LegacyEasyTarget[];
   titles: readonly CategoryTitle[];
 }>;
 
@@ -71,6 +71,21 @@ function artifactDefinitions(acceptedRoot: string, outputRoot: string): readonly
       destinationPath: resolve(acceptedRoot, `content/evidence/${batchId}.jsonl`),
     },
   ]);
+}
+
+function comparablePath(path: string): string {
+  const absolute = resolve(path);
+  return process.platform === 'win32' ? absolute.toLocaleLowerCase('en') : absolute;
+}
+
+function assertDistinctStagingPaths(acceptedRoot: string, outputRoot: string): void {
+  const artifacts = artifactDefinitions(acceptedRoot, outputRoot);
+  const destinations = new Set(artifacts.map(({ destinationPath }) => comparablePath(destinationPath)));
+  for (const { stagedPath } of artifacts) {
+    if (destinations.has(comparablePath(stagedPath))) {
+      throw new Error(`Staged artifact overlaps accepted destination: ${stagedPath}`);
+    }
+  }
 }
 
 function parseRows(
@@ -117,27 +132,43 @@ function readAcceptedEvidence(path: string): readonly ContentEvidence[] {
 }
 
 function validateGlobalTargets(options: StageOptions): void {
+  const targetsByCategorySetId = new Map<string, LegacyEasyTarget>();
+  for (const target of options.targets) {
+    if (targetsByCategorySetId.has(target.categorySetId)) {
+      throw new Error(`Duplicate target category: ${target.categorySetId}`);
+    }
+    targetsByCategorySetId.set(target.categorySetId, target);
+  }
   const categoryIds = new Set<string>();
   for (const category of options.categories) {
+    const target = targetsByCategorySetId.get(category.categorySetId);
+    if (target === undefined) {
+      throw new Error(`Category ${category.categorySetId} is not present in the target ledger`);
+    }
     if (categoryIds.has(category.categorySetId)) {
       throw new Error(`Duplicate accessible category: ${category.categorySetId}`);
     }
+    if (category.batchId !== target.batchId) {
+      throw new Error(
+        `Category ${category.categorySetId} has batch ${category.batchId}; expected ${target.batchId}`,
+      );
+    }
     categoryIds.add(category.categorySetId);
   }
-  if (categoryIds.size !== options.targetCategorySetIds.size) {
+  if (categoryIds.size !== targetsByCategorySetId.size) {
     throw new Error(
-      `Expected ${options.targetCategorySetIds.size} accessible categories; found ${categoryIds.size}`,
+      `Expected ${targetsByCategorySetId.size} accessible categories; found ${categoryIds.size}`,
     );
   }
-  for (const categorySetId of options.targetCategorySetIds) {
+  for (const categorySetId of targetsByCategorySetId.keys()) {
     if (!categoryIds.has(categorySetId)) {
       throw new Error(`Missing accessible category: ${categorySetId}`);
     }
   }
 }
 
-export function stageAccessibleCorpus(options: StageOptions): Readonly<{
-  artifactPaths: readonly string[];
+function buildExpectedStage(options: StageOptions): Readonly<{
+  artifacts: ReadonlyMap<string, string>;
   replacedClueIds: readonly string[];
 }> {
   validateGlobalTargets(options);
@@ -148,7 +179,11 @@ export function stageAccessibleCorpus(options: StageOptions): Readonly<{
     const generatedPath = resolve(options.acceptedRoot, `content/generated/${batchId}.en-et.csv`);
     const evidencePath = resolve(options.acceptedRoot, `content/evidence/${batchId}.jsonl`);
     const categories = options.categories.filter((category) => category.batchId === batchId);
-    const targetCategorySetIds = new Set(categories.map(({ categorySetId }) => categorySetId));
+    const targetCategorySetIds = new Set(
+      options.targets
+        .filter((target) => target.batchId === batchId)
+        .map(({ categorySetId }) => categorySetId),
+    );
     const titles = options.titles.filter((title) => title.batchId === batchId);
     const result = applyAccessibleCorpus({
       authoredRows: readAcceptedRows(authoredPath),
@@ -167,11 +202,21 @@ export function stageAccessibleCorpus(options: StageOptions): Readonly<{
     replacedClueIds.push(...result.replacedClueIds);
   }
 
-  for (const [path, bytes] of staged) {
+  return { artifacts: staged, replacedClueIds };
+}
+
+export function stageAccessibleCorpus(options: StageOptions): Readonly<{
+  artifactPaths: readonly string[];
+  replacedClueIds: readonly string[];
+}> {
+  assertDistinctStagingPaths(options.acceptedRoot, options.outputRoot);
+  const expected = buildExpectedStage(options);
+
+  for (const [path, bytes] of expected.artifacts) {
     mkdirSync(dirname(path), { recursive: true });
     writeFileSync(path, bytes);
   }
-  return { artifactPaths: [...staged.keys()], replacedClueIds };
+  return { artifactPaths: [...expected.artifacts.keys()], replacedClueIds: expected.replacedClueIds };
 }
 
 function readStagedArtifact(path: string): Buffer {
@@ -217,11 +262,11 @@ function removeOwned(path: string, errors: Error[]): void {
   }
 }
 
-export function publishAccessibleCorpusStage(options: Readonly<{
-  acceptedRoot: string;
-  outputRoot: string;
+export function publishAccessibleCorpusStage(options: StageOptions & Readonly<{
   dependencies?: PublishDependencies;
 }>): void {
+  assertDistinctStagingPaths(options.acceptedRoot, options.outputRoot);
+  const expected = buildExpectedStage(options);
   const artifacts = artifactDefinitions(options.acceptedRoot, options.outputRoot);
   const bytes = new Map<string, Buffer>();
   for (const artifact of artifacts) bytes.set(artifact.stagedPath, readStagedArtifact(artifact.stagedPath));
@@ -233,6 +278,12 @@ export function publishAccessibleCorpusStage(options: Readonly<{
       bytes.get(batchArtifacts.find(({ kind }) => kind === 'generated')!.stagedPath)!,
       bytes.get(batchArtifacts.find(({ kind }) => kind === 'evidence')!.stagedPath)!,
     );
+  }
+  for (const artifact of artifacts) {
+    const expectedBytes = Buffer.from(expected.artifacts.get(artifact.stagedPath)!, 'utf8');
+    if (!bytes.get(artifact.stagedPath)!.equals(expectedBytes)) {
+      throw new Error(`Staged artifact does not match expected transform: ${artifact.stagedPath}`);
+    }
   }
 
   const token = (options.dependencies?.createTemporaryId ?? randomUUID)();
@@ -349,14 +400,15 @@ function runCli(argv = process.argv.slice(2)): void {
   const repositoryRoot = resolve(import.meta.dirname, '../..');
   const args = parseAccessibleCorpusArgs(argv);
   const outputRoot = resolve(repositoryRoot, args.outputRoot);
-  const result = stageAccessibleCorpus({
+  const pipeline = {
     acceptedRoot: repositoryRoot,
     outputRoot,
     categories: loadAccessibleCorpus(),
-    targetCategorySetIds: new Set(LEGACY_EASY_TARGET_IDS),
+    targets: LEGACY_EASY_TARGETS,
     titles: ACCESSIBLE_CATEGORY_TITLES,
-  });
-  if (args.publish) publishAccessibleCorpusStage({ acceptedRoot: repositoryRoot, outputRoot });
+  } as const;
+  const result = stageAccessibleCorpus(pipeline);
+  if (args.publish) publishAccessibleCorpusStage(pipeline);
   process.stdout.write(
     `Staged ${result.replacedClueIds.length} accessible corpus clues across ${PRODUCTION_BATCHES.length} batches${args.publish ? ' and published 36 artifacts' : ''}.\n`,
   );

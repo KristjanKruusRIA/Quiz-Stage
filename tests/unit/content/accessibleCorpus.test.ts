@@ -26,6 +26,7 @@ import type {
   AccessibleQuestion,
   CategoryTitle,
 } from '../../../scripts/content/accessibility/types';
+import type { LegacyEasyTarget } from '../../../scripts/content/accessibility/targets';
 import type { ContentEvidence } from '../../../scripts/content/evidence';
 import {
   loadAccessibleCorpus,
@@ -303,7 +304,7 @@ type StagingFixture = Readonly<{
   outputRoot: string;
   categories: readonly AccessibleCategory[];
   titles: readonly CategoryTitle[];
-  targetCategorySetIds: ReadonlySet<string>;
+  targets: readonly LegacyEasyTarget[];
 }>;
 
 const temporaryDirectories: string[] = [];
@@ -334,13 +335,13 @@ function stagingFixture(): StagingFixture {
   const outputRoot = resolve(acceptedRoot, 'staged');
   const categories: AccessibleCategory[] = [];
   const titles: CategoryTitle[] = [];
-  const targetCategorySetIds = new Set<string>();
+  const targets: LegacyEasyTarget[] = [];
   for (const batchId of ACCEPTED_BATCHES) {
     const categorySetId = `target-${batchId}`;
     const accessibleCategory = category(categorySetId, batchId);
     categories.push(accessibleCategory);
     titles.push({ categorySetId, batchId, name: accessibleCategory.name });
-    targetCategorySetIds.add(categorySetId);
+    targets.push({ categorySetId, batchId });
     const rows = [1, 2, 3, 4, 5].map((tier) => ({
       ...applyRow(categorySetId, tier),
       pack_id: `built-in-${batchId}`,
@@ -359,7 +360,7 @@ function stagingFixture(): StagingFixture {
     );
   }
   writeFileSync(resolve(acceptedRoot, 'content/unrelated.txt'), 'leave me alone');
-  return { acceptedRoot, outputRoot, categories, titles, targetCategorySetIds };
+  return { acceptedRoot, outputRoot, categories, titles, targets };
 }
 
 function acceptedArtifactPaths(): string[] {
@@ -996,13 +997,36 @@ describe('applyAccessibleCorpus staging and publishing', () => {
     expect(existsSync(fixture.outputRoot)).toBe(false);
   });
 
+  it('rejects a staging root whose artifacts overlap accepted destinations', () => {
+    const fixture = stagingFixture();
+    const overlapping = { ...fixture, outputRoot: resolve(fixture.acceptedRoot, 'content') };
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+
+    expect(() => stageAccessibleCorpus(overlapping)).toThrowError(
+      'Staged artifact overlaps accepted destination',
+    );
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+  });
+
+  it('rejects a category whose batch differs from its target ledger before staging writes', () => {
+    const fixture = stagingFixture();
+    const categorySetId = 'target-12-mythology-religion-philosophy';
+    const categories = fixture.categories.map((item) => item.categorySetId === categorySetId
+      ? { ...item, batchId: '99-unknown' }
+      : item);
+
+    expect(() => stageAccessibleCorpus({ ...fixture, categories })).toThrowError(
+      `Category ${categorySetId} has batch 99-unknown; expected 12-mythology-religion-philosophy`,
+    );
+    expect(existsSync(fixture.outputRoot)).toBe(false);
+  });
+
   it('publishes all 36 staged artifacts and leaves unrelated accepted content untouched', () => {
     const fixture = stagingFixture();
     stageAccessibleCorpus(fixture);
 
     publishAccessibleCorpusStage({
-      acceptedRoot: fixture.acceptedRoot,
-      outputRoot: fixture.outputRoot,
+      ...fixture,
       dependencies: { createTemporaryId: () => 'success' },
     });
 
@@ -1016,6 +1040,49 @@ describe('applyAccessibleCorpus staging and publishing', () => {
     );
   });
 
+  it('does not touch accepted files for header-only staged CSV and empty evidence', () => {
+    const fixture = stagingFixture();
+    stageAccessibleCorpus(fixture);
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+    writeApplyRows(resolve(fixture.outputRoot, 'authored/01-history.csv'), []);
+    writeApplyRows(resolve(fixture.outputRoot, 'generated/01-history.en-et.csv'), []);
+    writeFileSync(resolve(fixture.outputRoot, 'evidence/01-history.jsonl'), '');
+
+    expect(() => publishAccessibleCorpusStage({ ...fixture })).toThrowError();
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+  });
+
+  it.each(['unrelated content', 'wrong category structure'] as const)(
+    'does not touch accepted files for same-count staged %s',
+    (corruption) => {
+      const fixture = stagingFixture();
+      stageAccessibleCorpus(fixture);
+      const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+      for (const kind of ['authored', 'generated'] as const) {
+        const path = kind === 'authored'
+          ? resolve(fixture.outputRoot, 'authored/01-history.csv')
+          : resolve(fixture.outputRoot, 'generated/01-history.en-et.csv');
+        const rows = parse(readFileSync(path, 'utf8'), {
+          columns: true,
+          skip_empty_lines: true,
+        }) as Array<Record<string, string>>;
+        rows[0] = corruption === 'unrelated content'
+          ? {
+              ...rows[0]!,
+              clue_en: 'This staged clue is unrelated to the reviewed accessible corpus.',
+              clue_et: 'See lavastatud küsimus ei kuulu kontrollitud ligipääsetavasse korpusesse.',
+            }
+          : { ...rows[0]!, category_set_id: 'unrelated-category' };
+        writeApplyRows(path, rows);
+      }
+
+      expect(() => publishAccessibleCorpusStage({ ...fixture })).toThrowError(
+        'Staged artifact does not match expected transform',
+      );
+      expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+    },
+  );
+
   it('does not touch accepted files when any staged artifact is missing', () => {
     const fixture = stagingFixture();
     stageAccessibleCorpus(fixture);
@@ -1023,8 +1090,7 @@ describe('applyAccessibleCorpus staging and publishing', () => {
     unlinkSync(resolve(fixture.outputRoot, 'evidence/12-mythology-religion-philosophy.jsonl'));
 
     expect(() => publishAccessibleCorpusStage({
-      acceptedRoot: fixture.acceptedRoot,
-      outputRoot: fixture.outputRoot,
+      ...fixture,
     })).toThrowError('Missing staged artifact');
     expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
   });
@@ -1042,8 +1108,7 @@ describe('applyAccessibleCorpus staging and publishing', () => {
     writeApplyRows(path, rows);
 
     expect(() => publishAccessibleCorpusStage({
-      acceptedRoot: fixture.acceptedRoot,
-      outputRoot: fixture.outputRoot,
+      ...fixture,
     })).toThrowError('Invalid accepted variants in staged CSV artifact');
     expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
   });
@@ -1055,8 +1120,7 @@ describe('applyAccessibleCorpus staging and publishing', () => {
     let replacements = 0;
 
     expect(() => publishAccessibleCorpusStage({
-      acceptedRoot: fixture.acceptedRoot,
-      outputRoot: fixture.outputRoot,
+      ...fixture,
       dependencies: {
         createTemporaryId: () => 'rollback',
         rename: (source, destination) => {
