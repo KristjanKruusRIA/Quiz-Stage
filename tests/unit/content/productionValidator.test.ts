@@ -845,7 +845,12 @@ describe('production content validation', () => {
         mode: 'batch', batch: FINAL_BATCH, evidenceByClueId: evidenceMap(records),
       });
 
-    const validCodes = validate(rows).issues.map((issue) => issue.code);
+    const validResult = validate(rows);
+    const validCodes = validResult.issues.map((issue) => issue.code);
+    expect(validResult.blocking).toBe(false);
+    expect(validCodes).not.toEqual(expect.arrayContaining([
+      'CSV_MULTIPLE_PACK_ID', 'CSV_INCONSISTENT_PACK_NAME',
+    ]));
     expect(validCodes).not.toEqual(expect.arrayContaining(['BATCH_ALLOCATION', 'OPENTDB_COMPOSITION']));
     expect(validCodes).not.toContain('MATCH_CATEGORY_NAMES_SHORTAGE');
 
@@ -857,7 +862,9 @@ describe('production content validation', () => {
     const adultFinal = rows.findIndex((row) => row.macro_topic === 'adult');
     const invalidAdultPack = rows.map((row) => ({ ...row }));
     invalidAdultPack[adultFinal] = { ...invalidAdultPack[adultFinal], pack_id: 'built-in-finals', pack_name: 'Finals Pack' };
-    expect(validate(invalidAdultPack).issues.map((issue) => issue.code)).toContain('BATCH_ALLOCATION');
+    expect(validate(invalidAdultPack).issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      'CSV_MULTIPLE_PACK_ID', 'CSV_INCONSISTENT_PACK_NAME', 'BATCH_ALLOCATION',
+    ]));
 
     const invalidDifficulty = rows.map((row) => ({ ...row }));
     invalidDifficulty[adultFinal] = { ...invalidDifficulty[adultFinal], difficulty: 'hard' };
@@ -890,7 +897,9 @@ describe('production content validation', () => {
 
     const result = validateProductionContent([input('adult.csv', mismatched)], { mode: 'batch', batch });
 
-    expect(result.issues.map((issue) => issue.code)).toContain('PACK_IDENTITY_MISMATCH');
+    expect(result.issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      'CSV_INCONSISTENT_PACK_NAME', 'PACK_IDENTITY_MISMATCH',
+    ]));
   });
 
   it('exports every factual, source, duplicate, allocation, and filler code as non-waivable', () => {

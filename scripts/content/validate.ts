@@ -254,7 +254,21 @@ export function validateProductionContent(
   };
 
   for (const input of [...inputs].sort((a, b) => a.file.localeCompare(b.file, 'en'))) {
+    const cataloguedFinalBatch = options.batch?.finalTopicAllocations !== undefined
+      ? options.batch
+      : (input.pack.rows.every((row) => row.content_kind === 'final' && batchForRow(row) === FINAL_BATCH)
+        ? FINAL_BATCH : undefined);
+    const hasAuthorizedFinalPackMix = cataloguedFinalBatch?.finalTopicAllocations !== undefined
+      && input.pack.rows.every((row) => {
+        const allocation = cataloguedFinalBatch.finalTopicAllocations?.[row.macro_topic];
+        return row.content_kind === 'final'
+          && allocation !== undefined
+          && row.pack_id === allocation.packId
+          && row.pack_name === allocation.packName;
+      });
     for (const issue of validatePack(input.pack)) {
+      if (hasAuthorizedFinalPackMix
+        && (issue.code === 'multiple-pack-id' || issue.code === 'inconsistent-pack-name')) continue;
       const row = issue.row ?? 0;
       const parsed = input.pack.rows.find((candidate) => candidate.rowNumber === row);
       const sourceColumn = issue.column !== undefined && ['source_title', 'source_url', 'source_license', 'source_retrieved_at'].includes(issue.column);
