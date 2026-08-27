@@ -146,6 +146,7 @@ export const en = {
   'host.undo': 'Undo',
   'host.reopenClue': 'Reopen clue',
   'host.corrections': 'Current match corrections',
+  'host.matchActions': 'Match actions',
   'host.scoreReason': 'Score adjustment reason',
   'host.scoreFor': 'Score for {team}',
   'host.setScore': 'Set {team} score',
