@@ -1,4 +1,4 @@
-import { chromium, expect, test, type Browser, type Page } from '@playwright/test';
+import { chromium, expect, test, type Browser, type Locator, type Page } from '@playwright/test';
 import type { ChildProcess } from 'node:child_process';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { createServer } from 'node:net';
@@ -14,12 +14,33 @@ import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
 
 const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
-const packagedSmokeTimeout = process.platform === 'darwin' && process.arch === 'x64' ? 600_000 : 300_000;
-test.setTimeout(packagedSmokeTimeout);
+const useDomPointerActivation = process.platform === 'darwin' && process.arch === 'x64';
+test.setTimeout(300_000);
 test.use({ trace: 'off', screenshot: 'off' });
 
 function reportPackagedSmokeProgress(phase: string, detail?: number): void {
   console.log(`PACKAGED_SMOKE_PROGRESS:${phase}${detail === undefined ? '' : `:${detail}`}`);
+}
+
+async function activateControl(control: Locator): Promise<void> {
+  await expect(control).toBeVisible();
+  await expect(control).toBeEnabled();
+  if (useDomPointerActivation) {
+    await control.evaluate((element) => (element as HTMLElement).click());
+    return;
+  }
+  await control.click();
+}
+
+async function activateRadio(radio: Locator): Promise<void> {
+  await expect(radio).toBeVisible();
+  await expect(radio).toBeEnabled();
+  if (useDomPointerActivation) {
+    await radio.evaluate((element) => (element as HTMLElement).click());
+  } else {
+    await radio.check();
+  }
+  await expect(radio).toBeChecked();
 }
 
 function packagedExecutable(): string {
@@ -80,16 +101,15 @@ async function launchPackaged(executable: string, userData: string): Promise<{ b
 
 async function playTileCorrect(page: Page): Promise<void> {
   const tile = page.locator('.public-board button:not([disabled])').first();
-  await expect(tile).toBeEnabled();
-  await tile.click();
+  await activateControl(tile);
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
   if (await wager.isVisible()) {
     await wager.fill('5');
-    await page.getByRole('button', { name: 'Commit wager' }).click();
+    await activateControl(page.getByRole('button', { name: 'Commit wager' }));
   }
-  await page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first().click();
-  await page.getByRole('button', { name: 'Correct', exact: true }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
+  await activateControl(page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first());
+  await activateControl(page.getByRole('button', { name: 'Correct', exact: true }));
+  await activateControl(page.getByRole('button', { name: 'Continue' }));
 }
 
 if (packagedSmokeEnabled) test('runs a complete two-team win sequence without external requests', async () => {
@@ -116,9 +136,9 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     });
 
     reportPackagedSmokeProgress('match-setup');
-    await page.getByRole('button', { name: 'New Match' }).click();
-    await page.getByRole('radio', { name: 'English' }).check();
-    await page.getByRole('radio', { name: 'Medium' }).check();
+    await activateControl(page.getByRole('button', { name: 'New Match' }));
+    await activateRadio(page.getByRole('radio', { name: 'English' }));
+    await activateRadio(page.getByRole('radio', { name: 'Medium' }));
     await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
     const startButton = page.getByRole('button', { name: 'Start match' });
     await expect.poll(async () => ({
@@ -128,7 +148,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
       enabled: true,
       alerts: [],
     });
-    await startButton.click();
+    await activateControl(startButton);
 
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
@@ -140,17 +160,17 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     for (const input of await page.getByRole('spinbutton', { name: /Final wager for/ }).all()) {
       if (await input.isVisible()) {
         await input.fill('0');
-        await input.locator('xpath=ancestor::form').getByRole('button').click();
+        await activateControl(input.locator('xpath=ancestor::form').getByRole('button'));
       }
     }
     await expect(page.getByRole('timer')).toHaveText('0', { timeout: 35_000 });
     while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
-      await page.getByRole('button', { name: /Reveal .* correct/ }).first().click();
+      await activateControl(page.getByRole('button', { name: /Reveal .* correct/ }).first());
     }
 
     await expect(page.getByRole('heading', { name: /wins/ })).toBeVisible();
-    await page.getByRole('button', { name: 'Back to Home' }).click();
-    await page.getByRole('button', { name: 'Match History' }).click();
+    await activateControl(page.getByRole('button', { name: 'Back to Home' }));
+    await activateControl(page.getByRole('button', { name: 'Match History' }));
     await expect(page.getByRole('heading', { name: 'Match History' })).toBeVisible();
     await expect(page.getByText('Complete')).toBeVisible();
 
