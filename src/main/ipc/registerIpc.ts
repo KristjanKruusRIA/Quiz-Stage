@@ -3,13 +3,17 @@ import type { DisplayMode, GameConfig } from '../../shared/game/types';
 import {
   audioSettingsSchema,
   contentAvailabilitySchema,
+  configuredMatchStartSchema,
   gameCommandSchema,
   gameConfigSchema,
   hostGameViewSchema,
+  matchConfigurationPreviewSchema,
   hasResumableMatchSchema,
   matchHistorySchema,
   noArgsSchema,
+  rerollConfiguredTopicRequestSchema,
   setupOptionsSchema,
+  startConfiguredMatchRequestSchema,
   type HostStateUpdate,
   type PublicStateUpdate,
   type ValidatedGameCommand,
@@ -86,6 +90,9 @@ interface RegisterIpcOptions {
   coordinator: CoordinatorPort;
   setup?: {
     startMatch(config: GameConfig): Promise<unknown>;
+    configureMatch(config: GameConfig): unknown;
+    rerollConfiguredTopic(input: unknown): unknown;
+    startConfiguredMatch(draftId: string): Promise<unknown>;
     checkContentAvailability(config: GameConfig): unknown;
     getSetupOptions(automaticDisplayMode: DisplayMode): unknown;
   };
@@ -225,6 +232,22 @@ export function registerIpc({
       applyDisplayMode?.(config.displayMode);
       return view;
     });
+    handle(IPC_CHANNELS.configureMatch, async (event, input) => {
+      requireHost(event.sender.id);
+      return matchConfigurationPreviewSchema.parse(await setup.configureMatch(gameConfigSchema.parse(input)));
+    });
+    handle(IPC_CHANNELS.rerollConfiguredTopic, async (event, input) => {
+      requireHost(event.sender.id);
+      const request = rerollConfiguredTopicRequestSchema.parse(input);
+      return matchConfigurationPreviewSchema.parse(await setup.rerollConfiguredTopic(request));
+    });
+    handle(IPC_CHANNELS.startConfiguredMatch, async (event, input) => {
+      requireHost(event.sender.id);
+      const request = startConfiguredMatchRequestSchema.parse(input);
+      const result = configuredMatchStartSchema.parse(await setup.startConfiguredMatch(request.draftId));
+      applyDisplayMode?.(result.displayMode);
+      return result.view;
+    });
     handle(IPC_CHANNELS.contentAvailability, async (event, input) => {
       requireHost(event.sender.id);
       return contentAvailabilitySchema.parse(await setup.checkContentAvailability(gameConfigSchema.parse(input)));
@@ -234,7 +257,14 @@ export function registerIpc({
       noArgsSchema.parse(input);
       return setupOptionsSchema.parse(await setup.getSetupOptions(getAutomaticDisplayMode()));
     });
-    setupChannels.push(IPC_CHANNELS.startMatch, IPC_CHANNELS.contentAvailability, IPC_CHANNELS.setupOptions);
+    setupChannels.push(
+      IPC_CHANNELS.startMatch,
+      IPC_CHANNELS.configureMatch,
+      IPC_CHANNELS.rerollConfiguredTopic,
+      IPC_CHANNELS.startConfiguredMatch,
+      IPC_CHANNELS.contentAvailability,
+      IPC_CHANNELS.setupOptions,
+    );
   }
 
   const matchAccessChannels: string[] = [];

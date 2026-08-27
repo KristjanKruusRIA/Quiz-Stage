@@ -1,11 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { HostDesktopApi } from '../../api/desktopApi';
 import type { DisplayMode, GameConfig, Team } from '../../../shared/game/types';
-import { gameConfigSchema, type ContentAvailabilityResponse, type SetupOptions } from '../../../shared/ipc/contracts';
+import {
+  gameConfigSchema,
+  type ContentAvailabilityResponse,
+  type MatchConfigurationPreview,
+  type SetupOptions,
+} from '../../../shared/ipc/contracts';
 import { TEAM_COLORS, TeamEditor } from './TeamEditor';
 import { createTranslator, pluralKey, translate, useI18n } from '../../i18n';
 import type { Language } from '../../../shared/game/types';
 import { normalizeTeamName } from '../../../shared/game/teamNames';
+import { MatchConfigurationScreen } from './MatchConfigurationScreen';
 
 interface SetupScreenProps {
   api: HostDesktopApi;
@@ -91,6 +97,8 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
   const [availabilityGeneration, setAvailabilityGeneration] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [startErrorKey, setStartErrorKey] = useState<string | null>(null);
+  const [configureError, setConfigureError] = useState(false);
+  const [configuration, setConfiguration] = useState<MatchConfigurationPreview | null>(null);
   const startInFlight = useRef(false);
   const t = createTranslator(language);
   const changeLanguage = (next: Language) => {
@@ -207,6 +215,32 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
     }
   };
 
+  const configure = async () => {
+    const validated = gameConfigSchema.safeParse(candidate);
+    if (startInFlight.current || !canStart || !validated.success) return;
+    startInFlight.current = true;
+    setSubmitting(true);
+    setConfigureError(false);
+    try {
+      setConfiguration(await api.configureMatch(validated.data));
+    } catch {
+      setConfigureError(true);
+      setAvailabilityGeneration((current) => current + 1);
+    } finally {
+      startInFlight.current = false;
+      setSubmitting(false);
+    }
+  };
+
+  if (configuration !== null) {
+    return <MatchConfigurationScreen
+      api={api}
+      initialPreview={configuration}
+      onBack={() => setConfiguration(null)}
+      onStarted={onStarted}
+    />;
+  }
+
   return (
     <main className="page-shell setup-screen">
       <header className="setup-header">
@@ -289,10 +323,12 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
         {currentAvailability === 'checking' ? <p role="status">{t('setup.checking')}</p> : null}
         {currentAvailability === 'error' && !showStartError ? <p role="alert">{t('setup.availabilityError')}</p> : null}
         {showStartError ? <p role="alert">{t('setup.startFailed')}</p> : null}
+        {configureError ? <p role="alert">{t('setup.configureFailed')}</p> : null}
         {currentAvailability !== null && currentAvailability !== 'checking' && currentAvailability !== 'error' && !currentAvailability.ok
           ? <p role="alert">{shortageMessage(currentAvailability, language)}</p>
           : null}
         <button className="primary-action" type="submit" disabled={!canStart}>{t('setup.start')}</button>
+        <button type="button" disabled={!canStart} onClick={() => void configure()}>{t('setup.configure')}</button>
       </form>
     </main>
   );

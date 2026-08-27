@@ -380,6 +380,35 @@ export const setupOptionsSchema = z.strictObject({
   automaticDisplayMode: z.enum(['single', 'dual']),
 });
 
+export const matchTopicTargetSchema = z.discriminatedUnion('round', [
+  z.strictObject({ round: z.literal('round-one'), index: z.number().int().min(0).max(5) }),
+  z.strictObject({ round: z.literal('round-two'), index: z.number().int().min(0).max(5) }),
+  z.strictObject({ round: z.literal('final') }),
+]);
+
+const matchTopicPreviewSchema = z.strictObject({
+  name: z.string().trim().min(1),
+  canReroll: z.boolean(),
+});
+
+export const matchConfigurationPreviewSchema = z.strictObject({
+  draftId: identifierSchema,
+  roundOne: z.array(matchTopicPreviewSchema).length(6),
+  roundTwo: z.array(matchTopicPreviewSchema).length(6),
+  final: matchTopicPreviewSchema,
+});
+
+export const rerollConfiguredTopicRequestSchema = z.strictObject({
+  draftId: identifierSchema,
+  target: matchTopicTargetSchema,
+});
+
+export const startConfiguredMatchRequestSchema = z.strictObject({ draftId: identifierSchema });
+export const configuredMatchStartSchema = z.strictObject({
+  view: hostGameViewSchema,
+  displayMode: z.enum(['single', 'dual']),
+});
+
 export const noArgsSchema = z.undefined();
 export const hasResumableMatchSchema = z.boolean();
 export { audioSettingsSchema };
@@ -424,6 +453,9 @@ export type HostStateUpdate = z.infer<typeof hostStateUpdateSchema>;
 export type PublicStateUpdate = z.infer<typeof publicStateUpdateSchema>;
 export type ContentAvailabilityResponse = z.infer<typeof contentAvailabilitySchema>;
 export type SetupOptions = z.infer<typeof setupOptionsSchema> & { automaticDisplayMode: DisplayMode };
+export type MatchTopicTarget = z.infer<typeof matchTopicTargetSchema>;
+export type MatchConfigurationPreview = z.infer<typeof matchConfigurationPreviewSchema>;
+export type RerollConfiguredTopicRequest = z.infer<typeof rerollConfiguredTopicRequestSchema>;
 export type MatchHistoryEntry = z.infer<typeof matchHistoryEntrySchema>;
 
 export type ValidatedGameConfig = z.infer<typeof gameConfigSchema> & GameConfig;
@@ -439,6 +471,9 @@ interface StateSubscriptionApi {
 export interface HostQuizStageApi extends StateSubscriptionApi {
   dispatch(command: GameCommand): Promise<HostGameView>;
   startMatch(config: GameConfig): Promise<HostGameView>;
+  configureMatch(config: GameConfig): Promise<MatchConfigurationPreview>;
+  rerollConfiguredTopic(input: RerollConfiguredTopicRequest): Promise<MatchConfigurationPreview>;
+  startConfiguredMatch(draftId: string): Promise<HostGameView>;
   checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
   getSetupOptions(): Promise<SetupOptions>;
   hasResumableMatch(): Promise<boolean>;

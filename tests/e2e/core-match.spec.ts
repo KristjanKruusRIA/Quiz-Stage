@@ -27,6 +27,11 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
   await page.getByRole('radio', { name: 'Medium' }).check();
   await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
   await expect(page.getByRole('button', { name: 'Start match' })).toBeEnabled();
+  await page.getByRole('button', { name: 'Configure match' }).click();
+  await expect(page.getByRole('heading', { name: 'Configure match' })).toBeVisible();
+  await expect(page.getByRole('button', { name: /^Re-roll / })).toHaveCount(13);
+  await expect(page.locator('.match-topic-rounds li span')).toHaveCount(13);
+  await expect(page.locator('.match-topic-rounds button:not([disabled])')).toHaveCount(0);
   await page.getByRole('button', { name: 'Start match' }).click();
 
   let dailyDoubles = 0;

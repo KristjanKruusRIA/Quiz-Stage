@@ -5,6 +5,18 @@ import type { HostDesktopApi } from '../../../src/renderer/api/desktopApi';
 import { SetupScreen } from '../../../src/renderer/features/setup/SetupScreen';
 import { hostView } from './game/fixtures';
 
+function configurationPreview(firstRoundOne = 'Round One 1') {
+  return {
+    draftId: 'draft-1',
+    roundOne: Array.from({ length: 6 }, (_, index) => ({
+      name: index === 0 ? firstRoundOne : `Round One ${index + 1}`,
+      canReroll: true,
+    })),
+    roundTwo: Array.from({ length: 6 }, (_, index) => ({ name: `Round Two ${index + 1}`, canReroll: true })),
+    final: { name: 'Final topic', canReroll: true },
+  };
+}
+
 function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
   return {
     surface: 'host',
@@ -17,6 +29,9 @@ function api(overrides: Partial<HostDesktopApi> = {}): HostDesktopApi {
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),
     startMatch: vi.fn(async () => undefined),
+    configureMatch: vi.fn(async () => configurationPreview()),
+    rerollConfiguredTopic: vi.fn(async () => configurationPreview('Replacement topic')),
+    startConfiguredMatch: vi.fn(async () => undefined),
     hasResumableMatch: vi.fn(async () => false),
     resumeMatch: vi.fn(async () => null),
     listHistory: vi.fn(async () => []),
@@ -36,6 +51,38 @@ function deferred<T>() {
 }
 
 describe('SetupScreen', () => {
+  it('opens a preserved full-match topic configuration and starts the displayed draft', async () => {
+    const desktopApi = api();
+    const onStarted = vi.fn();
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} onBack={vi.fn()} onStarted={onStarted} />);
+    const teamName = await screen.findByRole('textbox', { name: 'Team 1 name' });
+    await user.clear(teamName);
+    await user.type(teamName, 'Custom Team');
+    const start = screen.getByRole('button', { name: 'Start match' });
+    await waitFor(() => expect(start).toBeEnabled());
+    const configure = screen.getByRole('button', { name: 'Configure match' });
+    expect(start.nextElementSibling).toBe(configure);
+
+    await user.click(configure);
+
+    expect(await screen.findByRole('heading', { name: 'Configure match' })).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: /^Re-roll / })).toHaveLength(13);
+    expect(screen.getByText('Final topic')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Back' }));
+    expect(screen.getByRole('textbox', { name: 'Team 1 name' })).toHaveValue('Custom Team');
+
+    await user.click(screen.getByRole('button', { name: 'Configure match' }));
+    await user.click(await screen.findByRole('button', { name: 'Re-roll Round One topic 1: Round One 1' }));
+    expect(await screen.findByText('Replacement topic')).toBeInTheDocument();
+    expect(desktopApi.rerollConfiguredTopic).toHaveBeenCalledWith({
+      draftId: 'draft-1', target: { round: 'round-one', index: 0 },
+    });
+    await user.click(screen.getByRole('button', { name: 'Start match' }));
+    await waitFor(() => expect(desktopApi.startConfiguredMatch).toHaveBeenCalledWith('draft-1'));
+    expect(onStarted).toHaveBeenCalledOnce();
+  });
+
   it('constrains authored team names to the shared 32-character layout limit', async () => {
     render(<SetupScreen api={api()} onBack={vi.fn()} />);
     expect(await screen.findByRole('textbox', { name: 'Team 1 name' })).toHaveAttribute('maxlength', '32');

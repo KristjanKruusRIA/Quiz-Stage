@@ -1,7 +1,10 @@
 import {
+  rerollMatchTopic,
   selectNextTiebreakerClue,
   selectMatchContent,
   type FinalClue,
+  type MatchTopicTarget,
+  type SelectedMatch,
   type SelectedMatchContent,
   type SelectionInput,
   type SelectionShortage,
@@ -24,6 +27,15 @@ export class ContentService {
 
   selectForMatch(config: GameConfig, seed: string): SelectedMatchContent {
     return selectMatchContent(this.loadSelectionInput(config, seed));
+  }
+
+  rerollMatchTopic(
+    config: GameConfig,
+    selected: SelectedMatch,
+    seed: string,
+    target: MatchTopicTarget,
+  ): SelectedMatch | null {
+    return rerollMatchTopic(this.loadSelectionInput(config, seed), selected, target);
   }
 
   selectNextTiebreaker(

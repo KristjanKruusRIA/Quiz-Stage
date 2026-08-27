@@ -1,6 +1,9 @@
 export const IPC_CHANNELS = {
   dispatch: 'quiz-stage:dispatch',
   startMatch: 'quiz-stage:start-match',
+  configureMatch: 'quiz-stage:configure-match',
+  rerollConfiguredTopic: 'quiz-stage:configure-match:reroll-topic',
+  startConfiguredMatch: 'quiz-stage:configure-match:start',
   contentAvailability: 'quiz-stage:content-availability',
   setupOptions: 'quiz-stage:setup-options',
   hasResumableMatch: 'quiz-stage:has-resumable-match',

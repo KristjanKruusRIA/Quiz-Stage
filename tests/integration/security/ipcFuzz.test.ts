@@ -33,6 +33,9 @@ function createHarness() {
     } as never,
     setup: {
       startMatch: async () => ({}),
+      configureMatch: async () => ({}),
+      rerollConfiguredTopic: async () => ({}),
+      startConfiguredMatch: async () => ({}),
       checkContentAvailability: async () => ({}),
       getSetupOptions: async () => ({ packs: [], automaticDisplayMode: 'single' }),
     },

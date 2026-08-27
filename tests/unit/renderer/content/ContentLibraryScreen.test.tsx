@@ -28,6 +28,7 @@ function library(): EditorLibrary {
 function api(load = vi.fn(async () => library())): HostDesktopApi {
   return {
     surface: 'host', getSetupOptions: vi.fn(), checkContentAvailability: vi.fn(), startMatch: vi.fn(),
+    configureMatch: vi.fn(), rerollConfiguredTopic: vi.fn(), startConfiguredMatch: vi.fn(),
     hasResumableMatch: vi.fn(), resumeMatch: vi.fn(), listHistory: vi.fn(), dispatch: vi.fn(),
     listContent: load, saveCategorySet: vi.fn(), saveFinalClue: vi.fn(), createContentPack: vi.fn(),
     deleteContentPack: vi.fn(), reportContentClue: vi.fn(), resolveContentReport: vi.fn(),
