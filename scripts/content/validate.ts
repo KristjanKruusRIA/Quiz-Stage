@@ -116,6 +116,7 @@ export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'SUBTHEME_LIMIT',
   'BATCH_ALLOCATION',
   'PACK_IDENTITY_MISMATCH',
+  'ADULT_POLICY_REVIEW_MISSING',
   'OPENTDB_COMPOSITION',
   'PLACEHOLDER_CONTENT',
 ]);
@@ -414,6 +415,13 @@ export function validateProductionContent(
         message: `Clue ${row.clue_id} requires approved evidence`,
       });
       continue;
+    }
+
+    if (row.pack_id === 'built-in-adult' && evidence.adultPolicyReview === null) {
+      add({
+        file, row: row.rowNumber, code: 'ADULT_POLICY_REVIEW_MISSING', severity: 'error',
+        message: `Adult clue ${row.clue_id} requires approved Adult policy review`,
+      });
     }
 
     const authoredMissingEtAllowed = options.allowMissingEt === true && row.translation_status === 'untranslated';

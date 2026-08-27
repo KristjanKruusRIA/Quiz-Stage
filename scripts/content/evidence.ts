@@ -29,6 +29,10 @@ const reviewDecisionSchema = z.object({
 
 export type ReviewDecision = z.infer<typeof reviewDecisionSchema>;
 
+const adultPolicyReviewSchema = reviewDecisionSchema.extend({
+  policy: z.literal('adult-mature-non-graphic-v1'),
+}).strict();
+
 const supportingSourceSchema = z.object({
   sourceId: nonEmptyString,
   title: nonEmptyString,
@@ -60,6 +64,7 @@ export const contentEvidenceSchema = z.object({
   factualReview: reviewDecisionSchema,
   editorialReview: reviewDecisionSchema,
   translationReview: reviewDecisionSchema.nullable(),
+  adultPolicyReview: adultPolicyReviewSchema.nullable().default(null),
 }).strict().superRefine((record, ctx) => {
   if (record.origin === 'openTdbInspired' && record.inspiration?.system !== 'OpenTDB') {
     ctx.addIssue({ code: 'custom', path: ['inspiration'], message: 'OpenTDB inspiration is required' });
@@ -67,14 +72,16 @@ export const contentEvidenceSchema = z.object({
   if (record.origin !== 'openTdbInspired' && record.inspiration !== null) {
     ctx.addIssue({ code: 'custom', path: ['inspiration'], message: 'Inspiration is only valid for OpenTDB records' });
   }
-  if ([record.factualReview, record.editorialReview].some((review) => review.reviewer === record.authoring.author)) {
-    ctx.addIssue({ code: 'custom', path: ['factualReview'], message: 'Author cannot approve factual or editorial review' });
+  if ([record.factualReview, record.editorialReview, record.adultPolicyReview]
+    .some((review) => review !== null && review.reviewer === record.authoring.author)) {
+    ctx.addIssue({ code: 'custom', path: ['factualReview'], message: 'Author cannot approve factual, editorial, or Adult policy review' });
   }
 
   for (const [name, review] of [
     ['factualReview', record.factualReview],
     ['editorialReview', record.editorialReview],
     ['translationReview', record.translationReview],
+    ['adultPolicyReview', record.adultPolicyReview],
   ] as const) {
     if (review !== null && Date.parse(review.reviewedAt) <= Date.parse(record.authoring.authoredAt)) {
       ctx.addIssue({ code: 'custom', path: [name, 'reviewedAt'], message: 'Review must occur later than authoring' });

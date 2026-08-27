@@ -11,7 +11,7 @@ import {
   validateProductionContent,
   type ProductionValidationInput,
 } from '../../../scripts/content/validate';
-import { serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
+import { contentEvidenceSchema, serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
 import {
   FINAL_BATCH,
   PRODUCTION_BATCHES,
@@ -115,8 +115,16 @@ const approvedReview = {
   decision: 'approved' as const,
 };
 
+const approvedAdultPolicyReview = {
+  policy: 'adult-mature-non-graphic-v1' as const,
+  reviewer: 'Independent Adult Policy Reviewer',
+  reviewedAt: '2026-08-27T13:00:00.000Z',
+  decision: 'approved' as const,
+  notes: 'Reviewed against the approved mature, factual, non-graphic boundary.',
+};
+
 type EvidenceRow = Pick<Row,
-  'clue_id' | 'response_en' | 'explanation_en' | 'source_title' | 'source_url'
+  'clue_id' | 'pack_id' | 'response_en' | 'explanation_en' | 'source_title' | 'source_url'
   | 'source_license' | 'source_retrieved_at'>;
 
 function evidenceFor(
@@ -146,6 +154,7 @@ function evidenceFor(
     factualReview: approvedReview,
     editorialReview: approvedReview,
     translationReview: approvedReview,
+    adultPolicyReview: row.pack_id === 'built-in-adult' ? approvedAdultPolicyReview : null,
     ...overrides,
   };
 }
@@ -255,6 +264,55 @@ function twelveValidSets(): Row[] {
 }
 
 describe('production content validation', () => {
+  it('defaults older non-Adult evidence to no Adult policy review', () => {
+    const row = boardRow(0, 1);
+
+    expect(contentEvidenceSchema.parse(evidenceFor(row, '01-history')).adultPolicyReview).toBeNull();
+  });
+
+  it('requires approved Adult policy review for Adult board rows', () => {
+    const batch = getProductionBatch('14-adult');
+    const row = boardBatchRows(batch)[0];
+    const result = validateProductionContent([input('adult.csv', [row])], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap([evidenceFor(row, batch.id, { adultPolicyReview: null })]),
+    });
+
+    expect(result.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'ADULT_POLICY_REVIEW_MISSING', severity: 'error' }),
+    ]));
+  });
+
+  it('rejects Adult policy review by the evidence author', () => {
+    const row = boardBatchRows(getProductionBatch('14-adult'))[0];
+
+    expect(() => contentEvidenceSchema.parse({
+      ...evidenceFor(row, '14-adult'),
+      adultPolicyReview: { ...approvedAdultPolicyReview, reviewer: 'Content Author' },
+    })).toThrow(/author/i);
+  });
+
+  it('accepts Adult Final evidence with approved Adult policy review', () => {
+    const row = finalBatchRows().find((candidate) => candidate.macro_topic === 'adult')!;
+    const result = validateProductionContent([input('adult-final.csv', [row])], {
+      mode: 'release',
+      evidenceByClueId: evidenceMap([{
+        ...evidenceFor(row, '13-finals'), adultPolicyReview: approvedAdultPolicyReview,
+      }]),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('ADULT_POLICY_REVIEW_MISSING');
+  });
+
+  it('does not require Adult policy review for non-Adult clues', () => {
+    const batch = getProductionBatch('01-history');
+    const row = boardBatchRows(batch)[0];
+    const result = validateProductionContent([input('history.csv', [row])], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap([evidenceFor(row, batch.id)]),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('ADULT_POLICY_REVIEW_MISSING');
+  });
+
   it.each([
     ['missing-tier.csv', 'MISSING_TIER'],
     ['duplicate-id.csv', 'DUPLICATE_ID'],
@@ -838,7 +896,8 @@ describe('production content validation', () => {
     expect([...NON_WAIVABLE_CODES]).toEqual(expect.arrayContaining([
       'MISSING_EVIDENCE', 'SOURCE_MISMATCH', 'GENERIC_SOURCE', 'DUPLICATE_FACT',
       'NEAR_DUPLICATE_CLUE', 'BOARD_FINAL_FACT_REUSE', 'SUBTHEME_LIMIT',
-      'BATCH_ALLOCATION', 'OPENTDB_COMPOSITION', 'PLACEHOLDER_CONTENT',
+      'BATCH_ALLOCATION', 'PACK_IDENTITY_MISMATCH', 'OPENTDB_COMPOSITION', 'PLACEHOLDER_CONTENT',
+      'ADULT_POLICY_REVIEW_MISSING',
     ]));
   });
 
@@ -853,6 +912,7 @@ describe('production content validation', () => {
       'RELEASE_EASY_SETS_SHORTAGE',
       'RELEASE_MEDIUM_SETS_SHORTAGE',
       'RELEASE_HARD_SETS_SHORTAGE',
+      'RELEASE_BUILT_IN_PACKS_SHORTAGE',
     ]));
   });
 

@@ -62,6 +62,7 @@ const validEvidence: ContentEvidence = {
     decision: 'approved',
   },
   translationReview: null,
+  adultPolicyReview: null,
 };
 
 const validReview: ReviewDecision = {

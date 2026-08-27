@@ -106,6 +106,13 @@ function evidenceFor(row: CsvRow, batchId: string, origin: ContentEvidence['orig
     factualReview: { reviewer: 'Fact Reviewer', reviewedAt: '2026-08-13T09:00:00.000Z', decision: 'approved' },
     editorialReview: { reviewer: 'Editor', reviewedAt: '2026-08-13T10:00:00.000Z', decision: 'approved' },
     translationReview: { reviewer: 'Translator', reviewedAt: '2026-08-13T11:00:00.000Z', decision: 'approved' },
+    adultPolicyReview: row.pack_id === 'built-in-adult' ? {
+      policy: 'adult-mature-non-graphic-v1',
+      reviewer: 'Independent Adult Policy Reviewer',
+      reviewedAt: '2026-08-27T13:00:00.000Z',
+      decision: 'approved',
+      notes: 'Reviewed against the approved mature, factual, non-graphic boundary.',
+    } : null,
   };
 }
 
