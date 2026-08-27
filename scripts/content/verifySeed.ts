@@ -106,8 +106,11 @@ export function readReleaseInventoryReport(path: string): ReleaseInventoryReport
   const summary = cast.summary as ReleaseSummary;
   for (const key of Object.keys(RELEASE_THRESHOLDS) as (keyof ReleaseSummary)[]) {
     const expected = RELEASE_THRESHOLDS[key];
-    if (typeof summary[key] !== 'number' || summary[key] < expected) {
-      throw new Error(`Release inventory report is below threshold for ${key}: ${summary[key]}`);
+    if (typeof summary[key] !== 'number' || summary[key] !== expected) {
+      throw new Error(
+        'Release inventory report does not match exact inventory for '
+        + key + ': ' + summary[key] + ' != ' + expected,
+      );
     }
   }
   const input = parsed.input;

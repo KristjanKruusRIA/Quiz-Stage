@@ -266,8 +266,9 @@ function twelveValidSets(): Row[] {
 describe('production content validation', () => {
   it('defaults older non-Adult evidence to no Adult policy review', () => {
     const row = boardRow(0, 1);
+    const { adultPolicyReview: _adultPolicyReview, ...olderEvidence } = evidenceFor(row, '01-history');
 
-    expect(contentEvidenceSchema.parse(evidenceFor(row, '01-history')).adultPolicyReview).toBeNull();
+    expect(contentEvidenceSchema.parse(olderEvidence).adultPolicyReview).toBeNull();
   });
 
   it('requires approved Adult policy review for Adult board rows', () => {

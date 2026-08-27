@@ -42,6 +42,7 @@ interface SeedInventory {
   easySets: number;
   mediumSets: number;
   hardSets: number;
+  builtInPacks: number;
 }
 
 const seedPath = resolve('resources/content/seed.sqlite');
@@ -129,7 +130,7 @@ function boardRows(batch: ProductionBatchDefinition, batchIndex: number): CsvRow
           rows.push({
             clue_id: `${batch.id}-clue-${localSetIndex}-${tier}`,
             pack_id: batch.packId,
-            pack_name: batch.topicFamily,
+            pack_name: batch.packName,
             category_set_id: `${batch.id}-set-${localSetIndex}`,
             content_kind: 'board', round, tier: String(tier), difficulty,
             macro_topic: batch.subthemes[localSetIndex % batch.subthemes.length],
@@ -156,26 +157,32 @@ function boardRows(batch: ProductionBatchDefinition, batchIndex: number): CsvRow
 }
 
 function finalRows(): CsvRow[] {
-  return Array.from({ length: 150 }, (_, index) => {
-    const unique = alphabeticId(10_000 + index);
-    return {
-      clue_id: `final-clue-${index}`, pack_id: FINAL_BATCH.packId, pack_name: FINAL_BATCH.topicFamily,
-      category_set_id: `final-set-${index}`, content_kind: 'final', round: 'final', tier: '0',
-      difficulty: (['easy', 'medium', 'hard'] as const)[index % 3],
-      macro_topic: FINAL_BATCH.subthemes[index % FINAL_BATCH.subthemes.length],
-      category_name_en: `Final category ${index}`, category_name_et: `Finaalkategooria ${index}`,
-      clue_en: `Identify the documented final subject ${unique}`,
-      clue_et: `Tuvasta dokumenteeritud finaaliteema ${unique}`,
-      response_en: `Final response ${index}`, response_et: `Finaalvastus ${index}`,
-      accepted_variants_en: '', accepted_variants_et: '',
-      explanation_en: `The source documents final response ${index}`,
-      explanation_et: `Allikas dokumenteerib finaalvastuse ${index}`,
-      source_title: `Supporting final source ${index}`,
-      source_url: `https://example.com/source/finals/${index}`,
-      source_license: 'CC0-1.0', source_retrieved_at: '2026-08-13',
-      translation_status: 'reviewed', enabled: 'true',
-    };
-  });
+  const rows: CsvRow[] = [];
+  for (const [macroTopic, allocation] of Object.entries(FINAL_BATCH.finalTopicAllocations!)) {
+    for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+      for (let index = 0; index < allocation[difficulty]; index += 1) {
+        const number = rows.length;
+        const unique = alphabeticId(10_000 + number);
+        rows.push({
+          clue_id: `final-clue-${number}`, pack_id: allocation.packId, pack_name: allocation.packName,
+          category_set_id: `final-set-${number}`, content_kind: 'final', round: 'final', tier: '0',
+          difficulty, macro_topic: macroTopic,
+          category_name_en: `Final category ${number}`, category_name_et: `Finaalkategooria ${number}`,
+          clue_en: `Identify the documented final subject ${unique}`,
+          clue_et: `Tuvasta dokumenteeritud finaaliteema ${unique}`,
+          response_en: `Final response ${number}`, response_et: `Finaalvastus ${number}`,
+          accepted_variants_en: '', accepted_variants_et: '',
+          explanation_en: `The source documents final response ${number}`,
+          explanation_et: `Allikas dokumenteerib finaalvastuse ${number}`,
+          source_title: `Supporting final source ${number}`,
+          source_url: `https://example.com/source/finals/${number}`,
+          source_license: 'CC0-1.0', source_retrieved_at: '2026-08-13',
+          translation_status: 'reviewed', enabled: 'true',
+        });
+      }
+    }
+  }
+  return rows;
 }
 
 function writeReleaseFixture(root: string): {
@@ -201,7 +208,15 @@ function writeReleaseFixture(root: string): {
   const finals = finalRows();
   const finalEvidence = finals.map((row) => evidenceFor(row, FINAL_BATCH.id));
   records.push(...finalEvidence);
-  writeFileSync(join(generated, `${FINAL_BATCH.id}.en-et.csv`), serializeCsv(finals));
+  const finalsByPack = new Map<string, CsvRow[]>();
+  for (const row of finals) {
+    const rows = finalsByPack.get(row.pack_id) ?? [];
+    rows.push(row);
+    finalsByPack.set(row.pack_id, rows);
+  }
+  for (const [packId, rows] of finalsByPack) {
+    writeFileSync(join(generated, `${FINAL_BATCH.id}-${packId}.en-et.csv`), serializeCsv(rows));
+  }
   writeFileSync(join(evidenceDirectory, `${FINAL_BATCH.id}.jsonl`), serializeEvidence(finalEvidence));
   return {
     inputs: [join(generated, '*.en-et.csv')],
@@ -252,6 +267,25 @@ function querySeedInventory(database: DatabaseConnection): SeedInventory {
     hardSets: database.prepare(
       "SELECT COUNT(*) FROM category_sets WHERE round IN ('round-one', 'round-two') AND difficulty = 'hard'",
     ).pluck().get() as number,
+    builtInPacks: database.prepare("SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'").pluck().get() as number,
+  };
+}
+
+function packInventory(database: DatabaseConnection, packId: string): {
+  boardSets: number;
+  boardClues: number;
+  finalClues: number;
+} {
+  return {
+    boardSets: database.prepare(
+      "SELECT COUNT(*) FROM category_sets WHERE pack_id = ? AND round IN ('round-one', 'round-two')",
+    ).pluck().get(packId) as number,
+    boardClues: database.prepare(
+      "SELECT COUNT(*) FROM clues JOIN category_sets ON category_sets.id = clues.category_set_id WHERE category_sets.pack_id = ? AND clues.round IN ('round-one', 'round-two')",
+    ).pluck().get(packId) as number,
+    finalClues: database.prepare(
+      "SELECT COUNT(*) FROM clues JOIN category_sets ON category_sets.id = clues.category_set_id WHERE category_sets.pack_id = ? AND clues.round = 'final'",
+    ).pluck().get(packId) as number,
   };
 }
 
@@ -394,14 +428,30 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(second.seedSha256).toBe(first.seedSha256);
     expect(readFileSync(secondOutput)).toEqual(readFileSync(firstOutput));
     expect(first.input.sha256).toBe(second.input.sha256);
-    expect(first.input.evidence).toMatchObject({ records: 6150, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
+    expect(first.input.evidence).toMatchObject({ records: 7174, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
     const firstReportData = JSON.parse(readFileSync(firstReport, 'utf8'));
     expect(firstReportData.validation).toMatchObject({
       mode: 'release', blocking: false,
-      summary: { boardClues: 6000, categorySets: 1200, finalClues: 150 },
+    });
+    expect(firstReportData.validation.summary).toEqual({
+      boardClues: 7_000,
+      categorySets: 1_400,
+      distinctCategoryNames: 1_400,
+      finalClues: 174,
+      easySets: 467,
+      mediumSets: 467,
+      hardSets: 466,
+      builtInPacks: 15,
     });
     expect(firstReportData.validation).not.toHaveProperty('validation');
     expect(readReleaseInventoryReport(firstReport).validation.summary).toEqual(firstReportData.validation.summary);
+    const aboveThreshold = structuredClone(firstReportData);
+    aboveThreshold.validation.summary.boardClues = 7_001;
+    writeFileSync(firstReport, `${JSON.stringify(aboveThreshold, null, 2)}\n`);
+    expect(() => readReleaseInventoryReport(firstReport)).toThrow(
+      'Release inventory report does not match exact inventory for boardClues: 7001 != 7000',
+    );
+    writeFileSync(firstReport, `${JSON.stringify(firstReportData, null, 2)}\n`);
 
     const database = openDatabase({ filePath: firstOutput, readonly: true });
     connections.push(database);
@@ -418,10 +468,53 @@ describe('evidence-bound production seed infrastructure', () => {
     });
     expect(database.prepare(
       "SELECT COUNT(*) FROM clues WHERE json_extract(source, '$.format') = 'quiz-stage-csv-v2'",
-    ).pluck().get()).toBe(6150);
+    ).pluck().get()).toBe(7174);
+    expect(database.prepare(
+      "SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'",
+    ).pluck().get()).toBe(15);
+    expect(packInventory(database, 'built-in-adult')).toEqual({
+      boardSets: 100, boardClues: 500, finalClues: 12,
+    });
+    expect(packInventory(database, 'built-in-estonia')).toEqual({
+      boardSets: 100, boardClues: 500, finalClues: 12,
+    });
+    expect(packInventory(database, 'built-in-finals')).toEqual({
+      boardSets: 0, boardClues: 0, finalClues: 150,
+    });
     database.close();
     connections.splice(connections.indexOf(database), 1);
-    expect(inspectSeed(firstOutput, fixture.evidenceByClueId).inventory.boardClues).toBe(6000);
+    expect(inspectSeed(firstOutput, fixture.evidenceByClueId).inventory).toEqual({
+      boardClues: 7_000,
+      categorySets: 1_400,
+      distinctCategoryNames: 1_400,
+      finalClues: 174,
+      easySets: 467,
+      mediumSets: 467,
+      hardSets: 466,
+      builtInPacks: 15,
+    });
+
+    const selectionDatabase = openDatabase({ filePath: firstOutput, readonly: true });
+    connections.push(selectionDatabase);
+    const service = new ContentService(new ContentRepository(selectionDatabase));
+    for (const packId of ['built-in-adult', 'built-in-estonia']) {
+      const selection = service.selectForMatch({
+        language: 'en', difficulty: 'easy', clueSeconds: 15,
+        teams: [
+          { id: 'team-1', name: 'Alpha', color: '#E3B341' },
+          { id: 'team-2', name: 'Beta', color: '#50A7F5' },
+        ],
+        packIds: [packId], displayMode: 'single',
+      }, `${packId}-only`);
+      expect(selection).toMatchObject({ ok: true });
+      if (selection.ok) {
+        expect(selection.categorySets).toHaveLength(12);
+        expect(selection.categorySets.every((categorySet) => categorySet.packId === packId)).toBe(true);
+        expect(selection.final.packId).toBe(packId);
+      }
+    }
+    selectionDatabase.close();
+    connections.splice(connections.indexOf(selectionDatabase), 1);
 
     const tampered = openDatabase({ filePath: firstOutput });
     connections.push(tampered);
@@ -461,7 +554,7 @@ describe('evidence-bound production seed infrastructure', () => {
 
     await expect(buildProductionSeed({
       inputs: fixture.inputs, evidence: fixture.evidence, output, report,
-    })).resolves.toMatchObject({ boardClues: 6000, categorySets: 1200, finalClues: 150 });
+    })).resolves.toMatchObject({ boardClues: 7_000, categorySets: 1_400, finalClues: 174 });
     expect(JSON.parse(readFileSync(report, 'utf8')).translation.exceptions).toHaveLength(1);
   }, 120_000);
 
