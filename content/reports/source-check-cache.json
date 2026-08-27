@@ -17568,6 +17568,4614 @@
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hannah_Arendt&oldid=1371098869"
       }
+    },
+    "https://en.wikipedia.org/wiki/24_Hours_of_Le_Mans": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:05.951Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/24_Hours_of_Le_Mans",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:05.951Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/24_Hours_of_Le_Mans"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Accordion": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:05.954Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Accordion",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:05.954Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Accordion"
+      }
+    },
+    "https://en.wikipedia.org/wiki/ABBA": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:05.956Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/ABBA",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:05.956Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/ABBA"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Acropolis_of_Athens": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Africa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.102Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Africa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.102Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Africa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/African_elephant": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.103Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/African_elephant",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.103Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/African_elephant"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.227Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.227Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Alphabet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.228Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Alphabet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.228Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Alphabet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Alps": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.229Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Alps",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.229Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Alps"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ancient_Egypt": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.351Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ancient_Egypt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.351Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ancient_Egypt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Amazon_River": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.353Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Amazon_River",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.353Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Amazon_River"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Android_(operating_system)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.475Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Android_(operating_system)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.475Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Android_(operating_system)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Angry_Birds": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.477Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Angry_Birds",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.477Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Angry_Birds"
+      }
+    },
+    "https://en.wikipedia.org/wiki/1984_(novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.575Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/1984_(novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.575Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/1984_(novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Antarctica": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.600Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Antarctica",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.600Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Antarctica"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Antonio_Vivaldi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.601Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Antonio_Vivaldi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.601Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Antonio_Vivaldi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Antonym": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.697Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Antonym",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.697Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Antonym"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Artificial_intelligence": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.724Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.724Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.726Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.726Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Arvo_Pärt": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.820Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Arvo_Pärt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.820Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Arvo_P%C3%A4rt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Association_football": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.848Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Association_football",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.848Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Association_football"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Atlantic_Ocean": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.944Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Atlantic_Ocean",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.944Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Atlantic_Ocean"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Atom": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.971Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Atom",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.971Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Atom"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Athletics": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:06.978Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Athletics",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:06.978Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Athletics"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.065Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.065Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Avatar_(2009_film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.101Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Avatar_(2009_film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.101Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Avatar_(2009_film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Aztecs": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.187Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Aztecs",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.187Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Aztecs"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Autobiography": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.205Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Autobiography",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.205Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Autobiography"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Backstreet_Boys": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.224Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Backstreet_Boys",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.224Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Backstreet_Boys"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ancient_Greece": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.227Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ancient_Greece",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.227Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ancient_Greece"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bagpipes": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.311Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bagpipes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.311Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bagpipes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Baltic_Sea": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.345Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.345Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Baltic_Sea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Barbecue": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.426Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Barbecue",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.426Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Barbecue"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Basketball": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.467Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Basketball",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.467Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Basketball"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bastille": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.549Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bastille",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.549Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bastille"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Baywatch": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.582Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Baywatch",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.582Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Baywatch"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Biathlon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.670Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Biathlon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.670Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Biathlon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Billie_Jean": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.696Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Billie_Jean",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.696Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Billie_Jean"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Blood": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.818Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Blood",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.818Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Blood"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Blue_whale": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:07.934Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Blue_whale",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:07.934Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Blue_whale"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bluetooth": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.048Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bluetooth",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.048Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bluetooth"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Baguette": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.096Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Baguette",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.096Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Baguette"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bohemian_Rhapsody": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.170Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bohemian_Rhapsody",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.170Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bohemian_Rhapsody"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Boston_Marathon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.218Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Boston_Marathon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.218Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Boston_Marathon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bank_of_Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.270Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bank_of_Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.270Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bank_of_Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Boxing": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.292Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Boxing",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.292Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Boxing"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Braille": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.340Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Braille",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.340Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Braille"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Brain": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.385Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Brain",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.385Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Brain"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Breakfast": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.415Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Breakfast",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.415Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Breakfast"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Biography": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.447Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Biography",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.447Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Biography"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Breaking_Bad": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.455Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Breaking_Bad",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.455Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Breaking_Bad"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Burj_Khalifa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.500Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Burj_Khalifa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.500Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Burj_Khalifa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cheetah": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.614Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cheetah",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.614Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cheetah"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cello": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.647Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cello",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.647Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cello"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chocolate": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.763Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chocolate",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.763Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chocolate"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.877Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.877Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Citizenship": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:08.998Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Citizenship",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:08.998Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Citizenship"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chess": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.087Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chess",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.087Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chess"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cheese": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.117Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cheese",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.117Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cheese"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cleopatra": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.121Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cleopatra",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.121Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cleopatra"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cloud_computing": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.209Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cloud_computing",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.209Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cloud_computing"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Central_processing_unit": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.278Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Central_processing_unit",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.278Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Central_processing_unit"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Coldplay": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.333Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Coldplay",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.333Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Coldplay"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Coat_of_arms_of_Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.359Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.359Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Colosseum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.400Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Colosseum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.400Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Colosseum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Comet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.457Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Comet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.457Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Comet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Constitution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.484Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Constitution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.484Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Constitution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Counter-Strike": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.524Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Counter-Strike",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.524Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Counter-Strike"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cristiano_Ronaldo": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.578Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.578Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Croissant": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.606Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Croissant",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.606Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Croissant"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Daniel_Radcliffe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.700Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Daniel_Radcliffe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.700Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Daniel_Radcliffe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Danube": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.823Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Danube",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.823Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Danube"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Coffee": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.913Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Coffee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.913Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Coffee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Darth_Vader": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:09.946Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Darth_Vader",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:09.946Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Darth_Vader"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dead_Sea": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.045Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dead_Sea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.045Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dead_Sea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Democracy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.087Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Democracy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.087Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Democracy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Denmark": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.181Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Denmark",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.181Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Denmark"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dessert": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.216Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dessert",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.216Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dessert"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Danish_krone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.233Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Danish_krone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.233Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Danish_krone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Diesel_engine": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.304Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Diesel_engine",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.304Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Diesel_engine"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dolphin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.341Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dolphin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.341Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dolphin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Don_Quixote": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.355Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Don_Quixote",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.355Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Don_Quixote"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dracula": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.426Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dracula",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.426Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dracula"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Drum_kit": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.463Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Drum_kit",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.463Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Drum_kit"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dancing_Queen": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.471Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dancing_Queen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.471Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dancing_Queen"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Dynamite": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.478Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Dynamite",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.478Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Dynamite"
+      }
+    },
+    "https://en.wikipedia.org/wiki/E-residency_of_Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.554Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/E-residency_of_Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.554Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/E-residency_of_Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.587Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.587Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eiffel_Tower": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.593Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.593Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Election": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.600Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Election",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.600Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Election"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ellis_Island": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ellis_Island",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ellis_Island"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Email": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.710Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Email",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.710Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Email"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Embassy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.714Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Embassy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.714Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Embassy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Emoji": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.722Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Emoji",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.722Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Emoji"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Emperor_penguin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.798Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.798Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Emperor_penguin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/End_of_World_War_II_in_Europe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.836Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/End_of_World_War_II_in_Europe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.836Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/End_of_World_War_II_in_Europe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Espresso": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.844Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Espresso",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.844Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Espresso"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.920Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.920Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonian_kroon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:10.967Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonian_kroon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:10.967Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonian_kroon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonian_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.041Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonian_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.041Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonian_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonian_Declaration_of_Independence": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.108Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonian_Declaration_of_Independence",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.108Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonian_Declaration_of_Independence"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Equator": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.345Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Equator",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.345Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Equator"
+      }
+    },
+    "https://en.wikipedia.org/wiki/European_Union": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.485Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/European_Union",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.485Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/European_Union"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Euro": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.616Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Euro",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.616Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Euro"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2001": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.642Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2001",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.642Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2001"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Eye": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.682Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Eye",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.682Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Eye"
+      }
+    },
+    "https://en.wikipedia.org/wiki/FIFA_World_Cup": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.741Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.741Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.766Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.766Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Finland": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.804Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Finland",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.804Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Finland"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Finnish_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.863Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Finnish_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.863Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Finnish_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fish_and_chips": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fish_and_chips",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fish_and_chips"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Flag_of_Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.928Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Flag_of_Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.928Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Flag_of_Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Flute": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:11.986Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Flute",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:11.986Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Flute"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Formula_One": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.012Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Formula_One",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.012Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Formula_One"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Forrest_Gump": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.050Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Forrest_Gump",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.050Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Forrest_Gump"
+      }
+    },
+    "https://en.wikipedia.org/wiki/France": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.109Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/France",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.109Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/France"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Freezing": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.136Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Freezing",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.136Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Freezing"
+      }
+    },
+    "https://en.wikipedia.org/wiki/French_Revolution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.172Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/French_Revolution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.172Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/French_Revolution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/French_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.234Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/French_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.234Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/French_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Friends": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.258Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Friends",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.258Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Friends"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Frozen_(2013_film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.293Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.293Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Frozen_(2013_film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Frédéric_Chopin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.358Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Frédéric_Chopin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.358Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Game_of_Thrones": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.416Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.416Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Game_of_Thrones"
+      }
+    },
+    "https://en.wikipedia.org/wiki/European_Parliament": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.476Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/European_Parliament",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.476Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/European_Parliament"
+      }
+    },
+    "https://en.wikipedia.org/wiki/German_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.539Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/German_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.539Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/German_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Georg_Ots": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.592Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Georg_Ots",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.592Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Georg_Ots"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Germany": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.595Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Germany",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.595Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Germany"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Giraffe": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.675Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Giraffe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.675Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Giraffe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Galaxy_S_series": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.729Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Galaxy_S_series",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.729Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Galaxy_S_series"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Giuseppe_Verdi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.740Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.740Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Giuseppe_Verdi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Global_Positioning_System": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.742Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.742Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Global_Positioning_System"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gold": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.796Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gold",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.796Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gold"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Golf": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.845Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Golf",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.845Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Golf"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Gravity": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.856Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Gravity",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.856Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Gravity"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Grand_Canyon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.862Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Grand_Canyon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.862Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Grand_Canyon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Wall_of_China": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.918Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.918Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Greek_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.967Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Greek_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.967Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Greek_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Guacamole": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:12.976Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Guacamole",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:12.976Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Guacamole"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Guitar": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.040Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Guitar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.040Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Guitar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Haiku": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.084Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Haiku",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.084Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Haiku"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hamburger": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.097Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hamburger",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.097Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hamburger"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harry_Potter": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.154Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harry_Potter",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.154Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harry_Potter"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hashtag": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.214Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hashtag",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.214Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hashtag"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hawaii": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.276Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hawaii",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.276Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hawaii"
+      }
+    },
+    "https://en.wikipedia.org/wiki/High-definition_television": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.336Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/High-definition_television",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.336Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/High-definition_television"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Home_Alone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.392Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Home_Alone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.392Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Home_Alone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hot_chocolate": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.528Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hot_chocolate",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.528Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hot_chocolate"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Harry_Potter_(character)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.542Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Harry_Potter_(character)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.542Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Harry_Potter_(character)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Greek_salad": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.581Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Greek_salad",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.581Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Greek_salad"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hummus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.642Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hummus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.642Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hummus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Honey_bee": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.660Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Honey_bee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.660Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Honey_bee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.665Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.665Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ice_cream": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.695Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ice_cream",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.695Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ice_cream"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Icelandic_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.783Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Icelandic_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.783Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Icelandic_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Inca_Empire": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.787Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Inca_Empire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.787Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Inca_Empire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Indiana_Jones": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.907Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Indiana_Jones",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.907Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Indiana_Jones"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Independence_Day_(Estonia)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:13.926Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Independence_Day_(Estonia)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:13.926Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Independence_Day_(Estonia)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.030Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.030Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Space_Station": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.049Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.049Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Space_Station"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Italian_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.157Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Italian_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.157Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Italian_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Italy": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.171Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Italy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.171Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Italy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jack_Sparrow": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.279Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jack_Sparrow",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.279Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jack_Sparrow"
+      }
+    },
+    "https://en.wikipedia.org/wiki/James_Bond": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.292Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/James_Bond",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.292Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/James_Bond"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Japan": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.401Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Japan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.401Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Japan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ice_hockey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.405Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ice_hockey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.405Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ice_hockey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Japanese_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.415Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Japanese_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.415Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Japanese_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/International_Olympic_Committee": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.426Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/International_Olympic_Committee",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.426Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/International_Olympic_Committee"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Japanese_yen": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.524Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Japanese_yen",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.524Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Japanese_yen"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jennifer_Aniston": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.527Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jennifer_Aniston",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.527Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jennifer_Aniston"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jim_Carrey": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.537Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jim_Carrey",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.537Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jim_Carrey"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Joan_of_Arc": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.549Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Joan_of_Arc",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.549Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Joan_of_Arc"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Julia_Roberts": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.648Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Julia_Roberts",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.648Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Julia_Roberts"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.649Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.649Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Julius_Caesar": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.659Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Julius_Caesar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.659Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Julius_Caesar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jupiter": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.672Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jupiter",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.672Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jupiter"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Jurassic_Park_(film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.771Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.771Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kalevipoeg": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.772Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kalevipoeg",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.772Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kalevipoeg"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kangaroo": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.783Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kangaroo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.783Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kangaroo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kefir": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.793Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kefir",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.793Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kefir"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kimchi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.904Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kimchi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.904Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kimchi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kindle_Store": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:14.916Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kindle_Store",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:14.916Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kindle_Store"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Knight_Rider_(1982_TV_series)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.026Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Knight_Rider_(1982_TV_series)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.026Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Knight_Rider_(1982_TV_series)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lake_Peipus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.148Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lake_Peipus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.148Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lake_Peipus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kevade": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.269Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kevade",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.269Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kevade"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Latvia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.272Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Latvia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.272Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Latvia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.386Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.386Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Latvian_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.392Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Latvian_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.392Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Latvian_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lemonade": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.501Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lemonade",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.501Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lemonade"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Leonardo_DiCaprio": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.512Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.512Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Light_bulb": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.616Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Light_bulb",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.616Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Light_bulb"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Like_a_Prayer_(song)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.633Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Like_a_Prayer_(song)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.633Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Like_a_Prayer_(song)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.738Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.738Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Machu_Picchu": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.753Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Machu_Picchu",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.753Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Machu_Picchu"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Magna_Carta": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.859Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.859Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Magna_Carta"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Magnet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.875Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Magnet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.875Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Magnet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mahatma_Gandhi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.982Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.982Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Margot_Robbie": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:15.989Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Margot_Robbie",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:15.989Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Margot_Robbie"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mars": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.104Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mars",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.104Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mars"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Marzipan": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.229Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Marzipan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.229Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Marzipan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mashed_potato": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.351Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mashed_potato",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.351Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mashed_potato"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Maya_civilization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.475Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Maya_civilization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.475Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Maya_civilization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mayor": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.597Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mayor",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.597Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mayor"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.628Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.628Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr."
+      }
+    },
+    "https://en.wikipedia.org/wiki/Meryl_Streep": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.743Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Meryl_Streep",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.743Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Meryl_Streep"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Metallica": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.866Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Metallica",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.866Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Metallica"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Metaphor": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:16.981Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Metaphor",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:16.981Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Metaphor"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kelly_Sildaru": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.042Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kelly_Sildaru",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.041Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kelly_Sildaru"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Michael_Jordan": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.102Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Michael_Jordan",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.102Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Michael_Jordan"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Michael_Schumacher": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.164Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Michael_Schumacher",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.164Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Michael_Schumacher"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Milkshake": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.219Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Milkshake",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.219Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Milkshake"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Milky_Way": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.279Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Milky_Way",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.279Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Milky_Way"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Minecraft": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.337Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Minecraft",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.337Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mineral_water": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.401Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mineral_water",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.401Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mineral_water"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Moai": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.460Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Moai",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.460Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Moai"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mongol_Empire": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.526Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mongol_Empire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.526Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mongol_Empire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Monopoly_(game)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.581Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Monopoly_(game)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.581Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Monopoly_(game)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Moomins": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.641Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Moomins",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.641Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Moomins"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mount_Everest": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.703Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mount_Everest",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.703Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mount_Everest"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Muhammad_Ali": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.755Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Muhammad_Ali",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.755Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Muhammad_Ali"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.819Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.819Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express"
+      }
+    },
+    "https://en.wikipedia.org/wiki/NATO": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.877Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/NATO",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.877Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/NATO"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Napoleon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.942Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Napoleon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.942Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Napoleon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nelson_Mandela": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:17.998Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:17.998Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nelson_Mandela"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Niagara_Falls": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.066Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Niagara_Falls",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.066Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Niagara_Falls"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nile": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.113Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nile",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.113Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nile"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nintendo_Switch": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.181Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.181Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nintendo_Switch"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mediterranean_Sea": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.183Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.183Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mediterranean_Sea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nokia_3310": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.235Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nokia_3310",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.235Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nokia_3310"
+      }
+    },
+    "https://en.wikipedia.org/wiki/North_Pole": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.299Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/North_Pole",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.299Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/North_Pole"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Norway": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.305Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Norway",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.305Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Norway"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Norwegian_krone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.357Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Norwegian_krone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.357Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Norwegian_krone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Novel": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.422Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Novel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.422Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Novel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Octopus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.427Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Octopus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.427Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Octopus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Olympic_Games": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.479Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Olympic_Games",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.479Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Olympic_Games"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Orange_juice": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.541Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Orange_juice",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.541Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Orange_juice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Omelette": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.544Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Omelette",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.544Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Omelette"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ott_Tänak": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.600Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ott_Tänak",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.600Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ott_T%C3%A4nak"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ottoman_Empire": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.656Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ottoman_Empire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.656Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ottoman_Empire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pacific_Ocean": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.665Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pacific_Ocean",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.665Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pacific_Ocean"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Paella": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.722Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Paella",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.722Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Paella"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Palindrome": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.772Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Palindrome",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.772Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Palindrome"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pancake": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.781Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pancake",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.781Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pancake"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Password": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.839Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Password",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.839Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Password"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Penicillin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.893Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Penicillin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.893Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Penicillin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pesto": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.902Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pesto",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.902Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pesto"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peter_the_Great": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:18.960Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peter_the_Great",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:18.960Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peter_the_Great"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Photosynthesis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.018Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.018Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Photosynthesis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Piano": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.026Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Piano",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.026Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Piano"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pippi_Longstocking": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.082Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pippi_Longstocking",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.082Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pippi_Longstocking"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pizza": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.139Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pizza",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.139Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pizza"
+      }
+    },
+    "https://en.wikipedia.org/wiki/PlayStation": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.149Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/PlayStation",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.149Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/PlayStation"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pluto": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.204Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pluto",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.204Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pluto"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pokémon": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.271Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pokémon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.271Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pok%C3%A9mon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Polar_bear": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.329Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Polar_bear",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.329Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Polar_bear"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Polish_złoty": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.393Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Polish_złoty",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.393Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Polish_z%C5%82oty"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Political_party": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.452Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Political_party",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.452Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Political_party"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pompeii": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.515Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pompeii",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.515Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pompeii"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Popcorn": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.574Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Popcorn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.574Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Popcorn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Portable_Document_Format": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.637Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Portable_Document_Format",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.637Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Portable_Document_Format"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Poker_Face_(song)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Poker_Face_(song)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Poker_Face_(song)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Portuguese_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.696Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Portuguese_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.696Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Portuguese_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pound_sterling": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.761Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pound_sterling",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.761Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pound_sterling"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pride_and_Prejudice": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.800Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.800Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pride_and_Prejudice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Printing_press": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.819Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Printing_press",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.819Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Printing_press"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Proverb": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.885Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Proverb",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.885Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Proverb"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.925Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.925Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky"
+      }
+    },
+    "https://en.wikipedia.org/wiki/QR_code": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:19.941Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/QR_code",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:19.941Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/QR_code"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Queen_(band)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.007Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Queen_(band)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.007Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Queen_(band)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Kristina_Šmigun-Vähi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.029Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Kristina_Šmigun-Vähi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.029Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Kristina_%C5%A0migun-V%C3%A4hi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Queen_Victoria": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.047Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Queen_Victoria",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.047Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Queen_Victoria"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Radio": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.067Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Radio",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.067Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Radio"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rainbow": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.130Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rainbow",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.130Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rainbow"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rammstein": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.170Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rammstein",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.170Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rammstein"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Random-access_memory": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.188Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.188Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Random-access_memory"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Raspberry_Pi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.252Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.252Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Raspberry_Pi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Referendum": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.309Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Referendum",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.309Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Referendum"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Renminbi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.368Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Renminbi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.368Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Renminbi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Red_blood_cell": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.403Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.403Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Red_blood_cell"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Richard_Wagner": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.485Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.485Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Richard_Wagner"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rally_Estonia": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.514Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rally_Estonia",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.514Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rally_Estonia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Riigikogu": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.526Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Riigikogu",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.526Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Riigikogu"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Robin_Hood": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.600Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Robin_Hood",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.600Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Robin_Hood"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rocky_Balboa": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.637Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rocky_Balboa",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.637Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rocky_Balboa"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rolling_in_the_Deep": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.648Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rolling_in_the_Deep",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.648Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rolling_in_the_Deep"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Roman_Empire": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.722Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Roman_Empire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.722Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Roman_Empire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Romeo_and_Juliet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.752Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.752Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Romeo_and_Juliet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rowan_Atkinson": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.762Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rowan_Atkinson",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.762Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rowan_Atkinson"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sagrada_Família": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.839Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sagrada_Família",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.839Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sahara": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.875Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sahara",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.875Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sahara"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Salad": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.886Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Salad",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.886Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Salad"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sandwich": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:20.960Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sandwich",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:20.960Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sandwich"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Saturn": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.014Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Saturn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.014Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Saturn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sauerkraut": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.019Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sauerkraut",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.019Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sauerkraut"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Saxophone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.021Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Saxophone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.021Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Saxophone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Scrabble": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.083Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Scrabble",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.083Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Scrabble"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Search_engine": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.140Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Search_engine",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.140Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Search_engine"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Separation_of_powers": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.144Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Separation_of_powers",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.144Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Separation_of_powers"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sherlock_Holmes": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.257Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sherlock_Holmes",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.257Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sherlock_Holmes"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shrek": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.377Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shrek",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.377Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shrek"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Singing_Revolution": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.499Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Singing_Revolution",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.499Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Singing_Revolution"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Skeleton": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.621Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Skeleton",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.621Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Skeleton"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Short_Message_Service": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.663Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Short_Message_Service",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.663Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Short_Message_Service"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Skype": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.785Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Skype",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.785Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Skype"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Serena_Williams": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.790Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Serena_Williams",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.790Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Serena_Williams"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Skin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.872Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Skin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.872Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Skin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Shape_of_You": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.897Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Shape_of_You",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.897Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Shape_of_You"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.901Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.901Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Smoothie": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.911Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Smoothie",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.911Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Smoothie"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sound": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:21.993Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sound",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:21.993Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sound"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Soup": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.021Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Soup",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.021Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Soup"
+      }
+    },
+    "https://en.wikipedia.org/wiki/South_Park": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.024Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/South_Park",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.024Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/South_Park"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Soviet_Union": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.034Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Soviet_Union",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.034Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Soviet_Union"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Spanish_language": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.120Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Spanish_language",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.120Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Spanish_language"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Spice_Girls": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.146Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Spice_Girls",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.146Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Spice_Girls"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Spider-Man": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.148Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Spider-Man",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.148Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Spider-Man"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Steam_engine": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.157Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Steam_engine",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.157Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Steam_engine"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Stomach": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.250Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Stomach",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.250Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Stomach"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Stranger_Things": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.287Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Stranger_Things",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.287Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Stranger_Things"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sun": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.294Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sun",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.294Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sun"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Super_Bowl": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.395Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Super_Bowl",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.395Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Super_Bowl"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Super_Mario": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.433Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Super_Mario",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.433Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Super_Mario"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sushi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.434Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sushi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.434Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sushi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sweden": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.520Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sweden",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.520Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sweden"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Swiss_franc": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.556Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Swiss_franc",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.556Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Swiss_franc"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Swedish_krona": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.557Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Swedish_krona",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.557Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Swedish_krona"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Subscriber_identity_module": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.569Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Subscriber_identity_module",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.569Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Subscriber_identity_module"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sydney_Opera_House": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.651Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.651Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sydney_Opera_House"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Taco": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.682Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Taco",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.682Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Taco"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Synonym": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.684Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Synonym",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.684Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Synonym"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tax": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.693Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tax",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.693Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tax"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Telephone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.806Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Telephone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.806Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Telephone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Terminator_(character)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.817Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Terminator_(character)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.817Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Terminator_(character)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tetris": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.931Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tetris",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.931Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tetris"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Beatles": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:22.939Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Beatles",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:22.939Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Beatles"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Hobbit": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.056Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Hobbit",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.056Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Hobbit"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Lion_King": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.064Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Lion_King",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.064Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Lion_King"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Little_Prince": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.189Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Little_Prince",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.189Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Little_Prince"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Matrix": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.222Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Matrix",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.222Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Matrix"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tea": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.246Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.246Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Office_(American_TV_series)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.312Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Office_(American_TV_series)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.312Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Office_(American_TV_series)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.347Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.347Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tennis": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.376Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tennis",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.376Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tennis"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Rolling_Stones": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.377Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Rolling_Stones",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.377Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Rolling_Stones"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Simpsons": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.433Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Simpsons",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.433Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Simpsons"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Terminator": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.470Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Terminator",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.470Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Terminator"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tiger_Woods": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.498Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tiger_Woods",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.498Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tiger_Woods"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Three_Musketeers": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.503Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.503Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Three_Musketeers"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Titanic_(1997_film)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.555Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.555Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tofu": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.595Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tofu",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.595Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tofu"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tom_Hanks": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.623Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tom_Hanks",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.623Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tom_Hanks"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tour_de_France": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.628Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tour_de_France",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.628Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tour_de_France"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tower_of_London": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.677Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tower_of_London",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.677Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tower_of_London"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Toxic_(song)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.717Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Toxic_(song)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.717Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Toxic_(song)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Trumpet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.745Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Trumpet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.745Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Trumpet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Truth_and_Justice": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.748Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Truth_and_Justice",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.748Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Truth_and_Justice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/U2": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.799Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/U2",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.799Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/U2"
+      }
+    },
+    "https://en.wikipedia.org/wiki/UEFA_Champions_League": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.840Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/UEFA_Champions_League",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.840Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/UEFA_Champions_League"
+      }
+    },
+    "https://en.wikipedia.org/wiki/United_Nations": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.870Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/United_Nations",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.870Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/United_Nations"
+      }
+    },
+    "https://en.wikipedia.org/wiki/UNESCO": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.876Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/UNESCO",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.876Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/UNESCO"
+      }
+    },
+    "https://en.wikipedia.org/wiki/United_States_dollar": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.926Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/United_States_dollar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.926Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/United_States_dollar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Universal_Serial_Bus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:23.969Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Universal_Serial_Bus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:23.969Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Universal_Serial_Bus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vegetarianism": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.090Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vegetarianism",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.090Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vegetarianism"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vikings": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.214Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vikings",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.214Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vikings"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Uno_(card_game)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.291Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Uno_(card_game)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.291Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Uno_(card_game)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Violin": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.336Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Violin",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.336Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Violin"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Volleyball": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.414Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Volleyball",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.414Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Volleyball"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.460Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.460Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wi-Fi": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.583Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wi-Fi",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.583Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wi-Fi"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Usain_Bolt": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.661Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Usain_Bolt",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.661Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Usain_Bolt"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wimbledon_Championships": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.709Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wimbledon_Championships",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.708Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wimbledon_Championships"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Vasaloppet": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.776Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Vasaloppet",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.776Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Vasaloppet"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Windows_95": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.777Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Windows_95",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.777Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Windows_95"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Winnie-the-Pooh": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.824Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Winnie-the-Pooh",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.824Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Winnie-the-Pooh"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Winston_Churchill": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.892Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.892Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Winston_Churchill"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.900Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.900Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wonder_Woman": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:24.946Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wonder_Woman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:24.946Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wonder_Woman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_Health_Organization": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.015Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_Health_Organization",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.015Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_Health_Organization"
+      }
+    },
+    "https://en.wikipedia.org/wiki/World_Wide_Web": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.016Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.016Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/World_Wide_Web"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Xbox": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.069Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Xbox",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.069Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Xbox"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Õnne_13": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.143Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Õnne_13",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.143Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/%C3%95nne_13"
+      }
+    },
+    "https://en.wikipedia.org/wiki/iPhone": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.378Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/iPhone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.378Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/IPhone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Waterloo_(song)": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:25:25.849Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Waterloo_(song)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:25:25.849Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Waterloo_(song)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonian_Restoration_of_Independence": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:26:37.733Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonian_Restoration_of_Independence",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:26:37.733Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonian_Restoration_of_Independence"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Estonian_Song_Festival": {
+      "version": 1,
+      "expiresAt": "2026-09-03T20:26:37.890Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Estonian_Song_Festival",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-27T20:26:37.890Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Estonian_Song_Festival"
+      }
     }
   }
 }
