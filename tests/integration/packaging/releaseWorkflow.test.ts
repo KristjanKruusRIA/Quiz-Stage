@@ -130,10 +130,12 @@ describe('release workflow', () => {
     expect(packagedSmoke).toContain('test.setTimeout(300_000);');
     expect(packagedSmoke).not.toContain('600_000');
     expect(packagedSmoke).toContain("const useDomPointerActivation = process.platform === 'darwin' && process.arch === 'x64';");
-    expect(packagedSmoke).toContain('await expect(control).toBeVisible();');
-    expect(packagedSmoke).toContain('await expect(control).toBeEnabled();');
+    expect(packagedSmoke).toContain('await expect(control).toBeVisible({ timeout: 30_000 });');
+    expect(packagedSmoke).toContain('await expect(control).toBeEnabled({ timeout: 30_000 });');
     expect(packagedSmoke).toContain('control.evaluate((element) => (element as HTMLElement).click())');
-    expect(packagedSmoke).toContain('await expect(radio).toBeChecked();');
+    expect(packagedSmoke).toContain('await expect(radio).toBeVisible({ timeout: 30_000 });');
+    expect(packagedSmoke).toContain('await expect(radio).toBeEnabled({ timeout: 30_000 });');
+    expect(packagedSmoke).toContain('await expect(radio).toBeChecked({ timeout: 30_000 });');
     expect(packagedSmoke).toContain("activateRadio(page.getByRole('radio', { name: 'English' }))");
     expect(packagedSmoke).toContain('page.setDefaultTimeout(30_000);');
     expect(packagedSmoke).toContain('PACKAGED_SMOKE_PROGRESS:${phase}');

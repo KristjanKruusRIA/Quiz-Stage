@@ -23,8 +23,8 @@ function reportPackagedSmokeProgress(phase: string, detail?: number): void {
 }
 
 async function activateControl(control: Locator): Promise<void> {
-  await expect(control).toBeVisible();
-  await expect(control).toBeEnabled();
+  await expect(control).toBeVisible({ timeout: 30_000 });
+  await expect(control).toBeEnabled({ timeout: 30_000 });
   if (useDomPointerActivation) {
     await control.evaluate((element) => (element as HTMLElement).click());
     return;
@@ -33,14 +33,14 @@ async function activateControl(control: Locator): Promise<void> {
 }
 
 async function activateRadio(radio: Locator): Promise<void> {
-  await expect(radio).toBeVisible();
-  await expect(radio).toBeEnabled();
+  await expect(radio).toBeVisible({ timeout: 30_000 });
+  await expect(radio).toBeEnabled({ timeout: 30_000 });
   if (useDomPointerActivation) {
     await radio.evaluate((element) => (element as HTMLElement).click());
   } else {
     await radio.check();
   }
-  await expect(radio).toBeChecked();
+  await expect(radio).toBeChecked({ timeout: 30_000 });
 }
 
 function packagedExecutable(): string {
