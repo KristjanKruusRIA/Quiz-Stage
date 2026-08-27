@@ -22,35 +22,26 @@ function reportPackagedSmokeProgress(phase: string, detail?: number): void {
   console.log(`PACKAGED_SMOKE_PROGRESS:${phase}${detail === undefined ? '' : `:${detail}`}`);
 }
 
-async function activateControl(control: Locator): Promise<void> {
+async function activateInitialControl(control: Locator): Promise<void> {
   await expect(control).toBeVisible({ timeout: 30_000 });
   await expect(control).toBeEnabled({ timeout: 30_000 });
   if (useDomPointerActivation) {
-    await control.evaluate((element) => {
-      if (
-        element instanceof HTMLButtonElement &&
-        !element.disabled &&
-        element.type === 'submit' &&
-        element.form !== null
-      ) {
-        element.form.requestSubmit(element);
-        return;
-      }
-      (element as HTMLElement).click();
-    });
+    await control.evaluate((element) => (element as HTMLElement).click());
     return;
   }
+  await control.click();
+}
+
+async function activateControl(control: Locator): Promise<void> {
+  await expect(control).toBeVisible({ timeout: 30_000 });
+  await expect(control).toBeEnabled({ timeout: 30_000 });
   await control.click();
 }
 
 async function activateRadio(radio: Locator): Promise<void> {
   await expect(radio).toBeVisible({ timeout: 30_000 });
   await expect(radio).toBeEnabled({ timeout: 30_000 });
-  if (useDomPointerActivation) {
-    await radio.evaluate((element) => (element as HTMLElement).click());
-  } else {
-    await radio.check();
-  }
+  await radio.check();
   await expect(radio).toBeChecked({ timeout: 30_000 });
 }
 
@@ -147,7 +138,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     });
 
     reportPackagedSmokeProgress('match-setup');
-    await activateControl(page.getByRole('button', { name: 'New Match' }));
+    await activateInitialControl(page.getByRole('button', { name: 'New Match' }));
     await activateRadio(page.getByRole('radio', { name: 'English' }));
     await activateRadio(page.getByRole('radio', { name: 'Medium' }));
     await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
