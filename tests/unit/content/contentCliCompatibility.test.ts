@@ -2,8 +2,10 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, sym
 import { tmpdir } from 'node:os';
 import { isAbsolute, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { stringify } from 'csv-stringify/sync';
 import { describe, expect, test } from 'vitest';
 import { runSourceCheckCli } from '../../../scripts/content/sourceCheck';
+import { parsePackCsv } from '../../../src/main/content/csvPacks';
 
 function runNpm(script: string, args: readonly string[]) {
   const quote = (value: string) => `'${value.replaceAll("'", "''")}'`;
@@ -78,6 +80,20 @@ describe('npm 11 content CLI compatibility', () => {
     expect(parsed.validation.issues.every((issue: { file: string }) => !isAbsolute(issue.file))).toBe(true);
   }, 20_000);
 
+  test('seed builder reconstructs the documented input, evidence, output, and report arguments', () => {
+    const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-seed-cli-'));
+    const result = runNpm('content:build-seed', [
+      '--input', join(directory, 'missing.csv'),
+      '--evidence', join(directory, 'missing.jsonl'),
+      '--output', join(directory, 'seed.sqlite'),
+      '--report', join(directory, 'report.json'),
+    ]);
+
+    expect(result.status).not.toBe(0);
+    expect(result.stderr).not.toMatch(/unknown argument/i);
+    expect(result.stderr).toMatch(/ENOENT|no such file|matched no files/i);
+  }, 20_000);
+
   test('source checker merges completed failures into the report and writes the exact source-cache file', () => {
     const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-source-cli-'));
     const input = join(directory, 'input.csv');
@@ -110,6 +126,23 @@ describe('npm 11 content CLI compatibility', () => {
 
     await expect(runSourceCheckCli(['--input', input, '--cache', cache])).resolves.toBe(1);
     expect(statSync(cache).isFile()).toBe(true);
+    expect(JSON.parse(readFileSync(cache, 'utf8'))).toEqual({ version: 1, entries: {} });
+  });
+
+  test('source checker accepts the catalogued multi-pack Finals artifact', async () => {
+    const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-source-finals-'));
+    const input = join(directory, '13-finals.en-et.csv');
+    const cache = join(directory, 'source-cache.json');
+    const finalsBytes = readFileSync('content/generated/13-finals.en-et.csv', 'utf8');
+    const columns = finalsBytes.slice(0, finalsBytes.indexOf('\n')).trimEnd().split(',');
+    const rows = parsePackCsv(finalsBytes).rows;
+    const sample = [
+      rows.find((row: { pack_id: string }) => row.pack_id === 'built-in-finals'),
+      rows.find((row: { pack_id: string }) => row.pack_id === 'built-in-adult'),
+    ].map((row) => ({ ...row, source_url: 'https://127.0.0.1/source' }));
+    writeFileSync(input, stringify(sample, { header: true, columns }));
+
+    await expect(runSourceCheckCli(['--input', input, '--cache', cache])).resolves.toBe(1);
     expect(JSON.parse(readFileSync(cache, 'utf8'))).toEqual({ version: 1, entries: {} });
   });
 

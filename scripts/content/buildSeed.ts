@@ -17,6 +17,7 @@ import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { parsePackCsv, type ParsedPack, type ParsedCsvRow } from '../../src/main/content/csvPacks';
 import { readEvidenceInputs, type ContentEvidence } from './evidence';
 import { publishValidationReport, reviewedIdsFromReport, validateProductionContent } from './validate';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 export interface SeedBuildArgs {
   inputs: string[];
@@ -392,6 +393,7 @@ function sha256File(path: string): string {
 }
 
 function parseCli(argv: readonly string[]): SeedBuildArgs {
+  argv = restoreNpmRunArgs(argv, ['--input', '--evidence', '--output', '--report']);
   const inputs: string[] = [];
   const evidence: string[] = [];
   let output = defaultOutputPath;

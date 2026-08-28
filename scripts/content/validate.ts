@@ -57,6 +57,26 @@ export interface ProductionValidationOptions {
 
 interface LocatedRow { file: string; row: ParsedCsvRow }
 
+export function validateProductionCsvPack(
+  pack: ParsedPack,
+  batch?: ProductionBatchDefinition,
+): ReturnType<typeof validatePack> {
+  const cataloguedFinalBatch = batch?.finalTopicAllocations !== undefined
+    ? batch
+    : (pack.rows.every((row) => row.content_kind === 'final' && batchForRow(row) === FINAL_BATCH)
+      ? FINAL_BATCH : undefined);
+  const hasAuthorizedFinalPackMix = cataloguedFinalBatch?.finalTopicAllocations !== undefined
+    && pack.rows.every((row) => {
+      const allocation = cataloguedFinalBatch.finalTopicAllocations?.[row.macro_topic];
+      return row.content_kind === 'final'
+        && allocation !== undefined
+        && row.pack_id === allocation.packId
+        && row.pack_name === allocation.packName;
+    });
+  return validatePack(pack).filter((issue) => !(hasAuthorizedFinalPackMix
+    && (issue.code === 'multiple-pack-id' || issue.code === 'inconsistent-pack-name')));
+}
+
 const CSV_CODE_MAP: Record<string, string> = {
   'duplicate-clue-id': 'DUPLICATE_ID',
   'duplicate-content-id': 'DUPLICATE_ID',
@@ -255,21 +275,7 @@ export function validateProductionContent(
   };
 
   for (const input of [...inputs].sort((a, b) => a.file.localeCompare(b.file, 'en'))) {
-    const cataloguedFinalBatch = options.batch?.finalTopicAllocations !== undefined
-      ? options.batch
-      : (input.pack.rows.every((row) => row.content_kind === 'final' && batchForRow(row) === FINAL_BATCH)
-        ? FINAL_BATCH : undefined);
-    const hasAuthorizedFinalPackMix = cataloguedFinalBatch?.finalTopicAllocations !== undefined
-      && input.pack.rows.every((row) => {
-        const allocation = cataloguedFinalBatch.finalTopicAllocations?.[row.macro_topic];
-        return row.content_kind === 'final'
-          && allocation !== undefined
-          && row.pack_id === allocation.packId
-          && row.pack_name === allocation.packName;
-      });
-    for (const issue of validatePack(input.pack)) {
-      if (hasAuthorizedFinalPackMix
-        && (issue.code === 'multiple-pack-id' || issue.code === 'inconsistent-pack-name')) continue;
+    for (const issue of validateProductionCsvPack(input.pack, options.batch)) {
       const row = issue.row ?? 0;
       const parsed = input.pack.rows.find((candidate) => candidate.rowNumber === row);
       const sourceColumn = issue.column !== undefined && ['source_title', 'source_url', 'source_license', 'source_retrieved_at'].includes(issue.column);
