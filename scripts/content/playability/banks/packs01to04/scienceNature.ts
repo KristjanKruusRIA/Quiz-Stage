@@ -747,6 +747,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-science-nature-set-070', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'When Stars Change', et: 'Kui tähed muutuvad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-070:supernova-exploding-star', factKey: 'science-nature:supernova-exploding-star', tier: 1, subjectKey: 'event:supernova',
+        clue: { en: 'What stellar explosion can briefly outshine an entire galaxy and hurl newly made elements into space?', et: 'Milline täheplahvatus võib lühikeseks ajaks tervest galaktikast eredamalt särada ning paisata kosmosesse äsja tekkinud elemente?' }, response: { en: 'a supernova', et: 'supernoova' }, acceptedVariants: { en: ['supernova'], et: ['supernoovaplahvatus'] },
+        explanation: { en: 'This exceptionally energetic event ejects stellar material at high speed and can seed later star systems with heavy elements.', et: 'See erakordselt energiline sündmus paiskab täheainet suurel kiirusel laiali ning võib rikastada hilisemaid tähesüsteeme raskete elementidega.' },
+        source: { sourceId: 'wikipedia:supernova-exploding-star', title: 'Supernova', url: 'https://en.wikipedia.org/wiki/Supernova', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-070:nuclear-fusion-star-power', factKey: 'science-nature:nuclear-fusion-star-power', tier: 2, subjectKey: 'process:nuclear-fusion',
+        clue: { en: 'What process powers the Sun by joining light atomic nuclei into heavier ones and releasing energy?', et: 'Milline protsess annab Päikesele energiat, ühendades kerged aatomituumad raskemateks ja vabastades seejuures energiat?' }, response: { en: 'nuclear fusion', et: 'tuumasüntees' }, acceptedVariants: { en: ['fusion'], et: ['termotuumareaktsioon'] },
+        explanation: { en: 'When light nuclei combine, a small amount of mass is converted into the energy radiated by a star.', et: 'Kergete tuumade ühinemisel muundub väike osa massist energiaks, mida täht kiirgab.' },
+        source: { sourceId: 'wikipedia:nuclear-fusion-star-power', title: 'Nuclear fusion', url: 'https://en.wikipedia.org/wiki/Nuclear_fusion', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-070:red-giant-expanded-star', factKey: 'science-nature:red-giant-expanded-star', tier: 3, subjectKey: 'stage:red-giant',
+        clue: { en: 'After a Sun-like star exhausts the hydrogen in its core, its outer layers swell and cool while remaining luminous. What type of star has it become?', et: 'Kui Päikese-sarnase tähe tuumas saab vesinik otsa, paisuvad ja jahtuvad selle väliskihid, kuigi täht jääb heledaks. Mis tüüpi täheks see on muutunud?' }, response: { en: 'a red giant', et: 'punane hiid' }, acceptedVariants: { en: ['red giant'], et: ['punane hiidtäht'] },
+        explanation: { en: 'The enlarged surface is cooler and therefore redder, while the star’s great size keeps its total luminosity high.', et: 'Paisunud pind on jahedam ja seetõttu punakam, kuid tähe suur mõõt hoiab selle kogukiirguse tugeva.' },
+        source: { sourceId: 'wikipedia:red-giant-expanded-star', title: 'Red giant', url: 'https://en.wikipedia.org/wiki/Red_giant', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-070:protostar-collapsing-cloud', factKey: 'science-nature:protostar-collapsing-cloud', tier: 4, subjectKey: 'stage:protostar',
+        clue: { en: 'A collapsing cloud of gas and dust has formed a young stellar object, but its core is not yet hot enough to sustain hydrogen reactions. What is this object called?', et: 'Kokkutõmbuvast gaasi- ja tolmupilvest on tekkinud noor tähe-eelne objekt, kuid selle tuum pole veel piisavalt kuum püsivateks vesinikureaktsioonideks. Kuidas seda objekti nimetatakse?' }, response: { en: 'protostar', et: 'prototäht' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Gravity heats the contracting object until its central temperature becomes high enough for a stable star to form.', et: 'Gravitatsioon kuumutab kokkutõmbuvat objekti, kuni selle keskosa temperatuur on püsiva tähe tekkeks piisavalt kõrge.' },
+        source: { sourceId: 'wikipedia:protostar-collapsing-cloud', title: 'Protostar', url: 'https://en.wikipedia.org/wiki/Protostar', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-070:neutron-star-dense-remnant', factKey: 'science-nature:neutron-star-dense-remnant', tier: 5, subjectKey: 'remnant:neutron-star',
+        clue: { en: 'In one possible remnant of a massive star’s explosive death, protons and electrons have been crushed together. What city-sized, ultra-dense object remains?', et: 'Massiivse tähe plahvatusliku surma ühe võimaliku jäänuki puhul on prootonid ja elektronid kokku surutud. Milline linnasuurune ülitihe objekt alles jääb?' }, response: { en: 'neutron star', et: 'neutrontäht' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Its matter is packed so tightly that a small sample would have an enormous mass under Earth conditions.', et: 'Selle aine on nii tihedalt kokku surutud, et väikesel kogusel oleks Maa tingimustes tohutu mass.' },
+        source: { sourceId: 'wikipedia:neutron-star-dense-remnant', title: 'Neutron star', url: 'https://en.wikipedia.org/wiki/Neutron_star', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-072', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Quantum Effects in Action', et: 'Kvantnähtused toimimas' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-072:superconductivity-zero-resistance', factKey: 'science-nature:superconductivity-zero-resistance', tier: 1, subjectKey: 'phenomenon:superconductivity',
+        clue: { en: 'Below a critical temperature, some materials conduct electric current with exactly zero resistance. What is this phenomenon called?', et: 'Kriitilisest temperatuurist madalamal juhivad mõned materjalid elektrivoolu täpselt nulltakistusega. Kuidas seda nähtust nimetatakse?' }, response: { en: 'superconductivity', et: 'ülijuhtivus' }, acceptedVariants: { en: ['the superconducting state'], et: ['ülijuhtiv olek'] },
+        explanation: { en: 'The current can persist without the ordinary energy loss caused by electrical resistance.', et: 'Elektrivool saab püsida ilma tavapärase energiakaota, mida põhjustab elektritakistus.' },
+        source: { sourceId: 'wikipedia:superconductivity-zero-resistance', title: 'Superconductivity', url: 'https://en.wikipedia.org/wiki/Superconductivity', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-072:photoelectric-effect-ejected-electrons', factKey: 'science-nature:photoelectric-effect-ejected-electrons', tier: 2, subjectKey: 'phenomenon:photoelectric-effect',
+        clue: { en: 'Shining light above a threshold frequency onto a metal can eject electrons from its surface. What effect did Einstein explain using packets of light energy?', et: 'Piirsagedusest suurema sagedusega valgus võib metallpinnalt elektrone välja lüüa. Millist efekti selgitas Einstein valgusenergia pakettide abil?' }, response: { en: 'the photoelectric effect', et: 'fotoefekt' }, acceptedVariants: { en: ['photoelectric effect'], et: ['fotoelektriline efekt'] },
+        explanation: { en: 'Electron emission depends on the light’s frequency, which classical wave theory alone could not explain.', et: 'Elektronide eraldumine sõltub valguse sagedusest ning klassikaline laineteooria üksi ei suutnud seda selgitada.' },
+        source: { sourceId: 'wikipedia:photoelectric-effect-ejected-electrons', title: 'Photoelectric effect', url: 'https://en.wikipedia.org/wiki/Photoelectric_effect', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-072:wave-particle-duality-behaviour', factKey: 'science-nature:wave-particle-duality-behaviour', tier: 3, subjectKey: 'concept:wave-particle-duality',
+        clue: { en: 'Electrons can create an interference pattern yet arrive at a detector as individual impacts. What principle says quantum objects show both wave-like and particle-like behaviour?', et: 'Elektronid võivad tekitada interferentsimustri, kuid jõuda detektorisse üksikute tabamustena. Milline printsiip ütleb, et kvantobjektidel on nii laine- kui ka osakeseomadused?' }, response: { en: 'wave–particle duality', et: 'laine-osakese dualism' }, acceptedVariants: { en: ['wave-particle duality'], et: ['laine-osakese duaalsus'] },
+        explanation: { en: 'Neither a purely classical wave nor a purely classical particle model captures every observed result.', et: 'Üksnes klassikalise laine ega üksnes klassikalise osakese mudel ei kirjelda kõiki vaadeldud tulemusi.' },
+        source: { sourceId: 'wikipedia:wave-particle-duality-behaviour', title: 'Wave–particle duality', url: 'https://en.wikipedia.org/wiki/Wave%E2%80%93particle_duality', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-072:uncertainty-principle-position-momentum', factKey: 'science-nature:uncertainty-principle-position-momentum', tier: 4, subjectKey: 'principle:uncertainty',
+        clue: { en: 'Which principle places a fundamental limit on how precisely a particle’s position and momentum can be specified together?', et: 'Milline printsiip seab põhimõttelise piiri sellele, kui täpselt saab ühtaegu määrata osakese asukohta ja impulssi?' }, response: { en: 'the uncertainty principle', et: 'määramatuse printsiip' }, acceptedVariants: { en: ['Heisenberg uncertainty principle', 'Heisenberg’s uncertainty principle'], et: ['Heisenbergi määramatuse printsiip'] },
+        explanation: { en: 'The limit is built into quantum mechanics and is not merely a defect of measuring instruments.', et: 'See piir tuleneb kvantmehaanikast ega ole pelgalt mõõteriistade ebatäpsuse tagajärg.' },
+        source: { sourceId: 'wikipedia:uncertainty-principle-position-momentum', title: 'Uncertainty principle', url: 'https://en.wikipedia.org/wiki/Uncertainty_principle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-072:quantum-tunnelling-barrier', factKey: 'science-nature:quantum-tunnelling-barrier', tier: 5, subjectKey: 'phenomenon:quantum-tunnelling',
+        clue: { en: 'A particle sometimes appears on the far side of an energy barrier that classical physics says it cannot cross. What phenomenon makes this possible?', et: 'Osake võib mõnikord ilmuda energiabarjääri teisele poolele, kuigi klassikalise füüsika järgi ei tohiks see barjääri ületada. Milline nähtus seda võimaldab?' }, response: { en: 'quantum tunnelling', et: 'kvanttunneleerumine' }, acceptedVariants: { en: ['quantum tunneling'], et: ['tunneliefekt', 'kvanttunneldumine'] },
+        explanation: { en: 'A quantum state extends into and sometimes through a classically forbidden region, giving a non-zero crossing probability.', et: 'Kvantolek ulatub klassikaliselt keelatud piirkonda ja mõnikord sellest läbi, mistõttu on barjääri ületamise tõenäosus nullist erinev.' },
+        source: { sourceId: 'wikipedia:quantum-tunnelling-barrier', title: 'Quantum tunnelling', url: 'https://en.wikipedia.org/wiki/Quantum_tunnelling', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-073', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'The Body’s Control Room', et: 'Keha juhtimiskeskus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:melatonin-darkness-signal', factKey: 'science-nature:melatonin-darkness-signal', tier: 1, subjectKey: 'hormone:melatonin',
+        clue: { en: 'Darkness prompts the pineal gland to release which hormone that signals biological night and helps prepare the body for sleep?', et: 'Pimedus paneb käbikeha eritama millist hormooni, mis annab märku bioloogilise öö saabumisest ja aitab kehal uneks valmistuda?' }, response: { en: 'melatonin', et: 'melatoniin' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Levels normally rise in the evening and fall toward morning as part of the body’s daily timing system.', et: 'Selle tase tõuseb tavaliselt õhtul ja langeb hommiku poole osana keha igapäevasest ajastussüsteemist.' },
+        source: { sourceId: 'wikipedia:melatonin-darkness-signal', title: 'Melatonin', url: 'https://en.wikipedia.org/wiki/Melatonin', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:cortisol-adrenal-stress', factKey: 'science-nature:cortisol-adrenal-stress', tier: 2, subjectKey: 'hormone:cortisol',
+        clue: { en: 'Which hormone from the adrenal cortex helps mobilize fuel during prolonged stress and normally reaches its daily peak around waking?', et: 'Milline neerupealise koore hormoon aitab pikaajalise stressi ajal energiavarusid kasutusele võtta ning saavutab tavaliselt ööpäevase tipu ärkamise paiku?' }, response: { en: 'cortisol', et: 'kortisool' }, acceptedVariants: { en: ['hydrocortisone'], et: ['hüdrokortisoon'] },
+        explanation: { en: 'It helps regulate metabolism, immune activity, and the body’s longer-lasting response to demanding conditions.', et: 'See aitab reguleerida ainevahetust, immuuntegevust ja organismi pikemaajalist vastust koormavatele olukordadele.' },
+        source: { sourceId: 'wikipedia:cortisol-adrenal-stress', title: 'Cortisol', url: 'https://en.wikipedia.org/wiki/Cortisol', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:homeostasis-stable-internal-conditions', factKey: 'science-nature:homeostasis-stable-internal-conditions', tier: 3, subjectKey: 'regulation:homeostasis',
+        clue: { en: 'Keeping body temperature, blood sugar, and acidity within workable ranges illustrates what general principle of internal regulation?', et: 'Millist organismi sisemise regulatsiooni üldpõhimõtet näitab kehatemperatuuri, veresuhkru ja happesuse hoidmine sobivates piirides?' }, response: { en: 'homeostasis', et: 'homöostaas' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Living systems continually adjust their activity so vital internal conditions stay within tolerable limits.', et: 'Elusorganismid kohandavad pidevalt oma talitlust, et elutähtsad sisetingimused püsiksid talutavates piirides.' },
+        source: { sourceId: 'wikipedia:homeostasis-stable-internal-conditions', title: 'Homeostasis', url: 'https://en.wikipedia.org/wiki/Homeostasis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:pituitary-master-gland', factKey: 'science-nature:pituitary-master-gland', tier: 4, subjectKey: 'organ:pituitary-gland',
+        clue: { en: 'Which pea-sized gland beneath the brain is nicknamed the “master gland” because its hormones regulate several other endocrine glands?', et: 'Millist hernesuurust aju all paiknevat nääret kutsutakse „peanäärmeks”, sest selle hormoonid reguleerivad mitut teist sisenõrenääret?' }, response: { en: 'the pituitary gland', et: 'ajuripats' }, acceptedVariants: { en: ['pituitary'], et: ['hüpofüüs'] },
+        explanation: { en: 'Its secretions influence growth, reproduction, water balance, and the activity of other glands.', et: 'Selle eritised mõjutavad kasvu, paljunemist, veetasakaalu ja teiste näärmete talitlust.' },
+        source: { sourceId: 'wikipedia:pituitary-master-gland', title: 'Pituitary gland', url: 'https://en.wikipedia.org/wiki/Pituitary_gland', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:negative-feedback-counteracts-change', factKey: 'science-nature:negative-feedback-counteracts-change', tier: 5, subjectKey: 'mechanism:negative-feedback',
+        clue: { en: 'When rising thyroid-hormone levels suppress signals that would produce still more of it, what control mechanism is operating?', et: 'Milline juhtimismehhanism toimib siis, kui kilpnäärmehormooni taseme tõus pärsib signaale, mis paneksid seda hormooni veelgi juurde tootma?' }, response: { en: 'negative feedback', et: 'negatiivne tagasiside' }, acceptedVariants: { en: ['a negative feedback loop'], et: ['negatiivne tagasisideahel'] },
+        explanation: { en: 'The response opposes the original change, preventing the regulated quantity from continually moving in one direction.', et: 'Vastus töötab algsele muutusele vastu ja takistab reguleeritaval suurusel lõputult samas suunas liikumast.' },
+        source: { sourceId: 'wikipedia:negative-feedback-counteracts-change', title: 'Negative feedback', url: 'https://en.wikipedia.org/wiki/Negative_feedback', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-074', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Microbes Around Us', et: 'Mikroobid meie ümber' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-074:probiotic-live-microorganisms', factKey: 'science-nature:probiotic-live-microorganisms', tier: 1, subjectKey: 'product:probiotic',
+        clue: { en: 'What term describes live microorganisms consumed in sufficient amounts with the aim of providing a health benefit?', et: 'Kuidas nimetatakse elusaid mikroorganisme, mida tarvitatakse piisavas koguses eesmärgiga saada tervisele kasu?' }, response: { en: 'a probiotic', et: 'probiootikum' }, acceptedVariants: { en: ['probiotic', 'probiotics'], et: ['probiootilised mikroorganismid'] },
+        explanation: { en: 'Products sold with this label contain selected living strains rather than simply any fermented ingredient.', et: 'Selle nimetusega tooted sisaldavad valitud elusaid tüvesid, mitte lihtsalt suvalist kääritatud koostisosa.' },
+        source: { sourceId: 'wikipedia:probiotic-live-microorganisms', title: 'Probiotic', url: 'https://en.wikipedia.org/wiki/Probiotic', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-074:microbiome-community-genomes', factKey: 'science-nature:microbiome-community-genomes', tier: 2, subjectKey: 'community:microbiome',
+        clue: { en: 'The bacteria, fungi, and other microscopic residents of the human gut, together with their genetic material, are collectively called what?', et: 'Kuidas nimetatakse ühiselt inimese soolestikus elavaid baktereid, seeni ja muid mikroorganisme koos nende geneetilise materjaliga?' }, response: { en: 'the gut microbiome', et: 'soolestiku mikrobioom' }, acceptedVariants: { en: ['gut microbiome', 'intestinal microbiome'], et: ['soolemikrobioom', 'soolestiku mikrobioota'] },
+        explanation: { en: 'This living community varies between people and interacts with digestion, metabolism, and immunity.', et: 'See eluskooslus on inimestel erinev ning mõjutab seedimist, ainevahetust ja immuunsust.' },
+        source: { sourceId: 'wikipedia:gut-microbiome-community', title: 'Gut microbiota', url: 'https://en.wikipedia.org/wiki/Gut_microbiota', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-074:biofilm-surface-community', factKey: 'science-nature:biofilm-surface-community', tier: 3, subjectKey: 'structure:biofilm',
+        clue: { en: 'Dental plaque is an example of what surface-attached microbial community held together in a self-produced slimy matrix?', et: 'Hambakatt on näide millisest pinnale kinnitunud mikroobikooslusest, mida hoiab koos mikroobide endi toodetud limane maatriks?' }, response: { en: 'a biofilm', et: 'biokile' }, acceptedVariants: { en: ['biofilm'], et: ['mikroobne biokile'] },
+        explanation: { en: 'The surrounding matrix helps the attached cells retain nutrients and withstand environmental stress.', et: 'Ümbritsev maatriks aitab kinnitunud rakkudel toitaineid hoida ja keskkonnastressile vastu pidada.' },
+        source: { sourceId: 'wikipedia:biofilm-surface-community', title: 'Biofilm', url: 'https://en.wikipedia.org/wiki/Biofilm', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-074:antibiotic-resistance-survival', factKey: 'science-nature:antibiotic-resistance-survival', tier: 4, subjectKey: 'trait:antibiotic-resistance',
+        clue: { en: 'When bacteria evolve so that a medicine intended to kill them no longer works, what public-health problem has developed?', et: 'Milline rahvatervise probleem on tekkinud siis, kui bakterid arenevad nii, et nende hävitamiseks mõeldud ravim enam ei toimi?' }, response: { en: 'antibiotic resistance', et: 'antibiootikumiresistentsus' }, acceptedVariants: { en: ['antibacterial resistance'], et: ['antibiootikumiresistents', 'antibiootikumidele resistentsus'] },
+        explanation: { en: 'Drug exposure favours resistant survivors, which can reproduce and spread their protective traits.', et: 'Ravimiga kokkupuude soosib vastupidavaid ellujääjaid, kes võivad paljuneda ja oma kaitseomadusi levitada.' },
+        source: { sourceId: 'wikipedia:antibiotic-resistance-survival', title: 'Antimicrobial resistance', url: 'https://en.wikipedia.org/wiki/Antimicrobial_resistance', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-074:bacteriophage-virus-bacteria', factKey: 'science-nature:bacteriophage-virus-bacteria', tier: 5, subjectKey: 'virus:bacteriophage',
+        clue: { en: 'What kind of virus infects bacteria, often attaching to a cell and injecting genetic material into it?', et: 'Kuidas nimetatakse viirust, mis nakatab baktereid, kinnitudes sageli rakule ja süstides sellesse oma geneetilise materjali?' }, response: { en: 'a bacteriophage', et: 'bakteriofaag' }, acceptedVariants: { en: ['bacteriophage', 'phage'], et: ['faag'] },
+        explanation: { en: 'Some reproduce by bursting the infected cell, while others can remain integrated in the host’s DNA.', et: 'Mõni neist paljuneb nakatunud rakku lõhustades, teine võib aga jääda peremehe DNA-sse lõimituks.' },
+        source: { sourceId: 'wikipedia:bacteriophage-virus-bacteria', title: 'Bacteriophage', url: 'https://en.wikipedia.org/wiki/Bacteriophage', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-075', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Inside the Working Brain', et: 'Töötava aju sisemuses' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-075:rem-sleep-rapid-eyes', factKey: 'science-nature:rem-sleep-rapid-eyes', tier: 1, subjectKey: 'stage:rem-sleep',
+        clue: { en: 'Which sleep stage takes its name from rapid eye movements and is strongly associated with vivid dreaming?', et: 'Milline unefaas on saanud nime kiirete silmaliigutuste järgi ning seostub tugevalt elavate unenägudega?' }, response: { en: 'REM sleep', et: 'REM-uni' }, acceptedVariants: { en: ['rapid eye movement sleep', 'REM'], et: ['REM-unefaas', 'kiirete silmaliigutustega uni'] },
+        explanation: { en: 'Brain activity is high during this stage, while most skeletal muscles are temporarily kept from moving.', et: 'Selles faasis on aju aktiivne, kuid enamik skeletilihaseid on ajutiselt liikumisvõimetud.' },
+        source: { sourceId: 'wikipedia:rem-sleep-rapid-eyes', title: 'Rapid eye movement sleep', url: 'https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-075:amygdala-fear-learning', factKey: 'science-nature:amygdala-fear-learning', tier: 2, subjectKey: 'region:amygdala',
+        clue: { en: 'Which almond-shaped brain region helps attach emotional significance to experiences and is especially important in learning fear?', et: 'Milline mandlikujuline ajupiirkond aitab kogemustele emotsionaalset tähendust anda ning on eriti tähtis hirmu õppimisel?' }, response: { en: 'the amygdala', et: 'mandelkeha' }, acceptedVariants: { en: ['amygdala'], et: ['amügdala'] },
+        explanation: { en: 'This paired region helps evaluate threats and link sensory cues with emotionally charged memories.', et: 'See paariline piirkond aitab ohte hinnata ning siduda meelelisi vihjeid emotsionaalselt laetud mälestustega.' },
+        source: { sourceId: 'wikipedia:amygdala-fear-learning', title: 'Amygdala', url: 'https://en.wikipedia.org/wiki/Amygdala', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-075:cerebellum-balance-coordination', factKey: 'science-nature:cerebellum-balance-coordination', tier: 3, subjectKey: 'region:cerebellum',
+        clue: { en: 'Damage to which structure at the back of the brain commonly disrupts balance, posture, and the fine coordination of movement?', et: 'Millise aju tagaosas paikneva struktuuri kahjustus häirib sageli tasakaalu, kehahoiakut ja liigutuste täpset koordineerimist?' }, response: { en: 'cerebellum', et: 'väikeaju' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'This region compares intended actions with sensory feedback and helps refine their timing and accuracy.', et: 'See ajupiirkond võrdleb kavandatud liigutusi meeleelunditest saadud tagasisidega ning aitab täpsustada nende ajastust ja täpsust.' },
+        source: { sourceId: 'wikipedia:cerebellum-balance-coordination', title: 'Cerebellum', url: 'https://en.wikipedia.org/wiki/Cerebellum', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-075:hippocampus-new-memories', factKey: 'science-nature:hippocampus-new-memories', tier: 4, subjectKey: 'region:hippocampus',
+        clue: { en: 'A patient can remember childhood but cannot reliably form new long-term memories after damage to which seahorse-shaped brain structure?', et: 'Patsient mäletab lapsepõlve, kuid ei suuda pärast millise merihobukujulise ajustruktuuri kahjustust usaldusväärselt uusi pikaajalisi mälestusi luua?' }, response: { en: 'hippocampus', et: 'hipokampus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'This paired structure is crucial for consolidating many new experiences into lasting memory.', et: 'See paariline struktuur on oluline paljude uute kogemuste kinnistamisel pikaajaliseks mäluks.' },
+        source: { sourceId: 'wikipedia:hippocampus-new-memories', title: 'Hippocampus', url: 'https://en.wikipedia.org/wiki/Hippocampus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-075:brocas-area-speech-production', factKey: 'science-nature:brocas-area-speech-production', tier: 5, subjectKey: 'region:brocas-area',
+        clue: { en: 'Damage to which named region of the dominant frontal lobe can leave speech slow and effortful even when comprehension is relatively preserved?', et: 'Millise juhtiva ajupoolkera otsmikusagara nime saanud piirkonna kahjustus võib muuta kõne aeglaseks ja vaevaliseks, kuigi kõnest arusaamine on suhteliselt säilinud?' }, response: { en: 'Broca’s area', et: 'Broca piirkond' }, acceptedVariants: { en: ['Broca area', 'Broca’s region'], et: ['Broca ala', 'Broca keskus'] },
+        explanation: { en: 'This frontal-language region helps plan and produce spoken language.', et: 'See otsmikusagara keelepiirkond aitab kõnet kavandada ja produtseerida.' },
+        source: { sourceId: 'wikipedia:brocas-area-speech-production', title: 'Broca’s area', url: 'https://en.wikipedia.org/wiki/Broca%27s_area', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-076', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Reading the Invisible Universe', et: 'Nähtamatu universumi lugemine' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-076:event-horizon-no-return', factKey: 'science-nature:event-horizon-no-return', tier: 1, subjectKey: 'boundary:event-horizon',
+        clue: { en: 'What boundary around a black hole marks the point beyond which not even light can return to the outside universe?', et: 'Milline musta auku ümbritsev piir tähistab punkti, millest kaugemalt ei pääse välisesse universumisse tagasi isegi valgus?' }, response: { en: 'event horizon', et: 'sündmuste horisont' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Crossing this boundary means every possible future path leads farther inward.', et: 'Selle piiri ületamise järel viivad kõik võimalikud tulevikuteed veelgi sissepoole.' },
+        source: { sourceId: 'wikipedia:event-horizon-no-return', title: 'Event horizon', url: 'https://en.wikipedia.org/wiki/Event_horizon', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-076:dark-matter-galaxy-gravity', factKey: 'science-nature:dark-matter-galaxy-gravity', tier: 2, subjectKey: 'matter:dark-matter',
+        clue: { en: 'Galaxies rotate as if surrounded by far more mass than their visible stars and gas provide. What unseen substance is proposed to supply the extra gravity?', et: 'Galaktikad pöörlevad nii, nagu ümbritseks neid palju rohkem massi, kui nähtavad tähed ja gaas annavad. Milline nähtamatu aine peaks lisagravitatsiooni tekitama?' }, response: { en: 'dark matter', et: 'tumeaine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'It does not emit or absorb detectable light, so astronomers infer its presence from gravitational effects.', et: 'See ei kiirga ega neela tuvastatavat valgust, mistõttu järeldavad astronoomid selle olemasolu gravitatsioonilise mõju järgi.' },
+        source: { sourceId: 'wikipedia:dark-matter-galaxy-gravity', title: 'Dark matter', url: 'https://en.wikipedia.org/wiki/Dark_matter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-076:gravitational-lensing-bent-light', factKey: 'science-nature:gravitational-lensing-bent-light', tier: 3, subjectKey: 'effect:gravitational-lensing',
+        clue: { en: 'A massive foreground galaxy bends light from a more distant object, sometimes producing arcs or multiple images. What effect is this?', et: 'Massiivne esiplaanil olev galaktika painutab kaugema objekti valgust ning võib tekitada kaari või mitu kujutist. Mis nähtus see on?' }, response: { en: 'gravitational lensing', et: 'gravitatsiooniläätsumine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Curved spacetime changes the path of passing light and can magnify otherwise faint background objects.', et: 'Kõverdunud aegruum muudab mööduva valguse teekonda ja võib võimendada muidu nõrku taustaobjekte.' },
+        source: { sourceId: 'wikipedia:gravitational-lensing-bent-light', title: 'Gravitational lens', url: 'https://en.wikipedia.org/wiki/Gravitational_lens', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-076:gravitational-waves-spacetime-ripples', factKey: 'science-nature:gravitational-waves-spacetime-ripples', tier: 4, subjectKey: 'wave:gravitational',
+        clue: { en: 'LIGO detects tiny rhythmic changes in distance caused by ripples in spacetime from events such as merging compact objects. What are these ripples called?', et: 'LIGO tuvastab tillukesi rütmilisi kaugusemuutusi, mida põhjustavad aegruumi virvendused näiteks kompaktsete objektide ühinemisel. Kuidas neid virvendusi nimetatakse?' }, response: { en: 'gravitational waves', et: 'gravitatsioonilained' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Accelerating masses can disturb spacetime, and the disturbance travels outward at the speed of light.', et: 'Kiirendusega liikuvad massid võivad aegruumi häirida ning see häire levib väljapoole valguse kiirusel.' },
+        source: { sourceId: 'wikipedia:gravitational-waves-spacetime-ripples', title: 'Gravitational wave', url: 'https://en.wikipedia.org/wiki/Gravitational_wave', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-076:cosmic-microwave-background-afterglow', factKey: 'science-nature:cosmic-microwave-background-afterglow', tier: 5, subjectKey: 'radiation:cosmic-microwave-background',
+        clue: { en: 'What faint microwave glow arriving from every direction is interpreted as cooled radiation left from the hot early universe?', et: 'Millist igast suunast saabuvat nõrka mikrolainekiirgust tõlgendatakse kuuma varajase universumi jahtunud jäänukina?' }, response: { en: 'the cosmic microwave background', et: 'kosmiline mikrolaine-taustkiirgus' }, acceptedVariants: { en: ['cosmic microwave background', 'CMB'], et: ['kosmiline mikrolaine-taust', 'reliktkiirgus'] },
+        explanation: { en: 'Expansion stretched this ancient radiation to microwave wavelengths while preserving a snapshot of the young cosmos.', et: 'Paisumine venitas selle iidse kiirguse mikrolainepikkustele, säilitades samal ajal pildi noorest kosmosest.' },
+        source: { sourceId: 'wikipedia:cosmic-microwave-background-afterglow', title: 'Cosmic microwave background', url: 'https://en.wikipedia.org/wiki/Cosmic_microwave_background', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-077', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Senses Beyond Our Own', et: 'Meile võõrad meeled' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-077:lateral-line-water-movement', factKey: 'science-nature:lateral-line-water-movement', tier: 1, subjectKey: 'sense:lateral-line',
+        clue: { en: 'Fish can detect nearby currents and vibrations with what row of sensory organs running along each side of the body?', et: 'Millise piki keha mõlemat külge kulgeva meeleelundite rea abil tajuvad kalad lähedalasuvaid veevoolusid ja võnkeid?' }, response: { en: 'the lateral line', et: 'küljejoon' }, acceptedVariants: { en: ['lateral line system'], et: ['küljejooneelund'] },
+        explanation: { en: 'Water movement bends tiny hair cells in canals on or just beneath the skin.', et: 'Vee liikumine painutab nahal või vahetult naha all olevates kanalites tillukesi karvarakke.' },
+        source: { sourceId: 'wikipedia:lateral-line-water-movement', title: 'Lateral line', url: 'https://en.wikipedia.org/wiki/Lateral_line', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-077:magnetoreception-earth-field', factKey: 'science-nature:magnetoreception-earth-field', tier: 2, subjectKey: 'sense:magnetoreception',
+        clue: { en: 'Migratory birds can use Earth’s magnetic field as a compass. What name is given to this biological sense?', et: 'Rändlinnud võivad kasutada Maa magnetvälja kompassina. Kuidas seda bioloogilist meelt nimetatakse?' }, response: { en: 'magnetoreception', et: 'magnetoretseptsioon' }, acceptedVariants: { en: ['magnetic sense'], et: ['magnettaju'] },
+        explanation: { en: 'The ability supplies directional information even when familiar landmarks or stars are unavailable.', et: 'See võime annab suunainfot ka siis, kui tuttavaid maamärke või tähti pole näha.' },
+        source: { sourceId: 'wikipedia:magnetoreception-earth-field', title: 'Magnetoreception', url: 'https://en.wikipedia.org/wiki/Magnetoreception', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-077:electroreception-shark-prey', factKey: 'science-nature:electroreception-shark-prey', tier: 3, subjectKey: 'sense:electroreception',
+        clue: { en: 'A shark can locate hidden prey by detecting the weak electric fields produced by muscle and nerve activity. What sense is it using?', et: 'Hai suudab peidetud saagi leida, tajudes lihaste ja närvide tekitatud nõrku elektrivälju. Millist meelt ta kasutab?' }, response: { en: 'electroreception', et: 'elektroretseptsioon' }, acceptedVariants: { en: ['electrical sense'], et: ['elektritaju'] },
+        explanation: { en: 'Specialized receptors around the head respond to tiny voltage differences in the surrounding water.', et: 'Pea ümbruses paiknevad eriretseptorid reageerivad ümbritseva vee tillukestele pingeerinevustele.' },
+        source: { sourceId: 'wikipedia:electroreception-shark-prey', title: 'Electroreception', url: 'https://en.wikipedia.org/wiki/Electroreception', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-077:ultraviolet-vision-nectar-guides', factKey: 'science-nature:ultraviolet-vision-nectar-guides', tier: 4, subjectKey: 'sense:ultraviolet-vision',
+        clue: { en: 'Many flowers have nectar-guide patterns that humans cannot see but bees can follow. What ability lets bees see these ultraviolet markings?', et: 'Paljudel õitel on nektarijuhised, mida inimene ei näe, kuid mesilane suudab järgida. Milline võime laseb mesilasel neid ultraviolettmustreid näha?' }, response: { en: 'ultraviolet vision', et: 'ultraviolettnägemine' }, acceptedVariants: { en: ['UV vision'], et: ['UV-nägemine'] },
+        explanation: { en: 'Their visual receptors are sensitive to wavelengths beyond the human visible range, revealing contrasting paths toward the flower’s centre.', et: 'Mesilaste nägemisretseptorid tajuvad inimese nähtavast vahemikust lühemaid laineid ning toovad esile kontrastsed rajad õie keskosa poole.' },
+        source: { sourceId: 'wikipedia:ultraviolet-nectar-guides', title: 'Nectar guide', url: 'https://en.wikipedia.org/wiki/Nectar_guide', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-077:vomeronasal-organ-snake-tongue', factKey: 'science-nature:vomeronasal-organ-snake-tongue', tier: 5, subjectKey: 'organ:vomeronasal',
+        clue: { en: 'A snake flicks its tongue to collect scent particles, then delivers them to which paired sensory structure in the roof of its mouth?', et: 'Madu kogub keelega lõhnaosakesi ja viib need seejärel millisesse paarilisse suulaes paiknevasse meeleelundisse?' }, response: { en: 'the vomeronasal organ', et: 'vomeronasaalelund' }, acceptedVariants: { en: ['Jacobson’s organ'], et: ['Jacobsoni elund'] },
+        explanation: { en: 'This chemosensory structure analyzes molecules carried in from the tongue tips.', et: 'See keemilisi ärritajaid tajuv struktuur analüüsib keeleotstelt kohale toodud molekule.' },
+        source: { sourceId: 'wikipedia:vomeronasal-organ-snake-tongue', title: 'Vomeronasal organ', url: 'https://en.wikipedia.org/wiki/Vomeronasal_organ', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-078', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Where Colour Comes From', et: 'Kust värv tuleb' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-078:ph-indicator-colour-change', factKey: 'science-nature:ph-indicator-colour-change', tier: 1, subjectKey: 'substance:ph-indicator',
+        clue: { en: 'Litmus and red-cabbage juice change colour depending on a solution’s acidity. What general kind of substance are they?', et: 'Lakmus ja punase kapsa mahl muudavad värvi sõltuvalt lahuse happesusest. Mis liiki ained need üldiselt on?' }, response: { en: 'pH indicators', et: 'pH-indikaatorid' }, acceptedVariants: { en: ['acid–base indicators', 'acid-base indicators'], et: ['happe-aluse indikaatorid', 'happesuse indikaatorid'] },
+        explanation: { en: 'Their molecular forms absorb different wavelengths as the balance of hydrogen ions changes.', et: 'Vesinikioonide tasakaalu muutudes neelavad nende molekulide eri vormid erinevaid lainepikkusi.' },
+        source: { sourceId: 'wikipedia:ph-indicator-colour-change', title: 'pH indicator', url: 'https://en.wikipedia.org/wiki/PH_indicator', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-078:chemiluminescence-glow-stick', factKey: 'science-nature:chemiluminescence-glow-stick', tier: 2, subjectKey: 'phenomenon:chemiluminescence',
+        clue: { en: 'A glow stick produces light from a chemical reaction with very little heat. What phenomenon creates the glow?', et: 'Valguspulk tekitab keemilise reaktsiooni abil valgust, kuid väga vähe soojust. Milline nähtus selle kuma tekitab?' }, response: { en: 'chemiluminescence', et: 'kemoluminestsents' }, acceptedVariants: { en: ['chemical luminescence'], et: ['keemiline luminestsents'] },
+        explanation: { en: 'Reaction energy raises molecules into excited states, and they release visible light as they return to lower energy.', et: 'Reaktsioonienergia viib molekulid ergastatud olekusse ning madalamale energiatasemele naastes kiirgavad need nähtavat valgust.' },
+        source: { sourceId: 'wikipedia:chemiluminescence-glow-stick', title: 'Chemiluminescence', url: 'https://en.wikipedia.org/wiki/Chemiluminescence', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-078:phosphorescence-afterglow', factKey: 'science-nature:phosphorescence-afterglow', tier: 3, subjectKey: 'phenomenon:phosphorescence',
+        clue: { en: 'Glow-in-the-dark stars continue shining after the room light is switched off because trapped energy is released slowly. What is this delayed emission called?', et: 'Pimedas helendavad tähed säravad pärast toavalguse kustutamist edasi, sest talletunud energia vabaneb aeglaselt. Kuidas seda hilinenud kiirgamist nimetatakse?' }, response: { en: 'phosphorescence', et: 'fosforestsents' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The material stores absorbed energy in long-lived excited states, producing an afterglow that can last well beyond illumination.', et: 'Materjal talletab neeldunud energia pikaealistes ergastatud olekutes ning järelhelendus võib kesta kaua pärast valgustamist.' },
+        source: { sourceId: 'wikipedia:phosphorescence-afterglow', title: 'Phosphorescence', url: 'https://en.wikipedia.org/wiki/Phosphorescence', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-078:structural-colour-peacock-feather', factKey: 'science-nature:structural-colour-peacock-feather', tier: 4, subjectKey: 'effect:structural-colour',
+        clue: { en: 'A peacock feather’s shimmering hue comes mainly from microscopic structures that interfere with light rather than from a matching pigment. What kind of colour is this?', et: 'Paabulinnu sule sillerdav toon tekib peamiselt valgust mõjutavatest mikrostruktuuridest, mitte sama värvi pigmendist. Mis liiki värvus see on?' }, response: { en: 'structural colour', et: 'struktuurvärvus' }, acceptedVariants: { en: ['structural coloration', 'structural colouration'], et: ['struktuurne värvus'] },
+        explanation: { en: 'Structures comparable in size to light wavelengths selectively reinforce some reflected colours and suppress others.', et: 'Valguse lainepikkusega võrreldavad struktuurid võimendavad peegelduses valikuliselt mõnd tooni ja nõrgendavad teisi.' },
+        source: { sourceId: 'wikipedia:structural-colour-peacock-feather', title: 'Structural coloration', url: 'https://en.wikipedia.org/wiki/Structural_coloration', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-078:chromophore-colour-bearing-group', factKey: 'science-nature:chromophore-colour-bearing-group', tier: 5, subjectKey: 'group:chromophore',
+        clue: { en: 'What name is given to the part of a molecule whose pattern of electrons absorbs particular visible wavelengths and is responsible for the molecule’s colour?', et: 'Kuidas nimetatakse molekuli osa, mille elektronide paigutus neelab kindlaid nähtava valguse lainepikkusi ja annab molekulile värvuse?' }, response: { en: 'chromophore', et: 'kromofoor' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Changes to this light-absorbing group can shift which wavelengths are removed from white light and therefore alter the observed hue.', et: 'Selle valgust neelava rühma muutused võivad nihutada valgest valgusest eemaldatavaid lainepikkusi ja muuta seega nähtavat tooni.' },
+        source: { sourceId: 'wikipedia:chromophore-colour-bearing-group', title: 'Chromophore', url: 'https://en.wikipedia.org/wiki/Chromophore', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-079', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Why Materials Fail', et: 'Miks materjalid purunevad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-079:brittleness-breaks-without-bending', factKey: 'science-nature:brittleness-breaks-without-bending', tier: 1, subjectKey: 'property:brittleness',
+        clue: { en: 'Glass can shatter with little bending or permanent deformation. What material property does this illustrate?', et: 'Klaas võib puruneda peaaegu ilma paindumise või püsiva kuju muutuseta. Millist materjali omadust see näitab?' }, response: { en: 'brittleness', et: 'haprus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'A brittle solid absorbs relatively little deformation before a crack causes sudden failure.', et: 'Habras tahke aine deformeerub enne prao põhjustatud järsku purunemist suhteliselt vähe.' },
+        source: { sourceId: 'wikipedia:brittleness-breaks-without-bending', title: 'Brittleness', url: 'https://en.wikipedia.org/wiki/Brittleness', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-079:ductility-drawn-into-wire', factKey: 'science-nature:ductility-drawn-into-wire', tier: 2, subjectKey: 'property:ductility',
+        clue: { en: 'Copper can be stretched into a long wire without snapping. What property names a material’s ability to undergo this kind of tensile deformation?', et: 'Vaske saab venitada pikaks traadiks, ilma et see katkeks. Milline omadus kirjeldab materjali võimet selliselt tõmbejõu mõjul deformeeruda?' }, response: { en: 'ductility', et: 'duktilisus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Metals with this property can change shape substantially under tension before they fracture.', et: 'Selle omadusega metallid võivad tõmbe all enne purunemist märkimisväärselt kuju muuta.' },
+        source: { sourceId: 'wikipedia:ductility-drawn-into-wire', title: 'Ductility', url: 'https://en.wikipedia.org/wiki/Ductility', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-079:metal-fatigue-repeated-loading', factKey: 'science-nature:metal-fatigue-repeated-loading', tier: 3, subjectKey: 'failure:metal-fatigue',
+        clue: { en: 'A paper clip eventually snaps after being bent back and forth many times, even though no single bend was enough to break it. What failure process is this?', et: 'Kirjaklamber murdub pärast korduvat edasi-tagasi painutamist, kuigi ükski painutus üksi poleks seda lõhkunud. Mis purunemisprotsess see on?' }, response: { en: 'metal fatigue', et: 'metalliväsimus' }, acceptedVariants: { en: ['material fatigue', 'fatigue'], et: ['materjali väsimus', 'väsimuspurunemine'] },
+        explanation: { en: 'Repeated loading can initiate and grow tiny cracks until the remaining section can no longer carry the load.', et: 'Korduv koormamine võib tekitada ja kasvatada tillukesi pragusid, kuni allesjäänud ristlõige ei suuda enam koormust kanda.' },
+        source: { sourceId: 'wikipedia:metal-fatigue-repeated-loading', title: 'Fatigue (material)', url: 'https://en.wikipedia.org/wiki/Fatigue_(material)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-079:creep-slow-deformation', factKey: 'science-nature:creep-slow-deformation', tier: 4, subjectKey: 'deformation:creep',
+        clue: { en: 'A turbine blade slowly changes shape while held under steady stress at high temperature. What time-dependent deformation is occurring?', et: 'Turbiinilaba muudab kõrgel temperatuuril püsiva koormuse all aeglaselt kuju. Milline ajast sõltuv deformatsioon toimub?' }, response: { en: 'creep', et: 'roomamine' }, acceptedVariants: { en: ['material creep'], et: ['materjali roomamine'] },
+        explanation: { en: 'Sustained stress can produce gradual permanent strain, especially when a material is hot for long periods.', et: 'Püsiv pinge võib tekitada järkjärgulise jäävdeformatsiooni, eriti kui materjal on kaua kuum.' },
+        source: { sourceId: 'wikipedia:creep-slow-deformation', title: 'Creep (deformation)', url: 'https://en.wikipedia.org/wiki/Creep_(deformation)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-079:fracture-toughness-crack-growth', factKey: 'science-nature:fracture-toughness-crack-growth', tier: 5, subjectKey: 'property:fracture-toughness',
+        clue: { en: 'Which engineering property measures how well a material that already contains a crack resists that crack growing catastrophically?', et: 'Milline insenertehniline omadus näitab, kui hästi peab juba pragu sisaldav materjal vastu prao järsule levikule?' }, response: { en: 'fracture toughness', et: 'purunemissitkus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'A higher value means a flawed component can withstand greater stress before rapid crack propagation begins.', et: 'Suurem väärtus tähendab, et defektiga detail talub enne prao kiire leviku algust suuremat pinget.' },
+        source: { sourceId: 'wikipedia:fracture-toughness-crack-growth', title: 'Fracture toughness', url: 'https://en.wikipedia.org/wiki/Fracture_toughness', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-080', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'A Cell’s Life Choices', et: 'Raku eluvalikud' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-080:stem-cell-self-renewal', factKey: 'science-nature:stem-cell-self-renewal', tier: 1, subjectKey: 'cell:stem-cell',
+        clue: { en: 'What kind of unspecialized cell can both make more cells like itself and give rise to cells with specialized roles?', et: 'Milline spetsialiseerumata rakk suudab nii omasuguseid rakke juurde tekitada kui ka anda alguse eri ülesannetega rakkudele?' }, response: { en: 'stem cell', et: 'tüvirakk' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Its capacity for self-renewal and for producing different descendants makes it valuable in development and tissue repair.', et: 'Võime end taastoota ja moodustada erinevaid järglasrakke muudab selle oluliseks arengus ning kudede parandamisel.' },
+        source: { sourceId: 'wikipedia:stem-cell-self-renewal', title: 'Stem cell', url: 'https://en.wikipedia.org/wiki/Stem_cell', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-080:cell-differentiation-specialization', factKey: 'science-nature:cell-differentiation-specialization', tier: 2, subjectKey: 'process:cell-differentiation',
+        clue: { en: 'A developing cell switches genes on and off until it acquires the structure and function of a muscle or nerve cell. What process is this?', et: 'Arenev rakk lülitab geene sisse ja välja, kuni omandab lihas- või närviraku ehituse ja talitluse. Mis protsess see on?' }, response: { en: 'cell differentiation', et: 'rakkude diferentseerumine' }, acceptedVariants: { en: ['cellular differentiation'], et: ['rakkude eristumine'] },
+        explanation: { en: 'Selective gene activity guides an initially less specialized cell toward a stable identity and function.', et: 'Geenide valikuline aktiivsus suunab algselt vähem spetsialiseerunud raku kindla identiteedi ja ülesande poole.' },
+        source: { sourceId: 'wikipedia:cell-differentiation-specialization', title: 'Cellular differentiation', url: 'https://en.wikipedia.org/wiki/Cellular_differentiation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-080:apoptosis-programmed-death', factKey: 'science-nature:apoptosis-programmed-death', tier: 3, subjectKey: 'process:apoptosis',
+        clue: { en: 'During development, cells between forming fingers are deliberately dismantled without spilling their contents and inflaming nearby tissue. What controlled process removes them?', et: 'Arengu käigus lammutatakse kujunevate sõrmede vahelised rakud sihipäraselt, ilma et nende sisu pääseks ümbritsevat kude ärritama. Milline kontrollitud protsess need eemaldab?' }, response: { en: 'apoptosis', et: 'apoptoos' }, acceptedVariants: { en: ['programmed cell death'], et: ['programmeeritud rakusurm'] },
+        explanation: { en: 'An internal molecular programme packages the cell into fragments that neighbouring cells can safely clear away.', et: 'Sisemine molekulaarne programm pakendab raku osadeks, mille naaberrakud saavad ohutult eemaldada.' },
+        source: { sourceId: 'wikipedia:apoptosis-programmed-death', title: 'Apoptosis', url: 'https://en.wikipedia.org/wiki/Apoptosis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-080:telomere-chromosome-end', factKey: 'science-nature:telomere-chromosome-end', tier: 4, subjectKey: 'structure:telomere',
+        clue: { en: 'What repeating DNA structure caps the end of a chromosome and helps keep it from being mistaken for broken DNA?', et: 'Milline korduv DNA-struktuur katab kromosoomi otsa ja aitab vältida selle pidamist katkise DNA otsaks?' }, response: { en: 'telomere', et: 'telomeer' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'These protective end regions prevent chromosome tips from fusing with one another or triggering repair responses.', et: 'Need kaitsvad otsapiirkonnad takistavad kromosoomiotstel omavahel liituda või parandussüsteemi käivitada.' },
+        source: { sourceId: 'wikipedia:telomere-chromosome-end', title: 'Telomere', url: 'https://en.wikipedia.org/wiki/Telomere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-080:cellular-senescence-stops-dividing', factKey: 'science-nature:cellular-senescence-stops-dividing', tier: 5, subjectKey: 'state:cellular-senescence',
+        clue: { en: 'A damaged cell remains metabolically active but permanently stops dividing, helping suppress tumours while sometimes contributing to ageing. What state has it entered?', et: 'Kahjustatud rakk jääb ainevahetuslikult aktiivseks, kuid lõpetab püsivalt jagunemise, aidates kasvajat pärssida, ent mõnikord ka vananemisele kaasa. Millisesse olekusse see on jõudnud?' }, response: { en: 'cellular senescence', et: 'rakuline senestsents' }, acceptedVariants: { en: ['cell senescence'], et: ['raku senestsents'] },
+        explanation: { en: 'The lasting growth arrest can block damaged cells from multiplying, although their secretions may affect surrounding tissue.', et: 'Püsiv kasvuseisak võib takistada kahjustatud rakkude paljunemist, kuigi nende eritised võivad mõjutada ümbritsevat kude.' },
+        source: { sourceId: 'wikipedia:cellular-senescence-stops-dividing', title: 'Cellular senescence', url: 'https://en.wikipedia.org/wiki/Cellular_senescence', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-082', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'The Baltic Sea in Balance', et: 'Läänemere habras tasakaal' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-082:brackish-water-fresh-salt-mix', factKey: 'science-nature:brackish-water-fresh-salt-mix', tier: 1, subjectKey: 'water:brackish',
+        clue: { en: 'River inflow dilutes seawater in the Baltic, giving it a salinity between fresh water and the open ocean. What kind of water is this?', et: 'Jõgede sissevool lahjendab Läänemere merevett, nii et selle soolsus jääb magevee ja avaookeani vahele. Mis liiki vesi see on?' }, response: { en: 'brackish water', et: 'riimvesi' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Only species able to tolerate this intermediate and variable salt content thrive across much of the sea.', et: 'Suures osas merest saavad hästi hakkama vaid liigid, kes taluvad sellist vahepealset ja muutlikku soolsust.' },
+        source: { sourceId: 'wikipedia:brackish-water-fresh-salt-mix', title: 'Brackish water', url: 'https://en.wikipedia.org/wiki/Brackish_water', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-082:eutrophication-excess-nutrients', factKey: 'science-nature:eutrophication-excess-nutrients', tier: 2, subjectKey: 'process:eutrophication',
+        clue: { en: 'Runoff rich in nitrogen and phosphorus can overload a sea or lake and drive excessive biological production. What environmental process is this?', et: 'Lämmastiku- ja fosforirikas äravool võib mere või järve toitainetega üle koormata ning põhjustada liigset elustiku produktsiooni. Mis keskkonnaprotsess see on?' }, response: { en: 'eutrophication', et: 'eutrofeerumine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The surplus nutrients upset the ecosystem by accelerating growth and increasing the amount of organic matter that must decompose.', et: 'Toitainete liig rikub ökosüsteemi tasakaalu, kiirendades kasvu ja suurendades lagundamist vajava orgaanilise aine hulka.' },
+        source: { sourceId: 'wikipedia:eutrophication-excess-nutrients', title: 'Eutrophication', url: 'https://en.wikipedia.org/wiki/Eutrophication', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-082:cyanobacterial-bloom-surface', factKey: 'science-nature:cyanobacterial-bloom-surface', tier: 3, subjectKey: 'event:cyanobacterial-bloom',
+        clue: { en: 'Warm, calm summer water can become covered by dense greenish surface streaks made by photosynthetic bacteria, some of which release toxins. What event is this?', et: 'Soojal ja tuulevaiksel suvel võivad veepinda katta tihedad rohekad viirud, mille moodustavad fotosünteesivad bakterid, kellest osa eritab mürke. Mis nähtus see on?' }, response: { en: 'a cyanobacterial bloom', et: 'tsüanobakterite õitseng' }, acceptedVariants: { en: ['blue-green algal bloom'], et: ['sinivetikate õitseng'] },
+        explanation: { en: 'Buoyant colonies can accumulate at the surface, reducing water quality and sometimes making bathing unsafe.', et: 'Ujuvad kolooniad võivad pinnale koguneda, halvendada vee kvaliteeti ja muuta suplemise mõnikord ohtlikuks.' },
+        source: { sourceId: 'wikipedia:cyanobacterial-bloom-surface', title: 'Cyanobacterial bloom', url: 'https://en.wikipedia.org/wiki/Cyanobacterial_bloom', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-082:hypoxia-low-bottom-oxygen', factKey: 'science-nature:hypoxia-low-bottom-oxygen', tier: 4, subjectKey: 'condition:hypoxia',
+        clue: { en: 'When deep water contains too little dissolved oxygen for most animals to survive, what condition has developed?', et: 'Milline seisund on tekkinud siis, kui süvavees on enamiku loomade ellujäämiseks liiga vähe lahustunud hapnikku?' }, response: { en: 'hypoxia', et: 'hüpoksia' }, acceptedVariants: { en: ['oxygen depletion'], et: ['hapnikuvaegus'] },
+        explanation: { en: 'Severe oxygen shortage can eliminate bottom-dwelling animals and create so-called dead zones.', et: 'Tugev hapnikupuudus võib põhjaloomastiku hävitada ja tekitada niinimetatud surnud alasid.' },
+        source: { sourceId: 'wikipedia:hypoxia-low-bottom-oxygen', title: 'Hypoxia (environmental)', url: 'https://en.wikipedia.org/wiki/Hypoxia_(environmental)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-082:halocline-salinity-change', factKey: 'science-nature:halocline-salinity-change', tier: 5, subjectKey: 'layer:halocline',
+        clue: { en: 'In a stratified sea, what transition layer has a rapid change in salinity with depth and separates fresher surface water from saltier deep water?', et: 'Kuidas nimetatakse kihistunud meres üleminekukihti, kus soolsus sügavusega kiiresti muutub ning magedam pinnavesi eraldub soolasemast süvaveest?' }, response: { en: 'the halocline', et: 'halokliin' }, acceptedVariants: { en: ['halocline', 'salinity gradient layer'], et: ['soolsuse hüppekiht', 'soolsuse muutekiht'] },
+        explanation: { en: 'The strong density change across this layer restricts vertical mixing between the upper and lower water masses.', et: 'Tugev tiheduse muutus selles kihis piirab ülemise ja alumise veemassi vertikaalset segunemist.' },
+        source: { sourceId: 'wikipedia:halocline-salinity-change', title: 'Halocline', url: 'https://en.wikipedia.org/wiki/Halocline', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const SCIENCE_NATURE_CATEGORIES = validatePlayableCorpus(rawCategories, ASSIGNED_TARGETS.slice(0, rawCategories.length));
