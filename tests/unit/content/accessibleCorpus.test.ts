@@ -46,6 +46,7 @@ import type {
 } from '../../../scripts/content/accessibility/types';
 import type { LegacyEasyTarget } from '../../../scripts/content/accessibility/targets';
 import type { ContentEvidence } from '../../../scripts/content/evidence';
+import { validateProductionContent } from '../../../scripts/content/validate';
 import {
   loadAccessibleCorpus,
   parseAccessibleCorpusArgs,
@@ -53,6 +54,7 @@ import {
   stageAccessibleCorpus,
 } from '../../../scripts/content/applyAccessibleCorpus';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
+import { parsePackCsv } from '../../../src/main/content/csvPacks';
 
 const ACCEPTED_BATCHES = [
   '01-history',
@@ -353,7 +355,7 @@ function applyFixture(): ApplyFixture {
         ...firstQuestion,
         acceptedVariants: {
           en: ['Alias; one', 'Back\\slash'],
-          et: [],
+          et: ['Alias; üks', 'Kald\\kriips'],
         },
       },
       ...baseTargetA.questions.slice(1),
@@ -774,8 +776,10 @@ describe('buildAccessibleCorpus', () => {
     expect(listResponses.map(({ key }) => key)).toEqual([
       'accessible-corpus:built-in-geography-set-015:united-states-capital-washington',
     ]);
-    expect(dateOrNumberPrompts).toHaveLength(77);
-    expect(numericResponses).toEqual([]);
+    expect(dateOrNumberPrompts).toHaveLength(74);
+    expect(numericResponses.map(({ key }) => key)).toEqual([
+      'famous-first-lines-nineteen-eighty-four-thirteen',
+    ]);
     expect(identicalProse).toEqual([]);
   });
 
@@ -1088,6 +1092,26 @@ describe('proposed complete easy corpus', () => {
     expect(binary.map(({ clue_id }) => clue_id)).toEqual([]);
     expect(banned.map(({ category_set_id }) => category_set_id)).toEqual([]);
   });
+
+  it('has no non-reviewable production-validation errors', () => {
+    const rows = proposedEasyCorpus().rows;
+    const inputs = ACCEPTED_BATCHES.map((batchId) => {
+      const packId = `built-in-${batchId.replace(/^\d+-/u, '')}`;
+      const batchRows = rows.filter(({ pack_id }) => pack_id === packId);
+      return {
+        file: `${batchId}.en-et.csv`,
+        pack: parsePackCsv(stringify(batchRows, {
+          header: true,
+          columns: [...CSV_COLUMNS],
+          record_delimiter: '\r\n',
+        })),
+      };
+    });
+
+    const result = validateProductionContent(inputs, { mode: 'batch' });
+
+    expect(result.issues.filter(({ severity }) => severity === 'error')).toEqual([]);
+  });
 });
 
 describe('validateAccessibleCorpus', () => {
@@ -1209,6 +1233,20 @@ describe('validateAccessibleCorpus', () => {
     } as unknown as AccessibleQuestion);
     expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
       'Question target-a-question-1 must provide English and Estonian accepted-variant arrays',
+    );
+  });
+
+  it.each([
+    { en: ['English alias'], et: [] },
+    { en: [], et: ['Eestikeelne alias'] },
+  ])('rejects one-sided accepted variants: $en / $et', (acceptedVariants) => {
+    const original = category('target-a');
+    const invalid = withQuestion(original, 0, {
+      ...original.questions[0]!,
+      acceptedVariants,
+    });
+    expect(() => validateAccessibleCorpus([invalid], targets.slice(0, 1))).toThrowError(
+      'Question target-a-question-1 must provide bilingual accepted variants',
     );
   });
 
@@ -1364,7 +1402,7 @@ describe('applyAccessibleCorpus', () => {
       response_en: 'Example monument target-a 1',
       response_et: 'Näidismonument target-a 1',
       accepted_variants_en: 'Alias\\; one;Back\\\\slash',
-      accepted_variants_et: '',
+      accepted_variants_et: 'Alias\\; üks;Kald\\\\kriips',
       explanation_en: 'The landmark is a well-known example from place target-a 1.',
       explanation_et: 'See vaatamisväärsus on tuntud näide kohast target-a 1.',
       source_title: 'Reference for target-a 1',

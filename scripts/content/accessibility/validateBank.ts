@@ -77,6 +77,9 @@ function validateAcceptedVariants(question: AccessibleQuestion): void {
       throw new Error(`Question ${question.key} has an empty ${label} accepted variant`);
     }
   }
+  if ((variants.en.length === 0) !== (variants.et.length === 0)) {
+    throw new Error(`Question ${question.key} must provide bilingual accepted variants`);
+  }
 }
 
 function validateQuestionText(question: AccessibleQuestion, category: AccessibleCategory): void {

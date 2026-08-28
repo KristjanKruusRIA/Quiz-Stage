@@ -86,7 +86,7 @@ const rawCategories = [
       ['Identify the multi-spindle machine that made one worker able to spin several threads at once.', 'Milline mitme värtnaga masin võimaldas ühel töölisel korraga mitut lõnga kedrata?'],
       ['Spinning Jenny', 'Spinning Jenny'],
       ['James Hargreaves\'s machine greatly increased yarn production during the mechanisation of textiles.', 'James Hargreavesi masin suurendas tekstiilitootmise mehhaniseerimisel tunduvalt lõnga valmistamise kiirust.'],
-      'Spinning_jenny', [[], ['Ketrus-Jenny']],
+      'Spinning_jenny', [[], []],
     ],
     [
       'industrial-revolution-coal-fuel', 'object:coal',
@@ -216,9 +216,9 @@ const rawCategories = [
     [
       'womens-suffrage-us-nineteenth-amendment', 'concept:nineteenth-amendment',
       ['What amendment to the United States Constitution prohibited denying the vote on the basis of sex?', 'Milline Ameerika Ühendriikide põhiseaduse parandus keelas hääleõiguse piiramise soo alusel?'],
-      ['The Nineteenth Amendment', '19. põhiseaduse parandus'],
+      ['The Nineteenth Amendment', 'Üheksateistkümnes põhiseaduse parandus'],
       ['Its ratification in 1920 protected women\'s voting rights nationwide.', 'Selle ratifitseerimine 1920. aastal kaitses naiste hääleõigust kogu riigis.'],
-      'Nineteenth_Amendment_to_the_United_States_Constitution', [['19th Amendment'], ['Üheksateistkümnes parandus']],
+      'Nineteenth_Amendment_to_the_United_States_Constitution', [['19th Amendment'], ['19. põhiseaduse parandus']],
     ],
   ]),
   category('built-in-history-set-050', [
@@ -337,7 +337,7 @@ const rawCategories = [
       'cities-through-time-constantinople-istanbul', 'place:istanbul',
       ['What is the modern name of the city once widely known as Constantinople?', 'Mis on kunagi laialt Konstantinoopoli nime kandnud linna tänapäevane nimi?'],
       ['Istanbul', 'Istanbul'],
-      ['The city on the Bosporus received its present official Turkish name in the twentieth century.', 'Bosporuse-äärne linn sai oma praeguse ametliku türgikeelse nime 20. sajandil.'],
+      ['The city on the Bosporus received its present official Turkish name in the 20th century.', 'Bosporuse-äärne linn sai oma praeguse ametliku türgikeelse nime 20. sajandil.'],
       'Istanbul', [['İstanbul'], ['İstanbul']],
     ],
     [
@@ -440,7 +440,7 @@ const rawCategories = [
       ['What dark eye cosmetic was worn by both women and men in ancient Egypt?', 'Millist tumedat silmakosmeetikat kasutasid Vana-Egiptuses nii naised kui ka mehed?'],
       ['Kohl', 'Kohl'],
       ['Mineral-based kohl outlined the eyes and was also associated with protection and status.', 'Mineraalidel põhinev kool rõhutas silmi ning seostus ka kaitse ja staatusega.'],
-      'Kohl_(cosmetics)', [[], ['Kool']],
+      'Kohl_(cosmetics)', [[], []],
     ],
   ]),
   category('built-in-history-set-010', [
@@ -485,7 +485,7 @@ const rawCategories = [
       'roman-empire-emperor-title', 'concept:roman-emperor',
       ['What title was used by rulers such as Augustus, Trajan, and Hadrian?', 'Millist tiitlit kandsid sellised Rooma valitsejad nagu Augustus, Traianus ja Hadrianus?'],
       ['Roman emperor', 'Rooma keiser'],
-      ['Roman emperors held the highest political and military authority in the empire.', 'Rooma keisrite käes oli impeeriumi kõrgeim poliitiline ja sõjaline võim.'],
+      ['Roman emperors exercised supreme political and military authority over the empire.', 'Rooma keisrid kasutasid impeeriumis ülimat poliitilist ja sõjalist võimu.'],
       'Roman_emperor', [['Emperor'], ['Keiser']],
     ],
     [
@@ -514,7 +514,7 @@ const rawCategories = [
       ['Which frontier fortification crossed northern Britain near the empire\'s edge?', 'Milline piirikindlustus kulges üle Põhja-Suurbritannia impeeriumi serva lähedal?'],
       ['Hadrian\'s Wall', 'Hadrianuse vall'],
       ['Roman troops built and guarded the barrier under Emperor Hadrian.', 'Rooma sõdurid ehitasid ja valvasid tõket keiser Hadrianuse ajal.'],
-      'Hadrian%27s_Wall', [[], ['Hadrianuse müür']],
+      'Hadrian%27s_Wall', [['Hadrian\'s Roman wall'], ['Hadrianuse müür']],
     ],
   ]),
   category('built-in-history-set-014', [
@@ -617,7 +617,7 @@ const rawCategories = [
       'age-of-exploration-zheng-he', 'person:zheng-he',
       ['What Ming admiral commanded great Chinese treasure-fleet voyages across the Indian Ocean?', 'Milline Mingi dünastia admiral juhtis Hiina suuri aardelaevastiku retki üle India ookeani?'],
       ['Zheng He', 'Zheng He'],
-      ['His early fifteenth-century fleets visited Southeast Asia, South Asia, Arabia, and East Africa.', 'Tema 15. sajandi alguse laevastikud käisid Kagu- ja Lõuna-Aasias, Araabias ning Ida-Aafrikas.'],
+      ['His fleets of the early 15th century visited Southeast Asia, South Asia, Arabia, and East Africa.', 'Tema 15. sajandi alguse laevastikud käisid Kagu- ja Lõuna-Aasias, Araabias ning Ida-Aafrikas.'],
       'Zheng_He', [['Cheng Ho'], ['Cheng Ho']],
     ],
     [
@@ -645,7 +645,7 @@ const rawCategories = [
     ],
     [
       'american-revolution-george-washington', 'person:george-washington',
-      ['Who commanded the Continental Army before becoming the first US president?', 'Kes juhtis Kontinentaalarmeed enne Ameerika Ühendriikide esimeseks presidendiks saamist?'],
+      ['Who commanded the Continental Army before becoming the first leader of the United States under its Constitution?', 'Kes juhtis Kontinentaalarmeed enne Ameerika Ühendriikide põhiseadusjärgseks esimeseks riigijuhiks saamist?'],
       ['George Washington', 'George Washington'],
       ['Washington led the revolutionary army through the war against Britain.', 'Washington juhtis revolutsiooniarmeed sõjas Suurbritannia vastu.'],
       'George_Washington', [['Washington'], ['Washington']],
@@ -883,7 +883,7 @@ const rawCategories = [
       'royal-houses-orange-nassau-netherlands', 'organization:house-of-orange-nassau',
       ['Name the royal house associated with the modern monarchy of the Netherlands.', 'Nimeta Madalmaade tänapäevase monarhiaga seotud kuningakoda.'],
       ['The House of Orange-Nassau', 'Oranje-Nassau dünastia'],
-      ['The dynasty has supplied the kings and queens of the Netherlands since the nineteenth century.', 'Dünastia on andnud Madalmaade kuningad ja kuningannad alates 19. sajandist.'],
+      ['The dynasty has supplied the kings and queens of the Netherlands since the 19th century.', 'Dünastia on andnud Madalmaade kuningad ja kuningannad alates 19. sajandist.'],
       'House_of_Orange-Nassau', [['Orange-Nassau'], ['Oranje-Nassau']],
     ],
   ]),
@@ -1048,21 +1048,21 @@ const rawCategories = [
       ['Name the figure of speech that makes an explicit comparison, often with “like” or “as”.', 'Milline kõnekujund seob kaht asja otseselt, kasutades sageli sõnu „nagu” või „kui”?'],
       ['A simile', 'Võrdlus'],
       ['Unlike a direct figurative identification, it signals that two things are being compared.', 'Erinevalt otsesest kujundlikust samastamisest annab see märku kahe asja võrdlemisest.'],
-      'Simile', [[], ['Võrdluskujund']],
+      'Simile', [[], []],
     ],
     [
       'literary-devices-personification', 'concept:personification',
       ['Which device gives human actions or feelings to animals, objects, or ideas?', 'Milline võte omistab loomadele, esemetele või mõistetele inimlikke tegusid ja tundeid?'],
       ['Personification', 'Isikustamine'],
       ['Writers use human traits to make non-human subjects vivid and relatable.', 'Kirjanikud muudavad inimlike omadustega mitteinimlikud nähtused elavaks ja mõistetavaks.'],
-      'Personification', [[], ['Personifikatsioon']],
+      'Personification', [['Humanisation'], ['Personifikatsioon']],
     ],
     [
       'literary-devices-alliteration', 'concept:alliteration',
       ['What sound device repeats the same initial consonant in nearby words?', 'Milline kõlavõte kordab lähestikku asuvate sõnade alguses sama kaashäälikut?'],
       ['Alliteration', 'Alliteratsioon'],
       ['The repeated opening sound can add rhythm and emphasis to a phrase.', 'Korduv algushäälik võib fraasile anda rütmi ja rõhu.'],
-      'Alliteration', [[], ['Algriim']],
+      'Alliteration', [['Head rhyme'], ['Algriim']],
     ],
     [
       'literary-devices-foreshadowing', 'concept:foreshadowing',
@@ -1097,9 +1097,9 @@ const rawCategories = [
     [
       'famous-first-lines-nineteen-eighty-four-thirteen', 'work:nineteen-eighty-four',
       ['What dystopian novel opens on a bright cold day when the clocks strike thirteen?', 'Milline düstoopiaromaan algab kirkal külmal päeval, kui kellad löövad kolmteist?'],
-      ['Nineteen Eighty-Four', '„1984”'],
+      ['1984', '„1984”'],
       ['The unsettling clock immediately signals that Winston Smith\'s world differs from ordinary life.', 'Rahutuks tegev kellalöök annab kohe märku, et Winston Smithi maailm erineb tavalisest elust.'],
-      'Nineteen_Eighty-Four', [['1984'], ['Tuhat üheksasada kaheksakümmend neli']],
+      'Nineteen_Eighty-Four', [['Nineteen Eighty-Four'], ['Tuhat üheksasada kaheksakümmend neli']],
     ],
     [
       'famous-first-lines-metamorphosis-insect', 'work:the-metamorphosis',
@@ -1119,7 +1119,7 @@ const rawCategories = [
     ],
     [
       'pen-names-george-orwell-blair', 'person:george-orwell',
-      ['Under what name did Eric Arthur Blair publish Animal Farm and Nineteen Eighty-Four?', 'Millise nime all avaldas Eric Arthur Blair teosed „Loomade farm” ja „1984”?'],
+      ['Under what name did Eric Arthur Blair publish Animal Farm and 1984?', 'Millise nime all avaldas Eric Arthur Blair teosed „Loomade farm” ja „1984”?'],
       ['George Orwell', 'George Orwell'],
       ['Blair chose the pseudonym early in his literary career and used it for his best-known work.', 'Blair valis pseudonüümi kirjanduskarjääri alguses ja kasutas seda oma tuntuimate teoste puhul.'],
       'George_Orwell', [['Orwell'], ['Orwell']],
@@ -1214,10 +1214,10 @@ const rawCategories = [
     ],
     [
       'talking-animals-charlotte-web-messages', 'person:charlotte-spider',
-      ['Who saves Wilbur by weaving praise such as “Some Pig” into her web?', 'Kes päästab Wilburi, kududes oma võrku kiidusõnu, näiteks „Mõni siga”?'],
+      ['Who saves Wilbur by weaving praise such as “Some Pig” into her web?', 'Kes päästab Wilburi, kududes oma võrku kiidusõnu, näiteks „Vahva notsu”?'],
       ['Charlotte', 'Charlotte'],
       ['The spider\'s messages persuade the humans that Wilbur is extraordinary.', 'Ämbliku sõnumid veenavad inimesi, et Wilbur on erakordne.'],
-      'Charlotte%27s_Web', [['Charlotte A. Cavatica'], []],
+      'Charlotte%27s_Web', [['Charlotte A. Cavatica'], ['Charlotte A. Cavatica']],
     ],
   ]),
   category('built-in-literature-language-set-080', [
@@ -1244,7 +1244,7 @@ const rawCategories = [
     ],
     [
       'literary-villains-big-brother', 'person:big-brother',
-      ['Which watchful figure symbolises the totalitarian state in Nineteen Eighty-Four?', 'Milline kõikjal valvav kuju sümboliseerib romaanis „1984” totalitaarset riiki?'],
+      ['Which watchful figure symbolises the totalitarian state in the novel 1984?', 'Milline kõikjal valvav kuju sümboliseerib romaanis „1984” totalitaarset riiki?'],
       ['Big Brother', 'Suur Vend'],
       ['Posters and screens present him as the face of the Party\'s constant surveillance.', 'Plakatid ja ekraanid näitavad teda partei pideva järelevalve näona.'],
       'Big_Brother_(Nineteen_Eighty-Four)', [[], []],
@@ -1304,7 +1304,7 @@ const rawCategories = [
     ],
     [
       'baltic-writers-lennart-meri-silverwhite', 'person:lennart-meri',
-      ['Which future Estonian president wrote the travel-history book Silverwhite?', 'Milline tulevane Eesti president kirjutas reisiloolise teose „Hõbevalge”?'],
+      ['Which Estonian writer and statesman wrote the travel-history book Silverwhite?', 'Milline Eesti kirjanik ja riigimees kirjutas reisiloolise teose „Hõbevalge”?'],
       ['Lennart Meri', 'Lennart Meri'],
       ['The 1976 book combines travel, history, and speculation about ancient contacts around the Baltic Sea.', '1976. aasta teos ühendab reisimuljeid, ajalugu ja oletusi muistsete Läänemere-äärsete kontaktide kohta.'],
       'Lennart_Meri', [['Meri'], ['Meri']],
@@ -1320,7 +1320,7 @@ const rawCategories = [
       'baltic-writers-donelaitis-seasons', 'person:kristijonas-donelaitis',
       ['Identify the Lithuanian poet who wrote The Seasons about rural life in Lithuania Minor.', 'Milline Leedu luuletaja kirjutas Väike-Leedu maaelust poeemi „Aastaajad”?'],
       ['Kristijonas Donelaitis', 'Kristijonas Donelaitis'],
-      ['His eighteenth-century poem is a foundational work of Lithuanian literature.', 'Tema 18. sajandi poeem on Leedu kirjanduse alustekste.'],
+      ['His 18th-century poem is a foundational work of Lithuanian literature.', 'Tema 18. sajandi poeem on Leedu kirjanduse alustekste.'],
       'Kristijonas_Donelaitis', [['Donelaitis'], ['Donelaitis']],
     ],
     [
@@ -1499,7 +1499,7 @@ const rawCategories = [
       ['Name the small traveller who leaves asteroid B-612 and visits several worlds.', 'Milline väike rändur lahkub asteroidilt B-612 ja külastab mitut maailma?'],
       ['The Little Prince', 'Väike prints'],
       ['Antoine de Saint-Exupéry uses his journey to reflect on friendship, loss, and adult priorities.', 'Antoine de Saint-Exupéry kasutab tema teekonda, et mõtiskleda sõpruse, kaotuse ja täiskasvanute väärtuste üle.'],
-      'The_Little_Prince', [['Little Prince'], []],
+      'The_Little_Prince', [[], []],
     ],
     [
       'childrens-classics-anne-green-gables', 'person:anne-shirley',
@@ -1670,14 +1670,14 @@ const rawCategories = [
       ['What term describes matching or similar sounds, especially at the ends of lines?', 'Milline termin tähendab kokkulangevaid või sarnaseid häälikuid, eriti värsiridade lõpus?'],
       ['Rhyme', 'Riim'],
       ['Poets can arrange repeated ending sounds into patterns called rhyme schemes.', 'Luuletajad võivad korduvad lõpuhäälikud seada riimiskeemideks nimetatud mustritesse.'],
-      'Rhyme', [[], ['Lõppriim']],
+      'Rhyme', [['End rhyme'], ['Lõppriim']],
     ],
     [
       'poetry-basics-stanza', 'concept:stanza',
       ['A grouped set of lines in a poem, separated from other groups, is called what?', 'Kuidas nimetatakse luuletuses teistest rühmadest eraldatud värsiridade kogumit?'],
       ['A stanza', 'Stroof'],
       ['It functions somewhat like a paragraph in prose and may follow a repeated pattern.', 'See toimib veidi nagu lõik proosas ning võib järgida korduvat mustrit.'],
-      'Stanza', [[], ['Salm']],
+      'Stanza', [['Verse'], ['Salm']],
     ],
     [
       'poetry-basics-limerick-five-lines', 'concept:limerick',
@@ -1727,7 +1727,7 @@ const rawCategories = [
       'authors-countries-achebe-things-fall-apart', 'person:chinua-achebe',
       ['Identify the Nigerian author whose novel Things Fall Apart portrays an Igbo community confronting colonial rule.', 'Nimeta Nigeeria kirjanik, kelle romaan „Kõik vajub koost” kujutab koloniaalvõimuga silmitsi seisvat igbode kogukonda.'],
       ['Chinua Achebe', 'Chinua Achebe'],
-      ['Achebe centred African voices and experience in one of the twentieth century\'s most widely read novels.', 'Achebe seadis ühes 20. sajandi loetuimas romaanis kesksele kohale Aafrika hääled ja kogemuse.'],
+      ['Achebe centred African voices and experience in one of the 20th century\'s most widely read novels.', 'Achebe seadis ühes 20. sajandi loetuimas romaanis kesksele kohale Aafrika hääled ja kogemuse.'],
       'Chinua_Achebe', [[], []],
     ],
     [
@@ -1787,7 +1787,7 @@ const rawCategories = [
       'classic-love-stories-doctor-zhivago', 'work:doctor-zhivago',
       ['In which Pasternak novel are Yuri and Lara separated by revolution and civil war?', 'Millises Pasternaki romaanis lahutavad Juri ja Lara revolutsioon ning kodusõda?'],
       ['Doctor Zhivago', '„Doktor Živago”'],
-      ['Their relationship unfolds amid Russia\'s upheavals in the early twentieth century.', 'Nende suhe areneb 20. sajandi alguse Venemaa vapustuste keskel.'],
+      ['Their relationship unfolds amid Russia\'s upheavals in the early 20th century.', 'Nende suhe areneb 20. sajandi alguse Venemaa vapustuste keskel.'],
       'Doctor_Zhivago_(novel)', [['Dr Zhivago'], ['Doktor Zhivago']],
     ],
     [
@@ -1831,7 +1831,7 @@ const rawCategories = [
       'estonian-classics-kalevipoeg-epic', 'work:kalevipoeg',
       ['Name Estonia\'s national epic about the son of Kalev.', 'Mis on Kalevi pojast jutustava Eesti rahvuseepose pealkiri?'],
       ['Kalevipoeg', '„Kalevipoeg”'],
-      ['Friedrich Reinhold Kreutzwald shaped traditional material into the nineteenth-century epic.', 'Friedrich Reinhold Kreutzwald kujundas pärimusmaterjalist 19. sajandi eepose.'],
+      ['Friedrich Reinhold Kreutzwald shaped traditional material into the 19th-century epic.', 'Friedrich Reinhold Kreutzwald kujundas pärimusmaterjalist 19. sajandi eepose.'],
       'Kalevipoeg', [[], []],
     ],
     [
@@ -1883,7 +1883,7 @@ const rawCategories = [
       ['In the Japanese compound “karaoke”, what does the first element, kara, mean?', 'Mida tähendab jaapani liitsõna „karaoke” esimene osa kara?'],
       ['Empty', 'Tühi'],
       ['The original compound combines “empty” with an abbreviation of “orchestra”.', 'Algne liitsõna ühendab „tühja” tähendava sõna „orkestri” lühendiga.'],
-      'Karaoke', [['Blank'], []],
+      'Karaoke', [['Blank'], ['Tühjus']],
     ],
   ]),
   category('built-in-literature-language-set-096', [
@@ -1957,7 +1957,7 @@ const rawCategories = [
       ['What raised mark shows omitted letters or possession in English?', 'Milline rea ülaossa paigutatud märk näitab inglise keeles väljajäetud tähti või omamist?'],
       ['An apostrophe', 'Ülakoma'],
       ['English contractions and possessive forms are its most familiar uses.', 'Selle tuntuimad kasutusalad inglise keeles on lühendvormid ja omastavad vormid.'],
-      'Apostrophe', [[], ['Apostroof']],
+      'Apostrophe', [['Apostrophe mark'], ['Apostroof']],
     ],
   ]),
   category('built-in-literature-language-set-100', [
@@ -1972,7 +1972,7 @@ const rawCategories = [
       'alphabets-world-cyrillic', 'concept:cyrillic-alphabet',
       ['What script is used for Russian, Bulgarian, Serbian, and several other languages?', 'Millist kirja kasutatakse vene, bulgaaria, serbia ja mitme teise keele puhul?'],
       ['The Cyrillic alphabet', 'Kirillitsa'],
-      ['It arose in medieval southeastern Europe and now has several national forms.', 'See tekkis keskaegses Kagu-Euroopas ning sellel on nüüd mitu rahvuslikku kuju.'],
+      ['It arose in medieval southeastern Europe and exists in several national forms.', 'See tekkis keskaegses Kagu-Euroopas ning esineb mitmel rahvuslikul kujul.'],
       'Cyrillic_script', [['Cyrillic script'], ['Kirilliline tähestik', 'Kirillkiri']],
     ],
     [
@@ -2047,7 +2047,7 @@ const rawCategories = [
       ['Name the underwater adventure that sends Marlin across the ocean to find his son.', 'Milline veealune seiklus saadab Marlini üle ookeani oma poega otsima?'],
       ['Finding Nemo', '„Kalapoeg Nemo”'],
       ['The cautious clownfish travels with the forgetful Dory towards Sydney.', 'Ettevaatlik klounkala rändab koos hajameelse Doryga Sydney poole.'],
-      'Finding_Nemo', [[], ['Nemo leidmine']],
+      'Finding_Nemo', [[], []],
     ],
     [
       'pixar-favourites-up-balloons', 'work:up-2009-film',
@@ -2269,7 +2269,7 @@ const rawCategories = [
       ['Name the comedy that makes weather presenter Phil Connors relive the same date.', 'Millises komöödias elab ilmateadustaja Phil Connors ikka ja jälle sama kuupäeva?'],
       ['Groundhog Day', '„Lõputu küünlapäev”'],
       ['The time loop forces the cynical broadcaster to reconsider how he treats other people.', 'Ajasilmus sunnib küünilist saatejuhti oma suhtumist teistesse inimestesse muutma.'],
-      'Groundhog_Day_(film)', [[], ['Küünlapäev']],
+      'Groundhog_Day_(film)', [[], []],
     ],
     [
       'film-comedies-monty-python-holy-grail', 'work:monty-python-holy-grail',
@@ -2319,8 +2319,8 @@ const rawCategories = [
       'romantic-comedies-love-actually', 'work:love-actually',
       ['Which British holiday film interweaves several stories about relationships in London?', 'Milline Briti jõulufilm põimib Londonis mitu suhtelugu?'],
       ['Love Actually', '„Armastus on see...”'],
-      ['The ensemble story follows families, friends, newlyweds, and the prime minister towards Christmas.', 'Ansamblilugu jälgib jõulude eel perekondi, sõpru, noorpaari ja peaministrit.'],
-      'Love_Actually', [[], ['Armastus on see']],
+      ['The ensemble story follows families, friends, newlyweds, and a fictional British leader towards Christmas.', 'Ansamblilugu jälgib jõulude eel perekondi, sõpru, noorpaari ja väljamõeldud Briti riigijuhti.'],
+      'Love_Actually', [[], []],
     ],
     [
       'romantic-comedies-when-harry-met-sally', 'work:when-harry-met-sally',
@@ -2417,7 +2417,7 @@ const rawCategories = [
       ['Which comedy follows Elle Woods as she enrols at Harvard Law School?', 'Milline komöödia jälgib Elle Woodsi õpinguid Harvardi õigusteaduskonnas?'],
       ['Legally Blonde', '„Arukas blondiin”'],
       ['Elle initially follows an ex-boyfriend to Harvard but proves herself as a capable law student.', 'Elle järgneb algul endisele poiss-sõbrale Harvardisse, kuid tõestab end võimeka juuratudengina.'],
-      'Legally_Blonde_(film)', [[], ['Legally Blonde']],
+      'Legally_Blonde_(film)', [['Legally Blonde film'], ['Legally Blonde']],
     ],
     [
       'films-2000s-gladiator', 'person:maximus-decimus-meridius',
@@ -2549,7 +2549,7 @@ const rawCategories = [
       ['Identify the Baltimore series that examines policing, the drug trade, schools, politics, and the media.', 'Nimeta Baltimore\'i sari, mis uurib politseid, uimastikaubandust, koole, poliitikat ja meediat.'],
       ['The Wire', '„The Wire”'],
       ['Each season shifts institutions while showing how the city\'s systems affect one another.', 'Iga hooaeg nihutab tähelepanu asutuste vahel, näidates linna süsteemide vastastikust mõju.'],
-      'The_Wire', [[], ['Keelatud võrk']],
+      'The_Wire', [['The Wire series'], ['Keelatud võrk']],
     ],
   ]),
   category('built-in-film-television-set-065', [
@@ -2602,7 +2602,7 @@ const rawCategories = [
       ['Which format films people living together under continuous camera observation?', 'Milline formaat filmib koos elavaid inimesi pideva kaamerajälgimise all?'],
       ['Big Brother', '„Big Brother”'],
       ['Contestants are isolated from the outside world and face nominations and evictions.', 'Võistlejad eraldatakse välismaailmast ning neid ootavad nominatsioonid ja väljahääletamised.'],
-      'Big_Brother_(franchise)', [[], ['Suur Vend']],
+      'Big_Brother_(franchise)', [['Big Brother format'], ['Suur Vend']],
     ],
     [
       'reality-formats-masterchef', 'work:masterchef',
@@ -2761,7 +2761,7 @@ const rawCategories = [
     ],
     [
       'oscar-actors-meryl-streep-thatcher', 'person:margaret-thatcher',
-      ['What British prime minister did Meryl Streep portray in her third Oscar-winning role?', 'Millist Suurbritannia peaministrit kehastas Meryl Streep oma kolmandas Oscari võitnud rollis?'],
+      ['Which British political leader did Meryl Streep portray in her third Oscar-winning role?', 'Millist Suurbritannia poliitilist juhti kehastas Meryl Streep oma kolmandas Oscari võitnud rollis?'],
       ['Margaret Thatcher', 'Margaret Thatcher'],
       ['The role brought Streep her third competitive acting Academy Award.', 'Roll tõi Streepile kolmanda võistlusliku näitleja-Oscari.'],
       'Margaret_Thatcher', [['Thatcher'], ['Thatcher']],
@@ -2785,9 +2785,9 @@ const rawCategories = [
     [
       'european-cinema-intouchables', 'work:the-intouchables',
       ['What French film pairs a wealthy wheelchair user with an unconventional new caregiver?', 'Milline Prantsuse film viib kokku jõuka ratastoolikasutaja ja ebatavalise uue hooldaja?'],
-      ['The Intouchables', '„1+1”'],
+      ['The Intouchables', '„Üks pluss üks”'],
       ['Philippe and Driss form a friendship that changes both men\'s routines and outlook.', 'Philippe\'i ja Drissi sõprus muudab mõlema mehe igapäevaelu ja vaateid.'],
-      'The_Intouchables', [['Intouchables'], ['1 + 1', 'Üks pluss üks']],
+      'The_Intouchables', [['Intouchables', '1+1', '1 + 1'], ['1+1', '1 + 1']],
     ],
     [
       'european-cinema-lives-of-others', 'work:the-lives-of-others',
@@ -2821,7 +2821,7 @@ const rawCategories = [
     ],
     [
       'nordic-screen-borgen', 'work:borgen',
-      ['Identify the Danish drama that follows politician Birgitte Nyborg as she becomes prime minister.', 'Milline Taani draamasari jälgib poliitik Birgitte Nyborgi saamist peaministriks?'],
+      ['Identify the Danish drama that follows politician Birgitte Nyborg as she rises to lead Denmark\'s government.', 'Milline Taani draamasari jälgib poliitik Birgitte Nyborgi tõusu Taani valitsusjuhiks?'],
       ['Borgen', '„Borgen”'],
       ['The series explores government, compromise, journalism, and the personal cost of power.', 'Sari uurib valitsust, kompromisse, ajakirjandust ja võimu isiklikku hinda.'],
       'Borgen_(TV_series)', [[], []],

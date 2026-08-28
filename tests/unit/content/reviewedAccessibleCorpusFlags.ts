@@ -42,14 +42,11 @@ export const REVIEWED_DATE_OR_NUMBER_PROMPT_OWNERS = [
   'built-in-history-accessible-easy-020@c4b625be8267',
   'built-in-history-accessible-easy-021@4debe7532446',
   'built-in-history-accessible-easy-029@40b72ca93135',
-  'built-in-literature-language-accessible-corpus-012@588bff1bd2f9',
-  'built-in-literature-language-accessible-corpus-029@1b3b9f3d1d35',
+  'built-in-literature-language-accessible-corpus-012@be574078ae25',
+  'built-in-literature-language-accessible-corpus-029@08ae91c88f7c',
   'built-in-literature-language-accessible-corpus-063@a10cab9bbf40',
   'built-in-literature-language-accessible-easy-007@f693502329b9',
   'built-in-music-accessible-corpus-037@b84514bccbbb',
-  'built-in-music-accessible-corpus-058@5678daa5d271',
-  'built-in-music-accessible-corpus-060@6e4928f2bc7e',
-  'built-in-music-accessible-corpus-068@3949b2ebf283',
   'built-in-music-accessible-corpus-086@3404a5efde01',
   'built-in-music-accessible-corpus-094@d5e73de59eb0',
   'built-in-music-accessible-corpus-103@2bc0f34f7d62',
@@ -94,7 +91,7 @@ export const REVIEWED_DATE_OR_NUMBER_PROMPT_OWNERS = [
   'built-in-technology-inventions-accessible-easy-009@8c8b580035dd',
 ] as const;
 
-// These ten answers are deliberately retained as iconic historical year questions.
+// These eleven answers are deliberately retained as iconic year or numbered-title questions.
 export const REVIEWED_NUMERIC_RESPONSE_OWNERS = [
   'built-in-history-accessible-easy-001@e28230ad6069',
   'built-in-history-accessible-easy-002@50327fe922a9',
@@ -106,4 +103,5 @@ export const REVIEWED_NUMERIC_RESPONSE_OWNERS = [
   'built-in-history-accessible-easy-008@6d784bb42e6f',
   'built-in-history-accessible-easy-009@aa812e1c1c55',
   'built-in-history-accessible-easy-010@2d993f837c2d',
+  'built-in-literature-language-accessible-corpus-009@6a1d8994d4bf',
 ] as const;
