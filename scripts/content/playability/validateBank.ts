@@ -166,7 +166,7 @@ function hasLeadingDatePreamble(value: string, language: 'en' | 'et'): boolean {
     ? /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting|president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest|building|skyscraper)\b/iu.exec(remainder)
     : /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev|president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees|rekord|rahvaarv|kõrgeim|kõige kõrgem|hoone|pilvelõhkuja)\b/iu.exec(remainder);
   if (cue === null) return false;
-  const sentenceBoundary = /[!?]+|\.(?=\s+\p{Lu})/u.exec(remainder);
+  const sentenceBoundary = /[!?]+|\.(?=\s+[\p{Pi}\p{Ps}"']*\p{Lu})/u.exec(remainder);
   return sentenceBoundary === null || cue.index < sentenceBoundary.index;
 }
 

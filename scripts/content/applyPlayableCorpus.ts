@@ -4,12 +4,13 @@ import {
   lstatSync,
   mkdirSync,
   readFileSync,
+  realpathSync,
   renameSync,
   unlinkSync,
   writeFileSync,
 } from 'node:fs';
 import { createRequire } from 'node:module';
-import { dirname, resolve } from 'node:path';
+import { basename, dirname, isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stringify } from 'csv-stringify/sync';
 import { parsePackCsv } from '../../src/main/content/csvPacks';
@@ -77,11 +78,34 @@ function comparablePath(path: string): string {
   return process.platform === 'win32' ? absolute.toLocaleLowerCase('en') : absolute;
 }
 
+function resolveThroughExistingAncestor(path: string): string {
+  let ancestor = resolve(path);
+  const missingSegments: string[] = [];
+  while (!existsSync(ancestor)) {
+    const parent = dirname(ancestor);
+    if (parent === ancestor) throw new Error(`Cannot resolve path ancestor: ${path}`);
+    missingSegments.unshift(basename(ancestor));
+    ancestor = parent;
+  }
+  return resolve(realpathSync.native(ancestor), ...missingSegments);
+}
+
+function containsPath(ancestor: string, candidate: string): boolean {
+  const relation = relative(comparablePath(ancestor), comparablePath(candidate));
+  return relation === ''
+    || (relation !== '..' && !relation.startsWith(`..${sep}`) && !isAbsolute(relation));
+}
+
 function assertDistinctStagingPaths(acceptedRoot: string, outputRoot: string): void {
   const artifacts = artifactDefinitions(acceptedRoot, outputRoot);
-  const destinations = new Set(artifacts.map(({ destinationPath }) => comparablePath(destinationPath)));
+  const destinationDirectories = new Set(
+    artifacts.map(({ destinationPath }) => resolveThroughExistingAncestor(dirname(destinationPath))),
+  );
   for (const { stagedPath } of artifacts) {
-    if (destinations.has(comparablePath(stagedPath))) {
+    const stagedDirectory = resolveThroughExistingAncestor(dirname(stagedPath));
+    if ([...destinationDirectories].some((destinationDirectory) =>
+      containsPath(stagedDirectory, destinationDirectory)
+      || containsPath(destinationDirectory, stagedDirectory))) {
       throw new Error(`Staged artifact overlaps accepted destination: ${stagedPath}`);
     }
   }
@@ -133,6 +157,22 @@ function readAcceptedEvidence(path: string): readonly ContentEvidence[] {
 }
 
 function validateGlobalInputs(options: StageOptions): void {
+  if (options.targets.length !== PLAYABLE_TARGETS.length) {
+    throw new Error(
+      `Expected ${PLAYABLE_TARGETS.length} canonical playable targets; found ${options.targets.length}`,
+    );
+  }
+  for (const [index, expected] of PLAYABLE_TARGETS.entries()) {
+    const actual = options.targets[index]!;
+    if (actual.categorySetId !== expected.categorySetId
+      || actual.batchId !== expected.batchId
+      || actual.packId !== expected.packId
+      || actual.difficulty !== expected.difficulty) {
+      throw new Error(
+        `Playable staging targets must exactly match the canonical ledger at index ${index}`,
+      );
+    }
+  }
   validatePlayableCorpus(options.categories, options.targets);
   const productionBatchIds = new Set(PRODUCTION_BATCHES.map(({ id }) => id));
   for (const target of options.targets) {

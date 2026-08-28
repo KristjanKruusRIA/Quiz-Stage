@@ -4,7 +4,10 @@ import {
   mkdtempSync,
   mkdirSync,
   readFileSync,
+  readdirSync,
+  renameSync,
   rmSync,
+  symlinkSync,
   writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -319,20 +322,16 @@ function stagingFixture(): StagingFixture {
   for (const batchId of ACCEPTED_BATCHES) {
     const slug = batchId.replace(/^\d+-/u, '');
     const packId = `built-in-${slug}`;
-    const playableTarget: PlayableTarget = {
-      categorySetId: `${packId}-target`,
-      batchId,
-      packId,
-      difficulty: 'medium',
-    };
-    targets.push(playableTarget);
-    categories.push(category(playableTarget));
-    const targetRows = [1, 2, 3, 4, 5].map((tier) => applyRow(
-      playableTarget.categorySetId,
-      tier,
-      'medium',
-      packId,
-    ));
+    const batchTargets = PLAYABLE_TARGETS.filter((targetItem) => targetItem.batchId === batchId);
+    targets.push(...batchTargets);
+    categories.push(...batchTargets.map(category));
+    const targetRows = batchTargets.flatMap((targetItem) =>
+      [1, 2, 3, 4, 5].map((tier) => applyRow(
+        targetItem.categorySetId,
+        tier,
+        targetItem.difficulty,
+        targetItem.packId,
+      )));
     const easyRows = [1, 2, 3, 4, 5].map((tier) => applyRow(
       `${packId}-easy`,
       tier,
@@ -346,10 +345,13 @@ function stagingFixture(): StagingFixture {
     );
     writeRows(resolve(acceptedRoot, `content/generated/${batchId}.en-et.csv`), rows);
     mkdirSync(resolve(acceptedRoot, 'content/evidence'), { recursive: true });
-    const evidence = rows.map((row, index) => applyEvidence(
+    const targetIds = new Set<string>(batchTargets.map(({ categorySetId }) => categorySetId));
+    const evidence = rows.map((row) => applyEvidence(
       row,
       batchId,
-      index === 0 ? `candidate-${batchId}` : undefined,
+      targetIds.has(row.category_set_id) && row.tier === '1'
+        ? `candidate-${row.category_set_id}`
+        : undefined,
     ));
     writeFileSync(
       resolve(acceptedRoot, `content/evidence/${batchId}.jsonl`),
@@ -1251,6 +1253,40 @@ describe('validatePlayableCorpus', () => {
 
   it.each([
     [
+      'English opening quote',
+      'As of 1900, staffing was ten. “Who is currently the CEO?”',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'English opening bracket',
+      'As of 1900, staffing was ten. [Who is currently the CEO?]',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian opening quote',
+      'Which officeholder is described?',
+      '1900. aasta seisuga, töötajaid oli kümme. „Kes on praegu tegevjuht?”',
+    ],
+    [
+      'Estonian opening bracket',
+      'Which officeholder is described?',
+      '1900. aasta seisuga, töötajaid oli kümme. (Kes on praegu tegevjuht?)',
+    ],
+  ])('does not let a leading date cross an %s', (_kind, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
+    [
       'English',
       'Staffing was recorded as of 1900; who is currently the CEO of Example Company?',
       'Milline ametikoht on siin kirjeldatud?',
@@ -1608,7 +1644,7 @@ describe('playable corpus staging and publishing', () => {
     const result = stagePlayableCorpus(fixture);
 
     expect(result.artifactPaths).toHaveLength(36);
-    expect(result.replacedClueIds).toHaveLength(60);
+    expect(result.replacedClueIds).toHaveLength(4_000);
     expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
     for (const batchId of ACCEPTED_BATCHES) {
       const stagedPath = resolve(fixture.outputRoot, `generated/${batchId}.en-et.csv`);
@@ -1617,11 +1653,78 @@ describe('playable corpus staging and publishing', () => {
         columns: true,
         skip_empty_lines: true,
       }) as Array<Record<string, string>>;
-      const packId = `built-in-${batchId.replace(/^\d+-/u, '')}`;
-      expect(rows.filter(({ difficulty }) => difficulty === 'medium').map(({ clue_id }) => clue_id))
-        .toEqual([1, 2, 3, 4, 5].map((sequence) =>
-          `${packId}-playable-corpus-${sequence.toString().padStart(3, '0')}`));
+      const batchTargets = PLAYABLE_TARGETS.filter((targetItem) => targetItem.batchId === batchId);
+      const targetIds = new Set<string>(batchTargets.map(({ categorySetId }) => categorySetId));
+      const expectedIds = batchTargets.flatMap((targetItem, targetIndex) =>
+        [1, 2, 3, 4, 5].map((tier) =>
+          `${targetItem.packId}-playable-corpus-${(targetIndex * 5 + tier).toString().padStart(3, '0')}`));
+      expect(rows.filter((row) => targetIds.has(row.category_set_id)).map(({ clue_id }) => clue_id))
+        .toEqual(expectedIds);
     }
+  }, 20_000);
+
+  it('rejects a coherent partial ledger before staging any filesystem output', () => {
+    const fixture = stagingFixture();
+    const removed = fixture.targets.at(-1)!;
+
+    expect(() => stagePlayableCorpus({
+      ...fixture,
+      targets: fixture.targets.slice(0, -1),
+      categories: fixture.categories.filter((item) =>
+        item.categorySetId !== removed.categorySetId),
+    })).toThrowError('Expected 800 canonical playable targets; found 799');
+    expect(existsSync(fixture.outputRoot)).toBe(false);
+  });
+
+  it.each([
+    ['reordered', (fixture: StagingFixture) => ({
+      ...fixture,
+      targets: [fixture.targets[1]!, fixture.targets[0]!, ...fixture.targets.slice(2)],
+    })],
+    ['extra', (fixture: StagingFixture) => {
+      const extra = target('built-in-history-extra');
+      return {
+        ...fixture,
+        targets: [...fixture.targets, extra],
+        categories: [...fixture.categories, category(extra)],
+      };
+    }],
+    ['difficulty-mismatched', (fixture: StagingFixture) => {
+      const changed = { ...fixture.targets[0]!, difficulty: 'medium' as const };
+      return {
+        ...fixture,
+        targets: [changed, ...fixture.targets.slice(1)],
+        categories: fixture.categories.map((item) =>
+          item.categorySetId === changed.categorySetId ? { ...item, difficulty: 'medium' as const } : item),
+      };
+    }],
+    ['batch-mismatched', (fixture: StagingFixture) => {
+      const changed = { ...fixture.targets[0]!, batchId: '02-geography' };
+      return {
+        ...fixture,
+        targets: [changed, ...fixture.targets.slice(1)],
+        categories: fixture.categories.map((item) =>
+          item.categorySetId === changed.categorySetId ? { ...item, batchId: '02-geography' } : item),
+      };
+    }],
+    ['pack-mismatched', (fixture: StagingFixture) => {
+      const changed = { ...fixture.targets[0]!, packId: 'built-in-geography' };
+      return {
+        ...fixture,
+        targets: [changed, ...fixture.targets.slice(1)],
+        categories: fixture.categories.map((item) =>
+          item.categorySetId === changed.categorySetId
+            ? { ...item, packId: 'built-in-geography' }
+            : item),
+      };
+    }],
+  ] as const)('rejects a %s filesystem target ledger before writes', (_kind, mutate) => {
+    const fixture = stagingFixture();
+
+    expect(() => stagePlayableCorpus(mutate(fixture))).toThrowError(
+      /(?:Expected 800 canonical playable targets|Playable staging targets must exactly match the canonical ledger)/u,
+    );
+    expect(existsSync(fixture.outputRoot)).toBe(false);
   });
 
   it('writes no staged artifact when a later batch fails validation', () => {
@@ -1654,6 +1757,31 @@ describe('playable corpus staging and publishing', () => {
         readFileSync(resolve(fixture.outputRoot, path.replace(/^content\//u, '')), 'utf8'),
       );
     }
+  }, 20_000);
+
+  it('rejects a real output-root alias to accepted content before any accepted write', () => {
+    const fixture = stagingFixture();
+    const aliasContainer = temporaryDirectory();
+    const outputAlias = resolve(aliasContainer, 'accepted-content-alias');
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+    symlinkSync(
+      resolve(fixture.acceptedRoot, 'content'),
+      outputAlias,
+      process.platform === 'win32' ? 'junction' : 'dir',
+    );
+    let failure: unknown;
+
+    try {
+      stagePlayableCorpus({ ...fixture, outputRoot: outputAlias });
+    } catch (error) {
+      failure = error;
+    } finally {
+      rmSync(outputAlias, { recursive: true, force: true });
+    }
+
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+    expect(failure).toBeInstanceOf(Error);
+    expect((failure as Error).message).toMatch(/overlaps accepted destination/u);
   });
 
   it('aborts before accepted writes when staged non-target content mutates', () => {
@@ -1673,7 +1801,33 @@ describe('playable corpus staging and publishing', () => {
       'Staged artifact does not match expected transform',
     );
     expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
-  });
+  }, 20_000);
+
+  it('rolls back every accepted rename and removes publisher residue after replacement failure', () => {
+    const fixture = stagingFixture();
+    stagePlayableCorpus(fixture);
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+    let replacements = 0;
+
+    expect(() => publishPlayableCorpusStage({
+      ...fixture,
+      dependencies: {
+        createTemporaryId: () => 'round-one-rollback',
+        rename: (source, destination) => {
+          if (source.endsWith('.tmp')) {
+            replacements += 1;
+            if (replacements === 2) throw new Error('injected replacement failure');
+          }
+          renameSync(source, destination);
+        },
+      },
+    })).toThrowError('injected replacement failure');
+
+    expect(replacements).toBe(2);
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+    expect((readdirSync(fixture.acceptedRoot, { recursive: true }) as string[])
+      .filter((path) => path.includes('round-one-rollback'))).toEqual([]);
+  }, 20_000);
 
   it('defaults to ignored staging and exposes no partial-batch publication option', () => {
     expect(parsePlayableCorpusArgs([])).toEqual({
