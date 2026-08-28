@@ -3,6 +3,7 @@ import { constants, copyFileSync, lstatSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createApplication } from './application';
+import { syncBundledContent } from './content/bundledContentSync';
 import { acceleratedE2eTimerOptions } from './e2eTimerOptions';
 import { automaticDisplayMode } from './displayMode';
 import { registerIpc } from './ipc/registerIpc';
@@ -200,16 +201,17 @@ async function initialize(): Promise<void> {
   }
   localLogger = initializeLocalLogger({ logDirectory: path.join(userDataDirectory, 'logs') });
   const databasePath = path.join(userDataDirectory, 'quiz-stage.sqlite');
+  const seedPath = app.isPackaged
+    ? path.join(process.resourcesPath, 'seed.sqlite')
+    : path.join(app.getAppPath(), 'resources', 'content', 'dev-seed.sqlite');
   const databaseEntry = lstatSync(databasePath, { throwIfNoEntry: false });
   if (databaseEntry === undefined) {
     mkdirSync(userDataDirectory, { recursive: true });
-    const seedPath = app.isPackaged
-      ? path.join(process.resourcesPath, 'seed.sqlite')
-      : path.join(app.getAppPath(), 'resources', 'content', 'dev-seed.sqlite');
     copyFileSync(seedPath, databasePath, constants.COPYFILE_EXCL);
   }
   const database = openDatabase({ filePath: databasePath });
   migrateDatabase(database, path.join(userDataDirectory, 'backups'));
+  if (app.isPackaged) syncBundledContent(database, seedPath);
   installDiagnosticsMenu(localLogger, {
     appVersion: app.getVersion(),
     schemaVersion: readSchemaVersion(database),
