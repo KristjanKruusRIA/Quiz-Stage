@@ -294,6 +294,20 @@ describe('validatePlayableCorpus', () => {
     expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
+  it.each(['element:118', 'year:1969', 'mission:11'])(
+    'allows the meaningful numeric subject key %s',
+    (subjectKey) => {
+      const expected = target('target-a');
+      const base = category(expected);
+      const changed = replaceQuestion(base, 1, {
+        ...base.questions[1]!,
+        subjectKey,
+      });
+
+      expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+    },
+  );
+
   it('rejects normalized duplicate titles in either language across categories', () => {
     const targets = [target('target-a'), target('target-b')];
     const first = category(targets[0]!);
@@ -719,6 +733,8 @@ describe('validatePlayableCorpus', () => {
   it.each([
     ['tallest building', 'Which building is the tallest in the world?', 'Burj Khalifa'],
     ['current record holder', 'Who is the current record holder in the men’s 100 metres?', 'Example Sprinter'],
+    ['current world record holder', 'Who is the current world record holder in the men’s 100 metres?', 'Example Sprinter'],
+    ['current Formula One world champion', 'Who is the current Formula One world champion?', 'Example Driver'],
   ])('rejects an undated changing %s superlative', (_kind, clue, response) => {
     const expected = target('target-a');
     const base = category(expected);
@@ -770,6 +786,63 @@ describe('validatePlayableCorpus', () => {
     expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
   });
 
+  it.each([
+    [
+      'English impossible day',
+      'Who is the president of Exampleland on February 31, 2024?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'English non-leap day',
+      'Who is the president of Exampleland on February 29, 2023?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian impossible day',
+      'Which officeholder is described?',
+      'Kes on Näitemaa president 31. veebruaril 2024?',
+    ],
+    [
+      'Estonian non-leap day',
+      'Which officeholder is described?',
+      'Kes on Näitemaa president 29. veebruaril 2023?',
+    ],
+  ])('rejects a changing role framed by an %s', (_kind, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
+    [
+      'English',
+      'Who is the president of Exampleland on February 29, 2024?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      'Kes on Näitemaa president 29. veebruaril 2024?',
+    ],
+  ])('accepts a changing role on a valid %s leap day', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
   it('does not let an unrelated calendar date frame a current officeholder', () => {
     const expected = target('target-a');
     const base = category(expected);
@@ -783,6 +856,30 @@ describe('validatePlayableCorpus', () => {
     });
 
     expect(() => validatePlayableCorpus([undatedCurrentRole], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
+    [
+      'English',
+      'Staffing was recorded as of 1900; who is currently the CEO of Example Company?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      'Töötajate arv fikseeriti 1900. aasta seisuga; kes on praegu Näidisettevõtte tegevjuht?',
+    ],
+  ])('does not let an unrelated as-of date frame a current %s officeholder', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
       .toThrowError(/asks about an unstable fact without an explicit date/u);
   });
 

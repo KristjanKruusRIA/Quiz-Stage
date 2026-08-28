@@ -7,7 +7,7 @@ const LANGUAGES = [
 ] as const;
 const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu|varia|mitmesugust)(?:\s+\d+)?$/u;
 const ENGLISH_CURRENT_CUE = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
-const ENGLISH_CURRENT_CONTEXT = /\bcurrent\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest)\b/u;
+const ENGLISH_CURRENT_CONTEXT = /\bcurrent(?:\s+[\p{L}\p{N}-]+){0,4}\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest)\b/u;
 const ESTONIAN_CURRENT_CUE = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u;
 const SET_SHAPED_SUBJECT_NAMESPACES = new Set([
   'bank',
@@ -20,6 +20,15 @@ const SET_SHAPED_SUBJECT_NAMESPACES = new Set([
   'theme',
   'topic',
 ]);
+const NUMERIC_SUBJECT_NAMESPACES = new Set(['element', 'mission', 'year']);
+const ENGLISH_MONTHS = [
+  'january', 'february', 'march', 'april', 'may', 'june',
+  'july', 'august', 'september', 'october', 'november', 'december',
+] as const;
+const ESTONIAN_MONTHS = [
+  'jaanuaril', 'veebruaril', 'märtsil', 'aprillil', 'mail', 'juunil',
+  'juulil', 'augustil', 'septembril', 'oktoobril', 'novembril', 'detsembril',
+] as const;
 
 function normalize(value: string): string {
   return value
@@ -82,7 +91,7 @@ function validateSubjectKey(question: PlayableQuestion, category: PlayableCatego
     || /^built-in-.+-set-\d+(?:-|$)/u.test(slug)) {
     throw new Error(`Question ${question.key} has a set-shaped subject key: ${key}`);
   }
-  if (/^\d+$/u.test(slug)) {
+  if (/^\d+$/u.test(slug) && !NUMERIC_SUBJECT_NAMESPACES.has(namespace)) {
     throw new Error(`Question ${question.key} has a digits-only subject key: ${key}`);
   }
   // Semantic aliases require editorial/global review; this validator enforces structural identity.
@@ -116,20 +125,51 @@ function hasEnglishCurrentCue(value: string): boolean {
   return ENGLISH_CURRENT_CUE.test(normalized) || ENGLISH_CURRENT_CONTEXT.test(normalized);
 }
 
+function changingRelationClause(value: string): string {
+  return value
+    .split(/(?:;|\.(?=\s+(?:who|which|what|kes|milline|mis)\b))\s*/iu)
+    .at(-1) ?? value;
+}
+
+function isValidCalendarDate(year: number, month: number, day: number): boolean {
+  const date = new Date(Date.UTC(year, month, day));
+  return date.getUTCFullYear() === year
+    && date.getUTCMonth() === month
+    && date.getUTCDate() === day;
+}
+
+function hasValidEnglishCalendarDate(value: string): boolean {
+  const match = /\bon\s+(?:(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{1,2})(?:st|nd|rd|th)?|(\d{1,2})(?:st|nd|rd|th)?\s+(january|february|march|april|may|june|july|august|september|october|november|december)),?\s+(1[5-9]\d{2}|20\d{2}|2100)\b/iu
+    .exec(value);
+  const monthName = match?.[1] ?? match?.[4];
+  const dayText = match?.[2] ?? match?.[3];
+  const yearText = match?.[5];
+  if (!monthName || !dayText || !yearText) return false;
+  const month = ENGLISH_MONTHS.indexOf(monthName.toLocaleLowerCase('en') as typeof ENGLISH_MONTHS[number]);
+  return isValidCalendarDate(Number(yearText), month, Number(dayText));
+}
+
+function hasValidEstonianCalendarDate(value: string): boolean {
+  const match = /\b(\d{1,2})\.\s*(jaanuaril|veebruaril|märtsil|aprillil|mail|juunil|juulil|augustil|septembril|oktoobril|novembril|detsembril)\s+(1[5-9]\d{2}|20\d{2}|2100)\b/iu
+    .exec(value);
+  if (!match?.[1] || !match[2] || !match[3]) return false;
+  const month = ESTONIAN_MONTHS.indexOf(match[2].toLocaleLowerCase('et') as typeof ESTONIAN_MONTHS[number]);
+  return isValidCalendarDate(Number(match[3]), month, Number(match[1]));
+}
+
 function hasExplicitDate(value: string, language: 'en' | 'et'): boolean {
+  const clause = changingRelationClause(value);
   if (language === 'en') {
-    if (/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value)) return true;
-    if (hasEnglishCurrentCue(value)) return false;
-    return /\b(?:in|during)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value)
-      || /\bon\s+(?:(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2}(?:st|nd|rd|th)?|\d{1,2}(?:st|nd|rd|th)?\s+(?:january|february|march|april|may|june|july|august|september|october|november|december)),?\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
-        .test(value);
+    if (/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(clause)) return true;
+    if (hasEnglishCurrentCue(clause)) return false;
+    return /\b(?:in|during)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(clause)
+      || hasValidEnglishCalendarDate(clause);
   }
   if (/\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga\b|\bseisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
-    .test(value)) return true;
-  if (ESTONIAN_CURRENT_CUE.test(normalize(value))) return false;
-  return /\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aastal\b/iu.test(value)
-    || /\b\d{1,2}\.\s*(?:jaanuaril|veebruaril|märtsil|aprillil|mail|juunil|juulil|augustil|septembril|oktoobril|novembril|detsembril)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
-      .test(value);
+    .test(clause)) return true;
+  if (ESTONIAN_CURRENT_CUE.test(normalize(clause))) return false;
+  return /\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aastal\b/iu.test(clause)
+    || hasValidEstonianCalendarDate(clause);
 }
 
 function asksUndatedChangingFact(value: string, language: 'en' | 'et'): boolean {
