@@ -26,7 +26,7 @@ function api(): HostDesktopApi {
   return {
     surface: 'host',
     getSetupOptions: vi.fn(async () => ({
-      packs: [{ id: 'pack', name: 'Pärisnimi', enabled: true }],
+      packs: [{ id: 'pack', name: 'Pärisnimi', enabled: true, selectedByDefault: true }],
       automaticDisplayMode: 'single' as const,
     })),
     checkContentAvailability: vi.fn(async () => ({ ok: true as const })),

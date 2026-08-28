@@ -9,6 +9,8 @@ import { ContentEditorService } from './content/contentEditorService';
 import { AudioSettingsRepository } from './persistence/audioSettingsRepository';
 import { AppearanceSettingsRepository } from './persistence/appearanceSettingsRepository';
 
+const ADULT_PACK_ID = 'built-in-adult';
+
 export interface ApplicationOptions {
   now?: () => number;
   createSeed?: () => string;
@@ -53,7 +55,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
     getSetupOptions: (automaticDisplayMode: DisplayMode) => ({
       packs: contentRepository.loadLibrary().packs
         .filter((pack) => pack.enabled)
-        .map(({ id, name, enabled }) => ({ id, name, enabled })),
+        .map(({ id, name, enabled }) => ({ id, name, enabled, selectedByDefault: id !== ADULT_PACK_ID })),
       automaticDisplayMode,
     }),
     close: () => {

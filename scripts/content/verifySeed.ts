@@ -106,8 +106,11 @@ export function readReleaseInventoryReport(path: string): ReleaseInventoryReport
   const summary = cast.summary as ReleaseSummary;
   for (const key of Object.keys(RELEASE_THRESHOLDS) as (keyof ReleaseSummary)[]) {
     const expected = RELEASE_THRESHOLDS[key];
-    if (typeof summary[key] !== 'number' || summary[key] < expected) {
-      throw new Error(`Release inventory report is below threshold for ${key}: ${summary[key]}`);
+    if (typeof summary[key] !== 'number' || summary[key] !== expected) {
+      throw new Error(
+        'Release inventory report does not match exact inventory for '
+        + key + ': ' + summary[key] + ' != ' + expected,
+      );
     }
   }
   const input = parsed.input;
@@ -148,6 +151,7 @@ interface SeedInventory {
   easySets: number;
   mediumSets: number;
   hardSets: number;
+  builtInPacks: number;
 }
 
 export function inspectSeed(
@@ -200,6 +204,7 @@ export function inspectSeed(
         hardSets: database.prepare(
           "SELECT COUNT(*) FROM category_sets WHERE round IN ('round-one', 'round-two') AND difficulty = 'hard'",
         ).pluck().get() as number,
+        builtInPacks: database.prepare("SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'").pluck().get() as number,
       },
     };
   } finally {
