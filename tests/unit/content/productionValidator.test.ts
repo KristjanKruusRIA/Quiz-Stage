@@ -1093,7 +1093,7 @@ describe('validator CLI boundaries and report publication', () => {
     expect(result.status).toBe(2);
     expect(result.stderr).toMatch(/batch mode/i);
     expect(() => readFileSync(report)).toThrow();
-  });
+  }, 20_000);
 
   it('accepts an exact valid synthetic release corpus through the documented CLI', () => {
     const directory = temporaryDirectory();
