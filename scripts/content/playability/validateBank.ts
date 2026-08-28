@@ -53,13 +53,16 @@ function asksUndatedChangingFact(value: string, language: 'en' | 'et'): boolean 
     const changing = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u
       .test(normalize(value))
       || /^(?:who|which person)\s+is\b[^?]{0,100}\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b/iu
+        .test(value)
+      || /\b(?:which|what) country\b[^?]{0,100}\bhas\b[^?]{0,60}\b(?:largest|highest) population\b/iu
         .test(value);
     return changing && !/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value);
   }
   const changing = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u
     .test(normalize(value))
     || /^(?:kes|milline isik)\s+on\b[^?]{0,100}\b(?:president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees)\b/iu
-      .test(value);
+      .test(value)
+    || /\bmillisel riigil\b[^?]{0,60}\bon\b[^?]{0,60}\bsuurim rahvaarv\b/iu.test(value);
   return changing
     && !/\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga\b|\bseisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
       .test(value);

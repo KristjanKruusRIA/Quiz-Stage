@@ -415,6 +415,22 @@ describe('validatePlayableCorpus', () => {
     expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
   });
 
+  it('rejects an undated changing relation even without a current-time keyword', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const undated = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Which country has the largest population?',
+        et: 'Millisel riigil on suurim rahvaarv?',
+      },
+      response: { en: 'India', et: 'India' },
+    });
+
+    expect(() => validatePlayableCorpus([undated], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
   it('rejects the same normalized clue/answer pair within one category', () => {
     const expected = target('target-a');
     const base = category(expected);
