@@ -55,7 +55,7 @@ function question(categorySetId: string, tier: 1 | 2 | 3 | 4 | 5): PlayableQuest
     key: `${categorySetId}:question:${tier}`,
     factKey: `${categorySetId}:fact:${tier}`,
     tier,
-    subjectKey: `${categorySetId}:subject:${tier}`,
+    subjectKey: `landmark:fixture-${categorySetId.slice(-1)}-${tier}`,
     clue: {
       en: `Which landmark matches clue ${tier} for ${categorySetId}?`,
       et: `Milline vaatamisväärsus sobib vihjega ${tier} kategoorias ${categorySetId}?`,
@@ -264,6 +264,23 @@ describe('validatePlayableCorpus', () => {
     }
   });
 
+  it.each([
+    ['non-canonical alias', 'landmark:fixture_A_2', /non-canonical subject key/u],
+    ['missing namespace', 'ada-lovelace', /invalid subject key/u],
+    ['generic category namespace', 'category:target-a', /set-shaped subject key/u],
+    ['generic set namespace', 'set:002', /set-shaped subject key/u],
+    ['embedded category-set ID', 'landmark:target-a-2', /set-shaped subject key/u],
+  ])('rejects a %s instead of counting it as a distinct subject', (_kind, subjectKey, message) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 1, {
+      ...base.questions[1]!,
+      subjectKey,
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected])).toThrowError(message);
+  });
+
   it('rejects normalized duplicate titles in either language across categories', () => {
     const targets = [target('target-a'), target('target-b')];
     const first = category(targets[0]!);
@@ -277,6 +294,37 @@ describe('validatePlayableCorpus', () => {
       first,
       { ...second, name: { ...second.name, et: `  ${first.name.et.toUpperCase()}! ` } },
     ], targets)).toThrowError(/Duplicate Estonian category title/u);
+  });
+
+  it.each([
+    'Mix',
+    'Medley',
+    'Tour',
+    'Grab Bag',
+    'Roundup',
+    'Sampler',
+    'Potpourri',
+    'Challenge',
+    'Quiz',
+    'Odds & Ends',
+  ])('rejects the generic filler title %s even with a pack prefix and numeric suffix', (filler) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = {
+      ...base,
+      name: { ...base.name, en: `History: ${filler} 12` },
+    };
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/generic English category title/u);
+  });
+
+  it('allows a meaningful one-word title', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = { ...base, name: { en: 'Volcanoes', et: 'Vulkaanid' } };
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
   it('rejects duplicate question and fact keys across categories', () => {
@@ -301,6 +349,9 @@ describe('validatePlayableCorpus', () => {
     ['Estonian category title', (item: PlayableCategory) => ({ ...item, name: { ...item.name, et: ' ' } })],
     ['English clue', (item: PlayableCategory) => replaceQuestion(item, 0, {
       ...firstQuestion(item), clue: { ...firstQuestion(item).clue, en: ' ' },
+    })],
+    ['symbol-only English clue', (item: PlayableCategory) => replaceQuestion(item, 0, {
+      ...firstQuestion(item), clue: { ...firstQuestion(item).clue, en: '+++' },
     })],
     ['Estonian response', (item: PlayableCategory) => replaceQuestion(item, 0, {
       ...firstQuestion(item), response: { ...firstQuestion(item).response, et: ' ' },
@@ -349,6 +400,39 @@ describe('validatePlayableCorpus', () => {
   });
 
   it.each([
+    ['root URL', 'https://example.com/'],
+    ['root URL with tracking parameters', 'https://example.com/?source=quiz'],
+    ['generic home path', 'https://example.com/home'],
+    ['generic index path', 'https://example.com/index.html'],
+  ])('rejects a structurally generic source %s', (_kind, url) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const changed = replaceQuestion(base, 0, {
+      ...first,
+      source: { ...first.source, url },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/has an invalid source/u);
+  });
+
+  it('allows a deep HTTPS source URL with a query and fragment', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const changed = replaceQuestion(base, 0, {
+      ...first,
+      source: {
+        ...first.source,
+        url: 'https://example.com/articles/prague?language=en#history',
+      },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
+  it.each([
     ['English clue', { clue: { en: 'Which city is Prague?', et: 'Millist pealinna kirjeldab vihje?' }, response: { en: 'Prague', et: 'Praha' } }],
     ['Estonian clue', { clue: { en: 'Which capital is described?', et: 'Milline linn on Praha?' }, response: { en: 'Prague', et: 'Praha' } }],
   ])('rejects an answer leaked in the %s', (_field, text) => {
@@ -373,6 +457,49 @@ describe('validatePlayableCorpus', () => {
       .toThrowError(/leaks its .* response in the category title/u);
   });
 
+  it('rejects accepted answer variants leaked in either the clue or category title', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const answer = {
+      response: { en: 'United States of America', et: 'Ameerika Ühendriigid' },
+      acceptedVariants: { en: ['USA'], et: ['USA'] },
+    } as const;
+    const clueLeak = replaceQuestion(base, 0, {
+      ...first,
+      ...answer,
+      clue: {
+        en: 'Which country is abbreviated USA?',
+        et: 'Millist riiki kirjeldab see lühend?',
+      },
+    });
+    const titleLeak = replaceQuestion(
+      { ...base, name: { en: 'American Abbreviations', et: 'USA ajalugu' } },
+      0,
+      { ...first, ...answer },
+    );
+
+    expect(() => validatePlayableCorpus([clueLeak], [expected]))
+      .toThrowError(/leaks its English accepted variant in the clue/u);
+    expect(() => validatePlayableCorpus([titleLeak], [expected]))
+      .toThrowError(/leaks its Estonian accepted variant in the category title/u);
+  });
+
+  it.each([
+    ['C++', 'Which language added classes to C and became a major systems language?'],
+    ['C#', 'Which Microsoft language drew syntax and ideas from C for the .NET platform?'],
+  ])('does not reduce the fair technical answer %s to the language C', (response, clue) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en: clue, et: 'Milline programmeerimiskeel on siin kirjeldatud?' },
+      response: { en: response, et: response },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
   it.each([
     ['English binary', { en: 'Is basalt an igneous rock?', et: 'Milline kivim on basalt?' }],
     ['English multiple choice', { en: 'Which of these is igneous: basalt or marble?', et: 'Milline kivim on basalt?' }],
@@ -388,6 +515,50 @@ describe('validatePlayableCorpus', () => {
     });
     expect(() => validatePlayableCorpus([changed], [expected]))
       .toThrowError(/binary or multiple-choice/u);
+  });
+
+  it.each([
+    [
+      'English comparative choice',
+      { en: 'Which is larger, the Baltic Sea or Lake Peipus?', et: 'Milline veekogu on suurem?' },
+      { en: 'The Baltic Sea', et: 'Läänemeri' },
+    ],
+    [
+      'Estonian kumb choice',
+      { en: 'Which body of water is larger?', et: 'Kumb on suurem, Läänemeri või Peipsi järv?' },
+      { en: 'The Baltic Sea', et: 'Läänemeri' },
+    ],
+    [
+      'Estonian verb-first yes/no',
+      { en: 'Name Estonia’s relationship to the European Union.', et: 'Kuulub Eesti Euroopa Liitu?' },
+      { en: 'Membership', et: 'Jah' },
+    ],
+  ])('rejects a common %s prompt form', (_kind, clue, response) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue,
+      response,
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/binary or multiple-choice/u);
+  });
+
+  it('allows an or-construction that describes a concept instead of offering answer choices', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Which logical term names a statement that is either true or false?',
+        et: 'Milline loogikatermin tähistab väidet, mis on kas tõene või väär?',
+      },
+      response: { en: 'Proposition', et: 'Propositsioon' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
   it('rejects undated changing facts and accepts an explicit as-of date', () => {
@@ -431,6 +602,68 @@ describe('validatePlayableCorpus', () => {
       .toThrowError(/asks about an unstable fact without an explicit date/u);
   });
 
+  it.each([
+    ['tallest building', 'Which building is the tallest in the world?', 'Burj Khalifa'],
+    ['current record holder', 'Who is the current record holder in the men’s 100 metres?', 'Example Sprinter'],
+  ])('rejects an undated changing %s superlative', (_kind, clue, response) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en: clue, et: 'Millist ajas muutuvat fakti siin küsitakse?' },
+      response: { en: response, et: 'Näidisvastus' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it('accepts dated role phrasing beyond the as-of form in both languages', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const dated = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Who is the president of Exampleland in 2024?',
+        et: 'Kes on Näitemaa president 2024. aastal?',
+      },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
+  });
+
+  it('does not let an unrelated historic year date a current officeholder', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const undatedCurrentRole = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Founded in 1900, who is currently the chief executive of Example Company?',
+        et: 'Kes on 1900. aastal asutatud Näidisettevõtte praegune tegevjuht?',
+      },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([undatedCurrentRole], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it('allows a stable natural-world superlative outside the changing-fact patterns', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const stable = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Which mountain is the tallest above sea level?',
+        et: 'Milline mägi on merepinnast mõõdetuna kõrgeim?',
+      },
+      response: { en: 'Mount Everest', et: 'Mount Everest' },
+    });
+
+    expect(validatePlayableCorpus([stable], [expected])).toEqual([stable]);
+  });
+
   it('rejects the same normalized clue/answer pair within one category', () => {
     const expected = target('target-a');
     const base = category(expected);
@@ -460,5 +693,49 @@ describe('validatePlayableCorpus', () => {
 
     expect(() => validatePlayableCorpus([first, duplicate], targets))
       .toThrowError(/Duplicate clue\/answer pair across categories/u);
+  });
+
+  it('rejects a local English duplicate even when the Estonian wording differs', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const second = base.questions[1]!;
+    const changed = replaceQuestion(base, 1, {
+      ...second,
+      clue: { ...second.clue, en: first.clue.en.toUpperCase() },
+      response: { ...second.response, en: `${first.response.en}!` },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/Duplicate clue\/answer pair within category target-a \(English\)/u);
+  });
+
+  it('rejects a global Estonian duplicate even when the English wording differs', () => {
+    const targets = [target('target-a'), target('target-b')];
+    const first = category(targets[0]!);
+    const second = category(targets[1]!);
+    const firstItem = firstQuestion(first);
+    const secondItem = firstQuestion(second);
+    const duplicate = replaceQuestion(second, 0, {
+      ...secondItem,
+      clue: { ...secondItem.clue, et: firstItem.clue.et.toUpperCase() },
+      response: { ...secondItem.response, et: `${firstItem.response.et}!` },
+    });
+
+    expect(() => validatePlayableCorpus([first, duplicate], targets))
+      .toThrowError(/Duplicate clue\/answer pair across categories \(Estonian\)/u);
+  });
+
+  it('allows a repeated response when each language supplies a distinct clue', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const second = base.questions[1]!;
+    const changed = replaceQuestion(base, 1, {
+      ...second,
+      response: first.response,
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 });

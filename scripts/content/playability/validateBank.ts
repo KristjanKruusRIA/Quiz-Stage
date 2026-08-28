@@ -5,18 +5,33 @@ const LANGUAGES = [
   ['en', 'English'],
   ['et', 'Estonian'],
 ] as const;
+const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu)(?:\s+\d+)?$/u;
+const ENGLISH_CURRENT_CUE = /\b(?:current|currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
+const ESTONIAN_CURRENT_CUE = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u;
+const SET_SHAPED_SUBJECT_NAMESPACES = new Set([
+  'batch',
+  'category',
+  'category-set',
+  'pack',
+  'set',
+  'subject',
+  'theme',
+  'topic',
+]);
 
 function normalize(value: string): string {
   return value
     .normalize('NFKC')
     .toLocaleLowerCase('en')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .replace(/[^\p{L}\p{N}+#]+/gu, ' ')
     .replace(/\s+/gu, ' ')
     .trim();
 }
 
 function isNonEmpty(value: unknown): value is string {
-  return typeof value === 'string' && normalize(value) !== '';
+  return typeof value === 'string'
+    && normalize(value) !== ''
+    && /[\p{L}\p{N}]/u.test(value.normalize('NFKC'));
 }
 
 function validateLocalizedText(
@@ -35,37 +50,91 @@ function containsNormalizedPhrase(value: string, phrase: string): boolean {
   return ` ${normalize(value)} `.includes(` ${normalize(phrase)} `);
 }
 
+function hasGenericTitle(value: string): boolean {
+  const suffix = value.split(':').at(-1) ?? value;
+  return GENERIC_TITLE.test(normalize(suffix));
+}
+
+function canonicalSubjectKey(value: string): string {
+  return value
+    .normalize('NFKC')
+    .trim()
+    .toLocaleLowerCase('en')
+    .replace(/\s*:\s*/gu, ':')
+    .replace(/[_\s\u2010-\u2015]+/gu, '-')
+    .replace(/-{2,}/gu, '-');
+}
+
+function validateSubjectKey(question: PlayableQuestion, category: PlayableCategory): string {
+  const key = question.subjectKey;
+  const canonical = canonicalSubjectKey(key);
+  if (key !== canonical) {
+    throw new Error(`Question ${question.key} has a non-canonical subject key: ${key}`);
+  }
+  if (!/^[a-z][a-z0-9-]*:[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(key)) {
+    throw new Error(`Question ${question.key} has an invalid subject key: ${key}`);
+  }
+  const [namespace, slug] = key.split(':') as [string, string];
+  if (SET_SHAPED_SUBJECT_NAMESPACES.has(namespace)
+    || slug.includes(category.categorySetId)
+    || /^built-in-.+-set-\d+(?:-|$)/u.test(slug)) {
+    throw new Error(`Question ${question.key} has a set-shaped subject key: ${key}`);
+  }
+  // Semantic aliases require editorial/global review; this validator enforces structural identity.
+  return canonical;
+}
+
 function isBinaryOrMultipleChoice(value: string, language: 'en' | 'et'): boolean {
   const prompt = normalize(value);
   if (language === 'en') {
     return /^(?:am|are|can|could|did|do|does|had|has|have|is|should|was|were|will|would)\b/u
       .test(prompt)
       || /^(?:which|what)\s+(?:one\s+)?of\s+(?:these|the following)\b/u.test(prompt)
-      || /\b(?:true\s*(?:or\s*)?false|yes\s*(?:or\s*)?no)\b/u.test(prompt);
+      || /^which\s+(?:one\s+)?is\s+(?:larger|smaller|older|younger|higher|lower|longer|shorter|faster|slower|closer|farther|more|less)\b[^?]*\bor\b/u
+        .test(prompt)
+      || /^which\s+(?:came|comes)\s+first\b[^?]*\bor\b/u.test(prompt)
+      || /^(?:true\s*(?:or\s*)?false|yes\s*(?:or\s*)?no)\b/u.test(prompt);
   }
   return /^(?:kas|on|olid|oli|saab|võib)\b/u.test(prompt)
     || /^(?:milline|mis)\s+(?:üks\s+)?(?:neist|järgmistest)\b/u.test(prompt)
-    || /\b(?:jah\s*(?:või\s*)?ei|tõene\s*(?:või\s*)?väär)\b/u.test(prompt);
+    || /^kumb\b/u.test(prompt)
+    || /^(?:asub|kasutab|kehtib|kuulub|sisaldab|sõltub|tähendab|toimub)\b/u.test(prompt)
+    || /^(?:jah\s*(?:või\s*)?ei|tõene\s*(?:või\s*)?väär)\b/u.test(prompt);
+}
+
+function hasExplicitDate(value: string, language: 'en' | 'et'): boolean {
+  if (language === 'en') {
+    if (/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value)) return true;
+    return !ENGLISH_CURRENT_CUE.test(normalize(value))
+      && /\b(?:in|during)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value);
+  }
+  if (/\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga\b|\bseisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
+    .test(value)) return true;
+  return !ESTONIAN_CURRENT_CUE.test(normalize(value))
+    && /\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aastal\b/iu.test(value);
 }
 
 function asksUndatedChangingFact(value: string, language: 'en' | 'et'): boolean {
   if (language === 'en') {
-    const changing = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u
-      .test(normalize(value))
+    const changing = ENGLISH_CURRENT_CUE.test(normalize(value))
       || /^(?:who|which person)\s+is\b[^?]{0,100}\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b/iu
         .test(value)
       || /\b(?:which|what) country\b[^?]{0,100}\bhas\b[^?]{0,60}\b(?:largest|highest) population\b/iu
+        .test(value)
+      || /\b(?:building|skyscraper)\b[^?]{0,80}\b(?:tallest|highest)\b|\b(?:tallest|highest)\b[^?]{0,80}\b(?:building|skyscraper)\b/iu
+        .test(value)
+      || /^(?:who|which person)\s+holds\b[^?]{0,100}\b(?:world |national )?record\b/iu
         .test(value);
-    return changing && !/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value);
+    return changing && !hasExplicitDate(value, language);
   }
-  const changing = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u
-    .test(normalize(value))
+  const changing = ESTONIAN_CURRENT_CUE.test(normalize(value))
     || /^(?:kes|milline isik)\s+on\b[^?]{0,100}\b(?:president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees)\b/iu
       .test(value)
-    || /\bmillisel riigil\b[^?]{0,60}\bon\b[^?]{0,60}\bsuurim rahvaarv\b/iu.test(value);
-  return changing
-    && !/\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga\b|\bseisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
-      .test(value);
+    || /\bmillisel riigil\b[^?]{0,60}\bon\b[^?]{0,60}\bsuurim rahvaarv\b/iu.test(value)
+    || /\b(?:hoone|pilvelõhkuja)\b[^?]{0,80}\b(?:kõrgeim|kõige kõrgem)\b|\b(?:kõrgeim|kõige kõrgem)\b[^?]{0,80}\b(?:hoone|pilvelõhkuja)\b/iu
+      .test(value)
+    || /^kes\s+hoiab\b[^?]{0,100}\brekordit\b/iu.test(value);
+  return changing && !hasExplicitDate(value, language);
 }
 
 function isIsoDate(value: unknown): value is string {
@@ -83,7 +152,11 @@ function hasValidSource(question: PlayableQuestion): boolean {
     return false;
   }
   try {
-    return new URL(source.url).protocol === 'https:';
+    const url = new URL(source.url);
+    const pathname = url.pathname.replace(/\/+$/u, '').toLocaleLowerCase('en');
+    return url.protocol === 'https:'
+      && pathname !== ''
+      && !/^\/(?:home(?:page)?|index(?:\.html?)?)$/u.test(pathname);
   } catch {
     return false;
   }
@@ -130,16 +203,23 @@ function validateQuestionText(question: PlayableQuestion, category: PlayableCate
         `Question ${question.key} leaks its ${label} response in the category title`,
       );
     }
+    for (const variant of question.acceptedVariants[language]) {
+      if (containsNormalizedPhrase(question.clue[language], variant)) {
+        throw new Error(
+          `Question ${question.key} leaks its ${label} accepted variant in the clue`,
+        );
+      }
+      if (containsNormalizedPhrase(category.name[language], variant)) {
+        throw new Error(
+          `Question ${question.key} leaks its ${label} accepted variant in the category title`,
+        );
+      }
+    }
   }
 }
 
-function clueAnswerIdentity(question: PlayableQuestion): string {
-  return [
-    normalize(question.clue.en),
-    normalize(question.response.en),
-    normalize(question.clue.et),
-    normalize(question.response.et),
-  ].join('\0');
+function clueAnswerIdentity(question: PlayableQuestion, language: 'en' | 'et'): string {
+  return [normalize(question.clue[language]), normalize(question.response[language])].join('\0');
 }
 
 export function validatePlayableCorpus(
@@ -191,11 +271,17 @@ export function validatePlayableCorpus(
   };
   const questionKeys = new Set<string>();
   const factKeys = new Set<string>();
-  const clueAnswerOwners = new Map<string, Readonly<{ categorySetId: string; key: string }>>();
+  const clueAnswerOwners = {
+    en: new Map<string, Readonly<{ categorySetId: string; key: string }>>(),
+    et: new Map<string, Readonly<{ categorySetId: string; key: string }>>(),
+  };
 
   for (const category of ordered) {
     validateLocalizedText(category.name, `Category ${category.categorySetId}`, 'title');
     for (const [language, label] of LANGUAGES) {
+      if (hasGenericTitle(category.name[language])) {
+        throw new Error(`Category ${category.categorySetId} has a generic ${label} category title`);
+      }
       const title = normalize(category.name[language]);
       const existingOwner = titleOwners[language].get(title);
       if (existingOwner !== undefined) {
@@ -234,29 +320,35 @@ export function validatePlayableCorpus(
       if (!isNonEmpty(question.subjectKey)) {
         throw new Error(`Question ${question.key} has an empty subject key`);
       }
-      if (subjectKeys.has(question.subjectKey)) {
+      const subjectKey = validateSubjectKey(question, category);
+      if (subjectKeys.has(subjectKey)) {
         throw new Error(
           `Category ${category.categorySetId} has duplicate subject key: ${question.subjectKey}`,
         );
       }
-      subjectKeys.add(question.subjectKey);
+      subjectKeys.add(subjectKey);
 
       validateQuestionText(question, category);
       if (!hasValidSource(question)) {
         throw new Error(`Question ${question.key} has an invalid source`);
       }
 
-      const identity = clueAnswerIdentity(question);
-      const existingOwner = clueAnswerOwners.get(identity);
-      if (existingOwner !== undefined) {
-        const scope = existingOwner.categorySetId === category.categorySetId
-          ? `within category ${category.categorySetId}`
-          : 'across categories';
-        throw new Error(
-          `Duplicate clue/answer pair ${scope}: ${question.key} duplicates ${existingOwner.key}`,
-        );
+      for (const [language, label] of LANGUAGES) {
+        const identity = clueAnswerIdentity(question, language);
+        const existingOwner = clueAnswerOwners[language].get(identity);
+        if (existingOwner !== undefined) {
+          const scope = existingOwner.categorySetId === category.categorySetId
+            ? `within category ${category.categorySetId}`
+            : 'across categories';
+          throw new Error(
+            `Duplicate clue/answer pair ${scope} (${label}): ${question.key} duplicates ${existingOwner.key}`,
+          );
+        }
+        clueAnswerOwners[language].set(identity, {
+          categorySetId: category.categorySetId,
+          key: question.key,
+        });
       }
-      clueAnswerOwners.set(identity, { categorySetId: category.categorySetId, key: question.key });
     }
   }
 
