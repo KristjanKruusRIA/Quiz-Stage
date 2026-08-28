@@ -1,5 +1,25 @@
 import { createHash } from 'node:crypto';
-import { describe, expect, it } from 'vitest';
+import {
+  existsSync,
+  mkdtempSync,
+  mkdirSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
+import { parse } from 'csv-parse/sync';
+import { stringify } from 'csv-stringify/sync';
+import { afterEach, describe, expect, it } from 'vitest';
+import { applyPlayableCorpus } from '../../../scripts/content/playability/apply';
+import {
+  loadPlayableCorpus,
+  parsePlayableCorpusArgs,
+  publishPlayableCorpusStage,
+  stagePlayableCorpus,
+} from '../../../scripts/content/applyPlayableCorpus';
+import type { ContentEvidence } from '../../../scripts/content/evidence';
 import {
   PLAYABLE_TARGET_IDS,
   PLAYABLE_TARGETS,
@@ -10,6 +30,22 @@ import type {
   PlayableQuestion,
 } from '../../../scripts/content/playability/types';
 import { validatePlayableCorpus } from '../../../scripts/content/playability/validateBank';
+import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
+
+const ACCEPTED_BATCHES = [
+  '01-history',
+  '02-geography',
+  '03-science-nature',
+  '04-literature-language',
+  '05-art-architecture',
+  '06-music',
+  '07-film-television',
+  '08-sports-games',
+  '09-food-drink',
+  '10-technology-inventions',
+  '11-politics-economics-society',
+  '12-mythology-religion-philosophy',
+] as const;
 
 const EXPECTED_ALLOCATION = {
   '01-history:hard': 33,
@@ -104,6 +140,238 @@ function replaceQuestion(
 
 function firstQuestion(playableCategory: PlayableCategory): PlayableQuestion {
   return playableCategory.questions[0]!;
+}
+
+type ApplyFixture = Readonly<{
+  authoredRows: readonly Record<string, string>[];
+  generatedRows: readonly Record<string, string>[];
+  evidence: readonly ContentEvidence[];
+  targets: readonly PlayableTarget[];
+  categories: readonly PlayableCategory[];
+}>;
+
+function applyRow(
+  categorySetId: string,
+  tier: number,
+  difficulty: 'easy' | 'medium' | 'hard' = 'medium',
+  packId = 'built-in-history',
+): Record<string, string> {
+  return {
+    clue_id: `old-${categorySetId}-${tier}`,
+    pack_id: packId,
+    pack_name: 'Fixture Pack',
+    category_set_id: categorySetId,
+    content_kind: 'board',
+    round: tier <= 3 ? 'round-one' : 'round-two',
+    tier: String(tier),
+    difficulty,
+    macro_topic: 'fixture-topic',
+    category_name_en: `Old ${categorySetId}`,
+    category_name_et: `Vana ${categorySetId}`,
+    clue_en: `Old clue ${categorySetId} ${tier}`,
+    clue_et: `Vana küsimus ${categorySetId} ${tier}`,
+    response_en: `Old response ${categorySetId} ${tier}`,
+    response_et: `Vana vastus ${categorySetId} ${tier}`,
+    accepted_variants_en: 'Old alias',
+    accepted_variants_et: 'Vana alias',
+    explanation_en: `Old explanation ${categorySetId} ${tier}`,
+    explanation_et: `Vana selgitus ${categorySetId} ${tier}`,
+    source_title: 'Old source',
+    source_url: 'https://example.com/old/source',
+    source_license: 'CC-BY-4.0',
+    source_retrieved_at: '2026-08-01',
+    translation_status: 'reviewed',
+    enabled: 'true',
+  };
+}
+
+function applyEvidence(
+  row: Readonly<Record<string, string>>,
+  batchId = '01-history',
+  candidateId?: string,
+): ContentEvidence {
+  return {
+    version: 1,
+    clueId: row.clue_id!,
+    batchId,
+    factKey: `old-fact:${row.clue_id}`,
+    subjectKey: `old-subject:${row.clue_id}`,
+    assertion: `Old assertion for ${row.clue_id}`,
+    origin: candidateId === undefined ? 'compatibleOpen' : 'openTdbInspired',
+    authoring: { author: 'Original Author', authoredAt: '2026-08-01T08:00:00.000Z' },
+    supportingSource: {
+      sourceId: `old-source:${row.clue_id}`,
+      title: 'Old source',
+      url: 'https://example.com/old/source',
+      license: 'CC-BY-4.0',
+      retrievedAt: '2026-08-01',
+    },
+    inspiration: candidateId === undefined ? null : {
+      system: 'OpenTDB',
+      candidateId,
+      license: 'CC-BY-SA-4.0',
+    },
+    factualReview: {
+      reviewer: 'Original Factual Reviewer',
+      reviewedAt: '2026-08-01T09:00:00.000Z',
+      decision: 'approved',
+    },
+    editorialReview: {
+      reviewer: 'Original Editorial Reviewer',
+      reviewedAt: '2026-08-01T10:00:00.000Z',
+      decision: 'approved',
+    },
+    translationReview: {
+      reviewer: 'Original Translation Reviewer',
+      reviewedAt: '2026-08-01T11:00:00.000Z',
+      decision: 'approved',
+    },
+  };
+}
+
+function applyFixture(): ApplyFixture {
+  const targets = [target('target-a'), target('target-b', 'hard')];
+  const targetA = category(targets[0]!);
+  const first = firstQuestion(targetA);
+  const categories = [
+    category(targets[1]!),
+    {
+      ...targetA,
+      questions: [
+        {
+          ...first,
+          acceptedVariants: {
+            en: ['Alias; one', 'Back\\slash'],
+            et: ['Alias; üks', 'Kald\\kriips'],
+          },
+        },
+        ...targetA.questions.slice(1),
+      ],
+    },
+  ];
+  const rows = [
+    applyRow('target-b', 5, 'hard'),
+    applyRow('retained-easy', 1, 'easy'),
+    applyRow('target-a', 3),
+    applyRow('target-b', 1, 'hard'),
+    applyRow('target-a', 1),
+    applyRow('target-a', 2),
+    applyRow('target-a', 4),
+    applyRow('target-a', 5),
+    applyRow('retained-easy', 2, 'easy'),
+    applyRow('retained-easy', 3, 'easy'),
+    applyRow('retained-easy', 4, 'easy'),
+    applyRow('retained-easy', 5, 'easy'),
+    applyRow('target-b', 2, 'hard'),
+    applyRow('target-b', 3, 'hard'),
+    applyRow('target-b', 4, 'hard'),
+  ];
+  return {
+    authoredRows: rows.map((row) => ({ ...row, category_name_et: '' })),
+    generatedRows: rows.map((row) => ({ ...row })),
+    evidence: rows.map((row) => applyEvidence(
+      row,
+      '01-history',
+      row.clue_id === 'old-target-a-2'
+        ? 'candidate-a-2'
+        : row.clue_id === 'old-target-b-4' ? 'candidate-b-4' : undefined,
+    )),
+    targets,
+    categories,
+  };
+}
+
+type StagingFixture = Readonly<{
+  acceptedRoot: string;
+  outputRoot: string;
+  categories: readonly PlayableCategory[];
+  targets: readonly PlayableTarget[];
+}>;
+
+const temporaryDirectories: string[] = [];
+
+afterEach(() => {
+  for (const directory of temporaryDirectories.splice(0)) {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+function temporaryDirectory(): string {
+  const directory = mkdtempSync(join(tmpdir(), 'playable-corpus-'));
+  temporaryDirectories.push(directory);
+  return directory;
+}
+
+function writeRows(path: string, rows: readonly Record<string, string>[]): void {
+  mkdirSync(resolve(path, '..'), { recursive: true });
+  writeFileSync(path, stringify([...rows], {
+    header: true,
+    columns: [...CSV_COLUMNS],
+    record_delimiter: '\r\n',
+  }));
+}
+
+function stagingFixture(): StagingFixture {
+  const acceptedRoot = temporaryDirectory();
+  const outputRoot = resolve(acceptedRoot, 'staged');
+  const categories: PlayableCategory[] = [];
+  const targets: PlayableTarget[] = [];
+  for (const batchId of ACCEPTED_BATCHES) {
+    const slug = batchId.replace(/^\d+-/u, '');
+    const packId = `built-in-${slug}`;
+    const playableTarget: PlayableTarget = {
+      categorySetId: `${packId}-target`,
+      batchId,
+      packId,
+      difficulty: 'medium',
+    };
+    targets.push(playableTarget);
+    categories.push(category(playableTarget));
+    const targetRows = [1, 2, 3, 4, 5].map((tier) => applyRow(
+      playableTarget.categorySetId,
+      tier,
+      'medium',
+      packId,
+    ));
+    const easyRows = [1, 2, 3, 4, 5].map((tier) => applyRow(
+      `${packId}-easy`,
+      tier,
+      'easy',
+      packId,
+    ));
+    const rows = [...targetRows, ...easyRows];
+    writeRows(
+      resolve(acceptedRoot, `content/authored/${batchId}.csv`),
+      rows.map((row) => ({ ...row, category_name_et: '' })),
+    );
+    writeRows(resolve(acceptedRoot, `content/generated/${batchId}.en-et.csv`), rows);
+    mkdirSync(resolve(acceptedRoot, 'content/evidence'), { recursive: true });
+    const evidence = rows.map((row, index) => applyEvidence(
+      row,
+      batchId,
+      index === 0 ? `candidate-${batchId}` : undefined,
+    ));
+    writeFileSync(
+      resolve(acceptedRoot, `content/evidence/${batchId}.jsonl`),
+      evidence.map((record) => `${JSON.stringify(record)}\n`).join(''),
+    );
+  }
+  return { acceptedRoot, outputRoot, categories, targets };
+}
+
+function acceptedArtifactPaths(): string[] {
+  return ACCEPTED_BATCHES.flatMap((batchId) => [
+    `content/authored/${batchId}.csv`,
+    `content/generated/${batchId}.en-et.csv`,
+    `content/evidence/${batchId}.jsonl`,
+  ]);
+}
+
+function acceptedArtifactBytes(root: string): Map<string, string> {
+  return new Map(acceptedArtifactPaths().map((path) => [
+    path,
+    readFileSync(resolve(root, path), 'utf8'),
+  ]));
 }
 
 describe('playable medium/hard target ledger', () => {
@@ -1126,5 +1394,304 @@ describe('validatePlayableCorpus', () => {
     });
 
     expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+});
+
+describe('applyPlayableCorpus', () => {
+  it('preserves target slots while replacing bilingual content and inspiration deterministically', () => {
+    const fixture = applyFixture();
+    const authoredBefore = structuredClone(fixture.authoredRows);
+    const generatedBefore = structuredClone(fixture.generatedRows);
+    const evidenceBefore = structuredClone(fixture.evidence);
+
+    const result = applyPlayableCorpus(fixture);
+
+    expect(result.replacedClueIds).toEqual([
+      'old-target-a-1', 'old-target-a-2', 'old-target-a-3', 'old-target-a-4',
+      'old-target-a-5', 'old-target-b-1', 'old-target-b-2', 'old-target-b-3',
+      'old-target-b-4', 'old-target-b-5',
+    ]);
+    expect(result.authoredRows).toHaveLength(fixture.authoredRows.length);
+    expect(result.generatedRows).toHaveLength(fixture.generatedRows.length);
+    const targetA1Index = fixture.generatedRows.findIndex((row) =>
+      row.category_set_id === 'target-a' && row.tier === '1');
+    expect(result.generatedRows[targetA1Index]).toEqual({
+      ...fixture.generatedRows[targetA1Index],
+      clue_id: 'built-in-history-playable-corpus-001',
+      category_name_en: 'Knowledge theme target-a',
+      category_name_et: 'Teadmisteema target-a',
+      clue_en: 'Which landmark matches clue 1 for target-a?',
+      clue_et: 'Milline vaatamisväärsus sobib vihjega 1 kategoorias target-a?',
+      response_en: 'Answer target-a 1',
+      response_et: 'Vastus target-a 1',
+      accepted_variants_en: 'Alias\\; one;Back\\\\slash',
+      accepted_variants_et: 'Alias\\; üks;Kald\\\\kriips',
+      explanation_en: 'This explains fact 1 for target-a.',
+      explanation_et: 'See selgitab fakti 1 kategoorias target-a.',
+      source_title: 'Reference target-a 1',
+      source_url: 'https://example.com/target-a/1',
+      source_license: 'CC-BY-4.0',
+      source_retrieved_at: '2026-08-28',
+      translation_status: 'reviewed',
+    });
+    expect(result.authoredRows[targetA1Index]).toEqual({
+      ...result.generatedRows[targetA1Index],
+      category_name_et: '',
+    });
+
+    const retainedIndexes = fixture.generatedRows
+      .map((row, index) => ({ row, index }))
+      .filter(({ row }) => row.difficulty === 'easy')
+      .map(({ index }) => index);
+    for (const index of retainedIndexes) {
+      expect(result.generatedRows[index]).toEqual(fixture.generatedRows[index]);
+      expect(result.authoredRows[index]).toEqual(fixture.authoredRows[index]);
+    }
+    for (const index of fixture.generatedRows.keys()) {
+      for (const field of [
+        'pack_id', 'pack_name', 'category_set_id', 'content_kind', 'round', 'tier',
+        'difficulty', 'macro_topic', 'enabled',
+      ]) {
+        expect(result.generatedRows[index]![field]).toBe(fixture.generatedRows[index]![field]);
+      }
+    }
+
+    expect(result.evidence.map(({ clueId }) => clueId)).toEqual([
+      'built-in-history-playable-corpus-001',
+      'built-in-history-playable-corpus-002',
+      'built-in-history-playable-corpus-003',
+      'built-in-history-playable-corpus-004',
+      'built-in-history-playable-corpus-005',
+      'built-in-history-playable-corpus-006',
+      'built-in-history-playable-corpus-007',
+      'built-in-history-playable-corpus-008',
+      'built-in-history-playable-corpus-009',
+      'built-in-history-playable-corpus-010',
+      'old-retained-easy-1',
+      'old-retained-easy-2',
+      'old-retained-easy-3',
+      'old-retained-easy-4',
+      'old-retained-easy-5',
+    ]);
+    expect(result.evidence.find(({ clueId }) =>
+      clueId === 'built-in-history-playable-corpus-002')).toMatchObject({
+        clueId: 'built-in-history-playable-corpus-002',
+        batchId: '01-history',
+        factKey: 'target-a:fact:2',
+        subjectKey: 'landmark:fixture-a-2',
+        origin: 'openTdbInspired',
+        inspiration: {
+          system: 'OpenTDB',
+          candidateId: 'candidate-a-2',
+          license: 'CC-BY-SA-4.0',
+        },
+      });
+    expect(fixture.authoredRows).toEqual(authoredBefore);
+    expect(fixture.generatedRows).toEqual(generatedBefore);
+    expect(fixture.evidence).toEqual(evidenceBefore);
+  });
+
+  it('is idempotent and keeps replacement IDs in target-ledger order', () => {
+    const fixture = applyFixture();
+    const first = applyPlayableCorpus(fixture);
+
+    const second = applyPlayableCorpus({
+      ...fixture,
+      authoredRows: first.authoredRows,
+      generatedRows: first.generatedRows,
+      evidence: first.evidence,
+    });
+
+    expect(second.authoredRows).toEqual(first.authoredRows);
+    expect(second.generatedRows).toEqual(first.generatedRows);
+    expect(second.evidence).toEqual(first.evidence);
+    expect(second.replacedClueIds).toEqual([
+      'built-in-history-playable-corpus-001',
+      'built-in-history-playable-corpus-002',
+      'built-in-history-playable-corpus-003',
+      'built-in-history-playable-corpus-004',
+      'built-in-history-playable-corpus-005',
+      'built-in-history-playable-corpus-006',
+      'built-in-history-playable-corpus-007',
+      'built-in-history-playable-corpus-008',
+      'built-in-history-playable-corpus-009',
+      'built-in-history-playable-corpus-010',
+    ]);
+  });
+
+  it('rejects missing and extra replacement categories', () => {
+    const fixture = applyFixture();
+    expect(() => applyPlayableCorpus({
+      ...fixture,
+      categories: fixture.categories.slice(0, 1),
+    })).toThrowError('Expected 2 playable categories; found 1');
+
+    expect(() => applyPlayableCorpus({
+      ...fixture,
+      categories: [fixture.categories[0]!, category(target('target-extra'))],
+    })).toThrowError('Category target-extra is not present in the target ledger');
+  });
+
+  it('rejects target rows without exactly one stable slot for tiers one through five', () => {
+    const fixture = applyFixture();
+    const duplicateTier = (row: Readonly<Record<string, string>>) =>
+      row.clue_id === 'old-target-a-3' ? { ...row, tier: '2' } : row;
+    expect(() => applyPlayableCorpus({
+      ...fixture,
+      authoredRows: fixture.authoredRows.map(duplicateTier),
+      generatedRows: fixture.generatedRows.map(duplicateTier),
+    })).toThrowError('Target target-a must contain tiers 1,2,3,4,5; found 1,2,2,4,5');
+  });
+
+  it.each(['missing', 'extra'] as const)('rejects %s evidence inventory', (kind) => {
+    const fixture = applyFixture();
+    const evidence = kind === 'missing'
+      ? fixture.evidence.filter(({ clueId }) => clueId !== 'old-retained-easy-1')
+      : [
+          ...fixture.evidence,
+          { ...fixture.evidence[0]!, clueId: 'orphan-evidence', factKey: 'orphan-fact' },
+        ];
+    expect(() => applyPlayableCorpus({ ...fixture, evidence })).toThrowError(
+      kind === 'missing'
+        ? 'Missing evidence for input clue: old-retained-easy-1'
+        : 'Evidence has no input clue: orphan-evidence',
+    );
+  });
+
+  it('rejects per-difficulty OpenTDB inspiration quota drift', () => {
+    const fixture = applyFixture();
+    const evidence = fixture.evidence.map((record) => record.clueId === 'old-target-a-2'
+      ? { ...record, origin: 'compatibleOpen' as const, inspiration: null }
+      : record);
+
+    expect(() => applyPlayableCorpus({ ...fixture, evidence })).toThrowError(
+      'Expected 1 OpenTDB-inspired medium target clues; found 0',
+    );
+  });
+
+  it('rejects duplicate input clue IDs and OpenTDB inspiration ownership', () => {
+    const fixture = applyFixture();
+    const duplicateId = (row: Readonly<Record<string, string>>) =>
+      row.clue_id === 'old-retained-easy-1' ? { ...row, clue_id: 'old-target-a-1' } : row;
+    expect(() => applyPlayableCorpus({
+      ...fixture,
+      authoredRows: fixture.authoredRows.map(duplicateId),
+      generatedRows: fixture.generatedRows.map(duplicateId),
+    })).toThrowError('Duplicate input clue ID: old-target-a-1');
+
+    const duplicateInspiration = fixture.evidence.map((record) =>
+      record.clueId === 'old-target-b-4' && record.inspiration !== null
+        ? {
+            ...record,
+            inspiration: { ...record.inspiration, candidateId: 'candidate-a-2' },
+          }
+        : record);
+    expect(() => applyPlayableCorpus({ ...fixture, evidence: duplicateInspiration }))
+      .toThrowError('OpenTDB candidate reused: candidate-a-2');
+  });
+
+  it('rejects authored/generated structural inventory drift', () => {
+    const fixture = applyFixture();
+    const generatedRows = fixture.generatedRows.map((row, index) =>
+      index === 0 ? { ...row, round: 'round-one' } : row);
+    expect(() => applyPlayableCorpus({ ...fixture, generatedRows })).toThrowError(
+      'Authored/generated inventory differs at row 0',
+    );
+  });
+});
+
+describe('playable corpus staging and publishing', () => {
+  it('stages the complete 12-batch, 36-artifact tree without accepted writes', () => {
+    const fixture = stagingFixture();
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+
+    const result = stagePlayableCorpus(fixture);
+
+    expect(result.artifactPaths).toHaveLength(36);
+    expect(result.replacedClueIds).toHaveLength(60);
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+    for (const batchId of ACCEPTED_BATCHES) {
+      const stagedPath = resolve(fixture.outputRoot, `generated/${batchId}.en-et.csv`);
+      expect(existsSync(stagedPath)).toBe(true);
+      const rows = parse(readFileSync(stagedPath, 'utf8'), {
+        columns: true,
+        skip_empty_lines: true,
+      }) as Array<Record<string, string>>;
+      const packId = `built-in-${batchId.replace(/^\d+-/u, '')}`;
+      expect(rows.filter(({ difficulty }) => difficulty === 'medium').map(({ clue_id }) => clue_id))
+        .toEqual([1, 2, 3, 4, 5].map((sequence) =>
+          `${packId}-playable-corpus-${sequence.toString().padStart(3, '0')}`));
+    }
+  });
+
+  it('writes no staged artifact when a later batch fails validation', () => {
+    const fixture = stagingFixture();
+    const lastBatch = ACCEPTED_BATCHES.at(-1)!;
+    for (const kind of ['authored', 'generated'] as const) {
+      const path = kind === 'authored'
+        ? resolve(fixture.acceptedRoot, `content/authored/${lastBatch}.csv`)
+        : resolve(fixture.acceptedRoot, `content/generated/${lastBatch}.en-et.csv`);
+      const rows = parse(readFileSync(path, 'utf8'), {
+        columns: true,
+        skip_empty_lines: true,
+      }) as Array<Record<string, string>>;
+      writeRows(path, rows.map((row) =>
+        row.difficulty === 'medium' && row.tier === '5' ? { ...row, tier: '4' } : row));
+    }
+
+    expect(() => stagePlayableCorpus(fixture)).toThrowError(/must contain tiers 1,2,3,4,5/u);
+    expect(existsSync(fixture.outputRoot)).toBe(false);
+  });
+
+  it('publishes all 36 staged artifacts only after complete validation', () => {
+    const fixture = stagingFixture();
+    stagePlayableCorpus(fixture);
+
+    publishPlayableCorpusStage(fixture);
+
+    for (const path of acceptedArtifactPaths()) {
+      expect(readFileSync(resolve(fixture.acceptedRoot, path), 'utf8')).toBe(
+        readFileSync(resolve(fixture.outputRoot, path.replace(/^content\//u, '')), 'utf8'),
+      );
+    }
+  });
+
+  it('aborts before accepted writes when staged non-target content mutates', () => {
+    const fixture = stagingFixture();
+    stagePlayableCorpus(fixture);
+    const acceptedBefore = acceptedArtifactBytes(fixture.acceptedRoot);
+    const path = resolve(fixture.outputRoot, 'generated/01-history.en-et.csv');
+    const rows = parse(readFileSync(path, 'utf8'), {
+      columns: true,
+      skip_empty_lines: true,
+    }) as Array<Record<string, string>>;
+    const easyIndex = rows.findIndex(({ difficulty }) => difficulty === 'easy');
+    rows[easyIndex] = { ...rows[easyIndex]!, clue_en: 'Mutated non-target clue.' };
+    writeRows(path, rows);
+
+    expect(() => publishPlayableCorpusStage(fixture)).toThrowError(
+      'Staged artifact does not match expected transform',
+    );
+    expect(acceptedArtifactBytes(fixture.acceptedRoot)).toEqual(acceptedBefore);
+  });
+
+  it('defaults to ignored staging and exposes no partial-batch publication option', () => {
+    expect(parsePlayableCorpusArgs([])).toEqual({
+      outputRoot: 'content/work/playable-corpus-overhaul/staged',
+      publish: false,
+    });
+    expect(parsePlayableCorpusArgs(['--output-root', 'custom-stage', '--publish'])).toEqual({
+      outputRoot: 'custom-stage',
+      publish: true,
+    });
+    expect(() => parsePlayableCorpusArgs(['--batch', '01-history'])).toThrowError(
+      'Unknown argument: --batch',
+    );
+  });
+
+  it('fails clearly until the complete playable bank module is supplied', () => {
+    expect(() => loadPlayableCorpus(() => ({}))).toThrowError(
+      'playability/bank.ts must export a callable buildPlayableCorpus',
+    );
   });
 });
