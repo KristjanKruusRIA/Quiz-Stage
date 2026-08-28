@@ -1,5 +1,6 @@
 import { contentEvidenceSchema, type ContentEvidence } from '../evidence';
 import { validateAccessibleCorpus } from './bank';
+import { applyRetainedEasyClueCorrection } from './retainedClueCorrections';
 import type { AccessibleCategory, AccessibleQuestion, CategoryTitle } from './types';
 
 const INVENTORY_COLUMNS = [
@@ -318,7 +319,7 @@ export function applyAccessibleCorpus(input: Readonly<{
     const title = titlesByCategorySetId.get(row.category_set_id);
     if (title === undefined) throw new Error(`Missing category title: ${row.category_set_id}`);
     return {
-      ...row,
+      ...applyRetainedEasyClueCorrection(row, retainedClueIds),
       category_name_en: title.name.en,
       category_name_et: authored ? '' : title.name.et,
     };
