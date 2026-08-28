@@ -5,10 +5,12 @@ const LANGUAGES = [
   ['en', 'English'],
   ['et', 'Estonian'],
 ] as const;
-const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu)(?:\s+\d+)?$/u;
-const ENGLISH_CURRENT_CUE = /\b(?:current|currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
+const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu|varia|mitmesugust)(?:\s+\d+)?$/u;
+const ENGLISH_CURRENT_CUE = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
+const ENGLISH_CURRENT_CONTEXT = /\bcurrent\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest)\b/u;
 const ESTONIAN_CURRENT_CUE = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u;
 const SET_SHAPED_SUBJECT_NAMESPACES = new Set([
+  'bank',
   'batch',
   'category',
   'category-set',
@@ -80,6 +82,9 @@ function validateSubjectKey(question: PlayableQuestion, category: PlayableCatego
     || /^built-in-.+-set-\d+(?:-|$)/u.test(slug)) {
     throw new Error(`Question ${question.key} has a set-shaped subject key: ${key}`);
   }
+  if (/^\d+$/u.test(slug)) {
+    throw new Error(`Question ${question.key} has a digits-only subject key: ${key}`);
+  }
   // Semantic aliases require editorial/global review; this validator enforces structural identity.
   return canonical;
 }
@@ -93,30 +98,43 @@ function isBinaryOrMultipleChoice(value: string, language: 'en' | 'et'): boolean
       || /^which\s+(?:one\s+)?is\s+(?:larger|smaller|older|younger|higher|lower|longer|shorter|faster|slower|closer|farther|more|less)\b[^?]*\bor\b/u
         .test(prompt)
       || /^which\s+(?:came|comes)\s+first\b[^?]*\bor\b/u.test(prompt)
+      || /^(?:answer|respond|say|state)\s+(?:with\s+)?(?:true\s+(?:or\s+)?false|yes\s+(?:or\s+)?no)\b/u
+        .test(prompt)
       || /^(?:true\s*(?:or\s*)?false|yes\s*(?:or\s*)?no)\b/u.test(prompt);
   }
   return /^(?:kas|on|olid|oli|saab|võib)\b/u.test(prompt)
     || /^(?:milline|mis)\s+(?:üks\s+)?(?:neist|järgmistest)\b/u.test(prompt)
     || /^kumb\b/u.test(prompt)
-    || /^(?:asub|kasutab|kehtib|kuulub|sisaldab|sõltub|tähendab|toimub)\b/u.test(prompt)
+    || /^(?:asub|kasutab|kehtib|kuulub|sisaldab|sõltub|tähendab|toimub)\b[^.!?]*\?\s*$/iu
+      .test(value.trim())
+    || /^(?:vasta|ütle)\s+(?:jah\s+(?:või\s+)?ei|tõene\s+(?:või\s+)?väär)\b/u.test(prompt)
     || /^(?:jah\s*(?:või\s*)?ei|tõene\s*(?:või\s*)?väär)\b/u.test(prompt);
+}
+
+function hasEnglishCurrentCue(value: string): boolean {
+  const normalized = normalize(value);
+  return ENGLISH_CURRENT_CUE.test(normalized) || ENGLISH_CURRENT_CONTEXT.test(normalized);
 }
 
 function hasExplicitDate(value: string, language: 'en' | 'et'): boolean {
   if (language === 'en') {
     if (/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value)) return true;
-    return !ENGLISH_CURRENT_CUE.test(normalize(value))
-      && /\b(?:in|during)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value);
+    if (hasEnglishCurrentCue(value)) return false;
+    return /\b(?:in|during)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(value)
+      || /\bon\s+(?:(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2}(?:st|nd|rd|th)?|\d{1,2}(?:st|nd|rd|th)?\s+(?:january|february|march|april|may|june|july|august|september|october|november|december)),?\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
+        .test(value);
   }
   if (/\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga\b|\bseisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
     .test(value)) return true;
-  return !ESTONIAN_CURRENT_CUE.test(normalize(value))
-    && /\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aastal\b/iu.test(value);
+  if (ESTONIAN_CURRENT_CUE.test(normalize(value))) return false;
+  return /\b(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aastal\b/iu.test(value)
+    || /\b\d{1,2}\.\s*(?:jaanuaril|veebruaril|märtsil|aprillil|mail|juunil|juulil|augustil|septembril|oktoobril|novembril|detsembril)\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu
+      .test(value);
 }
 
 function asksUndatedChangingFact(value: string, language: 'en' | 'et'): boolean {
   if (language === 'en') {
-    const changing = ENGLISH_CURRENT_CUE.test(normalize(value))
+    const changing = hasEnglishCurrentCue(value)
       || /^(?:who|which person)\s+is\b[^?]{0,100}\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b/iu
         .test(value)
       || /\b(?:which|what) country\b[^?]{0,100}\bhas\b[^?]{0,60}\b(?:largest|highest) population\b/iu
@@ -156,7 +174,7 @@ function hasValidSource(question: PlayableQuestion): boolean {
     const pathname = url.pathname.replace(/\/+$/u, '').toLocaleLowerCase('en');
     return url.protocol === 'https:'
       && pathname !== ''
-      && !/^\/(?:home(?:page)?|index(?:\.html?)?)$/u.test(pathname);
+      && !/^\/(?:home(?:page)?|index|default)(?:\.(?:html?|php|aspx?))?$/u.test(pathname);
   } catch {
     return false;
   }

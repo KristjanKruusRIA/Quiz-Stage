@@ -269,6 +269,8 @@ describe('validatePlayableCorpus', () => {
     ['missing namespace', 'ada-lovelace', /invalid subject key/u],
     ['generic category namespace', 'category:target-a', /set-shaped subject key/u],
     ['generic set namespace', 'set:002', /set-shaped subject key/u],
+    ['generic bank namespace', 'bank:002', /set-shaped subject key/u],
+    ['digits-only subject slug', 'person:002', /digits-only subject key/u],
     ['embedded category-set ID', 'landmark:target-a-2', /set-shaped subject key/u],
   ])('rejects a %s instead of counting it as a distinct subject', (_kind, subjectKey, message) => {
     const expected = target('target-a');
@@ -279,6 +281,17 @@ describe('validatePlayableCorpus', () => {
     });
 
     expect(() => validatePlayableCorpus([changed], [expected])).toThrowError(message);
+  });
+
+  it('allows a canonical subject key with meaningful namespace and slug', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 1, {
+      ...base.questions[1]!,
+      subjectKey: 'person:ada-lovelace',
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
   it('rejects normalized duplicate titles in either language across categories', () => {
@@ -318,6 +331,18 @@ describe('validatePlayableCorpus', () => {
     expect(() => validatePlayableCorpus([changed], [expected]))
       .toThrowError(/generic English category title/u);
   });
+
+  it.each(['Varia', 'Mitmesugust'])(
+    'rejects the generic Estonian filler title %s',
+    (filler) => {
+      const expected = target('target-a');
+      const base = category(expected);
+      const changed = { ...base, name: { ...base.name, et: filler } };
+
+      expect(() => validatePlayableCorpus([changed], [expected]))
+        .toThrowError(/generic Estonian category title/u);
+    },
+  );
 
   it('allows a meaningful one-word title', () => {
     const expected = target('target-a');
@@ -404,6 +429,10 @@ describe('validatePlayableCorpus', () => {
     ['root URL with tracking parameters', 'https://example.com/?source=quiz'],
     ['generic home path', 'https://example.com/home'],
     ['generic index path', 'https://example.com/index.html'],
+    ['generic HTML home filename', 'https://example.com/home.html'],
+    ['generic HTML homepage filename', 'https://example.com/homepage.html'],
+    ['generic PHP index filename', 'https://example.com/index.php'],
+    ['generic ASPX default filename', 'https://example.com/default.aspx'],
   ])('rejects a structurally generic source %s', (_kind, url) => {
     const expected = target('target-a');
     const base = category(expected);
@@ -426,6 +455,21 @@ describe('validatePlayableCorpus', () => {
       source: {
         ...first.source,
         url: 'https://example.com/articles/prague?language=en#history',
+      },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
+  it('allows a deep source whose final filename happens to be index.php', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const first = firstQuestion(base);
+    const changed = replaceQuestion(base, 0, {
+      ...first,
+      source: {
+        ...first.source,
+        url: 'https://example.com/archive/index.php?article=prague',
       },
     });
 
@@ -546,6 +590,61 @@ describe('validatePlayableCorpus', () => {
       .toThrowError(/binary or multiple-choice/u);
   });
 
+  it.each([
+    [
+      'English true/false instruction',
+      { en: 'Answer true or false: basalt is an igneous rock.', et: 'Millist kivimit kirjeldatakse?' },
+      { en: 'True', et: 'Tõene' },
+    ],
+    [
+      'Estonian yes/no instruction',
+      { en: 'Identify the requested response format.', et: 'Vasta jah või ei: basalt on tardkivim.' },
+      { en: 'Yes', et: 'Jah' },
+    ],
+  ])('rejects an imperative %s', (_kind, clue, response) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue,
+      response,
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/binary or multiple-choice/u);
+  });
+
+  it.each([
+    [
+      'Asub',
+      'Asub Pariisis ja valmis 1889. aastal. Mis ehitis see on?',
+      'The Eiffel Tower',
+      'Eiffeli torn',
+    ],
+    [
+      'Sisaldab',
+      'Sisaldab 14 rida ja kindla riimiskeemi. Mis luulevorm see on?',
+      'A sonnet',
+      'Sonett',
+    ],
+    [
+      'Tähendab',
+      'Tähendab eluslooduse mitmekesisust. Mis termin see on?',
+      'Biodiversity',
+      'Elurikkus',
+    ],
+  ])('allows open-answer Estonian prose beginning with %s', (_verb, et, enResponse, etResponse) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en: 'Which subject is described?', et },
+      response: { en: enResponse, et: etResponse },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
   it('allows an or-construction that describes a concept instead of offering answer choices', () => {
     const expected = target('target-a');
     const base = category(expected);
@@ -556,6 +655,21 @@ describe('validatePlayableCorpus', () => {
         et: 'Milline loogikatermin tähistab väidet, mis on kas tõene või väär?',
       },
       response: { en: 'Proposition', et: 'Propositsioon' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
+  it('allows current as a stable noun rather than a current-time cue', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Which ocean current warms Western Europe?',
+        et: 'Milline hoovus soojendab Lääne-Euroopat?',
+      },
+      response: { en: 'The Gulf Stream', et: 'Golfi hoovus' },
     });
 
     expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
@@ -631,6 +745,45 @@ describe('validatePlayableCorpus', () => {
     });
 
     expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
+  });
+
+  it.each([
+    [
+      'English',
+      'Who is the president of Exampleland on January 1, 2024?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      'Kes on Näitemaa president 1. jaanuaril 2024?',
+    ],
+  ])('accepts a changing role framed by an explicit %s calendar date', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const dated = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
+  });
+
+  it('does not let an unrelated calendar date frame a current officeholder', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const undatedCurrentRole = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Founded on January 1, 1900, who is currently the chief executive of Example Company?',
+        et: 'Kes on 1. jaanuaril 1900 asutatud Näidisettevõtte praegune tegevjuht?',
+      },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([undatedCurrentRole], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
   });
 
   it('does not let an unrelated historic year date a current officeholder', () => {
