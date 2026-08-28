@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { applyAccessibleEasyQuestions, buildAccessibleEasyQuestions } from './accessibleEasy';
+import { selectRemovedOpenTdbInspirations } from './accessibleEasyEvidence';
 import { parseEvidenceJsonl, serializeEvidence } from './evidence';
 import { getProductionBatch } from './productionBatches';
 
@@ -38,14 +39,7 @@ for (const batchId of batchIds) {
   const allEvidence = [...parseEvidenceJsonl(readFileSync(evidencePath, 'utf8'), evidencePath).values()];
   const existingEvidence = allEvidence.filter((record) => !removedClueIds.has(record.clueId));
   const requiredOpenTdb = getProductionBatch(batchId).requiredOpenTdbClues;
-  const retainedOpenTdb = existingEvidence.filter((record) => record.origin === 'openTdbInspired');
-  const neededOpenTdb = requiredOpenTdb - retainedOpenTdb.length;
-  const inspirations = retainedOpenTdb
-    .flatMap((record) => record.inspiration === null ? [] : [record.inspiration])
-    .slice(0, neededOpenTdb);
-  if (inspirations.length !== neededOpenTdb) {
-    throw new Error(`${batchId} cannot retain its OpenTDB composition quota`);
-  }
+  const inspirations = selectRemovedOpenTdbInspirations(allEvidence, removedClueIds, requiredOpenTdb);
   const generatedResult = applyAccessibleEasyQuestions(generated, batchQuestions, inspirations);
   if (preliminaryGeneratedResult.rows.length !== generatedResult.rows.length) {
     throw new Error(`${batchId} generated replacement row count changed unexpectedly`);
