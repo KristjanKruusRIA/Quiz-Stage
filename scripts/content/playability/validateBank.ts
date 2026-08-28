@@ -155,6 +155,15 @@ function isPureDatePreamble(value: string | undefined, language: 'en' | 'et'): b
     .test(value);
 }
 
+function hasLeadingDatePreamble(value: string, language: 'en' | 'et'): boolean {
+  if (language === 'en') {
+    return /^\s*as of\s+(?:1[5-9]\d{2}|20\d{2}|2100)(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)\s*\S/iu
+      .test(value);
+  }
+  return /^\s*(?:(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga|seisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100))(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)\s*\S/iu
+    .test(value);
+}
+
 function isValidCalendarDate(year: number, month: number, day: number): boolean {
   const date = new Date(Date.UTC(year, month, day));
   return date.getUTCFullYear() === year
@@ -182,6 +191,7 @@ function hasValidEstonianCalendarDate(value: string): boolean {
 }
 
 function hasExplicitDate(value: string, language: 'en' | 'et'): boolean {
+  if (hasLeadingDatePreamble(value, language)) return true;
   const { clause, precedingPreamble } = changingRelationScope(value, language);
   if (isPureDatePreamble(precedingPreamble, language)) return true;
   if (language === 'en') {

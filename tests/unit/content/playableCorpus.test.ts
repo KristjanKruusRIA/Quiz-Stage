@@ -755,6 +755,47 @@ describe('validatePlayableCorpus', () => {
     expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
+  it.each([
+    ['reviewed current-role wording', 'As of 2024, who is the current U.S. president?'],
+    ['explicit current-time cue', 'As of 2024, who is currently the U.S. president?'],
+  ])('accepts a leading as-of preamble before an abbreviation with %s', (_kind, clue) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: clue,
+        et: 'Milline ametikoht on siin kirjeldatud?',
+      },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
+  it.each([
+    [
+      'English',
+      'As of 2024, according to the official register, who is the current president?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      '2024. aasta seisuga, ametliku registri järgi, kes on praegune president?',
+    ],
+  ])('accepts a leading %s as-of preamble before an intervening phrase', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
   it('rejects an undated changing relation even without a current-time keyword', () => {
     const expected = target('target-a');
     const base = category(expected);
