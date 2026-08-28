@@ -13,8 +13,26 @@ import { join, resolve } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { afterEach, describe, expect, it } from 'vitest';
+import {
+  REVIEWED_DATE_OR_NUMBER_PROMPT_OWNERS,
+  REVIEWED_NUMERIC_RESPONSE_OWNERS,
+} from './reviewedAccessibleCorpusFlags';
+import {
+  REVIEWED_DISTINCT_EASY_PRIMARY_ALIAS_GROUPS,
+  REVIEWED_DISTINCT_EASY_RESPONSE_GROUPS,
+  REVIEWED_DISTINCT_EASY_SOURCE_OWNER_GROUPS,
+  REVIEWED_DISTINCT_EASY_VARIANT_ALIAS_GROUPS,
+} from './reviewedRepeatedEasyFacts';
 import { applyAccessibleCorpus } from '../../../scripts/content/accessibility/apply';
-import { validateAccessibleCorpus } from '../../../scripts/content/accessibility/bank';
+import { createHash } from 'node:crypto';
+import {
+  buildAccessibleCorpus,
+  validateAccessibleCorpus,
+} from '../../../scripts/content/accessibility/bank';
+import { ART_MYTHOLOGY_CATEGORIES } from '../../../scripts/content/accessibility/banks/artMythology';
+import { GEOGRAPHY_SCIENCE_FOOD_CATEGORIES } from '../../../scripts/content/accessibility/banks/geographyScienceFood';
+import { HISTORY_LITERATURE_SCREEN_CATEGORIES } from '../../../scripts/content/accessibility/banks/historyLiteratureScreen';
+import { SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES } from '../../../scripts/content/accessibility/banks/societyTechnologyCulture';
 import { ACCESSIBLE_CATEGORY_TITLES } from '../../../scripts/content/accessibility/categoryNames';
 import {
   ACCESSIBLE_EASY_SET_IDS,
@@ -89,6 +107,73 @@ function acceptedEasySets(): Map<string, Readonly<{
   return sets;
 }
 
+type ProposedEasyCorpus = Readonly<{
+  rows: readonly Record<string, string>[];
+  evidence: readonly ContentEvidence[];
+}>;
+
+function acceptedRows(path: string): readonly Record<string, string>[] {
+  return parse(readFileSync(path, 'utf8'), {
+    columns: true,
+    skip_empty_lines: true,
+  }) as Array<Record<string, string>>;
+}
+
+function acceptedEvidence(path: string): readonly ContentEvidence[] {
+  return readFileSync(path, 'utf8')
+    .split(/\r?\n/u)
+    .filter((line) => line.trim() !== '')
+    .map((line) => JSON.parse(line) as ContentEvidence);
+}
+
+function proposedEasyCorpus(): ProposedEasyCorpus {
+  const categories = buildAccessibleCorpus();
+  const rows: Record<string, string>[] = [];
+  const evidence: ContentEvidence[] = [];
+
+  for (const batchId of ACCEPTED_BATCHES) {
+    const targetCategorySetIds = new Set(
+      LEGACY_EASY_TARGETS
+        .filter((target) => target.batchId === batchId)
+        .map(({ categorySetId }) => categorySetId),
+    );
+    const result = applyAccessibleCorpus({
+      authoredRows: acceptedRows(resolve('content', 'authored', `${batchId}.csv`)),
+      generatedRows: acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`)),
+      evidence: acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`)),
+      targetCategorySetIds,
+      titles: ACCESSIBLE_CATEGORY_TITLES.filter((title) => title.batchId === batchId),
+      categories: categories.filter((category) => category.batchId === batchId),
+    });
+    const easyRows = result.generatedRows.filter((row) =>
+      row.content_kind === 'board' && row.difficulty === 'easy');
+    const easyClueIds = new Set(easyRows.map((row) => row.clue_id));
+    rows.push(...easyRows);
+    evidence.push(...result.evidence.filter((record) => easyClueIds.has(record.clueId)));
+  }
+
+  return { rows, evidence };
+}
+
+function acceptedInspirationDuplicates(): readonly Readonly<{
+  batchId: string;
+  candidateId: string;
+  clueIds: readonly string[];
+}>[] {
+  return ACCEPTED_BATCHES.flatMap((batchId) => {
+    const clueIdsByCandidate = new Map<string, string[]>();
+    for (const record of acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`))) {
+      if (record.inspiration === null) continue;
+      const clueIds = clueIdsByCandidate.get(record.inspiration.candidateId) ?? [];
+      clueIds.push(record.clueId);
+      clueIdsByCandidate.set(record.inspiration.candidateId, clueIds);
+    }
+    return [...clueIdsByCandidate]
+      .filter(([, clueIds]) => clueIds.length > 1)
+      .map(([candidateId, clueIds]) => ({ batchId, candidateId, clueIds }));
+  });
+}
+
 function normalized(value: string): string {
   return value
     .normalize('NFKC')
@@ -96,6 +181,25 @@ function normalized(value: string): string {
     .replace(/\p{P}+/gu, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function acceptedVariants(value: string): string[] {
+  if (value === '') return [];
+  const variants: string[] = [];
+  let current = '';
+  let escaped = false;
+  for (const character of value) {
+    if (escaped) {
+      current += character;
+      escaped = false;
+    } else if (character === '\\') escaped = true;
+    else if (character === ';') {
+      variants.push(current);
+      current = '';
+    } else current += character;
+  }
+  variants.push(current);
+  return variants;
 }
 
 function containsNormalizedPhrase(value: string, phrase: string): boolean {
@@ -497,6 +601,492 @@ describe('accessible corpus ledgers', () => {
         ).toBe(false);
       }
     }
+  });
+});
+
+describe('buildAccessibleCorpus', () => {
+  it('assembles every replacement category in target-ledger order', () => {
+    const categories = buildAccessibleCorpus();
+
+    expect(categories).toHaveLength(320);
+    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(1_600);
+    expect(categories.map(({ categorySetId }) => categorySetId)).toEqual(
+      LEGACY_EASY_TARGET_IDS,
+    );
+  });
+
+  it('meets every lane and accepted-batch allocation', () => {
+    const lanes = [
+      ART_MYTHOLOGY_CATEGORIES,
+      SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
+      GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
+      HISTORY_LITERATURE_SCREEN_CATEGORIES,
+    ] as const;
+    const categories = buildAccessibleCorpus();
+
+    expect(lanes.map((lane) => lane.length)).toEqual([66, 100, 77, 77]);
+    expect(lanes.map((lane) => lane.flatMap(({ questions }) => questions).length)).toEqual(
+      [330, 500, 385, 385],
+    );
+    expect(ACCEPTED_BATCHES.map((batchId) =>
+      categories.filter((category) => category.batchId === batchId).length)).toEqual(
+      EXPECTED_TARGETS_BY_BATCH,
+    );
+  });
+
+  it('keeps direct lane imports validated against their exact target slices', () => {
+    for (const lane of [
+      ART_MYTHOLOGY_CATEGORIES,
+      SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
+      GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
+      HISTORY_LITERATURE_SCREEN_CATEGORIES,
+    ]) {
+      const laneIds = new Set(lane.map(({ categorySetId }) => categorySetId));
+      const targets = LEGACY_EASY_TARGETS.filter(({ categorySetId }) =>
+        laneIds.has(categorySetId));
+      expect(validateAccessibleCorpus(lane, targets)).toEqual(lane);
+    }
+  });
+
+  it('has globally unique authored identities and consistent subject keys', () => {
+    const questions = buildAccessibleCorpus().flatMap(({ questions }) => questions);
+    const questionKeys = questions.map(({ key }) => key);
+    const clueAnswerPairs = questions.map(({ clue, response }) =>
+      `${normalized(clue.en)}\0${normalized(response.en)}\0${normalized(clue.et)}\0${normalized(response.et)}`);
+    const responsesBySubject = new Map<string, Set<string>>();
+    const subjectsByResponse = new Map<string, Set<string>>();
+
+    for (const question of questions) {
+      const responseIdentity = `${normalized(question.response.en)}\0${normalized(question.response.et)}`;
+      const factIdentity = [
+        normalized(question.response.en),
+        normalized(question.response.et),
+        normalized(question.source.url),
+      ].join('\0');
+      const responses = responsesBySubject.get(question.subjectKey) ?? new Set<string>();
+      responses.add(responseIdentity);
+      responsesBySubject.set(question.subjectKey, responses);
+      const subjects = subjectsByResponse.get(factIdentity) ?? new Set<string>();
+      subjects.add(question.subjectKey);
+      subjectsByResponse.set(factIdentity, subjects);
+    }
+
+    expect(new Set(questionKeys).size).toBe(1_600);
+    expect(new Set(clueAnswerPairs).size).toBe(1_600);
+    const conflictingIdentities = [...subjectsByResponse]
+      .filter(([, subjects]) => subjects.size > 1);
+    const kalevipoegAmbiguity = conflictingIdentities.filter(([identity]) =>
+      identity.startsWith('kalevipoeg\0kalevipoeg\0'));
+
+    expect([...responsesBySubject].filter(([, responses]) => responses.size > 1)).toEqual([]);
+    expect(kalevipoegAmbiguity).toHaveLength(1);
+    expect(kalevipoegAmbiguity[0]![1]).toEqual(
+      new Set(['work:kalevipoeg', 'myth:kalevipoeg']),
+    );
+    expect(conflictingIdentities.filter(([identity]) =>
+      !identity.startsWith('kalevipoeg\0kalevipoeg\0'))).toEqual([]);
+  });
+
+  it('locks every deferred bilingual and difficulty-ladder ruling', () => {
+    const categories = buildAccessibleCorpus();
+    const questions = categories.flatMap(({ questions }) => questions);
+    const findQuestion = (keyFragment: string): AccessibleQuestion => {
+      const matches = questions.filter(({ key }) => key.includes(keyFragment));
+      expect(matches, keyFragment).toHaveLength(1);
+      return matches[0]!;
+    };
+    const responses = (categorySetId: string): readonly string[] =>
+      categories.find((category) => category.categorySetId === categorySetId)!.questions
+        .map((question) => question.response.en);
+
+    expect(findQuestion('art-primary-colours-ryb-blue').clue.et).toContain(
+      'põhivärvide hulka',
+    );
+    expect(findQuestion('art-sculpture-material-wood').clue.en).toBe(
+      'What material is a sculptor carving when gouges reveal a figure inside a tree trunk?',
+    );
+    expect(findQuestion('religion-festival-christmas-nativity').explanation.et).toContain(
+      'Jõulud tähistavad Jeesuse sündi',
+    );
+    expect(findQuestion('religion-text-talmud-mishnah-gemara').clue.en).toContain(
+      'consists of the Mishnah together with the Gemara',
+    );
+    expect(findQuestion('front-crawl-fast-freestyle-stroke').acceptedVariants.et).not.toContain(
+      'vabaujumine',
+    );
+    expect(findQuestion('steam-locomotive-powered-by-boiler').acceptedVariants.et).not.toContain(
+      'aururong',
+    );
+    expect(findQuestion('royal-flush-ten-to-ace').clue.et).toBe(
+      'Milline pokkerikäsi koosneb sama masti kümnest, soldatist, emandast, kuningast ja ässast?',
+    );
+    expect(findQuestion('date-line-pacific').clue.et).toContain('piiri, mille ületamisel');
+    expect(findQuestion('croissant-layered-pastry').clue.et).toContain(
+      'korduva tainasse voltimise',
+    );
+    expect(findQuestion('bat-powered-flight').clue.et).toBe(
+      'Millised imetajad suudavad tiibade abil kestvalt lennata?',
+    );
+    expect(findQuestion('medieval-castles-portcullis').response.et).toBe('Langevõre');
+    expect(findQuestion('idioms-under-the-weather').response.et).toBe('Haige');
+    expect(responses('built-in-geography-set-065')).toEqual(
+      ['Iceland', 'Norway', 'Finland', 'Sweden', 'Denmark'],
+    );
+    expect(responses('built-in-history-set-043')).toEqual(
+      ['Suffragettes', 'New Zealand', 'Finland', 'Emmeline Pankhurst', 'The Nineteenth Amendment'],
+    );
+    expect(responses('built-in-history-set-053')).toEqual(
+      ['Egyptian hieroglyphs', 'The Rosetta Stone', 'Cuneiform', 'The Phoenician alphabet', 'Linear A'],
+    );
+    expect(responses('built-in-science-nature-set-029')).toEqual(
+      ['Hedgehog', 'Dolphin', 'Koala', 'Bats', 'Platypus'],
+    );
+    expect(responses('built-in-food-drink-set-025')).toEqual(
+      ['Pineapple juice', 'Apple juice', 'Tomato juice', 'Cranberry juice', 'Grapefruit juice'],
+    );
+    expect(responses('built-in-food-drink-set-010')).toEqual(
+      ['Carrot', 'Onion', 'Radish', 'Broccoli', 'Asparagus'],
+    );
+    expect(responses('built-in-mythology-religion-philosophy-set-009')).toEqual(
+      ['amber', 'the fern flower', 'a hiis', 'Velnias', 'Jūratė'],
+    );
+    expect(responses('built-in-science-nature-set-030')).toEqual(
+      ['Frog', 'Snake', 'Turtle', 'Salamander', 'Crocodile'],
+    );
+  });
+
+  it('records deterministic authored-line review flags', () => {
+    const questions = buildAccessibleCorpus().flatMap(({ questions }) => questions);
+    const longResponses = questions.filter((question) =>
+      Math.max(question.response.en.length, question.response.et.length) >= 40);
+    const listResponses = questions.filter((question) =>
+      /[,;]/u.test(question.response.en) || /[,;]/u.test(question.response.et));
+    const dateOrNumberPrompts = questions.filter((question) =>
+      /\b(?:1[0-9]{3}|20[0-9]{2}|\d{2,})\b/u.test(question.clue.en)
+      || /\b(?:1[0-9]{3}|20[0-9]{2}|\d{2,})\b/u.test(question.clue.et));
+    const numericResponses = questions.filter((question) =>
+      /^\s*[\d.,-]+\s*$/u.test(question.response.en)
+      || /^\s*[\d.,-]+\s*$/u.test(question.response.et));
+    const identicalProse = questions.filter((question) =>
+      normalized(question.clue.en) === normalized(question.clue.et));
+
+    expect(longResponses).toEqual([]);
+    expect(listResponses.map(({ key }) => key)).toEqual([
+      'accessible-corpus:built-in-geography-set-015:united-states-capital-washington',
+    ]);
+    expect(dateOrNumberPrompts).toHaveLength(77);
+    expect(numericResponses).toEqual([]);
+    expect(identicalProse).toEqual([]);
+  });
+
+  it('locks the complete bilingual editorial sample population', () => {
+    const authoredEdges = buildAccessibleCorpus().flatMap((category) =>
+      category.questions.filter(({ tier }) => tier === 1 || tier === 5));
+    const accepted = acceptedEasySets();
+    const retainedEdges = [...accepted]
+      .filter(([categorySetId]) => ACCESSIBLE_EASY_SET_IDS.includes(
+        categorySetId as (typeof ACCESSIBLE_EASY_SET_IDS)[number],
+      ))
+      .flatMap(([, category]) => category.responses.filter((_, index) => index === 0 || index === 4));
+
+    expect(ACCESSIBLE_CATEGORY_TITLES).toHaveLength(400);
+    expect(authoredEdges).toHaveLength(640);
+    expect(retainedEdges).toHaveLength(160);
+  });
+});
+
+describe('proposed complete easy corpus', () => {
+  it('starts from unique accepted OpenTDB candidate ownership', () => {
+    const duplicates = acceptedInspirationDuplicates();
+
+    expect(duplicates).toEqual([]);
+    expect(() => proposedEasyCorpus()).not.toThrow();
+  });
+
+  it('applies all 400 titles and 1,600 replacements in memory without changing inventory', () => {
+    const proposed = proposedEasyCorpus();
+    const sets = new Map<string, Record<string, string>[]>();
+    for (const row of proposed.rows) {
+      const existing = sets.get(row.category_set_id) ?? [];
+      existing.push(row);
+      sets.set(row.category_set_id, existing);
+    }
+    const titleById = new Map<string, CategoryTitle>(ACCESSIBLE_CATEGORY_TITLES.map((title) => [
+      title.categorySetId,
+      title,
+    ]));
+
+    expect(proposed.rows).toHaveLength(2_000);
+    expect(sets.size).toBe(400);
+    expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-corpus-'))).toHaveLength(
+      1_600,
+    );
+    expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-easy-'))).toHaveLength(
+      400,
+    );
+    for (const [categorySetId, categoryRows] of sets) {
+      const title = titleById.get(categorySetId)!;
+      expect(categoryRows.map(({ tier }) => tier).sort()).toEqual(['1', '2', '3', '4', '5']);
+      expect(new Set(categoryRows.map(({ category_name_en }) => category_name_en))).toEqual(
+        new Set([title.name.en]),
+      );
+      expect(new Set(categoryRows.map(({ category_name_et }) => category_name_et))).toEqual(
+        new Set([title.name.et]),
+      );
+    }
+  });
+
+  it('has no duplicate facts, clue-answer pairs, title/answer leaks, or repeated set subjects', () => {
+    const proposed = proposedEasyCorpus();
+    const evidenceByClueId = new Map(proposed.evidence.map((record) => [record.clueId, record]));
+    const factKeys = proposed.evidence.map(({ factKey }) => factKey);
+    const bilingualPairs = proposed.rows.map((row) => [
+      normalized(row.clue_en), normalized(row.response_en),
+      normalized(row.clue_et), normalized(row.response_et),
+    ].join('\0'));
+    const answerLeaks: string[] = [];
+    const subjectsBySet = new Map<string, string[]>();
+
+    for (const row of proposed.rows) {
+      for (const language of ['en', 'et'] as const) {
+        if (
+          containsNormalizedPhrase(row[`clue_${language}`]!, row[`response_${language}`]!)
+          || containsNormalizedPhrase(
+            row[`category_name_${language}`]!,
+            row[`response_${language}`]!,
+          )
+        ) {
+          answerLeaks.push(`${row.clue_id}:${language}`);
+        }
+      }
+      const subjects = subjectsBySet.get(row.category_set_id) ?? [];
+      subjects.push(evidenceByClueId.get(row.clue_id!)!.subjectKey!);
+      subjectsBySet.set(row.category_set_id, subjects);
+    }
+
+    expect(new Set(factKeys).size).toBe(2_000);
+    expect(new Set(bilingualPairs).size).toBe(2_000);
+    expect.soft(answerLeaks).toEqual([]);
+    expect.soft(
+      [...subjectsBySet].filter(([, subjects]) => new Set(subjects).size !== 5),
+    ).toEqual([]);
+  });
+
+  it('locks every reviewed repeated response, subject owner, and distinct proposition', () => {
+    const proposed = proposedEasyCorpus();
+    const evidenceByClueId = new Map(proposed.evidence.map((record) => [record.clueId, record]));
+    const rowsByResponse = new Map<string, Record<string, string>[]>();
+
+    for (const row of proposed.rows) {
+      const responseIdentity = [
+        normalized(row.response_en).replace(/^(?:a|an|the)\s+/u, ''),
+        normalized(row.response_et),
+      ].join('|');
+      const rows = rowsByResponse.get(responseIdentity) ?? [];
+      rows.push(row);
+      rowsByResponse.set(responseIdentity, rows);
+    }
+
+    const reviewedGroups = [...rowsByResponse]
+      .filter(([, rows]) => rows.length > 1)
+      .map(([responseIdentity, rows]) => `${responseIdentity}::${rows.map((row) => {
+        const propositionHash = createHash('sha256')
+          .update([
+            normalized(row.clue_en),
+            normalized(row.clue_et),
+            normalized(row.response_en),
+            normalized(row.response_et),
+          ].join('\0'))
+          .digest('hex')
+          .slice(0, 12);
+        return [
+          row.clue_id,
+          evidenceByClueId.get(row.clue_id)!.subjectKey,
+          propositionHash,
+        ].join('@');
+      }).sort().join(',')}`)
+      .sort();
+
+    expect(reviewedGroups).toEqual(REVIEWED_DISTINCT_EASY_RESPONSE_GROUPS);
+  });
+
+  it('locks reviewed primary-response aliases with different bilingual labels', () => {
+    const proposed = proposedEasyCorpus();
+    const evidenceByClueId = new Map(proposed.evidence.map((record) => [record.clueId, record]));
+    const rowsByLanguageResponse = new Map<string, Record<string, string>[]>();
+
+    for (const row of proposed.rows) {
+      for (const language of ['en', 'et'] as const) {
+        const responseIdentity = [
+          language,
+          normalized(row[`response_${language}`]).replace(/^(?:a|an|the)\s+/u, ''),
+        ].join('|');
+        const rows = rowsByLanguageResponse.get(responseIdentity) ?? [];
+        rows.push(row);
+        rowsByLanguageResponse.set(responseIdentity, rows);
+      }
+    }
+
+    const aliasGroups = [...rowsByLanguageResponse]
+      .filter(([, rows]) =>
+        rows.length > 1 && new Set(rows.map((row) => [
+          normalized(row.response_en).replace(/^(?:a|an|the)\s+/u, ''),
+          normalized(row.response_et),
+        ].join('|'))).size > 1)
+      .map(([responseIdentity, rows]) => `${responseIdentity}::${rows.map((row) => {
+        const propositionHash = createHash('sha256')
+          .update([
+            normalized(row.clue_en),
+            normalized(row.clue_et),
+            normalized(row.response_en),
+            normalized(row.response_et),
+          ].join('\0'))
+          .digest('hex')
+          .slice(0, 12);
+        return [
+          row.clue_id,
+          normalized(row.response_et),
+          evidenceByClueId.get(row.clue_id)!.subjectKey,
+          propositionHash,
+        ].join('@');
+      }).sort().join(',')}`)
+      .sort();
+
+    expect(aliasGroups).toEqual(REVIEWED_DISTINCT_EASY_PRIMARY_ALIAS_GROUPS);
+  });
+
+  it('locks reviewed accepted-variant aliases with different primary labels', () => {
+    const proposed = proposedEasyCorpus();
+    const evidenceByClueId = new Map(proposed.evidence.map((record) => [record.clueId, record]));
+    const ownersByAlias = new Map<string, Record<string, string>[]>();
+
+    for (const row of proposed.rows) {
+      for (const language of ['en', 'et'] as const) {
+        const aliases = [
+          row[`response_${language}`],
+          ...acceptedVariants(row[`accepted_variants_${language}`]),
+        ].map((value) => normalized(value).replace(/^(?:a|an|the)\s+/u, ''));
+        for (const alias of new Set(aliases)) {
+          const identity = `${language}|${alias}`;
+          const rows = ownersByAlias.get(identity) ?? [];
+          rows.push(row);
+          ownersByAlias.set(identity, rows);
+        }
+      }
+    }
+
+    const variantAliasGroups = [...ownersByAlias]
+      .filter(([identity, rows]) => {
+        const language = identity.slice(0, 2) as 'en' | 'et';
+        return rows.length > 1 && new Set(rows.map((row) =>
+          normalized(row[`response_${language}`]).replace(/^(?:a|an|the)\s+/u, ''))).size > 1;
+      })
+      .map(([identity, rows]) => `${identity}::${rows.map((row) => {
+        const propositionHash = createHash('sha256')
+          .update([
+            normalized(row.clue_en),
+            normalized(row.clue_et),
+            normalized(row.response_en),
+            normalized(row.response_et),
+          ].join('\0'))
+          .digest('hex')
+          .slice(0, 12);
+        return [
+          row.clue_id,
+          evidenceByClueId.get(row.clue_id)!.subjectKey,
+          propositionHash,
+        ].join('@');
+      }).sort().join(',')}`)
+      .sort();
+
+    expect(variantAliasGroups).toEqual(REVIEWED_DISTINCT_EASY_VARIANT_ALIAS_GROUPS);
+  });
+
+  it('locks every reviewed repeated supporting-source owner and proposition', () => {
+    const proposed = proposedEasyCorpus();
+    const evidenceByClueId = new Map(proposed.evidence.map((record) => [record.clueId, record]));
+    const rowsBySourceUrl = new Map<string, Record<string, string>[]>();
+
+    for (const row of proposed.rows) {
+      const sourceUrl = row.source_url.trim().toLocaleLowerCase('en');
+      const rows = rowsBySourceUrl.get(sourceUrl) ?? [];
+      rows.push(row);
+      rowsBySourceUrl.set(sourceUrl, rows);
+    }
+
+    const reviewedSourceOwners = [...rowsBySourceUrl]
+      .filter(([, rows]) => rows.length > 1)
+      .map(([sourceUrl, rows]) => `${sourceUrl}::${rows.map((row) => {
+        const propositionHash = createHash('sha256')
+          .update([
+            normalized(row.clue_en),
+            normalized(row.clue_et),
+            normalized(row.response_en),
+            normalized(row.response_et),
+          ].join('\0'))
+          .digest('hex')
+          .slice(0, 12);
+        return [
+          row.clue_id,
+          evidenceByClueId.get(row.clue_id)!.subjectKey,
+          propositionHash,
+        ].join('@');
+      }).sort().join(',')}`)
+      .sort();
+
+    expect(reviewedSourceOwners).toEqual(REVIEWED_DISTINCT_EASY_SOURCE_OWNER_GROUPS);
+  });
+
+  it('locks every final-corpus long, list, date, number, and identical-prose review owner', () => {
+    const rows = proposedEasyCorpus().rows;
+    const ids = (selected: readonly Record<string, string>[]) =>
+      selected.map(({ clue_id }) => clue_id).sort();
+    const reviewedOwners = (selected: readonly Record<string, string>[]) =>
+      selected.map((row) => `${row.clue_id}@${createHash('sha256')
+        .update([
+          normalized(row.clue_en),
+          normalized(row.clue_et),
+          normalized(row.response_en),
+          normalized(row.response_et),
+        ].join('\0'))
+        .digest('hex')
+        .slice(0, 12)}`).sort();
+    const longResponses = rows.filter((row) =>
+      Math.max(row.response_en.length, row.response_et.length) >= 40);
+    const listResponses = rows.filter((row) =>
+      /[,;]/u.test(row.response_en) || /[,;]/u.test(row.response_et));
+    const dateOrNumberPrompts = rows.filter((row) =>
+      /\b(?:1[0-9]{3}|20[0-9]{2}|\d{2,})\b/u.test(row.clue_en)
+      || /\b(?:1[0-9]{3}|20[0-9]{2}|\d{2,})\b/u.test(row.clue_et));
+    const numericResponses = rows.filter((row) =>
+      /^\s*[\d.,-]+\s*$/u.test(row.response_en)
+      || /^\s*[\d.,-]+\s*$/u.test(row.response_et));
+    const identicalProse = rows.filter((row) =>
+      normalized(row.clue_en) === normalized(row.clue_et));
+
+    expect(ids(longResponses)).toEqual([]);
+    expect(ids(listResponses)).toEqual(['built-in-geography-accessible-corpus-061']);
+    expect(reviewedOwners(dateOrNumberPrompts)).toEqual(REVIEWED_DATE_OR_NUMBER_PROMPT_OWNERS);
+    expect(reviewedOwners(numericResponses)).toEqual(REVIEWED_NUMERIC_RESPONSE_OWNERS);
+    expect(ids(identicalProse)).toEqual([]);
+  });
+
+  it('contains no binary prompts or banned generic titles', () => {
+    const proposed = proposedEasyCorpus();
+    const binary = proposed.rows.filter((row) =>
+      /^(?:am|are|can|could|did|do|does|had|has|have|is|should|was|were|will|would)\b|\b(?:true\s*(?:or\s*)?false|yes\s*(?:or\s*)?no)\b/iu.test(
+        normalized(row.clue_en),
+      )
+      || /^(?:kas|on|olid|oli|saab|võib)\b|\b(?:jah\s*(?:või\s*)?ei|tõene\s*(?:või\s*)?väär)\b/iu.test(
+        normalized(row.clue_et),
+      ));
+    const bannedTitle = /\b(?:mix|medley|sampler|grab bag|odds ends|potpourri|roundup|tour|quiz|challenge)\b/iu;
+    const banned = proposed.rows.filter((row) =>
+      bannedTitle.test(normalized(row.category_name_en))
+      || bannedTitle.test(normalized(row.category_name_et)));
+
+    expect(binary.map(({ clue_id }) => clue_id)).toEqual([]);
+    expect(banned.map(({ category_set_id }) => category_set_id)).toEqual([]);
   });
 });
 

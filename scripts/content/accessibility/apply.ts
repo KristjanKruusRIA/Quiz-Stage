@@ -1,6 +1,9 @@
 import { contentEvidenceSchema, type ContentEvidence } from '../evidence';
 import { validateAccessibleCorpus } from './bank';
-import { applyRetainedEasyClueCorrection } from './retainedClueCorrections';
+import {
+  applyRetainedEasyClueCorrection,
+  applyRetainedEasyEvidenceCorrection,
+} from './retainedClueCorrections';
 import type { AccessibleCategory, AccessibleQuestion, CategoryTitle } from './types';
 
 const INVENTORY_COLUMNS = [
@@ -332,7 +335,9 @@ export function applyAccessibleCorpus(input: Readonly<{
     replacement.removed,
   ));
   const evidence = [
-    ...input.evidence.filter((record) => !targetOldIds.has(record.clueId)),
+    ...input.evidence
+      .filter((record) => !targetOldIds.has(record.clueId))
+      .map((record) => applyRetainedEasyEvidenceCorrection(record, retainedClueIds)),
     ...replacementEvidence,
   ].sort((left, right) => compareCodeUnits(left.clueId, right.clueId));
 
