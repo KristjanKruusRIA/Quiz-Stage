@@ -1347,11 +1347,11 @@ const rawCategories = [
       'Germanic_languages', [['Germanic'], ['Germaani keelerühm']],
     ],
     [
-      'language-families-romance-latin-ancestor', 'language:latin',
-      ['Spanish, French, Italian, Portuguese, and Romanian all developed from what ancient language?', 'Millisest muistsest keelest arenesid hispaania, prantsuse, itaalia, portugali ja rumeenia keel?'],
-      ['Latin', 'Ladina keel'],
-      ['Varieties of spoken Latin developed into the modern Romance languages.', 'Kõneldud ladina keele variantidest arenesid tänapäeva romaani keeled.'],
-      'Latin', [['Latin language'], ['Ladina']],
+      'language-families-basque-isolate', 'language:basque',
+      ['What language spoken on both sides of the western Pyrenees is an isolate with no known living relatives?', 'Millist läänepoolsete Püreneede mõlemal küljel kõneldavat keelt peetakse isoleeritud keeleks, millel pole teadaolevaid elavaid sugulaskeeli?'],
+      ['Basque', 'Baski keel'],
+      ['Unlike the surrounding Romance languages, Basque has no demonstrated family relationship to another surviving language.', 'Erinevalt ümbritsevatest romaani keeltest pole baski keele sugulust ühegi teise elava keelega tõendatud.'],
+      'Basque_language', [['Euskara'], ['Baski', 'Euskara']],
     ],
     [
       'language-families-russian-slavic', 'concept:slavic-languages',
