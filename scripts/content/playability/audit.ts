@@ -226,7 +226,7 @@ export const auditPlayability = (
     }
   }
   for (const [categoryId, subjects] of categorySubjects) {
-    if ([...subjects.values()].some((clueIds) => clueIds.size >= 2)) {
+    if ([...subjects.values()].some((clueIds) => clueIds.size >= 3)) {
       addReason(categoryReasons, categoryId, 'incoherent-source-fanout');
     }
   }

@@ -263,6 +263,23 @@ describe('playability audit', () => {
     });
   });
 
+  it('allows exactly two clues in a category to share one primary subject', () => {
+    const audit = auditPlayability([
+      row({
+        clue_id: 'shared-subject-one',
+        category_set_id: 'two-shared-subjects',
+        subject_key: 'shared-subject',
+      }),
+      row({
+        clue_id: 'shared-subject-two',
+        category_set_id: 'two-shared-subjects',
+        subject_key: 'shared-subject',
+      }),
+    ]);
+
+    expect(audit.categoryReasons.get('two-shared-subjects')).toBeUndefined();
+  });
+
   it('keeps fair medium and hard clue constructions free of keyword-only findings', () => {
     const fairRows = [
       row({
