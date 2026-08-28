@@ -351,6 +351,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-science-nature-set-045', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'How Plants Read Their World', et: 'Kuidas taimed keskkonda tajuvad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-045:seed-dormancy-pause', factKey: 'science-nature:seed-dormancy-pause', tier: 1, subjectKey: 'state:seed-dormancy',
+        clue: { en: 'A viable seed can pause growth until light, moisture, or temperature becomes favourable. What is this waiting state called?', et: 'Elujõuline seeme võib kasvu peatada, kuni valgus-, niiskus- või temperatuuriolud muutuvad soodsaks. Kuidas seda ooteolekut nimetatakse?' }, response: { en: 'dormancy', et: 'puhkeolek' }, acceptedVariants: { en: ['seed dormancy'], et: ['seemne puhkeolek'] },
+        explanation: { en: 'Dormancy prevents a seed from sprouting when conditions are unsuitable for the young plant.', et: 'Puhkeolek takistab seemnel idaneda ajal, mil tingimused on noorele taimele ebasoodsad.' },
+        source: { sourceId: 'wikipedia:seed-dormancy-conditions', title: 'Seed dormancy', url: 'https://en.wikipedia.org/wiki/Seed_dormancy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-045:stomata-leaf-pores', factKey: 'science-nature:stomata-leaf-pores', tier: 2, subjectKey: 'structure:stomata',
+        clue: { en: 'What tiny adjustable pores in leaves let carbon dioxide enter while water vapour and oxygen leave?', et: 'Millised väikesed reguleeritavad poorid lehtedes lasevad süsinikdioksiidil siseneda ning veeaurul ja hapnikul väljuda?' }, response: { en: 'stomata', et: 'õhulõhed' }, acceptedVariants: { en: ['leaf stomata'], et: ['lehe õhulõhed'] },
+        explanation: { en: 'Pairs of guard cells open and close each stoma to regulate gas exchange.', et: 'Iga õhulõhe avanemist ja sulgumist juhib paar sulgrakke, mis reguleerib gaasivahetust.' },
+        source: { sourceId: 'wikipedia:stoma-gas-exchange', title: 'Stoma', url: 'https://en.wikipedia.org/wiki/Stoma', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-045:transpiration-water-loss', factKey: 'science-nature:transpiration-water-loss', tier: 3, subjectKey: 'process:transpiration',
+        clue: { en: 'Name the process by which a plant loses water as vapour, mainly from its leaves.', et: 'Nimeta protsess, mille käigus taim kaotab peamiselt lehtede kaudu vett veeauruna.' }, response: { en: 'transpiration', et: 'transpiratsioon' }, acceptedVariants: { en: ['plant transpiration'], et: ['taimede transpiratsioon'] },
+        explanation: { en: 'This water loss helps pull a continuous stream of water and dissolved minerals upward through a plant.', et: 'Selline veekadu aitab tõmmata pidevat vee ja lahustunud mineraalainete voogu taimes ülespoole.' },
+        source: { sourceId: 'wikipedia:transpiration-water-loss', title: 'Transpiration', url: 'https://en.wikipedia.org/wiki/Transpiration', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-045:phototropism-growing-toward-light', factKey: 'science-nature:phototropism-growing-toward-light', tier: 4, subjectKey: 'response:phototropism',
+        clue: { en: 'A houseplant shoot bends toward a bright window as it grows. What directional growth response is this?', et: 'Toataime võrse paindub kasvades heleda akna poole. Milline suunatud kasvureaktsioon see on?' }, response: { en: 'phototropism', et: 'fototropism' }, acceptedVariants: { en: ['positive phototropism'], et: ['positiivne fototropism'] },
+        explanation: { en: 'Uneven growth on opposite sides of the shoot curves it toward the light source.', et: 'Võrse vastaskülgede ebaühtlane kasv painutab selle valgusallika poole.' },
+        source: { sourceId: 'wikipedia:phototropism-light-response', title: 'Phototropism', url: 'https://en.wikipedia.org/wiki/Phototropism', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-045:vernalization-cold-flowering', factKey: 'science-nature:vernalization-cold-flowering', tier: 5, subjectKey: 'process:vernalization',
+        clue: { en: 'Some winter cereals flower only after a prolonged spell of cold. What is this cold-triggered preparation for flowering called?', et: 'Mõni taliteravili õitseb alles pärast pikemat külmaperioodi. Kuidas nimetatakse sellist külma toimel õitsemiseks valmistumist?' }, response: { en: 'vernalization', et: 'vernalisatsioon' }, acceptedVariants: { en: ['vernalisation'], et: ['jarovisatsioon'] },
+        explanation: { en: 'Vernalization makes flowering possible after a plant experiences the required low temperatures.', et: 'Vernalisatsioon võimaldab taimel õitsema hakata pärast vajalikku kokkupuudet madala temperatuuriga.' },
+        source: { sourceId: 'wikipedia:vernalization-cold-exposure', title: 'Vernalization', url: 'https://en.wikipedia.org/wiki/Vernalization', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-046', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Materials Made Smarter', et: 'Nutikamaks muudetud materjalid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-046:alloy-metal-mixture', factKey: 'science-nature:alloy-metal-mixture', tier: 1, subjectKey: 'material:alloy',
+        clue: { en: 'Steel and bronze belong to what broad class of materials made by combining a metal with other elements?', et: 'Millisesse laia materjaliklassi kuuluvad teras ja pronks, mis saadakse metalli ühendamisel teiste elementidega?' }, response: { en: 'alloys', et: 'sulamid' }, acceptedVariants: { en: ['an alloy', 'alloy'], et: ['sulam'] },
+        explanation: { en: 'Combining elements can give an alloy useful properties that its main metal lacks.', et: 'Elementide ühendamine võib anda sulamile kasulikke omadusi, mida selle põhimetallil ei ole.' },
+        source: { sourceId: 'wikipedia:alloy-metal-mixture', title: 'Alloy', url: 'https://en.wikipedia.org/wiki/Alloy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-046:vulcanization-rubber-sulfur', factKey: 'science-nature:vulcanization-rubber-sulfur', tier: 2, subjectKey: 'process:vulcanization',
+        clue: { en: 'Charles Goodyear became famous for which process that uses heat and usually sulfur to make rubber tougher and more durable?', et: 'Millise protsessiga sai kuulsaks Charles Goodyear, kes muutis kummi kuumuse ja tavaliselt väävli abil sitkemaks ning vastupidavamaks?' }, response: { en: 'vulcanization', et: 'vulkaniseerimine' }, acceptedVariants: { en: ['vulcanisation'], et: ['vulkanisatsioon'] },
+        explanation: { en: 'Vulcanization creates links between polymer chains, improving rubber’s strength and elasticity.', et: 'Vulkaniseerimine tekitab polümeeriahelate vahele sidemeid ning parandab kummi tugevust ja elastsust.' },
+        source: { sourceId: 'wikipedia:vulcanization-rubber-sulfur', title: 'Vulcanization', url: 'https://en.wikipedia.org/wiki/Vulcanization', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-046:tempered-glass-safety-fragments', factKey: 'science-nature:tempered-glass-safety-fragments', tier: 3, subjectKey: 'material:tempered-glass',
+        clue: { en: 'Side windows in many cars use what heat-strengthened safety material that breaks into small granular pieces rather than long jagged shards?', et: 'Millist kuumtöödeldud turvamaterjali kasutatakse paljude autode külgakendes, sest see puruneb pikkade teravate kildude asemel väikesteks teradeks?' }, response: { en: 'tempered glass', et: 'karastatud klaas' }, acceptedVariants: { en: ['toughened glass'], et: ['termiliselt karastatud klaas'] },
+        explanation: { en: 'Controlled heating and rapid cooling place the surface under compression, making the glass stronger and changing how it breaks.', et: 'Kontrollitud kuumutamine ja kiire jahutamine tekitavad pinnas survepinge, mis muudab klaasi tugevamaks ja mõjutab selle purunemisviisi.' },
+        source: { sourceId: 'wikipedia:tempered-glass-safety', title: 'Tempered glass', url: 'https://en.wikipedia.org/wiki/Tempered_glass', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-046:aerogel-frozen-smoke', factKey: 'science-nature:aerogel-frozen-smoke', tier: 4, subjectKey: 'material:aerogel',
+        clue: { en: 'Which extremely light, porous solid is sometimes nicknamed “frozen smoke” and used as a thermal insulator?', et: 'Millist ülikerget poorset tahket ainet hüütakse mõnikord „külmunud suitsuks” ning kasutatakse soojusisolaatorina?' }, response: { en: 'aerogel', et: 'aerogeel' }, acceptedVariants: { en: ['an aerogel'], et: ['aerogeelne materjal'] },
+        explanation: { en: 'In an aerogel, gas replaces most of a gel’s liquid while the delicate solid network remains.', et: 'Aerogeelis asendab gaas suurema osa geeli vedelikust, kuid õrn tahke võrgustik jääb alles.' },
+        source: { sourceId: 'wikipedia:aerogel-porous-insulator', title: 'Aerogel', url: 'https://en.wikipedia.org/wiki/Aerogel', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-046:shape-memory-alloy-heated', factKey: 'science-nature:shape-memory-alloy-heated', tier: 5, subjectKey: 'material:shape-memory-alloy',
+        clue: { en: 'What kind of metal mixture can be bent while cool and then return toward a pre-set form when heated?', et: 'Millist liiki metallisegu saab jahedana painutada, kuid mis liigub kuumutamisel tagasi etteantud kuju poole?' }, response: { en: 'a shape-memory alloy', et: 'mälusulam' }, acceptedVariants: { en: ['shape-memory alloy', 'memory metal'], et: ['kujumuutmäluga sulam'] },
+        explanation: { en: 'A reversible change in crystal structure lets this material recover its trained shape as its temperature rises.', et: 'Kristallstruktuuri pöörduv muutus laseb sellel materjalil temperatuuri tõustes taastada varem antud kuju.' },
+        source: { sourceId: 'wikipedia:shape-memory-alloy-heating', title: 'Shape-memory alloy', url: 'https://en.wikipedia.org/wiki/Shape-memory_alloy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-047', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Clues from Classic Experiments', et: 'Klassikaliste katsete jälgedel' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-047:pavlov-classical-conditioning', factKey: 'science-nature:pavlov-classical-conditioning', tier: 1, subjectKey: 'process:classical-conditioning',
+        clue: { en: 'Pavlov’s dogs learned to salivate at a previously neutral signal after it was repeatedly paired with food. What learning process did this demonstrate?', et: 'Pavlovi koerad õppisid eritama sülge varem neutraalse signaali peale, kui seda oli korduvalt seostatud toiduga. Millist õppimisprotsessi see näitas?' }, response: { en: 'classical conditioning', et: 'klassikaline tingimine' }, acceptedVariants: { en: ['Pavlovian conditioning'], et: ['Pavlovi tingimine'] },
+        explanation: { en: 'Repeated pairing can make a neutral signal trigger a response that originally followed another stimulus.', et: 'Korduv seostamine võib panna neutraalse signaali esile kutsuma reaktsiooni, mille tekitas algselt teine stiimul.' },
+        source: { sourceId: 'wikipedia:classical-conditioning-pavlov', title: 'Classical conditioning', url: 'https://en.wikipedia.org/wiki/Classical_conditioning', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-047:foucault-pendulum-earth-rotation', factKey: 'science-nature:foucault-pendulum-earth-rotation', tier: 2, subjectKey: 'experiment:foucault-pendulum',
+        clue: { en: 'The swing plane of a freely moving Foucault pendulum appears to turn relative to the floor. Which motion of Earth does this demonstrate?', et: 'Vabalt liikuva Foucault’ pendli võnketasand näib põranda suhtes pöörduvat. Millist Maa liikumist see näitab?' }, response: { en: 'Earth’s rotation', et: 'Maa pöörlemine' }, acceptedVariants: { en: ['the rotation of Earth'], et: ['Maa pöördliikumine'] },
+        explanation: { en: 'The pendulum keeps nearly the same swing direction in space while the ground rotates beneath it.', et: 'Pendel säilitab ruumis peaaegu sama võnkesuuna, samal ajal kui maapind selle all pöörleb.' },
+        source: { sourceId: 'wikipedia:foucault-pendulum-earth-rotation', title: 'Foucault pendulum', url: 'https://en.wikipedia.org/wiki/Foucault_pendulum', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-047:double-slit-interference', factKey: 'science-nature:double-slit-interference', tier: 3, subjectKey: 'experiment:double-slit',
+        clue: { en: 'Passing light through two narrow openings produces alternating bright and dark bands. Which famous experiment demonstrates this interference?', et: 'Valguse suunamisel läbi kahe kitsa ava tekivad vahelduvad heledad ja tumedad ribad. Milline kuulus katse näitab sellist interferentsi?' }, response: { en: 'the double-slit experiment', et: 'kahe pilu katse' }, acceptedVariants: { en: ['Young’s double-slit experiment', 'two-slit experiment'], et: ['Youngi kahe pilu katse', 'topeltpilukatse'] },
+        explanation: { en: 'Waves from the two openings overlap, reinforcing one another in some places and cancelling in others.', et: 'Kahest avast lähtuvad lained kattuvad, võimendades teineteist mõnes kohas ja kustutades teises.' },
+        source: { sourceId: 'wikipedia:double-slit-interference', title: 'Double-slit experiment', url: 'https://en.wikipedia.org/wiki/Double-slit_experiment', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-047:gold-foil-nucleus', factKey: 'science-nature:gold-foil-nucleus', tier: 4, subjectKey: 'experiment:gold-foil',
+        clue: { en: 'Alpha particles fired at a thin sheet mostly passed through, but a few bounced sharply back, revealing a small dense atomic nucleus. Name the experiment.', et: 'Õhukesele metallilehele suunatud alfaosakesed läbisid selle enamasti, kuid mõni põrkus järsult tagasi, paljastades aatomi väikese tiheda tuuma. Nimeta katse.' }, response: { en: 'the gold foil experiment', et: 'Rutherfordi kullalehekatse' }, acceptedVariants: { en: ['Rutherford’s gold foil experiment', 'Geiger–Marsden experiment'], et: ['kullalehekatse', 'Geigeri–Marsdeni katse'] },
+        explanation: { en: 'The scattering result overturned the diffuse “plum pudding” model and led to the nuclear model of the atom.', et: 'Hajumistulemus lükkas ümber hajusa „rosinapudingimudeli” ning viis aatomi tuumamudelini.' },
+        source: { sourceId: 'wikipedia:geiger-marsden-gold-foil', title: 'Geiger–Marsden experiments', url: 'https://en.wikipedia.org/wiki/Geiger%E2%80%93Marsden_experiments', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-047:oil-drop-electron-charge', factKey: 'science-nature:oil-drop-electron-charge', tier: 5, subjectKey: 'experiment:oil-drop',
+        clue: { en: 'Robert Millikan balanced tiny charged droplets between electric and gravitational forces to measure the elementary electric charge. Name this experiment.', et: 'Robert Millikan tasakaalustas pisikesi laetud piisku elektri- ja raskusjõu vahel, et mõõta elementaarlaengut. Nimeta see katse.' }, response: { en: 'the oil-drop experiment', et: 'õlitilga katse' }, acceptedVariants: { en: ['Millikan oil-drop experiment', 'Millikan’s oil-drop experiment'], et: ['Millikani õlitilga katse', 'Millikani katse'] },
+        explanation: { en: 'The measured droplet charges came in whole-number multiples of one smallest charge value.', et: 'Mõõdetud piiskade laengud olid ühe vähima laenguväärtuse täisarvkordsed.' },
+        source: { sourceId: 'wikipedia:oil-drop-elementary-charge', title: 'Oil drop experiment', url: 'https://en.wikipedia.org/wiki/Oil_drop_experiment', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-048', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Optical Surprises in the Sky', et: 'Optilised üllatused taevas' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-048:mirage-hot-road', factKey: 'science-nature:mirage-hot-road', tier: 1, subjectKey: 'phenomenon:mirage',
+        clue: { en: 'A hot road can seem to have a pool of water ahead because layers of air bend light differently. What illusion is this?', et: 'Kuumal teel võib ees paista veelomp, sest eri temperatuuriga õhukihid murravad valgust erinevalt. Mis nähtus see on?' }, response: { en: 'a mirage', et: 'miraaž' }, acceptedVariants: { en: ['mirage'], et: ['õhumiraaž'] },
+        explanation: { en: 'A steep temperature gradient changes the path of light and can create a displaced image of the sky.', et: 'Järsk temperatuurigradient muudab valguse teed ja võib tekitada taeva nihkunud kujutise.' },
+        source: { sourceId: 'wikipedia:mirage-hot-road', title: 'Mirage', url: 'https://en.wikipedia.org/wiki/Mirage', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-048:halo-ice-crystal-ring', factKey: 'science-nature:halo-ice-crystal-ring', tier: 2, subjectKey: 'phenomenon:halo',
+        clue: { en: 'What ring around the Sun or Moon forms when high-altitude ice crystals refract and reflect light?', et: 'Milline rõngas Päikese või Kuu ümber tekib siis, kui kõrgpilvede jääkristallid valgust murravad ja peegeldavad?' }, response: { en: 'a halo', et: 'halo' }, acceptedVariants: { en: ['an ice halo'], et: ['halonähtus'] },
+        explanation: { en: 'Hexagonal ice crystals redirect incoming light at characteristic angles, often producing a 22-degree ring.', et: 'Kuusnurksed jääkristallid suunavad valgust iseloomulike nurkade all ning tekitavad sageli 22-kraadise rõnga.' },
+        source: { sourceId: 'wikipedia:22-degree-halo-ice-crystals', title: '22° halo', url: 'https://en.wikipedia.org/wiki/22%C2%B0_halo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-048:sundog-bright-spot', factKey: 'science-nature:sundog-bright-spot', tier: 3, subjectKey: 'phenomenon:sundog',
+        clue: { en: 'What is the bright, sometimes rainbow-tinted patch that can appear to either side of the Sun when light passes through ice crystals?', et: 'Kuidas nimetatakse heledat, vahel vikerkaarevärvilist laiku, mis võib jääkristalle läbinud valguse tõttu ilmuda Päikese kummalegi küljele?' }, response: { en: 'a sundog', et: 'ebapäike' }, acceptedVariants: { en: ['sun dog', 'parhelion'], et: ['kõrvalpäike', 'parheelion'] },
+        explanation: { en: 'Plate-shaped crystals commonly place these bright patches at the same height as the Sun.', et: 'Plaadikujulised kristallid tekitavad need heledad laigud tavaliselt Päikesega samale kõrgusele.' },
+        source: { sourceId: 'wikipedia:sundog-ice-crystals', title: 'Sun dog', url: 'https://en.wikipedia.org/wiki/Sun_dog', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-048:light-pillar-vertical-column', factKey: 'science-nature:light-pillar-vertical-column', tier: 4, subjectKey: 'phenomenon:light-pillar',
+        clue: { en: 'Flat ice crystals can make a streetlamp or the low Sun seem to extend as a vertical column. Name this effect.', et: 'Lamedad jääkristallid võivad jätta mulje, et tänavalatern või madal Päike ulatub püstise sambana üles või alla. Nimeta nähtus.' }, response: { en: 'a light pillar', et: 'valgussammas' }, acceptedVariants: { en: ['light pillar'], et: ['valguspilar'] },
+        explanation: { en: 'Many crystals reflect light toward the observer from slightly different heights, visually joining into a column.', et: 'Paljud eri kõrgustel paiknevad kristallid peegeldavad valgust vaatleja poole ning nende kujutised liituvad näiliseks sambaks.' },
+        source: { sourceId: 'wikipedia:light-pillar-ice-crystals', title: 'Light pillar', url: 'https://en.wikipedia.org/wiki/Light_pillar', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-048:green-flash-horizon', factKey: 'science-nature:green-flash-horizon', tier: 5, subjectKey: 'phenomenon:green-flash',
+        clue: { en: 'Just as the Sun disappears below a clear horizon, its upper edge may briefly turn emerald. What rare sight is this?', et: 'Selge horisondi taha kaduva Päikese ülaserv võib hetkeks smaragdroheliseks muutuda. Kuidas seda haruldast vaatepilti nimetatakse?' }, response: { en: 'the green flash', et: 'roheline kiir' }, acceptedVariants: { en: ['a green flash'], et: ['roheline välgatus'] },
+        explanation: { en: 'Atmospheric refraction and colour separation can make the final visible sliver of the Sun appear green.', et: 'Atmosfääri refraktsioon ja valguse lahknemine värvusteks võivad muuta Päikese viimase nähtava serva roheliseks.' },
+        source: { sourceId: 'wikipedia:green-flash-horizon', title: 'Green flash', url: 'https://en.wikipedia.org/wiki/Green_flash', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-049', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Close Company in Nature', et: 'Lähikooselu looduses' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-049:tapeworm-intestinal-flatworm', factKey: 'science-nature:tapeworm-intestinal-flatworm', tier: 1, subjectKey: 'animal:tapeworm',
+        clue: { en: 'Which ribbon-like, segmented flatworm has no digestive tract and absorbs nutrients while living in a vertebrate’s intestine?', et: 'Milline linditaoline lüliline lameuss elab selgroogse soolestikus, tal puudub seedekulgla ja ta omastab toitaineid läbi kehapinna?' }, response: { en: 'a tapeworm', et: 'paeluss' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Its flattened body takes up digested nutrients directly from the host’s gut.', et: 'Lame keha omastab peremehe soolestikust juba seeditud toitaineid.' },
+        source: { sourceId: 'wikipedia:tapeworm-intestinal-flatworm', title: 'Cestoda', url: 'https://en.wikipedia.org/wiki/Cestoda', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-049:remora-suction-disc', factKey: 'science-nature:remora-suction-disc', tier: 2, subjectKey: 'animal:remora',
+        clue: { en: 'Which fish uses a suction disc on top of its head to hitch rides on sharks, rays, or turtles?', et: 'Milline kala kasutab pea peal olevat iminappa, et sõita kaasa haide, raide või kilpkonnade küljes?' }, response: { en: 'a remora', et: 'imikala' }, acceptedVariants: { en: ['remora', 'suckerfish'], et: ['remora'] },
+        explanation: { en: 'The modified dorsal fin forms a disc that grips a larger marine animal without piercing it.', et: 'Muundunud seljauim moodustab ketta, mis kinnitub suurema merelooma külge tema nahka läbistamata.' },
+        source: { sourceId: 'wikipedia:remora-suction-disc', title: 'Remora', url: 'https://en.wikipedia.org/wiki/Remora', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-049:coral-bleaching-algae-loss', factKey: 'science-nature:coral-bleaching-algae-loss', tier: 3, subjectKey: 'process:coral-bleaching',
+        clue: { en: 'Heat stress can make corals expel the microscopic algae that give them colour, leaving the pale skeleton visible. What is this event called?', et: 'Kuumastress võib panna korallid väljutama neile värvi andvad mikroskoopilised vetikad, nii et hele lubiskelett jääb nähtavale. Kuidas seda nähtust nimetatakse?' }, response: { en: 'coral bleaching', et: 'korallide pleekimine' }, acceptedVariants: { en: ['coral bleaching event'], et: ['korallide valgenemine'] },
+        explanation: { en: 'A bleached coral is still alive at first, but prolonged loss of its algal partners can lead to starvation and death.', et: 'Pleekinud korall on esialgu elus, kuid vetikpartnerite pikaajaline puudumine võib viia nälgimise ja surmani.' },
+        source: { sourceId: 'wikipedia:coral-bleaching-algae-loss', title: 'Coral bleaching', url: 'https://en.wikipedia.org/wiki/Coral_bleaching', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-049:lichen-fungus-alga', factKey: 'science-nature:lichen-fungus-alga', tier: 4, subjectKey: 'organism:lichen',
+        clue: { en: 'What composite organism commonly consists of a fungus living closely with an alga or cyanobacterium?', et: 'Milline liitorganism koosneb tavaliselt seenest, kes elab tihedalt koos vetika või tsüanobakteriga?' }, response: { en: 'a lichen', et: 'samblik' }, acceptedVariants: { en: ['lichen'], et: ['lihhen'] },
+        explanation: { en: 'The fungal partner provides structure, while the photosynthetic partner supplies organic nutrients.', et: 'Seenpartner loob struktuuri, fotosünteesiv partner aga toodab orgaanilisi toitaineid.' },
+        source: { sourceId: 'wikipedia:lichen-fungus-photosynthetic-partner', title: 'Lichen', url: 'https://en.wikipedia.org/wiki/Lichen', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-049:mycorrhiza-fungus-root', factKey: 'science-nature:mycorrhiza-fungus-root', tier: 5, subjectKey: 'association:mycorrhiza',
+        clue: { en: 'What name is given to the close association in which a fungus helps plant roots absorb water and minerals in exchange for sugars?', et: 'Kuidas nimetatakse kooslust, milles seen aitab taimejuurtel vett ja mineraalaineid omastada ning saab vastu suhkruid?' }, response: { en: 'mycorrhiza', et: 'mükoriisa' }, acceptedVariants: { en: ['a mycorrhiza', 'mycorrhizal association'], et: ['seenjuur', 'mükoriisne kooslus'] },
+        explanation: { en: 'Fungal threads extend the root’s reach through soil, while the plant provides carbon-rich compounds.', et: 'Seeneniidid laiendavad juure ulatust mullas ning taim annab vastu süsinikurikkaid ühendeid.' },
+        source: { sourceId: 'wikipedia:mycorrhiza-root-fungus-exchange', title: 'Mycorrhiza', url: 'https://en.wikipedia.org/wiki/Mycorrhiza', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-050', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Seasonal Survival Strategies', et: 'Hooajalised ellujäämisvõtted' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-050:hibernation-winter-slowdown', factKey: 'science-nature:hibernation-winter-slowdown', tier: 1, subjectKey: 'strategy:hibernation',
+        clue: { en: 'Bats and hedgehogs can spend winter in a prolonged state of greatly reduced metabolism. What seasonal strategy is this?', et: 'Nahkhiired ja siilid võivad veeta talve pikaajalises tugevalt aeglustunud ainevahetusega seisundis. Milline hooajaline strateegia see on?' }, response: { en: 'hibernation', et: 'talveuni' }, acceptedVariants: { en: ['winter hibernation'], et: ['hibernatsioon'] },
+        explanation: { en: 'Hibernation conserves energy when cold weather and scarce food make normal activity costly.', et: 'Talveuni säästab energiat ajal, mil külm ilm ja toidunappus muudavad tavapärase aktiivsuse kulukaks.' },
+        source: { sourceId: 'wikipedia:hibernation-winter-metabolism', title: 'Hibernation', url: 'https://en.wikipedia.org/wiki/Hibernation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-050:estivation-hot-dry', factKey: 'science-nature:estivation-hot-dry', tier: 2, subjectKey: 'strategy:estivation',
+        clue: { en: 'Some snails and lungfish become inactive during a hot, dry season to limit water loss. What is this warm-weather dormancy called?', et: 'Mõned teod ja kopskalad muutuvad kuumal kuival ajal veekao piiramiseks passiivseks. Kuidas nimetatakse sellist sooja aja puhkeseisundit?' }, response: { en: 'estivation', et: 'suveuni' }, acceptedVariants: { en: ['aestivation'], et: ['estivatsioon'] },
+        explanation: { en: 'This reduced-activity state helps an animal survive heat or drought until conditions improve.', et: 'Selline vähenenud aktiivsusega seisund aitab loomal kuumuse või põua üle elada, kuni tingimused paranevad.' },
+        source: { sourceId: 'wikipedia:estivation-hot-dry-dormancy', title: 'Aestivation', url: 'https://en.wikipedia.org/wiki/Aestivation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-050:torpor-short-metabolic-drop', factKey: 'science-nature:torpor-short-metabolic-drop', tier: 3, subjectKey: 'state:torpor',
+        clue: { en: 'A hummingbird may sharply lower its body temperature and metabolic rate for a single cold night. What short-term state is this?', et: 'Koolibri võib üheks külmaks ööks oma kehatemperatuuri ja ainevahetuse järsult langetada. Kuidas seda lühiajalist seisundit nimetatakse?' }, response: { en: 'torpor', et: 'tardumus' }, acceptedVariants: { en: ['daily torpor'], et: ['ööpäevane tardumus'] },
+        explanation: { en: 'Torpor is a reversible metabolic slowdown that can last for hours and greatly reduce energy use.', et: 'Tardumus on tundide kaupa kestev pöörduv ainevahetuse aeglustumine, mis vähendab oluliselt energiakulu.' },
+        source: { sourceId: 'wikipedia:torpor-short-term-metabolic', title: 'Torpor', url: 'https://en.wikipedia.org/wiki/Torpor', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-050:diapause-insect-development', factKey: 'science-nature:diapause-insect-development', tier: 4, subjectKey: 'state:diapause',
+        clue: { en: 'Many insects survive an unfavourable season by entering a hormonally programmed pause in development. What is this pause called?', et: 'Paljud putukad elavad ebasoodsa aastaaja üle, peatades hormonaalse programmi alusel oma arengu. Kuidas seda arengupausi nimetatakse?' }, response: { en: 'diapause', et: 'diapaus' }, acceptedVariants: { en: ['insect diapause'], et: ['putukate diapaus'] },
+        explanation: { en: 'Diapause begins before conditions become severe and ends only after particular environmental cues.', et: 'Diapaus algab enne tingimuste karmistumist ning lõpeb alles kindlate keskkonnasignaalide järel.' },
+        source: { sourceId: 'wikipedia:diapause-programmed-development', title: 'Diapause', url: 'https://en.wikipedia.org/wiki/Diapause', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-050:antifreeze-proteins-ice-growth', factKey: 'science-nature:antifreeze-proteins-ice-growth', tier: 5, subjectKey: 'protein:antifreeze',
+        clue: { en: 'Polar fish can keep their body fluids from freezing by making molecules that bind to tiny ice crystals and stop them growing. What are these molecules called?', et: 'Polaaralade kalad võivad takistada kehavedelike külmumist molekulidega, mis seonduvad tillukeste jääkristallidega ja peatavad nende kasvu. Kuidas neid molekule nimetatakse?' }, response: { en: 'antifreeze proteins', et: 'antifriisivalgud' }, acceptedVariants: { en: ['antifreeze protein', 'ice-binding proteins'], et: ['külmumisvastased valgud', 'jääga seonduvad valgud'] },
+        explanation: { en: 'These proteins lower the temperature at which ice crystals can grow in biological fluids.', et: 'Need valgud langetavad temperatuuri, mille juures jääkristallid saavad kehavedelikes edasi kasvada.' },
+        source: { sourceId: 'wikipedia:antifreeze-protein-ice-growth', title: 'Antifreeze protein', url: 'https://en.wikipedia.org/wiki/Antifreeze_protein', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-008', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Instruments for Invisible Evidence', et: 'Nähtamatu maailma mõõteriistad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-008:geiger-counter-radiation', factKey: 'science-nature:geiger-counter-radiation', tier: 1, subjectKey: 'instrument:geiger-counter',
+        clue: { en: 'Which handheld detector often signals each pulse of ionizing radiation with a characteristic click?', et: 'Milline käeshoitav detektor annab igast ioniseeriva kiirguse impulsist sageli märku iseloomuliku klõpsuga?' }, response: { en: 'a Geiger counter', et: 'Geigeri loendur' }, acceptedVariants: { en: ['Geiger counter', 'Geiger–Müller counter'], et: ['Geigeri–Mülleri loendur', 'Geiger-Mülleri loendur'] },
+        explanation: { en: 'Incoming radiation ionizes gas in the tube, producing an electrical pulse that can be counted.', et: 'Saabuv kiirgus ioniseerib torus oleva gaasi ning tekitab loendatava elektriimpulsi.' },
+        source: { sourceId: 'wikipedia:geiger-counter-ionizing-radiation', title: 'Geiger counter', url: 'https://en.wikipedia.org/wiki/Geiger_counter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-008:calorimeter-heat-transfer', factKey: 'science-nature:calorimeter-heat-transfer', tier: 2, subjectKey: 'instrument:calorimeter',
+        clue: { en: 'A chemist puts a reaction in an insulated vessel and tracks a temperature change to determine transferred heat. What instrument is being used?', et: 'Keemik viib reaktsiooni läbi isoleeritud anumas ning jälgib temperatuuri muutust, et määrata ülekantud soojushulk. Millist mõõteriista ta kasutab?' }, response: { en: 'a calorimeter', et: 'kalorimeeter' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Known heat capacities and measured temperature changes allow the exchanged energy to be calculated.', et: 'Teadaolevate soojusmahtuvuste ja mõõdetud temperatuurimuutuste abil saab vahetatud energia arvutada.' },
+        source: { sourceId: 'wikipedia:calorimeter-heat-measurement', title: 'Calorimeter', url: 'https://en.wikipedia.org/wiki/Calorimeter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-008:mass-spectrometer-mass-charge', factKey: 'science-nature:mass-spectrometer-mass-charge', tier: 3, subjectKey: 'instrument:mass-spectrometer',
+        clue: { en: 'Which laboratory instrument identifies chemical species by separating ions according to their mass-to-charge ratio?', et: 'Milline laboriseade tuvastab keemilisi osakesi, eraldades ioone nende massi ja laengu suhte järgi?' }, response: { en: 'a mass spectrometer', et: 'massispektromeeter' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The resulting spectrum shows ion signals at characteristic mass-to-charge values.', et: 'Saadud spekter näitab ioonide signaale neile iseloomulike massi ja laengu suhete juures.' },
+        source: { sourceId: 'wikipedia:mass-spectrometry-mass-charge', title: 'Mass spectrometry', url: 'https://en.wikipedia.org/wiki/Mass_spectrometry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-008:cloud-chamber-particle-tracks', factKey: 'science-nature:cloud-chamber-particle-tracks', tier: 4, subjectKey: 'instrument:cloud-chamber',
+        clue: { en: 'Charged particles leave visible condensation trails through supersaturated vapour in what classic detector?', et: 'Millises klassikalises detektoris jätavad laetud osakesed üleküllastunud auru läbides nähtavad kondensatsioonijäljed?' }, response: { en: 'a cloud chamber', et: 'pilvekamber' }, acceptedVariants: { en: ['cloud chamber', 'Wilson cloud chamber'], et: ['Wilsoni pilvekamber'] },
+        explanation: { en: 'Ions along a particle’s path act as centres around which tiny droplets form.', et: 'Osakese rajale tekkinud ioonid toimivad keskustena, mille ümber moodustuvad pisikesed tilgad.' },
+        source: { sourceId: 'wikipedia:cloud-chamber-condensation-tracks', title: 'Cloud chamber', url: 'https://en.wikipedia.org/wiki/Cloud_chamber', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-008:interferometer-tiny-changes', factKey: 'science-nature:interferometer-tiny-changes', tier: 5, subjectKey: 'instrument:interferometer',
+        clue: { en: 'Which precision instrument splits a wave and recombines its paths so shifts in the interference pattern reveal extremely small changes in distance?', et: 'Milline täppisinstrument jagab laine eri teedele ja liidab need uuesti, nii et interferentsipildi nihe paljastab üliväikese vahemaa muutuse?' }, response: { en: 'an interferometer', et: 'interferomeeter' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'A tiny path difference changes the relative phase of the recombined waves and moves the pattern.', et: 'Väike teepikkuste erinevus muudab taasühendatud lainete suhtelist faasi ning nihutab interferentsipilti.' },
+        source: { sourceId: 'wikipedia:interferometry-path-difference', title: 'Interferometry', url: 'https://en.wikipedia.org/wiki/Interferometry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-009', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Reading Earth’s Deep Past', et: 'Maa süvaajaloo lugemine' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-009:mohs-scale-scratch-hardness', factKey: 'science-nature:mohs-scale-scratch-hardness', tier: 1, subjectKey: 'scale:mohs',
+        clue: { en: 'A geologist compares whether one mineral can scratch another, ranking relative hardness from talc to diamond. Which scale is being used?', et: 'Geoloog võrdleb, kas üks mineraal kriimustab teist, ning järjestab suhtelise kõvaduse talgist teemandini. Millist skaalat ta kasutab?' }, response: { en: 'the Mohs scale', et: 'Mohsi skaala' }, acceptedVariants: { en: ['Mohs scale', 'Mohs hardness scale'], et: ['Mohsi kõvadusskaala'] },
+        explanation: { en: 'The scale orders ten reference minerals by scratch resistance rather than measuring hardness in equal numerical steps.', et: 'Skaala järjestab kümme võrdlusmineraali kriimustuskindluse järgi, kuid arvulised astmed ei ole omavahel võrdsed.' },
+        source: { sourceId: 'wikipedia:mohs-scale-scratch-hardness', title: 'Mohs scale', url: 'https://en.wikipedia.org/wiki/Mohs_scale', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-009:index-fossil-correlate-layers', factKey: 'science-nature:index-fossil-correlate-layers', tier: 2, subjectKey: 'evidence:index-fossil',
+        clue: { en: 'A fossil from a widespread species that existed for a relatively short time can help match the ages of distant rock layers. What is it called?', et: 'Laialt levinud, kuid suhteliselt lühikest aega elanud liigi kivistis aitab võrrelda kaugete kivimikihtide vanust. Kuidas seda nimetatakse?' }, response: { en: 'an index fossil', et: 'juhtkivistis' }, acceptedVariants: { en: ['index fossil', 'guide fossil'], et: ['indekskivistis'] },
+        explanation: { en: 'Finding the same diagnostic fossil in separate locations helps geologists correlate the layers.', et: 'Sama iseloomuliku kivistise leidmine eri paikades aitab geoloogidel kihte omavahel rööbistada.' },
+        source: { sourceId: 'wikipedia:index-fossil-correlation', title: 'Index fossil', url: 'https://en.wikipedia.org/wiki/Index_fossil', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-009:radiometric-dating-isotope-clock', factKey: 'science-nature:radiometric-dating-isotope-clock', tier: 3, subjectKey: 'method:radiometric-dating',
+        clue: { en: 'Which dating method compares radioactive parent isotopes with their decay products to calculate the age of a rock or mineral?', et: 'Milline dateerimismeetod võrdleb radioaktiivseid lähteisotoope nende lagunemissaadustega, et arvutada kivimi või mineraali vanus?' }, response: { en: 'radiometric dating', et: 'radiomeetriline dateerimine' }, acceptedVariants: { en: ['radioisotope dating'], et: ['radiomeetriline vanusemääramine', 'radioisotoopdateerimine'] },
+        explanation: { en: 'A known decay rate turns the measured parent-to-product ratio into a geological clock.', et: 'Teadaolev lagunemiskiirus muudab mõõdetud lähte- ja tütarisotoopide suhte geoloogiliseks kellaks.' },
+        source: { sourceId: 'wikipedia:radiometric-dating-parent-daughter', title: 'Radiometric dating', url: 'https://en.wikipedia.org/wiki/Radiometric_dating', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-009:unconformity-missing-time', factKey: 'science-nature:unconformity-missing-time', tier: 4, subjectKey: 'feature:unconformity',
+        clue: { en: 'What geological surface marks missing time where deposition stopped or older rock was eroded before younger layers formed?', et: 'Milline geoloogiline piirpind tähistab puuduva ajavahemikuga kohta, kus settimine katkes või vanem kivim kulutati enne nooremate kihtide teket?' }, response: { en: 'an unconformity', et: 'stratigraafiline katkestus' }, acceptedVariants: { en: ['unconformity'], et: ['diskordants'] },
+        explanation: { en: 'The boundary represents a gap in the local rock record rather than continuous deposition.', et: 'See piir tähistab kohalikus kivimite läbilõikes lünka, mitte pidevat settimist.' },
+        source: { sourceId: 'wikipedia:unconformity-gap-rock-record', title: 'Unconformity', url: 'https://en.wikipedia.org/wiki/Unconformity', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-009:uniformitarianism-present-past', factKey: 'science-nature:uniformitarianism-present-past', tier: 5, subjectKey: 'principle:uniformitarianism',
+        clue: { en: '“The present is the key to the past” summarizes which geological principle that uses directly observed processes to interpret ancient rocks?', et: 'Ütlus „olevik on mineviku võti” võtab kokku millise geoloogilise printsiibi, mis tõlgendab muistseid kivimeid vaadeldavate loodusprotsesside abil?' }, response: { en: 'uniformitarianism', et: 'aktualism' }, acceptedVariants: { en: ['the principle of uniformitarianism'], et: ['aktualismiprintsiip', 'uniformitarism'] },
+        explanation: { en: 'The principle assumes that the same natural laws and recurring processes can explain geological history.', et: 'Printsiibi järgi aitavad samad loodusseadused ja korduvad protsessid selgitada geoloogilist ajalugu.' },
+        source: { sourceId: 'wikipedia:uniformitarianism-present-past', title: 'Uniformitarianism', url: 'https://en.wikipedia.org/wiki/Uniformitarianism', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-067', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'How Nerve Signals Travel', et: 'Närvisignaalide teekond' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-067:synapse-neuron-junction', factKey: 'science-nature:synapse-neuron-junction', tier: 1, subjectKey: 'structure:synapse',
+        clue: { en: 'What junction lets one neuron pass a signal to another cell, commonly by releasing a chemical messenger across a tiny gap?', et: 'Milline ühenduskoht võimaldab närvirakul anda signaali järgmisele rakule, saates tavaliselt üle tillukese pilu keemilise virgatsaine?' }, response: { en: 'a synapse', et: 'sünaps' }, acceptedVariants: { en: ['synapse', 'synaptic junction'], et: ['sünaptiline ühendus'] },
+        explanation: { en: 'At a chemical synapse, the sending cell releases messenger molecules that bind to receptors on the receiving cell.', et: 'Keemilises sünapsis vabastab saatjarakk virgatsaineid, mis seonduvad vastuvõtjaraku retseptoritega.' },
+        source: { sourceId: 'wikipedia:synapse-neuron-junction', title: 'Synapse', url: 'https://en.wikipedia.org/wiki/Synapse', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-067:reflex-arc-withdrawal', factKey: 'science-nature:reflex-arc-withdrawal', tier: 2, subjectKey: 'pathway:reflex-arc',
+        clue: { en: 'Touching a hot surface triggers a rapid route from sensory receptor through the spinal cord to a muscle. What is this neural pathway called?', et: 'Kuuma pinna puudutamisel kulgeb kiire signaalitee meeleretseptorist seljaaju kaudu lihasesse. Kuidas seda närviteed nimetatakse?' }, response: { en: 'a reflex arc', et: 'refleksikaar' }, acceptedVariants: { en: ['reflex arc'], et: ['refleksitee'] },
+        explanation: { en: 'The pathway produces a quick protective response before detailed conscious processing is complete.', et: 'See närvitee tekitab kiire kaitsereaktsiooni enne, kui teadlik töötlus on lõpule jõudnud.' },
+        source: { sourceId: 'wikipedia:reflex-arc-neural-pathway', title: 'Reflex arc', url: 'https://en.wikipedia.org/wiki/Reflex_arc', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-067:myelin-axon-insulation', factKey: 'science-nature:myelin-axon-insulation', tier: 3, subjectKey: 'substance:myelin',
+        clue: { en: 'What fatty insulating substance wraps many axons and greatly increases the speed of nerve impulses?', et: 'Milline rasvarikas isoleeriv aine ümbritseb paljusid aksoneid ja suurendab märgatavalt närviimpulsside kiirust?' }, response: { en: 'myelin', et: 'müeliin' }, acceptedVariants: { en: ['myelin sheath'], et: ['müeliinkest'] },
+        explanation: { en: 'The insulating layers reduce current loss and allow rapid transmission along the fibre.', et: 'Isoleerivad kihid vähendavad voolukadu ning võimaldavad signaalil piki närvikiudu kiiresti levida.' },
+        source: { sourceId: 'wikipedia:myelin-axon-insulation', title: 'Myelin', url: 'https://en.wikipedia.org/wiki/Myelin', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-067:action-potential-voltage-pulse', factKey: 'science-nature:action-potential-voltage-pulse', tier: 4, subjectKey: 'signal:action-potential',
+        clue: { en: 'What all-or-none electrical pulse briefly reverses the voltage across a neuron’s membrane and propagates along it?', et: 'Milline kõik-või-mitte-midagi elektriimpulss pöörab hetkeks närviraku membraanipinge vastupidiseks ning levib mööda rakku?' }, response: { en: 'an action potential', et: 'aktsioonipotentsiaal' }, acceptedVariants: { en: ['action potential', 'nerve impulse'], et: ['toimepotentsiaal', 'närviimpulss'] },
+        explanation: { en: 'Ion channels open in sequence, producing a self-propagating change in membrane voltage.', et: 'Ioonkanalid avanevad järjest ning tekitavad iseeneslikult edasi leviva membraanipinge muutuse.' },
+        source: { sourceId: 'wikipedia:action-potential-membrane-voltage', title: 'Action potential', url: 'https://en.wikipedia.org/wiki/Action_potential', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-067:saltatory-conduction-node-jumps', factKey: 'science-nature:saltatory-conduction-node-jumps', tier: 5, subjectKey: 'process:saltatory-conduction',
+        clue: { en: 'In an insulated axon, the electrical signal is regenerated only at exposed gaps and seems to leap from gap to gap. Name this mode of transmission.', et: 'Isoleeritud aksonis taastub elektrisignaal üksnes katmata sõlmekohtades ning näib hüppavat ühest pilust teise. Nimeta selline levimisviis.' }, response: { en: 'saltatory conduction', et: 'hüppeline erutusjuhtimine' }, acceptedVariants: { en: ['saltatory propagation'], et: ['saltatoorne juhtimine', 'hüppeline juhtimine'] },
+        explanation: { en: 'Regeneration at the nodes of Ranvier makes transmission faster than continuous propagation along every membrane segment.', et: 'Signaali taastumine Ranvier’ soonistes muudab leviku kiiremaks kui pidev edasikandumine membraani igas lõigus.' },
+        source: { sourceId: 'wikipedia:saltatory-conduction-nodes', title: 'Saltatory conduction', url: 'https://en.wikipedia.org/wiki/Saltatory_conduction', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-068', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Engines of the Ocean', et: 'Ookeani liikumapanevad jõud' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-068:upwelling-nutrient-rich-water', factKey: 'science-nature:upwelling-nutrient-rich-water', tier: 1, subjectKey: 'process:upwelling',
+        clue: { en: 'What process brings cold, nutrient-rich deep water toward the sea surface, supporting productive fisheries off coasts such as Peru?', et: 'Milline protsess toob külma ja toitainerikka süvavee merepinna poole ning toetab kalandust näiteks Peruu rannikul?' }, response: { en: 'upwelling', et: 'süvaveekerge' }, acceptedVariants: { en: ['ocean upwelling'], et: ['uhkvool', 'apvelling'] },
+        explanation: { en: 'When winds move surface water away, deeper water rises to replace it and carries dissolved nutrients upward.', et: 'Kui tuul viib pinnavee eemale, tõuseb sügavam vesi seda asendama ning kannab lahustunud toitained üles.' },
+        source: { sourceId: 'wikipedia:upwelling-nutrient-rich-water', title: 'Upwelling', url: 'https://en.wikipedia.org/wiki/Upwelling', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-068:thermocline-temperature-gradient', factKey: 'science-nature:thermocline-temperature-gradient', tier: 2, subjectKey: 'layer:thermocline',
+        clue: { en: 'What ocean layer separates warm surface water from colder deep water and has a rapid temperature change with depth?', et: 'Millises ookeanikihis muutub temperatuur sügavuse suurenedes kiiresti, eraldades sooja pinnavee külmast süvaveest?' }, response: { en: 'the thermocline', et: 'termokliin' }, acceptedVariants: { en: ['thermocline'], et: ['temperatuuri hüppekiht'] },
+        explanation: { en: 'Within this transition layer, a relatively small increase in depth produces a large temperature drop.', et: 'Selles üleminekukihis toob suhteliselt väike sügavuse kasv kaasa suure temperatuurilanguse.' },
+        source: { sourceId: 'wikipedia:thermocline-ocean-layer', title: 'Thermocline', url: 'https://en.wikipedia.org/wiki/Thermocline', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-068:ocean-gyre-circular-currents', factKey: 'science-nature:ocean-gyre-circular-currents', tier: 3, subjectKey: 'system:ocean-gyre',
+        clue: { en: 'The Gulf Stream forms part of what type of vast circular current system shaped by global winds and Earth’s rotation?', et: 'Millist liiki hiiglaslikku ringjat hoovustesüsteemi kuulub Golfi hoovus, kui selliseid süsteeme kujundavad püsivad tuuled ja Maa pöörlemine?' }, response: { en: 'an ocean gyre', et: 'ookeani ringhoovus' }, acceptedVariants: { en: ['ocean gyre', 'gyre'], et: ['ookeanikeeris', 'ookeani hoovusering'] },
+        explanation: { en: 'Major basins contain rotating current systems that redistribute heat and floating material across great distances.', et: 'Suurtes ookeanibasseinides pöörlevad hoovustesüsteemid kannavad soojust ja ujuvat materjali väga pikkade vahemaade taha.' },
+        source: { sourceId: 'wikipedia:ocean-gyre-circular-currents', title: 'Ocean gyre', url: 'https://en.wikipedia.org/wiki/Ocean_gyre', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-068:thermohaline-density-circulation', factKey: 'science-nature:thermohaline-density-circulation', tier: 4, subjectKey: 'circulation:thermohaline',
+        clue: { en: 'What global deep-water circulation is driven by density differences caused mainly by temperature and salinity?', et: 'Kuidas nimetatakse üleilmset süvaveeringlust, mida käitavad peamiselt temperatuurist ja soolsusest tingitud tiheduserinevused?' }, response: { en: 'thermohaline circulation', et: 'termohaliinne tsirkulatsioon' }, acceptedVariants: { en: ['the global conveyor belt'], et: ['termohaliinne ringlus', 'globaalne konveierlint'] },
+        explanation: { en: 'Cold, salty water sinks in key regions and participates in a connected system of deep and surface flows.', et: 'Külm soolane vesi vajub teatud piirkondades põhja ning osaleb omavahel seotud süva- ja pinnahoovuste süsteemis.' },
+        source: { sourceId: 'wikipedia:thermohaline-circulation-density', title: 'Thermohaline circulation', url: 'https://en.wikipedia.org/wiki/Thermohaline_circulation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-068:ekman-transport-right-angle', factKey: 'science-nature:ekman-transport-right-angle', tier: 5, subjectKey: 'process:ekman-transport',
+        clue: { en: 'Because rotating Earth deflects each moving layer, wind can drive the net upper-ocean flow roughly at right angles to its own direction. Name this transport.', et: 'Maa pöörlemise tõttu kaldub iga liikuv veekiht kõrvale ning tuul võib panna ookeani ülakihi summaarse voolu liikuma enda suunaga ligikaudu risti. Nimeta see transport.' }, response: { en: 'Ekman transport', et: 'Ekmani transport' }, acceptedVariants: { en: ['the Ekman transport'], et: ['Ekmani ülekanne'] },
+        explanation: { en: 'Friction transfers motion downward while rotational deflection turns successive layers, producing a sideways net flow.', et: 'Hõõrdumine kannab liikumise allapoole, pöörlemisest tingitud kõrvalekalle aga pöörab järjestikuseid kihte ja tekitab külgsuunalise summaarse voolu.' },
+        source: { sourceId: 'wikipedia:ekman-transport-net-flow', title: 'Ekman transport', url: 'https://en.wikipedia.org/wiki/Ekman_transport', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-069', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Signals in the Climate System', et: 'Kliimasüsteemi signaalid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-069:albedo-reflected-fraction', factKey: 'science-nature:albedo-reflected-fraction', tier: 1, subjectKey: 'property:albedo',
+        clue: { en: 'Fresh snow reflects much more sunlight than dark ocean water. What name is given to the fraction of incoming radiation a surface reflects?', et: 'Värske lumi peegeldab palju rohkem päikesevalgust kui tume ookeanivesi. Kuidas nimetatakse pinnalt tagasi peegelduva kiirguse osakaalu?' }, response: { en: 'albedo', et: 'albeedo' }, acceptedVariants: { en: ['surface albedo'], et: ['pinna albeedo'] },
+        explanation: { en: 'A high value means a surface returns a large share of incoming energy instead of absorbing it.', et: 'Suur väärtus tähendab, et pind saadab suure osa saabuvast energiast tagasi ega neela seda.' },
+        source: { sourceId: 'wikipedia:albedo-reflected-radiation', title: 'Albedo', url: 'https://en.wikipedia.org/wiki/Albedo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-069:carbon-sink-net-uptake', factKey: 'science-nature:carbon-sink-net-uptake', tier: 2, subjectKey: 'reservoir:carbon-sink',
+        clue: { en: 'A forest, soil, or ocean region that absorbs more carbon than it releases is known by what two-word term?', et: 'Kuidas nimetatakse metsa, mulda või ookeanipiirkonda, mis seob rohkem süsinikku, kui seda vabastab?' }, response: { en: 'a carbon sink', et: 'süsiniku siduja' }, acceptedVariants: { en: ['carbon sink'], et: ['süsinikuneel', 'süsiniku neeldaja'] },
+        explanation: { en: 'Net uptake stores carbon in biomass, soils, dissolved compounds, or sediments.', et: 'Netosidumine talletab süsinikku biomassis, mullas, lahustunud ühendites või setetes.' },
+        source: { sourceId: 'wikipedia:carbon-sink-net-uptake', title: 'Carbon sink', url: 'https://en.wikipedia.org/wiki/Carbon_sink', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-069:ocean-acidification-carbon-dioxide', factKey: 'science-nature:ocean-acidification-carbon-dioxide', tier: 3, subjectKey: 'process:ocean-acidification',
+        clue: { en: 'What process lowers seawater pH as the ocean absorbs atmospheric carbon dioxide and forms carbonic acid?', et: 'Milline protsess alandab merevee pH-d, kui ookean neelab atmosfääri süsinikdioksiidi ja tekib süsihape?' }, response: { en: 'ocean acidification', et: 'ookeani hapestumine' }, acceptedVariants: { en: ['acidification of the ocean'], et: ['ookeanide hapestumine', 'merevee hapestumine'] },
+        explanation: { en: 'The added carbon dioxide shifts seawater chemistry and reduces the availability of carbonate ions.', et: 'Lisandunud süsinikdioksiid muudab merevee keemilist tasakaalu ning vähendab karbonaatioonide kättesaadavust.' },
+        source: { sourceId: 'wikipedia:ocean-acidification-carbon-dioxide', title: 'Ocean acidification', url: 'https://en.wikipedia.org/wiki/Ocean_acidification', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-069:climate-proxy-indirect-record', factKey: 'science-nature:climate-proxy-indirect-record', tier: 4, subjectKey: 'evidence:climate-proxy',
+        clue: { en: 'Tree rings, pollen in sediments, and coral growth bands can stand in for thermometer readings from before instruments existed. What is such indirect evidence called?', et: 'Aastarõngad, setetes leiduv õietolm ja korallide kasvuvööndid võivad asendada mõõteriistade-eelse aja temperatuuriandmeid. Kuidas sellist kaudset tõendit nimetatakse?' }, response: { en: 'a climate proxy', et: 'kliimaproksi' }, acceptedVariants: { en: ['climate proxy', 'proxy record'], et: ['kliima asendusnäitaja', 'proksiandmed'] },
+        explanation: { en: 'A calibrated relationship lets a preserved natural feature estimate a past climate variable.', et: 'Kalibreeritud seos võimaldab säilinud loodusliku tunnuse abil hinnata mineviku kliimanäitajat.' },
+        source: { sourceId: 'wikipedia:proxy-climate-indirect-record', title: 'Proxy (climate)', url: 'https://en.wikipedia.org/wiki/Proxy_(climate)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-069:milankovitch-orbital-cycles', factKey: 'science-nature:milankovitch-orbital-cycles', tier: 5, subjectKey: 'cycle:milankovitch',
+        clue: { en: 'Which named cycles combine slow changes in Earth’s orbital shape, axial tilt, and precession to alter the distribution of sunlight over thousands of years?', et: 'Millised nime saanud tsüklid ühendavad Maa orbiidi kuju, teljekalde ja pretsessiooni aeglased muutused, mis muudavad tuhandete aastate jooksul päikesekiirguse jaotust?' }, response: { en: 'Milankovitch cycles', et: 'Milankovići tsüklid' }, acceptedVariants: { en: ['Milanković cycles'], et: ['Milankovitchi tsüklid'] },
+        explanation: { en: 'The three orbital variations change seasonal and regional insolation and help pace long-term glacial cycles.', et: 'Kolm orbiidimuutust mõjutavad päikesekiirguse hooajalist ja piirkondlikku jaotust ning aitavad ajastada pikaajalisi jääajatsükleid.' },
+        source: { sourceId: 'wikipedia:milankovitch-orbital-cycles', title: 'Milankovitch cycles', url: 'https://en.wikipedia.org/wiki/Milankovitch_cycles', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const SCIENCE_NATURE_CATEGORIES = validatePlayableCorpus(rawCategories, ASSIGNED_TARGETS.slice(0, rawCategories.length));
