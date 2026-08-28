@@ -7,8 +7,11 @@ const LANGUAGES = [
 ] as const;
 const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu|varia|mitmesugust)(?:\s+\d+)?$/u;
 const ENGLISH_CURRENT_CUE = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
-const ENGLISH_CURRENT_CONTEXT = /\bcurrent(?:\s+[\p{L}\p{N}-]+){0,4}\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest)\b/u;
+const ENGLISH_CURRENT_CONTEXT = /\bcurrent\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|(?:world |national )?record holder|(?:(?:formula one )?world )?champion|population|ranking|tallest|highest|largest|newest)\b/u;
 const ESTONIAN_CURRENT_CUE = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u;
+const ENGLISH_RELATION_CUE = /\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest|building|skyscraper)\b/u;
+const ESTONIAN_RELATION_CUE = /\b(?:president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees|rekord|rahvaarv|kõrgeim|kõige kõrgem|hoone|pilvelõhkuja)\b/u;
+const RELATION_CLAUSE_SEPARATOR = /(?:[;:]|,(?!\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b)|[!?]+|\s+[–—-]\s+|\.(?=\s+(?!(?:aasta(?:l)?|jaanuaril|veebruaril|märtsil|aprillil|mail|juunil|juulil|augustil|septembril|oktoobril|novembril|detsembril)\b)))\s*/iu;
 const SET_SHAPED_SUBJECT_NAMESPACES = new Set([
   'bank',
   'batch',
@@ -125,10 +128,31 @@ function hasEnglishCurrentCue(value: string): boolean {
   return ENGLISH_CURRENT_CUE.test(normalized) || ENGLISH_CURRENT_CONTEXT.test(normalized);
 }
 
-function changingRelationClause(value: string): string {
-  return value
-    .split(/(?:;|\.(?=\s+(?:who|which|what|kes|milline|mis)\b))\s*/iu)
-    .at(-1) ?? value;
+function changingRelationScope(
+  value: string,
+  language: 'en' | 'et',
+): Readonly<{ clause: string; precedingPreamble?: string }> {
+  const clauses = value.split(RELATION_CLAUSE_SEPARATOR).filter((clause) => clause.trim() !== '');
+  const hasCue = language === 'en'
+    ? (clause: string) => hasEnglishCurrentCue(clause)
+      || ENGLISH_RELATION_CUE.test(normalize(clause))
+    : (clause: string) => ESTONIAN_CURRENT_CUE.test(normalize(clause))
+      || ESTONIAN_RELATION_CUE.test(normalize(clause));
+  let relationIndex = clauses.length - 1;
+  while (relationIndex > 0 && !hasCue(clauses[relationIndex]!)) relationIndex -= 1;
+  return {
+    clause: clauses[relationIndex] ?? value,
+    precedingPreamble: relationIndex > 0 ? clauses[relationIndex - 1] : undefined,
+  };
+}
+
+function isPureDatePreamble(value: string | undefined, language: 'en' | 'et'): boolean {
+  if (value === undefined) return false;
+  if (language === 'en') {
+    return /^\s*as of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\s*$/iu.test(value);
+  }
+  return /^\s*(?:(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga|seisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100))\s*$/iu
+    .test(value);
 }
 
 function isValidCalendarDate(year: number, month: number, day: number): boolean {
@@ -158,7 +182,8 @@ function hasValidEstonianCalendarDate(value: string): boolean {
 }
 
 function hasExplicitDate(value: string, language: 'en' | 'et'): boolean {
-  const clause = changingRelationClause(value);
+  const { clause, precedingPreamble } = changingRelationScope(value, language);
+  if (isPureDatePreamble(precedingPreamble, language)) return true;
   if (language === 'en') {
     if (/\bas of\s+(?:1[5-9]\d{2}|20\d{2}|2100)\b/iu.test(clause)) return true;
     if (hasEnglishCurrentCue(clause)) return false;

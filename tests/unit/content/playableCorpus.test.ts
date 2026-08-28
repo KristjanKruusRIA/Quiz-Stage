@@ -689,6 +689,24 @@ describe('validatePlayableCorpus', () => {
     expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
+  it('allows an ocean-current superlative as stable natural-world trivia', () => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: {
+        en: 'Which ocean current has the highest volume flow?',
+        et: 'Millisel ookeanihoovusel on suurim vooluhulk?',
+      },
+      response: {
+        en: 'The Antarctic Circumpolar Current',
+        et: 'Antarktika ringhoovus',
+      },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
+  });
+
   it('rejects undated changing facts and accepts an explicit as-of date', () => {
     const expected = target('target-a');
     const base = category(expected);
@@ -712,6 +730,29 @@ describe('validatePlayableCorpus', () => {
     expect(() => validatePlayableCorpus([undated], [expected]))
       .toThrowError(/asks about an unstable fact without an explicit date/u);
     expect(validatePlayableCorpus([dated], [expected])).toEqual([dated]);
+  });
+
+  it.each([
+    [
+      'English',
+      'As of 2024; who is the current president of Exampleland?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      '2024. aasta seisuga; kes on Näitemaa praegune president?',
+    ],
+  ])('accepts a pure %s as-of preamble before a semicolon', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(validatePlayableCorpus([changed], [expected])).toEqual([changed]);
   });
 
   it('rejects an undated changing relation even without a current-time keyword', () => {
@@ -876,6 +917,23 @@ describe('validatePlayableCorpus', () => {
     const changed = replaceQuestion(base, 0, {
       ...firstQuestion(base),
       clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
+    ['sentence and Name starter', 'Staffing was recorded as of 1900. Name the current CEO of Example Company.'],
+    ['comma and Identify starter', 'Staffing was recorded as of 1900, Identify the current CEO of Example Company.'],
+    ['dash and Identify starter', 'Staffing was recorded as of 1900 — Identify the current CEO of Example Company.'],
+  ])('does not let unrelated dated prose cross a %s', (_kind, clue) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en: clue, et: 'Milline ametikoht on siin kirjeldatud?' },
       response: { en: 'Jane Citizen', et: 'Jane Citizen' },
     });
 
