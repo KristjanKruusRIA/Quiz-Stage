@@ -452,7 +452,7 @@ test('survives a private Estonian eight-team match, restart, completion, history
       const name = await checkbox.locator('xpath=..').innerText();
       if (name.includes(PACK_NAME)) await checkbox.check(); else await checkbox.uncheck();
     }
-    await expect(host.getByRole('alert')).toContainText('Round One: 1 category set missing.');
+    await expect(host.getByRole('alert').filter({ hasText: 'Round One: 1 category set missing.' })).toBeVisible();
     await expect(host.getByRole('button', { name: 'Start match' })).toBeDisabled();
     await host.getByRole('button', { name: 'Back' }).click();
     await host.getByRole('button', { name: 'Content Library' }).click();

@@ -2,6 +2,7 @@ import { _electron as electron, expect, test } from '@playwright/test';
 import { copyFileSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { AUDIO_ASSET_SPEC } from '../../src/shared/media/contracts';
 import { electronExecutablePath, prepareE2eApplication } from './productHarness';
 
 test.beforeAll(prepareE2eApplication);
@@ -53,7 +54,7 @@ test('persists audio settings and serves bundled fallback through the pathless p
       range: { status: 416, accept: 'bytes', length: '0', mime: 'audio/wav' },
       method: { status: 405, allow: 'GET, HEAD' },
     });
-    expect(response.duration).toBeCloseTo(8.022, 1);
+    expect(response.duration).toBeCloseTo(AUDIO_ASSET_SPEC.opening.durationMs / 1_000, 1);
     await expect(page.getByRole('alert', { name: 'Opening audio' })).toContainText('bundled audio');
     await expect(page.getByRole('alert', { name: 'Winner audio' })).toContainText('bundled audio');
     copyFileSync(path.join(process.cwd(), 'resources', 'media', 'audio', 'opening.wav'), path.join(media, 'opening.wav'));

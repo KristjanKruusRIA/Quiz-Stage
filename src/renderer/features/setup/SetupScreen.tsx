@@ -116,7 +116,7 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
     void api.getSetupOptions().then((value) => {
       if (!active) return;
       setOptions(value);
-      setPackIds(value.packs.filter((pack) => pack.enabled).map((pack) => pack.id));
+      setPackIds(value.packs.filter((pack) => pack.enabled && pack.selectedByDefault).map((pack) => pack.id));
     }).catch(() => {
       if (active) setLoadFailed(true);
     });
