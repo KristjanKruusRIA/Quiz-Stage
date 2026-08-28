@@ -733,6 +733,22 @@ describe('validatePlayableCorpus', () => {
   });
 
   it.each([
+    'Who is the current U.S. president?',
+    'Name the current U.S. president.',
+  ])('rejects an undated current role with a dotted modifier: %s', (clue) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en: clue, et: 'Milline ametikoht on siin kirjeldatud?' },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
     [
       'English',
       'As of 2024; who is the current president of Exampleland?',
@@ -938,6 +954,30 @@ describe('validatePlayableCorpus', () => {
     });
 
     expect(() => validatePlayableCorpus([undatedCurrentRole], [expected]))
+      .toThrowError(/asks about an unstable fact without an explicit date/u);
+  });
+
+  it.each([
+    [
+      'English',
+      'As of 1900, staffing was ten. Who is currently the CEO?',
+      'Milline ametikoht on siin kirjeldatud?',
+    ],
+    [
+      'Estonian',
+      'Which officeholder is described?',
+      '1900. aasta seisuga oli töötajaid kümme. Kes on praegu tegevjuht?',
+    ],
+  ])('does not let a leading %s date preamble cross a sentence boundary', (_language, en, et) => {
+    const expected = target('target-a');
+    const base = category(expected);
+    const changed = replaceQuestion(base, 0, {
+      ...firstQuestion(base),
+      clue: { en, et },
+      response: { en: 'Jane Citizen', et: 'Jane Citizen' },
+    });
+
+    expect(() => validatePlayableCorpus([changed], [expected]))
       .toThrowError(/asks about an unstable fact without an explicit date/u);
   });
 

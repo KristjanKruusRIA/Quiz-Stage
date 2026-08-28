@@ -7,7 +7,7 @@ const LANGUAGES = [
 ] as const;
 const GENERIC_TITLE = /^(?:mix|medley|tour|grab bag|roundup|sampler|potpourri|challenge|quiz|odds ends|segu|varia|mitmesugust)(?:\s+\d+)?$/u;
 const ENGLISH_CURRENT_CUE = /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting)\b/u;
-const ENGLISH_CURRENT_CONTEXT = /\bcurrent\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|(?:world |national )?record holder|(?:(?:formula one )?world )?champion|population|ranking|tallest|highest|largest|newest)\b/u;
+const ENGLISH_CURRENT_CONTEXT = /\bcurrent\s+(?:(?:[a-z]\s+){1,3})?(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|(?:world |national )?record holder|(?:(?:formula one )?world )?champion|population|ranking|tallest|highest|largest|newest)\b/u;
 const ESTONIAN_CURRENT_CUE = /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev)\b/u;
 const ENGLISH_RELATION_CUE = /\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest|building|skyscraper)\b/u;
 const ESTONIAN_RELATION_CUE = /\b(?:president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees|rekord|rahvaarv|kõrgeim|kõige kõrgem|hoone|pilvelõhkuja)\b/u;
@@ -156,12 +156,18 @@ function isPureDatePreamble(value: string | undefined, language: 'en' | 'et'): b
 }
 
 function hasLeadingDatePreamble(value: string, language: 'en' | 'et'): boolean {
-  if (language === 'en') {
-    return /^\s*as of\s+(?:1[5-9]\d{2}|20\d{2}|2100)(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)\s*\S/iu
-      .test(value);
-  }
-  return /^\s*(?:(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga|seisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100))(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)\s*\S/iu
-    .test(value);
+  const match = language === 'en'
+    ? /^\s*as of\s+(?:1[5-9]\d{2}|20\d{2}|2100)(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)(?<remainder>\s*\S.*)$/iu.exec(value)
+    : /^\s*(?:(?:1[5-9]\d{2}|20\d{2}|2100)\.?\s+aasta seisuga|seisuga\s+(?:1[5-9]\d{2}|20\d{2}|2100))(?:\s*[,;:]|\s*\.(?=\s)|\s+[–—-]\s+)(?<remainder>\s*\S.*)$/iu.exec(value);
+  const remainder = match?.groups?.remainder;
+  if (remainder === undefined) return false;
+
+  const cue = language === 'en'
+    ? /\b(?:currently|today|now|presently|at present|most recent|latest|incumbent|sitting|president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|officeholder|record holder|champion|population|ranking|tallest|highest|largest|newest|building|skyscraper)\b/iu.exec(remainder)
+    : /\b(?:praegu|hetkel|tänapäeval|praegune|viimane|uusim|ametis olev|president|peaminister|tegevjuht|linnapea|kuberner|juht|esimees|rekord|rahvaarv|kõrgeim|kõige kõrgem|hoone|pilvelõhkuja)\b/iu.exec(remainder);
+  if (cue === null) return false;
+  const sentenceBoundary = /[!?]+|\.(?=\s+\p{Lu})/u.exec(remainder);
+  return sentenceBoundary === null || cue.index < sentenceBoundary.index;
 }
 
 function isValidCalendarDate(year: number, month: number, day: number): boolean {
