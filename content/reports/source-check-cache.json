@@ -35448,6 +35448,78 @@
         "code": null,
         "finalUrl": "https://www.introducingmilan.com/where-to-eat"
       }
+    },
+    "https://ruhnuviiul.ee/#:~:text=Kunagi%20oli%20Ruhnu%20tuntud%20oma%20osavate%20viiuldajate%20poolest": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.293Z",
+      "result": {
+        "url": "https://ruhnuviiul.ee/#:~:text=Kunagi%20oli%20Ruhnu%20tuntud%20oma%20osavate%20viiuldajate%20poolest",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.293Z",
+        "code": null,
+        "finalUrl": "https://ruhnuviiul.ee/#:~:text=Kunagi%20oli%20Ruhnu%20tuntud%20oma%20osavate%20viiuldajate%20poolest"
+      }
+    },
+    "https://muhuvain.ee/en/history/": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.329Z",
+      "result": {
+        "url": "https://muhuvain.ee/en/history/",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.329Z",
+        "code": null,
+        "finalUrl": "https://muhuvain.ee/en/history/"
+      }
+    },
+    "https://virurally.ee/ajalugu/": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.331Z",
+      "result": {
+        "url": "https://virurally.ee/ajalugu/",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.331Z",
+        "code": null,
+        "finalUrl": "https://virurally.ee/ajalugu/"
+      }
+    },
+    "https://visitestonia.com/en/suur-munamagi-observation-tower": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.342Z",
+      "result": {
+        "url": "https://visitestonia.com/en/suur-munamagi-observation-tower",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.342Z",
+        "code": null,
+        "finalUrl": "https://visitestonia.com/en/suur-munamagi-observation-tower"
+      }
+    },
+    "https://visitestonia.com/en/what-to-do/estonias-top-summer-music-festivals": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.351Z",
+      "result": {
+        "url": "https://visitestonia.com/en/what-to-do/estonias-top-summer-music-festivals",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.351Z",
+        "code": null,
+        "finalUrl": "https://visitestonia.com/en/what-to-do/estonias-top-summer-music-festivals"
+      }
+    },
+    "https://robotont.ut.ee/en/": {
+      "version": 1,
+      "expiresAt": "2026-09-04T04:17:31.433Z",
+      "result": {
+        "url": "https://robotont.ut.ee/en/",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-28T04:17:31.433Z",
+        "code": null,
+        "finalUrl": "https://robotont.ut.ee/en/"
+      }
     }
   }
 }
