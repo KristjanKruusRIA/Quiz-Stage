@@ -106,5 +106,6 @@ Task 43: complete (baseline `cc4fe45`; clean release gate, installer and portabl
 
 Task 12 (playable corpus): in-progress checkpoint handoff for `feat/playable-medium-hard-corpus`
 - Branch head is currently `34809fd` (`feat(content): extend science playability checkpoint`), adding `scripts/content/playability/banks/packs01to04.ts` updates.
-- Reviewed upstream checkpoint commit on science lane is `302a181` in `playable-science-nature` and was previously used as the source checkpoint.
-- Next for continuation: finish easy-mode validation on this branch, then integrate adult/Estonia changes into this branch, cherry-pick/merge the reviewed science checkpoint state, and continue packs 01–04 review pass before Task 8/Task 10 pipeline.
+- Reviewed upstream checkpoint commit on science lane remains `302a181` in `playable-science-nature` and is already used as a source checkpoint.
+- Easy-mode verification status: `npm run test:run -- tests/unit/content/accessibleCorpus.test.ts` and `npm run test:run -- tests/unit/content/accessibleEasy.test.ts` are both green on this branch.
+- Next for continuation: keep branch on easy-mode-green baseline, finish lane review/repair for packs 01–04, merge in `feat/adult-estonia-content` if branch has drifted, cherry-pick/merge reviewed `playable-science-nature` checkpoint (`302a181` + `5df4030`), then proceed with Task 8/Task 10 pipeline.
