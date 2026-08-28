@@ -5,7 +5,6 @@ import {
   acceptedBatchPaths,
   getProductionBatch,
 } from '../../../scripts/content/productionBatches';
-import type { BatchDistribution } from '../../../scripts/content/productionBatches';
 
 const expectedBatches = [
   ['01-history', 'built-in-history', 'history', ['ancient', 'medieval', 'early-modern', 'modern', 'political', 'social', 'military', 'economic', 'archaeological', 'cultural'], [[17, 17], [17, 16], [16, 17]]],
@@ -38,12 +37,47 @@ const expectedPaths = [
   ['13-finals', 'content/authored/13-finals.csv', 'content/generated/13-finals.en-et.csv', 'content/evidence/13-finals.jsonl', 'content/reports/13-finals.json'],
 ] as const;
 
-function countSets(distribution: BatchDistribution): number {
-  return Object.values(distribution).reduce(
-    (sum, rounds) => sum + rounds.roundOne + rounds.roundTwo,
-    0,
-  );
-}
+const expectedPackNames = {
+  '01-history': 'History Pack',
+  '02-geography': 'Geography Pack',
+  '03-science-nature': 'Science and Nature Pack',
+  '04-literature-language': 'Literature and Language Pack',
+  '05-art-architecture': 'Art and Architecture Pack',
+  '06-music': 'Music Pack',
+  '07-film-television': 'Film and Television Pack',
+  '08-sports-games': 'Sports and Games',
+  '09-food-drink': 'Food and Drink',
+  '10-technology-inventions': 'Technology and Inventions',
+  '11-politics-economics-society': 'Politics, Economics, and Society',
+  '12-mythology-religion-philosophy': 'Mythology, Religion, and Philosophy',
+} as const;
+
+const expectedNewTopics = [
+  {
+    id: '14-adult',
+    packId: 'built-in-adult',
+    packName: 'Adult (Mature) / Täiskasvanutele',
+    topicFamily: 'adult',
+    requiredOpenTdbClues: 0,
+    distribution: {
+      easy: { roundOne: 17, roundTwo: 16 },
+      medium: { roundOne: 17, roundTwo: 17 },
+      hard: { roundOne: 16, roundTwo: 17 },
+    },
+  },
+  {
+    id: '15-estonia',
+    packId: 'built-in-estonia',
+    packName: 'Estonia / Eesti',
+    topicFamily: 'estonia',
+    requiredOpenTdbClues: 0,
+    distribution: {
+      easy: { roundOne: 17, roundTwo: 17 },
+      medium: { roundOne: 16, roundTwo: 17 },
+      hard: { roundOne: 17, roundTwo: 16 },
+    },
+  },
+] as const;
 
 function sumByDifficultyAndRound(batches: typeof PRODUCTION_BATCHES) {
   return batches.reduce((totals, batch) => {
@@ -60,17 +94,20 @@ function sumByDifficultyAndRound(batches: typeof PRODUCTION_BATCHES) {
 }
 
 describe('production batch catalog', () => {
-  it('encodes all twelve 100-set batches and the exact global allocation', () => {
-    expect(PRODUCTION_BATCHES).toHaveLength(12);
-    expect(new Set(PRODUCTION_BATCHES.map((batch) => batch.id)).size).toBe(12);
+  it('encodes all fourteen board batches and the exact global allocation', () => {
+    expect(PRODUCTION_BATCHES).toHaveLength(14);
+    expect(PRODUCTION_BATCHES.slice(0, 12).map((batch) => batch.id)).toEqual(expectedBatches.map(([id]) => id));
+    for (const expected of expectedNewTopics) expect(getProductionBatch(expected.id)).toMatchObject(expected);
+    expect(PRODUCTION_BATCHES.slice(0, 12).every((batch) => batch.requiredOpenTdbClues === 100)).toBe(true);
+    expect(PRODUCTION_BATCHES.slice(12).every((batch) => batch.requiredOpenTdbClues === 0)).toBe(true);
     expect(PRODUCTION_BATCHES.every((batch) => batch.boardClues === 500)).toBe(true);
-    expect(PRODUCTION_BATCHES.reduce((sum, batch) => sum + countSets(batch.distribution!), 0)).toBe(1_200);
+    expect(PRODUCTION_BATCHES.reduce((sum, batch) => sum + batch.boardClues, 0)).toBe(7_000);
     expect(sumByDifficultyAndRound(PRODUCTION_BATCHES)).toEqual({
-      easy: { roundOne: 200, roundTwo: 200 },
-      medium: { roundOne: 200, roundTwo: 200 },
-      hard: { roundOne: 200, roundTwo: 200 },
+      easy: { roundOne: 234, roundTwo: 233 },
+      medium: { roundOne: 233, roundTwo: 234 },
+      hard: { roundOne: 233, roundTwo: 233 },
     });
-    expect(FINAL_BATCH.finalClues).toBe(150);
+    expect(FINAL_BATCH.finalClues).toBe(174);
   });
 
   it('encodes every batch metadata, vocabulary, and difficulty allocation exactly', () => {
@@ -79,6 +116,7 @@ describe('production batch catalog', () => {
       expect(batch).toEqual({
         id,
         packId,
+        packName: expectedPackNames[id],
         topicFamily,
         subthemes,
         maxSetsPerSubtheme: 15,
@@ -88,6 +126,7 @@ describe('production batch catalog', () => {
           medium: { roundOne: distribution[1][0], roundTwo: distribution[1][1] },
           hard: { roundOne: distribution[2][0], roundTwo: distribution[2][1] },
         },
+        finalTopicAllocations: null,
         boardClues: 500,
         finalClues: 0,
       });
@@ -95,16 +134,34 @@ describe('production batch catalog', () => {
   });
 
   it('defines Finals with every board topic family as its authoritative vocabulary', () => {
+    expect(FINAL_BATCH.finalTopicAllocations).toEqual({
+      history: { packId: 'built-in-finals', packName: 'Finals Pack', easy: 5, medium: 4, hard: 4 },
+      geography: { packId: 'built-in-finals', packName: 'Finals Pack', easy: 5, medium: 4, hard: 4 },
+      'science-nature': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 5, hard: 4 },
+      'literature-language': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 5, hard: 4 },
+      'art-architecture': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 5 },
+      music: { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 5 },
+      'film-television': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      'sports-games': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      'food-drink': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      'technology-inventions': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      'politics-economics-society': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      'mythology-religion-philosophy': { packId: 'built-in-finals', packName: 'Finals Pack', easy: 4, medium: 4, hard: 4 },
+      adult: { packId: 'built-in-adult', packName: 'Adult (Mature) / Täiskasvanutele', easy: 4, medium: 4, hard: 4 },
+      estonia: { packId: 'built-in-estonia', packName: 'Estonia / Eesti', easy: 4, medium: 4, hard: 4 },
+    });
     expect(FINAL_BATCH).toEqual({
       id: '13-finals',
       packId: 'built-in-finals',
+      packName: 'Finals Pack',
       topicFamily: 'finals',
-      subthemes: expectedBatches.map(([, , topicFamily]) => topicFamily),
+      subthemes: [...expectedBatches.map(([, , topicFamily]) => topicFamily), 'adult', 'estonia'],
       maxSetsPerSubtheme: 15,
       requiredOpenTdbClues: 0,
       distribution: null,
+      finalTopicAllocations: FINAL_BATCH.finalTopicAllocations,
       boardClues: 0,
-      finalClues: 150,
+      finalClues: 174,
     });
     expect(getProductionBatch('13-finals')).toBe(FINAL_BATCH);
   });
@@ -121,6 +178,8 @@ describe('production batch catalog', () => {
     }
     expect(Object.isFrozen(FINAL_BATCH)).toBe(true);
     expect(Object.isFrozen(FINAL_BATCH.subthemes)).toBe(true);
+    expect(Object.isFrozen(FINAL_BATCH.finalTopicAllocations)).toBe(true);
+    for (const allocation of Object.values(FINAL_BATCH.finalTopicAllocations!)) expect(Object.isFrozen(allocation)).toBe(true);
   });
 
   it('resolves every accepted repository-relative batch path exactly', () => {

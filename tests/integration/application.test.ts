@@ -29,7 +29,7 @@ describe('main application composition', () => {
     };
 
     expect(application.getSetupOptions('dual')).toEqual({
-      packs: [{ id: 'dev-library', name: 'Quiz Stage Development Library', enabled: true }],
+      packs: [{ id: 'dev-library', name: 'Quiz Stage Development Library', enabled: true, selectedByDefault: true }],
       automaticDisplayMode: 'dual',
     });
     expect(application.checkContentAvailability(config)).toEqual({ ok: true });
@@ -37,6 +37,28 @@ describe('main application composition', () => {
 
     expect(view.state.boards).toHaveLength(2);
     expect(application.repository.loadResumable()?.state).toEqual(view.state);
+    application.close();
+  });
+
+  it('marks only the built-in Adult pack as opt-in in setup options', () => {
+    directory = mkdtempSync(join(tmpdir(), 'quiz-stage-application-'));
+    const databasePath = join(directory, 'quiz.sqlite');
+    copyFileSync(join(process.cwd(), 'resources/content/dev-seed.sqlite'), databasePath);
+    const database = openDatabase({ filePath: databasePath });
+    database.prepare(`
+      INSERT INTO content_packs (id, name, version, source, enabled) VALUES
+        ('built-in-adult', 'Adult (Mature) / T\u00e4iskasvanutele', '1', 'bundled', 1),
+        ('built-in-estonia', 'Estonia / Eesti', '1', 'bundled', 1),
+        ('custom-pack', 'Custom Pack', '1', 'custom-editor', 1)
+    `).run();
+    const application = createApplication(database, { now: () => 100, createSeed: () => 'application-seed' });
+
+    expect(application.getSetupOptions('dual').packs).toEqual([
+      { id: 'built-in-adult', name: 'Adult (Mature) / T\u00e4iskasvanutele', enabled: true, selectedByDefault: false },
+      { id: 'built-in-estonia', name: 'Estonia / Eesti', enabled: true, selectedByDefault: true },
+      { id: 'custom-pack', name: 'Custom Pack', enabled: true, selectedByDefault: true },
+      { id: 'dev-library', name: 'Quiz Stage Development Library', enabled: true, selectedByDefault: true },
+    ]);
     application.close();
   });
 

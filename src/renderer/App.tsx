@@ -245,11 +245,11 @@ export default function App({ api }: AppProps) {
     />;
   }
   const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
-  return <I18nProvider locale={activeLocale}><div data-reduced-motion={appearance.reducedMotion}>
-    {[...mediaWarnings.values()].map((warning) => {
+  return <I18nProvider locale={activeLocale}><div className={route === 'match' ? 'app-shell app-shell--match' : 'app-shell'} data-reduced-motion={appearance.reducedMotion}>
+    <div className="media-warnings">{[...mediaWarnings.values()].map((warning) => {
       const asset = translate(activeLocale, audioAssetLabelKeys[warning.assetKey]);
       return <p role="alert" key={warning.assetKey} aria-label={asset}>{translate(activeLocale, 'settings.mediaWarning', { asset })}</p>;
-    })}
+    })}</div>
     {content}
   </div></I18nProvider>;
 }

@@ -51,7 +51,7 @@ function createPassingWork(root: string): { workRoot: string; sourceDependencies
       const sourceTitle = `source ${clueWord}`;
       const explanation = `${response} follows from the documented ${clueWord} evidence`;
       const common = {
-        clue_id: clueId, pack_id: batch.packId, pack_name: 'History', category_set_id: categoryId,
+        clue_id: clueId, pack_id: batch.packId, pack_name: batch.packName, category_set_id: categoryId,
         content_kind: 'board', round: cell.round, tier: String(tier), difficulty: cell.difficulty,
         macro_topic: batch.subthemes[setIndex % batch.subthemes.length], category_name_en: `category ${setWord}`,
         clue_en: `identify ${clueWord} from its distinctive documented historical context`, response_en: response,
@@ -79,6 +79,7 @@ function createPassingWork(root: string): { workRoot: string; sourceDependencies
         factualReview: { reviewer: 'fact-reviewer', reviewedAt: '2026-08-13T09:00:00.000Z', decision: 'approved' },
         editorialReview: { reviewer: 'editor', reviewedAt: '2026-08-13T10:00:00.000Z', decision: 'approved' },
         translationReview: { reviewer: 'translator', reviewedAt: '2026-08-13T11:00:00.000Z', decision: 'approved' },
+        adultPolicyReview: null,
       });
     }
   }

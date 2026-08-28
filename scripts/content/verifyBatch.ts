@@ -86,7 +86,7 @@ const issueSchema = z.object({
 const exceptionSchema = z.object({ id: z.string(), code: z.string(), clueId: z.string(), reason: z.string() }).strict();
 const summarySchema = z.object({
   boardClues: z.number(), categorySets: z.number(), distinctCategoryNames: z.number(),
-  finalClues: z.number(), easySets: z.number(), mediumSets: z.number(), hardSets: z.number(),
+  finalClues: z.number(), easySets: z.number(), mediumSets: z.number(), hardSets: z.number(), builtInPacks: z.number(),
 }).strict();
 const validationSchema = z.object({
   mode: z.enum(['batch', 'release']), blocking: z.boolean(), summary: summarySchema,
