@@ -19,9 +19,11 @@ import { applyAccessibleCorpus } from './accessibility/apply';
 import { LEGACY_EASY_TARGETS, type LegacyEasyTarget } from './accessibility/targets';
 import type { AccessibleCategory, CategoryTitle } from './accessibility/types';
 import { parseEvidenceJsonl, serializeEvidence, type ContentEvidence } from './evidence';
-import { PRODUCTION_BATCHES } from './productionBatches';
 
 const DEFAULT_OUTPUT_ROOT = 'content/work/accessible-easy-overhaul/staged';
+const ACCESSIBLE_BATCH_IDS = Object.freeze([
+  ...new Set(LEGACY_EASY_TARGETS.map(({ batchId }) => batchId)),
+]);
 const INVENTORY_COLUMNS = [
   'clue_id', 'pack_id', 'pack_name', 'category_set_id', 'content_kind',
   'round', 'tier', 'difficulty', 'macro_topic', 'enabled',
@@ -51,7 +53,7 @@ type StagedArtifact = Readonly<{
 }>;
 
 function artifactDefinitions(acceptedRoot: string, outputRoot: string): readonly StagedArtifact[] {
-  return PRODUCTION_BATCHES.flatMap(({ id: batchId }) => [
+  return ACCESSIBLE_BATCH_IDS.flatMap((batchId) => [
     {
       batchId,
       kind: 'authored' as const,
@@ -174,7 +176,7 @@ function buildExpectedStage(options: StageOptions): Readonly<{
   validateGlobalTargets(options);
   const staged = new Map<string, string>();
   const replacedClueIds: string[] = [];
-  for (const { id: batchId } of PRODUCTION_BATCHES) {
+  for (const batchId of ACCESSIBLE_BATCH_IDS) {
     const authoredPath = resolve(options.acceptedRoot, `content/authored/${batchId}.csv`);
     const generatedPath = resolve(options.acceptedRoot, `content/generated/${batchId}.en-et.csv`);
     const evidencePath = resolve(options.acceptedRoot, `content/evidence/${batchId}.jsonl`);
@@ -270,7 +272,7 @@ export function publishAccessibleCorpusStage(options: StageOptions & Readonly<{
   const artifacts = artifactDefinitions(options.acceptedRoot, options.outputRoot);
   const bytes = new Map<string, Buffer>();
   for (const artifact of artifacts) bytes.set(artifact.stagedPath, readStagedArtifact(artifact.stagedPath));
-  for (const { id: batchId } of PRODUCTION_BATCHES) {
+  for (const batchId of ACCESSIBLE_BATCH_IDS) {
     const batchArtifacts = artifacts.filter((artifact) => artifact.batchId === batchId);
     validateStagedBatch(
       batchId,
@@ -410,7 +412,7 @@ function runCli(argv = process.argv.slice(2)): void {
   const result = stageAccessibleCorpus(pipeline);
   if (args.publish) publishAccessibleCorpusStage(pipeline);
   process.stdout.write(
-    `Staged ${result.replacedClueIds.length} accessible corpus clues across ${PRODUCTION_BATCHES.length} batches${args.publish ? ' and published 36 artifacts' : ''}.\n`,
+    `Staged ${result.replacedClueIds.length} accessible corpus clues across ${ACCESSIBLE_BATCH_IDS.length} batches${args.publish ? ` and published ${ACCESSIBLE_BATCH_IDS.length * 3} artifacts` : ''}.\n`,
   );
 }
 

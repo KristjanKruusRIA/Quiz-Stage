@@ -336,6 +336,7 @@ function applyEvidence(
       reviewedAt: '2026-08-01T10:00:00.000Z',
       decision: 'approved',
     },
+    adultPolicyReview: null,
     translationReview: {
       reviewer: 'Original Translation Reviewer',
       reviewedAt: '2026-08-01T11:00:00.000Z',
@@ -1486,6 +1487,7 @@ describe('applyAccessibleCorpus', () => {
         reviewedAt: '2026-08-28T10:00:00.000Z',
         decision: 'approved',
       },
+      adultPolicyReview: null,
       translationReview: {
         reviewer: 'Codex Accessible Corpus Translation Reviewer',
         reviewedAt: '2026-08-28T11:00:00.000Z',
