@@ -1143,6 +1143,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-science-nature-set-020', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Carbon’s Many Arrangements', et: 'Süsiniku paljud struktuurid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-020:benzene-six-carbon-ring', factKey: 'science-nature:benzene-six-carbon-ring', tier: 1, subjectKey: 'molecule:benzene',
+        clue: { en: 'Which aromatic hydrocarbon has six carbon atoms in a ring and is conventionally drawn as a hexagon with alternating bonds?', et: 'Millise aromaatse süsivesiniku kuus süsinikuaatomit moodustavad ringi, mida kujutatakse tavaliselt vahelduvate sidemetega kuusnurgana?' }, response: { en: 'benzene', et: 'benseen' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Its delocalized electrons make all six carbon–carbon bonds equivalent despite the familiar alternating-bond drawing.', et: 'Delokaliseerunud elektronide tõttu on kõik kuus süsinik-süsiniksidet võrdsed, ehkki tuntud joonisel on sidemed vahelduvad.' },
+        source: { sourceId: 'wikipedia:benzene-aromatic-ring', title: 'Benzene', url: 'https://en.wikipedia.org/wiki/Benzene', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-020:structural-isomerism-connectivity', factKey: 'science-nature:structural-isomerism-connectivity', tier: 2, subjectKey: 'concept:structural-isomerism',
+        clue: { en: 'Compounds can share a molecular formula while their atoms are connected in different orders. What kind of isomerism is this?', et: 'Ühenditel võib olla sama molekulivalem, kuid aatomid on omavahel seotud erinevas järjekorras. Mis liiki isomeeria see on?' }, response: { en: 'structural isomerism', et: 'struktuuriisomeeria' }, acceptedVariants: { en: ['constitutional isomerism'], et: ['konstitutsiooniisomeeria'] },
+        explanation: { en: 'Structural isomers differ in bond connectivity, not merely in how the same connectivity is arranged in space.', et: 'Struktuuriisomeerid erinevad sidemete ühendusviisi, mitte üksnes sama ühendusviisi ruumilise paigutuse poolest.' },
+        source: { sourceId: 'wikipedia:structural-isomerism-connectivity', title: 'Structural isomer', url: 'https://en.wikipedia.org/wiki/Structural_isomer', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-020:chain-growth-active-centre', factKey: 'science-nature:chain-growth-active-centre', tier: 3, subjectKey: 'process:chain-growth-polymerization',
+        clue: { en: 'In which mode of polymer formation does a reactive centre add monomers one at a time to a growing chain?', et: 'Millises polümeeri moodustumise viisis liidab aktiivne tsenter monomeere ükshaaval kasvava ahela külge?' }, response: { en: 'chain-growth polymerization', et: 'ahelpolümerisatsioon' }, acceptedVariants: { en: ['chain-growth polymerisation'], et: ['ahelkasvupolümerisatsioon'] },
+        explanation: { en: 'Initiation creates an active centre, propagation lengthens the chain, and termination ends its growth.', et: 'Initsiatsioon tekitab aktiivse tsentri, ahela kasv pikendab seda ning terminatsioon lõpetab kasvu.' },
+        source: { sourceId: 'wikipedia:chain-growth-polymerization-active-centre', title: 'Chain-growth polymerization', url: 'https://en.wikipedia.org/wiki/Chain-growth_polymerization', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-020:chirality-mirror-images', factKey: 'science-nature:chirality-mirror-images', tier: 4, subjectKey: 'property:chirality',
+        clue: { en: 'What molecular property makes two mirror-image forms impossible to superimpose, much like left and right hands?', et: 'Milline molekuli omadus muudab kaks peegelpildivormi teineteisega kattumatuks nagu vasaku ja parema käe?' }, response: { en: 'chirality', et: 'kiraalsus' }, acceptedVariants: { en: ['molecular handedness'], et: ['molekulaarne käelisus'] },
+        explanation: { en: 'The two nonsuperimposable mirror images are enantiomers and may interact differently with biological molecules.', et: 'Kaks kattumatut peegelpilti on enantiomeerid ning võivad bioloogiliste molekulidega erinevalt vastastikmõjuda.' },
+        source: { sourceId: 'wikipedia:chirality-mirror-images', title: 'Chirality (chemistry)', url: 'https://en.wikipedia.org/wiki/Chirality_(chemistry)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-020:buckminsterfullerene-c60-cage', factKey: 'science-nature:buckminsterfullerene-c60-cage', tier: 5, subjectKey: 'molecule:buckminsterfullerene',
+        clue: { en: 'Which C60 carbon molecule forms a cage of pentagons and hexagons resembling a football and was named for architect R. Buckminster Fuller?', et: 'Milline C60 süsinikumolekul moodustab viis- ja kuusnurkadest jalgpallitaolise puuri ning sai nime arhitekt R. Buckminster Fulleri järgi?' }, response: { en: 'buckminsterfullerene', et: 'buckminsterfullereen' }, acceptedVariants: { en: ['buckyball'], et: ['C60-fullereen'] },
+        explanation: { en: 'Its sixty carbon atoms occupy the vertices of a truncated-icosahedron cage.', et: 'Selle kuuskümmend süsinikuaatomit paiknevad kärbitud ikosaeedri puuri tippudes.' },
+        source: { sourceId: 'wikipedia:buckminsterfullerene-c60-cage', title: 'Buckminsterfullerene', url: 'https://en.wikipedia.org/wiki/Buckminsterfullerene', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-025', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Radioactive Clocks and Changes', et: 'Radioaktiivsuse kellad ja muutused' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-025:half-life-half-decays', factKey: 'science-nature:half-life-half-decays', tier: 1, subjectKey: 'quantity:half-life',
+        clue: { en: 'What term names the time required for half the unstable nuclei in a sample to decay?', et: 'Kuidas nimetatakse aega, mille jooksul lagunevad pooled proovis olevatest ebastabiilsetest tuumadest?' }, response: { en: 'half-life', et: 'poolestusaeg' }, acceptedVariants: { en: ['radioactive half-life'], et: ['radioaktiivne poolestusaeg'] },
+        explanation: { en: 'After each such interval, the expected number of undecayed nuclei is halved again.', et: 'Iga sellise ajavahemiku järel väheneb lagunemata tuumade eeldatav arv taas poole võrra.' },
+        source: { sourceId: 'wikipedia:half-life-radioactive-decay', title: 'Half-life', url: 'https://en.wikipedia.org/wiki/Half-life', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-025:alpha-particle-helium-nucleus', factKey: 'science-nature:alpha-particle-helium-nucleus', tier: 2, subjectKey: 'particle:alpha',
+        clue: { en: 'Which emitted particle consists of two protons and two neutrons—the same composition as a helium-4 nucleus?', et: 'Milline kiirguv osake koosneb kahest prootonist ja kahest neutronist ehk on sama koostisega nagu heelium-4 tuum?' }, response: { en: 'an alpha particle', et: 'alfaosake' }, acceptedVariants: { en: ['alpha particle'], et: ['alfa-osake'] },
+        explanation: { en: 'Emitting this doubly charged particle lowers the parent nucleus’s atomic number by two and mass number by four.', et: 'Selle kahekordse positiivse laenguga osakese kiirgumine vähendab lähtetuuma aatomnumbrit kahe ja massiarvu nelja võrra.' },
+        source: { sourceId: 'wikipedia:alpha-particle-helium-nucleus', title: 'Alpha particle', url: 'https://en.wikipedia.org/wiki/Alpha_particle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-025:gamma-radiation-photons', factKey: 'science-nature:gamma-radiation-photons', tier: 3, subjectKey: 'radiation:gamma',
+        clue: { en: 'An excited nucleus can lose energy by emitting highly penetrating photons without changing its proton or neutron count. What radiation is emitted?', et: 'Ergastatud tuum võib kaotada energiat suure läbitungimisvõimega footoneid kiirates, ilma et prootonite või neutronite arv muutuks. Mis kiirgus see on?' }, response: { en: 'gamma radiation', et: 'gammakiirgus' }, acceptedVariants: { en: ['gamma rays'], et: ['gammakiired'] },
+        explanation: { en: 'This electromagnetic emission often follows another nuclear decay that leaves the daughter nucleus excited.', et: 'See elektromagnetkiirgus järgneb sageli teisele tuumalagunemisele, mis jätab tütartuuma ergastatud olekusse.' },
+        source: { sourceId: 'wikipedia:gamma-radiation-nuclear-transition', title: 'Gamma ray', url: 'https://en.wikipedia.org/wiki/Gamma_ray', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-025:beta-minus-neutron-conversion', factKey: 'science-nature:beta-minus-neutron-conversion', tier: 4, subjectKey: 'process:beta-minus-decay',
+        clue: { en: 'Which decay converts a neutron into a proton while emitting an electron and an electron antineutrino?', et: 'Milline lagunemine muudab neutroni prootoniks ning kiirgab elektroni ja elektroni antineutriino?' }, response: { en: 'beta-minus decay', et: 'beeta-miinuslagunemine' }, acceptedVariants: { en: ['β− decay'], et: ['β−-lagunemine'] },
+        explanation: { en: 'The mass number stays constant, but the new proton raises the atomic number by one.', et: 'Massiarv ei muutu, kuid uus prooton suurendab aatomnumbrit ühe võrra.' },
+        source: { sourceId: 'wikipedia:beta-minus-neutron-conversion', title: 'Beta decay', url: 'https://en.wikipedia.org/wiki/Beta_decay', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-025:electron-capture-proton-neutron', factKey: 'science-nature:electron-capture-proton-neutron', tier: 5, subjectKey: 'process:electron-capture',
+        clue: { en: 'In which decay process does a proton-rich nucleus absorb one of the atom’s inner-shell electrons, turning a proton into a neutron and emitting a neutrino?', et: 'Millises lagunemisprotsessis neelab prootonirikas tuum aatomi sisekihi elektroni, muutes prootoni neutroniks ja kiirates neutriino?' }, response: { en: 'electron capture', et: 'elektronhaare' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The process lowers the atomic number by one while leaving the mass number unchanged.', et: 'Protsess vähendab aatomnumbrit ühe võrra, kuid massiarv jääb samaks.' },
+        source: { sourceId: 'wikipedia:electron-capture-proton-neutron', title: 'Electron capture', url: 'https://en.wikipedia.org/wiki/Electron_capture', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-033', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Evolution by Chance and Choice', et: 'Evolutsioon juhuse ja valiku kaudu' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-033:genetic-drift-random-frequency', factKey: 'science-nature:genetic-drift-random-frequency', tier: 1, subjectKey: 'process:genetic-drift',
+        clue: { en: 'What evolutionary process changes allele frequencies through random sampling, with especially strong effects in small populations?', et: 'Milline evolutsiooniprotsess muudab alleelisagedusi juhusliku valimi tõttu ning avaldab eriti tugevat mõju väikestes populatsioonides?' }, response: { en: 'genetic drift', et: 'geneetiline triiv' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Chance alone can make an allele more common, rarer, or lost even when it gives no selective advantage.', et: 'Üksnes juhus võib muuta alleeli sagedamaks, haruldasemaks või selle kaotada ka siis, kui alleel ei anna valikueelist.' },
+        source: { sourceId: 'wikipedia:genetic-drift-random-frequency', title: 'Genetic drift', url: 'https://en.wikipedia.org/wiki/Genetic_drift', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-033:founder-effect-new-population', factKey: 'science-nature:founder-effect-new-population', tier: 2, subjectKey: 'process:founder-effect',
+        clue: { en: 'A few colonists establish an isolated population whose allele frequencies differ by chance from the source population. What effect is this?', et: 'Vähesed asustajad rajavad isoleeritud populatsiooni, mille alleelisagedused erinevad juhuslikult lähtepopulatsiooni omadest. Mis efekt see on?' }, response: { en: 'the founder effect', et: 'rajajaefekt' }, acceptedVariants: { en: ['founder effect'], et: ['asutajaefekt'] },
+        explanation: { en: 'The founders carry only a sample of the original gene pool, so rare variants can become unusually common.', et: 'Rajajad kannavad vaid osa algsest geenifondist, mistõttu haruldased variandid võivad muutuda ebatavaliselt sagedaks.' },
+        source: { sourceId: 'wikipedia:founder-effect-colonists', title: 'Founder effect', url: 'https://en.wikipedia.org/wiki/Founder_effect', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-033:population-bottleneck-diversity', factKey: 'science-nature:population-bottleneck-diversity', tier: 3, subjectKey: 'process:population-bottleneck',
+        clue: { en: 'What term describes a sharp temporary reduction in population size that can leave surviving descendants with much less genetic diversity?', et: 'Kuidas nimetatakse populatsiooni arvukuse järsku ajutist vähenemist, mille järel võib ellujäänute järglastel olla palju vähem geneetilist mitmekesisust?' }, response: { en: 'a population bottleneck', et: 'populatsiooni pudelikael' }, acceptedVariants: { en: ['genetic bottleneck'], et: ['geneetiline pudelikael'] },
+        explanation: { en: 'The survivors represent a restricted genetic sample, and later population growth does not automatically restore lost alleles.', et: 'Ellujäänud moodustavad piiratud geneetilise valimi ning hilisem arvukuse kasv ei taasta kaotatud alleele automaatselt.' },
+        source: { sourceId: 'wikipedia:population-bottleneck-genetic-diversity', title: 'Population bottleneck', url: 'https://en.wikipedia.org/wiki/Population_bottleneck', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-033:hardy-weinberg-no-evolution', factKey: 'science-nature:hardy-weinberg-no-evolution', tier: 4, subjectKey: 'principle:hardy-weinberg-equilibrium',
+        clue: { en: 'Which named equilibrium predicts constant allele and genotype frequencies when a large, randomly mating population experiences no mutation, migration, selection, or drift?', et: 'Milline nime saanud tasakaal ennustab alleeli- ja genotüübisageduste püsimist, kui suur juhuslikult paarituv populatsioon ei koge mutatsiooni, rännet, valikut ega triivi?' }, response: { en: 'Hardy–Weinberg equilibrium', et: 'Hardy–Weinbergi tasakaal' }, acceptedVariants: { en: ['Hardy-Weinberg equilibrium'], et: ['Hardy-Weinbergi printsiip'] },
+        explanation: { en: 'It provides a null model: departures from its assumptions can reveal evolutionary forces acting on a population.', et: 'See on nullmudel, mille eeldustest kõrvalekaldumine võib näidata populatsioonis toimivaid evolutsioonijõude.' },
+        source: { sourceId: 'wikipedia:hardy-weinberg-equilibrium-assumptions', title: 'Hardy–Weinberg principle', url: 'https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-033:kin-selection-relatives', factKey: 'science-nature:kin-selection-relatives', tier: 5, subjectKey: 'process:kin-selection',
+        clue: { en: 'What evolutionary process can favour costly helping behaviour when it increases the reproductive success of close relatives who share genes?', et: 'Milline evolutsiooniprotsess võib soosida kulukat abistamiskäitumist, kui see suurendab ühiseid geene kandvate lähisugulaste sigimisedu?' }, response: { en: 'kin selection', et: 'sugulusvalik' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'By helping relatives reproduce, an organism can increase the transmission of alleles identical by descent.', et: 'Sugulaste sigimist toetades võib organism suurendada ühise päritoluga alleelide edasikandumist.' },
+        source: { sourceId: 'wikipedia:kin-selection-relatives', title: 'Kin selection', url: 'https://en.wikipedia.org/wiki/Kin_selection', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-064', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'When Immunity Misfires', et: 'Kui immuunsus eksib' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-064:allergy-harmless-trigger', factKey: 'science-nature:allergy-harmless-trigger', tier: 1, subjectKey: 'condition:allergy',
+        clue: { en: 'What condition is an immune overreaction to a normally harmless substance such as pollen or certain foods?', et: 'Milline seisund on immuunsüsteemi ülereaktsioon tavaliselt kahjutule ainele, näiteks õietolmule või mõnele toidule?' }, response: { en: 'an allergy', et: 'allergia' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The triggering substance is an allergen, and symptoms can range from local irritation to a systemic emergency.', et: 'Reaktsiooni vallandav aine on allergeen ning sümptomid võivad ulatuda kohalikust ärritusest kogu keha haarava hädaolukorrani.' },
+        source: { sourceId: 'wikipedia:allergy-harmless-trigger', title: 'Allergy', url: 'https://en.wikipedia.org/wiki/Allergy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-064:autoimmune-disease-self-tissue', factKey: 'science-nature:autoimmune-disease-self-tissue', tier: 2, subjectKey: 'condition:autoimmune-disease',
+        clue: { en: 'What broad class of disease occurs when immune responses mistakenly target the body’s own cells or tissues?', et: 'Millise üldnimetusega haigus tekib siis, kui immuunvastus ründab ekslikult organismi enda rakke või kudesid?' }, response: { en: 'an autoimmune disease', et: 'autoimmuunhaigus' }, acceptedVariants: { en: ['autoimmune disorder'], et: ['autoimmuunne haigus'] },
+        explanation: { en: 'Examples include type 1 diabetes, multiple sclerosis, and rheumatoid arthritis, each directed at different self targets.', et: 'Näiteks I tüüpi diabeet, hulgiskleroos ja reumatoidartriit on suunatud erinevate organismi enda sihtmärkide vastu.' },
+        source: { sourceId: 'wikipedia:autoimmune-disease-self-tissue', title: 'Autoimmune disease', url: 'https://en.wikipedia.org/wiki/Autoimmune_disease', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-064:anaphylaxis-systemic-emergency', factKey: 'science-nature:anaphylaxis-systemic-emergency', tier: 3, subjectKey: 'reaction:anaphylaxis',
+        clue: { en: 'What severe, rapid systemic allergic reaction can constrict airways and dangerously lower blood pressure?', et: 'Milline raske ja kiiresti tekkiv kogu organismi allergiline reaktsioon võib ahendada hingamisteid ning langetada ohtlikult vererõhku?' }, response: { en: 'anaphylaxis', et: 'anafülaksia' }, acceptedVariants: { en: ['an anaphylactic reaction'], et: ['anafülaktiline reaktsioon'] },
+        explanation: { en: 'It is a medical emergency commonly treated first with intramuscular epinephrine.', et: 'See on erakorraline seisund, mille esmane ravi on tavaliselt lihasesisene adrenaliin.' },
+        source: { sourceId: 'wikipedia:anaphylaxis-systemic-emergency', title: 'Anaphylaxis', url: 'https://en.wikipedia.org/wiki/Anaphylaxis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-064:type-one-hypersensitivity-ige', factKey: 'science-nature:type-one-hypersensitivity-ige', tier: 4, subjectKey: 'mechanism:type-one-hypersensitivity',
+        clue: { en: 'Which numbered hypersensitivity reaction is immediate, mediated by IgE antibodies, and responsible for hay fever and many cases of anaphylaxis?', et: 'Milline nummerdatud ülitundlikkusreaktsioon on vahetu, IgE-antikehade vahendatud ning põhjustab heinapalavikku ja paljusid anafülaksiajuhte?' }, response: { en: 'type I hypersensitivity', et: 'I tüüpi ülitundlikkus' }, acceptedVariants: { en: ['immediate hypersensitivity'], et: ['vahetu ülitundlikkus'] },
+        explanation: { en: 'Allergen binding cross-links IgE on mast cells, prompting rapid release of histamine and other mediators.', et: 'Allergeeni seondumine ristseob nuumrakkudel IgE ning vallandab histamiini ja teiste virgatsainete kiire vabanemise.' },
+        source: { sourceId: 'wikipedia:type-one-hypersensitivity-ige', title: 'Type I hypersensitivity', url: 'https://en.wikipedia.org/wiki/Type_I_hypersensitivity', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-064:molecular-mimicry-cross-reaction', factKey: 'science-nature:molecular-mimicry-cross-reaction', tier: 5, subjectKey: 'mechanism:molecular-mimicry',
+        clue: { en: 'What mechanism can provoke autoimmunity when a pathogen’s antigen resembles a host molecule closely enough for antibodies or T cells to cross-react?', et: 'Milline mehhanism võib vallandada autoimmuunsuse, kui haigustekitaja antigeen sarnaneb organismi enda molekuliga sedavõrd, et antikehad või T-rakud reageerivad mõlemaga?' }, response: { en: 'molecular mimicry', et: 'molekulaarne mimikri' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'An immune response raised against the microbe can then recognize a structurally similar self antigen.', et: 'Mikroobi vastu tekkinud immuunvastus võib seejärel ära tunda struktuurilt sarnase organismi enda antigeeni.' },
+        source: { sourceId: 'wikipedia:molecular-mimicry-cross-reaction', title: 'Molecular mimicry', url: 'https://en.wikipedia.org/wiki/Molecular_mimicry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-065', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'How Enzymes Control Reactions', et: 'Kuidas ensüümid reaktsioone juhivad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-065:active-site-substrate-binding', factKey: 'science-nature:active-site-substrate-binding', tier: 1, subjectKey: 'structure:active-site',
+        clue: { en: 'What region of an enzyme binds its substrate and contains the residues that carry out catalysis?', et: 'Milline ensüümi piirkond seob substraadi ja sisaldab katalüüsi läbiviivaid aminohappejääke?' }, response: { en: 'the active site', et: 'aktiivtsenter' }, acceptedVariants: { en: ['active site'], et: ['aktiivne tsenter'] },
+        explanation: { en: 'Its three-dimensional shape and chemical groups position the substrate for reaction.', et: 'Selle ruumiline kuju ja keemilised rühmad paigutavad substraadi reaktsiooniks sobivalt.' },
+        source: { sourceId: 'wikipedia:active-site-substrate-binding', title: 'Active site', url: 'https://en.wikipedia.org/wiki/Active_site', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-065:coenzyme-organic-helper', factKey: 'science-nature:coenzyme-organic-helper', tier: 2, subjectKey: 'molecule:coenzyme',
+        clue: { en: 'What name is given to a non-protein organic helper molecule, often derived from a vitamin, that an enzyme needs for catalysis?', et: 'Kuidas nimetatakse valgulise ehituseta orgaanilist abimolekuli, mis pärineb sageli vitamiinist ja mida ensüüm vajab katalüüsiks?' }, response: { en: 'a coenzyme', et: 'koensüüm' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Such molecules can carry electrons or chemical groups between reactions and are a type of cofactor.', et: 'Sellised molekulid võivad kanda reaktsioonide vahel elektrone või keemilisi rühmi ning kuuluvad kofaktorite hulka.' },
+        source: { sourceId: 'wikipedia:coenzyme-organic-helper', title: 'Coenzyme', url: 'https://en.wikipedia.org/wiki/Coenzyme', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-065:competitive-inhibition-active-site', factKey: 'science-nature:competitive-inhibition-active-site', tier: 3, subjectKey: 'mechanism:competitive-inhibition',
+        clue: { en: 'What inhibition occurs when a molecule competes with the substrate for the same binding region and can be overcome by raising substrate concentration?', et: 'Milline inhibeerimine toimub siis, kui molekul konkureerib substraadiga sama seondumispiirkonna pärast ning suurem substraadikontsentratsioon võib mõju vähendada?' }, response: { en: 'competitive inhibition', et: 'konkurentne inhibeerimine' }, acceptedVariants: { en: ['competitive enzyme inhibition'], et: ['konkurentsinhibeerimine'] },
+        explanation: { en: 'The inhibitor reduces substrate binding without lowering the catalytic capacity of enzyme molecules that do bind substrate.', et: 'Inhibiitor vähendab substraadi seondumist, kuid ei kahanda substraati sidunud ensüümimolekulide katalüütilist võimet.' },
+        source: { sourceId: 'wikipedia:competitive-inhibition-active-site', title: 'Competitive inhibition', url: 'https://en.wikipedia.org/wiki/Competitive_inhibition', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-065:allosteric-site-distant-control', factKey: 'science-nature:allosteric-site-distant-control', tier: 4, subjectKey: 'structure:allosteric-site',
+        clue: { en: 'What regulatory binding region, distinct from the catalytic region, changes an enzyme’s activity by altering its conformation?', et: 'Milline katalüütilisest piirkonnast erinev regulatoorne seondumispiirkond muudab ensüümi konformatsiooni kaudu selle aktiivsust?' }, response: { en: 'an allosteric site', et: 'allosteeriline tsenter' }, acceptedVariants: { en: ['allosteric site'], et: ['allosteeriline seondumiskoht'] },
+        explanation: { en: 'A regulator binding there can stabilize a more active or less active shape of the enzyme.', et: 'Sinna seonduv regulaator võib stabiliseerida ensüümi aktiivsema või vähem aktiivse kuju.' },
+        source: { sourceId: 'wikipedia:allosteric-site-distant-control', title: 'Allosteric regulation', url: 'https://en.wikipedia.org/wiki/Allosteric_regulation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-065:zymogen-inactive-precursor', factKey: 'science-nature:zymogen-inactive-precursor', tier: 5, subjectKey: 'protein:zymogen',
+        clue: { en: 'What is an inactive enzyme precursor called when it must be cleaved before becoming catalytically active, as with digestive pepsinogen?', et: 'Kuidas nimetatakse inaktiivset ensüümi eellast, mis peab katalüütilise aktiivsuse saavutamiseks lõhustuma, nagu seedeensüümi pepsinogeeni puhul?' }, response: { en: 'a zymogen', et: 'proensüüm' }, acceptedVariants: { en: ['proenzyme'], et: ['tsümogeen'] },
+        explanation: { en: 'Producing the enzyme in an inactive form helps prevent it from acting in the wrong place or at the wrong time.', et: 'Ensüümi tootmine inaktiivsel kujul aitab vältida selle toimimist vales kohas või valel ajal.' },
+        source: { sourceId: 'wikipedia:zymogen-inactive-precursor', title: 'Zymogen', url: 'https://en.wikipedia.org/wiki/Zymogen', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-066', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Controls Above the DNA Sequence', et: 'Geenijuhtimine DNA järjestust muutmata' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-066:nucleosome-dna-spool', factKey: 'science-nature:nucleosome-dna-spool', tier: 1, subjectKey: 'structure:nucleosome',
+        clue: { en: 'What basic unit of chromatin consists of DNA wrapped around a core of histone proteins like thread around a spool?', et: 'Milline kromatiini põhiüksus koosneb histoonvalkude südamiku ümber niidina keritud DNA-st?' }, response: { en: 'a nucleosome', et: 'nukleosoom' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Repeating units compact the genome while still allowing regulated access to the DNA.', et: 'Korduvad üksused pakivad genoomi kokku, kuid võimaldavad samal ajal reguleeritud juurdepääsu DNA-le.' },
+        source: { sourceId: 'wikipedia:nucleosome-dna-histone-core', title: 'Nucleosome', url: 'https://en.wikipedia.org/wiki/Nucleosome', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-066:dna-methylation-cytosine', factKey: 'science-nature:dna-methylation-cytosine', tier: 2, subjectKey: 'process:dna-methylation',
+        clue: { en: 'What chemical modification adds methyl groups to DNA, commonly at cytosines in CpG sites, and is often linked to reduced gene expression?', et: 'Milline keemiline modifikatsioon lisab DNA-le metüülrühmi, sageli CpG-kohtade tsütosiinidele, ning seostub tihti geeniekspressiooni vähenemisega?' }, response: { en: 'DNA methylation', et: 'DNA metüleerimine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The mark can influence protein binding and chromatin state without changing the nucleotide sequence.', et: 'See märgis võib mõjutada valkude seondumist ja kromatiini olekut ilma nukleotiidijärjestust muutmata.' },
+        source: { sourceId: 'wikipedia:dna-methylation-cytosine', title: 'DNA methylation', url: 'https://en.wikipedia.org/wiki/DNA_methylation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-066:histone-acetylation-open-chromatin', factKey: 'science-nature:histone-acetylation-open-chromatin', tier: 3, subjectKey: 'process:histone-acetylation',
+        clue: { en: 'Which modification of histone tails tends to loosen chromatin by neutralizing positive charges and is commonly associated with active transcription?', et: 'Milline histoonisabade modifikatsioon lõdvendab kromatiini, neutraliseerides positiivseid laenguid, ning seostub tavaliselt aktiivse transkriptsiooniga?' }, response: { en: 'histone acetylation', et: 'histoonide atsetüülimine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Acetyl groups weaken histone–DNA attraction and create binding sites for proteins that support gene activity.', et: 'Atsetüülrühmad nõrgendavad histoonide ja DNA vahelist tõmmet ning loovad seondumiskohti geenide aktiivsust toetavatele valkudele.' },
+        source: { sourceId: 'wikipedia:histone-acetylation-open-chromatin', title: 'Histone acetylation and deacetylation', url: 'https://en.wikipedia.org/wiki/Histone_acetylation_and_deacetylation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-066:x-inactivation-barr-body', factKey: 'science-nature:x-inactivation-barr-body', tier: 4, subjectKey: 'process:x-chromosome-inactivation',
+        clue: { en: 'What dosage-compensation process silences most genes on one X chromosome in each cell of many female mammals, forming a Barr body?', et: 'Milline geenidoosi tasakaalustav protsess vaigistab paljude emaste imetajate igas rakus enamiku ühe X-kromosoomi geene ning moodustab Barri kehakese?' }, response: { en: 'X-chromosome inactivation', et: 'X-kromosoomi inaktivatsioon' }, acceptedVariants: { en: ['X-inactivation'], et: ['X-inaktivatsioon'] },
+        explanation: { en: 'The chromosome is selected early in development, creating a mosaic of cells with different active X chromosomes.', et: 'Kromosoom valitakse arengu varases järgus, mistõttu tekib erineva aktiivse X-kromosoomiga rakkude mosaiik.' },
+        source: { sourceId: 'wikipedia:x-inactivation-barr-body', title: 'X-inactivation', url: 'https://en.wikipedia.org/wiki/X-inactivation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-066:genomic-imprinting-parent-origin', factKey: 'science-nature:genomic-imprinting-parent-origin', tier: 5, subjectKey: 'process:genomic-imprinting',
+        clue: { en: 'What epigenetic phenomenon makes an allele’s expression depend on whether it was inherited from the mother or the father?', et: 'Millise epigeneetilise nähtuse korral sõltub alleeli avaldumine sellest, kas see pärandus emalt või isalt?' }, response: { en: 'genomic imprinting', et: 'genoomne vermimine' }, acceptedVariants: { en: ['genetic imprinting'], et: ['genoomne imprinting'] },
+        explanation: { en: 'Parent-specific marks silence one copy of certain genes, so only the maternal or paternal allele is expressed.', et: 'Vanemaspetsiifilised märgised vaigistavad mõne geeni ühe koopia, nii et avaldub üksnes ema- või isapoolne alleel.' },
+        source: { sourceId: 'wikipedia:genomic-imprinting-parent-origin', title: 'Genomic imprinting', url: 'https://en.wikipedia.org/wiki/Genomic_imprinting', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-071', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Reading an Earthquake', et: 'Maavärina lugemine' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-071:p-wave-compression-fastest', factKey: 'science-nature:p-wave-compression-fastest', tier: 1, subjectKey: 'wave:p-wave',
+        clue: { en: 'Which seismic body wave arrives first and alternately compresses and expands material in its direction of travel?', et: 'Milline seismiline ruumilaine saabub esimesena ning surub kivimit levimissuunas vaheldumisi kokku ja venitab laiali?' }, response: { en: 'a P wave', et: 'P-laine' }, acceptedVariants: { en: ['primary wave'], et: ['primaarlaine'] },
+        explanation: { en: 'This longitudinal wave travels through solids, liquids, and gases faster than other seismic waves.', et: 'See pikilaine levib tahketes ainetes, vedelikes ja gaasides teistest seismilistest lainetest kiiremini.' },
+        source: { sourceId: 'wikipedia:p-wave-compression-fastest', title: 'P wave', url: 'https://en.wikipedia.org/wiki/P_wave', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-071:s-wave-shear-solids', factKey: 'science-nature:s-wave-shear-solids', tier: 2, subjectKey: 'wave:s-wave',
+        clue: { en: 'Which slower seismic body wave moves particles perpendicular to its path and cannot pass through Earth’s liquid outer core?', et: 'Milline aeglasem seismiline ruumilaine liigutab osakesi levimissuunaga risti ega läbi Maa vedelat välistuuma?' }, response: { en: 'an S wave', et: 'S-laine' }, acceptedVariants: { en: ['secondary wave', 'shear wave'], et: ['sekundaarlaine', 'ristlaine'] },
+        explanation: { en: 'Fluids do not resist the shear deformation this transverse wave requires.', et: 'Vedelikud ei pea vastu nihkedeformatsioonile, mida see ristlaine levimiseks vajab.' },
+        source: { sourceId: 'wikipedia:s-wave-shear-solids', title: 'S wave', url: 'https://en.wikipedia.org/wiki/S_wave', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-071:shadow-zone-missing-direct-waves', factKey: 'science-nature:shadow-zone-missing-direct-waves', tier: 3, subjectKey: 'region:seismic-shadow-zone',
+        clue: { en: 'What region of Earth’s surface receives no direct seismic waves of a given type because the planet’s interior refracts or blocks them?', et: 'Kuidas nimetatakse Maa pinnapiirkonda, kuhu teatavat tüüpi otsesed seismilised lained ei jõua, sest planeedi siseehitus murrab või tõkestab neid?' }, response: { en: 'a seismic shadow zone', et: 'seismiline varjutsoon' }, acceptedVariants: { en: ['shadow zone'], et: ['seismiliste lainete varjutsoon'] },
+        explanation: { en: 'These gaps in global recordings revealed major boundaries and a liquid layer deep inside Earth.', et: 'Sellised lüngad üleilmsetes mõõtmistes paljastasid Maa siseehituse suured piirpinnad ja sügaval asuva vedela kihi.' },
+        source: { sourceId: 'wikipedia:seismic-shadow-zone-missing-waves', title: 'Seismic wave', url: 'https://en.wikipedia.org/wiki/Seismic_wave#Shadow_zones', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-071:moment-magnitude-seismic-moment', factKey: 'science-nature:moment-magnitude-seismic-moment', tier: 4, subjectKey: 'scale:moment-magnitude',
+        clue: { en: 'Which modern earthquake scale derives size from seismic moment—the fault area, slip, and rock rigidity—rather than from one instrument’s wave amplitude?', et: 'Milline tänapäevane maavärinaskaala tuletab suuruse seismilisest momendist ehk murrangu pindalast, nihkest ja kivimi jäikusest, mitte ühe mõõteriista laineamplituudist?' }, response: { en: 'the moment magnitude scale', et: 'momendimagnituudi skaala' }, acceptedVariants: { en: ['moment magnitude'], et: ['momendimagnituud'] },
+        explanation: { en: 'It is logarithmic and avoids the saturation problem that limits older magnitude scales for very large earthquakes.', et: 'See on logaritmiline ega küllastu väga suurte maavärinate korral nii nagu vanemad magnituudiskaalad.' },
+        source: { sourceId: 'wikipedia:moment-magnitude-seismic-moment', title: 'Moment magnitude scale', url: 'https://en.wikipedia.org/wiki/Moment_magnitude_scale', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-071:elastic-rebound-stored-strain', factKey: 'science-nature:elastic-rebound-stored-strain', tier: 5, subjectKey: 'theory:elastic-rebound',
+        clue: { en: 'Which theory explains earthquakes as the sudden release of elastic strain after rocks on opposite sides of a locked fault deform and then snap to new positions?', et: 'Milline teooria selgitab maavärinat elastse deformatsiooni järsu vabanemisena pärast seda, kui lukustunud murrangu eri poolte kivimid painduvad ja nihkuvad siis uude asendisse?' }, response: { en: 'elastic rebound theory', et: 'elastse tagasilöögi teooria' }, acceptedVariants: { en: ['the elastic-rebound theory'], et: ['elastse tagasipõrke teooria'] },
+        explanation: { en: 'Tectonic motion slowly stores strain until friction is overcome and the fault slips.', et: 'Laamade liikumine kogub aeglaselt deformatsioonienergiat, kuni hõõrdetakistus ületatakse ja murrang nihkub.' },
+        source: { sourceId: 'wikipedia:elastic-rebound-stored-strain', title: 'Elastic-rebound theory', url: 'https://en.wikipedia.org/wiki/Elastic-rebound_theory', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-083', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Inside a Tornadic Storm', et: 'Tornaadotormi sees' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-083:supercell-rotating-updraft', factKey: 'science-nature:supercell-rotating-updraft', tier: 1, subjectKey: 'storm:supercell',
+        clue: { en: 'What long-lived thunderstorm type contains a deep, persistently rotating updraft and produces many of the strongest tornadoes?', et: 'Milline pikaealine äikesetormi tüüp sisaldab sügavat ja püsivalt pöörlevat tõusuvoolu ning tekitab paljusid tugevaimaid tornaadosid?' }, response: { en: 'a supercell', et: 'supertsell' }, acceptedVariants: { en: ['supercell thunderstorm'], et: ['supertsell-äikesetorm'] },
+        explanation: { en: 'Strong vertical wind shear lets the storm organize around its rotating updraft.', et: 'Tugev vertikaalne tuulenihe võimaldab tormil pöörleva tõusuvoolu ümber organiseeruda.' },
+        source: { sourceId: 'wikipedia:supercell-rotating-updraft', title: 'Supercell', url: 'https://en.wikipedia.org/wiki/Supercell', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-083:mesocyclone-storm-rotation', factKey: 'science-nature:mesocyclone-storm-rotation', tier: 2, subjectKey: 'circulation:mesocyclone',
+        clue: { en: 'What is the rotating updraft region within a severe thunderstorm called when radar detects broad storm-scale rotation?', et: 'Kuidas nimetatakse tugeva äikesetormi pöörlevat tõusuvoolupiirkonda, kui radar tuvastab tormi mõõtkavas laia pöörlemise?' }, response: { en: 'a mesocyclone', et: 'mesotsüklon' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'It is much wider than a tornado and can exist without producing one.', et: 'See on tornaadost palju laiem ning võib eksisteerida ka ilma tornaadot tekitamata.' },
+        source: { sourceId: 'wikipedia:mesocyclone-storm-rotation', title: 'Mesocyclone', url: 'https://en.wikipedia.org/wiki/Mesocyclone', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-083:enhanced-fujita-damage', factKey: 'science-nature:enhanced-fujita-damage', tier: 3, subjectKey: 'scale:enhanced-fujita',
+        clue: { en: 'Which EF0-to-EF5 scale estimates tornado wind speed from observed damage to structures and vegetation?', et: 'Milline EF0-st EF5-ni ulatuv skaala hindab tornaado tuulekiirust ehitistele ja taimestikule tekitatud kahjustuste põhjal?' }, response: { en: 'the Enhanced Fujita scale', et: 'täiustatud Fujita skaala' }, acceptedVariants: { en: ['EF scale'], et: ['EF-skaala'] },
+        explanation: { en: 'Damage indicators and degrees of damage support an estimated wind-speed range rather than a direct measurement.', et: 'Kahjustusnäitajate ja kahjustusastmete abil hinnatakse tuulekiiruse vahemikku, mitte ei mõõdeta seda otse.' },
+        source: { sourceId: 'wikipedia:enhanced-fujita-damage', title: 'Enhanced Fujita scale', url: 'https://en.wikipedia.org/wiki/Enhanced_Fujita_scale', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-083:wall-cloud-rain-free-base', factKey: 'science-nature:wall-cloud-rain-free-base', tier: 4, subjectKey: 'cloud:wall-cloud',
+        clue: { en: 'What localized lowering beneath a storm’s rain-free base marks a strong inflow region and may rotate before tornado formation?', et: 'Kuidas nimetatakse tormi sademeteta aluse paikset madaldumist, mis tähistab tugevat sissevoolupiirkonda ning võib enne tornaado teket pöörlema hakata?' }, response: { en: 'a wall cloud', et: 'seinpilv' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'It forms where humid inflow rises into the updraft; rotation increases concern but does not guarantee a tornado.', et: 'See tekib, kui niiske sissevool tõuseb tõusuvoolu; pöörlemine suurendab ohtu, kuid ei tähenda vältimatult tornaadot.' },
+        source: { sourceId: 'wikipedia:wall-cloud-rain-free-base', title: 'Wall cloud', url: 'https://en.wikipedia.org/wiki/Wall_cloud', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-083:hook-echo-radar-signature', factKey: 'science-nature:hook-echo-radar-signature', tier: 5, subjectKey: 'radar-signature:hook-echo',
+        clue: { en: 'What hook-shaped radar reflectivity signature forms when a rotating storm wraps precipitation around its mesocyclone and can signal tornado potential?', et: 'Milline konksukujuline radari peegeldussignatuur tekib siis, kui pöörlev torm mähib sademed ümber mesotsükloni, ning võib viidata tornaadoohule?' }, response: { en: 'a hook echo', et: 'konkskaja' }, acceptedVariants: { en: ['hook echo'], et: ['konksukujuline radarikaja'] },
+        explanation: { en: 'The shape reveals precipitation curving around rotation, though radar velocity data provide additional evidence.', et: 'Kuju näitab pöörlemise ümber kaarduvaid sademeid, kuid lisatõendeid annavad radari kiirusandmed.' },
+        source: { sourceId: 'wikipedia:hook-echo-radar-signature', title: 'Hook echo', url: 'https://en.wikipedia.org/wiki/Hook_echo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-086', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'The High-Energy Sky', et: 'Kõrge energiaga taevas' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-086:chandra-nasa-observatory', factKey: 'science-nature:chandra-nasa-observatory', tier: 1, subjectKey: 'observatory:chandra',
+        clue: { en: 'Which NASA space observatory, named for astrophysicist Subrahmanyan Chandrasekhar, studies extremely hot and energetic cosmic sources in X-rays?', et: 'Milline NASA kosmoseobservatoorium, mis sai nime astrofüüsik Subrahmanyan Chandrasekhari järgi, uurib röntgenikiirguses ülikuumi ja energilisi kosmilisi allikaid?' }, response: { en: 'the Chandra X-ray Observatory', et: 'Chandra röntgenobservatoorium' }, acceptedVariants: { en: ['Chandra'], et: ['Chandra observatoorium'] },
+        explanation: { en: 'Orbiting above the atmosphere lets it observe radiation that air would otherwise absorb.', et: 'Atmosfäärist kõrgemal tiirlemine võimaldab vaadelda kiirgust, mille õhk muidu neelaks.' },
+        source: { sourceId: 'wikipedia:chandra-nasa-observatory', title: 'Chandra X-ray Observatory', url: 'https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-086:accretion-disk-hot-spiral', factKey: 'science-nature:accretion-disk-hot-spiral', tier: 2, subjectKey: 'structure:accretion-disk',
+        clue: { en: 'What rotating structure forms when matter spirals toward a compact object, heating through friction and often shining strongly at high energies?', et: 'Milline pöörlev struktuur tekib siis, kui aine spiraalib kompaktse objekti poole, kuumeneb hõõrdumise tõttu ja kiirgab sageli tugevalt suure energiaga kiirgust?' }, response: { en: 'an accretion disk', et: 'akretsiooniketas' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Angular momentum keeps infalling material in orbit while internal stresses move it gradually inward.', et: 'Impulsimoment hoiab langevat ainet orbiidil, sisemised pinged aga liigutavad seda järk-järgult sissepoole.' },
+        source: { sourceId: 'wikipedia:accretion-disk-hot-spiral', title: 'Accretion disk', url: 'https://en.wikipedia.org/wiki/Accretion_disk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-086:pulsar-wind-nebula-particles', factKey: 'science-nature:pulsar-wind-nebula-particles', tier: 3, subjectKey: 'nebula:pulsar-wind',
+        clue: { en: 'What kind of nebula is powered inside a supernova remnant when a spinning neutron star drives a wind of relativistic particles into its surroundings?', et: 'Millist liiki udukogu saab supernoovajäänuki sees energiat siis, kui pöörlev neutrontäht paiskab ümbrusse relativistlike osakeste tuule?' }, response: { en: 'a pulsar wind nebula', et: 'pulsari tuule udukogu' }, acceptedVariants: { en: ['plerion'], et: ['plerion'] },
+        explanation: { en: 'The particle wind produces synchrotron radiation, with the Crab Nebula as the best-known example.', et: 'Osakeste tuul tekitab sünkrotronkiirgust ning tuntuim näide on Krabi udukogu.' },
+        source: { sourceId: 'wikipedia:pulsar-wind-nebula-particles', title: 'Pulsar wind nebula', url: 'https://en.wikipedia.org/wiki/Pulsar_wind_nebula', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-086:xray-binary-compact-companion', factKey: 'science-nature:xray-binary-compact-companion', tier: 4, subjectKey: 'system:x-ray-binary',
+        clue: { en: 'What kind of two-star system shines strongly at high energies when a compact object draws matter from a companion?', et: 'Millist liiki kaksiktähesüsteem kiirgab tugevalt suure energiaga kiirgust, kui kompaktne objekt tõmbab ainet kaastähelt?' }, response: { en: 'an X-ray binary', et: 'röntgenkaksiktäht' }, acceptedVariants: { en: ['X-ray binary system'], et: ['röntgenkiirguse kaksiktäht'] },
+        explanation: { en: 'Gas heated while falling toward a neutron star or black hole can become an intense source of energetic photons.', et: 'Neutrontähe või musta augu poole langedes kuumenev gaas võib saada intensiivseks suure energiaga footonite allikaks.' },
+        source: { sourceId: 'wikipedia:xray-binary-compact-companion', title: 'X-ray binary', url: 'https://en.wikipedia.org/wiki/X-ray_binary', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-086:grazing-incidence-xray-mirrors', factKey: 'science-nature:grazing-incidence-xray-mirrors', tier: 5, subjectKey: 'optics:grazing-incidence',
+        clue: { en: 'What mirror technique focuses X-rays by reflecting them at very shallow angles, because they would pass through or be absorbed by a conventional telescope mirror?', et: 'Milline peeglitehnika koondab röntgenikiiri väga väikese langemisnurga all peegeldades, sest tavalise teleskoobipeegli läbiksid või neelduksid need?' }, response: { en: 'grazing-incidence optics', et: 'riivava langemise optika' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Nested, nearly cylindrical mirrors guide the rays through one or more shallow reflections to a focus.', et: 'Pesastatud peaaegu silindrilised peeglid juhivad kiired ühe või mitme väikese nurga all peegeldusega fookusse.' },
+        source: { sourceId: 'wikipedia:grazing-incidence-xray-mirrors', title: 'X-ray telescope', url: 'https://en.wikipedia.org/wiki/X-ray_telescope', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-087', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Sharks Under the Surface', et: 'Haid pinna all' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-087:countershading-dark-light', factKey: 'science-nature:countershading-dark-light', tier: 1, subjectKey: 'camouflage:countershading',
+        clue: { en: 'What camouflage pattern makes a shark dark above and pale below, reducing its contrast against deep water from above and the bright surface from below?', et: 'Milline varjevärvuse muster teeb hai seljapoole tumedaks ja kõhupoole heledaks, vähendades kontrasti ülalt süvavee ning alt heleda veepinna taustal?' }, response: { en: 'countershading', et: 'vastuvarjutus' }, acceptedVariants: { en: ['counter-shading'], et: ['vastandvarjutus'] },
+        explanation: { en: 'Opposite shading counters the natural pattern of light and shadow on a three-dimensional body.', et: 'Vastassuunaline toonierinevus tasakaalustab ruumilisele kehale langeva valguse ja varju loomulikku mustrit.' },
+        source: { sourceId: 'wikipedia:countershading-dark-light', title: 'Countershading', url: 'https://en.wikipedia.org/wiki/Countershading', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-087:dermal-denticles-toothlike-scales', factKey: 'science-nature:dermal-denticles-toothlike-scales', tier: 2, subjectKey: 'structure:dermal-denticles',
+        clue: { en: 'What tooth-like scales cover shark skin, protecting it and helping reduce drag as water flows from head to tail?', et: 'Millised hambataolised soomused katavad hai nahka, kaitstes seda ja vähendades veetakistust, kui vesi liigub peast saba poole?' }, response: { en: 'dermal denticles', et: 'plakoidsoomused' }, acceptedVariants: { en: ['placoid scales'], et: ['nahahambakesed'] },
+        explanation: { en: 'Each small structure has enamel-like and dentine-like tissues and points backward with the flow.', et: 'Iga väike struktuur sisaldab emaili- ja dentiinilaadseid kudesid ning on suunatud veevooluga tahapoole.' },
+        source: { sourceId: 'wikipedia:dermal-denticles-shark-skin', title: 'Fish scale', url: 'https://en.wikipedia.org/wiki/Fish_scale#Placoid_scales', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-087:nictitating-membrane-protective-eyelid', factKey: 'science-nature:nictitating-membrane-protective-eyelid', tier: 3, subjectKey: 'structure:nictitating-membrane',
+        clue: { en: 'What transparent or translucent third eyelid can sweep across the eye of some sharks to protect it while retaining some vision?', et: 'Milline läbipaistev või poolläbipaistev kolmas silmalaug võib mõnel hail liikuda üle silma, et seda kaitsta ja samal ajal osa nägemisest säilitada?' }, response: { en: 'the nictitating membrane', et: 'pilkkile' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The movable membrane shields the exposed eye, including during close contact with prey.', et: 'Liikuv kile kaitseb paljast silma, sealhulgas saagiga lähikontakti ajal.' },
+        source: { sourceId: 'wikipedia:nictitating-membrane-protective-eyelid', title: 'Nictitating membrane', url: 'https://en.wikipedia.org/wiki/Nictitating_membrane', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-087:ovoviviparity-eggs-inside', factKey: 'science-nature:ovoviviparity-eggs-inside', tier: 4, subjectKey: 'reproduction:ovoviviparity',
+        clue: { en: 'What reproductive mode describes eggs retained inside the mother, where embryos rely mainly on yolk and hatch before or during birth?', et: 'Milline sigimisviis tähendab munade hoidmist emaslooma kehas, kus embrüod toituvad peamiselt rebust ning kooruvad enne sünnitust või selle ajal?' }, response: { en: 'ovoviviparity', et: 'ovovivipaarsus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Several shark species use this egg-retaining form of live birth without a placental connection like that of most mammals.', et: 'Mitmed hailiigid kasutavad sellist mune kehas hoidvat elussünnitust ilma enamiku imetajate platsentaga sarnase ühenduseta.' },
+        source: { sourceId: 'wikipedia:ovoviviparity-eggs-inside', title: 'Ovoviviparity', url: 'https://en.wikipedia.org/wiki/Ovoviviparity', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-087:tonic-immobility-shark-trance', factKey: 'science-nature:tonic-immobility-shark-trance', tier: 5, subjectKey: 'response:tonic-immobility',
+        clue: { en: 'What temporary trance-like state can be induced in some sharks by turning or restraining them, leaving them unusually still for several minutes?', et: 'Kuidas nimetatakse ajutist transilaadset seisundit, mida võib mõnel hail ümberpööramise või kinnihoidmisega esile kutsuda ning mis jätab looma mitmeks minutiks ebatavaliselt liikumatuks?' }, response: { en: 'tonic immobility', et: 'tooniline liikumatus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Researchers use this involuntary response to handle certain sharks, although susceptibility varies among species.', et: 'Teadlased kasutavad seda tahtmatut reaktsiooni mõne hailiigi käsitsemiseks, kuid vastuvõtlikkus erineb liigiti.' },
+        source: { sourceId: 'wikipedia:tonic-immobility-shark-trance', title: 'Tonic immobility', url: 'https://en.wikipedia.org/wiki/Tonic_immobility', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-088', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Arthropod Body Engineering', et: 'Lülijalgsete kehaehitus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-088:ecdysis-shed-cuticle', factKey: 'science-nature:ecdysis-shed-cuticle', tier: 1, subjectKey: 'process:ecdysis',
+        clue: { en: 'What is the shedding of an arthropod’s old external cuticle called when growth requires a roomier covering?', et: 'Kuidas nimetatakse lülijalgse vana väliskutiikula mahajätmist, kui kasvamiseks on vaja avaramat katet?' }, response: { en: 'ecdysis', et: 'kestumine' }, acceptedVariants: { en: ['moulting', 'molting'], et: ['kestavahetus'] },
+        explanation: { en: 'A new soft cuticle forms beneath the old one, then expands and hardens after the old covering splits.', et: 'Vana katte alla moodustub uus pehme kutiikula, mis pärast vana kesta lõhenemist paisub ja kõvastub.' },
+        source: { sourceId: 'wikipedia:ecdysis-shed-cuticle', title: 'Ecdysis', url: 'https://en.wikipedia.org/wiki/Ecdysis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-088:hemolymph-open-circulation', factKey: 'science-nature:hemolymph-open-circulation', tier: 2, subjectKey: 'fluid:hemolymph',
+        clue: { en: 'What circulating fluid directly bathes organs in the open circulatory system of insects and many other arthropods?', et: 'Milline ringlusvedelik ümbritseb putukate ja paljude teiste lülijalgsete avatud vereringes elundeid vahetult?' }, response: { en: 'hemolymph', et: 'hemolümf' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Unlike vertebrate blood, it is not confined entirely to vessels and usually carries little respiratory oxygen in insects.', et: 'Erinevalt selgroogsete verest ei püsi see täielikult veresoontes ning kannab putukatel tavaliselt vähe hingamishapnikku.' },
+        source: { sourceId: 'wikipedia:hemolymph-open-circulation', title: 'Hemolymph', url: 'https://en.wikipedia.org/wiki/Hemolymph', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-088:chelicerae-first-appendages', factKey: 'science-nature:chelicerae-first-appendages', tier: 3, subjectKey: 'appendage:chelicerae',
+        clue: { en: 'What first pair of mouth-adjacent appendages gives spiders their fangs and distinguishes chelicerates from insects and crustaceans?', et: 'Milline esimene suulähedaste jätkete paar moodustab ämblike kihvad ning eristab lõugtundlasi putukatest ja vähilaadsetest?' }, response: { en: 'chelicerae', et: 'lõugtundlad' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'These appendages serve feeding or defence roles in spiders, scorpions, mites, horseshoe crabs, and their relatives.', et: 'Need jätked täidavad toitumis- või kaitseülesannet ämblikel, skorpionidel, lestadel, odasabadel ja nende sugulastel.' },
+        source: { sourceId: 'wikipedia:chelicerae-first-appendages', title: 'Chelicerae', url: 'https://en.wikipedia.org/wiki/Chelicerae', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-088:book-lungs-stacked-plates', factKey: 'science-nature:book-lungs-stacked-plates', tier: 4, subjectKey: 'organ:book-lungs',
+        clue: { en: 'What respiratory organs in spiders and scorpions contain stacked air pockets and tissue plates resembling the pages of a book?', et: 'Millised ämblike ja skorpionide hingamiselundid sisaldavad raamatu lehekülgi meenutavaid kihilisi õhutaskuid ja koeplaate?' }, response: { en: 'book lungs', et: 'lehviktrahheed' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Gas exchange occurs across the many thin plates, which provide a large surface area inside the abdomen.', et: 'Gaasivahetus toimub arvukatel õhukestel plaatidel, mis annavad tagakehas suure pindala.' },
+        source: { sourceId: 'wikipedia:book-lungs-stacked-plates', title: 'Book lung', url: 'https://en.wikipedia.org/wiki/Book_lung', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-088:malpighian-tubules-waste', factKey: 'science-nature:malpighian-tubules-waste', tier: 5, subjectKey: 'organ:malpighian-tubules',
+        clue: { en: 'What blind-ended excretory tubes remove nitrogenous waste from the circulating fluid of insects and empty it into the gut?', et: 'Millised umbse otsaga eritusjuhad eemaldavad putukate ringlusvedelikust lämmastikujäätmeid ning suubuvad soolde?' }, response: { en: 'Malpighian tubules', et: 'Malpighi juhad' }, acceptedVariants: { en: ['Malpighian tubes'], et: ['Malpighi torukesed'] },
+        explanation: { en: 'They secrete solutes and waste into the tubules while water and useful ions can later be reabsorbed.', et: 'Need eritavad lahustunud aineid ja jääke juhadesse, samal ajal kui vesi ja kasulikud ioonid võidakse hiljem tagasi imada.' },
+        source: { sourceId: 'wikipedia:malpighian-tubules-waste', title: 'Malpighian tubule system', url: 'https://en.wikipedia.org/wiki/Malpighian_tubule_system', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const SCIENCE_NATURE_CATEGORIES = validatePlayableCorpus(rawCategories, ASSIGNED_TARGETS.slice(0, rawCategories.length));
