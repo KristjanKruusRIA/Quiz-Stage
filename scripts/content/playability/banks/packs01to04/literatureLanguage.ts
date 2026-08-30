@@ -797,6 +797,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-literature-language-set-040', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Novels Check In to a Hotel', et: 'Romaanid registreeruvad hotelli' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-040:maid-molly-regency-grand', factKey: 'literature-language:maid-molly-gray-hotel-murder', tier: 1, subjectKey: 'work:the-maid-novel',
+        clue: { en: 'Which Nita Prose novel follows meticulous Molly Gray after she finds a wealthy guest dead in his room at the Regency Grand Hotel?', et: 'Millises Nita Prose’i romaanis leiab piinlikult korralik Molly Gray Regency Grandi hotellitoast jõuka külalise surnukeha?' }, response: { en: 'The Maid', et: '„Toateenija“' }, acceptedVariants: { en: ['Toateenija'], et: ['„The Maid“'] },
+        explanation: { en: 'Molly’s difficulty reading social cues makes her both a suspect and an unusually observant investigator.', et: 'Mollyl on raske sotsiaalseid vihjeid mõista, mistõttu saab temast korraga nii kahtlusalune kui ka erakordselt tähelepanelik uurija.' },
+        source: { sourceId: 'wikipedia:maid-molly-regency-grand', title: 'The Maid (novel)', url: 'https://en.wikipedia.org/wiki/The_Maid_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-040:gentleman-moscow-metropol', factKey: 'literature-language:gentleman-moscow-rostov-metropol-house-arrest', tier: 2, subjectKey: 'work:a-gentleman-in-moscow',
+        clue: { en: 'Which Amor Towles novel sentences Count Alexander Rostov to lifelong house arrest inside Moscow’s Hotel Metropol?', et: 'Millises Amor Towlesi romaanis määratakse krahv Aleksandr Rostov eluaegse koduaresti Moskva hotellis Metropol?' }, response: { en: 'A Gentleman in Moscow', et: '„Härrasmees Moskvas“' }, acceptedVariants: { en: ['Gentleman in Moscow', 'Härrasmees Moskvas'], et: ['„A Gentleman in Moscow“'] },
+        explanation: { en: 'Confined to the hotel after the Russian Revolution, Rostov builds a rich life through its staff, guests, and hidden corners.', et: 'Pärast Vene revolutsiooni hotelli suletud Rostov loob selle töötajate, külaliste ja peidetud paikade kaudu sisuka elu.' },
+        source: { sourceId: 'wikipedia:gentleman-moscow-metropol', title: 'A Gentleman in Moscow', url: 'https://en.wikipedia.org/wiki/A_Gentleman_in_Moscow', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-040:hotel-du-lac-edith-hope', factKey: 'literature-language:hotel-du-lac-edith-hope-swiss-exile', tier: 3, subjectKey: 'work:hotel-du-lac',
+        clue: { en: 'Which Anita Brookner novel sends romance writer Edith Hope to a quiet Swiss hotel after her friends decide she needs time away from London?', et: 'Millises Anita Brookneri romaanis saadavad sõbrad armastusromaanide autori Edith Hope’i vaiksesse Šveitsi hotelli Londonist eemal järele mõtlema?' }, response: { en: 'Hotel du Lac', et: '„Hotel du Lac“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Edith observes the other guests while deciding whether to accept a respectable but loveless future.', et: 'Edith jälgib teisi külalisi ja otsustab, kas leppida korraliku, ent armastuseta tulevikuga.' },
+        source: { sourceId: 'wikipedia:hotel-du-lac-edith-hope', title: 'Hotel du Lac', url: 'https://en.wikipedia.org/wiki/Hotel_du_Lac', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-040:grand-hotel-berlin-guests', factKey: 'literature-language:grand-hotel-vicki-baum-berlin-guests', tier: 4, subjectKey: 'work:grand-hotel-novel',
+        clue: { en: 'Which Vicki Baum novel brings a fading ballerina, a charming thief, and other strangers together beneath the same luxurious Berlin roof?', et: 'Millises Vicki Baumi romaanis satuvad hääbuv baleriin, sarmikas varas ja teised võõrad sama luksusliku Berliini katuse alla?' }, response: { en: 'Grand Hotel', et: '„Grand Hotel“' }, acceptedVariants: { en: ['Menschen im Hotel'], et: ['„Menschen im Hotel“'] },
+        explanation: { en: 'The hotel’s revolving population lets Baum cross several lives in a portrait of Weimar-era Berlin.', et: 'Hotelli vahelduv külaliskond võimaldab Baumil põimida mitu elukäiku Weimari-aegse Berliini portreeks.' },
+        source: { sourceId: 'wikipedia:grand-hotel-berlin-guests', title: 'Grand Hotel (novel)', url: 'https://en.wikipedia.org/wiki/Grand_Hotel_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-040:hotel-new-hampshire-berry-family', factKey: 'literature-language:hotel-new-hampshire-berry-family-hotels', tier: 5, subjectKey: 'work:the-hotel-new-hampshire',
+        clue: { en: 'Which John Irving novel follows the eccentric Berry family as they run hotels in New England and Vienna?', et: 'Milline John Irvingi romaan jälgib ekstsentrilist Berryde perekonda, kes peab hotelle Uus-Inglismaal ja Viinis?' }, response: { en: 'The Hotel New Hampshire', et: '„Hotell New Hampshire“' }, acceptedVariants: { en: ['Hotel New Hampshire', 'Hotell New Hampshire'], et: ['„The Hotel New Hampshire“'] },
+        explanation: { en: 'The family repeatedly rebuilds its idea of home amid accidents, loss, theatrical schemes, and improbable hotel ventures.', et: 'Perekond ehitab õnnetuste, kaotuste, teatriplaanide ja ebatõenäoliste hotelliettevõtmiste keskel ikka uuesti üles oma kodutunnet.' },
+        source: { sourceId: 'wikipedia:hotel-new-hampshire-berry-family', title: 'The Hotel New Hampshire', url: 'https://en.wikipedia.org/wiki/The_Hotel_New_Hampshire', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-041', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'A Whole Novel in One Day', et: 'Terve romaan ühe päevaga' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-041:mrs-dalloway-party-septimus', factKey: 'literature-language:mrs-dalloway-london-day-party-septimus', tier: 1, subjectKey: 'work:mrs-dalloway',
+        clue: { en: 'Which Virginia Woolf novel follows Clarissa preparing a London party while the shell-shocked Septimus struggles elsewhere in the city on the same day?', et: 'Milline Virginia Woolfi romaan jälgib Clarissat Londonis peoks valmistumas, samal ajal kui sõjatraumaga Septimus peab mujal linnas oma võitlust?' }, response: { en: 'Mrs Dalloway', et: '„Proua Dalloway“' }, acceptedVariants: { en: ['Proua Dalloway'], et: ['„Mrs Dalloway“'] },
+        explanation: { en: 'The novel moves through memories and private thoughts while Big Ben’s chimes mark the passing of a single June day.', et: 'Romaan liigub mälestustes ja sisemõtetes, samal ajal kui Big Beni kellalöögid märgivad ühe juunipäeva kulgu.' },
+        source: { sourceId: 'wikipedia:mrs-dalloway-party-septimus', title: 'Mrs Dalloway', url: 'https://en.wikipedia.org/wiki/Mrs_Dalloway', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-041:hours-three-women-dalloway', factKey: 'literature-language:hours-three-women-mrs-dalloway-days', tier: 2, subjectKey: 'work:the-hours-novel',
+        clue: { en: 'Which Michael Cunningham novel links one day in the lives of Virginia Woolf, Laura Brown, and Clarissa Vaughan through Mrs Dalloway?', et: 'Milline Michael Cunninghami romaan seob „Proua Dalloway“ kaudu ühe päeva Virginia Woolfi, Laura Browni ja Clarissa Vaughani elus?' }, response: { en: 'The Hours', et: '„Tunnid“' }, acceptedVariants: { en: ['Tunnid'], et: ['„The Hours“'] },
+        explanation: { en: 'The three narratives echo one another across different decades through reading, writing, and living Woolf’s novel.', et: 'Kolm eri kümnenditel kulgevat lugu kajavad üksteises vastu Woolfi romaani kirjutamise, lugemise ja läbielamise kaudu.' },
+        source: { sourceId: 'wikipedia:hours-three-women-dalloway', title: 'The Hours (novel)', url: 'https://en.wikipedia.org/wiki/The_Hours_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-041:ivan-denisovich-camp-day', factKey: 'literature-language:ivan-denisovich-single-day-gulag', tier: 3, subjectKey: 'work:one-day-ivan-denisovich',
+        clue: { en: 'Which Aleksandr Solzhenitsyn novel records prisoner Shukhov’s routine from reveille to lights-out in a Soviet labour camp?', et: 'Milline Aleksandr Solženitsõni romaan jäädvustab vang Šuhhovi argipäeva äratusest öörahuni Nõukogude töölaagris?' }, response: { en: 'One Day in the Life of Ivan Denisovich', et: '„Üks päev Ivan Denissovitši elus“' }, acceptedVariants: { en: ['One Day in Ivan Denisovich’s Life', 'Üks päev Ivan Denissovitši elus'], et: ['„One Day in the Life of Ivan Denisovich“'] },
+        explanation: { en: 'Small victories over cold, hunger, and camp rules make one ordinary day reveal the wider Gulag system.', et: 'Väikesed võidud külma, nälja ja laagri korra üle lasevad ühel tavalisel päeval avada kogu Gulagi süsteemi.' },
+        source: { sourceId: 'wikipedia:ivan-denisovich-camp-day', title: 'One Day in the Life of Ivan Denisovich', url: 'https://en.wikipedia.org/wiki/One_Day_in_the_Life_of_Ivan_Denisovich', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-041:saturday-perowne-london', factKey: 'literature-language:saturday-perowne-london-protest-day', tier: 4, subjectKey: 'work:saturday-mcewan',
+        clue: { en: 'Which Ian McEwan novel follows neurosurgeon Henry Perowne through a London day shaped by an anti-war march and a threatening encounter?', et: 'Milline Ian McEwani romaan jälgib neurokirurg Henry Perowne’i läbi Londoni päeva, mida kujundavad sõjavastane meeleavaldus ja ähvardav kohtumine?' }, response: { en: 'Saturday', et: '„Laupäev“' }, acceptedVariants: { en: ['Laupäev'], et: ['„Saturday“'] },
+        explanation: { en: 'A minor traffic confrontation intrudes on Perowne’s privileged family life and returns with dangerous consequences that evening.', et: 'Väike liiklustüli tungib Perowne’i privilegeeritud pereellu ning naaseb õhtul ohtlike tagajärgedega.' },
+        source: { sourceId: 'wikipedia:saturday-perowne-london', title: 'Saturday (novel)', url: 'https://en.wikipedia.org/wiki/Saturday_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-041:under-volcano-consul-day-dead', factKey: 'literature-language:under-volcano-consul-cuervanaca-day-dead', tier: 5, subjectKey: 'work:under-the-volcano',
+        clue: { en: 'Which Malcolm Lowry novel follows the alcoholic former consul Geoffrey Firmin through the Day of the Dead in the Mexican town of Quauhnahuac?', et: 'Milline Malcolm Lowry romaan jälgib alkoholisõltlasest endist konsulit Geoffrey Firminit surnutepäeval Mehhiko linnas Quauhnahuacis?' }, response: { en: 'Under the Volcano', et: '„Vulkaani all“' }, acceptedVariants: { en: ['Vulkaani all'], et: ['„Under the Volcano“'] },
+        explanation: { en: 'Firmin’s estranged wife returns hoping for reconciliation, but his self-destruction carries the day toward tragedy.', et: 'Firmini võõrdunud abikaasa naaseb leppimise lootuses, kuid mehe enesehävitus viib päeva tragöödia poole.' },
+        source: { sourceId: 'wikipedia:under-volcano-consul-day-dead', title: 'Under the Volcano', url: 'https://en.wikipedia.org/wiki/Under_the_Volcano', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-042', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Letters Carry the Whole Story', et: 'Kirjad kannavad kogu lugu' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-042:perks-charlie-letters', factKey: 'literature-language:perks-wallflower-charlie-anonymous-letters', tier: 1, subjectKey: 'work:perks-being-wallflower',
+        clue: { en: 'Which Stephen Chbosky novel has Charlie address anonymous letters to a “friend” as he starts high school and finds a new circle?', et: 'Millises Stephen Chbosky romaanis saadab Charlie keskkooli alustades anonüümseid kirju „sõbrale“ ja leiab uue seltskonna?' }, response: { en: 'The Perks of Being a Wallflower', et: '„Müürililleks olemise iseärasused“' }, acceptedVariants: { en: ['Perks of Being a Wallflower', 'Müürililleks olemise iseärasused'], et: ['„The Perks of Being a Wallflower“'] },
+        explanation: { en: 'Charlie’s dated letters reveal friendship, first love, trauma, and his gradual move from observing life to participating in it.', et: 'Charlie dateeritud kirjad avavad sõpruse, esimese armastuse ja trauma ning tema aeglase liikumise elu vaatlemisest selles osalemiseni.' },
+        source: { sourceId: 'wikipedia:perks-charlie-letters', title: 'The Perks of Being a Wallflower', url: 'https://en.wikipedia.org/wiki/The_Perks_of_Being_a_Wallflower', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-042:84-charing-cross-hanff-doel', factKey: 'literature-language:84-charing-cross-hanff-doel-correspondence', tier: 2, subjectKey: 'work:84-charing-cross-road',
+        clue: { en: 'Which Helene Hanff book grew from her transatlantic correspondence with bookseller Frank Doel at Marks & Co. in London?', et: 'Milline Helene Hanffi raamat kasvas välja tema Atlandi-ülesest kirjavahetusest Londoni Marks & Co. raamatukaupmehe Frank Doeliga?' }, response: { en: '84, Charing Cross Road', et: '„84, Charing Cross Road“' }, acceptedVariants: { en: ['84 Charing Cross Road'], et: ['„84 Charing Cross Road“'] },
+        explanation: { en: 'Requests for rare books develop into a warm friendship between Hanff, the shop staff, and their families.', et: 'Haruldaste raamatute tellimustest kasvab soe sõprus Hanffi, poe töötajate ja nende perekondade vahel.' },
+        source: { sourceId: 'wikipedia:84-charing-cross-hanff-doel', title: '84, Charing Cross Road', url: 'https://en.wikipedia.org/wiki/84,_Charing_Cross_Road', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-042:guernsey-society-letters', factKey: 'literature-language:guernsey-society-juliet-islanders-letters', tier: 3, subjectKey: 'work:guernsey-literary-potato-peel',
+        clue: { en: 'Which novel begins when writer Juliet Ashton receives a letter from a Guernsey islander who found her name inside a used book?', et: 'Milline romaan algab sellega, et kirjanik Juliet Ashton saab kirja Guernsey saare elanikult, kes leidis kasutatud raamatust tema nime?' }, response: { en: 'The Guernsey Literary and Potato Peel Pie Society', et: '„Guernsey kirjandus- ja kartulikoorepiruka selts“' }, acceptedVariants: { en: ['Guernsey Literary and Potato Peel Pie Society', 'Guernsey kirjandus- ja kartulikoorepiruka selts'], et: ['„The Guernsey Literary and Potato Peel Pie Society“'] },
+        explanation: { en: 'Letters introduce Juliet to a book club invented as an alibi during the German occupation of the island.', et: 'Kirjad tutvustavad Julietile raamatuklubi, mis mõeldi välja alibina saare Saksa okupatsiooni ajal.' },
+        source: { sourceId: 'wikipedia:guernsey-society-letters', title: 'The Guernsey Literary and Potato Peel Pie Society', url: 'https://en.wikipedia.org/wiki/The_Guernsey_Literary_and_Potato_Peel_Pie_Society', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-042:screwtape-wormwood-letters', factKey: 'literature-language:screwtape-senior-demon-wormwood-letters', tier: 4, subjectKey: 'work:the-screwtape-letters',
+        clue: { en: 'Which C. S. Lewis book consists of a senior demon’s advice to his nephew Wormwood on tempting a human called the Patient?', et: 'Milline C. S. Lewise raamat koosneb vanema deemoni nõuannetest vennapoeg Koirohile, kuidas kiusata Patsienti-nimelist inimest?' }, response: { en: 'The Screwtape Letters', et: '„Pahareti kirjapaun“' }, acceptedVariants: { en: ['Screwtape Letters', 'Pahareti kirjapaun'], et: ['„The Screwtape Letters“'] },
+        explanation: { en: 'The inverted correspondence satirizes ordinary vanity, distraction, and self-deception from the tempters’ viewpoint.', et: 'Pööratud vaatenurgaga kirjavahetus pilab kiusajate pilgu läbi igapäevast edevust, hajameelsust ja enesepettust.' },
+        source: { sourceId: 'wikipedia:screwtape-wormwood-letters', title: 'The Screwtape Letters', url: 'https://en.wikipedia.org/wiki/The_Screwtape_Letters', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-042:daddy-long-legs-judy-letters', factKey: 'literature-language:daddy-long-legs-judy-benefactor-letters', tier: 5, subjectKey: 'work:daddy-long-legs-novel',
+        clue: { en: 'Which Jean Webster novel has orphan Judy Abbott write monthly letters to the anonymous benefactor who pays for her college education?', et: 'Millises Jean Websteri romaanis kirjutab orb Judy Abbott iga kuu kirju anonüümsele heategijale, kes maksab tema kolledžiõpingute eest?' }, response: { en: 'Daddy-Long-Legs', et: '„Pikkjalg-isa“' }, acceptedVariants: { en: ['Daddy Long-Legs', 'Pikkjalg-isa'], et: ['„Daddy-Long-Legs“', '„Daddy Long-Legs“'] },
+        explanation: { en: 'Judy gives the unseen trustee a nickname from his elongated shadow, and her letters trace her growing independence.', et: 'Judy annab nägemata usaldusisikule tema pika varju järgi hüüdnime ning kirjad jälgivad neiu kasvavat iseseisvust.' },
+        source: { sourceId: 'wikipedia:daddy-long-legs-judy-letters', title: 'Daddy-Long-Legs (novel)', url: 'https://en.wikipedia.org/wiki/Daddy-Long-Legs_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-043', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Houses That Keep a Secret', et: 'Majad, mis varjavad saladust' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-043:rebecca-manderley-first-wife', factKey: 'literature-language:rebecca-manderley-unnamed-narrator-first-wife', tier: 1, subjectKey: 'work:rebecca-novel',
+        clue: { en: 'Which Daphne du Maurier novel brings an unnamed young bride to Manderley, where the memory of Maxim’s first wife dominates the house?', et: 'Millises Daphne du Maurier’ romaanis saabub nimetu noor pruut Manderleysse, kus kogu maja valitseb Maximi esimese naise mälestus?' }, response: { en: 'Rebecca', et: '„Rebecca“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Housekeeper Mrs Danvers preserves Rebecca’s presence until the secrets of her death overturn the narrator’s marriage.', et: 'Majapidajanna proua Danvers hoiab Rebecca kohalolu elavana, kuni tema surma saladused jutustaja abielu pea peale pööravad.' },
+        source: { sourceId: 'wikipedia:rebecca-manderley-first-wife', title: 'Rebecca (novel)', url: 'https://en.wikipedia.org/wiki/Rebecca_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-043:hill-house-eleanor-montague', factKey: 'literature-language:hill-house-eleanor-montague-supernatural-study', tier: 2, subjectKey: 'work:haunting-hill-house',
+        clue: { en: 'Which Shirley Jackson novel has Dr Montague invite Eleanor and others to a mansion with a history of violent deaths to study possible supernatural activity?', et: 'Millises Shirley Jacksoni romaanis kutsub doktor Montague Eleanori ja teised vägivaldsete surmade ajalooga häärberisse võimalikku üleloomulikku tegevust uurima?' }, response: { en: 'The Haunting of Hill House', et: '„Hill House’i kummitus“' }, acceptedVariants: { en: ['Haunting of Hill House', 'Hill House’i kummitus'], et: ['„The Haunting of Hill House“'] },
+        explanation: { en: 'The house’s strange architecture and ambiguous phenomena become inseparable from Eleanor’s growing sense that she belongs there.', et: 'Maja kummaline arhitektuur ja ebamäärased nähtused põimuvad Eleanori kasvava tundega, et just sinna ta kuulubki.' },
+        source: { sourceId: 'wikipedia:hill-house-eleanor-montague', title: 'The Haunting of Hill House', url: 'https://en.wikipedia.org/wiki/The_Haunting_of_Hill_House', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-043:turn-screw-bly-governess', factKey: 'literature-language:turn-screw-governess-bly-apparitions', tier: 3, subjectKey: 'work:the-turn-of-the-screw',
+        clue: { en: 'Which Henry James novella sends an inexperienced governess to Bly, where she believes the children are threatened by the apparitions of former servants?', et: 'Millises Henry Jamesi lühiromaanis läheb kogenematu guvernant Bly mõisa ja usub, et endiste teenijate vaimud ohustavad lapsi?' }, response: { en: 'The Turn of the Screw', et: '„Kruvi keere“' }, acceptedVariants: { en: ['Turn of the Screw', 'Kruvi keere'], et: ['„The Turn of the Screw“'] },
+        explanation: { en: 'James leaves readers unsure whether Bly is haunted or the governess has catastrophically misread what she sees.', et: 'James jätab lahtiseks, kas Blyd kummitatakse või tõlgendab guvernant nähtut hukatuslikult valesti.' },
+        source: { sourceId: 'wikipedia:turn-screw-bly-governess', title: 'The Turn of the Screw', url: 'https://en.wikipedia.org/wiki/The_Turn_of_the_Screw', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-043:seven-gables-pyncheon-curse', factKey: 'literature-language:seven-gables-pyncheon-house-curse', tier: 4, subjectKey: 'work:house-seven-gables',
+        clue: { en: 'Which Nathaniel Hawthorne novel places the Pyncheon family in an old New England mansion burdened by a curse and a disputed inheritance?', et: 'Millises Nathaniel Hawthorne’i romaanis elab Pyncheonide perekond vanas Uus-Inglismaa häärberis, mida painavad needus ja vaidlusalune pärandus?' }, response: { en: 'The House of the Seven Gables', et: '„Seitsmeviilumaja“' }, acceptedVariants: { en: ['House of the Seven Gables', 'Seitsmeviilumaja'], et: ['„The House of the Seven Gables“', '„House of the Seven Gables“'] },
+        explanation: { en: 'The decaying house embodies the damage caused by ancestral greed until a new generation can leave it behind.', et: 'Lagunev maja kehastab esivanemate ahnuse tekitatud kahju, kuni uus põlvkond saab selle seljataha jätta.' },
+        source: { sourceId: 'wikipedia:seven-gables-pyncheon-curse', title: 'The House of the Seven Gables', url: 'https://en.wikipedia.org/wiki/The_House_of_the_Seven_Gables', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-043:always-castle-blackwood-poisoning', factKey: 'literature-language:always-castle-merricat-constance-poisoning', tier: 5, subjectKey: 'work:we-have-always-lived-castle',
+        clue: { en: 'Which Shirley Jackson novel keeps Merricat and Constance Blackwood isolated at home after arsenic in the sugar bowl killed most of their family?', et: 'Millises Shirley Jacksoni romaanis elavad Merricat ja Constance Blackwood teistest eraldatuna pärast seda, kui suhkrutoosi pandud arseen tappis suurema osa nende perest?' }, response: { en: 'We Have Always Lived in the Castle', et: '„Me oleme alati lossis elanud“' }, acceptedVariants: { en: ['Me oleme alati lossis elanud'], et: ['„We Have Always Lived in the Castle“'] },
+        explanation: { en: 'The sisters’ guarded routine collapses when cousin Charles arrives seeking control of the household and its money.', et: 'Õdede kaitstud elukorraldus variseb kokku, kui nõbu Charles saabub majapidamist ja selle raha enda kontrolli alla võtma.' },
+        source: { sourceId: 'wikipedia:always-castle-blackwood-poisoning', title: 'We Have Always Lived in the Castle', url: 'https://en.wikipedia.org/wiki/We_Have_Always_Lived_in_the_Castle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-044', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Reality Turns Magical in These Novels', et: 'Neis romaanides muutub tegelikkus maagiliseks' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-044:master-margarita-devil-moscow', factKey: 'literature-language:master-margarita-devil-soviet-moscow', tier: 1, subjectKey: 'work:master-and-margarita',
+        clue: { en: 'Which Mikhail Bulgakov novel sends the Devil and his bizarre entourage into Soviet Moscow while telling the story of a persecuted writer?', et: 'Millises Mihhail Bulgakovi romaanis saabuvad Kurat ja tema veider kaaskond Nõukogude Moskvasse, samal ajal kui jutustatakse tagakiusatud kirjaniku lugu?' }, response: { en: 'The Master and Margarita', et: '„Meister ja Margarita“' }, acceptedVariants: { en: ['Master and Margarita', 'Meister ja Margarita'], et: ['„The Master and Margarita“'] },
+        explanation: { en: 'Satire, romance, and a novel about Pontius Pilate cross as Woland’s supernatural visit exposes hypocrisy and fear.', et: 'Satiir, armastuslugu ja romaan Pontius Pilatusest ristuvad, kui Wolandi üleloomulik külaskäik paljastab silmakirjalikkuse ja hirmu.' },
+        source: { sourceId: 'wikipedia:master-margarita-devil-moscow', title: 'The Master and Margarita', url: 'https://en.wikipedia.org/wiki/The_Master_and_Margarita', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-044:water-chocolate-tita-emotions', factKey: 'literature-language:water-chocolate-tita-food-emotions', tier: 2, subjectKey: 'work:like-water-for-chocolate',
+        clue: { en: 'Which Laura Esquivel novel lets Tita’s emotions pass into the food she cooks, affecting everyone who eats it?', et: 'Millises Laura Esquiveli romaanis kanduvad Tita tunded tema valmistatud toitu ja mõjutavad kõiki sööjaid?' }, response: { en: 'Like Water for Chocolate', et: '„Nagu vesi šokolaadile“' }, acceptedVariants: { en: ['Nagu vesi šokolaadile'], et: ['„Like Water for Chocolate“'] },
+        explanation: { en: 'Recipes structure the story as family tradition bars Tita from marrying Pedro and turns cooking into emotional expression.', et: 'Retseptid liigendavad lugu, milles perekonnatraditsioon keelab Tital Pedroga abielluda ja muudab kokkamise tunnete väljenduseks.' },
+        source: { sourceId: 'wikipedia:water-chocolate-tita-emotions', title: 'Like Water for Chocolate (novel)', url: 'https://en.wikipedia.org/wiki/Like_Water_for_Chocolate_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-044:house-spirits-clara-trueba', factKey: 'literature-language:house-spirits-clara-trueba-family', tier: 3, subjectKey: 'work:the-house-of-the-spirits',
+        clue: { en: 'Which Isabel Allende novel follows the Trueba family through political upheaval while clairvoyant Clara speaks with spirits?', et: 'Milline Isabel Allende romaan jälgib Truebade perekonda läbi poliitiliste vapustuste, samal ajal kui selgeltnägija Clara suhtleb vaimudega?' }, response: { en: 'The House of the Spirits', et: '„Vaimude maja“' }, acceptedVariants: { en: ['House of the Spirits', 'Vaimude maja'], et: ['„The House of the Spirits“'] },
+        explanation: { en: 'Several generations combine private memory, supernatural events, and the violent transformation of an unnamed Latin American country.', et: 'Mitme põlvkonna loos põimuvad isiklik mälu, üleloomulikud sündmused ja nimetu Ladina-Ameerika riigi vägivaldne muutumine.' },
+        source: { sourceId: 'wikipedia:house-spirits-clara-trueba', title: 'The House of the Spirits', url: 'https://en.wikipedia.org/wiki/The_House_of_the_Spirits', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-044:beloved-sethe-124-haunting', factKey: 'literature-language:beloved-sethe-124-dead-daughter-haunting', tier: 4, subjectKey: 'work:beloved-novel',
+        clue: { en: 'Which Toni Morrison novel has formerly enslaved Sethe’s Cincinnati home at 124 haunted by the daughter she killed rather than let slavery reclaim?', et: 'Millises Toni Morrisoni romaanis kummitab endise orja Sethe Cincinnati maja number 124 tütar, kelle ta tappis, et orjus last tagasi ei saaks?' }, response: { en: 'Beloved', et: '„Armas“' }, acceptedVariants: { en: ['Armas'], et: ['„Beloved“'] },
+        explanation: { en: 'The haunting gives physical form to memories that Sethe, Denver, and their community have struggled to face.', et: 'Kummitus annab kehalise kuju mälestustele, millega Sethe, Denver ja nende kogukond on püüdnud toime tulla.' },
+        source: { sourceId: 'wikipedia:beloved-sethe-124-haunting', title: 'Beloved (novel)', url: 'https://en.wikipedia.org/wiki/Beloved_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-044:kafka-shore-tamura-nakata', factKey: 'literature-language:kafka-shore-tamura-nakata-parallel-stories', tier: 5, subjectKey: 'work:kafka-on-the-shore',
+        clue: { en: 'Which Haruki Murakami novel links runaway Kafka Tamura with the elderly Nakata, who can speak to cats, in parallel journeys across Japan?', et: 'Milline Haruki Murakami romaan seob kodust põgenenud Kafka Tamura eaka Nakataga, kes oskab kassidega rääkida, nende paralleelsetel rännakutel läbi Jaapani?' }, response: { en: 'Kafka on the Shore', et: '„Kafka mererannas“' }, acceptedVariants: { en: ['Kafka mererannas'], et: ['„Kafka on the Shore“'] },
+        explanation: { en: 'Dreams, prophecy, music, and opened entrances blur the boundary between the two travellers’ realities.', et: 'Unenäod, ettekuulutus, muusika ja avatud sissepääsud hägustavad kahe ränduri tegelikkuse piiri.' },
+        source: { sourceId: 'wikipedia:kafka-shore-tamura-nakata', title: 'Kafka on the Shore', url: 'https://en.wikipedia.org/wiki/Kafka_on_the_Shore', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-045', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Climbing the Social Ladder', et: 'Tõus ühiskonnaredelil' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-045:great-expectations-pip-gentleman', factKey: 'literature-language:great-expectations-pip-unknown-benefactor', tier: 1, subjectKey: 'work:great-expectations',
+        clue: { en: 'Which Charles Dickens novel gives orphan Pip an unknown benefactor and the chance to become a gentleman in London?', et: 'Millises Charles Dickensi romaanis saab orb Pip tundmatult heategijalt võimaluse minna Londonisse härrasmeheks saama?' }, response: { en: 'Great Expectations', et: '„Suured lootused“' }, acceptedVariants: { en: ['Suured lootused'], et: ['„Great Expectations“'] },
+        explanation: { en: 'Pip assumes Miss Havisham funded his rise, but learning the benefactor’s identity forces him to rethink loyalty and worth.', et: 'Pip arvab, et tema tõusu rahastab miss Havisham, kuid heategija isik sunnib teda lojaalsust ja inimväärtust ümber hindama.' },
+        source: { sourceId: 'wikipedia:great-expectations-pip-gentleman', title: 'Great Expectations', url: 'https://en.wikipedia.org/wiki/Great_Expectations', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-045:vanity-fair-becky-sharp', factKey: 'literature-language:vanity-fair-becky-sharp-social-ascent', tier: 2, subjectKey: 'work:vanity-fair-novel',
+        clue: { en: 'Which William Makepeace Thackeray novel follows clever Becky Sharp as she uses charm, marriage, and deception to enter fashionable society?', et: 'Milline William Makepeace Thackeray romaan jälgib nutikat Becky Sharpi, kes kasutab sarmikust, abielu ja pettust moeseltskonda pääsemiseks?' }, response: { en: 'Vanity Fair', et: '„Edevuse laat“' }, acceptedVariants: { en: ['Edevuse laat'], et: ['„Vanity Fair“'] },
+        explanation: { en: 'Becky’s ambition crosses the Napoleonic era and contrasts with Amelia Sedley’s more conventional path.', et: 'Becky ambitsioon viib ta läbi Napoleoni ajastu ning vastandub Amelia Sedley tavapärasemale eluteele.' },
+        source: { sourceId: 'wikipedia:vanity-fair-becky-sharp', title: 'Vanity Fair (novel)', url: 'https://en.wikipedia.org/wiki/Vanity_Fair_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-045:red-black-julien-sorel', factKey: 'literature-language:red-black-julien-sorel-class-ambition', tier: 3, subjectKey: 'work:the-red-and-the-black',
+        clue: { en: 'Which Stendhal novel follows ambitious Julien Sorel from a provincial sawmill family into wealthy households and the church?', et: 'Milline Stendhali romaan jälgib auahnet Julien Soreli teekonda provintsi saeveskiperekonnast jõukatesse majapidamistesse ja kirikusse?' }, response: { en: 'The Red and the Black', et: '„Punane ja must“' }, acceptedVariants: { en: ['Red and the Black', 'Punane ja must'], et: ['„The Red and the Black“'] },
+        explanation: { en: 'Julien’s admiration for Napoleon clashes with the limited routes to advancement in Restoration France.', et: 'Julieni imetlus Napoleoni vastu põrkub restaureeritud monarhia aegse Prantsusmaa piiratud tõusuvõimalustega.' },
+        source: { sourceId: 'wikipedia:red-black-julien-sorel', title: 'The Red and the Black', url: 'https://en.wikipedia.org/wiki/The_Red_and_the_Black', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-045:bel-ami-duroy-journalism', factKey: 'literature-language:bel-ami-georges-duroy-paris-rise', tier: 4, subjectKey: 'work:bel-ami',
+        clue: { en: 'Which Guy de Maupassant novel has former soldier Georges Duroy exploit journalism and influential relationships to rise through Paris society?', et: 'Millises Guy de Maupassanti romaanis kasutab endine sõdur Georges Duroy ajakirjandust ja mõjukaid suhteid, et Pariisi seltskonnas tõusta?' }, response: { en: 'Bel-Ami', et: '„Bel-Ami“' }, acceptedVariants: { en: ['Bel Ami'], et: ['„Bel Ami“'] },
+        explanation: { en: 'Duroy’s nickname becomes the title of a cynical ascent powered by other people’s writing, money, and connections.', et: 'Duroy hüüdnimest saab küünilise tõusuloo pealkiri; tema edu kannavad teiste kirjutised, raha ja sidemed.' },
+        source: { sourceId: 'wikipedia:bel-ami-duroy-journalism', title: 'Bel-Ami', url: 'https://en.wikipedia.org/wiki/Bel-Ami', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-045:custom-country-undine-spragg', factKey: 'literature-language:custom-country-undine-spragg-marriages', tier: 5, subjectKey: 'work:the-custom-of-the-country',
+        clue: { en: 'Which Edith Wharton novel follows Undine Spragg from Midwestern new money through a series of marriages pursued for wealth and status?', et: 'Milline Edith Whartoni romaan jälgib Kesk-Lääne uusrikkast Undine Spraggi läbi mitme abielu, mida ta taotleb raha ja staatuse nimel?' }, response: { en: 'The Custom of the Country', et: '„The Custom of the Country“' }, acceptedVariants: { en: ['Custom of the Country'], et: ['„Custom of the Country“'] },
+        explanation: { en: 'Undine treats American and European social worlds as markets, always discovering another luxury beyond the one she gains.', et: 'Undine kohtleb Ameerika ja Euroopa seltskondi turuna ning leiab iga saavutatud luksuse tagant alati järgmise.' },
+        source: { sourceId: 'wikipedia:custom-country-undine-spragg', title: 'The Custom of the Country', url: 'https://en.wikipedia.org/wiki/The_Custom_of_the_Country', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-046', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Nordic Detectives Open the Case', et: 'Põhjamaade uurijad avavad juhtumi' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-046:dragon-tattoo-harriet-vanger', factKey: 'literature-language:dragon-tattoo-blomkvist-salander-vanger', tier: 1, subjectKey: 'work:girl-dragon-tattoo',
+        clue: { en: 'Which Stieg Larsson novel pairs journalist Mikael Blomkvist with hacker Lisbeth Salander to investigate Harriet Vanger’s disappearance?', et: 'Milline Stieg Larssoni romaan viib ajakirjanik Mikael Blomkvisti ja häkker Lisbeth Salanderi uurima Harriet Vangeri kadumist?' }, response: { en: 'The Girl with the Dragon Tattoo', et: '„Lohetätoveeringuga tüdruk“' }, acceptedVariants: { en: ['Girl with the Dragon Tattoo', 'Lohetätoveeringuga tüdruk'], et: ['„The Girl with the Dragon Tattoo“'] },
+        explanation: { en: 'The cold case draws the pair into the secrets and violence hidden inside the wealthy Vanger family.', et: 'Lahendamata juhtum viib paari jõuka Vangeri perekonna varjatud saladuste ja vägivalla juurde.' },
+        source: { sourceId: 'wikipedia:dragon-tattoo-harriet-vanger', title: 'The Girl with the Dragon Tattoo', url: 'https://en.wikipedia.org/wiki/The_Girl_with_the_Dragon_Tattoo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-046:snowman-harry-hole', factKey: 'literature-language:snowman-harry-hole-serial-killer', tier: 2, subjectKey: 'work:the-snowman-nesbo',
+        clue: { en: 'Which Jo Nesbø novel has Oslo detective Harry Hole pursue a serial killer who leaves snowmen at crime scenes?', et: 'Millises Jo Nesbø romaanis jälitab Oslo uurija Harry Hole sarimõrvarit, kes jätab kuriteopaikadele lumememmesid?' }, response: { en: 'The Snowman', et: '„Lumememm“' }, acceptedVariants: { en: ['Snowman', 'Lumememm'], et: ['„The Snowman“'] },
+        explanation: { en: 'Missing women and the recurring winter figure lead Hole toward a pattern concealed across years.', et: 'Kadunud naised ja korduv talvine kuju juhivad Hole’i aastate taha peidetud mustrini.' },
+        source: { sourceId: 'wikipedia:snowman-harry-hole', title: 'The Snowman (Nesbø novel)', url: 'https://en.wikipedia.org/wiki/The_Snowman_(Nesb%C3%B8_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-046:jar-city-erlendur-genetics', factKey: 'literature-language:jar-city-erlendur-murder-genetic-disease', tier: 3, subjectKey: 'work:jar-city-novel',
+        clue: { en: 'Which Arnaldur Indriðason novel has Reykjavík detective Erlendur connect an old man’s murder to a child’s grave and an inherited disease?', et: 'Millises Arnaldur Indriðasoni romaanis seob Reykjavíki uurija Erlendur vana mehe mõrva lapse haua ja päriliku haigusega?' }, response: { en: 'Jar City', et: '„Jar City“' }, acceptedVariants: { en: ['Tainted Blood', 'Mýrin'], et: ['„Tainted Blood“', '„Mýrin“'] },
+        explanation: { en: 'The investigation uses Iceland’s close family histories to expose violence whose consequences crossed generations.', et: 'Uurimine kasutab Islandi tihedalt põimunud perekonnalugusid, et paljastada vägivald, mille tagajärjed kandusid üle põlvkondade.' },
+        source: { sourceId: 'wikipedia:jar-city-erlendur-genetics', title: 'Jar City', url: 'https://en.wikipedia.org/wiki/Jar_City', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-046:faceless-killers-wallander', factKey: 'literature-language:faceless-killers-wallander-farm-couple', tier: 4, subjectKey: 'work:faceless-killers',
+        clue: { en: 'Which Henning Mankell novel begins Kurt Wallander’s series with the brutal attack on an elderly farm couple and rising xenophobic tension?', et: 'Milline Henning Mankelli romaan alustab Kurt Wallanderi sarja eaka talupaariga toime pandud jõhkra rünnaku ja kasvava ksenofoobse pingega?' }, response: { en: 'Faceless Killers', et: '„Näota tapjad“' }, acceptedVariants: { en: ['Näota tapjad'], et: ['„Faceless Killers“'] },
+        explanation: { en: 'A dying victim’s disputed final word turns the murder inquiry into a test of both evidence and public prejudice.', et: 'Sureva ohvri vaieldav viimane sõna muudab mõrvajuurdluse nii tõendite kui ka avalike eelarvamuste proovikiviks.' },
+        source: { sourceId: 'wikipedia:faceless-killers-wallander', title: 'Faceless Killers', url: 'https://en.wikipedia.org/wiki/Faceless_Killers', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-046:keeper-lost-causes-department-q', factKey: 'literature-language:keeper-lost-causes-carl-morck-merete', tier: 5, subjectKey: 'work:keeper-of-lost-causes',
+        clue: { en: 'Which Jussi Adler-Olsen novel gives Copenhagen detective Carl Mørck’s new Department Q the cold case of vanished politician Merete Lynggaard?', et: 'Millises Jussi Adler-Olseni romaanis saab Kopenhaageni uurija Carl Mørcki uus Q-osakond lahendamata juhtumiks poliitik Merete Lynggaardi kadumise?' }, response: { en: 'The Keeper of Lost Causes', et: '„Naine puuris“' }, acceptedVariants: { en: ['Keeper of Lost Causes', 'Mercy', 'Naine puuris'], et: ['„The Keeper of Lost Causes“', '„Mercy“'] },
+        explanation: { en: 'Mørck and his assistant Assad reopen the disappearance and discover that Merete’s ordeal may not be over.', et: 'Mørck ja tema abiline Assad avavad kadumisloo uuesti ning avastavad, et Merete katsumus ei pruugi olla lõppenud.' },
+        source: { sourceId: 'wikipedia:keeper-lost-causes-department-q', title: 'The Keeper of Lost Causes', url: 'https://en.wikipedia.org/wiki/The_Keeper_of_Lost_Causes', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-047', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Books Board a Train', et: 'Raamatud astuvad rongile' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-047:polar-express-north-pole', factKey: 'literature-language:polar-express-boy-north-pole-bell', tier: 1, subjectKey: 'work:the-polar-express',
+        clue: { en: 'Which Chris Van Allsburg picture book takes a doubting boy by magical train to the North Pole, where he asks Santa for a sleigh bell?', et: 'Millises Chris Van Allsburgi pildiraamatus sõidab kahtlev poiss võlurongiga põhjapoolusele ja palub jõuluvanalt saanikelgukella?' }, response: { en: 'The Polar Express', et: '„Polaarekspress“' }, acceptedVariants: { en: ['Polar Express', 'Polaarekspress'], et: ['„The Polar Express“'] },
+        explanation: { en: 'Only those who still believe can hear the bell, making the train journey a test of wonder as well as distance.', et: 'Kellukest kuulevad vaid need, kes veel usuvad, nii et rongisõit paneb proovile nii imestamisvõime kui ka vahemaa.' },
+        source: { sourceId: 'wikipedia:polar-express-north-pole', title: 'The Polar Express', url: 'https://en.wikipedia.org/wiki/The_Polar_Express', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-047:railway-children-father', factKey: 'literature-language:railway-children-family-father-disappears', tier: 2, subjectKey: 'work:the-railway-children',
+        clue: { en: 'Which E. Nesbit novel moves Bobbie, Peter, and Phyllis to a cottage beside a railway after their father suddenly disappears?', et: 'Millises E. Nesbiti romaanis kolivad Bobbie, Peter ja Phyllis pärast isa ootamatut kadumist raudteeäärsesse suvilasse?' }, response: { en: 'The Railway Children', et: '„Raudteelapsed“' }, acceptedVariants: { en: ['Railway Children', 'Raudteelapsed'], et: ['„The Railway Children“'] },
+        explanation: { en: 'The children befriend railway workers and passengers, perform rescues, and gradually uncover what happened to their father.', et: 'Lapsed sõbrunevad raudteelaste ja reisijatega, osalevad päästmistes ning saavad aegamisi teada, mis isaga juhtus.' },
+        source: { sourceId: 'wikipedia:railway-children-father', title: 'The Railway Children', url: 'https://en.wikipedia.org/wiki/The_Railway_Children', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-047:strangers-train-exchange-murders', factKey: 'literature-language:strangers-train-bruno-guy-murder-swap', tier: 3, subjectKey: 'work:strangers-on-a-train-novel',
+        clue: { en: 'Which Patricia Highsmith novel begins when Bruno proposes to architect Guy that two strangers exchange murders and remove each other’s motive?', et: 'Milline Patricia Highsmithi romaan algab sellega, et Bruno teeb arhitekt Guyle ettepaneku vahetada mõrvad, et kummalgi poleks motiivi?' }, response: { en: 'Strangers on a Train', et: '„Võõrad rongis“' }, acceptedVariants: { en: ['Võõrad rongis'], et: ['„Strangers on a Train“'] },
+        explanation: { en: 'Guy dismisses the plan, but Bruno treats the conversation as an agreement and binds their lives together.', et: 'Guy ei võta plaani tõsiselt, kuid Bruno peab vestlust kokkuleppeks ja seob nende elud omavahel.' },
+        source: { sourceId: 'wikipedia:strangers-train-exchange-murders', title: 'Strangers on a Train (novel)', url: 'https://en.wikipedia.org/wiki/Strangers_on_a_Train_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-047:snowpiercer-last-train', factKey: 'literature-language:snowpiercer-graphic-novel-frozen-earth-train', tier: 4, subjectKey: 'work:le-transperceneige',
+        clue: { en: 'Which French graphic novel, adapted internationally under an English title, confines the last human survivors to a class-divided train circling a frozen Earth?', et: 'Milline prantsuse graafiline romaan, mida tuntakse rahvusvaheliselt ingliskeelse pealkirja all, paigutab viimased inimesed klassideks jagatud rongi külmunud Maal?' }, response: { en: 'Snowpiercer', et: '„Lumemurdja“' }, acceptedVariants: { en: ['Le Transperceneige', 'Lumemurdja'], et: ['„Snowpiercer“', '„Le Transperceneige“'] },
+        explanation: { en: 'Movement from the oppressed rear cars toward the engine turns the train into a compact model of social inequality.', et: 'Liikumine rõhutud tagavagunitest veduri poole muudab rongi ühiskondliku ebavõrdsuse tihendatud mudeliks.' },
+        source: { sourceId: 'wikipedia:snowpiercer-last-train', title: 'Le Transperceneige', url: 'https://en.wikipedia.org/wiki/Le_Transperceneige', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-047:moscow-petushki-venya-train', factKey: 'literature-language:moscow-petushki-venya-suburban-train', tier: 5, subjectKey: 'work:moscow-petushki',
+        clue: { en: 'Which Venedikt Erofeev work follows Venya on a suburban train from Moscow toward Petushki through philosophical digressions and elaborate drink recipes?', et: 'Milline Venedikt Jerofejevi teos jälgib Venjat linnalähirongis Moskvast Petuški poole läbi filosoofiliste kõrvalepõigete ja keerukate joogiretseptide?' }, response: { en: 'Moscow-Petushki', et: '„Moskva-Petuški“' }, acceptedVariants: { en: ['Moscow to the End of the Line', 'Moskva-Petuški'], et: ['„Moscow-Petushki“', '„Moscow to the End of the Line“'] },
+        explanation: { en: 'Venya hopes to reach his partner and child, but the comic, alcohol-soaked journey bends into a dark circular ending.', et: 'Venja loodab jõuda elukaaslase ja lapseni, kuid koomiline alkoholist läbi imbunud teekond paindub süngeks ringikujuliseks lõpuks.' },
+        source: { sourceId: 'wikipedia:moscow-petushki-venya-train', title: 'Moscow-Petushki', url: 'https://en.wikipedia.org/wiki/Moscow-Petushki', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-048', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Languages Make a Comeback', et: 'Keeled teevad tagasituleku' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-048:hebrew-spoken-revival', factKey: 'literature-language:hebrew-revival-everyday-spoken-language', tier: 1, subjectKey: 'language:modern-hebrew',
+        clue: { en: 'Which ancient language of Jewish scripture was revived for everyday speech and became a principal language of modern Israel?', et: 'Milline juudi pühakirja muistne keel taaselustati igapäevase kõnekeelena ja sai üheks tänapäeva Iisraeli põhikeeleks?' }, response: { en: 'Hebrew', et: 'heebrea keel' }, acceptedVariants: { en: ['Modern Hebrew'], et: ['uusheebrea keel', 'ivriit'] },
+        explanation: { en: 'The modern revival expanded Hebrew for home, school, administration, and new technology after centuries of mainly liturgical and literary use.', et: 'Taaselustamise käigus laiendati sajandeid peamiselt usu- ja kirjakeelena kasutatud heebrea keelt kodu, kooli, halduse ning uue tehnika tarbeks.' },
+        source: { sourceId: 'wikipedia:hebrew-spoken-revival', title: 'Revival of the Hebrew language', url: 'https://en.wikipedia.org/wiki/Revival_of_the_Hebrew_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-048:cornish-kernewek-revival', factKey: 'literature-language:cornish-kernewek-celtic-revival', tier: 2, subjectKey: 'language:cornish',
+        clue: { en: 'Which Celtic language is again taught and spoken in Cornwall after losing its traditional community of native speakers?', et: 'Millist keldi keelt õpetatakse ja räägitakse Cornwallis taas pärast traditsioonilise emakeelse kogukonna kadumist?' }, response: { en: 'Cornish', et: 'korni keel' }, acceptedVariants: { en: ['Kernewek', 'Cornish language'], et: ['kerni keel', 'Kernewek'] },
+        explanation: { en: 'Revivalists used surviving literature, dictionaries, and related Celtic languages to return Cornish to public and family life.', et: 'Taaselustajad kasutasid säilinud kirjandust, sõnaraamatuid ja sugulaskeeli, et tuua korni keel tagasi avalikku ja pereellu.' },
+        source: { sourceId: 'wikipedia:cornish-kernewek-revival', title: 'Cornish language', url: 'https://en.wikipedia.org/wiki/Cornish_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-048:manx-isle-man-schools', factKey: 'literature-language:manx-isle-man-revival-school', tier: 3, subjectKey: 'language:manx',
+        clue: { en: 'Which Gaelic language of the Isle of Man gained new speakers through recordings, community teaching, and an immersion primary school?', et: 'Milline Mani saare gaeli keel sai uusi kõnelejaid tänu helisalvestistele, kogukonnaõppele ja keelekümblusega algkoolile?' }, response: { en: 'Manx', et: 'mänksi keel' }, acceptedVariants: { en: ['Manx Gaelic', 'Gaelg'], et: ['mani keel', 'Gaelg'] },
+        explanation: { en: 'Recordings of the last traditional speakers helped later learners rebuild pronunciation and pass Manx to children.', et: 'Viimaste traditsiooniliste kõnelejate salvestised aitasid hilisematel õppijatel taastada hääldust ja anda mänksi keelt lastele edasi.' },
+        source: { sourceId: 'wikipedia:manx-isle-man-schools', title: 'Manx language', url: 'https://en.wikipedia.org/wiki/Manx_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-048:hawaiian-immersion-schools', factKey: 'literature-language:hawaiian-language-immersion-revival', tier: 4, subjectKey: 'language:hawaiian',
+        clue: { en: 'Which Polynesian language of the United States’ island state rebounded through local-language preschools and immersion schools after English displaced it from most classrooms?', et: 'Milline USA saar-osariigi polüneesia keel hakkas taastuma kohalike lasteaedade ja keelekümbluskoolide kaudu pärast seda, kui inglise keel oli selle enamikust klassiruumidest välja tõrjunud?' }, response: { en: 'Hawaiian', et: 'havai keel' }, acceptedVariants: { en: ['Hawaiian language', 'ʻŌlelo Hawaiʻi'], et: ['hawaii keel', 'ʻŌlelo Hawaiʻi'] },
+        explanation: { en: 'Families and educators created a path from early childhood through university in Hawaiian, producing new generations of speakers.', et: 'Pered ja õpetajad lõid havaikeelse õpitee varasest lapsepõlvest ülikoolini ning kasvatasid uusi kõnelejate põlvkondi.' },
+        source: { sourceId: 'wikipedia:hawaiian-immersion-schools', title: 'Hawaiian language', url: 'https://en.wikipedia.org/wiki/Hawaiian_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-048:wampanoag-language-reclamation', factKey: 'literature-language:wampanoag-language-reclamation-documents', tier: 5, subjectKey: 'language:wampanoag-massachusett',
+        clue: { en: 'Which Indigenous language of New England was reclaimed from documents including a colonial Bible, creating new speakers after generations without native speakers?', et: 'Milline Uus-Inglismaa põlisrahva keel taastati muu hulgas koloniaalaegse piibli põhjal, nii et pärast emakeelsete kõnelejateta põlvkondi tekkisid uued kõnelejad?' }, response: { en: 'Wampanoag', et: 'vampanoagi keel' }, acceptedVariants: { en: ['Wôpanâak', 'Massachusett', 'Wampanoag language'], et: ['wampanoagi keel', 'wôpanâaki keel', 'massatšuuseti keel'] },
+        explanation: { en: 'The Wôpanâak Language Reclamation Project combined community knowledge with extensive written records to restore teaching and home use.', et: 'Wôpanâaki keele taastamise projekt ühendas kogukonna teadmised mahuka kirjaliku pärandiga, et taastada keele õpetamine ja kodune kasutus.' },
+        source: { sourceId: 'wikipedia:wampanoag-language-reclamation', title: 'Massachusett language', url: 'https://en.wikipedia.org/wiki/Massachusett_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-049', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Migration Reshapes a Family Story', et: 'Ränne kujundab pereloo ümber' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-049:namesake-gogol-ganguly', factKey: 'literature-language:namesake-gogol-ganguly-indian-american', tier: 1, subjectKey: 'work:the-namesake',
+        clue: { en: 'Which Jhumpa Lahiri novel follows Gogol Ganguli as he grows up between his Bengali parents’ traditions and life in the United States?', et: 'Milline Jhumpa Lahiri romaan jälgib Gogol Gangulit, kes kasvab bengali vanemate traditsioonide ja Ameerika Ühendriikide elu vahel?' }, response: { en: 'The Namesake', et: '„Nimekaim“' }, acceptedVariants: { en: ['Namesake', 'Nimekaim'], et: ['„The Namesake“'] },
+        explanation: { en: 'Gogol’s unusual name ties family memory to his struggle over belonging, independence, and inheritance.', et: 'Gogoli ebatavaline nimi seob perekonnamälu tema võitlusega kuuluvuse, iseseisvuse ja pärandi üle.' },
+        source: { sourceId: 'wikipedia:namesake-gogol-ganguly', title: 'The Namesake', url: 'https://en.wikipedia.org/wiki/The_Namesake', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-049:americanah-ifemelu-blog', factKey: 'literature-language:americanah-ifemelu-nigeria-us-blog', tier: 2, subjectKey: 'work:americanah',
+        clue: { en: 'Which Chimamanda Ngozi Adichie novel follows Ifemelu from Nigeria to the United States, where she writes a successful blog about race?', et: 'Milline Chimamanda Ngozi Adichie romaan jälgib Ifemelu teekonda Nigeeriast Ameerika Ühendriikidesse, kus ta kirjutab menukat blogi rassist?' }, response: { en: 'Americanah', et: '„Americanah“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Ifemelu’s eventual return to Nigeria reframes both her American experience and her unfinished relationship with Obinze.', et: 'Ifemelu naasmine Nigeeriasse asetab uude valgusse nii tema Ameerika-kogemuse kui ka pooleli jäänud suhte Obinzega.' },
+        source: { sourceId: 'wikipedia:americanah-ifemelu-blog', title: 'Americanah', url: 'https://en.wikipedia.org/wiki/Americanah', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-049:exit-west-magical-doors', factKey: 'literature-language:exit-west-saeed-nadia-magical-doors', tier: 3, subjectKey: 'work:exit-west',
+        clue: { en: 'Which Mohsin Hamid novel lets Saeed and Nadia escape a city at war through mysterious doors that instantly carry refugees across borders?', et: 'Millises Mohsin Hamidi romaanis põgenevad Saeed ja Nadia sõjast haaratud linnast salapäraste uste kaudu, mis viivad pagulased hetkega üle riigipiiride?' }, response: { en: 'Exit West', et: '„Exit West“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Removing the physical journey focuses the novel on how displacement transforms love, cities, and ideas of home.', et: 'Füüsilise teekonna vahelejätmine suunab tähelepanu sellele, kuidas ümberasumine muudab armastust, linnu ja kodutunnet.' },
+        source: { sourceId: 'wikipedia:exit-west-magical-doors', title: 'Exit West', url: 'https://en.wikipedia.org/wiki/Exit_West', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-049:brick-lane-nazneen-london', factKey: 'literature-language:brick-lane-nazneen-bangladesh-london', tier: 4, subjectKey: 'work:brick-lane-novel',
+        clue: { en: 'Which Monica Ali novel brings Nazneen from rural Bangladesh into an arranged marriage and a new life in London’s East End?', et: 'Milline Monica Ali romaan toob Nazneeni Bangladeshi maapiirkonnast korraldatud abielu kaudu uude ellu Londoni East Endis?' }, response: { en: 'Brick Lane', et: '„Brick Lane“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Nazneen’s growing independence unfolds alongside letters from her sister Hasina and change in the surrounding community.', et: 'Nazneeni kasvav iseseisvus avaneb koos õde Hasina kirjade ja ümbritseva kogukonna muutumisega.' },
+        source: { sourceId: 'wikipedia:brick-lane-nazneen-london', title: 'Brick Lane (novel)', url: 'https://en.wikipedia.org/wiki/Brick_Lane_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-049:joy-luck-mothers-daughters', factKey: 'literature-language:joy-luck-club-chinese-mothers-american-daughters', tier: 5, subjectKey: 'work:the-joy-luck-club',
+        clue: { en: 'Which Amy Tan novel links four Chinese immigrant mothers in San Francisco with the American-born daughters who inherit their stories?', et: 'Milline Amy Tani romaan seob San Franciscos neli Hiinast sisserännanud ema nende Ameerikas sündinud tütardega, kes pärivad emade lood?' }, response: { en: 'The Joy Luck Club', et: '„Õnnerõõmu klubi“' }, acceptedVariants: { en: ['Joy Luck Club', 'Õnnerõõmu klubi'], et: ['„The Joy Luck Club“'] },
+        explanation: { en: 'Interlocking memories reveal how war, migration, expectation, and misunderstanding shape both generations.', et: 'Põimuvad mälestused näitavad, kuidas sõda, ränne, ootused ja vääritimõistmine kujundavad mõlemat põlvkonda.' },
+        source: { sourceId: 'wikipedia:joy-luck-mothers-daughters', title: 'The Joy Luck Club (novel)', url: 'https://en.wikipedia.org/wiki/The_Joy_Luck_Club_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-050', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'People Hidden Inside Everyday Words', et: 'Igapäevasõnades peituvad inimesed' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-050:boycott-charles-irish-land', factKey: 'literature-language:boycott-charles-boycott-social-isolation', tier: 1, subjectKey: 'word:boycott',
+        clue: { en: 'Which verb meaning organized refusal comes from Irish tenants and neighbours socially isolating a County Mayo land agent?', et: 'Milline organiseeritud keeldumist tähendav sõna pärineb sellest, et Iiri rentnikud ja naabrid tõrjusid ühe Mayo krahvkonna maahalduri kogukonnast välja?' }, response: { en: 'boycott', et: 'boikott' }, acceptedVariants: { en: ['to boycott'], et: ['boikoteerima'] },
+        explanation: { en: 'The widely reported campaign against Boycott turned his surname into an international word for collective non-cooperation.', et: 'Laialt kajastatud kampaania Boycotti vastu muutis tema perekonnanime rahvusvaheliseks sõnaks, mis tähistab ühist koostööst keeldumist.' },
+        source: { sourceId: 'wikipedia:boycott-charles-irish-land', title: 'Boycott', url: 'https://en.wikipedia.org/wiki/Boycott', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-050:silhouette-etienne-profile', factKey: 'literature-language:silhouette-etienne-cheap-profile-portrait', tier: 2, subjectKey: 'word:silhouette',
+        clue: { en: 'Which word for a dark outline recalls an austere French finance minister named Étienne and the fashion for inexpensive profile portraits?', et: 'Milline tumedat kontuuri tähistav sõna meenutab ranget Prantsuse rahandusministrit nimega Étienne ja odavate profiilportreede moodi?' }, response: { en: 'silhouette', et: 'siluett' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Silhouette’s name became associated with things done cheaply and then with simple cut-paper profile likenesses.', et: 'Silhouette’i nime hakati seostama odavalt tehtud asjadega ning seejärel lihtsate väljalõigatud profiilportreedega.' },
+        source: { sourceId: 'wikipedia:silhouette-etienne-profile', title: 'Silhouette', url: 'https://en.wikipedia.org/wiki/Silhouette', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-050:mesmerism-animal-magnetism', factKey: 'literature-language:mesmerism-franz-mesmer-animal-magnetism', tier: 3, subjectKey: 'word:mesmerism',
+        clue: { en: 'Which word for hypnotic fascination comes from Franz Mesmer, who claimed that an invisible “animal magnetism” could affect health?', et: 'Milline hüpnootilist lummust tähistav sõna pärineb Franz Mesmerilt, kes väitis, et nähtamatu „loomne magnetism“ võib tervist mõjutada?' }, response: { en: 'mesmerism', et: 'mesmerism' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Mesmer’s disputed treatments faded, but his name survived in words for trance-like influence and fascination.', et: 'Mesmeri vaidlustatud ravivõtted hääbusid, kuid tema nimi jäi elama transilaadset mõju ja lummust tähistavates sõnades.' },
+        source: { sourceId: 'wikipedia:mesmerism-animal-magnetism', title: 'Franz Mesmer', url: 'https://en.wikipedia.org/wiki/Franz_Mesmer', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-050:maverick-unbranded-cattle', factKey: 'literature-language:maverick-samuel-unbranded-cattle', tier: 4, subjectKey: 'word:maverick',
+        clue: { en: 'Which word for an independent-minded person comes from a Texas rancher named Samuel and the unbranded cattle associated with him?', et: 'Milline sõltumatult mõtlevat inimest tähistav sõna pärineb Texase karjakasvatajalt nimega Samuel ja temaga seostatud märgistamata veistelt?' }, response: { en: 'maverick', et: 'maverick' }, acceptedVariants: { en: ['a maverick'], et: ['maverik'] },
+        explanation: { en: 'An unbranded range animal became a “maverick,” and the word later broadened to someone who refuses group discipline.', et: 'Märgistamata kariloomast sai „maverick“ ning hiljem laienes sõna inimesele, kes ei allu rühma distsipliinile.' },
+        source: { sourceId: 'wikipedia:maverick-unbranded-cattle', title: 'Maverick (animal)', url: 'https://en.wikipedia.org/wiki/Maverick_(animal)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-050:cardigan-earl-crimea', factKey: 'literature-language:cardigan-earl-knitted-jacket', tier: 5, subjectKey: 'word:cardigan',
+        clue: { en: 'Which knitted jacket takes its name from James Brudenell, the Earl who led the Charge of the Light Brigade in the Crimean War?', et: 'Milline kootud jakk on saanud nime James Brudenellilt, krahvilt, kes juhtis Krimmi sõjas kergeratsaväebrigaadi rünnakut?' }, response: { en: 'cardigan', et: 'kardigan' }, acceptedVariants: { en: ['a cardigan', 'cardigan sweater'], et: ['kardigan-jakk'] },
+        explanation: { en: 'The garment was named after the Earl of Cardigan, though later fashion shaped the familiar open-front sweater.', et: 'Rõivaese sai nime Cardigani krahvi järgi, kuigi tuttava eest lahtise kampsuni kuju kujundas hilisem mood.' },
+        source: { sourceId: 'wikipedia:cardigan-earl-crimea', title: 'Cardigan (sweater)', url: 'https://en.wikipedia.org/wiki/Cardigan_(sweater)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const LITERATURE_LANGUAGE_CATEGORIES = validatePlayableCorpus(
