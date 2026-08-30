@@ -97,6 +97,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "acceptedVariants": {
           "en": [
             "Spanish omelette",
+            "Spanish tortilla",
             "tortilla de patatas"
           ],
           "et": [
@@ -321,8 +322,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "dish:manti",
         "clue": {
-          "en": "Across Turkey and Central Asia, which small meat-filled parcels are steamed or boiled and commonly topped with garlicky yoghurt and spiced butter?",
-          "et": "Milliseid väikeseid lihatäidisega tainataskuid aurutatakse või keedetakse Türgis ja Kesk-Aasias ning serveeritakse sageli küüslauguse jogurti ja vürtsivõiga?"
+          "en": "In Turkey, which tiny Kayseri dumplings are served with yoghurt, melted butter, dried mint, and Aleppo pepper?",
+          "et": "Milliseid Kayseri pisikesi tainataskuid serveeritakse Türgis jogurti, sulavõi, kuivatatud mündi ja Aleppo pipraga?"
         },
         "response": {
           "en": "manti",
@@ -1102,8 +1103,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "dessert:pastel-de-nata",
         "clue": {
-          "en": "In Lisbon, which flaky pastry cup holds an egg-and-cream filling baked until dark spots appear, with Belém famous for its version?",
-          "et": "Milline Lissaboni lehttainakorvike täidetakse muna-kooreseguga ja küpsetatakse tumedatäpiliseks, kusjuures Belém on kuulus oma variandi poolest?"
+          "en": "Created by Catholic monks at Lisbon's Jerónimos Monastery in Belém, which Portuguese pastry may be dusted with cinnamon?",
+          "et": "Millise Portugali küpsetise lõid katoliku mungad Lissabonis Belémi Jerónimose kloostris ning seda võib serveerimisel kaneeliga üle puistata?"
         },
         "response": {
           "en": "pastel de nata",
@@ -1111,15 +1112,17 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "Portuguese custard tart"
+            "Portuguese custard tart",
+            "pastéis de nata",
+            "Portuguese egg tart"
           ],
           "et": [
             "Portugali munakreemikorvike"
           ]
         },
         "explanation": {
-          "en": "Pastéis de nata developed from Portugal's convent pastry tradition and are served with blistered, caramelised tops.",
-          "et": "Pastéis de nata pärineb Portugali kloostriküpsetiste traditsioonist ning selle pinnale küpsevad karamellistunud laigud."
+          "en": "Pastéis de nata descend from pastéis de Belém, created by Catholic monks at Lisbon's Jerónimos Monastery before the 18th century.",
+          "et": "Pastéis de nata eelkäija pastéis de Belém loodi enne 18. sajandit Lissaboni Jerónimose kloostri katoliku munkade poolt."
         },
         "source": {
           "sourceId": "wikipedia:pastel_de_nata",
@@ -1143,8 +1146,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "tres leches'i kook"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tres leches",
+            "pastel de tres leches"
+          ],
+          "et": [
+            "tres leches",
+            "pastel de tres leches"
+          ]
         },
         "explanation": {
           "en": "The airy sponge of tres leches cake absorbs its rich milk mixture without completely falling apart.",
@@ -1362,8 +1371,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-042",
     "name": {
-      "en": "Italy Beyond Pizza and Pasta",
-      "et": "Itaalia ilma pitsa ja pastata"
+      "en": "Italy's Regional Classics",
+      "et": "Itaalia piirkondlikud klassikud"
     },
     "questions": [
       {
