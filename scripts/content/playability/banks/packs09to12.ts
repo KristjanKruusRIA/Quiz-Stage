@@ -3062,8 +3062,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "dish:beshbarmak",
           "clue": {
-            "en": "Kazakhstan’s dish of boiled meat over broad noodles bears a name translated as “five fingers.” What is that name?",
-            "et": "Kasahstani keedetud liha ja laiade nuudlitega roa nimi tähendab tõlkes „viit sõrme“. Mis nimi see on?"
+            "en": "Kazakhstan’s dish of boiled meat with noodles bears a name translated as “five fingers.” What is that name?",
+            "et": "Kasahstani keedetud liha ja nuudlitega roa nimi tähendab tõlkes „viit sõrme“. Mis nimi see on?"
           },
           "response": {
             "en": "beshbarmak",
@@ -3078,8 +3078,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "Beshbarmak serves boiled meat with large noodle sheets, and its Turkic name is commonly translated as “five fingers.”",
-            "et": "Bešbarmakis serveeritakse keedetud liha suurte nuudlilehtedega ning selle turgikeelne nimi tähendab tavaliselt „viit sõrme“."
+            "en": "Beshbarmak combines boiled meat with dough, typically egg noodles, and its Turkic name means “five fingers.”",
+            "et": "Bešbarmakis ühendatakse keedetud liha tainaga, tavaliselt munanuudlitega, ning selle turgikeelne nimi tähendab „viit sõrme“."
           },
           "source": {
             "sourceId": "wikipedia:beshbarmak",
@@ -3207,8 +3207,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
           "explanation": {
-            "en": "Maafe is a West African stew whose defining sauce is made with peanuts or peanut butter.",
-            "et": "Maafe on Lääne-Aafrika hautis, mille põhiline kaste valmistatakse maapähklitest või maapähklivõist."
+            "en": "Senegalese maafe is a rice-based dish with a creamy peanut-paste sauce.",
+            "et": "Senegali maafe on riisiroog kreemja maapähklipastakastmega."
           },
           "source": {
             "sourceId": "wikipedia:peanut_stew",
@@ -3519,8 +3519,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Salmorejo is a thick chilled soup from Córdoba based on tomato, bread, olive oil and garlic.",
-            "et": "Salmorejo on Córdobast pärit paks külmsupp, mille aluseks on tomat, leib, oliiviõli ja küüslauk."
+            "en": "Salmorejo is a chilled Córdoba soup based on tomato, bread, olive oil and garlic; it is much thicker than gazpacho.",
+            "et": "Salmorejo on Córdobast pärit tomati, leiva, oliiviõli ja küüslaugu põhine külmsupp, mis on gazpacho’st palju paksem."
           },
           "source": {
             "sourceId": "wikipedia:salmorejo",
@@ -3536,8 +3536,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "dish:pulpo-a-feira",
           "clue": {
-            "en": "Galician fairground cooks slice boiled octopus and season it with olive oil, salt and sweet or hot paprika. Give the dish’s name.",
-            "et": "Galicia laadakokad lõikavad keedetud kaheksajala viiludeks ning maitsestavad selle oliiviõli, soola ning magusa või terava paprikapulbriga. Anna roa nimi."
+            "en": "Galician fairground cooks slice boiled octopus and season it with olive oil, salt, and both sweet and hot paprika. Give the dish’s name.",
+            "et": "Galicia laadakokad lõikavad keedetud kaheksajala viiludeks ning maitsestavad selle oliiviõli, soola ning magusa ja terava paprikapulbriga. Anna roa nimi."
           },
           "response": {
             "en": "pulpo a feira",
@@ -4070,8 +4070,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 5,
           "subjectKey": "brand:pringles",
           "clue": {
-            "en": "P&G developed which brand’s saddle-shaped potato-based chips to stack inside a cylindrical can, addressing complaints about broken chips and empty air in bags?",
-            "et": "Millise kaubamärgi sadulakujulised kartulipõhised krõpsud töötas P&G välja silindrilisse purki ladumiseks, et lahendada murdunud krõpsude ja kotis oleva tühja õhu probleem?"
+            "en": "Which snack brand’s package was designed to address customer complaints about broken chips and empty air in bags?",
+            "et": "Millise suupistebrändi pakend loodi vastuseks tarbijate kaebustele murdunud krõpsude ja kotis oleva tühja õhu pärast?"
           },
           "response": {
             "en": "Pringles",
