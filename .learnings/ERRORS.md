@@ -516,3 +516,35 @@ Inspect each module's actual exports before composing one-off import scripts; us
 - **Notes**: Queried all module exports and switched the inspection script to their declared uppercase symbols.
 
 ---
+
+## [ERR-20260830-012] playable-category-name-field
+
+**Logged**: 2026-08-30T17:02:41+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A one-off Science draft inspection assumed the category label field was named `title` instead of `name`.
+
+### Error
+```
+TypeError: Cannot read properties of undefined (reading 'en')
+```
+
+### Context
+- Operation attempted: print the newly drafted category names and clue responses for a controller-side editorial preview.
+- Playable category records expose bilingual labels through `name`, while questions expose `clue` and `response`.
+
+### Suggested Fix
+Inspect representative object keys before writing ad hoc corpus introspection scripts.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `scripts/content/playability/banks/packs01to04/scienceNature.ts`
+
+### Resolution
+- **Resolved**: 2026-08-30T17:02:41+03:00
+- **Notes**: Inspected the runtime object keys and switched the preview to `category.name`.
+
+---
