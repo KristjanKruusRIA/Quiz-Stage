@@ -1919,7 +1919,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         clue: { en: 'Which American diner dish forms seasoned ground beef into patties and usually serves them with brown gravy and mashed potatoes?', et: 'Millises Ameerika sööklaroas vormitakse maitsestatud veisehakkliha kotlettideks ning pakutakse tavaliselt pruuni kastme ja kartulipudruga?' },
         response: { en: 'Salisbury steak', et: 'Salisbury steak' },
         acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Salisbury steak is an American ground-meat dish commonly served with gravy and named for physician James Salisbury.', et: 'Salisbury steak on Ameerika hakkliharuog, mida pakutakse sageli kastmega ja mis sai nime arst James Salisbury järgi.' },
+        explanation: { en: 'Salisbury steak is an American ground-meat dish commonly served with gravy and named for physician James Salisbury.', et: 'Salisbury steak on Ameerika hakkliharoog, mida pakutakse sageli kastmega ja mis sai nime arst James Salisbury järgi.' },
         source: { sourceId: 'wikipedia:salisbury_steak', title: 'Salisbury steak', url: 'https://en.wikipedia.org/wiki/Salisbury_steak', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
