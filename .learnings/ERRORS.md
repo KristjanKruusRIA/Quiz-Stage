@@ -1102,3 +1102,30 @@ Batch unique titles, bound retries, and validate response status/content type be
 - **Notes**: A batched query plus rendered-page checks completed all 55 source validations.
 
 ---
+
+## [ERR-20260830-H1] powershell-native-command-condition
+
+**Logged**: 2026-08-30T21:25:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+A PowerShell `if (git merge-base --is-ancestor ...)` check reported false because native-command success produced no stdout for the condition to evaluate.
+
+### Error
+```
+PRIMARY_CONTAINS_ORIGIN_MAIN=NO
+```
+
+### Context
+- The merge commit visibly had `origin/main` as its second parent; the failure was in the PowerShell condition, not repository ancestry.
+
+### Suggested Fix
+Run the native command first and branch on a captured `$LASTEXITCODE`, never on its stdout.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:25:00+03:00
+- **Notes**: The corrected check returned `PRIMARY_CONTAINS_ORIGIN_MAIN=YES`; merge commit `80b90e0` has `220c7d2` as its second parent.
+
+---
