@@ -1193,6 +1193,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-literature-language-set-018', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Novel Titles Borrowed from Poetry', et: 'Luulest laenatud romaanipealkirjad' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-018:of-mice-men-burns-title', factKey: 'literature-language:of-mice-men-title-from-burns-poem', tier: 1, subjectKey: 'work:of-mice-and-men',
+        clue: { en: 'Which Steinbeck novella about ranch workers George and Lennie takes its title from Robert Burns’s warning that carefully made plans often fail?', et: 'Milline Steinbecki lühiromaan rantšotöölistest George’ist ja Lennie’st sai pealkirja Robert Burnsi hoiatusest, et hoolega tehtud plaanid võivad nurjuda?' }, response: { en: 'Of Mice and Men', et: '„Hiirtest ja inimestest“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Burns’s poem “To a Mouse” supplied the phrase that links fragile hopes with George and Lennie’s doomed dream.', et: 'Burnsi luuletus „To a Mouse“ andis fraasi, mis seob haprad lootused George’i ja Lennie’i nurjuva unistusega.' },
+        source: { sourceId: 'wikipedia:of-mice-men-burns-title', title: 'Of Mice and Men', url: 'https://en.wikipedia.org/wiki/Of_Mice_and_Men', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-018:tender-night-keats-title', factKey: 'literature-language:tender-night-title-from-keats-ode', tier: 2, subjectKey: 'work:tender-is-the-night',
+        clue: { en: 'Which Fitzgerald novel about psychiatrist Dick Diver and his wealthy wife Nicole on the French Riviera draws its title from a John Keats ode?', et: 'Milline Fitzgeraldi romaan psühhiaater Dick Diverist ja tema jõukast abikaasast Nicole’ist Prantsuse Rivieral sai pealkirja John Keatsi oodist?' }, response: { en: 'Tender Is the Night', et: '„Sume on öö“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Fitzgerald borrowed the title from “Ode to a Nightingale” for his story of glamour, illness, and a marriage coming apart.', et: 'Fitzgerald laenas pealkirja „Oodist ööbikule“ loole glamuurist, haigusest ja lagunevast abielust.' },
+        source: { sourceId: 'wikipedia:tender-night-keats-title', title: 'Tender Is the Night', url: 'https://en.wikipedia.org/wiki/Tender_Is_the_Night', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-018:passage-india-whitman-title', factKey: 'literature-language:passage-india-title-from-whitman-poem', tier: 3, subjectKey: 'work:a-passage-to-india',
+        clue: { en: 'Which E. M. Forster novel about Dr Aziz and the Marabar Caves takes its title from Walt Whitman’s poem celebrating new links between continents?', et: 'Milline E. M. Forsteri romaan doktor Azizist ja Marabari koobastest sai pealkirja Walt Whitmani luuletusest, mis ülistab uusi ühendusi maailmajagude vahel?' }, response: { en: 'A Passage to India', et: '„Teekond Indiasse“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Whitman’s poem connects exploration and spiritual unity; Forster turns the borrowed phrase toward the tensions of British rule.', et: 'Whitmani luuletus seob maadeavastuse vaimse ühtsusega; Forster suunab laenatud fraasi Briti võimu pingetele.' },
+        source: { sourceId: 'wikipedia:passage-india-whitman-title', title: 'A Passage to India', url: 'https://en.wikipedia.org/wiki/A_Passage_to_India', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-018:bell-tolls-donne-title', factKey: 'literature-language:bell-tolls-title-from-donne-meditation', tier: 4, subjectKey: 'work:for-whom-the-bell-tolls',
+        clue: { en: 'Which Hemingway novel follows American volunteer Robert Jordan during the Spanish Civil War and borrows its title from John Donne’s meditation on a funeral bell and human solidarity?', et: 'Milline Hemingway romaan jälgib Hispaania kodusõjas Ameerika vabatahtlikku Robert Jordanit ning laenab pealkirja John Donne’i mõtisklusest matusekella ja inimeste ühtekuuluvuse üle?' }, response: { en: 'For Whom the Bell Tolls', et: '„Kellele lüüakse hingekella“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Donne argues that every death diminishes all humanity, an idea Hemingway placed before his wartime story as an epigraph.', et: 'Donne väidab, et iga surm vähendab kogu inimkonda; Hemingway asetas selle mõtte sõjaromaani ette epigraafiks.' },
+        source: { sourceId: 'wikipedia:bell-tolls-donne-title', title: 'For Whom the Bell Tolls', url: 'https://en.wikipedia.org/wiki/For_Whom_the_Bell_Tolls', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-018:no-country-yeats-title', factKey: 'literature-language:no-country-title-from-yeats-poem', tier: 5, subjectKey: 'work:no-country-for-old-men',
+        clue: { en: 'Which Cormac McCarthy novel about Llewelyn Moss, Anton Chigurh, and a failed drug deal takes its title from the opening of Yeats’s “Sailing to Byzantium”?', et: 'Milline Cormac McCarthy romaan Llewelyn Mossist, Anton Chigurhist ja nurjunud uimastitehingust sai pealkirja Yeatsi luuletuse „Sailing to Byzantium“ algusest?' }, response: { en: 'No Country for Old Men', et: '„No Country for Old Men“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Yeats contrasts youth with aging wisdom; McCarthy uses the borrowed line for Sheriff Bell’s sense that violence has outrun him.', et: 'Yeats vastandab nooruse vanaduse tarkusele; McCarthy seob laenatud rea šerif Belli tundega, et vägivald on temast ette jõudnud.' },
+        source: { sourceId: 'wikipedia:no-country-yeats-title', title: 'No Country for Old Men (novel)', url: 'https://en.wikipedia.org/wiki/No_Country_for_Old_Men_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-019', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Poems Look at Works of Art', et: 'Luuletused vaatavad kunstiteoseid' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-019:grecian-urn-keats-images', factKey: 'literature-language:grecian-urn-keats-addresses-painted-scenes', tier: 1, subjectKey: 'work:ode-on-a-grecian-urn',
+        clue: { en: 'Which Keats ode addresses an ancient vessel whose frozen musicians, lovers, and sacrificial procession can never complete their actions?', et: 'Milline Keatsi ood pöördub antiikse anuma poole, mille tardunud pillimehed, armastajad ja ohvrirongkäik ei saa oma tegevust kunagi lõpule viia?' }, response: { en: 'Ode on a Grecian Urn', et: '„Ode on a Grecian Urn“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Keats reads the pictured scenes as permanently unfinished, using the silent object to test ideas of beauty, time, and truth.', et: 'Keats näeb kujutatud stseene igavesti lõpetamata ning proovib vaikiva eseme kaudu ilu, aja ja tõe ideid.' },
+        source: { sourceId: 'wikipedia:grecian-urn-keats-images', title: 'Ode on a Grecian Urn', url: 'https://en.wikipedia.org/wiki/Ode_on_a_Grecian_Urn', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-019:musee-beaux-arts-icarus', factKey: 'literature-language:musee-beaux-arts-bruegel-icarus-suffering', tier: 2, subjectKey: 'work:musee-des-beaux-arts-poem',
+        clue: { en: 'Which W. H. Auden poem reflects on ordinary life continuing beside suffering after the poet studied Bruegel paintings, especially the scene where Icarus falls almost unnoticed?', et: 'Milline W. H. Audeni luuletus mõtiskleb Bruegeli maalide, eriti peaaegu märkamatult langeva Ikarose stseeni põhjal selle üle, kuidas argielu kannatuse kõrval jätkub?' }, response: { en: 'Musée des Beaux Arts', et: '„Musée des Beaux Arts“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Auden contrasts catastrophe with a ploughman, a ship, and other figures who continue their routines.', et: 'Auden vastandab katastroofi kündja, laeva ja teiste tegelastega, kes jätkavad oma igapäevaseid toiminguid.' },
+        source: { sourceId: 'wikipedia:musee-beaux-arts-icarus', title: 'Musée des Beaux Arts (poem)', url: 'https://en.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux_Arts_(poem)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-019:blue-guitar-stevens-picasso', factKey: 'literature-language:blue-guitar-stevens-inspired-by-picasso', tier: 3, subjectKey: 'work:the-man-with-the-blue-guitar',
+        clue: { en: 'Which long poem by Wallace Stevens, inspired by Picasso’s painting The Old Guitarist, has a musician debate how art transforms reality?', et: 'Milline Wallace Stevensi pikk luuletus, mille ajendiks oli Picasso maal „Vana kitarrist“, laseb muusikul arutleda selle üle, kuidas kunst tegelikkust muudab?' }, response: { en: 'The Man with the Blue Guitar', et: '„The Man with the Blue Guitar“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The guitarist’s altered instrument becomes Stevens’s image for the artist reshaping rather than merely copying the world.', et: 'Kitarristi muudetud pillist saab Stevensil kujund kunstnikule, kes maailma pelga kopeerimise asemel ümber vormib.' },
+        source: { sourceId: 'wikipedia:blue-guitar-stevens-picasso', title: 'The Man with the Blue Guitar', url: 'https://en.wikipedia.org/wiki/The_Man_with_the_Blue_Guitar', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-019:convex-mirror-ashbery-parmigianino', factKey: 'literature-language:convex-mirror-ashbery-studies-parmigianino-self-portrait', tier: 4, subjectKey: 'work:self-portrait-in-a-convex-mirror-poem',
+        clue: { en: 'Which John Ashbery poem studies Parmigianino’s painted reflection, with the artist’s enlarged hand curving toward the viewer?', et: 'Milline John Ashbery luuletus uurib Parmigianino maalitud peegelpilti, kus kunstniku suurendatud käsi kaardub vaataja poole?' }, response: { en: 'Self-Portrait in a Convex Mirror', et: '„Self-Portrait in a Convex Mirror“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Ashbery uses the distorted self-image to question how faithfully art, memory, and language can hold a person.', et: 'Ashbery kasutab moonutatud enesekujutist, et küsida, kui truult suudavad kunst, mälu ja keel inimest talletada.' },
+        source: { sourceId: 'wikipedia:convex-mirror-ashbery-parmigianino', title: 'Self-Portrait in a Convex Mirror', url: 'https://en.wikipedia.org/wiki/Self-Portrait_in_a_Convex_Mirror_(poetry_collection)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-019:shield-achilles-auden-modern-scene', factKey: 'literature-language:shield-achilles-auden-reimagines-homeric-art', tier: 5, subjectKey: 'work:the-shield-of-achilles-poem',
+        clue: { en: 'Which W. H. Auden poem has Thetis expect heroic cities on her son’s new armor, only to see Hephaestus depict a bleak modern world of camps, crowds, and executions?', et: 'Millises W. H. Audeni luuletuses ootab Thetis poja uuele turvisele kangelaslikke linnu, kuid Hephaistos kujutab hoopis sünget nüüdisaegset maailma laagrite, rahvahulkade ja hukkamistega?' }, response: { en: 'The Shield of Achilles', et: '„The Shield of Achilles“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Auden replaces the rich civic scenes on Homer’s shield with images of mass violence and indifference.', et: 'Auden asendab Homerose kilbi rikkalikud linnastseenid massivägivalla ja ükskõiksuse kujutistega.' },
+        source: { sourceId: 'wikipedia:shield-achilles-auden-modern-scene', title: 'The Shield of Achilles', url: 'https://en.wikipedia.org/wiki/The_Shield_of_Achilles', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-020', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'The Harlem Renaissance on the Page', et: 'Harlemi renessanss raamatulehel' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-020:blacker-berry-emma-lou', factKey: 'literature-language:blacker-berry-emma-lou-colorism', tier: 1, subjectKey: 'work:the-blacker-the-berry-novel',
+        clue: { en: 'Which Wallace Thurman novel follows dark-skinned Emma Lou Morgan from Idaho to college and Harlem as she confronts colorism?', et: 'Milline Wallace Thurmani romaan jälgib tumedanahalise Emma Lou Morgani teekonda Idahost kolledžisse ja Harlemisse, kus ta puutub kokku nahavärvipõhise eelarvamusega?' }, response: { en: 'The Blacker the Berry', et: '„The Blacker the Berry“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Published in 1929, the novel examines discrimination within Black communities as Emma Lou struggles to accept her complexion.', et: '1929. aastal ilmunud romaan uurib mustanahaliste kogukondade sisest diskrimineerimist, kui Emma Lou püüab oma nahavärviga leppida.' },
+        source: { sourceId: 'wikipedia:blacker-berry-emma-lou', title: 'The Blacker the Berry (novel)', url: 'https://en.wikipedia.org/wiki/The_Blacker_the_Berry_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-020:weary-blues-hughes-collection', factKey: 'literature-language:weary-blues-hughes-first-poetry-collection', tier: 2, subjectKey: 'work:the-weary-blues',
+        clue: { en: 'Which debut poetry collection by Langston Hughes shares its name with a poem about a piano player whose performance brings jazz rhythm onto the page?', et: 'Milline Langston Hughesi debüütluulekogu kannab sama nime luuletusega pianistist, kelle esitus toob džässirütmi trükilehele?' }, response: { en: 'The Weary Blues', et: '„The Weary Blues“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The title poem fuses vernacular speech, musical repetition, and the sound of a late-night performance.', et: 'Nimiluuletus ühendab rahvaliku kõne, muusikalise korduse ja hilisõhtuse esituse kõla.' },
+        source: { sourceId: 'wikipedia:weary-blues-hughes-collection', title: 'The Weary Blues', url: 'https://en.wikipedia.org/wiki/The_Weary_Blues', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-020:black-no-more-procedure', factKey: 'literature-language:black-no-more-max-disher-procedure', tier: 3, subjectKey: 'work:black-no-more',
+        clue: { en: 'Which George S. Schuyler satire has Max Disher undergo a procedure that makes Black skin white, after which he assumes the name Matthew Fisher?', et: 'Millises George S. Schuyleri satiiris läbib Max Disher protseduuri, mis muudab musta naha valgeks, ning võtab seejärel nimeks Matthew Fisher?' }, response: { en: 'Black No More', et: '„Black No More“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The 1931 novel uses its fantastic treatment to expose the economic and political machinery built around racial categories.', et: '1931. aasta romaan kasutab fantastilist ravivõtet, et paljastada rassikategooriate ümber ehitatud majanduslik ja poliitiline masinavärk.' },
+        source: { sourceId: 'wikipedia:black-no-more-procedure', title: 'Black No More', url: 'https://en.wikipedia.org/wiki/Black_No_More', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-020:home-harlem-jake-brown', factKey: 'literature-language:home-harlem-jake-brown-returns', tier: 4, subjectKey: 'work:home-to-harlem',
+        clue: { en: 'Which Claude McKay novel follows Jake Brown, a Black soldier who deserts during World War I and returns to the nightlife and working life of uptown Manhattan?', et: 'Milline Claude McKay romaan jälgib Jake Browni, mustanahalist sõdurit, kes deserteerib Esimese maailmasõja ajal ja naaseb Manhattani põhjaosa öö- ning tööellu?' }, response: { en: 'Home to Harlem', et: '„Home to Harlem“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Jake’s search for belonging moves through clubs, rail work, friendship, and romance in the neighborhood’s changing culture.', et: 'Jake’i kuuluvusotsing liigub klubide, raudteetöö, sõpruse ja armastuse kaudu muutuvas linnakultuuris.' },
+        source: { sourceId: 'wikipedia:home-harlem-jake-brown', title: 'Home to Harlem', url: 'https://en.wikipedia.org/wiki/Home_to_Harlem', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-020:quicksand-helga-crane', factKey: 'literature-language:quicksand-helga-crane-identity-search', tier: 5, subjectKey: 'work:quicksand-nella-larsen',
+        clue: { en: 'Which Nella Larsen novel sends mixed-race teacher Helga Crane from a Southern school to Chicago, Harlem, and Copenhagen in an elusive search for belonging?', et: 'Milline Nella Larseni romaan viib segapäritolu õpetaja Helga Crane’i lõunapoolsest koolist Chicagosse, Harlemisse ja Kopenhaagenisse raskesti tabatavat kuuluvust otsima?' }, response: { en: 'Quicksand', et: '„Quicksand“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Each new community promises Helga freedom but imposes another set of racial, social, or gender expectations.', et: 'Iga uus kogukond lubab Helgale vabadust, kuid seab talle uued rassilised, ühiskondlikud või soolised ootused.' },
+        source: { sourceId: 'wikipedia:quicksand-helga-crane', title: 'Quicksand (Larsen novel)', url: 'https://en.wikipedia.org/wiki/Quicksand_(Larsen_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-025', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Authors Who Changed Writing Languages', et: 'Kirjanikud, kes vahetasid kirjutamiskeelt' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-025:conrad-polish-to-english', factKey: 'literature-language:conrad-mastered-english-after-polish-french', tier: 1, subjectKey: 'person:joseph-conrad',
+        clue: { en: 'Which Polish-born author of Heart of Darkness became an English prose master even though he did not speak the language fluently until his twenties?', et: 'Milline Poolas sündinud „Pimeduse südame“ autor sai inglise proosa meistriks, kuigi ei rääkinud seda keelt soravalt enne kahekümnendaid eluaastaid?' }, response: { en: 'Joseph Conrad', et: 'Joseph Conrad' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Born Józef Teodor Konrad Korzeniowski, he grew up with Polish and French before building his literary career in English.', et: 'Józef Teodor Konrad Korzeniowski kasvas poola ja prantsuse keelega ning kujundas hiljem oma kirjanduskarjääri inglise keeles.' },
+        source: { sourceId: 'wikipedia:conrad-polish-to-english', title: 'Joseph Conrad', url: 'https://en.wikipedia.org/wiki/Joseph_Conrad', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-025:beckett-english-french', factKey: 'literature-language:beckett-wrote-and-self-translated-english-french', tier: 2, subjectKey: 'person:samuel-beckett',
+        clue: { en: 'Which Irish playwright wrote major works in both English and French, composing Waiting for Godot in French before translating it himself?', et: 'Milline iiri näitekirjanik kirjutas tähtteoseid nii inglise kui ka prantsuse keeles ning lõi „Godot’d oodates“ esmalt prantsuse keeles ja tõlkis selle ise?' }, response: { en: 'Samuel Beckett', et: 'Samuel Beckett' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Working in a second language helped him pursue the spare style that became central to his drama and prose.', et: 'Teises keeles töötamine aitas tal kujundada nappi stiili, millest sai tema draama ja proosa keskne tunnus.' },
+        source: { sourceId: 'wikipedia:beckett-english-french', title: 'Samuel Beckett', url: 'https://en.wikipedia.org/wiki/Samuel_Beckett', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-025:kristof-hungarian-french', factKey: 'literature-language:kristof-hungarian-writer-in-french', tier: 3, subjectKey: 'person:agota-kristof',
+        clue: { en: 'Which Hungarian-born writer lived in Switzerland and wrote in French, including Le Grand Cahier, translated into English as The Notebook?', et: 'Milline Ungaris sündinud kirjanik elas Šveitsis ja kirjutas prantsuse keeles, sealhulgas teose „Le Grand Cahier“, mis ilmus inglise keeles pealkirjaga „The Notebook“?' }, response: { en: 'Ágota Kristóf', et: 'Ágota Kristóf' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'After leaving Hungary, Kristóf built a Francophone career whose first novel began The Notebook Trilogy.', et: 'Pärast Ungarist lahkumist rajas Kristóf prantsuskeelse kirjanikukarjääri, mille esimene romaan alustas „The Notebook Trilogy“ triloogiat.' },
+        source: { sourceId: 'wikipedia:kristof-hungarian-french', title: 'Ágota Kristóf', url: 'https://en.wikipedia.org/wiki/%C3%81gota_Krist%C3%B3f', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-025:kundera-czech-french', factKey: 'literature-language:kundera-switched-czech-to-french-novels', tier: 4, subjectKey: 'person:milan-kundera',
+        clue: { en: 'Which Czech-born author of The Unbearable Lightness of Being settled in France and later wrote novels such as Slowness directly in French?', et: 'Milline Tšehhis sündinud „Olemise talumatu kerguse“ autor asus elama Prantsusmaale ning kirjutas hiljem näiteks romaani „Slowness“ otse prantsuse keeles?' }, response: { en: 'Milan Kundera', et: 'Milan Kundera' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'His career spans Czech-language novels from before exile and a later group composed in French.', et: 'Tema looming hõlmab enne pagulust kirjutatud tšehhikeelseid romaane ning hilisemat prantsuskeelset teosterühma.' },
+        source: { sourceId: 'wikipedia:kundera-czech-french', title: 'Milan Kundera', url: 'https://en.wikipedia.org/wiki/Milan_Kundera', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-025:tawada-japanese-german', factKey: 'literature-language:tawada-writes-japanese-and-german', tier: 5, subjectKey: 'person:yoko-tawada',
+        clue: { en: 'Which Japanese-born, Berlin-based author writes in both Japanese and German and created the novel translated as Memoirs of a Polar Bear?', et: 'Milline Jaapanis sündinud ja Berliinis elav autor kirjutab nii jaapani kui ka saksa keeles ning lõi romaani, mis ilmus inglise keeles pealkirjaga „Memoirs of a Polar Bear“?' }, response: { en: 'Yoko Tawada', et: 'Yoko Tawada' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Tawada makes movement between Japanese and German a central part of her multilingual literary practice.', et: 'Tawada on muutnud jaapani ja saksa keele vahel liikumise oma mitmekeelse kirjanduspraktika keskseks osaks.' },
+        source: { sourceId: 'wikipedia:tawada-japanese-german', title: 'Yoko Tawada', url: 'https://en.wikipedia.org/wiki/Yoko_Tawada', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-052', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Novel Titles with Biblical Roots', et: 'Piiblist võrsunud romaanipealkirjad' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-052:east-eden-genesis-title', factKey: 'literature-language:east-eden-title-cain-exile-genesis', tier: 1, subjectKey: 'work:east-of-eden',
+        clue: { en: 'Which Steinbeck family saga about the Trasks and Hamiltons takes its title from the direction of Cain’s exile in Genesis?', et: 'Milline Steinbecki perekonnasaaga Traskidest ja Hamiltonidest sai pealkirja suunast, kuhu Kain Esimeses Moosese raamatus pagendati?' }, response: { en: 'East of Eden', et: '„Hommiku pool Eedenit“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The Cain and Abel story echoes through the Trask brothers, while the Hebrew word timshel frames the possibility of moral choice.', et: 'Kaini ja Aabeli lugu kajab Traski vendade loos, heebrea sõna timshel aga raamib moraalse valiku võimalust.' },
+        source: { sourceId: 'wikipedia:east-eden-genesis-title', title: 'East of Eden (novel)', url: 'https://en.wikipedia.org/wiki/East_of_Eden_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-052:house-mirth-ecclesiastes-title', factKey: 'literature-language:house-mirth-title-from-ecclesiastes', tier: 2, subjectKey: 'work:the-house-of-mirth',
+        clue: { en: 'Which Edith Wharton novel about Lily Bart takes its title from Ecclesiastes’ contrast between the place of mourning and the place of pleasure?', et: 'Milline Edith Whartoni romaan Lily Bartist sai pealkirja Koguja raamatu vastandusest leinapaiga ja lõbupaiga vahel?' }, response: { en: 'The House of Mirth', et: '„The House of Mirth“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The biblical contrast becomes ironic as Lily’s pursuit of security in fashionable society leads toward isolation and ruin.', et: 'Piibellik vastandus muutub irooniliseks, sest Lily turvalisuseotsing kõrgseltskonnas viib eraldatuse ja hävinguni.' },
+        source: { sourceId: 'wikipedia:house-mirth-ecclesiastes-title', title: 'The House of Mirth', url: 'https://en.wikipedia.org/wiki/The_House_of_Mirth', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-052:sun-rises-ecclesiastes-title', factKey: 'literature-language:sun-rises-title-from-ecclesiastes', tier: 3, subjectKey: 'work:the-sun-also-rises',
+        clue: { en: 'Which Hemingway novel follows Jake Barnes and Lady Brett Ashley from Paris to Pamplona under a title drawn from Ecclesiastes’ cycle of generations and nature?', et: 'Milline Hemingway romaan jälgib Jake Barnesi ja leedi Brett Ashleyt Pariisist Pamplonasse ning kannab Koguja raamatu põlvkondade ja looduse ringkäigust pärit pealkirja?' }, response: { en: 'The Sun Also Rises', et: '„Ja päike tõuseb“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The Ecclesiastes epigraph sets enduring natural cycles against the disoriented postwar generation in the novel.', et: 'Koguja raamatu epigraaf vastandab kestvad loodusringid romaani sõjajärgse põlvkonna sihitusele.' },
+        source: { sourceId: 'wikipedia:sun-rises-ecclesiastes-title', title: 'The Sun Also Rises', url: 'https://en.wikipedia.org/wiki/The_Sun_Also_Rises', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-052:go-tell-spiritual-title', factKey: 'literature-language:go-tell-mountain-title-from-spiritual', tier: 4, subjectKey: 'work:go-tell-it-on-the-mountain',
+        clue: { en: 'Which James Baldwin novel about teenager John Grimes and a Harlem storefront church takes its title from an African American spiritual about proclaiming the Nativity?', et: 'Milline James Baldwini romaan teismelisest John Grimesist ja Harlemi väikesest kirikust sai pealkirja afroameerika spirituaalist, mis kuulutab Kristuse sündi?' }, response: { en: 'Go Tell It on the Mountain', et: '„Go Tell It on the Mountain“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The spiritual’s call to testify fits a novel built around conversion, family memory, and the language of the Black church.', et: 'Spirituaali üleskutse tunnistada sobib romaaniga, mille keskmes on pöördumine, peremälu ja mustanahalise kiriku keel.' },
+        source: { sourceId: 'wikipedia:go-tell-spiritual-title', title: 'Go Tell It on the Mountain (novel)', url: 'https://en.wikipedia.org/wiki/Go_Tell_It_on_the_Mountain_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-052:power-glory-prayer-title', factKey: 'literature-language:power-glory-title-from-lords-prayer-doxology', tier: 5, subjectKey: 'work:the-power-and-the-glory',
+        clue: { en: 'Which Graham Greene novel about a fugitive priest in anti-clerical Mexico takes its title from the doxology traditionally added to the Lord’s Prayer?', et: 'Milline Graham Greene’i romaan kirikuvastases Mehhikos põgenevast preestrist sai pealkirja meieisapalvele tavapäraselt lisatud doksoloogiast?' }, response: { en: 'The Power and the Glory', et: '„Vägi ja au“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The prayer’s triumphant words stand in tension with the flawed priest’s fear, weakness, and stubborn sense of duty.', et: 'Palve võidukad sõnad on pinges puuduliku preestri hirmu, nõrkuse ja visa kohusetundega.' },
+        source: { sourceId: 'wikipedia:power-glory-prayer-title', title: 'The Power and the Glory', url: 'https://en.wikipedia.org/wiki/The_Power_and_the_Glory', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-053', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Books That Obey a Letter Rule', et: 'Raamatud, mis järgivad tähereeglit' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-053:a-void-perec-no-e', factKey: 'literature-language:a-void-perec-lipogram-without-e', tier: 1, subjectKey: 'work:a-void',
+        clue: { en: 'Which Georges Perec mystery avoids the most common letter in French throughout its original text, while its disappearance also haunts the plot?', et: 'Milline Georges Pereci mõistatusromaan väldib kogu prantsuskeelses algtekstis selle keele kõige tavalisemat tähte ning teeb puudumisest ka süžee motiivi?' }, response: { en: 'A Void', et: '„A Void“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Perec wrote the novel without the letter e; Gilbert Adair’s English translation preserves the same constraint.', et: 'Perec kirjutas romaani ilma e-täheta ning Gilbert Adairi ingliskeelne tõlge säilitab sama piirangu.' },
+        source: { sourceId: 'wikipedia:a-void-perec-no-e', title: 'A Void', url: 'https://en.wikipedia.org/wiki/A_Void', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-053:gadsby-wright-no-e', factKey: 'literature-language:gadsby-wright-fifty-thousand-words-without-e', tier: 2, subjectKey: 'work:gadsby-ernest-wright',
+        clue: { en: 'Which Ernest Vincent Wright novel about revitalizing the fictional city of Branton Hills runs for more than 50,000 words without using the letter e?', et: 'Milline Ernest Vincent Wrighti romaan väljamõeldud Branton Hillsi linna elavdamisest kestab üle 50 000 sõna, kasutamata kordagi e-tähte?' }, response: { en: 'Gadsby', et: '„Gadsby“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Wright reportedly disabled the typewriter key to maintain the book-length lipogram.', et: 'Väidetavalt blokeeris Wright kirjutusmasinal vastava klahvi, et romaanipikkust lipogrammi järjekindlalt hoida.' },
+        source: { sourceId: 'wikipedia:gadsby-wright-no-e', title: 'Gadsby (novel)', url: 'https://en.wikipedia.org/wiki/Gadsby_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-053:ella-minnow-pea-falling-letters', factKey: 'literature-language:ella-minnow-pea-bans-fallen-statue-letters', tier: 3, subjectKey: 'work:ella-minnow-pea',
+        clue: { en: 'Which Mark Dunn novel is set on Nollop, where each letter that falls from a pangram statue is banned from speech and writing?', et: 'Milline Mark Dunni romaan toimub Nollopi saarel, kus pangrammiga ausambalt langenud tähed keelatakse ükshaaval kõnes ja kirjas?' }, response: { en: 'Ella Minnow Pea', et: '„Ella Minnow Pea“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The epistolary novel visibly loses letters as its characters resist an increasingly absurd language law.', et: 'Kiriromaan kaotab nähtavalt tähti, kui tegelased hakkavad üha absurdsemale keeleseadusele vastu.' },
+        source: { sourceId: 'wikipedia:ella-minnow-pea-falling-letters', title: 'Ella Minnow Pea', url: 'https://en.wikipedia.org/wiki/Ella_Minnow_Pea', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-053:eunoia-single-vowel-chapters', factKey: 'literature-language:eunoia-each-chapter-one-vowel', tier: 4, subjectKey: 'work:eunoia-christian-bok',
+        clue: { en: 'Which Christian Bök poetry book gives each main chapter permission to use only one of the five vowel letters?', et: 'Milline Christian Böki luuleraamat lubab igas põhipeatükis kasutada vaid üht viiest täishäälikutähest?' }, response: { en: 'Eunoia', et: '„Eunoia“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'One chapter admits only a, another only e, and so on, while still building grammatically varied sentences.', et: 'Üks peatükk lubab ainult a-d, järgmine ainult e-d ja nii edasi, moodustades siiski grammatiliselt vaheldusrikkaid lauseid.' },
+        source: { sourceId: 'wikipedia:eunoia-single-vowel-chapters', title: 'Eunoia (book)', url: 'https://en.wikipedia.org/wiki/Eunoia_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-053:alphabetical-africa-expanding-letters', factKey: 'literature-language:alphabetical-africa-chapters-expand-and-contract-alphabet', tier: 5, subjectKey: 'work:alphabetical-africa',
+        clue: { en: 'Which Walter Abish novel begins with words starting only with A, admits B in its next chapter, and expands through the alphabet before reversing the process?', et: 'Milline Walter Abishi romaan algab ainult a-ga algavate sõnadega, lubab järgmises peatükis juurde b ning avardab tähestikku enne protsessi tagasipööramist?' }, response: { en: 'Alphabetical Africa', et: '„Alphabetical Africa“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The permitted initial letters grow chapter by chapter to Z, then contract again, making structure part of the adventure.', et: 'Lubatud algustähtede hulk kasvab peatükkhaaval z-ni ja kahaneb seejärel taas, muutes struktuuri seikluse osaks.' },
+        source: { sourceId: 'wikipedia:alphabetical-africa-expanding-letters', title: 'Alphabetical Africa', url: 'https://en.wikipedia.org/wiki/Alphabetical_Africa', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-071', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Absent Characters Who Shape the Story', et: 'Puuduvad tegelased, kes kujundavad loo' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-071:godot-never-arrives', factKey: 'literature-language:godot-awaited-by-vladimir-estragon-never-arrives', tier: 1, subjectKey: 'character:godot',
+        clue: { en: 'Whom do Beckett’s Vladimir and Estragon wait for through two acts, receiving only messages that he will come another day?', et: 'Keda ootavad Becketti Vladimir ja Estragon kaks vaatust, saades vaid teateid, et ta tuleb mõnel teisel päeval?' }, response: { en: 'Godot', et: 'Godot' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The promised visitor never appears, turning the act of waiting itself into the play’s central event.', et: 'Lubatud külaline ei ilmu kunagi ning ootamisest endast saab näidendi keskne sündmus.' },
+        source: { sourceId: 'wikipedia:godot-never-arrives', title: 'Waiting for Godot', url: 'https://en.wikipedia.org/wiki/Waiting_for_Godot', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-071:rosaline-before-juliet', factKey: 'literature-language:rosaline-unseen-romeo-love-before-juliet', tier: 2, subjectKey: 'character:rosaline',
+        clue: { en: 'What unseen woman is Romeo mourning at the start of Shakespeare’s tragedy before he meets Juliet at the Capulet feast?', et: 'Millist lavale ilmumatut naist leinab Romeo Shakespeare’i tragöödia alguses enne Julia kohtamist Capulettide peol?' }, response: { en: 'Rosaline', et: 'Rosaline' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Romeo’s unreturned devotion to Rosaline vanishes almost immediately when he sees Juliet.', et: 'Romeo vastuseta kiindumus Rosaline’i kaob peaaegu kohe, kui ta näeb Juliat.' },
+        source: { sourceId: 'wikipedia:rosaline-before-juliet', title: 'Rosaline', url: 'https://en.wikipedia.org/wiki/Rosaline', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-071:wingfield-portrait-absence', factKey: 'literature-language:mr-wingfield-absent-father-glass-menagerie', tier: 3, subjectKey: 'character:mr-wingfield',
+        clue: { en: 'Which absent father in The Glass Menagerie has abandoned Amanda, Tom, and Laura, yet remains visible in a smiling portrait on the wall?', et: 'Milline eemalviibiv isa on „Klaasist loomaaia“ Amandast, Tomist ja Laurast lahkunud, kuid püsib seinal naerataval portreel nähtavana?' }, response: { en: 'Mr Wingfield', et: 'härra Wingfield' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'His escape burdens Tom with supporting the family and makes the portrait a constant reminder of departure.', et: 'Tema lahkumine jätab pere ülalpidamise Tomi õlule ning muudab portree pidevaks põgenemise meeldetuletuseks.' },
+        source: { sourceId: 'wikipedia:wingfield-portrait-absence', title: 'The Glass Menagerie', url: 'https://en.wikipedia.org/wiki/The_Glass_Menagerie', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-071:captain-alving-ghosts-legacy', factKey: 'literature-language:captain-alving-dead-husband-shapes-ghosts', tier: 4, subjectKey: 'character:captain-alving',
+        clue: { en: 'Which late husband in Ibsen’s Ghosts is publicly honored with an orphanage while his concealed affairs and illness haunt his widow and son?', et: 'Millist Ibseni „Kummituste“ surnud abikaasat austatakse avalikult lastekoduga, kuigi tema varjatud kõrvalsuhted ja haigus kummitavad leske ning poega?' }, response: { en: 'Captain Alving', et: 'kapten Alving' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Mrs Alving’s effort to preserve his respectable image cannot prevent the consequences of his life from returning.', et: 'Proua Alvingi püüd säilitada mehe laitmatut mainet ei takista tema elu tagajärgede naasmist.' },
+        source: { sourceId: 'wikipedia:captain-alving-ghosts-legacy', title: 'Ghosts (play)', url: 'https://en.wikipedia.org/wiki/Ghosts_(play)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-071:dulcinea-idealized-aldonza', factKey: 'literature-language:dulcinea-name-for-unseen-aldonza-don-quixote', tier: 5, subjectKey: 'character:dulcinea',
+        clue: { en: 'What courtly name does Don Quixote give the peasant woman Aldonza Lorenzo when he imagines her as the noble lady inspiring his quests?', et: 'Millise õukondliku nime annab don Quijote talunaisele Aldonza Lorenzole, kui kujutleb teda oma rännakuid inspireeriva aadlidaamina?' }, response: { en: 'Dulcinea', et: 'Dulcinea' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Aldonza never knowingly plays the role; the exalted lady exists mainly inside the knight’s imagination.', et: 'Aldonza ei täida seda rolli teadlikult; ülistatud daam eksisteerib peamiselt rüütli kujutluses.' },
+        source: { sourceId: 'wikipedia:dulcinea-idealized-aldonza', title: 'Dulcinea', url: 'https://en.wikipedia.org/wiki/Dulcinea', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-075', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Campus Novels Enrol for Class', et: 'Ülikooliromaanid astuvad loengusse' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:lucky-jim-dixon-lecturer', factKey: 'literature-language:lucky-jim-dixon-provincial-university', tier: 1, subjectKey: 'work:lucky-jim',
+        clue: { en: 'Which Kingsley Amis comedy follows reluctant medieval-history lecturer Jim Dixon as he survives academic pretension at a provincial English university?', et: 'Milline Kingsley Amise komöödia jälgib tõrksat keskajaloo õppejõudu Jim Dixonit, kes püüab Inglismaa provintsiülikoolis akadeemilise eneseupitamise keskel toime tulla?' }, response: { en: 'Lucky Jim', et: '„Lucky Jim“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Dixon’s bad lectures, worse hangover, and rebellion against Professor Welch made the novel a defining campus satire.', et: 'Dixoni kehvad loengud, veel hullem pohmell ja mäss professor Welchi vastu tegid romaanist ülikoolisatiiri klassiku.' },
+        source: { sourceId: 'wikipedia:lucky-jim-dixon-lecturer', title: 'Lucky Jim', url: 'https://en.wikipedia.org/wiki/Lucky_Jim', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:pnin-waindell-professor', factKey: 'literature-language:pnin-russian-professor-waindell', tier: 2, subjectKey: 'work:pnin',
+        clue: { en: 'Which Nabokov novel follows the kind, exiled Russian professor Timofey at fictional Waindell College, where language and custom repeatedly trip him up?', et: 'Milline Nabokovi romaan jälgib heasüdamlikku vene pagulasprofessorit Timofeyd väljamõeldud Waindelli kolledžis, kus keel ja kombed talle alatasa raskusi valmistavad?' }, response: { en: 'Pnin', et: '„Pnin“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Comic misunderstandings surround a lonely scholar whose dignity gradually exceeds the narrator’s mockery.', et: 'Koomilised arusaamatused ümbritsevad üksildast õpetlast, kelle väärikus kasvab lõpuks jutustaja pilkest suuremaks.' },
+        source: { sourceId: 'wikipedia:pnin-waindell-professor', title: 'Pnin', url: 'https://en.wikipedia.org/wiki/Pnin', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:stoner-farmer-literature', factKey: 'literature-language:stoner-farm-student-becomes-literature-professor', tier: 3, subjectKey: 'work:stoner-john-williams',
+        clue: { en: 'Which John Williams novel follows a Missouri farm son named William who arrives to study agriculture but discovers literature and spends his career teaching it?', et: 'Milline John Williamsi romaan jälgib Missouri talupoega Williamit, kes tuleb õppima põllumajandust, avastab kirjanduse ning pühendab selle õpetamisele kogu karjääri?' }, response: { en: 'Stoner', et: '„Stoner“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The quiet academic life contains disappointed love, departmental conflict, and a lasting devotion to books.', et: 'Vaikne akadeemiline elu sisaldab pettunud armastust, osakonnakonflikte ja püsivat pühendumist raamatutele.' },
+        source: { sourceId: 'wikipedia:stoner-farmer-literature', title: 'Stoner (novel)', url: 'https://en.wikipedia.org/wiki/Stoner_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:secret-history-hampden-classics', factKey: 'literature-language:secret-history-hampden-classics-bunny-murder', tier: 4, subjectKey: 'work:the-secret-history',
+        clue: { en: 'Which Donna Tartt novel has Richard Papen join an elite Classics circle at Hampden College and reveal from the outset that the group killed Bunny Corcoran?', et: 'Millises Donna Tartti romaanis liitub Richard Papen Hampdeni kolledži elitaarse antiigiringiga ning avaldab kohe alguses, et rühm tappis Bunny Corcorani?' }, response: { en: 'The Secret History', et: '„The Secret History“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The inverted mystery asks why the students committed the murder and how shared guilt breaks their closed circle.', et: 'Pööratud mõistatus küsib, miks tudengid mõrva sooritasid ja kuidas ühine süü nende suletud ringi lõhub.' },
+        source: { sourceId: 'wikipedia:secret-history-hampden-classics', title: 'The Secret History', url: 'https://en.wikipedia.org/wiki/The_Secret_History', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:disgrace-lurie-professor-farm', factKey: 'literature-language:disgrace-david-lurie-loses-post-visits-farm', tier: 5, subjectKey: 'work:disgrace-coetzee',
+        clue: { en: 'Which J. M. Coetzee novel sends dismissed Cape Town professor David Lurie to his daughter Lucy’s farm, where both confront violence and a changing South Africa?', et: 'Milline J. M. Coetzee romaan saadab vallandatud Kaplinna professori David Lurie tema tütre Lucy tallu, kus mõlemad seisavad silmitsi vägivalla ja muutuva Lõuna-Aafrikaga?' }, response: { en: 'Disgrace', et: '„Disgrace“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Lurie loses his university position after misconduct, but retreat offers no escape from questions of power and responsibility.', et: 'Lurie kaotab vääritu käitumise tõttu ülikoolikoha, kuid eemaldumine ei paku pääsu võimu ja vastutuse küsimustest.' },
+        source: { sourceId: 'wikipedia:disgrace-lurie-professor-farm', title: 'Disgrace', url: 'https://en.wikipedia.org/wiki/Disgrace', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-084', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Languages Someone Deliberately Invented', et: 'Keeled, mille keegi teadlikult lõi' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:esperanto-zamenhof-international', factKey: 'literature-language:esperanto-zamenhof-international-language', tier: 1, subjectKey: 'language:esperanto',
+        clue: { en: 'Which planned international language was introduced by L. L. Zamenhof in 1887 under a pen name meaning “one who hopes”?', et: 'Millise kavandatud rahvusvahelise keele tutvustas L. L. Zamenhof 1887. aastal varjunime all, mis tähendab „lootjat“?' }, response: { en: 'Esperanto', et: 'esperanto' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Zamenhof designed a regular grammar and international vocabulary to make the language comparatively easy to learn.', et: 'Zamenhof kujundas korrapärase grammatika ja rahvusvahelise sõnavara, et keelt oleks suhteliselt lihtne õppida.' },
+        source: { sourceId: 'wikipedia:esperanto-zamenhof-international', title: 'Esperanto', url: 'https://en.wikipedia.org/wiki/Esperanto', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:klingon-okrant-star-trek', factKey: 'literature-language:klingon-created-by-marc-okrant-star-trek', tier: 2, subjectKey: 'language:klingon',
+        clue: { en: 'Which deliberately harsh-sounding language did linguist Marc Okrand develop for an alien warrior culture in Star Trek?', et: 'Millise teadlikult karmi kõlaga keele arendas lingvist Marc Okrand „Star Treki“ tulnukatest sõdalasrahvale?' }, response: { en: 'Klingon', et: 'klingoni keel' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Okrand expanded a few earlier film sounds into a grammar and vocabulary that fans could actually learn and use.', et: 'Okrand arendas mõnest varasemast filmihelindist grammatika ja sõnavara, mida huvilised said päriselt õppida ja kasutada.' },
+        source: { sourceId: 'wikipedia:klingon-okrant-star-trek', title: 'Klingon language', url: 'https://en.wikipedia.org/wiki/Klingon_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:volapuk-schleyer-international', factKey: 'literature-language:volapuk-schleyer-international-language', tier: 3, subjectKey: 'language:volapuk',
+        clue: { en: 'Which international auxiliary language did German priest Johann Martin Schleyer create in 1879, before Esperanto appeared?', et: 'Millise rahvusvahelise abikeele lõi saksa preester Johann Martin Schleyer 1879. aastal, enne esperanto ilmumist?' }, response: { en: 'Volapük', et: 'volapüki keel' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Schleyer’s constructed language developed an international movement and held conventions during the 1880s.', et: 'Schleyeri tehiskeele ümber tekkis rahvusvaheline liikumine, mis pidas 1880. aastatel ka kongresse.' },
+        source: { sourceId: 'wikipedia:volapuk-schleyer-international', title: 'Volapük', url: 'https://en.wikipedia.org/wiki/Volap%C3%BCk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:dothraki-peterson-horse-lords', factKey: 'literature-language:dothraki-developed-by-david-peterson-game-thrones', tier: 4, subjectKey: 'language:dothraki',
+        clue: { en: 'Which language did David J. Peterson develop for the nomadic horse lords encountered by Daenerys in Game of Thrones?', et: 'Millise keele arendas David J. Peterson rändavatest ratsaisandatest rahvale, kellega Daenerys „Troonide mängus“ kohtub?' }, response: { en: 'Dothraki', et: 'dothraki keel' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Peterson expanded the words in George R. R. Martin’s books into a full language for television dialogue.', et: 'Peterson arendas George R. R. Martini raamatutes leidunud sõnad televisioonidialoogi jaoks terviklikuks keeleks.' },
+        source: { sourceId: 'wikipedia:dothraki-peterson-horse-lords', title: 'Dothraki language', url: 'https://en.wikipedia.org/wiki/Dothraki_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:toki-pona-sonja-lang-minimal', factKey: 'literature-language:toki-pona-sonja-lang-minimalist-language', tier: 5, subjectKey: 'language:toki-pona',
+        clue: { en: 'Which minimalist constructed language by Sonja Lang uses a very small core vocabulary and encourages speakers to break complex ideas into simple parts?', et: 'Milline Sonja Langi minimalistlik tehiskeel kasutab väga väikest põhisõnavara ning suunab kõnelejaid keerukaid mõtteid lihtsateks osadeks jagama?' }, response: { en: 'Toki Pona', et: 'toki pona' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Its limited roots make context and creative combinations essential rather than assigning a separate word to every concept.', et: 'Piiratud tüvede hulk muudab konteksti ja loomingulised ühendid hädavajalikuks, selle asemel et anda igale mõistele eraldi sõna.' },
+        source: { sourceId: 'wikipedia:toki-pona-sonja-lang-minimal', title: 'Toki Pona', url: 'https://en.wikipedia.org/wiki/Toki_Pona', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-085', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Impossible Crimes Behind Locked Doors', et: 'Võimatud kuriteod lukustatud uste taga' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-085:rue-morgue-orangutan', factKey: 'literature-language:rue-morgue-dupin-orangutan-locked-room', tier: 1, subjectKey: 'work:the-murders-in-the-rue-morgue',
+        clue: { en: 'Which Poe story has C. Auguste Dupin solve the brutal deaths of two women in a sealed Paris room by identifying an escaped orangutan?', et: 'Millises Poe jutustuses lahendab C. Auguste Dupin kahe naise jõhkra surma suletud Pariisi toas, tuvastades põgenenud orangutani?' }, response: { en: 'The Murders in the Rue Morgue', et: '„The Murders in the Rue Morgue“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Conflicting witness accounts of an inhuman voice help Dupin see that the killer was not a conventional suspect.', et: 'Tunnistajate vastuolulised kirjeldused ebainimlikust häälest aitavad Dupinil mõista, et tapja polnud tavaline kahtlusalune.' },
+        source: { sourceId: 'wikipedia:rue-morgue-orangutan', title: 'The Murders in the Rue Morgue', url: 'https://en.wikipedia.org/wiki/The_Murders_in_the_Rue_Morgue', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-085:yellow-room-rouletabille', factKey: 'literature-language:yellow-room-rouletabille-locked-bedroom-attack', tier: 2, subjectKey: 'work:the-mystery-of-the-yellow-room',
+        clue: { en: 'Which Gaston Leroux novel sends young reporter Joseph Rouletabille to explain how Mathilde Stangerson was attacked inside a locked bedroom?', et: 'Millises Gaston Leroux’ romaanis peab noor reporter Joseph Rouletabille selgitama, kuidas Mathilde Stangersoni rünnati lukustatud magamistoas?' }, response: { en: 'The Mystery of the Yellow Room', et: '„The Mystery of the Yellow Room“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Rouletabille reconstructs both timing and identity to show why the apparently sealed scene misled investigators.', et: 'Rouletabille taastab nii sündmuste ajastuse kui ka isiku, näidates, miks näiliselt suletud sündmuspaik uurijaid eksitas.' },
+        source: { sourceId: 'wikipedia:yellow-room-rouletabille', title: 'The Mystery of the Yellow Room', url: 'https://en.wikipedia.org/wiki/The_Mystery_of_the_Yellow_Room', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-085:hollow-man-dr-fell', factKey: 'literature-language:hollow-man-dr-fell-two-impossible-murders', tier: 3, subjectKey: 'work:the-hollow-man-carr',
+        clue: { en: 'Which John Dickson Carr novel gives Dr Gideon Fell two impossible murders—one in a watched room and one in a snow-covered street without footprints?', et: 'Milline John Dickson Carri romaan annab doktor Gideon Fellile lahendada kaks võimatut mõrva: ühe valvatud toas ja teise lumisel tänaval ilma jalajälgedeta?' }, response: { en: 'The Hollow Man', et: '„The Hollow Man“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The novel pauses for Fell’s celebrated discussion of the main ways locked-room illusions can be constructed.', et: 'Romaan peatub Felli kuulsaks saanud aruteluks peamistest viisidest, kuidas lukustatud toa illusiooni luua.' },
+        source: { sourceId: 'wikipedia:hollow-man-dr-fell', title: 'The Hollow Man (Carr novel)', url: 'https://en.wikipedia.org/wiki/The_Hollow_Man_(Carr_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-085:honjin-kindaichi-snow', factKey: 'literature-language:honjin-murders-kindaichi-wedding-snow-locked-room', tier: 4, subjectKey: 'work:the-honjin-murders',
+        clue: { en: 'Which Seishi Yokomizo novel introduces detective Kosuke Kindaichi with newlyweds found dead after a scream, a koto sound, and a night of snow showing no intruder’s tracks?', et: 'Milline Seishi Yokomizo romaan tutvustab detektiiv Kosuke Kindaichit juhtumiga, kus noorpaar leitakse pärast karjet ja koto heli surnuna ning öine lumi ei näita sissetungija jälgi?' }, response: { en: 'The Honjin Murders', et: '„The Honjin Murders“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'A bloodied sword and untouched snow turn the wedding-night deaths into a Japanese locked-room classic.', et: 'Verine mõõk ja puutumatu lumi muudavad pulmaöö surmad Jaapani lukustatud toa mõistatuse klassikaks.' },
+        source: { sourceId: 'wikipedia:honjin-kindaichi-snow', title: 'The Honjin Murders', url: 'https://en.wikipedia.org/wiki/The_Honjin_Murders', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-085:tokyo-zodiac-locked-studio', factKey: 'literature-language:tokyo-zodiac-astrologer-locked-studio-plan', tier: 5, subjectKey: 'work:the-tokyo-zodiac-murders',
+        clue: { en: 'Which Sōji Shimada novel begins with an astrologer killed in a locked studio after leaving a grotesque plan, then asks investigators decades later to connect several women’s deaths?', et: 'Milline Sōji Shimada romaan algab lukustatud ateljees tapetud astroloogi groteskse kavandiga ning laseb uurijatel aastakümneid hiljem siduda mitme naise surmad?' }, response: { en: 'The Tokyo Zodiac Murders', et: '„The Tokyo Zodiac Murders“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The elaborate cold case pairs an apparently impossible first murder with a trail of bodies arranged around astrological ideas.', et: 'Keerukas lahendamata juhtum ühendab näiliselt võimatu esimese mõrva astroloogiliste ideede järgi korraldatud laipade ahelaga.' },
+        source: { sourceId: 'wikipedia:tokyo-zodiac-locked-studio', title: 'The Tokyo Zodiac Murders', url: 'https://en.wikipedia.org/wiki/The_Tokyo_Zodiac_Murders', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-086', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Epidemics Transform the Novel', et: 'Epideemia muudab romaanimaailma' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:death-grass-virus', factKey: 'literature-language:death-grass-virus-destroys-crops', tier: 1, subjectKey: 'work:the-death-of-grass',
+        clue: { en: 'Which John Christopher novel follows engineer John Custance through a collapsing England after a virus destroys grasses, including rice and wheat?', et: 'Milline John Christopheri romaan jälgib insener John Custance’i läbi kokkuvariseva Inglismaa pärast seda, kui viirus hävitab kõrrelised, sealhulgas riisi ja nisu?' }, response: { en: 'The Death of Grass', et: '„The Death of Grass“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Crop failure drives famine and anarchy while Custance’s group heads north in search of a defensible refuge.', et: 'Saagi hävimine toob nälja ja anarhia, samal ajal kui Custance’i rühm suundub põhja kaitstavat pelgupaika otsima.' },
+        source: { sourceId: 'wikipedia:death-grass-virus', title: 'The Death of Grass', url: 'https://en.wikipedia.org/wiki/The_Death_of_Grass', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:dog-stars-hig-airport', factKey: 'literature-language:dog-stars-hig-post-pandemic-airport', tier: 2, subjectKey: 'work:the-dog-stars',
+        clue: { en: 'Which Peter Heller novel has Hig live with his dog Jasper and the armed Bangley at a Colorado airport after an influenza pandemic?', et: 'Millises Peter Helleri romaanis elab Hig pärast gripipandeemiat Colorado lennuväljal koos koer Jasperi ja relvastatud Bangleyga?' }, response: { en: 'The Dog Stars', et: '„The Dog Stars“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Hig patrols by aircraft until a radio transmission draws him beyond the settlement’s defensive perimeter.', et: 'Hig teeb lennukiga patrull-lende, kuni raadiosõnum meelitab ta asula kaitsepiirist kaugemale.' },
+        source: { sourceId: 'wikipedia:dog-stars-hig-airport', title: 'The Dog Stars', url: 'https://en.wikipedia.org/wiki/The_Dog_Stars', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:station-eleven-traveling-symphony', factKey: 'literature-language:station-eleven-georgia-flu-traveling-symphony', tier: 3, subjectKey: 'work:station-eleven',
+        clue: { en: 'Which Emily St. John Mandel novel links actor Arthur Leander’s final performance with the Traveling Symphony after the Georgia Flu devastates civilization?', et: 'Milline Emily St. John Mandeli romaan seob näitleja Arthur Leanderi viimase etenduse Rändava Sümfoonia teekonnaga pärast Georgia gripi laastamist?' }, response: { en: 'Station Eleven', et: '„Jaam Üksteist“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The troupe performs Shakespeare around the Great Lakes, insisting that survival requires more than staying alive.', et: 'Trupp esitab Suure järvistu ümbruses Shakespeare’i, kinnitades, et ellujäämine tähendab enamat kui lihtsalt eluspüsimist.' },
+        source: { sourceId: 'wikipedia:station-eleven-traveling-symphony', title: 'Station Eleven', url: 'https://en.wikipedia.org/wiki/Station_Eleven', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:oryx-crake-jimmy-pandemic', factKey: 'literature-language:oryx-crake-jimmy-engineered-pandemic', tier: 4, subjectKey: 'work:oryx-and-crake',
+        clue: { en: 'Which Margaret Atwood novel leaves Jimmy among genetically altered humanoids after his scientist friend engineers a global pandemic?', et: 'Milline Margaret Atwoodi romaan jätab Jimmy geneetiliselt muudetud inimolendite sekka pärast seda, kui tema teadlasest sõber vallandab üleilmse pandeemia?' }, response: { en: 'Oryx and Crake', et: '„Orüks ja Ruik“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Jimmy reconstructs the friendship and corporate biotechnology that ended the old world.', et: 'Jimmy taastab mälus sõpruse ja korporatiivse biotehnoloogia loo, mis lõpetas vana maailma.' },
+        source: { sourceId: 'wikipedia:oryx-crake-jimmy-pandemic', title: 'Oryx and Crake', url: 'https://en.wikipedia.org/wiki/Oryx_and_Crake', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:last-man-lionel-verney', factKey: 'literature-language:last-man-lionel-verney-global-disease', tier: 5, subjectKey: 'work:the-last-man-mary-shelley',
+        clue: { en: 'Which Mary Shelley novel imagines Lionel Verney surviving a worldwide disease in a future Europe emptied of humanity?', et: 'Milline Mary Shelley romaan kujutab Lionel Verneyd üleilmse haiguse järel ellu jäämas tuleviku-Euroopas, kust inimkond on kadunud?' }, response: { en: 'The Last Man', et: '„The Last Man“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The early apocalyptic novel turns political hopes and intimate friendships into a long retreat before an unstoppable pandemic.', et: 'Varajane apokalüptiline romaan muudab poliitilised lootused ja lähedased sõprussuhted pikaks taganemiseks peatamatu pandeemia ees.' },
+        source: { sourceId: 'wikipedia:last-man-lionel-verney', title: 'The Last Man', url: 'https://en.wikipedia.org/wiki/The_Last_Man', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const LITERATURE_LANGUAGE_CATEGORIES = validatePlayableCorpus(
