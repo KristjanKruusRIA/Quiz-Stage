@@ -964,3 +964,141 @@ Run the real validator after each authored category batch and make category them
 - **Notes**: Renamed the category before proceeding; the full doppelgänger category was later replaced with the collision-free `Two Authors, One Novel` / `Kaks autorit, üks romaan` theme during accepted-corpus review.
 
 ---
+
+## [ERR-20260830-A2G-A2C] incomplete-authority-normalization
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: high
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Two Art checkpoint-2 collision probes counted an incomplete or incorrectly shaped authority set and initially returned false zero-collision results.
+
+### Context
+- A double-escaped filename regex omitted `content/generated/*.en-et.csv` rows.
+- A later condensed scan counted CSV rows but queried camel-case authored-module fields instead of CSV fields such as `clue_en`.
+- These consolidate the lane-local `ERR-20260830-A2G` and `ERR-20260830-A2C` notes.
+
+### Suggested Fix
+Resolve authoritative filenames explicitly, map every input shape to one canonical row type, and assert each partition count before trusting collision output.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: The final scan asserted 3,000 generated CSV, 1,210 approved Task 4, and 1,285 frozen-lane questions (5,495 total), then found zero exact or target-answer teaching reuse; semantic candidates were manually adjudicated.
+
+---
+
+## [ERR-20260830-A2M-A2W] mediawiki-batch-and-rate-limit
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: source verification
+
+### Summary
+Art checkpoint-2 source probes received incomplete `prop=extracts` evidence and later hit a non-JSON MediaWiki rate-limit response.
+
+### Context
+- These consolidate lane-local `ERR-20260830-A2M` and `ERR-20260830-A2W`.
+- The audit required proposition-level evidence for 55 unique pages.
+
+### Suggested Fix
+Fetch `prop=revisions` content in bounded title batches, resolve redirects, check status/content type before parsing JSON, and avoid sequential one-page bursts.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: Wikitext was retrieved for all 55 pages; the one throttled follow-up was verified through an indexed direct result.
+
+---
+
+## [ERR-20260830-A2S] windows-inline-audit-command-boundaries
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Nested PowerShell/`tsx -e` audit commands failed on Unicode-regex escaping, quoted JSON, top-level await, Windows ESM paths, and partial-line patch context.
+
+### Context
+- Consolidates lane-local `ERR-20260830-A2R`, `A2U`, `A2A`, `A2T`, and `A2P`.
+- The content bank stores each question tuple on one complete long line.
+
+### Suggested Fix
+Prefer repository scripts for complex checks; otherwise use explicit combining-mark ranges, async IIFEs, `pathToFileURL`, encoded data, native .NET hashing, and complete tuple lines in patches.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: Corrected commands produced the final authoritative collision/source/hash evidence; no accepted content was changed by the failed probes.
+
+---
+
+## [ERR-20260830-F2V] windows-verifier-reproducibility
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Food checkpoint-2 verification hit a wrong export name, Windows command-length and glob limits, temporary-verifier deletion, raw-HTML phrase splits, and apostrophe quoting failures.
+
+### Context
+- Consolidates lane-local `ERR-20260830-CP2`, `CP2I`, `CP2H`, `CP2C` (escaped quote), and `CP2B`.
+- The correct accessibility export is `buildAccessibleCorpus`; Windows `rg` needs a directory plus `-g '*.ts'` instead of an absolute wildcard.
+
+### Suggested Fix
+Inspect exports first, use ignored temporary scripts for large maps, retain a compact inline fallback, strip markup before proposition matching, and Unicode-encode problematic inline literals.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: Corrected verifiers produced 55/55 source support and zero authoritative collisions, then ephemeral scripts were removed.
+
+---
+
+## [ERR-20260830-F2C] checkpoint-content-contracts
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: content
+
+### Summary
+Food checkpoint-2 validation caught an internal answer mention, an undated `now` cue, and asymmetric bilingual accepted-variant arrays; the first asymmetric scan was itself directional.
+
+### Context
+- Consolidates lane-local `ERR-20260830-CP2G`, `CP2F`, `CP2E`, and `CP2D`.
+- Exact answer terms naturally co-occur in food descriptions, so cross-question teaching scans are required even when both propositions are supported.
+
+### Suggested Fix
+Use generic ingredient wording when another checkpoint answer would be taught, remove unnecessary current-time language, and compare EN/ET variant-array presence with symmetric XOR logic.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: `praline` was replaced by `nut cream` / `pähklikreem`, the current cue was removed, and all bilingual variant arrays now satisfy the structural contract.
+
+---
+
+## [ERR-20260830-F2W] mediawiki-sequential-rate-limit
+
+**Logged**: 2026-08-30T21:20:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: source verification
+
+### Summary
+A sequential Food checkpoint-2 MediaWiki rerun was rate-limited and then attempted to parse the plain-text response as JSON.
+
+### Context
+- Consolidates the lane-local rate-limit note that duplicated the identifier `ERR-20260830-CP2C`.
+
+### Suggested Fix
+Batch unique titles, bound retries, and validate response status/content type before JSON parsing.
+
+### Resolution
+- **Resolved**: 2026-08-30T21:20:00+03:00
+- **Notes**: A batched query plus rendered-page checks completed all 55 source validations.
+
+---
