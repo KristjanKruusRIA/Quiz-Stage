@@ -105,6 +105,8 @@ Task 36: complete (commit `c021338`; deterministic production seed verified with
 Task 43: complete (baseline `cc4fe45`; clean release gate, installer and portable offline full matches, upgrade, hardening, and Windows 11 plus Windows 10 Pro 22H2 x64 visual/manual evidence pass)
 
 Task 12 (playable corpus): in-progress checkpoint handoff for `feat/playable-medium-hard-corpus`
-- Branch head is currently `34809fd` (`feat(content): extend science playability checkpoint`), adding `scripts/content/playability/banks/packs01to04.ts` updates.
-- Reviewed upstream checkpoint commit on science lane is `302a181` in `playable-science-nature` and was previously used as the source checkpoint.
-- Next for continuation: finish easy-mode validation on this branch, then integrate adult/Estonia changes into this branch, cherry-pick/merge the reviewed science checkpoint state, and continue packs 01–04 review pass before Task 8/Task 10 pipeline.
+- `origin/main` is `220c7d2`: Adult/Estonia and the verified 1,600-clue accessible-easy corpus are already published. The medium/hard branch merged that exact baseline at `80b90e0`.
+- Primary branch head is `60a4952`. Reviewed History and Geography are complete; Science checkpoint 3 is integrated and independently approved at 33/66 categories (165/330 clues, 17 medium/16 hard).
+- Fresh primary gates after Science checkpoint 3: exact target order/count, scoped ESLint, `git diff --check`, 3 focused files / 226 tests, and `npm run typecheck` all pass; the tracked worktree is clean.
+- Literature checkpoint 1 is the active authoring lane for its first 11 targets / 55 hard clues. Science checkpoint 4 is fully briefed for the next 11 targets but must not be dispatched concurrently with another implementer.
+- Resume from `.superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/progress.md`; do not redo easy publication, Adult/Estonia integration, or Science checkpoints 1–3. Continue Task 4 lane review before Task 8/Task 10 publication and Windows-only acceptance.
