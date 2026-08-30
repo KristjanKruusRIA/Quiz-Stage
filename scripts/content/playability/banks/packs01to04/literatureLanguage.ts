@@ -1597,7 +1597,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-087:trial-kafka-brod', factKey: 'literature-language:trial-brod-published-against-kafka-request', tier: 1, subjectKey: 'work:the-trial-kafka',
         clue: { en: 'Which unfinished novel about Josef K. reached print after Max Brod ignored Franz Kafka’s request to destroy his manuscripts?', et: 'Milline lõpetamata romaan Josef K-st jõudis trükki pärast seda, kui Max Brod eiras Franz Kafka palvet tema käsikirjad hävitada?' }, response: { en: 'The Trial', et: '„Protsess“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Brod preserved and edited Kafka’s manuscript, publishing the story of Josef K.’s unexplained prosecution after Kafka’s death.', et: 'Brod säilitas ja toimetas Kafka käsikirja ning avaldas Josef K. seletamatu kohtuasja loo pärast Kafka surma.' },
-        source: { sourceId: 'wikipedia:trial-kafka-brod', title: 'The Trial', url: 'https://en.wikipedia.org/wiki/The_Trial', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:max-brod-kafka-instruction-trial', title: 'Max Brod', url: 'https://en.wikipedia.org/wiki/Max_Brod', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-087:silmarillion-christopher-edits', factKey: 'literature-language:silmarillion-christopher-edited-father-materials', tier: 2, subjectKey: 'work:the-silmarillion',
@@ -1608,7 +1608,7 @@ const rawCategories = [
       {
         key: 'playable-literature-language:built-in-literature-language-set-087:confederacy-thema-percy', factKey: 'literature-language:confederacy-thelma-toole-walker-percy-posthumous', tier: 3, subjectKey: 'work:a-confederacy-of-dunces',
         clue: { en: 'Which comic novel about Ignatius J. Reilly was championed by John Kennedy Toole’s mother and Walker Percy years after the author’s death?', et: 'Millise koomilise romaani Ignatius J. Reillyst aitasid aastaid pärast John Kennedy Toole’i surma avalikkuse ette tema ema ja Walker Percy?' }, response: { en: 'A Confederacy of Dunces', et: '„A Confederacy of Dunces“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Thelma Toole persuaded Percy to read the manuscript; its eventual publication brought her son a posthumous Pulitzer Prize.', et: 'Thelma Toole veenis Percyt käsikirja lugema; hilisem avaldamine tõi tema pojale postuumselt Pulitzeri auhinna.' },
+        explanation: { en: 'Thelma Toole persuaded Percy to read the manuscript; its eventual publication brought her son major posthumous recognition.', et: 'Thelma Toole veenis Percyt käsikirja lugema; hilisem avaldamine tõi tema pojale suure postuumse tunnustuse.' },
         source: { sourceId: 'wikipedia:confederacy-thelma-percy', title: 'A Confederacy of Dunces', url: 'https://en.wikipedia.org/wiki/A_Confederacy_of_Dunces', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
@@ -1619,7 +1619,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-087:first-man-crash-manuscript', factKey: 'literature-language:first-man-manuscript-found-camus-crash', tier: 5, subjectKey: 'work:the-first-man-camus',
-        clue: { en: 'Which unfinished autobiographical novel was found in the wreckage of the car crash that killed Albert Camus and later prepared for publication by his daughter?', et: 'Milline lõpetamata autobiograafiline romaan leiti Albert Camus’ surmaga lõppenud autoõnnetuse rusudest ning anti hiljem tema tütre ettevalmistusel välja?' }, response: { en: 'The First Man', et: '„Esimene inimene“' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which unfinished autobiographical novel was found at the accident site after the car crash that killed Albert Camus and later prepared for publication by his daughter?', et: 'Milline lõpetamata autobiograafiline romaan leiti pärast Albert Camus’ surmaga lõppenud autoõnnetust õnnetuspaigalt ning anti hiljem tema tütre ettevalmistusel välja?' }, response: { en: 'The First Man', et: '„Esimene inimene“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Camus’s draft follows Jacques Cormery’s search for his father and childhood memories in colonial Algeria.', et: 'Camus’ käsikiri jälgib Jacques Cormery isaotsinguid ja lapsepõlvemälestusi koloniaalaja Alžeerias.' },
         source: { sourceId: 'wikipedia:first-man-crash-manuscript', title: 'The First Man', url: 'https://en.wikipedia.org/wiki/The_First_Man', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1663,12 +1663,12 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-089', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
-    name: { en: 'Real Lives Behind Fictional Figures', et: 'Tõelised elud väljamõeldud tegelaste taga' },
+    name: { en: 'Real Lives Behind Fictional Figures', et: 'Pärisinimesed kirjandustegelaste taga' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-089:christopher-robin-milne', factKey: 'literature-language:christopher-robin-milne-inspired-pooh-character', tier: 1, subjectKey: 'person:christopher-robin-milne',
         clue: { en: 'Which son of A. A. Milne shared his name and childhood toys with the boy who visits Winnie-the-Pooh in the Hundred Acre Wood?', et: 'Milline A. A. Milne’i poeg jagas oma nime ja lapsepõlve mänguasju poisiga, kes külastab Karupoeg Puhhi Saja Aakri Metsas?' }, response: { en: 'Christopher Robin Milne', et: 'Christopher Robin Milne' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'His teddy bear and other toys inspired Pooh, Piglet, Eeyore, Kanga, and Tigger, while Christopher Robin entered the stories under his own names.', et: 'Tema mängukaru ja teised lelud inspireerisid Puhhi, Notsut, Iiahit, Kängut ja Tiigrit ning Christopher Robin jõudis lugudesse oma nimedega.' },
+        explanation: { en: 'His teddy bear and other toys inspired Pooh, Piglet, Eeyore, Kanga, and Tigger, while Christopher Robin entered the stories under his own name.', et: 'Tema mängukaru ja teised lelud inspireerisid Puhhi, Notsut, Iiahit, Kängut ja Tiigrit ning Christopher Robin jõudis lugudesse oma nime all.' },
         source: { sourceId: 'wikipedia:christopher-robin-milne', title: 'Christopher Robin Milne', url: 'https://en.wikipedia.org/wiki/Christopher_Robin_Milne', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
@@ -1699,7 +1699,7 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-095', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
-    name: { en: 'Writing Runs in the Family', et: 'Kirjutamine on perekonnas' },
+    name: { en: 'Writing Runs in the Family', et: 'Kirjutamine on neil veres' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-095:anne-bronte-novelist-sister', factKey: 'literature-language:anne-bronte-sister-agnes-grey-tenant', tier: 1, subjectKey: 'author:anne-bronte',
@@ -1721,7 +1721,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-095:dumas-fils-camille', factKey: 'literature-language:alexandre-dumas-fils-son-camille', tier: 4, subjectKey: 'author:alexandre-dumas-fils',
-        clue: { en: 'Which son of The Three Musketeers’ author wrote La Dame aux camélias, the novel and play that inspired Verdi’s La traviata?', et: 'Milline „Kolme musketäri“ autori poeg kirjutas romaani ja näidendi „Kameeliadaam“, millest sai Verdi „La traviata“ alus?' }, response: { en: 'Alexandre Dumas fils', et: 'Alexandre Dumas noorem' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which son of The Three Musketeers’ author wrote La Dame aux camélias, the novel and play that inspired Verdi’s La traviata?', et: 'Milline „Kolme musketäri“ autori poeg kirjutas romaani ja näidendi „Kameeliadaam“, millest sai Verdi „La traviata“ alus?' }, response: { en: 'Alexandre Dumas fils', et: 'Alexandre Dumas noorem' }, acceptedVariants: { en: ['Alexandre Dumas Jr.', 'Alexandre Dumas the Younger'], et: ['Alexandre Dumas Jr.', 'Alexandre Dumas the Younger'] },
         explanation: { en: 'The younger Dumas distinguished himself from his famous father with the suffix fils and a drama of Marguerite Gautier.', et: 'Noorem Dumas eristas end kuulsast isast lisandiga fils ning Marguerite Gautier’st jutustava draamaga.' },
         source: { sourceId: 'wikipedia:dumas-fils-camille', title: 'Alexandre Dumas fils', url: 'https://en.wikipedia.org/wiki/Alexandre_Dumas_fils', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1771,7 +1771,7 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-027', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
-    name: { en: 'Numbers on the Book Cover', et: 'Numbrid raamatu pealkirjas' },
+    name: { en: 'Numbers in Book Titles', et: 'Numbrid raamatu pealkirjas' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-027:slaughterhouse-billy-dresden', factKey: 'literature-language:slaughterhouse-five-billy-pilgrim-dresden-tralfamadore', tier: 1, subjectKey: 'work:slaughterhouse-five',
@@ -1787,9 +1787,9 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-027:39-steps-hannay-spies', factKey: 'literature-language:39-steps-richard-hannay-spy-conspiracy', tier: 3, subjectKey: 'work:the-39-steps',
-        clue: { en: 'Which John Buchan thriller sends Richard Hannay fleeing across Scotland after a murdered spy leaves him a notebook about a German conspiracy?', et: 'Millises John Buchani põnevikus põgeneb Richard Hannay läbi Šotimaa pärast seda, kui mõrvatud spioon jätab talle Saksa vandenõu kirjeldava märkmiku?' }, response: { en: 'The 39 Steps', et: '„39 astet“' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which John Buchan thriller sends Richard Hannay fleeing across Scotland after a murdered spy leaves him a notebook about a German conspiracy?', et: 'Millises John Buchani põnevikus põgeneb Richard Hannay läbi Šotimaa pärast seda, kui mõrvatud spioon jätab talle Saksa vandenõu kirjeldava märkmiku?' }, response: { en: 'The Thirty-Nine Steps', et: '„39 astet“' }, acceptedVariants: { en: ['The 39 Steps'], et: ['„The 39 Steps“'] },
         explanation: { en: 'Hannay must evade both police and enemy agents while decoding the warning before the conspirators can act.', et: 'Hannay peab vältima nii politseid kui ka vaenlase agente ning hoiatuse lahti mõtestama enne vandenõulaste tegutsemist.' },
-        source: { sourceId: 'wikipedia:39-steps-hannay-spies', title: 'The Thirty-Nine Steps', url: 'https://en.wikipedia.org/wiki/The_39_Steps', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:thirty-nine-steps-hannay-spies', title: 'The Thirty-Nine Steps', url: 'https://en.wikipedia.org/wiki/The_Thirty-Nine_Steps', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-027:no1-ladies-ramotswe', factKey: 'literature-language:no1-ladies-precious-ramotswe-botswana-agency', tier: 4, subjectKey: 'work:no1-ladies-detective-agency',
@@ -1813,7 +1813,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-029:white-rabbit-pocket-watch', factKey: 'literature-language:white-rabbit-pocket-watch-alice-follows', tier: 1, subjectKey: 'object:white-rabbit-pocket-watch',
         clue: { en: 'What object does the waistcoated White Rabbit take out while worrying that he is late, prompting Alice to follow him?', et: 'Millise eseme võtab vestiga Valge Jänes hilinemise pärast muretsedes välja, ajendades Alice’it talle järgnema?' }, response: { en: 'a pocket watch', et: 'taskukell' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'A talking rabbit is already unusual, but seeing him consult the watch makes Alice run after him to the rabbit hole.', et: 'Rääkiv jänes on juba ebatavaline, kuid taskukella vaatamine paneb Alice’i talle uru juurde järele jooksma.' },
-        source: { sourceId: 'wikipedia:white-rabbit-pocket-watch', title: 'White Rabbit', url: 'https://en.wikipedia.org/wiki/White_Rabbit', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikisource:alice-1866-chapter-1-pocket-watch', title: 'Alice’s Adventures in Wonderland (1866), Chapter I', url: 'https://en.wikisource.org/wiki/Alice%27s_Adventures_in_Wonderland_(1866)/Chapter_1', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-029:scarlet-letter-hester-mark', factKey: 'literature-language:scarlet-letter-a-hester-adultery', tier: 2, subjectKey: 'object:scarlet-letter-a',
@@ -1906,10 +1906,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:mysterious-island-balloon', title: 'The Mysterious Island', url: 'https://en.wikipedia.org/wiki/The_Mysterious_Island', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-033:cay-phillip-timothy', factKey: 'literature-language:cay-phillip-timothy-shipwreck-blind', tier: 5, subjectKey: 'work:the-cay',
-        clue: { en: 'Which Theodore Taylor novel strands blinded boy Phillip with an elderly sailor named Timothy on a small Caribbean island during the Second World War?', et: 'Millises Theodore Taylori romaanis jääb pimedaks jäänud poiss Phillip Teise maailmasõja ajal koos eaka meremehe Timothyga väikesele Kariibi mere saarele?' }, response: { en: 'The Cay', et: '„The Cay“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'After their ship is torpedoed, Phillip must overcome prejudice and learn survival skills from Timothy.', et: 'Pärast laeva torpedeerimist peab Phillip ületama eelarvamused ja õppima Timothy käest ellujäämisoskusi.' },
-        source: { sourceId: 'wikipedia:cay-phillip-timothy', title: 'The Cay', url: 'https://en.wikipedia.org/wiki/The_Cay', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-033:two-years-vacation-schoolboys', factKey: 'literature-language:two-years-vacation-schoolboys-stranded-island', tier: 5, subjectKey: 'work:two-years-vacation',
+        clue: { en: 'Which Jules Verne novel strands a group of Auckland schoolboys on a deserted Pacific island after their schooner drifts out to sea without its crew?', et: 'Millises Jules Verne’i romaanis jääb rühm Aucklandi koolipoisse inimtühjale Vaikse ookeani saarele pärast seda, kui nende kuunar triivib ilma meeskonnata merele?' }, response: { en: 'Two Years’ Vacation', et: '„Kaheaastane puhkus“' }, acceptedVariants: { en: ["Two Years' Vacation", 'Kaheaastane puhkus'], et: ['„Two Years’ Vacation“', "„Two Years' Vacation“"] },
+        explanation: { en: 'Their planned six-week holiday becomes two years of survival on the island before the boys defeat mutineers and escape.', et: 'Kavandatud kuuenädalasest puhkusest saab kaks aastat ellujäämist saarel, enne kui poisid alistavad mässajad ja pääsevad minema.' },
+        source: { sourceId: 'wikipedia:two-years-vacation-schoolboys', title: 'Two Years’ Vacation', url: 'https://en.wikipedia.org/wiki/Two_Years%27_Vacation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -1920,12 +1920,12 @@ const rawCategories = [
       {
         key: 'playable-literature-language:built-in-literature-language-set-055:white-fang-wolfdog', factKey: 'literature-language:white-fang-wolfdog-wild-domestic', tier: 1, subjectKey: 'work:white-fang',
         clue: { en: 'Which Jack London novel follows a wolfdog from the Yukon wilderness through cruelty to a trusting life with Weedon Scott?', et: 'Milline Jack Londoni romaan jälgib hundikoera teekonda Yukoni metsikust loodusest läbi julmuse usaldava eluni Weedon Scotti juures?' }, response: { en: 'White Fang', et: '„Valgekihv“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'The story reverses the movement of The Call of the Wild by bringing its animal hero toward human companionship.', et: 'Lugu pöörab „Ürgse kutse“ liikumise ümber, juhtides loomast kangelase inimeste seltsi.' },
+        explanation: { en: 'London brings his animal hero from life in the wild toward trust and human companionship.', et: 'London juhib loomast kangelase metsikust elust usalduse ja inimeste seltsi poole.' },
         source: { sourceId: 'wikipedia:white-fang-wolfdog', title: 'White Fang', url: 'https://en.wikipedia.org/wiki/White_Fang', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-055:black-beauty-horse', factKey: 'literature-language:black-beauty-horse-first-person-life', tier: 2, subjectKey: 'work:black-beauty',
-        clue: { en: 'Which Anna Sewell novel lets a horse narrate his own life through kind and cruel owners in Victorian England?', et: 'Millises Anna Sewelli romaanis jutustab hobune ise oma elust heade ja julmade omanike käes viktoriaanlikul Inglismaal?' }, response: { en: 'Black Beauty', et: '„Must Iludus“' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which Anna Sewell novel lets a horse narrate his own life through kind and cruel owners in Victorian England?', et: 'Millises Anna Sewelli romaanis jutustab hobune ise oma elust heade ja julmade omanike käes viktoriaanlikul Inglismaal?' }, response: { en: 'Black Beauty', et: '„Must iludus“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'The animal’s viewpoint made everyday mistreatment visible and encouraged more humane care of working horses.', et: 'Looma vaatepunkt muutis igapäevase väärkohtlemise nähtavaks ning toetas tööhobuste inimlikumat kohtlemist.' },
         source: { sourceId: 'wikipedia:black-beauty-horse', title: 'Black Beauty', url: 'https://en.wikipedia.org/wiki/Black_Beauty', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
