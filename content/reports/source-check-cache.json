@@ -4935,84 +4935,84 @@
     },
     "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.149Z",
+      "expiresAt": "2026-09-06T10:44:42.119Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.149Z",
+        "retrievedAt": "2026-08-30T10:44:42.119Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929"
       }
     },
     "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.155Z",
+      "expiresAt": "2026-09-06T10:44:42.123Z",
       "result": {
         "url": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.155Z",
+        "retrievedAt": "2026-08-30T10:44:42.123Z",
         "code": null,
         "finalUrl": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json"
       }
     },
     "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.162Z",
+      "expiresAt": "2026-09-06T10:44:42.128Z",
       "result": {
         "url": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.162Z",
+        "retrievedAt": "2026-08-30T10:44:42.128Z",
         "code": null,
         "finalUrl": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.272Z",
+      "expiresAt": "2026-09-06T10:44:47.166Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.272Z",
+        "retrievedAt": "2026-08-30T10:44:47.166Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.276Z",
+      "expiresAt": "2026-09-06T10:44:44.955Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.276Z",
+        "retrievedAt": "2026-08-30T10:44:44.955Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.301Z",
+      "expiresAt": "2026-09-06T10:44:42.354Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.301Z",
+        "retrievedAt": "2026-08-30T10:44:42.354Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.411Z",
+      "expiresAt": "2026-09-06T10:44:51.141Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.411Z",
+        "retrievedAt": "2026-08-30T10:44:51.141Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997"
       }
@@ -5031,72 +5031,72 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.521Z",
+      "expiresAt": "2026-09-06T10:44:49.377Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.521Z",
+        "retrievedAt": "2026-08-30T10:44:49.377Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.542Z",
+      "expiresAt": "2026-09-06T10:44:48.749Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.542Z",
+        "retrievedAt": "2026-08-30T10:44:48.749Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.646Z",
+      "expiresAt": "2026-09-06T10:44:49.334Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.646Z",
+        "retrievedAt": "2026-08-30T10:44:49.334Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.740Z",
+      "expiresAt": "2026-09-06T10:44:49.902Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.740Z",
+        "retrievedAt": "2026-08-30T10:44:49.902Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.801Z",
+      "expiresAt": "2026-09-06T10:44:50.938Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.801Z",
+        "retrievedAt": "2026-08-30T10:44:50.938Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.890Z",
+      "expiresAt": "2026-09-06T10:44:57.392Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.890Z",
+        "retrievedAt": "2026-08-30T10:44:57.392Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961"
       }
@@ -5115,24 +5115,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:24.993Z",
+      "expiresAt": "2026-09-06T10:44:51.189Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:24.993Z",
+        "retrievedAt": "2026-08-30T10:44:51.189Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.045Z",
+      "expiresAt": "2026-09-06T10:44:49.864Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.045Z",
+        "retrievedAt": "2026-08-30T10:44:49.864Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348"
       }
@@ -5151,48 +5151,48 @@
     },
     "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.153Z",
+      "expiresAt": "2026-09-06T10:45:03.546Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.153Z",
+        "retrievedAt": "2026-08-30T10:45:03.546Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.168Z",
+      "expiresAt": "2026-09-06T10:44:54.305Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.168Z",
+        "retrievedAt": "2026-08-30T10:44:54.305Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.276Z",
+      "expiresAt": "2026-09-06T10:44:55.718Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.276Z",
+        "retrievedAt": "2026-08-30T10:44:55.718Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.354Z",
+      "expiresAt": "2026-09-06T10:44:55.032Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.354Z",
+        "retrievedAt": "2026-08-30T10:44:55.032Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487"
       }
@@ -5211,24 +5211,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.416Z",
+      "expiresAt": "2026-09-06T10:44:56.189Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.416Z",
+        "retrievedAt": "2026-08-30T10:44:56.189Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.430Z",
+      "expiresAt": "2026-09-06T10:44:55.830Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.430Z",
+        "retrievedAt": "2026-08-30T10:44:55.830Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655"
       }
@@ -5283,12 +5283,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.906Z",
+      "expiresAt": "2026-09-06T10:44:57.836Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.906Z",
+        "retrievedAt": "2026-08-30T10:44:57.836Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276"
       }
@@ -5307,12 +5307,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:25.957Z",
+      "expiresAt": "2026-09-06T10:44:57.397Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:25.957Z",
+        "retrievedAt": "2026-08-30T10:44:57.397Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584"
       }
@@ -5331,24 +5331,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.080Z",
+      "expiresAt": "2026-09-06T10:45:00.676Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.080Z",
+        "retrievedAt": "2026-08-30T10:45:00.676Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.172Z",
+      "expiresAt": "2026-09-06T10:44:58.713Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.172Z",
+        "retrievedAt": "2026-08-30T10:44:58.713Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881"
       }
@@ -5367,48 +5367,48 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.272Z",
+      "expiresAt": "2026-09-06T10:45:03.796Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.272Z",
+        "retrievedAt": "2026-08-30T10:45:03.796Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.286Z",
+      "expiresAt": "2026-09-06T10:44:59.392Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.286Z",
+        "retrievedAt": "2026-08-30T10:44:59.392Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.357Z",
+      "expiresAt": "2026-09-06T10:45:01.053Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.357Z",
+        "retrievedAt": "2026-08-30T10:45:01.053Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.358Z",
+      "expiresAt": "2026-09-06T10:44:59.116Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.358Z",
+        "retrievedAt": "2026-08-30T10:44:59.116Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235"
       }
@@ -5427,12 +5427,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.482Z",
+      "expiresAt": "2026-09-06T10:45:03.491Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.482Z",
+        "retrievedAt": "2026-08-30T10:45:03.491Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518"
       }
@@ -5451,24 +5451,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.586Z",
+      "expiresAt": "2026-09-06T10:45:11.100Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.586Z",
+        "retrievedAt": "2026-08-30T10:45:11.100Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.632Z",
+      "expiresAt": "2026-09-06T10:45:07.592Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.632Z",
+        "retrievedAt": "2026-08-30T10:45:07.592Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864"
       }
@@ -5499,48 +5499,48 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.720Z",
+      "expiresAt": "2026-09-06T10:45:06.951Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.720Z",
+        "retrievedAt": "2026-08-30T10:45:06.951Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.754Z",
+      "expiresAt": "2026-09-06T10:45:08.968Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.754Z",
+        "retrievedAt": "2026-08-30T10:45:08.968Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.842Z",
+      "expiresAt": "2026-09-06T10:45:09.227Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.842Z",
+        "retrievedAt": "2026-08-30T10:45:09.227Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.876Z",
+      "expiresAt": "2026-09-06T10:45:13.589Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.876Z",
+        "retrievedAt": "2026-08-30T10:45:13.589Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365"
       }
@@ -5571,12 +5571,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:26.969Z",
+      "expiresAt": "2026-09-06T10:45:09.546Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:26.969Z",
+        "retrievedAt": "2026-08-30T10:45:09.546Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200"
       }
@@ -5607,36 +5607,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.200Z",
+      "expiresAt": "2026-09-06T10:45:12.465Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.200Z",
+        "retrievedAt": "2026-08-30T10:45:12.465Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.209Z",
+      "expiresAt": "2026-09-06T10:45:13.814Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.209Z",
+        "retrievedAt": "2026-08-30T10:45:13.814Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.322Z",
+      "expiresAt": "2026-09-06T10:45:18.506Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.322Z",
+        "retrievedAt": "2026-08-30T10:45:18.506Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278"
       }
@@ -5667,12 +5667,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.421Z",
+      "expiresAt": "2026-09-06T10:45:16.921Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.421Z",
+        "retrievedAt": "2026-08-30T10:45:16.921Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995"
       }
@@ -5703,12 +5703,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.611Z",
+      "expiresAt": "2026-09-06T10:45:19.148Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.611Z",
+        "retrievedAt": "2026-08-30T10:45:19.148Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662"
       }
@@ -5739,24 +5739,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.840Z",
+      "expiresAt": "2026-09-06T10:45:19.548Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.840Z",
+        "retrievedAt": "2026-08-30T10:45:19.548Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:27.848Z",
+      "expiresAt": "2026-09-06T10:45:20.734Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:27.848Z",
+        "retrievedAt": "2026-08-30T10:45:20.734Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389"
       }
@@ -5799,72 +5799,72 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.095Z",
+      "expiresAt": "2026-09-06T10:45:21.482Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.095Z",
+        "retrievedAt": "2026-08-30T10:45:21.482Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.179Z",
+      "expiresAt": "2026-09-06T10:45:22.522Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.179Z",
+        "retrievedAt": "2026-08-30T10:45:22.522Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.297Z",
+      "expiresAt": "2026-09-06T10:45:31.209Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.297Z",
+        "retrievedAt": "2026-08-30T10:45:31.209Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.301Z",
+      "expiresAt": "2026-09-06T10:45:27.783Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.301Z",
+        "retrievedAt": "2026-08-30T10:45:27.783Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.323Z",
+      "expiresAt": "2026-09-06T10:45:23.407Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.323Z",
+        "retrievedAt": "2026-08-30T10:45:23.407Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.326Z",
+      "expiresAt": "2026-09-06T10:45:28.839Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.326Z",
+        "retrievedAt": "2026-08-30T10:45:28.839Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495"
       }
@@ -5883,24 +5883,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.550Z",
+      "expiresAt": "2026-09-06T10:45:31.822Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.550Z",
+        "retrievedAt": "2026-08-30T10:45:31.822Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.551Z",
+      "expiresAt": "2026-09-06T10:45:32.129Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.551Z",
+        "retrievedAt": "2026-08-30T10:45:32.129Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261"
       }
@@ -5919,12 +5919,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:28.915Z",
+      "expiresAt": "2026-09-06T10:45:36.159Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:28.915Z",
+        "retrievedAt": "2026-08-30T10:45:36.159Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890"
       }
@@ -5943,48 +5943,48 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.060Z",
+      "expiresAt": "2026-09-06T10:45:33.374Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.060Z",
+        "retrievedAt": "2026-08-30T10:45:33.374Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.069Z",
+      "expiresAt": "2026-09-06T10:45:35.653Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.069Z",
+        "retrievedAt": "2026-08-30T10:45:35.653Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.109Z",
+      "expiresAt": "2026-09-06T10:45:36.735Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.109Z",
+        "retrievedAt": "2026-08-30T10:45:36.735Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.183Z",
+      "expiresAt": "2026-09-06T10:45:37.547Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.183Z",
+        "retrievedAt": "2026-08-30T10:45:37.547Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892"
       }
@@ -6003,12 +6003,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.379Z",
+      "expiresAt": "2026-09-06T10:45:37.943Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.379Z",
+        "retrievedAt": "2026-08-30T10:45:37.943Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198"
       }
@@ -6027,36 +6027,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.445Z",
+      "expiresAt": "2026-09-06T10:45:38.666Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.445Z",
+        "retrievedAt": "2026-08-30T10:45:38.666Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.493Z",
+      "expiresAt": "2026-09-06T10:45:38.694Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.493Z",
+        "retrievedAt": "2026-08-30T10:45:38.694Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.560Z",
+      "expiresAt": "2026-09-06T10:45:38.128Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.560Z",
+        "retrievedAt": "2026-08-30T10:45:38.128Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325"
       }
@@ -6087,12 +6087,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.798Z",
+      "expiresAt": "2026-09-06T10:45:39.714Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.798Z",
+        "retrievedAt": "2026-08-30T10:45:39.714Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829"
       }
@@ -6111,96 +6111,96 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.874Z",
+      "expiresAt": "2026-09-06T10:45:40.075Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.874Z",
+        "retrievedAt": "2026-08-30T10:45:40.075Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.920Z",
+      "expiresAt": "2026-09-06T10:45:40.392Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.920Z",
+        "retrievedAt": "2026-08-30T10:45:40.392Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:29.947Z",
+      "expiresAt": "2026-09-06T10:45:40.863Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:29.947Z",
+        "retrievedAt": "2026-08-30T10:45:40.863Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.068Z",
+      "expiresAt": "2026-09-06T10:45:44.348Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.068Z",
+        "retrievedAt": "2026-08-30T10:45:44.348Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.132Z",
+      "expiresAt": "2026-09-06T10:45:43.331Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.132Z",
+        "retrievedAt": "2026-08-30T10:45:43.331Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.143Z",
+      "expiresAt": "2026-09-06T10:45:41.881Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.143Z",
+        "retrievedAt": "2026-08-30T10:45:41.881Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.180Z",
+      "expiresAt": "2026-09-06T10:45:41.006Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.180Z",
+        "retrievedAt": "2026-08-30T10:45:41.006Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.314Z",
+      "expiresAt": "2026-09-06T10:45:46.533Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.314Z",
+        "retrievedAt": "2026-08-30T10:45:46.533Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596"
       }
@@ -6219,24 +6219,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.388Z",
+      "expiresAt": "2026-09-06T10:45:53.811Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.388Z",
+        "retrievedAt": "2026-08-30T10:45:53.811Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230"
       }
     },
     "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.450Z",
+      "expiresAt": "2026-09-06T10:45:51.048Z",
       "result": {
         "url": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.450Z",
+        "retrievedAt": "2026-08-30T10:45:51.048Z",
         "code": null,
         "finalUrl": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945"
       }
@@ -6267,24 +6267,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.572Z",
+      "expiresAt": "2026-09-06T10:45:44.960Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.572Z",
+        "retrievedAt": "2026-08-30T10:45:44.960Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430"
       }
     },
     "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126": {
       "version": 1,
-      "expiresAt": "2026-08-28T14:28:30.575Z",
+      "expiresAt": "2026-09-06T10:45:50.872Z",
       "result": {
         "url": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T14:28:30.575Z",
+        "retrievedAt": "2026-08-30T10:45:50.872Z",
         "code": null,
         "finalUrl": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126"
       }
@@ -6315,24 +6315,24 @@
     },
     "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861": {
       "version": 1,
-      "expiresAt": "2026-08-28T17:22:15.033Z",
+      "expiresAt": "2026-09-06T10:45:54.449Z",
       "result": {
         "url": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T17:22:15.033Z",
+        "retrievedAt": "2026-08-30T10:45:54.449Z",
         "code": null,
         "finalUrl": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699": {
       "version": 1,
-      "expiresAt": "2026-08-28T17:22:15.035Z",
+      "expiresAt": "2026-09-06T10:45:08.963Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-21T17:22:15.035Z",
+        "retrievedAt": "2026-08-30T10:45:08.963Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699"
       }
@@ -6351,60 +6351,60 @@
     },
     "https://en.wikipedia.org/w/index.php?title=2001%3A_A_Space_Odyssey&oldid=1370275826": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.352Z",
+      "expiresAt": "2026-09-06T10:44:47.764Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=2001%3A_A_Space_Odyssey&oldid=1370275826",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.351Z",
+        "retrievedAt": "2026-08-30T10:44:47.764Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=2001%3A_A_Space_Odyssey&oldid=1370275826"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=A_Quiet_Place&oldid=1370249171": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.352Z",
+      "expiresAt": "2026-09-06T10:44:42.393Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=A_Quiet_Place&oldid=1370249171",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.352Z",
+        "retrievedAt": "2026-08-30T10:44:42.393Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=A_Quiet_Place&oldid=1370249171"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Afro_Samurai&oldid=1367452845": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.353Z",
+      "expiresAt": "2026-09-06T10:44:44.301Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Afro_Samurai&oldid=1367452845",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.353Z",
+        "retrievedAt": "2026-08-30T10:44:44.301Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Afro_Samurai&oldid=1367452845"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=All_Dogs_Go_to_Heaven&oldid=1367555035": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.471Z",
+      "expiresAt": "2026-09-06T10:44:45.495Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=All_Dogs_Go_to_Heaven&oldid=1367555035",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.471Z",
+        "retrievedAt": "2026-08-30T10:44:45.495Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=All_Dogs_Go_to_Heaven&oldid=1367555035"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Another_(novel)&oldid=1370062504": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.473Z",
+      "expiresAt": "2026-09-06T10:44:49.674Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Another_(novel)&oldid=1370062504",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.473Z",
+        "retrievedAt": "2026-08-30T10:44:49.674Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Another_(novel)&oldid=1370062504"
       }
@@ -6435,12 +6435,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Copper_in_architecture&oldid=1369258424": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.592Z",
+      "expiresAt": "2026-09-06T10:44:50.184Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Copper_in_architecture&oldid=1369258424",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.592Z",
+        "retrievedAt": "2026-08-30T10:44:50.184Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Copper_in_architecture&oldid=1369258424"
       }
@@ -6471,12 +6471,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Crown_Fountain&oldid=1336318929": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.600Z",
+      "expiresAt": "2026-09-06T10:44:50.440Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Crown_Fountain&oldid=1336318929",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.600Z",
+        "retrievedAt": "2026-08-30T10:44:50.440Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Crown_Fountain&oldid=1336318929"
       }
@@ -6507,12 +6507,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Dal%C3%AD_Theatre_and_Museum&oldid=1365806124": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.720Z",
+      "expiresAt": "2026-09-06T10:44:50.143Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Dal%C3%AD_Theatre_and_Museum&oldid=1365806124",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.720Z",
+        "retrievedAt": "2026-08-30T10:44:50.143Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dal%C3%AD_Theatre_and_Museum&oldid=1365806124"
       }
@@ -6543,12 +6543,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Duck_Soup&oldid=1364490561": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.838Z",
+      "expiresAt": "2026-09-06T10:44:53.578Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Duck_Soup&oldid=1364490561",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.838Z",
+        "retrievedAt": "2026-08-30T10:44:53.578Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Duck_Soup&oldid=1364490561"
       }
@@ -6567,96 +6567,96 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Flag_of_New_Zealand&oldid=1366588754": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.845Z",
+      "expiresAt": "2026-09-06T10:44:51.766Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_New_Zealand&oldid=1366588754",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.845Z",
+        "retrievedAt": "2026-08-30T10:44:51.766Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_New_Zealand&oldid=1366588754"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Flag_of_Wales&oldid=1367469736": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.964Z",
+      "expiresAt": "2026-09-06T10:44:51.981Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wales&oldid=1367469736",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.964Z",
+        "retrievedAt": "2026-08-30T10:44:51.981Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wales&oldid=1367469736"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Frame_rate&oldid=1369634927": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.965Z",
+      "expiresAt": "2026-09-06T10:44:52.236Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Frame_rate&oldid=1369634927",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.965Z",
+        "retrievedAt": "2026-08-30T10:44:52.236Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Frame_rate&oldid=1369634927"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Flag_of_Wisconsin&oldid=1359176877": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.966Z",
+      "expiresAt": "2026-09-06T10:44:52.221Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wisconsin&oldid=1359176877",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.966Z",
+        "retrievedAt": "2026-08-30T10:44:52.221Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wisconsin&oldid=1359176877"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Fullmetal_Alchemist_(TV_series)&oldid=1369170392": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:44.966Z",
+      "expiresAt": "2026-09-06T10:44:52.741Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Fullmetal_Alchemist_(TV_series)&oldid=1369170392",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:44.966Z",
+        "retrievedAt": "2026-08-30T10:44:52.741Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Fullmetal_Alchemist_(TV_series)&oldid=1369170392"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Grave_of_the_Fireflies&oldid=1368880508": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.089Z",
+      "expiresAt": "2026-09-06T10:44:56.333Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Grave_of_the_Fireflies&oldid=1368880508",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.089Z",
+        "retrievedAt": "2026-08-30T10:44:56.333Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Grave_of_the_Fireflies&oldid=1368880508"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Google_logo&oldid=1365344260": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.090Z",
+      "expiresAt": "2026-09-06T10:44:56.078Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Google_logo&oldid=1365344260",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.090Z",
+        "retrievedAt": "2026-08-30T10:44:56.078Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Google_logo&oldid=1365344260"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Green&oldid=1369579348": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.090Z",
+      "expiresAt": "2026-09-06T10:44:57.094Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Green&oldid=1369579348",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.090Z",
+        "retrievedAt": "2026-08-30T10:44:57.094Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Green&oldid=1369579348"
       }
@@ -6675,60 +6675,60 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Gum_arabic&oldid=1370406664": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.212Z",
+      "expiresAt": "2026-09-06T10:44:56.610Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Gum_arabic&oldid=1370406664",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.212Z",
+        "retrievedAt": "2026-08-30T10:44:56.610Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gum_arabic&oldid=1370406664"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Harvey_Ball&oldid=1365186726": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.214Z",
+      "expiresAt": "2026-09-06T10:44:57.343Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Harvey_Ball&oldid=1365186726",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.214Z",
+        "retrievedAt": "2026-08-30T10:44:57.343Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harvey_Ball&oldid=1365186726"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Hidamari_Sketch&oldid=1369170504": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.214Z",
+      "expiresAt": "2026-09-06T10:44:57.668Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Hidamari_Sketch&oldid=1369170504",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.214Z",
+        "retrievedAt": "2026-08-30T10:44:57.668Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hidamari_Sketch&oldid=1369170504"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Hasegawa_Machiko_Art_Museum&oldid=1271718924": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.215Z",
+      "expiresAt": "2026-09-06T10:44:57.908Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Hasegawa_Machiko_Art_Museum&oldid=1271718924",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.215Z",
+        "retrievedAt": "2026-08-30T10:44:57.908Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hasegawa_Machiko_Art_Museum&oldid=1271718924"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=History_of_Monopoly&oldid=1369612215": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.337Z",
+      "expiresAt": "2026-09-06T10:44:57.916Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=History_of_Monopoly&oldid=1369612215",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.337Z",
+        "retrievedAt": "2026-08-30T10:44:57.916Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=History_of_Monopoly&oldid=1369612215"
       }
@@ -6747,36 +6747,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=King_Kong_(1933_film)&oldid=1365217071": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.341Z",
+      "expiresAt": "2026-09-06T10:45:08.445Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=King_Kong_(1933_film)&oldid=1365217071",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.341Z",
+        "retrievedAt": "2026-08-30T10:45:08.445Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=King_Kong_(1933_film)&oldid=1365217071"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Kill_la_Kill&oldid=1369170622": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.341Z",
+      "expiresAt": "2026-09-06T10:45:08.567Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Kill_la_Kill&oldid=1369170622",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.341Z",
+        "retrievedAt": "2026-08-30T10:45:08.567Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kill_la_Kill&oldid=1369170622"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Kunsthal&oldid=1363327905": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.463Z",
+      "expiresAt": "2026-09-06T10:45:07.192Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Kunsthal&oldid=1363327905",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.463Z",
+        "retrievedAt": "2026-08-30T10:45:07.192Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kunsthal&oldid=1363327905"
       }
@@ -6819,36 +6819,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Liberty_Place&oldid=1364538607": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.589Z",
+      "expiresAt": "2026-09-06T10:45:08.227Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Liberty_Place&oldid=1364538607",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.589Z",
+        "retrievedAt": "2026-08-30T10:45:08.227Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Liberty_Place&oldid=1364538607"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Louvre&oldid=1370474152": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.590Z",
+      "expiresAt": "2026-09-06T10:45:16.171Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Louvre&oldid=1370474152",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.590Z",
+        "retrievedAt": "2026-08-30T10:45:16.171Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Louvre&oldid=1370474152"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=List_of_London_Monopoly_locations&oldid=1363792530": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.590Z",
+      "expiresAt": "2026-09-06T10:45:08.859Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=List_of_London_Monopoly_locations&oldid=1363792530",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.590Z",
+        "retrievedAt": "2026-08-30T10:45:08.859Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_London_Monopoly_locations&oldid=1363792530"
       }
@@ -6879,108 +6879,108 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1369149371": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.717Z",
+      "expiresAt": "2026-09-06T10:45:17.920Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1369149371",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.717Z",
+        "retrievedAt": "2026-08-30T10:45:17.920Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1369149371"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Monte_Carlo_Casino&oldid=1365291214": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.720Z",
+      "expiresAt": "2026-09-06T10:45:15.265Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Monte_Carlo_Casino&oldid=1365291214",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.720Z",
+        "retrievedAt": "2026-08-30T10:45:15.265Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monte_Carlo_Casino&oldid=1365291214"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1370675950": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.720Z",
+      "expiresAt": "2026-09-06T10:45:20.698Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1370675950",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.720Z",
+        "retrievedAt": "2026-08-30T10:45:20.698Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1370675950"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Museum_of_Modern_Art&oldid=1356169714": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.836Z",
+      "expiresAt": "2026-09-06T10:45:16.060Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Museum_of_Modern_Art&oldid=1356169714",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.836Z",
+        "retrievedAt": "2026-08-30T10:45:16.060Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Museum_of_Modern_Art&oldid=1356169714"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=National_Gallery_of_Art&oldid=1368982424": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.837Z",
+      "expiresAt": "2026-09-06T10:45:17.298Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=National_Gallery_of_Art&oldid=1368982424",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.837Z",
+        "retrievedAt": "2026-08-30T10:45:17.298Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=National_Gallery_of_Art&oldid=1368982424"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Naples_yellow&oldid=1279359922": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.842Z",
+      "expiresAt": "2026-09-06T10:45:16.651Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Naples_yellow&oldid=1279359922",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.842Z",
+        "retrievedAt": "2026-08-30T10:45:16.651Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Naples_yellow&oldid=1279359922"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=New_Amsterdam_Theatre&oldid=1370041814": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.845Z",
+      "expiresAt": "2026-09-06T10:45:17.840Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=New_Amsterdam_Theatre&oldid=1370041814",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.845Z",
+        "retrievedAt": "2026-08-30T10:45:17.840Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=New_Amsterdam_Theatre&oldid=1370041814"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=New_Museum&oldid=1365429236": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.955Z",
+      "expiresAt": "2026-09-06T10:45:19.306Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=New_Museum&oldid=1365429236",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.955Z",
+        "retrievedAt": "2026-08-30T10:45:19.306Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=New_Museum&oldid=1365429236"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Nosferatu&oldid=1370137637": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.956Z",
+      "expiresAt": "2026-09-06T10:45:18.807Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Nosferatu&oldid=1370137637",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.956Z",
+        "retrievedAt": "2026-08-30T10:45:18.807Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nosferatu&oldid=1370137637"
       }
@@ -6999,24 +6999,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Olympiastadion_(Berlin)&oldid=1363187111": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:45.966Z",
+      "expiresAt": "2026-09-06T10:45:19.078Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Olympiastadion_(Berlin)&oldid=1363187111",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:45.966Z",
+        "retrievedAt": "2026-08-30T10:45:19.078Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Olympiastadion_(Berlin)&oldid=1363187111"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Orange_(colour)&oldid=1369029819": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.078Z",
+      "expiresAt": "2026-09-06T10:45:19.914Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Orange_(colour)&oldid=1369029819",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.078Z",
+        "retrievedAt": "2026-08-30T10:45:19.914Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Orange_(colour)&oldid=1369029819"
       }
@@ -7035,12 +7035,12 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Paintings_by_Adolf_Hitler&oldid=1368009034": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.083Z",
+      "expiresAt": "2026-09-06T10:45:19.965Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Paintings_by_Adolf_Hitler&oldid=1368009034",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.083Z",
+        "retrievedAt": "2026-08-30T10:45:19.965Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Paintings_by_Adolf_Hitler&oldid=1368009034"
       }
@@ -7095,24 +7095,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Psycho_(1960_film)&oldid=1368981671": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.217Z",
+      "expiresAt": "2026-09-06T10:45:26.775Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Psycho_(1960_film)&oldid=1368981671",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.217Z",
+        "retrievedAt": "2026-08-30T10:45:26.775Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Psycho_(1960_film)&oldid=1368981671"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Puma_(brand)&oldid=1368608228": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.323Z",
+      "expiresAt": "2026-09-06T10:45:23.151Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Puma_(brand)&oldid=1368608228",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.323Z",
+        "retrievedAt": "2026-08-30T10:45:23.151Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Puma_(brand)&oldid=1368608228"
       }
@@ -7131,60 +7131,60 @@
     },
     "https://en.wikipedia.org/w/index.php?title=RWBY&oldid=1367990004": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.328Z",
+      "expiresAt": "2026-09-06T10:45:21.190Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=RWBY&oldid=1367990004",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.328Z",
+        "retrievedAt": "2026-08-30T10:45:21.190Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=RWBY&oldid=1367990004"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Ra_(board_game)&oldid=1333026488": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.345Z",
+      "expiresAt": "2026-09-06T10:45:21.231Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Ra_(board_game)&oldid=1333026488",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.345Z",
+        "retrievedAt": "2026-08-30T10:45:21.231Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ra_(board_game)&oldid=1333026488"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Renault_Avantime&oldid=1367044589": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.448Z",
+      "expiresAt": "2026-09-06T10:45:21.717Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Renault_Avantime&oldid=1367044589",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.448Z",
+        "retrievedAt": "2026-08-30T10:45:21.717Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Renault_Avantime&oldid=1367044589"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Robot_Chicken&oldid=1369791400": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.449Z",
+      "expiresAt": "2026-09-06T10:45:24.705Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Robot_Chicken&oldid=1369791400",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.449Z",
+        "retrievedAt": "2026-08-30T10:45:24.705Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Robot_Chicken&oldid=1369791400"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Rope_(film)&oldid=1366335909": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.450Z",
+      "expiresAt": "2026-09-06T10:45:24.022Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Rope_(film)&oldid=1366335909",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.450Z",
+        "retrievedAt": "2026-08-30T10:45:24.022Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rope_(film)&oldid=1366335909"
       }
@@ -7203,36 +7203,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Senedd_building&oldid=1367502849": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.572Z",
+      "expiresAt": "2026-09-06T10:45:28.709Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Senedd_building&oldid=1367502849",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.572Z",
+        "retrievedAt": "2026-08-30T10:45:28.709Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Senedd_building&oldid=1367502849"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Scrabble&oldid=1369780993": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.573Z",
+      "expiresAt": "2026-09-06T10:45:31.542Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Scrabble&oldid=1369780993",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.573Z",
+        "retrievedAt": "2026-08-30T10:45:31.542Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scrabble&oldid=1369780993"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Sigiriya&oldid=1367952186": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.574Z",
+      "expiresAt": "2026-09-06T10:45:31.793Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Sigiriya&oldid=1367952186",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.574Z",
+        "retrievedAt": "2026-08-30T10:45:31.793Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sigiriya&oldid=1367952186"
       }
@@ -7311,84 +7311,84 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Steven_Universe&oldid=1370570485": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.815Z",
+      "expiresAt": "2026-09-06T10:45:37.160Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Steven_Universe&oldid=1370570485",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.815Z",
+        "retrievedAt": "2026-08-30T10:45:37.160Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Steven_Universe&oldid=1370570485"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Studio_Ghibli&oldid=1370294645": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.815Z",
+      "expiresAt": "2026-09-06T10:45:32.366Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Studio_Ghibli&oldid=1370294645",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.815Z",
+        "retrievedAt": "2026-08-30T10:45:32.366Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Studio_Ghibli&oldid=1370294645"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Super_Mario_Bros.&oldid=1369409935": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.831Z",
+      "expiresAt": "2026-09-06T10:45:39.236Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Super_Mario_Bros.&oldid=1369409935",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.831Z",
+        "retrievedAt": "2026-08-30T10:45:39.236Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Super_Mario_Bros.&oldid=1369409935"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Beehive&oldid=1364886091": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.938Z",
+      "expiresAt": "2026-09-06T10:45:36.398Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Beehive&oldid=1364886091",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.938Z",
+        "retrievedAt": "2026-08-30T10:45:36.398Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Beehive&oldid=1364886091"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Day_the_Earth_Stood_Still&oldid=1368703068": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.939Z",
+      "expiresAt": "2026-09-06T10:45:37.883Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Day_the_Earth_Stood_Still&oldid=1368703068",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.939Z",
+        "retrievedAt": "2026-08-30T10:45:37.883Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Day_the_Earth_Stood_Still&oldid=1368703068"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Sydney_Opera_House&oldid=1369640428": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.940Z",
+      "expiresAt": "2026-09-06T10:45:39.416Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Sydney_Opera_House&oldid=1369640428",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.940Z",
+        "retrievedAt": "2026-08-30T10:45:39.416Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sydney_Opera_House&oldid=1369640428"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Night_Watch&oldid=1370533738": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:46.954Z",
+      "expiresAt": "2026-09-06T10:45:39.070Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Night_Watch&oldid=1370533738",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:46.954Z",
+        "retrievedAt": "2026-08-30T10:45:39.070Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Night_Watch&oldid=1370533738"
       }
@@ -7407,24 +7407,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Pentagon&oldid=1370215272": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.064Z",
+      "expiresAt": "2026-09-06T10:45:39.116Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Pentagon&oldid=1370215272",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.064Z",
+        "retrievedAt": "2026-08-30T10:45:39.116Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Pentagon&oldid=1370215272"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Red_Studio&oldid=1361443273": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.065Z",
+      "expiresAt": "2026-09-06T10:45:39.519Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Red_Studio&oldid=1361443273",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.065Z",
+        "retrievedAt": "2026-08-30T10:45:39.519Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Red_Studio&oldid=1361443273"
       }
@@ -7443,24 +7443,24 @@
     },
     "https://en.wikipedia.org/w/index.php?title=The_Shining_(film)&oldid=1370009076": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.187Z",
+      "expiresAt": "2026-09-06T10:45:50.003Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Shining_(film)&oldid=1370009076",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.187Z",
+        "retrievedAt": "2026-08-30T10:45:50.003Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Shining_(film)&oldid=1370009076"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=The_Silence_of_the_Lambs_(film)&oldid=1369796259": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.189Z",
+      "expiresAt": "2026-09-06T10:45:40.154Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=The_Silence_of_the_Lambs_(film)&oldid=1369796259",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.189Z",
+        "retrievedAt": "2026-08-30T10:45:40.154Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Silence_of_the_Lambs_(film)&oldid=1369796259"
       }
@@ -7503,36 +7503,36 @@
     },
     "https://en.wikipedia.org/w/index.php?title=Web_colors&oldid=1368058563": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.313Z",
+      "expiresAt": "2026-09-06T10:45:44.175Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Web_colors&oldid=1368058563",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.313Z",
+        "retrievedAt": "2026-08-30T10:45:44.175Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Web_colors&oldid=1368058563"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Walt_Disney_Concert_Hall&oldid=1369637385": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.314Z",
+      "expiresAt": "2026-09-06T10:45:41.717Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Walt_Disney_Concert_Hall&oldid=1369637385",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.314Z",
+        "retrievedAt": "2026-08-30T10:45:41.717Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Walt_Disney_Concert_Hall&oldid=1369637385"
       }
     },
     "https://en.wikipedia.org/w/index.php?title=Wolf_Children&oldid=1367985125": {
       "version": 1,
-      "expiresAt": "2026-08-30T09:06:47.318Z",
+      "expiresAt": "2026-09-06T10:45:45.492Z",
       "result": {
         "url": "https://en.wikipedia.org/w/index.php?title=Wolf_Children&oldid=1367985125",
         "ok": true,
         "status": 200,
-        "retrievedAt": "2026-08-23T09:06:47.318Z",
+        "retrievedAt": "2026-08-30T10:45:45.492Z",
         "code": null,
         "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wolf_Children&oldid=1367985125"
       }
@@ -57599,6 +57599,810 @@
         "retrievedAt": "2026-08-28T08:12:34.351Z",
         "code": null,
         "finalUrl": "https://en.wiktionary.org/wiki/break_the_ice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Acetone": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:45.717Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Acetone",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:45.717Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Acetone"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Am%C3%A9lie": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:45.839Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Am%C3%A9lie",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:45.839Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Am%C3%A9lie"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Andy_Warhol": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:45.960Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Andy_Warhol",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:45.960Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Andy_Warhol"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ansel_Adams": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.082Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ansel_Adams",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.082Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ansel_Adams"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bishop_(chess)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.204Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bishop_(chess)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.204Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bishop_(chess)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Bol%C3%A9ro": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.327Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Bol%C3%A9ro",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.327Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Bol%C3%A9ro"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Breakaway_(cycling)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.452Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Breakaway_(cycling)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.452Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Breakaway_(cycling)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Camp_David_Accords": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.574Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Camp_David_Accords",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.574Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Camp_David_Accords"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Cave_painting": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.656Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Cave_painting",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.656Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Cave_painting"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chocobo": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.696Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Chocobo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.696Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Chocobo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Concertmaster": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.779Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Concertmaster",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.779Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Concertmaster"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Crete": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.820Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Crete",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.820Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Crete"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Drafting_(aerodynamics)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.901Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Drafting_(aerodynamics)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.901Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Drafting_(aerodynamics)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/El_Niño": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:46.942Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/El_Niño",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:46.942Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/El_Ni%C3%B1o"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Electrical_telegraph": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.023Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.023Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Electrical_telegraph"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Elizabeth_II": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.064Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Elizabeth_II",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.064Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Elizabeth_II"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Enderman": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.145Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Enderman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.145Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Enderman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Frida_Kahlo": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.186Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Frida_Kahlo",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.186Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Frida_Kahlo"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Fried_rice": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.259Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Fried_rice",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.259Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Fried_rice"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Galilean_moons": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.307Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Galilean_moons",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.307Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Galilean_moons"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Georgia_O%27Keeffe": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.375Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Georgia_O%27Keeffe",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.375Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Georgia_O%27Keeffe"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.428Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.428Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Henri_Rousseau": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.496Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Henri_Rousseau",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.496Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Henri_Rousseau"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_James_Audubon": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.562Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_James_Audubon",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.562Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_James_Audubon"
+      }
+    },
+    "https://en.wikipedia.org/wiki/John_Wick": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.611Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/John_Wick",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.611Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/John_Wick"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Lohikeitto": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.727Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Lohikeitto",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.727Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Lohikeitto"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Master_Chief_(Halo)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.848Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Master_Chief_(Halo)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.848Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Master_Chief_(Halo)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Meatball#Sweden": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:47.970Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Meatball#Sweden",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:47.970Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Meatball#Sweden"
+      }
+    },
+    "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.026Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.026Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Morse_code": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.198Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Morse_code",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.198Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Morse_code"
+      }
+    },
+    "https://en.wikipedia.org/wiki/National_symbol": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.320Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/National_symbol",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.320Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/National_symbol"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Nighthawks_(Hopper)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.441Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Nighthawks_(Hopper)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.441Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Nighthawks_(Hopper)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Mu_isamaa_on_minu_arm": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.494Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Mu_isamaa_on_minu_arm",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.494Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Mu_isamaa_on_minu_arm"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.557Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.557Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Pixel_art": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.678Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Pixel_art",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.678Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Pixel_art"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Piet_Mondrian": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.753Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Piet_Mondrian",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.753Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Piet_Mondrian"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Plant_stem": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.799Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Plant_stem",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.799Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Plant_stem"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Plumber": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.875Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Plumber",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.875Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Plumber"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rapunzel": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.913Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rapunzel",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.913Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rapunzel"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:48.990Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:48.990Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Rummy": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.036Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Rummy",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.036Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Rummy"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Semitic_languages": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.111Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Semitic_languages",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.111Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Semitic_languages"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.151Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.151Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.233Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.233Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Slumdog_Millionaire": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.274Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Slumdog_Millionaire",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.274Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Slumdog_Millionaire"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Snowplow_turn": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.355Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Snowplow_turn",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.355Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Snowplow_turn"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Steve_Jobs": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.395Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.395Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Steve_Jobs"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tallink": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.477Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tallink",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.477Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tallink"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.534Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.534Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Hunger_Games": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.670Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Hunger_Games",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.670Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Hunger_Games"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Greatest_Showman": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.727Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Greatest_Showman",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.727Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Greatest_Showman"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.792Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.792Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Persistence_of_Memory": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.849Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.849Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Thinker": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:49.971Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Thinker",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:49.971Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Thinker"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Truman_Show": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.094Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Truman_Show",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.094Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Truman_Show"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Tokyo_Tower": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.149Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Tokyo_Tower",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.149Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Tokyo_Tower"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Trevi_Fountain": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.216Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Trevi_Fountain",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.216Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Trevi_Fountain"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Ukulele": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.271Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Ukulele",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.271Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Ukulele"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Scream": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.332Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Scream",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.332Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Scream"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Wednesday_(TV_series)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.339Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Wednesday_(TV_series)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.339Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Wednesday_(TV_series)"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Yayoi_Kusama": {
+      "version": 1,
+      "expiresAt": "2026-09-06T10:45:50.395Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Yayoi_Kusama",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T10:45:50.395Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Yayoi_Kusama"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Music_of_Minecraft": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:30:07.049Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Music_of_Minecraft",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:30:07.049Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Music_of_Minecraft"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Guitar_Hero": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:30:07.052Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Guitar_Hero",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:30:07.052Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Guitar_Hero"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Landscape_painting": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:30:07.053Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Landscape_painting",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:30:07.053Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Landscape_painting"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Photography": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:30:07.176Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Photography",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:30:07.176Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Photography"
+      }
+    },
+    "https://en.wikipedia.org/wiki/Still_life": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:30:07.188Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/Still_life",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:30:07.188Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/Still_life"
+      }
+    },
+    "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)": {
+      "version": 1,
+      "expiresAt": "2026-09-06T11:31:48.359Z",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)",
+        "ok": true,
+        "status": 200,
+        "retrievedAt": "2026-08-30T11:31:48.359Z",
+        "code": null,
+        "finalUrl": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)"
       }
     }
   }

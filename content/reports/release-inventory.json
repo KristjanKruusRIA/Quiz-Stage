@@ -223,14 +223,6 @@
       },
       {
         "file": "content/generated/01-history.en-et.csv",
-        "row": 43,
-        "code": "UNCHANGED_TRANSLATION",
-        "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-002"
-      },
-      {
-        "file": "content/generated/01-history.en-et.csv",
         "row": 44,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -423,6 +415,14 @@
       },
       {
         "file": "content/generated/01-history.en-et.csv",
+        "row": 75,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-034"
+      },
+      {
+        "file": "content/generated/01-history.en-et.csv",
         "row": 76,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -460,6 +460,22 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-042"
+      },
+      {
+        "file": "content/generated/01-history.en-et.csv",
+        "row": 85,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-044"
+      },
+      {
+        "file": "content/generated/01-history.en-et.csv",
+        "row": 85,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-044"
       },
       {
         "file": "content/generated/01-history.en-et.csv",
@@ -871,6 +887,14 @@
       },
       {
         "file": "content/generated/01-history.en-et.csv",
+        "row": 151,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-110"
+      },
+      {
+        "file": "content/generated/01-history.en-et.csv",
         "row": 152,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -892,6 +916,14 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-113"
+      },
+      {
+        "file": "content/generated/01-history.en-et.csv",
+        "row": 154,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-113"
       },
       {
         "file": "content/generated/01-history.en-et.csv",
@@ -3663,22 +3695,6 @@
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
-        "row": 149,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-028"
-      },
-      {
-        "file": "content/generated/02-geography.en-et.csv",
-        "row": 149,
-        "code": "UNCHANGED_TRANSLATION",
-        "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-028"
-      },
-      {
-        "file": "content/generated/02-geography.en-et.csv",
         "row": 150,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -3743,19 +3759,19 @@
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
+        "row": 160,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-039"
+      },
+      {
+        "file": "content/generated/02-geography.en-et.csv",
         "row": 161,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-040"
-      },
-      {
-        "file": "content/generated/02-geography.en-et.csv",
-        "row": 161,
-        "code": "UNCHANGED_TRANSLATION",
-        "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-040"
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
@@ -4119,11 +4135,11 @@
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
-        "row": 234,
+        "row": 232,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-113"
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-111"
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
@@ -4144,10 +4160,10 @@
       {
         "file": "content/generated/02-geography.en-et.csv",
         "row": 237,
-        "code": "UNCHANGED_TRANSLATION",
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-116"
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-116"
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
@@ -4196,6 +4212,22 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-124"
+      },
+      {
+        "file": "content/generated/02-geography.en-et.csv",
+        "row": 246,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-125"
+      },
+      {
+        "file": "content/generated/02-geography.en-et.csv",
+        "row": 246,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-125"
       },
       {
         "file": "content/generated/02-geography.en-et.csv",
@@ -5471,22 +5503,6 @@
       },
       {
         "file": "content/generated/03-science-nature.en-et.csv",
-        "row": 43,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-002"
-      },
-      {
-        "file": "content/generated/03-science-nature.en-et.csv",
-        "row": 47,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-006"
-      },
-      {
-        "file": "content/generated/03-science-nature.en-et.csv",
         "row": 57,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -6575,6 +6591,14 @@
       },
       {
         "file": "content/generated/04-literature-language.en-et.csv",
+        "row": 58,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-017"
+      },
+      {
+        "file": "content/generated/04-literature-language.en-et.csv",
         "row": 59,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -6796,6 +6820,14 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-042"
+      },
+      {
+        "file": "content/generated/04-literature-language.en-et.csv",
+        "row": 84,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-043"
       },
       {
         "file": "content/generated/04-literature-language.en-et.csv",
@@ -7284,14 +7316,6 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-047"
-      },
-      {
-        "file": "content/generated/04-literature-language.en-et.csv",
-        "row": 175,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-049"
       },
       {
         "file": "content/generated/04-literature-language.en-et.csv",
@@ -9103,11 +9127,35 @@
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 33,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-032"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
         "row": 34,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-033"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 35,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-034"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 36,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-035"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
@@ -9119,11 +9167,35 @@
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 38,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-037"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 38,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-037"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
         "row": 39,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-038"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 39,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-038"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
@@ -9135,27 +9207,27 @@
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
-        "row": 44,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "row": 40,
+        "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-043"
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-039"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
-        "row": 46,
+        "row": 41,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-045"
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-040"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
-        "row": 48,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "row": 41,
+        "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-047"
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-040"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
@@ -9164,6 +9236,14 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-048"
+      },
+      {
+        "file": "content/generated/05-art-architecture.en-et.csv",
+        "row": 49,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-048"
       },
       {
         "file": "content/generated/05-art-architecture.en-et.csv",
@@ -11935,6 +12015,14 @@
       },
       {
         "file": "content/generated/06-music.en-et.csv",
+        "row": 191,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-070"
+      },
+      {
+        "file": "content/generated/06-music.en-et.csv",
         "row": 192,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -12416,26 +12504,18 @@
       {
         "file": "content/generated/06-music.en-et.csv",
         "row": 244,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-123"
+      },
+      {
+        "file": "content/generated/06-music.en-et.csv",
+        "row": 244,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
         "message": "Multiword Estonian text is unchanged from English",
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-123"
-      },
-      {
-        "file": "content/generated/06-music.en-et.csv",
-        "row": 245,
-        "code": "UNCHANGED_TRANSLATION",
-        "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-124"
-      },
-      {
-        "file": "content/generated/06-music.en-et.csv",
-        "row": 246,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-125"
       },
       {
         "file": "content/generated/06-music.en-et.csv",
@@ -14415,14 +14495,6 @@
       },
       {
         "file": "content/generated/07-film-television.en-et.csv",
-        "row": 160,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-034"
-      },
-      {
-        "file": "content/generated/07-film-television.en-et.csv",
         "row": 161,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -15631,6 +15703,14 @@
       },
       {
         "file": "content/generated/07-film-television.en-et.csv",
+        "row": 345,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-054"
+      },
+      {
+        "file": "content/generated/07-film-television.en-et.csv",
         "row": 348,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -15652,14 +15732,6 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-060"
-      },
-      {
-        "file": "content/generated/07-film-television.en-et.csv",
-        "row": 351,
-        "code": "UNCHANGED_TRANSLATION",
-        "severity": "warning",
-        "message": "Multiword Estonian text is unchanged from English",
-        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-film-television-accessible-corpus-060"
       },
       {
         "file": "content/generated/07-film-television.en-et.csv",
@@ -15919,6 +15991,14 @@
       },
       {
         "file": "content/generated/07-film-television.en-et.csv",
+        "row": 391,
+        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
+        "severity": "warning",
+        "message": "A stable acronym or proper name changed in translation",
+        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-100"
+      },
+      {
+        "file": "content/generated/07-film-television.en-et.csv",
         "row": 392,
         "code": "UNCHANGED_TRANSLATION",
         "severity": "warning",
@@ -16100,6 +16180,14 @@
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-122"
+      },
+      {
+        "file": "content/generated/07-film-television.en-et.csv",
+        "row": 413,
+        "code": "UNCHANGED_TRANSLATION",
+        "severity": "warning",
+        "message": "Multiword Estonian text is unchanged from English",
+        "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-film-television-accessible-corpus-122"
       },
       {
         "file": "content/generated/07-film-television.en-et.csv",
@@ -18175,14 +18263,6 @@
       },
       {
         "file": "content/generated/08-sports-games.en-et.csv",
-        "row": 270,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-059"
-      },
-      {
-        "file": "content/generated/08-sports-games.en-et.csv",
         "row": 276,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -19655,14 +19735,6 @@
       },
       {
         "file": "content/generated/09-food-drink.en-et.csv",
-        "row": 79,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-038"
-      },
-      {
-        "file": "content/generated/09-food-drink.en-et.csv",
         "row": 80,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
@@ -19775,35 +19847,11 @@
       },
       {
         "file": "content/generated/09-food-drink.en-et.csv",
-        "row": 157,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-116"
-      },
-      {
-        "file": "content/generated/09-food-drink.en-et.csv",
-        "row": 159,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-118"
-      },
-      {
-        "file": "content/generated/09-food-drink.en-et.csv",
         "row": 160,
         "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
         "severity": "warning",
         "message": "A stable acronym or proper name changed in translation",
         "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-119"
-      },
-      {
-        "file": "content/generated/09-food-drink.en-et.csv",
-        "row": 161,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-120"
       },
       {
         "file": "content/generated/09-food-drink.en-et.csv",
@@ -21100,14 +21148,6 @@
         "severity": "warning",
         "message": "Multiword Estonian text is unchanged from English",
         "exceptionId": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-094"
-      },
-      {
-        "file": "content/generated/10-technology-inventions.en-et.csv",
-        "row": 136,
-        "code": "SUSPICIOUS_PROPER_NOUN_CHANGE",
-        "severity": "warning",
-        "message": "A stable acronym or proper name changed in translation",
-        "exceptionId": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-accessible-corpus-095"
       },
       {
         "file": "content/generated/10-technology-inventions.en-et.csv",
@@ -30880,95 +30920,95 @@
     ],
     "exceptions": []
   },
-  "generatedAt": "2026-08-28T08:13:24.755Z",
+  "generatedAt": "2026-08-30T11:32:33.397Z",
   "mode": "release",
   "input": {
     "files": [
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\01-history.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\01-history.en-et.csv",
         "rowCount": 500,
-        "sha256": "8baa6b8b852b0514a08fc49edf0ff1a5803b75c6416701ca76deeb7a82449011"
+        "sha256": "e4286451a76df98dff81e43581db1ee419efcb582cc96d1e666fdfc7fcf7019d"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\02-geography.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\02-geography.en-et.csv",
         "rowCount": 500,
-        "sha256": "cd81bbc4dd250bad191e83f274546b3702a2a4cfc9956f3ab377c807665c5db1"
+        "sha256": "7dab1df35b80652be84fc857a7f0cb8c54afca685c4701bfd091be266371547a"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\03-science-nature.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\03-science-nature.en-et.csv",
         "rowCount": 500,
-        "sha256": "a88d0c8ce4899432fac7a7d55ad879d6de442e45d0444208aace073362975e72"
+        "sha256": "215430c10bc044dbb2c97e37fd823cfe13297e69f43e37915242ea368ff3e399"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\04-literature-language.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\04-literature-language.en-et.csv",
         "rowCount": 500,
-        "sha256": "c946285d72e043114287eb76d713b853f3cbc60911618516540a5180aed49438"
+        "sha256": "4d446596e576fb4c937348f959866f0ef8985b90702949091eeb05feaecb7e17"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\05-art-architecture.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\05-art-architecture.en-et.csv",
         "rowCount": 500,
-        "sha256": "f74fb88cab858067ea1075716793b36640369aa01fb94f220b39ede99e38a245"
+        "sha256": "0ae8e433605976b4472cdce3aba236e45b8032e69bb6c9dacf8ad3226d0eebc7"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\06-music.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\06-music.en-et.csv",
         "rowCount": 500,
-        "sha256": "df8557c61a4c0d3d66d4eb5c826ef6b28f2cf95e8065a822a733c430caef0fe6"
+        "sha256": "55f074ecedf12f6cabe8cd41a4cb5c84b8dddbd98d78554a48fd1d82b48e6235"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\07-film-television.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\07-film-television.en-et.csv",
         "rowCount": 500,
-        "sha256": "24d9d1c5a150fe0f86b47e97c4cba65725fe7706442c6717d63f774aebf722d5"
+        "sha256": "2244ba496bde70f8f1868c4db88f6303ecc0a0888556b49be85e17632b3b6487"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\08-sports-games.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\08-sports-games.en-et.csv",
         "rowCount": 500,
-        "sha256": "957c3781661a38121ae136ad2615874c4484b102594216a46b04b50a73ede42c"
+        "sha256": "766698f6cc6c6be018ee068492163f5a9eb91847f05d4427e52d42e65700b998"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\09-food-drink.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\09-food-drink.en-et.csv",
         "rowCount": 500,
-        "sha256": "316c637cc14b1892aab9d130f963e3b163e2851251f8f637b48b26935096b848"
+        "sha256": "a57ca1ae34174af134a57773597e0f012adea56a766972994a0abe536ef9530a"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\10-technology-inventions.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\10-technology-inventions.en-et.csv",
         "rowCount": 500,
-        "sha256": "913ae77b75fe014782913e9a7dbb22f137d948cfc39c37e6d9d1d062912d7cd9"
+        "sha256": "27c944f773333a14b30c72addfbdb367002cc8a18e687fe398b955c8f49c8840"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\11-politics-economics-society.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\11-politics-economics-society.en-et.csv",
         "rowCount": 500,
-        "sha256": "f792fe0d0a23b764fec5033ad0e199f99a7ff5b958f9df42e7d10cf60046b982"
+        "sha256": "bb7217456e0985a965412e9c3f1dc6bdaa001b62def50ed851e297877a89da7c"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\12-mythology-religion-philosophy.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\12-mythology-religion-philosophy.en-et.csv",
         "rowCount": 500,
         "sha256": "53fe2f1904e8763dfc6dcd0b7b36bd3aac667f7b0e1b2249298c0929e081cc12"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\13-finals.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\13-finals.en-et.csv",
         "rowCount": 174,
         "sha256": "6cc7a375cc02da653ed9eaeebf129ce9594ca3c1171e4f11907e56cea438e3f6"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\14-adult.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\14-adult.en-et.csv",
         "rowCount": 500,
         "sha256": "663097a82107d1965e8715a44e2e87068c2c5a0f13d2d364d5461616536213cf"
       },
       {
-        "file": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\content\\generated\\15-estonia.en-et.csv",
+        "file": "E:\\git\\jeopardy\\content\\generated\\15-estonia.en-et.csv",
         "rowCount": 500,
         "sha256": "c457d3ffe857463c837c8580499df2fe0236f0fc02577f7d34a1aa3121250873"
       }
     ],
     "evidence": {
       "records": 7174,
-      "sha256": "3a85d44eb67a5aa824a3b6df8cf7a331296e688ec0c41bc26529fb9a8e0fa4d3"
+      "sha256": "f22ffc4f286a14b8ce00d350e656168716ff3ae8a523c343254a94f0d02dd761"
     },
-    "sha256": "9b134badd8e7230187a387e072d9ea8cc3894a824873e91bee032137d1f76e69"
+    "sha256": "f801e061c98db3057318bd7f947a8c480cb1aa2ca6d5212818e79150dfc814e0"
   },
   "output": {
-    "path": "E:\\git\\jeopardy\\.worktrees\\integrate-accessible-easy-main\\resources\\content\\seed.sqlite",
-    "sha256": "d68572552dee5d2434c2674b21b7a80ddcb034c2089e300113fd3430ee74b775"
+    "path": "E:\\git\\jeopardy\\resources\\content\\seed.sqlite",
+    "sha256": "bc8f628c3df155762899defd9b147f38ab830d2511c6c4f90fc33846637465b2"
   },
   "inventory": {
     "boardClues": 7000,
@@ -30982,6 +31022,166 @@
   },
   "translation": {
     "exceptions": [
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-044",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-111",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-116",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-125",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-017",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-043",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-032",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-034",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-035",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-037",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-040",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-042",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-044",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-070",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-054",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-100",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged proper name or work title is correctly localized and preserves the English meaning."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-034",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-044",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-110",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-113",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-039",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-geography-accessible-corpus-125",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-037",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-038",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-039",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-040",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-042",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-043",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-044",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-045",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-048",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
+      {
+        "id": "translation:UNCHANGED_TRANSLATION:built-in-film-television-accessible-corpus-122",
+        "status": "reviewed",
+        "reviewerReason": "Codex Easy Corpus Translation Reviewer approved the bilingual row on 2026-08-30; the flagged name, title, or accepted variant is intentionally language-stable and the surrounding Estonian is natural."
+      },
       {
         "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0005",
         "status": "reviewed",
@@ -39321,6 +39521,11 @@
         "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-121",
         "status": "reviewed",
         "reviewerReason": "Codex Accessible Corpus Translation Reviewer approved this clue at 08/28/2026 11:00:00; approval is bound to its committed ContentEvidence translation review."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-123",
+        "status": "reviewed",
+        "reviewerReason": "Codex Accessible Corpus Translation Reviewer checked this bilingual row on 2026-08-30: Nintendo, Link, The Legend of Zelda, and Koji Kondo are preserved correctly while the surrounding prose is natural Estonian."
       },
       {
         "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-125",
@@ -50335,7 +50540,7 @@
       "url": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.162Z",
+      "retrievedAt": "2026-08-30T10:44:42.128Z",
       "code": null,
       "finalUrl": "https://avas-demon.fandom.com/api.php?action=parse&oldid=16726&prop=wikitext&format=json"
     },
@@ -50351,7 +50556,7 @@
       "url": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.155Z",
+      "retrievedAt": "2026-08-30T10:44:42.123Z",
       "code": null,
       "finalUrl": "https://camorr.fandom.com/api.php?action=parse&oldid=6234&prop=wikitext&format=json"
     },
@@ -51783,7 +51988,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.149Z",
+      "retrievedAt": "2026-08-30T10:44:42.119Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=%C3%85&oldid=1368825929"
     },
@@ -51831,7 +52036,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=2001%3A_A_Space_Odyssey&oldid=1370275826",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.351Z",
+      "retrievedAt": "2026-08-30T10:44:47.764Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=2001%3A_A_Space_Odyssey&oldid=1370275826"
     },
@@ -51903,7 +52108,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.301Z",
+      "retrievedAt": "2026-08-30T10:44:42.354Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=42_(number)&oldid=1370412921"
     },
@@ -51935,7 +52140,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=A_Quiet_Place&oldid=1370249171",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.352Z",
+      "retrievedAt": "2026-08-30T10:44:42.393Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=A_Quiet_Place&oldid=1370249171"
     },
@@ -51999,7 +52204,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Afro_Samurai&oldid=1367452845",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.353Z",
+      "retrievedAt": "2026-08-30T10:44:44.301Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Afro_Samurai&oldid=1367452845"
     },
@@ -52023,7 +52228,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.272Z",
+      "retrievedAt": "2026-08-30T10:44:47.166Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alan_Moore&oldid=1364587817"
     },
@@ -52071,7 +52276,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.411Z",
+      "retrievedAt": "2026-08-30T10:44:51.141Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice%27s_Adventures_in_Wonderland&oldid=1369184997"
     },
@@ -52079,7 +52284,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.276Z",
+      "retrievedAt": "2026-08-30T10:44:44.955Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Alice_(Alice%27s_Adventures_in_Wonderland)&oldid=1365697159"
     },
@@ -52095,7 +52300,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=All_Dogs_Go_to_Heaven&oldid=1367555035",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.471Z",
+      "retrievedAt": "2026-08-30T10:44:45.495Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=All_Dogs_Go_to_Heaven&oldid=1367555035"
     },
@@ -52143,7 +52348,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.521Z",
+      "retrievedAt": "2026-08-30T10:44:49.377Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ampersand&oldid=1370147916"
     },
@@ -52151,7 +52356,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Another_(novel)&oldid=1370062504",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.473Z",
+      "retrievedAt": "2026-08-30T10:44:49.674Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Another_(novel)&oldid=1370062504"
     },
@@ -52423,7 +52628,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.542Z",
+      "retrievedAt": "2026-08-30T10:44:48.749Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Berenstain_Bears&oldid=1362883912"
     },
@@ -52535,7 +52740,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.646Z",
+      "retrievedAt": "2026-08-30T10:44:49.334Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Bootleg&oldid=1368541656"
     },
@@ -52687,7 +52892,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.740Z",
+      "retrievedAt": "2026-08-30T10:44:49.902Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Camino_Island&oldid=1354728487"
     },
@@ -52767,7 +52972,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.045Z",
+      "retrievedAt": "2026-08-30T10:44:49.864Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Carmen&oldid=1369757348"
     },
@@ -52975,7 +53180,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Copper_in_architecture&oldid=1369258424",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.592Z",
+      "retrievedAt": "2026-08-30T10:44:50.184Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Copper_in_architecture&oldid=1369258424"
     },
@@ -53031,7 +53236,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Crown_Fountain&oldid=1336318929",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.600Z",
+      "retrievedAt": "2026-08-30T10:44:50.440Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Crown_Fountain&oldid=1336318929"
     },
@@ -53087,7 +53292,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Dal%C3%AD_Theatre_and_Museum&oldid=1365806124",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.720Z",
+      "retrievedAt": "2026-08-30T10:44:50.143Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dal%C3%AD_Theatre_and_Museum&oldid=1365806124"
     },
@@ -53167,7 +53372,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.801Z",
+      "retrievedAt": "2026-08-30T10:44:50.938Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=David_Tennant&oldid=1369916346"
     },
@@ -53295,7 +53500,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.890Z",
+      "retrievedAt": "2026-08-30T10:44:57.392Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Dr._Seuss&oldid=1367533961"
     },
@@ -53343,7 +53548,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Duck_Soup&oldid=1364490561",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.838Z",
+      "retrievedAt": "2026-08-30T10:44:53.578Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Duck_Soup&oldid=1364490561"
     },
@@ -53487,7 +53692,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:24.993Z",
+      "retrievedAt": "2026-08-30T10:44:51.189Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=English_alphabet&oldid=1364945547"
     },
@@ -53703,7 +53908,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_New_Zealand&oldid=1366588754",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.845Z",
+      "retrievedAt": "2026-08-30T10:44:51.766Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_New_Zealand&oldid=1366588754"
     },
@@ -53711,7 +53916,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wales&oldid=1367469736",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.964Z",
+      "retrievedAt": "2026-08-30T10:44:51.981Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wales&oldid=1367469736"
     },
@@ -53719,7 +53924,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wisconsin&oldid=1359176877",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.966Z",
+      "retrievedAt": "2026-08-30T10:44:52.221Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Flag_of_Wisconsin&oldid=1359176877"
     },
@@ -53759,7 +53964,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Frame_rate&oldid=1369634927",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.965Z",
+      "retrievedAt": "2026-08-30T10:44:52.236Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Frame_rate&oldid=1369634927"
     },
@@ -53799,7 +54004,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.153Z",
+      "retrievedAt": "2026-08-30T10:45:03.546Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=French_language&oldid=1370384936"
     },
@@ -53839,7 +54044,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Fullmetal_Alchemist_(TV_series)&oldid=1369170392",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:44.966Z",
+      "retrievedAt": "2026-08-30T10:44:52.741Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Fullmetal_Alchemist_(TV_series)&oldid=1369170392"
     },
@@ -53919,7 +54124,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.430Z",
+      "retrievedAt": "2026-08-30T10:44:55.830Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=George_Eliot&oldid=1364793655"
     },
@@ -53935,7 +54140,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.168Z",
+      "retrievedAt": "2026-08-30T10:44:54.305Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gimli_(Middle-earth)&oldid=1368648460"
     },
@@ -53967,7 +54172,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.354Z",
+      "retrievedAt": "2026-08-30T10:44:55.032Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Glorfindel&oldid=1368648487"
     },
@@ -53991,7 +54196,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.276Z",
+      "retrievedAt": "2026-08-30T10:44:55.718Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1370346489"
     },
@@ -53999,7 +54204,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.416Z",
+      "retrievedAt": "2026-08-30T10:44:56.189Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gongoozler&oldid=1359068831"
     },
@@ -54015,7 +54220,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Google_logo&oldid=1365344260",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.090Z",
+      "retrievedAt": "2026-08-30T10:44:56.078Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Google_logo&oldid=1365344260"
     },
@@ -54071,7 +54276,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Grave_of_the_Fireflies&oldid=1368880508",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.089Z",
+      "retrievedAt": "2026-08-30T10:44:56.333Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Grave_of_the_Fireflies&oldid=1368880508"
     },
@@ -54111,7 +54316,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Green&oldid=1369579348",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.090Z",
+      "retrievedAt": "2026-08-30T10:44:57.094Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Green&oldid=1369579348"
     },
@@ -54159,7 +54364,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Gum_arabic&oldid=1370406664",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.212Z",
+      "retrievedAt": "2026-08-30T10:44:56.610Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Gum_arabic&oldid=1370406664"
     },
@@ -54239,7 +54444,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.957Z",
+      "retrievedAt": "2026-08-30T10:44:57.397Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harry_Potter&oldid=1368993584"
     },
@@ -54263,7 +54468,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Harvey_Ball&oldid=1365186726",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.214Z",
+      "retrievedAt": "2026-08-30T10:44:57.343Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Harvey_Ball&oldid=1365186726"
     },
@@ -54271,7 +54476,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Hasegawa_Machiko_Art_Museum&oldid=1271718924",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.215Z",
+      "retrievedAt": "2026-08-30T10:44:57.908Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hasegawa_Machiko_Art_Museum&oldid=1271718924"
     },
@@ -54295,7 +54500,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:25.906Z",
+      "retrievedAt": "2026-08-30T10:44:57.836Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hermione_Granger&oldid=1363299276"
     },
@@ -54303,7 +54508,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Hidamari_Sketch&oldid=1369170504",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.214Z",
+      "retrievedAt": "2026-08-30T10:44:57.668Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hidamari_Sketch&oldid=1369170504"
     },
@@ -54319,7 +54524,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=History_of_Monopoly&oldid=1369612215",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.337Z",
+      "retrievedAt": "2026-08-30T10:44:57.916Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=History_of_Monopoly&oldid=1369612215"
     },
@@ -54423,7 +54628,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.272Z",
+      "retrievedAt": "2026-08-30T10:45:03.796Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Hunter_S._Thompson&oldid=1370089444"
     },
@@ -54455,7 +54660,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.172Z",
+      "retrievedAt": "2026-08-30T10:44:58.713Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ian_Fleming&oldid=1367342881"
     },
@@ -54479,7 +54684,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.080Z",
+      "retrievedAt": "2026-08-30T10:45:00.676Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=In_the_Heights&oldid=1366266791"
     },
@@ -54559,7 +54764,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.358Z",
+      "retrievedAt": "2026-08-30T10:44:59.116Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invictus&oldid=1364466235"
     },
@@ -54567,7 +54772,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.286Z",
+      "retrievedAt": "2026-08-30T10:44:59.392Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Invincible_(comics)&oldid=1370389490"
     },
@@ -54607,7 +54812,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.357Z",
+      "retrievedAt": "2026-08-30T10:45:01.053Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=It_(novel)&oldid=1368921205"
     },
@@ -54695,7 +54900,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.586Z",
+      "retrievedAt": "2026-08-30T10:45:11.100Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Japanese_grammar&oldid=1347248191"
     },
@@ -54767,7 +54972,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.482Z",
+      "retrievedAt": "2026-08-30T10:45:03.491Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=John_Clare&oldid=1370097518"
     },
@@ -54831,7 +55036,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.720Z",
+      "retrievedAt": "2026-08-30T10:45:06.951Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Julius_Caesar_play&oldid=1367108439"
     },
@@ -54895,7 +55100,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Kill_la_Kill&oldid=1369170622",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.341Z",
+      "retrievedAt": "2026-08-30T10:45:08.567Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kill_la_Kill&oldid=1369170622"
     },
@@ -54927,7 +55132,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=King_Kong_(1933_film)&oldid=1365217071",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.341Z",
+      "retrievedAt": "2026-08-30T10:45:08.445Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=King_Kong_(1933_film)&oldid=1365217071"
     },
@@ -54975,7 +55180,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Kunsthal&oldid=1363327905",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.463Z",
+      "retrievedAt": "2026-08-30T10:45:07.192Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Kunsthal&oldid=1363327905"
     },
@@ -55047,7 +55252,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.632Z",
+      "retrievedAt": "2026-08-30T10:45:07.592Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Languages_of_Switzerland&oldid=1363155864"
     },
@@ -55079,7 +55284,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Liberty_Place&oldid=1364538607",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.589Z",
+      "retrievedAt": "2026-08-30T10:45:08.227Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Liberty_Place&oldid=1364538607"
     },
@@ -55103,7 +55308,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=List_of_London_Monopoly_locations&oldid=1363792530",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.590Z",
+      "retrievedAt": "2026-08-30T10:45:08.859Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_London_Monopoly_locations&oldid=1363792530"
     },
@@ -55111,7 +55316,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.754Z",
+      "retrievedAt": "2026-08-30T10:45:08.968Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_The_Railway_Series_and_Thomas_%26_Friends_characters&oldid=1369704890"
     },
@@ -55143,7 +55348,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T17:22:15.035Z",
+      "retrievedAt": "2026-08-30T10:45:08.963Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=List_of_common_false_etymologies_of_English_words&oldid=1361495699"
     },
@@ -55175,7 +55380,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.969Z",
+      "retrievedAt": "2026-08-30T10:45:09.546Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Londonderry_Air&oldid=1351539200"
     },
@@ -55183,7 +55388,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Louvre&oldid=1370474152",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.590Z",
+      "retrievedAt": "2026-08-30T10:45:16.171Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Louvre&oldid=1370474152"
     },
@@ -55199,7 +55404,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.842Z",
+      "retrievedAt": "2026-08-30T10:45:09.227Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Love_Symbol&oldid=1369567129"
     },
@@ -55247,7 +55452,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:26.876Z",
+      "retrievedAt": "2026-08-30T10:45:13.589Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Macbeth&oldid=1369397365"
     },
@@ -55391,7 +55596,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.200Z",
+      "retrievedAt": "2026-08-30T10:45:12.465Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Maurice_Sendak&oldid=1368676305"
     },
@@ -55551,7 +55756,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1369149371",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.717Z",
+      "retrievedAt": "2026-08-30T10:45:17.920Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1369149371"
     },
@@ -55559,7 +55764,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1370675950",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.720Z",
+      "retrievedAt": "2026-08-30T10:45:20.698Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monopoly_(game)&oldid=1370675950"
     },
@@ -55583,7 +55788,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.209Z",
+      "retrievedAt": "2026-08-30T10:45:13.814Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monster_Hunter_Orage&oldid=1354288020"
     },
@@ -55591,7 +55796,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Monte_Carlo_Casino&oldid=1365291214",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.720Z",
+      "retrievedAt": "2026-08-30T10:45:15.265Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Monte_Carlo_Casino&oldid=1365291214"
     },
@@ -55663,7 +55868,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Museum_of_Modern_Art&oldid=1356169714",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.836Z",
+      "retrievedAt": "2026-08-30T10:45:16.060Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Museum_of_Modern_Art&oldid=1356169714"
     },
@@ -55687,7 +55892,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Naples_yellow&oldid=1279359922",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.842Z",
+      "retrievedAt": "2026-08-30T10:45:16.651Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Naples_yellow&oldid=1279359922"
     },
@@ -55703,7 +55908,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=National_Gallery_of_Art&oldid=1368982424",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.837Z",
+      "retrievedAt": "2026-08-30T10:45:17.298Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=National_Gallery_of_Art&oldid=1368982424"
     },
@@ -55719,7 +55924,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.421Z",
+      "retrievedAt": "2026-08-30T10:45:16.921Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nautilus_(fictional_submarine)&oldid=1355792995"
     },
@@ -55759,7 +55964,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=New_Amsterdam_Theatre&oldid=1370041814",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.845Z",
+      "retrievedAt": "2026-08-30T10:45:17.840Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=New_Amsterdam_Theatre&oldid=1370041814"
     },
@@ -55767,7 +55972,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=New_Museum&oldid=1365429236",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.955Z",
+      "retrievedAt": "2026-08-30T10:45:19.306Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=New_Museum&oldid=1365429236"
     },
@@ -55775,7 +55980,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.322Z",
+      "retrievedAt": "2026-08-30T10:45:18.506Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=News&oldid=1358060278"
     },
@@ -55863,7 +56068,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Nosferatu&oldid=1370137637",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.956Z",
+      "retrievedAt": "2026-08-30T10:45:18.807Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Nosferatu&oldid=1370137637"
     },
@@ -55919,7 +56124,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.611Z",
+      "retrievedAt": "2026-08-30T10:45:19.148Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Official_bilingualism_in_Canada&oldid=1363124662"
     },
@@ -55959,7 +56164,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Olympiastadion_(Berlin)&oldid=1363187111",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:45.966Z",
+      "retrievedAt": "2026-08-30T10:45:19.078Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Olympiastadion_(Berlin)&oldid=1363187111"
     },
@@ -55983,7 +56188,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Orange_(colour)&oldid=1369029819",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.078Z",
+      "retrievedAt": "2026-08-30T10:45:19.914Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Orange_(colour)&oldid=1369029819"
     },
@@ -56031,7 +56236,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Paintings_by_Adolf_Hitler&oldid=1368009034",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.083Z",
+      "retrievedAt": "2026-08-30T10:45:19.965Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Paintings_by_Adolf_Hitler&oldid=1368009034"
     },
@@ -56271,7 +56476,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.840Z",
+      "retrievedAt": "2026-08-30T10:45:19.548Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Portuguese_orthography&oldid=1370018895"
     },
@@ -56295,7 +56500,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Psycho_(1960_film)&oldid=1368981671",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.217Z",
+      "retrievedAt": "2026-08-30T10:45:26.775Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Psycho_(1960_film)&oldid=1368981671"
     },
@@ -56311,7 +56516,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Puma_(brand)&oldid=1368608228",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.323Z",
+      "retrievedAt": "2026-08-30T10:45:23.151Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Puma_(brand)&oldid=1368608228"
     },
@@ -56319,7 +56524,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:27.848Z",
+      "retrievedAt": "2026-08-30T10:45:20.734Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Purgatorio&oldid=1368630389"
     },
@@ -56351,7 +56556,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=RWBY&oldid=1367990004",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.328Z",
+      "retrievedAt": "2026-08-30T10:45:21.190Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=RWBY&oldid=1367990004"
     },
@@ -56359,7 +56564,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Ra_(board_game)&oldid=1333026488",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.345Z",
+      "retrievedAt": "2026-08-30T10:45:21.231Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ra_(board_game)&oldid=1333026488"
     },
@@ -56431,7 +56636,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Renault_Avantime&oldid=1367044589",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.448Z",
+      "retrievedAt": "2026-08-30T10:45:21.717Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Renault_Avantime&oldid=1367044589"
     },
@@ -56495,7 +56700,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.095Z",
+      "retrievedAt": "2026-08-30T10:45:21.482Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Robert_Kirkman&oldid=1370366106"
     },
@@ -56503,7 +56708,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Robot_Chicken&oldid=1369791400",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.449Z",
+      "retrievedAt": "2026-08-30T10:45:24.705Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Robot_Chicken&oldid=1369791400"
     },
@@ -56519,7 +56724,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.179Z",
+      "retrievedAt": "2026-08-30T10:45:22.522Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romanization_of_Arabic&oldid=1365517204"
     },
@@ -56527,7 +56732,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.297Z",
+      "retrievedAt": "2026-08-30T10:45:31.209Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Romeo_and_Juliet&oldid=1368549343"
     },
@@ -56535,7 +56740,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.323Z",
+      "retrievedAt": "2026-08-30T10:45:23.407Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Ron_Weasley&oldid=1356329411"
     },
@@ -56543,7 +56748,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Rope_(film)&oldid=1366335909",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.450Z",
+      "retrievedAt": "2026-08-30T10:45:24.022Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Rope_(film)&oldid=1366335909"
     },
@@ -56631,7 +56836,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.326Z",
+      "retrievedAt": "2026-08-30T10:45:28.839Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=SCP_Foundation&oldid=1367387495"
     },
@@ -56735,7 +56940,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.301Z",
+      "retrievedAt": "2026-08-30T10:45:27.783Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scarecrow_(DC_Comics)&oldid=1369969389"
     },
@@ -56767,7 +56972,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Scrabble&oldid=1369780993",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.573Z",
+      "retrievedAt": "2026-08-30T10:45:31.542Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Scrabble&oldid=1369780993"
     },
@@ -56783,7 +56988,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Senedd_building&oldid=1367502849",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.572Z",
+      "retrievedAt": "2026-08-30T10:45:28.709Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Senedd_building&oldid=1367502849"
     },
@@ -56815,7 +57020,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.551Z",
+      "retrievedAt": "2026-08-30T10:45:32.129Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shakespeare%27s_plays&oldid=1358930261"
     },
@@ -56855,7 +57060,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.060Z",
+      "retrievedAt": "2026-08-30T10:45:33.374Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sherlock_Holmes&oldid=1368267015"
     },
@@ -56895,7 +57100,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.550Z",
+      "retrievedAt": "2026-08-30T10:45:31.822Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Shub-Niggurath&oldid=1359074213"
     },
@@ -56903,7 +57108,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Sigiriya&oldid=1367952186",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.574Z",
+      "retrievedAt": "2026-08-30T10:45:31.793Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sigiriya&oldid=1367952186"
     },
@@ -57119,7 +57324,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Steven_Universe&oldid=1370570485",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.815Z",
+      "retrievedAt": "2026-08-30T10:45:37.160Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Steven_Universe&oldid=1370570485"
     },
@@ -57175,7 +57380,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Studio_Ghibli&oldid=1370294645",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.815Z",
+      "retrievedAt": "2026-08-30T10:45:32.366Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Studio_Ghibli&oldid=1370294645"
     },
@@ -57223,7 +57428,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Super_Mario_Bros.&oldid=1369409935",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.831Z",
+      "retrievedAt": "2026-08-30T10:45:39.236Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Super_Mario_Bros.&oldid=1369409935"
     },
@@ -57295,7 +57500,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.069Z",
+      "retrievedAt": "2026-08-30T10:45:35.653Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Swedish_language&oldid=1364236208"
     },
@@ -57319,7 +57524,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Sydney_Opera_House&oldid=1369640428",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.940Z",
+      "retrievedAt": "2026-08-30T10:45:39.416Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Sydney_Opera_House&oldid=1369640428"
     },
@@ -57407,7 +57612,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:28.915Z",
+      "retrievedAt": "2026-08-30T10:45:36.159Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Adventures_of_Tintin&oldid=1366341890"
     },
@@ -57431,7 +57636,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Beehive&oldid=1364886091",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.938Z",
+      "retrievedAt": "2026-08-30T10:45:36.398Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Beehive&oldid=1364886091"
     },
@@ -57471,7 +57676,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.109Z",
+      "retrievedAt": "2026-08-30T10:45:36.735Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Communist_Manifesto&oldid=1369584744"
     },
@@ -57495,7 +57700,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.183Z",
+      "retrievedAt": "2026-08-30T10:45:37.547Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Day_of_the_Locust&oldid=1364462892"
     },
@@ -57503,7 +57708,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Day_the_Earth_Stood_Still&oldid=1368703068",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.939Z",
+      "retrievedAt": "2026-08-30T10:45:37.883Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Day_the_Earth_Stood_Still&oldid=1368703068"
     },
@@ -57527,7 +57732,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.379Z",
+      "retrievedAt": "2026-08-30T10:45:37.943Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Female_of_the_Species_(poem)&oldid=1353084198"
     },
@@ -57567,7 +57772,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.560Z",
+      "retrievedAt": "2026-08-30T10:45:38.128Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hitchhiker%27s_Guide_to_the_Galaxy&oldid=1369394325"
     },
@@ -57575,7 +57780,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.445Z",
+      "retrievedAt": "2026-08-30T10:45:38.666Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Hobbit&oldid=1369773395"
     },
@@ -57623,7 +57828,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.493Z",
+      "retrievedAt": "2026-08-30T10:45:38.694Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Lies_of_Locke_Lamora&oldid=1366353852"
     },
@@ -57639,7 +57844,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Night_Watch&oldid=1370533738",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:46.954Z",
+      "retrievedAt": "2026-08-30T10:45:39.070Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Night_Watch&oldid=1370533738"
     },
@@ -57655,7 +57860,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Pentagon&oldid=1370215272",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.064Z",
+      "retrievedAt": "2026-08-30T10:45:39.116Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Pentagon&oldid=1370215272"
     },
@@ -57663,7 +57868,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.798Z",
+      "retrievedAt": "2026-08-30T10:45:39.714Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Producers_(musical)&oldid=1368924829"
     },
@@ -57671,7 +57876,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Red_Studio&oldid=1361443273",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.065Z",
+      "retrievedAt": "2026-08-30T10:45:39.519Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Red_Studio&oldid=1361443273"
     },
@@ -57703,7 +57908,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.180Z",
+      "retrievedAt": "2026-08-30T10:45:41.006Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Scarlet_Letter&oldid=1369839212"
     },
@@ -57711,7 +57916,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Shining_(film)&oldid=1370009076",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.187Z",
+      "retrievedAt": "2026-08-30T10:45:50.003Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Shining_(film)&oldid=1370009076"
     },
@@ -57719,7 +57924,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Silence_of_the_Lambs_(film)&oldid=1369796259",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.189Z",
+      "retrievedAt": "2026-08-30T10:45:40.154Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Silence_of_the_Lambs_(film)&oldid=1369796259"
     },
@@ -57743,7 +57948,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.874Z",
+      "retrievedAt": "2026-08-30T10:45:40.075Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Tale_of_Mr._Tod&oldid=1313731399"
     },
@@ -57799,7 +58004,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.920Z",
+      "retrievedAt": "2026-08-30T10:45:40.392Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=The_Windhover&oldid=1368630326"
     },
@@ -57831,7 +58036,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:29.947Z",
+      "retrievedAt": "2026-08-30T10:45:40.863Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Thomas_Hardy%27s_Wessex&oldid=1359312307"
     },
@@ -57935,7 +58140,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.132Z",
+      "retrievedAt": "2026-08-30T10:45:43.331Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Tony_Kushner&oldid=1365846454"
     },
@@ -58007,7 +58212,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.143Z",
+      "retrievedAt": "2026-08-30T10:45:41.881Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Turkish_grammar&oldid=1360913553"
     },
@@ -58247,7 +58452,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Walt_Disney_Concert_Hall&oldid=1369637385",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.314Z",
+      "retrievedAt": "2026-08-30T10:45:41.717Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Walt_Disney_Concert_Hall&oldid=1369637385"
     },
@@ -58255,7 +58460,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.068Z",
+      "retrievedAt": "2026-08-30T10:45:44.348Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Walter_de_la_Mare&oldid=1370098154"
     },
@@ -58271,7 +58476,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.314Z",
+      "retrievedAt": "2026-08-30T10:45:46.533Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Watchmen&oldid=1364430596"
     },
@@ -58311,7 +58516,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Web_colors&oldid=1368058563",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.313Z",
+      "retrievedAt": "2026-08-30T10:45:44.175Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Web_colors&oldid=1368058563"
     },
@@ -58319,7 +58524,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.572Z",
+      "retrievedAt": "2026-08-30T10:45:44.960Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=West_Side_Story&oldid=1370117430"
     },
@@ -58359,7 +58564,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.388Z",
+      "retrievedAt": "2026-08-30T10:45:53.811Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=William_Golding&oldid=1370098230"
     },
@@ -58391,7 +58596,7 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Wolf_Children&oldid=1367985125",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-23T09:06:47.318Z",
+      "retrievedAt": "2026-08-30T10:45:45.492Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/w/index.php?title=Wolf_Children&oldid=1367985125"
     },
@@ -58708,14 +58913,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/AHHAA"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:42.954Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Aalto_Vase",
       "ok": true,
       "status": 200,
@@ -58796,6 +58993,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Acetic_acid"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Acetone",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:45.717Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Acetone"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Achilles",
       "ok": true,
       "status": 200,
@@ -58836,36 +59041,12 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Act_of_the_Re-Establishment_of_the_State_of_Lithuania",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:43.190Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Act_of_the_Re-Establishment_of_the_State_of_Lithuania"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Active_noise_control",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T08:11:43.196Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Active_noise_control"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Actuary",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:43.285Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Actuary"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Actuator",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:43.296Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Actuator"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Addis_Ababa",
@@ -59228,6 +59409,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Am%C3%A9lie",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:45.839Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Am%C3%A9lie"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Amazon_River",
       "ok": true,
       "status": 200,
@@ -59370,6 +59559,14 @@
       "retrievedAt": "2026-08-28T04:24:02.839Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Android_(operating_system)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Andy_Warhol",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:45.960Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Andy_Warhol"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Angel_Falls",
@@ -59780,14 +59977,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Association_football"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Asteroid_belt",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T05:42:59.826Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Asteroid_belt"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/At_sign",
       "ok": true,
       "status": 200,
@@ -60172,14 +60361,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Baltic_Assembly"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Baltic_Council_of_Ministers",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:46.539Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Baltic_Council_of_Ministers"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
       "ok": true,
       "status": 200,
@@ -60556,14 +60737,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Beach_volleyball"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Bedroom_in_Arles",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:47.406Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Bedroom_in_Arles"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Beetle",
       "ok": true,
       "status": 200,
@@ -60724,6 +60897,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Bisexual_flag"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Bishop_(chess)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.204Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Bishop_(chess)"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Bj%C3%B6rk",
       "ok": true,
       "status": 200,
@@ -60852,14 +61033,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Blu-ray"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Blue_Period",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:47.999Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Blue_Period"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Blue_note",
       "ok": true,
       "status": 200,
@@ -60914,6 +61087,14 @@
       "retrievedAt": "2026-08-28T08:11:48.097Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Boiling"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bol%C3%A9ro",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.327Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Bol%C3%A9ro"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Bolivia–Brazil_border",
@@ -61124,6 +61305,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Break_room"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Breakaway_(cycling)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.452Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Breakaway_(cycling)"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Breakfast",
       "ok": true,
       "status": 200,
@@ -61290,14 +61479,6 @@
       "retrievedAt": "2026-08-28T08:11:48.948Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Brown_v._Board_of_Education"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Brunost",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:49.078Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Brunost"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Brussels_and_the_European_Union",
@@ -61524,6 +61705,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Camera_lens"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Camp_David_Accords",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.574Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Camp_David_Accords"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Camp_Nou",
       "ok": true,
       "status": 200,
@@ -61714,6 +61903,14 @@
       "retrievedAt": "2026-08-28T03:40:23.112Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Cathode-ray_tube"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cave_painting",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.656Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Cave_painting"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Cello",
@@ -61940,14 +62137,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Chicago_Pile-1"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Chichen_Itza",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:50.655Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Chichen_Itza"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Chile",
       "ok": true,
       "status": 200,
@@ -62074,14 +62263,6 @@
       "retrievedAt": "2026-08-28T08:11:51.005Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Cinderella"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Cinema_Paradiso",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:51.018Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Cinema_Paradiso"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Cinerama",
@@ -62356,14 +62537,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Coleslaw"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Collage",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:51.743Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Collage"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Collective_bargaining",
       "ok": true,
       "status": 200,
@@ -62522,6 +62695,14 @@
       "retrievedAt": "2026-08-28T08:11:51.994Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Computer_mouse"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Concertmaster",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.779Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Concertmaster"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Conchita_Wurst",
@@ -62860,6 +63041,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Crazy_in_Love"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Crete",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.820Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Crete"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Crime_and_Punishment",
       "ok": true,
       "status": 200,
@@ -62938,14 +63127,6 @@
       "retrievedAt": "2026-08-28T08:11:52.978Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Cubism",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:53.077Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Cubism"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Culper_Ring",
@@ -63524,14 +63705,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Diwali"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Doctor_Zhivago_(novel)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:54.386Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Doctor_Zhivago_(novel)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Dolly_Parton",
       "ok": true,
       "status": 200,
@@ -63554,14 +63727,6 @@
       "retrievedAt": "2026-08-28T08:11:54.407Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Domain_Name_System"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Domestique",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:54.410Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Domestique"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Dominoes",
@@ -63682,6 +63847,14 @@
       "retrievedAt": "2026-08-28T04:24:04.914Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Dracula"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Drafting_(aerodynamics)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.901Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Drafting_(aerodynamics)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Drawbridge",
@@ -63876,14 +64049,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Ebook"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Echelon_(cycling)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:55.150Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Echelon_(cycling)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Eda-Ines_Etti",
       "ok": true,
       "status": 200,
@@ -63988,6 +64153,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/El_Dorado"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/El_Niño",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:46.942Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/El_Ni%C3%B1o"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Elbow",
       "ok": true,
       "status": 200,
@@ -64052,6 +64225,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Electrical_network"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.023Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Electrical_telegraph"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Electrician",
       "ok": true,
       "status": 200,
@@ -64090,6 +64271,14 @@
       "retrievedAt": "2026-08-27T19:26:39.948Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Elizabeth_Castle"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_II",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.064Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Elizabeth_II"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Ella_Fitzgerald",
@@ -64250,14 +64439,6 @@
       "retrievedAt": "2026-08-28T03:40:25.009Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Empty_nest_syndrome"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/En_passant",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:55.864Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/En_passant"
     },
     {
       "url": "https://en.wikipedia.org/wiki/En_plein_air",
@@ -65132,14 +65313,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Flapper"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Flash_Gordon_(film)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:57.623Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Flash_Gordon_(film)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Flea_market",
       "ok": true,
       "status": 200,
@@ -65452,6 +65625,22 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Freyja"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Frida_Kahlo",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.186Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Frida_Kahlo"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Fried_rice",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.259Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Fried_rice"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Friedrich_Reinhold_Kreutzwald",
       "ok": true,
       "status": 200,
@@ -65556,6 +65745,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Galaxy_S_series"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Galilean_moons",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.307Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Galilean_moons"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
       "ok": true,
       "status": 200,
@@ -65578,14 +65775,6 @@
       "retrievedAt": "2026-08-28T08:11:58.668Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Ganache"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Ganymede_(moon)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T05:43:00.756Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Ganymede_(moon)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Gargoyle",
@@ -65964,28 +66153,12 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Giselle",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:59.739Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Giselle"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T04:24:06.368Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Giuseppe_Verdi"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Giverny",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:11:59.786Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Giverny"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
@@ -66148,14 +66321,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Good_Friday_Agreement"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Good_Omens_(TV_series)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:00.610Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Good_Omens_(TV_series)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Google_Chrome",
       "ok": true,
       "status": 200,
@@ -66308,14 +66473,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Great_Migration_(African_American)"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Great_Mosque_of_Djenné",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:01.081Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Great_Mosque_of_Djenn%C3%A9"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Great_Northern_War",
       "ok": true,
       "status": 200,
@@ -66332,12 +66489,12 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Great_Seal",
+      "url": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-28T08:12:01.095Z",
+      "retrievedAt": "2026-08-30T10:45:47.428Z",
       "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Great_Seal"
+      "finalUrl": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
@@ -66484,6 +66641,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Guitar"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Guitar_Hero",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T11:30:07.052Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Guitar_Hero"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Gulf_Stream",
       "ok": true,
       "status": 200,
@@ -66610,22 +66775,6 @@
       "retrievedAt": "2026-08-28T08:12:01.582Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Hajj"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:02.169Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Halley%27s_Comet"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Halo_Original_Soundtrack",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:01.664Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Halo_Original_Soundtrack"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Hamburger",
@@ -66812,14 +66961,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Hays_Code"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Haystacks_(Monet_series)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:02.277Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Haystacks_(Monet_series)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Headline",
       "ok": true,
       "status": 200,
@@ -66866,14 +67007,6 @@
       "retrievedAt": "2026-08-28T08:12:02.398Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Hedgehog"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Hedy_Lamarr",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:02.407Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Hedy_Lamarr"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Hel_(location)",
@@ -67162,14 +67295,6 @@
       "retrievedAt": "2026-08-28T08:12:03.020Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/House_of_Habsburg"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/House_of_Orange-Nassau",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:03.033Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/House_of_Orange-Nassau"
     },
     {
       "url": "https://en.wikipedia.org/wiki/House_of_Romanov",
@@ -67538,14 +67663,6 @@
       "retrievedAt": "2026-08-28T08:12:03.892Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Image_sensor"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Imperator_Furiosa",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:03.983Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Imperator_Furiosa"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Import",
@@ -68212,20 +68329,20 @@
       "finalUrl": "https://en.wikipedia.org/wiki/John_R._Brinkley"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/John_Wick",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.611Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/John_Wick"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Joker_(playing_card)",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T03:40:26.842Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Joker_(playing_card)"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Jollof_rice",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:05.778Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Jollof_rice"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Jonas_Salk",
@@ -68692,6 +68809,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Kindle_Store"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.026Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/King_Arthur",
       "ok": true,
       "status": 200,
@@ -68908,14 +69033,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Kuressaare_Castle"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Kuroshio_Current",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:07.113Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Kuroshio_Current"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Kurt_Wallander",
       "ok": true,
       "status": 200,
@@ -69018,6 +69135,14 @@
       "retrievedAt": "2026-08-28T05:43:01.355Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Landsat_6"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Landscape_painting",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T11:30:07.053Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Landscape_painting"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Languages_of_Costa_Rica",
@@ -69156,14 +69281,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Leeloo",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:07.603Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Leeloo"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Legal_tender",
       "ok": true,
       "status": 200,
@@ -69234,14 +69351,6 @@
       "retrievedAt": "2026-08-28T04:24:08.380Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:07.831Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Les_Liaisons_dangereuses",
@@ -69370,14 +69479,6 @@
       "retrievedAt": "2026-08-28T03:40:27.217Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Lindy_Hop"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Linear_A",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:08.190Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Linear_A"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Linen",
@@ -69538,6 +69639,14 @@
       "retrievedAt": "2026-08-28T08:12:08.624Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Logo"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Lohikeitto",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.727Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Lohikeitto"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Loki",
@@ -70228,6 +70337,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Mean_Girls"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Meatball#Sweden",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:47.970Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Meatball#Sweden"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Mecca",
       "ok": true,
       "status": 200,
@@ -70556,14 +70673,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Minecraft"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Minecraft_%E2%80%93_Volume_Alpha",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:10.841Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Minecraft_%E2%80%93_Volume_Alpha"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Mineral_water",
       "ok": true,
       "status": 200,
@@ -70602,22 +70711,6 @@
       "retrievedAt": "2026-08-28T03:10:41.210Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Minox"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Miranda_Priestly",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:10.882Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Miranda_Priestly"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Mirror_writing",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:10.892Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Mirror_writing"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Miso",
@@ -70876,6 +70969,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Moonshine"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Morse_code",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.198Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Morse_code"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Mortar_and_pestle",
       "ok": true,
       "status": 200,
@@ -70996,14 +71097,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Mount_Olympus"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Mount_Rushmore",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:11.824Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Mount_Rushmore"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Mount_Sinai",
       "ok": true,
       "status": 200,
@@ -71074,6 +71167,14 @@
       "retrievedAt": "2026-08-28T08:12:12.666Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Mrs._Doubtfire"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mu_isamaa_on_minu_arm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.494Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Mu_isamaa_on_minu_arm"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Muddy_Waters",
@@ -71170,6 +71271,14 @@
       "retrievedAt": "2026-08-28T03:40:28.339Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Museo_del_Prado"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_Minecraft",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T11:30:07.049Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_Minecraft"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Music_of_Star_Wars",
@@ -71340,14 +71449,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/National_Baseball_Hall_of_Fame_and_Museum"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/National_Liberation_Front_(Algeria)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:13.253Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/National_Liberation_Front_(Algeria)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/National_Library_of_Estonia",
       "ok": true,
       "status": 200,
@@ -71378,6 +71479,14 @@
       "retrievedAt": "2026-08-28T08:12:13.333Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/National_flag"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/National_symbol",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.320Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/National_symbol"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Natural_(music)",
@@ -71580,6 +71689,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Night_service_(public_transport)"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Nighthawks_(Hopper)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.441Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Nighthawks_(Hopper)"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Nile",
       "ok": true,
       "status": 200,
@@ -71650,14 +71767,6 @@
       "retrievedAt": "2026-08-28T08:12:13.914Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Noble_Eightfold_Path"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Nobuo_Uematsu",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:13.943Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Nobuo_Uematsu"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Nokia_3310",
@@ -71898,14 +72007,6 @@
       "retrievedAt": "2026-08-28T03:40:28.828Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/OkCupid"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Okavango_Delta",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:14.325Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Okavango_Delta"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Old_Thomas",
@@ -72516,6 +72617,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Peace_symbols"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.557Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Peasants%27_Revolt",
       "ok": true,
       "status": 200,
@@ -72740,6 +72849,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Phonograph_record"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Photography",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T11:30:07.176Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Photography"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Photosynthesis",
       "ok": true,
       "status": 200,
@@ -72770,6 +72887,14 @@
       "retrievedAt": "2026-08-28T08:12:16.332Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Pierre_de_Coubertin"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Piet_Mondrian",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.753Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Piet_Mondrian"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Pineapple",
@@ -72868,6 +72993,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Pixel#Megapixel"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Pixel_art",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.678Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Pixel_art"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Pizza",
       "ok": true,
       "status": 200,
@@ -72908,6 +73041,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Plankton"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Plant_stem",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.799Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Plant_stem"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Plaster",
       "ok": true,
       "status": 200,
@@ -72946,6 +73087,14 @@
       "retrievedAt": "2026-08-28T04:24:10.221Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/PlayStation"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Plumber",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.875Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Plumber"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Pluto",
@@ -73234,14 +73383,6 @@
       "retrievedAt": "2026-08-28T08:12:17.252Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Poseidon"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Post-Impressionism",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:17.301Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Post-Impressionism"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Postal_censorship",
@@ -74004,6 +74145,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Random-access_memory"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Rapunzel",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.913Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Rapunzel"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
       "ok": true,
       "status": 200,
@@ -74236,14 +74385,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Residence_permit"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Resonator_guitar",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:19.431Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Resonator_guitar"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Respect",
       "ok": true,
       "status": 200,
@@ -74410,6 +74551,14 @@
       "retrievedAt": "2026-08-28T08:12:20.033Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/RoboCop"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:48.990Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Rocket_League",
@@ -74580,14 +74729,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Rotunda_(architecture)"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:20.541Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Roulette",
       "ok": true,
       "status": 200,
@@ -74658,6 +74799,14 @@
       "retrievedAt": "2026-08-27T11:05:27.259Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Rum-running"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rummy",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.036Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Rummy"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Rumours_(album)",
@@ -75204,6 +75353,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Selkie"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Semitic_languages",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.111Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Semitic_languages"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Sensor",
       "ok": true,
       "status": 200,
@@ -75290,14 +75447,6 @@
       "retrievedAt": "2026-08-28T03:40:31.105Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Sexually_transmitted_infection#Screening"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Sfumato",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:22.348Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Sfumato"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Shabbat",
@@ -75484,6 +75633,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Silk_Road"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.151Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Simile",
       "ok": true,
       "status": 200,
@@ -75522,6 +75679,14 @@
       "retrievedAt": "2026-08-28T03:10:41.824Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Sipsik"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.233Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Sitar",
@@ -75628,6 +75793,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Slot_machine"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Slumdog_Millionaire",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.274Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Slumdog_Millionaire"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Small_intestine",
       "ok": true,
       "status": 200,
@@ -75668,28 +75841,12 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Smoothie"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Smørrebrød",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:23.001Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Sm%C3%B8rrebr%C3%B8d"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Snake",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T08:12:23.067Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Snake"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Snow_White",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:23.081Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Snow_White"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)",
@@ -75706,6 +75863,14 @@
       "retrievedAt": "2026-08-28T08:12:23.116Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Snowboarding"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Snowplow_turn",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.355Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Snowplow_turn"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Social_safety_net",
@@ -76060,14 +76225,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Spiegel_im_Spiegel"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Spinning_jenny",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:23.857Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Spinning_jenny"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Spirited_Away",
       "ok": true,
       "status": 200,
@@ -76292,12 +76449,28 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Stethoscope"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.395Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Steve_Jobs"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Steven_Spielberg",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T08:12:24.473Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Steven_Spielberg"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Still_life",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T11:30:07.188Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Still_life"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Stomach",
@@ -76506,14 +76679,6 @@
       "retrievedAt": "2026-08-28T03:10:42.015Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Supilinn"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Surfactant",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:24.912Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Surfactant"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Survivor_(franchise)",
@@ -76804,6 +76969,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Talharpa"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Tallink",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.477Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Tallink"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Tallinn_Airport",
       "ok": true,
       "status": 200,
@@ -76916,14 +77089,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Taste_bud"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Tatooine",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:25.650Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Tatooine"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Tax",
       "ok": true,
       "status": 200,
@@ -76970,14 +77135,6 @@
       "retrievedAt": "2026-08-28T08:12:25.652Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Tee_(golf)"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Telemark_skiing",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:25.714Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Telemark_skiing"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Telenovela",
@@ -77268,6 +77425,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_Ed_Sullivan_Show"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.534Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/The_Firebird",
       "ok": true,
       "status": 200,
@@ -77324,6 +77489,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/The_Greatest_Showman",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.727Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Greatest_Showman"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/The_Handmaid's_Tale",
       "ok": true,
       "status": 200,
@@ -77362,6 +77535,22 @@
       "retrievedAt": "2026-08-28T04:24:13.479Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/The_Hobbit"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Hunger_Games",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.670Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Hunger_Games"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.792Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/The_International_(Dota_2)",
@@ -77412,12 +77601,12 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_Last_Judgment_(Michelangelo)"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+      "url": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-28T08:12:26.746Z",
+      "retrievedAt": "2026-08-30T11:31:48.359Z",
       "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)"
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/The_Lion_King",
@@ -77556,6 +77745,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.849Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_(1986_musical)",
       "ok": true,
       "status": 200,
@@ -77612,6 +77809,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_School_of_Athens"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/The_Scream",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.332Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Scream"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/The_Second_City",
       "ok": true,
       "status": 200,
@@ -77660,6 +77865,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_Terminator"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/The_Thinker",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:49.971Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Thinker"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
       "ok": true,
       "status": 200,
@@ -77674,6 +77887,14 @@
       "retrievedAt": "2026-08-28T08:12:27.334Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/The_Time_Traveler%27s_Wife"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Truman_Show",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.094Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Truman_Show"
     },
     {
       "url": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
@@ -77700,22 +77921,6 @@
       "finalUrl": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/The_Water_Lily_Pond",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:27.455Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/The_Water_Lily_Pond"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/The_Wire",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:27.492Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/The_Wire"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/The_Wizard_of_Oz",
       "ok": true,
       "status": 200,
@@ -77730,14 +77935,6 @@
       "retrievedAt": "2026-08-28T08:12:27.577Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/The_Wonderful_Adventures_of_Nils"
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Theo_van_Gogh_(art_dealer)",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:27.613Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Theo_van_Gogh_(art_dealer)"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Thermometer",
@@ -77970,6 +78167,14 @@
       "retrievedAt": "2026-08-28T04:24:13.844Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Tofu"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tokyo_Tower",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.149Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Tokyo_Tower"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack",
@@ -78268,6 +78473,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Trench_warfare"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Trevi_Fountain",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.216Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Trevi_Fountain"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Triage",
       "ok": true,
       "status": 200,
@@ -78538,6 +78751,14 @@
       "retrievedAt": "2026-08-28T03:40:32.704Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Uffizi"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ukulele",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.271Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Ukulele"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Ulaanbaatar",
@@ -79404,6 +79625,14 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Wedding_ring"
     },
     {
+      "url": "https://en.wikipedia.org/wiki/Wednesday_(TV_series)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.339Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Wednesday_(TV_series)"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Wembley_Stadium",
       "ok": true,
       "status": 200,
@@ -79884,20 +80113,20 @@
       "finalUrl": "https://en.wikipedia.org/wiki/Xibalba"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/Xylem",
-      "ok": true,
-      "status": 200,
-      "retrievedAt": "2026-08-28T08:12:32.390Z",
-      "code": null,
-      "finalUrl": "https://en.wikipedia.org/wiki/Xylem"
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/Xylophone",
       "ok": true,
       "status": 200,
       "retrievedAt": "2026-08-28T08:12:32.421Z",
       "code": null,
       "finalUrl": "https://en.wikipedia.org/wiki/Xylophone"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Yayoi_Kusama",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-08-30T10:45:50.395Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Yayoi_Kusama"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer",
@@ -80055,7 +80284,7 @@
       "url": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.450Z",
+      "retrievedAt": "2026-08-30T10:45:51.048Z",
       "code": null,
       "finalUrl": "https://en.wiktionary.org/w/index.php?title=%D9%82%D9%85%D8%B1&oldid=92018945"
     },
@@ -80063,7 +80292,7 @@
       "url": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T14:28:30.575Z",
+      "retrievedAt": "2026-08-30T10:45:50.872Z",
       "code": null,
       "finalUrl": "https://en.wiktionary.org/w/index.php?title=f%C3%B6nster&oldid=87879126"
     },
@@ -80071,7 +80300,7 @@
       "url": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861",
       "ok": true,
       "status": 200,
-      "retrievedAt": "2026-08-21T17:22:15.033Z",
+      "retrievedAt": "2026-08-30T10:45:54.449Z",
       "code": null,
       "finalUrl": "https://en.wiktionary.org/w/index.php?title=news&oldid=91983861"
     },
