@@ -580,3 +580,101 @@ Run `validatePlayableCorpus` after each literal category is added, then phrase l
 - **Notes**: The author removed both answer terms; the bank now imports cleanly at 33 categories / 165 questions with zero playability diagnostics.
 
 ---
+
+## [ERR-20260830-014] science-final-checkpoint-easy-collision
+
+**Logged**: 2026-08-30T17:21:34+03:00
+**Priority**: high
+**Status**: resolved
+**Area**: content
+
+### Summary
+The Science final-checkpoint author scan reported no accepted-corpus collisions but missed a direct easy-clue duplicate and explanation-to-answer leak.
+
+### Error
+```
+New set-060:red-blood-cells-oxygen duplicates accepted easy clue built-in-science-nature-accessible-easy-020, including the canonical source URL; that easy explanation also teaches the new haemoglobin response.
+```
+
+### Context
+- The checkpoint report claimed zero aliases, facts, source URLs, themes, and internal text-answer mentions across 3,645 prior questions.
+- Independent review directly matched `content/generated/03-science-nature.en-et.csv:21` against the new blood-components category.
+- The accepted easy row uses singular `a red blood cell` / `punalible`, while the new row uses plurals, so exact normalized-string logic can miss the semantic duplicate.
+
+### Suggested Fix
+For every new category, scan singular/plural and inflected answer forms, direct source URLs, and accepted clue/explanation text for every new response; manually inspect any category sharing a broad domain with accepted easy categories.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `content/generated/03-science-nature.en-et.csv`, `scripts/content/playability/banks/packs01to04/scienceNature.ts`
+
+### Resolution
+- **Resolved**: 2026-08-30T17:51:28+03:00
+- **Notes**: Replaced both colliding records with fibrin and albumin, corrected the blood-category tier ramp, strengthened source-title/inflection/explanation scans, and obtained clean scoped re-review before primary integration.
+
+---
+
+## [ERR-20260830-015] ripgrep-windows-path-glob
+
+**Logged**: 2026-08-30T17:28:59+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: infra
+
+### Summary
+A PowerShell ripgrep command passed a wildcard in a directory argument that Windows did not expand.
+
+### Error
+```
+rg: content/generated/*.csv: IO error for operation on content/generated/*.csv: The filename, directory name, or volume label syntax is incorrect. (os error 123)
+```
+
+### Context
+- Operation attempted: directly search generated CSVs for the proposed Science blood-question answers and variants.
+- On this Windows invocation, `content/generated/*.csv` reached ripgrep as an invalid literal path.
+
+### Suggested Fix
+Pass the directory as the search path and express file selection with ripgrep's glob option: `rg -g '*.csv' PATTERN content/generated`.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `content/generated/*.csv`
+
+### Resolution
+- **Resolved**: 2026-08-30T17:28:59+03:00
+- **Notes**: Re-ran with `-g '*.csv'`; the intended corpus search completed successfully.
+
+---
+
+## [ERR-20260830-016] literature-checkpoint-source-and-contract-review
+
+**Logged**: 2026-08-30T17:35:20+03:00
+**Priority**: high
+**Status**: resolved
+**Area**: content
+
+### Summary
+Literature checkpoint verification treated a live disambiguation URL as valid proposition support and missed three bilingual answer-contract defects.
+
+### Error
+```
+The Namesake clue cited a live disambiguation page; The Snowman clue leaked its title stem; Pikakoivaline isa was missing; kerni keel and hawaii keel were accepted without Estonian authority.
+```
+
+### Context
+- All 55 URLs returned successful HTTP responses, but reachability alone did not establish clue-level support.
+- The validator did not stem inflected clue words such as `lumememmesid` back to the displayed response `Lumememm`.
+- Catalog/terminology checks correctly found primary forms but did not fully police missing editions and permissive variants.
+
+### Suggested Fix
+Combine live-source checks with title/content inspection, apply language-aware stem review to title-answer clues, and verify every localized accepted variant against catalog or EKI evidence rather than only checking the primary response.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `scripts/content/playability/banks/packs01to04/literatureLanguage.ts`
+
+### Resolution
+- **Resolved**: 2026-08-30T17:51:28+03:00
+- **Notes**: Corrected the Namesake source, Snowman clue, catalog title variant, and EKI variants; 55/55 sources and 224 focused tests passed, and scoped re-review approved the fix before primary integration.
+
+---
