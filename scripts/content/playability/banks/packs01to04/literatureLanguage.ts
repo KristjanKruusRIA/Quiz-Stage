@@ -899,7 +899,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-042:daddy-long-legs-judy-letters', factKey: 'literature-language:daddy-long-legs-judy-benefactor-letters', tier: 5, subjectKey: 'work:daddy-long-legs-novel',
-        clue: { en: 'Which Jean Webster novel has orphan Judy Abbott write monthly letters to the anonymous benefactor who pays for her college education?', et: 'Millises Jean Websteri romaanis kirjutab orb Judy Abbott iga kuu kirju anonüümsele heategijale, kes maksab tema kolledžiõpingute eest?' }, response: { en: 'Daddy-Long-Legs', et: '„Pikkjalg-isa“' }, acceptedVariants: { en: ['Daddy Long-Legs', 'Pikkjalg-isa'], et: ['„Daddy-Long-Legs“', '„Daddy Long-Legs“'] },
+        clue: { en: 'Which Jean Webster novel has orphan Judy Abbott write monthly letters to the anonymous benefactor who pays for her college education?', et: 'Millises Jean Websteri romaanis kirjutab orb Judy Abbott iga kuu kirju anonüümsele heategijale, kes maksab tema kolledžiõpingute eest?' }, response: { en: 'Daddy-Long-Legs', et: '„Pikkjalg-isa“' }, acceptedVariants: { en: ['Daddy Long-Legs', 'Pikkjalg-isa'], et: ['„Daddy-Long-Legs“', '„Daddy Long-Legs“', '„Pikakoivaline isa“'] },
         explanation: { en: 'Judy gives the unseen trustee a nickname from his elongated shadow, and her letters trace her growing independence.', et: 'Judy annab nägemata usaldusisikule tema pika varju järgi hüüdnime ning kirjad jälgivad neiu kasvavat iseseisvust.' },
         source: { sourceId: 'wikipedia:daddy-long-legs-judy-letters', title: 'Daddy-Long-Legs (novel)', url: 'https://en.wikipedia.org/wiki/Daddy-Long-Legs_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1025,7 +1025,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-046:snowman-harry-hole', factKey: 'literature-language:snowman-harry-hole-serial-killer', tier: 2, subjectKey: 'work:the-snowman-nesbo',
-        clue: { en: 'Which Jo Nesbø novel has Oslo detective Harry Hole pursue a serial killer who leaves snowmen at crime scenes?', et: 'Millises Jo Nesbø romaanis jälitab Oslo uurija Harry Hole sarimõrvarit, kes jätab kuriteopaikadele lumememmesid?' }, response: { en: 'The Snowman', et: '„Lumememm“' }, acceptedVariants: { en: ['Snowman', 'Lumememm'], et: ['„The Snowman“'] },
+        clue: { en: 'Which Jo Nesbø novel has Oslo detective Harry Hole pursue a serial killer whose recurring crime-scene signature is a childlike winter figure built outdoors?', et: 'Millises Jo Nesbø romaanis jälitab Oslo uurija Harry Hole sarimõrvarit, kelle korduvaks allkirjaks kuriteopaikadel on õue ehitatud lapsemeelne talvekuju?' }, response: { en: 'The Snowman', et: '„Lumememm“' }, acceptedVariants: { en: ['Snowman', 'Lumememm'], et: ['„The Snowman“'] },
         explanation: { en: 'Missing women and the recurring winter figure lead Hole toward a pattern concealed across years.', et: 'Kadunud naised ja korduv talvine kuju juhivad Hole’i aastate taha peidetud mustrini.' },
         source: { sourceId: 'wikipedia:snowman-harry-hole', title: 'The Snowman (Nesbø novel)', url: 'https://en.wikipedia.org/wiki/The_Snowman_(Nesb%C3%B8_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1097,7 +1097,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-048:cornish-kernewek-revival', factKey: 'literature-language:cornish-kernewek-celtic-revival', tier: 2, subjectKey: 'language:cornish',
-        clue: { en: 'Which Celtic language is again taught and spoken in Cornwall after losing its traditional community of native speakers?', et: 'Millist keldi keelt õpetatakse ja räägitakse Cornwallis taas pärast traditsioonilise emakeelse kogukonna kadumist?' }, response: { en: 'Cornish', et: 'korni keel' }, acceptedVariants: { en: ['Kernewek', 'Cornish language'], et: ['kerni keel', 'Kernewek'] },
+        clue: { en: 'Which Celtic language is again taught and spoken in Cornwall after losing its traditional community of native speakers?', et: 'Millist keldi keelt õpetatakse ja räägitakse Cornwallis taas pärast traditsioonilise emakeelse kogukonna kadumist?' }, response: { en: 'Cornish', et: 'korni keel' }, acceptedVariants: { en: ['Kernewek', 'Cornish language'], et: ['Kernewek'] },
         explanation: { en: 'Revivalists used surviving literature, dictionaries, and related Celtic languages to return Cornish to public and family life.', et: 'Taaselustajad kasutasid säilinud kirjandust, sõnaraamatuid ja sugulaskeeli, et tuua korni keel tagasi avalikku ja pereellu.' },
         source: { sourceId: 'wikipedia:cornish-kernewek-revival', title: 'Cornish language', url: 'https://en.wikipedia.org/wiki/Cornish_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1109,7 +1109,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-048:hawaiian-immersion-schools', factKey: 'literature-language:hawaiian-language-immersion-revival', tier: 4, subjectKey: 'language:hawaiian',
-        clue: { en: 'Which Polynesian language of the United States’ island state rebounded through local-language preschools and immersion schools after English displaced it from most classrooms?', et: 'Milline USA saar-osariigi polüneesia keel hakkas taastuma kohalike lasteaedade ja keelekümbluskoolide kaudu pärast seda, kui inglise keel oli selle enamikust klassiruumidest välja tõrjunud?' }, response: { en: 'Hawaiian', et: 'havai keel' }, acceptedVariants: { en: ['Hawaiian language', 'ʻŌlelo Hawaiʻi'], et: ['hawaii keel', 'ʻŌlelo Hawaiʻi'] },
+        clue: { en: 'Which Polynesian language of the United States’ island state rebounded through local-language preschools and immersion schools after English displaced it from most classrooms?', et: 'Milline USA saar-osariigi polüneesia keel hakkas taastuma kohalike lasteaedade ja keelekümbluskoolide kaudu pärast seda, kui inglise keel oli selle enamikust klassiruumidest välja tõrjunud?' }, response: { en: 'Hawaiian', et: 'havai keel' }, acceptedVariants: { en: ['Hawaiian language', 'ʻŌlelo Hawaiʻi'], et: ['ʻŌlelo Hawaiʻi'] },
         explanation: { en: 'Families and educators created a path from early childhood through university in Hawaiian, producing new generations of speakers.', et: 'Pered ja õpetajad lõid havaikeelse õpitee varasest lapsepõlvest ülikoolini ning kasvatasid uusi kõnelejate põlvkondi.' },
         source: { sourceId: 'wikipedia:hawaiian-immersion-schools', title: 'Hawaiian language', url: 'https://en.wikipedia.org/wiki/Hawaiian_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1129,7 +1129,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-049:namesake-gogol-ganguly', factKey: 'literature-language:namesake-gogol-ganguly-indian-american', tier: 1, subjectKey: 'work:the-namesake',
         clue: { en: 'Which Jhumpa Lahiri novel follows Gogol Ganguli as he grows up between his Bengali parents’ traditions and life in the United States?', et: 'Milline Jhumpa Lahiri romaan jälgib Gogol Gangulit, kes kasvab bengali vanemate traditsioonide ja Ameerika Ühendriikide elu vahel?' }, response: { en: 'The Namesake', et: '„Nimekaim“' }, acceptedVariants: { en: ['Namesake', 'Nimekaim'], et: ['„The Namesake“'] },
         explanation: { en: 'Gogol’s unusual name ties family memory to his struggle over belonging, independence, and inheritance.', et: 'Gogoli ebatavaline nimi seob perekonnamälu tema võitlusega kuuluvuse, iseseisvuse ja pärandi üle.' },
-        source: { sourceId: 'wikipedia:namesake-gogol-ganguly', title: 'The Namesake', url: 'https://en.wikipedia.org/wiki/The_Namesake', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:namesake-gogol-ganguly', title: 'The Namesake', url: 'https://en.wikipedia.org/wiki/The_Namesake_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-049:americanah-ifemelu-blog', factKey: 'literature-language:americanah-ifemelu-nigeria-us-blog', tier: 2, subjectKey: 'work:americanah',
