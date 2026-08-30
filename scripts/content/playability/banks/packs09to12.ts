@@ -2644,7 +2644,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-063:question:2', factKey: 'built-in-food-drink:checkpoint3:clam-chowder-new-england-shellfish-cream', tier: 2, subjectKey: 'dish:clam-chowder',
-        clue: { en: 'This creamy soup from the northeastern United States combines milk or cream, potatoes, and bivalve shellfish. What is it called?', et: 'Ameerika Ühendriikide kirdeosast pärit kreemjas supp sisaldab piima või koort, kartuleid ja kahepoolmeliste molluskite liha. Mis supp see on?' },
+        clue: { en: 'This creamy soup from the northeastern United States combines milk or cream, potatoes, and bivalve shellfish. What is it called?', et: 'Ameerika Ühendriikide kirdeosast pärit kreemjas supp sisaldab piima või koort, kartuleid ja karpide liha. Mis supp see on?' },
         response: { en: 'clam chowder', et: 'clam chowder' }, acceptedVariants: { en: ['New England clam chowder'], et: ['Uus-Inglismaa merekarbisupp'] },
         explanation: { en: 'New England clam chowder is the creamy regional style, distinct from Manhattan’s tomato-based version.', et: 'Uus-Inglismaa merekarbisupp on kreemjas piirkondlik variant, mis erineb Manhattani tomatipõhisest versioonist.' },
         source: { sourceId: 'wikipedia:clam_chowder', title: 'Clam chowder', url: 'https://en.wikipedia.org/wiki/Clam_chowder', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
