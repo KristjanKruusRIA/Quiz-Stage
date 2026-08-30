@@ -106,7 +106,7 @@ Task 43: complete (baseline `cc4fe45`; clean release gate, installer and portabl
 
 Task 12 (playable corpus): in-progress checkpoint handoff for `feat/playable-medium-hard-corpus`
 - `origin/main` is `220c7d2`: Adult/Estonia and the verified 1,600-clue accessible-easy corpus are already published. The medium/hard branch merged that exact baseline at `80b90e0`.
-- Latest corpus implementation commits are `84f5d78` + `60a4952`. Reviewed History and Geography are complete; Science checkpoint 3 is integrated and independently approved at 33/66 categories (165/330 clues, 17 medium/16 hard).
-- Fresh primary gates after Science checkpoint 3: exact target order/count, scoped ESLint, `git diff --check`, 3 focused files / 226 tests, and `npm run typecheck` all pass; the tracked worktree is clean.
-- Literature checkpoint 1 is the active authoring lane for its first 11 targets / 55 hard clues. Science checkpoint 4 is fully briefed for the next 11 targets but must not be dispatched concurrently with another implementer.
-- Resume from `.superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/progress.md`; do not redo easy publication, Adult/Estonia integration, or Science checkpoints 1–3. Continue Task 4 lane review before Task 8/Task 10 publication and Windows-only acceptance.
+- Reviewed History and Geography are complete. Science checkpoints 1–4 are integrated through `9993ef3` at 44/66 categories (220/330 clues, 17 medium/27 hard); Literature checkpoint 1 is integrated through `1e53b7f` at 11/66 categories (55/330 hard clues).
+- Fresh primary gates after both integrations: exact target order/count, scoped ESLint across all approved Task 4 modules, `git diff --check`, 3 focused files / 226 tests, and `npm run typecheck` all pass; the tracked worktree is clean.
+- Active isolated lanes: Science checkpoint 5 (`e569509` base, next 11 targets / 55 clues) and Literature checkpoint 2 (`7a785fc` base, next 11 targets / 55 clues). Both may author in parallel but require independent review before primary integration.
+- Resume from `.superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/progress.md`; do not redo easy publication, Adult/Estonia integration, Science checkpoints 1–4, or Literature checkpoint 1. Continue Task 4 lane review before Task 8/Task 10 publication and Windows-only acceptance.
