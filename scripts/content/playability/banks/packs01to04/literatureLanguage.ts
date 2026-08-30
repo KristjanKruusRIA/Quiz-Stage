@@ -1991,7 +1991,7 @@ const rawCategories = [
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-057:ohenry-william-porter', factKey: 'literature-language:william-sydney-porter-pen-name-ohenry', tier: 1, subjectKey: 'author:o-henry',
-        clue: { en: 'Which pen name did William Sydney Porter use for twist-ending stories such as “The Gift of the Magi” and “The Last Leaf”?', et: 'Millise varjunime all kirjutas William Sydney Porter ootamatu lõpuga jutud „The Gift of the Magi“ ja „The Last Leaf“?' }, response: { en: 'O. Henry', et: 'O. Henry' }, acceptedVariants: { en: ['O Henry'], et: ['O Henry'] },
+        clue: { en: 'Which pen name did William Sydney Porter use for twist-ending stories such as “The Gift of the Magi” and “The Last Leaf”?', et: 'Millise varjunime all kirjutas William Sydney Porter ootamatu lõpuga „Maagide kingituse“ ning Behrmani ja luuderohulehe loo?' }, response: { en: 'O. Henry', et: 'O. Henry' }, acceptedVariants: { en: ['O Henry'], et: ['O Henry'] },
         explanation: { en: 'Porter published hundreds of short stories under the name O. Henry, becoming especially known for playful coincidence and surprise endings.', et: 'Porter avaldas O. Henry nime all sadu novelle ning sai eriti tuntuks mänguliste kokkusattumuste ja üllatuslõppude poolest.' },
         source: { sourceId: 'wikipedia:ohenry-william-porter', title: 'O. Henry', url: 'https://en.wikipedia.org/wiki/O._Henry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -2023,7 +2023,7 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-058', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
-    name: { en: 'Famous Addresses on the Page', et: 'Kuulsad aadressid raamatulehel' },
+    name: { en: 'Character Homes and Haunts', et: 'Tegelaste kodud ja paigad' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-058:221b-sherlock-holmes', factKey: 'literature-language:221b-baker-street-holmes-watson-home', tier: 1, subjectKey: 'place:221b-baker-street',
@@ -2038,20 +2038,20 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:bag-end-bilbo-frodo', title: 'Bag End', url: 'https://en.wikipedia.org/wiki/Bag_End', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-058:pemberley-darcy-estate', factKey: 'literature-language:pemberley-darcy-derbyshire-estate', tier: 3, subjectKey: 'place:pemberley',
-        clue: { en: 'What Derbyshire estate does Elizabeth Bennet tour before unexpectedly meeting its owner, Mr Darcy?', et: 'Millist Derbyshire’i mõisa külastab Elizabeth Bennet, enne kui kohtub seal ootamatult mõisaomanik härra Darcyga?' }, response: { en: 'Pemberley', et: 'Pemberley' }, acceptedVariants: { en: [], et: [] },
+        key: 'playable-literature-language:built-in-literature-language-set-058:pemberley-darcy-estate', factKey: 'literature-language:pemberley-darcy-country-estate', tier: 3, subjectKey: 'place:pemberley',
+        clue: { en: 'What country estate does Elizabeth Bennet tour before unexpectedly meeting its owner, Mr Darcy?', et: 'Millist maamõisa külastab Elizabeth Bennet, enne kui kohtub seal ootamatult mõisaomanik härra Darcyga?' }, response: { en: 'Pemberley', et: 'Pemberley' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'The house, grounds, and housekeeper’s account help Elizabeth reassess Darcy away from the pressures of earlier encounters.', et: 'Maja, park ja majapidajanna jutustus aitavad Elizabethil Darcyt varasematest pingelistest kohtumistest eemal uue pilguga näha.' },
         source: { sourceId: 'wikipedia:pemberley-darcy-estate', title: 'Pemberley', url: 'https://en.wikipedia.org/wiki/Pemberley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-058:moominvalley-jansson-home', factKey: 'literature-language:moominvalley-jansson-family-home', tier: 4, subjectKey: 'place:moominvalley',
-        clue: { en: 'What peaceful valley is home to Moomintroll, Moominmamma, Moominpappa, and their tall blue house?', et: 'Milline rahulik org on Muumitrolli, Muumimamma, Muumipapa ja nende kõrge sinise maja kodu?' }, response: { en: 'Moominvalley', et: 'Muumiorg' }, acceptedVariants: { en: ['Moomin Valley', 'Muumiorg'], et: ['Moominvalley', 'Moomin Valley'] },
+        clue: { en: 'What peaceful fictional valley is where the Moomins live in the book series that began in 1945?', et: 'Millises rahulikus väljamõeldud orus elavad 1945. aastal alanud raamatusarja muumid?' }, response: { en: 'Moominvalley', et: 'Muumiorg' }, acceptedVariants: { en: ['Moomin Valley', 'Muumiorg'], et: ['Moominvalley', 'Moomin Valley'] },
         explanation: { en: 'The valley provides a welcoming home base even as floods, comets, winter, and visitors repeatedly disrupt ordinary life.', et: 'Org on turvaline kodupaik, kuigi üleujutused, komeedid, talv ja külalised argielu korduvalt segavad.' },
         source: { sourceId: 'wikipedia:moominvalley-jansson-home', title: 'Moominvalley', url: 'https://en.wikipedia.org/wiki/Moominvalley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-058:blandings-castle-emsworth', factKey: 'literature-language:blandings-castle-lord-emsworth-empress', tier: 5, subjectKey: 'place:blandings-castle',
-        clue: { en: 'What country estate is the home of P. G. Wodehouse’s absent-minded Lord Emsworth and his prize pig, the Empress?', et: 'Milline maamõis on P. G. Wodehouse’i hajameelse lord Emsworthi ja tema auhinnasea Empressi kodu?' }, response: { en: 'Blandings Castle', et: 'Blandingsi loss' }, acceptedVariants: { en: ['Blandings'], et: ['Blandings', 'Blandings Castle'] },
+        clue: { en: 'What country house is the home of P. G. Wodehouse’s absent-minded Lord Emsworth and his prize pig, the Empress?', et: 'Milline maamaja on P. G. Wodehouse’i hajameelse lord Emsworthi ja tema auhinnasea Empressi kodu?' }, response: { en: 'Blandings Castle', et: 'Blandingsi loss' }, acceptedVariants: { en: ['Blandings'], et: ['Blandings', 'Blandings Castle'] },
         explanation: { en: 'The recurring setting hosts comic battles over family expectations, unwanted guests, romance, and the care of the celebrated pig.', et: 'Korduvas tegevuspaigas põrkuvad koomiliselt perekonna ootused, soovimatud külalised, armulood ja kuulsa sea eest hoolitsemine.' },
         source: { sourceId: 'wikipedia:blandings-castle-emsworth', title: 'Blandings Castle', url: 'https://en.wikipedia.org/wiki/Blandings_Castle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -2065,7 +2065,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-059:pequod-ahab-whale', factKey: 'literature-language:pequod-ahab-white-whale-voyage', tier: 1, subjectKey: 'ship:pequod',
         clue: { en: 'What whaling ship does Melville’s Captain Ahab command on his obsessive hunt for the white whale?', et: 'Millist vaalapüügilaeva juhib Melville’i kapten Ahab, kui ajab kinnisideeliselt taga valget vaala?' }, response: { en: 'the Pequod', et: 'Pequod' }, acceptedVariants: { en: ['Pequod'], et: ['the Pequod'] },
         explanation: { en: 'Ishmael signs aboard the vessel in Nantucket, unaware that Ahab intends to turn a commercial voyage into a personal pursuit.', et: 'Ishmael astub Nantucketis laevale, teadmata, et Ahab kavatseb muuta kaubaretke isiklikuks kättemaksujahiks.' },
-        source: { sourceId: 'wikipedia:pequod-ahab-whale', title: 'Pequod (Moby-Dick)', url: 'https://en.wikipedia.org/wiki/Pequod', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:pequod-ahab-whale', title: 'Pequod (Moby-Dick)', url: 'https://en.wikipedia.org/wiki/Pequod_(Moby-Dick)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-059:dawn-treader-caspian-voyage', factKey: 'literature-language:dawn-treader-caspian-seven-lords', tier: 2, subjectKey: 'ship:dawn-treader',
@@ -2088,7 +2088,7 @@ const rawCategories = [
       {
         key: 'playable-literature-language:built-in-literature-language-set-059:patna-lord-jim-abandonment', factKey: 'literature-language:patna-lord-jim-pilgrim-ship-abandoned', tier: 5, subjectKey: 'ship:patna',
         clue: { en: 'What pilgrim ship does the young officer Jim abandon after its crew believes it is about to sink in Joseph Conrad’s Lord Jim?', et: 'Millise palverändurite laeva jätab noor tüürimees Jim Joseph Conradi „Lord Jimis“ maha, kui meeskond usub, et alus hakkab uppuma?' }, response: { en: 'the Patna', et: 'Patna' }, acceptedVariants: { en: ['Patna'], et: ['the Patna'] },
-        explanation: { en: 'The ship remains afloat and is rescued, so Jim must face an inquiry and a lasting crisis of honour.', et: 'Laev jääb siiski vee peale ja päästetakse, mistõttu Jim peab vastama uurimisel ning elama püsiva aukriisiga.' },
+        explanation: { en: 'The ship remains afloat and is rescued, so Jim must face an inquiry and a lasting crisis of honour.', et: 'Laev jääb siiski vee peale ja päästetakse, mistõttu Jim peab uurimisel aru andma ning elama edasi kahjustatud mainega.' },
         source: { sourceId: 'wikipedia:patna-lord-jim-abandonment', title: 'Lord Jim', url: 'https://en.wikipedia.org/wiki/Lord_Jim', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
@@ -2125,7 +2125,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-060:neuromancer-dead-channel-sky', factKey: 'literature-language:neuromancer-opens-chiba-sky-dead-channel', tier: 5, subjectKey: 'work:neuromancer',
         clue: { en: 'Which William Gibson novel opens in Chiba City by comparing the sky above the port to a television tuned to a dead channel?', et: 'Milline William Gibsoni romaan algab Chiba linnas, võrreldes sadama kohal olevat taevast tühjale kanalile häälestatud teleriekraaniga?' }, response: { en: 'Neuromancer', et: '„Neuromant“' }, acceptedVariants: { en: ['Neuromant'], et: ['„Neuromancer“'] },
         explanation: { en: 'The image introduces Case’s neon-lit world before the damaged hacker is offered a way back into cyberspace.', et: 'Kujund avab Case’i neoonvalguses maailma, enne kui kahjustatud häkkerile pakutakse võimalust küberruumi naasta.' },
-        source: { sourceId: 'wikipedia:neuromancer-dead-channel-sky', title: 'Neuromancer', url: 'https://en.wikipedia.org/wiki/Neuromancer', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikiquote:neuromancer-dead-channel-sky', title: 'Neuromancer', url: 'https://en.wikiquote.org/wiki/Neuromancer', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -2140,10 +2140,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:anagram-rearranged-letters', title: 'Anagram', url: 'https://en.wikipedia.org/wiki/Anagram', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-061:homophone-knight-night', factKey: 'literature-language:homophone-same-sound-different-meaning', tier: 2, subjectKey: 'device:homophone',
-        clue: { en: 'What term describes words such as “knight” and “night” that sound alike but differ in spelling and meaning?', et: 'Kuidas nimetatakse sõnu, mis kõlavad ühtemoodi, kuid erinevad kirjapildi ja tähenduse poolest, nagu inglise knight ja night?' }, response: { en: 'homophones', et: 'homofoonid' }, acceptedVariants: { en: ['a homophone', 'homophone'], et: ['homofoon'] },
+        key: 'playable-literature-language:built-in-literature-language-set-061:homophone-to-too-two', factKey: 'literature-language:homophone-same-sound-different-meaning', tier: 2, subjectKey: 'device:homophone',
+        clue: { en: 'What term describes words such as “to”, “too”, and “two” that sound alike but differ in spelling or meaning?', et: 'Kuidas nimetatakse sõnu, mis kõlavad ühtemoodi, kuid erinevad kirjapildi või tähenduse poolest, nagu inglise to, too ja two?' }, response: { en: 'homophones', et: 'homofoonid' }, acceptedVariants: { en: ['a homophone', 'homophone'], et: ['homofoon'] },
         explanation: { en: 'The name combines Greek roots for “same” and “sound”; such pairs often power puns and spelling jokes.', et: 'Nimetus ühendab kreeka tüved „sama“ ja „heli“ ning sellised paarid annavad sageli ainest kalambuuridele ja õigekirjanaljadele.' },
-        source: { sourceId: 'wikipedia:homophone-knight-night', title: 'Homophone', url: 'https://en.wikipedia.org/wiki/Homophone', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:homophone-to-too-two', title: 'Homophone', url: 'https://en.wikipedia.org/wiki/Homophone', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-061:acrostic-first-letters', factKey: 'literature-language:acrostic-line-initials-spell-message', tier: 3, subjectKey: 'device:acrostic',
@@ -2153,7 +2153,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-061:oxymoron-contradictory-terms', factKey: 'literature-language:oxymoron-joins-contradictory-terms', tier: 4, subjectKey: 'device:oxymoron',
-        clue: { en: 'What figure of speech places apparently contradictory terms together, as in “deafening silence”?', et: 'Milline kõnekujund ühendab näiliselt vasturääkivad sõnad, nagu väljendis „kõrvulukustav vaikus“?' }, response: { en: 'an oxymoron', et: 'oksüümoron' }, acceptedVariants: { en: ['oxymoron', 'oksüümoron'], et: ['oxymoron'] },
+        clue: { en: 'What figure of speech places apparently contradictory terms together, as in “bittersweet”?', et: 'Milline kõnekujund ühendab näiliselt vasturääkivad mõisted, nagu sõnas „mõrkjasmagus“?' }, response: { en: 'an oxymoron', et: 'oksüümoron' }, acceptedVariants: { en: ['oxymoron', 'oksüümoron'], et: ['oxymoron'] },
         explanation: { en: 'The compact contradiction can sharpen an idea by making the reader hold two opposing qualities at once.', et: 'Kompaktne vastuolu võib mõtet teravdada, sundides lugejat korraga arvestama kahe vastandliku omadusega.' },
         source: { sourceId: 'wikipedia:oxymoron-contradictory-terms', title: 'Oxymoron', url: 'https://en.wikipedia.org/wiki/Oxymoron', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -2183,13 +2183,13 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-062:ellipsis-three-dots', factKey: 'literature-language:ellipsis-three-dots-omission-trailing-off', tier: 3, subjectKey: 'punctuation:ellipsis',
-        clue: { en: 'Which mark of three dots can show omitted words in a quotation or a voice trailing off?', et: 'Milline kolmest punktist koosnev märk võib näidata tsitaadist välja jäetud sõnu või hääle vaibumist?' }, response: { en: 'an ellipsis', et: 'mõttepunktid' }, acceptedVariants: { en: ['ellipsis', 'mõttepunktid'], et: ['ellipsis', 'kolm punkti'] },
+        clue: { en: 'Which mark of three dots can show omitted words in a quotation or a voice trailing off?', et: 'Milline kolmest punktist koosnev märk võib näidata tsitaadist välja jäetud sõnu või hääle vaibumist?' }, response: { en: 'an ellipsis', et: 'mõttepunktid' }, acceptedVariants: { en: ['ellipsis', 'mõttepunktid'], et: ['ellipsis'] },
         explanation: { en: 'Its interpretation depends on context: editors mark a gap, while dialogue often uses it for hesitation or an unfinished thought.', et: 'Tähendus sõltub kontekstist: toimetaja märgib sellega väljajätet, dialoogis osutab see sageli kõhklusele või lõpetamata mõttele.' },
         source: { sourceId: 'wikipedia:ellipsis-three-dots', title: 'Ellipsis', url: 'https://en.wikipedia.org/wiki/Ellipsis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-062:em-dash-interruption', factKey: 'literature-language:em-dash-long-interruption-emphasis', tier: 4, subjectKey: 'punctuation:em-dash',
-        clue: { en: 'Which long horizontal punctuation mark, named for the width of a typesetter’s letter M, often signals an interruption or emphatic aside?', et: 'Milline pikk rõhtne kirjavahemärk, mis sai nime ladumistähe M laiuse järgi, märgib sageli katkestust või rõhutatud kiilu?' }, response: { en: 'an em dash', et: 'pikk mõttekriips' }, acceptedVariants: { en: ['em dash', 'em rule', 'pikk mõttekriips'], et: ['em dash', 'em-kriips'] },
+        clue: { en: 'Which long horizontal punctuation mark often signals an interruption or sets off an emphatic aside?', et: 'Milline pikk rõhtne kirjavahemärk märgib sageli katkestust või eraldab rõhutatud kiilu?' }, response: { en: 'an em dash', et: 'pikk mõttekriips' }, acceptedVariants: { en: ['em dash', 'em rule', 'pikk mõttekriips'], et: ['em dash', 'em-kriips'] },
         explanation: { en: 'Writers use it more forcefully than commas or parentheses to set off material or break a sentence’s flow.', et: 'Kirjutajad eraldavad sellega lauseosa või katkestavad lause kulgu jõulisemalt kui komade või sulgudega.' },
         source: { sourceId: 'wikipedia:em-dash-interruption', title: 'Dash', url: 'https://en.wikipedia.org/wiki/Dash', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -2203,19 +2203,19 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-063', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
-    name: { en: 'Trials Take Centre Stage', et: 'Kohtuprotsessid loo keskmes' },
+    name: { en: 'Law Drives the Plot', et: 'Seadus viib loo edasi' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-063:twelve-angry-men-jurors', factKey: 'literature-language:twelve-angry-men-jurors-deliberate-murder', tier: 1, subjectKey: 'work:twelve-angry-men',
         clue: { en: 'Which Reginald Rose play follows a jury deliberating a murder charge after Juror 8 refuses to join an immediate guilty vote?', et: 'Milline Reginald Rose’i näidend jälgib mõrvasüüdistust arutavat vandekohut pärast seda, kui vandekohtunik number 8 keeldub kohe süüdimõistmise poolt hääletamast?' }, response: { en: 'Twelve Angry Men', et: '„12 vihast meest“' }, acceptedVariants: { en: ['12 Angry Men', '12 vihast meest'], et: ['„Twelve Angry Men“'] },
         explanation: { en: 'Almost all the action unfolds in the jury room as doubts about the evidence expose the men’s assumptions and prejudices.', et: 'Peaaegu kogu tegevus toimub vandekohtu toas, kus kahtlused tõendites paljastavad meeste eelarvamused ja oletused.' },
-        source: { sourceId: 'wikipedia:twelve-angry-men-jurors', title: 'Twelve Angry Men (play)', url: 'https://en.wikipedia.org/wiki/12_Angry_Men_(play)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:twelve-angry-men-jurors', title: 'Twelve Angry Men (1964 play)', url: 'https://en.wikipedia.org/wiki/Twelve_Angry_Men_(1964_play)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-063:time-kill-jake-brigance', factKey: 'literature-language:time-kill-jake-brigance-carl-lee-trial', tier: 2, subjectKey: 'work:a-time-to-kill',
         clue: { en: 'Which novel has defence lawyer Jake Brigance represent Carl Lee Hailey after the father kills the men who attacked his daughter?', et: 'Millises romaanis kaitseb advokaat Jake Brigance Carl Lee Haileyt, kui isa tapab tema tütart rünnanud mehed?' }, response: { en: 'A Time to Kill', et: '„Aeg tappa“' }, acceptedVariants: { en: ['Time to Kill', 'Aeg tappa'], et: ['„A Time to Kill“'] },
         explanation: { en: 'The trial places race, vengeance, and the possibility of an impartial decision at the centre of the story.', et: 'Kohtuprotsess seab loo keskmesse rassi, kättemaksu ja erapooletu otsuse võimalikkuse.' },
-        source: { sourceId: 'wikipedia:time-kill-jake-brigance', title: 'A Time to Kill (novel)', url: 'https://en.wikipedia.org/wiki/A_Time_to_Kill_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:time-kill-jake-brigance', title: 'A Time to Kill (Grisham novel)', url: 'https://en.wikipedia.org/wiki/A_Time_to_Kill_(Grisham_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-063:lincoln-lawyer-mickey-haller', factKey: 'literature-language:lincoln-lawyer-mickey-haller-car-office', tier: 3, subjectKey: 'work:the-lincoln-lawyer',
@@ -2251,12 +2251,12 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-064:butterbeer-hogsmeade', factKey: 'literature-language:butterbeer-hogsmeade-three-broomsticks', tier: 2, subjectKey: 'drink:butterbeer',
         clue: { en: 'What warm wizarding drink do Harry Potter and his friends order at the Three Broomsticks in Hogsmeade?', et: 'Millist sooja võlurite jooki tellivad Harry Potter ja tema sõbrad Siganurme Kolme Luua kõrtsis?' }, response: { en: 'butterbeer', et: 'võiõlu' }, acceptedVariants: { en: ['butter beer', 'võiõlu'], et: ['butterbeer', 'butter beer'] },
         explanation: { en: 'The mildly intoxicating drink is a popular treat among young witches and wizards visiting the village.', et: 'Kergelt joovastav jook on küla külastavate noorte nõidade ja võlurite seas populaarne maius.' },
-        source: { sourceId: 'wikipedia:butterbeer-hogsmeade', title: 'Fictional universe of Harry Potter', url: 'https://en.wikipedia.org/wiki/Fictional_universe_of_Harry_Potter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:butterbeer-three-broomsticks', title: 'Places in Harry Potter', url: 'https://en.wikipedia.org/wiki/Places_in_Harry_Potter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-064:lembas-elven-waybread', factKey: 'literature-language:lembas-elven-waybread-fellowship', tier: 3, subjectKey: 'food:lembas',
-        clue: { en: 'What sustaining Elven waybread, wrapped in leaves, feeds members of the Fellowship on their long journey?', et: 'Milline lehtedesse mähitud toitev haldjate teeleib annab Sõrmuse Vennaskonna liikmetele pikal rännakul jõudu?' }, response: { en: 'lembas', et: 'lembas' }, acceptedVariants: { en: ['lembas bread'], et: ['lembase leib'] },
-        explanation: { en: 'A small amount stays fresh for long journeys and provides far more nourishment than ordinary bread.', et: 'Väike kogus säilib pikal teekonnal värskena ning toidab palju paremini kui tavaline leib.' },
+        clue: { en: 'What Elven waybread can keep a traveller on their feet through a day of long labour?', et: 'Milline haldjate teeleib suudab rändurit terve pika tööpäeva jalul hoida?' }, response: { en: 'lembas', et: 'lembas' }, acceptedVariants: { en: ['lembas bread'], et: ['lembase leib'] },
+        explanation: { en: 'Tolkien describes this Elvish food as unusually sustaining for travellers.', et: 'Tolkien kirjeldab seda haldjate toitu rändureid erakordselt hästi turgutavana.' },
         source: { sourceId: 'wikipedia:lembas-elven-waybread', title: 'Magic in Middle-earth', url: 'https://en.wikipedia.org/wiki/Magic_in_Middle-earth', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
@@ -2269,7 +2269,7 @@ const rawCategories = [
         key: 'playable-literature-language:built-in-literature-language-set-064:wonka-bar-chocolate', factKey: 'literature-language:wonka-bar-willy-wonka-chocolate', tier: 5, subjectKey: 'food:wonka-bar',
         clue: { en: 'What branded chocolate bar from Willy Wonka’s factory does Charlie Bucket buy in Roald Dahl’s novel?', et: 'Millise Willy Wonka vabriku nime kandva šokolaaditahvli ostab Charlie Bucket Roald Dahli romaanis?' }, response: { en: 'a Wonka Bar', et: 'Wonka šokolaad' }, acceptedVariants: { en: ['Wonka Bar', 'Wonka chocolate', 'Wonka šokolaad'], et: ['a Wonka Bar', 'Wonka Bar', 'Wonka šokolaaditahvel'] },
         explanation: { en: 'The fictional brand later became a real confectionery line, but it began as part of Wonka’s fantastic chocolate business.', et: 'Väljamõeldud kaubamärgist sai hiljem päris maiustustesari, kuid algselt kuulus see Wonka fantastilisse šokolaadiärisse.' },
-        source: { sourceId: 'wikipedia:wonka-bar-chocolate', title: 'Wonka Bar', url: 'https://en.wikipedia.org/wiki/Wonka_Bar', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        source: { sourceId: 'wikipedia:wonka-bar-charlie-novel', title: 'Charlie and the Chocolate Factory', url: 'https://en.wikipedia.org/wiki/Charlie_and_the_Chocolate_Factory', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -2278,57 +2278,57 @@ const rawCategories = [
     name: { en: 'School Gates in Fiction', et: 'Kooliväravad kirjanduses' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-065:lowood-jane-eyre', factKey: 'literature-language:lowood-jane-eyre-helen-burns-school', tier: 1, subjectKey: 'school:lowood',
-        clue: { en: 'What harsh charity school does young Jane attend with Helen Burns before she later returns there as a teacher?', et: 'Millises karmis heategevuskoolis õpib noor Jane koos Helen Burnsiga, enne kui naaseb sinna hiljem õpetajana?' }, response: { en: 'Lowood School', et: 'Lowoodi kool' }, acceptedVariants: { en: ['Lowood', 'Lowoodi kool'], et: ['Lowood School', 'Lowood'] },
-        explanation: { en: 'Mr Brocklehurst’s neglect leaves the pupils cold and hungry until an epidemic brings reforms to the institution.', et: 'Härra Brocklehursti hoolimatus jätab õpilased külma ja nälga, kuni epideemia toob kooli reformid.' },
-        source: { sourceId: 'wikisource:lowood-jane-eyre', title: 'Jane Eyre, Chapter V', url: 'https://en.wikisource.org/wiki/Jane_Eyre/Chapter_V', license: 'Public Domain', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-065:crunchem-hall-matilda', factKey: 'literature-language:crunchem-hall-matilda-trunchbull-honey', tier: 2, subjectKey: 'school:crunchem-hall',
-        clue: { en: 'What school brings together Roald Dahl’s gifted child heroine, kind Miss Honey, and terrifying headmistress Miss Trunchbull?', et: 'Millises koolis tegutsevad Roald Dahli andekas lapseealine kangelanna, lahke preili Honey ja hirmuäratav direktor preili Trunchbull?' }, response: { en: 'Crunchem Hall', et: 'Crunchem Hall' }, acceptedVariants: { en: ['Crunchem Hall Primary School'], et: ['Crunchem Hall Primary School'] },
+        key: 'playable-literature-language:built-in-literature-language-set-065:crunchem-hall-matilda', factKey: 'literature-language:crunchem-hall-matilda-trunchbull-honey', tier: 1, subjectKey: 'school:crunchem-hall',
+        clue: { en: 'What school brings together Roald Dahl’s gifted young heroine, kind Miss Honey, and terrifying headmistress Miss Trunchbull?', et: 'Millises koolis tegutsevad Roald Dahli andekas noor kangelanna, lahke preili Honey ja hirmuäratav direktor preili Trunchbull?' }, response: { en: 'Crunchem Hall', et: 'Crunchem Hall' }, acceptedVariants: { en: ['Crunchem Hall Primary School'], et: ['Crunchem Hall Primary School'] },
         explanation: { en: 'The school becomes the main arena for the child’s resistance to Trunchbull and her growing bond with Miss Honey.', et: 'Koolist saab lapse vastuhaku peamine tegevuspaik ning seal süveneb tema side preili Honeyga.' },
         source: { sourceId: 'wikipedia:crunchem-hall-matilda', title: 'Miss Trunchbull', url: 'https://en.wikipedia.org/wiki/Miss_Trunchbull', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-065:dotheboys-nicholas-nickleby', factKey: 'literature-language:dotheboys-hall-squeers-nicholas-nickleby', tier: 3, subjectKey: 'school:dotheboys-hall',
-        clue: { en: 'What boarding school is run by the brutal Wackford Squeers when Nicholas Nickleby arrives as an assistant master?', et: 'Millist internaatkooli juhib jõhker Wackford Squeers, kui Nicholas Nickleby saabub sinna abiõpetajaks?' }, response: { en: 'Dotheboys Hall', et: 'Dotheboys Hall' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Dickens uses the neglected boys and Squeers’s cruelty to attack abusive private schools of the period.', et: 'Dickens kasutab hooletusse jäetud poisse ja Squeersi julmust, et rünnata ajastu kuritarvitavaid erakoole.' },
-        source: { sourceId: 'wikipedia:dotheboys-nicholas-nickleby', title: 'Nicholas Nickleby', url: 'https://en.wikipedia.org/wiki/Nicholas_Nickleby', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-065:lowood-jane-eyre', factKey: 'literature-language:lowood-jane-eyre-helen-burns-school', tier: 2, subjectKey: 'school:lowood',
+        clue: { en: 'What harsh charity school does young Jane attend alongside Helen Burns under Mr Brocklehurst’s regime?', et: 'Millises karmis heategevuskoolis õpib noor Jane koos Helen Burnsiga härra Brocklehursti korra all?' }, response: { en: 'Lowood School', et: 'Lowoodi kool' }, acceptedVariants: { en: ['Lowood', 'Lowoodi kool'], et: ['Lowood School', 'Lowood'] },
+        explanation: { en: 'The pupils endure cold, hunger, and rigid discipline at the institution.', et: 'Õpilased peavad selles koolis taluma külma, nälga ja jäika korda.' },
+        source: { sourceId: 'wikisource:lowood-jane-eyre', title: 'Jane Eyre, Chapter VI', url: 'https://en.wikisource.org/wiki/Jane_Eyre/Chapter_VI', license: 'Public Domain', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-065:wayside-thirty-storeys', factKey: 'literature-language:wayside-school-thirty-storeys-classrooms', tier: 4, subjectKey: 'school:wayside',
-        clue: { en: 'What Louis Sachar school was accidentally built with one classroom on each of thirty storeys instead of thirty rooms on one floor?', et: 'Milline Louis Sachari kool ehitati kogemata kolmekümnekorruseliseks, igal korrusel üks klassiruum, mitte ühekorruseliseks kolmekümne klassiga hooneks?' }, response: { en: 'Wayside School', et: 'Pahupidi kool' }, acceptedVariants: { en: ['Wayside', 'Pahupidi kool'], et: ['Wayside School', 'Wayside'] },
-        explanation: { en: 'The absurd building houses equally unusual pupils and teachers, especially the class on the thirtieth floor.', et: 'Absurdne hoone mahutab sama ebatavalisi õpilasi ja õpetajaid, eriti kolmekümnenda korruse klassis.' },
-        source: { sourceId: 'wikipedia:wayside-thirty-storeys', title: 'Wayside School', url: 'https://en.wikipedia.org/wiki/Wayside_School', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-065:xavier-school-x-men', factKey: 'literature-language:xavier-school-gifted-youngsters-x-men-home', tier: 3, subjectKey: 'school:xavier-school-gifted-youngsters',
+        clue: { en: 'What school for young mutants is based in Professor X’s mansion and serves as a home and training site for the X-Men?', et: 'Milline noortele mutantidele mõeldud kool asub professor X-i mõisas ning on X-meeste kodu ja treeningupaik?' }, response: { en: 'Xavier’s School for Gifted Youngsters', et: 'Xavieri andekate noorte kool' }, acceptedVariants: { en: ['Xavier School for Gifted Youngsters', 'Xavier’s School', 'Xavieri andekate noorte kool'], et: ['Xavier’s School for Gifted Youngsters', 'Xavier School for Gifted Youngsters', 'Xavieri kool'] },
+        explanation: { en: 'Charles Xavier’s Westchester estate conceals both a private school and the X-Men’s headquarters.', et: 'Charles Xavieri Westchesteri mõis peidab nii erakooli kui ka X-meeste peakorterit.' },
+        source: { sourceId: 'wikipedia:xavier-school-x-men', title: 'X-Mansion', url: 'https://en.wikipedia.org/wiki/X-Mansion', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-065:miss-cackle-worst-witch', factKey: 'literature-language:miss-cackle-academy-mildred-hubble', tier: 5, subjectKey: 'school:miss-cackles-academy',
-        clue: { en: 'Which academy for young witches does accident-prone Mildred Hubble attend in Jill Murphy’s The Worst Witch books?', et: 'Millises noorte nõidade akadeemias õpib Jill Murphy „Nõrgima nõia“ raamatutes äpardustesse sattuv Mildred Hubble?' }, response: { en: 'Miss Cackle’s Academy', et: 'preili Cackle’i akadeemia' }, acceptedVariants: { en: ['Miss Cackles Academy', 'Cackle’s Academy'], et: ['Miss Cackle’s Academy', 'preili Cackle’i nõiakool'] },
-        explanation: { en: 'Mildred struggles with spells, broomstick flying, and strict Miss Hardbroom while headmistress Cackle remains sympathetic.', et: 'Mildredil on raskusi loitsude, luuasõidu ja range preili Hardbroomiga, kuid direktor Cackle suhtub temasse mõistvalt.' },
-        source: { sourceId: 'wikipedia:miss-cackle-worst-witch', title: 'The Worst Witch', url: 'https://en.wikipedia.org/wiki/The_Worst_Witch', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-065:battle-school-ender', factKey: 'literature-language:battle-school-ender-wiggin-zero-gravity-training', tier: 4, subjectKey: 'school:battle-school-ender',
+        clue: { en: 'What orbiting military school trains Ender Wiggin through increasingly difficult war games, including battles in zero gravity?', et: 'Milline orbiidil asuv sõjakool õpetab Ender Wigginit üha raskemate sõjamängudega, sealhulgas kaaluta olekus peetavate lahingutega?' }, response: { en: 'Battle School', et: 'Lahingukool' }, acceptedVariants: { en: ['the Battle School', 'Lahingukool'], et: ['Battle School', 'the Battle School'] },
+        explanation: { en: 'The International Fleet recruits gifted children there and uses competitive simulations to identify commanders.', et: 'Rahvusvaheline Laevastik värbab sinna andekaid lapsi ning otsib võistluslike simulatsioonidega väejuhte.' },
+        source: { sourceId: 'wikipedia:battle-school-ender', title: 'Ender’s Game', url: 'https://en.wikipedia.org/wiki/Ender%27s_Game', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-065:miskatonic-university-arkham', factKey: 'literature-language:miskatonic-university-arkham-lovecraft', tier: 5, subjectKey: 'school:miskatonic-university',
+        clue: { en: 'What fictional university in Arkham lends the town a scholarly air amid its supernatural horrors?', et: 'Milline väljamõeldud ülikool annab Arkhamile üleloomulike õuduste keskel õpetlasliku ilme?' }, response: { en: 'Miskatonic University', et: 'Miskatonic University' }, acceptedVariants: { en: ['Miskatonic'], et: ['Miskatonic'] },
+        explanation: { en: 'The New England institution recurs across cosmic-horror fiction and is associated with unsettling scholarship.', et: 'See Uus-Inglismaa õppeasutus kordub kosmilises õuduskirjanduses ning seostub kõhedust tekitavate uurimustega.' },
+        source: { sourceId: 'wikipedia:miskatonic-university-arkham', title: 'Arkham', url: 'https://en.wikipedia.org/wiki/Arkham', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
   {
     categorySetId: 'built-in-literature-language-set-066', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
-    name: { en: 'Famous Names Worn in Secret', et: 'Kuulsad nimed, mida kantakse salaja' },
+    name: { en: 'Fictional Nicknames and Alter Egos', et: 'Kirjanduslikud hüüdnimed ja salaidentiteedid' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-066:scarlet-pimpernel-sir-percy', factKey: 'literature-language:scarlet-pimpernel-secret-sir-percy-blakeney', tier: 1, subjectKey: 'alias:scarlet-pimpernel',
-        clue: { en: 'What heroic identity hides behind the foolish public persona of Sir Percy Blakeney as he rescues aristocrats during the Reign of Terror?', et: 'Milline kangelasnimi peitub kohtlasena näiva sir Percy Blakeney avaliku maski taga, kui ta päästab hirmuvalitsuse ajal aristokraate?' }, response: { en: 'the Scarlet Pimpernel', et: 'Punane Pimpernell' }, acceptedVariants: { en: ['Scarlet Pimpernel', 'Punane Pimpernell'], et: ['the Scarlet Pimpernel', 'Scarlet Pimpernel'] },
-        explanation: { en: 'Baroness Orczy’s hero leaves a small red flower as his sign while maintaining the disguise of an idle aristocrat.', et: 'Paruness Orczy kangelane jätab märgiks väikese punase lille ning hoiab samal ajal ülal laisa aristokraadi maski.' },
-        source: { sourceId: 'wikipedia:scarlet-pimpernel-sir-percy', title: 'The Scarlet Pimpernel', url: 'https://en.wikipedia.org/wiki/The_Scarlet_Pimpernel', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-066:zorro-don-diego', factKey: 'literature-language:zorro-secret-don-diego-de-la-vega', tier: 2, subjectKey: 'alias:zorro',
+        key: 'playable-literature-language:built-in-literature-language-set-066:zorro-don-diego', factKey: 'literature-language:zorro-secret-don-diego-de-la-vega', tier: 1, subjectKey: 'alias:zorro',
         clue: { en: 'Which masked swordsman is the secret identity of Don Diego de la Vega in stories set in colonial California?', et: 'Milline maskis mõõgamees on koloniaalaja Californias toimuvates lugudes Don Diego de la Vega salajane isik?' }, response: { en: 'Zorro', et: 'Zorro' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Johnston McCulley created the defender of ordinary people, who signs his work by cutting a Z with his sword.', et: 'Johnston McCulley loodud lihtrahva kaitsja jätab oma märgiks mõõgaga lõigatud Z-tähe.' },
         source: { sourceId: 'wikipedia:zorro-don-diego', title: 'Zorro', url: 'https://en.wikipedia.org/wiki/Zorro', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
+        key: 'playable-literature-language:built-in-literature-language-set-066:scarlet-pimpernel-sir-percy', factKey: 'literature-language:scarlet-pimpernel-secret-sir-percy-blakeney', tier: 2, subjectKey: 'alias:scarlet-pimpernel',
+        clue: { en: 'What heroic identity hides behind the foolish public persona of Sir Percy Blakeney as he rescues aristocrats during the Reign of Terror?', et: 'Milline kangelasnimi peitub kohtlasena näiva sir Percy Blakeney avaliku maski taga, kui ta päästab hirmuvalitsuse ajal aristokraate?' }, response: { en: 'the Scarlet Pimpernel', et: 'Punane Pimpernell' }, acceptedVariants: { en: ['Scarlet Pimpernel', 'Punane Pimpernell'], et: ['the Scarlet Pimpernel', 'Scarlet Pimpernel'] },
+        explanation: { en: 'Baroness Orczy’s hero leaves a small red flower as his sign while maintaining the disguise of an idle aristocrat.', et: 'Paruness Orczy kangelane jätab märgiks väikese punase lille ning hoiab samal ajal ülal laisa aristokraadi maski.' },
+        source: { sourceId: 'wikipedia:scarlet-pimpernel-sir-percy', title: 'The Scarlet Pimpernel', url: 'https://en.wikipedia.org/wiki/The_Scarlet_Pimpernel', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
         key: 'playable-literature-language:built-in-literature-language-set-066:dread-pirate-roberts-westley', factKey: 'literature-language:dread-pirate-roberts-title-inherited-westley', tier: 3, subjectKey: 'alias:dread-pirate-roberts',
         clue: { en: 'Which feared pirate identity does Westley inherit before returning to Buttercup in The Princess Bride?', et: 'Millise kardetud piraadi nime pärib Westley enne Buttercupi juurde naasmist teoses „Printsess pruut“?' }, response: { en: 'the Dread Pirate Roberts', et: 'Kohutav Piraat Roberts' }, acceptedVariants: { en: ['Dread Pirate Roberts', 'Kohutav Piraat Roberts'], et: ['the Dread Pirate Roberts', 'Dread Pirate Roberts'] },
-        explanation: { en: 'The reputation survives because each holder secretly passes the established name to a successor.', et: 'Maine püsib, sest iga nime kandja annab väljakujunenud isiku salaja edasi järgmisele järglasele.' },
+        explanation: { en: 'The reputation survives because each holder secretly passes the established name to a successor.', et: 'Maine püsib, sest iga nime kandja annab väljakujunenud identiteedi salaja edasi järgmisele kandjale.' },
         source: { sourceId: 'wikipedia:dread-pirate-roberts-westley', title: 'Dread Pirate Roberts', url: 'https://en.wikipedia.org/wiki/Dread_Pirate_Roberts', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
@@ -2351,7 +2351,7 @@ const rawCategories = [
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-067:samwise-frodo-mordor', factKey: 'literature-language:samwise-gamgee-accompanies-frodo-mordor', tier: 1, subjectKey: 'character:samwise-gamgee',
-        clue: { en: 'Which loyal gardener accompanies Frodo from the Shire into Mordor and carries him up Mount Doom when he can walk no farther?', et: 'Milline ustav aednik saadab Frodo Maakonnast Mordorisse ning kannab ta Hukatusmäel üles, kui Frodo enam kõndida ei suuda?' }, response: { en: 'Samwise Gamgee', et: 'Samwise Gamgee' }, acceptedVariants: { en: ['Sam Gamgee', 'Samwise', 'Sam'], et: ['Sam Gamgee', 'Samwise', 'Sam'] },
+        clue: { en: 'Which loyal gardener accompanies Frodo from the Shire into Mordor and carries him up Mount Doom when he can walk no farther?', et: 'Milline ustav aednik saadab Frodo Maakonnast Mordorisse ning kannab ta Hukatusmäel üles, kui Frodo enam kõndida ei suuda?' }, response: { en: 'Samwise Gamgee', et: 'Samwise Gamgee' }, acceptedVariants: { en: ['Sam Gamgee', 'Samwise'], et: ['Sam Gamgee', 'Samwise'] },
         explanation: { en: 'Sam’s practical care and refusal to abandon Frodo make him essential to completing the quest.', et: 'Sami praktiline hoolitsus ja keeldumine Frodot maha jätta muudavad ta ülesande täitmisel asendamatuks.' },
         source: { sourceId: 'wikipedia:samwise-frodo-mordor', title: 'Samwise Gamgee', url: 'https://en.wikipedia.org/wiki/Samwise_Gamgee', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
