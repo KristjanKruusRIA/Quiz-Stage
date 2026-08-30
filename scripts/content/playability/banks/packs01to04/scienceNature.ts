@@ -1539,6 +1539,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-science-nature-set-089', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Anatomy Built for Flight', et: 'Lennuks loodud kehaehitus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-089:keel-flight-muscle-anchor', factKey: 'science-nature:keel-flight-muscle-anchor', tier: 1, subjectKey: 'anatomy:bird-sternal-keel',
+        clue: { en: 'What deep ridge on a flying bird’s breastbone provides a broad anchor for the powerful muscles that drive the wings?', et: 'Milline sügav hari lendava linnu rinnakul annab laia kinnituspinna võimsatele tiibu liigutavatele lihastele?' }, response: { en: 'the keel', et: 'rinnakukiil' }, acceptedVariants: { en: ['sternal keel'], et: ['rinnaku kiil'] },
+        explanation: { en: 'The projecting ridge greatly enlarges the breastbone area available to the main flight muscles.', et: 'Väljaulatuv hari suurendab tunduvalt rinnaku pinda, millele kinnituvad peamised lennulihased.' },
+        source: { sourceId: 'wikipedia:bird-sternal-keel', title: 'Keel (bird anatomy)', url: 'https://en.wikipedia.org/wiki/Keel_(bird_anatomy)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-089:furcula-wishbone-brace', factKey: 'science-nature:furcula-wishbone-brace', tier: 2, subjectKey: 'bone:furcula',
+        clue: { en: 'Which V-shaped bone formed from fused collarbones braces a bird’s shoulder girdle and flexes during wing beats?', et: 'Milline kokkukasvanud rangluudest moodustunud V-kujuline luu toestab linnu õlavöödet ja paindub tiivalöökide ajal?' }, response: { en: 'the furcula', et: 'harkluu' }, acceptedVariants: { en: ['furcula', 'wishbone'], et: ['linnu harkluu'] },
+        explanation: { en: 'The fused collarbones act as a springy brace between the shoulders during flight.', et: 'Kokku kasvanud rangluud toimivad lennul õlgade vahel vetruva toena.' },
+        source: { sourceId: 'wikipedia:furcula-wishbone', title: 'Furcula', url: 'https://en.wikipedia.org/wiki/Furcula', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-089:air-sacs-continuous-airflow', factKey: 'science-nature:air-sacs-continuous-airflow', tier: 3, subjectKey: 'organ:avian-air-sacs',
+        clue: { en: 'Which thin-walled structures act like bellows so fresh air keeps moving through a bird’s rigid lungs during both inhalation and exhalation?', et: 'Millised õhukeseseinalised struktuurid toimivad lõõtsana, nii et värske õhk liigub läbi linnu jäikade kopsude nii sisse- kui ka väljahingamisel?' }, response: { en: 'air sacs', et: 'õhukotid' }, acceptedVariants: { en: ['avian air sacs'], et: ['linnu õhukotid'] },
+        explanation: { en: 'These reservoirs move air through the lungs but are not themselves the main site of gas exchange.', et: 'Need reservuaarid liigutavad õhku läbi kopsude, kuid ei ole ise peamine gaasivahetuse koht.' },
+        source: { sourceId: 'wikipedia:bird-anatomy-respiratory-system', title: 'Bird anatomy — Respiratory system', url: 'https://en.wikipedia.org/wiki/Bird_anatomy#Respiratory_system', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-089:alula-low-speed-control', factKey: 'science-nature:alula-low-speed-control', tier: 4, subjectKey: 'feather-group:alula',
+        clue: { en: 'What small, thumb-mounted group of feathers can lift from a bird’s leading wing edge to delay a stall during slow flight or landing?', et: 'Milline väike linnu pöidla külge kinnituv sulerühm võib tiiva eesserval kerkida, et aeglasel lennul või maandumisel varisemist edasi lükata?' }, response: { en: 'the alula', et: 'tiivake' }, acceptedVariants: { en: ['alula', 'bastard wing'], et: ['alula'] },
+        explanation: { en: 'It forms a slot that helps airflow remain attached to the wing at a high angle of attack.', et: 'See moodustab pilu, mis aitab õhuvoolul suure kohtumisnurga korral tiiva pinnale kinnitunuks jääda.' },
+        source: { sourceId: 'wikipedia:alula-low-speed-flight', title: 'Alula', url: 'https://en.wikipedia.org/wiki/Alula', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-089:uncinate-processes-rib-bracing', factKey: 'science-nature:uncinate-processes-rib-bracing', tier: 5, subjectKey: 'anatomy:uncinate-rib-processes',
+        clue: { en: 'What hook-like projections on many birds’ ribs overlap neighbouring ribs, strengthening the chest during flight and breathing?', et: 'Millised konksjad jätked paljude lindude roietel ulatuvad naaberroiete peale ning tugevdavad rindkeret lennu ja hingamise ajal?' }, response: { en: 'uncinate processes', et: 'konksjätked' }, acceptedVariants: { en: ['uncinate processes of the ribs'], et: ['roiete konksjätked'] },
+        explanation: { en: 'The overlapping projections brace the rib cage and provide leverage for muscles that move the sternum.', et: 'Ülekattuvad jätked toestavad rinnakorvi ja annavad rinnakut liigutavatele lihastele jõuõla.' },
+        source: { sourceId: 'wikipedia:uncinate-rib-processes', title: 'Uncinate processes of ribs', url: 'https://en.wikipedia.org/wiki/Uncinate_processes_of_ribs', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-091', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'How Fungi Make Spores', et: 'Kuidas seened eoseid tekitavad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-091:sporangium-spore-container', factKey: 'science-nature:sporangium-spore-container', tier: 1, subjectKey: 'structure:sporangium',
+        clue: { en: 'What sac or case produces and contains spores in bread moulds, many plants, and other organisms?', et: 'Milline kotike või kupar tekitab ja sisaldab eoseid leivahallitustel, paljudel taimedel ning teistel organismidel?' }, response: { en: 'a sporangium', et: 'sporangium' }, acceptedVariants: { en: ['spore case'], et: ['eoskupar', 'eospesa'] },
+        explanation: { en: 'When mature, this structure releases the spores formed inside it.', et: 'Küpsedes vabastab see struktuur enda sees moodustunud eosed.' },
+        source: { sourceId: 'wikipedia:sporangium-spore-container', title: 'Sporangium', url: 'https://en.wikipedia.org/wiki/Sporangium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-091:ascus-sac-ascospores', factKey: 'science-nature:ascus-sac-ascospores', tier: 2, subjectKey: 'structure:ascus',
+        clue: { en: 'Which microscopic sac gives the sac fungi their name and commonly forms eight sexual spores inside?', et: 'Milline mikroskoopiline struktuur annab kottseentele nime ning moodustab enda sees tavaliselt kaheksa sugulist eost?' }, response: { en: 'an ascus', et: 'askus' }, acceptedVariants: { en: ['ascus'], et: ['eoskott'] },
+        explanation: { en: 'Meiosis followed by a mitotic division commonly produces eight ascospores within this cell.', et: 'Meioosile järgnev mitoos tekitab selles rakus tavaliselt kaheksa askospoori.' },
+        source: { sourceId: 'wikipedia:ascus-sac-spores', title: 'Ascus', url: 'https://en.wikipedia.org/wiki/Ascus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-091:basidium-club-spores', factKey: 'science-nature:basidium-club-spores', tier: 3, subjectKey: 'structure:basidium',
+        clue: { en: 'What club-shaped cell on a mushroom’s gills usually bears sexual spores externally on tiny projections?', et: 'Milline nuiakujuline rakk seene eoslehekestel kannab sugulisi eoseid tavaliselt välispinnal väikeste jätkete otsas?' }, response: { en: 'a basidium', et: 'basiid' }, acceptedVariants: { en: ['basidium'], et: ['basiidium'] },
+        explanation: { en: 'This spore-bearing cell is characteristic of the group that includes mushrooms, puffballs, and rusts.', et: 'See eoseid kandev rakk on iseloomulik seenerühmale, kuhu kuuluvad kübarseened, murumunad ja roosteseened.' },
+        source: { sourceId: 'wikipedia:basidium-club-spores', title: 'Basidium', url: 'https://en.wikipedia.org/wiki/Basidium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-091:dikaryon-two-haploid-nuclei', factKey: 'science-nature:dikaryon-two-haploid-nuclei', tier: 4, subjectKey: 'cell-state:dikaryon',
+        clue: { en: 'What fungal cell state contains two genetically distinct haploid nuclei that share one cell but have not yet fused?', et: 'Kuidas nimetatakse seeneraku seisundit, kus ühes rakus paiknevad kaks geneetiliselt erinevat haploidset tuuma, mis pole veel ühinenud?' }, response: { en: 'a dikaryon', et: 'dikarüon' }, acceptedVariants: { en: ['dikaryotic state'], et: ['dikarüootne seisund'] },
+        explanation: { en: 'It is written n+n because the paired nuclei remain separate until a later stage of sexual reproduction.', et: 'Seda tähistatakse n+n, sest paarilised tuumad püsivad lahus kuni sugulise paljunemise hilisema etapini.' },
+        source: { sourceId: 'wikipedia:dikaryon-two-nuclei', title: 'Dikaryon', url: 'https://en.wikipedia.org/wiki/Dikaryon', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-091:clamp-connection-nuclei-distribution', factKey: 'science-nature:clamp-connection-nuclei-distribution', tier: 5, subjectKey: 'structure:clamp-connection',
+        clue: { en: 'What hook-shaped bridge on some fungal hyphae helps each new cell receive one copy of each nucleus during division?', et: 'Milline konksukujuline sild mõne seene hüüfil aitab tagada, et jagunemisel saab iga uus rakk kummastki tuumast ühe koopia?' }, response: { en: 'a clamp connection', et: 'pannalühendus' }, acceptedVariants: { en: ['clamp connection'], et: ['pannal'] },
+        explanation: { en: 'The temporary side loop coordinates nuclear movement so the paired-nucleus condition is maintained.', et: 'Ajutine külgaas koordineerib tuumade liikumist, et kahe eraldi tuumaga seisund säiliks.' },
+        source: { sourceId: 'wikipedia:clamp-connection-nuclei', title: 'Clamp connection', url: 'https://en.wikipedia.org/wiki/Clamp_connection', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-092', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Deep-Sea Food and Light', et: 'Süvamere toit ja valgus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-092:marine-snow-sinking-particles', factKey: 'science-nature:marine-snow-sinking-particles', tier: 1, subjectKey: 'food-source:marine-snow',
+        clue: { en: 'What poetic name describes the continuous fall of organic flakes, faecal pellets, and tiny remains from sunlit waters into the deep ocean?', et: 'Milline poeetiline nimetus tähistab orgaaniliste helveste, väljaheiteosakeste ja pisijäänuste pidevat langemist valgusküllasest veekihist süvamerre?' }, response: { en: 'marine snow', et: 'merelumi' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'This sinking material carries surface-produced carbon and nutrients to animals and microbes far below.', et: 'See vajuv aine kannab pinnakihis tekkinud süsinikku ja toitaineid palju sügavamal elavate loomade ning mikroobideni.' },
+        source: { sourceId: 'wikipedia:marine-snow-sinking-particles', title: 'Marine snow', url: 'https://en.wikipedia.org/wiki/Marine_snow', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-092:chemosynthesis-vent-food', factKey: 'science-nature:chemosynthesis-vent-food', tier: 2, subjectKey: 'metabolism:chemosynthesis',
+        clue: { en: 'At dark hydrothermal vents, microbes build organic food using energy from chemicals such as hydrogen sulphide. Name this process.', et: 'Pimedate hüdrotermiliste allikate juures valmistavad mikroobid orgaanilist toitu näiteks vesiniksulfiidi keemilise energia abil. Nimeta see protsess.' }, response: { en: 'chemosynthesis', et: 'kemosüntees' }, acceptedVariants: { en: ['chemoautotrophy'], et: ['kemoautotroofia'] },
+        explanation: { en: 'Chemical reactions replace sunlight as the energy source at the base of these ecosystems.', et: 'Keemilised reaktsioonid asendavad neis ökosüsteemides toiduahela aluseks oleva energiaallikana päikesevalgust.' },
+        source: { sourceId: 'wikipedia:chemosynthesis-vent-food', title: 'Chemosynthesis', url: 'https://en.wikipedia.org/wiki/Chemosynthesis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-092:whale-fall-seafloor-community', factKey: 'science-nature:whale-fall-seafloor-community', tier: 3, subjectKey: 'ecosystem:whale-fall',
+        clue: { en: 'What name is given to a whale carcass that reaches the seabed and supports a succession of scavengers and specialised microbes for years?', et: 'Kuidas nimetatakse merepõhja jõudnud vaalakorjust, mis toidab aastaid raipesööjate ja spetsialiseerunud mikroobide järjestikuseid kooslusi?' }, response: { en: 'a whale fall', et: 'merepõhja vajunud vaalakorjus' }, acceptedVariants: { en: ['whale fall'], et: ['vaalakorjus süvameres'] },
+        explanation: { en: 'Its soft tissue, bones, and sulphide-rich decay create several ecological stages on an otherwise food-poor seabed.', et: 'Pehmed koed, luud ja sulfiidirikas lagunemine loovad muidu toiduvaesel merepõhjal mitu ökoloogilist etappi.' },
+        source: { sourceId: 'wikipedia:whale-fall-community', title: 'Whale fall', url: 'https://en.wikipedia.org/wiki/Whale_fall', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-092:photophore-light-organ', factKey: 'science-nature:photophore-light-organ', tier: 4, subjectKey: 'organ:photophore',
+        clue: { en: 'What specialised light-producing organ forms the glowing spots or patches on many squid, fish, and other deep-sea animals?', et: 'Milline spetsialiseerunud valgust tootev elund moodustab paljude kalmaaride, kalade ja teiste süvamereloomade helendavad täpid või laigud?' }, response: { en: 'a photophore', et: 'fotofoor' }, acceptedVariants: { en: ['photophore'], et: ['valguselund'] },
+        explanation: { en: 'Reflectors, lenses, filters, or shutters can shape and control the light made within this organ.', et: 'Peegeldid, läätsed, filtrid või sulgurid võivad selles elundis tekkivat valgust suunata ja reguleerida.' },
+        source: { sourceId: 'wikipedia:photophore-light-organ', title: 'Photophore', url: 'https://en.wikipedia.org/wiki/Photophore', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-092:counterillumination-silhouette-camouflage', factKey: 'science-nature:counterillumination-silhouette-camouflage', tier: 5, subjectKey: 'camouflage:counterillumination',
+        clue: { en: 'What camouflage strategy uses an animal’s downward glow to match the light above and erase its silhouette from predators below?', et: 'Milline varjevõte kasutab looma allapoole suunatud helendust, et sobituda ülalt tuleva valgusega ja kaotada siluett alt vaatavate kiskjate eest?' }, response: { en: 'counterillumination', et: 'vastuvalgustus' }, acceptedVariants: { en: ['counter-illumination camouflage'], et: ['vastuvalgustuslik varjevärvus'] },
+        explanation: { en: 'By matching the brightness overhead, an animal becomes harder to detect against the lighter surface waters.', et: 'Ülalt paistva heleduse jäljendamine muudab looma heledama pinnavee taustal raskemini märgatavaks.' },
+        source: { sourceId: 'wikipedia:counterillumination-camouflage', title: 'Counter-illumination', url: 'https://en.wikipedia.org/wiki/Counter-illumination', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-093', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Tools for Reading DNA', et: 'Tööriistad DNA uurimiseks' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-093:pcr-amplifies-dna', factKey: 'science-nature:pcr-amplifies-dna', tier: 1, subjectKey: 'method:polymerase-chain-reaction',
+        clue: { en: 'Which laboratory method repeatedly heats and cools a sample to make millions of copies of a chosen DNA segment?', et: 'Milline laborimeetod kuumutab ja jahutab proovi korduvalt, et valmistada valitud DNA-lõigust miljoneid koopiaid?' }, response: { en: 'polymerase chain reaction', et: 'polümeraasi ahelreaktsioon' }, acceptedVariants: { en: ['PCR'], et: ['PCR'] },
+        explanation: { en: 'Primers mark the segment’s ends, and a heat-stable polymerase copies it during each cycle.', et: 'Praimerid märgivad lõigu otsad ning kuumuskindel polümeraas kopeerib seda igas tsüklis.' },
+        source: { sourceId: 'wikipedia:pcr-amplifies-dna', title: 'Polymerase chain reaction', url: 'https://en.wikipedia.org/wiki/Polymerase_chain_reaction', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-093:gel-electrophoresis-size-separation', factKey: 'science-nature:gel-electrophoresis-size-separation', tier: 2, subjectKey: 'method:gel-electrophoresis',
+        clue: { en: 'Which method pulls charged DNA fragments through a gel with an electric field, separating shorter pieces from longer ones?', et: 'Milline meetod tõmbab laetud DNA-lõike elektrivälja abil läbi geeli ning eraldab lühemad lõigud pikematest?' }, response: { en: 'gel electrophoresis', et: 'geelelektroforees' }, acceptedVariants: { en: ['DNA gel electrophoresis'], et: ['DNA geelelektroforees'] },
+        explanation: { en: 'Smaller fragments usually travel farther through the gel’s network, producing a pattern of bands.', et: 'Väiksemad lõigud liiguvad geeli võrgustikus tavaliselt kaugemale ja moodustavad vöötide mustri.' },
+        source: { sourceId: 'wikipedia:gel-electrophoresis-size-separation', title: 'Gel electrophoresis', url: 'https://en.wikipedia.org/wiki/Gel_electrophoresis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-093:restriction-enzyme-cut-site', factKey: 'science-nature:restriction-enzyme-cut-site', tier: 3, subjectKey: 'enzyme:restriction-endonuclease',
+        clue: { en: 'What type of enzyme cuts DNA at or near a particular recognition sequence, serving as molecular scissors in cloning?', et: 'Millist tüüpi ensüüm lõikab DNA-d kindla äratundmisjärjestuse kohalt või lähedalt ning toimib kloonimisel molekulaarsete kääridena?' }, response: { en: 'a restriction enzyme', et: 'restriktsiooniensüüm' }, acceptedVariants: { en: ['restriction endonuclease'], et: ['restriktsiooniendonukleaas'] },
+        explanation: { en: 'Different members recognise different short sequences and can leave blunt or overhanging ends.', et: 'Eri ensüümid tunnevad ära erinevaid lühikesi järjestusi ning võivad jätta tömbid või üleulatuvad otsad.' },
+        source: { sourceId: 'wikipedia:restriction-enzyme-cut-site', title: 'Restriction enzyme', url: 'https://en.wikipedia.org/wiki/Restriction_enzyme', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-093:dna-ligase-joins-strands', factKey: 'science-nature:dna-ligase-joins-strands', tier: 4, subjectKey: 'enzyme:dna-ligase',
+        clue: { en: 'Which enzyme seals breaks in a DNA backbone and is used to join an inserted fragment to a cut plasmid?', et: 'Milline ensüüm sulgeb katkestused DNA selgroos ning seda kasutatakse sisestatava lõigu ühendamiseks lahtilõigatud plasmiidiga?' }, response: { en: 'DNA ligase', et: 'DNA ligaas' }, acceptedVariants: { en: ['a DNA ligase'], et: ['desoksüribonukleiinhappe ligaas'] },
+        explanation: { en: 'It forms phosphodiester bonds between adjacent DNA ends, completing the recombinant molecule.', et: 'See moodustab kõrvuti asuvate DNA-otste vahel fosfodiestersidemed ja viib rekombinantse molekuli kokkupaneku lõpule.' },
+        source: { sourceId: 'wikipedia:dna-ligase-joins-strands', title: 'DNA ligase', url: 'https://en.wikipedia.org/wiki/DNA_ligase', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-093:sanger-sequencing-chain-termination', factKey: 'science-nature:sanger-sequencing-chain-termination', tier: 5, subjectKey: 'method:sanger-sequencing',
+        clue: { en: 'Which DNA-reading method identifies bases from fragments stopped at different positions by chain-terminating nucleotides?', et: 'Milline DNA lugemise meetod määrab alused fragmentide järgi, mille pikenemine peatati ahela eri kohtades ahelat lõpetavate nukleotiididega?' }, response: { en: 'Sanger sequencing', et: 'Sangeri sekveneerimine' }, acceptedVariants: { en: ['the chain-termination method'], et: ['Sangeri meetod', 'ahela terminatsiooni meetod'] },
+        explanation: { en: 'Separating the terminated fragments by length reveals the order of bases in the copied strand.', et: 'Lõpetatud fragmentide pikkuse järgi eraldamine näitab kopeeritud ahela aluste järjestust.' },
+        source: { sourceId: 'wikipedia:sanger-chain-termination', title: 'Sanger sequencing', url: 'https://en.wikipedia.org/wiki/Sanger_sequencing', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-096', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Inside the Kidney’s Filter', et: 'Neeru filtri sisemus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-096:nephron-functional-unit', factKey: 'science-nature:nephron-functional-unit', tier: 1, subjectKey: 'organ-unit:nephron',
+        clue: { en: 'What microscopic functional unit of the kidney filters blood and then adjusts the filtrate through a long tubule?', et: 'Milline neeru mikroskoopiline talitlusüksus filtreerib verd ning muudab seejärel filtraadi koostist pika torukese abil?' }, response: { en: 'a nephron', et: 'nefron' }, acceptedVariants: { en: ['nephron'], et: ['neeru nefron'] },
+        explanation: { en: 'Each unit begins with a renal corpuscle and continues through tubule segments that reabsorb or secrete substances.', et: 'Iga üksus algab neerukehakesega ning jätkub torukese osadena, mis imavad aineid tagasi või eritavad neid.' },
+        source: { sourceId: 'wikipedia:nephron-functional-unit', title: 'Nephron', url: 'https://en.wikipedia.org/wiki/Nephron', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-096:glomerulus-capillary-tuft', factKey: 'science-nature:glomerulus-capillary-tuft', tier: 2, subjectKey: 'structure:glomerulus',
+        clue: { en: 'What tuft of tiny capillaries at a nephron’s beginning forces water and small solutes out of the blood under pressure?', et: 'Milline peente kapillaaride kogum nefroni alguses surub rõhu abil verest välja vee ja väikesed lahustunud ained?' }, response: { en: 'the glomerulus', et: 'päsmake' }, acceptedVariants: { en: ['glomerulus'], et: ['glomerulus'] },
+        explanation: { en: 'Blood cells and most large proteins stay in the circulation while smaller components enter the surrounding capsule.', et: 'Vererakud ja enamik suuri valke jäävad vereringesse, väiksemad koostisosad aga liiguvad ümbritsevasse kapslisse.' },
+        source: { sourceId: 'wikipedia:glomerulus-capillary-tuft', title: 'Glomerulus (kidney)', url: 'https://en.wikipedia.org/wiki/Glomerulus_(kidney)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-096:bowman-capsule-collects-filtrate', factKey: 'science-nature:bowman-capsule-collects-filtrate', tier: 3, subjectKey: 'structure:bowmans-capsule',
+        clue: { en: 'Which cup-shaped, double-walled part of a nephron surrounds its capillary tuft and receives the newly filtered fluid?', et: 'Milline nefroni karikakujuline kahekordse seinaga osa ümbritseb kapillaarpäsmakest ja võtab vastu äsja filtreeritud vedeliku?' }, response: { en: 'Bowman’s capsule', et: 'Bowmani kapsel' }, acceptedVariants: { en: ['glomerular capsule'], et: ['päsmakapsel'] },
+        explanation: { en: 'The space between its layers collects the filtrate before it flows into the first tubule segment.', et: 'Selle kihtide vaheline ruum kogub filtraadi enne, kui see voolab torukese esimesse ossa.' },
+        source: { sourceId: 'wikipedia:bowmans-capsule-filtrate', title: 'Bowman’s capsule', url: 'https://en.wikipedia.org/wiki/Bowman%27s_capsule', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-096:loop-henle-concentration-gradient', factKey: 'science-nature:loop-henle-concentration-gradient', tier: 4, subjectKey: 'structure:loop-of-henle',
+        clue: { en: 'Which U-shaped nephron segment descends into the kidney medulla and helps establish the salt gradient used to concentrate urine?', et: 'Milline U-kujuline nefroni osa laskub neerusäsisse ja aitab luua uriini kontsentreerimiseks kasutatava soolsusgradiendi?' }, response: { en: 'the loop of Henle', et: 'Henle ling' }, acceptedVariants: { en: ['Henle’s loop'], et: ['Henle aas'] },
+        explanation: { en: 'Its limbs differ in permeability and transport, creating a countercurrent multiplier in the medulla.', et: 'Lingu harud erinevad läbilaskvuse ja ainetranspordi poolest ning loovad neerusäsis vastuvoolukordisti.' },
+        source: { sourceId: 'wikipedia:loop-henle-gradient', title: 'Loop of Henle', url: 'https://en.wikipedia.org/wiki/Loop_of_Henle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-096:collecting-duct-water-recovery', factKey: 'science-nature:collecting-duct-water-recovery', tier: 5, subjectKey: 'structure:collecting-duct',
+        clue: { en: 'Which final shared tube receives fluid from several nephrons and varies its water permeability in response to antidiuretic hormone?', et: 'Milline ühine lõppjuha võtab vastu vedeliku mitmest nefronist ning muudab antidiureetilise hormooni toimel oma veeläbilaskvust?' }, response: { en: 'the collecting duct', et: 'kogumistoru' }, acceptedVariants: { en: ['collecting duct'], et: ['kogumisjuha'] },
+        explanation: { en: 'Hormone-regulated water recovery here is a major determinant of the final urine concentration.', et: 'Hormooni reguleeritud vee tagasiimendumine selles juhas määrab suuresti uriini lõpliku kontsentratsiooni.' },
+        source: { sourceId: 'wikipedia:collecting-duct-water', title: 'Collecting duct system', url: 'https://en.wikipedia.org/wiki/Collecting_duct_system', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-099', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'hard',
+    name: { en: 'Volcanoes Beyond the Lava', et: 'Vulkaanid peale laava' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-099:fumarole-volcanic-gas-vent', factKey: 'science-nature:fumarole-volcanic-gas-vent', tier: 1, subjectKey: 'vent:fumarole',
+        clue: { en: 'What opening near a volcano releases steam and gases such as carbon dioxide or sulphur compounds without erupting lava?', et: 'Milline vulkaani lähedal asuv ava eraldab auru ja gaase, näiteks süsinikdioksiidi või väävliühendeid, kuid ei purska laavat?' }, response: { en: 'a fumarole', et: 'fumarool' }, acceptedVariants: { en: ['fumarole'], et: ['gaasilehter'] },
+        explanation: { en: 'Groundwater heated by magma can emerge through this vent as steam mixed with volcanic gases.', et: 'Magma kuumutatud põhjavesi võib väljuda sellest avast auruna, mis on segunenud vulkaaniliste gaasidega.' },
+        source: { sourceId: 'wikipedia:fumarole-volcanic-gas-vent', title: 'Fumarole', url: 'https://en.wikipedia.org/wiki/Fumarole', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-099:pyroclastic-flow-hot-avalanche', factKey: 'science-nature:pyroclastic-flow-hot-avalanche', tier: 2, subjectKey: 'hazard:pyroclastic-flow',
+        clue: { en: 'What fast, ground-hugging avalanche of hot gas, ash, and rock fragments can race down a volcano’s slopes?', et: 'Milline kiire maadligi liikuv kuuma gaasi, tuha ja kivimikildude laviin võib vulkaani nõlvadest alla kihutada?' }, response: { en: 'a pyroclastic flow', et: 'püroklastiline vool' }, acceptedVariants: { en: ['pyroclastic density current'], et: ['püroklastiline tihedusvool'] },
+        explanation: { en: 'Its speed, heat, and dense load of debris make it one of the most destructive eruption hazards.', et: 'Kiirus, kuumus ja tihe rusukoorem teevad sellest ühe hävitavama purskeohu.' },
+        source: { sourceId: 'wikipedia:pyroclastic-flow-hot-avalanche', title: 'Pyroclastic flow', url: 'https://en.wikipedia.org/wiki/Pyroclastic_flow', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-099:lahar-volcanic-mudflow', factKey: 'science-nature:lahar-volcanic-mudflow', tier: 3, subjectKey: 'hazard:lahar',
+        clue: { en: 'What Indonesian-derived term names a concrete-like flood of water, ash, and volcanic debris that follows valleys?', et: 'Milline indoneesia päritolu termin tähistab betoonitaolist vee, tuha ja vulkaanilise rusuga tulva, mis liigub mööda orge?' }, response: { en: 'a lahar', et: 'lahar' }, acceptedVariants: { en: ['volcanic mudflow'], et: ['vulkaaniline mudavool'] },
+        explanation: { en: 'Heavy rain, melted snow, or a crater lake can mix with loose eruption material and send this flow far downstream.', et: 'Paduvihm, sulanud lumi või kraatrijärv võib seguneda lahtise purskematerjaliga ja kanda sellise voolu kaugele allavoolu.' },
+        source: { sourceId: 'wikipedia:lahar-volcanic-mudflow', title: 'Lahar', url: 'https://en.wikipedia.org/wiki/Lahar', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-099:pillow-lava-underwater-lobes', factKey: 'science-nature:pillow-lava-underwater-lobes', tier: 4, subjectKey: 'lava-form:pillow-lava',
+        clue: { en: 'What rounded, stacked lava form develops when basalt erupts underwater and its surface chills rapidly around each new lobe?', et: 'Milline ümaratest kuhjuvatest padjanditest koosnev laavavorm tekib, kui basalt purskab vee all ja iga uue sagara pind kiiresti jahtub?' }, response: { en: 'pillow lava', et: 'padilaava' }, acceptedVariants: { en: ['pillow basalt'], et: ['padjandlaava'] },
+        explanation: { en: 'A glassy skin forms on contact with water, then splits as more molten rock pushes outward.', et: 'Veega kokkupuutel tekib klaasjas koorik, mis lõheneb, kui selle seest surub välja uut sulakivimit.' },
+        source: { sourceId: 'wikipedia:pillow-lava-underwater', title: 'Pillow lava', url: 'https://en.wikipedia.org/wiki/Pillow_lava', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-099:phreatic-eruption-steam-blast', factKey: 'science-nature:phreatic-eruption-steam-blast', tier: 5, subjectKey: 'eruption:phreatic',
+        clue: { en: 'What steam-driven eruption occurs when groundwater is suddenly heated, blasting old rock apart even if no new magma reaches the surface?', et: 'Milline aururõhul toimuv purse tekib põhjavee järsul kuumenemisel ning paiskab vana kivimit laiali isegi siis, kui uus magma maapinnani ei jõua?' }, response: { en: 'a phreatic eruption', et: 'freatiline purse' }, acceptedVariants: { en: ['steam-blast eruption'], et: ['auruplahvatuslik purse'] },
+        explanation: { en: 'Rapid expansion of water into steam drives the explosion, so warning signs can be limited.', et: 'Plahvatuse käivitab vee kiire paisumine auruks, mistõttu võib eelhoiatus olla napp.' },
+        source: { sourceId: 'wikipedia:phreatic-steam-eruption', title: 'Phreatic eruption', url: 'https://en.wikipedia.org/wiki/Phreatic_eruption', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-024', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Watching the Moon', et: 'Kuud vaadeldes' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-024:lunar-phases-changing-view', factKey: 'science-nature:lunar-phases-changing-view', tier: 1, subjectKey: 'cycle:lunar-phases',
+        clue: { en: 'What cycle of crescent, quarter, gibbous, and full shapes results from our changing view of the Moon’s sunlit half?', et: 'Milline sirbi, poolkuu, kumera ja täiskuu kujude tsükkel tekib sellest, et näeme Kuu Päikese valgustatud poolt eri nurkade alt?' }, response: { en: 'the lunar phases', et: 'Kuu faasid' }, acceptedVariants: { en: ['phases of the Moon', 'Moon phases'], et: ['kuufaasid'] },
+        explanation: { en: 'Half the Moon is always sunlit, but its position in orbit changes how much of that half is visible from Earth.', et: 'Pool Kuust on alati Päikese valgustatud, kuid asukoht orbiidil muudab seda, kui suurt osa valgustatud poolest Maalt näeme.' },
+        source: { sourceId: 'wikipedia:lunar-phases-changing-view', title: 'Lunar phase', url: 'https://en.wikipedia.org/wiki/Lunar_phase', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-024:solar-eclipse-moon-shadow', factKey: 'science-nature:solar-eclipse-moon-shadow', tier: 2, subjectKey: 'event:solar-eclipse',
+        clue: { en: 'What event occurs when the Moon passes between Earth and the Sun, blocking all or part of the Sun from view?', et: 'Milline sündmus toimub siis, kui Kuu liigub Maa ja Päikese vahele ning varjab Päikese täielikult või osaliselt?' }, response: { en: 'a solar eclipse', et: 'päikesevarjutus' }, acceptedVariants: { en: ['solar eclipse'], et: ['Päikese varjutus'] },
+        explanation: { en: 'Observers inside the Moon’s shadow see the solar disc partly or completely covered.', et: 'Kuu varju jäävad vaatlejad näevad Päikese ketast osaliselt või täielikult kaetuna.' },
+        source: { sourceId: 'wikipedia:solar-eclipse-moon-shadow', title: 'Solar eclipse', url: 'https://en.wikipedia.org/wiki/Solar_eclipse', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-024:synchronous-rotation-same-face', factKey: 'science-nature:synchronous-rotation-same-face', tier: 3, subjectKey: 'motion:synchronous-rotation',
+        clue: { en: 'What rotation state keeps nearly the same side of the Moon facing Earth because one spin takes one orbit?', et: 'Milline pöörlemisseisund hoiab peaaegu sama Kuu külje Maa poole, sest üks pööre kestab sama kaua kui üks tiir?' }, response: { en: 'synchronous rotation', et: 'sünkroonne pöörlemine' }, acceptedVariants: { en: ['tidal locking'], et: ['loodelukustus', 'sünkroonpöörlemine'] },
+        explanation: { en: 'Tidal forces slowed the Moon until its rotation period matched its orbital period.', et: 'Loodejõud aeglustasid Kuud, kuni selle pöörlemisperiood võrdus tiirlemisperioodiga.' },
+        source: { sourceId: 'wikipedia:synchronous-rotation-moon', title: 'Tidal locking', url: 'https://en.wikipedia.org/wiki/Tidal_locking', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-024:lunar-maria-dark-plains', factKey: 'science-nature:lunar-maria-dark-plains', tier: 4, subjectKey: 'landform:lunar-maria',
+        clue: { en: 'What Latin plural, meaning “seas,” names the Moon’s broad dark plains formed by ancient basaltic lava?', et: 'Milline ladina mitmusevorm tähendusega „mered“ nimetab Kuu laiu tumedaid tasandikke, mille moodustas muistne basaltlaava?' }, response: { en: 'lunar maria', et: 'Kuu mered' }, acceptedVariants: { en: ['maria'], et: ['kuumered'] },
+        explanation: { en: 'Early telescope users mistook these smoother, darker impact basins for bodies of water.', et: 'Varased teleskoobivaatlejad pidasid neid siledamaid tumedaid põrkealasid veekogudeks.' },
+        source: { sourceId: 'wikipedia:lunar-maria-dark-plains', title: 'Lunar mare', url: 'https://en.wikipedia.org/wiki/Lunar_mare', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-024:earthshine-dark-crescent', factKey: 'science-nature:earthshine-dark-crescent', tier: 5, subjectKey: 'phenomenon:earthshine',
+        clue: { en: 'A thin crescent Moon can show a faint outline of its dark side because sunlight reflects from Earth onto it. What is this glow called?', et: 'Õhukese kuusirbi korral võib Kuu tume osa nõrgalt nähtav olla, sest Maalt peegeldunud päikesevalgus langeb Kuule. Kuidas seda kuma nimetatakse?' }, response: { en: 'earthshine', et: 'tuhkvalgus' }, acceptedVariants: { en: ['the Moon’s ashen glow'], et: ['Kuu tuhkvalgus'] },
+        explanation: { en: 'Earth first reflects sunlight to the Moon, which then reflects a small portion back to the observer.', et: 'Maa peegeldab esmalt päikesevalguse Kuule ning Kuu peegeldab väikese osa sellest vaatlejale tagasi.' },
+        source: { sourceId: 'wikipedia:earthshine-ashen-glow', title: 'Planetshine', url: 'https://en.wikipedia.org/wiki/Planetshine', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-031', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Survival in Dry Places', et: 'Ellujäämine kuivades paikades' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-031:succulent-water-storage', factKey: 'science-nature:succulent-water-storage', tier: 1, subjectKey: 'plant-form:succulent',
+        clue: { en: 'What kind of plant stores water in thick, fleshy leaves or stems, as cacti and aloes do?', et: 'Millist tüüpi taim talletab vett paksudes lihakates lehtedes või vartes, nagu teevad kaktused ja aaloed?' }, response: { en: 'a succulent', et: 'sukulent' }, acceptedVariants: { en: ['succulent plant'], et: ['turdtaim'] },
+        explanation: { en: 'Its enlarged tissues hold water that can support the plant through long dry periods.', et: 'Paksenenud koed hoiavad vett, mis aitab taimel pika kuivaperioodi üle elada.' },
+        source: { sourceId: 'wikipedia:succulent-water-storage', title: 'Succulent plant', url: 'https://en.wikipedia.org/wiki/Succulent_plant', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-031:waxy-cuticle-reduces-water-loss', factKey: 'science-nature:waxy-cuticle-reduces-water-loss', tier: 2, subjectKey: 'plant-layer:waxy-cuticle',
+        clue: { en: 'Which waterproof outer layer on a leaf slows evaporation and is often especially thick on desert plants?', et: 'Milline vett tõrjuv lehe väliskiht aeglustab aurumist ja on kõrbetaimedel sageli eriti paks?' }, response: { en: 'the waxy cuticle', et: 'vahakutiikula' }, acceptedVariants: { en: ['plant cuticle'], et: ['vahakiht', 'taime kutiikula'] },
+        explanation: { en: 'Its waxes form a barrier that limits uncontrolled water loss from exposed surfaces.', et: 'Selles sisalduvad vahad moodustavad tõkke, mis piirab vee kontrollimatut kadu paljastelt pindadelt.' },
+        source: { sourceId: 'wikipedia:plant-cuticle-water-loss', title: 'Plant cuticle', url: 'https://en.wikipedia.org/wiki/Plant_cuticle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-031:nocturnality-avoids-day-heat', factKey: 'science-nature:nocturnality-avoids-day-heat', tier: 3, subjectKey: 'behaviour:nocturnality',
+        clue: { en: 'What activity pattern helps many desert animals avoid daytime heat by feeding and travelling mainly after dark?', et: 'Milline aktiivsusmuster aitab paljudel kõrbeloomadel päevakuumust vältida, sest nad toituvad ja liiguvad peamiselt pärast pimeduse saabumist?' }, response: { en: 'nocturnality', et: 'öise eluviisiga aktiivsus' }, acceptedVariants: { en: ['being nocturnal'], et: ['öine eluviis', 'öine aktiivsus'] },
+        explanation: { en: 'Cooler nights reduce heat stress and can also lower the water cost of activity.', et: 'Jahedamad ööd vähendavad kuumastressi ja võivad kahandada ka liikumisega kaasnevat veekulu.' },
+        source: { sourceId: 'wikipedia:nocturnality-dry-places', title: 'Nocturnality', url: 'https://en.wikipedia.org/wiki/Nocturnality', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-031:burrowing-stable-microclimate', factKey: 'science-nature:burrowing-stable-microclimate', tier: 4, subjectKey: 'behaviour:burrowing',
+        clue: { en: 'Which shelter-making behaviour lets a desert animal escape surface heat in a cooler, more humid underground microclimate?', et: 'Milline varjendi rajamise käitumine võimaldab kõrbeloomal pinnakuumuse eest pääseda jahedamasse ning niiskemasse maa-alusesse mikrokliimasse?' }, response: { en: 'burrowing', et: 'uru kaevamine' }, acceptedVariants: { en: ['digging a burrow'], et: ['urus elamine'] },
+        explanation: { en: 'Soil buffers rapid temperature swings and slows the loss of moisture to dry moving air.', et: 'Pinnas tasandab kiireid temperatuurikõikumisi ning aeglustab niiskuse kadu kuiva liikuvasse õhku.' },
+        source: { sourceId: 'wikipedia:burrow-shelter', title: 'Burrow', url: 'https://en.wikipedia.org/wiki/Burrow', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-031:cam-photosynthesis-night-carbon', factKey: 'science-nature:cam-photosynthesis-night-carbon', tier: 5, subjectKey: 'metabolism:cam-photosynthesis',
+        clue: { en: 'Which water-saving photosynthetic pathway lets a plant open pores at night, store carbon dioxide, and use it by day?', et: 'Milline vett säästev fotosünteesirada võimaldab taimel avada õhulõhed öösel, talletada süsinikdioksiidi ja kasutada seda päeval?' }, response: { en: 'CAM photosynthesis', et: 'CAM-fotosüntees' }, acceptedVariants: { en: ['crassulacean acid metabolism'], et: ['krossulatsioidhappe metabolism'] },
+        explanation: { en: 'Separating carbon uptake from daytime sugar production limits water loss in hot, dry conditions.', et: 'Süsiniku sidumise eraldamine päevasest suhkrutootmisest vähendab kuumades kuivades oludes veekadu.' },
+        source: { sourceId: 'wikipedia:cam-night-carbon', title: 'Crassulacean acid metabolism', url: 'https://en.wikipedia.org/wiki/Crassulacean_acid_metabolism', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-052', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Branches of the Mammal Family', et: 'Imetajate sugupuu harud' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-052:rodents-gnawing-incisors', factKey: 'science-nature:rodents-gnawing-incisors', tier: 1, subjectKey: 'mammal-group:rodents',
+        clue: { en: 'Mice, squirrels, and beavers belong to which mammal order recognised by one continuously growing pair of incisors in each jaw?', et: 'Millisesse imetajate seltsi kuuluvad hiired, oravad ja koprad, keda eristab kummaski lõualuus üks paar pidevalt kasvavaid lõikehambaid?' }, response: { en: 'rodents', et: 'närilised' }, acceptedVariants: { en: ['Rodentia'], et: ['näriliste selts'] },
+        explanation: { en: 'Gnawing keeps the hard-fronted incisors worn to a useful cutting edge as they continue growing.', et: 'Närimine kulutab pidevalt kasvavad kõva esiküljega lõikehambad terava ja kasutuskõlblikuna.' },
+        source: { sourceId: 'wikipedia:rodents-growing-incisors', title: 'Rodent', url: 'https://en.wikipedia.org/wiki/Rodent', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-052:cetaceans-whales-dolphins', factKey: 'science-nature:cetaceans-whales-dolphins', tier: 2, subjectKey: 'mammal-group:cetaceans',
+        clue: { en: 'What mammal order includes whales, dolphins, and porpoises, all fully adapted to life in water?', et: 'Millisesse imetajate seltsi kuuluvad vaalad, delfiinid ja pringlid, kes kõik on täielikult kohastunud eluks vees?' }, response: { en: 'cetaceans', et: 'vaalalised' }, acceptedVariants: { en: ['Cetacea'], et: ['vaalaliste selts'] },
+        explanation: { en: 'Members breathe air through blowholes, nurse their young, and propel themselves with horizontal tail flukes.', et: 'Rühma liikmed hingavad õhku hingamisavade kaudu, imetavad poegi ja liiguvad horisontaalsete sabalabade jõul.' },
+        source: { sourceId: 'animal-diversity-web:cetacea', title: 'Cetacea — Animal Diversity Web', url: 'https://animaldiversity.org/accounts/Cetacea/', license: 'all-rights-reserved', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-052:monotremes-egg-laying', factKey: 'science-nature:monotremes-egg-laying', tier: 3, subjectKey: 'mammal-group:monotremes',
+        clue: { en: 'The platypus and echidnas form which unusual mammal group whose members lay eggs instead of giving birth to live young?', et: 'Millise ebatavalise imetajarühma moodustavad nokkloom ja sipelgasiilid, kelle liikmed munevad, mitte ei sünnita elusaid poegi?' }, response: { en: 'monotremes', et: 'ürgimetajad' }, acceptedVariants: { en: ['egg-laying mammals'], et: ['munevad imetajad', 'kloaakloomad'] },
+        explanation: { en: 'They produce milk but lack nipples, and they survive naturally only in Australia and New Guinea.', et: 'Nad toodavad piima, kuid neil puuduvad nisad, ning looduses elavad nad ainult Austraalias ja Uus-Guineas.' },
+        source: { sourceId: 'wikipedia:monotremes-egg-laying', title: 'Monotreme', url: 'https://en.wikipedia.org/wiki/Monotreme', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-052:pinnipeds-flipper-mammals', factKey: 'science-nature:pinnipeds-flipper-mammals', tier: 4, subjectKey: 'mammal-group:pinnipeds',
+        clue: { en: 'Seals, sea lions, and walruses make up which group of fin-footed marine mammals that rest or breed on land or ice?', et: 'Millise loivaliste mereimetajate rühma moodustavad hülged, merilõvid ja morsad, kes puhkavad või sigivad maal või jääl?' }, response: { en: 'pinnipeds', et: 'loivalised' }, acceptedVariants: { en: ['Pinnipedia'], et: ['loivaliste rühm'] },
+        explanation: { en: 'Their limbs are modified as flippers, yet they still depend on air and return to solid surfaces for key life stages.', et: 'Nende jäsemed on muutunud loibadeks, kuid nad hingavad õhku ja naasevad tähtsateks eluetappideks kindlale pinnale.' },
+        source: { sourceId: 'wikipedia:pinnipeds-fin-footed', title: 'Pinniped', url: 'https://en.wikipedia.org/wiki/Pinniped', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-052:mustelids-weasel-family', factKey: 'science-nature:mustelids-weasel-family', tier: 5, subjectKey: 'mammal-family:mustelids',
+        clue: { en: 'Otters, badgers, weasels, and wolverines belong to which diverse carnivore family?', et: 'Millisesse mitmekesisesse kiskjaliste sugukonda kuuluvad saarmad, mägrad, nirgid ja ahmid?' }, response: { en: 'the mustelids', et: 'kärplased' }, acceptedVariants: { en: ['the weasel family', 'Mustelidae'], et: ['kärplaste sugukond'] },
+        explanation: { en: 'This family ranges from aquatic otters to powerful badgers and includes many long-bodied hunters.', et: 'Sellesse sugukonda kuuluvad nii veelembesed saarmad kui ka jõulised mägrad ning paljud pika kehaga kütid.' },
+        source: { sourceId: 'wikipedia:mustelids-weasel-family', title: 'Mustelidae', url: 'https://en.wikipedia.org/wiki/Mustelidae', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-053', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'How Sound Behaves', et: 'Kuidas heli käitub' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-053:frequency-pitch-hertz', factKey: 'science-nature:frequency-pitch-hertz', tier: 1, subjectKey: 'wave-property:frequency',
+        clue: { en: 'Which wave property, measured in hertz, largely determines whether a sound is heard as high- or low-pitched?', et: 'Milline hertsides mõõdetav laine omadus määrab suuresti selle, kas heli kuuldub kõrge või madalana?' }, response: { en: 'frequency', et: 'sagedus' }, acceptedVariants: { en: ['sound frequency'], et: ['helisagedus'] },
+        explanation: { en: 'More vibration cycles per second generally produce a higher perceived pitch.', et: 'Rohkem võnketsükleid sekundis tekitab üldjuhul kõrgemana tajutava heli.' },
+        source: { sourceId: 'wikipedia:sound-frequency-pitch', title: 'Audio frequency', url: 'https://en.wikipedia.org/wiki/Audio_frequency', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-053:amplitude-sound-loudness', factKey: 'science-nature:amplitude-sound-loudness', tier: 2, subjectKey: 'wave-property:amplitude',
+        clue: { en: 'Which measure of a sound wave’s maximum disturbance grows when the vibration becomes stronger and the sound usually seems louder?', et: 'Milline helilaine suurima hälbe mõõt kasvab siis, kui võnkumine tugevneb ja heli tundub tavaliselt valjem?' }, response: { en: 'amplitude', et: 'amplituud' }, acceptedVariants: { en: ['wave amplitude'], et: ['laine amplituud'] },
+        explanation: { en: 'A larger value means greater pressure variation and usually greater sound intensity.', et: 'Suurem väärtus tähendab suuremat rõhumuutust ja tavaliselt suuremat heli intensiivsust.' },
+        source: { sourceId: 'wikipedia:amplitude-wave-property', title: 'Amplitude', url: 'https://en.wikipedia.org/wiki/Amplitude', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-053:echo-reflected-sound', factKey: 'science-nature:echo-reflected-sound', tier: 3, subjectKey: 'phenomenon:echo',
+        clue: { en: 'What repeated sound is heard when a wave reflects from a distant cliff or wall and returns after a noticeable delay?', et: 'Milline korduv heli kostab siis, kui helilaine peegeldub kaugelt kaljult või seinalt ja jõuab märgatava viivitusega tagasi?' }, response: { en: 'an echo', et: 'kaja' }, acceptedVariants: { en: ['echo'], et: ['helikaja'] },
+        explanation: { en: 'The reflecting surface must be far enough away for the returning sound to be distinguished from the original.', et: 'Peegeldav pind peab olema piisavalt kaugel, et tagasijõudvat heli saaks algsest helist eristada.' },
+        source: { sourceId: 'wikipedia:echo-reflected-sound', title: 'Echo', url: 'https://en.wikipedia.org/wiki/Echo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-053:resonance-natural-frequency', factKey: 'science-nature:resonance-natural-frequency', tier: 4, subjectKey: 'phenomenon:resonance',
+        clue: { en: 'What effect makes a swing or musical instrument vibrate strongly when repeated pushes match one of its natural frequencies?', et: 'Milline nähtus paneb kiige või muusikariista tugevalt võnkuma, kui korduv mõjutus sobib ühe selle omavõnkesagedusega?' }, response: { en: 'resonance', et: 'resonants' }, acceptedVariants: { en: ['acoustic resonance'], et: ['akustiline resonants'] },
+        explanation: { en: 'Energy is transferred especially efficiently when the driving rhythm matches a natural mode of vibration.', et: 'Energia kandub eriti tõhusalt üle siis, kui sundiva mõju rütm langeb kokku loomuliku võnkemoodiga.' },
+        source: { sourceId: 'wikipedia:resonance-natural-frequency', title: 'Resonance', url: 'https://en.wikipedia.org/wiki/Resonance', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-053:doppler-effect-moving-siren', factKey: 'science-nature:doppler-effect-moving-siren', tier: 5, subjectKey: 'phenomenon:doppler-effect',
+        clue: { en: 'A siren sounds higher as an ambulance approaches and lower after it passes. What wave effect causes this change?', et: 'Kiirabi sireen kõlab lähenedes kõrgemalt ja möödumise järel madalamalt. Milline laineefekt seda muutust põhjustab?' }, response: { en: 'the Doppler effect', et: 'Doppleri efekt' }, acceptedVariants: { en: ['Doppler shift'], et: ['Doppleri nihe'] },
+        explanation: { en: 'Relative motion compresses arriving wavefronts during approach and spreads them out during recession.', et: 'Suhteline liikumine surub lähenemisel saabuvad lainefrondid kokku ja eemaldumisel venitab need laiali.' },
+        source: { sourceId: 'wikipedia:doppler-moving-siren', title: 'Doppler effect', url: 'https://en.wikipedia.org/wiki/Doppler_effect', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-054', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Weather from the Sun', et: 'Päikesest lähtuv kosmoseilm' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-054:sunspot-cool-dark-region', factKey: 'science-nature:sunspot-cool-dark-region', tier: 1, subjectKey: 'solar-feature:sunspot',
+        clue: { en: 'What dark-looking patch on the Sun is cooler than its surroundings because strong magnetic fields suppress convection?', et: 'Milline tumedana näiv laik Päikesel on ümbrusest jahedam, sest tugev magnetväli pärsib konvektsiooni?' }, response: { en: 'a sunspot', et: 'päikeseplekk' }, acceptedVariants: { en: ['sunspot'], et: ['Päikese plekk'] },
+        explanation: { en: 'It is still extremely hot, but the brighter, hotter surface around it makes it appear dark by contrast.', et: 'See on endiselt äärmiselt kuum, kuid heledam ja kuumem ümbrus paneb selle kontrasti tõttu tumedana paistma.' },
+        source: { sourceId: 'wikipedia:sunspot-cool-dark-region', title: 'Sunspot', url: 'https://en.wikipedia.org/wiki/Sunspot', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-054:solar-flare-radiation-burst', factKey: 'science-nature:solar-flare-radiation-burst', tier: 2, subjectKey: 'solar-event:flare',
+        clue: { en: 'What sudden flash on the Sun releases a powerful burst of electromagnetic radiation and can disrupt radio communication?', et: 'Milline äkiline sähvatus Päikesel vabastab võimsa elektromagnetkiirguse purske ning võib häirida raadiosidet?' }, response: { en: 'a solar flare', et: 'päikeseloide' }, acceptedVariants: { en: ['solar flare'], et: ['Päikese loide'] },
+        explanation: { en: 'Rapid magnetic-energy release heats plasma and sends radiation across the spectrum toward space.', et: 'Magnetenergia kiire vabanemine kuumutab plasmat ja saadab eri lainepikkustega kiirgust kosmosesse.' },
+        source: { sourceId: 'wikipedia:solar-flare-radiation', title: 'Solar flare', url: 'https://en.wikipedia.org/wiki/Solar_flare', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-054:coronal-mass-ejection-plasma', factKey: 'science-nature:coronal-mass-ejection-plasma', tier: 3, subjectKey: 'solar-event:coronal-mass-ejection',
+        clue: { en: 'What solar event hurls a vast magnetised cloud of plasma from the corona into space rather than releasing radiation alone?', et: 'Milline päikesesündmus paiskab kroonist kosmosesse tohutu magnetiseeritud plasmapilve, mitte üksnes kiirgust?' }, response: { en: 'a coronal mass ejection', et: 'krooni massipurse' }, acceptedVariants: { en: ['CME'], et: ['koronaalne massipurse', 'CME'] },
+        explanation: { en: 'If the expanding cloud reaches Earth, its magnetic field can strongly disturb near-Earth space.', et: 'Kui paisuv pilv jõuab Maani, võib selle magnetväli Maa-lähedast kosmost tugevasti häirida.' },
+        source: { sourceId: 'wikipedia:coronal-mass-ejection-plasma', title: 'Coronal mass ejection', url: 'https://en.wikipedia.org/wiki/Coronal_mass_ejection', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-054:solar-wind-charged-stream', factKey: 'science-nature:solar-wind-charged-stream', tier: 4, subjectKey: 'solar-flow:solar-wind',
+        clue: { en: 'What continuous stream of charged particles flows outward from the Sun’s corona and fills the Solar System?', et: 'Milline pidev laetud osakeste voog liigub Päikese kroonist väljapoole ja täidab Päikesesüsteemi?' }, response: { en: 'the solar wind', et: 'päikesetuul' }, acceptedVariants: { en: ['solar wind'], et: ['Päikese tuul'] },
+        explanation: { en: 'It consists mainly of protons and electrons carried outward with the Sun’s magnetic field.', et: 'See koosneb peamiselt prootonitest ja elektronidest, mis kannavad Päikese magnetvälja väljapoole.' },
+        source: { sourceId: 'wikipedia:solar-wind-charged-stream', title: 'Solar wind', url: 'https://en.wikipedia.org/wiki/Solar_wind', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-054:geomagnetic-storm-field-disturbance', factKey: 'science-nature:geomagnetic-storm-field-disturbance', tier: 5, subjectKey: 'space-weather:geomagnetic-storm',
+        clue: { en: 'What prolonged disturbance of Earth’s magnetic field can follow an arriving solar plasma cloud and induce currents in power grids?', et: 'Milline Maa magnetvälja pikaajaline häire võib järgneda saabuvale Päikese plasmapilvele ning tekitada elektrivõrkudes voole?' }, response: { en: 'a geomagnetic storm', et: 'geomagnetiline torm' }, acceptedVariants: { en: ['magnetic storm'], et: ['magnettorm'] },
+        explanation: { en: 'Strong coupling between the incoming magnetic field and Earth’s magnetosphere drives currents in space and the ground.', et: 'Saabuva magnetvälja tugev seostumine Maa magnetosfääriga käivitab voolud kosmoses ja maapinnas.' },
+        source: { sourceId: 'wikipedia:geomagnetic-storm-field-disturbance', title: 'Geomagnetic storm', url: 'https://en.wikipedia.org/wiki/Geomagnetic_storm', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const SCIENCE_NATURE_CATEGORIES = validatePlayableCorpus(rawCategories, ASSIGNED_TARGETS.slice(0, rawCategories.length));
