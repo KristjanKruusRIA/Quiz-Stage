@@ -401,6 +401,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-literature-language-set-074', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Classics Retold from the Margins', et: 'Klassika ümberjutustused kõrvalpilgust' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-074:wide-sargasso-sea-antoinette', factKey: 'literature-language:wide-sargasso-sea-reimagines-bertha-mason', tier: 1, subjectKey: 'work:wide-sargasso-sea',
+        clue: { en: 'Which Jean Rhys novel imagines the Caribbean youth of Antoinette Cosway, the woman later known as Bertha Mason in Jane Eyre?', et: 'Milline Jean Rhysi romaan kujutab Antoinette Cosway Kariibi mere noorust enne seda, kui temast saab „Jane Eyre’i“ Bertha Mason?' }, response: { en: 'Wide Sargasso Sea', et: '„Lai Sargasso meri“' }, acceptedVariants: { en: ['The Wide Sargasso Sea', 'Lai Sargasso meri'], et: ['„Wide Sargasso Sea“'] },
+        explanation: { en: 'Rhys gives Rochester’s first wife a history and voice of her own, turning a figure from the edge of Jane Eyre into the centre of the story.', et: 'Rhys annab Rochesteri esimesele naisele oma ajaloo ja hääle ning tõstab „Jane Eyre’i“ kõrvaltegelase loo keskmesse.' },
+        source: { sourceId: 'wikipedia:wide-sargasso-sea-antoinette', title: 'Wide Sargasso Sea', url: 'https://en.wikipedia.org/wiki/Wide_Sargasso_Sea', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-074:grendel-monster-narrator', factKey: 'literature-language:grendel-retells-beowulf-from-monster-view', tier: 2, subjectKey: 'work:grendel-novel',
+        clue: { en: 'Which John Gardner novel retells part of Beowulf through the lonely monster’s own philosophical voice?', et: 'Milline John Gardneri romaan jutustab osa „Beowulfist“ ümber üksildase koletise enda filosoofilise hääle kaudu?' }, response: { en: 'Grendel', et: '„Grendel“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Gardner makes Grendel the narrator, recasting the epic conflict as the monster’s search for meaning before Beowulf arrives.', et: 'Gardner teeb Grendelist jutustaja ning kujutab eepilist konflikti koletise tähenduseotsinguna enne Beowulfi saabumist.' },
+        source: { sourceId: 'wikipedia:grendel-novel-narrator', title: 'Grendel (novel)', url: 'https://en.wikipedia.org/wiki/Grendel_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-074:penelopiad-maids-chorus', factKey: 'literature-language:penelopiad-penelope-maids-retell-odyssey', tier: 3, subjectKey: 'work:the-penelopiad',
+        clue: { en: 'Which Margaret Atwood work lets Penelope recount her marriage to Odysseus while the twelve hanged maids interrupt as a chorus?', et: 'Millises Margaret Atwoodi teoses jutustab Penelope oma abielust Odysseusega, samal ajal kui kaksteist ülespoodud teenijannat koorina vahele astuvad?' }, response: { en: 'The Penelopiad', et: '„Penelopeia“' }, acceptedVariants: { en: ['Penelopiad', 'Penelopeia'], et: ['„The Penelopiad“'] },
+        explanation: { en: 'The novella revisits the Odyssey from the afterlife, questioning both Odysseus’s legend and the maids’ punishment.', et: 'Lühiromaan vaatab „Odüsseiale“ tagasi teispoolsusest ning seab küsimärgi alla nii Odysseuse legendi kui ka teenijannade karistuse.' },
+        source: { sourceId: 'wikipedia:penelopiad-maids-chorus', title: 'The Penelopiad', url: 'https://en.wikipedia.org/wiki/The_Penelopiad', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-074:thousand-acres-king-lear', factKey: 'literature-language:thousand-acres-recasts-king-lear-iowa', tier: 4, subjectKey: 'work:a-thousand-acres',
+        clue: { en: 'Which Jane Smiley novel turns King Lear into an Iowa farmer who divides his land among three daughters, with Ginny telling the story?', et: 'Milline Jane Smiley romaan muudab kuningas Leari Iowa farmeriks, kes jagab maa kolme tütre vahel, ning laseb loo jutustada Ginnyl?' }, response: { en: 'A Thousand Acres', et: '„A Thousand Acres“' }, acceptedVariants: { en: ['Thousand Acres'], et: ['„Thousand Acres“'] },
+        explanation: { en: 'Smiley relocates Shakespeare’s family tragedy to a modern farm and shifts sympathy toward the eldest daughter’s perspective.', et: 'Smiley paigutab Shakespeare’i peretragöödia tänapäeva farmi ning nihutab vaatepunkti ja kaastunde vanima tütre poole.' },
+        source: { sourceId: 'wikipedia:thousand-acres-king-lear', title: 'A Thousand Acres', url: 'https://en.wikipedia.org/wiki/A_Thousand_Acres', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-074:hag-seed-prison-tempest', factKey: 'literature-language:hag-seed-reworks-tempest-in-prison', tier: 5, subjectKey: 'work:hag-seed',
+        clue: { en: 'Which Margaret Atwood novel reworks The Tempest through Felix, a deposed theatre director who stages Shakespeare’s play with prison inmates?', et: 'Milline Margaret Atwoodi romaan loob „Tormi“ ümber Felixi kaudu, kes pärast teatrijuhi kohalt tõrjumist lavastab Shakespeare’i näidendi vangidega?' }, response: { en: 'Hag-Seed', et: '„Hag-Seed“' }, acceptedVariants: { en: ['Hag Seed'], et: ['„Hag Seed“'] },
+        explanation: { en: 'Felix uses the prison production to pursue revenge, echoing Prospero while directing his own version of the play.', et: 'Felix kasutab vanglalavastust kättemaksuks ning kordab Prosperot, juhtides samal ajal omaenda versiooni näidendist.' },
+        source: { sourceId: 'wikipedia:hag-seed-prison-tempest', title: 'Hag-Seed', url: 'https://en.wikipedia.org/wiki/Hag-Seed', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-076', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Books, Scholars, and Hidden Texts', et: 'Raamatud, uurijad ja peidetud tekstid' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-076:name-rose-library-murders', factKey: 'literature-language:name-rose-monk-library-mystery', tier: 1, subjectKey: 'work:the-name-of-the-rose',
+        clue: { en: 'Which Umberto Eco novel sends the Franciscan William of Baskerville into a medieval Italian monastery to investigate deaths linked to its labyrinthine library?', et: 'Millises Umberto Eco romaanis uurib frantsiskaan William Baskerville’ist keskaegses Itaalia kloostris surmajuhtumeid, mis on seotud labürintliku raamatukoguga?' }, response: { en: 'The Name of the Rose', et: '„Roosi nimi“' }, acceptedVariants: { en: ['Name of the Rose', 'Roosi nimi'], et: ['„The Name of the Rose“'] },
+        explanation: { en: 'William’s inquiry joins a murder mystery to debates about knowledge, laughter, and the control of books.', et: 'Williami uurimine seob mõrvamüsteeriumi vaidlustega teadmiste, naeru ja raamatute üle valitsemise teemal.' },
+        source: { sourceId: 'wikipedia:name-rose-library-murders', title: 'The Name of the Rose', url: 'https://en.wikipedia.org/wiki/The_Name_of_the_Rose', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-076:shadow-wind-forgotten-book', factKey: 'literature-language:shadow-wind-daniel-carax-book', tier: 2, subjectKey: 'work:the-shadow-of-the-wind',
+        clue: { en: 'Which Carlos Ruiz Zafón novel begins when young Daniel Sempere chooses a Julián Carax book in Barcelona’s Cemetery of Forgotten Books?', et: 'Milline Carlos Ruiz Zafóni romaan algab sellega, et noor Daniel Sempere valib Barcelona Unustatud Raamatute Surnuaial Julián Caraxi teose?' }, response: { en: 'The Shadow of the Wind', et: '„Tuule vari“' }, acceptedVariants: { en: ['Shadow of the Wind', 'Tuule vari'], et: ['„The Shadow of the Wind“'] },
+        explanation: { en: 'Daniel’s attempt to learn about Carax draws him into a mystery involving someone who is destroying every surviving copy of the author’s books.', et: 'Caraxi loo uurimine viib Danieli mõistatuseni, kus keegi hävitab süstemaatiliselt kirjaniku teoste säilinud eksemplare.' },
+        source: { sourceId: 'wikipedia:shadow-wind-forgotten-book', title: 'The Shadow of the Wind', url: 'https://en.wikipedia.org/wiki/The_Shadow_of_the_Wind', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-076:possession-victorian-letters', factKey: 'literature-language:possession-scholars-discover-poets-romance', tier: 3, subjectKey: 'work:possession-byatt',
+        clue: { en: 'Which A. S. Byatt novel follows scholars Roland Michell and Maud Bailey as hidden letters reveal a secret romance between two invented Victorian poets?', et: 'Millises A. S. Byatti romaanis avastavad uurijad Roland Michell ja Maud Bailey peidetud kirjade kaudu kahe väljamõeldud viktoriaanliku luuletaja salaarmastuse?' }, response: { en: 'Possession', et: '„Possession“' }, acceptedVariants: { en: ['Possession: A Romance'], et: ['„Possession: A Romance“'] },
+        explanation: { en: 'The modern investigation alternates with poems, diaries, and letters attributed to the fictional poets Randolph Ash and Christabel LaMotte.', et: 'Tänapäevane uurimine vaheldub väljamõeldud luuletajatele Randolph Ashile ja Christabel LaMotte’ile omistatud luuletuste, päevikute ja kirjadega.' },
+        source: { sourceId: 'wikipedia:possession-victorian-letters', title: 'Possession (Byatt novel)', url: 'https://en.wikipedia.org/wiki/Possession_(Byatt_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-076:historian-archives-dracula', factKey: 'literature-language:historian-letters-archives-vlad-dracula', tier: 4, subjectKey: 'work:the-historian',
+        clue: { en: 'Which Elizabeth Kostova novel turns old letters, archives, and libraries into a hunt for the historical Vlad the Impaler and the possible survival of Dracula?', et: 'Milline Elizabeth Kostova romaan muudab vanad kirjad, arhiivid ja raamatukogud jahiks ajaloolisele Vlad Teibasseajajale ning võib-olla ellu jäänud Draculale?' }, response: { en: 'The Historian', et: '„Ajaloolane“' }, acceptedVariants: { en: ['Historian', 'Ajaloolane'], et: ['„The Historian“'] },
+        explanation: { en: 'Nested accounts follow generations of researchers across Europe as scholarship becomes a dangerous confrontation with the Dracula legend.', et: 'Mitmekihiline jutustus jälgib eri põlvkondade uurijaid üle Euroopa, kuni teadustööst saab ohtlik vastasseis Dracula legendiga.' },
+        source: { sourceId: 'wikipedia:historian-archives-dracula', title: 'The Historian', url: 'https://en.wikipedia.org/wiki/The_Historian', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-076:people-book-haggadah-clues', factKey: 'literature-language:people-book-conservator-sarajevo-haggadah', tier: 5, subjectKey: 'work:people-of-the-book',
+        clue: { en: 'Which Geraldine Brooks novel has conservator Hanna Heath use a butterfly wing, wine stains, and other traces to reconstruct the Sarajevo Haggadah’s travels?', et: 'Millises Geraldine Brooksi romaanis kasutab konservaator Hanna Heath liblikatiiba, veiniplekke ja muid jälgi, et taastada Sarajevo hagada teekond?' }, response: { en: 'People of the Book', et: '„People of the Book“' }, acceptedVariants: { en: ['The People of the Book'], et: ['„The People of the Book“'] },
+        explanation: { en: 'Each physical clue opens a story from the illuminated manuscript’s imagined passage through persecution, exile, and rescue.', et: 'Iga füüsiline jälg avab loo illustreeritud käsikirja kujuteldavast teekonnast läbi tagakiusamise, pagenduse ja pääsemise.' },
+        source: { sourceId: 'wikipedia:people-book-haggadah-clues', title: 'People of the Book (novel)', url: 'https://en.wikipedia.org/wiki/People_of_the_Book_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-078', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Great Works Their Authors Never Finished', et: 'Suurteosed, mis jäid autoril lõpetamata' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-078:edwin-drood-unsolved', factKey: 'literature-language:edwin-drood-dickens-died-before-solution', tier: 1, subjectKey: 'work:mystery-of-edwin-drood',
+        clue: { en: 'Which mystery about a missing young man was left without Dickens’s solution when the author died after publishing only half of it?', et: 'Milline kadunud noormehe mõistatus jäi Dickensi lahenduseta, sest autor suri pärast ligikaudu poole romaani avaldamist?' }, response: { en: 'The Mystery of Edwin Drood', et: '„The Mystery of Edwin Drood“' }, acceptedVariants: { en: ['Mystery of Edwin Drood', 'Edwin Drood'], et: ['„Edwin Drood“'] },
+        explanation: { en: 'Dickens died while the serial was in progress, leaving Edwin’s fate and the intended culprit open to debate.', et: 'Dickens suri järjejutu ilmumise ajal, mistõttu Edwini saatus ja kavandatud süüdlane jäid vaidlusaluseks.' },
+        source: { sourceId: 'wikipedia:edwin-drood-unfinished-mystery', title: 'The Mystery of Edwin Drood', url: 'https://en.wikipedia.org/wiki/The_Mystery_of_Edwin_Drood', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-078:sanditon-seaside-fragment', factKey: 'literature-language:sanditon-austen-unfinished-resort', tier: 2, subjectKey: 'work:sanditon',
+        clue: { en: 'Which Jane Austen fragment brings Charlotte Heywood to an ambitious seaside resort before the manuscript breaks off partway through its twelfth chapter?', et: 'Milline Jane Austeni katkend viib Charlotte Heywoodi arenevasse merekuurorti, kuid katkeb kaheteistkümnenda peatüki keskel?' }, response: { en: 'Sanditon', et: '„Sanditon“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Austen stopped work as her health declined, leaving the resort satire and Charlotte’s story incomplete.', et: 'Austen katkestas halveneva tervise tõttu töö ning kuurordisatiir ja Charlotte’i lugu jäid lõpetamata.' },
+        source: { sourceId: 'wikipedia:sanditon-seaside-fragment', title: 'Sanditon', url: 'https://en.wikipedia.org/wiki/Sanditon', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-078:svejk-unfinished-war-journey', factKey: 'literature-language:svejk-hasek-died-before-completing-novel', tier: 3, subjectKey: 'work:good-soldier-svejk',
+        clue: { en: 'Which Jaroslav Hašek satire follows a cheerfully obstructive Czech soldier toward the First World War front but ends because its author died mid-series?', et: 'Milline Jaroslav Hašeki satiir saadab rõõmsalt tõrkuva tšehhi sõduri Esimese maailmasõja rindele, kuid katkeb autori surma tõttu?' }, response: { en: 'The Good Soldier Švejk', et: '„Vahva sõdur Švejk“' }, acceptedVariants: { en: ['The Good Soldier Schweik', 'Good Soldier Švejk', 'Vahva sõdur Švejk'], et: ['„The Good Soldier Švejk“', '„The Good Soldier Schweik“'] },
+        explanation: { en: 'Hašek completed only part of his planned comic sequence, so Švejk never reaches a conventional conclusion.', et: 'Hašek jõudis kavandatud koomilisest romaanisarjast valmis vaid osa ning Švejki lugu ei saa tavapärast lõppu.' },
+        source: { sourceId: 'wikipedia:svejk-unfinished-war-journey', title: 'The Good Soldier Švejk', url: 'https://en.wikipedia.org/wiki/The_Good_Soldier_%C5%A0vejk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-078:dead-souls-unfinished-design', factKey: 'literature-language:dead-souls-survives-as-incomplete-gogol-project', tier: 4, subjectKey: 'work:dead-souls',
+        clue: { en: 'Which Gogol work follows Chichikov buying the names of dead serfs and survives as only the incomplete beginning of a much larger design?', et: 'Millises Gogoli teoses ostab Tšitšikov surnud pärisorjade nimesid ning millest on säilinud vaid suurema kavandi lõpetamata algus?' }, response: { en: 'Dead Souls', et: '„Surnud hinged“' }, acceptedVariants: { en: ['Surnud hinged'], et: ['„Dead Souls“'] },
+        explanation: { en: 'Gogol envisioned further parts but destroyed much of the continuation, leaving the satirical project unfinished.', et: 'Gogol kavandas järgmisi osi, kuid hävitas suure osa jätkust, nii et satiiriline suurprojekt jäi lõpetamata.' },
+        source: { sourceId: 'wikipedia:dead-souls-unfinished-design', title: 'Dead Souls', url: 'https://en.wikipedia.org/wiki/Dead_Souls', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-078:original-laura-index-cards', factKey: 'literature-language:original-laura-nabokov-index-card-fragments', tier: 5, subjectKey: 'work:the-original-of-laura',
+        clue: { en: 'Which Vladimir Nabokov project survived as 138 index cards that he asked to have destroyed, but which his son later published in facsimile form?', et: 'Milline Vladimir Nabokovi teos säilis 138 registrikaardina, mille autor palus hävitada, kuid mille poeg hiljem faksiimilekujul avaldas?' }, response: { en: 'The Original of Laura', et: '„The Original of Laura“' }, acceptedVariants: { en: ['Original of Laura'], et: ['„Original of Laura“'] },
+        explanation: { en: 'The published volume preserves Nabokov’s movable cards and fragments rather than presenting a completed novel.', et: 'Avaldatud köide säilitab Nabokovi ümbertõstetavad kaardid ja katkendid, mitte valmis romaani.' },
+        source: { sourceId: 'wikipedia:original-laura-index-cards', title: 'The Original of Laura', url: 'https://en.wikipedia.org/wiki/The_Original_of_Laura', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-079', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Theatre Turns the Mirror on Itself', et: 'Teater vaatab iseendale otsa' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-079:noises-off-nothing-on', factKey: 'literature-language:noises-off-shows-farce-front-and-backstage', tier: 1, subjectKey: 'work:noises-off',
+        clue: { en: 'Which Michael Frayn comedy shows a disastrous touring production of the fictional farce Nothing On first from the audience side and then from backstage?', et: 'Milline Michael Frayni komöödia näitab väljamõeldud farsi „Nothing On“ katastroofilist ringreisi esmalt publiku poolt ja seejärel lava tagant?' }, response: { en: 'Noises Off', et: '„Noises Off“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The revolving set exposes how the actors’ quarrels and missed cues turn the play within the play into chaos.', et: 'Pöördlava paljastab, kuidas näitlejate tülid ja eksitud märguanded muudavad näidendi näidendis täielikuks kaoseks.' },
+        source: { sourceId: 'wikipedia:noises-off-nothing-on', title: 'Noises Off', url: 'https://en.wikipedia.org/wiki/Noises_Off', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-079:six-characters-interrupt-rehearsal', factKey: 'literature-language:six-characters-seek-author-at-rehearsal', tier: 2, subjectKey: 'work:six-characters-search-author',
+        clue: { en: 'Which Pirandello play begins when six unfinished characters interrupt a theatre rehearsal and demand that their story be performed?', et: 'Milline Pirandello näidend algab sellega, et kuus lõpetamata tegelast katkestavad teatriproovi ja nõuavad oma loo lavastamist?' }, response: { en: 'Six Characters in Search of an Author', et: '„Kuus tegelast autorit otsimas“' }, acceptedVariants: { en: ['Kuus tegelast autorit otsimas'], et: ['„Six Characters in Search of an Author“'] },
+        explanation: { en: 'The characters insist that their drama is more real than the actors’ imitation, blurring rehearsal, performance, and reality.', et: 'Tegelased väidavad, et nende draama on näitlejate jäljendusest tõelisem, ning hägustavad proovi, etenduse ja tegelikkuse piiri.' },
+        source: { sourceId: 'wikipedia:six-characters-interrupt-rehearsal', title: 'Six Characters in Search of an Author', url: 'https://en.wikipedia.org/wiki/Six_Characters_in_Search_of_an_Author', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-079:real-inspector-hound-critics', factKey: 'literature-language:real-inspector-hound-critics-enter-mystery', tier: 3, subjectKey: 'work:the-real-inspector-hound',
+        clue: { en: 'Which Tom Stoppard comedy has theatre critics Moon and Birdboot comment on a country-house mystery until they are pulled into its action?', et: 'Millises Tom Stoppardi komöödias arvustavad teatrikriitikud Moon ja Birdboot maamõisa mõrvalugu, kuni satuvad ise selle tegevusse?' }, response: { en: 'The Real Inspector Hound', et: '„The Real Inspector Hound“' }, acceptedVariants: { en: ['Real Inspector Hound'], et: ['„Real Inspector Hound“'] },
+        explanation: { en: 'Stoppard parodies both formula mysteries and reviewing as the observers become characters in the play they are watching.', et: 'Stoppard parodeerib nii vormellikke mõrvalugusid kui ka kriitikat, sest vaatlejatest saavad vaadatava näidendi tegelased.' },
+        source: { sourceId: 'wikipedia:real-inspector-hound-critics', title: 'The Real Inspector Hound', url: 'https://en.wikipedia.org/wiki/The_Real_Inspector_Hound', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-079:dresser-norman-sir-lear', factKey: 'literature-language:dresser-norman-prepares-sir-for-lear', tier: 4, subjectKey: 'work:the-dresser-play',
+        clue: { en: 'Which Ronald Harwood play follows Norman struggling backstage to prepare an exhausted actor known as “Sir” for another performance of King Lear?', et: 'Milline Ronald Harwoodi näidend jälgib lavatagust Normanit, kes püüab kurnatud „Siri“ järjekordseks kuningas Leari etenduseks valmis seada?' }, response: { en: 'The Dresser', et: '„The Dresser“' }, acceptedVariants: { en: ['Dresser'], et: ['„Dresser“'] },
+        explanation: { en: 'The wartime theatre company depends on the intimate, unequal bond between the aging actor-manager and the dresser who sustains him.', et: 'Sõjaaegne teatritrupp sõltub vananeva näitleja-juhi ja teda toetava riietaja lähedasest, kuid ebavõrdsest suhtest.' },
+        source: { sourceId: 'wikipedia:dresser-norman-sir-lear', title: 'The Dresser', url: 'https://en.wikipedia.org/wiki/The_Dresser', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-079:rosencrantz-guildenstern-hamlet-wings', factKey: 'literature-language:rosencrantz-guildenstern-centres-hamlet-minor-figures', tier: 5, subjectKey: 'work:rosencrantz-guildenstern-dead',
+        clue: { en: 'Which Stoppard play keeps two minor figures from Hamlet waiting in the wings, flipping coins and trying to understand a plot whose ending is already fixed?', et: 'Milline Stoppardi näidend jätab kaks „Hamleti“ kõrvaltegelast kulissidesse ootama, münte viskama ja püüdma mõista süžeed, mille lõpp on juba määratud?' }, response: { en: 'Rosencrantz and Guildenstern Are Dead', et: '„Rosencrantz ja Guildenstern on surnud“' }, acceptedVariants: { en: ['Rosencrantz ja Guildenstern on surnud'], et: ['„Rosencrantz and Guildenstern Are Dead“'] },
+        explanation: { en: 'Rosencrantz and Guildenstern move between Shakespeare’s familiar scenes and an absurdist uncertainty they cannot escape.', et: 'Rosencrantz ja Guildenstern liiguvad Shakespeare’i tuttavate stseenide ning absurdistliku ebakindluse vahel, millest nad pääseda ei saa.' },
+        source: { sourceId: 'wikipedia:rosencrantz-guildenstern-hamlet-wings', title: 'Rosencrantz and Guildenstern Are Dead', url: 'https://en.wikipedia.org/wiki/Rosencrantz_and_Guildenstern_Are_Dead', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-083', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Words That Escaped Their Books', et: 'Raamatutest ellu läinud sõnad' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:chortle-jabberwocky-blend', factKey: 'literature-language:chortle-coined-jabberwocky-chuckle-snort', tier: 1, subjectKey: 'word:chortle',
+        clue: { en: 'Which word for a gleeful laugh did Lewis Carroll coin in “Jabberwocky” by blending “chuckle” and “snort”?', et: 'Millise rõõmsa naeru sõna lõi Lewis Carroll „Jabberwockys“, sulatades kokku inglise sõnad chuckle ja snort?' }, response: { en: 'chortle', et: 'chortle' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Carroll’s portmanteau outgrew the poem and became an ordinary English verb and noun for a delighted laugh.', et: 'Carrolli kohversõna väljus luuletusest ning sai inglise keeles tavaliseks rõõmsa naeru tegusõnaks ja nimisõnaks.' },
+        source: { sourceId: 'wikipedia:chortle-jabberwocky-blend', title: 'Chortle', url: 'https://en.wikipedia.org/wiki/Chortle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:pandemonium-milton-capital', factKey: 'literature-language:pandemonium-milton-capital-of-hell', tier: 2, subjectKey: 'word:pandemonium',
+        clue: { en: 'What word for noisy chaos began as Milton’s name for the capital of Hell where the demons gather in Paradise Lost?', et: 'Milline lärmakat kaost tähistav sõna oli algselt Miltoni nimi põrgu pealinnale, kus „Kaotatud paradiisi“ deemonid kogunevad?' }, response: { en: 'pandemonium', et: 'pandemoonium' }, acceptedVariants: { en: ['Pandæmonium', 'pandemoonium'], et: ['pandemonium', 'Pandæmonium'] },
+        explanation: { en: 'Milton formed Pandæmonium as the demons’ assembly place; the name later broadened to any scene of uproar and disorder.', et: 'Milton lõi Pandæmoniumi deemonite kogunemispaigaks; hiljem laienes nimi igasuguse möllu ja korratuse tähiseks.' },
+        source: { sourceId: 'wikipedia:pandemonium-milton-capital', title: 'Pandæmonium (Paradise Lost)', url: 'https://en.wikipedia.org/wiki/Pand%C3%A6monium_(Paradise_Lost)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:utopia-more-no-place', factKey: 'literature-language:utopia-more-coined-island-name', tier: 3, subjectKey: 'word:utopia',
+        clue: { en: 'Which word for an ideal society comes from Thomas More’s invented island name, built as a Greek pun on “no place”?', et: 'Milline ideaalühiskonda tähistav sõna pärineb Thomas More’i väljamõeldud saare nimest, mis mängib kreeka väljendiga „ei mingi koht“?' }, response: { en: 'utopia', et: 'utoopia' }, acceptedVariants: { en: ['utoopia'], et: ['utopia'] },
+        explanation: { en: 'More’s book made Utopia the name of an imagined commonwealth, and the word became a general term for an ideal but unreal society.', et: 'More’i teoses oli Utoopia kujuteldava riigi nimi ning sõnast sai üldnimetus ideaalsele, kuid tegelikkuses olematule ühiskonnale.' },
+        source: { sourceId: 'wikipedia:utopia-more-no-place', title: 'Utopia (book)', url: 'https://en.wikipedia.org/wiki/Utopia_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:yahoo-gulliver-brutish', factKey: 'literature-language:yahoo-from-gulliver-brutish-humanoids', tier: 4, subjectKey: 'word:yahoo',
+        clue: { en: 'What insult for a coarse person began as Swift’s name for the filthy, brutish humanoids ruled by rational horses in Gulliver’s Travels?', et: 'Milline tahumatu inimese kohta käiv sõimunimi oli Swiftil algselt räpaste ja jõhkrate inimesesarnaste olendite nimi, keda valitsesid „Gulliveri reisides“ mõistusega hobused?' }, response: { en: 'yahoo', et: 'yahoo' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Swift’s Yahoos embody degraded human appetites, and their name entered English for a loutish or uncivilized person.', et: 'Swifti yahood kehastavad mandunud inimlikke ihasid ning nende nimi hakkas inglise keeles tähistama matslikku või tsiviliseerimata inimest.' },
+        source: { sourceId: 'wikipedia:yahoo-gulliver-brutish', title: 'Yahoo (Gulliver’s Travels)', url: 'https://en.wikipedia.org/wiki/Yahoo_(Gulliver%27s_Travels)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:catch-22-no-win-rule', factKey: 'literature-language:catch-22-heller-contradictory-airman-rule', tier: 5, subjectKey: 'phrase:catch-22',
+        clue: { en: 'What term for a no-win situation comes from Joseph Heller’s rule that an airman asking to avoid dangerous missions proves he is sane enough to keep flying?', et: 'Milline väljapääsmatut olukorda tähistav väljend pärineb Joseph Helleri reeglist, mille järgi tõestab ohtlikest lendudest vabastamist paluv lendur, et on lendamiseks piisavalt terve mõistusega?' }, response: { en: 'a catch-22', et: 'nokk kinni, saba lahti olukord' }, acceptedVariants: { en: ['catch-22', 'Catch-22', 'nokk kinni, saba lahti olukord'], et: ['catch-22', 'Catch-22', 'väljapääsmatu vastuolu'] },
+        explanation: { en: 'The fictional regulation traps Heller’s airmen in circular logic, and its name became shorthand for any self-contradictory bind.', et: 'Väljamõeldud määrus sulgeb Helleri lendurid ringloogikasse ning selle nimest sai iseenesega vastuolus oleva ummiku üldnimetus.' },
+        source: { sourceId: 'wikipedia:catch-22-no-win-rule', title: 'Catch-22 (logic)', url: 'https://en.wikipedia.org/wiki/Catch-22_(logic)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-097', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Nordic Lives Under Pressure', et: 'Põhjamaade elud surve all' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-097:unknown-soldier-continuation-war', factKey: 'literature-language:unknown-soldier-machine-gun-company-war', tier: 1, subjectKey: 'work:the-unknown-soldier-novel',
+        clue: { en: 'Which Väinö Linna novel follows an ordinary Finnish machine-gun company through the Continuation War, replacing heroic distance with soldiers’ varied voices?', et: 'Milline Väinö Linna romaan jälgib Soome kuulipildujakompaniid läbi Jätkusõja ning asendab kangelasliku distantsi sõdurite eri häältega?' }, response: { en: 'The Unknown Soldier', et: '„Tundmatu sõdur“' }, acceptedVariants: { en: ['Unknown Soldier', 'Tundmatu sõdur', 'Tuntematon sotilas'], et: ['„The Unknown Soldier“', '„Tuntematon sotilas“'] },
+        explanation: { en: 'Linna’s ensemble of conscripts presents the war from the ranks and became a central work of Finnish post-war literature.', et: 'Linna ajateenijatest koosnev tegelaskond näitab sõda reameeste vaatepunktist ning romaanist sai Soome sõjajärgse kirjanduse keskne teos.' },
+        source: { sourceId: 'wikipedia:unknown-soldier-continuation-war', title: 'The Unknown Soldier (novel)', url: 'https://en.wikipedia.org/wiki/The_Unknown_Soldier_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-097:summer-book-sophia-grandmother', factKey: 'literature-language:summer-book-sophia-grandmother-island', tier: 2, subjectKey: 'work:the-summer-book',
+        clue: { en: 'Which Tove Jansson novel builds brief, unsentimental episodes around young Sophia and her grandmother sharing a small island in the Gulf of Finland?', et: 'Milline Tove Janssoni romaan loob lühikesed ja sentimentaalsust vältivad lood noore Sophia ning tema vanaema ühisest suvest Soome lahe väikesaarel?' }, response: { en: 'The Summer Book', et: '„Suveraamat“' }, acceptedVariants: { en: ['Summer Book', 'Suveraamat'], et: ['„The Summer Book“', '„Sommarboken“'] },
+        explanation: { en: 'The island conversations let childhood curiosity and old age meet against weather, sea, and the family’s quiet grief.', et: 'Saarevestlustes kohtuvad lapse uudishimu ja vanadus ilma, mere ning perekonna vaikse leina taustal.' },
+        source: { sourceId: 'wikipedia:summer-book-sophia-grandmother', title: 'The Summer Book', url: 'https://en.wikipedia.org/wiki/The_Summer_Book', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-097:kristin-lavransdatter-medieval-life', factKey: 'literature-language:kristin-lavransdatter-medieval-norway-trilogy', tier: 3, subjectKey: 'work:kristin-lavransdatter',
+        clue: { en: 'Which Sigrid Undset trilogy follows one woman from rebellious youth through marriage and motherhood in fourteenth-century Norway?', et: 'Milline Sigrid Undseti triloogia jälgib ühe naise teekonda mässumeelsest noorusest abielu ja emaduseni 14. sajandi Norras?' }, response: { en: 'Kristin Lavransdatter', et: '„Kristin Lavransdatter“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Kristin’s choices, faith, and bond with Erlend unfold across The Wreath, The Wife, and The Cross.', et: 'Kristini valikud, usk ja suhe Erlendiga arenevad triloogia osades „Pärg“, „Naine“ ja „Rist“.' },
+        source: { sourceId: 'wikipedia:kristin-lavransdatter-medieval-life', title: 'Kristin Lavransdatter', url: 'https://en.wikipedia.org/wiki/Kristin_Lavransdatter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-097:growth-soil-isak-homestead', factKey: 'literature-language:growth-soil-isak-builds-norwegian-homestead', tier: 4, subjectKey: 'work:growth-of-the-soil',
+        clue: { en: 'Which Knut Hamsun novel begins with Isak clearing remote Norwegian land and building the farm Sellanraa almost from nothing?', et: 'Milline Knut Hamsuni romaan algab sellega, et Isak harib kauget Norra maad ja rajab peaaegu tühjalt kohalt Sellanraa talu?' }, response: { en: 'Growth of the Soil', et: '„Maa õnnistus“' }, acceptedVariants: { en: ['Maa õnnistus'], et: ['„Growth of the Soil“', '„Markens grøde“'] },
+        explanation: { en: 'Isak’s homestead anchors a novel about labour, settlement, family, and the pressure of modern change.', et: 'Isaki talu on töö, asustamise, perekonna ja moodsa muutuse survega tegeleva romaani kese.' },
+        source: { sourceId: 'wikipedia:growth-soil-isak-homestead', title: 'Growth of the Soil', url: 'https://en.wikipedia.org/wiki/Growth_of_the_Soil', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-097:independent-people-bjartur-debt', factKey: 'literature-language:independent-people-bjartur-farm-independence', tier: 5, subjectKey: 'work:independent-people',
+        clue: { en: 'Which Halldór Laxness novel tests the proud sheep farmer Bjartur’s dream of absolute independence against debt, harsh land, and his family’s needs?', et: 'Milline Halldór Laxnessi romaan paneb uhke lambakasvataja Bjarturi täieliku iseseisvuse unistuse vastamisi võla, karmi maa ja perekonna vajadustega?' }, response: { en: 'Independent People', et: '„Independent People“' }, acceptedVariants: { en: ['Sjálfstætt fólk'], et: ['„Sjálfstætt fólk“'] },
+        explanation: { en: 'Bjartur’s refusal to depend on others gives him dignity but also drives the losses at the heart of the Icelandic novel.', et: 'Bjarturi keeldumine teistest sõltuda annab talle väärikuse, kuid põhjustab ka Islandi romaani keskmes olevad kaotused.' },
+        source: { sourceId: 'wikipedia:independent-people-bjartur-debt', title: 'Independent People', url: 'https://en.wikipedia.org/wiki/Independent_People', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-013', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Lives Rebuilt in Memoir', et: 'Mälestustes taastatud elud' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-013:anne-frank-diary-annex', factKey: 'literature-language:diary-young-girl-anne-frank-annex', tier: 1, subjectKey: 'work:diary-of-a-young-girl',
+        clue: { en: 'Which book preserves Anne Frank’s diary from the Amsterdam hiding place she called the Secret Annex?', et: 'Milline raamat talletab Anne Franki päeviku Amsterdami peidupaigast, mida ta nimetas tagumiseks majaks?' }, response: { en: 'The Diary of a Young Girl', et: '„Anne Franki päevik“' }, acceptedVariants: { en: ['Anne Frank: The Diary of a Young Girl', 'Anne Franki päevik'], et: ['„The Diary of a Young Girl“', '„Anne Frank: The Diary of a Young Girl“'] },
+        explanation: { en: 'Frank wrote while hiding with her family during the Nazi occupation; her father Otto later prepared the diary for publication.', et: 'Frank kirjutas päevikut koos perega natside okupatsiooni eest varjudes; tema isa Otto aitas selle hiljem avaldada.' },
+        source: { sourceId: 'wikipedia:anne-frank-diary-annex', title: 'The Diary of a Young Girl', url: 'https://en.wikipedia.org/wiki/The_Diary_of_a_Young_Girl', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-013:angelas-ashes-limerick-childhood', factKey: 'literature-language:angelas-ashes-mccourt-limerick-childhood', tier: 2, subjectKey: 'work:angelas-ashes',
+        clue: { en: 'Which Frank McCourt memoir recounts a poor childhood in Limerick with his mother Angela and an unreliable alcoholic father?', et: 'Milline Frank McCourti mälestusteraamat jutustab vaesest lapsepõlvest Limerickis koos ema Angela ja ebakindla alkohoolikust isaga?' }, response: { en: 'Angela’s Ashes', et: '„Angela tuhk“' }, acceptedVariants: { en: ['Angelas Ashes', 'Angela tuhk'], et: ['„Angela’s Ashes“', '„Angelas Ashes“'] },
+        explanation: { en: 'McCourt balances hardship with a child’s eye and dark humour as the family struggles in Ireland.', et: 'McCourt ühendab raskused lapse pilgu ja tumeda huumoriga, kirjeldades pere võitlust Iirimaal.' },
+        source: { sourceId: 'wikipedia:angelas-ashes-limerick-childhood', title: 'Angela’s Ashes', url: 'https://en.wikipedia.org/wiki/Angela%27s_Ashes', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-013:caged-bird-angelou-coming-age', factKey: 'literature-language:caged-bird-angelou-childhood-memoir', tier: 3, subjectKey: 'work:i-know-why-caged-bird-sings',
+        clue: { en: 'Which Maya Angelou memoir follows her childhood in Stamps, Arkansas, and her growth toward a voice able to resist racism and silence?', et: 'Milline Maya Angelou mälestusteraamat jälgib tema lapsepõlve Arkansase osariigis Stampsis ning oma hääle leidmist rassismi ja vaikimise vastu?' }, response: { en: 'I Know Why the Caged Bird Sings', et: '„Ma tean, miks puurilind laulab“' }, acceptedVariants: { en: ['Ma tean, miks puurilind laulab'], et: ['„I Know Why the Caged Bird Sings“'] },
+        explanation: { en: 'Angelou’s first autobiography traces how literature, community, and self-respect help her confront childhood oppression.', et: 'Angelou esimene autobiograafia näitab, kuidas kirjandus, kogukond ja eneseväärikus aitavad tal lapsepõlve rõhumisele vastu seista.' },
+        source: { sourceId: 'wikipedia:caged-bird-angelou-coming-age', title: 'I Know Why the Caged Bird Sings', url: 'https://en.wikipedia.org/wiki/I_Know_Why_the_Caged_Bird_Sings', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-013:educated-westover-school', factKey: 'literature-language:educated-westover-self-education-idaho', tier: 4, subjectKey: 'work:educated-memoir',
+        clue: { en: 'Which Tara Westover memoir follows a girl raised in an isolated Idaho survivalist family who enters a classroom for the first time at seventeen?', et: 'Milline Tara Westoveri mälestusteraamat jälgib Idaho eraldatud ellujääjate peres kasvanud tüdrukut, kes astub esimest korda klassiruumi seitsmeteistkümneaastaselt?' }, response: { en: 'Educated', et: '„Haritud“' }, acceptedVariants: { en: ['Haritud'], et: ['„Educated“'] },
+        explanation: { en: 'Westover describes using study to widen her world, eventually reaching university while reassessing the family history she had been taught.', et: 'Westover kirjeldab, kuidas õppimine avardas tema maailma ja viis ülikooli, sundides samal ajal ümber hindama perekonnalt saadud arusaamu.' },
+        source: { sourceId: 'wikipedia:educated-westover-school', title: 'Educated (book)', url: 'https://en.wikipedia.org/wiki/Educated_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-013:when-breath-kalanithi', factKey: 'literature-language:when-breath-kalanithi-surgeon-cancer', tier: 5, subjectKey: 'work:when-breath-becomes-air',
+        clue: { en: 'Which memoir by neurosurgeon Paul Kalanithi asks what makes life meaningful after he is diagnosed with terminal lung cancer?', et: 'Millises neurokirurg Paul Kalanithi mälestusteraamatus küsib autor elu tähenduse järele pärast ravimatu kopsuvähi diagnoosi?' }, response: { en: 'When Breath Becomes Air', et: '„Kui hingusest saab õhk“' }, acceptedVariants: { en: ['Kui hingusest saab õhk'], et: ['„When Breath Becomes Air“'] },
+        explanation: { en: 'Kalanithi writes from both sides of medicine, moving from treating patients to facing mortality as a patient himself.', et: 'Kalanithi kirjutab meditsiini mõlemalt poolelt, liikudes patsientide ravimisest ise patsiendina surelikkusega silmitsi seismiseni.' },
+        source: { sourceId: 'wikipedia:when-breath-kalanithi', title: 'When Breath Becomes Air', url: 'https://en.wikipedia.org/wiki/When_Breath_Becomes_Air', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-015', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Poems Carried into Public Memory', et: 'Ühismällu jõudnud luuletused' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-015:o-captain-lincoln-elegy', factKey: 'literature-language:o-captain-whitman-lincoln-elegy', tier: 1, subjectKey: 'work:o-captain-my-captain',
+        clue: { en: 'Which Walt Whitman poem mourns Abraham Lincoln by addressing the dead president as a captain whose ship has reached port?', et: 'Milline Walt Whitmani luuletus leinab Abraham Lincolni, pöördudes surnud presidendi kui kapteni poole, kelle laev on jõudnud sadamasse?' }, response: { en: 'O Captain! My Captain!', et: '„Oo, kapten! Mu kapten!“' }, acceptedVariants: { en: ['O Captain, My Captain', 'Oo, kapten! Mu kapten!'], et: ['„O Captain! My Captain!“', '„O Captain, My Captain“'] },
+        explanation: { en: 'Whitman turns the end of the Civil War into a victorious voyage overshadowed by the captain’s death.', et: 'Whitman muudab kodusõja lõpu võidukaks merereisiks, mida varjutab kapteni surm.' },
+        source: { sourceId: 'wikipedia:o-captain-lincoln-elegy', title: 'O Captain! My Captain!', url: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-015:new-colossus-statue-liberty', factKey: 'literature-language:new-colossus-statue-liberty-pedestal', tier: 2, subjectKey: 'work:the-new-colossus',
+        clue: { en: 'Which Emma Lazarus sonnet calls the Statue of Liberty the “Mother of Exiles” and welcomes the homeless and tempest-tossed?', et: 'Milline Emma Lazaruse sonett nimetab Vabadussammast „pagulaste emaks“ ning tervitab kodutuid ja tormist räsituid?' }, response: { en: 'The New Colossus', et: '„Uus koloss“' }, acceptedVariants: { en: ['New Colossus', 'Uus koloss'], et: ['„The New Colossus“'] },
+        explanation: { en: 'Lines from the poem were mounted inside the statue’s pedestal and helped define the monument as a symbol of welcome.', et: 'Luuletuse read paigutati monumendi aluse sisemusse ning need aitasid kujundada Vabadussambast vastuvõtu sümboli.' },
+        source: { sourceId: 'wikipedia:new-colossus-statue-liberty', title: 'The New Colossus', url: 'https://en.wikipedia.org/wiki/The_New_Colossus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-015:flanders-fields-poppies', factKey: 'literature-language:flanders-fields-mccrae-poppies-remembrance', tier: 3, subjectKey: 'work:in-flanders-fields',
+        clue: { en: 'Which First World War poem by John McCrae opens with poppies growing between soldiers’ graves and helped make the flower a remembrance symbol?', et: 'Milline John McCrae Esimese maailmasõja luuletus algab sõdurite haudade vahel kasvavate moonidega ning aitas muuta lille mälestussümboliks?' }, response: { en: 'In Flanders Fields', et: '„Flandria väljadel“' }, acceptedVariants: { en: ['Flandria väljadel'], et: ['„In Flanders Fields“'] },
+        explanation: { en: 'McCrae gives the fallen soldiers a collective voice from the fields where the living are urged to continue their cause.', et: 'McCrae annab langenud sõduritele ühise hääle väljadel, kust elavaid kutsutakse nende võitlust jätkama.' },
+        source: { sourceId: 'wikipedia:flanders-fields-poppies', title: 'In Flanders Fields', url: 'https://en.wikipedia.org/wiki/In_Flanders_Fields', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-015:if-kipling-advice', factKey: 'literature-language:if-kipling-stoic-advice-son', tier: 4, subjectKey: 'work:if-kipling',
+        clue: { en: 'Which Rudyard Kipling poem gives a son a sequence of calm tests—keeping his head, trusting himself, and meeting triumph and disaster alike?', et: 'Milline Rudyard Kiplingi luuletus annab pojale rea meelerahu proovilepanevaid nõuandeid: säilitada pea, usaldada ennast ning kohelda võitu ja kaotust võrdselt?' }, response: { en: 'If—', et: '„Kui…“' }, acceptedVariants: { en: ['If', 'Kui…', 'Kui...'], et: ['„If—“', '„If“'] },
+        explanation: { en: 'The poem frames maturity as self-command under pressure and ends by promising that these qualities make the listener a man.', et: 'Luuletus kujutab küpsust enesevalitsusena surve all ning lõpeb lubadusega, et need omadused teevad kuulajast mehe.' },
+        source: { sourceId: 'wikipedia:if-kipling-advice', title: 'If—', url: 'https://en.wikipedia.org/wiki/If%E2%80%94', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-015:dulce-gas-attack', factKey: 'literature-language:dulce-et-decorum-est-gas-attack', tier: 5, subjectKey: 'work:dulce-et-decorum-est',
+        clue: { en: 'Which Wilfred Owen poem depicts an exhausted march and a gas attack before rejecting the old claim that it is sweet and fitting to die for one’s country?', et: 'Milline Wilfred Oweni luuletus kujutab kurnatud marssi ja gaasirünnakut ning lükkab seejärel tagasi vana väite, et kodumaa eest on magus ja auväärne surra?' }, response: { en: 'Dulce et Decorum est', et: '„Dulce et Decorum est“' }, acceptedVariants: { en: ['Dulce et Decorum Est'], et: ['„Dulce et Decorum Est“'] },
+        explanation: { en: 'Owen uses a soldier’s choking death to expose the patriotic Latin motto as “the old Lie.”', et: 'Owen kasutab lämbuva sõduri surma, et paljastada isamaaline ladinakeelne maksiim „vana valena“.' },
+        source: { sourceId: 'wikipedia:dulce-gas-attack', title: 'Dulce et Decorum est', url: 'https://en.wikipedia.org/wiki/Dulce_et_Decorum_est', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-017', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Children Find a Door to Another World', et: 'Lapsed leiavad ukse teise maailma' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-017:coraline-small-door', factKey: 'literature-language:coraline-door-other-mother-buttons', tier: 1, subjectKey: 'work:coraline',
+        clue: { en: 'Which Neil Gaiman novel sends a girl through a small door to an “other mother” who wants to sew buttons over her eyes?', et: 'Millises Neil Gaimani romaanis läheb tüdruk läbi väikese ukse „teise ema“ juurde, kes tahab talle silmade asemele nööbid õmmelda?' }, response: { en: 'Coraline', et: '„Coraline“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Coraline discovers that the tempting copy of her home is a trap and must rescue both her parents and other imprisoned children.', et: 'Coraline avastab, et ahvatlev kodu koopia on lõks, ning peab päästma nii oma vanemad kui ka teised vangistatud lapsed.' },
+        source: { sourceId: 'wikipedia:coraline-small-door', title: 'Coraline', url: 'https://en.wikipedia.org/wiki/Coraline', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-017:wrinkle-time-tesseract', factKey: 'literature-language:wrinkle-time-meg-tesseract-rescue', tier: 2, subjectKey: 'work:a-wrinkle-in-time',
+        clue: { en: 'Which Madeleine L’Engle novel has Meg Murry, Charles Wallace, and Calvin travel by tesseract to rescue Meg’s father from the mind-controlling IT?', et: 'Millises Madeleine L’Engle’i romaanis rändavad Meg Murry, Charles Wallace ja Calvin tesserakti abil, et päästa Megi isa mõtteid valitseva IT käest?' }, response: { en: 'A Wrinkle in Time', et: '„Ajalõhe“' }, acceptedVariants: { en: ['Wrinkle in Time', 'Ajalõhe'], et: ['„A Wrinkle in Time“'] },
+        explanation: { en: 'The children cross space with Mrs Whatsit, Mrs Who, and Mrs Which to confront enforced sameness on Camazotz.', et: 'Lapsed liiguvad proua Whatsiti, proua Who ja proua Whichi abiga läbi ruumi, et astuda Camazotzil vastu sunnitud ühetaolisusele.' },
+        source: { sourceId: 'wikipedia:wrinkle-time-tesseract', title: 'A Wrinkle in Time', url: 'https://en.wikipedia.org/wiki/A_Wrinkle_in_Time', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-017:phantom-tollbooth-milo', factKey: 'literature-language:phantom-tollbooth-milo-kingdom-wisdom', tier: 3, subjectKey: 'work:the-phantom-tollbooth',
+        clue: { en: 'Which Norton Juster book has bored Milo drive a toy car through a mysterious tollbooth into the Kingdom of Wisdom?', et: 'Millises Norton Justeri raamatus sõidab tüdinud Milo mänguautoga läbi salapärase teemaksuputka Tarkuse Kuningriiki?' }, response: { en: 'The Phantom Tollbooth', et: '„The Phantom Tollbooth“' }, acceptedVariants: { en: ['Phantom Tollbooth'], et: ['„Phantom Tollbooth“'] },
+        explanation: { en: 'Milo’s journey through wordplay and number puzzles leads him to rescue the princesses Rhyme and Reason.', et: 'Sõnamängude ja arvumõistatuste kaudu kulgev teekond viib Milo printsesside Rhyme’i ja Reasoni päästmiseni.' },
+        source: { sourceId: 'wikipedia:phantom-tollbooth-milo', title: 'The Phantom Tollbooth', url: 'https://en.wikipedia.org/wiki/The_Phantom_Tollbooth', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-017:inkheart-read-characters-out', factKey: 'literature-language:inkheart-mo-reads-characters-from-books', tier: 4, subjectKey: 'work:inkheart',
+        clue: { en: 'Which Cornelia Funke novel reveals that Meggie’s father Mo can read characters out of books, including the villain Capricorn?', et: 'Millises Cornelia Funke romaanis selgub, et Meggie isa Mo suudab tegelasi raamatutest välja lugeda, nende seas kurikael Capricornit?' }, response: { en: 'Inkheart', et: '„Tindisüda“' }, acceptedVariants: { en: ['Tindisüda'], et: ['„Inkheart“'] },
+        explanation: { en: 'Mo’s gift exchanges people between fiction and reality, and the family must face the characters he accidentally released.', et: 'Mo anne vahetab inimesi väljamõeldise ja tegelikkuse vahel ning pere peab silmitsi seisma tegelastega, kelle ta kogemata vabastas.' },
+        source: { sourceId: 'wikipedia:inkheart-read-characters-out', title: 'Inkheart', url: 'https://en.wikipedia.org/wiki/Inkheart', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-017:dark-is-rising-six-signs', factKey: 'literature-language:dark-is-rising-will-stanton-six-signs', tier: 5, subjectKey: 'work:the-dark-is-rising',
+        clue: { en: 'Which Susan Cooper novel reveals on Will Stanton’s eleventh birthday that he is one of the Old Ones and must gather six Signs against the Dark?', et: 'Millises Susan Cooperi romaanis selgub Will Stantoni üheteistkümnendal sünnipäeval, et ta kuulub Vanade hulka ning peab Pimeduse vastu koguma kuus Märki?' }, response: { en: 'The Dark Is Rising', et: '„The Dark Is Rising“' }, acceptedVariants: { en: ['Dark Is Rising'], et: ['„Dark Is Rising“'] },
+        explanation: { en: 'Will’s familiar English countryside opens into an ancient struggle between the Light and the Dark.', et: 'Willi tuttav Inglise maastik avaneb Valguse ja Pimeduse iidsesse võitlusse.' },
+        source: { sourceId: 'wikipedia:dark-is-rising-six-signs', title: 'The Dark Is Rising', url: 'https://en.wikipedia.org/wiki/The_Dark_Is_Rising', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-038', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Classic Comedies on Stage', et: 'Klassikalised lavakomöödiad' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-038:earnest-double-identities', factKey: 'literature-language:earnest-jack-algernon-invent-identities', tier: 1, subjectKey: 'work:importance-of-being-earnest',
+        clue: { en: 'Which Oscar Wilde comedy has both Jack Worthing and Algernon Moncrieff invent false identities while Gwendolen and Cecily insist on loving a man named Ernest?', et: 'Millises Oscar Wilde’i komöödias loovad nii Jack Worthing kui ka Algernon Moncrieff endale valeidentiteedi, samal ajal kui Gwendolen ja Cecily tahavad armastada Ernesti-nimelist meest?' }, response: { en: 'The Importance of Being Earnest', et: '„Tähtis on olla tõsine“' }, acceptedVariants: { en: ['Importance of Being Earnest', 'Tähtis on olla tõsine'], et: ['„The Importance of Being Earnest“'] },
+        explanation: { en: 'Wilde’s title pun and the heroes’ invented lives drive a satire of courtship, respectability, and social convention.', et: 'Wilde’i pealkirjasõnamäng ja kangelaste väljamõeldud elud käivitavad kosimist, kombekust ja seltskonnareegleid pilava satiiri.' },
+        source: { sourceId: 'wikipedia:earnest-double-identities', title: 'The Importance of Being Earnest', url: 'https://en.wikipedia.org/wiki/The_Importance_of_Being_Earnest', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-038:pygmalion-eliza-speech', factKey: 'literature-language:pygmalion-higgins-trains-eliza-speech', tier: 2, subjectKey: 'work:pygmalion-play',
+        clue: { en: 'Which George Bernard Shaw play has phonetics professor Henry Higgins train flower seller Eliza Doolittle to speak like a duchess?', et: 'Millises George Bernard Shaw’ näidendis õpetab foneetikaprofessor Henry Higgins lillemüüja Eliza Doolittle’i hertsoginna kombel kõnelema?' }, response: { en: 'Pygmalion', et: '„Pygmalion“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Eliza’s transformation exposes how accent and manners act as gates to class, while she demands control over her own future.', et: 'Eliza muutumine näitab, kuidas aktsent ja kombed valvavad klassipiire, ent ta nõuab õigust oma tulevikku ise juhtida.' },
+        source: { sourceId: 'wikipedia:pygmalion-eliza-speech', title: 'Pygmalion (play)', url: 'https://en.wikipedia.org/wiki/Pygmalion_(play)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-038:government-inspector-mistaken-khlestakov', factKey: 'literature-language:government-inspector-town-mistakes-khlestakov', tier: 3, subjectKey: 'work:the-government-inspector',
+        clue: { en: 'Which Gogol comedy erupts when corrupt provincial officials mistake the penniless traveller Khlestakov for an undercover state inspector?', et: 'Milline Gogoli komöödia puhkeb kaoseks, kui korrumpeerunud provintsilinna ametnikud peavad pennitut rändurit Hlestakovi salajaseks riigirevidendiks?' }, response: { en: 'The Government Inspector', et: '„Revident“' }, acceptedVariants: { en: ['The Inspector General', 'Government Inspector', 'Revident'], et: ['„The Government Inspector“', '„The Inspector General“'] },
+        explanation: { en: 'Khlestakov accepts bribes and admiration while the frightened officials expose their own dishonesty.', et: 'Hlestakov võtab vastu altkäemakse ja imetlust, samal ajal kui hirmunud ametnikud paljastavad ise oma ebaaususe.' },
+        source: { sourceId: 'wikipedia:government-inspector-mistaken-khlestakov', title: 'The Government Inspector', url: 'https://en.wikipedia.org/wiki/The_Government_Inspector', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-038:imaginary-invalid-argan-doctors', factKey: 'literature-language:imaginary-invalid-argan-hypochondriac', tier: 4, subjectKey: 'work:the-imaginary-invalid',
+        clue: { en: 'Which Molière comedy centres on the hypochondriac Argan, who wants his daughter to marry a doctor so medical care will stay in the family?', et: 'Millise Molière’i komöödia keskmes on hüpohondrik Argan, kes tahab tütre arstile mehele panna, et arstiabi jääks perekonda?' }, response: { en: 'The Imaginary Invalid', et: '„Ebahaige“' }, acceptedVariants: { en: ['Imaginary Invalid', 'Ebahaige'], et: ['„The Imaginary Invalid“'] },
+        explanation: { en: 'The play mocks credulous patients and pompous medicine as Argan’s household stages schemes to cure him of manipulation rather than disease.', et: 'Näidend pilkab kergeusklikke patsiente ja upsakat arstiteadust, samal ajal kui Argani pere püüab ravida teda pigem mõjutatavusest kui haigusest.' },
+        source: { sourceId: 'wikipedia:imaginary-invalid-argan-doctors', title: 'The Imaginary Invalid', url: 'https://en.wikipedia.org/wiki/The_Imaginary_Invalid', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-038:servant-two-masters-truffaldino', factKey: 'literature-language:servant-two-masters-truffaldino-double-service', tier: 5, subjectKey: 'work:servant-of-two-masters',
+        clue: { en: 'Which Carlo Goldoni comedy follows the hungry servant Truffaldino as he secretly works for two masters and scrambles to keep their letters and meals apart?', et: 'Millises Carlo Goldoni komöödias teenib näljane Truffaldino salaja kaht isandat ning püüab nende kirju ja eineid mitte segamini ajada?' }, response: { en: 'The Servant of Two Masters', et: '„Kahe isanda teener“' }, acceptedVariants: { en: ['A Servant of Two Masters', 'Servant of Two Masters', 'Kahe isanda teener'], et: ['„The Servant of Two Masters“', '„A Servant of Two Masters“'] },
+        explanation: { en: 'Truffaldino’s attempt to double his wages and food multiplies disguises, crossed messages, and physical comedy.', et: 'Truffaldino soov kahekordistada palka ja toitu tekitab aina uusi maskeeringuid, valesse kohta jõudvaid sõnumeid ja füüsilist koomikat.' },
+        source: { sourceId: 'wikipedia:servant-two-masters-truffaldino', title: 'The Servant of Two Masters', url: 'https://en.wikipedia.org/wiki/The_Servant_of_Two_Masters', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-039', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Journeys That Became Bestsellers', et: 'Menukiteks saanud rännakud' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-039:into-wild-mccandless-alaska', factKey: 'literature-language:into-wild-krakauer-mccandless-alaska', tier: 1, subjectKey: 'work:into-the-wild-book',
+        clue: { en: 'Which Jon Krakauer book reconstructs Christopher McCandless’s decision to leave conventional life and travel into the Alaskan wilderness?', et: 'Milline Jon Krakaueri raamat taastab Christopher McCandlessi otsuse hüljata tavapärane elu ja rännata Alaska metsikusse loodusse?' }, response: { en: 'Into the Wild', et: '„Into the Wild“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Krakauer follows McCandless’s route and the ideals behind it while investigating how the journey ended in an abandoned bus.', et: 'Krakauer jälgib McCandlessi teekonda ja selle ideaale ning uurib, kuidas rännak mahajäetud bussis lõppes.' },
+        source: { sourceId: 'wikipedia:into-wild-mccandless-alaska', title: 'Into the Wild (book)', url: 'https://en.wikipedia.org/wiki/Into_the_Wild_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-039:wild-strayed-pacific-crest', factKey: 'literature-language:wild-strayed-pacific-crest-trail', tier: 2, subjectKey: 'work:wild-strayed-memoir',
+        clue: { en: 'Which Cheryl Strayed memoir follows her solo hike along the Pacific Crest Trail as she tries to rebuild her life after her mother’s death?', et: 'Milline Cheryl Strayedi mälestusteraamat jälgib tema üksinda läbitud Pacific Crest Traili matka, millega ta püüab pärast ema surma oma elu uuesti üles ehitada?' }, response: { en: 'Wild', et: '„Wild“' }, acceptedVariants: { en: ['Wild: From Lost to Found on the Pacific Crest Trail'], et: ['„Wild: From Lost to Found on the Pacific Crest Trail“'] },
+        explanation: { en: 'Strayed begins with little long-distance hiking experience, and the difficult trail becomes a structure for grief and recovery.', et: 'Strayed alustab vähese pikamaamatka kogemusega ning raskest rajast saab leina ja taastumise kandekonstruktsioon.' },
+        source: { sourceId: 'wikipedia:wild-strayed-pacific-crest', title: 'Wild: From Lost to Found on the Pacific Crest Trail', url: 'https://en.wikipedia.org/wiki/Wild:_From_Lost_to_Found_on_the_Pacific_Crest_Trail', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-039:walk-woods-appalachian-trail', factKey: 'literature-language:walk-woods-bryson-katz-appalachian-trail', tier: 3, subjectKey: 'work:a-walk-in-the-woods',
+        clue: { en: 'Which Bill Bryson book pairs him with his old friend Stephen Katz for an attempt to hike the Appalachian Trail?', et: 'Millises Bill Brysoni raamatus asub ta koos vana sõbra Stephen Katziga Appalachi matkarada läbima?' }, response: { en: 'A Walk in the Woods', et: '„A Walk in the Woods“' }, acceptedVariants: { en: ['Walk in the Woods'], et: ['„Walk in the Woods“'] },
+        explanation: { en: 'Bryson mixes the mismatched pair’s mishaps with natural history and criticism of how the long trail is managed.', et: 'Bryson ühendab ebasobiva matkapaari äpardused loodusloo ning pika raja haldamise kriitikaga.' },
+        source: { sourceId: 'wikipedia:walk-woods-appalachian-trail', title: 'A Walk in the Woods (book)', url: 'https://en.wikipedia.org/wiki/A_Walk_in_the_Woods_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-039:motorcycle-diaries-south-america', factKey: 'literature-language:motorcycle-diaries-guevara-granado-south-america', tier: 4, subjectKey: 'work:the-motorcycle-diaries-book',
+        clue: { en: 'Which travel book grew from the South American journey made by the young Ernesto Guevara and Alberto Granado, initially on a motorcycle called La Poderosa?', et: 'Milline reisiraamat kasvas välja noore Ernesto Guevara ja Alberto Granado Lõuna-Ameerika teekonnast, mis algas La Poderosa nimelise mootorrattaga?' }, response: { en: 'The Motorcycle Diaries', et: '„Mootorrattapäevikud“' }, acceptedVariants: { en: ['Motorcycle Diaries', 'Mootorrattapäevikud'], et: ['„The Motorcycle Diaries“'] },
+        explanation: { en: 'Guevara’s notes combine youthful adventure with encounters that sharpened his awareness of poverty and inequality.', et: 'Guevara märkmed ühendavad noorusliku seikluse kohtumistega, mis teravdasid tema teadlikkust vaesusest ja ebavõrdsusest.' },
+        source: { sourceId: 'wikipedia:motorcycle-diaries-south-america', title: 'The Motorcycle Diaries (book)', url: 'https://en.wikipedia.org/wiki/The_Motorcycle_Diaries_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-039:travels-charley-rocinante', factKey: 'literature-language:travels-charley-steinbeck-road-trip', tier: 5, subjectKey: 'work:travels-with-charley',
+        clue: { en: 'Which John Steinbeck book recounts a road trip around the United States with his poodle in a camper named Rocinante?', et: 'Milline John Steinbecki raamat jutustab autoreisist läbi Ameerika Ühendriikide koos puudliga matkaautos nimega Rocinante?' }, response: { en: 'Travels with Charley', et: '„Teekond Charleyga“' }, acceptedVariants: { en: ['Travels with Charley: In Search of America', 'Teekond Charleyga'], et: ['„Travels with Charley“', '„Travels with Charley: In Search of America“'] },
+        explanation: { en: 'Steinbeck presents the journey as a renewed encounter with his country, with Charley serving as companion and social bridge.', et: 'Steinbeck kujutab teekonda uue kohtumisena oma kodumaaga, Charley on talle nii kaaslane kui ka sild teiste inimesteni.' },
+        source: { sourceId: 'wikipedia:travels-charley-rocinante', title: 'Travels with Charley', url: 'https://en.wikipedia.org/wiki/Travels_with_Charley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const LITERATURE_LANGUAGE_CATEGORIES = validatePlayableCorpus(
