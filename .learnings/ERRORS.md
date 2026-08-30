@@ -324,6 +324,38 @@ For the compact society/technology/culture bank tuple, supply one verified Wikip
 
 ---
 
+## [ERR-20260830-010] vitest-min-workers-option
+
+**Logged**: 2026-08-30T14:43:22+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The installed Vitest version rejects the `--minWorkers` CLI option.
+
+### Error
+```
+CACError: Unknown option `--minWorkers`
+```
+
+### Context
+- Operation attempted: focused medium/hard continuation baseline for the playability audit, corpus, and accessible-corpus tests.
+- The command used both `--maxWorkers=1` and `--minWorkers=1`; option parsing stopped before any tests ran.
+
+### Suggested Fix
+Run this checkout's focused Vitest suites without `--minWorkers`; add supported worker controls only after checking `vitest --help` for the installed version.
+
+### Metadata
+- Reproducible: yes
+- Related Files: package.json, tests/unit/content/playabilityAudit.test.ts, tests/unit/content/playableCorpus.test.ts, tests/unit/content/accessibleCorpus.test.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T14:43:22+03:00
+- **Notes**: Removed the unsupported flag before rerunning the focused baseline.
+
+---
+
 ## [ERR-20260828-003] full-vitest-concurrency
 
 **Logged**: 2026-08-28T12:00:00+03:00
