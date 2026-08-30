@@ -503,7 +503,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-078:original-laura-index-cards', factKey: 'literature-language:original-laura-nabokov-index-card-fragments', tier: 5, subjectKey: 'work:the-original-of-laura',
-        clue: { en: 'Which Vladimir Nabokov project survived as 138 index cards that he asked to have destroyed, but which his son later published in facsimile form?', et: 'Milline Vladimir Nabokovi teos säilis 138 registrikaardina, mille autor palus hävitada, kuid mille poeg hiljem faksiimilekujul avaldas?' }, response: { en: 'The Original of Laura', et: '„The Original of Laura“' }, acceptedVariants: { en: ['Original of Laura'], et: ['„Original of Laura“'] },
+        clue: { en: 'Which Vladimir Nabokov project survived as a set of index cards that he asked to have destroyed, but which his son later published in facsimile form?', et: 'Milline Vladimir Nabokovi teos säilis registrikaartide kogumina, mille autor palus hävitada, kuid mille poeg hiljem faksiimilekujul avaldas?' }, response: { en: 'The Original of Laura', et: '„The Original of Laura“' }, acceptedVariants: { en: ['Original of Laura'], et: ['„Original of Laura“'] },
         explanation: { en: 'The published volume preserves Nabokov’s movable cards and fragments rather than presenting a completed novel.', et: 'Avaldatud köide säilitab Nabokovi ümbertõstetavad kaardid ja katkendid, mitte valmis romaani.' },
         source: { sourceId: 'wikipedia:original-laura-index-cards', title: 'The Original of Laura', url: 'https://en.wikipedia.org/wiki/The_Original_of_Laura', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -550,22 +550,22 @@ const rawCategories = [
     name: { en: 'Words That Escaped Their Books', et: 'Raamatutest ellu läinud sõnad' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-083:chortle-jabberwocky-blend', factKey: 'literature-language:chortle-coined-jabberwocky-chuckle-snort', tier: 1, subjectKey: 'word:chortle',
-        clue: { en: 'Which word for a gleeful laugh did Lewis Carroll coin in “Jabberwocky” by blending “chuckle” and “snort”?', et: 'Millise rõõmsa naeru sõna lõi Lewis Carroll „Jabberwockys“, sulatades kokku inglise sõnad chuckle ja snort?' }, response: { en: 'chortle', et: 'chortle' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Carroll’s portmanteau outgrew the poem and became an ordinary English verb and noun for a delighted laugh.', et: 'Carrolli kohversõna väljus luuletusest ning sai inglise keeles tavaliseks rõõmsa naeru tegusõnaks ja nimisõnaks.' },
-        source: { sourceId: 'wikipedia:chortle-jabberwocky-blend', title: 'Chortle', url: 'https://en.wikipedia.org/wiki/Chortle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-083:catch-22-no-win-rule', factKey: 'literature-language:catch-22-heller-contradictory-airman-rule', tier: 1, subjectKey: 'phrase:catch-22',
+        clue: { en: 'What term for a no-win situation comes from Joseph Heller’s rule that an airman asking to avoid dangerous missions proves he is sane enough to keep flying?', et: 'Milline väljapääsmatut olukorda tähistav väljend pärineb Joseph Helleri reeglist, mille järgi tõestab ohtlikest lendudest vabastamist paluv lendur, et on lendamiseks piisavalt terve mõistusega?' }, response: { en: 'a catch-22', et: 'nokk kinni, saba lahti olukord' }, acceptedVariants: { en: ['catch-22', 'Catch-22', 'nokk kinni, saba lahti olukord'], et: ['catch-22', 'Catch-22'] },
+        explanation: { en: 'The fictional regulation traps Heller’s airmen in circular logic, and its name became shorthand for any self-contradictory bind.', et: 'Väljamõeldud määrus sulgeb Helleri lendurid ringloogikasse ning selle nimest sai iseenesega vastuolus oleva ummiku üldnimetus.' },
+        source: { sourceId: 'wikipedia:catch-22-no-win-rule', title: 'Catch-22 (logic)', url: 'https://en.wikipedia.org/wiki/Catch-22_(logic)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-083:pandemonium-milton-capital', factKey: 'literature-language:pandemonium-milton-capital-of-hell', tier: 2, subjectKey: 'word:pandemonium',
-        clue: { en: 'What word for noisy chaos began as Milton’s name for the capital of Hell where the demons gather in Paradise Lost?', et: 'Milline lärmakat kaost tähistav sõna oli algselt Miltoni nimi põrgu pealinnale, kus „Kaotatud paradiisi“ deemonid kogunevad?' }, response: { en: 'pandemonium', et: 'pandemoonium' }, acceptedVariants: { en: ['Pandæmonium', 'pandemoonium'], et: ['pandemonium', 'Pandæmonium'] },
-        explanation: { en: 'Milton formed Pandæmonium as the demons’ assembly place; the name later broadened to any scene of uproar and disorder.', et: 'Milton lõi Pandæmoniumi deemonite kogunemispaigaks; hiljem laienes nimi igasuguse möllu ja korratuse tähiseks.' },
-        source: { sourceId: 'wikipedia:pandemonium-milton-capital', title: 'Pandæmonium (Paradise Lost)', url: 'https://en.wikipedia.org/wiki/Pand%C3%A6monium_(Paradise_Lost)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-083:utopia-more-no-place', factKey: 'literature-language:utopia-more-coined-island-name', tier: 3, subjectKey: 'word:utopia',
+        key: 'playable-literature-language:built-in-literature-language-set-083:utopia-more-no-place', factKey: 'literature-language:utopia-more-coined-island-name', tier: 2, subjectKey: 'word:utopia',
         clue: { en: 'Which word for an ideal society comes from Thomas More’s invented island name, built as a Greek pun on “no place”?', et: 'Milline ideaalühiskonda tähistav sõna pärineb Thomas More’i väljamõeldud saare nimest, mis mängib kreeka väljendiga „ei mingi koht“?' }, response: { en: 'utopia', et: 'utoopia' }, acceptedVariants: { en: ['utoopia'], et: ['utopia'] },
         explanation: { en: 'More’s book made Utopia the name of an imagined commonwealth, and the word became a general term for an ideal but unreal society.', et: 'More’i teoses oli Utoopia kujuteldava riigi nimi ning sõnast sai üldnimetus ideaalsele, kuid tegelikkuses olematule ühiskonnale.' },
         source: { sourceId: 'wikipedia:utopia-more-no-place', title: 'Utopia (book)', url: 'https://en.wikipedia.org/wiki/Utopia_(book)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-083:pandemonium-milton-capital', factKey: 'literature-language:pandemonium-milton-capital-of-hell', tier: 3, subjectKey: 'word:pandemonium',
+        clue: { en: 'What word for noisy chaos began as Milton’s name for the capital of Hell where the demons gather in Paradise Lost?', et: 'Milline lärmakat kaost tähistav sõna oli algselt Miltoni nimi põrgu pealinnale, kus „Kaotatud paradiisi“ deemonid kogunevad?' }, response: { en: 'pandemonium', et: 'pandemoonium' }, acceptedVariants: { en: ['Pandæmonium', 'pandemoonium'], et: ['pandemonium', 'Pandæmonium'] },
+        explanation: { en: 'Milton formed Pandæmonium as the demons’ assembly place; the name later broadened to any scene of uproar and disorder.', et: 'Milton lõi Pandæmoniumi deemonite kogunemispaigaks; hiljem laienes nimi igasuguse möllu ja korratuse tähiseks.' },
+        source: { sourceId: 'wikipedia:pandemonium-milton-capital', title: 'Pandæmonium (Paradise Lost)', url: 'https://en.wikipedia.org/wiki/Pand%C3%A6monium_(Paradise_Lost)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-083:yahoo-gulliver-brutish', factKey: 'literature-language:yahoo-from-gulliver-brutish-humanoids', tier: 4, subjectKey: 'word:yahoo',
@@ -574,10 +574,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:yahoo-gulliver-brutish', title: 'Yahoo (Gulliver’s Travels)', url: 'https://en.wikipedia.org/wiki/Yahoo_(Gulliver%27s_Travels)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-083:catch-22-no-win-rule', factKey: 'literature-language:catch-22-heller-contradictory-airman-rule', tier: 5, subjectKey: 'phrase:catch-22',
-        clue: { en: 'What term for a no-win situation comes from Joseph Heller’s rule that an airman asking to avoid dangerous missions proves he is sane enough to keep flying?', et: 'Milline väljapääsmatut olukorda tähistav väljend pärineb Joseph Helleri reeglist, mille järgi tõestab ohtlikest lendudest vabastamist paluv lendur, et on lendamiseks piisavalt terve mõistusega?' }, response: { en: 'a catch-22', et: 'nokk kinni, saba lahti olukord' }, acceptedVariants: { en: ['catch-22', 'Catch-22', 'nokk kinni, saba lahti olukord'], et: ['catch-22', 'Catch-22', 'väljapääsmatu vastuolu'] },
-        explanation: { en: 'The fictional regulation traps Heller’s airmen in circular logic, and its name became shorthand for any self-contradictory bind.', et: 'Väljamõeldud määrus sulgeb Helleri lendurid ringloogikasse ning selle nimest sai iseenesega vastuolus oleva ummiku üldnimetus.' },
-        source: { sourceId: 'wikipedia:catch-22-no-win-rule', title: 'Catch-22 (logic)', url: 'https://en.wikipedia.org/wiki/Catch-22_(logic)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-083:chortle-jabberwocky-blend', factKey: 'literature-language:chortle-coined-jabberwocky-chuckle-snort', tier: 5, subjectKey: 'word:chortle',
+        clue: { en: 'Which word for a gleeful laugh did Lewis Carroll coin in “Jabberwocky” by blending “chuckle” and “snort”?', et: 'Millise rõõmsa naeru sõna lõi Lewis Carroll „Jabberwockys“, sulatades kokku inglise sõnad chuckle ja snort?' }, response: { en: 'chortle', et: 'chortle' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Carroll’s portmanteau outgrew the poem and became an ordinary English verb and noun for a delighted laugh.', et: 'Carrolli kohversõna väljus luuletusest ning sai inglise keeles tavaliseks rõõmsa naeru tegusõnaks ja nimisõnaks.' },
+        source: { sourceId: 'wikipedia:chortle-jabberwocky-blend', title: 'Chortle', url: 'https://en.wikipedia.org/wiki/Chortle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -611,7 +611,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-097:independent-people-bjartur-debt', factKey: 'literature-language:independent-people-bjartur-farm-independence', tier: 5, subjectKey: 'work:independent-people',
-        clue: { en: 'Which Halldór Laxness novel tests the proud sheep farmer Bjartur’s dream of absolute independence against debt, harsh land, and his family’s needs?', et: 'Milline Halldór Laxnessi romaan paneb uhke lambakasvataja Bjarturi täieliku iseseisvuse unistuse vastamisi võla, karmi maa ja perekonna vajadustega?' }, response: { en: 'Independent People', et: '„Independent People“' }, acceptedVariants: { en: ['Sjálfstætt fólk'], et: ['„Sjálfstætt fólk“'] },
+        clue: { en: 'Which Halldór Laxness novel tests the proud sheep farmer Bjartur’s dream of absolute independence against debt, harsh land, and his family’s needs?', et: 'Milline Halldór Laxnessi romaan paneb uhke lambakasvataja Bjarturi täieliku iseseisvuse unistuse vastamisi võla, karmi maa ja perekonna vajadustega?' }, response: { en: 'Independent People', et: '„Iseseisvad inimesed“' }, acceptedVariants: { en: ['Sjálfstætt fólk', 'Iseseisvad inimesed'], et: ['„Independent People“', '„Sjálfstætt fólk“'] },
         explanation: { en: 'Bjartur’s refusal to depend on others gives him dignity but also drives the losses at the heart of the Icelandic novel.', et: 'Bjarturi keeldumine teistest sõltuda annab talle väärikuse, kuid põhjustab ka Islandi romaani keskmes olevad kaotused.' },
         source: { sourceId: 'wikipedia:independent-people-bjartur-debt', title: 'Independent People', url: 'https://en.wikipedia.org/wiki/Independent_People', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -773,7 +773,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-039:wild-strayed-pacific-crest', factKey: 'literature-language:wild-strayed-pacific-crest-trail', tier: 2, subjectKey: 'work:wild-strayed-memoir',
-        clue: { en: 'Which Cheryl Strayed memoir follows her solo hike along the Pacific Crest Trail as she tries to rebuild her life after her mother’s death?', et: 'Milline Cheryl Strayedi mälestusteraamat jälgib tema üksinda läbitud Pacific Crest Traili matka, millega ta püüab pärast ema surma oma elu uuesti üles ehitada?' }, response: { en: 'Wild', et: '„Wild“' }, acceptedVariants: { en: ['Wild: From Lost to Found on the Pacific Crest Trail'], et: ['„Wild: From Lost to Found on the Pacific Crest Trail“'] },
+        clue: { en: 'Which Cheryl Strayed memoir follows her solo hike along the Pacific Crest Trail as she tries to rebuild her life after her mother’s death?', et: 'Milline Cheryl Strayedi mälestusteraamat jälgib tema üksinda läbitud Pacific Crest Traili matka, millega ta püüab pärast ema surma oma elu uuesti üles ehitada?' }, response: { en: 'Wild', et: '„Metsik“' }, acceptedVariants: { en: ['Wild: From Lost to Found on the Pacific Crest Trail', 'Metsik'], et: ['„Wild“', '„Wild: From Lost to Found on the Pacific Crest Trail“'] },
         explanation: { en: 'Strayed begins with little long-distance hiking experience, and the difficult trail becomes a structure for grief and recovery.', et: 'Strayed alustab vähese pikamaamatka kogemusega ning raskest rajast saab leina ja taastumise kandekonstruktsioon.' },
         source: { sourceId: 'wikipedia:wild-strayed-pacific-crest', title: 'Wild: From Lost to Found on the Pacific Crest Trail', url: 'https://en.wikipedia.org/wiki/Wild:_From_Lost_to_Found_on_the_Pacific_Crest_Trail', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
