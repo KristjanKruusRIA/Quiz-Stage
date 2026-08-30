@@ -2996,8 +2996,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 2,
           "subjectKey": "dish:khinkali",
           "clue": {
-            "en": "A pleated Georgian dumpling traps seasoned meat and broth inside, while its doughy top is often left uneaten. Identify it.",
-            "et": "Volditud Gruusia pelmeen hoiab sees maitsestatud liha ja puljongit, kuid selle tainane tipp jäetakse sageli söömata. Tuvasta roog."
+            "en": "A pleated Georgian dumpling holds a seasoned meat filling whose juices diners suck out first; the tough doughy top is left uneaten. Identify it.",
+            "et": "Volditud Gruusia pelmeen sisaldab maitsestatud lihatäidist, mille mahla sööjad esmalt välja imevad; kõva tainane tipp jäetakse söömata. Tuvasta roog."
           },
           "response": {
             "en": "khinkali",
@@ -3012,8 +3012,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "Khinkali are Georgian dumplings whose pleated wrapper encloses a juicy meat filling; diners commonly hold the top knot.",
-            "et": "Hinkalid on Gruusia pelmeenid, mille volditud tainas ümbritseb mahlast lihatäidist; sööjad hoiavad neid tavaliselt tipunupust."
+            "en": "Khinkali are Georgian dumplings with a pleated wrapper around a juicy meat filling; diners suck out the juices first and leave the tough top uneaten.",
+            "et": "Hinkalid on volditud tainasse keeratud mahlase lihatäidisega Gruusia pelmeenid; sööjad imevad esmalt mahla välja ja jätavad kõva tipu söömata."
           },
           "source": {
             "sourceId": "wikipedia:khinkali",
@@ -3195,8 +3195,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 3,
           "subjectKey": "dish:maafe",
           "clue": {
-            "en": "A rich Sahelian stew combines meat or vegetables with a sauce built around ground peanuts. Give its Mandinka-derived name.",
-            "et": "Rikkalikus Saheli hautises ühendatakse liha või köögiviljad jahvatatud maapähklitel põhineva kastmega. Anna selle mandinke päritolu nimi."
+            "en": "Which West African stew combines meat or vegetables with a sauce built around ground peanuts?",
+            "et": "Millises Lääne-Aafrika hautises ühendatakse liha või köögiviljad jahvatatud maapähklitel põhineva kastmega?"
           },
           "response": {
             "en": "maafe",
@@ -3349,8 +3349,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 3,
           "subjectKey": "dish:mofongo",
           "clue": {
-            "en": "Puerto Rican cooks mash fried green plantains with garlic and crisp pork pieces in a mortar. Identify the resulting dish.",
-            "et": "Puerto Rico kokad tambivad frititud rohelised jahubanaanid uhmris küüslaugu ja krõbedate sealihatükkidega kokku. Tuvasta roog."
+            "en": "In modern Puerto Rican versions, green plantains are typically fried, then mashed in a wooden pilón with garlic, pork, broth and oil. Name the dish.",
+            "et": "Tänapäevastes Puerto Rico variantides frititakse rohelised jahubanaanid tavaliselt ning tambitakse seejärel puust pilón’is küüslaugu, sealiha, puljongi ja õliga. Nimeta roog."
           },
           "response": {
             "en": "mofongo",
@@ -3361,8 +3361,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Mofongo is a Puerto Rican dish of fried green plantains mashed with garlic and often pork cracklings.",
-            "et": "Mofongo on Puerto Rico roog, kus frititud rohelised jahubanaanid tambitakse küüslaugu ja sageli seakrõbinatega."
+            "en": "Mofongo is a Puerto Rican plantain dish; modern versions typically fry green pieces before mashing them with garlic, pork, broth and oil.",
+            "et": "Mofongo on Puerto Rico jahubanaaniroog; tänapäevastes variantides frititakse rohelised tükid tavaliselt enne küüslaugu, sealiha, puljongi ja õliga tampimist."
           },
           "source": {
             "sourceId": "wikipedia:mofongo",
@@ -3536,8 +3536,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "dish:pulpo-a-feira",
           "clue": {
-            "en": "Galician fairground cooks slice boiled octopus onto wooden plates and season it with olive oil, salt and paprika. Give the dish’s name.",
-            "et": "Galicia laadakokad lõikavad keedetud kaheksajala puittaldrikule ning maitsestavad selle oliiviõli, soola ja paprikapulbriga. Anna roa nimi."
+            "en": "Galician fairground cooks slice boiled octopus and season it with olive oil, salt and sweet or hot paprika. Give the dish’s name.",
+            "et": "Galicia laadakokad lõikavad keedetud kaheksajala viiludeks ning maitsestavad selle oliiviõli, soola ning magusa või terava paprikapulbriga. Anna roa nimi."
           },
           "response": {
             "en": "pulpo a feira",
@@ -3809,8 +3809,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 2,
           "subjectKey": "biscuit:anzac",
           "clue": {
-            "en": "Rolled oats, coconut and golden syrup go into an Australasian biscuit associated with a First World War army corps. Name it.",
-          "et": "Kaerahelbed, kookos ja kuldsiirup lähevad Australaasia küpsisesse, mida seostatakse Esimese maailmasõja armeekorpusega. Nimeta see."
+            "en": "Rolled oats and golden syrup form the base of which Australasian biscuit associated with a First World War army corps? Some recipes also add coconut.",
+            "et": "Kaerahelbed ja kuldsiirup on aluseks millisele Esimese maailmasõja armeekorpusega seostatud Australaasia küpsisele? Mõnes retseptis lisatakse ka kookost."
           },
           "response": {
             "en": "ANZAC biscuit",
@@ -3825,8 +3825,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "ANZAC biscuits contain oats, coconut and golden syrup and are associated with the Australian and New Zealand Army Corps.",
-            "et": "ANZAC-küpsised sisaldavad kaerahelbeid, kookost ja kuldsiirupit ning seostuvad Austraalia ja Uus-Meremaa armeekorpusega."
+            "en": "ANZAC biscuits use rolled oats and golden syrup, may include coconut, and are associated with the Australian and New Zealand Army Corps.",
+            "et": "ANZAC-küpsistes kasutatakse kaerahelbeid ja kuldsiirupit, neisse võidakse lisada kookost ning need seostuvad Austraalia ja Uus-Meremaa armeekorpusega."
           },
           "source": {
             "sourceId": "wikipedia:anzac_biscuit",
@@ -3979,8 +3979,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 2,
           "subjectKey": "brand:chupa-chups",
           "clue": {
-            "en": "Which Spanish lollipop brand received a logo designed by Salvador Dalí in 1969?",
-            "et": "Millise Hispaania pulgakommibrändi logo kujundas Salvador Dalí 1969. aastal?"
+            "en": "Which Spanish lollipop brand received a logo designed by Salvador Dalí?",
+            "et": "Millise Hispaania pulgakommibrändi logo kujundas Salvador Dalí?"
           },
           "response": {
             "en": "Chupa Chups",
@@ -4041,8 +4041,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "brand:hp-sauce",
           "clue": {
-            "en": "A bottle label showing London’s Palace of Westminster hints at the expanded name of which British brown condiment?",
-            "et": "Londoni Westminsteri paleega pudelisilt vihjab millise Briti pruuni kastme pikemale nimele?"
+            "en": "Which British brown condiment was named after the Houses of Parliament and shows the Palace of Westminster on its bottle label?",
+            "et": "Milline Briti pruun kaste sai nime parlamendihoone järgi ning kujutab pudelisildil Westminsteri paleed?"
           },
           "response": {
             "en": "HP Sauce",
@@ -4053,8 +4053,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "HP Sauce takes its initials from the Houses of Parliament, whose building appears on the label.",
-            "et": "HP Sauce’i initsiaalid tulevad parlamendihoonest ehk Houses of Parliamentist, mille kujutis on sildil."
+            "en": "HP Sauce was named after London’s Houses of Parliament, and its bottle depicts the Palace of Westminster.",
+            "et": "HP Sauce sai nime Londoni parlamendihoone järgi ning selle pudelil on kujutatud Westminsteri paleed."
           },
           "source": {
             "sourceId": "wikipedia:hp_sauce",
@@ -4070,8 +4070,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 5,
           "subjectKey": "brand:pringles",
           "clue": {
-            "en": "P&G researcher Alexander Liepa revived Fredric Baur’s shelved potato-crisp project, while writer Gene Wolfe helped engineer its production machine. Which brand emerged?",
-            "et": "P&G teadlane Alexander Liepa taaselustas Fredric Bauri kõrvale pandud kartulikrõpsuprojekti ning kirjanik Gene Wolfe aitas luua selle tootmismasinat. Milline kaubamärk sellest sündis?"
+            "en": "P&G developed which brand’s saddle-shaped potato-based chips to stack inside a cylindrical can, addressing complaints about broken chips and empty air in bags?",
+            "et": "Millise kaubamärgi sadulakujulised kartulipõhised krõpsud töötas P&G välja silindrilisse purki ladumiseks, et lahendada murdunud krõpsude ja kotis oleva tühja õhu probleem?"
           },
           "response": {
             "en": "Pringles",
@@ -4082,8 +4082,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Pringles emerged from a P&G project: Fredric Baur developed the shape and packaging, Alexander Liepa improved the taste, and Gene Wolfe helped engineer the production machine.",
-            "et": "Pringles sündis P&G projektist: Fredric Baur arendas kuju ja pakendit, Alexander Liepa parandas maitset ning Gene Wolfe aitas luua tootmismasinat."
+            "en": "Pringles dough is formed into saddle shapes and placed in cylindrical cans; the tubular package was designed to reduce breakage and empty air.",
+            "et": "Pringlesi tainas vormitakse sadulakujuliseks ja pannakse silindrilistesse purkidesse; torukujuline pakend loodi murdumise ja tühja õhu vähendamiseks."
           },
           "source": {
             "sourceId": "wikipedia:pringles",
