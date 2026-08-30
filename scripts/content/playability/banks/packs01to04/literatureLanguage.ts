@@ -115,37 +115,37 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-010', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
-    name: { en: 'The Writers Behind the Pen Names', et: 'Kirjanikud varjunimede taga' },
+    name: { en: 'Novels That Break the Usual Shape', et: 'Romaanid, mis murravad vormireegleid' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-010:o-henry-william-sydney-porter', factKey: 'literature-language:o-henry-pen-name-of-william-sydney-porter', tier: 1, subjectKey: 'author:william-sydney-porter',
-        clue: { en: 'The author of “The Gift of the Magi” signed his short stories O. Henry. What was his real name?', et: 'Jutustuse „Maagide kingitus“ autor avaldas oma lood O. Henry nime all. Mis oli tema pärisnimi?' }, response: { en: 'William Sydney Porter', et: 'William Sydney Porter' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Porter adopted O. Henry as his best-known pen name while writing the twist-ending stories that made him famous.', et: 'Porter võttis O. Henry oma tuntuimaks varjunimeks, kirjutades ootamatu lõpplahendusega jutustusi, mis ta kuulsaks tegid.' },
-        source: { sourceId: 'wikipedia:o-henry-william-sydney-porter', title: 'O. Henry', url: 'https://en.wikipedia.org/wiki/O._Henry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-010:cloud-atlas-nested-palindrome', factKey: 'literature-language:cloud-atlas-six-stories-mirrored-order', tier: 1, subjectKey: 'work:cloud-atlas-novel',
+        clue: { en: 'Which David Mitchell novel nests six linked stories in a mirror pattern, breaking off the first five and completing them in reverse order?', et: 'Millises David Mitchelli romaanis paiknevad kuus omavahel seotud lugu peegelstruktuuris, nii et esimese viie loo algustele järgnevad nende lõpud vastupidises järjekorras?' }, response: { en: 'Cloud Atlas', et: '„Pilveatlas“' }, acceptedVariants: { en: ['Pilveatlas'], et: ['Cloud Atlas', 'Pilveatlas'] },
+        explanation: { en: 'Mitchell arranges the narratives concentrically: five stop at a turning point, the central story is complete, and the interrupted stories then close in reverse order.', et: 'Mitchell paigutab lood kontsentriliselt: viis katkeb pöördepunktis, keskne lugu esitatakse tervikuna ning katkestatud lood lõpetatakse vastupidises järjekorras.' },
+        source: { sourceId: 'wikipedia:cloud-atlas-novel-nested-structure', title: 'Cloud Atlas (novel)', url: 'https://en.wikipedia.org/wiki/Cloud_Atlas_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-010:dr-seuss-theodor-geisel', factKey: 'literature-language:dr-seuss-pen-name-of-theodor-geisel', tier: 2, subjectKey: 'author:theodor-seuss-geisel',
-        clue: { en: 'The Cat in the Hat and Green Eggs and Ham appeared under the name Dr. Seuss. What was their author’s real name?', et: '„Kass kübaras“ ja „Rohelised munad ja sink“ ilmusid Dr. Seussi nime all. Mis oli nende autori pärisnimi?' }, response: { en: 'Theodor Seuss Geisel', et: 'Theodor Seuss Geisel' }, acceptedVariants: { en: ['Theodor Geisel'], et: ['Theodor Geisel'] },
-        explanation: { en: 'Geisel used Dr. Seuss for most of the imaginative children’s books that established his worldwide reputation.', et: 'Geisel kasutas enamiku oma fantaasiarikaste lasteraamatute juures nime Dr. Seuss ning saavutas nendega ülemaailmse tuntuse.' },
-        source: { sourceId: 'wikipedia:dr-seuss-theodor-geisel', title: 'Dr. Seuss', url: 'https://en.wikipedia.org/wiki/Dr._Seuss', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-010:house-of-leaves-typographic-labyrinth', factKey: 'literature-language:house-of-leaves-layout-mirrors-impossible-house', tier: 2, subjectKey: 'work:house-of-leaves',
+        clue: { en: 'Which Mark Z. Danielewski novel uses dense footnotes, rotated or nearly empty pages, and changing typography while recounting a film about a house larger inside than outside?', et: 'Milline Mark Z. Danielewski romaan kasutab tihedaid joonealuseid märkusi, pööratud või peaaegu tühje lehekülgi ja muutuvat tüpograafiat, jutustades filmist, mis käsitleb seest suuremat maja?' }, response: { en: 'House of Leaves', et: 'House of Leaves' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The page layout becomes part of the labyrinth: text contracts, expands, turns, and fragments as the explorers move through the impossible house.', et: 'Lehekülje kujundus muutub labürindi osaks: tekst tõmbub kokku, paisub, pöördub ja killustub sedamööda, kuidas tegelased võimatus majas liiguvad.' },
+        source: { sourceId: 'wikipedia:house-of-leaves-typographic-layout', title: 'House of Leaves', url: 'https://en.wikipedia.org/wiki/House_of_Leaves', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-010:voltaire-francois-marie-arouet', factKey: 'literature-language:voltaire-pen-name-of-francois-marie-arouet', tier: 3, subjectKey: 'author:francois-marie-arouet',
-        clue: { en: 'The French satirist who wrote Candide became famous as Voltaire. Under what name was he born?', et: '„Candide’i“ kirjutanud Prantsuse satiirik sai kuulsaks Voltaire’ina. Millise nime all ta sündis?' }, response: { en: 'François-Marie Arouet', et: 'François-Marie Arouet' }, acceptedVariants: { en: ['Francois-Marie Arouet'], et: ['Francois-Marie Arouet'] },
-        explanation: { en: 'Arouet began using Voltaire as a young writer, and the adopted name became inseparable from his Enlightenment works.', et: 'Arouet hakkas noore kirjanikuna kasutama nime Voltaire, mis muutus tema valgustusajastu loomingust lahutamatuks.' },
-        source: { sourceId: 'wikipedia:voltaire-francois-marie-arouet', title: 'Voltaire', url: 'https://en.wikipedia.org/wiki/Voltaire', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-010:if-on-winters-night-ten-openings', factKey: 'literature-language:if-on-winters-night-reader-ten-interrupted-novels', tier: 3, subjectKey: 'work:if-on-a-winters-night-a-traveler',
+        clue: { en: 'Which Italo Calvino novel addresses “you” as a reader whose effort to continue one book leads into the opening chapters of ten different novels?', et: 'Milline Italo Calvino romaan pöördub „sinu“ kui lugeja poole, kelle katse üht raamatut jätkata viib kümne eri romaani alguspeatükkideni?' }, response: { en: 'If on a winter’s night a traveler', et: '„Kui rändur talvisel ööl“' }, acceptedVariants: { en: ["If on a winter's night a traveler"], et: ['Kui rändur talvisel ööl'] },
+        explanation: { en: 'Alternating chapters follow the Reader and the Other Reader, while each even-numbered chapter begins a new novel that breaks off before its resolution.', et: 'Vahelduvad peatükid jälgivad Lugejat ja Teist Lugejat, iga paarisarvuline peatükk aga alustab uut romaani, mis katkeb enne lahendust.' },
+        source: { sourceId: 'wikipedia:if-on-winters-night-reader-ten-novels', title: 'If on a winter’s night a traveler', url: 'https://en.wikipedia.org/wiki/If_on_a_winter%27s_night_a_traveler', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-010:moliere-jean-baptiste-poquelin', factKey: 'literature-language:moliere-stage-name-of-jean-baptiste-poquelin', tier: 4, subjectKey: 'author:jean-baptiste-poquelin',
-        clue: { en: 'The playwright of Tartuffe and The Misanthrope used Molière as his stage name. What was his birth name?', et: '„Tartuffe’i“ ja „Misantroobi“ autor kasutas lavanime Molière. Mis oli tema sünninimi?' }, response: { en: 'Jean-Baptiste Poquelin', et: 'Jean-Baptiste Poquelin' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Poquelin adopted Molière after joining the theatre, and that name came to represent French classical comedy.', et: 'Poquelin võttis teatriga liitudes nime Molière, millest sai Prantsuse klassikalise komöödia sümbol.' },
-        source: { sourceId: 'wikipedia:moliere-jean-baptiste-poquelin', title: 'Molière', url: 'https://en.wikipedia.org/wiki/Moli%C3%A8re', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-010:pale-fire-poem-commentary', factKey: 'literature-language:pale-fire-poem-and-kinbote-commentary', tier: 4, subjectKey: 'work:pale-fire',
+        clue: { en: 'Which Vladimir Nabokov novel places a 999-line poem by the fictional John Shade beside Charles Kinbote’s commentary, which tries to turn the poem into Kinbote’s own royal saga?', et: 'Milline Vladimir Nabokovi romaan asetab väljamõeldud John Shade’i 999-realise luuletuse kõrvale Charles Kinbote’i kommentaarid, millega Kinbote püüab muuta luuletuse omaenda kuninglikuks looks?' }, response: { en: 'Pale Fire', et: 'Pale Fire' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The novel’s foreword, poem, commentary, and index force readers to reconstruct the conflict between Shade’s work and Kinbote’s intrusive interpretation.', et: 'Romaani eessõna, luuletus, kommentaarid ja register sunnivad lugejat taastama vastuolu Shade’i teose ning Kinbote’i pealetükkiva tõlgenduse vahel.' },
+        source: { sourceId: 'wikipedia:pale-fire-poem-commentary-structure', title: 'Pale Fire', url: 'https://en.wikipedia.org/wiki/Pale_Fire', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-010:saki-hector-hugh-munro', factKey: 'literature-language:saki-pen-name-of-hector-hugh-munro', tier: 5, subjectKey: 'author:hector-hugh-munro',
-        clue: { en: 'The sharp-edged stories “The Open Window” and “Sredni Vashtar” were published under the name Saki. What was the writer’s real name?', et: 'Terava huumoriga jutustused „Avatud aken“ ja „Sredni Vaštar“ ilmusid Saki nime all. Mis oli kirjaniku pärisnimi?' }, response: { en: 'Hector Hugh Munro', et: 'Hector Hugh Munro' }, acceptedVariants: { en: ['H. H. Munro'], et: ['H. H. Munro'] },
-        explanation: { en: 'Munro used Saki for the short fiction whose elegant surfaces conceal cruelty, mischief, and sudden reversals.', et: 'Munro kasutas nime Saki jutustustes, mille elegantse pinna all peituvad julmus, riuklikkus ja ootamatud pöörded.' },
-        source: { sourceId: 'wikipedia:saki-hector-hugh-munro', title: 'Saki', url: 'https://en.wikipedia.org/wiki/Saki', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-010:hopscotch-two-reading-orders', factKey: 'literature-language:hopscotch-conventional-and-table-reading-orders', tier: 5, subjectKey: 'work:hopscotch-cortazar',
+        clue: { en: 'Which Julio Cortázar novel offers one reading that stops after chapter 56 and another that sends the reader hopping among all 155 chapters according to a table?', et: 'Milline Julio Cortázari romaan pakub ühe lugemisviisi, mis lõpeb 56. peatüki järel, ning teise, mis suunab lugeja tabeli järgi hüplema kõigi 155 peatüki vahel?' }, response: { en: 'Hopscotch', et: '„Keksumäng“' }, acceptedVariants: { en: ['Keksumäng'], et: ['Hopscotch', 'Keksumäng'] },
+        explanation: { en: 'Cortázar’s table of instructions creates an alternative sequence that mixes the main narrative with the book’s “expendable” chapters.', et: 'Cortázari juhiste tabel loob alternatiivse järjestuse, mis põimib põhijutustuse raamatu „üleliigsete“ peatükkidega.' },
+        source: { sourceId: 'wikipedia:hopscotch-novel-reading-orders', title: 'Hopscotch (Cortázar novel)', url: 'https://en.wikipedia.org/wiki/Hopscotch_(Cort%C3%A1zar_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -154,10 +154,10 @@ const rawCategories = [
     name: { en: 'Who Is Telling This Story?', et: 'Kes seda lugu jutustab?' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-012:ishmael-narrates-moby-dick', factKey: 'literature-language:ishmael-narrates-moby-dick-voyage', tier: 1, subjectKey: 'narrator:ishmael',
-        clue: { en: 'Which sailor narrates Moby-Dick after joining Captain Ahab’s voyage aboard the Pequod?', et: 'Milline meremees jutustab „Moby Dicki“ loo pärast kapten Ahabi laevaga Pequod teele asumist?' }, response: { en: 'Ishmael', et: 'Ismael' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Ishmael survives the Pequod’s destruction and becomes the witness who can tell Ahab’s story.', et: 'Ismael elab Pequodi hukkumise üle ning temast saab tunnistaja, kes võib Ahabi loo edasi jutustada.' },
-        source: { sourceId: 'wikipedia:ishmael-moby-dick-narrator', title: 'Ishmael (Moby-Dick)', url: 'https://en.wikipedia.org/wiki/Ishmael_(Moby-Dick)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-012:holden-caulfield-catcher-rye', factKey: 'literature-language:holden-caulfield-narrates-catcher-rye-manhattan', tier: 1, subjectKey: 'narrator:holden-caulfield',
+        clue: { en: 'Which expelled Pencey Prep student narrates The Catcher in the Rye while wandering Manhattan and dismissing many people as “phonies”?', et: 'Milline Pencey Prepi koolist välja heidetud õpilane jutustab romaanis „Kuristik rukkis“ oma rännakutest Manhattanil ning nimetab paljusid inimesi võltsideks?' }, response: { en: 'Holden Caulfield', et: 'Holden Caulfield' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Holden recounts the days after his expulsion in a defensive, conversational voice that exposes both his judgment of others and his own grief.', et: 'Holden jutustab väljaviskamisele järgnenud päevadest kaitsvas ja vestluslikus toonis, mis paljastab nii tema hinnangud teistele kui ka tema enda leina.' },
+        source: { sourceId: 'wikipedia:holden-caulfield-catcher-rye-narrator', title: 'Holden Caulfield', url: 'https://en.wikipedia.org/wiki/Holden_Caulfield', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-012:scout-narrates-mockingbird', factKey: 'literature-language:scout-childhood-nickname-narrator', tier: 2, subjectKey: 'narrator:scout-finch',
@@ -190,10 +190,10 @@ const rawCategories = [
     name: { en: 'Literary Journeys to the Underworld', et: 'Kirjanduslikud rännakud allilma' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-034:virgil-guides-dante', factKey: 'literature-language:virgil-guides-dante-through-hell-and-purgatory', tier: 1, subjectKey: 'guide:virgil',
-        clue: { en: 'Which Roman poet guides Dante through Hell and most of Purgatory in the Divine Comedy?', et: 'Milline Rooma luuletaja juhib Dantet „Jumalikus komöödias“ läbi põrgu ja suurema osa puhastustulest?' }, response: { en: 'Virgil', et: 'Vergilius' }, acceptedVariants: { en: ['Vergil'], et: ['Publius Vergilius Maro'] },
-        explanation: { en: 'Dante makes the author of the Aeneid a figure of human reason who can lead him only as far as the earthly paradise.', et: 'Dante teeb „Aeneise“ autorist inimliku mõistuse kehastuse, kes saab teda juhtida vaid maise paradiisini.' },
-        source: { sourceId: 'wikipedia:virgil-dante-guide', title: 'Virgil in the Divine Comedy', url: 'https://en.wikipedia.org/wiki/Virgil#Dante%27s_Divine_Comedy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-034:psyche-brings-proserpina-beauty', factKey: 'literature-language:psyche-descends-for-proserpina-beauty', tier: 1, subjectKey: 'traveler:psyche',
+        clue: { en: 'In Apuleius’s tale, which heroine must descend to the underworld and bring Venus a box containing a portion of Proserpina’s beauty?', et: 'Milline Apuleiuse loo kangelanna peab laskuma allilma ja tooma Venusele karbi, milles on osa Proserpina ilust?' }, response: { en: 'Psyche', et: 'Psyche' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The underworld errand is the last of Venus’s impossible tasks for Psyche before divine help leads to her reunion with Cupid.', et: 'Allilmas käimine on viimane Venuse võimatutest ülesannetest Psychele, enne kui jumalik abi viib ta taas kokku Cupidoga.' },
+        source: { sourceId: 'wikipedia:cupid-psyche-underworld-task', title: 'Cupid and Psyche', url: 'https://en.wikipedia.org/wiki/Cupid_and_Psyche', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-034:cumaean-sibyl-guides-aeneas', factKey: 'literature-language:cumaean-sibyl-guides-aeneas-underworld', tier: 2, subjectKey: 'guide:cumaean-sibyl',
@@ -298,10 +298,10 @@ const rawCategories = [
     name: { en: 'Authors Draw Their Own Maps', et: 'Kirjanike väljamõeldud maakaardid' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-068:hardys-wessex', factKey: 'literature-language:hardy-fictionalizes-wessex', tier: 1, subjectKey: 'place:wessex',
-        clue: { en: 'What name did Thomas Hardy give the partly fictionalized southwest English region shared by Tess of the d’Urbervilles and The Mayor of Casterbridge?', et: 'Millise nime andis Thomas Hardy osaliselt väljamõeldud Edela-Inglismaa piirkonnale, kus toimuvad „Tess d’Urberville’ide suguvõsast“ ja „Casterbridge’i linnapea“?' }, response: { en: 'Wessex', et: 'Wessex' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Hardy adapted the old regional name Wessex for a connected literary landscape built from real and invented places.', et: 'Hardy kohandas vana piirkonnanime Wessex omavahel seotud kirjandusmaastikuks, kus põimuvad tegelikud ja väljamõeldud paigad.' },
-        source: { sourceId: 'wikipedia:thomas-hardy-wessex', title: 'Thomas Hardy’s Wessex', url: 'https://en.wikipedia.org/wiki/Thomas_Hardy%27s_Wessex', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-068:swift-lilliput-island-kingdom', factKey: 'literature-language:swift-maps-lilliput-tiny-islanders', tier: 1, subjectKey: 'place:lilliput',
+        clue: { en: 'What island kingdom in Gulliver’s Travels is inhabited by people about six inches tall, making the shipwrecked Gulliver a giant among them?', et: 'Millist „Gulliveri reiside“ saareriiki asustavad umbes kuue tolli pikkused inimesed, nii et laevahukust pääsenud Gulliver on nende seas hiiglane?' }, response: { en: 'Lilliput', et: 'Lilliput' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Swift gives Lilliput its own capital, court, rival factions, and conflict with neighbouring Blefuscu, making the tiny realm a map-sized political satire.', et: 'Swift annab Lilliputile oma pealinna, õukonna, rivaalitsevad rühmitused ja konflikti naaberriigi Blefuscuga, muutes tillukese kuningriigi poliitiliseks satiiriks.' },
+        source: { sourceId: 'wikipedia:lilliput-blefuscu-gulliver', title: 'Lilliput and Blefuscu', url: 'https://en.wikipedia.org/wiki/Lilliput_and_Blefuscu', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-068:ankh-morpork-discworld', factKey: 'literature-language:ankh-morpork-discworld-city', tier: 2, subjectKey: 'place:ankh-morpork',
