@@ -483,3 +483,36 @@ Set an explicit `maxBuffer` when reading large tracked artifacts through `execFi
 - **Notes**: Re-ran the comparison with a 10 MiB buffer and confirmed only paths and timestamp changed.
 
 ---
+
+## [ERR-20260830-011] playable-target-export-name
+
+**Logged**: 2026-08-30T16:49:25+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A one-off TypeScript corpus inspection imported non-existent inferred target-ledger and bank symbols.
+
+### Error
+```
+SyntaxError: The requested module './scripts/content/playability/targets.ts' does not provide an export named 'mediumHardTargets'
+SyntaxError: The requested module './scripts/content/playability/banks/packs01to04/literatureLanguage.ts' does not provide an export named 'packs01to04LiteratureLanguage'
+```
+
+### Context
+- Operation attempted: list the still-unimplemented Science and Literature targets before preparing later checkpoints.
+- The authoritative ledger exports `PLAYABLE_TARGETS`, and the banks export `SCIENCE_NATURE_CATEGORIES` / `LITERATURE_LANGUAGE_CATEGORIES`.
+
+### Suggested Fix
+Inspect each module's actual exports before composing one-off import scripts; use `PLAYABLE_TARGETS`, `SCIENCE_NATURE_CATEGORIES`, and `LITERATURE_LANGUAGE_CATEGORIES` here.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `scripts/content/playability/targets.ts`
+
+### Resolution
+- **Resolved**: 2026-08-30T16:49:25+03:00
+- **Notes**: Queried all module exports and switched the inspection script to their declared uppercase symbols.
+
+---
