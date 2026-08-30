@@ -2440,14 +2440,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-058:question:2', factKey: 'built-in-food-drink:checkpoint3:thai-green-curry-coconut-chillies-basil', tier: 2, subjectKey: 'dish:thai-green-curry',
-        clue: { en: 'Fresh green chillies give colour and heat to a coconut-milk curry commonly scented with basil and makrut lime. What Thai dish is this?', et: 'Värske roheline tšilli annab värvi ja tulisuse kookospiimakarrile, mida maitsestatakse sageli basiiliku ja makrutlaimiga. Mis Tai roog see on?' },
+        clue: { en: 'Fresh chillies give colour and heat to a Southeast Asian coconut-milk dish scented with basil and makrut lime. What is it called?', et: 'Värske tšilli annab värvi ja tulisuse Kagu-Aasia kookospiimaroale, mida maitsestatakse basiiliku ja makrutlaimiga. Mis roog see on?' },
         response: { en: 'Thai green curry', et: 'Tai roheline karri' }, acceptedVariants: { en: ['green curry'], et: ['roheline Tai karri'] },
         explanation: { en: 'Thai green curry uses a fresh green-chilli paste with coconut milk, herbs, and aromatic leaves.', et: 'Tai rohelise karri aluseks on värskest rohelisest tšillist pasta, millele lisatakse kookospiima, ürte ja aromaatseid lehti.' },
         source: { sourceId: 'wikipedia:green_curry', title: 'Green curry', url: 'https://en.wikipedia.org/wiki/Green_curry', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'built-in-food-drink-set-058:question:3', factKey: 'built-in-food-drink:checkpoint3:mango-sticky-rice-coconut-dessert', tier: 3, subjectKey: 'dessert:mango-sticky-rice',
-        clue: { en: 'Ripe mango is paired with sweet glutinous rice cooked in coconut milk. Identify the Thai dessert.', et: 'Küps mango serveeritakse kookospiimaga magustatud kleepuva riisi kõrval. Tuvasta see Tai magustoit.' },
+        clue: { en: 'Ripe yellow fruit is paired with sweet glutinous grains cooked in coconut milk. Identify the Thai dessert.', et: 'Küps kollane puuvili serveeritakse koos kookospiimas magusaks keedetud kleepuvate teradega. Tuvasta see Tai magustoit.' },
         response: { en: 'mango sticky rice', et: 'mango sticky rice' }, acceptedVariants: { en: ['khao niao mamuang'], et: ['khao niao mamuang'] },
         explanation: { en: 'Mango sticky rice serves coconut-sweetened glutinous rice with slices of ripe mango.', et: 'Mango sticky rice koosneb kookosega magustatud kleepuvast riisist ja küpse mango viiludest.' },
         source: { sourceId: 'wikipedia:mango_sticky_rice', title: 'Mango sticky rice', url: 'https://en.wikipedia.org/wiki/Mango_sticky_rice', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2529,14 +2529,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-060:question:3', factKey: 'built-in-food-drink:checkpoint3:crepe-suzette-orange-butter-liqueur', tier: 3, subjectKey: 'dessert:crepe-suzette',
-        clue: { en: 'Thin pancakes arrive in an orange, butter, and sugar sauce, often finished with orange liqueur. Identify the French dessert.', et: 'Õhukesi pannkooke serveeritakse apelsini, või ja suhkru kastmes, millele lisatakse sageli apelsinilikööri. Tuvasta see Prantsuse magustoit.' },
+        clue: { en: 'Thin pancakes arrive in an orange, butter, and sugar sauce, often finished with orange liqueur. Identify the French dessert.', et: 'Õhukesi pannkooke serveeritakse apelsinist, võist ja suhkrust valmistatud kastmes, millele lisatakse sageli apelsinilikööri. Tuvasta see Prantsuse magustoit.' },
         response: { en: 'crêpe Suzette', et: 'crêpe Suzette' }, acceptedVariants: { en: ['crepe Suzette'], et: ['crepe Suzette'] },
         explanation: { en: 'Crêpe Suzette pairs crêpes with beurre Suzette, an orange-butter sauce that may be flambéed at the table.', et: 'Crêpe Suzette ühendab pannkoogid beurre Suzette’i ehk apelsini-võikastmega, mida võib lauas leegitada.' },
         source: { sourceId: 'wikipedia:crepe_suzette', title: 'Crêpe Suzette', url: 'https://en.wikipedia.org/wiki/Cr%C3%AApe_Suzette', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'built-in-food-drink-set-060:question:4', factKey: 'built-in-food-drink:checkpoint3:salade-nicoise-tomatoes-olives-anchovies-eggs', tier: 4, subjectKey: 'dish:salade-nicoise',
-        clue: { en: 'From Nice comes a Mediterranean salad of tomatoes, olives, anchovies or tuna, and hard-boiled eggs. Name it.', et: 'Nice’ist pärineb Vahemere salat, kuhu kuuluvad tomatid, oliivid, anšoovised või tuunikala ja kõvaks keedetud munad. Nimeta see.' },
+        clue: { en: 'Tomatoes, olives, anchovies or tuna, and hard-boiled eggs meet in a French Mediterranean salad. Name it.', et: 'Prantsuse Vahemere salatis on tomatid, oliivid, anšoovised või tuunikala ja kõvaks keedetud munad. Nimeta see.' },
         response: { en: 'salade niçoise', et: 'Nice’i salat' }, acceptedVariants: { en: ['Niçoise salad'], et: ['salade niçoise'] },
         explanation: { en: 'Salade niçoise comes from Nice; arguments over cooked vegetables have become part of its culinary fame.', et: 'Nice’i salat pärineb Nice’ist ning vaidlused keedetud köögiviljade üle on saanud osaks roa kuulsusest.' },
         source: { sourceId: 'wikipedia:salade_nicoise', title: 'Salade niçoise', url: 'https://en.wikipedia.org/wiki/Salade_ni%C3%A7oise', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2644,7 +2644,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-063:question:2', factKey: 'built-in-food-drink:checkpoint3:clam-chowder-new-england-shellfish-cream', tier: 2, subjectKey: 'dish:clam-chowder',
-        clue: { en: 'Milk or cream, potatoes, and pieces of clam make up this New England soup. What is it called?', et: 'Uus-Inglismaa supp sisaldab piima või koort, kartuleid ja merekarbiliha. Mis supp see on?' },
+        clue: { en: 'This creamy soup from the northeastern United States combines milk or cream, potatoes, and bivalve shellfish. What is it called?', et: 'Ameerika Ühendriikide kirdeosast pärit kreemjas supp sisaldab piima või koort, kartuleid ja kahepoolmeliste molluskite liha. Mis supp see on?' },
         response: { en: 'clam chowder', et: 'clam chowder' }, acceptedVariants: { en: ['New England clam chowder'], et: ['Uus-Inglismaa merekarbisupp'] },
         explanation: { en: 'New England clam chowder is the creamy regional style, distinct from Manhattan’s tomato-based version.', et: 'Uus-Inglismaa merekarbisupp on kreemjas piirkondlik variant, mis erineb Manhattani tomatipõhisest versioonist.' },
         source: { sourceId: 'wikipedia:clam_chowder', title: 'Clam chowder', url: 'https://en.wikipedia.org/wiki/Clam_chowder', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2678,7 +2678,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     questions: [
       {
         key: 'built-in-food-drink-set-064:question:1', factKey: 'built-in-food-drink:checkpoint3:burek-flaky-filled-balkan-pastry', tier: 1, subjectKey: 'dish:burek',
-        clue: { en: 'Thin flaky dough is coiled or layered around minced meat, cheese, spinach, or potato in this Balkan pastry. Name it.', et: 'Õhuke helbeline tainas keeratakse või laotakse hakkliha-, juustu-, spinati- või kartulitäidise ümber. Nimeta see Balkani küpsetis.' },
+        clue: { en: 'Thin flaky dough is coiled or layered around minced meat, cheese, spinach, or potato in this Balkan pastry. Name it.', et: 'Õhuke kihiline tainas keeratakse või laotakse hakkliha-, juustu-, spinati- või kartulitäidise ümber. Nimeta see Balkani küpsetis.' },
         response: { en: 'burek', et: 'burek' }, acceptedVariants: { en: ['börek'], et: ['börek'] },
         explanation: { en: 'Burek belongs to the broad Ottoman börek family and has distinctive shapes and fillings across the Balkans.', et: 'Burek kuulub Osmanite köögist pärinevate börek’ite hulka ning selle kuju ja täidised erinevad Balkanil piirkonniti.' },
         source: { sourceId: 'wikipedia:borek', title: 'Börek', url: 'https://en.wikipedia.org/wiki/B%C3%B6rek', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2740,7 +2740,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-065:question:4', factKey: 'built-in-food-drink:checkpoint3:manakish-levantine-flatbread-zaatar', tier: 4, subjectKey: 'dish:manakish',
-        clue: { en: 'Za’atar and olive oil, cheese, or minced meat top a Levantine breakfast flatbread before baking. What is it called?', et: 'Levandi hommikusöögi-lameleivale pannakse enne küpsetamist za’atari ja oliiviõli, juustu või hakkliha. Kuidas seda nimetatakse?' },
+        clue: { en: 'Za’atar and olive oil, cheese, or minced meat top a Levantine breakfast flatbread before baking. What is it called?', et: 'Levandi lameleivale, mida süüakse hommikusöögiks, pannakse enne küpsetamist za’atari ja oliiviõli, juustu või hakkliha. Kuidas seda nimetatakse?' },
         response: { en: 'manakish', et: 'manakish' }, acceptedVariants: { en: ['manaqish'], et: ['manaqish'] },
         explanation: { en: 'Manakish is often compared with pizza because its seasoned topping is baked directly on a round of dough.', et: 'Manakish’i võrreldakse sageli pitsaga, sest maitsestatud kate küpsetatakse otse ümmargusel tainal.' },
         source: { sourceId: 'wikipedia:manakish', title: 'Manakish', url: 'https://en.wikipedia.org/wiki/Manakish', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2760,7 +2760,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     questions: [
       {
         key: 'built-in-food-drink-set-066:question:1', factKey: 'built-in-food-drink:checkpoint3:banana-split-three-scoops-sundae', tier: 1, subjectKey: 'dessert:banana-split',
-        clue: { en: 'Three ice-cream scoops sit between a banana cut lengthwise and are topped with sauces, cream, nuts, and a cherry. What American sundae is this?', et: 'Kolm jäätisepalli asetatakse pikuti poolitatud banaani vahele ning lisatakse kastmed, vahukoor, pähklid ja kirss. Mis Ameerika jäätisemagustoit see on?' },
+        clue: { en: 'Three ice-cream scoops sit between two lengthwise fruit halves and are topped with sauces, cream, nuts, and a cherry. What American sundae is this?', et: 'Kolm jäätisepalli asetatakse pikuti poolitatud puuvilja kahe poole vahele ning lisatakse kastmed, vahukoor, pähklid ja kirss. Mis Ameerika jäätisemagustoit see on?' },
         response: { en: 'banana split', et: 'banana split' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'A classic banana split arranges vanilla, chocolate, and strawberry ice cream between two banana halves.', et: 'Klassikalises banana split’is paiknevad vanilli-, šokolaadi- ja maasikajäätise pallid kahe banaanipoole vahel.' },
         source: { sourceId: 'wikipedia:banana_split', title: 'Banana split', url: 'https://en.wikipedia.org/wiki/Banana_split', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
@@ -2774,7 +2774,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         key: 'built-in-food-drink-set-066:question:3', factKey: 'built-in-food-drink:checkpoint3:flan-baked-custard-caramel', tier: 3, subjectKey: 'dessert:flan',
-        clue: { en: 'A smooth baked custard is turned out of its mould so liquid caramel runs over the top. What dessert is this?', et: 'Sile küpsetatud munakreem kummutatakse vormist välja, nii et vedel karamell voolab selle peale. Mis magustoit see on?' },
+        clue: { en: 'A smooth baked egg dessert is turned out of its mould so a glossy amber sauce runs over the top. What is it?', et: 'Sile küpsetatud munakreem kummutatakse vormist välja, nii et läikiv merevaigukarva kaste voolab selle peale. Mis magustoit see on?' },
         response: { en: 'flan', et: 'flan' }, acceptedVariants: { en: ['caramel custard'], et: ['karamellkreem'] },
         explanation: { en: 'Flan is baked over caramel, then inverted so the caramel becomes its sauce.', et: 'Flan küpsetatakse karamelli peal ning kummutatakse seejärel ümber, nii et karamellist saab kaste.' },
         source: { sourceId: 'wikipedia:creme_caramel', title: 'Crème caramel', url: 'https://en.wikipedia.org/wiki/Cr%C3%A8me_caramel', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
