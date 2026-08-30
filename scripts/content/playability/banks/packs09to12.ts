@@ -19,157 +19,159 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-034",
     "name": {
-      "en": "Gentle Cooking in Water",
-      "et": "Õrn küpsetamine vees"
+      "en": "Eggs Take Centre Stage",
+      "et": "Munast saab roog"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-034:question:1",
-        "factKey": "built-in-food-drink:moist-heat:medium:technique:blanching",
+        "factKey": "built-in-food-drink:checkpoint1:frittata-pan-finished",
         "tier": 1,
-        "subjectKey": "technique:blanching",
+        "subjectKey": "dish:frittata",
         "clue": {
-          "en": "Name the cooking technique that briefly boils food and then cools it rapidly.",
-          "et": "Vihjes kirjeldatud kuumtöötlusvõte keedab toitu lühidalt ja jahutab selle seejärel kiiresti. Mis see on?"
+          "en": "This Italian egg dish begins in a frying pan and is often finished under a grill; unlike a folded omelette, its fillings are mixed through the eggs. Name it.",
+          "et": "See Itaalia munaroog alustab küpsemist pannil ja valmib sageli grilli all; erinevalt kokkuvolditud omletist on täidis munasegusse läbi segatud. Mis roog see on?"
         },
         "response": {
-          "en": "blanching",
-          "et": "blanšeerimine"
+          "en": "frittata",
+          "et": "frittata"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Blanching is often used before freezing vegetables to slow enzyme activity.",
-          "et": "Blanšeerimist kasutatakse sageli enne köögiviljade külmutamist ensüümide toime aeglustamiseks."
+          "en": "A frittata cooks its eggs and fillings together as a thick, open-faced dish, often with the top set under direct heat.",
+          "et": "Frittata puhul küpsevad munad ja täidis koos paksuks lahtiseks roaks ning pealispind lastakse sageli otsese kuumuse all hüübida."
         },
         "source": {
-          "sourceId": "wikipedia:blanching_(cooking)",
-          "title": "Blanching (cooking)",
-          "url": "https://en.wikipedia.org/wiki/Blanching_(cooking)",
+          "sourceId": "wikipedia:frittata",
+          "title": "Frittata",
+          "url": "https://en.wikipedia.org/wiki/Frittata",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-034:question:2",
-        "factKey": "built-in-food-drink:moist-heat:medium:technique:braising",
+        "factKey": "built-in-food-drink:checkpoint1:quiche-savoury-custard-tart",
         "tier": 2,
-        "subjectKey": "technique:braising",
+        "subjectKey": "dish:quiche",
         "clue": {
-          "en": "Recognise the cooking technique that first browns food and then cooks it slowly with a little liquid.",
-          "et": "Otsitav kuumtöötlusvõte pruunistab toidu ja hautab seda siis aeglaselt väheses vedelikus. Mis see on?"
+          "en": "Which French savoury tart sets eggs and cream inside a pastry crust, with bacon appearing in its Lorraine version?",
+          "et": "Milline Prantsuse soolane pirukas hüübib tainapõhjas muna ja koore segust ning sisaldab Lorraine'i versioonis peekonit?"
         },
         "response": {
-          "en": "braising",
-          "et": "mooring"
+          "en": "quiche",
+          "et": "quiche"
         },
         "acceptedVariants": {
-          "en": [
-            "stewing"
-          ],
-          "et": [
-            "hautamine"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Braising combines dry searing with a covered, low-temperature moist finish.",
-          "et": "Mooring ühendab kuiva pruunistamise kaane all madalal kuumusel hautamisega."
+          "en": "Quiche is an open pastry case with a savoury egg-and-dairy filling; quiche Lorraine traditionally adds lardons or bacon.",
+          "et": "Quiche on lahtine soolane pirukas muna-piimatäidisega; quiche Lorraine'i traditsioonilisse täidisesse kuuluvad peekonitükid."
         },
         "source": {
-          "sourceId": "wikipedia:braising",
-          "title": "Braising",
-          "url": "https://en.wikipedia.org/wiki/Braising",
+          "sourceId": "wikipedia:quiche",
+          "title": "Quiche",
+          "url": "https://en.wikipedia.org/wiki/Quiche",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-034:question:3",
-        "factKey": "built-in-food-drink:moist-heat:medium:technique:poaching",
+        "factKey": "built-in-food-drink:checkpoint1:spanish-tortilla-potato-onion",
         "tier": 3,
-        "subjectKey": "technique:poaching",
+        "subjectKey": "dish:spanish-tortilla",
         "clue": {
-          "en": "Which cooking technique gently cooks delicate food in liquid below a simmer?",
-          "et": "Tuvasta järgmine kuumtöötlusvõte: see küpsetab õrna toitu vedelikus allpool keemistemperatuuri."
+          "en": "At tapas bars, thick round slices made chiefly from eggs, potatoes, and onion belong to which classic dish?",
+          "et": "Millise klassikalise roa paksud ümmargused viilud valmivad tapasebaarides peamiselt munast, kartulist ja sibulast?"
         },
         "response": {
-          "en": "poaching",
-          "et": "pošeerimine"
+          "en": "tortilla española",
+          "et": "tortilla española"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Spanish omelette",
+            "tortilla de patatas"
+          ],
+          "et": [
+            "Hispaania tortilla",
+            "tortilla de patatas"
+          ]
         },
         "explanation": {
-          "en": "Poaching uses a calmer liquid than simmering, which helps eggs or fish keep their shape.",
-          "et": "Pošeerimine kasutab podisemisest rahulikumat vedelikku, mis aitab munal või kalal kuju hoida."
+          "en": "Tortilla española slowly sets eggs around fried potatoes and often onion, producing a thick cake cut into wedges.",
+          "et": "Tortilla española puhul hüübib muna aeglaselt praetud kartuli ja sageli ka sibula ümber ning paks roog lõigatakse sektoriteks."
         },
         "source": {
-          "sourceId": "wikipedia:poaching_(cooking)",
-          "title": "Poaching (cooking)",
-          "url": "https://en.wikipedia.org/wiki/Poaching_(cooking)",
+          "sourceId": "wikipedia:spanish_omelette",
+          "title": "Spanish omelette",
+          "url": "https://en.wikipedia.org/wiki/Spanish_omelette",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-034:question:4",
-        "factKey": "built-in-food-drink:moist-heat:medium:technique:steaming",
+        "factKey": "built-in-food-drink:checkpoint1:chawanmushi-savoury-steamed-egg",
         "tier": 4,
-        "subjectKey": "technique:steaming",
+        "subjectKey": "dish:chawanmushi",
         "clue": {
-          "en": "One cooking technique cooks food with hot vapour without immersing it in water. Which one is described?",
-          "et": "Kuumtöötlusvõte küpsetab toitu kuuma auruga ilma seda vette kastmata. Mis see on?"
+          "en": "In Japan, dashi, shiitake mushrooms, and boiled shrimp can be suspended in a silky savoury egg mixture steamed and eaten from a small cup. Name the dish.",
+          "et": "Jaapanis aurutatakse dashi, shiitake-seente ja keedetud krevettidega siidiseks soolane munasegu, mida süüakse väikesest tassist. Mis roog see on?"
         },
         "response": {
-          "en": "steaming",
-          "et": "aurutamine"
+          "en": "chawanmushi",
+          "et": "chawanmushi"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Steaming limits the loss of water-soluble nutrients because the food does not sit in cooking liquid.",
-          "et": "Aurutamine vähendab vees lahustuvate toitainete kadu, sest toit ei ligune keeduvedelikus."
+          "en": "Chawanmushi means 'steamed in a tea bowl' and differs from sweet custards through its dashi-based savoury filling.",
+          "et": "Chawanmushi nimi tähendab teekausis aurutamist ning magusast kreemist eristab seda dashi-põhine soolane täidis."
         },
         "source": {
-          "sourceId": "wikipedia:steaming",
-          "title": "Steaming",
-          "url": "https://en.wikipedia.org/wiki/Steaming",
+          "sourceId": "wikipedia:chawanmushi",
+          "title": "Chawanmushi",
+          "url": "https://en.wikipedia.org/wiki/Chawanmushi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-034:question:5",
-        "factKey": "built-in-food-drink:moist-heat:medium:technique:simmering",
+        "factKey": "built-in-food-drink:checkpoint1:menemen-tomato-pepper-eggs",
         "tier": 5,
-        "subjectKey": "technique:simmering",
+        "subjectKey": "dish:menemen",
         "clue": {
-          "en": "Recognise the cooking technique that keeps liquid just below a full rolling boil.",
-          "et": "Otsitav kuumtöötlusvõte hoiab vedeliku veidi allpool tugevat keemist. Mis see on?"
+          "en": "Which Turkish pan dish combines softly set eggs with tomatoes and green peppers and is commonly served in the vessel in which it cooked?",
+          "et": "Milline Türgi panniroog ühendab pehmelt hüübinud munad tomati ja rohelise paprikaga ning tuuakse sageli lauale küpsetusnõus?"
         },
         "response": {
-          "en": "simmering",
-          "et": "tasane keetmine"
+          "en": "menemen",
+          "et": "menemen"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Simmering shows small, gentle bubbles rather than the vigorous motion of boiling.",
-          "et": "Tasane keetmine tekitab tugeva keemise asemel väikesi rahulikke mulle."
+          "en": "Menemen cooks eggs with tomatoes, peppers, and seasonings into a soft mixture intended for sharing with bread.",
+          "et": "Menemenis küpsevad munad tomati, paprika ja maitseainetega pehmeks seguks, mida jagatakse tavaliselt leiva kõrvale."
         },
         "source": {
-          "sourceId": "wikipedia:simmering",
-          "title": "Simmering",
-          "url": "https://en.wikipedia.org/wiki/Simmering",
+          "sourceId": "wikipedia:menemen_food",
+          "title": "Menemen (food)",
+          "url": "https://en.wikipedia.org/wiki/Menemen_(food)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -177,153 +179,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-035",
     "name": {
-      "en": "Cooking with Dry Heat",
-      "et": "Kuiv kuumus köögis"
+      "en": "Filled Parcels Without Borders",
+      "et": "Täidetud tainataskud üle piiride"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-035:question:1",
-        "factKey": "built-in-food-drink:dry-heat:medium:technique:grilling",
+        "factKey": "built-in-food-drink:checkpoint1:pelmeni-russian-meat-dumplings",
         "tier": 1,
-        "subjectKey": "technique:grilling",
+        "subjectKey": "dish:pelmeni",
         "clue": {
-          "en": "A cooking method cooks food quickly above or below intense radiant heat. What term fits?",
-          "et": "Siin kirjeldatud küpsetusviis küpsetab toitu kiiresti tugeva kiirguskuumuse kohal või all. Mis see on?"
+          "en": "Which small Russian and Siberian dumplings wrap seasoned raw meat in thin dough and are often served with butter or sour cream?",
+          "et": "Millised väikesed Vene ja Siberi tainataskud peidavad õhukeses tainas maitsestatud toorest liha ning jõuavad lauale sageli või või hapukoorega?"
         },
         "response": {
-          "en": "grilling",
-          "et": "grillimine"
+          "en": "pelmeni",
+          "et": "pelmeenid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "pelmen"
+          ],
+          "et": [
+            "pelmeen"
+          ]
         },
         "explanation": {
-          "en": "Grilling typically marks food where it touches a grate while smoke adds flavour.",
-          "et": "Grillimine jätab restiga kokkupuutel toidule triibud ning suits lisab maitset."
+          "en": "Pelmeni are boiled from fresh or frozen and traditionally use a compact meat filling inside unleavened dough.",
+          "et": "Pelmeenid keedetakse värskelt või külmutatult ning nende pärmita tainas ümbritseb tihedat lihatäidist."
         },
         "source": {
-          "sourceId": "wikipedia:grilling",
-          "title": "Grilling",
-          "url": "https://en.wikipedia.org/wiki/Grilling",
+          "sourceId": "wikipedia:pelmeni",
+          "title": "Pelmeni",
+          "url": "https://en.wikipedia.org/wiki/Pelmeni",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-035:question:2",
-        "factKey": "built-in-food-drink:dry-heat:medium:technique:roasting",
+        "factKey": "built-in-food-drink:checkpoint1:pierogi-polish-crescent-dumplings",
         "tier": 2,
-        "subjectKey": "technique:roasting",
+        "subjectKey": "dish:pierogi",
         "clue": {
-          "en": "Recognise the cooking method that surrounds food with hot, dry air and is common for meat and vegetables.",
-          "et": "Otsitav küpsetusviis ümbritseb toidu kuuma kuiva õhuga ning sobib lihale ja köögiviljadele. Mis see on?"
+          "en": "Polish cooks boil these crescent-shaped parcels, often filled with potato and cheese, and may then fry them with onion. What are they?",
+          "et": "Poolas keedetakse neid poolkuukujulisi, sageli kartuli ja juustuga täidetud tainataskuid ning praetakse vahel hiljem sibulaga. Mis need on?"
         },
         "response": {
-          "en": "roasting",
-          "et": "röstimine"
+          "en": "pierogi",
+          "et": "pierogi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "pierogies"
+          ],
+          "et": [
+            "pierogid"
+          ]
         },
         "explanation": {
-          "en": "Roasting encourages surface browning while the oven heats the food from all sides.",
-          "et": "Röstimine soodustab pinna pruunistumist, samal ajal kui ahi kuumutab toitu igast küljest."
+          "en": "Pierogi are filled Polish dumplings whose many savoury and sweet versions are boiled before optional pan-frying.",
+          "et": "Pierogi on Poola täidetud tainataskud, mille soolased ja magusad variandid keedetakse ning soovi korral praetakse pannil üle."
         },
         "source": {
-          "sourceId": "wikipedia:roasting",
-          "title": "Roasting",
-          "url": "https://en.wikipedia.org/wiki/Roasting",
+          "sourceId": "wikipedia:pierogi",
+          "title": "Pierogi",
+          "url": "https://en.wikipedia.org/wiki/Pierogi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-035:question:3",
-        "factKey": "built-in-food-drink:dry-heat:medium:technique:baking",
+        "factKey": "built-in-food-drink:checkpoint1:gyoza-japanese-pan-fried-dumplings",
         "tier": 3,
-        "subjectKey": "technique:baking",
+        "subjectKey": "dish:gyoza",
         "clue": {
-          "en": "What cooking method uses an enclosed oven and is central to breads and cakes?",
-          "et": "Järgmine küpsetusviis kasutab suletud ahju ning on leiva ja kookide valmistamise alus. Milline see on?"
+          "en": "These Japanese crescent parcels, adapted from Chinese jiaozi, are commonly browned on one side and then steamed in the same pan. Name them.",
+          "et": "Neid Hiina jiaozi'st kohandatud Jaapani poolkuukujulisi tainataskuid pruunistatakse tavaliselt ühelt küljelt ja aurutatakse siis samal pannil. Mis need on?"
         },
         "response": {
-          "en": "baking",
-          "et": "küpsetamine"
+          "en": "gyōza",
+          "et": "gyōza"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "gyoza"
+          ],
+          "et": [
+            "gyoza"
+          ]
         },
         "explanation": {
-          "en": "Baking sets dough or batter as heat expands gases and firms its structure.",
-          "et": "Küpsetamine kinnistab taina, kui kuumus paisutab gaase ja tugevdab selle struktuuri."
+          "en": "The popular yaki-gyōza method gives the base a crisp crust while steam cooks the wrapper and filling.",
+          "et": "Levinud yaki-gyōza valmistusviis teeb põhja krõbedaks, samal ajal kui aur küpsetab taina ja täidise."
         },
         "source": {
-          "sourceId": "wikipedia:baking",
-          "title": "Baking",
-          "url": "https://en.wikipedia.org/wiki/Baking",
+          "sourceId": "wikipedia:gyoza",
+          "title": "Gyoza",
+          "url": "https://en.wikipedia.org/wiki/Gyoza",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-035:question:4",
-        "factKey": "built-in-food-drink:dry-heat:medium:technique:broiling",
+        "factKey": "built-in-food-drink:checkpoint1:xiaolongbao-broth-filled-basket-buns",
         "tier": 4,
-        "subjectKey": "technique:broiling",
+        "subjectKey": "dish:xiaolongbao",
         "clue": {
-          "en": "One cooking method places food close beneath an oven heat source. Which one is described?",
-          "et": "Küpsetusviis asetab toidu ahju kuumusallika vahetusse lähedusse. Mis see on?"
+          "en": "Which Jiangnan speciality is steamed in a bamboo basket and releases hot broth from inside its thin wrapper when bitten?",
+          "et": "Milline Jiangnani roog aurutatakse bambuskorvis ning vabastab hammustamisel õhukese taina seest kuuma puljongi?"
         },
         "response": {
-          "en": "broiling",
-          "et": "ülalt grillimine"
+          "en": "xiaolongbao",
+          "et": "xiaolongbao"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "xiao long bao"
+          ],
+          "et": [
+            "xiao long bao"
+          ]
         },
         "explanation": {
-          "en": "Broiling is the North American term for intense overhead grilling.",
-          "et": "Ülalt grillimine on Põhja-Ameerika nimetus tugevale ülalt lähtuva kuumusega grillimisele."
+          "en": "Xiaolongbao enclose meat and chilled gelled stock; the stock melts into soup during steaming.",
+          "et": "Xiaolongbao sisse pannakse liha ja külm tarretunud puljong, mis sulab aurutamisel supiks."
         },
         "source": {
-          "sourceId": "wikipedia:broiling",
-          "title": "Broiling",
-          "url": "https://en.wikipedia.org/wiki/Broiling",
+          "sourceId": "wikipedia:xiaolongbao",
+          "title": "Xiaolongbao",
+          "url": "https://en.wikipedia.org/wiki/Xiaolongbao",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-035:question:5",
-        "factKey": "built-in-food-drink:dry-heat:medium:technique:searing",
+        "factKey": "built-in-food-drink:checkpoint1:manti-yoghurt-topped-dumplings",
         "tier": 5,
-        "subjectKey": "technique:searing",
+        "subjectKey": "dish:manti",
         "clue": {
-          "en": "Identify this cooking method: it uses very high heat to brown the outside of food rapidly.",
-          "et": "Kirjeldatud küpsetusviis kasutab väga tugevat kuumust toidu välispinna kiireks pruunistamiseks. Mis on selle nimi?"
+          "en": "Across Turkey and Central Asia, which small meat-filled parcels are steamed or boiled and commonly topped with garlicky yoghurt and spiced butter?",
+          "et": "Milliseid väikeseid lihatäidisega tainataskuid aurutatakse või keedetakse Türgis ja Kesk-Aasias ning serveeritakse sageli küüslauguse jogurti ja vürtsivõiga?"
         },
         "response": {
-          "en": "searing",
-          "et": "kõrgel kuumusel pruunistamine"
+          "en": "manti",
+          "et": "manti"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "mantı"
+          ],
+          "et": [
+            "mantı"
+          ]
         },
         "explanation": {
-          "en": "Searing builds a flavourful crust but does not, contrary to a common myth, seal in juices.",
-          "et": "Kõrgel kuumusel pruunistamine loob maitserikka kooriku, kuid vastupidi levinud müüdile ei sulge mahlu sisse."
+          "en": "Manti belong to a broad family of Turkic and Central Asian filled dumplings with regional shapes and sauces.",
+          "et": "Manti kuulub türgi ja Kesk-Aasia täidetud tainataskute suurde perekonda, mille kuju ja lisandid piirkonniti erinevad."
         },
         "source": {
-          "sourceId": "wikipedia:searing",
-          "title": "Searing",
-          "url": "https://en.wikipedia.org/wiki/Searing",
+          "sourceId": "wikipedia:manti_food",
+          "title": "Manti (food)",
+          "url": "https://en.wikipedia.org/wiki/Manti_(food)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -331,153 +353,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-036",
     "name": {
-      "en": "Classic Knife Cuts",
-      "et": "Klassikalised noalõiked"
+      "en": "Central European Comfort Food",
+      "et": "Kesk-Euroopa lohutustoit"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-036:question:1",
-        "factKey": "built-in-food-drink:knife-cuts:medium:technique:julienne",
+        "factKey": "built-in-food-drink:checkpoint1:pretzel-alkaline-knotted-bread",
         "tier": 1,
-        "subjectKey": "technique:julienne",
+        "subjectKey": "food:pretzel",
         "clue": {
-          "en": "A culinary cut turns vegetables into thin matchstick-shaped strips. What term fits?",
-          "et": "Siin kirjeldatud kokanduslik lõige lõikab köögiviljad peenikesteks tikukujulisteks ribadeks. Mis see on?"
+          "en": "Its dough is twisted into a looped knot, dipped in an alkaline bath, and baked with coarse salt. Name this Central European bakery staple.",
+          "et": "Selle pagaritoote tainas keeratakse aasaliseks sõlmeks, kastetakse aluselisse lahusesse ja küpsetatakse jämeda soolaga. Mis see on?"
         },
         "response": {
-          "en": "julienne",
-          "et": "julienne-lõige"
+          "en": "pretzel",
+          "et": "soolakringel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bretzel"
+          ],
+          "et": [
+            "pretzel",
+            "Bretzel"
+          ]
         },
         "explanation": {
-          "en": "Julienne usually precedes an even finer dice called brunoise.",
-          "et": "Julienne-lõige on sageli veel peenema brunoise-kuubiku lähtekuju."
+          "en": "The alkaline treatment gives a pretzel its dark glossy crust and distinctive flavour while its knotted shape remains recognizable.",
+          "et": "Aluseline töötlus annab soolakringlile tumeda läikiva kooriku ja iseloomuliku maitse, sõlmjas kuju jääb aga äratuntavaks."
         },
         "source": {
-          "sourceId": "wikipedia:julienning",
-          "title": "Julienning",
-          "url": "https://en.wikipedia.org/wiki/Julienning",
+          "sourceId": "wikipedia:pretzel",
+          "title": "Pretzel",
+          "url": "https://en.wikipedia.org/wiki/Pretzel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-036:question:2",
-        "factKey": "built-in-food-drink:knife-cuts:medium:technique:brunoise",
+        "factKey": "built-in-food-drink:checkpoint1:goulash-hungarian-paprika-stew",
         "tier": 2,
-        "subjectKey": "technique:brunoise",
+        "subjectKey": "dish:goulash",
         "clue": {
-          "en": "Recognise the culinary cut that produces very small, even cubes from narrow vegetable strips.",
-          "et": "Otsitav kokanduslik lõige teeb kitsastest köögiviljaribadest väga väikesed ühtlased kuubikud. Mis see on?"
+          "en": "Hungarian herders gave their name to which paprika-rich meat-and-vegetable soup or stew?",
+          "et": "Milline paprikarohke liha ja köögiviljadega supp või hautis sai nime Ungari karjustelt?"
         },
         "response": {
-          "en": "brunoise",
-          "et": "brunoise-lõige"
+          "en": "goulash",
+          "et": "guljašš"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "gulyás"
+          ],
+          "et": [
+            "guljaš",
+            "gulyás"
+          ]
         },
         "explanation": {
-          "en": "Brunoise is made by turning julienne strips and cutting them crosswise.",
-          "et": "Brunoise-lõige valmib julienne-ribade pööramisel ja ristipidi lõikamisel."
+          "en": "Gulyás began as a herders' dish; paprika became a defining flavour after the spice spread through Hungarian cooking.",
+          "et": "Gulyás sai alguse karjuste roast; paprika muutus selle põhimaitseks pärast vürtsi levikut Ungari köögis."
         },
         "source": {
-          "sourceId": "wikipedia:brunoise",
-          "title": "Brunoise",
-          "url": "https://en.wikipedia.org/wiki/Brunoise",
+          "sourceId": "wikipedia:goulash",
+          "title": "Goulash",
+          "url": "https://en.wikipedia.org/wiki/Goulash",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-036:question:3",
-        "factKey": "built-in-food-drink:knife-cuts:medium:technique:chiffonade",
+        "factKey": "built-in-food-drink:checkpoint1:wiener-schnitzel-breaded-veal",
         "tier": 3,
-        "subjectKey": "technique:chiffonade",
+        "subjectKey": "dish:wiener-schnitzel",
         "clue": {
-          "en": "What culinary cut slices rolled leafy herbs or greens into fine ribbons?",
-          "et": "Järgmine kokanduslik lõige lõikab rulli keeratud lehed või ürdid peenteks ribadeks. Milline see on?"
+          "en": "Austria's best-known cutlet is traditionally thin veal coated in flour, egg, and breadcrumbs before frying. What is it called?",
+          "et": "Austria tuntuim kotlet on traditsiooniliselt õhuke vasikaliha, mis paneeritakse jahus, munas ja riivsaias ning praetakse. Mis on selle nimi?"
         },
         "response": {
-          "en": "chiffonade",
-          "et": "chiffonade-lõige"
+          "en": "Wiener schnitzel",
+          "et": "Viini šnitsel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Viennese schnitzel"
+          ],
+          "et": [
+            "Wiener schnitzel"
+          ]
         },
         "explanation": {
-          "en": "Chiffonade takes its name from a French word connected with rags or ribbons.",
-          "et": "Chiffonade-lõige saab nime prantsuse sõnast, mis seostub kaltsude või lintidega."
+          "en": "A true Wiener schnitzel uses veal; similar breaded cutlets made from pork are normally labelled by the meat used.",
+          "et": "Ehtne Viini šnitsel valmistatakse vasikalihast; samal viisil paneeritud sealiha nimetuses tuuakse tavaliselt liha eraldi välja."
         },
         "source": {
-          "sourceId": "wikipedia:chiffonade",
-          "title": "Chiffonade",
-          "url": "https://en.wikipedia.org/wiki/Chiffonade",
+          "sourceId": "wikipedia:wiener_schnitzel",
+          "title": "Wiener schnitzel",
+          "url": "https://en.wikipedia.org/wiki/Wiener_schnitzel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-036:question:4",
-        "factKey": "built-in-food-drink:knife-cuts:medium:technique:dicing",
+        "factKey": "built-in-food-drink:checkpoint1:apple-strudel-rolled-thin-pastry",
         "tier": 4,
-        "subjectKey": "technique:dicing",
+        "subjectKey": "dessert:apple-strudel",
         "clue": {
-          "en": "Name the culinary cut that cuts food into small cubes of roughly equal size.",
-          "et": "Vihjes kirjeldatud kokanduslik lõige lõikab toidu ligikaudu ühesuurusteks väikesteks kuubikuteks. Mis see on?"
+          "en": "Which Austrian rolled pastry wraps spiced orchard fruit in dough stretched so thin that a newspaper can traditionally be read through it?",
+          "et": "Milline Austria rullitud küpsetis mähib vürtsitatud puuviljatäidise tainasse, mis venitatakse pärimuse järgi nii õhukeseks, et sellest saab ajalehte läbi lugeda?"
         },
         "response": {
-          "en": "dicing",
-          "et": "kuubikuteks lõikamine"
+          "en": "apple strudel",
+          "et": "õunastruudel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Apfelstrudel"
+          ],
+          "et": [
+            "Apfelstrudel"
+          ]
         },
         "explanation": {
-          "en": "Dicing promotes even cooking by giving pieces similar dimensions.",
-          "et": "Kuubikuteks lõikamine aitab ühesuuruste tükkide tõttu toidul ühtlaselt küpseda."
+          "en": "Apple strudel rolls sliced apples and spices inside an exceptionally thin sheet of stretched dough.",
+          "et": "Õunastruudel keerab viilutatud õunad ja vürtsid erakordselt õhukeseks venitatud tainalehe sisse."
         },
         "source": {
-          "sourceId": "wikipedia:dicing",
-          "title": "Dicing",
-          "url": "https://en.wikipedia.org/wiki/Dicing",
+          "sourceId": "wikipedia:apple_strudel",
+          "title": "Apple strudel",
+          "url": "https://en.wikipedia.org/wiki/Apple_strudel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-036:question:5",
-        "factKey": "built-in-food-drink:knife-cuts:medium:technique:mincing",
+        "factKey": "built-in-food-drink:checkpoint1:raclette-melted-cheese-scraped",
         "tier": 5,
-        "subjectKey": "technique:mincing",
+        "subjectKey": "dish:raclette",
         "clue": {
-          "en": "Identify this culinary cut: it chops an ingredient into pieces much finer than an ordinary dice.",
-          "et": "Kirjeldatud kokanduslik lõige hakib koostisosa palju peenemaks kui tavaline kuubiklõige. Mis on selle nimi?"
+          "en": "At an Alpine table, a half-wheel of cheese is heated and its softened face scraped over potatoes and pickles. Which Swiss dish is this?",
+          "et": "Alpi söögilauas kuumutatakse poolikut juusturatast ning pehme pind kraabitakse kartulitele ja hapukurkidele. Milline Šveitsi roog see on?"
         },
         "response": {
-          "en": "mincing",
-          "et": "hakkimine"
+          "en": "raclette",
+          "et": "raclette"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Mincing is commonly used for garlic and herbs so their flavour disperses widely.",
-          "et": "Hakkimine sobib sageli küüslaugule ja ürtidele, et nende maitse laialt jaotuks."
+          "en": "Raclette names both the meltable cheese and the communal dish made by scraping its heated surface onto accompaniments.",
+          "et": "Raclette tähistab nii hästi sulavat juustu kui ka ühisrooga, mille puhul kuumutatud juust lisanditele kraabitakse."
         },
         "source": {
-          "sourceId": "wikipedia:mincing",
-          "title": "Mincing",
-          "url": "https://en.wikipedia.org/wiki/Mincing",
+          "sourceId": "wikipedia:raclette",
+          "title": "Raclette",
+          "url": "https://en.wikipedia.org/wiki/Raclette",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -485,161 +525,161 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-037",
     "name": {
-      "en": "Foundations of French Sauces",
-      "et": "Prantsuse kastmete alused"
+      "en": "Southeast Asian Favourites",
+      "et": "Kagu-Aasia lemmikroad"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-037:question:1",
-        "factKey": "built-in-food-drink:mother-sauces:medium:food:bechamel",
+        "factKey": "built-in-food-drink:checkpoint1:satay-grilled-skewers-peanut-sauce",
         "tier": 1,
-        "subjectKey": "food:bechamel",
+        "subjectKey": "dish:satay",
         "clue": {
-          "en": "One sauce thickens milk with a pale butter-and-flour roux. Which one is described?",
-          "et": "Kaste paksendab piima heleda või-jahuseguga. Mis see on?"
+          "en": "Across Indonesia and its neighbours, which skewers of seasoned meat are grilled over a fire and commonly paired with a peanut sauce?",
+          "et": "Milliseid maitsestatud lihavardaid grillitakse Indoneesias ja naabermaades tule kohal ning pakutakse sageli maapähklikastmega?"
         },
         "response": {
-          "en": "béchamel",
-          "et": "bešamellkaste"
+          "en": "satay",
+          "et": "satay"
         },
         "acceptedVariants": {
-          "en": [
-            "bechamel"
-          ],
-          "et": [
-            "bešamell"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Béchamel is the white mother sauce behind derivatives such as Mornay.",
-          "et": "Bešamellkaste on valge emakaste, millest valmistatakse muu hulgas Mornay kastet."
+          "en": "Satay developed in Java and spread across Southeast Asia, where meats, marinades, and accompanying sauces vary.",
+          "et": "Satay kujunes Jaaval ja levis üle Kagu-Aasia, kus liha, marinaad ja lisandikaste piirkonniti erinevad."
         },
         "source": {
-          "sourceId": "wikipedia:b%c3%a9chamel_sauce",
-          "title": "Béchamel sauce",
-          "url": "https://en.wikipedia.org/wiki/B%C3%A9chamel_sauce",
+          "sourceId": "wikipedia:satay",
+          "title": "Satay",
+          "url": "https://en.wikipedia.org/wiki/Satay",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-037:question:2",
-        "factKey": "built-in-food-drink:mother-sauces:medium:food:veloute",
+        "factKey": "built-in-food-drink:checkpoint1:laksa-spicy-noodle-soup",
         "tier": 2,
-        "subjectKey": "food:veloute",
+        "subjectKey": "dish:laksa",
         "clue": {
-          "en": "Identify this sauce: it thickens a light stock with a blond roux.",
-          "et": "Kirjeldatud kaste paksendab heleda puljongi blondi või-jahuseguga. Mis on selle nimi?"
+          "en": "Which spicy noodle soup from Malaysia and Singapore often builds its broth from coconut milk or sour tamarind and is associated with Peranakan cooking?",
+          "et": "Milline Malaisia ja Singapuri vürtsikas nuudlisupp saab puljongi sageli kookospiimast või hapust tamarindist ning seostub peranakani köögiga?"
         },
         "response": {
-          "en": "velouté",
-          "et": "velouté-kaste"
+          "en": "laksa",
+          "et": "laksa"
         },
         "acceptedVariants": {
-          "en": [
-            "veloute"
-          ],
-          "et": [
-            "veloute"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Velouté takes its name from the French word for velvety.",
-          "et": "Velouté-kaste saab nime prantsuse sõnast, mis tähendab sametist."
+          "en": "Laksa is a family of noodle soups whose major styles include creamy curry laksa and tart fish-based asam laksa.",
+          "et": "Laksa on nuudlisuppide perekond, mille põhistiilid on kreemjas karri-laksa ja hapukas kalapõhine asam laksa."
         },
         "source": {
-          "sourceId": "wikipedia:velout%c3%a9_sauce",
-          "title": "Velouté sauce",
-          "url": "https://en.wikipedia.org/wiki/Velout%C3%A9_sauce",
+          "sourceId": "wikipedia:laksa",
+          "title": "Laksa",
+          "url": "https://en.wikipedia.org/wiki/Laksa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-037:question:3",
-        "factKey": "built-in-food-drink:mother-sauces:medium:food:espagnole",
+        "factKey": "built-in-food-drink:checkpoint1:rendang-coconut-spiced-meat",
         "tier": 3,
-        "subjectKey": "food:espagnole",
+        "subjectKey": "dish:rendang",
         "clue": {
-          "en": "Which sauce combines brown stock, brown roux, vegetables, and tomato?",
-          "et": "Tuvasta järgmine kaste: see ühendab pruuni puljongi, pruuni või-jahusegu, köögiviljad ja tomati."
+          "en": "Minangkabau cooks slowly reduce beef with coconut milk and spices until the liquid is gone and the meat is dark and intensely flavoured. Name the dish.",
+          "et": "Minangkabau köögis hautatakse veiseliha kookospiima ja vürtsidega, kuni vedelik kaob ning liha muutub tumedaks ja maitseküllaseks. Mis roog see on?"
         },
         "response": {
-          "en": "espagnole",
-          "et": "Espagnole’i kaste"
+          "en": "rendang",
+          "et": "rendang"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Espagnole is reduced with brown stock to make demi-glace.",
-          "et": "Espagnole’i kaste keedetakse pruuni puljongiga kokku demi-glace’i valmistamiseks."
+          "en": "Rendang's long reduction fries the meat in the coconut's released oil, helping the spice coating cling and concentrate.",
+          "et": "Rendang'i pika hautamise lõpus praeb liha kookosest eraldunud õlis ning vürtsikiht kinnitub ja muutub kontsentreeritumaks."
         },
         "source": {
-          "sourceId": "wikipedia:espagnole_sauce",
-          "title": "Espagnole sauce",
-          "url": "https://en.wikipedia.org/wiki/Espagnole_sauce",
+          "sourceId": "wikipedia:rendang",
+          "title": "Rendang",
+          "url": "https://en.wikipedia.org/wiki/Rendang",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-037:question:4",
-        "factKey": "built-in-food-drink:mother-sauces:medium:food:hollandaise",
+        "factKey": "built-in-food-drink:checkpoint1:som-tam-green-papaya-salad",
         "tier": 4,
-        "subjectKey": "food:hollandaise",
+        "subjectKey": "dish:som-tam",
         "clue": {
-          "en": "Name the sauce that emulsifies warm butter with egg yolks and lemon juice.",
-          "et": "Vihjes kirjeldatud kaste emulgeerib sooja või munakollaste ja sidrunimahlaga. Mis see on?"
+          "en": "In a mortar, Thai cooks pound shredded unripe papaya with lime, chilli, palm sugar, and fish sauce for which crisp salad?",
+          "et": "Tai köögis tambitakse uhmris ribastatud toorest papaiat laimi, tšilli, palmisuhkru ja kalakastmega. Milline krõmpsuv salat nii valmib?"
         },
         "response": {
-          "en": "hollandaise",
-          "et": "Hollandi kaste"
+          "en": "som tam",
+          "et": "som tam"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "som tum"
+          ],
+          "et": [
+            "som tum"
+          ]
         },
         "explanation": {
-          "en": "Hollandaise is unusual among the five because egg yolk, not roux, provides its structure.",
-          "et": "Hollandi kaste erineb teistest viiest, sest struktuuri annab munakollane, mitte või-jahusegu."
+          "en": "Som tam balances sour, hot, sweet, and salty tastes while the firm unripe fruit keeps its crunch.",
+          "et": "Som tam tasakaalustab haput, teravat, magusat ja soolast maitset ning kõva toores vili säilitab krõmpsu."
         },
         "source": {
-          "sourceId": "wikipedia:hollandaise_sauce",
-          "title": "Hollandaise sauce",
-          "url": "https://en.wikipedia.org/wiki/Hollandaise_sauce",
+          "sourceId": "wikipedia:green_papaya_salad",
+          "title": "Green papaya salad",
+          "url": "https://en.wikipedia.org/wiki/Green_papaya_salad",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-037:question:5",
-        "factKey": "built-in-food-drink:mother-sauces:medium:food:tomato-sauce",
+        "factKey": "built-in-food-drink:checkpoint1:tom-kha-gai-galangal-coconut-soup",
         "tier": 5,
-        "subjectKey": "food:tomato-sauce",
+        "subjectKey": "dish:tom-kha-gai",
         "clue": {
-          "en": "Identify this sauce: it builds its familiar red base from cooked tomatoes.",
-          "et": "Kirjeldatud kaste saab tuttava punase põhja küpsetatud tomatitest. Mis on selle nimi?"
+          "en": "Which Thai soup combines chicken and coconut milk with galangal, lemongrass, and makrut lime leaves?",
+          "et": "Milline Tai supp ühendab kana ja kookospiima galangali, sidrunheina ning makrut-laimi lehtedega?"
         },
         "response": {
-          "en": "tomato sauce",
-          "et": "tomatikaste"
+          "en": "tom kha gai",
+          "et": "tom kha gai"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tom kha kai"
+          ],
+          "et": [
+            "tom kha kai"
+          ]
         },
         "explanation": {
-          "en": "Tomato sauce entered Escoffier’s influential list as the tomato-based mother sauce.",
-          "et": "Tomatikaste kuulus Escoffier’ mõjukasse loendisse tomatipõhise emakastmena."
+          "en": "The name identifies boiled galangal with chicken, while coconut milk carries the soup's aromatic herbs and sour heat.",
+          "et": "Nimi viitab keedetud kalganile kanaga, kookospiim aga kannab supi aromaatseid ürte, hapet ja teravust."
         },
         "source": {
-          "sourceId": "wikipedia:tomato_sauce",
-          "title": "Tomato sauce",
-          "url": "https://en.wikipedia.org/wiki/Tomato_sauce",
+          "sourceId": "wikipedia:tom_kha_kai",
+          "title": "Tom kha kai",
+          "url": "https://en.wikipedia.org/wiki/Tom_kha_kai",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -647,157 +687,165 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-038",
     "name": {
-      "en": "Sauces That Hold Oil and Water",
-      "et": "Õli ja vett ühendavad kastmed"
+      "en": "South Asian Classics",
+      "et": "Lõuna-Aasia klassikud"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-038:question:1",
-        "factKey": "built-in-food-drink:emulsified-sauces:medium:food:mayonnaise",
+        "factKey": "built-in-food-drink:checkpoint1:dosa-fermented-rice-lentil-crepe",
         "tier": 1,
-        "subjectKey": "food:mayonnaise",
+        "subjectKey": "dish:dosa",
         "clue": {
-          "en": "Name the emulsified sauce that combines oil and egg yolk into a thick cold sauce.",
-          "et": "Vihjes kirjeldatud emulgeeritud kaste ühendab õli ja munakollase paksuks külmaks kastmeks. Mis see on?"
+          "en": "Which crisp South Indian crepe is spread thin on a hot griddle from a fermented batter of rice and black gram?",
+          "et": "Milline krõbe Lõuna-India pannkook küpsetatakse kuumal plaadil õhukeseks kääritatud riisi ja musta mungoa tainast?"
         },
         "response": {
-          "en": "mayonnaise",
-          "et": "majonees"
+          "en": "dosa",
+          "et": "dosa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "dosai"
+          ],
+          "et": [
+            "dosai"
+          ]
         },
         "explanation": {
-          "en": "Mayonnaise relies on lecithin in yolk to keep tiny oil droplets dispersed.",
-          "et": "Majonees toetub munakollase letsitiinile, mis hoiab õlitilgad hajutatuna."
+          "en": "Fermentation gives dosa batter flavour and lift; the batter can be cooked plain or wrapped around a potato filling.",
+          "et": "Käärimine annab dosa-tainale maitse ja kohevuse; seda küpsetatakse niisama või keeratakse kartulitäidise ümber."
         },
         "source": {
-          "sourceId": "wikipedia:mayonnaise",
-          "title": "Mayonnaise",
-          "url": "https://en.wikipedia.org/wiki/Mayonnaise",
+          "sourceId": "wikipedia:dosa_food",
+          "title": "Dosa (food)",
+          "url": "https://en.wikipedia.org/wiki/Dosa_(food)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-038:question:2",
-        "factKey": "built-in-food-drink:emulsified-sauces:medium:food:vinaigrette",
+        "factKey": "built-in-food-drink:checkpoint1:butter-chicken-delhi-tomato-sauce",
         "tier": 2,
-        "subjectKey": "food:vinaigrette",
+        "subjectKey": "dish:butter-chicken",
         "clue": {
-          "en": "Identify this emulsified sauce: it mixes oil with vinegar for a tart salad dressing.",
-          "et": "Kirjeldatud emulgeeritud kaste segab õli äädikaga hapukaks salatikastmeks. Mis on selle nimi?"
+          "en": "Created in Delhi, which dish folds pieces roasted in a tandoor into a smooth tomato-and-cream sauce?",
+          "et": "Milline Delhis loodud roog paneb tandooris röstitud lihatükid siidisesse tomati-koorekastmesse?"
         },
         "response": {
-          "en": "vinaigrette",
-          "et": "vinegrett"
+          "en": "butter chicken",
+          "et": "võikana"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "murgh makhani"
+          ],
+          "et": [
+            "murgh makhani"
+          ]
         },
         "explanation": {
-          "en": "Vinaigrette is usually temporary because its droplets separate without a strong emulsifier.",
-          "et": "Vinegrett on tavaliselt ajutine, sest ilma tugeva emulgaatorita tilgad eralduvad."
+          "en": "Butter chicken, or murgh makhani, was devised as a way to keep leftover tandoori chicken tender in a rich sauce.",
+          "et": "Võikana ehk murgh makhani loodi selleks, et järelejäänud tandoorikana püsiks rikkalikus kastmes mahlane."
         },
         "source": {
-          "sourceId": "wikipedia:vinaigrette",
-          "title": "Vinaigrette",
-          "url": "https://en.wikipedia.org/wiki/Vinaigrette",
+          "sourceId": "wikipedia:butter_chicken",
+          "title": "Butter chicken",
+          "url": "https://en.wikipedia.org/wiki/Butter_chicken",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-038:question:3",
-        "factKey": "built-in-food-drink:emulsified-sauces:medium:food:aioli",
+        "factKey": "built-in-food-drink:checkpoint1:korma-mughal-braised-yoghurt",
         "tier": 3,
-        "subjectKey": "food:aioli",
+        "subjectKey": "dish:korma",
         "clue": {
-          "en": "Which emulsified sauce pairs garlic with oil in a Mediterranean cold sauce?",
-          "et": "Tuvasta järgmine emulgeeritud kaste: see ühendab Vahemere külmas kastmes küüslaugu ja õli."
+          "en": "Which Mughal-influenced curry gently braises meat or vegetables with yoghurt or cream, spices, and sometimes ground nuts?",
+          "et": "Milline Mogulite mõjuga karri hautab liha või köögivilju õrnalt jogurti või koore, vürtside ja vahel jahvatatud pähklitega?"
         },
         "response": {
-          "en": "aioli",
-          "et": "aioli"
+          "en": "korma",
+          "et": "korma"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "qorma"
+          ],
+          "et": [
+            "qorma"
+          ]
         },
         "explanation": {
-          "en": "Aioli traditionally forms from garlic and olive oil even without egg yolk.",
-          "et": "Aioli valmib traditsiooniliselt küüslaugust ja oliiviõlist ka munakollaseta."
+          "en": "Korma describes a family of mild, aromatic braises whose sauce can be thickened with dairy, nuts, or seeds.",
+          "et": "Korma on mahedate aromaatsete hautiste perekond, mille kastet paksendatakse piimatoodete, pähklite või seemnetega."
         },
         "source": {
-          "sourceId": "wikipedia:aioli",
-          "title": "Aioli",
-          "url": "https://en.wikipedia.org/wiki/Aioli",
+          "sourceId": "wikipedia:korma",
+          "title": "Korma",
+          "url": "https://en.wikipedia.org/wiki/Korma",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-038:question:4",
-        "factKey": "built-in-food-drink:emulsified-sauces:medium:food:bearnaise",
+        "factKey": "built-in-food-drink:checkpoint1:vindaloo-goan-portuguese-roots",
         "tier": 4,
-        "subjectKey": "food:bearnaise",
+        "subjectKey": "dish:vindaloo",
         "clue": {
-          "en": "One emulsified sauce flavours a warm butter-and-yolk emulsion with tarragon. Which one is described?",
-          "et": "Emulgeeritud kaste maitsestab sooja või ja munakollase emulsiooni estragoniga. Mis see on?"
+          "en": "Portuguese sailors brought a wine-and-garlic meat preparation to Goa, where local cooks transformed it with vinegar and spices into which curry?",
+          "et": "Portugali meremehed tõid Goasse veini ja küüslauguga liharoa, mille kohalikud kokad muutsid äädika ning vürtsidega milliseks karriks?"
         },
         "response": {
-          "en": "béarnaise",
-          "et": "Béarni kaste"
-        },
-        "acceptedVariants": {
-          "en": [
-            "bearnaise"
-          ],
-          "et": [
-            "béarnaise-kaste"
-          ]
-        },
-        "explanation": {
-          "en": "Béarnaise is a hollandaise derivative sharpened with a vinegar and shallot reduction.",
-          "et": "Béarni kaste on Hollandi kastme tuletis, mida teravdab äädika ja šalottsibula reduktsioon."
-        },
-        "source": {
-          "sourceId": "wikipedia:b%c3%a9arnaise_sauce",
-          "title": "Béarnaise sauce",
-          "url": "https://en.wikipedia.org/wiki/B%C3%A9arnaise_sauce",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-038:question:5",
-        "factKey": "built-in-food-drink:emulsified-sauces:medium:food:toum",
-        "tier": 5,
-        "subjectKey": "food:toum",
-        "clue": {
-          "en": "Identify this emulsified sauce: it whips garlic, oil, lemon, and salt into a white Levantine sauce.",
-          "et": "Kirjeldatud emulgeeritud kaste vahustab küüslaugu, õli, sidruni ja soola valgeks Levandi kastmeks. Mis on selle nimi?"
-        },
-        "response": {
-          "en": "toum",
-          "et": "toum"
+          "en": "vindaloo",
+          "et": "vindaloo"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Toum uses garlic itself as the emulsifier for a notably fluffy texture.",
-          "et": "Toum kasutab emulgaatorina küüslauku ennast ning saab seetõttu eriti koheva tekstuuri."
+          "en": "Vindaloo developed from carne de vinha d'alhos; its Goan form uses vinegar, garlic, and a distinctive spice mixture.",
+          "et": "Vindaloo arenes roast carne de vinha d'alhos; Goa versioon kasutab äädikat, küüslauku ja iseloomulikku vürtsisegu."
         },
         "source": {
-          "sourceId": "wikipedia:toum",
-          "title": "Toum",
-          "url": "https://en.wikipedia.org/wiki/Toum",
+          "sourceId": "wikipedia:vindaloo",
+          "title": "Vindaloo",
+          "url": "https://en.wikipedia.org/wiki/Vindaloo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-038:question:5",
+        "factKey": "built-in-food-drink:checkpoint1:gulab-jamun-milk-solid-syrup",
+        "tier": 5,
+        "subjectKey": "dessert:gulab-jamun",
+        "clue": {
+          "en": "Which South Asian sweet fries balls made from concentrated milk solids and soaks them in a rose- or cardamom-scented syrup?",
+          "et": "Millise Lõuna-Aasia maiuse jaoks praetakse kontsentreeritud piimakuivainest pallid ja leotatakse neid roosi või kardemoni lõhnalises siirupis?"
+        },
+        "response": {
+          "en": "gulab jamun",
+          "et": "gulab jamun"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Gulab jamun uses khoya or milk powder for its soft fried dumplings, which absorb warm aromatic syrup.",
+          "et": "Gulab jamun'i pehmed praetud pallid tehakse khoya'st või piimapulbrist ning need imavad sooja aromaatse siirupi endasse."
+        },
+        "source": {
+          "sourceId": "wikipedia:gulab_jamun",
+          "title": "Gulab jamun",
+          "url": "https://en.wikipedia.org/wiki/Gulab_jamun",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -805,157 +853,170 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-039",
     "name": {
-      "en": "Fermented Soy Staples",
-      "et": "Kääritatud soja põhitoidud"
+      "en": "From the Levant to North Africa",
+      "et": "Levandist Põhja-Aafrikani"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-039:question:1",
-        "factKey": "built-in-food-drink:fermented-soy:medium:food:miso",
+        "factKey": "built-in-food-drink:checkpoint1:tagine-conical-pot-and-stew",
         "tier": 1,
-        "subjectKey": "food:miso",
+        "subjectKey": "dish:tagine",
         "clue": {
-          "en": "One fermented soy food forms a Japanese savoury paste used in its namesake soup. Which one is described?",
-          "et": "Kääritatud sojatoode moodustab Jaapani soolase pasta, mida kasutatakse samanimelises supis. Mis see on?"
+          "en": "A conical earthenware pot and the Moroccan slow-cooked stew prepared inside it share what name?",
+          "et": "Millist nime kannavad nii koonilise kaanega savinõu kui ka selles valmiv Maroko aeglaselt hautatud roog?"
         },
         "response": {
-          "en": "miso",
-          "et": "miso"
+          "en": "tagine",
+          "et": "tagine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tajine"
+          ],
+          "et": [
+            "tajine"
+          ]
         },
         "explanation": {
-          "en": "Miso is commonly inoculated with koji mould grown on rice or barley.",
-          "et": "Miso saab sageli algkultuuri riisil või odral kasvatatud koji-hallitusest."
+          "en": "A tagine's tall lid returns condensed steam to the stew, allowing slow cooking with relatively little added water.",
+          "et": "Tagine'i kõrge kaas juhib kondenseerunud auru hautisse tagasi ja võimaldab aeglaselt küpsetada vähese lisatud veega."
         },
         "source": {
-          "sourceId": "wikipedia:miso",
-          "title": "Miso",
-          "url": "https://en.wikipedia.org/wiki/Miso",
+          "sourceId": "wikipedia:tajine",
+          "title": "Tajine",
+          "url": "https://en.wikipedia.org/wiki/Tajine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-039:question:2",
-        "factKey": "built-in-food-drink:fermented-soy:medium:food:soy-sauce",
+        "factKey": "built-in-food-drink:checkpoint1:tabbouleh-parsley-bulgur-salad",
         "tier": 2,
-        "subjectKey": "food:soy-sauce",
+        "subjectKey": "dish:tabbouleh",
         "clue": {
-          "en": "Recognise the fermented soy food that becomes a dark salty seasoning brewed from soybeans and grain.",
-          "et": "Otsitav kääritatud sojatoode valmib sojaubadest ja teraviljast tumedaks soolaseks maitseaineks. Mis see on?"
+          "en": "Which Levantine salad makes chopped parsley the star, with smaller amounts of bulgur, tomato, mint, lemon, and olive oil?",
+          "et": "Millises Levandi salatis on peaosas hakitud petersell ning kõrval väiksem kogus bulgurit, tomatit, münti, sidrunit ja oliiviõli?"
         },
         "response": {
-          "en": "soy sauce",
-          "et": "sojakaste"
+          "en": "tabbouleh",
+          "et": "tabbouleh"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tabouli"
+          ],
+          "et": [
+            "tabulee",
+            "tabouli"
+          ]
         },
         "explanation": {
-          "en": "Soy sauce develops through koji cultivation followed by brine fermentation.",
-          "et": "Sojakaste valmib koji kasvatamisele järgneva soolveekäärituse kaudu."
+          "en": "Traditional tabbouleh is herb-forward rather than grain-heavy, with parsley providing most of its volume and colour.",
+          "et": "Traditsiooniline tabbouleh on pigem ürdi- kui teraviljarohke: suurema osa mahust ja värvist annab petersell."
         },
         "source": {
-          "sourceId": "wikipedia:soy_sauce",
-          "title": "Soy sauce",
-          "url": "https://en.wikipedia.org/wiki/Soy_sauce",
+          "sourceId": "wikipedia:tabbouleh",
+          "title": "Tabbouleh",
+          "url": "https://en.wikipedia.org/wiki/Tabbouleh",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-039:question:3",
-        "factKey": "built-in-food-drink:fermented-soy:medium:food:tempeh",
+        "factKey": "built-in-food-drink:checkpoint1:baba-ghanoush-roasted-aubergine",
         "tier": 3,
-        "subjectKey": "food:tempeh",
+        "subjectKey": "dish:baba-ghanoush",
         "clue": {
-          "en": "Identify the fermented soy food: it binds whole soybeans into a firm Indonesian cake.",
-          "et": "Mis kääritatud sojatoode seob terved sojaoad tugevaks Indoneesia pätsiks?"
+          "en": "Roasted aubergine is mashed with tahini, lemon, and garlic for which smoky Levantine dip?",
+          "et": "Röstitud baklažaan tambitakse tahini, sidruni ja küüslauguga milliseks suitsumaitseliseks Levandi dipiks?"
         },
         "response": {
-          "en": "tempeh",
-          "et": "tempeh"
+          "en": "baba ghanoush",
+          "et": "baba ghanoush"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "baba ganoush"
+          ],
+          "et": [
+            "baba ganoush"
+          ]
         },
         "explanation": {
-          "en": "Tempeh uses Rhizopus mould whose mycelium knits the beans together.",
-          "et": "Tempeh kasutab Rhizopus-hallitust, mille niidistik seob oad kokku."
+          "en": "Charring the aubergine before mixing its flesh with sesame paste gives baba ghanoush its characteristic smokiness.",
+          "et": "Baklažaani kõrvetamine enne viljaliha seesamipastaga segamist annab baba ghanoush'ile iseloomuliku suitsususe."
         },
         "source": {
-          "sourceId": "wikipedia:tempeh",
-          "title": "Tempeh",
-          "url": "https://en.wikipedia.org/wiki/Tempeh",
+          "sourceId": "wikipedia:baba_ghanoush",
+          "title": "Baba ghanoush",
+          "url": "https://en.wikipedia.org/wiki/Baba_ghanoush",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-039:question:4",
-        "factKey": "built-in-food-drink:fermented-soy:medium:food:natto",
+        "factKey": "built-in-food-drink:checkpoint1:harissa-tunisian-chilli-paste",
         "tier": 4,
-        "subjectKey": "food:natto",
+        "subjectKey": "condiment:harissa",
         "clue": {
-          "en": "One fermented soy food is a sticky Japanese breakfast food with a strong aroma. Which one is described?",
-          "et": "Kääritatud sojatoode on kleepuv tugeva lõhnaga Jaapani hommikusöögitoit. Mis see on?"
+          "en": "Which North African red paste, especially associated with Tunisia, blends chillies with garlic and spices such as caraway or coriander?",
+          "et": "Milline eriti Tuneesiaga seotud Põhja-Aafrika punane maitsepasta ühendab tšilli küüslaugu ning näiteks köömne või koriandri seemnetega?"
         },
         "response": {
-          "en": "nattō",
-          "et": "nattō"
-        },
-        "acceptedVariants": {
-          "en": [
-            "natto"
-          ],
-          "et": [
-            "natto"
-          ]
-        },
-        "explanation": {
-          "en": "Nattō gets its strings from fermentation by a specialised Bacillus culture.",
-          "et": "Nattō saab venivad niidid spetsiaalse Bacillus-bakterikultuuri käärimisest."
-        },
-        "source": {
-          "sourceId": "wikipedia:natt%c5%8d",
-          "title": "Nattō",
-          "url": "https://en.wikipedia.org/wiki/Natt%C5%8D",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-039:question:5",
-        "factKey": "built-in-food-drink:fermented-soy:medium:food:doubanjiang",
-        "tier": 5,
-        "subjectKey": "food:doubanjiang",
-        "clue": {
-          "en": "Find the fermented soy food that adds a salty, spicy bean paste to Sichuan cooking.",
-          "et": "Kääritatud sojatoode annab Sichuani köögile soolase ja vürtsika oapasta. Leia sobiv vastus."
-        },
-        "response": {
-          "en": "doubanjiang",
-          "et": "doubanjiang"
+          "en": "harissa",
+          "et": "harissa"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Doubanjiang traditionally ferments broad beans with chillies rather than relying only on soybeans.",
-          "et": "Doubanjiang kääritab traditsiooniliselt tšilliga põldube, mitte üksnes sojaube."
+          "en": "Harissa is used as both a condiment and a cooking ingredient, with heat and seasoning varying between recipes.",
+          "et": "Harissat kasutatakse nii lauamaitseaine kui ka toiduvalmistamise koostisosana ning selle teravus ja maitsestus retseptiti erinevad."
         },
         "source": {
-          "sourceId": "wikipedia:doubanjiang",
-          "title": "Doubanjiang",
-          "url": "https://en.wikipedia.org/wiki/Doubanjiang",
+          "sourceId": "wikipedia:harissa",
+          "title": "Harissa",
+          "url": "https://en.wikipedia.org/wiki/Harissa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-039:question:5",
+        "factKey": "built-in-food-drink:checkpoint1:fattoush-toasted-bread-sumac-salad",
+        "tier": 5,
+        "subjectKey": "dish:fattoush",
+        "clue": {
+          "en": "Which Levantine salad turns pieces of toasted or fried flatbread into a main ingredient and seasons its vegetables with tangy sumac?",
+          "et": "Millises Levandi salatis saavad röstitud või praetud lameleivatükid põhikoostisosaks ning köögivilju maitsestab hapukas sumahh?"
+        },
+        "response": {
+          "en": "fattoush",
+          "et": "fattoush"
+        },
+        "acceptedVariants": {
+          "en": [
+            "fattoosh"
+          ],
+          "et": [
+            "fattoosh"
+          ]
+        },
+        "explanation": {
+          "en": "Fattoush belongs to the fattat family of dishes that make practical use of pieces of stale or toasted bread.",
+          "et": "Fattoush kuulub fattat-roogade perekonda, kus kasutatakse nutikalt kuivanud või röstitud leivatükke."
+        },
+        "source": {
+          "sourceId": "wikipedia:fattoush",
+          "title": "Fattoush",
+          "url": "https://en.wikipedia.org/wiki/Fattoush",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -963,165 +1024,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-040",
     "name": {
-      "en": "Cultured Milk Foods",
-      "et": "Hapendatud piimatooted"
+      "en": "Sweet Landmarks",
+      "et": "Magusad maamärgid"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-040:question:1",
-        "factKey": "built-in-food-drink:fermented-dairy:medium:food:yogurt",
+        "factKey": "built-in-food-drink:checkpoint1:black-forest-cake-cherry-cream-chocolate",
         "tier": 1,
-        "subjectKey": "food:yogurt",
+        "subjectKey": "dessert:black-forest-cake",
         "clue": {
-          "en": "Identify the cultured dairy product: it thickens milk with lactic-acid bacteria and has a tangy taste.",
-          "et": "Mis hapendatud piimatoode paksendab piima piimhappebakteritega ning maitseb hapukalt?"
+          "en": "Chocolate sponge, cherries, and whipped cream form which German cake whose name evokes a wooded region?",
+          "et": "Milline Saksa tort ühendab šokolaadibiskviidi, kirsid ja vahukoore ning kannab metsase piirkonna nime?"
         },
         "response": {
-          "en": "yogurt",
-          "et": "jogurt"
+          "en": "Black Forest gâteau",
+          "et": "Schwarzwaldi tort"
         },
         "acceptedVariants": {
           "en": [
-            "yoghurt"
+            "Black Forest cake"
           ],
           "et": [
-            "jogurt"
+            "Schwarzwaldi kirsitort",
+            "Black Foresti tort"
           ]
         },
         "explanation": {
-          "en": "Yogurt classically uses cultures including Streptococcus thermophilus and Lactobacillus bulgaricus.",
-          "et": "Jogurt kasutab klassikaliselt Streptococcus thermophilus’e ja Lactobacillus bulgaricus’e kultuure."
+          "en": "Its German name is Schwarzwälder Kirschtorte, literally Black Forest cherry cake, reflecting its chocolate, cream, and cherry layers.",
+          "et": "Saksa nimi Schwarzwälder Kirschtorte tähendab sõna-sõnalt Schwarzwaldi kirsitorti ning viitab šokolaadi-, koore- ja kirsikihtidele."
         },
         "source": {
-          "sourceId": "wikipedia:yogurt",
-          "title": "Yogurt",
-          "url": "https://en.wikipedia.org/wiki/Yogurt",
+          "sourceId": "wikipedia:black_forest_gateau",
+          "title": "Black Forest gâteau",
+          "url": "https://en.wikipedia.org/wiki/Black_Forest_gateau",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-040:question:2",
-        "factKey": "built-in-food-drink:fermented-dairy:medium:food:kefir",
+        "factKey": "built-in-food-drink:checkpoint1:sachertorte-apricot-chocolate-vienna",
         "tier": 2,
-        "subjectKey": "food:kefir",
+        "subjectKey": "dessert:sachertorte",
         "clue": {
-          "en": "One cultured dairy product ferments milk into a tart drink using reusable grains. Which one is described?",
-          "et": "Hapendatud piimatoode kääritab piima hapukaks joogiks taaskasutatavate terade abil. Mis see on?"
+          "en": "Which dense Viennese chocolate cake layers apricot jam beneath a dark glaze and is traditionally served with unsweetened whipped cream?",
+          "et": "Milline tihe Viini šokolaadikook peidab tumeda glasuuri all aprikoosimoosi ning seda serveeritakse traditsiooniliselt magustamata vahukoorega?"
         },
         "response": {
-          "en": "kefir",
-          "et": "keefir"
+          "en": "Sachertorte",
+          "et": "Sacheri tort"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Sacher torte"
+          ],
+          "et": [
+            "Sachertorte",
+            "Sacher-tort"
+          ]
         },
         "explanation": {
-          "en": "Kefir contains a community of bacteria and yeasts held in polysaccharide grains.",
-          "et": "Keefir sisaldab polüsahhariidterades koos elavat bakterite ja pärmide kooslust."
+          "en": "Franz Sacher created the cake in Vienna; its contrast of chocolate and apricot became the signature of the later hotel.",
+          "et": "Franz Sacher lõi koogi Viinis ning šokolaadi ja aprikoosi kontrastist sai hilisema hotelli tunnus."
         },
         "source": {
-          "sourceId": "wikipedia:kefir",
-          "title": "Kefir",
-          "url": "https://en.wikipedia.org/wiki/Kefir",
+          "sourceId": "wikipedia:sachertorte",
+          "title": "Sachertorte",
+          "url": "https://en.wikipedia.org/wiki/Sachertorte",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-040:question:3",
-        "factKey": "built-in-food-drink:fermented-dairy:medium:food:skyr",
+        "factKey": "built-in-food-drink:checkpoint1:pastel-de-nata-portuguese-custard-tart",
         "tier": 3,
-        "subjectKey": "food:skyr",
+        "subjectKey": "dessert:pastel-de-nata",
         "clue": {
-          "en": "Identify this cultured dairy product: it is an Icelandic cultured milk food with a thick, strained texture.",
-          "et": "Kirjeldatud hapendatud piimatoode on paksu nõrutatud tekstuuriga Islandi hapendatud piimatoit. Mis on selle nimi?"
+          "en": "In Lisbon, which flaky pastry cup holds an egg-and-cream filling baked until dark spots appear, with Belém famous for its version?",
+          "et": "Milline Lissaboni lehttainakorvike täidetakse muna-kooreseguga ja küpsetatakse tumedatäpiliseks, kusjuures Belém on kuulus oma variandi poolest?"
         },
         "response": {
-          "en": "skyr",
-          "et": "skyr"
+          "en": "pastel de nata",
+          "et": "pastel de nata"
+        },
+        "acceptedVariants": {
+          "en": [
+            "Portuguese custard tart"
+          ],
+          "et": [
+            "Portugali munakreemikorvike"
+          ]
+        },
+        "explanation": {
+          "en": "Pastéis de nata developed from Portugal's convent pastry tradition and are served with blistered, caramelised tops.",
+          "et": "Pastéis de nata pärineb Portugali kloostriküpsetiste traditsioonist ning selle pinnale küpsevad karamellistunud laigud."
+        },
+        "source": {
+          "sourceId": "wikipedia:pastel_de_nata",
+          "title": "Pastel de nata",
+          "url": "https://en.wikipedia.org/wiki/Pastel_de_nata",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-30"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-040:question:4",
+        "factKey": "built-in-food-drink:checkpoint1:tres-leches-three-dairy-soak",
+        "tier": 4,
+        "subjectKey": "dessert:tres-leches-cake",
+        "clue": {
+          "en": "A Latin American sponge is soaked after baking with evaporated milk, condensed milk, and a third dairy component. What cake is this?",
+          "et": "Ladina-Ameerika biskviit immutatakse pärast küpsetamist aurutamisega kontsentreeritud piima, magustatud kondenspiima ja koorega. Mis kook see on?"
+        },
+        "response": {
+          "en": "tres leches cake",
+          "et": "tres leches'i kook"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Skyr is legally and traditionally described as a fresh sour-milk cheese despite resembling yogurt.",
-          "et": "Skyr on välimusest hoolimata traditsiooniliselt värske hapupiimajuust."
+          "en": "The airy sponge of tres leches cake absorbs its rich milk mixture without completely falling apart.",
+          "et": "Tres leches'i koogi õhuline biskviit imab rikkaliku piimasegu endasse, kuid ei lagune täielikult."
         },
         "source": {
-          "sourceId": "wikipedia:skyr",
-          "title": "Skyr",
-          "url": "https://en.wikipedia.org/wiki/Skyr",
+          "sourceId": "wikipedia:tres_leches_cake",
+          "title": "Tres leches cake",
+          "url": "https://en.wikipedia.org/wiki/Tres_leches_cake",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-040:question:4",
-        "factKey": "built-in-food-drink:fermented-dairy:medium:food:creme-fraiche",
-        "tier": 4,
-        "subjectKey": "food:creme-fraiche",
-        "clue": {
-          "en": "Cultured dairy product is a mildly tangy cultured cream used in French cooking. What is it called?",
-          "et": "Milline hapendatud piimatoode on Prantsuse köögis kasutatav mahedalt hapukas hapukoor?"
-        },
-        "response": {
-          "en": "crème fraîche",
-          "et": "crème fraîche"
-        },
-        "acceptedVariants": {
-          "en": [
-            "creme fraiche"
-          ],
-          "et": [
-            "rõõsk hapukoor"
-          ]
-        },
-        "explanation": {
-          "en": "Crème fraîche has enough fat to resist curdling more readily than lower-fat sour cream when heated.",
-          "et": "Crème fraîche sisaldab piisavalt rasva, et kuumutamisel kalgenduda harvem kui lahjem hapukoor."
-        },
-        "source": {
-          "sourceId": "wikipedia:cr%c3%a8me_fra%c3%aeche",
-          "title": "Crème fraîche",
-          "url": "https://en.wikipedia.org/wiki/Cr%C3%A8me_fra%C3%AEche",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-040:question:5",
-        "factKey": "built-in-food-drink:fermented-dairy:medium:food:kumis",
+        "factKey": "built-in-food-drink:checkpoint1:lamington-chocolate-coconut-sponge",
         "tier": 5,
-        "subjectKey": "food:kumis",
+        "subjectKey": "dessert:lamington",
         "clue": {
-          "en": "A cultured dairy product is a Central Asian drink traditionally made from mare’s milk. Name it.",
-          "et": "Üks hapendatud piimatoode on Kesk-Aasia jook, mida tehakse traditsiooniliselt märapiimast. Millist vastust otsime?"
+          "en": "Which Australian treat cuts sponge cake into cubes, coats them in chocolate sauce, and rolls them in desiccated coconut?",
+          "et": "Millise Austraalia maiuse jaoks lõigatakse biskviit kuubikuteks, kaetakse šokolaadikastmega ja veeretatakse kookoshelvestes?"
         },
         "response": {
-          "en": "kumis",
-          "et": "kumõss"
+          "en": "lamington",
+          "et": "lamington"
         },
         "acceptedVariants": {
           "en": [
-            "koumiss"
+            "lamington cake"
           ],
           "et": [
-            "kumis"
+            "lamingtoni kook"
           ]
         },
         "explanation": {
-          "en": "Kumis undergoes both lactic and alcoholic fermentation because yeasts join the bacterial culture.",
-          "et": "Kumõss läbib nii piimhappe- kui alkoholkäärimise, sest bakterikultuuriga liituvad pärmid."
+          "en": "Lamington's thin chocolate coating soaks slightly into the sponge before the coconut forms its dry outer layer.",
+          "et": "Lamingtoni õhuke šokolaadikiht imbub veidi biskviiti, enne kui kookos moodustab kuiva väliskihi."
         },
         "source": {
-          "sourceId": "wikipedia:kumis",
-          "title": "Kumis",
-          "url": "https://en.wikipedia.org/wiki/Kumis",
+          "sourceId": "wikipedia:lamington",
+          "title": "Lamington",
+          "url": "https://en.wikipedia.org/wiki/Lamington",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -1129,153 +1196,165 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-041",
     "name": {
-      "en": "Vegetables Transformed by Fermentation",
-      "et": "Käärimisega muudetud köögiviljad"
+      "en": "Edible Botany Surprises",
+      "et": "Söödava botaanika üllatused"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-041:question:1",
-        "factKey": "built-in-food-drink:fermented-vegetables:medium:food:kimchi",
+        "factKey": "built-in-food-drink:checkpoint1:rhubarb-edible-stalk-toxic-leaf",
         "tier": 1,
-        "subjectKey": "food:kimchi",
+        "subjectKey": "plant:rhubarb",
         "clue": {
-          "en": "Identify the fermented vegetable dish: it seasons Korean vegetables with chilli, garlic, and other aromatics.",
-          "et": "Mis kääritatud köögiviljaroog maitsestab Korea köögivilju tšilli, küüslaugu ja muude ürtidega?"
+          "en": "Pie makers use the tart red-green stalks of which plant but discard its broad leaves because they contain harmful oxalic acid?",
+          "et": "Millise taime hapukaid puna-rohelisi varsi kasutatakse pirukas, kuid laiad lehed jäetakse kahjuliku oblikhappe tõttu kõrvale?"
         },
         "response": {
-          "en": "kimchi",
-          "et": "kimchi"
+          "en": "rhubarb",
+          "et": "rabarber"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Kimchi often ferments napa cabbage as lactic-acid bacteria acidify the brine.",
-          "et": "Kimchi kääritab sageli hiina kapsast, kui piimhappebakterid soolvee hapestavad."
+          "en": "Rhubarb's fleshy leaf stalk is edible after cooking, whereas the leaf blade contains compounds unsafe to eat.",
+          "et": "Rabarberi lihakas leheroots on pärast valmistamist söödav, lehelaba sisaldab aga söömiseks ohtlikke ühendeid."
         },
         "source": {
-          "sourceId": "wikipedia:kimchi",
-          "title": "Kimchi",
-          "url": "https://en.wikipedia.org/wiki/Kimchi",
+          "sourceId": "wikipedia:rhubarb",
+          "title": "Rhubarb",
+          "url": "https://en.wikipedia.org/wiki/Rhubarb",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-041:question:2",
-        "factKey": "built-in-food-drink:fermented-vegetables:medium:food:sauerkraut",
+        "factKey": "built-in-food-drink:checkpoint1:strawberry-achenes-accessory-fruit",
         "tier": 2,
-        "subjectKey": "food:sauerkraut",
+        "subjectKey": "plant:strawberry",
         "clue": {
-          "en": "A fermented vegetable dish turns finely cut cabbage sour with salt and time. What term fits?",
-          "et": "Siin kirjeldatud kääritatud köögiviljaroog muudab peeneks lõigatud kapsa soola ja ajaga hapuks. Mis see on?"
+          "en": "The red flesh of which familiar berry is botanically an enlarged flower base, while the apparent seeds on its surface are separate dry fruits?",
+          "et": "Millise tuttava marja punane viljaliha on botaaniliselt paisunud õiepõhi, pinnal näivad seemned aga eraldi kuivviljad?"
         },
         "response": {
-          "en": "sauerkraut",
-          "et": "hapukapsas"
+          "en": "strawberry",
+          "et": "maasikas"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sauerkraut ferments in its own drawn-out juices rather than in added vinegar.",
-          "et": "Hapukapsas käärib kapsast eraldunud mahlas, mitte lisatud äädikas."
+          "en": "A strawberry is an aggregate accessory fruit: each surface achene developed from one ovary and contains a seed.",
+          "et": "Maasikas on ühtaegu koguvili ja ebavili: iga pinnal olev pähklike arenes ühest sigimikust ja sisaldab seemet."
         },
         "source": {
-          "sourceId": "wikipedia:sauerkraut",
-          "title": "Sauerkraut",
-          "url": "https://en.wikipedia.org/wiki/Sauerkraut",
+          "sourceId": "wikipedia:strawberry",
+          "title": "Strawberry",
+          "url": "https://en.wikipedia.org/wiki/Strawberry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-041:question:3",
-        "factKey": "built-in-food-drink:fermented-vegetables:medium:food:curtido",
+        "factKey": "built-in-food-drink:checkpoint1:cashew-seed-below-cashew-apple",
         "tier": 3,
-        "subjectKey": "food:curtido",
+        "subjectKey": "plant:cashew",
         "clue": {
-          "en": "Find the fermented vegetable dish that is a lightly fermented Salvadoran cabbage relish served with pupusas.",
-          "et": "Kääritatud köögiviljaroog on kergelt kääritatud Salvadori kapsasalat, mida pakutakse pupusa’dega. Leia sobiv vastus."
+          "en": "Which curved edible seed grows in a hard shell attached beneath a swollen fruit stalk called an apple?",
+          "et": "Milline kaarjas söödav seeme kasvab kõvas kestas paisunud viljavarre all, mida nimetatakse õunaks?"
         },
         "response": {
-          "en": "curtido",
-          "et": "curtido"
+          "en": "cashew",
+          "et": "kašupähkel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cashew nut"
+          ],
+          "et": [
+            "India pähkel"
+          ]
         },
         "explanation": {
-          "en": "Curtido typically includes cabbage, onion, carrot, and oregano in a tart mixture.",
-          "et": "Curtido sisaldab hapukas segus tavaliselt kapsast, sibulat, porgandit ja punet."
+          "en": "The cashew apple is a fleshy false fruit, while the kidney-shaped structure hanging below it contains the commercial seed.",
+          "et": "Kašuõun on lihakas ebavili, selle all rippuv neerukujuline moodustis sisaldab kaubanduses tuntud seemet."
         },
         "source": {
-          "sourceId": "wikipedia:curtido",
-          "title": "Curtido",
-          "url": "https://en.wikipedia.org/wiki/Curtido",
+          "sourceId": "wikipedia:cashew",
+          "title": "Cashew",
+          "url": "https://en.wikipedia.org/wiki/Cashew",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-041:question:4",
-        "factKey": "built-in-food-drink:fermented-vegetables:medium:food:pao-cai",
+        "factKey": "built-in-food-drink:checkpoint1:artichoke-unopened-thistle-flower",
         "tier": 4,
-        "subjectKey": "food:pao-cai",
+        "subjectKey": "plant:artichoke",
         "clue": {
-          "en": "Identify the fermented vegetable dish: it names Sichuan vegetables kept in a seasoned fermentation brine.",
-          "et": "Mis kääritatud köögiviljaroog tähistab Sichuani maitsestatud käärimissoolvees hoitud köögivilju?"
+          "en": "Before it opens into a purple thistle bloom, the layered flower bud of which plant is harvested for its fleshy bracts and heart?",
+          "et": "Millise taime kihiline õienupp korjatakse lihakate soomuste ja südamiku pärast enne, kui see avaneb lillaks ohakaõieks?"
         },
         "response": {
-          "en": "pao cai",
-          "et": "pao cai"
+          "en": "artichoke",
+          "et": "artišokk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "globe artichoke"
+          ],
+          "et": [
+            "harilik artišokk"
+          ]
         },
         "explanation": {
-          "en": "Pao cai uses a brine that can be maintained and reused for successive batches.",
-          "et": "Pao cai kasutab soolvett, mida saab säilitada ja järgmiste partiide jaoks uuesti kasutada."
+          "en": "The globe artichoke is a cultivated thistle whose immature flower head is eaten before the florets open.",
+          "et": "Harilik artišokk on kultuuristatud ohakas, mille avanemata õisikut süüakse enne õite puhkemist."
         },
         "source": {
-          "sourceId": "wikipedia:pao_cai",
-          "title": "Pao cai",
-          "url": "https://en.wikipedia.org/wiki/Pao_cai",
+          "sourceId": "wikipedia:artichoke",
+          "title": "Artichoke",
+          "url": "https://en.wikipedia.org/wiki/Artichoke",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-041:question:5",
-        "factKey": "built-in-food-drink:fermented-vegetables:medium:food:torshi",
+        "factKey": "built-in-food-drink:checkpoint1:fig-inward-facing-flowers-syconium",
         "tier": 5,
-        "subjectKey": "food:torshi",
+        "subjectKey": "plant:fig",
         "clue": {
-          "en": "One fermented vegetable dish is a family of pickled vegetables found from the Balkans to the Middle East. Which one is described?",
-          "et": "Kääritatud köögiviljaroog on Balkanilt Lähis-Idani levinud marineeritud köögiviljade perekond. Mis see on?"
+          "en": "Which fruit-like structure hides hundreds of tiny flowers on its inner surface, where they develop into the crunchy little units inside?",
+          "et": "Milline viljataoline moodustis peidab sisepinnal sadu tillukesi õisi, millest arenevad sees krõmpsuvad osakesed?"
         },
         "response": {
-          "en": "torshi",
-          "et": "torshi"
+          "en": "fig",
+          "et": "viigimari"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "common fig"
+          ],
+          "et": [
+            "harilik viigimari"
+          ]
         },
         "explanation": {
-          "en": "Torshi takes its name from a Persian word for sourness.",
-          "et": "Torshi saab nime pärsia haput tähendavast sõnast."
+          "en": "A fig is a syconium: an enclosed inflorescence whose many inward-facing flowers mature within the fleshy wall.",
+          "et": "Viigimari on sükoonium ehk suletud õisik, mille paljud sissepoole pööratud õied valmivad lihaka seina sees."
         },
         "source": {
-          "sourceId": "wikipedia:torshi",
-          "title": "Torshi",
-          "url": "https://en.wikipedia.org/wiki/Torshi",
+          "sourceId": "wikipedia:fig",
+          "title": "Fig",
+          "url": "https://en.wikipedia.org/wiki/Fig",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -1283,153 +1362,161 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-042",
     "name": {
-      "en": "Cheeses with a Sense of Place",
-      "et": "Juustud ja nende kodupaigad"
+      "en": "Italy Beyond Pizza and Pasta",
+      "et": "Itaalia ilma pitsa ja pastata"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-042:question:1",
-        "factKey": "built-in-food-drink:cheese-styles:medium:food:mozzarella",
+        "factKey": "built-in-food-drink:checkpoint1:panna-cotta-set-cream-dessert",
         "tier": 1,
-        "subjectKey": "food:mozzarella",
+        "subjectKey": "dessert:panna-cotta",
         "clue": {
-          "en": "Identify the cheese: it is the mild Italian cheese stretched into a supple ball for pizza or caprese.",
-          "et": "Mis juust on mahe Itaalia juust, mida venitatakse elastseks palliks pitsa või caprese jaoks?"
+          "en": "Which Piedmontese dessert sets sweetened cream with gelatine and unmoulds it with a trembling texture?",
+          "et": "Milline Piemonte magustoit valmistatakse magustatud koorest, tarretatakse želatiiniga ning vabastatakse vormist võbeleva tekstuuriga?"
         },
         "response": {
-          "en": "mozzarella",
-          "et": "mozzarella"
+          "en": "panna cotta",
+          "et": "panna cotta"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Mozzarella belongs to pasta filata cheeses whose curd is kneaded in hot water.",
-          "et": "Mozzarella kuulub pasta filata juustude hulka, mille kalgendit sõtkutakse kuumas vees."
+          "en": "Panna cotta means cooked cream, although the mixture is only heated enough to dissolve sugar and gelatine before chilling.",
+          "et": "Panna cotta tähendab keedetud koort, kuigi segu kuumutatakse vaid suhkru ja želatiini lahustamiseks ning jahutatakse siis."
         },
         "source": {
-          "sourceId": "wikipedia:mozzarella",
-          "title": "Mozzarella",
-          "url": "https://en.wikipedia.org/wiki/Mozzarella",
+          "sourceId": "wikipedia:panna_cotta",
+          "title": "Panna cotta",
+          "url": "https://en.wikipedia.org/wiki/Panna_cotta",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-042:question:2",
-        "factKey": "built-in-food-drink:cheese-styles:medium:food:cheddar",
+        "factKey": "built-in-food-drink:checkpoint1:cacio-e-pepe-pecorino-pepper",
         "tier": 2,
-        "subjectKey": "food:cheddar",
+        "subjectKey": "dish:cacio-e-pepe",
         "clue": {
-          "en": "Name the cheese that takes its name from an English village and ranges from mild to mature.",
-          "et": "Vihjes kirjeldatud juust saab nime Inglise külast ning ulatub mahedast pikalt laagerdununi. Mis see on?"
+          "en": "Pecorino Romano, black pepper, cooking water, and pasta form which famously minimal Roman dish?",
+          "et": "Milline kuulsalt napp Rooma roog valmib Pecorino Romano juustust, mustast piprast, pastaveest ja pastast?"
         },
         "response": {
-          "en": "Cheddar",
-          "et": "cheddar"
+          "en": "cacio e pepe",
+          "et": "cacio e pepe"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Cheddar gives its name to cheddaring, in which curd slabs are stacked and turned.",
-          "et": "Cheddar annab nime cheddardamisele, mille käigus kalgendiplaate virnastatakse ja pööratakse."
+          "en": "Starchy pasta water helps grated pecorino and pepper form the creamy coating in cacio e pepe without added cream.",
+          "et": "Tärkliserikas pastavesi aitab riivitud pecorinol ja pipral moodustada cacio e pepe kreemja katte ilma koort lisamata."
         },
         "source": {
-          "sourceId": "wikipedia:cheddar_cheese",
-          "title": "Cheddar cheese",
-          "url": "https://en.wikipedia.org/wiki/Cheddar_cheese",
+          "sourceId": "wikipedia:cacio_e_pepe",
+          "title": "Cacio e pepe",
+          "url": "https://en.wikipedia.org/wiki/Cacio_e_pepe",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-042:question:3",
-        "factKey": "built-in-food-drink:cheese-styles:medium:food:roquefort",
+        "factKey": "built-in-food-drink:checkpoint1:arancini-sicilian-filled-rice-balls",
         "tier": 3,
-        "subjectKey": "food:roquefort",
+        "subjectKey": "dish:arancini",
         "clue": {
-          "en": "This cheese is a blue sheep’s-milk cheese linked to caves in southern France. What is it?",
-          "et": "See juust on Lõuna-Prantsusmaa koobastega seotud sinihallitus-lambapiimajuust. Mis see on?"
+          "en": "Which Sicilian snacks enclose ragù, cheese, or other fillings inside breaded, deep-fried rice balls?",
+          "et": "Millised Sitsiilia suupisted peidavad raguu, juustu või muu täidise paneeritud ja frititud riisipalli sisse?"
         },
         "response": {
-          "en": "Roquefort",
-          "et": "Roquefort"
+          "en": "arancini",
+          "et": "arancini"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "arancine"
+          ],
+          "et": [
+            "arancine"
+          ]
         },
         "explanation": {
-          "en": "Roquefort ripens with a characteristic Penicillium mould in natural caves beneath its protected French village.",
-          "et": "Roquefort küpseb iseloomuliku Penicillium-hallitusega oma kaitstud Prantsuse küla all looduslikes koobastes."
+          "en": "Arancini means little oranges, a reference to the fried rice balls' golden colour and rounded shape.",
+          "et": "Arancini tähendab väikesi apelsine ning viitab praetud riisipallide kuldsele värvile ja ümarale kujule."
         },
         "source": {
-          "sourceId": "wikipedia:roquefort",
-          "title": "Roquefort",
-          "url": "https://en.wikipedia.org/wiki/Roquefort",
+          "sourceId": "wikipedia:arancini",
+          "title": "Arancini",
+          "url": "https://en.wikipedia.org/wiki/Arancini",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-042:question:4",
-        "factKey": "built-in-food-drink:cheese-styles:medium:food:gouda",
+        "factKey": "built-in-food-drink:checkpoint1:osso-buco-milanese-veal-shank",
         "tier": 4,
-        "subjectKey": "food:gouda",
+        "subjectKey": "dish:osso-buco",
         "clue": {
-          "en": "Cheese is the Dutch yellow cheese named for a market city. What is it called?",
-          "et": "Milline juust on Hollandi kollane juust, mis on nimetatud turulinna järgi?"
+          "en": "Milanese cooks braise cross-cut veal shanks so that each serving includes a marrow-filled bone. Which dish is this?",
+          "et": "Milano köögis hautatakse ristipidi lõigatud vasikakooti nii, et igas portsjonis on luuüdi täis kont. Milline roog see on?"
         },
         "response": {
-          "en": "Gouda",
-          "et": "Gouda"
+          "en": "osso buco",
+          "et": "ossobuco"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ossobuco"
+          ],
+          "et": [
+            "osso buco"
+          ]
         },
         "explanation": {
-          "en": "Gouda traditionally has some whey replaced by warm water, producing a sweeter curd.",
-          "et": "Gouda saab traditsiooniliselt osa vadaku asendamisel sooja veega magusama kalgendi."
+          "en": "Osso buco means bone with a hole, describing the marrow bone at the centre of the braised veal shank.",
+          "et": "Osso buco tähendab auguga luud ning kirjeldab hautatud vasikakoodi keskel olevat luuüdiga konti."
         },
         "source": {
-          "sourceId": "wikipedia:gouda_cheese",
-          "title": "Gouda cheese",
-          "url": "https://en.wikipedia.org/wiki/Gouda_cheese",
+          "sourceId": "wikipedia:ossobuco",
+          "title": "Osso buco",
+          "url": "https://en.wikipedia.org/wiki/Ossobuco",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-042:question:5",
-        "factKey": "built-in-food-drink:cheese-styles:medium:food:halloumi",
+        "factKey": "built-in-food-drink:checkpoint1:ribollita-tuscan-reboiled-soup",
         "tier": 5,
-        "subjectKey": "food:halloumi",
+        "subjectKey": "dish:ribollita",
         "clue": {
-          "en": "Name the cheese that is the Cypriot cheese famous for keeping its shape on a grill.",
-          "et": "Vihjes kirjeldatud juust on Küprose juust, mis säilitab grillil hästi kuju. Mis see on?"
+          "en": "Which Tuscan soup uses bread, beans, and vegetables and takes a name meaning reboiled from the custom of heating it again the next day?",
+          "et": "Milline Toscana supp kasutab leiba, ube ja köögivilju ning sai uuesti keetmist tähendava nime tavast rooga järgmisel päeval soojendada?"
         },
         "response": {
-          "en": "halloumi",
-          "et": "halloumi"
+          "en": "ribollita",
+          "et": "ribollita"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Halloumi has a high melting point because its curd is heated in whey during production.",
-          "et": "Halloumi sulab kõrgel temperatuuril, sest kalgendit kuumutatakse valmistamisel vadakus."
+          "en": "Ribollita grew from peasant cookery in which leftover vegetable-and-bread soup became richer when cooked again.",
+          "et": "Ribollita pärineb talupojaköögist, kus järelejäänud köögivilja-leivasupp muutus uuesti kuumutades maitsekamaks."
         },
         "source": {
-          "sourceId": "wikipedia:halloumi",
-          "title": "Halloumi",
-          "url": "https://en.wikipedia.org/wiki/Halloumi",
+          "sourceId": "wikipedia:ribollita",
+          "title": "Ribollita",
+          "url": "https://en.wikipedia.org/wiki/Ribollita",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -1437,153 +1524,161 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-043",
     "name": {
-      "en": "Breads around the World",
-      "et": "Maailma leivad"
+      "en": "Condiments with Character",
+      "et": "Iseloomuga maitseained"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-043:question:1",
-        "factKey": "built-in-food-drink:bread-traditions:medium:food:baguette",
+        "factKey": "built-in-food-drink:checkpoint1:tzatziki-yoghurt-cucumber-garlic",
         "tier": 1,
-        "subjectKey": "food:baguette",
+        "subjectKey": "condiment:tzatziki",
         "clue": {
-          "en": "Bread is the long, narrow French loaf with a crisp crust. What is it called?",
-          "et": "Milline leib või sai on pikk kitsas krõbeda koorikuga Prantsuse sai?"
+          "en": "Greek yoghurt, cucumber, garlic, and herbs make which cool sauce often served with grilled meat or bread?",
+          "et": "Milline jahe kaste valmib Kreeka jogurtist, kurgist, küüslaugust ja ürtidest ning käib sageli grill-liha või leiva kõrvale?"
         },
         "response": {
-          "en": "baguette",
-          "et": "baguette"
+          "en": "tzatziki",
+          "et": "tzatziki"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Baguette gets much of its crust from steam and a high surface-to-volume ratio.",
-          "et": "Baguette saab rohke kooriku aurust ja suurest pinna suhtest sisusse."
+          "en": "Tzatziki is thickened by strained yoghurt and cucumber, while garlic and herbs provide its savoury freshness.",
+          "et": "Tzatziki saab paksuse nõrutatud jogurtist ja kurgist, küüslauk ning ürdid annavad soolaka värskuse."
         },
         "source": {
-          "sourceId": "wikipedia:baguette",
-          "title": "Baguette",
-          "url": "https://en.wikipedia.org/wiki/Baguette",
+          "sourceId": "wikipedia:tzatziki",
+          "title": "Tzatziki",
+          "url": "https://en.wikipedia.org/wiki/Tzatziki",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-043:question:2",
-        "factKey": "built-in-food-drink:bread-traditions:medium:food:pita",
+        "factKey": "built-in-food-drink:checkpoint1:chimichurri-herb-vinegar-sauce",
         "tier": 2,
-        "subjectKey": "food:pita",
+        "subjectKey": "condiment:chimichurri",
         "clue": {
-          "en": "A bread is a round flatbread that can puff into a pocket. Name it.",
-          "et": "Üks leib või sai on ümar lameleib, mis võib kerkida taskuks. Millist vastust otsime?"
+          "en": "Which uncooked Argentine and Uruguayan sauce mixes chopped parsley, garlic, vinegar, oil, and chilli for spooning over grilled meat?",
+          "et": "Milline Argentina ja Uruguay kuumutamata kaste segab hakitud peterselli, küüslaugu, äädika, õli ja tšilli ning käib grill-liha peale?"
         },
         "response": {
-          "en": "pita",
-          "et": "pita"
+          "en": "chimichurri",
+          "et": "chimichurri"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pita forms its hollow centre when oven heat rapidly turns moisture into steam.",
-          "et": "Pita moodustab õõnsa keskme, kui ahjukuumuses muutub niiskus kiiresti auruks."
+          "en": "Chimichurri's acidity and fresh herbs cut through the richness of food cooked over an asado fire.",
+          "et": "Chimichurri hape ja värsked ürdid tasakaalustavad asado-tulel küpsetatud toidu rammusust."
         },
         "source": {
-          "sourceId": "wikipedia:pita",
-          "title": "Pita",
-          "url": "https://en.wikipedia.org/wiki/Pita",
+          "sourceId": "wikipedia:chimichurri",
+          "title": "Chimichurri",
+          "url": "https://en.wikipedia.org/wiki/Chimichurri",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-043:question:3",
-        "factKey": "built-in-food-drink:bread-traditions:medium:food:naan",
+        "factKey": "built-in-food-drink:checkpoint1:sriracha-si-racha-chilli-sauce",
         "tier": 3,
-        "subjectKey": "food:naan",
+        "subjectKey": "condiment:sriracha",
         "clue": {
-          "en": "Identify this bread: it is a leavened South Asian flatbread often baked on a tandoor wall.",
-          "et": "Kirjeldatud leib või sai on kergitatud Lõuna-Aasia lameleib, mida küpsetatakse sageli tandoori seinal. Mis on selle nimi?"
+          "en": "Which pourable red Thai sauce combines chillies with vinegar, garlic, sugar, and salt?",
+          "et": "Milline vedel punane Tai kaste ühendab tšilli äädika, küüslaugu, suhkru ja soolaga?"
         },
         "response": {
-          "en": "naan",
-          "et": "naan"
+          "en": "sriracha",
+          "et": "sriracha"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Naan is slapped against the hot inner clay surface rather than laid on an oven floor.",
-          "et": "Naan surutakse kuuma saviahju siseseinale, mitte ahjupõrandale."
+          "en": "Thai sriracha began as a pourable chilli sauce; later international versions can be thicker and sweeter.",
+          "et": "Tai sriracha sai alguse vedelamast tšillikastmest; hilisemad rahvusvahelised variandid võivad olla paksemad ja magusamad."
         },
         "source": {
-          "sourceId": "wikipedia:naan",
-          "title": "Naan",
-          "url": "https://en.wikipedia.org/wiki/Naan",
+          "sourceId": "wikipedia:sriracha",
+          "title": "Sriracha",
+          "url": "https://en.wikipedia.org/wiki/Sriracha",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-043:question:4",
-        "factKey": "built-in-food-drink:bread-traditions:medium:food:sourdough",
+        "factKey": "built-in-food-drink:checkpoint1:romesco-catalan-pepper-nut-sauce",
         "tier": 4,
-        "subjectKey": "food:sourdough",
+        "subjectKey": "condiment:romesco",
         "clue": {
-          "en": "Bread rises from a living starter rather than commercial yeast alone. What is it called?",
-          "et": "Milline leib või sai kerkib elusa juuretise, mitte üksnes tööstusliku pärmi abil?"
+          "en": "Fishermen around Tarragona gave Catalonia which sauce of roasted peppers or tomatoes, nuts, garlic, olive oil, and bread?",
+          "et": "Millise röstitud paprika või tomati, pähklite, küüslaugu, oliiviõli ja leivaga kastme andsid Katalooniale Tarragona ümbruse kalurid?"
         },
         "response": {
-          "en": "sourdough",
-          "et": "juuretiseleib"
+          "en": "romesco",
+          "et": "romesco"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "romesco sauce"
+          ],
+          "et": [
+            "romesco-kaste"
+          ]
         },
         "explanation": {
-          "en": "Sourdough uses a stable culture of yeasts and lactic-acid bacteria that also acidify the dough.",
-          "et": "Juuretiseleib kasutab püsivat pärmide ja piimhappebakterite kultuuri, mis taina ka hapestab."
+          "en": "Romesco is pounded or blended into a thick rust-coloured sauce traditionally suited to fish and grilled vegetables.",
+          "et": "Romesco tambitakse või segatakse paksuks roostekarva kastmeks, mis sobib traditsiooniliselt kala ja grillitud köögiviljadega."
         },
         "source": {
-          "sourceId": "wikipedia:sourdough",
-          "title": "Sourdough",
-          "url": "https://en.wikipedia.org/wiki/Sourdough",
+          "sourceId": "wikipedia:romesco",
+          "title": "Romesco",
+          "url": "https://en.wikipedia.org/wiki/Romesco",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-043:question:5",
-        "factKey": "built-in-food-drink:bread-traditions:medium:food:rye-bread",
+        "factKey": "built-in-food-drink:checkpoint1:hoisin-sweet-cantonese-no-seafood",
         "tier": 5,
-        "subjectKey": "food:rye-bread",
+        "subjectKey": "condiment:hoisin",
         "clue": {
-          "en": "A bread is the dark northern European loaf made substantially from rye flour. Name it.",
-          "et": "Üks leib või sai on Põhja-Euroopa tume leib, mis tehakse suures osas rukkijahust. Millist vastust otsime?"
+          "en": "Its Cantonese name sounds like seafood, yet which thick sweet-savoury sauce normally contains none and is served with Peking duck?",
+          "et": "Selle kantonikeelne nimi kõlab nagu mereannid, kuid milline paks magus-soolane kaste neid tavaliselt ei sisalda ja käib Pekingi pardi kõrvale?"
         },
         "response": {
-          "en": "rye bread",
-          "et": "rukkileib"
+          "en": "hoisin sauce",
+          "et": "hoisini kaste"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "hoisin"
+          ],
+          "et": [
+            "hoisin"
+          ]
         },
         "explanation": {
-          "en": "Rye bread relies less on wheat-like gluten and often benefits from sourdough acidity.",
-          "et": "Rukkileib toetub nisugluteenist vähem ning saab sageli kasu juuretise happesusest."
+          "en": "Hoisin is usually based on fermented soybean paste, sweeteners, and spices despite the seafood meaning of its name.",
+          "et": "Hoisini kaste põhineb nime mereannitähendusest hoolimata tavaliselt kääritatud sojapastal, magustajatel ja vürtsidel."
         },
         "source": {
-          "sourceId": "wikipedia:rye_bread",
-          "title": "Rye bread",
-          "url": "https://en.wikipedia.org/wiki/Rye_bread",
+          "sourceId": "wikipedia:hoisin_sauce",
+          "title": "Hoisin sauce",
+          "url": "https://en.wikipedia.org/wiki/Hoisin_sauce",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
@@ -1591,153 +1686,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-044",
     "name": {
-      "en": "Rice at the Centre of the Plate",
-      "et": "Riis pearollis"
+      "en": "Sandwiches with Passports",
+      "et": "Passiga võileivad"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-044:question:1",
-        "factKey": "built-in-food-drink:rice-dishes:medium:food:risotto",
+        "factKey": "built-in-food-drink:checkpoint1:club-sandwich-triple-decker",
         "tier": 1,
-        "subjectKey": "food:risotto",
+        "subjectKey": "sandwich:club",
         "clue": {
-          "en": "What rice dish is stirred with stock into a creamy northern Italian dish?",
-          "et": "Järgmine riisiroog segatakse puljongiga kreemjaks Põhja-Itaalia roaks. Milline see on?"
+          "en": "Which triple-decker of toasted bread typically stacks poultry, bacon, lettuce, and tomato, then arrives in quarters held by wooden picks?",
+          "et": "Milline kolmekorruseline röstsaiavõileib laob tavaliselt kokku linnuliha, peekoni, salati ja tomati ning jõuab lauale väikeste tikkudega kinnitatud veeranditena?"
         },
         "response": {
-          "en": "risotto",
-          "et": "risoto"
+          "en": "club sandwich",
+          "et": "klubivõileib"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "clubhouse sandwich"
+          ],
+          "et": [
+            "club sandwich"
+          ]
         },
         "explanation": {
-          "en": "Risotto releases starch from short-grain rice while the liquid is added gradually.",
-          "et": "Risoto vabastab lühiteralisest riisist tärklist, kui vedelikku lisatakse järk-järgult."
+          "en": "The club sandwich is distinguished by layered toast and a tall filling, making quartering and securing it practical.",
+          "et": "Klubivõileiba eristavad kihilised röstsaiad ja kõrge täidis, mistõttu on seda praktiline neljaks lõigata ja tikuga kinnitada."
         },
         "source": {
-          "sourceId": "wikipedia:risotto",
-          "title": "Risotto",
-          "url": "https://en.wikipedia.org/wiki/Risotto",
+          "sourceId": "wikipedia:club_sandwich",
+          "title": "Club sandwich",
+          "url": "https://en.wikipedia.org/wiki/Club_sandwich",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-044:question:2",
-        "factKey": "built-in-food-drink:rice-dishes:medium:food:paella",
+        "factKey": "built-in-food-drink:checkpoint1:reuben-corned-beef-sauerkraut",
         "tier": 2,
-        "subjectKey": "food:paella",
+        "subjectKey": "sandwich:reuben",
         "clue": {
-          "en": "A rice dish comes from Valencia and cooks rice in a wide shallow pan. What term fits?",
-          "et": "Siin kirjeldatud riisiroog pärineb Valenciast ning küpsetab riisi laias madalas pannis. Mis see on?"
+          "en": "Corned beef, Swiss cheese, sauerkraut, and Russian dressing are grilled between slices of rye in which American deli classic?",
+          "et": "Millises Ameerika deliklassikus grillitakse rukkileiva vahel soolatud veiseliha, Šveitsi juustu, hapukapsast ja Vene kastet?"
         },
         "response": {
-          "en": "paella",
-          "et": "paella"
+          "en": "Reuben sandwich",
+          "et": "Reubeni võileib"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Reuben"
+          ],
+          "et": [
+            "Reuben"
+          ]
         },
         "explanation": {
-          "en": "Paella prizes socarrat, the toasted layer that can form on the pan bottom.",
-          "et": "Paella hindab socarrat’i ehk panni põhjale tekkivat röstitud kihti."
+          "en": "The Reuben balances fatty beef and melted cheese with acidic cabbage and dressing on sturdy rye bread.",
+          "et": "Reubeni võileivas tasakaalustavad rasvast veiseliha ja sulajuustu hapukas kapsas ning kaste tugeval rukkileival."
         },
         "source": {
-          "sourceId": "wikipedia:paella",
-          "title": "Paella",
-          "url": "https://en.wikipedia.org/wiki/Paella",
+          "sourceId": "wikipedia:reuben_sandwich",
+          "title": "Reuben sandwich",
+          "url": "https://en.wikipedia.org/wiki/Reuben_sandwich",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-044:question:3",
-        "factKey": "built-in-food-drink:rice-dishes:medium:food:biryani",
+        "factKey": "built-in-food-drink:checkpoint1:croque-monsieur-french-ham-cheese",
         "tier": 3,
-        "subjectKey": "food:biryani",
+        "subjectKey": "sandwich:croque-monsieur",
         "clue": {
-          "en": "Find the rice dish that layers fragrant spiced rice with meat or vegetables in South Asia.",
-          "et": "Riisiroog kihistab Lõuna-Aasias lõhnava vürtsiriisi liha või köögiviljadega. Leia sobiv vastus."
+          "en": "Which French café sandwich grills ham and cheese, often Gruyère, and may add béchamel before browning?",
+          "et": "Milline Prantsuse kohvikuvõileib grillib singi ja juustu, sageli Gruyère'i, ning võib enne pruunistamist lisada bešamellkastme?"
         },
         "response": {
-          "en": "biryani",
-          "et": "biryani"
+          "en": "croque monsieur",
+          "et": "croque monsieur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "croque-monsieur"
+          ],
+          "et": [
+            "croque-monsieur"
+          ]
         },
         "explanation": {
-          "en": "Biryani may finish by dum, sealing the pot so the ingredients steam together.",
-          "et": "Biryani võib lõppeda dum-võttega, kus pott suletakse ja koostisosad auravad koos."
+          "en": "A croque monsieur is a hot ham-and-cheese sandwich; adding a fried or poached egg turns it into a croque madame.",
+          "et": "Croque monsieur on kuum singi-juustuvõileib; praetud või pošeeritud muna lisamisel saab sellest croque madame."
         },
         "source": {
-          "sourceId": "wikipedia:biryani",
-          "title": "Biryani",
-          "url": "https://en.wikipedia.org/wiki/Biryani",
+          "sourceId": "wikipedia:croque_monsieur",
+          "title": "Croque monsieur",
+          "url": "https://en.wikipedia.org/wiki/Croque_monsieur",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-044:question:4",
-        "factKey": "built-in-food-drink:rice-dishes:medium:food:pilaf",
+        "factKey": "built-in-food-drink:checkpoint1:smorrebrod-danish-open-rye",
         "tier": 4,
-        "subjectKey": "food:pilaf",
+        "subjectKey": "sandwich:smorrebrod",
         "clue": {
-          "en": "Rice dish cooks seasoned rice in broth so the grains remain separate. What is it called?",
-          "et": "Milline riisiroog küpsetab maitsestatud riisi puljongis nii, et terad jäävad eraldi?"
+          "en": "What Danish open sandwich begins with buttered rye and is carefully topped with fish, cold cuts, cheese, or spreads?",
+          "et": "Milline Taani lahtine võileib algab võitatud rukkileivast ning kaetakse hoolikalt kala, külmlõikude, juustu või määretega?"
         },
         "response": {
-          "en": "pilaf",
-          "et": "pilaff"
+          "en": "smørrebrød",
+          "et": "smørrebrød"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "smorrebrod"
+          ],
+          "et": [
+            "smorrebrod"
+          ]
         },
         "explanation": {
-          "en": "Pilaf often begins by coating grains in fat before measured liquid is added.",
-          "et": "Pilaff algab sageli terade rasvas kuumutamisega enne mõõdetud vedeliku lisamist."
+          "en": "Smørrebrød literally means butter and bread, but its arranged toppings turned it into a distinctive Danish lunch tradition.",
+          "et": "Smørrebrød tähendab sõna-sõnalt võid ja leiba, kuid korrastatud katetest kujunes Taani eriline lõunatraditsioon."
         },
         "source": {
-          "sourceId": "wikipedia:pilaf",
-          "title": "Pilaf",
-          "url": "https://en.wikipedia.org/wiki/Pilaf",
+          "sourceId": "wikipedia:smorrebrod",
+          "title": "Smørrebrød",
+          "url": "https://en.wikipedia.org/wiki/Sm%C3%B8rrebr%C3%B8d",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       },
       {
         "key": "built-in-food-drink-set-044:question:5",
-        "factKey": "built-in-food-drink:rice-dishes:medium:food:congee",
+        "factKey": "built-in-food-drink:checkpoint1:muffuletta-new-orleans-olive-salad",
         "tier": 5,
-        "subjectKey": "food:congee",
+        "subjectKey": "sandwich:muffuletta",
         "clue": {
-          "en": "One rice dish is an East Asian rice porridge made with abundant water. Which one is described?",
-          "et": "Riisiroog on rohke veega valmistatud Ida-Aasia riisipuder. Mis see on?"
+          "en": "New Orleans fills a round sesame loaf with salami, mortadella, cheese, and a chopped olive salad for which Sicilian-American sandwich?",
+          "et": "Millise Sitsiilia-Ameerika võileiva jaoks täidetakse New Orleansis ümmargune seesamisai salaami, mortadella, juustu ja hakitud oliivisalatiga?"
         },
         "response": {
-          "en": "congee",
-          "et": "congee"
+          "en": "muffuletta",
+          "et": "muffuletta"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "muffaletta"
+          ],
+          "et": [
+            "muffaletta"
+          ]
         },
         "explanation": {
-          "en": "Congee cooks long enough for the grains to break down into a soft, spoonable texture.",
-          "et": "Congee keeb nii kaua, et terad lagunevad pehmeks lusikaga söödavaks massiks."
+          "en": "The muffuletta takes its name from the Sicilian-style round loaf, while New Orleans' olive salad defines the sandwich filling.",
+          "et": "Muffuletta sai nime Sitsiilia stiilis ümmarguse saia järgi, New Orleansi oliivisalat aga määrab võileiva täidise."
         },
         "source": {
-          "sourceId": "wikipedia:congee",
-          "title": "Congee",
-          "url": "https://en.wikipedia.org/wiki/Congee",
+          "sourceId": "wikipedia:muffuletta",
+          "title": "Muffuletta",
+          "url": "https://en.wikipedia.org/wiki/Muffuletta",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-30"
         }
       }
     ]
