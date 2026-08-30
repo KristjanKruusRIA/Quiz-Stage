@@ -1490,10 +1490,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:nictitating-membrane-protective-eyelid', title: 'Nictitating membrane', url: 'https://en.wikipedia.org/wiki/Nictitating_membrane', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-087:ovoviviparity-eggs-inside', factKey: 'science-nature:ovoviviparity-eggs-inside', tier: 4, subjectKey: 'reproduction:ovoviviparity',
-        clue: { en: 'What reproductive mode describes eggs retained inside the mother, where embryos rely mainly on yolk and hatch before or during birth?', et: 'Milline sigimisviis tähendab munade hoidmist emaslooma kehas, kus embrüod toituvad peamiselt rebust ning kooruvad enne sünnitust või selle ajal?' }, response: { en: 'ovoviviparity', et: 'ovovivipaarsus' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Several shark species use this egg-retaining form of live birth without a placental connection like that of most mammals.', et: 'Mitmed hailiigid kasutavad sellist mune kehas hoidvat elussünnitust ilma enamiku imetajate platsentaga sarnase ühenduseta.' },
-        source: { sourceId: 'wikipedia:ovoviviparity-eggs-inside', title: 'Ovoviviparity', url: 'https://en.wikipedia.org/wiki/Ovoviviparity', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-science-nature:built-in-science-nature-set-087:yolk-only-viviparity', factKey: 'science-nature:yolk-only-viviparity', tier: 4, subjectKey: 'reproduction:lecithotrophic-viviparity',
+        clue: { en: 'Which viviparous reproductive category applies when shark embryos develop inside the mother but receive nutrition solely from yolk, with no additional maternal provisioning?', et: 'Millise vivipaarsuse liigiga on tegu, kui hai embrüod arenevad ema kehas, kuid toituvad üksnes rebust ega saa emalt lisatoitaineid?' }, response: { en: 'yolk-only viviparity', et: 'rebutoiteline vivipaarsus' }, acceptedVariants: { en: ['lecithotrophic viviparity'], et: ['letsitotroofne vivipaarsus'] },
+        explanation: { en: 'Unlike matrotrophic modes, the embryo’s entire energy supply comes from yolk deposited before gestation.', et: 'Erinevalt matrotroofsetest viisidest pärineb embrüo kogu energiavaru enne tiinust talletatud rebust.' },
+        source: { sourceId: 'pmc:lecithotrophic-viviparity-sharks', title: 'Egg Yolk Protein Homologs Identified in Live-Bearing Sharks: Co-Opted in the Lecithotrophy-to-Matrotrophy Shift?', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10015161/', license: 'CC-BY-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-087:tonic-immobility-shark-trance', factKey: 'science-nature:tonic-immobility-shark-trance', tier: 5, subjectKey: 'response:tonic-immobility',
