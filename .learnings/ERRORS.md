@@ -548,3 +548,35 @@ Inspect representative object keys before writing ad hoc corpus introspection sc
 - **Notes**: Inspected the runtime object keys and switched the preview to `category.name`.
 
 ---
+
+## [ERR-20260830-013] literature-draft-response-leak
+
+**Logged**: 2026-08-30T17:07:43+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: content
+
+### Summary
+An in-progress Literature checkpoint clue included its own accepted English response.
+
+### Error
+```
+Error: Question playable-literature-language:built-in-literature-language-set-048:hawaiian-immersion-schools leaks its English response in the clue
+```
+
+### Context
+- Operation attempted: import the uncommitted checkpoint-3 draft for a controller-side structure check.
+- Literal `Hawaiian` and `havakeelsete` wording exposed the requested language in the English and Estonian clue text.
+
+### Suggested Fix
+Run `validatePlayableCorpus` after each literal category is added, then phrase language-identification clues using geographic and revival-program cues without repeating the response.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `scripts/content/playability/banks/packs01to04/literatureLanguage.ts`
+
+### Resolution
+- **Resolved**: 2026-08-30T17:07:43+03:00
+- **Notes**: The author removed both answer terms; the bank now imports cleanly at 33 categories / 165 questions with zero playability diagnostics.
+
+---
