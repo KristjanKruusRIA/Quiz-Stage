@@ -3079,7 +3079,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           },
           "explanation": {
             "en": "Beshbarmak serves boiled meat with large noodle sheets, and its Turkic name is commonly translated as “five fingers.”",
-            "et": "Bešbarmakis serveeritakse keedetud liha suurte nuudlilehtedega ning selle türgi päritolu nime tõlgitakse tavaliselt „viieks sõrmeks“."
+            "et": "Bešbarmakis serveeritakse keedetud liha suurte nuudlilehtedega ning selle turgikeelne nimi tähendab tavaliselt „viit sõrme“."
           },
           "source": {
             "sourceId": "wikipedia:beshbarmak",
@@ -3224,8 +3224,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "dish:egusi-soup",
           "clue": {
-            "en": "Ground seeds from certain gourds and melons thicken a Nigerian soup often enriched with leafy greens and meat. Name it.",
-            "et": "Teatud kõrvitsate ja melonite jahvatatud seemned paksendavad Nigeeria suppi, kuhu lisatakse sageli lehtköögivilju ja liha. Nimeta see."
+            "en": "Ground seeds from certain gourds and melons thicken a West African soup often enriched with leafy greens and meat. Name it.",
+            "et": "Teatud kõrvitsate ja melonite jahvatatud seemned paksendavad Lääne-Aafrika suppi, kuhu lisatakse sageli lehtköögivilju ja liha. Nimeta see."
           },
           "response": {
             "en": "egusi soup",
@@ -3407,8 +3407,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 5,
           "subjectKey": "dish:oil-down",
           "clue": {
-            "en": "Grenada’s national one-pot meal layers breadfruit, coconut milk, dumplings and salted meat until the liquid is absorbed. Name it.",
-            "et": "Grenada rahvuslikus ühepajaroas hautatakse leivapuu vilja, kookospiima, klimpe ja soolaliha, kuni vedelik imendub. Nimeta roog."
+            "en": "Grenada’s national stew layers breadfruit, coconut milk, dumplings and salted meat until the liquid is absorbed. Name it.",
+            "et": "Grenada rahvusroas hautatakse leivapuu vilja, kookospiima, klimpe ja soolaliha, kuni vedelik imendub. Nimeta roog."
           },
           "response": {
             "en": "oil down",
@@ -3537,7 +3537,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "subjectKey": "dish:pulpo-a-feira",
           "clue": {
             "en": "Galician fairground cooks slice boiled octopus onto wooden plates and season it with olive oil, salt and paprika. Give the dish’s name.",
-            "et": "Galicia laadakokad lõikavad keedetud kaheksajala puittaldrikule ning maitsestavad selle oliiviõli, soola ja paprikaga. Anna roa nimi."
+            "et": "Galicia laadakokad lõikavad keedetud kaheksajala puittaldrikule ning maitsestavad selle oliiviõli, soola ja paprikapulbriga. Anna roa nimi."
           },
           "response": {
             "en": "pulpo a feira",
@@ -3555,7 +3555,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           },
           "explanation": {
             "en": "Pulpo a feira, also called polbo á feira, is Galician octopus served with oil, salt and paprika.",
-            "et": "Pulpo a feira ehk polbo á feira on Galicia kaheksajalaroog, mida serveeritakse õli, soola ja paprikaga."
+            "et": "Pulpo a feira ehk polbo á feira on Galicia kaheksajalaroog, mida serveeritakse õli, soola ja paprikapulbriga."
           },
           "source": {
             "sourceId": "wikipedia:polbo_a_feira",
@@ -3660,7 +3660,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           },
           "explanation": {
             "en": "A Karelian pasty has a thin rye crust around a rice-porridge filling and is often served with egg butter.",
-            "et": "Karjala pirukal on õhuke rukkikoore ja riisipudrutäidis ning seda serveeritakse sageli munavõiga."
+            "et": "Karjala pirukal on õhuke rukkikoor ja riisipudrutäidis ning seda serveeritakse sageli munavõiga."
           },
           "source": {
             "sourceId": "wikipedia:karelian_pasty",
@@ -3909,7 +3909,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "subjectKey": "cake:lolly-cake",
           "clue": {
             "en": "A New Zealand no-bake log mixes crushed malt biscuits with soft coloured sweets and condensed milk, then rolls in coconut. Name it.",
-            "et": "Uus-Meremaa küpsetamata rullis segatakse purustatud linnaseküpsised pehmete värviliste kommide ja kondenspiimaga ning rullitakse kookoses. Nimeta see."
+            "et": "See Uus-Meremaa küpsetamata maius valmistatakse purustatud linnaseküpsistest, pehmetest värvilistest kommidest ja kondenspiimast ning kaetakse kookosega. Nimeta see."
           },
           "response": {
             "en": "lolly cake",
@@ -3979,8 +3979,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 2,
           "subjectKey": "brand:chupa-chups",
           "clue": {
-            "en": "Salvador Dalí designed the daisy-shaped logo for which Spanish lollipop brand?",
-            "et": "Millisele Hispaania pulgakommibrändile kujundas Salvador Dalí karikakrataolise logo?"
+            "en": "Which Spanish lollipop brand received a logo designed by Salvador Dalí in 1969?",
+            "et": "Millise Hispaania pulgakommibrändi logo kujundas Salvador Dalí 1969. aastal?"
           },
           "response": {
             "en": "Chupa Chups",
@@ -3991,8 +3991,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Salvador Dalí designed the Chupa Chups logo in 1969 and advised placing it on top of the wrapper.",
-            "et": "Salvador Dalí kujundas Chupa Chupsi logo 1969. aastal ning soovitas paigutada selle ümbrise peale."
+            "en": "Salvador Dalí designed the Chupa Chups logo in 1969.",
+            "et": "Salvador Dalí kujundas Chupa Chupsi logo 1969. aastal."
           },
           "source": {
             "sourceId": "wikipedia:chupa_chups",
@@ -4008,8 +4008,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 3,
           "subjectKey": "brand:haagen-dazs",
           "clue": {
-            "en": "Bronx entrepreneurs Reuben and Rose Mattus invented a Danish-sounding name for which American ice-cream brand?",
-            "et": "Bronxi ettevõtjad Reuben ja Rose Mattus mõtlesid millisele Ameerika jäätisebrändile välja taanipäraselt kõlava nime?"
+            "en": "Which American ice-cream brand did Bronx maker Reuben Mattus give a Danish-sounding name when he founded it with Rose Mattus?",
+            "et": "Millisele Ameerika jäätisebrändile mõtles Bronxi jäätisetootja Reuben Mattus välja taanipäraselt kõlava nime, kui ta asutas ettevõtte koos Rose Mattusega?"
           },
           "response": {
             "en": "Häagen-Dazs",
@@ -4024,8 +4024,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "Häagen-Dazs was founded in New York by Reuben and Rose Mattus, who created its invented Scandinavian-sounding name.",
-            "et": "Häagen-Dazsi asutasid New Yorgis Reuben ja Rose Mattus, kes lõid sellele väljamõeldud skandinaaviapärase nime."
+            "en": "Reuben and Rose Mattus founded Häagen-Dazs in the Bronx; Reuben coined its invented Danish-sounding name.",
+            "et": "Reuben ja Rose Mattus asutasid Häagen-Dazsi Bronxis; väljamõeldud taanipäraselt kõlava nime lõi Reuben."
           },
           "source": {
             "sourceId": "wikipedia:haagen-dazs",
@@ -4070,8 +4070,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 5,
           "subjectKey": "brand:pringles",
           "clue": {
-            "en": "Packaging inventor Fredric Baur had some of his ashes buried in the tubular can he designed for which stacked snack brand?",
-            "et": "Pakendidisainer Fredric Bauri osa tuhast maeti torukujulisse purki, mille ta kujundas millisele virnastatud suupistebrändile?"
+            "en": "P&G researcher Alexander Liepa revived Fredric Baur’s shelved potato-crisp project, while writer Gene Wolfe helped engineer its production machine. Which brand emerged?",
+            "et": "P&G teadlane Alexander Liepa taaselustas Fredric Bauri kõrvale pandud kartulikrõpsuprojekti ning kirjanik Gene Wolfe aitas luua selle tootmismasinat. Milline kaubamärk sellest sündis?"
           },
           "response": {
             "en": "Pringles",
@@ -4082,13 +4082,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Fredric Baur helped develop the Pringles can and requested that part of his ashes be buried in one.",
-            "et": "Fredric Baur aitas välja töötada Pringlesi purgi ning soovis, et osa tema tuhast maetaks sellesse."
+            "en": "Pringles emerged from a P&G project: Fredric Baur developed the shape and packaging, Alexander Liepa improved the taste, and Gene Wolfe helped engineer the production machine.",
+            "et": "Pringles sündis P&G projektist: Fredric Baur arendas kuju ja pakendit, Alexander Liepa parandas maitset ning Gene Wolfe aitas luua tootmismasinat."
           },
           "source": {
-          "sourceId": "wikipedia:fredric_j_baur",
-          "title": "Fredric J. Baur",
-          "url": "https://en.wikipedia.org/wiki/Fredric_J._Baur",
+            "sourceId": "wikipedia:pringles",
+            "title": "Pringles",
+            "url": "https://en.wikipedia.org/wiki/Pringles",
             "license": "CC-BY-SA-4.0",
             "retrievedAt": "2026-08-30"
           }
@@ -4278,8 +4278,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 1,
           "subjectKey": "book:joy-of-cooking",
           "clue": {
-            "en": "Irma S. Rombauer self-published which enduring American kitchen reference in 1931?",
-            "et": "Millise püsima jäänud Ameerika köögikäsiraamatu andis Irma S. Rombauer 1931. aastal ise välja?"
+            "en": "Irma S. Rombauer wrote which enduring American cookbook whose friendly, conversational recipes introduce ingredients within the narrative as they are needed?",
+            "et": "Millise mõjuka Ameerika kokaraamatu kirjutas Irma S. Rombauer sõbralikus vestlusstiilis, kus koostisosad tuuakse jutustavasse retsepti vastavalt vajadusele?"
           },
           "response": {
             "en": "The Joy of Cooking",
@@ -4294,8 +4294,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "Irma S. Rombauer first self-published The Joy of Cooking in 1931; it became one of America’s most influential cookbooks.",
-            "et": "Irma S. Rombauer andis The Joy of Cookingu esimest korda ise välja 1931. aastal ning sellest sai üks Ameerika mõjukamaid kokaraamatuid."
+            "en": "The Joy of Cooking preserves Rombauer’s conversational style by presenting recipes as narratives and introducing ingredients when they are needed.",
+            "et": "The Joy of Cooking säilitab Rombaueri vestlusliku stiili, esitades retseptid jutustusena ja tuues koostisosad sisse siis, kui neid vajatakse."
           },
           "source": {
             "sourceId": "wikipedia:joy_of_cooking",
@@ -4340,8 +4340,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 3,
           "subjectKey": "book:larousse-gastronomique",
           "clue": {
-            "en": "Prosper Montagné edited which French culinary encyclopaedia first published in 1938?",
-            "et": "Millist 1938. aastal esimest korda ilmunud Prantsuse kulinaariaentsüklopeediat toimetas Prosper Montagné?"
+            "en": "Prosper Montagné edited which gastronomy encyclopaedia devoted mainly to French cuisine, recipes and cooking techniques?",
+            "et": "Millist peamiselt Prantsuse köögile, retseptidele ja köögivõtetele pühendatud gastronoomiaentsüklopeediat toimetas Prosper Montagné?"
           },
           "response": {
             "en": "Larousse Gastronomique",
@@ -4352,8 +4352,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": []
           },
           "explanation": {
-            "en": "Larousse Gastronomique is a French culinary encyclopaedia edited by Prosper Montagné and first published in 1938.",
-            "et": "Larousse Gastronomique on Prosper Montagné toimetatud Prantsuse kulinaariaentsüklopeedia, mis ilmus esimest korda 1938. aastal."
+            "en": "Larousse Gastronomique is an encyclopaedia of gastronomy whose first edition focused mainly on French recipes and cooking techniques; later editions broadened its coverage.",
+            "et": "Larousse Gastronomique on gastronoomiaentsüklopeedia, mille esimene väljaanne keskendus peamiselt Prantsuse retseptidele ja köögivõtetele; hilisemad väljaanded laiendasid käsitlust."
           },
           "source": {
             "sourceId": "wikipedia:larousse_gastronomique",
@@ -4369,8 +4369,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 4,
           "subjectKey": "book:mrs-beeton",
           "clue": {
-          "en": "Isabella Beeton’s 1861 Victorian guide combined recipes with advice on servants, children and running a home. Give its full title.",
-          "et": "Isabella Beetoni 1861. aasta viktoriaanlik käsiraamat ühendas retseptid nõuannetega teenijate, laste ja koduse elu korraldamise kohta. Anna selle täielik pealkiri."
+          "en": "Which extensive Victorian household guide became known for its highly structured recipes?",
+          "et": "Milline mahukas viktoriaanlik majapidamiskäsiraamat sai tuntuks rangelt üles ehitatud retseptide poolest?"
           },
           "response": {
             "en": "Mrs Beeton's Book of Household Management",
@@ -4385,8 +4385,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "Mrs Beeton’s Book of Household Management appeared in book form in 1861 and covered both cookery and domestic management.",
-            "et": "Mrs Beeton’s Book of Household Management ilmus raamatuna 1861. aastal ning käsitles nii kokandust kui ka majapidamist."
+            "en": "Mrs Beeton’s Book of Household Management is an extensive guide to running a Victorian household, with recipes structured more rigorously than earlier cookbooks.",
+            "et": "Mrs Beeton’s Book of Household Management on mahukas viktoriaanliku majapidamise käsiraamat, mille retseptid on varasematest kokaraamatutest rangemalt üles ehitatud."
           },
           "source": {
             "sourceId": "wikipedia:mrs_beeton_household",
@@ -4410,12 +4410,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "et": "Apicius"
           },
           "acceptedVariants": {
-            "en": [
-              "De re culinaria"
-            ],
-            "et": [
-              "De re culinaria"
-            ]
+            "en": [],
+            "et": []
           },
           "explanation": {
             "en": "Apicius is the conventional title of a Roman cookery collection compiled in late antiquity and traditionally associated with Marcus Gavius Apicius.",
@@ -4502,8 +4498,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "tier": 3,
           "subjectKey": "pastry:beignet",
           "clue": {
-            "en": "Café du Monde serves which square pieces of fried dough buried under powdered sugar?",
-            "et": "Milliseid kandilisi frititud tainapalu serveerib Café du Monde paksu tuhksuhkrukihi all?"
+            "en": "In New Orleans, which square leavened pastries are served with powdered sugar and eaten immediately after frying?",
+            "et": "Milliseid kandilisi kergitatud tainast küpsetisi serveeritakse New Orleansis tuhksuhkruga ja süüakse kohe pärast frittimist?"
           },
           "response": {
             "en": "beignet",
@@ -4518,8 +4514,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             ]
           },
           "explanation": {
-            "en": "New Orleans beignets are square fried pastries commonly served hot with a generous dusting of powdered sugar.",
-            "et": "New Orleansi beignet’d on kandilised frititud küpsetised, mida serveeritakse tavaliselt kuumalt rohke tuhksuhkruga."
+            "en": "Louisiana-style beignets are square pieces of leavened dough served with powdered sugar and meant to be eaten immediately after frying.",
+            "et": "Louisiana stiilis beignet’d on kandilised kergitatud tainast küpsetised, mida serveeritakse tuhksuhkruga ja süüakse kohe pärast frittimist."
           },
           "source": {
             "sourceId": "wikipedia:beignet",
