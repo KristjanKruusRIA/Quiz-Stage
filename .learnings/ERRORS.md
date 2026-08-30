@@ -678,3 +678,131 @@ Combine live-source checks with title/content inspection, apply language-aware s
 - **Notes**: Corrected the Namesake source, Snowman clue, catalog title variant, and EKI variants; 55/55 sources and 224 focused tests passed, and scoped re-review approved the fix before primary integration.
 
 ---
+
+## [ERR-20260830-017] tsx-commonjs-top-level-await
+
+**Logged**: 2026-08-30T19:07:35.2112302+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Task-local TypeScript inspection scripts failed when they used top-level `await` under this repository's CommonJS `tsx` transform.
+
+### Error
+```
+Top-level await is currently not supported with the "cjs" output format
+```
+
+### Context
+- Literature and Art content agents independently encountered the same failure in read-only source and collision checkers.
+- The commands changed no source or accepted artifact state.
+
+### Suggested Fix
+Wrap asynchronous task-local checks in `async function main()` or an async IIFE, then surface failures through `.catch(...)`.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/sourceCheck.ts, content/work/playable-corpus-overhaul/checkpoint4-literature-collision.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T19:07:35.2112302+03:00
+- **Notes**: Both agents wrapped their asynchronous entry points and reran the checks successfully.
+
+---
+
+## [ERR-20260830-018] cross-worktree-git-path-query
+
+**Logged**: 2026-08-30T19:07:35.2112302+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+`git check-ignore` rejected an absolute report path owned by a sibling worktree.
+
+### Error
+```
+fatal: task-5-report.md is outside repository at playable-packs-05-08
+```
+
+### Context
+- A read-only ignore query ran from the Art recovery worktree against a coordination report stored under the primary worktree.
+- The command did not change either worktree.
+
+### Suggested Fix
+Run Git path queries with `git -C <owning-worktree>` and a path relative to that worktree.
+
+### Metadata
+- Reproducible: yes
+- Related Files: none
+
+### Resolution
+- **Resolved**: 2026-08-30T19:07:35.2112302+03:00
+- **Notes**: The query was rerun from the primary worktree and confirmed that the report is intentionally ignored.
+
+---
+
+## [ERR-20260830-019] recovery-worktree-path-typo
+
+**Logged**: 2026-08-30T19:07:35.2112302+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+An Art checkpoint commit command initially used a nonexistent worktree path containing an extra segment.
+
+### Error
+```
+The directory name is invalid. (os error 267)
+```
+
+### Context
+- The command failed before Git started and changed no repository state.
+- The assigned bank file remained staged and the learning notes remained untracked.
+
+### Suggested Fix
+Copy the already verified absolute worktree path directly into state-changing commands.
+
+### Metadata
+- Reproducible: yes
+- Related Files: none
+
+### Resolution
+- **Resolved**: 2026-08-30T19:07:35.2112302+03:00
+- **Notes**: The same commit succeeded from the correct `playable-packs-05-08` worktree.
+
+---
+
+## [ERR-20260830-020] mediawiki-source-inspection-rate-limit
+
+**Logged**: 2026-08-30T19:07:35.2112302+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Sequential one-page MediaWiki API requests were rate-limited during proposition-level inspection of 55 Art sources.
+
+### Error
+```
+HTTP 429 Too Many Requests
+```
+
+### Context
+- The repository source checker had already confirmed that all 55 unique URLs were reachable.
+- The additional checker requested full extracts one page at a time and received a 429 after ten requests.
+
+### Suggested Fix
+Use bounded-concurrency direct article fetches for this task-local proposition inspection.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs05to08.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T19:07:35.2112302+03:00
+- **Notes**: Direct article HTML inspection with four workers completed for all 55 pages without further rate limiting.
+
+---
