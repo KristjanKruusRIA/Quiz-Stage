@@ -806,3 +806,129 @@ Use bounded-concurrency direct article fetches for this task-local proposition i
 - **Notes**: Direct article HTML inspection with four workers completed for all 55 pages without further rate limiting.
 
 ---
+
+## [ERR-20260830-C5L] literature-prefix-marker-mismatch
+
+**Logged**: 2026-08-30T19:07:55+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A checkpoint-5 byte-prefix probe omitted the bank terminator's `as const` tokens.
+
+### Error
+```
+Error: marker missing
+```
+
+### Context
+- The task-local probe searched for `] satisfies PlayableCategory[];`, while the module closes with `] as const satisfies readonly PlayableCategory[];`.
+
+### Suggested Fix
+Read the exact module terminator before constructing byte-preservation probes.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs01to04/literatureLanguage.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T19:07:55+03:00
+- **Notes**: Corrected the marker and captured the baseline prefix hash.
+
+---
+
+## [ERR-20260830-C5P] powershell-foreach-pipeline-parse
+
+**Logged**: 2026-08-30T19:13:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A read-only collision query piped directly from a `foreach` statement and PowerShell rejected the pipeline position.
+
+### Error
+```
+ParserError: An empty pipe element is not allowed.
+```
+
+### Context
+- The query scanned candidate answers across `content/generated/*.csv` and changed no files.
+
+### Suggested Fix
+Assign the `foreach` output to a variable before piping it to `Format-Table`.
+
+### Metadata
+- Reproducible: yes
+- Related Files: content/generated/*.csv
+
+### Resolution
+- **Resolved**: 2026-08-30T19:13:00+03:00
+- **Notes**: Rewrote the query with an intermediate result variable. The same parser error recurred once in a later URL probe, confirming that future checkpoint scripts should always assign `foreach` output before formatting.
+
+---
+
+## [ERR-20260830-C5W] learning-log-relocated-during-task
+
+**Logged**: 2026-08-30T19:14:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+The primary-worktree learning log was consolidated to the repository root while this parallel task was running.
+
+### Error
+```
+apply_patch verification failed: Failed to read file to update the primary-worktree .learnings/ERRORS.md
+```
+
+### Context
+- A concurrent consolidation removed the formerly untracked primary copy after it had been inspected.
+- No content or accepted artifact was affected.
+
+### Suggested Fix
+Recheck the current learning-log location immediately before appending during parallel work.
+
+### Metadata
+- Reproducible: no
+- Related Files: .learnings/ERRORS.md
+
+### Resolution
+- **Resolved**: 2026-08-30T19:14:00+03:00
+- **Notes**: Appended the resolved checkpoint-5 notes to the consolidated root log instead.
+
+---
+
+## [ERR-20260830-C5U] guessed-wikipedia-article-paths
+
+**Logged**: 2026-08-30T19:20:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: content
+
+### Summary
+Three guessed Wikipedia article paths returned HTTP 404 during pre-authoring source validation.
+
+### Error
+```
+404 Not Found: The_First_Man_(novel), Briony_Tallis, March_family
+```
+
+### Context
+- The URLs were candidate sources and had not yet been written into the content bank.
+- No source or accepted artifact was changed by the failed requests.
+
+### Suggested Fix
+Probe exact source URLs before authoring and use direct live article pages that support the same proposition.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs01to04/literatureLanguage.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T19:20:00+03:00
+- **Notes**: Replaced them with live direct pages `The_First_Man`, `Atonement_(novel)`, and `Little_Women`; all returned HTTP 200.
+
+---
