@@ -331,10 +331,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "mantı"
+            "mantı",
+            "Kayseri mantı",
+            "Kayseri mantısı"
           ],
           "et": [
-            "mantı"
+            "mantı",
+            "Kayseri mantı",
+            "Kayseri mantısı"
           ]
         },
         "explanation": {
@@ -1103,8 +1107,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "dessert:pastel-de-nata",
         "clue": {
-          "en": "Created by Catholic monks at Lisbon's Jerónimos Monastery in Belém, which Portuguese pastry may be dusted with cinnamon?",
-          "et": "Millise Portugali küpsetise lõid katoliku mungad Lissabonis Belémi Jerónimose kloostris ning seda võib serveerimisel kaneeliga üle puistata?"
+          "en": "Which Portuguese egg-custard pastry, optionally dusted with cinnamon, was inspired by an original recipe created by monks at Lisbon's Jerónimos Monastery in Belém?",
+          "et": "Milline Portugali munakreemitäidisega küpsetis, mida võib kaneeliga üle puistata, sai eeskuju Lissaboni Belémi Jerónimose kloostri munkade loodud algupärasest retseptist?"
         },
         "response": {
           "en": "pastel de nata",
@@ -1114,10 +1118,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "en": [
             "Portuguese custard tart",
             "pastéis de nata",
-            "Portuguese egg tart"
+            "Portuguese egg tart",
+            "Pastel de Belém",
+            "Pastéis de Belém"
           ],
           "et": [
-            "Portugali munakreemikorvike"
+            "Portugali munakreemikorvike",
+            "Pastel de Belém",
+            "Pastéis de Belém"
           ]
         },
         "explanation": {
