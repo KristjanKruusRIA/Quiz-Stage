@@ -1589,6 +1589,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-literature-language-set-087', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'The Manuscript Outlived Its Author', et: 'Käsikiri elas autori üle' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-087:trial-kafka-brod', factKey: 'literature-language:trial-brod-published-against-kafka-request', tier: 1, subjectKey: 'work:the-trial-kafka',
+        clue: { en: 'Which unfinished novel about Josef K. reached print after Max Brod ignored Franz Kafka’s request to destroy his manuscripts?', et: 'Milline lõpetamata romaan Josef K-st jõudis trükki pärast seda, kui Max Brod eiras Franz Kafka palvet tema käsikirjad hävitada?' }, response: { en: 'The Trial', et: '„Protsess“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Brod preserved and edited Kafka’s manuscript, publishing the story of Josef K.’s unexplained prosecution after Kafka’s death.', et: 'Brod säilitas ja toimetas Kafka käsikirja ning avaldas Josef K. seletamatu kohtuasja loo pärast Kafka surma.' },
+        source: { sourceId: 'wikipedia:trial-kafka-brod', title: 'The Trial', url: 'https://en.wikipedia.org/wiki/The_Trial', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-087:silmarillion-christopher-edits', factKey: 'literature-language:silmarillion-christopher-edited-father-materials', tier: 2, subjectKey: 'work:the-silmarillion',
+        clue: { en: 'Which history of Middle-earth did Christopher Tolkien assemble from his father’s unpublished writings after J. R. R. Tolkien died?', et: 'Millise Keskmaa ajaloo pani Christopher Tolkien pärast J. R. R. Tolkieni surma kokku isa avaldamata kirjutistest?' }, response: { en: 'The Silmarillion', et: '„Silmarillion“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Christopher Tolkien edited the mythology into a continuous volume covering the creation of the world and the First Age.', et: 'Christopher Tolkien toimetas mütoloogia tervikuks, mis käsitleb maailma loomist ja Esimest Ajastut.' },
+        source: { sourceId: 'wikipedia:silmarillion-christopher-edits', title: 'The Silmarillion', url: 'https://en.wikipedia.org/wiki/The_Silmarillion', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-087:confederacy-thema-percy', factKey: 'literature-language:confederacy-thelma-toole-walker-percy-posthumous', tier: 3, subjectKey: 'work:a-confederacy-of-dunces',
+        clue: { en: 'Which comic novel about Ignatius J. Reilly was championed by John Kennedy Toole’s mother and Walker Percy years after the author’s death?', et: 'Millise koomilise romaani Ignatius J. Reillyst aitasid aastaid pärast John Kennedy Toole’i surma avalikkuse ette tema ema ja Walker Percy?' }, response: { en: 'A Confederacy of Dunces', et: '„A Confederacy of Dunces“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Thelma Toole persuaded Percy to read the manuscript; its eventual publication brought her son a posthumous Pulitzer Prize.', et: 'Thelma Toole veenis Percyt käsikirja lugema; hilisem avaldamine tõi tema pojale postuumselt Pulitzeri auhinna.' },
+        source: { sourceId: 'wikipedia:confederacy-thelma-percy', title: 'A Confederacy of Dunces', url: 'https://en.wikipedia.org/wiki/A_Confederacy_of_Dunces', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-087:suite-francaise-daughters-notebook', factKey: 'literature-language:suite-francaise-daughters-preserved-manuscript', tier: 4, subjectKey: 'work:suite-francaise',
+        clue: { en: 'Which Irène Némirovsky novel survived in a notebook kept by her daughters after she was killed at Auschwitz and was published decades later?', et: 'Milline Irène Némirovsky romaan säilis tema tütarde hoitud märkmikus pärast autori hukkumist Auschwitzis ning avaldati aastakümneid hiljem?' }, response: { en: 'Suite Française', et: '„Prantsuse süit“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The notebook contained the first two parts of Némirovsky’s planned sequence about France under German occupation.', et: 'Märkmik sisaldas Némirovsky kavandatud, Saksa okupatsiooni aegset Prantsusmaad käsitleva sarja kaht esimest osa.' },
+        source: { sourceId: 'wikipedia:suite-francaise-daughters-notebook', title: 'Suite française (Némirovsky novel)', url: 'https://en.wikipedia.org/wiki/Suite_fran%C3%A7aise_(N%C3%A9mirovsky_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-087:first-man-crash-manuscript', factKey: 'literature-language:first-man-manuscript-found-camus-crash', tier: 5, subjectKey: 'work:the-first-man-camus',
+        clue: { en: 'Which unfinished autobiographical novel was found in the wreckage of the car crash that killed Albert Camus and later prepared for publication by his daughter?', et: 'Milline lõpetamata autobiograafiline romaan leiti Albert Camus’ surmaga lõppenud autoõnnetuse rusudest ning anti hiljem tema tütre ettevalmistusel välja?' }, response: { en: 'The First Man', et: '„Esimene inimene“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Camus’s draft follows Jacques Cormery’s search for his father and childhood memories in colonial Algeria.', et: 'Camus’ käsikiri jälgib Jacques Cormery isaotsinguid ja lapsepõlvemälestusi koloniaalaja Alžeerias.' },
+        source: { sourceId: 'wikipedia:first-man-crash-manuscript', title: 'The First Man', url: 'https://en.wikipedia.org/wiki/The_First_Man', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-088', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Writers Inside the Story', et: 'Kirjanikud loo sees' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-088:jo-march-stories', factKey: 'literature-language:jo-march-writes-stories-little-women', tier: 1, subjectKey: 'character:jo-march',
+        clue: { en: 'Which March sister in Little Women writes sensational stories, rejects Laurie’s proposal, and later opens a school at Plumfield?', et: 'Milline „Väikeste naiste“ Marchi õde kirjutab kõmulisi lugusid, lükkab tagasi Laurie abieluettepaneku ja avab hiljem Plumfieldis kooli?' }, response: { en: 'Jo March', et: 'Jo March' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Jo’s determination to earn money by writing makes her the novel’s clearest portrait of artistic ambition.', et: 'Jo otsus kirjutamisega raha teenida teeb temast romaani kõige selgema kunstiliste ambitsioonide kehastuse.' },
+        source: { sourceId: 'wikipedia:jo-march-stories', title: 'Jo March', url: 'https://en.wikipedia.org/wiki/Jo_March', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-088:paul-sheldon-misery-captive', factKey: 'literature-language:paul-sheldon-writer-held-by-annie-wilkes', tier: 2, subjectKey: 'character:paul-sheldon',
+        clue: { en: 'Which novelist is held captive by Annie Wilkes and forced to revive his heroine Misery Chastain in a Stephen King thriller?', et: 'Millise romaanikirjaniku vangistab Stephen Kingi põnevikus Annie Wilkes ja sunnib ta kangelanna Misery Chastaini ellu äratama?' }, response: { en: 'Paul Sheldon', et: 'Paul Sheldon' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'After rescuing Paul from a car crash, Annie turns from devoted reader into a violent editor of his next manuscript.', et: 'Pärast Pauli päästmist autoõnnetusest muutub pühendunud lugeja Annie tema järgmise käsikirja vägivaldseks toimetajaks.' },
+        source: { sourceId: 'wikipedia:paul-sheldon-misery-captive', title: 'Paul Sheldon', url: 'https://en.wikipedia.org/wiki/Paul_Sheldon', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-088:briony-tallis-atonement-writer', factKey: 'literature-language:briony-tallis-writer-false-accusation', tier: 3, subjectKey: 'character:briony-tallis',
+        clue: { en: 'Which aspiring writer in Atonement misreads an encounter between Cecilia and Robbie, makes a disastrous accusation, and spends her life revising their story?', et: 'Milline „Lepituse“ kirjanikuks pürgiv tegelane tõlgendab Cecilia ja Robbie kohtumist valesti, esitab hukatusliku süüdistuse ning parandab nende lugu kogu ülejäänud elu?' }, response: { en: 'Briony Tallis', et: 'Briony Tallis' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Briony’s childhood certainty separates the lovers, and her later writing becomes an attempt at an impossible act of repair.', et: 'Briony lapselik veendumus lahutab armastajad ning tema hilisemast kirjutamisest saab võimatu heastamise katse.' },
+        source: { sourceId: 'wikipedia:briony-tallis-atonement-writer', title: 'Atonement (novel)', url: 'https://en.wikipedia.org/wiki/Atonement_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-088:stephen-dedalus-artist', factKey: 'literature-language:stephen-dedalus-aspiring-writer-portrait-artist', tier: 4, subjectKey: 'character:stephen-dedalus',
+        clue: { en: 'Which aspiring Irish writer grows from a schoolboy into a young artist in James Joyce’s A Portrait of the Artist as a Young Man?', et: 'Milline kirjanikuks pürgiv iirlane kasvab James Joyce’i „Kunstniku noorpõlveportrees“ koolipoisist nooreks kunstnikuks?' }, response: { en: 'Stephen Dedalus', et: 'Stephen Dedalus' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Stephen rejects religious and national expectations to seek artistic freedom, then returns as a central figure in Ulysses.', et: 'Stephen lükkab kunstilise vabaduse nimel kõrvale usulised ja rahvuslikud ootused ning naaseb keskse tegelasena „Ulysseses“.' },
+        source: { sourceId: 'wikipedia:stephen-dedalus-artist', title: 'Stephen Dedalus', url: 'https://en.wikipedia.org/wiki/Stephen_Dedalus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-088:kilgore-trout-vonnegut-writer', factKey: 'literature-language:kilgore-trout-recurring-vonnegut-science-fiction-writer', tier: 5, subjectKey: 'character:kilgore-trout',
+        clue: { en: 'Which unsuccessful science-fiction writer recurs across Kurt Vonnegut’s novels and becomes central to Breakfast of Champions?', et: 'Milline ebaedukas ulmekirjanik kordub Kurt Vonneguti romaanides ning tõuseb „Tšempionide eine“ keskseks tegelaseks?' }, response: { en: 'Kilgore Trout', et: 'Kilgore Trout' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Trout’s strange ideas appear in cheap publications, letting Vonnegut insert miniature speculative stories inside his novels.', et: 'Trouti veidrad ideed ilmuvad odavates väljaannetes ning võimaldavad Vonnegutil põimida romaanidesse väikseid ulmelugusid.' },
+        source: { sourceId: 'wikipedia:kilgore-trout-vonnegut-writer', title: 'Kilgore Trout', url: 'https://en.wikipedia.org/wiki/Kilgore_Trout', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-089', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Real Lives Behind Fictional Figures', et: 'Tõelised elud väljamõeldud tegelaste taga' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-089:christopher-robin-milne', factKey: 'literature-language:christopher-robin-milne-inspired-pooh-character', tier: 1, subjectKey: 'person:christopher-robin-milne',
+        clue: { en: 'Which son of A. A. Milne shared his name and childhood toys with the boy who visits Winnie-the-Pooh in the Hundred Acre Wood?', et: 'Milline A. A. Milne’i poeg jagas oma nime ja lapsepõlve mänguasju poisiga, kes külastab Karupoeg Puhhi Saja Aakri Metsas?' }, response: { en: 'Christopher Robin Milne', et: 'Christopher Robin Milne' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'His teddy bear and other toys inspired Pooh, Piglet, Eeyore, Kanga, and Tigger, while Christopher Robin entered the stories under his own names.', et: 'Tema mängukaru ja teised lelud inspireerisid Puhhi, Notsut, Iiahit, Kängut ja Tiigrit ning Christopher Robin jõudis lugudesse oma nimedega.' },
+        source: { sourceId: 'wikipedia:christopher-robin-milne', title: 'Christopher Robin Milne', url: 'https://en.wikipedia.org/wiki/Christopher_Robin_Milne', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-089:selkirk-crusoe-castaway', factKey: 'literature-language:alexander-selkirk-inspiration-robinson-crusoe', tier: 2, subjectKey: 'person:alexander-selkirk',
+        clue: { en: 'Which Scottish sailor survived alone for years on a Pacific island and became a major real-life model for Robinson Crusoe?', et: 'Milline Šoti meremees elas aastaid üksinda Vaikse ookeani saarel ning sai Robinson Crusoe üheks peamiseks päriseluliseks eeskujuks?' }, response: { en: 'Alexander Selkirk', et: 'Alexander Selkirk' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Selkirk was rescued from the Juan Fernández Islands, and accounts of his survival helped shape Defoe’s castaway story.', et: 'Selkirk päästeti Juan Fernándeze saartelt ning kirjeldused tema ellujäämisest aitasid kujundada Defoe merehädalise lugu.' },
+        source: { sourceId: 'wikipedia:selkirk-crusoe-castaway', title: 'Alexander Selkirk', url: 'https://en.wikipedia.org/wiki/Alexander_Selkirk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-089:joseph-bell-holmes-observation', factKey: 'literature-language:joseph-bell-inspired-sherlock-holmes-deduction', tier: 3, subjectKey: 'person:joseph-bell',
+        clue: { en: 'Which Edinburgh surgeon impressed his student Arthur Conan Doyle by deducing patients’ backgrounds from small details and helped inspire Sherlock Holmes?', et: 'Milline Edinburgh’ kirurg avaldas oma õpilasele Arthur Conan Doyle’ile muljet, järeldades pisiasjadest patsientide tausta, ning aitas inspireerida Sherlock Holmesi?' }, response: { en: 'Joseph Bell', et: 'Joseph Bell' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Bell emphasized close observation in diagnosis, a method Doyle transformed into his detective’s celebrated reasoning.', et: 'Bell rõhutas diagnoosimisel tähelepanelikku vaatlust ning Doyle muutis selle oma detektiivi kuulsaks arutlusmeetodiks.' },
+        source: { sourceId: 'wikipedia:joseph-bell-holmes-observation', title: 'Joseph Bell', url: 'https://en.wikipedia.org/wiki/Joseph_Bell', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-089:peter-davies-pan-name', factKey: 'literature-language:peter-llewelyn-davies-name-peter-pan', tier: 4, subjectKey: 'person:peter-llewelyn-davies',
+        clue: { en: 'Which of the Llewelyn Davies boys lent his first name to J. M. Barrie’s hero of Neverland, though several brothers inspired the character?', et: 'Milline Llewelyn Daviese poistest andis oma eesnime J. M. Barrie Eikunagimaa kangelasele, kuigi tegelast inspireeris mitu venda?' }, response: { en: 'Peter Llewelyn Davies', et: 'Peter Llewelyn Davies' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Barrie combined the boys’ games and personalities, but Peter’s name became permanently attached to the boy who would not grow up.', et: 'Barrie ühendas poiste mängud ja iseloomujooned, kuid Peteri nimi jäi alatiseks kasvamast keelduva poisi külge.' },
+        source: { sourceId: 'wikipedia:peter-davies-pan-name', title: 'Peter Llewelyn Davies', url: 'https://en.wikipedia.org/wiki/Peter_Llewelyn_Davies', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-089:deacon-brodie-double-life', factKey: 'literature-language:william-brodie-double-life-inspired-jekyll-hyde', tier: 5, subjectKey: 'person:william-brodie',
+        clue: { en: 'Which respected Edinburgh tradesman and city councillor secretly led burglars, helping inspire Stevenson’s tale of Dr Jekyll’s double life?', et: 'Milline lugupeetud Edinburgh’ käsitööline ja linnanõunik juhtis salaja murdvargaid ning aitas inspireerida Stevensoni lugu doktor Jekylli kaksikelust?' }, response: { en: 'William Brodie', et: 'William Brodie' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Known as Deacon Brodie, his contrast between public respectability and nighttime crime fascinated Stevenson.', et: 'Diakon Brodie nime all tuntud mehe avaliku auväärsuse ja öise kuritegevuse vastuolu paelus Stevensoni.' },
+        source: { sourceId: 'wikipedia:deacon-brodie-double-life', title: 'Deacon Brodie', url: 'https://en.wikipedia.org/wiki/Deacon_Brodie', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-095', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Writing Runs in the Family', et: 'Kirjutamine on perekonnas' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-095:anne-bronte-novelist-sister', factKey: 'literature-language:anne-bronte-sister-agnes-grey-tenant', tier: 1, subjectKey: 'author:anne-bronte',
+        clue: { en: 'Which younger sister of Charlotte and Emily Brontë wrote Agnes Grey and The Tenant of Wildfell Hall?', et: 'Milline Charlotte ja Emily Brontë noorem õde kirjutas romaanid „Agnes Grey“ ja „Wildfelli härrastemaja rentnik“?' }, response: { en: 'Anne Brontë', et: 'Anne Brontë' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Anne drew on her experience as a governess and published both novels under the name Acton Bell.', et: 'Anne kasutas guvernandikogemust ning avaldas mõlemad romaanid nime Acton Bell all.' },
+        source: { sourceId: 'wikipedia:anne-bronte-novelist-sister', title: 'Anne Brontë', url: 'https://en.wikipedia.org/wiki/Anne_Bront%C3%AB', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-095:joe-hill-stephen-king-son', factKey: 'literature-language:joe-hill-son-stephen-king-heart-shaped-box', tier: 2, subjectKey: 'author:joe-hill',
+        clue: { en: 'Which son of Stephen King built his own horror career with Heart-Shaped Box and NOS4A2 under a shortened pen name?', et: 'Milline Stephen Kingi poeg rajas lühendatud kirjanikunime all oma õuduskirjaniku karjääri teostega „Südamekujuline karp“ ja „NOS4A2“?' }, response: { en: 'Joe Hill', et: 'Joe Hill' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Joseph Hillström King chose Joe Hill so his early work could be judged without immediate reliance on his father’s name.', et: 'Joseph Hillström King valis nime Joe Hill, et tema varaseid teoseid hinnataks ilma isa nime vahetu mõjuta.' },
+        source: { sourceId: 'wikipedia:joe-hill-stephen-king-son', title: 'Joe Hill (writer)', url: 'https://en.wikipedia.org/wiki/Joe_Hill_(writer)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-095:martin-amis-kingsley-son', factKey: 'literature-language:martin-amis-son-kingsley-money-london-fields', tier: 3, subjectKey: 'author:martin-amis',
+        clue: { en: 'Which son of Lucky Jim author Kingsley Amis wrote the novels Money and London Fields?', et: 'Milline „Lucky Jimi“ autori Kingsley Amise poeg kirjutas romaanid „Money“ ja „London Fields“?' }, response: { en: 'Martin Amis', et: 'Martin Amis' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Martin Amis became known for darkly comic novels about excess, status, and late-twentieth-century Britain.', et: 'Martin Amis sai tuntuks sünge huumoriga romaanidega liialdustest, staatusest ja 20. sajandi lõpu Suurbritanniast.' },
+        source: { sourceId: 'wikipedia:martin-amis-kingsley-son', title: 'Martin Amis', url: 'https://en.wikipedia.org/wiki/Martin_Amis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-095:dumas-fils-camille', factKey: 'literature-language:alexandre-dumas-fils-son-camille', tier: 4, subjectKey: 'author:alexandre-dumas-fils',
+        clue: { en: 'Which son of The Three Musketeers’ author wrote La Dame aux camélias, the novel and play that inspired Verdi’s La traviata?', et: 'Milline „Kolme musketäri“ autori poeg kirjutas romaani ja näidendi „Kameeliadaam“, millest sai Verdi „La traviata“ alus?' }, response: { en: 'Alexandre Dumas fils', et: 'Alexandre Dumas noorem' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The younger Dumas distinguished himself from his famous father with the suffix fils and a drama of Marguerite Gautier.', et: 'Noorem Dumas eristas end kuulsast isast lisandiga fils ning Marguerite Gautier’st jutustava draamaga.' },
+        source: { sourceId: 'wikipedia:dumas-fils-camille', title: 'Alexandre Dumas fils', url: 'https://en.wikipedia.org/wiki/Alexandre_Dumas_fils', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-095:margaret-drabble-byatt-sister', factKey: 'literature-language:margaret-drabble-younger-sister-as-byatt', tier: 5, subjectKey: 'author:margaret-drabble',
+        clue: { en: 'Which author of The Millstone and The Red Queen was the younger sister of Possession novelist A. S. Byatt?', et: 'Milline „The Millstone’i“ ja „The Red Queeni“ autor oli „Possessioni“ kirjutanud A. S. Byatti noorem õde?' }, response: { en: 'Margaret Drabble', et: 'Margaret Drabble' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Both sisters became major British novelists, although their public accounts described a long and difficult relationship.', et: 'Mõlemast õest sai oluline Briti romaanikirjanik, kuigi nende avalikud kirjeldused rääkisid pikast ja keerulisest suhtest.' },
+        source: { sourceId: 'wikipedia:margaret-drabble-byatt-sister', title: 'Margaret Drabble', url: 'https://en.wikipedia.org/wiki/Margaret_Drabble', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-099', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
+    name: { en: 'Two Authors, One Novel', et: 'Kaks autorit, üks romaan' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-099:talisman-king-straub', factKey: 'literature-language:talisman-king-straub-jack-territories', tier: 1, subjectKey: 'work:the-talisman-king-straub',
+        clue: { en: 'Which fantasy novel by Stephen King and Peter Straub sends Jack Sawyer across a parallel realm called the Territories to save his dying mother?', et: 'Millises Stephen Kingi ja Peter Straubi fantaasiaromaanis rändab Jack Sawyer sureva ema päästmiseks läbi paralleelmaailma nimega Territories?' }, response: { en: 'The Talisman', et: '„The Talisman“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Jack can shift between America and the Territories, where people have counterparts whose fates are linked.', et: 'Jack suudab liikuda Ameerika ja Territories-nimelise paralleelmaailma vahel, kus inimestel on omavahel seotud saatusega teisikud.' },
+        source: { sourceId: 'wikipedia:talisman-king-straub', title: 'The Talisman (King and Straub novel)', url: 'https://en.wikipedia.org/wiki/The_Talisman_(King_and_Straub_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-099:time-war-red-blue', factKey: 'literature-language:time-war-el-mohtar-gladstone-red-blue-letters', tier: 2, subjectKey: 'work:this-is-how-you-lose-time-war',
+        clue: { en: 'Which novella by Amal El-Mohtar and Max Gladstone follows rival agents Red and Blue exchanging letters across competing timelines?', et: 'Millises Amal El-Mohtari ja Max Gladstone’i lühiromaanis vahetavad konkureerivates ajaliinides kirju vastasleeride agendid Red ja Blue?' }, response: { en: 'This Is How You Lose the Time War', et: '„This Is How You Lose the Time War“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Their taunting correspondence grows into intimacy even though both organizations demand victory and punish betrayal.', et: 'Nende pilkav kirjavahetus kasvab läheduseks, kuigi mõlemad organisatsioonid nõuavad võitu ja karistavad reetmist.' },
+        source: { sourceId: 'wikipedia:time-war-red-blue', title: 'This Is How You Lose the Time War', url: 'https://en.wikipedia.org/wiki/This_Is_How_You_Lose_the_Time_War', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-099:long-earth-stepper', factKey: 'literature-language:long-earth-pratchett-baxter-stepper-parallel-worlds', tier: 3, subjectKey: 'work:the-long-earth',
+        clue: { en: 'Which Terry Pratchett and Stephen Baxter novel lets people use a simple potato-powered device to step into countless parallel Earths?', et: 'Millises Terry Pratchetti ja Stephen Baxteri romaanis võimaldab lihtne kartulitoitel seade astuda loendamatutele paralleelsetele Maadele?' }, response: { en: 'The Long Earth', et: '„Pikkmaa“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Most alternate worlds lack humans, opening an immense frontier that explorer Joshua Valienté can cross naturally.', et: 'Enamikus alternatiivmaailmades inimesi pole ning avaneb tohutu piiriala, mida uurija Joshua Valienté suudab loomulikult läbida.' },
+        source: { sourceId: 'wikipedia:long-earth-stepper', title: 'The Long Earth', url: 'https://en.wikipedia.org/wiki/The_Long_Earth', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-099:difference-engine-gibson-sterling', factKey: 'literature-language:difference-engine-gibson-sterling-babbage-victorian', tier: 4, subjectKey: 'work:the-difference-engine',
+        clue: { en: 'Which William Gibson and Bruce Sterling novel imagines Victorian Britain transformed because Charles Babbage’s mechanical computers actually work?', et: 'Millises William Gibsoni ja Bruce Sterlingi romaanis muudavad Charles Babbage’i töötavad mehaanilised arvutid viktoriaanliku Suurbritannia teistsuguseks?' }, response: { en: 'The Difference Engine', et: '„The Difference Engine“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The alternate history replaces electronic computing with steam-driven Engines and follows the struggle over a set of punch cards.', et: 'Alternatiivajalugu asendab elektroonilise andmetöötluse aurujõul töötavate masinatega ning jälgib võitlust perfokaartide komplekti pärast.' },
+        source: { sourceId: 'wikipedia:difference-engine-gibson-sterling', title: 'The Difference Engine', url: 'https://en.wikipedia.org/wiki/The_Difference_Engine', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-099:mote-niven-pournelle', factKey: 'literature-language:mote-niven-pournelle-first-contact-three-armed-aliens', tier: 5, subjectKey: 'work:the-mote-in-gods-eye',
+        clue: { en: 'Which Larry Niven and Jerry Pournelle novel gives a human interstellar empire its first contact with a clever three-armed alien species?', et: 'Millises Larry Niveni ja Jerry Pournelle’i romaanis puutub inimeste tähtedevaheline impeerium esimest korda kokku nutika kolme käega tulnukaliigiga?' }, response: { en: 'The Mote in God’s Eye', et: '„The Mote in God’s Eye“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The visitors discover a technically brilliant civilization trapped in destructive population cycles within a single star system.', et: 'Külalised avastavad tehniliselt hiilgava tsivilisatsiooni, mis on ühes tähesüsteemis hävitavate rahvastikutsüklite lõksus.' },
+        source: { sourceId: 'wikipedia:mote-niven-pournelle', title: 'The Mote in God’s Eye', url: 'https://en.wikipedia.org/wiki/The_Mote_in_God%27s_Eye', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-027', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Numbers on the Book Cover', et: 'Numbrid raamatu pealkirjas' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-027:slaughterhouse-billy-dresden', factKey: 'literature-language:slaughterhouse-five-billy-pilgrim-dresden-tralfamadore', tier: 1, subjectKey: 'work:slaughterhouse-five',
+        clue: { en: 'Which Kurt Vonnegut novel follows Billy Pilgrim becoming “unstuck in time” between wartime Dresden, ordinary American life, and the planet Tralfamadore?', et: 'Millises Kurt Vonneguti romaanis liigub „ajast lahti pääsenud“ Billy Pilgrim sõjaaegse Dresdeni, argise Ameerika elu ja Tralfamadore’i planeedi vahel?' }, response: { en: 'Slaughterhouse-Five', et: '„Tapamaja, korpus viis“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Vonnegut combines the Dresden bombing with science-fiction episodes to examine trauma, memory, and fatalism.', et: 'Vonnegut ühendab Dresdeni pommitamise ulmeliste episoodidega, et käsitleda traumat, mälu ja fatalismi.' },
+        source: { sourceId: 'wikipedia:slaughterhouse-billy-dresden', title: 'Slaughterhouse-Five', url: 'https://en.wikipedia.org/wiki/Slaughterhouse-Five', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-027:seven-husbands-evelyn-monique', factKey: 'literature-language:seven-husbands-evelyn-hugo-tells-monique-life', tier: 2, subjectKey: 'work:seven-husbands-evelyn-hugo',
+        clue: { en: 'Which Taylor Jenkins Reid novel has reclusive Hollywood star Evelyn choose unknown reporter Monique Grant to hear the truth about her career and marriages?', et: 'Millises Taylor Jenkins Reidi romaanis valib eraklik Hollywoodi täht Evelyn tundmatu ajakirjaniku Monique Granti kuulama tõde tema karjäärist ja abieludest?' }, response: { en: 'The Seven Husbands of Evelyn Hugo', et: '„Evelyn Hugo seitse abikaasat“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The interview reveals the compromises behind Evelyn’s public image and the private love she protected for decades.', et: 'Intervjuu paljastab Evelyni avaliku kuvandi taga olnud kompromissid ja armastuse, mida ta aastakümneid kaitses.' },
+        source: { sourceId: 'wikipedia:seven-husbands-evelyn-monique', title: 'The Seven Husbands of Evelyn Hugo', url: 'https://en.wikipedia.org/wiki/The_Seven_Husbands_of_Evelyn_Hugo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-027:39-steps-hannay-spies', factKey: 'literature-language:39-steps-richard-hannay-spy-conspiracy', tier: 3, subjectKey: 'work:the-39-steps',
+        clue: { en: 'Which John Buchan thriller sends Richard Hannay fleeing across Scotland after a murdered spy leaves him a notebook about a German conspiracy?', et: 'Millises John Buchani põnevikus põgeneb Richard Hannay läbi Šotimaa pärast seda, kui mõrvatud spioon jätab talle Saksa vandenõu kirjeldava märkmiku?' }, response: { en: 'The 39 Steps', et: '„39 astet“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Hannay must evade both police and enemy agents while decoding the warning before the conspirators can act.', et: 'Hannay peab vältima nii politseid kui ka vaenlase agente ning hoiatuse lahti mõtestama enne vandenõulaste tegutsemist.' },
+        source: { sourceId: 'wikipedia:39-steps-hannay-spies', title: 'The Thirty-Nine Steps', url: 'https://en.wikipedia.org/wiki/The_39_Steps', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-027:no1-ladies-ramotswe', factKey: 'literature-language:no1-ladies-precious-ramotswe-botswana-agency', tier: 4, subjectKey: 'work:no1-ladies-detective-agency',
+        clue: { en: 'Which Alexander McCall Smith novel introduces Precious Ramotswe as she opens a detective agency in Botswana?', et: 'Milline Alexander McCall Smithi romaan tutvustab Precious Ramotswet, kes avab Botswanas detektiiviagentuuri?' }, response: { en: 'The No. 1 Ladies’ Detective Agency', et: '„Esimene daamide detektiiviagentuur“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Mma Ramotswe uses patience and close observation to solve personal mysteries for clients in and around Gaborone.', et: 'Mma Ramotswe lahendab kannatlikkuse ja tähelepanelikkusega klientide isiklikke mõistatusi Gaborones ja selle ümbruses.' },
+        source: { sourceId: 'wikipedia:no1-ladies-ramotswe', title: 'The No. 1 Ladies’ Detective Agency', url: 'https://en.wikipedia.org/wiki/The_No._1_Ladies%27_Detective_Agency', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-027:five-people-eddie-heaven', factKey: 'literature-language:five-people-eddie-heaven-amusement-park', tier: 5, subjectKey: 'work:five-people-you-meet-heaven',
+        clue: { en: 'Which Mitch Albom novel follows amusement-park mechanic Eddie after his death as five connected people explain the meaning of his life?', et: 'Millises Mitch Albomi romaanis kohtub lõbustuspargi mehaanik Eddie pärast surma viie temaga seotud inimesega, kes selgitavad tema elu tähendust?' }, response: { en: 'The Five People You Meet in Heaven', et: '„Viis inimest, keda kohtad taevas“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Each meeting reframes an event Eddie misunderstood, showing how apparently separate lives affect one another.', et: 'Iga kohtumine annab Eddie valesti mõistetud sündmusele uue tähenduse ja näitab, kuidas näiliselt eraldi elud üksteist mõjutavad.' },
+        source: { sourceId: 'wikipedia:five-people-eddie-heaven', title: 'The Five People You Meet in Heaven', url: 'https://en.wikipedia.org/wiki/The_Five_People_You_Meet_in_Heaven', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-029', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Objects That Steer the Story', et: 'Esemed, mis suunavad lugu' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-029:white-rabbit-pocket-watch', factKey: 'literature-language:white-rabbit-pocket-watch-alice-follows', tier: 1, subjectKey: 'object:white-rabbit-pocket-watch',
+        clue: { en: 'What object does the waistcoated White Rabbit take out while worrying that he is late, prompting Alice to follow him?', et: 'Millise eseme võtab vestiga Valge Jänes hilinemise pärast muretsedes välja, ajendades Alice’it talle järgnema?' }, response: { en: 'a pocket watch', et: 'taskukell' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'A talking rabbit is already unusual, but seeing him consult the watch makes Alice run after him to the rabbit hole.', et: 'Rääkiv jänes on juba ebatavaline, kuid taskukella vaatamine paneb Alice’i talle uru juurde järele jooksma.' },
+        source: { sourceId: 'wikipedia:white-rabbit-pocket-watch', title: 'White Rabbit', url: 'https://en.wikipedia.org/wiki/White_Rabbit', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-029:scarlet-letter-hester-mark', factKey: 'literature-language:scarlet-letter-a-hester-adultery', tier: 2, subjectKey: 'object:scarlet-letter-a',
+        clue: { en: 'What embroidered mark must Hester Prynne wear on her dress as public punishment in Nathaniel Hawthorne’s novel?', et: 'Millist tikitud märki peab Hester Prynne Nathaniel Hawthorne’i romaanis avaliku karistusena kleidil kandma?' }, response: { en: 'the scarlet letter A', et: 'tulipunane A-täht' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The Puritan community intends the A to brand Hester for adultery, but its meaning changes as she builds an independent life.', et: 'Puritaanlik kogukond tahab A-tähega märkida Hesteri abielurikkumist, kuid naise iseseisva elu jooksul märgi tähendus muutub.' },
+        source: { sourceId: 'wikipedia:scarlet-letter-hester-mark', title: 'The Scarlet Letter', url: 'https://en.wikipedia.org/wiki/The_Scarlet_Letter', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-029:conch-lord-flies-assemblies', factKey: 'literature-language:conch-calls-assemblies-speaking-order', tier: 3, subjectKey: 'object:lord-flies-conch',
+        clue: { en: 'What found object does Ralph blow to gather the stranded boys and use to grant speaking turns in Lord of the Flies?', et: 'Millist leitud eset puhub Ralph „Kärbeste jumalas“, et merehädalised poisid kokku kutsuda ja anda kõnevoor sellele, kes eset hoiab?' }, response: { en: 'the conch shell', et: 'merikarp' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The shell represents the boys’ fragile system of order, and its destruction marks that system’s collapse.', et: 'Merikarp tähistab poiste haprast korda ning selle purunemine märgib kogu süsteemi kokkuvarisemist.' },
+        source: { sourceId: 'wikipedia:conch-lord-flies-assemblies', title: 'Lord of the Flies', url: 'https://en.wikipedia.org/wiki/Lord_of_the_Flies', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-029:othello-handkerchief', factKey: 'literature-language:desdemona-handkerchief-iago-othello-evidence', tier: 4, subjectKey: 'object:desdemona-handkerchief',
+        clue: { en: 'What small gift does Iago arrange to have found with Cassio, turning it into false evidence of Desdemona’s infidelity in Othello?', et: 'Millise väikese kingituse laseb Iago Cassio juurest leida, muutes selle „Othellos“ Desdemona truudusetuse valetõendiks?' }, response: { en: 'Desdemona’s handkerchief', et: 'Desdemona taskurätt' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Othello had given Desdemona the patterned cloth, so its movement into Cassio’s room makes Iago’s lie appear tangible.', et: 'Othello oli mustrilise räti Desdemonale kinkinud ning selle sattumine Cassio tuppa muudab Iago vale käegakatsutavaks.' },
+        source: { sourceId: 'wikipedia:othello-handkerchief', title: 'Othello', url: 'https://en.wikipedia.org/wiki/Othello', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-029:moonstone-diamond', factKey: 'literature-language:moonstone-diamond-stolen-rachel-birthday', tier: 5, subjectKey: 'object:moonstone-diamond',
+        clue: { en: 'What sacred Indian diamond disappears from Rachel Verinder’s room after she receives it for her birthday in Wilkie Collins’s mystery?', et: 'Milline püha India teemant kaob Wilkie Collinsi mõistatusromaanis Rachel Verinderi toast pärast seda, kui ta saab ehte sünnipäevaks?' }, response: { en: 'the Moonstone', et: 'Kuukivi' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The jewel has been taken from an Indian shrine, and its theft draws several narrators into an early detective story.', et: 'Juveel on röövitud India pühamust ning selle kadumine tõmbab mitu jutustajat varasesse detektiivilukku.' },
+        source: { sourceId: 'wikipedia:moonstone-diamond', title: 'The Moonstone', url: 'https://en.wikipedia.org/wiki/The_Moonstone', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-031', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Name the Literary Family', et: 'Nimeta kirjanduslik perekond' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-031:bennets-five-daughters', factKey: 'literature-language:bennet-family-five-daughters-longbourn', tier: 1, subjectKey: 'family:bennets',
+        clue: { en: 'Which Pride and Prejudice family has five daughters at Longbourn while their mother urgently searches for suitable husbands?', et: 'Millises „Uhkuse ja eelarvamuse“ perekonnas kasvab Longbournis viis tütart, kellele ema innukalt sobivaid abikaasasid otsib?' }, response: { en: 'the Bennets', et: 'Bennetid' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Elizabeth is the second daughter, and the estate’s entail makes the sisters’ future security a constant concern.', et: 'Elizabeth on teine tütar ning mõisa pärimiskord muudab õdede tulevase kindlustatuse pidevaks mureks.' },
+        source: { sourceId: 'wikipedia:bennets-five-daughters', title: 'Bennet family', url: 'https://en.wikipedia.org/wiki/Bennet_family', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-031:karamazovs-father-sons', factKey: 'literature-language:karamazov-family-fyodor-three-sons-murder', tier: 2, subjectKey: 'family:karamazovs',
+        clue: { en: 'Which Dostoevsky family joins dissolute father Fyodor Pavlovich with sons Dmitri, Ivan, and Alyosha before a murder tears them apart?', et: 'Millises Dostojevski perekonnas kohtuvad liiderlik isa Fjodor Pavlovitš ning pojad Dmitri, Ivan ja Aljoša, enne kui mõrv nad lahku rebib?' }, response: { en: 'the Karamazovs', et: 'Karamazovid' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The brothers embody sharply different passions and beliefs while suspicion falls on Dmitri after their father’s death.', et: 'Vennad kehastavad väga erinevaid kirgi ja veendumusi ning pärast isa surma langeb kahtlus Dmitrile.' },
+        source: { sourceId: 'wikipedia:karamazovs-father-sons', title: 'The Brothers Karamazov', url: 'https://en.wikipedia.org/wiki/The_Brothers_Karamazov', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-031:joads-dust-bowl', factKey: 'literature-language:joad-family-oklahoma-california-dust-bowl', tier: 3, subjectKey: 'family:joads',
+        clue: { en: 'Which family leaves an Oklahoma farm for California after Tom returns from prison in The Grapes of Wrath?', et: 'Milline perekond lahkub „Vihakobarates“ Oklahoma talust California poole pärast seda, kui Tom vanglast naaseb?' }, response: { en: 'the Joads', et: 'Joadid' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The Dust Bowl migrants travel west in a failing truck and meet exploitation alongside other displaced families.', et: 'Tolmukausi rändurid sõidavad laguneva veoautoga läände ning kohtavad koos teiste kodu kaotanud peredega ärakasutamist.' },
+        source: { sourceId: 'wikipedia:joads-dust-bowl', title: 'The Grapes of Wrath', url: 'https://en.wikipedia.org/wiki/The_Grapes_of_Wrath', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-031:compsons-sound-fury', factKey: 'literature-language:compson-family-quentin-caddy-benjy-decline', tier: 4, subjectKey: 'family:compsons',
+        clue: { en: 'Which declining Southern family includes siblings Quentin, Caddy, Jason, and Benjy in William Faulkner’s The Sound and the Fury?', et: 'Millises hääbuvas USA lõunaosariikide perekonnas on William Faulkneri „Hälina ja raevu“ õed-vennad Quentin, Caddy, Jason ja Benjy?' }, response: { en: 'the Compsons', et: 'Compsonid' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Multiple viewpoints and broken chronology reveal the family’s losses, resentments, and fixation on Caddy.', et: 'Mitu vaatepunkti ja katkendlik ajajärg paljastavad perekonna kaotused, kibestumise ning kinnisidee Caddyst.' },
+        source: { sourceId: 'wikipedia:compsons-sound-fury', title: 'The Sound and the Fury', url: 'https://en.wikipedia.org/wiki/The_Sound_and_the_Fury', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-031:forsytes-soames-property', factKey: 'literature-language:forsyte-family-soames-property-saga', tier: 5, subjectKey: 'family:forsytes',
+        clue: { en: 'Which wealthy family gives its name to John Galsworthy’s saga, where solicitor Soames treats property and marriage as matters of possession?', et: 'Milline jõukas perekond annab nime John Galsworthy saagale, kus advokaat Soames käsitleb omandit ja abielu valdamise küsimusena?' }, response: { en: 'the Forsytes', et: 'Forsyte’id' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Several generations reveal the security and emotional cost of the family’s upper-middle-class attachment to ownership.', et: 'Mitu põlvkonda paljastab perekonna kõrgema keskklassi omandikire pakutava kindluse ja emotsionaalse hinna.' },
+        source: { sourceId: 'wikipedia:forsytes-soames-property', title: 'The Forsyte Saga', url: 'https://en.wikipedia.org/wiki/The_Forsyte_Saga', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-033', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Cast Away on the Page', et: 'Kirjanduslikud merehädalised' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-033:life-pi-tiger-boat', factKey: 'literature-language:life-pi-patel-richard-parker-lifeboat', tier: 1, subjectKey: 'work:life-of-pi',
+        clue: { en: 'Which Yann Martel novel strands Pi Patel in a lifeboat with a Bengal tiger named Richard Parker after a cargo ship sinks?', et: 'Millises Yann Marteli romaanis jääb Pi Patel pärast kaubalaeva uppumist päästepaati koos Bengali tiigri Richard Parkeriga?' }, response: { en: 'Life of Pi', et: '„Pii elu“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Pi uses knowledge from his family’s zoo and a carefully defended territory to survive the Pacific crossing.', et: 'Pi kasutab Vaikse ookeani ületamisel ellujäämiseks pere loomaaiast saadud teadmisi ja hoolikalt kaitstud territooriumi.' },
+        source: { sourceId: 'wikipedia:life-pi-tiger-boat', title: 'Life of Pi', url: 'https://en.wikipedia.org/wiki/Life_of_Pi', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-033:swiss-family-island', factKey: 'literature-language:swiss-family-robinson-shipwreck-island-home', tier: 2, subjectKey: 'work:swiss-family-robinson',
+        clue: { en: 'Which Johann David Wyss novel has two parents and four sons salvage a wrecked ship and build an elaborate new home on a tropical island?', et: 'Millises Johann David Wyssi romaanis päästavad kaks vanemat ja neli poega hukkunud laevalt varustuse ning rajavad troopilisele saarele leidliku uue kodu?' }, response: { en: 'The Swiss Family Robinson', et: '„Šveitsi perekond Robinson“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The family combines practical skills, salvaged supplies, and the island’s plants and animals to create a self-sufficient settlement.', et: 'Perekond ühendab praktilised oskused, laevalt päästetud varud ning saare taimed ja loomad, et luua iseseisev asula.' },
+        source: { sourceId: 'wikipedia:swiss-family-island', title: 'The Swiss Family Robinson', url: 'https://en.wikipedia.org/wiki/The_Swiss_Family_Robinson', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-033:moreau-prendick-island', factKey: 'literature-language:doctor-moreau-prendick-castaway-vivisection', tier: 3, subjectKey: 'work:island-doctor-moreau',
+        clue: { en: 'Which H. G. Wells novel brings shipwreck survivor Edward Prendick to an island where a scientist transforms animals through vivisection?', et: 'Millises H. G. Wellsi romaanis satub merehädaline Edward Prendick saarele, kus teadlane muudab vivisektsiooni abil loomi?' }, response: { en: 'The Island of Doctor Moreau', et: '„Doktor Moreau’ saar“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Prendick discovers Moreau’s Beast Folk and the fragile rules meant to suppress their animal instincts.', et: 'Prendick avastab Moreau’ loom-inimesed ja haprad reeglid, mis peaksid nende loomainstinkte ohjeldama.' },
+        source: { sourceId: 'wikipedia:moreau-prendick-island', title: 'The Island of Doctor Moreau', url: 'https://en.wikipedia.org/wiki/The_Island_of_Doctor_Moreau', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-033:mysterious-island-balloon', factKey: 'literature-language:mysterious-island-prisoners-balloon-castaways', tier: 4, subjectKey: 'work:the-mysterious-island',
+        clue: { en: 'Which Jules Verne novel strands American Civil War prisoners on an uncharted island after they escape Richmond in a balloon?', et: 'Millises Jules Verne’i romaanis jäävad Ameerika kodusõja vangid kaardistamata saarele pärast Richmondist õhupalliga põgenemist?' }, response: { en: 'The Mysterious Island', et: '„Saladuslik saar“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Engineer Cyrus Smith leads the castaways in building a settlement while an unseen helper repeatedly intervenes.', et: 'Insener Cyrus Smith juhib merehädalisi asula rajamisel, samal ajal kui nähtamatu abiline korduvalt sekkub.' },
+        source: { sourceId: 'wikipedia:mysterious-island-balloon', title: 'The Mysterious Island', url: 'https://en.wikipedia.org/wiki/The_Mysterious_Island', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-033:cay-phillip-timothy', factKey: 'literature-language:cay-phillip-timothy-shipwreck-blind', tier: 5, subjectKey: 'work:the-cay',
+        clue: { en: 'Which Theodore Taylor novel strands blinded boy Phillip with an elderly sailor named Timothy on a small Caribbean island during the Second World War?', et: 'Millises Theodore Taylori romaanis jääb pimedaks jäänud poiss Phillip Teise maailmasõja ajal koos eaka meremehe Timothyga väikesele Kariibi mere saarele?' }, response: { en: 'The Cay', et: '„The Cay“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'After their ship is torpedoed, Phillip must overcome prejudice and learn survival skills from Timothy.', et: 'Pärast laeva torpedeerimist peab Phillip ületama eelarvamused ja õppima Timothy käest ellujäämisoskusi.' },
+        source: { sourceId: 'wikipedia:cay-phillip-timothy', title: 'The Cay', url: 'https://en.wikipedia.org/wiki/The_Cay', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-055', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Colour Words on the Bookshelf', et: 'Värvisõnad raamaturiiulil' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-055:white-fang-wolfdog', factKey: 'literature-language:white-fang-wolfdog-wild-domestic', tier: 1, subjectKey: 'work:white-fang',
+        clue: { en: 'Which Jack London novel follows a wolfdog from the Yukon wilderness through cruelty to a trusting life with Weedon Scott?', et: 'Milline Jack Londoni romaan jälgib hundikoera teekonda Yukoni metsikust loodusest läbi julmuse usaldava eluni Weedon Scotti juures?' }, response: { en: 'White Fang', et: '„Valgekihv“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The story reverses the movement of The Call of the Wild by bringing its animal hero toward human companionship.', et: 'Lugu pöörab „Ürgse kutse“ liikumise ümber, juhtides loomast kangelase inimeste seltsi.' },
+        source: { sourceId: 'wikipedia:white-fang-wolfdog', title: 'White Fang', url: 'https://en.wikipedia.org/wiki/White_Fang', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-055:black-beauty-horse', factKey: 'literature-language:black-beauty-horse-first-person-life', tier: 2, subjectKey: 'work:black-beauty',
+        clue: { en: 'Which Anna Sewell novel lets a horse narrate his own life through kind and cruel owners in Victorian England?', et: 'Millises Anna Sewelli romaanis jutustab hobune ise oma elust heade ja julmade omanike käes viktoriaanlikul Inglismaal?' }, response: { en: 'Black Beauty', et: '„Must Iludus“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The animal’s viewpoint made everyday mistreatment visible and encouraged more humane care of working horses.', et: 'Looma vaatepunkt muutis igapäevase väärkohtlemise nähtavaks ning toetas tööhobuste inimlikumat kohtlemist.' },
+        source: { sourceId: 'wikipedia:black-beauty-horse', title: 'Black Beauty', url: 'https://en.wikipedia.org/wiki/Black_Beauty', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-055:red-badge-henry-fleming', factKey: 'literature-language:red-badge-henry-fleming-civil-war-fear', tier: 3, subjectKey: 'work:red-badge-courage',
+        clue: { en: 'Which Stephen Crane novel follows young Union soldier Henry Fleming as he flees battle, wrestles with shame, and returns to fight?', et: 'Milline Stephen Crane’i romaan jälgib noort põhjaosariikide sõdurit Henry Flemingit, kes põgeneb lahingust, võitleb häbiga ja naaseb võitlema?' }, response: { en: 'The Red Badge of Courage', et: '„Punane vaprusemärk“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Henry imagines a wound as proof of bravery before experience forces him to reconsider what courage means.', et: 'Henry kujutleb haava vapruse tõendina, enne kui kogemus sunnib teda julguse tähendust ümber hindama.' },
+        source: { sourceId: 'wikipedia:red-badge-henry-fleming', title: 'The Red Badge of Courage', url: 'https://en.wikipedia.org/wiki/The_Red_Badge_of_Courage', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-055:bluest-eye-pecola', factKey: 'literature-language:bluest-eye-pecola-wishes-blue-eyes', tier: 4, subjectKey: 'work:the-bluest-eye',
+        clue: { en: 'Which Toni Morrison novel centres on Pecola Breedlove, a Black girl who believes having blue eyes would make her loved and beautiful?', et: 'Milline Toni Morrisoni romaan keskendub mustanahalisele tüdrukule Pecola Breedlove’ile, kes usub, et sinised silmad muudaksid ta armastatuks ja ilusaks?' }, response: { en: 'The Bluest Eye', et: '„Siniseim silm“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Pecola’s wish exposes how racism and inherited standards of beauty damage children and families around her.', et: 'Pecola soov paljastab, kuidas rassism ja päritud ilustandardid kahjustavad lapsi ning neid ümbritsevaid peresid.' },
+        source: { sourceId: 'wikipedia:bluest-eye-pecola', title: 'The Bluest Eye', url: 'https://en.wikipedia.org/wiki/The_Bluest_Eye', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-055:golden-notebook-anna-wulf', factKey: 'literature-language:golden-notebook-anna-wulf-four-notebooks', tier: 5, subjectKey: 'work:the-golden-notebook',
+        clue: { en: 'Which Doris Lessing novel has writer Anna Wulf divide her life among four notebooks before trying to unite them in one final volume?', et: 'Millises Doris Lessingi romaanis jagab kirjanik Anna Wulf oma elu nelja märkmiku vahel ning püüab need lõpuks ühte köitesse ühendada?' }, response: { en: 'The Golden Notebook', et: '„Kuldne märkmeraamat“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The separate books hold Anna’s fiction, politics, personal life, and dreams, reflecting a mind under pressure to become whole.', et: 'Eraldi märkmikud sisaldavad Anna ilukirjandust, poliitikat, eraelu ja unenägusid ning peegeldavad terviklikkust otsivat pinges teadvust.' },
+        source: { sourceId: 'wikipedia:golden-notebook-anna-wulf', title: 'The Golden Notebook', url: 'https://en.wikipedia.org/wiki/The_Golden_Notebook', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-literature-language-set-056', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'medium',
+    name: { en: 'Fictional Diary Keepers', et: 'Väljamõeldud päevikupidajad' },
+    questions: [
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-056:bridget-jones-diary', factKey: 'literature-language:bridget-jones-records-dates-habits', tier: 1, subjectKey: 'character:bridget-jones',
+        clue: { en: 'Which London singleton records her weight, cigarettes, career troubles, and tangled feelings for Daniel Cleaver and Mark Darcy?', et: 'Milline Londoni vallaline naine märgib üles oma kaalu, sigaretid, töömured ning keerulised tunded Daniel Cleaveri ja Mark Darcy vastu?' }, response: { en: 'Bridget Jones', et: 'Bridget Jones' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Helen Fielding’s heroine begins each year with resolutions whose neat statistics quickly give way to comic disorder.', et: 'Helen Fieldingi kangelanna alustab aastat lubadustega, mille korrapärane statistika annab kiiresti teed koomilisele kaosele.' },
+        source: { sourceId: 'wikipedia:bridget-jones-diary', title: 'Bridget Jones', url: 'https://en.wikipedia.org/wiki/Bridget_Jones', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-056:adrian-mole-intellectual', factKey: 'literature-language:adrian-mole-teen-diary-intellectual', tier: 2, subjectKey: 'character:adrian-mole',
+        clue: { en: 'Which self-declared intellectual begins Sue Townsend’s diary series aged thirteen and three-quarters, worrying about spots, Pandora, and his parents?', et: 'Milline end intellektuaaliks pidav tegelane alustab Sue Townsendi päevikusarja 13 ja kolmeveerandi aastaselt, muretsedes vistrike, Pandora ja oma vanemate pärast?' }, response: { en: 'Adrian Mole', et: 'Adrian Mole' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Adrian’s earnest entries mix adolescent problems with an accidentally revealing view of 1980s Britain.', et: 'Adriani siirad sissekanded ühendavad teismeea mured tahtmatult paljastava pilguga 1980. aastate Suurbritanniale.' },
+        source: { sourceId: 'wikipedia:adrian-mole-intellectual', title: 'Adrian Mole', url: 'https://en.wikipedia.org/wiki/Adrian_Mole', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-056:greg-heffley-journal', factKey: 'literature-language:greg-heffley-middle-school-journal-cartoons', tier: 3, subjectKey: 'character:greg-heffley',
+        clue: { en: 'Which middle-school student fills Jeff Kinney’s illustrated books with accounts of Rowley, family disasters, and schemes for popularity?', et: 'Milline põhikooliõpilane täidab Jeff Kinney illustreeritud raamatud lugudega Rowleyst, pereäpardustest ja populaarsuse saavutamise plaanidest?' }, response: { en: 'Greg Heffley', et: 'Greg Heffley' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Greg insists he is keeping a journal rather than a diary, but his drawings and self-serving narration reveal more than he intends.', et: 'Greg rõhutab, et peab märkmikku, mitte päevikut, kuid joonistused ja ennast õigustav jutustus paljastavad rohkem, kui ta soovib.' },
+        source: { sourceId: 'wikipedia:greg-heffley-journal', title: 'Greg Heffley', url: 'https://en.wikipedia.org/wiki/Greg_Heffley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-056:cassandra-mortmain-castle', factKey: 'literature-language:cassandra-mortmain-journal-crumbling-castle', tier: 4, subjectKey: 'character:cassandra-mortmain',
+        clue: { en: 'Which seventeen-year-old narrator records life with her eccentric, impoverished family in a crumbling English castle in I Capture the Castle?', et: 'Milline 17-aastane jutustaja jäädvustab romaanis „Ma vallutan lossi“ oma ekstsentrilise ja vaese perekonna elu lagunevas Inglise lossis?' }, response: { en: 'Cassandra Mortmain', et: 'Cassandra Mortmain' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Cassandra fills three notebooks as new American neighbours upset the family’s isolation and her understanding of love.', et: 'Cassandra täidab kolm märkmikku, kui uued Ameerika naabrid raputavad perekonna eraldatust ja tema arusaama armastusest.' },
+        source: { sourceId: 'wikipedia:cassandra-mortmain-castle', title: 'Cassandra Mortmain', url: 'https://en.wikipedia.org/wiki/Cassandra_Mortmain', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-056:georgia-nicolson-angus', factKey: 'literature-language:georgia-nicolson-teen-diaries-angus', tier: 5, subjectKey: 'character:georgia-nicolson',
+        clue: { en: 'Which British teenager narrates Louise Rennison’s comic series beginning with Angus, Thongs and Full-Frontal Snogging?', et: 'Milline Briti teismeline jutustab Louise Rennisoni koomilist raamatusarja, mis algab teosega „Poisid, stringid ja ogar kass“?' }, response: { en: 'Georgia Nicolson', et: 'Georgia Nicolson' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Georgia’s slang-filled entries follow her friends, family, enormous cat Angus, and frequently chaotic romantic plans.', et: 'Georgia slängirohked sissekanded jälgivad sõpru, peret, hiiglaslikku kassi Angust ja alatasa kaootilisi armuplaanisid.' },
+        source: { sourceId: 'wikipedia:georgia-nicolson-angus', title: 'Georgia Nicolson', url: 'https://en.wikipedia.org/wiki/Georgia_Nicolson', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const LITERATURE_LANGUAGE_CATEGORIES = validatePlayableCorpus(
