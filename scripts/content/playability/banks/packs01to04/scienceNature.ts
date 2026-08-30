@@ -1935,6 +1935,402 @@ const rawCategories = [
       },
     ],
   },
+  {
+    categorySetId: 'built-in-science-nature-set-055', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Bodies That Grow Back', et: 'Kehaosad, mis kasvavad tagasi' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-055:lizard-tail-regrowth', factKey: 'science-nature:lizard-tail-regrowth', tier: 1, subjectKey: 'animal:lizard',
+        clue: { en: 'Which familiar scaly reptile can escape a predator by shedding its tail and later growing a replacement?', et: 'Milline tuttav soomuseline roomaja võib kiskja eest pääsemiseks saba maha jätta ja hiljem uue kasvatada?' }, response: { en: 'a lizard', et: 'sisalik' }, acceptedVariants: { en: ['lizard'], et: ['sisalikud'] },
+        explanation: { en: 'Many species can release the tail at a built-in weak point; the replacement contains cartilage rather than a copy of every original structure.', et: 'Paljud liigid võivad saba kindlast murdekohast lahti lasta; asendussabas on algsete luude täpse koopia asemel kõhr.' },
+        source: { sourceId: 'wikipedia:lizard-tail-regrowth', title: 'Lizard', url: 'https://en.wikipedia.org/wiki/Lizard', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-055:crab-limb-autotomy', factKey: 'science-nature:crab-limb-autotomy', tier: 2, subjectKey: 'animal:crab',
+        clue: { en: 'Which clawed crustacean can deliberately drop an injured leg at a joint and replace it over later moults?', et: 'Milline sõrgadega koorikloom võib vigastatud jala liigesest tahtlikult loovutada ja kasvatada selle järgnevate kestumiste käigus tagasi?' }, response: { en: 'a crab', et: 'krabi' }, acceptedVariants: { en: ['crab'], et: ['krabid'] },
+        explanation: { en: 'Limb loss at a specialised break point limits damage, while a small replacement limb develops and enlarges during successive moults.', et: 'Jäseme kaotus erilise murdekoha kaudu piirab vigastust ning väike asendusjalg areneb ja suureneb järgnevate kestumistega.' },
+        source: { sourceId: 'wikipedia:autotomy-crustaceans', title: 'Autotomy', url: 'https://en.wikipedia.org/wiki/Autotomy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-055:sea-star-arm-regeneration', factKey: 'science-nature:sea-star-arm-regeneration', tier: 3, subjectKey: 'animal:sea-star',
+        clue: { en: 'Which five-rayed marine animal can regrow a lost arm, and in some species rebuild a whole body when part of the central disc remains?', et: 'Milline viie kiirega mereloom võib kaotatud kiire tagasi kasvatada ning mõnel liigil taastada kogu keha, kui alles jääb osa keskkettast?' }, response: { en: 'a sea star', et: 'meritäht' }, acceptedVariants: { en: ['starfish'], et: ['meritähed'] },
+        explanation: { en: 'Regenerative ability varies among species, but rebuilding arms is widespread in this group of echinoderms.', et: 'Taastumisvõime erineb liigiti, kuid kiirte tagasikasvatamine on selles okasnahksete rühmas levinud.' },
+        source: { sourceId: 'wikipedia:starfish-regeneration', title: 'Starfish', url: 'https://en.wikipedia.org/wiki/Starfish', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-055:axolotl-limb-regeneration', factKey: 'science-nature:axolotl-limb-regeneration', tier: 4, subjectKey: 'animal:axolotl',
+        clue: { en: 'Which Mexican salamander, famous for keeping its feathery external gills as an adult, can regenerate limbs and parts of several organs?', et: 'Milline Mehhiko salamander, kes säilitab täiskasvanuna sulgjad välislõpused, suudab taastada jäsemeid ja mitme elundi osi?' }, response: { en: 'the axolotl', et: 'aksolotl' }, acceptedVariants: { en: ['an axolotl', 'axolotl'], et: ['Mehhiko aksolotl'] },
+        explanation: { en: 'Its unusual healing can rebuild complex tissues without the heavy scarring typical of mammalian wounds.', et: 'Tema ebatavaline paranemine suudab taastada keerukaid kudesid ilma imetajate haavadele omase tugeva armistumiseta.' },
+        source: { sourceId: 'wikipedia:axolotl-regeneration', title: 'Axolotl', url: 'https://en.wikipedia.org/wiki/Axolotl', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-055:planarian-whole-body-regeneration', factKey: 'science-nature:planarian-whole-body-regeneration', tier: 5, subjectKey: 'animal:planarian',
+        clue: { en: 'Which flatworm used in laboratory studies can rebuild a complete animal from a body fragment through its abundant stem cells?', et: 'Milline laboriuuringutes kasutatav lameuss võib tänu rohketele tüvirakkudele taastada kehatükist tervikliku looma?' }, response: { en: 'a planarian', et: 'planaar' }, acceptedVariants: { en: ['planarian'], et: ['planaaria', 'planaarid'] },
+        explanation: { en: 'Planarians contain neoblast stem cells that can produce the many specialised cell types needed to replace missing tissues.', et: 'Planaaridel on neoblastidest tüvirakud, millest võivad tekkida puuduvate kudede taastamiseks vajalikud eri rakutüübid.' },
+        source: { sourceId: 'wikipedia:planarian-regeneration', title: 'Planarian', url: 'https://en.wikipedia.org/wiki/Planarian', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-056', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Ancient Lineages Still Living', et: 'Tänini elavad iidsed liinid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-056:ginkgo-fan-leaves', factKey: 'science-nature:ginkgo-fan-leaves', tier: 1, subjectKey: 'plant:ginkgo',
+        clue: { en: 'Which tree with fan-shaped leaves is the only living species in a plant group known from fossils hundreds of millions of years old?', et: 'Milline lehvikukujuliste lehtedega puu on ainus tänapäevane liik taimerühmas, mida tuntakse sadade miljonite aastate vanustest fossiilidest?' }, response: { en: 'ginkgo', et: 'hõlmikpuu' }, acceptedVariants: { en: ['Ginkgo biloba', 'maidenhair tree'], et: ['kahehõlmaline hõlmikpuu', 'Ginkgo biloba'] },
+        explanation: { en: 'Ginkgo biloba has no close living relatives, although its wider lineage was once much more diverse.', et: 'Kahehõlmalisel hõlmikpuul pole lähedasi elavaid sugulasi, kuigi tema laiem arenguliin oli kunagi palju mitmekesisem.' },
+        source: { sourceId: 'wikipedia:ginkgo-ancient-lineage', title: 'Ginkgo biloba', url: 'https://en.wikipedia.org/wiki/Ginkgo_biloba', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-056:horseshoe-crab-ancient-arthropod', factKey: 'science-nature:horseshoe-crab-ancient-arthropod', tier: 2, subjectKey: 'animal:horseshoe-crab',
+        clue: { en: 'Which helmet-shelled coastal arthropod is more closely related to spiders than true crabs and has an ancestry extending far into the Palaeozoic?', et: 'Milline kiivrikujulise kilbiga ranniku lülijalgne on lähem sugulane ämblikele kui päriskrabidele ning pärineb kaugest paleosoikumist?' }, response: { en: 'a horseshoe crab', et: 'odasaba' }, acceptedVariants: { en: ['horseshoe crab'], et: ['Atlandi odasaba'] },
+        explanation: { en: 'Despite its common name, it belongs among chelicerates alongside spiders and scorpions rather than among crustacean crabs.', et: 'Nimetusest hoolimata kuulub ta koos ämblike ja skorpionidega lõugtundlaste, mitte koorikloomadest krabide hulka.' },
+        source: { sourceId: 'wikipedia:horseshoe-crab-lineage', title: 'Horseshoe crab', url: 'https://en.wikipedia.org/wiki/Horseshoe_crab', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-056:nautilus-chambered-shell', factKey: 'science-nature:nautilus-chambered-shell', tier: 3, subjectKey: 'animal:nautilus',
+        clue: { en: 'Which many-tentacled cephalopod controls its buoyancy with gas and liquid in the chambers of a coiled external shell?', et: 'Milline rohkete kombitsatega peajalgne reguleerib ujuvust gaasi ja vedelikuga oma keerdunud väliskesta kambrites?' }, response: { en: 'a nautilus', et: 'laevuke' }, acceptedVariants: { en: ['nautilus'], et: ['nautilus'] },
+        explanation: { en: 'Unlike its shell-less octopus and squid relatives, it retains a chambered outer shell resembling those of many extinct cephalopods.', et: 'Erinevalt kestata kaheksajalgadest ja kalmaaridest on tal kambriline väliskest, mis sarnaneb paljude väljasurnud peajalgsete omaga.' },
+        source: { sourceId: 'wikipedia:nautilus-chambered-shell', title: 'Nautilus', url: 'https://en.wikipedia.org/wiki/Nautilus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-056:coelacanth-lobed-fins', factKey: 'science-nature:coelacanth-lobed-fins', tier: 4, subjectKey: 'animal:coelacanth',
+        clue: { en: 'Which deep-water lobe-finned fish stunned scientists when a living specimen was identified in 1938 after its group was known mainly from fossils?', et: 'Milline süvaveeline sagaruimne kala üllatas teadlasi, kui 1938. aastal tuvastati elus isend rühmast, mida tunti peamiselt fossiilide järgi?' }, response: { en: 'the coelacanth', et: 'latimeeria' }, acceptedVariants: { en: ['a coelacanth', 'coelacanth'], et: ['vihtuim'] },
+        explanation: { en: 'Modern coelacanths are not unchanged ancestors of land vertebrates, but surviving members of an old lobe-finned branch.', et: 'Tänapäeva latimeeriad pole maismaaselgroogsete muutumatud esivanemad, vaid vana sagaruimsete haru säilinud liikmed.' },
+        source: { sourceId: 'wikipedia:coelacanth-rediscovery', title: 'Coelacanth', url: 'https://en.wikipedia.org/wiki/Coelacanth', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-056:tuatara-new-zealand-reptile', factKey: 'science-nature:tuatara-new-zealand-reptile', tier: 5, subjectKey: 'animal:tuatara',
+        clue: { en: 'Which New Zealand reptile resembles a familiar small scaly reptile but is the sole survivor of a separate order whose relatives flourished in the age of dinosaurs?', et: 'Milline Uus-Meremaa roomaja meenutab tuttavat väikest soomuselist roomajat, kuid on ainsana säilinud eraldi seltsist, mille sugulased õitsesid dinosauruste ajastul?' }, response: { en: 'the tuatara', et: 'tuataara' }, acceptedVariants: { en: ['a tuatara', 'tuatara'], et: ['hateeria'] },
+        explanation: { en: 'It belongs to Rhynchocephalia, a branch separate from its familiar lookalikes and otherwise known only from extinct forms.', et: 'Ta kuulub nokkpealiste hulka, mis on tema tuttavatest sarnastest loomadest eraldi haru ja mida muidu tuntakse vaid väljasurnud vormidena.' },
+        source: { sourceId: 'wikipedia:tuatara-lineage', title: 'Tuatara', url: 'https://en.wikipedia.org/wiki/Tuatara', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-057', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Animal Architects', et: 'Loomadest ehitusmeistrid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-057:spider-silk-web', factKey: 'science-nature:spider-silk-web', tier: 1, subjectKey: 'animal:spider',
+        clue: { en: 'Which eight-legged hunter spins silk into an orb-shaped trap that catches flying insects?', et: 'Milline kaheksajalgne kütt koob siidist rattakujulise püünise, mis püüab lendavaid putukaid?' }, response: { en: 'a spider', et: 'ämblik' }, acceptedVariants: { en: ['spider'], et: ['ämblikud'] },
+        explanation: { en: 'Many species build webs from several kinds of silk, combining strong support threads with sticky capture spirals.', et: 'Paljud liigid ehitavad võrgu mitut liiki siidist, ühendades tugevad tuginiidid kleepuva püüdspiraaliga.' },
+        source: { sourceId: 'wikipedia:spider-web-construction', title: 'Spider web', url: 'https://en.wikipedia.org/wiki/Spider_web', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-057:beaver-river-dam', factKey: 'science-nature:beaver-river-dam', tier: 2, subjectKey: 'animal:beaver',
+        clue: { en: 'Which large rodent fells trees and piles wood and mud across streams, creating a protective pond around its lodge?', et: 'Milline suur näriline langetab puid ning kuhjab ojale puitu ja muda, tekitades oma kuhilpesa ümber kaitsva tiigi?' }, response: { en: 'a beaver', et: 'kobras' }, acceptedVariants: { en: ['beaver'], et: ['koprad'] },
+        explanation: { en: 'Its dams slow flowing water, expand wetland habitat, and give the lodge an underwater entrance.', et: 'Tema tammid aeglustavad voolu, laiendavad märgala ning annavad kuhilpesale veealuse sissepääsu.' },
+        source: { sourceId: 'wikipedia:beaver-dam-builder', title: 'Beaver', url: 'https://en.wikipedia.org/wiki/Beaver', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-057:termite-ventilated-mound', factKey: 'science-nature:termite-ventilated-mound', tier: 3, subjectKey: 'animal:termite',
+        clue: { en: 'Which social insect colony can build a towering soil mound whose passages help ventilate the nest below?', et: 'Millise ühiselulise putuka koloonia võib rajada kõrge mullakuhila, mille käigud aitavad selle all olevat pesa õhutada?' }, response: { en: 'termites', et: 'termiidid' }, acceptedVariants: { en: ['a termite colony'], et: ['termiidikoloonia'] },
+        explanation: { en: 'The mound is an environmental-control structure around the colony, not simply a solid heap in which every chamber lies.', et: 'Kuhil on kolooniat ümbritsev keskkonda reguleeriv ehitis, mitte lihtsalt täismass, kus paiknevad kõik kambrid.' },
+        source: { sourceId: 'wikipedia:termite-mound-ventilation', title: 'Termite', url: 'https://en.wikipedia.org/wiki/Termite', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-057:weaverbird-woven-nest', factKey: 'science-nature:weaverbird-woven-nest', tier: 4, subjectKey: 'bird:weaverbird',
+        clue: { en: 'Which bird group earns its name by knotting and weaving strips of grass into hanging nests, often with a narrow entrance?', et: 'Milline linnurühm on saanud nime selle järgi, et sõlmib ja põimib rohuribasid rippuvaks pesaks, millel on sageli kitsas sissepääs?' }, response: { en: 'weaverbirds', et: 'kangurlinnud' }, acceptedVariants: { en: ['weaver birds', 'weavers'], et: ['kangurlind'] },
+        explanation: { en: 'Males of many species construct elaborate woven nests that females inspect when choosing a mate.', et: 'Paljude liikide isaslinnud ehitavad keerukaid põimitud pesi, mida emaslinnud paarilise valikul hindavad.' },
+        source: { sourceId: 'wikipedia:weaverbird-woven-nests', title: 'Ploceidae', url: 'https://en.wikipedia.org/wiki/Ploceidae', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-057:bowerbird-display-structure', factKey: 'science-nature:bowerbird-display-structure', tier: 5, subjectKey: 'bird:bowerbird',
+        clue: { en: 'Which Australasian bird decorates a ground display structure with colourful objects to impress a mate, although that structure is not its nest?', et: 'Milline Australaasia lind kaunistab paarilise võlumiseks maapinnal asuvat mänguplatsi värviliste esemetega, kuigi see ehitis pole tema pesa?' }, response: { en: 'a bowerbird', et: 'lehtlalind' }, acceptedVariants: { en: ['bowerbird'], et: ['lehtlalinnud'] },
+        explanation: { en: 'The male arranges a courtship display called a bower; the female builds the actual nest elsewhere.', et: 'Isaslind rajab pulmamänguks lehtla, kuid emaslind ehitab tegeliku pesa mujale.' },
+        source: { sourceId: 'wikipedia:bowerbird-display', title: 'Bowerbird', url: 'https://en.wikipedia.org/wiki/Bowerbird', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-058', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Epic Animal Journeys', et: 'Loomade suured ränded' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-058:salmon-return-spawning-river', factKey: 'science-nature:salmon-return-spawning-river', tier: 1, subjectKey: 'animal:salmon',
+        clue: { en: 'Which fish grows in the ocean but famously swims upstream to reproduce in the freshwater system where it began life?', et: 'Milline kala kasvab meres, kuid ujub tuntud kombel vastuvoolu tagasi mageveekogusse, kus tema elu algas, et seal kudeda?' }, response: { en: 'salmon', et: 'lõhe' }, acceptedVariants: { en: ['a salmon'], et: ['lõhed'] },
+        explanation: { en: 'Many species use smell and other cues to home to their natal river before spawning.', et: 'Paljud liigid leiavad lõhna ja teiste vihjete abil üles sünnijõe ning koevad seal.' },
+        source: { sourceId: 'wikipedia:salmon-run-homing', title: 'Salmon run', url: 'https://en.wikipedia.org/wiki/Salmon_run', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-058:monarch-multigeneration-migration', factKey: 'science-nature:monarch-multigeneration-migration', tier: 2, subjectKey: 'insect:monarch-butterfly',
+        clue: { en: 'Which orange-and-black butterfly makes a remarkable migration between Mexico and northern North America that takes several generations to complete?', et: 'Milline oranži-mustakirju liblikas sooritab tähelepanuväärse rände Mehhiko ja Põhja-Ameerika põhjaosa vahel, mille läbimiseks kulub mitu põlvkonda?' }, response: { en: 'the monarch butterfly', et: 'monarhliblikas' }, acceptedVariants: { en: ['a monarch', 'monarch butterfly'], et: ['monarh'] },
+        explanation: { en: 'No single individual completes the full annual round trip; descendants continue stages of the route.', et: 'Ükski isend ei läbi kogu aastast edasi-tagasi teekonda, vaid marsruudi etappe jätkavad tema järglased.' },
+        source: { sourceId: 'wikipedia:monarch-butterfly-migration', title: 'Monarch butterfly migration', url: 'https://en.wikipedia.org/wiki/Monarch_butterfly_migration', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-058:humpback-seasonal-migration', factKey: 'science-nature:humpback-seasonal-migration', tier: 3, subjectKey: 'animal:humpback-whale',
+        clue: { en: 'Which whale with long flippers and complex songs travels between cold, food-rich feeding grounds and warmer breeding waters?', et: 'Milline pikkade rinnauimede ja keerukate lauludega vaal rändab külmade toidurikaste toitumisalade ning soojemate sigimisvete vahel?' }, response: { en: 'the humpback whale', et: 'küürvaal' }, acceptedVariants: { en: ['a humpback', 'humpback whale'], et: ['küürvaalad'] },
+        explanation: { en: 'Seasonal movement separates productive high-latitude feeding from breeding and calving in warmer seas.', et: 'Hooajaline ränne eraldab saagirohke kõrgemate laiuste toitumise sigimisest ja poegimisest soojemates meredes.' },
+        source: { sourceId: 'wikipedia:humpback-whale-migration', title: 'Humpback whale', url: 'https://en.wikipedia.org/wiki/Humpback_whale', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-058:arctic-tern-polar-summers', factKey: 'science-nature:arctic-tern-polar-summers', tier: 4, subjectKey: 'bird:arctic-tern',
+        clue: { en: 'Which small seabird experiences two polar summers by travelling each year between breeding grounds in the far north and waters near Antarctica?', et: 'Milline väike merelind kogeb kaht polaarsuve, rännates igal aastal kaugel põhjas asuvate pesitsusalade ja Antarktika-lähedaste vete vahel?' }, response: { en: 'the Arctic tern', et: 'randtiir' }, acceptedVariants: { en: ['an Arctic tern', 'Arctic tern'], et: ['randtiirud'] },
+        explanation: { en: 'Its winding ocean route links Arctic breeding areas with productive southern waters during the opposite season.', et: 'Tema looklev meretee ühendab Arktika pesitsusalad lõunapoolsete saagirikaste vetega vastaspoole aastaajal.' },
+        source: { sourceId: 'wikipedia:arctic-tern-migration', title: 'Arctic tern', url: 'https://en.wikipedia.org/wiki/Arctic_tern', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-058:red-crab-island-migration', factKey: 'science-nature:red-crab-island-migration', tier: 5, subjectKey: 'animal:christmas-island-red-crab',
+        clue: { en: 'Which bright land crustacean leaves the forests of Christmas Island in huge numbers when the wet season begins and marches to the sea to spawn?', et: 'Milline ere maismaal elav koorikloom lahkub märja aastaaja alguses massiliselt Jõulusaare metsadest ja marsib merre kudema?' }, response: { en: 'the Christmas Island red crab', et: 'Jõulusaare punakrabi' }, acceptedVariants: { en: ['a Christmas Island red crab', 'red crab'], et: ['punakrabi'] },
+        explanation: { en: 'The synchronized journey can cover roads and settlements as adults move from inland burrows to the coast.', et: 'Sünkroonne teekond kulgeb üle teede ja asulate, kui täiskasvanud liiguvad sisemaa urgudest rannikule.' },
+        source: { sourceId: 'wikipedia:christmas-island-red-crab-migration', title: 'Christmas Island red crab', url: 'https://en.wikipedia.org/wiki/Christmas_Island_red_crab', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-059', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Plants That Trap Prey', et: 'Saaki püüdvad taimed' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-059:venus-flytrap-snap-trap', factKey: 'science-nature:venus-flytrap-snap-trap', tier: 1, subjectKey: 'plant:venus-flytrap',
+        clue: { en: 'Which famous carnivorous plant snaps two hinged leaf lobes shut after prey touches its trigger hairs?', et: 'Milline kuulus putuktoiduline taim sulgeb kaks liigendiga lehehõlma, kui saak puudutab selle tundekarvu?' }, response: { en: 'the Venus flytrap', et: 'Veenuse kärbsepüünis' }, acceptedVariants: { en: ['a Venus flytrap', 'Venus flytrap'], et: ['kärbsepüünis'] },
+        explanation: { en: 'Repeated stimulation closes the trap quickly, helping the plant distinguish moving prey from a stray raindrop.', et: 'Korduv ärritus sulgeb püünise kiiresti ning aitab taimel eristada liikuvat saaki juhuslikust vihmapiisast.' },
+        source: { sourceId: 'wikipedia:venus-flytrap-snap-trap', title: 'Venus flytrap', url: 'https://en.wikipedia.org/wiki/Venus_flytrap', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-059:pitcher-plant-pitfall', factKey: 'science-nature:pitcher-plant-pitfall', tier: 2, subjectKey: 'plant:pitcher-plant',
+        clue: { en: 'Which carnivorous plant turns a leaf into a deep slippery cup where insects fall into digestive fluid?', et: 'Milline putuktoiduline taim muudab lehe sügavaks libedaks kannuks, kus putukad kukuvad seedevedelikku?' }, response: { en: 'a pitcher plant', et: 'kannutaim' }, acceptedVariants: { en: ['pitcher plant'], et: ['kannutaimed'] },
+        explanation: { en: 'Nectar attracts visitors to the rim, while the smooth inner surface and downward-pointing hairs hinder escape.', et: 'Nektar meelitab külastajad servale, kuid sile sisepind ja allapoole suunatud karvad takistavad põgenemist.' },
+        source: { sourceId: 'wikipedia:pitcher-plant-pitfall', title: 'Pitcher plant', url: 'https://en.wikipedia.org/wiki/Pitcher_plant', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-059:sundew-sticky-tentacles', factKey: 'science-nature:sundew-sticky-tentacles', tier: 3, subjectKey: 'plant:sundew',
+        clue: { en: 'Which small bog plant catches insects on glistening sticky drops held by red-tipped leaf tentacles?', et: 'Milline väike rabataim püüab putukaid lehe punakatel kombitsatel säravate kleepuvate tilkadega?' }, response: { en: 'a sundew', et: 'huulhein' }, acceptedVariants: { en: ['sundew'], et: ['huulheinad'] },
+        explanation: { en: 'The leaf can bend around trapped prey, increasing contact with glands that release digestive enzymes.', et: 'Leht võib püütud saagi ümber kaarduda ning suurendada kokkupuudet seedeensüüme eritavate näärmetega.' },
+        source: { sourceId: 'wikipedia:sundew-sticky-tentacles', title: 'Drosera', url: 'https://en.wikipedia.org/wiki/Drosera', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-059:bladderwort-suction-traps', factKey: 'science-nature:bladderwort-suction-traps', tier: 4, subjectKey: 'plant:bladderwort',
+        clue: { en: 'Which aquatic carnivorous plant uses tiny underwater bladders that open like suction traps when minute animals touch a trigger?', et: 'Milline vees kasvav putuktoiduline taim kasutab tillukesi veealuseid põiekesi, mis pisilooma puudutusel imipüünisena avanevad?' }, response: { en: 'bladderwort', et: 'vesihernes' }, acceptedVariants: { en: ['a bladderwort'], et: ['vesiherned'] },
+        explanation: { en: 'A pressure difference pulls water and prey through the trapdoor in a rapid capture movement.', et: 'Rõhkude erinevus tõmbab vee ja saagi kiire liigutusega läbi püünise ukse.' },
+        source: { sourceId: 'wikipedia:bladderwort-suction-traps', title: 'Utricularia', url: 'https://en.wikipedia.org/wiki/Utricularia', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-059:butterwort-sticky-leaves', factKey: 'science-nature:butterwort-sticky-leaves', tier: 5, subjectKey: 'plant:butterwort',
+        clue: { en: 'Which carnivorous plant has greasy-looking flat leaves that work like flypaper and curl slightly around captured insects?', et: 'Millisel putuktoidulisel taimel on rasvaselt läikivad lamedad lehed, mis toimivad kärbsepaberina ja kaarduvad veidi püütud putuka ümber?' }, response: { en: 'butterwort', et: 'võipätakas' }, acceptedVariants: { en: ['a butterwort'], et: ['võipätakad'] },
+        explanation: { en: 'One set of glands produces sticky mucilage, while another releases enzymes that digest nutrients from the prey.', et: 'Ühed näärmed toodavad kleepuvat lima, teised aga eritavad ensüüme, mis vabastavad saagist toitaineid.' },
+        source: { sourceId: 'wikipedia:butterwort-sticky-leaves', title: 'Pinguicula', url: 'https://en.wikipedia.org/wiki/Pinguicula', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-060', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'The Working Parts of Blood', et: 'Vere töötavad koostisosad' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-060:red-blood-cells-oxygen', factKey: 'science-nature:red-blood-cells-oxygen', tier: 1, subjectKey: 'blood:red-blood-cell',
+        clue: { en: 'Which disc-shaped cells carry oxygen from the lungs and give blood most of its red colour?', et: 'Millised kettakujulised rakud kannavad kopsudest hapnikku ja annavad verele suurema osa punasest värvusest?' }, response: { en: 'red blood cells', et: 'punalibled' }, acceptedVariants: { en: ['erythrocytes'], et: ['erütrotsüüdid', 'punased verelibled'] },
+        explanation: { en: 'Their flexible biconcave shape provides a large exchange surface and lets them squeeze through narrow capillaries.', et: 'Nende paindlik kaksiknõgus kuju annab suure vahetuspinna ja võimaldab liikuda läbi kitsaste kapillaaride.' },
+        source: { sourceId: 'wikipedia:red-blood-cell-oxygen', title: 'Red blood cell', url: 'https://en.wikipedia.org/wiki/Red_blood_cell', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-060:white-blood-cells-defence', factKey: 'science-nature:white-blood-cells-defence', tier: 2, subjectKey: 'blood:white-blood-cell',
+        clue: { en: 'Which broad class of blood cells includes immune defenders that engulf microbes or coordinate targeted attacks?', et: 'Millisesse laia vererakkude rühma kuuluvad immuunkaitsjad, kes neelavad mikroobe või juhivad täpselt suunatud rünnakuid?' }, response: { en: 'white blood cells', et: 'valgelibled' }, acceptedVariants: { en: ['leukocytes', 'white blood corpuscles'], et: ['leukotsüüdid', 'valged verelibled'] },
+        explanation: { en: 'The group contains several cell types with different roles in innate and adaptive immunity.', et: 'Rühm hõlmab mitut rakutüüpi, millel on kaasasündinud ja omandatud immuunsuses erinevad ülesanded.' },
+        source: { sourceId: 'wikipedia:white-blood-cell-defence', title: 'White blood cell', url: 'https://en.wikipedia.org/wiki/White_blood_cell', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-060:platelets-form-clot', factKey: 'science-nature:platelets-form-clot', tier: 3, subjectKey: 'blood:platelet',
+        clue: { en: 'Which tiny cell fragments gather at a damaged blood vessel and help start a clot that seals the break?', et: 'Millised tillukesed rakufragmendid kogunevad kahjustatud veresoone juurde ja aitavad käivitada rebendit sulgeva hüübe tekke?' }, response: { en: 'platelets', et: 'vereliistakud' }, acceptedVariants: { en: ['thrombocytes'], et: ['trombotsüüdid'] },
+        explanation: { en: 'They stick to the damaged surface, activate one another, and support the protein reactions that stabilise a clot.', et: 'Nad kinnituvad kahjustatud pinnale, aktiveerivad üksteist ning toetavad hüüvet stabiliseerivaid valgureaktsioone.' },
+        source: { sourceId: 'wikipedia:platelet-blood-clot', title: 'Platelet', url: 'https://en.wikipedia.org/wiki/Platelet', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-060:blood-plasma-liquid', factKey: 'science-nature:blood-plasma-liquid', tier: 4, subjectKey: 'blood:plasma',
+        clue: { en: 'What straw-coloured liquid portion carries blood cells along with dissolved nutrients, hormones, proteins, and wastes?', et: 'Milline õlgkollane vedel osa kannab vererakke ning selles lahustunud toitaineid, hormoone, valke ja jääkaineid?' }, response: { en: 'blood plasma', et: 'vereplasma' }, acceptedVariants: { en: ['plasma'], et: ['plasma'] },
+        explanation: { en: 'It is mostly water but also transports salts and many proteins, including antibodies and clotting factors.', et: 'See koosneb peamiselt veest, kuid kannab ka sooli ja paljusid valke, sealhulgas antikehi ja hüübimisfaktoreid.' },
+        source: { sourceId: 'wikipedia:blood-plasma-liquid', title: 'Blood plasma', url: 'https://en.wikipedia.org/wiki/Blood_plasma', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-060:haemoglobin-binds-oxygen', factKey: 'science-nature:haemoglobin-binds-oxygen', tier: 5, subjectKey: 'protein:haemoglobin',
+        clue: { en: 'Which iron-containing protein inside red cells binds oxygen reversibly and changes to a brighter red when loaded?', et: 'Milline punaliblede rauasisaldusega valk seob hapnikku pöörduvalt ning muutub hapnikuga seotuna erepunasemaks?' }, response: { en: 'haemoglobin', et: 'hemoglobiin' }, acceptedVariants: { en: ['hemoglobin'], et: ['verepigment hemoglobiin'] },
+        explanation: { en: 'Each molecule has iron-bearing haem groups that collect oxygen in the lungs and release it in tissues.', et: 'Igal molekulil on rauda sisaldavad heemirühmad, mis seovad kopsudes hapnikku ja vabastavad selle kudedes.' },
+        source: { sourceId: 'wikipedia:haemoglobin-oxygen-binding', title: 'Hemoglobin', url: 'https://en.wikipedia.org/wiki/Hemoglobin', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-061', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Layers Above Earth', et: 'Kihid Maa kohal' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-061:troposphere-weather-layer', factKey: 'science-nature:troposphere-weather-layer', tier: 1, subjectKey: 'atmosphere:troposphere',
+        clue: { en: 'What lowest atmospheric layer contains most of the air and nearly all ordinary weather?', et: 'Milline atmosfääri alumine kiht sisaldab suuremat osa õhust ja peaaegu kõiki tavapäraseid ilmanähtusi?' }, response: { en: 'the troposphere', et: 'troposfäär' }, acceptedVariants: { en: ['troposphere'], et: ['troposfääri kiht'] },
+        explanation: { en: 'It touches Earth’s surface, and its temperature generally decreases with height.', et: 'See ulatub maapinnani ning temperatuur langeb selles üldjuhul kõrguse kasvades.' },
+        source: { sourceId: 'wikipedia:troposphere-weather-layer', title: 'Troposphere', url: 'https://en.wikipedia.org/wiki/Troposphere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-061:stratosphere-ozone-layer', factKey: 'science-nature:stratosphere-ozone-layer', tier: 2, subjectKey: 'atmosphere:stratosphere',
+        clue: { en: 'Which calm layer above most weather contains the ozone region that absorbs much of the Sun’s ultraviolet radiation?', et: 'Milline enamiku ilmade kohal asuv rahulik kiht sisaldab osoonirikast piirkonda, mis neelab suure osa Päikese ultraviolettkiirgusest?' }, response: { en: 'the stratosphere', et: 'stratosfäär' }, acceptedVariants: { en: ['stratosphere'], et: ['stratosfääri kiht'] },
+        explanation: { en: 'Absorption by ozone warms its upper part, so temperature rises with height through much of the layer.', et: 'Osooni neeldumine soojendab kihi ülaosa, mistõttu temperatuur tõuseb suures osas kihist kõrguse kasvades.' },
+        source: { sourceId: 'wikipedia:stratosphere-ozone-region', title: 'Stratosphere', url: 'https://en.wikipedia.org/wiki/Stratosphere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-061:mesosphere-meteors-burn', factKey: 'science-nature:mesosphere-meteors-burn', tier: 3, subjectKey: 'atmosphere:mesosphere',
+        clue: { en: 'In which middle atmospheric layer do most incoming meteors glow and break apart as they strike denser air?', et: 'Millises atmosfääri keskmises kihis hakkab enamik saabuvaid meteoore tihedamasse õhku jõudes helendama ja lagunema?' }, response: { en: 'the mesosphere', et: 'mesosfäär' }, acceptedVariants: { en: ['mesosphere'], et: ['mesosfääri kiht'] },
+        explanation: { en: 'It lies above the ozone-bearing region and becomes extremely cold near its upper boundary.', et: 'See paikneb osoonirikka piirkonna kohal ning muutub ülemise piiri lähedal äärmiselt külmaks.' },
+        source: { sourceId: 'wikipedia:mesosphere-meteors', title: 'Mesosphere', url: 'https://en.wikipedia.org/wiki/Mesosphere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-061:thermosphere-aurora-orbits', factKey: 'science-nature:thermosphere-aurora-orbits', tier: 4, subjectKey: 'atmosphere:thermosphere',
+        clue: { en: 'Which very thin upper layer includes the orbit of the International Space Station and grows hotter as it absorbs energetic solar radiation?', et: 'Millises väga hõredas ülakihis tiirleb rahvusvaheline kosmosejaam ning temperatuur tõuseb suure energiaga päikesekiirguse neeldumisel?' }, response: { en: 'the thermosphere', et: 'termosfäär' }, acceptedVariants: { en: ['thermosphere'], et: ['termosfääri kiht'] },
+        explanation: { en: 'Sparse atoms absorb energetic solar radiation, producing high measured temperatures despite very little heat content.', et: 'Hõredad aatomid neelavad Päikese suure energiaga kiirgust, mistõttu mõõdetud temperatuur on kõrge, kuigi soojushulk on väike.' },
+        source: { sourceId: 'wikipedia:thermosphere-aurora', title: 'Thermosphere', url: 'https://en.wikipedia.org/wiki/Thermosphere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-061:exosphere-outer-fringe', factKey: 'science-nature:exosphere-outer-fringe', tier: 5, subjectKey: 'atmosphere:exosphere',
+        clue: { en: 'What outermost atmospheric fringe gradually fades into interplanetary space because its particles are so far apart?', et: 'Milline atmosfääri välimine hõre ala hajub järk-järgult planeetidevahelisse ruumi, sest selle osakesed paiknevad üksteisest väga kaugel?' }, response: { en: 'the exosphere', et: 'eksosfäär' }, acceptedVariants: { en: ['exosphere'], et: ['eksosfääri kiht'] },
+        explanation: { en: 'Particles can travel long distances without collisions, and some escape Earth’s gravity entirely.', et: 'Osakesed võivad kokkupõrgeteta läbida pikki vahemaid ning osa neist pääseb Maa gravitatsioonist täielikult.' },
+        source: { sourceId: 'wikipedia:exosphere-outer-layer', title: 'Exosphere', url: 'https://en.wikipedia.org/wiki/Exosphere', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-062', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Weather Falling from the Sky', et: 'Taevast langev ilm' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-062:rain-liquid-drops', factKey: 'science-nature:rain-liquid-drops', tier: 1, subjectKey: 'precipitation:rain',
+        clue: { en: 'What common precipitation reaches the ground as liquid water drops rather than ice crystals?', et: 'Milline tavaline sademeliik jõuab maapinnale vedelate veepiiskade, mitte jääkristallidena?' }, response: { en: 'rain', et: 'vihm' }, acceptedVariants: { en: ['rainfall'], et: ['vihmasadu'] },
+        explanation: { en: 'Cloud droplets merge until they are heavy enough to fall while temperatures remain above freezing.', et: 'Pilvepiisad ühinevad, kuni muutuvad langemiseks piisavalt raskeks, ning temperatuur püsib üle külmumispunkti.' },
+        source: { sourceId: 'wikipedia:rain-liquid-precipitation', title: 'Rain', url: 'https://en.wikipedia.org/wiki/Rain', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-062:drizzle-fine-droplets', factKey: 'science-nature:drizzle-fine-droplets', tier: 2, subjectKey: 'precipitation:drizzle',
+        clue: { en: 'What light precipitation falls as very fine liquid droplets, often from a low grey cloud, and seems gentler than an ordinary shower?', et: 'Milline nõrk sademeliik langeb väga peente vedelate piiskadena, sageli madalast hallist pilvest, ning tundub tavalisest sajust leebem?' }, response: { en: 'drizzle', et: 'uduvihm' }, acceptedVariants: { en: ['a drizzle'], et: ['tibutamine'] },
+        explanation: { en: 'Its droplets are smaller than those in ordinary showers and can remain closely packed in the air.', et: 'Selle piisad on tavalise saju omadest väiksemad ja võivad õhus tihedalt paikneda.' },
+        source: { sourceId: 'wikipedia:drizzle-fine-droplets', title: 'Drizzle', url: 'https://en.wikipedia.org/wiki/Drizzle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-062:hail-thunderstorm-ice-balls', factKey: 'science-nature:hail-thunderstorm-ice-balls', tier: 3, subjectKey: 'precipitation:hail',
+        clue: { en: 'What balls or lumps of layered ice grow inside strong thunderstorm updraughts before falling to the ground?', et: 'Millised kihilise jää kuulid või tükid kasvavad tugeva äikesepilve tõusvates õhuvooludes enne maapinnale langemist?' }, response: { en: 'hail', et: 'rahe' }, acceptedVariants: { en: ['hailstones'], et: ['raheterad', 'rahesadu'] },
+        explanation: { en: 'Repeated lifting through supercooled droplets adds shells of ice until gravity overcomes the storm’s updraught.', et: 'Korduv tõstmine läbi allajahtunud piiskade lisab jääkihte, kuni raskusjõud ületab pilve tõusva õhuvoolu.' },
+        source: { sourceId: 'wikipedia:hail-thunderstorm-ice', title: 'Hail', url: 'https://en.wikipedia.org/wiki/Hail', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-062:sleet-rain-snow-mix', factKey: 'science-nature:sleet-rain-snow-mix', tier: 4, subjectKey: 'precipitation:sleet',
+        clue: { en: 'In British and Estonian usage, what wet precipitation mixes partly melted flakes with liquid drops?', et: 'Milline märg sademeliik koosneb osaliselt sulanud lumehelveste ja vihmapiiskade segust?' }, response: { en: 'sleet', et: 'lörts' }, acceptedVariants: { en: ['rain and snow mixed'], et: ['lörtsisadu'] },
+        explanation: { en: 'It forms near the freezing point when falling flakes melt only partly before reaching the surface.', et: 'See tekib külmumispunkti lähedal, kui langevad helbed sulavad enne maapinnale jõudmist vaid osaliselt.' },
+        source: { sourceId: 'wikipedia:sleet-rain-snow-mix', title: 'Rain and snow mixed', url: 'https://en.wikipedia.org/wiki/Rain_and_snow_mixed', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-062:freezing-rain-ice-glaze', factKey: 'science-nature:freezing-rain-ice-glaze', tier: 5, subjectKey: 'precipitation:freezing-rain',
+        clue: { en: 'What liquid precipitation freezes on contact with a sub-zero road or branch and coats it in a smooth glaze of ice?', et: 'Milline vedel sademeliik külmub kokkupuutel miinuskraadise tee või oksaga ning katab selle sileda jääkihiga?' }, response: { en: 'freezing rain', et: 'jäävihm' }, acceptedVariants: { en: ['freezing rainfall'], et: ['jäätuv vihm'] },
+        explanation: { en: 'Supercooled drops remain liquid in the air but solidify when they strike a sufficiently cold surface.', et: 'Allajahtunud piisad püsivad õhus vedelana, kuid tahkuvad piisavalt külma pinda tabades.' },
+        source: { sourceId: 'wikipedia:freezing-rain-glaze', title: 'Freezing rain', url: 'https://en.wikipedia.org/wiki/Freezing_rain', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-063', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Seeds on the Move', et: 'Seemned teel' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-063:dandelion-wind-parachute', factKey: 'science-nature:dandelion-wind-parachute', tier: 1, subjectKey: 'plant:dandelion',
+        clue: { en: 'Which familiar yellow-flowered plant sends each seed aloft beneath a white parachute of fine hairs?', et: 'Milline tuttav kollaste õitega taim saadab iga seemne lendu peente valgete karvade langevarju all?' }, response: { en: 'a dandelion', et: 'võilill' }, acceptedVariants: { en: ['dandelion'], et: ['harilik võilill'] },
+        explanation: { en: 'The hair-like pappus slows the seed’s fall and lets moving air carry it away from the parent plant.', et: 'Karvadest lendkarv aeglustab seemne langemist ja laseb õhuvoolul selle emataimest eemale kanda.' },
+        source: { sourceId: 'wikipedia:dandelion-wind-dispersal', title: 'Taraxacum', url: 'https://en.wikipedia.org/wiki/Taraxacum', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-063:coconut-floating-seed', factKey: 'science-nature:coconut-floating-seed', tier: 2, subjectKey: 'plant:coconut-palm',
+        clue: { en: 'Which palm’s buoyant, fibrous fruit can survive seawater and carry its seed to a distant tropical shore?', et: 'Millise palmi ujuv kiuline vili võib merevees vastu pidada ja viia seemne kaugele troopilisele rannale?' }, response: { en: 'the coconut palm', et: 'kookospalm' }, acceptedVariants: { en: ['a coconut', 'coconut'], et: ['kookospähkel'] },
+        explanation: { en: 'The thick husk protects the seed and traps air, making ocean transport possible.', et: 'Paks kest kaitseb seemet ja hoiab õhku kinni, võimaldades sellel meritsi levida.' },
+        source: { sourceId: 'wikipedia:coconut-water-dispersal', title: 'Coconut', url: 'https://en.wikipedia.org/wiki/Coconut', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-063:burdock-hooked-burs', factKey: 'science-nature:burdock-hooked-burs', tier: 3, subjectKey: 'plant:burdock',
+        clue: { en: 'Which plant disperses hooked burs by fastening them to animal fur and famously inspired the hook-and-loop fastener?', et: 'Milline taim levitab konksulisi vilikondi loomakarvade külge kinnitudes ning inspireeris takjakinnise leiutamist?' }, response: { en: 'burdock', et: 'takjas' }, acceptedVariants: { en: ['a burdock'], et: ['takjad'] },
+        explanation: { en: 'Tiny hooks on the dry flower heads hitch a ride on animals or clothing before dropping elsewhere.', et: 'Kuivanud õisikute tillukesed konksud haakuvad looma või riiete külge ja kukuvad hiljem uues paigas maha.' },
+        source: { sourceId: 'wikipedia:burdock-hooked-burs', title: 'Arctium', url: 'https://en.wikipedia.org/wiki/Arctium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-063:mistletoe-sticky-seeds-birds', factKey: 'science-nature:mistletoe-sticky-seeds-birds', tier: 4, subjectKey: 'plant:mistletoe',
+        clue: { en: 'Which tree-dwelling parasitic plant relies on birds to spread sticky berry seeds onto new branches?', et: 'Milline puudel kasvav parasiittaim kasutab linde, et levitada kleepuvaid marjaseemneid uutele okstele?' }, response: { en: 'mistletoe', et: 'puuvõõrik' }, acceptedVariants: { en: ['a mistletoe'], et: ['harilik puuvõõrik'] },
+        explanation: { en: 'Birds eat the fruit or wipe the clinging seeds from their bills, leaving seeds attached to suitable host bark.', et: 'Linnud söövad vilju või pühivad nokale kleepunud seemned maha, jättes need sobiva peremeespuu koorele.' },
+        source: { sourceId: 'wikipedia:mistletoe-sticky-seeds', title: 'Mistletoe', url: 'https://en.wikipedia.org/wiki/Mistletoe', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-063:squirting-cucumber-explosive-fruit', factKey: 'science-nature:squirting-cucumber-explosive-fruit', tier: 5, subjectKey: 'plant:squirting-cucumber',
+        clue: { en: 'Which Mediterranean plant ejects its seeds in a jet of liquid when its pressurised ripe fruit breaks from the stalk?', et: 'Milline Vahemere taim paiskab seemned vedelikujoaga laiali, kui surve all küps vili varre küljest lahti murdub?' }, response: { en: 'the squirting cucumber', et: 'pritskurk' }, acceptedVariants: { en: ['squirting cucumber'], et: ['pritsiv kurk'] },
+        explanation: { en: 'Pressure inside the fruit drives an explosive launch that scatters seeds away from the parent.', et: 'Vilja sisemine rõhk põhjustab plahvatusliku paiskumise, mis hajutab seemned emataimest eemale.' },
+        source: { sourceId: 'wikipedia:squirting-cucumber-dispersal', title: 'Ecballium elaterium', url: 'https://en.wikipedia.org/wiki/Ecballium_elaterium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-095', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Masters of Disguise', et: 'Maskeerumise meistrid' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-095:stick-insect-twig-mimicry', factKey: 'science-nature:stick-insect-twig-mimicry', tier: 1, subjectKey: 'insect:stick-insect',
+        clue: { en: 'Which long, narrow insect avoids notice by resembling a twig and may sway as though moved by the wind?', et: 'Milline pikk ja sale putukas jääb märkamatuks, sest meenutab oksaraagu ning võib kõikuda nagu tuules liikuv oks?' }, response: { en: 'a stick insect', et: 'raagsirk' }, acceptedVariants: { en: ['stick insect', 'walking stick'], et: ['raagritsikas', 'raagsirklane'] },
+        explanation: { en: 'Its body shape, colour, and slow movement make it difficult for visual predators to separate from vegetation.', et: 'Keha kuju, värvus ja aeglane liikumine raskendavad nägemise järgi jahtival kiskjal tema eristamist taimestikust.' },
+        source: { sourceId: 'wikipedia:stick-insect-camouflage', title: 'Phasmatodea', url: 'https://en.wikipedia.org/wiki/Phasmatodea', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-095:snowshoe-hare-seasonal-coat', factKey: 'science-nature:snowshoe-hare-seasonal-coat', tier: 2, subjectKey: 'animal:snowshoe-hare',
+        clue: { en: 'Which North American hare changes from a brown summer coat to white winter fur and has oversized feet for travelling over snow?', et: 'Milline Põhja-Ameerikas elav pikk-kõrv vahetab pruuni suvekarva valge talvekasuka vastu ning liigub lumel ebatavaliselt suurte käppadega?' }, response: { en: 'the snowshoe hare', et: 'ameerika jänes' }, acceptedVariants: { en: ['a snowshoe hare', 'snowshoe hare'], et: ['Lepus americanus'] },
+        explanation: { en: 'Seasonal colour change helps it blend with the ground, while broad hind feet spread its weight on soft snow.', et: 'Hooajaline värvimuutus aitab taustaga sulanduda ning laiad tagakäpad jaotavad raskuse pehmel lumel.' },
+        source: { sourceId: 'wikipedia:snowshoe-hare-seasonal-coat', title: 'Snowshoe hare', url: 'https://en.wikipedia.org/wiki/Snowshoe_hare', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-095:hoverfly-wasp-mimicry', factKey: 'science-nature:hoverfly-wasp-mimicry', tier: 3, subjectKey: 'insect:hoverfly',
+        clue: { en: 'Which harmless fly often wears yellow-and-black bands like a wasp and can remain almost motionless in the air?', et: 'Milline ohutu kärbes kannab sageli herilast meenutavaid kollase-musti vööte ning suudab õhus peaaegu paigal püsida?' }, response: { en: 'a hoverfly', et: 'sirelane' }, acceptedVariants: { en: ['hoverfly', 'flower fly'], et: ['sirelased'] },
+        explanation: { en: 'Resembling a stinging insect can discourage predators even though the fly itself lacks a sting.', et: 'Nõelava putuka meenutamine võib kiskjaid heidutada, kuigi kärbsel endal astelt pole.' },
+        source: { sourceId: 'wikipedia:hoverfly-wasp-mimicry', title: 'Hoverfly', url: 'https://en.wikipedia.org/wiki/Hoverfly', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-095:leaf-tailed-gecko-bark', factKey: 'science-nature:leaf-tailed-gecko-bark', tier: 4, subjectKey: 'animal:leaf-tailed-gecko',
+        clue: { en: 'Which Madagascar reptile has a flattened leaf-like tail and mottled skin fringes that break up its outline against bark?', et: 'Millisel Madagaskari roomajal on lapik lehetaoline saba ja laigulised nahaservad, mis lõhuvad tema kontuuri puukoorel?' }, response: { en: 'a leaf-tailed gecko', et: 'lehtsabageko' }, acceptedVariants: { en: ['leaf-tailed gecko'], et: ['Uroplatus'] },
+        explanation: { en: 'Its colour and ragged body edge can imitate leaves, moss, or bark while it rests motionless by day.', et: 'Värvus ja sakiline kehaserv võivad liikumatult puhkava looma muuta lehtede, sambla või koore sarnaseks.' },
+        source: { sourceId: 'wikipedia:leaf-tailed-gecko-camouflage', title: 'Uroplatus', url: 'https://en.wikipedia.org/wiki/Uroplatus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-095:mimic-octopus-imitates-animals', factKey: 'science-nature:mimic-octopus-imitates-animals', tier: 5, subjectKey: 'animal:mimic-octopus',
+        clue: { en: 'Which Indonesian cephalopod changes posture, movement, and colour to imitate animals such as sea snakes, lionfish, or flatfish?', et: 'Milline Indoneesia peajalgne muudab kehahoiakut, liikumist ja värvust, et jäljendada näiteks meremadusid, tiibkalu või lestalisi?' }, response: { en: 'the mimic octopus', et: 'jäljendav kaheksajalg' }, acceptedVariants: { en: ['a mimic octopus', 'mimic octopus'], et: ['Thaumoctopus mimicus'] },
+        explanation: { en: 'It selects different displays in response to threats, combining flexible anatomy with rapid colour control.', et: 'Ta valib ohu järgi erineva etenduse, ühendades paindliku keha kiire värvimuutusega.' },
+        source: { sourceId: 'wikipedia:mimic-octopus-displays', title: 'Mimic octopus', url: 'https://en.wikipedia.org/wiki/Mimic_octopus', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
+  {
+    categorySetId: 'built-in-science-nature-set-098', batchId: '03-science-nature', packId: 'built-in-science-nature', difficulty: 'medium',
+    name: { en: 'Inside a Flower', et: 'Õie sisemus' },
+    questions: [
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-098:petal-attracts-pollinators', factKey: 'science-nature:petal-attracts-pollinators', tier: 1, subjectKey: 'flower-part:petal',
+        clue: { en: 'What often colourful part surrounds a flower’s reproductive structures and helps advertise nectar or pollen to animals?', et: 'Milline sageli värvikas osa ümbritseb õie sigimisorganeid ning aitab loomadele nektarit või õietolmu reklaamida?' }, response: { en: 'a petal', et: 'kroonleht' }, acceptedVariants: { en: ['petal'], et: ['õie kroonleht'] },
+        explanation: { en: 'Together these structures form the corolla, whose colour, shape, and scent can guide pollinators.', et: 'Koos moodustavad need õiekrooni, mille värv, kuju ja lõhn võivad tolmeldajaid suunata.' },
+        source: { sourceId: 'wikipedia:petal-pollinator-attraction', title: 'Petal', url: 'https://en.wikipedia.org/wiki/Petal', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-098:sepal-protects-bud', factKey: 'science-nature:sepal-protects-bud', tier: 2, subjectKey: 'flower-part:sepal',
+        clue: { en: 'What usually green outer leaf-like part protects a developing flower bud before it opens?', et: 'Milline tavaliselt roheline välimine lehetaoline osa kaitseb arenevat õiepunga enne selle avanemist?' }, response: { en: 'a sepal', et: 'tuppleht' }, acceptedVariants: { en: ['sepal'], et: ['õie tuppleht'] },
+        explanation: { en: 'The complete ring of these protective parts is called the calyx.', et: 'Kõigi nende kaitsvate osade ringi nimetatakse õietupeks.' },
+        source: { sourceId: 'wikipedia:sepal-protects-bud', title: 'Sepal', url: 'https://en.wikipedia.org/wiki/Sepal', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-098:stamen-makes-pollen', factKey: 'science-nature:stamen-makes-pollen', tier: 3, subjectKey: 'flower-part:stamen',
+        clue: { en: 'What male flower organ consists of a supporting filament topped by a pollen-producing anther?', et: 'Milline õie isasorgan koosneb tuginiidist ja selle tipus paiknevast õietolmu tootvast tolmukapeast?' }, response: { en: 'a stamen', et: 'tolmukas' }, acceptedVariants: { en: ['stamen'], et: ['õie tolmukas'] },
+        explanation: { en: 'Pollen develops in the anther and carries the male reproductive cells.', et: 'Õietolm areneb tolmukapeas ning kannab isassugurakke.' },
+        source: { sourceId: 'wikipedia:stamen-pollen-organ', title: 'Stamen', url: 'https://en.wikipedia.org/wiki/Stamen', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-098:stigma-receives-pollen', factKey: 'science-nature:stigma-receives-pollen', tier: 4, subjectKey: 'flower-part:stigma',
+        clue: { en: 'What receptive tip of a flower’s female organ is often sticky so that arriving pollen grains attach to it?', et: 'Milline õie emasorgani vastuvõtlik tipp on sageli kleepuv, et sinna saabuvad õietolmuterad kinnituksid?' }, response: { en: 'the stigma', et: 'emakasuue' }, acceptedVariants: { en: ['a stigma', 'stigma'], et: ['emaka suue'] },
+        explanation: { en: 'Compatible grains can germinate there and grow a pollen tube down through the style.', et: 'Sobivad terad võivad seal idaneda ja kasvatada õietolmutoru läbi emakakaela allapoole.' },
+        source: { sourceId: 'wikipedia:stigma-receives-pollen', title: 'Stigma (botany)', url: 'https://en.wikipedia.org/wiki/Stigma_(botany)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-098:ovary-holds-ovules', factKey: 'science-nature:ovary-holds-ovules', tier: 5, subjectKey: 'flower-part:ovary',
+        clue: { en: 'What swollen basal part of a flower’s female organ contains ovules and often develops into the fruit after fertilisation?', et: 'Milline õie emasorgani paksenenud alaosa sisaldab seemnealgeid ja areneb pärast viljastumist sageli viljaks?' }, response: { en: 'the ovary', et: 'sigimik' }, acceptedVariants: { en: ['a flower ovary', 'ovary'], et: ['õie sigimik'] },
+        explanation: { en: 'Ovules within it can become seeds, while surrounding tissue may mature into the fruit wall.', et: 'Selles olevad seemnealged võivad areneda seemneteks ning ümbritsev kude viljaseinaks.' },
+        source: { sourceId: 'wikipedia:flower-ovary-ovules', title: 'Ovary (botany)', url: 'https://en.wikipedia.org/wiki/Ovary_(botany)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+    ],
+  },
 ] as const satisfies readonly PlayableCategory[];
 
 export const SCIENCE_NATURE_CATEGORIES = validatePlayableCorpus(rawCategories, ASSIGNED_TARGETS.slice(0, rawCategories.length));
