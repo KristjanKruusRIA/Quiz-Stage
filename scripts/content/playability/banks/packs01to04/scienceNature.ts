@@ -842,16 +842,16 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:homeostasis-stable-internal-conditions', title: 'Homeostasis', url: 'https://en.wikipedia.org/wiki/Homeostasis', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-073:pituitary-master-gland', factKey: 'science-nature:pituitary-master-gland', tier: 4, subjectKey: 'organ:pituitary-gland',
-        clue: { en: 'Which pea-sized gland beneath the brain is nicknamed the “master gland” because its hormones regulate several other endocrine glands?', et: 'Millist hernesuurust aju all paiknevat nääret kutsutakse „peanäärmeks”, sest selle hormoonid reguleerivad mitut teist sisenõrenääret?' }, response: { en: 'the pituitary gland', et: 'ajuripats' }, acceptedVariants: { en: ['pituitary'], et: ['hüpofüüs'] },
-        explanation: { en: 'Its secretions influence growth, reproduction, water balance, and the activity of other glands.', et: 'Selle eritised mõjutavad kasvu, paljunemist, veetasakaalu ja teiste näärmete talitlust.' },
-        source: { sourceId: 'wikipedia:pituitary-master-gland', title: 'Pituitary gland', url: 'https://en.wikipedia.org/wiki/Pituitary_gland', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
-      },
-      {
-        key: 'playable-science-nature:built-in-science-nature-set-073:negative-feedback-counteracts-change', factKey: 'science-nature:negative-feedback-counteracts-change', tier: 5, subjectKey: 'mechanism:negative-feedback',
+        key: 'playable-science-nature:built-in-science-nature-set-073:negative-feedback-counteracts-change', factKey: 'science-nature:negative-feedback-counteracts-change', tier: 4, subjectKey: 'mechanism:negative-feedback',
         clue: { en: 'When rising thyroid-hormone levels suppress signals that would produce still more of it, what control mechanism is operating?', et: 'Milline juhtimismehhanism toimib siis, kui kilpnäärmehormooni taseme tõus pärsib signaale, mis paneksid seda hormooni veelgi juurde tootma?' }, response: { en: 'negative feedback', et: 'negatiivne tagasiside' }, acceptedVariants: { en: ['a negative feedback loop'], et: ['negatiivne tagasisideahel'] },
         explanation: { en: 'The response opposes the original change, preventing the regulated quantity from continually moving in one direction.', et: 'Vastus töötab algsele muutusele vastu ja takistab reguleeritaval suurusel lõputult samas suunas liikumast.' },
         source: { sourceId: 'wikipedia:negative-feedback-counteracts-change', title: 'Negative feedback', url: 'https://en.wikipedia.org/wiki/Negative_feedback', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+      },
+      {
+        key: 'playable-science-nature:built-in-science-nature-set-073:pituitary-master-gland', factKey: 'science-nature:pituitary-master-gland', tier: 5, subjectKey: 'organ:pituitary-gland',
+        clue: { en: 'Which pea-sized gland beneath the brain is nicknamed the “master gland” because its hormones regulate several other endocrine glands?', et: 'Millist hernesuurust aju all paiknevat nääret kutsutakse „peanäärmeks”, sest selle hormoonid reguleerivad mitut teist sisenõrenääret?' }, response: { en: 'the pituitary gland', et: 'ajuripats' }, acceptedVariants: { en: ['pituitary'], et: ['hüpofüüs'] },
+        explanation: { en: 'Its secretions influence growth, reproduction, water balance, and the activity of other glands.', et: 'Selle eritised mõjutavad kasvu, paljunemist, veetasakaalu ja teiste näärmete talitlust.' },
+        source: { sourceId: 'wikipedia:pituitary-master-gland', title: 'Pituitary gland', url: 'https://en.wikipedia.org/wiki/Pituitary_gland', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
     ],
   },
@@ -867,7 +867,7 @@ const rawCategories = [
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-074:microbiome-community-genomes', factKey: 'science-nature:microbiome-community-genomes', tier: 2, subjectKey: 'community:microbiome',
-        clue: { en: 'The bacteria, fungi, and other microscopic residents of the human gut, together with their genetic material, are collectively called what?', et: 'Kuidas nimetatakse ühiselt inimese soolestikus elavaid baktereid, seeni ja muid mikroorganisme koos nende geneetilise materjaliga?' }, response: { en: 'the gut microbiome', et: 'soolestiku mikrobioom' }, acceptedVariants: { en: ['gut microbiome', 'intestinal microbiome'], et: ['soolemikrobioom', 'soolestiku mikrobioota'] },
+        clue: { en: 'The bacteria, fungi, and other microscopic residents of the human gut, together with their genetic material, are collectively called what?', et: 'Kuidas nimetatakse ühiselt inimese soolestikus elavaid baktereid, seeni ja muid mikroorganisme koos nende geneetilise materjaliga?' }, response: { en: 'the gut microbiome', et: 'soolestiku mikrobioom' }, acceptedVariants: { en: ['gut microbiome', 'intestinal microbiome'], et: ['soolemikrobioom'] },
         explanation: { en: 'This living community varies between people and interacts with digestion, metabolism, and immunity.', et: 'See eluskooslus on inimestel erinev ning mõjutab seedimist, ainevahetust ja immuunsust.' },
         source: { sourceId: 'wikipedia:gut-microbiome-community', title: 'Gut microbiota', url: 'https://en.wikipedia.org/wiki/Gut_microbiota', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
@@ -879,7 +879,7 @@ const rawCategories = [
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-074:antibiotic-resistance-survival', factKey: 'science-nature:antibiotic-resistance-survival', tier: 4, subjectKey: 'trait:antibiotic-resistance',
-        clue: { en: 'When bacteria evolve so that a medicine intended to kill them no longer works, what public-health problem has developed?', et: 'Milline rahvatervise probleem on tekkinud siis, kui bakterid arenevad nii, et nende hävitamiseks mõeldud ravim enam ei toimi?' }, response: { en: 'antibiotic resistance', et: 'antibiootikumiresistentsus' }, acceptedVariants: { en: ['antibacterial resistance'], et: ['antibiootikumiresistents', 'antibiootikumidele resistentsus'] },
+        clue: { en: 'When bacteria evolve so that a medicine intended to kill them no longer works, what public-health problem has developed?', et: 'Milline rahvatervise probleem on tekkinud siis, kui bakterid arenevad nii, et nende hävitamiseks mõeldud ravim enam ei toimi?' }, response: { en: 'antibiotic resistance', et: 'antibiootikumiresistentsus' }, acceptedVariants: { en: ['antibacterial resistance'], et: ['antibiootikumidele resistentsus'] },
         explanation: { en: 'Drug exposure favours resistant survivors, which can reproduce and spread their protective traits.', et: 'Ravimiga kokkupuude soosib vastupidavaid ellujääjaid, kes võivad paljuneda ja oma kaitseomadusi levitada.' },
         source: { sourceId: 'wikipedia:antibiotic-resistance-survival', title: 'Antimicrobial resistance', url: 'https://en.wikipedia.org/wiki/Antimicrobial_resistance', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
