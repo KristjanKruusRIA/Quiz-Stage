@@ -1195,7 +1195,7 @@ const rawCategories = [
   },
   {
     categorySetId: 'built-in-literature-language-set-018', batchId: '04-literature-language', packId: 'built-in-literature-language', difficulty: 'hard',
-    name: { en: 'Novel Titles Borrowed from Poetry', et: 'Luulest laenatud romaanipealkirjad' },
+    name: { en: 'Novel Titles Borrowed from Earlier Writing', et: 'Varasemast kirjandusest laenatud romaanipealkirjad' },
     questions: [
       {
         key: 'playable-literature-language:built-in-literature-language-set-018:of-mice-men-burns-title', factKey: 'literature-language:of-mice-men-title-from-burns-poem', tier: 1, subjectKey: 'work:of-mice-and-men',
@@ -1331,7 +1331,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-025:tawada-japanese-german', factKey: 'literature-language:tawada-writes-japanese-and-german', tier: 5, subjectKey: 'person:yoko-tawada',
-        clue: { en: 'Which Japanese-born, Berlin-based author writes in both Japanese and German and created the novel translated as Memoirs of a Polar Bear?', et: 'Milline Jaapanis sündinud ja Berliinis elav autor kirjutab nii jaapani kui ka saksa keeles ning lõi romaani, mis ilmus inglise keeles pealkirjaga „Memoirs of a Polar Bear“?' }, response: { en: 'Yoko Tawada', et: 'Yoko Tawada' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which Japanese-born author writes in both Japanese and German and created the novel translated as Memoirs of a Polar Bear?', et: 'Milline Jaapanis sündinud autor kirjutab nii jaapani kui ka saksa keeles ning lõi romaani, mis ilmus inglise keeles pealkirjaga „Memoirs of a Polar Bear“?' }, response: { en: 'Yoko Tawada', et: 'Yoko Tawada' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Tawada makes movement between Japanese and German a central part of her multilingual literary practice.', et: 'Tawada on muutnud jaapani ja saksa keele vahel liikumise oma mitmekeelse kirjanduspraktika keskseks osaks.' },
         source: { sourceId: 'wikipedia:tawada-japanese-german', title: 'Yoko Tawada', url: 'https://en.wikipedia.org/wiki/Yoko_Tawada', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1439,7 +1439,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-071:dulcinea-idealized-aldonza', factKey: 'literature-language:dulcinea-name-for-unseen-aldonza-don-quixote', tier: 5, subjectKey: 'character:dulcinea',
-        clue: { en: 'What courtly name does Don Quixote give the peasant woman Aldonza Lorenzo when he imagines her as the noble lady inspiring his quests?', et: 'Millise õukondliku nime annab don Quijote talunaisele Aldonza Lorenzole, kui kujutleb teda oma rännakuid inspireeriva aadlidaamina?' }, response: { en: 'Dulcinea', et: 'Dulcinea' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'What courtly name does Don Quixote give the peasant woman Aldonza Lorenzo when he imagines her as the noble lady inspiring his quests?', et: 'Millise õukondliku nime annab don Quijote talunaisele Aldonza Lorenzole, kui kujutleb teda oma rännakuid inspireeriva aadlidaamina?' }, response: { en: 'Dulcinea', et: 'Dulcinea' }, acceptedVariants: { en: ['Dulcinea del Toboso'], et: ['Dulcinea del Toboso'] },
         explanation: { en: 'Aldonza never knowingly plays the role; the exalted lady exists mainly inside the knight’s imagination.', et: 'Aldonza ei täida seda rolli teadlikult; ülistatud daam eksisteerib peamiselt rüütli kujutluses.' },
         source: { sourceId: 'wikipedia:dulcinea-idealized-aldonza', title: 'Dulcinea', url: 'https://en.wikipedia.org/wiki/Dulcinea', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1450,28 +1450,28 @@ const rawCategories = [
     name: { en: 'Campus Novels Enrol for Class', et: 'Ülikooliromaanid astuvad loengusse' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-075:lucky-jim-dixon-lecturer', factKey: 'literature-language:lucky-jim-dixon-provincial-university', tier: 1, subjectKey: 'work:lucky-jim',
+        key: 'playable-literature-language:built-in-literature-language-set-075:secret-history-hampden-classics', factKey: 'literature-language:secret-history-hampden-classics-bunny-murder', tier: 1, subjectKey: 'work:the-secret-history',
+        clue: { en: 'Which Donna Tartt novel has Richard Papen join an elite Classics circle at Hampden College and reveal from the outset that the group killed Bunny Corcoran?', et: 'Millises Donna Tartti romaanis liitub Richard Papen Hampdeni kolledži elitaarse antiigiringiga ning avaldab kohe alguses, et rühm tappis Bunny Corcorani?' }, response: { en: 'The Secret History', et: '„The Secret History“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The inverted mystery asks why the students committed the murder and how shared guilt breaks their closed circle.', et: 'Pööratud mõistatus küsib, miks tudengid mõrva sooritasid ja kuidas ühine süü nende suletud ringi lõhub.' },
+        source: { sourceId: 'wikipedia:secret-history-hampden-classics', title: 'The Secret History', url: 'https://en.wikipedia.org/wiki/The_Secret_History', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-075:lucky-jim-dixon-lecturer', factKey: 'literature-language:lucky-jim-dixon-provincial-university', tier: 2, subjectKey: 'work:lucky-jim',
         clue: { en: 'Which Kingsley Amis comedy follows reluctant medieval-history lecturer Jim Dixon as he survives academic pretension at a provincial English university?', et: 'Milline Kingsley Amise komöödia jälgib tõrksat keskajaloo õppejõudu Jim Dixonit, kes püüab Inglismaa provintsiülikoolis akadeemilise eneseupitamise keskel toime tulla?' }, response: { en: 'Lucky Jim', et: '„Lucky Jim“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Dixon’s bad lectures, worse hangover, and rebellion against Professor Welch made the novel a defining campus satire.', et: 'Dixoni kehvad loengud, veel hullem pohmell ja mäss professor Welchi vastu tegid romaanist ülikoolisatiiri klassiku.' },
         source: { sourceId: 'wikipedia:lucky-jim-dixon-lecturer', title: 'Lucky Jim', url: 'https://en.wikipedia.org/wiki/Lucky_Jim', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-075:pnin-waindell-professor', factKey: 'literature-language:pnin-russian-professor-waindell', tier: 2, subjectKey: 'work:pnin',
+        key: 'playable-literature-language:built-in-literature-language-set-075:pnin-waindell-professor', factKey: 'literature-language:pnin-russian-professor-waindell', tier: 3, subjectKey: 'work:pnin',
         clue: { en: 'Which Nabokov novel follows the kind, exiled Russian professor Timofey at fictional Waindell College, where language and custom repeatedly trip him up?', et: 'Milline Nabokovi romaan jälgib heasüdamlikku vene pagulasprofessorit Timofeyd väljamõeldud Waindelli kolledžis, kus keel ja kombed talle alatasa raskusi valmistavad?' }, response: { en: 'Pnin', et: '„Pnin“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Comic misunderstandings surround a lonely scholar whose dignity gradually exceeds the narrator’s mockery.', et: 'Koomilised arusaamatused ümbritsevad üksildast õpetlast, kelle väärikus kasvab lõpuks jutustaja pilkest suuremaks.' },
         source: { sourceId: 'wikipedia:pnin-waindell-professor', title: 'Pnin', url: 'https://en.wikipedia.org/wiki/Pnin', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-075:stoner-farmer-literature', factKey: 'literature-language:stoner-farm-student-becomes-literature-professor', tier: 3, subjectKey: 'work:stoner-john-williams',
+        key: 'playable-literature-language:built-in-literature-language-set-075:stoner-farmer-literature', factKey: 'literature-language:stoner-farm-student-becomes-literature-professor', tier: 4, subjectKey: 'work:stoner-john-williams',
         clue: { en: 'Which John Williams novel follows a Missouri farm son named William who arrives to study agriculture but discovers literature and spends his career teaching it?', et: 'Milline John Williamsi romaan jälgib Missouri talupoega Williamit, kes tuleb õppima põllumajandust, avastab kirjanduse ning pühendab selle õpetamisele kogu karjääri?' }, response: { en: 'Stoner', et: '„Stoner“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'The quiet academic life contains disappointed love, departmental conflict, and a lasting devotion to books.', et: 'Vaikne akadeemiline elu sisaldab pettunud armastust, osakonnakonflikte ja püsivat pühendumist raamatutele.' },
         source: { sourceId: 'wikipedia:stoner-farmer-literature', title: 'Stoner (novel)', url: 'https://en.wikipedia.org/wiki/Stoner_(novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-075:secret-history-hampden-classics', factKey: 'literature-language:secret-history-hampden-classics-bunny-murder', tier: 4, subjectKey: 'work:the-secret-history',
-        clue: { en: 'Which Donna Tartt novel has Richard Papen join an elite Classics circle at Hampden College and reveal from the outset that the group killed Bunny Corcoran?', et: 'Millises Donna Tartti romaanis liitub Richard Papen Hampdeni kolledži elitaarse antiigiringiga ning avaldab kohe alguses, et rühm tappis Bunny Corcorani?' }, response: { en: 'The Secret History', et: '„The Secret History“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'The inverted mystery asks why the students committed the murder and how shared guilt breaks their closed circle.', et: 'Pööratud mõistatus küsib, miks tudengid mõrva sooritasid ja kuidas ühine süü nende suletud ringi lõhub.' },
-        source: { sourceId: 'wikipedia:secret-history-hampden-classics', title: 'The Secret History', url: 'https://en.wikipedia.org/wiki/The_Secret_History', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-075:disgrace-lurie-professor-farm', factKey: 'literature-language:disgrace-david-lurie-loses-post-visits-farm', tier: 5, subjectKey: 'work:disgrace-coetzee',
@@ -1498,22 +1498,22 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:klingon-okrant-star-trek', title: 'Klingon language', url: 'https://en.wikipedia.org/wiki/Klingon_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-084:volapuk-schleyer-international', factKey: 'literature-language:volapuk-schleyer-international-language', tier: 3, subjectKey: 'language:volapuk',
-        clue: { en: 'Which international auxiliary language did German priest Johann Martin Schleyer create in 1879, before Esperanto appeared?', et: 'Millise rahvusvahelise abikeele lõi saksa preester Johann Martin Schleyer 1879. aastal, enne esperanto ilmumist?' }, response: { en: 'Volapük', et: 'volapüki keel' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Schleyer’s constructed language developed an international movement and held conventions during the 1880s.', et: 'Schleyeri tehiskeele ümber tekkis rahvusvaheline liikumine, mis pidas 1880. aastatel ka kongresse.' },
-        source: { sourceId: 'wikipedia:volapuk-schleyer-international', title: 'Volapük', url: 'https://en.wikipedia.org/wiki/Volap%C3%BCk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-084:dothraki-peterson-horse-lords', factKey: 'literature-language:dothraki-developed-by-david-peterson-game-thrones', tier: 4, subjectKey: 'language:dothraki',
+        key: 'playable-literature-language:built-in-literature-language-set-084:dothraki-peterson-horse-lords', factKey: 'literature-language:dothraki-developed-by-david-peterson-game-thrones', tier: 3, subjectKey: 'language:dothraki',
         clue: { en: 'Which language did David J. Peterson develop for the nomadic horse lords encountered by Daenerys in Game of Thrones?', et: 'Millise keele arendas David J. Peterson rändavatest ratsaisandatest rahvale, kellega Daenerys „Troonide mängus“ kohtub?' }, response: { en: 'Dothraki', et: 'dothraki keel' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Peterson expanded the words in George R. R. Martin’s books into a full language for television dialogue.', et: 'Peterson arendas George R. R. Martini raamatutes leidunud sõnad televisioonidialoogi jaoks terviklikuks keeleks.' },
         source: { sourceId: 'wikipedia:dothraki-peterson-horse-lords', title: 'Dothraki language', url: 'https://en.wikipedia.org/wiki/Dothraki_language', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-084:toki-pona-sonja-lang-minimal', factKey: 'literature-language:toki-pona-sonja-lang-minimalist-language', tier: 5, subjectKey: 'language:toki-pona',
+        key: 'playable-literature-language:built-in-literature-language-set-084:toki-pona-sonja-lang-minimal', factKey: 'literature-language:toki-pona-sonja-lang-minimalist-language', tier: 4, subjectKey: 'language:toki-pona',
         clue: { en: 'Which minimalist constructed language by Sonja Lang uses a very small core vocabulary and encourages speakers to break complex ideas into simple parts?', et: 'Milline Sonja Langi minimalistlik tehiskeel kasutab väga väikest põhisõnavara ning suunab kõnelejaid keerukaid mõtteid lihtsateks osadeks jagama?' }, response: { en: 'Toki Pona', et: 'toki pona' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Its limited roots make context and creative combinations essential rather than assigning a separate word to every concept.', et: 'Piiratud tüvede hulk muudab konteksti ja loomingulised ühendid hädavajalikuks, selle asemel et anda igale mõistele eraldi sõna.' },
         source: { sourceId: 'wikipedia:toki-pona-sonja-lang-minimal', title: 'Toki Pona', url: 'https://en.wikipedia.org/wiki/Toki_Pona', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-084:volapuk-schleyer-international', factKey: 'literature-language:volapuk-schleyer-international-language', tier: 5, subjectKey: 'language:volapuk',
+        clue: { en: 'Which international auxiliary language did German priest Johann Martin Schleyer create in 1879, before Esperanto appeared?', et: 'Millise rahvusvahelise abikeele lõi saksa preester Johann Martin Schleyer 1879. aastal, enne esperanto ilmumist?' }, response: { en: 'Volapük', et: 'volapüki keel' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Schleyer’s constructed language developed an international movement and held conventions during the 1880s.', et: 'Schleyeri tehiskeele ümber tekkis rahvusvaheline liikumine, mis pidas 1880. aastatel ka kongresse.' },
+        source: { sourceId: 'wikipedia:volapuk-schleyer-international', title: 'Volapük', url: 'https://en.wikipedia.org/wiki/Volap%C3%BCk', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -1535,7 +1535,7 @@ const rawCategories = [
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-085:hollow-man-dr-fell', factKey: 'literature-language:hollow-man-dr-fell-two-impossible-murders', tier: 3, subjectKey: 'work:the-hollow-man-carr',
-        clue: { en: 'Which John Dickson Carr novel gives Dr Gideon Fell two impossible murders—one in a watched room and one in a snow-covered street without footprints?', et: 'Milline John Dickson Carri romaan annab doktor Gideon Fellile lahendada kaks võimatut mõrva: ühe valvatud toas ja teise lumisel tänaval ilma jalajälgedeta?' }, response: { en: 'The Hollow Man', et: '„The Hollow Man“' }, acceptedVariants: { en: [], et: [] },
+        clue: { en: 'Which John Dickson Carr novel gives Dr Gideon Fell two impossible murders—one in a watched room and one in a snow-covered street without footprints?', et: 'Milline John Dickson Carri romaan annab doktor Gideon Fellile lahendada kaks võimatut mõrva: ühe valvatud toas ja teise lumisel tänaval ilma jalajälgedeta?' }, response: { en: 'The Hollow Man', et: '„The Hollow Man“' }, acceptedVariants: { en: ['The Three Coffins'], et: ['„The Three Coffins“'] },
         explanation: { en: 'The novel pauses for Fell’s celebrated discussion of the main ways locked-room illusions can be constructed.', et: 'Romaan peatub Felli kuulsaks saanud aruteluks peamistest viisidest, kuidas lukustatud toa illusiooni luua.' },
         source: { sourceId: 'wikipedia:hollow-man-dr-fell', title: 'The Hollow Man (Carr novel)', url: 'https://en.wikipedia.org/wiki/The_Hollow_Man_(Carr_novel)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
@@ -1558,34 +1558,34 @@ const rawCategories = [
     name: { en: 'Epidemics Transform the Novel', et: 'Epideemia muudab romaanimaailma' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-086:death-grass-virus', factKey: 'literature-language:death-grass-virus-destroys-crops', tier: 1, subjectKey: 'work:the-death-of-grass',
-        clue: { en: 'Which John Christopher novel follows engineer John Custance through a collapsing England after a virus destroys grasses, including rice and wheat?', et: 'Milline John Christopheri romaan jälgib insener John Custance’i läbi kokkuvariseva Inglismaa pärast seda, kui viirus hävitab kõrrelised, sealhulgas riisi ja nisu?' }, response: { en: 'The Death of Grass', et: '„The Death of Grass“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Crop failure drives famine and anarchy while Custance’s group heads north in search of a defensible refuge.', et: 'Saagi hävimine toob nälja ja anarhia, samal ajal kui Custance’i rühm suundub põhja kaitstavat pelgupaika otsima.' },
-        source: { sourceId: 'wikipedia:death-grass-virus', title: 'The Death of Grass', url: 'https://en.wikipedia.org/wiki/The_Death_of_Grass', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-086:dog-stars-hig-airport', factKey: 'literature-language:dog-stars-hig-post-pandemic-airport', tier: 2, subjectKey: 'work:the-dog-stars',
-        clue: { en: 'Which Peter Heller novel has Hig live with his dog Jasper and the armed Bangley at a Colorado airport after an influenza pandemic?', et: 'Millises Peter Helleri romaanis elab Hig pärast gripipandeemiat Colorado lennuväljal koos koer Jasperi ja relvastatud Bangleyga?' }, response: { en: 'The Dog Stars', et: '„The Dog Stars“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Hig patrols by aircraft until a radio transmission draws him beyond the settlement’s defensive perimeter.', et: 'Hig teeb lennukiga patrull-lende, kuni raadiosõnum meelitab ta asula kaitsepiirist kaugemale.' },
-        source: { sourceId: 'wikipedia:dog-stars-hig-airport', title: 'The Dog Stars', url: 'https://en.wikipedia.org/wiki/The_Dog_Stars', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
-      },
-      {
-        key: 'playable-literature-language:built-in-literature-language-set-086:station-eleven-traveling-symphony', factKey: 'literature-language:station-eleven-georgia-flu-traveling-symphony', tier: 3, subjectKey: 'work:station-eleven',
+        key: 'playable-literature-language:built-in-literature-language-set-086:station-eleven-traveling-symphony', factKey: 'literature-language:station-eleven-georgia-flu-traveling-symphony', tier: 1, subjectKey: 'work:station-eleven',
         clue: { en: 'Which Emily St. John Mandel novel links actor Arthur Leander’s final performance with the Traveling Symphony after the Georgia Flu devastates civilization?', et: 'Milline Emily St. John Mandeli romaan seob näitleja Arthur Leanderi viimase etenduse Rändava Sümfoonia teekonnaga pärast Georgia gripi laastamist?' }, response: { en: 'Station Eleven', et: '„Jaam Üksteist“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'The troupe performs Shakespeare around the Great Lakes, insisting that survival requires more than staying alive.', et: 'Trupp esitab Suure järvistu ümbruses Shakespeare’i, kinnitades, et ellujäämine tähendab enamat kui lihtsalt eluspüsimist.' },
         source: { sourceId: 'wikipedia:station-eleven-traveling-symphony', title: 'Station Eleven', url: 'https://en.wikipedia.org/wiki/Station_Eleven', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-086:oryx-crake-jimmy-pandemic', factKey: 'literature-language:oryx-crake-jimmy-engineered-pandemic', tier: 4, subjectKey: 'work:oryx-and-crake',
+        key: 'playable-literature-language:built-in-literature-language-set-086:oryx-crake-jimmy-pandemic', factKey: 'literature-language:oryx-crake-jimmy-engineered-pandemic', tier: 2, subjectKey: 'work:oryx-and-crake',
         clue: { en: 'Which Margaret Atwood novel leaves Jimmy among genetically altered humanoids after his scientist friend engineers a global pandemic?', et: 'Milline Margaret Atwoodi romaan jätab Jimmy geneetiliselt muudetud inimolendite sekka pärast seda, kui tema teadlasest sõber vallandab üleilmse pandeemia?' }, response: { en: 'Oryx and Crake', et: '„Orüks ja Ruik“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'Jimmy reconstructs the friendship and corporate biotechnology that ended the old world.', et: 'Jimmy taastab mälus sõpruse ja korporatiivse biotehnoloogia loo, mis lõpetas vana maailma.' },
         source: { sourceId: 'wikipedia:oryx-crake-jimmy-pandemic', title: 'Oryx and Crake', url: 'https://en.wikipedia.org/wiki/Oryx_and_Crake', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-086:last-man-lionel-verney', factKey: 'literature-language:last-man-lionel-verney-global-disease', tier: 5, subjectKey: 'work:the-last-man-mary-shelley',
+        key: 'playable-literature-language:built-in-literature-language-set-086:last-man-lionel-verney', factKey: 'literature-language:last-man-lionel-verney-global-disease', tier: 3, subjectKey: 'work:the-last-man-mary-shelley',
         clue: { en: 'Which Mary Shelley novel imagines Lionel Verney surviving a worldwide disease in a future Europe emptied of humanity?', et: 'Milline Mary Shelley romaan kujutab Lionel Verneyd üleilmse haiguse järel ellu jäämas tuleviku-Euroopas, kust inimkond on kadunud?' }, response: { en: 'The Last Man', et: '„The Last Man“' }, acceptedVariants: { en: [], et: [] },
         explanation: { en: 'The early apocalyptic novel turns political hopes and intimate friendships into a long retreat before an unstoppable pandemic.', et: 'Varajane apokalüptiline romaan muudab poliitilised lootused ja lähedased sõprussuhted pikaks taganemiseks peatamatu pandeemia ees.' },
         source: { sourceId: 'wikipedia:last-man-lionel-verney', title: 'The Last Man', url: 'https://en.wikipedia.org/wiki/The_Last_Man', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:dog-stars-hig-airport', factKey: 'literature-language:dog-stars-hig-post-pandemic-airport', tier: 4, subjectKey: 'work:the-dog-stars',
+        clue: { en: 'Which Peter Heller novel has Hig live with his dog Jasper and the armed Bangley at a Colorado airport after an influenza pandemic?', et: 'Millises Peter Helleri romaanis elab Hig pärast gripipandeemiat Colorado lennuväljal koos koer Jasperi ja relvastatud Bangleyga?' }, response: { en: 'The Dog Stars', et: '„The Dog Stars“' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Hig patrols by aircraft until a radio transmission draws him beyond the settlement’s defensive perimeter.', et: 'Hig teeb lennukiga patrull-lende, kuni raadiosõnum meelitab ta asula kaitsepiirist kaugemale.' },
+        source: { sourceId: 'wikipedia:dog-stars-hig-airport', title: 'The Dog Stars', url: 'https://en.wikipedia.org/wiki/The_Dog_Stars', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+      },
+      {
+        key: 'playable-literature-language:built-in-literature-language-set-086:death-grass-virus', factKey: 'literature-language:death-grass-virus-destroys-crops', tier: 5, subjectKey: 'work:the-death-of-grass',
+        clue: { en: 'Which John Christopher novel follows engineer John Custance through a collapsing England after a virus destroys grasses, including rice and wheat?', et: 'Milline John Christopheri romaan jälgib insener John Custance’i läbi kokkuvariseva Inglismaa pärast seda, kui viirus hävitab kõrrelised, sealhulgas riisi ja nisu?' }, response: { en: 'The Death of Grass', et: '„The Death of Grass“' }, acceptedVariants: { en: ['No Blade of Grass'], et: ['„No Blade of Grass“'] },
+        explanation: { en: 'Crop failure drives famine and anarchy while Custance’s group heads north in search of a defensible refuge.', et: 'Saagi hävimine toob nälja ja anarhia, samal ajal kui Custance’i rühm suundub põhja kaitstavat pelgupaika otsima.' },
+        source: { sourceId: 'wikipedia:death-grass-virus', title: 'The Death of Grass', url: 'https://en.wikipedia.org/wiki/The_Death_of_Grass', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
