@@ -904,7 +904,7 @@ Recheck the current learning-log location immediately before appending during pa
 ## [ERR-20260830-C5U] guessed-wikipedia-article-paths
 
 **Logged**: 2026-08-30T19:20:00+03:00
-**Priority**: low
+**Priority**: medium
 **Status**: resolved
 **Area**: content
 
@@ -929,6 +929,38 @@ Probe exact source URLs before authoring and use direct live article pages that 
 
 ### Resolution
 - **Resolved**: 2026-08-30T19:20:00+03:00
-- **Notes**: Replaced them with live direct pages `The_First_Man`, `Atonement_(novel)`, and `Little_Women`; all returned HTTP 200.
+- **Notes**: Replaced them with live direct pages `The_First_Man`, `Atonement_(novel)`, and `Little_Women`; all returned HTTP 200. The same guessing mistake later recurred for `Joad_family`, `The_Long_Earth_(novel)`, and `Bridget_Jones_(character)`; live replacements `The_Grapes_of_Wrath`, `The_Long_Earth`, and `Bridget_Jones` were verified before authoring or committing.
+
+---
+
+## [ERR-20260830-C5V] category-title-answer-leak
+
+**Logged**: 2026-08-30T19:31:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: content
+
+### Summary
+The initial checkpoint-5 set-099 theme repeated the exact English and Estonian response for its first question.
+
+### Error
+```
+Question ...:double-golyadkin leaks its Estonian response in the category title
+```
+
+### Context
+- The corpus validator caught the leak immediately after the first five categories were appended.
+- No commit had been made.
+
+### Suggested Fix
+Run the real validator after each authored category batch and make category themes descriptive without naming any displayed response.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs01to04/literatureLanguage.ts
+
+### Resolution
+- **Resolved**: 2026-08-30T19:31:00+03:00
+- **Notes**: Renamed the category before proceeding; the full doppelgänger category was later replaced with the collision-free `Two Authors, One Novel` / `Kaks autorit, üks romaan` theme during accepted-corpus review.
 
 ---
