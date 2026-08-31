@@ -15093,157 +15093,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-076",
     "name": {
-      "en": "Trust Built from Keys and Proofs",
-      "et": "Võtmetest ja tõenditest ehitatud usaldus"
+      "en": "Home Computers Before the Internet",
+      "et": "Koduarvutid enne internetti"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-076:question:1",
-        "factKey": "built-in-technology-inventions:round1-overlap:algorithm:argon2",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:altair-8800-kit",
         "tier": 1,
-        "subjectKey": "algorithm:argon2",
+        "subjectKey": "computer:altair-8800",
         "clue": {
-          "en": "Which password-hashing algorithm won the Password Hashing Competition and is designed to resist GPU attacks through memory use?",
-          "et": "Milline parooliräsialgoritm võitis Password Hashing Competitioni ning kasutab GPU-rünnete tõrjumiseks palju mälu?"
+          "en": "Which 1975 mail-order microcomputer kit, publicised in Popular Electronics, put rows of switches and lights on the front panel and helped ignite the home-computer hobby?",
+          "et": "Milline 1975. aastal ajakirjas Popular Electronics tutvustatud postimüügist saadav mikroarvutikomplekt pani esipaneelile lülitite ja tulede read ning sütitas koduarvutiharrastuse?"
         },
         "response": {
-          "en": "Argon2",
-          "et": "Argon2"
+          "en": "Altair 8800",
+          "et": "Altair 8800"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["MITS Altair 8800"],
+          "et": ["MITS Altair 8800"]
         },
         "explanation": {
-          "en": "Argon2 provides tunable time, memory, and parallelism costs and has variants for different threat models.",
-          "et": "Argon2 võimaldab seadistada aja-, mälu- ja paralleelsuskulu ning pakub eri ohumudelitele variante."
+          "en": "MITS sold the Altair 8800 as a kit; its publicity drew hobbyists who soon formed clubs and wrote software for it.",
+          "et": "MITS müüs Altair 8800 komplektina; selle tutvustus tõi kokku harrastajaid, kes asutasid peagi klubisid ja kirjutasid masinale tarkvara."
         },
         "source": {
-          "sourceId": "wikipedia:argon2",
-          "title": "Argon2",
-          "url": "https://en.wikipedia.org/wiki/Argon2",
+          "sourceId": "wikipedia:altair-8800",
+          "title": "Altair 8800",
+          "url": "https://en.wikipedia.org/wiki/Altair_8800",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-076:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:security:password-salt",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:trs-80-radioshack",
         "tier": 2,
-        "subjectKey": "security:password-salt",
+        "subjectKey": "computer:trs-80",
         "clue": {
-          "en": "What random value is mixed into each password before hashing to defeat precomputed tables?",
-          "et": "Milline juhuväärtus segatakse enne räsimist iga parooli hulka, et nurjata eelarvutatud tabelid?"
+          "en": "What 1977 Radio Shack machine bundled a keyboard, monitor, and cassette recorder, making a ready-to-use home computer available through ordinary shops?",
+          "et": "Milline 1977. aasta Radio Shacki masin ühendas klaviatuuri, monitori ja kassettmakki ning tegi kasutusvalmis koduarvuti tavapoodides kättesaadavaks?"
         },
         "response": {
-          "en": "salt",
-          "et": "sool"
+          "en": "TRS-80",
+          "et": "TRS-80"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Tandy TRS-80"],
+          "et": ["Tandy TRS-80"]
         },
         "explanation": {
-          "en": "A unique salt makes equal passwords produce different stored hashes.",
-          "et": "Ainulaadne sool paneb ühesugused paroolid andma erinevaid salvestatud räsisid."
+          "en": "The TRS-80 Model I was sold through Radio Shack stores as a complete system, unlike many hobby kits of the period.",
+          "et": "TRS-80 Model I jõudis Radio Shacki poodidesse tervikliku süsteemina, erinevalt paljudest tolle aja harrastajakomplektidest."
         },
         "source": {
-          "sourceId": "wikipedia:salt_(cryptography)",
-          "title": "Salt (cryptography)",
-          "url": "https://en.wikipedia.org/wiki/Salt_(cryptography)",
+          "sourceId": "wikipedia:trs-80",
+          "title": "TRS-80",
+          "url": "https://en.wikipedia.org/wiki/TRS-80",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-076:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:webauthn",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:commodore-64-sales-sid",
         "tier": 3,
-        "subjectKey": "standard:webauthn",
+        "subjectKey": "computer:commodore-64",
         "clue": {
-          "en": "Which web standard lets a site authenticate users with origin-bound public-key credentials instead of shared passwords?",
-          "et": "Milline veebistandard lubab saidil kasutajaid autentida päritoluga seotud avaliku võtme mandaadiga jagatud parooli asemel?"
+          "en": "Which beige 1982 home computer, named for its 64 kilobytes of memory, became a bestseller and is remembered for the distinctive sound of its SID chip?",
+          "et": "Milline 1982. aasta beež koduarvuti, mille nimi viitas 64 kilobaidile mälule, sai menukiks ja on tuntud oma SID-helikiibi iseloomuliku kõla poolest?"
         },
         "response": {
-          "en": "WebAuthn",
-          "et": "WebAuthn"
+          "en": "Commodore 64",
+          "et": "Commodore 64"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["C64"],
+          "et": ["C64"]
         },
         "explanation": {
-          "en": "WebAuthn is part of the FIDO2 project and supports hardware authenticators and platform biometrics.",
-          "et": "WebAuthn kuulub FIDO2 projekti ning toetab nii riistvaralisi autentikaatoreid kui seadme biomeetriat."
+          "en": "The Commodore 64 combined low price, 64 KB of RAM, colourful graphics, and the SID sound chip, helping it become one of the best-selling computers ever.",
+          "et": "Commodore 64 ühendas madala hinna, 64 KB mälu, värvilise graafika ja SID-helikiibi ning kujunes üheks ajaloo enimmüüdud arvutiks."
         },
         "source": {
-          "sourceId": "wikipedia:webauthn",
-          "title": "WebAuthn",
-          "url": "https://en.wikipedia.org/wiki/WebAuthn",
+          "sourceId": "wikipedia:commodore-64",
+          "title": "Commodore 64",
+          "url": "https://en.wikipedia.org/wiki/Commodore_64",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-076:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:security:zero-day",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:zx-spectrum-rubber-keys",
         "tier": 4,
-        "subjectKey": "security:zero-day",
+        "subjectKey": "computer:zx-spectrum",
         "clue": {
-          "en": "What is an exploitable flaw called before its defender has had time to issue a fix?",
-          "et": "Kuidas nimetatakse ärakasutatavat viga enne, kui kaitsja on jõudnud paranduse avaldada?"
+          "en": "Which Sinclair home computer became a British gaming icon with its tiny rubber keys and a name referring to its colour display?",
+          "et": "Milline Sinclairi koduarvuti kujunes Suurbritannia mängukultuuri ikooniks oma pisikeste kummiklaviatuuriklahvide ja värvilisele kuvale viitava nimega?"
         },
         "response": {
-          "en": "zero-day vulnerability",
-          "et": "nullpäeva turvanõrkus"
+          "en": "ZX Spectrum",
+          "et": "ZX Spectrum"
         },
         "acceptedVariants": {
-          "en": [
-            "zero-day"
-          ],
-          "et": [
-            "nullpäev"
-          ]
+          "en": ["Sinclair ZX Spectrum"],
+          "et": ["Sinclair ZX Spectrum"]
         },
         "explanation": {
-          "en": "A zero-day exploit takes advantage of a vulnerability with no available patch.",
-          "et": "Nullpäeva rünne kasutab ära turvanõrkust, millele pole veel parandust."
+          "en": "The ZX Spectrum's low price and recognisable rubber-key model helped create a large market for British home-computer games.",
+          "et": "ZX Spectrumi madal hind ja äratuntav kummiklaviatuuriga mudel aitasid luua suure Briti koduarvutimängude turu."
         },
         "source": {
-          "sourceId": "wikipedia:zero-day_(computing)",
-          "title": "Zero-day (computing)",
-          "url": "https://en.wikipedia.org/wiki/Zero-day_(computing)",
+          "sourceId": "wikipedia:zx-spectrum",
+          "title": "ZX Spectrum",
+          "url": "https://en.wikipedia.org/wiki/ZX_Spectrum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-076:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:security:digital-signature",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:amiga-500-custom-chips",
         "tier": 5,
-        "subjectKey": "security:digital-signature",
+        "subjectKey": "computer:amiga-500",
         "clue": {
-          "en": "Which cryptographic result proves message origin and detects later alteration?",
-          "et": "Milline krüptograafiline tulemus tõendab sõnumi päritolu ning paljastab hilisema muutmise?"
+          "en": "Which 1987 Commodore home computer brought the Amiga's custom graphics and sound chips to a broad audience, later becoming a favourite of demo-scene creators?",
+          "et": "Milline 1987. aasta Commodore'i koduarvuti tõi Amiga kohandatud graafika- ja helikiibid laiema publikuni ning sai hiljem demostseeni loojate lemmikuks?"
         },
         "response": {
-          "en": "digital signature",
-          "et": "digiallkiri"
+          "en": "Amiga 500",
+          "et": "Amiga 500"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Commodore Amiga 500"],
+          "et": ["Commodore Amiga 500"]
         },
         "explanation": {
-          "en": "A digital signature is created with a private key and checked with the corresponding public key.",
-          "et": "Digiallkiri luuakse privaatvõtmega ning kontrollitakse vastava avaliku võtmega."
+          "en": "The Amiga 500 used custom chips for graphics and sound, giving home users unusually strong multimedia capabilities for its time.",
+          "et": "Amiga 500 kasutas graafika ja heli jaoks kohandatud kiipe, pakkudes kodukasutajatele oma aja kohta ebatavaliselt võimsaid multimeediavõimalusi."
         },
         "source": {
-          "sourceId": "wikipedia:digital_signature",
-          "title": "Digital signature",
-          "url": "https://en.wikipedia.org/wiki/Digital_signature",
+          "sourceId": "wikipedia:amiga-500",
+          "title": "Amiga 500",
+          "url": "https://en.wikipedia.org/wiki/Amiga_500",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -15251,161 +15247,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-077",
     "name": {
-      "en": "Circuits That Shape Signals",
-      "et": "Signaale kujundavad ahelad"
+      "en": "Satellites That Changed the View",
+      "et": "Satelliidid, mis muutsid vaadet"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-077:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:mosfet",
+        "factKey": "built-in-technology-inventions:checkpoint6:satellites:hubble-space-telescope",
         "tier": 1,
-        "subjectKey": "component:mosfet",
+        "subjectKey": "spacecraft:hubble-space-telescope",
         "clue": {
-          "en": "Which voltage-controlled transistor dominates modern digital integrated circuits?",
-          "et": "Milline pingega juhitav transistor valitseb tänapäevaseid digitaalseid integraallülitusi?"
+          "en": "Which orbiting observatory, launched in 1990 and later repaired by Space Shuttle astronauts, became famous for deep-field images of distant galaxies?",
+          "et": "Milline 1990. aastal orbiidile saadetud observatoorium, mida süstikute astronaudid hiljem parandasid, sai kuulsaks kaugete galaktikate süvavälja fotode poolest?"
         },
         "response": {
-          "en": "MOSFET",
-          "et": "MOSFET"
+          "en": "Hubble Space Telescope",
+          "et": "Hubble'i kosmoseteleskoop"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Hubble"],
+          "et": ["Hubble"]
         },
         "explanation": {
-          "en": "A MOSFET controls current through an insulated gate with very little steady input current.",
-          "et": "MOSFET juhib voolu isoleeritud paisuga, mis vajab väga vähe püsivat sisendvoolu."
+          "en": "Hubble's position above the atmosphere lets it make sharp observations, and its servicing missions corrected its early mirror problem.",
+          "et": "Hubble'i asukoht atmosfäärist kõrgemal võimaldab teravaid vaatlusi ning hooldusmissioonid parandasid selle varase peeglirikke."
         },
         "source": {
-          "sourceId": "wikipedia:mosfet",
-          "title": "MOSFET",
-          "url": "https://en.wikipedia.org/wiki/MOSFET",
+          "sourceId": "wikipedia:hubble-space-telescope",
+          "title": "Hubble Space Telescope",
+          "url": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-077:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:operational-amplifier",
+        "factKey": "built-in-technology-inventions:checkpoint6:satellites:landsat-1-earth-images",
         "tier": 2,
-        "subjectKey": "component:operational-amplifier",
+        "subjectKey": "satellite:landsat-1",
         "clue": {
-          "en": "Which high-gain differential amplifier is the basis of many analogue circuits?",
-          "et": "Milline suure võimendusega diferentsiaalvõimendi on paljude analoogahelate alus?"
+          "en": "Which 1972 Earth-observation satellite began the long-running programme whose repeated images let scientists track forests, farms, and changing coastlines?",
+          "et": "Milline 1972. aasta Maa vaatlussatelliit alustas pikaajalist programmi, mille korduvate piltide abil jälgitakse metsi, põlde ja muutuvat rannajoont?"
         },
         "response": {
-          "en": "operational amplifier",
-          "et": "operatsioonivõimendi"
+          "en": "Landsat 1",
+          "et": "Landsat 1"
         },
         "acceptedVariants": {
-          "en": [
-            "op-amp"
-          ],
-          "et": [
-            "opvõimendi"
-          ]
+          "en": ["ERTS-1"],
+          "et": ["ERTS-1"]
         },
         "explanation": {
-          "en": "Negative feedback lets an op-amp perform stable amplification, filtering, and mathematical operations.",
-          "et": "Negatiivne tagasiside võimaldab operatsioonivõimendil stabiilselt võimendada, filtreerida ja arvutada."
+          "en": "Landsat 1, first called ERTS-1, supplied multispectral images of Earth and established the Landsat remote-sensing programme.",
+          "et": "Landsat 1, algse nimega ERTS-1, edastas Maa mitmespektrilisi pilte ja pani aluse Landsati kaugseireprogrammile."
         },
         "source": {
-          "sourceId": "wikipedia:operational_amplifier",
-          "title": "Operational amplifier",
-          "url": "https://en.wikipedia.org/wiki/Operational_amplifier",
+          "sourceId": "wikipedia:landsat-1",
+          "title": "Landsat 1",
+          "url": "https://en.wikipedia.org/wiki/Landsat_1",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-077:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:circuit:schmitt-trigger",
+        "factKey": "built-in-technology-inventions:checkpoint6:satellites:telstar-1-live-television",
         "tier": 3,
-        "subjectKey": "circuit:schmitt-trigger",
+        "subjectKey": "satellite:telstar-1",
         "clue": {
-          "en": "Which comparator with hysteresis cleans up a slowly changing or noisy digital input?",
-          "et": "Milline hüstereesiga komparaator puhastab aeglaselt muutuva või mürase digitaalsisendi?"
+          "en": "Which 1962 communications satellite relayed the first live television pictures across the Atlantic, though it could transmit only while in view of ground stations?",
+          "et": "Milline 1962. aasta sidesatelliit vahendas esimesed otseülekande telepildid üle Atlandi, kuid sai edastada vaid siis, kui maajaamad seda nägid?"
         },
         "response": {
-          "en": "Schmitt trigger",
-          "et": "Schmitti triger"
+          "en": "Telstar 1",
+          "et": "Telstar 1"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Telstar"],
+          "et": ["Telstar"]
         },
         "explanation": {
-          "en": "A Schmitt trigger uses different thresholds for rising and falling signals.",
-          "et": "Schmitti triger kasutab tõusvale ja langevale signaalile erinevaid lävesid."
+          "en": "Telstar 1 was an active communications satellite in a low orbit, so its transatlantic relay windows were brief but historic.",
+          "et": "Telstar 1 oli madalal orbiidil töötav sidesatelliit, mistõttu olid selle Atlandi-ülesed edastusaknad lühikesed, kuid ajaloolised."
         },
         "source": {
-          "sourceId": "wikipedia:schmitt_trigger",
-          "title": "Schmitt trigger",
-          "url": "https://en.wikipedia.org/wiki/Schmitt_trigger",
+          "sourceId": "wikipedia:telstar-1",
+          "title": "Telstar 1",
+          "url": "https://en.wikipedia.org/wiki/Telstar_1",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-077:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:component:optocoupler",
+        "factKey": "built-in-technology-inventions:checkpoint6:satellites:tiros-1-weather-images",
         "tier": 4,
-        "subjectKey": "component:optocoupler",
+        "subjectKey": "satellite:tiros-1",
         "clue": {
-          "en": "Which component transfers a signal with light while electrically isolating two circuits?",
-          "et": "Milline komponent edastab signaali valgusega, eraldades samal ajal kaks ahelat elektriliselt?"
+          "en": "Which 1960 spacecraft sent television pictures of cloud cover, proving that a satellite could help weather forecasters see storms from above?",
+          "et": "Milline 1960. aasta kosmoseaparaat edastas pilvekatte telepilte ja tõestas, et satelliit võib aidata ilmaennustajatel torme kõrgelt näha?"
         },
         "response": {
-          "en": "optocoupler",
-          "et": "optoeraldaja"
-        },
-        "acceptedVariants": {
-          "en": [
-            "opto-isolator"
-          ],
-          "et": [
-            "optron"
-          ]
-        },
-        "explanation": {
-          "en": "An optocoupler commonly pairs an LED with a photodetector inside one package.",
-          "et": "Optoeraldaja ühendab tavaliselt ühes korpuses LED-i ja fotodetektori."
-        },
-        "source": {
-          "sourceId": "wikipedia:opto-isolator",
-          "title": "Opto-isolator",
-          "url": "https://en.wikipedia.org/wiki/Opto-isolator",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-077:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:component:crystal-oscillator",
-        "tier": 5,
-        "subjectKey": "component:crystal-oscillator",
-        "clue": {
-          "en": "Which oscillator uses a vibrating quartz crystal as a stable frequency reference?",
-          "et": "Milline ostsillaator kasutab stabiilse sagedusviitena võnkuvat kvartskristalli?"
-        },
-        "response": {
-          "en": "crystal oscillator",
-          "et": "kvartsostsillaator"
+          "en": "TIROS-1",
+          "et": "TIROS-1"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The piezoelectric resonance of quartz gives crystal oscillators high frequency stability.",
-          "et": "Kvartsi piesoelektriline resonants annab kvartsostsillaatorile suure sagedusstabiilsuse."
+          "en": "TIROS-1 was the first successful low-Earth-orbit weather satellite and returned images that revealed cloud systems on a large scale.",
+          "et": "TIROS-1 oli esimene edukas madalal Maa orbiidil töötav ilmasatelliit ning selle pildid näitasid pilvesüsteeme suures ulatuses."
         },
         "source": {
-          "sourceId": "wikipedia:crystal_oscillator",
-          "title": "Crystal oscillator",
-          "url": "https://en.wikipedia.org/wiki/Crystal_oscillator",
+          "sourceId": "wikipedia:tiros-1",
+          "title": "TIROS-1",
+          "url": "https://en.wikipedia.org/wiki/TIROS-1",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-077:question:5",
+        "factKey": "built-in-technology-inventions:checkpoint6:satellites:syncom-3-geostationary-broadcast",
+        "tier": 5,
+        "subjectKey": "satellite:syncom-3",
+        "clue": {
+          "en": "Which 1964 satellite was the first to reach geostationary orbit and carried television coverage of the Tokyo Olympics to the United States?",
+          "et": "Milline 1964. aasta satelliit jõudis esimesena geostatsionaarsele orbiidile ja vahendas Tokyo olümpiamängude telepilti Ameerika Ühendriikidesse?"
+        },
+        "response": {
+          "en": "Syncom 3",
+          "et": "Syncom 3"
+        },
+        "acceptedVariants": {
+          "en": ["Syncom III"],
+          "et": ["Syncom III"]
+        },
+        "explanation": {
+          "en": "Syncom 3 stayed over one point on the equator, a practical breakthrough for continuous communications and Olympic television coverage.",
+          "et": "Syncom 3 püsis ekvaatori kohal ühe punkti kohal, mis oli pideva side ja olümpiatelevisiooni jaoks praktiline läbimurre."
+        },
+        "source": {
+          "sourceId": "wikipedia:syncom-3",
+          "title": "Syncom 3",
+          "url": "https://en.wikipedia.org/wiki/Syncom_3",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -15413,161 +15401,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-078",
     "name": {
-      "en": "Sensors That Turn Physics into Voltage",
-      "et": "Füüsikat pingeks muutvad andurid"
+      "en": "Printing Beyond Ink and Type",
+      "et": "Trükkimine tindist ja kirjatüübist kaugemal"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-078:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:sensor:hall-effect",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:inkjet-droplets",
         "tier": 1,
-        "subjectKey": "sensor:hall-effect",
+        "subjectKey": "printer:inkjet",
         "clue": {
-          "en": "Which sensor detects a magnetic field through a transverse voltage in a conductor?",
-          "et": "Milline andur tuvastab magnetvälja juhis tekkiva ristpinge kaudu?"
+          "en": "What kind of home printer forms letters and images by placing tiny droplets of liquid colour directly on paper?",
+          "et": "Milline koduprinteri tüüp moodustab tähed ja pildid, paigutades paberile imepisikesi vedela värvi tilku?"
         },
         "response": {
-          "en": "Hall-effect sensor",
-          "et": "Halli andur"
+          "en": "inkjet printer",
+          "et": "tindiprinter"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Hall sensors measure position, speed, or current without mechanical contact.",
-          "et": "Halli andur mõõdab asendit, kiirust või voolu ilma mehaanilise kontaktita."
+          "en": "Inkjet printers create an image from controlled droplets of ink, making compact colour printing practical at home.",
+          "et": "Tindiprinter loob pildi juhitavatest tindipiiskadest, mis tegi kompaktse värvitrüki kodus praktiliseks."
         },
         "source": {
-          "sourceId": "wikipedia:hall_effect_sensor",
-          "title": "Hall effect sensor",
-          "url": "https://en.wikipedia.org/wiki/Hall_effect_sensor",
+          "sourceId": "wikipedia:inkjet-printing",
+          "title": "Inkjet printing",
+          "url": "https://en.wikipedia.org/wiki/Inkjet_printing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-078:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:sensor:lidar",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:laser-electrostatic-toner",
         "tier": 2,
-        "subjectKey": "sensor:lidar",
+        "subjectKey": "printer:laser",
         "clue": {
-          "en": "Which instrument times laser reflections to build a three-dimensional distance map?",
-          "et": "Milline seade mõõdab laserpeegelduse aega, et luua kolmemõõtmeline kauguskaart?"
+          "en": "What printer uses a laser to draw an electrostatic image that attracts toner powder before heat fixes it to the page?",
+          "et": "Milline printer kasutab laserit elektrostaatilise kujutise loomiseks, mis tõmbab ligi tooneripulbri, enne kui kuumus selle paberile kinnitab?"
         },
         "response": {
-          "en": "lidar",
-          "et": "lidar"
+          "en": "laser printer",
+          "et": "laserprinter"
         },
         "acceptedVariants": {
-          "en": [
-            "LiDAR"
-          ],
-          "et": [
-            "LiDAR"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Lidar scans many points and is used in surveying, mapping, and autonomous vehicles.",
-          "et": "Lidar skaneerib palju punkte ning seda kasutatakse mõõdistamises, kaardistamises ja isejuhtivates sõidukites."
+          "en": "A laser printer adapts xerographic copying: toner follows an electrically charged image and is fused by heat.",
+          "et": "Laserprinter kohandab kserograafiat: tooner järgib elektrilaenguga kujutist ja kinnitatakse kuumusega."
         },
         "source": {
-          "sourceId": "wikipedia:lidar",
-          "title": "Lidar",
-          "url": "https://en.wikipedia.org/wiki/Lidar",
+          "sourceId": "wikipedia:laser-printing",
+          "title": "Laser printing",
+          "url": "https://en.wikipedia.org/wiki/Laser_printing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-078:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:sensor:thermistor",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:dot-matrix-pins",
         "tier": 3,
-        "subjectKey": "sensor:thermistor",
+        "subjectKey": "printer:dot-matrix",
         "clue": {
-          "en": "Which resistor changes its resistance strongly with temperature?",
-          "et": "Milline takisti muudab temperatuuri mõjul tugevasti oma takistust?"
+          "en": "What noisy printer creates characters by driving a grid of pins through an ink ribbon, a method once common for multipart invoices?",
+          "et": "Milline lärmakas printer moodustab tähemärgid, surudes tihvtide maatriksi läbi tindilindi, ning oli kunagi mitmeosaliste arvete puhul tavaline?"
         },
         "response": {
-          "en": "thermistor",
-          "et": "termistor"
+          "en": "dot-matrix printer",
+          "et": "nõelmaatriksprinter"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Thermistors may have negative or positive temperature coefficients.",
-          "et": "Termistoril võib olla negatiivne või positiivne temperatuuritegur."
+          "en": "Dot-matrix printers use impact pins, so they can press through carbon copies even though their output is coarse and noisy.",
+          "et": "Nõelmaatriksprinter kasutab lööktihvte, mistõttu saab see trükkida läbi kopeerpaberi, kuigi tulemus on jämedam ja mürarikas."
         },
         "source": {
-          "sourceId": "wikipedia:thermistor",
-          "title": "Thermistor",
-          "url": "https://en.wikipedia.org/wiki/Thermistor",
+          "sourceId": "wikipedia:dot-matrix-printing",
+          "title": "Dot matrix printing",
+          "url": "https://en.wikipedia.org/wiki/Dot_matrix_printing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-078:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:sensor:strain-gauge",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:thermal-heat-paper",
         "tier": 4,
-        "subjectKey": "sensor:strain-gauge",
+        "subjectKey": "printer:thermal",
         "clue": {
-          "en": "Which bonded foil sensor changes resistance when a structure stretches?",
-          "et": "Milline liimitud fooliumandur muudab konstruktsiooni venimisel takistust?"
+          "en": "Which printer makes till receipts without ink by heating selected spots on specially coated paper?",
+          "et": "Milline printer teeb kassakviitungid ilma tindita, kuumutades spetsiaalselt kaetud paberil valitud punkte?"
         },
         "response": {
-          "en": "strain gauge",
-          "et": "tensoandur"
+          "en": "thermal printer",
+          "et": "termoprinter"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Strain gauges are often wired in a Wheatstone bridge for sensitive measurement.",
-          "et": "Tensoandurid ühendatakse tundlikuks mõõtmiseks sageli Wheatstone’i silda."
+          "en": "Direct thermal printing darkens a heat-sensitive coating, which is why receipts can fade when exposed to heat or light.",
+          "et": "Otsetermotrükk tumendab kuumatundlikku katet; seepärast võivad kviitungid kuumuse või valguse käes pleekida."
         },
         "source": {
-          "sourceId": "wikipedia:strain_gauge",
-          "title": "Strain gauge",
-          "url": "https://en.wikipedia.org/wiki/Strain_gauge",
+          "sourceId": "wikipedia:thermal-printing",
+          "title": "Thermal printing",
+          "url": "https://en.wikipedia.org/wiki/Thermal_printing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-078:question:5",
-        "factKey": "built-in-technology-inventions:round1-overlap:sensor:avalanche-photodiode",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:plotter-technical-drawings",
         "tier": 5,
-        "subjectKey": "sensor:avalanche-photodiode",
+        "subjectKey": "device:plotter",
         "clue": {
-          "en": "Which light sensor achieves internal gain when photo-generated carriers trigger impact ionisation?",
-          "et": "Milline valgusandur saavutab sisemise võimenduse, kui valguse tekitatud laengukandjad vallandavad põrkeionisatsiooni?"
+          "en": "What output device was once a familiar sight in engineering offices because it moved a pen over paper to draw precise maps and technical plans?",
+          "et": "Milline väljundseade oli inseneribüroodes tavaline, sest liigutas pliiatsit paberil, et joonistada täpseid kaarte ja tehnilisi plaane?"
         },
         "response": {
-          "en": "avalanche photodiode",
-          "et": "laviinfotodiood"
+          "en": "plotter",
+          "et": "plotter"
         },
         "acceptedVariants": {
-          "en": [
-            "APD"
-          ],
-          "et": [
-            "APD"
-          ]
+          "en": ["pen plotter"],
+          "et": ["pliiatsplotter"]
         },
         "explanation": {
-          "en": "An avalanche photodiode operates at high reverse bias and can detect much weaker light than a simple photodiode.",
-          "et": "Laviinfotodiood töötab suure vastupingega ning suudab tavalisest fotodioodist nõrgemat valgust tuvastada."
+          "en": "A plotter makes vector-style line drawings by moving a pen, or later a cutting or printing tool, with computer-controlled precision.",
+          "et": "Plotter teeb vektorilaadseid joonejooniseid, liigutades arvutijuhitult täpselt pliiatsit või hiljem lõike- või printimisvahendit."
         },
         "source": {
-          "sourceId": "wikipedia:avalanche_photodiode",
-          "title": "Avalanche photodiode",
-          "url": "https://en.wikipedia.org/wiki/Avalanche_photodiode",
+          "sourceId": "wikipedia:plotter",
+          "title": "Plotter",
+          "url": "https://en.wikipedia.org/wiki/Plotter",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -15575,161 +15555,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-079",
     "name": {
-      "en": "Engineering the Modern Display",
-      "et": "Tänapäevase ekraani inseneeria"
+      "en": "Technology That Answers an Emergency",
+      "et": "Tehnoloogia hädaolukorras"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-079:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:in-plane-switching",
+        "factKey": "built-in-technology-inventions:checkpoint6:emergency:smoke-detector",
         "tier": 1,
-        "subjectKey": "technology:in-plane-switching",
+        "subjectKey": "device:smoke-detector",
         "clue": {
-          "en": "Which LCD arrangement rotates liquid crystals within the panel plane for wider viewing angles?",
-          "et": "Milline LCD-paigutus pöörab vedelkristalle paneeli tasandis, et anda laiem vaatenurk?"
+          "en": "What ceiling device sounds an alarm when it detects products of a fire, giving people an early warning while they can still escape?",
+          "et": "Milline lakke paigaldatav seade annab tulekahju põlemisprodukte tuvastades häiret, et inimesed jõuaksid varakult põgeneda?"
         },
         "response": {
-          "en": "in-plane switching",
-          "et": "tasapinnaline ümberlülitus"
+          "en": "smoke detector",
+          "et": "suitsuandur"
         },
         "acceptedVariants": {
-          "en": [
-            "IPS"
-          ],
-          "et": [
-            "IPS"
-          ]
+          "en": ["smoke alarm"],
+          "et": ["suitsuanduriga häire"]
         },
         "explanation": {
-          "en": "IPS panels improve colour consistency compared with older twisted-nematic designs.",
-          "et": "IPS-paneel parandab värvi püsivust võrreldes vanema TN-lahendusega."
+          "en": "Smoke detectors commonly sense smoke particles or combustion gases and warn occupants before a fire becomes obvious.",
+          "et": "Suitsuandurid tuvastavad tavaliselt suitsuosakesi või põlemisgaase ja hoiatavad inimesi enne, kui tulekahju muutub silmaga nähtavaks."
         },
         "source": {
-          "sourceId": "wikipedia:ips_panel",
-          "title": "IPS panel",
-          "url": "https://en.wikipedia.org/wiki/IPS_panel",
+          "sourceId": "wikipedia:smoke-detector",
+          "title": "Smoke detector",
+          "url": "https://en.wikipedia.org/wiki/Smoke_detector",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-079:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:material:quantum-dot",
+        "factKey": "built-in-technology-inventions:checkpoint6:emergency:fire-sprinkler-system",
         "tier": 2,
-        "subjectKey": "material:quantum-dot",
+        "subjectKey": "system:fire-sprinkler",
         "clue": {
-          "en": "Which nanoscale semiconductor crystal emits a colour determined by its size?",
-          "et": "Milline nanomõõdus pooljuhtkristall kiirgab oma suurusest sõltuvat värvi?"
+          "en": "What fire-protection system releases water from individual heads when heat opens them, rather than drenching every room at once?",
+          "et": "Milline tulekaitsesüsteem laseb kuumuse toimel vett välja üksikutest peadest, mitte ei uputa korraga kõiki ruume?"
         },
         "response": {
-          "en": "quantum dot",
-          "et": "kvanttäpp"
+          "en": "fire sprinkler",
+          "et": "tuletõrjesprinkler"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Quantum-dot films convert blue light into narrow red and green spectra in displays.",
-          "et": "Kvanttäpikile muudab sinise valguse kitsaks punaseks ja roheliseks spektriks."
+          "en": "A sprinkler system normally activates only heads heated by the fire, delivering water where it is needed first.",
+          "et": "Sprinklersüsteemis rakenduvad tavaliselt ainult tulekahju kuumuse kätte sattunud pead, juhtides vee esmalt õigesse kohta."
         },
         "source": {
-          "sourceId": "wikipedia:quantum_dot_display",
-          "title": "Quantum dot display",
-          "url": "https://en.wikipedia.org/wiki/Quantum_dot_display",
+          "sourceId": "wikipedia:fire-sprinkler-system",
+          "title": "Fire sprinkler system",
+          "url": "https://en.wikipedia.org/wiki/Fire_sprinkler_system",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-079:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:microled",
+        "factKey": "built-in-technology-inventions:checkpoint6:emergency:crash-test-dummy",
         "tier": 3,
-        "subjectKey": "technology:microled",
+        "subjectKey": "test:crash-test-dummy",
         "clue": {
-          "en": "Which display technology builds each pixel from microscopic self-emitting LEDs?",
-          "et": "Milline kuvatehnoloogia ehitab iga piksli mikroskoopilistest isehelendavatest LED-idest?"
+          "en": "What instrumented human-shaped surrogate lets engineers measure forces in a simulated car collision before exposing people to danger?",
+          "et": "Milline anduritega inimesekujuline asendaja võimaldab inseneridel mõõta lavastatud autoavariis jõude enne inimeste ohtu seadmist?"
         },
         "response": {
-          "en": "microLED",
-          "et": "microLED"
+          "en": "crash test dummy",
+          "et": "avariikatse mannekeen"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "MicroLED aims to combine emissive contrast with high brightness and long life.",
-          "et": "microLED ühendab isehelendava ekraani kontrasti suure heleduse ja pika elueaga."
+          "en": "Crash-test dummies carry sensors that record the loads a body would experience, helping designers compare restraint and vehicle designs.",
+          "et": "Avariikatse mannekeenidel on andurid, mis salvestavad kehale mõjuvad koormused ja aitavad võrrelda turvavarustuse ning auto konstruktsioone."
         },
         "source": {
-          "sourceId": "wikipedia:microled",
-          "title": "MicroLED",
-          "url": "https://en.wikipedia.org/wiki/MicroLED",
+          "sourceId": "wikipedia:crash-test-dummy",
+          "title": "Crash test dummy",
+          "url": "https://en.wikipedia.org/wiki/Crash_test_dummy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-079:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:process:electrophoresis-display",
+        "factKey": "built-in-technology-inventions:checkpoint6:emergency:automated-external-defibrillator",
         "tier": 4,
-        "subjectKey": "process:electrophoresis-display",
+        "subjectKey": "device:automated-external-defibrillator",
         "clue": {
-          "en": "Which display moves charged pigment particles through fluid to imitate paper?",
-          "et": "Milline ekraan liigutab laetud pigmendiosakesi vedelikus, et matkida paberit?"
+          "en": "What public-access device analyses a collapsed person's heart rhythm and, when appropriate, tells a bystander to deliver an electric shock?",
+          "et": "Milline avalikus kohas kasutatav seade analüüsib kokku varisenud inimese südamerütmi ja annab vajaduse korral pealtnägijale juhise elektrilöök teha?"
         },
         "response": {
-          "en": "electrophoretic display",
-          "et": "elektroforeetiline ekraan"
-        },
-        "acceptedVariants": {
-          "en": [
-            "e-paper"
-          ],
-          "et": [
-            "e-paber"
-          ]
-        },
-        "explanation": {
-          "en": "Electrophoretic pixels retain an image without continuous power.",
-          "et": "Elektroforeetiline piksel säilitab kujutise pideva elektritoiteta."
-        },
-        "source": {
-          "sourceId": "wikipedia:electronic_paper",
-          "title": "Electronic paper",
-          "url": "https://en.wikipedia.org/wiki/Electronic_paper",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-079:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:measurement:refresh-rate",
-        "tier": 5,
-        "subjectKey": "measurement:refresh-rate",
-        "clue": {
-          "en": "Which hertz value states how often a display updates its image each second?",
-          "et": "Milline hertsides väärtus näitab, mitu korda sekundis ekraan pilti uuendab?"
-        },
-        "response": {
-          "en": "refresh rate",
-          "et": "värskendussagedus"
+          "en": "automated external defibrillator",
+          "et": "automaatne välisdefibrillaator"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Higher refresh rates can make motion look smoother when content supplies enough frames.",
-          "et": "Suurem värskendussagedus muudab liikumise sujuvamaks, kui sisu annab piisavalt kaadreid."
+          "en": "An AED checks the rhythm automatically and uses voice or visual prompts so a trained layperson can respond before emergency crews arrive.",
+          "et": "AED kontrollib rütmi automaatselt ning kasutab hääl- või pildijuhiseid, et väljaõppinud tavainimene saaks tegutseda enne päästjate saabumist."
         },
         "source": {
-          "sourceId": "wikipedia:refresh_rate",
-          "title": "Refresh rate",
-          "url": "https://en.wikipedia.org/wiki/Refresh_rate",
+          "sourceId": "wikipedia:automated-external-defibrillator",
+          "title": "Automated external defibrillator",
+          "url": "https://en.wikipedia.org/wiki/Automated_external_defibrillator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-079:question:5",
+        "factKey": "built-in-technology-inventions:checkpoint6:emergency:jaws-of-life-hydraulic-rescue",
+        "tier": 5,
+        "subjectKey": "tool:jaws-of-life",
+        "clue": {
+          "en": "What informal name is given to the hydraulic cutters and spreaders firefighters use to free people trapped in damaged vehicles?",
+          "et": "Kuidas nimetatakse kõnekeeles hüdraulilisi lõikureid ja avajaid, millega päästjad vabastavad inimesi avariis kahjustatud sõidukitest?"
+        },
+        "response": {
+          "en": "Jaws of Life",
+          "et": "hüdraulilised päästekäärid"
+        },
+        "acceptedVariants": {
+          "en": ["hydraulic rescue tools"],
+          "et": ["Jaws of Life"]
+        },
+        "explanation": {
+          "en": "Jaws of Life is a widely used name for hydraulic rescue tools that cut, spread, or ram apart vehicle structure after a crash.",
+          "et": "Jaws of Life on laialt kasutatav nimetus hüdraulilistele päästetööriistadele, mis lõikavad, avavad või suruvad pärast avariid sõiduki konstruktsiooni lahti."
+        },
+        "source": {
+          "sourceId": "wikipedia:jaws-of-life",
+          "title": "Jaws of Life",
+          "url": "https://en.wikipedia.org/wiki/Jaws_of_Life",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -15737,161 +15709,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-080",
     "name": {
-      "en": "Reliability inside Data Storage",
-      "et": "Andmesalvestuse töökindlus"
+      "en": "Flights That Changed the Future",
+      "et": "Lennud, mis muutsid tulevikku"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-080:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:hard-disk-platter",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:montgolfier-balloon",
         "tier": 1,
-        "subjectKey": "component:hard-disk-platter",
+        "subjectKey": "aircraft:montgolfier-balloon",
         "clue": {
-          "en": "Which rapidly spinning coated disk stores magnetic bits inside a hard drive?",
-          "et": "Milline kiiresti pöörlev kaetud ketas talletab kõvaketta sees magnetbitte?"
+          "en": "What did the Montgolfier brothers send aloft over France in 1783, opening the era of human flight with heated air?",
+          "et": "Mille saatsid vennad Montgolfier'd 1783. aastal kuuma õhu abil Prantsusmaa kohal taevasse, avades inimlennunduse ajastu?"
         },
         "response": {
-          "en": "hard-disk platter",
-          "et": "kõvakettaplaat"
+          "en": "Montgolfier balloon",
+          "et": "Montgolfier' õhupall"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Read-write heads fly extremely close above each platter surface.",
-          "et": "Lugemis-kirjutuspead lendavad kõvakettaplaadi pinnale äärmiselt lähedal."
+          "en": "The Montgolfiers demonstrated that heated air could lift a large balloon, and the first free human flight followed later in 1783.",
+          "et": "Vennad Montgolfier'd näitasid, et kuum õhk võib suure õhupalli üles tõsta, ning esimene vaba inimlend järgnes samal aastal."
         },
         "source": {
-          "sourceId": "wikipedia:hard_disk_drive",
-          "title": "Hard disk drive",
-          "url": "https://en.wikipedia.org/wiki/Hard_disk_drive",
+          "sourceId": "wikipedia:montgolfier-brothers",
+          "title": "Montgolfier brothers",
+          "url": "https://en.wikipedia.org/wiki/Montgolfier_brothers",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-080:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:memory:nand-flash",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:graf-zeppelin-circumnavigation",
         "tier": 2,
-        "subjectKey": "memory:nand-flash",
+        "subjectKey": "airship:graf-zeppelin",
         "clue": {
-          "en": "Which non-volatile memory arranges cells for dense storage in SSDs and cards?",
-          "et": "Milline säilmälu paigutab elemendid SSD-de ja kaartide tihedaks salvestuseks?"
+          "en": "Which German airship completed a round-the-world journey in 1929 and made its name a symbol of the great rigid airships?",
+          "et": "Milline Saksa dirižaabel tegi 1929. aastal ümbermaailmareisi ja muutis oma nime suurte jäikkerega õhulaevade sümboliks?"
         },
         "response": {
-          "en": "NAND flash",
-          "et": "NAND-välkmälu"
+          "en": "Graf Zeppelin",
+          "et": "Graf Zeppelin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "NAND flash erases data in blocks and wears over repeated program-erase cycles.",
-          "et": "NAND-välkmälu kustutab plokkidena ning kulub kirjutus-kustutustsüklitega."
+          "en": "Graf Zeppelin carried passengers on long-distance flights and completed a widely publicised circumnavigation in 1929.",
+          "et": "Graf Zeppelin vedas reisijaid pikkadel lendudel ja lõpetas 1929. aastal laialt kajastatud ümbermaailmareisi."
         },
         "source": {
-          "sourceId": "wikipedia:flash_memory",
-          "title": "Flash memory",
-          "url": "https://en.wikipedia.org/wiki/Flash_memory",
+          "sourceId": "wikipedia:graf-zeppelin",
+          "title": "LZ 127 Graf Zeppelin",
+          "url": "https://en.wikipedia.org/wiki/LZ_127_Graf_Zeppelin",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-080:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:architecture:raid",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:bell-x-1-sound-barrier",
         "tier": 3,
-        "subjectKey": "architecture:raid",
+        "subjectKey": "aircraft:bell-x-1",
         "clue": {
-          "en": "Which scheme combines several drives for redundancy, performance, or both?",
-          "et": "Milline skeem ühendab mitu ketast liiasuse, jõudluse või mõlema jaoks?"
+          "en": "Which rocket-powered orange research aircraft carried Chuck Yeager past the sound barrier in level flight in 1947?",
+          "et": "Milline rakettmootoriga oranž uurimislennuk viis Chuck Yeageri 1947. aastal horisontaallennul helikiirusest üle?"
         },
         "response": {
-          "en": "RAID",
-          "et": "RAID"
+          "en": "Bell X-1",
+          "et": "Bell X-1"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "RAID levels distribute data and parity differently and do not replace backups.",
-          "et": "RAID-tasemed jaotavad andmeid ja paarsust erinevalt ega asenda varukoopiaid."
+          "en": "The Bell X-1 was designed for high-speed research and became the first piloted aircraft confirmed to exceed Mach 1 in level flight.",
+          "et": "Bell X-1 oli ehitatud kiirlennu uurimiseks ja sai esimeseks piloteeritud lennukiks, mis ületas horisontaallennul kinnitatult Mach 1."
         },
         "source": {
-          "sourceId": "wikipedia:raid",
-          "title": "RAID",
-          "url": "https://en.wikipedia.org/wiki/RAID",
+          "sourceId": "wikipedia:bell-x-1",
+          "title": "Bell X-1",
+          "url": "https://en.wikipedia.org/wiki/Bell_X-1",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-080:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:coding:error-correction-code",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:concorde-supersonic-service",
         "tier": 4,
-        "subjectKey": "coding:error-correction-code",
+        "subjectKey": "aircraft:concorde",
         "clue": {
-          "en": "Which added redundancy lets storage detect and reconstruct some corrupted bits?",
-          "et": "Milline lisatud liiasus laseb salvestil osa rikutud bitte tuvastada ja taastada?"
+          "en": "Which Anglo-French passenger jet crossed the Atlantic at more than twice the speed of sound until its final commercial flight in 2003?",
+          "et": "Milline Briti-Prantsuse reisilennuk ületas Atlandi rohkem kui kahekordse helikiirusega kuni viimase kommertslennuni 2003. aastal?"
         },
         "response": {
-          "en": "error-correcting code",
-          "et": "veaparanduskood"
+          "en": "Concorde",
+          "et": "Concorde"
         },
         "acceptedVariants": {
-          "en": [
-            "ECC"
-          ],
-          "et": [
-            "ECC"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "ECC memory and media trade capacity for measurable protection against errors.",
-          "et": "Veaparanduskood vahetab osa mahust vigade vastase kaitse vastu."
+          "en": "Concorde was a supersonic airliner jointly developed by Britain and France; its speed made transatlantic journeys notably shorter.",
+          "et": "Concorde oli Suurbritannia ja Prantsusmaa ühiselt arendatud ülehelikiirusega reisilennuk, mille kiirus muutis Atlandi-ülesed reisid märgatavalt lühemaks."
         },
         "source": {
-          "sourceId": "wikipedia:error_correction_code",
-          "title": "Error correction code",
-          "url": "https://en.wikipedia.org/wiki/Error_correction_code",
+          "sourceId": "wikipedia:concorde",
+          "title": "Concorde",
+          "url": "https://en.wikipedia.org/wiki/Concorde",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-080:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:medium:worm-storage",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:solar-impulse-2-circumnavigation",
         "tier": 5,
-        "subjectKey": "medium:worm-storage",
+        "subjectKey": "aircraft:solar-impulse-2",
         "clue": {
-          "en": "Which storage policy permits one write but repeated later reading?",
-          "et": "Milline salvestuspõhimõte lubab ühe kirjutamise, kuid hiljem korduva lugemise?"
+          "en": "Which single-seat solar aircraft completed the first round-the-world flight powered only by the Sun, using batteries to continue after dark?",
+          "et": "Milline ühekohaline päikesejõul töötav lennuk lõpetas esimese ainult Päikese energial tehtud ümbermaailmalennu, kasutades pimedal ajal akusid?"
         },
         "response": {
-          "en": "write once, read many",
-          "et": "ühekordse kirjutusega mälu"
+          "en": "Solar Impulse 2",
+          "et": "Solar Impulse 2"
         },
         "acceptedVariants": {
-          "en": [
-            "WORM"
-          ],
-          "et": [
-            "WORM"
-          ]
+          "en": ["Si2"],
+          "et": ["Si2"]
         },
         "explanation": {
-          "en": "WORM media help preserve records against later alteration.",
-          "et": "Ühekordse kirjutusega mälu aitab hoida kirjeid hilisema muutmise eest."
+          "en": "Solar Impulse 2 combined solar cells, large batteries, and extreme lightness to complete its 2015–2016 circumnavigation without fuel.",
+          "et": "Solar Impulse 2 ühendas päikesepaneelid, suured akud ja äärmise kerguse, et teha 2015.–2016. aastal ümbermaailmareis ilma kütuseta."
         },
         "source": {
-          "sourceId": "wikipedia:write_once_read_many",
-          "title": "Write once read many",
-          "url": "https://en.wikipedia.org/wiki/Write_once_read_many",
+          "sourceId": "wikipedia:solar-impulse",
+          "title": "Solar Impulse",
+          "url": "https://en.wikipedia.org/wiki/Solar_Impulse",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -15899,161 +15863,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-081",
     "name": {
-      "en": "Energy Storage beyond Ordinary Batteries",
-      "et": "Energia salvestamine tavapatareist kaugemal"
+      "en": "Plastics with a Story",
+      "et": "Plastid, millel on lugu"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-081:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:solid-state-battery",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:plexiglas-acrylic-glass",
         "tier": 1,
-        "subjectKey": "technology:solid-state-battery",
+        "subjectKey": "material:plexiglas",
         "clue": {
-          "en": "Which battery replaces a liquid electrolyte with a solid material?",
-          "et": "Milline aku asendab vedela elektrolüüdi tahke materjaliga?"
+          "en": "What trade name for transparent acrylic plastic became famous as a lighter, shatter-resistant alternative to glass in aircraft canopies?",
+          "et": "Milline läbipaistva akrüülplasti kaubamärk sai tuntuks lennukikabiinide klaasist kergema ja purunemiskindlama alternatiivina?"
         },
         "response": {
-          "en": "solid-state battery",
-          "et": "tahkisaku"
+          "en": "Plexiglas",
+          "et": "pleksiklaas"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Solid electrolytes may improve safety and enable different electrode chemistries.",
-          "et": "Tahke elektrolüüt võib parandada ohutust ning võimaldada teistsugust elektroodikeemiat."
+          "en": "Plexiglas is a brand of polymethyl methacrylate, a transparent plastic used where glass would be heavy or fragile.",
+          "et": "Pleksiklaas on polümetüülmetakrülaadi kaubamärk, läbipaistev plast, mida kasutatakse seal, kus klaas oleks raske või habras."
         },
         "source": {
-          "sourceId": "wikipedia:solid-state_battery",
-          "title": "Solid-state battery",
-          "url": "https://en.wikipedia.org/wiki/Solid-state_battery",
+          "sourceId": "wikipedia:plexiglas",
+          "title": "Plexiglas",
+          "url": "https://en.wikipedia.org/wiki/Plexiglas",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-081:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:flow-battery",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:styrofoam-polystyrene-brand",
         "tier": 2,
-        "subjectKey": "technology:flow-battery",
+        "subjectKey": "material:styrofoam",
         "clue": {
-          "en": "Which rechargeable system pumps liquid electrolytes through an electrochemical cell?",
-          "et": "Milline laetav süsteem pumpab vedelaid elektrolüüte läbi elektrokeemilise elemendi?"
+          "en": "What blue foamed-plastic trade name is often used generically for polystyrene packaging, although the original product is an extruded insulation material?",
+          "et": "Milline sinise vahtplasti kaubamärk on muutunud üldnimeks polüstüreenpakenditele, kuigi algne toode on pressitud soojustusmaterjal?"
         },
         "response": {
-          "en": "flow battery",
-          "et": "vooluaku"
+          "en": "Styrofoam",
+          "et": "Styrofoam"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Flow batteries scale energy capacity by enlarging external storage tanks.",
-          "et": "Vooluaku energiamahutavust suurendatakse väliste paakide kasvatamisega."
+          "en": "Styrofoam is Dow's trademark for extruded polystyrene foam; everyday use of the word often covers other foamed polystyrene products.",
+          "et": "Styrofoam on Dow kaubamärk ekstrudeeritud polüstüreenvahtplastile; igapäevases kõnes kasutatakse seda sõna sageli ka muude vahtpolüstüreenitoodete kohta."
         },
         "source": {
-          "sourceId": "wikipedia:flow_battery",
-          "title": "Flow battery",
-          "url": "https://en.wikipedia.org/wiki/Flow_battery",
+          "sourceId": "wikipedia:styrofoam",
+          "title": "Styrofoam",
+          "url": "https://en.wikipedia.org/wiki/Styrofoam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-081:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:supercapacitor",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:mylar-polyester-film",
         "tier": 3,
-        "subjectKey": "device:supercapacitor",
+        "subjectKey": "material:mylar",
         "clue": {
-          "en": "Which device stores charge electrostatically and can cycle far faster than a battery?",
-          "et": "Milline seade talletab laengut elektrostaatiliselt ning peab akust palju rohkem tsükleid vastu?"
+          "en": "What DuPont trade name for a thin polyester film appears in reflective balloons, electrical insulation, and magnetic recording tape?",
+          "et": "Milline DuPonti õhukese polüesterkile kaubamärk esineb peegeldavates õhupallides, elektriisolatsioonis ja magnetlintides?"
         },
         "response": {
-          "en": "supercapacitor",
-          "et": "superkondensaator"
+          "en": "Mylar",
+          "et": "Mylar"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Supercapacitors deliver high power but usually store less energy per mass than batteries.",
-          "et": "Superkondensaator annab suurt võimsust, kuid talletab massi kohta tavaliselt akust vähem energiat."
+          "en": "Mylar is a brand name for biaxially oriented PET film, valued for strength, electrical insulation, and a reflective metallised form.",
+          "et": "Mylar on kaubamärk kaheteljaliselt orienteeritud PET-kilele, mida hinnatakse tugevuse, elektriisolatsiooni ja metalliseerituna peegelduvuse tõttu."
         },
         "source": {
-          "sourceId": "wikipedia:supercapacitor",
-          "title": "Supercapacitor",
-          "url": "https://en.wikipedia.org/wiki/Supercapacitor",
+          "sourceId": "wikipedia:mylar",
+          "title": "Mylar",
+          "url": "https://en.wikipedia.org/wiki/Mylar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-081:question:4",
-        "factKey": "built-in-technology-inventions:round1-overlap:storage:redox-flow-battery",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:formica-laminate",
         "tier": 4,
-        "subjectKey": "storage:redox-flow-battery",
+        "subjectKey": "material:formica",
         "clue": {
-          "en": "Which rechargeable battery stores energy in liquid electrolytes pumped through an electrochemical cell?",
-          "et": "Milline laetav aku salvestab energia vedelates elektrolüütides, mida pumbatakse läbi elektrokeemilise elemendi?"
+          "en": "What countertop laminate was named as a substitute “for mica” and is made by bonding decorative paper layers with resin?",
+          "et": "Milline tööpinnalaminaat sai nime väljendist „mica asemel” ja valmib vaiguga kokku liimitud dekoratiivpaberikihtidest?"
         },
         "response": {
-          "en": "redox flow battery",
-          "et": "redoksvooluaku"
+          "en": "Formica",
+          "et": "Formica"
         },
         "acceptedVariants": {
-          "en": [
-            "flow battery"
-          ],
-          "et": [
-            "vooluaku"
-          ]
+          "en": ["Formica laminate"],
+          "et": ["Formica laminaat"]
         },
         "explanation": {
-          "en": "A redox flow battery scales energy capacity mainly by enlarging its electrolyte tanks.",
-          "et": "Redoksvooluaku energiamahutavust saab suurendada peamiselt elektrolüüdipaake kasvatades."
+          "en": "Formica is a high-pressure decorative laminate; its name came from its original use as a replacement for mica in electrical insulation.",
+          "et": "Formica on kõrgsurve-dekoratiivlaminaat; selle nimi tuli algsest kasutusest elektriisolatsioonis vilgukivi asendajana."
         },
         "source": {
-          "sourceId": "wikipedia:flow_battery",
-          "title": "Flow battery",
-          "url": "https://en.wikipedia.org/wiki/Flow_battery",
+          "sourceId": "wikipedia:formica-plastic",
+          "title": "Formica (plastic)",
+          "url": "https://en.wikipedia.org/wiki/Formica_(plastic)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-081:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:system:battery-management-system",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:kevlar-aramid-fibre",
         "tier": 5,
-        "subjectKey": "system:battery-management-system",
+        "subjectKey": "material:kevlar",
         "clue": {
-          "en": "Which controller monitors cell voltage, temperature, charging, and balancing in a battery pack?",
-          "et": "Milline kontroller jälgib akupakis elementide pinget, temperatuuri, laadimist ja tasakaalustamist?"
+          "en": "What yellow aramid fibre, developed by Stephanie Kwolek, is light yet exceptionally strong and became associated with bullet-resistant vests?",
+          "et": "Milline Stephanie Kwoleki arendatud kollane aramiidkiud on kerge, kuid erakordselt tugev ja sai tuntuks kuulikindlate vestide materjalina?"
         },
         "response": {
-          "en": "battery management system",
-          "et": "akuhaldussüsteem"
+          "en": "Kevlar",
+          "et": "Kevlar"
         },
         "acceptedVariants": {
-          "en": [
-            "BMS"
-          ],
-          "et": [
-            "BMS"
-          ]
+          "en": ["Kevlar fibre"],
+          "et": ["Kevlari kiud"]
         },
         "explanation": {
-          "en": "A BMS protects cells from operating beyond safe limits.",
-          "et": "Akuhaldussüsteem kaitseb elemente ohututest piiridest väljumise eest."
+          "en": "Kevlar is an aramid synthetic fibre with high tensile strength relative to its weight, allowing tough protective fabrics without much bulk.",
+          "et": "Kevlar on aramiidist sünteetiline kiud, mille tõmbetugevus on kaalu kohta suur, võimaldades valmistada tugevaid kaitsekangaid ilma liigse massita."
         },
         "source": {
-          "sourceId": "wikipedia:battery_management_system",
-          "title": "Battery management system",
-          "url": "https://en.wikipedia.org/wiki/Battery_management_system",
+          "sourceId": "wikipedia:kevlar",
+          "title": "Kevlar",
+          "url": "https://en.wikipedia.org/wiki/Kevlar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16061,157 +16017,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-082",
     "name": {
-      "en": "Balancing an Electric Grid",
-      "et": "Elektrivõrgu tasakaalustamine"
+      "en": "Calculators Before Electronics",
+      "et": "Arvutusmasinad enne elektroonikat"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-082:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:metric:capacity-factor",
+        "factKey": "built-in-technology-inventions:checkpoint6:calculators:slide-rule-logarithms",
         "tier": 1,
-        "subjectKey": "metric:capacity-factor",
+        "subjectKey": "instrument:slide-rule",
         "clue": {
-          "en": "Which ratio compares a power plant’s actual output with full-rated output over time?",
-          "et": "Milline suhtarv võrdleb elektrijaama tegelikku toodangut sama aja täisvõimsuse toodanguga?"
+          "en": "What pocket instrument with sliding logarithmic scales let engineers multiply and divide for centuries before electronic calculators?",
+          "et": "Milline taskuinstrument libisevate logaritmiliste skaaladega võimaldas inseneridel sajandeid enne elektroonilisi kalkulaatoreid korrutada ja jagada?"
         },
         "response": {
-          "en": "capacity factor",
-          "et": "kasutustegur"
+          "en": "slide rule",
+          "et": "arvutuslükati"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Capacity factor reflects availability and resource conditions, not only nameplate power.",
-          "et": "Kasutustegur peegeldab kättesaadavust ja ressursitingimusi, mitte üksnes nimivõimsust."
+          "en": "A slide rule uses logarithmic scales, turning multiplication and division into addition and subtraction of distances.",
+          "et": "Arvutuslükati kasutab logaritmilisi skaalasid, muutes korrutamise ja jagamise kauguste liitmiseks ning lahutamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:capacity_factor",
-          "title": "Capacity factor",
-          "url": "https://en.wikipedia.org/wiki/Capacity_factor",
+          "sourceId": "wikipedia:slide-rule",
+          "title": "Slide rule",
+          "url": "https://en.wikipedia.org/wiki/Slide_rule",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-082:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:storage:pumped-hydro",
+        "factKey": "built-in-technology-inventions:checkpoint6:calculators:pascaline-carrying-gears",
         "tier": 2,
-        "subjectKey": "storage:pumped-hydro",
+        "subjectKey": "calculator:pascaline",
         "clue": {
-          "en": "Which storage method pumps water uphill when electricity is plentiful?",
-          "et": "Milline salvestusviis pumpab elektri ülejäägi ajal vee ülesmäge?"
+          "en": "What gear-driven calculating machine did Blaise Pascal build in the 1640s to help with his tax-collector father's arithmetic?",
+          "et": "Millise hammasratastega arvutusmasina ehitas Blaise Pascal 1640. aastatel, et aidata oma maksukogujast isa arvutustega?"
         },
         "response": {
-          "en": "pumped-storage hydroelectricity",
-          "et": "pumphüdroakumulatsioon"
+          "en": "Pascaline",
+          "et": "Paskaliin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pumped storage later releases water through turbines during high demand.",
-          "et": "Pumphüdroakumulatsioon laseb suure nõudluse ajal vee hiljem läbi turbiinide."
+          "en": "The Pascaline used numbered wheels and a carrying mechanism to perform addition and subtraction mechanically.",
+          "et": "Paskaliin kasutas nummerdatud rattaid ja ülekandemehhanismi, et teha liitmist ning lahutamist mehaaniliselt."
         },
         "source": {
-          "sourceId": "wikipedia:pumped-storage_hydroelectricity",
-          "title": "Pumped-storage hydroelectricity",
-          "url": "https://en.wikipedia.org/wiki/Pumped-storage_hydroelectricity",
+          "sourceId": "wikipedia:pascaline",
+          "title": "Pascal's calculator",
+          "url": "https://en.wikipedia.org/wiki/Pascal%27s_calculator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-082:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:concentrated-solar-power",
+        "factKey": "built-in-technology-inventions:checkpoint6:calculators:arithmometer-four-operations",
         "tier": 3,
-        "subjectKey": "technology:concentrated-solar-power",
+        "subjectKey": "calculator:arithmometer",
         "clue": {
-          "en": "Which solar technology focuses mirrors onto a receiver to produce heat?",
-          "et": "Milline päikesetehnoloogia koondab peeglitega valguse soojusvastuvõtjale?"
+          "en": "What nineteenth-century mechanical calculator popularised a reliable way to add, subtract, multiply, and divide with a turning crank?",
+          "et": "Milline 19. sajandi mehaaniline kalkulaator populariseeris töökindla viisi liita, lahutada, korrutada ja jagada väntaga?"
         },
         "response": {
-          "en": "concentrated solar power",
-          "et": "kontsentreeritud päikeseenergia"
+          "en": "arithmometer",
+          "et": "aritmomeeter"
         },
         "acceptedVariants": {
-          "en": [
-            "CSP"
-          ],
-          "et": [
-            "CSP"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "CSP can store thermal energy in molten salt for generation after sunset.",
-          "et": "Kontsentreeritud päikeseenergia võib talletada soojust sulasoolas ka päikeseloojangujärgseks tootmiseks."
+          "en": "The arithmometer was the first mass-produced mechanical calculator and made the four basic arithmetic operations practical in offices.",
+          "et": "Aritmomeeter oli esimene masstoodanguna valmistatud mehaaniline kalkulaator ning tegi neli põhitehet kontorites praktiliseks."
         },
         "source": {
-          "sourceId": "wikipedia:concentrated_solar_power",
-          "title": "Concentrated solar power",
-          "url": "https://en.wikipedia.org/wiki/Concentrated_solar_power",
+          "sourceId": "wikipedia:arithmometer",
+          "title": "Arithmometer",
+          "url": "https://en.wikipedia.org/wiki/Arithmometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-082:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:tidal-power",
+        "factKey": "built-in-technology-inventions:checkpoint6:calculators:comptometer-keyboard",
         "tier": 4,
-        "subjectKey": "technology:tidal-power",
+        "subjectKey": "calculator:comptometer",
         "clue": {
-          "en": "Which renewable source exploits predictable sea-level movement caused by tides?",
-          "et": "Milline taastuvallikas kasutab loodete põhjustatud ennustatavat meretaseme liikumist?"
+          "en": "What keyboard-operated mechanical calculator, patented by Dorr Felt in 1887, let a trained operator enter numbers rapidly without a crank?",
+          "et": "Milline Dorr Felti 1887. aastal patenteeritud klaviatuuriga mehaaniline kalkulaator lubas oskuslikul kasutajal numbreid kiiresti sisestada ilma väntamiseta?"
         },
         "response": {
-          "en": "tidal power",
-          "et": "loodete energia"
+          "en": "Comptometer",
+          "et": "Comptometer"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Tidal schemes use barrages, lagoons, or underwater stream turbines.",
-          "et": "Loodete energia lahendused kasutavad paise, laguune või veealuseid vooluturbiine."
+          "en": "The Comptometer's many keys directly engaged its mechanism, making fast repetitive calculations possible for office workers.",
+          "et": "Comptometeri paljud klahvid rakendasid mehhanismi otse, võimaldades kontoritöötajatel kiiresti korduvaid arvutusi teha."
         },
         "source": {
-          "sourceId": "wikipedia:tidal_power",
-          "title": "Tidal power",
-          "url": "https://en.wikipedia.org/wiki/Tidal_power",
+          "sourceId": "wikipedia:comptometer",
+          "title": "Comptometer",
+          "url": "https://en.wikipedia.org/wiki/Comptometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-082:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:technology:combined-cycle",
+        "factKey": "built-in-technology-inventions:checkpoint6:calculators:curta-handheld",
         "tier": 5,
-        "subjectKey": "technology:combined-cycle",
+        "subjectKey": "calculator:curta",
         "clue": {
-          "en": "Which plant uses a gas turbine’s hot exhaust to raise steam for a second turbine?",
-          "et": "Milline jaam kasutab gaasiturbiini kuuma heitgaasi auru tootmiseks teisele turbiinile?"
+          "en": "What palm-sized cylindrical mechanical calculator, designed by Curt Herzstark and first sold after the Second World War, is prized by collectors?",
+          "et": "Millist peopesasuurust silindrilist mehaanilist kalkulaatorit, mille Curt Herzstark kavandas ja mida hakati müüma pärast Teist maailmasõda, hindavad kogujad?"
         },
         "response": {
-          "en": "combined-cycle power plant",
-          "et": "kombineeritud tsükliga elektrijaam"
+          "en": "Curta calculator",
+          "et": "Curta kalkulaator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Curta"],
+          "et": ["Curta"]
         },
         "explanation": {
-          "en": "Combined cycle extracts more electricity from the same fuel than a simple gas turbine.",
-          "et": "Kombineeritud tsükkel saab samast kütusest rohkem elektrit kui lihtne gaasiturbiin."
+          "en": "The Curta packed a sophisticated stepped-drum mechanism into a small cylinder, making it unusually portable for a mechanical calculator.",
+          "et": "Curta mahutas keeruka astmetrumli mehhanismi väikesesse silindrisse, mistõttu oli see mehaanilise kalkulaatori kohta ebatavaliselt kaasaskantav."
         },
         "source": {
-          "sourceId": "wikipedia:combined_cycle_power_plant",
-          "title": "Combined cycle power plant",
-          "url": "https://en.wikipedia.org/wiki/Combined_cycle_power_plant",
+          "sourceId": "wikipedia:curta",
+          "title": "Curta",
+          "url": "https://en.wikipedia.org/wiki/Curta",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16219,153 +16171,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-083",
     "name": {
-      "en": "Rotating Machines and Their Control",
-      "et": "Pöörlevad masinad ja nende juhtimine"
+      "en": "Engineering That Helps the Body",
+      "et": "Keha abistav inseneeria"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-083:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:machine:induction-motor",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:hearing-aid-amplification",
         "tier": 1,
-        "subjectKey": "machine:induction-motor",
+        "subjectKey": "device:hearing-aid",
         "clue": {
-          "en": "Which AC motor induces rotor current without an electrical connection to the rotor?",
-          "et": "Milline vahelduvvoolumootor indutseerib rootorivoolu ilma rootori elektriühenduseta?"
+          "en": "What small device worn in or behind the ear uses a microphone, amplifier, and receiver to make sound easier to hear?",
+          "et": "Milline kõrvas või kõrva taga kantav väike seade kasutab mikrofoni, võimendit ja vastuvõtjat, et heli oleks paremini kuuldav?"
         },
         "response": {
-          "en": "induction motor",
-          "et": "asünkroonmootor"
+          "en": "hearing aid",
+          "et": "kuuldeaparaat"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "An induction motor’s rotor turns slightly slower than the rotating magnetic field.",
-          "et": "Asünkroonmootori rootor pöörleb pöörlevast magnetväljast veidi aeglasemalt."
+          "en": "A hearing aid captures sound with a microphone, processes or amplifies it, and sends the result to a receiver near the ear.",
+          "et": "Kuuldeaparaat püüab heli mikrofoniga, töötleb või võimendab seda ja saadab tulemuse kõrva lähedal asuvasse vastuvõtjasse."
         },
         "source": {
-          "sourceId": "wikipedia:induction_motor",
-          "title": "Induction motor",
-          "url": "https://en.wikipedia.org/wiki/Induction_motor",
+          "sourceId": "wikipedia:hearing-aid",
+          "title": "Hearing aid",
+          "url": "https://en.wikipedia.org/wiki/Hearing_aid",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-083:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:commutator",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:dialysis-machine-blood-filtering",
         "tier": 2,
-        "subjectKey": "component:commutator",
+        "subjectKey": "device:dialysis-machine",
         "clue": {
-          "en": "Which segmented rotating switch reverses current in a brushed DC machine?",
-          "et": "Milline segmenteeritud pöördlüliti muudab harjadega alalisvoolumasinas voolu suunda?"
+          "en": "What machine removes wastes and excess fluid from blood through a filter when the kidneys cannot perform that job adequately?",
+          "et": "Milline masin eemaldab vere filtriga jääkaineid ja liigset vedelikku, kui neerud ei suuda seda ülesannet piisavalt täita?"
         },
         "response": {
-          "en": "commutator",
-          "et": "kommutaator"
+          "en": "dialysis machine",
+          "et": "dialüüsiaparaat"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Brushes contact the commutator to keep torque acting in a consistent direction.",
-          "et": "Harjad puutuvad kommutaatoriga kokku, et pöördemoment jääks samasuunaliseks."
+          "en": "A dialysis machine circulates blood through a dialyser, where diffusion and filtration remove substances the kidneys would normally clear.",
+          "et": "Dialüüsiaparaat juhib vere läbi dialüsaatori, kus difusioon ja filtreerimine eemaldavad aineid, mida neerud tavaliselt välja viivad."
         },
         "source": {
-          "sourceId": "wikipedia:commutator_(electric)",
-          "title": "Commutator (electric)",
-          "url": "https://en.wikipedia.org/wiki/Commutator_(electric)",
+          "sourceId": "wikipedia:hemodialysis",
+          "title": "Hemodialysis",
+          "url": "https://en.wikipedia.org/wiki/Hemodialysis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-083:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:machine:alternator",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:cochlear-implant-auditory-nerve",
         "tier": 3,
-        "subjectKey": "machine:alternator",
+        "subjectKey": "device:cochlear-implant",
         "clue": {
-          "en": "Which generator produces alternating current from mechanical rotation?",
-          "et": "Milline generaator toodab mehaanilisest pöörlemisest vahelduvvoolu?"
+          "en": "What implanted electronic device bypasses damaged inner-ear structures by sending electrical signals directly to the auditory nerve?",
+          "et": "Milline siirdatud elektrooniline seade möödub kahjustunud sisekõrva osadest, saates elektrisignaale otse kuulmisnärvi?"
         },
         "response": {
-          "en": "alternator",
-          "et": "vahelduvvoolugeneraator"
+          "en": "cochlear implant",
+          "et": "sisekõrva implantaat"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Automotive alternators rectify their output to charge a DC battery.",
-          "et": "Auto vahelduvvoolugeneraator alaldab väljundi alalisvooluaku laadimiseks."
+          "en": "A cochlear implant combines an external sound processor with an internal electrode array that stimulates the auditory nerve.",
+          "et": "Sisekõrva implantaat ühendab välise heliprotsessori sisemise elektroodirea süsteemiga, mis stimuleerib kuulmisnärvi."
         },
         "source": {
-          "sourceId": "wikipedia:alternator",
-          "title": "Alternator",
-          "url": "https://en.wikipedia.org/wiki/Alternator",
+          "sourceId": "wikipedia:cochlear-implant",
+          "title": "Cochlear implant",
+          "url": "https://en.wikipedia.org/wiki/Cochlear_implant",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-083:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:machine:stepper-motor",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:artificial-heart-pumping",
         "tier": 4,
-        "subjectKey": "machine:stepper-motor",
+        "subjectKey": "device:artificial-heart",
         "clue": {
-          "en": "Which motor advances through discrete angular steps under pulse control?",
-          "et": "Milline mootor liigub impulssjuhtimisel kindlate nurksammudena?"
+          "en": "What mechanical pump may be implanted to take over the heart's pumping function, either temporarily or as a longer-term replacement?",
+          "et": "Milline mehaaniline pump võidakse siirdada südame pumpamisfunktsiooni üle võtma kas ajutiselt või pikemaajaliseks asenduseks?"
         },
         "response": {
-          "en": "stepper motor",
-          "et": "samm-mootor"
+          "en": "artificial heart",
+          "et": "tehissüda"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Stepper motors can position mechanisms without a feedback sensor when loads are predictable.",
-          "et": "Samm-mootor saab ennustatava koormuse korral mehhanismi paigutada tagasisideandurita."
+          "en": "An artificial heart is a device designed to replace the heart's pumping action, unlike a pacemaker, which only regulates rhythm.",
+          "et": "Tehissüda on seade, mis asendab südame pumpamisfunktsiooni, erinevalt südamestimulaatorist, mis reguleerib vaid rütmi."
         },
         "source": {
-          "sourceId": "wikipedia:stepper_motor",
-          "title": "Stepper motor",
-          "url": "https://en.wikipedia.org/wiki/Stepper_motor",
+          "sourceId": "wikipedia:artificial-heart",
+          "title": "Artificial heart",
+          "url": "https://en.wikipedia.org/wiki/Artificial_heart",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-083:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:flywheel",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:prosthetic-limb-functional-replacement",
         "tier": 5,
-        "subjectKey": "device:flywheel",
+        "subjectKey": "device:prosthetic-limb",
         "clue": {
-          "en": "Which heavy rotating mass smooths speed changes and stores kinetic energy?",
-          "et": "Milline raske pöörlev mass silub kiiruse muutusi ning talletab kineetilist energiat?"
+          "en": "What artificial replacement for an absent arm or leg can be shaped for appearance, movement, or specialised tasks such as running?",
+          "et": "Millist puuduva käe või jala kunstlikku asendust saab kujundada välimuse, liikumise või eriülesannete, näiteks jooksmise jaoks?"
         },
         "response": {
-          "en": "flywheel",
-          "et": "hooratas"
+          "en": "prosthetic limb",
+          "et": "jäsemeprotees"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A flywheel resists rapid changes in rotational speed through its moment of inertia.",
-          "et": "Hooratas takistab inertsimomendi tõttu pöörlemiskiiruse kiiret muutumist."
+          "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
+          "et": "Jäsemeprotees asendab puuduvat kehaosa; nüüdisaegseid lahendusi saab kohandada igapäevaseks liikumiseks või kindlaks tegevuseks."
         },
         "source": {
-          "sourceId": "wikipedia:flywheel",
-          "title": "Flywheel",
-          "url": "https://en.wikipedia.org/wiki/Flywheel",
+          "sourceId": "wikipedia:prosthesis",
+          "title": "Prosthesis",
+          "url": "https://en.wikipedia.org/wiki/Prosthesis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
