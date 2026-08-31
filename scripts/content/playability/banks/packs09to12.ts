@@ -10919,61 +10919,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-049:question:4",
-        "factKey": "built-in-technology-inventions:road-junction:medium:road:speed-bump",
+        "factKey": "built-in-technology-inventions:road-junction:medium:strategy:traffic-calming",
         "tier": 4,
-        "subjectKey": "road:speed-bump",
-        "clue": {
-          "en": "This raised strip across a street makes an uncomfortable jolt if a car travels too fast over it. What traffic-calming feature is it?",
-          "et": "See üle tänava ulatuv kõrgem riba raputab autot ebamugavalt, kui sellest liiga kiiresti üle sõita. Mis liiklust rahustav rajatis see on?"
-        },
-        "response": {
-          "en": "speed bump",
-          "et": "lamav politseinik"
-        },
-        "acceptedVariants": {
-          "en": ["speed hump"],
-          "et": ["kiirustõke", "lamav politseinik"]
-        },
-        "explanation": {
-          "en": "A speed bump is a raised roadway feature designed to slow vehicles by making fast driving uncomfortable.",
-          "et": "Lamav politseinik on teele rajatud kõrgend, mis aeglustab sõidukeid, muutes kiire ületamise ebamugavaks."
-        },
-        "source": {
-          "sourceId": "wikipedia:speed_bump",
-          "title": "Speed bump",
-          "url": "https://en.wikipedia.org/wiki/Speed_bump",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
+        "subjectKey": "strategy:traffic-calming",
+        "clue": { "en": "Speed humps, narrowed lanes, and raised crossings are all measures designed to slow vehicles and make streets safer. What is this approach called?", "et": "Kiirustõkked, kitsendatud sõidurajad ja tõstetud ülekäigud on meetmed, mille eesmärk on sõidukeid aeglustada ja tänavaid turvalisemaks muuta. Mis lähenemine see on?" },
+        "response": { "en": "traffic calming", "et": "liikluse rahustamine" },
+        "acceptedVariants": { "en": ["traffic-calming measures"], "et": ["liiklust rahustavad meetmed"] },
+        "explanation": { "en": "Traffic calming uses road design and other measures to reduce vehicle speed and improve safety.", "et": "Liikluse rahustamine kasutab teekujundust ja muid meetmeid sõidukiiruse vähendamiseks ning ohutuse parandamiseks." },
+        "source": { "sourceId": "wikipedia:traffic_calming", "title": "Traffic calming", "url": "https://en.wikipedia.org/wiki/Traffic_calming", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       },
       {
         "key": "built-in-technology-inventions-set-049:question:5",
-        "factKey": "built-in-technology-inventions:road-junction:medium:device:traffic-enforcement-camera",
+        "factKey": "built-in-technology-inventions:road-junction:medium:structure:grade-separation",
         "tier": 5,
-        "subjectKey": "device:traffic-enforcement-camera",
-        "clue": {
-          "en": "A roadside device photographs vehicles that break rules such as running a red light or exceeding a limit. What is this enforcement device?",
-          "et": "Teeäärne seade pildistab sõidukeid, mis näiteks sõidavad punase tulega või ületavad piirkiirust. Mis järelevalveseade see on?"
-        },
-        "response": {
-          "en": "traffic enforcement camera",
-          "et": "liiklusjärelevalvekaamera"
-        },
-        "acceptedVariants": {
-          "en": ["red-light camera"],
-          "et": ["liikluskaamera"]
-        },
-        "explanation": {
-          "en": "Traffic enforcement cameras record vehicles that violate road rules, including red-light and speed offences.",
-          "et": "Liiklusjärelevalvekaamera salvestab sõidukeid, mis rikuvad liiklusreegleid, näiteks sõidavad punase tulega või liiga kiiresti."
-        },
-        "source": {
-          "sourceId": "wikipedia:traffic_enforcement_camera",
-          "title": "Traffic enforcement camera",
-          "url": "https://en.wikipedia.org/wiki/Traffic_enforcement_camera",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
+        "subjectKey": "structure:grade-separation",
+        "clue": { "en": "When two roads cross at different heights using a bridge or tunnel so traffic need not meet at one level, what engineering arrangement is this?", "et": "Kui kaks teed ristuvad eri kõrgustel silla või tunneli abil, nii et liiklus ei kohtu samal tasandil, mis insenertehniline lahendus see on?" },
+        "response": { "en": "grade separation", "et": "eritasandiline ristmik" },
+        "acceptedVariants": { "en": ["grade-separated junction"], "et": ["eritasandiline liiklussõlm"] },
+        "explanation": { "en": "Grade separation uses bridges or tunnels to keep crossing traffic streams at different levels.", "et": "Eritasandiline ristmik kasutab sildu või tunneleid, et hoida ristuvad liiklusvood eri tasanditel." },
+        "source": { "sourceId": "wikipedia:grade_separation", "title": "Grade separation", "url": "https://en.wikipedia.org/wiki/Grade_separation", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       }
     ]
   },
@@ -11380,8 +11344,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-052:question:3",
-        "factKey": "built-in-technology-inventions:automated-payment:medium:device:point-of-sale-terminal",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:service:online-banking",
         "tier": 3,
+        "subjectKey": "service:online-banking",
+        "clue": { "en": "This service lets customers check accounts, transfer money, and pay bills through a bank’s website or app. What is it?", "et": "See teenus võimaldab pangakonto saldot vaadata, raha üle kanda ja arveid maksta panga veebisaidil või rakenduses. Mis see on?" },
+        "response": { "en": "online banking", "et": "internetipank" },
+        "acceptedVariants": { "en": ["internet banking"], "et": ["veebipank"] },
+        "explanation": { "en": "Online banking provides banking services through the internet instead of only at a branch.", "et": "Internetipank pakub pangateenuseid interneti kaudu, mitte ainult pangakontoris." },
+        "source": { "sourceId": "wikipedia:online_banking", "title": "Online banking", "url": "https://en.wikipedia.org/wiki/Online_banking", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
+      },
+      {
+        "key": "built-in-technology-inventions-set-052:question:4",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:device:point-of-sale-terminal",
+        "tier": 4,
         "subjectKey": "device:point-of-sale-terminal",
         "clue": {
           "en": "At a checkout, you tap or insert a card into this device to approve a purchase. What is it called?",
@@ -11412,17 +11387,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
-      },
-      {
-        "key": "built-in-technology-inventions-set-052:question:4",
-        "factKey": "built-in-technology-inventions:automated-payment:medium:service:online-banking",
-        "tier": 4,
-        "subjectKey": "service:online-banking",
-        "clue": { "en": "This service lets customers check accounts, transfer money, and pay bills through a bank’s website or app. What is it?", "et": "See teenus võimaldab pangakonto saldot vaadata, raha üle kanda ja arveid maksta panga veebisaidil või rakenduses. Mis see on?" },
-        "response": { "en": "online banking", "et": "internetipank" },
-        "acceptedVariants": { "en": ["internet banking"], "et": ["veebipank"] },
-        "explanation": { "en": "Online banking provides banking services through the internet instead of only at a branch.", "et": "Internetipank pakub pangateenuseid interneti kaudu, mitte ainult pangakontoris." },
-        "source": { "sourceId": "wikipedia:online_banking", "title": "Online banking", "url": "https://en.wikipedia.org/wiki/Online_banking", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:5",
@@ -11616,7 +11580,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-054:question:1",
-        "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:voice-recognition",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:speech-recognition",
         "tier": 1,
         "subjectKey": "technology:voice-recognition",
         "clue": {
@@ -11860,7 +11824,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "acceptedVariants": {
           "en": ["tower-type crane"],
           "et": [
-            "ehituskraana"
+            "tornkraana tüüpi kraana"
           ]
         },
         "explanation": {
