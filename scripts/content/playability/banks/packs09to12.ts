@@ -12046,8 +12046,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-057",
     "name": {
-      "en": "Aviation in Difficult Weather",
-      "et": "Lennundus keerulise ilmaga"
+      "en": "Making Flight Safer",
+      "et": "Ohutum lendamine"
     },
     "questions": [
       {
@@ -12056,24 +12056,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:windsock",
         "clue": {
-          "en": "At an airfield, this fabric cone points into the wind and gives pilots a rough indication of wind strength. What is it?",
+          "en": "Before a small aircraft takes off, pilots can check this fabric cone at the airfield: its narrow end streams downwind and its extension suggests wind strength. What is it?",
           "et": "Lennuväljal näitab see riidest koonus tuule suunda ja annab pilootidele ligikaudse ettekujutuse tuule tugevusest. Mis see on?"
         },
         "response": {
           "en": "windsock",
-          "et": "tuulesukk"
+          "et": "tuulekott"
         },
         "acceptedVariants": {
           "en": [
             "wind sock"
           ],
           "et": [
+            "tuulesokk",
             "tuulekoonus"
           ]
         },
         "explanation": {
-          "en": "A windsock aligns with the wind, so its angle and extension offer a visual wind check before take-off or landing.",
-          "et": "Tuulesukk joondub tuulega; selle nurk ja sirutus annavad enne õhkutõusu või maandumist visuaalse tuulekontrolli."
+          "en": "A windsock's narrow end streams downwind, opposite the direction the wind comes from. Its angle and extension give a visual wind check before take-off or landing.",
+          "et": "Tuulekoti kitsas ots ulatub allatuult ehk vastassuunas sellele, kust tuul puhub. Selle nurk ja sirutus annavad enne õhkutõusu või maandumist visuaalse tuulekontrolli."
         },
         "source": {
           "sourceId": "wikipedia:Windsock",
@@ -12119,7 +12120,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-057:question:3",
         "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:black-box",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "device:black-box",
         "clue": {
           "en": "What common name is given to the orange crash-resistant recorders that preserve flight data and cockpit audio after an accident?",
@@ -12152,7 +12153,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-057:question:4",
         "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:runway-lighting",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "system:runway-lighting",
         "clue": {
           "en": "Pilots approaching after dark use this system of coloured and white lights to identify the runway and align the aircraft. What system is it?",
@@ -12573,8 +12574,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "kummipael"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "elastic band"
+          ],
+          "et": [
+            "kummirõngas"
+          ]
         },
         "explanation": {
           "en": "A rubber band is an elastic loop whose stretched rubber returns toward its original shape. That elastic force keeps a bundle together without a permanent fastening.",
@@ -12598,12 +12603,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Milline vedruga korpuses painduv mõõteriist tõmmatakse välja toa või puutüki mõõtmiseks ja kerib vabastamisel tagasi?"
         },
         "response": {
-          "en": "measuring tape",
+          "en": "tape measure",
           "et": "mõõdulint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "measuring tape"
+          ],
+          "et": [
+            "rullmõõdulint"
+          ]
         },
         "explanation": {
           "en": "A measuring tape is a flexible graduated ruler, commonly a metal strip that coils into a protective case. Its sliding hook makes inside and outside measurements practical.",
@@ -12631,8 +12640,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "purgiavaja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tin opener"
+          ],
+          "et": [
+            "konserviavaja"
+          ]
         },
         "explanation": {
           "en": "A can opener uses a sharp cutting wheel and a gripping wheel to travel around a can's rim. This opened canned food without requiring a knife or puncturing by hand.",
@@ -12649,7 +12662,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-060:question:4",
         "factKey": "built-in-technology-inventions:small-inventions-big-difference:medium:safety-match",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "fire:safety-match",
         "clue": {
           "en": "What kind of match is designed to light only when struck on the specially prepared surface of its box, rather than on any rough surface?",
@@ -12678,7 +12691,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-060:question:5",
         "factKey": "built-in-technology-inventions:small-inventions-big-difference:medium:corkscrew",
-        "tier": 5,
+        "tier": 4,
         "subjectKey": "tool:corkscrew",
         "clue": {
           "en": "What hand tool removes a cork from a wine bottle by driving a metal spiral into the cork and pulling it out?",
@@ -12710,14 +12723,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-061",
     "name": {
-      "en": "Everyday Digital Connections",
-      "et": "Igapäevased digitaalsed ühendused"
+      "en": "Everyday Wireless and Web Tools",
+      "et": "Igapäevased juhtmevabad ja veebivahendid"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-061:question:1",
         "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:bluetooth",
-        "tier": 1,
+        "tier": 2,
         "subjectKey": "technology:bluetooth",
         "clue": {
           "en": "Named after a Danish king, this short-range wireless standard uses a rune-like logo made from his initials. What is it?",
@@ -12746,7 +12759,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-061:question:2",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:wi-fi",
-        "tier": 2,
+        "tier": 1,
         "subjectKey": "network:wi-fi",
         "clue": {
           "en": "What wireless network technology lets a phone or laptop join a local router without a cable?",
@@ -12775,7 +12788,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-061:question:3",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:rss-feed",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "web:rss-feed",
         "clue": {
           "en": "What web format lets a news site publish a stream of new headlines that a reader app can check without visiting every site separately?",
@@ -12786,8 +12799,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "RSS-voog"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "RSS"
+          ],
+          "et": [
+            "RSS"
+          ]
         },
         "explanation": {
           "en": "An RSS feed is a machine-readable list of recent website updates. Feed-reader software can collect subscriptions from many sites in one place.",
@@ -12804,7 +12821,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-061:question:4",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:inductive-charging",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "technology:inductive-charging",
         "clue": {
           "en": "What charging method transfers energy through a changing magnetic field when a phone is placed on a compatible charging pad?",
@@ -12837,7 +12854,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-061:question:5",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:url-shortener",
-        "tier": 5,
+        "tier": 3,
         "subjectKey": "web:url-shortener",
         "clue": {
           "en": "What web service creates a brief redirecting address for a much longer link, making it easier to share in a message or on a poster?",
@@ -12887,8 +12904,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "monorööbasraudtee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "single-rail railway"
+          ],
+          "et": [
+            "monorelss",
+            "monotee"
+          ]
         },
         "explanation": {
           "en": "A monorail uses one guiding rail rather than the two rails of conventional track. Systems can be straddle-beam or suspended beneath the beam.",
@@ -12905,7 +12927,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-062:question:2",
         "factKey": "built-in-technology-inventions:ways-up-and-over:medium:aerial-tramway",
-        "tier": 2,
+        "tier": 4,
         "subjectKey": "transport:aerial-tramway",
         "clue": {
           "en": "What transport system carries a cabin high above the ground on cables between stations, often across a valley or up a mountain?",
@@ -12938,7 +12960,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-062:question:3",
         "factKey": "built-in-technology-inventions:ways-up-and-over:medium:funicular",
-        "tier": 3,
+        "tier": 5,
         "subjectKey": "railway:funicular",
         "clue": {
           "en": "This hillside railway uses two cars on a cable: as one descends, the other is pulled uphill. What is it?",
@@ -12971,7 +12993,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-062:question:4",
         "factKey": "built-in-technology-inventions:ways-up-and-over:medium:maglev",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "transport:maglev",
         "clue": {
           "en": "Rather than rolling on wheels, this train is lifted and guided by magnetic forces above its track. Name the technology.",
@@ -13004,7 +13026,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-062:question:5",
         "factKey": "built-in-technology-inventions:ways-up-and-over:medium:snowmobile",
-        "tier": 5,
+        "tier": 2,
         "subjectKey": "vehicle:snowmobile",
         "clue": {
           "en": "This motorised vehicle uses skis at the front and a continuous track at the rear to travel over snow. What is it?",
@@ -13195,14 +13217,14 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-064",
     "name": {
-      "en": "Pictures That Learned to Move",
-      "et": "Pildid, mis õppisid liikuma"
+      "en": "Images That Create Illusions",
+      "et": "Kujutised, mis loovad illusioone"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-064:question:1",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:zoetrope",
-        "tier": 1,
+        "tier": 4,
         "subjectKey": "device:zoetrope",
         "clue": {
           "en": "When spun, this Victorian drum with a strip of drawings makes them appear to move through slits in its side. What is it?",
@@ -13231,7 +13253,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-064:question:2",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:flip-book",
-        "tier": 2,
+        "tier": 1,
         "subjectKey": "device:flip-book",
         "clue": {
           "en": "What small book creates a moving picture when you rapidly thumb through its pages, each of which has a slightly changed drawing?",
@@ -13239,15 +13261,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "flip book",
-          "et": "lehitsev raamat"
+          "et": "folioskoop"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "flipbook"
+          ],
+          "et": [
+            "flipbook"
+          ]
         },
         "explanation": {
-          "en": "A flip book relies on persistence of vision: rapid viewing of successive drawings makes the small changes appear as continuous motion.",
-          "et": "Lehitsev raamat tugineb nägemise järelmõjule: järjestikuste jooniste kiire vaatamine muudab väikesed muutused näiliselt pidevaks liikumiseks."
+          "en": "A flip book presents slightly changed pictures in rapid succession, creating the illusion of motion when the pages are thumbed through.",
+          "et": "Folioskoop esitab veidi muudetud pilte kiiresti järjest, luues lehti pöidla alt läbi lastes liikumise illusiooni."
         },
         "source": {
           "sourceId": "wikipedia:Flip_book",
@@ -13289,7 +13315,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-064:question:4",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:cinematograph",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "device:cinematograph",
         "clue": {
           "en": "The Lumière brothers used this machine to record, develop, and project early motion pictures. What was it called?",
@@ -13318,7 +13344,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-064:question:5",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:hologram",
-        "tier": 5,
+        "tier": 2,
         "subjectKey": "image:hologram",
         "clue": {
           "en": "This three-dimensional-looking image is made by recording the interference pattern of laser light. What is it?",
@@ -13390,7 +13416,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-065:question:2",
         "factKey": "built-in-technology-inventions:power-from-elements:medium:nuclear-reactor",
-        "tier": 2,
+        "tier": 3,
         "subjectKey": "facility:nuclear-reactor",
         "clue": {
           "en": "What facility component controls a chain reaction to release heat, which can then make steam for generating electricity?",
@@ -13419,7 +13445,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-065:question:3",
         "factKey": "built-in-technology-inventions:power-from-elements:medium:geothermal-energy",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "energy:geothermal-energy",
         "clue": {
           "en": "Iceland taps this energy source by using heat from beneath Earth’s surface for heating and electricity. What is it?",
@@ -13448,7 +13474,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-065:question:4",
         "factKey": "built-in-technology-inventions:power-from-elements:medium:hydroelectricity",
-        "tier": 4,
+        "tier": 2,
         "subjectKey": "energy:hydroelectricity",
         "clue": {
           "en": "At a dam, falling or flowing water turns turbines to generate this form of electricity. What is it called?",
@@ -13513,8 +13539,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-066",
     "name": {
-      "en": "Machines That Make Machines",
-      "et": "Masinad, mis teevad masinaid"
+      "en": "Machines and Methods That Make Parts",
+      "et": "Masinad ja meetodid detailide valmistamiseks"
     },
     "questions": [
       {
@@ -13585,8 +13611,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "machine:cnc-machine",
         "clue": {
-          "en": "Its name means “computer numerical control”: this machine follows coded instructions to cut or shape parts with high precision. What kind of machine is it?",
-          "et": "Selle nime lühend tähendab „arvutiga arvjuhtimist”: see masin järgib kodeeritud juhiseid, et lõigata või vormida detaile suure täpsusega. Mis tüüpi masin see on?"
+          "en": "CNC is short for the English term “computer numerical control”. What kind of machine follows coded coordinates to cut or shape parts with high precision?",
+          "et": "CNC tuleb ingliskeelsest väljendist „computer numerical control”. Milline tööpink järgib kodeeritud koordinaate, et lõigata või vormida detaile suure täpsusega?"
         },
         "response": {
           "en": "CNC machine",
@@ -13597,7 +13623,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "computer numerical control machine"
           ],
           "et": [
-            "arvjuhtimispink"
+            "arvjuhtimispink",
+            "CNC-tööpink"
           ]
         },
         "explanation": {
@@ -13626,8 +13653,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "survevalu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "injection molding"
+          ],
+          "et": [
+            "injektsioonvalu"
+          ]
         },
         "explanation": {
           "en": "Injection moulding fills a closed mould with molten material under pressure and then cools it. It is especially efficient when a factory needs many identical plastic components.",
