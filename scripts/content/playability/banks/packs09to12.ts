@@ -6416,157 +6416,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-089",
     "name": {
-      "en": "Chemistry and Ceremony in Tea",
-      "et": "Tee keemia ja tseremoonia"
+      "en": "Five Teas with a Story",
+      "et": "Viis lugu teest"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-089:question:1",
-        "factKey": "built-in-food-drink:round1-hard:compound:theaflavin",
+        "factKey": "built-in-food-drink:checkpoint6:bubble-tea",
         "tier": 1,
-        "subjectKey": "compound:theaflavin",
+        "subjectKey": "food:bubble-tea",
         "clue": {
-          "en": "Which orange-red polyphenol family forms when tea catechins oxidise during black-tea production?",
-          "et": "Milline oranžikaspunane polüfenoolide rühm tekib teekatehhiinide oksüdeerumisel musta tee tootmises?"
+          "en": "Which Taiwanese tea drink is famous for chewy tapioca pearls at the bottom of the cup?",
+          "et": "Milline Taiwani teejook on kuulus tassi põhjas olevate nätskete tapiokipärlite poolest?"
         },
         "response": {
-          "en": "theaflavin",
-          "et": "teaflaviin"
+          "en": "bubble tea",
+          "et": "mullitee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "boba tea",
+            "boba"
+          ],
+          "et": [
+            "boba-tee",
+            "boba"
+          ]
         },
         "explanation": {
-          "en": "Theaflavins contribute brightness, colour, and briskness to black-tea liquor.",
-          "et": "Teaflaviinid annavad musta tee tõmmisele erksuse, värvi ja karguse."
+          "en": "Bubble tea originated in Taiwan in the 1980s and is also called boba.",
+          "et": "Mullitee sai alguse Taiwanil 1980. aastatel ning seda nimetatakse ka boba’ks."
         },
         "source": {
-          "sourceId": "wikipedia:theaflavin",
-          "title": "Theaflavin",
-          "url": "https://en.wikipedia.org/wiki/Theaflavin",
+          "sourceId": "wikipedia:bubble-tea",
+          "title": "Bubble tea",
+          "url": "https://en.wikipedia.org/wiki/Bubble_tea",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-089:question:2",
-        "factKey": "built-in-food-drink:round1-hard:compound:catechin",
+        "factKey": "built-in-food-drink:checkpoint6:earl-grey-tea",
         "tier": 2,
-        "subjectKey": "compound:catechin",
+        "subjectKey": "food:earl-grey-tea",
         "clue": {
-          "en": "Which flavanol is abundant in green tea because its leaves are heated before extensive oxidation?",
-          "et": "Millist flavanooli leidub rohkelt rohelises tees, sest lehed kuumutatakse enne ulatuslikku oksüdeerumist?"
+          "en": "Which tea blend gets its distinctive flavour from oil of bergamot?",
+          "et": "Milline teesegu saab iseloomuliku maitse bergamotiõlist?"
         },
         "response": {
-          "en": "catechin",
-          "et": "katehhiin"
+          "en": "Earl Grey tea",
+          "et": "Earl Grey tee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Earl Grey"
+          ],
+          "et": [
+            "Earl Grey"
+          ]
         },
         "explanation": {
-          "en": "Catechins are polyphenols whose transformations help distinguish green, oolong, and black teas.",
-          "et": "Katehhiinid on polüfenoolid, mille muutumine aitab eristada rohelist, oolong- ja musta teed."
+          "en": "It has been suggested that the blend was named after Charles Grey, the British prime minister and second Earl Grey.",
+          "et": "On oletatud, et teesegu sai nime Suurbritannia peaministri ja teise Earl Grey Charles Grey järgi."
         },
         "source": {
-          "sourceId": "wikipedia:catechin",
-          "title": "Catechin",
-          "url": "https://en.wikipedia.org/wiki/Catechin",
+          "sourceId": "wikipedia:earl-grey-tea",
+          "title": "Earl Grey tea",
+          "url": "https://en.wikipedia.org/wiki/Earl_Grey_tea",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-089:question:3",
-        "factKey": "built-in-food-drink:round1-hard:tea:gyokuro",
+        "factKey": "built-in-food-drink:checkpoint6:masala-chai",
         "tier": 3,
-        "subjectKey": "tea:gyokuro",
+        "subjectKey": "food:masala-chai",
         "clue": {
-          "en": "Which prized Japanese green tea is shaded before harvest but brewed as whole leaves rather than powder?",
-          "et": "Millist hinnatud Jaapani rohelist teed varjutatakse enne korjet, kuid valmistatakse tervetest lehtedest, mitte pulbrist?"
+          "en": "Which Indian drink brews black tea with milk, sugar and aromatic spices?",
+          "et": "Millises India joogis keedetakse musta teed piima, suhkru ja aromaatsete vürtsidega?"
         },
         "response": {
-          "en": "gyokuro",
-          "et": "gyokuro"
+          "en": "masala chai",
+          "et": "masala chai"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "spiced chai"
+          ],
+          "et": [
+            "vürtsitee"
+          ]
         },
         "explanation": {
-          "en": "Gyokuro's pre-harvest shade promotes a sweet, umami-rich character and distinguishes it from sencha.",
-          "et": "Korje-eelne varjutamine annab gyokurole magusa umamirikka iseloomu ja eristab seda sencha'st."
+          "en": "Masala chai brews black tea in milk and water, then adds aromatic herbs and spices.",
+          "et": "Masala chai valmistamisel tõmmatakse musta teed piimas ja vees ning lisatakse aromaatseid ürte ja vürtse."
         },
         "source": {
-          "sourceId": "wikipedia:gyokuro",
-          "title": "Gyokuro",
-          "url": "https://en.wikipedia.org/wiki/Gyokuro",
+          "sourceId": "wikipedia:masala-chai",
+          "title": "Masala chai",
+          "url": "https://en.wikipedia.org/wiki/Masala_chai",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-089:question:4",
-        "factKey": "built-in-food-drink:round1-hard:compound:l-theanine",
+        "factKey": "built-in-food-drink:checkpoint6:rooibos",
         "tier": 4,
-        "subjectKey": "compound:l-theanine",
+        "subjectKey": "food:rooibos",
         "clue": {
-          "en": "Which amino acid found in tea is especially associated with umami and a soft savoury taste?",
-          "et": "Milline tees leiduv aminohape seostub eriti umami ja pehme täidlase maitsega?"
+          "en": "Which caffeine-free herbal infusion comes from a plant endemic to South Africa’s Western Cape?",
+          "et": "Milline kofeiinivaba ürditõmmis saadakse Lõuna-Aafrika Lääne-Kapimaale endeemilisest taimest?"
         },
         "response": {
-          "en": "L-theanine",
-          "et": "L-teaniin"
+          "en": "rooibos",
+          "et": "rooibos"
         },
         "acceptedVariants": {
           "en": [
-            "theanine"
+            "red bush tea"
           ],
           "et": [
-            "teaniin"
+            "punapõõsatee"
           ]
         },
         "explanation": {
-          "en": "L-theanine accumulates in shade-grown tea leaves and can decline as sunlight converts it into other compounds.",
-          "et": "L-teaniin koguneb varjus kasvanud teelehtedesse ning päikesevalgus võib muuta selle teisteks ühenditeks."
+          "en": "Rooibos is the common name for Aspalathus linearis, a broom-like member of the plant family Fabaceae.",
+          "et": "Rooibos on taime Aspalathus linearis üldnimetus; see luuataoline liik kuulub liblikõieliste sugukonda."
         },
         "source": {
-          "sourceId": "wikipedia:theanine",
-          "title": "Theanine",
-          "url": "https://en.wikipedia.org/wiki/Theanine",
+          "sourceId": "wikipedia:rooibos",
+          "title": "Rooibos",
+          "url": "https://en.wikipedia.org/wiki/Rooibos",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-089:question:5",
-        "factKey": "built-in-food-drink:round1-hard:ritual:chanoyu",
+        "factKey": "built-in-food-drink:checkpoint6:sencha",
         "tier": 5,
-        "subjectKey": "ritual:chanoyu",
+        "subjectKey": "food:sencha",
         "clue": {
-          "en": "What Japanese “way of tea” centres on the choreographed preparation and serving of matcha?",
-          "et": "Milline Jaapani „tee tee“ keskendub matcha rituaalsele valmistamisele ja serveerimisele?"
+          "en": "Which Japanese green tea is brewed by infusing processed whole leaves rather than whisking a powder?",
+          "et": "Millist Jaapani rohelist teed valmistatakse töödeldud tervete lehtede tõmbamisel, mitte pulbri vahustamisel?"
         },
         "response": {
-          "en": "chanoyu",
-          "et": "chanoyu"
+          "en": "sencha",
+          "et": "sencha"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Chanoyu values harmony, respect, purity, and tranquillity in a purposefully arranged setting.",
-          "et": "Chanoyu väärtustab läbimõeldud keskkonnas harmooniat, austust, puhtust ja meelerahu."
+          "en": "Sencha is prepared by infusing processed whole leaves in hot water, while matcha mixes powdered tea into water.",
+          "et": "Sencha valmistatakse töödeldud terveid lehti kuumas vees tõmmates, matcha puhul aga segatakse teepulber vette."
         },
         "source": {
-          "sourceId": "wikipedia:japanese_tea_ceremony",
-          "title": "Japanese tea ceremony",
-          "url": "https://en.wikipedia.org/wiki/Japanese_tea_ceremony",
+          "sourceId": "wikipedia:sencha",
+          "title": "Sencha",
+          "url": "https://en.wikipedia.org/wiki/Sencha",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -6574,76 +6588,150 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-090",
     "name": {
-      "en": "Unusual Implements at the Table",
-      "et": "Ebatavalised söögiriistad"
+      "en": "Odd Tools with a Food Story",
+      "et": "Kummalised toiduriistad"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-090:question:1",
-        "factKey": "built-in-food-drink:round1-hard:utensil:spork",
+        "factKey": "built-in-food-drink:checkpoint6:spork",
         "tier": 1,
-        "subjectKey": "utensil:spork",
+        "subjectKey": "food:spork",
         "clue": {
-          "en": "Which hybrid utensil combines a shallow spoon bowl with short fork tines?",
-          "et": "Milline hübriidriist ühendab madala lusikakausi lühikeste kahvliharudega?"
+          "en": "Which hybrid utensil puts short fork tines at the end of a spoon bowl?",
+          "et": "Milline hübriidriist ühendab lusikakausi otsas lühikesed kahvliharud?"
         },
         "response": {
           "en": "spork",
           "et": "kahvellusikas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "forkspoon"
+          ],
+          "et": [
+            "lusikahvel"
+          ]
         },
         "explanation": {
-          "en": "The word spork blends spoon and fork, though combined utensils existed before the modern name.",
-          "et": "Inglise sõna spork ühendab sõnad spoon ja fork, kuigi kombineeritud riistu tunti varemgi."
+          "en": "Its English name blends the words spoon and fork.",
+          "et": "Ingliskeelne nimi spork ühendab sõnad spoon ja fork."
         },
         "source": {
           "sourceId": "wikipedia:spork",
           "title": "Spork",
           "url": "https://en.wikipedia.org/wiki/Spork",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-090:question:2",
-        "factKey": "built-in-food-drink:round1-hard:tableware:trencher",
+        "factKey": "built-in-food-drink:checkpoint6:demitasse-spoon",
         "tier": 2,
-        "subjectKey": "tableware:trencher",
+        "subjectKey": "food:demitasse-spoon",
         "clue": {
-          "en": "In medieval dining, what thick slice of stale bread could serve as an edible plate?",
-          "et": "Kuidas nimetati keskaja söömaajal paksu tahket leivaviilu, mis toimis söödava taldrikuna?"
+          "en": "Which diminutive utensil is smaller than a teaspoon and paired with a matching small coffee cup?",
+          "et": "Milline tilluke söögiriist on teelusikast väiksem ja kuulub kokku sobiva väikese kohvitassiga?"
+        },
+        "response": {
+          "en": "demitasse spoon",
+          "et": "espressolusikas"
+        },
+        "acceptedVariants": {
+          "en": [
+            "espresso spoon"
+          ],
+          "et": [
+            "demitasse-lusikas"
+          ]
+        },
+        "explanation": {
+          "en": "A demitasse spoon is smaller than an ordinary teaspoon.",
+          "et": "Espressolusikas on tavalisest teelusikast väiksem."
+        },
+        "source": {
+          "sourceId": "wikipedia:demitasse-spoon",
+          "title": "Demitasse spoon",
+          "url": "https://en.wikipedia.org/wiki/Demitasse_spoon",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-090:question:3",
+        "factKey": "built-in-food-drink:checkpoint6:trencher-tableware",
+        "tier": 3,
+        "subjectKey": "food:trencher-tableware",
+        "clue": {
+          "en": "What medieval edible plate was made from a flat round of stale bread?",
+          "et": "Kuidas nimetati keskajal lapikust ümmargusest tahkest leivast tehtud söödavat taldrikut?"
         },
         "response": {
           "en": "trencher",
           "et": "leivataldrik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "bread trencher"
+          ],
+          "et": [
+            "trencher"
+          ]
         },
         "explanation": {
-          "en": "A trencher absorbed sauces and might later be eaten or given to the poor or to animals.",
-          "et": "Leivataldrik imas kastmeid ning selle võis hiljem ära süüa või anda vaestele või loomadele."
+          "en": "At the end of a meal, a trencher could be eaten with sauce or given as alms to the poor.",
+          "et": "Söögikorra lõpus võis leivataldriku kastmega ära süüa või vaestele almuseks anda."
         },
         "source": {
-          "sourceId": "wikipedia:trencher_(tableware)",
+          "sourceId": "wikipedia:trencher-tableware",
           "title": "Trencher (tableware)",
           "url": "https://en.wikipedia.org/wiki/Trencher_(tableware)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
-        "key": "built-in-food-drink-set-090:question:3",
-        "factKey": "built-in-food-drink:round1-hard:utensil:splayd",
-        "tier": 3,
-        "subjectKey": "utensil:splayd",
+        "key": "built-in-food-drink-set-090:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:spurtle",
+        "tier": 4,
+        "subjectKey": "food:spurtle",
         "clue": {
-          "en": "Which Australian utensil combines spoon, fork, and knife features in one piece?",
-          "et": "Milline Austraalia söögiriist ühendab ühes esemes lusika, kahvli ja noa omadused?"
+          "en": "Which Scottish wooden rod is traditionally used to stir porridge?",
+          "et": "Millist Šoti puust pulka kasutatakse traditsiooniliselt pudru segamiseks?"
+        },
+        "response": {
+          "en": "spurtle",
+          "et": "spurtle"
+        },
+        "acceptedVariants": {
+          "en": [
+            "the spurtle"
+          ],
+          "et": [
+            "pudrupulk"
+          ]
+        },
+        "explanation": {
+          "en": "Its rod-like shape lets porridge be stirred without congealing and forming lumps.",
+          "et": "Selle pulgakujuline vorm võimaldab putru segada, ilma et see paksuks tõmbuks ja tükki läheks."
+        },
+        "source": {
+          "sourceId": "wikipedia:spurtle",
+          "title": "Spurtle",
+          "url": "https://en.wikipedia.org/wiki/Spurtle",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-090:question:5",
+        "factKey": "built-in-food-drink:checkpoint6:splayd",
+        "tier": 5,
+        "subjectKey": "food:splayd",
+        "clue": {
+          "en": "Which Australian invention combines the bowl of a spoon, fork tines and knife-like side edges?",
+          "et": "Milline Austraalia leiutis ühendab lusikakausi, kahvliharud ja noataolised külgservad?"
         },
         "response": {
           "en": "splayd",
@@ -6654,73 +6742,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "A splayd has fork tines, a spoon-like bowl, and sharpened side edges.",
-          "et": "Splaydil on kahvliharud, lusikataoline kauss ja teritatud külgservad."
+          "en": "William McArthur created the splayd in Sydney in the 1940s.",
+          "et": "William McArthur lõi splayd’i Sydneys 1940. aastatel."
         },
         "source": {
           "sourceId": "wikipedia:splayd",
           "title": "Splayd",
           "url": "https://en.wikipedia.org/wiki/Splayd",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-090:question:4",
-        "factKey": "built-in-food-drink:round1-hard:utensil:spurtle",
-        "tier": 4,
-        "subjectKey": "utensil:spurtle",
-        "clue": {
-          "en": "Which Scottish wooden stirring stick is traditionally used for porridge?",
-          "et": "Millist Šoti puust segamispulka kasutatakse traditsiooniliselt pudru tegemisel?"
-        },
-        "response": {
-          "en": "spurtle",
-          "et": "spurtle"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "A spurtle’s simple rod shape stirs oats without creating the drag of a broad spoon.",
-          "et": "Spurtle’i lihtne pulgakuju segab kaera ilma laia lusika tekitatud takistuseta."
-        },
-        "source": {
-          "sourceId": "wikipedia:spurtle",
-          "title": "Spurtle",
-          "url": "https://en.wikipedia.org/wiki/Spurtle",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-090:question:5",
-        "factKey": "built-in-food-drink:round1-hard:utensil:demitasse-spoon",
-        "tier": 5,
-        "subjectKey": "utensil:demitasse-spoon",
-        "clue": {
-          "en": "What very small spoon accompanies a demitasse cup of espresso or Turkish coffee?",
-          "et": "Milline väga väike lusikas käib demitasse-tassi espresso või Türgi kohvi juurde?"
-        },
-        "response": {
-          "en": "demitasse spoon",
-          "et": "espressolusikas"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "A demitasse spoon is smaller than a teaspoon and sized for a small coffee cup.",
-          "et": "Espressolusikas on teelusikast väiksem ning sobib väikese kohvitassi juurde."
-        },
-        "source": {
-          "sourceId": "wikipedia:demitasse_spoon",
-          "title": "Demitasse spoon",
-          "url": "https://en.wikipedia.org/wiki/Demitasse_spoon",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -6728,76 +6758,84 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-091",
     "name": {
-      "en": "Shared Tables beyond Tapas",
-      "et": "Jagatud lauad väljaspool tapast"
+      "en": "How the World Shares a Table",
+      "et": "Kuidas maailm lauda jagab"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-091:question:1",
-        "factKey": "built-in-food-drink:round1-hard:tradition:antipasto",
+        "factKey": "built-in-food-drink:checkpoint6:antipasto",
         "tier": 1,
-        "subjectKey": "tradition:antipasto",
+        "subjectKey": "food:antipasto",
         "clue": {
-          "en": "What Italian first course offers small savoury foods such as cured meat, olives, and vegetables?",
-          "et": "Milline Itaalia esimene käik pakub väikesi soolaseid palu, näiteks vinnutatud liha, oliive ja köögivilju?"
+          "en": "What traditional first course of a formal Italian meal is served before the primo piatto?",
+          "et": "Milline Itaalia piduliku eine traditsiooniline esimene käik eelneb primo piatto’le?"
         },
         "response": {
           "en": "antipasto",
           "et": "antipasto"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "antipasti"
+          ],
+          "et": [
+            "antipasti"
+          ]
         },
         "explanation": {
-          "en": "Antipasto means “before the meal” and precedes the pasta or main course.",
-          "et": "Antipasto tähendab „enne sööki“ ning eelneb pastale või pearoale."
+          "en": "The contents of an antipasto vary greatly by region.",
+          "et": "Antipasto sisu erineb piirkonniti suuresti."
         },
         "source": {
           "sourceId": "wikipedia:antipasto",
           "title": "Antipasto",
           "url": "https://en.wikipedia.org/wiki/Antipasto",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-091:question:2",
-        "factKey": "built-in-food-drink:round1-hard:tradition:banchan",
+        "factKey": "built-in-food-drink:checkpoint6:zakuski",
         "tier": 2,
-        "subjectKey": "tradition:banchan",
+        "subjectKey": "food:zakuski",
         "clue": {
-          "en": "What Korean term covers the many small side dishes placed around a shared bowl of rice?",
-          "et": "Milline Korea termin tähistab paljusid väikseid lisandeid ühise riisikausi ümber?"
+          "en": "What Russian term names an assortment of cold hors d’oeuvres, entrées and snacks?",
+          "et": "Milline vene termin nimetab külmade eelroogade, suupistete ja väikeste roogade valikut?"
         },
         "response": {
-          "en": "banchan",
-          "et": "banchan"
+          "en": "zakuski",
+          "et": "zakuski"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "zakuska"
+          ],
+          "et": [
+            "zakuska"
+          ]
         },
         "explanation": {
-          "en": "Banchan are shared at the table and commonly include seasoned vegetables, pickles, and protein dishes.",
-          "et": "Banchan’i jagatakse lauas ning see hõlmab sageli maitsestatud köögivilju, hapendeid ja valgurikkaid roogi."
+          "en": "Zakuski may include cured fish, meat, salads, pickles and bread.",
+          "et": "Zakuski hulka võivad kuuluda soolakala, liha, salatid, hoidised ja leib."
         },
         "source": {
-          "sourceId": "wikipedia:banchan",
-          "title": "Banchan",
-          "url": "https://en.wikipedia.org/wiki/Banchan",
+          "sourceId": "wikipedia:zakuski",
+          "title": "Zakuski",
+          "url": "https://en.wikipedia.org/wiki/Zakuski",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-091:question:3",
-        "factKey": "built-in-food-drink:round1-hard:tradition:thali",
+        "factKey": "built-in-food-drink:checkpoint6:thali",
         "tier": 3,
-        "subjectKey": "tradition:thali",
+        "subjectKey": "food:thali",
         "clue": {
-          "en": "Which South Asian meal presents several dishes together on a round platter or compartmented plate?",
-          "et": "Milline Lõuna-Aasia eine esitab mitu rooga korraga ümaral kandikul või jaotustega taldrikul?"
+          "en": "Which South Asian meal presents several dishes together on a round platter?",
+          "et": "Milline Lõuna-Aasia eine esitab mitu rooga koos ümmargusel kandikul?"
         },
         "response": {
           "en": "thali",
@@ -6808,54 +6846,58 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "A thali balances staples, pulses, vegetables, condiments, and sweets according to region and occasion.",
-          "et": "Thali ühendab piirkonna ja sündmuse järgi põhitoidu, kaunviljad, köögiviljad, lisandid ning maiuse."
+          "en": "The Hindi word thali also names the plate on which the meal is served.",
+          "et": "Hindi sõna thali tähistab ka taldrikut, millel eine serveeritakse."
         },
         "source": {
           "sourceId": "wikipedia:thali",
           "title": "Thali",
           "url": "https://en.wikipedia.org/wiki/Thali",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-091:question:4",
-        "factKey": "built-in-food-drink:round1-hard:tradition:zakuski",
+        "factKey": "built-in-food-drink:checkpoint6:banchan",
         "tier": 4,
-        "subjectKey": "tradition:zakuski",
+        "subjectKey": "food:banchan",
         "clue": {
-          "en": "What Eastern European spread of cold appetisers is served before the main meal?",
-          "et": "Kuidas nimetatakse Ida-Euroopa külmade suupistete valikut, mida pakutakse enne põhieinet?"
+          "en": "What Korean name covers the small side dishes shared with cooked rice?",
+          "et": "Milline Korea nimetus hõlmab keedetud riisi kõrvale jagatavaid väikseid lisandeid?"
         },
         "response": {
-          "en": "zakuski",
-          "et": "zakuski"
+          "en": "banchan",
+          "et": "banchan"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "panchan"
+          ],
+          "et": [
+            "panchan"
+          ]
         },
         "explanation": {
-          "en": "Zakuski may include pickles, fish, cured meat, salads, and bread arranged for sharing.",
-          "et": "Zakuski võib jagamiseks sisaldada hapendeid, kala, vinnutatud liha, salateid ja leiba."
+          "en": "Banchan are set in the middle of the table for diners to share.",
+          "et": "Banchan asetatakse laua keskele, et sööjad saaksid neid jagada."
         },
         "source": {
-          "sourceId": "wikipedia:zakuski",
-          "title": "Zakuski",
-          "url": "https://en.wikipedia.org/wiki/Zakuski",
+          "sourceId": "wikipedia:banchan",
+          "title": "Banchan",
+          "url": "https://en.wikipedia.org/wiki/Banchan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-091:question:5",
-        "factKey": "built-in-food-drink:round1-hard:food:pintxo",
+        "factKey": "built-in-food-drink:checkpoint6:pintxo",
         "tier": 5,
         "subjectKey": "food:pintxo",
         "clue": {
-          "en": "Which Basque bar snack is often secured to bread with a small skewer?",
-          "et": "Milline baski suupiste kinnitatakse sageli väikese tikuga leivale?"
+          "en": "Which Basque bar snack is often held to a slice of bread with a small skewer?",
+          "et": "Milline baski baarisuupiste kinnitatakse sageli väikese tikuga leivaviilule?"
         },
         "response": {
           "en": "pintxo",
@@ -6870,15 +6912,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "The name pintxo comes from the verb meaning to pierce, referring to the securing skewer.",
-          "et": "Nimi pintxo tuleb läbistamist tähendavast tegusõnast ning viitab kinnitustikule."
+          "en": "The Spanish word pincho literally means “thorn” or “spike.”",
+          "et": "Hispaania sõna pincho tähendab otsetõlkes „okka“ või „teravikku“."
         },
         "source": {
-          "sourceId": "wikipedia:pincho",
+          "sourceId": "wikipedia:pintxo",
           "title": "Pincho",
           "url": "https://en.wikipedia.org/wiki/Pincho",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -6886,176 +6928,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-092",
     "name": {
-      "en": "Legal Geography on Food Labels",
-      "et": "Toidumärgise õiguslik geograafia"
+      "en": "A World Cheese Board",
+      "et": "Juustulaud ümber maailma"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-092:question:1",
-        "factKey": "built-in-food-drink:round1-hard:label:protected-designation-of-origin",
+        "factKey": "built-in-food-drink:checkpoint6:halloumi",
         "tier": 1,
-        "subjectKey": "label:protected-designation-of-origin",
+        "subjectKey": "food:halloumi",
         "clue": {
-          "en": "Which EU label requires production, processing, and preparation all to occur in the named region?",
-          "et": "Milline EL-i märgis nõuab, et tootmine, töötlemine ja valmistamine toimuksid kõik nimetatud piirkonnas?"
+          "en": "Which Cypriot cheese keeps its shape well enough to be grilled or fried?",
+          "et": "Milline Küprose juust hoiab kuju piisavalt hästi, et seda grillida või praadida?"
         },
         "response": {
-          "en": "Protected Designation of Origin",
-          "et": "kaitstud päritolunimetus"
+          "en": "halloumi",
+          "et": "halloumi"
         },
         "acceptedVariants": {
           "en": [
-            "PDO"
+            "haloumi"
           ],
           "et": [
-            "KPN",
-            "PDO"
+            "haloumi"
           ]
         },
         "explanation": {
-          "en": "Protected Designation of Origin is the strictest of the main EU geographical food schemes.",
-          "et": "Kaitstud päritolunimetus on EL-i peamistest geograafilistest toidukavadest kõige rangem."
+          "en": "Halloumi has a high melting point and is traditionally made from goat’s and sheep’s milk.",
+          "et": "Halloumil on kõrge sulamistemperatuur ning seda valmistatakse traditsiooniliselt kitse- ja lambapiimast."
         },
         "source": {
-          "sourceId": "wikipedia:geographical_indications_and_traditional_specialities_in_the_european_union",
-          "title": "Geographical indications and traditional specialities in the European Union",
-          "url": "https://en.wikipedia.org/wiki/Geographical_indications_and_traditional_specialities_in_the_European_Union",
+          "sourceId": "wikipedia:halloumi",
+          "title": "Halloumi",
+          "url": "https://en.wikipedia.org/wiki/Halloumi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-092:question:2",
-        "factKey": "built-in-food-drink:round1-hard:label:protected-geographical-indication",
+        "factKey": "built-in-food-drink:checkpoint6:paneer",
         "tier": 2,
-        "subjectKey": "label:protected-geographical-indication",
+        "subjectKey": "food:paneer",
         "clue": {
-          "en": "Under which EU label must at least one production stage occur in the linked region?",
-          "et": "Millise EL-i märgise puhul peab vähemalt üks tootmisetapp toimuma seotud piirkonnas?"
+          "en": "Which fresh South Asian cheese is made by curdling milk with a fruit or vegetable acid?",
+          "et": "Milline värske Lõuna-Aasia juust saadakse piima kalgendamisel puuvilja- või köögiviljahappega?"
         },
         "response": {
-          "en": "Protected Geographical Indication",
-          "et": "kaitstud geograafiline tähis"
+          "en": "paneer",
+          "et": "paneer"
         },
         "acceptedVariants": {
           "en": [
-            "PGI"
+            "panir"
           ],
           "et": [
-            "KGT",
-            "PGI"
+            "panir"
           ]
         },
         "explanation": {
-          "en": "Protected Geographical Indication allows a looser territorial link than PDO while protecting regional reputation.",
-          "et": "Kaitstud geograafiline tähis lubab KPN-ist lõdvemat piirkondlikku seost, kuid kaitseb kohalikku mainet."
+          "en": "Paneer is unaged and does not melt when heated.",
+          "et": "Paneer on laagerdamata ega sula kuumutamisel."
         },
         "source": {
-          "sourceId": "wikipedia:geographical_indications_and_traditional_specialities_in_the_european_union",
-          "title": "Geographical indications and traditional specialities in the European Union",
-          "url": "https://en.wikipedia.org/wiki/Geographical_indications_and_traditional_specialities_in_the_European_Union",
+          "sourceId": "wikipedia:paneer",
+          "title": "Paneer",
+          "url": "https://en.wikipedia.org/wiki/Paneer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-092:question:3",
-        "factKey": "built-in-food-drink:round1-hard:label:traditional-speciality-guaranteed",
+        "factKey": "built-in-food-drink:checkpoint6:gruyere-cheese",
         "tier": 3,
-        "subjectKey": "label:traditional-speciality-guaranteed",
+        "subjectKey": "food:gruyere-cheese",
         "clue": {
-          "en": "Which EU scheme protects a traditional recipe or production method without tying it to one place?",
-          "et": "Milline EL-i kava kaitseb traditsioonilist retsepti või tootmisviisi, sidumata seda ühe paigaga?"
+          "en": "Which Swiss cheese takes its name from a town in Fribourg and is central to fondue and croque monsieur?",
+          "et": "Milline Šveitsi juust kannab Fribourgi kantoni linna nime ning on fondüü ja croque monsieur’ tähtis koostisosa?"
         },
         "response": {
-          "en": "Traditional Speciality Guaranteed",
-          "et": "garanteeritud traditsiooniline toode"
+          "en": "Gruyère",
+          "et": "Gruyère'i juust"
         },
         "acceptedVariants": {
           "en": [
-            "TSG"
+            "Gruyere cheese",
+            "Gruyère cheese"
           ],
           "et": [
-            "GTT",
-            "TSG"
+            "Gruyère"
           ]
         },
         "explanation": {
-          "en": "Traditional Speciality Guaranteed recognises customary composition or method rather than geographical origin.",
-          "et": "Garanteeritud traditsiooniline toode tunnustab tavapärast koostist või meetodit, mitte geograafilist päritolu."
+          "en": "Gruyère is a hard Swiss cheese whose production begins with raw cow’s milk.",
+          "et": "Gruyère on kõva Šveitsi juust, mille valmistamine algab toorest lehmapiimast."
         },
         "source": {
-          "sourceId": "wikipedia:geographical_indications_and_traditional_specialities_in_the_european_union",
-          "title": "Geographical indications and traditional specialities in the European Union",
-          "url": "https://en.wikipedia.org/wiki/Geographical_indications_and_traditional_specialities_in_the_European_Union",
+          "sourceId": "wikipedia:gruyere-cheese",
+          "title": "Gruyère cheese",
+          "url": "https://en.wikipedia.org/wiki/Gruy%C3%A8re_cheese",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-092:question:4",
-        "factKey": "built-in-food-drink:round1-hard:concept:geographical-indication",
+        "factKey": "built-in-food-drink:checkpoint6:stilton-cheese",
         "tier": 4,
-        "subjectKey": "concept:geographical-indication",
+        "subjectKey": "food:stilton-cheese",
         "clue": {
-          "en": "What general intellectual-property term links a product’s qualities or reputation to its place of origin?",
-          "et": "Milline intellektuaalomandi üldmõiste seob toote omadused või maine päritolukohaga?"
+          "en": "Which English blue cheese may legally be made in three counties, but not in the village whose name it bears?",
+          "et": "Millist Inglise sinihallitusjuustu võib seaduse järgi teha kolmes krahvkonnas, kuid mitte külas, mille nime see kannab?"
         },
         "response": {
-          "en": "geographical indication",
-          "et": "geograafiline tähis"
+          "en": "Stilton",
+          "et": "Stilton"
         },
         "acceptedVariants": {
           "en": [
-            "GI"
+            "Stilton cheese",
+            "Blue Stilton"
           ],
           "et": [
-            "GI"
+            "Stiltoni juust"
           ]
         },
         "explanation": {
-          "en": "A geographical indication protects names such as regional foods and drinks against misleading use.",
-          "et": "Geograafiline tähis kaitseb piirkondlike toitude ja jookide nimesid eksitava kasutuse eest."
+          "en": "Blue Stilton is produced in Derbyshire, Leicestershire and Nottinghamshire.",
+          "et": "Blue Stiltonit toodetakse Derbyshire’is, Leicestershire’is ja Nottinghamshire’is."
         },
         "source": {
-          "sourceId": "wikipedia:geographical_indication",
-          "title": "Geographical indication",
-          "url": "https://en.wikipedia.org/wiki/Geographical_indication",
+          "sourceId": "wikipedia:stilton-cheese",
+          "title": "Stilton cheese",
+          "url": "https://en.wikipedia.org/wiki/Stilton_cheese",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-092:question:5",
-        "factKey": "built-in-food-drink:round1-hard:label:appellation-dorigine-controlee",
+        "factKey": "built-in-food-drink:checkpoint6:pecorino-romano",
         "tier": 5,
-        "subjectKey": "label:appellation-dorigine-controlee",
+        "subjectKey": "food:pecorino-romano",
         "clue": {
-          "en": "Which French certification regulates origin and production rules for products such as cheese?",
-          "et": "Milline Prantsuse sertifikaat reguleerib näiteks juustu päritolu ja tootmisreegleid?"
+          "en": "Which hard salty Italian sheep’s-milk cheese is often grated over pasta?",
+          "et": "Millist kõva ja soolast Itaalia lambapiimajuustu riivitakse sageli pasta peale?"
         },
         "response": {
-          "en": "Appellation d’origine contrôlée",
-          "et": "kontrollitud päritolunimetus"
+          "en": "Pecorino Romano",
+          "et": "Pecorino Romano"
         },
         "acceptedVariants": {
           "en": [
-            "AOC"
+            "Romano cheese"
           ],
           "et": [
-            "AOC"
+            "pecorino romano"
           ]
         },
         "explanation": {
-          "en": "Appellation d’origine contrôlée predates and influenced the European protected-origin system.",
-          "et": "Kontrollitud päritolunimetus eelnes Euroopa kaitstud päritolu süsteemile ning mõjutas seda."
+          "en": "Pecorino Romano was a staple in the diet of ancient Roman soldiers.",
+          "et": "Pecorino Romano kuulus juba Vana-Rooma sõdurite põhitoidu hulka."
         },
         "source": {
-          "sourceId": "wikipedia:appellation_d%27origine_contr%c3%b4l%c3%a9e",
-          "title": "Appellation d'origine contrôlée",
-          "url": "https://en.wikipedia.org/wiki/Appellation_d%27origine_contr%C3%B4l%C3%A9e",
+          "sourceId": "wikipedia:pecorino-romano",
+          "title": "Pecorino Romano",
+          "url": "https://en.wikipedia.org/wiki/Pecorino_Romano",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7063,165 +7104,165 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-093",
     "name": {
-      "en": "Building Flavour into Clear Soups",
-      "et": "Maitse ehitamine selges supis"
+      "en": "Soup Passport",
+      "et": "Supipass"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-093:question:1",
-        "factKey": "built-in-food-drink:round1-hard:soup:consomme",
+        "factKey": "built-in-food-drink:checkpoint6:minestrone",
         "tier": 1,
-        "subjectKey": "soup:consomme",
+        "subjectKey": "food:minestrone",
         "clue": {
-          "en": "Which clarified stock becomes a crystal-clear, intensely flavoured soup?",
-          "et": "Milline selitatud puljong muutub kristallselgeks ja tugeva maitsega supiks?"
+          "en": "Which thick Italian soup combines vegetables and often beans, pasta or rice?",
+          "et": "Milline paks Itaalia supp ühendab köögiviljad ning sageli oad, pasta või riisi?"
         },
         "response": {
-          "en": "consommé",
-          "et": "konsomee"
+          "en": "minestrone",
+          "et": "minestrone"
         },
         "acceptedVariants": {
           "en": [
-            "consomme"
+            "minestrone soup"
           ],
           "et": [
-            "consommé"
+            "minestrone-supp"
           ]
         },
         "explanation": {
-          "en": "Consommé is clarified with a protein-rich raft that traps suspended particles as it coagulates.",
-          "et": "Konsomee selitatakse valgurikka parvega, mis kalgendudes seob hõljuvad osakesed."
+          "en": "Minestrone has no fixed recipe and changes with available seasonal vegetables.",
+          "et": "Minestrone’l pole kindlat retsepti ning see muutub saadaolevate hooajaköögiviljade järgi."
         },
         "source": {
-          "sourceId": "wikipedia:consomm%c3%a9",
-          "title": "Consommé",
-          "url": "https://en.wikipedia.org/wiki/Consomm%C3%A9",
+          "sourceId": "wikipedia:minestrone",
+          "title": "Minestrone",
+          "url": "https://en.wikipedia.org/wiki/Minestrone",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-093:question:2",
-        "factKey": "built-in-food-drink:round1-hard:mixture:mirepoix",
+        "factKey": "built-in-food-drink:checkpoint6:tom-yum",
         "tier": 2,
-        "subjectKey": "mixture:mirepoix",
+        "subjectKey": "food:tom-yum",
         "clue": {
-          "en": "What French aromatic base combines diced onion, carrot, and celery?",
-          "et": "Milline Prantsuse aroomipõhi ühendab kuubikuteks lõigatud sibula, porgandi ja selleri?"
+          "en": "Which Thai hot-and-sour soup is perfumed with lemongrass, makrut lime leaves and galangal?",
+          "et": "Millist Tai teravhaput suppi lõhnastavad sidrunhein, makrutilaimi lehed ja galangal?"
         },
         "response": {
-          "en": "mirepoix",
-          "et": "mirepoix"
+          "en": "tom yum",
+          "et": "tom yum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tom yam"
+          ],
+          "et": [
+            "tom yam"
+          ]
         },
         "explanation": {
-          "en": "Mirepoix is gently cooked to release sweetness and forms a base for stocks, soups, and sauces.",
-          "et": "Mirepoix’d kuumutatakse õrnalt magususe vabastamiseks ning see on puljongite, suppide ja kastmete alus."
+          "en": "In the name, tom refers to boiling while yum means “mixed.”",
+          "et": "Nimetuses viitab tom keetmisele, yum aga tähendab „segatud“."
         },
         "source": {
-          "sourceId": "wikipedia:mirepoix",
-          "title": "Mirepoix",
-          "url": "https://en.wikipedia.org/wiki/Mirepoix",
+          "sourceId": "wikipedia:tom-yum",
+          "title": "Tom yum",
+          "url": "https://en.wikipedia.org/wiki/Tom_yum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-093:question:3",
-        "factKey": "built-in-food-drink:round1-hard:bundle:bouquet-garni",
+        "factKey": "built-in-food-drink:checkpoint6:bouillabaisse",
         "tier": 3,
-        "subjectKey": "bundle:bouquet-garni",
+        "subjectKey": "food:bouillabaisse",
         "clue": {
-          "en": "Which tied bundle of herbs flavours a simmering stock and is removed before serving?",
-          "et": "Milline seotud maitsetaimede pakk maitsestab podisevat puljongit ning eemaldatakse enne serveerimist?"
+          "en": "Which Provençal fish soup originated in the port city of Marseille?",
+          "et": "Milline Provence’i kalasupp pärineb Marseille’ sadamalinnast?"
         },
         "response": {
-          "en": "bouquet garni",
-          "et": "ürdikimp"
+          "en": "bouillabaisse",
+          "et": "bouillabaisse"
+        },
+        "acceptedVariants": {
+          "en": [
+            "bouillabaisse stew"
+          ],
+          "et": [
+            "buillabaisse"
+          ]
+        },
+        "explanation": {
+          "en": "Its broth is traditionally served with rouille on grilled slices of bread.",
+          "et": "Selle leent serveeritakse traditsiooniliselt rouille’i ja grillitud leivaviiludega."
+        },
+        "source": {
+          "sourceId": "wikipedia:bouillabaisse",
+          "title": "Bouillabaisse",
+          "url": "https://en.wikipedia.org/wiki/Bouillabaisse",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-093:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:caldo-verde",
+        "tier": 4,
+        "subjectKey": "food:caldo-verde",
+        "clue": {
+          "en": "Which Portuguese soup is made with potatoes and shredded greens and traditionally served with slices of chouriço?",
+          "et": "Milline Portugali supp valmistatakse kartulist ja ribastatud lehtköögiviljast ning serveeritakse traditsiooniliselt chouriço-viiludega?"
+        },
+        "response": {
+          "en": "caldo verde",
+          "et": "caldo verde"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A classic bouquet garni contains parsley, thyme, and bay leaf, though compositions vary.",
-          "et": "Klassikaline ürdikimp sisaldab peterselli, tüümiani ja loorberilehte, kuid koostis võib erineda."
+          "en": "Caldo verde originated in the Minho region of northern Portugal.",
+          "et": "Caldo verde pärineb Põhja-Portugali Minho piirkonnast."
         },
         "source": {
-          "sourceId": "wikipedia:bouquet_garni",
-          "title": "Bouquet garni",
-          "url": "https://en.wikipedia.org/wiki/Bouquet_garni",
+          "sourceId": "wikipedia:caldo-verde",
+          "title": "Caldo verde",
+          "url": "https://en.wikipedia.org/wiki/Caldo_verde",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-093:question:4",
-        "factKey": "built-in-food-drink:round1-hard:ingredient:culinary-stock",
-        "tier": 4,
-        "subjectKey": "ingredient:culinary-stock",
-        "clue": {
-          "en": "Bones, vegetables, and aromatics simmer to produce which foundational cooking liquid?",
-          "et": "Milliseks kokanduse alusvedelikuks keedetakse luid, köögivilju ja maitseaineid?"
-        },
-        "response": {
-          "en": "stock",
-          "et": "puljongipõhi"
-        },
-        "acceptedVariants": {
-          "en": [
-            "culinary stock"
-          ],
-          "et": [
-            "fond"
-          ]
-        },
-        "explanation": {
-          "en": "Stock is usually kept lightly seasoned so it can be reduced or used in many later dishes.",
-          "et": "Puljongipõhi jäetakse tavaliselt vähe soolatuks, et seda saaks redutseerida ja kasutada eri roogades."
-        },
-        "source": {
-          "sourceId": "wikipedia:stock_(food)",
-          "title": "Stock (food)",
-          "url": "https://en.wikipedia.org/wiki/Stock_(food)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-093:question:5",
-        "factKey": "built-in-food-drink:round1-hard:technique:degreasing",
+        "factKey": "built-in-food-drink:checkpoint6:cioppino",
         "tier": 5,
-        "subjectKey": "technique:degreasing",
+        "subjectKey": "food:cioppino",
         "clue": {
-          "en": "What step removes fat floating on stock, often after chilling makes it solid?",
-          "et": "Milline samm eemaldab puljongi pinnal oleva rasva, mis pärast jahutamist sageli tahkub?"
+          "en": "Which tomato-based seafood stew was developed in late-1800s San Francisco by Italian immigrants and Spanish and Portuguese fishers?",
+          "et": "Milline tomatine mereannihautis kujunes 19. sajandi lõpu San Franciscos Itaalia sisserändajate ning Hispaania ja Portugali kalurite seas?"
         },
         "response": {
-          "en": "degreasing",
-          "et": "rasva eemaldamine"
+          "en": "cioppino",
+          "et": "cioppino"
         },
         "acceptedVariants": {
-          "en": [
-            "defatting"
-          ],
-          "et": [
-            "rasva riisumine"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Degreasing gives a stock or sauce a cleaner appearance and mouthfeel.",
-          "et": "Rasva eemaldamine annab puljongile või kastmele puhtama välimuse ja suutunde."
+          "en": "Cioppino is traditionally made from the catch of the day, often including crab, clams and fish.",
+          "et": "Cioppino tehakse traditsiooniliselt päeva saagist, kuhu võivad kuuluda krabi, karbid ja kala."
         },
         "source": {
-          "sourceId": "wikipedia:degreasing#degreasing-food",
-          "title": "Degreasing — Degreasing food",
-          "url": "https://en.wikipedia.org/wiki/Degreasing#Degreasing_food",
+          "sourceId": "wikipedia:cioppino",
+          "title": "Cioppino",
+          "url": "https://en.wikipedia.org/wiki/Cioppino",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7229,153 +7270,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-094",
     "name": {
-      "en": "Portable Pastries and Parcels",
-      "et": "Kaasaskantavad pirukad ja taskud"
+      "en": "Pocket Foods Across Borders",
+      "et": "Taskutoidud eri maadest"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-094:question:1",
-        "factKey": "built-in-food-drink:round1-hard:food:empanada",
+        "factKey": "built-in-food-drink:checkpoint6:empanada",
         "tier": 1,
         "subjectKey": "food:empanada",
         "clue": {
-          "en": "Which filled turnover baked or fried across Spain and Latin America takes its name from wrapping in bread?",
-          "et": "Milline Hispaanias ja Ladina-Ameerikas küpsetatud või praetud täidetud pirukas sai nime tainasse mähkimisest?"
+          "en": "Which Spanish and Latin American turnover wraps a savoury or sweet filling in dough before baking or frying?",
+          "et": "Milline Hispaania ja Ladina-Ameerika pirukas mähib soolase või magusa täidise tainasse ning küpsetatakse või praetakse?"
         },
         "response": {
           "en": "empanada",
           "et": "empanada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "empanadas"
+          ],
+          "et": [
+            "empanadas"
+          ]
         },
         "explanation": {
-          "en": "Empanada fillings range from meat and seafood to cheese or vegetables, with highly regional doughs.",
-          "et": "Empanada täidised ulatuvad lihast ja mereandidest juustu ning köögiviljadeni, tainad erinevad piirkonniti."
+          "en": "The name comes from the Spanish verb empanar, meaning to wrap or coat in bread.",
+          "et": "Nimetus tuleb hispaania verbist empanar, mis tähendab leiva või tainaga katmist."
         },
         "source": {
           "sourceId": "wikipedia:empanada",
           "title": "Empanada",
           "url": "https://en.wikipedia.org/wiki/Empanada",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-094:question:2",
-        "factKey": "built-in-food-drink:round1-overlap:food:kachori",
+        "factKey": "built-in-food-drink:checkpoint6:samosa",
         "tier": 2,
-        "subjectKey": "food:kachori",
+        "subjectKey": "food:samosa",
         "clue": {
-          "en": "Which round Indian pastry is deep-fried with a spiced lentil or pea filling sealed inside?",
-          "et": "Milline ümmargune India küpsetis frititakse, selle sees vürtsikas läätse- või hernetäidis?"
+          "en": "Which South Asian fried turnover has a savoury filling often made from spiced potatoes, onions and peas?",
+          "et": "Millise Lõuna-Aasia frititud piruka soolane täidis tehakse sageli vürtsikast kartulist, sibulast ja hernestest?"
         },
         "response": {
-          "en": "kachori",
-          "et": "kachori"
+          "en": "samosa",
+          "et": "samosa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "sambusa"
+          ],
+          "et": [
+            "samuusa"
+          ]
         },
         "explanation": {
-          "en": "Kachori has a crisp shell and is commonly eaten with chutney as a snack.",
-          "et": "Kachori on krõbeda kestaga suupiste, mida süüakse sageli tšatniga."
+          "en": "A common samosa filling combines potatoes, onions, peas and spices.",
+          "et": "Levinud samosa-täidis ühendab kartuli, sibula, herned ja vürtsid."
         },
         "source": {
-          "sourceId": "wikipedia:kachori",
-          "title": "Kachori",
-          "url": "https://en.wikipedia.org/wiki/Kachori",
+          "sourceId": "wikipedia:samosa",
+          "title": "Samosa",
+          "url": "https://en.wikipedia.org/wiki/Samosa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-094:question:3",
-        "factKey": "built-in-food-drink:round1-overlap:food:pupusa",
+        "factKey": "built-in-food-drink:checkpoint6:onigiri",
         "tier": 3,
-        "subjectKey": "food:pupusa",
-        "clue": {
-          "en": "Which thick Salvadoran maize flatbread is stuffed before cooking with cheese, beans, or pork?",
-          "et": "Milline paks Salvadori maisileib täidetakse enne küpsetamist juustu, ubade või sealihaga?"
-        },
-        "response": {
-          "en": "pupusa",
-          "et": "pupusa"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Pupusas are griddled and traditionally served with curtido and tomato sauce.",
-          "et": "Pupusa küpsetatakse plaadil ning seda pakutakse traditsiooniliselt curtido ja tomatikastmega."
-        },
-        "source": {
-          "sourceId": "wikipedia:pupusa",
-          "title": "Pupusa",
-          "url": "https://en.wikipedia.org/wiki/Pupusa",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-094:question:4",
-        "factKey": "built-in-food-drink:round1-hard:food:onigiri",
-        "tier": 4,
         "subjectKey": "food:onigiri",
         "clue": {
-          "en": "Which Japanese hand-shaped rice parcel often contains a savoury filling and a strip of nori?",
-          "et": "Milline Jaapani käsitsi vormitud riisipala sisaldab sageli soolast täidist ja nori-riba?"
+          "en": "Which Japanese portable food shapes rice around a savoury filling and often adds a strip of nori?",
+          "et": "Milline Jaapani kaasaskantav toit vormib riisi soolase täidise ümber ja lisab sageli nori-riba?"
         },
         "response": {
           "en": "onigiri",
           "et": "onigiri"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "omusubi",
+            "rice ball"
+          ],
+          "et": [
+            "omusubi",
+            "riisipall"
+          ]
         },
         "explanation": {
-          "en": "Onigiri is compacted rice rather than vinegared sushi rice and is a common portable meal.",
-          "et": "Onigiri on kokku surutud tavariis, mitte äädikaga sushiriis, ning sobib kaasaskantavaks eineks."
+          "en": "Onigiri uses plain rice rather than the vinegared rice associated with sushi.",
+          "et": "Onigiri tehakse tavalisest riisist, mitte sushiga seostuvast äädikaga maitsestatud riisist."
         },
         "source": {
           "sourceId": "wikipedia:onigiri",
           "title": "Onigiri",
           "url": "https://en.wikipedia.org/wiki/Onigiri",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-094:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:pupusa",
+        "tier": 4,
+        "subjectKey": "food:pupusa",
+        "clue": {
+          "en": "Which Salvadoran maize flatbread is stuffed with cheese, beans or pork before griddling?",
+          "et": "Milline Salvadori maisileib täidetakse enne plaadil küpsetamist juustu, ubade või sealihaga?"
+        },
+        "response": {
+          "en": "pupusa",
+          "et": "pupusa"
+        },
+        "acceptedVariants": {
+          "en": [
+            "pupusas"
+          ],
+          "et": [
+            "pupusas"
+          ]
+        },
+        "explanation": {
+          "en": "Pupusas can be served with curtido cabbage relish and tomato sauce.",
+          "et": "Pupusa’sid võib serveerida curtido-kapsasalati ja tomatikastmega."
+        },
+        "source": {
+          "sourceId": "wikipedia:pupusa",
+          "title": "Pupusa",
+          "url": "https://en.wikipedia.org/wiki/Pupusa",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-094:question:5",
-        "factKey": "built-in-food-drink:round1-overlap:food:empanada-gallega",
+        "factKey": "built-in-food-drink:checkpoint6:kachori",
         "tier": 5,
-        "subjectKey": "food:empanada-gallega",
+        "subjectKey": "food:kachori",
         "clue": {
-          "en": "Which large Galician filled pie is baked as a round or rectangular slab and cut into portions?",
-          "et": "Milline suur Galicia täidisega pirukas küpsetatakse ümmarguse või kandilise plaadina ning lõigatakse portsjoniteks?"
+          "en": "Which deep-fried spicy stuffed pastry originated in Rajasthan’s Marwar region?",
+          "et": "Milline frititud vürtsikas täidisega pirukas pärineb Rajasthani Marwari piirkonnast?"
         },
         "response": {
-          "en": "empanada gallega",
-          "et": "Galicia empanada"
+          "en": "kachori",
+          "et": "kachori"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "kachauri"
+          ],
+          "et": [
+            "kachauri"
+          ]
         },
         "explanation": {
-          "en": "Empanada gallega often encloses fish, seafood, or meat with an onion-and-pepper filling.",
-          "et": "Galicia empanada täidis ühendab sageli kala, mereannid või liha sibula ja paprikaga."
+          "en": "Kachori may be served with tamarind chutney or mint-and-green-chilli chutney.",
+          "et": "Kachori’t võib serveerida tamarindi-tšatni või mündi-rohelise tšilli tšatniga."
         },
         "source": {
-          "sourceId": "wikipedia:empanada#galicia",
-          "title": "Empanada — Galicia",
-          "url": "https://en.wikipedia.org/wiki/Empanada#Galicia",
+          "sourceId": "wikipedia:kachori",
+          "title": "Kachori",
+          "url": "https://en.wikipedia.org/wiki/Kachori",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7383,18 +7446,51 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-095",
     "name": {
-      "en": "Foundations of the Pastry Kitchen",
-      "et": "Kondiitri köögi põhivõtted"
+      "en": "Inside a Pastry Kitchen",
+      "et": "Kondiitri köögis"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-095:question:1",
-        "factKey": "built-in-food-drink:round1-hard:pastry:pate-a-choux",
+        "factKey": "built-in-food-drink:checkpoint6:meringue",
         "tier": 1,
-        "subjectKey": "pastry:pate-a-choux",
+        "subjectKey": "food:meringue",
         "clue": {
-          "en": "Which cooked paste puffs through steam to make éclairs and profiteroles?",
-          "et": "Milline kuumutatud tainas paisub auruga ning sellest tehakse ekleere ja profitroole?"
+          "en": "Which sweet foam is made by whipping egg whites with sugar?",
+          "et": "Milline magus vaht valmib munavalgete vahustamisel suhkruga?"
+        },
+        "response": {
+          "en": "meringue",
+          "et": "besee"
+        },
+        "acceptedVariants": {
+          "en": [
+            "meringue mixture"
+          ],
+          "et": [
+            "mereng"
+          ]
+        },
+        "explanation": {
+          "en": "Meringue may be baked until crisp or used as a topping for pies and desserts.",
+          "et": "Beseed võib küpsetada krõbedaks või kasutada pirukate ja magustoitude kattena."
+        },
+        "source": {
+          "sourceId": "wikipedia:meringue",
+          "title": "Meringue",
+          "url": "https://en.wikipedia.org/wiki/Meringue",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-095:question:2",
+        "factKey": "built-in-food-drink:checkpoint6:choux-pastry",
+        "tier": 2,
+        "subjectKey": "food:choux-pastry",
+        "clue": {
+          "en": "Which high-moisture dough relies on steam to puff into éclairs and profiteroles?",
+          "et": "Milline niiskusrikas tainas paisub auru jõul ekleerideks ja profitroolideks?"
         },
         "response": {
           "en": "pâte à choux",
@@ -7402,67 +7498,33 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "choux pastry"
+            "choux pastry",
+            "choux"
           ],
           "et": [
             "choux-tainas"
           ]
         },
         "explanation": {
-          "en": "Pâte à choux is cooked on the stove before eggs are beaten in and contains no chemical leavener.",
-          "et": "Keedutainas kuumutatakse esmalt pliidil, seejärel klopitakse sisse munad ning keemilist kergitajat ei kasutata."
+          "en": "Butter, water, flour and eggs give choux pastry enough moisture for steam to puff it during baking.",
+          "et": "Või, vee, jahu ja munadega keedutainas sisaldab piisavalt niiskust, et aur selle küpsetamisel paisutaks."
         },
         "source": {
-          "sourceId": "wikipedia:choux_pastry",
+          "sourceId": "wikipedia:choux-pastry",
           "title": "Choux pastry",
           "url": "https://en.wikipedia.org/wiki/Choux_pastry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-095:question:2",
-        "factKey": "built-in-food-drink:round1-hard:dessert:sabayon",
-        "tier": 2,
-        "subjectKey": "dessert:sabayon",
-        "clue": {
-          "en": "Egg yolks, sugar, and wine whisked over gentle heat form which airy custard?",
-          "et": "Milline õhuline kreem valmib munakollaste, suhkru ja veini vahustamisel õrnal kuumusel?"
-        },
-        "response": {
-          "en": "sabayon",
-          "et": "sabayon"
-        },
-        "acceptedVariants": {
-          "en": [
-            "zabaglione",
-            "zabaione"
-          ],
-          "et": [
-            "zabaglione",
-            "zabaione"
-          ]
-        },
-        "explanation": {
-          "en": "Sabayon is the French name related to Italian zabaione and may be served warm or used in desserts.",
-          "et": "Sabayon on Itaalia zabaione’ga seotud Prantsuse nimetus ning kreemi võib pakkuda soojalt või kasutada magustoitudes."
-        },
-        "source": {
-          "sourceId": "wikipedia:zabaione",
-          "title": "Zabaione",
-          "url": "https://en.wikipedia.org/wiki/Zabaione",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-095:question:3",
-        "factKey": "built-in-food-drink:round1-hard:sauce:creme-anglaise",
+        "factKey": "built-in-food-drink:checkpoint6:creme-anglaise",
         "tier": 3,
-        "subjectKey": "sauce:creme-anglaise",
+        "subjectKey": "food:creme-anglaise",
         "clue": {
-          "en": "Which pourable stirred custard thickens milk with egg yolks but contains no starch?",
-          "et": "Milline valatav segatud kreem paksendab piima munakollastega, kuid ei sisalda tärklist?"
+          "en": "Which light pouring custard combines milk, sugar and egg yolks and is often flavoured with vanilla?",
+          "et": "Milline kerge valatav kreem ühendab piima, suhkru ja munakollased ning maitsestatakse sageli vanilliga?"
         },
         "response": {
           "en": "crème anglaise",
@@ -7470,84 +7532,90 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "English custard"
+            "English cream"
           ],
           "et": [
-            "crème anglaise"
+            "inglise kreem"
           ]
         },
         "explanation": {
-          "en": "Crème anglaise is cooked carefully below boiling so the yolks thicken without scrambling.",
-          "et": "Vanillikastet kuumutatakse ettevaatlikult alla keemispunkti, et munakollane pakseneks tükki minemata."
+          "en": "Crème anglaise combines sugar and egg yolks with hot milk and is often flavoured with vanilla.",
+          "et": "Crème anglaise ühendab suhkru ja munakollased kuuma piimaga ning seda maitsestatakse sageli vanilliga."
         },
         "source": {
-          "sourceId": "wikipedia:cr%c3%a8me_anglaise",
+          "sourceId": "wikipedia:creme-anglaise",
           "title": "Crème anglaise",
           "url": "https://en.wikipedia.org/wiki/Cr%C3%A8me_anglaise",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-095:question:4",
-        "factKey": "built-in-food-drink:round1-hard:mixture:ganache",
+        "factKey": "built-in-food-drink:checkpoint6:frangipane",
         "tier": 4,
-        "subjectKey": "mixture:ganache",
+        "subjectKey": "food:frangipane",
         "clue": {
-          "en": "Chocolate and hot cream combine into which smooth filling, glaze, or truffle centre?",
-          "et": "Milliseks siledaks täidiseks, glasuuriks või trühvlisüdamikuks ühendatakse šokolaad ja kuum koor?"
+          "en": "Which almond-based mixture is used in a Bakewell tart?",
+          "et": "Millist mandlipõhist segu kasutatakse Bakewelli tardis?"
         },
         "response": {
-          "en": "ganache",
-          "et": "ganache"
+          "en": "frangipane",
+          "et": "frangipane"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "frangipani cream"
+          ],
+          "et": [
+            "mandlikreem"
+          ]
         },
         "explanation": {
-          "en": "Ganache texture depends on the chocolate-to-cream ratio and becomes firmer as it cools.",
-          "et": "Ganache’i tekstuur sõltub šokolaadi ja koore suhtest ning segu muutub jahtudes tugevamaks."
+          "en": "Frangipane is commonly made from almonds, butter, sugar and eggs.",
+          "et": "Frangipane valmistatakse tavaliselt mandlitest, võist, suhkrust ja munadest."
         },
         "source": {
-          "sourceId": "wikipedia:ganache",
-          "title": "Ganache",
-          "url": "https://en.wikipedia.org/wiki/Ganache",
+          "sourceId": "wikipedia:frangipane",
+          "title": "Frangipane",
+          "url": "https://en.wikipedia.org/wiki/Frangipane",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-095:question:5",
-        "factKey": "built-in-food-drink:round1-hard:technique:chocolate-tempering",
+        "factKey": "built-in-food-drink:checkpoint6:zabaione",
         "tier": 5,
-        "subjectKey": "technique:chocolate-tempering",
+        "subjectKey": "food:zabaione",
         "clue": {
-          "en": "What controlled heating and cooling process selects stable cocoa-butter crystals for gloss and snap?",
-          "et": "Milline kontrollitud kuumutamise ja jahutamise protsess valib läike ning murduvuse jaoks stabiilsed kakaovõikristallid?"
+          "en": "Egg yolks, sugar and sweet wine whipped into an airy custard form which Italian dessert?",
+          "et": "Milline Itaalia magustoit valmib munakollaste, suhkru ja magusa veini vahustamisel õhuliseks kreemiks?"
         },
         "response": {
-          "en": "chocolate tempering",
-          "et": "šokolaadi tempereerimine"
+          "en": "sabayon",
+          "et": "sabayon"
         },
         "acceptedVariants": {
           "en": [
-            "tempering"
+            "zabaione",
+            "zabaglione"
           ],
           "et": [
-            "tempereerimine"
+            "zabaione",
+            "zabaglione"
           ]
         },
         "explanation": {
-          "en": "Tempering favours a stable crystal form that contracts cleanly from moulds and resists fat bloom.",
-          "et": "Tempereerimine soodustab stabiilset kristallivormi, mis tuleb vormist lahti ja peab vastu rasvaõitsengule."
+          "en": "Sabayon is the French name for the dessert known in Italian as zabaione.",
+          "et": "Sabayon on prantsuskeelne nimetus magustoidule, mida itaalia keeles tuntakse zabaione’na."
         },
         "source": {
-          "sourceId": "wikipedia:chocolate#tempering",
-          "title": "Chocolate",
-          "url": "https://en.wikipedia.org/wiki/Chocolate#Tempering",
+          "sourceId": "wikipedia:zabaione",
+          "title": "Zabaione",
+          "url": "https://en.wikipedia.org/wiki/Zabaione",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7555,138 +7623,51 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-096",
     "name": {
-      "en": "Breakfast Bowls and Griddles",
-      "et": "Hommikused kausid ja küpsetusplaadid"
+      "en": "Breakfasts Before Noon",
+      "et": "Hommikusöögid enne keskpäeva"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-096:question:1",
-        "factKey": "built-in-food-drink:round1-hard:food:upma",
+        "factKey": "built-in-food-drink:checkpoint6:huevos-rancheros",
         "tier": 1,
-        "subjectKey": "food:upma",
-        "clue": {
-          "en": "Which South Indian breakfast dish cooks roasted semolina into a savoury porridge with spices and vegetables?",
-          "et": "Milline Lõuna-India hommikuroog keedab röstitud manna vürtside ja köögiviljadega soolaseks pudruks?"
-        },
-        "response": {
-          "en": "upma",
-          "et": "upma"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Upma is commonly made from dry-roasted semolina, with regional versions using other grains or vermicelli.",
-          "et": "Upma valmistatakse tavaliselt kuivalt röstitud mannast, kuid piirkondlikud variandid kasutavad ka muid teravilju või vermišelli."
-        },
-        "source": {
-          "sourceId": "wikipedia:upma",
-          "title": "Upma",
-          "url": "https://en.wikipedia.org/wiki/Upma",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-096:question:2",
-        "factKey": "built-in-food-drink:round1-hard:food:huevos-rancheros",
-        "tier": 2,
         "subjectKey": "food:huevos-rancheros",
         "clue": {
-          "en": "Fried eggs on tortillas with tomato-chilli salsa make which Mexican breakfast?",
-          "et": "Millise Mehhiko hommikusöögi moodustavad tortiljal olevad praemunad tomati-tšillikastmega?"
+          "en": "Which Mexican breakfast serves fried eggs on tortillas with tomato-chilli salsa?",
+          "et": "Milline Mehhiko hommikusöök serveerib praemune tortiljadel koos tomati-tšillisalsaga?"
         },
         "response": {
           "en": "huevos rancheros",
           "et": "huevos rancheros"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Huevos rancheros began as a hearty rural morning meal and is often served with beans or rice.",
-          "et": "Huevos rancheros sai alguse toitva maa-hommikusöögina ning seda pakutakse sageli ubade või riisiga."
-        },
-        "source": {
-          "sourceId": "wikipedia:huevos_rancheros",
-          "title": "Huevos rancheros",
-          "url": "https://en.wikipedia.org/wiki/Huevos_rancheros",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-096:question:3",
-        "factKey": "built-in-food-drink:round1-hard:food:ful-medames",
-        "tier": 3,
-        "subjectKey": "food:ful-medames",
-        "clue": {
-          "en": "Which Egyptian breakfast simmers fava beans and seasons them with oil, lemon, and cumin?",
-          "et": "Milline Egiptuse hommikusöök hautab põldube ning maitsestab need õli, sidruni ja vürtsköömnega?"
-        },
-        "response": {
-          "en": "ful medames",
-          "et": "ful medames"
-        },
-        "acceptedVariants": {
           "en": [
-            "ful"
+            "ranch eggs"
           ],
           "et": [
-            "ful"
+            "rantšomunad"
           ]
         },
         "explanation": {
-          "en": "Ful medames is an old staple eaten across Egypt, the Levant, and neighbouring regions.",
-          "et": "Ful medames on vana põhitoit, mida süüakse Egiptuses, Levandis ja naaberpiirkondades."
+          "en": "Huevos rancheros follows the style of a traditional large mid-morning meal on rural Mexican farms.",
+          "et": "Huevos rancheros järgib Mehhiko maafarmide traditsioonilise suure hilise hommikueine stiili."
         },
         "source": {
-          "sourceId": "wikipedia:ful_medames",
-          "title": "Ful medames",
-          "url": "https://en.wikipedia.org/wiki/Ful_medames",
+          "sourceId": "wikipedia:huevos-rancheros",
+          "title": "Huevos rancheros",
+          "url": "https://en.wikipedia.org/wiki/Huevos_rancheros",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
-        "key": "built-in-food-drink-set-096:question:4",
-        "factKey": "built-in-food-drink:round1-hard:food:appam",
-        "tier": 4,
-        "subjectKey": "food:appam",
-        "clue": {
-          "en": "Which bowl-shaped South Indian pancake ferments a batter of rice and coconut milk?",
-          "et": "Milline kausikujuline Lõuna-India pannkook kääritab riisi ja kookospiima taina?"
-        },
-        "response": {
-          "en": "appam",
-          "et": "appam"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Appam develops a lacy crisp rim and a thicker soft centre in its curved pan.",
-          "et": "Appam saab kumeral pannil pitsilise krõbeda serva ning paksema pehme keskosa."
-        },
-        "source": {
-          "sourceId": "wikipedia:appam",
-          "title": "Appam",
-          "url": "https://en.wikipedia.org/wiki/Appam",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-096:question:5",
-        "factKey": "built-in-food-drink:round1-hard:food:nasi-lemak",
-        "tier": 5,
+        "key": "built-in-food-drink-set-096:question:2",
+        "factKey": "built-in-food-drink:checkpoint6:nasi-lemak",
+        "tier": 2,
         "subjectKey": "food:nasi-lemak",
         "clue": {
-          "en": "Coconut rice with sambal, anchovies, peanuts, and egg forms which Malaysian breakfast classic?",
-          "et": "Millise Malaisia hommikusöögiklassiku moodustavad kookosriis, sambal, anšoovis, maapähkel ja muna?"
+          "en": "Which Malaysian coconut-rice dish is traditionally served with sambal, anchovies, peanuts and egg?",
+          "et": "Millist Malaisia kookosriisirooga serveeritakse traditsiooniliselt sambali, anšooviste, maapähklite ja munaga?"
         },
         "response": {
           "en": "nasi lemak",
@@ -7697,15 +7678,120 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Nasi lemak means “rich rice” and is widely regarded as a national dish of Malaysia.",
-          "et": "Nasi lemak tähendab „rikast riisi“ ning seda peetakse laialt Malaisia rahvusroaks."
+          "en": "Nasi lemak is widely considered the national dish of Malaysia.",
+          "et": "Nasi lemak’i peetakse laialt Malaisia rahvusroaks."
         },
         "source": {
-          "sourceId": "wikipedia:nasi_lemak",
+          "sourceId": "wikipedia:nasi-lemak",
           "title": "Nasi lemak",
           "url": "https://en.wikipedia.org/wiki/Nasi_lemak",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-096:question:3",
+        "factKey": "built-in-food-drink:checkpoint6:ful-medames",
+        "tier": 3,
+        "subjectKey": "food:ful-medames",
+        "clue": {
+          "en": "Which Egyptian staple is a stew of cooked fava beans served with olive oil and cumin, with lemon juice among its optional additions?",
+          "et": "Milline Egiptuse põhitoit on keedetud põldubadest hautis, mida serveeritakse oliiviõli ja vürtsköömnega ning millele võib lisada sidrunimahla?"
+        },
+        "response": {
+          "en": "ful medames",
+          "et": "ful medames"
+        },
+        "acceptedVariants": {
+          "en": [
+            "foul medames",
+            "ful"
+          ],
+          "et": [
+            "ful",
+            "foul medames"
+          ]
+        },
+        "explanation": {
+          "en": "In Cairo, huge pots of fava beans were kept simmering to provide breakfast for the city’s population.",
+          "et": "Kairos hoiti suuri põldoapotte podisemas, et pakkuda linnaelanikele hommikusööki."
+        },
+        "source": {
+          "sourceId": "wikipedia:ful-medames",
+          "title": "Ful medames",
+          "url": "https://en.wikipedia.org/wiki/Ful_medames",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-096:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:appam",
+        "tier": 4,
+        "subjectKey": "food:appam",
+        "clue": {
+          "en": "Which thin South Indian pancake is made from fermented rice batter and coconut milk?",
+          "et": "Milline õhuke Lõuna-India pannkook valmistatakse kääritatud riisitainast ja kookospiimast?"
+        },
+        "response": {
+          "en": "appam",
+          "et": "appam"
+        },
+        "acceptedVariants": {
+          "en": [
+            "appa",
+            "hoppers"
+          ],
+          "et": [
+            "appa",
+            "hopper"
+          ]
+        },
+        "explanation": {
+          "en": "Appam is traditionally cooked in an appachatti, a deep pan shaped like a wok.",
+          "et": "Appam küpsetatakse traditsiooniliselt appachatti’s, vokipanni kujulises sügavas pannis."
+        },
+        "source": {
+          "sourceId": "wikipedia:appam",
+          "title": "Appam",
+          "url": "https://en.wikipedia.org/wiki/Appam",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-096:question:5",
+        "factKey": "built-in-food-drink:checkpoint6:upma",
+        "tier": 5,
+        "subjectKey": "food:upma",
+        "clue": {
+          "en": "Which South Indian savoury porridge begins with dry-roasted semolina?",
+          "et": "Milline Lõuna-India soolane puder algab kuivröstitud mannast?"
+        },
+        "response": {
+          "en": "upma",
+          "et": "upma"
+        },
+        "acceptedVariants": {
+          "en": [
+            "uppuma",
+            "uppittu"
+          ],
+          "et": [
+            "uppuma",
+            "uppittu"
+          ]
+        },
+        "explanation": {
+          "en": "Upma variations add or remove spices and vegetables.",
+          "et": "Upma variatsioonides lisatakse või jäetakse ära vürtse ja köögivilju."
+        },
+        "source": {
+          "sourceId": "wikipedia:upma",
+          "title": "Upma",
+          "url": "https://en.wikipedia.org/wiki/Upma",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7713,18 +7799,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-097",
     "name": {
-      "en": "Seafood Cured into New Forms",
-      "et": "Uueks vormitud mereannid"
+      "en": "From Catch to Pantry",
+      "et": "Saagist sahvrisse"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-097:question:1",
-        "factKey": "built-in-food-drink:round1-hard:food:surimi",
+        "factKey": "built-in-food-drink:checkpoint6:surimi",
         "tier": 1,
         "subjectKey": "food:surimi",
         "clue": {
-          "en": "Fish proteins are washed, minced, and shaped into products such as imitation crab. What is the base called?",
-          "et": "Kalavalgud pestakse, hakitakse ning vormitakse näiteks krabimaitseliseks tooteks. Kuidas nimetatakse seda massi?"
+          "en": "Which fish paste is sold in many shapes and used to mimic crab, lobster or other shellfish?",
+          "et": "Millist kalapastat müüakse mitmel kujul ning kasutatakse krabi, homaari või muude koorikloomade jäljendamiseks?"
         },
         "response": {
           "en": "surimi",
@@ -7735,116 +7821,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Surimi is stabilised as a concentrated protein paste and can be flavoured and textured into many forms.",
-          "et": "Surimi stabiliseeritakse kontsentreeritud valgupastana ning seda saab maitsestada ja eri kujule vormida."
+          "en": "Sucrose and other carbohydrates can act as cryoprotectants by stabilising surimi protein during freezing.",
+          "et": "Sahharoos ja teised süsivesikud võivad toimida krüoprotektantidena, stabiliseerides surimi valku külmutamisel."
         },
         "source": {
           "sourceId": "wikipedia:surimi",
           "title": "Surimi",
           "url": "https://en.wikipedia.org/wiki/Surimi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-097:question:2",
-        "factKey": "built-in-food-drink:round1-hard:food:bottarga",
+        "factKey": "built-in-food-drink:checkpoint6:lutefisk",
         "tier": 2,
-        "subjectKey": "food:bottarga",
-        "clue": {
-          "en": "Which Mediterranean delicacy consists of salted, pressed, and dried fish roe sacs?",
-          "et": "Milline Vahemere delikatess koosneb soolatud, pressitud ja kuivatatud kalamarjakottidest?"
-        },
-        "response": {
-          "en": "bottarga",
-          "et": "bottarga"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Bottarga is commonly made from grey mullet or tuna roe and grated thinly over food.",
-          "et": "Bottarga’t tehakse sageli meripoisi või tuuni marjast ning riivitakse õhukeselt toidule."
-        },
-        "source": {
-          "sourceId": "wikipedia:bottarga",
-          "title": "Bottarga",
-          "url": "https://en.wikipedia.org/wiki/Bottarga",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-097:question:3",
-        "factKey": "built-in-food-drink:round1-hard:food:bacalhau",
-        "tier": 3,
-        "subjectKey": "food:bacalhau",
-        "clue": {
-          "en": "What Portuguese term refers to dried and salted cod used in hundreds of dishes?",
-          "et": "Milline Portugali termin tähistab kuivatatud ja soolatud turska, mida kasutatakse sadades roogades?"
-        },
-        "response": {
-          "en": "bacalhau",
-          "et": "bacalhau"
-        },
-        "acceptedVariants": {
-          "en": [
-            "salt cod"
-          ],
-          "et": [
-            "soolatursk"
-          ]
-        },
-        "explanation": {
-          "en": "Bacalhau must usually be soaked repeatedly before cooking to remove excess salt and restore moisture.",
-          "et": "Bacalhau’d tuleb enne küpsetamist tavaliselt korduvalt leotada, et eemaldada liigne sool ja taastada niiskus."
-        },
-        "source": {
-          "sourceId": "wikipedia:bacalhau",
-          "title": "Bacalhau",
-          "url": "https://en.wikipedia.org/wiki/Bacalhau",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-097:question:4",
-        "factKey": "built-in-food-drink:round1-hard:food:katsuobushi",
-        "tier": 4,
-        "subjectKey": "food:katsuobushi",
-        "clue": {
-          "en": "Bonito is simmered, smoked, dried, and sometimes mould-fermented to make which Japanese ingredient?",
-          "et": "Milliseks Jaapani koostisosaks muutub keedetud, suitsutatud, kuivatatud ja vahel hallitusega kääritatud bonito?"
-        },
-        "response": {
-          "en": "katsuobushi",
-          "et": "katsuobushi"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Katsuobushi is shaved into flakes and is a principal source of smoky inosinate in dashi.",
-          "et": "Katsuobushi riivitakse helvesteks ning see annab dashile suitsuse maitse ja inosinaadi."
-        },
-        "source": {
-          "sourceId": "wikipedia:katsuobushi",
-          "title": "Katsuobushi",
-          "url": "https://en.wikipedia.org/wiki/Katsuobushi",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-097:question:5",
-        "factKey": "built-in-food-drink:round1-hard:food:lutefisk",
-        "tier": 5,
         "subjectKey": "food:lutefisk",
         "clue": {
-          "en": "Which Nordic preserved fish is dried, soaked in lye, and then soaked again before cooking?",
-          "et": "Milline Põhjamaade kalahoids kuivatatakse, leotatakse leelises ning seejärel enne küpsetamist uuesti vees?"
+          "en": "Which Nordic fish preparation soaks dried whitefish in lye and then in water before cooking?",
+          "et": "Millise Põhjamaade kalaroa puhul leotatakse kuivatatud valget kala enne küpsetamist leelises ja seejärel vees?"
         },
         "response": {
           "en": "lutefisk",
@@ -7855,15 +7850,114 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Lutefisk develops a distinctive gelatinous texture and must be handled carefully after its caustic treatment.",
-          "et": "Lutefisk saab iseloomuliku želatiinse tekstuuri ning vajab pärast söövitavat töötlust hoolikat käsitsemist."
+          "en": "Lutefisk develops a distinctive gelatinous texture during its treatment.",
+          "et": "Lutefisk omandab töötlemise käigus iseloomuliku želatiinse tekstuuri."
         },
         "source": {
           "sourceId": "wikipedia:lutefisk",
           "title": "Lutefisk",
           "url": "https://en.wikipedia.org/wiki/Lutefisk",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-097:question:3",
+        "factKey": "built-in-food-drink:checkpoint6:katsuobushi",
+        "tier": 3,
+        "subjectKey": "food:katsuobushi",
+        "clue": {
+          "en": "Which Japanese ingredient is simmered, smoked and fermented skipjack tuna?",
+          "et": "Milline Jaapani koostisosa on keedetud, suitsutatud ja fermenteeritud vööttuun?"
+        },
+        "response": {
+          "en": "katsuobushi",
+          "et": "katsuobushi"
+        },
+        "acceptedVariants": {
+          "en": [
+            "bonito flakes"
+          ],
+          "et": [
+            "bonitohelbed"
+          ]
+        },
+        "explanation": {
+          "en": "Katsuobushi is shaved into flakes and used with kombu to make dashi.",
+          "et": "Katsuobushi hööveldatakse helvesteks ning kasutatakse koos kombu’ga dashi valmistamiseks."
+        },
+        "source": {
+          "sourceId": "wikipedia:katsuobushi",
+          "title": "Katsuobushi",
+          "url": "https://en.wikipedia.org/wiki/Katsuobushi",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-097:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:bacalhau",
+        "tier": 4,
+        "subjectKey": "food:bacalhau",
+        "clue": {
+          "en": "What Portuguese term names dried and salted cod used in hundreds of dishes?",
+          "et": "Milline Portugali termin tähistab sadades roogades kasutatavat kuivatatud ja soolatud turska?"
+        },
+        "response": {
+          "en": "bacalhau",
+          "et": "bacalhau"
+        },
+        "acceptedVariants": {
+          "en": [
+            "bacalao"
+          ],
+          "et": [
+            "bakalao"
+          ]
+        },
+        "explanation": {
+          "en": "Drying and salting cod preserve its nutrients and change the fish’s taste.",
+          "et": "Tursa kuivatamine ja soolamine säilitavad selle toitained ning muudavad kala maitset."
+        },
+        "source": {
+          "sourceId": "wikipedia:bacalhau",
+          "title": "Bacalhau",
+          "url": "https://en.wikipedia.org/wiki/Bacalhau",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-097:question:5",
+        "factKey": "built-in-food-drink:checkpoint6:bottarga",
+        "tier": 5,
+        "subjectKey": "food:bottarga",
+        "clue": {
+          "en": "Which Italian delicacy is a salted, cured and dried pouch of fish roe?",
+          "et": "Milline Itaalia delikatess on soolatud, laagerdatud ja kuivatatud kalamarjakott?"
+        },
+        "response": {
+          "en": "bottarga",
+          "et": "bottarga"
+        },
+        "acceptedVariants": {
+          "en": [
+            "botargo"
+          ],
+          "et": [
+            "botargo"
+          ]
+        },
+        "explanation": {
+          "en": "Bottarga is commonly made from grey mullet or bluefin tuna roe.",
+          "et": "Bottarga’t valmistatakse tavaliselt kefali või hariliku tuuni marjast."
+        },
+        "source": {
+          "sourceId": "wikipedia:bottarga",
+          "title": "Bottarga",
+          "url": "https://en.wikipedia.org/wiki/Bottarga",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -7871,169 +7965,169 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-098",
     "name": {
-      "en": "The Chemistry of Savouriness",
-      "et": "Täidlase maitse keemia"
+      "en": "Sources of Deep Savour",
+      "et": "Sügava maitse allikad"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-098:question:1",
-        "factKey": "built-in-food-drink:round1-hard:compound:inosine-monophosphate",
+        "factKey": "built-in-food-drink:checkpoint6:umami",
         "tier": 1,
-        "subjectKey": "compound:inosine-monophosphate",
+        "subjectKey": "food:umami",
         "clue": {
-          "en": "Which nucleotide in meat and fish strongly amplifies glutamate’s umami effect?",
-          "et": "Milline lihas ja kalas leiduv nukleotiid võimendab tugevalt glutamaadi umami-efekti?"
+          "en": "Which savoury sensation is recognised as one of the five basic tastes?",
+          "et": "Millist täidlast maitseaistingut tunnustatakse ühe viiest põhimaitsest?"
         },
         "response": {
-          "en": "inosine monophosphate",
-          "et": "inosiinmonofosfaat"
-        },
-        "acceptedVariants": {
-          "en": [
-            "IMP",
-            "inosinate"
-          ],
-          "et": [
-            "IMP",
-            "inosinaat"
-          ]
-        },
-        "explanation": {
-          "en": "Inosine monophosphate acts synergistically with glutamate, producing more savouriness than either alone.",
-          "et": "Inosiinmonofosfaat toimib glutamaadiga sünergiliselt ning annab koos tugevama täidlase maitse."
-        },
-        "source": {
-          "sourceId": "wikipedia:inosinic_acid",
-          "title": "Inosinic acid",
-          "url": "https://en.wikipedia.org/wiki/Inosinic_acid",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-098:question:2",
-        "factKey": "built-in-food-drink:round1-hard:compound:guanosine-monophosphate",
-        "tier": 2,
-        "subjectKey": "compound:guanosine-monophosphate",
-        "clue": {
-          "en": "Which nucleotide abundant in dried mushrooms enhances umami alongside glutamate?",
-          "et": "Milline kuivatatud seentes rohke nukleotiid tugevdab koos glutamaadiga umamit?"
-        },
-        "response": {
-          "en": "guanosine monophosphate",
-          "et": "guanosiinmonofosfaat"
-        },
-        "acceptedVariants": {
-          "en": [
-            "GMP",
-            "guanylate"
-          ],
-          "et": [
-            "GMP",
-            "guanülaat"
-          ]
-        },
-        "explanation": {
-          "en": "Guanosine monophosphate is also called guanylate and is used as a flavour enhancer.",
-          "et": "Guanosiinmonofosfaati nimetatakse ka guanülaadiks ning kasutatakse maitsetugevdajana."
-        },
-        "source": {
-          "sourceId": "wikipedia:guanylic_acid",
-          "title": "Guanylic acid",
-          "url": "https://en.wikipedia.org/wiki/Guanylic_acid",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-098:question:3",
-        "factKey": "built-in-food-drink:round1-hard:receptor:t1r1-t1r3",
-        "tier": 3,
-        "subjectKey": "receptor:t1r1-t1r3",
-        "clue": {
-          "en": "Which paired taste receptor on the tongue responds to amino acids including glutamate?",
-          "et": "Milline paariline maitseretseptor keelel reageerib aminohapetele, sealhulgas glutamaadile?"
-        },
-        "response": {
-          "en": "T1R1–T1R3 receptor",
-          "et": "T1R1–T1R3-retseptor"
-        },
-        "acceptedVariants": {
-          "en": [
-            "T1R1/T1R3"
-          ],
-          "et": [
-            "T1R1/T1R3"
-          ]
-        },
-        "explanation": {
-          "en": "The T1R1–T1R3 heterodimer is a major molecular detector for umami in humans.",
-          "et": "T1R1–T1R3 heterodimeer on inimese tähtis molekulaarne umamiandur."
-        },
-        "source": {
-          "sourceId": "wikipedia:tas1r1",
-          "title": "TAS1R1",
-          "url": "https://en.wikipedia.org/wiki/TAS1R1",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-098:question:4",
-        "factKey": "built-in-food-drink:round1-overlap:food:wakame",
-        "tier": 4,
-        "subjectKey": "food:wakame",
-        "clue": {
-          "en": "Which tender seaweed appears in miso soup and Japanese seaweed salads?",
-          "et": "Milline õrn merevetikas leidub misosupis ja Jaapani vetikasalatites?"
-        },
-        "response": {
-          "en": "wakame",
-          "et": "wakame"
+          "en": "umami",
+          "et": "umami"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Wakame is the edible brown alga Undaria pinnatifida and has a softer texture than stock-making kombu.",
-          "et": "Wakame on söödav pruunvetikas Undaria pinnatifida ning pehmema tekstuuriga kui puljongikombu."
+          "en": "In 1908, Kikunae Ikeda identified umami as a distinct taste attributed to glutamic acid.",
+          "et": "Kikunae Ikeda tuvastas 1908. aastal umami glutamiinhappega seotud eraldi maitsena."
         },
         "source": {
-          "sourceId": "wikipedia:wakame",
-          "title": "Wakame",
-          "url": "https://en.wikipedia.org/wiki/Wakame",
+          "sourceId": "wikipedia:umami",
+          "title": "Umami",
+          "url": "https://en.wikipedia.org/wiki/Umami",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-098:question:2",
+        "factKey": "built-in-food-drink:checkpoint6:monosodium-glutamate",
+        "tier": 2,
+        "subjectKey": "food:monosodium-glutamate",
+        "clue": {
+          "en": "Which flavour enhancer is the sodium salt of glutamic acid?",
+          "et": "Milline maitsetugevdaja on glutamiinhappe naatriumisool?"
+        },
+        "response": {
+          "en": "monosodium glutamate",
+          "et": "naatriumglutamaat"
+        },
+        "acceptedVariants": {
+          "en": [
+            "MSG"
+          ],
+          "et": [
+            "MSG"
+          ]
+        },
+        "explanation": {
+          "en": "Monosodium glutamate produces an umami taste through its glutamate component.",
+          "et": "Naatriumglutamaat tekitab glutamaadikomponendi kaudu umami maitse."
+        },
+        "source": {
+          "sourceId": "wikipedia:monosodium-glutamate",
+          "title": "Monosodium glutamate",
+          "url": "https://en.wikipedia.org/wiki/Monosodium_glutamate",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-098:question:3",
+        "factKey": "built-in-food-drink:checkpoint6:shiitake",
+        "tier": 3,
+        "subjectKey": "food:shiitake",
+        "clue": {
+          "en": "Which East Asian mushroom is used fresh or dried and has a Japanese name combining the shii tree with “mushroom”?",
+          "et": "Millist Ida-Aasia seent kasutatakse värskelt või kuivatatult ning selle jaapanikeelne nimi ühendab shii-puu sõnaga „seen“?"
+        },
+        "response": {
+          "en": "shiitake",
+          "et": "shiitake"
+        },
+        "acceptedVariants": {
+          "en": [
+            "shiitake mushroom"
+          ],
+          "et": [
+            "šitake"
+          ]
+        },
+        "explanation": {
+          "en": "Shiitake grows naturally on the decaying wood of deciduous trees and is widely cultivated.",
+          "et": "Shiitake kasvab looduses lehtpuude kõduneval puidul ning seda kasvatatakse laialdaselt."
+        },
+        "source": {
+          "sourceId": "wikipedia:shiitake",
+          "title": "Shiitake",
+          "url": "https://en.wikipedia.org/wiki/Shiitake",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-098:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:kombu",
+        "tier": 4,
+        "subjectKey": "food:kombu",
+        "clue": {
+          "en": "Which edible kelp supplies glutamate to the Japanese stock called dashi?",
+          "et": "Milline söödav pruunvetikas annab glutamaati Jaapani puljongile dashi?"
+        },
+        "response": {
+          "en": "kombu",
+          "et": "kombu"
+        },
+        "acceptedVariants": {
+          "en": [
+            "konbu"
+          ],
+          "et": [
+            "konbu"
+          ]
+        },
+        "explanation": {
+          "en": "Kombu is widely eaten in East Asia and is one of three main ingredients used to make dashi.",
+          "et": "Kombu’t süüakse laialt Ida-Aasias ning see on üks kolmest dashi põhikoostisosast."
+        },
+        "source": {
+          "sourceId": "wikipedia:kombu",
+          "title": "Kombu",
+          "url": "https://en.wikipedia.org/wiki/Kombu",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-098:question:5",
-        "factKey": "built-in-food-drink:round1-hard:ingredient:yeast-extract",
+        "factKey": "built-in-food-drink:checkpoint6:yeast-extract",
         "tier": 5,
-        "subjectKey": "ingredient:yeast-extract",
+        "subjectKey": "food:yeast-extract",
         "clue": {
-          "en": "Which savoury paste or powder is made from broken-down yeast cells and naturally contains glutamates?",
-          "et": "Milline maitsekas pasta või pulber saadakse lagundatud pärmirakkudest ning sisaldab loomulikult glutamaate?"
+          "en": "Which paste or powder is made from the soluble contents separated after yeast cells are broken down?",
+          "et": "Milline pasta või pulber valmistatakse pärast pärmirakkude lõhkumist eraldatud lahustuvast osast?"
         },
         "response": {
           "en": "yeast extract",
           "et": "pärmiekstrakt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "autolysed yeast extract"
+          ],
+          "et": [
+            "autolüüsitud pärmiekstrakt"
+          ]
         },
         "explanation": {
-          "en": "Yeast extract concentrates amino acids and nucleotides and is used in spreads, soups, and seasonings.",
-          "et": "Pärmiekstrakt koondab aminohappeid ja nukleotiide ning seda kasutatakse määretes, suppides ja maitseainetes."
+          "en": "Yeast extract contains amino acids and is used in spreads, soups and seasonings.",
+          "et": "Pärmiekstrakt sisaldab aminohappeid ning seda kasutatakse määretes, suppides ja maitseainetes."
         },
         "source": {
-          "sourceId": "wikipedia:yeast_extract",
+          "sourceId": "wikipedia:yeast-extract",
           "title": "Yeast extract",
           "url": "https://en.wikipedia.org/wiki/Yeast_extract",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -8041,163 +8135,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-099",
     "name": {
-      "en": "Instruments for a Precise Kitchen",
-      "et": "Täpse köögi mõõteriistad"
+      "en": "Names on the Kitchen Shelf",
+      "et": "Nimed köögiriiulil"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-099:question:1",
-        "factKey": "built-in-food-drink:round1-hard:instrument:hydrometer",
+        "factKey": "built-in-food-drink:checkpoint6:thermos",
         "tier": 1,
-        "subjectKey": "instrument:hydrometer",
+        "subjectKey": "food:thermos",
         "clue": {
-          "en": "Which floating instrument estimates a liquid’s relative density from how deeply it sinks?",
-          "et": "Milline ujuv mõõteriist hindab vedeliku suhtelist tihedust selle järgi, kui sügavale see vajub?"
+          "en": "Which brand name became a common word for a vacuum flask that keeps drinks hot or cold?",
+          "et": "Milline kaubamärk muutus kuuma või külma hoidva vaakumpudeli üldnimetuseks?"
         },
         "response": {
-          "en": "hydrometer",
-          "et": "hüdromeeter"
+          "en": "Thermos",
+          "et": "termos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Thermos flask"
+          ],
+          "et": [
+            "termospudel"
+          ]
         },
         "explanation": {
-          "en": "A hydrometer can track dissolved sugar and fermentation progress when readings are compared over time.",
-          "et": "Hüdromeetriga saab järjestikuste näitude abil jälgida lahustunud suhkrut ja käärimise kulgu."
+          "en": "In the United States, lowercase “thermos” was declared a genericised trademark in 1963.",
+          "et": "Ameerika Ühendriikides tunnistati väiketähega „thermos“ 1963. aastal üldnimetuseks muutunud kaubamärgiks."
         },
         "source": {
-          "sourceId": "wikipedia:hydrometer",
-          "title": "Hydrometer",
-          "url": "https://en.wikipedia.org/wiki/Hydrometer",
+          "sourceId": "wikipedia:thermos",
+          "title": "Thermos",
+          "url": "https://en.wikipedia.org/wiki/Thermos",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-099:question:2",
-        "factKey": "built-in-food-drink:round1-hard:instrument:refractometer",
+        "factKey": "built-in-food-drink:checkpoint6:tupperware",
         "tier": 2,
-        "subjectKey": "instrument:refractometer",
+        "subjectKey": "food:tupperware",
         "clue": {
-          "en": "A drop of juice reveals sugar concentration through how much it bends light in which instrument?",
-          "et": "Millises mõõteriistas näitab mahlatilga valguse murdumine suhkrusisaldust?"
+          "en": "Which plastic storage-container company developed the direct-marketing strategy known as the party plan?",
+          "et": "Milline plastist säilitusnõude ettevõte arendas otseturundusstrateegia, mida tuntakse peoplaanina?"
         },
         "response": {
-          "en": "refractometer",
-          "et": "refraktomeeter"
+          "en": "Tupperware",
+          "et": "Tupperware"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tupperware container"
+          ],
+          "et": [
+            "Tupperware’i karp"
+          ]
         },
         "explanation": {
-          "en": "A refractometer commonly reports fruit or syrup concentration in degrees Brix.",
-          "et": "Refraktomeeter näitab puuvilja või siirupi kontsentratsiooni sageli Brixi kraadides."
+          "en": "Earl Tupper introduced the product line in 1946.",
+          "et": "Earl Tupper tõi tootesarja turule 1946. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:refractometer",
-          "title": "Refractometer",
-          "url": "https://en.wikipedia.org/wiki/Refractometer",
+          "sourceId": "wikipedia:tupperware",
+          "title": "Tupperware",
+          "url": "https://en.wikipedia.org/wiki/Tupperware",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-099:question:3",
-        "factKey": "built-in-food-drink:round1-hard:instrument:infrared-thermometer",
+        "factKey": "built-in-food-drink:checkpoint6:pyrex",
         "tier": 3,
-        "subjectKey": "instrument:infrared-thermometer",
+        "subjectKey": "food:pyrex",
         "clue": {
-          "en": "Which non-contact instrument estimates a surface's temperature from the thermal radiation it emits?",
-          "et": "Milline kontaktivaba mõõteriist hindab pinna temperatuuri selle kiiratava soojuskiirguse põhjal?"
+          "en": "Which Corning brand introduced heat-resistant glassware for kitchens in 1915?",
+          "et": "Milline Corningi kaubamärk tõi 1915. aastal turule köögi jaoks mõeldud kuumakindlad klaasnõud?"
         },
         "response": {
-          "en": "infrared thermometer",
-          "et": "infrapunatermomeeter"
+          "en": "Pyrex",
+          "et": "Pyrex"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "PYREX"
+          ],
+          "et": [
+            "PYREX"
+          ]
         },
         "explanation": {
-          "en": "An infrared thermometer reads surface temperature quickly without piercing or touching the food.",
-          "et": "Infrapunatermomeeter mõõdab kiiresti pinnatemperatuuri ilma toitu puudutamata või sellesse torkamata."
+          "en": "Pyrex was originally made from borosilicate glass.",
+          "et": "Pyrexit valmistati algselt borosilikaatklaasist."
         },
         "source": {
-          "sourceId": "wikipedia:infrared_thermometer",
-          "title": "Infrared thermometer",
-          "url": "https://en.wikipedia.org/wiki/Infrared_thermometer",
+          "sourceId": "wikipedia:pyrex",
+          "title": "Pyrex",
+          "url": "https://en.wikipedia.org/wiki/Pyrex",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-099:question:4",
-        "factKey": "built-in-food-drink:round1-hard:measurement:brix",
+        "factKey": "built-in-food-drink:checkpoint6:mason-jar",
         "tier": 4,
-        "subjectKey": "measurement:brix",
+        "subjectKey": "food:mason-jar",
         "clue": {
-          "en": "Which scale approximates grams of sucrose per 100 grams of solution?",
-          "et": "Milline skaala ligikaudu näitab sahharoosi gramme 100 grammi lahuse kohta?"
+          "en": "Which screw-threaded glass preserving jar bears the surname of its 1858 American patentee?",
+          "et": "Milline keermega klaasist hoidisepurk kannab oma 1858. aasta Ameerika patendiomaniku perekonnanime?"
         },
         "response": {
-          "en": "degrees Brix",
-          "et": "Brixi kraad"
+          "en": "Mason jar",
+          "et": "Masoni purk"
         },
         "acceptedVariants": {
           "en": [
-            "°Bx",
-            "Brix"
+            "Mason bottle"
           ],
           "et": [
-            "°Bx",
-            "Brix"
+            "Masoni klaaspurk"
           ]
         },
         "explanation": {
-          "en": "Degrees Brix are widely used to assess fruit ripeness, juice, wine must, and syrups.",
-          "et": "Brixi kraade kasutatakse laialt puuvilja küpsuse, mahla, virde ja siirupi hindamisel."
+          "en": "John Landis Mason patented the preserving jar in 1858; its threaded mouth accepts a metal band that presses down a separate lid.",
+          "et": "John Landis Mason patenteeris hoidisepurgi 1858. aastal; selle keermestatud suu võtab vastu metallrõnga, mis surub alla eraldi kaane."
         },
         "source": {
-          "sourceId": "wikipedia:brix",
-          "title": "Brix",
-          "url": "https://en.wikipedia.org/wiki/Brix",
+          "sourceId": "wikipedia:mason-jar",
+          "title": "Mason jar",
+          "url": "https://en.wikipedia.org/wiki/Mason_jar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-099:question:5",
-        "factKey": "built-in-food-drink:round1-hard:measurement:tare-weight",
+        "factKey": "built-in-food-drink:checkpoint6:crock-pot",
         "tier": 5,
-        "subjectKey": "measurement:tare-weight",
+        "subjectKey": "food:crock-pot",
         "clue": {
-          "en": "Which value is subtracted so a scale reports only the ingredient and not its container?",
-          "et": "Milline väärtus lahutatakse, et kaal näitaks ainult koostisosa, mitte anuma massi?"
+          "en": "Which trademarked slow-cooker name began with an appliance marketed for cooking beans?",
+          "et": "Milline aeglase küpsetaja kaubamärk sai alguse ubade keetmiseks turustatud seadmest?"
         },
         "response": {
-          "en": "tare weight",
-          "et": "taaramass"
+          "en": "Crock-Pot",
+          "et": "Crock-Pot"
         },
         "acceptedVariants": {
           "en": [
-            "tare"
+            "Crock Pot"
           ],
           "et": [
-            "taara"
+            "Crock Pot"
           ]
         },
         "explanation": {
-          "en": "Tare weight is the mass of empty packaging or a container; net weight excludes it.",
-          "et": "Taaramass on tühja pakendi või anuma mass ning netomass seda ei sisalda."
+          "en": "The Rival Company introduced the Crock-Pot name for its slow cooker in 1971.",
+          "et": "Rival Company võttis oma aeglase küpsetaja jaoks nime Crock-Pot kasutusele 1971. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:tare_weight",
-          "title": "Tare weight",
-          "url": "https://en.wikipedia.org/wiki/Tare_weight",
+          "sourceId": "wikipedia:crock-pot",
+          "title": "Slow cooker",
+          "url": "https://en.wikipedia.org/wiki/Slow_cooker",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -8205,153 +8309,179 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-100",
     "name": {
-      "en": "Staple Doughs from Grain and Roots",
-      "et": "Teravilja- ja juurviljatainast põhitoidud"
+      "en": "Staples for Scooping and Sharing",
+      "et": "Põhitoidud kastme tõstmiseks"
     },
     "questions": [
       {
         "key": "built-in-food-drink-set-100:question:1",
-        "factKey": "built-in-food-drink:round1-hard:food:ugali",
+        "factKey": "built-in-food-drink:checkpoint6:couscous",
         "tier": 1,
-        "subjectKey": "food:ugali",
-        "clue": {
-          "en": "Which stiff East African porridge is stirred from maize or another grain flour and eaten with stews?",
-          "et": "Milline paks Ida-Aafrika puder segatakse maisi- või muust teraviljajahust ning süüakse hautistega?"
-        },
-        "response": {
-          "en": "ugali",
-          "et": "ugali"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Ugali is shaped by hand into small portions used to scoop accompanying food.",
-          "et": "Ugali vormitakse käega väikesteks portsjoniteks, millega tõstetakse lisandit."
-        },
-        "source": {
-          "sourceId": "wikipedia:ugali",
-          "title": "Ugali",
-          "url": "https://en.wikipedia.org/wiki/Ugali",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-100:question:2",
-        "factKey": "built-in-food-drink:round1-hard:food:polenta",
-        "tier": 2,
-        "subjectKey": "food:polenta",
-        "clue": {
-          "en": "Which northern Italian staple turns boiled maize meal into a soft porridge or cooled slices?",
-          "et": "Milline Põhja-Itaalia põhitoit muudab keedetud maisijahu pehmeks pudruks või jahtunud viiludeks?"
-        },
-        "response": {
-          "en": "polenta",
-          "et": "polenta"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Polenta was once made from other grains, but maize became its defining base after the Columbian exchange.",
-          "et": "Polentat tehti varem ka muudest teradest, kuid pärast Kolumbuse vahetust sai põhiliseks mais."
-        },
-        "source": {
-          "sourceId": "wikipedia:polenta",
-          "title": "Polenta",
-          "url": "https://en.wikipedia.org/wiki/Polenta",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-100:question:3",
-        "factKey": "built-in-food-drink:round1-hard:food:couscous",
-        "tier": 3,
         "subjectKey": "food:couscous",
         "clue": {
-          "en": "What North African staple consists of tiny steamed granules rolled from durum-wheat semolina?",
-          "et": "Milline Põhja-Aafrika põhitoit koosneb kõvanisu mannast veeretatud väikestest aurutatud teradest?"
+          "en": "Which North African staple consists of tiny steamed granules of rolled semolina?",
+          "et": "Milline Põhja-Aafrika põhitoit koosneb väikestest aurutatud ja veeretatud mannaterakestest?"
         },
         "response": {
           "en": "couscous",
           "et": "kuskuss"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cuscus"
+          ],
+          "et": [
+            "couscous"
+          ]
         },
         "explanation": {
-          "en": "Traditional couscous is steamed repeatedly above a stew rather than simply soaked once.",
-          "et": "Traditsioonilist kuskussi aurutatakse hautise kohal korduvalt, mitte ei leotata vaid korra."
+          "en": "Traditional couscous is steamed above a stew in a vessel called a couscoussier.",
+          "et": "Traditsioonilist kuskussi aurutatakse hautise kohal nõus nimega couscoussier."
         },
         "source": {
           "sourceId": "wikipedia:couscous",
           "title": "Couscous",
           "url": "https://en.wikipedia.org/wiki/Couscous",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
-        "key": "built-in-food-drink-set-100:question:4",
-        "factKey": "built-in-food-drink:round1-hard:food:injera",
-        "tier": 4,
-        "subjectKey": "food:injera",
-        "clue": {
-          "en": "Which sour Ethiopian and Eritrean flatbread is fermented from teff and cooked on one side?",
-          "et": "Milline hapukas Etioopia ja Eritrea lameleib kääritatakse teffist ning küpsetatakse ühelt poolt?"
-        },
-        "response": {
-          "en": "injera",
-          "et": "injera"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Injera’s porous surface absorbs sauces and the bread doubles as plate and utensil.",
-          "et": "Injera poorne pind imab kastmeid ning leib toimib korraga taldriku ja söögiriistana."
-        },
-        "source": {
-          "sourceId": "wikipedia:injera",
-          "title": "Injera",
-          "url": "https://en.wikipedia.org/wiki/Injera",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-100:question:5",
-        "factKey": "built-in-food-drink:round1-hard:food:fufu",
-        "tier": 5,
+        "key": "built-in-food-drink-set-100:question:2",
+        "factKey": "built-in-food-drink:checkpoint6:fufu",
+        "tier": 2,
         "subjectKey": "food:fufu",
         "clue": {
-          "en": "Which West and Central African staple is pounded into a smooth elastic dough from cassava, yam, or plantain?",
-          "et": "Milline Lääne- ja Kesk-Aafrika põhitoit tambitakse maniokist, jamssist või jahubanaanist siledaks elastseks tainaks?"
+          "en": "Which West African pounded meal is made from cassava, plantain or cocoyam and eaten with broth-like soups?",
+          "et": "Milline Lääne-Aafrika tambitud roog valmistatakse maniokist, jahubanaanist või tarost ning süüakse leemetaoliste suppidega?"
         },
         "response": {
           "en": "fufu",
           "et": "fufu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "foofoo",
+            "foutou"
+          ],
+          "et": [
+            "foofoo",
+            "foutou"
+          ]
         },
         "explanation": {
-          "en": "Fufu is not inherently grain-based; diners pinch off pieces to scoop soup or stew.",
-          "et": "Fufu ei ole olemuselt teraviljatoit; sellest näpistatakse tükke supi või hautise tõstmiseks."
+          "en": "Fufu was originally made from boiled cassava, plantains and cocoyam.",
+          "et": "Fufu’t valmistati algselt keedetud maniokist, jahubanaanidest ja tarost."
         },
         "source": {
           "sourceId": "wikipedia:fufu",
           "title": "Fufu",
           "url": "https://en.wikipedia.org/wiki/Fufu",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-100:question:3",
+        "factKey": "built-in-food-drink:checkpoint6:arepa",
+        "tier": 3,
+        "subjectKey": "food:arepa",
+        "clue": {
+          "en": "Which maize flatbread is especially prominent in Colombia and Venezuela and may be stuffed with a filling?",
+          "et": "Milline maisijahust lameleib on eriti tähtis Colombia ja Venezuela köögis ning seda võib täidisega täita?"
+        },
+        "response": {
+          "en": "arepa",
+          "et": "arepa"
+        },
+        "acceptedVariants": {
+          "en": [
+            "arepas"
+          ],
+          "et": [
+            "arepas"
+          ]
+        },
+        "explanation": {
+          "en": "Arepas are made from ground maize dough and may be baked, grilled or fried.",
+          "et": "Arepa’sid tehakse jahvatatud maisi tainast ning neid võib küpsetada, grillida või praadida."
+        },
+        "source": {
+          "sourceId": "wikipedia:arepa",
+          "title": "Arepa",
+          "url": "https://en.wikipedia.org/wiki/Arepa",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-100:question:4",
+        "factKey": "built-in-food-drink:checkpoint6:ugali",
+        "tier": 4,
+        "subjectKey": "food:ugali",
+        "clue": {
+          "en": "Which widely eaten African dish cooks maize flour to a stiff, dough-like consistency?",
+          "et": "Millises laialt levinud Aafrika roas keedetakse maisijahu tihke tainalaadse konsistentsini?"
+        },
+        "response": {
+          "en": "ugali",
+          "et": "ugali"
+        },
+        "acceptedVariants": {
+          "en": [
+            "posho",
+            "nsima"
+          ],
+          "et": [
+            "posho",
+            "nsima"
+          ]
+        },
+        "explanation": {
+          "en": "Ugali is cooked in boiling water or milk until it reaches a firm consistency.",
+          "et": "Ugali’t keedetakse vees või piimas, kuni see muutub tihkeks."
+        },
+        "source": {
+          "sourceId": "wikipedia:ugali",
+          "title": "Ugali",
+          "url": "https://en.wikipedia.org/wiki/Ugali",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-100:question:5",
+        "factKey": "built-in-food-drink:checkpoint6:sadza",
+        "tier": 5,
+        "subjectKey": "food:sadza",
+        "clue": {
+          "en": "Which cooked maize meal is the staple food of Zimbabwe?",
+          "et": "Milline keedetud maisijahuroog on Zimbabwe põhitoit?"
+        },
+        "response": {
+          "en": "sadza",
+          "et": "sadza"
+        },
+        "acceptedVariants": {
+          "en": [
+            "pap",
+            "isitshwala"
+          ],
+          "et": [
+            "pap",
+            "isitshwala"
+          ]
+        },
+        "explanation": {
+          "en": "Sadza is commonly rolled into a ball by hand before being dipped into sauce, sour milk or stewed vegetables.",
+          "et": "Sadza veeretatakse tavaliselt käega palliks ning kastetakse seejärel kastmesse, hapupiima või hautatud köögiviljadesse."
+        },
+        "source": {
+          "sourceId": "wikipedia:sadza",
+          "title": "Sadza",
+          "url": "https://en.wikipedia.org/wiki/Sadza",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
