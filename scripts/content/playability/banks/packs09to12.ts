@@ -8961,8 +8961,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "kompaktplaat (CD)"
         },
         "acceptedVariants": {
-          "en": ["CD", "compact disc"],
-          "et": ["CD", "kompaktplaat"]
+          "en": ["compact disc"],
+          "et": ["kompaktplaat"]
         },
         "explanation": {
           "en": "The compact disc is a Philips and Sony digital optical-disc format for storing and playing digital audio.",
