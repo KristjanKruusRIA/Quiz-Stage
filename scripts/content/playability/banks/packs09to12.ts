@@ -11582,7 +11582,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "key": "built-in-technology-inventions-set-054:question:1",
         "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:speech-recognition",
         "tier": 1,
-        "subjectKey": "technology:voice-recognition",
+        "subjectKey": "technology:speech-recognition",
         "clue": {
           "en": "A phone can turn spoken words into a search or a command. What technology lets it recognise speech?",
           "et": "Telefon saab muuta öeldud sõnad otsinguks või käsuks. Mis tehnoloogia võimaldab tal kõnet ära tunda?"
