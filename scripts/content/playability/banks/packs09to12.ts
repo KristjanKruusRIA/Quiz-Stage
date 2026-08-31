@@ -7277,7 +7277,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "food:empanada",
         "clue": {
           "en": "Which filled pastry, common in Spain and Latin America, is baked or fried?",
-          "et": "Milline Hispaanias ja Ladina-Ameerikas levinud täidisega pirukas küpsetatakse ahjus või praetakse?"
+          "et": "Millist Hispaanias ja Ladina-Ameerikas levinud täidisega pirukat küpsetatakse ahjus või praetakse?"
         },
         "response": {
           "en": "empanada",
