@@ -13707,153 +13707,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-067",
     "name": {
-      "en": "Ideas That Made Software Possible",
-      "et": "Ideed, mis tegid tarkvara võimalikuks"
+      "en": "Engineering Disasters That Changed Design",
+      "et": "Insenerikatastroofid, mis muutsid projekteerimist"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-067:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:person:claude-shannon",
+        "factKey": "built-in-technology-inventions:engineering-disasters:hard:tacoma-narrows-bridge",
         "tier": 1,
-        "subjectKey": "person:claude-shannon",
+        "subjectKey": "structure:tacoma-narrows-bridge",
         "clue": {
-          "en": "Who connected Boolean algebra with electrical switching circuits?",
-          "et": "Kes sidus Boole’i algebra elektriliste lülitusahelatega?"
+          "en": "The spectacular 1940 collapse filmed as a suspension bridge twisted in the wind is remembered by what name?",
+          "et": "Millise nime all tuntakse 1940. aasta kuulsat varingut, kus rippsild tuules väändus ja mis filmiti üles?"
         },
         "response": {
-          "en": "Claude Shannon",
-          "et": "Claude Shannon"
+          "en": "Tacoma Narrows Bridge",
+          "et": "Tacoma Narrows Bridge"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Tacoma Narrows Bridge collapse"],
+          "et": ["Tacoma Narrowsi silla varing"]
         },
         "explanation": {
-          "en": "Shannon also founded mathematical information theory with his 1948 paper.",
-          "et": "Shannon rajas 1948. aasta artikliga ka matemaatilise infoteooria."
+          "en": "The bridge’s failure became a classic warning that wind-induced motion must be considered in suspension-bridge design.",
+          "et": "Silla varingust sai klassikaline hoiatus, et rippsildade projekteerimisel tuleb arvestada tuule põhjustatud võnkumisega."
         },
         "source": {
-          "sourceId": "wikipedia:claude_shannon",
-          "title": "Claude Shannon",
-          "url": "https://en.wikipedia.org/wiki/Claude_Shannon",
+          "sourceId": "wikipedia:tacoma_narrows_bridge_collapse",
+          "title": "Tacoma Narrows Bridge collapse",
+          "url": "https://en.wikipedia.org/wiki/Tacoma_Narrows_Bridge_(1940)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-067:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:person:john-backus",
+        "factKey": "built-in-technology-inventions:engineering-disasters:hard:mars-climate-orbiter",
         "tier": 2,
-        "subjectKey": "person:john-backus",
+        "subjectKey": "mission:mars-climate-orbiter",
         "clue": {
-          "en": "Which IBM computer scientist led the team that created Fortran?",
-          "et": "Milline IBMi arvutiteadlane juhtis Fortrani loonud meeskonda?"
+          "en": "Which NASA Mars mission was lost after software used imperial units while a contractor supplied metric data?",
+          "et": "Milline NASA Marsi missioon kaotati, sest tarkvara kasutas imperiaalmõõdustikku, kuid töövõtja andis meetermõõdustiku andmeid?"
         },
         "response": {
-          "en": "John Backus",
-          "et": "John Backus"
+          "en": "Mars Climate Orbiter",
+          "et": "Mars Climate Orbiter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Mars Climate Orbiter mission"],
+          "et": ["Mars Climate Orbiteri missioon"]
         },
         "explanation": {
-          "en": "Backus later helped define formal notation for programming-language syntax.",
-          "et": "Backus aitas hiljem luua programmeerimiskeelte süntaksi formaalset tähistust."
+          "en": "The loss highlighted the practical importance of unit consistency and interface checks in complex engineering projects.",
+          "et": "Kaotus näitas, kui tähtsad on keerukates inseneriprojektides ühtsed ühikud ja liideste kontrollimine."
         },
         "source": {
-          "sourceId": "wikipedia:john_backus",
-          "title": "John Backus",
-          "url": "https://en.wikipedia.org/wiki/John_Backus",
+          "sourceId": "wikipedia:mars_climate_orbiter",
+          "title": "Mars Climate Orbiter",
+          "url": "https://en.wikipedia.org/wiki/Mars_Climate_Orbiter",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-067:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:person:margaret-hamilton",
+        "factKey": "built-in-technology-inventions:engineering-disasters:hard:de-havilland-comet",
         "tier": 3,
-        "subjectKey": "person:margaret-hamilton",
+        "subjectKey": "aircraft:de-havilland-comet",
         "clue": {
-          "en": "Who led the MIT team that developed Apollo flight software?",
-          "et": "Kes juhtis MIT-i meeskonda, mis arendas Apollo lennutarkvara?"
+          "en": "Which pioneering British jet airliner suffered fatal breakups that helped establish the importance of testing metal fatigue?",
+          "et": "Millise teedrajav Briti reaktiivlennuki surmaga lõppenud lagunemised aitasid kinnistada metalliväsimuse katsetamise tähtsust?"
         },
         "response": {
-          "en": "Margaret Hamilton",
-          "et": "Margaret Hamilton"
+          "en": "de Havilland Comet",
+          "et": "de Havilland Comet"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Comet airliner"],
+          "et": ["Comet reisilennuk"]
         },
         "explanation": {
-          "en": "Hamilton popularised the term software engineering while working on high-reliability systems.",
-          "et": "Hamilton aitas kõrge töökindlusega süsteemide juures populariseerida terminit tarkvaratehnika."
+          "en": "Investigators linked the early Comet crashes to fatigue cracks, prompting redesigned windows and stronger fatigue testing.",
+          "et": "Uurijad seostasid varased Cometi õnnetused väsimuspragudega; see tõi kaasa akende ümberprojekteerimise ja rangemad väsimuskatsed."
         },
         "source": {
-          "sourceId": "wikipedia:margaret_hamilton_(software_engineer)",
-          "title": "Margaret Hamilton (software engineer)",
-          "url": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
+          "sourceId": "wikipedia:de_havilland_comet",
+          "title": "de Havilland Comet",
+          "url": "https://en.wikipedia.org/wiki/De_Havilland_Comet",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-067:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:person:dennis-ritchie",
+        "factKey": "built-in-technology-inventions:engineering-disasters:hard:hyatt-regency-walkway-collapse",
         "tier": 4,
-        "subjectKey": "person:dennis-ritchie",
+        "subjectKey": "disaster:hyatt-regency-walkway-collapse",
         "clue": {
-          "en": "Which Bell Labs researcher created C and co-developed Unix?",
-          "et": "Milline Bell Labsi teadlane lõi C-keele ning arendas kaasa Unixi?"
+          "en": "What 1981 hotel disaster in Kansas City exposed how a last-minute design change had doubled the load on a suspended walkway connection?",
+          "et": "Milline 1981. aasta hotellikatastroof Kansas Citys paljastas, et projektimuudatus oli kahekordistanud rippsilla ühenduse koormust?"
         },
         "response": {
-          "en": "Dennis Ritchie",
-          "et": "Dennis Ritchie"
+          "en": "Hyatt Regency walkway collapse",
+          "et": "Hyatt Regency kõnniteede varing"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Hyatt Regency disaster"],
+          "et": ["Hyatt Regency katastroof"]
         },
         "explanation": {
-          "en": "Ritchie’s C language made operating systems portable across different machines.",
-          "et": "Ritchie C-keel muutis operatsioonisüsteemid eri masinate vahel teisaldatavaks."
+          "en": "The disaster made design-change review and clear responsibility between engineers, fabricators, and contractors central safety lessons.",
+          "et": "Katastroofist said keskse ohutusõppetunni projektimuudatuste kontroll ning selge vastutus inseneride, valmistajate ja töövõtjate vahel."
         },
         "source": {
-          "sourceId": "wikipedia:dennis_ritchie",
-          "title": "Dennis Ritchie",
-          "url": "https://en.wikipedia.org/wiki/Dennis_Ritchie",
+          "sourceId": "wikipedia:hyatt_regency_walkway_collapse",
+          "title": "Hyatt Regency walkway collapse",
+          "url": "https://en.wikipedia.org/wiki/Hyatt_Regency_walkway_collapse",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-067:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:person:donald-knuth",
+        "factKey": "built-in-technology-inventions:engineering-disasters:hard:ariane-flight-501",
         "tier": 5,
-        "subjectKey": "person:donald-knuth",
+        "subjectKey": "launch:ariane-flight-501",
         "clue": {
-          "en": "Who wrote the multi-volume work The Art of Computer Programming?",
-          "et": "Kes kirjutas mitmeköitelise teose „The Art of Computer Programming“?"
+          "en": "Which European rocket’s first launch failed after reused guidance software converted a value too large for its integer format?",
+          "et": "Millise Euroopa raketi esimene start ebaõnnestus, sest taaskasutatud juhtimistarkvara teisendas arvväärtuse liiga suureks kasutatud täisarvuvormingu jaoks?"
         },
         "response": {
-          "en": "Donald Knuth",
-          "et": "Donald Knuth"
+          "en": "Ariane Flight 501",
+          "et": "Ariane'i lend 501"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Ariane 5 Flight 501"],
+          "et": ["Ariane 5 lend 501"]
         },
         "explanation": {
-          "en": "Knuth also created TeX to achieve precise digital typesetting.",
-          "et": "Knuth lõi täpse digitaalse küljenduse jaoks ka TeXi."
+          "en": "The 1996 failure is a well-known case in which software proven on an earlier rocket was unsafe under the new vehicle’s conditions.",
+          "et": "1996. aasta ebaõnnestumine on tuntud näide sellest, kuidas varasema raketi jaoks toimiv tarkvara osutus uue sõiduki tingimustes ohtlikuks."
         },
         "source": {
-          "sourceId": "wikipedia:donald_knuth",
-          "title": "Donald Knuth",
-          "url": "https://en.wikipedia.org/wiki/Donald_Knuth",
+          "sourceId": "wikipedia:ariane-flight-501",
+          "title": "Ariane flight V88",
+          "url": "https://en.wikipedia.org/wiki/Ariane_flight_V88",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -13861,161 +13861,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-068",
     "name": {
-      "en": "How a Processor Moves Data",
-      "et": "Kuidas protsessor andmeid liigutab"
+      "en": "Inventors of Everyday Fixes",
+      "et": "Igapäevaste lahenduste leiutajad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-068:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:arithmetic-logic-unit",
+        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:percy-spencer",
         "tier": 1,
-        "subjectKey": "component:arithmetic-logic-unit",
+        "subjectKey": "person:percy-spencer",
         "clue": {
-          "en": "Which processor block performs arithmetic and logical operations?",
-          "et": "Milline protsessoriplokk teeb aritmeetika- ja loogikatehteid?"
+          "en": "Which engineer noticed a candy bar melting near radar equipment and went on to develop the microwave oven?",
+          "et": "Milline insener märkas, et radariseadmete läheduses sulab komm, ning asus seejärel arendama mikrolaineahju?"
         },
         "response": {
-          "en": "arithmetic logic unit",
-          "et": "aritmeetika-loogikaplokk"
+          "en": "Percy Spencer",
+          "et": "Percy Spencer"
         },
         "acceptedVariants": {
-          "en": [
-            "ALU"
-          ],
-          "et": [
-            "ALU"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "The ALU operates on values supplied from registers and returns a result plus status flags.",
-          "et": "ALU töötleb registritest saadud väärtusi ning tagastab tulemuse koos olekulippudega."
+          "en": "Spencer’s food-heating experiments led Raytheon to market an early microwave oven under the Radarange name.",
+          "et": "Spenceri toidu kuumutamise katsed viisid selleni, et Raytheon turustas varast mikrolaineahju nime Radarange all."
         },
         "source": {
-          "sourceId": "wikipedia:arithmetic_logic_unit",
-          "title": "Arithmetic logic unit",
-          "url": "https://en.wikipedia.org/wiki/Arithmetic_logic_unit",
+          "sourceId": "wikipedia:percy-spencer",
+          "title": "Percy Spencer",
+          "url": "https://en.wikipedia.org/wiki/Percy_Spencer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:control-unit",
+        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:josephine-cochrane",
         "tier": 2,
-        "subjectKey": "component:control-unit",
+        "subjectKey": "person:josephine-cochrane",
         "clue": {
-          "en": "What CPU component decodes instructions and directs the other units?",
-          "et": "Milline protsessori osa dekodeerib käske ning juhib teisi üksusi?"
+          "en": "Which inventor patented a machine that used water pressure to wash dishes after becoming frustrated with servants chipping her china?",
+          "et": "Milline leiutaja patenteeris veesurvet kasutava nõudepesumasina pärast seda, kui teenijad tema portselani ära lõhkusid?"
         },
         "response": {
-          "en": "control unit",
-          "et": "juhtplokk"
+          "en": "Josephine Cochrane",
+          "et": "Josephine Cochrane"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The control unit sequences data movement according to the current instruction.",
-          "et": "Juhtplokk järjestab andmete liikumise parasjagu täidetava käsu järgi."
+          "en": "Cochrane’s design held dishes in wire compartments and directed water at them; it became a forerunner of the modern dishwasher.",
+          "et": "Cochrane’i lahendus hoidis nõusid traatkorvides ja suunas neile veejoa; sellest sai tänapäevase nõudepesumasina eelkäija."
         },
         "source": {
-          "sourceId": "wikipedia:control_unit",
-          "title": "Control unit",
-          "url": "https://en.wikipedia.org/wiki/Control_unit",
+          "sourceId": "wikipedia:josephine-cochrane",
+          "title": "Josephine Cochrane",
+          "url": "https://en.wikipedia.org/wiki/Josephine_Cochrane",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:memory:cpu-cache",
+        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:earl-dickson",
         "tier": 3,
-        "subjectKey": "memory:cpu-cache",
+        "subjectKey": "person:earl-dickson",
         "clue": {
-          "en": "Which small fast memory keeps recently used data close to processor cores?",
-          "et": "Milline väike kiire mälu hoiab hiljuti kasutatud andmeid protsessorituumade lähedal?"
+          "en": "Which Johnson & Johnson employee made the first adhesive bandage after looking for an easier way to cover his wife’s frequent kitchen cuts?",
+          "et": "Milline Johnson & Johnsoni töötaja tegi esimese liimplaastri, otsides lihtsamat viisi oma naise sagedaste köögis saadud lõikehaavade katmiseks?"
         },
         "response": {
-          "en": "CPU cache",
-          "et": "protsessori vahemälu"
+          "en": "Earl Dickson",
+          "et": "Earl Dickson"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Caches exploit locality and are commonly arranged in several levels.",
-          "et": "Vahemälud kasutavad lokaalsust ning jagunevad tavaliselt mitmeks tasemeks."
+          "en": "Dickson placed gauze on adhesive tape and covered it with a protective layer, creating the product later sold as Band-Aid.",
+          "et": "Dickson paigutas marli liimlindile ja kattis selle kaitsekihiga, luues toote, mida hakati hiljem müüma Band-Aidi nime all."
         },
         "source": {
-          "sourceId": "wikipedia:cpu_cache",
-          "title": "CPU cache",
-          "url": "https://en.wikipedia.org/wiki/CPU_cache",
+          "sourceId": "wikipedia:earl-dickson",
+          "title": "Earle Dickson",
+          "url": "https://en.wikipedia.org/wiki/Earle_Dickson",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:architecture:system-bus",
+        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:elisha-otis",
         "tier": 4,
-        "subjectKey": "architecture:system-bus",
+        "subjectKey": "person:elisha-otis",
         "clue": {
-          "en": "What shared pathway carries data, addresses, and control signals between computer components?",
-          "et": "Milline ühine ühendustee kannab arvutikomponentide vahel andmeid, aadresse ja juhtsignaale?"
+          "en": "Which inventor demonstrated his elevator safety brake by having a hoisting rope cut during a public exhibition?",
+          "et": "Milline leiutaja demonstreeris oma lifti turvapidurit avalikul näitusel, lastes tõstetrossi läbi lõigata?"
         },
         "response": {
-          "en": "system bus",
-          "et": "süsteemisiin"
+          "en": "Elisha Otis",
+          "et": "Elisha Otis"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A system bus is often described as separate data, address, and control buses.",
-          "et": "Süsteemisiini kirjeldatakse sageli eraldi andme-, aadressi- ja juhtsiinina."
+          "en": "Otis’s brake caught the elevator platform if its rope failed, helping make passenger elevators trusted enough for tall buildings.",
+          "et": "Otise pidur püüdis liftiplatvormi kinni, kui tross katkes, aidates muuta reisiliftid piisavalt usaldusväärseks kõrghoonete jaoks."
         },
         "source": {
-          "sourceId": "wikipedia:system_bus",
-          "title": "System bus",
-          "url": "https://en.wikipedia.org/wiki/System_bus",
+          "sourceId": "wikipedia:elisha-otis",
+          "title": "Elisha Otis",
+          "url": "https://en.wikipedia.org/wiki/Elisha_Otis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:process:direct-memory-access",
+        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:stephanie-kwolek",
         "tier": 5,
-        "subjectKey": "process:direct-memory-access",
+        "subjectKey": "person:stephanie-kwolek",
         "clue": {
-          "en": "Which mechanism lets a device transfer blocks to RAM without continuous CPU handling?",
-          "et": "Milline mehhanism laseb seadmel plokke RAM-i kanda ilma protsessori pideva sekkumiseta?"
+          "en": "Which DuPont chemist developed the exceptionally strong fibre later sold as Kevlar, widely used in protective equipment?",
+          "et": "Milline DuPonti keemik arendas erakordselt tugeva kiu, mida hakati hiljem müüma Kevlari nime all ja kasutama kaitsevarustuses?"
         },
         "response": {
-          "en": "direct memory access",
-          "et": "otsejuurdepääs mälule"
+          "en": "Stephanie Kwolek",
+          "et": "Stephanie Kwolek"
         },
         "acceptedVariants": {
-          "en": [
-            "DMA"
-          ],
-          "et": [
-            "DMA"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "DMA frees the processor while a controller performs the bulk transfer.",
-          "et": "DMA vabastab protsessori ajaks, mil kontroller teeb suure andmeülekande."
+          "en": "Kwolek discovered a liquid-crystalline polymer solution whose spun fibres had extraordinary tensile strength.",
+          "et": "Kwolek avastas vedelkristallilise polümeerilahuse, millest kedratud kiud olid erakordselt suure tõmbetugevusega."
         },
         "source": {
-          "sourceId": "wikipedia:direct_memory_access",
-          "title": "Direct memory access",
-          "url": "https://en.wikipedia.org/wiki/Direct_memory_access",
+          "sourceId": "wikipedia:stephanie-kwolek",
+          "title": "Stephanie Kwolek",
+          "url": "https://en.wikipedia.org/wiki/Stephanie_Kwolek",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -14023,153 +14015,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-069",
     "name": {
-      "en": "Tricks of Digital Representation",
-      "et": "Digitaalse esituse võtted"
+      "en": "Milestones Before the Personal Computer",
+      "et": "Verstapostid enne personaalarvutit"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-069:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:encoding:twos-complement",
+        "factKey": "built-in-technology-inventions:pre-pc-milestones:hard:jacquard-loom",
         "tier": 1,
-        "subjectKey": "encoding:twos-complement",
+        "subjectKey": "machine:jacquard-loom",
         "clue": {
-          "en": "Which binary convention represents negative integers by inverting bits and adding one?",
-          "et": "Milline kahendesituse võte kujutab negatiivset täisarvu bittide pööramise ja ühe liitmisega?"
+          "en": "Which early nineteenth-century weaving machine used punched cards to control its patterns, later inspiring computing pioneers?",
+          "et": "Milline 19. sajandi alguse kudumismasin kasutas mustrite juhtimiseks perfokaarte ja inspireeris hiljem arvutuse teerajajaid?"
         },
         "response": {
-          "en": "two’s complement",
-          "et": "kahe täiendkood"
+          "en": "Jacquard loom",
+          "et": "Jacquard' kangasteljed"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Two’s complement permits the same adder circuitry for positive and negative arithmetic.",
-          "et": "Kahe täiendkood lubab positiivsete ja negatiivsete arvude jaoks kasutada sama liitmisskeemi."
+          "en": "The Jacquard loom encoded each textile pattern on cards, an idea Charles Babbage later drew on for the Analytical Engine.",
+          "et": "Jacquard' kangasteljed kodeerisid iga tekstiilimustri kaartidele; sellele ideele tugines hiljem Charles Babbage analüütilise masina kavandamisel."
         },
         "source": {
-          "sourceId": "wikipedia:two%27s_complement",
-          "title": "Two's complement",
-          "url": "https://en.wikipedia.org/wiki/Two%27s_complement",
+          "sourceId": "wikipedia:jacquard-machine",
+          "title": "Jacquard machine",
+          "url": "https://en.wikipedia.org/wiki/Jacquard_machine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-069:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:encoding:floating-point",
+        "factKey": "built-in-technology-inventions:pre-pc-milestones:hard:colossus",
         "tier": 2,
-        "subjectKey": "encoding:floating-point",
+        "subjectKey": "computer:colossus",
         "clue": {
-          "en": "Which representation stores a sign, significand, and exponent for a wide numeric range?",
-          "et": "Milline esitus talletab laia arvupiirkonna jaoks märgi, mantissi ja eksponendi?"
+          "en": "What British wartime electronic computer was built at Bletchley Park to help read German Lorenz-encrypted messages?",
+          "et": "Milline Briti sõjaaegne elektrooniline arvuti ehitati Bletchley Parkis, et aidata lugeda Saksa Lorenziga krüpteeritud sõnumeid?"
         },
         "response": {
-          "en": "floating-point arithmetic",
-          "et": "ujukomaarvutus"
+          "en": "Colossus",
+          "et": "Colossus"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Floating-point numbers trade exactness for range and follow standards such as IEEE 754.",
-          "et": "Ujukomaarvud vahetavad täpsuse ulatuse vastu ning järgivad näiteks standardit IEEE 754."
+          "en": "Colossus was programmable by switches and plugs and is regarded as one of the first electronic digital computers.",
+          "et": "Colossust programmeeriti lülitite ja pistikute abil ning seda peetakse üheks esimeseks elektrooniliseks digitaalarvutiks."
         },
         "source": {
-          "sourceId": "wikipedia:floating-point_arithmetic",
-          "title": "Floating-point arithmetic",
-          "url": "https://en.wikipedia.org/wiki/Floating-point_arithmetic",
+          "sourceId": "wikipedia:colossus-computer",
+          "title": "Colossus computer",
+          "url": "https://en.wikipedia.org/wiki/Colossus_computer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-069:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:code:hamming-code",
+        "factKey": "built-in-technology-inventions:pre-pc-milestones:hard:univac-i",
         "tier": 3,
-        "subjectKey": "code:hamming-code",
+        "subjectKey": "computer:univac-i",
         "clue": {
-          "en": "Which error-correcting code adds parity bits so a receiver can locate and repair a single-bit error?",
-          "et": "Milline veaparanduskood lisab paarsusbite, et vastuvõtja saaks ühebitise vea leida ja parandada?"
+          "en": "Which early commercial American computer became famous after a television network used it to predict the 1952 US presidential election?",
+          "et": "Milline varane Ameerika kommertsarvuti sai kuulsaks, kui telekanal kasutas seda 1952. aasta USA presidendivalimiste ennustamiseks?"
         },
         "response": {
-          "en": "Hamming code",
-          "et": "Hammingi kood"
+          "en": "UNIVAC I",
+          "et": "UNIVAC I"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A Hamming code places parity checks so each bit position has a distinct binary signature.",
-          "et": "Hammingi kood paigutab paarsuskontrollid nii, et igal bitipositsioonil on eristatav kahendallkiri."
+          "en": "UNIVAC I was the first general-purpose electronic digital computer designed for business use in the United States.",
+          "et": "UNIVAC I oli esimene Ameerika Ühendriikides äriotstarbeks kavandatud üldotstarbeline elektrooniline digitaalarvuti."
         },
         "source": {
-          "sourceId": "wikipedia:hamming_code",
-          "title": "Hamming code",
-          "url": "https://en.wikipedia.org/wiki/Hamming_code",
+          "sourceId": "wikipedia:univac-i",
+          "title": "UNIVAC I",
+          "url": "https://en.wikipedia.org/wiki/UNIVAC_I",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-069:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:endianness",
+        "factKey": "built-in-technology-inventions:pre-pc-milestones:hard:xerox-alto",
         "tier": 4,
-        "subjectKey": "concept:endianness",
+        "subjectKey": "computer:xerox-alto",
         "clue": {
-          "en": "What term describes whether a multibyte value stores its most or least significant byte first?",
-          "et": "Milline termin kirjeldab, kas mitmebaidine väärtus talletab esmalt kaalukama või vähemkaaluka baidi?"
+          "en": "Which 1973 research computer pioneered a graphical desktop, mouse, Ethernet networking, and laser printing years before those ideas reached mass-market PCs?",
+          "et": "Milline 1973. aasta uurimisarvuti teerajati graafilise töölaua, hiire, Etherneti võrgu ja laserprintimisega aastaid enne nende jõudmist tavakasutaja arvutitesse?"
         },
         "response": {
-          "en": "endianness",
-          "et": "baidijärjestus"
+          "en": "Xerox Alto",
+          "et": "Xerox Alto"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Big-endian and little-endian systems can interpret the same byte sequence differently.",
-          "et": "Suur- ja väikejärjestusega süsteemid võivad sama baidijada erinevalt tõlgendada."
+          "en": "The Alto was developed at Xerox PARC, where its interface strongly influenced later personal-computer design.",
+          "et": "Alto töötati välja Xerox PARCis, kus selle kasutajaliides mõjutas tugevasti hilisemat personaalarvutite disaini."
         },
         "source": {
-          "sourceId": "wikipedia:endianness",
-          "title": "Endianness",
-          "url": "https://en.wikipedia.org/wiki/Endianness",
+          "sourceId": "wikipedia:xerox-alto",
+          "title": "Xerox Alto",
+          "url": "https://en.wikipedia.org/wiki/Xerox_Alto",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-069:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:error-check:parity-bit",
+        "factKey": "built-in-technology-inventions:pre-pc-milestones:hard:ibm-system-360",
         "tier": 5,
-        "subjectKey": "error-check:parity-bit",
+        "subjectKey": "computer:ibm-system-360",
         "clue": {
-          "en": "Which extra bit detects any odd number of flipped bits in a data word?",
-          "et": "Milline lisabitt tuvastab andmesõnas paaritu arvu muutunud bitte?"
+          "en": "Which IBM computer family was designed so programs could run across machines of different sizes, helping establish a common architecture for business computing?",
+          "et": "Milline IBMi arvutiperekond kavandati nii, et programmid saaksid töötada eri suurusega masinatel, aidates kujundada ärarvutuse ühise arhitektuuri?"
         },
         "response": {
-          "en": "parity bit",
-          "et": "paarsusbitt"
+          "en": "IBM System/360",
+          "et": "IBM System/360"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A parity bit detects simple errors but cannot identify or correct the damaged bit.",
-          "et": "Paarsusbitt tuvastab lihtsa vea, kuid ei näita ega paranda vigast bitti."
+          "en": "System/360 made compatibility across a product line a defining commercial idea, despite a costly and risky development programme.",
+          "et": "System/360 muutis tootesarjaülese ühilduvuse määravaks äriideeks, kuigi selle arendusprogramm oli kulukas ja riskantne."
         },
         "source": {
-          "sourceId": "wikipedia:parity_bit",
-          "title": "Parity bit",
-          "url": "https://en.wikipedia.org/wiki/Parity_bit",
+          "sourceId": "wikipedia:ibm-system-360",
+          "title": "IBM System/360",
+          "url": "https://en.wikipedia.org/wiki/IBM_System/360",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -14177,151 +14169,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-070",
     "name": {
-      "en": "Services Inside an Operating System",
-      "et": "Operatsioonisüsteemi siseteenused"
+      "en": "Software That Made Personal Computers Useful",
+      "et": "Tarkvara, mis tegi personaalarvutid kasulikuks"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-070:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:kernel",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:visicalc",
         "tier": 1,
-        "subjectKey": "component:kernel",
+        "subjectKey": "software:visicalc",
         "clue": {
-          "en": "Which privileged core manages hardware, memory, and processes for an operating system?",
-          "et": "Milline privilegeeritud põhiosa haldab operatsioonisüsteemi riistvara, mälu ja protsesse?"
+          "en": "What 1979 spreadsheet is often credited with turning the Apple II into a serious business machine?",
+          "et": "Millist 1979. aasta tabelarvutusprogrammi peetakse sageli Apple II muutmisel tõsiseks ärimasinaks?"
         },
         "response": {
-          "en": "kernel",
-          "et": "tuum"
+          "en": "VisiCalc",
+          "et": "VisiCalc"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The kernel mediates access to resources and handles interrupts and system calls.",
-          "et": "Tuum vahendab juurdepääsu ressurssidele ning teenindab katkestusi ja süsteemikutseid."
+          "en": "VisiCalc let users recalculate linked financial figures on a personal computer, creating demand for the Apple II in offices.",
+          "et": "VisiCalc võimaldas personaalarvutis omavahel seotud finantsarve ümber arvutada ja tekitas Apple II järele kontorites nõudluse."
         },
         "source": {
-          "sourceId": "wikipedia:kernel_(operating_system)",
-          "title": "Kernel (operating system)",
-          "url": "https://en.wikipedia.org/wiki/Kernel_(operating_system)",
+          "sourceId": "wikipedia:visicalc",
+          "title": "VisiCalc",
+          "url": "https://en.wikipedia.org/wiki/VisiCalc",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-070:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:scheduler",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:lotus-1-2-3",
         "tier": 2,
-        "subjectKey": "component:scheduler",
+        "subjectKey": "software:lotus-1-2-3",
         "clue": {
-          "en": "What OS component decides which runnable task receives processor time next?",
-          "et": "Milline operatsioonisüsteemi osa otsustab, milline valmis ülesanne saab järgmisena protsessoriaega?"
+          "en": "Which DOS business program combined spreadsheet, charting, and database functions in its deliberately memorable name?",
+          "et": "Milline DOSi äriprogramm ühendas tabelarvutuse, diagrammid ja andmebaasifunktsioonid oma teadlikult meeldejäävas nimes?"
         },
         "response": {
-          "en": "scheduler",
-          "et": "plaanur"
+          "en": "Lotus 1-2-3",
+          "et": "Lotus 1-2-3"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A scheduler balances responsiveness, throughput, and fairness among competing tasks.",
-          "et": "Plaanur tasakaalustab konkureerivate ülesannete reageerimiskiirust, läbilaset ja õiglust."
+          "en": "Lotus 1-2-3 became the leading spreadsheet package for IBM-compatible PCs during the 1980s.",
+          "et": "Lotus 1-2-3 sai 1980. aastatel IBMi ühilduvate personaalarvutite juhtivaks tabelarvutusprogrammiks."
         },
         "source": {
-          "sourceId": "wikipedia:scheduling_(computing)",
-          "title": "Scheduling (computing)",
-          "url": "https://en.wikipedia.org/wiki/Scheduling_(computing)",
+          "sourceId": "wikipedia:lotus-1-2-3",
+          "title": "Lotus 1-2-3",
+          "url": "https://en.wikipedia.org/wiki/Lotus_1-2-3",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-070:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:virtual-memory",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:wordstar",
         "tier": 3,
-        "subjectKey": "concept:virtual-memory",
+        "subjectKey": "software:wordstar",
         "clue": {
-          "en": "Which abstraction gives each process its own address space and can page data to storage?",
-          "et": "Milline abstraktsioon annab igale protsessile oma aadressiruumi ning võib andmeid kettale saalida?"
+          "en": "Which early word processor became a favourite of writers and journalists on CP/M and DOS machines?",
+          "et": "Milline varane tekstitöötlusprogramm sai kirjanike ja ajakirjanike lemmikuks CP/Mi ja DOSi arvutites?"
         },
         "response": {
-          "en": "virtual memory",
-          "et": "virtuaalmälu"
+          "en": "WordStar",
+          "et": "WordStar"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Virtual memory maps program addresses to physical frames through page tables.",
-          "et": "Virtuaalmälu seob programmi aadressid leheküljetabelite kaudu füüsiliste mälukaadritega."
+          "en": "WordStar’s keyboard commands made it an influential writing tool before graphical word processors became standard.",
+          "et": "WordStari kiirklahvid tegid sellest mõjuka kirjutamisvahendi enne, kui graafilised tekstitöötlusprogrammid said tavaliseks."
         },
         "source": {
-          "sourceId": "wikipedia:virtual_memory",
-          "title": "Virtual memory",
-          "url": "https://en.wikipedia.org/wiki/Virtual_memory",
+          "sourceId": "wikipedia:wordstar",
+          "title": "WordStar",
+          "url": "https://en.wikipedia.org/wiki/WordStar",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-070:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:interface:system-call",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:mosaic-web-browser",
         "tier": 4,
-        "subjectKey": "interface:system-call",
+        "subjectKey": "software:mosaic-web-browser",
         "clue": {
-          "en": "How does a user program formally request a protected service from the kernel?",
-          "et": "Kuidas nimetatakse kasutajaprogrammi ametlikku taotlust tuuma kaitstud teenuse kasutamiseks?"
+          "en": "Which University of Illinois browser helped popularise the World Wide Web by showing text and images together in a window?",
+          "et": "Milline Illinoisi ülikoolis loodud veebilehitseja aitas muuta veebi populaarseks, näidates aknas koos teksti ja pilte?"
         },
         "response": {
-          "en": "system call",
-          "et": "süsteemikutse"
+          "en": "Mosaic",
+          "et": "Mosaic"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A system call crosses the boundary from unprivileged code into kernel mode.",
-          "et": "Süsteemikutse ületab piiri privilegeerimata koodist tuumarežiimi."
+          "en": "Mosaic’s accessible graphical interface helped carry the web beyond specialist academic users in the early 1990s.",
+          "et": "Mosaici ligipääsetav graafiline kasutajaliides aitas 1990. aastate algul tuua veebi välja akadeemiliste spetsialistide ringist."
         },
         "source": {
-          "sourceId": "wikipedia:system_call",
-          "title": "System call",
-          "url": "https://en.wikipedia.org/wiki/System_call",
+          "sourceId": "wikipedia:mosaic-web-browser",
+          "title": "Mosaic (web browser)",
+          "url": "https://en.wikipedia.org/wiki/Mosaic_(web_browser)",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-070:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:process",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:netscape-navigator",
         "tier": 5,
-        "subjectKey": "concept:process",
+        "subjectKey": "software:netscape-navigator",
         "clue": {
-          "en": "What is a running program together with its memory and execution state called?",
-          "et": "Kuidas nimetatakse töötavat programmi koos selle mälu ja täitmisolekuga?"
+          "en": "Which commercial browser became the emblem of the 1990s web boom and triggered the first browser war with Microsoft?",
+          "et": "Milline kommertsveebilehitseja sai 1990. aastate veebibuumi sümboliks ja käivitas Microsoftiga esimese brauserisõja?"
         },
         "response": {
-          "en": "process",
-          "et": "protsess"
+          "en": "Netscape Navigator",
+          "et": "Netscape Navigator"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A process may contain several threads that share its resources.",
-          "et": "Protsess võib sisaldada mitut lõime, mis jagavad selle ressursse."
+          "en": "Netscape Navigator rapidly gained web-browser market share before Internet Explorer displaced it in the late 1990s.",
+          "et": "Netscape Navigator saavutas kiiresti veebilehitsejate turuosa, enne kui Internet Explorer selle 1990. aastate lõpul tõrjus."
         },
         "source": {
-          "sourceId": "wikipedia:process_(computing)",
-          "title": "Process (computing)",
-          "url": "https://en.wikipedia.org/wiki/Process_(computing)",
+          "sourceId": "wikipedia:netscape-navigator",
+          "title": "Netscape Navigator",
+          "url": "https://en.wikipedia.org/wiki/Netscape_Navigator",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14331,155 +14323,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-071",
     "name": {
-      "en": "What Happens after Source Code",
-      "et": "Mis juhtub pärast lähtekoodi"
+      "en": "The Internet Before Social Media",
+      "et": "Internet enne sotsiaalmeediat"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-071:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:tool:linker",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:bulletin-board-system",
         "tier": 1,
-        "subjectKey": "tool:linker",
+        "subjectKey": "service:bulletin-board-system",
         "clue": {
-          "en": "Which tool combines object files and resolves references into an executable?",
-          "et": "Milline tööriist ühendab objektfailid ning lahendab viited täitmisfailiks?"
+          "en": "What was the name for an early online community that users typically reached by dialling directly into one computer?",
+          "et": "Kuidas nimetati varast veebikogukonda, kuhu kasutajad jõudsid tavaliselt modemi kaudu otse ühte arvutisse helistades?"
         },
         "response": {
-          "en": "linker",
-          "et": "linkur"
+          "en": "bulletin board system",
+          "et": "teadetetahvlisüsteem"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A linker can also attach shared libraries and relocate code to final addresses.",
-          "et": "Linkur võib lisada jagatud teeke ning paigutada koodi lõplikesse aadressidesse."
+          "en": "Bulletin board systems, usually called BBSes, let callers exchange messages and files before the web became widespread.",
+          "et": "Teadetetahvlisüsteemid ehk BBSid võimaldasid helistajatel sõnumeid ja faile vahetada enne veebi laialdast levikut."
         },
         "source": {
-          "sourceId": "wikipedia:linker_(computing)",
-          "title": "Linker (computing)",
-          "url": "https://en.wikipedia.org/wiki/Linker_(computing)",
+          "sourceId": "wikipedia:bulletin-board-system",
+          "title": "Bulletin board system",
+          "url": "https://en.wikipedia.org/wiki/Bulletin_board_system",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:tool:debugger",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:usenet",
         "tier": 2,
-        "subjectKey": "tool:debugger",
+        "subjectKey": "service:usenet",
         "clue": {
-          "en": "Which tool pauses a program at breakpoints and inspects its state?",
-          "et": "Milline tööriist peatab programmi katkestuspunktis ning uurib selle olekut?"
+          "en": "Which distributed discussion network organised conversations into newsgroups and predated the World Wide Web?",
+          "et": "Milline hajutatud aruteluvõrk korraldas vestlusi uudisgruppides ja eelnes veebile?"
         },
         "response": {
-          "en": "debugger",
-          "et": "silur"
+          "en": "Usenet",
+          "et": "Usenet"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A debugger supports stepping, stack inspection, and controlled changes to variables.",
-          "et": "Silur võimaldab sammhaaval täita, pinu uurida ja muutujaid kontrollitult muuta."
+          "en": "Usenet passed articles between servers, creating public discussion groups that influenced later online forums.",
+          "et": "Usenet edastas artikleid serverite vahel ning lõi avalikud arutelurühmad, mis mõjutasid hilisemaid veebifoorumeid."
         },
         "source": {
-          "sourceId": "wikipedia:debugger",
-          "title": "Debugger",
-          "url": "https://en.wikipedia.org/wiki/Debugger",
+          "sourceId": "wikipedia:usenet",
+          "title": "Usenet",
+          "url": "https://en.wikipedia.org/wiki/Usenet",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:compiler:just-in-time",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:geocities",
         "tier": 3,
-        "subjectKey": "compiler:just-in-time",
+        "subjectKey": "service:geocities",
         "clue": {
-          "en": "Which strategy compiles code during execution using information about actual workloads?",
-          "et": "Milline strateegia kompileerib koodi täitmise ajal, kasutades tegeliku koormuse teavet?"
+          "en": "Which free web-hosting service grouped personal home pages into themed online “neighbourhoods” in the 1990s?",
+          "et": "Milline tasuta veebimajutusteenus rühmitas 1990. aastatel isiklikke kodulehti teemakohastesse veebinaabruskondadesse?"
         },
         "response": {
-          "en": "just-in-time compilation",
-          "et": "jooksevkompileerimine"
+          "en": "GeoCities",
+          "et": "GeoCities"
         },
         "acceptedVariants": {
-          "en": [
-            "JIT compilation"
-          ],
-          "et": [
-            "JIT-kompileerimine"
-          ]
+          "en": ["Geo Cities"],
+          "et": ["Geo Cities"]
         },
         "explanation": {
-          "en": "JIT compilers can optimise hot paths while retaining a portable intermediate form.",
-          "et": "JIT-kompilaator saab optimeerida sageli kasutatavaid radu, säilitades teisaldatava vahekuju."
+          "en": "GeoCities gave non-specialists tools and space to publish personal pages, before it was closed in 2009.",
+          "et": "GeoCities andis mittespetsialistidele vahendid ja ruumi isiklike kodulehtede avaldamiseks, enne kui teenus 2009. aastal suleti."
         },
         "source": {
-          "sourceId": "wikipedia:just-in-time_compilation",
-          "title": "Just-in-time compilation",
-          "url": "https://en.wikipedia.org/wiki/Just-in-time_compilation",
+          "sourceId": "wikipedia:geocities",
+          "title": "GeoCities",
+          "url": "https://en.wikipedia.org/wiki/GeoCities",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:code:bytecode",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:icq",
         "tier": 4,
-        "subjectKey": "code:bytecode",
+        "subjectKey": "service:icq",
         "clue": {
-          "en": "What portable intermediate instruction form is executed by many virtual machines?",
-          "et": "Millist teisaldatavat vahekäsustikku täidavad paljud virtuaalmasinad?"
+          "en": "Which 1990s instant-messaging service took its name from the phrase “I seek you”?",
+          "et": "Milline 1990. aastate kiirsõnumiteenus sai oma nime fraasist „I seek you“?"
         },
         "response": {
-          "en": "bytecode",
-          "et": "baitkood"
+          "en": "ICQ",
+          "et": "ICQ"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Bytecode sits between source text and a specific processor’s native machine code.",
-          "et": "Baitkood paikneb lähtekoodi ja konkreetse protsessori masinakoodi vahel."
+          "en": "ICQ popularised presence indicators and direct online messaging for a large international audience.",
+          "et": "ICQ populariseeris kohalolekunäitajaid ja otsesõnumite saatmist suure rahvusvahelise kasutajaskonna seas."
         },
         "source": {
-          "sourceId": "wikipedia:bytecode",
-          "title": "Bytecode",
-          "url": "https://en.wikipedia.org/wiki/Bytecode",
+          "sourceId": "wikipedia:icq",
+          "title": "ICQ",
+          "url": "https://en.wikipedia.org/wiki/ICQ",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:process:garbage-collection",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:napster",
         "tier": 5,
-        "subjectKey": "process:garbage-collection",
+        "subjectKey": "service:napster",
         "clue": {
-          "en": "Which runtime process reclaims memory occupied by objects no longer reachable?",
-          "et": "Milline käitusprotsess vabastab mälu objektidelt, milleni programm enam ei ulatu?"
+          "en": "Which peer-to-peer music-sharing service became a legal flashpoint around copyright at the turn of the millennium?",
+          "et": "Milline võrdõiguslik muusikajagamisteenus sai aastatuhande vahetusel autoriõiguse kohtuvaidluste keskpunktiks?"
         },
         "response": {
-          "en": "garbage collection",
-          "et": "prügikoristus"
+          "en": "Napster",
+          "et": "Napster"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Garbage collection reduces manual deallocation errors but introduces runtime work.",
-          "et": "Prügikoristus vähendab käsitsi vabastamise vigu, kuid lisab täitmisajal tööd."
+          "en": "Napster connected users who shared music files directly and its lawsuits helped shape later digital-music services.",
+          "et": "Napster ühendas kasutajaid, kes jagasid muusikafaile otse, ning selle kohtuasjad aitasid kujundada hilisemaid digimuusikateenuseid."
         },
         "source": {
-          "sourceId": "wikipedia:garbage_collection_(computer_science)",
-          "title": "Garbage collection (computer science)",
-          "url": "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)",
+          "sourceId": "wikipedia:napster",
+          "title": "Napster",
+          "url": "https://en.wikipedia.org/wiki/Napster",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14489,167 +14477,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-072",
     "name": {
-      "en": "Rules the Browser Applies",
-      "et": "Reeglid, mida brauser rakendab"
+      "en": "Cameras and Processes That Changed Photography",
+      "et": "Kaamerad ja protsessid, mis muutsid fotograafiat"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-072:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:model:document-object-model",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:daguerreotype",
         "tier": 1,
-        "subjectKey": "model:document-object-model",
+        "subjectKey": "process:daguerreotype",
         "clue": {
-          "en": "Which tree-like programming interface represents an HTML document in memory?",
-          "et": "Milline puukujuline programmiliides esitab HTML-dokumenti mälus?"
+          "en": "Which early photographic process produced a unique image on a polished silver-plated copper sheet?",
+          "et": "Milline varane fotoprotsess tekitas ainulaadse kujutise poleeritud hõbetatud vaskplaadil?"
         },
         "response": {
-          "en": "Document Object Model",
-          "et": "dokumendiobjektide mudel"
-        },
-        "acceptedVariants": {
-          "en": [
-            "DOM"
-          ],
-          "et": [
-            "DOM"
-          ]
-        },
-        "explanation": {
-          "en": "The DOM lets scripts inspect and change document nodes, attributes, and events.",
-          "et": "DOM laseb skriptil uurida ja muuta dokumendisõlmi, atribuute ning sündmusi."
-        },
-        "source": {
-          "sourceId": "wikipedia:document_object_model",
-          "title": "Document Object Model",
-          "url": "https://en.wikipedia.org/wiki/Document_Object_Model",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:mime-type",
-        "tier": 2,
-        "subjectKey": "standard:mime-type",
-        "clue": {
-          "en": "Which HTTP label tells a client whether content is HTML, JSON, an image, or another format?",
-          "et": "Milline HTTP-märgend ütleb kliendile, kas sisu on HTML, JSON, pilt või muu vorming?"
-        },
-        "response": {
-          "en": "media type",
-          "et": "meediatüüp"
-        },
-        "acceptedVariants": {
-          "en": [
-            "MIME type"
-          ],
-          "et": [
-            "MIME-tüüp"
-          ]
-        },
-        "explanation": {
-          "en": "Media types use a type/subtype form such as text/html or image/png.",
-          "et": "Meediatüübid kasutavad kuju tüüp/alamtüüp, näiteks text/html või image/png."
-        },
-        "source": {
-          "sourceId": "wikipedia:media_type",
-          "title": "Media type",
-          "url": "https://en.wikipedia.org/wiki/Media_type",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:data:http-cookie",
-        "tier": 3,
-        "subjectKey": "data:http-cookie",
-        "clue": {
-          "en": "What small browser-held value lets a website maintain a session across requests?",
-          "et": "Milline brauseris hoitav väike väärtus laseb veebisaidil päringute vahel seanssi säilitada?"
-        },
-        "response": {
-          "en": "HTTP cookie",
-          "et": "HTTP-küpsis"
-        },
-        "acceptedVariants": {
-          "en": [
-            "cookie"
-          ],
-          "et": [
-            "küpsis"
-          ]
-        },
-        "explanation": {
-          "en": "Cookies are sent with matching requests and can carry security and expiry attributes.",
-          "et": "Küpsised saadetakse sobivate päringutega ning neil võivad olla turbe- ja aegumisatribuudid."
-        },
-        "source": {
-          "sourceId": "wikipedia:http_cookie",
-          "title": "HTTP cookie",
-          "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:policy:cross-origin-resource-sharing",
-        "tier": 4,
-        "subjectKey": "policy:cross-origin-resource-sharing",
-        "clue": {
-          "en": "Which header-based mechanism lets a server permit selected requests from another origin?",
-          "et": "Milline päisepõhine mehhanism lubab serveril valida teisest päritolust tulevaid päringuid?"
-        },
-        "response": {
-          "en": "Cross-Origin Resource Sharing",
-          "et": "ristpäritolu ressursijagamine"
-        },
-        "acceptedVariants": {
-          "en": [
-            "CORS"
-          ],
-          "et": [
-            "CORS"
-          ]
-        },
-        "explanation": {
-          "en": "CORS relaxes the browser’s same-origin policy only where the server explicitly allows it.",
-          "et": "CORS lõdvendab brauseri sama päritolu reeglit ainult serveri selgesõnalisel loal."
-        },
-        "source": {
-          "sourceId": "wikipedia:cross-origin_resource_sharing",
-          "title": "Cross-origin resource sharing",
-          "url": "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:responsive-web-design",
-        "tier": 5,
-        "subjectKey": "concept:responsive-web-design",
-        "clue": {
-          "en": "Which design approach adapts page layout to different screen widths?",
-          "et": "Milline disainiviis kohandab lehe paigutuse eri ekraanilaiustele?"
-        },
-        "response": {
-          "en": "responsive web design",
-          "et": "kohanduv veebidisain"
+          "en": "daguerreotype",
+          "et": "dagerrotüüp"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Responsive design combines fluid grids, flexible media, and CSS media queries.",
-          "et": "Kohanduv veebidisain ühendab paindliku ruudustiku, meedia ja CSS-i meediapäringud."
+          "en": "Louis Daguerre’s process was publicly announced in 1839 and made detailed photographic portraits possible.",
+          "et": "Louis Daguerre’i protsess avalikustati 1839. aastal ning see võimaldas teha detailseid portreefotosid."
         },
         "source": {
-          "sourceId": "wikipedia:responsive_web_design",
-          "title": "Responsive web design",
-          "url": "https://en.wikipedia.org/wiki/Responsive_web_design",
+          "sourceId": "wikipedia:daguerreotype",
+          "title": "Daguerreotype",
+          "url": "https://en.wikipedia.org/wiki/Daguerreotype",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:2",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:dry-plate",
+        "tier": 2,
+        "subjectKey": "process:dry-plate",
+        "clue": {
+          "en": "What photographic innovation replaced wet plates with factory-made light-sensitive glass plates that could be used later?",
+          "et": "Milline fototehniline uuendus asendas märgplaadid tehases valmistatud valgustundlike klaasplaatidega, mida sai kasutada hiljem?"
+        },
+        "response": {
+          "en": "dry plate",
+          "et": "kuivplaat"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Dry plates made cameras more portable because photographers no longer had to prepare and develop a plate while it was still wet.",
+          "et": "Kuivplaadid muutsid kaamerad kaasaskantavamaks, sest fotograaf ei pidanud plaati valmistama ja ilmutama veel märjana."
+        },
+        "source": {
+          "sourceId": "wikipedia:dry-plate",
+          "title": "Dry plate",
+          "url": "https://en.wikipedia.org/wiki/Dry_plate",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:3",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:kodak-brownie",
+        "tier": 3,
+        "subjectKey": "camera:kodak-brownie",
+        "clue": {
+          "en": "Which inexpensive Kodak camera, introduced in 1900, popularised casual snapshot photography with roll film?",
+          "et": "Milline 1900. aastal kasutusele võetud odav Kodaki kaamera populariseeris rullfilmiga argist hetkpildistamist?"
+        },
+        "response": {
+          "en": "Brownie camera",
+          "et": "Brownie kaamera"
+        },
+        "acceptedVariants": {
+          "en": ["Kodak Brownie"],
+          "et": ["Kodak Brownie"]
+        },
+        "explanation": {
+          "en": "The Brownie was simple and cheap enough to bring photography to a mass market rather than trained professionals alone.",
+          "et": "Brownie oli piisavalt lihtne ja odav, et tuua fotograafia massiturule, mitte ainult väljaõppinud professionaalidele."
+        },
+        "source": {
+          "sourceId": "wikipedia:brownie-camera",
+          "title": "Brownie (camera)",
+          "url": "https://en.wikipedia.org/wiki/Brownie_(camera)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:4",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:leica-i",
+        "tier": 4,
+        "subjectKey": "camera:leica-i",
+        "clue": {
+          "en": "Which 1920s German camera helped establish 35 mm film as a serious format for compact still photography?",
+          "et": "Milline 1920. aastate Saksa kaamera aitas muuta 35 mm filmi kompaktse fotokaamera tõsiseks standardiks?"
+        },
+        "response": {
+          "en": "Leica I",
+          "et": "Leica I"
+        },
+        "acceptedVariants": {
+          "en": ["Leica 1"],
+          "et": ["Leica 1"]
+        },
+        "explanation": {
+          "en": "The Leica I developed from Oskar Barnack’s small-format design and encouraged portable, candid photography.",
+          "et": "Leica I arenes Oskar Barnacki väikeformaadilisest kavandist ja soodustas kaasaskantavat ning spontaanset fotograafiat."
+        },
+        "source": {
+          "sourceId": "wikipedia:leica-camera",
+          "title": "Leica Camera",
+          "url": "https://en.wikipedia.org/wiki/Leica_Camera",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:5",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:kodachrome",
+        "tier": 5,
+        "subjectKey": "film:kodachrome",
+        "clue": {
+          "en": "Which colour reversal film became famous for its richly saturated slides and was celebrated in a Paul Simon song?",
+          "et": "Milline värviline pöördfilm sai tuntuks oma küllastunud slaidide poolest ja jõudis Paul Simoni laulu pealkirja?"
+        },
+        "response": {
+          "en": "Kodachrome",
+          "et": "Kodachrome"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Kodachrome was a subtractive colour-reversal process whose distinctive look made it an important film stock for decades.",
+          "et": "Kodachrome oli subtraktiivne värviline pöördprotsess, mille iseloomulik välimus tegi sellest aastakümneteks tähtsa filmimaterjali."
+        },
+        "source": {
+          "sourceId": "wikipedia:kodachrome",
+          "title": "Kodachrome",
+          "url": "https://en.wikipedia.org/wiki/Kodachrome",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14659,151 +14631,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-073",
     "name": {
-      "en": "Protocols behind Local and Global Networks",
-      "et": "Kohaliku ja globaalse võrgu protokollid"
+      "en": "Machines That Took Humans Underwater",
+      "et": "Masinad, mis viisid inimesed vee alla"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-073:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:protocol:udp",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:bathyscaphe-trieste",
         "tier": 1,
-        "subjectKey": "protocol:udp",
+        "subjectKey": "submersible:bathyscaphe-trieste",
         "clue": {
-          "en": "Which transport protocol sends datagrams without establishing a reliable connection?",
-          "et": "Milline transpordiprotokoll saadab datagramme usaldusväärset ühendust loomata?"
+          "en": "Which bathyscaphe carried Jacques Piccard and Don Walsh to the deepest known part of the ocean in 1960?",
+          "et": "Milline batüskaaf viis Jacques Piccardi ja Don Walshi 1960. aastal ookeani sügavaimasse teadaolevasse piirkonda?"
         },
         "response": {
-          "en": "UDP",
-          "et": "UDP"
+          "en": "Bathyscaphe Trieste",
+          "et": "batüskaaf Trieste"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "UDP avoids retransmission and ordering overhead, suiting time-sensitive traffic.",
-          "et": "UDP väldib kordussaatmise ja järjestamise kulu ning sobib ajatundlikule liiklusele."
+          "en": "Trieste reached Challenger Deep in the Mariana Trench, demonstrating that people could descend to the ocean’s greatest depth.",
+          "et": "Trieste jõudis Mariaani süvikus Challengeri sügavikku, näidates, et inimesed võivad laskuda ookeani suurimasse sügavusse."
         },
         "source": {
-          "sourceId": "wikipedia:user_datagram_protocol",
-          "title": "User Datagram Protocol",
-          "url": "https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+          "sourceId": "wikipedia:trieste-bathyscaphe",
+          "title": "Trieste (bathyscaphe)",
+          "url": "https://en.wikipedia.org/wiki/Trieste_(bathyscaphe)",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-073:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:protocol:dhcp",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:dsv-alvin",
         "tier": 2,
-        "subjectKey": "protocol:dhcp",
+        "subjectKey": "submersible:dsv-alvin",
         "clue": {
-          "en": "Which protocol automatically assigns IP configuration to a newly connected device?",
-          "et": "Milline protokoll annab äsja ühendatud seadmele automaatselt IP-seadistuse?"
+          "en": "Which US research submersible became famous for exploring hydrothermal vents and visiting the wreck of Titanic?",
+          "et": "Milline USA uurimisallveesõiduk sai tuntuks hüdrotermiliste lõõride uurimise ja Titanicu vraki külastamisega?"
         },
         "response": {
-          "en": "DHCP",
-          "et": "DHCP"
+          "en": "DSV Alvin",
+          "et": "DSV Alvin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "DHCP leases addresses and can also supply gateway and DNS information.",
-          "et": "DHCP rendib aadresse ning võib anda ka lüüsi- ja DNS-teabe."
+          "en": "Alvin is a crewed deep-ocean research vehicle operated for scientific work by the Woods Hole Oceanographic Institution.",
+          "et": "Alvin on Woods Hole'i okeanograafiainstituudi teadustööks kasutatav mehitatud süvaookeani uurimisallveesõiduk."
         },
         "source": {
-          "sourceId": "wikipedia:dynamic_host_configuration_protocol",
-          "title": "Dynamic Host Configuration Protocol",
-          "url": "https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol",
+          "sourceId": "wikipedia:dsv-alvin",
+          "title": "DSV Alvin",
+          "url": "https://en.wikipedia.org/wiki/DSV_Alvin",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-073:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:protocol:arp",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:sealab",
         "tier": 3,
-        "subjectKey": "protocol:arp",
+        "subjectKey": "project:sealab",
         "clue": {
-          "en": "Which local-network protocol maps an IPv4 address to a hardware address?",
-          "et": "Milline kohaliku võrgu protokoll seob IPv4-aadressi riistvaraaadressiga?"
+          "en": "What US Navy programme tested whether divers could live and work for long periods in underwater habitats?",
+          "et": "Milline USA mereväe programm katsetas, kas sukeldujad saavad veealustes elupaikades pikalt elada ja töötada?"
         },
         "response": {
-          "en": "ARP",
-          "et": "ARP"
+          "en": "SEALAB",
+          "et": "SEALAB"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "ARP requests are broadcast on the local link and answers are cached.",
-          "et": "ARP-päring edastatakse kohalikus võrgus kõigile ning vastus salvestatakse vahemällu."
+          "en": "SEALAB placed experimental habitats on the sea floor and helped develop knowledge about saturation diving.",
+          "et": "SEALAB paigutas katselisi elupaiku merepõhja ja aitas arendada teadmisi küllastussukeldumisest."
         },
         "source": {
-          "sourceId": "wikipedia:address_resolution_protocol",
-          "title": "Address Resolution Protocol",
-          "url": "https://en.wikipedia.org/wiki/Address_Resolution_Protocol",
+          "sourceId": "wikipedia:sealab",
+          "title": "SEALAB",
+          "url": "https://en.wikipedia.org/wiki/SEALAB",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-073:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:protocol:bgp",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:aquarius-reef-base",
         "tier": 4,
-        "subjectKey": "protocol:bgp",
+        "subjectKey": "habitat:aquarius-reef-base",
         "clue": {
-          "en": "Which routing protocol exchanges reachability between autonomous systems on the Internet?",
-          "et": "Milline marsruutimisprotokoll vahetab interneti autonoomsete süsteemide vahel kättesaadavusteavet?"
+          "en": "What is the name of the underwater laboratory off Florida where aquanauts can stay for days while studying coral reefs?",
+          "et": "Mis on Florida ranniku lähedal asuva veealuse labori nimi, kus akvanaudid saavad korallriffe uurides päevi viibida?"
         },
         "response": {
-          "en": "BGP",
-          "et": "BGP"
+          "en": "Aquarius Reef Base",
+          "et": "Aquarius Reef Base"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "BGP selects policy-based paths rather than simply the physically shortest route.",
-          "et": "BGP valib poliitikapõhiseid radu, mitte lihtsalt füüsiliselt lühimat teed."
+          "en": "Aquarius is a submerged research habitat in the Florida Keys National Marine Sanctuary, used for long-duration underwater research.",
+          "et": "Aquarius on Florida Keysi merekaitsealal asuv sukeldatud uurimiselupaik, mida kasutatakse pikaajaliseks veealuseks teadustööks."
         },
         "source": {
-          "sourceId": "wikipedia:border_gateway_protocol",
-          "title": "Border Gateway Protocol",
-          "url": "https://en.wikipedia.org/wiki/Border_Gateway_Protocol",
+          "sourceId": "wikipedia:aquarius-reef-base",
+          "title": "Aquarius Reef Base",
+          "url": "https://en.wikipedia.org/wiki/Aquarius_Reef_Base",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-073:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:protocol:tls",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:deepsea-challenger",
         "tier": 5,
-        "subjectKey": "protocol:tls",
+        "subjectKey": "submersible:deepsea-challenger",
         "clue": {
-          "en": "Which protocol authenticates and encrypts many modern Internet connections?",
-          "et": "Milline protokoll autendib ja krüpteerib paljusid tänapäevaseid internetiühendusi?"
+          "en": "What one-person submersible did filmmaker James Cameron pilot alone to Challenger Deep in 2012?",
+          "et": "Millise ühe inimese uurimisallveesõidukiga laskus filmitegija James Cameron 2012. aastal üksinda Challengeri sügavikku?"
         },
         "response": {
-          "en": "TLS",
-          "et": "TLS"
+          "en": "Deepsea Challenger",
+          "et": "Deepsea Challenger"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "TLS underlies HTTPS and negotiates keys before protected application data flows.",
-          "et": "TLS on HTTPS-i alus ning lepib võtmed kokku enne kaitstud rakendusandmete liikumist."
+          "en": "Deepsea Challenger was built for an extremely deep solo dive and collected scientific samples and images from Challenger Deep.",
+          "et": "Deepsea Challenger ehitati ülisügavaks üksiksukeldumiseks ning kogus Challengeri sügavikust teadusproove ja pilte."
         },
         "source": {
-          "sourceId": "wikipedia:transport_layer_security",
-          "title": "Transport Layer Security",
-          "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+          "sourceId": "wikipedia:deepsea-challenger",
+          "title": "Deepsea Challenger",
+          "url": "https://en.wikipedia.org/wiki/Deepsea_Challenger",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14813,155 +14785,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-074",
     "name": {
-      "en": "Specialised Network Components",
-      "et": "Võrgu eriülesannetega komponendid"
+      "en": "Civil Engineering on a Grand Scale",
+      "et": "Suuremõõtmeline ehitusinseneeria"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-074:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:device:network-bridge",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:panama-canal-locks",
         "tier": 1,
-        "subjectKey": "device:network-bridge",
+        "subjectKey": "structure:panama-canal-locks",
         "clue": {
-          "en": "Which link-layer device joins network segments and forwards frames by MAC address?",
-          "et": "Milline ühenduskihi seade liidab võrgusegmendid ning edastab kaadreid MAC-aadressi järgi?"
+          "en": "What engineering system raises and lowers ships between sea level and Gatun Lake as they cross Panama?",
+          "et": "Milline insenerisüsteem tõstab ja langetab laevu merepinna ja Gatuni järve vahel Panama läbimisel?"
         },
         "response": {
-          "en": "network bridge",
-          "et": "võrgusild"
+          "en": "Panama Canal locks",
+          "et": "Panama kanali lüüsid"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A bridge learns which addresses lie behind each port and filters unnecessary traffic.",
-          "et": "Võrgusild õpib, millised aadressid asuvad iga pordi taga, ning filtreerib tarbetut liiklust."
+          "en": "The canal’s lock chambers use gravity-fed water to lift ships over the continental divide and lower them again.",
+          "et": "Kanali lüüsikambrid kasutavad raskusjõul voolavat vett, et tõsta laevad üle mandriveelahe ja need taas alla lasta."
         },
         "source": {
-          "sourceId": "wikipedia:network_bridge",
-          "title": "Network bridge",
-          "url": "https://en.wikipedia.org/wiki/Network_bridge",
+          "sourceId": "wikipedia:panama-canal-locks",
+          "title": "Panama Canal locks",
+          "url": "https://en.wikipedia.org/wiki/Panama_Canal_locks",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-074:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:device:repeater",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:three-gorges-dam",
         "tier": 2,
-        "subjectKey": "device:repeater",
+        "subjectKey": "structure:three-gorges-dam",
         "clue": {
-          "en": "Which physical-layer device regenerates a weakened signal to extend its reach?",
-          "et": "Milline füüsilise kihi seade taastab nõrgenenud signaali, et selle levi pikendada?"
+          "en": "Which dam on China’s Yangtze River combines flood control, navigation locks, and one of the world’s largest hydroelectric stations?",
+          "et": "Milline Hiina Jangtse jõel asuv tamm ühendab üleujutuste ohjamise, laevalüüsid ja ühe maailma suurima hüdroelektrijaama?"
         },
         "response": {
-          "en": "repeater",
-          "et": "repiiter"
+          "en": "Three Gorges Dam",
+          "et": "Kolme Kuristiku tamm"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A repeater does not interpret packet addresses; it repeats the signal itself.",
-          "et": "Repiiter ei tõlgenda paketi aadresse, vaid kordab signaali ennast."
+          "en": "The Three Gorges Dam spans the Yangtze and includes a major hydroelectric power station and ship-lock system.",
+          "et": "Kolme Kuristiku tamm ulatub üle Jangtse ning hõlmab suurt hüdroelektrijaama ja laevalüüside süsteemi."
         },
         "source": {
-          "sourceId": "wikipedia:repeater",
-          "title": "Repeater",
-          "url": "https://en.wikipedia.org/wiki/Repeater",
+          "sourceId": "wikipedia:three-gorges-dam",
+          "title": "Three Gorges Dam",
+          "url": "https://en.wikipedia.org/wiki/Three_Gorges_Dam",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-074:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:protocol-gateway",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:akashi-kaikyo-bridge",
         "tier": 3,
-        "subjectKey": "device:protocol-gateway",
+        "subjectKey": "structure:akashi-kaikyo-bridge",
         "clue": {
-          "en": "Which device translates between systems that use different communication protocols?",
-          "et": "Milline seade tõlgib eri sideprotokolle kasutavate süsteemide vahel?"
+          "en": "Which Japanese suspension bridge links Kobe to Awaji Island and is celebrated for its exceptionally long main span?",
+          "et": "Milline Jaapani rippsild ühendab Kobe Awaji saarega ja on tuntud erakordselt pika peavahe tõttu?"
         },
         "response": {
-          "en": "protocol gateway",
-          "et": "protokollilüüs"
+          "en": "Akashi Kaikyō Bridge",
+          "et": "Akashi Kaikyō sild"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A protocol gateway can transform addressing, message format, and control conventions.",
-          "et": "Protokollilüüs võib muuta adresseerimist, sõnumivormingut ja juhtimisreegleid."
+          "en": "The bridge crosses the Akashi Strait, a route exposed to strong winds, tides, and earthquakes.",
+          "et": "Sild ületab Akashi väina, kus tuleb arvestada tugeva tuule, hoovuste ja maavärinatega."
         },
         "source": {
-          "sourceId": "wikipedia:gateway_(telecommunications)",
-          "title": "Gateway (telecommunications)",
-          "url": "https://en.wikipedia.org/wiki/Gateway_(telecommunications)",
+          "sourceId": "wikipedia:akashi-kaikyo-bridge",
+          "title": "Akashi Kaikyō Bridge",
+          "url": "https://en.wikipedia.org/wiki/Akashi_Kaikyo_Bridge",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-074:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:device:load-balancer",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:millau-viaduct",
         "tier": 4,
-        "subjectKey": "device:load-balancer",
+        "subjectKey": "structure:millau-viaduct",
         "clue": {
-          "en": "Which component distributes client requests among several backend servers?",
-          "et": "Milline komponent jagab kliendipäringud mitme tagaserveri vahel?"
+          "en": "Which cable-stayed viaduct carries a motorway high above the Tarn valley in southern France?",
+          "et": "Milline vantsildviadukt viib kiirtee kõrgel üle Tami jõe oru Lõuna-Prantsusmaal?"
         },
         "response": {
-          "en": "load balancer",
-          "et": "koormusjaotur"
+          "en": "Millau Viaduct",
+          "et": "Millau viadukt"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A load balancer improves capacity and can remove unhealthy servers from rotation.",
-          "et": "Koormusjaotur suurendab läbilaset ning võib rikkis serveri jaotusest eemaldada."
+          "en": "The Millau Viaduct’s tall masts and slender deck were designed to cross the valley while limiting the motorway’s descent and climb.",
+          "et": "Millau viadukti kõrged mastid ja sale teekate kavandati oru ületamiseks nii, et kiirtee laskumine ja tõus jääksid väikseks."
         },
         "source": {
-          "sourceId": "wikipedia:load_balancing_(computing)",
-          "title": "Load balancing (computing)",
-          "url": "https://en.wikipedia.org/wiki/Load_balancing_(computing)",
+          "sourceId": "wikipedia:millau-viaduct",
+          "title": "Millau Viaduct",
+          "url": "https://en.wikipedia.org/wiki/Millau_Viaduct",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-074:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:component:network-interface-controller",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:laerdal-tunnel",
         "tier": 5,
-        "subjectKey": "component:network-interface-controller",
+        "subjectKey": "structure:laerdal-tunnel",
         "clue": {
-          "en": "Which computer component provides the hardware interface to Ethernet or another network?",
-          "et": "Milline arvutikomponent annab riistvaraliidese Etherneti või muu võrguga?"
+          "en": "Which Norwegian road tunnel uses illuminated caverns to break up a long underground drive between Lærdal and Aurland?",
+          "et": "Milline Norra maanteetunnel kasutab valgustatud koopaid, et liigend anda pikk maa-alune sõit Lærdali ja Aurlandi vahel?"
         },
         "response": {
-          "en": "network interface controller",
-          "et": "võrgukaart"
+          "en": "Lærdal Tunnel",
+          "et": "Lærdali tunnel"
         },
         "acceptedVariants": {
-          "en": [
-            "NIC"
-          ],
-          "et": [
-            "NIC"
-          ]
+          "en": ["Laerdal Tunnel"],
+          "et": ["Laerdali tunnel"]
         },
         "explanation": {
-          "en": "A NIC commonly owns a link-layer address and moves frames between host and medium.",
-          "et": "Võrgukaardil on tavaliselt ühenduskihi aadress ning see liigutab kaadreid arvuti ja meediumi vahel."
+          "en": "The Lærdal Tunnel was designed with large, lit caverns to reduce monotony and help drivers stay alert on the long journey.",
+          "et": "Lærdali tunnelisse kavandati suured valgustatud koopad, et vähendada üksluisust ja aidata juhil pikal teekonnal erksana püsida."
         },
         "source": {
-          "sourceId": "wikipedia:network_interface_controller",
-          "title": "Network interface controller",
-          "url": "https://en.wikipedia.org/wiki/Network_interface_controller",
+          "sourceId": "wikipedia:laerdal-tunnel",
+          "title": "Lærdal Tunnel",
+          "url": "https://en.wikipedia.org/wiki/Lærdal_Tunnel",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14971,159 +14939,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-075",
     "name": {
-      "en": "Short and Long Wireless Links",
-      "et": "Lühikesed ja pikad raadiosidelingid"
+      "en": "Early Robotic Visitors to Space",
+      "et": "Varased robotlikud kosmosekülalised"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-075:question:1",
-        "factKey": "built-in-technology-inventions:round1-overlap:format:ndef",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:explorer-1",
         "tier": 1,
-        "subjectKey": "format:ndef",
+        "subjectKey": "mission:explorer-1",
         "clue": {
-          "en": "Which standard message format stores records such as a URL or contact card on an NFC tag?",
-          "et": "Milline standardne sõnumivorming talletab NFC-sildil näiteks veebiaadressi või kontaktkaardi kirjeid?"
+          "en": "What was the name of the first US satellite, which carried an instrument that helped discover the Van Allen radiation belts?",
+          "et": "Mis oli esimese USA satelliidi nimi, mis kandis instrumenti, mis aitas avastada Van Alleni kiirgusvööd?"
         },
         "response": {
-          "en": "NFC Data Exchange Format",
-          "et": "NFC andmevahetusvorming"
+          "en": "Explorer 1",
+          "et": "Explorer 1"
         },
         "acceptedVariants": {
-          "en": [
-            "NDEF"
-          ],
-          "et": [
-            "NDEF"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "NDEF packages typed records so compatible NFC devices can interpret tag content.",
-          "et": "NFC andmevahetusvorming pakib tüübistatud kirjed, et ühilduv seade oskaks sildi sisu tõlgendada."
+          "en": "Explorer 1 was launched in 1958 and its observations led to the identification of radiation belts around Earth.",
+          "et": "Explorer 1 saadeti orbiidile 1958. aastal ning selle vaatlused viisid Maad ümbritsevate kiirgusvööde tuvastamiseni."
         },
         "source": {
-          "sourceId": "wikipedia:near-field_communication#standards",
-          "title": "Near-field communication — Standards",
-          "url": "https://en.wikipedia.org/wiki/Near-field_communication#Standards",
+          "sourceId": "wikipedia:explorer-1",
+          "title": "Explorer 1",
+          "url": "https://en.wikipedia.org/wiki/Explorer_1",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-075:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:zigbee",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:luna-2",
         "tier": 2,
-        "subjectKey": "standard:zigbee",
+        "subjectKey": "mission:luna-2",
         "clue": {
-          "en": "Which low-power mesh standard is common in home sensors and smart lights?",
-          "et": "Milline väikese energiakuluga silmvõrgustandard on levinud koduandurites ja nutivalgustites?"
+          "en": "Which Soviet probe became the first human-made object to reach the Moon?",
+          "et": "Milline Nõukogude sond sai esimeseks inimese valmistatud objektiks, mis jõudis Kuule?"
         },
         "response": {
-          "en": "Zigbee",
-          "et": "Zigbee"
+          "en": "Luna 2",
+          "et": "Luna 2"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Zigbee builds on IEEE 802.15.4 and supports many low-data-rate nodes.",
-          "et": "Zigbee põhineb standardil IEEE 802.15.4 ning toetab paljusid väikese andmesagedusega sõlmi."
+          "en": "Luna 2 impacted the lunar surface in 1959 and was the first spacecraft to reach another celestial body.",
+          "et": "Luna 2 põrkas 1959. aastal Kuu pinnale ning oli esimene kosmosesõiduk, mis jõudis teise taevakehani."
         },
         "source": {
-          "sourceId": "wikipedia:zigbee",
-          "title": "Zigbee",
-          "url": "https://en.wikipedia.org/wiki/Zigbee",
+          "sourceId": "wikipedia:luna-2",
+          "title": "Luna 2",
+          "url": "https://en.wikipedia.org/wiki/Luna_2",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-075:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:lora",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:mariner-2",
         "tier": 3,
-        "subjectKey": "standard:lora",
+        "subjectKey": "mission:mariner-2",
         "clue": {
-          "en": "Which chirp-spread-spectrum radio serves low-power devices over kilometres?",
-          "et": "Milline sirpsagedusmodulatsiooniga raadioside teenindab väikese energiakuluga seadmeid kilomeetrite kaugusel?"
+          "en": "Which NASA mission became the first successful spacecraft to fly past Venus and return data from another planet?",
+          "et": "Milline NASA missioon sai esimeseks edukaks kosmosesõidukiks, mis lendas mööda Veenusest ja saatis tagasi andmeid teiselt planeedilt?"
         },
         "response": {
-          "en": "LoRa",
-          "et": "LoRa"
+          "en": "Mariner 2",
+          "et": "Mariner 2"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "LoRa trades data rate for long range and is often used with LoRaWAN networks.",
-          "et": "LoRa vahetab andmesageduse pika levi vastu ning seda kasutatakse sageli LoRaWAN-võrkudes."
+          "en": "Mariner 2 flew past Venus in 1962 and returned measurements that changed early ideas about the planet’s environment.",
+          "et": "Mariner 2 lendas 1962. aastal Veenusest mööda ning saatis tagasi mõõtmisi, mis muutsid varaseid arusaamu planeedi keskkonnast."
         },
         "source": {
-          "sourceId": "wikipedia:lora",
-          "title": "LoRa",
-          "url": "https://en.wikipedia.org/wiki/LoRa",
+          "sourceId": "wikipedia:mariner-2",
+          "title": "Mariner 2",
+          "url": "https://en.wikipedia.org/wiki/Mariner_2",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-075:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:wi-fi-direct",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:pioneer-10",
         "tier": 4,
-        "subjectKey": "standard:wi-fi-direct",
+        "subjectKey": "mission:pioneer-10",
         "clue": {
-          "en": "Which standard lets Wi-Fi devices connect peer-to-peer without an access point?",
-          "et": "Milline standard laseb Wi-Fi-seadmetel ühenduda otse ilma pääsupunktita?"
+          "en": "Which NASA probe made the first close-up flyby of Jupiter and carried a plaque intended for any finder beyond Earth?",
+          "et": "Milline NASA sond tegi esimese lähilennu Jupiterist ning kandis tahvlit, mis oli mõeldud võimalikule leidjale väljaspool Maad?"
         },
         "response": {
-          "en": "Wi-Fi Direct",
-          "et": "Wi-Fi Direct"
+          "en": "Pioneer 10",
+          "et": "Pioneer 10"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Wi-Fi Direct negotiates a group owner so compatible devices can form a local link.",
-          "et": "Wi-Fi Direct lepib kokku rühmaomaniku, et ühilduvad seadmed saaksid luua kohaliku lingi."
+          "en": "Pioneer 10 passed Jupiter in 1973 and was the first spacecraft to travel through the asteroid belt.",
+          "et": "Pioneer 10 möödus Jupiterist 1973. aastal ning oli esimene kosmosesõiduk, mis läbis asteroidivöö."
         },
         "source": {
-          "sourceId": "wikipedia:wi-fi_direct",
-          "title": "Wi-Fi Direct",
-          "url": "https://en.wikipedia.org/wiki/Wi-Fi_Direct",
+          "sourceId": "wikipedia:pioneer-10",
+          "title": "Pioneer 10",
+          "url": "https://en.wikipedia.org/wiki/Pioneer_10",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-075:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:ultra-wideband",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:voyager-1",
         "tier": 5,
-        "subjectKey": "standard:ultra-wideband",
+        "subjectKey": "mission:voyager-1",
         "clue": {
-          "en": "Which radio technique uses very wide bandwidth for precise short-range ranging?",
-          "et": "Milline raadiotehnika kasutab väga laia sagedusriba täpseks lähikauguse mõõtmiseks?"
+          "en": "Which probe sent back detailed images of Jupiter and Saturn before becoming the first spacecraft to enter interstellar space?",
+          "et": "Milline sond saatis tagasi detailsed pildid Jupiterist ja Saturnist, enne kui sellest sai esimene tähtedevahelisse ruumi jõudnud kosmosesõiduk?"
         },
         "response": {
-          "en": "ultra-wideband",
-          "et": "ülilairiba"
+          "en": "Voyager 1",
+          "et": "Voyager 1"
         },
         "acceptedVariants": {
-          "en": [
-            "UWB"
-          ],
-          "et": [
-            "UWB"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Ultra-wideband pulses permit fine time-of-flight estimates with low spectral power.",
-          "et": "Ülilairiba impulsid lubavad väikese spektraalvõimsusega täpset lennuaja hinnangut."
+          "en": "Voyager 1 launched in 1977, made landmark outer-planet observations, and later crossed the heliopause into interstellar space.",
+          "et": "Voyager 1 startis 1977. aastal, tegi tähtsaid välisplaneetide vaatlusi ja ületas hiljem heliopausi tähtedevahelisse ruumi."
         },
         "source": {
-          "sourceId": "wikipedia:ultra-wideband",
-          "title": "Ultra-wideband",
-          "url": "https://en.wikipedia.org/wiki/Ultra-wideband",
+          "sourceId": "wikipedia:voyager-1",
+          "title": "Voyager 1",
+          "url": "https://en.wikipedia.org/wiki/Voyager_1",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
