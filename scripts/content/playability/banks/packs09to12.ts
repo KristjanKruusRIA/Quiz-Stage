@@ -11878,1713 +11878,1827 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-056",
     "name": {
-      "en": "Finding the Way before Smartphones",
-      "et": "Tee leidmine enne nutitelefoni"
+      "en": "Messages That Outran the Post",
+      "et": "Sõnumid, mis jõudsid postist ette"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-056:question:1",
-        "factKey": "built-in-technology-inventions:navigation-tools:medium:device:magnetic-compass",
+        "factKey": "built-in-technology-inventions:messages-outran-post:medium:email",
         "tier": 1,
-        "subjectKey": "device:magnetic-compass",
+        "subjectKey": "service:email",
         "clue": {
-          "en": "Find the navigation technology that points toward magnetic north with a freely turning needle.",
-          "et": "Navigatsioonitehnoloogia näitab vabalt pöörleva nõelaga magnetilise põhja suunda. Leia sobiv vastus."
+          "en": "An address written as name@domain is used to send this kind of electronic message across computer networks. What is it?",
+          "et": "Nimekujulist aadressi name@domain kasutatakse seda liiki elektroonilise sõnumi saatmiseks arvutivõrkudes. Mis see on?"
         },
         "response": {
-          "en": "magnetic compass",
-          "et": "magnetkompass"
+          "en": "email",
+          "et": "e-post"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "electronic mail",
+            "e-mail"
+          ],
+          "et": [
+            "elektronpost"
+          ]
         },
         "explanation": {
-          "en": "Magnetic compass needs correction for declination because magnetic and geographic north differ.",
-          "et": "Magnetkompass vajab deklinatsiooni parandust, sest magnetiline ja geograafiline põhi erinevad."
+          "en": "Email routes messages through networked mail systems, with the domain naming the receiving server.",
+          "et": "E-post liigub võrgustatud meiliserverite kaudu ning domeen määrab vastuvõtva serveri."
         },
         "source": {
-          "sourceId": "wikipedia:compass",
-          "title": "Compass",
-          "url": "https://en.wikipedia.org/wiki/Compass",
+          "sourceId": "wikipedia:email",
+          "title": "email",
+          "url": "https://en.wikipedia.org/wiki/email",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-056:question:2",
-        "factKey": "built-in-technology-inventions:navigation-tools:medium:device:sextant",
+        "factKey": "built-in-technology-inventions:messages-outran-post:medium:instant-messaging",
         "tier": 2,
-        "subjectKey": "device:sextant",
+        "subjectKey": "service:instant-messaging",
         "clue": {
-          "en": "Which navigation technology measures the angle between a celestial body and the horizon?",
-          "et": "Tuvasta järgmine navigatsioonitehnoloogia: see mõõdab taevakeha ja horisondi vahelist nurka."
+          "en": "Unlike email, this service is designed for a rapid back-and-forth written conversation while both people are online. Name it.",
+          "et": "Erinevalt e-postist on see teenus mõeldud kiireks edasi-tagasi kirjalikuks vestluseks ajal, kui mõlemad inimesed on võrgus. Mis teenus see on?"
         },
         "response": {
-          "en": "sextant",
-          "et": "sekstant"
+          "en": "instant messaging",
+          "et": "kiirsuhtlus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "instant messenger"
+          ],
+          "et": [
+            "kiirvestlus"
+          ]
         },
         "explanation": {
-          "en": "Sextant uses two mirrors so a navigator can bring star and horizon into one view.",
-          "et": "Sekstant kasutab kaht peeglit, et navigaator saaks tähe ja horisondi ühte vaatesse tuua."
+          "en": "Instant messaging delivers short messages in near real time, usually through a dedicated client or service.",
+          "et": "Kiirsuhtlus edastab lühisõnumeid peaaegu reaalajas, tavaliselt eraldi rakenduse või teenuse kaudu."
         },
         "source": {
-          "sourceId": "wikipedia:sextant",
-          "title": "Sextant",
-          "url": "https://en.wikipedia.org/wiki/Sextant",
+          "sourceId": "wikipedia:instant_messaging",
+          "title": "instant messaging",
+          "url": "https://en.wikipedia.org/wiki/instant_messaging",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-056:question:3",
-        "factKey": "built-in-technology-inventions:navigation-tools:medium:device:marine-chronometer",
+        "factKey": "built-in-technology-inventions:messages-outran-post:medium:fax-machine",
         "tier": 3,
-        "subjectKey": "device:marine-chronometer",
+        "subjectKey": "device:fax-machine",
         "clue": {
-          "en": "A navigation technology kept accurate reference time so sailors could find longitude. Name it.",
-          "et": "Üks navigatsioonitehnoloogia hoidis täpset võrdlusaega, et meremehed saaksid leida pikkuskraadi. Millist vastust otsime?"
+          "en": "Before scanned attachments became routine, an office could send a document over a telephone line to be printed at the other end. What machine did that?",
+          "et": "Enne kui skannitud manused tavaliseks said, võis kontor saata dokumendi telefoniliini kaudu teises otsas välja printimiseks. Mis masin seda tegi?"
         },
         "response": {
-          "en": "marine chronometer",
-          "et": "merekronomeeter"
+          "en": "fax machine",
+          "et": "faksiaparaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "fax"
+          ],
+          "et": [
+            "faks"
+          ]
         },
         "explanation": {
-          "en": "Marine chronometer made longitude calculable by comparing local noon with home-port time.",
-          "et": "Merekronomeeter tegi pikkuskraadi arvutatavaks, võrreldes kohalikku keskpäeva kodusadama ajaga."
+          "en": "A fax machine scans a document, transmits its image over a telephone network, and reproduces it at the receiver.",
+          "et": "Faksiaparaat skannib dokumendi, edastab selle kujutise telefonivõrgu kaudu ja taastoodab selle vastuvõtvas seadmes."
         },
         "source": {
-          "sourceId": "wikipedia:marine_chronometer",
-          "title": "Marine chronometer",
-          "url": "https://en.wikipedia.org/wiki/Marine_chronometer",
+          "sourceId": "wikipedia:fax",
+          "title": "fax",
+          "url": "https://en.wikipedia.org/wiki/fax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-056:question:4",
-        "factKey": "built-in-technology-inventions:navigation-tools:medium:technology:radar",
+        "factKey": "built-in-technology-inventions:messages-outran-post:medium:emoji",
         "tier": 4,
-        "subjectKey": "technology:radar",
+        "subjectKey": "symbol:emoji",
         "clue": {
-          "en": "Find the navigation technology that uses reflected radio waves to locate distant objects.",
-          "et": "Navigatsioonitehnoloogia kasutab kaugete objektide leidmiseks peegeldunud raadiolaineid. Leia sobiv vastus."
+          "en": "Its Japanese name combines words for “picture” and “character”; this small digital image can add tone to a message. What is it?",
+          "et": "Selle jaapanikeelne nimi ühendab sõnad „pilt” ja „märk”; see väike digipilt võib sõnumile tooni lisada. Mis see on?"
         },
         "response": {
-          "en": "radar",
-          "et": "radar"
+          "en": "emoji",
+          "et": "emoji"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Radar derives range from echo delay and speed from Doppler shift.",
-          "et": "Radar tuletab kauguse kaja viitest ning kiiruse Doppleri nihkest."
+          "en": "Emoji are pictographic characters used in electronic messages; the word comes from Japanese e and moji.",
+          "et": "Emojid on elektroonilistes sõnumites kasutatavad piltmärgid; sõna tuleb jaapani sõnadest e ja moji."
         },
         "source": {
-          "sourceId": "wikipedia:radar",
-          "title": "Radar",
-          "url": "https://en.wikipedia.org/wiki/Radar",
+          "sourceId": "wikipedia:emoji",
+          "title": "emoji",
+          "url": "https://en.wikipedia.org/wiki/emoji",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-056:question:5",
-        "factKey": "built-in-technology-inventions:navigation-tools:medium:technology:sonar",
+        "factKey": "built-in-technology-inventions:messages-outran-post:medium:video-conference",
         "tier": 5,
-        "subjectKey": "technology:sonar",
+        "subjectKey": "service:video-conferencing",
         "clue": {
-          "en": "Identify the navigation technology: it uses sound to detect objects or depth underwater.",
-          "et": "Mis navigatsioonitehnoloogia kasutab vee all objektide või sügavuse tuvastamiseks heli?"
+          "en": "What kind of meeting lets people in different places speak and see one another live through networked cameras and microphones?",
+          "et": "Mis liiki kohtumine võimaldab eri paikades olevatel inimestel võrgustatud kaamerate ja mikrofonide abil üksteist reaalajas näha ja kuulda?"
         },
         "response": {
-          "en": "sonar",
-          "et": "sonar"
+          "en": "video conference",
+          "et": "videokonverents"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "videoconference",
+            "video call"
+          ],
+          "et": [
+            "videokohtumine"
+          ]
         },
         "explanation": {
-          "en": "Sonar works acoustically because radio waves attenuate strongly in seawater.",
-          "et": "Sonar töötab akustiliselt, sest raadiolained sumbuvad merevees tugevalt."
+          "en": "A video conference carries live audio and video between participants in different locations.",
+          "et": "Videokonverents edastab eri paikades olevate osalejate vahel reaalajas heli ja pilti."
         },
         "source": {
-          "sourceId": "wikipedia:sonar",
-          "title": "Sonar",
-          "url": "https://en.wikipedia.org/wiki/Sonar",
+          "sourceId": "wikipedia:videoconferencing",
+          "title": "videoconferencing",
+          "url": "https://en.wikipedia.org/wiki/videoconferencing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-057",
     "name": {
-      "en": "Looking inside the Body",
-      "et": "Pilk keha sisse"
+      "en": "At the Airport, Behind the Scenes",
+      "et": "Lennujaama kulisside taga"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-057:question:1",
-        "factKey": "built-in-technology-inventions:medical-imaging:medium:technology:x-ray-imaging",
+        "factKey": "built-in-technology-inventions:airport-behind-scenes:medium:baggage-carousel",
         "tier": 1,
-        "subjectKey": "technology:x-ray-imaging",
+        "subjectKey": "system:baggage-carousel",
         "clue": {
-          "en": "Identify this imaging method: it shows dense bone strongly by passing ionising radiation through the body.",
-          "et": "Kirjeldatud kuvamismeetod näitab tihedat luud selgelt, juhtides kehast läbi ioniseeriva kiirguse. Mis on selle nimi?"
+          "en": "After landing, suitcases emerge onto a moving loop in the arrivals hall. What is this conveyor system called?",
+          "et": "Pärast maandumist jõuavad kohvrid saabumissaali liikuvale ringile. Kuidas seda konveiersüsteemi nimetatakse?"
         },
         "response": {
-          "en": "X-ray imaging",
-          "et": "röntgenuuring"
+          "en": "baggage carousel",
+          "et": "pagasilint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "baggage belt",
+            "luggage carousel"
+          ],
+          "et": [
+            "pagasikonveier"
+          ]
         },
         "explanation": {
-          "en": "X-ray imaging forms contrast because tissues attenuate the beam by different amounts.",
-          "et": "Röntgenuuring moodustab kontrasti, sest koed nõrgendavad kiirt erineval määral."
+          "en": "The source directly supports this identification of baggage carousel.",
+          "et": "Allikas toetab otseselt pagasilint tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:x-ray",
-          "title": "X-ray",
-          "url": "https://en.wikipedia.org/wiki/X-ray",
+          "sourceId": "wikipedia:baggage_carousel",
+          "title": "baggage carousel",
+          "url": "https://en.wikipedia.org/wiki/baggage_carousel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-057:question:2",
-        "factKey": "built-in-technology-inventions:medical-imaging:medium:technology:medical-ultrasound",
+        "factKey": "built-in-technology-inventions:airport-behind-scenes:medium:jet-bridge",
         "tier": 2,
-        "subjectKey": "technology:medical-ultrasound",
+        "subjectKey": "structure:jet-bridge",
         "clue": {
-          "en": "Imaging method uses high-frequency sound echoes and is common in pregnancy scans. What is it called?",
-          "et": "Milline kuvamismeetod kasutab kõrgsagedusliku heli kajasid ning on levinud rasedusuuringul?"
+          "en": "This enclosed movable corridor connects an airport gate to an aircraft door, letting passengers board without using the apron. Name it.",
+          "et": "See kinnine liigutatav koridor ühendab lennujaama värava lennukiuksega ja võimaldab reisijatel pardale minna ilma perroonile astumata. Mis see on?"
         },
         "response": {
-          "en": "ultrasound",
-          "et": "ultraheliuuring"
+          "en": "jet bridge",
+          "et": "reisijatesild"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "passenger boarding bridge"
+          ],
+          "et": [
+            "pardaleminekusild"
+          ]
         },
         "explanation": {
-          "en": "Ultrasound forms echoes at boundaries where acoustic impedance changes.",
-          "et": "Ultraheliuuring tekitab kajad piiridel, kus akustiline takistus muutub."
+          "en": "The source directly supports this identification of jet bridge.",
+          "et": "Allikas toetab otseselt reisijatesild tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:medical_ultrasound",
-          "title": "Medical ultrasound",
-          "url": "https://en.wikipedia.org/wiki/Medical_ultrasound",
+          "sourceId": "wikipedia:jet_bridge",
+          "title": "jet bridge",
+          "url": "https://en.wikipedia.org/wiki/jet_bridge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-057:question:3",
-        "factKey": "built-in-technology-inventions:medical-imaging:medium:technology:ct-scan",
+        "factKey": "built-in-technology-inventions:airport-behind-scenes:medium:flight-recorder",
         "tier": 3,
-        "subjectKey": "technology:ct-scan",
+        "subjectKey": "device:flight-recorder",
         "clue": {
-          "en": "One imaging method combines many X-ray projections into cross-sectional slices. Which one is described?",
-          "et": "Kuvamismeetod ühendab paljud röntgenprojektsioonid ristlõikeviiludeks. Mis see on?"
+          "en": "The orange crash-resistant device that preserves flight data and cockpit audio after an accident has what proper name?",
+          "et": "Mis on oranži löögikindla seadme õige nimetus, kui see säilitab pärast õnnetust lennuandmeid ja kokpiti heli?"
         },
         "response": {
-          "en": "CT scan",
-          "et": "kompuutertomograafia"
+          "en": "flight recorder",
+          "et": "lennusalvesti"
         },
         "acceptedVariants": {
           "en": [
-            "computed tomography"
+            "black box"
           ],
           "et": [
-            "KT"
+            "must kast"
           ]
         },
         "explanation": {
-          "en": "CT scan reconstructs attenuation values mathematically while source and detectors rotate.",
-          "et": "Kompuutertomograafia rekonstrueerib nõrgenemisväärtused matemaatiliselt, kui allikas ja detektorid pöörlevad."
+          "en": "The source directly supports this identification of flight recorder.",
+          "et": "Allikas toetab otseselt lennusalvesti tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:ct_scan",
-          "title": "CT scan",
-          "url": "https://en.wikipedia.org/wiki/CT_scan",
+          "sourceId": "wikipedia:flight_recorder",
+          "title": "flight recorder",
+          "url": "https://en.wikipedia.org/wiki/flight_recorder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-057:question:4",
-        "factKey": "built-in-technology-inventions:medical-imaging:medium:technology:mri",
+        "factKey": "built-in-technology-inventions:airport-behind-scenes:medium:air-traffic-control",
         "tier": 4,
-        "subjectKey": "technology:mri",
+        "subjectKey": "service:air-traffic-control",
         "clue": {
-          "en": "This imaging method images soft tissue with strong magnets and radio pulses. What is it?",
-          "et": "See kuvamismeetod kuvab pehmeid kudesid tugeva magneti ja raadioimpulssidega. Mis see on?"
+          "en": "Which service directs aircraft on the ground and in the air so they keep safe separation around an airport?",
+          "et": "Milline teenus juhib lennukeid nii maapinnal kui õhus, et nad hoiaksid lennujaama ümbruses ohutut vahemaad?"
         },
         "response": {
-          "en": "MRI",
-          "et": "magnetresonantstomograafia"
+          "en": "air traffic control",
+          "et": "lennujuhtimine"
         },
         "acceptedVariants": {
           "en": [
-            "magnetic resonance imaging"
+            "ATC"
           ],
           "et": [
-            "MRT"
+            "ATC"
           ]
         },
         "explanation": {
-          "en": "MRI measures relaxation signals from aligned hydrogen nuclei without ionising radiation.",
-          "et": "Magnetresonantstomograafia mõõdab joondatud vesinikutuuma relaksatsioonisignaali ilma ioniseeriva kiirguseta."
+          "en": "The source directly supports this identification of air traffic control.",
+          "et": "Allikas toetab otseselt lennujuhtimine tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:magnetic_resonance_imaging",
-          "title": "Magnetic resonance imaging",
-          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "sourceId": "wikipedia:air_traffic_control",
+          "title": "air traffic control",
+          "url": "https://en.wikipedia.org/wiki/air_traffic_control",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-057:question:5",
-        "factKey": "built-in-technology-inventions:medical-imaging:medium:technology:pet-scan",
+        "factKey": "built-in-technology-inventions:airport-behind-scenes:medium:runway-lighting",
         "tier": 5,
-        "subjectKey": "technology:pet-scan",
+        "subjectKey": "system:runway-lighting",
         "clue": {
-          "en": "Which imaging method maps body function using an injected radioactive tracer?",
-          "et": "Tuvasta järgmine kuvamismeetod: see kaardistab keha talitlust süstitud radioaktiivse märkainega."
+          "en": "Pilots approaching after dark use this system of coloured and white lights to identify the runway and align the aircraft. What system is it?",
+          "et": "Pimedal ajal lähenedes kasutavad piloodid seda värviliste ja valgete tulede süsteemi, et lennurada ära tunda ja lennuk joondada. Mis süsteem see on?"
         },
         "response": {
-          "en": "PET scan",
-          "et": "positronemissioontomograafia"
+          "en": "runway lighting",
+          "et": "lennuraja valgustus"
         },
         "acceptedVariants": {
           "en": [
-            "positron emission tomography"
+            "runway lights"
           ],
           "et": [
-            "PET"
+            "lennurajatuled"
           ]
         },
         "explanation": {
-          "en": "PET scan detects paired gamma photons from positron-electron annihilation.",
-          "et": "Positronemissioontomograafia tuvastab positroni ja elektroni annihilatsioonist tekkinud gammakvante."
+          "en": "The source directly supports this identification of runway lighting.",
+          "et": "Allikas toetab otseselt lennuraja valgustus tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:positron_emission_tomography",
-          "title": "Positron emission tomography",
-          "url": "https://en.wikipedia.org/wiki/Positron_emission_tomography",
+          "sourceId": "wikipedia:runway_lighting",
+          "title": "runway lighting",
+          "url": "https://en.wikipedia.org/wiki/runway_lighting",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-058",
     "name": {
-      "en": "Medical Machines That Sustain Life",
-      "et": "Elu toetavad meditsiiniseadmed"
+      "en": "Electricity at Work",
+      "et": "Elekter töös"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-058:question:1",
-        "factKey": "built-in-technology-inventions:life-support-devices:medium:device:cardiac-pacemaker",
+        "factKey": "built-in-technology-inventions:electricity-at-work:medium:electric-motor",
         "tier": 1,
-        "subjectKey": "device:cardiac-pacemaker",
+        "subjectKey": "device:electric-motor",
         "clue": {
-          "en": "Identify this medical device or treatment: it sends timed electrical impulses when the heart beats too slowly.",
-          "et": "Kirjeldatud meditsiiniseade või ravimeetod saadab ajastatud elektriimpulsse, kui süda lööb liiga aeglaselt. Mis on selle nimi?"
+          "en": "A fan, washing machine, and many electric cars use this device to turn electrical energy into motion. Name it.",
+          "et": "Ventilaator, pesumasin ja paljud elektriautod kasutavad seda seadet elektrienergia liikumiseks muutmiseks. Mis seade see on?"
         },
         "response": {
-          "en": "pacemaker",
-          "et": "südamestimulaator"
+          "en": "electric motor",
+          "et": "elektrimootor"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pacemaker senses intrinsic beats and stimulates only when programmed criteria require it.",
-          "et": "Südamestimulaator tajub südame enda lööke ning stimuleerib vaid programmeeritud vajadusel."
+          "en": "The source directly supports this identification of electric motor.",
+          "et": "Allikas toetab otseselt elektrimootor tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:artificial_cardiac_pacemaker",
-          "title": "Artificial cardiac pacemaker",
-          "url": "https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker",
+          "sourceId": "wikipedia:electric_motor",
+          "title": "electric motor",
+          "url": "https://en.wikipedia.org/wiki/electric_motor",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-058:question:2",
-        "factKey": "built-in-technology-inventions:life-support-devices:medium:device:defibrillator",
+        "factKey": "built-in-technology-inventions:electricity-at-work:medium:transformer",
         "tier": 2,
-        "subjectKey": "device:defibrillator",
+        "subjectKey": "device:transformer",
         "clue": {
-          "en": "What medical device or treatment delivers a shock to stop certain lethal chaotic heart rhythms?",
-          "et": "Järgmine meditsiiniseade või ravimeetod annab šoki teatud surmavate kaootiliste südamerütmide peatamiseks. Milline see on?"
+          "en": "On a power pole or in a charger, this device changes alternating-current voltage. What is it?",
+          "et": "Elektripostil või laadijas muudab see seade vahelduvvoolu pinget. Mis seade see on?"
         },
         "response": {
-          "en": "defibrillator",
-          "et": "defibrillaator"
+          "en": "transformer",
+          "et": "trafo"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Defibrillator depolarises much of the myocardium at once so organised rhythm can resume.",
-          "et": "Defibrillaator depolariseerib korraga suure osa südamelihasest, et korrastatud rütm saaks taastuda."
+          "en": "The source directly supports this identification of transformer.",
+          "et": "Allikas toetab otseselt trafo tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:defibrillation",
-          "title": "Defibrillation",
-          "url": "https://en.wikipedia.org/wiki/Defibrillation",
+          "sourceId": "wikipedia:transformer",
+          "title": "transformer",
+          "url": "https://en.wikipedia.org/wiki/transformer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-058:question:3",
-        "factKey": "built-in-technology-inventions:life-support-devices:medium:device:medical-ventilator",
+        "factKey": "built-in-technology-inventions:electricity-at-work:medium:fuse",
         "tier": 3,
-        "subjectKey": "device:medical-ventilator",
+        "subjectKey": "device:fuse",
         "clue": {
-          "en": "A medical device or treatment moves air into and out of lungs when breathing is inadequate. Name it.",
-          "et": "Üks meditsiiniseade või ravimeetod liigutab õhku kopsudesse ja sealt välja, kui hingamine on ebapiisav. Millist vastust otsime?"
+          "en": "What disposable electrical safety part melts and opens a circuit when too much current flows through it?",
+          "et": "Milline ühekordne elektriohutuse osa sulab ja katkestab vooluahela, kui sellest voolab liiga suur vool?"
         },
         "response": {
-          "en": "ventilator",
-          "et": "hingamisaparaat"
+          "en": "fuse",
+          "et": "sulavkaitse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "electric fuse"
+          ],
+          "et": [
+            "kaitse"
+          ]
         },
         "explanation": {
-          "en": "Ventilator often applies positive pressure through an airway rather than using an iron lung’s negative pressure.",
-          "et": "Hingamisaparaat rakendab sageli hingamistee kaudu positiivset rõhku, mitte raudkopsu alarõhku."
+          "en": "The source directly supports this identification of fuse.",
+          "et": "Allikas toetab otseselt sulavkaitse tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:medical_ventilator",
-          "title": "Medical ventilator",
-          "url": "https://en.wikipedia.org/wiki/Medical_ventilator",
+          "sourceId": "wikipedia:fuse_(electrical)",
+          "title": "fuse (electrical)",
+          "url": "https://en.wikipedia.org/wiki/fuse_(electrical)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-058:question:4",
-        "factKey": "built-in-technology-inventions:life-support-devices:medium:treatment:dialysis",
+        "factKey": "built-in-technology-inventions:electricity-at-work:medium:electric-generator",
         "tier": 4,
-        "subjectKey": "treatment:dialysis",
+        "subjectKey": "device:electric-generator",
         "clue": {
-          "en": "This medical device or treatment removes wastes and excess water when kidneys fail. What is it?",
-          "et": "See meditsiiniseade või ravimeetod eemaldab neerupuudulikkuse korral jääkained ja liigse vee. Mis see on?"
+          "en": "A wind turbine spins this machine to convert mechanical rotation into electrical energy. What is it?",
+          "et": "Tuulik paneb selle masina pöörlema, et muuta mehaaniline pöörlemine elektrienergiaks. Mis masin see on?"
         },
         "response": {
-          "en": "dialysis",
-          "et": "dialüüs"
+          "en": "electric generator",
+          "et": "elektrigeneraator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "generator"
+          ],
+          "et": [
+            "generaator"
+          ]
         },
         "explanation": {
-          "en": "Dialysis moves solutes across a semipermeable membrane by diffusion and fluid by ultrafiltration.",
-          "et": "Dialüüs liigutab lahustunud aineid läbi poolläbilaskva membraani difusiooniga ning vedelikku ultrafiltratsiooniga."
+          "en": "The source directly supports this identification of electric generator.",
+          "et": "Allikas toetab otseselt elektrigeneraator tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:dialysis",
-          "title": "Dialysis",
-          "url": "https://en.wikipedia.org/wiki/Dialysis",
+          "sourceId": "wikipedia:electric_generator",
+          "title": "electric generator",
+          "url": "https://en.wikipedia.org/wiki/electric_generator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-058:question:5",
-        "factKey": "built-in-technology-inventions:life-support-devices:medium:device:insulin-pump",
+        "factKey": "built-in-technology-inventions:electricity-at-work:medium:power-station",
         "tier": 5,
-        "subjectKey": "device:insulin-pump",
+        "subjectKey": "facility:power-station",
         "clue": {
-          "en": "Which medical device or treatment delivers programmable doses of insulin through a small catheter?",
-          "et": "Tuvasta järgmine meditsiiniseade või ravimeetod: see manustab väikese kateetri kaudu programmeeritud insuliiniannuseid."
+          "en": "Coal, gas, nuclear heat, water, or wind can drive turbines at this facility, where electricity is generated for a grid. Name it.",
+          "et": "Süsi, gaas, tuumasoojus, vesi või tuul võivad kõik panna turbiine tööle selles rajatises, kus toodetakse elektrivõrgule elektrit. Mis rajatis see on?"
         },
         "response": {
-          "en": "insulin pump",
-          "et": "insuliinipump"
+          "en": "power station",
+          "et": "elektrijaam"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Insulin pump provides a basal flow plus user-triggered mealtime boluses.",
-          "et": "Insuliinipump annab baasvoolu ning kasutaja käivitatud söögiaegseid booluseid."
+          "en": "The source directly supports this identification of power station.",
+          "et": "Allikas toetab otseselt elektrijaam tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:insulin_pump",
-          "title": "Insulin pump",
-          "url": "https://en.wikipedia.org/wiki/Insulin_pump",
+          "sourceId": "wikipedia:power_station",
+          "title": "power station",
+          "url": "https://en.wikipedia.org/wiki/power_station",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-059",
     "name": {
-      "en": "Five Ways to Span a Gap",
-      "et": "Viis viisi ava ületamiseks"
+      "en": "Engineering Feats in the Landscape",
+      "et": "Insenerisaavutused maastikul"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-059:question:1",
-        "factKey": "built-in-technology-inventions:bridge-structures:medium:structure:suspension-bridge",
+        "factKey": "built-in-technology-inventions:engineering-feats-landscape:medium:brooklyn-bridge",
         "tier": 1,
-        "subjectKey": "structure:suspension-bridge",
+        "subjectKey": "structure:brooklyn-bridge",
         "clue": {
-          "en": "Find the bridge type that hangs its deck from main cables draped between towers.",
-          "et": "Sillatüüp riputab silla teki tornide vahel kaarduvatele peakanduritele. Leia sobiv vastus."
+          "en": "This New York bridge links Manhattan and Brooklyn and was the world’s longest suspension bridge when it opened. Name it.",
+          "et": "See New Yorgi sild ühendab Manhattanit ja Brooklyni ning oli avamisel maailma pikim rippsild. Mis silla nimi see on?"
         },
         "response": {
-          "en": "suspension bridge",
-          "et": "rippsild"
+          "en": "Brooklyn Bridge",
+          "et": "Brooklyni sild"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Suspension bridge carries deck loads through hangers into cable tension and tower compression.",
-          "et": "Rippsild viib tekikoormuse riputite kaudu kaabli tõmbesse ja torni survesse."
+          "en": "The source directly supports this identification of Brooklyn Bridge.",
+          "et": "Allikas toetab otseselt Brooklyni sild tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:suspension_bridge",
-          "title": "Suspension bridge",
-          "url": "https://en.wikipedia.org/wiki/Suspension_bridge",
+          "sourceId": "wikipedia:brooklyn_bridge",
+          "title": "brooklyn bridge",
+          "url": "https://en.wikipedia.org/wiki/brooklyn_bridge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-059:question:2",
-        "factKey": "built-in-technology-inventions:bridge-structures:medium:structure:arch-bridge",
+        "factKey": "built-in-technology-inventions:engineering-feats-landscape:medium:hoover-dam",
         "tier": 2,
-        "subjectKey": "structure:arch-bridge",
+        "subjectKey": "structure:hoover-dam",
         "clue": {
-          "en": "Bridge type curves its main support and pushes outward at the abutments. What is it called?",
-          "et": "Milline sillatüüp kõverdab põhikanduri ning surub tugedele külgsuunas?"
+          "en": "Built on the Colorado River, this concrete arch-gravity dam created Lake Mead on the border of Nevada and Arizona. Name it.",
+          "et": "See Colorado jõele rajatud betoonist kaar-raskusdam tekitas Nevada ja Arizona piiril Meadi järve. Mis rajatis see on?"
         },
         "response": {
-          "en": "arch bridge",
-          "et": "kaarsild"
+          "en": "Hoover Dam",
+          "et": "Hooveri tamm"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Arch bridge carries loads chiefly as compression along the arch.",
-          "et": "Kaarsild kannab koormust peamiselt kaare pikipressena."
+          "en": "The source directly supports this identification of Hoover Dam.",
+          "et": "Allikas toetab otseselt Hooveri tamm tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:arch_bridge",
-          "title": "Arch bridge",
-          "url": "https://en.wikipedia.org/wiki/Arch_bridge",
+          "sourceId": "wikipedia:hoover_dam",
+          "title": "hoover dam",
+          "url": "https://en.wikipedia.org/wiki/hoover_dam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-059:question:3",
-        "factKey": "built-in-technology-inventions:bridge-structures:medium:structure:beam-bridge",
+        "factKey": "built-in-technology-inventions:engineering-feats-landscape:medium:trans-siberian-railway",
         "tier": 3,
-        "subjectKey": "structure:beam-bridge",
+        "subjectKey": "railway:trans-siberian-railway",
         "clue": {
-          "en": "A bridge type lays a horizontal member across supports in the simplest form. Name it.",
-          "et": "Üks sillatüüp asetab lihtsaimal kujul horisontaalse tala tugedele. Millist vastust otsime?"
+          "en": "Which railway runs across Russia from Moscow toward the Pacific and is famed as the world’s longest single railway line?",
+          "et": "Milline raudtee kulgeb läbi Venemaa Moskvast Vaikse ookeani suunas ning on tuntud maailma pikima üksiku raudteeliinina?"
         },
         "response": {
-          "en": "beam bridge",
-          "et": "talasild"
+          "en": "Trans-Siberian Railway",
+          "et": "Trans-Siberi raudtee"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Beam bridge bends with its upper fibres in compression and lower fibres in tension.",
-          "et": "Talasild paindub nii, et ülemised kiud surutakse ja alumised venitatakse."
+          "en": "The source directly supports this identification of Trans-Siberian Railway.",
+          "et": "Allikas toetab otseselt Trans-Siberi raudtee tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:beam_bridge",
-          "title": "Beam bridge",
-          "url": "https://en.wikipedia.org/wiki/Beam_bridge",
+          "sourceId": "wikipedia:trans-siberian_railway",
+          "title": "trans-siberian railway",
+          "url": "https://en.wikipedia.org/wiki/trans-siberian_railway",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-059:question:4",
-        "factKey": "built-in-technology-inventions:bridge-structures:medium:structure:cable-stayed-bridge",
+        "factKey": "built-in-technology-inventions:engineering-feats-landscape:medium:three-gorges-dam",
         "tier": 4,
-        "subjectKey": "structure:cable-stayed-bridge",
+        "subjectKey": "structure:three-gorges-dam",
         "clue": {
-          "en": "Identify this bridge type: it connects the deck directly to towers with diagonal cables.",
-          "et": "Kirjeldatud sillatüüp ühendab teki diagonaalsete vantidega otse tornide külge. Mis on selle nimi?"
+          "en": "This hydroelectric dam on China’s Yangtze River created a vast reservoir and is the world’s largest power station by installed capacity. Name it.",
+          "et": "See Hiina Jangtse jõel asuv hüdroelektrijaama tamm tekitas tohutu veehoidla ning on paigaldatud võimsuse järgi maailma suurim elektrijaam. Mis rajatis see on?"
         },
         "response": {
-          "en": "cable-stayed bridge",
-          "et": "vant­sild"
+          "en": "Three Gorges Dam",
+          "et": "Kolme Kuristiku tamm"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Cable-stayed bridge differs from a suspension bridge by having no continuous main cable over anchorages.",
-          "et": "Vant­sild erineb rippsillast pideva ankruteni ulatuva peakanduri puudumise poolest."
+          "en": "The source directly supports this identification of Three Gorges Dam.",
+          "et": "Allikas toetab otseselt Kolme Kuristiku tamm tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:cable-stayed_bridge",
-          "title": "Cable-stayed bridge",
-          "url": "https://en.wikipedia.org/wiki/Cable-stayed_bridge",
+          "sourceId": "wikipedia:three_gorges_dam",
+          "title": "three gorges dam",
+          "url": "https://en.wikipedia.org/wiki/three_gorges_dam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-059:question:5",
-        "factKey": "built-in-technology-inventions:bridge-structures:medium:structure:truss-bridge",
+        "factKey": "built-in-technology-inventions:engineering-feats-landscape:medium:millau-viaduct",
         "tier": 5,
-        "subjectKey": "structure:truss-bridge",
+        "subjectKey": "structure:millau-viaduct",
         "clue": {
-          "en": "Bridge type uses a framework of connected triangles around its span. What is it called?",
-          "et": "Milline sillatüüp kasutab silde ümber ühendatud kolmnurkade sõrestikku?"
+          "en": "Near Millau in southern France, this cable-stayed road bridge carries the A75 high above the Tarn valley. Name it.",
+          "et": "Lõuna-Prantsusmaal Millau lähedal kannab see vantsild A75 kiirteed kõrgel üle Tarni oru. Mis rajatis see on?"
         },
         "response": {
-          "en": "truss bridge",
-          "et": "sõrestiksild"
+          "en": "Millau Viaduct",
+          "et": "Millau viadukt"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Truss bridge idealises members as carrying axial tension or compression.",
-          "et": "Sõrestiksild käsitleb vardaid peamiselt teljesuunalise tõmbe või survena."
+          "en": "The source directly supports this identification of Millau Viaduct.",
+          "et": "Allikas toetab otseselt Millau viadukt tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:truss_bridge",
-          "title": "Truss bridge",
-          "url": "https://en.wikipedia.org/wiki/Truss_bridge",
+          "sourceId": "wikipedia:millau_viaduct",
+          "title": "millau viaduct",
+          "url": "https://en.wikipedia.org/wiki/millau_viaduct",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-060",
     "name": {
-      "en": "Hidden Systems in Large Buildings",
-      "et": "Suurhoonete varjatud süsteemid"
+      "en": "Inventors Behind Everyday Things",
+      "et": "Igapäevaste asjade leiutajad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-060:question:1",
-        "factKey": "built-in-technology-inventions:building-services:medium:device:elevator",
+        "factKey": "built-in-technology-inventions:inventors-everyday-things:medium:hedy-lamarr",
         "tier": 1,
-        "subjectKey": "device:elevator",
+        "subjectKey": "person:hedy-lamarr",
         "clue": {
-          "en": "A building system carries people vertically in a moving car. What term fits?",
-          "et": "Siin kirjeldatud hoonesüsteem veab inimesi liikuvas kabiinis püstsuunas. Mis see on?"
+          "en": "This Hollywood star co-invented a frequency-hopping radio guidance idea that later influenced wireless communication. Who was she?",
+          "et": "See Hollywoodi staar leiutas koos partneriga sagedushüpleva raadiojuhtimise idee, mis mõjutas hiljem juhtmevaba sidet. Kes ta oli?"
         },
         "response": {
-          "en": "elevator",
-          "et": "lift"
+          "en": "Hedy Lamarr",
+          "et": "Hedy Lamarr"
         },
         "acceptedVariants": {
-          "en": [
-            "lift"
-          ],
-          "et": [
-            "elevaator"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Elevator became practical for tall buildings after reliable safety brakes were demonstrated.",
-          "et": "Lift muutus kõrghoonetes praktiliseks pärast töökindla turvapiduri näitamist."
+          "en": "The source directly supports this identification of Hedy Lamarr.",
+          "et": "Allikas toetab otseselt Hedy Lamarr tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:elevator",
-          "title": "Elevator",
-          "url": "https://en.wikipedia.org/wiki/Elevator",
+          "sourceId": "wikipedia:hedy_lamarr",
+          "title": "hedy lamarr",
+          "url": "https://en.wikipedia.org/wiki/hedy_lamarr",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-060:question:2",
-        "factKey": "built-in-technology-inventions:building-services:medium:device:escalator",
+        "factKey": "built-in-technology-inventions:inventors-everyday-things:medium:grace-hopper",
         "tier": 2,
-        "subjectKey": "device:escalator",
+        "subjectKey": "person:grace-hopper",
         "clue": {
-          "en": "Find the building system that is a continuously moving staircase for passengers.",
-          "et": "Hoonesüsteem on reisijatele mõeldud pidevalt liikuv trepp. Leia sobiv vastus."
+          "en": "Which computer pioneer helped popularise the idea that a compiler could translate human-readable programming instructions into machine code?",
+          "et": "Milline arvutiteerajaja aitas levitada ideed, et kompilaator võib tõlkida inimloetavad programmeerimisjuhised masinkoodiks?"
         },
         "response": {
-          "en": "escalator",
-          "et": "eskalaator"
+          "en": "Grace Hopper",
+          "et": "Grace Hopper"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Escalator keeps its linked steps level through tracks that control the wheel paths.",
-          "et": "Eskalaator hoiab ühendatud astmed rõhtsalt rööbastega, mis juhivad rataste teed."
+          "en": "The source directly supports this identification of Grace Hopper.",
+          "et": "Allikas toetab otseselt Grace Hopper tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:escalator",
-          "title": "Escalator",
-          "url": "https://en.wikipedia.org/wiki/Escalator",
+          "sourceId": "wikipedia:grace_hopper",
+          "title": "grace hopper",
+          "url": "https://en.wikipedia.org/wiki/grace_hopper",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-060:question:3",
-        "factKey": "built-in-technology-inventions:building-services:medium:system:fire-sprinkler",
+        "factKey": "built-in-technology-inventions:inventors-everyday-things:medium:mary-anderson",
         "tier": 3,
-        "subjectKey": "system:fire-sprinkler",
+        "subjectKey": "person:mary-anderson",
         "clue": {
-          "en": "What building system automatically sprays water when local heat opens a head?",
-          "et": "Järgmine hoonesüsteem pihustab automaatselt vett, kui kohalik kuumus sprinkleripea avab. Milline see on?"
+          "en": "A New York streetcar ride in bad weather inspired this inventor to devise a hand-operated windscreen wiper. Who was she?",
+          "et": "Halva ilmaga New Yorgi trammisõit innustas seda leiutajat kavandama käsitsi juhitavat tuuleklaasipuhastit. Kes ta oli?"
         },
         "response": {
-          "en": "fire sprinkler",
-          "et": "sprinkler"
+          "en": "Mary Anderson",
+          "et": "Mary Anderson"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Fire sprinkler normally activates individual heated heads rather than every head at once.",
-          "et": "Sprinkler käivitab tavaliselt üksiku kuumenenud pea, mitte kõik korraga."
+          "en": "The source directly supports this identification of Mary Anderson.",
+          "et": "Allikas toetab otseselt Mary Anderson tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:fire_sprinkler",
-          "title": "Fire sprinkler",
-          "url": "https://en.wikipedia.org/wiki/Fire_sprinkler",
+          "sourceId": "wikipedia:mary_anderson_(inventor)",
+          "title": "mary anderson (inventor)",
+          "url": "https://en.wikipedia.org/wiki/mary_anderson_(inventor)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-060:question:4",
-        "factKey": "built-in-technology-inventions:building-services:medium:system:hvac",
+        "factKey": "built-in-technology-inventions:inventors-everyday-things:medium:laszlo-biro",
         "tier": 4,
-        "subjectKey": "system:hvac",
+        "subjectKey": "person:laszlo-biro",
         "clue": {
-          "en": "One building system combines indoor heating, ventilation, and cooling. Which one is described?",
-          "et": "Hoonesüsteem ühendab siseruumide kütte, ventilatsiooni ja jahutuse. Mis see on?"
+          "en": "A Hungarian-Argentine journalist noticed that newspaper ink dried quickly and adapted the idea into the ballpoint pen. Who was he?",
+          "et": "Ungari-Argentiina ajakirjanik märkas, et ajalehetint kuivab kiiresti, ning kohandas selle idee pastapliiatsiks. Kes ta oli?"
         },
         "response": {
-          "en": "HVAC",
-          "et": "HVAC"
+          "en": "László Bíró",
+          "et": "László Bíró"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Laszlo Biro"
+          ],
+          "et": [
+            "Laszlo Biro"
+          ]
         },
         "explanation": {
-          "en": "HVAC controls thermal comfort and air quality through conditioned air and heat transfer.",
-          "et": "HVAC juhib sisekliimat ja õhukvaliteeti töödeldud õhu ning soojusülekandega."
+          "en": "The source directly supports this identification of László Bíró.",
+          "et": "Allikas toetab otseselt László Bíró tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:heating,_ventilation,_and_air_conditioning",
-          "title": "Heating, ventilation, and air conditioning",
-          "url": "https://en.wikipedia.org/wiki/Heating,_ventilation,_and_air_conditioning",
+          "sourceId": "wikipedia:László_Bíró",
+          "title": "László Bíró",
+          "url": "https://en.wikipedia.org/wiki/László_Bíró",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-060:question:5",
-        "factKey": "built-in-technology-inventions:building-services:medium:system:building-foundation",
+        "factKey": "built-in-technology-inventions:inventors-everyday-things:medium:garrett-morgan",
         "tier": 5,
-        "subjectKey": "system:building-foundation",
+        "subjectKey": "person:garrett-morgan",
         "clue": {
-          "en": "Identify this building system: it transfers a building’s loads safely into the ground.",
-          "et": "Kirjeldatud hoonesüsteem kannab hoone koormused ohutult pinnasesse. Mis on selle nimi?"
+          "en": "Which inventor patented a three-position traffic signal after witnessing a collision at an intersection in Cleveland?",
+          "et": "Milline leiutaja patenteeris pärast Clevelandis ristmikul toimunud kokkupõrke nägemist kolmeasendilise liiklussignaali?"
         },
         "response": {
-          "en": "foundation",
-          "et": "vundament"
+          "en": "Garrett Morgan",
+          "et": "Garrett Morgan"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Foundation may spread load shallowly or reach stronger strata with deep piles.",
-          "et": "Vundament võib jaotada koormuse madalalt või ulatuda vaiadega tugevamate kihtideni."
+          "en": "The source directly supports this identification of Garrett Morgan.",
+          "et": "Allikas toetab otseselt Garrett Morgan tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:foundation_(engineering)",
-          "title": "Foundation (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Foundation_(engineering)",
+          "sourceId": "wikipedia:garrett_morgan",
+          "title": "garrett morgan",
+          "url": "https://en.wikipedia.org/wiki/garrett_morgan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-061",
     "name": {
-      "en": "Engineering Water’s Journey",
-      "et": "Vee teekonna inseneeria"
+      "en": "Technology with Nordic Roots",
+      "et": "Põhjamaise päritoluga tehnoloogia"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-061:question:1",
-        "factKey": "built-in-technology-inventions:water-engineering:medium:structure:aqueduct",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:bluetooth",
         "tier": 1,
-        "subjectKey": "structure:aqueduct",
+        "subjectKey": "technology:bluetooth",
         "clue": {
-          "en": "One water-engineering structure or process conveys water over distance, sometimes on monumental arches. Which one is described?",
-          "et": "Veeehituse rajatis või protsess juhib vett kaugele, vahel monumentaalsetel kaartel. Mis see on?"
+          "en": "Named after a Danish king, this short-range wireless standard uses a rune-like logo made from his initials. What is it?",
+          "et": "Taani kuninga järgi nimetatud lähiside standard kasutab tema initsiaalidest moodustatud ruunikujulist logo. Mis standard see on?"
         },
         "response": {
-          "en": "aqueduct",
-          "et": "akvedukt"
+          "en": "Bluetooth",
+          "et": "Bluetooth"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Aqueduct can maintain a very slight gravity-fed gradient for many kilometres.",
-          "et": "Akvedukt võib hoida paljude kilomeetrite vältel väga väikest raskusjõulist langust."
+          "en": "The source directly supports this identification of Bluetooth.",
+          "et": "Allikas toetab otseselt Bluetooth tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:aqueduct_(water_supply)",
-          "title": "Aqueduct (water supply)",
-          "url": "https://en.wikipedia.org/wiki/Aqueduct_(water_supply)",
+          "sourceId": "wikipedia:bluetooth",
+          "title": "bluetooth",
+          "url": "https://en.wikipedia.org/wiki/bluetooth",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-061:question:2",
-        "factKey": "built-in-technology-inventions:water-engineering:medium:structure:dam",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:linux",
         "tier": 2,
-        "subjectKey": "structure:dam",
+        "subjectKey": "software:linux",
         "clue": {
-          "en": "Identify this water-engineering structure or process: it blocks a river to store or control water.",
-          "et": "Kirjeldatud veeehituse rajatis või protsess tõkestab jõe vee hoidmiseks või juhtimiseks. Mis on selle nimi?"
+          "en": "Finnish student Linus Torvalds announced this free operating-system kernel as a hobby project in 1991. Name it.",
+          "et": "Soome tudeng Linus Torvalds kuulutas selle vaba operatsioonisüsteemi tuuma 1991. aastal hobiprojektina välja. Mis see on?"
         },
         "response": {
-          "en": "dam",
-          "et": "tamm"
+          "en": "Linux",
+          "et": "Linux"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Dam must resist hydrostatic pressure that increases with depth.",
-          "et": "Tamm peab vastu pidama hüdrostaatilisele rõhule, mis sügavusega kasvab."
+          "en": "The source directly supports this identification of Linux.",
+          "et": "Allikas toetab otseselt Linux tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:dam",
-          "title": "Dam",
-          "url": "https://en.wikipedia.org/wiki/Dam",
+          "sourceId": "wikipedia:linux",
+          "title": "linux",
+          "url": "https://en.wikipedia.org/wiki/linux",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-061:question:3",
-        "factKey": "built-in-technology-inventions:water-engineering:medium:structure:canal-lock",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:nokia",
         "tier": 3,
-        "subjectKey": "structure:canal-lock",
+        "subjectKey": "company:nokia",
         "clue": {
-          "en": "Identify the water-engineering structure or process: it raises or lowers boats between stretches of different water level.",
-          "et": "Mis veeehituse rajatis või protsess tõstab või langetab paate eri veetasemega lõikude vahel?"
+          "en": "This Finnish company began beside the Nokianvirta River and later became globally known for mobile phones. Name it.",
+          "et": "See Soome ettevõte sai alguse Nokianvirta jõe ääres ning sai hiljem maailmakuulsaks mobiiltelefonide poolest. Mis ettevõte see on?"
         },
         "response": {
-          "en": "canal lock",
-          "et": "kanalilüüs"
+          "en": "Nokia",
+          "et": "Nokia"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Canal lock fills or empties a gated chamber rather than lifting the vessel mechanically.",
-          "et": "Kanalilüüs täidab või tühjendab väravatega kambri ega tõsta alust mehaaniliselt."
+          "en": "The source directly supports this identification of Nokia.",
+          "et": "Allikas toetab otseselt Nokia tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:lock_(water_navigation)",
-          "title": "Lock (water navigation)",
-          "url": "https://en.wikipedia.org/wiki/Lock_(water_navigation)",
+          "sourceId": "wikipedia:nokia",
+          "title": "nokia",
+          "url": "https://en.wikipedia.org/wiki/nokia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-061:question:4",
-        "factKey": "built-in-technology-inventions:water-engineering:medium:structure:water-tower",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:spotify",
         "tier": 4,
-        "subjectKey": "structure:water-tower",
+        "subjectKey": "company:spotify",
         "clue": {
-          "en": "Name the water-engineering structure or process that stores water high above consumers to maintain pressure.",
-          "et": "Vihjes kirjeldatud veeehituse rajatis või protsess hoiab vett tarbijatest kõrgel, et säilitada rõhk. Mis see on?"
+          "en": "This Swedish streaming service was founded in Stockholm and became known for on-demand access to a large music catalogue. Name it.",
+          "et": "See Rootsi voogedastusteenus loodi Stockholmis ja sai tuntuks suure muusikakataloogi nõudmisel kuulamise võimalusega. Mis teenus see on?"
         },
         "response": {
-          "en": "water tower",
-          "et": "veetorn"
+          "en": "Spotify",
+          "et": "Spotify"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Water tower provides hydraulic head and short-term demand balancing even if pumps stop.",
-          "et": "Veetorn annab survekõrguse ja lühiajalise tarbimise tasakaalu ka pumba seiskumisel."
+          "en": "The source directly supports this identification of Spotify.",
+          "et": "Allikas toetab otseselt Spotify tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:water_tower",
-          "title": "Water tower",
-          "url": "https://en.wikipedia.org/wiki/Water_tower",
+          "sourceId": "wikipedia:spotify",
+          "title": "spotify",
+          "url": "https://en.wikipedia.org/wiki/spotify",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-061:question:5",
-        "factKey": "built-in-technology-inventions:water-engineering:medium:process:desalination",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:ericsson",
         "tier": 5,
-        "subjectKey": "process:desalination",
+        "subjectKey": "company:ericsson",
         "clue": {
-          "en": "Recognise the water-engineering structure or process that removes dissolved salts to make seawater usable.",
-          "et": "Otsitav veeehituse rajatis või protsess eemaldab lahustunud soolad, et merevesi kasutatavaks muuta. Mis see on?"
+          "en": "This Swedish telecommunications company took its name from its founder Lars Magnus and became a major maker of telephone equipment. Name it.",
+          "et": "See Rootsi telekommunikatsiooniettevõte sai nime asutaja Lars Magnuse järgi ning kujunes suureks telefoniseadmete tootjaks. Mis ettevõte see on?"
         },
         "response": {
-          "en": "desalination",
-          "et": "magestamine"
+          "en": "Ericsson",
+          "et": "Ericsson"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Desalination often uses reverse osmosis, applying pressure above the osmotic pressure.",
-          "et": "Magestamine kasutab sageli pöördosmoosi, rakendades osmootsest rõhust suuremat rõhku."
+          "en": "The source directly supports this identification of Ericsson.",
+          "et": "Allikas toetab otseselt Ericsson tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:desalination",
-          "title": "Desalination",
-          "url": "https://en.wikipedia.org/wiki/Desalination",
+          "sourceId": "wikipedia:ericsson",
+          "title": "ericsson",
+          "url": "https://en.wikipedia.org/wiki/ericsson",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-062",
     "name": {
-      "en": "Messages across Distance",
-      "et": "Sõnumid üle vahemaa"
+      "en": "Travel That Skips the Usual Road",
+      "et": "Reisimine tavapärasest teest mööda"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-062:question:1",
-        "factKey": "built-in-technology-inventions:communication-inventions:medium:device:printing-press",
+        "factKey": "built-in-technology-inventions:travel-skips-road:medium:hovercraft",
         "tier": 1,
-        "subjectKey": "device:printing-press",
+        "subjectKey": "vehicle:hovercraft",
         "clue": {
-          "en": "A communication invention multiplied texts with reusable type and mechanical pressure. Name it.",
-          "et": "Üks sideleiutis paljundas tekste korduskasutatavate trükitüüpide ja mehaanilise survega. Millist vastust otsime?"
+          "en": "This craft rides on a cushion of air and can travel over water, mud, or flat land. What is it called?",
+          "et": "See sõiduk liigub õhkpadjal ning võib sõita vee, muda või tasase maa kohal. Mis sõiduk see on?"
         },
         "response": {
-          "en": "printing press",
-          "et": "trükipress"
+          "en": "hovercraft",
+          "et": "õhkpadjalaev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "air-cushion vehicle"
+          ],
+          "et": [
+            "õhkpadjasõiduk"
+          ]
         },
         "explanation": {
-          "en": "Printing press made movable metal type and oil-based ink a transformative European system.",
-          "et": "Trükipress ühendas Euroopas liikuvad metalltähed ja õlipõhise tindi murranguliseks süsteemiks."
+          "en": "The source directly supports this identification of hovercraft.",
+          "et": "Allikas toetab otseselt õhkpadjalaev tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:printing_press",
-          "title": "Printing press",
-          "url": "https://en.wikipedia.org/wiki/Printing_press",
+          "sourceId": "wikipedia:hovercraft",
+          "title": "hovercraft",
+          "url": "https://en.wikipedia.org/wiki/hovercraft",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-062:question:2",
-        "factKey": "built-in-technology-inventions:communication-inventions:medium:device:electrical-telegraph",
+        "factKey": "built-in-technology-inventions:travel-skips-road:medium:cable-car",
         "tier": 2,
-        "subjectKey": "device:electrical-telegraph",
+        "subjectKey": "vehicle:cable-car",
         "clue": {
-          "en": "Recognise the communication invention that sent coded electrical pulses along wires before voice telephony.",
-          "et": "Otsitav sideleiutis saatis enne kõnetelefoni juhtmeid mööda kodeeritud elektriimpulsse. Mis see on?"
+          "en": "In steep mountain terrain, this passenger vehicle hangs from and is pulled by an overhead cable. Name it.",
+          "et": "Järsul mägismaastikul ripub see reisijasõiduk õhukaabli küljes ja seda veab kaabel. Mis sõiduk see on?"
         },
         "response": {
-          "en": "telegraph",
-          "et": "telegraaf"
+          "en": "cable car",
+          "et": "kaabelraudtee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "aerial tramway"
+          ],
+          "et": [
+            "õhuraudtee"
+          ]
         },
         "explanation": {
-          "en": "Telegraph separated a message from physical transport and often used Morse code.",
-          "et": "Telegraaf lahutas sõnumi füüsilisest veost ning kasutas sageli morsekoodi."
+          "en": "The source directly supports this identification of cable car.",
+          "et": "Allikas toetab otseselt kaabelraudtee tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:electrical_telegraph",
-          "title": "Electrical telegraph",
-          "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+          "sourceId": "wikipedia:cable_car_(railway)",
+          "title": "cable car (railway)",
+          "url": "https://en.wikipedia.org/wiki/cable_car_(railway)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-062:question:3",
-        "factKey": "built-in-technology-inventions:communication-inventions:medium:device:telephone",
+        "factKey": "built-in-technology-inventions:travel-skips-road:medium:funicular",
         "tier": 3,
-        "subjectKey": "device:telephone",
+        "subjectKey": "railway:funicular",
         "clue": {
-          "en": "Identify the communication invention: it transmits two-way speech over distance.",
-          "et": "Mis sideleiutis edastab kõnet kahes suunas üle vahemaa?"
+          "en": "This hillside railway uses two cars on a cable: as one descends, the other is pulled uphill. What is it?",
+          "et": "See nõlvraudtee kasutab kaablil kahte vagunit: kui üks laskub, tõmmatakse teine ülesmäge. Mis see on?"
         },
         "response": {
-          "en": "telephone",
-          "et": "telefon"
+          "en": "funicular",
+          "et": "funikulöör"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "funicular railway"
+          ],
+          "et": [
+            "mäeraudtee"
+          ]
         },
         "explanation": {
-          "en": "Telephone turns sound into an electrical signal and a remote receiver back into sound.",
-          "et": "Telefon muudab heli elektrisignaaliks ning kauge vastuvõtja selle tagasi heliks."
+          "en": "The source directly supports this identification of funicular.",
+          "et": "Allikas toetab otseselt funikulöör tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:telephone",
-          "title": "Telephone",
-          "url": "https://en.wikipedia.org/wiki/Telephone",
+          "sourceId": "wikipedia:funicular",
+          "title": "funicular",
+          "url": "https://en.wikipedia.org/wiki/funicular",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-062:question:4",
-        "factKey": "built-in-technology-inventions:communication-inventions:medium:device:radio",
+        "factKey": "built-in-technology-inventions:travel-skips-road:medium:maglev",
         "tier": 4,
-        "subjectKey": "device:radio",
+        "subjectKey": "transport:maglev",
         "clue": {
-          "en": "A communication invention sends information wirelessly with electromagnetic waves. What term fits?",
-          "et": "Siin kirjeldatud sideleiutis saadab teavet juhtmevabalt elektromagnetlainetega. Mis see on?"
+          "en": "Rather than rolling on wheels, this train is lifted and guided by magnetic forces above its track. Name the technology.",
+          "et": "Ratastel veeremise asemel tõstavad ja juhivad seda rongi rööbastee kohal magnetjõud. Mis tehnoloogia see on?"
         },
         "response": {
-          "en": "radio",
-          "et": "raadio"
+          "en": "maglev",
+          "et": "maglev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "magnetic levitation train"
+          ],
+          "et": [
+            "magnetlevitatsioonrong"
+          ]
         },
         "explanation": {
-          "en": "Radio encodes information by modulating a carrier’s amplitude, frequency, or phase.",
-          "et": "Raadio kodeerib teabe kandelaine amplituudi, sageduse või faasi moduleerimisega."
+          "en": "The source directly supports this identification of maglev.",
+          "et": "Allikas toetab otseselt maglev tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:radio",
-          "title": "Radio",
-          "url": "https://en.wikipedia.org/wiki/Radio",
+          "sourceId": "wikipedia:maglev",
+          "title": "maglev",
+          "url": "https://en.wikipedia.org/wiki/maglev",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-062:question:5",
-        "factKey": "built-in-technology-inventions:communication-inventions:medium:device:television",
+        "factKey": "built-in-technology-inventions:travel-skips-road:medium:snowmobile",
         "tier": 5,
-        "subjectKey": "device:television",
+        "subjectKey": "vehicle:snowmobile",
         "clue": {
-          "en": "Find the communication invention that broadcasts synchronised moving images and sound.",
-          "et": "Sideleiutis edastab sünkroonitud liikuvat pilti ja heli. Leia sobiv vastus."
+          "en": "This motorised vehicle uses skis at the front and a continuous track at the rear to travel over snow. What is it?",
+          "et": "See mootorsõiduk kasutab lumel liikumiseks ees suuski ja taga pidevat roomikut. Mis sõiduk see on?"
         },
         "response": {
-          "en": "television",
-          "et": "televisioon"
+          "en": "snowmobile",
+          "et": "lumesaan"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "motor sled"
+          ],
+          "et": [
+            "mootorsaan"
+          ]
         },
         "explanation": {
-          "en": "Television scans images into a time-varying signal that a receiver reconstructs frame by frame.",
-          "et": "Televisioon skaneerib pildi ajas muutuvaks signaaliks, mille vastuvõtja kaaderhaaval taastab."
+          "en": "The source directly supports this identification of snowmobile.",
+          "et": "Allikas toetab otseselt lumesaan tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:television",
-          "title": "Television",
-          "url": "https://en.wikipedia.org/wiki/Television",
+          "sourceId": "wikipedia:snowmobile",
+          "title": "snowmobile",
+          "url": "https://en.wikipedia.org/wiki/snowmobile",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-063",
     "name": {
-      "en": "Machines That Changed Housework",
-      "et": "Kodutööd muutnud masinad"
+      "en": "Sound Becomes Electricity",
+      "et": "Heli muutub elektriks"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-063:question:1",
-        "factKey": "built-in-technology-inventions:household-machines:medium:device:refrigerator",
+        "factKey": "built-in-technology-inventions:sound-becomes-electricity:medium:microphone",
         "tier": 1,
-        "subjectKey": "device:refrigerator",
+        "subjectKey": "device:microphone",
         "clue": {
-          "en": "A household appliance keeps food cool by moving heat out of an insulated cabinet. What term fits?",
-          "et": "Siin kirjeldatud kodumasin hoiab toidu jahedana, viies soojuse isoleeritud kapist välja. Mis see on?"
+          "en": "Singers speak into this device, which converts sound waves into an electrical signal for recording or amplification. What is it?",
+          "et": "Lauljad räägivad sellesse seadmesse, mis muudab helilained salvestamiseks või võimendamiseks elektrisignaaliks. Mis seade see on?"
         },
         "response": {
-          "en": "refrigerator",
-          "et": "külmkapp"
+          "en": "microphone",
+          "et": "mikrofon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "mic"
+          ],
+          "et": [
+            "mikk"
+          ]
         },
         "explanation": {
-          "en": "Refrigerator uses a vapour-compression cycle with evaporation inside and condensation outside.",
-          "et": "Külmkapp kasutab aurukompressioonitsüklit: aurustumine sees ja kondenseerumine väljas."
+          "en": "The source directly supports this identification of microphone.",
+          "et": "Allikas toetab otseselt mikrofon tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:refrigerator",
-          "title": "Refrigerator",
-          "url": "https://en.wikipedia.org/wiki/Refrigerator",
+          "sourceId": "wikipedia:microphone",
+          "title": "microphone",
+          "url": "https://en.wikipedia.org/wiki/microphone",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-063:question:2",
-        "factKey": "built-in-technology-inventions:household-machines:medium:device:washing-machine",
+        "factKey": "built-in-technology-inventions:sound-becomes-electricity:medium:loudspeaker",
         "tier": 2,
-        "subjectKey": "device:washing-machine",
+        "subjectKey": "device:loudspeaker",
         "clue": {
-          "en": "This household appliance agitates or tumbles clothes in water and detergent. What is it?",
-          "et": "See kodumasin liigutab või pöörab riideid vees ja pesuaines. Mis see on?"
+          "en": "The cone in this device vibrates to turn an electrical audio signal back into audible sound. Name it.",
+          "et": "Selle seadme membraan võngub, et muuta elektriline helisignaal jälle kuuldavaks heliks. Mis seade see on?"
         },
         "response": {
-          "en": "washing machine",
-          "et": "pesumasin"
+          "en": "loudspeaker",
+          "et": "kõlar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "speaker"
+          ],
+          "et": [
+            "speaker"
+          ]
         },
         "explanation": {
-          "en": "Washing machine uses a fast spin to remove water by inertia through drum holes.",
-          "et": "Pesumasin eemaldab kiire tsentrifuugiga vee inertsuse abil läbi trumliavade."
+          "en": "The source directly supports this identification of loudspeaker.",
+          "et": "Allikas toetab otseselt kõlar tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:washing_machine",
-          "title": "Washing machine",
-          "url": "https://en.wikipedia.org/wiki/Washing_machine",
+          "sourceId": "wikipedia:loudspeaker",
+          "title": "loudspeaker",
+          "url": "https://en.wikipedia.org/wiki/loudspeaker",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-063:question:3",
-        "factKey": "built-in-technology-inventions:household-machines:medium:device:vacuum-cleaner",
+        "factKey": "built-in-technology-inventions:sound-becomes-electricity:medium:synthesizer",
         "tier": 3,
-        "subjectKey": "device:vacuum-cleaner",
+        "subjectKey": "instrument:synthesizer",
         "clue": {
-          "en": "What household appliance uses moving air to collect dust from floors?",
-          "et": "Järgmine kodumasin kasutab põrandalt tolmu kogumiseks liikuvat õhku. Milline see on?"
+          "en": "This electronic instrument can generate and shape sounds with oscillators and filters rather than vibrating strings or air columns. What is it?",
+          "et": "See elektrooniline instrument saab tekitada ja kujundada helisid ostsillaatorite ja filtritega, mitte keelte või õhusammaste võnkumise abil. Mis instrument see on?"
         },
         "response": {
-          "en": "vacuum cleaner",
-          "et": "tolmuimeja"
+          "en": "synthesizer",
+          "et": "süntesaator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "synth"
+          ],
+          "et": [
+            "sünt"
+          ]
         },
         "explanation": {
-          "en": "Vacuum cleaner creates a pressure difference with a fan rather than producing a perfect vacuum.",
-          "et": "Tolmuimeja tekitab ventilaatoriga rõhuerinevuse ega loo täiuslikku vaakumit."
+          "en": "The source directly supports this identification of synthesizer.",
+          "et": "Allikas toetab otseselt süntesaator tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:vacuum_cleaner",
-          "title": "Vacuum cleaner",
-          "url": "https://en.wikipedia.org/wiki/Vacuum_cleaner",
+          "sourceId": "wikipedia:synthesizer",
+          "title": "synthesizer",
+          "url": "https://en.wikipedia.org/wiki/synthesizer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-063:question:4",
-        "factKey": "built-in-technology-inventions:household-machines:medium:device:microwave-oven",
+        "factKey": "built-in-technology-inventions:sound-becomes-electricity:medium:drum-machine",
         "tier": 4,
-        "subjectKey": "device:microwave-oven",
+        "subjectKey": "instrument:drum-machine",
         "clue": {
-          "en": "Name the household appliance that heats food with radio-frequency electromagnetic energy.",
-          "et": "Vihjes kirjeldatud kodumasin kuumutab toitu raadiosagedusliku elektromagnetenergiaga. Mis see on?"
+          "en": "A producer can programme this electronic instrument to play repeating percussion patterns without a drummer. What is it?",
+          "et": "Produtsent saab programmeerida selle elektroonilise instrumendi mängima korduvaid löökpillirütme ilma trummarita. Mis instrument see on?"
         },
         "response": {
-          "en": "microwave oven",
-          "et": "mikrolaineahi"
+          "en": "drum machine",
+          "et": "trummimasin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Microwave oven drives rotational motion of polar molecules, with water contributing strongly.",
-          "et": "Mikrolaineahi paneb polaarsed molekulid pöörlema, kusjuures vesi annab suure panuse."
+          "en": "The source directly supports this identification of drum machine.",
+          "et": "Allikas toetab otseselt trummimasin tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:microwave_oven",
-          "title": "Microwave oven",
-          "url": "https://en.wikipedia.org/wiki/Microwave_oven",
+          "sourceId": "wikipedia:drum_machine",
+          "title": "drum machine",
+          "url": "https://en.wikipedia.org/wiki/drum_machine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-063:question:5",
-        "factKey": "built-in-technology-inventions:household-machines:medium:device:sewing-machine",
+        "factKey": "built-in-technology-inventions:sound-becomes-electricity:medium:vocoder",
         "tier": 5,
-        "subjectKey": "device:sewing-machine",
+        "subjectKey": "technology:vocoder",
         "clue": {
-          "en": "Find the household appliance that mechanises stitching fabric with thread.",
-          "et": "Kodumasin mehhaniseerib kanga niidiga õmblemise. Leia sobiv vastus."
+          "en": "This device analyses a voice and uses that information to impose speech-like qualities on another sound, producing a robotic vocal effect. Name it.",
+          "et": "See seade analüüsib häält ja kasutab saadud teavet, et anda teisele helile kõnelaadsed omadused ning luua robotliku vokaalefekti. Mis seade see on?"
         },
         "response": {
-          "en": "sewing machine",
-          "et": "õmblusmasin"
+          "en": "vocoder",
+          "et": "vokooder"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sewing machine commonly interlocks a top thread with a bobbin thread in a lockstitch.",
-          "et": "Õmblusmasin põimib lukkpistes tavaliselt ülemise niidi pooliniidiga."
+          "en": "The source directly supports this identification of vocoder.",
+          "et": "Allikas toetab otseselt vokooder tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:sewing_machine",
-          "title": "Sewing machine",
-          "url": "https://en.wikipedia.org/wiki/Sewing_machine",
+          "sourceId": "wikipedia:vocoder",
+          "title": "vocoder",
+          "url": "https://en.wikipedia.org/wiki/vocoder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-064",
     "name": {
-      "en": "Ways Humans Kept Time",
-      "et": "Kuidas inimesed aega mõõtsid"
+      "en": "Pictures That Learned to Move",
+      "et": "Pildid, mis õppisid liikuma"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-064:question:1",
-        "factKey": "built-in-technology-inventions:timekeeping:medium:device:sundial",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:zoetrope",
         "tier": 1,
-        "subjectKey": "device:sundial",
+        "subjectKey": "device:zoetrope",
         "clue": {
-          "en": "One timekeeping device uses a shadow cast by the Sun to show local solar time. Which one is described?",
-          "et": "Ajanäitaja näitab Päikese heidetud varju abil kohalikku päikeseaega. Mis see on?"
+          "en": "When spun, this Victorian drum with a strip of drawings makes them appear to move through slits in its side. What is it?",
+          "et": "Pöörlemisel paneb see viktoriaanlik joonistusribaga trummel külgedel olevate pilude kaudu pildid näiliselt liikuma. Mis seade see on?"
         },
         "response": {
-          "en": "sundial",
-          "et": "päikesekell"
+          "en": "zoetrope",
+          "et": "zoetroop"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sundial needs its gnomon aligned with Earth’s rotational axis for an equatorial hour scale.",
-          "et": "Päikesekell vajab ekvatoriaalse tunniskaala puhul gnoomoni joondamist Maa pöörlemisteljega."
+          "en": "The source directly supports this identification of zoetrope.",
+          "et": "Allikas toetab otseselt zoetroop tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:sundial",
-          "title": "Sundial",
-          "url": "https://en.wikipedia.org/wiki/Sundial",
+          "sourceId": "wikipedia:zoetrope",
+          "title": "zoetrope",
+          "url": "https://en.wikipedia.org/wiki/zoetrope",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-064:question:2",
-        "factKey": "built-in-technology-inventions:timekeeping:medium:device:pendulum-clock",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:stop-motion-animation",
         "tier": 2,
-        "subjectKey": "device:pendulum-clock",
+        "subjectKey": "technique:stop-motion-animation",
         "clue": {
-          "en": "Identify this timekeeping device: it regulates a mechanical clock with a swinging weight.",
-          "et": "Kirjeldatud ajanäitaja reguleerib mehaanilist kella võnkuva raskusega. Mis on selle nimi?"
+          "en": "In this animation technique, a model is moved a little between separate photographs so it appears to move when the images are played in sequence. Name it.",
+          "et": "Selles animatsioonitehnikas liigutatakse mudelit üksikute fotode vahel veidi, nii et pildijada esitamisel näib see liikuvat. Mis tehnika see on?"
         },
         "response": {
-          "en": "pendulum clock",
-          "et": "pendelkell"
+          "en": "stop-motion animation",
+          "et": "kaaderhaaval animatsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "stop motion"
+          ],
+          "et": [
+            "stop-motion-animatsioon"
+          ]
         },
         "explanation": {
-          "en": "Pendulum clock gained accuracy because a pendulum’s small-swing period is nearly constant.",
-          "et": "Pendelkell sai täpsuse pendli väikeste võngete peaaegu püsivast perioodist."
+          "en": "The source directly supports this identification of stop-motion animation.",
+          "et": "Allikas toetab otseselt kaaderhaaval animatsioon tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:pendulum_clock",
-          "title": "Pendulum clock",
-          "url": "https://en.wikipedia.org/wiki/Pendulum_clock",
+          "sourceId": "wikipedia:stop_motion",
+          "title": "stop motion",
+          "url": "https://en.wikipedia.org/wiki/stop_motion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-064:question:3",
-        "factKey": "built-in-technology-inventions:timekeeping:medium:device:quartz-clock",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:animatronics",
         "tier": 3,
-        "subjectKey": "device:quartz-clock",
+        "subjectKey": "technology:animatronics",
         "clue": {
-          "en": "Which timekeeping device keeps time with an electrically driven crystal oscillator?",
-          "et": "Tuvasta järgmine ajanäitaja: see hoiab aega elektriliselt ergastatud kristallvõnkuriga."
+          "en": "Theme parks use this technology to give robotic figures lifelike movement, often combining mechanics, electronics, and control systems. What is it?",
+          "et": "Teemapargid kasutavad seda tehnoloogiat, et anda robotkujudele elutruu liikumine, ühendades sageli mehaanika, elektroonika ja juhtsüsteemid. Mis tehnoloogia see on?"
         },
         "response": {
-          "en": "quartz clock",
-          "et": "kvartskell"
+          "en": "animatronics",
+          "et": "animatroonika"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Quartz clock uses quartz piezoelectric resonance, commonly at 32,768 hertz in watches.",
-          "et": "Kvartskell kasutab kvartsi piesoelektrilist resonantsi, käekellades sageli 32 768 hertsi."
+          "en": "The source directly supports this identification of animatronics.",
+          "et": "Allikas toetab otseselt animatroonika tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:quartz_clock",
-          "title": "Quartz clock",
-          "url": "https://en.wikipedia.org/wiki/Quartz_clock",
+          "sourceId": "wikipedia:animatronics",
+          "title": "animatronics",
+          "url": "https://en.wikipedia.org/wiki/animatronics",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-064:question:4",
-        "factKey": "built-in-technology-inventions:timekeeping:medium:device:atomic-clock",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:cinematograph",
         "tier": 4,
-        "subjectKey": "device:atomic-clock",
+        "subjectKey": "device:cinematograph",
         "clue": {
-          "en": "One timekeeping device keeps extraordinarily stable time from an atomic transition. Which one is described?",
-          "et": "Ajanäitaja hoiab erakordselt stabiilset aega aatomiülemineku abil. Mis see on?"
+          "en": "The Lumière brothers used this machine to record, develop, and project early motion pictures. What was it called?",
+          "et": "Vennad Lumière’id kasutasid seda masinat varajaste liikuvate piltide salvestamiseks, ilmutamiseks ja projitseerimiseks. Mis masina nimi see oli?"
         },
         "response": {
-          "en": "atomic clock",
-          "et": "aatomkell"
+          "en": "cinematograph",
+          "et": "kinematograaf"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Atomic clock tunes an oscillator to a caesium or other atom’s resonance frequency.",
-          "et": "Aatomkell häälestab võnkuri tseesiumi või muu aatomi resonantssagedusele."
+          "en": "The source directly supports this identification of cinematograph.",
+          "et": "Allikas toetab otseselt kinematograaf tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:atomic_clock",
-          "title": "Atomic clock",
-          "url": "https://en.wikipedia.org/wiki/Atomic_clock",
+          "sourceId": "wikipedia:cinématographe",
+          "title": "cinématographe",
+          "url": "https://en.wikipedia.org/wiki/cinématographe",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-064:question:5",
-        "factKey": "built-in-technology-inventions:timekeeping:medium:device:mechanical-watch",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:hologram",
         "tier": 5,
-        "subjectKey": "device:mechanical-watch",
+        "subjectKey": "image:hologram",
         "clue": {
-          "en": "This timekeeping device runs from a wound spring without a battery. What is it?",
-          "et": "See ajanäitaja töötab üleskeeratud vedruga ilma patareita. Mis see on?"
+          "en": "This three-dimensional-looking image is made by recording the interference pattern of laser light. What is it?",
+          "et": "See ruumilise muljega kujutis luuakse laserivalguse interferentsimustri salvestamisega. Mis kujutis see on?"
         },
         "response": {
-          "en": "mechanical watch",
-          "et": "mehaaniline käekell"
+          "en": "hologram",
+          "et": "hologram"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "holographic image"
+          ],
+          "et": [
+            "holograafiline kujutis"
+          ]
         },
         "explanation": {
-          "en": "Mechanical watch meters the mainspring through an escapement and balance-wheel oscillator.",
-          "et": "Mehaaniline käekell doseerib vedru energiat ankru ja balanssvõnkuri kaudu."
+          "en": "The source directly supports this identification of hologram.",
+          "et": "Allikas toetab otseselt hologram tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:mechanical_watch",
-          "title": "Mechanical watch",
-          "url": "https://en.wikipedia.org/wiki/Mechanical_watch",
+          "sourceId": "wikipedia:holography",
+          "title": "holography",
+          "url": "https://en.wikipedia.org/wiki/holography",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-065",
     "name": {
-      "en": "From Dark Room to Digital Image",
-      "et": "Pimedast ruumist digipildini"
+      "en": "Power from the Elements",
+      "et": "Energia loodusjõududest"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-065:question:1",
-        "factKey": "built-in-technology-inventions:photography:medium:device:camera-obscura",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:wind-turbine",
         "tier": 1,
-        "subjectKey": "device:camera-obscura",
+        "subjectKey": "device:wind-turbine",
         "clue": {
-          "en": "A photographic technology projects an inverted scene through a small hole into a dark space. Name it.",
-          "et": "Üks fototehnoloogia projitseerib väikese ava kaudu pimedasse ruumi ümberpööratud vaate. Millist vastust otsime?"
+          "en": "This machine uses blades turned by wind to drive a generator and produce electricity. What is it?",
+          "et": "See masin kasutab tuule pööratavaid labasid generaatori käitamiseks ja elektri tootmiseks. Mis masin see on?"
         },
         "response": {
-          "en": "camera obscura",
-          "et": "camera obscura"
+          "en": "wind turbine",
+          "et": "tuulegeneraator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "wind generator"
+          ],
+          "et": [
+            "tuulik"
+          ]
         },
         "explanation": {
-          "en": "Camera obscura forms an image without recording it and gave the camera its name.",
-          "et": "Camera obscura moodustab pildi seda salvestamata ning andis kaamerale nime."
+          "en": "The source directly supports this identification of wind turbine.",
+          "et": "Allikas toetab otseselt tuulegeneraator tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:camera_obscura",
-          "title": "Camera obscura",
-          "url": "https://en.wikipedia.org/wiki/Camera_obscura",
+          "sourceId": "wikipedia:wind_turbine",
+          "title": "wind turbine",
+          "url": "https://en.wikipedia.org/wiki/wind_turbine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-065:question:2",
-        "factKey": "built-in-technology-inventions:photography:medium:technology:daguerreotype",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:solar-panel",
         "tier": 2,
-        "subjectKey": "technology:daguerreotype",
+        "subjectKey": "device:solar-panel",
         "clue": {
-          "en": "Find the photographic technology that made a unique early photograph on a silvered copper plate.",
-          "et": "Fototehnoloogia tegi ainulaadse varase foto hõbetatud vaskplaadile. Leia sobiv vastus."
+          "en": "Rooftop modules made of photovoltaic cells turn sunlight directly into electricity. What are they called?",
+          "et": "Katustel olevad fotogalvaanilistest elementidest moodulid muudavad päikesevalguse otse elektriks. Mis need on?"
         },
         "response": {
-          "en": "daguerreotype",
-          "et": "dagerrotüüp"
+          "en": "solar panel",
+          "et": "päikesepaneel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "photovoltaic panel"
+          ],
+          "et": [
+            "päikesepatarei"
+          ]
         },
         "explanation": {
-          "en": "Daguerreotype produced no negative, so the finely detailed image could not be directly multiplied.",
-          "et": "Dagerrotüüp ei loonud negatiivi, mistõttu peent pilti ei saanud otse paljundada."
+          "en": "The source directly supports this identification of solar panel.",
+          "et": "Allikas toetab otseselt päikesepaneel tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:daguerreotype",
-          "title": "Daguerreotype",
-          "url": "https://en.wikipedia.org/wiki/Daguerreotype",
+          "sourceId": "wikipedia:solar_panel",
+          "title": "solar panel",
+          "url": "https://en.wikipedia.org/wiki/solar_panel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-065:question:3",
-        "factKey": "built-in-technology-inventions:photography:medium:medium:photographic-film",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:geothermal-energy",
         "tier": 3,
-        "subjectKey": "medium:photographic-film",
+        "subjectKey": "energy:geothermal-energy",
         "clue": {
-          "en": "Identify the photographic technology: it records images in a light-sensitive emulsion on a flexible strip.",
-          "et": "Mis fototehnoloogia salvestab pildid painduva lindi valgustundlikku emulsiooni?"
+          "en": "Iceland taps this energy source by using heat from beneath Earth’s surface for heating and electricity. What is it?",
+          "et": "Island kasutab seda energiaallikat Maa pinna alt tuleva soojuse abil kütteks ja elektri tootmiseks. Mis energiaallikas see on?"
         },
         "response": {
-          "en": "photographic film",
-          "et": "fotofilm"
+          "en": "geothermal energy",
+          "et": "geotermaalenergia"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Photographic film uses silver-halide crystals that development turns into metallic-silver patterns.",
-          "et": "Fotofilm kasutab hõbehalogeniidi kristalle, mille ilmutus muudab metallhõbeda mustriks."
+          "en": "The source directly supports this identification of geothermal energy.",
+          "et": "Allikas toetab otseselt geotermaalenergia tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:photographic_film",
-          "title": "Photographic film",
-          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "sourceId": "wikipedia:geothermal_energy",
+          "title": "geothermal energy",
+          "url": "https://en.wikipedia.org/wiki/geothermal_energy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-065:question:4",
-        "factKey": "built-in-technology-inventions:photography:medium:device:ccd-sensor",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:hydroelectricity",
         "tier": 4,
-        "subjectKey": "device:ccd-sensor",
+        "subjectKey": "energy:hydroelectricity",
         "clue": {
-          "en": "Name the photographic technology that is an image sensor that shifts collected charge across a chip for readout.",
-          "et": "Vihjes kirjeldatud fototehnoloogia on pildiandur, mis nihutab kogutud laengut lugemiseks üle kiibi. Mis see on?"
+          "en": "At a dam, falling or flowing water turns turbines to generate this form of electricity. What is it called?",
+          "et": "Tammis paneb langev või voolav vesi turbiinid pöörlema, et toota seda liiki elektrit. Mis see on?"
         },
         "response": {
-          "en": "CCD",
-          "et": "CCD"
+          "en": "hydroelectricity",
+          "et": "hüdroelekter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "hydropower"
+          ],
+          "et": [
+            "hüdroenergia"
+          ]
         },
         "explanation": {
-          "en": "CCD transfers pixel packets sequentially, unlike active-pixel CMOS readout.",
-          "et": "CCD edastab pikslilaengud järjestikku, erinevalt aktiivpiksliga CMOS-lugemisest."
+          "en": "The source directly supports this identification of hydroelectricity.",
+          "et": "Allikas toetab otseselt hüdroelekter tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:charge-coupled_device",
-          "title": "Charge-coupled device",
-          "url": "https://en.wikipedia.org/wiki/Charge-coupled_device",
+          "sourceId": "wikipedia:hydroelectricity",
+          "title": "hydroelectricity",
+          "url": "https://en.wikipedia.org/wiki/hydroelectricity",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-065:question:5",
-        "factKey": "built-in-technology-inventions:photography:medium:device:digital-camera",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:tidal-power",
         "tier": 5,
-        "subjectKey": "device:digital-camera",
+        "subjectKey": "energy:tidal-power",
         "clue": {
-          "en": "Find the photographic technology that records photographs electronically instead of on chemical film.",
-          "et": "Fototehnoloogia salvestab fotod keemilise filmi asemel elektrooniliselt. Leia sobiv vastus."
+          "en": "This renewable energy source uses the regular rise and fall of the sea caused mainly by the Moon’s gravity. Name it.",
+          "et": "See taastuv energiaallikas kasutab peamiselt Kuu gravitatsiooni põhjustatud mere korrapärast tõusu ja mõõna. Mis energiaallikas see on?"
         },
         "response": {
-          "en": "digital camera",
-          "et": "digikaamera"
+          "en": "tidal power",
+          "et": "loodete energia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tidal energy"
+          ],
+          "et": [
+            "loodenergia"
+          ]
         },
         "explanation": {
-          "en": "Digital camera converts sensor charge through analogue-to-digital processing into image data.",
-          "et": "Digikaamera muudab anduri laengu analoog-digitaal­töötlusega pildiandmeteks."
+          "en": "The source directly supports this identification of tidal power.",
+          "et": "Allikas toetab otseselt loodete energia tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:digital_camera",
-          "title": "Digital camera",
-          "url": "https://en.wikipedia.org/wiki/Digital_camera",
+          "sourceId": "wikipedia:tidal_power",
+          "title": "tidal power",
+          "url": "https://en.wikipedia.org/wiki/tidal_power",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-066",
     "name": {
-      "en": "Engineering That Prevents Injury",
-      "et": "Vigastusi ennetav inseneeria"
+      "en": "Machines That Make Machines",
+      "et": "Masinad, mis teevad masinaid"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-066:question:1",
-        "factKey": "built-in-technology-inventions:safety-engineering:medium:device:seat-belt",
+        "factKey": "built-in-technology-inventions:machines-make-machines:medium:three-d-printer",
         "tier": 1,
-        "subjectKey": "device:seat-belt",
+        "subjectKey": "device:3d-printer",
         "clue": {
-          "en": "Name the safety device that restrains a vehicle occupant during a sudden stop.",
-          "et": "Vihjes kirjeldatud ohutusseade hoiab sõidukis viibijat äkkpeatuse ajal kinni. Mis see on?"
+          "en": "This machine builds a physical object layer by layer from a digital design, often by depositing melted material. What is it?",
+          "et": "See masin ehitab digitaalse kavandi järgi füüsilise eseme kiht kihi haaval, sageli sulamaterjali lisades. Mis masin see on?"
         },
         "response": {
-          "en": "seat belt",
-          "et": "turvavöö"
+          "en": "3D printer",
+          "et": "3D-printer"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "three-dimensional printer"
+          ],
+          "et": [
+            "kolmemõõtmeline printer"
+          ]
         },
         "explanation": {
-          "en": "Seat belt spreads force over stronger body regions while limiting contact with the interior.",
-          "et": "Turvavöö jaotab jõu tugevamatele kehapiirkondadele ning piirab kokkupõrget salongiga."
+          "en": "The source directly supports this identification of 3D printer.",
+          "et": "Allikas toetab otseselt 3D-printer tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:seat_belt",
-          "title": "Seat belt",
-          "url": "https://en.wikipedia.org/wiki/Seat_belt",
+          "sourceId": "wikipedia:3D_printing",
+          "title": "3D printing",
+          "url": "https://en.wikipedia.org/wiki/3D_printing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-066:question:2",
-        "factKey": "built-in-technology-inventions:safety-engineering:medium:device:airbag",
+        "factKey": "built-in-technology-inventions:machines-make-machines:medium:laser-cutter",
         "tier": 2,
-        "subjectKey": "device:airbag",
+        "subjectKey": "device:laser-cutter",
         "clue": {
-          "en": "Identify this safety device: it inflates rapidly to cushion a vehicle occupant in a crash.",
-          "et": "Kirjeldatud ohutusseade täitub avariis kiiresti, et sõitjat pehmendada. Mis on selle nimi?"
+          "en": "A focused beam of light lets this computer-controlled machine cut detailed shapes in wood, acrylic, or metal. What is it?",
+          "et": "Fokusseeritud valguskiir võimaldab sellel arvutiga juhitaval masinal lõigata detailseid kujundeid puidust, akrüülist või metallist. Mis masin see on?"
         },
         "response": {
-          "en": "airbag",
-          "et": "turvapadi"
+          "en": "laser cutter",
+          "et": "laserlõikur"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Airbag supplements rather than replaces the belt and vents as the occupant loads it.",
-          "et": "Turvapadi täiendab, mitte ei asenda turvavööd ning laseb koormumisel gaasi välja."
+          "en": "The source directly supports this identification of laser cutter.",
+          "et": "Allikas toetab otseselt laserlõikur tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:airbag",
-          "title": "Airbag",
-          "url": "https://en.wikipedia.org/wiki/Airbag",
+          "sourceId": "wikipedia:laser_cutting",
+          "title": "laser cutting",
+          "url": "https://en.wikipedia.org/wiki/laser_cutting",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-066:question:3",
-        "factKey": "built-in-technology-inventions:safety-engineering:medium:device:smoke-detector",
+        "factKey": "built-in-technology-inventions:machines-make-machines:medium:cnc-machine",
         "tier": 3,
-        "subjectKey": "device:smoke-detector",
+        "subjectKey": "machine:cnc-machine",
         "clue": {
-          "en": "What safety device sounds an alarm when it senses combustion particles?",
-          "et": "Järgmine ohutusseade annab häire, kui tajub põlemisosakesi. Milline see on?"
+          "en": "Its name means “computer numerical control”: this machine follows coded instructions to cut or shape parts with high precision. What kind of machine is it?",
+          "et": "Selle nime lühend tähendab „arvutiga arvjuhtimist”: see masin järgib kodeeritud juhiseid, et lõigata või vormida detaile suure täpsusega. Mis tüüpi masin see on?"
         },
         "response": {
-          "en": "smoke detector",
-          "et": "suitsuandur"
+          "en": "CNC machine",
+          "et": "CNC-pink"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "computer numerical control machine"
+          ],
+          "et": [
+            "arvjuhtimispink"
+          ]
         },
         "explanation": {
-          "en": "Smoke detector may use light scattering in an optical chamber or ion-current change.",
-          "et": "Suitsuandur võib kasutada valguse hajumist optilises kambris või ioonvoolu muutust."
+          "en": "The source directly supports this identification of CNC machine.",
+          "et": "Allikas toetab otseselt CNC-pink tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:smoke_detector",
-          "title": "Smoke detector",
-          "url": "https://en.wikipedia.org/wiki/Smoke_detector",
+          "sourceId": "wikipedia:numerical_control",
+          "title": "numerical control",
+          "url": "https://en.wikipedia.org/wiki/numerical_control",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-066:question:4",
-        "factKey": "built-in-technology-inventions:safety-engineering:medium:device:safety-valve",
+        "factKey": "built-in-technology-inventions:machines-make-machines:medium:industrial-robot",
         "tier": 4,
-        "subjectKey": "device:safety-valve",
+        "subjectKey": "machine:industrial-robot",
         "clue": {
-          "en": "One safety device opens automatically when vessel pressure becomes dangerous. Which one is described?",
-          "et": "Ohutusseade avaneb automaatselt, kui anuma rõhk muutub ohtlikuks. Mis see on?"
+          "en": "On an assembly line, this programmable automated machine may weld, paint, or move parts repeatedly and precisely. What is it?",
+          "et": "Koosteliinil võib see programmeeritav automatiseeritud masin detaile korduvalt ja täpselt keevitada, värvida või liigutada. Mis masin see on?"
         },
         "response": {
-          "en": "safety valve",
-          "et": "kaitseklapp"
+          "en": "industrial robot",
+          "et": "tööstusrobot"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Safety valve is spring-loaded to reseat after relieving excess pressure.",
-          "et": "Kaitseklapp on vedruga koormatud, et pärast liigse rõhu vabastamist uuesti sulguda."
+          "en": "The source directly supports this identification of industrial robot.",
+          "et": "Allikas toetab otseselt tööstusrobot tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:safety_valve",
-          "title": "Safety valve",
-          "url": "https://en.wikipedia.org/wiki/Safety_valve",
+          "sourceId": "wikipedia:industrial_robot",
+          "title": "industrial robot",
+          "url": "https://en.wikipedia.org/wiki/industrial_robot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-066:question:5",
-        "factKey": "built-in-technology-inventions:safety-engineering:medium:device:circuit-breaker",
+        "factKey": "built-in-technology-inventions:machines-make-machines:medium:robotic-arm",
         "tier": 5,
-        "subjectKey": "device:circuit-breaker",
+        "subjectKey": "machine:robotic-arm",
         "clue": {
-          "en": "Identify this safety device: it interrupts an electrical circuit during overload or fault.",
-          "et": "Kirjeldatud ohutusseade katkestab elektriahela ülekoormuse või rikke korral. Mis on selle nimi?"
+          "en": "This articulated mechanical arm can copy movements or be programmed to handle tools and components where a human operator cannot safely reach. Name it.",
+          "et": "See liigendatud mehaaniline käsivars võib liigutusi kopeerida või olla programmeeritud tööriistu ja detaile käsitsema kohtades, kuhu inimene ei pääse ohutult ligi. Mis see on?"
         },
         "response": {
-          "en": "circuit breaker",
-          "et": "kaitselüliti"
+          "en": "robotic arm",
+          "et": "robotkäsi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "robot arm"
+          ],
+          "et": [
+            "robotiline käsivars"
+          ]
         },
         "explanation": {
-          "en": "Circuit breaker can be reset after tripping, unlike a sacrificial fuse.",
-          "et": "Kaitselüliti saab pärast rakendumist lähtestada, erinevalt ühekordsest kaitsmest."
+          "en": "The source directly supports this identification of robotic arm.",
+          "et": "Allikas toetab otseselt robotkäsi tuvastamist."
         },
         "source": {
-          "sourceId": "wikipedia:circuit_breaker",
-          "title": "Circuit breaker",
-          "url": "https://en.wikipedia.org/wiki/Circuit_breaker",
+          "sourceId": "wikipedia:robotic_arm",
+          "title": "robotic arm",
+          "url": "https://en.wikipedia.org/wiki/robotic_arm",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
+
   {
     "categorySetId": "built-in-technology-inventions-set-067",
     "name": {
