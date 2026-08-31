@@ -10960,7 +10960,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "liiklusjärelevalvekaamera"
         },
         "acceptedVariants": {
-          "en": ["traffic camera"],
+          "en": ["red-light camera"],
           "et": ["liikluskaamera"]
         },
         "explanation": {
@@ -10998,7 +10998,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "lennurada"
         },
         "acceptedVariants": {
-          "en": ["airstrip"],
+          "en": ["airport runway"],
           "et": ["stardi- ja maandumisrada"]
         },
         "explanation": {
@@ -11078,7 +11078,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "building:control-tower",
         "clue": {
           "en": "Controllers can see over the airfield from this tall airport building and give pilots instructions. What is it?",
-          "et": "Lennujuhid näevad selle kõrge lennujaamahoone juurest üle lennuvälja ja annavad pilootidele juhiseid. Mis hoone see on?"
+          "et": "Lennujuhid näevad selle kõrge lennujaamahoone tornist üle lennuvälja ja annavad pilootidele juhiseid. Mis hoone see on?"
         },
         "response": {
           "en": "control tower",
@@ -11222,7 +11222,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "shipping pallet"
           ],
           "et": [
-            "alus"
+            "veoalus"
           ]
         },
         "explanation": {
@@ -11415,69 +11415,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-052:question:4",
-        "factKey": "built-in-technology-inventions:automated-payment:medium:method:contactless-payment",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:service:online-banking",
         "tier": 4,
-        "subjectKey": "method:contactless-payment",
-        "clue": {
-          "en": "Holding a card, phone, or watch close to a reader can pay for a small purchase without inserting the card. What method is this?",
-          "et": "Kaardi, telefoni või kella lugeja lähedal hoidmisega saab väikese ostu eest maksta ilma kaarti sisestamata. Mis makseviis see on?"
-        },
-        "response": {
-          "en": "contactless payment",
-          "et": "viipemakse"
-        },
-        "acceptedVariants": {
-          "en": [
-            "tap to pay"
-          ],
-          "et": [
-            "viipemaksmine"
-          ]
-        },
-        "explanation": {
-          "en": "Contactless payment transfers payment data over a short-range wireless connection when the device is brought near a reader.",
-          "et": "Viipemakse edastab makseandmed lähitoimelise juhtmevaba ühenduse kaudu, kui seade tuuakse lugeja lähedale."
-        },
-        "source": {
-          "sourceId": "wikipedia:contactless_payment",
-          "title": "Contactless payment",
-          "url": "https://en.wikipedia.org/wiki/contactless_payment",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
+        "subjectKey": "service:online-banking",
+        "clue": { "en": "This service lets customers check accounts, transfer money, and pay bills through a bank’s website or app. What is it?", "et": "See teenus võimaldab pangakonto saldot vaadata, raha üle kanda ja arveid maksta panga veebisaidil või rakenduses. Mis see on?" },
+        "response": { "en": "online banking", "et": "internetipank" },
+        "acceptedVariants": { "en": ["internet banking"], "et": ["veebipank"] },
+        "explanation": { "en": "Online banking provides banking services through the internet instead of only at a branch.", "et": "Internetipank pakub pangateenuseid interneti kaudu, mitte ainult pangakontoris." },
+        "source": { "sourceId": "wikipedia:online_banking", "title": "Online banking", "url": "https://en.wikipedia.org/wiki/Online_banking", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:5",
-        "factKey": "built-in-technology-inventions:automated-payment:medium:system:self-checkout",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:service:payment-gateway",
         "tier": 5,
-        "subjectKey": "system:self-checkout",
-        "clue": {
-          "en": "In this shop system, a customer scans and pays for goods without a cashier processing each item. What is it?",
-          "et": "Selles poesüsteemis skannib ja maksab klient kaupade eest ise, ilma et kassapidaja iga toodet töötleks. Mis süsteem see on?"
-        },
-        "response": {
-          "en": "self-checkout",
-          "et": "iseteeninduskassa"
-        },
-        "acceptedVariants": {
-          "en": [
-            "self-service checkout"
-          ],
-          "et": [
-            "iseteenindus"
-          ]
-        },
-        "explanation": {
-          "en": "A self-checkout lets customers scan and pay for their own purchases at an automated station.",
-          "et": "Iseteeninduskassa võimaldab kliendil automaatses punktis oma ostud ise skannida ja nende eest maksta."
-        },
-        "source": {
-          "sourceId": "wikipedia:self-checkout",
-          "title": "Self-checkout",
-          "url": "https://en.wikipedia.org/wiki/self-checkout",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
+        "subjectKey": "service:payment-gateway",
+        "clue": { "en": "An online shop sends card details through this service so the payment can be authorised between the customer, merchant, and bank. What is it?", "et": "Veebipood saadab selle teenuse kaudu kaardiandmed, et makse saaks kliendi, kaupmehe ja panga vahel autoriseerida. Mis teenus see on?" },
+        "response": { "en": "payment gateway", "et": "maksevärav" },
+        "acceptedVariants": { "en": ["online payment gateway"], "et": ["makseteenuse värav"] },
+        "explanation": { "en": "A payment gateway securely transmits payment information between an online merchant and payment processors.", "et": "Maksevärav edastab makseandmeid turvaliselt veebikaupmehe ja maksetöötlejate vahel." },
+        "source": { "sourceId": "wikipedia:payment_gateway", "title": "Payment gateway", "url": "https://en.wikipedia.org/wiki/Payment_gateway", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       }
     ]
   },
@@ -11494,8 +11450,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "test:captcha",
         "clue": {
-          "en": "A website asks you to identify letters or pictures to show that you are a person rather than an automated program. What is this test?",
-          "et": "Veebisait palub sul valida tähti või pilte, et näidata, et oled inimene, mitte automaatne programm. Mis test see on?"
+          "en": "A website may ask you to identify distorted letters or select matching pictures to show that you are a person rather than an automated program. What is this test?",
+          "et": "Veebisait võib paluda sul tuvastada moonutatud tähti või valida sobivaid pilte, et näidata, et oled inimene, mitte automaatne programm. Mis test see on?"
         },
         "response": {
           "en": "CAPTCHA",
@@ -11622,8 +11578,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "protocol:https",
         "clue": {
-          "en": "The padlock in a browser address bar commonly signals this secure version of the web protocol. What is it?",
-          "et": "Brauseri aadressiribal olev tabalukk viitab tavaliselt sellele veebiprotokolli turvalisele versioonile. Mis see on?"
+          "en": "What secure web protocol carries HTTP over an encrypted and authenticated TLS connection?",
+          "et": "Milline turvaline veebiprotokoll kasutab HTTP-d krüptitud ja autentitud TLS-ühenduse kaudu?"
         },
         "response": {
           "en": "HTTPS",
@@ -11668,19 +11624,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Telefon saab muuta öeldud sõnad otsinguks või käsuks. Mis tehnoloogia võimaldab tal kõnet ära tunda?"
         },
         "response": {
-          "en": "voice recognition",
+          "en": "speech recognition",
           "et": "kõnetuvastus"
         },
         "acceptedVariants": {
           "en": [
-            "speech recognition"
+            "automatic speech recognition"
           ],
           "et": [
             "kõnetuvastus"
           ]
         },
         "explanation": {
-          "en": "Voice recognition uses software to identify spoken words or commands.",
+          "en": "Speech recognition uses software to identify spoken words or commands.",
           "et": "Kõnetuvastus kasutab tarkvara öeldud sõnade või käskude tuvastamiseks."
         },
         "source": {
@@ -11736,7 +11692,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "screen reader",
-          "et": "ekraani lugeja"
+          "et": "ekraanilugeja"
         },
         "acceptedVariants": {
           "en": [
@@ -11760,69 +11716,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-054:question:4",
-        "factKey": "built-in-technology-inventions:spoken-computing:medium:software:dictation",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:machine-translation",
         "tier": 4,
-        "subjectKey": "software:dictation",
-        "clue": {
-          "en": "Speaking into a device so it writes the words into a document is known as what?",
-          "et": "Kuidas nimetatakse seda, kui räägid seadmesse ja see kirjutab su sõnad dokumenti?"
-        },
-        "response": {
-          "en": "dictation",
-          "et": "dikteerimine"
-        },
-        "acceptedVariants": {
-          "en": [
-            "voice dictation"
-          ],
-          "et": [
-            "hääldikteerimine"
-          ]
-        },
-        "explanation": {
-          "en": "Dictation software transcribes spoken language into written text.",
-          "et": "Dikteerimistarkvara transkribeerib öeldud keele kirjalikuks tekstiks."
-        },
-        "source": {
-          "sourceId": "wikipedia:speech_recognition",
-          "title": "Speech recognition",
-          "url": "https://en.wikipedia.org/wiki/speech_recognition",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
+        "subjectKey": "technology:machine-translation",
+        "clue": { "en": "A website or app automatically renders a sentence from one human language into another. What technology is this?", "et": "Veebisait või rakendus tõlgib lause automaatselt ühest inimkeelest teise. Mis tehnoloogia see on?" },
+        "response": { "en": "machine translation", "et": "masintõlge" },
+        "acceptedVariants": { "en": ["automated translation"], "et": ["automaatne tõlge"] },
+        "explanation": { "en": "Machine translation uses software to translate text or speech from one language into another.", "et": "Masintõlge kasutab tarkvara teksti või kõne tõlkimiseks ühest keelest teise." },
+        "source": { "sourceId": "wikipedia:machine_translation", "title": "Machine translation", "url": "https://en.wikipedia.org/wiki/Machine_translation", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       },
       {
         "key": "built-in-technology-inventions-set-054:question:5",
-        "factKey": "built-in-technology-inventions:spoken-computing:medium:software:virtual-assistant",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:field:natural-language-processing",
         "tier": 5,
-        "subjectKey": "software:virtual-assistant",
-        "clue": {
-          "en": "Siri, Alexa, and Google Assistant are examples of what kind of software that answers spoken requests?",
-          "et": "Siri, Alexa ja Google Assistant on näited millisest tarkvarast, mis vastab suulistele palvetele?"
-        },
-        "response": {
-          "en": "virtual assistant",
-          "et": "virtuaalassistent"
-        },
-        "acceptedVariants": {
-          "en": [
-            "voice assistant"
-          ],
-          "et": [
-            "häälassistent"
-          ]
-        },
-        "explanation": {
-          "en": "A virtual assistant performs tasks or provides information in response to a user’s spoken or written requests.",
-          "et": "Virtuaalassistent täidab ülesandeid või annab teavet kasutaja suuliste või kirjalike palvete peale."
-        },
-        "source": {
-          "sourceId": "wikipedia:virtual_assistant",
-          "title": "Virtual assistant",
-          "url": "https://en.wikipedia.org/wiki/virtual_assistant",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
+        "subjectKey": "field:natural-language-processing",
+        "clue": { "en": "What field of computing enables software to analyse, understand, and generate human language?", "et": "Mis arvutiteaduse valdkond võimaldab tarkvaral inimkeelt analüüsida, mõista ja luua?" },
+        "response": { "en": "natural language processing", "et": "loomuliku keele töötlus" },
+        "acceptedVariants": { "en": ["NLP"], "et": ["NLP"] },
+        "explanation": { "en": "Natural language processing is the field concerned with computer processing of human language.", "et": "Loomuliku keele töötlus on arvutiteaduse valdkond, mis tegeleb inimkeele arvutipõhise töötlemisega." },
+        "source": { "sourceId": "wikipedia:natural_language_processing", "title": "Natural language processing", "url": "https://en.wikipedia.org/wiki/Natural_language_processing", "license": "CC-BY-SA-4.0", "retrievedAt": "2026-08-31" }
       }
     ]
   },
@@ -11840,7 +11752,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "vehicle:excavator",
         "clue": {
           "en": "This tracked or wheeled machine uses a boom and bucket to dig soil and lift it away. What is it?",
-          "et": "See roomik- või ratassõiduk kasutab poomi ja koppasid pinnase kaevamiseks ning tõstmiseks. Mis masin see on?"
+          "et": "See roomik- või ratassõiduk kasutab poomi ja koppa pinnase kaevamiseks ning tõstmiseks. Mis masin see on?"
         },
         "response": {
           "en": "excavator",
@@ -11856,7 +11768,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "An excavator uses a boom, stick, and bucket to dig and move earth.",
-          "et": "Ekskavaator kasutab pinnase kaevamiseks ja teisaldamiseks poomi, vart ning koppasid."
+          "et": "Ekskavaator kasutab pinnase kaevamiseks ja teisaldamiseks poomi, vart ning koppa."
         },
         "source": {
           "sourceId": "wikipedia:excavator",
@@ -11946,9 +11858,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "tornkraana"
         },
         "acceptedVariants": {
-          "en": [
-            "construction crane"
-          ],
+          "en": ["tower-type crane"],
           "et": [
             "ehituskraana"
           ]
