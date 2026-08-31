@@ -8491,8 +8491,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "brand:rollerblade",
         "clue": {
-          "en": "This skate brand became an everyday verb for gliding on a single line of wheels. Name the brand.",
-          "et": "Sellest uisubrändist sai argine sõna ühe rataste reaga veeremise kohta. Mis bränd see on?"
+          "en": "This inline-skate brand became a common name for skates whose wheels sit in a single line. Name the brand.",
+          "et": "Selle rulluiskude brändi nimi muutus tavaliseks nimetuseks uiskudele, mille rattad paiknevad ühes reas. Mis bränd see on?"
         },
         "response": {
           "en": "Rollerblade",
@@ -8503,8 +8503,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["Rollerblade'id"]
         },
         "explanation": {
-          "en": "Rollerblade is a brand of inline skates, and its name became a generic term for that kind of skating.",
-          "et": "Rollerblade on rulluiskude bränd ning selle nimest sai üldnimetus samasuguse uisutamise kohta."
+          "en": "Rollerblade is a brand of inline skates, and its name became a generic term for skates with wheels in a single line.",
+          "et": "Rollerblade on rulluiskude bränd ning selle nimest sai üldnimetus ühes reas ratastega rulluiskude kohta."
         },
         "source": {
           "sourceId": "wikipedia:rollerblade",
@@ -8520,8 +8520,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "brand:frisbee",
         "clue": {
-          "en": "Wham-O used a pie-company campus nickname for this toss-and-catch disc. Which brand became an everyday word?",
-          "et": "Wham-O võttis selle viskeketta nimeks tudengite pirukafirma-hüüdnime. Millisest brändist sai argisõna?"
+          "en": "Wham-O named this flying disc after hearing college students use a name linked to the Frisbie Pie Company's tossed pie tins. What brand was it?",
+          "et": "Wham-O andis sellele lendavale kettale nime pärast seda, kui kuulis tudengeid Frisbie Pie Company pirukavormide järgi selliseid kettaid kutsumas. Mis bränd see oli?"
         },
         "response": {
           "en": "Frisbee",
@@ -8646,7 +8646,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:pager",
         "clue": {
           "en": "Before text threads lived on phones, this pocket device buzzed after receiving a number or short message. Name it.",
-          "et": "Enne telefonide sõnumilõimesid piiksus see taskuseade, kui sai numbri või lühisõnumi. Mis seade see on?"
+          "et": "Enne nutitelefonide sõnumirakendusi piiksus see taskuseade, kui sai numbri või lühisõnumi. Mis seade see on?"
         },
         "response": {
           "en": "pager",
@@ -8675,7 +8675,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:blackberry",
         "clue": {
           "en": "Office email followed many people around on these handhelds, famous for push mail and a tiny thumb keyboard. Name the line.",
-          "et": "Kontori e-post rändas paljudega kaasa nende pihuseadmetes, mida tunti tõukeposti ja pisikese pöidlaklaviatuuri järgi. Mis sari see oli?"
+          "et": "Selle füüsilise klaviatuuriga äriseadme tegi kuulsaks automaatselt saabuv e-post. Milline marjanimeline bränd see oli?"
         },
         "response": {
           "en": "BlackBerry",
@@ -8687,7 +8687,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "BlackBerry devices became known for mobile QWERTY keyboards and push email or notification features.",
-          "et": "BlackBerry seadmed said tuntuks mobiilse QWERTY-klaviatuuri ning tõukeposti ja teavituste poolest."
+          "et": "BlackBerry seadmed said tuntuks mobiilse QWERTY-klaviatuuri ning automaatselt saabuva e-posti ja teavituste poolest."
         },
         "source": {
           "sourceId": "wikipedia:blackberry",
@@ -8703,8 +8703,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "device:palmpilot",
         "clue": {
-          "en": "This 1990s organiser fit in a hand and used handwriting gestures to manage contacts, calendar items, and notes. Name it.",
-          "et": "See 1990. aastate taskuorganisaator mahtus kätte ning kasutas kontaktide, kalendri ja märkmete jaoks käekirjaliigutusi. Mis seade see oli?"
+          "en": "This 1990s handheld organiser used a stylus and handwriting recognition for entering contacts, appointments, and notes. Name it.",
+          "et": "See 1990. aastate pihuarvuti kasutas kontaktide, kalendrikannete ja märkmete sisestamiseks puutepliiatsit ning käekirjatuvastust. Mis seade see oli?"
         },
         "response": {
           "en": "PalmPilot",
@@ -8854,7 +8854,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-036:question:3",
         "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:light-gun",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "controller:light-gun",
         "clue": {
           "en": "Duck Hunt and many arcade shooters used this pistol-shaped controller for aiming at the screen. Name the accessory.",
@@ -8883,7 +8883,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-036:question:4",
         "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:dance-pad",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "controller:dance-pad",
         "clue": {
           "en": "In rhythm games, players step on panels of this flat floor controller instead of pressing buttons by hand. Name it.",
@@ -8916,15 +8916,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "controller:force-feedback",
         "clue": {
           "en": "A racing wheel that fights back in a bend is using this tactile effect, created by motors in the controller. Name the effect.",
-          "et": "Rool, mis kurvis kätele vastu töötab, kasutab seda kontrolleri mootoritest tulevat taktiilset mõju. Mis mõju see on?"
+          "et": "Rool, mis kurvis kätele vastu töötab, kasutab kontrolleri mootorite tekitatud füüsilist vastujõudu. Mis mõju see on?"
         },
         "response": {
           "en": "force feedback",
           "et": "jõutagasiside"
         },
         "acceptedVariants": {
-          "en": ["haptic feedback"],
-          "et": ["haptiline tagasiside"]
+          "en": ["force-feedback"],
+          "et": ["jõu tagasiside"]
         },
         "explanation": {
           "en": "Force feedback uses motors to resist or move a control, such as a racing wheel simulating cornering forces.",
@@ -9012,7 +9012,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "medium:8-track-cartridge",
         "clue": {
           "en": "This single-spool cartridge played an endless loop of analogue sound in many 1970s cars and could not rewind. Name it.",
-          "et": "See ühe pooliga kassett mängis paljudes 1970. aastate autodes lõputut analoogheli silmust ega saanud tagasi kerida. Mis see oli?"
+          "et": "Selle kasseti sees liikus analoogheli esitav lint lõputus silmuses ning seda ei saanud tagasi kerida. Mis see oli?"
         },
         "response": {
           "en": "8-track cartridge",
@@ -9041,7 +9041,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "medium:reel-to-reel-tape",
         "clue": {
           "en": "Studios long used two open reels, sending magnetic tape from one side across the heads to the other. Name the format.",
-          "et": "Stuudiotes liikus magnetlint kaua kahe avatud rulli vahel, ühelt poolt üle peade teisele. Mis formaat see on?"
+          "et": "Stuudiotes liikus magnetlint kaua etteanderullilt üle helipeade vastuvõturullile. Mis formaat see on?"
         },
         "response": {
           "en": "reel-to-reel tape",
@@ -9162,7 +9162,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-038:question:3",
         "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:medium:laserdisc",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "medium:laserdisc",
         "clue": {
           "en": "Before DVDs, film fans could buy movies on huge shiny discs about the size of vinyl records. What format was this?",
@@ -9191,7 +9191,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-038:question:4",
         "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:device:tivo",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "device:tivo",
         "clue": {
           "en": "This brand of digital video recorder stored television on a hard disk and paired it with an on-screen programme guide. Name it.",
@@ -9220,11 +9220,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-038:question:5",
         "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:medium:super-8-film",
-        "tier": 5,
+        "tier": 3,
         "subjectKey": "medium:super-8-film",
         "clue": {
           "en": "Kodak's improved 8 mm home-movie format arrived in 1965 and became a familiar consumer way to shoot and project family films. Name it.",
-          "et": "Kodaki täiustatud 8 mm kodufilmiformaat tuli 1965. aastal ja sai tarbijatele tuttavaks viisiks perefilme võtta ning näidata. Mis formaat see oli?"
+          "et": "Kodaki täiustatud 8 mm kodufilmiformaat tuli 1965. aastal ja sai tarbijatele tuttavaks viisiks perefilme filmida ja projitseerida. Mis formaat see oli?"
         },
         "response": {
           "en": "Super 8 film",
@@ -9251,105 +9251,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-039",
     "name": {
-      "en": "Fiction's Famous Technology",
-      "et": "Kuulsad väljamõeldud tehnoloogiad"
+      "en": "Gadgets from Imaginary Worlds",
+      "et": "Vidinad väljamõeldud maailmadest"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-039:question:1",
-        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:arc-reactor",
+        "factKey": "built-in-technology-inventions:gadgets-imaginary-worlds:medium:fictional-device:bat-signal",
         "tier": 1,
-        "subjectKey": "fictional-device:arc-reactor",
-        "clue": {
-          "en": "In the Marvel films, Tony Stark keeps a tiny power source in his chest that also keeps shrapnel away from his heart. What is it called?",
-          "et": "Marveli filmides hoiab Tony Stark rinnus pisikest energiaallikat, mis takistab šrapnellil südamesse jõudmast. Mis selle nimi on?"
-        },
-        "response": {
-          "en": "arc reactor",
-          "et": "kaarreaktor"
-        },
-        "acceptedVariants": {
-          "en": ["miniature arc reactor"],
-          "et": ["miniatuurne kaarreaktor"]
-        },
-        "explanation": {
-          "en": "Tony Stark's miniature arc reactor powers his armour and keeps shrapnel from reaching his heart.",
-          "et": "Tony Starki miniatuurne kaarreaktor annab energiat tema raudrüüle ja hoiab šrapnelli südamest eemal."
-        },
-        "source": {
-          "sourceId": "wikipedia:arc-reactor-mcu",
-          "title": "Features of the Marvel Cinematic Universe",
-          "url": "https://en.wikipedia.org/wiki/Arc_reactor_(Marvel_Cinematic_Universe)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-039:question:2",
-        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:sonic-screwdriver",
-        "tier": 2,
-        "subjectKey": "fictional-device:sonic-screwdriver",
-        "clue": {
-          "en": "The Doctor carries this fictional multitool in Doctor Who, using it for locks, scans, and many other convenient jobs. Name it.",
-          "et": "Doctor Who peategelane kannab seda väljamõeldud mitmeotstarbelist tööriista, millega avada lukke, skaneerida ja teha palju muud. Mis see on?"
-        },
-        "response": {
-          "en": "sonic screwdriver",
-          "et": "helikruvikeeraja"
-        },
-        "acceptedVariants": {
-          "en": ["sonic screwdriver tool"],
-          "et": ["helikruvits"]
-        },
-        "explanation": {
-          "en": "The sonic screwdriver is the Doctor's fictional multifunctional tool in Doctor Who.",
-          "et": "Helikruvikeeraja on Doctor Who Doktori väljamõeldud mitmeotstarbeline tööriist."
-        },
-        "source": {
-          "sourceId": "wikipedia:sonic-screwdriver",
-          "title": "Sonic screwdriver",
-          "url": "https://en.wikipedia.org/wiki/Sonic_screwdriver",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-039:question:3",
-        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:portal-gun",
-        "tier": 3,
-        "subjectKey": "fictional-device:portal-gun",
-        "clue": {
-          "en": "In the Portal games, this handheld Aperture gadget places two linked openings on suitable flat surfaces. Name the gadget.",
-          "et": "Portali mängudes paigutab see Aperture'i käeshoitav vidin sobivatele lamedatele pindadele kaks ühendatud avaust. Mis vidin see on?"
-        },
-        "response": {
-          "en": "portal gun",
-          "et": "portaalipüstol"
-        },
-        "acceptedVariants": {
-          "en": ["Aperture Science Handheld Portal Device", "portal device"],
-          "et": ["Aperture Science Handheld Portal Device", "portaaliseade"]
-        },
-        "explanation": {
-          "en": "The Aperture Science Handheld Portal Device creates two linked portals that players can pass between.",
-          "et": "Aperture Science Handheld Portal Device loob kaks ühendatud portaali, mille vahel mängija saab liikuda."
-        },
-        "source": {
-          "sourceId": "wikipedia:portal-gun",
-          "title": "Portal series",
-          "url": "https://en.wikipedia.org/wiki/Portal_gun",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-039:question:4",
-        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:bat-signal",
-        "tier": 4,
         "subjectKey": "fictional-device:bat-signal",
         "clue": {
-          "en": "Gotham police shine this modified searchlight into the sky, projecting a bat emblem to summon Batman. Name it.",
-          "et": "Gothami politsei suunab selle muudetud prožektori taevasse, et nahkhiireembleemiga Batman kohale kutsuda. Mis signaal see on?"
+          "en": "Gotham police project a bat emblem onto the clouds when they need Batman's help. What is this modified searchlight called?",
+          "et": "Gothami politsei heidab pilvedele nahkhiireembleemi, kui vajab Batmani abi. Mis nime kannab see muudetud prožektor?"
         },
         "response": {
           "en": "Bat-Signal",
@@ -9357,11 +9270,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["Batman signal"],
-          "et": ["nahkhiiresignaal"]
+          "et": ["nahkhiiresignaal", "Batmani signaal"]
         },
         "explanation": {
-          "en": "The Bat-Signal is a modified searchlight that projects a bat emblem over Gotham City to summon Batman.",
-          "et": "Bat-Signal on muudetud prožektor, mis heidab Gothami kohale nahkhiireembleemi, et Batman välja kutsuda."
+          "en": "The Bat-Signal is a searchlight bearing a stylised bat emblem, used by Gotham's police to summon Batman.",
+          "et": "Bat-Signal on stiliseeritud nahkhiireembleemiga prožektor, millega Gothami politsei Batmani välja kutsub."
         },
         "source": {
           "sourceId": "wikipedia:bat-signal",
@@ -9372,13 +9285,100 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
+        "key": "built-in-technology-inventions-set-039:question:2",
+        "factKey": "built-in-technology-inventions:gadgets-imaginary-worlds:medium:fictional-device:arc-reactor",
+        "tier": 2,
+        "subjectKey": "fictional-device:arc-reactor",
+        "clue": {
+          "en": "In the Marvel films, Tony Stark builds a miniature power source that sits in his chest and later powers Iron Man's armour. Name it.",
+          "et": "Marveli filmides ehitab Tony Stark miniatuurse energiaallika, mis asub tema rinnus ja annab hiljem jõudu Raudmehe soomusrüüle. Mis see on?"
+        },
+        "response": {
+          "en": "arc reactor",
+          "et": "kaarreaktor"
+        },
+        "acceptedVariants": {
+          "en": ["miniature arc reactor"],
+          "et": ["miniatuurne kaarreaktor"]
+        },
+        "explanation": {
+          "en": "Tony Stark's miniature arc reactor first keeps shrapnel from his heart and then becomes a power source for his armour.",
+          "et": "Tony Starki miniatuurne kaarreaktor hoiab esmalt šrapnelli tema südamest eemal ja saab hiljem soomusrüü energiaallikaks."
+        },
+        "source": {
+          "sourceId": "wikipedia:arc-reactor-mcu",
+          "title": "Arc reactor (Marvel Cinematic Universe)",
+          "url": "https://en.wikipedia.org/wiki/Arc_reactor_(Marvel_Cinematic_Universe)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-039:question:3",
+        "factKey": "built-in-technology-inventions:gadgets-imaginary-worlds:medium:fictional-device:sonic-screwdriver",
+        "tier": 3,
+        "subjectKey": "fictional-device:sonic-screwdriver",
+        "clue": {
+          "en": "The Doctor in Doctor Who carries a pocket-sized multitool used for jobs such as opening locks and scanning unfamiliar objects. Name it.",
+          "et": "Sarja „Doctor Who” Doktor kannab taskus mitmeotstarbelist tööriista, millega saab näiteks lukke avada ja tundmatuid esemeid skaneerida. Mis see on?"
+        },
+        "response": {
+          "en": "sonic screwdriver",
+          "et": "helikruvikeeraja"
+        },
+        "acceptedVariants": {
+          "en": ["the Doctor's sonic screwdriver"],
+          "et": ["helikruvits", "Doktori helikruvikeeraja"]
+        },
+        "explanation": {
+          "en": "The sonic screwdriver is the Doctor's versatile fictional tool, though the programme gives it different abilities in different stories.",
+          "et": "Helikruvikeeraja on Doktori mitmekülgne väljamõeldud tööriist, mille võimed on eri lugudes erinevad."
+        },
+        "source": {
+          "sourceId": "wikipedia:sonic-screwdriver",
+          "title": "Sonic screwdriver",
+          "url": "https://en.wikipedia.org/wiki/Sonic_screwdriver",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-039:question:4",
+        "factKey": "built-in-technology-inventions:gadgets-imaginary-worlds:medium:fictional-device:portal-gun",
+        "tier": 4,
+        "subjectKey": "fictional-device:portal-gun",
+        "clue": {
+          "en": "In the Portal games, an Aperture Science device places two linked doorways on suitable surfaces so the player can step between them. Name the device.",
+          "et": "Portali mängudes paigutab Aperture Science'i seade sobivatele pindadele kaks ühendatud läbipääsu, mille vahel mängija saab liikuda. Mis seade see on?"
+        },
+        "response": {
+          "en": "portal gun",
+          "et": "portaalipüstol"
+        },
+        "acceptedVariants": {
+          "en": ["Aperture Science Handheld Portal Device", "portal device"],
+          "et": ["Aperture Science Handheld Portal Device", "portaaliseade"]
+        },
+        "explanation": {
+          "en": "The Aperture Science Handheld Portal Device creates a linked pair of openings that players and objects can pass through.",
+          "et": "Aperture Science Handheld Portal Device loob kaks ühendatud ava, mille kaudu saavad liikuda mängija ja esemed."
+        },
+        "source": {
+          "sourceId": "wikipedia:portal-gun",
+          "title": "Portal (series)",
+          "url": "https://en.wikipedia.org/wiki/Portal_(series)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
         "key": "built-in-technology-inventions-set-039:question:5",
-        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:tricorder",
+        "factKey": "built-in-technology-inventions:gadgets-imaginary-worlds:medium:fictional-device:tricorder",
         "tier": 5,
         "subjectKey": "fictional-device:tricorder",
         "clue": {
-          "en": "Star Trek crews carry this handheld scanner to sense surroundings, record data, and analyse what it finds. Name it.",
-          "et": "Star Treki meeskonnad kannavad seda käeshoitavat skannerit ümbruse tajumiseks, andmete salvestamiseks ja leidude analüüsimiseks. Mis see on?"
+          "en": "Star Trek landing parties carry a handheld device that scans unfamiliar surroundings, records data, and analyses its findings. Name it.",
+          "et": "Star Treki planeedimeeskonnad kannavad käeshoitavat seadet, mis skaneerib tundmatut ümbrust, salvestab andmeid ja analüüsib leide. Mis see on?"
         },
         "response": {
           "en": "tricorder",
@@ -9389,8 +9389,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["Star Treki trikorder"]
         },
         "explanation": {
-          "en": "A Star Trek tricorder is a handheld sensor that scans environments, records data, and analyses it.",
-          "et": "Star Treki trikorder on käeshoitav andur, mis skaneerib ümbrust, salvestab andmeid ja analüüsib neid."
+          "en": "A tricorder is Star Trek's portable sensor, computer, and recorder for examining environments and life forms.",
+          "et": "Trikorder on Star Treki kaasaskantav andur, arvuti ja salvesti, millega uuritakse keskkondi ning eluvorme."
         },
         "source": {
           "sourceId": "wikipedia:tricorder",
@@ -9405,47 +9405,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-040",
     "name": {
-      "en": "Materials You Meet in Real Life",
-      "et": "Materjalid meie ümber"
+      "en": "Materials with Hidden Talents",
+      "et": "Materjalide varjatud võimed"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-040:question:1",
-        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:lycra",
+        "factKey": "built-in-technology-inventions:materials-hidden-talents:medium:material:gore-tex",
         "tier": 1,
-        "subjectKey": "material:lycra",
-        "clue": {
-          "en": "This stretchy fibre brand turns up in swimwear and leggings; outside the brand, the same fibre has generic names. Name the brand.",
-          "et": "See veniva kiu bränd on tuttav ujumisriietest ja retuusidest; väljaspool brändi on samal kiul üldnimed. Mis bränd see on?"
-        },
-        "response": {
-          "en": "Lycra",
-          "et": "Lycra"
-        },
-        "acceptedVariants": {
-          "en": ["spandex", "elastane"],
-          "et": ["spandeks", "elastaan"]
-        },
-        "explanation": {
-          "en": "Lycra is a trade name for the very elastic synthetic fibre also called spandex or elastane.",
-          "et": "Lycra on väga elastse sünteetilise kiu kaubanimi; sama kiudu nimetatakse ka spandeksiks või elastaaniks."
-        },
-        "source": {
-          "sourceId": "wikipedia:spandex",
-          "title": "Spandex",
-          "url": "https://en.wikipedia.org/wiki/Spandex",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-040:question:2",
-        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:gore-tex",
-        "tier": 2,
         "subjectKey": "material:gore-tex",
         "clue": {
-          "en": "Rain jackets use this membrane to block liquid water while letting water vapour escape. Name the material brand.",
-          "et": "Vihmajoped kasutavad seda membraani, mis peab vedela vee kinni, kuid laseb veeaurul välja pääseda. Mis materjalibränd see on?"
+          "en": "Hikers know this membrane brand because it keeps liquid rain out of a jacket while allowing water vapour from sweat to escape. Name it.",
+          "et": "Matkajad tunnevad seda membraanibrändi: jope ei lase vedelal vihmaveel sisse tulla, kuid higist tekkinud veeaur pääseb välja. Mis bränd see on?"
         },
         "response": {
           "en": "Gore-Tex",
@@ -9456,8 +9427,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Gore-Tex is a waterproof breathable membrane: liquid water is blocked, while water vapour can pass through.",
-          "et": "Gore-Tex on veekindel ja hingav membraan: vedel vesi jääb kinni, kuid veeaur pääseb läbi."
+          "en": "Gore-Tex uses a waterproof, breathable membrane whose pores block liquid water but pass water vapour.",
+          "et": "Gore-Tex kasutab veekindlat ja hingavat membraani, mille poorid peatavad vedela vee, kuid lasevad veeauru läbi."
         },
         "source": {
           "sourceId": "wikipedia:gore-tex",
@@ -9468,13 +9439,71 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
+        "key": "built-in-technology-inventions-set-040:question:2",
+        "factKey": "built-in-technology-inventions:materials-hidden-talents:medium:material:neoprene",
+        "tier": 2,
+        "subjectKey": "material:neoprene",
+        "clue": {
+          "en": "A wetsuit traps a thin layer of water beside the body, while sheets of this foamed synthetic rubber slow heat loss. Name the material.",
+          "et": "Kalipso hoiab keha kõrval õhukest veekihti, sellest sünteetilisest kummist vahustatud kihid aga aeglustavad soojuskadu. Mis materjal see on?"
+        },
+        "response": {
+          "en": "neoprene",
+          "et": "neopreen"
+        },
+        "acceptedVariants": {
+          "en": ["polychloroprene"],
+          "et": ["polükloropreen"]
+        },
+        "explanation": {
+          "en": "Foamed neoprene insulates wetsuits by holding water and tiny gas bubbles close to the wearer's body.",
+          "et": "Vahustatud neopreen isoleerib kalipsot, hoides kandja keha lähedal vett ja tillukesi gaasimulle."
+        },
+        "source": {
+          "sourceId": "wikipedia:neoprene",
+          "title": "Neoprene",
+          "url": "https://en.wikipedia.org/wiki/Neoprene",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
         "key": "built-in-technology-inventions-set-040:question:3",
-        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:cellophane",
+        "factKey": "built-in-technology-inventions:materials-hidden-talents:medium:material:elastane",
         "tier": 3,
+        "subjectKey": "material:elastane",
+        "clue": {
+          "en": "Leggings and swimwear stretch comfortably and spring back because they contain this highly elastic synthetic fibre. Name its common European name.",
+          "et": "Retuusid ja ujumisriided venivad mugavalt ning võtavad taas kuju tänu sellele väga elastsele sünteetilisele kiule. Mis on selle Euroopas levinud nimetus?"
+        },
+        "response": {
+          "en": "elastane",
+          "et": "elastaan"
+        },
+        "acceptedVariants": {
+          "en": ["spandex", "Lycra"],
+          "et": ["spandeks", "Lycra"]
+        },
+        "explanation": {
+          "en": "Elastane, Spandex, and the Lycra brand all refer to the highly elastic synthetic fibre used in close-fitting clothing.",
+          "et": "Elastaan, spandeks ja Lycra kaubamärk tähistavad väga elastset sünteetilist kiudu, mida kasutatakse liibuvates rõivastes."
+        },
+        "source": {
+          "sourceId": "wikipedia:spandex",
+          "title": "Spandex",
+          "url": "https://en.wikipedia.org/wiki/Spandex",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-040:question:4",
+        "factKey": "built-in-technology-inventions:materials-hidden-talents:medium:material:cellophane",
+        "tier": 4,
         "subjectKey": "material:cellophane",
         "clue": {
-          "en": "This thin transparent sheet made from regenerated cellulose became useful as a barrier in food packaging. Name it.",
-          "et": "See regenereeritud tselluloosist õhuke läbipaistev kile sai kasulikuks toidupakendi kaitsekihina. Mis materjal see on?"
+          "en": "This clear, crinkly wrapping looks like plastic but is made from regenerated cellulose. What material once wrapped sweets, flowers, and food baskets?",
+          "et": "See läbipaistev krabisev ümbris näeb välja nagu plast, kuid on valmistatud regenereeritud tselluloosist. Mis materjali kasutati maiustuste, lillede ja toidukorvide pakkimiseks?"
         },
         "response": {
           "en": "cellophane",
@@ -9485,8 +9514,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Cellophane is a transparent regenerated-cellulose sheet whose barrier properties suit food packaging.",
-          "et": "Tsellofaan on läbipaistev regenereeritud tselluloosi leht, mille tõkkeomadused sobivad toidupakenditele."
+          "en": "Cellophane is a transparent sheet of regenerated cellulose, so its chemistry differs from common petroleum-based plastics.",
+          "et": "Tsellofaan on läbipaistev regenereeritud tselluloosi leht ning erineb seetõttu keemiliselt tavalisest naftapõhisest plastist."
         },
         "source": {
           "sourceId": "wikipedia:cellophane",
@@ -9497,13 +9526,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-040:question:4",
-        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:bakelite",
-        "tier": 4,
+        "key": "built-in-technology-inventions-set-040:question:5",
+        "factKey": "built-in-technology-inventions:materials-hidden-talents:medium:material:bakelite",
+        "tier": 5,
         "subjectKey": "material:bakelite",
         "clue": {
-          "en": "Old radios, telephones, and handles often used this early plastic, the first made entirely from synthetic components. Name it.",
-          "et": "Vanad raadiod, telefonid ja käepidemed kasutasid sageli seda varajast plasti, mis oli esimene täielikult sünteetilistest koostisosadest. Mis see on?"
+          "en": "Early radios and telephones often had hard, heat-resistant cases made from the first plastic created entirely from synthetic ingredients. Name it.",
+          "et": "Varastel raadiotel ja telefonidel oli sageli kõva ning kuumakindel kest esimesest täielikult sünteetilistest lähteainetest loodud plastist. Mis plast see oli?"
         },
         "response": {
           "en": "Bakelite",
@@ -9514,42 +9543,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Bakelite was the first plastic made from wholly synthetic components.",
-          "et": "Bakeliit oli esimene plast, mis valmistati täielikult sünteetilistest koostisosadest."
+          "en": "Bakelite was the first plastic made wholly from synthetic components and became common in electrical housings because it resisted heat and did not conduct electricity well.",
+          "et": "Bakeliit oli esimene täielikult sünteetilistest koostisosadest valmistatud plast ning levis elektriseadmete korpustes, sest talus kuumust ja juhtis halvasti elektrit."
         },
         "source": {
           "sourceId": "wikipedia:bakelite",
           "title": "Bakelite",
           "url": "https://en.wikipedia.org/wiki/Bakelite",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-040:question:5",
-        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:neoprene",
-        "tier": 5,
-        "subjectKey": "material:neoprene",
-        "clue": {
-          "en": "Divers wear foamed sheets of this synthetic rubber for warmth; the buoyancy can even require extra weights. Name the material.",
-          "et": "Sukeldujad kannavad selle sünteetilise kummi vahustatud kihte soojuse hoidmiseks; ujuvus võib nõuda isegi lisaraskusi. Mis materjal see on?"
-        },
-        "response": {
-          "en": "neoprene",
-          "et": "neopreen"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Foamed neoprene is widely used as thermal insulation in wetsuits and is buoyant enough that divers compensate with weights.",
-          "et": "Vahustatud neopreeni kasutatakse laialt kalipsode soojusisolatsioonina ning selle ujuvust tasakaalustatakse raskustega."
-        },
-        "source": {
-          "sourceId": "wikipedia:neoprene",
-          "title": "Neoprene",
-          "url": "https://en.wikipedia.org/wiki/Neoprene",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -9559,18 +9559,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-041",
     "name": {
-      "en": "Road and Cockpit Problem-Solvers",
-      "et": "Lahendused teel ja kokpitis"
+      "en": "Travel Problems, Clever Fixes",
+      "et": "Reisimured, nutikad lahendused"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-041:question:1",
-        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:windscreen-wiper",
+        "factKey": "built-in-technology-inventions:travel-problems-clever-fixes:medium:device:windscreen-wiper",
         "tier": 1,
         "subjectKey": "device:windscreen-wiper",
         "clue": {
-          "en": "A moving rubber blade sweeps rain, snow, or debris from a vehicle's front glass. What device is doing the work?",
-          "et": "Liikuv kummitera pühib sõiduki esiklaasilt vihma, lund või mustust. Mis seade seda teeb?"
+          "en": "After watching a driver repeatedly stop to clear sleet from his windscreen, Mary Anderson patented a lever-operated blade for the job. What device had she designed?",
+          "et": "Mary Anderson nägi, kuidas juht peatas sõiduki korduvalt, et esiklaasilt lörtsi pühkida, ning patenteeris hoovaga liigutatava laba. Mis seadme ta kavandas?"
         },
         "response": {
           "en": "windscreen wiper",
@@ -9581,8 +9581,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["kojamees", "tuuleklaasipuhasti"]
         },
         "explanation": {
-          "en": "A windscreen wiper uses a moving blade to clear rain, snow, or debris from a vehicle windscreen.",
-          "et": "Klaasipuhasti kasutab liikuvat tera, et eemaldada sõiduki tuuleklaasilt vihm, lumi või praht."
+          "en": "Mary Anderson's design moved a rubber blade across the windscreen from a lever inside the vehicle, establishing the basic idea of the windscreen wiper.",
+          "et": "Mary Andersoni lahenduses liigutas sõidukis olev hoob kummilaba üle esiklaasi ning pani aluse tänapäevase klaasipuhasti põhimõttele."
         },
         "source": {
           "sourceId": "wikipedia:windscreen-wiper",
@@ -9594,41 +9594,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-041:question:2",
-        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:pneumatic-tyre",
+        "factKey": "built-in-technology-inventions:travel-problems-clever-fixes:medium:system:cruise-control",
         "tier": 2,
-        "subjectKey": "device:pneumatic-tyre",
-        "clue": {
-          "en": "Pressurised air inside this road-contact ring supports the load and softens bumps. Name the kind of tyre.",
-          "et": "Selle teega kokkupuutuva rõnga sees olev suruõhk kannab koormat ja pehmendab põrutusi. Mis tüüpi rehv see on?"
-        },
-        "response": {
-          "en": "pneumatic tyre",
-          "et": "õhkrehv"
-        },
-        "acceptedVariants": {
-          "en": ["pneumatic tire", "air-filled tyre", "air-filled tire"],
-          "et": ["pneumorehv"]
-        },
-        "explanation": {
-          "en": "A pneumatic tyre has a pressurised air cavity that supports the load and cushions contact with the road.",
-          "et": "Õhkrehvil on suruõhuga õõnsus, mis kannab koormat ja pehmendab kokkupuudet teega."
-        },
-        "source": {
-          "sourceId": "wikipedia:pneumatic-tyre",
-          "title": "Tire",
-          "url": "https://en.wikipedia.org/wiki/Pneumatic_tire",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-041:question:3",
-        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:system:cruise-control",
-        "tier": 3,
         "subjectKey": "system:cruise-control",
         "clue": {
-          "en": "On a long road, this system keeps the car at a selected pace without the driver's foot staying on the accelerator. Name it.",
-          "et": "Pikal teel hoiab see süsteem auto valitud kiirusel, ilma et juhi jalg peaks gaasipedaalil püsima. Mis süsteem see on?"
+          "en": "Blind inventor Ralph Teetor disliked the way his driver's speed kept surging and slowing. He helped develop what system that holds a car at a selected pace?",
+          "et": "Pimedat leiutajat Ralph Teetorit häiris, et tema autojuhi sõidukiirus pidevalt kasvas ja kahanes. Millise auto valitud kiirust hoidva süsteemi arendamisse ta panustas?"
         },
         "response": {
           "en": "cruise control",
@@ -9636,11 +9607,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["speed control"],
-          "et": ["kiirushoidik"]
+          "et": ["kiirushoidik", "püsikiiruse hoidja"]
         },
         "explanation": {
-          "en": "Cruise control automatically maintains a vehicle's selected speed without constant accelerator input.",
-          "et": "Püsikiirusehoidja hoiab sõiduki valitud kiirust automaatselt, ilma pideva gaasipedaali vajutamiseta."
+          "en": "Ralph Teetor developed an early modern cruise-control system, which maintains a selected road speed without constant accelerator input.",
+          "et": "Ralph Teetor töötas välja varase tänapäevase püsikiirusehoidja, mis säilitab valitud sõidukiiruse ilma pideva gaasipedaali vajutamiseta."
         },
         "source": {
           "sourceId": "wikipedia:cruise-control",
@@ -9651,25 +9622,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-041:question:4",
-        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:catalytic-converter",
-        "tier": 4,
+        "key": "built-in-technology-inventions-set-041:question:3",
+        "factKey": "built-in-technology-inventions:travel-problems-clever-fixes:medium:device:catalytic-converter",
+        "tier": 3,
         "subjectKey": "device:catalytic-converter",
         "clue": {
-          "en": "This exhaust device uses chemical reactions to turn toxic engine gases into less harmful pollutants. Name it.",
-          "et": "See väljalaskeseade kasutab keemilisi reaktsioone, et muuta mürgised mootorigaasid vähem kahjulikeks saasteaineteks. Mis seade see on?"
+          "en": "In a car's exhaust, a ceramic core coated with metals such as platinum helps turn carbon monoxide and other harmful gases into less harmful products. Name this device.",
+          "et": "Auto väljalaskes aitab näiteks plaatinaga kaetud keraamiline kärg muuta vingugaasi ja teisi kahjulikke gaase vähem kahjulikeks aineteks. Mis seade see on?"
         },
         "response": {
           "en": "catalytic converter",
           "et": "katalüüsmuundur"
         },
         "acceptedVariants": {
-          "en": ["automotive catalytic converter"],
-          "et": ["auto katalüsaator"]
+          "en": ["automotive catalytic converter", "car catalytic converter"],
+          "et": ["auto katalüsaator", "katalüsaator"]
         },
         "explanation": {
-          "en": "A catalytic converter changes toxic exhaust gases into less-toxic pollutants by catalysing redox reactions.",
-          "et": "Katalüüsmuundur muudab mürgised heitgaasid vähem mürgisteks saasteaineteks, katalüüsides redoksreaktsioone."
+          "en": "A catalytic converter uses precious-metal catalysts to promote reactions that reduce toxic pollutants in engine exhaust.",
+          "et": "Katalüüsmuundur kasutab väärismetallkatalüsaatoreid, et soodustada mootorigaasides mürgiseid saasteaineid vähendavaid reaktsioone."
         },
         "source": {
           "sourceId": "wikipedia:catalytic-converter",
@@ -9680,13 +9651,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-041:question:5",
-        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:ejection-seat",
-        "tier": 5,
+        "key": "built-in-technology-inventions-set-041:question:4",
+        "factKey": "built-in-technology-inventions:travel-problems-clever-fixes:medium:device:ejection-seat",
+        "tier": 4,
         "subjectKey": "device:ejection-seat",
         "clue": {
-          "en": "In an aircraft emergency, this crew chair blasts clear of the cockpit and then deploys a parachute. Name it.",
-          "et": "Lennuki hädaolukorras paiskab see meeskonnatool inimese kokpitist eemale ja avab seejärel langevarju. Mis iste see on?"
+          "en": "In a military-aircraft emergency, an explosive charge or rocket propels the pilot's chair clear before a parachute opens. Name the life-saving seat.",
+          "et": "Sõjalennuki hädaolukorras paiskab lõhkelaeng või rakett piloodi istme lennukist eemale, enne kui avaneb langevari. Mis päästeiste see on?"
         },
         "response": {
           "en": "ejection seat",
@@ -9694,16 +9665,45 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["ejector seat"],
-          "et": ["katapulteerimisiste"]
+          "et": ["katapulteerimisiste", "väljaheiteiste"]
         },
         "explanation": {
-          "en": "An ejection seat propels an aircraft crew member clear in an emergency and then deploys a parachute.",
-          "et": "Katapultiste paiskab lennuki meeskonnaliikme hädaolukorras ohutusse kaugusse ja avab seejärel langevarju."
+          "en": "An ejection seat rapidly carries an aircraft crew member away from danger and then deploys a parachute for descent.",
+          "et": "Katapultiste viib lennuki meeskonnaliikme kiiresti ohust eemale ja avab seejärel laskumiseks langevarju."
         },
         "source": {
           "sourceId": "wikipedia:ejection-seat",
           "title": "Ejection seat",
           "url": "https://en.wikipedia.org/wiki/Ejection_seat",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-041:question:5",
+        "factKey": "built-in-technology-inventions:travel-problems-clever-fixes:medium:device:pneumatic-tyre",
+        "tier": 5,
+        "subjectKey": "device:pneumatic-tyre",
+        "clue": {
+          "en": "Veterinary surgeon John Boyd Dunlop tried to soften his son's bumpy tricycle ride by fitting the wheels with inflated rubber tubes. What kind of tyre did this help popularise?",
+          "et": "Loomaarst John Boyd Dunlop püüdis muuta poja konarlikku sõitu kolmerattalisel pehmemaks, paigaldades ratastele täispuhutud kummitorud. Millise rehvitüübi aitas see tuntuks teha?"
+        },
+        "response": {
+          "en": "pneumatic tyre",
+          "et": "õhkrehv"
+        },
+        "acceptedVariants": {
+          "en": ["pneumatic tire", "inflatable tyre", "inflatable tire"],
+          "et": ["pneumorehv", "täispuhutav rehv"]
+        },
+        "explanation": {
+          "en": "John Boyd Dunlop developed a practical pneumatic tyre for his son's tricycle, using pressurised air to cushion the ride.",
+          "et": "John Boyd Dunlop valmistas poja kolmerattalisele praktilise õhkrehvi, milles suruõhk pehmendas sõitu."
+        },
+        "source": {
+          "sourceId": "wikipedia:pneumatic-tyre",
+          "title": "Pneumatic tire",
+          "url": "https://en.wikipedia.org/wiki/Pneumatic_tire",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -9713,18 +9713,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-042",
     "name": {
-      "en": "The Pre-Cloud Office",
-      "et": "Kontor enne pilve"
+      "en": "Paperwork Before the Cloud",
+      "et": "Paberitöö enne pilve"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-042:question:1",
-        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:typewriter",
+        "factKey": "built-in-technology-inventions:paperwork-before-cloud:medium:device:typewriter",
         "tier": 1,
         "subjectKey": "device:typewriter",
         "clue": {
-          "en": "On this desk machine, pressing a key strikes an inked ribbon against paper with a letter-shaped element. Name it.",
-          "et": "Selles lauamasinas lööb klahvivajutus tähekujulise elemendi abil tindilindi vastu paberit. Mis masin see on?"
+          "en": "Its keys strike an inked ribbon against paper, and a bell warns the typist that the carriage is nearing the end of a line. Name this desk machine.",
+          "et": "Selle klahvid löövad tindilindi vastu paberit ning kelluke hoiatab masinakirjutajat, et kelk läheneb rea lõpule. Mis lauamasin see on?"
         },
         "response": {
           "en": "typewriter",
@@ -9735,8 +9735,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "A typewriter makes characters by striking an inked ribbon against paper with a type element.",
-          "et": "Kirjutusmasin teeb märke, lüües täheelemendiga tindilindi vastu paberit."
+          "en": "A mechanical typewriter prints characters through an inked ribbon and moves its carriage across the page one position at a time.",
+          "et": "Mehaaniline kirjutusmasin trükib tähed läbi tindilindi ning liigutab kelku iga märgi järel ühe koha võrra."
         },
         "source": {
           "sourceId": "wikipedia:typewriter",
@@ -9748,12 +9748,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-042:question:2",
-        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:photocopier",
+        "factKey": "built-in-technology-inventions:paperwork-before-cloud:medium:device:photocopier",
         "tier": 2,
         "subjectKey": "device:photocopier",
         "clue": {
-          "en": "This office machine uses light, static charge, and toner on a drum to reproduce a document. Name it.",
-          "et": "See kontorimasin kasutab dokumendi paljundamiseks valgust, staatilist laengut ja trumlil olevat toonerit. Mis masin see on?"
+          "en": "Light reflects from a document onto a charged drum; toner sticks to the resulting image and is fused onto a fresh sheet. Which office machine uses this process?",
+          "et": "Valgus peegeldub dokumendilt laetud trumlile, tooner kinnitub tekkinud kujutisele ja sulatatakse uuele paberilehele. Milline kontorimasin nii töötab?"
         },
         "response": {
           "en": "photocopier",
@@ -9764,8 +9764,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["paljundusmasin"]
         },
         "explanation": {
-          "en": "A xerographic photocopier uses light, electrostatic charge, and toner on a photoconductive drum to reproduce documents.",
-          "et": "Kserograafiline koopiamasin kasutab dokumentide kopeerimiseks valgust, elektrostaatilist laengut ja fotojuhtival trumlil olevat toonerit."
+          "en": "A xerographic photocopier uses light, electrostatic charge, a photoconductive drum, and toner to reproduce documents.",
+          "et": "Kserograafiline koopiamasin kasutab dokumentide paljundamiseks valgust, elektrostaatilist laengut, fotojuhtivat trumlit ja toonerit."
         },
         "source": {
           "sourceId": "wikipedia:photocopier",
@@ -9777,53 +9777,24 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-042:question:3",
-        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:paper-shredder",
+        "factKey": "built-in-technology-inventions:paperwork-before-cloud:medium:material:correction-fluid",
         "tier": 3,
-        "subjectKey": "device:paper-shredder",
-        "clue": {
-          "en": "Sensitive pages go into this office device and come out as strips or tiny particles that are hard to read. Name it.",
-          "et": "Tundlikud lehed lähevad sellesse kontoriseadmesse ning tulevad välja ribade või väikeste osakestena, mida on raske lugeda. Mis seade see on?"
-        },
-        "response": {
-          "en": "paper shredder",
-          "et": "paberipurustaja"
-        },
-        "acceptedVariants": {
-          "en": ["document shredder"],
-          "et": ["dokumendipurustaja"]
-        },
-        "explanation": {
-          "en": "A paper shredder cuts documents into strips or fine particles so sensitive text cannot readily be read.",
-          "et": "Paberipurustaja lõikab dokumendid ribadeks või peenteks osakesteks, et tundlikku teksti ei saaks hõlpsalt lugeda."
-        },
-        "source": {
-          "sourceId": "wikipedia:paper-shredder",
-          "title": "Paper shredder",
-          "url": "https://en.wikipedia.org/wiki/Paper_shredder",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-042:question:4",
-        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:material:correction-fluid",
-        "tier": 4,
         "subjectKey": "material:correction-fluid",
         "clue": {
-          "en": "Before word processors, typists could paint this opaque liquid over a mistake and type the character again. Name it.",
-          "et": "Enne tekstitöötlust said masinakirjutajad vea katta läbipaistmatu vedelikuga ja märgi uuesti peale kirjutada. Mis vahend see on?"
+          "en": "Secretary and artist Bette Nesmith Graham borrowed a painter's trick: instead of erasing a typing error, she covered it with an opaque white coating. What office product did she create?",
+          "et": "Sekretär ja kunstnik Bette Nesmith Graham laenas maalijatelt nipi: trükivea kustutamise asemel kattis ta selle läbipaistmatu valge kihiga. Millise kontoritarbe ta lõi?"
         },
         "response": {
           "en": "correction fluid",
           "et": "korrektorvedelik"
         },
         "acceptedVariants": {
-          "en": ["liquid paper", "white-out", "Wite-Out"],
+          "en": ["Liquid Paper", "white-out", "Wite-Out"],
           "et": ["korrektuurivedelik", "valgendusvedelik"]
         },
         "explanation": {
-          "en": "Correction fluid is applied over typing or handwriting mistakes and was especially useful before word processors.",
-          "et": "Korrektorvedelik kantakse trüki- või käsikirjaveale ning oli eriti kasulik enne tekstitöötlusprogramme."
+          "en": "Bette Nesmith Graham invented a white correcting paint for typists and later sold it under the Liquid Paper name.",
+          "et": "Bette Nesmith Graham leiutas masinakirjutajatele valge parandusaine ning müüs seda hiljem Liquid Paperi nime all."
         },
         "source": {
           "sourceId": "wikipedia:correction-fluid",
@@ -9834,30 +9805,59 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-042:question:5",
-        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:label-maker",
-        "tier": 5,
-        "subjectKey": "device:label-maker",
+        "key": "built-in-technology-inventions-set-042:question:4",
+        "factKey": "built-in-technology-inventions:paperwork-before-cloud:medium:material:carbon-paper",
+        "tier": 4,
+        "subjectKey": "material:carbon-paper",
         "clue": {
-          "en": "This small office tool prints or embosses self-adhesive tags for drawers, folders, and cables. Name it.",
-          "et": "See väike kontoritööriist prindib või pressib sahtlitele, kaustadele ja kaablitele kleepuvaid silte. Mis tööriist see on?"
+          "en": "Placed between two sheets, this pigment-coated paper transferred the pressure of typing onto the lower sheet, producing the 'carbon copy' behind email's CC. Name it.",
+          "et": "Kahe lehe vahele asetatud pigmendiga kaetud paber kandis kirjutamisel avaldatud surve abil pigmendi alumisele lehele ja andis nime e-kirja CC ehk koopiaväljale. Mis paber see oli?"
         },
         "response": {
-          "en": "label maker",
-          "et": "etiketiprinter"
+          "en": "carbon paper",
+          "et": "kopeerpaber"
         },
         "acceptedVariants": {
-          "en": ["label printer", "labeler", "labeller"],
-          "et": ["sildiprinter", "etiketimasin"]
+          "en": ["carbon sheet"],
+          "et": ["karbonpaber", "söepaber"]
         },
         "explanation": {
-          "en": "A stand-alone label maker prints on self-adhesive label stock, while older embossing models raised letters in plastic tape.",
-          "et": "Eraldiseisev etiketiprinter prindib isekleepuvale materjalile; vanemad pressmudelid tõstsid tähed plastlindis esile."
+          "en": "Carbon paper carried pigment to a second sheet under pressure, creating the carbon copy abbreviated as CC.",
+          "et": "Kopeerpaber kandis surve all pigmendi teisele lehele ja tekitas koopia, mida inglise keeles lühendati CC."
         },
         "source": {
-          "sourceId": "wikipedia:label-printer",
-          "title": "Label printer",
-          "url": "https://en.wikipedia.org/wiki/Label_printer",
+          "sourceId": "wikipedia:carbon-paper",
+          "title": "Carbon paper",
+          "url": "https://en.wikipedia.org/wiki/Carbon_paper",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-042:question:5",
+        "factKey": "built-in-technology-inventions:paperwork-before-cloud:medium:system:pneumatic-tube",
+        "tier": 5,
+        "subjectKey": "system:pneumatic-tube",
+        "clue": {
+          "en": "Banks, hospitals, and old department stores sent documents or cash through building-wide pipes in sealed capsules propelled by air pressure. Name this delivery system.",
+          "et": "Pangad, haiglad ja vanad kaubamajad saatsid dokumente või raha läbi hoone torustiku suletud kapslites, mida liigutas õhurõhk. Mis transpordisüsteem see on?"
+        },
+        "response": {
+          "en": "pneumatic tube system",
+          "et": "pneumopost"
+        },
+        "acceptedVariants": {
+          "en": ["pneumatic tube", "pneumatic dispatch"],
+          "et": ["torupost", "pneumaatiline post", "pneumaatiline torusüsteem"]
+        },
+        "explanation": {
+          "en": "A pneumatic tube system moves sealed carriers through pipes by creating a pressure difference with compressed air or a partial vacuum.",
+          "et": "Pneumopost liigutab suletud kapsleid torudes suruõhu või osalise vaakumiga tekitatud rõhuerinevuse abil."
+        },
+        "source": {
+          "sourceId": "wikipedia:pneumatic-tube",
+          "title": "Pneumatic tube",
+          "url": "https://en.wikipedia.org/wiki/Pneumatic_tube",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -9867,18 +9867,18 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-043",
     "name": {
-      "en": "Machines That Spot a Pattern",
-      "et": "Mustrid, mida masin märkab"
+      "en": "From Pattern to Data",
+      "et": "Mustrist saavad andmed"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-043:question:1",
-        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:barcode-reader",
+        "factKey": "built-in-technology-inventions:pattern-to-data:medium:device:barcode-reader",
         "tier": 1,
         "subjectKey": "device:barcode-reader",
         "clue": {
-          "en": "At a checkout, this device shines light on printed bars, senses the reflection, and sends decoded data to a computer. Name it.",
-          "et": "Kassas valgustab see seade trükitud ribasid, tajub peegeldust ja saadab dekodeeritud andmed arvutisse. Mis seade see on?"
+          "en": "At a supermarket checkout, this device reads the alternating dark and light bars on a product and sends the decoded number to the till. Name it.",
+          "et": "Supermarketi kassas loeb see seade tootel vahelduvaid tumedaid ja heledaid ribasid ning saadab dekodeeritud numbri kassasüsteemi. Mis seade see on?"
         },
         "response": {
           "en": "barcode reader",
@@ -9889,8 +9889,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["vöötkoodiskanner", "triipkoodilugeja"]
         },
         "explanation": {
-          "en": "A barcode reader uses a light source, lens, and sensor to read printed bar patterns and send decoded data to a computer.",
-          "et": "Vöötkoodilugeja kasutab valgusallikat, läätse ja andurit, et lugeda ribamustreid ning saata dekodeeritud andmed arvutisse."
+          "en": "A barcode reader detects the contrast between printed bars and spaces, then decodes their widths into product data.",
+          "et": "Vöötkoodilugeja tuvastab trükitud ribade ja vahede kontrasti ning dekodeerib nende laiused tooteandmeteks."
         },
         "source": {
           "sourceId": "wikipedia:barcode-reader",
@@ -9902,53 +9902,24 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-043:question:2",
-        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:metal-detector",
+        "factKey": "built-in-technology-inventions:pattern-to-data:medium:device:fingerprint-scanner",
         "tier": 2,
-        "subjectKey": "device:metal-detector",
-        "clue": {
-          "en": "Its coil creates a changing magnetic field and notices the secondary field from nearby conductive material. Name the instrument.",
-          "et": "Selle pool tekitab muutuva magnetvälja ja märkab lähedal oleva juhtiva materjali sekundaarvälja. Mis instrument see on?"
-        },
-        "response": {
-          "en": "metal detector",
-          "et": "metallidetektor"
-        },
-        "acceptedVariants": {
-          "en": ["metal finder"],
-          "et": ["metalliotsija"]
-        },
-        "explanation": {
-          "en": "A metal detector's coil creates a changing magnetic field and detects the secondary field induced in nearby conductive metal.",
-          "et": "Metallidetektori pool tekitab muutuva magnetvälja ning tuvastab lähedal asuvas juhtivas metallis indutseeritud sekundaarvälja."
-        },
-        "source": {
-          "sourceId": "wikipedia:metal-detector",
-          "title": "Metal detector",
-          "url": "https://en.wikipedia.org/wiki/Metal_detector",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-043:question:3",
-        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:fingerprint-scanner",
-        "tier": 3,
         "subjectKey": "device:fingerprint-scanner",
         "clue": {
-          "en": "Phones and doors use this biometric device to identify a person from the ridge pattern on a fingertip. Name it.",
-          "et": "Telefonid ja uksed kasutavad seda biomeetrilist seadet, et tuvastada inimene sõrmeotsa harjamustri järgi. Mis seade see on?"
+          "en": "A phone can unlock after comparing the arches, loops, and whorls in the ridges of a fingertip with a stored template. What sensor performs this check?",
+          "et": "Telefon võib avaneda, kui sõrmeotsa harjade kaared, silmused ja keerised vastavad salvestatud mallile. Milline andur seda kontrollib?"
         },
         "response": {
           "en": "fingerprint scanner",
           "et": "sõrmejäljelugeja"
         },
         "acceptedVariants": {
-          "en": ["fingerprint reader"],
-          "et": ["sõrmejäljeskanner"]
+          "en": ["fingerprint reader", "fingerprint sensor"],
+          "et": ["sõrmejäljeskanner", "sõrmejäljeandur"]
         },
         "explanation": {
-          "en": "A fingerprint scanner is a biometric security device that identifies a person from fingerprint ridge structure.",
-          "et": "Sõrmejäljelugeja on biomeetriline turvaseade, mis tuvastab inimese sõrmejälje harjastruktuuri järgi."
+          "en": "A fingerprint scanner captures distinctive ridge features and compares them with an enrolled digital template.",
+          "et": "Sõrmejäljelugeja salvestab harjamustri iseloomulikud tunnused ja võrdleb neid registreeritud digitaalse malliga."
         },
         "source": {
           "sourceId": "wikipedia:fingerprint-scanner",
@@ -9959,13 +9930,42 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
+        "key": "built-in-technology-inventions-set-043:question:3",
+        "factKey": "built-in-technology-inventions:pattern-to-data:medium:device:metal-detector",
+        "tier": 3,
+        "subjectKey": "device:metal-detector",
+        "clue": {
+          "en": "Alexander Graham Bell built an electromagnetic instrument to search for the bullet lodged in US president James Garfield. What kind of detector was it?",
+          "et": "Alexander Graham Bell ehitas elektromagnetilise seadme, et otsida USA presidendi James Garfieldi kehasse jäänud kuuli. Mis tüüpi detektor see oli?"
+        },
+        "response": {
+          "en": "metal detector",
+          "et": "metallidetektor"
+        },
+        "acceptedVariants": {
+          "en": ["electromagnetic metal detector", "metal finder"],
+          "et": ["elektromagnetiline metallidetektor", "metalliotsija"]
+        },
+        "explanation": {
+          "en": "Bell adapted induction-balance technology into a metal detector, although interference from Garfield's metal bed complicated the search.",
+          "et": "Bell kohandas induktsioonitasakaalu tehnoloogia metallidetektoriks, kuid Garfieldi metallvoodi segas otsingut."
+        },
+        "source": {
+          "sourceId": "wikipedia:metal-detector",
+          "title": "Metal detector",
+          "url": "https://en.wikipedia.org/wiki/Metal_detector",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
         "key": "built-in-technology-inventions-set-043:question:4",
-        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:technology:optical-character-recognition",
+        "factKey": "built-in-technology-inventions:pattern-to-data:medium:technology:optical-character-recognition",
         "tier": 4,
         "subjectKey": "technology:optical-character-recognition",
         "clue": {
-          "en": "This technology turns pictures of typed, printed, or handwritten text into machine-encoded text. Name the technology.",
-          "et": "See tehnoloogia muudab trükitud, kirjutatud või käsitsi kirjutatud teksti pildid masinloetavaks tekstiks. Mis tehnoloogia see on?"
+          "en": "A scanned page is only a picture until this technology identifies its letters and turns them into searchable, editable text. Name the technology.",
+          "et": "Skaneeritud leht on vaid pilt, kuni see tehnoloogia tunneb ära tähed ning muudab need otsitavaks ja muudetavaks tekstiks. Mis tehnoloogia see on?"
         },
         "response": {
           "en": "optical character recognition (OCR)",
@@ -9976,8 +9976,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["OCR"]
         },
         "explanation": {
-          "en": "Optical character recognition converts images of typed, printed, or handwritten text into machine-encoded text.",
-          "et": "Optiline märgituvastus teisendab trükitud, kirjutatud või käsitsi kirjutatud teksti kujutised masinkodeeritud tekstiks."
+          "en": "Optical character recognition analyses letter shapes in an image and converts them into machine-encoded text.",
+          "et": "Optiline märgituvastus analüüsib pildil olevaid tähekujusid ja teisendab need masinkodeeritud tekstiks."
         },
         "source": {
           "sourceId": "wikipedia:optical-character-recognition",
@@ -9989,12 +9989,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-043:question:5",
-        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:radar-speed-gun",
+        "factKey": "built-in-technology-inventions:pattern-to-data:medium:device:radar-speed-gun",
         "tier": 5,
         "subjectKey": "device:radar-speed-gun",
         "clue": {
-          "en": "Police can use this device to calculate speed from the Doppler shift between sent radio waves and the reflected signal. Name it.",
-          "et": "Politsei saab selle seadmega arvutada kiirust Doppleri nihkest saadetud raadiolainete ja peegeldunud signaali vahel. Mis seade see on?"
+          "en": "Police point this handheld instrument at a moving car; it compares transmitted radio waves with their Doppler-shifted reflection to calculate speed. Name it.",
+          "et": "Politsei suunab selle käeshoitava seadme liikuvale autole; kiirus leitakse saadetud raadiolainete ja Doppleri nihkega peegelduse võrdlusest. Mis seade see on?"
         },
         "response": {
           "en": "radar speed gun",
@@ -10005,8 +10005,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["radarkiirusmõõtur", "kiirusradar"]
         },
         "explanation": {
-          "en": "A radar speed gun calculates speed from the Doppler shift between transmitted radio waves and the signal reflected by a moving target.",
-          "et": "Radar-kiirusmõõtur arvutab kiiruse saadetud raadiolainete ja liikuva sihtmärgi peegeldatud signaali Doppleri nihkest."
+          "en": "A radar speed gun measures the frequency shift in radio waves reflected by a moving target and converts it into a speed reading.",
+          "et": "Radar-kiirusmõõtur mõõdab liikuvalt sihtmärgilt peegeldunud raadiolainete sagedusnihet ja teisendab selle kiiruseks."
         },
         "source": {
           "sourceId": "wikipedia:radar-speed-gun",
@@ -10021,30 +10021,30 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-044",
     "name": {
-      "en": "A Different First Purpose",
-      "et": "Esialgu hoopis teiseks"
+      "en": "Inventions with an Unexpected Start",
+      "et": "Ootamatu algusega leiutised"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-044:question:1",
-        "factKey": "built-in-technology-inventions:different-first-purpose:medium:material:teflon",
+        "factKey": "built-in-technology-inventions:inventions-by-accident:medium:material:teflon",
         "tier": 1,
         "subjectKey": "material:teflon",
         "clue": {
-          "en": "Chemists seeking a refrigerant found a slippery white polymer inside a gas cylinder; cookware later made the brand famous. Name it.",
-          "et": "Külmaainet otsinud keemikud leidsid gaasiballoonist libeda valge polümeeri; hiljem tegi kööginõu brändi kuulsaks. Mis see on?"
+          "en": "While looking for a new refrigerant, Roy Plunkett found a waxy white polymer inside a gas cylinder. Later famous on non-stick cookware, what material was it?",
+          "et": "Uut külmaainet otsides leidis Roy Plunkett gaasiballoonist vahaja valge polümeeri. Milline hiljem nakkumatu kattega pannidega kuulsaks saanud materjal see oli?"
         },
         "response": {
           "en": "Teflon",
           "et": "teflon"
         },
         "acceptedVariants": {
-          "en": ["PTFE"],
-          "et": ["PTFE"]
+          "en": ["PTFE", "polytetrafluoroethylene"],
+          "et": ["PTFE", "polütetrafluoroetüleen"]
         },
         "explanation": {
-          "en": "PTFE, commonly branded Teflon, was discovered accidentally while chemists were seeking a refrigerant.",
-          "et": "PTFE, mida tuntakse sageli tefloni nime all, avastati juhuslikult külmaainet otsides."
+          "en": "Roy Plunkett discovered PTFE by accident in 1938 while trying to make a new refrigerant; Teflon became its best-known brand name.",
+          "et": "Roy Plunkett avastas PTFE juhuslikult 1938. aastal, kui püüdis valmistada uut külmaainet; Teflonist sai selle tuntuim kaubamärk."
         },
         "source": {
           "sourceId": "wikipedia:ptfe",
@@ -10056,116 +10056,116 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-044:question:2",
-        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:super-glue",
+        "factKey": "built-in-technology-inventions:unexpected-start:medium:product:post-it-note",
         "tier": 2,
-        "subjectKey": "product:super-glue",
+        "subjectKey": "product:post-it-note",
         "clue": {
-          "en": "A clear gun-sight plastic was first rejected because it stuck to everything; it was later rediscovered as a fast adhesive. Name the product.",
-          "et": "Läbipaistev sihikumaterjal lükati algul tagasi, sest see kleepus kõige külge; hiljem avastati see uuesti kiire liimina. Mis toode see on?"
+          "en": "A 3M scientist accidentally created a weak adhesive that could be peeled off and reused; a colleague later put it on small paper notes. Name the product.",
+          "et": "3M-i teadlane lõi juhuslikult nõrga liimi, mida sai eemaldada ja uuesti kasutada; kolleeg pani selle hiljem väikestele märkmepaberitele. Mis toode see oli?"
         },
         "response": {
-          "en": "Super Glue",
-          "et": "superliim"
+          "en": "Post-it Note",
+          "et": "Post-it märkmepaber"
         },
         "acceptedVariants": {
-          "en": ["superglue", "cyanoacrylate", "cyanoacrylate glue"],
-          "et": ["tsüanoakrülaat", "kiirliim"]
+          "en": ["Post-it", "sticky note"],
+          "et": ["Post-it", "kleepmärkmepaber"]
         },
         "explanation": {
-          "en": "Cyanoacrylate was rejected during a search for clear gun-sight material, then rediscovered as a fast adhesive.",
-          "et": "Tsüanoakrülaat lükati läbipaistva sihikumaterjali otsingul kõrvale, kuid avastati hiljem uuesti kiire liimina."
+          "en": "Spencer Silver discovered 3M's low-tack reusable adhesive by accident, and Art Fry later used it to create repositionable notes.",
+          "et": "Spencer Silver avastas 3M-i nõrga korduvkasutatava liimi juhuslikult ning Art Fry rakendas seda hiljem ümberpaigutatavatel märkmepaberitel."
         },
         "source": {
-          "sourceId": "wikipedia:cyanoacrylate",
-          "title": "Cyanoacrylate",
-          "url": "https://en.wikipedia.org/wiki/Cyanoacrylate",
+          "sourceId": "wikipedia:post-it-note",
+          "title": "Post-it note",
+          "url": "https://en.wikipedia.org/wiki/Post-it_note",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:3",
-        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:bubble-wrap",
+        "factKey": "built-in-technology-inventions:unexpected-start:medium:food:corn-flakes",
         "tier": 3,
-        "subjectKey": "product:bubble-wrap",
+        "subjectKey": "food:corn-flakes",
         "clue": {
-          "en": "Two shower curtains sealed with trapped air were first tried as textured wallpaper before the material protected parcels. Name it.",
-          "et": "Kaks õhku kinni hoidvat dušikardinat prooviti esmalt reljeefse tapeedina, enne kui materjal hakkas pakke kaitsma. Mis see on?"
+          "en": "This breakfast cereal began as wheat flakes made for patients at the Battle Creek Sanitarium before Will Kellogg developed the corn version. Name it.",
+          "et": "See hommikuhelvestest toit sai alguse Battle Creeki sanatooriumi patsientidele valmistatud nisuhelvestest, enne kui Will Kellogg arendas maisivariandi. Mis toit see on?"
         },
         "response": {
-          "en": "bubble wrap",
-          "et": "mullikile"
+          "en": "Corn Flakes",
+          "et": "maisihelbed"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["cornflakes", "Kellogg's Corn Flakes"],
+          "et": ["Corn Flakes", "Kelloggi maisihelbed"]
         },
         "explanation": {
-          "en": "Bubble wrap began as two shower curtains sealed into air bubbles and was first tried as textured wallpaper.",
-          "et": "Mullikile algas kahe õhumullideks suletud dušikardinana ning seda prooviti algul reljeefse tapeedina."
+          "en": "Will Kellogg first made flaked cereal from wheat for sanitarium patients and later developed the toasted corn product known as Corn Flakes.",
+          "et": "Will Kellogg valmistas sanatooriumi patsientidele algul nisuhelbeid ning arendas hiljem röstitud maisitoote, mida tuntakse maisihelvestena."
         },
         "source": {
-          "sourceId": "wikipedia:bubble-wrap",
-          "title": "Bubble Wrap",
-          "url": "https://en.wikipedia.org/wiki/Bubble_Wrap",
+          "sourceId": "wikipedia:corn-flakes",
+          "title": "Corn flakes",
+          "url": "https://en.wikipedia.org/wiki/Corn_flakes",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:4",
-        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:slinky",
+        "factKey": "built-in-technology-inventions:unexpected-start:medium:material:laminated-glass",
         "tier": 4,
-        "subjectKey": "product:slinky",
+        "subjectKey": "material:laminated-glass",
         "clue": {
-          "en": "Engineer Richard James saw a spring step downward after it fell from a shelf, inspiring this walking toy. Name it.",
-          "et": "Insener Richard James nägi, kuidas riiulilt kukkunud vedru justkui astus allapoole, ja sellest sündis see kõndiv mänguasi. Mis see on?"
+          "en": "Édouard Bénédictus noticed that a dropped flask coated with plastic cracked but did not scatter into shards. What protective material did this inspire?",
+          "et": "Édouard Bénédictus märkas, et plastkihiga kaetud maha kukkunud kolb mõranes, kuid ei lagunenud kildudeks. Millise kaitsva materjali see inspireeris?"
         },
         "response": {
-          "en": "Slinky",
-          "et": "Slinky"
+          "en": "laminated glass",
+          "et": "lamineeritud klaas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["laminated safety glass", "safety glass"],
+          "et": ["lamineeritud turvaklaas", "turvaklaas"]
         },
         "explanation": {
-          "en": "The Slinky toy grew from Richard James seeing a spring step downward after it was knocked from a shelf.",
-          "et": "Slinky mänguasi sai alguse sellest, et Richard James nägi riiulilt tõugatud vedru allapoole astumas."
+          "en": "Bénédictus developed laminated safety glass after seeing that a plastic-coated flask held its broken pieces together.",
+          "et": "Bénédictus arendas lamineeritud turvaklaasi pärast seda, kui nägi, et plastkattega kolb hoidis purunenud tükid koos."
         },
         "source": {
-          "sourceId": "wikipedia:slinky",
-          "title": "Slinky",
-          "url": "https://en.wikipedia.org/wiki/Slinky",
+          "sourceId": "wikipedia:edouard-benedictus",
+          "title": "Édouard Bénédictus",
+          "url": "https://en.wikipedia.org/wiki/%C3%89douard_B%C3%A9n%C3%A9dictus",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:5",
-        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:play-doh",
+        "factKey": "built-in-technology-inventions:unexpected-start:medium:material:stainless-steel",
         "tier": 5,
-        "subjectKey": "product:play-doh",
+        "subjectKey": "material:stainless-steel",
         "clue": {
-          "en": "This colourful modelling compound began as a putty for cleaning coal soot from wallpaper. Name the toy brand.",
-          "et": "See värviline voolimismass algas pahtlina, millega puhastati tapeedilt kivisöetahma. Mis mänguasjabränd see on?"
+          "en": "While testing alloys for gun barrels, Harry Brearley noticed that one discarded sample resisted rust. What widely used material emerged from that work?",
+          "et": "Relvaraudade jaoks sulameid katsetades märkas Harry Brearley, et üks kõrvale heidetud proov ei roostetanud. Milline laialt kasutatav materjal sellest tööst sündis?"
         },
         "response": {
-          "en": "Play-Doh",
-          "et": "Play-Doh"
+          "en": "stainless steel",
+          "et": "roostevaba teras"
         },
         "acceptedVariants": {
-          "en": ["Playdoh", "Play-Doh compound"],
-          "et": ["Playdoh"]
+          "en": ["rustless steel", "inox"],
+          "et": ["inox", "roostekindel teras"]
         },
         "explanation": {
-          "en": "The modelling compound sold as Play-Doh was originally manufactured as a putty for cleaning coal soot from wallpaper.",
-          "et": "Play-Doh nime all müüdud voolimismassi valmistati algselt pahtlina, millega puhastati tapeedilt kivisöetahma."
+          "en": "Harry Brearley found that a chromium-rich steel made during gun-barrel research resisted corrosion, helping establish stainless steel.",
+          "et": "Harry Brearley leidis relvarauauuringute käigus, et kroomirikas teras peab korrosioonile vastu, aidates kaasa roostevaba terase kujunemisele."
         },
         "source": {
-          "sourceId": "wikipedia:play-doh",
-          "title": "Play-Doh",
-          "url": "https://en.wikipedia.org/wiki/Play-Doh",
+          "sourceId": "wikipedia:stainless-steel-history",
+          "title": "Stainless steel",
+          "url": "https://en.wikipedia.org/wiki/Stainless_steel#History",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -10175,153 +10175,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-045",
     "name": {
-      "en": "Sensors in Modern Machines",
-      "et": "Nüüdisaegsete masinate andurid"
+      "en": "How Your Phone Knows",
+      "et": "Kuidas telefon aru saab"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-045:question:1",
-        "factKey": "built-in-technology-inventions:sensors:medium:device:accelerometer",
+        "factKey": "built-in-technology-inventions:phone-awareness:medium:system:gps",
         "tier": 1,
-        "subjectKey": "device:accelerometer",
+        "subjectKey": "system:gps",
         "clue": {
-          "en": "Sensor detects acceleration and helps a phone sense its orientation. What is it called?",
-          "et": "Milline andur tuvastab kiirenduse ning aitab telefonil asendit tajuda?"
+          "en": "Navigation apps calculate a phone's location from precisely timed signals sent by satellites. What global system provides them?",
+          "et": "Navigeerimisrakendused arvutavad telefoni asukoha satelliitide saadetud ülitäpsete ajasignaalide järgi. Milline üleilmne süsteem neid annab?"
         },
         "response": {
-          "en": "accelerometer",
-          "et": "kiirendusandur"
+          "en": "GPS",
+          "et": "GPS"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Global Positioning System", "satnav"],
+          "et": ["globaalne positsioneerimissüsteem", "satelliitnavigatsioon"]
         },
         "explanation": {
-          "en": "Accelerometer often measures motion through the deflection of a microscopic proof mass.",
-          "et": "Kiirendusandur mõõdab liikumist sageli mikroskoopilise inertsmassi paindumise kaudu."
+          "en": "GPS receivers determine position by comparing the travel times of precisely timed radio signals from multiple satellites.",
+          "et": "GPS-vastuvõtjad määravad asukoha, võrreldes mitme satelliidi täpselt ajastatud raadiosignaalide leviaegu."
         },
         "source": {
-          "sourceId": "wikipedia:accelerometer",
-          "title": "Accelerometer",
-          "url": "https://en.wikipedia.org/wiki/Accelerometer",
+          "sourceId": "wikipedia:global-positioning-system",
+          "title": "Global Positioning System",
+          "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-045:question:2",
-        "factKey": "built-in-technology-inventions:sensors:medium:device:gyroscope",
+        "factKey": "built-in-technology-inventions:phone-awareness:medium:feature:automatic-screen-rotation",
         "tier": 2,
-        "subjectKey": "device:gyroscope",
+        "subjectKey": "feature:automatic-screen-rotation",
         "clue": {
-          "en": "A sensor measures rotation and helps stabilise aircraft or phones. Name it.",
-          "et": "Üks andur mõõdab pöörlemist ning aitab lennukit või telefoni stabiliseerida. Millist vastust otsime?"
+          "en": "Turn a phone sideways and this display feature switches the picture between portrait and landscape. What is the feature called?",
+          "et": "Kui pöörad telefoni külili, vahetab see ekraanifunktsioon pildi püst- ja rõhtpaigutuse vahel. Mis funktsioon see on?"
         },
         "response": {
-          "en": "gyroscope",
-          "et": "güroskoop"
+          "en": "automatic screen rotation",
+          "et": "automaatne ekraanipööre"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["auto-rotate", "screen auto-rotation"],
+          "et": ["automaatpööre", "ekraani automaatne pööramine"]
         },
         "explanation": {
-          "en": "Gyroscope in MEMS form senses Coriolis forces in vibrating structures.",
-          "et": "Güroskoop tajub MEMS-kujul vibreerivates struktuurides Coriolisi jõudu."
+          "en": "Automatic screen rotation uses motion-sensor readings, especially gravity measured by an accelerometer, to choose portrait or landscape orientation.",
+          "et": "Automaatne ekraanipööre kasutab liikumisandurite näite, eriti kiirendusanduriga mõõdetud raskusjõu suunda, et valida püst- või rõhtpaigutus."
         },
         "source": {
-          "sourceId": "wikipedia:gyroscope",
-          "title": "Gyroscope",
-          "url": "https://en.wikipedia.org/wiki/Gyroscope",
+          "sourceId": "wikipedia:accelerometer-screen-rotation",
+          "title": "Accelerometer",
+          "url": "https://en.wikipedia.org/wiki/Accelerometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-045:question:3",
-        "factKey": "built-in-technology-inventions:sensors:medium:device:thermocouple",
+        "factKey": "built-in-technology-inventions:phone-awareness:medium:sensor:proximity",
         "tier": 3,
-        "subjectKey": "device:thermocouple",
+        "subjectKey": "sensor:proximity",
         "clue": {
-          "en": "Find the sensor that measures temperature using a junction of two unlike metals.",
-          "et": "Andur mõõdab temperatuuri kahe eri metalli liite abil. Leia sobiv vastus."
+          "en": "When you lift a phone to your ear, this contactless detector helps switch off the screen so your cheek cannot tap it. Name the sensor.",
+          "et": "Kui tõstad telefoni kõrva juurde, aitab see kontaktivaba andur ekraani välja lülitada, et põsk seda ei puudutaks. Mis andur see on?"
         },
         "response": {
-          "en": "thermocouple",
-          "et": "termopaar"
+          "en": "proximity sensor",
+          "et": "lähedusandur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["proximity detector"],
+          "et": ["proximity sensor", "lähendusandur"]
         },
         "explanation": {
-          "en": "Thermocouple produces a voltage through the Seebeck effect when junction temperatures differ.",
-          "et": "Termopaar tekitab Seebecki efekti tõttu pinge, kui liitekohtade temperatuur erineb."
+          "en": "A phone's proximity sensor detects when an object such as a face is close, allowing the touchscreen to be disabled during a call.",
+          "et": "Telefoni lähedusandur tuvastab lähedal oleva objekti, näiteks näo, ning võimaldab kõne ajal puuteekraani välja lülitada."
         },
         "source": {
-          "sourceId": "wikipedia:thermocouple",
-          "title": "Thermocouple",
-          "url": "https://en.wikipedia.org/wiki/Thermocouple",
+          "sourceId": "wikipedia:proximity-sensor",
+          "title": "Proximity sensor",
+          "url": "https://en.wikipedia.org/wiki/Proximity_sensor",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-045:question:4",
-        "factKey": "built-in-technology-inventions:sensors:medium:device:photodiode",
+        "factKey": "built-in-technology-inventions:phone-awareness:medium:sensor:ambient-light",
         "tier": 4,
-        "subjectKey": "device:photodiode",
+        "subjectKey": "sensor:ambient-light",
         "clue": {
-          "en": "Sensor turns incoming light into an electrical current. What is it called?",
-          "et": "Milline andur muudab langeva valguse elektrivooluks?"
+          "en": "Automatic brightness uses this component to measure the light around a phone and dim or brighten the display. Name the sensor.",
+          "et": "Automaatne heledus kasutab seda andurit, et mõõta telefoni ümbritseva valguse tugevust ning muuta ekraan tumedamaks või heledamaks. Mis andur see on?"
         },
         "response": {
-          "en": "photodiode",
-          "et": "fotodiood"
+          "en": "ambient light sensor",
+          "et": "ümbritseva valguse andur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["light sensor", "ambient-light sensor"],
+          "et": ["valgusandur", "ambient light sensor"]
         },
         "explanation": {
-          "en": "Photodiode is commonly operated in reverse bias so photons generate measurable charge carriers.",
-          "et": "Fotodiood töötab sageli vastupingel, et footonid tekitaksid mõõdetavaid laengukandjaid."
+          "en": "An ambient light sensor measures surrounding illumination so a device can adjust its screen for the room or outdoors.",
+          "et": "Ümbritseva valguse andur mõõdab valgustaset, et seade saaks ekraani toas või õues sobivalt reguleerida."
         },
         "source": {
-          "sourceId": "wikipedia:photodiode",
-          "title": "Photodiode",
-          "url": "https://en.wikipedia.org/wiki/Photodiode",
+          "sourceId": "wikipedia:ambient-light-sensor",
+          "title": "Ambient light sensor",
+          "url": "https://en.wikipedia.org/wiki/Ambient_light_sensor",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-045:question:5",
-        "factKey": "built-in-technology-inventions:sensors:medium:device:microphone",
+        "factKey": "built-in-technology-inventions:phone-awareness:medium:sensor:magnetometer",
         "tier": 5,
-        "subjectKey": "device:microphone",
+        "subjectKey": "sensor:magnetometer",
         "clue": {
-          "en": "A sensor converts sound pressure into an electrical signal. Name it.",
-          "et": "Üks andur muundab helirõhu elektrisignaaliks. Millist vastust otsime?"
+          "en": "A compass app finds magnetic north with a sensor that measures a field's strength and direction. Name it.",
+          "et": "Kompassirakendus leiab magnetilise põhjasuuna anduriga, mis mõõdab välja tugevust ja suunda. Mis andur see on?"
         },
         "response": {
-          "en": "microphone",
-          "et": "mikrofon"
+          "en": "magnetometer",
+          "et": "magnetomeeter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["magnetic-field sensor", "magnetic sensor"],
+          "et": ["magnetandur", "magnetic sensor"]
         },
         "explanation": {
-          "en": "Microphone may sense diaphragm motion through electromagnetic induction or changing capacitance.",
-          "et": "Mikrofon võib tajuda membraani liikumist elektromagnetilise induktsiooni või muutuva mahtuvusega."
+          "en": "A magnetometer measures magnetic fields, allowing a phone to act as a digital compass when calibrated.",
+          "et": "Magnetomeeter mõõdab magnetvälja ning võimaldab kalibreeritud telefonil toimida digitaalse kompassina."
         },
         "source": {
-          "sourceId": "wikipedia:microphone",
-          "title": "Microphone",
-          "url": "https://en.wikipedia.org/wiki/Microphone",
+          "sourceId": "wikipedia:magnetometer",
+          "title": "Magnetometer",
+          "url": "https://en.wikipedia.org/wiki/Magnetometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -10329,176 +10329,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-046",
     "name": {
-      "en": "Ways to Make a Screen",
-      "et": "Ekraani valmistamise viisid"
+      "en": "When Screens Misbehave",
+      "et": "Kui ekraan tembutab"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-046:question:1",
-        "factKey": "built-in-technology-inventions:display-technologies:medium:technology:lcd",
+        "factKey": "built-in-technology-inventions:screen-trouble:medium:error:blue-screen-of-death",
         "tier": 1,
-        "subjectKey": "technology:lcd",
+        "subjectKey": "error:blue-screen-of-death",
         "clue": {
-          "en": "Identify the display technology: it uses liquid crystals to control light from a backlight.",
-          "et": "Mis kuvatehnoloogia kasutab taustvalgustuse juhtimiseks vedelkristalle?"
+          "en": "Windows users know this crash screen by a grim nickname based on its colour. What is it called?",
+          "et": "Windowsi kasutajad tunnevad seda krahhiekraani sünge hüüdnime järgi, mis viitab selle värvile. Mis nimi see on?"
         },
         "response": {
-          "en": "LCD",
-          "et": "vedelkristallkuvar"
+          "en": "Blue Screen of Death",
+          "et": "sinine surmaekraan"
         },
         "acceptedVariants": {
           "en": [
-            "liquid-crystal display"
+            "BSOD"
           ],
           "et": [
-            "LCD"
+            "BSOD",
+            "Blue Screen of Death"
           ]
         },
         "explanation": {
-          "en": "LCD needs polarising filters because its pixels do not emit light themselves.",
-          "et": "Vedelkristallkuvar vajab polariseerivaid filtreid, sest pikslid ise valgust ei kiirga."
+          "en": "The Blue Screen of Death is the familiar nickname for a Windows stop-error screen after a serious system failure.",
+          "et": "Sinine surmaekraan on Windowsi stopp-tõrke ekraani tuntud hüüdnimi pärast tõsist süsteemiriket."
         },
         "source": {
-          "sourceId": "wikipedia:liquid-crystal_display",
-          "title": "Liquid-crystal display",
-          "url": "https://en.wikipedia.org/wiki/Liquid-crystal_display",
+          "sourceId": "wikipedia:blue-screen-of-death",
+          "title": "Blue screen of death",
+          "url": "https://en.wikipedia.org/wiki/Blue_screen_of_death",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-046:question:2",
-        "factKey": "built-in-technology-inventions:display-technologies:medium:technology:oled",
+        "factKey": "built-in-technology-inventions:screen-trouble:medium:defect:dead-pixel",
         "tier": 2,
-        "subjectKey": "technology:oled",
+        "subjectKey": "defect:dead-pixel",
         "clue": {
-          "en": "Name the display technology that uses organic compounds whose pixels emit their own light.",
-          "et": "Vihjes kirjeldatud kuvatehnoloogia kasutab orgaanilisi ühendeid, mille pikslid kiirgavad ise valgust. Mis see on?"
+          "en": "A tiny dot on a display that remains black because it no longer responds is commonly called what?",
+          "et": "Kuidas nimetatakse ekraanil olevat tillukest punkti, mis ei reageeri enam ja jääb mustaks?"
         },
         "response": {
-          "en": "OLED",
-          "et": "OLED"
+          "en": "dead pixel",
+          "et": "surnud piksel"
         },
         "acceptedVariants": {
           "en": [
-            "organic light-emitting diode"
+            "dead screen pixel"
           ],
           "et": [
-            "orgaaniline valgusdiood"
+            "surnud ekraanipiksel"
           ]
         },
         "explanation": {
-          "en": "OLED can show deep black by switching individual pixels completely off.",
-          "et": "OLED saab näidata sügavat musta, lülitades üksikud pikslid täielikult välja."
+          "en": "A dead pixel is a defective display pixel that produces no light and therefore appears black.",
+          "et": "Surnud piksel on vigane kuvapiksel, mis ei tekita valgust ja paistab seetõttu mustana."
         },
         "source": {
-          "sourceId": "wikipedia:oled",
-          "title": "OLED",
-          "url": "https://en.wikipedia.org/wiki/OLED",
+          "sourceId": "wikipedia:defective-pixel",
+          "title": "Defective pixel",
+          "url": "https://en.wikipedia.org/wiki/Defective_pixel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-046:question:3",
-        "factKey": "built-in-technology-inventions:display-technologies:medium:technology:electronic-paper",
+        "factKey": "built-in-technology-inventions:screen-trouble:medium:damage:screen-burn-in",
         "tier": 3,
-        "subjectKey": "technology:electronic-paper",
+        "subjectKey": "damage:screen-burn-in",
         "clue": {
-          "en": "Find the display technology that mimics ink on paper and holds an image with little power.",
-          "et": "Kuvatehnoloogia jäljendab paberil tinti ning hoiab pilti vähese energiaga. Leia sobiv vastus."
+          "en": "After a static channel logo remains for many hours, a faint ghost can stay visible even when the picture changes. Name this display damage.",
+          "et": "Kui muutumatu kanali logo püsib ekraanil palju tunde, võib selle kahvatu jälg jääda nähtavaks ka pärast pildi vahetumist. Kuidas seda kahjustust nimetatakse?"
         },
         "response": {
-          "en": "electronic paper",
-          "et": "e-paber"
+          "en": "screen burn-in",
+          "et": "ekraani sissepõlemine"
         },
         "acceptedVariants": {
           "en": [
-            "e-paper",
-            "E Ink"
+            "burn-in",
+            "image burn-in"
           ],
           "et": [
-            "elektrooniline paber",
-            "E Ink"
+            "sissepõlemine",
+            "kujutise sissepõlemine"
           ]
         },
         "explanation": {
-          "en": "Electronic paper often moves charged black and white particles through microscopic capsules.",
-          "et": "E-paber liigutab sageli laetud musti ja valgeid osakesi mikrokapslites."
+          "en": "Screen burn-in is permanent or long-lasting discolouration caused by uneven use of display pixels, often from static images.",
+          "et": "Ekraani sissepõlemine on pikslite ebaühtlasest kasutusest, sageli staatilisest kujutisest, tekkinud püsiv või kauakestev värvimuutus."
         },
         "source": {
-          "sourceId": "wikipedia:electronic_paper",
-          "title": "Electronic paper",
-          "url": "https://en.wikipedia.org/wiki/Electronic_paper",
+          "sourceId": "wikipedia:screen-burn-in",
+          "title": "Screen burn-in",
+          "url": "https://en.wikipedia.org/wiki/Screen_burn-in",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-046:question:4",
-        "factKey": "built-in-technology-inventions:display-technologies:medium:technology:cathode-ray-tube",
+        "factKey": "built-in-technology-inventions:screen-trouble:medium:artifact:screen-tearing",
         "tier": 4,
-        "subjectKey": "technology:cathode-ray-tube",
+        "subjectKey": "artifact:screen-tearing",
         "clue": {
-          "en": "Identify the display technology: it formed television pictures by sweeping an electron beam across phosphor.",
-          "et": "Mis kuvatehnoloogia moodustas telepildi, pühkides elektronkiire üle luminofoori?"
+          "en": "A game shows misaligned portions of consecutive frames at once, often as a horizontal split across moving scenery. What visual fault is this?",
+          "et": "Mäng näitab korraga järjestikuste kaadrite nihkes osi, sageli liikuva pildi horisontaalse rebendina. Mis pildihäire see on?"
         },
         "response": {
-          "en": "cathode-ray tube",
-          "et": "katoodkiiretoru"
+          "en": "screen tearing",
+          "et": "pildi rebimine"
         },
         "acceptedVariants": {
           "en": [
-            "CRT"
+            "tearing",
+            "video tearing"
           ],
           "et": [
-            "CRT",
-            "kineskoop"
+            "ekraani rebimine",
+            "screen tearing"
           ]
         },
         "explanation": {
-          "en": "Cathode-ray tube used magnetic deflection coils to steer the beam line by line.",
-          "et": "Katoodkiiretoru kasutas kiire ridade kaupa suunamiseks magnetilisi hälvitusmähiseid."
+          "en": "Screen tearing occurs when a display shows information from more than one video frame in a single screen draw.",
+          "et": "Pildi rebimine tekib siis, kui ekraan näitab ühe värskenduse ajal teavet rohkem kui ühest videokaadrist."
         },
         "source": {
-          "sourceId": "wikipedia:cathode-ray_tube",
-          "title": "Cathode-ray tube",
-          "url": "https://en.wikipedia.org/wiki/Cathode-ray_tube",
+          "sourceId": "wikipedia:screen-tearing",
+          "title": "Screen tearing",
+          "url": "https://en.wikipedia.org/wiki/Screen_tearing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-046:question:5",
-        "factKey": "built-in-technology-inventions:display-technologies:medium:technology:video-projector",
+        "factKey": "built-in-technology-inventions:screen-trouble:medium:pattern:moire",
         "tier": 5,
-        "subjectKey": "technology:video-projector",
+        "subjectKey": "pattern:moire",
         "clue": {
-          "en": "One display technology throws an enlarged image onto a separate screen. Which one is described?",
-          "et": "Kuvatehnoloogia heidab suurendatud pildi eraldi ekraanile. Mis see on?"
+          "en": "Photographing a monitor or finely striped fabric can produce broad wavy bands where two grids interfere. What is this effect called?",
+          "et": "Monitori või peenetriibulise kanga pildistamisel võivad kahe võrgustiku interferentsi tõttu tekkida laiad lainelised vöödid. Mis efekt see on?"
         },
         "response": {
-          "en": "video projector",
-          "et": "videoprojektor"
+          "en": "moiré pattern",
+          "et": "muareemuster"
         },
         "acceptedVariants": {
           "en": [
-            "projector"
+            "moiré",
+            "moire pattern",
+            "moire effect"
           ],
           "et": [
-            "projektor"
+            "muaree",
+            "muareeefekt",
+            "moiré muster"
           ]
         },
         "explanation": {
-          "en": "Video projector may form images with tiny mirrors in a digital light processing chip.",
-          "et": "Videoprojektor võib moodustada pildi digitaalvalguse töötluskiibi tillukeste peeglitega."
+          "en": "A moiré pattern is a large-scale interference pattern produced when two similar grids or repeated patterns overlap imperfectly.",
+          "et": "Muareemuster on suuremõõtmeline interferentsmuster, mis tekib kahe sarnase võrgustiku või korduva mustri ebatäpsel kattumisel."
         },
         "source": {
-          "sourceId": "wikipedia:video_projector",
-          "title": "Video projector",
-          "url": "https://en.wikipedia.org/wiki/Video_projector",
+          "sourceId": "wikipedia:moire-pattern",
+          "title": "Moiré pattern",
+          "url": "https://en.wikipedia.org/wiki/Moir%C3%A9_pattern",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -10506,153 +10512,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-047",
     "name": {
-      "en": "How Data Was Stored",
-      "et": "Kuidas andmeid talletati"
+      "en": "Data You Could Hold",
+      "et": "Käega katsutavad andmed"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-047:question:1",
-        "factKey": "built-in-technology-inventions:storage-history:medium:medium:punched-card",
+        "factKey": "built-in-technology-inventions:data-you-could-hold:medium:medium:floppy-disk",
         "tier": 1,
-        "subjectKey": "medium:punched-card",
-        "clue": {
-          "en": "What storage medium encoded data as holes in stiff paper cards?",
-          "et": "Järgmine andmekandja kodeeris andmed aukudena jäikades paberkaartides. Milline see on?"
-        },
-        "response": {
-          "en": "punched card",
-          "et": "perfokaart"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Punched card was read by sensing hole positions in fixed columns.",
-          "et": "Perfokaart loeti kindlates veergudes asuvate aukude tuvastamisega."
-        },
-        "source": {
-          "sourceId": "wikipedia:punched_card",
-          "title": "Punched card",
-          "url": "https://en.wikipedia.org/wiki/Punched_card",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-047:question:2",
-        "factKey": "built-in-technology-inventions:storage-history:medium:medium:magnetic-tape",
-        "tier": 2,
-        "subjectKey": "medium:magnetic-tape",
-        "clue": {
-          "en": "A storage medium records data along a coated plastic ribbon. Name it.",
-          "et": "Üks andmekandja salvestab andmed kaetud plastribale. Millist vastust otsime?"
-        },
-        "response": {
-          "en": "magnetic tape",
-          "et": "magnetlint"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Magnetic tape is sequential-access storage but remains valuable for large archives.",
-          "et": "Magnetlint on jadapöördusmälu, kuid on endiselt väärtuslik suurtes arhiivides."
-        },
-        "source": {
-          "sourceId": "wikipedia:magnetic_tape_data_storage",
-          "title": "Magnetic tape data storage",
-          "url": "https://en.wikipedia.org/wiki/Magnetic_tape_data_storage",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-047:question:3",
-        "factKey": "built-in-technology-inventions:storage-history:medium:medium:floppy-disk",
-        "tier": 3,
         "subjectKey": "medium:floppy-disk",
         "clue": {
-          "en": "Recognise the storage medium that enclosed a flexible magnetic disk in a square shell.",
-          "et": "Otsitav andmekandja ümbritses painduva magnetketta kandilise kestaga. Mis see on?"
+          "en": "Its square outline still means Save in many apps, long after this removable magnetic disk vanished from everyday use. Name it.",
+          "et": "Selle kandilise andmekandja kujutis tähendab paljudes rakendustes endiselt salvestamist, kuigi andmekandja ise kadus ammu igapäevakasutusest. Mis see on?"
         },
         "response": {
           "en": "floppy disk",
           "et": "diskett"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["floppy", "diskette"],
+          "et": ["flopiketas", "flopi"]
         },
         "explanation": {
-          "en": "Floppy disk was called floppy because the recording medium itself was flexible.",
-          "et": "Diskett sai nime sellest, et salvestusketas ise oli painduv."
+          "en": "The floppy disk's familiar square shell became the standard Save icon even after floppy drives disappeared from most computers.",
+          "et": "Disketi tuttav kandiline kest jäi salvestamise sümboliks ka pärast seda, kui disketiseadmed enamikust arvutitest kadusid."
         },
         "source": {
-          "sourceId": "wikipedia:floppy_disk",
+          "sourceId": "wikipedia:floppy-disk",
           "title": "Floppy disk",
           "url": "https://en.wikipedia.org/wiki/Floppy_disk",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
-        "key": "built-in-technology-inventions-set-047:question:4",
-        "factKey": "built-in-technology-inventions:storage-history:medium:medium:cd-rom",
-        "tier": 4,
+        "key": "built-in-technology-inventions-set-047:question:2",
+        "factKey": "built-in-technology-inventions:data-you-could-hold:medium:medium:cd-rom",
+        "tier": 2,
         "subjectKey": "medium:cd-rom",
         "clue": {
-          "en": "Storage medium stores read-only digital data on an optical compact disc. What is it called?",
-          "et": "Milline andmekandja salvestab kirjutuskaitstud digitaalandmed optilisele laserplaadile?"
+          "en": "In the 1990s, software and encyclopedias arrived on this shiny computer disc that users could read but normally not rewrite. Name the format.",
+          "et": "1990. aastatel saabusid tarkvara ja entsüklopeediad sellel läikival arvutiplaadil, mida kasutaja sai lugeda, kuid tavaliselt mitte ümber kirjutada. Mis formaat see oli?"
         },
         "response": {
           "en": "CD-ROM",
           "et": "CD-ROM"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["compact disc read-only memory", "CD ROM"],
+          "et": ["CD-ROM-plaat", "CD ROM"]
         },
         "explanation": {
-          "en": "CD-ROM encodes bits as a spiral sequence of pits and lands read by laser.",
-          "et": "CD-ROM kodeerib bitid spiraalse süvendite ja tasandike jadana, mida loeb laser."
+          "en": "A CD-ROM stores computer data on an optical compact disc that is read-only for ordinary users.",
+          "et": "CD-ROM talletab arvutiandmeid optilisel kompaktplaadil, mida tavakasutaja saab lugeda, kuid mitte ümber kirjutada."
         },
         "source": {
           "sourceId": "wikipedia:cd-rom",
           "title": "CD-ROM",
           "url": "https://en.wikipedia.org/wiki/CD-ROM",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-047:question:3",
+        "factKey": "built-in-technology-inventions:data-you-could-hold:medium:medium:punched-card",
+        "tier": 3,
+        "subjectKey": "medium:punched-card",
+        "clue": {
+          "en": "Early computers read programs and data from stacks of stiff paper cards whose hole positions carried the information. Name the medium.",
+          "et": "Varased arvutid lugesid programme ja andmeid jäikade paberkaartide pakkidest, kus teavet kandsid aukude asukohad. Mis andmekandja see oli?"
+        },
+        "response": {
+          "en": "punched card",
+          "et": "perfokaart"
+        },
+        "acceptedVariants": {
+          "en": ["punch card", "Hollerith card"],
+          "et": ["aukkaart", "Hollerithi kaart"]
+        },
+        "explanation": {
+          "en": "Punched cards encoded data through holes in fixed positions and were fed into readers in stacks.",
+          "et": "Perfokaardid kodeerisid andmeid kindlates kohtades olevate aukudega ning neid söödeti lugeritesse pakkidena."
+        },
+        "source": {
+          "sourceId": "wikipedia:punched-card",
+          "title": "Punched card",
+          "url": "https://en.wikipedia.org/wiki/Punched_card",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-047:question:4",
+        "factKey": "built-in-technology-inventions:data-you-could-hold:medium:medium:compactflash",
+        "tier": 4,
+        "subjectKey": "medium:compactflash",
+        "clue": {
+          "en": "SanDisk introduced this chunky removable flash-memory card in 1994, and it became common in early professional digital cameras. Name the format.",
+          "et": "SanDisk tõi selle jämedavõitu eemaldatava välkmälukaardi turule 1994. aastal ning see levis varastes professionaalsetes digikaamerates. Mis formaat see oli?"
+        },
+        "response": {
+          "en": "CompactFlash",
+          "et": "CompactFlash"
+        },
+        "acceptedVariants": {
+          "en": ["Compact Flash", "CF card"],
+          "et": ["Compact Flash", "CF-kaart"]
+        },
+        "explanation": {
+          "en": "CompactFlash is a removable flash-memory format introduced by SanDisk in 1994 and widely adopted in digital cameras.",
+          "et": "CompactFlash on SanDiski 1994. aastal turule toodud eemaldatav välkmäluformaat, mida kasutati laialt digikaamerates."
+        },
+        "source": {
+          "sourceId": "wikipedia:compactflash",
+          "title": "CompactFlash",
+          "url": "https://en.wikipedia.org/wiki/CompactFlash",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-047:question:5",
-        "factKey": "built-in-technology-inventions:storage-history:medium:medium:usb-flash-drive",
+        "factKey": "built-in-technology-inventions:data-you-could-hold:medium:medium:zip-disk",
         "tier": 5,
-        "subjectKey": "medium:usb-flash-drive",
+        "subjectKey": "medium:zip-disk",
         "clue": {
-          "en": "One storage medium combines rewritable flash memory with a small plug-in connector. Which one is described?",
-          "et": "Andmekandja ühendab ümberkirjutatava välkmälu väikese pistikuga. Mis see on?"
+          "en": "Iomega launched this thick, square removable disk in 1995 with 100 megabytes of space, far more than a standard floppy. Name it.",
+          "et": "Iomega tõi 1995. aastal turule selle paksu kandilise eemaldatava ketta, kuhu mahtus 100 megabaiti ehk palju rohkem kui tavalisele disketile. Mis ketas see oli?"
         },
         "response": {
-          "en": "USB flash drive",
-          "et": "USB-mälupulk"
+          "en": "Zip disk",
+          "et": "Zip-ketas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Iomega Zip", "Zip drive"],
+          "et": ["Iomega Zip", "Zip-disk", "Zip-ajam"]
         },
         "explanation": {
-          "en": "USB flash drive has no moving parts and uses a controller to manage NAND flash cells.",
-          "et": "USB-mälupulk ei sisalda liikuvaid osi ning juhib NAND-välkmälurakke kontrolleriga."
+          "en": "Iomega's Zip system launched with 100 MB removable disks and became a popular high-capacity alternative to floppy disks in the late 1990s.",
+          "et": "Iomega Zip-süsteem tuli turule 100 MB eemaldatavate ketastega ning sai 1990. aastate lõpus populaarseks suurema mahuga disketialternatiiviks."
         },
         "source": {
-          "sourceId": "wikipedia:usb_flash_drive",
-          "title": "USB flash drive",
-          "url": "https://en.wikipedia.org/wiki/USB_flash_drive",
+          "sourceId": "wikipedia:zip-drive",
+          "title": "Zip drive",
+          "url": "https://en.wikipedia.org/wiki/Zip_drive",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -10660,157 +10666,159 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-048",
     "name": {
-      "en": "Portable Sources of Power",
-      "et": "Kaasaskantavad energiaallikad"
+      "en": "Power Away from the Socket",
+      "et": "Energia ilma seinakontaktita"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-048:question:1",
-        "factKey": "built-in-technology-inventions:batteries-and-cells:medium:technology:lithium-ion-battery",
+        "factKey": "built-in-technology-inventions:power-away-from-socket:medium:device:power-bank",
         "tier": 1,
-        "subjectKey": "technology:lithium-ion-battery",
+        "subjectKey": "device:power-bank",
         "clue": {
-          "en": "Identify the battery or cell: it powers many phones and electric cars with rechargeable cells.",
-          "et": "Mis patarei, aku või element toidab taaslaetavate elementidega paljusid telefone ja elektriautosid?"
+          "en": "When no wall socket is nearby, this rechargeable pocket pack can give a phone another charge. Name it.",
+          "et": "Kui seinakontakti pole lähedal, saab see taaslaetav taskuseade telefoni uuesti laadida. Mis seade see on?"
+        },
+        "response": {
+          "en": "power bank",
+          "et": "akupank"
+        },
+        "acceptedVariants": {
+          "en": ["portable charger", "battery pack"],
+          "et": ["power bank", "kaasaskantav laadija"]
+        },
+        "explanation": {
+          "en": "A power bank stores energy in a rechargeable battery and delivers it through a cable or wireless charging interface.",
+          "et": "Akupank talletab energia taaslaetavas akus ning annab selle seadmele kaabli või juhtmevaba laadimise kaudu."
+        },
+        "source": {
+          "sourceId": "wikipedia:power-bank",
+          "title": "Power bank",
+          "url": "https://en.wikipedia.org/wiki/Power_bank",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-048:question:2",
+        "factKey": "built-in-technology-inventions:power-away-from-socket:medium:battery:button-cell",
+        "tier": 2,
+        "subjectKey": "battery:button-cell",
+        "clue": {
+          "en": "Watches and car-key fobs often use this small, flat battery shaped like a coin. What type is it?",
+          "et": "Kellad ja autovõtme puldid kasutavad sageli seda väikest lamedat, mündi kujuga patareid. Mis tüüpi patarei see on?"
+        },
+        "response": {
+          "en": "button cell",
+          "et": "nööppatarei"
+        },
+        "acceptedVariants": {
+          "en": ["coin cell", "button battery"],
+          "et": ["mündipatarei", "nööpelement"]
+        },
+        "explanation": {
+          "en": "A button cell is a small single-cell battery shaped like a squat cylinder, commonly used in watches and compact electronics.",
+          "et": "Nööppatarei on madala silindri kujuline väike üksikelement, mida kasutatakse sageli kellades ja kompaktsetes elektroonikaseadmetes."
+        },
+        "source": {
+          "sourceId": "wikipedia:button-cell",
+          "title": "Button cell",
+          "url": "https://en.wikipedia.org/wiki/Button_cell",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-048:question:3",
+        "factKey": "built-in-technology-inventions:power-away-from-socket:medium:battery:lithium-ion",
+        "tier": 3,
+        "subjectKey": "battery:lithium-ion",
+        "clue": {
+          "en": "Phones, laptops, and many electric cars rely on which rechargeable battery family, named for the ions moving inside it?",
+          "et": "Millisele sees liikuvate ioonide järgi nimetatud taaslaetavale akuperekonnale toetuvad telefonid, sülearvutid ja paljud elektriautod?"
         },
         "response": {
           "en": "lithium-ion battery",
           "et": "liitiumioonaku"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Li-ion battery", "lithium ion battery", "Li-ion"],
+          "et": ["Li-ioonaku", "liitium-ioonaku", "Li-ion"]
         },
         "explanation": {
-          "en": "Lithium-ion battery shuttles lithium ions between intercalation electrodes rather than plating bulk lithium in normal use.",
-          "et": "Liitiumioonaku liigutab liitiumioone interkalatsioonielektroodide vahel ega sadesta tavakasutuses liitiumi metalli."
+          "en": "Lithium-ion batteries move lithium ions between electrodes during charging and discharge, providing high energy density for portable devices and vehicles.",
+          "et": "Liitiumioonakudes liiguvad laadimisel ja tühjenemisel liitiumioonid elektroodide vahel, pakkudes kaasaskantavatele seadmetele ja sõidukitele suurt energiatihedust."
         },
         "source": {
-          "sourceId": "wikipedia:lithium-ion_battery",
+          "sourceId": "wikipedia:lithium-ion-battery",
           "title": "Lithium-ion battery",
           "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-048:question:2",
-        "factKey": "built-in-technology-inventions:batteries-and-cells:medium:technology:lead-acid-battery",
-        "tier": 2,
-        "subjectKey": "technology:lead-acid-battery",
-        "clue": {
-          "en": "A battery or cell is the heavy rechargeable battery long used to start cars. Name it.",
-          "et": "Üks patarei, aku või element on raske taaslaetav aku, mida on kaua kasutatud autode käivitamiseks. Millist vastust otsime?"
-        },
-        "response": {
-          "en": "lead–acid battery",
-          "et": "pliiaku"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Lead–acid battery uses lead dioxide and lead electrodes in sulfuric acid.",
-          "et": "Pliiaku kasutab väävelhappes pliidioksiid- ja pliielektroodi."
-        },
-        "source": {
-          "sourceId": "wikipedia:lead%e2%80%93acid_battery",
-          "title": "Lead–acid battery",
-          "url": "https://en.wikipedia.org/wiki/Lead%E2%80%93acid_battery",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-048:question:3",
-        "factKey": "built-in-technology-inventions:batteries-and-cells:medium:technology:alkaline-battery",
-        "tier": 3,
-        "subjectKey": "technology:alkaline-battery",
-        "clue": {
-          "en": "Find the battery or cell that is a common disposable household cell sold in AA sizes.",
-          "et": "Patarei, aku või element on levinud ühekordne AA-suuruses kodupatarei. Leia sobiv vastus."
-        },
-        "response": {
-          "en": "alkaline battery",
-          "et": "leelispatarei"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Alkaline battery uses zinc and manganese dioxide with an alkaline potassium-hydroxide electrolyte.",
-          "et": "Leelispatarei kasutab tsinki ja mangaandioksiidi leeliselise kaaliumhüdroksiid-elektrolüüdiga."
-        },
-        "source": {
-          "sourceId": "wikipedia:alkaline_battery",
-          "title": "Alkaline battery",
-          "url": "https://en.wikipedia.org/wiki/Alkaline_battery",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-048:question:4",
-        "factKey": "built-in-technology-inventions:batteries-and-cells:medium:technology:nickel-metal-hydride-battery",
+        "factKey": "built-in-technology-inventions:power-away-from-socket:medium:generator:thermoelectric",
         "tier": 4,
-        "subjectKey": "technology:nickel-metal-hydride-battery",
+        "subjectKey": "generator:thermoelectric",
         "clue": {
-          "en": "Identify the battery or cell: it is a rechargeable household-cell chemistry often sold in standard battery sizes.",
-          "et": "Mis patarei, aku või element on taaslaetav koduelemendi keemia, mida müüakse sageli tavalistes patareisuurustes?"
+          "en": "Some camping stoves can charge a phone by turning a temperature difference directly into electricity, with no moving parts. What kind of generator does this?",
+          "et": "Mõni matkapliit saab telefoni laadida, muutes temperatuurierinevuse liikuvate osadeta otse elektriks. Mis tüüpi generaator seda teeb?"
         },
         "response": {
-          "en": "nickel–metal hydride battery",
-          "et": "nikkel-metallhüdriidaku"
+          "en": "thermoelectric generator",
+          "et": "termoelektriline generaator"
         },
         "acceptedVariants": {
           "en": [
-            "NiMH"
+            "thermoelectric generator module",
+            "TEG"
           ],
           "et": [
-            "NiMH"
+            "termoelektrigeneraator",
+            "TEG"
           ]
         },
         "explanation": {
-          "en": "Nickel–metal hydride battery stores hydrogen in a metal alloy instead of using toxic cadmium.",
-          "et": "Nikkel-metallhüdriidaku talletab vesiniku metallisulamis ega kasuta mürgist kaadmiumi."
+          "en": "A thermoelectric generator uses the Seebeck effect to convert a temperature difference directly into electrical energy.",
+          "et": "Termoelektriline generaator kasutab Seebecki efekti, et muuta temperatuurierinevus otse elektrienergiaks."
         },
         "source": {
-          "sourceId": "wikipedia:nickel%e2%80%93metal_hydride_battery",
-          "title": "Nickel–metal hydride battery",
-          "url": "https://en.wikipedia.org/wiki/Nickel%E2%80%93metal_hydride_battery",
+          "sourceId": "wikipedia:thermoelectric-generator",
+          "title": "Thermoelectric generator",
+          "url": "https://en.wikipedia.org/wiki/Thermoelectric_generator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-048:question:5",
-        "factKey": "built-in-technology-inventions:batteries-and-cells:medium:technology:fuel-cell",
+        "factKey": "built-in-technology-inventions:power-away-from-socket:medium:device:fuel-cell",
         "tier": 5,
-        "subjectKey": "technology:fuel-cell",
+        "subjectKey": "device:fuel-cell",
         "clue": {
-          "en": "Name the battery or cell that makes electricity continuously while fuel and oxidant are supplied.",
-          "et": "Vihjes kirjeldatud patarei, aku või element toodab elektrit pidevalt, kuni antakse kütust ja oksüdeerijat. Mis see on?"
+          "en": "Unlike a battery that simply runs down, this device keeps making electricity while fuel and oxygen are supplied; hydrogen versions produce water. Name it.",
+          "et": "Erinevalt lihtsalt tühjenevast akust toodab see seade elektrit seni, kuni juurde antakse kütust ja hapnikku; vesinikku kasutav variant tekitab vett. Mis seade see on?"
         },
         "response": {
           "en": "fuel cell",
           "et": "kütuseelement"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["hydrogen fuel cell"],
+          "et": ["vesinikkütuseelement", "vesiniku kütuseelement"]
         },
         "explanation": {
-          "en": "Fuel cell converts chemical energy electrochemically rather than burning fuel in a heat engine.",
-          "et": "Kütuseelement muundab keemilise energia elektrokeemiliselt ega põleta kütust soojusmasinas."
+          "en": "A fuel cell converts a continuously supplied fuel and oxidant into electricity by an electrochemical reaction; hydrogen cells also form water.",
+          "et": "Kütuseelement muundab pidevalt lisatava kütuse ja oksüdeerija elektrokeemilise reaktsiooniga elektriks; vesinikuelemendis tekib ka vesi."
         },
         "source": {
           "sourceId": "wikipedia:fuel_cell",
           "title": "Fuel cell",
           "url": "https://en.wikipedia.org/wiki/Fuel_cell",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
