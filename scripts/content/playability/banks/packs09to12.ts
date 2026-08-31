@@ -13861,153 +13861,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-068",
     "name": {
-      "en": "Everyday Technology Under the Hood",
-      "et": "Igapäevatehnika kulisside taga"
+      "en": "Technology from Surprising Experiments",
+      "et": "Tehnoloogia üllatavatest katsetest"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-068:question:1",
-        "factKey": "built-in-technology-inventions:everyday-technology:hard:pocket-calculator",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:dynamite-kieselguhr",
         "tier": 1,
-        "subjectKey": "device:pocket-calculator",
+        "subjectKey": "explosive:dynamite",
         "clue": {
-          "en": "What handheld electronic device uses integrated circuits to perform arithmetic and became a common desk and school tool during the 1970s?",
-          "et": "Milline käes hoitav elektrooniline seade kasutab arvutamiseks integraallülitusi ning sai 1970. aastatel tavaliseks laua- ja koolivahendiks?"
+          "en": "What explosive did Alfred Nobel patent in 1867 after making volatile nitroglycerin easier to handle by absorbing it into kieselguhr?",
+          "et": "Millise lõhkeaine patenteeris Alfred Nobel 1867. aastal pärast seda, kui muutis ebastabiilse nitroglütseriini käsitsemise lihtsamaks, immutades selle kobediatomiiti?"
         },
         "response": {
-          "en": "pocket calculator",
-          "et": "taskukalkulaator"
+          "en": "dynamite",
+          "et": "dünamiit"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pocket calculators became practical when integrated circuits reduced the size and power needs of electronic calculating machines.",
-          "et": "Taskukalkulaatorid muutusid praktiliseks, kui integraallülitused vähendasid elektrooniliste arvutusmasinate suurust ja energiavajadust."
+          "en": "Kieselguhr stabilized the nitroglycerin into a portable explosive that Nobel named dynamite.",
+          "et": "Kobediatomiit stabiliseeris nitroglütseriini kaasaskantavaks lõhkeaineks, mille Nobel nimetas dünamiidiks."
         },
         "source": {
-          "sourceId": "wikipedia:calculator",
-          "title": "Calculator",
-          "url": "https://en.wikipedia.org/wiki/Calculator",
+          "sourceId": "wikipedia:dynamite",
+          "title": "Dynamite",
+          "url": "https://en.wikipedia.org/wiki/Dynamite",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:2",
-        "factKey": "built-in-technology-inventions:everyday-technology:hard:piezoelectric-igniter",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:vaseline-rod-wax",
         "tier": 2,
-        "subjectKey": "device:piezoelectric-igniter",
+        "subjectKey": "product:vaseline",
         "clue": {
-          "en": "What ignition device creates a high-voltage spark when a spring strikes or compresses a crystal, as in many gas lighters and grills?",
-          "et": "Milline süüteseade tekitab kõrgepinge sädeme, kui vedru lööb vastu kristalli või surub selle kokku, nagu paljudes gaasisüütajates ja grillides?"
+          "en": "Robert Chesebrough took 'rod wax' from Pennsylvania oil pumps back to Brooklyn after seeing workers use it on cuts and burns. What name did he give the purified product?",
+          "et": "Robert Chesebrough viis Pennsylvania naftapumpadelt pärit „vardavaha” Brooklyni, kui nägi, et töölised määrisid seda lõigetele ja põletustele. Mis nime ta puhastatud tootele andis?"
         },
         "response": {
-          "en": "piezoelectric igniter",
-          "et": "piesosüüti"
+          "en": "Vaseline",
+          "et": "vaseliin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A piezoelectric igniter uses certain crystals’ ability to generate voltage when mechanically stressed, avoiding a battery.",
-          "et": "Piesosüüti kasutab mõne kristalli võimet tekitada mehaanilise surve all pinget ja ei vaja seetõttu patareid."
+          "en": "Chesebrough refined the oil-pump residue into petroleum jelly and began manufacturing it under the name Vaseline.",
+          "et": "Chesebrough puhastas naftapumpade jäägi vaseliiniks ja hakkas seda Vaseline'i nime all tootma."
         },
         "source": {
-          "sourceId": "wikipedia:piezoelectricity",
-          "title": "Piezoelectricity",
-          "url": "https://en.wikipedia.org/wiki/Piezoelectricity",
+          "sourceId": "wikipedia:vaseline",
+          "title": "Vaseline",
+          "url": "https://en.wikipedia.org/wiki/Vaseline",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:3",
-        "factKey": "built-in-technology-inventions:everyday-technology:hard:thermostat",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:gorilla-glass-iphone",
         "tier": 3,
-        "subjectKey": "controller:thermostat",
+        "subjectKey": "material:gorilla-glass",
         "clue": {
-          "en": "What feedback-control device senses temperature and switches a heating or cooling system on and off to hold a chosen setting?",
-          "et": "Milline tagasisidejuhtimisseade mõõdab temperatuuri ja lülitab küttesüsteemi või jahutuse sisse ning välja, et hoida valitud seadistust?"
+          "en": "After Steve Jobs noticed scratches on the plastic screen of the 2007 iPhone prototype, Apple asked Corning for thin, tough glass descended from its Chemcor research. What brand resulted?",
+          "et": "Kui Steve Jobs märkas 2007. aasta iPhone'i prototüübi plastekraanil kriimustusi, palus Apple Corningult õhukest vastupidavat klaasi, mis põhines Chemcori uuringutel. Millise kaubamärgi all sai see tuntuks?"
         },
         "response": {
-          "en": "thermostat",
-          "et": "termostaat"
+          "en": "Gorilla Glass",
+          "et": "Gorilla Glass"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Corning Gorilla Glass"],
+          "et": ["Corning Gorilla Glass"]
         },
         "explanation": {
-          "en": "A thermostat compares a measured temperature with a set point and controls equipment to reduce the difference.",
-          "et": "Termostaat võrdleb mõõdetud temperatuuri seatud väärtusega ning juhib seadmeid, et nende erinevust vähendada."
+          "en": "Corning revived its chemically strengthened glass work for consumer electronics, and the first iPhone shipped with glass later branded Gorilla Glass.",
+          "et": "Corning võttis tarbeelektroonika jaoks taas kasutusele keemiliselt tugevdatud klaasi uuringud ning esimene iPhone sai hiljem Gorilla Glassi nime kandnud klaasi."
         },
         "source": {
-          "sourceId": "wikipedia:thermostat",
-          "title": "Thermostat",
-          "url": "https://en.wikipedia.org/wiki/Thermostat",
+          "sourceId": "wikipedia:gorilla-glass",
+          "title": "Gorilla Glass",
+          "url": "https://en.wikipedia.org/wiki/Gorilla_Glass",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:4",
-        "factKey": "built-in-technology-inventions:everyday-technology:hard:carbon-monoxide-detector",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:silly-putty-rubber-substitute",
         "tier": 4,
-        "subjectKey": "device:carbon-monoxide-detector",
+        "subjectKey": "toy:silly-putty",
         "clue": {
-          "en": "What safety device warns of carbon monoxide, a colourless and odourless gas produced by incomplete combustion, before it can reach a dangerous concentration?",
-          "et": "Milline ohutusseade hoiatab vingugaasi eest — see on mittetäielikul põlemisel tekkiv värvitu ja lõhnatu gaas — enne, kui selle sisaldus muutub ohtlikuks?"
+          "en": "During the U.S. wartime search for synthetic rubber, boric acid and silicone oil produced a goo that bounced but failed as a rubber substitute. Under what toy name was it later sold in plastic eggs?",
+          "et": "USA sõjaaegsetes sünteetilise kautšuki katsetes saadi boorhappest ja silikoonõlist veniv mass, mis põrkas, kuid ei sobinud kautšuki asendajaks. Millise mänguasja nime all hakati seda hiljem plastmunades müüma?"
         },
         "response": {
-          "en": "carbon monoxide detector",
-          "et": "vingugaasiandur"
+          "en": "Silly Putty",
+          "et": "Silly Putty"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Carbon-monoxide detectors use sensor technologies that trigger an alarm when the gas reaches a hazardous level.",
-          "et": "Vingugaasiandurid kasutavad anduritehnoloogiaid, mis käivitavad häire, kui gaasi sisaldus jõuab ohtliku tasemeni."
+          "en": "The bouncy silicone material did not replace rubber, but marketer Peter Hodgson turned it into the egg-packaged toy Silly Putty.",
+          "et": "Põrkav silikoonmaterjal ei asendanud kautšukit, kuid turundaja Peter Hodgson tegi sellest plastmunades müüdava mänguasja Silly Putty."
         },
         "source": {
-          "sourceId": "wikipedia:carbon-monoxide-detector",
-          "title": "Carbon monoxide detector",
-          "url": "https://en.wikipedia.org/wiki/Carbon_monoxide_detector",
+          "sourceId": "wikipedia:silly-putty",
+          "title": "Silly Putty",
+          "url": "https://en.wikipedia.org/wiki/Silly_Putty",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:5",
-        "factKey": "built-in-technology-inventions:everyday-technology:hard:capacitive-touchscreen",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:mauveine-quinine",
         "tier": 5,
-        "subjectKey": "display:capacitive-touchscreen",
+        "subjectKey": "dye:mauveine",
         "clue": {
-          "en": "What kind of touchscreen detects a conductive finger by measuring a change in an electrostatic field, rather than needing the screen layers to be pressed together?",
-          "et": "Milline puuteekraan tuvastab juhtiva sõrme elektrostaatilise välja muutuse järgi, selle asemel et ekraanikihte peaks kokku suruma?"
+          "en": "While trying to synthesize quinine in 1856, 18-year-old William Henry Perkin noticed a purple solution as he cleaned a failed experiment with alcohol. What mass-produced synthetic dye did he discover?",
+          "et": "Kui 18-aastane William Henry Perkin püüdis 1856. aastal kiniini sünteesida, märkas ta ebaõnnestunud katset alkoholiga puhastades lillat lahust. Millise tööstuslikult toodetud sünteetilise värvaine ta avastas?"
         },
         "response": {
-          "en": "capacitive touchscreen",
-          "et": "mahtuvuslik puuteekraan"
+          "en": "mauveine",
+          "et": "aniliinlilla"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["aniline purple", "Perkin's mauve"],
+          "et": ["Perkini lilla"]
         },
         "explanation": {
-          "en": "Capacitive touchscreens are widely used in phones because a conductive touch changes the local electrical capacitance.",
-          "et": "Mahtuvuslikke puuteekraane kasutatakse laialt telefonides, sest juhtiv puudutus muudab kohalikku elektrilist mahtuvust."
+          "en": "Perkin's failed quinine experiment yielded mauveine, one of the first synthetic dyes to be mass-produced.",
+          "et": "Perkini ebaõnnestunud kiniinikatse andis aniliinlilla, ühe esimese tööstuslikult toodetud sünteetilise värvaine."
         },
         "source": {
-          "sourceId": "wikipedia:capacitive-sensing",
-          "title": "Capacitive sensing",
-          "url": "https://en.wikipedia.org/wiki/Capacitive_sensing",
+          "sourceId": "wikipedia:mauveine",
+          "title": "Mauveine",
+          "url": "https://en.wikipedia.org/wiki/Mauveine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -14341,8 +14341,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "ICQ"
         },
         "acceptedVariants": {
-          "en": ["BBS"],
-          "et": ["BBS"]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "ICQ popularised presence indicators and direct online messaging for a large international audience.",
@@ -14428,8 +14428,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "teadetetahvlisüsteem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["BBS"],
+          "et": ["BBS"]
         },
         "explanation": {
           "en": "Bulletin board systems, usually called BBSes, let callers exchange messages and files before the web became widespread.",
@@ -14824,8 +14824,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "structure:thames-barrier",
         "clue": {
-          "en": "What movable flood barrier across the River Thames protects London from exceptionally high tides and storm surges from the North Sea?",
-          "et": "Milline üle Thamesi jõe paiknev liigutatav üleujutustõke kaitseb Londonit Põhjamere erakordselt kõrgete loodete ja tormitulvade eest?"
+          "en": "What movable flood barrier at Woolwich protects London from exceptionally high tides and storm surges from the North Sea?",
+          "et": "Milline Woolwichis asuv liigutatav üleujutustõke kaitseb Londonit Põhjamere erakordselt kõrgete loodete ja tormitulvade eest?"
         },
         "response": {
           "en": "Thames Barrier",
@@ -14878,8 +14878,37 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-074:question:4",
-        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:maeslantkering",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:laerdal-tunnel",
         "tier": 4,
+        "subjectKey": "structure:laerdal-tunnel",
+        "clue": {
+          "en": "Which 24.5-kilometre Norwegian E16 road tunnel, opened in 2000, uses illuminated caverns to break up its unusually long underground drive?",
+          "et": "Milline 2000. aastal avatud 24,5-kilomeetrine Norra E16 maanteetunnel kasutab valgustatud koopaid, et katkestada pika maa-aluse sõidu üksluisust?"
+        },
+        "response": {
+          "en": "Lærdal Tunnel",
+          "et": "Lærdali tunnel"
+        },
+        "acceptedVariants": {
+          "en": ["Laerdal Tunnel"],
+          "et": ["Laerdali tunnel"]
+        },
+        "explanation": {
+          "en": "The Lærdal Tunnel was designed with large, lit caverns to reduce monotony and help drivers stay alert on the long journey.",
+          "et": "Lærdali tunnelisse kavandati suured valgustatud koopad, et vähendada üksluisust ja aidata juhil pikal teekonnal erksana püsida."
+        },
+        "source": {
+          "sourceId": "wikipedia:laerdal-tunnel",
+          "title": "Lærdal Tunnel",
+          "url": "https://en.wikipedia.org/wiki/Lærdal_Tunnel",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-074:question:5",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:maeslantkering",
+        "tier": 5,
         "subjectKey": "structure:maeslantkering",
         "clue": {
           "en": "What Dutch storm-surge barrier near Rotterdam uses two enormous floating gates that automatically close when dangerous water levels are forecast?",
@@ -14901,35 +14930,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:maeslantkering",
           "title": "Maeslantkering",
           "url": "https://en.wikipedia.org/wiki/Maeslantkering",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-074:question:5",
-        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:laerdal-tunnel",
-        "tier": 5,
-        "subjectKey": "structure:laerdal-tunnel",
-        "clue": {
-          "en": "Which Norwegian road tunnel uses illuminated caverns to break up a long underground drive between Lærdal and Aurland?",
-          "et": "Milline Norra maanteetunnel kasutab valgustatud koopaid, et katkestada Lærdali ja Aurlandi vahelise pika maa-aluse sõidu üksluisust?"
-        },
-        "response": {
-          "en": "Lærdal Tunnel",
-          "et": "Lærdali tunnel"
-        },
-        "acceptedVariants": {
-          "en": ["Laerdal Tunnel"],
-          "et": ["Laerdali tunnel"]
-        },
-        "explanation": {
-          "en": "The Lærdal Tunnel was designed with large, lit caverns to reduce monotony and help drivers stay alert on the long journey.",
-          "et": "Lærdali tunnelisse kavandati suured valgustatud koopad, et vähendada üksluisust ja aidata juhil pikal teekonnal erksana püsida."
-        },
-        "source": {
-          "sourceId": "wikipedia:laerdal-tunnel",
-          "title": "Lærdal Tunnel",
-          "url": "https://en.wikipedia.org/wiki/Lærdal_Tunnel",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
