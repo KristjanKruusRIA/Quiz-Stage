@@ -10826,151 +10826,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-049",
     "name": {
-      "en": "Turning Nature into Electricity",
-      "et": "Loodusest elektriks"
+      "en": "At a Road Junction",
+      "et": "Teeristil"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-049:question:1",
-        "factKey": "built-in-technology-inventions:electricity-generation:medium:technology:solar-cell",
+        "factKey": "built-in-technology-inventions:road-junction:medium:device:traffic-light",
         "tier": 1,
-        "subjectKey": "technology:solar-cell",
+        "subjectKey": "device:traffic-light",
         "clue": {
-          "en": "Which power technology converts sunlight directly into electric current?",
-          "et": "Tuvasta järgmine energiatehnoloogia: see muundab päikesevalguse otse elektrivooluks."
+          "en": "Red tells drivers to stop, green tells them to go, and amber warns that the change is coming. What device gives these signals at a junction?",
+          "et": "Punane käsib juhil peatuda, roheline lubab sõita ja kollane hoiatab muutuse eest. Mis seade annab ristmikul neid signaale?"
         },
         "response": {
-          "en": "solar cell",
-          "et": "päikesepatarei"
+          "en": "traffic light",
+          "et": "valgusfoor"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["traffic signal"],
+          "et": ["foor", "liiklusfoor"]
         },
         "explanation": {
-          "en": "Solar cell uses a semiconductor junction where photons create charge carriers.",
-          "et": "Päikesepatarei kasutab pooljuhtsiiret, kus footonid tekitavad laengukandjaid."
+          "en": "Traffic lights use coloured signals to control competing streams of traffic at road junctions.",
+          "et": "Valgusfoor juhib ristmikul eri suundadest tulevat liiklust värviliste signaalidega."
         },
         "source": {
-          "sourceId": "wikipedia:solar_cell",
-          "title": "Solar cell",
-          "url": "https://en.wikipedia.org/wiki/Solar_cell",
+          "sourceId": "wikipedia:traffic_light",
+          "title": "Traffic light",
+          "url": "https://en.wikipedia.org/wiki/Traffic_light",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-049:question:2",
-        "factKey": "built-in-technology-inventions:electricity-generation:medium:technology:wind-turbine",
+        "factKey": "built-in-technology-inventions:road-junction:medium:road:pedestrian-crossing",
         "tier": 2,
-        "subjectKey": "technology:wind-turbine",
+        "subjectKey": "road:pedestrian-crossing",
         "clue": {
-          "en": "Name the power technology that turns moving air into shaft power and electricity.",
-          "et": "Vihjes kirjeldatud energiatehnoloogia muudab liikuva õhu võllivõimsuseks ja elektriks. Mis see on?"
+          "en": "Painted stripes or marked lines show people where they may cross a road, while drivers must give way. What is this marked place called?",
+          "et": "Värvitud triibud või märgised näitavad, kus jalakäija tohib teed ületada ja kus juht peab teed andma. Kuidas seda kohta nimetatakse?"
         },
         "response": {
-          "en": "wind turbine",
-          "et": "tuulik"
+          "en": "pedestrian crossing",
+          "et": "ülekäigurada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["crosswalk", "zebra crossing"],
+          "et": ["sebra", "jalakäijate ülekäik"]
         },
         "explanation": {
-          "en": "Wind turbine extracts lift-driven rotor energy but cannot capture all of the wind’s kinetic power.",
-          "et": "Tuulik ammutab tõstejõuga rootorist energiat, kuid ei saa haarata kogu tuule kineetilist võimsust."
+          "en": "A pedestrian crossing is a designated road crossing for people on foot, often marked with stripes or signals.",
+          "et": "Ülekäigurada on jalakäijatele mõeldud määratud teeületuskoht, mida märgitakse sageli triipude või fooriga."
         },
         "source": {
-          "sourceId": "wikipedia:wind_turbine",
-          "title": "Wind turbine",
-          "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+          "sourceId": "wikipedia:pedestrian_crossing",
+          "title": "Pedestrian crossing",
+          "url": "https://en.wikipedia.org/wiki/Pedestrian_crossing",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-049:question:3",
-        "factKey": "built-in-technology-inventions:electricity-generation:medium:technology:hydroelectricity",
+        "factKey": "built-in-technology-inventions:road-junction:medium:junction:roundabout",
         "tier": 3,
-        "subjectKey": "technology:hydroelectricity",
+        "subjectKey": "junction:roundabout",
         "clue": {
-          "en": "Find the power technology that uses falling or flowing water to drive generators.",
-          "et": "Energiatehnoloogia kasutab langevat või voolavat vett generaatorite käitamiseks. Leia sobiv vastus."
+          "en": "Instead of taking turns at traffic lights, drivers travel around a central island and leave at their chosen exit. What kind of junction is this?",
+          "et": "Foori taga ootamise asemel sõidavad juhid ümber kesksaare ja lahkuvad valitud väljasõidust. Mis tüüpi ristmik see on?"
         },
         "response": {
-          "en": "hydroelectric power",
-          "et": "hüdroelekter"
+          "en": "roundabout",
+          "et": "ringristmik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["traffic circle"],
+          "et": ["ringtee"]
         },
         "explanation": {
-          "en": "Hydroelectric power converts gravitational potential through a hydraulic turbine.",
-          "et": "Hüdroelekter muundab gravitatsioonilise potentsiaali hüdroturbiini kaudu."
+          "en": "At a roundabout, circulating traffic has priority and drivers exit after travelling around a central island.",
+          "et": "Ringristmikul liigub liiklus ümber kesksaare ning juhid väljuvad soovitud suunas pärast ringil sõitmist."
         },
         "source": {
-          "sourceId": "wikipedia:hydroelectricity",
-          "title": "Hydroelectricity",
-          "url": "https://en.wikipedia.org/wiki/Hydroelectricity",
+          "sourceId": "wikipedia:roundabout",
+          "title": "Roundabout",
+          "url": "https://en.wikipedia.org/wiki/Roundabout",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-049:question:4",
-        "factKey": "built-in-technology-inventions:electricity-generation:medium:technology:geothermal-power",
+        "factKey": "built-in-technology-inventions:road-junction:medium:road:speed-bump",
         "tier": 4,
-        "subjectKey": "technology:geothermal-power",
+        "subjectKey": "road:speed-bump",
         "clue": {
-          "en": "Identify the power technology: it draws useful heat from within Earth.",
-          "et": "Mis energiatehnoloogia ammutab kasulikku soojust Maa sisemusest?"
+          "en": "This raised strip across a street makes an uncomfortable jolt if a car travels too fast over it. What traffic-calming feature is it?",
+          "et": "See üle tänava ulatuv kõrgem riba raputab autot ebamugavalt, kui sellest liiga kiiresti üle sõita. Mis liiklust rahustav rajatis see on?"
         },
         "response": {
-          "en": "geothermal power",
-          "et": "geotermiline energia"
+          "en": "speed bump",
+          "et": "lamav politseinik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["speed hump"],
+          "et": ["kiirustõke", "lamav politseinik"]
         },
         "explanation": {
-          "en": "Geothermal power can flash hot pressurised water into steam or use a secondary binary-cycle fluid.",
-          "et": "Geotermiline energia võib muuta kuuma survevee auruks või kasutada binaartsükli töövedelikku."
+          "en": "A speed bump is a raised roadway feature designed to slow vehicles by making fast driving uncomfortable.",
+          "et": "Lamav politseinik on teele rajatud kõrgend, mis aeglustab sõidukeid, muutes kiire ületamise ebamugavaks."
         },
         "source": {
-          "sourceId": "wikipedia:geothermal_power",
-          "title": "Geothermal power",
-          "url": "https://en.wikipedia.org/wiki/Geothermal_power",
+          "sourceId": "wikipedia:speed_bump",
+          "title": "Speed bump",
+          "url": "https://en.wikipedia.org/wiki/Speed_bump",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-049:question:5",
-        "factKey": "built-in-technology-inventions:electricity-generation:medium:technology:nuclear-reactor",
+        "factKey": "built-in-technology-inventions:road-junction:medium:device:traffic-enforcement-camera",
         "tier": 5,
-        "subjectKey": "technology:nuclear-reactor",
+        "subjectKey": "device:traffic-enforcement-camera",
         "clue": {
-          "en": "One power technology controls fission heat that can raise steam for a turbine. Which one is described?",
-          "et": "Energiatehnoloogia juhib lõhustumissoojust, millega saab turbiinile auru tekitada. Mis see on?"
+          "en": "A roadside device photographs vehicles that break rules such as running a red light or exceeding a limit. What is this enforcement device?",
+          "et": "Teeäärne seade pildistab sõidukeid, mis näiteks sõidavad punase tulega või ületavad piirkiirust. Mis järelevalveseade see on?"
         },
         "response": {
-          "en": "nuclear reactor",
-          "et": "tuumareaktor"
+          "en": "traffic enforcement camera",
+          "et": "liiklusjärelevalvekaamera"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["traffic camera"],
+          "et": ["liikluskaamera"]
         },
         "explanation": {
-          "en": "Nuclear reactor uses moderators, coolant, and control rods to sustain a manageable chain reaction.",
-          "et": "Tuumareaktor kasutab moderaatorit, jahutit ja juhtvardaid juhitava ahelreaktsiooni hoidmiseks."
+          "en": "Traffic enforcement cameras record vehicles that violate road rules, including red-light and speed offences.",
+          "et": "Liiklusjärelevalvekaamera salvestab sõidukeid, mis rikuvad liiklusreegleid, näiteks sõidavad punase tulega või liiga kiiresti."
         },
         "source": {
-          "sourceId": "wikipedia:nuclear_reactor",
-          "title": "Nuclear reactor",
-          "url": "https://en.wikipedia.org/wiki/Nuclear_reactor",
+          "sourceId": "wikipedia:traffic_enforcement_camera",
+          "title": "Traffic enforcement camera",
+          "url": "https://en.wikipedia.org/wiki/Traffic_enforcement_camera",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -10980,151 +10980,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-050",
     "name": {
-      "en": "Machines That Move Energy",
-      "et": "Energiat liigutavad masinad"
+      "en": "At the Airport",
+      "et": "Lennujaamas"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-050:question:1",
-        "factKey": "built-in-technology-inventions:electromechanical-machines:medium:device:electric-motor",
+        "factKey": "built-in-technology-inventions:airport:medium:area:runway",
         "tier": 1,
-        "subjectKey": "device:electric-motor",
+        "subjectKey": "area:runway",
         "clue": {
-          "en": "This machine converts electrical energy into mechanical motion. What is it?",
-          "et": "See masin muundab elektrienergia mehaaniliseks liikumiseks. Mis see on?"
+          "en": "Planes take off and land on this long, paved strip, whose markings guide pilots. What is it called?",
+          "et": "Lennukid tõusevad õhku ja maanduvad sellel pikal sillutatud ribal, mille märgised juhivad piloote. Mis see on?"
         },
         "response": {
-          "en": "electric motor",
-          "et": "elektrimootor"
+          "en": "runway",
+          "et": "lennurada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["airstrip"],
+          "et": ["stardi- ja maandumisrada"]
         },
         "explanation": {
-          "en": "Electric motor produces torque from interacting magnetic fields in stator and rotor.",
-          "et": "Elektrimootor tekitab pöördemomendi staatori ja rootori magnetväljade vastasmõjust."
+          "en": "A runway is the defined rectangular area at an airport prepared for aircraft landing and takeoff.",
+          "et": "Lennurada on lennuväljal määratud ristkülikukujuline ala, mis on ette valmistatud õhkutõusuks ja maandumiseks."
         },
         "source": {
-          "sourceId": "wikipedia:electric_motor",
-          "title": "Electric motor",
-          "url": "https://en.wikipedia.org/wiki/Electric_motor",
+          "sourceId": "wikipedia:runway",
+          "title": "Runway",
+          "url": "https://en.wikipedia.org/wiki/Runway",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-050:question:2",
-        "factKey": "built-in-technology-inventions:electromechanical-machines:medium:device:electric-generator",
+        "factKey": "built-in-technology-inventions:airport:medium:system:baggage-carousel",
         "tier": 2,
-        "subjectKey": "device:electric-generator",
+        "subjectKey": "system:baggage-carousel",
         "clue": {
-          "en": "Machine converts mechanical rotation into electricity. What is it called?",
-          "et": "Milline masin muundab mehaanilise pöörlemise elektriks?"
+          "en": "After a flight, suitcases emerge onto this moving loop in the arrivals hall. What is it called?",
+          "et": "Pärast lendu ilmuvad kohvrid saabumissaalis sellele liikuvale ringile. Mis see on?"
         },
         "response": {
-          "en": "electric generator",
-          "et": "elektrigeneraator"
+          "en": "baggage carousel",
+          "et": "pagasilint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["baggage belt", "baggage reclaim belt"],
+          "et": ["pagasikonveier", "pagasilint"]
         },
         "explanation": {
-          "en": "Electric generator induces voltage when conductors move through magnetic flux.",
-          "et": "Elektrigeneraator indutseerib pinge, kui juhid liiguvad läbi magnetvoo."
+          "en": "A baggage carousel is a conveyor system that delivers checked luggage to passengers in an arrivals area.",
+          "et": "Pagasilint on konveiersüsteem, mis toob registreeritud pagasi saabumisalal reisijateni."
         },
         "source": {
-          "sourceId": "wikipedia:electric_generator",
-          "title": "Electric generator",
-          "url": "https://en.wikipedia.org/wiki/Electric_generator",
+          "sourceId": "wikipedia:baggage_claim",
+          "title": "Baggage claim",
+          "url": "https://en.wikipedia.org/wiki/Baggage_claim",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-050:question:3",
-        "factKey": "built-in-technology-inventions:electromechanical-machines:medium:device:transformer",
+        "factKey": "built-in-technology-inventions:airport:medium:structure:jet-bridge",
         "tier": 3,
-        "subjectKey": "device:transformer",
+        "subjectKey": "structure:jet-bridge",
         "clue": {
-          "en": "One machine changes alternating voltage using coupled coils. Which one is described?",
-          "et": "Masin muudab vahelduvpinget seotud mähiste abil. Mis see on?"
+          "en": "Passengers often walk from the gate straight into an aircraft through this enclosed movable corridor. Name it.",
+          "et": "Reisijad kõnnivad sageli väravast otse lennukisse selle kinnise liigutatava koridori kaudu. Mis see on?"
         },
         "response": {
-          "en": "transformer",
-          "et": "transformaator"
+          "en": "jet bridge",
+          "et": "reisijasild"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["boarding bridge", "passenger boarding bridge"],
+          "et": ["lennukisild", "pardaleminekusild"]
         },
         "explanation": {
-          "en": "Transformer works by mutual induction and needs changing magnetic flux.",
-          "et": "Transformaator töötab vastastikuse induktsiooni kaudu ning vajab muutuvat magnetvoogu."
+          "en": "A jet bridge is a movable enclosed connector that lets passengers board an aircraft directly from the terminal.",
+          "et": "Reisijasild on liigutatav kinnine ühendus, mille kaudu saab terminalist otse lennukisse minna."
         },
         "source": {
-          "sourceId": "wikipedia:transformer",
-          "title": "Transformer",
-          "url": "https://en.wikipedia.org/wiki/Transformer",
+          "sourceId": "wikipedia:jet_bridge",
+          "title": "Jet bridge",
+          "url": "https://en.wikipedia.org/wiki/Jet_bridge",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-050:question:4",
-        "factKey": "built-in-technology-inventions:electromechanical-machines:medium:device:steam-turbine",
+        "factKey": "built-in-technology-inventions:airport:medium:building:control-tower",
         "tier": 4,
-        "subjectKey": "device:steam-turbine",
+        "subjectKey": "building:control-tower",
         "clue": {
-          "en": "Find the machine that turns high-pressure steam into shaft rotation.",
-          "et": "Masin muudab kõrgrõhuauru võlli pöörlemiseks. Leia sobiv vastus."
+          "en": "Controllers can see over the airfield from this tall airport building and give pilots instructions. What is it?",
+          "et": "Lennujuhid näevad selle kõrge lennujaamahoone juurest üle lennuvälja ja annavad pilootidele juhiseid. Mis hoone see on?"
         },
         "response": {
-          "en": "steam turbine",
-          "et": "auruturbiin"
+          "en": "control tower",
+          "et": "lennujuhtimistorn"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["airport control tower"],
+          "et": ["lennujuhtimistorn", "juhtimistorn"]
         },
         "explanation": {
-          "en": "Steam turbine expands steam through stationary nozzles and moving blade stages.",
-          "et": "Auruturbiin paisutab auru läbi liikumatute düüside ja liikuvate labade astmete."
+          "en": "A control tower houses airport controllers who manage aircraft on runways and nearby airspace.",
+          "et": "Lennujuhtimistornis töötavad lennujuhid, kes korraldavad lennukite liikumist radadel ja lähialas."
         },
         "source": {
-          "sourceId": "wikipedia:steam_turbine",
-          "title": "Steam turbine",
-          "url": "https://en.wikipedia.org/wiki/Steam_turbine",
+          "sourceId": "wikipedia:control_tower",
+          "title": "Control tower",
+          "url": "https://en.wikipedia.org/wiki/Control_tower",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-050:question:5",
-        "factKey": "built-in-technology-inventions:electromechanical-machines:medium:device:internal-combustion-engine",
+        "factKey": "built-in-technology-inventions:airport:medium:system:air-traffic-control",
         "tier": 5,
-        "subjectKey": "device:internal-combustion-engine",
+        "subjectKey": "system:air-traffic-control",
         "clue": {
-          "en": "What machine burns fuel inside its working cylinders or chamber?",
-          "et": "Järgmine masin põletab kütuse töötava silindri või kambri sees. Milline see on?"
+          "en": "This service separates aircraft in the sky and coordinates their takeoffs and landings. What is it called?",
+          "et": "See teenistus hoiab lennukid õhus üksteisest eraldi ning korraldab nende õhkutõusud ja maandumised. Mis see on?"
         },
         "response": {
-          "en": "internal combustion engine",
-          "et": "sisepõlemismootor"
+          "en": "air traffic control",
+          "et": "lennuliikluse juhtimine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["ATC"],
+          "et": ["ATC", "lennujuhtimine"]
         },
         "explanation": {
-          "en": "Internal combustion engine contrasts with a steam engine, whose combustion heats a separate working fluid.",
-          "et": "Sisepõlemismootor erineb aurumasinast, mille põlemine kuumutab eraldi töövedelikku."
+          "en": "Air traffic control coordinates aircraft on the ground and in controlled airspace to keep traffic safe and orderly.",
+          "et": "Lennuliikluse juhtimine koordineerib lennukeid maa peal ja kontrollitavas õhuruumis, et liiklus oleks ohutu ja sujuv."
         },
         "source": {
-          "sourceId": "wikipedia:internal_combustion_engine",
-          "title": "Internal combustion engine",
-          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "sourceId": "wikipedia:air_traffic_control",
+          "title": "Air traffic control",
+          "url": "https://en.wikipedia.org/wiki/Air_traffic_control",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -11134,153 +11134,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-051",
     "name": {
-      "en": "Materials That Built the Modern World",
-      "et": "Nüüdisaega ehitanud materjalid"
+      "en": "A Parcel on the Move",
+      "et": "Pakk on teel"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-051:question:1",
-        "factKey": "built-in-technology-inventions:engineered-materials:medium:material:steel",
+        "factKey": "built-in-technology-inventions:parcel-journey:medium:system:conveyor-belt",
         "tier": 1,
-        "subjectKey": "material:steel",
+        "subjectKey": "system:conveyor-belt",
         "clue": {
-          "en": "Recognise the engineered material that is the iron alloy strengthened chiefly with carbon.",
-          "et": "Otsitav tehismaterjal on rauasulam, mida tugevdatakse peamiselt süsinikuga. Mis see on?"
+          "en": "At a warehouse, boxes travel continuously along this moving belt between workstations. What is it called?",
+          "et": "Laos liiguvad kastid töökohtade vahel sellel pidevalt liikuval lindil. Mis see on?"
         },
         "response": {
-          "en": "steel",
-          "et": "teras"
+          "en": "conveyor belt",
+          "et": "konveierlint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "conveyor"
+          ],
+          "et": [
+            "konveier"
+          ]
         },
         "explanation": {
-          "en": "Steel gets varied properties from heat treatment and alloying elements beyond carbon.",
-          "et": "Teras saab erinevad omadused kuumtöötlusest ning muudest legeerelementidest."
+          "en": "A conveyor belt uses a moving belt to carry materials or goods from one place to another.",
+          "et": "Konveierlint kasutab liikuvat linti materjalide või kaupade ühest kohast teise vedamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:steel",
-          "title": "Steel",
-          "url": "https://en.wikipedia.org/wiki/Steel",
+          "sourceId": "wikipedia:conveyor_belt",
+          "title": "Conveyor belt",
+          "url": "https://en.wikipedia.org/wiki/conveyor_belt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-051:question:2",
-        "factKey": "built-in-technology-inventions:engineered-materials:medium:material:concrete",
+        "factKey": "built-in-technology-inventions:parcel-journey:medium:vehicle:forklift-truck",
         "tier": 2,
-        "subjectKey": "material:concrete",
+        "subjectKey": "vehicle:forklift-truck",
         "clue": {
-          "en": "Engineered material hardens when cement binds sand, gravel, and water. What is it called?",
-          "et": "Milline tehismaterjal kivistub, kui tsement seob liiva, killustiku ja vee?"
+          "en": "This small warehouse vehicle slides two metal forks under a load and lifts it. What is it?",
+          "et": "See väike laosõiduk lükkab kaks metallkahvlit koorma alla ja tõstab selle üles. Mis see on?"
         },
         "response": {
-          "en": "concrete",
-          "et": "betoon"
+          "en": "forklift truck",
+          "et": "kahveltõstuk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "forklift"
+          ],
+          "et": [
+            "kahveltõstuk"
+          ]
         },
         "explanation": {
-          "en": "Concrete gains strength through cement hydration rather than simply drying.",
-          "et": "Betoon saab tugevuse tsemendi hüdratatsioonist, mitte pelgast kuivamisest."
+          "en": "A forklift truck lifts and moves loads with forked arms, especially on pallets.",
+          "et": "Kahveltõstuk tõstab ja liigutab koormaid kahvlitega, eriti kaubaalustel."
         },
         "source": {
-          "sourceId": "wikipedia:concrete",
-          "title": "Concrete",
-          "url": "https://en.wikipedia.org/wiki/Concrete",
+          "sourceId": "wikipedia:forklift",
+          "title": "Forklift",
+          "url": "https://en.wikipedia.org/wiki/forklift",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-051:question:3",
-        "factKey": "built-in-technology-inventions:engineered-materials:medium:material:graphene",
+        "factKey": "built-in-technology-inventions:parcel-journey:medium:platform:pallet",
         "tier": 3,
-        "subjectKey": "material:graphene",
+        "subjectKey": "platform:pallet",
         "clue": {
-          "en": "An engineered material is a one-atom-thick sheet of carbon in a hexagonal lattice. Name it.",
-          "et": "Üks tehismaterjal on ühe aatomi paksune süsinikuleht kuusnurkses võres. Millist vastust otsime?"
+          "en": "Boxes are often stacked on this flat transport platform so a forklift can lift them together. What is it?",
+          "et": "Kastid laotakse sageli sellele lamedale veoplatvormile, et kahveltõstuk saaks need koos üles tõsta. Mis see on?"
         },
         "response": {
-          "en": "graphene",
-          "et": "grafeen"
+          "en": "pallet",
+          "et": "kaubaalus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "shipping pallet"
+          ],
+          "et": [
+            "alus"
+          ]
         },
         "explanation": {
-          "en": "Graphene is the two-dimensional building block conceptually underlying graphite and nanotubes.",
-          "et": "Grafeen on kahemõõtmeline ehituskivi, millest saab mõtteliselt grafiiti ja nanotorusid."
+          "en": "A pallet is a flat transport structure that supports goods while they are lifted and moved.",
+          "et": "Kaubaalus on lame veostruktuur, mis toetab kaupu nende tõstmisel ja teisaldamisel."
         },
         "source": {
-          "sourceId": "wikipedia:graphene",
-          "title": "Graphene",
-          "url": "https://en.wikipedia.org/wiki/Graphene",
+          "sourceId": "wikipedia:pallet",
+          "title": "Pallet",
+          "url": "https://en.wikipedia.org/wiki/pallet",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-051:question:4",
-        "factKey": "built-in-technology-inventions:engineered-materials:medium:material:kevlar",
+        "factKey": "built-in-technology-inventions:parcel-journey:medium:delivery:parcel-locker",
         "tier": 4,
-        "subjectKey": "material:kevlar",
+        "subjectKey": "delivery:parcel-locker",
         "clue": {
-          "en": "Recognise the engineered material that is the strong aramid fibre used in protective armour and cables.",
-          "et": "Otsitav tehismaterjal on tugev aramiidkiud kaitsevestides ja kaablites. Mis see on?"
+          "en": "A courier can leave a package in one of many locked compartments for the recipient to collect later. What is this service called?",
+          "et": "Kuller saab jätta paki ühte paljudest lukustatud kappidesse, kust saaja selle hiljem välja võtab. Mis teenus see on?"
         },
         "response": {
-          "en": "Kevlar",
-          "et": "Kevlar"
+          "en": "parcel locker",
+          "et": "pakiautomaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "package locker"
+          ],
+          "et": [
+            "pakikapp"
+          ]
         },
         "explanation": {
-          "en": "Kevlar aligns rigid polymer chains with hydrogen bonding to give high tensile strength.",
-          "et": "Kevlar joondab jäigad polümeeriahelad vesiniksidemetega suure tõmbetugevuse saamiseks."
+          "en": "A parcel locker has secure compartments where delivery companies leave packages for collection.",
+          "et": "Pakiautomaadil on turvalised kapid, kuhu kullerid jätavad pakid hilisemaks väljavõtmiseks."
         },
         "source": {
-          "sourceId": "wikipedia:kevlar",
-          "title": "Kevlar",
-          "url": "https://en.wikipedia.org/wiki/Kevlar",
+          "sourceId": "wikipedia:parcel_locker",
+          "title": "Parcel locker",
+          "url": "https://en.wikipedia.org/wiki/parcel_locker",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-051:question:5",
-        "factKey": "built-in-technology-inventions:engineered-materials:medium:material:aerogel",
+        "factKey": "built-in-technology-inventions:parcel-journey:medium:technology:radio-frequency-identification",
         "tier": 5,
-        "subjectKey": "material:aerogel",
+        "subjectKey": "technology:rfid",
         "clue": {
-          "en": "Identify the engineered material: it is an ultralight porous solid famous for thermal insulation.",
-          "et": "Mis tehismaterjal on ülikerge poorne tahkis, mis on tuntud soojusisolatsiooni poolest?"
+          "en": "A tagged item can be identified by radio waves without the reader seeing a printed code. What technology is this?",
+          "et": "Märgistatud eset saab raadiolainete abil tuvastada, ilma et lugeja peaks trükitud koodi nägema. Mis tehnoloogia see on?"
         },
         "response": {
-          "en": "aerogel",
-          "et": "aerogeel"
+          "en": "RFID",
+          "et": "raadiosagedustuvastus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "radio-frequency identification"
+          ],
+          "et": [
+            "RFID"
+          ]
         },
         "explanation": {
-          "en": "Aerogel replaces a gel’s liquid with gas while preserving its nanoscale network.",
-          "et": "Aerogeel asendab geelis vedeliku gaasiga, säilitades nanomõõtmelise võrgustiku."
+          "en": "RFID identifies tagged objects by radio waves, so the tag does not need a visible optical code.",
+          "et": "Raadiosagedustuvastus tuvastab märgistatud esemeid raadiolainete abil ega vaja nähtavat optilist koodi."
         },
         "source": {
-          "sourceId": "wikipedia:aerogel",
-          "title": "Aerogel",
-          "url": "https://en.wikipedia.org/wiki/Aerogel",
+          "sourceId": "wikipedia:radio-frequency_identification",
+          "title": "Radio-frequency identification",
+          "url": "https://en.wikipedia.org/wiki/radio-frequency_identification",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -11288,153 +11308,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-052",
     "name": {
-      "en": "The SI Measuring System",
-      "et": "SI mõõtühikute süsteem"
+      "en": "Paying by Machine",
+      "et": "Maksmine masinaga"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-052:question:1",
-        "factKey": "built-in-technology-inventions:si-base-units:medium:unit:metre",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:device:cash-register",
         "tier": 1,
-        "subjectKey": "unit:metre",
+        "subjectKey": "device:cash-register",
         "clue": {
-          "en": "Recognise the SI base unit that measures length and is symbolised by a lowercase m.",
-          "et": "Otsitav SI põhiühik mõõdab pikkust ning selle tähis on väike m. Mis see on?"
+          "en": "A shopkeeper uses this machine to record a sale and keep cash, often printing a receipt. What is it?",
+          "et": "Poepidaja kasutab seda masinat müügi registreerimiseks ja sularaha hoidmiseks ning see prindib sageli tšeki. Mis see on?"
         },
         "response": {
-          "en": "metre",
-          "et": "meeter"
+          "en": "cash register",
+          "et": "kassaaparaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cash till"
+          ],
+          "et": [
+            "kassa"
+          ]
         },
         "explanation": {
-          "en": "Metre is defined through the fixed speed of light and the second.",
-          "et": "Meeter on määratletud valguse fikseeritud kiiruse ja sekundi kaudu."
+          "en": "A cash register records sales and commonly includes a drawer for cash and a receipt printer.",
+          "et": "Kassaaparaat registreerib müüke ning sellel on tavaliselt kassasahtel ja tšekiprinter."
         },
         "source": {
-          "sourceId": "wikipedia:metre",
-          "title": "Metre",
-          "url": "https://en.wikipedia.org/wiki/Metre",
+          "sourceId": "wikipedia:cash_register",
+          "title": "Cash register",
+          "url": "https://en.wikipedia.org/wiki/cash_register",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:2",
-        "factKey": "built-in-technology-inventions:si-base-units:medium:unit:kilogram",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:card:chip-card",
         "tier": 2,
-        "subjectKey": "unit:kilogram",
+        "subjectKey": "card:chip-card",
         "clue": {
-          "en": "SI base unit is the SI base unit of mass. What is it called?",
-          "et": "Milline SI põhiühik on SI massi põhiühik?"
+          "en": "This payment card has a small embedded chip that stores data and helps authenticate a transaction. What kind of card is it?",
+          "et": "Sellel maksekaardil on väike sisseehitatud kiip, mis salvestab andmeid ja aitab tehingut autentida. Mis kaart see on?"
         },
         "response": {
-          "en": "kilogram",
-          "et": "kilogramm"
+          "en": "chip card",
+          "et": "kiipkaart"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "smart card"
+          ],
+          "et": [
+            "kiibiga kaart"
+          ]
         },
         "explanation": {
-          "en": "Kilogram is defined by fixing the numerical value of the Planck constant.",
-          "et": "Kilogramm on määratletud Plancki konstandi arvväärtuse fikseerimisega."
+          "en": "A chip card contains an integrated circuit that can store data and take part in secure transactions.",
+          "et": "Kiipkaardil on integraallülitus, mis saab andmeid talletada ja turvalistes tehingutes osaleda."
         },
         "source": {
-          "sourceId": "wikipedia:kilogram",
-          "title": "Kilogram",
-          "url": "https://en.wikipedia.org/wiki/Kilogram",
+          "sourceId": "wikipedia:smart_card",
+          "title": "Smart card",
+          "url": "https://en.wikipedia.org/wiki/smart_card",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:3",
-        "factKey": "built-in-technology-inventions:si-base-units:medium:unit:second",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:device:point-of-sale-terminal",
         "tier": 3,
-        "subjectKey": "unit:second",
+        "subjectKey": "device:point-of-sale-terminal",
         "clue": {
-          "en": "A SI base unit is the SI base unit of time. What term fits?",
-          "et": "Siin kirjeldatud SI põhiühik on SI aja põhiühik. Mis see on?"
+          "en": "At a checkout, you tap or insert a card into this device to approve a purchase. What is it called?",
+          "et": "Kassas puudutad või sisestad maksekaardi sellesse seadmesse, et ost kinnitada. Mis seade see on?"
         },
         "response": {
-          "en": "second",
-          "et": "sekund"
+          "en": "point-of-sale terminal",
+          "et": "makseterminal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "POS terminal",
+            "card terminal"
+          ],
+          "et": [
+            "POS-terminal",
+            "kaarditerminal"
+          ]
         },
         "explanation": {
-          "en": "Second is defined from a caesium-133 atomic transition frequency.",
-          "et": "Sekund on määratletud tseesium-133 aatomi üleminekusageduse järgi."
+          "en": "A point-of-sale terminal is the checkout device used to process card payments.",
+          "et": "Makseterminal on kassas kasutatav seade kaardimaksete töötlemiseks."
         },
         "source": {
-          "sourceId": "wikipedia:second",
-          "title": "Second",
-          "url": "https://en.wikipedia.org/wiki/Second",
+          "sourceId": "wikipedia:point_of_sale",
+          "title": "Point of sale",
+          "url": "https://en.wikipedia.org/wiki/point_of_sale",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:4",
-        "factKey": "built-in-technology-inventions:si-base-units:medium:unit:kelvin",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:method:contactless-payment",
         "tier": 4,
-        "subjectKey": "unit:kelvin",
+        "subjectKey": "method:contactless-payment",
         "clue": {
-          "en": "Recognise the SI base unit that measures thermodynamic temperature without the word degree.",
-          "et": "Otsitav SI põhiühik mõõdab termodünaamilist temperatuuri ilma sõnata kraad. Mis see on?"
+          "en": "Holding a card, phone, or watch close to a reader can pay for a small purchase without inserting the card. What method is this?",
+          "et": "Kaardi, telefoni või kella lugeja lähedal hoidmisega saab väikese ostu eest maksta ilma kaarti sisestamata. Mis makseviis see on?"
         },
         "response": {
-          "en": "kelvin",
-          "et": "kelvin"
+          "en": "contactless payment",
+          "et": "viipemakse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tap to pay"
+          ],
+          "et": [
+            "viipemaksmine"
+          ]
         },
         "explanation": {
-          "en": "Kelvin is defined by fixing the Boltzmann constant.",
-          "et": "Kelvin on määratletud Boltzmanni konstandi fikseerimisega."
+          "en": "Contactless payment transfers payment data over a short-range wireless connection when the device is brought near a reader.",
+          "et": "Viipemakse edastab makseandmed lähitoimelise juhtmevaba ühenduse kaudu, kui seade tuuakse lugeja lähedale."
         },
         "source": {
-          "sourceId": "wikipedia:kelvin",
-          "title": "Kelvin",
-          "url": "https://en.wikipedia.org/wiki/Kelvin",
+          "sourceId": "wikipedia:contactless_payment",
+          "title": "Contactless payment",
+          "url": "https://en.wikipedia.org/wiki/contactless_payment",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-052:question:5",
-        "factKey": "built-in-technology-inventions:si-base-units:medium:unit:mole",
+        "factKey": "built-in-technology-inventions:automated-payment:medium:system:self-checkout",
         "tier": 5,
-        "subjectKey": "unit:mole",
+        "subjectKey": "system:self-checkout",
         "clue": {
-          "en": "What SI base unit measures amount of substance by counting elementary entities?",
-          "et": "Järgmine SI põhiühik mõõdab ainehulka elementaarosakeste loendamise kaudu. Milline see on?"
+          "en": "In this shop system, a customer scans and pays for goods without a cashier processing each item. What is it?",
+          "et": "Selles poesüsteemis skannib ja maksab klient kaupade eest ise, ilma et kassapidaja iga toodet töötleks. Mis süsteem see on?"
         },
         "response": {
-          "en": "mole",
-          "et": "mool"
+          "en": "self-checkout",
+          "et": "iseteeninduskassa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "self-service checkout"
+          ],
+          "et": [
+            "iseteenindus"
+          ]
         },
         "explanation": {
-          "en": "Mole contains exactly the fixed Avogadro number of specified entities.",
-          "et": "Mool sisaldab täpselt Avogadro konstandiga fikseeritud arvu määratud osakesi."
+          "en": "A self-checkout lets customers scan and pay for their own purchases at an automated station.",
+          "et": "Iseteeninduskassa võimaldab kliendil automaatses punktis oma ostud ise skannida ja nende eest maksta."
         },
         "source": {
-          "sourceId": "wikipedia:mole_(unit)",
-          "title": "Mole (unit)",
-          "url": "https://en.wikipedia.org/wiki/Mole_(unit)",
+          "sourceId": "wikipedia:self-checkout",
+          "title": "Self-checkout",
+          "url": "https://en.wikipedia.org/wiki/self-checkout",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -11442,153 +11484,169 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-053",
     "name": {
-      "en": "Tools That Turn Quantity into a Reading",
-      "et": "Suurusest näiduks"
+      "en": "Staying Safe Online",
+      "et": "Turvaliselt internetis"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-053:question:1",
-        "factKey": "built-in-technology-inventions:measurement-instruments:medium:device:oscilloscope",
+        "factKey": "built-in-technology-inventions:online-safety:medium:test:captcha",
         "tier": 1,
-        "subjectKey": "device:oscilloscope",
+        "subjectKey": "test:captcha",
         "clue": {
-          "en": "Find the measuring instrument that draws electrical voltage as a waveform over time.",
-          "et": "Mõõteriist joonistab elektripinge ajas muutuva lainekujuna. Leia sobiv vastus."
+          "en": "A website asks you to identify letters or pictures to show that you are a person rather than an automated program. What is this test?",
+          "et": "Veebisait palub sul valida tähti või pilte, et näidata, et oled inimene, mitte automaatne programm. Mis test see on?"
         },
         "response": {
-          "en": "oscilloscope",
-          "et": "ostsilloskoop"
+          "en": "CAPTCHA",
+          "et": "CAPTCHA"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "CAPTCHA test"
+          ],
+          "et": [
+            "CAPTCHA-kontroll"
+          ]
         },
         "explanation": {
-          "en": "Oscilloscope uses triggered sweeps or digital sampling to make repeating signals appear stable.",
-          "et": "Ostsilloskoop kasutab päästikuga laotust või digitaaldiskreetimist, et korduv signaal näiks stabiilne."
+          "en": "A CAPTCHA is designed to distinguish people from automated programs on a website.",
+          "et": "CAPTCHA on mõeldud eristama veebisaidil inimesi automaatsetest programmidest."
         },
         "source": {
-          "sourceId": "wikipedia:oscilloscope",
-          "title": "Oscilloscope",
-          "url": "https://en.wikipedia.org/wiki/Oscilloscope",
+          "sourceId": "wikipedia:captcha",
+          "title": "CAPTCHA",
+          "url": "https://en.wikipedia.org/wiki/captcha",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-053:question:2",
-        "factKey": "built-in-technology-inventions:measurement-instruments:medium:device:multimeter",
+        "factKey": "built-in-technology-inventions:online-safety:medium:software:spam-filter",
         "tier": 2,
-        "subjectKey": "device:multimeter",
+        "subjectKey": "software:spam-filter",
         "clue": {
-          "en": "Measuring instrument combines voltage, current, and resistance measurement in one handheld tool. What is it called?",
-          "et": "Milline mõõteriist ühendab ühes käsiseadmes pinge, voolu ja takistuse mõõtmise?"
+          "en": "This email tool sorts unwanted advertising and suspicious messages away from the inbox. What is it?",
+          "et": "See e-posti tööriist suunab soovimatud reklaamid ja kahtlased kirjad postkastist eemale. Mis see on?"
         },
         "response": {
-          "en": "multimeter",
-          "et": "multimeeter"
+          "en": "spam filter",
+          "et": "rämpspostifilter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "spam filter"
+          ],
+          "et": [
+            "spämmifilter"
+          ]
         },
         "explanation": {
-          "en": "Multimeter must be placed in series for current but in parallel for voltage.",
-          "et": "Multimeeter tuleb voolu mõõtmiseks ühendada jadamisi, pinge jaoks rööbiti."
+          "en": "A spam filter identifies unwanted email and separates it from ordinary inbox messages.",
+          "et": "Rämpspostifilter tuvastab soovimatud e-kirjad ja eraldab need tavapostist."
         },
         "source": {
-          "sourceId": "wikipedia:multimeter",
-          "title": "Multimeter",
-          "url": "https://en.wikipedia.org/wiki/Multimeter",
+          "sourceId": "wikipedia:email_spam",
+          "title": "Email spam",
+          "url": "https://en.wikipedia.org/wiki/email_spam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-053:question:3",
-        "factKey": "built-in-technology-inventions:measurement-instruments:medium:device:calipers",
+        "factKey": "built-in-technology-inventions:online-safety:medium:mode:private-browsing",
         "tier": 3,
-        "subjectKey": "device:calipers",
+        "subjectKey": "mode:private-browsing",
         "clue": {
-          "en": "A measuring instrument uses sliding jaws to measure an object’s dimensions. What term fits?",
-          "et": "Siin kirjeldatud mõõteriist kasutab eseme mõõtmete leidmiseks liikuvaid haaru. Mis see on?"
+          "en": "This browser mode avoids saving your history and usually clears its cookies when you close its windows. What is it called?",
+          "et": "See brauserirežiim ei salvesta sirvimisajalugu ning kustutab tavaliselt akna sulgemisel küpsised. Mis režiim see on?"
         },
         "response": {
-          "en": "calipers",
-          "et": "nihik"
+          "en": "private browsing",
+          "et": "privaatne sirvimine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["incognito mode"],
+          "et": ["inkognito režiim"]
         },
         "explanation": {
-          "en": "Calipers can read fine fractions with a vernier scale that compares two graduations.",
-          "et": "Nihik võib lugeda peeni jaotisi noonuse abil, mis võrdleb kahte skaalat."
+          "en": "Private browsing prevents a browser from retaining local history and session data after the private windows are closed.",
+          "et": "Privaatne sirvimine ei jäta pärast privaatakende sulgemist brauserisse kohalikku ajalugu ega seansiandmeid."
         },
         "source": {
-          "sourceId": "wikipedia:calipers",
-          "title": "Calipers",
-          "url": "https://en.wikipedia.org/wiki/Calipers",
+          "sourceId": "wikipedia:private_browsing",
+          "title": "Private browsing",
+          "url": "https://en.wikipedia.org/wiki/Private_browsing",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-053:question:4",
-        "factKey": "built-in-technology-inventions:measurement-instruments:medium:device:barometer",
+        "factKey": "built-in-technology-inventions:online-safety:medium:network:virtual-private-network",
         "tier": 4,
-        "subjectKey": "device:barometer",
+        "subjectKey": "network:virtual-private-network",
         "clue": {
-          "en": "Find the measuring instrument that measures atmospheric pressure for weather observation.",
-          "et": "Mõõteriist mõõdab ilma vaatlemiseks õhurõhku. Leia sobiv vastus."
+          "en": "This service creates an encrypted connection between your device and another network, often used on public Wi-Fi. What is it?",
+          "et": "See teenus loob sinu seadme ja teise võrgu vahel krüptitud ühenduse ning seda kasutatakse sageli avalikus Wi-Fi võrgus. Mis see on?"
         },
         "response": {
-          "en": "barometer",
-          "et": "baromeeter"
+          "en": "virtual private network",
+          "et": "virtuaalne privaatvõrk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "VPN"
+          ],
+          "et": [
+            "VPN"
+          ]
         },
         "explanation": {
-          "en": "Barometer may balance air against a mercury column or deform a sealed aneroid capsule.",
-          "et": "Baromeeter võib tasakaalustada õhu elavhõbedasambaga või painutada suletud aneroidkapslit."
+          "en": "A virtual private network extends a private network across a public network through an encrypted connection.",
+          "et": "Virtuaalne privaatvõrk laiendab privaatvõrku üle avaliku võrgu krüptitud ühenduse abil."
         },
         "source": {
-          "sourceId": "wikipedia:barometer",
-          "title": "Barometer",
-          "url": "https://en.wikipedia.org/wiki/Barometer",
+          "sourceId": "wikipedia:virtual_private_network",
+          "title": "Virtual private network",
+          "url": "https://en.wikipedia.org/wiki/virtual_private_network",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-053:question:5",
-        "factKey": "built-in-technology-inventions:measurement-instruments:medium:device:seismometer",
+        "factKey": "built-in-technology-inventions:online-safety:medium:protocol:https",
         "tier": 5,
-        "subjectKey": "device:seismometer",
+        "subjectKey": "protocol:https",
         "clue": {
-          "en": "Measuring instrument records ground motion from earthquakes and other vibrations. What is it called?",
-          "et": "Milline mõõteriist registreerib maavärinate ja muu vibratsiooni maapinnaliikumist?"
+          "en": "The padlock in a browser address bar commonly signals this secure version of the web protocol. What is it?",
+          "et": "Brauseri aadressiribal olev tabalukk viitab tavaliselt sellele veebiprotokolli turvalisele versioonile. Mis see on?"
         },
         "response": {
-          "en": "seismometer",
-          "et": "seismomeeter"
+          "en": "HTTPS",
+          "et": "HTTPS"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Hypertext Transfer Protocol Secure"
+          ],
+          "et": [
+            "turvaline HTTP"
+          ]
         },
         "explanation": {
-          "en": "Seismometer uses an inertial mass that moves differently from its supporting frame.",
-          "et": "Seismomeeter kasutab inertsmassi, mis liigub tugiraamist erinevalt."
+          "en": "HTTPS is HTTP used over an encrypted connection, helping protect data exchanged with a website.",
+          "et": "HTTPS on HTTP, mida kasutatakse krüptitud ühenduse kaudu ja mis aitab kaitsta veebisaidiga vahetatavaid andmeid."
         },
         "source": {
-          "sourceId": "wikipedia:seismometer",
-          "title": "Seismometer",
-          "url": "https://en.wikipedia.org/wiki/Seismometer",
+          "sourceId": "wikipedia:https",
+          "title": "HTTPS",
+          "url": "https://en.wikipedia.org/wiki/https",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -11596,153 +11654,174 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-054",
     "name": {
-      "en": "Technology That Keeps Aircraft Flying",
-      "et": "Lennukit õhus hoidev tehnika"
+      "en": "When Computers Listen and Speak",
+      "et": "Kui arvuti kuulab ja räägib"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-054:question:1",
-        "factKey": "built-in-technology-inventions:aircraft-systems:medium:device:jet-engine",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:voice-recognition",
         "tier": 1,
-        "subjectKey": "device:jet-engine",
+        "subjectKey": "technology:voice-recognition",
         "clue": {
-          "en": "This aircraft component or system produces thrust by accelerating a high-speed exhaust stream. What is it?",
-          "et": "See lennuki osa või süsteem tekitab tõukejõu kiire väljavoolu kiirendamisega. Mis see on?"
+          "en": "A phone can turn spoken words into a search or a command. What technology lets it recognise speech?",
+          "et": "Telefon saab muuta öeldud sõnad otsinguks või käsuks. Mis tehnoloogia võimaldab tal kõnet ära tunda?"
         },
         "response": {
-          "en": "jet engine",
-          "et": "reaktiivmootor"
+          "en": "voice recognition",
+          "et": "kõnetuvastus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "speech recognition"
+          ],
+          "et": [
+            "kõnetuvastus"
+          ]
         },
         "explanation": {
-          "en": "Jet engine in a turbofan sends much of its air around the hot core for efficiency.",
-          "et": "Reaktiivmootor suunab turboventilaatormootoris tõhususe nimel suure osa õhust kuumast südamikust mööda."
+          "en": "Voice recognition uses software to identify spoken words or commands.",
+          "et": "Kõnetuvastus kasutab tarkvara öeldud sõnade või käskude tuvastamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:jet_engine",
-          "title": "Jet engine",
-          "url": "https://en.wikipedia.org/wiki/Jet_engine",
+          "sourceId": "wikipedia:speech_recognition",
+          "title": "Speech recognition",
+          "url": "https://en.wikipedia.org/wiki/speech_recognition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-054:question:2",
-        "factKey": "built-in-technology-inventions:aircraft-systems:medium:device:aircraft-propeller",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:technology:text-to-speech",
         "tier": 2,
-        "subjectKey": "device:aircraft-propeller",
+        "subjectKey": "technology:text-to-speech",
         "clue": {
-          "en": "Aircraft component or system uses rotating blades as airfoils to pull or push an aircraft. What is it called?",
-          "et": "Milline lennuki osa või süsteem kasutab pöörlevaid labasid tiibprofiilidena lennuki tõmbamiseks või lükkamiseks?"
+          "en": "This feature reads written words aloud, for example in a navigation app or e-book. What is it called?",
+          "et": "See funktsioon loeb kirjutatud sõnad ette, näiteks navigatsioonirakenduses või e-raamatus. Mis see on?"
         },
         "response": {
-          "en": "propeller",
-          "et": "propeller"
+          "en": "text-to-speech",
+          "et": "tekst-kõneks-süntees"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "TTS"
+          ],
+          "et": [
+            "TTS",
+            "tekst kõneks"
+          ]
         },
         "explanation": {
-          "en": "Propeller changes blade pitch to keep an efficient angle of attack as conditions vary.",
-          "et": "Propeller muudab laba sammu, et hoida tingimuste muutudes tõhusat kohtumisnurka."
+          "en": "Text-to-speech converts written text into spoken audio produced by a computer.",
+          "et": "Tekst-kõneks-süntees muudab kirjaliku teksti arvuti tekitatud kõneks."
         },
         "source": {
-          "sourceId": "wikipedia:propeller_(aeronautics)",
-          "title": "Propeller (aeronautics)",
-          "url": "https://en.wikipedia.org/wiki/Propeller_(aeronautics)",
+          "sourceId": "wikipedia:speech_synthesis",
+          "title": "Speech synthesis",
+          "url": "https://en.wikipedia.org/wiki/speech_synthesis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-054:question:3",
-        "factKey": "built-in-technology-inventions:aircraft-systems:medium:component:aircraft-wing",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:software:screen-reader",
         "tier": 3,
-        "subjectKey": "component:aircraft-wing",
+        "subjectKey": "software:screen-reader",
         "clue": {
-          "en": "An aircraft component or system creates most of an aeroplane’s lift as air flows around it. What term fits?",
-          "et": "Siin kirjeldatud lennuki osa või süsteem loob õhuvoolus suurema osa lennuki tõstejõust. Mis see on?"
+          "en": "This accessibility program reads on-screen text aloud and describes controls for a blind user. What is it?",
+          "et": "See ligipääsetavusprogramm loeb ekraanil oleva teksti ette ja kirjeldab pimedale kasutajale juhtelemente. Mis see on?"
         },
         "response": {
-          "en": "wing",
-          "et": "tiib"
+          "en": "screen reader",
+          "et": "ekraani lugeja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "screen-reading software"
+          ],
+          "et": [
+            "ekraanilugeja"
+          ]
         },
         "explanation": {
-          "en": "Wing produces lift by turning airflow downward along with a pressure difference.",
-          "et": "Tiib tekitab tõstejõu õhuvoolu allapoole pööramise ja rõhuerinevuse kaudu."
+          "en": "A screen reader presents screen content through speech or other non-visual output.",
+          "et": "Ekraanilugeja esitab ekraanisisu kõne või muu mittevisuaalse väljundi kaudu."
         },
         "source": {
-          "sourceId": "wikipedia:wing",
-          "title": "Wing",
-          "url": "https://en.wikipedia.org/wiki/Wing",
+          "sourceId": "wikipedia:screen_reader",
+          "title": "Screen reader",
+          "url": "https://en.wikipedia.org/wiki/screen_reader",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-054:question:4",
-        "factKey": "built-in-technology-inventions:aircraft-systems:medium:device:flight-recorder",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:software:dictation",
         "tier": 4,
-        "subjectKey": "device:flight-recorder",
+        "subjectKey": "software:dictation",
         "clue": {
-          "en": "This aircraft component or system preserves cockpit audio or flight data after an accident. What is it?",
-          "et": "See lennuki osa või süsteem säilitab pärast õnnetust kabiiniheli või lennuandmed. Mis see on?"
+          "en": "Speaking into a device so it writes the words into a document is known as what?",
+          "et": "Kuidas nimetatakse seda, kui räägid seadmesse ja see kirjutab su sõnad dokumenti?"
         },
         "response": {
-          "en": "flight recorder",
-          "et": "pardasalvesti"
+          "en": "dictation",
+          "et": "dikteerimine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "voice dictation"
+          ],
+          "et": [
+            "hääldikteerimine"
+          ]
         },
         "explanation": {
-          "en": "Flight recorder is brightly coloured and crash-protected despite the nickname black box.",
-          "et": "Pardasalvesti on hüüdnimest must kast hoolimata erksavärviline ja avariikindel."
+          "en": "Dictation software transcribes spoken language into written text.",
+          "et": "Dikteerimistarkvara transkribeerib öeldud keele kirjalikuks tekstiks."
         },
         "source": {
-          "sourceId": "wikipedia:flight_recorder",
-          "title": "Flight recorder",
-          "url": "https://en.wikipedia.org/wiki/Flight_recorder",
+          "sourceId": "wikipedia:speech_recognition",
+          "title": "Speech recognition",
+          "url": "https://en.wikipedia.org/wiki/speech_recognition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-054:question:5",
-        "factKey": "built-in-technology-inventions:aircraft-systems:medium:system:autopilot",
+        "factKey": "built-in-technology-inventions:spoken-computing:medium:software:virtual-assistant",
         "tier": 5,
-        "subjectKey": "system:autopilot",
+        "subjectKey": "software:virtual-assistant",
         "clue": {
-          "en": "Identify the aircraft component or system: it automatically controls selected aspects of an aircraft’s path.",
-          "et": "Mis lennuki osa või süsteem juhib automaatselt lennuki valitud liikumisparameetreid?"
+          "en": "Siri, Alexa, and Google Assistant are examples of what kind of software that answers spoken requests?",
+          "et": "Siri, Alexa ja Google Assistant on näited millisest tarkvarast, mis vastab suulistele palvetele?"
         },
         "response": {
-          "en": "autopilot",
-          "et": "autopiloot"
+          "en": "virtual assistant",
+          "et": "virtuaalassistent"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "voice assistant"
+          ],
+          "et": [
+            "häälassistent"
+          ]
         },
         "explanation": {
-          "en": "Autopilot closes feedback loops using sensors, commanded targets, and control surfaces.",
-          "et": "Autopiloot sulgeb tagasisideahelad andurite, sihtväärtuste ja juhtpindade abil."
+          "en": "A virtual assistant performs tasks or provides information in response to a user’s spoken or written requests.",
+          "et": "Virtuaalassistent täidab ülesandeid või annab teavet kasutaja suuliste või kirjalike palvete peale."
         },
         "source": {
-          "sourceId": "wikipedia:autopilot",
-          "title": "Autopilot",
-          "url": "https://en.wikipedia.org/wiki/Autopilot",
+          "sourceId": "wikipedia:virtual_assistant",
+          "title": "Virtual assistant",
+          "url": "https://en.wikipedia.org/wiki/virtual_assistant",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -11750,153 +11829,174 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-055",
     "name": {
-      "en": "Machines Beyond the Atmosphere",
-      "et": "Masinad väljaspool atmosfääri"
+      "en": "On a Construction Site",
+      "et": "Ehitusplatsil"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-055:question:1",
-        "factKey": "built-in-technology-inventions:spacecraft-hardware:medium:device:rocket",
+        "factKey": "built-in-technology-inventions:construction-site:medium:vehicle:excavator",
         "tier": 1,
-        "subjectKey": "device:rocket",
+        "subjectKey": "vehicle:excavator",
         "clue": {
-          "en": "This space technology carries its own reaction mass and works even in vacuum. What is it?",
-          "et": "See kosmosetehnoloogia kannab ise reaktsioonimassi ning töötab ka vaakumis. Mis see on?"
+          "en": "This tracked or wheeled machine uses a boom and bucket to dig soil and lift it away. What is it?",
+          "et": "See roomik- või ratassõiduk kasutab poomi ja koppasid pinnase kaevamiseks ning tõstmiseks. Mis masin see on?"
         },
         "response": {
-          "en": "rocket",
-          "et": "rakett"
+          "en": "excavator",
+          "et": "ekskavaator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "digger"
+          ],
+          "et": [
+            "kaevemasin"
+          ]
         },
         "explanation": {
-          "en": "Rocket gains momentum by expelling mass, not by pushing against surrounding air.",
-          "et": "Rakett saab impulsi massi väljapaiskamisest, mitte ümbritseva õhu vastu tõukamisest."
+          "en": "An excavator uses a boom, stick, and bucket to dig and move earth.",
+          "et": "Ekskavaator kasutab pinnase kaevamiseks ja teisaldamiseks poomi, vart ning koppasid."
         },
         "source": {
-          "sourceId": "wikipedia:rocket",
-          "title": "Rocket",
-          "url": "https://en.wikipedia.org/wiki/Rocket",
+          "sourceId": "wikipedia:excavator",
+          "title": "Excavator",
+          "url": "https://en.wikipedia.org/wiki/excavator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-055:question:2",
-        "factKey": "built-in-technology-inventions:spacecraft-hardware:medium:device:artificial-satellite",
+        "factKey": "built-in-technology-inventions:construction-site:medium:vehicle:bulldozer",
         "tier": 2,
-        "subjectKey": "device:artificial-satellite",
+        "subjectKey": "vehicle:bulldozer",
         "clue": {
-          "en": "Identify the space technology: it is a human-made object placed in orbit.",
-          "et": "Mis kosmosetehnoloogia on inimese loodud orbiidile paigutatud objekt?"
+          "en": "This heavy tracked machine pushes earth or rubble ahead of a broad front blade. What is it?",
+          "et": "See raske roomikmasin lükkab laia esilabaga enda ees pinnast või prahti. Mis masin see on?"
         },
         "response": {
-          "en": "artificial satellite",
-          "et": "tehiskaaslane"
+          "en": "bulldozer",
+          "et": "buldooser"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "dozer"
+          ],
+          "et": [
+            "buldooser"
+          ]
         },
         "explanation": {
-          "en": "Artificial satellite stays aloft by continually falling around a curved planet.",
-          "et": "Tehiskaaslane püsib üleval, langedes pidevalt ümber kõvera planeedi."
+          "en": "A bulldozer is a powerful tracked vehicle with a large front blade for pushing material.",
+          "et": "Buldooser on võimas roomiksõiduk suure esilabaga materjali lükkamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:satellite",
-          "title": "Satellite",
-          "url": "https://en.wikipedia.org/wiki/Satellite",
+          "sourceId": "wikipedia:bulldozer",
+          "title": "Bulldozer",
+          "url": "https://en.wikipedia.org/wiki/bulldozer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-055:question:3",
-        "factKey": "built-in-technology-inventions:spacecraft-hardware:medium:device:space-station",
+        "factKey": "built-in-technology-inventions:construction-site:medium:machine:concrete-mixer",
         "tier": 3,
-        "subjectKey": "device:space-station",
+        "subjectKey": "machine:concrete-mixer",
         "clue": {
-          "en": "Name the space technology that supports people living and working in orbit for long periods.",
-          "et": "Vihjes kirjeldatud kosmosetehnoloogia toetab inimeste pikaajalist elamist ja töötamist orbiidil. Mis see on?"
+          "en": "Its rotating drum combines cement, water, sand, and aggregate on the way to a building site. What machine is it?",
+          "et": "Selle pöörlev trummel segab ehitusplatsile sõites tsementi, vett, liiva ja killustikku. Mis masin see on?"
         },
         "response": {
-          "en": "space station",
-          "et": "kosmosejaam"
+          "en": "concrete mixer",
+          "et": "betoonisegur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cement mixer"
+          ],
+          "et": [
+            "betoonimikser"
+          ]
         },
         "explanation": {
-          "en": "Space station is assembled and resupplied rather than designed chiefly for landing.",
-          "et": "Kosmosejaam pannakse kokku ja varustatakse juurde ega ole mõeldud peamiselt maandumiseks."
+          "en": "A concrete mixer combines cement, water, and aggregate to make concrete.",
+          "et": "Betoonisegur segab betooni valmistamiseks tsemendi, vee ja täitematerjali."
         },
         "source": {
-          "sourceId": "wikipedia:space_station",
-          "title": "Space station",
-          "url": "https://en.wikipedia.org/wiki/Space_station",
+          "sourceId": "wikipedia:concrete_mixer",
+          "title": "Concrete mixer",
+          "url": "https://en.wikipedia.org/wiki/concrete_mixer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-055:question:4",
-        "factKey": "built-in-technology-inventions:spacecraft-hardware:medium:component:heat-shield",
+        "factKey": "built-in-technology-inventions:construction-site:medium:machine:tower-crane",
         "tier": 4,
-        "subjectKey": "component:heat-shield",
+        "subjectKey": "machine:tower-crane",
         "clue": {
-          "en": "Identify this space technology: it protects a returning craft from intense atmospheric heating.",
-          "et": "Kirjeldatud kosmosetehnoloogia kaitseb naasvat kosmosesõidukit tugeva atmosfäärikuumenemise eest. Mis on selle nimi?"
+          "en": "A tall fixed crane with a long horizontal jib lifts heavy loads high above a city building site. What type of crane is it?",
+          "et": "Kõrge kinnitatud kraana pika horisontaalse noolega tõstab linnas ehitusplatsil raskeid koormaid kõrgele. Mis tüüpi kraana see on?"
         },
         "response": {
-          "en": "heat shield",
-          "et": "kuumuskilp"
+          "en": "tower crane",
+          "et": "tornkraana"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "construction crane"
+          ],
+          "et": [
+            "ehituskraana"
+          ]
         },
         "explanation": {
-          "en": "Heat shield may ablate, carrying heat away as surface material chars and erodes.",
-          "et": "Kuumuskilp võib ablatsiooni käigus soojust ära viia, kui pinnamaterjal söestub ja kulub."
+          "en": "A tower crane is a tall crane used to lift heavy materials to great heights on construction sites.",
+          "et": "Tornkraana on kõrge kraana, mida kasutatakse ehitusplatsil raskete materjalide suurele kõrgusele tõstmiseks."
         },
         "source": {
-          "sourceId": "wikipedia:atmospheric_entry",
-          "title": "Atmospheric entry",
-          "url": "https://en.wikipedia.org/wiki/Atmospheric_entry",
+          "sourceId": "wikipedia:tower_crane",
+          "title": "Tower crane",
+          "url": "https://en.wikipedia.org/wiki/tower_crane",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-055:question:5",
-        "factKey": "built-in-technology-inventions:spacecraft-hardware:medium:device:planetary-rover",
+        "factKey": "built-in-technology-inventions:construction-site:medium:machine:tunnel-boring-machine",
         "tier": 5,
-        "subjectKey": "device:planetary-rover",
+        "subjectKey": "machine:tunnel-boring-machine",
         "clue": {
-          "en": "Space technology travels across another world’s surface after landing. What is it called?",
-          "et": "Milline kosmosetehnoloogia liigub pärast maandumist teise taevakeha pinnal?"
+          "en": "This enormous machine bores through soil or rock and can line the tunnel behind its rotating cutting head. What is it?",
+          "et": "See hiiglaslik masin puurib läbi pinnase või kivimi ning võib pöörleva lõikepea taga tunnelit vooderdada. Mis masin see on?"
         },
         "response": {
-          "en": "planetary rover",
-          "et": "planeedikulgur"
+          "en": "tunnel boring machine",
+          "et": "tunnelipuurmasin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "TBM"
+          ],
+          "et": [
+            "TBM",
+            "tunnelipuur"
+          ]
         },
         "explanation": {
-          "en": "Planetary rover trades speed for autonomy, obstacle handling, and scientific payload.",
-          "et": "Planeedikulgur ohverdab kiiruse autonoomia, takistuste ületamise ja teaduskoorma kasuks."
+          "en": "A tunnel boring machine excavates circular tunnels through soil or rock with a rotating cutting head.",
+          "et": "Tunnelipuurmasin kaevab pinnasesse või kivimisse ümmargusi tunneleid pöörleva lõikepea abil."
         },
         "source": {
-          "sourceId": "wikipedia:rover_(space_exploration)",
-          "title": "Rover (space exploration)",
-          "url": "https://en.wikipedia.org/wiki/Rover_(space_exploration)",
+          "sourceId": "wikipedia:tunnel_boring_machine",
+          "title": "Tunnel boring machine",
+          "url": "https://en.wikipedia.org/wiki/tunnel_boring_machine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
