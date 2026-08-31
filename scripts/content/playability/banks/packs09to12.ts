@@ -15099,78 +15099,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-076:question:1",
-        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:altair-8800-kit",
-        "tier": 1,
-        "subjectKey": "computer:altair-8800",
-        "clue": {
-          "en": "Which 1975 mail-order microcomputer kit, publicised in Popular Electronics, put rows of switches and lights on the front panel and helped ignite the home-computer hobby?",
-          "et": "Milline 1975. aastal ajakirjas Popular Electronics tutvustatud postimüügist saadav mikroarvutikomplekt pani esipaneelile lülitite ja tulede read ning sütitas koduarvutiharrastuse?"
-        },
-        "response": {
-          "en": "Altair 8800",
-          "et": "Altair 8800"
-        },
-        "acceptedVariants": {
-          "en": ["MITS Altair 8800"],
-          "et": ["MITS Altair 8800"]
-        },
-        "explanation": {
-          "en": "MITS sold the Altair 8800 as a kit; its publicity drew hobbyists who soon formed clubs and wrote software for it.",
-          "et": "MITS müüs Altair 8800 komplektina; selle tutvustus tõi kokku harrastajaid, kes asutasid peagi klubisid ja kirjutasid masinale tarkvara."
-        },
-        "source": {
-          "sourceId": "wikipedia:altair-8800",
-          "title": "Altair 8800",
-          "url": "https://en.wikipedia.org/wiki/Altair_8800",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-076:question:2",
-        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:trs-80-radioshack",
-        "tier": 2,
-        "subjectKey": "computer:trs-80",
-        "clue": {
-          "en": "What 1977 Radio Shack machine bundled a keyboard, monitor, and cassette recorder, making a ready-to-use home computer available through ordinary shops?",
-          "et": "Milline 1977. aasta Radio Shacki masin ühendas klaviatuuri, monitori ja kassettmakki ning tegi kasutusvalmis koduarvuti tavapoodides kättesaadavaks?"
-        },
-        "response": {
-          "en": "TRS-80",
-          "et": "TRS-80"
-        },
-        "acceptedVariants": {
-          "en": ["Tandy TRS-80"],
-          "et": ["Tandy TRS-80"]
-        },
-        "explanation": {
-          "en": "The TRS-80 Model I was sold through Radio Shack stores as a complete system, unlike many hobby kits of the period.",
-          "et": "TRS-80 Model I jõudis Radio Shacki poodidesse tervikliku süsteemina, erinevalt paljudest tolle aja harrastajakomplektidest."
-        },
-        "source": {
-          "sourceId": "wikipedia:trs-80",
-          "title": "TRS-80",
-          "url": "https://en.wikipedia.org/wiki/TRS-80",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-076:question:3",
         "factKey": "built-in-technology-inventions:checkpoint6:home-computers:commodore-64-sales-sid",
-        "tier": 3,
+        "tier": 1,
         "subjectKey": "computer:commodore-64",
         "clue": {
-          "en": "Which beige 1982 home computer, named for its 64 kilobytes of memory, became a bestseller and is remembered for the distinctive sound of its SID chip?",
-          "et": "Milline 1982. aasta beež koduarvuti, mille nimi viitas 64 kilobaidile mälule, sai menukiks ja on tuntud oma SID-helikiibi iseloomuliku kõla poolest?"
+          "en": "Which 1982 home computer became a bestseller through its low price, colourful graphics, and the distinctive SID sound chip?",
+          "et": "Milline 1982. aasta koduarvuti sai menukiks tänu madalale hinnale, värvilisele graafikale ja SID-helikiibi iseloomulikule kõlale?"
         },
         "response": {
           "en": "Commodore 64",
           "et": "Commodore 64"
         },
         "acceptedVariants": {
-          "en": ["C64"],
-          "et": ["C64"]
+          "en": ["C64", "C-64"],
+          "et": ["C64", "C-64"]
         },
         "explanation": {
           "en": "The Commodore 64 combined low price, 64 KB of RAM, colourful graphics, and the SID sound chip, helping it become one of the best-selling computers ever.",
@@ -15185,9 +15127,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-076:question:4",
+        "key": "built-in-technology-inventions-set-076:question:2",
         "factKey": "built-in-technology-inventions:checkpoint6:home-computers:zx-spectrum-rubber-keys",
-        "tier": 4,
+        "tier": 2,
         "subjectKey": "computer:zx-spectrum",
         "clue": {
           "en": "Which Sinclair home computer became a British gaming icon with its tiny rubber keys and a name referring to its colour display?",
@@ -15214,30 +15156,88 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-076:question:5",
+        "key": "built-in-technology-inventions-set-076:question:3",
         "factKey": "built-in-technology-inventions:checkpoint6:home-computers:amiga-500-custom-chips",
-        "tier": 5,
+        "tier": 3,
         "subjectKey": "computer:amiga-500",
         "clue": {
-          "en": "Which 1987 Commodore home computer brought the Amiga's custom graphics and sound chips to a broad audience, later becoming a favourite of demo-scene creators?",
-          "et": "Milline 1987. aasta Commodore'i koduarvuti tõi Amiga kohandatud graafika- ja helikiibid laiema publikuni ning sai hiljem demostseeni loojate lemmikuks?"
+          "en": "Which 1987 Commodore model became the first popular Amiga home computer, putting its graphics and sound coprocessors into a compact keyboard-style case?",
+          "et": "Milline 1987. aasta Commodore'i mudel sai esimeseks populaarseks Amiga koduarvutiks ning mahutas graafika- ja helikaasprotsessorid kompaktsesse klaviatuuriga korpusesse?"
         },
         "response": {
           "en": "Amiga 500",
           "et": "Amiga 500"
         },
         "acceptedVariants": {
-          "en": ["Commodore Amiga 500"],
-          "et": ["Commodore Amiga 500"]
+          "en": ["Commodore Amiga 500", "A500"],
+          "et": ["Commodore Amiga 500", "A500"]
         },
         "explanation": {
-          "en": "The Amiga 500 used custom chips for graphics and sound, giving home users unusually strong multimedia capabilities for its time.",
-          "et": "Amiga 500 kasutas graafika ja heli jaoks kohandatud kiipe, pakkudes kodukasutajatele oma aja kohta ebatavaliselt võimsaid multimeediavõimalusi."
+          "en": "The Amiga 500 made the Amiga platform broadly popular in a compact home-computer case, with dedicated chips for graphics and sound.",
+          "et": "Amiga 500 tegi Amiga platvormi kompaktses koduarvutikorpuses laialt populaarseks ning kasutas graafika ja heli erikiibe."
         },
         "source": {
           "sourceId": "wikipedia:amiga-500",
           "title": "Amiga 500",
           "url": "https://en.wikipedia.org/wiki/Amiga_500",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-076:question:4",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:altair-8800-kit",
+        "tier": 4,
+        "subjectKey": "computer:altair-8800",
+        "clue": {
+          "en": "Which mail-order microcomputer kit appeared on the cover of the January 1975 issue of Popular Electronics, with rows of switches and lights on its front panel?",
+          "et": "Milline postimüügist saadav mikroarvutikomplekt ilmus ajakirja Popular Electronics 1975. aasta jaanuarinumbrite kaanele ning mille esipaneelil olid lülitite ja tulede read?"
+        },
+        "response": {
+          "en": "Altair 8800",
+          "et": "Altair 8800"
+        },
+        "acceptedVariants": {
+          "en": ["MITS Altair 8800", "Altair"],
+          "et": ["MITS Altair 8800", "Altair"]
+        },
+        "explanation": {
+          "en": "MITS sold the Altair 8800 as a kit; its January 1975 Popular Electronics cover story drew hobbyists who soon formed clubs and wrote software for it.",
+          "et": "MITS müüs Altair 8800 komplektina; Popular Electronicsi 1975. aasta jaanuarinumbri kaanelugu tõi kokku harrastajaid, kes asutasid peagi klubisid ja kirjutasid sellele tarkvara."
+        },
+        "source": {
+          "sourceId": "wikipedia:altair-8800",
+          "title": "Altair 8800",
+          "url": "https://en.wikipedia.org/wiki/Altair_8800",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-076:question:5",
+        "factKey": "built-in-technology-inventions:checkpoint6:home-computers:trs-80-radioshack",
+        "tier": 5,
+        "subjectKey": "computer:trs-80",
+        "clue": {
+          "en": "What 1977 Radio Shack machine made a ready-to-use home computer available through ordinary shops with a keyboard, monitor, and cassette storage?",
+          "et": "Milline 1977. aasta Radio Shacki masin tegi kasutusvalmis koduarvuti tavapoodides kättesaadavaks klaviatuuri, monitori ja kassettmäluga?"
+        },
+        "response": {
+          "en": "TRS-80",
+          "et": "TRS-80"
+        },
+        "acceptedVariants": {
+          "en": ["Tandy TRS-80", "TRS-80 Model I"],
+          "et": ["Tandy TRS-80", "TRS-80 Model I"]
+        },
+        "explanation": {
+          "en": "The TRS-80 Model I was sold through Radio Shack stores as a complete system, unlike many hobby kits of the period.",
+          "et": "TRS-80 Model I jõudis Radio Shacki poodidesse tervikliku süsteemina, erinevalt paljudest tolle aja harrastajakomplektidest."
+        },
+        "source": {
+          "sourceId": "wikipedia:trs-80",
+          "title": "TRS-80",
+          "url": "https://en.wikipedia.org/wiki/TRS-80",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -15401,8 +15401,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-078",
     "name": {
-      "en": "Printing Beyond Ink and Type",
-      "et": "Trükkimine tindist ja kirjatüübist kaugemal"
+      "en": "Computer Printing Methods",
+      "et": "Arvutiga trükkimise viisid"
     },
     "questions": [
       {
@@ -15411,16 +15411,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "printer:inkjet",
         "clue": {
-          "en": "What kind of home printer forms letters and images by placing tiny droplets of liquid colour directly on paper?",
-          "et": "Milline koduprinteri tüüp moodustab tähed ja pildid, paigutades paberile imepisikesi vedela värvi tilku?"
+          "en": "What kind of home printer made photo-quality colour practical by placing controlled microscopic drops of liquid ink directly on paper?",
+          "et": "Milline koduprinteri tüüp tegi fotoliku värvitrüki praktiliseks, paigutades paberile juhitult mikroskoopilisi vedela tindi piisakesi?"
         },
         "response": {
           "en": "inkjet printer",
           "et": "tindiprinter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["inkjet"],
+          "et": ["tindipritsprinter"]
         },
         "explanation": {
           "en": "Inkjet printers create an image from controlled droplets of ink, making compact colour printing practical at home.",
@@ -15440,8 +15440,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "printer:laser",
         "clue": {
-          "en": "What printer uses a laser to draw an electrostatic image that attracts toner powder before heat fixes it to the page?",
-          "et": "Milline printer kasutab laserit elektrostaatilise kujutise loomiseks, mis tõmbab ligi tooneripulbri, enne kui kuumus selle paberile kinnitab?"
+          "en": "What printer creates an electrostatic image on a drum, attracts powdered toner to it, and fuses the toner to paper with heat?",
+          "et": "Milline printer loob trumlile elektrostaatilise kujutise, tõmbab sellele tooneripulbri ja kinnitab tooneri kuumusega paberile?"
         },
         "response": {
           "en": "laser printer",
@@ -15465,49 +15465,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-078:question:3",
-        "factKey": "built-in-technology-inventions:checkpoint6:printing:dot-matrix-pins",
-        "tier": 3,
-        "subjectKey": "printer:dot-matrix",
-        "clue": {
-          "en": "What noisy printer creates characters by driving a grid of pins through an ink ribbon, a method once common for multipart invoices?",
-          "et": "Milline lärmakas printer moodustab tähemärgid, surudes tihvtide maatriksi läbi tindilindi, ning oli kunagi mitmeosaliste arvete puhul tavaline?"
-        },
-        "response": {
-          "en": "dot-matrix printer",
-          "et": "nõelmaatriksprinter"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Dot-matrix printers use impact pins, so they can press through carbon copies even though their output is coarse and noisy.",
-          "et": "Nõelmaatriksprinter kasutab lööktihvte, mistõttu saab see trükkida läbi kopeerpaberi, kuigi tulemus on jämedam ja mürarikas."
-        },
-        "source": {
-          "sourceId": "wikipedia:dot-matrix-printing",
-          "title": "Dot matrix printing",
-          "url": "https://en.wikipedia.org/wiki/Dot_matrix_printing",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-078:question:4",
         "factKey": "built-in-technology-inventions:checkpoint6:printing:thermal-heat-paper",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "printer:thermal",
         "clue": {
-          "en": "Which printer makes till receipts without ink by heating selected spots on specially coated paper?",
-          "et": "Milline printer teeb kassakviitungid ilma tindita, kuumutades spetsiaalselt kaetud paberil valitud punkte?"
+          "en": "What kind of receipt printer can leave a blank till slip in sunlight that later darkens and fades, because it heats a specially coated paper?",
+          "et": "Milline kviitungiprinter võib jätta päikese kätte sattunud kassalipiku hiljem tumenema ja pleekima, sest see kuumutab spetsiaalse kattega paberit?"
         },
         "response": {
           "en": "thermal printer",
           "et": "termoprinter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["direct thermal printer"],
+          "et": ["otsetermoprinter"]
         },
         "explanation": {
           "en": "Direct thermal printing darkens a heat-sensitive coating, which is why receipts can fade when exposed to heat or light.",
@@ -15517,6 +15488,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:thermal-printing",
           "title": "Thermal printing",
           "url": "https://en.wikipedia.org/wiki/Thermal_printing",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-078:question:4",
+        "factKey": "built-in-technology-inventions:checkpoint6:printing:dot-matrix-pins",
+        "tier": 4,
+        "subjectKey": "printer:dot-matrix",
+        "clue": {
+          "en": "What noisy printer forms characters by striking an ink ribbon against paper with a matrix of pins, a method once common for multipart invoices?",
+          "et": "Milline lärmakas printer moodustab tähemärke, lüües nõelmaatriksiga tindilinti vastu paberit, ning oli kunagi mitmeosaliste arvete puhul tavaline?"
+        },
+        "response": {
+          "en": "dot-matrix printer",
+          "et": "nõelmaatriksprinter"
+        },
+        "acceptedVariants": {
+          "en": ["matrix printer"],
+          "et": ["maatriksprinter", "nõelprinter"]
+        },
+        "explanation": {
+          "en": "Dot-matrix printers use impact pins, so they can press through carbon copies even though their output is coarse and noisy.",
+          "et": "Nõelmaatriksprinter kasutab lööktihvte, mistõttu saab see trükkida läbi kopeerpaberi, kuigi tulemus on jämedam ja mürarikas."
+        },
+        "source": {
+          "sourceId": "wikipedia:dot-matrix-printing",
+          "title": "Dot matrix printing",
+          "url": "https://en.wikipedia.org/wiki/Dot_matrix_printing",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -15555,8 +15555,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-079",
     "name": {
-      "en": "Technology That Answers an Emergency",
-      "et": "Tehnoloogia hädaolukorras"
+      "en": "Technology That Makes Danger Less Deadly",
+      "et": "Tehnoloogia, mis vähendab ohtu"
     },
     "questions": [
       {
@@ -15565,8 +15565,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:smoke-detector",
         "clue": {
-          "en": "What ceiling device sounds an alarm when it detects products of a fire, giving people an early warning while they can still escape?",
-          "et": "Milline lakke paigaldatav seade annab tulekahju põlemisprodukte tuvastades häiret, et inimesed jõuaksid varakult põgeneda?"
+          "en": "What ceiling device sounds an alarm when it detects airborne particles produced by a fire, giving people an early warning while they can still escape?",
+          "et": "Milline lakke paigaldatav seade annab häiret, kui tuvastab tulekahjus tekkinud õhus hõljuvaid osakesi, et inimesed jõuaksid varakult põgeneda?"
         },
         "response": {
           "en": "smoke detector",
@@ -15574,11 +15574,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["smoke alarm"],
-          "et": ["suitsuanduriga häire"]
+          "et": ["suitsualarm"]
         },
         "explanation": {
-          "en": "Smoke detectors commonly sense smoke particles or combustion gases and warn occupants before a fire becomes obvious.",
-          "et": "Suitsuandurid tuvastavad tavaliselt suitsuosakesi või põlemisgaase ja hoiatavad inimesi enne, kui tulekahju muutub silmaga nähtavaks."
+          "en": "Smoke detectors normally sense airborne smoke particles, either optically or through ionisation, and trigger an alarm.",
+          "et": "Suitsuandur tuvastab õhus olevaid suitsuosakesi tavaliselt optiliselt või ionisatsiooni abil ning käivitab häire."
         },
         "source": {
           "sourceId": "wikipedia:smoke-detector",
@@ -15595,15 +15595,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "system:fire-sprinkler",
         "clue": {
           "en": "What fire-protection system releases water from individual heads when heat opens them, rather than drenching every room at once?",
-          "et": "Milline tulekaitsesüsteem laseb kuumuse toimel vett välja üksikutest peadest, mitte ei uputa korraga kõiki ruume?"
+          "et": "Milline tulekaitsesüsteem laseb kuumuse toimel vett välja üksikutest sprinkleripeadest, mitte ei uputa korraga kõiki ruume?"
         },
         "response": {
-          "en": "fire sprinkler",
-          "et": "tuletõrjesprinkler"
+          "en": "fire sprinkler system",
+          "et": "sprinklersüsteem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["sprinkler system", "automatic fire sprinkler system", "fire sprinkler"],
+          "et": ["automaatne sprinklersüsteem", "tuletõrjesprinkler"]
         },
         "explanation": {
           "en": "A sprinkler system normally activates only heads heated by the fire, delivering water where it is needed first.",
@@ -15624,7 +15624,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "test:crash-test-dummy",
         "clue": {
           "en": "What instrumented human-shaped surrogate lets engineers measure forces in a simulated car collision before exposing people to danger?",
-          "et": "Milline anduritega inimesekujuline asendaja võimaldab inseneridel mõõta lavastatud autoavariis jõude enne inimeste ohtu seadmist?"
+          "et": "Milline anduritega inimesekujuline asendaja võimaldab inseneridel mõõta avariikatses jõude enne inimeste ohtu seadmist?"
         },
         "response": {
           "en": "crash test dummy",
@@ -15648,29 +15648,29 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-079:question:4",
-        "factKey": "built-in-technology-inventions:checkpoint6:emergency:automated-external-defibrillator",
+        "factKey": "built-in-technology-inventions:checkpoint6:injury-prevention:seat-belt-pretensioner",
         "tier": 4,
-        "subjectKey": "device:automated-external-defibrillator",
+        "subjectKey": "device:seat-belt-pretensioner",
         "clue": {
-          "en": "What public-access device analyses a collapsed person's heart rhythm and, when appropriate, tells a bystander to deliver an electric shock?",
-          "et": "Milline avalikus kohas kasutatav seade analüüsib kokku varisenud inimese südamerütmi ja annab vajaduse korral pealtnägijale juhise elektrilöök teha?"
+          "en": "What car-safety device rapidly tightens an already fastened seat belt at the start of a severe crash, positioning the occupant before the airbag deploys?",
+          "et": "Milline autoohutusseade pingutab tugeva avarii alguses juba kinnitatud turvavööd kiiresti, asetades sõitja õigesse asendisse enne turvapadja avanemist?"
         },
         "response": {
-          "en": "automated external defibrillator",
-          "et": "automaatne välisdefibrillaator"
+          "en": "seat belt pretensioner",
+          "et": "turvavöö eelpinguti"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["seatbelt pretensioner"],
+          "et": ["turvavöö pinguti"]
         },
         "explanation": {
-          "en": "An AED checks the rhythm automatically and uses voice or visual prompts so a trained layperson can respond before emergency crews arrive.",
-          "et": "AED kontrollib rütmi automaatselt ning kasutab hääl- või pildijuhiseid, et väljaõppinud tavainimene saaks tegutseda enne päästjate saabumist."
+          "en": "A pretensioner removes slack from the belt in the first moments of a collision, helping the restraint and airbag work in their intended positions.",
+          "et": "Eelpinguti eemaldab kokkupõrke esimestel hetkedel turvavöö lõtku, et turvavöö ja turvapadi töötaksid ettenähtud asendis."
         },
         "source": {
-          "sourceId": "wikipedia:automated-external-defibrillator",
-          "title": "Automated external defibrillator",
-          "url": "https://en.wikipedia.org/wiki/Automated_external_defibrillator",
+          "sourceId": "wikipedia:seat-belt",
+          "title": "Seat belt",
+          "url": "https://en.wikipedia.org/wiki/Seat_belt#Pretensioners",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -15682,19 +15682,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "tool:jaws-of-life",
         "clue": {
           "en": "What informal name is given to the hydraulic cutters and spreaders firefighters use to free people trapped in damaged vehicles?",
-          "et": "Kuidas nimetatakse kõnekeeles hüdraulilisi lõikureid ja avajaid, millega päästjad vabastavad inimesi avariis kahjustatud sõidukitest?"
+          "et": "Kuidas nimetatakse kõnekeeles hüdraulilisi lõikureid ja laiendeid, millega päästjad vabastavad inimesi avariis kahjustatud sõidukitest?"
         },
         "response": {
           "en": "Jaws of Life",
-          "et": "hüdraulilised päästekäärid"
+          "et": "Jaws of Life"
         },
         "acceptedVariants": {
           "en": ["hydraulic rescue tools"],
-          "et": ["Jaws of Life"]
+          "et": ["hüdraulilised päästetööriistad"]
         },
         "explanation": {
           "en": "Jaws of Life is a widely used name for hydraulic rescue tools that cut, spread, or ram apart vehicle structure after a crash.",
-          "et": "Jaws of Life on laialt kasutatav nimetus hüdraulilistele päästetööriistadele, mis lõikavad, avavad või suruvad pärast avariid sõiduki konstruktsiooni lahti."
+          "et": "Jaws of Life on laialt kasutatav nimetus hüdraulilistele päästetööriistadele, mis lõikavad, laiendavad või suruvad pärast avariid sõiduki konstruktsiooni lahti."
         },
         "source": {
           "sourceId": "wikipedia:jaws-of-life",
@@ -15715,95 +15715,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-080:question:1",
-        "factKey": "built-in-technology-inventions:checkpoint6:flight:montgolfier-balloon",
-        "tier": 1,
-        "subjectKey": "aircraft:montgolfier-balloon",
-        "clue": {
-          "en": "What did the Montgolfier brothers send aloft over France in 1783, opening the era of human flight with heated air?",
-          "et": "Mille saatsid vennad Montgolfier'd 1783. aastal kuuma õhu abil Prantsusmaa kohal taevasse, avades inimlennunduse ajastu?"
-        },
-        "response": {
-          "en": "Montgolfier balloon",
-          "et": "Montgolfier' õhupall"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "The Montgolfiers demonstrated that heated air could lift a large balloon, and the first free human flight followed later in 1783.",
-          "et": "Vennad Montgolfier'd näitasid, et kuum õhk võib suure õhupalli üles tõsta, ning esimene vaba inimlend järgnes samal aastal."
-        },
-        "source": {
-          "sourceId": "wikipedia:montgolfier-brothers",
-          "title": "Montgolfier brothers",
-          "url": "https://en.wikipedia.org/wiki/Montgolfier_brothers",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-080:question:2",
-        "factKey": "built-in-technology-inventions:checkpoint6:flight:graf-zeppelin-circumnavigation",
-        "tier": 2,
-        "subjectKey": "airship:graf-zeppelin",
-        "clue": {
-          "en": "Which German airship completed a round-the-world journey in 1929 and made its name a symbol of the great rigid airships?",
-          "et": "Milline Saksa dirižaabel tegi 1929. aastal ümbermaailmareisi ja muutis oma nime suurte jäikkerega õhulaevade sümboliks?"
-        },
-        "response": {
-          "en": "Graf Zeppelin",
-          "et": "Graf Zeppelin"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Graf Zeppelin carried passengers on long-distance flights and completed a widely publicised circumnavigation in 1929.",
-          "et": "Graf Zeppelin vedas reisijaid pikkadel lendudel ja lõpetas 1929. aastal laialt kajastatud ümbermaailmareisi."
-        },
-        "source": {
-          "sourceId": "wikipedia:graf-zeppelin",
-          "title": "LZ 127 Graf Zeppelin",
-          "url": "https://en.wikipedia.org/wiki/LZ_127_Graf_Zeppelin",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-080:question:3",
-        "factKey": "built-in-technology-inventions:checkpoint6:flight:bell-x-1-sound-barrier",
-        "tier": 3,
-        "subjectKey": "aircraft:bell-x-1",
-        "clue": {
-          "en": "Which rocket-powered orange research aircraft carried Chuck Yeager past the sound barrier in level flight in 1947?",
-          "et": "Milline rakettmootoriga oranž uurimislennuk viis Chuck Yeageri 1947. aastal horisontaallennul helikiirusest üle?"
-        },
-        "response": {
-          "en": "Bell X-1",
-          "et": "Bell X-1"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "The Bell X-1 was designed for high-speed research and became the first piloted aircraft confirmed to exceed Mach 1 in level flight.",
-          "et": "Bell X-1 oli ehitatud kiirlennu uurimiseks ja sai esimeseks piloteeritud lennukiks, mis ületas horisontaallennul kinnitatult Mach 1."
-        },
-        "source": {
-          "sourceId": "wikipedia:bell-x-1",
-          "title": "Bell X-1",
-          "url": "https://en.wikipedia.org/wiki/Bell_X-1",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-080:question:4",
         "factKey": "built-in-technology-inventions:checkpoint6:flight:concorde-supersonic-service",
-        "tier": 4,
+        "tier": 1,
         "subjectKey": "aircraft:concorde",
         "clue": {
           "en": "Which Anglo-French passenger jet crossed the Atlantic at more than twice the speed of sound until its final commercial flight in 2003?",
@@ -15825,6 +15738,93 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:concorde",
           "title": "Concorde",
           "url": "https://en.wikipedia.org/wiki/Concorde",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-080:question:2",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:montgolfier-balloon",
+        "tier": 2,
+        "subjectKey": "aircraft:montgolfier-balloon",
+        "clue": {
+          "en": "What did the Montgolfier brothers send aloft over France in 1783, opening the era of human flight with heated air?",
+          "et": "Mille saatsid vennad Montgolfier'd 1783. aastal kuuma õhu abil Prantsusmaa kohal taevasse, avades inimlennunduse ajastu?"
+        },
+        "response": {
+          "en": "Montgolfier balloon",
+          "et": "Montgolfier' õhupall"
+        },
+        "acceptedVariants": {
+          "en": ["Montgolfier hot-air balloon", "hot-air balloon"],
+          "et": ["Montgolfier' kuumaõhupall", "kuumaõhupall"]
+        },
+        "explanation": {
+          "en": "The Montgolfiers demonstrated that heated air could lift a large balloon, and the first free human flight followed later in 1783.",
+          "et": "Vennad Montgolfier'd näitasid, et kuum õhk võib suure õhupalli üles tõsta, ning esimene vaba inimlend järgnes samal aastal."
+        },
+        "source": {
+          "sourceId": "wikipedia:montgolfier-brothers",
+          "title": "Montgolfier brothers",
+          "url": "https://en.wikipedia.org/wiki/Montgolfier_brothers",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-080:question:3",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:graf-zeppelin-circumnavigation",
+        "tier": 3,
+        "subjectKey": "airship:graf-zeppelin",
+        "clue": {
+          "en": "Which German airship completed a round-the-world journey in 1929 and made its name a symbol of the great rigid airships?",
+          "et": "Milline Saksa dirižaabel tegi 1929. aastal ümbermaailmareisi ja muutis oma nime suurte jäikkerega õhulaevade sümboliks?"
+        },
+        "response": {
+          "en": "Graf Zeppelin",
+          "et": "Graf Zeppelin"
+        },
+        "acceptedVariants": {
+          "en": ["LZ 127", "LZ 127 Graf Zeppelin"],
+          "et": ["LZ 127", "LZ 127 Graf Zeppelin"]
+        },
+        "explanation": {
+          "en": "Graf Zeppelin carried passengers on long-distance flights and completed a widely publicised circumnavigation in 1929.",
+          "et": "Graf Zeppelin vedas reisijaid pikkadel lendudel ja lõpetas 1929. aastal laialt kajastatud ümbermaailmareisi."
+        },
+        "source": {
+          "sourceId": "wikipedia:graf-zeppelin",
+          "title": "LZ 127 Graf Zeppelin",
+          "url": "https://en.wikipedia.org/wiki/LZ_127_Graf_Zeppelin",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-080:question:4",
+        "factKey": "built-in-technology-inventions:checkpoint6:flight:bell-x-1-sound-barrier",
+        "tier": 4,
+        "subjectKey": "aircraft:bell-x-1",
+        "clue": {
+          "en": "Which rocket-powered orange research aircraft carried Chuck Yeager past the sound barrier in level flight in 1947?",
+          "et": "Milline rakettmootoriga oranž uurimislennuk, millega Chuck Yeager ületas 1947. aastal horisontaallennul helikiiruse?"
+        },
+        "response": {
+          "en": "Bell X-1",
+          "et": "Bell X-1"
+        },
+        "acceptedVariants": {
+          "en": ["X-1", "X1"],
+          "et": ["X-1", "X1"]
+        },
+        "explanation": {
+          "en": "The Bell X-1 was designed for high-speed research and became the first piloted aircraft confirmed to exceed Mach 1 in level flight.",
+          "et": "Bell X-1 oli ehitatud kiirlennu uurimiseks ja sai esimeseks piloteeritud lennukiks, mis ületas horisontaallennul kinnitatult Mach 1."
+        },
+        "source": {
+          "sourceId": "wikipedia:bell-x-1",
+          "title": "Bell X-1",
+          "url": "https://en.wikipedia.org/wiki/Bell_X-1",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -15881,8 +15881,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "pleksiklaas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Plexiglass"],
+          "et": ["Plexiglas"]
         },
         "explanation": {
           "en": "Plexiglas is a brand of polymethyl methacrylate, a transparent plastic used where glass would be heavy or fragile.",
@@ -15898,12 +15898,41 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-081:question:2",
-        "factKey": "built-in-technology-inventions:checkpoint6:plastics:styrofoam-polystyrene-brand",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:kevlar-aramid-fibre",
         "tier": 2,
+        "subjectKey": "material:kevlar",
+        "clue": {
+          "en": "What yellow aramid fibre, developed by Stephanie Kwolek, is light yet exceptionally strong and became associated with bullet-resistant vests?",
+          "et": "Milline Stephanie Kwoleki arendatud kollane aramiidkiud on kerge, kuid erakordselt tugev ja sai tuntuks kuulikindlate vestide materjalina?"
+        },
+        "response": {
+          "en": "Kevlar",
+          "et": "Kevlar"
+        },
+        "acceptedVariants": {
+          "en": ["Kevlar fibre"],
+          "et": ["Kevlari kiud"]
+        },
+        "explanation": {
+          "en": "Kevlar is an aramid synthetic fibre with high tensile strength relative to its weight, allowing tough protective fabrics without much bulk.",
+          "et": "Kevlar on aramiidist sünteetiline kiud, mille tõmbetugevus on kaalu kohta suur, võimaldades valmistada tugevaid kaitsekangaid ilma liigse massita."
+        },
+        "source": {
+          "sourceId": "wikipedia:kevlar",
+          "title": "Kevlar",
+          "url": "https://en.wikipedia.org/wiki/Kevlar",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-081:question:3",
+        "factKey": "built-in-technology-inventions:checkpoint6:plastics:styrofoam-polystyrene-brand",
+        "tier": 3,
         "subjectKey": "material:styrofoam",
         "clue": {
-          "en": "What blue foamed-plastic trade name is often used generically for polystyrene packaging, although the original product is an extruded insulation material?",
-          "et": "Milline sinise vahtplasti kaubamärk on muutunud üldnimeks polüstüreenpakenditele, kuigi algne toode on pressitud soojustusmaterjal?"
+          "en": "What blue foamed-plastic trade name is often used in the United States for polystyrene packaging, although DuPont's actual product is an extruded insulation material?",
+          "et": "Millist sinise vahtplasti kaubamärki kasutatakse Ameerika Ühendriikides sageli üldnimena polüstüreenpakendite kohta, kuigi DuPonti tegelik toode on ekstrudeeritud soojustusmaterjal?"
         },
         "response": {
           "en": "Styrofoam",
@@ -15914,8 +15943,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Styrofoam is Dow's trademark for extruded polystyrene foam; everyday use of the word often covers other foamed polystyrene products.",
-          "et": "Styrofoam on Dow kaubamärk ekstrudeeritud polüstüreenvahtplastile; igapäevases kõnes kasutatakse seda sõna sageli ka muude vahtpolüstüreenitoodete kohta."
+          "en": "Styrofoam is DuPont's trademark for extruded polystyrene foam; in the United States, everyday use of the word often covers other foamed polystyrene packaging.",
+          "et": "Styrofoam on DuPonti kaubamärk ekstrudeeritud polüstüreenvahtplastile; Ameerika Ühendriikides kasutatakse seda sõna igapäevases kõnes sageli ka muude vahtpolüstüreenist pakendite kohta."
         },
         "source": {
           "sourceId": "wikipedia:styrofoam",
@@ -15926,13 +15955,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-081:question:3",
+        "key": "built-in-technology-inventions-set-081:question:4",
         "factKey": "built-in-technology-inventions:checkpoint6:plastics:mylar-polyester-film",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "material:mylar",
         "clue": {
-          "en": "What DuPont trade name for a thin polyester film appears in reflective balloons, electrical insulation, and magnetic recording tape?",
-          "et": "Milline DuPonti õhukese polüesterkile kaubamärk esineb peegeldavates õhupallides, elektriisolatsioonis ja magnetlintides?"
+          "en": "What trade name for a thin polyester film appears in reflective balloons, electrical insulation, and magnetic recording tape?",
+          "et": "Milline õhukese polüesterkile kaubamärk esineb peegeldavates õhupallides, elektriisolatsioonis ja magnetlintides?"
         },
         "response": {
           "en": "Mylar",
@@ -15955,13 +15984,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-081:question:4",
+        "key": "built-in-technology-inventions-set-081:question:5",
         "factKey": "built-in-technology-inventions:checkpoint6:plastics:formica-laminate",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "material:formica",
         "clue": {
           "en": "What countertop laminate was named as a substitute “for mica” and is made by bonding decorative paper layers with resin?",
-          "et": "Milline tööpinnalaminaat sai nime väljendist „mica asemel” ja valmib vaiguga kokku liimitud dekoratiivpaberikihtidest?"
+          "et": "Milline tööpinnalaminaat sai nime ingliskeelsest väljendist „for mica” ehk „vilgukivi asemel” ja valmib vaiguga kokku liimitud dekoratiivpaberikihtidest?"
         },
         "response": {
           "en": "Formica",
@@ -15979,35 +16008,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:formica-plastic",
           "title": "Formica (plastic)",
           "url": "https://en.wikipedia.org/wiki/Formica_(plastic)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-081:question:5",
-        "factKey": "built-in-technology-inventions:checkpoint6:plastics:kevlar-aramid-fibre",
-        "tier": 5,
-        "subjectKey": "material:kevlar",
-        "clue": {
-          "en": "What yellow aramid fibre, developed by Stephanie Kwolek, is light yet exceptionally strong and became associated with bullet-resistant vests?",
-          "et": "Milline Stephanie Kwoleki arendatud kollane aramiidkiud on kerge, kuid erakordselt tugev ja sai tuntuks kuulikindlate vestide materjalina?"
-        },
-        "response": {
-          "en": "Kevlar",
-          "et": "Kevlar"
-        },
-        "acceptedVariants": {
-          "en": ["Kevlar fibre"],
-          "et": ["Kevlari kiud"]
-        },
-        "explanation": {
-          "en": "Kevlar is an aramid synthetic fibre with high tensile strength relative to its weight, allowing tough protective fabrics without much bulk.",
-          "et": "Kevlar on aramiidist sünteetiline kiud, mille tõmbetugevus on kaalu kohta suur, võimaldades valmistada tugevaid kaitsekangaid ilma liigse massita."
-        },
-        "source": {
-          "sourceId": "wikipedia:kevlar",
-          "title": "Kevlar",
-          "url": "https://en.wikipedia.org/wiki/Kevlar",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -16064,8 +16064,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Paskaliin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Pascal's calculator"],
+          "et": ["Pascali arvutusmasin", "Pascali kalkulaator"]
         },
         "explanation": {
           "en": "The Pascaline used numbered wheels and a carrying mechanism to perform addition and subtraction mechanically.",
@@ -16172,7 +16172,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-technology-inventions-set-083",
     "name": {
       "en": "Engineering That Helps the Body",
-      "et": "Keha abistav inseneeria"
+      "et": "Keha toetav meditsiinitehnika"
     },
     "questions": [
       {
@@ -16206,20 +16206,49 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-083:question:2",
-        "factKey": "built-in-technology-inventions:checkpoint6:body:dialysis-machine-blood-filtering",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:prosthetic-limb-functional-replacement",
         "tier": 2,
+        "subjectKey": "device:prosthetic-limb",
+        "clue": {
+          "en": "What artificial arm or leg can be tailored for everyday mobility, a particular sport, or a job, rather than merely filling the outline of a missing limb?",
+          "et": "Millist puuduva käe või jala kunstlikku asendust saab kohandada igapäevaseks liikumiseks, kindlaks spordialaks või tööks, mitte ainult puuduva jäseme kuju täitmiseks?"
+        },
+        "response": {
+          "en": "prosthetic limb",
+          "et": "jäsemeprotees"
+        },
+        "acceptedVariants": {
+          "en": ["limb prosthesis"],
+          "et": ["käe- või jalaprotees"]
+        },
+        "explanation": {
+          "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
+          "et": "Jäsemeprotees asendab puuduvat kehaosa; nüüdisaegseid lahendusi saab kohandada igapäevaseks liikumiseks või kindlaks tegevuseks."
+        },
+        "source": {
+          "sourceId": "wikipedia:prosthesis",
+          "title": "Prosthesis",
+          "url": "https://en.wikipedia.org/wiki/Prosthesis",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-083:question:3",
+        "factKey": "built-in-technology-inventions:checkpoint6:body:dialysis-machine-blood-filtering",
+        "tier": 3,
         "subjectKey": "device:dialysis-machine",
         "clue": {
-          "en": "What machine removes wastes and excess fluid from blood through a filter when the kidneys cannot perform that job adequately?",
-          "et": "Milline masin eemaldab vere filtriga jääkaineid ja liigset vedelikku, kui neerud ei suuda seda ülesannet piisavalt täita?"
+          "en": "What machine sends blood through a dialyser, where diffusion across a membrane removes wastes and excess fluid when kidneys can no longer do so?",
+          "et": "Milline masin juhib vere läbi dialüsaatori, kus membraani kaudu toimuv difusioon eemaldab jääkaineid ja liigset vedelikku, kui neerud seda enam teha ei suuda?"
         },
         "response": {
           "en": "dialysis machine",
           "et": "dialüüsiaparaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["hemodialysis machine"],
+          "et": ["hemodialüüsiaparaat"]
         },
         "explanation": {
           "en": "A dialysis machine circulates blood through a dialyser, where diffusion and filtration remove substances the kidneys would normally clear.",
@@ -16234,25 +16263,25 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-083:question:3",
+        "key": "built-in-technology-inventions-set-083:question:4",
         "factKey": "built-in-technology-inventions:checkpoint6:body:cochlear-implant-auditory-nerve",
-        "tier": 3,
+        "tier": 4,
         "subjectKey": "device:cochlear-implant",
         "clue": {
-          "en": "What implanted electronic device bypasses damaged inner-ear structures by sending electrical signals directly to the auditory nerve?",
-          "et": "Milline siirdatud elektrooniline seade möödub kahjustunud sisekõrva osadest, saates elektrisignaale otse kuulmisnärvi?"
+          "en": "What implanted hearing device combines an external sound processor with an internal electrode array, bypassing damaged inner-ear structures to stimulate the auditory nerve?",
+          "et": "Milline siirdatud kuulmisseade ühendab välise heliprotsessori sisemise elektroodireaga, möödudes kahjustunud sisekõrva osadest ja stimuleerides kuulmisnärvi?"
         },
         "response": {
           "en": "cochlear implant",
-          "et": "sisekõrva implantaat"
+          "et": "sisekõrvaimplantaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["cochlear hearing implant"],
+          "et": ["kohleaarimplantaat"]
         },
         "explanation": {
           "en": "A cochlear implant combines an external sound processor with an internal electrode array that stimulates the auditory nerve.",
-          "et": "Sisekõrva implantaat ühendab välise heliprotsessori sisemise elektroodirea süsteemiga, mis stimuleerib kuulmisnärvi."
+          "et": "Sisekõrvaimplantaat ühendab välise heliprotsessori sisemise elektroodirea süsteemiga, mis stimuleerib kuulmisnärvi."
         },
         "source": {
           "sourceId": "wikipedia:cochlear-implant",
@@ -16263,13 +16292,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-083:question:4",
+        "key": "built-in-technology-inventions-set-083:question:5",
         "factKey": "built-in-technology-inventions:checkpoint6:body:artificial-heart-pumping",
-        "tier": 4,
+        "tier": 5,
         "subjectKey": "device:artificial-heart",
         "clue": {
-          "en": "What mechanical pump may be implanted to take over the heart's pumping function, either temporarily or as a longer-term replacement?",
-          "et": "Milline mehaaniline pump võidakse siirdada südame pumpamisfunktsiooni üle võtma kas ajutiselt või pikemaajaliseks asenduseks?"
+          "en": "What implanted device replaces the heart itself, rather than merely assisting a ventricle, and is usually used as a bridge while a patient awaits a transplant?",
+          "et": "Milline siiratav seade asendab südame enda, mitte ei abista üksnes vatsakest, ning seda kasutatakse tavaliselt siirdamissüdame ootamise ajal?"
         },
         "response": {
           "en": "artificial heart",
@@ -16280,42 +16309,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "An artificial heart is a device designed to replace the heart's pumping action, unlike a pacemaker, which only regulates rhythm.",
-          "et": "Tehissüda on seade, mis asendab südame pumpamisfunktsiooni, erinevalt südamestimulaatorist, mis reguleerib vaid rütmi."
+          "en": "An artificial heart replaces the heart's pumping action; a ventricular assist device supports one or both ventricles without replacing the whole heart.",
+          "et": "Tehissüda asendab südame pumpamisfunktsiooni; vatsakese abiseade toetab üht või mõlemat vatsakest südant ennast asendamata."
         },
         "source": {
           "sourceId": "wikipedia:artificial-heart",
           "title": "Artificial heart",
           "url": "https://en.wikipedia.org/wiki/Artificial_heart",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-083:question:5",
-        "factKey": "built-in-technology-inventions:checkpoint6:body:prosthetic-limb-functional-replacement",
-        "tier": 5,
-        "subjectKey": "device:prosthetic-limb",
-        "clue": {
-          "en": "What artificial replacement for an absent arm or leg can be shaped for appearance, movement, or specialised tasks such as running?",
-          "et": "Millist puuduva käe või jala kunstlikku asendust saab kujundada välimuse, liikumise või eriülesannete, näiteks jooksmise jaoks?"
-        },
-        "response": {
-          "en": "prosthetic limb",
-          "et": "jäsemeprotees"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
-          "et": "Jäsemeprotees asendab puuduvat kehaosa; nüüdisaegseid lahendusi saab kohandada igapäevaseks liikumiseks või kindlaks tegevuseks."
-        },
-        "source": {
-          "sourceId": "wikipedia:prosthesis",
-          "title": "Prosthesis",
-          "url": "https://en.wikipedia.org/wiki/Prosthesis",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
