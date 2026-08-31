@@ -1,6 +1,6 @@
 import { validateAccessibleCorpus } from '../validateBank';
 import { ACCESSIBLE_CATEGORY_TITLES } from '../categoryNames';
-import { LEGACY_EASY_TARGETS } from '../targets';
+import { LEGACY_EASY_TARGETS, REAUTHORED_RETAINED_EASY_SET_IDS } from '../targets';
 import type { AccessibleCategory, AccessibleQuestion, CategoryTitle } from '../types';
 
 const ASSIGNED_BATCH_IDS = new Set([
@@ -727,8 +727,9 @@ const FACTS: Readonly<Record<string, readonly Fact[]>> = {
   ],
 };
 
-const assignedTargets = LEGACY_EASY_TARGETS.filter(({ batchId }) =>
-  ASSIGNED_BATCH_IDS.has(batchId));
+const reauthoredRetainedIds = new Set<string>(REAUTHORED_RETAINED_EASY_SET_IDS);
+const assignedTargets = LEGACY_EASY_TARGETS.filter(({ categorySetId, batchId }) =>
+  ASSIGNED_BATCH_IDS.has(batchId) && !reauthoredRetainedIds.has(categorySetId));
 
 const titleById = new Map<string, CategoryTitle>(ACCESSIBLE_CATEGORY_TITLES.map((title) =>
   [title.categorySetId, title]));

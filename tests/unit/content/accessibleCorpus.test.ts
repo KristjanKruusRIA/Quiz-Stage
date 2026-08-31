@@ -33,6 +33,7 @@ import { ART_MYTHOLOGY_CATEGORIES } from '../../../scripts/content/accessibility
 import { GEOGRAPHY_SCIENCE_FOOD_CATEGORIES } from '../../../scripts/content/accessibility/banks/geographyScienceFood';
 import { HISTORY_LITERATURE_SCREEN_CATEGORIES } from '../../../scripts/content/accessibility/banks/historyLiteratureScreen';
 import { SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES } from '../../../scripts/content/accessibility/banks/societyTechnologyCulture';
+import { REAUTHORED_RETAINED_EASY_CATEGORIES } from '../../../scripts/content/accessibility/banks/retainedEasy';
 import { ACCESSIBLE_CATEGORY_TITLES } from '../../../scripts/content/accessibility/categoryNames';
 import {
   ACCESSIBLE_EASY_SET_IDS,
@@ -71,7 +72,7 @@ const ACCEPTED_BATCHES = [
   '12-mythology-religion-philosophy',
 ] as const;
 
-const EXPECTED_TARGETS_BY_BATCH = [26, 26, 26, 26, 33, 25, 25, 25, 25, 25, 25, 33] as const;
+const EXPECTED_TARGETS_BY_BATCH = [34, 34, 34, 34, 33, 33, 33, 33, 33, 33, 33, 33] as const;
 
 const REVIEW_REJECTED_SPECIALIST_KEY_SUFFIXES = [
   'fairy-tales-snow-white-seven-dwarfs',
@@ -575,7 +576,7 @@ function acceptedArtifactBytes(root: string): Map<string, string> {
 }
 
 describe('accessible corpus ledgers', () => {
-  it('partitions the 400 accepted easy sets into the stable 80 retained and 320 target IDs', () => {
+  it('routes all 400 accepted easy sets through the reviewed accessible corpus', () => {
     const accepted = acceptedEasySets();
     const acceptedIds = [...accepted.keys()];
     const retainedIds = acceptedIds.filter((id) =>
@@ -583,10 +584,10 @@ describe('accessible corpus ledgers', () => {
     const targetIds = acceptedIds.filter((id) => !retainedIds.includes(id));
 
     expect(acceptedIds).toHaveLength(400);
-    expect(ACCESSIBLE_EASY_SET_IDS).toEqual(retainedIds);
-    expect(ACCESSIBLE_EASY_SET_IDS).toHaveLength(80);
-    expect(LEGACY_EASY_TARGET_IDS).toEqual(targetIds);
-    expect(LEGACY_EASY_TARGET_IDS).toHaveLength(320);
+    expect(retainedIds).toEqual([]);
+    expect(ACCESSIBLE_EASY_SET_IDS).toEqual([]);
+    expect(new Set(LEGACY_EASY_TARGET_IDS)).toEqual(new Set(targetIds));
+    expect(LEGACY_EASY_TARGET_IDS).toHaveLength(400);
     expect(new Set([...ACCESSIBLE_EASY_SET_IDS, ...LEGACY_EASY_TARGET_IDS])).toEqual(
       new Set(acceptedIds),
     );
@@ -625,67 +626,16 @@ describe('accessible corpus ledgers', () => {
     expect(variants).toEqual([]);
   });
 
-  it('uses truthful umbrellas for retained five-clue sets', () => {
-    const titleById = new Map(ACCESSIBLE_CATEGORY_TITLES.map((title) => [title.categorySetId, title]));
-    const retainedTitleIds = ACCESSIBLE_CATEGORY_TITLES
-      .filter(({ categorySetId }) => ACCESSIBLE_EASY_SET_IDS.includes(
-        categorySetId as (typeof ACCESSIBLE_EASY_SET_IDS)[number],
-      ))
-      .map(({ categorySetId }) => categorySetId);
-
-    expect(retainedTitleIds).toHaveLength(80);
-    expect(titleById.get('built-in-history-set-019')?.name).toEqual({
-      en: 'History: Places That Witnessed History',
-      et: 'Ajalugu: Ajaloo tunnistajaks olnud paigad',
-    });
-    expect(titleById.get('built-in-literature-language-set-003')?.name).toEqual({
-      en: 'Literature & Language: Classic Books and Their Connections',
-      et: 'Kirjandus ja keel: Klassikalised raamatud ja nende seosed',
-    });
-    expect(titleById.get('built-in-geography-set-013')?.name).toEqual({
-      en: 'Geography: Seas, Oceans, and Great Rivers',
-      et: 'Geograafia: Mered, ookeanid ja suured jõed',
-    });
-    expect(titleById.get('built-in-science-nature-set-010')?.name).toEqual({
-      en: 'Science & Nature: Remarkable Animals from Ocean to Ice',
-      et: 'Teadus ja loodus: Tähelepanuväärsed loomad ookeanist jääväljadeni',
-    });
-    expect(titleById.get('built-in-sports-games-set-008')?.name).toEqual({
-      en: 'Sports & Games: Games from Cards to Consoles',
-      et: 'Sport ja mängud: Mängud kaartidest konsoolideni',
-    });
-    expect(titleById.get('built-in-history-set-013')?.name).toEqual({
-      en: 'History: Reformers, Monarchs, and Wartime Leaders',
-      et: 'Ajalugu: Uuendajad, monarhid ja sõjaaegsed juhid',
-    });
-    expect(titleById.get('built-in-sports-games-set-003')?.name).toEqual({
-      en: 'Sports & Games: Global Sports Stars Across Stadiums, Courts, and Tracks',
-      et: 'Sport ja mängud: Maailma sporditähed staadionidel, väljakutel ja radadel',
-    });
-    expect(titleById.get('built-in-technology-inventions-set-001')?.name).toEqual({
-      en: 'Technology & Inventions: Companies Behind Phones, Software, Games, and E-Readers',
-      et: 'Tehnoloogia ja leiutised: Telefonide, tarkvara, mängude ja e-lugerite ettevõtted',
-    });
-    expect(titleById.get('built-in-technology-inventions-set-002')?.name).toEqual({
-      en: 'Technology & Inventions: Makers Behind Mobiles, Consoles, and Mini Computers',
-      et: 'Tehnoloogia ja leiutised: Mobiilide, konsoolide ja miniarvutite loojad',
-    });
-  });
-
-  it('keeps every retained bilingual response out of its category title', () => {
-    const accepted = acceptedEasySets();
-    const retainedIds = new Set<string>(ACCESSIBLE_EASY_SET_IDS);
-
-    for (const title of ACCESSIBLE_CATEGORY_TITLES) {
-      if (!retainedIds.has(title.categorySetId)) continue;
-      for (const response of accepted.get(title.categorySetId)!.responses) {
+  it('keeps every reviewed bilingual response out of its category title', () => {
+    for (const category of buildAccessibleCorpus()) {
+      for (const question of category.questions) {
         expect(
-          containsNormalizedPhrase(title.name.en, response.en),
-          `${title.categorySetId} English: ${response.en}`,
+          containsNormalizedPhrase(category.name.en, question.response.en),
+          `${category.categorySetId} English: ${question.response.en}`,
         ).toBe(false);
         expect(
-          containsNormalizedPhrase(title.name.et, response.et),
-          `${title.categorySetId} Estonian: ${response.et}`,
+          containsNormalizedPhrase(category.name.et, question.response.et),
+          `${category.categorySetId} Estonian: ${question.response.et}`,
         ).toBe(false);
       }
     }
@@ -696,8 +646,8 @@ describe('buildAccessibleCorpus', () => {
   it('assembles every replacement category in target-ledger order', () => {
     const categories = buildAccessibleCorpus();
 
-    expect(categories).toHaveLength(320);
-    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(1_600);
+    expect(categories).toHaveLength(400);
+    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(2_000);
     expect(categories.map(({ categorySetId }) => categorySetId)).toEqual(
       LEGACY_EASY_TARGET_IDS,
     );
@@ -709,12 +659,13 @@ describe('buildAccessibleCorpus', () => {
       SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
       GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
       HISTORY_LITERATURE_SCREEN_CATEGORIES,
+      REAUTHORED_RETAINED_EASY_CATEGORIES,
     ] as const;
     const categories = buildAccessibleCorpus();
 
-    expect(lanes.map((lane) => lane.length)).toEqual([66, 100, 77, 77]);
+    expect(lanes.map((lane) => lane.length)).toEqual([66, 100, 77, 77, 80]);
     expect(lanes.map((lane) => lane.flatMap(({ questions }) => questions).length)).toEqual(
-      [330, 500, 385, 385],
+      [330, 500, 385, 385, 400],
     );
     expect(ACCEPTED_BATCHES.map((batchId) =>
       categories.filter((category) => category.batchId === batchId).length)).toEqual(
@@ -728,6 +679,7 @@ describe('buildAccessibleCorpus', () => {
       SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
       GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
       HISTORY_LITERATURE_SCREEN_CATEGORIES,
+      REAUTHORED_RETAINED_EASY_CATEGORIES,
     ]) {
       const laneIds = new Set(lane.map(({ categorySetId }) => categorySetId));
       const targets = LEGACY_EASY_TARGETS.filter(({ categorySetId }) =>
@@ -776,8 +728,8 @@ describe('buildAccessibleCorpus', () => {
       subjectsByResponse.set(factIdentity, subjects);
     }
 
-    expect(new Set(questionKeys).size).toBe(1_600);
-    expect(new Set(clueAnswerPairs).size).toBe(1_600);
+    expect(new Set(questionKeys).size).toBe(2_000);
+    expect(new Set(clueAnswerPairs).size).toBe(2_000);
     const conflictingIdentities = [...subjectsByResponse]
       .filter(([, subjects]) => subjects.size > 1);
     const kalevipoegAmbiguity = conflictingIdentities.filter(([identity]) =>
@@ -916,8 +868,8 @@ describe('buildAccessibleCorpus', () => {
       .flatMap(([, category]) => category.responses.filter((_, index) => index === 0 || index === 4));
 
     expect(ACCESSIBLE_CATEGORY_TITLES).toHaveLength(400);
-    expect(authoredEdges).toHaveLength(640);
-    expect(retainedEdges).toHaveLength(160);
+    expect(authoredEdges).toHaveLength(800);
+    expect(retainedEdges).toHaveLength(0);
   });
 });
 
@@ -929,7 +881,7 @@ describe('proposed complete easy corpus', () => {
     expect(() => proposedEasyCorpus()).not.toThrow();
   });
 
-  it('applies all 400 titles and 1,600 replacements in memory without changing inventory', () => {
+  it('applies all 400 titles and 2,000 replacements in memory without changing inventory', () => {
     const proposed = proposedEasyCorpus();
     const sets = new Map<string, Record<string, string>[]>();
     for (const row of proposed.rows) {
@@ -945,10 +897,10 @@ describe('proposed complete easy corpus', () => {
     expect(proposed.rows).toHaveLength(2_000);
     expect(sets.size).toBe(400);
     expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-corpus-'))).toHaveLength(
-      1_600,
+      2_000,
     );
     expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-easy-'))).toHaveLength(
-      400,
+      0,
     );
     for (const [categorySetId, categoryRows] of sets) {
       const title = titleById.get(categorySetId)!;

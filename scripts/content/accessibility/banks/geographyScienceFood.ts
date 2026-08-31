@@ -1,11 +1,12 @@
 import { validateAccessibleCorpus } from '../validateBank';
 import { ACCESSIBLE_CATEGORY_TITLES } from '../categoryNames';
-import { LEGACY_EASY_TARGETS } from '../targets';
+import { LEGACY_EASY_TARGETS, REAUTHORED_RETAINED_EASY_SET_IDS } from '../targets';
 import type { AccessibleCategory, AccessibleQuestion } from '../types';
 
 const ASSIGNED_BATCH_IDS = new Set(['02-geography', '03-science-nature', '09-food-drink']);
-const assignedTargets = LEGACY_EASY_TARGETS.filter(({ batchId }) =>
-  ASSIGNED_BATCH_IDS.has(batchId));
+const reauthoredRetainedIds = new Set<string>(REAUTHORED_RETAINED_EASY_SET_IDS);
+const assignedTargets = LEGACY_EASY_TARGETS.filter(({ categorySetId, batchId }) =>
+  ASSIGNED_BATCH_IDS.has(batchId) && !reauthoredRetainedIds.has(categorySetId));
 
 type QuestionSeed = readonly [
   factKey: string,
