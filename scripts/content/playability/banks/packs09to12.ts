@@ -13746,8 +13746,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "mission:mars-climate-orbiter",
         "clue": {
-          "en": "Which NASA Mars mission was lost after software used imperial units while a contractor supplied metric data?",
-          "et": "Milline NASA Marsi missioon kaotati, sest tarkvara kasutas imperiaalmõõdustikku, kuid töövõtja andis meetermõõdustiku andmeid?"
+          "en": "Which NASA Mars mission was lost after a contractor's ground software supplied impulse data in pound-force seconds while NASA's navigation software expected newton-seconds?",
+          "et": "Milline NASA Marsi missioon kaotati pärast seda, kui töövõtja maapealne tarkvara edastas impulsiandmed naeljõudsekundites, kuid NASA navigatsioonitarkvara eeldas njuutonsekundeid?"
         },
         "response": {
           "en": "Mars Climate Orbiter",
@@ -13776,7 +13776,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "aircraft:de-havilland-comet",
         "clue": {
           "en": "Which pioneering British jet airliner suffered fatal breakups that helped establish the importance of testing metal fatigue?",
-          "et": "Millise teedrajav Briti reaktiivlennuki surmaga lõppenud lagunemised aitasid kinnistada metalliväsimuse katsetamise tähtsust?"
+          "et": "Millise teedrajava Briti reaktiivlennuki surmaga lõppenud lagunemised aitasid kinnistada metalliväsimuse katsetamise tähtsust?"
         },
         "response": {
           "en": "de Havilland Comet",
@@ -13804,12 +13804,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "disaster:hyatt-regency-walkway-collapse",
         "clue": {
-          "en": "What 1981 hotel disaster in Kansas City exposed how a last-minute design change had doubled the load on a suspended walkway connection?",
-          "et": "Milline 1981. aasta hotellikatastroof Kansas Citys paljastas, et projektimuudatus oli kahekordistanud rippsilla ühenduse koormust?"
+          "en": "What 1981 hotel disaster in Kansas City exposed how a design change had doubled the load on a suspended walkway connection?",
+          "et": "Milline 1981. aasta hotellikatastroof Kansas Citys paljastas, et projektimuudatus oli kahekordistanud riputatud käigusilla ühendusele mõjuva koormuse?"
         },
         "response": {
           "en": "Hyatt Regency walkway collapse",
-          "et": "Hyatt Regency kõnniteede varing"
+          "et": "Hyatt Regency käigusildade varing"
         },
         "acceptedVariants": {
           "en": ["Hyatt Regency disaster"],
@@ -13833,16 +13833,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "launch:ariane-flight-501",
         "clue": {
-          "en": "Which European rocket’s first launch failed after reused guidance software converted a value too large for its integer format?",
-          "et": "Millise Euroopa raketi esimene start ebaõnnestus, sest taaskasutatud juhtimistarkvara teisendas arvväärtuse liiga suureks kasutatud täisarvuvormingu jaoks?"
+          "en": "Which European rocket failed on its maiden launch after reused inertial-reference software attempted to convert a value too large for a 16-bit signed integer?",
+          "et": "Millise Euroopa raketi esmalend ebaõnnestus, kui taaskasutatud inertsiaalse navigatsiooni tarkvara püüdis teisendada väärtust, mis oli 16-bitise märgiga täisarvu jaoks liiga suur?"
         },
         "response": {
-          "en": "Ariane Flight 501",
-          "et": "Ariane'i lend 501"
+          "en": "Ariane 5",
+          "et": "Ariane 5"
         },
         "acceptedVariants": {
-          "en": ["Ariane 5 Flight 501"],
-          "et": ["Ariane 5 lend 501"]
+          "en": ["Ariane 5 Flight 501", "Ariane Flight 501"],
+          "et": ["Ariane 5 lend 501", "Ariane'i lend 501"]
         },
         "explanation": {
           "en": "The 1996 failure is a well-known case in which software proven on an earlier rocket was unsafe under the new vehicle’s conditions.",
@@ -13861,151 +13861,151 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-068",
     "name": {
-      "en": "Inventors of Everyday Fixes",
-      "et": "Igapäevaste lahenduste leiutajad"
+      "en": "Everyday Technology Under the Hood",
+      "et": "Igapäevatehnika kulisside taga"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-068:question:1",
-        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:percy-spencer",
+        "factKey": "built-in-technology-inventions:everyday-technology:hard:pocket-calculator",
         "tier": 1,
-        "subjectKey": "person:percy-spencer",
+        "subjectKey": "device:pocket-calculator",
         "clue": {
-          "en": "Which engineer noticed a candy bar melting near radar equipment and went on to develop the microwave oven?",
-          "et": "Milline insener märkas, et radariseadmete läheduses sulab komm, ning asus seejärel arendama mikrolaineahju?"
+          "en": "What handheld electronic device uses integrated circuits to perform arithmetic and became a common desk and school tool during the 1970s?",
+          "et": "Milline käes hoitav elektrooniline seade kasutab arvutamiseks integraallülitusi ning sai 1970. aastatel tavaliseks laua- ja koolivahendiks?"
         },
         "response": {
-          "en": "Percy Spencer",
-          "et": "Percy Spencer"
+          "en": "pocket calculator",
+          "et": "taskukalkulaator"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Spencer’s food-heating experiments led Raytheon to market an early microwave oven under the Radarange name.",
-          "et": "Spenceri toidu kuumutamise katsed viisid selleni, et Raytheon turustas varast mikrolaineahju nime Radarange all."
+          "en": "Pocket calculators became practical when integrated circuits reduced the size and power needs of electronic calculating machines.",
+          "et": "Taskukalkulaatorid muutusid praktiliseks, kui integraallülitused vähendasid elektrooniliste arvutusmasinate suurust ja energiavajadust."
         },
         "source": {
-          "sourceId": "wikipedia:percy-spencer",
-          "title": "Percy Spencer",
-          "url": "https://en.wikipedia.org/wiki/Percy_Spencer",
+          "sourceId": "wikipedia:calculator",
+          "title": "Calculator",
+          "url": "https://en.wikipedia.org/wiki/Calculator",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:2",
-        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:josephine-cochrane",
+        "factKey": "built-in-technology-inventions:everyday-technology:hard:piezoelectric-igniter",
         "tier": 2,
-        "subjectKey": "person:josephine-cochrane",
+        "subjectKey": "device:piezoelectric-igniter",
         "clue": {
-          "en": "Which inventor patented a machine that used water pressure to wash dishes after becoming frustrated with servants chipping her china?",
-          "et": "Milline leiutaja patenteeris veesurvet kasutava nõudepesumasina pärast seda, kui teenijad tema portselani ära lõhkusid?"
+          "en": "What ignition device creates a high-voltage spark when a spring strikes or compresses a crystal, as in many gas lighters and grills?",
+          "et": "Milline süüteseade tekitab kõrgepinge sädeme, kui vedru lööb vastu kristalli või surub selle kokku, nagu paljudes gaasisüütajates ja grillides?"
         },
         "response": {
-          "en": "Josephine Cochrane",
-          "et": "Josephine Cochrane"
+          "en": "piezoelectric igniter",
+          "et": "piesosüüti"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Cochrane’s design held dishes in wire compartments and directed water at them; it became a forerunner of the modern dishwasher.",
-          "et": "Cochrane’i lahendus hoidis nõusid traatkorvides ja suunas neile veejoa; sellest sai tänapäevase nõudepesumasina eelkäija."
+          "en": "A piezoelectric igniter uses certain crystals’ ability to generate voltage when mechanically stressed, avoiding a battery.",
+          "et": "Piesosüüti kasutab mõne kristalli võimet tekitada mehaanilise surve all pinget ja ei vaja seetõttu patareid."
         },
         "source": {
-          "sourceId": "wikipedia:josephine-cochrane",
-          "title": "Josephine Cochrane",
-          "url": "https://en.wikipedia.org/wiki/Josephine_Cochrane",
+          "sourceId": "wikipedia:piezoelectricity",
+          "title": "Piezoelectricity",
+          "url": "https://en.wikipedia.org/wiki/Piezoelectricity",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:3",
-        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:earl-dickson",
+        "factKey": "built-in-technology-inventions:everyday-technology:hard:thermostat",
         "tier": 3,
-        "subjectKey": "person:earl-dickson",
+        "subjectKey": "controller:thermostat",
         "clue": {
-          "en": "Which Johnson & Johnson employee made the first adhesive bandage after looking for an easier way to cover his wife’s frequent kitchen cuts?",
-          "et": "Milline Johnson & Johnsoni töötaja tegi esimese liimplaastri, otsides lihtsamat viisi oma naise sagedaste köögis saadud lõikehaavade katmiseks?"
+          "en": "What feedback-control device senses temperature and switches a heating or cooling system on and off to hold a chosen setting?",
+          "et": "Milline tagasisidejuhtimisseade mõõdab temperatuuri ja lülitab küttesüsteemi või jahutuse sisse ning välja, et hoida valitud seadistust?"
         },
         "response": {
-          "en": "Earl Dickson",
-          "et": "Earl Dickson"
+          "en": "thermostat",
+          "et": "termostaat"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Dickson placed gauze on adhesive tape and covered it with a protective layer, creating the product later sold as Band-Aid.",
-          "et": "Dickson paigutas marli liimlindile ja kattis selle kaitsekihiga, luues toote, mida hakati hiljem müüma Band-Aidi nime all."
+          "en": "A thermostat compares a measured temperature with a set point and controls equipment to reduce the difference.",
+          "et": "Termostaat võrdleb mõõdetud temperatuuri seatud väärtusega ning juhib seadmeid, et nende erinevust vähendada."
         },
         "source": {
-          "sourceId": "wikipedia:earl-dickson",
-          "title": "Earle Dickson",
-          "url": "https://en.wikipedia.org/wiki/Earle_Dickson",
+          "sourceId": "wikipedia:thermostat",
+          "title": "Thermostat",
+          "url": "https://en.wikipedia.org/wiki/Thermostat",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:4",
-        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:elisha-otis",
+        "factKey": "built-in-technology-inventions:everyday-technology:hard:carbon-monoxide-detector",
         "tier": 4,
-        "subjectKey": "person:elisha-otis",
+        "subjectKey": "device:carbon-monoxide-detector",
         "clue": {
-          "en": "Which inventor demonstrated his elevator safety brake by having a hoisting rope cut during a public exhibition?",
-          "et": "Milline leiutaja demonstreeris oma lifti turvapidurit avalikul näitusel, lastes tõstetrossi läbi lõigata?"
+          "en": "What safety device warns of carbon monoxide, a colourless and odourless gas produced by incomplete combustion, before it can reach a dangerous concentration?",
+          "et": "Milline ohutusseade hoiatab vingugaasi eest — see on mittetäielikul põlemisel tekkiv värvitu ja lõhnatu gaas — enne, kui selle sisaldus muutub ohtlikuks?"
         },
         "response": {
-          "en": "Elisha Otis",
-          "et": "Elisha Otis"
+          "en": "carbon monoxide detector",
+          "et": "vingugaasiandur"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Otis’s brake caught the elevator platform if its rope failed, helping make passenger elevators trusted enough for tall buildings.",
-          "et": "Otise pidur püüdis liftiplatvormi kinni, kui tross katkes, aidates muuta reisiliftid piisavalt usaldusväärseks kõrghoonete jaoks."
+          "en": "Carbon-monoxide detectors use sensor technologies that trigger an alarm when the gas reaches a hazardous level.",
+          "et": "Vingugaasiandurid kasutavad anduritehnoloogiaid, mis käivitavad häire, kui gaasi sisaldus jõuab ohtliku tasemeni."
         },
         "source": {
-          "sourceId": "wikipedia:elisha-otis",
-          "title": "Elisha Otis",
-          "url": "https://en.wikipedia.org/wiki/Elisha_Otis",
+          "sourceId": "wikipedia:carbon-monoxide-detector",
+          "title": "Carbon monoxide detector",
+          "url": "https://en.wikipedia.org/wiki/Carbon_monoxide_detector",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-068:question:5",
-        "factKey": "built-in-technology-inventions:everyday-fix-inventors:hard:stephanie-kwolek",
+        "factKey": "built-in-technology-inventions:everyday-technology:hard:capacitive-touchscreen",
         "tier": 5,
-        "subjectKey": "person:stephanie-kwolek",
+        "subjectKey": "display:capacitive-touchscreen",
         "clue": {
-          "en": "Which DuPont chemist developed the exceptionally strong fibre later sold as Kevlar, widely used in protective equipment?",
-          "et": "Milline DuPonti keemik arendas erakordselt tugeva kiu, mida hakati hiljem müüma Kevlari nime all ja kasutama kaitsevarustuses?"
+          "en": "What kind of touchscreen detects a conductive finger by measuring a change in an electrostatic field, rather than needing the screen layers to be pressed together?",
+          "et": "Milline puuteekraan tuvastab juhtiva sõrme elektrostaatilise välja muutuse järgi, selle asemel et ekraanikihte peaks kokku suruma?"
         },
         "response": {
-          "en": "Stephanie Kwolek",
-          "et": "Stephanie Kwolek"
+          "en": "capacitive touchscreen",
+          "et": "mahtuvuslik puuteekraan"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Kwolek discovered a liquid-crystalline polymer solution whose spun fibres had extraordinary tensile strength.",
-          "et": "Kwolek avastas vedelkristallilise polümeerilahuse, millest kedratud kiud olid erakordselt suure tõmbetugevusega."
+          "en": "Capacitive touchscreens are widely used in phones because a conductive touch changes the local electrical capacitance.",
+          "et": "Mahtuvuslikke puuteekraane kasutatakse laialt telefonides, sest juhtiv puudutus muudab kohalikku elektrilist mahtuvust."
         },
         "source": {
-          "sourceId": "wikipedia:stephanie-kwolek",
-          "title": "Stephanie Kwolek",
-          "url": "https://en.wikipedia.org/wiki/Stephanie_Kwolek",
+          "sourceId": "wikipedia:capacitive-sensing",
+          "title": "Capacitive sensing",
+          "url": "https://en.wikipedia.org/wiki/Capacitive_sensing",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -14015,8 +14015,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-069",
     "name": {
-      "en": "Milestones Before the Personal Computer",
-      "et": "Verstapostid enne personaalarvutit"
+      "en": "Milestones on the Road to the Personal Computer",
+      "et": "Verstapostid teel personaalarvutini"
     },
     "questions": [
       {
@@ -14030,15 +14030,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "Jacquard loom",
-          "et": "Jacquard' kangasteljed"
+          "et": "žakaarteljed"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Jacquard machine"],
+          "et": ["žakaarmasin"]
         },
         "explanation": {
           "en": "The Jacquard loom encoded each textile pattern on cards, an idea Charles Babbage later drew on for the Analytical Engine.",
-          "et": "Jacquard' kangasteljed kodeerisid iga tekstiilimustri kaartidele; sellele ideele tugines hiljem Charles Babbage analüütilise masina kavandamisel."
+          "et": "Žakaarteljed kodeerisid iga tekstiilimustri kaartidele; sellele ideele tugines hiljem Charles Babbage analüütilise masina kavandamisel."
         },
         "source": {
           "sourceId": "wikipedia:jacquard-machine",
@@ -14091,8 +14091,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "UNIVAC I"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["UNIVAC 1"],
+          "et": ["UNIVAC 1"]
         },
         "explanation": {
           "en": "UNIVAC I was the first general-purpose electronic digital computer designed for business use in the United States.",
@@ -14112,20 +14112,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "computer:xerox-alto",
         "clue": {
-          "en": "Which 1973 research computer pioneered a graphical desktop, mouse, Ethernet networking, and laser printing years before those ideas reached mass-market PCs?",
-          "et": "Milline 1973. aasta uurimisarvuti teerajati graafilise töölaua, hiire, Etherneti võrgu ja laserprintimisega aastaid enne nende jõudmist tavakasutaja arvutitesse?"
+          "en": "Which 1973 research computer combined a graphical desktop, a mouse, Ethernet networking, and access to networked printing years before those ideas reached mass-market PCs?",
+          "et": "Milline 1973. aasta uurimisarvuti ühendas graafilise töölaua, hiire, Etherneti võrgu ja ligipääsu võrgustatud printeritele aastaid enne nende ideede jõudmist tavakasutaja arvutitesse?"
         },
         "response": {
           "en": "Xerox Alto",
           "et": "Xerox Alto"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["The Alto"],
+          "et": ["Alto arvuti"]
         },
         "explanation": {
-          "en": "The Alto was developed at Xerox PARC, where its interface strongly influenced later personal-computer design.",
-          "et": "Alto töötati välja Xerox PARCis, kus selle kasutajaliides mõjutas tugevasti hilisemat personaalarvutite disaini."
+          "en": "The Alto was developed at Xerox PARC, where its graphical interface, mouse, Ethernet networking, and printer services influenced later personal-computer design.",
+          "et": "Alto töötati välja Xerox PARCis, kus selle graafiline kasutajaliides, hiir, Etherneti võrk ja printeriteenused mõjutasid tugevasti hilisemat personaalarvutite disaini."
         },
         "source": {
           "sourceId": "wikipedia:xerox-alto",
@@ -14149,12 +14149,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "IBM System/360"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["System/360", "IBM 360"],
+          "et": ["System/360", "IBM 360"]
         },
         "explanation": {
           "en": "System/360 made compatibility across a product line a defining commercial idea, despite a costly and risky development programme.",
-          "et": "System/360 muutis tootesarjaülese ühilduvuse määravaks äriideeks, kuigi selle arendusprogramm oli kulukas ja riskantne."
+          "et": "System/360 muutis tootesarjaülese ühilduvuse määravaks äriideeks ja aitas luua ettevõtete andmetöötlusele ühise arhitektuuri."
         },
         "source": {
           "sourceId": "wikipedia:ibm-system-360",
@@ -14175,8 +14175,66 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-070:question:1",
-        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:visicalc",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:netscape-navigator",
         "tier": 1,
+        "subjectKey": "software:netscape-navigator",
+        "clue": {
+          "en": "Which commercial browser became the emblem of the 1990s web boom and triggered the first browser war with Microsoft?",
+          "et": "Milline kommertsveebilehitseja sai 1990. aastate veebibuumi sümboliks ja käivitas Microsoftiga esimese brauserisõja?"
+        },
+        "response": {
+          "en": "Netscape Navigator",
+          "et": "Netscape Navigator"
+        },
+        "acceptedVariants": {
+          "en": ["Netscape"],
+          "et": ["Netscape"]
+        },
+        "explanation": {
+          "en": "Netscape Navigator rapidly gained web-browser market share before Internet Explorer displaced it in the late 1990s.",
+          "et": "Netscape Navigator saavutas kiiresti veebilehitsejate turuosa, enne kui Internet Explorer selle 1990. aastate lõpul tõrjus."
+        },
+        "source": {
+          "sourceId": "wikipedia:netscape-navigator",
+          "title": "Netscape Navigator",
+          "url": "https://en.wikipedia.org/wiki/Netscape_Navigator",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-070:question:2",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:mosaic-web-browser",
+        "tier": 2,
+        "subjectKey": "software:mosaic-web-browser",
+        "clue": {
+          "en": "Which University of Illinois browser helped popularise the World Wide Web by showing text and images together in a window?",
+          "et": "Milline Illinoisi ülikoolis loodud veebilehitseja aitas muuta veebi populaarseks, näidates aknas koos teksti ja pilte?"
+        },
+        "response": {
+          "en": "Mosaic",
+          "et": "Mosaic"
+        },
+        "acceptedVariants": {
+          "en": ["NCSA Mosaic"],
+          "et": ["NCSA Mosaic"]
+        },
+        "explanation": {
+          "en": "Mosaic’s accessible graphical interface helped carry the web beyond specialist academic users in the early 1990s.",
+          "et": "Mosaici ligipääsetav graafiline kasutajaliides aitas 1990. aastate algul tuua veebi välja akadeemiliste spetsialistide ringist."
+        },
+        "source": {
+          "sourceId": "wikipedia:mosaic-web-browser",
+          "title": "Mosaic (web browser)",
+          "url": "https://en.wikipedia.org/wiki/Mosaic_(web_browser)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-070:question:3",
+        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:visicalc",
+        "tier": 3,
         "subjectKey": "software:visicalc",
         "clue": {
           "en": "What 1979 spreadsheet is often credited with turning the Apple II into a serious business machine?",
@@ -14203,9 +14261,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-070:question:2",
+        "key": "built-in-technology-inventions-set-070:question:4",
         "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:lotus-1-2-3",
-        "tier": 2,
+        "tier": 4,
         "subjectKey": "software:lotus-1-2-3",
         "clue": {
           "en": "Which DOS business program combined spreadsheet, charting, and database functions in its deliberately memorable name?",
@@ -14232,9 +14290,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-070:question:3",
+        "key": "built-in-technology-inventions-set-070:question:5",
         "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:wordstar",
-        "tier": 3,
+        "tier": 5,
         "subjectKey": "software:wordstar",
         "clue": {
           "en": "Which early word processor became a favourite of writers and journalists on CP/M and DOS machines?",
@@ -14259,64 +14317,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
-      },
-      {
-        "key": "built-in-technology-inventions-set-070:question:4",
-        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:mosaic-web-browser",
-        "tier": 4,
-        "subjectKey": "software:mosaic-web-browser",
-        "clue": {
-          "en": "Which University of Illinois browser helped popularise the World Wide Web by showing text and images together in a window?",
-          "et": "Milline Illinoisi ülikoolis loodud veebilehitseja aitas muuta veebi populaarseks, näidates aknas koos teksti ja pilte?"
-        },
-        "response": {
-          "en": "Mosaic",
-          "et": "Mosaic"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Mosaic’s accessible graphical interface helped carry the web beyond specialist academic users in the early 1990s.",
-          "et": "Mosaici ligipääsetav graafiline kasutajaliides aitas 1990. aastate algul tuua veebi välja akadeemiliste spetsialistide ringist."
-        },
-        "source": {
-          "sourceId": "wikipedia:mosaic-web-browser",
-          "title": "Mosaic (web browser)",
-          "url": "https://en.wikipedia.org/wiki/Mosaic_(web_browser)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-070:question:5",
-        "factKey": "built-in-technology-inventions:pc-software-landmarks:hard:netscape-navigator",
-        "tier": 5,
-        "subjectKey": "software:netscape-navigator",
-        "clue": {
-          "en": "Which commercial browser became the emblem of the 1990s web boom and triggered the first browser war with Microsoft?",
-          "et": "Milline kommertsveebilehitseja sai 1990. aastate veebibuumi sümboliks ja käivitas Microsoftiga esimese brauserisõja?"
-        },
-        "response": {
-          "en": "Netscape Navigator",
-          "et": "Netscape Navigator"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Netscape Navigator rapidly gained web-browser market share before Internet Explorer displaced it in the late 1990s.",
-          "et": "Netscape Navigator saavutas kiiresti veebilehitsejate turuosa, enne kui Internet Explorer selle 1990. aastate lõpul tõrjus."
-        },
-        "source": {
-          "sourceId": "wikipedia:netscape-navigator",
-          "title": "Netscape Navigator",
-          "url": "https://en.wikipedia.org/wiki/Netscape_Navigator",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
       }
     ]
   },
@@ -14329,58 +14329,58 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-071:question:1",
-        "factKey": "built-in-technology-inventions:early-internet-culture:hard:bulletin-board-system",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:icq",
         "tier": 1,
-        "subjectKey": "service:bulletin-board-system",
+        "subjectKey": "service:icq",
         "clue": {
-          "en": "What was the name for an early online community that users typically reached by dialling directly into one computer?",
-          "et": "Kuidas nimetati varast veebikogukonda, kuhu kasutajad jõudsid tavaliselt modemi kaudu otse ühte arvutisse helistades?"
+          "en": "Which 1990s instant-messaging service took its name from the phrase “I seek you”?",
+          "et": "Milline 1990. aastate kiirsõnumiteenus sai oma nime fraasist „I seek you“?"
         },
         "response": {
-          "en": "bulletin board system",
-          "et": "teadetetahvlisüsteem"
+          "en": "ICQ",
+          "et": "ICQ"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["BBS"],
+          "et": ["BBS"]
         },
         "explanation": {
-          "en": "Bulletin board systems, usually called BBSes, let callers exchange messages and files before the web became widespread.",
-          "et": "Teadetetahvlisüsteemid ehk BBSid võimaldasid helistajatel sõnumeid ja faile vahetada enne veebi laialdast levikut."
+          "en": "ICQ popularised presence indicators and direct online messaging for a large international audience.",
+          "et": "ICQ populariseeris kohalolekunäitajaid ja otsesõnumite saatmist suure rahvusvahelise kasutajaskonna seas."
         },
         "source": {
-          "sourceId": "wikipedia:bulletin-board-system",
-          "title": "Bulletin board system",
-          "url": "https://en.wikipedia.org/wiki/Bulletin_board_system",
+          "sourceId": "wikipedia:icq",
+          "title": "ICQ",
+          "url": "https://en.wikipedia.org/wiki/ICQ",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:2",
-        "factKey": "built-in-technology-inventions:early-internet-culture:hard:usenet",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:napster",
         "tier": 2,
-        "subjectKey": "service:usenet",
+        "subjectKey": "service:napster",
         "clue": {
-          "en": "Which distributed discussion network organised conversations into newsgroups and predated the World Wide Web?",
-          "et": "Milline hajutatud aruteluvõrk korraldas vestlusi uudisgruppides ja eelnes veebile?"
+          "en": "Which peer-to-peer music-sharing service became a legal flashpoint around copyright at the turn of the millennium?",
+          "et": "Milline otseühendusega muusikajagamisteenus sai aastatuhande vahetusel autoriõiguse kohtuvaidluste keskpunktiks?"
         },
         "response": {
-          "en": "Usenet",
-          "et": "Usenet"
+          "en": "Napster",
+          "et": "Napster"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Usenet passed articles between servers, creating public discussion groups that influenced later online forums.",
-          "et": "Usenet edastas artikleid serverite vahel ning lõi avalikud arutelurühmad, mis mõjutasid hilisemaid veebifoorumeid."
+          "en": "Napster connected users who shared music files directly and its lawsuits helped shape later digital-music services.",
+          "et": "Napster ühendas kasutajaid, kes jagasid muusikafaile otse, ning selle kohtuasjad aitasid kujundada hilisemaid digimuusikateenuseid."
         },
         "source": {
-          "sourceId": "wikipedia:usenet",
-          "title": "Usenet",
-          "url": "https://en.wikipedia.org/wiki/Usenet",
+          "sourceId": "wikipedia:napster",
+          "title": "Napster",
+          "url": "https://en.wikipedia.org/wiki/Napster",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14416,58 +14416,58 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-071:question:4",
-        "factKey": "built-in-technology-inventions:early-internet-culture:hard:icq",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:bulletin-board-system",
         "tier": 4,
-        "subjectKey": "service:icq",
+        "subjectKey": "service:bulletin-board-system",
         "clue": {
-          "en": "Which 1990s instant-messaging service took its name from the phrase “I seek you”?",
-          "et": "Milline 1990. aastate kiirsõnumiteenus sai oma nime fraasist „I seek you“?"
+          "en": "What was the name for an early online community that users typically reached by dialling directly into one computer?",
+          "et": "Kuidas nimetati varast võrgukogukonda, kuhu kasutajad jõudsid tavaliselt modemiga otse ühte arvutisse helistades?"
         },
         "response": {
-          "en": "ICQ",
-          "et": "ICQ"
+          "en": "bulletin board system",
+          "et": "teadetetahvlisüsteem"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "ICQ popularised presence indicators and direct online messaging for a large international audience.",
-          "et": "ICQ populariseeris kohalolekunäitajaid ja otsesõnumite saatmist suure rahvusvahelise kasutajaskonna seas."
+          "en": "Bulletin board systems, usually called BBSes, let callers exchange messages and files before the web became widespread.",
+          "et": "Teadetetahvlisüsteemid ehk BBSid võimaldasid helistajatel sõnumeid ja faile vahetada enne veebi laialdast levikut."
         },
         "source": {
-          "sourceId": "wikipedia:icq",
-          "title": "ICQ",
-          "url": "https://en.wikipedia.org/wiki/ICQ",
+          "sourceId": "wikipedia:bulletin-board-system",
+          "title": "Bulletin board system",
+          "url": "https://en.wikipedia.org/wiki/Bulletin_board_system",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
       },
       {
         "key": "built-in-technology-inventions-set-071:question:5",
-        "factKey": "built-in-technology-inventions:early-internet-culture:hard:napster",
+        "factKey": "built-in-technology-inventions:early-internet-culture:hard:usenet",
         "tier": 5,
-        "subjectKey": "service:napster",
+        "subjectKey": "service:usenet",
         "clue": {
-          "en": "Which peer-to-peer music-sharing service became a legal flashpoint around copyright at the turn of the millennium?",
-          "et": "Milline võrdõiguslik muusikajagamisteenus sai aastatuhande vahetusel autoriõiguse kohtuvaidluste keskpunktiks?"
+          "en": "Which distributed discussion network organised conversations into newsgroups and predated the World Wide Web?",
+          "et": "Milline hajutatud aruteluvõrk korraldas vestlusi uudisgruppides ja eelnes veebile?"
         },
         "response": {
-          "en": "Napster",
-          "et": "Napster"
+          "en": "Usenet",
+          "et": "Usenet"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Napster connected users who shared music files directly and its lawsuits helped shape later digital-music services.",
-          "et": "Napster ühendas kasutajaid, kes jagasid muusikafaile otse, ning selle kohtuasjad aitasid kujundada hilisemaid digimuusikateenuseid."
+          "en": "Usenet passed articles between servers, creating public discussion groups that influenced later online forums.",
+          "et": "Usenet edastas artikleid serverite vahel ning lõi avalikud arutelurühmad, mis mõjutasid hilisemaid veebifoorumeid."
         },
         "source": {
-          "sourceId": "wikipedia:napster",
-          "title": "Napster",
-          "url": "https://en.wikipedia.org/wiki/Napster",
+          "sourceId": "wikipedia:usenet",
+          "title": "Usenet",
+          "url": "https://en.wikipedia.org/wiki/Usenet",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14483,95 +14483,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-072:question:1",
-        "factKey": "built-in-technology-inventions:photography-milestones:hard:daguerreotype",
-        "tier": 1,
-        "subjectKey": "process:daguerreotype",
-        "clue": {
-          "en": "Which early photographic process produced a unique image on a polished silver-plated copper sheet?",
-          "et": "Milline varane fotoprotsess tekitas ainulaadse kujutise poleeritud hõbetatud vaskplaadil?"
-        },
-        "response": {
-          "en": "daguerreotype",
-          "et": "dagerrotüüp"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Louis Daguerre’s process was publicly announced in 1839 and made detailed photographic portraits possible.",
-          "et": "Louis Daguerre’i protsess avalikustati 1839. aastal ning see võimaldas teha detailseid portreefotosid."
-        },
-        "source": {
-          "sourceId": "wikipedia:daguerreotype",
-          "title": "Daguerreotype",
-          "url": "https://en.wikipedia.org/wiki/Daguerreotype",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:2",
-        "factKey": "built-in-technology-inventions:photography-milestones:hard:dry-plate",
-        "tier": 2,
-        "subjectKey": "process:dry-plate",
-        "clue": {
-          "en": "What photographic innovation replaced wet plates with factory-made light-sensitive glass plates that could be used later?",
-          "et": "Milline fototehniline uuendus asendas märgplaadid tehases valmistatud valgustundlike klaasplaatidega, mida sai kasutada hiljem?"
-        },
-        "response": {
-          "en": "dry plate",
-          "et": "kuivplaat"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Dry plates made cameras more portable because photographers no longer had to prepare and develop a plate while it was still wet.",
-          "et": "Kuivplaadid muutsid kaamerad kaasaskantavamaks, sest fotograaf ei pidanud plaati valmistama ja ilmutama veel märjana."
-        },
-        "source": {
-          "sourceId": "wikipedia:dry-plate",
-          "title": "Dry plate",
-          "url": "https://en.wikipedia.org/wiki/Dry_plate",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:3",
-        "factKey": "built-in-technology-inventions:photography-milestones:hard:kodak-brownie",
-        "tier": 3,
-        "subjectKey": "camera:kodak-brownie",
-        "clue": {
-          "en": "Which inexpensive Kodak camera, introduced in 1900, popularised casual snapshot photography with roll film?",
-          "et": "Milline 1900. aastal kasutusele võetud odav Kodaki kaamera populariseeris rullfilmiga argist hetkpildistamist?"
-        },
-        "response": {
-          "en": "Brownie camera",
-          "et": "Brownie kaamera"
-        },
-        "acceptedVariants": {
-          "en": ["Kodak Brownie"],
-          "et": ["Kodak Brownie"]
-        },
-        "explanation": {
-          "en": "The Brownie was simple and cheap enough to bring photography to a mass market rather than trained professionals alone.",
-          "et": "Brownie oli piisavalt lihtne ja odav, et tuua fotograafia massiturule, mitte ainult väljaõppinud professionaalidele."
-        },
-        "source": {
-          "sourceId": "wikipedia:brownie-camera",
-          "title": "Brownie (camera)",
-          "url": "https://en.wikipedia.org/wiki/Brownie_(camera)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-072:question:4",
         "factKey": "built-in-technology-inventions:photography-milestones:hard:leica-i",
-        "tier": 4,
+        "tier": 1,
         "subjectKey": "camera:leica-i",
         "clue": {
           "en": "Which 1920s German camera helped establish 35 mm film as a serious format for compact still photography?",
@@ -14598,9 +14511,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-072:question:5",
+        "key": "built-in-technology-inventions-set-072:question:2",
         "factKey": "built-in-technology-inventions:photography-milestones:hard:kodachrome",
-        "tier": 5,
+        "tier": 2,
         "subjectKey": "film:kodachrome",
         "clue": {
           "en": "Which colour reversal film became famous for its richly saturated slides and was celebrated in a Paul Simon song?",
@@ -14625,36 +14538,152 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
-      }
-    ]
-  },
-  {
-    "categorySetId": "built-in-technology-inventions-set-073",
-    "name": {
-      "en": "Machines That Took Humans Underwater",
-      "et": "Masinad, mis viisid inimesed vee alla"
-    },
-    "questions": [
+      },
       {
-        "key": "built-in-technology-inventions-set-073:question:1",
-        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:bathyscaphe-trieste",
-        "tier": 1,
-        "subjectKey": "submersible:bathyscaphe-trieste",
+        "key": "built-in-technology-inventions-set-072:question:3",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:daguerreotype",
+        "tier": 3,
+        "subjectKey": "process:daguerreotype",
         "clue": {
-          "en": "Which bathyscaphe carried Jacques Piccard and Don Walsh to the deepest known part of the ocean in 1960?",
-          "et": "Milline batüskaaf viis Jacques Piccardi ja Don Walshi 1960. aastal ookeani sügavaimasse teadaolevasse piirkonda?"
+          "en": "Which early photographic process produced a unique image on a polished silver-plated copper sheet?",
+          "et": "Milline varane fotoprotsess tekitas ainulaadse kujutise poleeritud hõbetatud vaskplaadil?"
         },
         "response": {
-          "en": "Bathyscaphe Trieste",
-          "et": "batüskaaf Trieste"
+          "en": "daguerreotype",
+          "et": "dagerrotüüp"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Trieste reached Challenger Deep in the Mariana Trench, demonstrating that people could descend to the ocean’s greatest depth.",
-          "et": "Trieste jõudis Mariaani süvikus Challengeri sügavikku, näidates, et inimesed võivad laskuda ookeani suurimasse sügavusse."
+          "en": "Louis Daguerre’s process was publicly announced in 1839 and made detailed photographic portraits possible.",
+          "et": "Louis Daguerre’i protsess avalikustati 1839. aastal ning see võimaldas teha detailseid portreefotosid."
+        },
+        "source": {
+          "sourceId": "wikipedia:daguerreotype",
+          "title": "Daguerreotype",
+          "url": "https://en.wikipedia.org/wiki/Daguerreotype",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:4",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:kodak-brownie",
+        "tier": 4,
+        "subjectKey": "camera:kodak-brownie",
+        "clue": {
+          "en": "Which inexpensive Kodak camera, introduced in 1900, popularised casual snapshot photography with roll film?",
+          "et": "Milline 1900. aastal kasutusele võetud odav Kodaki kaamera populariseeris rullfilmiga argist hetkpildistamist?"
+        },
+        "response": {
+          "en": "Brownie camera",
+          "et": "Brownie kaamera"
+        },
+        "acceptedVariants": {
+          "en": ["Kodak Brownie"],
+          "et": ["Kodak Brownie"]
+        },
+        "explanation": {
+          "en": "The Brownie was simple and cheap enough to bring photography to a mass market rather than trained professionals alone.",
+          "et": "Brownie oli piisavalt lihtne ja odav, et tuua fotograafia massiturule, mitte ainult väljaõppinud professionaalidele."
+        },
+        "source": {
+          "sourceId": "wikipedia:brownie-camera",
+          "title": "Brownie (camera)",
+          "url": "https://en.wikipedia.org/wiki/Brownie_(camera)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-072:question:5",
+        "factKey": "built-in-technology-inventions:photography-milestones:hard:dry-plate",
+        "tier": 5,
+        "subjectKey": "process:dry-plate",
+        "clue": {
+          "en": "Richard Leach Maddox's 1871 use of silver bromide in gelatin led to which photographic plate technology that could be prepared in advance?",
+          "et": "Millise ettevalmistatava fotoplaaditehnoloogiani viis Richard Leach Maddoxi 1871. aasta hõbebromiidi ja želatiini kasutus?"
+        },
+        "response": {
+          "en": "dry plate",
+          "et": "kuivplaat"
+        },
+        "acceptedVariants": {
+          "en": ["gelatin dry plate"],
+          "et": ["želatiinkuivplaat"]
+        },
+        "explanation": {
+          "en": "Dry plates made cameras more portable because photographers no longer had to prepare and develop a plate while it was still wet.",
+          "et": "Kuivplaadid muutsid kaamerad kaasaskantavamaks, sest fotograaf ei pidanud plaati valmistama ja ilmutama veel märjana."
+        },
+        "source": {
+          "sourceId": "wikipedia:dry-plate",
+          "title": "Dry plate",
+          "url": "https://en.wikipedia.org/wiki/Dry_plate",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      }
+    ]
+  },
+  {
+    "categorySetId": "built-in-technology-inventions-set-073",
+    "name": {
+      "en": "Milestones in Human Undersea Exploration",
+      "et": "Inimese veealuse uurimise verstapostid"
+    },
+    "questions": [
+      {
+        "key": "built-in-technology-inventions-set-073:question:1",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:deepsea-challenger",
+        "tier": 1,
+        "subjectKey": "submersible:deepsea-challenger",
+        "clue": {
+          "en": "What one-person submersible did filmmaker James Cameron pilot alone to the deepest known point of the ocean in 2012?",
+          "et": "Millise ühekohalise uurimisallveesõidukiga laskus filmitegija James Cameron 2012. aastal üksinda ookeani sügavaimasse teadaolevasse punkti?"
+        },
+        "response": {
+          "en": "Deepsea Challenger",
+          "et": "Deepsea Challenger"
+        },
+        "acceptedVariants": {
+          "en": ["Deepsea Challenger submersible"],
+          "et": ["Deepsea Challengeri uurimisallveesõiduk"]
+        },
+        "explanation": {
+          "en": "Deepsea Challenger was built for an extremely deep solo dive and collected scientific samples and images from the ocean floor.",
+          "et": "Deepsea Challenger ehitati ülisügavaks üksiksukeldumiseks ning kogus ookeanipõhjast teadusproove ja pilte."
+        },
+        "source": {
+          "sourceId": "wikipedia:deepsea-challenger",
+          "title": "Deepsea Challenger",
+          "url": "https://en.wikipedia.org/wiki/Deepsea_Challenger",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-073:question:2",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:bathyscaphe-trieste",
+        "tier": 2,
+        "subjectKey": "submersible:bathyscaphe-trieste",
+        "clue": {
+          "en": "Which bathyscaphe carried Jacques Piccard and Don Walsh to the deepest known part of the ocean in 1960?",
+          "et": "Milline batüskaaf viis Jacques Piccardi ja Don Walshi 1960. aastal ookeani sügavaimasse teadaolevasse piirkonda?"
+        },
+        "response": {
+          "en": "Trieste",
+          "et": "Trieste"
+        },
+        "acceptedVariants": {
+          "en": ["Bathyscaphe Trieste", "Trieste bathyscaphe"],
+          "et": ["batüskaaf Trieste"]
+        },
+        "explanation": {
+          "en": "Trieste reached the Mariana Trench's deepest known point, demonstrating that people could descend to the ocean’s greatest depth.",
+          "et": "Trieste jõudis Mariaani süviku sügavaimasse teadaolevasse punkti, näidates, et inimesed võivad laskuda ookeani suurimasse sügavusse."
         },
         "source": {
           "sourceId": "wikipedia:trieste-bathyscaphe",
@@ -14665,21 +14694,21 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-073:question:2",
+        "key": "built-in-technology-inventions-set-073:question:3",
         "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:dsv-alvin",
-        "tier": 2,
+        "tier": 3,
         "subjectKey": "submersible:dsv-alvin",
         "clue": {
           "en": "Which US research submersible became famous for exploring hydrothermal vents and visiting the wreck of Titanic?",
           "et": "Milline USA uurimisallveesõiduk sai tuntuks hüdrotermiliste lõõride uurimise ja Titanicu vraki külastamisega?"
         },
         "response": {
-          "en": "DSV Alvin",
-          "et": "DSV Alvin"
+          "en": "Alvin",
+          "et": "Alvin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["DSV Alvin"],
+          "et": ["DSV Alvin"]
         },
         "explanation": {
           "en": "Alvin is a crewed deep-ocean research vehicle operated for scientific work by the Woods Hole Oceanographic Institution.",
@@ -14694,9 +14723,38 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-073:question:3",
+        "key": "built-in-technology-inventions-set-073:question:4",
+        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:bathysphere",
+        "tier": 4,
+        "subjectKey": "submersible:bathysphere",
+        "clue": {
+          "en": "William Beebe and Otis Barton descended in what spherical steel chamber lowered from a ship by cable during record-setting 1930s dives?",
+          "et": "Millises laevalt kaabli otsas vette lastud sfäärilises teraskambris tegid William Beebe ja Otis Barton 1930. aastatel rekordilisi süvasukeldumisi?"
+        },
+        "response": {
+          "en": "bathysphere",
+          "et": "batüsfäär"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "The Bathysphere had no propulsion of its own; a surface ship lowered and raised it by cable.",
+          "et": "Batüsfääril polnud oma jõuallikat; pinnalaev laskis selle kaabli otsas vette ja tõstis tagasi."
+        },
+        "source": {
+          "sourceId": "wikipedia:bathysphere",
+          "title": "Bathysphere",
+          "url": "https://en.wikipedia.org/wiki/Bathysphere",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-073:question:5",
         "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:sealab",
-        "tier": 3,
+        "tier": 5,
         "subjectKey": "project:sealab",
         "clue": {
           "en": "What US Navy programme tested whether divers could live and work for long periods in underwater habitats?",
@@ -14721,64 +14779,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
-      },
-      {
-        "key": "built-in-technology-inventions-set-073:question:4",
-        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:aquarius-reef-base",
-        "tier": 4,
-        "subjectKey": "habitat:aquarius-reef-base",
-        "clue": {
-          "en": "What is the name of the underwater laboratory off Florida where aquanauts can stay for days while studying coral reefs?",
-          "et": "Mis on Florida ranniku lähedal asuva veealuse labori nimi, kus akvanaudid saavad korallriffe uurides päevi viibida?"
-        },
-        "response": {
-          "en": "Aquarius Reef Base",
-          "et": "Aquarius Reef Base"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Aquarius is a submerged research habitat in the Florida Keys National Marine Sanctuary, used for long-duration underwater research.",
-          "et": "Aquarius on Florida Keysi merekaitsealal asuv sukeldatud uurimiselupaik, mida kasutatakse pikaajaliseks veealuseks teadustööks."
-        },
-        "source": {
-          "sourceId": "wikipedia:aquarius-reef-base",
-          "title": "Aquarius Reef Base",
-          "url": "https://en.wikipedia.org/wiki/Aquarius_Reef_Base",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-073:question:5",
-        "factKey": "built-in-technology-inventions:deep-sea-exploration:hard:deepsea-challenger",
-        "tier": 5,
-        "subjectKey": "submersible:deepsea-challenger",
-        "clue": {
-          "en": "What one-person submersible did filmmaker James Cameron pilot alone to Challenger Deep in 2012?",
-          "et": "Millise ühe inimese uurimisallveesõidukiga laskus filmitegija James Cameron 2012. aastal üksinda Challengeri sügavikku?"
-        },
-        "response": {
-          "en": "Deepsea Challenger",
-          "et": "Deepsea Challenger"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Deepsea Challenger was built for an extremely deep solo dive and collected scientific samples and images from Challenger Deep.",
-          "et": "Deepsea Challenger ehitati ülisügavaks üksiksukeldumiseks ning kogus Challengeri sügavikust teadusproove ja pilte."
-        },
-        "source": {
-          "sourceId": "wikipedia:deepsea-challenger",
-          "title": "Deepsea Challenger",
-          "url": "https://en.wikipedia.org/wiki/Deepsea_Challenger",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
       }
     ]
   },
@@ -14786,7 +14786,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-technology-inventions-set-074",
     "name": {
       "en": "Civil Engineering on a Grand Scale",
-      "et": "Suuremõõtmeline ehitusinseneeria"
+      "et": "Suurejooneline ehitusinseneeria"
     },
     "questions": [
       {
@@ -14820,29 +14820,29 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-074:question:2",
-        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:three-gorges-dam",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:thames-barrier",
         "tier": 2,
-        "subjectKey": "structure:three-gorges-dam",
+        "subjectKey": "structure:thames-barrier",
         "clue": {
-          "en": "Which dam on China’s Yangtze River combines flood control, navigation locks, and one of the world’s largest hydroelectric stations?",
-          "et": "Milline Hiina Jangtse jõel asuv tamm ühendab üleujutuste ohjamise, laevalüüsid ja ühe maailma suurima hüdroelektrijaama?"
+          "en": "What movable flood barrier across the River Thames protects London from exceptionally high tides and storm surges from the North Sea?",
+          "et": "Milline üle Thamesi jõe paiknev liigutatav üleujutustõke kaitseb Londonit Põhjamere erakordselt kõrgete loodete ja tormitulvade eest?"
         },
         "response": {
-          "en": "Three Gorges Dam",
-          "et": "Kolme Kuristiku tamm"
+          "en": "Thames Barrier",
+          "et": "Thames Barrier"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Thames flood barrier"],
+          "et": ["Thamesi üleujutustõke"]
         },
         "explanation": {
-          "en": "The Three Gorges Dam spans the Yangtze and includes a major hydroelectric power station and ship-lock system.",
-          "et": "Kolme Kuristiku tamm ulatub üle Jangtse ning hõlmab suurt hüdroelektrijaama ja laevalüüside süsteemi."
+          "en": "The Thames Barrier has movable gates that can be raised to stop a surge travelling upstream toward London.",
+          "et": "Thames Barrieril on liikuvad väravad, mida saab tõsta, et peatada Londonit mööda jõge lähenev tormitulv."
         },
         "source": {
-          "sourceId": "wikipedia:three-gorges-dam",
-          "title": "Three Gorges Dam",
-          "url": "https://en.wikipedia.org/wiki/Three_Gorges_Dam",
+          "sourceId": "wikipedia:thames-barrier",
+          "title": "Thames Barrier",
+          "url": "https://en.wikipedia.org/wiki/Thames_Barrier",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14861,8 +14861,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Akashi Kaikyō sild"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Akashi Kaikyo Bridge"],
+          "et": ["Akashi Kaikyo sild"]
         },
         "explanation": {
           "en": "The bridge crosses the Akashi Strait, a route exposed to strong winds, tides, and earthquakes.",
@@ -14878,29 +14878,29 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-074:question:4",
-        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:millau-viaduct",
+        "factKey": "built-in-technology-inventions:civil-engineering-landmarks:hard:maeslantkering",
         "tier": 4,
-        "subjectKey": "structure:millau-viaduct",
+        "subjectKey": "structure:maeslantkering",
         "clue": {
-          "en": "Which cable-stayed viaduct carries a motorway high above the Tarn valley in southern France?",
-          "et": "Milline vantsildviadukt viib kiirtee kõrgel üle Tami jõe oru Lõuna-Prantsusmaal?"
+          "en": "What Dutch storm-surge barrier near Rotterdam uses two enormous floating gates that automatically close when dangerous water levels are forecast?",
+          "et": "Milline Rotterdami lähedal asuv Hollandi tormitulvatõke kasutab kahte hiiglaslikku ujuvväravat, mis sulguvad automaatselt, kui ennustatakse ohtlikku veetaset?"
         },
         "response": {
-          "en": "Millau Viaduct",
-          "et": "Millau viadukt"
+          "en": "Maeslantkering",
+          "et": "Maeslantkering"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Maeslant barrier"],
+          "et": ["Maeslanti tõke"]
         },
         "explanation": {
-          "en": "The Millau Viaduct’s tall masts and slender deck were designed to cross the valley while limiting the motorway’s descent and climb.",
-          "et": "Millau viadukti kõrged mastid ja sale teekate kavandati oru ületamiseks nii, et kiirtee laskumine ja tõus jääksid väikseks."
+          "en": "Maeslantkering is part of the Netherlands' Delta Works and closes the Nieuwe Waterweg to protect the Rotterdam region from storm surges.",
+          "et": "Maeslantkering on osa Madalmaade Delta Worksist ning sulgeb Nieuwe Waterwegi, et kaitsta Rotterdami piirkonda tormitulvade eest."
         },
         "source": {
-          "sourceId": "wikipedia:millau-viaduct",
-          "title": "Millau Viaduct",
-          "url": "https://en.wikipedia.org/wiki/Millau_Viaduct",
+          "sourceId": "wikipedia:maeslantkering",
+          "title": "Maeslantkering",
+          "url": "https://en.wikipedia.org/wiki/Maeslantkering",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -14912,7 +14912,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "structure:laerdal-tunnel",
         "clue": {
           "en": "Which Norwegian road tunnel uses illuminated caverns to break up a long underground drive between Lærdal and Aurland?",
-          "et": "Milline Norra maanteetunnel kasutab valgustatud koopaid, et liigend anda pikk maa-alune sõit Lærdali ja Aurlandi vahel?"
+          "et": "Milline Norra maanteetunnel kasutab valgustatud koopaid, et katkestada Lærdali ja Aurlandi vahelise pika maa-aluse sõidu üksluisust?"
         },
         "response": {
           "en": "Lærdal Tunnel",
@@ -14940,13 +14940,42 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-technology-inventions-set-075",
     "name": {
       "en": "Early Robotic Visitors to Space",
-      "et": "Varased robotlikud kosmosekülalised"
+      "et": "Varased mehitamata kosmoseuurijad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-075:question:1",
-        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:explorer-1",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:voyager-1",
         "tier": 1,
+        "subjectKey": "mission:voyager-1",
+        "clue": {
+          "en": "Which probe sent back detailed images of Jupiter and Saturn before becoming the first spacecraft to enter interstellar space?",
+          "et": "Milline sond saatis tagasi detailsed pildid Jupiterist ja Saturnist, enne kui sellest sai esimene tähtedevahelisse ruumi jõudnud kosmosesõiduk?"
+        },
+        "response": {
+          "en": "Voyager 1",
+          "et": "Voyager 1"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Voyager 1 launched in 1977, made landmark outer-planet observations, and later crossed the heliopause into interstellar space.",
+          "et": "Voyager 1 startis 1977. aastal, tegi tähtsaid välisplaneetide vaatlusi ja ületas hiljem heliopausi tähtedevahelisse ruumi."
+        },
+        "source": {
+          "sourceId": "wikipedia:voyager-1",
+          "title": "Voyager 1",
+          "url": "https://en.wikipedia.org/wiki/Voyager_1",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-075:question:2",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:explorer-1",
+        "tier": 2,
         "subjectKey": "mission:explorer-1",
         "clue": {
           "en": "What was the name of the first US satellite, which carried an instrument that helped discover the Van Allen radiation belts?",
@@ -14973,9 +15002,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-075:question:2",
+        "key": "built-in-technology-inventions-set-075:question:3",
         "factKey": "built-in-technology-inventions:space-mission-milestones:hard:luna-2",
-        "tier": 2,
+        "tier": 3,
         "subjectKey": "mission:luna-2",
         "clue": {
           "en": "Which Soviet probe became the first human-made object to reach the Moon?",
@@ -14997,35 +15026,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:luna-2",
           "title": "Luna 2",
           "url": "https://en.wikipedia.org/wiki/Luna_2",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-075:question:3",
-        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:mariner-2",
-        "tier": 3,
-        "subjectKey": "mission:mariner-2",
-        "clue": {
-          "en": "Which NASA mission became the first successful spacecraft to fly past Venus and return data from another planet?",
-          "et": "Milline NASA missioon sai esimeseks edukaks kosmosesõidukiks, mis lendas mööda Veenusest ja saatis tagasi andmeid teiselt planeedilt?"
-        },
-        "response": {
-          "en": "Mariner 2",
-          "et": "Mariner 2"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Mariner 2 flew past Venus in 1962 and returned measurements that changed early ideas about the planet’s environment.",
-          "et": "Mariner 2 lendas 1962. aastal Veenusest mööda ning saatis tagasi mõõtmisi, mis muutsid varaseid arusaamu planeedi keskkonnast."
-        },
-        "source": {
-          "sourceId": "wikipedia:mariner-2",
-          "title": "Mariner 2",
-          "url": "https://en.wikipedia.org/wiki/Mariner_2",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
@@ -15061,29 +15061,29 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-075:question:5",
-        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:voyager-1",
+        "factKey": "built-in-technology-inventions:space-mission-milestones:hard:mariner-2",
         "tier": 5,
-        "subjectKey": "mission:voyager-1",
+        "subjectKey": "mission:mariner-2",
         "clue": {
-          "en": "Which probe sent back detailed images of Jupiter and Saturn before becoming the first spacecraft to enter interstellar space?",
-          "et": "Milline sond saatis tagasi detailsed pildid Jupiterist ja Saturnist, enne kui sellest sai esimene tähtedevahelisse ruumi jõudnud kosmosesõiduk?"
+          "en": "Which NASA mission became the first successful spacecraft to fly past Venus and return data from another planet?",
+          "et": "Milline NASA missioon sai esimeseks edukaks kosmosesõidukiks, mis lendas mööda Veenusest ja saatis tagasi andmeid teiselt planeedilt?"
         },
         "response": {
-          "en": "Voyager 1",
-          "et": "Voyager 1"
+          "en": "Mariner 2",
+          "et": "Mariner 2"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Voyager 1 launched in 1977, made landmark outer-planet observations, and later crossed the heliopause into interstellar space.",
-          "et": "Voyager 1 startis 1977. aastal, tegi tähtsaid välisplaneetide vaatlusi ja ületas hiljem heliopausi tähtedevahelisse ruumi."
+          "en": "Mariner 2 flew past Venus in 1962 and returned measurements that changed early ideas about the planet’s environment.",
+          "et": "Mariner 2 lendas 1962. aastal Veenusest mööda ning saatis tagasi mõõtmisi, mis muutsid varaseid arusaamu planeedi keskkonnast."
         },
         "source": {
-          "sourceId": "wikipedia:voyager-1",
-          "title": "Voyager 1",
-          "url": "https://en.wikipedia.org/wiki/Voyager_1",
+          "sourceId": "wikipedia:mariner-2",
+          "title": "Mariner 2",
+          "url": "https://en.wikipedia.org/wiki/Mariner_2",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-28"
         }
