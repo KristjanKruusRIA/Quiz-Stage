@@ -5445,8 +5445,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "vegetable:brussels-sprout",
         "clue": {
-          "en": "What vegetable name derives from a Belgian city near which the crop was cultivated in the 13th century?",
-          "et": "Millise köögivilja nimi tuleneb Belgia linnast, mille lähedal seda taime 13. sajandil kasvatati?"
+          "en": "The English name of what derives from a Belgian city near which it was cultivated in the 13th century?",
+          "et": "Mille ingliskeelne nimi tuleneb Belgia linnast, mille lähedal seda 13. sajandil kasvatati?"
         },
         "response": {
           "en": "Brussels sprouts",
