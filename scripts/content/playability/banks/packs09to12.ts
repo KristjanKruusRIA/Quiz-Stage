@@ -4595,7 +4595,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-food-drink-set-078",
     "name": {
       "en": "Food Stories on Film",
-      "et": "Toidujuttu filmilinal"
+      "et": "Toidulood filmilinal"
     },
     "questions": [
       {
@@ -4753,7 +4753,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-food-drink-set-079",
     "name": {
       "en": "Chefs Who Changed the Conversation",
-      "et": "Kokad, kes muutsid toidujuttu"
+      "et": "Kokad, kes muutsid arusaama toidust"
     },
     "questions": [
       {
@@ -4882,7 +4882,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "chef:alice-waters",
         "clue": {
-          "en": "Who opened Berkeley's Chez Panisse, a restaurant noted for pioneering farm-to-table dining and California cuisine?",
+          "en": "What American chef opened Berkeley's Chez Panisse, a restaurant noted for pioneering farm-to-table dining and California cuisine?",
           "et": "Milline Ameerika kokk avas Berkeleys Chez Panisse'i, mis oli talust-lauale-liikumise ja California köögi teerajaja?"
         },
         "response": {
@@ -5445,8 +5445,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "vegetable:brussels-sprout",
         "clue": {
-          "en": "Which small cabbage buds take their English name from a Belgian city near which they were cultivated in the 13th century?",
-          "et": "Millised väikesed kapsapungad said ingliskeelse nime Belgia linna järgi, mille lähedal neid kasvatati 13. sajandil?"
+          "en": "What takes its English name from a Belgian city near which it was cultivated in the 13th century?",
+          "et": "Mis sai ingliskeelse nime Belgia linna järgi, mille lähedal seda kasvatati 13. sajandil?"
         },
         "response": {
           "en": "Brussels sprouts",
@@ -5549,7 +5549,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "Frankfurt sausage"
+            "Frankfurt sausage",
+            "Frankfurter"
           ],
           "et": [
             "Frankfurter Würstchen",
@@ -5827,7 +5828,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "The oven firms and caramelises the meringue before the protected ice cream begins to melt.",
+          "en": "The oven firms and caramelises the meringue before the ice cream begins to melt.",
           "et": "Ahi tahendab ja karamellistab besee enne, kui selle all olev jäätis jõuab sulama hakata."
         },
         "source": {
@@ -5916,7 +5917,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "dish:poutine",
         "clue": {
           "en": "French fries and cheese curds topped with hot brown gravy make which Québec dish?",
-          "et": "Friikartulitest, juustuteradest ja kuumast pruunist kastmest koosneb milline Québeci roog?"
+          "et": "Milline Québeci roog koosneb friikartulitest, juustuteradest ja kuumast pruunist kastmest?"
         },
         "response": {
           "en": "poutine",
@@ -5962,8 +5963,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Bánh mì can mean the bread itself or the filled sandwich, often called bánh mì thịt.",
-          "et": "Bánh mì võib tähendada nii saia ennast kui ka täidetud võileiba, mida nimetatakse sageli bánh mì thịt'iks."
+          "en": "Plain bánh mì is eaten as a staple, while the filled sandwich is called bánh mì thịt.",
+          "et": "Täidiseta bánh mì'd süüakse põhitoiduna, täidetud võileiba aga nimetatakse bánh mì thịt'iks."
         },
         "source": {
           "sourceId": "wikipedia:banh-mi",
@@ -5979,8 +5980,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "dish:zapiekanka",
         "clue": {
-          "en": "Which Polish street snack is an open-faced toasted baguette traditionally topped with mushrooms, cheese and ketchup?",
-          "et": "Milline Poola tänavasuupiste on lahtine röstitud baguette, millel on traditsiooniliselt seened, juust ja ketšup?"
+          "en": "Which Polish street snack is an open-faced toasted baguette topped with mushrooms and cheese and served with ketchup?",
+          "et": "Milline Poola tänavasuupiste on seente ja juustuga kaetud lahtine röstitud baguette, mida serveeritakse ketšupiga?"
         },
         "response": {
           "en": "zapiekanka",
@@ -6350,8 +6351,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "dish:cobb-salad",
         "clue": {
-          "en": "Which American chopped salad combines greens, tomato, bacon, chicken, egg, avocado and blue cheese?",
-          "et": "Millises Ameerika hakitud salatis on roheline salat, tomat, peekon, kana, muna, avokaado ja sinihallitusjuust?"
+          "en": "Which American garden salad combines chopped greens, tomato, bacon, chicken, egg, avocado and blue cheese?",
+          "et": "Millises Ameerika aiasalatis on hakitud roheline salat, tomat, peekon, kana, muna, avokaado ja sinihallitusjuust?"
         },
         "response": {
           "en": "Cobb salad",
