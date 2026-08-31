@@ -130,7 +130,7 @@ const GEOGRAPHY = [
     ['Germany', 'Germany', 'Germany', 'Saksamaa', 'Berlin', 'Berliin'],
     ['France', 'France', 'France', 'Prantsusmaa', 'Paris', 'Pariis'],
     ['Italy', 'Italy', 'Italy', 'Itaalia', 'Rome', 'Rooma'],
-    ['Japan', 'Japan', 'Japan', 'Jaapan', 'Tokyo', 'Tokyo'],
+    ['Japan', 'Japan', 'Japan', 'Jaapani', 'Tokyo', 'Tokyo'],
   ],
   (prompt) => `What is the capital of ${prompt}?`,
   (prompt) => `Mis on ${prompt} pealinn?`,
@@ -822,6 +822,7 @@ export function applyAccessibleEasyQuestions(
           reviewedAt: '2026-08-27T21:00:00.000Z',
           decision: 'approved',
         },
+        adultPolicyReview: null,
       });
     }
   }

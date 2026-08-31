@@ -12,6 +12,7 @@ import {
 } from '../../scripts/release/packagedProcess';
 import { releaseTargetFor } from '../../scripts/release/targets';
 import { openDatabase } from '../../src/main/persistence/database';
+import { gameStateSchema } from '../../src/shared/ipc/contracts';
 
 const packagedSmokeEnabled = process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined;
 const useDomPointerActivation = process.platform === 'darwin' && process.arch === 'x64';
@@ -114,6 +115,22 @@ async function playTileCorrect(page: Page): Promise<void> {
   await activateControl(page.getByRole('button', { name: 'Continue' }));
 }
 
+function newestPackagedSnapshot(userData: string) {
+  const database = openDatabase({ filePath: path.join(userData, 'quiz-stage.sqlite'), readonly: true });
+  try {
+    const row = database.prepare(`
+      SELECT snapshots.state_json
+      FROM match_snapshots AS snapshots
+      JOIN matches ON matches.id = snapshots.match_id
+      ORDER BY matches.updated_at DESC, snapshots.sequence DESC
+      LIMIT 1
+    `).get() as { state_json: string } | undefined;
+    return row === undefined ? null : gameStateSchema.parse(JSON.parse(row.state_json));
+  } finally {
+    database.close();
+  }
+}
+
 if (packagedSmokeEnabled) test('runs a complete two-team win sequence without external requests', async () => {
   const executable = packagedExecutable();
   const userData = packagedUserData(executable);
@@ -142,15 +159,56 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     await activateRadio(page.getByRole('radio', { name: 'English' }));
     await activateRadio(page.getByRole('radio', { name: 'Medium' }));
     await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
-    const startButton = page.getByRole('button', { name: 'Start match' });
+    const adultPack = page.getByRole('checkbox', { name: 'Adult (Mature) / Täiskasvanutele' });
+    const estoniaPack = page.getByRole('checkbox', { name: 'Estonia / Eesti' });
+    await expect(adultPack).not.toBeChecked();
+    await expect(estoniaPack).toBeChecked();
+    let startButton = page.getByRole('button', { name: 'Start match' });
     await expect.poll(async () => ({
       enabled: await startButton.isEnabled(),
-      alerts: await page.getByRole('alert').allTextContents(),
+      alerts: await page.locator('[role="alert"]:not([aria-label])').allTextContents(),
     }), { message: 'Packaged content must support an English/Medium match', timeout: 30_000 }).toEqual({
       enabled: true,
       alerts: [],
     });
     await activateControl(startButton);
+
+    await expect.poll(() => newestPackagedSnapshot(userData), {
+      message: 'The first packaged match snapshot must be persisted', timeout: 30_000,
+    }).not.toBeNull();
+    const firstState = newestPackagedSnapshot(userData);
+    expect(firstState).not.toBeNull();
+    expect(firstState!.config.packIds).toContain('built-in-estonia');
+    expect(firstState!.config.packIds).not.toContain('built-in-adult');
+    const firstSelectedIds = [
+      ...firstState!.boards.flatMap((board) => board.categories.flatMap((category) => [
+        category.id, ...category.clues.map((clue) => clue.id),
+      ])),
+      ...(firstState!.finalClue === null ? [] : [firstState!.finalClue.id]),
+    ];
+    expect(firstSelectedIds.filter((id) => id.startsWith('built-in-adult-'))).toEqual([]);
+
+    await activateControl(page.getByRole('checkbox', { name: 'I understand this ends the current match' }));
+    await activateControl(page.getByRole('button', { name: 'End match incomplete' }));
+    await activateControl(page.getByRole('button', { name: 'Back to Home' }));
+    await activateControl(page.getByRole('button', { name: 'New Match' }));
+    await activateRadio(page.getByRole('radio', { name: 'English' }));
+    await activateRadio(page.getByRole('radio', { name: 'Medium' }));
+    await page.getByRole('combobox', { name: 'Clue time' }).selectOption('5');
+    await page.getByRole('checkbox', { name: 'Adult (Mature) / Täiskasvanutele' }).check();
+    await expect(page.getByRole('checkbox', { name: 'Adult (Mature) / Täiskasvanutele' })).toBeChecked();
+    startButton = page.getByRole('button', { name: 'Start match' });
+    await expect.poll(async () => ({
+      enabled: await startButton.isEnabled(),
+      alerts: await page.locator('[role="alert"]:not([aria-label])').allTextContents(),
+    }), { message: 'Packaged Adult content must become available', timeout: 30_000 }).toEqual({
+      enabled: true,
+      alerts: [],
+    });
+    await activateControl(startButton);
+    await expect.poll(() => newestPackagedSnapshot(userData)?.config.packIds.includes('built-in-adult') ?? false, {
+      message: 'The second packaged match must persist Adult selection', timeout: 30_000,
+    }).toBe(true);
 
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
@@ -174,13 +232,16 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     await activateControl(page.getByRole('button', { name: 'Back to Home' }));
     await activateControl(page.getByRole('button', { name: 'Match History' }));
     await expect(page.getByRole('heading', { name: 'Match History' })).toBeVisible();
-    await expect(page.getByText('Complete')).toBeVisible();
+    await expect(page.getByText('Complete', { exact: true })).toBeVisible();
+    await expect(page.getByText('Incomplete', { exact: true })).toBeVisible();
 
     reportPackagedSmokeProgress('persistence');
     const database = openDatabase({ filePath: path.join(userData, 'quiz-stage.sqlite'), readonly: true });
     try {
       const completeMatchCount = database.prepare('SELECT COUNT(*) FROM matches WHERE completed_at IS NOT NULL').pluck().get() as number;
+      const incompleteMatchCount = database.prepare('SELECT COUNT(*) FROM matches WHERE ended_incomplete = 1').pluck().get() as number;
       expect(completeMatchCount).toBeGreaterThanOrEqual(1);
+      expect(incompleteMatchCount).toBeGreaterThanOrEqual(1);
     } finally {
       database.close();
     }

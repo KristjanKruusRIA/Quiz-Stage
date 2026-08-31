@@ -93,6 +93,7 @@ describe('accessible easy question bank', () => {
     for (let offset = 0; offset < result.evidence.length; offset += 5) {
       expect(new Set(result.evidence.slice(offset, offset + 5).map((item) => item.subjectKey)).size).toBe(5);
     }
+    expect(result.evidence.every((item) => item.adultPolicyReview === null)).toBe(true);
 
     const rerun = applyAccessibleEasyQuestions(
       result.rows,

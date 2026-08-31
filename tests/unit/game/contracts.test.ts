@@ -1,7 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { gameCommandSchema, gameConfigSchema, gameStateSchema } from '../../../src/shared/ipc/contracts';
+import { gameCommandSchema, gameConfigSchema, gameStateSchema, setupOptionsSchema } from '../../../src/shared/ipc/contracts';
 
 describe('IPC contracts', () => {
+  it('requires the default selection state for every setup pack', () => {
+    expect(setupOptionsSchema.safeParse({
+      packs: [{ id: 'built-in-adult', name: 'Adult (Mature) / T\u00e4iskasvanutele', enabled: true }],
+      automaticDisplayMode: 'single',
+    }).success).toBe(false);
+  });
+
   it('accepts 2-8 unique teams and one match difficulty', () => {
     const result = gameConfigSchema.safeParse({
       language: 'et', difficulty: 'hard', clueSeconds: 15,

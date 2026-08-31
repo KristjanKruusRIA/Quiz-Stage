@@ -7,8 +7,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { readCsvInputs } from './readCsv';
-import { validatePack } from '../../src/main/content/csvPacks';
-import { publishValidationReport } from './validate';
+import { publishValidationReport, validateProductionCsvPack } from './validate';
 import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 const USER_AGENT = 'Quiz Stage content source checker/0.1 (+offline desktop content validation)';
@@ -387,7 +386,7 @@ export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<n
   if (reportPath === '') throw new Error('--report requires a path');
   if (reportPath !== undefined) assertReportCanBePublished(reportPath);
   const parsed = await readCsvInputs(inputs);
-  const validationIssues = parsed.flatMap(({ file, pack }) => validatePack(pack).map((issue) => ({ file, ...issue })));
+  const validationIssues = parsed.flatMap(({ file, pack }) => validateProductionCsvPack(pack).map((issue) => ({ file, ...issue })));
   if (validationIssues.length > 0) throw new Error(`Source input failed CSV validation: ${JSON.stringify(validationIssues)}`);
   const urls = parsed.flatMap(({ pack }) => pack.rows.map((row) => row.source_url));
   const cache = openFileSourceCache(cachePath);

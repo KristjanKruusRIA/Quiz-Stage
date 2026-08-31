@@ -62,6 +62,7 @@ const validEvidence: ContentEvidence = {
     decision: 'approved',
   },
   translationReview: null,
+  adultPolicyReview: null,
 };
 
 const validReview: ReviewDecision = {
@@ -99,6 +100,14 @@ describe('content evidence', () => {
       origin: 'openTdbInspired',
       inspiration: null,
     })).toThrow(/inspiration/i);
+  });
+
+  it('parses optional subject keys and Final-compatible evidence without one', () => {
+    expect(contentEvidenceSchema.parse({ ...validEvidence, subjectKey: 'subject:galaxy' }).subjectKey)
+      .toBe('subject:galaxy');
+    const finalEvidence: Partial<typeof validEvidence> = { ...validEvidence };
+    delete finalEvidence.subjectKey;
+    expect(contentEvidenceSchema.parse(finalEvidence).subjectKey).toBeUndefined();
   });
 
   it('rejects non-independent or premature factual and editorial reviews', () => {

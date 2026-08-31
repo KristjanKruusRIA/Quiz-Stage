@@ -88,7 +88,7 @@ describe('setup IPC registration', () => {
       startConfiguredMatch: vi.fn(async () => ({ view: startedView, displayMode: 'single' as const })),
       checkContentAvailability: vi.fn(() => ({ ok: true })),
       getSetupOptions: vi.fn((automaticDisplayMode: 'single' | 'dual') => ({
-        packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+        packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
         automaticDisplayMode,
       })),
     };
@@ -120,7 +120,7 @@ describe('setup IPC registration', () => {
       .resolves.toEqual({ ok: true });
     await expect(handlers.get(IPC_CHANNELS.setupOptions)!({ sender: { id: 30 } }, undefined))
       .resolves.toEqual({
-        packs: [{ id: 'pack', name: 'Pack', enabled: true }],
+        packs: [{ id: 'pack', name: 'Pack', enabled: true, selectedByDefault: true }],
         automaticDisplayMode: 'dual',
       });
     await expect(handlers.get(IPC_CHANNELS.startMatch)!({ sender: { id: 30 } }, config))

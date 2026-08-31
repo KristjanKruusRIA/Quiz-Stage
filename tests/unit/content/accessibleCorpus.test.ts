@@ -73,6 +73,91 @@ const ACCEPTED_BATCHES = [
 
 const EXPECTED_TARGETS_BY_BATCH = [26, 26, 26, 26, 33, 25, 25, 25, 25, 25, 25, 33] as const;
 
+const REVIEW_REJECTED_SPECIALIST_KEY_SUFFIXES = [
+  'fairy-tales-snow-white-seven-dwarfs',
+  'industrial-revolution-spinning-jenny',
+  'writing-history-linear-a-undeciphered',
+  'peace-treaties-westphalia',
+  'baltic-independence-lithuania-march-1990',
+  'independence-movements-algerian-fln',
+  'royal-houses-orange-nassau-netherlands',
+  'famous-first-lines-tale-two-cities-contrasts',
+  'book-settings-ulysses-dublin',
+  'language-families-basque-isolate',
+  'classic-love-stories-doctor-zhivago',
+  'action-films-mad-max-fury-road',
+  '1990s-sf-fifth-element',
+  'films-2000s-devil-wears-prada',
+  'crime-dramas-the-wire-baltimore',
+  'fantasy-tv-good-omens-angel-demon',
+  'film-music-flash-gordon-queen',
+  'european-cinema-cinema-paradiso',
+  'filming-locations-star-wars-tunisia',
+  'c418-composed-minecraft-volume-alpha',
+  'martin-odonnell-halo-music',
+  'nobuo-uematsu-final-fantasy',
+  'first-oboe-sounds-concert-a',
+  'resonator-guitar-metal-cone',
+  'adam-composed-giselle',
+  'domestique-supports-team-leader',
+  'echelon-diagonal-crosswind-formation',
+  'telemark-turn-knee-bent',
+  'en-passant-special-pawn-capture',
+  'baccarat-hand-closest-to-nine',
+  'lamarr-co-invented-frequency-hopping',
+  'actuator-produces-motion',
+  'actuary-models-financial-risk',
+  'great-seal-authenticates-state-documents',
+  'baltic-council-ministers-government-cooperation',
+  'tallink-name-tallinn-finland',
+  'minecraft-enderman-teleports',
+  'halo-master-chief-spartan',
+  'final-fantasy-chocobo-riding-bird',
+  'okavango-inland-delta',
+  'chichen-itza-maya-pyramid',
+  'mount-rushmore-presidents',
+  'halley-comet-returns',
+  'ganymede-largest-moon',
+  'asteroid-belt-mars-jupiter',
+  'kanelbulle-swedish-bun',
+  'smorrebrod-open-sandwich',
+  'brunost-brown-whey-cheese',
+  'djenne-mud-brick-mosque',
+  'kuroshio-japan',
+  'blue-sky-scattering',
+  'xylem-carries-water',
+  'soap-surfactant',
+  'jollof-tomato-rice',
+  'art-van-gogh-brother-theo',
+  'art-van-gogh-post-impressionism',
+  'art-van-gogh-sunflowers-series',
+  'art-van-gogh-bedroom-arles',
+  'art-picasso-blue-period',
+  'art-picasso-demoiselles',
+  'art-picasso-cubism',
+  'art-picasso-collage',
+  'art-monet-giverny',
+  'art-monet-rouen-cathedral-series',
+  'art-monet-haystacks-series',
+  'art-monet-japanese-bridge',
+  'art-leonardo-sfumato',
+  'art-leonardo-mirror-writing',
+  'art-leonardo-last-supper',
+  'art-leonardo-vitruvian-man',
+  'art-nature-okeeffe-flowers',
+  'art-nature-rousseau-jungles',
+  'art-nature-ansel-adams-yosemite',
+  'art-nature-audubon-birds-america',
+] as const;
+
+const REVIEW_REJECTED_NARROW_CATEGORY_TITLES = [
+  'Art & Architecture: The Art of Vincent van Gogh',
+  'Art & Architecture: The Art of Pablo Picasso',
+  'Art & Architecture: The Art of Claude Monet',
+  'Art & Architecture: Leonardo da Vinci',
+  'Art & Architecture: Nature in Famous Art',
+] as const;
+
 type AcceptedRow = Readonly<{
   clue_id: string;
   category_set_id: string;
@@ -336,6 +421,7 @@ function applyEvidence(
       reviewedAt: '2026-08-01T10:00:00.000Z',
       decision: 'approved',
     },
+    adultPolicyReview: null,
     translationReview: {
       reviewer: 'Original Translation Reviewer',
       reviewedAt: '2026-08-01T11:00:00.000Z',
@@ -650,6 +736,23 @@ describe('buildAccessibleCorpus', () => {
     }
   });
 
+  it('omits specialist questions and single-creator themes rejected by easy-play review', () => {
+    const categories = buildAccessibleCorpus();
+    const rejectedQuestions = categories
+      .flatMap(({ questions }) => questions)
+      .map(({ key }) => key)
+      .filter((key) => REVIEW_REJECTED_SPECIALIST_KEY_SUFFIXES.some((suffix) =>
+        key.endsWith(suffix)));
+    const rejectedTitles = categories
+      .map(({ name }) => name.en)
+      .filter((title) => REVIEW_REJECTED_NARROW_CATEGORY_TITLES.includes(
+        title as (typeof REVIEW_REJECTED_NARROW_CATEGORY_TITLES)[number],
+      ));
+
+    expect(rejectedQuestions).toEqual([]);
+    expect(rejectedTitles).toEqual([]);
+  });
+
   it('has globally unique authored identities and consistent subject keys', () => {
     const questions = buildAccessibleCorpus().flatMap(({ questions }) => questions);
     const questionKeys = questions.map(({ key }) => key);
@@ -731,6 +834,25 @@ describe('buildAccessibleCorpus', () => {
     );
     expect(findQuestion('medieval-castles-portcullis').response.et).toBe('Langevõre');
     expect(findQuestion('idioms-under-the-weather').response.et).toBe('Haige');
+    expect(findQuestion('concertmaster-leads-orchestra-strings').clue.en).toContain(
+      'sits nearest the conductor',
+    );
+    expect(findQuestion('bolero-ravel-repeating-rhythm').clue.en).toContain(
+      'a pair of melodies',
+    );
+    expect(findQuestion('snowplough-turn-controls-speed').clue.en).toContain('ski turn');
+    expect(findQuestion('light-scattering-blue-sky').acceptedVariants.en).toContain(
+      'Rayleigh scattering',
+    );
+    expect(responses('built-in-art-architecture-set-009')).toEqual(
+      ['landscape', 'water lilies', 'sunflowers', 'still life', 'photograph'],
+    );
+    expect(responses('built-in-music-set-033')).toEqual(
+      ['Super Mario Bros.', 'Tetris', 'The Legend of Zelda', 'Minecraft', 'Guitar Hero'],
+    );
+    expect(findQuestion('tallink-ferry-tallinn-helsinki').clue.en).toContain(
+      'between Tallinn and Helsinki',
+    );
     expect(responses('built-in-geography-set-065')).toEqual(
       ['Iceland', 'Norway', 'Finland', 'Sweden', 'Denmark'],
     );
@@ -738,7 +860,7 @@ describe('buildAccessibleCorpus', () => {
       ['Suffragettes', 'New Zealand', 'Finland', 'Emmeline Pankhurst', 'The Nineteenth Amendment'],
     );
     expect(responses('built-in-history-set-053')).toEqual(
-      ['Egyptian hieroglyphs', 'The Rosetta Stone', 'Cuneiform', 'The Phoenician alphabet', 'Linear A'],
+      ['Egyptian hieroglyphs', 'The Rosetta Stone', 'Cuneiform', 'The Phoenician alphabet', 'Morse code'],
     );
     expect(responses('built-in-science-nature-set-029')).toEqual(
       ['Hedgehog', 'Dolphin', 'Koala', 'Bats', 'Platypus'],
@@ -776,7 +898,7 @@ describe('buildAccessibleCorpus', () => {
     expect(listResponses.map(({ key }) => key)).toEqual([
       'accessible-corpus:built-in-geography-set-015:united-states-capital-washington',
     ]);
-    expect(dateOrNumberPrompts).toHaveLength(74);
+    expect(dateOrNumberPrompts).toHaveLength(71);
     expect(numericResponses.map(({ key }) => key)).toEqual([
       'famous-first-lines-nineteen-eighty-four-thirteen',
     ]);
@@ -838,6 +960,20 @@ describe('proposed complete easy corpus', () => {
         new Set([title.name.et]),
       );
     }
+  });
+
+  it('keeps accepted easy rows and evidence exactly in sync with the current source bank', () => {
+    const proposed = proposedEasyCorpus();
+    const acceptedRowsForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
+      acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`))
+        .filter((row) => row.content_kind === 'board' && row.difficulty === 'easy'));
+    const acceptedEasyClueIds = new Set(acceptedRowsForEasy.map((row) => row.clue_id));
+    const acceptedEvidenceForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
+      acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`))
+        .filter((record) => acceptedEasyClueIds.has(record.clueId)));
+
+    expect(acceptedRowsForEasy).toEqual(proposed.rows);
+    expect(acceptedEvidenceForEasy).toEqual(proposed.evidence);
   });
 
   it('has no duplicate facts, clue-answer pairs, title/answer leaks, or repeated set subjects', () => {
@@ -1462,7 +1598,7 @@ describe('applyAccessibleCorpus', () => {
       origin: 'openTdbInspired',
       authoring: {
         author: 'Codex Accessible Corpus Author',
-        authoredAt: '2026-08-28T08:00:00.000Z',
+        authoredAt: '2026-08-30T08:00:00.000Z',
       },
       supportingSource: {
         sourceId: 'target-a-source-2',
@@ -1478,17 +1614,18 @@ describe('applyAccessibleCorpus', () => {
       },
       factualReview: {
         reviewer: 'Codex Accessible Corpus Factual Reviewer',
-        reviewedAt: '2026-08-28T09:00:00.000Z',
+        reviewedAt: '2026-08-30T09:00:00.000Z',
         decision: 'approved',
       },
       editorialReview: {
         reviewer: 'Codex Accessible Corpus Editorial Reviewer',
-        reviewedAt: '2026-08-28T10:00:00.000Z',
+        reviewedAt: '2026-08-30T10:00:00.000Z',
         decision: 'approved',
       },
+      adultPolicyReview: null,
       translationReview: {
         reviewer: 'Codex Accessible Corpus Translation Reviewer',
-        reviewedAt: '2026-08-28T11:00:00.000Z',
+        reviewedAt: '2026-08-30T11:00:00.000Z',
         decision: 'approved',
       },
     });

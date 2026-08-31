@@ -1,5 +1,5 @@
 import { _electron as electron, expect, test, type ElectronApplication, type Page, type TestInfo } from '@playwright/test';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { electronExecutablePath, prepareE2eApplication } from '../e2e/productHarness';
@@ -15,6 +15,9 @@ const sizes = [
 
 async function launch(): Promise<{ app: ElectronApplication; page: Page; userData: string }> {
   const userData = mkdtempSync(path.join(tmpdir(), 'quiz-stage-classic-stage-'));
+  const mediaDirectory = path.join(userData, 'media');
+  mkdirSync(mediaDirectory);
+  writeFileSync(path.join(mediaDirectory, 'opening.wav'), 'malformed personal replacement');
   const app = await electron.launch({
     cwd: process.cwd(),
     executablePath: electronExecutablePath(),
@@ -31,11 +34,17 @@ async function captureMatrix(page: Page, testInfo: TestInfo, name: string) {
       overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth,
       overflowY: document.documentElement.scrollHeight > document.documentElement.clientHeight,
       clipped: [...document.querySelectorAll('.public-board, .board-header-row h2, .board-row button, .scoreboard li, .public-clue, .public-final, .winner-screen, .final-waiting, .host-console button:not([disabled]), .host-console input')]
-        .some((element) => element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1),
+        .filter((element) => element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)
+        .map((element) => ({
+          element: `${element.tagName.toLowerCase()}.${element.className}`,
+          text: element.textContent?.trim().slice(0, 160),
+          client: [element.clientWidth, element.clientHeight],
+          scroll: [element.scrollWidth, element.scrollHeight],
+        })),
     }));
     expect(layout.overflowX).toBe(false);
     expect(layout.overflowY).toBe(false);
-    expect(layout.clipped).toBe(false);
+    expect(layout.clipped).toEqual([]);
     await page.screenshot({ path: testInfo.outputPath(`${name}-${size.width}x${size.height}.png`), fullPage: true });
   }
 }

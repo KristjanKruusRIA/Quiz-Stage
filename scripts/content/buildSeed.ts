@@ -17,6 +17,7 @@ import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { parsePackCsv, type ParsedPack, type ParsedCsvRow } from '../../src/main/content/csvPacks';
 import { readEvidenceInputs, type ContentEvidence } from './evidence';
 import { publishValidationReport, reviewedIdsFromReport, validateProductionContent } from './validate';
+import { restoreNpmRunArgs } from './npmCliCompatibility';
 
 export interface SeedBuildArgs {
   inputs: string[];
@@ -44,6 +45,7 @@ interface SeedInventory {
   easySets: number;
   mediumSets: number;
   hardSets: number;
+  builtInPacks: number;
 }
 
 interface BuildSeedResult extends SeedInventory {
@@ -349,6 +351,7 @@ function readSeedInventory(seedPath: string): SeedInventory {
       hardSets: database.prepare(
         "SELECT COUNT(*) FROM category_sets WHERE round IN ('round-one', 'round-two') AND difficulty = 'hard'",
       ).pluck().get() as number,
+      builtInPacks: database.prepare("SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'").pluck().get() as number,
     };
   } finally {
     database.close();
@@ -390,6 +393,7 @@ function sha256File(path: string): string {
 }
 
 function parseCli(argv: readonly string[]): SeedBuildArgs {
+  argv = restoreNpmRunArgs(argv, ['--input', '--evidence', '--output', '--report']);
   const inputs: string[] = [];
   const evidence: string[] = [];
   let output = defaultOutputPath;
