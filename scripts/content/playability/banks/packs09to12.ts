@@ -12694,8 +12694,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "fire:safety-match",
         "clue": {
-          "en": "In the safer Swedish match design, red phosphorus was kept on the box's striking surface instead of mixed into the head. What type of match does that design describe?",
-          "et": "Ohutumas Rootsi tikus hoiti punast fosforit tikutoosi süütepinnal, mitte tikupäises. Millist tüüpi tikku see lahendus kirjeldab?"
+          "en": "In a 19th-century Swedish match design, red phosphorus was moved from the match head to a specially prepared strip on the box. What type of match did this produce?",
+          "et": "19. sajandi Rootsi tikulahenduses viidi punane fosfor tikupäisest tikutoosi spetsiaalsele süütepinnale. Millist tüüpi tikk nii loodi?"
         },
         "response": {
           "en": "safety match",
