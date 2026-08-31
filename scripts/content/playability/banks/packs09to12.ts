@@ -8481,153 +8481,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-034",
     "name": {
-      "en": "People Who Shaped Computing",
-      "et": "Arvutustehnika kujundajad"
+      "en": "Trade Names That Became Everyday Words",
+      "et": "Kaubamärgid, millest said argisõnad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-034:question:1",
-        "factKey": "built-in-technology-inventions:computing-pioneers:medium:person:charles-babbage",
+        "factKey": "built-in-technology-inventions:trade-names-everyday-words:medium:brand:rollerblade",
         "tier": 1,
-        "subjectKey": "person:charles-babbage",
+        "subjectKey": "brand:rollerblade",
         "clue": {
-          "en": "Name the computing pioneer who designed the mechanical Analytical Engine but never completed it.",
-          "et": "Vihjes kirjeldatud arvutustehnika teerajaja projekteeris mehaanilise analüütilise masina, kuid ei lõpetanud seda. Kes see on?"
+          "en": "This skate brand became an everyday verb for gliding on a single line of wheels. Name the brand.",
+          "et": "Sellest uisubrändist sai argine sõna ühe rataste reaga veeremise kohta. Mis bränd see on?"
         },
         "response": {
-          "en": "Charles Babbage",
-          "et": "Charles Babbage"
+          "en": "Rollerblade",
+          "et": "Rollerblade"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Rollerblades"],
+          "et": ["Rollerblade'id"]
         },
         "explanation": {
-          "en": "Charles Babbage separated the planned machine into a store and a mill, foreshadowing memory and processing.",
-          "et": "Charles Babbage jagas kavandatud masina mäluks ja veskiks, aimates ette mälu ning töötlust."
+          "en": "Rollerblade is a brand of inline skates, and its name became a generic term for that kind of skating.",
+          "et": "Rollerblade on rulluiskude bränd ning selle nimest sai üldnimetus samasuguse uisutamise kohta."
         },
         "source": {
-          "sourceId": "wikipedia:charles_babbage",
-          "title": "Charles Babbage",
-          "url": "https://en.wikipedia.org/wiki/Charles_Babbage",
+          "sourceId": "wikipedia:rollerblade",
+          "title": "Rollerblade",
+          "url": "https://en.wikipedia.org/wiki/Rollerblade",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-034:question:2",
-        "factKey": "built-in-technology-inventions:computing-pioneers:medium:person:ada-lovelace",
+        "factKey": "built-in-technology-inventions:trade-names-everyday-words:medium:brand:frisbee",
         "tier": 2,
-        "subjectKey": "person:ada-lovelace",
+        "subjectKey": "brand:frisbee",
         "clue": {
-          "en": "Identify this computing pioneer: they wrote a celebrated algorithm for Babbage’s proposed machine.",
-          "et": "Kirjeldatud arvutustehnika teerajaja kirjutas Babbage’i kavandatud masinale kuulsa algoritmi. Mis on tema nimi?"
+          "en": "Wham-O used a pie-company campus nickname for this toss-and-catch disc. Which brand became an everyday word?",
+          "et": "Wham-O võttis selle viskeketta nimeks tudengite pirukafirma-hüüdnime. Millisest brändist sai argisõna?"
         },
         "response": {
-          "en": "Ada Lovelace",
-          "et": "Ada Lovelace"
+          "en": "Frisbee",
+          "et": "frisbi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Frisbee disc"],
+          "et": ["Frisbee ketas"]
         },
         "explanation": {
-          "en": "Ada Lovelace saw that a general machine could manipulate symbols, not merely calculate numbers.",
-          "et": "Ada Lovelace mõistis, et üldotstarbeline masin võiks töödelda sümboleid, mitte üksnes arve."
+          "en": "The name Frisbee came from a student term linked to the Frisbie Pie Company and empty pie tins tossed for fun.",
+          "et": "Nimi frisbi tuli tudengite sõnast, mis seostus Frisbie Pie Company ja lõbu pärast visatud tühjade pirukavormidega."
         },
         "source": {
-          "sourceId": "wikipedia:ada_lovelace",
-          "title": "Ada Lovelace",
-          "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+          "sourceId": "wikipedia:frisbee",
+          "title": "Frisbee",
+          "url": "https://en.wikipedia.org/wiki/Frisbee",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-034:question:3",
-        "factKey": "built-in-technology-inventions:computing-pioneers:medium:person:alan-turing",
+        "factKey": "built-in-technology-inventions:trade-names-everyday-words:medium:brand:jet-ski",
         "tier": 3,
-        "subjectKey": "person:alan-turing",
+        "subjectKey": "brand:jet-ski",
         "clue": {
-          "en": "Identify the computing pioneer: they helped define computation and worked on British wartime codebreaking.",
-          "et": "Kes aitas määratleda arvutatavust ning töötas Briti sõjaaegse koodimurdmise kallal?"
+          "en": "Kawasaki sold this stand-up watercraft line, and its name is often used for personal watercraft in general. Name it.",
+          "et": "Kawasaki müüs selle nime all püstist veesõidukisarja ning nime kasutatakse sageli terve veesõidukiliigi kohta. Mis nimi see on?"
         },
         "response": {
-          "en": "Alan Turing",
-          "et": "Alan Turing"
+          "en": "Jet Ski",
+          "et": "Jet Ski"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["jetski", "Kawasaki Jet Ski"],
+          "et": ["jetski", "Kawasaki Jet Ski"]
         },
         "explanation": {
-          "en": "Alan Turing introduced an abstract tape machine used to formalise what algorithms can compute.",
-          "et": "Alan Turing kirjeldas abstraktset lindimasinat, millega formaliseeritakse algoritmide arvutusvõimet."
+          "en": "Jet Ski is Kawasaki's product-line name, and it is widely used as a common label for personal watercraft.",
+          "et": "Jet Ski on Kawasaki tootesarja nimi ning seda kasutatakse laialt üldnimetusena skuutrilaadsete veesõidukite kohta."
         },
         "source": {
-          "sourceId": "wikipedia:alan_turing",
-          "title": "Alan Turing",
-          "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+          "sourceId": "wikipedia:jet-ski",
+          "title": "Jet Ski",
+          "url": "https://en.wikipedia.org/wiki/Jet_Ski",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-034:question:4",
-        "factKey": "built-in-technology-inventions:computing-pioneers:medium:person:grace-hopper",
+        "factKey": "built-in-technology-inventions:trade-names-everyday-words:medium:brand:jacuzzi",
         "tier": 4,
-        "subjectKey": "person:grace-hopper",
+        "subjectKey": "brand:jacuzzi",
         "clue": {
-          "en": "Name the computing pioneer who championed programming languages closer to ordinary English.",
-          "et": "Vihjes kirjeldatud arvutustehnika teerajaja edendas programmeerimiskeeli, mis olid tavakeelele lähemal. Kes see on?"
+          "en": "A family company made hydrotherapy pumps and whirlpool baths; its surname became casual shorthand for many bubbling tubs. What name is it?",
+          "et": "Ühe perefirma nimi oli hüdroteraapiapumpadel ja mullivannidel ning sellest sai argine lühinimi paljude mullitavate vannide kohta. Mis nimi see on?"
         },
         "response": {
-          "en": "Grace Hopper",
-          "et": "Grace Hopper"
+          "en": "Jacuzzi",
+          "et": "Jacuzzi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Jacuzzi tub", "Jacuzzi bath"],
+          "et": ["Jacuzzi vann"]
         },
         "explanation": {
-          "en": "Grace Hopper worked on A-0 and FLOW-MATIC, important steps toward compilers and COBOL.",
-          "et": "Grace Hopper töötas A-0 ja FLOW-MATICu kallal, mis olid tähtsad sammud kompilaatorite ja COBOLi poole."
+          "en": "The Jacuzzi company developed hydrotherapy pumps and whirlpool baths, and the family name became a common hot-tub label.",
+          "et": "Jacuzzi ettevõte arendas hüdroteraapiapumpi ja mullivanne ning perekonnanimest sai levinud mullivanni nimetus."
         },
         "source": {
-          "sourceId": "wikipedia:grace_hopper",
-          "title": "Grace Hopper",
-          "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+          "sourceId": "wikipedia:jacuzzi",
+          "title": "Jacuzzi",
+          "url": "https://en.wikipedia.org/wiki/Jacuzzi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-034:question:5",
-        "factKey": "built-in-technology-inventions:computing-pioneers:medium:person:john-von-neumann",
+        "factKey": "built-in-technology-inventions:trade-names-everyday-words:medium:brand:taser",
         "tier": 5,
-        "subjectKey": "person:john-von-neumann",
+        "subjectKey": "brand:taser",
         "clue": {
-          "en": "Find the computing pioneer who lent his name to the stored-program architecture of most computers.",
-          "et": "Arvutustehnika teerajaja andis nime enamiku arvutite salvestatud programmi arhitektuurile. Leia sobiv vastus."
+          "en": "Jack Cover coined which less-lethal electric-weapon brand name as a loose nod to Tom Swift and an electric rifle?",
+          "et": "Millise vähem surmava elektrirelva brändinime mõtles Jack Cover välja vaba viitena Tom Swiftile ja elektripüssile?"
         },
         "response": {
-          "en": "John von Neumann",
-          "et": "John von Neumann"
+          "en": "Taser",
+          "et": "Taser"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "John von Neumann described instructions and data sharing one memory in the EDVAC report.",
-          "et": "John von Neumann kirjeldas EDVACi aruandes käske ja andmeid jagamas sama mälu."
+          "en": "Taser was named as a loose acronym inspired by the adventure title Tom Swift and His Electric Rifle.",
+          "et": "Taser nimetati vaba akronüümina, mille inspiratsiooniks oli seikluspealkiri Tom Swift and His Electric Rifle."
         },
         "source": {
-          "sourceId": "wikipedia:john_von_neumann",
-          "title": "John von Neumann",
-          "url": "https://en.wikipedia.org/wiki/John_von_Neumann",
+          "sourceId": "wikipedia:taser",
+          "title": "Taser",
+          "url": "https://en.wikipedia.org/wiki/Taser",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -8635,172 +8635,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-035",
     "name": {
-      "en": "Inside a Personal Computer",
-      "et": "Personaalarvuti sees"
+      "en": "Before the Smartphone",
+      "et": "Enne nutitelefoni"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-035:question:1",
-        "factKey": "built-in-technology-inventions:computer-components:medium:component:cpu",
+        "factKey": "built-in-technology-inventions:before-smartphone:medium:device:pager",
         "tier": 1,
-        "subjectKey": "component:cpu",
+        "subjectKey": "device:pager",
         "clue": {
-          "en": "A computer component executes program instructions and performs the main calculations. What term fits?",
-          "et": "Siin kirjeldatud arvutikomponent täidab programmi käske ning teeb põhilised arvutused. Mis see on?"
+          "en": "Before text threads lived on phones, this pocket device buzzed after receiving a number or short message. Name it.",
+          "et": "Enne telefonide sõnumilõimesid piiksus see taskuseade, kui sai numbri või lühisõnumi. Mis seade see on?"
         },
         "response": {
-          "en": "CPU",
-          "et": "protsessor"
+          "en": "pager",
+          "et": "peiler"
         },
         "acceptedVariants": {
-          "en": [
-            "central processing unit",
-            "processor"
-          ],
-          "et": [
-            "keskprotsessor",
-            "CPU"
-          ]
+          "en": ["beeper"],
+          "et": ["piipar"]
         },
         "explanation": {
-          "en": "CPU cycles through fetching, decoding, and executing instructions.",
-          "et": "Protsessor läbib käskude toomise, dekodeerimise ja täitmise tsüklit."
+          "en": "A pager is a wireless device for receiving numeric, text, or voice messages.",
+          "et": "Peiler on juhtmevaba seade, mis võtab vastu numbreid, teksti- või häälsõnumeid."
         },
         "source": {
-          "sourceId": "wikipedia:central_processing_unit",
-          "title": "Central processing unit",
-          "url": "https://en.wikipedia.org/wiki/Central_processing_unit",
+          "sourceId": "wikipedia:pager",
+          "title": "Pager",
+          "url": "https://en.wikipedia.org/wiki/Pager",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-035:question:2",
-        "factKey": "built-in-technology-inventions:computer-components:medium:component:ram",
+        "factKey": "built-in-technology-inventions:before-smartphone:medium:device:blackberry",
         "tier": 2,
-        "subjectKey": "component:ram",
+        "subjectKey": "device:blackberry",
         "clue": {
-          "en": "Recognise the computer component that holds working data that disappears when power is removed.",
-          "et": "Otsitav arvutikomponent hoiab tööandmeid, mis toite kadumisel kaovad. Mis see on?"
+          "en": "Office email followed many people around on these handhelds, famous for push mail and a tiny thumb keyboard. Name the line.",
+          "et": "Kontori e-post rändas paljudega kaasa nende pihuseadmetes, mida tunti tõukeposti ja pisikese pöidlaklaviatuuri järgi. Mis sari see oli?"
         },
         "response": {
-          "en": "RAM",
-          "et": "muutmälu"
+          "en": "BlackBerry",
+          "et": "BlackBerry"
         },
         "acceptedVariants": {
-          "en": [
-            "random-access memory"
-          ],
-          "et": [
-            "RAM",
-            "operatiivmälu"
-          ]
+          "en": ["RIM BlackBerry"],
+          "et": ["RIM BlackBerry"]
         },
         "explanation": {
-          "en": "RAM offers random access because any addressed location can be reached directly.",
-          "et": "Muutmälu pakub suvapöördust, sest igale aadressile pääseb otse."
+          "en": "BlackBerry devices became known for mobile QWERTY keyboards and push email or notification features.",
+          "et": "BlackBerry seadmed said tuntuks mobiilse QWERTY-klaviatuuri ning tõukeposti ja teavituste poolest."
         },
         "source": {
-          "sourceId": "wikipedia:random-access_memory",
-          "title": "Random-access memory",
-          "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+          "sourceId": "wikipedia:blackberry",
+          "title": "BlackBerry",
+          "url": "https://en.wikipedia.org/wiki/BlackBerry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-035:question:3",
-        "factKey": "built-in-technology-inventions:computer-components:medium:component:ssd",
+        "factKey": "built-in-technology-inventions:before-smartphone:medium:device:palmpilot",
         "tier": 3,
-        "subjectKey": "component:ssd",
+        "subjectKey": "device:palmpilot",
         "clue": {
-          "en": "Which computer component stores files without the spinning platters of a hard disk?",
-          "et": "Tuvasta järgmine arvutikomponent: see salvestab faile ilma kõvaketta pöörlevate plaatideta."
+          "en": "This 1990s organiser fit in a hand and used handwriting gestures to manage contacts, calendar items, and notes. Name it.",
+          "et": "See 1990. aastate taskuorganisaator mahtus kätte ning kasutas kontaktide, kalendri ja märkmete jaoks käekirjaliigutusi. Mis seade see oli?"
         },
         "response": {
-          "en": "solid-state drive",
-          "et": "pooljuhtketas"
+          "en": "PalmPilot",
+          "et": "PalmPilot"
         },
         "acceptedVariants": {
-          "en": [
-            "SSD"
-          ],
-          "et": [
-            "SSD"
-          ]
+          "en": ["Palm Pilot", "Palm PDA"],
+          "et": ["Palm Pilot", "Palm PDA"]
         },
         "explanation": {
-          "en": "Solid-state drive uses flash-memory cells and a controller that spreads writes to limit wear.",
-          "et": "Pooljuhtketas kasutab välkmälurakke ning kontrollerit, mis kulumise piiramiseks kirjutusi hajutab."
+          "en": "PalmPilot devices were personal digital assistants built around organiser software and handwriting input.",
+          "et": "PalmPiloti seadmed olid pihuarvutid, mille keskmes olid korraldustarkvara ja käekirjasisestus."
         },
         "source": {
-          "sourceId": "wikipedia:solid-state_drive",
-          "title": "Solid-state drive",
-          "url": "https://en.wikipedia.org/wiki/Solid-state_drive",
+          "sourceId": "wikipedia:palm-pda",
+          "title": "Palm PDA",
+          "url": "https://en.wikipedia.org/wiki/Palm_(PDA)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-035:question:4",
-        "factKey": "built-in-technology-inventions:computer-components:medium:component:gpu",
+        "factKey": "built-in-technology-inventions:before-smartphone:medium:device:nokia-9000-communicator",
         "tier": 4,
-        "subjectKey": "component:gpu",
+        "subjectKey": "device:nokia-9000-communicator",
         "clue": {
-          "en": "One computer component renders images with many calculations performed in parallel. Which one is described?",
-          "et": "Arvutikomponent renderdab pilte paljude paralleelselt tehtavate arvutustega. Mis see on?"
+          "en": "This clamshell from the mid-1990s combined GSM calls with email, fax, web access, organiser tools, and a full keyboard. Name the device.",
+          "et": "See 1990. aastate keskpaiga klappseade ühendas GSM-kõned, e-posti, faksi, veebipääsu, märkmiku ja täisklaviatuuri. Mis seade see oli?"
         },
         "response": {
-          "en": "graphics processing unit",
-          "et": "graafikaprotsessor"
+          "en": "Nokia 9000 Communicator",
+          "et": "Nokia 9000 Communicator"
         },
         "acceptedVariants": {
-          "en": [
-            "GPU"
-          ],
-          "et": [
-            "GPU"
-          ]
+          "en": ["9000 Communicator", "Nokia Communicator"],
+          "et": ["9000 Communicator", "Nokia Communicator"]
         },
         "explanation": {
-          "en": "Graphics processing unit uses numerous simpler cores suited to throughput rather than low-latency serial work.",
-          "et": "Graafikaprotsessor kasutab paljusid lihtsamaid tuumi, mis sobivad läbilaskevõimeks, mitte väikese viitega jadatööks."
+          "en": "The Nokia 9000 Communicator put phone, email, fax, web, organiser, and keyboard functions into one clamshell device.",
+          "et": "Nokia 9000 Communicator pani telefoni, e-posti, faksi, veebi, märkmiku ja klaviatuuri ühte klappseadmesse."
         },
         "source": {
-          "sourceId": "wikipedia:graphics_processing_unit",
-          "title": "Graphics processing unit",
-          "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit",
+          "sourceId": "wikipedia:nokia-9000-communicator",
+          "title": "Nokia 9000 Communicator",
+          "url": "https://en.wikipedia.org/wiki/Nokia_9000_Communicator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-035:question:5",
-        "factKey": "built-in-technology-inventions:computer-components:medium:component:motherboard",
+        "factKey": "built-in-technology-inventions:before-smartphone:medium:device:motorola-startac",
         "tier": 5,
-        "subjectKey": "component:motherboard",
+        "subjectKey": "device:motorola-startac",
         "clue": {
-          "en": "This computer component connects the processor, memory, storage, and expansion devices. What is it?",
-          "et": "See arvutikomponent ühendab protsessori, mälu, salvestid ja laiendusseadmed. Mis see on?"
+          "en": "This 1996 pocket-sized clamshell mobile folded above its display and was advertised as roughly pager-sized. Name the model.",
+          "et": "See 1996. aasta taskuformaadis klapptelefon murdus ekraani kohalt ning seda reklaamiti ligikaudu peileri suurusena. Mis mudel see oli?"
         },
         "response": {
-          "en": "motherboard",
-          "et": "emaplaat"
+          "en": "Motorola StarTAC",
+          "et": "Motorola StarTAC"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["StarTAC", "Motorola Star TAC", "Star TAC"],
+          "et": ["StarTAC", "Motorola Star TAC", "Star TAC"]
         },
         "explanation": {
-          "en": "Motherboard distributes power and data through sockets, buses, and chipset logic.",
-          "et": "Emaplaat jaotab toite ja andmeid pesade, siinide ning kiibistiku kaudu."
+          "en": "Motorola marketed the StarTAC clamshell mobile-phone series from 1996, with the original folding above its display.",
+          "et": "Motorola tõi StarTACi klapptelefonide sarja müügile 1996. aastal ning algne mudel murdus ekraani kohalt."
         },
         "source": {
-          "sourceId": "wikipedia:motherboard",
-          "title": "Motherboard",
-          "url": "https://en.wikipedia.org/wiki/Motherboard",
+          "sourceId": "wikipedia:startac",
+          "title": "StarTAC",
+          "url": "https://en.wikipedia.org/wiki/StarTAC",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -8808,153 +8789,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-036",
     "name": {
-      "en": "How Computers Represent Data",
-      "et": "Kuidas arvuti andmeid esitab"
+      "en": "How Gamers Took Control",
+      "et": "Kuidas mängija mängu juhtis"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-036:question:1",
-        "factKey": "built-in-technology-inventions:data-representation:medium:concept:bit",
+        "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:joystick",
         "tier": 1,
-        "subjectKey": "concept:bit",
+        "subjectKey": "controller:joystick",
         "clue": {
-          "en": "A data concept is the smallest binary unit, holding a zero or a one. Name it.",
-          "et": "Üks andmeesituse mõiste on väikseim kahendühik, mis hoiab nulli või ühte. Millist vastust otsime?"
+          "en": "Arcade cabinets and flight games often use this tilting stick that pivots on a base to report direction. Name it.",
+          "et": "Arkaadikapid ja lennumängud kasutavad sageli seda alusel pöörduvat kangi, mis annab suuna edasi. Mis see on?"
         },
         "response": {
-          "en": "bit",
-          "et": "bitt"
+          "en": "joystick",
+          "et": "juhtkang"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["control stick"],
+          "et": ["joystick"]
         },
         "explanation": {
-          "en": "Bit takes its name from the phrase binary digit.",
-          "et": "Bitt saab nime ingliskeelsest väljendist binary digit."
+          "en": "A joystick is an input device whose stick pivots on a base and reports its angle or direction.",
+          "et": "Juhtkang on sisendseade, mille kang pöördub alusel ning edastab nurga või suuna."
         },
         "source": {
-          "sourceId": "wikipedia:bit",
-          "title": "Bit",
-          "url": "https://en.wikipedia.org/wiki/Bit",
+          "sourceId": "wikipedia:joystick",
+          "title": "Joystick",
+          "url": "https://en.wikipedia.org/wiki/Joystick",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-036:question:2",
-        "factKey": "built-in-technology-inventions:data-representation:medium:concept:byte",
+        "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:d-pad",
         "tier": 2,
-        "subjectKey": "concept:byte",
+        "subjectKey": "controller:d-pad",
         "clue": {
-          "en": "This data concept normally groups eight bits into one addressable unit. What is it?",
-          "et": "See andmeesituse mõiste rühmitab tavaliselt kaheksa bitti üheks adresseeritavaks ühikuks. Mis see on?"
+          "en": "This flat cross-shaped thumb control sends up, down, left, right, and diagonal directions. Name it.",
+          "et": "See lame ristikujuline pöidlajuhtseade annab edasi üles, alla, vasakule, paremale ja diagonaalsuunad. Mis see on?"
         },
         "response": {
-          "en": "byte",
-          "et": "bait"
+          "en": "D-pad",
+          "et": "suunarist"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["directional pad", "direction pad"],
+          "et": ["D-pad", "suunapadi"]
         },
         "explanation": {
-          "en": "Byte was coined with altered spelling to avoid confusion with bit.",
-          "et": "Bait loodi muudetud kirjapildiga, et vältida segiajamist sõnaga bit."
+          "en": "A D-pad maps thumb movement on a flat cross to cardinal and diagonal directions.",
+          "et": "Suunarist teisendab pöidlaliigutuse tasasel ristil põhi- ja diagonaalsuundadeks."
         },
         "source": {
-          "sourceId": "wikipedia:byte",
-          "title": "Byte",
-          "url": "https://en.wikipedia.org/wiki/Byte",
+          "sourceId": "wikipedia:d-pad",
+          "title": "D-pad",
+          "url": "https://en.wikipedia.org/wiki/D-pad",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-036:question:3",
-        "factKey": "built-in-technology-inventions:data-representation:medium:concept:binary-number",
+        "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:light-gun",
         "tier": 3,
-        "subjectKey": "concept:binary-number",
+        "subjectKey": "controller:light-gun",
         "clue": {
-          "en": "Which data concept writes numbers using only the digits zero and one?",
-          "et": "Tuvasta järgmine andmeesituse mõiste: see kirjutab arve ainult numbrite null ja üks abil."
+          "en": "Duck Hunt and many arcade shooters used this pistol-shaped controller for aiming at the screen. Name the accessory.",
+          "et": "Duck Hunt ja paljud arkaadilaskmised kasutasid ekraanile sihtimiseks püstolikujulist kontrollerit. Mis tarvik see on?"
         },
         "response": {
-          "en": "binary",
-          "et": "kahendsüsteem"
+          "en": "light gun",
+          "et": "valguspüstol"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["lightgun"],
+          "et": ["valgusrelv"]
         },
         "explanation": {
-          "en": "Binary uses powers of two for place values just as decimal uses powers of ten.",
-          "et": "Kahendsüsteem kasutab kohaväärtustena kahe astmeid nagu kümnendsüsteem kümne astmeid."
+          "en": "A light gun is a pistol-shaped pointing and control device for arcade and video games.",
+          "et": "Valguspüstol on arkaadi- ja videomängudes kasutatav püstolikujuline osutus- ja juhtseade."
         },
         "source": {
-          "sourceId": "wikipedia:binary_number",
-          "title": "Binary number",
-          "url": "https://en.wikipedia.org/wiki/Binary_number",
+          "sourceId": "wikipedia:light-gun",
+          "title": "Light gun",
+          "url": "https://en.wikipedia.org/wiki/Light_gun",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-036:question:4",
-        "factKey": "built-in-technology-inventions:data-representation:medium:standard:unicode",
+        "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:dance-pad",
         "tier": 4,
-        "subjectKey": "standard:unicode",
+        "subjectKey": "controller:dance-pad",
         "clue": {
-          "en": "A data concept assigns code points to writing systems and symbols worldwide. Name it.",
-          "et": "Üks andmeesituse mõiste määrab koodipunktid maailma kirjasüsteemidele ja sümbolitele. Millist vastust otsime?"
+          "en": "In rhythm games, players step on panels of this flat floor controller instead of pressing buttons by hand. Name it.",
+          "et": "Rütmimängudes astuvad mängijad selle lameda põrandakontrolleri paneelidele, mitte ei vajuta nuppe käega. Mis see on?"
         },
         "response": {
-          "en": "Unicode",
-          "et": "Unicode"
+          "en": "dance pad",
+          "et": "tantsumatt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["dance mat"],
+          "et": ["tantsupadi"]
         },
         "explanation": {
-          "en": "Unicode separates an abstract character’s code point from encodings such as UTF-8.",
-          "et": "Unicode eristab abstraktse märgi koodipunkti kodeeringutest, näiteks UTF-8-st."
+          "en": "A dance pad is a flat floor controller whose panels correspond to directions or actions in music games.",
+          "et": "Tantsumatt on lame põrandakontroller, mille paneelid vastavad muusikamängudes suundadele või tegevustele."
         },
         "source": {
-          "sourceId": "wikipedia:unicode",
-          "title": "Unicode",
-          "url": "https://en.wikipedia.org/wiki/Unicode",
+          "sourceId": "wikipedia:dance-pad",
+          "title": "Dance pad",
+          "url": "https://en.wikipedia.org/wiki/Dance_pad",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-036:question:5",
-        "factKey": "built-in-technology-inventions:data-representation:medium:concept:hexadecimal",
+        "factKey": "built-in-technology-inventions:gamers-took-control:medium:controller:force-feedback",
         "tier": 5,
-        "subjectKey": "concept:hexadecimal",
+        "subjectKey": "controller:force-feedback",
         "clue": {
-          "en": "Find the data concept that uses digits zero to nine plus A to F.",
-          "et": "Andmeesituse mõiste kasutab numbreid nullist üheksani ning tähti A-st F-ni. Leia sobiv vastus."
+          "en": "A racing wheel that fights back in a bend is using this tactile effect, created by motors in the controller. Name the effect.",
+          "et": "Rool, mis kurvis kätele vastu töötab, kasutab seda kontrolleri mootoritest tulevat taktiilset mõju. Mis mõju see on?"
         },
         "response": {
-          "en": "hexadecimal",
-          "et": "kuueteistkümnendsüsteem"
+          "en": "force feedback",
+          "et": "jõutagasiside"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["haptic feedback"],
+          "et": ["haptiline tagasiside"]
         },
         "explanation": {
-          "en": "Hexadecimal maps neatly to binary because one digit corresponds to four bits.",
-          "et": "Kuueteistkümnendsüsteem sobitub kahendsüsteemiga, sest üks number vastab neljale bitile."
+          "en": "Force feedback uses motors to resist or move a control, such as a racing wheel simulating cornering forces.",
+          "et": "Jõutagasiside kasutab mootoreid juhtseadme vastupanuks või liigutamiseks, näiteks kurvijõude matkivas roolis."
         },
         "source": {
-          "sourceId": "wikipedia:hexadecimal",
-          "title": "Hexadecimal",
-          "url": "https://en.wikipedia.org/wiki/Hexadecimal",
+          "sourceId": "wikipedia:haptic-technology",
+          "title": "Haptic technology",
+          "url": "https://en.wikipedia.org/wiki/Haptic_technology",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -8962,157 +8943,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-037",
     "name": {
-      "en": "Operating Systems We Recognise",
-      "et": "Tuntud operatsioonisüsteemid"
+      "en": "Sounds on a Physical Format",
+      "et": "Heli füüsilisel kandjal"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-037:question:1",
-        "factKey": "built-in-technology-inventions:operating-systems:medium:software:unix",
+        "factKey": "built-in-technology-inventions:sounds-physical-format:medium:medium:compact-disc",
         "tier": 1,
-        "subjectKey": "software:unix",
+        "subjectKey": "medium:compact-disc",
         "clue": {
-          "en": "An operating system or family began at Bell Labs and inspired many later multiuser systems. What term fits?",
-          "et": "Siin kirjeldatud operatsioonisüsteem või süsteemiperekond sai alguse Bell Labsis ning innustas paljusid hilisemaid mitmekasutajasüsteeme. Mis see on?"
+          "en": "Philips and Sony co-developed this shiny optical audio format, making track skipping much easier than on tape. Name it.",
+          "et": "Philips ja Sony arendasid koos selle läikiva optilise helikandja, millel oli lugusid palju lihtsam vahele jätta kui lindil. Mis see on?"
         },
         "response": {
-          "en": "Unix",
-          "et": "Unix"
+          "en": "Compact Disc (CD)",
+          "et": "kompaktplaat (CD)"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["CD", "compact disc"],
+          "et": ["CD", "kompaktplaat"]
         },
         "explanation": {
-          "en": "Unix popularised small composable tools connected by pipes.",
-          "et": "Unix tegi populaarseks väikesed torudega ühendatavad tööriistad."
+          "en": "The compact disc is a Philips and Sony digital optical-disc format for storing and playing digital audio.",
+          "et": "Kompaktplaat on Philipsi ja Sony digitaalne optilise plaadi formaat digitaalse heli talletamiseks ja esitamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:unix",
-          "title": "Unix",
-          "url": "https://en.wikipedia.org/wiki/Unix",
+          "sourceId": "wikipedia:compact-disc",
+          "title": "Compact disc",
+          "url": "https://en.wikipedia.org/wiki/Compact_disc",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-037:question:2",
-        "factKey": "built-in-technology-inventions:operating-systems:medium:software:linux",
+        "factKey": "built-in-technology-inventions:sounds-physical-format:medium:medium:minidisc",
         "tier": 2,
-        "subjectKey": "software:linux",
+        "subjectKey": "medium:minidisc",
         "clue": {
-          "en": "Find the operating system or family that is the open-source kernel used by many servers and distributions.",
-          "et": "Operatsioonisüsteem või süsteemiperekond on avatud lähtekoodiga tuum, mida kasutavad paljud serverid ja distributsioonid. Leia sobiv vastus."
+          "en": "Sony sold this small erasable audio disc sealed inside a protective cartridge. What format was it?",
+          "et": "Sony müüs seda väikest kustutatavat heliplaati kaitsekassetis. Mis formaat see oli?"
         },
         "response": {
-          "en": "Linux",
-          "et": "Linux"
+          "en": "MiniDisc",
+          "et": "MiniDisc"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["MD", "Sony MiniDisc"],
+          "et": ["MD", "Sony MiniDisc"]
         },
         "explanation": {
-          "en": "Linux is technically the kernel paired with user-space tools in systems such as Debian.",
-          "et": "Linux on täpsemalt tuum, mis ühendatakse kasutajaruumitööriistadega, näiteks Debianis."
+          "en": "MiniDisc was Sony's erasable magneto-optical disc format for digitised audio, enclosed in a protective cartridge.",
+          "et": "MiniDisc oli Sony kustutatav magnetoptiline digiheli formaat, mille plaat oli kaitsekassetis."
         },
         "source": {
-          "sourceId": "wikipedia:linux",
-          "title": "Linux",
-          "url": "https://en.wikipedia.org/wiki/Linux",
+          "sourceId": "wikipedia:minidisc",
+          "title": "MiniDisc",
+          "url": "https://en.wikipedia.org/wiki/MiniDisc",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-037:question:3",
-        "factKey": "built-in-technology-inventions:operating-systems:medium:software:microsoft-windows",
+        "factKey": "built-in-technology-inventions:sounds-physical-format:medium:medium:8-track-cartridge",
         "tier": 3,
-        "subjectKey": "software:microsoft-windows",
+        "subjectKey": "medium:8-track-cartridge",
         "clue": {
-          "en": "Identify the operating system or family: it became the dominant graphical desktop system for IBM-compatible PCs.",
-          "et": "Mis operatsioonisüsteem või süsteemiperekond sai IBM-ühilduvate arvutite valdavaks graafiliseks töölauasüsteemiks?"
+          "en": "This single-spool cartridge played an endless loop of analogue sound in many 1970s cars and could not rewind. Name it.",
+          "et": "See ühe pooliga kassett mängis paljudes 1970. aastate autodes lõputut analoogheli silmust ega saanud tagasi kerida. Mis see oli?"
         },
         "response": {
-          "en": "Microsoft Windows",
-          "et": "Microsoft Windows"
+          "en": "8-track cartridge",
+          "et": "8-rajaline kassett"
         },
         "acceptedVariants": {
-          "en": [
-            "Windows"
-          ],
-          "et": [
-            "Windows"
-          ]
+          "en": ["8-track", "eight-track cartridge", "eight-track"],
+          "et": ["8-track", "kaheksarajaline kassett", "8-rajaline lintkassett"]
         },
         "explanation": {
-          "en": "Microsoft Windows moved its consumer line onto the NT-family kernel with the XP release.",
-          "et": "Microsoft Windows viis tarbijaliini XP väljalaskega NT-perekonna tuumale."
+          "en": "An 8-track cartridge uses a single-spool endless loop, so playback continues but ordinary rewinding is not available.",
+          "et": "8-rajaline kassett kasutab ühe pooliga lõputut linti, mistõttu esitus jätkub, kuid tavapärast tagasikerimist ei ole."
         },
         "source": {
-          "sourceId": "wikipedia:microsoft_windows",
-          "title": "Microsoft Windows",
-          "url": "https://en.wikipedia.org/wiki/Microsoft_Windows",
+          "sourceId": "wikipedia:8-track-cartridge",
+          "title": "8-track cartridge",
+          "url": "https://en.wikipedia.org/wiki/8-track_cartridge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-037:question:4",
-        "factKey": "built-in-technology-inventions:operating-systems:medium:software:macos",
+        "factKey": "built-in-technology-inventions:sounds-physical-format:medium:medium:reel-to-reel-tape",
         "tier": 4,
-        "subjectKey": "software:macos",
+        "subjectKey": "medium:reel-to-reel-tape",
         "clue": {
-          "en": "An operating system or family runs Apple’s Mac computers and descends from NeXT technology. What term fits?",
-          "et": "Siin kirjeldatud operatsioonisüsteem või süsteemiperekond töötab Apple’i Mac-arvutitel ning pärineb NeXTi tehnoloogiast. Mis see on?"
+          "en": "Studios long used two open reels, sending magnetic tape from one side across the heads to the other. Name the format.",
+          "et": "Stuudiotes liikus magnetlint kaua kahe avatud rulli vahel, ühelt poolt üle peade teisele. Mis formaat see on?"
         },
         "response": {
-          "en": "macOS",
-          "et": "macOS"
+          "en": "reel-to-reel tape",
+          "et": "lahtine magnetlint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["open-reel tape", "reel to reel"],
+          "et": ["lahtine lint", "rullmagnetlint"]
         },
         "explanation": {
-          "en": "MacOS uses the Darwin foundation with the XNU hybrid kernel.",
-          "et": "MacOS kasutab Darwini alust koos XNU hübriidtuumaga."
+          "en": "Reel-to-reel recording runs magnetic tape from a supply reel across tape heads onto a separate take-up reel.",
+          "et": "Lahtise magnetlindi salvestus viib lindi etteanderullilt üle helipeade eraldi vastuvõturullile."
         },
         "source": {
-          "sourceId": "wikipedia:macos",
-          "title": "MacOS",
-          "url": "https://en.wikipedia.org/wiki/MacOS",
+          "sourceId": "wikipedia:reel-to-reel-audio",
+          "title": "Reel-to-reel audio tape recording",
+          "url": "https://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-037:question:5",
-        "factKey": "built-in-technology-inventions:operating-systems:medium:software:android",
+        "factKey": "built-in-technology-inventions:sounds-physical-format:medium:medium:phonograph-cylinder",
         "tier": 5,
-        "subjectKey": "software:android",
+        "subjectKey": "medium:phonograph-cylinder",
         "clue": {
-          "en": "Identify this operating system or family: it powers many touch-screen phones with a Linux-based platform.",
-          "et": "Kirjeldatud operatsioonisüsteem või süsteemiperekond käitab paljusid puuteekraaniga telefone Linuxil põhineva platvormiga. Mis on selle nimi?"
+          "en": "Before flat records took over, this round recording medium was the earliest commercial way to record and replay sound. Name it.",
+          "et": "Enne lapikute plaatide võidukäiku oli see ümmargune kandja varaseim kaubanduslik viis heli salvestada ja taasesitada. Mis see oli?"
         },
         "response": {
-          "en": "Android",
-          "et": "Android"
+          "en": "phonograph cylinder",
+          "et": "fonograafisilinder"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["phonograph cylinders", "wax cylinder"],
+          "et": ["vahasilinder", "fonograafi silinder"]
         },
         "explanation": {
-          "en": "Android runs most applications in a managed runtime rather than as ordinary desktop Linux programs.",
-          "et": "Android käitab enamikku rakendusi hallatud käituskeskkonnas, mitte tavaliste töölaua-Linuxi programmidena."
+          "en": "Phonograph cylinders were the earliest commercial medium for recording and reproducing sound.",
+          "et": "Fonograafisilindrid olid varaseim kaubanduslik kandja heli salvestamiseks ja taas esitamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:android_(operating_system)",
-          "title": "Android (operating system)",
-          "url": "https://en.wikipedia.org/wiki/Android_(operating_system)",
+          "sourceId": "wikipedia:phonograph-cylinder",
+          "title": "Phonograph cylinder",
+          "url": "https://en.wikipedia.org/wiki/Phonograph_cylinder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9120,157 +9097,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-038",
     "name": {
-      "en": "Ways to Turn Code into Action",
-      "et": "Kuidas kood tööle hakkab"
+      "en": "Home Viewing Before Streaming",
+      "et": "Kodune vaatamine enne voogedastust"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-038:question:1",
-        "factKey": "built-in-technology-inventions:programming-tools:medium:software:compiler",
+        "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:device:videocassette-recorder",
         "tier": 1,
-        "subjectKey": "software:compiler",
+        "subjectKey": "device:videocassette-recorder",
         "clue": {
-          "en": "A programming concept translates source code into another form before it runs. What term fits?",
-          "et": "Siin kirjeldatud programmeerimismõiste tõlgib lähtekoodi enne käivitamist teise vormi. Mis see on?"
+          "en": "This home machine could record a TV programme onto cassette tape and play it back later. Name the device.",
+          "et": "See kodune seade salvestas telesaate kassetilindile ja mängis selle hiljem uuesti ette. Mis seade see oli?"
         },
         "response": {
-          "en": "compiler",
-          "et": "kompilaator"
+          "en": "videocassette recorder (VCR)",
+          "et": "videomagnetofon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["VCR", "video cassette recorder"],
+          "et": ["VCR", "videomakk", "videosalvesti"]
         },
         "explanation": {
-          "en": "Compiler commonly performs lexical analysis, parsing, optimisation, and code generation.",
-          "et": "Kompilaator teeb tavaliselt leksikaalanalüüsi, parsimise, optimeerimise ja koodigeneratsiooni."
+          "en": "A videocassette recorder records analogue television audio and video onto cassette tape for later playback.",
+          "et": "Videomagnetofon salvestab analoogtelevisiooni heli ja pildi kassetilindile, et seda hiljem uuesti vaadata."
         },
         "source": {
-          "sourceId": "wikipedia:compiler",
-          "title": "Compiler",
-          "url": "https://en.wikipedia.org/wiki/Compiler",
+          "sourceId": "wikipedia:videocassette-recorder",
+          "title": "Videocassette recorder",
+          "url": "https://en.wikipedia.org/wiki/Videocassette_recorder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-038:question:2",
-        "factKey": "built-in-technology-inventions:programming-tools:medium:software:interpreter",
+        "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:technology:teletext",
         "tier": 2,
-        "subjectKey": "software:interpreter",
+        "subjectKey": "technology:teletext",
         "clue": {
-          "en": "This programming concept executes a program through another program rather than only producing an executable. What is it?",
-          "et": "See programmeerimismõiste täidab programmi teise programmi kaudu, mitte üksnes käivitatavat faili luues. Mis see on?"
+          "en": "On old TVs, viewers could type page numbers to read news, weather, and simple graphics carried inside the broadcast signal. What service was this?",
+          "et": "Vanades telerites sai leheküljenumbreid sisestades lugeda uudiseid, ilma ja lihtsat graafikat, mis tuli koos telesignaaliga. Mis teenus see oli?"
         },
         "response": {
-          "en": "interpreter",
-          "et": "interpretaator"
+          "en": "teletext",
+          "et": "teletekst"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Interpreter can evaluate syntax trees or bytecode incrementally at runtime.",
-          "et": "Interpretaator võib käitusajal süntaksipuid või baitkoodi järk-järgult hinnata."
+          "en": "Teletext sends numbered pages of text and simple graphics within a television broadcast signal for equipped sets.",
+          "et": "Teletekst saadab nummerdatud tekstilehti ja lihtsat graafikat telesignaali sees seda toetavatele teleritele."
         },
         "source": {
-          "sourceId": "wikipedia:interpreter_(computing)",
-          "title": "Interpreter (computing)",
-          "url": "https://en.wikipedia.org/wiki/Interpreter_(computing)",
+          "sourceId": "wikipedia:teletext",
+          "title": "Teletext",
+          "url": "https://en.wikipedia.org/wiki/Teletext",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-038:question:3",
-        "factKey": "built-in-technology-inventions:programming-tools:medium:concept:object-oriented-programming",
+        "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:medium:laserdisc",
         "tier": 3,
-        "subjectKey": "concept:object-oriented-programming",
+        "subjectKey": "medium:laserdisc",
         "clue": {
-          "en": "What programming concept organises software around objects that combine data and behaviour?",
-          "et": "Järgmine programmeerimismõiste korraldab tarkvara objektide ümber, mis ühendavad andmed ja käitumise. Milline see on?"
+          "en": "Before DVDs, film fans could buy movies on huge shiny discs about the size of vinyl records. What format was this?",
+          "et": "Enne DVD-sid said filmisõbrad osta filme suurte läikivate, vinüülplaadi mõõtu plaatidena. Mis formaat see oli?"
         },
         "response": {
-          "en": "object-oriented programming",
-          "et": "objektorienteeritud programmeerimine"
+          "en": "LaserDisc",
+          "et": "LaserDisc"
         },
         "acceptedVariants": {
-          "en": [
-            "OOP"
-          ],
-          "et": [
-            "OOP"
-          ]
+          "en": ["Laser Disc"],
+          "et": ["Laser Disc"]
         },
         "explanation": {
-          "en": "Object-oriented programming commonly uses encapsulation, inheritance, and polymorphism.",
-          "et": "Objektorienteeritud programmeerimine kasutab tavaliselt kapseldamist, pärilust ja polümorfismi."
+          "en": "LaserDisc was an early commercial optical-disc home-video medium, usually using record-sized discs with analogue video.",
+          "et": "LaserDisc oli varajane optiline koduvideo formaat, kus kasutati tavaliselt vinüülplaadi suurusi analoogvideoga plaate."
         },
         "source": {
-          "sourceId": "wikipedia:object-oriented_programming",
-          "title": "Object-oriented programming",
-          "url": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+          "sourceId": "wikipedia:laserdisc",
+          "title": "LaserDisc",
+          "url": "https://en.wikipedia.org/wiki/LaserDisc",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-038:question:4",
-        "factKey": "built-in-technology-inventions:programming-tools:medium:concept:functional-programming",
+        "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:device:tivo",
         "tier": 4,
-        "subjectKey": "concept:functional-programming",
+        "subjectKey": "device:tivo",
         "clue": {
-          "en": "A programming concept treats computation as the evaluation and composition of functions. What term fits?",
-          "et": "Siin kirjeldatud programmeerimismõiste käsitleb arvutust funktsioonide hindamise ja komponeerimisena. Mis see on?"
+          "en": "This brand of digital video recorder stored television on a hard disk and paired it with an on-screen programme guide. Name it.",
+          "et": "See digitaalse videosalvesti bränd talletas telesaateid kõvakettale ja sidus need ekraanil oleva saatekavaga. Mis bränd see oli?"
         },
         "response": {
-          "en": "functional programming",
-          "et": "funktsionaalne programmeerimine"
+          "en": "TiVo",
+          "et": "TiVo"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Functional programming favours immutable data and limits observable side effects.",
-          "et": "Funktsionaalne programmeerimine eelistab muutumatuid andmeid ning piirab nähtavaid kõrvalmõjusid."
+          "en": "TiVo is a digital video recorder that stores digitised television on a hard disk and provides an on-screen programme guide.",
+          "et": "TiVo on digitaalne videosalvesti, mis salvestab digiteeritud televisiooni kõvakettale ja pakub ekraanil saatekava."
         },
         "source": {
-          "sourceId": "wikipedia:functional_programming",
-          "title": "Functional programming",
-          "url": "https://en.wikipedia.org/wiki/Functional_programming",
+          "sourceId": "wikipedia:tivo",
+          "title": "TiVo",
+          "url": "https://en.wikipedia.org/wiki/TiVo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-038:question:5",
-        "factKey": "built-in-technology-inventions:programming-tools:medium:concept:assembly-language",
+        "factKey": "built-in-technology-inventions:home-viewing-before-streaming:medium:medium:super-8-film",
         "tier": 5,
-        "subjectKey": "concept:assembly-language",
+        "subjectKey": "medium:super-8-film",
         "clue": {
-          "en": "This programming concept uses mnemonic instructions close to a processor’s machine code. What is it?",
-          "et": "See programmeerimismõiste kasutab protsessori masinakoodile lähedasi mnemoonilisi käske. Mis see on?"
+          "en": "Kodak's improved 8 mm home-movie format arrived in 1965 and became a familiar consumer way to shoot and project family films. Name it.",
+          "et": "Kodaki täiustatud 8 mm kodufilmiformaat tuli 1965. aastal ja sai tarbijatele tuttavaks viisiks perefilme võtta ning näidata. Mis formaat see oli?"
         },
         "response": {
-          "en": "assembly language",
-          "et": "assemblerkeel"
+          "en": "Super 8 film",
+          "et": "Super 8 film"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Super 8", "Super 8mm film"],
+          "et": ["Super 8", "Super 8 mm film"]
         },
         "explanation": {
-          "en": "Assembly language needs an assembler and targets a particular instruction-set architecture.",
-          "et": "Assemblerkeel vajab assemblerit ning sihib kindlat käsustikuarhitektuuri."
+          "en": "Kodak released Super 8 in 1965 as an improved 8 mm format, and it became popular for consumer home movies.",
+          "et": "Kodak tõi Super 8 formaadi välja 1965. aastal täiustatud 8 mm vorminguna ning see sai populaarseks kodufilmide tegemisel."
         },
         "source": {
-          "sourceId": "wikipedia:assembly_language",
-          "title": "Assembly language",
-          "url": "https://en.wikipedia.org/wiki/Assembly_language",
+          "sourceId": "wikipedia:super-8-film",
+          "title": "Super 8 film",
+          "url": "https://en.wikipedia.org/wiki/Super_8_film",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9278,169 +9251,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-039",
     "name": {
-      "en": "Building Blocks of the Web",
-      "et": "Veebi ehituskivid"
+      "en": "Fiction's Famous Technology",
+      "et": "Kuulsad väljamõeldud tehnoloogiad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-039:question:1",
-        "factKey": "built-in-technology-inventions:web-foundations:medium:standard:html",
+        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:arc-reactor",
         "tier": 1,
-        "subjectKey": "standard:html",
+        "subjectKey": "fictional-device:arc-reactor",
         "clue": {
-          "en": "A web technology marks up headings, links, images, and other page structure. What term fits?",
-          "et": "Siin kirjeldatud veebitehnoloogia märgendab pealkirjad, lingid, pildid ja muu lehestruktuuri. Mis see on?"
+          "en": "In the Marvel films, Tony Stark keeps a tiny power source in his chest that also keeps shrapnel away from his heart. What is it called?",
+          "et": "Marveli filmides hoiab Tony Stark rinnus pisikest energiaallikat, mis takistab šrapnellil südamesse jõudmast. Mis selle nimi on?"
         },
         "response": {
-          "en": "HTML",
-          "et": "HTML"
+          "en": "arc reactor",
+          "et": "kaarreaktor"
         },
         "acceptedVariants": {
-          "en": [
-            "HyperText Markup Language"
-          ],
-          "et": [
-            "hüperteksti märgistuskeel"
-          ]
+          "en": ["miniature arc reactor"],
+          "et": ["miniatuurne kaarreaktor"]
         },
         "explanation": {
-          "en": "HTML builds a document tree from elements rather than describing visual appearance alone.",
-          "et": "HTML loob elementidest dokumendipuu ega kirjelda üksnes välimust."
+          "en": "Tony Stark's miniature arc reactor powers his armour and keeps shrapnel from reaching his heart.",
+          "et": "Tony Starki miniatuurne kaarreaktor annab energiat tema raudrüüle ja hoiab šrapnelli südamest eemal."
         },
         "source": {
-          "sourceId": "wikipedia:html",
-          "title": "HTML",
-          "url": "https://en.wikipedia.org/wiki/HTML",
+          "sourceId": "wikipedia:arc-reactor-mcu",
+          "title": "Features of the Marvel Cinematic Universe",
+          "url": "https://en.wikipedia.org/wiki/Arc_reactor_(Marvel_Cinematic_Universe)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-039:question:2",
-        "factKey": "built-in-technology-inventions:web-foundations:medium:standard:css",
+        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:sonic-screwdriver",
         "tier": 2,
-        "subjectKey": "standard:css",
+        "subjectKey": "fictional-device:sonic-screwdriver",
         "clue": {
-          "en": "This web technology controls the layout and visual style of web documents. What is it?",
-          "et": "See veebitehnoloogia juhib veebidokumentide paigutust ja visuaalset stiili. Mis see on?"
+          "en": "The Doctor carries this fictional multitool in Doctor Who, using it for locks, scans, and many other convenient jobs. Name it.",
+          "et": "Doctor Who peategelane kannab seda väljamõeldud mitmeotstarbelist tööriista, millega avada lukke, skaneerida ja teha palju muud. Mis see on?"
         },
         "response": {
-          "en": "CSS",
-          "et": "CSS"
+          "en": "sonic screwdriver",
+          "et": "helikruvikeeraja"
         },
         "acceptedVariants": {
-          "en": [
-            "Cascading Style Sheets"
-          ],
-          "et": [
-            "kaskaadlaadistik"
-          ]
+          "en": ["sonic screwdriver tool"],
+          "et": ["helikruvits"]
         },
         "explanation": {
-          "en": "CSS resolves competing rules through cascade, specificity, and source order.",
-          "et": "CSS lahendab konkureerivad reeglid kaskaadi, spetsiifilisuse ja lähtejärjekorra kaudu."
+          "en": "The sonic screwdriver is the Doctor's fictional multifunctional tool in Doctor Who.",
+          "et": "Helikruvikeeraja on Doctor Who Doktori väljamõeldud mitmeotstarbeline tööriist."
         },
         "source": {
-          "sourceId": "wikipedia:css",
-          "title": "CSS",
-          "url": "https://en.wikipedia.org/wiki/CSS",
+          "sourceId": "wikipedia:sonic-screwdriver",
+          "title": "Sonic screwdriver",
+          "url": "https://en.wikipedia.org/wiki/Sonic_screwdriver",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-039:question:3",
-        "factKey": "built-in-technology-inventions:web-foundations:medium:software:javascript",
+        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:portal-gun",
         "tier": 3,
-        "subjectKey": "software:javascript",
+        "subjectKey": "fictional-device:portal-gun",
         "clue": {
-          "en": "What web technology adds interactive program logic to web pages?",
-          "et": "Järgmine veebitehnoloogia lisab veebilehtedele interaktiivse programmiloogika. Milline see on?"
+          "en": "In the Portal games, this handheld Aperture gadget places two linked openings on suitable flat surfaces. Name the gadget.",
+          "et": "Portali mängudes paigutab see Aperture'i käeshoitav vidin sobivatele lamedatele pindadele kaks ühendatud avaust. Mis vidin see on?"
         },
         "response": {
-          "en": "JavaScript",
-          "et": "JavaScript"
+          "en": "portal gun",
+          "et": "portaalipüstol"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Aperture Science Handheld Portal Device", "portal device"],
+          "et": ["Aperture Science Handheld Portal Device", "portaaliseade"]
         },
         "explanation": {
-          "en": "JavaScript was standardised as ECMAScript and uses prototype-based inheritance.",
-          "et": "JavaScript standarditi ECMAScriptina ning kasutab prototüübipõhist pärilust."
+          "en": "The Aperture Science Handheld Portal Device creates two linked portals that players can pass between.",
+          "et": "Aperture Science Handheld Portal Device loob kaks ühendatud portaali, mille vahel mängija saab liikuda."
         },
         "source": {
-          "sourceId": "wikipedia:javascript",
-          "title": "JavaScript",
-          "url": "https://en.wikipedia.org/wiki/JavaScript",
+          "sourceId": "wikipedia:portal-gun",
+          "title": "Portal series",
+          "url": "https://en.wikipedia.org/wiki/Portal_gun",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-039:question:4",
-        "factKey": "built-in-technology-inventions:web-foundations:medium:standard:url",
+        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:bat-signal",
         "tier": 4,
-        "subjectKey": "standard:url",
+        "subjectKey": "fictional-device:bat-signal",
         "clue": {
-          "en": "A web technology gives a network resource its web address. Name it.",
-          "et": "Üks veebitehnoloogia annab võrguressursile veebiaadressi. Millist vastust otsime?"
+          "en": "Gotham police shine this modified searchlight into the sky, projecting a bat emblem to summon Batman. Name it.",
+          "et": "Gothami politsei suunab selle muudetud prožektori taevasse, et nahkhiireembleemiga Batman kohale kutsuda. Mis signaal see on?"
         },
         "response": {
-          "en": "URL",
-          "et": "URL"
+          "en": "Bat-Signal",
+          "et": "Bat-Signal"
         },
         "acceptedVariants": {
-          "en": [
-            "uniform resource locator"
-          ],
-          "et": [
-            "ühtne ressursilokaator"
-          ]
+          "en": ["Batman signal"],
+          "et": ["nahkhiiresignaal"]
         },
         "explanation": {
-          "en": "URL is one kind of URI and can include scheme, host, path, query, and fragment.",
-          "et": "URL on URI liik ning võib sisaldada skeemi, hosti, teed, päringut ja fragmenti."
+          "en": "The Bat-Signal is a modified searchlight that projects a bat emblem over Gotham City to summon Batman.",
+          "et": "Bat-Signal on muudetud prožektor, mis heidab Gothami kohale nahkhiireembleemi, et Batman välja kutsuda."
         },
         "source": {
-          "sourceId": "wikipedia:url",
-          "title": "URL",
-          "url": "https://en.wikipedia.org/wiki/URL",
+          "sourceId": "wikipedia:bat-signal",
+          "title": "Bat-Signal",
+          "url": "https://en.wikipedia.org/wiki/Bat-Signal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-039:question:5",
-        "factKey": "built-in-technology-inventions:web-foundations:medium:software:web-browser",
+        "factKey": "built-in-technology-inventions:fiction-famous-technology:medium:fictional-device:tricorder",
         "tier": 5,
-        "subjectKey": "software:web-browser",
+        "subjectKey": "fictional-device:tricorder",
         "clue": {
-          "en": "Identify this web technology: it retrieves pages and renders them for a user to navigate.",
-          "et": "Kirjeldatud veebitehnoloogia hangib lehed ning renderdab need kasutajale navigeerimiseks. Mis on selle nimi?"
+          "en": "Star Trek crews carry this handheld scanner to sense surroundings, record data, and analyse what it finds. Name it.",
+          "et": "Star Treki meeskonnad kannavad seda käeshoitavat skannerit ümbruse tajumiseks, andmete salvestamiseks ja leidude analüüsimiseks. Mis see on?"
         },
         "response": {
-          "en": "web browser",
-          "et": "veebibrauser"
+          "en": "tricorder",
+          "et": "trikorder"
         },
         "acceptedVariants": {
-          "en": [
-            "browser"
-          ],
-          "et": [
-            "brauser"
-          ]
+          "en": ["Star Trek tricorder"],
+          "et": ["Star Treki trikorder"]
         },
         "explanation": {
-          "en": "Web browser uses layout and JavaScript engines while enforcing origins and other security boundaries.",
-          "et": "Veebibrauser kasutab paigutus- ja JavaScripti mootorit ning jõustab päritolu- ja muid turvapiire."
+          "en": "A Star Trek tricorder is a handheld sensor that scans environments, records data, and analyses it.",
+          "et": "Star Treki trikorder on käeshoitav andur, mis skaneerib ümbrust, salvestab andmeid ja analüüsib neid."
         },
         "source": {
-          "sourceId": "wikipedia:web_browser",
-          "title": "Web browser",
-          "url": "https://en.wikipedia.org/wiki/Web_browser",
+          "sourceId": "wikipedia:tricorder",
+          "title": "Tricorder",
+          "url": "https://en.wikipedia.org/wiki/Tricorder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9448,173 +9405,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-040",
     "name": {
-      "en": "Languages of the Internet",
-      "et": "Interneti protokollid"
+      "en": "Materials You Meet in Real Life",
+      "et": "Materjalid meie ümber"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-040:question:1",
-        "factKey": "built-in-technology-inventions:internet-protocols:medium:protocol:tcp",
+        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:lycra",
         "tier": 1,
-        "subjectKey": "protocol:tcp",
+        "subjectKey": "material:lycra",
         "clue": {
-          "en": "Networking standard or service delivers an ordered, reliable byte stream between applications. What is it called?",
-          "et": "Milline võrgustandard või -teenus edastab rakenduste vahel järjestatud usaldusväärse baidivoo?"
+          "en": "This stretchy fibre brand turns up in swimwear and leggings; outside the brand, the same fibre has generic names. Name the brand.",
+          "et": "See veniva kiu bränd on tuttav ujumisriietest ja retuusidest; väljaspool brändi on samal kiul üldnimed. Mis bränd see on?"
         },
         "response": {
-          "en": "TCP",
-          "et": "TCP"
+          "en": "Lycra",
+          "et": "Lycra"
         },
         "acceptedVariants": {
-          "en": [
-            "Transmission Control Protocol"
-          ],
-          "et": [
-            "edastusohje protokoll"
-          ]
+          "en": ["spandex", "elastane"],
+          "et": ["spandeks", "elastaan"]
         },
         "explanation": {
-          "en": "TCP uses sequence numbers, acknowledgements, retransmission, and congestion control.",
-          "et": "TCP kasutab järjekorranumbreid, kinnitusi, kordussaatmist ja ülekoormusjuhtimist."
+          "en": "Lycra is a trade name for the very elastic synthetic fibre also called spandex or elastane.",
+          "et": "Lycra on väga elastse sünteetilise kiu kaubanimi; sama kiudu nimetatakse ka spandeksiks või elastaaniks."
         },
         "source": {
-          "sourceId": "wikipedia:transmission_control_protocol",
-          "title": "Transmission Control Protocol",
-          "url": "https://en.wikipedia.org/wiki/Transmission_Control_Protocol",
+          "sourceId": "wikipedia:spandex",
+          "title": "Spandex",
+          "url": "https://en.wikipedia.org/wiki/Spandex",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-040:question:2",
-        "factKey": "built-in-technology-inventions:internet-protocols:medium:protocol:ip",
+        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:gore-tex",
         "tier": 2,
-        "subjectKey": "protocol:ip",
+        "subjectKey": "material:gore-tex",
         "clue": {
-          "en": "Name the networking standard or service that addresses and routes packets across interconnected networks.",
-          "et": "Vihjes kirjeldatud võrgustandard või -teenus adresseerib ja marsruudib pakette ühendatud võrkudes. Mis see on?"
+          "en": "Rain jackets use this membrane to block liquid water while letting water vapour escape. Name the material brand.",
+          "et": "Vihmajoped kasutavad seda membraani, mis peab vedela vee kinni, kuid laseb veeaurul välja pääseda. Mis materjalibränd see on?"
         },
         "response": {
-          "en": "Internet Protocol",
-          "et": "internetiprotokoll"
+          "en": "Gore-Tex",
+          "et": "Gore-Tex"
         },
         "acceptedVariants": {
-          "en": [
-            "IP"
-          ],
-          "et": [
-            "IP"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Internet Protocol offers best-effort datagrams without promising delivery or order.",
-          "et": "Internetiprotokoll pakub parima pingutuse datagramme ilma kättetoimetamise või järjekorra garantiita."
+          "en": "Gore-Tex is a waterproof breathable membrane: liquid water is blocked, while water vapour can pass through.",
+          "et": "Gore-Tex on veekindel ja hingav membraan: vedel vesi jääb kinni, kuid veeaur pääseb läbi."
         },
         "source": {
-          "sourceId": "wikipedia:internet_protocol",
-          "title": "Internet Protocol",
-          "url": "https://en.wikipedia.org/wiki/Internet_Protocol",
+          "sourceId": "wikipedia:gore-tex",
+          "title": "Gore-Tex",
+          "url": "https://en.wikipedia.org/wiki/Gore-Tex",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-040:question:3",
-        "factKey": "built-in-technology-inventions:internet-protocols:medium:protocol:dns",
+        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:cellophane",
         "tier": 3,
-        "subjectKey": "protocol:dns",
+        "subjectKey": "material:cellophane",
         "clue": {
-          "en": "Identify this networking standard or service: it translates human-readable domain names into network records.",
-          "et": "Kirjeldatud võrgustandard või -teenus tõlgib inimesele loetavad domeeninimed võrgukirjeteks. Mis on selle nimi?"
+          "en": "This thin transparent sheet made from regenerated cellulose became useful as a barrier in food packaging. Name it.",
+          "et": "See regenereeritud tselluloosist õhuke läbipaistev kile sai kasulikuks toidupakendi kaitsekihina. Mis materjal see on?"
         },
         "response": {
-          "en": "DNS",
-          "et": "DNS"
+          "en": "cellophane",
+          "et": "tsellofaan"
         },
         "acceptedVariants": {
-          "en": [
-            "Domain Name System"
-          ],
-          "et": [
-            "domeeninimede süsteem"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "DNS uses a distributed hierarchy with recursive resolvers and authoritative servers.",
-          "et": "DNS kasutab hajutatud hierarhiat rekursiivsete resolverite ja autoriteetsete serveritega."
+          "en": "Cellophane is a transparent regenerated-cellulose sheet whose barrier properties suit food packaging.",
+          "et": "Tsellofaan on läbipaistev regenereeritud tselluloosi leht, mille tõkkeomadused sobivad toidupakenditele."
         },
         "source": {
-          "sourceId": "wikipedia:domain_name_system",
-          "title": "Domain Name System",
-          "url": "https://en.wikipedia.org/wiki/Domain_Name_System",
+          "sourceId": "wikipedia:cellophane",
+          "title": "Cellophane",
+          "url": "https://en.wikipedia.org/wiki/Cellophane",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-040:question:4",
-        "factKey": "built-in-technology-inventions:internet-protocols:medium:protocol:http",
+        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:bakelite",
         "tier": 4,
-        "subjectKey": "protocol:http",
+        "subjectKey": "material:bakelite",
         "clue": {
-          "en": "Networking standard or service carries web requests and responses between clients and servers. What is it called?",
-          "et": "Milline võrgustandard või -teenus kannab veebipäringuid ja vastuseid klientide ning serverite vahel?"
+          "en": "Old radios, telephones, and handles often used this early plastic, the first made entirely from synthetic components. Name it.",
+          "et": "Vanad raadiod, telefonid ja käepidemed kasutasid sageli seda varajast plasti, mis oli esimene täielikult sünteetilistest koostisosadest. Mis see on?"
         },
         "response": {
-          "en": "HTTP",
-          "et": "HTTP"
+          "en": "Bakelite",
+          "et": "bakeliit"
         },
         "acceptedVariants": {
-          "en": [
-            "Hypertext Transfer Protocol"
-          ],
-          "et": [
-            "hüperteksti edastusprotokoll"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "HTTP is stateless at the application layer, while cookies can add session continuity.",
-          "et": "HTTP on rakenduskihis olekuta, kuigi küpsised võivad lisada seansi järjepidevuse."
+          "en": "Bakelite was the first plastic made from wholly synthetic components.",
+          "et": "Bakeliit oli esimene plast, mis valmistati täielikult sünteetilistest koostisosadest."
         },
         "source": {
-          "sourceId": "wikipedia:http",
-          "title": "HTTP",
-          "url": "https://en.wikipedia.org/wiki/HTTP",
+          "sourceId": "wikipedia:bakelite",
+          "title": "Bakelite",
+          "url": "https://en.wikipedia.org/wiki/Bakelite",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-040:question:5",
-        "factKey": "built-in-technology-inventions:internet-protocols:medium:protocol:smtp",
+        "factKey": "built-in-technology-inventions:materials-real-life:medium:material:neoprene",
         "tier": 5,
-        "subjectKey": "protocol:smtp",
+        "subjectKey": "material:neoprene",
         "clue": {
-          "en": "A networking standard or service relays outgoing email between mail systems. Name it.",
-          "et": "Üks võrgustandard või -teenus vahendab väljuvat e-posti postisüsteemide vahel. Millist vastust otsime?"
+          "en": "Divers wear foamed sheets of this synthetic rubber for warmth; the buoyancy can even require extra weights. Name the material.",
+          "et": "Sukeldujad kannavad selle sünteetilise kummi vahustatud kihte soojuse hoidmiseks; ujuvus võib nõuda isegi lisaraskusi. Mis materjal see on?"
         },
         "response": {
-          "en": "SMTP",
-          "et": "SMTP"
+          "en": "neoprene",
+          "et": "neopreen"
         },
         "acceptedVariants": {
-          "en": [
-            "Simple Mail Transfer Protocol"
-          ],
-          "et": [
-            "lihtne meiliedastusprotokoll"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "SMTP is mainly for sending, while IMAP or POP retrieves messages for users.",
-          "et": "SMTP on peamiselt saatmiseks, samal ajal kui IMAP või POP toob kasutajale kirju."
+          "en": "Foamed neoprene is widely used as thermal insulation in wetsuits and is buoyant enough that divers compensate with weights.",
+          "et": "Vahustatud neopreeni kasutatakse laialt kalipsode soojusisolatsioonina ning selle ujuvust tasakaalustatakse raskustega."
         },
         "source": {
-          "sourceId": "wikipedia:simple_mail_transfer_protocol",
-          "title": "Simple Mail Transfer Protocol",
-          "url": "https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol",
+          "sourceId": "wikipedia:neoprene",
+          "title": "Neoprene",
+          "url": "https://en.wikipedia.org/wiki/Neoprene",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9622,161 +9559,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-041",
     "name": {
-      "en": "Boxes That Move Network Traffic",
-      "et": "Võrguliiklust suunavad seadmed"
+      "en": "Road and Cockpit Problem-Solvers",
+      "et": "Lahendused teel ja kokpitis"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-041:question:1",
-        "factKey": "built-in-technology-inventions:network-devices:medium:device:router",
+        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:windscreen-wiper",
         "tier": 1,
-        "subjectKey": "device:router",
+        "subjectKey": "device:windscreen-wiper",
         "clue": {
-          "en": "Which network device forwards packets between separate networks?",
-          "et": "Tuvasta järgmine võrguseade: see edastab pakette eri võrkude vahel."
+          "en": "A moving rubber blade sweeps rain, snow, or debris from a vehicle's front glass. What device is doing the work?",
+          "et": "Liikuv kummitera pühib sõiduki esiklaasilt vihma, lund või mustust. Mis seade seda teeb?"
         },
         "response": {
-          "en": "router",
-          "et": "marsruuter"
+          "en": "windscreen wiper",
+          "et": "klaasipuhasti"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["windshield wiper"],
+          "et": ["kojamees", "tuuleklaasipuhasti"]
         },
         "explanation": {
-          "en": "Router chooses next hops from routing tables using destination IP prefixes.",
-          "et": "Marsruuter valib sihtkoha IP-prefiksite põhjal marsruuditabelist järgmise hüppe."
+          "en": "A windscreen wiper uses a moving blade to clear rain, snow, or debris from a vehicle windscreen.",
+          "et": "Klaasipuhasti kasutab liikuvat tera, et eemaldada sõiduki tuuleklaasilt vihm, lumi või praht."
         },
         "source": {
-          "sourceId": "wikipedia:router_(computing)",
-          "title": "Router (computing)",
-          "url": "https://en.wikipedia.org/wiki/Router_(computing)",
+          "sourceId": "wikipedia:windscreen-wiper",
+          "title": "Windscreen wiper",
+          "url": "https://en.wikipedia.org/wiki/Windscreen_wiper",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-041:question:2",
-        "factKey": "built-in-technology-inventions:network-devices:medium:device:network-switch",
+        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:pneumatic-tyre",
         "tier": 2,
-        "subjectKey": "device:network-switch",
+        "subjectKey": "device:pneumatic-tyre",
         "clue": {
-          "en": "One network device connects devices within a local Ethernet network. Which one is described?",
-          "et": "Võrguseade ühendab seadmed kohalikus Etherneti võrgus. Mis see on?"
+          "en": "Pressurised air inside this road-contact ring supports the load and softens bumps. Name the kind of tyre.",
+          "et": "Selle teega kokkupuutuva rõnga sees olev suruõhk kannab koormat ja pehmendab põrutusi. Mis tüüpi rehv see on?"
         },
         "response": {
-          "en": "network switch",
-          "et": "võrgulüliti"
+          "en": "pneumatic tyre",
+          "et": "õhkrehv"
         },
         "acceptedVariants": {
-          "en": [
-            "switch"
-          ],
-          "et": [
-            "lüliti"
-          ]
+          "en": ["pneumatic tire", "air-filled tyre", "air-filled tire"],
+          "et": ["pneumorehv"]
         },
         "explanation": {
-          "en": "Network switch learns source MAC addresses and forwards frames only toward the needed port.",
-          "et": "Võrgulüliti õpib lähte-MAC-aadresse ning edastab kaadri ainult vajaliku pordi poole."
+          "en": "A pneumatic tyre has a pressurised air cavity that supports the load and cushions contact with the road.",
+          "et": "Õhkrehvil on suruõhuga õõnsus, mis kannab koormat ja pehmendab kokkupuudet teega."
         },
         "source": {
-          "sourceId": "wikipedia:network_switch",
-          "title": "Network switch",
-          "url": "https://en.wikipedia.org/wiki/Network_switch",
+          "sourceId": "wikipedia:pneumatic-tyre",
+          "title": "Tire",
+          "url": "https://en.wikipedia.org/wiki/Pneumatic_tire",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-041:question:3",
-        "factKey": "built-in-technology-inventions:network-devices:medium:device:modem",
+        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:system:cruise-control",
         "tier": 3,
-        "subjectKey": "device:modem",
+        "subjectKey": "system:cruise-control",
         "clue": {
-          "en": "Identify this network device: it converts data for transmission over a communications medium.",
-          "et": "Kirjeldatud võrguseade teisendab andmed sidekanalis edastatavaks. Mis on selle nimi?"
+          "en": "On a long road, this system keeps the car at a selected pace without the driver's foot staying on the accelerator. Name it.",
+          "et": "Pikal teel hoiab see süsteem auto valitud kiirusel, ilma et juhi jalg peaks gaasipedaalil püsima. Mis süsteem see on?"
         },
         "response": {
-          "en": "modem",
-          "et": "modem"
+          "en": "cruise control",
+          "et": "püsikiirusehoidja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["speed control"],
+          "et": ["kiirushoidik"]
         },
         "explanation": {
-          "en": "Modem takes its name from modulator-demodulator.",
-          "et": "Modem saab nime sõnadest modulaator-demodulaator."
+          "en": "Cruise control automatically maintains a vehicle's selected speed without constant accelerator input.",
+          "et": "Püsikiirusehoidja hoiab sõiduki valitud kiirust automaatselt, ilma pideva gaasipedaali vajutamiseta."
         },
         "source": {
-          "sourceId": "wikipedia:modem",
-          "title": "Modem",
-          "url": "https://en.wikipedia.org/wiki/Modem",
+          "sourceId": "wikipedia:cruise-control",
+          "title": "Cruise control",
+          "url": "https://en.wikipedia.org/wiki/Cruise_control",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-041:question:4",
-        "factKey": "built-in-technology-inventions:network-devices:medium:device:wireless-access-point",
+        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:catalytic-converter",
         "tier": 4,
-        "subjectKey": "device:wireless-access-point",
+        "subjectKey": "device:catalytic-converter",
         "clue": {
-          "en": "What network device lets Wi-Fi devices join a wired local network?",
-          "et": "Järgmine võrguseade lubab Wi-Fi-seadmetel liituda juhtmega kohaliku võrguga. Milline see on?"
+          "en": "This exhaust device uses chemical reactions to turn toxic engine gases into less harmful pollutants. Name it.",
+          "et": "See väljalaskeseade kasutab keemilisi reaktsioone, et muuta mürgised mootorigaasid vähem kahjulikeks saasteaineteks. Mis seade see on?"
         },
         "response": {
-          "en": "wireless access point",
-          "et": "juhtmevaba pääsupunkt"
+          "en": "catalytic converter",
+          "et": "katalüüsmuundur"
         },
         "acceptedVariants": {
-          "en": [
-            "access point"
-          ],
-          "et": [
-            "pääsupunkt"
-          ]
+          "en": ["automotive catalytic converter"],
+          "et": ["auto katalüsaator"]
         },
         "explanation": {
-          "en": "Wireless access point bridges wireless stations at the link layer rather than routing every connection itself.",
-          "et": "Juhtmevaba pääsupunkt sillab juhtmevabad jaamad kanalihis ega marsruudi ise iga ühendust."
+          "en": "A catalytic converter changes toxic exhaust gases into less-toxic pollutants by catalysing redox reactions.",
+          "et": "Katalüüsmuundur muudab mürgised heitgaasid vähem mürgisteks saasteaineteks, katalüüsides redoksreaktsioone."
         },
         "source": {
-          "sourceId": "wikipedia:wireless_access_point",
-          "title": "Wireless access point",
-          "url": "https://en.wikipedia.org/wiki/Wireless_access_point",
+          "sourceId": "wikipedia:catalytic-converter",
+          "title": "Catalytic converter",
+          "url": "https://en.wikipedia.org/wiki/Catalytic_converter",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-041:question:5",
-        "factKey": "built-in-technology-inventions:network-devices:medium:device:network-firewall",
+        "factKey": "built-in-technology-inventions:road-cockpit-problem-solvers:medium:device:ejection-seat",
         "tier": 5,
-        "subjectKey": "device:network-firewall",
+        "subjectKey": "device:ejection-seat",
         "clue": {
-          "en": "A network device filters network traffic according to security rules. What term fits?",
-          "et": "Siin kirjeldatud võrguseade filtreerib võrguliiklust turvareeglite järgi. Mis see on?"
+          "en": "In an aircraft emergency, this crew chair blasts clear of the cockpit and then deploys a parachute. Name it.",
+          "et": "Lennuki hädaolukorras paiskab see meeskonnatool inimese kokpitist eemale ja avab seejärel langevarju. Mis iste see on?"
         },
         "response": {
-          "en": "firewall",
-          "et": "tulemüür"
+          "en": "ejection seat",
+          "et": "katapultiste"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["ejector seat"],
+          "et": ["katapulteerimisiste"]
         },
         "explanation": {
-          "en": "Firewall may track connection state so return traffic is treated differently from unsolicited packets.",
-          "et": "Tulemüür võib jälgida ühenduse olekut, et vastuseliiklust eristada soovimatutest pakettidest."
+          "en": "An ejection seat propels an aircraft crew member clear in an emergency and then deploys a parachute.",
+          "et": "Katapultiste paiskab lennuki meeskonnaliikme hädaolukorras ohutusse kaugusse ja avab seejärel langevarju."
         },
         "source": {
-          "sourceId": "wikipedia:firewall_(computing)",
-          "title": "Firewall (computing)",
-          "url": "https://en.wikipedia.org/wiki/Firewall_(computing)",
+          "sourceId": "wikipedia:ejection-seat",
+          "title": "Ejection seat",
+          "url": "https://en.wikipedia.org/wiki/Ejection_seat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9784,161 +9713,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-042",
     "name": {
-      "en": "Wireless Connections around Us",
-      "et": "Juhtmevabad ühendused meie ümber"
+      "en": "The Pre-Cloud Office",
+      "et": "Kontor enne pilve"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-042:question:1",
-        "factKey": "built-in-technology-inventions:short-range-wireless:medium:standard:wifi",
+        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:typewriter",
         "tier": 1,
-        "subjectKey": "standard:wifi",
+        "subjectKey": "device:typewriter",
         "clue": {
-          "en": "Which wireless technology connects laptops and phones to local networks by radio?",
-          "et": "Tuvasta järgmine juhtmevaba tehnoloogia: see ühendab sülearvutid ja telefonid raadio teel kohaliku võrguga."
+          "en": "On this desk machine, pressing a key strikes an inked ribbon against paper with a letter-shaped element. Name it.",
+          "et": "Selles lauamasinas lööb klahvivajutus tähekujulise elemendi abil tindilindi vastu paberit. Mis masin see on?"
         },
         "response": {
-          "en": "Wi-Fi",
-          "et": "Wi-Fi"
+          "en": "typewriter",
+          "et": "kirjutusmasin"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Wi-Fi is based on the IEEE 802.11 family rather than being an acronym for wireless fidelity.",
-          "et": "Wi-Fi põhineb IEEE 802.11 perekonnal ega ole lühend väljendist wireless fidelity."
+          "en": "A typewriter makes characters by striking an inked ribbon against paper with a type element.",
+          "et": "Kirjutusmasin teeb märke, lüües täheelemendiga tindilindi vastu paberit."
         },
         "source": {
-          "sourceId": "wikipedia:wi-fi",
-          "title": "Wi-Fi",
-          "url": "https://en.wikipedia.org/wiki/Wi-Fi",
+          "sourceId": "wikipedia:typewriter",
+          "title": "Typewriter",
+          "url": "https://en.wikipedia.org/wiki/Typewriter",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-042:question:2",
-        "factKey": "built-in-technology-inventions:short-range-wireless:medium:standard:bluetooth",
+        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:photocopier",
         "tier": 2,
-        "subjectKey": "standard:bluetooth",
+        "subjectKey": "device:photocopier",
         "clue": {
-          "en": "A wireless technology links nearby headphones, keyboards, and phones with low-power radio. What term fits?",
-          "et": "Siin kirjeldatud juhtmevaba tehnoloogia ühendab lähedal asuvad kõrvaklapid, klaviatuurid ja telefonid väikese võimsusega raadio kaudu. Mis see on?"
+          "en": "This office machine uses light, static charge, and toner on a drum to reproduce a document. Name it.",
+          "et": "See kontorimasin kasutab dokumendi paljundamiseks valgust, staatilist laengut ja trumlil olevat toonerit. Mis masin see on?"
         },
         "response": {
-          "en": "Bluetooth",
-          "et": "Bluetooth"
+          "en": "photocopier",
+          "et": "koopiamasin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["copy machine", "xerox machine"],
+          "et": ["paljundusmasin"]
         },
         "explanation": {
-          "en": "Bluetooth uses frequency hopping in the 2.4-gigahertz band and is named for a medieval Danish king.",
-          "et": "Bluetooth kasutab 2,4-gigahertsises alas sagedushüplemist ning on nimetatud keskaegse Taani kuninga järgi."
+          "en": "A xerographic photocopier uses light, electrostatic charge, and toner on a photoconductive drum to reproduce documents.",
+          "et": "Kserograafiline koopiamasin kasutab dokumentide kopeerimiseks valgust, elektrostaatilist laengut ja fotojuhtival trumlil olevat toonerit."
         },
         "source": {
-          "sourceId": "wikipedia:bluetooth",
-          "title": "Bluetooth",
-          "url": "https://en.wikipedia.org/wiki/Bluetooth",
+          "sourceId": "wikipedia:photocopier",
+          "title": "Photocopier",
+          "url": "https://en.wikipedia.org/wiki/Photocopier",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-042:question:3",
-        "factKey": "built-in-technology-inventions:short-range-wireless:medium:standard:nfc",
+        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:paper-shredder",
         "tier": 3,
-        "subjectKey": "standard:nfc",
+        "subjectKey": "device:paper-shredder",
         "clue": {
-          "en": "Identify this wireless technology: it enables tap-to-pay over a distance of only a few centimetres.",
-          "et": "Kirjeldatud juhtmevaba tehnoloogia võimaldab viipemakset vaid mõne sentimeetri kauguselt. Mis on selle nimi?"
+          "en": "Sensitive pages go into this office device and come out as strips or tiny particles that are hard to read. Name it.",
+          "et": "Tundlikud lehed lähevad sellesse kontoriseadmesse ning tulevad välja ribade või väikeste osakestena, mida on raske lugeda. Mis seade see on?"
         },
         "response": {
-          "en": "NFC",
-          "et": "NFC"
+          "en": "paper shredder",
+          "et": "paberipurustaja"
         },
         "acceptedVariants": {
-          "en": [
-            "near-field communication"
-          ],
-          "et": [
-            "lähiväljaside"
-          ]
+          "en": ["document shredder"],
+          "et": ["dokumendipurustaja"]
         },
         "explanation": {
-          "en": "NFC uses inductive coupling at 13.56 megahertz and can power passive tags.",
-          "et": "NFC kasutab induktiivsidestust sagedusel 13,56 megahertsi ning võib toita passiivseid silte."
+          "en": "A paper shredder cuts documents into strips or fine particles so sensitive text cannot readily be read.",
+          "et": "Paberipurustaja lõikab dokumendid ribadeks või peenteks osakesteks, et tundlikku teksti ei saaks hõlpsalt lugeda."
         },
         "source": {
-          "sourceId": "wikipedia:near-field_communication",
-          "title": "Near-field communication",
-          "url": "https://en.wikipedia.org/wiki/Near-field_communication",
+          "sourceId": "wikipedia:paper-shredder",
+          "title": "Paper shredder",
+          "url": "https://en.wikipedia.org/wiki/Paper_shredder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-042:question:4",
-        "factKey": "built-in-technology-inventions:short-range-wireless:medium:standard:rfid",
+        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:material:correction-fluid",
         "tier": 4,
-        "subjectKey": "standard:rfid",
+        "subjectKey": "material:correction-fluid",
         "clue": {
-          "en": "Wireless technology identifies tagged goods or cards by radio. What is it called?",
-          "et": "Milline juhtmevaba tehnoloogia tuvastab sildistatud kauba või kaardi raadio teel?"
+          "en": "Before word processors, typists could paint this opaque liquid over a mistake and type the character again. Name it.",
+          "et": "Enne tekstitöötlust said masinakirjutajad vea katta läbipaistmatu vedelikuga ja märgi uuesti peale kirjutada. Mis vahend see on?"
         },
         "response": {
-          "en": "RFID",
-          "et": "RFID"
+          "en": "correction fluid",
+          "et": "korrektorvedelik"
         },
         "acceptedVariants": {
-          "en": [
-            "radio-frequency identification"
-          ],
-          "et": [
-            "raadiosagedustuvastus"
-          ]
+          "en": ["liquid paper", "white-out", "Wite-Out"],
+          "et": ["korrektuurivedelik", "valgendusvedelik"]
         },
         "explanation": {
-          "en": "RFID can use passive tags that answer using energy supplied by the reader.",
-          "et": "RFID võib kasutada passiivsilte, mis vastavad lugejalt saadud energiaga."
+          "en": "Correction fluid is applied over typing or handwriting mistakes and was especially useful before word processors.",
+          "et": "Korrektorvedelik kantakse trüki- või käsikirjaveale ning oli eriti kasulik enne tekstitöötlusprogramme."
         },
         "source": {
-          "sourceId": "wikipedia:radio-frequency_identification",
-          "title": "Radio-frequency identification",
-          "url": "https://en.wikipedia.org/wiki/Radio-frequency_identification",
+          "sourceId": "wikipedia:correction-fluid",
+          "title": "Correction fluid",
+          "url": "https://en.wikipedia.org/wiki/Correction_fluid",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-042:question:5",
-        "factKey": "built-in-technology-inventions:short-range-wireless:medium:standard:cellular-network",
+        "factKey": "built-in-technology-inventions:pre-cloud-office:medium:device:label-maker",
         "tier": 5,
-        "subjectKey": "standard:cellular-network",
+        "subjectKey": "device:label-maker",
         "clue": {
-          "en": "A wireless technology divides a wide service area into radio cells. Name it.",
-          "et": "Üks juhtmevaba tehnoloogia jagab suure teenindusala raadioelementideks. Millist vastust otsime?"
+          "en": "This small office tool prints or embosses self-adhesive tags for drawers, folders, and cables. Name it.",
+          "et": "See väike kontoritööriist prindib või pressib sahtlitele, kaustadele ja kaablitele kleepuvaid silte. Mis tööriist see on?"
         },
         "response": {
-          "en": "cellular network",
-          "et": "mobiilsidevõrk"
+          "en": "label maker",
+          "et": "etiketiprinter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["label printer", "labeler", "labeller"],
+          "et": ["sildiprinter", "etiketimasin"]
         },
         "explanation": {
-          "en": "Cellular network reuses frequencies in separated cells and hands moving devices between base stations.",
-          "et": "Mobiilsidevõrk taaskasutab eraldatud kärgedes sagedusi ning annab liikuva seadme tugijaamade vahel üle."
+          "en": "A stand-alone label maker prints on self-adhesive label stock, while older embossing models raised letters in plastic tape.",
+          "et": "Eraldiseisev etiketiprinter prindib isekleepuvale materjalile; vanemad pressmudelid tõstsid tähed plastlindis esile."
         },
         "source": {
-          "sourceId": "wikipedia:cellular_network",
-          "title": "Cellular network",
-          "url": "https://en.wikipedia.org/wiki/Cellular_network",
+          "sourceId": "wikipedia:label-printer",
+          "title": "Label printer",
+          "url": "https://en.wikipedia.org/wiki/Label_printer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -9946,159 +9867,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-043",
     "name": {
-      "en": "Everyday Digital Security",
-      "et": "Igapäevane digiturve"
+      "en": "Machines That Spot a Pattern",
+      "et": "Mustrid, mida masin märkab"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-043:question:1",
-        "factKey": "built-in-technology-inventions:digital-security:medium:software:password-manager",
+        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:barcode-reader",
         "tier": 1,
-        "subjectKey": "software:password-manager",
+        "subjectKey": "device:barcode-reader",
         "clue": {
-          "en": "Which security tool or concept stores unique account passwords in an encrypted vault?",
-          "et": "Tuvasta järgmine turvatööriist või -mõiste: see hoiab eri kontode paroole krüpteeritud hoidlas."
+          "en": "At a checkout, this device shines light on printed bars, senses the reflection, and sends decoded data to a computer. Name it.",
+          "et": "Kassas valgustab see seade trükitud ribasid, tajub peegeldust ja saadab dekodeeritud andmed arvutisse. Mis seade see on?"
         },
         "response": {
-          "en": "password manager",
-          "et": "paroolihaldur"
+          "en": "barcode reader",
+          "et": "vöötkoodilugeja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["barcode scanner"],
+          "et": ["vöötkoodiskanner", "triipkoodilugeja"]
         },
         "explanation": {
-          "en": "Password manager lets one strong master secret protect many randomly generated credentials.",
-          "et": "Paroolihaldur lubab ühe tugeva peasaladusega kaitsta paljusid juhuslikult loodud paroole."
+          "en": "A barcode reader uses a light source, lens, and sensor to read printed bar patterns and send decoded data to a computer.",
+          "et": "Vöötkoodilugeja kasutab valgusallikat, läätse ja andurit, et lugeda ribamustreid ning saata dekodeeritud andmed arvutisse."
         },
         "source": {
-          "sourceId": "wikipedia:password_manager",
-          "title": "Password manager",
-          "url": "https://en.wikipedia.org/wiki/Password_manager",
+          "sourceId": "wikipedia:barcode-reader",
+          "title": "Barcode reader",
+          "url": "https://en.wikipedia.org/wiki/Barcode_reader",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-043:question:2",
-        "factKey": "built-in-technology-inventions:digital-security:medium:concept:multi-factor-authentication",
+        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:metal-detector",
         "tier": 2,
-        "subjectKey": "concept:multi-factor-authentication",
+        "subjectKey": "device:metal-detector",
         "clue": {
-          "en": "Name the security tool or concept that requires evidence from more than one kind of login factor.",
-          "et": "Vihjes kirjeldatud turvatööriist või -mõiste nõuab sisselogimisel tõendit rohkem kui ühest teguriliigist. Mis see on?"
+          "en": "Its coil creates a changing magnetic field and notices the secondary field from nearby conductive material. Name the instrument.",
+          "et": "Selle pool tekitab muutuva magnetvälja ja märkab lähedal oleva juhtiva materjali sekundaarvälja. Mis instrument see on?"
         },
         "response": {
-          "en": "multi-factor authentication",
-          "et": "mitmikautentimine"
+          "en": "metal detector",
+          "et": "metallidetektor"
         },
         "acceptedVariants": {
-          "en": [
-            "MFA",
-            "two-factor authentication"
-          ],
-          "et": [
-            "MFA",
-            "kaheastmeline autentimine"
-          ]
+          "en": ["metal finder"],
+          "et": ["metalliotsija"]
         },
         "explanation": {
-          "en": "Multi-factor authentication combines categories such as something known, possessed, or inherent.",
-          "et": "Mitmikautentimine ühendab liike nagu miski teadaolev, omatav või isikule omane."
+          "en": "A metal detector's coil creates a changing magnetic field and detects the secondary field induced in nearby conductive metal.",
+          "et": "Metallidetektori pool tekitab muutuva magnetvälja ning tuvastab lähedal asuvas juhtivas metallis indutseeritud sekundaarvälja."
         },
         "source": {
-          "sourceId": "wikipedia:multi-factor_authentication",
-          "title": "Multi-factor authentication",
-          "url": "https://en.wikipedia.org/wiki/Multi-factor_authentication",
+          "sourceId": "wikipedia:metal-detector",
+          "title": "Metal detector",
+          "url": "https://en.wikipedia.org/wiki/Metal_detector",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-043:question:3",
-        "factKey": "built-in-technology-inventions:digital-security:medium:concept:public-key-cryptography",
+        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:fingerprint-scanner",
         "tier": 3,
-        "subjectKey": "concept:public-key-cryptography",
+        "subjectKey": "device:fingerprint-scanner",
         "clue": {
-          "en": "Find the security tool or concept that uses a shareable key alongside a mathematically linked private key.",
-          "et": "Turvatööriist või -mõiste kasutab jagatavat võtit koos matemaatiliselt seotud privaatvõtmega. Leia sobiv vastus."
+          "en": "Phones and doors use this biometric device to identify a person from the ridge pattern on a fingertip. Name it.",
+          "et": "Telefonid ja uksed kasutavad seda biomeetrilist seadet, et tuvastada inimene sõrmeotsa harjamustri järgi. Mis seade see on?"
         },
         "response": {
-          "en": "public-key cryptography",
-          "et": "avaliku võtme krüptograafia"
+          "en": "fingerprint scanner",
+          "et": "sõrmejäljelugeja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["fingerprint reader"],
+          "et": ["sõrmejäljeskanner"]
         },
         "explanation": {
-          "en": "Public-key cryptography enables signatures or key exchange without first sharing one secret key.",
-          "et": "Avaliku võtme krüptograafia võimaldab allkirju või võtmevahetust ilma üht salavõtit ette jagamata."
+          "en": "A fingerprint scanner is a biometric security device that identifies a person from fingerprint ridge structure.",
+          "et": "Sõrmejäljelugeja on biomeetriline turvaseade, mis tuvastab inimese sõrmejälje harjastruktuuri järgi."
         },
         "source": {
-          "sourceId": "wikipedia:public-key_cryptography",
-          "title": "Public-key cryptography",
-          "url": "https://en.wikipedia.org/wiki/Public-key_cryptography",
+          "sourceId": "wikipedia:fingerprint-scanner",
+          "title": "Fingerprint scanner",
+          "url": "https://en.wikipedia.org/wiki/Fingerprint_scanner",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-043:question:4",
-        "factKey": "built-in-technology-inventions:digital-security:medium:concept:cryptographic-hash",
+        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:technology:optical-character-recognition",
         "tier": 4,
-        "subjectKey": "concept:cryptographic-hash",
+        "subjectKey": "technology:optical-character-recognition",
         "clue": {
-          "en": "Which security tool or concept maps data to a fixed-size digest used to detect changes?",
-          "et": "Tuvasta järgmine turvatööriist või -mõiste: see teisendab andmed fikseeritud pikkusega räsiks, millega muutusi tuvastada."
+          "en": "This technology turns pictures of typed, printed, or handwritten text into machine-encoded text. Name the technology.",
+          "et": "See tehnoloogia muudab trükitud, kirjutatud või käsitsi kirjutatud teksti pildid masinloetavaks tekstiks. Mis tehnoloogia see on?"
         },
         "response": {
-          "en": "cryptographic hash function",
-          "et": "krüptograafiline räsifunktsioon"
+          "en": "optical character recognition (OCR)",
+          "et": "optiline märgituvastus (OCR)"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["OCR"],
+          "et": ["OCR"]
         },
         "explanation": {
-          "en": "Cryptographic hash function is designed to resist finding an input or a second message with the same digest.",
-          "et": "Krüptograafiline räsifunktsioon on kavandatud takistama sisendi või sama räsiga teise sõnumi leidmist."
+          "en": "Optical character recognition converts images of typed, printed, or handwritten text into machine-encoded text.",
+          "et": "Optiline märgituvastus teisendab trükitud, kirjutatud või käsitsi kirjutatud teksti kujutised masinkodeeritud tekstiks."
         },
         "source": {
-          "sourceId": "wikipedia:cryptographic_hash_function",
-          "title": "Cryptographic hash function",
-          "url": "https://en.wikipedia.org/wiki/Cryptographic_hash_function",
+          "sourceId": "wikipedia:optical-character-recognition",
+          "title": "Optical character recognition",
+          "url": "https://en.wikipedia.org/wiki/Optical_character_recognition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-043:question:5",
-        "factKey": "built-in-technology-inventions:digital-security:medium:concept:digital-certificate",
+        "factKey": "built-in-technology-inventions:machines-spot-pattern:medium:device:radar-speed-gun",
         "tier": 5,
-        "subjectKey": "concept:digital-certificate",
+        "subjectKey": "device:radar-speed-gun",
         "clue": {
-          "en": "A security tool or concept binds an identity or domain name to a public key. What term fits?",
-          "et": "Siin kirjeldatud turvatööriist või -mõiste seob identiteedi või domeeninime avaliku võtmega. Mis see on?"
+          "en": "Police can use this device to calculate speed from the Doppler shift between sent radio waves and the reflected signal. Name it.",
+          "et": "Politsei saab selle seadmega arvutada kiirust Doppleri nihkest saadetud raadiolainete ja peegeldunud signaali vahel. Mis seade see on?"
         },
         "response": {
-          "en": "digital certificate",
-          "et": "digisertifikaat"
+          "en": "radar speed gun",
+          "et": "radar-kiirusmõõtur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["radar gun", "speed radar"],
+          "et": ["radarkiirusmõõtur", "kiirusradar"]
         },
         "explanation": {
-          "en": "Digital certificate is signed by a certificate authority so clients can verify a chain of trust.",
-          "et": "Digisertifikaat allkirjastatakse sertifitseerimiskeskuse poolt, et klient saaks usaldusahelat kontrollida."
+          "en": "A radar speed gun calculates speed from the Doppler shift between transmitted radio waves and the signal reflected by a moving target.",
+          "et": "Radar-kiirusmõõtur arvutab kiiruse saadetud raadiolainete ja liikuva sihtmärgi peegeldatud signaali Doppleri nihkest."
         },
         "source": {
-          "sourceId": "wikipedia:public_key_certificate",
-          "title": "Public key certificate",
-          "url": "https://en.wikipedia.org/wiki/Public_key_certificate",
+          "sourceId": "wikipedia:radar-speed-gun",
+          "title": "Radar speed gun",
+          "url": "https://en.wikipedia.org/wiki/Radar_speed_gun",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
@@ -10106,153 +10021,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-044",
     "name": {
-      "en": "Parts on a Circuit Board",
-      "et": "Trükkplaadi komponendid"
+      "en": "A Different First Purpose",
+      "et": "Esialgu hoopis teiseks"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-044:question:1",
-        "factKey": "built-in-technology-inventions:electronic-components:medium:component:resistor",
+        "factKey": "built-in-technology-inventions:different-first-purpose:medium:material:teflon",
         "tier": 1,
-        "subjectKey": "component:resistor",
+        "subjectKey": "material:teflon",
         "clue": {
-          "en": "Identify the electronic component: it opposes current and helps set voltages in a circuit.",
-          "et": "Mis elektroonikakomponent takistab voolu ning aitab ahelas pingeid määrata?"
+          "en": "Chemists seeking a refrigerant found a slippery white polymer inside a gas cylinder; cookware later made the brand famous. Name it.",
+          "et": "Külmaainet otsinud keemikud leidsid gaasiballoonist libeda valge polümeeri; hiljem tegi kööginõu brändi kuulsaks. Mis see on?"
         },
         "response": {
-          "en": "resistor",
-          "et": "takisti"
+          "en": "Teflon",
+          "et": "teflon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["PTFE"],
+          "et": ["PTFE"]
         },
         "explanation": {
-          "en": "Resistor approximately follows Ohm’s law and dissipates electrical energy as heat.",
-          "et": "Takisti järgib ligikaudu Ohmi seadust ning hajutab elektrienergia soojuseks."
+          "en": "PTFE, commonly branded Teflon, was discovered accidentally while chemists were seeking a refrigerant.",
+          "et": "PTFE, mida tuntakse sageli tefloni nime all, avastati juhuslikult külmaainet otsides."
         },
         "source": {
-          "sourceId": "wikipedia:resistor",
-          "title": "Resistor",
-          "url": "https://en.wikipedia.org/wiki/Resistor",
+          "sourceId": "wikipedia:ptfe",
+          "title": "Polytetrafluoroethylene",
+          "url": "https://en.wikipedia.org/wiki/Polytetrafluoroethylene",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:2",
-        "factKey": "built-in-technology-inventions:electronic-components:medium:component:capacitor",
+        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:super-glue",
         "tier": 2,
-        "subjectKey": "component:capacitor",
+        "subjectKey": "product:super-glue",
         "clue": {
-          "en": "Name the electronic component that stores separated electric charge on two conductors.",
-          "et": "Vihjes kirjeldatud elektroonikakomponent talletab eraldatud elektrilaengu kahel juhil. Mis see on?"
+          "en": "A clear gun-sight plastic was first rejected because it stuck to everything; it was later rediscovered as a fast adhesive. Name the product.",
+          "et": "Läbipaistev sihikumaterjal lükati algul tagasi, sest see kleepus kõige külge; hiljem avastati see uuesti kiire liimina. Mis toode see on?"
         },
         "response": {
-          "en": "capacitor",
-          "et": "kondensaator"
+          "en": "Super Glue",
+          "et": "superliim"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["superglue", "cyanoacrylate", "cyanoacrylate glue"],
+          "et": ["tsüanoakrülaat", "kiirliim"]
         },
         "explanation": {
-          "en": "Capacitor blocks steady direct current after charging but responds to changing voltage.",
-          "et": "Kondensaator tõkestab pärast laadimist püsiva alalisvoolu, kuid reageerib muutuvale pingele."
+          "en": "Cyanoacrylate was rejected during a search for clear gun-sight material, then rediscovered as a fast adhesive.",
+          "et": "Tsüanoakrülaat lükati läbipaistva sihikumaterjali otsingul kõrvale, kuid avastati hiljem uuesti kiire liimina."
         },
         "source": {
-          "sourceId": "wikipedia:capacitor",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor",
+          "sourceId": "wikipedia:cyanoacrylate",
+          "title": "Cyanoacrylate",
+          "url": "https://en.wikipedia.org/wiki/Cyanoacrylate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:3",
-        "factKey": "built-in-technology-inventions:electronic-components:medium:component:diode",
+        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:bubble-wrap",
         "tier": 3,
-        "subjectKey": "component:diode",
+        "subjectKey": "product:bubble-wrap",
         "clue": {
-          "en": "Find the electronic component that lets current pass much more readily in one direction.",
-          "et": "Elektroonikakomponent laseb voolul palju kergemini liikuda ühes suunas. Leia sobiv vastus."
+          "en": "Two shower curtains sealed with trapped air were first tried as textured wallpaper before the material protected parcels. Name it.",
+          "et": "Kaks õhku kinni hoidvat dušikardinat prooviti esmalt reljeefse tapeedina, enne kui materjal hakkas pakke kaitsma. Mis see on?"
         },
         "response": {
-          "en": "diode",
-          "et": "diood"
+          "en": "bubble wrap",
+          "et": "mullikile"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Diode uses a junction with forward bias conduction and reverse bias blocking.",
-          "et": "Diood kasutab siiret, mis päripingel juhib ning vastupingel tõkestab."
+          "en": "Bubble wrap began as two shower curtains sealed into air bubbles and was first tried as textured wallpaper.",
+          "et": "Mullikile algas kahe õhumullideks suletud dušikardinana ning seda prooviti algul reljeefse tapeedina."
         },
         "source": {
-          "sourceId": "wikipedia:diode",
-          "title": "Diode",
-          "url": "https://en.wikipedia.org/wiki/Diode",
+          "sourceId": "wikipedia:bubble-wrap",
+          "title": "Bubble Wrap",
+          "url": "https://en.wikipedia.org/wiki/Bubble_Wrap",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:4",
-        "factKey": "built-in-technology-inventions:electronic-components:medium:component:transistor",
+        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:slinky",
         "tier": 4,
-        "subjectKey": "component:transistor",
+        "subjectKey": "product:slinky",
         "clue": {
-          "en": "What electronic component acts as an electronic switch or amplifier?",
-          "et": "Järgmine elektroonikakomponent toimib elektroonilise lüliti või võimendina. Milline see on?"
+          "en": "Engineer Richard James saw a spring step downward after it fell from a shelf, inspiring this walking toy. Name it.",
+          "et": "Insener Richard James nägi, kuidas riiulilt kukkunud vedru justkui astus allapoole, ja sellest sündis see kõndiv mänguasi. Mis see on?"
         },
         "response": {
-          "en": "transistor",
-          "et": "transistor"
+          "en": "Slinky",
+          "et": "Slinky"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Transistor controls a larger current with a smaller input at a gate or base.",
-          "et": "Transistor juhib suuremat voolu väiksema sisendiga paisul või baasil."
+          "en": "The Slinky toy grew from Richard James seeing a spring step downward after it was knocked from a shelf.",
+          "et": "Slinky mänguasi sai alguse sellest, et Richard James nägi riiulilt tõugatud vedru allapoole astumas."
         },
         "source": {
-          "sourceId": "wikipedia:transistor",
-          "title": "Transistor",
-          "url": "https://en.wikipedia.org/wiki/Transistor",
+          "sourceId": "wikipedia:slinky",
+          "title": "Slinky",
+          "url": "https://en.wikipedia.org/wiki/Slinky",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-044:question:5",
-        "factKey": "built-in-technology-inventions:electronic-components:medium:component:inductor",
+        "factKey": "built-in-technology-inventions:different-first-purpose:medium:product:play-doh",
         "tier": 5,
-        "subjectKey": "component:inductor",
+        "subjectKey": "product:play-doh",
         "clue": {
-          "en": "One electronic component stores energy in a magnetic field when current flows. Which one is described?",
-          "et": "Elektroonikakomponent salvestab voolu liikumisel energia magnetvälja. Mis see on?"
+          "en": "This colourful modelling compound began as a putty for cleaning coal soot from wallpaper. Name the toy brand.",
+          "et": "See värviline voolimismass algas pahtlina, millega puhastati tapeedilt kivisöetahma. Mis mänguasjabränd see on?"
         },
         "response": {
-          "en": "inductor",
-          "et": "induktiivpool"
+          "en": "Play-Doh",
+          "et": "Play-Doh"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Playdoh", "Play-Doh compound"],
+          "et": ["Playdoh"]
         },
         "explanation": {
-          "en": "Inductor opposes rapid changes in current according to its inductance.",
-          "et": "Induktiivpool takistab induktiivsuse tõttu voolu kiireid muutusi."
+          "en": "The modelling compound sold as Play-Doh was originally manufactured as a putty for cleaning coal soot from wallpaper.",
+          "et": "Play-Doh nime all müüdud voolimismassi valmistati algselt pahtlina, millega puhastati tapeedilt kivisöetahma."
         },
         "source": {
-          "sourceId": "wikipedia:inductor",
-          "title": "Inductor",
-          "url": "https://en.wikipedia.org/wiki/Inductor",
+          "sourceId": "wikipedia:play-doh",
+          "title": "Play-Doh",
+          "url": "https://en.wikipedia.org/wiki/Play-Doh",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-08-31"
         }
       }
     ]
