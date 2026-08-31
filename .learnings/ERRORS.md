@@ -1297,6 +1297,7 @@ Running `pnpm exec tsx` in the npm-managed isolated lane triggered dependency re
 ### Context
 - The failed reconciliation surfaced `ERR_PNPM_EXOTIC_SUBDEP`; later child processes could not resolve lane-local `tsx`, and direct runners lacked npm's `npm_execpath`.
 - Recovery stayed within the named lane: resolve and validate every source/target absolute path, confirm all targets are absent, then restore scoped and unscoped packages with PowerShell `Move-Item` in one shell. Do not enumerate in one shell and move in another.
+- The same 38 packages recurred under `.ignored` at 2026-08-31T13:15+03:00 during parallel read-only audits; the live `tsx.cmd` shim then pointed to an absent target. The controller repeated the exact validated in-lane move only after all package-manager users stopped.
 - Consolidates lane-local ERR-20260831-021/022.
 
 ### Suggested Fix
@@ -1308,7 +1309,7 @@ Use the checked-out local `node_modules/.bin` tool for ignored artifact scripts 
 
 ### Resolution
 - **Resolved**: 2026-08-31T09:35:00+03:00
-- **Notes**: All 38 packages were safely restored without deletion; lane-local `tsx`, ESLint and Vitest entrypoints and the documented npm gates passed afterward.
+- **Notes**: All 38 packages were safely restored without deletion. After the recurrence, `npm ls tsx typescript vitest eslint --depth=0`, direct `.\\node_modules\\.bin\\tsx.cmd --version`, and `npm run typecheck` all passed.
 
 ---
 
