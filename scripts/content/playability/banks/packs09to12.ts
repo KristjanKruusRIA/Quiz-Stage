@@ -4595,7 +4595,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-food-drink-set-078",
     "name": {
       "en": "Food Stories on Film",
-      "et": "Toidulood filmilinal"
+      "et": "Toidujuttu filmilinal"
     },
     "questions": [
       {
@@ -4633,8 +4633,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "film:big-night",
         "clue": {
-          "en": "Stanley Tucci and Tony Shalhoub play Italian immigrant brothers staging a free feast to save their Jersey Shore restaurant in which film?",
-          "et": "Millises filmis mängivad Stanley Tucci ja Tony Shalhoub Itaalia immigrantidest vendi, kes korraldavad oma Jersey Shore'i restorani päästmiseks tasuta pidusöögi?"
+          "en": "Stanley Tucci and Tony Shalhoub play Italian immigrant brothers staging a free feast at their Jersey Shore restaurant in which film?",
+          "et": "Millises filmis mängivad Stanley Tucci ja Tony Shalhoub Itaalia immigrantidest vendi, kes korraldavad oma Jersey Shore'i restoranis tasuta pidusöögi?"
         },
         "response": {
           "en": "Big Night",
@@ -4663,7 +4663,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "film:tampopo",
         "clue": {
           "en": "Juzo Itami's Japanese comedy advertised itself as the first “ramen Western.” What is its title?",
-          "et": "Juzo Itami Jaapani komöödiat reklaamiti esimese „rameniwesternina“. Mis on filmi pealkiri?"
+          "et": "Juzo Itami Jaapani komöödiat reklaamiti esimese „ramenivesternina“. Mis on filmi pealkiri?"
         },
         "response": {
           "en": "Tampopo",
@@ -4675,7 +4675,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Tampopo is a Japanese comedy written and directed by Juzo Itami; its nickname plays on the term “spaghetti Western.”",
-          "et": "Tampopo on Juzo Itami kirjutatud ja lavastatud Jaapani komöödia, mille hüüdnimi mängib väljendiga „spagetiwestern“."
+          "et": "Tampopo on Juzo Itami kirjutatud ja lavastatud Jaapani komöödia, mille hüüdnimi mängib väljendiga „spagetivestern“."
         },
         "source": {
           "sourceId": "wikipedia:tampopo",
@@ -4725,7 +4725,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "film:eat-drink-man-woman",
         "clue": {
           "en": "Ang Lee directed which family comedy-drama about the transition from tradition to modernity?",
-          "et": "Millise perekondliku draamakomöödia traditsioonidelt modernsusele üleminekust lavastas Ang Lee?"
+          "et": "Millise Ang Lee perekonnast rääkiva draamakomöödia keskmes on üleminek traditsioonidelt tänapäeva?"
         },
         "response": {
           "en": "Eat Drink Man Woman",
@@ -4737,7 +4737,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Eat Drink Man Woman is an Ang Lee film about the Zhu family navigating love, life, tradition and family.",
-          "et": "Eat Drink Man Woman on Ang Lee film Zhu perekonnast, kes tuleb toime armastuse, elu, traditsioonide ja peresuhetega."
+          "et": "Eat Drink Man Woman jälgib Zhu perekonda armastuse, elu, traditsioonide ja peresuhete keskel."
         },
         "source": {
           "sourceId": "wikipedia:eat-drink-man-woman",
@@ -4882,7 +4882,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "chef:alice-waters",
         "clue": {
-          "en": "Which American chef opened Berkeley's Chez Panisse, a restaurant noted for pioneering farm-to-table dining and California cuisine?",
+          "en": "Who opened Berkeley's Chez Panisse, a restaurant noted for pioneering farm-to-table dining and California cuisine?",
           "et": "Milline Ameerika kokk avas Berkeleys Chez Panisse'i, mis oli talust-lauale-liikumise ja California köögi teerajaja?"
         },
         "response": {
@@ -4945,40 +4945,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-080:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:donabe-japanese-clay-pot",
-        "tier": 2,
-        "subjectKey": "equipment:donabe",
-        "clue": {
-          "en": "What Japanese clay pot can sit over an open flame and often cooks nabemono at the table?",
-          "et": "Milline Jaapani savipott sobib lahtisele tulele ja selles valmistatakse lauas sageli nabemono-rooga?"
-        },
-        "response": {
-          "en": "donabe",
-          "et": "donabe"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Donabe literally means “earthenware pot”; it is glazed inside, porous outside and used for simmered Japanese dishes.",
-          "et": "Donabe tähendab sõna-sõnalt savipotti; see on seest glasuuritud, väljast poorne ja seda kasutatakse Jaapani hautatud roogade jaoks."
-        },
-        "source": {
-          "sourceId": "wikipedia:donabe",
-          "title": "Donabe",
-          "url": "https://en.wikipedia.org/wiki/Donabe",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-080:question:3",
         "factKey": "built-in-food-drink:checkpoint5:kamado-japanese-stove",
-        "tier": 3,
+        "tier": 2,
         "subjectKey": "equipment:kamado",
         "clue": {
-          "en": "Which traditional Japanese cook stove is fuelled by wood or charcoal?",
+          "en": "What traditional Japanese cook stove is fuelled by wood or charcoal?",
           "et": "Millist traditsioonilist Jaapani küpsetusahju köetakse puidu või söega?"
         },
         "response": {
@@ -5002,9 +4973,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-food-drink-set-080:question:4",
+        "key": "built-in-food-drink-set-080:question:3",
         "factKey": "built-in-food-drink:checkpoint5:caquelon-fondue-pot",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "equipment:caquelon",
         "clue": {
           "en": "What Swiss French name denotes the thick-bottomed ceramic or cast-iron pot used for fondue?",
@@ -5031,9 +5002,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-food-drink-set-080:question:5",
+        "key": "built-in-food-drink-set-080:question:4",
         "factKey": "built-in-food-drink:checkpoint5:couscoussier-double-steamer",
-        "tier": 5,
+        "tier": 4,
         "subjectKey": "equipment:couscoussier",
         "clue": {
           "en": "Which North African double-chambered steamer is designed specifically to cook couscous?",
@@ -5062,6 +5033,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
+      },
+      {
+        "key": "built-in-food-drink-set-080:question:5",
+        "factKey": "built-in-food-drink:checkpoint5:donabe-japanese-clay-pot",
+        "tier": 5,
+        "subjectKey": "equipment:donabe",
+        "clue": {
+          "en": "What Japanese clay pot can sit over an open flame and often cooks nabemono at the table?",
+          "et": "Milline Jaapani savipott sobib lahtisele tulele ja selles valmistatakse lauas sageli nabemono-rooga?"
+        },
+        "response": {
+          "en": "donabe",
+          "et": "donabe"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Donabe literally means “earthenware pot”; it is glazed inside, porous outside and used for simmered Japanese dishes.",
+          "et": "Donabe tähendab sõna-sõnalt savipotti; see on seest glasuuritud, väljast poorne ja seda kasutatakse Jaapani hautatud roogade jaoks."
+        },
+        "source": {
+          "sourceId": "wikipedia:donabe",
+          "title": "Donabe",
+          "url": "https://en.wikipedia.org/wiki/Donabe",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
       }
     ]
   },
@@ -5079,7 +5079,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "dish:ceviche",
         "clue": {
           "en": "Which Peruvian national dish marinates raw fish or shellfish in citrus with seasonings?",
-          "et": "Millises Peruu rahvusroas marineeritakse toorest kala või karpe tsitruse ja maitseainetega?"
+          "et": "Millises Peruu rahvusroas marineeritakse toorest kala või muid mereande tsitruse ja maitseainetega?"
         },
         "response": {
           "en": "ceviche",
@@ -5108,70 +5108,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-081:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:brandade-salt-cod-emulsion",
-        "tier": 2,
-        "subjectKey": "dish:brandade",
-        "clue": {
-          "en": "Which French speciality blends salt cod and olive oil into a creamy emulsion, usually with potato?",
-          "et": "Millises Prantsuse roas segatakse soolatursk ja oliiviõli kreemjaks emulsiooniks, tavaliselt koos kartuliga?"
-        },
-        "response": {
-          "en": "brandade",
-          "et": "brandade"
-        },
-        "acceptedVariants": {
-          "en": [
-            "brandade de morue"
-          ],
-          "et": [
-            "brandade de morue"
-          ]
-        },
-        "explanation": {
-          "en": "Brandade is a speciality of Mediterranean France and is also known in eastern Spain.",
-          "et": "Brandade on Vahemere-äärse Prantsusmaa eriroog, mida tuntakse ka Ida-Hispaanias."
-        },
-        "source": {
-          "sourceId": "wikipedia:brandade",
-          "title": "Brandade",
-          "url": "https://en.wikipedia.org/wiki/Brandade",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-081:question:3",
-        "factKey": "built-in-food-drink:checkpoint5:escabeche-acid-marinade",
-        "tier": 3,
-        "subjectKey": "dish:escabeche",
-        "clue": {
-          "en": "What name covers fish, meat or vegetables cooked or pickled in an acidic sauce, usually vinegar, with spices?",
-          "et": "Milline nimetus hõlmab kala, liha või köögivilju, mida küpsetatakse või marineeritakse happelises, tavaliselt äädikases vürtsikastmes?"
-        },
-        "response": {
-          "en": "escabeche",
-          "et": "escabeche"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Escabeche has versions in Spanish, Portuguese, Filipino and Hispanic American cuisines, sometimes frying the main ingredient before marinating it.",
-          "et": "Escabeche variante leidub Hispaania, Portugali, Filipiinide ja Ladina-Ameerika köögis ning mõnikord praetakse põhitooraine enne marineerimist."
-        },
-        "source": {
-          "sourceId": "wikipedia:escabeche",
-          "title": "Escabeche",
-          "url": "https://en.wikipedia.org/wiki/Escabeche",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-081:question:4",
         "factKey": "built-in-food-drink:checkpoint5:rollmops-rolled-herring",
-        "tier": 4,
+        "tier": 2,
         "subjectKey": "food:rollmops",
         "clue": {
           "en": "What name is given to pickled herring fillets rolled into cylinders, often around onion or gherkin?",
@@ -5202,13 +5140,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-food-drink-set-081:question:5",
+        "key": "built-in-food-drink-set-081:question:3",
         "factKey": "built-in-food-drink:checkpoint5:surstromming-fermented-herring",
-        "tier": 5,
+        "tier": 3,
         "subjectKey": "food:surstromming",
         "clue": {
           "en": "Which Swedish speciality is made from lightly salted, fermented Baltic herring?",
-          "et": "Milline Rootsi hõrgutis valmistatakse kergelt soolatud ja fermenteeritud Läänemere heeringast?"
+          "et": "Milline Rootsi hõrgutis valmistatakse kergelt soolatud ja fermenteeritud Läänemere räimest?"
         },
         "response": {
           "en": "surströmming",
@@ -5224,12 +5162,74 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Surströmming is a Swedish fermented-herring tradition documented since at least the 16th century.",
-          "et": "Surströmming on Rootsi fermenteeritud heeringa traditsioon, mida tuntakse vähemalt 16. sajandist."
+          "et": "Surströmming on Rootsi fermenteeritud räime traditsioon, mida tuntakse vähemalt 16. sajandist."
         },
         "source": {
           "sourceId": "wikipedia:surstromming",
           "title": "Surströmming",
           "url": "https://en.wikipedia.org/wiki/Surstr%C3%B6mming",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-081:question:4",
+        "factKey": "built-in-food-drink:checkpoint5:escabeche-acid-marinade",
+        "tier": 4,
+        "subjectKey": "dish:escabeche",
+        "clue": {
+          "en": "Fish, meat or vegetables cooked or pickled in an acidic sauce, usually vinegar, with spices bear what name?",
+          "et": "Milline nimetus hõlmab kala, liha või köögivilju, mida küpsetatakse või marineeritakse happelises, tavaliselt äädikases vürtsikastmes?"
+        },
+        "response": {
+          "en": "escabeche",
+          "et": "escabeche"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Escabeche has versions in Spanish, Portuguese, Filipino and Hispanic American cuisines, sometimes frying the main ingredient before marinating it.",
+          "et": "Escabeche variante leidub Hispaania, Portugali, Filipiinide ja Ladina-Ameerika köögis ning mõnikord praetakse põhitooraine enne marineerimist."
+        },
+        "source": {
+          "sourceId": "wikipedia:escabeche",
+          "title": "Escabeche",
+          "url": "https://en.wikipedia.org/wiki/Escabeche",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-081:question:5",
+        "factKey": "built-in-food-drink:checkpoint5:brandade-salt-cod-emulsion",
+        "tier": 5,
+        "subjectKey": "dish:brandade",
+        "clue": {
+          "en": "Name the French speciality that blends salt cod and olive oil into a creamy emulsion, usually with potato.",
+          "et": "Millises Prantsuse roas segatakse soolatursk ja oliiviõli kreemjaks emulsiooniks, tavaliselt koos kartuliga?"
+        },
+        "response": {
+          "en": "brandade",
+          "et": "brandade"
+        },
+        "acceptedVariants": {
+          "en": [
+            "brandade de morue"
+          ],
+          "et": [
+            "brandade de morue"
+          ]
+        },
+        "explanation": {
+          "en": "Brandade is a speciality of Mediterranean France and is also known in eastern Spain.",
+          "et": "Brandade on Vahemere-äärse Prantsusmaa eriroog, mida tuntakse ka Ida-Hispaanias."
+        },
+        "source": {
+          "sourceId": "wikipedia:brandade",
+          "title": "Brandade",
+          "url": "https://en.wikipedia.org/wiki/Brandade",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -5278,8 +5278,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "dessert:basque-cheesecake",
         "clue": {
-          "en": "Which crustless San Sebastián dessert from La Viña has a dark caramelised surface and creamy centre?",
-          "et": "Milline La Viñast pärit koorikuta San Sebastiáni magustoit on tumeda karamellistunud pinna ja kreemja sisuga?"
+          "en": "Which crustless San Sebastián dessert from La Viña has a caramelised surface and creamy centre?",
+          "et": "Milline La Viñast pärit koorikuta San Sebastiáni magustoit on karamellistunud pinna ja kreemja sisuga?"
         },
         "response": {
           "en": "Basque cheesecake",
@@ -5340,8 +5340,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "dessert:dobos-torte",
         "clue": {
-          "en": "Which Hungarian sponge cake named for József C. Dobos is layered with chocolate buttercream and topped with hard caramel?",
-          "et": "Milline József C. Dobosi järgi nimetatud Ungari biskviittort on kihitatud šokolaadi-võikreemiga ja kaetud kõva karamelliga?"
+          "en": "Which Hungarian sponge cake named for József C. Dobos is layered with chocolate buttercream and topped with caramel?",
+          "et": "Milline József C. Dobosi järgi nimetatud Ungari biskviittort on kihitatud šokolaadi-võikreemiga ja kaetud karamelliga?"
         },
         "response": {
           "en": "Dobos torte",
@@ -5358,7 +5358,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The hardened caramel top helped the cake resist drying when refrigeration was limited.",
-          "et": "Kõva karamellkate aitas koogil mitte kuivada ajal, mil külmutusvõimalused olid piiratud."
+          "et": "Kõva karamellkate aitas koogil mitte kuivada ajal, mil jahutusvõimalused olid piiratud."
         },
         "source": {
           "sourceId": "wikipedia:dobos-torte",
@@ -5445,8 +5445,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "vegetable:brussels-sprout",
         "clue": {
-          "en": "Which member of the Gemmifera cabbage cultivar group is grown for its edible buds?",
-          "et": "Millist kapsa sordirühma Gemmifera liiget kasvatatakse söödavate pungade pärast?"
+          "en": "Which small cabbage buds take their English name from a Belgian city near which they were cultivated in the 13th century?",
+          "et": "Millised väikesed kapsapungad said ingliskeelse nime Belgia linna järgi, mille lähedal neid kasvatati 13. sajandil?"
         },
         "response": {
           "en": "Brussels sprouts",
@@ -5461,8 +5461,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Brussels sprouts belong to the Gemmifera cultivar group of Brassica oleracea.",
-          "et": "Rooskapsas kuulub liigi Brassica oleracea sordirühma Gemmifera."
+          "en": "Their forerunners appeared in northern Europe in the 5th century; cultivation near Brussels in the 13th century gave them their name.",
+          "et": "Nende eelkäijad ilmusid Põhja-Euroopasse 5. sajandil; 13. sajandi kasvatus Brüsseli lähistel andis neile nime."
         },
         "source": {
           "sourceId": "wikipedia:brussels-sprout",
@@ -5548,8 +5548,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Frankfurdi vorst"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Frankfurt sausage"
+          ],
+          "et": [
+            "Frankfurter Würstchen",
+            "Frankfurdi viiner"
+          ]
         },
         "explanation": {
           "en": "Frankfurter Würstchen is a parboiled smoked sausage traditionally served with bread, mustard, horseradish or potato salad.",
@@ -5644,8 +5649,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "dish:congee",
         "clue": {
-          "en": "Which Asian savoury porridge is made by boiling rice in abundant water until the grains soften?",
-          "et": "Milline Aasia soolane puder valmib riisi rohkes vees keetmisel, kuni terad pehmenevad?"
+          "en": "Which savoury porridge is made by boiling rice in abundant water until the grains soften?",
+          "et": "Milline soolane puder valmib riisi rohkes vees keetmisel, kuni terad pehmenevad?"
         },
         "response": {
           "en": "congee",
@@ -5761,7 +5766,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Kulfi is often described as traditional Indian ice cream and, unlike ordinary ice cream, is not churned while freezing.",
-          "et": "Kulfit kirjeldatakse sageli traditsioonilise India jäätisena ning erinevalt tavalisest jäätisest seda külmutamise ajal ei klopita."
+          "et": "Kulfit kirjeldatakse sageli traditsioonilise India jäätisena ning erinevalt tavalisest jäätisest seda külmutamise ajal ei segata."
         },
         "source": {
           "sourceId": "wikipedia:kulfi",
@@ -5823,7 +5828,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The oven firms and caramelises the meringue before the protected ice cream begins to melt.",
-          "et": "Ahi tahendab ja karamellistab besee enne, kui selle all kaitstud jäätis sulama hakkab."
+          "et": "Ahi tahendab ja karamellistab besee enne, kui selle all olev jäätis jõuab sulama hakata."
         },
         "source": {
           "sourceId": "wikipedia:baked-alaska",
@@ -5900,8 +5905,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-086",
     "name": {
-      "en": "Quick Bites in Five Cities",
-      "et": "Kiired ampsud viies linnas"
+      "en": "A Five-Stop Street-Food Tour",
+      "et": "Viie peatusega tänavatoiduretk"
     },
     "questions": [
       {
@@ -5910,8 +5915,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "dish:poutine",
         "clue": {
-          "en": "Which dish tops French fries and cheese curds with hot brown gravy?",
-          "et": "Millises roas kaetakse friikartulid ja juustutükid kuuma pruuni kastmega?"
+          "en": "French fries and cheese curds topped with hot brown gravy make which Québec dish?",
+          "et": "Friikartulitest, juustuteradest ja kuumast pruunist kastmest koosneb milline Québeci roog?"
         },
         "response": {
           "en": "poutine",
@@ -5935,76 +5940,43 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-086:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:doner-vertical-rotisserie",
+        "factKey": "built-in-food-drink:checkpoint5:banh-mi-vietnamese-baguette",
         "tier": 2,
-        "subjectKey": "dish:doner-kebab",
+        "subjectKey": "dish:banh-mi",
         "clue": {
-          "en": "Which Turkish dish cooks an inverted cone of seasoned meat on a vertical rotisserie and shaves off the browned outer layer?",
-          "et": "Millises Türgi roas küpseb maitsestatud lihast tagurpidi koonus püstvardas ning pruunistunud väliskiht lõigatakse õhukeselt maha?"
+          "en": "Which Vietnamese sandwich fills a short, crisp-crusted baguette with meat and savoury ingredients?",
+          "et": "Millises Vietnami võileivas täidetakse lühike krõbeda koorikuga baguette liha ja soolaste lisanditega?"
         },
         "response": {
-          "en": "döner kebab",
-          "et": "döner-kebab"
+          "en": "bánh mì",
+          "et": "bánh mì"
         },
         "acceptedVariants": {
           "en": [
-            "doner kebab",
-            "döner"
+            "banh mi",
+            "banh-mi"
           ],
           "et": [
-            "döner",
-            "doner-kebab"
+            "banh mi",
+            "banh-mi"
           ]
         },
         "explanation": {
-          "en": "The vertical-rotisserie technique arose in the Ottoman Empire and influenced shawarma, gyros and al pastor.",
-          "et": "Püstvarda tehnika tekkis Osmanite riigis ning mõjutas shawarma't, gyros't ja al pastor'it."
+          "en": "Bánh mì can mean the bread itself or the filled sandwich, often called bánh mì thịt.",
+          "et": "Bánh mì võib tähendada nii saia ennast kui ka täidetud võileiba, mida nimetatakse sageli bánh mì thịt'iks."
         },
         "source": {
-          "sourceId": "wikipedia:doner-kebab",
-          "title": "Doner kebab",
-          "url": "https://en.wikipedia.org/wiki/Doner_kebab",
+          "sourceId": "wikipedia:banh-mi",
+          "title": "Bánh mì",
+          "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-food-drink-set-086:question:3",
-        "factKey": "built-in-food-drink:checkpoint5:jianbing-chinese-crepe",
-        "tier": 3,
-        "subjectKey": "dish:jianbing",
-        "clue": {
-          "en": "Which Chinese breakfast crêpe is cooked on a flat hotplate, topped with sauces and crisp fillings, and often folded before serving?",
-          "et": "Milline Hiina hommikusöögikrepp küpseb siledal küpsetusplaadil, kaetakse kastmete ja krõbedate lisanditega ning volditakse sageli enne serveerimist kokku?"
-        },
-        "response": {
-          "en": "jianbing",
-          "et": "jianbing"
-        },
-        "acceptedVariants": {
-          "en": [
-            "jian bing"
-          ],
-          "et": [
-            "jian bing"
-          ]
-        },
-        "explanation": {
-          "en": "Jianbing is a popular Chinese street breakfast made with grain-flour batter, eggs, sauces and varied fillings.",
-          "et": "Jianbing on populaarne Hiina tänavahommikueine, mida tehakse teraviljajahutainast, munadest, kastmetest ja eri täidistest."
-        },
-        "source": {
-          "sourceId": "wikipedia:jianbing",
-          "title": "Jianbing",
-          "url": "https://en.wikipedia.org/wiki/Jianbing",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-086:question:4",
         "factKey": "built-in-food-drink:checkpoint5:zapiekanka-polish-baguette",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "dish:zapiekanka",
         "clue": {
           "en": "Which Polish street snack is an open-faced toasted baguette traditionally topped with mushrooms, cheese and ketchup?",
@@ -6031,9 +6003,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-food-drink-set-086:question:5",
+        "key": "built-in-food-drink-set-086:question:4",
         "factKey": "built-in-food-drink:checkpoint5:hotteok-korean-pancake",
-        "tier": 5,
+        "tier": 4,
         "subjectKey": "dish:hotteok",
         "clue": {
           "en": "Which South Korean street-food pancake has a filling of brown sugar, honey, peanuts and cinnamon?",
@@ -6059,6 +6031,39 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:hotteok",
           "title": "Hotteok",
           "url": "https://en.wikipedia.org/wiki/Hotteok",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-086:question:5",
+        "factKey": "built-in-food-drink:checkpoint5:jianbing-chinese-crepe",
+        "tier": 5,
+        "subjectKey": "dish:jianbing",
+        "clue": {
+          "en": "Which Chinese breakfast crêpe is cooked on a flat hotplate, topped with sauces and crisp fillings, and often folded before serving?",
+          "et": "Milline Hiina hommikusöögikrepp küpseb siledal küpsetusplaadil, kaetakse kastmete ja krõbedate lisanditega ning volditakse sageli enne serveerimist kokku?"
+        },
+        "response": {
+          "en": "jianbing",
+          "et": "jianbing"
+        },
+        "acceptedVariants": {
+          "en": [
+            "jian bing"
+          ],
+          "et": [
+            "jian bing"
+          ]
+        },
+        "explanation": {
+          "en": "Jianbing is a popular Chinese street breakfast made with grain-flour batter, eggs, sauces and varied fillings.",
+          "et": "Jianbing on populaarne Hiina tänavahommikueine, mida tehakse teraviljajahutainast, munadest, kastmetest ja eri täidistest."
+        },
+        "source": {
+          "sourceId": "wikipedia:jianbing",
+          "title": "Jianbing",
+          "url": "https://en.wikipedia.org/wiki/Jianbing",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -6240,70 +6245,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-088:question:1",
-        "factKey": "built-in-food-drink:checkpoint5:beef-wellington-pastry",
-        "tier": 1,
-        "subjectKey": "dish:beef-wellington",
-        "clue": {
-          "en": "Which celebratory dish wraps beef fillet and mushroom duxelles in puff pastry?",
-          "et": "Millises pidulikus roas mähitakse veisefilee ja seene-duxelles lehttainasse?"
-        },
-        "response": {
-          "en": "beef Wellington",
-          "et": "veiseliha Wellingtoni moodi"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "The precise origin of the name is unclear, and its connection to the Duke of Wellington is uncertain.",
-          "et": "Nime täpne päritolu on ebaselge ning seos Wellingtoni hertsogiga pole kindel."
-        },
-        "source": {
-          "sourceId": "wikipedia:beef-wellington",
-          "title": "Beef Wellington",
-          "url": "https://en.wikipedia.org/wiki/Beef_Wellington",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-088:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:fettuccine-alfredo-butter-parmesan",
-        "tier": 2,
-        "subjectKey": "dish:fettuccine-alfredo",
-        "clue": {
-          "en": "Which pasta dish named for its Roman restaurateur creator coats the pasta with butter and Parmesan?",
-          "et": "Millises Rooma restoranipidajast looja järgi nimetatud pastaroas kaetakse pasta või ja parmesaniga?"
-        },
-        "response": {
-          "en": "fettuccine Alfredo",
-          "et": "fettuccine Alfredo"
-        },
-        "acceptedVariants": {
-          "en": [
-            "fettuccine al burro"
-          ],
-          "et": [
-            "fettuccine al burro"
-          ]
-        },
-        "explanation": {
-          "en": "The butter and Parmesan melt and emulsify into a rich sauce that coats the pasta.",
-          "et": "Või ja parmesan sulavad ning emulgeeruvad rikkalikuks kastmeks, mis katab pasta."
-        },
-        "source": {
-          "sourceId": "wikipedia:fettuccine-alfredo",
-          "title": "Fettuccine Alfredo",
-          "url": "https://en.wikipedia.org/wiki/Fettuccine_Alfredo",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-food-drink-set-088:question:3",
         "factKey": "built-in-food-drink:checkpoint5:beef-stroganoff-sour-cream",
-        "tier": 3,
+        "tier": 1,
         "subjectKey": "dish:beef-stroganoff",
         "clue": {
           "en": "Which Russian dish serves sautéed beef in a mustard and sour-cream sauce?",
@@ -6336,6 +6279,72 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
+        "key": "built-in-food-drink-set-088:question:2",
+        "factKey": "built-in-food-drink:checkpoint5:beef-wellington-pastry",
+        "tier": 2,
+        "subjectKey": "dish:beef-wellington",
+        "clue": {
+          "en": "Which dish wraps beef fillet and mushroom duxelles in puff pastry?",
+          "et": "Millises roas mähitakse veisefilee ja seene-duxelles lehttainasse?"
+        },
+        "response": {
+          "en": "beef Wellington",
+          "et": "Wellingtoni veisefilee"
+        },
+        "acceptedVariants": {
+          "en": [
+            "Wellington"
+          ],
+          "et": [
+            "beef Wellington"
+          ]
+        },
+        "explanation": {
+          "en": "The precise origin of the name is unclear, and its connection to the Duke of Wellington is uncertain.",
+          "et": "Nime täpne päritolu on ebaselge ning seos Wellingtoni hertsogiga pole kindel."
+        },
+        "source": {
+          "sourceId": "wikipedia:beef-wellington",
+          "title": "Beef Wellington",
+          "url": "https://en.wikipedia.org/wiki/Beef_Wellington",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-food-drink-set-088:question:3",
+        "factKey": "built-in-food-drink:checkpoint5:fettuccine-alfredo-butter-parmesan",
+        "tier": 3,
+        "subjectKey": "dish:fettuccine-alfredo",
+        "clue": {
+          "en": "Which pasta dish named for its Roman restaurateur creator coats the pasta with butter and Parmesan?",
+          "et": "Millises Rooma restoranipidajast looja järgi nimetatud pastaroas kaetakse pasta või ja parmesaniga?"
+        },
+        "response": {
+          "en": "fettuccine Alfredo",
+          "et": "fettuccine Alfredo"
+        },
+        "acceptedVariants": {
+          "en": [
+            "fettuccine al burro"
+          ],
+          "et": [
+            "fettuccine al burro"
+          ]
+        },
+        "explanation": {
+          "en": "The butter and Parmesan melt and emulsify into a rich sauce that coats the pasta.",
+          "et": "Või ja parmesan sulavad ning emulgeeruvad rikkalikuks kastmeks, mis katab pasta."
+        },
+        "source": {
+          "sourceId": "wikipedia:fettuccine-alfredo",
+          "title": "Fettuccine Alfredo",
+          "url": "https://en.wikipedia.org/wiki/Fettuccine_Alfredo",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
         "key": "built-in-food-drink-set-088:question:4",
         "factKey": "built-in-food-drink:checkpoint5:cobb-salad-brown-derby",
         "tier": 4,
@@ -6349,8 +6358,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Cobbi salat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Cobb's salad"
+          ],
+          "et": [
+            "Cobb salad"
+          ]
         },
         "explanation": {
           "en": "One origin story says Cobb salad became a signature dish of Hollywood's Brown Derby restaurant in 1937.",
@@ -6370,8 +6383,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "dish:lobster-newberg",
         "clue": {
-          "en": "Which rich American lobster dish combines butter, cream, eggs, cognac and sherry?",
-          "et": "Millises rikkalikus Ameerika homaariroas ühendatakse või, koor, munad, konjak ja šerri?"
+          "en": "Which American lobster dish combines butter, cream, eggs, cognac and sherry?",
+          "et": "Millises Ameerika homaariroas ühendatakse või, koor, munad, konjak ja šerri?"
         },
         "response": {
           "en": "Lobster Newberg",
