@@ -15411,8 +15411,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "printer:inkjet",
         "clue": {
-          "en": "What kind of home printer made photo-quality colour practical by placing controlled microscopic drops of liquid ink directly on paper?",
-          "et": "Milline koduprinteri tüüp tegi fotoliku värvitrüki praktiliseks, paigutades paberile juhitult mikroskoopilisi vedela tindi piisakesi?"
+          "en": "What printing method gives a desktop photo printer smooth colour gradients by firing controlled microscopic drops of liquid ink, without the impact pins used for multipart invoices?",
+          "et": "Milline trükiviis annab lauaprinterile sujuvad värviüleminekud, paisates paberile juhitult mikroskoopilisi vedela tindi piisakesi, mitte kasutades mitmeosaliste arvete jaoks mõeldud lööknõelu?"
         },
         "response": {
           "en": "inkjet printer",
@@ -15440,8 +15440,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "printer:laser",
         "clue": {
-          "en": "What printer creates an electrostatic image on a drum, attracts powdered toner to it, and fuses the toner to paper with heat?",
-          "et": "Milline printer loob trumlile elektrostaatilise kujutise, tõmbab sellele tooneripulbri ja kinnitab tooneri kuumusega paberile?"
+          "en": "What office printer writes an electrostatic image onto a drum with a focused beam swept by a rotating mirror, then attracts toner and fuses it to paper with heat?",
+          "et": "Milline kontoriprinter kirjutab pöörleva peegliga suunatud kiire abil trumlile elektrostaatilise kujutise, tõmbab sellele tooneri ja kinnitab selle kuumusega paberile?"
         },
         "response": {
           "en": "laser printer",
@@ -15469,20 +15469,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "printer:thermal",
         "clue": {
-          "en": "What kind of receipt printer can leave a blank till slip in sunlight that later darkens and fades, because it heats a specially coated paper?",
-          "et": "Milline kviitungiprinter võib jätta päikese kätte sattunud kassalipiku hiljem tumenema ja pleekima, sest see kuumutab spetsiaalse kattega paberit?"
+          "en": "What kind of receipt printer makes an image by selectively heating coated paper—a medium that may darken from incidental heat or friction and whose printed image can fade in light?",
+          "et": "Milline kviitungiprinter tekitab kujutise spetsiaalse kattega paberit valikuliselt kuumutades, kusjuures paber võib juhusliku kuumuse või hõõrdumise tõttu tumeneda ja trükipilt valguse käes pleekida?"
         },
         "response": {
-          "en": "thermal printer",
-          "et": "termoprinter"
+          "en": "direct thermal printer",
+          "et": "otsetermoprinter"
         },
         "acceptedVariants": {
-          "en": ["direct thermal printer"],
-          "et": ["otsetermoprinter"]
+          "en": ["thermal printer"],
+          "et": ["termoprinter"]
         },
         "explanation": {
-          "en": "Direct thermal printing darkens a heat-sensitive coating, which is why receipts can fade when exposed to heat or light.",
-          "et": "Otsetermotrükk tumendab kuumatundlikku katet; seepärast võivad kviitungid kuumuse või valguse käes pleekida."
+          "en": "Direct thermal printing darkens a heat-sensitive coating. Incidental heat or friction can darken the paper, while light can fade the printed image.",
+          "et": "Otsetermotrükk tumendab kuumatundlikku katet. Juhuslik kuumus või hõõrdumine võib paberit tumendada, valgus aga trükipilti pleegitada."
         },
         "source": {
           "sourceId": "wikipedia:thermal-printing",
@@ -15498,8 +15498,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "printer:dot-matrix",
         "clue": {
-          "en": "What noisy printer forms characters by striking an ink ribbon against paper with a matrix of pins, a method once common for multipart invoices?",
-          "et": "Milline lärmakas printer moodustab tähemärke, lüües nõelmaatriksiga tindilinti vastu paberit, ning oli kunagi mitmeosaliste arvete puhul tavaline?"
+          "en": "What noisy office printer became useful wherever carbon duplicates were required, because its matrix of pins struck an ink ribbon against the paper?",
+          "et": "Milline lärmakas kontoriprinter oli vajalik seal, kus nõuti kopeerpaberiga duplikaate, sest selle nõelmaatriks lõi tindilinti vastu paberit?"
         },
         "response": {
           "en": "dot-matrix printer",
@@ -15565,8 +15565,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:smoke-detector",
         "clue": {
-          "en": "What ceiling device sounds an alarm when it detects airborne particles produced by a fire, giving people an early warning while they can still escape?",
-          "et": "Milline lakke paigaldatav seade annab häiret, kui tuvastab tulekahjus tekkinud õhus hõljuvaid osakesi, et inimesed jõuaksid varakult põgeneda?"
+          "en": "What early-warning device can use either a photoelectric light path or an ionisation chamber to detect airborne smoke particles before flames become obvious?",
+          "et": "Milline varajase hoiatuse seade võib õhus hõljuvaid suitsuosakesi tuvastada kas fotoelektrilise valgusraja või ionisatsioonikambri abil enne, kui leegid muutuvad ilmseks?"
         },
         "response": {
           "en": "smoke detector",
@@ -15594,8 +15594,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "system:fire-sprinkler",
         "clue": {
-          "en": "What fire-protection system releases water from individual heads when heat opens them, rather than drenching every room at once?",
-          "et": "Milline tulekaitsesüsteem laseb kuumuse toimel vett välja üksikutest sprinkleripeadest, mitte ei uputa korraga kõiki ruume?"
+          "en": "In a hotel fire, what system can send water only from heads heated near the blaze rather than drenching every room, because each sprinkler head operates independently?",
+          "et": "Milline süsteem võib hotellipõlengus lasta vett ainult tulekolde lähedal kuumenenud peadest, mitte uputada korraga kõiki ruume, sest iga sprinkleripea töötab iseseisvalt?"
         },
         "response": {
           "en": "fire sprinkler system",
@@ -15623,16 +15623,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "test:crash-test-dummy",
         "clue": {
-          "en": "What instrumented human-shaped surrogate lets engineers measure forces in a simulated car collision before exposing people to danger?",
-          "et": "Milline anduritega inimesekujuline asendaja võimaldab inseneridel mõõta avariikatses jõude enne inimeste ohtu seadmist?"
+          "en": "What crash-laboratory surrogate lets engineers compare two restraint designs because instruments inside it record the loads a human body would experience?",
+          "et": "Milline avariilabori inimesekujuline asendaja võimaldab inseneridel võrrelda kahte turvasüsteemi, sest selle sees olevad andurid salvestavad inimkehale mõjuvaid koormusi?"
         },
         "response": {
           "en": "crash test dummy",
           "et": "avariikatse mannekeen"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["crash dummy"],
+          "et": ["kokkupõrketesti mannekeen"]
         },
         "explanation": {
           "en": "Crash-test dummies carry sensors that record the loads a body would experience, helping designers compare restraint and vehicle designs.",
@@ -15652,20 +15652,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "device:seat-belt-pretensioner",
         "clue": {
-          "en": "What car-safety device rapidly tightens an already fastened seat belt at the start of a severe crash, positioning the occupant before the airbag deploys?",
-          "et": "Milline autoohutusseade pingutab tugeva avarii alguses juba kinnitatud turvavööd kiiresti, asetades sõitja õigesse asendisse enne turvapadja avanemist?"
+          "en": "What car-safety device tightens an already fastened seat belt almost instantly during a crash, removing slack and reducing the occupant's forward movement?",
+          "et": "Milline autoohutusseade pingutab kokkupõrke korral kinnitatud turvavöö peaaegu hetkega, eemaldades lõtku ja vähendades sõitja ettepoole liikumist?"
         },
         "response": {
           "en": "seat belt pretensioner",
           "et": "turvavöö eelpinguti"
         },
         "acceptedVariants": {
-          "en": ["seatbelt pretensioner"],
-          "et": ["turvavöö pinguti"]
+          "en": ["pretensioner", "belt pretensioner", "pre-tensioner", "seatbelt pretensioner"],
+          "et": ["eelpinguti", "turvavöö pinguti"]
         },
         "explanation": {
-          "en": "A pretensioner removes slack from the belt in the first moments of a collision, helping the restraint and airbag work in their intended positions.",
-          "et": "Eelpinguti eemaldab kokkupõrke esimestel hetkedel turvavöö lõtku, et turvavöö ja turvapadi töötaksid ettenähtud asendis."
+          "en": "A seat-belt pretensioner removes slack almost instantly during a crash, helping the belt restrain the occupant sooner and reducing forward movement.",
+          "et": "Turvavöö eelpinguti eemaldab kokkupõrke korral turvavöö lõtku peaaegu hetkega, nii et vöö hakkab sõitjat varem kinni hoidma ja vähendab ettepoole liikumist."
         },
         "source": {
           "sourceId": "wikipedia:seat-belt",
@@ -16181,8 +16181,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:hearing-aid",
         "clue": {
-          "en": "What small device worn in or behind the ear uses a microphone, amplifier, and receiver to make sound easier to hear?",
-          "et": "Milline kõrvas või kõrva taga kantav väike seade kasutab mikrofoni, võimendit ja vastuvõtjat, et heli oleks paremini kuuldav?"
+          "en": "What device is individually fitted and programmed for hearing loss, yet still works through the same chain of microphone, amplifier, and receiver worn in or behind the ear?",
+          "et": "Milline seade kohandatakse ja programmeeritakse inimese kuulmislanguse järgi, kuid töötab siiski kõrvas või kõrva taga mikrofoni, võimendi ja vastuvõtja ahelaga?"
         },
         "response": {
           "en": "hearing aid",
@@ -16210,16 +16210,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "device:prosthetic-limb",
         "clue": {
-          "en": "What artificial arm or leg can be tailored for everyday mobility, a particular sport, or a job, rather than merely filling the outline of a missing limb?",
-          "et": "Millist puuduva käe või jala kunstlikku asendust saab kohandada igapäevaseks liikumiseks, kindlaks spordialaks või tööks, mitte ainult puuduva jäseme kuju täitmiseks?"
+          "en": "What artificial arm or leg may be custom-built for a runner, a particular trade, or everyday walking, rather than serving only as a cosmetic replacement?",
+          "et": "Millist puuduva käe või jala kunstlikku asendust saab valmistada jooksjale, kindla ameti jaoks või igapäevaseks kõndimiseks, mitte ainult välimuse taastamiseks?"
         },
         "response": {
           "en": "prosthetic limb",
           "et": "jäsemeprotees"
         },
         "acceptedVariants": {
-          "en": ["limb prosthesis"],
-          "et": ["käe- või jalaprotees"]
+          "en": ["limb prosthesis", "artificial limb"],
+          "et": ["käe- või jalaprotees", "tehisjäse"]
         },
         "explanation": {
           "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
