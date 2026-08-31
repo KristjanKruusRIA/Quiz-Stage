@@ -1440,3 +1440,35 @@ Redispatch the same bounded brief to an available frontier coding model without 
 - **Notes**: Redispatched the unchanged task to an available model; no recovery or rollback was needed.
 
 ---
+
+## [ERR-20260831-TSX] tsx-eval-top-level-await
+
+**Logged**: 2026-08-31T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+`tsx -e` compiled an inline audit probe as CommonJS, so top-level `await` was rejected.
+
+### Error
+```
+Top-level await is currently not supported with the "cjs" output format
+```
+
+### Context
+- Attempted dynamic imports of sibling TypeScript content banks from an inline `tsx -e` probe.
+- The audit itself remained read-only and no source data was changed.
+
+### Suggested Fix
+Wrap dynamic imports in an async IIFE when using `tsx -e` in this workspace.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-08-31T00:00:00+03:00
+- **Notes**: Continue with `(async () => { ... })()` around the inline probe.
+
+---
