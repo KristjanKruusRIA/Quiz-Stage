@@ -12119,45 +12119,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-057:question:3",
-        "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:black-box",
-        "tier": 4,
-        "subjectKey": "device:black-box",
-        "clue": {
-          "en": "What common name is given to the orange crash-resistant recorders that preserve flight data and cockpit audio after an accident?",
-          "et": "Mis üldnimetusega kutsutakse oranže löögikindlaid salvestajaid, mis säilitavad pärast õnnetust lennuandmed ja kokpiti heli?"
-        },
-        "response": {
-          "en": "black box",
-          "et": "must kast"
-        },
-        "acceptedVariants": {
-          "en": [
-            "flight recorder"
-          ],
-          "et": [
-            "lennusalvesti"
-          ]
-        },
-        "explanation": {
-          "en": "The popular name covers flight-data and cockpit-voice recorders, which are painted orange to make recovery easier.",
-          "et": "Rahvapärane nimetus hõlmab lennuandmete ja kokpiti hääle salvestajaid, mis on leidmise hõlbustamiseks oranžid."
-        },
-        "source": {
-          "sourceId": "wikipedia:Flight_recorder",
-          "title": "Flight recorder",
-          "url": "https://en.wikipedia.org/wiki/Flight_recorder",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-057:question:4",
         "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:runway-lighting",
         "tier": 3,
         "subjectKey": "system:runway-lighting",
         "clue": {
-          "en": "Pilots approaching after dark use this system of coloured and white lights to identify the runway and align the aircraft. What system is it?",
-          "et": "Pimedal ajal lähenedes kasutavad piloodid seda värviliste ja valgete tulede süsteemi, et lennurada ära tunda ja lennuk joondada. Mis süsteem see on?"
+          "en": "On a dark or foggy approach, coloured and white lights help a pilot find the runway and line up the aircraft. What system provides them?",
+          "et": "Pimedal või udusel lähenemisel aitavad värvilised ja valged tuled piloodil lennurada leida ning lennukit joondada. Milline süsteem neid annab?"
         },
         "response": {
           "en": "runway lighting",
@@ -12184,13 +12151,46 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
+        "key": "built-in-technology-inventions-set-057:question:4",
+        "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:black-box",
+        "tier": 4,
+        "subjectKey": "device:black-box",
+        "clue": {
+          "en": "After an accident, investigators recover orange crash-resistant units containing the flight-data and cockpit-voice recorders. What familiar collective name do people use for them?",
+          "et": "Pärast õnnetust leiavad uurijad oranžid löögikindlad seadmed, milles on lennuandmete ja kokpiti hääle salvestajad. Millist üldtuntud koondnimetust nende kohta kasutatakse?"
+        },
+        "response": {
+          "en": "black box",
+          "et": "must kast"
+        },
+        "acceptedVariants": {
+          "en": [
+            "flight recorder"
+          ],
+          "et": [
+            "lennusalvesti"
+          ]
+        },
+        "explanation": {
+          "en": "The popular name covers flight-data and cockpit-voice recorders, which are painted orange to make recovery easier.",
+          "et": "Rahvapärane nimetus hõlmab lennuandmete ja kokpiti hääle salvestajaid, mis on leidmise hõlbustamiseks oranžid."
+        },
+        "source": {
+          "sourceId": "wikipedia:Flight_recorder",
+          "title": "Flight recorder",
+          "url": "https://en.wikipedia.org/wiki/Flight_recorder",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
         "key": "built-in-technology-inventions-set-057:question:5",
         "factKey": "built-in-technology-inventions:aviation-difficult-weather:medium:wind-tunnel",
         "tier": 5,
         "subjectKey": "facility:wind-tunnel",
         "clue": {
-          "en": "Engineers test aircraft shapes in this facility by forcing air past a stationary model. What is it called?",
-          "et": "Insenerid katsetavad selles rajatises lennukikujusid, juhtides õhu liikumatust mudelist mööda. Mis rajatis see on?"
+          "en": "Before committing a new wing shape to flight, engineers can keep a scale model still, drive a measured stream of air around it, and compare lift and drag. What test facility does that?",
+          "et": "Enne uue tiivakuju lennukile paigaldamist saavad insenerid hoida mudelit paigal, juhtida selle ümber mõõdetud õhuvoolu ning võrrelda tõstejõudu ja takistust. Mis katserajatis seda võimaldab?"
         },
         "response": {
           "en": "wind tunnel",
@@ -12661,41 +12661,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-060:question:4",
-        "factKey": "built-in-technology-inventions:small-inventions-big-difference:medium:safety-match",
-        "tier": 5,
-        "subjectKey": "fire:safety-match",
-        "clue": {
-          "en": "What kind of match is designed to light only when struck on the specially prepared surface of its box, rather than on any rough surface?",
-          "et": "Milline tikk on mõeldud süttima ainult toosi spetsiaalsel süütepinnal, mitte igal karedal pinnal tõmmates?"
-        },
-        "response": {
-          "en": "safety match",
-          "et": "ohutustikk"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "A safety match separates the reactive chemicals between the match head and the striking surface. That makes accidental ignition much less likely than with older strike-anywhere matches.",
-          "et": "Ohutustiku reageerivad kemikaalid on jaotatud tikupäise ja süütepinna vahel. Seetõttu süttib see juhuslikult palju vähem tõenäoliselt kui vanem kõikjal süttiv tikk."
-        },
-        "source": {
-          "sourceId": "wikipedia:Match",
-          "title": "Match",
-          "url": "https://en.wikipedia.org/wiki/Match",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-060:question:5",
         "factKey": "built-in-technology-inventions:small-inventions-big-difference:medium:corkscrew",
         "tier": 4,
         "subjectKey": "tool:corkscrew",
         "clue": {
-          "en": "What hand tool removes a cork from a wine bottle by driving a metal spiral into the cork and pulling it out?",
-          "et": "Milline käsitööriist eemaldab veinipudelilt korgi, keerates metallspiraali korgi sisse ja tõmmates selle välja?"
+          "en": "A wine waiter twists a metal helix into a stubborn cork, then uses a lever to pull it free. What everyday tool is being used?",
+          "et": "Veiniteenindaja keerab metallspiraali tugevalt kinni olevasse korki ja kasutab selle välja tõmbamiseks kangi. Millist igapäevast tööriista ta kasutab?"
         },
         "response": {
           "en": "corkscrew",
@@ -12716,6 +12687,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
+      },
+      {
+        "key": "built-in-technology-inventions-set-060:question:5",
+        "factKey": "built-in-technology-inventions:small-inventions-big-difference:medium:safety-match",
+        "tier": 5,
+        "subjectKey": "fire:safety-match",
+        "clue": {
+          "en": "In the safer Swedish match design, red phosphorus was kept on the box's striking surface instead of mixed into the head. What type of match does that design describe?",
+          "et": "Ohutumas Rootsi tikus hoiti punast fosforit tikutoosi süütepinnal, mitte tikupäises. Millist tüüpi tikku see lahendus kirjeldab?"
+        },
+        "response": {
+          "en": "safety match",
+          "et": "ohutustikk"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "A safety match separates reactive chemicals between the match head and its prepared striking surface. The Swedish design used red phosphorus on the surface, reducing accidental ignition.",
+          "et": "Ohutustiku reageerivad kemikaalid on jagatud tikupäise ja ettevalmistatud süütepinna vahel. Rootsi lahendus kasutas süütepinnal punast fosforit, vähendades juhusliku süttimise ohtu."
+        },
+        "source": {
+          "sourceId": "wikipedia:Match",
+          "title": "Match",
+          "url": "https://en.wikipedia.org/wiki/Match",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
       }
     ]
   },
@@ -12729,35 +12729,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-technology-inventions-set-061:question:1",
-        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:bluetooth",
-        "tier": 2,
-        "subjectKey": "technology:bluetooth",
-        "clue": {
-          "en": "Named after a Danish king, this short-range wireless standard uses a rune-like logo made from his initials. What is it?",
-          "et": "Taani kuninga järgi nimetatud lähiside standard kasutab tema initsiaalidest moodustatud ruunikujulist logo. Mis standard see on?"
-        },
-        "response": {
-          "en": "Bluetooth",
-          "et": "Bluetooth"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Bluetooth is a short-range wireless technology for exchanging data between nearby devices. Its name and logo refer to the Danish king Harald Bluetooth.",
-          "et": "Bluetooth on lähimaa juhtmevaba tehnoloogia lähedal asuvate seadmete andmevahetuseks. Selle nimi ja logo viitavad Taani kuningale Harald Bluetoothile."
-        },
-        "source": {
-          "sourceId": "wikipedia:Bluetooth",
-          "title": "Bluetooth",
-          "url": "https://en.wikipedia.org/wiki/Bluetooth",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-061:question:2",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:wi-fi",
         "tier": 1,
         "subjectKey": "network:wi-fi",
@@ -12786,34 +12757,59 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-061:question:3",
-        "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:rss-feed",
-        "tier": 4,
-        "subjectKey": "web:rss-feed",
+        "key": "built-in-technology-inventions-set-061:question:2",
+        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:bluetooth",
+        "tier": 2,
+        "subjectKey": "technology:bluetooth",
         "clue": {
-          "en": "What web format lets a news site publish a stream of new headlines that a reader app can check without visiting every site separately?",
-          "et": "Milline veebivorming võimaldab uudistesaidil avaldada uute pealkirjade voo, mida lugejarakendus saab kontrollida iga saiti eraldi külastamata?"
+          "en": "Named after a Danish king, this short-range wireless standard uses a rune-like logo made from his initials. What is it?",
+          "et": "Taani kuninga järgi nimetatud lähiside standard kasutab tema initsiaalidest moodustatud ruunikujulist logo. Mis standard see on?"
         },
         "response": {
-          "en": "RSS feed",
-          "et": "RSS-voog"
+          "en": "Bluetooth",
+          "et": "Bluetooth"
         },
         "acceptedVariants": {
-          "en": [
-            "RSS"
-          ],
-          "et": [
-            "RSS"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "An RSS feed is a machine-readable list of recent website updates. Feed-reader software can collect subscriptions from many sites in one place.",
-          "et": "RSS-voog on masinloetav nimekiri veebisaidi hiljutistest uuendustest. Voogude lugeja saab koguda paljude saitide tellimused ühte kohta."
+          "en": "Bluetooth is a short-range wireless technology for exchanging data between nearby devices. Its name and logo refer to the Danish king Harald Bluetooth.",
+          "et": "Bluetooth on lähimaa juhtmevaba tehnoloogia lähedal asuvate seadmete andmevahetuseks. Selle nimi ja logo viitavad Taani kuningale Harald Bluetoothile."
         },
         "source": {
-          "sourceId": "wikipedia:RSS",
-          "title": "RSS",
-          "url": "https://en.wikipedia.org/wiki/RSS",
+          "sourceId": "wikipedia:Bluetooth",
+          "title": "Bluetooth",
+          "url": "https://en.wikipedia.org/wiki/Bluetooth",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-061:question:3",
+        "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:url-shortener",
+        "tier": 3,
+        "subjectKey": "web:url-shortener",
+        "clue": {
+          "en": "What web service creates a brief redirecting address for a much longer link, making it easier to share in a message or on a poster?",
+          "et": "Milline veebiteenus loob palju pikema lingi jaoks lühikese ümbersuunava aadressi, et seda oleks lihtsam sõnumis või plakatil jagada?"
+        },
+        "response": {
+          "en": "URL shortener",
+          "et": "URL-i lühendaja"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "A URL shortener maps a short address to a longer destination and redirects the visitor. This makes unwieldy links easier to distribute, though the destination can be hidden.",
+          "et": "URL-i lühendaja seob lühikese aadressi pikema sihtkohaga ja suunab külastaja edasi. Nii on kohmakaid linke lihtsam jagada, kuigi sihtkoht võib jääda varjatuks."
+        },
+        "source": {
+          "sourceId": "wikipedia:URL_shortening",
+          "title": "URL shortening",
+          "url": "https://en.wikipedia.org/wiki/URL_shortening",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -12821,7 +12817,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       {
         "key": "built-in-technology-inventions-set-061:question:4",
         "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:inductive-charging",
-        "tier": 5,
+        "tier": 4,
         "subjectKey": "technology:inductive-charging",
         "clue": {
           "en": "What charging method transfers energy through a changing magnetic field when a phone is placed on a compatible charging pad?",
@@ -12853,36 +12849,39 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-061:question:5",
-        "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:url-shortener",
-        "tier": 3,
-        "subjectKey": "web:url-shortener",
+        "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:rss-feed",
+        "tier": 5,
+        "subjectKey": "web:rss-feed",
         "clue": {
-          "en": "What web service creates a brief redirecting address for a much longer link, making it easier to share in a message or on a poster?",
-          "et": "Milline veebiteenus loob palju pikema lingi jaoks lühikese ümbersuunava aadressi, et seda oleks lihtsam sõnumis või plakatil jagada?"
+          "en": "What web format lets a news site publish a stream of new headlines that a reader app can check without visiting every site separately?",
+          "et": "Milline veebivorming võimaldab uudistesaidil avaldada uute pealkirjade voo, mida lugejarakendus saab kontrollida iga saiti eraldi külastamata?"
         },
         "response": {
-          "en": "URL shortener",
-          "et": "URL-i lühendaja"
+          "en": "RSS feed",
+          "et": "RSS-voog"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "RSS"
+          ],
+          "et": [
+            "RSS"
+          ]
         },
         "explanation": {
-          "en": "A URL shortener maps a short address to a longer destination and redirects the visitor. This makes unwieldy links easier to distribute, though the destination can be hidden.",
-          "et": "URL-i lühendaja seob lühikese aadressi pikema sihtkohaga ja suunab külastaja edasi. Nii on kohmakaid linke lihtsam jagada, kuigi sihtkoht võib jääda varjatuks."
+          "en": "An RSS feed is a machine-readable list of recent website updates. Feed-reader software can collect subscriptions from many sites in one place.",
+          "et": "RSS-voog on masinloetav nimekiri veebisaidi hiljutistest uuendustest. Voogude lugeja saab koguda paljude saitide tellimused ühte kohta."
         },
         "source": {
-          "sourceId": "wikipedia:URL_shortening",
-          "title": "URL shortening",
-          "url": "https://en.wikipedia.org/wiki/URL_shortening",
+          "sourceId": "wikipedia:RSS",
+          "title": "RSS",
+          "url": "https://en.wikipedia.org/wiki/RSS",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
-
   {
     "categorySetId": "built-in-technology-inventions-set-062",
     "name": {
@@ -12926,72 +12925,39 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-062:question:2",
-        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:aerial-tramway",
-        "tier": 4,
-        "subjectKey": "transport:aerial-tramway",
+        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:snowmobile",
+        "tier": 2,
+        "subjectKey": "vehicle:snowmobile",
         "clue": {
-          "en": "What transport system carries a cabin high above the ground on cables between stations, often across a valley or up a mountain?",
-          "et": "Milline transpordisüsteem viib kabiini kõrgel maapinna kohal jaamade vahel kaablitel, sageli üle oru või mäkke?"
+          "en": "This motorised vehicle uses skis at the front and a continuous track at the rear to travel over snow. What is it?",
+          "et": "See mootorsõiduk kasutab lumel liikumiseks ees suuski ja taga pidevat roomikut. Mis sõiduk see on?"
         },
         "response": {
-          "en": "aerial tramway",
-          "et": "köisripptee"
+          "en": "snowmobile",
+          "et": "lumesaan"
         },
         "acceptedVariants": {
           "en": [
-            "cable car"
+            "motor sled"
           ],
           "et": [
-            "õhuraudtee"
+            "mootorsaan"
           ]
         },
         "explanation": {
-          "en": "An aerial tramway suspends one or more passenger cabins from cables stretched between stations. Unlike a funicular, its cabins travel through the air rather than on rails.",
-          "et": "Köisripptee riputab ühe või mitu reisikabiini jaamade vahel pingutatud kaablite külge. Erinevalt funikulöörist liiguvad selle kabiinid õhus, mitte rööbastel."
+          "en": "A snowmobile steers with front skis while a powered rubber track drives it over snow. The wide track spreads its weight so it does not sink as readily.",
+          "et": "Lumesaan juhib esisuuskedega, kuid seda veab lumel tagumine mootoriga kummist roomik. Lai roomik jaotab kaalu, nii et sõiduk ei vaju nii kergesti läbi lume."
         },
         "source": {
-          "sourceId": "wikipedia:Aerial_tramway",
-          "title": "Aerial tramway",
-          "url": "https://en.wikipedia.org/wiki/Aerial_tramway",
+          "sourceId": "wikipedia:Snowmobile",
+          "title": "Snowmobile",
+          "url": "https://en.wikipedia.org/wiki/Snowmobile",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       },
       {
         "key": "built-in-technology-inventions-set-062:question:3",
-        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:funicular",
-        "tier": 5,
-        "subjectKey": "railway:funicular",
-        "clue": {
-          "en": "This hillside railway uses two cars on a cable: as one descends, the other is pulled uphill. What is it?",
-          "et": "See nõlvraudtee kasutab kaablil kahte vagunit: kui üks laskub, tõmmatakse teine ülesmäge. Mis see on?"
-        },
-        "response": {
-          "en": "funicular",
-          "et": "funikulöör"
-        },
-        "acceptedVariants": {
-          "en": [
-            "funicular railway"
-          ],
-          "et": [
-            "köisraudtee"
-          ]
-        },
-        "explanation": {
-          "en": "A funicular uses two rail cars linked by a cable on a steep slope. Their opposing movement helps counterbalance the load and reduces the power needed.",
-          "et": "Funikulöör kasutab järsul nõlval kaabliga ühendatud kahte rööbasvagunit. Nende vastassuunaline liikumine tasakaalustab koormust ja vähendab vajatavat energiat."
-        },
-        "source": {
-          "sourceId": "wikipedia:Funicular",
-          "title": "Funicular",
-          "url": "https://en.wikipedia.org/wiki/Funicular",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-062:question:4",
         "factKey": "built-in-technology-inventions:ways-up-and-over:medium:maglev",
         "tier": 3,
         "subjectKey": "transport:maglev",
@@ -13024,41 +12990,73 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-062:question:5",
-        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:snowmobile",
-        "tier": 2,
-        "subjectKey": "vehicle:snowmobile",
+        "key": "built-in-technology-inventions-set-062:question:4",
+        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:aerial-tramway",
+        "tier": 4,
+        "subjectKey": "transport:aerial-tramway",
         "clue": {
-          "en": "This motorised vehicle uses skis at the front and a continuous track at the rear to travel over snow. What is it?",
-          "et": "See mootorsõiduk kasutab lumel liikumiseks ees suuski ja taga pidevat roomikut. Mis sõiduk see on?"
+          "en": "What transport system carries a cabin high above the ground on cables between stations, often across a valley or up a mountain?",
+          "et": "Milline transpordisüsteem viib kabiini kõrgel maapinna kohal jaamade vahel kaablitel, sageli üle oru või mäkke?"
         },
         "response": {
-          "en": "snowmobile",
-          "et": "lumesaan"
+          "en": "aerial tramway",
+          "et": "köisripptee"
         },
         "acceptedVariants": {
           "en": [
-            "motor sled"
+            "cable car"
           ],
           "et": [
-            "mootorsaan"
+            "õhuraudtee"
           ]
         },
         "explanation": {
-          "en": "A snowmobile steers with front skis while a powered rubber track drives it over snow. The wide track spreads its weight so it does not sink as readily.",
-          "et": "Lumesaan juhib esisuuskedega, kuid seda veab lumel tagumine mootoriga kummist roomik. Lai roomik jaotab kaalu, nii et sõiduk ei vaju nii kergesti läbi lume."
+          "en": "An aerial tramway suspends one or more passenger cabins from cables stretched between stations. Unlike a funicular, its cabins travel through the air rather than on rails.",
+          "et": "Köisripptee riputab ühe või mitu reisikabiini jaamade vahel pingutatud kaablite külge. Erinevalt funikulöörist liiguvad selle kabiinid õhus, mitte rööbastel."
         },
         "source": {
-          "sourceId": "wikipedia:Snowmobile",
-          "title": "Snowmobile",
-          "url": "https://en.wikipedia.org/wiki/Snowmobile",
+          "sourceId": "wikipedia:Aerial_tramway",
+          "title": "Aerial tramway",
+          "url": "https://en.wikipedia.org/wiki/Aerial_tramway",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-062:question:5",
+        "factKey": "built-in-technology-inventions:ways-up-and-over:medium:funicular",
+        "tier": 5,
+        "subjectKey": "railway:funicular",
+        "clue": {
+          "en": "This hillside railway uses two cars on a cable: as one descends, the other is pulled uphill. What is it?",
+          "et": "See nõlvraudtee kasutab kaablil kahte vagunit: kui üks laskub, tõmmatakse teine ülesmäge. Mis see on?"
+        },
+        "response": {
+          "en": "funicular",
+          "et": "funikulöör"
+        },
+        "acceptedVariants": {
+          "en": [
+            "funicular railway"
+          ],
+          "et": [
+            "köisraudtee"
+          ]
+        },
+        "explanation": {
+          "en": "A funicular uses two rail cars linked by a cable on a steep slope. Their opposing movement helps counterbalance the load and reduces the power needed.",
+          "et": "Funikulöör kasutab järsul nõlval kaabliga ühendatud kahte rööbasvagunit. Nende vastassuunaline liikumine tasakaalustab koormust ja vähendab vajatavat energiat."
+        },
+        "source": {
+          "sourceId": "wikipedia:Funicular",
+          "title": "Funicular",
+          "url": "https://en.wikipedia.org/wiki/Funicular",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
       }
     ]
   },
-
   {
     "categorySetId": "built-in-technology-inventions-set-063",
     "name": {
@@ -13196,8 +13194,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "termograafia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "thermography"
+          ],
+          "et": [
+            "soojuskuvamine"
+          ]
         },
         "explanation": {
           "en": "Thermal imaging detects infrared radiation emitted by objects and maps it to a visible image. It can reveal heat loss from buildings, warm machinery, or people in darkness.",
@@ -13217,41 +13219,12 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-064",
     "name": {
-      "en": "Images That Create Illusions",
-      "et": "Kujutised, mis loovad illusioone"
+      "en": "Technologies of Visual Illusion",
+      "et": "Visuaalsete illusioonide tehnoloogiad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-064:question:1",
-        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:zoetrope",
-        "tier": 4,
-        "subjectKey": "device:zoetrope",
-        "clue": {
-          "en": "When spun, this Victorian drum with a strip of drawings makes them appear to move through slits in its side. What is it?",
-          "et": "Pöörlemisel paneb see viktoriaanlik joonistusribaga trummel külgedel olevate pilude kaudu pildid näiliselt liikuma. Mis seade see on?"
-        },
-        "response": {
-          "en": "zoetrope",
-          "et": "zoetroop"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "A zoetrope is a slotted rotating cylinder containing a sequence of pictures. Looking through the slits separates the images enough for them to appear to move.",
-          "et": "Zoetroop on piludega pöörlev silinder, mille sees on pildijada. Piludest vaatamine eraldab kujutised piisavalt, et need näiksid liikuvat."
-        },
-        "source": {
-          "sourceId": "wikipedia:Zoetrope",
-          "title": "Zoetrope",
-          "url": "https://en.wikipedia.org/wiki/Zoetrope",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-064:question:2",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:flip-book",
         "tier": 1,
         "subjectKey": "device:flip-book",
@@ -13279,6 +13252,39 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:Flip_book",
           "title": "Flip book",
           "url": "https://en.wikipedia.org/wiki/Flip_book",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-064:question:2",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:hologram",
+        "tier": 2,
+        "subjectKey": "image:hologram",
+        "clue": {
+          "en": "This three-dimensional-looking image is made by recording the interference pattern of laser light. What is it?",
+          "et": "See ruumilise muljega kujutis luuakse laserivalguse interferentsimustri salvestamisega. Mis kujutis see on?"
+        },
+        "response": {
+          "en": "hologram",
+          "et": "hologram"
+        },
+        "acceptedVariants": {
+          "en": [
+            "holographic image"
+          ],
+          "et": [
+            "holograafiline kujutis"
+          ]
+        },
+        "explanation": {
+          "en": "A hologram records both intensity and phase information in light, so it can reproduce a view that changes with the observer's angle rather than a flat photograph.",
+          "et": "Hologram salvestab valguse intensiivsuse ja faasi teabe, mistõttu võib vaatenurk vaatleja liikumisel muutuda, erinevalt tasapinnalisest fotost."
+        },
+        "source": {
+          "sourceId": "wikipedia:holography",
+          "title": "holography",
+          "url": "https://en.wikipedia.org/wiki/holography",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -13314,6 +13320,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-064:question:4",
+        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:zoetrope",
+        "tier": 4,
+        "subjectKey": "device:zoetrope",
+        "clue": {
+          "en": "When spun, this Victorian drum with a strip of drawings makes them appear to move through slits in its side. What is it?",
+          "et": "Pöörlemisel paneb see viktoriaanlik joonistusribaga trummel külgedel olevate pilude kaudu pildid näiliselt liikuma. Mis seade see on?"
+        },
+        "response": {
+          "en": "zoetrope",
+          "et": "zoetroop"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "A zoetrope is a slotted rotating cylinder containing a sequence of pictures. Looking through the slits separates the images enough for them to appear to move.",
+          "et": "Zoetroop on piludega pöörlev silinder, mille sees on pildijada. Piludest vaatamine eraldab kujutised piisavalt, et need näiksid liikuvat."
+        },
+        "source": {
+          "sourceId": "wikipedia:Zoetrope",
+          "title": "Zoetrope",
+          "url": "https://en.wikipedia.org/wiki/Zoetrope",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-064:question:5",
         "factKey": "built-in-technology-inventions:pictures-learned-move:medium:cinematograph",
         "tier": 5,
         "subjectKey": "device:cinematograph",
@@ -13340,43 +13375,9 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
-      },
-      {
-        "key": "built-in-technology-inventions-set-064:question:5",
-        "factKey": "built-in-technology-inventions:pictures-learned-move:medium:hologram",
-        "tier": 2,
-        "subjectKey": "image:hologram",
-        "clue": {
-          "en": "This three-dimensional-looking image is made by recording the interference pattern of laser light. What is it?",
-          "et": "See ruumilise muljega kujutis luuakse laserivalguse interferentsimustri salvestamisega. Mis kujutis see on?"
-        },
-        "response": {
-          "en": "hologram",
-          "et": "hologram"
-        },
-        "acceptedVariants": {
-          "en": [
-            "holographic image"
-          ],
-          "et": [
-            "holograafiline kujutis"
-          ]
-        },
-        "explanation": {
-          "en": "A hologram records both intensity and phase information in light, so it can reproduce a view that changes with the observer's angle rather than a flat photograph.",
-          "et": "Hologram salvestab valguse intensiivsuse ja faasi teabe, mistõttu võib vaatenurk vaatleja liikumisel muutuda, erinevalt tasapinnalisest fotost."
-        },
-        "source": {
-          "sourceId": "wikipedia:holography",
-          "title": "holography",
-          "url": "https://en.wikipedia.org/wiki/holography",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
       }
     ]
   },
-
   {
     "categorySetId": "built-in-technology-inventions-set-065",
     "name": {
@@ -13415,6 +13416,39 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-065:question:2",
+        "factKey": "built-in-technology-inventions:power-from-elements:medium:hydroelectricity",
+        "tier": 2,
+        "subjectKey": "energy:hydroelectricity",
+        "clue": {
+          "en": "At a dam, falling or flowing water turns turbines to generate this form of electricity. What is it called?",
+          "et": "Tammis paneb langev või voolav vesi turbiinid pöörlema, et toota seda liiki elektrit. Mis see on?"
+        },
+        "response": {
+          "en": "hydroelectricity",
+          "et": "hüdroelekter"
+        },
+        "acceptedVariants": {
+          "en": [
+            "hydropower"
+          ],
+          "et": [
+            "hüdroenergia"
+          ]
+        },
+        "explanation": {
+          "en": "Hydroelectricity is generated when moving water drives a turbine connected to a generator. A dam can store water and release it through turbines when power is needed.",
+          "et": "Hüdroelekter tekib, kui liikuv vesi paneb tööle generaatoriga ühendatud turbiini. Tamm võib vett koguda ja seda vajaduse korral turbiinidest läbi lasta."
+        },
+        "source": {
+          "sourceId": "wikipedia:hydroelectricity",
+          "title": "hydroelectricity",
+          "url": "https://en.wikipedia.org/wiki/hydroelectricity",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-31"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-065:question:3",
         "factKey": "built-in-technology-inventions:power-from-elements:medium:nuclear-reactor",
         "tier": 3,
         "subjectKey": "facility:nuclear-reactor",
@@ -13443,7 +13477,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         }
       },
       {
-        "key": "built-in-technology-inventions-set-065:question:3",
+        "key": "built-in-technology-inventions-set-065:question:4",
         "factKey": "built-in-technology-inventions:power-from-elements:medium:geothermal-energy",
         "tier": 4,
         "subjectKey": "energy:geothermal-energy",
@@ -13467,39 +13501,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:Geothermal_energy",
           "title": "Geothermal energy",
           "url": "https://en.wikipedia.org/wiki/Geothermal_energy",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-065:question:4",
-        "factKey": "built-in-technology-inventions:power-from-elements:medium:hydroelectricity",
-        "tier": 2,
-        "subjectKey": "energy:hydroelectricity",
-        "clue": {
-          "en": "At a dam, falling or flowing water turns turbines to generate this form of electricity. What is it called?",
-          "et": "Tammis paneb langev või voolav vesi turbiinid pöörlema, et toota seda liiki elektrit. Mis see on?"
-        },
-        "response": {
-          "en": "hydroelectricity",
-          "et": "hüdroelekter"
-        },
-        "acceptedVariants": {
-          "en": [
-            "hydropower"
-          ],
-          "et": [
-            "hüdroenergia"
-          ]
-        },
-        "explanation": {
-          "en": "Hydroelectricity is generated when moving water drives a turbine connected to a generator. A dam can store water and release it through turbines when power is needed.",
-          "et": "Hüdroelekter tekib, kui liikuv vesi paneb tööle generaatoriga ühendatud turbiini. Tamm võib vett koguda ja seda vajaduse korral turbiinidest läbi lasta."
-        },
-        "source": {
-          "sourceId": "wikipedia:hydroelectricity",
-          "title": "hydroelectricity",
-          "url": "https://en.wikipedia.org/wiki/hydroelectricity",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-08-31"
         }
@@ -13535,7 +13536,6 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       }
     ]
   },
-
   {
     "categorySetId": "built-in-technology-inventions-set-066",
     "name": {
