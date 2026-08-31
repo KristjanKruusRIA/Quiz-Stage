@@ -6426,8 +6426,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "food:bubble-tea",
         "clue": {
-          "en": "Which Taiwanese tea drink is famous for chewy tapioca pearls at the bottom of the cup?",
-          "et": "Milline Taiwani teejook on kuulus tassi põhjas olevate nätskete tapiokipärlite poolest?"
+          "en": "Which Taiwanese tea drink is famous for chewy tapioca pearls?",
+          "et": "Milline Taiwani teejook on kuulus nätskete tapiokipärlite poolest?"
         },
         "response": {
           "en": "bubble tea",
@@ -6494,8 +6494,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "food:masala-chai",
         "clue": {
-          "en": "Which Indian drink brews black tea with milk, sugar and aromatic spices?",
-          "et": "Millises India joogis keedetakse musta teed piima, suhkru ja aromaatsete vürtsidega?"
+          "en": "Which Indian drink adds aromatic herbs and spices to black tea brewed in milk and water and sweetened with sugar?",
+          "et": "Milline India jook valmib piimas ja vees tõmmatud, suhkruga magustatud mustast teest, millele lisatakse aromaatseid ürte ja vürtse?"
         },
         "response": {
           "en": "masala chai",
@@ -6510,8 +6510,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Masala chai brews black tea in milk and water, then adds aromatic herbs and spices.",
-          "et": "Masala chai valmistamisel tõmmatakse musta teed piimas ja vees ning lisatakse aromaatseid ürte ja vürtse."
+          "en": "Masala chai adds aromatic herbs and spices to black tea brewed in milk and water.",
+          "et": "Masala chai puhul lisatakse piimas ja vees tõmmatud mustale teele aromaatseid ürte ja vürtse."
         },
         "source": {
           "sourceId": "wikipedia:masala-chai",
@@ -6588,7 +6588,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-090",
     "name": {
-      "en": "Odd Tools with a Food Story",
+      "en": "Odd Food Utensils",
       "et": "Kummalised toiduriistad"
     },
     "questions": [
@@ -6598,8 +6598,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "food:spork",
         "clue": {
-          "en": "Which hybrid utensil puts short fork tines at the end of a spoon bowl?",
-          "et": "Milline hübriidriist ühendab lusikakausi otsas lühikesed kahvliharud?"
+          "en": "Which hybrid utensil puts fork-like tines at the end of a spoon bowl?",
+          "et": "Millise hübriidriista lusikakausi otsas on kahvlitaolised harud?"
         },
         "response": {
           "en": "spork",
@@ -6971,8 +6971,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "food:paneer",
         "clue": {
-          "en": "Which fresh South Asian cheese is made by curdling milk with a fruit or vegetable acid?",
-          "et": "Milline värske Lõuna-Aasia juust saadakse piima kalgendamisel puuvilja- või köögiviljahappega?"
+          "en": "Which fresh South Asian cheese is made by curdling milk with an acid such as lemon juice or citric acid?",
+          "et": "Milline värske Lõuna-Aasia juust saadakse piima kalgendamisel happega, näiteks sidrunimahla või sidrunhappega?"
         },
         "response": {
           "en": "paneer",
@@ -7004,8 +7004,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "food:gruyere-cheese",
         "clue": {
-          "en": "Which Swiss cheese takes its name from a town in Fribourg and is central to fondue and croque monsieur?",
-          "et": "Milline Šveitsi juust kannab Fribourgi kantoni linna nime ning on fondüü ja croque monsieur’ tähtis koostisosa?"
+          "en": "Which Swiss cheese takes its name from a town in Fribourg, is suited for fondue and is traditionally used in croque monsieur?",
+          "et": "Milline Šveitsi juust kannab Fribourgi kantoni linna nime, sobib fondüü jaoks ning kuulub traditsiooniliselt croque monsieur’ koostisse?"
         },
         "response": {
           "en": "Gruyère",
@@ -7072,20 +7072,16 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "food:pecorino-romano",
         "clue": {
-          "en": "Which hard salty Italian sheep’s-milk cheese is often grated over pasta?",
-          "et": "Millist kõva ja soolast Itaalia lambapiimajuustu riivitakse sageli pasta peale?"
+          "en": "Which hard, salty Italian sheep’s-milk cheese, often grated over pasta, was a staple for ancient Roman legionaries?",
+          "et": "Milline kõva ja soolane Itaalia lambapiimajuust, mida riivitakse sageli pasta peale, kuulus Vana-Rooma leegionäride põhitoidu hulka?"
         },
         "response": {
           "en": "Pecorino Romano",
           "et": "Pecorino Romano"
         },
         "acceptedVariants": {
-          "en": [
-            "Romano cheese"
-          ],
-          "et": [
-            "pecorino romano"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "Pecorino Romano was a staple in the diet of ancient Roman soldiers.",
@@ -7280,8 +7276,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "food:empanada",
         "clue": {
-          "en": "Which Spanish and Latin American turnover wraps a savoury or sweet filling in dough before baking or frying?",
-          "et": "Milline Hispaania ja Ladina-Ameerika pirukas mähib soolase või magusa täidise tainasse ning küpsetatakse või praetakse?"
+          "en": "Which filled pastry, common in Spain and Latin America, is baked or fried?",
+          "et": "Milline Hispaanias ja Ladina-Ameerikas levinud täidisega pirukas küpsetatakse ahjus või praetakse?"
         },
         "response": {
           "en": "empanada",
@@ -7346,8 +7342,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "food:onigiri",
         "clue": {
-          "en": "Which Japanese portable food shapes rice around a savoury filling and often adds a strip of nori?",
-          "et": "Milline Jaapani kaasaskantav toit vormib riisi soolase täidise ümber ja lisab sageli nori-riba?"
+          "en": "Which portable Japanese food is made by shaping rice around a savoury filling and often wrapping it in nori?",
+          "et": "Milline Jaapani kaasaskantav toit valmistatakse riisi soolase täidise ümber vormides ja sageli nori sisse mähkides?"
         },
         "response": {
           "en": "onigiri",
@@ -7456,8 +7452,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "food:meringue",
         "clue": {
-          "en": "Which sweet foam is made by whipping egg whites with sugar?",
-          "et": "Milline magus vaht valmib munavalgete vahustamisel suhkruga?"
+          "en": "Which light, airy sweet confection is made by whipping egg whites with sugar?",
+          "et": "Milline kerge, õhuline magus maius valmib munavalgete vahustamisel suhkruga?"
         },
         "response": {
           "en": "meringue",
@@ -7908,12 +7904,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "bacalhau"
         },
         "acceptedVariants": {
-          "en": [
-            "bacalao"
-          ],
-          "et": [
-            "bakalao"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "Drying and salting cod preserve its nutrients and change the fish’s taste.",
@@ -8119,8 +8111,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Yeast extract contains amino acids and is used in spreads, soups and seasonings.",
-          "et": "Pärmiekstrakt sisaldab aminohappeid ning seda kasutatakse määretes, suppides ja maitseainetes."
+          "en": "Yeast extract contains the amino acid glutamic acid and is used in spreads, soups and seasonings.",
+          "et": "Pärmiekstrakt sisaldab glutamiinhapet, mis on aminohape, ning seda kasutatakse määretes, suppides ja maitseainetes."
         },
         "source": {
           "sourceId": "wikipedia:yeast-extract",
@@ -8145,8 +8137,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "food:thermos",
         "clue": {
-          "en": "Which brand name became a common word for a vacuum flask that keeps drinks hot or cold?",
-          "et": "Milline kaubamärk muutus kuuma või külma hoidva vaakumpudeli üldnimetuseks?"
+          "en": "Which word became a household name for vacuum flasks that keep drinks hot or cold?",
+          "et": "Milline sõna sai üldtuntud nimetuseks vaakumpudelitele, mis hoiavad jooke kuuma või külmana?"
         },
         "response": {
           "en": "Thermos",
@@ -8309,8 +8301,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-food-drink-set-100",
     "name": {
-      "en": "Staples for Scooping and Sharing",
-      "et": "Põhitoidud kastme tõstmiseks"
+      "en": "Staple Dishes of Africa and South America",
+      "et": "Aafrika ja Lõuna-Ameerika põhitoidud"
     },
     "questions": [
       {
@@ -8420,8 +8412,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "food:ugali",
         "clue": {
-          "en": "Which widely eaten African dish cooks maize flour to a stiff, dough-like consistency?",
-          "et": "Millises laialt levinud Aafrika roas keedetakse maisijahu tihke tainalaadse konsistentsini?"
+          "en": "Which widely eaten African dish is made by cooking maize flour to a stiff, dough-like consistency?",
+          "et": "Milline Aafrikas laialt levinud roog valmistatakse maisijahu keetmisel tihke tainalaadse konsistentsini?"
         },
         "response": {
           "en": "ugali",
