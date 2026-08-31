@@ -13896,37 +13896,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-068:question:2",
-        "factKey": "built-in-technology-inventions:surprising-experiments:hard:vaseline-rod-wax",
-        "tier": 2,
-        "subjectKey": "product:vaseline",
-        "clue": {
-          "en": "Robert Chesebrough took 'rod wax' from Pennsylvania oil pumps back to Brooklyn after seeing workers use it on cuts and burns. What name did he give the purified product?",
-          "et": "Robert Chesebrough viis Pennsylvania naftapumpadelt pärit „vardavaha” Brooklyni, kui nägi, et töölised määrisid seda lõigetele ja põletustele. Mis nime ta puhastatud tootele andis?"
-        },
-        "response": {
-          "en": "Vaseline",
-          "et": "vaseliin"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Chesebrough refined the oil-pump residue into petroleum jelly and began manufacturing it under the name Vaseline.",
-          "et": "Chesebrough puhastas naftapumpade jäägi vaseliiniks ja hakkas seda Vaseline'i nime all tootma."
-        },
-        "source": {
-          "sourceId": "wikipedia:vaseline",
-          "title": "Vaseline",
-          "url": "https://en.wikipedia.org/wiki/Vaseline",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-068:question:3",
         "factKey": "built-in-technology-inventions:surprising-experiments:hard:gorilla-glass-iphone",
-        "tier": 3,
+        "tier": 2,
         "subjectKey": "material:gorilla-glass",
         "clue": {
           "en": "After Steve Jobs noticed scratches on the plastic screen of the 2007 iPhone prototype, Apple asked Corning for thin, tough glass descended from its Chemcor research. What brand resulted?",
@@ -13948,6 +13919,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:gorilla-glass",
           "title": "Gorilla Glass",
           "url": "https://en.wikipedia.org/wiki/Gorilla_Glass",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-068:question:3",
+        "factKey": "built-in-technology-inventions:surprising-experiments:hard:vaseline-rod-wax",
+        "tier": 3,
+        "subjectKey": "product:vaseline",
+        "clue": {
+          "en": "Robert Chesebrough took 'rod wax' from Pennsylvania oil pumps back to Brooklyn after seeing workers use it on cuts and burns. What name did he give the purified product?",
+          "et": "Robert Chesebrough viis Pennsylvania naftapumpadelt pärit „vardavaha” Brooklyni, kui nägi, et töölised määrisid seda lõigetele ja põletustele. Mis nime ta puhastatud tootele andis?"
+        },
+        "response": {
+          "en": "Vaseline",
+          "et": "vaseliin"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Chesebrough refined the oil-pump residue into petroleum jelly and began manufacturing it under the name Vaseline.",
+          "et": "Chesebrough puhastas naftapumpade jäägi vaseliiniks ja hakkas seda Vaseline'i nime all tootma."
+        },
+        "source": {
+          "sourceId": "wikipedia:vaseline",
+          "title": "Vaseline",
+          "url": "https://en.wikipedia.org/wiki/Vaseline",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -13996,7 +13996,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["aniline purple", "Perkin's mauve"],
-          "et": ["Perkini lilla"]
+          "et": ["Perkini lilla", "mauveiin", "mauveine"]
         },
         "explanation": {
           "en": "Perkin's failed quinine experiment yielded mauveine, one of the first synthetic dyes to be mass-produced.",
@@ -14121,7 +14121,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["The Alto"],
-          "et": ["Alto arvuti"]
+          "et": ["Alto arvuti", "Alto"]
         },
         "explanation": {
           "en": "The Alto was developed at Xerox PARC, where its graphical interface, mouse, Ethernet networking, and printer services influenced later personal-computer design.",
