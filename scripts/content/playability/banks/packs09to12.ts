@@ -5445,8 +5445,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "vegetable:brussels-sprout",
         "clue": {
-          "en": "What takes its English name from a Belgian city near which it was cultivated in the 13th century?",
-          "et": "Mis sai ingliskeelse nime Belgia linna järgi, mille lähedal seda kasvatati 13. sajandil?"
+          "en": "What vegetable name derives from a Belgian city near which the crop was cultivated in the 13th century?",
+          "et": "Millise köögivilja nimi tuleneb Belgia linnast, mille lähedal seda taime 13. sajandil kasvatati?"
         },
         "response": {
           "en": "Brussels sprouts",
@@ -5945,8 +5945,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "dish:banh-mi",
         "clue": {
-          "en": "Which Vietnamese sandwich fills a short, crisp-crusted baguette with meat and savoury ingredients?",
-          "et": "Millises Vietnami võileivas täidetakse lühike krõbeda koorikuga baguette liha ja soolaste lisanditega?"
+          "en": "Which Vietnamese short baguette with a crisp crust is often split and filled with meat and savoury ingredients?",
+          "et": "Milline Vietnami lühike krõbeda koorikuga baguette lõigatakse sageli pikuti lahti ning täidetakse liha ja soolaste lisanditega?"
         },
         "response": {
           "en": "bánh mì",
@@ -5980,8 +5980,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "dish:zapiekanka",
         "clue": {
-          "en": "Which Polish street snack is an open-faced toasted baguette topped with mushrooms and cheese and served with ketchup?",
-          "et": "Milline Poola tänavasuupiste on seente ja juustuga kaetud lahtine röstitud baguette, mida serveeritakse ketšupiga?"
+          "en": "Which Polish toasted open-face sandwich is made from a sliced baguette or another long roll, topped with mushrooms and cheese, and served with ketchup?",
+          "et": "Milline Poola röstitud lahtine võileib tehakse viilutatud baguette'ist või muust pikast saiast, kaetakse seente ja juustuga ning serveeritakse ketšupiga?"
         },
         "response": {
           "en": "zapiekanka",
