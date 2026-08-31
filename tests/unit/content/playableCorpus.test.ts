@@ -229,6 +229,7 @@ function applyEvidence(
       reviewedAt: '2026-08-01T11:00:00.000Z',
       decision: 'approved',
     },
+    adultPolicyReview: null,
   };
 }
 
