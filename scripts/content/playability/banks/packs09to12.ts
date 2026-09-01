@@ -18278,8 +18278,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "AT&T bännerreklaam HotWiredis"
         },
         "acceptedVariants": {
-          "en": ["AT&T banner ad", "HotWired AT&T banner"],
-          "et": ["AT&T bänner", "AT&T HotWiredi bänner"]
+          "en": ["AT&T banner ad", "HotWired AT&T banner", "AT&T"],
+          "et": ["AT&T bänner", "AT&T HotWiredi bänner", "AT&T"]
         },
         "explanation": {
           "en": "HotWired put the AT&T banner online on 27 October 1994. It was the first web banner sold by HotWired, though other early-banner claims exist.",
