@@ -26807,157 +26807,193 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-076",
     "name": {
-      "en": "Indicators beneath the Headline Economy",
-      "et": "Pealkirjamajanduse all olevad näitajad"
+      "en": "Fictional Power Players",
+      "et": "Väljamõeldud võimukandjad"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-076:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:output-gap",
+        "factKey": "politics-fiction:palpatine:senator-chancellor-galactic-emperor-vader-master",
         "tier": 1,
-        "subjectKey": "measure:output-gap",
+        "subjectKey": "fictional-ruler:emperor-palpatine",
         "clue": {
-          "en": "What difference separates actual output from sustainable potential output?",
-          "et": "Milline erinevus lahutab tegelikku toodangut jätkusuutlikust potentsiaalsest toodangust?"
+          "en": "Darth Vader serves this Sith master, a former Naboo senator who rises to Supreme Chancellor before replacing the Republic with a Galactic Empire. Name the ruler.",
+          "et": "Darth Vader teenib seda sithide isandat, endist Naboo senaatorit, kes tõuseb ülemkantsleriks ja asendab vabariigi Galaktilise Impeeriumiga. Nimeta valitseja."
         },
         "response": {
-          "en": "output gap",
-          "et": "toodangulõhe"
+          "en": "Emperor Palpatine",
+          "et": "keiser Palpatine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Palpatine",
+            "Darth Sidious",
+            "Emperor Darth Sidious",
+            "Sheev Palpatine"
+          ],
+          "et": [
+            "Palpatine",
+            "Darth Sidious",
+            "keiser Darth Sidious",
+            "Sheev Palpatine"
+          ]
         },
         "explanation": {
-          "en": "A negative output gap signals spare capacity; a positive gap may add inflation pressure.",
-          "et": "Negatiivne toodangulõhe näitab vaba võimsust, positiivne võib lisada hinnasurvet."
+          "en": "Emperor Palpatine, also known as Darth Sidious, engineers the fall of the Republic and rules the Galactic Empire in Star Wars.",
+          "et": "Keiser Palpatine, keda tuntakse ka Darth Sidiousena, korraldab „Star Warsis” vabariigi languse ja valitseb Galaktilist Impeeriumi."
         },
         "source": {
-          "sourceId": "wikipedia:output_gap",
-          "title": "Output gap",
-          "url": "https://en.wikipedia.org/wiki/Output_gap",
+          "sourceId": "wikipedia:palpatine",
+          "title": "Palpatine",
+          "url": "https://en.wikipedia.org/wiki/Palpatine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-076:question:2",
-        "factKey": "built-in-politics-economics-society:round1-overlap:measure:balance-of-payments",
+        "factKey": "politics-fiction:snow:panem-president-white-roses-katniss",
         "tier": 2,
-        "subjectKey": "measure:balance-of-payments",
+        "subjectKey": "fictional-ruler:president-snow",
         "clue": {
-          "en": "Which national account records all economic transactions between residents and the rest of the world?",
-          "et": "Milline rahvamajanduse aruanne kajastab kõiki residentide ja ülejäänud maailma majandustehinguid?"
+          "en": "White roses mask the smell of blood around this ruler of Panem, whose conflict with Katniss Everdeen drives The Hunger Games. Name the president.",
+          "et": "Valged roosid varjavad verelõhna selle Panemi valitseja ümber, kelle vastasseis Katniss Everdeeniga kannab „Näljamängude” lugu. Nimeta president."
         },
         "response": {
-          "en": "balance of payments",
-          "et": "maksebilanss"
+          "en": "President Snow",
+          "et": "president Snow"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Coriolanus Snow",
+            "President Coriolanus Snow",
+            "Snow"
+          ],
+          "et": [
+            "Coriolanus Snow",
+            "president Coriolanus Snow",
+            "Snow"
+          ]
         },
         "explanation": {
-          "en": "The balance of payments includes current, capital, and financial accounts that offset in accounting terms.",
-          "et": "Maksebilanss hõlmab jooksev-, kapitali- ja finantskontot, mis raamatupidamises tasakaalustuvad."
+          "en": "President Coriolanus Snow is Panem’s authoritarian ruler and Katniss Everdeen’s chief political enemy in The Hunger Games.",
+          "et": "President Coriolanus Snow on Panemi autoritaarne valitseja ja Katniss Everdeeni peamine poliitiline vastane „Näljamängudes”."
         },
         "source": {
-          "sourceId": "wikipedia:balance_of_payments",
-          "title": "Balance of payments",
-          "url": "https://en.wikipedia.org/wiki/Balance_of_payments",
+          "sourceId": "wikipedia:president-snow",
+          "title": "President Snow",
+          "url": "https://en.wikipedia.org/wiki/President_Snow",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-076:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:rate:labour-force-participation",
+        "factKey": "politics-fiction:animal-farm-napoleon:drives-out-snowball-tyrant",
         "tier": 3,
-        "subjectKey": "rate:labour-force-participation",
+        "subjectKey": "fictional-ruler:animal-farm-napoleon",
         "clue": {
-          "en": "Which rate measures workers and jobseekers as a share of the working-age population?",
-          "et": "Milline määr mõõdab töötajaid ja tööotsijaid tööealise rahvastiku osana?"
+          "en": "Which Animal Farm character drives Snowball away, raises loyal dogs, and gradually becomes the farm’s tyrant? Give the answer qualified by the novel or the character’s species.",
+          "et": "Milline „Loomade farmi” tegelane ajab Lumepalli minema, kasvatab endale ustavad koerad ja muutub järk-järgult farmi türanniks? Täpsusta vastuses romaani või tegelase liiki."
         },
         "response": {
-          "en": "labour-force participation rate",
-          "et": "tööjõus osalemise määr"
+          "en": "Napoleon the pig",
+          "et": "siga Napoleon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Napoleon from Animal Farm",
+            "Animal Farm’s Napoleon",
+            "Napoleon the Animal Farm pig"
+          ],
+          "et": [
+            "Napoleon „Loomade farmist”",
+            "„Loomade farmi” Napoleon",
+            "siga Napoleon „Loomade farmist”"
+          ]
         },
         "explanation": {
-          "en": "Participation differs from employment because active jobseekers count in the labour force.",
-          "et": "Osalemine erineb tööhõivest, sest aktiivsed tööotsijad kuuluvad tööjõusse."
+          "en": "Napoleon the pig seizes power after the rebellion in Animal Farm, expels Snowball, and develops into a dictator.",
+          "et": "Siga Napoleon haarab „Loomade farmis” pärast ülestõusu võimu, tõrjub Lumepalli välja ja muutub diktaatoriks."
         },
         "source": {
-          "sourceId": "wikipedia:labor_force_participation_rate",
-          "title": "Labor force participation rate",
-          "url": "https://en.wikipedia.org/wiki/Labor_force_participation_rate",
+          "sourceId": "wikipedia:napoleon-animal-farm",
+          "title": "Napoleon (Animal Farm)",
+          "url": "https://en.wikipedia.org/wiki/Napoleon_(Animal_Farm)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-076:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:consumer-price-index",
+        "factKey": "politics-fiction:underwood:house-of-cards-whip-president-fourth-wall",
         "tier": 4,
-        "subjectKey": "measure:consumer-price-index",
+        "subjectKey": "fictional-politician:frank-underwood",
         "clue": {
-          "en": "Which index tracks the changing cost of a representative household basket?",
-          "et": "Milline indeks jälgib tüüpilise leibkonna ostukorvi maksumuse muutust?"
+          "en": "Kevin Spacey played this House of Cards schemer, who climbs from congressional whip to the White House while sharing ruthless asides directly with the audience. Name the character.",
+          "et": "Kevin Spacey mängis seda „Kaardimaja” intrigaanti, kes tõuseb esindajatekoja parteidistsipliini juhist Valgesse Majja ja jagab publikuga otse oma halastamatuid kõrvalmärkusi. Nimeta tegelane."
         },
         "response": {
-          "en": "consumer price index",
-          "et": "tarbijahinnaindeks"
+          "en": "Frank Underwood",
+          "et": "Frank Underwood"
         },
         "acceptedVariants": {
           "en": [
-            "CPI"
+            "Francis Underwood",
+            "President Frank Underwood",
+            "Underwood"
           ],
           "et": [
-            "THI"
+            "Francis Underwood",
+            "president Frank Underwood",
+            "Underwood"
           ]
         },
         "explanation": {
-          "en": "CPI weights categories by spending patterns and is a common inflation measure.",
-          "et": "Tarbijahinnaindeks kaalub rühmi kulumustri järgi ning mõõdab tavaliselt inflatsiooni."
+          "en": "Frank Underwood is the central political operator of the US House of Cards, rising from House Majority Whip to president and repeatedly breaking the fourth wall.",
+          "et": "Frank Underwood on USA „Kaardimaja” keskne poliitik, kes tõuseb esindajatekoja enamuspartei distsipliinijuhi ametist presidendiks ja lõhub korduvalt neljanda seina."
         },
         "source": {
-          "sourceId": "wikipedia:consumer_price_index",
-          "title": "Consumer price index",
-          "url": "https://en.wikipedia.org/wiki/Consumer_price_index",
+          "sourceId": "wikipedia:frank-underwood-house-of-cards",
+          "title": "Frank Underwood (House of Cards)",
+          "url": "https://en.wikipedia.org/wiki/Frank_Underwood_(House_of_Cards)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-076:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:real-gdp",
+        "factKey": "politics-fiction:malcolm-tucker:thick-of-it-capaldi-spin-doctor",
         "tier": 5,
-        "subjectKey": "measure:real-gdp",
+        "subjectKey": "fictional-operator:malcolm-tucker",
         "clue": {
-          "en": "Which output measure removes price change from nominal production?",
-          "et": "Milline toodangumõõt eemaldab nominaaltoodangust hinnamuutuse?"
+          "en": "Peter Capaldi’s volcanic government communications chief terrorises ministers with inventive tirades in The Thick of It. Name this fictional spin doctor.",
+          "et": "Peter Capaldi plahvatusohtlik valitsuse kommunikatsioonijuht hirmutab sarjas „The Thick of It” ministreid leidlike sõimurahega. Nimeta see väljamõeldud spinndoktor."
         },
         "response": {
-          "en": "real GDP",
-          "et": "reaalne SKP"
+          "en": "Malcolm Tucker",
+          "et": "Malcolm Tucker"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Malcolm F. Tucker",
+            "Tucker"
+          ],
+          "et": [
+            "Malcolm F. Tucker",
+            "Tucker"
+          ]
         },
         "explanation": {
-          "en": "Real GDP uses constant prices or chain-volume methods to compare quantities over time.",
-          "et": "Reaalne SKP kasutab koguste ajaliseks võrdlemiseks püsihindu või ahelmahtu."
+          "en": "Malcolm Tucker is Peter Capaldi’s famously profane Director of Communications and political enforcer in The Thick of It.",
+          "et": "Malcolm Tucker on Peter Capaldi ropu suuga kommunikatsioonidirektor ja poliitiline käsutäitja sarjas „The Thick of It”."
         },
         "source": {
-          "sourceId": "wikipedia:real_gross_domestic_product",
-          "title": "Real gross domestic product",
-          "url": "https://en.wikipedia.org/wiki/Real_gross_domestic_product",
+          "sourceId": "wikipedia:malcolm-tucker",
+          "title": "Malcolm Tucker",
+          "url": "https://en.wikipedia.org/wiki/Malcolm_Tucker",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -26965,153 +27001,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-077",
     "name": {
-      "en": "Less Visible Levers of Macroeconomic Policy",
-      "et": "Makropoliitika vähem nähtavad hoovad"
+      "en": "Referendums That Shaped Politics",
+      "et": "Poliitikat kujundanud rahvahääletused"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-077:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:policy:helicopter-money",
+        "factKey": "politics:brexit-referendum:leave-remain-52-percent-eu",
         "tier": 1,
-        "subjectKey": "policy:helicopter-money",
+        "subjectKey": "referendum:uk-eu-membership-2016",
         "clue": {
-          "en": "What metaphor describes creating money for direct distribution to the public rather than buying financial assets?",
-          "et": "Milline metafoor kirjeldab raha loomist otse üldsusele jagamiseks, mitte finantsvara ostmiseks?"
+          "en": "Leave defeated Remain by roughly 52 to 48 percent when UK voters were asked whether their country should stay in the European Union. Name the vote.",
+          "et": "Lahkumise pooldajad võitsid jäämise pooldajaid ligikaudu 52 protsendiga 48 vastu, kui Ühendkuningriigi valijailt küsiti, kas riik peaks jääma Euroopa Liitu. Nimeta hääletus."
         },
         "response": {
-          "en": "helicopter money",
-          "et": "helikopteriraha"
+          "en": "2016 Brexit referendum",
+          "et": "2016. aasta Brexiti rahvahääletus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Brexit referendum",
+            "2016 EU referendum",
+            "UK EU membership referendum"
+          ],
+          "et": [
+            "Brexiti referendum",
+            "2016. aasta EL-i referendum",
+            "Ühendkuningriigi EL-i liikmesuse referendum"
+          ]
         },
         "explanation": {
-          "en": "Helicopter money combines monetary financing with a fiscal-style transfer and remains largely hypothetical.",
-          "et": "Helikopteriraha ühendab rahaloomise eelarvelaadse siirdega ning on jäänud suuresti hüpoteetiliseks."
+          "en": "The 2016 Brexit referendum produced a Leave majority and set the United Kingdom on the path to withdrawing from the EU.",
+          "et": "2016. aasta Brexiti rahvahääletusel saavutas lahkumisvariant enamuse ja Ühendkuningriik asus Euroopa Liidust väljaastumise teele."
         },
         "source": {
-          "sourceId": "wikipedia:helicopter_money",
-          "title": "Helicopter money",
-          "url": "https://en.wikipedia.org/wiki/Helicopter_money",
+          "sourceId": "wikipedia:2016-united-kingdom-european-union-membership-referendum",
+          "title": "2016 United Kingdom European Union membership referendum",
+          "url": "https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-077:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:operation:open-market",
+        "factKey": "politics:scotland-referendum:yes-no-55-percent-remain-uk",
         "tier": 2,
-        "subjectKey": "operation:open-market",
+        "subjectKey": "referendum:scotland-independence-2014",
         "clue": {
-          "en": "What central-bank purchase or sale changes reserves in the banking system?",
-          "et": "Milline keskpanga ost või müük muudab pangandussüsteemi reserve?"
+          "en": "Yes lost to No by about 45 to 55 percent when voters decided whether this nation should leave the United Kingdom. Name the 2014 vote.",
+          "et": "Jah-variant kaotas ei-variandile umbes 45 protsendiga 55 vastu, kui valijad otsustasid, kas see maa peaks Ühendkuningriigist lahkuma. Nimeta 2014. aasta hääletus."
         },
         "response": {
-          "en": "open market operation",
-          "et": "avaturuoperatsioon"
+          "en": "2014 Scottish independence referendum",
+          "et": "2014. aasta Šotimaa iseseisvusreferendum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Scottish independence referendum",
+            "Scotland independence referendum"
+          ],
+          "et": [
+            "Šotimaa iseseisvusreferendum",
+            "Šoti iseseisvusreferendum"
+          ]
         },
         "explanation": {
-          "en": "Open market operations implement monetary policy through securities transactions.",
-          "et": "Avaturuoperatsioon rakendab rahapoliitikat väärtpaberitehingutega."
+          "en": "The 2014 Scottish independence referendum kept Scotland in the United Kingdom after 55.3 percent voted No.",
+          "et": "2014. aasta Šotimaa iseseisvusreferendum jättis Šotimaa Ühendkuningriiki, sest 55,3 protsenti hääletas vastu."
         },
         "source": {
-          "sourceId": "wikipedia:open_market_operation",
-          "title": "Open market operation",
-          "url": "https://en.wikipedia.org/wiki/Open_market_operation",
+          "sourceId": "wikipedia:2014-scottish-independence-referendum",
+          "title": "2014 Scottish independence referendum",
+          "url": "https://en.wikipedia.org/wiki/2014_Scottish_independence_referendum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-077:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:yield-curve-control",
+        "factKey": "politics:quebec-referendum:canada-sovereignty-razor-thin-no",
         "tier": 3,
-        "subjectKey": "policy:yield-curve-control",
+        "subjectKey": "referendum:quebec-sovereignty-1995",
         "clue": {
-          "en": "Which policy targets yields on selected government-bond maturities?",
-          "et": "Milline poliitika sihib valitud tähtajaga riigivõlakirjade tootlust?"
+          "en": "In a French-speaking Canadian province, the No side preserved federal unity by barely more than one percentage point. Name the 1995 sovereignty vote.",
+          "et": "Kanada prantsuskeelses provintsis säilitas ei-pool föderatsiooni pisut enam kui ühe protsendipunktise eduga. Nimeta 1995. aasta suveräänsushääletus."
         },
         "response": {
-          "en": "yield curve control",
-          "et": "tulukõvera kontroll"
+          "en": "1995 Quebec referendum",
+          "et": "1995. aasta Quebeci rahvahääletus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Quebec independence referendum",
+            "1995 Quebec sovereignty referendum"
+          ],
+          "et": [
+            "Quebeci iseseisvusreferendum",
+            "Quebeci suveräänsusreferendum"
+          ]
         },
         "explanation": {
-          "en": "Yield-curve control commits the central bank to transact as needed near its target.",
-          "et": "Tulukõvera kontroll kohustab keskpanka sihi lähedal vajaduse järgi tehinguid tegema."
+          "en": "The 1995 Quebec referendum rejected sovereignty by 50.58 percent to 49.42 percent, one of Canada’s closest major votes.",
+          "et": "1995. aasta Quebeci rahvahääletus lükkas suveräänsuse tagasi tulemusega 50,58 protsenti 49,42 vastu ja oli üks Kanada tasavägisemaid suuri hääletusi."
         },
         "source": {
-          "sourceId": "wikipedia:yield_curve_control",
-          "title": "Yield curve control",
-          "url": "https://en.wikipedia.org/wiki/Yield_curve_control",
+          "sourceId": "wikipedia:1995-quebec-referendum",
+          "title": "1995 Quebec referendum",
+          "url": "https://en.wikipedia.org/wiki/1995_Quebec_referendum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-077:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:requirement:reserve",
+        "factKey": "politics:south-africa-referendum:white-voters-de-klerk-apartheid-reform",
         "tier": 4,
-        "subjectKey": "requirement:reserve",
+        "subjectKey": "referendum:south-africa-apartheid-1992",
         "clue": {
-          "en": "What rule sets the share of deposits banks must hold as reserves?",
-          "et": "Milline reegel määrab hoiuste osa, mida pank peab reservina hoidma?"
+          "en": "White voters in South Africa were asked whether F. W. de Klerk should continue negotiations that would end apartheid; a large Yes majority backed the reform path. Name the ballot.",
+          "et": "Lõuna-Aafrika valgetelt valijatelt küsiti, kas F. W. de Klerk peaks jätkama apartheidi lõpetavaid läbirääkimisi; suur jah-enamus toetas reformiteed. Nimeta hääletus."
         },
         "response": {
-          "en": "reserve requirement",
-          "et": "kohustusliku reservi määr"
+          "en": "1992 South African apartheid referendum",
+          "et": "1992. aasta Lõuna-Aafrika apartheidireferendum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "South African apartheid referendum",
+            "1992 South Africa referendum"
+          ],
+          "et": [
+            "Lõuna-Aafrika apartheidireferendum",
+            "1992. aasta Lõuna-Aafrika rahvahääletus"
+          ]
         },
         "explanation": {
-          "en": "Changing reserve requirements affects liquidity and potential credit expansion.",
-          "et": "Kohustusliku reservi muutmine mõjutab likviidsust ja krediidi võimalikku kasvu."
+          "en": "The 1992 South African apartheid referendum gave de Klerk a mandate from the white electorate to continue negotiations toward ending minority rule.",
+          "et": "1992. aasta Lõuna-Aafrika apartheidireferendum andis de Klerkile valge valijaskonna mandaadi jätkata läbirääkimisi vähemusvõimu lõpetamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:reserve_requirement",
-          "title": "Reserve requirement",
-          "url": "https://en.wikipedia.org/wiki/Reserve_requirement",
+          "sourceId": "wikipedia:1992-south-african-apartheid-referendum",
+          "title": "1992 South African apartheid referendum",
+          "url": "https://en.wikipedia.org/wiki/1992_South_African_apartheid_referendum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-077:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:fiscal-multiplier",
+        "factKey": "politics:australia-republic-referendum:monarchy-appointed-president-rejected",
         "tier": 5,
-        "subjectKey": "concept:fiscal-multiplier",
+        "subjectKey": "referendum:australia-republic-1999",
         "clue": {
-          "en": "Which ratio compares the change in output with an initial fiscal-policy change?",
-          "et": "Milline suhtarv võrdleb toodangu muutust esialgse eelarvepoliitika muutusega?"
+          "en": "Voters rejected a proposal to replace the Queen and governor-general with a president chosen by a two-thirds vote of parliament. Name the Australian ballot.",
+          "et": "Valijad lükkasid tagasi ettepaneku asendada kuninganna ja kindralkuberner presidendiga, kelle parlament valiks kahekolmandikulise häälteenamusega. Nimeta Austraalia hääletus."
         },
         "response": {
-          "en": "fiscal multiplier",
-          "et": "eelarvekordaja"
+          "en": "1999 Australian republic referendum",
+          "et": "1999. aasta Austraalia vabariigireferendum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Australian republic referendum",
+            "1999 Australian referendum"
+          ],
+          "et": [
+            "Austraalia vabariigireferendum",
+            "1999. aasta Austraalia rahvahääletus"
+          ]
         },
         "explanation": {
-          "en": "The fiscal multiplier varies with spare capacity, openness, and monetary response.",
-          "et": "Eelarvekordaja sõltub vabast võimsusest, avatusest ja rahapoliitika reaktsioonist."
+          "en": "The 1999 Australian republic referendum rejected the proposed parliamentary-republic model and retained the constitutional monarchy.",
+          "et": "1999. aasta Austraalia vabariigireferendum lükkas pakutud parlamentaarse vabariigi mudeli tagasi ja säilitas põhiseadusliku monarhia."
         },
         "source": {
-          "sourceId": "wikipedia:fiscal_multiplier",
-          "title": "Fiscal multiplier",
-          "url": "https://en.wikipedia.org/wiki/Fiscal_multiplier",
+          "sourceId": "wikipedia:1999-australian-republic-referendum",
+          "title": "1999 Australian republic referendum",
+          "url": "https://en.wikipedia.org/wiki/1999_Australian_republic_referendum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27119,153 +27187,193 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-078",
     "name": {
-      "en": "Power and Conflict at the Workplace",
-      "et": "Võim ja konflikt töökohal"
+      "en": "Defections That Made Headlines",
+      "et": "Kuulsad ülejooksikud"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-078:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:arrangement:closed-shop",
+        "factKey": "politics:nureyev:defection-paris-airport-kirov-ballet-1961",
         "tier": 1,
-        "subjectKey": "arrangement:closed-shop",
+        "subjectKey": "defector:rudolf-nureyev",
         "clue": {
-          "en": "Which workplace arrangement requires employees to belong to a specified union?",
-          "et": "Milline töökorraldus nõuab töötajalt kuulumist kindlasse ametiühingusse?"
+          "en": "During a 1961 tour by the Kirov Ballet, this Soviet dance star broke from his minders at Le Bourget Airport and asked French police for protection. Name him.",
+          "et": "Kirovi balleti 1961. aasta turneel murdis see Nõukogude tantsutäht Le Bourget’ lennujaamas saatjate juurest lahti ja palus Prantsuse politseilt kaitset. Nimeta ta."
         },
         "response": {
-          "en": "closed shop",
-          "et": "suletud töökoda"
+          "en": "Rudolf Nureyev",
+          "et": "Rudolf Nurejev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nureyev",
+            "Rudolf Khametovich Nureyev"
+          ],
+          "et": [
+            "Nurejev",
+            "Rudolf Hametovitš Nurejev",
+            "Rudolf Nureyev",
+            "Nureyev"
+          ]
         },
         "explanation": {
-          "en": "Closed shops have been restricted or prohibited in many jurisdictions.",
-          "et": "Suletud töökoda on paljudes riikides piiratud või keelatud."
+          "en": "Rudolf Nureyev defected in Paris in 1961 and became one of the twentieth century’s most celebrated ballet dancers in the West.",
+          "et": "Rudolf Nurejev põgenes 1961. aastal Pariisis läände ja temast sai üks 20. sajandi kuulsamaid balletitantsijaid."
         },
         "source": {
-          "sourceId": "wikipedia:closed_shop",
-          "title": "Closed shop",
-          "url": "https://en.wikipedia.org/wiki/Closed_shop",
+          "sourceId": "wikipedia:rudolf-nureyev",
+          "title": "Rudolf Nureyev",
+          "url": "https://en.wikipedia.org/wiki/Rudolf_Nureyev",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-078:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:action:wildcat-strike",
+        "factKey": "politics:philby:cambridge-five-mi6-beirut-moscow",
         "tier": 2,
-        "subjectKey": "action:wildcat-strike",
+        "subjectKey": "defector:kim-philby",
         "clue": {
-          "en": "What strike begins without authorisation from union leadership?",
-          "et": "Milline streik algab ametiühingu juhtkonna loata?"
+          "en": "This Cambridge Five double agent rose inside MI6 before disappearing from Beirut in 1963 and resurfacing in Moscow. Name him.",
+          "et": "See Cambridge Five’i topeltagent tõusis MI6-s kõrgele, kadus 1963. aastal Beirutist ja ilmus taas välja Moskvas. Nimeta ta."
         },
         "response": {
-          "en": "wildcat strike",
-          "et": "metsik streik"
+          "en": "Kim Philby",
+          "et": "Kim Philby"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Harold Adrian Russell Philby",
+            "Philby"
+          ],
+          "et": [
+            "Harold Adrian Russell Philby",
+            "Philby"
+          ]
         },
         "explanation": {
-          "en": "A wildcat strike may expose participants to union or legal sanctions.",
-          "et": "Metsik streik võib tuua osalejatele ametiühingu- või õiguslikke sanktsioone."
+          "en": "Kim Philby spied for the Soviet Union while serving British intelligence and escaped from Beirut to Moscow when suspicion closed in.",
+          "et": "Kim Philby luuras Nõukogude Liidu heaks Briti luures töötades ning põgenes kahtluste süvenedes Beirutist Moskvasse."
         },
         "source": {
-          "sourceId": "wikipedia:wildcat_strike_action",
-          "title": "Wildcat strike action",
-          "url": "https://en.wikipedia.org/wiki/Wildcat_strike_action",
+          "sourceId": "wikipedia:kim-philby",
+          "title": "Kim Philby",
+          "url": "https://en.wikipedia.org/wiki/Kim_Philby",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-078:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:works-council",
+        "factKey": "politics:alliluyeva:stalin-daughter-india-us-embassy-1967",
         "tier": 3,
-        "subjectKey": "institution:works-council",
+        "subjectKey": "defector:svetlana-alliluyeva",
         "clue": {
-          "en": "Which elected workplace body represents employees in consultation with management?",
-          "et": "Milline valitud töökohaorgan esindab töötajaid juhtkonnaga konsulteerimisel?"
+          "en": "While visiting India in 1967, Stalin’s daughter walked into the US embassy and requested asylum. Name the woman who made this dramatic break with her father’s country.",
+          "et": "1967. aastal Indiat külastades astus Stalini tütar USA saatkonda ja palus varjupaika. Nimeta naine, kes niimoodi oma isa riigist lahku lõi."
         },
         "response": {
-          "en": "works council",
-          "et": "töönõukogu"
+          "en": "Svetlana Alliluyeva",
+          "et": "Svetlana Allilujeva"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Alliluyeva",
+            "Svetlana Stalin",
+            "Lana Peters",
+            "Svetlana Iosifovna Alliluyeva"
+          ],
+          "et": [
+            "Allilujeva",
+            "Svetlana Alliluyeva",
+            "Alliluyeva",
+            "Svetlana Stalina",
+            "Lana Peters",
+            "Svetlana Iossifovna Allilujeva"
+          ]
         },
         "explanation": {
-          "en": "Works councils often address information and consultation rather than wage bargaining alone.",
-          "et": "Töönõukogu tegeleb sageli teabe ja konsultatsiooniga, mitte üksnes palgaläbirääkimistega."
+          "en": "Svetlana Alliluyeva, Joseph Stalin’s only daughter, defected via the US embassy in New Delhi, settled in the United States, and later used the name Lana Peters.",
+          "et": "Svetlana Allilujeva, Jossif Stalini ainus tütar, põgenes New Delhis asuva USA saatkonna kaudu, asus elama Ameerika Ühendriikidesse ja kasutas hiljem nime Lana Peters."
         },
         "source": {
-          "sourceId": "wikipedia:works_council",
-          "title": "Works council",
-          "url": "https://en.wikipedia.org/wiki/Works_council",
+          "sourceId": "wikipedia:svetlana-alliluyeva",
+          "title": "Svetlana Alliluyeva",
+          "url": "https://en.wikipedia.org/wiki/Svetlana_Alliluyeva",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-078:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:agreement:collective-bargaining",
+        "factKey": "politics:belenko:mig25-hakodate-japan-asylum-1976",
         "tier": 4,
-        "subjectKey": "agreement:collective-bargaining",
+        "subjectKey": "defector:viktor-belenko",
         "clue": {
-          "en": "What negotiated contract sets employment terms for a group of workers?",
-          "et": "Milline läbiräägitud leping sätestab töötajate rühma töötingimused?"
+          "en": "In 1976, this Soviet pilot landed a MiG-25 at Hakodate in Japan, giving Western experts their first close look at the interceptor before receiving US asylum. Name him.",
+          "et": "1976. aastal maandas see Nõukogude piloot Jaapanis Hakodates MiG-25, andes lääne ekspertidele esimese lähedase pilgu püüdurhävitajale, ning sai hiljem USA-lt varjupaiga. Nimeta ta."
         },
         "response": {
-          "en": "collective agreement",
-          "et": "kollektiivleping"
+          "en": "Viktor Belenko",
+          "et": "Viktor Belenko"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Viktor Ivanovich Belenko",
+            "Belenko"
+          ],
+          "et": [
+            "Viktor Ivanovitš Belenko",
+            "Belenko"
+          ]
         },
         "explanation": {
-          "en": "A collective agreement may cover pay, hours, leave, and dispute procedures.",
-          "et": "Kollektiivleping võib katta palga, tööaja, puhkuse ja vaidlusmenetluse."
+          "en": "Viktor Belenko defected by flying his MiG-25 to Japan; the aircraft was dismantled for examination and later returned to the Soviet Union.",
+          "et": "Viktor Belenko põgenes MiG-25-ga Jaapanisse; lennuk võeti uurimiseks osadeks ja saadeti hiljem Nõukogude Liitu tagasi."
         },
         "source": {
-          "sourceId": "wikipedia:collective_agreement",
-          "title": "Collective agreement",
-          "url": "https://en.wikipedia.org/wiki/Collective_agreement",
+          "sourceId": "wikipedia:viktor-belenko",
+          "title": "Viktor Belenko",
+          "url": "https://en.wikipedia.org/wiki/Viktor_Belenko",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-078:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:action:lockout",
+        "factKey": "politics:gordievsky:kgb-british-agent-operation-pimlico-car-escape",
         "tier": 5,
-        "subjectKey": "action:lockout",
+        "subjectKey": "defector:oleg-gordievsky",
         "clue": {
-          "en": "What employer action excludes workers during an industrial dispute?",
-          "et": "Milline tööandja tegevus jätab töötajad töövaidluse ajal töökohalt välja?"
+          "en": "This KGB colonel secretly worked for Britain and escaped the Soviet Union in 1985 through Operation Pimlico, hidden in a car crossing toward Finland. Name him.",
+          "et": "See KGB polkovnik töötas salaja Suurbritannia heaks ja põgenes 1985. aastal Nõukogude Liidust operatsiooni Pimlico käigus Soome poole sõitvasse autosse peidetuna. Nimeta ta."
         },
         "response": {
-          "en": "lockout",
-          "et": "töösulg"
+          "en": "Oleg Gordievsky",
+          "et": "Oleg Gordijevski"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Oleg Antonovich Gordievsky",
+            "Gordievsky"
+          ],
+          "et": [
+            "Oleg Gordievski",
+            "Oleg Gordievsky",
+            "Oleg Antonovitš Gordijevski",
+            "Gordijevski"
+          ]
         },
         "explanation": {
-          "en": "A lockout is management’s counterpart to a strike and pressures the workforce.",
-          "et": "Töösulg on juhtkonna vaste streigile ning avaldab töötajatele survet."
+          "en": "Oleg Gordievsky was a senior KGB officer and British double agent whose SIS extraction concealed him in a car boot and carried him across the Soviet–Finnish border.",
+          "et": "Oleg Gordijevski oli kõrge KGB ohvitser ja Briti topeltagent, kelle SIS peitis auto pakiruumi ning viis üle Nõukogude-Soome piiri."
         },
         "source": {
-          "sourceId": "wikipedia:lockout_(industry)",
-          "title": "Lockout (industry)",
-          "url": "https://en.wikipedia.org/wiki/Lockout_(industry)",
+          "sourceId": "wikipedia:oleg-gordievsky",
+          "title": "Oleg Gordievsky",
+          "url": "https://en.wikipedia.org/wiki/Oleg_Gordievsky",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27273,157 +27381,184 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-079",
     "name": {
-      "en": "Competing Blueprints for Social Protection",
-      "et": "Sotsiaalkaitse võistlevad mudelid"
+      "en": "Together, Apart, and Changing Hands",
+      "et": "Koos, lahus ja käest kätte"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-079:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:universal-basic-services",
+        "factKey": "politics:german-reunification:east-west-1990-berlin-wall",
         "tier": 1,
-        "subjectKey": "policy:universal-basic-services",
+        "subjectKey": "state-change:german-reunification",
         "clue": {
-          "en": "Which social-policy proposal guarantees essential public services such as housing, transport, and care instead of a cash payment?",
-          "et": "Milline sotsiaalpoliitiline ettepanek tagab rahamakse asemel sellised põhiteenused nagu eluase, transport ja hooldus?"
+          "en": "Less than a year after the Berlin Wall fell, the former East joined the Federal Republic on 3 October 1990, creating a single German state. Name the event.",
+          "et": "Vähem kui aasta pärast Berliini müüri langemist liitus endine idaosa 3. oktoobril 1990 Saksamaa Liitvabariigiga ja tekkis üks Saksa riik. Nimeta sündmus."
         },
         "response": {
-          "en": "universal basic services",
-          "et": "universaalsed põhiteenused"
+          "en": "German reunification",
+          "et": "Saksamaa taasühinemine"
         },
         "acceptedVariants": {
           "en": [
-            "UBS"
+            "reunification of Germany",
+            "German unity"
           ],
           "et": [
-            "UBS"
+            "Saksa taasühinemine",
+            "Saksamaa ühinemine"
           ]
         },
         "explanation": {
-          "en": "Universal basic services argues for collective provision of essentials that everyone can access according to need.",
-          "et": "Universaalsed põhiteenused näevad ette hädavajalike teenuste ühise pakkumise nii, et need oleksid vajaduse järgi kõigile kättesaadavad."
+          "en": "German reunification brought East and West Germany together in 1990, with the eastern states acceding to the Federal Republic.",
+          "et": "Saksamaa taasühinemine ühendas 1990. aastal Ida- ja Lääne-Saksamaa, kui idapoolsed liidumaad astusid Saksamaa Liitvabariigi koosseisu."
         },
         "source": {
-          "sourceId": "wikipedia:universal_basic_services",
-          "title": "Universal basic services",
-          "url": "https://en.wikipedia.org/wiki/Universal_basic_services",
+          "sourceId": "wikipedia:german-reunification",
+          "title": "German reunification",
+          "url": "https://en.wikipedia.org/wiki/German_reunification",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-079:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:negative-income-tax",
+        "factKey": "politics:velvet-divorce:czechoslovakia-czech-slovak-peaceful-1993",
         "tier": 2,
-        "subjectKey": "policy:negative-income-tax",
+        "subjectKey": "state-change:velvet-divorce",
         "clue": {
-          "en": "Which scheme pays households below a threshold through the tax system?",
-          "et": "Milline süsteem maksab alla lävendi jäävale leibkonnale maksusüsteemi kaudu raha?"
+          "en": "Czechoslovakia peacefully became the Czech Republic and Slovakia on 1 January 1993. What soft-textile nickname was given to the split?",
+          "et": "Tšehhoslovakkia jagunes 1. jaanuaril 1993 rahumeelselt Tšehhiks ja Slovakkiaks. Millise pehmet kangast meenutava hüüdnime sai lahkuminek?"
         },
         "response": {
-          "en": "negative income tax",
-          "et": "negatiivne tulumaks"
+          "en": "Velvet Divorce",
+          "et": "sametlahutus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "dissolution of Czechoslovakia",
+            "Czechoslovak dissolution"
+          ],
+          "et": [
+            "sametine lahutus",
+            "Tšehhoslovakkia lagunemine",
+            "Tšehhoslovakkia rahumeelne jagunemine"
+          ]
         },
         "explanation": {
-          "en": "A negative income tax gradually withdraws support as earned income rises.",
-          "et": "Negatiivne tulumaks vähendab toetust teenitud tulu kasvades järk-järgult."
+          "en": "The Velvet Divorce was the negotiated and nonviolent dissolution of Czechoslovakia into two independent states.",
+          "et": "Sametlahutus oli Tšehhoslovakkia kokkuleppeline ja vägivallatu jagunemine kaheks iseseisvaks riigiks."
         },
         "source": {
-          "sourceId": "wikipedia:negative_income_tax",
-          "title": "Negative income tax",
-          "url": "https://en.wikipedia.org/wiki/Negative_income_tax",
+          "sourceId": "wikipedia:dissolution-of-czechoslovakia",
+          "title": "Dissolution of Czechoslovakia",
+          "url": "https://en.wikipedia.org/wiki/Dissolution_of_Czechoslovakia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-079:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:model:beveridge",
+        "factKey": "politics:macau-handover:portugal-china-1999-special-region",
         "tier": 3,
-        "subjectKey": "model:beveridge",
+        "subjectKey": "state-change:macau-handover",
         "clue": {
-          "en": "Which welfare model funds broad benefits mainly through taxation?",
-          "et": "Milline heaolumudel rahastab laiu hüvitisi peamiselt maksudest?"
+          "en": "On 20 December 1999, Portugal ended more than four centuries of administration and this territory became a special administrative region of China. Name the transfer event, not merely the place.",
+          "et": "20. detsembril 1999 lõpetas Portugal enam kui neli sajandit kestnud halduse ja sellest territooriumist sai Hiina erihalduspiirkond. Nimeta üleandmissündmus, mitte ainult paik."
         },
         "response": {
-          "en": "Beveridge model",
-          "et": "Beveridge’i mudel"
+          "en": "Macau handover",
+          "et": "Macau üleandmine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "handover of Macau",
+            "transfer of sovereignty over Macau"
+          ],
+          "et": [
+            "Macau suveräänsuse üleandmine",
+            "Macau võimu üleandmine"
+          ]
         },
         "explanation": {
-          "en": "The Beveridge tradition stresses universal coverage and national responsibility.",
-          "et": "Beveridge’i traditsioon rõhutab universaalset katvust ja riiklikku vastutust."
+          "en": "The Macau handover transferred sovereignty from Portugal to China and established Macau as a Chinese special administrative region.",
+          "et": "Macau üleandmisega läks suveräänsus Portugalilt Hiinale ning Macaust sai Hiina erihalduspiirkond."
         },
         "source": {
-          "sourceId": "wikipedia:beveridge_model",
-          "title": "Beveridge model",
-          "url": "https://en.wikipedia.org/wiki/Beveridge_model",
+          "sourceId": "wikipedia:transfer-of-sovereignty-over-macau",
+          "title": "Transfer of sovereignty over Macau",
+          "url": "https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Macau",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-079:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:model:bismarck",
+        "factKey": "politics:singapore-separation:malaysia-federation-1963-expulsion-1965",
         "tier": 4,
-        "subjectKey": "model:bismarck",
+        "subjectKey": "state-change:singapore-malaysia-separation",
         "clue": {
-          "en": "Which social-insurance model ties benefits to employment-based contributions?",
-          "et": "Milline sotsiaalkindlustusmudel seob hüvitised töösuhtest tulenevate sissemaksetega?"
+          "en": "This island joined a new federation in 1963, but a constitutional amendment two years later separated it and recognised it as an independent state. Name its departure from the federation, not merely the island.",
+          "et": "See saareriik liitus 1963. aastal uue föderatsiooniga, kuid kaks aastat hiljem eraldas põhiseaduse muudatus selle föderatsioonist ja tunnustas iseseisva riigina. Nimeta selle lahkumine föderatsioonist, mitte ainult saar."
         },
         "response": {
-          "en": "Bismarck model",
-          "et": "Bismarcki mudel"
+          "en": "Singapore's separation from Malaysia",
+          "et": "Singapuri lahkumine Malaisiast"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Singapore's independence from Malaysia",
+            "Singapore leaving Malaysia"
+          ],
+          "et": [
+            "Singapuri eraldumine Malaisiast",
+            "Singapuri iseseisvumine Malaisiast"
+          ]
         },
         "explanation": {
-          "en": "The Bismarck model traditionally uses payroll-funded insurance funds.",
-          "et": "Bismarcki mudel kasutab traditsiooniliselt palgamaksetest rahastatud kindlustusfonde."
+          "en": "Singapore's separation from Malaysia in 1965 made it an independent state after a short and troubled period inside the Malaysian federation.",
+          "et": "Singapuri lahkumine Malaisiast 1965. aastal tegi sellest iseseisva riigi pärast lühikest ja pingelist aega Malaisia föderatsioonis."
         },
         "source": {
-          "sourceId": "wikipedia:bismarck_model",
-          "title": "Bismarck model",
-          "url": "https://en.wikipedia.org/wiki/Bismarck_model",
+          "sourceId": "wikipedia:constitution-and-malaysia-singapore-amendment-act-1965",
+          "title": "Constitution and Malaysia (Singapore Amendment) Act 1965",
+          "url": "https://en.wikipedia.org/wiki/Constitution_and_Malaysia_(Singapore_Amendment)_Act_1965",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-079:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:social-dividend",
+        "factKey": "politics:yemeni-unification:north-south-1990-sanaa-saleh",
         "tier": 5,
-        "subjectKey": "policy:social-dividend",
+        "subjectKey": "state-change:yemeni-unification",
         "clue": {
-          "en": "What payment distributes returns from collectively owned capital to citizens?",
-          "et": "Milline makse jagab kollektiivselt omatud kapitali tulu kodanikele?"
+          "en": "In 1990, the northern republic and the southern people’s republic joined, with Sana’a as capital and Ali Abdullah Saleh as president. Name the state-making event.",
+          "et": "1990. aastal ühinesid põhjapoolne vabariik ja lõunapoolne rahvavabariik, pealinnaks sai Sana’a ning presidendiks Ali Abdullah Saleh. Nimeta riiki loonud sündmus."
         },
         "response": {
-          "en": "social dividend",
-          "et": "ühiskondlik dividend"
+          "en": "Yemeni unification",
+          "et": "Jeemeni ühinemine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "unification of Yemen",
+            "Yemen unification"
+          ],
+          "et": [
+            "Põhja- ja Lõuna-Jeemeni ühinemine",
+            "Jeemeni taasühinemine"
+          ]
         },
         "explanation": {
-          "en": "A social dividend links cash income to public or social ownership of assets.",
-          "et": "Ühiskondlik dividend seob rahamakse varade avaliku või ühise omandiga."
+          "en": "Yemeni unification joined North Yemen and South Yemen on 22 May 1990 to create the Republic of Yemen.",
+          "et": "Jeemeni ühinemine ühendas 22. mail 1990 Põhja- ja Lõuna-Jeemeni Jeemeni Vabariigiks."
         },
         "source": {
-          "sourceId": "wikipedia:social_dividend",
-          "title": "Social dividend",
-          "url": "https://en.wikipedia.org/wiki/Social_dividend",
+          "sourceId": "wikipedia:yemeni-unification",
+          "title": "Yemeni unification",
+          "url": "https://en.wikipedia.org/wiki/Yemeni_unification",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27431,153 +27566,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-080",
     "name": {
-      "en": "Patterns within International Migration",
-      "et": "Rahvusvahelise rände mustrid"
+      "en": "Wars with Unlikely Names",
+      "et": "Kummalise nimega sõjad"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-080:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:pattern:circular-migration",
+        "factKey": "politics:cod-wars:iceland-uk-fishing-limits-coast-guard",
         "tier": 1,
-        "subjectKey": "pattern:circular-migration",
+        "subjectKey": "conflict:cod-wars",
         "clue": {
-          "en": "What repeated movement carries a migrant between origin and destination countries?",
-          "et": "Milline korduv liikumine viib rändaja lähte- ja sihtriigi vahel edasi-tagasi?"
+          "en": "Icelandic coast-guard cutters faced British trawlers and warships in three confrontations over expanding North Atlantic fishing limits. What collective nickname do they carry?",
+          "et": "Islandi rannavalvelaevad seisid kolmes vastasseisus silmitsi Briti traalerite ja sõjalaevadega, vaieldes Põhja-Atlandi püügipiiride laiendamise üle. Millise ühise hüüdnime all neid tuntakse?"
         },
         "response": {
-          "en": "circular migration",
-          "et": "ringränne"
+          "en": "Cod Wars",
+          "et": "tursasõjad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Cod Wars",
+            "Icelandic Cod Wars"
+          ],
+          "et": [
+            "Cod Wars",
+            "Islandi tursasõjad",
+            "tursasõda"
+          ]
         },
         "explanation": {
-          "en": "Circular migration may follow seasonal work, family, or study cycles.",
-          "et": "Ringränne võib järgida hooajatöö, pere või õpingute tsüklit."
+          "en": "The Cod Wars were the Iceland–United Kingdom disputes over fishing rights that ended with Iceland securing a 200-nautical-mile zone.",
+          "et": "Tursasõjad olid Islandi ja Ühendkuningriigi kalapüügiõiguste vaidlused, mis lõppesid Islandi 200 meremiili laiuse tsooni tunnustamisega."
         },
         "source": {
-          "sourceId": "wikipedia:circular_migration",
-          "title": "Circular migration",
-          "url": "https://en.wikipedia.org/wiki/Circular_migration",
+          "sourceId": "wikipedia:cod-wars",
+          "title": "Cod Wars",
+          "url": "https://en.wikipedia.org/wiki/Cod_Wars",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-080:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:pattern:return-migration",
+        "factKey": "politics:whisky-war:hans-island-canada-denmark-flags-bottles",
         "tier": 2,
-        "subjectKey": "pattern:return-migration",
+        "subjectKey": "conflict:whisky-war",
         "clue": {
-          "en": "What movement brings migrants back to their country or region of origin?",
-          "et": "Milline liikumine toob rändaja tagasi päritoluriiki või -piirkonda?"
+          "en": "Canada and Denmark repeatedly planted flags on tiny Hans Island and left bottles of their national spirits for the other side. What light-hearted conflict nickname did this ritual earn?",
+          "et": "Kanada ja Taani heiskasid tillukesel Hansu saarel korduvalt oma lipu ning jätsid vastaspoolele pudeleid kodumaise kange joogiga. Millise humoorika konfliktihüüdnime see rituaal sai?"
         },
         "response": {
-          "en": "return migration",
-          "et": "tagasiränne"
+          "en": "Whisky War",
+          "et": "viskisõda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Whiskey War",
+            "Hans Island Whisky War"
+          ],
+          "et": [
+            "Whisky War",
+            "Whiskey War",
+            "Hans Islandi viskisõda",
+            "viski sõda"
+          ]
         },
         "explanation": {
-          "en": "Return migration may be voluntary, planned, forced, temporary, or permanent.",
-          "et": "Tagasiränne võib olla vabatahtlik, kavandatud, sunnitud, ajutine või püsiv."
+          "en": "The Whisky War was the peaceful Canadian–Danish sovereignty dispute over Hans Island, marked by exchanged flags, notes, and bottles until a 2022 border agreement.",
+          "et": "Viskisõda oli Kanada ja Taani rahumeelne vaidlus Hansu saare üle, mida tähistasid lipud, kirjad ja joogipudelid kuni 2022. aasta piirileppeni."
         },
         "source": {
-          "sourceId": "wikipedia:return_migration",
-          "title": "Return migration",
-          "url": "https://en.wikipedia.org/wiki/Return_migration",
+          "sourceId": "wikipedia:whisky-war",
+          "title": "Whisky War",
+          "url": "https://en.wikipedia.org/wiki/Whisky_War",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-080:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:model:push-pull",
+        "factKey": "politics:pig-war:san-juan-us-britain-shot-animal-no-human-deaths",
         "tier": 3,
-        "subjectKey": "model:push-pull",
+        "subjectKey": "conflict:pig-war-1859",
         "clue": {
-          "en": "Which model contrasts pressures to leave with attractions at a destination?",
-          "et": "Milline mudel vastandab lahkumissurve sihtkoha ligitõmbele?"
+          "en": "An American settler shot a British employee’s farm animal on disputed San Juan Island, setting off a military standoff whose only casualty was that animal. Name the 1859 conflict.",
+          "et": "USA asunik lasi vaidlusalusel San Juani saarel maha Briti töötajale kuulunud talulooma, vallandades sõjalise vastasseisu, mille ainsaks ohvriks loom jäigi. Nimeta 1859. aasta konflikt."
         },
         "response": {
-          "en": "push–pull model",
-          "et": "tõuke- ja tõmbetegurite mudel"
+          "en": "Pig War",
+          "et": "Seasõda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1859 Pig War",
+            "San Juan Pig War"
+          ],
+          "et": [
+            "Pig War",
+            "1859. aasta Seasõda",
+            "San Juani Seasõda"
+          ]
         },
         "explanation": {
-          "en": "Push factors include conflict or unemployment; pull factors include safety or opportunity.",
-          "et": "Tõuketegurid hõlmavad konflikti või töötust, tõmbetegurid turvalisust või võimalusi."
+          "en": "The Pig War was a bloodless United States–British confrontation over the San Juan Islands, triggered when Lyman Cutlar shot a pig.",
+          "et": "Seasõda oli veretu USA ja Suurbritannia vastasseis San Juani saarte pärast, mille vallandas Lyman Cutlari lask sea pihta."
         },
         "source": {
-          "sourceId": "wikipedia:push_and_pull_factors_in_migration",
-          "title": "Push and pull factors in migration",
-          "url": "https://en.wikipedia.org/wiki/Push_and_pull_factors_in_migration",
+          "sourceId": "wikipedia:pig-war-1859",
+          "title": "Pig War (1859)",
+          "url": "https://en.wikipedia.org/wiki/Pig_War_(1859)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-080:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:process:refugee-resettlement",
+        "factKey": "politics:pastry-war:mexico-france-baker-claim-veracruz",
         "tier": 4,
-        "subjectKey": "process:refugee-resettlement",
+        "subjectKey": "conflict:pastry-war",
         "clue": {
-          "en": "Which process transfers a recognised refugee from an asylum country to a third state?",
-          "et": "Milline protsess viib tunnustatud pagulase varjupaigariigist kolmandasse riiki?"
+          "en": "A French baker’s demand for compensation became the best-remembered grievance behind France’s 1838 blockade and attack on Veracruz. What culinary nickname was given to the conflict with Mexico?",
+          "et": "Prantsuse pagari kahjunõudest sai kõige meeldejäävam kaebus, mis eelnes Prantsusmaa 1838. aasta blokaadile ja rünnakule Veracruzi vastu. Millise kulinaarse hüüdnime sai konflikt Mehhikoga?"
         },
         "response": {
-          "en": "refugee resettlement",
-          "et": "pagulaste ümberasustamine"
+          "en": "Pastry War",
+          "et": "Kondiitrisõda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "French-Mexican Pastry War",
+            "First French intervention in Mexico"
+          ],
+          "et": [
+            "Pastry War",
+            "Prantsuse-Mehhiko Kondiitrisõda",
+            "Prantsusmaa esimene sekkumine Mehhikos"
+          ]
         },
         "explanation": {
-          "en": "Resettlement offers durable protection when safe return or local integration is unavailable.",
-          "et": "Pagulaste ümberasustamine pakub püsivat kaitset, kui tagasipöördumine või kohalik lõimumine pole võimalik."
+          "en": "The Pastry War was France’s first intervention in Mexico, named for a pastry cook’s damages claim among wider French demands.",
+          "et": "Kondiitrisõda oli Prantsusmaa esimene sekkumine Mehhikosse ning sai nime kondiitri kahjunõude järgi, mis oli osa laiematest Prantsuse nõudmistest."
         },
         "source": {
-          "sourceId": "wikipedia:third-country_resettlement",
-          "title": "Third-country resettlement",
-          "url": "https://en.wikipedia.org/wiki/Third-country_resettlement",
+          "sourceId": "wikipedia:pastry-war",
+          "title": "Pastry War",
+          "url": "https://en.wikipedia.org/wiki/Pastry_War",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-080:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:status:stateless-person",
+        "factKey": "politics:petrich-incident:greece-bulgaria-border-league-nations-1925",
         "tier": 5,
-        "subjectKey": "status:stateless-person",
+        "subjectKey": "conflict:incident-at-petrich",
         "clue": {
-          "en": "Who is not considered a national by any state under its law?",
-          "et": "Keda ei pea ükski riik oma õiguse järgi kodanikuks?"
+          "en": "In 1925 a border shooting near Petrich led Greek forces into Bulgaria before the League of Nations ordered a ceasefire; one popular origin story blames a runaway animal. Name the conflict.",
+          "et": "1925. aastal viis piiritulistamine Petrichi lähistel Kreeka väed Bulgaariasse, kuni Rahvasteliit nõudis relvarahu; üks levinud päritolulugu süüdistab põgenenud looma. Nimeta konflikt."
         },
         "response": {
-          "en": "stateless person",
-          "et": "kodakondsuseta isik"
+          "en": "War of the Stray Dog",
+          "et": "hulkuva koera sõda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Incident at Petrich",
+            "Petrich incident"
+          ],
+          "et": [
+            "War of the Stray Dog",
+            "Petrichi intsident",
+            "Petrichi vahejuhtum"
+          ]
         },
         "explanation": {
-          "en": "Statelessness can restrict travel, education, work, and access to services.",
-          "et": "Kodakondsusetus võib piirata reisimist, haridust, tööd ja teenuseid."
+          "en": "The War of the Stray Dog, also called the Incident at Petrich, was a brief Greek–Bulgarian crisis halted through League of Nations intervention.",
+          "et": "Hulkuva koera sõda, mida nimetatakse ka Petrichi intsidendiks, oli lühike Kreeka-Bulgaaria kriis, mille peatas Rahvasteliidu sekkumine."
         },
         "source": {
-          "sourceId": "wikipedia:statelessness",
-          "title": "Statelessness",
-          "url": "https://en.wikipedia.org/wiki/Statelessness",
+          "sourceId": "wikipedia:incident-at-petrich",
+          "title": "Incident at Petrich",
+          "url": "https://en.wikipedia.org/wiki/Incident_at_Petrich",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27585,157 +27756,190 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-081",
     "name": {
-      "en": "Routes and Limits of Legal Belonging",
-      "et": "Õigusliku kuuluvuse teed ja piirid"
+      "en": "Coups That Failed",
+      "et": "Nurjunud riigipöörded"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-081:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:right:return",
+        "factKey": "politics:soviet-coup-attempt:gorbachev-crimea-yeltsin-tank",
         "tier": 1,
-        "subjectKey": "right:return",
+        "subjectKey": "coup-attempt:soviet-1991-august",
         "clue": {
-          "en": "Which claimed or legal principle lets displaced people or their descendants return to an ancestral country or home?",
-          "et": "Milline väidetav või seaduslik põhimõte lubab ümberasustatud inimestel või nende järglastel naasta esivanemate riiki või koju?"
+          "en": "Hardliners detained Mikhail Gorbachev at his Crimean dacha, sent tanks into Moscow, and watched Boris Yeltsin climb onto one to rally resistance. Name the failed takeover of August 1991.",
+          "et": "Vanameelsed pidasid Mihhail Gorbatšovi kinni tema Krimmi suvilas, saatsid tankid Moskvasse ja nägid Boris Jeltsinit ühele neist vastupanu õhutamiseks ronimas. Nimeta 1991. aasta augusti nurjunud võimuhaaramine."
         },
         "response": {
-          "en": "right of return",
-          "et": "tagasipöördumisõigus"
+          "en": "1991 Soviet coup attempt",
+          "et": "1991. aasta Nõukogude riigipöördekatse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "August Coup",
+            "August Putsch",
+            "1991 August coup",
+            "Soviet August coup"
+          ],
+          "et": [
+            "August Coup",
+            "August Putsch",
+            "augustiputš",
+            "augustipööre",
+            "1991. aasta augustiputš"
+          ]
         },
         "explanation": {
-          "en": "Rights of return differ between citizenship statutes, peace claims, and refugee law.",
-          "et": "Tagasipöördumisõigus erineb kodakondsusseadustes, rahunõuetes ja pagulasõiguses."
+          "en": "The 1991 Soviet coup attempt, also called the August Coup, collapsed within days and accelerated the dissolution of the Soviet Union.",
+          "et": "1991. aasta Nõukogude riigipöördekatse ehk augustiputš varises mõne päevaga kokku ja kiirendas Nõukogude Liidu lagunemist."
         },
         "source": {
-          "sourceId": "wikipedia:right_of_return",
-          "title": "Right of return",
-          "url": "https://en.wikipedia.org/wiki/Right_of_return",
+          "sourceId": "wikipedia:1991-soviet-coup-attempt",
+          "title": "1991 Soviet coup attempt",
+          "url": "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-081:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:process:denaturalization",
+        "factKey": "politics:turkey-coup-attempt:bridges-jets-erdogan-facetime",
         "tier": 2,
-        "subjectKey": "process:denaturalization",
+        "subjectKey": "coup-attempt:turkey-2016",
         "clue": {
-          "en": "What process withdraws citizenship previously gained through naturalisation?",
-          "et": "Milline protsess võtab ära varem naturaliseerimisega saadud kodakondsuse?"
+          "en": "Soldiers blocked Bosphorus bridges and jets flew over Ankara while Recep Tayyip Erdoğan used FaceTime to urge supporters into the streets. Name the failed takeover.",
+          "et": "Sõdurid sulgesid Bosporuse sildu ja Ankara kohal lendasid hävitajad, samal ajal kui Recep Tayyip Erdoğan kutsus FaceTime’i kaudu toetajaid tänavatele. Nimeta nurjunud võimuhaaramine."
         },
         "response": {
-          "en": "denaturalisation",
-          "et": "naturaliseerimise tühistamine"
+          "en": "2016 Turkish coup attempt",
+          "et": "2016. aasta Türgi riigipöördekatse"
         },
         "acceptedVariants": {
           "en": [
-            "denaturalization"
+            "2016 coup attempt in Turkey",
+            "Turkish coup attempt"
           ],
           "et": [
-            "kodakondsuse äravõtmine"
+            "2016. aasta riigipöördekatse Türgis",
+            "Türgi riigipöördekatse"
           ]
         },
         "explanation": {
-          "en": "Denaturalisation is generally limited by due process and rules against statelessness.",
-          "et": "Naturaliseerimise tühistamist piiravad menetlusõigus ja kodakondsusetuse vältimine."
+          "en": "The 2016 Turkish coup attempt was launched by a military faction and collapsed after violent clashes and mass public resistance.",
+          "et": "2016. aasta Türgi riigipöördekatse korraldas sõjaväe rühmitus ning see varises vägivaldsete kokkupõrgete ja ulatusliku rahva vastuseisu järel kokku."
         },
         "source": {
-          "sourceId": "wikipedia:denaturalization",
-          "title": "Denaturalization",
-          "url": "https://en.wikipedia.org/wiki/Denaturalization",
+          "sourceId": "wikipedia:2016-turkish-coup-attempt",
+          "title": "2016 Turkish coup attempt",
+          "url": "https://en.wikipedia.org/wiki/2016_Turkish_coup_attempt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-081:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:status:permanent-residency",
+        "factKey": "politics:kapp-putsch:weimar-berlin-freikorps-general-strike",
         "tier": 3,
-        "subjectKey": "status:permanent-residency",
+        "subjectKey": "coup-attempt:kapp-putsch",
         "clue": {
-          "en": "Which status permits indefinite residence without granting full citizenship?",
-          "et": "Milline staatus lubab tähtajatult elada, andmata täielikku kodakondsust?"
+          "en": "In 1920, Freikorps troops occupied Berlin and installed a government fronted by a politician named Wolfgang, but a nationwide general strike defeated it within days. Which putsch bore his surname?",
+          "et": "1920. aastal hõivasid Freikorpsi üksused Berliini ja seadsid ametisse valitsuse, mille etteotsa pandi poliitik nimega Wolfgang, kuid üleriigiline üldstreik kukutas selle mõne päevaga. Milline putš kandis tema perekonnanime?"
         },
         "response": {
-          "en": "permanent residency",
-          "et": "alaline elamisluba"
+          "en": "Kapp Putsch",
+          "et": "Kappi putš"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kapp-Lüttwitz Putsch",
+            "Kapp coup"
+          ],
+          "et": [
+            "Kapp-Lüttwitzi putš",
+            "Kappi riigipöördekatse"
+          ]
         },
         "explanation": {
-          "en": "Permanent residents often retain another nationality and may lack voting rights.",
-          "et": "Alaline elanik säilitab sageli teise kodakondsuse ning tal ei pruugi olla hääleõigust."
+          "en": "The Kapp Putsch challenged the Weimar Republic under Wolfgang Kapp and Walther von Lüttwitz and failed when workers paralysed the country.",
+          "et": "Kappi putš seadis Wolfgang Kappi ja Walther von Lüttwitzi juhtimisel proovile Weimari vabariigi ning nurjus, kui töölised riigi seiskasid."
         },
         "source": {
-          "sourceId": "wikipedia:permanent_residency",
-          "title": "Permanent residency",
-          "url": "https://en.wikipedia.org/wiki/Permanent_residency",
+          "sourceId": "wikipedia:kapp-putsch",
+          "title": "Kapp Putsch",
+          "url": "https://en.wikipedia.org/wiki/Kapp_Putsch",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-081:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:citizenship-by-investment",
+        "factKey": "politics:spain-coup-attempt:tejero-congress-civil-guard-king-address",
         "tier": 4,
-        "subjectKey": "policy:citizenship-by-investment",
+        "subjectKey": "coup-attempt:spain-1981-23f",
         "clue": {
-          "en": "Which programme grants nationality after a qualifying financial contribution?",
-          "et": "Milline programm annab kodakondsuse nõuetele vastava rahalise panuse järel?"
+          "en": "Antonio Tejero led armed Civil Guards into Spain’s Congress during a prime-ministerial vote, while King Juan Carlos later appeared on television in uniform to defend constitutional rule. Name the 1981 attempt.",
+          "et": "Antonio Tejero juhtis relvastatud tsiviilkaardiväelased Hispaania parlamenti peaministri hääletuse ajal, samal ajal kui kuningas Juan Carlos kaitses hiljem mundris telepöördumises põhiseaduslikku korda. Nimeta 1981. aasta katse."
         },
         "response": {
-          "en": "citizenship by investment",
-          "et": "kodakondsus investeeringu eest"
+          "en": "1981 Spanish coup attempt",
+          "et": "1981. aasta Hispaania riigipöördekatse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "23-F",
+            "23F",
+            "1981 Spanish coup"
+          ],
+          "et": [
+            "23-F",
+            "23F",
+            "1981. aasta Hispaania riigipööre"
+          ]
         },
         "explanation": {
-          "en": "Citizenship-by-investment schemes differ from residence-only investor visas.",
-          "et": "Kodakondsus investeeringu eest erineb üksnes elamisõigust andvast investoriviisast."
+          "en": "The 1981 Spanish coup attempt, commonly called 23-F, failed after the seizure of parliament did not win the king or the wider military.",
+          "et": "1981. aasta Hispaania riigipöördekatse, mida tuntakse nimega 23-F, nurjus, sest parlamendi hõivamine ei saanud kuninga ega laiema sõjaväe toetust."
         },
         "source": {
-          "sourceId": "wikipedia:immigrant_investor_programs",
-          "title": "Immigrant investor programs",
-          "url": "https://en.wikipedia.org/wiki/Immigrant_investor_programs",
+          "sourceId": "wikipedia:1981-spanish-coup-attempt",
+          "title": "1981 Spanish coup attempt",
+          "url": "https://en.wikipedia.org/wiki/1981_Spanish_coup_attempt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-081:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:requirement:naturalization-test",
+        "factKey": "politics:algiers-putsch:retired-generals-french-algeria-de-gaulle",
         "tier": 5,
-        "subjectKey": "requirement:naturalization-test",
+        "subjectKey": "coup-attempt:algiers-1961",
         "clue": {
-          "en": "Which examination checks language or civic knowledge before citizenship is granted?",
-          "et": "Milline eksam kontrollib enne kodakondsuse andmist keele- või ühiskonnateadmisi?"
+          "en": "Four retired French generals seized key buildings in colonial Algeria in 1961 to resist Charles de Gaulle’s move toward Algerian self-determination. Name the failed takeover.",
+          "et": "Neli erru läinud Prantsuse kindralit hõivasid 1961. aastal koloniaal-Alžeerias tähtsad hooned, et seista vastu Charles de Gaulle’i liikumisele Alžeeria enesemääramise poole. Nimeta nurjunud võimuhaaramine."
         },
         "response": {
-          "en": "naturalisation test",
-          "et": "kodakondsuseksam"
+          "en": "Algiers putsch",
+          "et": "Alžiiri putš"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1961 Algiers putsch",
+            "Generals’ putsch"
+          ],
+          "et": [
+            "1961. aasta Alžiiri putš",
+            "kindralite putš"
+          ]
         },
         "explanation": {
-          "en": "Citizenship tests are one possible requirement alongside residence and good character.",
-          "et": "Kodakondsuseksam võib lisanduda elamisaja ja laitmatu tausta nõudele."
+          "en": "The Algiers putsch was a short-lived military revolt by generals who wanted to keep French Algeria and opposed de Gaulle’s policy.",
+          "et": "Alžiiri putš oli lühiajaline kindralite sõjaline mäss, mille eesmärk oli säilitada Prantsuse Alžeeria ja takistada de Gaulle’i poliitikat."
         },
         "source": {
-          "sourceId": "wikipedia:citizenship_test",
-          "title": "Citizenship test",
-          "url": "https://en.wikipedia.org/wiki/Citizenship_test",
+          "sourceId": "wikipedia:algiers-putsch-of-1961",
+          "title": "Algiers putsch of 1961",
+          "url": "https://en.wikipedia.org/wiki/Algiers_putsch_of_1961",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27743,165 +27947,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-082",
     "name": {
-      "en": "Diplomacy behind Closed Doors",
-      "et": "Diplomaatia suletud uste taga"
+      "en": "Satire in the Corridors of Power",
+      "et": "Satiir võimukoridorides"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-082:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:communication:demarche",
+        "factKey": "politics-satire:charlie-hebdo:french-weekly-cartoons-secular",
         "tier": 1,
-        "subjectKey": "communication:demarche",
+        "subjectKey": "satire-publication:charlie-hebdo",
         "clue": {
-          "en": "What formal diplomatic representation delivers a government’s position or protest?",
-          "et": "Milline ametlik diplomaatiline pöördumine edastab valitsuse seisukoha või protesti?"
+          "en": "Name the French satirical weekly known for irreverent cartoons about politics and religion; the requested response is the publication, not the 2015 attack on its office.",
+          "et": "Nimeta Prantsuse satiiriline nädalaleht, mis on tuntud aukartmatute poliitika- ja usuteemaliste karikatuuride poolest; vastuseks on väljaanne, mitte 2015. aasta rünnak selle toimetusele."
         },
         "response": {
-          "en": "démarche",
-          "et": "demarš"
+          "en": "Charlie Hebdo",
+          "et": "Charlie Hebdo"
         },
         "acceptedVariants": {
           "en": [
-            "demarche"
+            "Charlie Hebdo magazine",
+            "Charlie Hebdo newspaper"
           ],
           "et": [
-            "démarche"
+            "ajakiri Charlie Hebdo",
+            "väljaanne Charlie Hebdo"
           ]
         },
         "explanation": {
-          "en": "A démarche may be written or oral and is presented to another state’s officials.",
-          "et": "Demarš võib olla kirjalik või suuline ning see esitatakse teise riigi ametnikule."
+          "en": "Charlie Hebdo is a French satirical newspaper whose cartoons and strongly secular editorial stance have repeatedly provoked controversy.",
+          "et": "Charlie Hebdo on Prantsuse satiirileht, mille karikatuurid ja jõuliselt ilmalik toimetuslik hoiak on korduvalt tekitanud vaidlusi."
         },
         "source": {
-          "sourceId": "wikipedia:d%c3%a9marche",
-          "title": "Démarche",
-          "url": "https://en.wikipedia.org/wiki/D%C3%A9marche",
+          "sourceId": "wikipedia:charlie-hebdo",
+          "title": "Charlie Hebdo",
+          "url": "https://en.wikipedia.org/wiki/Charlie_Hebdo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-082:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:role:charge-daffaires",
+        "factKey": "politics-satire:daily-show:comedy-central-mock-news-jon-stewart",
         "tier": 2,
-        "subjectKey": "role:charge-daffaires",
+        "subjectKey": "satire-program:daily-show",
         "clue": {
-          "en": "Who heads an embassy when no ambassador is accredited or present?",
-          "et": "Kes juhib saatkonda, kui suursaadik pole akrediteeritud või kohal?"
+          "en": "Jon Stewart became the best-known host of this Comedy Central programme, which presents political comedy through the look of a television news desk. Name the show.",
+          "et": "Jon Stewartist sai selle Comedy Centrali saate tuntuim juht; poliitilist komöödiat esitatakse seal teleuudiste laua ja vormi kaudu. Nimeta saade."
         },
         "response": {
-          "en": "chargé d’affaires",
-          "et": "asjur"
+          "en": "The Daily Show",
+          "et": "The Daily Show"
         },
         "acceptedVariants": {
           "en": [
-            "charge d’affaires"
+            "Daily Show",
+            "The Daily Show with Jon Stewart"
           ],
           "et": [
-            "chargé d’affaires"
+            "Daily Show",
+            "The Daily Show with Jon Stewart"
           ]
         },
         "explanation": {
-          "en": "A chargé d’affaires is accredited to the foreign ministry rather than the head of state.",
-          "et": "Asjur on akrediteeritud välisministeeriumi, mitte riigipea juurde."
+          "en": "The Daily Show is a US satirical news programme whose mock newscast format made Jon Stewart a prominent political-comedy figure.",
+          "et": "The Daily Show on USA satiiriline uudistesaade, mille pilauudiste vorm tegi Jon Stewartist mõjuka poliitilise komöödia tegelase."
         },
         "source": {
-          "sourceId": "wikipedia:charg%c3%a9_d%27affaires",
-          "title": "Chargé d'affaires",
-          "url": "https://en.wikipedia.org/wiki/Charg%C3%A9_d%27affaires",
+          "sourceId": "wikipedia:the-daily-show",
+          "title": "The Daily Show",
+          "url": "https://en.wikipedia.org/wiki/The_Daily_Show",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-082:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:status:persona-non-grata",
+        "factKey": "politics-satire:colbert-report:daily-show-spinoff-faux-pundit",
         "tier": 3,
-        "subjectKey": "status:persona-non-grata",
+        "subjectKey": "satire-program:colbert-report",
         "clue": {
-          "en": "What declaration requires an unacceptable diplomat to be recalled?",
-          "et": "Milline deklaratsioon nõuab vastuvõetamatuks kuulutatud diplomaadi tagasikutsumist?"
+          "en": "Stephen Colbert played a self-important conservative television pundit in this Daily Show spin-off, even pronouncing its final word with a silent T. Name the programme.",
+          "et": "Stephen Colbert mängis selles „The Daily Show” kõrvalsarjas enesekeskset konservatiivset telekommentaatorit ja hääldas pealkirja viimast sõna isegi vaikiva t-ga. Nimeta saade."
         },
         "response": {
-          "en": "persona non grata",
-          "et": "persona non grata"
+          "en": "The Colbert Report",
+          "et": "The Colbert Report"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Colbert Report",
+            "Stephen Colbert’s Colbert Report"
+          ],
+          "et": [
+            "Colbert Report",
+            "Stephen Colberti Colbert Report"
+          ]
         },
         "explanation": {
-          "en": "The Vienna Convention allows a host state to make the declaration without explaining why.",
-          "et": "Viini konventsioon lubab asukohariigil selle põhjendust esitamata välja kuulutada."
+          "en": "The Colbert Report used Colbert’s fictional pundit persona to parody personality-driven US cable news from 2005 to 2014.",
+          "et": "The Colbert Report kasutas Colberti väljamõeldud kommentaatoripersooni, et parodeerida aastatel 2005–2014 USA isikukeskseid kaabeluudiseid."
         },
         "source": {
-          "sourceId": "wikipedia:persona_non_grata",
-          "title": "Persona non grata",
-          "url": "https://en.wikipedia.org/wiki/Persona_non_grata",
+          "sourceId": "wikipedia:the-colbert-report",
+          "title": "The Colbert Report",
+          "url": "https://en.wikipedia.org/wiki/The_Colbert_Report",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-082:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:method:track-two-diplomacy",
+        "factKey": "politics-satire:spitting-image:british-itv-puppets-thatcher-reagan",
         "tier": 4,
-        "subjectKey": "method:track-two-diplomacy",
+        "subjectKey": "satire-program:spitting-image",
         "clue": {
-          "en": "What form of diplomacy uses unofficial, non-governmental contacts to improve communication between opponents?",
-          "et": "Milline diplomaatia vorm kasutab vastaste suhtluse parandamiseks mitteametlikke ja valitsusväliseid kontakte?"
+          "en": "Latex puppets caricatured Margaret Thatcher, Ronald Reagan, and other public figures in this British television satire first shown on ITV in the 1980s. Name the series.",
+          "et": "Lateksnukud pilasid Margaret Thatcherit, Ronald Reaganit ja teisi avaliku elu tegelasi selles Briti telesatiiris, mida näidati 1980. aastatel esmakordselt ITV-s. Nimeta sari."
         },
         "response": {
-          "en": "Track II diplomacy",
-          "et": "teise raja diplomaatia"
+          "en": "Spitting Image",
+          "et": "Spitting Image"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ITV’s Spitting Image",
+            "Spitting Image television series"
+          ],
+          "et": [
+            "ITV Spitting Image",
+            "telesari Spitting Image"
+          ]
         },
         "explanation": {
-          "en": "Track II diplomacy brings non-state practitioners into informal conflict-resolution dialogue.",
-          "et": "Teise raja diplomaatia kaasab valitsusvälised praktikud mitteametlikku konfliktide lahendamise dialoogi."
+          "en": "Spitting Image became famous for grotesque puppet versions of politicians, celebrities, and royalty during its original 1984–1996 run.",
+          "et": "Spitting Image sai kuulsaks poliitikute, kuulsuste ja kuningliku perekonna grotesksete nukuversioonidega oma algsel 1984.–1996. aasta eetriperioodil."
         },
         "source": {
-          "sourceId": "wikipedia:track_ii_diplomacy",
-          "title": "Track II diplomacy",
-          "url": "https://en.wikipedia.org/wiki/Track_II_diplomacy",
+          "sourceId": "wikipedia:spitting-image",
+          "title": "Spitting Image",
+          "url": "https://en.wikipedia.org/wiki/Spitting_Image",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-082:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:un-dppa",
+        "factKey": "politics-satire:private-eye:british-fortnightly-ian-hislop-investigations",
         "tier": 5,
-        "subjectKey": "organization:un-dppa",
+        "subjectKey": "satire-publication:private-eye",
         "clue": {
-          "en": "Which UN department manages special political missions and supports the Secretary-General’s good offices?",
-          "et": "Milline ÜRO osakond juhib poliitilisi erimissioone ning toetab peasekretäri heade teenete kasutamist?"
+          "en": "Ian Hislop has edited this British satirical fortnightly since 1986; alongside jokes and cartoons, it publishes investigations and the press-gossip column Street of Shame. Name the magazine.",
+          "et": "Ian Hislop on seda Briti satiirilist kahenädalalehte toimetanud alates 1986. aastast; naljade ja karikatuuride kõrval avaldab see uurivat ajakirjandust ning pressiklatši rubriiki „Street of Shame”. Nimeta ajakiri."
         },
         "response": {
-          "en": "UN Department of Political and Peacebuilding Affairs",
-          "et": "ÜRO poliitika- ja rahuloomeosakond"
+          "en": "Private Eye",
+          "et": "Private Eye"
         },
         "acceptedVariants": {
           "en": [
-            "DPPA"
+            "Private Eye magazine",
+            "Private Eye fortnightly"
           ],
           "et": [
-            "DPPA"
+            "ajakiri Private Eye",
+            "väljaanne Private Eye"
           ]
         },
         "explanation": {
-          "en": "The department leads UN work in preventive diplomacy, mediation, political analysis, and peacebuilding support.",
-          "et": "Osakond juhib ÜRO ennetava diplomaatia, vahenduse, poliitilise analüüsi ja rahuloome toetamise tööd."
+          "en": "Private Eye combines satirical cartoons and recurring jokes with investigations into politics, business, and the press.",
+          "et": "Private Eye ühendab satiirilised karikatuurid ja püsinaljad poliitikat, äri ning ajakirjandust käsitlevate uurimustega."
         },
         "source": {
-          "sourceId": "wikipedia:united_nations_department_of_political_and_peacebuilding_affairs",
-          "title": "United Nations Department of Political and Peacebuilding Affairs",
-          "url": "https://en.wikipedia.org/wiki/United_Nations_Department_of_Political_and_Peacebuilding_Affairs",
+          "sourceId": "wikipedia:private-eye",
+          "title": "Private Eye",
+          "url": "https://en.wikipedia.org/wiki/Private_Eye",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -27909,165 +28131,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-083",
     "name": {
-      "en": "Specialised International Organisations",
-      "et": "Rahvusvahelised eriorganisatsioonid"
+      "en": "Politics Live on Air",
+      "et": "Poliitika otse-eetris"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-083:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:international-labour-organization",
+        "factKey": "politics-media:bbc-dad:robert-kelly-live-interview-family-moniker",
         "tier": 1,
-        "subjectKey": "organization:international-labour-organization",
+        "subjectKey": "media-nickname:bbc-dad",
         "clue": {
-          "en": "Which UN agency brings governments, employers, and workers into a tripartite structure?",
-          "et": "Milline ÜRO agentuur ühendab kolmepoolselt valitsused, tööandjad ja töötajad?"
+          "en": "Political scientist Robert Kelly was discussing South Korean politics live on BBC World News when his children entered and his wife hurried in after them. What nickname did the viral moment give him?",
+          "et": "Politoloog Robert Kelly rääkis BBC World Newsi otse-eetris Lõuna-Korea poliitikast, kui tema lapsed tuppa tulid ja abikaasa neile kiirustades järgnes. Millise hüüdnime see üle maailma levinud hetk talle andis?"
         },
         "response": {
-          "en": "International Labour Organization",
-          "et": "Rahvusvaheline Tööorganisatsioon"
+          "en": "BBC Dad",
+          "et": "BBC isa"
         },
         "acceptedVariants": {
           "en": [
-            "ILO"
+            "the BBC Dad"
           ],
           "et": [
-            "ILO"
+            "BBC Dad"
           ]
         },
         "explanation": {
-          "en": "The ILO sets international labour standards through conventions and recommendations.",
-          "et": "Rahvusvaheline Tööorganisatsioon loob konventsioonide ja soovitustega tööstandardeid."
+          "en": "BBC Dad was the moniker Robert Kelly acquired after the family interruption of his 2017 live television interview became a worldwide hit.",
+          "et": "BBC isa oli hüüdnimi, mille Robert Kelly sai pärast seda, kui tema pere sekkumine 2017. aasta otseintervjuusse levis üle maailma."
         },
         "source": {
-          "sourceId": "wikipedia:international_labour_organization",
-          "title": "International Labour Organization",
-          "url": "https://en.wikipedia.org/wiki/International_Labour_Organization",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "abc-news:bbc-dad-robert-e-kelly-internet-stardom",
+          "title": "'BBC Dad' Robert E. Kelly reflects on a year of internet stardom",
+          "url": "https://www.abc.net.au/news/2018-03-12/bbc-dad-robert-e-kelly-youtube-stardom-viral-video/9537940",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-083:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:international-atomic-energy-agency",
+        "factKey": "politics-media:baghdad-bob:al-sahhaf-iraq-2003-denials",
         "tier": 2,
-        "subjectKey": "organization:international-atomic-energy-agency",
+        "subjectKey": "media-nickname:baghdad-bob",
         "clue": {
-          "en": "Which agency verifies nuclear safeguards and promotes peaceful atomic technology?",
-          "et": "Milline agentuur kontrollib tuumagarantiisid ja edendab aatomitehnoloogia rahumeelset kasutust?"
+          "en": "During the 2003 invasion of Iraq, information minister Muhammad Saeed al-Sahhaf gave televised briefings with extravagant denials even as coalition forces approached. What nickname did Western media give him?",
+          "et": "2003. aasta Iraagi sissetungi ajal pidas infominister Muhammad Saeed al-Sahhaf telebriifinguid ja eitas värvikalt tegelikkust isegi koalitsioonivägede lähenedes. Millise hüüdnime andis talle lääne meedia?"
         },
         "response": {
-          "en": "International Atomic Energy Agency",
-          "et": "Rahvusvaheline Aatomienergiaagentuur"
+          "en": "Baghdad Bob",
+          "et": "Bagdadi Bob"
         },
         "acceptedVariants": {
           "en": [
-            "IAEA"
+            "Comical Ali",
+            "Bagdad Bob"
           ],
           "et": [
-            "IAEA"
+            "Baghdad Bob",
+            "Comical Ali"
           ]
         },
         "explanation": {
-          "en": "The IAEA reports on safeguards while assisting safety, medicine, and energy programmes.",
-          "et": "Rahvusvaheline Aatomienergiaagentuur kontrollib garantiisid ning toetab ohutust, meditsiini ja energeetikat."
+          "en": "Baghdad Bob was the Western nickname for al-Sahhaf, whose implausibly upbeat wartime statements became internationally famous.",
+          "et": "Bagdadi Bob oli lääne meedia hüüdnimi al-Sahhafile, kelle ebausutavalt optimistlikud sõjaaegsed avaldused said üle maailma kuulsaks."
         },
         "source": {
-          "sourceId": "wikipedia:international_atomic_energy_agency",
-          "title": "International Atomic Energy Agency",
-          "url": "https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency",
+          "sourceId": "wikipedia:muhammad-saeed-al-sahhaf",
+          "title": "Muhammad Saeed al-Sahhaf",
+          "url": "https://en.wikipedia.org/wiki/Muhammad_Saeed_al-Sahhaf",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-083:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:interpol",
+        "factKey": "politics-media:ceausescu-speech:bucharest-balcony-jeering-broadcast-1989",
         "tier": 3,
-        "subjectKey": "organization:interpol",
+        "subjectKey": "broadcast-event:ceausescu-final-speech",
         "clue": {
-          "en": "Which organisation coordinates police information across national borders?",
-          "et": "Milline organisatsioon koordineerib politseiteavet üle riigipiiride?"
+          "en": "A Romanian ruler addressed a mass rally from a Bucharest balcony in December 1989, but the crowd erupted in shouts and the state-television feed was cut; his regime collapsed the next day. Name the broadcast event.",
+          "et": "Rumeenia juht kõneles 1989. aasta detsembris Bukaresti rõdult massimiitingule, kuid rahvas puhkes hüüdma ja riigitelevisiooni otseülekanne katkestati; tema režiim varises järgmisel päeval kokku. Nimeta otse-eetris nähtud sündmus."
         },
         "response": {
-          "en": "Interpol",
-          "et": "Interpol"
+          "en": "Ceaușescu's final speech",
+          "et": "Ceaușescu viimane kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ceaușescu's last speech",
+            "Ceaușescu's 1989 speech",
+            "Ceaușescu speech"
+          ],
+          "et": [
+            "Ceaușescu lõpukõne",
+            "Ceaușescu 1989. aasta kõne",
+            "Ceaușescu kõne"
+          ]
         },
         "explanation": {
-          "en": "Interpol issues notices and databases but does not itself arrest suspects.",
-          "et": "Interpol väljastab teateid ja haldab andmebaase, kuid ei vahista ise kahtlusaluseid."
+          "en": "Ceaușescu's final speech on 21 December 1989 exposed the regime’s loss of control when a supposedly loyal crowd turned against him on live television.",
+          "et": "Ceaușescu viimane kõne 21. detsembril 1989 näitas režiimi kontrolli kadumist, kui väidetavalt lojaalne rahvahulk pöördus otse-eetris tema vastu."
         },
         "source": {
-          "sourceId": "wikipedia:interpol",
-          "title": "Interpol",
-          "url": "https://en.wikipedia.org/wiki/Interpol",
+          "sourceId": "wikipedia:romanian-revolution-ceausescu-s-speech",
+          "title": "Romanian revolution",
+          "url": "https://en.wikipedia.org/wiki/Romanian_revolution#Ceau%C8%99escu%27s_speech",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-083:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:asean",
+        "factKey": "politics-media:cronkite:vietnam-tet-stalemate-cbs-anchor",
         "tier": 4,
-        "subjectKey": "organization:asean",
+        "subjectKey": "journalist:walter-cronkite",
         "clue": {
-          "en": "Which association organises regional cooperation among Southeast Asian states?",
-          "et": "Milline ühendus korraldab Kagu-Aasia riikide piirkondlikku koostööd?"
+          "en": "After reporting from Vietnam following the Tet Offensive, this CBS Evening News anchor told viewers that the war seemed “mired in stalemate.” Name the journalist often called America’s most trusted man.",
+          "et": "Pärast Teti pealetungi järel Vietnamist naasmist ütles see „CBS Evening Newsi” ankur vaatajatele, et sõda näib olevat „takerdunud patiseisu”. Nimeta ajakirjanik, keda kutsuti sageli Ameerika kõige usaldusväärsemaks meheks."
         },
         "response": {
-          "en": "ASEAN",
-          "et": "ASEAN"
+          "en": "Walter Cronkite",
+          "et": "Walter Cronkite"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Walter Leland Cronkite Jr.",
+            "Cronkite"
+          ],
+          "et": [
+            "Walter Leland Cronkite Jr.",
+            "Cronkite"
+          ]
         },
         "explanation": {
-          "en": "ASEAN works by consultation and consensus across political and economic fields.",
-          "et": "ASEAN tegutseb poliitika- ja majandusvaldkondades konsultatsiooni ning konsensusega."
+          "en": "Walter Cronkite’s 1968 Vietnam special concluded that negotiation, rather than claims of victory, was the only rational way out of the war.",
+          "et": "Walter Cronkite’i 1968. aasta Vietnami erisaade järeldas, et võidujuttude asemel on sõjast ainus mõistlik väljapääs läbirääkimised."
         },
         "source": {
-          "sourceId": "wikipedia:asean",
-          "title": "ASEAN",
-          "url": "https://en.wikipedia.org/wiki/ASEAN",
+          "sourceId": "wikipedia:walter-cronkite",
+          "title": "Walter Cronkite",
+          "url": "https://en.wikipedia.org/wiki/Walter_Cronkite",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-083:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:african-union",
+        "factKey": "politics-media:see-it-now:murrow-cbs-mccarthy-own-words-1954",
         "tier": 5,
-        "subjectKey": "organization:african-union",
+        "subjectKey": "news-program:see-it-now",
         "clue": {
-          "en": "Which continental organisation succeeded the Organisation of African Unity in 2002?",
-          "et": "Milline mandriorganisatsioon asendas 2002. aastal Aafrika Ühtsuse Organisatsiooni?"
+          "en": "Edward R. Murrow’s CBS newsmagazine devoted a 1954 broadcast to Senator Joseph McCarthy, building its case largely from the senator’s own recorded words and images. Name the programme.",
+          "et": "Edward R. Murrow’ CBS-i uudistemagasin pühendas 1954. aasta saate senaator Joseph McCarthyle ja ehitas käsitluse suuresti senaatori enda salvestatud sõnadele ning pildile. Nimeta saade."
         },
         "response": {
-          "en": "African Union",
-          "et": "Aafrika Liit"
+          "en": "See It Now",
+          "et": "See It Now"
         },
         "acceptedVariants": {
           "en": [
-            "AU"
+            "Edward R. Murrow’s See It Now",
+            "See It Now with Edward R. Murrow"
           ],
           "et": [
-            "AL"
+            "Edward R. Murrow’ See It Now",
+            "See It Now koos Edward R. Murrow’ga"
           ]
         },
         "explanation": {
-          "en": "The African Union pursues integration, peace, and common African positions.",
-          "et": "Aafrika Liit taotleb lõimumist, rahu ja ühiseid Aafrika seisukohti."
+          "en": "See It Now aired the influential McCarthy report in March 1954 and answered the senator in a later episode after CBS offered him reply time.",
+          "et": "See It Now näitas mõjukat McCarthy-käsitlust 1954. aasta märtsis ja vastas senaatorile hilisemas osas pärast seda, kui CBS oli talle vastamisaja andnud."
         },
         "source": {
-          "sourceId": "wikipedia:african_union",
-          "title": "African Union",
-          "url": "https://en.wikipedia.org/wiki/African_Union",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "cbs-news:edward-r-murrow-joseph-mccarthy-report-1954",
+          "title": "Edward R. Murrow aired historic Joseph McCarthy report 63 years ago today",
+          "url": "https://www.cbsnews.com/news/edward-r-murrow-joseph-mccarthy-report-1954/",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
