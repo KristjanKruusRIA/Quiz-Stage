@@ -30043,157 +30043,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-093",
     "name": {
-      "en": "Rules beneath International Trade",
-      "et": "Rahvusvahelise kaubanduse alusreeglid"
+      "en": "Political Nicknames That Stuck",
+      "et": "Poliitilised hüüdnimed, mis jäid külge"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-093:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:union:customs",
+        "factKey": "thatcher-soviet-iron-lady-nickname",
         "tier": 1,
-        "subjectKey": "union:customs",
+        "subjectKey": "political-nickname:iron-lady",
         "clue": {
-          "en": "Which trade bloc removes internal tariffs and adopts a common external tariff?",
-          "et": "Milline kaubandusliit kaotab sisetollid ning kehtestab ühise välistariifi?"
+          "en": "A Soviet military newspaper coined which metal-and-gender nickname for Britain’s first woman prime minister after an anti-communist speech?",
+          "et": "Millise metallile ja soole viitava hüüdnime andis Nõukogude sõjaväeleht Suurbritannia esimesele naispeaministrile pärast tema kommunismivastast kõnet?"
         },
         "response": {
-          "en": "customs union",
-          "et": "tolliliit"
+          "en": "Iron Lady",
+          "et": "Raudne Leedi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Iron Lady"
+          ],
+          "et": [
+            "Iron Lady"
+          ]
         },
         "explanation": {
-          "en": "A customs union goes beyond a free-trade area by aligning tariffs toward non-members.",
-          "et": "Tolliliit läheb vabakaubanduspiirkonnast kaugemale, ühtlustades tollid kolmandate riikide suhtes."
+          "en": "“Iron Lady” was the Soviet-coined nickname that became inseparable from Margaret Thatcher’s uncompromising public image.",
+          "et": "„Raudne Leedi” oli Nõukogude ajakirjanduses sündinud hüüdnimi, mis jäi Margaret Thatcheri järeleandmatu avaliku kuvandiga lahutamatult seotuks."
         },
         "source": {
-          "sourceId": "wikipedia:customs_union",
-          "title": "Customs union",
-          "url": "https://en.wikipedia.org/wiki/Customs_union",
+          "sourceId": "wikipedia:iron_lady",
+          "title": "Iron Lady",
+          "url": "https://en.wikipedia.org/wiki/Iron_Lady",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-093:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:rule:origin",
+        "factKey": "mandela-xhosa-clan-name-madiba",
         "tier": 2,
-        "subjectKey": "rule:origin",
+        "subjectKey": "political-nickname:madiba",
         "clue": {
-          "en": "Which criteria decide the country legally attributed as the source of an imported product?",
-          "et": "Millised kriteeriumid määravad, millist riiki loetakse imporditud toote õiguslikuks päritoluks?"
+          "en": "What respectful Xhosa clan name is commonly used when addressing or referring to Nelson Mandela?",
+          "et": "Millist austavat koosa klanninime kasutatakse sageli Nelson Mandela poole pöördudes või temast rääkides?"
         },
         "response": {
-          "en": "rules of origin",
-          "et": "päritolureeglid"
+          "en": "Madiba",
+          "et": "Madiba"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Rules of origin determine eligibility for preferences, quotas, and trade remedies.",
-          "et": "Päritolureeglid määravad soodustuste, kvootide ja kaubanduskaitsemeetmete kohaldumise."
+          "en": "“Madiba,” Mandela’s Thembu clan name, became a widely used respectful form of address for him.",
+          "et": "„Madiba”, Mandela thembu klanninimi, sai tema laialt kasutatud austavaks kõnetlusvormiks."
         },
         "source": {
-          "sourceId": "wikipedia:rules_of_origin",
-          "title": "Rules of origin",
-          "url": "https://en.wikipedia.org/wiki/Rules_of_origin",
+          "sourceId": "wikipedia:nelson_mandela",
+          "title": "Nelson Mandela",
+          "url": "https://en.wikipedia.org/wiki/Nelson_Mandela#Names",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-093:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:dumping",
+        "factKey": "ho-chi-minh-uncle-ho-nickname",
         "tier": 3,
-        "subjectKey": "practice:dumping",
+        "subjectKey": "political-nickname:uncle-ho",
         "clue": {
-          "en": "What trade practice sells exports below normal value in the exporter’s home market?",
-          "et": "Milline kaubandustava müüb ekspordi alla eksportija koduturu tavaväärtuse?"
+          "en": "Vietnam’s founding president cultivated an avuncular image under what familiar two-word nickname using his revolutionary surname?",
+          "et": "Vietnami rajajast president kujundas isaliku kuvandi millise tuttava kahesõnalise hüüdnime all, mis kasutas tema revolutsioonilist perekonnanime?"
         },
         "response": {
-          "en": "dumping",
-          "et": "dumping"
+          "en": "Uncle Ho",
+          "et": "Onu Ho"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Onu Ho"
+          ],
+          "et": [
+            "Uncle Ho"
+          ]
         },
         "explanation": {
-          "en": "Trade law may permit anti-dumping duties after investigation of injury to domestic industry.",
-          "et": "Kaubandusõigus võib pärast kodumaise tööstuse kahju uurimist lubada dumpinguvastast tolli."
+          "en": "Ho Chi Minh was widely known by the affectionate political nickname “Uncle Ho.”",
+          "et": "Ho Chi Minhi tunti laialt südamliku poliitilise hüüdnime „Onu Ho” all."
         },
         "source": {
-          "sourceId": "wikipedia:dumping_(pricing_policy)",
-          "title": "Dumping (pricing policy)",
-          "url": "https://en.wikipedia.org/wiki/Dumping_(pricing_policy)",
+          "sourceId": "wikipedia:ho_chi_minh",
+          "title": "Ho Chi Minh",
+          "url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-093:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:principle:most-favoured-nation",
+        "factKey": "castro-el-comandante-nickname",
         "tier": 4,
-        "subjectKey": "principle:most-favoured-nation",
+        "subjectKey": "political-nickname:el-comandante",
         "clue": {
-          "en": "Which WTO principle generally extends one trading partner’s tariff advantage to all members?",
-          "et": "Milline WTO põhimõte laiendab ühe partneri tariifieelise üldjuhul kõigile liikmetele?"
+          "en": "Which signature Spanish title became a familiar nickname for the Cuban revolutionary who later served as prime minister and president?",
+          "et": "Milline tunnuslik hispaaniakeelne tiitel sai Kuuba revolutsionääri hüüdnimeks, enne kui temast sai peaminister ja president?"
         },
         "response": {
-          "en": "most-favoured-nation treatment",
-          "et": "enamsoodustusrežiim"
+          "en": "El Comandante",
+          "et": "El Comandante"
         },
         "acceptedVariants": {
           "en": [
-            "MFN treatment"
+            "Comandante",
+            "the Commander"
           ],
           "et": [
-            "MFN-režiim"
+            "Comandante",
+            "Komandant"
           ]
         },
         "explanation": {
-          "en": "Most-favoured-nation treatment limits discrimination among trading partners, subject to exceptions.",
-          "et": "Enamsoodustusrežiim piirab kaubanduspartnerite diskrimineerimist, arvestades erandeid."
+          "en": "Fidel Castro was widely called “El Comandante,” a title rooted in his leadership of the Cuban Revolution.",
+          "et": "Fidel Castrot kutsuti laialt „El Comandanteks”, mis viitas tema juhikohale Kuuba revolutsioonis."
         },
         "source": {
-          "sourceId": "wikipedia:most_favoured_nation",
-          "title": "Most favoured nation",
-          "url": "https://en.wikipedia.org/wiki/Most_favoured_nation",
+          "sourceId": "wikipedia:fidel_castro",
+          "title": "Fidel Castro",
+          "url": "https://en.wikipedia.org/wiki/Fidel_Castro",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-093:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:effect:trade-diversion",
+        "factKey": "mao-great-helmsman-nickname",
         "tier": 5,
-        "subjectKey": "effect:trade-diversion",
+        "subjectKey": "political-nickname:great-helmsman",
         "clue": {
-          "en": "What effect replaces a cheaper outside supplier with a costlier partner inside a preferential bloc?",
-          "et": "Milline mõju asendab odavama välise tarnija kallima partneriga sooduskaubandusliidu sees?"
+          "en": "What ship-steering nickname was applied to the Chinese Communist chairman who proclaimed the People’s Republic in 1949?",
+          "et": "Millise laevajuhtimisele viitava hüüdnime sai Hiina Kommunistliku Partei esimees, kes kuulutas 1949. aastal välja Rahvavabariigi?"
         },
         "response": {
-          "en": "trade diversion",
-          "et": "kaubanduse ümbersuunamine"
+          "en": "Great Helmsman",
+          "et": "Suur Tüürimees"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Great Helmsman"
+          ],
+          "et": [
+            "Great Helmsman"
+          ]
         },
         "explanation": {
-          "en": "Trade diversion can reduce efficiency even while trade within a bloc increases.",
-          "et": "Kaubanduse ümbersuunamine võib tõhusust vähendada, kuigi liidusisene kaubandus kasvab."
+          "en": "Mao Zedong was celebrated in official political culture as the “Great Helmsman,” casting him as the guide steering China.",
+          "et": "„Suur Tüürimees” oli Mao Zedongi ametlikus poliitilises kultuuris ülistav hüüdnimi, mis kujutas teda Hiina kursi juhina."
         },
         "source": {
-          "sourceId": "wikipedia:trade_creation",
-          "title": "Trade creation",
-          "url": "https://en.wikipedia.org/wiki/Trade_creation",
+          "sourceId": "wikipedia:mao_zedong",
+          "title": "Mao Zedong",
+          "url": "https://en.wikipedia.org/wiki/Mao_Zedong",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30201,153 +30215,174 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-094",
     "name": {
-      "en": "Safeguards around Banking",
-      "et": "Pangandust ümbritsevad kaitsemehhanismid"
+      "en": "Movements That Took Off Online",
+      "et": "Veebis hoo sisse saanud liikumised"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-094:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:role:lender-of-last-resort",
+        "factKey": "tarana-burke-metoo-hashtag-movement",
         "tier": 1,
-        "subjectKey": "role:lender-of-last-resort",
+        "subjectKey": "online-movement:metoo",
         "clue": {
-          "en": "Who supplies emergency liquidity to solvent financial institutions when ordinary funding disappears?",
-          "et": "Kes annab maksevõimelisele finantsasutusele erakorralist likviidsust, kui tavarahastus kaob?"
+          "en": "Tarana Burke coined a short phrase for solidarity with survivors; a decade later a hashtag carrying it spread testimony about sexual harassment and abuse worldwide. Name the movement.",
+          "et": "Tarana Burke lõi lühikese väljendi ellujäänutega solidaarsuse näitamiseks; kümme aastat hiljem levitas sama väljendiga teemaviide kogu maailmas tunnistusi seksuaalsest ahistamisest ja väärkohtlemisest. Nimeta liikumine."
         },
         "response": {
-          "en": "lender of last resort",
-          "et": "viimase instantsi laenuandja"
+          "en": "MeToo movement",
+          "et": "#MeToo liikumine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "#MeToo",
+            "Me Too movement"
+          ],
+          "et": [
+            "#MeToo"
+          ]
         },
         "explanation": {
-          "en": "A central bank often acts as lender of last resort to contain a wider panic.",
-          "et": "Keskpank tegutseb sageli viimase instantsi laenuandjana, et piirata laiemat paanikat."
+          "en": "The MeToo movement grew from Burke’s activism into a global wave of survivor testimony amplified by the #MeToo hashtag.",
+          "et": "#MeToo liikumine kasvas Burke’i aktivismist üleilmseks ellujäänute tunnistuste laineks, mida võimendas teemaviide #MeToo."
         },
         "source": {
-          "sourceId": "wikipedia:lender_of_last_resort",
-          "title": "Lender of last resort",
-          "url": "https://en.wikipedia.org/wiki/Lender_of_last_resort",
+          "sourceId": "wikipedia:metoo_movement",
+          "title": "MeToo movement",
+          "url": "https://en.wikipedia.org/wiki/MeToo_movement",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-094:question:2",
-        "factKey": "built-in-politics-economics-society:round1-overlap:process:bank-resolution",
+        "factKey": "invisible-children-kony-viral-video",
         "tier": 2,
-        "subjectKey": "process:bank-resolution",
+        "subjectKey": "online-movement:kony-2012",
         "clue": {
-          "en": "What orderly process restructures or closes a failing bank while protecting critical functions?",
-          "et": "Milline korrastatud protsess kujundab raskustes panga ümber või sulgeb selle, kaitstes kriitilisi teenuseid?"
+          "en": "Invisible Children released a hugely viral film seeking the arrest of a Ugandan warlord and put his surname beside an election year. What was the campaign called?",
+          "et": "Invisible Children avaldas tohutult levinud filmi, mis nõudis Uganda sõjapealiku vahistamist ja pani tema perekonnanime valimisaasta kõrvale. Mis oli kampaania nimi?"
         },
         "response": {
-          "en": "bank resolution",
-          "et": "panga kriisilahendus"
+          "en": "Kony 2012",
+          "et": "Kony 2012"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Bank resolution can transfer assets, impose losses on investors, or create a bridge bank.",
-          "et": "Panga kriisilahendus võib vara üle anda, panna kahju investoritele või luua sildpanga."
+          "en": "Kony 2012 was Invisible Children’s viral campaign to make Joseph Kony internationally famous and press for his capture.",
+          "et": "„Kony 2012” oli Invisible Childreni viiruskampaania, mille eesmärk oli Joseph Kony rahvusvaheliselt tuntuks teha ja suurendada survet tema tabamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:bank_failure",
-          "title": "Bank failure",
-          "url": "https://en.wikipedia.org/wiki/Bank_failure",
+          "sourceId": "wikipedia:kony_2012",
+          "title": "Kony 2012",
+          "url": "https://en.wikipedia.org/wiki/Kony_2012",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-094:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:system:fractional-reserve",
+        "factKey": "chibok-schoolgirls-hashtag-campaign",
         "tier": 3,
-        "subjectKey": "system:fractional-reserve",
+        "subjectKey": "online-movement:bring-back-our-girls",
         "clue": {
-          "en": "Which banking arrangement holds only part of deposits as liquid reserves while lending the rest?",
-          "et": "Milline pangakorraldus hoiab vaid osa hoiustest likviidse reservina ja laenab ülejäänu välja?"
+          "en": "After Boko Haram abducted schoolgirls from Chibok, Nigeria, what four-word appeal became a globally shared hashtag campaign?",
+          "et": "Milline neljasõnaline üleskutse muutus üleilmseks teemaviitekampaaniaks pärast seda, kui Boko Haram röövis Nigeerias Chiboki koolitüdrukud?"
         },
         "response": {
-          "en": "fractional-reserve banking",
-          "et": "osareservpangandus"
+          "en": "Bring Back Our Girls",
+          "et": "Bring Back Our Girls"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "#BringBackOurGirls"
+          ],
+          "et": [
+            "#BringBackOurGirls"
+          ]
         },
         "explanation": {
-          "en": "Fractional-reserve banks transform maturities and therefore depend on liquidity management.",
-          "et": "Osareservpank muudab tähtaegu ning sõltub seetõttu likviidsuse juhtimisest."
+          "en": "Bring Back Our Girls used the #BringBackOurGirls hashtag to demand the return of the abducted Chibok schoolgirls.",
+          "et": "„Bring Back Our Girls” kasutas teemaviidet #BringBackOurGirls, et nõuda röövitud Chiboki koolitüdrukute tagasitoomist."
         },
         "source": {
-          "sourceId": "wikipedia:fractional-reserve_banking",
-          "title": "Fractional-reserve banking",
-          "url": "https://en.wikipedia.org/wiki/Fractional-reserve_banking",
+          "sourceId": "wikipedia:bring_back_our_girls",
+          "title": "Bring Back Our Girls",
+          "url": "https://en.wikipedia.org/wiki/Bring_Back_Our_Girls",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-094:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:requirement:capital-adequacy",
+        "factKey": "wikipedia-blackout-sopa-pipa-protest",
         "tier": 4,
-        "subjectKey": "requirement:capital-adequacy",
+        "subjectKey": "online-movement:sopa-pipa-blackout",
         "clue": {
-          "en": "What regulation requires a bank to fund a minimum share of risk-weighted assets with loss-absorbing capital?",
-          "et": "Milline regulatsioon nõuab pangalt riskiga kaalutud varade minimaalse osa rahastamist kahjumit katva kapitaliga?"
+          "en": "English Wikipedia and thousands of other sites went dark together to oppose two proposed US internet-copyright bills. Name the coordinated online action.",
+          "et": "Ingliskeelne Wikipedia ja tuhanded teised veebilehed läksid korraga pimedaks, et protestida kahe kavandatud USA interneti-autoriõiguse eelnõu vastu. Nimeta koordineeritud veebiaktsioon."
         },
         "response": {
-          "en": "capital adequacy requirement",
-          "et": "kapitalinõue"
+          "en": "SOPA/PIPA blackout",
+          "et": "SOPA/PIPA pimendus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "SOPA blackout",
+            "SOPA/PIPA protests"
+          ],
+          "et": [
+            "SOPA pimendus",
+            "SOPA/PIPA protestid"
+          ]
         },
         "explanation": {
-          "en": "Capital requirements protect creditors by placing an equity cushion ahead of them.",
-          "et": "Kapitalinõue kaitseb võlausaldajaid, asetades nende ette omakapitalipuhvri."
+          "en": "The SOPA/PIPA blackout was the January 2012 web protest against the Stop Online Piracy Act and PROTECT IP Act.",
+          "et": "SOPA/PIPA pimendus oli 2012. aasta jaanuari veebiprotest Stop Online Piracy Acti ja PROTECT IP Acti vastu."
         },
         "source": {
-          "sourceId": "wikipedia:capital_requirement",
-          "title": "Capital requirement",
-          "url": "https://en.wikipedia.org/wiki/Capital_requirement",
+          "sourceId": "wikipedia:protests_against_sopa_and_pipa",
+          "title": "Protests against SOPA and PIPA",
+          "url": "https://en.wikipedia.org/wiki/Protests_against_SOPA_and_PIPA",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-094:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:fund:sovereign-wealth",
+        "factKey": "dan-savage-youtube-lgbt-project",
         "tier": 5,
-        "subjectKey": "fund:sovereign-wealth",
+        "subjectKey": "online-movement:it-gets-better",
         "clue": {
-          "en": "What state-owned investment fund manages public financial assets, often accumulated from reserves or resource revenue?",
-          "et": "Milline riigi omandis investeerimisfond haldab avalikke finantsvarasid, mis pärinevad sageli reservidest või loodusvaratulust?"
+          "en": "Dan Savage and Terry Miller began a YouTube project in which adults encouraged LGBT teenagers facing bullying with a hopeful three-word promise. Name it.",
+          "et": "Dan Savage ja Terry Miller alustasid YouTube’i projekti, kus täiskasvanud julgustasid kiusamist kogevaid LGBT-teismelisi lootusrikka kolmesõnalise lubadusega. Nimeta projekt."
         },
         "response": {
-          "en": "sovereign wealth fund",
-          "et": "riiklik investeerimisfond"
+          "en": "It Gets Better Project",
+          "et": "It Gets Better Project"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "It Gets Better",
+            "It Gets Better campaign"
+          ],
+          "et": [
+            "It Gets Better",
+            "It Gets Better projekt"
+          ]
         },
         "explanation": {
-          "en": "A sovereign wealth fund invests for long-term national objectives rather than ordinary annual spending.",
-          "et": "Riiklik investeerimisfond paigutab vara pikaajaliste riiklike eesmärkide, mitte tavapäraste aastakulude jaoks."
+          "en": "The It Gets Better Project collected encouraging videos intended to show bullied LGBT young people that life can improve.",
+          "et": "„It Gets Better Project” kogus julgustavaid videoid, et näidata kiusatud LGBT-noortele, et elu võib paremaks minna."
         },
         "source": {
-          "sourceId": "wikipedia:sovereign_wealth_fund",
-          "title": "Sovereign wealth fund",
-          "url": "https://en.wikipedia.org/wiki/Sovereign_wealth_fund",
+          "sourceId": "wikipedia:it_gets_better_project",
+          "title": "It Gets Better Project",
+          "url": "https://en.wikipedia.org/wiki/It_Gets_Better_Project",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30355,153 +30390,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-095",
     "name": {
-      "en": "Predictable Errors in Economic Choice",
-      "et": "Majandusvalikute ennustatavad vead"
+      "en": "Pets Close to Power",
+      "et": "Lemmikud võimu lähedal"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-095:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:effect:decoy",
+        "factKey": "downing-street-chief-mouser-larry",
         "tier": 1,
-        "subjectKey": "effect:decoy",
+        "subjectKey": "political-pet:larry",
         "clue": {
-          "en": "Which choice effect makes one option more attractive after an obviously inferior similar option is introduced?",
-          "et": "Milline valikuefekt muudab ühe võimaluse ahvatlevamaks pärast selgelt halvema sarnase võimaluse lisamist?"
+          "en": "Which tabby arrived at 10 Downing Street in 2011 and carries the official title Chief Mouser to the Cabinet Office?",
+          "et": "Milline vöödiline kass saabus 2011. aastal Downing Street 10-sse ja kannab ametlikku valitsuskabineti peahiireküti tiitlit?"
         },
         "response": {
-          "en": "decoy effect",
-          "et": "peibutusefekt"
+          "en": "Larry",
+          "et": "Larry"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Larry the Cat"
+          ],
+          "et": [
+            "kass Larry"
+          ]
         },
         "explanation": {
-          "en": "The decoy is asymmetrically dominated, steering comparison toward the target option.",
-          "et": "Peibutus on asümmeetriliselt halvem ning suunab võrdluse sihtvaliku kasuks."
+          "en": "Larry is the resident Downing Street cat whose formal job title is Chief Mouser to the Cabinet Office.",
+          "et": "Larry on Downing Streeti residentkass, kelle ametlik töötiitel on valitsuskabineti peahiirekütt."
         },
         "source": {
-          "sourceId": "wikipedia:decoy_effect",
-          "title": "Decoy effect",
-          "url": "https://en.wikipedia.org/wiki/Decoy_effect",
+          "sourceId": "wikipedia:larry_cat",
+          "title": "Larry (cat)",
+          "url": "https://en.wikipedia.org/wiki/Larry_(cat)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-095:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:bias:hyperbolic-discounting",
+        "factKey": "obama-white-house-portuguese-water-dog-bo",
         "tier": 2,
-        "subjectKey": "bias:hyperbolic-discounting",
+        "subjectKey": "political-pet:bo",
         "clue": {
-          "en": "Which time preference makes people choose a smaller immediate reward yet prefer the larger reward when both are distant?",
-          "et": "Milline ajaeelistus paneb valima väiksema kohese tasu, kuigi kaugemate valikute puhul eelistatakse suuremat?"
+          "en": "What was the short name of the Obama family’s male Portuguese Water Dog, given to them after they entered the White House?",
+          "et": "Mis oli Obama perekonna isase portugali veekoera lühike nimi, kui koer neile pärast Valgesse Majja kolimist kingiti?"
         },
         "response": {
-          "en": "hyperbolic discounting",
-          "et": "hüperboolne diskonteerimine"
+          "en": "Bo",
+          "et": "Bo"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bo Obama",
+            "Bo the dog"
+          ],
+          "et": [
+            "Obama koer Bo"
+          ]
         },
         "explanation": {
-          "en": "Hyperbolic discounting produces preference reversals as an immediate option draws near.",
-          "et": "Hüperboolne diskonteerimine tekitab eelistuse pöördumise, kui kohene võimalus läheneb."
+          "en": "Bo was the Obama family’s Portuguese Water Dog and one of the best-known White House pets of the 2010s.",
+          "et": "Bo oli Obama perekonna portugali veekoer ja üks 2010. aastate tuntumaid Valge Maja lemmikuid."
         },
         "source": {
-          "sourceId": "wikipedia:hyperbolic_discounting",
-          "title": "Hyperbolic discounting",
-          "url": "https://en.wikipedia.org/wiki/Hyperbolic_discounting",
+          "sourceId": "wikipedia:bo_dog",
+          "title": "Bo (dog)",
+          "url": "https://en.wikipedia.org/wiki/Bo_(dog)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-095:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:bias:mental-accounting",
+        "factKey": "clinton-white-house-adopted-stray-socks",
         "tier": 3,
-        "subjectKey": "bias:mental-accounting",
+        "subjectKey": "political-pet:socks",
         "clue": {
-          "en": "What bias treats equal amounts of money differently according to imagined budgets or their source?",
-          "et": "Milline kallutatus kohtleb võrdset rahasummat erinevalt kujuteldava eelarvekonto või päritolu järgi?"
+          "en": "The Clintons adopted which black-and-white stray cat that later appeared as the animated host of a children’s White House website?",
+          "et": "Millise mustvalge hulkurkassi Clintonid adopteerisid ja kellest sai hiljem laste Valge Maja veebilehe animeeritud juht?"
         },
         "response": {
-          "en": "mental accounting",
-          "et": "mentaalne arvepidamine"
+          "en": "Socks",
+          "et": "Socks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Socks the cat",
+            "Socks Clinton"
+          ],
+          "et": [
+            "kass Socks",
+            "Clintonite kass Socks"
+          ]
         },
         "explanation": {
-          "en": "Mental accounting can separate a windfall from ordinary income even though money is fungible.",
-          "et": "Mentaalne arvepidamine võib ootamatu tulu tavapalgast lahutada, kuigi raha on asendatav."
+          "en": "Socks was the Clinton family’s adopted stray and became a highly visible White House cat during Bill Clinton’s presidency.",
+          "et": "Socks oli Clintonite adopteeritud hulkur ja Bill Clintoni presidendiajal väga nähtav Valge Maja kass."
         },
         "source": {
-          "sourceId": "wikipedia:mental_accounting",
-          "title": "Mental accounting",
-          "url": "https://en.wikipedia.org/wiki/Mental_accounting",
+          "sourceId": "wikipedia:socks_cat",
+          "title": "Socks (cat)",
+          "url": "https://en.wikipedia.org/wiki/Socks_(cat)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-095:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:bias:status-quo",
+        "factKey": "khrushchev-kennedy-strelka-puppy-pushinka",
         "tier": 4,
-        "subjectKey": "bias:status-quo",
+        "subjectKey": "political-pet:pushinka",
         "clue": {
-          "en": "Which bias gives disproportionate preference to leaving the current arrangement unchanged?",
-          "et": "Milline kallutatus annab ebaproportsionaalse eelise praeguse korralduse muutmata jätmisele?"
+          "en": "Khrushchev sent JFK which puppy, a daughter of Soviet space dog Strelka, that US agents reportedly checked for listening devices?",
+          "et": "Millise kutsika saatis Hruštšov JFK-le, kui tema emaks oli Nõukogude kosmosekoer Strelka ja USA agendid kontrollisid väidetavalt, ega kutsikasse ole peidetud pealtkuulamisseadmeid?"
         },
         "response": {
-          "en": "status quo bias",
-          "et": "status quo kallutatus"
+          "en": "Pushinka",
+          "et": "Pušinka"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pushinka the dog"
+          ],
+          "et": [
+            "Pushinka"
+          ]
         },
         "explanation": {
-          "en": "Default options exploit status quo bias because inaction preserves the existing choice.",
-          "et": "Vaikevalik kasutab status quo kallutatust, sest tegevusetus säilitab olemasoleva valiku."
+          "en": "Pushinka was Strelka’s puppy, sent by Nikita Khrushchev to the Kennedy family during the Cold War.",
+          "et": "Pušinka oli Strelka kutsikas, kelle Nikita Hruštšov saatis külma sõja ajal Kennedy perekonnale."
         },
         "source": {
-          "sourceId": "wikipedia:status_quo_bias",
-          "title": "Status quo bias",
-          "url": "https://en.wikipedia.org/wiki/Status_quo_bias",
+          "sourceId": "wikipedia:pushinka",
+          "title": "Pushinka",
+          "url": "https://en.wikipedia.org/wiki/Pushinka",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-095:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:bias:availability",
+        "factKey": "nixon-televised-fund-defense-dog-checkers",
         "tier": 5,
-        "subjectKey": "bias:availability",
+        "subjectKey": "political-pet:checkers",
         "clue": {
-          "en": "Which shortcut judges likelihood by how easily examples come to mind?",
-          "et": "Milline mõtteotsetee hindab tõenäosust selle järgi, kui kergesti näited meenuvad?"
+          "en": "In a live nationwide broadcast defending his place on Eisenhower’s ticket, Richard Nixon said his family would keep one campaign gift. What was the dog’s name?",
+          "et": "Richard Nixon ütles Eisenhoweri valimisnimekirjas oma koha kaitseks peetud üleriigilises otseülekandes, et pere jätab alles ühe kampaaniakingi. Mis oli koera nimi?"
         },
         "response": {
-          "en": "availability heuristic",
-          "et": "kättesaadavusheuristik"
+          "en": "Checkers",
+          "et": "Checkers"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Checkers the dog"
+          ],
+          "et": [
+            "koer Checkers"
+          ]
         },
         "explanation": {
-          "en": "Vivid recent events can seem more common because the availability heuristic makes them easier to recall.",
-          "et": "Eredad hiljutised sündmused võivad tunduda sagedamad, sest kättesaadavusheuristik teeb need hõlpsasti meenutatavaks."
+          "en": "Checkers was the dog Nixon named in his successful televised defence against allegations about campaign funds.",
+          "et": "Checkers oli koer, kelle Nixon nimetas oma edukas telekõnes, millega ta vastas kampaaniaraha puudutanud süüdistustele."
         },
         "source": {
-          "sourceId": "wikipedia:availability_heuristic",
-          "title": "Availability heuristic",
-          "url": "https://en.wikipedia.org/wiki/Availability_heuristic",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "nara:nixon-centennial-biography",
+          "title": "Biography",
+          "url": "https://www.archives.gov/presidential-libraries/events/centennials/nixon/biography.html",
+          "license": "CC0-1.0",
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30509,153 +30567,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-096",
     "name": {
-      "en": "Different Lenses on Inequality",
-      "et": "Ebavõrdsuse eri mõõdupuud"
+      "en": "Taxes on the Strangest Things",
+      "et": "Maksud kõige kummalisematele asjadele"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-096:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:palma-ratio",
+        "factKey": "england-window-tax-1696",
         "tier": 1,
-        "subjectKey": "measure:palma-ratio",
+        "subjectKey": "strange-tax:window",
         "clue": {
-          "en": "Which inequality measure divides the richest ten per cent’s income share by the poorest forty per cent’s share?",
-          "et": "Milline ebavõrdsuse näit jagab rikkaima kümnendiku tuluosa vaeseima nelja kümnendiku tuluosaga?"
+          "en": "In late Stuart England, householders sometimes bricked up glass openings because a 1696 levy rose with how many a home had. Name the tax.",
+          "et": "Stuartite võimuaja lõpu Inglismaal müürisid majaomanikud mõnikord klaasitud avasid kinni, sest 1696. aasta maks kasvas vastavalt nende arvule. Nimeta maks."
         },
         "response": {
-          "en": "Palma ratio",
-          "et": "Palma suhtarv"
+          "en": "British window tax",
+          "et": "Briti aknamaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "window tax"
+          ],
+          "et": [
+            "aknamaks"
+          ]
         },
         "explanation": {
-          "en": "The Palma ratio focuses on distributional tails because middle-income shares tend to vary less.",
-          "et": "Palma suhtarv keskendub jaotuse äärtele, sest keskmiste rühmade tuluosa muutub vähem."
+          "en": "The British window tax tied the bill to the number of windows, leaving blocked openings as a visible architectural legacy.",
+          "et": "Briti aknamaks sidus maksusumma akende arvuga ning jättis nähtava arhitektuuripärandina kinni müüritud avad."
         },
         "source": {
-          "sourceId": "wikipedia:palma_ratio",
-          "title": "Palma ratio",
-          "url": "https://en.wikipedia.org/wiki/Palma_ratio",
+          "sourceId": "wikipedia:window_tax",
+          "title": "Window tax",
+          "url": "https://en.wikipedia.org/wiki/Window_tax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-096:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:intergenerational-elasticity",
+        "factKey": "peter-great-russian-beard-tax-token",
         "tier": 2,
-        "subjectKey": "measure:intergenerational-elasticity",
+        "subjectKey": "strange-tax:beard",
         "clue": {
-          "en": "Which statistic relates children’s adult income to that of their parents?",
-          "et": "Milline näit seob laste täiskasvanuea tulu nende vanemate tuluga?"
+          "en": "As Peter the Great pushed Russian elites toward Western fashion, men who kept traditional facial hair paid a levy and carried a metal token. Name the tax.",
+          "et": "Kui Peeter I surus Venemaa eliiti lääneliku moe poole, pidid traditsioonilise näokarvastiku säilitanud mehed maksma lõivu ja kandma metallžetooni. Nimeta maks."
         },
         "response": {
-          "en": "intergenerational income elasticity",
-          "et": "põlvkondadevaheline tuluelastsus"
+          "en": "Russian beard tax",
+          "et": "Venemaa habememaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "beard tax"
+          ],
+          "et": [
+            "habememaks"
+          ]
         },
         "explanation": {
-          "en": "Higher intergenerational income elasticity indicates stronger persistence and less relative mobility.",
-          "et": "Suurem põlvkondadevaheline tuluelastsus näitab tugevamat püsivust ja väiksemat suhtelist liikuvust."
+          "en": "Peter the Great’s Russian beard tax made payers carry a token proving they had paid to retain their beards.",
+          "et": "Peeter I Venemaa habememaksu tasujad kandsid žetooni, mis tõendas õigust habe alles jätta."
         },
         "source": {
-          "sourceId": "wikipedia:economic_mobility",
-          "title": "Economic mobility",
-          "url": "https://en.wikipedia.org/wiki/Economic_mobility",
+          "sourceId": "wikipedia:beard_tax",
+          "title": "Beard tax",
+          "url": "https://en.wikipedia.org/wiki/Beard_tax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-096:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:absolute-poverty",
+        "factKey": "vespasian-roman-urine-tax",
         "tier": 3,
-        "subjectKey": "concept:absolute-poverty",
+        "subjectKey": "strange-tax:urine",
         "clue": {
-          "en": "Which definition compares resources with a fixed minimum needed for basic necessities?",
-          "et": "Milline määratlus võrdleb ressursse põhivajaduste jaoks vajaliku kindla miinimumiga?"
+          "en": "Roman laundries and tanneries bought a useful liquid collected from public urinals. Which levy associated with Emperor Vespasian prompted the saying “money does not stink”?",
+          "et": "Rooma pesukojad ja nahatöökojad ostsid avalikest pissuaaridest kogutud kasulikku vedelikku. Milline keiser Vespasianusega seotud maks sünnitas ütluse „raha ei haise”?"
         },
         "response": {
-          "en": "absolute poverty",
-          "et": "absoluutne vaesus"
+          "en": "Vespasian’s urine tax",
+          "et": "Vespasianuse uriinimaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Roman urine tax",
+            "urine tax"
+          ],
+          "et": [
+            "Rooma uriinimaks",
+            "uriinimaks"
+          ]
         },
         "explanation": {
-          "en": "An absolute poverty line is intended to represent a stable real standard rather than current median income.",
-          "et": "Absoluutse vaesuse piir väljendab püsivat reaalset elatustaset, mitte jooksvat mediaantulu."
+          "en": "Vespasian’s urine tax applied to trade in urine collected from public urinals; the episode is linked to the phrase pecunia non olet, “money does not stink.”",
+          "et": "Vespasianuse uriinimaks puudutas avalikest pissuaaridest kogutud uriini kaubandust; looga seostub väljend pecunia non olet ehk „raha ei haise”."
         },
         "source": {
-          "sourceId": "wikipedia:poverty",
-          "title": "Poverty",
-          "url": "https://en.wikipedia.org/wiki/Poverty",
+          "sourceId": "wikipedia:pecunia_non_olet",
+          "title": "Pecunia non olet",
+          "url": "https://en.wikipedia.org/wiki/Pecunia_non_olet",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-096:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:relative-poverty",
+        "factKey": "british-hat-tax-revenue-stamp",
         "tier": 4,
-        "subjectKey": "concept:relative-poverty",
+        "subjectKey": "strange-tax:hat",
         "clue": {
-          "en": "Which definition sets the poverty line in relation to typical income in the same society?",
-          "et": "Milline määratlus seab vaesuspiiri sama ühiskonna tüüpilise tulu suhtes?"
+          "en": "Georgian Britain required headwear sellers to buy licences and paste a revenue stamp inside each item sold. Name the levy.",
+          "et": "18. sajandi lõpu Suurbritannias pidid peakattemüüjad ostma litsentsi ja kleepima iga müüdud eseme sisse maksumärgi. Nimeta maks."
         },
         "response": {
-          "en": "relative poverty",
-          "et": "suhteline vaesus"
+          "en": "British hat tax",
+          "et": "Briti kübaramaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "hat tax"
+          ],
+          "et": [
+            "kübaramaks"
+          ]
         },
         "explanation": {
-          "en": "Relative poverty captures exclusion from customary living standards even when basic survival is possible.",
-          "et": "Suhteline vaesus kajastab kõrvalejäämist tavapärasest elatustasemest isegi siis, kui põhivajadused on kaetud."
+          "en": "The British hat tax was collected through licences and revenue stamps fixed inside hats, with penalties for forgery.",
+          "et": "Briti kübaramaksu koguti litsentside ja kübarate sisse kinnitatud maksumärkide kaudu; võltsimise eest ähvardas karistus."
         },
         "source": {
-          "sourceId": "wikipedia:poverty_threshold",
-          "title": "Poverty threshold",
-          "url": "https://en.wikipedia.org/wiki/Poverty_threshold",
+          "sourceId": "wikipedia:hat_tax",
+          "title": "Hat tax",
+          "url": "https://en.wikipedia.org/wiki/Hat_tax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-096:question:5",
-        "factKey": "built-in-politics-economics-society:round1-overlap:concept:tax-incidence",
+        "factKey": "mussolini-italy-bachelor-tax",
         "tier": 5,
-        "subjectKey": "concept:tax-incidence",
+        "subjectKey": "strange-tax:bachelor",
         "clue": {
-          "en": "What economic concept identifies who ultimately bears a tax after prices and behaviour adjust?",
-          "et": "Milline majandusmõiste näitab, kes kannab maksu lõpuks pärast hindade ja käitumise kohanemist?"
+          "en": "Fascist Italy’s “Battle for Births” penalised unmarried men financially while Mussolini tried to raise the population. Name the levy.",
+          "et": "Fašistliku Itaalia „sündimuse lahing” karistas vallalisi mehi rahaliselt, kui Mussolini püüdis rahvaarvu kasvatada. Nimeta maks."
         },
         "response": {
-          "en": "tax incidence",
-          "et": "maksukoormuse jaotus"
+          "en": "Mussolini’s bachelor tax",
+          "et": "Mussolini poissmehemaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "bachelor tax"
+          ],
+          "et": [
+            "poissmehemaks"
+          ]
         },
         "explanation": {
-          "en": "Tax incidence can fall on buyers, sellers, workers, or owners regardless of who sends payment to the state.",
-          "et": "Maksukoormus võib langeda ostjale, müüjale, töötajale või omanikule sõltumata sellest, kes riigile makse teeb."
+          "en": "Mussolini’s bachelor tax charged unmarried Italian men as part of the regime’s demographic campaign.",
+          "et": "Mussolini poissmehemaks maksustas vallalisi Itaalia mehi režiimi rahvastikukampaania osana."
         },
         "source": {
-          "sourceId": "wikipedia:tax_incidence",
-          "title": "Tax incidence",
-          "url": "https://en.wikipedia.org/wiki/Tax_incidence",
+          "sourceId": "wikipedia:bachelor_tax",
+          "title": "Bachelor tax",
+          "url": "https://en.wikipedia.org/wiki/Bachelor_tax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30663,153 +30743,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-097",
     "name": {
-      "en": "Institutions That Keep Democracy Accountable",
-      "et": "Demokraatiat vastutavana hoidvad institutsioonid"
+      "en": "Leaders Hidden in Everyday Names",
+      "et": "Juhid argiste nimede taga"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-097:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:norm:peaceful-transfer",
+        "factKey": "duke-wellington-boot-eponym",
         "tier": 1,
-        "subjectKey": "norm:peaceful-transfer",
+        "subjectKey": "leader-eponym:wellington-boot",
         "clue": {
-          "en": "What democratic norm has an outgoing leadership surrender authority without violence after losing?",
-          "et": "Milline demokraatlik norm paneb kaotanud juhtkonna võimu vägivallata loovutama?"
+          "en": "The duke who defeated Napoleon at Waterloo asked his shoemaker to adapt leather riding footwear; its waterproof descendants still bear his name. Name the object.",
+          "et": "Napoleoni Waterloo all võitnud hertsog palus kingsepal nahast ratsasaapaid kohandada; nende veekindlad järglased kannavad siiani tema nime. Nimeta ese."
         },
         "response": {
-          "en": "peaceful transfer of power",
-          "et": "võimu rahumeelne üleandmine"
+          "en": "Wellington boot",
+          "et": "Wellingtoni saabas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Wellington boots",
+            "wellies"
+          ],
+          "et": [
+            "Wellingtoni saapad",
+            "Wellingtoni kummikud"
+          ]
         },
         "explanation": {
-          "en": "Peaceful transfer accepts electoral or constitutional succession as legitimate even after bitter competition.",
-          "et": "Võimu rahumeelne üleandmine tunnustab valimis- või põhiseaduslikku järglust ka terava konkurentsi järel."
+          "en": "The Wellington boot developed from footwear commissioned by the Duke of Wellington and later became the familiar waterproof “wellie.”",
+          "et": "Wellingtoni saabas arenes Wellingtoni hertsogi tellitud jalanõust ja selle veekindel järglane on tänapäevane kummik."
         },
         "source": {
-          "sourceId": "wikipedia:peaceful_transition_of_power",
-          "title": "Peaceful transition of power",
-          "url": "https://en.wikipedia.org/wiki/Peaceful_transition_of_power",
+          "sourceId": "wikipedia:wellington_boot",
+          "title": "Wellington boot",
+          "url": "https://en.wikipedia.org/wiki/Wellington_boot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-097:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:european-court-of-auditors",
+        "factKey": "jawaharlal-nehru-mandarin-collar-jacket",
         "tier": 2,
-        "subjectKey": "institution:european-court-of-auditors",
+        "subjectKey": "leader-eponym:nehru-jacket",
         "clue": {
-          "en": "Which EU institution audits whether the Union's money is collected and spent correctly?",
-          "et": "Milline Euroopa Liidu institutsioon auditeerib, kas liidu raha kogutakse ja kulutatakse nõuetekohaselt?"
+          "en": "Which hip-length, mandarin-collared garment takes its Western name from India’s first prime minister, who was associated with a related style?",
+          "et": "Milline puusani ulatuv mandariinkraega rõivaese sai läänemaailmas nime India esimese peaministri järgi, keda seostati sarnase stiiliga?"
         },
         "response": {
-          "en": "European Court of Auditors",
-          "et": "Euroopa Kontrollikoda"
+          "en": "Nehru jacket",
+          "et": "Nehru jakk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nehru coat"
+          ],
+          "et": [
+            "Nehru pintsak"
+          ]
         },
         "explanation": {
-          "en": "The European Court of Auditors is the EU's external auditor and reports on the reliability and legality of its finances.",
-          "et": "Euroopa Kontrollikoda on ELi välisaudiitor ning annab aru liidu rahanduse usaldusväärsusest ja seaduslikkusest."
+          "en": "The Nehru jacket is a fitted, hip-length coat with a mandarin collar named after Jawaharlal Nehru.",
+          "et": "Nehru jakk on liibuv puusani ulatuv mandariinkraega rõivas, mis on nimetatud Jawaharlal Nehru järgi."
         },
         "source": {
-          "sourceId": "wikipedia:european_court_of_auditors",
-          "title": "European Court of Auditors",
-          "url": "https://en.wikipedia.org/wiki/European_Court_of_Auditors",
+          "sourceId": "wikipedia:nehru_jacket",
+          "title": "Nehru jacket",
+          "url": "https://en.wikipedia.org/wiki/Nehru_jacket",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-097:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:independent-judiciary",
+        "factKey": "winston-churchill-julieta-cigar-size",
         "tier": 3,
-        "subjectKey": "institution:independent-judiciary",
+        "subjectKey": "leader-eponym:churchill-cigar",
         "clue": {
-          "en": "Which principle lets judges decide cases without improper pressure from government or private interests?",
-          "et": "Milline põhimõte lubab kohtunikul otsustada ilma valitsuse või erahuvi sobimatu surveta?"
+          "en": "An avid cigar-smoking wartime British prime minister visited the Romeo y Julieta maker in Havana in 1946. Which classic seven-inch cigar size carries his surname? Name the complete object.",
+          "et": "Sigarilembene Briti sõjaaegne peaminister külastas 1946. aastal Havannas Romeo y Julieta tootjat. Milline klassikaline seitsmetolline sigarisuurus kannab tema perekonnanime? Nimeta täielik ese."
         },
         "response": {
-          "en": "judicial independence",
-          "et": "kohtuvõimu sõltumatus"
+          "en": "Churchill cigar",
+          "et": "Churchilli sigar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Churchill-size cigar",
+            "Churchill cigar size"
+          ],
+          "et": [
+            "Churchill-sigar",
+            "Churchilli-suuruses sigar"
+          ]
         },
         "explanation": {
-          "en": "Judicial independence relies on institutional safeguards as well as impartial conduct.",
-          "et": "Kohtuvõimu sõltumatus tugineb nii institutsionaalsetele tagatistele kui erapooletule käitumisele."
+          "en": "Churchill visited Romeo y Julieta in Havana in 1946, and its seven-inch Julieta No. 2 size became known as a Churchill cigar.",
+          "et": "Churchill külastas 1946. aastal Havannas Romeo y Julietat ning tootja seitsmetolline Julieta No. 2 suurus sai tuntuks Churchilli sigarina."
         },
         "source": {
-          "sourceId": "wikipedia:judicial_independence",
-          "title": "Judicial independence",
-          "url": "https://en.wikipedia.org/wiki/Judicial_independence",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "international-churchill-society:drink-and-cigars",
+          "title": "Drink and cigars",
+          "url": "https://winstonchurchill.org/churchill-central/storyelement/drink-and-cigars/",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-097:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:oversight:congressional",
+        "factKey": "bismarck-name-pickled-herring",
         "tier": 4,
-        "subjectKey": "oversight:congressional",
+        "subjectKey": "leader-eponym:bismarck-herring",
         "clue": {
-          "en": "What oversight does the United States Congress exercise through hearings, investigations, and its committee system?",
-          "et": "Millist järelevalvet teeb Ameerika Ühendriikide Kongress kuulamiste, uurimiste ja komisjonide süsteemi kaudu?"
+          "en": "Which complete food name combines the surname of Germany’s “Iron Chancellor” with a traditional pickled fish?",
+          "et": "Milline täielik toidunimi ühendab Saksamaa „raudkantsleri” perekonnanime traditsioonilise marineeritud kalaga?"
         },
         "response": {
-          "en": "congressional oversight",
-          "et": "Kongressi järelevalve"
+          "en": "Bismarck herring",
+          "et": "Bismarcki heeringas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bismarck herring sandwich"
+          ],
+          "et": [
+            "Bismarcki heeringad",
+            "Bismarckhering"
+          ]
         },
         "explanation": {
-          "en": "Congressional oversight reviews and monitors federal agencies, programmes, and policy implementation.",
-          "et": "Kongressi järelevalve kontrollib föderaalasutusi, programme ja poliitika elluviimist."
+          "en": "Bismarck herring is a named form of pickled herring; the response requires both the political surname and the food.",
+          "et": "Bismarcki heeringas on marineeritud heeringa nimetus; vastus peab sisaldama nii poliitilist perekonnanime kui ka toitu."
         },
         "source": {
-          "sourceId": "wikipedia:congressional_oversight",
-          "title": "Congressional oversight",
-          "url": "https://en.wikipedia.org/wiki/Congressional_oversight",
+          "sourceId": "wikipedia:bismarck_herring",
+          "title": "Bismarck herring",
+          "url": "https://en.wikipedia.org/wiki/Bismarck_herring",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-097:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:right:freedom-of-information",
+        "factKey": "eisenhower-ike-world-war-two-field-jacket",
         "tier": 5,
-        "subjectKey": "right:freedom-of-information",
+        "subjectKey": "leader-eponym:eisenhower-jacket",
         "clue": {
-          "en": "Which legal right lets the public request records held by government, subject to defined exceptions?",
-          "et": "Milline seaduslik õigus lubab üldsusel küsida valitsuse dokumente, arvestades kindlaid erandeid?"
+          "en": "A future US president and supreme Allied commander found the standard World War II uniform restrictive and had its wool field coat tailored very short. Name the complete garment that took his surname.",
+          "et": "Tulevane USA president ja liitlasvägede ülemjuhataja pidas Teise maailmasõja tavavormi piiravaks ning lasi villase välijaki väga lühikeseks kohandada. Nimeta täielik rõivaese, mis sai tema perekonnanime."
         },
         "response": {
-          "en": "freedom of information",
-          "et": "teabevabadus"
+          "en": "Eisenhower jacket",
+          "et": "Eisenhoweri jakk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ike jacket",
+            "Eisenhower field jacket"
+          ],
+          "et": [
+            "Ike’i jakk",
+            "Eisenhoweri väliülikonna jakk"
+          ]
         },
         "explanation": {
-          "en": "Freedom-of-information laws turn administrative openness into an enforceable access procedure.",
-          "et": "Teabevabaduse seadused muudavad haldusliku avatuse jõustatavaks juurdepääsumenetluseks."
+          "en": "The Eisenhower jacket, also called the Ike jacket, was the short wool field jacket associated with General Dwight D. Eisenhower and later made standard issue.",
+          "et": "Eisenhoweri jakk ehk Ike’i jakk oli kindral Dwight D. Eisenhoweriga seostatud lühike villane välijakk, millest sai hiljem standardvarustus."
         },
         "source": {
-          "sourceId": "wikipedia:freedom_of_information",
-          "title": "Freedom of information",
-          "url": "https://en.wikipedia.org/wiki/Freedom_of_information",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "nara:the-ike-jacket",
+          "title": "The Ike Jacket",
+          "url": "https://prologue.blogs.archives.gov/2014/11/11/the-ike-jacket/",
+          "license": "CC0-1.0",
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30817,157 +30924,174 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-098",
     "name": {
-      "en": "Digital Traces That Test a Claim",
-      "et": "Väidet kontrollivad digijäljed"
+      "en": "Tiny Places with Grand Claims",
+      "et": "Väikesed paigad suurte nõudmistega"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-098:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:metadata:exif",
+        "factKey": "fort-roughs-north-sea-bates-sealand",
         "tier": 1,
-        "subjectKey": "metadata:exif",
+        "subjectKey": "micronation:sealand",
         "clue": {
-          "en": "Which camera-file standard can store exposure settings, capture time, and sometimes location?",
-          "et": "Milline kaamerafaili standard võib talletada särituse seaded, pildistamisaja ja vahel asukoha?"
+          "en": "Roy Bates occupied an abandoned wartime sea fort in the North Sea and declared which self-styled principality there?",
+          "et": "Roy Bates hõivas Põhjameres mahajäetud sõjaaegse merekindluse ja kuulutas seal välja millise isehakanud vürstiriigi?"
         },
         "response": {
-          "en": "Exif metadata",
-          "et": "Exif-metaandmed"
+          "en": "Principality of Sealand",
+          "et": "Sealandi vürstiriik"
         },
         "acceptedVariants": {
           "en": [
-            "Exchangeable Image File Format"
+            "Sealand"
           ],
           "et": [
-            "Exchangeable Image File Format"
+            "Sealand"
           ]
         },
         "explanation": {
-          "en": "Exif fields can aid verification, but editing or online platforms may remove or alter them.",
-          "et": "Exif-väljad võivad kontrollimist aidata, kuid töötlus või veebiplatvorm võib need eemaldada või muuta."
+          "en": "The Principality of Sealand is the micronation Bates proclaimed on Fort Roughs off the English coast.",
+          "et": "Sealandi vürstiriik on mikroriik, mille Bates kuulutas välja Inglismaa ranniku lähedal Fort Roughsil."
         },
         "source": {
-          "sourceId": "wikipedia:exif",
-          "title": "Exif",
-          "url": "https://en.wikipedia.org/wiki/Exif",
+          "sourceId": "wikipedia:principality_of_sealand",
+          "title": "Principality of Sealand",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Sealand",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-098:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:method:geolocation",
+        "factKey": "vilnius-april-fools-uzupis-constitution",
         "tier": 2,
-        "subjectKey": "method:geolocation",
+        "subjectKey": "micronation:uzupis",
         "clue": {
-          "en": "What verification task infers where an image was captured from landmarks, terrain, signs, or shadows?",
-          "et": "Milline kontrollivõte tuletab orientiiride, maastiku, siltide või varjude järgi pildi tegemise koha?"
+          "en": "Which artists’ district in Vilnius declared a playful republic on April Fools’ Day and displays a constitution that includes the right to be unhappy?",
+          "et": "Milline Vilniuse kunstnike linnaosa kuulutas naljaka vabariigi välja aprillinaljapäeval ja eksponeerib põhiseadust, kus on muu hulgas õigus olla õnnetu?"
         },
         "response": {
-          "en": "geolocation",
-          "et": "geolokatsioon"
+          "en": "Republic of Užupis",
+          "et": "Užupise Vabariik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Užupis Republic",
+            "Užupis"
+          ],
+          "et": [
+            "Užupis"
+          ]
         },
         "explanation": {
-          "en": "Visual geolocation combines independent clues and should distinguish a plausible match from proof.",
-          "et": "Visuaalne geolokatsioon ühendab sõltumatuid vihjeid ning peab eristama tõenäolist vastet tõendist."
+          "en": "The Republic of Užupis is Vilnius’s bohemian neighbourhood republic, proclaimed on 1 April with a deliberately whimsical constitution.",
+          "et": "Užupise Vabariik on Vilniuse boheemlaslik linnaosavabariik, mis kuulutati välja 1. aprillil ja millel on meelega humoorikas põhiseadus."
         },
         "source": {
-          "sourceId": "wikipedia:geolocation",
-          "title": "Geolocation",
-          "url": "https://en.wikipedia.org/wiki/Geolocation",
+          "sourceId": "wikipedia:uzupis",
+          "title": "Užupis",
+          "url": "https://en.wikipedia.org/wiki/U%C5%BEupis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-098:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:archive:wayback-machine",
+        "factKey": "danube-croatia-serbia-liberland-claim",
         "tier": 3,
-        "subjectKey": "archive:wayback-machine",
+        "subjectKey": "micronation:liberland",
         "clue": {
-          "en": "Which Internet Archive service lets a checker view many earlier captures of a webpage?",
-          "et": "Milline Internet Archive’i teenus lubab kontrollijal vaadata veebilehe varasemaid salvestisi?"
+          "en": "Czech libertarian Vít Jedlička claimed an uninhabited Danube patch disputed between Croatia and Serbia for which self-declared state?",
+          "et": "Tšehhi libertaar Vít Jedlička kuulutas Horvaatia ja Serbia vahel vaidlustatud asustamata Doonau maalapi milliseks isehakanud riigiks?"
         },
         "response": {
-          "en": "Wayback Machine",
-          "et": "Wayback Machine"
+          "en": "Liberland",
+          "et": "Liberland"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Free Republic of Liberland"
+          ],
+          "et": [
+            "Liberlandi Vaba Vabariik"
+          ]
         },
         "explanation": {
-          "en": "The Wayback Machine preserves timestamped snapshots, although its coverage is not complete.",
-          "et": "Wayback Machine säilitab ajatempliga hetktõmmiseid, kuigi selle katvus pole täielik."
+          "en": "Liberland is Jedlička’s claimed micronation on the Danube borderland between Croatia and Serbia.",
+          "et": "Liberland on Jedlička kuulutatud mikroriik Horvaatia ja Serbia vahelisel Doonau piirialal."
         },
         "source": {
-          "sourceId": "wikipedia:wayback_machine",
-          "title": "Wayback Machine",
-          "url": "https://en.wikipedia.org/wiki/Wayback_Machine",
+          "sourceId": "wikipedia:liberland",
+          "title": "Liberland",
+          "url": "https://en.wikipedia.org/wiki/Liberland",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-098:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:method:bot-detection",
+        "factKey": "giorgio-rosa-adriatic-platform-rose-island",
         "tier": 4,
-        "subjectKey": "method:bot-detection",
+        "subjectKey": "micronation:rose-island",
         "clue": {
-          "en": "What analysis looks for automated or coordinated account behaviour rather than judging one post alone?",
-          "et": "Milline analüüs otsib automatiseeritud või koordineeritud kontokäitumist, mitte ei hinda üksnes üht postitust?"
+          "en": "Engineer Giorgio Rosa built an offshore platform in the Adriatic, declared it independent, and inspired a later Netflix film. Name the short-lived micronation.",
+          "et": "Insener Giorgio Rosa ehitas Aadria merre avamereplatvormi, kuulutas selle iseseisvaks ja inspireeris hilisemat Netflixi filmi. Nimeta lühiajaline mikroriik."
         },
         "response": {
-          "en": "bot detection",
-          "et": "botituvastus"
+          "en": "Rose Island",
+          "et": "Rose Island"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Republic of Rose Island"
+          ],
+          "et": [
+            "Rose Islandi vabariik"
+          ]
         },
         "explanation": {
-          "en": "Bot detection may combine timing, network, profile, and language signals, none of which proves automation alone.",
-          "et": "Botituvastus võib ühendada ajastuse, võrgustiku, profiili ja keele tunnuseid, millest ükski eraldi automaatsust ei tõesta."
+          "en": "Rose Island was Rosa’s artificial-platform micronation off the Italian coast, later dramatized in a Netflix film of the same name.",
+          "et": "Rose Island oli Rosa Aadria mere avamereplatvormile rajatud mikroriik Itaalia ranniku lähedal, mida hiljem dramatiseeris samanimeline Netflixi film."
         },
         "source": {
-          "sourceId": "wikipedia:social_bot",
-          "title": "Social bot",
-          "url": "https://en.wikipedia.org/wiki/Social_bot",
+          "sourceId": "wikipedia:rose_island_micronation",
+          "title": "Rose Island (micronation)",
+          "url": "https://en.wikipedia.org/wiki/Rose_Island_(micronation)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-098:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:strategy:prebunking",
+        "factKey": "key-west-border-patrol-conch-secession",
         "tier": 5,
-        "subjectKey": "strategy:prebunking",
+        "subjectKey": "micronation:conch-republic",
         "clue": {
-          "en": "What strategy teaches manipulation techniques before people encounter a misleading claim?",
-          "et": "Milline strateegia õpetab mõjutamisvõtteid enne, kui inimene eksitava väitega kokku puutub?"
+          "en": "Key West protested a US Border Patrol roadblock by declaring independence, breaking stale Cuban bread over the head of a man in naval uniform, and surrendering to him one minute later. Name the comic republic.",
+          "et": "Key West protestis USA piirivalve teetõkke vastu, kuulutas end iseseisvaks, murdis mereväevormi kandnud mehe pea kohal kuivanud Kuuba saiapätsi ja alistus talle minut hiljem. Nimeta koomiline vabariik."
         },
         "response": {
-          "en": "prebunking",
-          "et": "ennetav ümberlükkamine"
+          "en": "Conch Republic",
+          "et": "Conchi Vabariik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Conch Republic"
+          ],
+          "et": [
+            "Conch Republic"
+          ]
         },
         "explanation": {
-          "en": "Prebunking applies inoculation theory by exposing a weakened example and explaining the tactic.",
-          "et": "Ennetav ümberlükkamine rakendab inokulatsiooniteooriat, näidates nõrgestatud näidet ja selgitades võtet."
+          "en": "The Conch Republic was Key West’s tongue-in-cheek 1982 secession protest against the Border Patrol checkpoint.",
+          "et": "Conchi Vabariik oli Key Westi naljatlev 1982. aasta lahkulöömise protest piirivalve kontrollpunkti vastu."
         },
         "source": {
-          "sourceId": "wikipedia:inoculation_theory",
-          "title": "Inoculation theory",
-          "url": "https://en.wikipedia.org/wiki/Inoculation_theory",
+          "sourceId": "wikipedia:conch_republic",
+          "title": "Conch Republic",
+          "url": "https://en.wikipedia.org/wiki/Conch_Republic",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -30975,165 +31099,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-099",
     "name": {
-      "en": "Institutions Linking Baltic and Nordic Neighbours",
-      "et": "Läänemere ja Põhjala naabreid ühendavad institutsioonid"
+      "en": "Former Country Names",
+      "et": "Riikide endised nimed"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-099:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:nordic-council-of-ministers",
+        "factKey": "sri-lanka-ceylon-republic-1972",
         "tier": 1,
-        "subjectKey": "institution:nordic-council-of-ministers",
+        "subjectKey": "former-country-name:ceylon",
         "clue": {
-          "en": "Which intergovernmental body coordinates official cooperation among the Nordic governments?",
-          "et": "Milline valitsustevaheline organ koordineerib Põhjamaade valitsuste ametlikku koostööd?"
+          "en": "Sri Lanka’s colonial-era name still appears on tea labels; under what name did it become independent as a dominion before becoming a republic in 1972?",
+          "et": "Sri Lanka koloniaalajastu nimi püsib siiani teepakenditel; millise nime all sai riik dominiigina iseseisvaks, enne kui muutus 1972. aastal vabariigiks?"
         },
         "response": {
-          "en": "Nordic Council of Ministers",
-          "et": "Põhjamaade Ministrite Nõukogu"
+          "en": "Ceylon",
+          "et": "Tseilon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Dominion of Ceylon"
+          ],
+          "et": [
+            "Ceylon"
+          ]
         },
         "explanation": {
-          "en": "The Nordic Council of Ministers complements the parliamentarian-led Nordic Council.",
-          "et": "Põhjamaade Ministrite Nõukogu täiendab parlamentaarset Põhjamaade Nõukogu."
+          "en": "Sri Lanka gained independence as the Dominion of Ceylon, retained Ceylon as its country name, and adopted Sri Lanka on becoming a republic in 1972.",
+          "et": "Sri Lanka iseseisvus Tseiloni dominiigina, säilitas riiginimena Tseiloni ning võttis 1972. aastal vabariigiks saades nime Sri Lanka."
         },
         "source": {
-          "sourceId": "wikipedia:nordic_council_of_ministers",
-          "title": "Nordic Council of Ministers",
-          "url": "https://en.wikipedia.org/wiki/Nordic_Council_of_Ministers",
+          "sourceId": "wikipedia:sri_lanka",
+          "title": "Sri Lanka",
+          "url": "https://en.wikipedia.org/wiki/Sri_Lanka",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-099:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:nordic-investment-bank",
+        "factKey": "iran-persia-international-exonym-1935",
         "tier": 2,
-        "subjectKey": "institution:nordic-investment-bank",
+        "subjectKey": "former-country-name:persia",
         "clue": {
-          "en": "Which Helsinki-based bank is jointly owned by eight Nordic and Baltic countries?",
-          "et": "Milline Helsingis asuv pank kuulub ühiselt kaheksale Põhjala ja Balti riigile?"
+          "en": "Reza Shah asked foreign governments in 1935 to use Iran’s native endonym in official correspondence. Which older Western international exonym did that request displace?",
+          "et": "Reza Shah palus 1935. aastal välisriikidel kasutada ametlikus kirjavahetuses Iraani omakeelset endonüümi. Millise varasema lääne rahvusvahelise eksonüümi see taotlus kõrvale tõrjus?"
         },
         "response": {
-          "en": "Nordic Investment Bank",
-          "et": "Põhjamaade Investeerimispank"
+          "en": "Persia",
+          "et": "Pärsia"
         },
         "acceptedVariants": {
           "en": [
-            "NIB"
+            "Pärsia"
           ],
           "et": [
-            "NIB"
+            "Persia"
           ]
         },
         "explanation": {
-          "en": "The Nordic Investment Bank finances projects intended to improve productivity and the environment.",
-          "et": "Põhjamaade Investeerimispank rahastab tootlikkust ja keskkonda parandavaid projekte."
+          "en": "Persia was the long-established Western exonym for Iran; the 1935 request concerned international usage, not the legal creation of a new state.",
+          "et": "Pärsia oli Iraani kauaaegne lääne eksonüüm; 1935. aasta palve puudutas rahvusvahelist nimekasutust, mitte uue riigi õiguslikku loomist."
         },
         "source": {
-          "sourceId": "wikipedia:nordic_investment_bank",
-          "title": "Nordic Investment Bank",
-          "url": "https://en.wikipedia.org/wiki/Nordic_Investment_Bank",
+          "sourceId": "wikipedia:name_of_iran",
+          "title": "Name of Iran",
+          "url": "https://en.wikipedia.org/wiki/Name_of_Iran",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-099:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:agreement:nordic-passport-union",
+        "factKey": "thailand-siam-name-1939",
         "tier": 3,
-        "subjectKey": "agreement:nordic-passport-union",
+        "subjectKey": "former-country-name:siam",
         "clue": {
-          "en": "Which regional arrangement removed routine passport checks among Nordic countries before Schengen?",
-          "et": "Milline piirkondlik kokkulepe kaotas Põhjamaade vahel tavapärase passikontrolli juba enne Schengenit?"
+          "en": "Bangkok remained the capital when this royal-era country name was officially replaced by “Thailand” in 1939. Supply the former name.",
+          "et": "Bangkok jäi pealinnaks, kui see kuningriigiaegne riiginimi asendati 1939. aastal ametlikult nimega „Tai”. Nimeta endine nimi."
         },
         "response": {
-          "en": "Nordic Passport Union",
-          "et": "Põhjamaade passiliit"
+          "en": "Siam",
+          "et": "Siiam"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Siiam"
+          ],
+          "et": [
+            "Siam"
+          ]
         },
         "explanation": {
-          "en": "The Nordic Passport Union grew from agreements in the 1950s and enabled Nordic citizens to travel without passports.",
-          "et": "Põhjamaade passiliit kasvas välja 1950. aastate lepetest ning võimaldas kodanikel passita reisida."
+          "en": "Siam was the internationally familiar name of the country officially renamed Thailand in 1939.",
+          "et": "Siiam oli riigi rahvusvaheliselt tuntud nimi, mis asendati 1939. aastal ametlikult nimega Tai."
         },
         "source": {
-          "sourceId": "wikipedia:nordic_passport_union",
-          "title": "Nordic Passport Union",
-          "url": "https://en.wikipedia.org/wiki/Nordic_Passport_Union",
+          "sourceId": "wikipedia:thailand",
+          "title": "Thailand",
+          "url": "https://en.wikipedia.org/wiki/Thailand",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-099:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:council-of-the-baltic-sea-states",
+        "factKey": "dr-congo-zaire-mobutu-1997",
         "tier": 4,
-        "subjectKey": "institution:council-of-the-baltic-sea-states",
+        "subjectKey": "former-country-name:zaire",
         "clue": {
-          "en": "Which intergovernmental forum founded in 1992 brings together states around the Baltic Sea?",
-          "et": "Milline 1992. aastal loodud valitsustevaheline foorum ühendab Läänemere-äärseid riike?"
+          "en": "Mobutu used which name for the vast Central African state that Laurent-Désiré Kabila renamed the Democratic Republic of the Congo after taking power in 1997?",
+          "et": "Millist nime kasutas Mobutu hiiglasliku Kesk-Aafrika riigi kohta, mille Laurent-Désiré Kabila nimetas pärast 1997. aastal võimule tulekut Kongo Demokraatlikuks Vabariigiks?"
         },
         "response": {
-          "en": "Council of the Baltic Sea States",
-          "et": "Läänemeremaade Nõukogu"
+          "en": "Zaire",
+          "et": "Sair"
         },
         "acceptedVariants": {
           "en": [
-            "CBSS"
+            "Sair"
           ],
           "et": [
-            "CBSS"
+            "Zaire"
           ]
         },
         "explanation": {
-          "en": "The Council of the Baltic Sea States supports regional cooperation in areas such as sustainability and civil security.",
-          "et": "Läänemeremaade Nõukogu toetab piirkondlikku koostööd näiteks kestlikkuse ja tsiviiljulgeoleku alal."
+          "en": "Zaire was the Mobutu-era name of the present-day Democratic Republic of the Congo; Kabila restored a Congo-based name in 1997.",
+          "et": "Sair oli praeguse Kongo Demokraatliku Vabariigi Mobutu-aegne nimi; Kabila taastas 1997. aastal Kongol põhineva nime."
         },
         "source": {
-          "sourceId": "wikipedia:council_of_the_baltic_sea_states",
-          "title": "Council of the Baltic Sea States",
-          "url": "https://en.wikipedia.org/wiki/Council_of_the_Baltic_Sea_States",
+          "sourceId": "wikipedia:zaire",
+          "title": "Zaire",
+          "url": "https://en.wikipedia.org/wiki/Zaire",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-099:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:group:nordic-baltic-eight",
+        "factKey": "burkina-faso-upper-volta-1984",
         "tier": 5,
-        "subjectKey": "group:nordic-baltic-eight",
+        "subjectKey": "former-country-name:upper-volta",
         "clue": {
-          "en": "What informal cooperation format groups the five Nordic and three Baltic countries?",
-          "et": "Milline mitteametlik koostööformaat ühendab viit Põhjamaad ja kolme Balti riiki?"
+          "en": "Thomas Sankara gave his country the name Burkina Faso in 1984. What was the earlier republic called, after its position along the upper reaches of a West African river system?",
+          "et": "Thomas Sankara andis oma riigile 1984. aastal nime Burkina Faso. Kuidas nimetati varasemat vabariiki, viidates selle asukohale Lääne-Aafrika jõesüsteemi ülemjooksul?"
         },
         "response": {
-          "en": "Nordic-Baltic Eight",
-          "et": "Põhja-Balti kaheksa"
+          "en": "Upper Volta",
+          "et": "Ülem-Volta"
         },
         "acceptedVariants": {
           "en": [
-            "NB8"
+            "Ülem-Volta"
           ],
           "et": [
-            "NB8"
+            "Upper Volta"
           ]
         },
         "explanation": {
-          "en": "Nordic-Baltic Eight meetings coordinate views without creating a treaty-based organisation.",
-          "et": "Põhja-Balti kaheksa kohtumised kooskõlastavad seisukohti, loomata lepingupõhist organisatsiooni."
+          "en": "The Republic of Upper Volta became Burkina Faso under Sankara; its former name referred to the upper Volta River basin.",
+          "et": "Ülem-Volta Vabariigist sai Sankara ajal Burkina Faso; endine nimi viitas Volta jõe ülemisele vesikonnale."
         },
         "source": {
-          "sourceId": "wikipedia:nordic-baltic_eight",
-          "title": "Nordic-Baltic Eight",
-          "url": "https://en.wikipedia.org/wiki/Nordic-Baltic_Eight",
+          "sourceId": "wikipedia:republic_of_upper_volta",
+          "title": "Republic of Upper Volta",
+          "url": "https://en.wikipedia.org/wiki/Republic_of_Upper_Volta",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -31141,157 +31273,201 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-100",
     "name": {
-      "en": "Why Shared Problems Resist Easy Solutions",
-      "et": "Miks ühised probleemid lahendusele vastu seisavad"
+      "en": "When Pop Culture Met Power",
+      "et": "Kui popkultuur kohtus võimuga"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-100:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:framework:ostrom-principles",
+        "factKey": "queen-paddington-jubilee-tea-sketch",
         "tier": 1,
-        "subjectKey": "framework:ostrom-principles",
+        "subjectKey": "power-pop-crossover:queen-paddington",
         "clue": {
-          "en": "Which governance principles emphasise clear boundaries, local rule-making, monitoring, and graduated sanctions for shared resources?",
-          "et": "Millised valitsemispõhimõtted rõhutavad ühisvara puhul selgeid piire, kohalikke reegleid, seiret ja astmelisi karistusi?"
+          "en": "At a Platinum Jubilee sketch, a late British monarch took tea with a marmalade-loving bear before tapping out “We Will Rock You” on a teacup. Name both characters in the scene.",
+          "et": "Plaatinajuubeli sketšis jõi kadunud Briti monarh teed marmelaadi armastava karuga ning toksis siis teetassil „We Will Rock You” rütmi. Nimeta stseeni mõlemad tegelased."
         },
         "response": {
-          "en": "Ostrom design principles",
-          "et": "Ostromi disainipõhimõtted"
+          "en": "Queen Elizabeth II and Paddington Bear",
+          "et": "kuninganna Elizabeth II ja Paddington"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Elizabeth II and Paddington",
+            "Queen Elizabeth II and Paddington",
+            "Paddington Bear and Queen Elizabeth II",
+            "Paddington and Queen Elizabeth II",
+            "Paddington and Elizabeth II"
+          ],
+          "et": [
+            "Elizabeth II ja Paddington",
+            "kuninganna Elizabeth II ja Paddingtoni karu",
+            "Paddington ja kuninganna Elizabeth II",
+            "Paddingtoni karu ja kuninganna Elizabeth II",
+            "Paddington ja Elizabeth II"
+          ]
         },
         "explanation": {
-          "en": "Elinor Ostrom identified recurring institutional features in durable self-governed commons.",
-          "et": "Elinor Ostrom leidis kestlikult ise juhitud ühisvarades korduvaid institutsionaalseid tunnuseid."
+          "en": "Queen Elizabeth II and Paddington Bear shared tea and revealed their emergency marmalade sandwiches in the filmed Jubilee sketch.",
+          "et": "Kuninganna Elizabeth II ja Paddington jõid filmitud juubelisketšis teed ning näitasid teineteisele oma hädaolukorra marmelaadivõileibu."
         },
         "source": {
-          "sourceId": "wikipedia:elinor_ostrom",
-          "title": "Elinor Ostrom",
-          "url": "https://en.wikipedia.org/wiki/Elinor_Ostrom",
+          "sourceId": "wikipedia:platinum_party_at_the_palace",
+          "title": "Platinum Party at the Palace",
+          "url": "https://en.wikipedia.org/wiki/Platinum_Party_at_the_Palace",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-100:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:problem:tragedy-of-commons",
+        "factKey": "elvis-nixon-white-house-iconic-photo",
         "tier": 2,
-        "subjectKey": "problem:tragedy-of-commons",
+        "subjectKey": "power-pop-crossover:elvis-nixon",
         "clue": {
-          "en": "What dilemma depletes an open shared resource when each user gains privately from taking more?",
-          "et": "Milline dilemma kurnab avatud ühisvara, kui iga kasutaja saab suuremast tarbimisest isikliku kasu?"
+          "en": "The King of Rock arrived at the White House with a letter seeking “Federal Agent at Large” credentials, producing one of the National Archives’ most popular photographs. Name both men in the handshake.",
+          "et": "Rokikuningas saabus Valgesse Majja kirjaga, milles soovis „föderaalse eriagendi” volitusi, ning kohtumisest sündis üks USA Rahvusarhiivi populaarsemaid fotosid. Nimeta mõlemad kätlejad."
         },
         "response": {
-          "en": "tragedy of the commons",
-          "et": "ühisvaratragöödia"
+          "en": "Elvis Presley and Richard Nixon",
+          "et": "Elvis Presley ja Richard Nixon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Elvis and Nixon",
+            "Nixon and Elvis"
+          ],
+          "et": [
+            "Elvis ja Nixon",
+            "Nixon ja Elvis"
+          ]
         },
         "explanation": {
-          "en": "The tragedy is not inevitable: enforceable rules or shared governance can align incentives.",
-          "et": "Ühisvaratragöödia pole vältimatu: jõustatavad reeglid või ühine valitsemine võivad ajendid kooskõlla viia."
+          "en": "Elvis Presley and Richard Nixon met at the White House, where their unexpected handshake was photographed.",
+          "et": "Elvis Presley ja Richard Nixon kohtusid Valges Majas ning nende ootamatu käepigistus jäädvustati fotole."
         },
         "source": {
-          "sourceId": "wikipedia:tragedy_of_the_commons",
-          "title": "Tragedy of the commons",
-          "url": "https://en.wikipedia.org/wiki/Tragedy_of_the_commons",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "nara:from-pearl-harbor-to-elvis-images-that-endure",
+          "title": "From Pearl Harbor to Elvis: Images That Endure",
+          "url": "https://www.archives.gov/publications/prologue/2004/winter/top-images.html",
+          "license": "CC0-1.0",
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-100:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:problem:principal-agent",
+        "factKey": "rodman-kim-north-korea-basketball-visits",
         "tier": 3,
-        "subjectKey": "problem:principal-agent",
+        "subjectKey": "power-pop-crossover:rodman-kim",
         "clue": {
-          "en": "What problem arises when a delegate has more information and different interests from the person represented?",
-          "et": "Milline probleem tekib, kui esindajal on rohkem teavet ja teistsugused huvid kui esindataval?"
+          "en": "A flamboyant former Chicago Bulls rebounder made repeated visits to North Korea and befriended its basketball-loving leader. Name both men.",
+          "et": "Värvikas endine Chicago Bullsi lauapallide meister külastas korduvalt Põhja-Koread ja sõbrunes selle korvpalli armastava juhiga. Nimeta mõlemad mehed."
         },
         "response": {
-          "en": "principal–agent problem",
-          "et": "printsipaali-agendi probleem"
+          "en": "Dennis Rodman and Kim Jong-un",
+          "et": "Dennis Rodman ja Kim Jong-un"
         },
         "acceptedVariants": {
           "en": [
-            "principal-agent problem"
+            "Rodman and Kim Jong-un",
+            "Kim Jong-un and Dennis Rodman",
+            "Kim Jong-un and Rodman"
           ],
           "et": [
-            "esindaja probleem"
+            "Rodman ja Kim Jong-un",
+            "Kim Jong-un ja Dennis Rodman",
+            "Kim Jong-un ja Rodman"
           ]
         },
         "explanation": {
-          "en": "Monitoring and incentive design try to keep an agent’s actions aligned with the principal’s goals.",
-          "et": "Seire ja ajendite kujundamine püüavad hoida agendi tegevuse printsipaali eesmärkidega kooskõlas."
+          "en": "Dennis Rodman and Kim Jong-un formed an unusual connection through Rodman’s North Korea visits and their shared interest in basketball.",
+          "et": "Dennis Rodman ja Kim Jong-un lõid Rodmani Põhja-Korea visiitide ning ühise korvpallihuvi kaudu ebatavalise sideme."
         },
         "source": {
-          "sourceId": "wikipedia:principal%e2%80%93agent_problem",
-          "title": "Principal–agent problem",
-          "url": "https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem",
+          "sourceId": "wikipedia:dennis_rodman",
+          "title": "Dennis Rodman",
+          "url": "https://en.wikipedia.org/wiki/Dennis_Rodman#North_Korea_visits",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-100:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:rent-seeking",
+        "factKey": "diana-travolta-white-house-dance",
         "tier": 4,
-        "subjectKey": "practice:rent-seeking",
+        "subjectKey": "power-pop-crossover:diana-travolta",
         "clue": {
-          "en": "What activity seeks profit by manipulating rules or privileges instead of creating new value?",
-          "et": "Milline tegevus taotleb kasu reeglite või privileegide mõjutamise, mitte uue väärtuse loomise kaudu?"
+          "en": "At a White House gala, the Princess of Wales crossed the dance floor with the star of Saturday Night Fever; her midnight-blue gown was later named for the moment. Name the pair.",
+          "et": "Valge Maja galal tantsis Walesi printsess filmi „Laupäevaõhtune palavik” tähega ning tema kesköösinine kleit sai hiljem selle hetke järgi nime. Nimeta paar."
         },
         "response": {
-          "en": "rent-seeking",
-          "et": "rendiotsing"
+          "en": "Princess Diana and John Travolta",
+          "et": "printsess Diana ja John Travolta"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Diana and Travolta",
+            "Princess Diana and Travolta",
+            "John Travolta and Princess Diana",
+            "Travolta and Princess Diana",
+            "Travolta and Diana"
+          ],
+          "et": [
+            "Diana ja Travolta",
+            "printsess Diana ja Travolta",
+            "John Travolta ja printsess Diana",
+            "Travolta ja printsess Diana",
+            "Travolta ja Diana"
+          ]
         },
         "explanation": {
-          "en": "Rent-seeking consumes resources in competition for transfers and can reduce overall welfare.",
-          "et": "Rendiotsing kulutab vahendeid siirete pärast võistlemisele ning võib vähendada üldist heaolu."
+          "en": "Princess Diana and John Travolta danced at the White House, creating the famous image behind the “Travolta dress” nickname.",
+          "et": "Printsess Diana ja John Travolta tantsisid Valges Majas ning sellest kuulsast hetkest sai alguse kleidi hüüdnimi „Travolta dress”."
         },
         "source": {
-          "sourceId": "wikipedia:rent-seeking",
-          "title": "Rent-seeking",
-          "url": "https://en.wikipedia.org/wiki/Rent-seeking",
+          "sourceId": "wikipedia:travolta_dress",
+          "title": "Travolta dress",
+          "url": "https://en.wikipedia.org/wiki/Travolta_dress",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-100:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:problem:collective-action",
+        "factKey": "gorbachev-red-square-pizza-hut-commercial",
         "tier": 5,
-        "subjectKey": "problem:collective-action",
+        "subjectKey": "power-pop-crossover:gorbachev-pizza-hut",
         "clue": {
-          "en": "What dilemma makes individuals free-ride even though everyone would benefit if enough people contributed?",
-          "et": "Milline dilemma paneb üksikisikut teiste panusel liugu laskma, kuigi piisava osaluse korral võidaksid kõik?"
+          "en": "In a commercial set near Red Square, diners argued over perestroika before agreeing over slices served by an American restaurant chain. Name the last Soviet leader and the brand.",
+          "et": "Punase väljaku lähedal filmitud reklaamis vaidlesid sööjad perestroika üle, kuid leidsid Ameerika restoraniketi pitsat süües üksmeele. Nimeta Nõukogude Liidu lõpuperioodi juht ja kaubamärk."
         },
         "response": {
-          "en": "collective-action problem",
-          "et": "ühistegevuse probleem"
+          "en": "Mikhail Gorbachev and Pizza Hut",
+          "et": "Mihhail Gorbatšov ja Pizza Hut"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gorbachev and Pizza Hut",
+            "Pizza Hut and Mikhail Gorbachev",
+            "Pizza Hut and Gorbachev"
+          ],
+          "et": [
+            "Gorbatšov ja Pizza Hut",
+            "Mikhail Gorbachev ja Pizza Hut",
+            "Pizza Hut ja Mihhail Gorbatšov",
+            "Pizza Hut ja Gorbatšov",
+            "Pizza Hut ja Mikhail Gorbachev"
+          ]
         },
         "explanation": {
-          "en": "Selective incentives, trust, and enforceable rules can help groups overcome collective-action problems.",
-          "et": "Valikulised ajendid, usaldus ja jõustatavad reeglid võivad aidata ühistegevuse probleemi ületada."
+          "en": "Mikhail Gorbachev and Pizza Hut came together in a commercial that turned debate about his legacy into a toast over pizza.",
+          "et": "Mihhail Gorbatšov ja Pizza Hut esinesid koos reklaamis, mis muutis vaidluse tema pärandi üle pitsaga lõppevaks toostiks."
         },
         "source": {
-          "sourceId": "wikipedia:collective_action_problem",
-          "title": "Collective action problem",
-          "url": "https://en.wikipedia.org/wiki/Collective_action_problem",
+          "sourceId": "wikipedia:mikhail_gorbachev_pizza_hut_commercial",
+          "title": "Mikhail Gorbachev Pizza Hut commercial",
+          "url": "https://en.wikipedia.org/wiki/Mikhail_Gorbachev_Pizza_Hut_commercial",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
