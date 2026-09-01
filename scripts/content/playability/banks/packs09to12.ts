@@ -21030,153 +21030,184 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-045",
     "name": {
-      "en": "Workers, Employers, and Bargaining",
-      "et": "Töötajad, tööandjad ja läbirääkimised"
+      "en": "Diplomacy with Props and Places",
+      "et": "Diplomaatia rekvisiitide ja paikadega"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-045:question:1",
-        "factKey": "built-in-politics-economics-society:labour-relations:medium:organization:trade-union",
+        "factKey": "politics:hotline:direct-us-soviet-link-created-after-cuban-missile-crisis",
         "tier": 1,
-        "subjectKey": "organization:trade-union",
+        "subjectKey": "communication:moscow-washington-hotline",
         "clue": {
-          "en": "Which labour concept organises workers to defend shared workplace interests?",
-          "et": "Tuvasta järgmine tööelu mõiste: see ühendab töötajad ühiste töökohahuvide kaitseks."
+          "en": "After the Cuban Missile Crisis, the United States and Soviet Union installed a direct link that first used teleprinters rather than a red telephone. Name the link.",
+          "et": "Pärast Kuuba raketikriisi rajasid USA ja Nõukogude Liit otseühenduse, mis kasutas algul teleprintereid, mitte punast telefoni. Nimeta ühendus."
         },
         "response": {
-          "en": "trade union",
-          "et": "ametiühing"
+          "en": "Moscow–Washington hotline",
+          "et": "Moskva–Washingtoni kuum liin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Washington–Moscow hotline",
+            "Moscow hotline",
+            "Kremlin hotline",
+            "hotline"
+          ],
+          "et": [
+            "Washingtoni–Moskva kuum liin",
+            "Moskva kuum liin",
+            "Kremli kuum liin",
+            "kuum liin"
+          ]
         },
         "explanation": {
-          "en": "Trade union derives bargaining power from acting collectively rather than as isolated employees.",
-          "et": "Ametiühing saab läbirääkimisjõu kollektiivsest tegutsemisest, mitte eraldiseisvatest töötajatest."
+          "en": "The Moscow–Washington hotline began operating in 1963 so the two governments could communicate directly in a crisis; its first generation carried written messages.",
+          "et": "Moskva–Washingtoni kuum liin alustas tööd 1963. aastal, et valitsused saaksid kriisis otse suhelda; alguses liikusid selle kaudu kirjalikud sõnumid."
         },
         "source": {
-          "sourceId": "wikipedia:trade_union",
-          "title": "Trade union",
-          "url": "https://en.wikipedia.org/wiki/Trade_union",
+          "sourceId": "wikipedia:moscow-washington-hotline",
+          "title": "Moscow–Washington hotline",
+          "url": "https://en.wikipedia.org/wiki/Moscow%E2%80%93Washington_hotline",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-045:question:2",
-        "factKey": "built-in-politics-economics-society:labour-relations:medium:concept:collective-bargaining",
+        "factKey": "politics:shuttle-diplomacy:mediator-travels-repeatedly-between-parties",
         "tier": 2,
-        "subjectKey": "concept:collective-bargaining",
+        "subjectKey": "practice:shuttle-diplomacy",
         "clue": {
-          "en": "A labour concept negotiates pay and conditions between worker representatives and employers. What term fits?",
-          "et": "Siin kirjeldatud tööelu mõiste peab töötajate esindajate ja tööandjate vahel palga ning tingimuste üle läbirääkimisi. Mis see on?"
+          "en": "Henry Kissinger repeatedly travelled between Middle Eastern capitals after the Yom Kippur War because the opposing sides would not negotiate face to face. What travel-themed form of mediation was this?",
+          "et": "Henry Kissinger reisis pärast Jom Kippuri sõda korduvalt Lähis-Ida pealinnade vahel, sest vastaspooled ei pidanud otseläbirääkimisi. Mis reisimisest nime saanud vahendusviis see oli?"
         },
         "response": {
-          "en": "collective bargaining",
-          "et": "kollektiivläbirääkimised"
+          "en": "shuttle diplomacy",
+          "et": "süstikdiplomaatia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "diplomatic shuttling"
+          ],
+          "et": [
+            "pendeldiplomaatia",
+            "süstik-diplomaatia"
+          ]
         },
         "explanation": {
-          "en": "Collective bargaining can produce an agreement covering an entire bargaining unit or sector.",
-          "et": "Kollektiivläbirääkimised võib anda kokkuleppe, mis hõlmab tervet üksust või sektorit."
+          "en": "Shuttle diplomacy has a mediator move repeatedly between parties; Kissinger's 1970s Middle East trips made the expression famous.",
+          "et": "Süstikdiplomaatias liigub vahendaja korduvalt osapoolte vahel; väljendi tegid tuntuks Kissingeri 1970. aastate Lähis-Ida reisid."
         },
         "source": {
-          "sourceId": "wikipedia:collective_bargaining",
-          "title": "Collective bargaining",
-          "url": "https://en.wikipedia.org/wiki/Collective_bargaining",
+          "sourceId": "wikipedia:shuttle-diplomacy",
+          "title": "Shuttle diplomacy",
+          "url": "https://en.wikipedia.org/wiki/Shuttle_diplomacy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-045:question:3",
-        "factKey": "built-in-politics-economics-society:labour-relations:medium:concept:labour-strike",
+        "factKey": "politics:gunboat-diplomacy:foreign-policy-backed-by-visible-naval-force",
         "tier": 3,
-        "subjectKey": "concept:labour-strike",
+        "subjectKey": "practice:gunboat-diplomacy",
         "clue": {
-          "en": "Recognise the labour concept that withholds labour collectively to press demands.",
-          "et": "Otsitav tööelu mõiste jätab nõudmiste toetuseks kollektiivselt töö tegemata. Mis see on?"
+          "en": "A great power parks warships within sight and lets the threat of their guns strengthen its demands, without necessarily firing. What naval phrase names this foreign-policy style?",
+          "et": "Suurriik paigutab sõjalaevad nähtavale ja laseb nende relvade ähvardusel oma nõudmisi tugevdada, ilma et peaks tingimata tulistama. Milline mereline väljend nimetab sellist välispoliitikat?"
         },
         "response": {
-          "en": "strike",
-          "et": "streik"
+          "en": "gunboat diplomacy",
+          "et": "kahuripaadidiplomaatia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "gunboat policy",
+            "naval coercion"
+          ],
+          "et": [
+            "kahurpaadipoliitika",
+            "kahurilaevadiplomaatia"
+          ]
         },
         "explanation": {
-          "en": "Strike uses the economic cost of stopped work as bargaining leverage.",
-          "et": "Streik kasutab seisva töö majanduslikku kulu läbirääkimissurvena."
+          "en": "Gunboat diplomacy means pursuing foreign-policy aims through conspicuous displays or threats of naval power.",
+          "et": "Kahuripaadidiplomaatia tähendab välispoliitiliste eesmärkide ajamist nähtava merejõu demonstratsiooni või ähvardusega."
         },
         "source": {
-          "sourceId": "wikipedia:strike_action",
-          "title": "Strike action",
-          "url": "https://en.wikipedia.org/wiki/Strike_action",
+          "sourceId": "wikipedia:gunboat-diplomacy",
+          "title": "Gunboat diplomacy",
+          "url": "https://en.wikipedia.org/wiki/Gunboat_diplomacy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-045:question:4",
-        "factKey": "built-in-politics-economics-society:labour-relations:medium:concept:minimum-wage",
+        "factKey": "politics:kitchen-debate:nixon-khrushchev-argued-in-model-american-kitchen",
         "tier": 4,
-        "subjectKey": "concept:minimum-wage",
+        "subjectKey": "event:kitchen-debate",
         "clue": {
-          "en": "Labour concept sets a legal floor under permitted pay. What is it called?",
-          "et": "Milline tööelu mõiste seab lubatud töötasule seadusliku alampiiri?"
+          "en": "At a 1959 Moscow exhibition, Richard Nixon and Nikita Khrushchev argued about capitalism and communism beside the appliances in a model American home. What domestic-room nickname did their exchange receive?",
+          "et": "Richard Nixon ja Nikita Hruštšov vaidlesid 1959. aasta Moskva näitusel kapitalismi ja kommunismi üle Ameerika näidiskodu kodumasinate kõrval. Millise koduruumi järgi sai nende sõnavahetus nime?"
         },
         "response": {
-          "en": "minimum wage",
-          "et": "miinimumpalk"
+          "en": "Kitchen Debate",
+          "et": "köögidebatt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Kitchen Debate",
+            "Nixon–Khrushchev Kitchen Debate"
+          ],
+          "et": [
+            "köögiväitlus",
+            "Nixoni ja Hruštšovi köögidebatt"
+          ]
         },
         "explanation": {
-          "en": "Minimum wage may be statutory or established through broad collective agreements.",
-          "et": "Miinimumpalk võib tuleneda seadusest või laialdastest kollektiivlepingutest."
+          "en": "The Kitchen Debate was an improvised public exchange between Nixon and Khrushchev in the model kitchen at the American National Exhibition in Moscow.",
+          "et": "Köögidebatt oli Nixoni ja Hruštšovi improviseeritud avalik sõnavahetus Moskva Ameerika rahvusnäituse näidisköögis."
         },
         "source": {
-          "sourceId": "wikipedia:minimum_wage",
-          "title": "Minimum wage",
-          "url": "https://en.wikipedia.org/wiki/Minimum_wage",
+          "sourceId": "wikipedia:kitchen-debate",
+          "title": "Kitchen Debate",
+          "url": "https://en.wikipedia.org/wiki/Kitchen_Debate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-045:question:5",
-        "factKey": "built-in-politics-economics-society:labour-relations:medium:concept:gig-economy",
+        "factKey": "politics:cricket-diplomacy:leaders-use-india-pakistan-matches-to-improve-relations",
         "tier": 5,
-        "subjectKey": "concept:gig-economy",
+        "subjectKey": "practice:cricket-diplomacy-india-pakistan",
         "clue": {
-          "en": "Name the labour concept that organises short tasks through platforms rather than standard long-term jobs.",
-          "et": "Vihjes kirjeldatud tööelu mõiste korraldab platvormide kaudu lühikesi tööotsi tavapäraste pikaajaliste töökohtade asemel. Mis see on?"
+          "en": "Leaders of India and Pakistan have attended matches between their national teams as a public opening for warmer relations. What bat-and-ball nickname is given to this approach?",
+          "et": "India ja Pakistani juhid on külastanud oma rahvuskoondiste kohtumisi, et luua avalik võimalus suhete soojendamiseks. Millise kurika ja palliga spordiala järgi seda lähenemist nimetatakse?"
         },
         "response": {
-          "en": "gig economy",
-          "et": "platvormitöö majandus"
+          "en": "cricket diplomacy",
+          "et": "kriketidiplomaatia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "India–Pakistan cricket diplomacy"
+          ],
+          "et": [
+            "India ja Pakistani kriketidiplomaatia"
+          ]
         },
         "explanation": {
-          "en": "Gig economy raises disputes over whether providers are employees or independent contractors.",
-          "et": "Platvormitöö majandus tekitab vaidluse, kas tegijad on töötajad või sõltumatud töövõtjad."
+          "en": "Cricket diplomacy describes using the sport and high-profile India–Pakistan matches to help improve relations between the two countries.",
+          "et": "Kriketidiplomaatia tähendab kriketi ja kõrgetasemeliste India–Pakistani mängude kasutamist kahe riigi suhete parandamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:gig_economy",
-          "title": "Gig economy",
-          "url": "https://en.wikipedia.org/wiki/Gig_economy",
+          "sourceId": "wikipedia:cricket-diplomacy",
+          "title": "Cricket diplomacy",
+          "url": "https://en.wikipedia.org/wiki/Cricket_diplomacy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21184,158 +21215,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-046",
     "name": {
-      "en": "Ways Societies Share Risk",
-      "et": "Kuidas ühiskond riske jagab"
+      "en": "Ads and Posters That Became Political Icons",
+      "et": "Poliitikast ikooniks saanud reklaamid ja plakatid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-046:question:1",
-        "factKey": "built-in-politics-economics-society:social-protection:medium:concept:social-insurance",
+        "factKey": "politics:obama-hope-poster:fairey-red-blue-portrait-one-word-slogan",
         "tier": 1,
-        "subjectKey": "concept:social-insurance",
+        "subjectKey": "poster:obama-hope",
         "clue": {
-          "en": "Which social-policy concept pools contributions to cover risks such as unemployment or old age?",
-          "et": "Tuvasta järgmine sotsiaalpoliitika mõiste: see koondab sissemaksed töötuse või vanaduse taoliste riskide katmiseks."
+          "en": "Shepard Fairey's red, beige, and blue portrait of Barack Obama put a single optimistic four-letter word below the candidate. Name the poster.",
+          "et": "Shepard Fairey punases, beežis ja sinises Barack Obama portrees seisis kandidaadi all üks optimistlik neljatäheline ingliskeelne sõna. Nimeta plakat."
         },
         "response": {
-          "en": "social insurance",
-          "et": "sotsiaalkindlustus"
+          "en": "Obama Hope poster",
+          "et": "Obama HOPE-plakat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "HOPE poster",
+            "Barack Obama Hope poster"
+          ],
+          "et": [
+            "Obama lootuseplakat",
+            "Barack Obama HOPE-plakat",
+            "HOPE-plakat"
+          ]
         },
         "explanation": {
-          "en": "Social insurance links eligibility or benefits to insured status rather than poverty alone.",
-          "et": "Sotsiaalkindlustus seob õiguse või hüvitise kindlustusstaatuse, mitte üksnes vaesusega."
+          "en": "The Obama Hope poster was Fairey's widely reproduced 2008 campaign image, built around Obama's stylized portrait and the word “HOPE.”",
+          "et": "Obama HOPE-plakat oli Fairey laialt levinud 2008. aasta kampaaniapilt, mille keskmes olid Obama stiliseeritud portree ja sõna „HOPE”."
         },
         "source": {
-          "sourceId": "wikipedia:social_insurance",
-          "title": "Social insurance",
-          "url": "https://en.wikipedia.org/wiki/Social_insurance",
+          "sourceId": "wikipedia:barack-obama-hope-poster",
+          "title": "Barack Obama \"Hope\" poster",
+          "url": "https://en.wikipedia.org/wiki/Barack_Obama_%22Hope%22_poster",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-046:question:2",
-        "factKey": "built-in-politics-economics-society:social-protection:medium:concept:universal-basic-income",
+        "factKey": "politics:we-can-do-it:westinghouse-worker-flexes-arm-later-rosie-association",
         "tier": 2,
-        "subjectKey": "concept:universal-basic-income",
+        "subjectKey": "poster:we-can-do-it",
         "clue": {
-          "en": "Name the social-policy concept that would pay everyone a regular sum without a work test.",
-          "et": "Vihjes kirjeldatud sotsiaalpoliitika mõiste maksaks kõigile korrapärase summa ilma töötamise tingimuseta. Mis see on?"
+          "en": "A woman in a red polka-dot bandana flexes her arm beneath a speech bubble in a 1943 Westinghouse factory poster later associated with Rosie the Riveter. Give the bubble's title phrase.",
+          "et": "Punase täpilise pearätiga naine näitab 1943. aasta Westinghouse’i tehaseplakatil kõnemulli all musklit; hiljem seostati pilti Rosie the Riveteriga. Ütle kõnemullis olnud pealkiri."
         },
         "response": {
-          "en": "universal basic income",
-          "et": "universaalne põhisissetulek"
+          "en": "We Can Do It! poster",
+          "et": "„We Can Do It!” plakat"
         },
         "acceptedVariants": {
           "en": [
-            "UBI"
+            "We Can Do It",
+            "Westinghouse We Can Do It poster"
           ],
           "et": [
-            "kodanikupalk",
-            "UBI"
+            "„Me saame hakkama!” plakat",
+            "Westinghouse’i „We Can Do It!” plakat"
           ]
         },
         "explanation": {
-          "en": "Universal basic income is individual, unconditional, and universal by definition.",
-          "et": "Universaalne põhisissetulek on definitsiooni järgi individuaalne, tingimusteta ja universaalne."
+          "en": "“We Can Do It!” was J. Howard Miller's wartime Westinghouse poster; its later reuse linked the image strongly with Rosie the Riveter.",
+          "et": "„We Can Do It!” oli J. Howard Milleri sõjaaegne Westinghouse’i plakat, mille hilisem kasutus sidus pildi tugevalt Rosie the Riveteriga."
         },
         "source": {
-          "sourceId": "wikipedia:universal_basic_income",
-          "title": "Universal basic income",
-          "url": "https://en.wikipedia.org/wiki/Universal_basic_income",
+          "sourceId": "wikipedia:we-can-do-it",
+          "title": "We Can Do It!",
+          "url": "https://en.wikipedia.org/wiki/We_Can_Do_It!",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-046:question:3",
-        "factKey": "built-in-politics-economics-society:social-protection:medium:concept:progressive-tax",
+        "factKey": "politics:daisy-ad:girl-petals-countdown-nuclear-explosion-lbj-campaign",
         "tier": 3,
-        "subjectKey": "concept:progressive-tax",
+        "subjectKey": "advertisement:daisy-1964",
         "clue": {
-          "en": "Identify this social-policy concept: it takes a higher rate as taxable capacity rises.",
-          "et": "Kirjeldatud sotsiaalpoliitika mõiste võtab maksuvõime kasvades kõrgema määra. Mis on selle nimi?"
+          "en": "A little girl counts petals from a flower; her counting turns into a launch countdown and a nuclear explosion in Lyndon Johnson's 1964 campaign. Name the television ad.",
+          "et": "Väike tüdruk loendab lille kroonlehti; tema loendus muutub Lyndon Johnsoni 1964. aasta kampaaniareklaamis stardiloenduseks ja tuumaplahvatuseks. Nimeta telereklaam."
         },
         "response": {
-          "en": "progressive taxation",
-          "et": "progressiivne maksustamine"
+          "en": "Daisy advertisement",
+          "et": "Daisy-reklaam"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Daisy ad",
+            "Daisy Girl ad",
+            "Peace, Little Girl",
+            "Daisy"
+          ],
+          "et": [
+            "Daisy Girl reklaam",
+            "„Peace, Little Girl”",
+            "Daisy"
+          ]
         },
         "explanation": {
-          "en": "Progressive taxation means the average tax rate rises with the tax base.",
-          "et": "Progressiivne maksustamine tähendab, et keskmine maksumäär kasvab maksubaasi suurenedes."
+          "en": "The Daisy advertisement, also called “Peace, Little Girl,” used the nuclear sequence to frame the stakes of the Johnson–Goldwater election.",
+          "et": "Daisy-reklaam, mida tuntakse ka nimega „Peace, Little Girl”, kasutas tuumastseeni Johnsoni ja Goldwateri valiku kujutamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:progressive_tax",
-          "title": "Progressive tax",
-          "url": "https://en.wikipedia.org/wiki/Progressive_tax",
+          "sourceId": "wikipedia:daisy-advertisement",
+          "title": "Daisy (advertisement)",
+          "url": "https://en.wikipedia.org/wiki/Daisy_(advertisement)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-046:question:4",
-        "factKey": "built-in-politics-economics-society:social-protection:medium:concept:public-pension",
+        "factKey": "politics:morning-in-america:reagan-1984-optimistic-everyday-scenes",
         "tier": 4,
-        "subjectKey": "concept:public-pension",
+        "subjectKey": "advertisement:morning-in-america",
         "clue": {
-          "en": "Identify the social-policy concept: it provides publicly organised income in retirement.",
-          "et": "Mis sotsiaalpoliitika mõiste annab pensionieas avalikult korraldatud sissetuleku?"
+          "en": "Weddings, commuters, and a flag-raising accompanied an optimistic voiceover beginning “It's morning again” in Ronald Reagan's 1984 campaign. What nickname identifies the ad?",
+          "et": "Pulmad, töölesõitjad ja lipuheiskamine saatsid Ronald Reagani 1984. aasta kampaanias optimistlikku teksti, mis algas sõnadega „It's morning again”. Millise nime all reklaami tuntakse?"
         },
         "response": {
-          "en": "public pension",
-          "et": "riiklik pension"
+          "en": "Morning in America",
+          "et": "Morning in America"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Morning in America ad",
+            "Prouder, Stronger, Better"
+          ],
+          "et": [
+            "„Hommik Ameerikas”",
+            "Reagani Morning in America reklaam",
+            "Prouder, Stronger, Better"
+          ]
         },
         "explanation": {
-          "en": "Public pension may be pay-as-you-go, funded, residence-based, or contribution-linked.",
-          "et": "Riiklik pension võib olla jooksvalt rahastatav, kogumispõhine, elukohapõhine või sissemaksetega seotud."
+          "en": "“Morning in America,” formally “Prouder, Stronger, Better,” was Reagan's 1984 television ad built from upbeat scenes of everyday life.",
+          "et": "„Morning in America”, ametliku nimega „Prouder, Stronger, Better”, oli Reagani 1984. aasta telereklaam, mis kasutas helgeid argielustseene."
         },
         "source": {
-          "sourceId": "wikipedia:pension",
-          "title": "Pension",
-          "url": "https://en.wikipedia.org/wiki/Pension",
+          "sourceId": "wikipedia:morning-in-america",
+          "title": "Morning in America",
+          "url": "https://en.wikipedia.org/wiki/Morning_in_America",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-046:question:5",
-        "factKey": "built-in-politics-economics-society:social-protection:medium:concept:means-test",
+        "factKey": "politics:labour-isnt-working:saatchi-unemployment-queue-conservative-1979-campaign",
         "tier": 5,
-        "subjectKey": "concept:means-test",
+        "subjectKey": "poster:labour-isnt-working",
         "clue": {
-          "en": "A social-policy concept checks income or assets before granting a benefit. What term fits?",
-          "et": "Siin kirjeldatud sotsiaalpoliitika mõiste kontrollib enne toetuse andmist sissetulekut või vara. Mis see on?"
+          "en": "A long unemployment queue under a punning headline became a celebrated Saatchi poster for Britain's Conservatives before the 1979 election. Give the headline.",
+          "et": "Pikk töötute järjekord sõnamängulise pealkirja all sai enne 1979. aasta valimisi Briti konservatiivide kuulsaks Saatchi plakatiks. Ütle pealkiri."
         },
         "response": {
-          "en": "means test",
-          "et": "vajaduse hindamine"
+          "en": "Labour Isn't Working",
+          "et": "Labour Isn’t Working"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Labour Isn't Working poster",
+            "Saatchi Labour poster"
+          ],
+          "et": [
+            "„Tööerakond ei tööta”",
+            "Labour Isn’t Working plakat",
+            "Saatchi Labouri plakat"
+          ]
         },
         "explanation": {
-          "en": "Means test targets scarce support but can create withdrawal-rate and take-up problems.",
-          "et": "Vajaduse hindamine suunab napi abi sihitult, kuid võib tekitada toetuse vähenemise ja kasutuselevõtu probleeme."
+          "en": "“Labour Isn't Working” paired the wordplay with a staged queue outside an unemployment office and became an emblem of the Conservative campaign.",
+          "et": "„Labour Isn’t Working” ühendas sõnamängu lavastatud järjekorraga töötukassa ees ja sai konservatiivide kampaania sümboliks."
         },
         "source": {
-          "sourceId": "wikipedia:means_test",
-          "title": "Means test",
-          "url": "https://en.wikipedia.org/wiki/Means_test",
+          "sourceId": "wikipedia:labour-isn-t-working",
+          "title": "Labour Isn't Working",
+          "url": "https://en.wikipedia.org/wiki/Labour_Isn%27t_Working",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21343,153 +21405,188 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-047",
     "name": {
-      "en": "Words for Human Migration",
-      "et": "Inimrände sõnavara"
+      "en": "Squares Where History Gathered",
+      "et": "Väljakud, kuhu ajalugu kogunes"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-047:question:1",
-        "factKey": "built-in-politics-economics-society:migration-status:medium:concept:immigration",
+        "factKey": "politics:tahrir-square:cairo-focal-point-2011-egyptian-revolution",
         "tier": 1,
-        "subjectKey": "concept:immigration",
+        "subjectKey": "place:tahrir-square-cairo",
         "clue": {
-          "en": "Migration term describes people arriving to settle in a country. What is it called?",
-          "et": "Milline rändemõiste kirjeldab inimeste saabumist riiki elama asumiseks?"
+          "en": "Cairo's “Liberation Square” became the central gathering place of the 2011 Egyptian Revolution. Give its familiar Arabic-derived name.",
+          "et": "Egiptuse pealinna „Vabastamise väljakust” sai 2011. aasta revolutsiooni keskne kogunemispaik. Ütle selle tuttav araabiapärane nimi."
         },
         "response": {
-          "en": "immigration",
-          "et": "sisseränne"
+          "en": "Tahrir Square",
+          "et": "Tahriri väljak"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Midan al-Tahrir",
+            "Cairo Tahrir Square",
+            "Tahrir"
+          ],
+          "et": [
+            "Midan at-Tahrir",
+            "Kairo Tahriri väljak",
+            "Tahrir"
+          ]
         },
         "explanation": {
-          "en": "Immigration is the destination country’s perspective on the same movement called emigration at origin.",
-          "et": "Sisseränne on sihtriigi vaade samale liikumisele, mida lähteriigis nimetatakse väljarändeks."
+          "en": "Tahrir Square is the major public square in central Cairo that became the focal point of the 2011 uprising against Hosni Mubarak.",
+          "et": "Tahriri väljak on Kairo kesklinna suur avalik väljak, millest sai 2011. aasta Hosni Mubaraki vastase ülestõusu kese."
         },
         "source": {
-          "sourceId": "wikipedia:immigration",
-          "title": "Immigration",
-          "url": "https://en.wikipedia.org/wiki/Immigration",
+          "sourceId": "wikipedia:tahrir-square",
+          "title": "Tahrir Square",
+          "url": "https://en.wikipedia.org/wiki/Tahrir_Square",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-047:question:2",
-        "factKey": "built-in-politics-economics-society:migration-status:medium:concept:emigration",
+        "factKey": "politics:maidan-nezalezhnosti:kyiv-central-square-euromaidan-protests",
         "tier": 2,
-        "subjectKey": "concept:emigration",
+        "subjectKey": "place:maidan-nezalezhnosti-kyiv",
         "clue": {
-          "en": "Name the migration term that describes people leaving their country to settle elsewhere.",
-          "et": "Vihjes kirjeldatud rändemõiste kirjeldab inimeste lahkumist riigist mujale elama. Mis see on?"
+          "en": "Pro-European demonstrators occupied Kyiv's central Independence Square through the winter of 2013–14. Give the square's Ukrainian name, often shortened in English to one word.",
+          "et": "Euroopa-meelsed meeleavaldajad hõivasid 2013.–2014. aasta talvel Kiievi keskse Iseseisvuse väljaku. Ütle väljaku ukrainakeelne nimi, mida sageli lühendatakse üheks sõnaks."
         },
         "response": {
-          "en": "emigration",
-          "et": "väljaränne"
+          "en": "Maidan Nezalezhnosti",
+          "et": "Maidan Nezaležnosti"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kyiv Maidan",
+            "Maidan"
+          ],
+          "et": [
+            "Kiievi Maidan",
+            "Maidan"
+          ]
         },
         "explanation": {
-          "en": "Emigration is measured from the origin side of an international move.",
-          "et": "Väljarännet mõõdetakse rahvusvahelise liikumise lähteriigi poolelt."
+          "en": "Maidan Nezalezhnosti means Independence Square; the central Kyiv plaza was the principal site of the Euromaidan demonstrations.",
+          "et": "Maidan Nezaležnosti tähendab Iseseisvuse väljakut; Kiievi keskne plats oli Euromaidani meeleavalduste peamine paik."
         },
         "source": {
-          "sourceId": "wikipedia:emigration",
-          "title": "Emigration",
-          "url": "https://en.wikipedia.org/wiki/Emigration",
+          "sourceId": "wikipedia:maidan-nezalezhnosti",
+          "title": "Maidan Nezalezhnosti",
+          "url": "https://en.wikipedia.org/wiki/Maidan_Nezalezhnosti",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-047:question:3",
-        "factKey": "built-in-politics-economics-society:migration-status:medium:status:refugee",
+        "factKey": "politics:taksim-square:republic-monument-adjoins-gezi-park-protests",
         "tier": 3,
-        "subjectKey": "status:refugee",
+        "subjectKey": "place:taksim-square-istanbul",
         "clue": {
-          "en": "Find the migration term that has crossed a border because of a well-founded fear of persecution.",
-          "et": "Rändemõiste on ületanud piiri põhjendatud tagakiusamishirmu tõttu. Leia sobiv vastus."
+          "en": "Istanbul's Republic Monument stands in this central square beside Gezi Park, whose threatened redevelopment triggered mass protests in 2013. Name the square.",
+          "et": "Istanbuli vabariigi monument seisab selle keskväljaku ääres Gezi pargi kõrval, mille kavandatud ümberehitus vallandas 2013. aastal suured protestid. Nimeta väljak."
         },
         "response": {
-          "en": "refugee",
-          "et": "pagulane"
+          "en": "Taksim Square",
+          "et": "Taksimi väljak"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Taksim",
+            "Istanbul Taksim Square"
+          ],
+          "et": [
+            "Taksim",
+            "Istanbuli Taksimi väljak"
+          ]
         },
         "explanation": {
-          "en": "Refugee is a protected legal status under the 1951 convention rather than a synonym for every migrant.",
-          "et": "Pagulane on pagulaskonventsiooni kaitstud õigusstaatus, mitte iga rändaja sünonüüm."
+          "en": "Taksim Square is a central Istanbul public space containing the Republic Monument and adjoining Gezi Park, the starting point of the 2013 protests.",
+          "et": "Taksimi väljak on Istanbuli keskne avalik ruum, kus asub vabariigi monument ja mille kõrval paiknevast Gezi pargist algasid 2013. aasta protestid."
         },
         "source": {
-          "sourceId": "wikipedia:refugee",
-          "title": "Refugee",
-          "url": "https://en.wikipedia.org/wiki/Refugee",
+          "sourceId": "wikipedia:taksim-square",
+          "title": "Taksim Square",
+          "url": "https://en.wikipedia.org/wiki/Taksim_Square",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-047:question:4",
-        "factKey": "built-in-politics-economics-society:migration-status:medium:concept:asylum",
+        "factKey": "politics:azadi-square:tehran-shahyad-renamed-freedom-after-revolution",
         "tier": 4,
-        "subjectKey": "concept:asylum",
+        "subjectKey": "place:azadi-square-tehran",
         "clue": {
-          "en": "Identify the migration term: it is protection granted by a state to someone fleeing danger or persecution.",
-          "et": "Mis rändemõiste on riigi antud kaitse ohu või tagakiusamise eest põgenejale?"
+          "en": "The monumental tower at Tehran's western entrance and its surrounding plaza received a Persian name meaning “Freedom” after the 1979 revolution. Name the square.",
+          "et": "Teherani läänepoolse sissepääsu monumentaalne torn ja seda ümbritsev plats said pärast 1979. aasta revolutsiooni pärsiakeelse nime tähendusega „vabadus”. Nimeta väljak."
         },
         "response": {
-          "en": "asylum",
-          "et": "varjupaik"
+          "en": "Azadi Square",
+          "et": "Azadi väljak"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Shahyad Square",
+            "Tehran Azadi Square",
+            "Azadi"
+          ],
+          "et": [
+            "Šahyadi väljak",
+            "Teherani Azadi väljak",
+            "Azadi"
+          ]
         },
         "explanation": {
-          "en": "Asylum is requested by a protection seeker before a final status decision.",
-          "et": "Varjupaik taotleb varjupaigataotleja enne lõplikku kaitseotsust."
+          "en": "Azadi Square surrounds Azadi Tower in Tehran; it was formerly Shahyad Square and was renamed after the Iranian Revolution.",
+          "et": "Azadi väljak ümbritseb Teheranis Azadi torni; varem kandis see Šahyadi nime ja nimetati Iraani revolutsiooni järel ümber."
         },
         "source": {
-          "sourceId": "wikipedia:right_of_asylum",
-          "title": "Right of asylum",
-          "url": "https://en.wikipedia.org/wiki/Right_of_asylum",
+          "sourceId": "wikipedia:azadi-square",
+          "title": "Azadi Square",
+          "url": "https://en.wikipedia.org/wiki/Azadi_Square",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-047:question:5",
-        "factKey": "built-in-politics-economics-society:migration-status:medium:concept:diaspora",
+        "factKey": "politics:pearl-roundabout:manama-six-dhow-sails-pearl-uprising-demolished",
         "tier": 5,
-        "subjectKey": "concept:diaspora",
+        "subjectKey": "place:pearl-roundabout-manama",
         "clue": {
-          "en": "A migration term is a dispersed population maintaining links with an ancestral homeland. Name it.",
-          "et": "Üks rändemõiste on hajali rahvastik, kes hoiab sidet esivanemate kodumaaga. Millist vastust otsime?"
+          "en": "Six dhow-shaped supports held a giant white sphere at this Manama traffic-circle monument, which became the centre of Bahrain's 2011 uprising before authorities demolished it. Name the landmark.",
+          "et": "Selle Manama liiklussõlme monumendi hiiglaslikku valget kera hoidsid üleval kuus dau-purje meenutavat kaart; 2011. aastal sai paigast Bahreini ülestõusu kese, enne kui võimud selle lammutasid. Nimeta maamärk."
         },
         "response": {
-          "en": "diaspora",
-          "et": "diaspora"
+          "en": "Pearl Roundabout",
+          "et": "Pärli ringristmik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lulu Roundabout",
+            "GCC Roundabout"
+          ],
+          "et": [
+            "Lulu ringristmik",
+            "Pärliring",
+            "GCC ringristmik"
+          ]
         },
         "explanation": {
-          "en": "Diaspora can persist across generations through institutions, memory, and transnational networks.",
-          "et": "Diaspora võib püsida põlvkondi institutsioonide, mälu ja riikideüleste võrgustike kaudu."
+          "en": "Pearl Roundabout was a Manama traffic circle and monument whose six sails supported a pearl; it became a protest focus and was demolished in March 2011.",
+          "et": "Pärli ringristmik oli Manama liiklussõlm ja monument, kus kuus purje kandsid pärli; sellest sai protestide kese ning see lammutati 2011. aasta märtsis."
         },
         "source": {
-          "sourceId": "wikipedia:diaspora",
-          "title": "Diaspora",
-          "url": "https://en.wikipedia.org/wiki/Diaspora",
+          "sourceId": "wikipedia:pearl-roundabout",
+          "title": "Pearl Roundabout",
+          "url": "https://en.wikipedia.org/wiki/Pearl_Roundabout",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21497,157 +21594,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-048",
     "name": {
-      "en": "Paths to Citizenship",
-      "et": "Teed kodakondsuseni"
+      "en": "Public-Life Words with Strange Backstories",
+      "et": "Ühiskonnasõnade kummalised sünnilood"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-048:question:1",
-        "factKey": "built-in-politics-economics-society:citizenship-rules:medium:concept:naturalization",
+        "factKey": "society:red-tape:red-ribbon-documents-became-bureaucracy-metaphor",
         "tier": 1,
-        "subjectKey": "concept:naturalization",
+        "subjectKey": "expression:red-tape-bureaucracy",
         "clue": {
-          "en": "What citizenship concept grants citizenship after birth through a legal application process?",
-          "et": "Järgmine kodakondsusmõiste annab kodakondsuse pärast sündi seadusliku taotlusmenetlusega. Milline see on?"
+          "en": "Official papers were once tied with coloured ribbon; its hue names excessive rules and paperwork. What two-word expression is this?",
+          "et": "Ametlikke pabereid seoti kunagi värvilise paelaga; selle toon nimetab nüüd liigseid reegleid ja paberimajandust. Milline ingliskeelne kahesõnaline väljend see on?"
         },
         "response": {
-          "en": "naturalisation",
-          "et": "naturalisatsioon"
+          "en": "red tape",
+          "et": "red tape"
         },
         "acceptedVariants": {
-          "en": [
-            "naturalization"
-          ],
-          "et": [
-            "kodakondsuse omandamine"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Naturalisation often requires residence and may test language or civic knowledge.",
-          "et": "Naturalisatsioon nõuab sageli elamist ning võib kontrollida keele- või kodanikuteadmisi."
+          "en": "Red tape is a metaphor for burdensome bureaucracy, associated with the historical practice of binding official documents in red ribbon.",
+          "et": "Inglise väljend „red tape” tähendab koormavat bürokraatiat ja seostub vana tavaga köita ametlikud dokumendid punase paelaga."
         },
         "source": {
-          "sourceId": "wikipedia:naturalization",
-          "title": "Naturalization",
-          "url": "https://en.wikipedia.org/wiki/Naturalization",
+          "sourceId": "wikipedia:red-tape",
+          "title": "Red tape",
+          "url": "https://en.wikipedia.org/wiki/Red_tape",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-048:question:2",
-        "factKey": "built-in-politics-economics-society:citizenship-rules:medium:concept:dual-citizenship",
+        "factKey": "society:soapbox:wooden-soap-crate-became-public-speaking-platform",
         "tier": 2,
-        "subjectKey": "concept:dual-citizenship",
+        "subjectKey": "object-metaphor:soapbox-speaking-platform",
         "clue": {
-          "en": "One citizenship concept means one person is a national of two states. Which one is described?",
-          "et": "Kodakondsusmõiste tähendab ühe inimese kuulumist kahe riigi kodakondsusse. Mis see on?"
+          "en": "Street speakers once stood on wooden shipping crates that had held a cleaning product. What everyday container became a metaphor for an improvised public-speaking platform?",
+          "et": "Tänavakõnelejad seisid kunagi puidust veokastidel, milles oli olnud puhastusvahend. Millisest argisest mahutist sai improviseeritud kõnepuldi võrdkuju?"
         },
         "response": {
-          "en": "dual citizenship",
-          "et": "topeltkodakondsus"
+          "en": "soapbox",
+          "et": "seebikast"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "speaker's soapbox",
+            "soap-box"
+          ],
+          "et": [
+            "kõnekast",
+            "seebikastist kõnelemine"
+          ]
         },
         "explanation": {
-          "en": "Dual citizenship depends on whether both legal systems permit simultaneous nationality.",
-          "et": "Topeltkodakondsus sõltub sellest, kas mõlemad õigussüsteemid lubavad samaaegset kodakondsust."
+          "en": "A soapbox was literally a sturdy crate for shipping soap; speakers used such boxes as raised platforms, creating the modern political metaphor.",
+          "et": "Seebikast oli algselt tugev kast seebi vedamiseks; kõnelejad kasutasid selliseid kaste kõrgendina ning sellest sündis poliitiline metafoor."
         },
         "source": {
-          "sourceId": "wikipedia:multiple_citizenship",
-          "title": "Multiple citizenship",
-          "url": "https://en.wikipedia.org/wiki/Multiple_citizenship",
+          "sourceId": "wikipedia:soapbox",
+          "title": "Soapbox",
+          "url": "https://en.wikipedia.org/wiki/Soapbox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-048:question:3",
-        "factKey": "built-in-politics-economics-society:citizenship-rules:medium:concept:jus-soli",
+        "factKey": "politics:gerrymander:gerry-salamander-cartoon-named-partisan-redistricting",
         "tier": 3,
-        "subjectKey": "concept:jus-soli",
+        "subjectKey": "concept:gerrymandering",
         "clue": {
-          "en": "This citizenship concept bases citizenship primarily on birth in a territory. What is it?",
-          "et": "See kodakondsusmõiste rajab kodakondsuse eelkõige territooriumil sündimisele. Mis see on?"
+          "en": "A Massachusetts district signed by Governor Elbridge Gerry looked so reptilian in a cartoon that his surname was blended with “salamander.” What political practice gained the resulting name?",
+          "et": "Kuberner Elbridge Gerry kinnitatud Massachusettsi valimisringkond nägi karikatuuril nii roomajalik välja, et tema perekonnanimi ühendati sõnaga „salamander”. Milline poliitiline võte sai sellest nime?"
         },
         "response": {
-          "en": "jus soli",
-          "et": "sünnikoha põhimõte"
+          "en": "gerrymandering",
+          "et": "gerrymandering"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "gerrymander",
+            "electoral gerrymandering"
+          ],
+          "et": [
+            "valimisringkondade manipuleerimine",
+            "valimisringkondade kallutatud ümberjoonistamine",
+            "gerrymander"
+          ]
         },
         "explanation": {
-          "en": "Jus soli literally means right of the soil and may include conditions.",
-          "et": "Sünnikoha põhimõte tähendab sõna-sõnalt maa õigust ning võib sisaldada tingimusi."
+          "en": "Gerrymandering is manipulating electoral-district boundaries for political advantage; the term combined Gerry's name with the salamander-shaped district cartoon.",
+          "et": "Gerrymandering tähendab valimisringkondade piiride kallutatud kujundamist; nimi ühendas Gerry perekonnanime salamandrit meenutanud ringkonnaga."
         },
         "source": {
-          "sourceId": "wikipedia:jus_soli",
-          "title": "Jus soli",
-          "url": "https://en.wikipedia.org/wiki/Jus_soli",
+          "sourceId": "wikipedia:gerrymandering",
+          "title": "Gerrymandering",
+          "url": "https://en.wikipedia.org/wiki/Gerrymandering",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-048:question:4",
-        "factKey": "built-in-politics-economics-society:citizenship-rules:medium:concept:jus-sanguinis",
+        "factKey": "politics:filibuster:pirate-derived-word-for-prolonged-legislative-delay",
         "tier": 4,
-        "subjectKey": "concept:jus-sanguinis",
+        "subjectKey": "practice:legislative-filibuster",
         "clue": {
-          "en": "Which citizenship concept bases citizenship on a parent’s nationality?",
-          "et": "Tuvasta järgmine kodakondsusmõiste: see rajab kodakondsuse vanema kodakondsusele."
+          "en": "A word that once travelled through terms for a pirate describes a marathon speech or other tactic used to delay a legislative vote. What is it?",
+          "et": "Sõna, mis jõudis keelde kunagiste mereröövli nimetuste kaudu, tähendab nüüd maratonkõnet või muud võtet parlamendihääletuse venitamiseks. Mis sõna see on?"
         },
         "response": {
-          "en": "jus sanguinis",
-          "et": "põlvnemise põhimõte"
+          "en": "filibuster",
+          "et": "filibuster"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "legislative filibuster",
+            "filibustering"
+          ],
+          "et": [
+            "venitamiskõne",
+            "parlamendi obstruktsioon",
+            "filibuster-kõne"
+          ]
         },
         "explanation": {
-          "en": "Jus sanguinis literally means right of blood and can transmit status to children born abroad.",
-          "et": "Põlvnemise põhimõte tähendab sõna-sõnalt vere õigust ning võib anda staatuse välismaal sündinud lapsele."
+          "en": "A filibuster is a parliamentary delaying tactic, often a prolonged speech; its word history runs through terms meaning freebooter or pirate.",
+          "et": "Filibuster on parlamendi venitamistaktika, sageli väga pikk kõne; sõna ajalugu ulatub vabaküti või mereröövli nimetusteni."
         },
         "source": {
-          "sourceId": "wikipedia:jus_sanguinis",
-          "title": "Jus sanguinis",
-          "url": "https://en.wikipedia.org/wiki/Jus_sanguinis",
+          "sourceId": "wikipedia:filibuster",
+          "title": "Filibuster",
+          "url": "https://en.wikipedia.org/wiki/Filibuster",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-048:question:5",
-        "factKey": "built-in-politics-economics-society:citizenship-rules:medium:status:statelessness",
+        "factKey": "politics:pork-barrel:local-spending-metaphor-from-salted-pork-container",
         "tier": 5,
-        "subjectKey": "status:statelessness",
+        "subjectKey": "concept:pork-barrel-politics",
         "clue": {
-          "en": "A citizenship concept means no state recognises a person as its national under its law. Name it.",
-          "et": "Üks kodakondsusmõiste tähendab, et ükski riik ei pea inimest oma seaduse järgi kodanikuks. Millist vastust otsime?"
+          "en": "A nineteenth-century image of handing out salted meat from a large container labels government spending steered toward a politician's home district. What food-storage phrase is used?",
+          "et": "Üheksateistkümnenda sajandi kujund suurest anumast soolaliha jagamisest nimetab nüüd riigi raha suunamist poliitiku koduringkonna projektidesse. Millist ingliskeelset toidusäilitamise väljendit kasutatakse?"
         },
         "response": {
-          "en": "statelessness",
-          "et": "kodakondsusetus"
+          "en": "pork barrel politics",
+          "et": "pork barrel’i poliitika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "pork barrel",
+            "pork-barrel spending"
+          ],
+          "et": [
+            "„seapekitünni” poliitika",
+            "kohalike projektide jagamispoliitika",
+            "pork barrel"
+          ]
         },
         "explanation": {
-          "en": "Statelessness can obstruct documents, travel, voting, and access to services.",
-          "et": "Kodakondsusetus võib takistada dokumente, reisimist, hääletamist ja teenuste kasutamist."
+          "en": "Pork barrel politics is public spending targeted at a representative's district, named through the image of a barrel that stored and distributed salted pork.",
+          "et": "„Pork barrel’i poliitika” tähendab avaliku raha suunamist esindaja valimisringkonda; väljend viitab tünnile, milles hoiti ja jagati soolatud sealiha."
         },
         "source": {
-          "sourceId": "wikipedia:statelessness",
-          "title": "Statelessness",
-          "url": "https://en.wikipedia.org/wiki/Statelessness",
+          "sourceId": "wikipedia:pork-barrel",
+          "title": "Pork barrel",
+          "url": "https://en.wikipedia.org/wiki/Pork_barrel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21655,153 +21775,188 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-049",
     "name": {
-      "en": "Diplomacy in Practice",
-      "et": "Diplomaatia praktikas"
+      "en": "When Money Stopped Behaving",
+      "et": "Kui raha lakkas normaalselt käitumast"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-049:question:1",
-        "factKey": "built-in-politics-economics-society:diplomatic-practice:medium:institution:embassy",
+        "factKey": "economics:zimbabwean-dollar:hundred-trillion-note-hyperinflation",
         "tier": 1,
-        "subjectKey": "institution:embassy",
+        "subjectKey": "currency:zimbabwean-dollar-1980-2009",
         "clue": {
-          "en": "Diplomatic term is a country’s principal diplomatic mission in another state. What is it called?",
-          "et": "Milline diplomaatiline mõiste on riigi peamine diplomaatiline esindus teises riigis?"
+          "en": "A banknote with “100 trillion” printed on it became the souvenir symbol of one country's hyperinflation before its currency was abandoned in 2009. Name the currency.",
+          "et": "Pangatäht kirjaga „100 triljonit” sai ühe riigi hüperinflatsiooni suveniirsümboliks, enne kui valuuta 2009. aastal kõrvale jäeti. Nimeta valuuta."
         },
         "response": {
-          "en": "embassy",
-          "et": "saatkond"
+          "en": "Zimbabwean dollar",
+          "et": "Zimbabwe dollar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Zimbabwe dollar",
+            "Zimdollar"
+          ],
+          "et": [
+            "Zimbabwe’i dollar",
+            "Zimbabve dollar"
+          ]
         },
         "explanation": {
-          "en": "Embassy is normally headed by an ambassador and located in the capital.",
-          "et": "Saatkond asub tavaliselt pealinnas ning seda juhib suursaadik."
+          "en": "The Zimbabwean dollar suffered extreme hyperinflation and its final series included a 100-trillion-dollar note; it was suspended in 2009.",
+          "et": "Zimbabwe dollarit tabas äärmuslik hüperinflatsioon ning viimases seerias oli 100 triljoni dollari rahatäht; valuuta kasutamine peatati 2009. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:diplomatic_mission",
-          "title": "Diplomatic mission",
-          "url": "https://en.wikipedia.org/wiki/Diplomatic_mission",
+          "sourceId": "wikipedia:zimbabwean-dollar-1980-2009",
+          "title": "Zimbabwean dollar (1980–2009)",
+          "url": "https://en.wikipedia.org/wiki/Zimbabwean_dollar_(1980%E2%80%932009)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-049:question:2",
-        "factKey": "built-in-politics-economics-society:diplomatic-practice:medium:role:ambassador",
+        "factKey": "economics:greek-capital-controls:banks-closed-atm-withdrawals-limited-during-debt-crisis",
         "tier": 2,
-        "subjectKey": "role:ambassador",
+        "subjectKey": "event:greek-capital-controls-2015",
         "clue": {
-          "en": "A diplomatic term is the highest-ranking official representative sent to another state. Name it.",
-          "et": "Üks diplomaatiline mõiste on teise riiki saadetud kõrgeim ametlik esindaja. Millist vastust otsime?"
+          "en": "During the eurozone debt crisis, this country's banks closed for weeks and cash-machine withdrawals were capped, even though it continued using the euro. Name the national controls.",
+          "et": "Euroala võlakriisi ajal suleti selle riigi pangad nädalateks ja pangaautomaadist väljavõetavale sularahale pandi piir, kuigi riik jätkas euro kasutamist. Nimeta riigi piirangud."
         },
         "response": {
-          "en": "ambassador",
-          "et": "suursaadik"
+          "en": "Greek capital controls",
+          "et": "Kreeka kapitalikontroll"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Greek bank controls",
+            "Greek cash-withdrawal limits",
+            "Greek capital-control crisis",
+            "capital controls"
+          ],
+          "et": [
+            "Kreeka pangapiirangud",
+            "Kreeka sularahapiirangud",
+            "Kreeka kapitalipiirangud",
+            "kapitalikontroll",
+            "kapitalikontrollid",
+            "kapitalipiirangud"
+          ]
         },
         "explanation": {
-          "en": "Ambassador presents credentials to the receiving head of state.",
-          "et": "Suursaadik annab volikirja üle vastuvõtva riigi riigipeale."
+          "en": "Greek capital controls were imposed in 2015, closing banks temporarily and limiting ATM cash withdrawals during the debt and bailout confrontation.",
+          "et": "Kreeka kapitalikontroll kehtestati 2015. aastal, mil pangad ajutiselt suleti ja sularahaautomaatide väljamakseid võla- ning abipakivaidluse ajal piirati."
         },
         "source": {
-          "sourceId": "wikipedia:ambassador",
-          "title": "Ambassador",
-          "url": "https://en.wikipedia.org/wiki/Ambassador",
+          "sourceId": "wikipedia:capital-controls-in-greece",
+          "title": "Capital controls in Greece",
+          "url": "https://en.wikipedia.org/wiki/Capital_controls_in_Greece",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-049:question:3",
-        "factKey": "built-in-politics-economics-society:diplomatic-practice:medium:concept:treaty",
+        "factKey": "economics:tequila-crisis:mexico-peso-devaluation-us-led-bailout",
         "tier": 3,
-        "subjectKey": "concept:treaty",
+        "subjectKey": "event:mexican-peso-crisis-1994",
         "clue": {
-          "en": "Find the diplomatic term that is a binding written agreement between subjects of international law.",
-          "et": "Diplomaatiline mõiste on rahvusvahelise õiguse subjektide siduv kirjalik kokkulepe. Leia sobiv vastus."
+          "en": "Mexico's sudden peso devaluation in 1994 triggered capital flight and a US-led rescue package. What drink-nicknamed crisis was this?",
+          "et": "Mehhiko peeso järsk devalveerimine 1994. aastal vallandas kapitali põgenemise ja USA juhitud abipaketi. Millise joogi järgi nimetatud kriis see oli?"
         },
         "response": {
-          "en": "treaty",
-          "et": "rahvusvaheline leping"
+          "en": "Tequila crisis",
+          "et": "Mehhiko tekiilakriis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tequila effect"
+          ],
+          "et": [
+            "tekiilakriis",
+            "tequilakriis",
+            "tekiilaefekt",
+            "tequila-efekt"
+          ]
         },
         "explanation": {
-          "en": "A treaty binds its parties under the principle pacta sunt servanda: agreements must be kept.",
-          "et": "Rahvusvaheline leping seob osapooli põhimõtte pacta sunt servanda järgi: kokkulepetest tuleb kinni pidada."
+          "en": "The Tequila crisis was the 1994–95 Mexican peso crisis, when devaluation and lost investor confidence led to an international financial rescue.",
+          "et": "Mehhiko tekiilakriis oli 1994.–1995. aasta peesokriis, mil devalveerimine ja investorite usalduse kadumine viisid rahvusvahelise finantsabini."
         },
         "source": {
-          "sourceId": "wikipedia:treaty",
-          "title": "Treaty",
-          "url": "https://en.wikipedia.org/wiki/Treaty",
+          "sourceId": "wikipedia:mexican-peso-crisis",
+          "title": "Mexican peso crisis",
+          "url": "https://en.wikipedia.org/wiki/Mexican_peso_crisis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-049:question:4",
-        "factKey": "built-in-politics-economics-society:diplomatic-practice:medium:event:diplomatic-summit",
+        "factKey": "economics:northern-rock:depositors-queued-after-emergency-support-became-public",
         "tier": 4,
-        "subjectKey": "event:diplomatic-summit",
+        "subjectKey": "event:northern-rock-bank-run",
         "clue": {
-          "en": "What diplomatic term brings top political leaders together for direct talks?",
-          "et": "Järgmine diplomaatiline mõiste toob kõrgeimad poliitilised juhid otsestele kõnelustele. Milline see on?"
+          "en": "British television showed savers queuing outside branches after this mortgage lender asked the Bank of England for emergency support in 2007. Name the bank run.",
+          "et": "Briti televisioon näitas 2007. aastal hoiustajaid järjekorras pärast seda, kui see eluasemelaenupank palus Inglise Pangalt erakorralist abi. Nimeta pangajooks."
         },
         "response": {
-          "en": "summit",
-          "et": "tippkohtumine"
+          "en": "Northern Rock bank run",
+          "et": "Northern Rocki pangajooks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Northern Rock run",
+            "run on Northern Rock"
+          ],
+          "et": [
+            "Northern Rocki hoiustajate jooks",
+            "Northern Rocki pangapaanika"
+          ]
         },
         "explanation": {
-          "en": "Summit differs from routine diplomacy by participation at head-of-state or government level.",
-          "et": "Tippkohtumine erineb tavapärasest diplomaatiast riigipea või valitsusjuhi taseme poolest."
+          "en": "The Northern Rock bank run began after news of emergency central-bank support became public, producing conspicuous queues of depositors outside branches.",
+          "et": "Northern Rocki pangajooks algas pärast keskpanga erakorralise toe avalikuks saamist ning pangakontorite ette tekkisid hoiustajate järjekorrad."
         },
         "source": {
-          "sourceId": "wikipedia:summit_(meeting)",
-          "title": "Summit (meeting)",
-          "url": "https://en.wikipedia.org/wiki/Summit_(meeting)",
+          "sourceId": "wikipedia:nationalisation-of-northern-rock",
+          "title": "Nationalisation of Northern Rock",
+          "url": "https://en.wikipedia.org/wiki/Nationalisation_of_Northern_Rock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-049:question:5",
-        "factKey": "built-in-politics-economics-society:diplomatic-practice:medium:concept:international-sanctions",
+        "factKey": "economics:corralito:argentina-restricted-bank-withdrawals-little-corral-nickname",
         "tier": 5,
-        "subjectKey": "concept:international-sanctions",
+        "subjectKey": "event:argentina-corralito",
         "clue": {
-          "en": "Name the diplomatic term that use economic or political restrictions to pressure an actor.",
-          "et": "Vihjes kirjeldatud diplomaatiline mõiste kasutavad osalise survestamiseks majanduslikke või poliitilisi piiranguid. Mis see on?"
+          "en": "Argentina's 2001 limits on cash withdrawals trapped savings behind bank restrictions. What Spanish diminutive meaning “little corral” became the episode's nickname?",
+          "et": "Argentina 2001. aasta sularahaväljamaksete piirangud jätsid säästud pangareeglite taha lõksu. Milline hispaania hellitusvorm tähendusega „väike aedik” sai episoodi hüüdnimeks?"
         },
         "response": {
-          "en": "sanctions",
-          "et": "sanktsioonid"
+          "en": "corralito",
+          "et": "corralito"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Argentine corralito"
+          ],
+          "et": [
+            "Argentina corralito"
+          ]
         },
         "explanation": {
-          "en": "Sanctions may target trade, finance, travel, or named individuals rather than military force.",
-          "et": "Sanktsioonid võivad sõjalise jõu asemel sihtida kaubandust, rahandust, reisimist või isikuid."
+          "en": "The corralito was Argentina's restriction on bank withdrawals during the 2001 crisis; its nickname literally evokes a small enclosure.",
+          "et": "Corralito oli Argentina 2001. aasta kriisi aegne pangaväljamaksete piirang; hüüdnimi tähendab sõna-sõnalt väikest aedikut."
         },
         "source": {
-          "sourceId": "wikipedia:international_sanctions",
-          "title": "International sanctions",
-          "url": "https://en.wikipedia.org/wiki/International_sanctions",
+          "sourceId": "wikipedia:corralito",
+          "title": "Corralito",
+          "url": "https://en.wikipedia.org/wiki/Corralito",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21809,169 +21964,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-050",
     "name": {
-      "en": "Institutions beyond the Nation-State",
-      "et": "Riigist kõrgemad institutsioonid"
+      "en": "Workplace Stories That Changed the Conversation",
+      "et": "Töölugusid, mis muutsid arutelu"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-050:question:1",
-        "factKey": "built-in-politics-economics-society:international-organizations:medium:organization:united-nations",
+        "factKey": "society:rana-plaza:bangladesh-garment-factories-building-collapse",
         "tier": 1,
-        "subjectKey": "organization:united-nations",
+        "subjectKey": "event:rana-plaza-collapse",
         "clue": {
-          "en": "Identify this international organisation: it joins nearly all states for peace, cooperation, and international law.",
-          "et": "Kirjeldatud rahvusvaheline organisatsioon ühendab peaaegu kõik riigid rahu, koostöö ja rahvusvahelise õiguse nimel. Mis on selle nimi?"
+          "en": "Cracks appeared in a Bangladeshi commercial building containing garment factories, yet many workers were sent inside; it collapsed the next day. Name the disaster.",
+          "et": "Bangladeshi ärihoones, kus töötasid rõivavabrikud, tekkisid praod, kuid paljud töötajad saadeti ikkagi sisse; järgmisel päeval varises hoone kokku. Nimeta katastroof."
         },
         "response": {
-          "en": "United Nations",
-          "et": "Ühinenud Rahvaste Organisatsioon"
+          "en": "Rana Plaza collapse",
+          "et": "Rana Plaza varing"
         },
         "acceptedVariants": {
           "en": [
-            "UN"
+            "Rana Plaza disaster"
           ],
           "et": [
-            "ÜRO"
+            "Rana Plaza katastroof",
+            "Rana Plaza hoonevaring"
           ]
         },
         "explanation": {
-          "en": "The United Nations combines a universal General Assembly with a Security Council whose five permanent members hold veto power.",
-          "et": "Ühinenud Rahvaste Organisatsioon ühendab universaalse Peaassamblee Julgeolekunõukoguga, kus viiel alalisel liikmel on veto."
+          "en": "The Rana Plaza collapse killed more than 1,100 people in 2013 and focused global attention on conditions in Bangladesh's export-garment industry.",
+          "et": "Rana Plaza varing tappis 2013. aastal üle 1100 inimese ja tõi üleilmse tähelepanu Bangladeshi ekspordirõivatööstuse töötingimustele."
         },
         "source": {
-          "sourceId": "wikipedia:united_nations",
-          "title": "United Nations",
-          "url": "https://en.wikipedia.org/wiki/United_Nations",
+          "sourceId": "wikipedia:rana-plaza-collapse",
+          "title": "Rana Plaza collapse",
+          "url": "https://en.wikipedia.org/wiki/Rana_Plaza_collapse",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-050:question:2",
-        "factKey": "built-in-politics-economics-society:international-organizations:medium:organization:european-union",
+        "factKey": "society:triangle-fire:locked-exits-garment-workers-deaths-safety-reform",
         "tier": 2,
-        "subjectKey": "organization:european-union",
+        "subjectKey": "event:triangle-shirtwaist-fire",
         "clue": {
-          "en": "What international organisation integrates European states through shared law and institutions?",
-          "et": "Järgmine rahvusvaheline organisatsioon lõimib Euroopa riike ühise õiguse ja institutsioonide kaudu. Milline see on?"
+          "en": "Many garment workers could not escape a 1911 New York factory blaze because some exits were locked. Name the disaster that drove workplace-safety reform.",
+          "et": "Paljud õmblustöölised ei pääsenud 1911. aasta New Yorgi vabrikupõlengust välja, sest osa väljapääse oli lukus. Nimeta tööohutusreforme ajendanud katastroof."
         },
         "response": {
-          "en": "European Union",
-          "et": "Euroopa Liit"
+          "en": "Triangle Shirtwaist Factory fire",
+          "et": "Triangle Shirtwaisti vabrikupõleng"
         },
         "acceptedVariants": {
           "en": [
-            "EU"
+            "Triangle fire",
+            "Triangle factory fire",
+            "Triangle Shirtwaist fire"
           ],
           "et": [
-            "EL"
+            "Triangle’i tehasepõleng",
+            "Triangle Shirtwaisti põleng",
+            "Triangle’i vabrikupõleng"
           ]
         },
         "explanation": {
-          "en": "European Union has directly applicable law and a single market beyond ordinary intergovernmental cooperation.",
-          "et": "Euroopa Liit omab otsekohalduvat õigust ja ühisturgu, mis ületavad tavapärast valitsustevahelist koostööd."
+          "en": "The Triangle Shirtwaist Factory fire killed 146 garment workers and helped spur major factory-safety and labour reforms in New York.",
+          "et": "Triangle Shirtwaisti vabrikupõlengus hukkus 146 rõivatöölist ning see aitas New Yorgis käivitada suuri tehaseohutuse ja tööõiguse reforme."
         },
         "source": {
-          "sourceId": "wikipedia:european_union",
-          "title": "European Union",
-          "url": "https://en.wikipedia.org/wiki/European_Union",
+          "sourceId": "wikipedia:triangle-shirtwaist-factory-fire",
+          "title": "Triangle Shirtwaist Factory fire",
+          "url": "https://en.wikipedia.org/wiki/Triangle_Shirtwaist_Factory_fire",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-050:question:3",
-        "factKey": "built-in-politics-economics-society:international-organizations:medium:organization:nato",
+        "factKey": "economics:ford-five-dollar-day:1914-doubled-auto-worker-daily-pay",
         "tier": 3,
-        "subjectKey": "organization:nato",
+        "subjectKey": "policy:ford-five-dollar-day",
         "clue": {
-          "en": "One international organisation is the transatlantic collective-defence alliance. Which one is described?",
-          "et": "Rahvusvaheline organisatsioon on Atlandi-ülene kollektiivkaitse liit. Mis see on?"
+          "en": "In 1914, an automaker made headlines by more than doubling many workers' daily pay to a round figure, hoping to reduce costly turnover. What wage policy was called this?",
+          "et": "Autotootja jõudis 1914. aastal lehtedesse, kui enam kui kahekordistas paljude tööliste päevatasu ümmarguse summani, et vähendada kulukat tööjõu voolavust. Millise nime sai palgapoliitika?"
         },
         "response": {
-          "en": "NATO",
-          "et": "NATO"
+          "en": "Ford's five-dollar day",
+          "et": "Fordi viiedollariline tööpäev"
         },
         "acceptedVariants": {
           "en": [
-            "North Atlantic Treaty Organization"
+            "five-dollar day",
+            "Ford $5 day"
           ],
           "et": [
-            "Põhja-Atlandi Lepingu Organisatsioon"
+            "Fordi viie dollari päev",
+            "Fordi 5-dollarine päev"
           ]
         },
         "explanation": {
-          "en": "NATO treats an armed attack on one as an attack on all under Article 5.",
-          "et": "NATO käsitleb artikli 5 järgi relvastatud rünnakut ühe vastu rünnakuna kõigi vastu."
+          "en": "Ford's five-dollar day raised eligible workers' daily compensation to five dollars and helped the company retain labour for mass production.",
+          "et": "Fordi viiedollariline tööpäev tõstis nõuetele vastavate töötajate päevatasu viie dollarini ja aitas ettevõttel masstootmiseks tööjõudu hoida."
         },
         "source": {
-          "sourceId": "wikipedia:nato",
-          "title": "NATO",
-          "url": "https://en.wikipedia.org/wiki/NATO",
+          "sourceId": "wikipedia:ford-motor-company-the-5-workday",
+          "title": "Ford Motor Company",
+          "url": "https://en.wikipedia.org/wiki/Ford_Motor_Company#The_$5_workday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-050:question:4",
-        "factKey": "built-in-politics-economics-society:international-organizations:medium:organization:world-trade-organization",
+        "factKey": "society:matchgirls-strike:bryant-may-women-fines-white-phosphorus",
         "tier": 4,
-        "subjectKey": "organization:world-trade-organization",
+        "subjectKey": "event:matchgirls-strike-1888",
         "clue": {
-          "en": "This international organisation administers multilateral trade rules and dispute settlement. What is it?",
-          "et": "See rahvusvaheline organisatsioon haldab mitmepoolseid kaubandusreegleid ja vaidluste lahendamist. Mis see on?"
+          "en": "Young women at Bryant & May walked out over fines and dangerous conditions in an industry notorious for white-phosphorus illness. Name the 1888 London strike.",
+          "et": "Bryant & May noored naistöölised lahkusid töölt trahvide ja ohtlike tingimuste tõttu tööstuses, mida tunti valge fosfori põhjustatud haiguse poolest. Nimeta 1888. aasta Londoni streik."
         },
         "response": {
-          "en": "World Trade Organization",
-          "et": "Maailma Kaubandusorganisatsioon"
+          "en": "Matchgirls' strike",
+          "et": "tikutüdrukute streik"
         },
         "acceptedVariants": {
           "en": [
-            "WTO"
+            "Bryant & May strike"
           ],
           "et": [
-            "WTO"
+            "tikuvabrikutööliste streik",
+            "Bryant & May streik",
+            "tikutüdrukute tööseisak"
           ]
         },
         "explanation": {
-          "en": "World Trade Organization grew from the GATT system and covers goods, services, and intellectual property.",
-          "et": "Maailma Kaubandusorganisatsioon kasvas GATTi süsteemist ning hõlmab kaupu, teenuseid ja intellektuaalomandit."
+          "en": "The Matchgirls' strike was a successful walkout by women and teenage girls at Bryant & May's London match factory over pay deductions and working conditions.",
+          "et": "Tikutüdrukute streik oli Bryant & May Londoni tikuvabriku naiste ja teismeliste tüdrukute edukas tööseisak palgakärbete ning töötingimuste vastu."
         },
         "source": {
-          "sourceId": "wikipedia:world_trade_organization",
-          "title": "World Trade Organization",
-          "url": "https://en.wikipedia.org/wiki/World_Trade_Organization",
+          "sourceId": "wikipedia:matchgirls-strike",
+          "title": "Matchgirls' strike",
+          "url": "https://en.wikipedia.org/wiki/Matchgirls%27_strike",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-050:question:5",
-        "factKey": "built-in-politics-economics-society:international-organizations:medium:organization:council-of-europe",
+        "factKey": "society:flint-sit-down:workers-occupied-gm-plants-uaw-recognition",
         "tier": 5,
-        "subjectKey": "organization:council-of-europe",
+        "subjectKey": "event:flint-sit-down-strike",
         "clue": {
-          "en": "Which international organisation promotes human rights and is separate from the European Union?",
-          "et": "Tuvasta järgmine rahvusvaheline organisatsioon: see edendab inimõigusi ning on Euroopa Liidust eraldi."
+          "en": "Auto workers occupied General Motors plants instead of picketing outside, protecting key machinery until the company recognized their union. Name the Michigan strike.",
+          "et": "Autotöölised hõivasid General Motorsi tehased, selle asemel et väljas piketti pidada, ning kaitsesid olulisi masinaid, kuni firma nende ametiühingut tunnustas. Nimeta Michigani streik."
         },
         "response": {
-          "en": "Council of Europe",
-          "et": "Euroopa Nõukogu"
+          "en": "Flint sit-down strike",
+          "et": "Flinti istumisstreik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Flint strike",
+            "General Motors sit-down strike"
+          ],
+          "et": [
+            "Flinti tehase hõivamisstreik",
+            "General Motorsi istumisstreik",
+            "Flinti streik"
+          ]
         },
         "explanation": {
-          "en": "Council of Europe underpins the European Convention and the Strasbourg human-rights court.",
-          "et": "Euroopa Nõukogu toetab Euroopa inimõiguste konventsiooni ja Strasbourgi inimõiguste kohut."
+          "en": "In the Flint sit-down strike of 1936–37, workers stayed inside GM factories; the settlement recognized the United Auto Workers as bargaining representative.",
+          "et": "1936.–1937. aasta Flinti istumisstreigis jäid töötajad GM-i tehastesse; kokkulepe tunnustas United Auto Workersit läbirääkimispartnerina."
         },
         "source": {
-          "sourceId": "wikipedia:council_of_europe",
-          "title": "Council of Europe",
-          "url": "https://en.wikipedia.org/wiki/Council_of_Europe",
+          "sourceId": "wikipedia:flint-sit-down-strike",
+          "title": "Flint sit-down strike",
+          "url": "https://en.wikipedia.org/wiki/Flint_sit-down_strike",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -21979,153 +22150,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-051",
     "name": {
-      "en": "Words That Pause or End Conflict",
-      "et": "Sõnad, mis peatavad konflikti"
+      "en": "City Ideas That Travelled",
+      "et": "Linnaideed, mis levisid maailma"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-051:question:1",
-        "factKey": "built-in-politics-economics-society:peace-processes:medium:concept:ceasefire",
+        "factKey": "society:bus-rapid-transit:curitiba-dedicated-corridors-off-board-payment",
         "tier": 1,
-        "subjectKey": "concept:ceasefire",
+        "subjectKey": "system:bus-rapid-transit",
         "clue": {
-          "en": "Recognise the peace-and-conflict term that is an agreement to stop fighting, temporarily or permanently.",
-          "et": "Otsitav rahu ja konflikti mõiste on kokkulepe võitluse ajutiseks või püsivaks peatamiseks. Mis see on?"
+          "en": "Curitiba's long buses use dedicated corridors, and passengers pay at stations before boarding. What three-word transit model is this?",
+          "et": "Curitiba pikad bussid sõidavad eraldatud koridorides ja reisijad maksavad peatustes enne bussi sisenemist. Milline ühistranspordimudel see on?"
         },
         "response": {
-          "en": "ceasefire",
-          "et": "relvarahu"
+          "en": "bus rapid transit",
+          "et": "kiirbussisüsteem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "BRT",
+            "Curitiba BRT",
+            "rapid bus system"
+          ],
+          "et": [
+            "BRT",
+            "Curitiba BRT",
+            "bussi kiirtransiit"
+          ]
         },
         "explanation": {
-          "en": "Ceasefire can be local or general and need not settle the underlying dispute.",
-          "et": "Relvarahu võib olla kohalik või üldine ega pea algset vaidlust lahendama."
+          "en": "Bus rapid transit gives buses faster, higher-capacity service through features such as dedicated lanes and off-board payment; Curitiba became its best-known early model.",
+          "et": "Kiirbussisüsteem annab bussidele eraldatud radade ja sõidukivälise maksmisega kiirema ning suurema läbilaskevõime; Curitibast sai selle tuntud varane eeskuju."
         },
         "source": {
-          "sourceId": "wikipedia:ceasefire",
-          "title": "Ceasefire",
-          "url": "https://en.wikipedia.org/wiki/Ceasefire",
+          "sourceId": "wikipedia:bus-rapid-transit",
+          "title": "Bus rapid transit",
+          "url": "https://en.wikipedia.org/wiki/Bus_rapid_transit",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-051:question:2",
-        "factKey": "built-in-politics-economics-society:peace-processes:medium:concept:armistice",
+        "factKey": "society:velib:paris-public-bicycle-system-name-velo-liberte",
         "tier": 2,
-        "subjectKey": "concept:armistice",
+        "subjectKey": "system:velib-paris-bike-share",
         "clue": {
-          "en": "Which peace-and-conflict term formally suspends hostilities between belligerents?",
-          "et": "Tuvasta järgmine rahu ja konflikti mõiste: see peatab sõdivate poolte vaenutegevuse ametlikult."
+          "en": "Paris combined the French words for bicycle and freedom to name its large public bike-share system. What is the blended name?",
+          "et": "Pariis ühendas prantsuskeelsed sõnad „jalgratas” ja „vabadus”, et nimetada oma suurt avalikku rattaringlust. Mis on liitnimi?"
         },
         "response": {
-          "en": "armistice",
-          "et": "vaherahu"
+          "en": "Vélib'",
+          "et": "Vélib’"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Vélib bike share",
+            "Paris Vélib"
+          ],
+          "et": [
+            "Pariisi Vélib",
+            "Vélibi rattaringlus"
+          ]
         },
         "explanation": {
-          "en": "Armistice ends active fighting without necessarily being the final peace treaty.",
-          "et": "Vaherahu lõpetab aktiivse võitluse, olemata tingimata lõplik rahuleping."
+          "en": "Vélib' is Paris's public bicycle-sharing system; its name contracts “vélo” and “liberté.”",
+          "et": "Vélib’ on Pariisi avalik rattaringlussüsteem; nimi ühendab sõnad „vélo” ja „liberté”."
         },
         "source": {
-          "sourceId": "wikipedia:armistice",
-          "title": "Armistice",
-          "url": "https://en.wikipedia.org/wiki/Armistice",
+          "sourceId": "wikipedia:velib",
+          "title": "Vélib'",
+          "url": "https://en.wikipedia.org/wiki/V%C3%A9lib%27",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-051:question:3",
-        "factKey": "built-in-politics-economics-society:peace-processes:medium:concept:peacekeeping",
+        "factKey": "society:ciclovia:bogota-closes-streets-to-cars-sundays-holidays",
         "tier": 3,
-        "subjectKey": "concept:peacekeeping",
+        "subjectKey": "program:bogota-ciclovia",
         "clue": {
-          "en": "A peace-and-conflict term deploys impartial personnel to help maintain a peace arrangement. Name it.",
-          "et": "Üks rahu ja konflikti mõiste paigutab erapooletu personali rahukorra hoidmiseks. Millist vastust otsime?"
+          "en": "Every Sunday and holiday, Bogotá closes a network of main streets to cars so people can cycle, walk, and exercise. What Spanish name does the programme use?",
+          "et": "Bogotá sulgeb igal pühapäeval ja riigipühal osa peatänavate võrgust autodele, et inimesed saaksid rattaga sõita, kõndida ja liikuda. Millist hispaaniakeelset nime programm kannab?"
         },
         "response": {
-          "en": "peacekeeping",
-          "et": "rahuvalve"
+          "en": "Ciclovía",
+          "et": "ciclovía"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bogotá Ciclovía"
+          ],
+          "et": [
+            "Bogotá ciclovía"
+          ]
         },
         "explanation": {
-          "en": "Peacekeeping traditionally relies on the parties’ approval, impartiality, and limited use of force.",
-          "et": "Rahuvalve toetub traditsiooniliselt osapoolte heakskiidule, erapooletusele ja piiratud jõukasutusele."
+          "en": "Bogotá's Ciclovía turns more than 100 kilometres of roads into car-free public space on Sundays and holidays.",
+          "et": "Bogotá ciclovía muudab pühapäeviti ja pühadel üle saja kilomeetri teid autovabaks avalikuks ruumiks."
         },
         "source": {
-          "sourceId": "wikipedia:peacekeeping",
-          "title": "Peacekeeping",
-          "url": "https://en.wikipedia.org/wiki/Peacekeeping",
+          "sourceId": "wikipedia:ciclovia",
+          "title": "Ciclovía",
+          "url": "https://en.wikipedia.org/wiki/Ciclov%C3%ADa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-051:question:4",
-        "factKey": "built-in-politics-economics-society:peace-processes:medium:concept:mediation",
+        "factKey": "society:stroget:copenhagen-main-shopping-street-pedestrianised-1962",
         "tier": 4,
-        "subjectKey": "concept:mediation",
+        "subjectKey": "place-system:stroget-pedestrianisation",
         "clue": {
-          "en": "This peace-and-conflict term uses a neutral third party to help opponents negotiate. What is it?",
-          "et": "See rahu ja konflikti mõiste kasutab neutraalset kolmandat poolt vastaste läbirääkimiste aitamiseks. Mis see on?"
+          "en": "Copenhagen removed cars from its main central shopping street in 1962 despite predictions that Danes would never embrace pavement café life. Name the street.",
+          "et": "Kopenhaagen eemaldas 1962. aastal autod oma kesklinna peamiselt ostutänavalt, kuigi ennustati, et taanlased ei võta kõnniteekohvikute elu omaks. Nimeta tänav."
         },
         "response": {
-          "en": "mediation",
-          "et": "vahendus"
+          "en": "Strøget",
+          "et": "Strøget"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Stroget"
+          ],
+          "et": [
+            "Strøgeti jalakäijate tänav",
+            "Stroget"
+          ]
         },
         "explanation": {
-          "en": "Mediation leaves the substantive decision with the parties rather than the mediator.",
-          "et": "Vahendus jätab sisulise otsuse pooltele, mitte vahendajale."
+          "en": "Strøget is Copenhagen's central pedestrian shopping street; its 1962 conversion became an influential early example of large-scale pedestrianisation.",
+          "et": "Strøget on Kopenhaageni keskne jalakäijate ostutänav; 1962. aasta muutusest sai mõjukas varane suuremahulise jalakäijastamise näide."
         },
         "source": {
-          "sourceId": "wikipedia:mediation",
-          "title": "Mediation",
-          "url": "https://en.wikipedia.org/wiki/Mediation",
+          "sourceId": "wikipedia:strøget",
+          "title": "Strøget",
+          "url": "https://en.wikipedia.org/wiki/Str%C3%B8get",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-051:question:5",
-        "factKey": "built-in-politics-economics-society:peace-processes:medium:concept:arbitration",
+        "factKey": "society:gemeindebau:vienna-municipal-housing-red-vienna-legacy",
         "tier": 5,
-        "subjectKey": "concept:arbitration",
+        "subjectKey": "housing-model:vienna-gemeindebau",
         "clue": {
-          "en": "Identify the peace-and-conflict term: it submits a dispute to a third party for a decision.",
-          "et": "Mis rahu ja konflikti mõiste annab vaidluse kolmandale poolele otsustamiseks?"
+          "en": "In Vienna, vast city-owned apartment complexes—many built during the “Red Vienna” years—share what German name meaning municipal building?",
+          "et": "Viinis kannavad suured linnale kuuluvad korterikompleksid, millest paljud ehitati „Punase Viini” ajal, millist saksakeelset nime tähendusega munitsipaalhoone?"
         },
         "response": {
-          "en": "arbitration",
-          "et": "arbitraaž"
+          "en": "Gemeindebau",
+          "et": "Gemeindebau"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gemeindebauten"
+          ],
+          "et": [
+            "Gemeindebauten"
+          ]
         },
         "explanation": {
-          "en": "Arbitration differs from mediation because the arbitrator issues an award.",
-          "et": "Arbitraaž erineb vahendusest, sest vahekohtunik teeb otsuse."
+          "en": "A Gemeindebau is municipal housing in Vienna; the celebrated programme expanded greatly under the Social Democratic city government between the world wars.",
+          "et": "Gemeindebau on Viini munitsipaalelamu; tuntud programm laienes maailmasõdade vahel sotsiaaldemokraatliku linnavalitsuse ajal märgatavalt."
         },
         "source": {
-          "sourceId": "wikipedia:arbitration",
-          "title": "Arbitration",
-          "url": "https://en.wikipedia.org/wiki/Arbitration",
+          "sourceId": "wikipedia:gemeindebau",
+          "title": "Gemeindebau",
+          "url": "https://en.wikipedia.org/wiki/Gemeindebau",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -22133,158 +22331,198 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-052",
     "name": {
-      "en": "Organising outside Government",
-      "et": "Organiseerumine väljaspool riiki"
+      "en": "Corporate Ideas That Backfired",
+      "et": "Ettevõtete ideed, mis läksid valesti"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-052:question:1",
-        "factKey": "built-in-politics-economics-society:civil-society:medium:organization:ngo",
+        "factKey": "economics:new-coke:reformulation-backlash-classic-return",
         "tier": 1,
-        "subjectKey": "organization:ngo",
+        "subjectKey": "product-failure:new-coke",
         "clue": {
-          "en": "This civil-society form pursues public or member goals independently of government. What is it?",
-          "et": "See kodanikuühiskonna vorm tegutseb avalike või liikmete eesmärkide nimel valitsusest sõltumatult. Mis see on?"
+          "en": "Coca-Cola replaced its familiar formula in 1985, met a consumer revolt, and restored the old drink as “Classic.” What was the failed replacement called?",
+          "et": "Coca-Cola asendas 1985. aastal tuttava retsepti, kohtas tarbijate pahameelt ja tõi vana joogi tagasi nimega „Classic”. Kuidas ebaõnnestunud asendust nimetati?"
         },
         "response": {
-          "en": "non-governmental organisation",
-          "et": "vabaühendus"
+          "en": "New Coke",
+          "et": "New Coke"
         },
         "acceptedVariants": {
           "en": [
-            "NGO"
+            "Coke II",
+            "new Coca-Cola formula"
           ],
           "et": [
-            "MTÜ",
-            "NGO"
+            "uus Coca-Cola",
+            "New Coke’i retsept",
+            "Coke II"
           ]
         },
         "explanation": {
-          "en": "Non-governmental organisation is defined by private organisation and non-state control, not necessarily by charity alone.",
-          "et": "Vabaühendus määratleb eraalgatus ja riigiväline juhtimine, mitte tingimata üksnes heategevus."
+          "en": "New Coke was Coca-Cola's 1985 reformulation; hostile public reaction led the company to return the original formula as Coca-Cola Classic.",
+          "et": "New Coke oli Coca-Cola 1985. aasta uus retsept; vaenulik avalik reaktsioon sundis firma algse joogi Coca-Cola Classicuna taastama."
         },
         "source": {
-          "sourceId": "wikipedia:non-governmental_organization",
-          "title": "Non-governmental organization",
-          "url": "https://en.wikipedia.org/wiki/Non-governmental_organization",
+          "sourceId": "wikipedia:new-coke",
+          "title": "New Coke",
+          "url": "https://en.wikipedia.org/wiki/New_Coke",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-052:question:2",
-        "factKey": "built-in-politics-economics-society:civil-society:medium:organization:charitable-organization",
+        "factKey": "society:streisand-effect:suppression-attempt-amplified-california-coast-photo",
         "tier": 2,
-        "subjectKey": "organization:charitable-organization",
+        "subjectKey": "effect:streisand",
         "clue": {
-          "en": "Civil-society form uses donated resources for recognised public-benefit purposes. What is it called?",
-          "et": "Milline kodanikuühiskonna vorm kasutab annetatud vahendeid tunnustatud avaliku kasu eesmärkidel?"
+          "en": "A singer sued to remove an obscure aerial photograph of her Malibu home, causing vastly more people to see it. What effect names this publicity backfire?",
+          "et": "Laulja kaebas kohtusse, et eemaldada vähetuntud aerofoto oma Malibu kodust, ning selle tulemusel nägi pilti palju rohkem inimesi. Milline efekt nimetab nüüd sellist reklaamialast tagasilööki?"
         },
         "response": {
-          "en": "charity",
-          "et": "heategevusorganisatsioon"
+          "en": "Streisand effect",
+          "et": "Streisandi efekt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Streisand effect"
+          ],
+          "et": [
+            "Barbra Streisandi efekt"
+          ]
         },
         "explanation": {
-          "en": "Charity usually faces limits on private benefit because assets serve its mission.",
-          "et": "Heategevusorganisatsioon allub tavaliselt erakasu piirangule, sest vara teenib missiooni."
+          "en": "The Streisand effect is the unintended amplification of information caused by trying to hide or censor it; Barbra Streisand's 2003 lawsuit supplied the name.",
+          "et": "Streisandi efekt on info varjamise või tsenseerimise katse põhjustatud tahtmatu võimendumine; nime andis Barbra Streisandi 2003. aasta kohtuasi."
         },
         "source": {
-          "sourceId": "wikipedia:charitable_organization",
-          "title": "Charitable organization",
-          "url": "https://en.wikipedia.org/wiki/Charitable_organization",
+          "sourceId": "wikipedia:streisand-effect",
+          "title": "Streisand effect",
+          "url": "https://en.wikipedia.org/wiki/Streisand_effect",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-052:question:3",
-        "factKey": "built-in-politics-economics-society:civil-society:medium:organization:cooperative",
+        "factKey": "economics:volkswagen-emissions:defeat-device-recognized-lab-tests-road-nox-higher",
         "tier": 3,
-        "subjectKey": "organization:cooperative",
+        "subjectKey": "event:volkswagen-emissions-scandal",
         "clue": {
-          "en": "A civil-society form is owned and democratically controlled by its members. Name it.",
-          "et": "Üks kodanikuühiskonna vorm kuulub liikmetele ning on nende demokraatliku kontrolli all. Millist vastust otsime?"
+          "en": "A carmaker programmed diesel engines to recognize laboratory tests, so its vehicles met limits in the lab while emitting far more nitrogen oxides on the road. Name the scandal.",
+          "et": "Autotootja programmeeris diiselmootorid laborikatseid ära tundma, nii et autod täitsid laboris piirnorme, kuid paiskasid teel õhku palju rohkem lämmastikoksiide. Nimeta skandaal."
         },
         "response": {
-          "en": "cooperative",
-          "et": "ühistu"
+          "en": "Volkswagen emissions scandal",
+          "et": "Volkswageni heitgaasiskandaal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Dieselgate",
+            "Volkswagen diesel scandal",
+            "VW emissions scandal",
+            "VW diesel scandal"
+          ],
+          "et": [
+            "Dieselgate",
+            "Volkswageni diisliskandaal",
+            "VW heitgaasiskandaal",
+            "diisliskandaal",
+            "Volkswageni heitmeskandaal",
+            "heitmeskandaal"
+          ]
         },
         "explanation": {
-          "en": "Cooperative typically follows one-member-one-vote rather than votes proportional to capital.",
-          "et": "Ühistu järgib tavaliselt põhimõtet üks liige, üks hääl, mitte kapitaliga võrdelisi hääli."
+          "en": "In the Volkswagen emissions scandal, also called Dieselgate, software detected official tests and changed engine behaviour; US regulators exposed the defeat devices in 2015.",
+          "et": "Volkswageni heitgaasiskandaalis ehk Dieselgate’is tundis tarkvara ametliku katse ära ja muutis mootori tööd; USA regulaatorid paljastasid selle katsetuvastustarkvara 2015. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:cooperative",
-          "title": "Cooperative",
-          "url": "https://en.wikipedia.org/wiki/Cooperative",
+          "sourceId": "wikipedia:volkswagen-emissions-scandal",
+          "title": "Volkswagen emissions scandal",
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-052:question:4",
-        "factKey": "built-in-politics-economics-society:civil-society:medium:concept:volunteering",
+        "factKey": "economics:galaxy-note-7:battery-fires-replacement-recall-production-ended-flight-ban",
         "tier": 4,
-        "subjectKey": "concept:volunteering",
+        "subjectKey": "product:samsung-galaxy-note-7",
         "clue": {
-          "en": "Identify this civil-society form: it gives time and skill freely for others or a cause.",
-          "et": "Kirjeldatud kodanikuühiskonna vorm annab aega ja oskusi vabalt teiste või eesmärgi heaks. Mis on selle nimi?"
+          "en": "Samsung ended production of which 2016 smartphone after batteries in both original and replacement units overheated or caught fire, leading airlines to ban it from flights?",
+          "et": "Millise 2016. aasta nutitelefoni tootmise lõpetas Samsung pärast seda, kui nii algsete kui ka asendusseadmete akud kuumenesid üle või süttisid ning lennufirmad keelasid telefoni lennukites?"
         },
         "response": {
-          "en": "volunteering",
-          "et": "vabatahtlik tegevus"
+          "en": "Samsung Galaxy Note 7",
+          "et": "Samsung Galaxy Note 7"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Galaxy Note 7",
+            "Samsung Note 7",
+            "Note 7",
+            "Samsung Galaxy Note7",
+            "Galaxy Note7",
+            "Samsung Note7",
+            "Note7"
+          ],
+          "et": [
+            "Galaxy Note 7",
+            "Samsung Note 7",
+            "Note 7",
+            "Samsung Galaxy Note7",
+            "Galaxy Note7",
+            "Samsung Note7",
+            "Note7"
+          ]
         },
         "explanation": {
-          "en": "Volunteering is unpaid service but may legitimately reimburse expenses.",
-          "et": "Vabatahtlik tegevus on tasustamata teenus, kuigi kulusid võib õiguspäraselt hüvitada."
+          "en": "The Samsung Galaxy Note 7 was recalled and discontinued after battery fires persisted in replacement devices; aviation authorities prohibited it aboard flights.",
+          "et": "Samsung Galaxy Note 7 kutsuti tagasi ja selle tootmine lõpetati, sest akupõlengud jätkusid ka asendusseadmetes; lennundusasutused keelasid selle lennukites."
         },
         "source": {
-          "sourceId": "wikipedia:volunteering",
-          "title": "Volunteering",
-          "url": "https://en.wikipedia.org/wiki/Volunteering",
+          "sourceId": "wikipedia:samsung-galaxy-note-7",
+          "title": "Samsung Galaxy Note 7",
+          "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_7",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-052:question:5",
-        "factKey": "built-in-politics-economics-society:civil-society:medium:concept:social-movement",
+        "factKey": "economics:hoover-flights:appliance-purchase-promised-return-tickets-claims-overwhelmed-company",
         "tier": 5,
-        "subjectKey": "concept:social-movement",
+        "subjectKey": "promotion:hoover-free-flights",
         "clue": {
-          "en": "Identify the civil-society form: it sustains collective action for social or political change.",
-          "et": "Mis kodanikuühiskonna vorm hoiab ühistegevust ühiskondliku või poliitilise muutuse nimel?"
+          "en": "A vacuum-cleaner company promised two return airline tickets with qualifying appliances, only to discover that claims cost far more than many purchases. Name the notorious promotion.",
+          "et": "Tolmuimejafirma lubas nõuetele vastava kodumasina ostuga kaks edasi-tagasi lennupiletit, kuid avastas, et nõuete täitmine maksis sageli palju rohkem kui ost. Nimeta kurikuulus kampaania."
         },
         "response": {
-          "en": "social movement",
-          "et": "ühiskondlik liikumine"
+          "en": "Hoover free flights promotion",
+          "et": "Hooveri tasuta lennupiletite kampaania"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Hoover flights fiasco",
+            "Hoover free flights fiasco"
+          ],
+          "et": [
+            "Hooveri lennupiletikampaania",
+            "Hooveri tasuta lendude fiasko"
+          ]
         },
         "explanation": {
-          "en": "Social movement is a looser network than a single formal organisation.",
-          "et": "Ühiskondlik liikumine on ühe ametliku organisatsiooniga võrreldes lõdvem võrgustik."
+          "en": "Hoover's free flights promotion offered return tickets with appliance purchases in Britain and Ireland; overwhelming demand and fulfilment problems turned it into a costly fiasco.",
+          "et": "Hooveri tasuta lennupiletite kampaania pakkus Suurbritannias ja Iirimaal kodumasinaostuga edasi-tagasi pileteid; tohutu nõudlus ja täitmisraskused muutsid selle kalliks fiaskoks."
         },
         "source": {
-          "sourceId": "wikipedia:social_movement",
-          "title": "Social movement",
-          "url": "https://en.wikipedia.org/wiki/Social_movement",
+          "sourceId": "wikipedia:hoover-free-flights-promotion",
+          "title": "Hoover free flights promotion",
+          "url": "https://en.wikipedia.org/wiki/Hoover_free_flights_promotion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -22292,153 +22530,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-053",
     "name": {
-      "en": "Peaceful Tools of Public Pressure",
-      "et": "Rahumeelse avaliku surve vahendid"
+      "en": "Marks on the Things We Buy",
+      "et": "Märgid asjadel, mida ostame"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-053:question:1",
-        "factKey": "built-in-politics-economics-society:collective-action:medium:concept:petition",
+        "factKey": "society:ce-marking:manufacturer-declares-eea-product-conformity",
         "tier": 1,
-        "subjectKey": "concept:petition",
+        "subjectKey": "mark:ce-conformity",
         "clue": {
-          "en": "This form of collective action collects formal requests or signatures for an authority. What is it?",
-          "et": "See ühistegevuse vorm kogub ametlikke taotlusi või allkirju võimule esitamiseks. Mis see on?"
+          "en": "Two rounded letters on electronics and toys show that the manufacturer declares the product meets relevant European Economic Area requirements. Name the marking.",
+          "et": "Kaks ümarat tähte elektroonikal ja mänguasjadel näitavad, et tootja kinnitab toote vastavust Euroopa Majanduspiirkonna nõuetele. Nimeta märgis."
         },
         "response": {
-          "en": "petition",
-          "et": "petitsioon"
+          "en": "CE marking",
+          "et": "CE-märgis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "CE mark",
+            "CE label"
+          ],
+          "et": [
+            "CE-märk",
+            "CE-tähis"
+          ]
         },
         "explanation": {
-          "en": "Petition channels a grievance without itself compelling the requested decision.",
-          "et": "Petitsioon suunab kaebuse võimuni, sundimata iseenesest soovitud otsust."
+          "en": "CE marking is the manufacturer's declaration that a product conforms to applicable EU requirements for sale in the EEA.",
+          "et": "CE-märgis on tootja kinnitus, et toode vastab EMP-s müümiseks kohalduvatele Euroopa Liidu nõuetele."
         },
         "source": {
-          "sourceId": "wikipedia:petition",
-          "title": "Petition",
-          "url": "https://en.wikipedia.org/wiki/Petition",
+          "sourceId": "wikipedia:ce-marking",
+          "title": "CE marking",
+          "url": "https://en.wikipedia.org/wiki/CE_marking",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-053:question:2",
-        "factKey": "built-in-politics-economics-society:collective-action:medium:concept:boycott",
+        "factKey": "society:fairtrade-mark:certifies-producer-and-trade-standards",
         "tier": 2,
-        "subjectKey": "concept:boycott",
+        "subjectKey": "mark:fairtrade-certification",
         "clue": {
-          "en": "What form of collective action refuses commercial or social dealings to exert pressure?",
-          "et": "Järgmine ühistegevuse vorm keeldub surve avaldamiseks kaubanduslikest või sotsiaalsetest suhetest. Milline see on?"
+          "en": "A black, blue, and green figure-like logo on coffee or chocolate signals a certification system with standards for producers and trade. Name the mark.",
+          "et": "Musta, sinise ja rohelise inimkuju meenutav logo kohvil või šokolaadil viitab tootjate ja kaubanduse standarditega sertifitseerimissüsteemile. Nimeta märgis."
         },
         "response": {
-          "en": "boycott",
-          "et": "boikott"
+          "en": "Fairtrade certification",
+          "et": "Fairtrade-märgis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Fairtrade mark",
+            "Fairtrade label",
+            "Fairtrade certification mark"
+          ],
+          "et": [
+            "õiglase kaubanduse märgis",
+            "Fairtrade’i märk",
+            "Fairtrade-sertifikaat"
+          ]
         },
         "explanation": {
-          "en": "Boycott is named after a nineteenth-century Irish land agent who was socially and economically isolated.",
-          "et": "Boikott on nimetatud ühe Iirimaal sotsiaalselt ja majanduslikult isoleeritud mõisavalitseja järgi."
+          "en": "The Fairtrade mark identifies products certified under Fairtrade standards intended to support producers and more equitable trading conditions.",
+          "et": "Fairtrade-märgis tähistab Fairtrade’i standardite järgi sertifitseeritud kaupa, mille eesmärk on toetada tootjaid ja õiglasemaid kaubandustingimusi."
         },
         "source": {
-          "sourceId": "wikipedia:boycott",
-          "title": "Boycott",
-          "url": "https://en.wikipedia.org/wiki/Boycott",
+          "sourceId": "wikipedia:fairtrade-certification",
+          "title": "Fairtrade certification",
+          "url": "https://en.wikipedia.org/wiki/Fairtrade_certification",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-053:question:3",
-        "factKey": "built-in-politics-economics-society:collective-action:medium:concept:demonstration",
+        "factKey": "society:energy-star:us-epa-voluntary-energy-efficiency-label",
         "tier": 3,
-        "subjectKey": "concept:demonstration",
+        "subjectKey": "mark:energy-star",
         "clue": {
-          "en": "One form of collective action gathers people publicly to express a shared position. Which one is described?",
-          "et": "Ühistegevuse vorm kogub inimesed avalikult ühist seisukohta väljendama. Mis see on?"
+          "en": "A blue label showing its name beneath a simple star began as a US Environmental Protection Agency programme for energy-efficient products. Name it.",
+          "et": "Sinine märgis, millel on nime kohal lihtne täht, algas USA keskkonnaagentuuri energiatõhusate toodete programmina. Nimeta see."
         },
         "response": {
-          "en": "demonstration",
-          "et": "meeleavaldus"
+          "en": "Energy Star",
+          "et": "Energy Star"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Energy Star label"
+          ],
+          "et": [
+            "Energy Stari märgis",
+            "energiatähe märgis"
+          ]
         },
         "explanation": {
-          "en": "Demonstration turns numbers, visibility, and public space into political communication.",
-          "et": "Meeleavaldus muudab osalejate arvu, nähtavuse ja avaliku ruumi poliitiliseks sõnumiks."
+          "en": "Energy Star is a voluntary programme created by the US EPA to identify products and buildings meeting energy-efficiency criteria.",
+          "et": "Energy Star on USA keskkonnaagentuuri loodud vabatahtlik programm, mis tähistab energiatõhususe nõuetele vastavaid tooteid ja hooneid."
         },
         "source": {
-          "sourceId": "wikipedia:demonstration_(political)",
-          "title": "Demonstration (political)",
-          "url": "https://en.wikipedia.org/wiki/Demonstration_(political)",
+          "sourceId": "wikipedia:energy-star",
+          "title": "Energy Star",
+          "url": "https://en.wikipedia.org/wiki/Energy_Star",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-053:question:4",
-        "factKey": "built-in-politics-economics-society:collective-action:medium:concept:civil-disobedience",
+        "factKey": "society:nordic-swan:official-nordic-environmental-product-label",
         "tier": 4,
-        "subjectKey": "concept:civil-disobedience",
+        "subjectKey": "mark:nordic-swan-ecolabel",
         "clue": {
-          "en": "Recognise the form of collective action that openly and non-violently breaks a law on grounds of conscience.",
-          "et": "Otsitav ühistegevuse vorm rikub südametunnistuse tõttu seadust avalikult ja vägivallatult. Mis see on?"
+          "en": "A white bird inside a green circular design is the official environmental product label of the Nordic countries. Name the ecolabel.",
+          "et": "Valge lind rohelises ringikujulises kujundis on Põhjamaade ametlik toodete keskkonnamärgis. Nimeta ökomärgis."
         },
         "response": {
-          "en": "civil disobedience",
-          "et": "kodanikuallumatus"
+          "en": "Nordic Swan Ecolabel",
+          "et": "Põhjamaade Luigemärk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nordic Swan",
+            "Swan label",
+            "Nordic Ecolabel"
+          ],
+          "et": [
+            "Põhjamaade Luik",
+            "Luigemärk",
+            "Põhjamaade ökomärgis"
+          ]
         },
         "explanation": {
-          "en": "Civil disobedience accepts legal risk to expose a claimed injustice.",
-          "et": "Kodanikuallumatus võtab õigusliku riski, et tuua nähtavale väidetav ebaõiglus."
+          "en": "The Nordic Swan Ecolabel is the Nordic countries' official environmental certification scheme, represented by a stylized swan.",
+          "et": "Põhjamaade Luigemärk on Põhjamaade ametlik keskkonnasertifikaat, mida kujutab stiliseeritud luik."
         },
         "source": {
-          "sourceId": "wikipedia:civil_disobedience",
-          "title": "Civil disobedience",
-          "url": "https://en.wikipedia.org/wiki/Civil_disobedience",
+          "sourceId": "wikipedia:nordic-swan",
+          "title": "Nordic swan",
+          "url": "https://en.wikipedia.org/wiki/Nordic_swan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-053:question:5",
-        "factKey": "built-in-politics-economics-society:collective-action:medium:concept:general-strike",
+        "factKey": "society:fsc:tree-check-logo-certifies-forest-products-chain",
         "tier": 5,
-        "subjectKey": "concept:general-strike",
+        "subjectKey": "mark:fsc-forest-certification",
         "clue": {
-          "en": "Which form of collective action withdraws labour across many industries at once?",
-          "et": "Tuvasta järgmine ühistegevuse vorm: see jätab töö korraga tegemata paljudes majandusharudes."
+          "en": "A small tree merging into a check mark on paper or furniture identifies products covered by responsible forest-management and chain-of-custody standards. Name the certification.",
+          "et": "Paberil või mööblil olev väike linnukeseks muutuv puu tähistab vastutustundliku metsamajanduse ja tarneahela standarditega hõlmatud tooteid. Nimeta sertifikaat."
         },
         "response": {
-          "en": "general strike",
-          "et": "üldstreik"
+          "en": "FSC certification",
+          "et": "FSC-sertifikaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "FSC label",
+            "Forest Stewardship Council certification",
+            "FSC mark",
+            "FSC"
+          ],
+          "et": [
+            "FSC-märgis",
+            "Metsahoolekogu sertifikaat",
+            "FSC"
+          ]
         },
         "explanation": {
-          "en": "General strike extends beyond a single workplace and can press broad political demands.",
-          "et": "Üldstreik ulatub ühest töökohast kaugemale ning võib toetada laiu poliitilisi nõudmisi."
+          "en": "FSC certification uses a tree-and-check logo to identify forest products covered by the council's responsible forest-management and chain-of-custody standards.",
+          "et": "FSC-sertifikaadi puu ja linnukese logo tähistab metsatooteid, mis kuuluvad nõukogu vastutustundliku metsamajanduse ja tarneahela standardite alla."
         },
         "source": {
-          "sourceId": "wikipedia:general_strike",
-          "title": "General strike",
-          "url": "https://en.wikipedia.org/wiki/General_strike",
+          "sourceId": "wikipedia:forest-stewardship-council",
+          "title": "Forest Stewardship Council",
+          "url": "https://en.wikipedia.org/wiki/Forest_Stewardship_Council",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -22446,153 +22720,191 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-054",
     "name": {
-      "en": "Checking Information before Sharing",
-      "et": "Teabe kontroll enne jagamist"
+      "en": "Experiments Everyone Argues About",
+      "et": "Eksperimendid, mille üle vaieldakse"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-054:question:1",
-        "factKey": "built-in-politics-economics-society:media-literacy:medium:concept:primary-source",
+        "factKey": "society:marshmallow-test:child-one-treat-now-or-two-after-waiting",
         "tier": 1,
-        "subjectKey": "concept:primary-source",
+        "subjectKey": "experiment:stanford-marshmallow",
         "clue": {
-          "en": "Find the media-literacy concept that provides direct evidence from the time, person, or event studied.",
-          "et": "Meediapädevuse mõiste annab uuritavast ajast, isikust või sündmusest otsese tõendi. Leia sobiv vastus."
+          "en": "A child could eat one sweet immediately or wait alone and receive two later. What snack-named Stanford study is this?",
+          "et": "Laps võis süüa ühe maiuse kohe või oodata üksinda ja saada hiljem kaks. Milline suupiste järgi nimetatud Stanfordi katse see on?"
         },
         "response": {
-          "en": "primary source",
-          "et": "algallikas"
+          "en": "marshmallow test",
+          "et": "vahukommitest"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Stanford marshmallow experiment",
+            "marshmallow experiment",
+            "marshmallow study"
+          ],
+          "et": [
+            "Stanfordi vahukommikatse",
+            "vahukommikatse",
+            "vahukommieksperiment"
+          ]
         },
         "explanation": {
-          "en": "Primary source must still be interpreted critically because proximity does not guarantee accuracy.",
-          "et": "Algallikas vajab ikkagi kriitilist tõlgendust, sest lähedus ei taga täpsust."
+          "en": "The marshmallow test studied delayed gratification by asking young children to choose between one immediate reward and a larger delayed reward.",
+          "et": "Vahukommitest uuris rahulduse edasilükkamist, lastes väikelastel valida ühe kohese tasu ja suurema hilisema tasu vahel."
         },
         "source": {
-          "sourceId": "wikipedia:primary_source",
-          "title": "Primary source",
-          "url": "https://en.wikipedia.org/wiki/Primary_source",
+          "sourceId": "wikipedia:stanford-marshmallow-experiment",
+          "title": "Stanford marshmallow experiment",
+          "url": "https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-054:question:2",
-        "factKey": "built-in-politics-economics-society:media-literacy:medium:concept:fact-checking",
+        "factKey": "society:asch-conformity:group-wrong-line-answer-influenced-participant",
         "tier": 2,
-        "subjectKey": "concept:fact-checking",
+        "subjectKey": "experiment:asch-conformity",
         "clue": {
-          "en": "Which media-literacy concept tests a claim against traceable reliable evidence?",
-          "et": "Tuvasta järgmine meediapädevuse mõiste: see kontrollib väidet jälgitavate usaldusväärsete tõenditega."
+          "en": "One participant compared line lengths after a roomful of planted volunteers had all chosen the same obviously wrong match. Name Solomon Asch's group-pressure study.",
+          "et": "Üks osaleja võrdles joonte pikkusi pärast seda, kui ruumitäis kokkumängijaid oli valinud sama ilmselgelt vale vastuse. Nimeta Solomon Aschi rühmasurve uuring."
         },
         "response": {
-          "en": "fact-checking",
-          "et": "faktikontroll"
+          "en": "Asch conformity experiments",
+          "et": "Aschi konformsuskatsed"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Asch experiment",
+            "Asch conformity experiment",
+            "Asch line experiment"
+          ],
+          "et": [
+            "Aschi eksperiment",
+            "Aschi konformsuseksperiment",
+            "Aschi joonekatse"
+          ]
         },
         "explanation": {
-          "en": "Fact-checking works best when it publishes sources and reasoning, not merely a verdict label.",
-          "et": "Faktikontroll toimib kõige paremini, kui avaldab allikad ja arutluse, mitte üksnes hinnangu."
+          "en": "The Asch conformity experiments tested whether people would repeat a group's incorrect line-length judgment despite clear visual evidence.",
+          "et": "Aschi konformsuskatsed uurisid, kas inimene kordab rühma valet joonepikkuse hinnangut hoolimata selgest visuaalsest tõendist."
         },
         "source": {
-          "sourceId": "wikipedia:fact-checking",
-          "title": "Fact-checking",
-          "url": "https://en.wikipedia.org/wiki/Fact-checking",
+          "sourceId": "wikipedia:asch-conformity-experiments",
+          "title": "Asch conformity experiments",
+          "url": "https://en.wikipedia.org/wiki/Asch_conformity_experiments",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-054:question:3",
-        "factKey": "built-in-politics-economics-society:media-literacy:medium:concept:editorial",
+        "factKey": "society:milgram:participants-believed-they-administered-shocks-under-authority",
         "tier": 3,
-        "subjectKey": "concept:editorial",
+        "subjectKey": "experiment:milgram-obedience",
         "clue": {
-          "en": "One media-literacy concept states a publication’s institutional opinion rather than straight news. Which one is described?",
-          "et": "Meediapädevuse mõiste esitab väljaande institutsionaalse arvamuse, mitte tavauudise. Mis see on?"
+          "en": "An experimenter in a lab coat urged participants to continue pressing higher-voltage switches, although the “learner” was an actor and no shocks were delivered. Name the obedience study.",
+          "et": "Valges kitlis katsejuht käskis osalejatel vajutada aina kõrgema pingega lüliteid, kuigi „õppija” oli näitleja ja tegelikke elektrilööke ei antud. Nimeta kuulekusuuring."
         },
         "response": {
-          "en": "editorial",
-          "et": "juhtkiri"
+          "en": "Milgram experiment",
+          "et": "Milgrami eksperiment"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Milgram obedience experiment",
+            "Milgram study",
+            "Milgram"
+          ],
+          "et": [
+            "Milgrami kuulekuseeksperiment",
+            "Milgrami katse",
+            "Milgram"
+          ]
         },
         "explanation": {
-          "en": "Editorial is usually unsigned because it speaks for the publication’s board.",
-          "et": "Juhtkiri on tavaliselt allkirjata, sest kõneleb toimetuse nimel."
+          "en": "Stanley Milgram's experiment tested obedience to authority by making participants believe they were administering increasingly severe electric shocks.",
+          "et": "Stanley Milgrami eksperiment uuris autoriteedile kuuletumist, pannes osalejad uskuma, et nad annavad aina tugevamaid elektrilööke."
         },
         "source": {
-          "sourceId": "wikipedia:editorial",
-          "title": "Editorial",
-          "url": "https://en.wikipedia.org/wiki/Editorial",
+          "sourceId": "wikipedia:milgram-experiment",
+          "title": "Milgram experiment",
+          "url": "https://en.wikipedia.org/wiki/Milgram_experiment",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-054:question:4",
-        "factKey": "built-in-politics-economics-society:media-literacy:medium:concept:propaganda",
+        "factKey": "society:third-wave:teacher-created-authoritarian-classroom-movement-to-explain-nazism",
         "tier": 4,
-        "subjectKey": "concept:propaganda",
+        "subjectKey": "experiment:third-wave-classroom",
         "clue": {
-          "en": "Recognise the media-literacy concept that selectively communicates to shape attitudes or behaviour.",
-          "et": "Otsitav meediapädevuse mõiste suhtleb valikuliselt hoiakute või käitumise kujundamiseks. Mis see on?"
+          "en": "A California teacher gave students salutes, slogans, discipline, and membership cards to show how ordinary people could be drawn into fascism. What classroom movement did he create?",
+          "et": "California õpetaja andis õpilastele tervituse, loosungid, distsipliini ja liikmekaardi, et näidata, kuidas tavalisi inimesi võib fašism kaasa tõmmata. Millise klassiliikumise ta lõi?"
         },
         "response": {
-          "en": "propaganda",
-          "et": "propaganda"
+          "en": "Third Wave experiment",
+          "et": "Kolmanda laine eksperiment"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "The Third Wave",
+            "Third Wave classroom experiment"
+          ],
+          "et": [
+            "Kolmas Laine",
+            "Kolmanda laine klassieksperiment",
+            "Third Wave eksperiment"
+          ]
         },
         "explanation": {
-          "en": "Propaganda may use true facts as well as falsehoods, framing them toward a persuasive goal.",
-          "et": "Propaganda võib kasutada nii tõeseid fakte kui valet, raamides neid veenmise eesmärgil."
+          "en": "The Third Wave was Ron Jones's 1967 classroom experiment, an authoritarian movement devised while teaching how Germans could have accepted Nazism.",
+          "et": "Kolmas Laine oli Ron Jonesi 1967. aasta klassieksperiment, autoritaarne liikumine, mis sündis õpetades, kuidas sakslased võisid natsismi omaks võtta."
         },
         "source": {
-          "sourceId": "wikipedia:propaganda",
-          "title": "Propaganda",
-          "url": "https://en.wikipedia.org/wiki/Propaganda",
+          "sourceId": "wikipedia:the-third-wave-experiment",
+          "title": "The Third Wave (experiment)",
+          "url": "https://en.wikipedia.org/wiki/The_Third_Wave_(experiment)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-054:question:5",
-        "factKey": "built-in-politics-economics-society:media-literacy:medium:concept:misinformation",
+        "factKey": "society:robbers-cave:boys-camp-rival-groups-conflict-shared-goals",
         "tier": 5,
-        "subjectKey": "concept:misinformation",
+        "subjectKey": "experiment:robbers-cave",
         "clue": {
-          "en": "Which media-literacy concept is false or misleading information regardless of intent?",
-          "et": "Tuvasta järgmine meediapädevuse mõiste: see on väär või eksitav teave sõltumata kavatsusest."
+          "en": "At an Oklahoma summer camp, boys were split into rival groups, made hostile through competition, and later brought together with problems neither group could solve alone. Name the study.",
+          "et": "Oklahoma suvelaagris jagati poisid rivaalitsevateks rühmadeks, võistlus muutis nad vaenulikuks ning hiljem ühendati nad ülesannetega, mida kumbki rühm üksi lahendada ei saanud. Nimeta uuring."
         },
         "response": {
-          "en": "misinformation",
-          "et": "väärinfo"
+          "en": "Robbers Cave experiment",
+          "et": "Robbers Cave’i eksperiment"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Robbers Cave study",
+            "Robbers Cave"
+          ],
+          "et": [
+            "Robbers Cave’i katse",
+            "röövlikoopa eksperiment",
+            "Robbers Cave"
+          ]
         },
         "explanation": {
-          "en": "Misinformation differs from disinformation, which is deliberately deceptive.",
-          "et": "Väärinfo erineb desinformatsioonist, mis on tahtlikult petlik."
+          "en": "The Robbers Cave experiment studied intergroup conflict by creating competition between two groups of boys and then introducing shared, superordinate goals.",
+          "et": "Robbers Cave’i eksperiment uuris rühmadevahelist konflikti, tekitades kahe poisterühma vahel konkurentsi ja tuues seejärel mängu ühised kõrgema tasandi eesmärgid."
         },
         "source": {
-          "sourceId": "wikipedia:misinformation",
-          "title": "Misinformation",
-          "url": "https://en.wikipedia.org/wiki/Misinformation",
+          "sourceId": "wikipedia:robbers-cave-experiment",
+          "title": "Robbers Cave Experiment",
+          "url": "https://en.wikipedia.org/wiki/Robbers_Cave_Experiment",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -22600,153 +22912,186 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-055",
     "name": {
-      "en": "How Newsrooms Serve the Public",
-      "et": "Kuidas toimetus avalikkust teenib"
+      "en": "Gifts Between Countries That Stayed Famous",
+      "et": "Riikide kingid, mis jäid kuulsaks"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-055:question:1",
-        "factKey": "built-in-politics-economics-society:journalism-forms:medium:concept:investigative-journalism",
+        "factKey": "politics:panda-diplomacy:china-gifts-loans-giant-pandas-for-relations",
         "tier": 1,
-        "subjectKey": "concept:investigative-journalism",
+        "subjectKey": "practice:panda-diplomacy",
         "clue": {
-          "en": "This journalism form or practice uses sustained original reporting to uncover concealed matters. What is it?",
-          "et": "See ajakirjandusvorm või -tava kasutab varjatud asjaolude paljastamiseks pikaajalist algupärast uurimist. Mis see on?"
+          "en": "China has sent a famously black-and-white animal to foreign zoos as a gift or loan tied to warmer relations. What cuddly phrase names the practice?",
+          "et": "Hiina on saatnud kuulsa mustvalge looma välismaa loomaaedadesse kingi või laenuna, mis seostub soojemate suhetega. Milline armas väljend seda tava nimetab?"
         },
         "response": {
-          "en": "investigative journalism",
-          "et": "uuriv ajakirjandus"
+          "en": "panda diplomacy",
+          "et": "pandadiplomaatia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "giant-panda diplomacy",
+            "China's panda diplomacy"
+          ],
+          "et": [
+            "hiidpandadiplomaatia",
+            "Hiina pandadiplomaatia"
+          ]
         },
         "explanation": {
-          "en": "Investigative journalism often combines records, confidential sources, and independent verification.",
-          "et": "Uuriv ajakirjandus ühendab sageli dokumendid, konfidentsiaalsed allikad ja sõltumatu kontrolli."
+          "en": "Panda diplomacy is China's use of giant-panda gifts and, more recently, loans as diplomatic gestures toward other countries.",
+          "et": "Pandadiplomaatia tähendab Hiina hiidpandakingituste ja uuemal ajal laenude kasutamist diplomaatiliste žestidena teiste riikide suhtes."
         },
         "source": {
-          "sourceId": "wikipedia:investigative_journalism",
-          "title": "Investigative journalism",
-          "url": "https://en.wikipedia.org/wiki/Investigative_journalism",
+          "sourceId": "wikipedia:panda-diplomacy",
+          "title": "Panda diplomacy",
+          "url": "https://en.wikipedia.org/wiki/Panda_diplomacy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-055:question:2",
-        "factKey": "built-in-politics-economics-society:journalism-forms:medium:concept:public-broadcasting",
+        "factKey": "politics:resolute-desk:queen-victoria-gift-hayes-ship-timbers-oval-office",
         "tier": 2,
-        "subjectKey": "concept:public-broadcasting",
+        "subjectKey": "artifact:resolute-desk",
         "clue": {
-          "en": "What journalism form or practice operates under a public-service mission rather than only commercial return?",
-          "et": "Järgmine ajakirjandusvorm või -tava tegutseb avaliku teenuse eesmärgil, mitte üksnes äritulu nimel. Milline see on?"
+          "en": "Queen Victoria gave a US president a desk made from timbers of an Arctic exploration ship returned to Britain by America. It later became an Oval Office fixture. Name the desk.",
+          "et": "Kuninganna Victoria kinkis USA presidendile laua, mis tehti Ameerika poolt Suurbritanniale tagastatud Arktika uurimislaeva puidust. Hiljem sai sellest ovaalkabineti püsiese. Nimeta laud."
         },
         "response": {
-          "en": "public broadcasting",
-          "et": "avalik-õiguslik ringhääling"
+          "en": "Resolute desk",
+          "et": "Resolute’i kirjutuslaud"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Resolute desk",
+            "HMS Resolute desk"
+          ],
+          "et": [
+            "Resolute’i laud",
+            "HMS Resolute’i kirjutuslaud"
+          ]
         },
         "explanation": {
-          "en": "Public broadcasting is expected to provide broad access, information, education, and culture.",
-          "et": "Avalik-õiguslik ringhääling peab pakkuma laialt ligipääsetavat teavet, haridust ja kultuuri."
+          "en": "The Resolute desk was made from HMS Resolute timbers and presented by Queen Victoria to President Rutherford B. Hayes in 1880; many later presidents used it in the Oval Office.",
+          "et": "Resolute’i kirjutuslaud valmistati HMS Resolute’i puidust ja kuninganna Victoria kinkis selle 1880. aastal president Rutherford B. Hayesile; paljud hilisemad presidendid kasutasid seda ovaalkabinetis."
         },
         "source": {
-          "sourceId": "wikipedia:public_broadcasting",
-          "title": "Public broadcasting",
-          "url": "https://en.wikipedia.org/wiki/Public_broadcasting",
+          "sourceId": "wikipedia:resolute-desk",
+          "title": "Resolute desk",
+          "url": "https://en.wikipedia.org/wiki/Resolute_desk",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-055:question:3",
-        "factKey": "built-in-politics-economics-society:journalism-forms:medium:organization:news-agency",
+        "factKey": "politics:washington-cherry-trees:tokyo-gifted-trees-us-friendship-festival",
         "tier": 3,
-        "subjectKey": "organization:news-agency",
+        "subjectKey": "gift:washington-japanese-cherry-trees",
         "clue": {
-          "en": "A journalism form or practice supplies reports that many newspapers and broadcasters reuse. Name it.",
-          "et": "Üks ajakirjandusvorm või -tava varustab paljusid ajalehti ja ringhäälinguid taaskasutatavate uudistega. Millist vastust otsime?"
+          "en": "Each spring, blossom crowds recall Tokyo's gift of thousands of flowering trees to the United States, planted around the Tidal Basin. Name the Washington gift.",
+          "et": "Igal kevadel meenutavad õitemassi vaatama tulnud rahvahulgad Tokyo kingitud tuhandeid õitsevaid puid, mis istutati Tidal Basini ümbrusse. Nimeta Washingtoni kingitus."
         },
         "response": {
-          "en": "news agency",
-          "et": "uudisteagentuur"
+          "en": "Washington's Japanese cherry trees",
+          "et": "Washingtoni jaapani kirsipuud"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Japanese cherry trees in Washington",
+            "Washington cherry blossoms",
+            "Potomac cherry trees"
+          ],
+          "et": [
+            "Washingtoni kirsipuud",
+            "Washingtoni kirsiõied",
+            "Potomaci kirsipuud"
+          ]
         },
         "explanation": {
-          "en": "News agency syndicates wire copy instead of addressing only one retail audience.",
-          "et": "Uudisteagentuur levitab agentuurimaterjali ega pöördu üksnes ühe lõpppubliku poole."
+          "en": "Washington's Japanese cherry trees came from a 1912 gift by Tokyo to symbolize friendship; their bloom is celebrated by the National Cherry Blossom Festival.",
+          "et": "Washingtoni jaapani kirsipuud pärinevad Tokyo 1912. aasta sõpruskinkidest ning nende õitsemist tähistab National Cherry Blossom Festival."
         },
         "source": {
-          "sourceId": "wikipedia:news_agency",
-          "title": "News agency",
-          "url": "https://en.wikipedia.org/wiki/News_agency",
+          "sourceId": "wikipedia:national-cherry-blossom-festival",
+          "title": "National Cherry Blossom Festival",
+          "url": "https://en.wikipedia.org/wiki/National_Cherry_Blossom_Festival",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-055:question:4",
-        "factKey": "built-in-politics-economics-society:journalism-forms:medium:concept:op-ed",
+        "factKey": "politics:trafalgar-tree:norway-annual-gift-thanks-britain-wwii-support",
         "tier": 4,
-        "subjectKey": "concept:op-ed",
+        "subjectKey": "gift:trafalgar-square-christmas-tree",
         "clue": {
-          "en": "This journalism form or practice is a signed opinion article distinct from the editorial board’s view. What is it?",
-          "et": "See ajakirjandusvorm või -tava on allkirjastatud arvamuslugu, mis erineb toimetuse seisukohast. Mis see on?"
+          "en": "Every year, Norway sends London a tall spruce to thank Britain for its support during the Second World War. What famous seasonal gift stands in the city centre?",
+          "et": "Norra saadab igal aastal Londonisse kõrge kuuse tänuks Suurbritannia toetuse eest Teise maailmasõja ajal. Milline kuulus hooajaline kingitus seisab kesklinnas?"
         },
         "response": {
-          "en": "op-ed",
-          "et": "arvamusartikkel"
+          "en": "Trafalgar Square Christmas tree",
+          "et": "Trafalgari väljaku jõulupuu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Trafalgar Christmas tree",
+            "Norway's Trafalgar tree"
+          ],
+          "et": [
+            "Norra Trafalgari jõulupuu",
+            "Trafalgar Square’i jõulupuu"
+          ]
         },
         "explanation": {
-          "en": "Op-ed takes its name from placement opposite the editorial page in print tradition.",
-          "et": "Arvamusartikkel saab nime trükiajakirjanduse paigutusest juhtkirjale vastaslehel."
+          "en": "The Trafalgar Square Christmas tree is Norway's annual gift to London, given since 1947 in gratitude for British support during the war.",
+          "et": "Trafalgari väljaku jõulupuu on Norra iga-aastane kingitus Londonile, mida antakse alates 1947. aastast tänuks sõjaaegse Briti toetuse eest."
         },
         "source": {
-          "sourceId": "wikipedia:op-ed",
-          "title": "Op-ed",
-          "url": "https://en.wikipedia.org/wiki/Op-ed",
+          "sourceId": "wikipedia:trafalgar-square-christmas-tree",
+          "title": "Trafalgar Square Christmas tree",
+          "url": "https://en.wikipedia.org/wiki/Trafalgar_Square_Christmas_tree",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-055:question:5",
-        "factKey": "built-in-politics-economics-society:journalism-forms:medium:concept:news-correction",
+        "factKey": "politics:canadian-tulip-festival:dutch-royal-refuge-and-liberation-gifts-to-ottawa",
         "tier": 5,
-        "subjectKey": "concept:news-correction",
+        "subjectKey": "festival-gift:canadian-tulip-festival",
         "clue": {
-          "en": "Identify the journalism form or practice: it publicly fixes a factual error in previously published work.",
-          "et": "Mis ajakirjandusvorm või -tava parandab avalikult varem ilmunud töö faktivea?"
+          "en": "A royal family's wartime refuge and Canadian help liberating the Netherlands led to lasting gifts of flower bulbs and a huge spring celebration in Ottawa. Name the festival.",
+          "et": "Kuningapere sõjaaegne varjupaik ja Kanada abi Hollandi vabastamisel tõid kaasa püsivad lillesibulakingid ning suure kevadpeo Ottawas. Nimeta festival."
         },
         "response": {
-          "en": "correction",
-          "et": "parandus"
+          "en": "Canadian Tulip Festival",
+          "et": "Kanada tulbifestival"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ottawa Tulip Festival",
+            "Canada's Tulip Festival"
+          ],
+          "et": [
+            "Ottawa tulbifestival",
+            "Kanada tulpide festival",
+            "Canadian Tulip Festival"
+          ]
         },
         "explanation": {
-          "en": "Correction preserves accountability by identifying the original error and accurate replacement.",
-          "et": "Parandus hoiab vastutust, nimetades algse vea ja õige asenduse."
+          "en": "The Canadian Tulip Festival grew from Dutch gifts thanking Canada for sheltering the royal family and for its role in the Netherlands' liberation during the Second World War.",
+          "et": "Kanada tulbifestival kasvas Hollandi kingitustest, millega tänati Kanadat kuningapere varjamise ja Hollandi vabastamisele kaasaaitamise eest Teises maailmasõjas."
         },
         "source": {
-          "sourceId": "wikipedia:retraction",
-          "title": "Retraction",
-          "url": "https://en.wikipedia.org/wiki/Retraction",
+          "sourceId": "wikipedia:canadian-tulip-festival",
+          "title": "Canadian Tulip Festival",
+          "url": "https://en.wikipedia.org/wiki/Canadian_Tulip_Festival",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
