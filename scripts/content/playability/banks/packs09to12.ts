@@ -31475,153 +31475,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-034",
     "name": {
-      "en": "The Olympians and Their Symbols",
-      "et": "Olümpose jumalad ja nende sümbolid"
+      "en": "Mythic Curses and Punishments",
+      "et": "Müütilised needused ja karistused"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-034:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:olympian-gods:medium:deity:zeus",
+        "factKey": "midas:golden-touch-curse",
         "tier": 1,
-        "subjectKey": "deity:zeus",
+        "subjectKey": "myth:midas",
         "clue": {
-          "en": "One Greek deity rules the sky and wields the thunderbolt. Who is described?",
-          "et": "Kreeka jumalus valitseb taevast ning kannab välgunoolt. Kes see on?"
+          "en": "Dionysus granted a king’s wish that everything he touched turn to gold. The gift became a curse when even food changed in his hands. Name the king.",
+          "et": "Dionysos täitis ühe kuninga soovi, et kõik tema puudutatu muutuks kullaks. Kingitus sai needuseks, kui isegi toit tema käes muutus. Nimeta kuningas."
         },
         "response": {
-          "en": "Zeus",
-          "et": "Zeus"
+          "en": "King Midas",
+          "et": "kuningas Midas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Midas"
+          ],
+          "et": [
+            "Midas"
+          ]
         },
         "explanation": {
-          "en": "Zeus overthrew Cronus and divided the cosmos with his brothers.",
-          "et": "Zeus kukutas Kronose ning jagas maailma oma vendadega."
+          "en": "King Midas is remembered for the golden touch that made eating and drinking impossible.",
+          "et": "Kuningas Midast mäletatakse kuldse puudutuse järgi, mis tegi söömise ja joomise võimatuks."
         },
         "source": {
-          "sourceId": "wikipedia:zeus",
-          "title": "Zeus",
-          "url": "https://en.wikipedia.org/wiki/Zeus",
+          "sourceId": "wikipedia:midas",
+          "title": "Midas",
+          "url": "https://en.wikipedia.org/wiki/Midas",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-034:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:olympian-gods:medium:deity:hera",
+        "factKey": "sisyphus:endless-boulder",
         "tier": 2,
-        "subjectKey": "deity:hera",
+        "subjectKey": "myth:sisyphus",
         "clue": {
-          "en": "This Greek deity is queen of the gods and patron of marriage. Who is it?",
-          "et": "See Kreeka jumalus on jumalate kuninganna ning abielu kaitsja. Kes see on?"
+          "en": "Which punished king must forever push a huge boulder uphill, only to watch it roll down whenever he nears the top?",
+          "et": "Milline karistatud kuningas peab igavesti lükkama hiiglaslikku kivi mäkke, kuid tippu jõudes näeb seda alati alla veeremas?"
         },
         "response": {
-          "en": "Hera",
-          "et": "Hera"
+          "en": "Sisyphus",
+          "et": "Sisyphos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Sisyphos"
+          ],
+          "et": [
+            "Sisyphus"
+          ]
         },
         "explanation": {
-          "en": "Hera was both sister and wife of Zeus in Olympian genealogy.",
-          "et": "Hera oli Olümpose sugupuus ühtaegu Zeusi õde ja naine."
+          "en": "Sisyphus’s endless failed climb gave English the adjective “Sisyphean” for labor that can never be completed.",
+          "et": "Sisyphose lõputu nurjuv tõus on andnud nime tööle, mida pole võimalik lõpule viia."
         },
         "source": {
-          "sourceId": "wikipedia:hera",
-          "title": "Hera",
-          "url": "https://en.wikipedia.org/wiki/Hera",
+          "sourceId": "wikipedia:sisyphus",
+          "title": "Sisyphus",
+          "url": "https://en.wikipedia.org/wiki/Sisyphus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-034:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:olympian-gods:medium:deity:athena",
+        "factKey": "cassandra:true-prophecies-disbelieved",
         "tier": 3,
-        "subjectKey": "deity:athena",
+        "subjectKey": "myth:cassandra",
         "clue": {
-          "en": "Which Greek deity represents wisdom and is linked with the owl and Athens?",
-          "et": "Kes kehastab tarkust ning seostub öökulli ja Ateenaga?"
+          "en": "Apollo gave which Trojan woman true prophetic sight, then cursed her so that nobody would believe her warnings?",
+          "et": "Millisele Trooja naisele andis Apollon tõese ennustusvõime, kuid needis ta nii, et keegi ei uskunud tema hoiatusi?"
         },
         "response": {
-          "en": "Athena",
-          "et": "Athena"
+          "en": "Cassandra",
+          "et": "Kassandra"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kassandra"
+          ],
+          "et": [
+            "Cassandra"
+          ]
         },
         "explanation": {
-          "en": "Athena sprang fully armed from Zeus’s head after he swallowed Metis.",
-          "et": "Athena sündis täies relvastuses Zeusi peast pärast Metise allaneelamist."
+          "en": "Cassandra could foresee disaster accurately, but the curse made her powerless to persuade others.",
+          "et": "Kassandra nägi katastroofe õigesti ette, kuid needus võttis temalt võimaluse teisi veenda."
         },
         "source": {
-          "sourceId": "wikipedia:athena",
-          "title": "Athena",
-          "url": "https://en.wikipedia.org/wiki/Athena",
+          "sourceId": "wikipedia:cassandra",
+          "title": "Cassandra",
+          "url": "https://en.wikipedia.org/wiki/Cassandra",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-034:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:olympian-gods:medium:deity:apollo",
+        "factKey": "tantalus:unreachable-food-water",
         "tier": 4,
-        "subjectKey": "deity:apollo",
+        "subjectKey": "myth:tantalus",
         "clue": {
-          "en": "A Greek deity governs prophecy and music and carries the lyre. Who fits?",
-          "et": "Siin kirjeldatud Kreeka jumalus valitseb ennustamist ja muusikat ning kannab lüürat. Kes see on?"
+          "en": "In Tartarus, which king stands among fruit and water that retreat whenever hunger or thirst makes him reach for them?",
+          "et": "Milline kuningas seisab Tartaroses puuviljade ja vee keskel, mis taanduvad alati, kui nälg või janu paneb teda nende järele sirutama?"
         },
         "response": {
-          "en": "Apollo",
-          "et": "Apollon"
+          "en": "Tantalus",
+          "et": "Tantalos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tantalos"
+          ],
+          "et": [
+            "Tantalus"
+          ]
         },
         "explanation": {
-          "en": "Apollo spoke through the Pythia at his sanctuary in Delphi.",
-          "et": "Apollon kõneles Delfi pühamus Pythia kaudu."
+          "en": "Tantalus’s unreachable food and drink are the mythic source of the verb “tantalize.”",
+          "et": "Tantalose kättesaamatu toit ja jook on müütiline allikas inglise verbile „tantalize”."
         },
         "source": {
-          "sourceId": "wikipedia:apollo",
-          "title": "Apollo",
-          "url": "https://en.wikipedia.org/wiki/Apollo",
+          "sourceId": "wikipedia:tantalus",
+          "title": "Tantalus",
+          "url": "https://en.wikipedia.org/wiki/Tantalus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-034:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:olympian-gods:medium:deity:poseidon",
+        "factKey": "arachne:weaving-spider-transformation",
         "tier": 5,
-        "subjectKey": "deity:poseidon",
+        "subjectKey": "myth:arachne",
         "clue": {
-          "en": "Which Greek deity rules the sea and carries a trident?",
-          "et": "Kirjeldatud Kreeka jumalus valitseb merd ning kannab kolmharki. Mis on tema nimi?"
+          "en": "A gifted mortal challenged Athena to a weaving contest and ended as the creature that still spins webs. Name her.",
+          "et": "Andekas surelik esitas Athenale kudumisvõistlusel väljakutse ning muutus lõpuks olendiks, kes tänini võrke koob. Nimeta ta."
         },
         "response": {
-          "en": "Poseidon",
-          "et": "Poseidon"
+          "en": "Arachne",
+          "et": "Arachne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Arakhne"
+          ],
+          "et": [
+            "Arakhne"
+          ]
         },
         "explanation": {
-          "en": "Poseidon lost the contest for Athens after offering a saltwater spring against Athena’s olive.",
-          "et": "Poseidon kaotas võistluse Ateena pärast, pakkudes Athena oliivipuu vastu soolase allika."
+          "en": "Arachne’s contest and transformation connect her name with spiders and their webs.",
+          "et": "Arachne võistlus ja muutumine seovad tema nime ämblike ning nende võrkudega."
         },
         "source": {
-          "sourceId": "wikipedia:poseidon",
-          "title": "Poseidon",
-          "url": "https://en.wikipedia.org/wiki/Poseidon",
+          "sourceId": "wikipedia:arachne",
+          "title": "Arachne",
+          "url": "https://en.wikipedia.org/wiki/Arachne",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -31629,153 +31649,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-035",
     "name": {
-      "en": "Heroes of Greek Myth",
-      "et": "Kreeka müütide kangelased"
+      "en": "Aesop Still Speaks",
+      "et": "Aisopos räägib siiani"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-035:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:greek-heroes:medium:hero:heracles",
+        "factKey": "tortoise-hare:slow-steady-race",
         "tier": 1,
-        "subjectKey": "hero:heracles",
+        "subjectKey": "fable:tortoise-hare",
         "clue": {
-          "en": "A Greek hero completed twelve labours including defeating the Nemean lion. Name them.",
-          "et": "Üks Kreeka kangelane täitis kaksteist vägitegu, sealhulgas alistas Nemea lõvi. Keda otsime?"
+          "en": "In which fable does an overconfident runner take a nap while a much slower rival keeps moving and wins their race?",
+          "et": "Millise valmi loos jääb enesekindel jooksja magama, samal ajal kui palju aeglasem vastane liigub edasi ja võidab nende võidujooksu?"
         },
         "response": {
-          "en": "Heracles",
-          "et": "Herakles"
+          "en": "The Tortoise and the Hare",
+          "et": "Kilpkonn ja jänes"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tortoise and the Hare",
+            "The Hare and the Tortoise"
+          ],
+          "et": [
+            "Jänes ja kilpkonn"
+          ]
         },
         "explanation": {
-          "en": "Heracles served Eurystheus as penance after Hera drove him into madness.",
-          "et": "Herakles teenis Eurystheust patukahetsuseks pärast Hera saadetud hullust."
+          "en": "The Tortoise and the Hare rewards steady persistence after the faster hare wastes his lead.",
+          "et": "„Kilpkonn ja jänes” premeerib järjekindlust pärast seda, kui kiirem jänes oma edumaa maha magab."
         },
         "source": {
-          "sourceId": "wikipedia:heracles",
-          "title": "Heracles",
-          "url": "https://en.wikipedia.org/wiki/Heracles",
+          "sourceId": "wikipedia:the_tortoise_and_the_hare",
+          "title": "The Tortoise and the Hare",
+          "url": "https://en.wikipedia.org/wiki/The_Tortoise_and_the_Hare",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-035:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:greek-heroes:medium:hero:odysseus",
+        "factKey": "boy-cried-wolf:false-alarms",
         "tier": 2,
-        "subjectKey": "hero:odysseus",
+        "subjectKey": "fable:boy-cried-wolf",
         "clue": {
-          "en": "Identify this Greek hero: they spent ten years journeying home to Ithaca after Troy.",
-          "et": "Kirjeldatud Kreeka kangelane rändas pärast Trooja sõda kümme aastat kodusaarele Ithakale. Mis on tema nimi?"
+          "en": "Villagers answer a young shepherd’s repeated false alarms, then ignore him when the predator really arrives. Name the fable.",
+          "et": "Külaelanikud reageerivad noore karjase korduvatele valehäiretele, kuid ei usu teda enam siis, kui kiskja päriselt saabub. Nimeta valm."
         },
         "response": {
-          "en": "Odysseus",
-          "et": "Odysseus"
+          "en": "The Boy Who Cried Wolf",
+          "et": "Poiss, kes hüüdis „Hunt!“"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Boy Who Cried Wolf",
+            "The Shepherd Boy and the Wolf"
+          ],
+          "et": [
+            "Karjapoiss ja hunt"
+          ]
         },
         "explanation": {
-          "en": "Odysseus escaped the Cyclops by naming himself Nobody and hiding beneath sheep.",
-          "et": "Odysseus pääses kükloobi käest, nimetades end Eikeegiks ning peitudes lammaste alla."
+          "en": "The Boy Who Cried Wolf warns that habitual liars may not be believed even when they finally tell the truth.",
+          "et": "„Poiss, kes hüüdis „Hunt!”” hoiatab, et harjumuspärast valetajat ei pruugita uskuda ka siis, kui ta lõpuks tõtt räägib."
         },
         "source": {
-          "sourceId": "wikipedia:odysseus",
-          "title": "Odysseus",
-          "url": "https://en.wikipedia.org/wiki/Odysseus",
+          "sourceId": "wikipedia:the_boy_who_cried_wolf",
+          "title": "The Boy Who Cried Wolf",
+          "url": "https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-035:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:greek-heroes:medium:hero:perseus",
+        "factKey": "golden-eggs-goose:greed-kills-goose",
         "tier": 3,
-        "subjectKey": "hero:perseus",
+        "subjectKey": "fable:golden-eggs-goose",
         "clue": {
-          "en": "Identify the Greek hero: they killed Medusa by looking at her reflection.",
-          "et": "Kes tappis Medusa tema peegeldust vaadates?"
+          "en": "In which fable does greed make an owner kill a miraculous bird to seize all its treasure at once, only to lose the daily source of wealth?",
+          "et": "Millise valmi loos tapab ahne omanik imelise linnu, et kogu varandus korraga kätte saada, kuid kaotab hoopis oma igapäevase rikkuse allika?"
         },
         "response": {
-          "en": "Perseus",
-          "et": "Perseus"
+          "en": "The Goose that Laid the Golden Eggs",
+          "et": "Kuldmune munev hani"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "The Goose that Laid the Golden Egg",
+            "The Goose and the Golden Egg"
+          ],
+          "et": [
+            "Hani, kes munes kuldmune"
+          ]
         },
         "explanation": {
-          "en": "Perseus received winged sandals and an invisibility helmet for the quest.",
-          "et": "Perseus sai retkeks tiivulised sandaalid ja nähtamatuks tegeva kiivri."
+          "en": "The Goose that Laid the Golden Eggs shows how impatient greed can destroy a continuing benefit.",
+          "et": "„Kuldmune munev hani” näitab, kuidas kärsitu ahnus võib püsiva kasu hävitada."
         },
         "source": {
-          "sourceId": "wikipedia:perseus",
-          "title": "Perseus",
-          "url": "https://en.wikipedia.org/wiki/Perseus",
+          "sourceId": "wikipedia:the_goose_that_laid_the_golden_eggs",
+          "title": "The Goose that Laid the Golden Eggs",
+          "url": "https://en.wikipedia.org/wiki/The_Goose_that_Laid_the_Golden_Eggs",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-035:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:greek-heroes:medium:hero:theseus",
+        "factKey": "fox-grapes:sour-grapes",
         "tier": 4,
-        "subjectKey": "hero:theseus",
+        "subjectKey": "fable:fox-grapes",
         "clue": {
-          "en": "A Greek hero entered the Cretan labyrinth and killed the Minotaur. Who fits?",
-          "et": "Siin kirjeldatud Kreeka kangelane läks Kreeta labürinti ning tappis Minotaurose. Kes see on?"
+          "en": "In which fable does a hungry animal fail to reach hanging fruit and then dismiss it as probably unripe?",
+          "et": "Millise valmi loos ei ulatu näljane loom rippuva viljani ning peab seda siis niikuinii tooreks?"
         },
         "response": {
-          "en": "Theseus",
-          "et": "Theseus"
+          "en": "The Fox and the Grapes",
+          "et": "Rebane ja viinamarjad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Fox and the Grapes"
+          ],
+          "et": [
+            "The Fox and the Grapes"
+          ]
         },
         "explanation": {
-          "en": "Theseus found the return path with Ariadne’s thread but later abandoned her.",
-          "et": "Theseus leidis tagasitee Ariadne lõnga abil, kuid hülgas ta hiljem."
+          "en": "In The Fox and the Grapes, the failed attempt is rationalized by belittling the desired fruit, giving us the phrase “sour grapes.”",
+          "et": "„Rebane ja viinamarjad” kirjeldab ebaõnnestumise õigustamist ihaldatud vilja väärtuse vähendamisega ning on andnud väljendi „hapud viinamarjad”."
         },
         "source": {
-          "sourceId": "wikipedia:theseus",
-          "title": "Theseus",
-          "url": "https://en.wikipedia.org/wiki/Theseus",
+          "sourceId": "wikipedia:the_fox_and_the_grapes",
+          "title": "The Fox and the Grapes",
+          "url": "https://en.wikipedia.org/wiki/The_Fox_and_the_Grapes",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-035:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:greek-heroes:medium:hero:achilles",
+        "factKey": "lions-share:lion-claims-all",
         "tier": 5,
-        "subjectKey": "hero:achilles",
+        "subjectKey": "fable:lions-share",
         "clue": {
-          "en": "Find the Greek hero who is the greatest Greek warrior in the Iliad.",
-          "et": "Kreeka kangelane on „Iliase“ suurim Kreeka sõdalane. Leia sobiv vastus."
+          "en": "In which Aesop fable does the strongest hunting partner divide the prey into portions, then claim every portion under a different excuse?",
+          "et": "Millise Aisopose valmi loos jagab tugevaim jahikaaslane saagi osadeks ja võtab siis iga osa eri ettekäändel endale?"
         },
         "response": {
-          "en": "Achilles",
-          "et": "Achilleus"
+          "en": "The Lion’s Share",
+          "et": "Lõviosa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lion's Share"
+          ],
+          "et": [
+            "Lõvi osa"
+          ]
         },
         "explanation": {
-          "en": "Achilles withdrew from battle over Briseis and returned after Patroclus died.",
-          "et": "Achilleus loobus Briseisi pärast võitlusest ning naasis Patroklose surma järel."
+          "en": "The Lion’s Share supplies the phrase for the largest portion because the lion uses power to take the entire catch.",
+          "et": "„Lõviosa” annab nime suurimale osale, sest lõvi kasutab oma jõudu kogu saagi omastamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:achilles",
-          "title": "Achilles",
-          "url": "https://en.wikipedia.org/wiki/Achilles",
+          "sourceId": "wikipedia:the_lions_share",
+          "title": "The Lion's Share",
+          "url": "https://en.wikipedia.org/wiki/The_Lion%27s_Share",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -31783,157 +31826,181 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-036",
     "name": {
-      "en": "Gods of Norse Myth",
-      "et": "Põhjala mütoloogia jumalad"
+      "en": "Gods in the English Week",
+      "et": "Jumalad inglise nädalas"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-036:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:norse-gods:medium:deity:odin",
+        "factKey": "saturday:name-saturn",
         "tier": 1,
-        "subjectKey": "deity:odin",
+        "subjectKey": "weekday:saturday-saturn",
         "clue": {
-          "en": "One Norse deity is the one-eyed god linked with wisdom, war, and ravens. Who is described?",
-          "et": "Põhjala jumalus on ühesilmne tarkuse, sõja ja kaarnatega seotud jumal. Kes see on?"
+          "en": "Name both the Roman god who is also the ringed planet and the English weekend day that preserves his name directly.",
+          "et": "Nimeta nii Rooma jumal, kelle järgi tuntakse ka rõngastega planeeti, kui ka ingliskeelne nädalalõpupäev, milles tema nimi otseselt säilib."
         },
         "response": {
-          "en": "Odin",
-          "et": "Odin"
+          "en": "Saturn and Saturday",
+          "et": "Saturn ja Saturday"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Saturday and Saturn"
+          ],
+          "et": [
+            "Saturday ja Saturn"
+          ]
         },
         "explanation": {
-          "en": "Odin sacrificed himself on the world tree to gain knowledge of runes.",
-          "et": "Odin ohverdas end maailmapuul, et saada ruunide teadmine."
+          "en": "Saturday comes through the Roman tradition of Saturn’s day, making this the week’s clearest deity-name match.",
+          "et": "Saturday pärineb Rooma Saturni päeva traditsioonist ning on nädala kõige läbipaistvam jumalanime seos."
         },
         "source": {
-          "sourceId": "wikipedia:odin",
-          "title": "Odin",
-          "url": "https://en.wikipedia.org/wiki/Odin",
+          "sourceId": "wikipedia:saturday",
+          "title": "Saturday",
+          "url": "https://en.wikipedia.org/wiki/Saturday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-036:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:norse-gods:medium:deity:thor",
+        "factKey": "thursday:name-thor",
         "tier": 2,
-        "subjectKey": "deity:thor",
+        "subjectKey": "weekday:thursday-thor",
         "clue": {
-          "en": "This Norse deity wields the hammer Mjölnir and battles giants. Who is it?",
-          "et": "See Põhjala jumalus kannab vasarat Mjölnir ning võitleb hiidudega. Kes see on?"
+          "en": "Name both the hammer-wielding Norse thunder god and the English day immediately before Friday whose name preserves his Germanic counterpart.",
+          "et": "Nimeta nii vasaraga Põhjala kõuejumal kui ka ingliskeelne päev vahetult enne reedet, mille nimi säilitab tema germaani vaste."
         },
         "response": {
-          "en": "Thor",
-          "et": "Thor"
+          "en": "Thor and Thursday",
+          "et": "Thor ja Thursday"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Thursday and Thor"
+          ],
+          "et": [
+            "Thursday ja Thor"
+          ]
         },
         "explanation": {
-          "en": "Thor is fated to kill the Midgard Serpent and then die from its venom.",
-          "et": "Thor on määratud tapma Midgardi mao ning seejärel tema mürki surema."
+          "en": "Thursday descends from Old English “Thunor’s day”; Thunor is the English form corresponding to Thor.",
+          "et": "Thursday pärineb vanainglise „Thunori päevast”; Thunor on Thorile vastav inglise kuju."
         },
         "source": {
-          "sourceId": "wikipedia:thor",
-          "title": "Thor",
-          "url": "https://en.wikipedia.org/wiki/Thor",
+          "sourceId": "wikipedia:thursday",
+          "title": "Thursday",
+          "url": "https://en.wikipedia.org/wiki/Thursday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-036:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:norse-gods:medium:deity:freyja",
+        "factKey": "wednesday:name-woden",
         "tier": 3,
-        "subjectKey": "deity:freyja",
+        "subjectKey": "weekday:wednesday-woden",
         "clue": {
-          "en": "Which Norse deity governs love and magic and wears the necklace Brísingamen?",
-          "et": "Kes valitseb armastust ja nõidust ning kannab kaelakeed Brísingamen?"
+          "en": "Name both the one-eyed Norse ruler of the gods and the English midweek day whose Old English name means the day of Woden.",
+          "et": "Nimeta nii ühesilmne Põhjala jumalate valitseja kui ka ingliskeelne nädala keskpäev, mille vanainglise nimi tähendab Wodeni päeva."
         },
         "response": {
-          "en": "Freyja",
-          "et": "Freyja"
+          "en": "Odin and Wednesday",
+          "et": "Odin ja Wednesday"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Woden and Wednesday",
+            "Wednesday and Odin",
+            "Wednesday and Woden"
+          ],
+          "et": [
+            "Woden ja Wednesday",
+            "Wednesday ja Odin",
+            "Wednesday ja Woden"
+          ]
         },
         "explanation": {
-          "en": "Freyja receives half the battle-slain in Fólkvangr while Odin receives the rest.",
-          "et": "Freyja võtab Fólkvangris vastu poole lahingus langenutest, ülejäänud saavad Odinile."
+          "en": "Woden is the English form of Odin, and Wednesday comes from Old English Wōdnesdæg.",
+          "et": "Woden on Odini inglise kuju ning Wednesday pärineb vanainglise sõnast Wōdnesdæg."
         },
         "source": {
-          "sourceId": "wikipedia:freyja",
-          "title": "Freyja",
-          "url": "https://en.wikipedia.org/wiki/Freyja",
+          "sourceId": "wikipedia:wednesday",
+          "title": "Wednesday",
+          "url": "https://en.wikipedia.org/wiki/Wednesday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-036:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:norse-gods:medium:deity:loki",
+        "factKey": "friday:name-frigg",
         "tier": 4,
-        "subjectKey": "deity:loki",
+        "subjectKey": "weekday:friday-frigg",
         "clue": {
-          "en": "A Norse deity is the cunning shape-shifter who both aids and harms the gods. Name them.",
-          "et": "Üks Põhjala jumalus on kaval kujumuutja, kes jumalaid nii aitab kui kahjustab. Keda otsime?"
+          "en": "Name both the Norse goddess associated with marriage and the English day before Saturday whose name is commonly connected with her.",
+          "et": "Nimeta nii abieluga seotud Põhjala jumalanna kui ka ingliskeelne päev enne laupäeva, mille nime temaga tavaliselt seostatakse."
         },
         "response": {
-          "en": "Loki",
-          "et": "Loki"
+          "en": "Frigg and Friday",
+          "et": "Frigg ja Friday"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Friday and Frigg"
+          ],
+          "et": [
+            "Friday ja Frigg"
+          ]
         },
         "explanation": {
-          "en": "Loki engineered Baldr’s death and was bound until Ragnarök.",
-          "et": "Loki korraldas Baldri surma ning aheldati Ragnarökini."
+          "en": "Friday comes from Old English Frīġedæġ and is traditionally associated with Frigg, although related goddess names complicate the etymology.",
+          "et": "Friday pärineb vanainglise sõnast Frīġedæġ ja seda seostatakse traditsiooniliselt Friggiga, kuigi etümoloogiat muudavad keerukamaks lähedased jumalannanimed."
         },
         "source": {
-          "sourceId": "wikipedia:loki",
-          "title": "Loki",
-          "url": "https://en.wikipedia.org/wiki/Loki",
+          "sourceId": "wikipedia:friday",
+          "title": "Friday",
+          "url": "https://en.wikipedia.org/wiki/Friday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-036:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:norse-gods:medium:deity:tyr",
+        "factKey": "tuesday:name-tiw",
         "tier": 5,
-        "subjectKey": "deity:tyr",
+        "subjectKey": "weekday:tuesday-tiw",
         "clue": {
-          "en": "Find the Norse deity who is the one-handed god linked with law and heroic courage.",
-          "et": "Põhjala jumalus on ühekäeline õiguse ja kangelasliku julguse jumal. Leia sobiv vastus."
+          "en": "Name both the one-handed Norse god and the English day after Monday that uses his Old English name, Tiw.",
+          "et": "Nimeta nii ühekäeline Põhjala jumal kui ka ingliskeelne päev pärast esmaspäeva, mis kasutab tema vanainglise nime Tiw."
         },
         "response": {
-          "en": "Týr",
-          "et": "Tyr"
+          "en": "Týr and Tuesday",
+          "et": "Týr ja Tuesday"
         },
         "acceptedVariants": {
           "en": [
-            "Tyr"
+            "Tiw and Tuesday",
+            "Tuesday and Týr",
+            "Tuesday and Tiw"
           ],
           "et": [
-            "Týr"
+            "Tiw ja Tuesday",
+            "Tuesday ja Týr",
+            "Tuesday ja Tiw"
           ]
         },
         "explanation": {
-          "en": "Týr lost his hand when the gods bound the wolf Fenrir.",
-          "et": "Tyr kaotas käe, kui jumalad sidusid hundi Fenriri."
+          "en": "Tuesday derives from Old English Tīwesdæg, the day of Tiw, a Germanic form of Týr.",
+          "et": "Tuesday pärineb vanainglise sõnast Tīwesdæg ehk Tiwi päev; Tiw on Týrile vastav germaani kuju."
         },
         "source": {
-          "sourceId": "wikipedia:t%c3%bdr",
-          "title": "Týr",
-          "url": "https://en.wikipedia.org/wiki/T%C3%BDr",
+          "sourceId": "wikipedia:tuesday",
+          "title": "Tuesday",
+          "url": "https://en.wikipedia.org/wiki/Tuesday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -31941,153 +32008,181 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-037",
     "name": {
-      "en": "Places of the Norse Cosmos",
-      "et": "Põhjala kosmose paigad"
+      "en": "Mythology in Famous Brands",
+      "et": "Mütoloogia kuulsates kaubamärkides"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-037:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:norse-cosmos:medium:place:yggdrasil",
+        "factKey": "starbucks:logo-siren",
         "tier": 1,
-        "subjectKey": "place:yggdrasil",
+        "subjectKey": "brand:starbucks-siren",
         "clue": {
-          "en": "A Norse cosmological place or event is the immense ash tree connecting the worlds. What term fits?",
-          "et": "Siin kirjeldatud Põhjala kosmoloogia paik või sündmus on eri maailmu ühendav hiiglaslik saar. Mis see on?"
+          "en": "Name both the coffee chain and the crowned, twin-tailed sea woman shown in its green logo.",
+          "et": "Nimeta nii kohvikett kui ka kroonitud kahesabaline merenaine selle rohelisel logol."
         },
         "response": {
-          "en": "Yggdrasil",
-          "et": "Yggdrasil"
+          "en": "Starbucks and the siren",
+          "et": "Starbucks ja sireen"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Starbucks and the mermaid",
+            "the siren and Starbucks",
+            "the mermaid and Starbucks"
+          ],
+          "et": [
+            "Starbucks ja merineitsi",
+            "sireen ja Starbucks",
+            "merineitsi ja Starbucks"
+          ]
         },
         "explanation": {
-          "en": "Yggdrasil is gnawed by Níðhöggr below while an eagle sits high in its branches.",
-          "et": "Yggdrasil seda närib all Níðhöggr, samal ajal kui okstes istub kotkas."
+          "en": "Starbucks describes its logo figure as a twin-tailed siren, also commonly called a mermaid.",
+          "et": "Starbucks kirjeldab oma logo kuju kahesabalise sireenina, keda nimetatakse tavaliselt ka merineitsiks."
         },
         "source": {
-          "sourceId": "wikipedia:yggdrasil",
-          "title": "Yggdrasil",
-          "url": "https://en.wikipedia.org/wiki/Yggdrasil",
+          "sourceId": "wikipedia:starbucks",
+          "title": "Starbucks",
+          "url": "https://en.wikipedia.org/wiki/Starbucks",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-037:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:norse-cosmos:medium:place:asgard",
+        "factKey": "versace:logo-medusa",
         "tier": 2,
-        "subjectKey": "place:asgard",
+        "subjectKey": "brand:versace-medusa",
         "clue": {
-          "en": "Find the Norse cosmological place or event that is the fortified home of the Æsir gods.",
-          "et": "Põhjala kosmoloogia paik või sündmus on aaside jumalate kindlustatud kodu. Leia sobiv vastus."
+          "en": "Name both the Italian fashion house and the snake-haired Gorgon whose head it uses as an emblem.",
+          "et": "Nimeta nii Itaalia moemaja kui ka madudest juustega gorgo, kelle pead see embleemina kasutab."
         },
         "response": {
-          "en": "Asgard",
-          "et": "Asgard"
+          "en": "Versace and Medusa",
+          "et": "Versace ja Medusa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Medusa and Versace"
+          ],
+          "et": [
+            "Medusa ja Versace"
+          ]
         },
         "explanation": {
-          "en": "Asgard is linked with the human world by the burning rainbow bridge Bifröst.",
-          "et": "Asgard on inimeste maailmaga ühendatud leegitseva vikerkaaresilla Bifrösti kaudu."
+          "en": "Versace’s logo centers on Medusa, a figure from Greek mythology.",
+          "et": "Versace logo keskmes on Kreeka mütoloogiast pärit Medusa."
         },
         "source": {
-          "sourceId": "wikipedia:asgard",
-          "title": "Asgard",
-          "url": "https://en.wikipedia.org/wiki/Asgard",
+          "sourceId": "wikipedia:versace",
+          "title": "Versace",
+          "url": "https://en.wikipedia.org/wiki/Versace",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-037:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:norse-cosmos:medium:place:midgard",
+        "factKey": "maserati:trident-neptune",
         "tier": 3,
-        "subjectKey": "place:midgard",
+        "subjectKey": "brand:maserati-neptune",
         "clue": {
-          "en": "What Norse cosmological place or event is the human world encircled by a giant serpent?",
-          "et": "Järgmine Põhjala kosmoloogia paik või sündmus on inimeste maailm, mida ümbritseb hiigelmadu. Milline see on?"
+          "en": "Name both the Italian carmaker with a trident badge and the Roman sea god whose statue in a Bologna fountain inspired it.",
+          "et": "Nimeta nii kolmharki kasutav Itaalia autotootja kui ka Rooma merejumal, kelle Bologna purskkaevukuju seda inspireeris."
         },
         "response": {
-          "en": "Midgard",
-          "et": "Midgard"
+          "en": "Maserati and Neptune",
+          "et": "Maserati ja Neptun"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Neptune and Maserati"
+          ],
+          "et": [
+            "Maserati ja Neptunus",
+            "Neptun ja Maserati",
+            "Neptunus ja Maserati"
+          ]
         },
         "explanation": {
-          "en": "Midgard literally describes a middle enclosure protected from outer chaos.",
-          "et": "Midgard tähendab sõna-sõnalt keskmist aeda, mis on välise kaose eest kaitstud."
+          "en": "Maserati’s trident was modeled on Neptune’s trident in Bologna’s Fountain of Neptune.",
+          "et": "Maserati kolmhark võeti Bologna Neptuni purskkaevus kujutatud merejumala relvast."
         },
         "source": {
-          "sourceId": "wikipedia:midgard",
-          "title": "Midgard",
-          "url": "https://en.wikipedia.org/wiki/Midgard",
+          "sourceId": "wikipedia:maserati",
+          "title": "Maserati",
+          "url": "https://en.wikipedia.org/wiki/Maserati",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-037:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:norse-cosmos:medium:event:ragnarok",
+        "factKey": "goodyear:wingfoot-mercury",
         "tier": 4,
-        "subjectKey": "event:ragnarok",
+        "subjectKey": "brand:goodyear-mercury",
         "clue": {
-          "en": "A Norse cosmological place or event is the final battle and destruction of many gods. Name it.",
-          "et": "Üks Põhjala kosmoloogia paik või sündmus on paljude jumalate lõppvõitlus ja hukatus. Millist vastust otsime?"
+          "en": "Name both the tyre maker whose Wingfoot trademark shows a winged foot and the swift Roman messenger god behind that image.",
+          "et": "Nimeta nii rehvitootja, kelle Wingfooti kaubamärgil on tiivuline jalg, kui ka kiire Rooma sõnumitoojajumal selle kujundi taga."
         },
         "response": {
-          "en": "Ragnarök",
-          "et": "Ragnarök"
+          "en": "Goodyear and Mercury",
+          "et": "Goodyear ja Mercurius"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mercury and Goodyear"
+          ],
+          "et": [
+            "Goodyear ja Merkuur",
+            "Mercurius ja Goodyear",
+            "Merkuur ja Goodyear"
+          ]
         },
         "explanation": {
-          "en": "Ragnarök is followed by the earth’s renewal and the return or survival of several figures.",
-          "et": "Ragnarök sellele järgneb maailma uuenemine ning mitme tegelase tagasitulek või ellujäämine."
+          "en": "Goodyear’s Wingfoot symbol was inspired by a Mercury statuette seen by founder F. A. Seiberling.",
+          "et": "Goodyeari Wingfooti sümbolit inspireeris Mercuriuse kuju, mida nägi ettevõtte asutaja F. A. Seiberling."
         },
         "source": {
-          "sourceId": "wikipedia:ragnar%c3%b6k",
-          "title": "Ragnarök",
-          "url": "https://en.wikipedia.org/wiki/Ragnar%C3%B6k",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "goodyear-corporate:history",
+          "title": "History",
+          "url": "https://corporate.goodyear.com/us/en/company/history.html",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-037:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:norse-cosmos:medium:place:valhalla",
+        "factKey": "mazda:name-ahura-mazda",
         "tier": 5,
-        "subjectKey": "place:valhalla",
+        "subjectKey": "brand:mazda-ahura",
         "clue": {
-          "en": "Identify this Norse cosmological place or event: it is Odin’s hall for chosen warriors slain in battle.",
-          "et": "Kirjeldatud Põhjala kosmoloogia paik või sündmus on Odini saal valitud lahingus langenud sõdalastele. Mis on selle nimi?"
+          "en": "Name both the Japanese carmaker and the Zoroastrian god associated with harmony, intelligence and wisdom whose name the company links to its own.",
+          "et": "Nimeta nii Jaapani autotootja kui ka harmoonia, arukuse ja tarkusega seotud zoroastrismi jumal, kelle nimega ettevõte oma nime seostab."
         },
         "response": {
-          "en": "Valhalla",
-          "et": "Valhalla"
+          "en": "Mazda and Ahura Mazda",
+          "et": "Mazda ja Ahura Mazda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ahura Mazda and Mazda"
+          ],
+          "et": [
+            "Ahura Mazda ja Mazda"
+          ]
         },
         "explanation": {
-          "en": "Valhalla prepares the einherjar to fight at Ragnarök rather than serving as every dead person’s destination.",
-          "et": "Valhalla valmistab einherjar’e ette Ragnarökiks ega ole iga surnu sihtkoht."
+          "en": "Mazda explains its name partly through Ahura Mazda, the Zoroastrian god associated with harmony, intelligence and wisdom.",
+          "et": "Mazda selgitab oma nime muu hulgas seosega Ahura Mazdaga, zoroastrismi harmoonia, arukuse ja tarkusega seotud jumalaga."
         },
         "source": {
-          "sourceId": "wikipedia:valhalla",
-          "title": "Valhalla",
-          "url": "https://en.wikipedia.org/wiki/Valhalla",
+          "sourceId": "wikipedia:mazda",
+          "title": "Mazda",
+          "url": "https://en.wikipedia.org/wiki/Mazda",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32095,153 +32190,161 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-038",
     "name": {
-      "en": "Gods along the Nile",
-      "et": "Niiluse jumalad"
+      "en": "Biblical Phrases in Everyday Speech",
+      "et": "Piiblist argikeelde"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-038:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:egyptian-gods:medium:deity:ra",
+        "factKey": "good-samaritan:parable-helper",
         "tier": 1,
-        "subjectKey": "deity:ra",
+        "subjectKey": "phrase:good-samaritan",
         "clue": {
-          "en": "Name the Egyptian deity who is the solar god often shown with a falcon head and sun disk.",
-          "et": "Vihjes kirjeldatud Egiptuse jumalus on päikesejumal, keda kujutatakse sageli pistrikupäise ja päikesekettaga. Kes see on?"
+          "en": "In Jesus’s parable, a traveler from a distrusted group stops to help a robbed and wounded stranger after others pass by. What everyday name means a compassionate helper?",
+          "et": "Jeesuse tähendamissõnas peatub põlatud rahva hulka kuuluv rändur, et aidata röövitud ja haavatud võõrast, kellest teised mööduvad. Milline arginimetus tähendab kaastundlikku aitajat?"
         },
         "response": {
-          "en": "Ra",
-          "et": "Ra"
+          "en": "Good Samaritan",
+          "et": "halastaja samaarlane"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Good Samaritan"
+          ],
+          "et": [
+            "hea samaarlane"
+          ]
         },
         "explanation": {
-          "en": "Ra travels through the underworld by night and is reborn at dawn.",
-          "et": "Ra rändab öösel läbi allilma ning sünnib koidikul uuesti."
+          "en": "A Good Samaritan is someone who helps a stranger in distress, after the charitable traveler in the parable.",
+          "et": "Halastaja samaarlane on hädas võõrast aitav inimene, nimetatud tähendamissõna abivalmi ränduri järgi."
         },
         "source": {
-          "sourceId": "wikipedia:ra",
-          "title": "Ra",
-          "url": "https://en.wikipedia.org/wiki/Ra",
+          "sourceId": "wikipedia:parable_of_the_good_samaritan",
+          "title": "Parable of the Good Samaritan",
+          "url": "https://en.wikipedia.org/wiki/Parable_of_the_Good_Samaritan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-038:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:egyptian-gods:medium:deity:osiris",
+        "factKey": "forbidden-fruit:eden-idiom",
         "tier": 2,
-        "subjectKey": "deity:osiris",
+        "subjectKey": "phrase:forbidden-fruit",
         "clue": {
-          "en": "Find the Egyptian deity who rules the dead and appears as a mummified king.",
-          "et": "Egiptuse jumalus valitseb surnuid ning ilmub mumifitseeritud kuningana. Leia sobiv vastus."
+          "en": "Eden gave English which two-word expression for something that becomes more tempting precisely because it is prohibited?",
+          "et": "Millise kahesõnalise väljendi andis Eedeni lugu millelegi, mis muutub ahvatlevamaks just seetõttu, et see on keelatud?"
         },
         "response": {
-          "en": "Osiris",
-          "et": "Osiris"
+          "en": "forbidden fruit",
+          "et": "keelatud vili"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Osiris was dismembered by Seth and restored by Isis before fathering Horus.",
-          "et": "Osiris tükeldati Sethi poolt ning taastati Isise abil enne Horuse isaks saamist."
+          "en": "“Forbidden fruit” refers both to Eden’s prohibited produce and figuratively to an attraction intensified by a ban.",
+          "et": "„Keelatud vili” tähendab nii Eedenis keelatud vilja kui ka kujundlikult ahvatlust, mida keeld suurendab."
         },
         "source": {
-          "sourceId": "wikipedia:osiris",
-          "title": "Osiris",
-          "url": "https://en.wikipedia.org/wiki/Osiris",
+          "sourceId": "wikipedia:forbidden_fruit",
+          "title": "Forbidden fruit",
+          "url": "https://en.wikipedia.org/wiki/Forbidden_fruit",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-038:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:egyptian-gods:medium:deity:isis",
+        "factKey": "prodigal-son:returning-child",
         "tier": 3,
-        "subjectKey": "deity:isis",
+        "subjectKey": "phrase:prodigal-son",
         "clue": {
-          "en": "Egyptian deity is the powerful goddess and mother of Horus. Who is it?",
-          "et": "Kes on võimas jumalanna ning Horuse ema?"
+          "en": "A younger heir wastes his property far from home, then returns to an unexpectedly warm welcome. Which biblical phrase labels a wayward person who comes back?",
+          "et": "Noorem pärija raiskab vara kodust kaugel, kuid saab tagasi tulles ootamatult sooja vastuvõtu. Milline piibellik väljend tähendab eksiteele läinud inimest, kes naaseb?"
         },
         "response": {
-          "en": "Isis",
-          "et": "Isis"
+          "en": "prodigal son",
+          "et": "kadunud poeg"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Isis reassembled Osiris and used magic to obtain Ra’s secret name.",
-          "et": "Isis pani Osirise taas kokku ning sai nõidusega teada Ra salanime."
+          "en": "The prodigal son is the returning younger child in Jesus’s parable and, figuratively, someone welcomed after an absence.",
+          "et": "Kadunud poeg on Jeesuse tähendamissõna naasev noorem laps ning kujundlikult pärast eemalolekut tagasi tulnud inimene."
         },
         "source": {
-          "sourceId": "wikipedia:isis",
-          "title": "Isis",
-          "url": "https://en.wikipedia.org/wiki/Isis",
+          "sourceId": "wikipedia:parable_of_the_prodigal_son",
+          "title": "Parable of the Prodigal Son",
+          "url": "https://en.wikipedia.org/wiki/Parable_of_the_Prodigal_Son",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-038:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:egyptian-gods:medium:deity:anubis",
+        "factKey": "scapegoat:leviticus-burden",
         "tier": 4,
-        "subjectKey": "deity:anubis",
+        "subjectKey": "phrase:scapegoat",
         "clue": {
-          "en": "An Egyptian deity is the jackal-headed guardian of embalming and graves. Who fits?",
-          "et": "Siin kirjeldatud Egiptuse jumalus on šaakalipäine palsameerimise ja haudade kaitsja. Kes see on?"
+          "en": "Leviticus describes one goat symbolically carrying the community’s sins into the wilderness. What word means a person blamed for other people’s failures?",
+          "et": "Kolmas Moosese raamat kirjeldab kitse, kes kannab sümboolselt kogukonna patud kõrbesse. Milline sõna tähendab inimest, kellele veeretatakse teiste süü?"
         },
         "response": {
-          "en": "Anubis",
-          "et": "Anubis"
+          "en": "scapegoat",
+          "et": "patuoinas"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Anubis conducts the weighing of the heart against Ma’at’s feather.",
-          "et": "Anubis juhib südame kaalumist Maati sule vastu."
+          "en": "A scapegoat bears blame that properly belongs elsewhere, extending the ritual image of the sin-bearing goat.",
+          "et": "Patuoinas kannab süüd, mis tegelikult kuulub mujale; kujund pärineb patte kandva kitse rituaalist."
         },
         "source": {
-          "sourceId": "wikipedia:anubis",
-          "title": "Anubis",
-          "url": "https://en.wikipedia.org/wiki/Anubis",
+          "sourceId": "wikipedia:scapegoat",
+          "title": "Scapegoat",
+          "url": "https://en.wikipedia.org/wiki/Scapegoat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-038:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:egyptian-gods:medium:deity:thoth",
+        "factKey": "writing-wall:belshazzar-warning",
         "tier": 5,
-        "subjectKey": "deity:thoth",
+        "subjectKey": "phrase:writing-wall",
         "clue": {
-          "en": "This Egyptian deity is the ibis-headed god of writing and knowledge. Who is it?",
-          "et": "See Egiptuse jumalus on iibisepäine kirja ja teadmiste jumal. Kes see on?"
+          "en": "At Belshazzar’s feast in Daniel, mysterious words appear during a doomed ruler’s celebration. Which expression means that disaster is plainly approaching?",
+          "et": "Taanieli raamatus ilmuvad Belsassari pidusöögi ajal salapärased sõnad, kui valitseja hukatus läheneb. Milline väljend tähendab selget märki peatsest katastroofist?"
         },
         "response": {
-          "en": "Thoth",
-          "et": "Thoth"
+          "en": "writing on the wall",
+          "et": "kiri seinal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the writing on the wall"
+          ],
+          "et": [
+            "seinale kirjutatud kiri"
+          ]
         },
         "explanation": {
-          "en": "Thoth records the verdict in the judgement of the dead and is linked with the moon.",
-          "et": "Thoth kirjutab surnute kohtu otsuse üles ning seostub Kuuga."
+          "en": "“The writing on the wall” is an unmistakable warning, from the message that foretold Belshazzar’s fall.",
+          "et": "„Kiri seinal” on ilmne hoiatus, nimetatud Belsassari langust ennustanud sõnumi järgi."
         },
         "source": {
-          "sourceId": "wikipedia:thoth",
-          "title": "Thoth",
-          "url": "https://en.wikipedia.org/wiki/Thoth",
+          "sourceId": "wikipedia:writing_on_the_wall",
+          "title": "Writing on the wall",
+          "url": "https://en.wikipedia.org/wiki/Writing_on_the_wall",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32249,153 +32352,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-039",
     "name": {
-      "en": "Myths between the Rivers",
-      "et": "Kahe jõe vahelised müüdid"
+      "en": "Relics, Real and Legendary",
+      "et": "Päris ja legendaarsed reliikviad"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-039:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:mesopotamian-myth:medium:hero:gilgamesh",
+        "factKey": "ark-covenant:tablets-chest",
         "tier": 1,
-        "subjectKey": "hero:gilgamesh",
+        "subjectKey": "relic:ark-covenant",
         "clue": {
-          "en": "One Mesopotamian figure is the king who seeks immortality after his friend dies. Who is described?",
-          "et": "Mesopotaamia mütoloogia tegelane on kuningas, kes otsib pärast sõbra surma surematust. Kes see on?"
+          "en": "Which gold-covered biblical chest is associated with the tablets of the Ten Commandments and became the prize pursued in Raiders of the Lost Ark?",
+          "et": "Millist kullatud piibellikku laegast seostatakse kümne käsu kivitahvlitega ning jahitakse filmis „Kadunud laeka jälil”?"
         },
         "response": {
-          "en": "Gilgamesh",
-          "et": "Gilgameš"
+          "en": "Ark of the Covenant",
+          "et": "seaduselaegas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Ark of the Covenant"
+          ],
+          "et": [
+            "lepingulaegas"
+          ]
         },
         "explanation": {
-          "en": "Gilgamesh loses the rejuvenating plant to a snake on his homeward journey.",
-          "et": "Gilgameš kaotab noorendava taime koduteel maole."
+          "en": "The Ark of the Covenant is the sacred chest linked in biblical tradition with the stone tablets of the commandments.",
+          "et": "Seaduselaegas on püha laegas, mida piiblipärimus seostab käsulaudadega."
         },
         "source": {
-          "sourceId": "wikipedia:gilgamesh",
-          "title": "Gilgamesh",
-          "url": "https://en.wikipedia.org/wiki/Gilgamesh",
+          "sourceId": "wikipedia:ark_of_the_covenant",
+          "title": "Ark of the Covenant",
+          "url": "https://en.wikipedia.org/wiki/Ark_of_the_Covenant",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-039:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:mesopotamian-myth:medium:hero:enkidu",
+        "factKey": "turin-shroud:crucified-image",
         "tier": 2,
-        "subjectKey": "hero:enkidu",
+        "subjectKey": "relic:turin-shroud",
         "clue": {
-          "en": "Recognise the Mesopotamian figure who is the wild man who becomes Gilgamesh’s closest companion.",
-          "et": "Otsitav Mesopotaamia mütoloogia tegelane on metsik mees, kellest saab Gilgameši lähim kaaslane. Kes see on?"
+          "en": "Which linen cloth kept in an Italian city bears the image of a crucified man and is claimed by some believers to be Jesus’s burial cloth?",
+          "et": "Millisel Itaalia linnas hoitaval linasel riidel on ristilöödud mehe kujutis ning osa usklikke peab seda Jeesuse surilinaks?"
         },
         "response": {
-          "en": "Enkidu",
-          "et": "Enkidu"
+          "en": "Shroud of Turin",
+          "et": "Torino surilina"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Turin Shroud"
+          ],
+          "et": [
+            "Turini surilina"
+          ]
         },
         "explanation": {
-          "en": "Enkidu is created to check the king’s power and dies after the heroes offend the gods.",
-          "et": "Enkidu luuakse kuninga võimu piirama ning ta sureb pärast seda, kui kangelased jumalaid solvavad."
+          "en": "The Shroud of Turin is a linen bearing a human image; its identification with Jesus’s burial cloth remains disputed rather than established fact.",
+          "et": "Torino surilina on inimkujutisega linane riie; selle samastamine Jeesuse matuseriidega on vaieldav, mitte tõestatud fakt."
         },
         "source": {
-          "sourceId": "wikipedia:enkidu",
-          "title": "Enkidu",
-          "url": "https://en.wikipedia.org/wiki/Enkidu",
+          "sourceId": "wikipedia:shroud_of_turin",
+          "title": "Shroud of Turin",
+          "url": "https://en.wikipedia.org/wiki/Shroud_of_Turin",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-039:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:mesopotamian-myth:medium:deity:inanna-ishtar",
+        "factKey": "crown-thorns:passion-relic",
         "tier": 3,
-        "subjectKey": "deity:inanna-ishtar",
+        "subjectKey": "relic:crown-thorns",
         "clue": {
-          "en": "Who is the goddess of love and war who descends to the underworld?",
-          "et": "Tuvasta järgmine Mesopotaamia mütoloogia tegelane: ta on armastuse ja sõja jumalanna, kes laskub allilma."
+          "en": "In the Passion narrative, soldiers mocked Jesus as “King of the Jews” with which painful royal headpiece, later claimed in relic traditions?",
+          "et": "Millise valusa kuningliku peakatte panid sõdurid kannatusloos Jeesusele pähe, et teda „juutide kuningana” pilgata, ning mida hiljem reliikviana austati?"
         },
         "response": {
-          "en": "Ishtar",
-          "et": "Ištar"
+          "en": "Crown of Thorns",
+          "et": "okaskroon"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Ishtar threatens to release the dead when denied the Bull of Heaven.",
-          "et": "Ištar ähvardab surnud vabastada, kui talle ei anta Taevapulli."
+          "en": "The Crown of Thorns belongs to the mockery of Jesus before the crucifixion and later became the subject of claimed relics.",
+          "et": "Okaskroon kuulub Jeesuse ristilöömisele eelnenud pilkamise loosse ning hiljem hakati selle väidetavaid osi reliikviatena austama."
         },
         "source": {
-          "sourceId": "wikipedia:inanna",
-          "title": "Inanna",
-          "url": "https://en.wikipedia.org/wiki/Inanna",
+          "sourceId": "wikipedia:crown_of_thorns",
+          "title": "Crown of thorns",
+          "url": "https://en.wikipedia.org/wiki/Crown_of_thorns",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-039:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:mesopotamian-myth:medium:deity:tiamat",
+        "factKey": "holy-lance:jesus-side",
         "tier": 4,
-        "subjectKey": "deity:tiamat",
+        "subjectKey": "relic:holy-lance",
         "clue": {
-          "en": "A Mesopotamian figure embodies the primordial salt sea as a chaos monster. Who fits?",
-          "et": "Siin kirjeldatud Mesopotaamia mütoloogia tegelane kehastab ürgset soolast merd kaosekoletisena. Kes see on?"
+          "en": "Christian tradition names which weapon as the lance that pierced Jesus’s side during the crucifixion, also linking it with a soldier called Longinus?",
+          "et": "Millise relva samastab kristlik pärimus piigiga, mis läbistas ristilöömise ajal Jeesuse külje, ning seostab sõdur Longinusega?"
         },
         "response": {
-          "en": "Tiamat",
-          "et": "Tiamat"
+          "en": "Spear of Destiny",
+          "et": "saatuse oda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Holy Lance",
+            "Holy Spear",
+            "Spear of Longinus",
+            "Lance of Longinus"
+          ],
+          "et": [
+            "püha oda",
+            "püha piik",
+            "Longinuse oda",
+            "Longinuse piik"
+          ]
         },
         "explanation": {
-          "en": "Tiamat is split by Marduk, who forms heaven and earth from her body.",
-          "et": "Tiamat lõhestatakse Marduki poolt, kes loob tema kehast taeva ja maa."
+          "en": "The Spear of Destiny, also called the Holy Lance or Spear of Longinus, is the legendary weapon associated with the wound in Jesus’s side.",
+          "et": "Saatuse oda, mida nimetatakse ka pühaks odaks või Longinuse odaks, on legendaarne relv, mida seostatakse Jeesuse küljehaavaga."
         },
         "source": {
-          "sourceId": "wikipedia:tiamat",
-          "title": "Tiamat",
-          "url": "https://en.wikipedia.org/wiki/Tiamat",
+          "sourceId": "wikipedia:holy_lance",
+          "title": "Holy Lance",
+          "url": "https://en.wikipedia.org/wiki/Holy_Lance",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-039:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:mesopotamian-myth:medium:deity:marduk",
+        "factKey": "black-stone:kaaba-corner",
         "tier": 5,
-        "subjectKey": "deity:marduk",
+        "subjectKey": "relic:black-stone",
         "clue": {
-          "en": "Recognise the Mesopotamian figure who is Babylon’s chief god and victor over Tiamat.",
-          "et": "Otsitav Mesopotaamia mütoloogia tegelane on Babüloni peajumal ning Tiamati võitja. Kes see on?"
+          "en": "Pilgrims circle the Kaaba in Mecca; what revered object is set into the structure’s eastern corner and may be touched or pointed toward during the circuit?",
+          "et": "Palverändurid tiirlevad Mekas ümber Kaaba. Milline austatud ese asub ehitise idanurgas ning mille poole ringkäigul osutatakse või mida puudutatakse?"
         },
         "response": {
-          "en": "Marduk",
-          "et": "Marduk"
+          "en": "Black Stone",
+          "et": "Must Kivi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Hajar al-Aswad"
+          ],
+          "et": [
+            "Kaaba Must Kivi",
+            "Hajar al-Aswad"
+          ]
         },
         "explanation": {
-          "en": "Marduk receives fifty names and supreme authority in the Enūma Eliš.",
-          "et": "Marduk saab eeposes „Enūma Eliš“ viiskümmend nime ja kõrgeima võimu."
+          "en": "The Black Stone, Hajar al-Aswad, is the venerated stone built into the Kaaba’s eastern corner.",
+          "et": "Must Kivi ehk Hajar al-Aswad on Kaaba idanurka paigutatud austatud kivi."
         },
         "source": {
-          "sourceId": "wikipedia:marduk",
-          "title": "Marduk",
-          "url": "https://en.wikipedia.org/wiki/Marduk",
+          "sourceId": "wikipedia:black_stone",
+          "title": "Black Stone",
+          "url": "https://en.wikipedia.org/wiki/Black_Stone",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32403,153 +32529,191 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-040",
     "name": {
-      "en": "Deities of Hindu Traditions",
-      "et": "Hindu traditsioonide jumalused"
+      "en": "Faith and Myth on National Flags",
+      "et": "Usk ja müüt riigilippudel"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-040:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:hindu-deities:medium:deity:brahma",
+        "factKey": "israel-flag:star-david",
         "tier": 1,
-        "subjectKey": "deity:brahma",
+        "subjectKey": "flag:israel-star-david",
         "clue": {
-          "en": "Which Hindu deity is the creator figure traditionally shown with four faces?",
-          "et": "Kes on loojajumal, keda kujutatakse tavaliselt nelja näoga?"
+          "en": "Name both the country and the blue hexagram centered between two horizontal blue stripes on its national flag.",
+          "et": "Nimeta nii riik kui ka sinine kuusnurk, mis asub selle riigilipul kahe horisontaalse sinise triibu vahel."
         },
         "response": {
-          "en": "Brahma",
-          "et": "Brahma"
+          "en": "Israel and the Star of David",
+          "et": "Iisrael ja Taaveti täht"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Star of David and Israel"
+          ],
+          "et": [
+            "Taaveti täht ja Iisrael"
+          ]
         },
         "explanation": {
-          "en": "Brahma belongs to the Trimurti but has relatively few major temples.",
-          "et": "Brahma kuulub Trimurtisse, kuid tal on suhteliselt vähe suuri templeid."
+          "en": "Israel’s flag places a blue Star of David between two blue stripes on a white field.",
+          "et": "Iisraeli lipul on valgel väljal kahe sinise triibu vahel sinine Taaveti täht."
         },
         "source": {
-          "sourceId": "wikipedia:brahma",
-          "title": "Brahma",
-          "url": "https://en.wikipedia.org/wiki/Brahma",
+          "sourceId": "wikipedia:flag_of_israel",
+          "title": "Flag of Israel",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_Israel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-040:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:hindu-deities:medium:deity:vishnu",
+        "factKey": "vatican-flag:peter-keys",
         "tier": 2,
-        "subjectKey": "deity:vishnu",
+        "subjectKey": "flag:vatican-keys",
         "clue": {
-          "en": "A Hindu deity preserves cosmic order and appears through avatars. Who fits?",
-          "et": "Siin kirjeldatud hindu jumalus säilitab kosmilist korda ning ilmub avataride kaudu. Kes see on?"
+          "en": "Name both the tiny state with a yellow-and-white flag and the crossed objects from the papal arms shown on its white half.",
+          "et": "Nimeta nii kollase-valge lipuga pisiriik kui ka paavsti vapilt pärit ristatud esemed selle valgel poolel."
         },
         "response": {
-          "en": "Vishnu",
-          "et": "Višnu"
+          "en": "Vatican City and the keys of Saint Peter",
+          "et": "Vatikan ja püha Peetruse võtmed"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the keys of Saint Peter and Vatican City"
+          ],
+          "et": [
+            "Vatikani Linnriik ja püha Peetruse võtmed",
+            "püha Peetruse võtmed ja Vatikan",
+            "püha Peetruse võtmed ja Vatikani Linnriik"
+          ]
         },
         "explanation": {
-          "en": "Vishnu counts Rama and Krishna among his best-known descents.",
-          "et": "Višnu loeb Rama ja Krišna oma tuntuimate kehastuste hulka."
+          "en": "Vatican City’s flag displays the crossed keys of Saint Peter with the papal tiara.",
+          "et": "Vatikani lipul on püha Peetruse ristatud võtmed koos paavstliku tiaaraga."
         },
         "source": {
-          "sourceId": "wikipedia:vishnu",
-          "title": "Vishnu",
-          "url": "https://en.wikipedia.org/wiki/Vishnu",
+          "sourceId": "wikipedia:flag_of_vatican_city",
+          "title": "Flag of Vatican City",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_Vatican_City",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-040:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:hindu-deities:medium:deity:shiva",
+        "factKey": "saudi-flag:shahada",
         "tier": 3,
-        "subjectKey": "deity:shiva",
+        "subjectKey": "flag:saudi-shahada",
         "clue": {
-          "en": "This Hindu deity is linked with transformation, asceticism, and the trident. Who is it?",
-          "et": "See hindu jumalus seostub muutumise, askeesi ja kolmhargiga. Kes see on?"
+          "en": "Name both the country whose green flag places a sword beneath a white Arabic religious inscription and the established name of that inscription.",
+          "et": "Nimeta nii riik, mille rohelisel lipul on mõõga kohal valge araabiakeelne religioosne tekst, kui ka selle teksti üldtuntud nimi."
         },
         "response": {
-          "en": "Shiva",
-          "et": "Šiva"
+          "en": "Saudi Arabia and the shahada",
+          "et": "Saudi Araabia ja šahaada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Saudi Arabia and the Islamic declaration of faith",
+            "Saudi Arabia and the Islamic creed",
+            "the shahada and Saudi Arabia",
+            "the Islamic declaration of faith and Saudi Arabia",
+            "the Islamic creed and Saudi Arabia"
+          ],
+          "et": [
+            "Saudi Araabia ja islami usutunnistus",
+            "Saudi Araabia ja usutunnistus",
+            "Saudi Araabia ja usukinnitus",
+            "šahaada ja Saudi Araabia",
+            "islami usutunnistus ja Saudi Araabia",
+            "usutunnistus ja Saudi Araabia",
+            "usukinnitus ja Saudi Araabia"
+          ]
         },
         "explanation": {
-          "en": "Shiva dances as Nataraja within a ring of flames that symbolises cosmic cycles.",
-          "et": "Šiva tantsib Natarajana leegiringis, mis sümboliseerib kosmilisi tsükleid."
+          "en": "Saudi Arabia’s flag shows the shahada in white Arabic script above a horizontal sword.",
+          "et": "Saudi Araabia lipul on valges araabia kirjas šahaada ning selle all horisontaalne mõõk."
         },
         "source": {
-          "sourceId": "wikipedia:shiva",
-          "title": "Shiva",
-          "url": "https://en.wikipedia.org/wiki/Shiva",
+          "sourceId": "wikipedia:flag_of_saudi_arabia",
+          "title": "Flag of Saudi Arabia",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_Saudi_Arabia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-040:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:hindu-deities:medium:deity:lakshmi",
+        "factKey": "india-flag:chakra",
         "tier": 4,
-        "subjectKey": "deity:lakshmi",
+        "subjectKey": "flag:india-ashoka-chakra",
         "clue": {
-          "en": "Which Hindu deity is the goddess of prosperity often shown on a lotus?",
-          "et": "Kes on heaolu jumalanna, keda kujutatakse sageli lootosel?"
+          "en": "Name both the country and the navy-blue, 24-spoke wheel at the center of its saffron-white-green tricolor.",
+          "et": "Nimeta nii riik kui ka tumesinine 24 kodaraga ratas selle safrankollase-valge-rohelise trikoloori keskel."
         },
         "response": {
-          "en": "Lakshmi",
-          "et": "Lakšmi"
+          "en": "India and the Ashoka Chakra",
+          "et": "India ja Ashoka tšakra"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Ashoka Chakra and India"
+          ],
+          "et": [
+            "India ja Ašoka tšakra",
+            "Ashoka tšakra ja India",
+            "Ašoka tšakra ja India"
+          ]
         },
         "explanation": {
-          "en": "Lakshmi is Vishnu’s consort and receives special worship during Diwali.",
-          "et": "Lakšmi on Višnu kaaslane ning saab Diwali ajal erilise austuse."
+          "en": "India’s flag centers the 24-spoke Ashoka Chakra, a wheel derived from Ashokan symbolism.",
+          "et": "India lipu keskmes on 24 kodaraga Ashoka tšakra, Ašoka sümboolikast pärinev ratas."
         },
         "source": {
-          "sourceId": "wikipedia:lakshmi",
-          "title": "Lakshmi",
-          "url": "https://en.wikipedia.org/wiki/Lakshmi",
+          "sourceId": "wikipedia:flag_of_india",
+          "title": "Flag of India",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_India",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-040:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:hindu-deities:medium:deity:ganesha",
+        "factKey": "sri-lanka-flag:bo-leaves",
         "tier": 5,
-        "subjectKey": "deity:ganesha",
+        "subjectKey": "flag:sri-lanka-bo-leaves",
         "clue": {
-          "en": "A Hindu deity is the elephant-headed remover of obstacles. Who fits?",
-          "et": "Siin kirjeldatud hindu jumalus on elevandipäine takistuste eemaldaja. Kes see on?"
+          "en": "Name both the island country and the four sacred-tree emblems placed in the corners around the lion on its flag.",
+          "et": "Nimeta nii saareriik kui ka neli püha puu kujutist, mis asuvad selle lipul lõvi ümber nurkades."
         },
         "response": {
-          "en": "Ganesha",
-          "et": "Ganeša"
+          "en": "Sri Lanka and the bo leaves",
+          "et": "Sri Lanka ja bodhipuu lehed"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Sri Lanka and the bodhi leaves",
+            "the bo leaves and Sri Lanka",
+            "the bodhi leaves and Sri Lanka"
+          ],
+          "et": [
+            "Sri Lanka ja bo-puu lehed",
+            "bodhipuu lehed ja Sri Lanka",
+            "bo-puu lehed ja Sri Lanka"
+          ]
         },
         "explanation": {
-          "en": "Ganesha is invoked at beginnings and is a son of Shiva and Parvati.",
-          "et": "Ganeša kutsutakse appi alguste puhul ning ta on Šiva ja Parvati poeg."
+          "en": "On Sri Lanka’s lion flag, the four bo leaves represent four Buddhist virtues: loving-kindness, compassion, sympathetic joy and equanimity.",
+          "et": "Sri Lanka lõvilipul tähistavad neli bodhipuu lehte nelja budistlikku voorust: heatahtlikkust, kaastunnet, kaasaelavat rõõmu ja tasakaalukust."
         },
         "source": {
-          "sourceId": "wikipedia:ganesha",
-          "title": "Ganesha",
-          "url": "https://en.wikipedia.org/wiki/Ganesha",
+          "sourceId": "wikipedia:flag_of_sri_lanka",
+          "title": "Flag of Sri Lanka",
+          "url": "https://en.wikipedia.org/wiki/Flag_of_Sri_Lanka",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32557,153 +32721,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-041",
     "name": {
-      "en": "Core Ideas of Buddhism",
-      "et": "Budismi põhiideed"
+      "en": "Holidays by Their Signature Customs",
+      "et": "Pühad tuntud kommete järgi"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-041:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:buddhist-path:medium:concept:four-noble-truths",
+        "factKey": "holi:coloured-powder",
         "tier": 1,
-        "subjectKey": "concept:four-noble-truths",
+        "subjectKey": "holiday:holi",
         "clue": {
-          "en": "What Buddhist concept diagnose suffering, its origin, its cessation, and a path?",
-          "et": "Järgmine budistlik mõiste käsitlevad kannatust, selle põhjust, lakkamist ja teed. Milline see on?"
+          "en": "At which Hindu spring festival do crowds famously throw brightly colored powders and water at one another?",
+          "et": "Millise hindu kevadpüha ajal loobivad rahvahulgad kuulsalt üksteist erksavärvilise pulbri ja veega?"
         },
         "response": {
-          "en": "Four Noble Truths",
-          "et": "neli õilsat tõde"
+          "en": "Holi",
+          "et": "Holi"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Four Noble Truths structure Buddhist teaching like a diagnosis and cure centred on craving.",
-          "et": "Neli õilsat tõde struktureerivad budistliku õpetuse ihale keskenduva diagnoosi ja ravina."
+          "en": "Holi is a Hindu spring festival widely recognized for exuberant play with colored powder and water.",
+          "et": "Holi on hindu kevadpüha, mida tuntakse rõõmsa värvipulbri- ja veemängu järgi."
         },
         "source": {
-          "sourceId": "wikipedia:four_noble_truths",
-          "title": "Four Noble Truths",
-          "url": "https://en.wikipedia.org/wiki/Four_Noble_Truths",
+          "sourceId": "wikipedia:holi",
+          "title": "Holi",
+          "url": "https://en.wikipedia.org/wiki/Holi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-041:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:buddhist-path:medium:concept:noble-eightfold-path",
+        "factKey": "day-dead:altars-marigolds",
         "tier": 2,
-        "subjectKey": "concept:noble-eightfold-path",
+        "subjectKey": "holiday:day-dead",
         "clue": {
-          "en": "A Buddhist concept groups right view, conduct, and meditation into a route from suffering. What term fits?",
-          "et": "Siin kirjeldatud budistlik mõiste ühendab õige vaate, käitumise ja meditatsiooni kannatusest vabanemise teeks. Mis see on?"
+          "en": "Which Mexican observance welcomes the memory of deceased relatives with home altars, marigolds, favorite foods and decorated skulls?",
+          "et": "Millise Mehhiko püha ajal meenutatakse surnud lähedasi kodualtarite, peiulillede, lemmiktoitude ja kaunistatud kolpidega?"
         },
         "response": {
-          "en": "Noble Eightfold Path",
-          "et": "õilis kaheksaosaline tee"
+          "en": "Day of the Dead",
+          "et": "Día de Muertos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Día de Muertos",
+            "Día de los Muertos"
+          ],
+          "et": [
+            "Día de los Muertos",
+            "Mehhiko surnutepäev",
+            "surnutepäev"
+          ]
         },
         "explanation": {
-          "en": "Noble Eightfold Path is commonly organised under wisdom, ethical conduct, and concentration.",
-          "et": "Õilis kaheksaosaline tee jaotatakse tavaliselt tarkuseks, eetiliseks käitumiseks ja keskendumiseks."
+          "en": "The Day of the Dead, Día de Muertos, is a Mexican remembrance in which families honor deceased loved ones through offerings and festive imagery.",
+          "et": "Día de Muertos ehk Mehhiko surnutepäev on mälestuspüha, mil pered austavad lahkunud lähedasi andide ja piduliku sümboolikaga."
         },
         "source": {
-          "sourceId": "wikipedia:noble_eightfold_path",
-          "title": "Noble Eightfold Path",
-          "url": "https://en.wikipedia.org/wiki/Noble_Eightfold_Path",
+          "sourceId": "wikipedia:day_of_the_dead",
+          "title": "Day of the Dead",
+          "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-041:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:buddhist-path:medium:concept:nirvana-buddhism",
+        "factKey": "ash-wednesday:forehead-cross",
         "tier": 3,
-        "subjectKey": "concept:nirvana-buddhism",
+        "subjectKey": "holiday:ash-wednesday",
         "clue": {
-          "en": "Recognise the Buddhist concept that is liberation from craving and the cycle of rebirth.",
-          "et": "Otsitav budistlik mõiste on vabanemine ihast ja taassünni ringist. Mis see on?"
+          "en": "Which Christian observance begins Lent by marking worshippers’ foreheads with a gray cross made from burned palm branches?",
+          "et": "Milline kristlik püha alustab paastuaega sellega, et usklike laubale tehakse põletatud palmilehtedest saadud hall rist?"
         },
         "response": {
-          "en": "nirvana",
-          "et": "nirvaana"
+          "en": "Ash Wednesday",
+          "et": "tuhkapäev"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Nirvana literally evokes extinguishing a flame rather than a heavenly place.",
-          "et": "Nirvaana viitab sõna-sõnalt leegi kustumisele, mitte taevasele paigale."
+          "en": "Ash Wednesday marks the beginning of Lent in Western Christianity and is named for the ritual use of ashes.",
+          "et": "Tuhkapäev tähistab läänekristluses paastuaja algust ning on saanud nime tuha kasutamise rituaalist."
         },
         "source": {
-          "sourceId": "wikipedia:nirvana_(buddhism)",
-          "title": "Nirvana (Buddhism)",
-          "url": "https://en.wikipedia.org/wiki/Nirvana_(Buddhism)",
+          "sourceId": "wikipedia:ash_wednesday",
+          "title": "Ash Wednesday",
+          "url": "https://en.wikipedia.org/wiki/Ash_Wednesday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-041:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:buddhist-path:medium:concept:karma",
+        "factKey": "saint-lucy:candle-crown",
         "tier": 4,
-        "subjectKey": "concept:karma",
+        "subjectKey": "holiday:saint-lucy",
         "clue": {
-          "en": "Identify the Buddhist concept: it links intentional actions with consequences across lives.",
-          "et": "Mis budistlik mõiste seob tahtlikud teod tagajärgedega üle elude?"
+          "en": "In a Scandinavian December custom, a girl in white leads a procession while wearing a crown of candles. Which saint’s day is being celebrated?",
+          "et": "Skandinaavia detsembrikombes juhib valgesse riietatud tüdruk rongkäiku, kandes peas küünlakrooni. Millise pühaku päeva tähistatakse?"
         },
         "response": {
-          "en": "karma",
-          "et": "karma"
+          "en": "Saint Lucy’s Day",
+          "et": "luutsinapäev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "St Lucy's Day",
+            "Saint Lucia Day",
+            "St Lucia Day"
+          ],
+          "et": [
+            "Lucia päev",
+            "püha Lucia päev"
+          ]
         },
         "explanation": {
-          "en": "Karma in Buddhist analysis depends chiefly on intention rather than fate or ritual reward.",
-          "et": "Karma sõltub budistlikus käsitluses peamiselt kavatsusest, mitte saatusest või rituaalitasust."
+          "en": "Saint Lucy’s Day is especially associated with Swedish and Scandinavian candlelit processions led by a white-robed “Lucy.”",
+          "et": "Luutsinapäeva seostatakse eriti Rootsi ja Skandinaavia küünlarongkäikudega, mida juhib valges „Lucia”."
         },
         "source": {
-          "sourceId": "wikipedia:karma",
-          "title": "Karma",
-          "url": "https://en.wikipedia.org/wiki/Karma",
+          "sourceId": "wikipedia:saint_lucys_day",
+          "title": "Saint Lucy's Day",
+          "url": "https://en.wikipedia.org/wiki/Saint_Lucy%27s_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-041:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:buddhist-path:medium:role:bodhisattva",
+        "factKey": "obon:ancestor-lanterns",
         "tier": 5,
-        "subjectKey": "role:bodhisattva",
+        "subjectKey": "holiday:obon",
         "clue": {
-          "en": "One Buddhist concept seeks awakening while acting for the liberation of other beings. Which one is described?",
-          "et": "Budistlik mõiste taotleb virgumist, tegutsedes teiste olendite vabanemise nimel. Mis see on?"
+          "en": "Which Japanese Buddhist season welcomes ancestral spirits home and often ends by sending glowing lanterns onto water?",
+          "et": "Milline Jaapani budistlik püha tervitab esivanemate vaime koju ning lõpeb sageli helendavate laternate veele saatmisega?"
         },
         "response": {
-          "en": "bodhisattva",
-          "et": "bodhisattva"
+          "en": "Obon",
+          "et": "Obon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bon festival"
+          ],
+          "et": [
+            "Bon"
+          ]
         },
         "explanation": {
-          "en": "Bodhisattva becomes especially central to Mahayana ideals of compassion.",
-          "et": "Bodhisattva muutub eriti keskseks mahajaana kaastundeideaalis."
+          "en": "Obon is a Japanese Buddhist custom honoring ancestors, with lanterns used to welcome and guide spirits.",
+          "et": "Obon on Jaapani budistlik esivanemate austamise komme, kus laternatega tervitatakse ja juhatatakse vaime."
         },
         "source": {
-          "sourceId": "wikipedia:bodhisattva",
-          "title": "Bodhisattva",
-          "url": "https://en.wikipedia.org/wiki/Bodhisattva",
+          "sourceId": "wikipedia:bon_festival",
+          "title": "Bon (festival)",
+          "url": "https://en.wikipedia.org/wiki/Bon_(festival)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32711,157 +32893,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-042",
     "name": {
-      "en": "Ideas and Symbols of East Asian Traditions",
-      "et": "Ida-Aasia traditsioonide ideed ja sümbolid"
+      "en": "Philosophy’s Memorable Props",
+      "et": "Filosoofia meeldejäävad rekvisiidid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-042:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:east-asian-traditions:medium:concept:dao",
+        "factKey": "trolley-problem:lever-five-one",
         "tier": 1,
-        "subjectKey": "concept:dao",
+        "subjectKey": "philosophy:trolley-problem",
         "clue": {
-          "en": "Which East Asian concept or figure means the Way underlying natural order in Chinese thought?",
-          "et": "Tuvasta järgmine Ida-Aasia mõiste või tegelane: see tähendab Hiina mõttes loomuliku korra aluseks olevat Teed."
+          "en": "A runaway rail vehicle is heading toward five people. Pulling a lever diverts it onto a track with one person. Name the ethical thought experiment.",
+          "et": "Juhitamatu rööbassõiduk liigub viie inimese poole. Hoova tõmbamine suunaks selle teele, kus on üks inimene. Nimeta eetiline mõttekatse."
         },
         "response": {
-          "en": "Dao",
-          "et": "dao"
+          "en": "trolley problem",
+          "et": "trammiprobleem"
         },
         "acceptedVariants": {
           "en": [
-            "Tao"
+            "the trolley problem"
           ],
           "et": [
-            "tao"
+            "trolliprobleem"
           ]
         },
         "explanation": {
-          "en": "Dao is described in Daoism as nameless and not fully captured in words.",
-          "et": "Dao on taoismis nimetu ega ole sõnadega täielikult haaratav."
+          "en": "The trolley problem asks whether actively redirecting danger from five people toward one is morally permissible.",
+          "et": "Trammiprobleem küsib, kas ohu aktiivne suunamine viielt inimeselt ühele on moraalselt lubatav."
         },
         "source": {
-          "sourceId": "wikipedia:tao",
-          "title": "Tao",
-          "url": "https://en.wikipedia.org/wiki/Tao",
+          "sourceId": "wikipedia:trolley_problem",
+          "title": "Trolley problem",
+          "url": "https://en.wikipedia.org/wiki/Trolley_problem",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-042:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:east-asian-traditions:medium:concept:yin-and-yang",
+        "factKey": "brain-vat:simulated-reality",
         "tier": 2,
-        "subjectKey": "concept:yin-and-yang",
+        "subjectKey": "philosophy:brain-vat",
         "clue": {
-          "en": "An East Asian concept or figure symbolises complementary dark and light aspects of change. What term fits?",
-          "et": "Siin kirjeldatud Ida-Aasia mõiste või tegelane sümboliseerivad muutuse täiendavaid tumedaid ja heledaid külgi. Mis see on?"
+          "en": "In which skeptical thought experiment does a disembodied thinking organ receive computer signals so convincing that it cannot tell its experienced world is simulated?",
+          "et": "Millises skeptilises mõttekatses saab kehast eraldatud mõtlev elund arvutilt nii veenvaid signaale, et ei suuda märgata kogetud maailma simuleeritust?"
         },
         "response": {
-          "en": "yin and yang",
-          "et": "yin ja yang"
+          "en": "brain in a vat",
+          "et": "aju purgis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the brain in a vat"
+          ],
+          "et": [
+            "purgiaju",
+            "aju tõrres",
+            "aju anumas"
+          ]
         },
         "explanation": {
-          "en": "Yin and yang are interdependent phases rather than a simple contest of evil and good.",
-          "et": "Yin ja yang on vastastikku sõltuvad faasid, mitte lihtne kurja ja hea võitlus."
+          "en": "A brain in a vat is imagined as receiving artificial inputs indistinguishable from ordinary experience, challenging what we can know about reality.",
+          "et": "Aju purgis saab kujutluses tehislikke sisendeid, mida pole tavakogemusest võimalik eristada, ning seab nii kahtluse alla meie teadmised tegelikkusest."
         },
         "source": {
-          "sourceId": "wikipedia:yin_and_yang",
-          "title": "Yin and yang",
-          "url": "https://en.wikipedia.org/wiki/Yin_and_yang",
+          "sourceId": "wikipedia:brain_in_a_vat",
+          "title": "Brain in a vat",
+          "url": "https://en.wikipedia.org/wiki/Brain_in_a_vat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-042:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:east-asian-traditions:medium:person:confucius",
+        "factKey": "pascals-wager:belief-bet",
         "tier": 3,
-        "subjectKey": "person:confucius",
+        "subjectKey": "philosophy:pascals-wager",
         "clue": {
-          "en": "Recognise the East Asian concept or figure who taught ethical cultivation, ritual, and humane government.",
-          "et": "Otsitav Ida-Aasia mõiste või tegelane õpetas eetilist enesekasvatust, rituaali ja inimlikku valitsemist. Kes see on?"
+          "en": "Which argument named for a French mathematician treats belief in God as a practical choice with a potentially infinite reward and a limited worldly cost?",
+          "et": "Milline Prantsuse matemaatiku järgi nimetatud argument käsitleb usku Jumalasse praktilise valikuna, mille võimalik võit on lõpmatu ja maine hind piiratud?"
         },
         "response": {
-          "en": "Confucius",
-          "et": "Konfutsius"
+          "en": "Pascal’s wager",
+          "et": "Pascali kihlvedu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Pascal wager"
+          ],
+          "et": [
+            "Pascal's wager"
+          ]
         },
         "explanation": {
-          "en": "Confucius focused on ren and li rather than presenting a systematic metaphysics.",
-          "et": "Konfutsius keskendus ren’ile ja li’le, mitte süsteemsele metafüüsikale."
+          "en": "Pascal’s wager argues pragmatically that the possible infinite gain from belief can outweigh its finite cost.",
+          "et": "Pascali kihlvedu väidab pragmaatiliselt, et usu võimalik lõpmatu kasu võib kaaluda üles selle piiratud kulu."
         },
         "source": {
-          "sourceId": "wikipedia:confucius",
-          "title": "Confucius",
-          "url": "https://en.wikipedia.org/wiki/Confucius",
+          "sourceId": "wikipedia:pascals_wager",
+          "title": "Pascal's wager",
+          "url": "https://en.wikipedia.org/wiki/Pascal%27s_wager",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-042:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:east-asian-traditions:medium:concept:kami",
+        "factKey": "veil-ignorance:rawls-original-position",
         "tier": 4,
-        "subjectKey": "concept:kami",
+        "subjectKey": "philosophy:veil-ignorance",
         "clue": {
-          "en": "Which East Asian concept or figure are the sacred presences honoured in Shinto?",
-          "et": "Tuvasta järgmine Ida-Aasia mõiste või tegelane: see on šintoos austatavad pühad kohalolud."
+          "en": "John Rawls asks people to design a just society without knowing their own future class, wealth, gender or talents. Name the imagined screen hiding that information.",
+          "et": "John Rawls palub inimestel kujundada õiglane ühiskond teadmata oma tulevast klassi, rikkust, sugu ega andeid. Nimeta kujuteldav kate, mis selle teabe varjab."
         },
         "response": {
-          "en": "kami",
-          "et": "kami"
+          "en": "veil of ignorance",
+          "et": "teadmatuse loor"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Kami can inhabit natural features, ancestors, or remarkable forces without being equivalent to western gods.",
-          "et": "Kami võivad asuda loodusobjektides, esivanemates või jõududes ega võrdu lääne jumalatega."
+          "en": "The veil of ignorance removes knowledge of one’s personal position so that principles are chosen without tailoring them to private advantage.",
+          "et": "Teadmatuse loor eemaldab teadmise inimese isiklikust positsioonist, et põhimõtteid ei valitaks enda eelise järgi."
         },
         "source": {
-          "sourceId": "wikipedia:kami",
-          "title": "Kami",
-          "url": "https://en.wikipedia.org/wiki/Kami",
+          "sourceId": "wikipedia:original_position",
+          "title": "Original position",
+          "url": "https://en.wikipedia.org/wiki/Original_position",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-042:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:east-asian-traditions:medium:object:torii",
+        "factKey": "russells-teapot:orbit-proof-burden",
         "tier": 5,
-        "subjectKey": "object:torii",
+        "subjectKey": "philosophy:russells-teapot",
         "clue": {
-          "en": "One East Asian concept or figure marks the approach to a Shinto sacred space. Which one is described?",
-          "et": "Ida-Aasia mõiste või tegelane märgib sissepääsu šinto pühasse ruumi. Mis see on?"
+          "en": "A British philosopher imagined a tiny piece of china orbiting the Sun between Earth and Mars to show that an unfalsifiable claim does not transfer the burden of proof. Name the analogy.",
+          "et": "Briti filosoof kujutles Päikese ümber Maa ja Marsi vahel tiirlevat tillukest portselaneset, näitamaks, et kontrollimatu väide ei lükka tõendamiskoormust teistele. Nimeta analoogia."
         },
         "response": {
-          "en": "torii",
-          "et": "torii"
+          "en": "Russell’s teapot",
+          "et": "Russelli teekann"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "celestial teapot"
+          ],
+          "et": [
+            "taevane teekann"
+          ]
         },
         "explanation": {
-          "en": "Torii symbolically separates the ordinary realm from the kami’s precinct.",
-          "et": "Torii eraldab sümboolselt argise maailma kami pühamualast."
+          "en": "Russell’s teapot illustrates that a claim does not become reasonable merely because others cannot disprove an undetectable object.",
+          "et": "Russelli teekann näitab, et väide ei muutu mõistlikuks pelgalt seetõttu, et teised ei suuda tuvastamatut eset ümber lükata."
         },
         "source": {
-          "sourceId": "wikipedia:torii",
-          "title": "Torii",
-          "url": "https://en.wikipedia.org/wiki/Torii",
+          "sourceId": "wikipedia:russells_teapot",
+          "title": "Russell's teapot",
+          "url": "https://en.wikipedia.org/wiki/Russell%27s_teapot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -32869,153 +33065,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-043",
     "name": {
-      "en": "Texts of Abrahamic Traditions",
-      "et": "Aabrahamlike traditsioonide tekstid"
+      "en": "Philosophy’s Famous One-Liners",
+      "et": "Filosoofia kuulsad lööklaused"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-043:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:abrahamic-texts:medium:work:torah",
+        "factKey": "descartes:cogito-proposition",
         "tier": 1,
-        "subjectKey": "work:torah",
+        "subjectKey": "quote:cogito",
         "clue": {
-          "en": "Sacred text or collection contains the first five books of the Hebrew Bible. What is it called?",
-          "et": "Milline püha tekst või kogu sisaldab heebrea piibli viit esimest raamatut?"
+          "en": "Supply Descartes’s complete proposition about thought proving one’s own existence, also famous in a three-word Latin form.",
+          "et": "Ütle terviklikult Descartes’i väide, mille järgi mõtlemine tõendab inimese enda olemasolu ning mida tuntakse ka kolmesõnalises ladina vormis."
         },
         "response": {
-          "en": "Torah",
-          "et": "Toora"
+          "en": "I think, therefore I am",
+          "et": "Mõtlen, järelikult olen"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Cogito ergo sum"
+          ],
+          "et": [
+            "Cogito ergo sum"
+          ]
         },
         "explanation": {
-          "en": "Torah means teaching or instruction and is read from a scroll in synagogue.",
-          "et": "Toora tähendab õpetust ning seda loetakse sünagoogis kirjarullist."
+          "en": "“I think, therefore I am,” or “Cogito ergo sum,” expresses Descartes’s certainty that the thinking self exists.",
+          "et": "„Mõtlen, järelikult olen” ehk „Cogito ergo sum” väljendab Descartes’i kindlust, et mõtlev mina on olemas."
         },
         "source": {
-          "sourceId": "wikipedia:torah",
-          "title": "Torah",
-          "url": "https://en.wikipedia.org/wiki/Torah",
+          "sourceId": "wikipedia:cogito_ergo_sum",
+          "title": "Cogito, ergo sum",
+          "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-043:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:abrahamic-texts:medium:work:book-of-psalms",
+        "factKey": "nietzsche:god-is-dead",
         "tier": 2,
-        "subjectKey": "work:book-of-psalms",
+        "subjectKey": "quote:god-is-dead",
         "clue": {
-          "en": "One sacred text or collection is the biblical collection of prayers and hymns. Which one is described?",
-          "et": "Püha tekst või kogu on piibellik palvete ja hümnide kogu. Mis see on?"
+          "en": "Supply Nietzsche’s complete three-word declaration that appears in The Gay Science and later in Thus Spoke Zarathustra.",
+          "et": "Ütle terviklikult Nietzsche kolmesõnaline kuulutus, mis esineb „Rõõmsas teaduses” ja hiljem teoses „Nõnda kõneles Zarathustra”."
         },
         "response": {
-          "en": "Psalms",
-          "et": "Psalmid"
+          "en": "God is dead",
+          "et": "Jumal on surnud"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Psalms contains varied genres including praise, lament, thanksgiving, and royal songs.",
-          "et": "Psalmid sisaldab kiituse, kaebuse, tänu ja kuninglike laulude žanre."
+          "en": "“God is dead” is Nietzsche’s famous diagnosis of the cultural consequences of declining Christian belief in modern Europe.",
+          "et": "„Jumal on surnud” on Nietzsche kuulus diagnoos kristliku usu taandumise kultuurilistele tagajärgedele moodsas Euroopas."
         },
         "source": {
-          "sourceId": "wikipedia:psalms",
-          "title": "Psalms",
-          "url": "https://en.wikipedia.org/wiki/Psalms",
+          "sourceId": "wikipedia:god_is_dead",
+          "title": "God is dead",
+          "url": "https://en.wikipedia.org/wiki/God_is_dead",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-043:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:abrahamic-texts:medium:work:canonical-gospels",
+        "factKey": "sartre:no-exit-hell-quote",
         "tier": 3,
-        "subjectKey": "work:canonical-gospels",
+        "subjectKey": "quote:hell-other-people",
         "clue": {
-          "en": "Identify this sacred text or collection: it tell the life, teaching, death, and resurrection of Jesus.",
-          "et": "Kirjeldatud püha tekst või kogu jutustavad Jeesuse elust, õpetusest, surmast ja ülestõusmisest. Mis on selle nimi?"
+          "en": "Sartre’s No Exit traps three characters together under one another’s gaze. Supply the complete famous proposition the play gives about damnation through that relationship.",
+          "et": "Sartre’i „Kinnine kohus” sulgeb kolm tegelast kokku üksteise pilgu alla. Ütle terviklikult näidendi kuulus väide hukatusest selles suhtes."
         },
         "response": {
-          "en": "Gospels",
-          "et": "evangeeliumid"
+          "en": "Hell is other people",
+          "et": "Põrgu on teised"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "L'enfer, c'est les autres"
+          ],
+          "et": [
+            "Põrgu, see on teised",
+            "L'enfer, c'est les autres"
+          ]
         },
         "explanation": {
-          "en": "Gospels comprise Matthew, Mark, Luke, and John in the Christian canon.",
-          "et": "Evangeeliumid koosnevad kristlikus kaanonis Matteuse, Markuse, Luuka ja Johannese raamatust."
+          "en": "“Hell is other people” appears in No Exit and reflects the play’s concern with being fixed and judged through other people’s gaze; it is not claimed here as the play’s final line.",
+          "et": "„Põrgu on teised” esineb „Kinnises kohtus” ja seostub näidendi mõttega, et teiste pilk võib inimese määratleda ja tema üle kohut mõista; seda ei esitata siin näidendi viimase lausena."
         },
         "source": {
-          "sourceId": "wikipedia:gospel",
-          "title": "Gospel",
-          "url": "https://en.wikipedia.org/wiki/Gospel",
+          "sourceId": "wikipedia:no_exit",
+          "title": "No Exit",
+          "url": "https://en.wikipedia.org/wiki/No_Exit",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-043:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:abrahamic-texts:medium:work:quran",
+        "factKey": "socrates:unexamined-life-apology",
         "tier": 4,
-        "subjectKey": "work:quran",
+        "subjectKey": "quote:unexamined-life",
         "clue": {
-          "en": "What sacred text or collection is Islam’s scripture understood as revelation to Muhammad?",
-          "et": "Järgmine püha tekst või kogu on islami pühakiri, mida mõistetakse Muhamedile antud ilmutusena. Milline see on?"
+          "en": "In Plato’s Apology, Socrates defends philosophical questioning even while facing death. Supply the complete proposition in which he denies value to human existence without such scrutiny.",
+          "et": "Platoni „Apoloogias” kaitseb Sokrates filosoofilist küsitlemist isegi surmaga silmitsi seistes. Ütle terviklikult väide, mille järgi pole inimese olemisel ilma sellise uurimiseta väärtust."
         },
         "response": {
-          "en": "Quran",
-          "et": "Koraan"
+          "en": "The unexamined life is not worth living",
+          "et": "Uurimata elu pole elamist väärt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "An unexamined life is not worth living",
+            "The unexamined life isn't worth living"
+          ],
+          "et": [
+            "Uurimata elu ei ole elamist väärt",
+            "Läbiuurimata elu ei ole elamist väärt",
+            "Uurimata elu ei vääri elamist"
+          ]
         },
         "explanation": {
-          "en": "Quran is arranged in surahs and recited in Arabic in ritual contexts.",
-          "et": "Koraan on jaotatud suuradeks ning seda retsiteeritakse rituaalis araabia keeles."
+          "en": "“The unexamined life is not worth living” is the conventional rendering of Socrates’s statement in the Apology.",
+          "et": "„Uurimata elu pole elamist väärt” on Sokratese „Apoloogias” esitatud mõtte tavapärane eestikeelne kuju."
         },
         "source": {
-          "sourceId": "wikipedia:quran",
-          "title": "Quran",
-          "url": "https://en.wikipedia.org/wiki/Quran",
+          "sourceId": "wikipedia:the_unexamined_life_is_not_worth_living",
+          "title": "The unexamined life is not worth living",
+          "url": "https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-043:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:abrahamic-texts:medium:work:hadith",
+        "factKey": "rousseau:social-contract-opening",
         "tier": 5,
-        "subjectKey": "work:hadith",
+        "subjectKey": "quote:born-free-chains",
         "clue": {
-          "en": "A sacred text or collection records reports of Muhammad’s sayings, actions, or approvals. Name it.",
-          "et": "Üks püha tekst või kogu kannab edasi teateid Muhamedi ütlustest, tegudest või heakskiidust. Millist vastust otsime?"
+          "en": "Supply Rousseau’s complete opening contrast in The Social Contract: it begins from natural liberty, then says society surrounds the person with bondage.",
+          "et": "Ütle terviklikult Rousseau „Ühiskondliku lepingu” avavastandus: see algab loomulikust vabadusest ja ütleb seejärel, et ühiskonnas ümbritseb inimest orjastav seisund."
         },
         "response": {
-          "en": "hadith",
-          "et": "hadith"
+          "en": "Man is born free, and everywhere he is in chains",
+          "et": "Inimene sünnib vabana, kuid kõikjal on ta ahelates"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Man is born free but everywhere he is in chains",
+            "Born free, everywhere in chains",
+            "Born free but everywhere in chains"
+          ],
+          "et": [
+            "Inimene on sündinud vabana, ent kõikjal on ta ahelais",
+            "Sünnib vabana, kõikjal ahelates",
+            "Sündinud vabana, kõikjal ahelais",
+            "Inimene sünnib vabana ja siiski on ta kõikjal ahelais",
+            "Inimene sünnib vabana ja siiski on ta kõikjal ahelates",
+            "Inimene on sündinud vabana ja siiski on ta kõikjal ahelais",
+            "Inimene on sündinud vabana ja siiski on ta kõikjal ahelates",
+            "Inimene sünnib vabana, aga ta on kõikjal ahelais",
+            "Inimene sünnib vabana, aga ta on kõikjal ahelates",
+            "Inimene on sündinud vabana, aga ta on kõikjal ahelais",
+            "Inimene on sündinud vabana, aga ta on kõikjal ahelates",
+            "Inimene sünnib vabana, ometi on ta kõikjal ahelais",
+            "Inimene sünnib vabana, ometi on ta kõikjal ahelates",
+            "Inimene on sündinud vabana, ometi on ta kõikjal ahelais",
+            "Inimene on sündinud vabana, ometi on ta kõikjal ahelates"
+          ]
         },
         "explanation": {
-          "en": "Hadith is evaluated through chains of transmitters and the report text.",
-          "et": "Hadith’i hinnatakse edastajate ahela ja pärimuse teksti kaudu."
+          "en": "“Man is born free, and everywhere he is in chains” opens Book I by contrasting natural freedom with social constraint.",
+          "et": "„Inimene sünnib vabana, kuid kõikjal on ta ahelates” avab esimese raamatu, vastandades loomuliku vabaduse ühiskondlikele piirangutele."
         },
         "source": {
-          "sourceId": "wikipedia:hadith",
-          "title": "Hadith",
-          "url": "https://en.wikipedia.org/wiki/Hadith",
+          "sourceId": "wikisource:the_social_contract_tr_cole_book_1",
+          "title": "The Social Contract (tr. Cole)/Book 1",
+          "url": "https://en.wikisource.org/wiki/The_Social_Contract_(tr._Cole)/Book_1",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -33023,153 +33255,162 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-044",
     "name": {
-      "en": "The Christian Liturgical Year",
-      "et": "Kristlik kirikuaasta"
+      "en": "Paradoxes at the Pub",
+      "et": "Paradoksid pubilauas"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-044:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:christian-calendar:medium:event:advent",
+        "factKey": "grandfather-paradox:ancestor-time-travel",
         "tier": 1,
-        "subjectKey": "event:advent",
+        "subjectKey": "paradox:grandfather",
         "clue": {
-          "en": "Identify the Christian season or feast: it is the season of preparation before Christmas.",
-          "et": "Mis kristlik aeg või püha on jõulueelne ettevalmistusaeg?"
+          "en": "A time traveler prevents an ancestor from having children, apparently erasing the traveler who made the intervention. Name the contradiction.",
+          "et": "Ajarändur takistab esivanemal lapsi saada ja kustutab näiliselt inimese, kes minevikku sekkus. Nimeta vastuolu."
         },
         "response": {
-          "en": "Advent",
-          "et": "advent"
+          "en": "grandfather paradox",
+          "et": "vanaisa paradoks"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Advent begins the western liturgical year and combines expectation of birth and second coming.",
-          "et": "Advent alustab lääne kirikuaastat ning ühendab sünni ja teise tulemise ootuse."
+          "en": "The grandfather paradox exposes a causal contradiction created when a journey into the past prevents that journey’s own cause.",
+          "et": "Vanaisa paradoks toob esile põhjusliku vastuolu, kus reis minevikku takistab selle reisi enda põhjuse tekkimist."
         },
         "source": {
-          "sourceId": "wikipedia:advent",
-          "title": "Advent",
-          "url": "https://en.wikipedia.org/wiki/Advent",
+          "sourceId": "wikipedia:grandfather_paradox",
+          "title": "Grandfather paradox",
+          "url": "https://en.wikipedia.org/wiki/Grandfather_paradox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-044:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:christian-calendar:medium:event:lent",
+        "factKey": "liar-paradox:this-sentence-false",
         "tier": 2,
-        "subjectKey": "event:lent",
+        "subjectKey": "paradox:liar",
         "clue": {
-          "en": "A Christian season or feast is the fasting season before Easter. Name it.",
-          "et": "Üks kristlik aeg või püha eelneb ülestõusmispühadele ning seda iseloomustab paastumine. Millist vastust otsime?"
+          "en": "“This sentence is false” seems true only when false and false only when true. Name the self-referential contradiction.",
+          "et": "„See lause on väär” näib tõene ainult siis, kui see on väär, ja väär ainult siis, kui see on tõene. Nimeta enesele viitav vastuolu."
         },
         "response": {
-          "en": "Lent",
-          "et": "paastuaeg"
+          "en": "liar paradox",
+          "et": "valetaja paradoks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "liar’s paradox"
+          ],
+          "et": [
+            "liar's paradox"
+          ]
         },
         "explanation": {
-          "en": "Lent recalls the forty days of Jesus in the wilderness, excluding Sundays in western counting.",
-          "et": "Paastuaeg meenutab Jeesuse neljakümmet päeva kõrbes, lääne arvestuses pühapäevi välja jättes."
+          "en": "The liar paradox arises because assigning either truth value to the sentence reverses that value.",
+          "et": "Valetaja paradoks tekib sellest, et kummagi tõeväärtuse omistamine lausele pöörab selle väärtuse vastupidiseks."
         },
         "source": {
-          "sourceId": "wikipedia:lent",
-          "title": "Lent",
-          "url": "https://en.wikipedia.org/wiki/Lent",
+          "sourceId": "wikipedia:liar_paradox",
+          "title": "Liar paradox",
+          "url": "https://en.wikipedia.org/wiki/Liar_paradox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-044:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:christian-calendar:medium:event:easter",
+        "factKey": "omnipotence-paradox-unliftable-stone",
         "tier": 3,
-        "subjectKey": "event:easter",
+        "subjectKey": "paradox:omnipotence",
         "clue": {
-          "en": "Recognise the Christian season or feast that celebrates the resurrection of Jesus.",
-          "et": "Otsitav kristlik aeg või püha tähistavad Jeesuse ülestõusmist. Mis see on?"
+          "en": "An all-powerful being is asked to create a stone so heavy that the same being cannot lift it. Name the logical challenge.",
+          "et": "Kõikvõimsal olendil palutakse luua nii raske kivi, et ta ise ei suuda seda tõsta. Nimeta loogiline probleem."
         },
         "response": {
-          "en": "Easter",
-          "et": "ülestõusmispühad"
+          "en": "omnipotence paradox",
+          "et": "kõikvõimsuse paradoks"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Easter is dated by a paschal lunar rule rather than a fixed civil date.",
-          "et": "Ülestõusmispühade aeg määratakse paasapüha kuukalendri reegliga, mitte kindla tsiviilkuupäevaga."
+          "en": "The omnipotence paradox tests whether unlimited power can consistently include the power to create a task that defeats itself.",
+          "et": "Kõikvõimsuse paradoks uurib, kas piiramatu jõud saab vastuoluta hõlmata võimet luua ülesanne, millega see jõud ise toime ei tule."
         },
         "source": {
-          "sourceId": "wikipedia:easter",
-          "title": "Easter",
-          "url": "https://en.wikipedia.org/wiki/Easter",
+          "sourceId": "wikipedia:omnipotence_paradox",
+          "title": "Omnipotence paradox",
+          "url": "https://en.wikipedia.org/wiki/Omnipotence_paradox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-044:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:christian-calendar:medium:event:pentecost",
+        "factKey": "barber-paradox-shaves-nonself",
         "tier": 4,
-        "subjectKey": "event:pentecost",
+        "subjectKey": "paradox:barber",
         "clue": {
-          "en": "Christian season or feast commemorates the Holy Spirit descending on the disciples. What is it called?",
-          "et": "Milline kristlik aeg või püha meenutab Püha Vaimu laskumist jüngritele?"
+          "en": "In one village, a professional grooms exactly those men who do not groom themselves, and nobody else. Does the professional groom himself? Name the puzzle.",
+          "et": "Ühes külas hoolitseb üks ametimees täpselt nende meeste näokarvade eest, kes seda ise ei tee, ja mitte kellegi teise eest. Kas ametimees hoolitseb enda omade eest? Nimeta mõistatus."
         },
         "response": {
-          "en": "Pentecost",
-          "et": "nelipüha"
+          "en": "barber paradox",
+          "et": "habemeajaja paradoks"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pentecost falls fifty days from Easter and takes its name from the Greek for fiftieth.",
-          "et": "Nelipüha langeb viiekümnendale päevale ülestõusmispühadest ning saab nime kreeka sõnast viiekümnes."
+          "en": "The barber paradox is Russell’s accessible illustration of a self-referential rule that cannot consistently classify its own rule-follower.",
+          "et": "Habemeajaja paradoks on Russelli lihtne näide enesele viitavast reeglist, mis ei suuda omaenda täitjat vastuoluta liigitada."
         },
         "source": {
-          "sourceId": "wikipedia:pentecost",
-          "title": "Pentecost",
-          "url": "https://en.wikipedia.org/wiki/Pentecost",
+          "sourceId": "wikipedia:barber_paradox",
+          "title": "Barber paradox",
+          "url": "https://en.wikipedia.org/wiki/Barber_paradox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-044:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:christian-calendar:medium:event:epiphany",
+        "factKey": "sorites-paradox-one-grain",
         "tier": 5,
-        "subjectKey": "event:epiphany",
+        "subjectKey": "paradox:sorites",
         "clue": {
-          "en": "Name the Christian season or feast that celebrates the manifestation of Christ, often to the Magi.",
-          "et": "Vihjes kirjeldatud kristlik aeg või püha tähistab Kristuse ilmumist, sageli idamaa tarkadele. Mis see on?"
+          "en": "A thousand grains clearly make a large collection and one grain clearly does not, yet removing any single grain seems unable to change the label. Name this puzzle about vague boundaries.",
+          "et": "Tuhat tera moodustab selgelt suure koguse ja üks tera seda ei tee, kuid ühegi üksiku tera eemaldamine ei näi nimetust muutvat. Nimeta see ebamääraste piiride mõistatus."
         },
         "response": {
-          "en": "Epiphany",
-          "et": "kolmekuningapäev"
+          "en": "sorites paradox",
+          "et": "soritese paradoks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "paradox of the heap",
+            "heap paradox"
+          ],
+          "et": [
+            "kuhja paradoks"
+          ]
         },
         "explanation": {
-          "en": "Epiphany has eastern traditions especially focused on Jesus’s baptism.",
-          "et": "Kolmekuningapäev keskendub idakirikutes eriti Jeesuse ristimisele."
+          "en": "The sorites paradox shows how tiny individually harmless steps can make a precise cutoff impossible for a vague category.",
+          "et": "Soritese paradoks näitab, kuidas eraldi tähtsusetud väikesed sammud võivad muuta ebamäärase kategooria täpse piiri võimatuks."
         },
         "source": {
-          "sourceId": "wikipedia:epiphany_(holiday)",
-          "title": "Epiphany (holiday)",
-          "url": "https://en.wikipedia.org/wiki/Epiphany_(holiday)",
+          "sourceId": "wikipedia:sorites_paradox",
+          "title": "Sorites paradox",
+          "url": "https://en.wikipedia.org/wiki/Sorites_paradox",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
