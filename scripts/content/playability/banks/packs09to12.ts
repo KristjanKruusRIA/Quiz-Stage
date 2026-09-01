@@ -16218,8 +16218,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "jäsemeprotees"
         },
         "acceptedVariants": {
-          "en": ["limb prosthesis", "artificial limb"],
-          "et": ["käe- või jalaprotees", "tehisjäse"]
+          "en": ["limb prosthesis", "artificial limb", "prosthetic arm", "arm prosthesis", "upper-limb prosthesis", "upper-extremity prosthesis"],
+          "et": ["käe- või jalaprotees", "tehisjäse", "käeprotees", "ülajäsemeprotees"]
         },
         "explanation": {
           "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
