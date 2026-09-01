@@ -20458,11 +20458,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "en": [
             "cacao beans",
             "cacao seeds",
-            "cocoa-bean money"
+            "cocoa-bean money",
+            "cocoa bean",
+            "cacao bean"
           ],
           "et": [
             "kakaoseemned",
-            "kakaooad rahana"
+            "kakaooad rahana",
+            "kakaouba",
+            "kakaoseeme"
           ]
         },
         "explanation": {
@@ -20494,12 +20498,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "en": [
             "brick tea",
             "compressed tea bricks",
-            "tea-brick currency"
+            "tea-brick currency",
+            "tea brick"
           ],
           "et": [
             "pressitud teeplokid",
             "teetelliseraha",
-            "brick tea"
+            "brick tea",
+            "teetellis",
+            "pressitud teeplokk"
           ]
         },
         "explanation": {
@@ -20569,12 +20576,17 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "en": [
             "cowries",
             "cowry shells",
-            "cowrie-shell money"
+            "cowrie-shell money",
+            "cowrie",
+            "cowry",
+            "cowrie shell"
           ],
           "et": [
             "kaurite kojad",
             "kauriraha",
-            "cowrie shells"
+            "cowrie shells",
+            "kaurikarp",
+            "kauri"
           ]
         },
         "explanation": {
@@ -20605,11 +20617,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "acceptedVariants": {
           "en": [
             "rai stone money",
-            "Yap stone money"
+            "Yap stone money",
+            "rai stone"
           ],
           "et": [
             "rai kiviraha",
-            "Japi kiviraha"
+            "Japi kiviraha",
+            "rai-kivi"
           ]
         },
         "explanation": {
