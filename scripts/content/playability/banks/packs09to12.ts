@@ -16518,8 +16518,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "malware:iloveyou-worm",
         "clue": {
-          "en": "In 2000, a tempting love-letter attachment copied itself to Microsoft Outlook contacts and raced around the world. Name this email worm.",
-          "et": "2000. aastal kopeeris ahvatleva armastuskirjana saabunud manus end Microsoft Outlooki kontaktidele ja levis üle maailma. Mis nime kandis see e-postiuss?"
+          "en": "In 2000, a tempting love-letter attachment sent itself to contacts in an infected system's address book and raced around the world. Name this email worm.",
+          "et": "2000. aastal saatis ahvatleva armastuskirjana saabunud manus end nakatunud süsteemi aadressiraamatu kontaktidele ja levis üle maailma. Mis nime kandis see e-postiuss?"
         },
         "response": {
           "en": "ILOVEYOU worm",
@@ -16617,8 +16617,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["Zune'i liigaastaviga", "Zune'i viga", "Zune'i hangumine", "Zune 30", "Z2K"]
         },
         "explanation": {
-          "en": "A loop in the Zune 30 clock driver could not finish calculating the final day of a leap year, so the players recovered only after the date changed.",
-          "et": "Zune 30 kelladraiveri tsükkel ei suutnud liigaasta viimast päeva lõpuni arvutada, mistõttu mängijad taastusid alles kuupäeva vahetudes."
+          "en": "The Zune 30's internal clock driver mishandled the final day of the 2008 leap year, and the players recovered automatically after 24 hours.",
+          "et": "Zune 30 sisemine kelladraiver käsitles 2008. liigaasta viimast päeva valesti ning mängijad taastusid 24 tunni pärast automaatselt."
         },
         "source": {
           "sourceId": "wikipedia:zune",
@@ -17017,8 +17017,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Ctrl-Alt-Delete"
         },
         "acceptedVariants": {
-          "en": ["Control-Alt-Delete", "three-finger salute"],
-          "et": ["Control-Alt-Delete", "kolme sõrme tervitus"]
+          "en": ["Control-Alt-Delete", "Ctrl+Alt+Del", "Ctrl+Alt+Delete", "Ctrl-Alt-Del", "three-finger salute"],
+          "et": ["Control-Alt-Delete", "Ctrl+Alt+Del", "Ctrl+Alt+Delete", "Ctrl-Alt-Del", "kolme sõrme tervitus"]
         },
         "explanation": {
           "en": "Ctrl-Alt-Delete began as a quick way for IBM PC developers to reboot without cycling the power and later gained a separate Windows security role.",
@@ -17529,8 +17529,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "sound:aol-youve-got-mail",
         "clue": {
-          "en": "Elwood Edwards recorded this home-made AOL notification announcing new email; its words later became the title of a Tom Hanks and Meg Ryan film. Name the greeting.",
-          "et": "Elwood Edwards salvestas kodus selle AOL-i teavituse, mis kuulutas uue e-kirja saabumist; selle sõnadest sai hiljem Tom Hanksi ja Meg Ryani filmi pealkiri. Mis tervitus see oli?"
+          "en": "Elwood Edwards recorded this home-made AOL notification announcing new email; its words later became the title of a 1998 film. Name the greeting.",
+          "et": "Elwood Edwards salvestas kodus selle AOL-i teavituse, mis kuulutas uue e-kirja saabumist; selle sõnadest sai hiljem 1998. aasta filmi pealkiri. Mis tervitus see oli?"
         },
         "response": {
           "en": "AOL “You've Got Mail” greeting",
@@ -17538,7 +17538,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["You've Got Mail notification", "AOL mail greeting", "You've Got Mail", "AOL You've Got Mail"],
-          "et": ["AOL-i postitervitus", "You've Got Mail teavitus", "AOL-i You've Got Mail"]
+          "et": ["AOL-i postitervitus", "You've Got Mail teavitus", "AOL-i You've Got Mail", "You've Got Mail"]
         },
         "explanation": {
           "en": "Edwards recorded AOL's familiar mail announcement on a cassette at home, and the phrase became a lasting symbol of dial-up internet culture.",
@@ -17625,8 +17625,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "clock:quartz",
         "clue": {
-          "en": "An electronic oscillator counts the exceptionally stable vibration of a piezoelectric crystal to regulate this everyday timekeeper. What type of clock is it?",
-          "et": "Elektrooniline ostsillaator loendab piesoelektrilise kristalli väga stabiilset võnkumist, et selle igapäevase ajanäitaja käiku reguleerida. Mis tüüpi kell see on?"
+          "en": "Electronic circuitry counts the exceptionally stable oscillations of a piezoelectric crystal to regulate this everyday timekeeper. What type of clock is it?",
+          "et": "Elektrooniline lülitus loendab piesoelektrilise kristalli väga stabiilseid võnkeid, et selle igapäevase ajanäitaja käiku reguleerida. Mis tüüpi kell see on?"
         },
         "response": {
           "en": "quartz clock",
