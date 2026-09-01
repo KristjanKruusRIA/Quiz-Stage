@@ -18943,153 +18943,186 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-034",
     "name": {
-      "en": "How Constitutions Limit Power",
-      "et": "Kuidas põhiseadus võimu piirab"
+      "en": "Election Night Props and Plot Twists",
+      "et": "Valimisõhtu rekvisiidid ja pöörded"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-034:question:1",
-        "factKey": "built-in-politics-economics-society:constitutional-principles:medium:concept:codified-constitution",
+        "factKey": "politics:exit-poll:voters-surveyed-after-leaving-polling-station",
         "tier": 1,
-        "subjectKey": "concept:codified-constitution",
+        "subjectKey": "practice:election-exit-poll",
         "clue": {
-          "en": "Name the constitutional concept that collects a state’s fundamental rules in one authoritative document.",
-          "et": "Vihjes kirjeldatud põhiseaduslik mõiste koondab riigi põhireeglid ühte autoriteetsesse dokumenti. Mis see on?"
+          "en": "Broadcasters question a sample of voters just after they leave polling stations so they can project the result before the official count is complete. Name the practice.",
+          "et": "Telekanalid küsitlevad valimisse kuuluvaid valijaid kohe pärast jaoskonnast väljumist, et prognoosida tulemust enne ametliku lugemise lõppu. Nimeta see tava."
         },
         "response": {
-          "en": "codified constitution",
-          "et": "kodifitseeritud põhiseadus"
+          "en": "exit poll",
+          "et": "lävepakuküsitlus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "election exit poll",
+            "exit polling"
+          ],
+          "et": [
+            "valimisjaoskonnast väljujate küsitlus",
+            "exit poll"
+          ]
         },
         "explanation": {
-          "en": "Codified constitution contrasts with an uncodified order spread across statutes, precedents, and conventions.",
-          "et": "Kodifitseeritud põhiseadus erineb kodifitseerimata korrast, mis jaotub seaduste, pretsedentide ja tavade vahel."
+          "en": "An exit poll surveys voters immediately after they leave the polling station, giving broadcasters an early basis for projecting the result.",
+          "et": "Lävepakuküsitlus uurib valijaid kohe pärast jaoskonnast väljumist ning annab telekanalitele varase aluse tulemuse prognoosimiseks."
         },
         "source": {
-          "sourceId": "wikipedia:codified_constitution",
-          "title": "Codified constitution",
-          "url": "https://en.wikipedia.org/wiki/Codified_constitution",
+          "sourceId": "wikipedia:exit-poll",
+          "title": "Exit poll",
+          "url": "https://en.wikipedia.org/wiki/Exit_poll",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-034:question:2",
-        "factKey": "built-in-politics-economics-society:constitutional-principles:medium:concept:separation-of-powers",
+        "factKey": "politics:election-ink:finger-mark-deters-double-voting",
         "tier": 2,
-        "subjectKey": "concept:separation-of-powers",
+        "subjectKey": "object:election-ink",
         "clue": {
-          "en": "Recognise the constitutional concept that divides lawmaking, execution, and judging among institutions.",
-          "et": "Otsitav põhiseaduslik mõiste jaotab seadusloome, täidesaatmise ja õigusemõistmise eri institutsioonidele. Mis see on?"
+          "en": "In many elections a voter leaves with a violet mark on one finger that is hard to wash off, deterring a second vote. What marking material is this?",
+          "et": "Paljudel valimistel jääb valija sõrmele raskesti mahapestav violetne märk, mis takistab teist korda hääletamist. Mis märkimisvahend see on?"
         },
         "response": {
-          "en": "separation of powers",
-          "et": "võimude lahusus"
+          "en": "election ink",
+          "et": "valimistint"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "electoral ink",
+            "indelible election ink",
+            "electoral stain",
+            "indelible ink"
+          ],
+          "et": [
+            "kustumatu valimistint",
+            "valimisvärv",
+            "electoral ink",
+            "kustumatu tint"
+          ]
         },
         "explanation": {
-          "en": "Separation of powers aims to prevent concentrated authority through checks and balances.",
-          "et": "Võimude lahusus püüab kontrolli ja tasakaalu abil vältida võimu koondumist."
+          "en": "Election ink leaves a hard-to-remove mark on a voter, helping election officials prevent the same person from voting twice.",
+          "et": "Valimistint jätab valijale raskesti eemaldatava märgi, mis aitab vältida sama inimese korduvat hääletamist."
         },
         "source": {
-          "sourceId": "wikipedia:separation_of_powers",
-          "title": "Separation of powers",
-          "url": "https://en.wikipedia.org/wiki/Separation_of_powers",
+          "sourceId": "wikipedia:election-ink",
+          "title": "Election ink",
+          "url": "https://en.wikipedia.org/wiki/Election_ink",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-034:question:3",
-        "factKey": "built-in-politics-economics-society:constitutional-principles:medium:concept:rule-of-law",
+        "factKey": "politics:hanging-chad:florida-punch-card-remained-attached-one-corner",
         "tier": 3,
-        "subjectKey": "concept:rule-of-law",
+        "subjectKey": "object:hanging-chad-ballot",
         "clue": {
-          "en": "Constitutional concept requires public power to operate under known law. What is it called?",
-          "et": "Milline põhiseaduslik mõiste nõuab avaliku võimu toimimist teadaoleva õiguse alusel?"
+          "en": "During Florida's 2000 recount, a punched-card scrap still attached at one corner could leave a voter's intent disputed. What two-word nickname did this ballot problem acquire?",
+          "et": "Florida 2000. aasta ülelugemisel võis perfokaardi külge ühest nurgast jäänud paberitükike muuta valija tahte vaieldavaks. Millise ingliskeelse kahesõnalise nime see probleem sai?"
         },
         "response": {
-          "en": "rule of law",
-          "et": "õigusriik"
+          "en": "hanging chad",
+          "et": "hanging chad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a hanging chad",
+            "one-corner chad"
+          ],
+          "et": [
+            "ühe nurgaga sedelitükike"
+          ]
         },
         "explanation": {
-          "en": "Rule of law includes legality, equality before law, and access to independent courts.",
-          "et": "Õigusriik hõlmab seaduslikkust, võrdsust seaduse ees ja juurdepääsu sõltumatule kohtule."
+          "en": "A hanging chad is a punched-card fragment that remains attached by one corner, a disputed ballot feature made famous by Florida in 2000.",
+          "et": "Hanging chad on perfokaardi tükike, mis jääb ühe nurgaga kaardi külge; sellised sedelid said kuulsaks Florida 2000. aasta ülelugemisel."
         },
         "source": {
-          "sourceId": "wikipedia:rule_of_law",
-          "title": "Rule of law",
-          "url": "https://en.wikipedia.org/wiki/Rule_of_law",
+          "sourceId": "wikipedia:chad-paper",
+          "title": "Chad (paper)",
+          "url": "https://en.wikipedia.org/wiki/Chad_(paper)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-034:question:4",
-        "factKey": "built-in-politics-economics-society:constitutional-principles:medium:concept:judicial-review",
+        "factKey": "politics:swingometer:bbc-election-graphic-shows-party-swing-and-seats",
         "tier": 4,
-        "subjectKey": "concept:judicial-review",
+        "subjectKey": "device:bbc-election-swingometer",
         "clue": {
-          "en": "A constitutional concept lets courts test government action against higher law. Name it.",
-          "et": "Üks põhiseaduslik mõiste lubab kohtul kontrollida võimu tegevust kõrgema õiguse järgi. Millist vastust otsime?"
+          "en": "BBC election broadcasts made a giant pendulum-like display famous for turning a change in party support into likely seats. What was the display called?",
+          "et": "BBC valimisõhtutel sai kuulsaks hiiglaslik pendlikujuline näidik, mis näitas, kuidas parteide toetuse muutus võiks teisenduda parlamendikohtadeks. Mis oli selle nimi?"
         },
         "response": {
-          "en": "judicial review",
-          "et": "kohtulik kontroll"
+          "en": "Swingometer",
+          "et": "Swingometer"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Swingometer",
+            "swing-o-meter"
+          ],
+          "et": [
+            "svingomeeter",
+            "swing-o-meter"
+          ]
         },
         "explanation": {
-          "en": "Judicial review may invalidate legislation that conflicts with a constitution.",
-          "et": "Kohtulik kontroll võib tühistada põhiseadusega vastuolus oleva seaduse."
+          "en": "The BBC Swingometer turned changes in party support into a visual indication of the parliamentary seats likely to change hands.",
+          "et": "BBC Swingometer muutis parteide toetuse kõikumise visuaalseks näiduks sellest, millised parlamendikohad võiksid omanikku vahetada."
         },
         "source": {
-          "sourceId": "wikipedia:judicial_review",
-          "title": "Judicial review",
-          "url": "https://en.wikipedia.org/wiki/Judicial_review",
+          "sourceId": "wikipedia:swingometer",
+          "title": "Swingometer",
+          "url": "https://en.wikipedia.org/wiki/Swingometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-034:question:5",
-        "factKey": "built-in-politics-economics-society:constitutional-principles:medium:concept:constitutional-amendment",
+        "factKey": "politics:dewey-defeats-truman:premature-tribune-headline-held-by-winner",
         "tier": 5,
-        "subjectKey": "concept:constitutional-amendment",
+        "subjectKey": "headline:dewey-defeats-truman",
         "clue": {
-          "en": "This constitutional concept formally changes a constitution through a special procedure. What is it?",
-          "et": "See põhiseaduslik mõiste muudab põhiseadust erimenetluse kaudu. Mis see on?"
+          "en": "A smiling Harry Truman was photographed holding a prematurely printed Chicago Daily Tribune after winning the election it had called for his opponent. Give the paper's famous three-word headline.",
+          "et": "Naeratav Harry Truman jäi pildile enneaegu trükitud Chicago Daily Tribune'iga pärast seda, kui ta võitis valimised, kuigi leht oli võitjaks kuulutanud tema vastase. Ütle kuulus kolmesõnaline pealkiri."
         },
         "response": {
-          "en": "constitutional amendment",
-          "et": "põhiseaduse muudatus"
+          "en": "Dewey Defeats Truman",
+          "et": "Dewey Defeats Truman"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Dewey Defeats Truman headline",
+            "Chicago Daily Tribune headline"
+          ],
+          "et": [
+            "„Dewey alistas Trumani“",
+            "Dewey Defeats Truman pealkiri"
+          ]
         },
         "explanation": {
-          "en": "Constitutional amendment usually demands a higher threshold than ordinary legislation.",
-          "et": "Põhiseaduse muudatus nõuab tavaliselt tavaseadusest kõrgemat otsustuslävendit."
+          "en": "The Chicago Daily Tribune printed “Dewey Defeats Truman” too early; the victorious Truman was later photographed holding the mistaken front page.",
+          "et": "Chicago Daily Tribune trükkis pealkirja „Dewey Defeats Truman” liiga vara; võitnud Truman jäi hiljem eksliku esiküljega pildile."
         },
         "source": {
-          "sourceId": "wikipedia:constitutional_amendment",
-          "title": "Constitutional amendment",
-          "url": "https://en.wikipedia.org/wiki/Constitutional_amendment",
+          "sourceId": "wikipedia:dewey-defeats-truman",
+          "title": "Dewey Defeats Truman",
+          "url": "https://en.wikipedia.org/wiki/Dewey_Defeats_Truman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19097,153 +19130,184 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-035",
     "name": {
-      "en": "Inside a Legislature",
-      "et": "Seadusandja sees"
+      "en": "Scandals With Names That Stuck",
+      "et": "Skandaalid, mille nimi jäi külge"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-035:question:1",
-        "factKey": "built-in-politics-economics-society:legislatures:medium:concept:unicameralism",
+        "factKey": "politics:watergate:dnchq-break-in-coverup-nixon-resignation",
         "tier": 1,
-        "subjectKey": "concept:unicameralism",
+        "subjectKey": "event:watergate-scandal",
         "clue": {
-          "en": "Name the legislative term that places national lawmaking in a single chamber.",
-          "et": "Vihjes kirjeldatud seadusandlik mõiste annab riikliku seadusloome ühe koja kätte. Mis see on?"
+          "en": "A break-in at Democratic headquarters and the cover-up that followed eventually led Richard Nixon to resign. Name the scandal.",
+          "et": "Demokraatide peakorterisse sissemurdmine ja sellele järgnenud kinnimätsimine viisid lõpuks Richard Nixoni tagasiastumiseni. Nimeta skandaal."
         },
         "response": {
-          "en": "unicameralism",
-          "et": "ühekojaline parlament"
+          "en": "Watergate scandal",
+          "et": "Watergate'i skandaal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Watergate",
+            "the Watergate affair"
+          ],
+          "et": [
+            "Watergate",
+            "Watergate’i afäär"
+          ]
         },
         "explanation": {
-          "en": "Unicameralism avoids inter-house deadlock but lacks a second chamber’s revision stage.",
-          "et": "Ühekojaline parlament väldib kodade ummikseisu, kuid jääb ilma teise koja ülevaatusest."
+          "en": "Watergate grew from the Democratic headquarters break-in and its cover-up into the scandal that ended Richard Nixon’s presidency.",
+          "et": "Watergate kasvas demokraatide peakorterisse sissemurdmisest ja selle kinnimätsimisest skandaaliks, mis lõpetas Richard Nixoni presidendiaja."
         },
         "source": {
-          "sourceId": "wikipedia:unicameralism",
-          "title": "Unicameralism",
-          "url": "https://en.wikipedia.org/wiki/Unicameralism",
+          "sourceId": "wikipedia:watergate-scandal",
+          "title": "Watergate scandal",
+          "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-035:question:2",
-        "factKey": "built-in-politics-economics-society:legislatures:medium:concept:bicameralism",
+        "factKey": "politics:panama-papers:mossack-fonseca-leak-exposed-offshore-finance",
         "tier": 2,
-        "subjectKey": "concept:bicameralism",
+        "subjectKey": "document-leak:panama-papers",
         "clue": {
-          "en": "Recognise the legislative term that divides a legislature into two chambers.",
-          "et": "Otsitav seadusandlik mõiste jagab seadusandja kaheks kojaks. Mis see on?"
+          "en": "Leaked files from the law firm Mossack Fonseca exposed offshore companies and owners around the world. What were these documents collectively called?",
+          "et": "Advokaadibüroost Mossack Fonseca lekkinud failid paljastasid üle maailma offshore-firmasid ja nende omanikke. Millise ühise nime need dokumendid said?"
         },
         "response": {
-          "en": "bicameralism",
-          "et": "kahekojaline parlament"
+          "en": "Panama Papers",
+          "et": "Panama paberid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Panama Papers leak"
+          ],
+          "et": [
+            "Panama dokumendid",
+            "Panama Papers"
+          ]
         },
         "explanation": {
-          "en": "Bicameralism can represent population in one house and regions or states in the other.",
-          "et": "Kahekojaline parlament võib esindada ühes kojas rahvast ja teises piirkondi või osariike."
+          "en": "The Panama Papers were leaked Mossack Fonseca files that revealed offshore companies and their owners across the world.",
+          "et": "Panama paberid olid Mossack Fonsecast lekkinud failid, mis paljastasid offshore-ettevõtteid ja nende omanikke üle maailma."
         },
         "source": {
-          "sourceId": "wikipedia:bicameralism",
-          "title": "Bicameralism",
-          "url": "https://en.wikipedia.org/wiki/Bicameralism",
+          "sourceId": "wikipedia:panama-papers",
+          "title": "Panama Papers",
+          "url": "https://en.wikipedia.org/wiki/Panama_Papers",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-035:question:3",
-        "factKey": "built-in-politics-economics-society:legislatures:medium:institution:lower-house",
+        "factKey": "politics:cambridge-analytica:facebook-quiz-data-used-for-political-profiling",
         "tier": 3,
-        "subjectKey": "institution:lower-house",
+        "subjectKey": "event:cambridge-analytica-data-scandal",
         "clue": {
-          "en": "Legislative term is usually the more directly population-based chamber. What is it called?",
-          "et": "Milline seadusandlik mõiste on tavaliselt otsesemalt rahvaarvupõhine koda?"
+          "en": "Data gathered through a Facebook quiz app reached a political consulting firm and was used for voter profiling without informed consent. What data scandal was this?",
+          "et": "Facebooki viktoriinirakenduse kaudu kogutud andmed jõudsid poliitkonsultatsioonifirmani ja neid kasutati valijaprofiilide loomiseks ilma teadliku nõusolekuta. Mis andmeskandaal see oli?"
         },
         "response": {
-          "en": "lower house",
-          "et": "alamkoda"
+          "en": "Cambridge Analytica data scandal",
+          "et": "Cambridge Analytica andmeskandaal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Cambridge Analytica scandal",
+            "Facebook–Cambridge Analytica scandal",
+            "Cambridge Analytica"
+          ],
+          "et": [
+            "Cambridge Analytica skandaal",
+            "Facebooki ja Cambridge Analytica skandaal",
+            "Cambridge Analytica"
+          ]
         },
         "explanation": {
-          "en": "Lower house often controls confidence and money bills in parliamentary systems.",
-          "et": "Alamkoda juhib parlamentaarses süsteemis sageli usaldust ja rahaseadusi."
+          "en": "The Cambridge Analytica scandal concerned Facebook-app data passed to a political consultancy and used for voter profiling without informed consent.",
+          "et": "Cambridge Analytica skandaal puudutas Facebooki rakenduse andmeid, mis jõudsid poliitkonsultantideni ja mida kasutati valijaprofiilideks ilma teadliku nõusolekuta."
         },
         "source": {
-          "sourceId": "wikipedia:lower_house",
-          "title": "Lower house",
-          "url": "https://en.wikipedia.org/wiki/Lower_house",
+          "sourceId": "wikipedia:facebook-cambridge-analytica-data-scandal",
+          "title": "Facebook–Cambridge Analytica data scandal",
+          "url": "https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-035:question:4",
-        "factKey": "built-in-politics-economics-society:legislatures:medium:institution:upper-house",
+        "factKey": "politics:iran-contra:secret-iran-arms-sales-funded-nicaraguan-contras",
         "tier": 4,
-        "subjectKey": "institution:upper-house",
+        "subjectKey": "event:iran-contra-affair",
         "clue": {
-          "en": "A legislative term is the second chamber often designed for review or regional representation. Name it.",
-          "et": "Üks seadusandlik mõiste on teine koda, mis on sageli mõeldud ülevaatuseks või piirkondade esindamiseks. Millist vastust otsime?"
+          "en": "Reagan administration officials secretly sold arms to Iran and diverted proceeds to Nicaraguan rebels despite congressional restrictions. Name the affair.",
+          "et": "Reagani administratsiooni ametnikud müüsid salaja Iraanile relvi ja suunasid tulu Nicaragua mässulistele hoolimata Kongressi piirangutest. Nimeta afäär."
         },
         "response": {
-          "en": "upper house",
-          "et": "ülemkoda"
+          "en": "Iran–Contra affair",
+          "et": "Iraani-Contra afäär"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Iran–Contra scandal"
+          ],
+          "et": [
+            "Iraani-Contra skandaal",
+            "Iran-Contra afäär",
+            "Iran-Contra skandaal"
+          ]
         },
         "explanation": {
-          "en": "Upper house may have longer terms or staggered membership to slow rapid change.",
-          "et": "Ülemkoda võib kiire muutuse aeglustamiseks kasutada pikemaid või astmelisi mandaate."
+          "en": "In the Iran–Contra affair, secret arms sales to Iran helped finance Nicaragua’s Contras despite restrictions imposed by Congress.",
+          "et": "Iraani-Contra afääris aitas salajane relvamüük Iraanile rahastada Nicaragua mässulisi hoolimata Kongressi piirangutest."
         },
         "source": {
-          "sourceId": "wikipedia:upper_house",
-          "title": "Upper house",
-          "url": "https://en.wikipedia.org/wiki/Upper_house",
+          "sourceId": "wikipedia:iran-contra-affair",
+          "title": "Iran–Contra affair",
+          "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Contra_affair",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-035:question:5",
-        "factKey": "built-in-politics-economics-society:legislatures:medium:institution:legislative-committee",
+        "factKey": "politics:teapot-dome:wyoming-kettle-shaped-rock-oil-field-harding-bribery",
         "tier": 5,
-        "subjectKey": "institution:legislative-committee",
+        "subjectKey": "event:teapot-dome-scandal",
         "clue": {
-          "en": "Recognise the legislative term that examines bills and evidence in a smaller group of legislators.",
-          "et": "Otsitav seadusandlik mõiste uurib eelnõusid ja tõendeid väiksemas parlamendiliikmete rühmas. Mis see on?"
+          "en": "A Wyoming sandstone formation whose outline once resembled a household kettle gave its name to an oil field at the centre of a Harding-era bribery scandal. Name the scandal.",
+          "et": "Wyomingi liivakivimoodustis, mille piirjoon meenutas kunagi sangaga teekannu, andis nime naftaväljale, mis sattus Hardingi-aegse altkäemaksuskandaali keskmesse. Nimeta skandaal."
         },
         "response": {
-          "en": "legislative committee",
-          "et": "parlamendikomisjon"
+          "en": "Teapot Dome scandal",
+          "et": "Teapot Dome'i skandaal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Teapot Dome",
+            "the Teapot Dome affair"
+          ],
+          "et": [
+            "Teapot Dome",
+            "Teapot Dome’i afäär"
+          ]
         },
         "explanation": {
-          "en": "Legislative committee allows detailed amendment and specialist scrutiny before plenary decision.",
-          "et": "Parlamendikomisjon võimaldab enne täiskogu otsust üksikasjalikke muudatusi ja erialast kontrolli."
+          "en": "Teapot Rock gave its name to the Wyoming oil field whose secret leasing and bribes became the Harding-era Teapot Dome scandal.",
+          "et": "Teapot Rock andis nime Wyomingi naftaväljale, mille salajased rendilepingud ja altkäemaksud kujunesid Hardingi-aegseks Teapot Dome’i skandaaliks."
         },
         "source": {
-          "sourceId": "wikipedia:committee",
-          "title": "Committee",
-          "url": "https://en.wikipedia.org/wiki/Committee",
+          "sourceId": "wikipedia:teapot-rock",
+          "title": "Teapot Rock",
+          "url": "https://en.wikipedia.org/wiki/Teapot_Rock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19251,157 +19315,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-036",
     "name": {
-      "en": "Ways Votes Become Seats",
-      "et": "Kuidas häältest saavad kohad"
+      "en": "Revolutions Named for Colours and Plants",
+      "et": "Värvide ja taimede järgi nimetatud revolutsioonid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-036:question:1",
-        "factKey": "built-in-politics-economics-society:electoral-systems:medium:concept:first-past-the-post",
+        "factKey": "politics:orange-revolution:ukraine-election-protests-campaign-colour",
         "tier": 1,
-        "subjectKey": "concept:first-past-the-post",
+        "subjectKey": "event:orange-revolution-ukraine",
         "clue": {
-          "en": "One electoral system awards a district seat to the candidate with the most votes. Which one is described?",
-          "et": "Valimissüsteem annab ringkonnakoha enim hääli saanud kandidaadile. Mis see on?"
+          "en": "After Ukraine's disputed presidential runoff, Viktor Yushchenko's campaign colour filled Kyiv's squares and became the protest movement's nickname. Name the revolution.",
+          "et": "Pärast Ukraina vaidlustatud presidendivalimiste teist vooru täitis Viktor Juštšenko kampaaniavärv Kiievi väljakud ja andis protestiliikumisele hüüdnime. Nimeta revolutsioon."
         },
         "response": {
-          "en": "first-past-the-post",
-          "et": "suhtelise enamuse süsteem"
+          "en": "Orange Revolution",
+          "et": "oranž revolutsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Ukrainian Orange Revolution"
+          ],
+          "et": [
+            "Ukraina oranž revolutsioon",
+            "Orange Revolution"
+          ]
         },
         "explanation": {
-          "en": "First-past-the-post does not require an absolute majority and can magnify a leading party.",
-          "et": "Suhtelise enamuse süsteem ei nõua absoluutset enamust ning võib suurima partei edu võimendada."
+          "en": "Viktor Yushchenko’s campaign colour became the emblem and name of Ukraine’s Orange Revolution after the disputed presidential runoff.",
+          "et": "Viktor Juštšenko kampaaniavärvist sai pärast vaidlustatud presidendivalimiste teist vooru Ukraina oranži revolutsiooni sümbol ja nimi."
         },
         "source": {
-          "sourceId": "wikipedia:first-past-the-post_voting",
-          "title": "First-past-the-post voting",
-          "url": "https://en.wikipedia.org/wiki/First-past-the-post_voting",
+          "sourceId": "wikipedia:orange-revolution",
+          "title": "Orange Revolution",
+          "url": "https://en.wikipedia.org/wiki/Orange_Revolution",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-036:question:2",
-        "factKey": "built-in-politics-economics-society:electoral-systems:medium:concept:party-list-proportional-representation",
+        "factKey": "politics:rose-revolution:georgia-protesters-entered-parliament-with-flowers",
         "tier": 2,
-        "subjectKey": "concept:party-list-proportional-representation",
+        "subjectKey": "event:rose-revolution-georgia",
         "clue": {
-          "en": "Identify this electoral system: it allocates seats roughly according to parties’ vote shares.",
-          "et": "Kirjeldatud valimissüsteem jaotab kohad ligikaudu parteide häälte osakaalu järgi. Mis on selle nimi?"
+          "en": "In Georgia, protesters entered parliament carrying flowers before Eduard Shevardnadze resigned. Which flower-named revolution was this?",
+          "et": "Gruusias sisenesid meeleavaldajad lilledega parlamenti, enne kui Eduard Ševardnadze tagasi astus. Milline lille järgi nimetatud revolutsioon see oli?"
         },
         "response": {
-          "en": "party-list proportional representation",
-          "et": "nimekirjapõhine proportsionaalne süsteem"
+          "en": "Rose Revolution",
+          "et": "rooside revolutsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Georgian Rose Revolution"
+          ],
+          "et": [
+            "Gruusia rooside revolutsioon",
+            "Rose Revolution"
+          ]
         },
         "explanation": {
-          "en": "Party-list proportional representation uses district magnitude and an allocation formula that affect proportionality.",
-          "et": "Nimekirjapõhine proportsionaalne süsteem kasutab ringkonna suurust ja jaotusvalemit, mis mõjutavad proportsionaalsust."
+          "en": "Georgia’s Rose Revolution took its flower name from demonstrators who entered parliament carrying roses before Eduard Shevardnadze resigned.",
+          "et": "Gruusia rooside revolutsioon sai lillenime meeleavaldajatelt, kes sisenesid enne Eduard Ševardnadze tagasiastumist roosidega parlamenti."
         },
         "source": {
-          "sourceId": "wikipedia:party-list_proportional_representation",
-          "title": "Party-list proportional representation",
-          "url": "https://en.wikipedia.org/wiki/Party-list_proportional_representation",
+          "sourceId": "wikipedia:rose-revolution",
+          "title": "Rose Revolution",
+          "url": "https://en.wikipedia.org/wiki/Rose_Revolution",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-036:question:3",
-        "factKey": "built-in-politics-economics-society:electoral-systems:medium:concept:single-transferable-vote",
+        "factKey": "politics:saffron-revolution:myanmar-monks-robes-protests",
         "tier": 3,
-        "subjectKey": "concept:single-transferable-vote",
+        "subjectKey": "event:saffron-revolution-myanmar",
         "clue": {
-          "en": "Which electoral system lets voters rank candidates in multi-member districts?",
-          "et": "Tuvasta järgmine valimissüsteem: see lubab valijal mitmemandaadilises ringkonnas kandidaate järjestada."
+          "en": "Buddhist monks became the most visible leaders of anti-government protests in Myanmar, and the colour associated with their robes supplied the movement's nickname. Name it.",
+          "et": "Budistlikest munkadest said Myanmari valitsusvastaste protestide nähtavaimad juhid ning nende rüüdega seostatud värv andis liikumisele hüüdnime. Nimeta see."
         },
         "response": {
-          "en": "single transferable vote",
-          "et": "üksiku ülekantava hääle süsteem"
+          "en": "Saffron Revolution",
+          "et": "safranrevolutsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Burmese Saffron Revolution"
+          ],
+          "et": [
+            "Safrani revolutsioon",
+            "Myanmari safranrevolutsioon",
+            "Saffron Revolution"
+          ]
         },
         "explanation": {
-          "en": "Single transferable vote transfers surplus and eliminated-candidate votes until seats meet a quota.",
-          "et": "Üksiku ülekantava hääle süsteem kannab üle kvooti ületavad ja väljalangenud kandidaatide hääled."
+          "en": "Myanmar’s Saffron Revolution was named for the robe colour associated with the Buddhist monks who led the protests.",
+          "et": "Myanmari safranrevolutsioon sai nime proteste juhtinud budistlike munkade rüüdega seostatud värvi järgi."
         },
         "source": {
-          "sourceId": "wikipedia:single_transferable_vote",
-          "title": "Single transferable vote",
-          "url": "https://en.wikipedia.org/wiki/Single_transferable_vote",
+          "sourceId": "wikipedia:saffron-revolution",
+          "title": "Saffron Revolution",
+          "url": "https://en.wikipedia.org/wiki/Saffron_Revolution",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-036:question:4",
-        "factKey": "built-in-politics-economics-society:electoral-systems:medium:concept:two-round-system",
+        "factKey": "politics:cedar-revolution:hariri-assassination-protests-syrian-withdrawal",
         "tier": 4,
-        "subjectKey": "concept:two-round-system",
+        "subjectKey": "event:cedar-revolution-lebanon",
         "clue": {
-          "en": "One electoral system holds a second vote if no candidate clears the required first-round threshold. Which one is described?",
-          "et": "Valimissüsteem korraldab teise hääletuse, kui keegi ei ületa esimeses voorus nõutud lävendit. Mis see on?"
+          "en": "After Rafic Hariri's assassination, huge Beirut demonstrations demanded the withdrawal of Syrian troops; the nickname invoked the tree on Lebanon's flag. Name the movement.",
+          "et": "Pärast Rafic Hariri mõrva nõudsid suured Beiruti meeleavaldused Süüria vägede lahkumist; hüüdnimi viitas Liibanoni lipul olevale puule. Nimeta liikumine."
         },
         "response": {
-          "en": "two-round system",
-          "et": "kahevooruline süsteem"
+          "en": "Cedar Revolution",
+          "et": "seedrirevolutsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lebanon's Cedar Revolution",
+            "Lebanese Cedar Revolution"
+          ],
+          "et": [
+            "Liibanoni seedrirevolutsioon",
+            "Cedar Revolution"
+          ]
         },
         "explanation": {
-          "en": "Two-round system usually narrows the field so the winner gains broader support.",
-          "et": "Kahevooruline süsteem kitsendab tavaliselt valikut, et võitja saaks laiema toetuse."
+          "en": "Lebanon’s Cedar Revolution invoked the cedar displayed on the national flag during protests demanding Syrian troop withdrawal.",
+          "et": "Liibanoni seedrirevolutsiooni nimi viitas riigilipul olevale seedrile protestides, mis nõudsid Süüria vägede lahkumist."
         },
         "source": {
-          "sourceId": "wikipedia:two-round_system",
-          "title": "Two-round system",
-          "url": "https://en.wikipedia.org/wiki/Two-round_system",
+          "sourceId": "wikipedia:cedar-revolution",
+          "title": "Cedar Revolution",
+          "url": "https://en.wikipedia.org/wiki/Cedar_Revolution",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-036:question:5",
-        "factKey": "built-in-politics-economics-society:electoral-systems:medium:concept:mixed-member-proportional-representation",
+        "factKey": "politics:jasmine-revolution:tunisia-national-flower-fragrance-perfume-nickname",
         "tier": 5,
-        "subjectKey": "concept:mixed-member-proportional-representation",
+        "subjectKey": "event:jasmine-revolution-tunisia-2011",
         "clue": {
-          "en": "This electoral system combines local district members with compensating party-list seats. What is it?",
-          "et": "See valimissüsteem ühendab kohalikud ringkonnasaadikud kompenseerivate nimekirjakohtadega. Mis see on?"
+          "en": "A nickname for Tunisia's 2011 revolution borrowed the country's national flower, a bloom cultivated for its distinctive fragrance and for perfume. Which flower-named Revolution was this?",
+          "et": "Tuneesia 2011. aasta revolutsiooni üks hüüdnimi laenas riigi rahvuslille nime. Seda õit kasvatatakse iseloomuliku lõhna ja parfüümitööstuse jaoks. Millise lille järgi nimetatud revolutsioon see oli?"
         },
         "response": {
-          "en": "mixed-member proportional representation",
-          "et": "segakompensatsioonisüsteem"
+          "en": "Jasmine Revolution",
+          "et": "jasmiinirevolutsioon"
         },
         "acceptedVariants": {
           "en": [
-            "MMP"
+            "Tunisian Jasmine Revolution",
+            "Jasmine Spring",
+            "Jasmine"
           ],
           "et": [
-            "MMP"
+            "Tuneesia jasmiinirevolutsioon",
+            "Jasmine Revolution",
+            "jasmiin"
           ]
         },
         "explanation": {
-          "en": "Mixed-member proportional representation uses the party vote to correct disproportional district results.",
-          "et": "Segakompensatsioonisüsteem kasutab parteihäält ringkonnatulemuse ebaproportsionaalsuse parandamiseks."
+          "en": "Jasmine, Tunisia’s national flower and a bloom prized for fragrance and perfume, supplied a Western nickname for the country’s 2011 revolution.",
+          "et": "Tuneesia rahvuslill jasmiin, mida hinnatakse lõhna ja parfüümikasutuse tõttu, andis lääne meedias hüüdnime riigi 2011. aasta revolutsioonile."
         },
         "source": {
-          "sourceId": "wikipedia:mixed-member_proportional_representation",
-          "title": "Mixed-member proportional representation",
-          "url": "https://en.wikipedia.org/wiki/Mixed-member_proportional_representation",
+          "sourceId": "wikipedia:jasmine-cultural-importance",
+          "title": "Jasmine",
+          "url": "https://en.wikipedia.org/wiki/Jasmine#Cultural_importance",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19409,153 +19499,190 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-037",
     "name": {
-      "en": "The Language of Elections",
-      "et": "Valimiste sõnavara"
+      "en": "Symbols Seen in the Protest Crowd",
+      "et": "Sümbolid protestirahva seas"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-037:question:1",
-        "factKey": "built-in-politics-economics-society:voting-language:medium:concept:secret-ballot",
+        "factKey": "politics:tank-man:stood-before-tank-column-beijing-1989",
         "tier": 1,
-        "subjectKey": "concept:secret-ballot",
+        "subjectKey": "person-symbol:tank-man",
         "clue": {
-          "en": "Name the election concept that keeps each voter’s choice private.",
-          "et": "Vihjes kirjeldatud valimismõiste hoiab iga valija valiku privaatsena. Mis see on?"
+          "en": "An unidentified man carrying shopping bags stood alone in front of a tank column in Beijing after the 1989 crackdown. By what nickname is he known?",
+          "et": "Tundmatu ostukotte kandnud mees seisis pärast 1989. aasta jõulist mahasurumist Pekingis üksinda tankikolonni ees. Millise hüüdnime all teda tuntakse?"
         },
         "response": {
-          "en": "secret ballot",
-          "et": "salajane hääletus"
+          "en": "Tank Man",
+          "et": "Tankimees"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Unknown Rebel",
+            "the unknown protester"
+          ],
+          "et": [
+            "Tundmatu mässaja",
+            "tundmatu meeleavaldaja",
+            "Tank Man"
+          ]
         },
         "explanation": {
-          "en": "Secret ballot reduces coercion by separating identity from the marked ballot.",
-          "et": "Salajane hääletus vähendab sundi, lahutades valija isiku märgitud sedelist."
+          "en": "Tank Man is the nickname for the unidentified shopper who stood in front of a tank column in Beijing after the 1989 crackdown.",
+          "et": "Tankimees on hüüdnimi tundmatule ostukottidega mehele, kes seisis pärast 1989. aasta mahasurumist Pekingis tankikolonni ees."
         },
         "source": {
-          "sourceId": "wikipedia:secret_ballot",
-          "title": "Secret ballot",
-          "url": "https://en.wikipedia.org/wiki/Secret_ballot",
+          "sourceId": "wikipedia:tank-man",
+          "title": "Tank Man",
+          "url": "https://en.wikipedia.org/wiki/Tank_Man",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-037:question:2",
-        "factKey": "built-in-politics-economics-society:voting-language:medium:concept:suffrage",
+        "factKey": "politics:yellow-vests:france-high-visibility-garment-fuel-tax-protests",
         "tier": 2,
-        "subjectKey": "concept:suffrage",
+        "subjectKey": "movement:yellow-vests-france",
         "clue": {
-          "en": "Recognise the election concept that means the legal right to vote in public elections.",
-          "et": "Otsitav valimismõiste tähendab seaduslikku õigust avalikel valimistel hääletada. Mis see on?"
+          "en": "French protesters adopted the high-visibility road-safety garment motorists keep in their cars while opposing fuel-tax rises and living costs. Name the movement.",
+          "et": "Prantsuse meeleavaldajad võtsid kütusemaksu tõusu ja elukalliduse vastu protestides sümboliks helkurriietuse, mida autojuhid autos hoiavad. Nimeta liikumine."
         },
         "response": {
-          "en": "suffrage",
-          "et": "valimisõigus"
+          "en": "yellow vests protests",
+          "et": "kollavestide protestid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "yellow vest movement",
+            "yellow jackets movement",
+            "gilets jaunes",
+            "yellow vests"
+          ],
+          "et": [
+            "kollaste vestide liikumine",
+            "kollavestide liikumine",
+            "gilets jaunes",
+            "kollased vestid"
+          ]
         },
         "explanation": {
-          "en": "Suffrage can be active for voting and passive for standing as a candidate.",
-          "et": "Valimisõigus võib olla aktiivne hääletamiseks ja passiivne kandideerimiseks."
+          "en": "France’s yellow vests movement adopted the high-visibility road-safety vest as the symbol of protests over fuel taxes and living costs.",
+          "et": "Prantsusmaa kollavestide liikumine võttis kütusemaksu ja elukalliduse vastaste protestide sümboliks helkurvesti."
         },
         "source": {
-          "sourceId": "wikipedia:suffrage",
-          "title": "Suffrage",
-          "url": "https://en.wikipedia.org/wiki/Suffrage",
+          "sourceId": "wikipedia:yellow-vests-protests",
+          "title": "Yellow vests protests",
+          "url": "https://en.wikipedia.org/wiki/Yellow_vests_protests",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-037:question:3",
-        "factKey": "built-in-politics-economics-society:voting-language:medium:concept:voter-turnout",
+        "factKey": "politics:umbrella-movement:hong-kong-umbrellas-pepper-spray-democracy-protests",
         "tier": 3,
-        "subjectKey": "concept:voter-turnout",
+        "subjectKey": "movement:umbrella-movement-hong-kong",
         "clue": {
-          "en": "Identify the election concept: it measures how many eligible or registered people cast ballots.",
-          "et": "Mis valimismõiste mõõdab, kui paljud hääleõiguslikud või registreeritud inimesed hääletavad?"
+          "en": "Hong Kong democracy demonstrators used everyday rain gear as shields from pepper spray, giving the 2014 movement its memorable name. What was it called?",
+          "et": "Hongkongi demokraatiameeleavaldajad kasutasid 2014. aastal igapäevast vihmavarustust pipragaasi eest kilbina ning see andis liikumisele meeldejääva nime. Mis nimi?"
         },
         "response": {
-          "en": "voter turnout",
-          "et": "valimisaktiivsus"
+          "en": "Umbrella Movement",
+          "et": "vihmavarjuliikumine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Umbrella Revolution",
+            "Hong Kong Umbrella Movement"
+          ],
+          "et": [
+            "vihmavarjurevolutsioon",
+            "Hongkongi vihmavarjuliikumine",
+            "Umbrella Movement"
+          ]
         },
         "explanation": {
-          "en": "Voter turnout depends on the denominator, so eligible-population and registered-voter rates differ.",
-          "et": "Valimisaktiivsus sõltub nimetajast, mistõttu hääleõiguslike ja registreeritute määrad erinevad."
+          "en": "The Umbrella Movement took its name from the umbrellas Hong Kong demonstrators used as shields against pepper spray.",
+          "et": "Vihmavarjuliikumine sai nime vihmavarjudest, mida Hongkongi meeleavaldajad kasutasid pipragaasi vastu kilbina."
         },
         "source": {
-          "sourceId": "wikipedia:voter_turnout",
-          "title": "Voter turnout",
-          "url": "https://en.wikipedia.org/wiki/Voter_turnout",
+          "sourceId": "wikipedia:umbrella-movement",
+          "title": "Umbrella Movement",
+          "url": "https://en.wikipedia.org/wiki/Umbrella_Movement",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-037:question:4",
-        "factKey": "built-in-politics-economics-society:voting-language:medium:concept:electoral-district",
+        "factKey": "politics:extinction-rebellion:hourglass-symbol-nonviolent-climate-action",
         "tier": 4,
-        "subjectKey": "concept:electoral-district",
+        "subjectKey": "movement:extinction-rebellion",
         "clue": {
-          "en": "Name the election concept that is the geographic or administrative unit that elects representatives.",
-          "et": "Vihjes kirjeldatud valimismõiste on geograafiline või halduslik üksus, mis valib esindajad. Mis see on?"
+          "en": "A climate movement using nonviolent civil disobedience marks banners with an hourglass inside a circle. Name the organization, often shortened to two letters.",
+          "et": "Vägivallatut kodanikuallumatust kasutav kliimaliikumine märgib plakateid ringi sees oleva liivakellaga. Nimeta organisatsioon, mille nimi lühendatakse sageli kaheks täheks."
         },
         "response": {
-          "en": "electoral district",
-          "et": "valimisringkond"
+          "en": "Extinction Rebellion",
+          "et": "Extinction Rebellion"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "XR",
+            "the Extinction Rebellion movement"
+          ],
+          "et": [
+            "XR"
+          ]
         },
         "explanation": {
-          "en": "Electoral district can return one member or several depending on district magnitude.",
-          "et": "Valimisringkond võib ringkonna suurusest sõltuvalt valida ühe või mitu liiget."
+          "en": "Extinction Rebellion is a climate movement associated with nonviolent civil disobedience and an hourglass symbol inside a circle.",
+          "et": "Extinction Rebellion on vägivallatu kodanikuallumatusega seotud kliimaliikumine, mille sümbol on ringi sees olev liivakell."
         },
         "source": {
-          "sourceId": "wikipedia:electoral_district",
-          "title": "Electoral district",
-          "url": "https://en.wikipedia.org/wiki/Electoral_district",
+          "sourceId": "wikipedia:extinction-rebellion",
+          "title": "Extinction Rebellion",
+          "url": "https://en.wikipedia.org/wiki/Extinction_Rebellion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-037:question:5",
-        "factKey": "built-in-politics-economics-society:voting-language:medium:concept:referendum",
+        "factKey": "politics:mothers-plaza-de-mayo:white-headscarves-disappeared-children",
         "tier": 5,
-        "subjectKey": "concept:referendum",
+        "subjectKey": "organization:mothers-of-plaza-de-mayo",
         "clue": {
-          "en": "Find the election concept that puts a policy or constitutional question directly to voters.",
-          "et": "Valimismõiste annab poliitika- või põhiseadusküsimuse otse valijatele. Leia sobiv vastus."
+          "en": "Argentine women wearing white headscarves gathered in Buenos Aires to demand answers about children who disappeared under the military dictatorship. What organization did they form?",
+          "et": "Valgete pearättidega Argentina naised kogunesid Buenos Aireses, et nõuda vastuseid sõjaväediktatuuri ajal kadunud laste kohta. Millise organisatsiooni nad moodustasid?"
         },
         "response": {
-          "en": "referendum",
-          "et": "rahvahääletus"
+          "en": "Mothers of the Plaza de Mayo",
+          "et": "Plaza de Mayo emad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mothers of May Square",
+            "the Mothers of Plaza de Mayo",
+            "Madres de Plaza de Mayo"
+          ],
+          "et": [
+            "Mai väljaku emad",
+            "Mothers of the Plaza de Mayo",
+            "Madres de Plaza de Mayo"
+          ]
         },
         "explanation": {
-          "en": "Referendum may be binding or consultative depending on the legal framework.",
-          "et": "Rahvahääletus võib õigusraamistikust sõltuvalt olla siduv või nõuandev."
+          "en": "The Mothers of the Plaza de Mayo wore white headscarves while demanding answers about children who disappeared under Argentina’s dictatorship.",
+          "et": "Plaza de Mayo emad kandsid valgeid pearätte ja nõudsid vastuseid Argentina diktatuuri ajal kadunud laste saatuse kohta."
         },
         "source": {
-          "sourceId": "wikipedia:referendum",
-          "title": "Referendum",
-          "url": "https://en.wikipedia.org/wiki/Referendum",
+          "sourceId": "wikipedia:mothers-of-the-plaza-de-mayo",
+          "title": "Mothers of the Plaza de Mayo",
+          "url": "https://en.wikipedia.org/wiki/Mothers_of_the_Plaza_de_Mayo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19563,153 +19690,188 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-038",
     "name": {
-      "en": "How Governments Take Office",
-      "et": "Kuidas valitsused ametisse saavad"
+      "en": "Charity Campaigns With a Visual Hook",
+      "et": "Heategevuskampaaniad, mis jäid silma"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-038:question:1",
-        "factKey": "built-in-politics-economics-society:executive-systems:medium:concept:parliamentary-system",
+        "factKey": "society:ice-bucket-challenge:viral-dousing-raised-als-awareness-funds",
         "tier": 1,
-        "subjectKey": "concept:parliamentary-system",
+        "subjectKey": "campaign:ice-bucket-challenge",
         "clue": {
-          "en": "A form of government or executive keeps the government in office only while it has legislative confidence. What term fits?",
-          "et": "Siin kirjeldatud valitsusvorm või täidesaatev organ hoiab valitsuse ametis vaid parlamendi usalduse toel. Mis see on?"
+          "en": "Social-media videos showed people pouring freezing water over themselves, nominating friends, and donating for ALS. Name the viral campaign.",
+          "et": "Sotsiaalmeediavideotes kallasid inimesed end jääveega üle, esitasid sõpradele väljakutse ja annetasid ALS-i heaks. Nimeta viiruslik kampaania."
         },
         "response": {
-          "en": "parliamentary system",
-          "et": "parlamentaarne süsteem"
+          "en": "Ice Bucket Challenge",
+          "et": "jää-ämbri väljakutse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ALS Ice Bucket Challenge"
+          ],
+          "et": [
+            "jääveeämbri väljakutse",
+            "ALS-i jää-ämbri väljakutse",
+            "Ice Bucket Challenge"
+          ]
         },
         "explanation": {
-          "en": "Parliamentary system usually separates a ceremonial head of state from a politically responsible premier.",
-          "et": "Parlamentaarne süsteem eristab tavaliselt tseremoniaalse riigipea poliitiliselt vastutavast peaministrist."
+          "en": "The Ice Bucket Challenge spread through nomination videos in which participants doused themselves with ice water and raised funds and awareness for ALS.",
+          "et": "Jää-ämbri väljakutse levis videote kaudu, kus osalejad kallasid end jääveega üle, esitasid järgmistele osalejatele väljakutse ning kogusid ALS-i jaoks raha ja tähelepanu."
         },
         "source": {
-          "sourceId": "wikipedia:parliamentary_system",
-          "title": "Parliamentary system",
-          "url": "https://en.wikipedia.org/wiki/Parliamentary_system",
+          "sourceId": "wikipedia:ice-bucket-challenge",
+          "title": "Ice Bucket Challenge",
+          "url": "https://en.wikipedia.org/wiki/Ice_Bucket_Challenge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-038:question:2",
-        "factKey": "built-in-politics-economics-society:executive-systems:medium:concept:presidential-system",
+        "factKey": "society:movember:november-moustaches-mens-health-fundraising",
         "tier": 2,
-        "subjectKey": "concept:presidential-system",
+        "subjectKey": "campaign:movember",
         "clue": {
-          "en": "This form of government or executive elects an executive separately from the legislature for a fixed term. What is it?",
-          "et": "See valitsusvorm või täidesaatev organ valib täitevvõimu seadusandjast eraldi kindlaks ametiajaks. Mis see on?"
+          "en": "Participants grow moustaches during November to raise money and attention for men's health. What blended campaign name combines the month and the facial hair?",
+          "et": "Osalejad kasvatavad novembris vuntsid, et koguda raha ja tähelepanu meeste tervisele. Milline kampaanianimi ühendab kuu ja näokarvad?"
         },
         "response": {
-          "en": "presidential system",
-          "et": "presidentaalne süsteem"
+          "en": "Movember",
+          "et": "Movember"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Movember campaign"
+          ],
+          "et": [
+            "Movemberi kampaania",
+            "vuntsikuu"
+          ]
         },
         "explanation": {
-          "en": "Presidential system combines head of state and head of government in one president.",
-          "et": "Presidentaalne süsteem ühendab riigipea ja valitsusjuhi rolli ühes presidendis."
+          "en": "Movember blends moustache with November: participants grow moustaches during the month to support men’s-health fundraising.",
+          "et": "Movember ühendab vuntsid ja novembri: osalejad kasvatavad kuu jooksul vuntsid, et toetada meeste tervise heategevust."
         },
         "source": {
-          "sourceId": "wikipedia:presidential_system",
-          "title": "Presidential system",
-          "url": "https://en.wikipedia.org/wiki/Presidential_system",
+          "sourceId": "wikipedia:movember",
+          "title": "Movember",
+          "url": "https://en.wikipedia.org/wiki/Movember",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-038:question:3",
-        "factKey": "built-in-politics-economics-society:executive-systems:medium:concept:semi-presidential-system",
+        "factKey": "society:earth-hour:wwf-lights-off-one-hour",
         "tier": 3,
-        "subjectKey": "concept:semi-presidential-system",
+        "subjectKey": "campaign:earth-hour",
         "clue": {
-          "en": "Which form of government or executive shares executive authority between a president and a prime minister?",
-          "et": "Tuvasta järgmine valitsusvorm või täidesaatev organ: see jagab täitevvõimu presidendi ja peaministri vahel."
+          "en": "Cities and households switch off non-essential lights for one evening hour in a WWF-backed environmental action. Name the campaign.",
+          "et": "Linnad ja kodud kustutavad ühel õhtul tunniks mittevajalikud tuled WWF-i toetatud keskkonnaaktsioonis. Nimeta kampaania."
         },
         "response": {
-          "en": "semi-presidential system",
-          "et": "poolpresidentaalne süsteem"
+          "en": "Earth Hour",
+          "et": "Maa tund"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "WWF Earth Hour",
+            "the Earth Hour campaign"
+          ],
+          "et": [
+            "Earth Hour",
+            "WWF-i Maa tund"
+          ]
         },
         "explanation": {
-          "en": "Semi-presidential system requires a cabinet responsible to parliament alongside a popularly elected president.",
-          "et": "Poolpresidentaalne süsteem nõuab parlamendi ees vastutavat kabinetti koos rahva valitud presidendiga."
+          "en": "Earth Hour is a WWF-backed action in which non-essential lights are switched off for one evening hour.",
+          "et": "Maa tund on WWF-i toetatud aktsioon, mille ajal kustutatakse ühel õhtul tunniks mittevajalikud tuled."
         },
         "source": {
-          "sourceId": "wikipedia:semi-presidential_republic",
-          "title": "Semi-presidential republic",
-          "url": "https://en.wikipedia.org/wiki/Semi-presidential_republic",
+          "sourceId": "wikipedia:earth-hour",
+          "title": "Earth Hour",
+          "url": "https://en.wikipedia.org/wiki/Earth_Hour",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-038:question:4",
-        "factKey": "built-in-politics-economics-society:executive-systems:medium:institution:cabinet-government",
+        "factKey": "society:red-nose-day:comic-relief-telethon-red-noses-fundraising",
         "tier": 4,
-        "subjectKey": "institution:cabinet-government",
+        "subjectKey": "campaign:red-nose-day-comic-relief",
         "clue": {
-          "en": "Name the form of government or executive that is the senior group of ministers directing government departments.",
-          "et": "Vihjes kirjeldatud valitsusvorm või täidesaatev organ on valitsusasutusi juhtivate kõrgemate ministrite kogu. Mis see on?"
+          "en": "Comic Relief's UK fundraising telethon turned foam clown noses into a recurring national symbol. What is the campaign day called?",
+          "et": "Comic Reliefi Suurbritannia heategevusteleton muutis poroloonist klounininad korduvaks üleriigiliseks sümboliks. Mis on kampaaniapäeva nimi?"
         },
         "response": {
-          "en": "cabinet",
-          "et": "valitsuskabinet"
+          "en": "Red Nose Day",
+          "et": "Punase nina päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Comic Relief's Red Nose Day",
+            "Comic Relief Red Nose Day"
+          ],
+          "et": [
+            "Comic Reliefi punase nina päev",
+            "Red Nose Day"
+          ]
         },
         "explanation": {
-          "en": "Cabinet often follows collective responsibility, defending agreed decisions together.",
-          "et": "Valitsuskabinet järgib sageli kollektiivvastutust ning kaitseb kokkulepitud otsuseid ühiselt."
+          "en": "Red Nose Day is Comic Relief’s recurring UK fundraising event, recognized by its foam clown noses and television appeal.",
+          "et": "Punase nina päev on Comic Reliefi korduv Suurbritannia rahakogumisüritus, mida tuntakse poroloonist klounininade ja teleprogrammi järgi."
         },
         "source": {
-          "sourceId": "wikipedia:cabinet_(government)",
-          "title": "Cabinet (government)",
-          "url": "https://en.wikipedia.org/wiki/Cabinet_(government)",
+          "sourceId": "wikipedia:red-nose-day",
+          "title": "Red Nose Day",
+          "url": "https://en.wikipedia.org/wiki/Red_Nose_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-038:question:5",
-        "factKey": "built-in-politics-economics-society:executive-systems:medium:concept:coalition-government",
+        "factKey": "society:livestrong-wristband:yellow-silicone-cancer-fundraising-symbol",
         "tier": 5,
-        "subjectKey": "concept:coalition-government",
+        "subjectKey": "campaign-artifact:livestrong-wristband",
         "clue": {
-          "en": "This form of government or executive joins two or more parties to command legislative support. What is it?",
-          "et": "See valitsusvorm või täidesaatev organ ühendab seadusandliku toetuse saamiseks kaks või enam parteid. Mis see on?"
+          "en": "A yellow silicone bracelet stamped with one word became a major 2000s cancer-fundraising symbol linked to Lance Armstrong's foundation. Name the wristband.",
+          "et": "Ühe sõnaga märgistatud kollasest silikoonkäepaelast sai 2000. aastatel Lance Armstrongi fondiga seotud vähiannetuste sümbol. Nimeta käepael."
         },
         "response": {
-          "en": "coalition government",
-          "et": "koalitsioonivalitsus"
+          "en": "Livestrong wristband",
+          "et": "Livestrongi käepael"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Livestrong bracelet",
+            "yellow Livestrong band",
+            "yellow Livestrong wristband",
+            "Livestrong band",
+            "Livestrong"
+          ],
+          "et": [
+            "Livestrongi kollane käepael",
+            "Livestrong bracelet",
+            "kollane Livestrongi pael",
+            "Livestrongi pael",
+            "Livestrong"
+          ]
         },
         "explanation": {
-          "en": "Coalition government typically negotiates a shared programme and division of ministries.",
-          "et": "Koalitsioonivalitsus lepib tavaliselt kokku ühise programmi ja ministeeriumide jaotuse."
+          "en": "The yellow silicone Livestrong wristband became a major 2000s cancer-fundraising symbol associated with Lance Armstrong’s foundation.",
+          "et": "Kollasest silikoonist Livestrongi käepaelast sai 2000. aastatel Lance Armstrongi fondiga seotud suur vähiannetuste sümbol."
         },
         "source": {
-          "sourceId": "wikipedia:coalition_government",
-          "title": "Coalition government",
-          "url": "https://en.wikipedia.org/wiki/Coalition_government",
+          "sourceId": "wikipedia:livestrong-wristband",
+          "title": "Livestrong wristband",
+          "url": "https://en.wikipedia.org/wiki/Livestrong_wristband",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19717,153 +19879,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-039",
     "name": {
-      "en": "Sharing Power across Territory",
-      "et": "Võimu jagamine territooriumil"
+      "en": "Economics in the Shopping Basket",
+      "et": "Majandus ostukorvis"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-039:question:1",
-        "factKey": "built-in-politics-economics-society:territorial-power:medium:concept:federation",
+        "factKey": "economics:shrinkflation:package-size-falls-price-stays-same",
         "tier": 1,
-        "subjectKey": "concept:federation",
+        "subjectKey": "concept:shrinkflation",
         "clue": {
-          "en": "A territorial-government concept constitutionally divides authority between national and regional governments. Name it.",
-          "et": "Üks territoriaalse võimu mõiste jagab põhiseadusega võimu kesk- ja piirkondliku valitsuse vahel. Millist vastust otsime?"
+          "en": "A snack bag keeps the same shelf price but quietly contains fewer grams than before. What portmanteau names this complaint?",
+          "et": "Suupistepaki riiulihind jääb samaks, kuid pakis on märkamatult vähem gramme kui varem. Milline liitsõna seda nähtust nimetab?"
         },
         "response": {
-          "en": "federation",
-          "et": "föderatsioon"
+          "en": "shrinkflation",
+          "et": "shrinkflatsioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "package downsizing",
+            "shrink inflation"
+          ],
+          "et": [
+            "kahanemisinflatsioon",
+            "pakendikahanemine",
+            "shrinkflation"
+          ]
         },
         "explanation": {
-          "en": "Federation protects each level’s direct powers so the centre cannot ordinarily revoke them alone.",
-          "et": "Föderatsioon kaitseb kummagi tasandi otseseid volitusi, mida keskvõim ei saa tavaliselt üksi tühistada."
+          "en": "Shrinkflation means reducing a package’s quantity while leaving its displayed price unchanged or nearly unchanged.",
+          "et": "Shrinkflatsioon tähendab pakendi koguse vähendamist nii, et nähtav hind jääb samaks või peaaegu samaks."
         },
         "source": {
-          "sourceId": "wikipedia:federation",
-          "title": "Federation",
-          "url": "https://en.wikipedia.org/wiki/Federation",
+          "sourceId": "wikipedia:shrinkflation",
+          "title": "Shrinkflation",
+          "url": "https://en.wikipedia.org/wiki/Shrinkflation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-039:question:2",
-        "factKey": "built-in-politics-economics-society:territorial-power:medium:concept:unitary-state",
+        "factKey": "economics:big-mac-index:economist-burger-price-purchasing-power-comparison",
         "tier": 2,
-        "subjectKey": "concept:unitary-state",
+        "subjectKey": "index:big-mac-index",
         "clue": {
-          "en": "Find the territorial-government concept that places ultimate constitutional authority at the national level.",
-          "et": "Territoriaalse võimu mõiste paigutab lõpliku põhiseadusliku võimu riigi kesksele tasandile. Leia sobiv vastus."
+          "en": "The Economist compares the price of the same McDonald's burger across currencies as a playful test of purchasing power. Name the index.",
+          "et": "The Economist võrdleb sama McDonald'si burgeri hinda eri valuutades kui mängulist ostujõu testi. Nimeta indeks."
         },
         "response": {
-          "en": "unitary state",
-          "et": "unitaarriik"
+          "en": "Big Mac Index",
+          "et": "Big Maci indeks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Economist's Big Mac Index"
+          ],
+          "et": [
+            "The Economisti Big Maci indeks",
+            "Big Mac Index"
+          ]
         },
         "explanation": {
-          "en": "Unitary state may decentralise extensively while retaining legal power to alter local authority.",
-          "et": "Unitaarriik võib ulatuslikult detsentraliseerida, säilitades õiguse kohalikku võimu muuta."
+          "en": "The Economist’s Big Mac Index compares the same burger’s price across currencies as an informal measure of purchasing power.",
+          "et": "The Economisti Big Maci indeks võrdleb sama burgeri hinda eri valuutades ostujõu mitteametliku mõõdikuna."
         },
         "source": {
-          "sourceId": "wikipedia:unitary_state",
-          "title": "Unitary state",
-          "url": "https://en.wikipedia.org/wiki/Unitary_state",
+          "sourceId": "wikipedia:big-mac-index",
+          "title": "Big Mac Index",
+          "url": "https://en.wikipedia.org/wiki/Big_Mac_Index",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-039:question:3",
-        "factKey": "built-in-politics-economics-society:territorial-power:medium:concept:devolution",
+        "factKey": "economics:planned-obsolescence:phoebus-cartel-lowered-light-bulb-life",
         "tier": 3,
-        "subjectKey": "concept:devolution",
+        "subjectKey": "concept:planned-obsolescence",
         "clue": {
-          "en": "What territorial-government concept transfers powers from a central government to regional institutions?",
-          "et": "Järgmine territoriaalse võimu mõiste annab keskvõimu volitusi piirkondlikele institutsioonidele. Milline see on?"
+          "en": "The Phoebus cartel lowered the useful life of light bulbs, a much-cited example of what product strategy?",
+          "et": "Phoebuse kartell lühendas elektripirnide kasutusiga. Millise tootestrateegia sageli tsiteeritud näide see on?"
         },
         "response": {
-          "en": "devolution",
-          "et": "devolutsioon"
+          "en": "planned obsolescence",
+          "et": "kavandatud vananemine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "built-in obsolescence",
+            "planned product obsolescence"
+          ],
+          "et": [
+            "planeeritud vananemine",
+            "plaaniline vananemine",
+            "planned obsolescence"
+          ]
         },
         "explanation": {
-          "en": "Devolution differs from federalism because the transfer usually rests on national law.",
-          "et": "Devolutsioon erineb föderalismist, sest üleandmine tugineb tavaliselt riigi seadusele."
+          "en": "The Phoebus cartel’s reduction of light-bulb life is often cited as a historical example of planned obsolescence.",
+          "et": "Phoebuse kartelli elektripirnide eluea lühendamist tuuakse sageli kavandatud vananemise ajaloolise näitena."
         },
         "source": {
-          "sourceId": "wikipedia:devolution",
-          "title": "Devolution",
-          "url": "https://en.wikipedia.org/wiki/Devolution",
+          "sourceId": "wikipedia:phoebus-cartel",
+          "title": "Phoebus cartel",
+          "url": "https://en.wikipedia.org/wiki/Phoebus_cartel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-039:question:4",
-        "factKey": "built-in-politics-economics-society:territorial-power:medium:concept:subsidiarity",
+        "factKey": "economics:razor-blades-model:cheap-printer-marked-up-ink-cartridges",
         "tier": 4,
-        "subjectKey": "concept:subsidiarity",
+        "subjectKey": "business-model:razor-and-blades",
         "clue": {
-          "en": "One territorial-government concept favours decisions at the lowest level able to handle them effectively. Which one is described?",
-          "et": "Territoriaalse võimu mõiste eelistab otsuseid madalaimal tasandil, mis saab nendega tõhusalt hakkama. Mis see on?"
+          "en": "A cheap inkjet printer paired with heavily marked-up replacement cartridges is a common example of which shaving-themed business model?",
+          "et": "Odav tindiprinter koos suure juurdehindlusega vahetuskassettidega on millise raseerimisteemalise ärimudeli levinud näide?"
         },
         "response": {
-          "en": "subsidiarity",
-          "et": "subsidiaarsus"
+          "en": "razor-and-blades model",
+          "et": "habemenoa ja terade ärimudel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "razor and blade model",
+            "razor blade business model",
+            "razors-and-blades model"
+          ],
+          "et": [
+            "raseerija ja terade ärimudel",
+            "habemenoa-terade mudel",
+            "razor-and-blades model"
+          ]
         },
         "explanation": {
-          "en": "Subsidiarity allows higher action when scale or spillovers defeat local solutions.",
-          "et": "Subsidiaarsus lubab kõrgema tasandi sekkumist, kui ulatus või kõrvalmõjud kohaliku lahenduse nurjavad."
+          "en": "The razor-and-blades model pairs a cheap initial product, such as a printer, with profitable recurring consumables such as ink cartridges.",
+          "et": "Habemenoa ja terade mudelis müüakse põhitoode, näiteks printer, odavalt ning teenitakse korduvate tarvikute, näiteks tindikassettide pealt."
         },
         "source": {
-          "sourceId": "wikipedia:subsidiarity",
-          "title": "Subsidiarity",
-          "url": "https://en.wikipedia.org/wiki/Subsidiarity",
+          "sourceId": "wikipedia:razor-and-blades-model",
+          "title": "Razor and blades model",
+          "url": "https://en.wikipedia.org/wiki/Razor_and_blades_model",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-039:question:5",
-        "factKey": "built-in-politics-economics-society:territorial-power:medium:institution:municipality",
+        "factKey": "economics:lipstick-effect:lauder-reported-sales-rise-after-2001-attacks",
         "tier": 5,
-        "subjectKey": "institution:municipality",
+        "subjectKey": "hypothesis:lipstick-effect",
         "clue": {
-          "en": "This territorial-government concept is a local government for a city, town, or surrounding area. What is it?",
-          "et": "See territoriaalse võimu mõiste on linna, valla või ümbritseva piirkonna kohalik valitsus. Mis see on?"
+          "en": "Leonard Lauder said sales of one small cosmetic luxury rose after the 2001 terrorist attacks, publicizing what proposed economic effect?",
+          "et": "Leonard Lauderi sõnul kasvas pärast 2001. aasta terrorirünnakuid ühe väikese kosmeetilise luksuskauba müük. Millise oletatava majandusefekti ta sellega tuntuks tegi?"
         },
         "response": {
-          "en": "municipality",
-          "et": "omavalitsus"
+          "en": "lipstick effect",
+          "et": "huulepulgaefekt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the lipstick effect"
+          ],
+          "et": [
+            "huulepulga efekt",
+            "lipstick effect"
+          ]
         },
         "explanation": {
-          "en": "Municipality commonly manages services such as local roads, planning, or waste.",
-          "et": "Omavalitsus korraldab sageli kohalikke teid, planeerimist või jäätmeid."
+          "en": "The lipstick effect is the proposed tendency for consumers to keep buying small affordable luxuries during difficult economic periods.",
+          "et": "Huulepulgaefekt on hüpotees, et raskel majandusajal ostavad tarbijad endiselt väikseid taskukohaseid luksuskaupu."
         },
         "source": {
-          "sourceId": "wikipedia:municipality",
-          "title": "Municipality",
-          "url": "https://en.wikipedia.org/wiki/Municipality",
+          "sourceId": "wikipedia:lipstick-effect",
+          "title": "Lipstick effect",
+          "url": "https://en.wikipedia.org/wiki/Lipstick_effect",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -19871,153 +20065,188 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-040",
     "name": {
-      "en": "Institutions That Defend Rights",
-      "et": "Õigusi kaitsvad institutsioonid"
+      "en": "Boom, Bubble, Bust",
+      "et": "Buum, mull ja krahh"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-040:question:1",
-        "factKey": "built-in-politics-economics-society:rights-watchdogs:medium:institution:ombudsman",
+        "factKey": "economics:dot-com-bubble:internet-company-speculation-boom-and-crash",
         "tier": 1,
-        "subjectKey": "institution:ombudsman",
+        "subjectKey": "event:dot-com-bubble",
         "clue": {
-          "en": "Identify the rights institution or service: it investigates public complaints about maladministration.",
-          "et": "Mis õiguskaitseasutus või -teenus uurib inimeste kaebusi avaliku halduse väärkohtlemise kohta?"
+          "en": "Investors rushed into internet-company shares in the late 1990s before many of those valuations collapsed. What hyphenated name is given to the boom and bust?",
+          "et": "Investorid tormasid 1990. aastate lõpus internetifirmade aktsiatesse, enne kui paljud hinnangud kokku varisesid. Millise sidekriipsuga nime sai buum ja krahh?"
         },
         "response": {
-          "en": "ombudsman",
-          "et": "ombudsman"
+          "en": "dot-com bubble",
+          "et": "dot-com-mull"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "dotcom bubble",
+            "internet bubble",
+            "dot-com boom and bust"
+          ],
+          "et": [
+            "internetimull",
+            "dotcom-mull",
+            "dot-com-buum"
+          ]
         },
         "explanation": {
-          "en": "Ombudsman usually recommends remedies independently rather than acting as an ordinary court.",
-          "et": "Ombudsman soovitab tavaliselt sõltumatult abinõusid ega tegutse tavakohtuna."
+          "en": "The dot-com bubble was the late-1990s surge in internet-company investment and valuations followed by a broad collapse.",
+          "et": "Dot-com-mull oli 1990. aastate lõpu internetifirmade investeeringute ja väärtuste kiire kasv, millele järgnes ulatuslik langus."
         },
         "source": {
-          "sourceId": "wikipedia:ombudsman",
-          "title": "Ombudsman",
-          "url": "https://en.wikipedia.org/wiki/Ombudsman",
+          "sourceId": "wikipedia:dot-com-bubble",
+          "title": "Dot-com bubble",
+          "url": "https://en.wikipedia.org/wiki/Dot-com_bubble",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-040:question:2",
-        "factKey": "built-in-politics-economics-society:rights-watchdogs:medium:institution:constitutional-court",
+        "factKey": "economics:tulip-mania:dutch-bulb-contract-prices-rose-then-collapsed",
         "tier": 2,
-        "subjectKey": "institution:constitutional-court",
+        "subjectKey": "event:tulip-mania",
         "clue": {
-          "en": "One rights institution or service specialises in disputes about a constitution. Which one is described?",
-          "et": "Õiguskaitseasutus või -teenus tegeleb põhiseadust puudutavate vaidlustega. Mis see on?"
+          "en": "In the Dutch Golden Age, contracts for fashionable flower bulbs reached extraordinary prices before the market abruptly collapsed. What famous episode was this?",
+          "et": "Hollandi kuldajal tõusid moekate lillesibulate lepinguhinnad erakordselt kõrgele, enne kui turg järsult kokku varises. Mis kuulus episood see oli?"
         },
         "response": {
-          "en": "constitutional court",
-          "et": "põhiseaduskohus"
+          "en": "tulip mania",
+          "et": "tulbimaania"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tulip craze",
+            "Dutch tulip mania"
+          ],
+          "et": [
+            "tulbipalavik",
+            "Hollandi tulbimaania",
+            "tulip mania"
+          ]
         },
         "explanation": {
-          "en": "Constitutional court often performs abstract review even before a concrete private lawsuit.",
-          "et": "Põhiseaduskohus teeb sageli abstraktset kontrolli ka enne konkreetset eravaidlust."
+          "en": "Tulip mania describes the Dutch Golden Age boom and collapse in prices for contracts tied to fashionable tulip bulbs.",
+          "et": "Tulbimaania kirjeldab Hollandi kuldajal moekate tulbisibulate lepinguhindade järsku tõusu ja kokkuvarisemist."
         },
         "source": {
-          "sourceId": "wikipedia:constitutional_court",
-          "title": "Constitutional court",
-          "url": "https://en.wikipedia.org/wiki/Constitutional_court",
+          "sourceId": "wikipedia:tulip-mania",
+          "title": "Tulip mania",
+          "url": "https://en.wikipedia.org/wiki/Tulip_mania",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-040:question:3",
-        "factKey": "built-in-politics-economics-society:rights-watchdogs:medium:institution:human-rights-commission",
+        "factKey": "economics:gamestop-short-squeeze:retail-buying-forced-short-covering",
         "tier": 3,
-        "subjectKey": "institution:human-rights-commission",
+        "subjectKey": "event:gamestop-short-squeeze",
         "clue": {
-          "en": "Identify this rights institution or service: it monitors and promotes rights independently at national level.",
-          "et": "Kirjeldatud õiguskaitseasutus või -teenus jälgib ja edendab õigusi riigi tasandil sõltumatult. Mis on selle nimi?"
+          "en": "Retail traders organized on Reddit bought shares in a video-game retailer, forcing heavily exposed short sellers to cover. Name the market episode.",
+          "et": "Redditis koondunud väikeinvestorid ostsid videomängupoe aktsiaid ja sundisid suure lühikese positsiooniga kauplejaid neid tagasi ostma. Nimeta turuepisood."
         },
         "response": {
-          "en": "human rights commission",
-          "et": "inimõiguste komisjon"
+          "en": "GameStop short squeeze",
+          "et": "GameStopi short squeeze"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "GameStop squeeze",
+            "GameStop stock frenzy",
+            "GME short squeeze"
+          ],
+          "et": [
+            "GameStopi aktsiapalavik",
+            "GME short squeeze"
+          ]
         },
         "explanation": {
-          "en": "Human rights commission may investigate, advise government, and report under the Paris Principles.",
-          "et": "Inimõiguste komisjon võib Pariisi põhimõtete alusel uurida, valitsust nõustada ja aru anda."
+          "en": "The GameStop short squeeze saw Reddit-organized retail buying drive up the retailer’s shares and force short sellers to cover.",
+          "et": "GameStopi short squeeze’is tõstsid Redditis koondunud väikeinvestorid aktsia hinda ja sundisid lühikeseks müüjaid positsioone katma."
         },
         "source": {
-          "sourceId": "wikipedia:national_human_rights_institution",
-          "title": "National human rights institution",
-          "url": "https://en.wikipedia.org/wiki/National_human_rights_institution",
+          "sourceId": "wikipedia:gamestop-short-squeeze",
+          "title": "GameStop short squeeze",
+          "url": "https://en.wikipedia.org/wiki/GameStop_short_squeeze",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-040:question:4",
-        "factKey": "built-in-politics-economics-society:rights-watchdogs:medium:service:legal-aid",
+        "factKey": "economics:black-wednesday:uk-withdrew-pound-from-erm",
         "tier": 4,
-        "subjectKey": "service:legal-aid",
+        "subjectKey": "event:black-wednesday-sterling",
         "clue": {
-          "en": "Which rights institution or service helps people obtain legal representation despite limited means?",
-          "et": "Tuvasta järgmine õiguskaitseasutus või -teenus: see aitab väheste vahenditega inimestel saada õigusesindust."
+          "en": "Britain abandoned its attempt to keep sterling inside the European Exchange Rate Mechanism after a day of intense currency pressure. What dark weekday nickname marks the crisis?",
+          "et": "Suurbritannia loobus pärast tugevat valuutasurvet katsest hoida naelsterlingit Euroopa vahetuskursimehhanismis. Millise sünge nädalapäevanimega kriisi tuntakse?"
         },
         "response": {
-          "en": "legal aid",
-          "et": "õigusabi"
+          "en": "Black Wednesday",
+          "et": "must kolmapäev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the 1992 sterling crisis",
+            "1992 Black Wednesday"
+          ],
+          "et": [
+            "1992. aasta naelakriis",
+            "Black Wednesday",
+            "1992. aasta must kolmapäev"
+          ]
         },
         "explanation": {
-          "en": "Legal aid supports effective access to justice rather than changing substantive law.",
-          "et": "Õigusabi toetab tegelikku ligipääsu õigusemõistmisele ega muuda materiaalõigust."
+          "en": "On Black Wednesday, Britain stopped defending sterling inside the European Exchange Rate Mechanism and withdrew the pound from it.",
+          "et": "Mustal kolmapäeval lõpetas Suurbritannia naelsterlingi kaitsmise Euroopa vahetuskursimehhanismis ja viis naela süsteemist välja."
         },
         "source": {
-          "sourceId": "wikipedia:legal_aid",
-          "title": "Legal aid",
-          "url": "https://en.wikipedia.org/wiki/Legal_aid",
+          "sourceId": "wikipedia:black-wednesday",
+          "title": "Black Wednesday",
+          "url": "https://en.wikipedia.org/wiki/Black_Wednesday",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-040:question:5",
-        "factKey": "built-in-politics-economics-society:rights-watchdogs:medium:role:public-defender",
+        "factKey": "economics:south-sea-bubble:company-debt-conversion-share-speculation-collapse",
         "tier": 5,
-        "subjectKey": "role:public-defender",
+        "subjectKey": "event:south-sea-bubble",
         "clue": {
-          "en": "A rights institution or service represents an accused person who cannot afford private counsel. Name it.",
-          "et": "Üks õiguskaitseasutus või -teenus esindab süüdistatavat, kes ei saa endale erakaitsjat lubada. Millist vastust otsime?"
+          "en": "Shares in a British company promising profits tied to trade and government-debt conversion soared and collapsed in 1720. Which sea-named bubble was it?",
+          "et": "Kaubanduse ja riigivõla ümberkujundamisega kasumit lubanud Briti ettevõtte aktsia tõusis 1720. aastal järsult ja kukkus siis kokku. Millise mere järgi nimetatud mull see oli?"
         },
         "response": {
-          "en": "public defender",
-          "et": "riigi määratud kaitsja"
+          "en": "South Sea Bubble",
+          "et": "Lõunamere mull"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "South Sea Company bubble",
+            "the South Sea Company bubble"
+          ],
+          "et": [
+            "South Sea Bubble",
+            "South Sea Company mull"
+          ]
         },
         "explanation": {
-          "en": "Public defender is salaried or publicly funded while owing professional loyalty to the client.",
-          "et": "Riigi määratud kaitsja saab avalikku palka või rahastust, kuid võlgneb kutsealase lojaalsuse kliendile."
+          "en": "The South Sea Bubble was the 1720 boom and collapse in shares of Britain’s South Sea Company amid trade and debt-conversion promises.",
+          "et": "Lõunamere mull oli Briti South Sea Company aktsiate 1720. aasta tõus ja krahh kaubandus- ning võlaümberkujundamise lubaduste taustal."
         },
         "source": {
-          "sourceId": "wikipedia:public_defender",
-          "title": "Public defender",
-          "url": "https://en.wikipedia.org/wiki/Public_defender",
+          "sourceId": "wikipedia:south-sea-bubble",
+          "title": "South Sea Bubble",
+          "url": "https://en.wikipedia.org/wiki/South_Sea_Bubble",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -20025,153 +20254,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-041",
     "name": {
-      "en": "Big Schools of Economic Thought",
-      "et": "Majandusmõtte suured koolkonnad"
+      "en": "Business Disasters With a Logo",
+      "et": "Logoga ärikatastroofid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-041:question:1",
-        "factKey": "built-in-politics-economics-society:economic-schools:medium:school:classical-economics",
+        "factKey": "economics:theranos:unreliable-small-sample-blood-testing-claims-fraud",
         "tier": 1,
-        "subjectKey": "school:classical-economics",
+        "subjectKey": "company:theranos-scandal",
         "clue": {
-          "en": "What economic school includes work by Smith and Ricardo on production and trade?",
-          "et": "Järgmine majanduskoolkond hõlmab Smithi ja Ricardo töid tootmisest ning kaubandusest. Milline see on?"
+          "en": "Elizabeth Holmes promised many medical tests from tiny blood samples, but the company's technology and claims unravelled into a fraud scandal. Name the company.",
+          "et": "Elizabeth Holmes lubas teha tillukesest vereproovist palju meditsiiniteste, kuid ettevõtte tehnoloogia ja väited varisesid pettuseskandaaliks. Nimeta firma."
         },
         "response": {
-          "en": "classical economics",
-          "et": "klassikaline majandusteadus"
+          "en": "Theranos",
+          "et": "Theranos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Theranos scandal"
+          ],
+          "et": [
+            "Theranose skandaal"
+          ]
         },
         "explanation": {
-          "en": "Classical economics often explained value through costs and distribution among wages, profit, and rent.",
-          "et": "Klassikaline majandusteadus seletas väärtust sageli kulude ning palga, kasumi ja rendi jaotuse kaudu."
+          "en": "Theranos claimed that tiny blood samples could support many tests, but its technology and claims collapsed into a fraud scandal.",
+          "et": "Theranos väitis, et tillukesest vereproovist saab teha palju teste, kuid ettevõtte tehnoloogia ja väited varisesid pettuseskandaaliks."
         },
         "source": {
-          "sourceId": "wikipedia:classical_economics",
-          "title": "Classical economics",
-          "url": "https://en.wikipedia.org/wiki/Classical_economics",
+          "sourceId": "wikipedia:theranos",
+          "title": "Theranos",
+          "url": "https://en.wikipedia.org/wiki/Theranos",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-041:question:2",
-        "factKey": "built-in-politics-economics-society:economic-schools:medium:school:keynesian-economics",
+        "factKey": "economics:lehman-brothers:bankruptcy-major-role-unfolding-financial-crisis",
         "tier": 2,
-        "subjectKey": "school:keynesian-economics",
+        "subjectKey": "company:lehman-brothers-collapse",
         "clue": {
-          "en": "Name the economic school that stresses aggregate demand and stabilisation during recessions.",
-          "et": "Vihjes kirjeldatud majanduskoolkond rõhutab kogunõudlust ja majanduse stabiliseerimist languse ajal. Mis see on?"
+          "en": "This Wall Street investment bank filed for bankruptcy in 2008, and its collapse played a major role in the unfolding financial crisis. Name it.",
+          "et": "See Wall Streeti investeerimispank esitas 2008. aastal pankrotiavalduse ning selle kokkuvarisemine mängis finantskriisi süvenemises suurt rolli. Nimeta pank."
         },
         "response": {
-          "en": "Keynesian economics",
-          "et": "keinslik majandusteadus"
+          "en": "Lehman Brothers",
+          "et": "Lehman Brothers"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lehman",
+            "Lehman Brothers Holdings"
+          ],
+          "et": [
+            "Lehman",
+            "Lehman Brothers Holdings"
+          ]
         },
         "explanation": {
-          "en": "Keynesian economics allows persistent underemployment when prices and wages adjust slowly.",
-          "et": "Keinslik majandusteadus lubab püsivat alahõivet, kui hinnad ja palgad kohanevad aeglaselt."
+          "en": "Lehman Brothers filed for bankruptcy in 2008, and its collapse played a major role as the financial crisis unfolded.",
+          "et": "Lehman Brothers esitas 2008. aastal pankrotiavalduse ning panga kokkuvarisemisel oli finantskriisi süvenemises suur roll."
         },
         "source": {
-          "sourceId": "wikipedia:keynesian_economics",
-          "title": "Keynesian economics",
-          "url": "https://en.wikipedia.org/wiki/Keynesian_economics",
+          "sourceId": "wikipedia:lehman-brothers",
+          "title": "Lehman Brothers",
+          "url": "https://en.wikipedia.org/wiki/Lehman_Brothers",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-041:question:3",
-        "factKey": "built-in-politics-economics-society:economic-schools:medium:school:monetarism",
+        "factKey": "economics:enron:accounting-fraud-bankruptcy",
         "tier": 3,
-        "subjectKey": "school:monetarism",
+        "subjectKey": "company:enron-scandal",
         "clue": {
-          "en": "Recognise the economic school that emphasises the money supply’s role in inflation and cycles.",
-          "et": "Otsitav majanduskoolkond rõhutab rahapakkumise osa inflatsioonis ja majandustsüklis. Mis see on?"
+          "en": "Complex accounting hid debt and inflated profits at a Houston energy trader until its spectacular bankruptcy. Which company became shorthand for the scandal?",
+          "et": "Keerukas raamatupidamine peitis Houstoni energiakaupleja võlgu ja paisutas kasumit kuni suurejoonelise pankrotini. Millisest ettevõttest sai skandaali võrdkuju?"
         },
         "response": {
-          "en": "monetarism",
-          "et": "monetarism"
+          "en": "Enron",
+          "et": "Enron"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Enron Corporation",
+            "Enron scandal"
+          ],
+          "et": [
+            "Enron Corporation",
+            "Enroni skandaal"
+          ]
         },
         "explanation": {
-          "en": "Monetarism is closely associated with Milton Friedman and stable money-growth rules.",
-          "et": "Monetarism seostub tihedalt Milton Friedmani ning stabiilsete rahakasvu reeglitega."
+          "en": "Enron used deceptive accounting to hide debt and inflate profits before the energy trader entered bankruptcy.",
+          "et": "Enron kasutas eksitavat raamatupidamist võlgade varjamiseks ja kasumi paisutamiseks, enne kui energiakaupleja pankrotti läks."
         },
         "source": {
-          "sourceId": "wikipedia:monetarism",
-          "title": "Monetarism",
-          "url": "https://en.wikipedia.org/wiki/Monetarism",
+          "sourceId": "wikipedia:enron-scandal",
+          "title": "Enron scandal",
+          "url": "https://en.wikipedia.org/wiki/Enron_scandal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-041:question:4",
-        "factKey": "built-in-politics-economics-society:economic-schools:medium:school:austrian-school",
+        "factKey": "economics:wirecard:missing-1-point-9-billion-insolvency",
         "tier": 4,
-        "subjectKey": "school:austrian-school",
+        "subjectKey": "company:wirecard-scandal",
         "clue": {
-          "en": "Identify the economic school: it emphasises individual choice, prices, and entrepreneurial discovery.",
-          "et": "Mis majanduskoolkond rõhutab individuaalset valikut, hindu ja ettevõtlikku avastamist?"
+          "en": "Auditors could not confirm €1.9 billion supposedly held for a German payments company, which soon filed for insolvency. Name the company.",
+          "et": "Audiitorid ei suutnud kinnitada 1,9 miljardit eurot, mida Saksa maksefirma väitis end hoidvat, ning ettevõte esitas peagi maksejõuetusavalduse. Nimeta firma."
         },
         "response": {
-          "en": "Austrian School",
-          "et": "Austria koolkond"
+          "en": "Wirecard",
+          "et": "Wirecard"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Wirecard AG",
+            "Wirecard scandal"
+          ],
+          "et": [
+            "Wirecard AG",
+            "Wirecardi skandaal"
+          ]
         },
         "explanation": {
-          "en": "Austrian School uses marginalism and criticises central planners’ knowledge limits.",
-          "et": "Austria koolkond kasutab marginalismi ning kritiseerib keskplaneerijate teadmiste piire."
+          "en": "Wirecard failed after auditors could not verify €1.9 billion supposedly held for the German payments company.",
+          "et": "Wirecard kukkus läbi pärast seda, kui audiitorid ei suutnud kinnitada Saksa maksefirma väidetavalt hoitud 1,9 miljardit eurot."
         },
         "source": {
-          "sourceId": "wikipedia:austrian_school_of_economics",
-          "title": "Austrian school of economics",
-          "url": "https://en.wikipedia.org/wiki/Austrian_school_of_economics",
+          "sourceId": "wikipedia:wirecard-scandal",
+          "title": "Wirecard scandal",
+          "url": "https://en.wikipedia.org/wiki/Wirecard_scandal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-041:question:5",
-        "factKey": "built-in-politics-economics-society:economic-schools:medium:school:institutional-economics",
+        "factKey": "economics:barings-bank:nick-leeson-unauthorized-trades-collapse",
         "tier": 5,
-        "subjectKey": "school:institutional-economics",
+        "subjectKey": "company:barings-bank-collapse",
         "clue": {
-          "en": "An economic school studies how rules, norms, and organisations shape economies. What term fits?",
-          "et": "Siin kirjeldatud majanduskoolkond uurib, kuidas reeglid, normid ja organisatsioonid majandust kujundavad. Mis see on?"
+          "en": "Unauthorized derivatives trading by Nick Leeson in Singapore destroyed Britain's centuries-old merchant bank. Name the bank.",
+          "et": "Nick Leesoni loata tuletistehingud Singapuris hävitasid sajanditevanuse Briti kaubanduspanga. Nimeta pank."
         },
         "response": {
-          "en": "institutional economics",
-          "et": "institutsionaalne majandusteadus"
+          "en": "Barings Bank",
+          "et": "Baringsi pank"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Barings",
+            "Baring Brothers"
+          ],
+          "et": [
+            "Barings",
+            "Baring Brothers",
+            "Barings Bank"
+          ]
         },
         "explanation": {
-          "en": "Institutional economics treats transaction costs and property rights as central explanatory factors.",
-          "et": "Institutsionaalne majandusteadus käsitleb tehingukulusid ja omandiõigust kesksete seletusteguritena."
+          "en": "Barings Bank collapsed after Nick Leeson concealed unauthorized derivatives trades made in Singapore.",
+          "et": "Baringsi pank varises kokku pärast seda, kui Nick Leeson varjas Singapuris tehtud loata tuletistehinguid."
         },
         "source": {
-          "sourceId": "wikipedia:institutional_economics",
-          "title": "Institutional economics",
-          "url": "https://en.wikipedia.org/wiki/Institutional_economics",
+          "sourceId": "wikipedia:barings-bank",
+          "title": "Barings Bank",
+          "url": "https://en.wikipedia.org/wiki/Barings_Bank",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -20179,153 +20437,191 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-042",
     "name": {
-      "en": "Who Holds Market Power",
-      "et": "Kelle käes on turujõud"
+      "en": "When Ordinary Things Became Money",
+      "et": "Kui argiasjadest sai raha"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-042:question:1",
-        "factKey": "built-in-politics-economics-society:market-structures:medium:concept:monopoly",
+        "factKey": "economics:cocoa-beans:mesoamerican-currency",
         "tier": 1,
-        "subjectKey": "concept:monopoly",
+        "subjectKey": "commodity-money:cocoa-beans",
         "clue": {
-          "en": "Which market structure has one dominant seller without close substitutes?",
-          "et": "Tuvasta järgmine turustruktuur: see sisaldab üht valitsevat müüjat ilma lähedaste asendajateta."
+          "en": "The seeds that eventually become chocolate were also used to pay for goods in Mesoamerica. What familiar ingredient served as money?",
+          "et": "Seemneid, millest lõpuks saab šokolaad, kasutati Mesoameerikas ka kaupade eest tasumiseks. Millist tuttavat toorainet kasutati rahana?"
         },
         "response": {
-          "en": "monopoly",
-          "et": "monopol"
+          "en": "cocoa beans",
+          "et": "kakaooad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cacao beans",
+            "cacao seeds",
+            "cocoa-bean money"
+          ],
+          "et": [
+            "kakaoseemned",
+            "kakaooad rahana"
+          ]
         },
         "explanation": {
-          "en": "Monopoly can set price above marginal cost when entry barriers protect market power.",
-          "et": "Monopol võib turujõudu kaitsvate sisenemistõkete korral hoida hinna üle piirkulu."
+          "en": "Cocoa beans, later processed into chocolate, also circulated as a means of payment in Mesoamerica.",
+          "et": "Kakaooad, millest hiljem valmistatakse šokolaadi, käibisid Mesoameerikas ka maksevahendina."
         },
         "source": {
-          "sourceId": "wikipedia:monopoly",
-          "title": "Monopoly",
-          "url": "https://en.wikipedia.org/wiki/Monopoly",
+          "sourceId": "wikipedia:cocoa-bean",
+          "title": "Cocoa bean",
+          "url": "https://en.wikipedia.org/wiki/Cocoa_bean",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-042:question:2",
-        "factKey": "built-in-politics-economics-society:market-structures:medium:concept:oligopoly",
+        "factKey": "economics:tea-bricks:compressed-tea-used-as-currency-asia",
         "tier": 2,
-        "subjectKey": "concept:oligopoly",
+        "subjectKey": "commodity-money:tea-bricks",
         "clue": {
-          "en": "A market structure is controlled by a small number of interdependent sellers. What term fits?",
-          "et": "Siin kirjeldatud turustruktuur on väikese arvu üksteisest sõltuvate müüjate kontrolli all. Mis see on?"
+          "en": "Compressed blocks of a familiar hot drink travelled well and were accepted as currency along Asian trade routes. What were the blocks called?",
+          "et": "Tuttava kuuma joogi pressitud plokid säilisid teel hästi ja neid võeti Aasia kaubateedel vastu rahana. Kuidas neid plokke nimetati?"
         },
         "response": {
-          "en": "oligopoly",
-          "et": "oligopol"
+          "en": "tea bricks",
+          "et": "teetellised"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "brick tea",
+            "compressed tea bricks",
+            "tea-brick currency"
+          ],
+          "et": [
+            "pressitud teeplokid",
+            "teetelliseraha",
+            "brick tea"
+          ]
         },
         "explanation": {
-          "en": "Oligopoly makes each firm consider rivals’ likely reactions when setting strategy.",
-          "et": "Oligopol paneb iga ettevõtte strateegias arvestama konkurentide tõenäolise vastusega."
+          "en": "Tea bricks were compressed blocks valued for durability and portability and used as currency along Asian trade routes.",
+          "et": "Teetellised olid vastupidavad ja hästi veetavad pressitud teeplokid, mida kasutati Aasia kaubateedel rahana."
         },
         "source": {
-          "sourceId": "wikipedia:oligopoly",
-          "title": "Oligopoly",
-          "url": "https://en.wikipedia.org/wiki/Oligopoly",
+          "sourceId": "wikipedia:tea-brick",
+          "title": "Tea brick",
+          "url": "https://en.wikipedia.org/wiki/Tea_brick",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-042:question:3",
-        "factKey": "built-in-politics-economics-society:market-structures:medium:concept:perfect-competition",
+        "factKey": "economics:tally-sticks:english-exchequer-split-debt-tax-records",
         "tier": 3,
-        "subjectKey": "concept:perfect-competition",
+        "subjectKey": "record-money:tally-sticks-exchequer",
         "clue": {
-          "en": "Identify this market structure: it models many price-taking firms selling an identical product.",
-          "et": "Kirjeldatud turustruktuur modelleerib paljusid hinnavõtjaid, kes müüvad ühesugust toodet. Mis on selle nimi?"
+          "en": "England's Exchequer recorded debts and tax payments by cutting notches into a wooden strip, then splitting it so two matching halves could be checked. What were these records called?",
+          "et": "Inglise riigikassa märkis võlad ja maksed puuliistule lõigatud sälkudega ning lõhestas liistu, et kahte sobivat poolt saaks võrrelda. Kuidas neid arvestusvahendeid nimetati?"
         },
         "response": {
-          "en": "perfect competition",
-          "et": "täiuslik konkurents"
+          "en": "tally sticks",
+          "et": "pügalpulgad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tally stick",
+            "Exchequer tallies",
+            "split tally sticks"
+          ],
+          "et": [
+            "pügalpulk",
+            "arvestuspulgad",
+            "sälkpulgad",
+            "tally sticks"
+          ]
         },
         "explanation": {
-          "en": "Perfect competition assumes free entry and enough information that no single firm controls price.",
-          "et": "Täiuslik konkurents eeldab vaba sisenemist ja piisavat teavet, nii et ükski ettevõte hinda ei juhi."
+          "en": "Tally sticks recorded obligations with notches; splitting a stick created matching halves that could later be compared.",
+          "et": "Pügalpulgad talletasid kohustusi sälkudega; pulga lõhestamine andis kaks sobivat poolt, mida sai hiljem võrrelda."
         },
         "source": {
-          "sourceId": "wikipedia:perfect_competition",
-          "title": "Perfect competition",
-          "url": "https://en.wikipedia.org/wiki/Perfect_competition",
+          "sourceId": "wikipedia:tally-stick",
+          "title": "Tally stick",
+          "url": "https://en.wikipedia.org/wiki/Tally_stick",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-042:question:4",
-        "factKey": "built-in-politics-economics-society:market-structures:medium:concept:monopsony",
+        "factKey": "economics:cowrie-shells:used-as-money-africa-asia",
         "tier": 4,
-        "subjectKey": "concept:monopsony",
+        "subjectKey": "commodity-money:cowrie-shells",
         "clue": {
-          "en": "Which market structure gives one buyer unusual power over many sellers or workers?",
-          "et": "Tuvasta järgmine turustruktuur: see annab ühele ostjale ebatavalise võimu paljude müüjate või töötajate üle."
+          "en": "Small glossy sea-snail shells circulated as money across parts of Africa and Asia for centuries. What shells were they?",
+          "et": "Väikesed läikivad mereteokarbid käibisid sajandeid rahana Aafrika ja Aasia eri piirkondades. Millised karbid need olid?"
         },
         "response": {
-          "en": "monopsony",
-          "et": "monopson"
+          "en": "cowrie shells",
+          "et": "kaurikarbid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "cowries",
+            "cowry shells",
+            "cowrie-shell money"
+          ],
+          "et": [
+            "kaurite kojad",
+            "kauriraha",
+            "cowrie shells"
+          ]
         },
         "explanation": {
-          "en": "Monopsony is the buyer-side counterpart of monopoly.",
-          "et": "Monopson on monopoli ostjapoolne vaste."
+          "en": "Cowrie shells are glossy sea-snail shells that served as money for centuries across parts of Africa and Asia.",
+          "et": "Kaurikarbid on läikivad meriteokarbid, mida kasutati sajandeid rahana Aafrika ja Aasia eri piirkondades."
         },
         "source": {
-          "sourceId": "wikipedia:monopsony",
-          "title": "Monopsony",
-          "url": "https://en.wikipedia.org/wiki/Monopsony",
+          "sourceId": "wikipedia:cowrie",
+          "title": "Cowrie",
+          "url": "https://en.wikipedia.org/wiki/Cowrie",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-042:question:5",
-        "factKey": "built-in-politics-economics-society:market-structures:medium:concept:cartel",
+        "factKey": "economics:rai-stones:yap-ownership-transferred-without-moving-stone",
         "tier": 5,
-        "subjectKey": "concept:cartel",
+        "subjectKey": "commodity-money:rai-stones-yap",
         "clue": {
-          "en": "A market structure is an agreement among rivals to coordinate price or output. What term fits?",
-          "et": "Siin kirjeldatud turustruktuur on konkurentide kokkulepe hinna või toodangu koordineerimiseks. Mis see on?"
+          "en": "On Yap, ownership of enormous carved limestone discs could change even when the objects never moved. What are these famous pieces of stone money called?",
+          "et": "Japi saarel võis hiiglaslike tahutud lubjakivikettaste omanik vahetuda ka siis, kui esemed paigast ei liikunud. Kuidas seda kuulsat kiviraha nimetatakse?"
         },
         "response": {
-          "en": "cartel",
-          "et": "kartell"
+          "en": "rai stones",
+          "et": "rai-kivid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "rai stone money",
+            "Yap stone money"
+          ],
+          "et": [
+            "rai kiviraha",
+            "Japi kiviraha"
+          ]
         },
         "explanation": {
-          "en": "Cartel tries to mimic monopoly but is vulnerable to cheating by members.",
-          "et": "Kartell püüab jäljendada monopoli, kuid on haavatav liikmete petmisele."
+          "en": "Rai stones are Yap’s carved limestone discs; ownership could be transferred publicly without physically moving the stone.",
+          "et": "Rai-kivid on Japi tahutud lubjakivikettad, mille omandiõigus võis avalikult üle minna ilma kivi ennast liigutamata."
         },
         "source": {
-          "sourceId": "wikipedia:cartel",
-          "title": "Cartel",
-          "url": "https://en.wikipedia.org/wiki/Cartel",
+          "sourceId": "wikipedia:rai-stones",
+          "title": "Rai stones",
+          "url": "https://en.wikipedia.org/wiki/Rai_stones",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -20333,157 +20629,192 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-043",
     "name": {
-      "en": "Reading the Economy",
-      "et": "Majanduse näitajad"
+      "en": "Big Ideas Tried in Real Life",
+      "et": "Suured ideed päriselukatses"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-043:question:1",
-        "factKey": "built-in-politics-economics-society:macroeconomic-indicators:medium:measure:gross-domestic-product",
+        "factKey": "economics:four-day-workweek:perpetual-guardian-weekday-off-full-pay-permanent",
         "tier": 1,
-        "subjectKey": "measure:gross-domestic-product",
+        "subjectKey": "policy:four-day-workweek",
         "clue": {
-          "en": "What economic indicator measures final goods and services produced within an economy?",
-          "et": "Järgmine majandusnäitaja mõõdab majanduses toodetud lõppkaupu ja -teenuseid. Milline see on?"
+          "en": "New Zealand company Perpetual Guardian let staff nominate one weekday off while still receiving full pay, then made the arrangement permanent. What workweek was it trialling?",
+          "et": "Uus-Meremaa ettevõte Perpetual Guardian lubas töötajatel valida igal nädalal ühe tööpäeva vabaks, makstes endiselt täispalka, ning muutis hiljem selle töökorralduse püsivaks. Millist töönädalat ettevõte katsetas?"
         },
         "response": {
-          "en": "gross domestic product",
-          "et": "sisemajanduse koguprodukt"
+          "en": "four-day workweek",
+          "et": "neljapäevane töönädal"
         },
         "acceptedVariants": {
           "en": [
-            "GDP"
+            "four-day week",
+            "4-day workweek",
+            "4-day week"
           ],
           "et": [
-            "SKP"
+            "4-päevane töönädal",
+            "nelja tööpäevaga nädal"
           ]
         },
         "explanation": {
-          "en": "Gross domestic product avoids double counting by summing value added or final expenditure.",
-          "et": "Sisemajanduse koguprodukt väldib topeltarvestust lisandväärtuse või lõppkulutuste summeerimisega."
+          "en": "Perpetual Guardian’s four-day-workweek trial gave staff one nominated weekday off at full pay and was later adopted permanently.",
+          "et": "Perpetual Guardiani neljapäevase töönädala katses said töötajad valida ühe täispalgaga vaba tööpäeva ning töökorraldus muudeti hiljem püsivaks."
         },
         "source": {
-          "sourceId": "wikipedia:gross_domestic_product",
-          "title": "Gross domestic product",
-          "url": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+          "sourceId": "wikipedia:four-day-workweek-perpetual-guardian-in-new-zealand",
+          "title": "Four-day workweek",
+          "url": "https://en.wikipedia.org/wiki/Four-day_workweek#Perpetual_Guardian_in_New_Zealand",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-043:question:2",
-        "factKey": "built-in-politics-economics-society:macroeconomic-indicators:medium:measure:inflation",
+        "factKey": "economics:finland-basic-income-trial:unconditional-monthly-payment-unemployed-sample",
         "tier": 2,
-        "subjectKey": "measure:inflation",
+        "subjectKey": "policy:universal-basic-income",
         "clue": {
-          "en": "An economic indicator is a sustained rise in the general price level. What term fits?",
-          "et": "Siin kirjeldatud majandusnäitaja on üldise hinnataseme püsiv tõus. Mis see on?"
+          "en": "Finland selected unemployed people to receive a regular payment with no requirement to seek or accept work. Which much-debated income policy was being tested?",
+          "et": "Soomes valiti töötuid inimesi saama regulaarset makset ilma kohustuseta tööd otsida või vastu võtta. Millist palju arutatud sissetulekupoliitikat katsetati?"
         },
         "response": {
-          "en": "inflation",
-          "et": "inflatsioon"
+          "en": "universal basic income",
+          "et": "universaalne baassissetulek"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "basic income",
+            "UBI",
+            "unconditional basic income"
+          ],
+          "et": [
+            "baassissetulek",
+            "tingimusteta baassissetulek",
+            "kodanikupalk",
+            "UBI"
+          ]
         },
         "explanation": {
-          "en": "Inflation reduces money’s purchasing power and is often tracked with a price index.",
-          "et": "Inflatsioon vähendab raha ostujõudu ning seda jälgitakse sageli hinnaindeksiga."
+          "en": "Finland’s universal-basic-income trial paid selected unemployed people regularly without requiring them to seek or accept work.",
+          "et": "Soome universaalse baassissetuleku katses said valitud töötud regulaarset makset ilma kohustuseta tööd otsida või vastu võtta."
         },
         "source": {
-          "sourceId": "wikipedia:inflation",
-          "title": "Inflation",
-          "url": "https://en.wikipedia.org/wiki/Inflation",
+          "sourceId": "wikipedia:universal-basic-income-pilots-finland",
+          "title": "Universal basic income pilots",
+          "url": "https://en.wikipedia.org/wiki/Universal_basic_income_pilots#Finland",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-043:question:3",
-        "factKey": "built-in-politics-economics-society:macroeconomic-indicators:medium:measure:unemployment-rate",
+        "factKey": "economics:london-congestion-charge:fee-to-drive-central-zone",
         "tier": 3,
-        "subjectKey": "measure:unemployment-rate",
+        "subjectKey": "policy:london-congestion-charge",
         "clue": {
-          "en": "Recognise the economic indicator that compares people seeking work with the labour force.",
-          "et": "Otsitav majandusnäitaja võrdleb tööd otsivaid inimesi tööjõuga. Mis see on?"
+          "en": "A white `C` on a red circular background marked the central-city zone where motorists generally had to pay to drive during charging hours. Which London policy was this?",
+          "et": "Valge `C` punasel ringil tähistas kesklinna tsooni, kuhu autojuhid pidid maksustamise ajal sõitmiseks üldjuhul tasu maksma. Milline Londoni poliitika see oli?"
         },
         "response": {
-          "en": "unemployment rate",
-          "et": "töötuse määr"
+          "en": "London congestion charge",
+          "et": "Londoni ummikumaks"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "congestion charge",
+            "London congestion pricing",
+            "congestion charging"
+          ],
+          "et": [
+            "Londoni congestion charge",
+            "Londoni ummikutsoon"
+          ]
         },
         "explanation": {
-          "en": "Unemployment rate excludes those neither employed nor actively seeking work from the denominator.",
-          "et": "Töötuse määr jätab nimetajast välja inimesed, kes ei tööta ega otsi aktiivselt tööd."
+          "en": "The London congestion charge requires most drivers to pay for entering the central charging zone during operating hours.",
+          "et": "Londoni ummikumaks nõuab enamikult autojuhtidelt kesklinna maksutsooni sisenemise eest kehtivatel tundidel tasu."
         },
         "source": {
-          "sourceId": "wikipedia:unemployment",
-          "title": "Unemployment",
-          "url": "https://en.wikipedia.org/wiki/Unemployment",
+          "sourceId": "wikipedia:london-congestion-charge",
+          "title": "London congestion charge",
+          "url": "https://en.wikipedia.org/wiki/London_congestion_charge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-043:question:4",
-        "factKey": "built-in-politics-economics-society:macroeconomic-indicators:medium:measure:labour-productivity",
+        "factKey": "economics:gross-national-happiness:bhutan-development-goal-alternative-to-gdp",
         "tier": 4,
-        "subjectKey": "measure:labour-productivity",
+        "subjectKey": "policy-framework:gross-national-happiness-bhutan",
         "clue": {
-          "en": "What economic indicator compares output with labour input?",
-          "et": "Järgmine majandusnäitaja võrdleb toodangut tööpanusega. Milline see on?"
+          "en": "Bhutan promoted a national development goal centred on well-being rather than treating GDP alone as the scorecard. What three-word framework became famous?",
+          "et": "Bhutan tõstis riikliku arengueesmärgina esile heaolu, selle asemel et kasutada ainsa mõõdupuuna SKP-d. Milline kolmesõnaline raamistik sai kuulsaks?"
         },
         "response": {
-          "en": "labour productivity",
-          "et": "tööviljakus"
+          "en": "Gross National Happiness",
+          "et": "rahvuslik koguõnn"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "GNH",
+            "gross national happiness index"
+          ],
+          "et": [
+            "kogu rahvuslik õnn",
+            "Gross National Happiness",
+            "GNH"
+          ]
         },
         "explanation": {
-          "en": "Labour productivity can rise through skills, capital, organisation, or technology rather than longer hours alone.",
-          "et": "Tööviljakus võib kasvada oskuste, kapitali, korralduse või tehnoloogia, mitte ainult pikema tööaja tõttu."
+          "en": "Gross National Happiness is Bhutan’s well-being-centred development framework, promoted as an alternative to judging progress by GDP alone.",
+          "et": "Rahvuslik koguõnn on Bhutani heaolukeskne arenguraamistik, mida edendatakse alternatiivina arengu hindamisele üksnes SKP järgi."
         },
         "source": {
-          "sourceId": "wikipedia:workforce_productivity",
-          "title": "Workforce productivity",
-          "url": "https://en.wikipedia.org/wiki/Workforce_productivity",
+          "sourceId": "wikipedia:gross-national-happiness",
+          "title": "Gross National Happiness",
+          "url": "https://en.wikipedia.org/wiki/Gross_National_Happiness",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-043:question:5",
-        "factKey": "built-in-politics-economics-society:macroeconomic-indicators:medium:measure:current-account",
+        "factKey": "economics:alaska-permanent-fund:oil-revenue-investment-resident-dividend",
         "tier": 5,
-        "subjectKey": "measure:current-account",
+        "subjectKey": "policy:alaska-permanent-fund-dividend",
         "clue": {
-          "en": "Name the economic indicator that records trade, primary income, and transfers with the rest of the world.",
-          "et": "Vihjes kirjeldatud majandusnäitaja kajastab kaubandust, esmast tulu ja ülekandeid muu maailmaga. Mis see on?"
+          "en": "Alaska invests part of its oil revenue in a state fund and distributes a yearly share to eligible residents. What is the payment called?",
+          "et": "Alaska investeerib osa naftatulust osariigi fondi ja jagab sobivatele elanikele igal aastal osa tulust. Kuidas seda makset nimetatakse?"
         },
         "response": {
-          "en": "current account",
-          "et": "jooksevkonto"
+          "en": "Alaska Permanent Fund dividend",
+          "et": "Alaska püsifondi dividend"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Permanent Fund Dividend",
+            "Alaska dividend",
+            "PFD"
+          ],
+          "et": [
+            "Alaska fondidividend",
+            "Alaska dividend",
+            "püsifondi dividend",
+            "PFD"
+          ]
         },
         "explanation": {
-          "en": "Current account is one main part of the balance of payments alongside capital and financial accounts.",
-          "et": "Jooksevkonto on maksebilansi üks põhiosa kapitali- ja finantskonto kõrval."
+          "en": "The Alaska Permanent Fund invests a share of oil revenue and pays an annual dividend to eligible Alaska residents.",
+          "et": "Alaska püsifond investeerib osa naftatulust ja maksab sobivatele Alaska elanikele iga-aastast dividendi."
         },
         "source": {
-          "sourceId": "wikipedia:current_account_(balance_of_payments)",
-          "title": "Current account (balance of payments)",
-          "url": "https://en.wikipedia.org/wiki/Current_account_(balance_of_payments)",
+          "sourceId": "wikipedia:alaska-permanent-fund",
+          "title": "Alaska Permanent Fund",
+          "url": "https://en.wikipedia.org/wiki/Alaska_Permanent_Fund",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -20491,161 +20822,193 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-044",
     "name": {
-      "en": "Levers of Economic Policy",
-      "et": "Majanduspoliitika hoovad"
+      "en": "Headline Hoaxes and Media Stunts",
+      "et": "Pealkirjapettused ja meediatembud"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-044:question:1",
-        "factKey": "built-in-politics-economics-society:economic-policy-tools:medium:concept:taxation",
+        "factKey": "society:left-handed-whopper:burger-king-condiments-rotated-april-fool",
         "tier": 1,
-        "subjectKey": "concept:taxation",
+        "subjectKey": "advertising-hoax:left-handed-whopper",
         "clue": {
-          "en": "Which policy tool or concept raises compulsory public revenue from people and organisations?",
-          "et": "Tuvasta järgmine majanduspoliitika tööriist või mõiste: see kogub inimestelt ja organisatsioonidelt kohustuslikku avalikku tulu."
+          "en": "Burger King advertised a sandwich for southpaws with its condiments rotated 180 degrees. What was this April Fool's product called?",
+          "et": "Burger King reklaamis vasakukäelistele mõeldud võileiba, mille lisandid olid pööratud 180 kraadi. Mis nime kandis see aprillinaljatoode?"
         },
         "response": {
-          "en": "taxation",
-          "et": "maksustamine"
+          "en": "Left-Handed Whopper",
+          "et": "Left-Handed Whopper"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Burger King's Left-Handed Whopper"
+          ],
+          "et": [
+            "vasakukäeline Whopper",
+            "vasakukäelise Whopper"
+          ]
         },
         "explanation": {
-          "en": "Taxation can finance services, redistribute resources, or change incentives.",
-          "et": "Maksustamine võib rahastada teenuseid, jaotada ressursse ümber või muuta stiimuleid."
+          "en": "Burger King’s April Fool advertisement described a Left-Handed Whopper with its condiments rotated 180 degrees for southpaw customers.",
+          "et": "Burger Kingi aprillinaljareklaam kirjeldas Left-Handed Whopperit, mille lisandid olid vasakukäeliste jaoks 180 kraadi pööratud."
         },
         "source": {
-          "sourceId": "wikipedia:tax",
-          "title": "Tax",
-          "url": "https://en.wikipedia.org/wiki/Tax",
+          "sourceId": "wikipedia:whopper",
+          "title": "Whopper",
+          "url": "https://en.wikipedia.org/wiki/Whopper",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-044:question:2",
-        "factKey": "built-in-politics-economics-society:economic-policy-tools:medium:concept:government-debt",
+        "factKey": "society:spaghetti-tree-hoax:bbc-panorama-swiss-harvest-april-fool",
         "tier": 2,
-        "subjectKey": "concept:government-debt",
+        "subjectKey": "broadcast-hoax:spaghetti-tree",
         "clue": {
-          "en": "A policy tool or concept is the accumulated borrowing owed by the public sector. Name it.",
-          "et": "Üks majanduspoliitika tööriist või mõiste on avaliku sektori kogunenud laenukohustus. Millist vastust otsime?"
+          "en": "A BBC Panorama report showed a Swiss family harvesting pasta strands from branches for an April Fool's joke. What is the stunt commonly called?",
+          "et": "BBC Panorama aprillinaljaloos näidati Šveitsi perekonda puuokstelt pastaniite korjamas. Millise nime all seda meediatempu tuntakse?"
         },
         "response": {
-          "en": "government debt",
-          "et": "riigivõlg"
+          "en": "spaghetti-tree hoax",
+          "et": "spagetipuu nali"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "BBC spaghetti-tree hoax",
+            "spaghetti harvest hoax",
+            "spaghetti tree"
+          ],
+          "et": [
+            "BBC spagetipuu nali",
+            "spagetisaagi nali",
+            "spaghetti-tree hoax",
+            "spagetipuu"
+          ]
         },
         "explanation": {
-          "en": "Government debt usually grows through deficits but changes also with repayments and valuation.",
-          "et": "Riigivõlg kasvab tavaliselt puudujäägi tõttu, kuid muutub ka tagasimaksete ja väärtuse tõttu."
+          "en": "The BBC’s spaghetti-tree hoax showed a Swiss family harvesting strands from branches in a Panorama April Fool report.",
+          "et": "BBC spagetipuu naljas näidati Panorama aprillinaljaloos Šveitsi perekonda okstelt pastaniite korjamas."
         },
         "source": {
-          "sourceId": "wikipedia:government_debt",
-          "title": "Government debt",
-          "url": "https://en.wikipedia.org/wiki/Government_debt",
+          "sourceId": "wikipedia:spaghetti-tree-hoax",
+          "title": "Spaghetti-tree hoax",
+          "url": "https://en.wikipedia.org/wiki/Spaghetti-tree_hoax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-044:question:3",
-        "factKey": "built-in-politics-economics-society:economic-policy-tools:medium:concept:policy-interest-rate",
+        "factKey": "society:balloon-boy:live-balloon-chase-child-found-at-home",
         "tier": 3,
-        "subjectKey": "concept:policy-interest-rate",
+        "subjectKey": "media-hoax:balloon-boy",
         "clue": {
-          "en": "This policy tool or concept is set by a central bank to influence wider borrowing conditions. What is it?",
-          "et": "See majanduspoliitika tööriist või mõiste on keskpanga määratud, et mõjutada laiemaid laenutingimusi. Mis see on?"
+          "en": "Live television followed a homemade helium balloon thought to carry six-year-old Falcon Heene, but the child was later found hiding at home. What nickname was Falcon given?",
+          "et": "Otseülekandes jälgiti omatehtud heeliumipalli, milles arvati olevat kuueaastane Falcon Heene, kuid laps leiti hiljem kodust peidust. Millise hüüdnime Falcon sai?"
         },
         "response": {
-          "en": "policy interest rate",
-          "et": "baasintressimäär"
+          "en": "Balloon Boy",
+          "et": "Balloon Boy"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Balloon Boy",
+            "Balloon Boy hoax",
+            "Balloon Boy incident",
+            "balloon boy story",
+            "Falcon Heene balloon hoax"
+          ],
+          "et": [
+            "õhupallipoiss",
+            "Balloon Boy pettus",
+            "Balloon Boy juhtum",
+            "õhupallipoisi pettus",
+            "Falcon Heene õhupallijuhtum"
+          ]
         },
         "explanation": {
-          "en": "Policy interest rate transmits through money markets, bank funding, demand, and inflation expectations.",
-          "et": "Baasintressimäär kandub edasi rahaturu, pankade rahastuse, nõudluse ja inflatsiooniootuste kaudu."
+          "en": "The Balloon Boy story followed a helium balloon thought to carry Falcon Heene, although the child was later found hiding at home.",
+          "et": "Balloon Boy juhtumis jälgiti heeliumipalli, milles arvati olevat Falcon Heene, kuigi laps leiti hiljem kodust peidust."
         },
         "source": {
-          "sourceId": "wikipedia:bank_rate",
-          "title": "Bank rate",
-          "url": "https://en.wikipedia.org/wiki/Bank_rate",
+          "sourceId": "wikipedia:balloon-boy-hoax",
+          "title": "Balloon boy hoax",
+          "url": "https://en.wikipedia.org/wiki/Balloon_boy_hoax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-044:question:4",
-        "factKey": "built-in-politics-economics-society:economic-policy-tools:medium:concept:quantitative-easing",
+        "factKey": "society:hitler-diaries:stern-published-kujau-forgeries",
         "tier": 4,
-        "subjectKey": "concept:quantitative-easing",
+        "subjectKey": "forgery:hitler-diaries",
         "clue": {
-          "en": "What policy tool or concept has a central bank buy assets when ordinary rate cuts are constrained?",
-          "et": "Järgmine majanduspoliitika tööriist või mõiste paneb keskpanga vara ostma, kui tavapärased intressikärped on piiratud. Milline see on?"
+          "en": "The magazine Stern announced a sensational set of a dictator's private journals before experts exposed Konrad Kujau's work as forgeries. What were the documents called?",
+          "et": "Ajakiri Stern kuulutas välja diktaatori sensatsioonilised erapäevikud, enne kui eksperdid paljastasid need Konrad Kujau võltsingutena. Kuidas dokumente nimetati?"
         },
         "response": {
-          "en": "quantitative easing",
-          "et": "kvantitatiivne lõdvendamine"
+          "en": "Hitler Diaries",
+          "et": "Hitleri päevikud"
         },
         "acceptedVariants": {
           "en": [
-            "QE"
+            "the forged Hitler Diaries",
+            "Stern Hitler Diaries"
           ],
           "et": [
-            "QE"
+            "võltsitud Hitleri päevikud",
+            "Sterni Hitleri päevikud",
+            "Hitler Diaries"
           ]
         },
         "explanation": {
-          "en": "Quantitative easing expands reserves and aims to lower longer-term yields through portfolio effects.",
-          "et": "Kvantitatiivne lõdvendamine suurendab reserve ning püüab portfellimõju kaudu langetada pikaajalist tootlust."
+          "en": "The Hitler Diaries published by Stern were exposed as forgeries made by Konrad Kujau rather than the dictator’s private journals.",
+          "et": "Sterni avaldatud Hitleri päevikud paljastati Konrad Kujau võltsingutena, mitte diktaatori erapäevikutena."
         },
         "source": {
-          "sourceId": "wikipedia:quantitative_easing",
-          "title": "Quantitative easing",
-          "url": "https://en.wikipedia.org/wiki/Quantitative_easing",
+          "sourceId": "wikipedia:hitler-diaries",
+          "title": "Hitler Diaries",
+          "url": "https://en.wikipedia.org/wiki/Hitler_Diaries",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-044:question:5",
-        "factKey": "built-in-politics-economics-society:economic-policy-tools:medium:concept:automatic-stabilizer",
+        "factKey": "society:great-moon-hoax:new-york-sun-lunar-creatures-series",
         "tier": 5,
-        "subjectKey": "concept:automatic-stabilizer",
+        "subjectKey": "newspaper-hoax:great-moon-hoax",
         "clue": {
-          "en": "A policy tool or concept softens cycles without a new discretionary vote each time. Name it.",
-          "et": "Üks majanduspoliitika tööriist või mõiste pehmendab majandustsüklit ilma iga kord uue eraldi otsuseta. Millist vastust otsime?"
+          "en": "The New York Sun ran articles claiming that astronomer John Herschel's powerful telescope had revealed fantastic lunar creatures, including bat-like people. What is this newspaper episode called?",
+          "et": "New York Sun avaldas lood, mille järgi olevat astronoom John Herscheli võimas teleskoop paljastanud Kuul fantastilised olendid, nende seas nahkhiiretaolised inimesed. Kuidas seda leheloosarja nimetatakse?"
         },
         "response": {
-          "en": "automatic stabiliser",
-          "et": "automaatne stabilisaator"
+          "en": "Great Moon Hoax",
+          "et": "suur kuupettus"
         },
         "acceptedVariants": {
           "en": [
-            "automatic stabilizer"
+            "the Great Moon Hoax of 1835",
+            "Moon Hoax"
           ],
           "et": [
-            "automaatstabilisaator"
+            "1835. aasta suur kuupettus",
+            "kuupettus",
+            "Great Moon Hoax"
           ]
         },
         "explanation": {
-          "en": "Automatic stabiliser works when taxes fall and benefits rise automatically during downturns.",
-          "et": "Automaatne stabilisaator toimib, kui maksutulu langeb ja toetused kasvavad languse ajal automaatselt."
+          "en": "The Great Moon Hoax was a New York Sun series claiming that John Herschel’s telescope had revealed fantastic creatures on the Moon.",
+          "et": "Suur kuupettus oli New York Suni leheloosari, mis väitis, et John Herscheli teleskoop paljastas Kuul fantastilised olendid."
         },
         "source": {
-          "sourceId": "wikipedia:automatic_stabilizer",
-          "title": "Automatic stabilizer",
-          "url": "https://en.wikipedia.org/wiki/Automatic_stabilizer",
+          "sourceId": "wikipedia:great-moon-hoax",
+          "title": "Great Moon Hoax",
+          "url": "https://en.wikipedia.org/wiki/Great_Moon_Hoax",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
