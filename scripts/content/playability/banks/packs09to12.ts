@@ -28315,162 +28315,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-084",
     "name": {
-      "en": "Tools for Ending Armed Conflict",
-      "et": "Relvakonflikti lõpetamise vahendid"
+      "en": "From Fame to Office",
+      "et": "Kuulsusest võimule"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-084:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:zone:demilitarized",
+        "factKey": "politics:schwarzenegger:bodybuilder-terminator-california-recall-governor",
         "tier": 1,
-        "subjectKey": "zone:demilitarized",
+        "subjectKey": "celebrity-politician:arnold-schwarzenegger",
         "clue": {
-          "en": "Troops and military installations are forbidden in what designated area between potential belligerents?",
-          "et": "Kuidas nimetatakse määratud ala võimalike sõdivate poolte vahel, kus väed ja militaarrajatised on keelatud?"
+          "en": "This Austrian-born bodybuilding champion became a Hollywood action star before winning California’s 2003 recall election for governor. Name the man.",
+          "et": "See Austrias sündinud kulturismimeister sai Hollywoodi märulitäheks ja võitis seejärel California 2003. aasta tagasikutsumisvalimistel kubernerikoha. Nimeta mees."
         },
         "response": {
-          "en": "demilitarised zone",
-          "et": "demilitariseeritud tsoon"
+          "en": "Arnold Schwarzenegger",
+          "et": "Arnold Schwarzenegger"
         },
         "acceptedVariants": {
           "en": [
-            "demilitarized zone",
-            "DMZ"
+            "Schwarzenegger",
+            "Governor Schwarzenegger"
           ],
           "et": [
-            "demilitariseeritud ala"
+            "Schwarzenegger",
+            "kuberner Schwarzenegger"
           ]
         },
         "explanation": {
-          "en": "A demilitarised zone separates armed forces by agreement or international decision.",
-          "et": "Demilitariseeritud tsoon eraldab relvajõude kokkuleppe või rahvusvahelise otsuse alusel."
+          "en": "Arnold Schwarzenegger moved from bodybuilding and the Terminator films into politics, serving as governor of California after the 2003 recall election.",
+          "et": "Arnold Schwarzenegger liikus kulturismist ja „Terminaatori” filmidest poliitikasse ning sai 2003. aasta tagasikutsumisvalimiste järel California kuberneriks."
         },
         "source": {
-          "sourceId": "wikipedia:demilitarized_zone",
-          "title": "Demilitarized zone",
-          "url": "https://en.wikipedia.org/wiki/Demilitarized_zone",
+          "sourceId": "wikipedia:arnold-schwarzenegger",
+          "title": "Arnold Schwarzenegger",
+          "url": "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-084:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:agreement:peace-treaty",
+        "factKey": "politics:zelenskyy:comedian-servant-of-the-people-2019-election",
         "tier": 2,
-        "subjectKey": "agreement:peace-treaty",
+        "subjectKey": "celebrity-politician:volodymyr-zelenskyy",
         "clue": {
-          "en": "What binding agreement formally ends a state of war between belligerents?",
-          "et": "Milline siduv kokkulepe lõpetab ametlikult sõdivate poolte sõjaseisukorra?"
+          "en": "Before winning a 2019 election, this comedian played a teacher who unexpectedly becomes president in the television series Servant of the People. Name him.",
+          "et": "Enne 2019. aasta valimisvõitu mängis see koomik telesarjas „Rahva teener” õpetajat, kellest saab ootamatult president. Nimeta ta."
         },
         "response": {
-          "en": "peace treaty",
-          "et": "rahuleping"
+          "en": "Volodymyr Zelenskyy",
+          "et": "Volodõmõr Zelenskõi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Volodymyr Zelensky",
+            "Zelenskyy",
+            "Zelensky"
+          ],
+          "et": [
+            "Volodõmõr Zelenski",
+            "Zelenskõi",
+            "Zelenski",
+            "Volodymyr Zelenskyy",
+            "Volodymyr Zelensky"
+          ]
         },
         "explanation": {
-          "en": "A peace treaty goes beyond a temporary ceasefire by settling the legal end of war.",
-          "et": "Rahuleping läheb ajutisest relvarahust kaugemale ning sätestab sõja õigusliku lõpu."
+          "en": "Volodymyr Zelenskyy built a career in comedy and acting, portrayed a fictional president in Servant of the People, and then won Ukraine’s 2019 presidential election.",
+          "et": "Volodõmõr Zelenskõi tegi karjääri koomiku ja näitlejana, kehastas „Rahva teenris” väljamõeldud presidenti ning võitis seejärel Ukraina 2019. aasta presidendivalimised."
         },
         "source": {
-          "sourceId": "wikipedia:peace_treaty",
-          "title": "Peace treaty",
-          "url": "https://en.wikipedia.org/wiki/Peace_treaty",
+          "sourceId": "wikipedia:volodymyr-zelenskyy",
+          "title": "Volodymyr Zelenskyy",
+          "url": "https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-084:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:confidence-building",
+        "factKey": "politics:reagan:actor-sag-president-california-governor-us-president",
         "tier": 3,
-        "subjectKey": "measure:confidence-building",
+        "subjectKey": "celebrity-politician:ronald-reagan",
         "clue": {
-          "en": "Advance notice of exercises and military hotlines are examples of what kind of security measure?",
-          "et": "Õppustest ette teatamine ja sõjalised kuumliinid on millise julgeolekumeetme näited?"
+          "en": "This former Warner Bros. actor twice led the Screen Actors Guild, then governed California before reaching the White House. Name the politician.",
+          "et": "See endine Warner Brosi näitleja juhtis kahel korral ekraaninäitlejate ametiühingut, valitses seejärel Californiat ja jõudis lõpuks Valgesse Majja. Nimeta poliitik."
         },
         "response": {
-          "en": "confidence-building measure",
-          "et": "usaldusmeede"
+          "en": "Ronald Reagan",
+          "et": "Ronald Reagan"
         },
         "acceptedVariants": {
           "en": [
-            "CBM"
+            "Reagan",
+            "President Reagan"
           ],
           "et": [
-            "usaldust suurendav meede"
+            "Reagan",
+            "president Reagan"
           ]
         },
         "explanation": {
-          "en": "Confidence-building measures reduce uncertainty and the risk that activity is misread as aggression.",
-          "et": "Usaldusmeetmed vähendavad ebakindlust ja ohtu, et tegevust tõlgendatakse rünnakuna."
+          "en": "Ronald Reagan worked as a film actor and Screen Actors Guild president, served as California governor, and later became US president.",
+          "et": "Ronald Reagan töötas filminäitlejana ja ekraaninäitlejate ametiühingu juhina, oli California kuberner ning sai hiljem USA presidendiks."
         },
         "source": {
-          "sourceId": "wikipedia:confidence-building_measures",
-          "title": "Confidence-building measures",
-          "url": "https://en.wikipedia.org/wiki/Confidence-building_measures",
+          "sourceId": "wikipedia:ronald-reagan",
+          "title": "Ronald Reagan",
+          "url": "https://en.wikipedia.org/wiki/Ronald_Reagan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-084:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:body:truth-commission",
+        "factKey": "politics:imran-khan:cricket-1992-world-cup-pti-prime-minister",
         "tier": 4,
-        "subjectKey": "body:truth-commission",
+        "subjectKey": "athlete-politician:imran-khan",
         "clue": {
-          "en": "What temporary body investigates a pattern of past political violence without serving as an ordinary criminal court?",
-          "et": "Milline ajutine organ uurib varasema poliitilise vägivalla mustrit, olemata tavaline kriminaalkohus?"
+          "en": "After captaining Pakistan to its 1992 Cricket World Cup title, this sports star founded PTI and later became prime minister. Name him.",
+          "et": "Pärast Pakistani viimist kaptenina 1992. aasta kriketi maailmameistriks asutas see sporditäht PTI ja sai hiljem peaministriks. Nimeta ta."
         },
         "response": {
-          "en": "truth commission",
-          "et": "tõekomisjon"
+          "en": "Imran Khan",
+          "et": "Imran Khan"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Imran Ahmad Khan Niazi"
+          ],
+          "et": [
+            "Imran Ahmad Khan Niazi"
+          ]
         },
         "explanation": {
-          "en": "Truth commissions document abuses, hear victims, and may recommend reparations or reforms.",
-          "et": "Tõekomisjon dokumenteerib rikkumisi, kuulab ohvreid ning võib soovitada hüvitisi või reforme."
+          "en": "Imran Khan captained Pakistan’s World Cup-winning cricket team, founded Pakistan Tehreek-e-Insaf, and became prime minister in 2018.",
+          "et": "Imran Khan juhtis Pakistani kriketikoondise maailmameistriks, asutas erakonna Pakistan Tehreek-e-Insaf ja sai 2018. aastal peaministriks."
         },
         "source": {
-          "sourceId": "wikipedia:truth_commission",
-          "title": "Truth commission",
-          "url": "https://en.wikipedia.org/wiki/Truth_commission",
+          "sourceId": "wikipedia:imran-khan",
+          "title": "Imran Khan",
+          "url": "https://en.wikipedia.org/wiki/Imran_Khan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-084:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:method:shuttle-diplomacy",
+        "factKey": "politics:weah:ballon-dor-liberia-election-president",
         "tier": 5,
-        "subjectKey": "method:shuttle-diplomacy",
+        "subjectKey": "athlete-politician:george-weah",
         "clue": {
-          "en": "A mediator carries proposals between parties unwilling to meet. What negotiating method is this?",
-          "et": "Vahendaja viib ettepanekuid poolte vahel, kes ei soovi kohtuda. Mis läbirääkimisviis see on?"
+          "en": "The only African winner of the men’s Ballon d’Or later entered politics in Liberia and won its 2017 presidential election. Name the former footballer.",
+          "et": "Ainus Aafrika koondist esindanud meeste Ballon d’Ori võitja läks hiljem Libeerias poliitikasse ja võitis seal 2017. aasta presidendivalimised. Nimeta endine jalgpallur."
         },
         "response": {
-          "en": "shuttle diplomacy",
-          "et": "süstikdiplomaatia"
+          "en": "George Weah",
+          "et": "George Weah"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Weah",
+            "George Manneh Weah"
+          ],
+          "et": [
+            "Weah",
+            "George Manneh Weah"
+          ]
         },
         "explanation": {
-          "en": "Shuttle diplomacy lets indirect talks continue when face-to-face negotiation is impossible.",
-          "et": "Süstikdiplomaatia võimaldab kaudseid kõnelusi jätkata, kui vahetu kohtumine pole võimalik."
+          "en": "George Weah won the 1995 Ballon d’Or after starring in European football and was elected president of Liberia in 2017.",
+          "et": "George Weah võitis 1995. aastal Euroopa klubijalgpallis särades Ballon d’Ori ning valiti 2017. aastal Libeeria presidendiks."
         },
         "source": {
-          "sourceId": "wikipedia:shuttle_diplomacy",
-          "title": "Shuttle diplomacy",
-          "url": "https://en.wikipedia.org/wiki/Shuttle_diplomacy",
+          "sourceId": "wikipedia:george-weah",
+          "title": "George Weah",
+          "url": "https://en.wikipedia.org/wiki/George_Weah",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -28478,153 +28501,192 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-085",
     "name": {
-      "en": "Organising beyond State and Market",
-      "et": "Organiseerumine riigi ja turu kõrval"
+      "en": "Political Family Trees",
+      "et": "Poliitilised sugupuud"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-085:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:social-enterprise",
+        "factKey": "politics-family:kennedy:jfk-rfk-ted-us",
         "tier": 1,
-        "subjectKey": "organization:social-enterprise",
+        "subjectKey": "political-family:kennedy",
         "clue": {
-          "en": "Which organisation trades goods or services chiefly to advance a social purpose?",
-          "et": "Milline organisatsioon müüb kaupu või teenuseid eeskätt ühiskondliku eesmärgi edendamiseks?"
+          "en": "John F. reached the White House, Robert served as attorney general and senator, and their brother Ted spent decades in the Senate. Name this US political family.",
+          "et": "John F. jõudis Valgesse Majja, Robert oli justiitsminister ja senaator ning nende vend Ted veetis aastakümneid senatis. Nimeta see USA poliitikaperekond."
         },
         "response": {
-          "en": "social enterprise",
-          "et": "sotsiaalne ettevõte"
+          "en": "Kennedy family",
+          "et": "Kennedy poliitikaperekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Kennedys",
+            "Kennedys",
+            "Kennedy dynasty"
+          ],
+          "et": [
+            "Kennedyte perekond",
+            "Kennedy perekond",
+            "Kennedyd",
+            "Kennedy dünastia"
+          ]
         },
         "explanation": {
-          "en": "A social enterprise reinvests much of its surplus in its mission rather than maximising private profit.",
-          "et": "Sotsiaalne ettevõte suunab suure osa ülejäägist oma eesmärki, mitte erakasumi maksimeerimisse."
+          "en": "The Kennedy family produced President John F. Kennedy and prominent politicians Robert and Ted Kennedy.",
+          "et": "Kennedy poliitikaperekonnast tulid president John F. Kennedy ning mõjukad poliitikud Robert ja Ted Kennedy."
         },
         "source": {
-          "sourceId": "wikipedia:social_enterprise",
-          "title": "Social enterprise",
-          "url": "https://en.wikipedia.org/wiki/Social_enterprise",
+          "sourceId": "wikipedia:kennedy-family",
+          "title": "Kennedy family",
+          "url": "https://en.wikipedia.org/wiki/Kennedy_family",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-085:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:community-foundation",
+        "factKey": "politics-family:bush:two-presidents-jeb-governor",
         "tier": 2,
-        "subjectKey": "organization:community-foundation",
+        "subjectKey": "political-family:bush",
         "clue": {
-          "en": "What place-based charitable foundation pools donations to support many local causes?",
-          "et": "Milline piirkondlik heategevusfond koondab annetusi paljude kohalike algatuste toetamiseks?"
+          "en": "One father and son both became US president, while another son named Jeb governed Florida. Name the political family.",
+          "et": "Isa ja poeg said mõlemad USA presidendiks, samal ajal kui teine poeg Jeb juhtis Florida osariiki. Nimeta poliitikaperekond."
         },
         "response": {
-          "en": "community foundation",
-          "et": "kogukonnafond"
+          "en": "Bush family",
+          "et": "Bushi poliitikaperekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Bushes",
+            "Bushes",
+            "Bush dynasty"
+          ],
+          "et": [
+            "Bushide perekond",
+            "Bushi perekond",
+            "Bushid",
+            "Bushi dünastia"
+          ]
         },
         "explanation": {
-          "en": "Community foundations commonly manage endowed funds and award grants within a defined area.",
-          "et": "Kogukonnafond haldab tavaliselt sihtkapitale ning jagab toetusi kindlas piirkonnas."
+          "en": "The Bush family includes presidents George H. W. and George W. Bush and former Florida governor Jeb Bush.",
+          "et": "Bushi poliitikaperekonda kuuluvad presidendid George H. W. ja George W. Bush ning endine Florida kuberner Jeb Bush."
         },
         "source": {
-          "sourceId": "wikipedia:community_foundation",
-          "title": "Community foundation",
-          "url": "https://en.wikipedia.org/wiki/Community_foundation",
+          "sourceId": "wikipedia:bush-family",
+          "title": "Bush family",
+          "url": "https://en.wikipedia.org/wiki/Bush_family",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-085:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:mutual-aid",
+        "factKey": "politics-family:trudeau:pierre-justin-canada-prime-ministers",
         "tier": 3,
-        "subjectKey": "practice:mutual-aid",
+        "subjectKey": "political-family:trudeau",
         "clue": {
-          "en": "Neighbours exchanging food, care, or emergency supplies directly practise what form of solidarity?",
-          "et": "Naabrid vahetavad otse toitu, hoolt või hädaabitarbeid. Millist solidaarsusvormi nad kasutavad?"
+          "en": "Pierre led Canada for most of the years from 1968 to 1984; decades later, his son Justin held the same office. Name the family.",
+          "et": "Pierre juhtis Kanadat suurema osa ajast 1968.–1984. aastani; aastakümneid hiljem täitis sama ametit tema poeg Justin. Nimeta perekond."
         },
         "response": {
-          "en": "mutual aid",
-          "et": "vastastikune abi"
+          "en": "Trudeau family",
+          "et": "Trudeau poliitikaperekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Trudeaus",
+            "Trudeau political family"
+          ],
+          "et": [
+            "Trudeau perekond",
+            "Trudeau poliitiline perekond",
+            "Trudeau dünastia"
+          ]
         },
         "explanation": {
-          "en": "Mutual aid is reciprocal voluntary cooperation rather than one-way charitable relief.",
-          "et": "Vastastikune abi on vabatahtlik kahepoolne koostöö, mitte ühesuunaline heategevus."
+          "en": "The Trudeau family produced Canadian prime ministers Pierre Trudeau and his son Justin Trudeau.",
+          "et": "Trudeau poliitikaperekonnast tulid Kanada peaministrid Pierre Trudeau ja tema poeg Justin Trudeau."
         },
         "source": {
-          "sourceId": "wikipedia:mutual_aid_(organization_theory)",
-          "title": "Mutual aid (organization theory)",
-          "url": "https://en.wikipedia.org/wiki/Mutual_aid_(organization_theory)",
+          "sourceId": "wikipedia:trudeau-family",
+          "title": "Trudeau family",
+          "url": "https://en.wikipedia.org/wiki/Trudeau_family",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-085:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:professional-association",
+        "factKey": "politics-family:nehru-gandhi:jawaharlal-indira-rajiv-prime-ministers",
         "tier": 4,
-        "subjectKey": "organization:professional-association",
+        "subjectKey": "political-family:nehru-gandhi",
         "clue": {
-          "en": "Which membership body represents a profession and may set ethical or qualification standards?",
-          "et": "Milline liikmesorganisatsioon esindab kutseala ning võib kehtestada eetika- või pädevusnõudeid?"
+          "en": "India’s first prime minister Jawaharlal was followed in national leadership by his daughter Indira and grandson Rajiv. Name their political family, which is not related to Mahatma Gandhi.",
+          "et": "India esimesele peaministrile Jawaharlalile järgnesid riigi juhtimises tema tütar Indira ja pojapoeg Rajiv. Nimeta nende poliitikaperekond, mis ei ole Mahatma Gandhi sugulaskond."
         },
         "response": {
-          "en": "professional association",
-          "et": "kutseühendus"
+          "en": "Nehru–Gandhi family",
+          "et": "Nehru-Gandhi poliitikaperekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nehru–Gandhi dynasty"
+          ],
+          "et": [
+            "Nehru-Gandhi perekond",
+            "Nehru-Gandhi dünastia"
+          ]
         },
         "explanation": {
-          "en": "Professional associations combine member advocacy with standards, training, or certification.",
-          "et": "Kutseühendus ühendab liikmete esindamise standardite, koolituse või sertifitseerimisega."
+          "en": "The Nehru–Gandhi family links Jawaharlal Nehru, Indira Gandhi, and Rajiv Gandhi, all prime ministers of India; Mahatma Gandhi was not a member.",
+          "et": "Nehru-Gandhi poliitikaperekonda ühendavad India peaministrid Jawaharlal Nehru, Indira Gandhi ja Rajiv Gandhi; Mahatma Gandhi sellesse ei kuulunud."
         },
         "source": {
-          "sourceId": "wikipedia:professional_association",
-          "title": "Professional association",
-          "url": "https://en.wikipedia.org/wiki/Professional_association",
+          "sourceId": "wikipedia:nehru-gandhi-family",
+          "title": "Nehru–Gandhi family",
+          "url": "https://en.wikipedia.org/wiki/Nehru%E2%80%93Gandhi_family",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-085:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:organization:advocacy-group",
+        "factKey": "politics-family:bhutto:zulfikar-benazir-pakistan-prime-ministers",
         "tier": 5,
-        "subjectKey": "organization:advocacy-group",
+        "subjectKey": "political-family:bhutto",
         "clue": {
-          "en": "What organised body tries to influence public policy without itself seeking government office?",
-          "et": "Milline organiseeritud ühendus püüab mõjutada avalikku poliitikat ise valitsusametisse kandideerimata?"
+          "en": "Zulfikar Ali served as Pakistan’s president and prime minister; his daughter Benazir later became the first woman to lead a democratic government in a Muslim-majority country. Name their family.",
+          "et": "Zulfikar Ali oli Pakistani president ja peaminister; tema tütar Benazirist sai hiljem esimene naine, kes juhtis moslemienamusega riigi demokraatlikku valitsust. Nimeta nende perekond."
         },
         "response": {
-          "en": "advocacy group",
-          "et": "huvikaitseorganisatsioon"
+          "en": "Bhutto family",
+          "et": "Bhutto poliitikaperekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Bhuttos",
+            "Bhuttos",
+            "Bhutto dynasty"
+          ],
+          "et": [
+            "Bhuttode perekond",
+            "Bhutto perekond",
+            "Bhuttod",
+            "Bhutto dünastia"
+          ]
         },
         "explanation": {
-          "en": "Advocacy groups use research, campaigns, lobbying, and public education to advance a cause.",
-          "et": "Huvikaitseorganisatsioon kasutab eesmärgi edendamiseks uuringuid, kampaaniaid, lobitööd ja teavitust."
+          "en": "The Bhutto family includes Zulfikar Ali Bhutto and his daughter Benazir Bhutto, both prime ministers of Pakistan.",
+          "et": "Bhutto poliitikaperekonda kuuluvad Zulfikar Ali Bhutto ja tema tütar Benazir Bhutto, kes mõlemad olid Pakistani peaministrid."
         },
         "source": {
-          "sourceId": "wikipedia:advocacy_group",
-          "title": "Advocacy group",
-          "url": "https://en.wikipedia.org/wiki/Advocacy_group",
+          "sourceId": "wikipedia:bhutto-family",
+          "title": "Bhutto family",
+          "url": "https://en.wikipedia.org/wiki/Bhutto_family",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -28632,153 +28694,186 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-086",
     "name": {
-      "en": "A Vocabulary of Collective Protest",
-      "et": "Ühise protesti sõnavara"
+      "en": "Films Governments Tried to Stop",
+      "et": "Filmid, mida valitsused püüdsid peatada"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-086:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:action:sit-in",
+        "factKey": "politics-film:borat:sacha-baron-cohen-kazakh-reporter-denunciation-ban-controversy",
         "tier": 1,
-        "subjectKey": "action:sit-in",
+        "subjectKey": "film:borat-2006",
         "clue": {
-          "en": "Protesters occupy a place and refuse to leave while remaining seated. What tactic are they using?",
-          "et": "Meeleavaldajad hõivavad koha ja keelduvad istudes lahkumast. Millist taktikat nad kasutavad?"
+          "en": "Sacha Baron Cohen’s fictional Kazakh reporter travels across the United States in this mockumentary, provoking denunciation from Kazakhstan and an international ban controversy. Name the film.",
+          "et": "Sacha Baron Coheni väljamõeldud Kasahstani reporter reisib selles piladokumentaalis läbi Ameerika Ühendriikide ning põhjustab Kasahstani hukkamõistu ja rahvusvahelise keelamisvaidluse. Nimeta film."
         },
         "response": {
-          "en": "sit-in",
-          "et": "istumisstreik"
+          "en": "Borat",
+          "et": "Borat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan"
+          ],
+          "et": [
+            "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan"
+          ]
         },
         "explanation": {
-          "en": "A sit-in disrupts normal use of a site through sustained nonviolent presence.",
-          "et": "Istumisstreik häirib paiga tavakasutust püsiva vägivallatu kohaloluga."
+          "en": "Borat is the 2006 mockumentary built around Cohen’s invented reporter; Kazakhstan’s government denounced its portrayal and the film faced bans in several countries.",
+          "et": "„Borat” on Coheni väljamõeldud reporterist rääkiv 2006. aasta piladokumentaal; Kasahstani valitsus mõistis selle kujutuse hukka ja film keelati mitmes riigis."
         },
         "source": {
-          "sourceId": "wikipedia:sit-in",
-          "title": "Sit-in",
-          "url": "https://en.wikipedia.org/wiki/Sit-in",
+          "sourceId": "wikipedia:borat",
+          "title": "Borat",
+          "url": "https://en.wikipedia.org/wiki/Borat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-086:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:action:human-chain",
+        "factKey": "politics-film:great-dictator:first-sound-hynkel-hitler-europe-latin-america-bans",
         "tier": 2,
-        "subjectKey": "action:human-chain",
+        "subjectKey": "film:the-great-dictator-1940",
         "clue": {
-          "en": "What demonstration forms a visible line by participants holding hands across a route or border?",
-          "et": "Milline meeleavaldus moodustab käest kinni hoidvate osalejate nähtava rea mööda teed või piiri?"
+          "en": "Charlie Chaplin made his first true sound film as a satire featuring Adenoid Hynkel, a stand-in for Hitler; it was banned across much of Europe and in several Latin American countries. Name the film.",
+          "et": "Charlie Chaplin tegi oma esimese täielikult helilise filmi satiirina, mille Adenoid Hynkel kujutas Hitlerit; teos keelati suures osas Euroopast ja mitmes Ladina-Ameerika riigis. Nimeta film."
         },
         "response": {
-          "en": "human chain",
-          "et": "inimkett"
+          "en": "The Great Dictator",
+          "et": "Suur diktaator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Great Dictator",
+            "Charlie Chaplin’s The Great Dictator"
+          ],
+          "et": [
+            "The Great Dictator",
+            "Great Dictator",
+            "Charlie Chaplini The Great Dictator"
+          ]
         },
         "explanation": {
-          "en": "A human chain makes solidarity and geographical extent visible without requiring a march.",
-          "et": "Inimkett muudab solidaarsuse ja geograafilise ulatuse nähtavaks ilma rongkäiguta."
+          "en": "The Great Dictator was Chaplin’s 1940 anti-fascist satire, in which he played both a Jewish barber and the dictator Adenoid Hynkel.",
+          "et": "„Suur diktaator” on Chaplini 1940. aasta fašismivastane satiir, kus ta mängis nii juudi habemeajajat kui diktaator Adenoid Hynkelit."
         },
         "source": {
-          "sourceId": "wikipedia:human_chain_(politics)",
-          "title": "Human chain (politics)",
-          "url": "https://en.wikipedia.org/wiki/Human_chain_(politics)",
+          "sourceId": "wikipedia:the-great-dictator",
+          "title": "The Great Dictator",
+          "url": "https://en.wikipedia.org/wiki/The_Great_Dictator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-086:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:fund:strike-fund",
+        "factKey": "politics-film:interview:rogen-franco-kim-jong-un-north-korea-sony-release",
         "tier": 3,
-        "subjectKey": "fund:strike-fund",
+        "subjectKey": "film:the-interview-2014",
         "clue": {
-          "en": "Which pool of union money supports workers who lose wages during industrial action?",
-          "et": "Milline ametiühingu rahavaru toetab töövõitluse ajal palgast ilma jäävaid töötajaid?"
+          "en": "Seth Rogen and James Franco play journalists recruited to kill Kim Jong-un in this 2014 comedy whose release became entangled with North Korea and the Sony hack. Name the film.",
+          "et": "Seth Rogen ja James Franco mängivad ajakirjanikke, kes värvatakse Kim Jong-uni tapma, selles 2014. aasta komöödias, mille linastus põimus Põhja-Korea ja Sony häkkimisega. Nimeta film."
         },
         "response": {
-          "en": "strike fund",
-          "et": "streigifond"
+          "en": "The Interview",
+          "et": "Intervjuu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "The Interview (2014 film)",
+            "Interview (2014)",
+            "Seth Rogen’s The Interview"
+          ],
+          "et": [
+            "The Interview",
+            "The Interview (2014)",
+            "2014. aasta film The Interview"
+          ]
         },
         "explanation": {
-          "en": "A strike fund pays strike benefits so members can sustain collective action.",
-          "et": "Streigifond maksab toetust, et liikmed saaksid töövõitlust jätkata."
+          "en": "The Interview is a Rogen–Franco comedy about an assassination plot against Kim Jong-un; threats and the Sony cyberattack disrupted its planned theatrical release.",
+          "et": "„Intervjuu” on Rogeni ja Franco komöödia Kim Jong-uni vastasest tapmisplaanist; ähvardused ja Sony küberrünnak häirisid kavandatud kinolinastust."
         },
         "source": {
-          "sourceId": "wikipedia:strike_pay",
-          "title": "Strike pay",
-          "url": "https://en.wikipedia.org/wiki/Strike_pay",
+          "sourceId": "wikipedia:the-interview-2014-film",
+          "title": "The Interview (2014 film)",
+          "url": "https://en.wikipedia.org/wiki/The_Interview_(2014_film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-086:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:event:teach-in",
+        "factKey": "politics-film:death-of-stalin:iannucci-black-comedy-succession-russia-certificate-withdrawn",
         "tier": 4,
-        "subjectKey": "event:teach-in",
+        "subjectKey": "film:the-death-of-stalin-2017",
         "clue": {
-          "en": "What extended participatory forum combines expert talks and discussion around a political cause?",
-          "et": "Milline pikk osalusfoorum ühendab asjatundjate ettekanded ja arutelu poliitilise teema ümber?"
+          "en": "Armando Iannucci turned the panic and manoeuvring after a Soviet ruler’s death into this black comedy; Russia withdrew its screening certificate shortly before release. Name the film.",
+          "et": "Armando Iannucci muutis Nõukogude juhi surmale järgnenud paanika ja intriigid selleks mustaks komöödiaks; Venemaa tühistas filmi linastusloa vahetult enne esilinastust. Nimeta film."
         },
         "response": {
-          "en": "teach-in",
-          "et": "avalik õpiseminar"
+          "en": "The Death of Stalin",
+          "et": "Stalini surm"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Death of Stalin",
+            "Armando Iannucci’s The Death of Stalin"
+          ],
+          "et": [
+            "The Death of Stalin",
+            "Death of Stalin",
+            "Armando Iannucci The Death of Stalin"
+          ]
         },
         "explanation": {
-          "en": "Teach-ins began as educational protest events and favour open discussion over a conventional lecture.",
-          "et": "Avalik õpiseminar kujunes harivaks protestivormiks ning eelistab tavaloengule avatud arutelu."
+          "en": "The Death of Stalin satirises the Soviet leadership struggle after Stalin died and was effectively banned from Russian cinemas in 2018.",
+          "et": "„Stalini surm” pilab Nõukogude juhtkonna võimuvõitlust pärast Stalini surma ja keelati 2018. aastal sisuliselt Venemaa kinodes."
         },
         "source": {
-          "sourceId": "wikipedia:teach-in",
-          "title": "Teach-in",
-          "url": "https://en.wikipedia.org/wiki/Teach-in",
+          "sourceId": "wikipedia:the-death-of-stalin",
+          "title": "The Death of Stalin",
+          "url": "https://en.wikipedia.org/wiki/The_Death_of_Stalin",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-086:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:action:flash-mob",
+        "factKey": "politics-film:battle-of-algiers:pseudodocumentary-urban-insurgency-algerian-war-france-ban",
         "tier": 5,
-        "subjectKey": "action:flash-mob",
+        "subjectKey": "film:the-battle-of-algiers-1966",
         "clue": {
-          "en": "Participants assemble suddenly, perform a brief coordinated action, and disperse. What is this called?",
-          "et": "Osalejad kogunevad äkki, teevad lühikese koordineeritud tegevuse ja hajuvad. Kuidas seda nimetatakse?"
+          "en": "Shot in a newsreel-like style, this film recreates urban guerrilla warfare during Algeria’s struggle against French rule and was formally banned in France. Name it.",
+          "et": "Uudisfilmilikus laadis teos kujutab linnasissisõda Alžeeria võitluses Prantsuse võimu vastu ning keelati Prantsusmaal ametlikult. Nimeta film."
         },
         "response": {
-          "en": "flash mob",
-          "et": "välkmass"
+          "en": "The Battle of Algiers",
+          "et": "Alžiiri lahing"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Battle of Algiers",
+            "La battaglia di Algeri"
+          ],
+          "et": [
+            "The Battle of Algiers",
+            "Battle of Algiers",
+            "La battaglia di Algeri"
+          ]
         },
         "explanation": {
-          "en": "A flash mob is organised in advance, often through digital communication, despite appearing spontaneous.",
-          "et": "Välkmass korraldatakse ette, sageli digisuhtluse kaudu, kuigi see näib spontaanne."
+          "en": "The Battle of Algiers dramatises the 1950s urban conflict between the FLN and French authorities in Algiers using a documentary-like visual style.",
+          "et": "„Alžiiri lahing” dramatiseerib FLN-i ja Prantsuse võimude 1950. aastate linnakonflikti Alžiiris dokumentaaliliku visuaalse stiiliga."
         },
         "source": {
-          "sourceId": "wikipedia:flash_mob",
-          "title": "Flash mob",
-          "url": "https://en.wikipedia.org/wiki/Flash_mob",
+          "sourceId": "wikipedia:the-battle-of-algiers",
+          "title": "The Battle of Algiers",
+          "url": "https://en.wikipedia.org/wiki/The_Battle_of_Algiers",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -28786,157 +28881,190 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-087",
     "name": {
-      "en": "Habits of a Careful News Reader",
-      "et": "Hoolika uudistelugeja töövõtted"
+      "en": "Leaders Who Gave Up Power",
+      "et": "Võimust loobunud juhid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-087:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:method:lateral-reading",
+        "factKey": "politics-exit:edward-viii:wallis-simpson-1936-radio-abdication",
         "tier": 1,
-        "subjectKey": "method:lateral-reading",
+        "subjectKey": "leader-exit:edward-viii",
         "clue": {
-          "en": "Instead of staying on a webpage, a checker opens new tabs to investigate its publisher. Name this method.",
-          "et": "Kontrollija ei jää veebilehele, vaid avab uusi vahelehti väljaandja uurimiseks. Nimeta see meetod."
+          "en": "Which British king chose marriage to Wallis Simpson over the throne and announced his decision by radio in December 1936? Name the leader.",
+          "et": "Milline Briti kuningas valis trooni asemel abielu Wallis Simpsoniga ja teatas oma otsusest 1936. aasta detsembris raadios? Nimeta juht."
         },
         "response": {
-          "en": "lateral reading",
-          "et": "külgsuunaline lugemine"
+          "en": "Edward VIII",
+          "et": "Edward VIII"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "King Edward VIII",
+            "Edward, Duke of Windsor",
+            "Duke of Windsor"
+          ],
+          "et": [
+            "kuningas Edward VIII",
+            "Edward VIII, Windsori hertsog",
+            "Windsori hertsog"
+          ]
         },
         "explanation": {
-          "en": "Lateral reading evaluates a source through independent information elsewhere on the web.",
-          "et": "Külgsuunaline lugemine hindab allikat mujal veebis leiduva sõltumatu teabe kaudu."
+          "en": "Edward VIII abdicated after less than a year as king because the government opposed his planned marriage to the divorced American Wallis Simpson.",
+          "et": "Edward VIII loobus troonist vähem kui aasta pärast kuningaks saamist, sest valitsus oli vastu tema kavandatud abielule lahutatud ameeriklanna Wallis Simpsoniga."
         },
         "source": {
-          "sourceId": "wikipedia:fact-checking#methodology",
-          "title": "Fact-checking — Methodology",
-          "url": "https://en.wikipedia.org/wiki/Fact-checking#Methodology",
+          "sourceId": "wikipedia:abdication-of-edward-viii",
+          "title": "Abdication of Edward VIII",
+          "url": "https://en.wikipedia.org/wiki/Abdication_of_Edward_VIII",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-087:question:2",
-        "factKey": "built-in-politics-economics-society:round1-overlap:test:craap",
+        "factKey": "politics-exit:benedict-xvi:latin-announcement-2013-resignation-emeritus",
         "tier": 2,
-        "subjectKey": "test:craap",
+        "subjectKey": "leader-exit:pope-benedict-xvi",
         "clue": {
-          "en": "Which source-evaluation checklist examines currency, relevance, authority, accuracy, and purpose?",
-          "et": "Milline allikahindamise kontrollnimekiri uurib ajakohasust, asjakohasust, autoriteeti, täpsust ja eesmärki?"
+          "en": "Which pontiff surprised cardinals with a Latin announcement in 2013, becoming the first pope in centuries to resign and later using an emeritus title? Name him.",
+          "et": "Milline kirikupea üllatas kardinale 2013. aastal ladinakeelse teatega, sai esimeseks sajandite jooksul tagasi astunud paavstiks ja kasutas hiljem emeriitpaavsti tiitlit? Nimeta ta."
         },
         "response": {
-          "en": "CRAAP test",
-          "et": "CRAAP-test"
+          "en": "Pope Benedict XVI",
+          "et": "paavst Benedictus XVI"
         },
         "acceptedVariants": {
           "en": [
-            "CRAAP"
+            "Benedict XVI",
+            "Pope Benedict",
+            "Joseph Ratzinger",
+            "Joseph Aloisius Ratzinger"
           ],
           "et": [
-            "CRAAP"
+            "Benedictus XVI",
+            "paavst Benedictus",
+            "Joseph Ratzinger",
+            "Joseph Alois Ratzinger"
           ]
         },
         "explanation": {
-          "en": "The CRAAP test prompts structured questions but does not replace corroboration or subject expertise.",
-          "et": "CRAAP-test suunab esitama korrastatud küsimusi, kuid ei asenda kinnitamist ega erialateadmisi."
+          "en": "Pope Benedict XVI, born Joseph Ratzinger, resigned in 2013 and became pope emeritus.",
+          "et": "Paavst Benedictus XVI, sünninimega Joseph Ratzinger, astus 2013. aastal tagasi ja sai emeriitpaavstiks."
         },
         "source": {
-          "sourceId": "wikipedia:craap_test",
-          "title": "CRAAP test",
-          "url": "https://en.wikipedia.org/wiki/CRAAP_test",
+          "sourceId": "wikipedia:resignation-of-pope-benedict-xvi",
+          "title": "Resignation of Pope Benedict XVI",
+          "url": "https://en.wikipedia.org/wiki/Resignation_of_Pope_Benedict_XVI",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-087:question:3",
-        "factKey": "built-in-politics-economics-society:round1-overlap:effect:illusory-truth",
+        "factKey": "politics-exit:yeltsin:new-years-eve-1999-apology-putin-acting-president",
         "tier": 3,
-        "subjectKey": "effect:illusory-truth",
+        "subjectKey": "leader-exit:boris-yeltsin",
         "clue": {
-          "en": "Which effect makes a repeated statement feel more believable merely because it has become familiar?",
-          "et": "Milline efekt muudab korratud väite usutavamaks pelgalt seetõttu, et see on tuttavaks saanud?"
+          "en": "Which Russian president used a surprise New Year’s Eve 1999 television address to apologise, resign, and leave Vladimir Putin as acting president? Name the leader.",
+          "et": "Milline Venemaa president vabandas 1999. aasta vana-aastaõhtu üllatuslikus telepöördumises, astus tagasi ja jättis Vladimir Putini presidendi kohusetäitjaks? Nimeta juht."
         },
         "response": {
-          "en": "illusory truth effect",
-          "et": "illusoorse tõe efekt"
+          "en": "Boris Yeltsin",
+          "et": "Boriss Jeltsin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Yeltsin",
+            "Boris Nikolayevich Yeltsin"
+          ],
+          "et": [
+            "Jeltsin",
+            "Boris Yeltsin",
+            "Boris Nikolajevitš Jeltsin"
+          ]
         },
         "explanation": {
-          "en": "Repetition improves processing fluency, which people may mistake for evidence of truth.",
-          "et": "Kordus parandab töötlussujuvust, mida inimene võib ekslikult pidada tõesuse tõendiks."
+          "en": "Boris Yeltsin resigned on 31 December 1999, apologised for unfulfilled hopes, and transferred presidential duties to Putin.",
+          "et": "Boriss Jeltsin astus 31. detsembril 1999 tagasi, vabandas täitumata lootuste pärast ja andis presidendi ülesanded Putinile."
         },
         "source": {
-          "sourceId": "wikipedia:illusory_truth_effect",
-          "title": "Illusory truth effect",
-          "url": "https://en.wikipedia.org/wiki/Illusory_truth_effect",
+          "sourceId": "wikipedia:presidency-of-boris-yeltsin-resignation",
+          "title": "Presidency of Boris Yeltsin",
+          "url": "https://en.wikipedia.org/wiki/Presidency_of_Boris_Yeltsin#Resignation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-087:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:technology:digital-watermarking",
+        "factKey": "politics-exit:ardern:enough-in-tank-2023-hipkins-new-zealand",
         "tier": 4,
-        "subjectKey": "technology:digital-watermarking",
+        "subjectKey": "leader-exit:jacinda-ardern",
         "clue": {
-          "en": "Which technique embeds a usually hidden signal in digital media to help trace ownership or authenticity?",
-          "et": "Milline võte peidab digimeediasse signaali, mis aitab jälgida omandit või ehtsust?"
+          "en": "Which New Zealand prime minister said she no longer had “enough in the tank” when announcing in January 2023 that she would leave office, clearing the way for Chris Hipkins? Name her.",
+          "et": "Milline Uus-Meremaa peaminister ütles 2023. aasta jaanuaris ametist lahkumist teatades, et tal pole enam „paagis piisavalt”, ja avas tee Chris Hipkinsile? Nimeta ta."
         },
         "response": {
-          "en": "digital watermarking",
-          "et": "digitaalne vesimärgistamine"
+          "en": "Jacinda Ardern",
+          "et": "Jacinda Ardern"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ardern",
+            "Dame Jacinda Ardern"
+          ],
+          "et": [
+            "Ardern",
+            "Dame Jacinda Ardern"
+          ]
         },
         "explanation": {
-          "en": "A digital watermark can survive ordinary copying or editing while carrying identification information within the content.",
-          "et": "Digitaalne vesimärk võib säilida tavalisel kopeerimisel või töötlemisel ning kanda sisu sees tuvastusteavet."
+          "en": "Jacinda Ardern announced her resignation in January 2023, explaining that she no longer had the energy needed for the role.",
+          "et": "Jacinda Ardern teatas 2023. aasta jaanuaris tagasiastumisest ja selgitas, et tal ei jätku enam ametiks vajalikku energiat."
         },
         "source": {
-          "sourceId": "wikipedia:digital_watermarking",
-          "title": "Digital watermarking",
-          "url": "https://en.wikipedia.org/wiki/Digital_watermarking",
+          "sourceId": "wikipedia:resignation-of-jacinda-ardern",
+          "title": "Resignation of Jacinda Ardern",
+          "url": "https://en.wikipedia.org/wiki/Resignation_of_Jacinda_Ardern",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-087:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:provenance",
+        "factKey": "politics-exit:abe:longest-serving-colitis-2020-resignation-japan",
         "tier": 5,
-        "subjectKey": "concept:provenance",
+        "subjectKey": "leader-exit:shinzo-abe",
         "clue": {
-          "en": "What record traces an item’s origin, ownership, and chain of custody?",
-          "et": "Milline kirje jälgib objekti päritolu, omandit ja valduse ahelat?"
+          "en": "Which record-setting Japanese prime minister announced in 2020 that a relapse of ulcerative colitis prevented him from continuing in office? Name the leader.",
+          "et": "Milline rekordiliselt kaua ametis olnud Jaapani peaminister teatas 2020. aastal, et haavandilise koliidi ägenemine ei lase tal ametis jätkata? Nimeta juht."
         },
         "response": {
-          "en": "provenance",
-          "et": "päritoluteave"
+          "en": "Shinzo Abe",
+          "et": "Shinzō Abe"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Abe",
+            "Prime Minister Abe"
+          ],
+          "et": [
+            "Abe",
+            "peaminister Abe"
+          ]
         },
         "explanation": {
-          "en": "In media verification, provenance helps establish when, where, and by whom material was created or changed.",
-          "et": "Meedia kontrollimisel aitab päritoluteave tuvastada, millal, kus ja kelle poolt materjal loodi või muudeti."
+          "en": "Shinzo Abe, Japan’s longest-serving prime minister, resigned in 2020 because ulcerative colitis had returned.",
+          "et": "Shinzō Abe, Jaapani kõige kauem ametis olnud peaminister, astus 2020. aastal tagasi haavandilise koliidi ägenemise tõttu."
         },
         "source": {
-          "sourceId": "wikipedia:provenance",
-          "title": "Provenance",
-          "url": "https://en.wikipedia.org/wiki/Provenance",
+          "sourceId": "wikipedia:second-premiership-of-shinzo-abe-resignation",
+          "title": "Second premiership of Shinzo Abe",
+          "url": "https://en.wikipedia.org/wiki/Second_premiership_of_Shinzo_Abe#Resignation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -28944,153 +29072,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-088",
     "name": {
-      "en": "Rules of Professional Reporting",
-      "et": "Professionaalse ajakirjanduse reeglid"
+      "en": "From Prison to Power",
+      "et": "Vanglast võimule"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-088:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:beat-reporting",
+        "factKey": "politics-prison-power:lula:metalworker-union-prison-annulled-2022-election",
         "tier": 1,
-        "subjectKey": "practice:beat-reporting",
+        "subjectKey": "prison-to-power:luiz-inacio-lula-da-silva",
         "clue": {
-          "en": "What newsroom practice assigns a reporter continuing responsibility for one institution or subject area?",
-          "et": "Milline toimetuse tava annab reporterile püsiva vastutuse ühe asutuse või teemavaldkonna eest?"
+          "en": "This Brazilian former metalworker and union leader was imprisoned in 2018, had his convictions annulled, and returned to win the 2022 presidential election. Name him.",
+          "et": "See Brasiilia endine metallitööline ja ametiühingujuht vangistati 2018. aastal, tema süüdimõistmised tühistati ning ta naasis 2022. aasta presidendivalimisi võitma. Nimeta ta."
         },
         "response": {
-          "en": "beat reporting",
-          "et": "valdkonnaajakirjandus"
+          "en": "Luiz Inácio Lula da Silva",
+          "et": "Luiz Inácio Lula da Silva"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lula",
+            "Lula da Silva"
+          ],
+          "et": [
+            "Lula",
+            "Lula da Silva"
+          ]
         },
         "explanation": {
-          "en": "Beat reporting builds specialist knowledge and regular sources over time.",
-          "et": "Valdkonnaajakirjandus kasvatab aja jooksul eriteadmisi ja püsivaid allikaid."
+          "en": "Luiz Inácio Lula da Silva, widely called Lula, returned from imprisonment and legal disqualification to win a third presidential term in Brazil.",
+          "et": "Luiz Inácio Lula da Silva ehk Lula naasis vangistuse ja valimistelt kõrvaldamise järel ning võitis Brasiilias kolmanda presidendi ametiaja."
         },
         "source": {
-          "sourceId": "wikipedia:beat_reporting",
-          "title": "Beat reporting",
-          "url": "https://en.wikipedia.org/wiki/Beat_reporting",
+          "sourceId": "wikipedia:luiz-inacio-lula-da-silva",
+          "title": "Luiz Inácio Lula da Silva",
+          "url": "https://en.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-088:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:rule:news-embargo",
+        "factKey": "politics-prison-power:erdogan:istanbul-mayor-poem-prison-akp-prime-minister-president",
         "tier": 2,
-        "subjectKey": "rule:news-embargo",
+        "subjectKey": "prison-to-power:recep-tayyip-erdogan",
         "clue": {
-          "en": "What agreement gives journalists material early on condition that it not be published before a set time?",
-          "et": "Milline kokkulepe annab ajakirjanikule materjali varem tingimusel, et seda ei avaldata enne määratud aega?"
+          "en": "An Istanbul mayor was jailed after reciting a poem, then helped found the AKP and later became Turkey’s prime minister and president. Name the politician.",
+          "et": "Üks Istanbuli linnapea vangistati luuletuse ettekandmise järel, aitas seejärel asutada AKP ning sai hiljem Türgi peaministriks ja presidendiks. Nimeta poliitik."
         },
         "response": {
-          "en": "news embargo",
-          "et": "avaldamisembargo"
+          "en": "Recep Tayyip Erdoğan",
+          "et": "Recep Tayyip Erdoğan"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Recep Erdogan",
+            "Erdoğan",
+            "President Erdoğan"
+          ],
+          "et": [
+            "Recep Erdogan",
+            "Erdoğan",
+            "president Erdoğan"
+          ]
         },
         "explanation": {
-          "en": "A news embargo allows several outlets to prepare accurate coverage for simultaneous release.",
-          "et": "Avaldamisembargo lubab eri väljaannetel valmistada täpse kajastuse üheaegseks avaldamiseks."
+          "en": "Recep Tayyip Erdoğan served prison time over a public poetry recital before leading the AKP, governing as prime minister, and becoming president of Turkey.",
+          "et": "Recep Tayyip Erdoğan kandis avaliku luulelugemise tõttu vanglakaristust, juhtis hiljem AKP-d, valitses peaministrina ja sai Türgi presidendiks."
         },
         "source": {
-          "sourceId": "wikipedia:news_embargo",
-          "title": "News embargo",
-          "url": "https://en.wikipedia.org/wiki/News_embargo",
+          "sourceId": "wikipedia:recep-tayyip-erdogan",
+          "title": "Recep Tayyip Erdoğan",
+          "url": "https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-088:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:rule:off-the-record",
+        "factKey": "politics-prison-power:mujica:tupamaro-imprisonment-austere-uruguay-president",
         "tier": 3,
-        "subjectKey": "rule:off-the-record",
+        "subjectKey": "prison-to-power:jose-mujica",
         "clue": {
-          "en": "Which source condition means supplied information may not be published or attributed as ordinary reporting?",
-          "et": "Milline allikatingimus tähendab, et antud teavet ei tohi tavapärase uudisena avaldada ega omistada?"
+          "en": "This former Tupamaro guerrilla spent many years in prison before becoming Uruguay’s president and gaining a reputation for an unusually austere lifestyle. Name him.",
+          "et": "See endine Tupamarose siss veetis aastaid vanglas, sai hiljem Uruguay presidendiks ja kogus tuntust erakordselt tagasihoidliku eluviisiga. Nimeta ta."
         },
         "response": {
-          "en": "off the record",
-          "et": "mitteavaldamiseks"
+          "en": "José Mujica",
+          "et": "José Mujica"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pepe Mujica",
+            "Mujica",
+            "José Alberto Mujica Cordano"
+          ],
+          "et": [
+            "Pepe Mujica",
+            "Mujica",
+            "José Alberto Mujica Cordano"
+          ]
         },
         "explanation": {
-          "en": "The exact meaning of off the record should be agreed beforehand because newsroom conventions differ.",
-          "et": "Mõiste „mitteavaldamiseks“ täpne tähendus tuleks enne kokku leppida, sest toimetuste tavad erinevad."
+          "en": "José “Pepe” Mujica was imprisoned during Uruguay’s military era and later served as president from 2010 to 2015.",
+          "et": "José „Pepe” Mujica vangistati Uruguay sõjaväelise ajajärgu ajal ning ta oli hiljem aastatel 2010–2015 president."
         },
         "source": {
-          "sourceId": "wikipedia:off_the_record_(journalism)",
-          "title": "Off the record (journalism)",
-          "url": "https://en.wikipedia.org/wiki/Off_the_record_(journalism)",
+          "sourceId": "wikipedia:jose-mujica",
+          "title": "José Mujica",
+          "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Mujica",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-088:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:credit:byline",
+        "factKey": "politics-prison-power:sirleaf:imprisonment-exile-liberia-first-elected-female-head-nobel",
         "tier": 4,
-        "subjectKey": "credit:byline",
+        "subjectKey": "prison-to-power:ellen-johnson-sirleaf",
         "clue": {
-          "en": "What line on an article identifies its writer?",
-          "et": "Milline rida artikli juures nimetab selle autori?"
+          "en": "After imprisonment and exile under Liberian regimes, this politician became Africa’s first elected female head of state and later shared a Nobel Peace Prize. Name her.",
+          "et": "Pärast vangistust ja pagulust Libeeria režiimide ajal sai sellest poliitikust Aafrika esimene valitud naisriigipea ning hiljem Nobeli rahupreemia kaaslaureaat. Nimeta ta."
         },
         "response": {
-          "en": "byline",
-          "et": "autoririda"
+          "en": "Ellen Johnson Sirleaf",
+          "et": "Ellen Johnson Sirleaf"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Sirleaf",
+            "Ellen Sirleaf",
+            "Ellen Eugenia Johnson Sirleaf"
+          ],
+          "et": [
+            "Sirleaf",
+            "Ellen Sirleaf",
+            "Ellen Eugenia Johnson Sirleaf"
+          ]
         },
         "explanation": {
-          "en": "A byline attributes responsibility and credit, while a dateline normally identifies place and date.",
-          "et": "Autoririda omistab vastutuse ja tunnustuse, samal ajal kui daatumirida näitab tavaliselt kohta ja aega."
+          "en": "Ellen Johnson Sirleaf survived imprisonment and exile, won Liberia’s presidency, and received the 2011 Nobel Peace Prize.",
+          "et": "Ellen Johnson Sirleaf elas üle vangistuse ja paguluse, võitis Libeeria presidendivalimised ning sai 2011. aasta Nobeli rahupreemia."
         },
         "source": {
-          "sourceId": "wikipedia:byline",
-          "title": "Byline",
-          "url": "https://en.wikipedia.org/wiki/Byline",
+          "sourceId": "wikipedia:ellen-johnson-sirleaf",
+          "title": "Ellen Johnson Sirleaf",
+          "url": "https://en.wikipedia.org/wiki/Ellen_Johnson_Sirleaf",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-088:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:corrections",
+        "factKey": "politics-prison-power:kim-dae-jung:dissident-prison-death-sentence-president-south-korea-nobel",
         "tier": 5,
-        "subjectKey": "policy:corrections",
+        "subjectKey": "prison-to-power:kim-dae-jung",
         "clue": {
-          "en": "What published newsroom rule explains how factual errors will be acknowledged and fixed?",
-          "et": "Milline avalik toimetusreegel selgitab, kuidas faktivead tunnistatakse ja parandatakse?"
+          "en": "This South Korean dissident survived repeated imprisonment and a death sentence, later won the presidency, and received the Nobel Peace Prize for his reconciliation policy. Name him.",
+          "et": "See Lõuna-Korea dissident elas üle korduvad vangistused ja surmaotsuse, võitis hiljem presidendivalimised ning sai lepituspoliitika eest Nobeli rahupreemia. Nimeta ta."
         },
         "response": {
-          "en": "corrections policy",
-          "et": "paranduste põhimõte"
+          "en": "Kim Dae-jung",
+          "et": "Kim Dae-jung"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kim Daejung",
+            "Dae-jung Kim"
+          ],
+          "et": [
+            "Kim Daejung",
+            "Dae-jung Kim"
+          ]
         },
         "explanation": {
-          "en": "A corrections policy makes accountability visible by preserving a clear record of substantive changes.",
-          "et": "Paranduste põhimõte teeb vastutuse nähtavaks, säilitades sisuliste muudatuste selge jälje."
+          "en": "Kim Dae-jung endured kidnapping, prison, and a death sentence before becoming South Korea’s president and winning the 2000 Nobel Peace Prize.",
+          "et": "Kim Dae-jung elas üle röövimise, vangla ja surmaotsuse, sai Lõuna-Korea presidendiks ning võitis 2000. aasta Nobeli rahupreemia."
         },
         "source": {
-          "sourceId": "wikipedia:journalism_ethics_and_standards",
-          "title": "Journalism ethics and standards",
-          "url": "https://en.wikipedia.org/wiki/Journalism_ethics_and_standards",
+          "sourceId": "wikipedia:kim-dae-jung",
+          "title": "Kim Dae-jung",
+          "url": "https://en.wikipedia.org/wiki/Kim_Dae-jung",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -29098,153 +29262,205 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-089",
     "name": {
-      "en": "Reading Population Change",
-      "et": "Rahvastikumuutuse lugemine"
+      "en": "Political Myths That Refuse to Die",
+      "et": "Visad poliitilised müüdid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-089:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:group:cohort",
+        "factKey": "politics-myth:napoleon:average-height-inch-confusion-gillray-caricature",
         "tier": 1,
-        "subjectKey": "group:cohort",
+        "subjectKey": "political-myth:napoleon-short",
         "clue": {
-          "en": "What population group shares a defining event, such as birth during the same period?",
-          "et": "Milline rahvastikurühm jagab määravat sündmust, näiteks sündimist samal ajavahemikul?"
+          "en": "French and British inches differed, and James Gillray’s caricatures did the rest. What mistaken belief about Napoleon’s body became so durable that it inspired the name of a “complex”?",
+          "et": "Prantsuse ja Briti toll olid erinevad ning James Gillray karikatuurid tegid ülejäänu. Milline eksiarvamus Napoleoni keha kohta jäi nii püsima, et andis nime isegi ühele „kompleksile”?"
         },
         "response": {
-          "en": "cohort",
-          "et": "kohort"
+          "en": "Napoleon was unusually short",
+          "et": "Napoleon oli ebatavaliselt lühike"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Napoleon was short",
+            "he was unusually short",
+            "was unusually short",
+            "he was very short",
+            "unusually short for his time"
+          ],
+          "et": [
+            "Napoleon oli lühike",
+            "ta oli ebatavaliselt lühike",
+            "oli ebatavaliselt lühike",
+            "ta oli väga lühike",
+            "oma aja kohta ebatavaliselt lühike"
+          ]
         },
         "explanation": {
-          "en": "Demographers follow cohorts over time to distinguish ageing from period effects.",
-          "et": "Demograafid jälgivad kohorte ajas, et eristada vananemist ajastumõjust."
+          "en": "Napoleon was around average height for a French man of his time; unit confusion and hostile British caricature helped create the short-emperor myth.",
+          "et": "Napoleon oli oma aja prantsuse mehe kohta ligikaudu keskmist kasvu; mõõtühikute segadus ja vaenulikud Briti karikatuurid aitasid luua lühikese keisri müüdi."
         },
         "source": {
-          "sourceId": "wikipedia:cohort_(statistics)",
-          "title": "Cohort (statistics)",
-          "url": "https://en.wikipedia.org/wiki/Cohort_(statistics)",
+          "sourceId": "wikipedia:napoleon-complex",
+          "title": "Napoleon complex",
+          "url": "https://en.wikipedia.org/wiki/Napoleon_complex",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-089:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:model:demographic-transition",
+        "factKey": "politics-myth:marie-antoinette:let-them-eat-cake-rousseau-brioche-attribution",
         "tier": 2,
-        "subjectKey": "model:demographic-transition",
+        "subjectKey": "political-myth:marie-antoinette-cake-quote",
         "clue": {
-          "en": "Which model describes societies moving from high birth and death rates toward low rates?",
-          "et": "Milline mudel kirjeldab ühiskonna liikumist kõrge sündimuse ja suremuse juurest madala taseme poole?"
+          "en": "Rousseau recorded a “great princess” proposing brioche before this French queen even arrived in France. What famous quotation is nevertheless attributed to Marie Antoinette?",
+          "et": "Rousseau kirjutas „suurest printsessist”, kes soovitas brioche’i juba enne selle Prantsuse kuninganna saabumist Prantsusmaale. Milline kuulus ütlus omistatakse sellest hoolimata Marie Antoinette’ile?"
         },
         "response": {
-          "en": "demographic transition",
-          "et": "demograafiline üleminek"
+          "en": "Marie Antoinette said “Let them eat cake”",
+          "et": "Marie Antoinette ütles „Söögu nad kooki”"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Let them eat cake",
+            "she said Let them eat cake",
+            "let them eat brioche"
+          ],
+          "et": [
+            "Söögu nad kooki",
+            "ta ütles „Söögu nad kooki”",
+            "söögu nad brioche’i"
+          ]
         },
         "explanation": {
-          "en": "Mortality usually falls before fertility during the demographic transition, producing rapid growth in between.",
-          "et": "Demograafilises üleminekus langeb suremus tavaliselt enne sündimust, põhjustades vahepeal kiire kasvu."
+          "en": "There is no reliable evidence that Marie Antoinette said “Let them eat cake”; a similar brioche line appeared earlier in Rousseau’s Confessions.",
+          "et": "Puuduvad usaldusväärsed tõendid, et Marie Antoinette ütles „Söögu nad kooki”; sarnane brioche’i lause ilmus varem Rousseau „Pihtimustes”."
         },
         "source": {
-          "sourceId": "wikipedia:demographic_transition",
-          "title": "Demographic transition",
-          "url": "https://en.wikipedia.org/wiki/Demographic_transition",
+          "sourceId": "wikipedia:let-them-eat-cake",
+          "title": "Let them eat cake",
+          "url": "https://en.wikipedia.org/wiki/Let_them_eat_cake",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-089:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:replacement-fertility",
+        "factKey": "politics-myth:nero:great-fire-rome-fiddle-lyre-anachronism-legend",
         "tier": 3,
-        "subjectKey": "measure:replacement-fertility",
+        "subjectKey": "political-myth:nero-fiddle-fire",
         "clue": {
-          "en": "What fertility level would let one generation of women replace itself in the long run without migration?",
-          "et": "Milline sündimustase võimaldaks naiste põlvkonnal end pika aja jooksul ilma rändeta asendada?"
+          "en": "The modern instrument in this story did not yet exist, and ancient reports disagree about the emperor’s conduct during the disaster of AD 64. What musical claim about Nero survives?",
+          "et": "Selle loo tänapäevast pilli ei olnud veel olemas ning antiikallikad ei nõustu keisri käitumises 64. aasta katastroofi ajal. Milline muusikaline väide Nero kohta püsib?"
         },
         "response": {
-          "en": "replacement-level fertility",
-          "et": "taastetaseme sündimus"
+          "en": "Nero fiddled while Rome burned",
+          "et": "Nero mängis Rooma põlemise ajal viiulit"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "he fiddled while Rome burned",
+            "fiddled while Rome burned",
+            "played the fiddle while Rome burned",
+            "Nero played violin while Rome burned"
+          ],
+          "et": [
+            "ta mängis Rooma põlemise ajal viiulit",
+            "mängis Rooma põlemise ajal viiulit",
+            "Nero mängis Rooma tulekahju ajal viiulit",
+            "mängis Rooma põledes viiulit"
+          ]
         },
         "explanation": {
-          "en": "Replacement level depends on mortality and the sex ratio at birth, so it is not identical everywhere.",
-          "et": "Taastetase sõltub suremusest ja sünni soolisest suhtest ega ole kõikjal täpselt sama."
+          "en": "The image of Nero fiddling while Rome burned is a later legend; some ancient accounts instead mention singing or a lyre, and the violin was anachronistic.",
+          "et": "Kujutelm, et Nero mängis Rooma põlemise ajal viiulit, on hilisem legend; osa antiikallikaid räägib hoopis laulmisest või lüürast ning viiul on anakronism."
         },
         "source": {
-          "sourceId": "wikipedia:sub-replacement_fertility",
-          "title": "Sub-replacement fertility",
-          "url": "https://en.wikipedia.org/wiki/Sub-replacement_fertility",
+          "sourceId": "wikipedia:great-fire-of-rome",
+          "title": "Great Fire of Rome",
+          "url": "https://en.wikipedia.org/wiki/Great_Fire_of_Rome",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-089:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:net-migration-rate",
+        "factKey": "politics-myth:mussolini:trains-punctuality-propaganda-earlier-improvements",
         "tier": 4,
-        "subjectKey": "measure:net-migration-rate",
+        "subjectKey": "political-myth:mussolini-trains-on-time",
         "clue": {
-          "en": "Which demographic rate compares immigrants minus emigrants with the population?",
-          "et": "Milline demograafiline kordaja võrdleb sisserändajate ja väljarändajate vahet rahvaarvuga?"
+          "en": "Fascist publicity highlighted selected services, although major railway improvements had begun earlier. What efficiency claim is still repeated about Mussolini?",
+          "et": "Fašistlik propaganda tõstis esile valitud liine, kuigi suured raudteeparandused olid alanud juba varem. Millist tõhususväidet korratakse Mussolini kohta endiselt?"
         },
         "response": {
-          "en": "net migration rate",
-          "et": "rändesaldo kordaja"
+          "en": "Mussolini made the trains run on time",
+          "et": "Mussolini pani rongid õigel ajal käima"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "he made the trains run on time",
+            "made the trains run on time",
+            "the trains ran on time because of him"
+          ],
+          "et": [
+            "ta pani rongid õigel ajal käima",
+            "pani rongid õigel ajal käima",
+            "rongid käisid tema tõttu õigel ajal"
+          ]
         },
         "explanation": {
-          "en": "A positive net migration rate means arrivals exceed departures relative to population size.",
-          "et": "Positiivne rändesaldo kordaja tähendab, et saabumisi on rahvaarvu suhtes rohkem kui lahkumisi."
+          "en": "The claim that Mussolini made Italian trains run on time was propaganda: earlier governments had made many improvements, and punctuality remained uneven.",
+          "et": "Väide, et Mussolini pani Itaalia rongid õigel ajal käima, oli propaganda: paljud parandused tehti varasemate valitsuste ajal ja täpsus jäi ebaühtlaseks."
         },
         "source": {
-          "sourceId": "wikipedia:net_migration_rate",
-          "title": "Net migration rate",
-          "url": "https://en.wikipedia.org/wiki/Net_migration_rate",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "the-independent:rear-window-making-italy-work-mussolini-trains-on-time",
+          "title": "Rear Window: Making Italy work: Did Mussolini really get the trains running on time?",
+          "url": "https://www.independent.co.uk/voices/rear-window-making-italy-work-did-mussolini-really-get-the-trains-running-on-time-1367688.html",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-089:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:chart:population-pyramid",
+        "factKey": "politics-myth:canute:tide-command-humility-secular-power-false-belief",
         "tier": 5,
-        "subjectKey": "chart:population-pyramid",
+        "subjectKey": "political-myth:canute-believed-control-tide",
         "clue": {
-          "en": "Which paired bar chart displays a population by age and sex?",
-          "et": "Milline kahepoolne tulpdiagramm näitab rahvastikku vanuse ja soo järgi?"
+          "en": "In the medieval story, this king orders the water back to teach flattering courtiers that earthly power has limits. What false belief about Canute is commonly attached to the episode?",
+          "et": "Keskaegses loos käsib see kuningas veel taganeda, et õpetada meelitavatele õukondlastele maise võimu piire. Milline valeusk Knudi kohta seotakse selle looga sageli?"
         },
         "response": {
-          "en": "population pyramid",
-          "et": "rahvastikupüramiid"
+          "en": "King Canute believed he could stop the tide",
+          "et": "Kuningas Knud uskus, et suudab tõusuvett peatada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Canute believed he could stop the tide",
+            "he believed he could stop the tide",
+            "believed he could stop the tide",
+            "thought he could stop the tide",
+            "believed he could command the tide",
+            "thought he controlled the tide"
+          ],
+          "et": [
+            "Knud uskus, et suudab tõusuvett peatada",
+            "ta uskus, et suudab tõusuvett peatada",
+            "uskus, et suudab tõusuvett peatada",
+            "arvas, et suudab tõusuvett peatada",
+            "uskus, et võib tõusuvett käskida",
+            "arvas, et kontrollib tõusuvett"
+          ]
         },
         "explanation": {
-          "en": "The outline of a population pyramid reveals ageing, growth, and unusually large cohorts.",
-          "et": "Rahvastikupüramiidi kuju näitab vananemist, kasvu ja ebatavaliselt suuri kohorte."
+          "en": "Canute staged the command to demonstrate that he could not control nature; the misconception reverses the lesson and portrays him as believing the tide would obey.",
+          "et": "Knud lavastas käsu näitamaks, et ta ei kontrolli loodust; eksiarvamus pöörab õppetunni ümber ja kujutab teda uskuvat, et tõusuvesi kuuletub."
         },
         "source": {
-          "sourceId": "wikipedia:population_pyramid",
-          "title": "Population pyramid",
-          "url": "https://en.wikipedia.org/wiki/Population_pyramid",
+          "sourceId": "wikipedia:king-canute-and-the-tide",
+          "title": "King Canute and the tide",
+          "url": "https://en.wikipedia.org/wiki/King_Canute_and_the_tide",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -29252,161 +29468,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-090",
     "name": {
-      "en": "Ideas That Shape a City",
-      "et": "Linna kujundavad põhimõtted"
+      "en": "Nobel Peace Prize Plot Twists",
+      "et": "Nobeli rahupreemia ootamatud pöörded"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-090:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:planning:fifteen-minute-city",
+        "factKey": "politics-nobel:malala:2014-youngest-education-satyarthi",
         "tier": 1,
-        "subjectKey": "planning:fifteen-minute-city",
+        "subjectKey": "nobel-laureate:malala-yousafzai",
         "clue": {
-          "en": "Which urban-planning idea aims to place most daily needs within a short walk or bicycle ride from home?",
-          "et": "Milline linnaplaneerimise idee soovib paigutada enamiku igapäevavajadusi kodust lühikese jalutus- või rattasõidu kaugusele?"
+          "en": "Which Pakistani education campaigner shared the 2014 Peace Prize with Kailash Satyarthi and, at seventeen, became the youngest Nobel laureate? Name the woman.",
+          "et": "Milline Pakistani haridusaktivist jagas 2014. aasta rahupreemiat Kailash Satyarthiga ja sai seitsmeteistkümneselt noorimaks Nobeli laureaadiks? Nimeta naine."
         },
         "response": {
-          "en": "15-minute city",
-          "et": "15 minuti linn"
+          "en": "Malala Yousafzai",
+          "et": "Malala Yousafzai"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Malala"
+          ],
+          "et": [
+            "Malala"
+          ]
         },
         "explanation": {
-          "en": "The 15-minute city combines proximity, mixed land use, and active travel rather than imposing one physical layout.",
-          "et": "15 minuti linn ühendab läheduse, segakasutuse ja aktiivse liikumise ega nõua üht kindlat ruumikuju."
+          "en": "Malala Yousafzai received the 2014 Nobel Peace Prize for defending children’s right to education and became the youngest Nobel winner.",
+          "et": "Malala Yousafzai sai 2014. aasta Nobeli rahupreemia laste haridusõiguse kaitsmise eest ja temast sai noorim Nobeli preemia laureaat."
         },
         "source": {
-          "sourceId": "wikipedia:15-minute_city",
-          "title": "15-minute city",
-          "url": "https://en.wikipedia.org/wiki/15-minute_city",
+          "sourceId": "wikipedia:2014-nobel-peace-prize",
+          "title": "2014 Nobel Peace Prize",
+          "url": "https://en.wikipedia.org/wiki/2014_Nobel_Peace_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-090:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:planning:green-belt",
+        "factKey": "politics-nobel:icrc:three-peace-prizes-1917-1944-1963-geneva",
         "tier": 2,
-        "subjectKey": "planning:green-belt",
+        "subjectKey": "nobel-organization:international-committee-red-cross",
         "clue": {
-          "en": "What protected open land around a city is intended to limit outward sprawl?",
-          "et": "Milline kaitstud avamaa linna ümber on mõeldud valglinnastumise piiramiseks?"
+          "en": "Which Geneva-based humanitarian organization, guardian of a famous protective emblem, received Peace Prizes in 1917 and 1944 and shared another in 1963? Name the organization.",
+          "et": "Milline Genfis asuv humanitaarorganisatsioon, tuntud kaitseembleemi hoidja, sai rahupreemia 1917. ja 1944. aastal ning jagas veel üht 1963. aastal? Nimeta organisatsioon."
         },
         "response": {
-          "en": "green belt",
-          "et": "rohevöönd"
+          "en": "International Committee of the Red Cross",
+          "et": "Rahvusvaheline Punase Risti Komitee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ICRC",
+            "International Red Cross Committee",
+            "Red Cross International Committee"
+          ],
+          "et": [
+            "ICRC",
+            "RPRK",
+            "Punase Risti Rahvusvaheline Komitee"
+          ]
         },
         "explanation": {
-          "en": "A green belt channels development inward or beyond the protected ring.",
-          "et": "Rohevöönd suunab arenduse sissepoole või kaitstud vööndist kaugemale."
+          "en": "The International Committee of the Red Cross is the only organization to have received the Nobel Peace Prize three times, including the centenary award shared in 1963.",
+          "et": "Rahvusvaheline Punase Risti Komitee on ainus organisatsioon, mis on saanud Nobeli rahupreemia kolm korda, sealhulgas 1963. aasta sajandijuubeli preemia kaaslaureaadina."
         },
         "source": {
-          "sourceId": "wikipedia:green_belt",
-          "title": "Green belt",
-          "url": "https://en.wikipedia.org/wiki/Green_belt",
+          "sourceId": "wikipedia:international-committee-of-the-red-cross-awards-and-recognition",
+          "title": "International Committee of the Red Cross",
+          "url": "https://en.wikipedia.org/wiki/International_Committee_of_the_Red_Cross#Awards_and_recognition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-090:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:planning:transit-oriented",
+        "factKey": "politics-nobel:aung-san-suu-kyi:house-arrest-1991-sons-accepted",
         "tier": 3,
-        "subjectKey": "planning:transit-oriented",
+        "subjectKey": "nobel-laureate:aung-san-suu-kyi",
         "clue": {
-          "en": "Which planning model concentrates walkable housing and services around high-capacity public transport?",
-          "et": "Milline planeerimismudel koondab jalgsi ligipääsetavad elamud ja teenused suure läbilaskevõimega ühistranspordi ümber?"
+          "en": "Which Myanmar opposition leader was under house arrest when awarded the 1991 Peace Prize, so her sons accepted it on her behalf? Name the laureate.",
+          "et": "Milline Myanmari opositsioonijuht oli 1991. aasta rahupreemia määramise ajal koduarestis, mistõttu võtsid auhinna tema eest vastu pojad? Nimeta laureaat."
         },
         "response": {
-          "en": "transit-oriented development",
-          "et": "ühistranspordikeskne arendus"
+          "en": "Aung San Suu Kyi",
+          "et": "Aung San Suu Kyi"
         },
         "acceptedVariants": {
           "en": [
-            "TOD"
+            "Suu Kyi",
+            "Daw Aung San Suu Kyi"
           ],
           "et": [
-            "TOD"
+            "Suu Kyi",
+            "Daw Aung San Suu Kyi"
           ]
         },
         "explanation": {
-          "en": "Transit-oriented development links compact land use with reduced dependence on private cars.",
-          "et": "Ühistranspordikeskne arendus seob kompaktse maakasutuse väiksema autosõltuvusega."
+          "en": "Aung San Suu Kyi received the 1991 Nobel Peace Prize while detained in Myanmar; her sons represented her at the ceremony.",
+          "et": "Aung San Suu Kyi sai 1991. aasta Nobeli rahupreemia Myanmaris kinnipidamise ajal ning tseremoonial esindasid teda pojad."
         },
         "source": {
-          "sourceId": "wikipedia:transit-oriented_development",
-          "title": "Transit-oriented development",
-          "url": "https://en.wikipedia.org/wiki/Transit-oriented_development",
+          "sourceId": "wikipedia:aung-san-suu-kyi-1990-general-election-and-nobel-peace-prize",
+          "title": "Aung San Suu Kyi",
+          "url": "https://en.wikipedia.org/wiki/Aung_San_Suu_Kyi#1990_general_election_and_Nobel_Peace_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-090:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:land:brownfield",
+        "factKey": "politics-nobel:icbl:jody-williams-1997-mine-ban-network",
         "tier": 4,
-        "subjectKey": "land:brownfield",
+        "subjectKey": "nobel-campaign:international-campaign-ban-landmines",
         "clue": {
-          "en": "What previously developed land may need contamination cleanup before reuse?",
-          "et": "Milline varem hoonestatud maa võib enne taaskasutust vajada saaste kõrvaldamist?"
+          "en": "Which global campaign network shared the 1997 Peace Prize with coordinator Jody Williams for helping turn an anti-personnel-mine ban into an international cause? Name the campaign.",
+          "et": "Milline üleilmne kampaaniavõrgustik jagas 1997. aasta rahupreemiat koordinaator Jody Williamsiga, aidates muuta jalaväemiinide keelustamise rahvusvaheliseks eesmärgiks? Nimeta kampaania."
         },
         "response": {
-          "en": "brownfield land",
-          "et": "endine tööstusmaa"
+          "en": "International Campaign to Ban Landmines",
+          "et": "Rahvusvaheline maamiinide keelustamise kampaania"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ICBL",
+            "Landmine Ban Campaign",
+            "International Landmine Ban Campaign"
+          ],
+          "et": [
+            "ICBL",
+            "maamiinide keelustamise kampaania",
+            "rahvusvaheline maamiinide vastane kampaania"
+          ]
         },
         "explanation": {
-          "en": "Brownfield redevelopment returns underused urban sites to productive use.",
-          "et": "Endise tööstusmaa taasarendus võtab alakasutatud linnaruumi uuesti kasutusele."
+          "en": "The International Campaign to Ban Landmines and Jody Williams received the 1997 Nobel Peace Prize for their work toward banning and clearing anti-personnel mines.",
+          "et": "Rahvusvaheline maamiinide keelustamise kampaania ja Jody Williams said 1997. aasta Nobeli rahupreemia jalaväemiinide keelustamise ja kõrvaldamise eest tehtud töö eest."
         },
         "source": {
-          "sourceId": "wikipedia:brownfield_land",
-          "title": "Brownfield land",
-          "url": "https://en.wikipedia.org/wiki/Brownfield_land",
+          "sourceId": "wikipedia:international-campaign-to-ban-landmines",
+          "title": "International Campaign to Ban Landmines",
+          "url": "https://en.wikipedia.org/wiki/International_Campaign_to_Ban_Landmines",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-090:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:policy:rent-control",
+        "factKey": "politics-nobel:le-duc-tho:1973-kissinger-paris-peace-accords-declined",
         "tier": 5,
-        "subjectKey": "policy:rent-control",
+        "subjectKey": "nobel-laureate:le-duc-tho",
         "clue": {
-          "en": "What policy limits the rent or rent increases a landlord may charge?",
-          "et": "Milline poliitika piirab üüri või selle tõusu, mida üürileandja võib küsida?"
+          "en": "Which North Vietnamese diplomat was selected with Henry Kissinger for the 1973 Peace Prize after the Paris negotiations, but declined the award? Name the person.",
+          "et": "Milline Põhja-Vietnami diplomaat valiti pärast Pariisi läbirääkimisi koos Henry Kissingeriga 1973. aasta rahupreemia saajaks, kuid keeldus auhinnast? Nimeta inimene."
         },
         "response": {
-          "en": "rent regulation",
-          "et": "üüri reguleerimine"
+          "en": "Lê Đức Thọ",
+          "et": "Lê Đức Thọ"
         },
         "acceptedVariants": {
           "en": [
-            "rent control"
+            "Le Duc Tho"
           ],
           "et": [
-            "üürikontroll"
+            "Le Duc Tho"
           ]
         },
         "explanation": {
-          "en": "Rent regulation can protect sitting tenants, although designs and market effects vary widely.",
-          "et": "Üüri reguleerimine võib kaitsta olemasolevaid üürnikke, kuid süsteemid ja turumõjud erinevad suuresti."
+          "en": "Lê Đức Thọ refused the 1973 Nobel Peace Prize because, despite the Paris Peace Accords, peace had not actually been established in Vietnam.",
+          "et": "Lê Đức Thọ keeldus 1973. aasta Nobeli rahupreemiast, sest Pariisi rahulepetest hoolimata polnud Vietnamis tegelikku rahu saavutatud."
         },
         "source": {
-          "sourceId": "wikipedia:rent_regulation",
-          "title": "Rent regulation",
-          "url": "https://en.wikipedia.org/wiki/Rent_regulation",
+          "sourceId": "wikipedia:1973-nobel-peace-prize",
+          "title": "1973 Nobel Peace Prize",
+          "url": "https://en.wikipedia.org/wiki/1973_Nobel_Peace_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -29414,157 +29652,191 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-091",
     "name": {
-      "en": "Institutions That Open Educational Doors",
-      "et": "Haridust avavad institutsioonid"
+      "en": "Political Days on the Calendar",
+      "et": "Poliitilised tähtpäevad kalendris"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-091:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:status:academic-tenure",
+        "factKey": "politics-day:europe-day:9-may-schuman-declaration-eu",
         "tier": 1,
-        "subjectKey": "status:academic-tenure",
+        "subjectKey": "commemorative-day:europe-day-eu",
         "clue": {
-          "en": "Which continuing appointment protects established scholars from dismissal without sufficient cause?",
-          "et": "Milline püsiv ametistaatus kaitseb kogenud teadlast piisava põhjuseta vallandamise eest?"
+          "en": "EU institutions mark 9 May, the anniversary of Robert Schuman’s 1950 declaration proposing shared coal and steel management. Name the annual observance.",
+          "et": "Euroopa Liidu institutsioonid tähistavad 9. mail Robert Schumani 1950. aasta deklaratsiooni aastapäeva; selles pakuti söe ja terase ühist haldamist. Nimeta tähtpäev."
         },
         "response": {
-          "en": "academic tenure",
-          "et": "akadeemiline tenuur"
+          "en": "Europe Day",
+          "et": "Euroopa päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "EU Europe Day",
+            "9 May Europe Day",
+            "European Union Europe Day"
+          ],
+          "et": [
+            "Euroopapäev",
+            "9. mai Euroopa päev",
+            "EL-i Euroopa päev",
+            "Euroopa Liidu Euroopa päev"
+          ]
         },
         "explanation": {
-          "en": "Academic tenure is intended to support intellectual independence while retaining dismissal procedures for cause.",
-          "et": "Akadeemiline tenuur toetab mõttevabadust, säilitades põhjendatud vallandamise menetluse."
+          "en": "Europe Day on 9 May commemorates the Schuman Declaration, regarded as a founding step toward today’s European Union.",
+          "et": "Euroopa päev 9. mail meenutab Schumani deklaratsiooni, mida peetakse üheks tänapäeva Euroopa Liidu alussammuks."
         },
         "source": {
-          "sourceId": "wikipedia:academic_tenure",
-          "title": "Academic tenure",
-          "url": "https://en.wikipedia.org/wiki/Academic_tenure",
+          "sourceId": "wikipedia:europe-day",
+          "title": "Europe Day",
+          "url": "https://en.wikipedia.org/wiki/Europe_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-091:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:process:accreditation",
+        "factKey": "politics-day:juneteenth:june-19-1865-galveston-emancipation-texas",
         "tier": 2,
-        "subjectKey": "process:accreditation",
+        "subjectKey": "commemorative-day:juneteenth",
         "clue": {
-          "en": "What external quality process recognises that an institution or programme meets defined standards?",
-          "et": "Milline väline kvaliteedimenetlus tunnustab asutuse või õppekava vastavust kindlatele standarditele?"
+          "en": "On 19 June 1865, Union troops in Galveston announced and enforced emancipation in Texas. What US holiday grew from that event?",
+          "et": "19. juunil 1865 teatasid liidu väed Galvestonis orjuse kaotamisest Texases ja asusid seda jõustama. Milline USA püha sellest sündmusest kasvas?"
         },
         "response": {
-          "en": "accreditation",
-          "et": "akrediteerimine"
+          "en": "Juneteenth",
+          "et": "Juneteenth"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Juneteenth Day",
+            "Juneteenth National Independence Day",
+            "Jubilee Day",
+            "Black Independence Day"
+          ],
+          "et": [
+            "Juneteenthi päev",
+            "Juneteenth National Independence Day",
+            "juubeli päev",
+            "mustanahaliste iseseisvuspäev"
+          ]
         },
         "explanation": {
-          "en": "Accreditation evaluates institutions or programmes rather than awarding individual student grades.",
-          "et": "Akrediteerimine hindab asutust või õppekava, mitte üksiku õppija hindeid."
+          "en": "Juneteenth commemorates the enforcement of emancipation in Texas on 19 June 1865 and is now a US federal holiday.",
+          "et": "Juneteenth meenutab orjuse kaotamise jõustamist Texases 19. juunil 1865 ja on nüüd USA föderaalpüha."
         },
         "source": {
-          "sourceId": "wikipedia:higher_education_accreditation",
-          "title": "Higher education accreditation",
-          "url": "https://en.wikipedia.org/wiki/Higher_education_accreditation",
+          "sourceId": "wikipedia:juneteenth",
+          "title": "Juneteenth",
+          "url": "https://en.wikipedia.org/wiki/Juneteenth",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-091:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:resource:open-educational",
+        "factKey": "politics-day:anzac:25-april-gallipoli-australia-new-zealand-remembrance",
         "tier": 3,
-        "subjectKey": "resource:open-educational",
+        "subjectKey": "commemorative-day:anzac-day",
         "clue": {
-          "en": "What teaching materials carry open licences permitting free access and reuse?",
-          "et": "Millised õppematerjalid kannavad avatud litsentsi, mis lubab tasuta ligipääsu ja taaskasutust?"
+          "en": "Australia and New Zealand hold dawn services on 25 April, the anniversary of their troops landing at Gallipoli in 1915. Name the day.",
+          "et": "Austraalia ja Uus-Meremaa korraldavad 25. aprillil koidutseremooniaid, meenutades oma vägede 1915. aasta maabumist Gallipolis. Nimeta päev."
         },
         "response": {
-          "en": "open educational resources",
-          "et": "avatud õppematerjalid"
+          "en": "ANZAC Day",
+          "et": "ANZACi päev"
         },
         "acceptedVariants": {
           "en": [
-            "OER"
+            "ANZAC remembrance day"
           ],
           "et": [
-            "OER"
+            "ANZAC Day",
+            "ANZACi mälestuspäev"
           ]
         },
         "explanation": {
-          "en": "Open educational resources may be adapted and redistributed under the terms of their licence.",
-          "et": "Avatud õppematerjale võib litsentsi tingimustel kohandada ja edasi jagada."
+          "en": "ANZAC Day began as a commemoration of Australian and New Zealand soldiers at Gallipoli and now honours their wider military service and sacrifice.",
+          "et": "ANZACi päev sai alguse Austraalia ja Uus-Meremaa sõdurite Gallipoli maabumise mälestamisest ning austab nüüd laiemalt nende sõjaväeteenistust ja ohvreid."
         },
         "source": {
-          "sourceId": "wikipedia:open_educational_resources",
-          "title": "Open educational resources",
-          "url": "https://en.wikipedia.org/wiki/Open_educational_resources",
+          "sourceId": "wikipedia:anzac-day",
+          "title": "Anzac Day",
+          "url": "https://en.wikipedia.org/wiki/Anzac_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-091:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:training:apprenticeship",
+        "factKey": "politics-day:south-africa-reconciliation:16-december-apartheid-afrikaner-anc-mandela",
         "tier": 4,
-        "subjectKey": "training:apprenticeship",
+        "subjectKey": "commemorative-day:south-africa-reconciliation",
         "clue": {
-          "en": "Which training route combines paid workplace experience with structured instruction?",
-          "et": "Milline õpitee ühendab tasustatud töökogemuse korraldatud õppega?"
+          "en": "Post-apartheid South Africa kept 16 December but recast a date carrying rival Afrikaner and liberation-movement meanings into a shared national holiday. Name the day.",
+          "et": "Apartheidijärgne Lõuna-Aafrika säilitas 16. detsembri, kuid muutis afrikaneride ja vabastusliikumise vastandlikke tähendusi kandnud kuupäeva ühiseks riigipühaks. Nimeta päev."
         },
         "response": {
-          "en": "apprenticeship",
-          "et": "õpipoisiõpe"
+          "en": "Day of Reconciliation",
+          "et": "leppimise päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "South African Day of Reconciliation",
+            "Reconciliation Day"
+          ],
+          "et": [
+            "leppimispäev",
+            "Lõuna-Aafrika leppimise päev",
+            "Lõuna-Aafrika Vabariigi leppimise päev"
+          ]
         },
         "explanation": {
-          "en": "An apprenticeship prepares a learner for a recognised occupation under supervision.",
-          "et": "Õpipoisiõpe valmistab õppija juhendamisel ette tunnustatud ametiks."
+          "en": "The Day of Reconciliation was created in 1995 to acknowledge different South African histories and promote unity after apartheid.",
+          "et": "Leppimise päev loodi 1995. aastal, et tunnustada Lõuna-Aafrika erinevaid ajalookogemusi ja edendada pärast apartheidi ühtsust."
         },
         "source": {
-          "sourceId": "wikipedia:apprenticeship",
-          "title": "Apprenticeship",
-          "url": "https://en.wikipedia.org/wiki/Apprenticeship",
+          "sourceId": "wikipedia:day-of-reconciliation",
+          "title": "Day of Reconciliation",
+          "url": "https://en.wikipedia.org/wiki/Day_of_Reconciliation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-091:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:support:student-grant",
+        "factKey": "politics-day:waitangi:6-february-treaty-crown-maori-new-zealand",
         "tier": 5,
-        "subjectKey": "support:student-grant",
+        "subjectKey": "commemorative-day:waitangi-day",
         "clue": {
-          "en": "What education funding is awarded to a learner and normally does not require repayment?",
-          "et": "Milline hariduse rahastus antakse õppijale ning seda ei pea tavaliselt tagasi maksma?"
+          "en": "New Zealand’s national day falls on 6 February, marking the 1840 treaty signed between representatives of the British Crown and many Māori chiefs. Name the day.",
+          "et": "Uus-Meremaa rahvuspäev on 6. veebruaril ning meenutab 1840. aasta lepingut, mille sõlmisid Briti krooni esindajad ja paljud maoori pealikud. Nimeta päev."
         },
         "response": {
-          "en": "student grant",
-          "et": "õppetoetus"
+          "en": "Waitangi Day",
+          "et": "Waitangi päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "New Zealand Waitangi Day",
+            "Te Rā o Waitangi"
+          ],
+          "et": [
+            "Uus-Meremaa Waitangi päev",
+            "Te Rā o Waitangi",
+            "Waitangi Day"
+          ]
         },
         "explanation": {
-          "en": "Student grants differ from loans because they are non-repayable when conditions are met.",
-          "et": "Õppetoetus erineb laenust, sest tingimuste täitmisel ei nõuta selle tagasimaksmist."
+          "en": "Waitangi Day commemorates the first signing of the Treaty of Waitangi, a foundational and contested document in New Zealand history.",
+          "et": "Waitangi päev meenutab Waitangi lepingu esimest allkirjastamist; see on Uus-Meremaa ajaloo alusdokument ja jätkuvate vaidluste keskpunkt."
         },
         "source": {
-          "sourceId": "wikipedia:student_financial_aid",
-          "title": "Student financial aid",
-          "url": "https://en.wikipedia.org/wiki/Student_financial_aid",
+          "sourceId": "wikipedia:waitangi-day",
+          "title": "Waitangi Day",
+          "url": "https://en.wikipedia.org/wiki/Waitangi_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -29572,157 +29844,198 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-092",
     "name": {
-      "en": "Measuring Health across a Population",
-      "et": "Rahvastiku tervise mõõtmine"
+      "en": "Pages That Changed Politics",
+      "et": "Poliitikat muutnud leheküljed"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-092:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:incidence",
+        "factKey": "politics-work:communist-manifesto:marx-engels-1848-spectre-workers",
         "tier": 1,
-        "subjectKey": "measure:incidence",
+        "subjectKey": "political-work:communist-manifesto",
         "clue": {
-          "en": "Which measure counts new cases arising in a population during a specified period?",
-          "et": "Milline näit loendab kindla ajavahemiku jooksul rahvastikus tekkinud uusi juhte?"
+          "en": "Marx and Engels published this 1848 pamphlet, whose opening spectre and final call to workers became two of political writing’s most quoted lines. Name the work.",
+          "et": "Marx ja Engels avaldasid selle 1848. aasta pamfleti, mille alguse tont ja lõpu üleskutse töölistele said poliitikakirjanduse kuulsaimateks ridadeks. Nimeta teos."
         },
         "response": {
-          "en": "incidence",
-          "et": "haigestumus"
+          "en": "The Communist Manifesto",
+          "et": "Kommunistliku partei manifest"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Communist Manifesto",
+            "Manifesto of the Communist Party",
+            "The Manifesto of the Communist Party"
+          ],
+          "et": [
+            "Kommunistlik manifest",
+            "The Communist Manifesto",
+            "Manifesto of the Communist Party"
+          ]
         },
         "explanation": {
-          "en": "Incidence measures risk or case occurrence over time rather than all existing cases.",
-          "et": "Haigestumus mõõdab uute juhtude teket ajas, mitte kõiki olemasolevaid juhte."
+          "en": "The Communist Manifesto set out a concise account of class struggle and called on workers of all countries to unite.",
+          "et": "„Kommunistliku partei manifest” esitas lühidalt klassivõitluse käsitluse ja kutsus kõigi maade proletaarlasi ühinema."
         },
         "source": {
-          "sourceId": "wikipedia:incidence_(epidemiology)",
-          "title": "Incidence (epidemiology)",
-          "url": "https://en.wikipedia.org/wiki/Incidence_(epidemiology)",
+          "sourceId": "wikipedia:the-communist-manifesto",
+          "title": "The Communist Manifesto",
+          "url": "https://en.wikipedia.org/wiki/The_Communist_Manifesto",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-092:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:prevalence",
+        "factKey": "politics-work:little-red-book:mao-quotations-pocket-cultural-revolution-mass-distribution",
         "tier": 2,
-        "subjectKey": "measure:prevalence",
+        "subjectKey": "political-work:quotations-chairman-mao",
         "clue": {
-          "en": "Which measure describes everyone in a population who has a condition at a given time?",
-          "et": "Milline näit kirjeldab kõiki rahvastiku liikmeid, kellel on kindlal ajal vaadeldav seisund?"
+          "en": "This pocket collection of quotations from Mao Zedong was distributed on an enormous scale and carried as a loyalty symbol during the Cultural Revolution. Name the work.",
+          "et": "Seda Mao Zedongi tsitaatide taskukogumikku jagati hiiglaslikes kogustes ja kanti kultuurirevolutsiooni ajal lojaalsuse sümbolina. Nimeta teos."
         },
         "response": {
-          "en": "prevalence",
-          "et": "levimus"
+          "en": "The Little Red Book",
+          "et": "Väike punane raamat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mao’s Little Red Book",
+            "Quotations from Chairman Mao Tse-tung",
+            "Quotations from Chairman Mao Zedong"
+          ],
+          "et": [
+            "Mao väike punane raamat",
+            "Esimees Mao tsitaadid",
+            "Mao Zedongi tsitaadid",
+            "The Little Red Book"
+          ]
         },
         "explanation": {
-          "en": "Prevalence depends on both new cases and how long the condition lasts.",
-          "et": "Levimus sõltub nii uutest juhtudest kui seisundi kestusest."
+          "en": "The Little Red Book is the popular name for Quotations from Chairman Mao Tse-tung, one of the most widely printed political books in history.",
+          "et": "„Väike punane raamat” on teose „Esimees Mao tsitaadid” levinud nimi ning see on üks ajaloo enim trükitud poliitilisi raamatuid."
         },
         "source": {
-          "sourceId": "wikipedia:prevalence",
-          "title": "Prevalence",
-          "url": "https://en.wikipedia.org/wiki/Prevalence",
+          "sourceId": "wikipedia:quotations-from-chairman-mao-tse-tung",
+          "title": "Quotations from Chairman Mao Tse-tung",
+          "url": "https://en.wikipedia.org/wiki/Quotations_from_Chairman_Mao_Tse-tung",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-092:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:system:sentinel-surveillance",
+        "factKey": "politics-work:birmingham-letter:mlk-1963-clergy-imprisoned-nonviolent-direct-action",
         "tier": 3,
-        "subjectKey": "system:sentinel-surveillance",
+        "subjectKey": "political-work:letter-birmingham-jail",
         "clue": {
-          "en": "Selected clinics report detailed cases to monitor trends. What surveillance design is this?",
-          "et": "Valitud kliinikud teatavad suundumuste jälgimiseks üksikasjalikest juhtudest. Mis seireviis see on?"
+          "en": "While imprisoned during a 1963 Alabama civil-rights campaign, Martin Luther King Jr. answered white clergy who urged patience and defended nonviolent direct action. Name the resulting work.",
+          "et": "Martin Luther King juunior vastas 1963. aasta Alabama kodanikuõiguste kampaania ajal vangistuses valgetele vaimulikele, kes soovitasid kannatust, ning kaitses vägivallatut otsest tegevust. Nimeta sündinud teos."
         },
         "response": {
-          "en": "sentinel surveillance",
-          "et": "sentinelseire"
+          "en": "Letter from Birmingham Jail",
+          "et": "Kiri Birminghami vanglast"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Birmingham Jail letter",
+            "Letter from Birmingham City Jail",
+            "Martin Luther King’s Birmingham Jail letter",
+            "MLK’s Birmingham Jail letter"
+          ],
+          "et": [
+            "Birminghami vanglakiri",
+            "Kiri Birminghami linnavanglast",
+            "Martin Luther Kingi kiri Birminghami vanglast",
+            "Letter from Birmingham Jail"
+          ]
         },
         "explanation": {
-          "en": "Sentinel surveillance uses chosen reporting sites rather than attempting complete population coverage.",
-          "et": "Sentinelseire kasutab valitud teavituskohti ega püüa katta kogu rahvastikku."
+          "en": "Letter from Birmingham Jail argues that people have a moral responsibility to resist unjust laws and explains why waiting for civil rights was unacceptable.",
+          "et": "„Kiri Birminghami vanglast” väidab, et inimestel on moraalne kohustus ebaõiglastele seadustele vastu seista, ja selgitab, miks kodanikuõigustega ootamine polnud vastuvõetav."
         },
         "source": {
-          "sourceId": "wikipedia:sentinel_surveillance",
-          "title": "Sentinel surveillance",
-          "url": "https://en.wikipedia.org/wiki/Sentinel_surveillance",
+          "sourceId": "wikipedia:letter-from-birmingham-jail",
+          "title": "Letter from Birmingham Jail",
+          "url": "https://en.wikipedia.org/wiki/Letter_from_Birmingham_Jail",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-092:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:measure:basic-reproduction-number",
+        "factKey": "politics-work:common-sense:thomas-paine-1776-thirteen-colonies-independence-circulation",
         "tier": 4,
-        "subjectKey": "measure:basic-reproduction-number",
+        "subjectKey": "political-work:common-sense-paine",
         "clue": {
-          "en": "Which epidemiological quantity estimates secondary infections from one case in a wholly susceptible population?",
-          "et": "Milline epidemioloogiline suurus hindab ühe juhu põhjustatud teiseseid nakatumisi täielikult vastuvõtlikus rahvastikus?"
+          "en": "Thomas Paine published this short 1776 pamphlet making a plain-language case for the Thirteen Colonies to break from Britain; it circulated extraordinarily widely. Name the work.",
+          "et": "Thomas Paine avaldas selle lühikese 1776. aasta pamfleti, mis põhjendas lihtsas keeles kolmeteistkümne koloonia lahkulöömist Suurbritanniast ja levis erakordselt laialt. Nimeta teos."
         },
         "response": {
-          "en": "basic reproduction number",
-          "et": "baasreproduktsiooniarv"
+          "en": "Common Sense",
+          "et": "Terve mõistus"
         },
         "acceptedVariants": {
           "en": [
-            "R0"
+            "Thomas Paine’s Common Sense",
+            "Common Sense pamphlet",
+            "Paine’s Common Sense"
           ],
           "et": [
-            "R0"
+            "Thomas Paine’i Terve mõistus",
+            "Thomas Paine’i Common Sense",
+            "Common Sense"
           ]
         },
         "explanation": {
-          "en": "A basic reproduction number above one indicates potential growth under the model’s assumptions.",
-          "et": "Ühest suurem baasreproduktsiooniarv näitab mudeli eeldustel võimalikku leviku kasvu."
+          "en": "Common Sense attacked monarchy and argued for American independence in language intended for a broad colonial audience.",
+          "et": "„Terve mõistus” ründas monarhiat ja kaitses Ameerika iseseisvust keeles, mis oli mõeldud laiale koloniaalpublikule."
         },
         "source": {
-          "sourceId": "wikipedia:basic_reproduction_number",
-          "title": "Basic reproduction number",
-          "url": "https://en.wikipedia.org/wiki/Basic_reproduction_number",
+          "sourceId": "wikipedia:common-sense",
+          "title": "Common Sense",
+          "url": "https://en.wikipedia.org/wiki/Common_Sense",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-092:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:health-promotion",
+        "factKey": "politics-work:green-book:gaddafi-libya-three-parts-third-international-theory",
         "tier": 5,
-        "subjectKey": "practice:health-promotion",
+        "subjectKey": "political-work:gaddafi-green-book",
         "clue": {
-          "en": "What public-health practice helps people gain greater control over the determinants of their health?",
-          "et": "Milline rahvatervise tegevus aitab inimestel saavutada suurema kontrolli oma tervisemõjurite üle?"
+          "en": "Muammar Gaddafi presented his Third International Theory in a three-part political work treated as ideological guidance in Libya. Name the book.",
+          "et": "Muammar Gaddafi esitas oma kolmanda rahvusvahelise teooria kolmeosalises poliitilises teoses, mida käsitleti Liibüas ideoloogilise juhisena. Nimeta raamat."
         },
         "response": {
-          "en": "health promotion",
-          "et": "terviseedendus"
+          "en": "The Green Book",
+          "et": "Roheline raamat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Muammar Gaddafi’s Green Book",
+            "Gaddafi’s Green Book",
+            "al-Kitāb al-Aḫḍar",
+            "The Green Book by Gaddafi"
+          ],
+          "et": [
+            "Gaddafi Roheline raamat",
+            "Muammar Gaddafi „Roheline raamat”",
+            "The Green Book",
+            "al-Kitāb al-Aḫḍar"
+          ]
         },
         "explanation": {
-          "en": "Health promotion includes supportive policy and environments, not merely information campaigns.",
-          "et": "Terviseedendus hõlmab toetavat poliitikat ja keskkonda, mitte ainult teavituskampaaniaid."
+          "en": "The Green Book outlined Gaddafi’s claimed alternative to capitalism and communism and became compulsory ideological reading in his Libya.",
+          "et": "„Roheline raamat” kirjeldas Gaddafi väidetavat alternatiivi kapitalismile ja kommunismile ning muutus tema Liibüas kohustuslikuks ideoloogiliseks lugemiseks."
         },
         "source": {
-          "sourceId": "wikipedia:health_promotion",
-          "title": "Health promotion",
-          "url": "https://en.wikipedia.org/wiki/Health_promotion",
+          "sourceId": "wikipedia:the-green-book-muammar-gaddafi",
+          "title": "The Green Book (Muammar Gaddafi)",
+          "url": "https://en.wikipedia.org/wiki/The_Green_Book_(Muammar_Gaddafi)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
