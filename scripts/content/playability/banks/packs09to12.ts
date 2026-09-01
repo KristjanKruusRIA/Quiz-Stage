@@ -25157,153 +25157,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-067",
     "name": {
-      "en": "Mechanisms That Restrain a Constitution",
-      "et": "Põhiseadusliku võimu pidurid"
+      "en": "Accords Named for Places",
+      "et": "Paikade järgi nimetatud kokkulepped"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-067:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:council:french-constitutional",
+        "factKey": "politics:oslo-accords:norway-secret-talks-israel-plo-handshake",
         "tier": 1,
-        "subjectKey": "council:french-constitutional",
+        "subjectKey": "agreement:oslo-accords",
         "clue": {
-          "en": "Which French body reviews statutes for constitutionality and supervises national elections and referendums?",
-          "et": "Milline Prantsusmaa organ kontrollib seaduste põhiseaduspärasust ning valvab üleriigiliste valimiste ja referendumite üle?"
+          "en": "Secret talks in Norway led Yitzhak Rabin and Yasser Arafat to shake hands at the White House over a framework for Palestinian self-government. Which accords took Norway’s capital as their name?",
+          "et": "Salajased kõnelused Norras viisid selleni, et Yitzhak Rabin ja Yasser Arafat surusid Valges Majas kätt Palestiina omavalitsuse raamistiku üle. Millised lepped said nime Norra pealinna järgi?"
         },
         "response": {
-          "en": "French Constitutional Council",
-          "et": "Prantsusmaa konstitutsiooninõukogu"
+          "en": "Oslo Accords",
+          "et": "Oslo lepped"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Oslo peace accords",
+            "Oslo peace agreement"
+          ],
+          "et": [
+            "Oslo rahulepped",
+            "Oslo kokkulepped"
+          ]
         },
         "explanation": {
-          "en": "The Constitutional Council is a distinct institution rather than the apex of France’s ordinary courts.",
-          "et": "Konstitutsiooninõukogu on eraldiseisev institutsioon, mitte Prantsusmaa tavakohtute kõrgeim aste."
+          "en": "The Oslo Accords grew from secret Norway talks between Israel and the PLO and produced the famous 1993 White House handshake.",
+          "et": "Oslo lepped kasvasid välja Iisraeli ja PLO salakõnelustest Norras ning viisid 1993. aasta kuulsa käepigistuseni Valges Majas."
         },
         "source": {
-          "sourceId": "wikipedia:constitutional_council_(france)",
-          "title": "Constitutional Council (France)",
-          "url": "https://en.wikipedia.org/wiki/Constitutional_Council_(France)",
+          "sourceId": "wikipedia:oslo-accords",
+          "title": "Oslo Accords",
+          "url": "https://en.wikipedia.org/wiki/Oslo_Accords",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-067:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:entrenched-clause",
+        "factKey": "politics:helsinki-accords:csce-security-borders-human-rights-baskets",
         "tier": 2,
-        "subjectKey": "concept:entrenched-clause",
+        "subjectKey": "agreement:helsinki-accords",
         "clue": {
-          "en": "What constitutional provision requires a harder procedure than ordinary amendment?",
-          "et": "Milline põhiseaduse säte nõuab tavamuudatusest rangemat menetlust?"
+          "en": "Thirty-five states signed a Cold War final act in Finland that linked European security and existing borders with cooperation and human-rights commitments. Name the accords.",
+          "et": "Kolmkümmend viis riiki allkirjastasid Soomes külma sõja aegse lõppakti, mis sidus Euroopa julgeoleku ja senised piirid koostöö ning inimõiguste kohustustega. Nimeta lepped."
         },
         "response": {
-          "en": "entrenched clause",
-          "et": "kaitseklausel"
+          "en": "Helsinki Accords",
+          "et": "Helsingi lepped"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Helsinki Final Act",
+            "Helsinki Declaration"
+          ],
+          "et": [
+            "Helsingi lõppakt",
+            "Helsingi kokkulepped"
+          ]
         },
         "explanation": {
-          "en": "An entrenched clause can demand a supermajority, referendum, or even prohibit amendment.",
-          "et": "Kaitseklausel võib nõuda kvalifitseeritud enamust, referendumit või muudatuse keelata."
+          "en": "The 1975 Helsinki Accords concluded the Conference on Security and Co-operation in Europe and grouped commitments on security, cooperation, and human rights.",
+          "et": "1975. aasta Helsingi lepped lõpetasid Euroopa julgeoleku- ja koostöökonverentsi ning koondasid julgeoleku-, koostöö- ja inimõiguskohustused."
         },
         "source": {
-          "sourceId": "wikipedia:entrenched_clause",
-          "title": "Entrenched clause",
-          "url": "https://en.wikipedia.org/wiki/Entrenched_clause",
+          "sourceId": "wikipedia:helsinki-accords",
+          "title": "Helsinki Accords",
+          "url": "https://en.wikipedia.org/wiki/Helsinki_Accords",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-067:question:3",
-        "factKey": "built-in-politics-economics-society:round1-overlap:assembly:constitutional-convention",
+        "factKey": "politics:dayton-agreement:ohio-talks-ended-bosnian-war-paris-signing",
         "tier": 3,
-        "subjectKey": "assembly:constitutional-convention",
+        "subjectKey": "agreement:dayton",
         "clue": {
-          "en": "What specially convened assembly drafts or revises a constitution outside ordinary legislative business?",
-          "et": "Milline eraldi kokku kutsutud kogu koostab või muudab põhiseadust väljaspool tavapärast seadusandlust?"
+          "en": "Negotiators spent weeks at an Ohio air base designing Bosnia and Herzegovina’s post-war settlement; the text was later signed in Paris. Which agreement kept the Ohio city’s name?",
+          "et": "Läbirääkijad veetsid nädalaid Ohio õhuväebaasis, kujundades Bosnia ja Hertsegoviina sõjajärgset korda; tekst allkirjastati hiljem Pariisis. Milline leping säilitas Ohio linna nime?"
         },
         "response": {
-          "en": "constitutional convention",
-          "et": "põhiseaduskonvent"
+          "en": "Dayton Agreement",
+          "et": "Daytoni leping"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Dayton Accords",
+            "Dayton Peace Agreement"
+          ],
+          "et": [
+            "Daytoni rahuleping",
+            "Daytoni kokkulepped",
+            "Daytoni kokkulepe"
+          ]
         },
         "explanation": {
-          "en": "A constitutional convention may propose a new basic law for later ratification by voters or states.",
-          "et": "Põhiseaduskonvent võib esitada uue aluskorra hilisemaks kinnitamiseks valijatele või osariikidele."
+          "en": "The Dayton Agreement was initialled near Dayton, Ohio, in 1995 and formally signed in Paris, ending the Bosnian War.",
+          "et": "Daytoni leping parafeeriti 1995. aastal Ohio osariigis Daytoni lähistel ja allkirjastati ametlikult Pariisis, lõpetades Bosnia sõja."
         },
         "source": {
-          "sourceId": "wikipedia:constitutional_convention_(political_meeting)",
-          "title": "Constitutional convention (political meeting)",
-          "url": "https://en.wikipedia.org/wiki/Constitutional_convention_(political_meeting)",
+          "sourceId": "wikipedia:dayton-agreement",
+          "title": "Dayton Agreement",
+          "url": "https://en.wikipedia.org/wiki/Dayton_Agreement",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-067:question:4",
-        "factKey": "built-in-politics-economics-society:round1-overlap:principle:checks-and-balances",
+        "factKey": "economics:plaza-accord:plaza-hotel-five-governments-dollar-depreciation",
         "tier": 4,
-        "subjectKey": "principle:checks-and-balances",
+        "subjectKey": "agreement:plaza-accord",
         "clue": {
-          "en": "Which design lets branches restrain one another through vetoes, review, appointment, or removal powers?",
-          "et": "Milline korraldus lubab võimuharudel üksteist veto, kontrolli, nimetamise või tagandamise kaudu piirata?"
+          "en": "Finance ministers from five major economies met at New York’s Plaza Hotel and agreed to push down an overvalued US dollar. What hotel-named currency deal was this?",
+          "et": "Viie suure majanduse rahandusministrid kohtusid New Yorgi Plaza hotellis ja leppisid kokku ülehinnatud USA dollari kursi langetamises. Milline hotelli järgi nimetatud valuutakokkulepe see oli?"
         },
         "response": {
-          "en": "checks and balances",
-          "et": "kontroll ja tasakaal"
+          "en": "Plaza Accord",
+          "et": "Plaza kokkulepe"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Plaza Agreement"
+          ],
+          "et": [
+            "Plaza lepe"
+          ]
         },
         "explanation": {
-          "en": "Checks and balances supplement separated functions with deliberate institutional interdependence.",
-          "et": "Kontroll ja tasakaal täiendavad lahutatud ülesandeid teadliku institutsionaalse vastastikuse sõltuvusega."
+          "en": "The 1985 Plaza Accord joined France, West Germany, Japan, the United Kingdom, and the United States in coordinated action to depreciate the dollar.",
+          "et": "1985. aasta Plaza kokkulepe ühendas Prantsusmaa, Lääne-Saksamaa, Jaapani, Ühendkuningriigi ja USA koordineeritud tegevuses dollari odavdamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:checks_and_balances",
-          "title": "Checks and balances",
-          "url": "https://en.wikipedia.org/wiki/Checks_and_balances",
+          "sourceId": "wikipedia:plaza-accord",
+          "title": "Plaza Accord",
+          "url": "https://en.wikipedia.org/wiki/Plaza_Accord",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-067:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:principle:constitutionalism",
+        "factKey": "politics:algiers-accords:algeria-mediated-iran-hostages-release-assets",
         "tier": 5,
-        "subjectKey": "principle:constitutionalism",
+        "subjectKey": "agreement:algiers-accords-1981",
         "clue": {
-          "en": "Which political principle holds that government should be limited by a constitution and its institutions?",
-          "et": "Milline poliitiline põhimõte nõuab, et valitsust piiraksid põhiseadus ja selle institutsioonid?"
+          "en": "Algeria mediated the settlement that freed 52 Americans after 444 days in captivity and created a claims tribunal to untangle frozen assets. Name the agreements after Algeria’s capital.",
+          "et": "Alžeeria vahendas kokkuleppe, mis vabastas 52 ameeriklast pärast 444 päeva vangistust ja lõi külmutatud varade vaidlusteks nõuete tribunali. Nimeta Alžeeria pealinna järgi tuntud kokkulepped."
         },
         "response": {
-          "en": "constitutionalism",
-          "et": "konstitutsionalism"
+          "en": "Algiers Accords",
+          "et": "Alžiiri kokkulepped"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Algiers Agreements",
+            "Algiers Agreement"
+          ],
+          "et": [
+            "Alžiiri lepped",
+            "Alžiiri kokkulepe"
+          ]
         },
         "explanation": {
-          "en": "Constitutionalism treats a constitution as a real limit on public power, not merely a description of offices.",
-          "et": "Konstitutsionalism käsitleb põhiseadust avaliku võimu tegeliku piirina, mitte pelga ametite kirjeldusena."
+          "en": "The 1981 Algiers Accords ended the Iran hostage crisis, arranged the hostages’ release, and established the Iran–United States Claims Tribunal.",
+          "et": "1981. aasta Alžiiri kokkulepped lõpetasid Iraani pantvangikriisi, korraldasid pantvangide vabastamise ja lõid Iraani-USA nõuete tribunali."
         },
         "source": {
-          "sourceId": "wikipedia:constitutionalism",
-          "title": "Constitutionalism",
-          "url": "https://en.wikipedia.org/wiki/Constitutionalism",
+          "sourceId": "wikipedia:algiers-accords-1981",
+          "title": "Algiers Accords (1981)",
+          "url": "https://en.wikipedia.org/wiki/Algiers_Accords_(1981)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -25311,153 +25340,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-068",
     "name": {
-      "en": "Procedure inside a Parliament",
-      "et": "Parlamendi menetluse tööriistad"
+      "en": "Speeches That Left a Phrase",
+      "et": "Kõned, millest jäi fraas"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-068:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:procedure:filibuster",
+        "factKey": "politics:tear-down-wall:reagan-brandenburg-gate-gorbachev-challenge",
         "tier": 1,
-        "subjectKey": "procedure:filibuster",
+        "subjectKey": "speech:tear-down-this-wall",
         "clue": {
-          "en": "What tactic delays a vote through prolonged debate or procedural moves?",
-          "et": "Milline taktika lükkab hääletust edasi pika arutelu või menetlusvõtetega?"
+          "en": "Speaking beside the Brandenburg Gate, Ronald Reagan challenged Mikhail Gorbachev to prove reform by opening and removing the barrier behind him. By what remembered command is the address known?",
+          "et": "Brandenburgi värava kõrval kõneldes kutsus Ronald Reagan Mihhail Gorbatšovi tõestama reformitahet, avades ja eemaldades enda taga oleva tõkke. Millise meeldejäänud käsu järgi kõnet tuntakse?"
         },
         "response": {
-          "en": "filibuster",
-          "et": "obstruktsioon"
+          "en": "Tear Down This Wall speech",
+          "et": "Tear Down This Wall kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tear Down This Wall",
+            "Reagan’s Berlin Wall speech"
+          ],
+          "et": [
+            "Tear Down This Wall",
+            "Reagani Berliini müüri kõne"
+          ]
         },
         "explanation": {
-          "en": "A filibuster exploits chamber rules and may be ended by a cloture procedure.",
-          "et": "Obstruktsioon kasutab koja reegleid ning selle võib lõpetada arutelu sulgemine."
+          "en": "Reagan’s 1987 Berlin address became famous for his challenge to Gorbachev concerning the Berlin Wall.",
+          "et": "Reagani 1987. aasta Berliini kõne sai kuulsaks Gorbatšovile esitatud üleskutsega Berliini müüri kohta."
         },
         "source": {
-          "sourceId": "wikipedia:filibuster",
-          "title": "Filibuster",
-          "url": "https://en.wikipedia.org/wiki/Filibuster",
+          "sourceId": "wikipedia:tear-down-this-wall",
+          "title": "Tear down this wall!",
+          "url": "https://en.wikipedia.org/wiki/Tear_down_this_wall!",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-068:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:quorum",
+        "factKey": "politics:ich-bin-ein-berliner:kennedy-west-berlin-rathaus-schoneberg-solidarity",
         "tier": 2,
-        "subjectKey": "concept:quorum",
+        "subjectKey": "speech:ich-bin-ein-berliner",
         "clue": {
-          "en": "What minimum attendance makes a legislative meeting valid?",
-          "et": "Milline minimaalne kohalolijate arv muudab seadusandliku koosoleku otsustusvõimeliseks?"
+          "en": "John F. Kennedy told a West Berlin crowd that every free person could claim their city’s identity, then repeated the idea in German. Name the address by its German phrase.",
+          "et": "John F. Kennedy ütles Lääne-Berliini rahvahulgale, et iga vaba inimene võib pidada end nende linna kodanikuks, ning kordas mõtet saksa keeles. Nimeta kõne selle saksakeelse fraasi järgi."
         },
         "response": {
-          "en": "quorum",
-          "et": "kvoorum"
+          "en": "Ich bin ein Berliner speech",
+          "et": "Ich bin ein Berliner kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ich bin ein Berliner",
+            "Kennedy’s Berlin speech"
+          ],
+          "et": [
+            "Ich bin ein Berliner",
+            "Kennedy Berliini kõne"
+          ]
         },
         "explanation": {
-          "en": "Without a quorum a chamber usually cannot conduct binding business.",
-          "et": "Kvoorumita ei saa koda tavaliselt siduvaid otsuseid teha."
+          "en": "Kennedy delivered the Ich bin ein Berliner speech outside Rathaus Schöneberg in 1963 as a declaration of US solidarity with West Berlin.",
+          "et": "Kennedy pidas Ich bin ein Berliner kõne 1963. aastal Rathaus Schönebergi ees, väljendades USA solidaarsust Lääne-Berliiniga."
         },
         "source": {
-          "sourceId": "wikipedia:quorum",
-          "title": "Quorum",
-          "url": "https://en.wikipedia.org/wiki/Quorum",
+          "sourceId": "wikipedia:ich-bin-ein-berliner",
+          "title": "Ich bin ein Berliner",
+          "url": "https://en.wikipedia.org/wiki/Ich_bin_ein_Berliner",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-068:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:stage:committee-stage",
+        "factKey": "politics:blood-toil:churchill-first-premier-commons-war-policy-victory",
         "tier": 3,
-        "subjectKey": "stage:committee-stage",
+        "subjectKey": "speech:blood-toil-tears-sweat",
         "clue": {
-          "en": "At which bill stage do specialists examine clauses and propose detailed amendments?",
-          "et": "Millises eelnõuetapis uurivad asjatundjad sätteid ja esitavad detailseid muudatusi?"
+          "en": "In his first address to the Commons as prime minister, Churchill offered no easy comfort and said his policy was war and his aim victory. Which four grim costs title the speech?",
+          "et": "Oma esimeses pöördumises alamkoja poole peaministrina ei pakkunud Churchill lihtsat lohutust: tema poliitika oli sõda ja eesmärk võit. Millised neli sünget hinda annavad kõnele nime?"
         },
         "response": {
-          "en": "committee stage",
-          "et": "komisjonietapp"
+          "en": "Blood, Toil, Tears and Sweat speech",
+          "et": "„Veri, vaev, pisarad ja higi” kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Blood, Toil, Tears and Sweat",
+            "Churchill’s blood, toil, tears and sweat speech"
+          ],
+          "et": [
+            "Blood, Toil, Tears and Sweat",
+            "veri, vaev, pisarad ja higi",
+            "verd, vaeva, pisaraid ja higi",
+            "Churchilli „veri, vaev, pisarad ja higi” kõne"
+          ]
         },
         "explanation": {
-          "en": "Committee stage allows closer scrutiny than debate by the full chamber.",
-          "et": "Komisjonietapp võimaldab täiskogu arutelust üksikasjalikumat kontrolli."
+          "en": "Churchill delivered Blood, Toil, Tears and Sweat on 13 May 1940 after forming a wartime coalition government.",
+          "et": "Churchill pidas kõne „veri, vaev, pisarad ja higi” 13. mail 1940 pärast sõjaaegse koalitsioonivalitsuse moodustamist."
         },
         "source": {
-          "sourceId": "wikipedia:committee_stage",
-          "title": "Committee stage",
-          "url": "https://en.wikipedia.org/wiki/Committee_stage",
+          "sourceId": "wikipedia:blood-toil-tears-and-sweat",
+          "title": "Blood, toil, tears and sweat",
+          "url": "https://en.wikipedia.org/wiki/Blood,_toil,_tears_and_sweat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-068:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:procedure:royal-assent",
+        "factKey": "politics:rivers-of-blood:powell-birmingham-immigration-aeneid",
         "tier": 4,
-        "subjectKey": "procedure:royal-assent",
+        "subjectKey": "speech:rivers-of-blood",
         "clue": {
-          "en": "What formal approval turns a passed bill into law in many monarchies?",
-          "et": "Milline ametlik heakskiit muudab vastuvõetud eelnõu paljudes monarhiates seaduseks?"
+          "en": "Enoch Powell’s 1968 Birmingham address attacked mass immigration and borrowed an ominous image of the River Tiber from Virgil’s Aeneid. By what unofficial title is it known?",
+          "et": "Enoch Powelli 1968. aasta Birminghami kõne ründas massilist sisserännet ja laenas Vergiliuse „Aeneisest” pahaendelise Tiberi jõe kujundi. Millise mitteametliku pealkirja all seda tuntakse?"
         },
         "response": {
-          "en": "royal assent",
-          "et": "kuninglik nõusolek"
+          "en": "Rivers of Blood speech",
+          "et": "Rivers of Blood kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Rivers of Blood",
+            "Enoch Powell’s Rivers of Blood speech"
+          ],
+          "et": [
+            "verejõgede kõne",
+            "Enoch Powelli Rivers of Blood kõne"
+          ]
         },
         "explanation": {
-          "en": "Royal assent is normally constitutional formality in modern parliamentary monarchies.",
-          "et": "Kuninglik nõusolek on tänapäeva parlamentaarses monarhias tavaliselt formaalsus."
+          "en": "The Rivers of Blood speech was Powell’s controversial 1968 address opposing Commonwealth immigration; its familiar title came from his classical quotation.",
+          "et": "Rivers of Blood kõne oli Powelli vastuoluline 1968. aasta pöördumine Rahvaste Ühendusest pärit sisserände vastu; tuntud pealkiri tuli tema antiiktsitaadist."
         },
         "source": {
-          "sourceId": "wikipedia:royal_assent",
-          "title": "Royal assent",
-          "url": "https://en.wikipedia.org/wiki/Royal_assent",
+          "sourceId": "wikipedia:rivers-of-blood-speech",
+          "title": "Rivers of Blood speech",
+          "url": "https://en.wikipedia.org/wiki/Rivers_of_Blood_speech",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-068:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:privilege:parliamentary",
+        "factKey": "politics:tryst-with-destiny:nehru-midnight-india-independence",
         "tier": 5,
-        "subjectKey": "privilege:parliamentary",
+        "subjectKey": "speech:tryst-with-destiny",
         "clue": {
-          "en": "Which protection permits legislators to speak in the chamber without ordinary defamation liability?",
-          "et": "Milline kaitse lubab saadikul kojas kõnelda tavapärase laimuvastutuseta?"
+          "en": "Near midnight on 14 August 1947, Jawaharlal Nehru told the assembly that while the world slept, India would awake to life and freedom. Name the address.",
+          "et": "1947. aasta 14. augusti südaöö paiku ütles Jawaharlal Nehru assambleele, et samal ajal kui maailm magab, ärkab India ellu ja vabadusse. Nimeta pöördumine."
         },
         "response": {
-          "en": "parliamentary privilege",
-          "et": "parlamendiprivileeg"
+          "en": "Tryst with Destiny speech",
+          "et": "Tryst with Destiny kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tryst with Destiny",
+            "A Tryst with Destiny"
+          ],
+          "et": [
+            "Tryst with Destiny",
+            "kohtumine saatusega"
+          ]
         },
         "explanation": {
-          "en": "Parliamentary privilege protects institutional independence rather than private convenience.",
-          "et": "Parlamendiprivileeg kaitseb institutsiooni sõltumatust, mitte isiklikku mugavust."
+          "en": "Nehru’s Tryst with Destiny speech marked India’s independence and was delivered to the Constituent Assembly on the eve of 15 August 1947.",
+          "et": "Nehru Tryst with Destiny kõne tähistas India iseseisvumist ning see peeti Asutavas Kogus 15. augusti eelõhtul."
         },
         "source": {
-          "sourceId": "wikipedia:parliamentary_privilege",
-          "title": "Parliamentary privilege",
-          "url": "https://en.wikipedia.org/wiki/Parliamentary_privilege",
+          "sourceId": "wikipedia:tryst-with-destiny",
+          "title": "Tryst with Destiny",
+          "url": "https://en.wikipedia.org/wiki/Tryst_with_Destiny",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -25465,153 +25526,184 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-069",
     "name": {
-      "en": "Mathematics beneath Seat Allocation",
-      "et": "Kohtade jaotuse matemaatika"
+      "en": "When Saying No Made History",
+      "et": "Kui „ei” tegi ajalugu"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-069:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:formula:hare-quota",
+        "factKey": "society:buy-nothing-day:consumerism-adbusters-black-friday-one-day",
         "tier": 1,
-        "subjectKey": "formula:hare-quota",
+        "subjectKey": "action:buy-nothing-day",
         "clue": {
-          "en": "Which electoral quota divides valid votes by the number of seats?",
-          "et": "Milline valimiskvoot jagab kehtivad hääled kohtade arvuga?"
+          "en": "Adbusters promoted a one-day refusal to shop, often timed to Black Friday in North America, as a protest against consumerism. Name the observance.",
+          "et": "Adbusters propageeris ühepäevast ostlemisest loobumist, mis toimub Põhja-Ameerikas sageli mustal reedel ja protestib tarbimiskultuuri vastu. Nimeta tähtpäev."
         },
         "response": {
-          "en": "Hare quota",
-          "et": "Hare’i kvoot"
+          "en": "Buy Nothing Day",
+          "et": "ostuvaba päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "International Buy Nothing Day"
+          ],
+          "et": [
+            "Buy Nothing Day",
+            "ostmisvaba päev"
+          ]
         },
         "explanation": {
-          "en": "The Hare quota is used with largest-remainder or transferable-vote systems.",
-          "et": "Hare’i kvooti kasutatakse suurimate jääkide või ülekantava hääle süsteemis."
+          "en": "Buy Nothing Day asks participants to make no purchases for a day and uses the Black Friday shopping rush to question overconsumption.",
+          "et": "Ostuvaba päev kutsub osalejaid ühe päeva jooksul mitte midagi ostma ja kasutab musta reede osturallit ületarbimise kritiseerimiseks."
         },
         "source": {
-          "sourceId": "wikipedia:hare_quota",
-          "title": "Hare quota",
-          "url": "https://en.wikipedia.org/wiki/Hare_quota",
+          "sourceId": "wikipedia:buy-nothing-day",
+          "title": "Buy Nothing Day",
+          "url": "https://en.wikipedia.org/wiki/Buy_Nothing_Day",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-069:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:formula:droop-quota",
+        "factKey": "society:nestle-boycott:infant-formula-marketing-developing-countries",
         "tier": 2,
-        "subjectKey": "formula:droop-quota",
+        "subjectKey": "boycott:nestle-1977",
         "clue": {
-          "en": "Which quota is the integer above votes divided by seats plus one?",
-          "et": "Milline kvoot on häälte ja kohtadele liidetud ühe jagatise järgmine täisarv?"
+          "en": "A worldwide consumer campaign targeted a Swiss-based food company over its promotion of breast-milk substitutes in developing countries, where unsafe water could make bottle-feeding dangerous. Name the boycott.",
+          "et": "Üleilmne tarbijakampaania võttis sihikule Šveitsis asuva toidufirma, sest see reklaamis arengumaades rinnapiimaasendajaid, kuigi ebaturvaline vesi võis pudelitoitmise ohtlikuks muuta. Nimeta boikott."
         },
         "response": {
-          "en": "Droop quota",
-          "et": "Droopi kvoot"
+          "en": "Nestlé boycott",
+          "et": "Nestlé boikott"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1977 Nestlé boycott",
+            "Nestlé baby-formula boycott",
+            "Nestle boycott"
+          ],
+          "et": [
+            "1977. aasta Nestlé boikott",
+            "Nestlé rinnapiimaasendaja boikott",
+            "Nestle boikott"
+          ]
         },
         "explanation": {
-          "en": "No more candidates than available seats can reach the Droop quota.",
-          "et": "Droopi kvoodini ei saa jõuda rohkem kandidaate kui on kohti."
+          "en": "The Nestlé boycott began in 1977 over the company’s marketing of infant formula in developing countries and continued through later monitoring and relaunches.",
+          "et": "Nestlé boikott algas 1977. aastal vastusena ettevõtte rinnapiimaasendajate turundamisele arengumaades ning jätkus hilisemate järelevalve- ja taaskäivitamisvoorudega."
         },
         "source": {
-          "sourceId": "wikipedia:droop_quota",
-          "title": "Droop quota",
-          "url": "https://en.wikipedia.org/wiki/Droop_quota",
+          "sourceId": "wikipedia:1977-nestle-boycott",
+          "title": "1977 Nestlé boycott",
+          "url": "https://en.wikipedia.org/wiki/1977_Nestl%C3%A9_boycott",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-069:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:rule:electoral-threshold",
+        "factKey": "society:iceland-womens-day-off:paid-unpaid-work-90-percent-1975",
         "tier": 3,
-        "subjectKey": "rule:electoral-threshold",
+        "subjectKey": "action:iceland-womens-day-off-1975",
         "clue": {
-          "en": "What minimum vote share must a party cross to receive representation?",
-          "et": "Millise minimaalse häälte osakaalu peab erakond esinduse saamiseks ületama?"
+          "en": "In 1975, about 90 percent of Iceland’s women stopped both paid jobs and unpaid housework for a day, exposing how much society depended on them. What was the action called?",
+          "et": "1975. aastal jättis umbes 90 protsenti Islandi naistest üheks päevaks tegemata nii palgatöö kui ka tasustamata kodutöö, näidates ühiskonna sõltuvust nende tööst. Kuidas aktsiooni nimetati?"
         },
         "response": {
-          "en": "electoral threshold",
-          "et": "valimiskünnis"
+          "en": "Icelandic Women’s Day Off",
+          "et": "Islandi naiste vaba päev"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Icelandic women’s strike",
+            "Women’s Day Off"
+          ],
+          "et": [
+            "Islandi naiste streik",
+            "naiste vaba päev"
+          ]
         },
         "explanation": {
-          "en": "Electoral thresholds reduce fragmentation but can leave votes unrepresented.",
-          "et": "Valimiskünnis vähendab killustatust, kuid võib jätta hääli esinduseta."
+          "en": "Iceland’s Women’s Day Off on 24 October 1975 saw women leave paid and domestic work and helped accelerate the country’s push for equality.",
+          "et": "Islandi naiste vabal päeval 24. oktoobril 1975 loobusid naised palga- ja kodutööst ning andsid riigi võrdõiguslikkuse arengule hoogu."
         },
         "source": {
-          "sourceId": "wikipedia:electoral_threshold",
-          "title": "Electoral threshold",
-          "url": "https://en.wikipedia.org/wiki/Electoral_threshold",
+          "sourceId": "wikipedia:1975-icelandic-women-s-strike",
+          "title": "1975 Icelandic women's strike",
+          "url": "https://en.wikipedia.org/wiki/1975_Icelandic_women%27s_strike",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-069:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:malapportionment",
+        "factKey": "society:delano-grape:filipino-workers-chavez-consumer-table-grapes",
         "tier": 4,
-        "subjectKey": "concept:malapportionment",
+        "subjectKey": "boycott:delano-grapes",
         "clue": {
-          "en": "What problem occurs when districts with very different populations elect equal numbers of representatives?",
-          "et": "Milline probleem tekib, kui väga erineva rahvaarvuga ringkonnad valivad sama arvu esindajaid?"
+          "en": "Filipino farmworkers walked out in California, César Chávez’s union joined them, and supporters nationwide stopped buying table grapes. Name the campaign.",
+          "et": "Filipiinlastest põllutöölised lahkusid Californias töölt, César Chávezi ametiühing liitus nendega ning toetajad üle riigi lõpetasid lauaviinamarjade ostmise. Nimeta kampaania."
         },
         "response": {
-          "en": "malapportionment",
-          "et": "ebavõrdne mandaadijaotus"
+          "en": "Delano grape boycott",
+          "et": "Delano viinamarjaboikott"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Delano grape strike",
+            "United Farm Workers grape boycott"
+          ],
+          "et": [
+            "Delano viinamarjastreik",
+            "põllumajandustööliste viinamarjaboikott"
+          ]
         },
         "explanation": {
-          "en": "Malapportionment makes votes carry unequal weight across districts.",
-          "et": "Ebavõrdne mandaadijaotus annab eri ringkondade häältele erineva kaalu."
+          "en": "The Delano grape strike and consumer boycott began in 1965 and helped farmworkers win contracts from California growers.",
+          "et": "Delano viinamarjastreik ja tarbijaboikott algasid 1965. aastal ning aitasid põllutöölistel California kasvatajatelt lepingud saavutada."
         },
         "source": {
-          "sourceId": "wikipedia:malapportionment",
-          "title": "Malapportionment",
-          "url": "https://en.wikipedia.org/wiki/Malapportionment",
+          "sourceId": "wikipedia:delano-grape-strike",
+          "title": "Delano grape strike",
+          "url": "https://en.wikipedia.org/wiki/Delano_grape_strike",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-069:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:gerrymandering",
+        "factKey": "society:bristol-bus-boycott:colour-bar-conductors-race-relations-act",
         "tier": 5,
-        "subjectKey": "practice:gerrymandering",
+        "subjectKey": "boycott:bristol-bus-1963",
         "clue": {
-          "en": "What practice draws electoral boundaries to advantage a political side?",
-          "et": "Milline tava joonistab valimispiirid ühe poliitilise poole kasuks?"
+          "en": "In the southwest English city of Brunel’s Clifton Suspension Bridge, a bus company refused to hire Black drivers or conductors; the resulting 1963 action helped drive Britain’s Race Relations Act. Name the boycott.",
+          "et": "Bruneli Cliftoni rippsilla poolest tuntud Edela-Inglismaa linnas keeldus bussifirma palkamast mustanahalisi juhte või konduktoreid; sellele järgnenud 1963. aasta aktsioon aitas kaasa Suurbritannia rassisuhete seaduse sünnile. Nimeta boikott."
         },
         "response": {
-          "en": "gerrymandering",
-          "et": "valimisringkondade manipuleerimine"
+          "en": "Bristol Bus Boycott",
+          "et": "Bristoli bussiboikott"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bristol bus protest",
+            "Bristol Omnibus boycott"
+          ],
+          "et": [
+            "Bristoli bussiprotest",
+            "Bristol Omnibusi boikott"
+          ]
         },
         "explanation": {
-          "en": "Packing and cracking are common gerrymandering strategies.",
-          "et": "Kokkupakkimine ja lõhkumine on levinud valimispiiride manipuleerimise võtted."
+          "en": "The Bristol Bus Boycott challenged the Bristol Omnibus Company’s discriminatory employment policy and helped build momentum for Britain’s Race Relations Act 1965.",
+          "et": "Bristoli bussiboikott vaidlustas Bristol Omnibus Company diskrimineeriva värbamispoliitika ja aitas kasvatada toetust Suurbritannia 1965. aasta rassisuhete seadusele."
         },
         "source": {
-          "sourceId": "wikipedia:gerrymandering",
-          "title": "Gerrymandering",
-          "url": "https://en.wikipedia.org/wiki/Gerrymandering",
+          "sourceId": "wikipedia:bristol",
+          "title": "Bristol",
+          "url": "https://en.wikipedia.org/wiki/Bristol",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -25619,153 +25711,177 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-070",
     "name": {
-      "en": "Events around Election Day",
-      "et": "Valimispäeva ümbruse sündmused"
+      "en": "When Sport Became Politics",
+      "et": "Kui sport muutus poliitikaks"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-070:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:election:by-election",
+        "factKey": "politics:1968-salute:smith-carlos-podium-black-gloves-human-rights",
         "tier": 1,
-        "subjectKey": "election:by-election",
+        "subjectKey": "sport-political-moment:1968-black-power-salute",
         "clue": {
-          "en": "What election fills a seat that becomes vacant between general elections?",
-          "et": "Milline valimine täidab üldvalimiste vahel vabanenud koha?"
+          "en": "Tommie Smith and John Carlos stood on the Mexico City medal podium in black socks and raised black-gloved fists during the US anthem. Name the protest gesture.",
+          "et": "Tommie Smith ja John Carlos seisid México medalipoodiumil mustades sokkides ning tõstsid USA hümni ajal musta kindaga rusika. Nimeta protestižest."
         },
         "response": {
-          "en": "by-election",
-          "et": "vahevalimine"
+          "en": "1968 Olympics Black Power salute",
+          "et": "1968. aasta olümpia Black Poweri tervitus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Black Power salute",
+            "Mexico City Black Power salute"
+          ],
+          "et": [
+            "Black Poweri tervitus",
+            "México olümpia musta kinda tervitus"
+          ]
         },
         "explanation": {
-          "en": "A by-election normally contests one district rather than the whole legislature.",
-          "et": "Vahevalimine puudutab tavaliselt üht ringkonda, mitte kogu parlamenti."
+          "en": "The 1968 Olympic podium salute by Smith and Carlos protested racial inequality and became an enduring image of the Black Power and human-rights movements.",
+          "et": "Smithi ja Carlose 1968. aasta olümpiapoodiumi tervitus protestis rassilise ebavõrdsuse vastu ning sellest sai püsiv Black Poweri ja inimõiguste sümbol."
         },
         "source": {
-          "sourceId": "wikipedia:by-election",
-          "title": "By-election",
-          "url": "https://en.wikipedia.org/wiki/By-election",
+          "sourceId": "wikipedia:1968-olympics-black-power-salute",
+          "title": "1968 Olympics Black Power salute",
+          "url": "https://en.wikipedia.org/wiki/1968_Olympics_Black_Power_salute",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-070:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:poll:exit-poll",
+        "factKey": "politics:rumble-jungle:ali-foreman-kinshasa-mobutu-zairian-showcase",
         "tier": 2,
-        "subjectKey": "poll:exit-poll",
+        "subjectKey": "sport-political-event:rumble-in-the-jungle",
         "clue": {
-          "en": "What survey asks voters about their choice immediately after voting?",
-          "et": "Milline küsitlus uurib valija valikut kohe pärast hääletamist?"
+          "en": "Muhammad Ali regained the heavyweight title from George Foreman in Kinshasa at a spectacle financed as a showcase for Mobutu’s Zaire. What nickname did the fight receive?",
+          "et": "Muhammad Ali võitis Kinshasas George Foremanilt raskekaalu tiitli tagasi vaatemängul, mida rahastati Mobutu Zaire’i esitlemiseks. Millise hüüdnime sai matš?"
         },
         "response": {
-          "en": "exit poll",
-          "et": "lävepakuküsitlus"
+          "en": "Rumble in the Jungle",
+          "et": "Rumble in the Jungle"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Exit polls estimate results and analyse voting patterns before complete counts.",
-          "et": "Lävepakuküsitlus hindab tulemust ja valimismustreid enne lõplikku lugemist."
+          "en": "The Rumble in the Jungle was the 1974 Ali–Foreman bout in Kinshasa, promoted internationally while Mobutu used it to display Zaire.",
+          "et": "Rumble in the Jungle oli Ali ja Foremani 1974. aasta matš Kinshasas, mida reklaamiti üleilmselt ja millega Mobutu Zaire’i tutvustas."
         },
         "source": {
-          "sourceId": "wikipedia:exit_poll",
-          "title": "Exit poll",
-          "url": "https://en.wikipedia.org/wiki/Exit_poll",
+          "sourceId": "wikipedia:the-rumble-in-the-jungle",
+          "title": "The Rumble in the Jungle",
+          "url": "https://en.wikipedia.org/wiki/The_Rumble_in_the_Jungle",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-070:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:electoral-college",
+        "factKey": "politics:football-war:honduras-el-salvador-qualifiers-land-migration-tensions",
         "tier": 3,
-        "subjectKey": "institution:electoral-college",
+        "subjectKey": "conflict:football-war-1969",
         "clue": {
-          "en": "What intermediary body formally selects an officeholder after a popular vote in some systems?",
-          "et": "Milline vahendav kogu valib mõnes süsteemis pärast rahvahääletust ametikandja?"
+          "en": "World Cup qualifiers inflamed already severe disputes over land and migration between Honduras and El Salvador shortly before a four-day conflict. By what name is the war known?",
+          "et": "Jalgpalli MM-valikmängud teravdasid Hondurase ja El Salvadori niigi raskeid maa- ja rändetülisid veidi enne neljapäevast konflikti. Millise nime all sõda tuntakse?"
         },
         "response": {
-          "en": "electoral college",
-          "et": "valijameeste kogu"
+          "en": "Football War",
+          "et": "Jalgpallisõda"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Soccer War",
+            "Hundred Hours’ War"
+          ],
+          "et": [
+            "Saja tunni sõda"
+          ]
         },
         "explanation": {
-          "en": "An electoral college makes the final choice through designated electors.",
-          "et": "Valijameeste kogu teeb lõpliku valiku määratud valijameeste kaudu."
+          "en": "The 1969 Football War grew from deeper political and social tensions between Honduras and El Salvador, although football matches helped trigger the immediate crisis.",
+          "et": "1969. aasta Jalgpallisõda kasvas Hondurase ja El Salvadori sügavamatest poliitilistest ning ühiskondlikest pingetest, kuigi valikmängud aitasid vahetu kriisi vallandada."
         },
         "source": {
-          "sourceId": "wikipedia:electoral_college",
-          "title": "Electoral college",
-          "url": "https://en.wikipedia.org/wiki/Electoral_college",
+          "sourceId": "wikipedia:football-war",
+          "title": "Football War",
+          "url": "https://en.wikipedia.org/wiki/Football_War",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-070:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:rule:compulsory-voting",
+        "factKey": "politics:blood-water:1956-hungary-soviet-water-polo-uprising",
         "tier": 4,
-        "subjectKey": "rule:compulsory-voting",
+        "subjectKey": "sport-political-event:blood-in-water-match",
         "clue": {
-          "en": "Which rule requires eligible citizens to attend or participate in an election?",
-          "et": "Milline reegel nõuab hääleõiguslikult kodanikult valimisel osalemist?"
+          "en": "Weeks after Soviet troops crushed Hungary’s uprising, the two countries met in an Olympic water-polo semifinal in Melbourne; an injured Hungarian left red streaks in the pool. Name the match.",
+          "et": "Mõni nädal pärast Ungari ülestõusu mahasurumist Nõukogude vägede poolt kohtusid riigid Melbourne’i olümpia veepalli poolfinaalis; vigastatud ungarlane jättis basseini punased jäljed. Nimeta matš."
         },
         "response": {
-          "en": "compulsory voting",
-          "et": "kohustuslik hääletamine"
+          "en": "Blood in the Water match",
+          "et": "„Veri vees” matš"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Blood in the Water",
+            "Melbourne blood-in-the-water match"
+          ],
+          "et": [
+            "Blood in the Water",
+            "Melbourne’i „Veri vees” matš",
+            "veri vees"
+          ]
         },
         "explanation": {
-          "en": "Compulsory-voting systems differ in exemptions and enforcement penalties.",
-          "et": "Kohustusliku hääletamise süsteemid erinevad erandite ja sanktsioonide poolest."
+          "en": "The Blood in the Water match was Hungary’s violent 1956 Olympic water-polo victory over the Soviet Union, played against the background of the crushed Hungarian Revolution.",
+          "et": "Veri vees matš oli Ungari vägivaldne 1956. aasta olümpiavõit veepallis Nõukogude Liidu üle, taustaks mahasurutud Ungari revolutsioon."
         },
         "source": {
-          "sourceId": "wikipedia:compulsory_voting",
-          "title": "Compulsory voting",
-          "url": "https://en.wikipedia.org/wiki/Compulsory_voting",
+          "sourceId": "wikipedia:blood-in-the-water-match",
+          "title": "Blood in the Water match",
+          "url": "https://en.wikipedia.org/wiki/Blood_in_the_Water_match",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-070:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:election:recall",
+        "factKey": "politics:springbok-tour:new-zealand-rugby-apartheid-protests-police",
         "tier": 5,
-        "subjectKey": "election:recall",
+        "subjectKey": "protest:1981-springbok-tour",
         "clue": {
-          "en": "Which vote can remove an elected official before the term ends?",
-          "et": "Milline hääletus võib valitud ametikandja enne ametiaja lõppu eemaldada?"
+          "en": "A South African rugby visit split New Zealand: matches proceeded behind fences and police lines while demonstrators opposed sporting contact with apartheid. Name the tour or protests.",
+          "et": "Lõuna-Aafrika ragbivisiit lõhestas Uus-Meremaa: mängud toimusid tarade ja politseiahelike taga, samal ajal kui meeleavaldajad vastustasid spordisuhteid apartheidiriigiga. Nimeta turnee või protestid."
         },
         "response": {
-          "en": "recall election",
-          "et": "tagasikutsumisvalimine"
+          "en": "1981 Springbok tour protests",
+          "et": "1981. aasta Springboki turnee protestid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1981 Springbok Tour",
+            "Springbok Tour protests"
+          ],
+          "et": [
+            "1981. aasta Springbok Tour",
+            "Springboki turnee vastased protestid"
+          ]
         },
         "explanation": {
-          "en": "A recall usually begins with a petition reaching a legal threshold.",
-          "et": "Tagasikutsumisvalimine algab tavaliselt nõutud toetusega petitsioonist."
+          "en": "The 1981 Springbok tour triggered months of large and sometimes violent protests across New Zealand over rugby links with apartheid South Africa.",
+          "et": "1981. aasta Springboki turnee põhjustas Uus-Meremaal kuudepikkused suured ja vahel vägivaldsed protestid ragbisidemete vastu apartheidiaegse Lõuna-Aafrikaga."
         },
         "source": {
-          "sourceId": "wikipedia:recall_election",
-          "title": "Recall election",
-          "url": "https://en.wikipedia.org/wiki/Recall_election",
+          "sourceId": "wikipedia:1981-south-africa-rugby-union-tour-of-new-zealand-and-the-united-states",
+          "title": "1981 South Africa rugby union tour of New Zealand and the United States",
+          "url": "https://en.wikipedia.org/wiki/1981_South_Africa_rugby_union_tour_of_New_Zealand_and_the_United_States",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -25773,153 +25889,187 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-071",
     "name": {
-      "en": "Unusual Paths to Governing Power",
-      "et": "Ebatavalised teed valitsusvõimuni"
+      "en": "Courtrooms That Changed Public Life",
+      "et": "Kohtusaalid, mis muutsid ühiskonda"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-071:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:procedure:constructive-no-confidence",
+        "factKey": "politics:nuremberg:allied-tribunal-nazi-leaders-crimes",
         "tier": 1,
-        "subjectKey": "procedure:constructive-no-confidence",
+        "subjectKey": "trial:nuremberg-major-war-criminals",
         "clue": {
-          "en": "Which procedure removes a government only while electing its replacement?",
-          "et": "Milline menetlus kukutab valitsuse ainult koos asendaja valimisega?"
+          "en": "Allied judges prosecuted leading Nazi officials for war crimes and crimes against humanity in the German city associated with the regime’s rallies. Name the post-war proceedings.",
+          "et": "Liitlasriikide kohtunikud mõistsid režiimi parteipäevadega seotud Saksa linnas juhtivate natsiametnike üle kohut sõjakuritegude ja inimsusvastaste kuritegude eest. Nimeta sõjajärgsed protsessid."
         },
         "response": {
-          "en": "constructive vote of no confidence",
-          "et": "konstruktiivne umbusaldusavaldus"
+          "en": "Nuremberg trials",
+          "et": "Nürnbergi protsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nuremberg Trial",
+            "International Military Tribunal at Nuremberg"
+          ],
+          "et": [
+            "Nürnbergi kohtuprotsess",
+            "Nürnbergi rahvusvaheline sõjatribunal"
+          ]
         },
         "explanation": {
-          "en": "Constructive no confidence is designed to prevent leaderless parliamentary crises.",
-          "et": "Konstruktiivne umbusaldusavaldus aitab vältida juhita parlamendikriisi."
+          "en": "The Nuremberg trials began with the International Military Tribunal of major Nazi leaders and helped establish individual responsibility for international crimes.",
+          "et": "Nürnbergi protsess algas juhtivate natsitegelaste üle peetud rahvusvahelise sõjatribunaliga ja aitas kinnistada üksikisiku vastutust rahvusvaheliste kuritegude eest."
         },
         "source": {
-          "sourceId": "wikipedia:constructive_vote_of_no_confidence",
-          "title": "Constructive vote of no confidence",
-          "url": "https://en.wikipedia.org/wiki/Constructive_vote_of_no_confidence",
+          "sourceId": "wikipedia:nuremberg-trials",
+          "title": "Nuremberg trials",
+          "url": "https://en.wikipedia.org/wiki/Nuremberg_trials",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-071:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:government:cohabitation",
+        "factKey": "politics:eichmann-trial:argentina-capture-jerusalem-glass-booth-holocaust",
         "tier": 2,
-        "subjectKey": "government:cohabitation",
+        "subjectKey": "trial:adolf-eichmann-jerusalem",
         "clue": {
-          "en": "What situation pairs a president with a prime minister from an opposing party?",
-          "et": "Milline olukord ühendab presidendi ja vastasparteist peaministri?"
+          "en": "Mossad captured a Holocaust organizer in Argentina, and the defendant then sat behind glass in a televised Jerusalem courtroom. Name the proceeding.",
+          "et": "Mossad tabas Argentinas holokausti korraldaja ning süüalune istus seejärel Jeruusalemma teleülekandega kohtusaalis klaasi taga. Nimeta protsess."
         },
         "response": {
-          "en": "cohabitation",
-          "et": "koosvalitsemine"
+          "en": "Eichmann trial",
+          "et": "Eichmanni protsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Adolf Eichmann trial",
+            "Jerusalem Eichmann trial"
+          ],
+          "et": [
+            "Adolf Eichmanni protsess",
+            "Jeruusalemma Eichmanni kohtuprotsess"
+          ]
         },
         "explanation": {
-          "en": "Cohabitation occurs in semi-presidential systems when parliamentary and presidential majorities differ.",
-          "et": "Koosvalitsemine tekib poolpresidentaalses süsteemis eri enamuste korral."
+          "en": "Adolf Eichmann’s 1961 trial in Jerusalem publicised survivor testimony and ended in his conviction for crimes against humanity and the Jewish people.",
+          "et": "Adolf Eichmanni 1961. aasta protsess Jeruusalemmas tõi ellujäänute tunnistused avalikkuse ette ja lõppes tema süüdimõistmisega inimsusvastastes ning juudi rahva vastastes kuritegudes."
         },
         "source": {
-          "sourceId": "wikipedia:cohabitation_(government)",
-          "title": "Cohabitation (government)",
-          "url": "https://en.wikipedia.org/wiki/Cohabitation_(government)",
+          "sourceId": "wikipedia:eichmann-trial",
+          "title": "Eichmann trial",
+          "url": "https://en.wikipedia.org/wiki/Eichmann_trial",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-071:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:arrangement:confidence-and-supply",
+        "factKey": "society:scopes-trial:tennessee-teacher-evolution-butler-act",
         "tier": 3,
-        "subjectKey": "arrangement:confidence-and-supply",
+        "subjectKey": "trial:scopes-1925",
         "clue": {
-          "en": "Which agreement supports a minority government on confidence and budgets without joining it?",
-          "et": "Milline kokkulepe toetab vähemusvalitsust usaldus- ja eelarvehääletustel valitsusse astumata?"
+          "en": "A Tennessee teacher was prosecuted in 1925 for teaching human evolution, turning a small-town case into a national argument over science and the Bible. Name the trial.",
+          "et": "Tennessee õpetaja anti 1925. aastal inimese evolutsiooni õpetamise eest kohtu alla ning väikelinna juhtumist sai üleriigiline vaidlus teaduse ja Piibli üle. Nimeta protsess."
         },
         "response": {
-          "en": "confidence and supply",
-          "et": "usaldus- ja eelarvekokkulepe"
+          "en": "Scopes Monkey Trial",
+          "et": "Scopesi ahviprotsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Scopes Trial",
+            "Monkey Trial",
+            "Scopes evolution trial"
+          ],
+          "et": [
+            "Scopesi protsess",
+            "ahviprotsess",
+            "Scopesi evolutsiooniprotsess"
+          ]
         },
         "explanation": {
-          "en": "Confidence and supply offers stability while preserving separate party identity.",
-          "et": "Usaldus- ja eelarvekokkulepe annab stabiilsuse, säilitades erakondade eraldiseisvuse."
+          "en": "The Scopes Monkey Trial tested Tennessee’s Butler Act after teacher John T. Scopes agreed to be charged with teaching evolution.",
+          "et": "Scopesi ahviprotsess pani proovile Tennessee Butleri seaduse pärast seda, kui õpetaja John T. Scopes nõustus evolutsiooni õpetamise süüdistusega."
         },
         "source": {
-          "sourceId": "wikipedia:confidence_and_supply",
-          "title": "Confidence and supply",
-          "url": "https://en.wikipedia.org/wiki/Confidence_and_supply",
+          "sourceId": "wikipedia:scopes-trial",
+          "title": "Scopes trial",
+          "url": "https://en.wikipedia.org/wiki/Scopes_trial",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-071:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:institution:shadow-cabinet",
+        "factKey": "society:mclibel:mcdonalds-activists-leaflet-longest-english-case",
         "tier": 4,
-        "subjectKey": "institution:shadow-cabinet",
+        "subjectKey": "trial:mclibel",
         "clue": {
-          "en": "What opposition team mirrors ministers and prepares an alternative government?",
-          "et": "Milline opositsioonimeeskond peegeldab ministreid ning valmistab ette alternatiivset valitsust?"
+          "en": "A fast-food giant sued two London activists over a leaflet criticising its labour, animal, and environmental practices; the resulting proceedings became England’s longest-running case of their kind. What nickname did the case receive?",
+          "et": "Kiirtoiduhiid kaebas kaks Londoni aktivisti kohtusse lendlehe pärast, mis kritiseeris firma töö-, looma- ja keskkonnapraktikaid; menetlusest sai Inglismaal omalaadsete seas pikim. Millise hüüdnime sai kohtuasi?"
         },
         "response": {
-          "en": "shadow cabinet",
-          "et": "varikabinet"
+          "en": "McLibel case",
+          "et": "McLibeli kohtuasi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "McDonald’s libel case",
+            "McDonald’s Corporation v Steel and Morris",
+            "McLibel"
+          ],
+          "et": [
+            "McDonald’si laimuprotsess",
+            "Steel ja Morris McDonald’si vastu",
+            "McLibel"
+          ]
         },
         "explanation": {
-          "en": "A shadow cabinet scrutinises each portfolio and signals likely future appointments.",
-          "et": "Varikabinet kontrollib valdkondi ning näitab võimalikke tulevasi ministreid."
+          "en": "In McLibel, McDonald’s pursued Helen Steel and David Morris for libel, generating years of publicity and a later European human-rights judgment.",
+          "et": "McLibeli kohtuasjas süüdistas McDonald’s Helen Steeli ja David Morrist laimamises; protsess tõi aastaid avalikkust ning hilisema Euroopa inimõiguste kohtu otsuse."
         },
         "source": {
-          "sourceId": "wikipedia:shadow_cabinet",
-          "title": "Shadow cabinet",
-          "url": "https://en.wikipedia.org/wiki/Shadow_cabinet",
+          "sourceId": "wikipedia:mclibel-case",
+          "title": "McLibel case",
+          "url": "https://en.wikipedia.org/wiki/McLibel_case",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-071:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:election:snap-election",
+        "factKey": "politics:rivonia-trial:mandela-liliesleaf-sabotage-life-sentences",
         "tier": 5,
-        "subjectKey": "election:snap-election",
+        "subjectKey": "trial:rivonia-1963-1964",
         "clue": {
-          "en": "What election is called earlier than the regular schedule?",
-          "et": "Milline valimine kuulutatakse välja tavagraafikust varem?"
+          "en": "Evidence from a raid on Liliesleaf Farm put Nelson Mandela and other anti-apartheid leaders in the dock for sabotage; Mandela gave his “ideal for which I am prepared to die” speech. Name the trial.",
+          "et": "Liliesleafi farmi haarangul saadud tõendid viisid Nelson Mandela ja teised apartheidivastased juhid sabotaažisüüdistusega kohtusse; Mandela pidas kõne ideaalist, mille nimel ta oli valmis surema. Nimeta protsess."
         },
         "response": {
-          "en": "snap election",
-          "et": "erakorraline valimine"
+          "en": "Rivonia Trial",
+          "et": "Rivonia protsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mandela’s Rivonia Trial",
+            "Rivonia sabotage trial"
+          ],
+          "et": [
+            "Mandela Rivonia protsess",
+            "Rivonia sabotaažiprotsess"
+          ]
         },
         "explanation": {
-          "en": "A snap election may seek a fresh mandate or exploit favourable political timing.",
-          "et": "Erakorraline valimine võib otsida uut mandaati või soodsat poliitilist hetke."
+          "en": "The 1963–64 Rivonia Trial ended with Mandela and seven co-defendants receiving life sentences.",
+          "et": "1963.–1964. aasta Rivonia protsess lõppes Mandela ja seitsme kaassüüdistatava eluaegse vangistusega."
         },
         "source": {
-          "sourceId": "wikipedia:snap_election",
-          "title": "Snap election",
-          "url": "https://en.wikipedia.org/wiki/Snap_election",
+          "sourceId": "wikipedia:rivonia-trial",
+          "title": "Rivonia Trial",
+          "url": "https://en.wikipedia.org/wiki/Rivonia_Trial",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -25927,153 +26077,181 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-072",
     "name": {
-      "en": "Different Designs for Territorial Power",
-      "et": "Territoriaalse võimu eri mudelid"
+      "en": "Cold War Without a Battlefield",
+      "et": "Külm sõda ilma lahinguväljata"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-072:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:power:concurrent-powers",
+        "factKey": "politics:u2-incident:powers-spy-plane-shot-down-summit",
         "tier": 1,
-        "subjectKey": "power:concurrent-powers",
+        "subjectKey": "cold-war-episode:u2-incident-1960",
         "clue": {
-          "en": "What powers may both federal and regional governments exercise?",
-          "et": "Milliseid pädevusi võivad kasutada nii kesk- kui piirkondlik valitsus?"
+          "en": "The Soviet Union shot down Gary Powers’s high-altitude American spy plane shortly before a Paris summit, exposing Washington’s false cover story. Name the 1960 incident.",
+          "et": "Nõukogude Liit tulistas veidi enne Pariisi tippkohtumist alla Gary Powersi kõrgelt lendava USA luurelennuki, paljastades Washingtoni vale katteversiooni. Nimeta 1960. aasta intsident."
         },
         "response": {
-          "en": "concurrent powers",
-          "et": "jagatud pädevused"
+          "en": "U-2 incident",
+          "et": "U-2 intsident"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1960 U-2 incident",
+            "Gary Powers U-2 incident"
+          ],
+          "et": [
+            "1960. aasta U-2 intsident",
+            "Gary Powersi U-2 juhtum"
+          ]
         },
         "explanation": {
-          "en": "Concurrent powers can create overlapping law and priority rules.",
-          "et": "Jagatud pädevused võivad tekitada kattuva õiguse ja ülimuslikkuse reeglid."
+          "en": "The U-2 incident derailed the Paris summit after Powers survived the shoot-down and the Soviet Union revealed his reconnaissance mission.",
+          "et": "U-2 intsident nurjas Pariisi tippkohtumise, kui Powers jäi allatulistamisel ellu ja Nõukogude Liit paljastas tema luuremissiooni."
         },
         "source": {
-          "sourceId": "wikipedia:concurrent_powers",
-          "title": "Concurrent powers",
-          "url": "https://en.wikipedia.org/wiki/Concurrent_powers",
+          "sourceId": "wikipedia:1960-u-2-incident",
+          "title": "1960 U-2 incident",
+          "url": "https://en.wikipedia.org/wiki/1960_U-2_incident",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-072:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:power:reserved-powers",
+        "factKey": "politics:petrov-incident:early-warning-false-us-missiles-duty-officer",
         "tier": 2,
-        "subjectKey": "power:reserved-powers",
+        "subjectKey": "cold-war-episode:petrov-false-alarm",
         "clue": {
-          "en": "What powers does a constitution leave specifically to regions or states?",
-          "et": "Millised pädevused jätab põhiseadus eraldi piirkondadele või osariikidele?"
+          "en": "A Soviet screen reported incoming US missiles in 1983. Which duty officer—later dubbed “the man who saved the world”—judged the warning false rather than pass it up as an attack? Name him or the incident.",
+          "et": "Nõukogude ekraan näitas 1983. aastal saabuvaid USA rakette. Milline valves olnud ohvitser, keda hiljem nimetati „meheks, kes päästis maailma”, pidas hoiatust valeks ega edastanud seda rünnakuna? Nimeta tema või juhtum."
         },
         "response": {
-          "en": "reserved powers",
-          "et": "reserveeritud pädevused"
+          "en": "Stanislav Petrov incident",
+          "et": "Stanislav Petrovi juhtum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1983 Soviet nuclear false alarm",
+            "Petrov false alarm",
+            "Stanislav Petrov"
+          ],
+          "et": [
+            "1983. aasta Nõukogude tuumavalehäire",
+            "Petrovi valehäire",
+            "Stanislav Petrov"
+          ]
         },
         "explanation": {
-          "en": "Reserved powers protect a sphere not assigned to central government.",
-          "et": "Reserveeritud pädevused kaitsevad keskvalitsusele andmata valdkonda."
+          "en": "In the Stanislav Petrov incident, the officer treated satellite warnings as a likely malfunction; later investigation confirmed a false alarm.",
+          "et": "Stanislav Petrovi juhtumis pidas ohvitser satelliidihoiatusi tõenäoliseks rikkeks; hilisem uurimine kinnitas valehäire."
         },
         "source": {
-          "sourceId": "wikipedia:reserved_powers",
-          "title": "Reserved powers",
-          "url": "https://en.wikipedia.org/wiki/Reserved_powers",
+          "sourceId": "wikipedia:1983-soviet-nuclear-false-alarm-incident",
+          "title": "1983 Soviet nuclear false alarm incident",
+          "url": "https://en.wikipedia.org/wiki/1983_Soviet_nuclear_false_alarm_incident",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-072:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:model:asymmetric-federalism",
+        "factKey": "politics:acoustic-kitty:cia-cat-microphone-soviet-eavesdropping",
         "tier": 3,
-        "subjectKey": "model:asymmetric-federalism",
+        "subjectKey": "cold-war-project:acoustic-kitty",
         "clue": {
-          "en": "Which federation grants different regions different degrees of autonomy?",
-          "et": "Milline föderatsioon annab eri piirkondadele erineva autonoomia?"
+          "en": "The CIA implanted a microphone and transmitter in a cat, hoping the animal could wander near Soviet officials unnoticed. What punning project name joined sound with the animal?",
+          "et": "CIA paigaldas kassi sisse mikrofoni ja saatja, lootes, et loom saab Nõukogude ametnike lähedal märkamatult liikuda. Milline sõnamänguline projektinimi ühendas heli ja looma?"
         },
         "response": {
-          "en": "asymmetric federalism",
-          "et": "asümmeetriline föderalism"
+          "en": "Acoustic Kitty",
+          "et": "Acoustic Kitty"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Operation Acoustic Kitty",
+            "CIA Acoustic Kitty project"
+          ],
+          "et": [
+            "operatsioon Acoustic Kitty",
+            "CIA Acoustic Kitty projekt"
+          ]
         },
         "explanation": {
-          "en": "Asymmetry may reflect language, history, size, or negotiated status.",
-          "et": "Asümmeetria võib peegeldada keelt, ajalugu, suurust või kokkulepitud staatust."
+          "en": "Acoustic Kitty was a 1960s CIA attempt to use a surgically modified cat as a mobile eavesdropping device; the project was abandoned.",
+          "et": "Acoustic Kitty oli CIA 1960. aastate katse kasutada kirurgiliselt muudetud kassi liikuva pealtkuulamisseadmena; projektist loobuti."
         },
         "source": {
-          "sourceId": "wikipedia:asymmetric_federalism",
-          "title": "Asymmetric federalism",
-          "url": "https://en.wikipedia.org/wiki/Asymmetric_federalism",
+          "sourceId": "wikipedia:acoustic-kitty",
+          "title": "Acoustic Kitty",
+          "url": "https://en.wikipedia.org/wiki/Acoustic_Kitty",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-072:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:concept:home-rule",
+        "factKey": "politics:able-archer:nato-command-post-soviet-nuclear-fears-1983",
         "tier": 4,
-        "subjectKey": "concept:home-rule",
+        "subjectKey": "cold-war-exercise:able-archer-83",
         "clue": {
-          "en": "What authority lets a locality govern its internal affairs within a larger state?",
-          "et": "Milline õigus lubab kohalikul üksusel suurema riigi sees siseasju juhtida?"
+          "en": "During a realistic 1983 NATO command exercise, rehearsed nuclear-release procedures coincided with Soviet fears that the drill concealed a surprise attack. Name the exercise.",
+          "et": "Realistliku 1983. aasta NATO juhtimisõppuse tuumarelvade kasutamise protseduurid langesid kokku Nõukogude kartusega, et õppus varjab üllatusrünnakut. Nimeta õppus."
         },
         "response": {
-          "en": "home rule",
-          "et": "omavalitsusõigus"
+          "en": "Able Archer 83",
+          "et": "Able Archer 83"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Able Archer exercise",
+            "Able Archer 1983",
+            "Able Archer"
+          ],
+          "et": [
+            "Able Archeri õppus",
+            "1983. aasta Able Archer",
+            "Able Archer"
+          ]
         },
         "explanation": {
-          "en": "Home rule differs from sovereignty because ultimate constitutional authority remains elsewhere.",
-          "et": "Omavalitsusõigus erineb suveräänsusest, sest lõplik võim jääb mujale."
+          "en": "Able Archer 83 simulated NATO nuclear procedures; Soviet reactions later made it a central episode in discussion of the 1983 war scare.",
+          "et": "Able Archer 83 simuleeris NATO tuumaprotseduure; Nõukogude reaktsioon muutis selle hiljem 1983. aasta sõjahirmu üheks keskseks episoodiks."
         },
         "source": {
-          "sourceId": "wikipedia:home_rule",
-          "title": "Home rule",
-          "url": "https://en.wikipedia.org/wiki/Home_rule",
+          "sourceId": "wikipedia:able-archer-83",
+          "title": "Able Archer 83",
+          "url": "https://en.wikipedia.org/wiki/Able_Archer_83",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-072:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:unit:special-administrative-region",
+        "factKey": "politics:operation-gold:cia-sis-tunnel-soviet-cables-berlin",
         "tier": 5,
-        "subjectKey": "unit:special-administrative-region",
+        "subjectKey": "cold-war-operation:gold-berlin-tunnel",
         "clue": {
-          "en": "What territorial unit operates under distinct legal and economic systems within one sovereign state?",
-          "et": "Milline territoriaalüksus toimib ühe suveräänse riigi sees eri õigus- ja majandussüsteemiga?"
+          "en": "American and British intelligence dug from West Berlin into the Soviet sector to tap military telephone lines. The British mole George Blake revealed the plan, but the Soviets waited until 1956 to expose the tunnel and protect him. Name the American operation.",
+          "et": "USA ja Briti luure kaevasid Lääne-Berliinist Nõukogude sektorisse tunneli, et kuulata pealt sõjaväe telefoniliine. Briti luures tegutsenud George Blake paljastas plaani, kuid Nõukogude pool ootas tunneli avalikustamisega 1956. aastani, et teda kaitsta. Nimeta USA operatsioon."
         },
         "response": {
-          "en": "special administrative region",
-          "et": "erihalduspiirkond"
+          "en": "Operation Gold",
+          "et": "operatsioon Gold"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A special administrative region has autonomy defined by national constitutional arrangements.",
-          "et": "Erihalduspiirkonna autonoomia määrab riigi põhiseaduslik kord."
+          "en": "Operation Gold was the CIA and SIS tunnel operation that intercepted Soviet military communications until its carefully timed public discovery in 1956.",
+          "et": "Operatsioon Gold oli CIA ja SIS-i tunnelioperatsioon, mis kuulas pealt Nõukogude sõjaväesidet kuni hoolikalt ajastatud avaliku paljastamiseni 1956. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:special_administrative_regions_of_china",
-          "title": "Special administrative regions of China",
-          "url": "https://en.wikipedia.org/wiki/Special_administrative_regions_of_China",
+          "sourceId": "wikipedia:operation-gold",
+          "title": "Operation Gold",
+          "url": "https://en.wikipedia.org/wiki/Operation_Gold",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -26081,153 +26259,179 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-073",
     "name": {
-      "en": "Legal Tools for Individual Rights",
-      "et": "Üksikisiku õiguste õigusvahendid"
+      "en": "Songs That Crossed Into Politics",
+      "et": "Laulud, mis jõudsid poliitikasse"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-073:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:procedure:habeas-corpus",
+        "factKey": "politics:bella-ciao:italian-resistance-protest-money-heist-revival",
         "tier": 1,
-        "subjectKey": "procedure:habeas-corpus",
+        "subjectKey": "song:bella-ciao-political-life",
         "clue": {
-          "en": "Which writ requires authorities to justify a person’s detention before a court?",
-          "et": "Milline kohtukäsk nõuab võimult isiku kinnipidamise põhjendamist kohtus?"
+          "en": "This Italian anti-fascist song became associated with Italy’s anti-fascist partisans and the Resistance; decades later, Money Heist carried it to a new global audience. Name the song.",
+          "et": "See Itaalia antifašistlik laul seostus Itaalia antifašistlike partisanide ja vastupanuliikumisega; aastakümneid hiljem viis „Rahavargus” selle uue üleilmse publikuni. Nimeta laul."
         },
         "response": {
-          "en": "habeas corpus",
-          "et": "habeas corpus"
+          "en": "Bella ciao",
+          "et": "Bella ciao"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Italian partisan song Bella ciao"
+          ],
+          "et": [
+            "Itaalia partisanilaul Bella ciao"
+          ]
         },
         "explanation": {
-          "en": "Habeas corpus protects against unlawful imprisonment rather than deciding guilt.",
-          "et": "Habeas corpus kaitseb ebaseadusliku vangistuse eest, mitte ei otsusta süüd."
+          "en": "Bella ciao became associated with the Italian resistance and has since travelled worldwide as a protest song, with Money Heist renewing its popularity.",
+          "et": "Bella ciao seostus Itaalia vastupanuliikumisega ja levis hiljem üle maailma protestilauluna; „Rahavargus” kasvatas selle populaarsust uuesti."
         },
         "source": {
-          "sourceId": "wikipedia:habeas_corpus",
-          "title": "Habeas corpus",
-          "url": "https://en.wikipedia.org/wiki/Habeas_corpus",
+          "sourceId": "wikipedia:bella-ciao",
+          "title": "Bella ciao",
+          "url": "https://en.wikipedia.org/wiki/Bella_ciao",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-073:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:role:amicus-curiae",
+        "factKey": "politics:wind-change:scorpions-moscow-glasnost-iron-curtain",
         "tier": 2,
-        "subjectKey": "role:amicus-curiae",
+        "subjectKey": "song:wind-of-change-political-life",
         "clue": {
-          "en": "What independent participant offers a court expertise without being a party?",
-          "et": "Milline sõltumatu osaline annab kohtule asjatundlikku teavet menetlusosaline olemata?"
+          "en": "Scorpions singer Klaus Meine wrote this whistled ballad after visiting Moscow, and it became a soundtrack to glasnost and the end of Europe’s Cold War division. Name the song.",
+          "et": "Scorpionsi laulja Klaus Meine kirjutas selle vilistatud ballaadi pärast Moskva külastamist ning laulust sai glasnosti ja Euroopa külma sõja aegse lõhe lõpu heliriba. Nimeta laul."
         },
         "response": {
-          "en": "amicus curiae",
-          "et": "kohtu sõber"
+          "en": "Wind of Change",
+          "et": "Wind of Change"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Scorpions’ Wind of Change",
+            "Wind of Change by Scorpions"
+          ],
+          "et": [
+            "Scorpionsi Wind of Change",
+            "Scorpionsi laul Wind of Change"
+          ]
         },
         "explanation": {
-          "en": "An amicus curiae brief can explain wider legal or social consequences.",
-          "et": "Kohtu sõbra arvamus võib selgitada laiemaid õiguslikke või ühiskondlikke tagajärgi."
+          "en": "Wind of Change was inspired by the Scorpions’ Soviet experiences and became widely associated with the fall of the Iron Curtain.",
+          "et": "Wind of Change sai inspiratsiooni Scorpionsi Nõukogude Liidu kogemustest ja seostus laialt raudse eesriide langemisega."
         },
         "source": {
-          "sourceId": "wikipedia:amicus_curiae",
-          "title": "Amicus curiae",
-          "url": "https://en.wikipedia.org/wiki/Amicus_curiae",
+          "sourceId": "wikipedia:wind-of-change-scorpions-song",
+          "title": "Wind of Change (Scorpions song)",
+          "url": "https://en.wikipedia.org/wiki/Wind_of_Change_(Scorpions_song)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-073:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:procedure:constitutional-complaint",
+        "factKey": "politics:99-luftballons:nena-balloons-radar-nuclear-war",
         "tier": 3,
-        "subjectKey": "procedure:constitutional-complaint",
+        "subjectKey": "song:99-luftballons-political-life",
         "clue": {
-          "en": "Which petition lets an individual allege that public power violated constitutional rights?",
-          "et": "Milline kaebus lubab isikul väita, et avalik võim rikkus põhiseaduslikke õigusi?"
+          "en": "In the original German story, 99 balloons are mistaken for UFOs; pilots put on a display of firepower, border nations grow alarmed, and escalation ends in catastrophe. Name Nena’s hit.",
+          "et": "Saksakeelses originaalis peetakse 99 õhupalli UFOdeks; piloodid demonstreerivad tulejõudu, piiririigid satuvad ärevusse ja eskalatsioon lõpeb katastroofiga. Nimeta Nena hitt."
         },
         "response": {
-          "en": "constitutional complaint",
-          "et": "põhiseaduskaebus"
+          "en": "99 Luftballons",
+          "et": "99 Luftballons"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "99 Red Balloons",
+            "Nena’s 99 Luftballons"
+          ],
+          "et": [
+            "99 Red Balloons",
+            "Nena 99 Luftballons"
+          ]
         },
         "explanation": {
-          "en": "Constitutional complaints often require ordinary remedies to be exhausted first.",
-          "et": "Põhiseaduskaebus nõuab sageli esmalt tavapäraste õiguskaitsevahendite ammendamist."
+          "en": "The German original 99 Luftballons turns harmless balloons into a chain of military reactions and devastation; its separately written English version is titled 99 Red Balloons.",
+          "et": "Saksakeelne originaal 99 Luftballons muudab süütud õhupallid sõjaliste reaktsioonide ja hävingu ahelaks; eraldi kirjutatud ingliskeelse versiooni pealkiri on 99 Red Balloons."
         },
         "source": {
-          "sourceId": "wikipedia:constitutional_complaint",
-          "title": "Constitutional complaint",
-          "url": "https://en.wikipedia.org/wiki/Constitutional_complaint",
+          "sourceId": "wikipedia:99-luftballons",
+          "title": "99 Luftballons",
+          "url": "https://en.wikipedia.org/wiki/99_Luftballons",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-073:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:practice:public-interest-law",
+        "factKey": "politics:free-mandela-song:special-aka-jerry-dammers-anti-apartheid",
         "tier": 4,
-        "subjectKey": "practice:public-interest-law",
+        "subjectKey": "song:free-nelson-mandela-political-life",
         "clue": {
-          "en": "Which field of legal practice helps underrepresented people or seeks social change rather than private profit?",
-          "et": "Milline õiguspraktika valdkond aitab alaesindatud inimesi või taotleb kasumi asemel ühiskondlikku muutust?"
+          "en": "Jerry Dammers and the Special A.K.A. turned a jailed South African leader’s name into an upbeat 1984 anti-apartheid chorus. Name the song.",
+          "et": "Jerry Dammers ja The Special A.K.A. muutsid vangistatud Lõuna-Aafrika juhi nime hoogsaks 1984. aasta apartheidivastaseks refrääniks. Nimeta laul."
         },
         "response": {
-          "en": "public interest law",
-          "et": "avaliku huvi õigus"
+          "en": "Free Nelson Mandela",
+          "et": "Free Nelson Mandela"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "The Special A.K.A.’s Free Nelson Mandela"
+          ],
+          "et": [
+            "The Special A.K.A. Free Nelson Mandela"
+          ]
         },
         "explanation": {
-          "en": "Public interest law commonly covers civil liberties, human rights, consumer protection, and environmental causes.",
-          "et": "Avaliku huvi õigus hõlmab sageli kodanikuvabadusi, inimõigusi, tarbijakaitset ja keskkonnaküsimusi."
+          "en": "Free Nelson Mandela was written by Dammers and recorded by the Special A.K.A.; it became a prominent musical call for Mandela’s release.",
+          "et": "Free Nelson Mandela kirjutas Dammers ja salvestas The Special A.K.A.; laulust sai tuntud muusikaline üleskutse Mandela vabastamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:public_interest_law",
-          "title": "Public interest law",
-          "url": "https://en.wikipedia.org/wiki/Public_interest_law",
+          "sourceId": "wikipedia:free-nelson-mandela",
+          "title": "Free Nelson Mandela",
+          "url": "https://en.wikipedia.org/wiki/Free_Nelson_Mandela",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-073:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:principle:standing-law",
+        "factKey": "politics:beds-are-burning:midnight-oil-pintupi-land-rights-global-hit",
         "tier": 5,
-        "subjectKey": "principle:standing-law",
+        "subjectKey": "song:beds-are-burning-political-life",
         "clue": {
-          "en": "What requirement asks whether a claimant is sufficiently affected to bring a case?",
-          "et": "Milline nõue küsib, kas kaebaja on kohtuasja algatamiseks piisavalt puudutatud?"
+          "en": "Which 1987 Midnight Oil single from Diesel and Dust called for land to be returned to Australia’s Pintupi people?",
+          "et": "Milline Midnight Oili 1987. aasta singel albumilt Diesel and Dust kutsus tagastama maad Austraalia Pintupi rahvale?"
         },
         "response": {
-          "en": "legal standing",
-          "et": "kaebeõigus"
+          "en": "Beds Are Burning",
+          "et": "Beds Are Burning"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Midnight Oil’s Beds Are Burning",
+            "Beds Are Burning by Midnight Oil"
+          ],
+          "et": [
+            "Midnight Oili Beds Are Burning",
+            "Beds Are Burning ansamblilt Midnight Oil"
+          ]
         },
         "explanation": {
-          "en": "Standing limits courts to disputes brought by eligible parties.",
-          "et": "Kaebeõigus piirab kohtud vaidlustega, mille esitab õigustatud osaline."
+          "en": "Beds Are Burning was Midnight Oil’s 1987 political song about returning land to the Pintupi people and became a chart hit in several countries.",
+          "et": "Beds Are Burning oli Midnight Oili 1987. aasta poliitiline laul Pintupi rahvale maa tagastamisest ning jõudis mitme riigi edetabelis kõrgele."
         },
         "source": {
-          "sourceId": "wikipedia:standing_(law)",
-          "title": "Standing (law)",
-          "url": "https://en.wikipedia.org/wiki/Standing_(law)",
+          "sourceId": "wikipedia:beds-are-burning",
+          "title": "Beds Are Burning",
+          "url": "https://de.wikipedia.org/wiki/Beds_Are_Burning",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -26235,153 +26439,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-074",
     "name": {
-      "en": "Economic Schools outside the Mainstream",
-      "et": "Majanduskoolkonnad peavoolu kõrval"
+      "en": "Countries as Characters",
+      "et": "Riigid tegelaskujudena"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-074:question:1",
-        "factKey": "built-in-politics-economics-society:round1-hard:school:physiocracy",
+        "factKey": "society:britannia:britain-helmet-trident-union-jack-shield",
         "tier": 1,
-        "subjectKey": "school:physiocracy",
+        "subjectKey": "personification:britannia",
         "clue": {
-          "en": "Which eighteenth-century school treated land as the ultimate source of economic surplus?",
-          "et": "Milline 18. sajandi koolkond pidas maad majandusliku ülejäägi algallikaks?"
+          "en": "A helmeted woman with a trident and often a Union Jack shield has represented Britain on coins and posters for centuries. Name her.",
+          "et": "Kiivri, kolmikhargi ja sageli Union Jacki kilbiga naine on kujutanud Ühendkuningriiki müntidel ning plakatitel sajandeid. Nimeta ta."
         },
         "response": {
-          "en": "physiocracy",
-          "et": "füsiokraatia"
+          "en": "Britannia",
+          "et": "Britannia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lady Britannia",
+            "Britannia personification"
+          ],
+          "et": [
+            "leedi Britannia",
+            "Britannia personifikatsioon"
+          ]
         },
         "explanation": {
-          "en": "Physiocrats advocated a natural economic order and freer internal trade.",
-          "et": "Füsiokraadid pooldasid loomulikku majanduskorda ja vabamat sisekaubandust."
+          "en": "Britannia is the female national personification of Britain, conventionally shown with helmet, trident, and shield.",
+          "et": "Britannia on Suurbritannia naissoost rahvuspersonifikatsioon, keda kujutatakse tavaliselt kiivri, kolmikhargi ja kilbiga."
         },
         "source": {
-          "sourceId": "wikipedia:physiocracy",
-          "title": "Physiocracy",
-          "url": "https://en.wikipedia.org/wiki/Physiocracy",
+          "sourceId": "wikipedia:britannia",
+          "title": "Britannia",
+          "url": "https://en.wikipedia.org/wiki/Britannia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-074:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:school:mercantilism",
+        "factKey": "society:russian-bear:russia-cartoon-symbol-european-usage",
         "tier": 2,
-        "subjectKey": "school:mercantilism",
+        "subjectKey": "personification:russian-bear",
         "clue": {
-          "en": "Which doctrine sought state power through trade surpluses and accumulated bullion?",
-          "et": "Milline doktriin taotles riigivõimu kaubandusülejäägi ja väärismetalli kogumise kaudu?"
+          "en": "European cartoonists have long drawn one vast northern power as a shaggy animal—sometimes menacing, sometimes friendly, and later embraced by Russians themselves. Name the personification.",
+          "et": "Euroopa karikaturistid on pikka aega joonistanud üht suurt põhjariiki karvase loomana, kord ähvardava, kord sõbraliku kujuna, mille venelased hiljem ka ise omaks võtsid. Nimeta personifikatsioon."
         },
         "response": {
-          "en": "mercantilism",
-          "et": "merkantilism"
+          "en": "Russian Bear",
+          "et": "Vene karu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Russian Bear",
+            "Russia’s bear personification"
+          ],
+          "et": [
+            "Venemaa karu",
+            "Vene karu personifikatsioon"
+          ]
         },
         "explanation": {
-          "en": "Mercantilist policy used tariffs, monopolies, and colonial controls.",
-          "et": "Merkantilistlik poliitika kasutas tariife, monopole ja koloniaalpiiranguid."
+          "en": "The Russian Bear is a widespread visual personification of Russia, originating in Western European imagery and later used inside Russia as well.",
+          "et": "Vene karu on laialt levinud Venemaa visuaalne personifikatsioon, mis sai alguse Lääne-Euroopa kujutistes ja mida hakati hiljem kasutama ka Venemaal."
         },
         "source": {
-          "sourceId": "wikipedia:mercantilism",
-          "title": "Mercantilism",
-          "url": "https://en.wikipedia.org/wiki/Mercantilism",
+          "sourceId": "wikipedia:russian-bear",
+          "title": "Russian Bear",
+          "url": "https://en.wikipedia.org/wiki/Russian_Bear",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-074:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:school:ordoliberalism",
+        "factKey": "society:marianne:french-republic-phrygian-cap-liberty-town-halls",
         "tier": 3,
-        "subjectKey": "school:ordoliberalism",
+        "subjectKey": "personification:marianne-france",
         "clue": {
-          "en": "Which German tradition asks the state to build a strong legal order for competition?",
-          "et": "Milline Saksa traditsioon nõuab riigilt tugevat õigusraami konkurentsile?"
+          "en": "This woman in a Phrygian cap appears in French town halls and on official emblems as the face of liberty and the republic. Name her.",
+          "et": "See Früügia mütsiga naine seisab Prantsuse raekodades ja ametlikel sümbolitel vabaduse ning vabariigi näona. Nimeta ta."
         },
         "response": {
-          "en": "ordoliberalism",
-          "et": "ordoliberalism"
+          "en": "Marianne",
+          "et": "Marianne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "French Marianne",
+            "Marianne of France"
+          ],
+          "et": [
+            "Prantsusmaa Marianne",
+            "Marianne’i kuju"
+          ]
         },
         "explanation": {
-          "en": "Ordoliberalism influenced the social market economy and opposes both laissez-faire and discretionary planning.",
-          "et": "Ordoliberalism mõjutas sotsiaalset turumajandust ning vastustab nii minnalaskmist kui suvalist planeerimist."
+          "en": "Marianne is the national personification of the French Republic and is commonly shown wearing the liberty-associated Phrygian cap.",
+          "et": "Marianne on Prantsuse Vabariigi rahvuspersonifikatsioon ning teda kujutatakse tavaliselt vabadust sümboliseeriva Früügia mütsiga."
         },
         "source": {
-          "sourceId": "wikipedia:ordoliberalism",
-          "title": "Ordoliberalism",
-          "url": "https://en.wikipedia.org/wiki/Ordoliberalism",
+          "sourceId": "wikipedia:marianne",
+          "title": "Marianne",
+          "url": "https://en.wikipedia.org/wiki/Marianne",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-074:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:school:post-keynesian",
+        "factKey": "society:john-bull:britain-stocky-waistcoat-union-jack-cartoon",
         "tier": 4,
-        "subjectKey": "school:post-keynesian",
+        "subjectKey": "personification:john-bull",
         "clue": {
-          "en": "Which school stresses fundamental uncertainty, effective demand, and endogenous money?",
-          "et": "Milline koolkond rõhutab fundamentaalset ebakindlust, efektiivset nõudlust ja endogeenset raha?"
+          "en": "Political cartoons show this stocky English gentleman in breeches and a waistcoat patterned with the Union Jack, often arguing with Uncle Sam. Name him.",
+          "et": "Poliitilistes karikatuurides kannab see jässakas inglise härrasmees põlvpükse ja Union Jacki mustriga vesti ning vaidleb sageli Onu Samiga. Nimeta ta."
         },
         "response": {
-          "en": "Post-Keynesian economics",
-          "et": "postkeinslik majandusteadus"
+          "en": "John Bull",
+          "et": "John Bull"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Britain’s John Bull",
+            "John Bull character"
+          ],
+          "et": [
+            "Briti John Bull",
+            "John Bulli tegelaskuju"
+          ]
         },
         "explanation": {
-          "en": "Post-Keynesians extend parts of Keynes while rejecting automatic full-employment equilibrium.",
-          "et": "Postkeinslased arendavad Keynesi ideid ning eitavad automaatset täistööhõive tasakaalu."
+          "en": "John Bull is a male national personification of Britain, developed from a literary character and made familiar through cartoons.",
+          "et": "John Bull on Suurbritannia meessoost rahvuspersonifikatsioon, kes arenes kirjandustegelasest ja sai tuntuks karikatuurides."
         },
         "source": {
-          "sourceId": "wikipedia:post-keynesian_economics",
-          "title": "Post-Keynesian economics",
-          "url": "https://en.wikipedia.org/wiki/Post-Keynesian_economics",
+          "sourceId": "wikipedia:john-bull",
+          "title": "John Bull",
+          "url": "https://en.wikipedia.org/wiki/John_Bull",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-074:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:school:public-choice",
+        "factKey": "society:johnny-canuck:canada-political-cartoon-wwii-action-hero-vancouver-logo",
         "tier": 5,
-        "subjectKey": "school:public-choice",
+        "subjectKey": "personification:johnny-canuck-canada",
         "clue": {
-          "en": "Which approach applies economic models of incentives to voters, officials, and bureaucracies?",
-          "et": "Milline lähenemine rakendab valijatele, ametnikele ja bürokraatiale majanduslikke stiimulimudeleid?"
+          "en": "A Canadian lumberjack personification first appeared in 1869 political cartoons as a younger cousin of Uncle Sam and John Bull, then returned as a Second World War action hero. A Vancouver NHL club later put a hockey-playing version on its logo. Name him.",
+          "et": "Kanada metsaraiujast personifikatsioon ilmus esimest korda 1869. aasta poliitilistes karikatuurides Onu Sami ja John Bulli noorema nõona ning naasis Teise maailmasõja ajal seikluskangelasena. Hiljem pani Vancouveri NHL-i klubi tema hokit mängiva kuju oma logole. Nimeta ta."
         },
         "response": {
-          "en": "public choice",
-          "et": "avaliku valiku teooria"
+          "en": "Johnny Canuck",
+          "et": "Johnny Canuck"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Canada’s Johnny Canuck",
+            "Johnny Canuck personification"
+          ],
+          "et": [
+            "Kanada Johnny Canuck",
+            "Johnny Canucki personifikatsioon"
+          ]
         },
         "explanation": {
-          "en": "Public choice studies government actors as self-interested rather than automatically benevolent.",
-          "et": "Avaliku valiku teooria uurib riigitegelasi omakasupüüdlike, mitte automaatselt heatahtlikena."
+          "en": "Johnny Canuck began as a Canadian political-cartoon figure and was reinvented in 1942 to fight Nazism; the Vancouver Canucks later used his image as a team logo.",
+          "et": "Johnny Canuck sai alguse Kanada poliitiliste karikatuuride tegelasena ja loodi 1942. aastal uuesti natsismi vastu võitlevaks kangelaseks; Vancouver Canucks kasutas hiljem tema kuju meeskonna logona."
         },
         "source": {
-          "sourceId": "wikipedia:public_choice",
-          "title": "Public choice",
-          "url": "https://en.wikipedia.org/wiki/Public_choice",
+          "sourceId": "wikipedia:johnny-canuck",
+          "title": "Johnny Canuck",
+          "url": "https://en.wikipedia.org/wiki/Johnny_Canuck",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -26389,157 +26623,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-075",
     "name": {
-      "en": "Measuring and Explaining Market Power",
-      "et": "Turujõu mõõtmine ja seletamine"
+      "en": "Turning Points Named After Places",
+      "et": "Paikade järgi nimetatud pöördepunktid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-075:question:1",
-        "factKey": "built-in-politics-economics-society:round1-overlap:market:oligopsony",
+        "factKey": "politics:bay-pigs:cia-backed-exiles-cuba-castro-failure",
         "tier": 1,
-        "subjectKey": "market:oligopsony",
+        "subjectKey": "event:bay-of-pigs-invasion",
         "clue": {
-          "en": "What market structure lets a small number of powerful buyers dominate many sellers?",
-          "et": "Millises turustruktuuris valitseb paljude müüjate üle väike arv võimsaid ostjaid?"
+          "en": "CIA-backed Cuban exiles landed at a south-coast inlet in 1961 hoping to overthrow Fidel Castro, but the operation collapsed within days. Name the failed invasion.",
+          "et": "CIA toetatud Kuuba pagulased maabusid 1961. aastal lõunaranniku lahes, lootes Fidel Castro kukutada, kuid operatsioon varises päevadega kokku. Nimeta ebaõnnestunud invasioon."
         },
         "response": {
-          "en": "oligopsony",
-          "et": "oligopson"
+          "en": "Bay of Pigs invasion",
+          "et": "Sigade lahe invasioon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bay of Pigs",
+            "Bay of Pigs operation"
+          ],
+          "et": [
+            "Sigade lahe dessant",
+            "Sigade lahe operatsioon"
+          ]
         },
         "explanation": {
-          "en": "In an oligopsony, buyers can exert downward pressure on supplier prices or wages.",
-          "et": "Oligopsonis saavad ostjad avaldada tarnijahindadele või palkadele langussurvet."
+          "en": "The Bay of Pigs invasion was an unsuccessful US-backed landing by Cuban exiles against Castro’s government in April 1961.",
+          "et": "Sigade lahe invasioon oli USA toetatud Kuuba pagulaste ebaõnnestunud dessant Castro valitsuse vastu 1961. aasta aprillis."
         },
         "source": {
-          "sourceId": "wikipedia:oligopsony",
-          "title": "Oligopsony",
-          "url": "https://en.wikipedia.org/wiki/Oligopsony",
+          "sourceId": "wikipedia:bay-of-pigs-invasion",
+          "title": "Bay of Pigs Invasion",
+          "url": "https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-075:question:2",
-        "factKey": "built-in-politics-economics-society:round1-hard:strategy:price-discrimination",
+        "factKey": "politics:potsdam:truman-stalin-churchill-attlee-postwar-germany",
         "tier": 2,
-        "subjectKey": "strategy:price-discrimination",
+        "subjectKey": "conference:potsdam-1945",
         "clue": {
-          "en": "What practice charges different customers different prices not explained by cost?",
-          "et": "Milline tava küsib eri klientidelt kuluga põhjendamata erinevat hinda?"
+          "en": "Truman, Stalin, and first Churchill then Attlee met near Berlin after Germany’s surrender to decide occupation and post-war arrangements. Name the conference for its host city.",
+          "et": "Truman, Stalin ning algul Churchill ja seejärel Attlee kohtusid pärast Saksamaa kapituleerumist Berliini lähistel, et otsustada okupatsiooni ja sõjajärgse korra üle. Nimeta korraldajalinna järgi tuntud konverents."
         },
         "response": {
-          "en": "price discrimination",
-          "et": "hinnadiskrimineerimine"
+          "en": "Potsdam Conference",
+          "et": "Potsdami konverents"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Potsdam summit",
+            "Potsdam meeting"
+          ],
+          "et": [
+            "Potsdami tippkohtumine",
+            "Potsdami kohtumine"
+          ]
         },
         "explanation": {
-          "en": "Price discrimination requires some market power and limits on resale.",
-          "et": "Hinnadiskrimineerimine vajab turujõudu ning edasimüügi piiramist."
+          "en": "The 1945 Potsdam Conference brought together the United States, Soviet Union, and United Kingdom to administer defeated Germany and settle post-war questions.",
+          "et": "1945. aasta Potsdami konverents tõi kokku USA, Nõukogude Liidu ja Ühendkuningriigi, et hallata lüüasaanud Saksamaad ning lahendada sõjajärgseid küsimusi."
         },
         "source": {
-          "sourceId": "wikipedia:price_discrimination",
-          "title": "Price discrimination",
-          "url": "https://en.wikipedia.org/wiki/Price_discrimination",
+          "sourceId": "wikipedia:potsdam-conference",
+          "title": "Potsdam Conference",
+          "url": "https://en.wikipedia.org/wiki/Potsdam_Conference",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-075:question:3",
-        "factKey": "built-in-politics-economics-society:round1-hard:theory:contestable-market",
+        "factKey": "politics:bandung:asian-african-states-colonialism-nonalignment",
         "tier": 3,
-        "subjectKey": "theory:contestable-market",
+        "subjectKey": "conference:bandung-1955",
         "clue": {
-          "en": "Which market can discipline incumbents because entry and exit are easy?",
-          "et": "Milline turg distsiplineerib seniseid ettevõtteid lihtsa sisenemise ja väljumisega?"
+          "en": "Twenty-nine Asian and African governments met in an Indonesian city in 1955 to discuss colonialism and cooperation outside the rival Cold War blocs. Name the conference.",
+          "et": "Kakskümmend üheksa Aasia ja Aafrika valitsust kohtusid 1955. aastal Indoneesia linnas, et arutada kolonialismi ning koostööd väljaspool vastanduvaid külma sõja blokke. Nimeta konverents."
         },
         "response": {
-          "en": "contestable market",
-          "et": "konkureeritav turg"
+          "en": "Bandung Conference",
+          "et": "Bandungi konverents"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Asian–African Conference",
+            "Afro-Asian Conference"
+          ],
+          "et": [
+            "Aasia-Aafrika konverents",
+            "Aafrika-Aasia konverents"
+          ]
         },
         "explanation": {
-          "en": "A contestable market may behave competitively even with few current sellers.",
-          "et": "Konkureeritav turg võib toimida konkurentslikult isegi väheste müüjatega."
+          "en": "The Bandung Conference gathered newly independent and decolonising states and helped lay foundations for the Non-Aligned Movement.",
+          "et": "Bandungi konverents tõi kokku hiljuti iseseisvunud ja dekoloniseeruvaid riike ning aitas rajada teed Mitteühinemisliikumisele."
         },
         "source": {
-          "sourceId": "wikipedia:contestable_market",
-          "title": "Contestable market",
-          "url": "https://en.wikipedia.org/wiki/Contestable_market",
+          "sourceId": "wikipedia:bandung-conference",
+          "title": "Bandung Conference",
+          "url": "https://en.wikipedia.org/wiki/Bandung_Conference",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-075:question:4",
-        "factKey": "built-in-politics-economics-society:round1-hard:structure:natural-monopoly",
+        "factKey": "society:battle-seattle:wto-ministerial-protests-direct-action-police",
         "tier": 4,
-        "subjectKey": "structure:natural-monopoly",
+        "subjectKey": "protest:battle-of-seattle-1999",
         "clue": {
-          "en": "Which market occurs when one supplier can serve total demand at lower cost than several?",
-          "et": "Milline turg tekib, kui üks pakkuja teenindab kogu nõudlust mitmest odavamalt?"
+          "en": "Trade unionists, environmentalists, and global-justice activists blocked streets during a 1999 World Trade Organization meeting, while police used tear gas. What battle-like nickname did the protests receive?",
+          "et": "Ametiühingud, keskkonnakaitsjad ja üleilmse õigluse aktivistid blokeerisid 1999. aasta Maailma Kaubandusorganisatsiooni kohtumise ajal tänavaid, politsei aga kasutas pisargaasi. Millise lahinguliku hüüdnime said protestid?"
         },
         "response": {
-          "en": "natural monopoly",
-          "et": "loomulik monopol"
+          "en": "Battle of Seattle",
+          "et": "Seattle’i lahing"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1999 Seattle WTO protests",
+            "Seattle WTO protests"
+          ],
+          "et": [
+            "1999. aasta Seattle’i WTO protestid",
+            "Seattle’i WTO meeleavaldused"
+          ]
         },
         "explanation": {
-          "en": "Natural monopoly often follows large fixed costs and falling average cost.",
-          "et": "Loomulik monopol tuleneb sageli suurtest püsikuludest ja langevast keskmisest kulust."
+          "en": "The Battle of Seattle refers to the large demonstrations and direct action around the WTO Ministerial Conference in Seattle in late 1999.",
+          "et": "Seattle’i lahing tähendab suuri meeleavaldusi ja otsest tegevust WTO ministrite konverentsi ümber Seattle’is 1999. aasta lõpus."
         },
         "source": {
-          "sourceId": "wikipedia:natural_monopoly",
-          "title": "Natural monopoly",
-          "url": "https://en.wikipedia.org/wiki/Natural_monopoly",
+          "sourceId": "wikipedia:1999-seattle-wto-protests",
+          "title": "1999 Seattle WTO protests",
+          "url": "https://en.wikipedia.org/wiki/1999_Seattle_WTO_protests",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-075:question:5",
-        "factKey": "built-in-politics-economics-society:round1-hard:index:herfindahl-hirschman",
+        "factKey": "politics:sharpeville:pass-laws-police-fire-at-least-91-deaths-apartheid",
         "tier": 5,
-        "subjectKey": "index:herfindahl-hirschman",
+        "subjectKey": "event:sharpeville-massacre",
         "clue": {
-          "en": "Which concentration measure sums the squared market shares of firms?",
-          "et": "Milline kontsentratsiooninäit liidab ettevõtete turuosade ruudud?"
+          "en": "Protesters in a South African township gathered against pass laws in 1960; police opened fire, and later research counts at least 91 deaths, many from shots in the back. Name the event for the township.",
+          "et": "Meeleavaldajad kogunesid 1960. aastal Lõuna-Aafrika asumis passiseaduste vastu; politsei avas tule ning hilisemate uuringute järgi hukkus vähemalt 91 inimest, paljud selga tulistamise tõttu. Nimeta sündmus asumi järgi."
         },
         "response": {
-          "en": "Herfindahl–Hirschman Index",
-          "et": "Herfindahli–Hirschmani indeks"
+          "en": "Sharpeville massacre",
+          "et": "Sharpeville’i veresaun"
         },
         "acceptedVariants": {
           "en": [
-            "HHI"
+            "Sharpeville shooting",
+            "Sharpeville killings"
           ],
           "et": [
-            "HHI"
+            "Sharpeville’i tulistamine",
+            "Sharpeville’i tapmised"
           ]
         },
         "explanation": {
-          "en": "Competition authorities use HHI changes when assessing mergers.",
-          "et": "Konkurentsiametid kasutavad ühinemiste hindamisel HHI muutust."
+          "en": "The Sharpeville massacre became a turning point in resistance to apartheid and prompted a state of emergency and bans on opposition organisations.",
+          "et": "Sharpeville’i veresaunast sai apartheidivastase vastupanu pöördepunkt ning sellele järgnes erakorraline seisukord ja opositsiooniorganisatsioonide keelustamine."
         },
         "source": {
-          "sourceId": "wikipedia:herfindahl%e2%80%93hirschman_index",
-          "title": "Herfindahl–Hirschman index",
-          "url": "https://en.wikipedia.org/wiki/Herfindahl%E2%80%93Hirschman_index",
+          "sourceId": "wikipedia:sharpeville-massacre",
+          "title": "Sharpeville massacre",
+          "url": "https://en.wikipedia.org/wiki/Sharpeville_massacre",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
