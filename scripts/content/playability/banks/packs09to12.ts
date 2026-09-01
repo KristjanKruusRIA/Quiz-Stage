@@ -16325,153 +16325,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-084",
     "name": {
-      "en": "Materials with Extraordinary Properties",
-      "et": "Erakordsete omadustega materjalid"
+      "en": "Science Museum Showstoppers",
+      "et": "Teadusmuuseumi pilgupüüdjad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-084:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:material:carbon-nanotube",
+        "factKey": "built-in-technology-inventions:checkpoint7:museum:newtons-cradle-impact",
         "tier": 1,
-        "subjectKey": "material:carbon-nanotube",
+        "subjectKey": "demonstration:newtons-cradle",
         "clue": {
-          "en": "Which cylindrical carbon nanostructure can be pictured as a graphene sheet rolled into a tube?",
-          "et": "Millist silindrilist süsiniku nanostruktuuri võib kujutleda toruks keeratud grafeenilehena?"
+          "en": "Five polished balls touch in a row. Lift and release the first, and the last swings away while the middle ones barely move. What desk demonstration is this?",
+          "et": "Viis läikivat kuuli puutuvad reas kokku. Kui esimene lahti lasta, liigub eemale teises otsas olev kuul ja keskmised peaaegu ei nihku. Mis lauademonstratsioon see on?"
         },
         "response": {
-          "en": "carbon nanotube",
-          "et": "süsiniknanotoru"
+          "en": "Newton's cradle",
+          "et": "Newtoni häll"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Newton cradle"],
+          "et": ["Newtoni kuulipendel"]
         },
         "explanation": {
-          "en": "Carbon nanotubes combine a very high length-to-diameter ratio with unusual mechanical and electrical properties.",
-          "et": "Süsiniknanotorudel on väga suur pikkuse ja läbimõõdu suhe ning ebatavalised mehaanilised ja elektrilised omadused."
+          "en": "Newton's cradle demonstrates how momentum and energy pass through a line of nearly elastic collisions, although the familiar desk toy dates from the 20th century.",
+          "et": "Newtoni häll näitab, kuidas impulss ja energia kanduvad peaaegu elastsete põrgete kaudu läbi kuulirea, kuigi tuttav lauamänguasi pärineb 20. sajandist."
         },
         "source": {
-          "sourceId": "wikipedia:carbon_nanotube",
-          "title": "Carbon nanotube",
-          "url": "https://en.wikipedia.org/wiki/Carbon_nanotube",
+          "sourceId": "wikipedia:newtons-cradle",
+          "title": "Newton's cradle",
+          "url": "https://en.wikipedia.org/wiki/Newton%27s_cradle",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-084:question:2",
-        "factKey": "built-in-technology-inventions:round1-overlap:material:xerogel",
+        "factKey": "built-in-technology-inventions:checkpoint7:museum:tesla-coil-arcs",
         "tier": 2,
-        "subjectKey": "material:xerogel",
+        "subjectKey": "device:tesla-coil",
         "clue": {
-          "en": "What porous solid results when a gel is dried by ordinary evaporation rather than supercritical extraction?",
-          "et": "Milline poorne tahkis saadakse geeli kuivatamisel tavalise aurumise, mitte ülekriitilise eraldamisega?"
+          "en": "Museum shows use this resonant transformer to throw spectacular high-frequency, high-voltage arcs through the air. Name the device.",
+          "et": "Muuseumietendustel paiskab see resonantstrafo õhku efektseid kõrgsageduslikke kõrgepinge kaarleeke. Mis seade see on?"
         },
         "response": {
-          "en": "xerogel",
-          "et": "kserogeel"
+          "en": "Tesla coil",
+          "et": "Tesla trafo"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Tesla transformer"],
+          "et": ["Tesla mähis"]
         },
         "explanation": {
-          "en": "A xerogel shrinks as capillary forces act during drying, unlike a low-density aerogel.",
-          "et": "Kserogeel tõmbub kuivamisel kapillaarjõudude tõttu kokku, erinevalt väikese tihedusega aerogeelist."
+          "en": "A Tesla coil is a resonant transformer circuit that produces very high-voltage alternating current and is often used for educational electrical displays.",
+          "et": "Tesla trafo on resonantstrafoskeem, mis tekitab väga kõrge pingega vahelduvvoolu ning mida kasutatakse sageli elektrinähtuste õppenäitustel."
         },
         "source": {
-          "sourceId": "wikipedia:sol%e2%80%93gel_process",
-          "title": "Sol–gel process",
-          "url": "https://en.wikipedia.org/wiki/Sol%E2%80%93gel_process",
+          "sourceId": "wikipedia:tesla-coil",
+          "title": "Tesla coil",
+          "url": "https://en.wikipedia.org/wiki/Tesla_coil",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-084:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:material:shape-memory-alloy",
+        "factKey": "built-in-technology-inventions:checkpoint7:museum:van-de-graaff-hair",
         "tier": 3,
-        "subjectKey": "material:shape-memory-alloy",
+        "subjectKey": "device:van-de-graaff-generator",
         "clue": {
-          "en": "Which alloy returns toward a preset shape when heated?",
-          "et": "Milline sulam naaseb kuumutamisel etteantud kuju poole?"
+          "en": "A moving insulating belt carries charge to a large metal sphere; touch it during a demonstration and your hair may stand on end. Name this generator.",
+          "et": "Liikuv isoleeriv lint kannab laengu suurele metallkerale; demonstratsioonil seda puudutades võivad juuksed püsti tõusta. Mis generaator see on?"
         },
         "response": {
-          "en": "shape-memory alloy",
-          "et": "kujumälusulam"
+          "en": "Van de Graaff generator",
+          "et": "Van de Graaffi generaator"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Van de Graaff machine"],
+          "et": ["Van de Graaffi masin"]
         },
         "explanation": {
-          "en": "Shape-memory alloys switch crystal structures and include nickel-titanium nitinol.",
-          "et": "Kujumälusulam vahetab kristallstruktuuri ning tuntud näide on nikkel-titaan-nitinool."
+          "en": "A Van de Graaff generator accumulates static electric charge on a hollow metal globe, creating the high voltage behind the familiar hair-raising demonstration.",
+          "et": "Van de Graaffi generaator kogub õõnsale metallkerale staatilise elektrilaengu ja tekitab tuttava juukseid kergitava katse jaoks kõrgepinge."
         },
         "source": {
-          "sourceId": "wikipedia:shape-memory_alloy",
-          "title": "Shape-memory alloy",
-          "url": "https://en.wikipedia.org/wiki/Shape-memory_alloy",
+          "sourceId": "wikipedia:van-de-graaff-generator",
+          "title": "Van de Graaff generator",
+          "url": "https://en.wikipedia.org/wiki/Van_de_Graaff_generator",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-084:question:4",
-        "factKey": "built-in-technology-inventions:round1-overlap:material:nomex",
+        "factKey": "built-in-technology-inventions:checkpoint7:museum:rube-goldberg-chain",
         "tier": 4,
-        "subjectKey": "material:nomex",
+        "subjectKey": "concept:rube-goldberg-machine",
         "clue": {
-          "en": "Which aramid fibre is valued for flame-resistant clothing and electrical insulation rather than ballistic strength?",
-          "et": "Millist aramiidkiudu hinnatakse eeskätt tulekindlas rõivastuses ja elektriisolatsioonis, mitte ballistilise tugevuse tõttu?"
+          "en": "An American cartoonist's name became shorthand for a comically elaborate chain reaction that does a very simple job. What is such a contraption called?",
+          "et": "Ühe Ameerika karikaturisti nimi hakkas tähistama koomiliselt keerukat ahelreaktsiooni, mis teeb väga lihtsa töö. Kuidas sellist masinavärki nimetatakse?"
         },
         "response": {
-          "en": "Nomex",
-          "et": "Nomex"
+          "en": "Rube Goldberg machine",
+          "et": "Rube Goldbergi masin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Rube Goldberg device"],
+          "et": ["Rube Goldbergi mehhanism"]
         },
         "explanation": {
-          "en": "Nomex chars instead of melting readily and is used in firefighters’ and racing drivers’ protective wear.",
-          "et": "Nomex söestub ega sula kergesti ning seda kasutatakse tuletõrjujate ja võidusõitjate kaitseriietuses."
+          "en": "Rube Goldberg drew cartoons of needlessly complicated inventions, and his name became an adjective for devices that reach a simple result through many indirect steps.",
+          "et": "Rube Goldberg joonistas tarbetult keerukaid leiutisi ning tema nimest sai väljend seadmete kohta, mis jõuavad lihtsa tulemuseni paljude kaudsete sammudega."
         },
         "source": {
-          "sourceId": "wikipedia:nomex",
-          "title": "Nomex",
-          "url": "https://en.wikipedia.org/wiki/Nomex",
+          "sourceId": "wikipedia:rube-goldberg-machine",
+          "title": "Rube Goldberg machine",
+          "url": "https://en.wikipedia.org/wiki/Rube_Goldberg_machine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-084:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:material:borosilicate-glass",
+        "factKey": "built-in-technology-inventions:checkpoint7:museum:crookes-radiometer-light",
         "tier": 5,
-        "subjectKey": "material:borosilicate-glass",
+        "subjectKey": "device:crookes-radiometer",
         "clue": {
-          "en": "Which low-expansion glass tolerates rapid temperature change in laboratories and cookware?",
-          "et": "Milline väikese soojuspaisumisega klaas talub laboris ja kööginõudes kiiret temperatuurimuutust?"
+          "en": "Inside a partly evacuated glass bulb, black-and-white vanes spin when illuminated—not simply from light pressure, but through thermal effects in the remaining gas. Name the instrument.",
+          "et": "Osaliselt tühjendatud klaaskolvis hakkavad mustvalged labad valguse käes pöörlema — mitte lihtsalt valgusrõhu, vaid allesjäänud gaasi soojusnähtuste tõttu. Mis riist see on?"
         },
         "response": {
-          "en": "borosilicate glass",
-          "et": "borosilikaatklaas"
+          "en": "Crookes radiometer",
+          "et": "Crookesi radiomeeter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["light mill", "radiometer"],
+          "et": ["valgusveski", "radiomeeter"]
         },
         "explanation": {
-          "en": "Boron oxide lowers borosilicate glass expansion and improves thermal-shock resistance.",
-          "et": "Booroksiid vähendab borosilikaatklaasi paisumist ning parandab termolöögikindlust."
+          "en": "A Crookes radiometer has light and dark vane faces inside a low-pressure bulb; heating the gas near the dark sides helps drive the rotation.",
+          "et": "Crookesi radiomeetri heledate ja tumedate külgedega labad paiknevad madalrõhukolvis; tumedamate külgede juures soojenev gaas aitab pöörlemist tekitada."
         },
         "source": {
-          "sourceId": "wikipedia:borosilicate_glass",
-          "title": "Borosilicate glass",
-          "url": "https://en.wikipedia.org/wiki/Borosilicate_glass",
+          "sourceId": "wikipedia:crookes-radiometer",
+          "title": "Crookes radiometer",
+          "url": "https://en.wikipedia.org/wiki/Crookes_radiometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16479,173 +16479,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-085",
     "name": {
-      "en": "Derived Units Used by Engineers",
-      "et": "Inseneride tuletatud mõõtühikud"
+      "en": "Named Digital Mishaps",
+      "et": "Nime saanud digitaalsed äpardused"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-085:question:1",
-        "factKey": "built-in-technology-inventions:round1-overlap:unit:dalton",
+        "factKey": "built-in-technology-inventions:checkpoint7:mishap:y2k-two-digit-years",
         "tier": 1,
-        "subjectKey": "unit:dalton",
+        "subjectKey": "incident:y2k-problem",
         "clue": {
-          "en": "Which non-SI unit of mass is defined as one twelfth of a carbon-12 atom’s mass?",
-          "et": "Milline SI-väline massiühik on määratud ühe kaheteistkümnendikuna süsinik-12 aatomi massist?"
+          "en": "As 1999 ended, programmers raced to stop two-digit years from making 00 look like 1900. What famous computer scare was this?",
+          "et": "1999. aasta lõpul püüdsid programmeerijad takistada kahekohalisi aastaarve tõlgendamast 00 kui 1900. aastat. Mis kuulus arvutihirm see oli?"
         },
         "response": {
-          "en": "dalton",
-          "et": "dalton"
+          "en": "Y2K problem",
+          "et": "aastatuhandevahetuse probleem"
         },
         "acceptedVariants": {
-          "en": [
-            "unified atomic mass unit"
-          ],
-          "et": [
-            "aatommassiühik"
-          ]
+          "en": ["Year 2000 problem", "millennium bug", "Y2K bug", "Y2K"],
+          "et": ["Y2K probleem", "2000. aasta probleem", "millenniumiviga", "Y2K"]
         },
         "explanation": {
-          "en": "The dalton is widely used for atomic and molecular masses and has the symbol Da.",
-          "et": "Daltonit kasutatakse laialt aatomi- ja molekulmasside jaoks ning selle tähis on Da."
+          "en": "Many older systems stored years with only two digits, so the change to 2000 risked bad comparisons and calculations; extensive remediation limited the disruption.",
+          "et": "Paljud vanemad süsteemid salvestasid aastaarvu vaid kahe numbriga, mistõttu üleminek 2000. aastale ähvardas rikkuda võrdlusi ja arvutusi; ulatuslik parandustöö piiras häireid."
         },
         "source": {
-          "sourceId": "wikipedia:dalton_(unit)",
-          "title": "Dalton (unit)",
-          "url": "https://en.wikipedia.org/wiki/Dalton_(unit)",
+          "sourceId": "wikipedia:year-2000-problem",
+          "title": "Year 2000 problem",
+          "url": "https://en.wikipedia.org/wiki/Year_2000_problem",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-085:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:unit:candela",
+        "factKey": "built-in-technology-inventions:checkpoint7:mishap:iloveyou-email-spread",
         "tier": 2,
-        "subjectKey": "unit:candela",
+        "subjectKey": "malware:iloveyou-worm",
         "clue": {
-          "en": "Which SI base unit measures luminous intensity in a direction?",
-          "et": "Milline SI-põhiühik mõõdab valgusallika valgustugevust kindlas suunas?"
+          "en": "In 2000, a tempting love-letter attachment copied itself to Microsoft Outlook contacts and raced around the world. Name this email worm.",
+          "et": "2000. aastal kopeeris ahvatleva armastuskirjana saabunud manus end Microsoft Outlooki kontaktidele ja levis üle maailma. Mis nime kandis see e-postiuss?"
         },
         "response": {
-          "en": "candela",
-          "et": "kandela"
+          "en": "ILOVEYOU worm",
+          "et": "ILOVEYOU uss"
         },
         "acceptedVariants": {
-          "en": [
-            "cd"
-          ],
-          "et": [
-            "cd"
-          ]
+          "en": ["ILOVEYOU", "Love Bug"],
+          "et": ["ILOVEYOU", "Love Bug"]
         },
         "explanation": {
-          "en": "The candela is defined using monochromatic radiation at a specified frequency and efficacy.",
-          "et": "Kandela defineeritakse kindla sageduse ja valgusviljakusega monokromaatilise kiirguse kaudu."
+          "en": "ILOVEYOU arrived as a Visual Basic script disguised as a text file and used the victim's address book to send further copies.",
+          "et": "ILOVEYOU saabus tekstifailiks maskeeritud Visual Basicu skriptina ja kasutas ohvri aadressiraamatut järgmiste koopiate saatmiseks."
         },
         "source": {
-          "sourceId": "wikipedia:candela",
-          "title": "Candela",
-          "url": "https://en.wikipedia.org/wiki/Candela",
+          "sourceId": "wikipedia:iloveyou",
+          "title": "ILOVEYOU",
+          "url": "https://en.wikipedia.org/wiki/ILOVEYOU",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-085:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:unit:tesla",
+        "factKey": "built-in-technology-inventions:checkpoint7:mishap:heartbleed-memory-disclosure",
         "tier": 3,
-        "subjectKey": "unit:tesla",
+        "subjectKey": "vulnerability:heartbleed",
         "clue": {
-          "en": "Which SI unit measures magnetic flux density?",
-          "et": "Milline SI-ühik mõõdab magnetvoo tihedust?"
+          "en": "A missing bounds check in OpenSSL's heartbeat extension let attackers ask a server to reveal pieces of its memory. What 2014 flaw made headlines?",
+          "et": "OpenSSL-i heartbeat-laienduse puuduv piirikontroll võimaldas ründajal paluda serveril avaldada tükke oma mälust. Mis 2014. aastal palju tähelepanu saanud turvaviga see oli?"
         },
         "response": {
-          "en": "tesla",
-          "et": "tesla"
+          "en": "Heartbleed",
+          "et": "Heartbleed"
         },
         "acceptedVariants": {
-          "en": [
-            "T"
-          ],
-          "et": [
-            "T"
-          ]
+          "en": ["Heartbleed bug"],
+          "et": ["Heartbleedi turvaviga"]
         },
         "explanation": {
-          "en": "One tesla equals one weber per square metre.",
-          "et": "Üks tesla võrdub ühe veeberiga ruutmeetri kohta."
+          "en": "Heartbleed abused malformed heartbeat requests to read beyond the intended buffer, potentially exposing passwords and cryptographic material.",
+          "et": "Heartbleed kasutas vigaseid heartbeat-päringuid, et lugeda ettenähtud puhvrist kaugemale ning paljastada võimalikke paroole ja krüptograafilisi andmeid."
         },
         "source": {
-          "sourceId": "wikipedia:tesla_(unit)",
-          "title": "Tesla (unit)",
-          "url": "https://en.wikipedia.org/wiki/Tesla_(unit)",
+          "sourceId": "wikipedia:heartbleed",
+          "title": "Heartbleed",
+          "url": "https://en.wikipedia.org/wiki/Heartbleed",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-085:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:unit:pascal",
+        "factKey": "built-in-technology-inventions:checkpoint7:mishap:pentium-fdiv-replacement",
         "tier": 4,
-        "subjectKey": "unit:pascal",
+        "subjectKey": "defect:pentium-fdiv-bug",
         "clue": {
-          "en": "Which SI unit equals one newton of force per square metre?",
-          "et": "Milline SI-ühik võrdub ühe njuutoni jõuga ruutmeetri kohta?"
+          "en": "Rare floating-point divisions on early Pentium processors returned wrong digits, and Intel eventually offered replacement chips. Name the defect.",
+          "et": "Varaste Pentiumi protsessorite harvad ujukomaarvude jagamised andsid valesid numbreid ning Intel hakkas lõpuks kiipe välja vahetama. Mis viga see oli?"
         },
         "response": {
-          "en": "pascal",
-          "et": "paskal"
+          "en": "Pentium FDIV bug",
+          "et": "Pentiumi FDIV-viga"
         },
         "acceptedVariants": {
-          "en": [
-            "Pa"
-          ],
-          "et": [
-            "Pa"
-          ]
+          "en": ["FDIV bug", "Pentium division bug"],
+          "et": ["FDIV-viga", "Pentiumi jagamisviga"]
         },
         "explanation": {
-          "en": "The pascal measures pressure and mechanical stress.",
-          "et": "Paskal mõõdab rõhku ja mehaanilist pinget."
+          "en": "The Pentium FDIV bug came from missing entries in a lookup table used by the processor's floating-point division algorithm.",
+          "et": "Pentiumi FDIV-vea põhjustasid puuduvad kirjed otsingutabelis, mida protsessor kasutas ujukomaarvude jagamise algoritmis."
         },
         "source": {
-          "sourceId": "wikipedia:pascal_(unit)",
-          "title": "Pascal (unit)",
-          "url": "https://en.wikipedia.org/wiki/Pascal_(unit)",
+          "sourceId": "wikipedia:pentium-fdiv-bug",
+          "title": "Pentium FDIV bug",
+          "url": "https://en.wikipedia.org/wiki/Pentium_FDIV_bug",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-085:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:unit:siemens",
+        "factKey": "built-in-technology-inventions:checkpoint7:mishap:zune-30-leap-year-freeze",
         "tier": 5,
-        "subjectKey": "unit:siemens",
+        "subjectKey": "incident:zune-30-freeze",
         "clue": {
-          "en": "Which SI unit measures electrical conductance, the reciprocal of resistance?",
-          "et": "Milline SI-ühik mõõdab elektrijuhtivust ehk takistuse pöördväärtust?"
+          "en": "On the last day of 2008, Microsoft's 30 GB music players froze together because their clock driver mishandled the leap year. Name this device-wide incident.",
+          "et": "2008. aasta viimasel päeval hangusid Microsofti 30 GB muusikamängijad korraga, sest kelladraiver käsitles liigaastat valesti. Mis seadmeid korraga tabanud juhtum see oli?"
         },
         "response": {
-          "en": "siemens",
-          "et": "siimens"
+          "en": "Zune 30 freeze",
+          "et": "Zune 30 hangumine"
         },
         "acceptedVariants": {
-          "en": [
-            "S"
-          ],
-          "et": [
-            "S"
-          ]
+          "en": ["Zune leap-year bug", "Zune bug", "Zune freeze", "Zune 30", "Z2K"],
+          "et": ["Zune'i liigaastaviga", "Zune'i viga", "Zune'i hangumine", "Zune 30", "Z2K"]
         },
         "explanation": {
-          "en": "One siemens equals one ampere per volt.",
-          "et": "Üks siimens võrdub ühe ampriga voldi kohta."
+          "en": "A loop in the Zune 30 clock driver could not finish calculating the final day of a leap year, so the players recovered only after the date changed.",
+          "et": "Zune 30 kelladraiveri tsükkel ei suutnud liigaasta viimast päeva lõpuni arvutada, mistõttu mängijad taastusid alles kuupäeva vahetudes."
         },
         "source": {
-          "sourceId": "wikipedia:siemens_(unit)",
-          "title": "Siemens (unit)",
-          "url": "https://en.wikipedia.org/wiki/Siemens_(unit)",
+          "sourceId": "wikipedia:zune",
+          "title": "Zune",
+          "url": "https://en.wikipedia.org/wiki/Zune",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16653,153 +16633,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-086",
     "name": {
-      "en": "Instruments for Hidden Quantities",
-      "et": "Varjatud suuruste mõõteriistad"
+      "en": "Bold Gadgets That Missed the Mainstream",
+      "et": "Julged vidinad, mis massidesse ei jõudnud"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-086:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:interferometer",
+        "factKey": "built-in-technology-inventions:checkpoint7:gadgets:google-glass-explorer",
         "tier": 1,
-        "subjectKey": "instrument:interferometer",
+        "subjectKey": "product:google-glass",
         "clue": {
-          "en": "Which instrument combines waves so tiny path differences appear as interference fringes?",
-          "et": "Milline seade ühendab laineid nii, et väga väike teepikkuse erinevus ilmub interferentsiribadena?"
+          "en": "Google's Explorer smart glasses placed a camera and a tiny display above one eye, but price and privacy criticism kept them from everyday adoption. Name the product.",
+          "et": "Google'i Exploreri nutiprillidel olid ühe silma kohal kaamera ja pisike ekraan, kuid hind ja privaatsuskriitika takistasid nende igapäevast levikut. Mis toode see oli?"
         },
         "response": {
-          "en": "interferometer",
-          "et": "interferomeeter"
+          "en": "Google Glass",
+          "et": "Google Glass"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Google Glass Explorer Edition"],
+          "et": ["Google'i nutiprillid"]
         },
         "explanation": {
-          "en": "Interferometers measure displacement, wavelength, refractive index, and astronomical detail.",
-          "et": "Interferomeeter mõõdab nihkumist, lainepikkust, murdumisnäitajat ja astronoomilisi detaile."
+          "en": "Google Glass displayed information through an optical head-mounted display and could record images, but the consumer version never became a mainstream wearable.",
+          "et": "Google Glass näitas infot optilise peaekraani kaudu ja sai salvestada pilte, kuid tarbijaversioonist ei saanud kunagi massilist kantavat seadet."
         },
         "source": {
-          "sourceId": "wikipedia:interferometry",
-          "title": "Interferometry",
-          "url": "https://en.wikipedia.org/wiki/Interferometry",
+          "sourceId": "wikipedia:google-glass",
+          "title": "Google Glass",
+          "url": "https://en.wikipedia.org/wiki/Google_Glass",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-086:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:circuit:wheatstone-bridge",
+        "factKey": "built-in-technology-inventions:checkpoint7:gadgets:segway-market-hype",
         "tier": 2,
-        "subjectKey": "circuit:wheatstone-bridge",
+        "subjectKey": "vehicle:segway-pt",
         "clue": {
-          "en": "Which four-resistor circuit precisely measures an unknown resistance by balance?",
-          "et": "Milline nelja takistiga ahel mõõdab tasakaalustamise teel täpselt tundmatut takistust?"
+          "en": "This heavily hyped self-balancing two-wheeler was steered by leaning, yet it did not remake urban travel as its promoters predicted. Name the vehicle.",
+          "et": "Seda palju reklaamitud isetasakaalustuvat kaherattalist juhiti kallutamisega, kuid see ei muutnud linnaliiklust nii, nagu ennustati. Mis sõiduk see oli?"
         },
         "response": {
-          "en": "Wheatstone bridge",
-          "et": "Wheatstone’i sild"
+          "en": "Segway PT",
+          "et": "Segway PT"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Segway Personal Transporter", "Segway"],
+          "et": ["Segway Personal Transporter", "Segway"]
         },
         "explanation": {
-          "en": "At balance, the detector sees no voltage and resistor ratios determine the unknown.",
-          "et": "Tasakaalus ei näe detektor pinget ning tundmatu määravad takistite suhted."
+          "en": "The Segway PT used gyroscopes and electric motors to balance a standing rider, but sales fell far short of the extraordinary launch hype.",
+          "et": "Segway PT kasutas seisva sõitja tasakaalustamiseks güroskoope ja elektrimootoreid, kuid müük jäi suurejoonelisest stardieelsest ootusest kaugele maha."
         },
         "source": {
-          "sourceId": "wikipedia:wheatstone_bridge",
-          "title": "Wheatstone bridge",
-          "url": "https://en.wikipedia.org/wiki/Wheatstone_bridge",
+          "sourceId": "wikipedia:segway",
+          "title": "Segway",
+          "url": "https://en.wikipedia.org/wiki/Segway",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-086:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:anemometer",
+        "factKey": "built-in-technology-inventions:checkpoint7:gadgets:n-gage-phone-console",
         "tier": 3,
-        "subjectKey": "instrument:anemometer",
+        "subjectKey": "device:nokia-n-gage",
         "clue": {
-          "en": "Which instrument measures wind speed using cups, propellers, heat, or sound?",
-          "et": "Milline mõõteriist mõõdab tuule kiirust topside, propelleri, soojuse või heliga?"
+          "en": "Nokia's phone-and-game-console hybrid was mocked for sideways calls and initially made owners remove the battery to change a game card. Name it.",
+          "et": "Nokia telefoni ja mängukonsooli hübriidi pilgati külg ees helistamise pärast ning algul tuli mängukaardi vahetamiseks aku eemaldada. Mis seadmega oli tegu?"
         },
         "response": {
-          "en": "anemometer",
-          "et": "anemomeeter"
+          "en": "Nokia N-Gage",
+          "et": "Nokia N-Gage"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["N-Gage", "N-Gage game deck"],
+          "et": ["N-Gage", "Nokia mängutelefon N-Gage"]
         },
         "explanation": {
-          "en": "Meteorology and ventilation testing both use anemometers.",
-          "et": "Anemomeetrit kasutatakse nii meteoroloogias kui ventilatsiooni kontrollis."
+          "en": "The N-Gage combined a mobile phone with cartridge-based gaming, but its awkward first design struggled against dedicated handheld consoles.",
+          "et": "N-Gage ühendas mobiiltelefoni mängukaartidega konsooliga, kuid selle kohmakas esimene mudel ei suutnud eraldi pihukonsoolidega võistelda."
         },
         "source": {
-          "sourceId": "wikipedia:anemometer",
-          "title": "Anemometer",
-          "url": "https://en.wikipedia.org/wiki/Anemometer",
+          "sourceId": "wikipedia:n-gage-device",
+          "title": "N-Gage (device)",
+          "url": "https://en.wikipedia.org/wiki/N-Gage_(device)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-086:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:manometer",
+        "factKey": "built-in-technology-inventions:checkpoint7:gadgets:hd-dvd-format-war",
         "tier": 4,
-        "subjectKey": "instrument:manometer",
+        "subjectKey": "format:hd-dvd",
         "clue": {
-          "en": "Which instrument measures pressure from the height difference of a liquid column?",
-          "et": "Milline mõõteriist määrab rõhu vedelikusamba kõrguste erinevusest?"
+          "en": "Toshiba backed this high-definition disc format, but it lost its market battle to Blu-ray and was discontinued in 2008. Name the losing format.",
+          "et": "Toshiba toetas seda kõrglahutusega plaadivormingut, kuid see kaotas turuvõitluse Blu-rayle ja lõpetati 2008. aastal. Mis vorming see oli?"
         },
         "response": {
-          "en": "manometer",
-          "et": "manomeeter"
+          "en": "HD DVD",
+          "et": "HD DVD"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["HD-DVD", "Toshiba HD DVD"],
+          "et": ["HD-DVD", "Toshiba HD DVD"]
         },
         "explanation": {
-          "en": "A U-tube manometer directly balances pressure against gravity and fluid density.",
-          "et": "U-toru manomeeter tasakaalustab rõhu vahetult raskusjõu ja vedeliku tihedusega."
+          "en": "HD DVD and Blu-ray competed to replace DVD for high-definition video; Toshiba ended the HD DVD business after studios and retailers shifted toward Blu-ray.",
+          "et": "HD DVD ja Blu-ray võistlesid DVD asendamise pärast kõrglahutusega videos; Toshiba lõpetas HD DVD äri, kui stuudiod ja jaemüüjad kaldusid Blu-ray poole."
         },
         "source": {
-          "sourceId": "wikipedia:pressure_measurement",
-          "title": "Pressure measurement",
-          "url": "https://en.wikipedia.org/wiki/Pressure_measurement",
+          "sourceId": "wikipedia:hd-dvd",
+          "title": "HD DVD",
+          "url": "https://en.wikipedia.org/wiki/HD_DVD",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-086:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:spectrometer",
+        "factKey": "built-in-technology-inventions:checkpoint7:gadgets:sinclair-c5-market",
         "tier": 5,
-        "subjectKey": "instrument:spectrometer",
+        "subjectKey": "vehicle:sinclair-c5",
         "clue": {
-          "en": "Which instrument separates a signal by wavelength or energy for measurement?",
-          "et": "Milline seade lahutab mõõtmiseks signaali lainepikkuse või energia järgi?"
+          "en": "Clive Sinclair launched this low, three-wheeled battery vehicle in 1985; poor range, weather exposure and safety worries helped make it a famous British flop. Name it.",
+          "et": "Clive Sinclair tõi 1985. aastal turule madala kolmerattalise akusõiduki; väike sõiduulatus, ilmastiku käes olemine ja ohutusmured tegid sellest kuulsa Briti läbikukkumise. Mis sõiduk see oli?"
         },
         "response": {
-          "en": "spectrometer",
-          "et": "spektromeeter"
+          "en": "Sinclair C5",
+          "et": "Sinclair C5"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Clive Sinclair C5"],
+          "et": ["Clive Sinclairi C5"]
         },
         "explanation": {
-          "en": "Spectrometers identify composition from characteristic lines or bands.",
-          "et": "Spektromeeter tuvastab koostise iseloomulike joonte või ribade järgi."
+          "en": "The Sinclair C5 was a small electric recumbent tricycle sold as personal transport, but it disappeared from the market within months.",
+          "et": "Sinclair C5 oli isiklikuks liikumiseks müüdud väike elektriline lamav kolmerattaline, kuid kadus turult mõne kuuga."
         },
         "source": {
-          "sourceId": "wikipedia:spectrometer",
-          "title": "Spectrometer",
-          "url": "https://en.wikipedia.org/wiki/Spectrometer",
+          "sourceId": "wikipedia:sinclair-c5",
+          "title": "Sinclair C5",
+          "url": "https://en.wikipedia.org/wiki/Sinclair_C5",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16807,157 +16787,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-087",
     "name": {
-      "en": "Reading the Air around an Aircraft",
-      "et": "Õhusõidukit ümbritseva õhu lugemine"
+      "en": "Machines at the Game Table",
+      "et": "Masinad mängulaua ääres"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-087:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:pitot-tube",
+        "factKey": "built-in-technology-inventions:checkpoint7:game-ai:deep-blue-kasparov",
         "tier": 1,
-        "subjectKey": "instrument:pitot-tube",
+        "subjectKey": "computer:deep-blue",
         "clue": {
-          "en": "Which forward-facing tube infers airspeed from total and static pressure?",
-          "et": "Milline ettepoole suunatud toru määrab õhukiiruse kogu- ja staatilise rõhu erinevusest?"
+          "en": "Which IBM chess computer defeated world champion Garry Kasparov in their 1997 rematch?",
+          "et": "Milline IBMi malearvuti alistas 1997. aasta kordusmatšis maailmameister Garri Kasparovi?"
         },
         "response": {
-          "en": "pitot tube",
-          "et": "Pitot’ toru"
+          "en": "Deep Blue",
+          "et": "Deep Blue"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["IBM Deep Blue"],
+          "et": ["IBMi Deep Blue"]
         },
         "explanation": {
-          "en": "A blocked pitot system can give dangerously false airspeed readings.",
-          "et": "Ummistunud Pitot’ süsteem võib anda ohtlikult vale õhukiiruse."
+          "en": "Deep Blue won the six-game rematch 3½–2½, becoming the first computer to defeat a reigning world chess champion in a match under standard conditions.",
+          "et": "Deep Blue võitis kuuemängulise kordusmatši 3½–2½ ja sai esimeseks arvutiks, mis alistas valitseva male maailmameistri tavatingimustes peetud matšis."
         },
         "source": {
-          "sourceId": "wikipedia:pitot_tube",
-          "title": "Pitot tube",
-          "url": "https://en.wikipedia.org/wiki/Pitot_tube",
+          "sourceId": "wikipedia:deep-blue-chess-computer",
+          "title": "Deep Blue (chess computer)",
+          "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-087:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:winglet",
+        "factKey": "built-in-technology-inventions:checkpoint7:game-ai:alphago-lee-sedol",
         "tier": 2,
-        "subjectKey": "component:winglet",
+        "subjectKey": "software:alphago",
         "clue": {
-          "en": "Which upturned wingtip device reduces induced drag from vortices?",
-          "et": "Milline ülespööratud tiivaotsaseade vähendab keeristest tekkivat induktiivtakistust?"
+          "en": "DeepMind's system won four games out of five against Lee Sedol in 2016, conquering a board game long thought resistant to ordinary game-tree search. Name it.",
+          "et": "DeepMindi süsteem võitis 2016. aastal Lee Sedoli vastu viisest mängust neli ning vallutas lauamängu, mida peeti tavapärasele mängupuude otsingule kaua liiga keerukaks. Mis süsteem see oli?"
         },
         "response": {
-          "en": "winglet",
-          "et": "tiivaotsavertikaal"
+          "en": "AlphaGo",
+          "et": "AlphaGo"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["DeepMind AlphaGo"],
+          "et": ["DeepMindi AlphaGo"]
         },
         "explanation": {
-          "en": "Winglets improve efficiency without requiring the full span of a longer wing.",
-          "et": "Tiivaotsavertikaal parandab tõhusust ilma pikema tiiva kogu ulatuseta."
+          "en": "AlphaGo combined neural networks with tree search and defeated one of the world's strongest Go players in a landmark match.",
+          "et": "AlphaGo ühendas närvivõrgud puuotsinguga ja alistas murrangulises matšis ühe maailma tugevaima go-mängija."
         },
         "source": {
-          "sourceId": "wikipedia:wingtip_device",
-          "title": "Wingtip device",
-          "url": "https://en.wikipedia.org/wiki/Wingtip_device",
+          "sourceId": "wikipedia:alphago",
+          "title": "AlphaGo",
+          "url": "https://en.wikipedia.org/wiki/AlphaGo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-087:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:engine:ramjet",
+        "factKey": "built-in-technology-inventions:checkpoint7:game-ai:watson-jeopardy",
         "tier": 3,
-        "subjectKey": "engine:ramjet",
+        "subjectKey": "computer:ibm-watson",
         "clue": {
-          "en": "Which jet engine compresses incoming air through forward speed and has no compressor turbine?",
-          "et": "Milline reaktiivmootor surub siseneva õhu kokku lennukiirusega ning ei kasuta kompressorturbiini?"
+          "en": "This IBM question-answering computer beat champions Ken Jennings and Brad Rutter on Jeopardy! in 2011. Name it.",
+          "et": "See IBMi küsimustele vastav arvuti alistas 2011. aastal „Jeopardy!” meistrid Ken Jenningsi ja Brad Rutteri. Mis oli selle nimi?"
         },
         "response": {
-          "en": "ramjet",
-          "et": "otsevoolu-reaktiivmootor"
+          "en": "IBM Watson",
+          "et": "IBM Watson"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Watson computer"],
+          "et": ["IBMi Watson", "Watsoni arvuti"]
         },
         "explanation": {
-          "en": "A ramjet cannot produce static thrust and becomes useful only at high speed.",
-          "et": "Otsevoolu-reaktiivmootor ei tekita paigalseisutõuget ning töötab alles suurel kiirusel."
+          "en": "IBM Watson analysed natural-language clues, generated candidate answers and assigned confidence scores quickly enough to compete through the show's buzzer.",
+          "et": "IBM Watson analüüsis loomulikus keeles vihjeid, koostas vastusekandidaate ja hindas nende kindlust piisavalt kiiresti, et saate summerimängus võistelda."
         },
         "source": {
-          "sourceId": "wikipedia:ramjet",
-          "title": "Ramjet",
-          "url": "https://en.wikipedia.org/wiki/Ramjet",
+          "sourceId": "wikipedia:ibm-watson",
+          "title": "IBM Watson",
+          "url": "https://en.wikipedia.org/wiki/IBM_Watson",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-087:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:control:fly-by-wire",
+        "factKey": "built-in-technology-inventions:checkpoint7:game-ai:libratus-poker",
         "tier": 4,
-        "subjectKey": "control:fly-by-wire",
+        "subjectKey": "software:libratus",
         "clue": {
-          "en": "Which system sends pilot commands as electrical signals instead of mechanical linkages?",
-          "et": "Milline süsteem saadab piloodi käsud mehaaniliste ühenduste asemel elektrisignaalidena?"
+          "en": "Carnegie Mellon's program beat elite players at heads-up no-limit Texas hold'em, a game where hidden cards make bluffing part of the computing problem. Name it.",
+          "et": "Carnegie Melloni programm alistas tipptasemel mängijaid kahe mängija limiidita Texas hold'em'is, kus varjatud kaardid muudavad blufi arvutusprobleemi osaks. Mis programm see oli?"
         },
         "response": {
-          "en": "fly-by-wire",
-          "et": "elektriline lennujuhtimine"
+          "en": "Libratus",
+          "et": "Libratus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["CMU Libratus"],
+          "et": ["Carnegie Melloni Libratus"]
         },
         "explanation": {
-          "en": "Fly-by-wire computers can stabilise flight and enforce safe control limits.",
-          "et": "Elektrilise lennujuhtimise arvuti võib lendu stabiliseerida ning rakendada ohutuid juhtimispiire."
+          "en": "Libratus used game-theory methods to improve its poker strategy and decisively beat four professional players in a 2017 competition.",
+          "et": "Libratus kasutas pokkeristrateegia parandamiseks mänguteooria meetodeid ja võitis 2017. aasta võistlusel selgelt nelja elukutselist mängijat."
         },
         "source": {
-          "sourceId": "wikipedia:fly-by-wire",
-          "title": "Fly-by-wire",
-          "url": "https://en.wikipedia.org/wiki/Fly-by-wire",
+          "sourceId": "wikipedia:libratus",
+          "title": "Libratus",
+          "url": "https://en.wikipedia.org/wiki/Libratus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-087:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:measurement:angle-of-attack",
+        "factKey": "built-in-technology-inventions:checkpoint7:game-ai:td-gammon-self-play",
         "tier": 5,
-        "subjectKey": "measurement:angle-of-attack",
+        "subjectKey": "software:td-gammon",
         "clue": {
-          "en": "Which angle between a wing chord and airflow strongly affects lift and stall?",
-          "et": "Milline tiivakõõlu ja õhuvoolu vaheline nurk mõjutab tugevalt tõstejõudu ja varisemist?"
+          "en": "Gerald Tesauro's backgammon program learned from self-play using temporal-difference methods and reached near top-human strength. Name the program.",
+          "et": "Gerald Tesauro triktrakkiprogramm õppis iseendaga mängides ja kasutas ajavahe meetodit, jõudes peaaegu parimate inimeste tasemele. Mis programm see oli?"
         },
         "response": {
-          "en": "angle of attack",
-          "et": "kohtumisnurk"
+          "en": "TD-Gammon",
+          "et": "TD-Gammon"
         },
         "acceptedVariants": {
-          "en": [
-            "AoA"
-          ],
-          "et": [
-            "AoA"
-          ]
+          "en": ["TD Gammon"],
+          "et": ["TD Gammon"]
         },
         "explanation": {
-          "en": "A stall occurs when angle of attack exceeds a critical value, not at one fixed airspeed.",
-          "et": "Varisemine tekib kriitilise kohtumisnurga ületamisel, mitte ühel kindlal õhukiirusel."
+          "en": "TD-Gammon became an influential reinforcement-learning example because it discovered strong backgammon play largely through experience rather than an expert-written strategy book.",
+          "et": "TD-Gammonist sai mõjukas stiimulõppe näide, sest see õppis tugeva triktrakimängu suuresti kogemusest, mitte eksperdi kirjutatud strateegiareeglitest."
         },
         "source": {
-          "sourceId": "wikipedia:angle_of_attack",
-          "title": "Angle of attack",
-          "url": "https://en.wikipedia.org/wiki/Angle_of_attack",
+          "sourceId": "wikipedia:td-gammon",
+          "title": "TD-Gammon",
+          "url": "https://en.wikipedia.org/wiki/TD-Gammon",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -16965,157 +16941,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-088",
     "name": {
-      "en": "Ways to Change an Orbit",
-      "et": "Orbiidi muutmise viisid"
+      "en": "Computer Culture's Greatest Hits",
+      "et": "Arvutikultuuri suurimad hitid"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-088:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:maneuver:gravity-assist",
+        "factKey": "built-in-technology-inventions:checkpoint7:computer-culture:http-404-not-found",
         "tier": 1,
-        "subjectKey": "maneuver:gravity-assist",
+        "subjectKey": "web:http-404",
         "clue": {
-          "en": "Which manoeuvre exchanges momentum with a planet to alter a spacecraft’s path?",
-          "et": "Milline manööver vahetab planeediga impulssi, et muuta kosmoselaeva trajektoori?"
+          "en": "A web server answers, but the requested page or file is not there. Which familiar HTTP status does the browser show?",
+          "et": "Veebiserver vastab, kuid soovitud lehte või faili seal pole. Millist tuttavat HTTP olekut brauser näitab?"
         },
         "response": {
-          "en": "gravity assist",
-          "et": "gravitatsiooniline lingutamine"
+          "en": "404 Not Found",
+          "et": "viga 404"
         },
         "acceptedVariants": {
-          "en": [
-            "slingshot manoeuvre"
-          ],
-          "et": [
-            "gravitatsioonimanööver"
-          ]
+          "en": ["404 error", "HTTP 404", "404"],
+          "et": ["404 viga", "HTTP 404", "404"]
         },
         "explanation": {
-          "en": "A gravity assist can increase or decrease heliocentric speed without onboard propellant.",
-          "et": "Gravitatsiooniline lingutamine võib suurendada või vähendada heliotsentrilist kiirust pardakütuseta."
+          "en": "HTTP status 404 means the server was reached but could not find the requested resource; it does not necessarily mean the whole website is offline.",
+          "et": "HTTP olek 404 tähendab, et serverini jõuti, kuid soovitud ressurssi ei leitud; kogu veebisait ei pruugi olla maas."
         },
         "source": {
-          "sourceId": "wikipedia:gravity_assist",
-          "title": "Gravity assist",
-          "url": "https://en.wikipedia.org/wiki/Gravity_assist",
+          "sourceId": "wikipedia:http-404",
+          "title": "HTTP 404",
+          "url": "https://en.wikipedia.org/wiki/HTTP_404",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-088:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:reaction-wheel",
+        "factKey": "built-in-technology-inventions:checkpoint7:computer-culture:clippy-office-assistant",
         "tier": 2,
-        "subjectKey": "component:reaction-wheel",
+        "subjectKey": "character:clippy",
         "clue": {
-          "en": "Which spinning wheel turns a spacecraft by conservation of angular momentum?",
-          "et": "Milline pöörlev ratas keerab kosmoselaeva nurkimpulsi jäävuse abil?"
+          "en": "Microsoft Office once offered advice through an animated paperclip that became better remembered as an annoyance and a meme. What was the character called?",
+          "et": "Microsoft Office pakkus kunagi nõu animeeritud kirjaklambri kaudu, mis jäi paremini meelde tüütu tegelase ja meemina. Mis oli tema nimi?"
         },
         "response": {
-          "en": "reaction wheel",
-          "et": "reaktsiooniratas"
+          "en": "Clippy",
+          "et": "Clippy"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Microsoft Clippy"],
+          "et": ["Microsofti Clippy"]
         },
         "explanation": {
-          "en": "Reaction wheels control attitude without expelling propellant but can become saturated.",
-          "et": "Reaktsiooniratas juhib asendit kütust väljutamata, kuid võib küllastuda."
+          "en": "Clippy was the default character for the Microsoft Office Assistant, which tried to infer a user's task and offer help.",
+          "et": "Clippy oli Microsoft Office Assistanti vaikimisi tegelane, kes püüdis kasutaja tegevust ära arvata ja abi pakkuda."
         },
         "source": {
-          "sourceId": "wikipedia:reaction_wheel",
-          "title": "Reaction wheel",
-          "url": "https://en.wikipedia.org/wiki/Reaction_wheel",
+          "sourceId": "wikipedia:office-assistant",
+          "title": "Office Assistant",
+          "url": "https://en.wikipedia.org/wiki/Office_Assistant",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-088:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:engine:ion-thruster",
+        "factKey": "built-in-technology-inventions:checkpoint7:computer-culture:ctrl-alt-delete-bradley",
         "tier": 3,
-        "subjectKey": "engine:ion-thruster",
+        "subjectKey": "command:ctrl-alt-delete",
         "clue": {
-          "en": "Which engine accelerates charged particles for very efficient low thrust?",
-          "et": "Milline mootor kiirendab laetud osakesi, andes väga tõhusalt väikest tõukejõudu?"
+          "en": "IBM engineer David Bradley devised this three-key reset shortcut; Windows later used the same combination to open security controls. Name it.",
+          "et": "IBMi insener David Bradley mõtles välja selle kolme klahvi taaskäivituskäsu; Windows hakkas sama kombinatsiooniga avama turvavalikuid. Mis käsk see on?"
         },
         "response": {
-          "en": "ion thruster",
-          "et": "ioonmootor"
+          "en": "Ctrl-Alt-Delete",
+          "et": "Ctrl-Alt-Delete"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Control-Alt-Delete", "three-finger salute"],
+          "et": ["Control-Alt-Delete", "kolme sõrme tervitus"]
         },
         "explanation": {
-          "en": "Ion thrusters operate for long periods and achieve high exhaust velocity.",
-          "et": "Ioonmootor töötab kaua ning saavutab suure väljavoolukiiruse."
+          "en": "Ctrl-Alt-Delete began as a quick way for IBM PC developers to reboot without cycling the power and later gained a separate Windows security role.",
+          "et": "Ctrl-Alt-Delete loodi algul selleks, et IBM PC arendajad saaksid arvuti kiiresti toidet katkestamata taaskäivitada, ning hiljem sai see Windowsis eraldi turvarolli."
         },
         "source": {
-          "sourceId": "wikipedia:ion_thruster",
-          "title": "Ion thruster",
-          "url": "https://en.wikipedia.org/wiki/Ion_thruster",
+          "sourceId": "wikipedia:control-alt-delete",
+          "title": "Control-Alt-Delete",
+          "url": "https://en.wikipedia.org/wiki/Control-Alt-Delete",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-088:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:orbit:hohmann-transfer",
+        "factKey": "built-in-technology-inventions:checkpoint7:computer-culture:konami-code-hashimoto",
         "tier": 4,
-        "subjectKey": "orbit:hohmann-transfer",
+        "subjectKey": "code:konami-code",
         "clue": {
-          "en": "Which two-burn elliptical transfer efficiently moves between circular coplanar orbits?",
-          "et": "Milline kahe impulsiga elliptiline üleminek liigutab tõhusalt kahe samatasandilise ringorbiidi vahel?"
+          "en": "Kazuhisa Hashimoto created a famous sequence of directions and buttons while testing the difficult home version of Gradius. What gaming secret did it become?",
+          "et": "Kazuhisa Hashimoto lõi Gradiuse keerulist koduversiooni testides kuulsa suuna- ja nupukombinatsiooni. Milliseks mängusaladuseks see kujunes?"
         },
         "response": {
-          "en": "Hohmann transfer orbit",
-          "et": "Hohmanni üleminekuorbiit"
+          "en": "Konami Code",
+          "et": "Konami kood"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Konami cheat code"],
+          "et": ["Konami Code"]
         },
         "explanation": {
-          "en": "A Hohmann transfer touches the starting and target circles at opposite apsides.",
-          "et": "Hohmanni üleminekuorbiit puudutab lähte- ja sihtringi vastastes apsiidides."
+          "en": "The Konami Code was left in Gradius and later appeared in many Konami games, becoming one of gaming's best-known cheat codes.",
+          "et": "Konami kood jäi Gradiusesse ning ilmus hiljem paljudes Konami mängudes, kujunedes üheks tuntumaks petukoodiks."
         },
         "source": {
-          "sourceId": "wikipedia:hohmann_transfer_orbit",
-          "title": "Hohmann transfer orbit",
-          "url": "https://en.wikipedia.org/wiki/Hohmann_transfer_orbit",
+          "sourceId": "wikipedia:konami-code",
+          "title": "Konami Code",
+          "url": "https://en.wikipedia.org/wiki/Konami_Code",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-088:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:point:lagrange-point",
+        "factKey": "built-in-technology-inventions:checkpoint7:computer-culture:hello-world-kernighan",
         "tier": 5,
-        "subjectKey": "point:lagrange-point",
+        "subjectKey": "program:hello-world",
         "clue": {
-          "en": "Where can a small body keep a stable geometry relative to two larger orbiting bodies?",
-          "et": "Kus saab väike keha säilitada kahe suurema tiirleva kehaga püsiva geomeetria?"
+          "en": "Brian Kernighan used a tiny program that printed a two-word greeting in early Bell Labs teaching material, starting a tradition for a programmer's first example. Name that program.",
+          "et": "Brian Kernighan kasutas varases Bell Labsi õppematerjalis pisikest programmi, mis trükkis kahe sõnaga tervituse, ja pani aluse esimese programmeerimisnäite traditsioonile. Mis programm see on?"
         },
         "response": {
-          "en": "Lagrange point",
-          "et": "Lagrange’i punkt"
+          "en": "Hello, World! program",
+          "et": "„Hello, World!” programm"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Hello, World!", "Hello World program"],
+          "et": ["Hello, World!", "Hello World programm"]
         },
         "explanation": {
-          "en": "A two-body system has five idealised Lagrange points, labelled L1 through L5.",
-          "et": "Kahe keha süsteemil on viis idealiseeritud Lagrange’i punkti L1-st L5-ni."
+          "en": "The Hello, World! example became a standard way to show the basic syntax needed to produce output in a new programming language.",
+          "et": "„Hello, World!” näitest sai tavapärane viis näidata uues programmeerimiskeeles väljundi tekitamiseks vajalikku põhisüntaksit."
         },
         "source": {
-          "sourceId": "wikipedia:lagrange_point",
-          "title": "Lagrange point",
-          "url": "https://en.wikipedia.org/wiki/Lagrange_point",
+          "sourceId": "wikipedia:hello-world-program",
+          "title": "\"Hello, World!\" program",
+          "url": "https://en.wikipedia.org/wiki/%22Hello,_World!%22_program",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -17123,157 +17095,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-089",
     "name": {
-      "en": "Navigation When Satellites Are Absent",
-      "et": "Navigeerimine satelliitideta"
+      "en": "Cars Built Around One Bold Idea",
+      "et": "Ühe julge idee ümber loodud autod"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-089:question:1",
-        "factKey": "built-in-technology-inventions:round1-overlap:instrument:octant",
+        "factKey": "built-in-technology-inventions:checkpoint7:cars:beetle-rear-engine-shape",
         "tier": 1,
-        "subjectKey": "instrument:octant",
+        "subjectKey": "car:volkswagen-beetle",
         "clue": {
-          "en": "Which reflecting navigation instrument measures angles up to ninety degrees and preceded the sextant?",
-          "et": "Milline peegelduv navigatsiooniriist mõõdab kuni 90-kraadiseid nurki ning eelnes sekstandile?"
+          "en": "Which rounded, rear-engined Volkswagen began as Germany's “people's car” and went on to be built in huge numbers around the world?",
+          "et": "Milline ümarate vormide ja tagamootoriga Volkswagen sai alguse Saksamaa „rahvaautona” ning mida toodeti hiljem tohutul hulgal üle maailma?"
         },
         "response": {
-          "en": "octant",
-          "et": "oktant"
+          "en": "Volkswagen Beetle",
+          "et": "Volkswagen Põrnikas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["VW Beetle"],
+          "et": ["Volkswagen Beetle", "VW Põrnikas"]
         },
         "explanation": {
-          "en": "The octant uses mirrors to bring the horizon and a celestial body into one view.",
-          "et": "Oktant kasutab peegleid, et tuua horisont ja taevakeha samasse vaatevälja."
+          "en": "The Volkswagen Beetle paired its unmistakable rounded body with an air-cooled rear engine and became one of history's most-produced car designs.",
+          "et": "Volkswagen Põrnikas ühendas iseloomuliku ümara kere õhkjahutusega tagamootoriga ning sellest sai üks ajaloo enim toodetud automudeleid."
         },
         "source": {
-          "sourceId": "wikipedia:octant_(instrument)",
-          "title": "Octant (instrument)",
-          "url": "https://en.wikipedia.org/wiki/Octant_(instrument)",
+          "sourceId": "wikipedia:volkswagen-beetle",
+          "title": "Volkswagen Beetle",
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_Beetle",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-089:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:system:inertial-navigation",
+        "factKey": "built-in-technology-inventions:checkpoint7:cars:mini-transverse-packaging",
         "tier": 2,
-        "subjectKey": "system:inertial-navigation",
+        "subjectKey": "car:original-mini",
         "clue": {
-          "en": "Which self-contained system integrates accelerometer and gyroscope readings to track position?",
-          "et": "Milline autonoomne süsteem integreerib asukoha jälgimiseks kiirendus- ja güroskoobiandmeid?"
+          "en": "Alec Issigonis turned the engine sideways over front-wheel drive so that most of this tiny British car's footprint could serve passengers. Name the classic model.",
+          "et": "Alec Issigonis paigutas mootori esiveo kohale ristipidi, et suurem osa selle pisikese Briti auto põrandapinnast jääks sõitjatele. Mis klassikaline mudel see oli?"
         },
         "response": {
-          "en": "inertial navigation system",
-          "et": "inertsiaalnavigatsioonisüsteem"
+          "en": "original Mini",
+          "et": "algupärane Mini"
         },
         "acceptedVariants": {
-          "en": [
-            "INS"
-          ],
-          "et": [
-            "INS"
-          ]
+          "en": ["classic Mini", "BMC Mini"],
+          "et": ["klassikaline Mini", "BMC Mini"]
         },
         "explanation": {
-          "en": "Inertial navigation needs no external signal but accumulates drift over time.",
-          "et": "Inertsiaalnavigatsioon ei vaja välissignaali, kuid selle viga kasvab ajaga."
+          "en": "The original Mini's transverse engine and front-wheel-drive layout saved so much space that the design influenced generations of compact cars.",
+          "et": "Algupärase Mini ristimootoriga esiveoline paigutus säästis sedavõrd ruumi, et mõjutas mitut põlvkonda väikeautosid."
         },
         "source": {
-          "sourceId": "wikipedia:inertial_navigation_system",
-          "title": "Inertial navigation system",
-          "url": "https://en.wikipedia.org/wiki/Inertial_navigation_system",
+          "sourceId": "wikipedia:mini",
+          "title": "Mini",
+          "url": "https://en.wikipedia.org/wiki/Mini",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-089:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:beacon:vor",
+        "factKey": "built-in-technology-inventions:checkpoint7:cars:citroen-ds-suspension",
         "tier": 3,
-        "subjectKey": "beacon:vor",
+        "subjectKey": "car:citroen-ds",
         "clue": {
-          "en": "Which aviation beacon gives an aircraft its magnetic bearing from the station?",
-          "et": "Milline lennundusmajakas annab õhusõidukile magnetilise suuna jaamast?"
+          "en": "Hydropneumatic self-levelling suspension made this futuristic French saloon seem to float over rough roads. Name the model.",
+          "et": "Hüdropneumaatiline isetasanduv vedrustus pani selle futuristliku Prantsuse sedaani ebatasasel teel otsekui hõljuma. Mis mudel see oli?"
         },
         "response": {
-          "en": "VOR",
-          "et": "VOR"
+          "en": "Citroën DS",
+          "et": "Citroën DS"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Citroen DS"],
+          "et": ["Citroen DS"]
         },
         "explanation": {
-          "en": "VOR encodes radial direction in the phase difference of radio signals.",
-          "et": "VOR kodeerib radiaalsuuna raadiosignaalide faasierinevusse."
+          "en": "The Citroën DS used hydraulic pressure for its self-levelling suspension and became famous for both its ride and avant-garde styling.",
+          "et": "Citroën DS kasutas isetasanduvas vedrustuses hüdraulilist rõhku ning sai kuulsaks nii sõidumugavuse kui ka avangardse välimuse poolest."
         },
         "source": {
-          "sourceId": "wikipedia:vhf_omnidirectional_range",
-          "title": "VHF omnidirectional range",
-          "url": "https://en.wikipedia.org/wiki/VHF_omnidirectional_range",
+          "sourceId": "wikipedia:citroen-ds",
+          "title": "Citroën DS",
+          "url": "https://en.wikipedia.org/wiki/Citro%C3%ABn_DS",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-089:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:method:dead-reckoning",
+        "factKey": "built-in-technology-inventions:checkpoint7:cars:tucker-48-safety",
         "tier": 4,
-        "subjectKey": "method:dead-reckoning",
+        "subjectKey": "car:tucker-48",
         "clue": {
-          "en": "Which method advances a known position using course, speed, and elapsed time?",
-          "et": "Milline meetod viib tuntud asukohta edasi kursi, kiiruse ja möödunud aja järgi?"
+          "en": "Preston Tucker's postwar car put its engine at the rear, used a central headlamp that turned with the steering, and promoted unusual safety ideas. Name it.",
+          "et": "Preston Tuckeri sõjajärgsel autol oli mootor taga, rooliga kaasa pöörav keskmine esituli ja mitu tollal ebatavalist ohutusideed. Mis auto see oli?"
         },
         "response": {
-          "en": "dead reckoning",
-          "et": "arvestuslik navigatsioon"
+          "en": "Tucker 48",
+          "et": "Tucker 48"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Tucker Torpedo"],
+          "et": ["Tucker Torpedo"]
         },
         "explanation": {
-          "en": "Dead reckoning errors accumulate unless corrected by an external fix.",
-          "et": "Arvestusliku navigatsiooni viga kuhjub, kui seda välise kohamääranguga ei parandata."
+          "en": "Only 50 production cars were completed; counting the prototype, 51 Tucker cars were made before the company folded.",
+          "et": "Seeriaautosid valmis vaid 50; koos prototüübiga tehti 51 Tuckerit, enne kui ettevõte tegevuse lõpetas."
         },
         "source": {
-          "sourceId": "wikipedia:dead_reckoning",
-          "title": "Dead reckoning",
-          "url": "https://en.wikipedia.org/wiki/Dead_reckoning",
+          "sourceId": "wikipedia:tucker-48",
+          "title": "Tucker 48",
+          "url": "https://en.wikipedia.org/wiki/Tucker_48",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-089:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:method:celestial-navigation",
+        "factKey": "built-in-technology-inventions:checkpoint7:cars:tatra-77-aerodynamics",
         "tier": 5,
-        "subjectKey": "method:celestial-navigation",
+        "subjectKey": "car:tatra-77",
         "clue": {
-          "en": "Which method finds position from measured angles to the Sun, stars, or planets?",
-          "et": "Milline meetod määrab asukoha Päikese, tähtede või planeetide mõõdetud nurkade järgi?"
+          "en": "Which Czechoslovak rear-engined V8 was among the first series-produced cars designed from the start around aerodynamic streamlining?",
+          "et": "Milline Tšehhoslovakkia tagamootoriga V8 oli üks esimesi seeriatootmises autosid, mis kavandati algusest peale aerodünaamiliselt voolujooneliseks?"
         },
         "response": {
-          "en": "celestial navigation",
-          "et": "astronavigatsioon"
+          "en": "Tatra 77",
+          "et": "Tatra 77"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Tatra T77"],
+          "et": ["Tatra T77"]
         },
         "explanation": {
-          "en": "Celestial navigation combines a sextant sight with accurate time and an almanac.",
-          "et": "Astronavigatsioon ühendab sekstandivaatluse täpse aja ja almanahhiga."
+          "en": "The Tatra 77 combined Hans Ledwinka's rear-engined chassis with a streamlined body developed with aerodynamicist Paul Jaray.",
+          "et": "Tatra 77 ühendas Hans Ledwinka tagamootoriga veermiku voolujoonelise kerega, mille loomisel osales aerodünaamik Paul Jaray."
         },
         "source": {
-          "sourceId": "wikipedia:celestial_navigation",
-          "title": "Celestial navigation",
-          "url": "https://en.wikipedia.org/wiki/Celestial_navigation",
+          "sourceId": "wikipedia:tatra-77",
+          "title": "Tatra 77",
+          "url": "https://en.wikipedia.org/wiki/Tatra_77",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -17281,153 +17249,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-090",
     "name": {
-      "en": "Specialised Medical Imaging",
-      "et": "Meditsiinikuvamise erimeetodid"
+      "en": "Electronic Play Before Apps",
+      "et": "Elektrooniline mäng enne äppe"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-090:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:method:doppler-ultrasound",
+        "factKey": "built-in-technology-inventions:checkpoint7:electronic-play:furby-furbish-craze",
         "tier": 1,
-        "subjectKey": "method:doppler-ultrasound",
+        "subjectKey": "toy:furby",
         "clue": {
-          "en": "Which imaging method uses frequency shifts to estimate blood-flow direction and speed?",
-          "et": "Milline kuvamismeetod kasutab sagedusnihet verevoolu suuna ja kiiruse hindamiseks?"
+          "en": "This furry 1998 creature moved its ears and beak, started out speaking Furbish and became a holiday-shopping craze. Name the toy.",
+          "et": "See 1998. aasta karvane olend liigutas kõrvu ja nokka, rääkis algul furbishi keelt ning tekitas pühade eel ostuhulluse. Mis mänguasi see oli?"
         },
         "response": {
-          "en": "Doppler ultrasound",
-          "et": "Doppleri ultraheli"
+          "en": "Furby",
+          "et": "Furby"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Furby toy"],
+          "et": ["Furby mänguasi"]
         },
         "explanation": {
-          "en": "Doppler ultrasound can display flow as spectra, sound, or colour maps.",
-          "et": "Doppleri ultraheli näitab voolu spektri, heli või värvikaardina."
+          "en": "Furby used sensors and motorised movements to appear responsive; its programmed vocabulary gradually shifted from Furbish toward English phrases.",
+          "et": "Furby kasutas andureid ja mootoriga liigutusi, et näida reageerivana; selle programmeeritud sõnavara liikus tasapisi furbishilt ingliskeelsete fraaside poole."
         },
         "source": {
-          "sourceId": "wikipedia:doppler_ultrasonography",
-          "title": "Doppler ultrasonography",
-          "url": "https://en.wikipedia.org/wiki/Doppler_ultrasonography",
+          "sourceId": "wikipedia:furby",
+          "title": "Furby",
+          "url": "https://en.wikipedia.org/wiki/Furby",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-090:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:agent:contrast-medium",
+        "factKey": "built-in-technology-inventions:checkpoint7:electronic-play:laser-tag-infrared",
         "tier": 2,
-        "subjectKey": "agent:contrast-medium",
+        "subjectKey": "game:laser-tag",
         "clue": {
-          "en": "What substance is administered to make selected tissues or vessels stand out in an image?",
-          "et": "Millist ainet manustatakse valitud kudede või veresoonte kuvamisel esiletõstmiseks?"
+          "en": "Despite its futuristic name, this game normally records hits with infrared-emitting guns and sensors worn by the players, not dangerous beams. What game is it?",
+          "et": "Hoolimata futuristlikust nimest registreerib see mäng tabamusi tavaliselt infrapunakiirguriga relvade ja mängijate küljes olevate anduritega, mitte ohtlike kiirtega. Mis mäng see on?"
         },
         "response": {
-          "en": "contrast agent",
-          "et": "kontrastaine"
+          "en": "laser tag",
+          "et": "lasermäng"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["laser-tag", "lasertag"],
+          "et": ["lasersõda", "laser tag"]
         },
         "explanation": {
-          "en": "Contrast agents alter X-ray attenuation, magnetic relaxation, or ultrasound echoes.",
-          "et": "Kontrastaine muudab röntgenkiirguse nõrgenemist, magnetrelaksatsiooni või ultrahelikaja."
+          "en": "Laser tag equipment usually sends coded infrared light from the gun to targets on an opponent's vest or equipment.",
+          "et": "Lasermängu varustus saadab relvast tavaliselt kodeeritud infrapunavalguse vastase vestil või varustusel olevatesse märklaudadesse."
         },
         "source": {
-          "sourceId": "wikipedia:contrast_agent",
-          "title": "Contrast agent",
-          "url": "https://en.wikipedia.org/wiki/Contrast_agent",
+          "sourceId": "wikipedia:laser-tag",
+          "title": "Laser tag",
+          "url": "https://en.wikipedia.org/wiki/Laser_tag",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-090:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:gamma-camera",
+        "factKey": "built-in-technology-inventions:checkpoint7:electronic-play:game-watch-lcd-clock",
         "tier": 3,
-        "subjectKey": "device:gamma-camera",
+        "subjectKey": "toy:nintendo-game-and-watch",
         "clue": {
-          "en": "Which detector forms an image from gamma photons emitted by a radiotracer inside the body?",
-          "et": "Milline detektor moodustab kujutise kehas oleva märkaine kiiratud gammakvantidest?"
+          "en": "Gunpei Yokoi's calculator-sized handhelds paired one game with a digital clock on a segmented LCD and became Nintendo's first worldwide electronic-game success. Name the series.",
+          "et": "Gunpei Yokoi kalkulaatorisuurused pihuseadmed ühendasid ühe mängu digitaalkellaga segmendiekraanil ning neist sai Nintendo esimene ülemaailmne elektroonilise mängu edu. Mis seeria see oli?"
         },
         "response": {
-          "en": "gamma camera",
-          "et": "gammakaamera"
+          "en": "Nintendo Game & Watch",
+          "et": "Nintendo Game & Watch"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Game & Watch", "Nintendo Game and Watch"],
+          "et": ["Game & Watch", "Nintendo Game and Watch"]
         },
         "explanation": {
-          "en": "A gamma camera uses a collimator and scintillation crystal to localise radiation.",
-          "et": "Gammakaamera kasutab kiirguse asukoha määramiseks kollimaatorit ja stsintillatsioonikristalli."
+          "en": "Each Game & Watch model contained a fixed LCD game and also worked as a clock, foreshadowing later Nintendo handhelds.",
+          "et": "Igas Game & Watchi mudelis oli üks kindel LCD-mäng ning seade toimis ka kellana, ennustades Nintendo hilisemaid pihukonsoole."
         },
         "source": {
-          "sourceId": "wikipedia:gamma_camera",
-          "title": "Gamma camera",
-          "url": "https://en.wikipedia.org/wiki/Gamma_camera",
+          "sourceId": "wikipedia:game-and-watch",
+          "title": "Game & Watch",
+          "url": "https://en.wikipedia.org/wiki/Game_%26_Watch",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-090:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:method:fluoroscopy",
+        "factKey": "built-in-technology-inventions:checkpoint7:electronic-play:simon-lights-tones",
         "tier": 4,
-        "subjectKey": "method:fluoroscopy",
+        "subjectKey": "toy:simon-electronic-game",
         "clue": {
-          "en": "Which X-ray technique provides a moving real-time view during procedures?",
-          "et": "Milline röntgenmeetod annab protseduuri ajal liikuva reaalajapildi?"
+          "en": "Ralph Baer's round electronic game challenged players to repeat an ever-growing sequence shown by four coloured lights and matching tones. Name it.",
+          "et": "Ralph Baeri ümmargune elektrooniline mäng pani mängija kordama aina pikenevat jada, mida näitasid neli värvilist tuld ja neile vastavad helid. Mis mäng see oli?"
         },
         "response": {
-          "en": "fluoroscopy",
-          "et": "fluoroskoopia"
+          "en": "Simon electronic game",
+          "et": "Simoni elektrooniline mäng"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Simon game", "electronic Simon game"],
+          "et": ["Simoni mäng", "elektrooniline Simon"]
         },
         "explanation": {
-          "en": "Fluoroscopy guides catheters, contrast studies, and orthopaedic interventions.",
-          "et": "Fluoroskoopia juhib kateetreid, kontrastuuringuid ja ortopeedilisi sekkumisi."
+          "en": "Simon presents a random sequence through its four large buttons, and each successful round adds another signal for the player to remember.",
+          "et": "Simon esitab nelja suure nupu abil juhusliku jada ning iga õnnestunud voor lisab mängijale meelde jätmiseks uue signaali."
         },
         "source": {
-          "sourceId": "wikipedia:fluoroscopy",
-          "title": "Fluoroscopy",
-          "url": "https://en.wikipedia.org/wiki/Fluoroscopy",
+          "sourceId": "wikipedia:simon-game",
+          "title": "Simon (game)",
+          "url": "https://en.wikipedia.org/wiki/Simon_(game)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-090:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:endoscope",
+        "factKey": "built-in-technology-inventions:checkpoint7:electronic-play:robosapien-remote-walk",
         "tier": 5,
-        "subjectKey": "device:endoscope",
+        "subjectKey": "toy:robosapien",
         "clue": {
-          "en": "Which flexible optical instrument carries a camera inside a hollow organ?",
-          "et": "Milline painduv optiline seade viib kaamera õõneselundi sisse?"
+          "en": "Mark Tilden designed this 2004 humanoid toy, whose infrared remote commands walking, grasping and vocalisations. It sold 1.5 million that year and won Toy of the Year. Name it.",
+          "et": "Mark Tilden kavandas selle 2004. aasta inimkujulise mänguasja, mille infrapunapuldiga juhitakse kõndimist, haaramist ja häälitsusi. Seda müüdi samal aastal 1,5 miljonit ning see valiti aasta mänguasjaks. Mis oli selle nimi?"
         },
         "response": {
-          "en": "endoscope",
-          "et": "endoskoop"
+          "en": "RoboSapien",
+          "et": "RoboSapien"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["WowWee RoboSapien", "Robosapien toy"],
+          "et": ["WowWee RoboSapien", "RoboSapieni robotmänguasi"]
         },
         "explanation": {
-          "en": "An endoscope can include channels for light, air, irrigation, and biopsy tools.",
-          "et": "Endoskoobil võivad olla kanalid valgusele, õhule, loputusele ja biopsiariistadele."
+          "en": "RoboSapien was a remote-controlled walking robot toy by WowWee, designed by Mark Tilden and launched in 2004.",
+          "et": "RoboSapien oli WowWee puldiga juhitav kõndiv robotmänguasi, mille kavandas Mark Tilden ja mis jõudis müügile 2004. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:endoscopy",
-          "title": "Endoscopy",
-          "url": "https://en.wikipedia.org/wiki/Endoscopy",
+          "sourceId": "wikipedia:robosapien",
+          "title": "RoboSapien",
+          "url": "https://en.wikipedia.org/wiki/RoboSapien",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -17435,157 +17403,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-091",
     "name": {
-      "en": "Machines That Support Breathing and Circulation",
-      "et": "Hingamist ja vereringet toetavad masinad"
+      "en": "Signature Sounds of Technology",
+      "et": "Tehnoloogia tunnushelid"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-091:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:device:ecmo",
+        "factKey": "built-in-technology-inventions:checkpoint7:sounds:windows-95-brian-eno",
         "tier": 1,
-        "subjectKey": "device:ecmo",
+        "subjectKey": "sound:windows-95-startup",
         "clue": {
-          "en": "Which system oxygenates blood outside the body during severe heart or lung failure?",
-          "et": "Milline süsteem hapnikustab verd väljaspool keha raske südame- või kopsupuudulikkuse korral?"
+          "en": "Brian Eno, who composed on a Mac, wrote a six-second ambient welcome for Microsoft's landmark 1995 operating system. Which startup sound was it?",
+          "et": "Macil muusikat loonud Brian Eno kirjutas Microsofti 1995. aasta murrangulisele operatsioonisüsteemile kuuesekundilise ambient-tervituse. Milline käivitusheli see oli?"
         },
         "response": {
-          "en": "ECMO",
-          "et": "ECMO"
+          "en": "Windows 95 startup sound",
+          "et": "Windows 95 käivitusheli"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["The Microsoft Sound", "Microsoft Sound"],
+          "et": ["The Microsoft Sound", "Microsofti heli"]
         },
         "explanation": {
-          "en": "ECMO returns oxygenated blood after a pump moves it through a membrane lung.",
-          "et": "ECMO tagastab hapnikustatud vere pärast pumba ja membraankopsu läbimist."
+          "en": "Microsoft commissioned Brian Eno to create the Windows 95 startup piece, officially titled The Microsoft Sound.",
+          "et": "Microsoft tellis Brian Enolt Windows 95 käivituspala, mille ametlik pealkiri on „The Microsoft Sound”."
         },
         "source": {
-          "sourceId": "wikipedia:extracorporeal_membrane_oxygenation",
-          "title": "Extracorporeal membrane oxygenation",
-          "url": "https://en.wikipedia.org/wiki/Extracorporeal_membrane_oxygenation",
+          "sourceId": "wikipedia:brian-eno",
+          "title": "Brian Eno",
+          "url": "https://en.wikipedia.org/wiki/Brian_Eno",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-091:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:device:pulse-oximeter",
+        "factKey": "built-in-technology-inventions:checkpoint7:sounds:intel-bong-werzowa",
         "tier": 2,
-        "subjectKey": "device:pulse-oximeter",
+        "subjectKey": "sound:intel-bong",
         "clue": {
-          "en": "Which clip estimates arterial oxygen saturation using red and infrared light?",
-          "et": "Milline klamber hindab punase ja infrapunavalguse abil arteriaalse vere hapnikusaturatsiooni?"
+          "en": "Walter Werzowa wrote this five-note sonic logo, heard at the end of countless adverts for processors carrying an “Inside” badge. Name the sound.",
+          "et": "Walter Werzowa kirjutas selle viienoodilise helilogo, mida kõlas lugematute „Inside” märgiga protsessorite reklaamide lõpus. Mis heli see on?"
         },
         "response": {
-          "en": "pulse oximeter",
-          "et": "pulssoksümeeter"
+          "en": "Intel bong",
+          "et": "Inteli helilogo"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Intel sonic logo", "Intel jingle", "Intel Inside sound", "Intel Inside jingle"],
+          "et": ["Inteli bong", "Inteli kõll", "Intel Inside heli", "Intel Inside kõll"]
         },
         "explanation": {
-          "en": "Pulse oximetry distinguishes absorption by oxygenated and deoxygenated haemoglobin.",
-          "et": "Pulssoksümeetria eristab hapnikuga ja hapnikuta hemoglobiini valgusneeldumist."
+          "en": "The Intel sonic logo compressed the Intel Inside brand into five notes and became one of advertising's most recognisable audio signatures.",
+          "et": "Inteli helilogo koondas Intel Inside'i kaubamärgi viide nooti ning kujunes üheks reklaamimaailma tuntumaks helisignatuuriks."
         },
         "source": {
-          "sourceId": "wikipedia:pulse_oximetry",
-          "title": "Pulse oximetry",
-          "url": "https://en.wikipedia.org/wiki/Pulse_oximetry",
+          "sourceId": "wikipedia:intel-sonic-logo",
+          "title": "Intel",
+          "url": "https://en.wikipedia.org/wiki/Intel#Sonic_logo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-091:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:lvad",
+        "factKey": "built-in-technology-inventions:checkpoint7:sounds:thx-deep-note",
         "tier": 3,
-        "subjectKey": "device:lvad",
+        "subjectKey": "sound:thx-deep-note",
         "clue": {
-          "en": "Which implanted pump helps a weakened left ventricle send blood to the body?",
-          "et": "Milline siiratav pump aitab nõrgal vasakul vatsakesel verd kehasse saata?"
+          "en": "A cinema logo begins with thirty synthesised voices crowded into a narrow pitch range, then lets them glide outward into one enormous sustained chord. Name the audio logo.",
+          "et": "Kinologo algab kolmekümne kitsasse helikõrgusvahemikku surutud sünteesihäälega, mis libisevad seejärel laiali üheks võimsaks pikaks akordiks. Mis helilogo see on?"
         },
         "response": {
-          "en": "left ventricular assist device",
-          "et": "vasaku vatsakese abiseade"
+          "en": "THX Deep Note",
+          "et": "THX Deep Note"
         },
         "acceptedVariants": {
-          "en": [
-            "LVAD"
-          ],
-          "et": [
-            "LVAD"
-          ]
+          "en": ["Deep Note", "THX sound"],
+          "et": ["Deep Note", "THX heli"]
         },
         "explanation": {
-          "en": "An LVAD may bridge a patient to transplant or provide longer-term support.",
-          "et": "LVAD võib toetada patsienti siirdamiseni või pikemaajaliselt."
+          "en": "James A. Moorer created the THX Deep Note for the company's cinema trailers, using computer-generated voices that converge on a broad final chord.",
+          "et": "James A. Moorer lõi THX Deep Note'i ettevõtte kinotreileritele, kasutades arvutiga tekitatud hääli, mis koonduvad laia lõppakordi."
         },
         "source": {
-          "sourceId": "wikipedia:ventricular_assist_device",
-          "title": "Ventricular assist device",
-          "url": "https://en.wikipedia.org/wiki/Ventricular_assist_device",
+          "sourceId": "wikipedia:deep-note",
+          "title": "Deep Note",
+          "url": "https://en.wikipedia.org/wiki/Deep_Note",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-091:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:therapy:cpap",
+        "factKey": "built-in-technology-inventions:checkpoint7:sounds:macintosh-startup-reekes",
         "tier": 4,
-        "subjectKey": "therapy:cpap",
+        "subjectKey": "sound:macintosh-startup-chime",
         "clue": {
-          "en": "Which therapy keeps airways open with continuous positive pressure during breathing?",
-          "et": "Milline ravi hoiab hingamisteed pideva positiivse rõhuga avatuna?"
+          "en": "Jim Reekes created a reassuring chord that many Apple computers played after a successful hardware check when booting. Which signature sound was it?",
+          "et": "Jim Reekes lõi rahustava akordi, mida paljud Apple'i arvutid esitasid käivitamisel pärast edukat riistvarakontrolli. Milline tunnusheli see oli?"
         },
         "response": {
-          "en": "CPAP",
-          "et": "CPAP"
+          "en": "Macintosh startup chime",
+          "et": "Macintoshi käivitusheli"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Mac startup chime"],
+          "et": ["Maci käivitusheli"]
         },
         "explanation": {
-          "en": "CPAP is widely used for obstructive sleep apnoea and some respiratory support.",
-          "et": "CPAP-i kasutatakse laialt obstruktiivse uneapnoe ja hingamistoetuse korral."
+          "en": "The Macintosh startup chime signalled that the machine's diagnostic tests had completed successfully before the operating system loaded.",
+          "et": "Macintoshi käivitusheli andis märku, et arvuti diagnostikatestid lõppesid edukalt enne operatsioonisüsteemi laadimist."
         },
         "source": {
-          "sourceId": "wikipedia:continuous_positive_airway_pressure",
-          "title": "Continuous positive airway pressure",
-          "url": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
+          "sourceId": "wikipedia:macintosh-startup",
+          "title": "Macintosh startup",
+          "url": "https://en.wikipedia.org/wiki/Macintosh_startup",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-091:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:iron-lung",
+        "factKey": "built-in-technology-inventions:checkpoint7:sounds:aol-greeting-edwards",
         "tier": 5,
-        "subjectKey": "device:iron-lung",
+        "subjectKey": "sound:aol-youve-got-mail",
         "clue": {
-          "en": "Which tank ventilator creates negative pressure around the body to draw air into the lungs?",
-          "et": "Milline paakventilaator tekitab keha ümber alarõhu, et tõmmata õhk kopsudesse?"
+          "en": "Elwood Edwards recorded this home-made AOL notification announcing new email; its words later became the title of a Tom Hanks and Meg Ryan film. Name the greeting.",
+          "et": "Elwood Edwards salvestas kodus selle AOL-i teavituse, mis kuulutas uue e-kirja saabumist; selle sõnadest sai hiljem Tom Hanksi ja Meg Ryani filmi pealkiri. Mis tervitus see oli?"
         },
         "response": {
-          "en": "iron lung",
-          "et": "raudkops"
+          "en": "AOL “You've Got Mail” greeting",
+          "et": "AOL-i „You've Got Mail” tervitus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["You've Got Mail notification", "AOL mail greeting", "You've Got Mail", "AOL You've Got Mail"],
+          "et": ["AOL-i postitervitus", "You've Got Mail teavitus", "AOL-i You've Got Mail"]
         },
         "explanation": {
-          "en": "Iron lungs became famous during polio epidemics before positive-pressure ventilation spread.",
-          "et": "Raudkops sai tuntuks poliomüeliidiepideemiate ajal enne positiivse rõhuga ventilatsiooni levikut."
+          "en": "Edwards recorded AOL's familiar mail announcement on a cassette at home, and the phrase became a lasting symbol of dial-up internet culture.",
+          "et": "Edwards salvestas AOL-i tuttava postiteavituse kodus kassetile ning fraasist sai sissehelistamisajastu internetikultuuri püsiv sümbol."
         },
         "source": {
-          "sourceId": "wikipedia:iron_lung",
-          "title": "Iron lung",
-          "url": "https://en.wikipedia.org/wiki/Iron_lung",
+          "sourceId": "wikipedia:elwood-edwards",
+          "title": "Elwood Edwards",
+          "url": "https://en.wikipedia.org/wiki/Elwood_Edwards",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -17593,153 +17557,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-092",
     "name": {
-      "en": "Hidden Engineering in Bridges",
-      "et": "Sildade varjatud inseneeria"
+      "en": "Clocks with a Bigger Job",
+      "et": "Kellad, millel on suurem ülesanne"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-092:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:bridge:cantilever",
+        "factKey": "built-in-technology-inventions:checkpoint7:clocks:cuckoo-clock-black-forest",
         "tier": 1,
-        "subjectKey": "bridge:cantilever",
+        "subjectKey": "clock:cuckoo",
         "clue": {
-          "en": "Which bridge projects rigid arms from supports and may meet over the span?",
-          "et": "Milline sild ulatab tugedest välja jäigad konsoolid, mis võivad ava kohal kohtuda?"
+          "en": "A mechanical bird emerges to call the hours from this folk clock, strongly associated with Germany's Black Forest. What kind of clock is it?",
+          "et": "Sellest Saksamaa Schwarzwaldiga tihedalt seotud rahvakellast ilmub täistunnil mehaaniline lind häälitsema. Mis liiki kell see on?"
         },
         "response": {
-          "en": "cantilever bridge",
-          "et": "konsoolsild"
+          "en": "cuckoo clock",
+          "et": "käokell"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Black Forest cuckoo clock"],
+          "et": ["Schwarzwaldi käokell"]
         },
         "explanation": {
-          "en": "Cantilever arms carry loads through bending and can be built without central falsework.",
-          "et": "Konsoolid kannavad koormust paindega ning neid saab ehitada ilma keskse toestuseta."
+          "en": "A cuckoo clock marks the hours with a bird call, usually using bellows and pipes, and the carved wooden style became closely linked with the Black Forest.",
+          "et": "Käokell märgib täistunde linnuhäälega, tavaliselt lõõtsa ja vilede abil, ning nikerdatud puidust stiil seostus tihedalt Schwarzwaldiga."
         },
         "source": {
-          "sourceId": "wikipedia:cantilever_bridge",
-          "title": "Cantilever bridge",
-          "url": "https://en.wikipedia.org/wiki/Cantilever_bridge",
+          "sourceId": "wikipedia:cuckoo-clock",
+          "title": "Cuckoo clock",
+          "url": "https://en.wikipedia.org/wiki/Cuckoo_clock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-092:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:structure:box-girder",
+        "factKey": "built-in-technology-inventions:checkpoint7:clocks:doomsday-clock-warning",
         "tier": 2,
-        "subjectKey": "structure:box-girder",
+        "subjectKey": "clock:doomsday",
         "clue": {
-          "en": "Which hollow beam section resists bending and torsion efficiently?",
-          "et": "Milline õõnes talaprofiil peab tõhusalt vastu paindele ja väändele?"
+          "en": "The Bulletin of the Atomic Scientists moves this symbolic clock toward or away from midnight to warn how close humanity is to catastrophe. Name it.",
+          "et": "Bulletin of the Atomic Scientists liigutab seda sümboolset kella keskööle lähemale või sellest eemale, et hoiatada inimkonna läheduse eest katastroofile. Mis kell see on?"
         },
         "response": {
-          "en": "box girder",
-          "et": "kasttala"
+          "en": "Doomsday Clock",
+          "et": "viimsepäevakell"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Bulletin Doomsday Clock"],
+          "et": ["maailmalõpukell"]
         },
         "explanation": {
-          "en": "Box girders are common in long concrete and steel bridge decks.",
-          "et": "Kasttalad on levinud pikkades betoon- ja terassillatekkides."
+          "en": "The Doomsday Clock is a metaphorical warning created by atomic scientists; its hands represent their assessment of global human-made threats.",
+          "et": "Viimsepäevakell on tuumateadlaste loodud metafoorne hoiatus, mille osutid väljendavad nende hinnangut üleilmsetele inimtekkelistele ohtudele."
         },
         "source": {
-          "sourceId": "wikipedia:box_girder_bridge",
-          "title": "Box girder bridge",
-          "url": "https://en.wikipedia.org/wiki/Box_girder_bridge",
+          "sourceId": "wikipedia:doomsday-clock",
+          "title": "Doomsday Clock",
+          "url": "https://en.wikipedia.org/wiki/Doomsday_Clock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-092:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:foundation:caisson",
+        "factKey": "built-in-technology-inventions:checkpoint7:clocks:quartz-crystal-oscillator",
         "tier": 3,
-        "subjectKey": "foundation:caisson",
+        "subjectKey": "clock:quartz",
         "clue": {
-          "en": "Which watertight chamber lets foundations be built below water level?",
-          "et": "Milline veetihe kamber võimaldab rajada vundamendi veetasemest allpool?"
+          "en": "An electronic oscillator counts the exceptionally stable vibration of a piezoelectric crystal to regulate this everyday timekeeper. What type of clock is it?",
+          "et": "Elektrooniline ostsillaator loendab piesoelektrilise kristalli väga stabiilset võnkumist, et selle igapäevase ajanäitaja käiku reguleerida. Mis tüüpi kell see on?"
         },
         "response": {
-          "en": "caisson",
-          "et": "kessoon"
+          "en": "quartz clock",
+          "et": "kvartskell"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["quartz timepiece"],
+          "et": ["kvartsostsillaatoriga kell"]
         },
         "explanation": {
-          "en": "Bridge caissons are sunk to firm ground and may be excavated from within.",
-          "et": "Sillakessoon uputatakse kandva pinnaseni ning seda võidakse seest kaevata."
+          "en": "A quartz clock uses the regular resonance of a crystal as its frequency reference, making accurate electronic timekeeping inexpensive and compact.",
+          "et": "Kvartskell kasutab sagedusetalonina kristalli korrapärast resonantsi, muutes täpse elektroonilise ajanäitamise odavaks ja kompaktseks."
         },
         "source": {
-          "sourceId": "wikipedia:caisson_(engineering)",
-          "title": "Caisson (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Caisson_(engineering)",
+          "sourceId": "wikipedia:quartz-clock",
+          "title": "Quartz clock",
+          "url": "https://en.wikipedia.org/wiki/Quartz_clock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-092:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:component:expansion-joint",
+        "factKey": "built-in-technology-inventions:checkpoint7:clocks:marine-chronometer-longitude",
         "tier": 4,
-        "subjectKey": "component:expansion-joint",
+        "subjectKey": "clock:marine-chronometer",
         "clue": {
-          "en": "Which gap and fitting lets a bridge deck lengthen with heat?",
-          "et": "Milline vahe ja liitmik laseb sillatekil kuumusega pikeneda?"
+          "en": "A navigator compares accurate home-port time with local noon to find longitude. What precision shipboard timekeeper made that method practical?",
+          "et": "Navigaator võrdleb pikkuskraadi leidmiseks täpset kodusadama aega kohaliku keskpäevaga. Milline täppisajanäitaja muutis selle meetodi laeval praktiliseks?"
         },
         "response": {
-          "en": "expansion joint",
-          "et": "paisumisvuuk"
+          "en": "marine chronometer",
+          "et": "merekronomeeter"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["ship's chronometer"],
+          "et": ["laevakronomeeter"]
         },
         "explanation": {
-          "en": "Expansion joints accommodate thermal movement while maintaining a usable surface.",
-          "et": "Paisumisvuuk lubab soojusliikumist, säilitades sõidetava pinna."
+          "en": "A marine chronometer kept reliable reference time despite a ship's motion and changing conditions, allowing longitude to be calculated from the time difference.",
+          "et": "Merekronomeeter säilitas laeva liikumisest ja muutuvatest oludest hoolimata usaldusväärse võrdlusaja, võimaldades pikkuskraadi ajavahe järgi arvutada."
         },
         "source": {
-          "sourceId": "wikipedia:expansion_joint",
-          "title": "Expansion joint",
-          "url": "https://en.wikipedia.org/wiki/Expansion_joint",
+          "sourceId": "wikipedia:marine-chronometer",
+          "title": "Marine chronometer",
+          "url": "https://en.wikipedia.org/wiki/Marine_chronometer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-092:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:tuned-mass-damper",
+        "factKey": "built-in-technology-inventions:checkpoint7:clocks:long-now-ten-thousand-years",
         "tier": 5,
-        "subjectKey": "device:tuned-mass-damper",
+        "subjectKey": "clock:long-now",
         "clue": {
-          "en": "Which moving counterweight reduces structural vibration near a chosen frequency?",
-          "et": "Milline liikuv vastukaal vähendab konstruktsiooni võnkumist valitud sageduse lähedal?"
+          "en": "As of 2026, which under-construction clock project is designed to run for ten millennia, encouraging people to think beyond a single lifetime?",
+          "et": "Milline 2026. aasta seisuga ehitatav kellaprojekt on kavandatud töötama kümme aastatuhandet ja innustama inimesi mõtlema kaugemale ühest eluajast?"
         },
         "response": {
-          "en": "tuned mass damper",
-          "et": "häälestatud massisummuti"
+          "en": "Clock of the Long Now",
+          "et": "Clock of the Long Now"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["10,000 Year Clock", "Long Now Clock"],
+          "et": ["10 000 aasta kell", "Long Now kell"]
         },
         "explanation": {
-          "en": "A tuned mass damper oscillates out of phase with the structure.",
-          "et": "Häälestatud massisummuti võngub konstruktsiooniga vastasfaasis."
+          "en": "The Clock of the Long Now is a mechanical monument intended to keep time for 10,000 years as a symbol of long-term responsibility.",
+          "et": "Clock of the Long Now on mehaaniline monument, mis peaks aega näitama 10 000 aastat ja sümboliseerima pikaajalist vastutust."
         },
         "source": {
-          "sourceId": "wikipedia:tuned_mass_damper",
-          "title": "Tuned mass damper",
-          "url": "https://en.wikipedia.org/wiki/Tuned_mass_damper",
+          "sourceId": "wikipedia:clock-of-the-long-now",
+          "title": "Clock of the Long Now",
+          "url": "https://en.wikipedia.org/wiki/Clock_of_the_Long_Now",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
