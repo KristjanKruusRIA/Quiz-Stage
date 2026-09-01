@@ -18087,8 +18087,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "material:lotus-effect-coating",
         "clue": {
-          "en": "Microscopic texture makes water bead on a lotus leaf and roll away with dirt. What self-cleaning coating or paint imitates this trick?",
-          "et": "Mikroskoopiline tekstuur paneb vee lootoselehel tilkadeks kogunema ja koos mustusega minema veerema. Milline isepuhastuv pinnakate või värv seda võtet jäljendab?"
+          "en": "A plant's micro- and nanostructured leaves make water droplets carry dirt away. Engineers copied the trick in self-cleaning paints and roof tiles. What flower-linked name is given to this coating principle?",
+          "et": "Ühe taime mikro- ja nanostruktuurne lehepind paneb veetilgad mustust kaasa viima. Insenerid kopeerisid seda nippi isepuhastuvates värvides ja katusekivides. Millise lillega seotud nime kannab see pinnakatte põhimõte?"
         },
         "response": {
           "en": "lotus-effect coating",
@@ -18116,15 +18116,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "material:gecko-inspired-adhesive",
         "clue": {
-          "en": "Synthetic microscopic hairs called setae imitate a gecko's foot pads. Name the resulting dry sticking technology or tape, not the tiny hairs themselves.",
-          "et": "Sünteetilised mikroskoopilised karvakesed ehk setae jäljendavad geko jalapadjandeid. Nimeta nende abil loodud kuivalt nakkav tehnoloogia või teip, mitte karvakesed ise."
+          "en": "A wall-running lizard needs no chemical glue: countless branching toe hairs create intermolecular attraction. Engineers reproduced those hairs in a reusable material that grips without liquid glue. Name the technology.",
+          "et": "Seintel jooksev sisalik ei vaja keemilist liimi: lugematud hargnevad varbakarvad loovad molekulidevahelise tõmbe. Insenerid jäljendasid neid karvu korduvkasutatavas materjalis, mis nakkub vedela liimita. Nimeta tehnoloogia."
         },
         "response": {
           "en": "gecko-inspired adhesive",
           "et": "gekost inspireeritud liim"
         },
         "acceptedVariants": {
-          "en": ["gecko tape", "synthetic gecko adhesive"],
+          "en": ["gecko tape", "synthetic gecko adhesive", "gecko adhesive"],
           "et": ["gekoteip", "gekoliim"]
         },
         "explanation": {
@@ -18183,20 +18183,20 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "website:first-website",
         "clue": {
-          "en": "Tim Berners-Lee created this pioneering web artifact at CERN and hosted it at info.cern.ch. What milestone page was it?",
-          "et": "Tim Berners-Lee lõi selle teedrajava veebilehe CERN-is ja majutas selle aadressil info.cern.ch. Milline verstapost see leht oli?"
+          "en": "In August 1991, Tim Berners-Lee created this web milestone at CERN. What was it?",
+          "et": "1991. aasta augustis lõi Tim Berners-Lee CERN-is selle veebiajaloo verstaposti. Mis see oli?"
         },
         "response": {
           "en": "first website",
           "et": "esimene veebisait"
         },
         "acceptedVariants": {
-          "en": ["CERN's first website", "info.cern.ch website"],
-          "et": ["CERN-i esimene veebisait", "info.cern.ch veebisait"]
+          "en": ["CERN's first website"],
+          "et": ["CERN-i esimene veebisait"]
         },
         "explanation": {
-          "en": "The CERN page described the World Wide Web project and explained how people could use the new system.",
-          "et": "CERN-i leht kirjeldas World Wide Webi projekti ja selgitas, kuidas uut süsteemi kasutada."
+          "en": "The first website was created by Berners-Lee at CERN in August 1991, the same month his WorldWideWeb browser became publicly available.",
+          "et": "Esimese veebisaidi lõi Berners-Lee CERN-is 1991. aasta augustis; samal kuul sai avalikult kättesaadavaks ka tema WorldWideWebi brauser."
         },
         "source": {
           "sourceId": "wikipedia:first-website",
@@ -18266,24 +18266,24 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-096:question:4",
-        "factKey": "built-in-technology-inventions:checkpoint8:early-web:first-banner-hotwired",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:att-hotwired-banner",
         "tier": 4,
-        "subjectKey": "advertisement:first-web-banner-att",
+        "subjectKey": "advertisement:att-hotwired-banner",
         "clue": {
-          "en": "HotWired carried a telecom advert asking whether readers had ever clicked right here. What web-advertising first was this AT&T artifact?",
-          "et": "HotWired avaldas telekomireklaami, mis küsis lugejalt, kas ta on kunagi just siia klõpsanud. Milline veebireklaami esmasündmus oli see AT&T reklaam?"
+          "en": "In October 1994, HotWired published a famous telecom advert asking readers whether they had clicked 'right here.' Which company's early banner was it?",
+          "et": "1994. aasta oktoobris avaldas HotWired kuulsaks saanud telekomireklaami, mis küsis lugejatelt, kas nad on „just siia” klõpsanud. Millise ettevõtte varajane bänner see oli?"
         },
         "response": {
-          "en": "AT&T's first banner ad",
-          "et": "AT&T esimene bännerreklaam"
+          "en": "AT&T's HotWired banner ad",
+          "et": "AT&T bännerreklaam HotWiredis"
         },
         "acceptedVariants": {
-          "en": ["first web banner", "AT&T banner ad"],
-          "et": ["esimene veebibänner", "AT&T bänner"]
+          "en": ["AT&T banner ad", "HotWired AT&T banner"],
+          "et": ["AT&T bänner", "AT&T HotWiredi bänner"]
         },
         "explanation": {
-          "en": "AT&T's clickable HotWired advertisement is widely described as the first web banner ad.",
-          "et": "AT&T klõpsatavat HotWiredi reklaami kirjeldatakse laialdaselt esimese veebibännerina."
+          "en": "HotWired put the AT&T banner online on 27 October 1994. It was the first web banner sold by HotWired, though other early-banner claims exist.",
+          "et": "HotWired pani AT&T bänneri veebi 27. oktoobril 1994. See oli esimene HotWiredi müüdud veebibänner, ehkki veebibännerite alguse kohta on ka teisi väiteid."
         },
         "source": {
           "sourceId": "wikipedia:web-banner",
@@ -18424,8 +18424,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "device:oculus-rift",
         "clue": {
-          "en": "A Kickstarter-backed headset helped revive consumer virtual reality before Facebook bought its maker. Name the product.",
-          "et": "Kickstarterist toetust saanud peakomplekt aitas tarbijatele mõeldud virtuaalreaalsuse taaselustada, enne kui Facebook selle tootja ostis. Mis toode see oli?"
+          "en": "Palmer Luckey's company took this more effective, inexpensive-for-gamers headset from a 2012 Kickstarter campaign to a public consumer release in 2016. Name the product line.",
+          "et": "Palmer Luckey ettevõte viis selle mänguritele mõeldud tõhusama ja odavama peakomplekti 2012. aasta Kickstarteri kampaaniast 2016. aastal avaliku müügini. Mis tootesari see oli?"
         },
         "response": {
           "en": "Oculus Rift",
@@ -18436,8 +18436,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["Oculus Rifti peakomplekt"]
         },
         "explanation": {
-          "en": "The Rift began as a crowdfunded virtual-reality headset and became central to the renewed consumer-VR market.",
-          "et": "Rift alustas ühisrahastatud virtuaalreaalsuse peakomplektina ja sai tarbijatele mõeldud VR-i uue tõusu keskseks tooteks."
+          "en": "Oculus VR launched the Rift's Kickstarter in 2012; the $300 DK1 helped developers prepare for the line's eventual consumer release.",
+          "et": "Oculus VR käivitas Rifti Kickstarteri kampaania 2012. aastal; 300-dollarine DK1 aitas arendajatel valmistuda tootesarja hilisemaks tarbijaversiooniks."
         },
         "source": {
           "sourceId": "wikipedia:oculus-rift",
@@ -18481,8 +18481,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-098",
     "name": {
-      "en": "Built in the Open",
-      "et": "Avalikult ehitatud digimaailm"
+      "en": "Tech Projects from Wiki to Workshop",
+      "et": "Tehnikaprojektid vikist töökojani"
     },
     "questions": [
       {
@@ -18799,8 +18799,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "robot:boston-dynamics-spot",
         "clue": {
-          "en": "Boston Dynamics sends this four-legged machine into inspection sites; videos show it recovering its balance on rough ground. Name the robot.",
-          "et": "Boston Dynamics saadab selle neljajalgse masina objekte inspekteerima ning videotes taastab see ebatasasel pinnal tasakaalu. Mis robot see on?"
+          "en": "Boston Dynamics designed this canine-inspired quadruped to cross terrain that was difficult for earlier robots; it has also performed inspection work on a floating production vessel. Name it.",
+          "et": "Boston Dynamics lõi selle koerast inspireeritud neljajalgse roboti liikuma maastikul, mis oli varasematele robotitele raske; seda on kasutatud ka ühe ujuva tootmislaeva inspekteerimisel. Nimeta robot."
         },
         "response": {
           "en": "Spot robot",
@@ -18828,8 +18828,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "robot:asimo",
         "clue": {
-          "en": "Honda's compact white humanoid demonstrated walking, running and stair climbing before its development project ended. Name it.",
-          "et": "Honda kompaktne valge humanoid demonstreeris kõndimist, jooksmist ja trepist liikumist, enne kui arendusprojekt lõpetati. Mis robot see oli?"
+          "en": "Honda's humanoid robot demonstrated walking and running before its development project ended. Name it.",
+          "et": "Honda humanoidrobot demonstreeris kõndimist ja jooksmist, enne kui arendusprojekt lõpetati. Mis robot see oli?"
         },
         "response": {
           "en": "ASIMO",
