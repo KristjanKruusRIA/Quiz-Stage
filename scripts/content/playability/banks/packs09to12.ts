@@ -17711,157 +17711,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-093",
     "name": {
-      "en": "Systems behind a Safe High-Rise",
-      "et": "Turvalise kõrghoone süsteemid"
+      "en": "Viral Before TikTok",
+      "et": "Internetihitid enne TikToki"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-093:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:curtain-wall",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:rickrolling-bait-link",
         "tier": 1,
-        "subjectKey": "component:curtain-wall",
+        "subjectKey": "meme:rickrolling",
         "clue": {
-          "en": "Which non-load-bearing exterior skin hangs from a building frame?",
-          "et": "Milline mittekandev väliskest ripub hoone kandekarkassil?"
+          "en": "A link promises something interesting but suddenly opens Rick Astley's Never Gonna Give You Up. What internet prank has caught you?",
+          "et": "Link lubab midagi huvitavat, kuid avab ootamatult Rick Astley loo Never Gonna Give You Up. Millise internetivembu otsa sa sattusid?"
         },
         "response": {
-          "en": "curtain wall",
-          "et": "rippfassaad"
+          "en": "Rickrolling",
+          "et": "rickroll"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["rickroll", "Rick Roll", "Rickroll prank"],
+          "et": ["rickrollimine", "Rick Roll", "rick roll", "Rickrolli-vemp"]
         },
         "explanation": {
-          "en": "A curtain wall resists weather and transfers wind loads back to the structure.",
-          "et": "Rippfassaad peab vastu ilmastikule ning kannab tuulekoormuse karkassile."
+          "en": "The bait-and-switch joke disguises the destination of a link, then redirects the victim to Astley's music video.",
+          "et": "Peibutusvemp varjab lingi tegelikku sihtkohta ja suunab ohvri Astley muusikavideole."
         },
         "source": {
-          "sourceId": "wikipedia:curtain_wall_(architecture)",
-          "title": "Curtain wall (architecture)",
-          "url": "https://en.wikipedia.org/wiki/Curtain_wall_(architecture)",
+          "sourceId": "wikipedia:rickrolling",
+          "title": "Rickrolling",
+          "url": "https://en.wikipedia.org/wiki/Rickrolling",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-093:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:component:raised-floor",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:numa-numa-lipsync",
         "tier": 2,
-        "subjectKey": "component:raised-floor",
+        "subjectKey": "meme:numa-numa-video",
         "clue": {
-          "en": "Which accessible floor void carries cables and conditioned air beneath offices or data centres?",
-          "et": "Milline ligipääsetav põrandaalune tühimik kannab kontoris või andmekeskuses kaableid ja jahutusõhku?"
+          "en": "Gary Brolsma became an early webcam celebrity by lip-syncing and dancing in his chair to O-Zone's Dragostea Din Tei. Name the viral video.",
+          "et": "Gary Brolsmast sai varajane veebikaamerakuulsus, kui ta O-Zone'i loo Dragostea Din Tei saatel toolil tantsis ja suud liigutas. Mis viirusvideo see oli?"
         },
         "response": {
-          "en": "raised floor",
-          "et": "tõstetud põrand"
+          "en": "Numa Numa video",
+          "et": "„Numa Numa” video"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Numa Numa", "Numa Numa Dance"],
+          "et": ["Numa Numa", "Numa Numa Dance"]
         },
         "explanation": {
-          "en": "Raised panels can be removed so services are changed without opening the structural slab.",
-          "et": "Tõstetud paneele saab eemaldada, et muuta tehnosüsteeme kandvat plaati avamata."
+          "en": "Brolsma recorded the energetic lip-sync at his desk and uploaded it in 2004, helping define the early viral-video era.",
+          "et": "Brolsma salvestas hoogsa suuliigutamise oma laua taga ja laadis selle 2004. aastal üles, aidates kujundada varajast viirusvideote ajastut."
         },
         "source": {
-          "sourceId": "wikipedia:raised_floor",
-          "title": "Raised floor",
-          "url": "https://en.wikipedia.org/wiki/Raised_floor",
+          "sourceId": "wikipedia:numa-numa-video",
+          "title": "Numa Numa (video)",
+          "url": "https://en.wikipedia.org/wiki/Numa_Numa_(video)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-093:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:component:smoke-damper",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:hampster-dance-webpage",
         "tier": 3,
-        "subjectKey": "component:smoke-damper",
+        "subjectKey": "meme:hampster-dance",
         "clue": {
-          "en": "Which duct device closes to limit smoke movement between fire compartments?",
-          "et": "Milline kanaliseade sulgub, et piirata suitsu liikumist tuletõkkesektsioonide vahel?"
+          "en": "Rows of animated hamsters bounced across an early webpage to a sped-up tune based on Disney's Whistle-Stop. Name this web craze, whose title deliberately misspelled the animal.",
+          "et": "Varajasel veebilehel hüplesid animeeritud hamstriread Disney loo Whistle-Stop kiirendatud töötluse saatel. Mis nime kandis see veebihullus, mille pealkirjas kirjutati looma nimi meelega valesti?"
         },
         "response": {
-          "en": "smoke damper",
-          "et": "suitsuklapp"
+          "en": "Hampster Dance",
+          "et": "Hampster Dance"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Hamster Dance", "Hampsterdance"],
+          "et": ["Hamster Dance", "Hampsterdance"]
         },
         "explanation": {
-          "en": "Smoke dampers respond to detection or control signals and preserve compartmentation.",
-          "et": "Suitsuklapp reageerib tuvastus- või juhtsignaalile ning säilitab sektsioonide eraldatuse."
+          "en": "The historical Hampster spelling came from the page's name; its looping GIFs and squeaky music made it an early internet phenomenon.",
+          "et": "Ajalooline kirjapilt Hampster tuli lehe nimest; korduvad GIF-id ja piiksuv muusika tegid sellest varajase internetifenomeni."
         },
         "source": {
-          "sourceId": "wikipedia:smoke_damper",
-          "title": "Smoke damper",
-          "url": "https://en.wikipedia.org/wiki/Smoke_damper",
+          "sourceId": "wikipedia:hampster-dance",
+          "title": "Hampster Dance",
+          "url": "https://en.wikipedia.org/wiki/Hampster_Dance",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-093:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:system:building-automation",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:dancing-baby-animation",
         "tier": 4,
-        "subjectKey": "system:building-automation",
+        "subjectKey": "meme:dancing-baby",
         "clue": {
-          "en": "Which central control network coordinates HVAC, lighting, alarms, and energy use?",
-          "et": "Milline keskne juhtimisvõrk koordineerib sisekliimat, valgustust, häireid ja energiakasutust?"
+          "en": "A looping 3D infant animation spread online in 1996 and later appeared doing its moves on Ally McBeal. Name the viral character.",
+          "et": "1996. aastal levis veebis korduv 3D-beebianimatsioon, mis näitas hiljem oma tantsusamme ka sarjas Ally McBeal. Mis viirustegelane see oli?"
         },
         "response": {
-          "en": "building automation system",
-          "et": "hooneautomaatika"
+          "en": "Dancing Baby",
+          "et": "Dancing Baby"
         },
         "acceptedVariants": {
-          "en": [
-            "BAS"
-          ],
-          "et": [
-            "BAS"
-          ]
+          "en": ["Oogachaka Baby"],
+          "et": ["tantsiv beebi", "Oogachaka Baby"]
         },
         "explanation": {
-          "en": "Building automation combines sensors, controllers, schedules, and supervisory software.",
-          "et": "Hooneautomaatika ühendab andurid, kontrollerid, ajakavad ja järelevalvetarkvara."
+          "en": "The computer animation circulated by email and websites before its television appearance made it even more widely known.",
+          "et": "Arvutianimatsioon levis e-posti ja veebilehtede kaudu juba enne seda, kui teleesinemine selle veel tuntumaks tegi."
         },
         "source": {
-          "sourceId": "wikipedia:building_automation",
-          "title": "Building automation",
-          "url": "https://en.wikipedia.org/wiki/Building_automation",
+          "sourceId": "wikipedia:dancing-baby",
+          "title": "Dancing baby",
+          "url": "https://en.wikipedia.org/wiki/Dancing_baby",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-093:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:system:emergency-lighting",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:all-your-base-zero-wing",
         "tier": 5,
-        "subjectKey": "system:emergency-lighting",
+        "subjectKey": "meme:all-your-base",
         "clue": {
-          "en": "Which independent lighting activates when normal building power fails?",
-          "et": "Milline sõltumatu valgustus rakendub hoone tavatoite kadumisel?"
+          "en": "A famously broken English declaration from the game Zero Wing spread through an animated GIF, forums and a popular Newgrounds remix. Name the meme.",
+          "et": "Mängu Zero Wing kurikuulsalt vigane ingliskeelne vallutuskuulutus levis animeeritud GIF-i, foorumite ja populaarse Newgroundsi remiksi kaudu. Mis meem see oli?"
         },
         "response": {
-          "en": "emergency lighting",
-          "et": "turvavalgustus"
+          "en": "All Your Base meme",
+          "et": "„All Your Base” meem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["All Your Base Are Belong to Us", "AYBABTU"],
+          "et": ["All Your Base Are Belong to Us", "AYBABTU"]
         },
         "explanation": {
-          "en": "Emergency lighting marks escape routes and permits safe evacuation.",
-          "et": "Turvavalgustus tähistab evakuatsiooniteid ning võimaldab ohutult lahkuda."
+          "en": "The awkward translation came from Zero Wing and became one of the best-known catchphrases of early internet culture.",
+          "et": "Kohmakas tõlge pärines mängust Zero Wing ja sellest sai üks varajase internetikultuuri tuntumaid lööklauseid."
         },
         "source": {
-          "sourceId": "wikipedia:emergency_light",
-          "title": "Emergency light",
-          "url": "https://en.wikipedia.org/wiki/Emergency_light",
+          "sourceId": "wikipedia:all-your-base",
+          "title": "All your base are belong to us",
+          "url": "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -17869,153 +17865,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-094",
     "name": {
-      "en": "Processes That Clean and Move Water",
-      "et": "Vett puhastavad ja liigutavad protsessid"
+      "en": "World's Fair Tech Showstoppers",
+      "et": "Maailmanäituste tehnikastaarid"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-094:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:process:activated-sludge",
+        "factKey": "built-in-technology-inventions:checkpoint8:worlds-fair:ferris-wheel-1893",
         "tier": 1,
-        "subjectKey": "process:activated-sludge",
+        "subjectKey": "attraction:original-ferris-wheel",
         "clue": {
-          "en": "Which wastewater process aerates a microbial suspension that consumes organic matter?",
-          "et": "Milline reoveeprotsess õhustab orgaanilist ainet tarbivat mikroobset suspensiooni?"
+          "en": "Built for Chicago's 1893 fair as America's answer to the Eiffel Tower, this giant rotating attraction carried passengers high above the grounds. Name the original machine.",
+          "et": "See hiiglaslik pöörlev atraktsioon ehitati 1893. aasta Chicago maailmanäituseks Ameerika vastusena Eiffeli tornile ja viis reisijad kõrgele näituseala kohale. Mis algupärane rajatis see oli?"
         },
         "response": {
-          "en": "activated sludge",
-          "et": "aktiivmuda"
+          "en": "original Ferris Wheel",
+          "et": "algupärane Ferrise ratas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Ferris Wheel", "Chicago Ferris Wheel"],
+          "et": ["Ferrise ratas", "Chicago vaateratas"]
         },
         "explanation": {
-          "en": "Activated sludge is later settled so biomass can be returned or removed.",
-          "et": "Aktiivmuda setitatakse hiljem, et biomass tagasi suunata või eemaldada."
+          "en": "Engineer George Washington Gale Ferris Jr designed the wheel for the World's Columbian Exposition in Chicago.",
+          "et": "Insener George Washington Gale Ferris noorem kavandas ratta Chicagos toimunud World's Columbian Expositioni jaoks."
         },
         "source": {
-          "sourceId": "wikipedia:activated_sludge",
-          "title": "Activated sludge",
-          "url": "https://en.wikipedia.org/wiki/Activated_sludge",
+          "sourceId": "wikipedia:ferris-wheel-1893",
+          "title": "Ferris Wheel (1893)",
+          "url": "https://en.wikipedia.org/wiki/Ferris_Wheel_(1893)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-094:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:process:reverse-osmosis",
+        "factKey": "built-in-technology-inventions:checkpoint8:worlds-fair:moving-walkway-1893-fair",
         "tier": 2,
-        "subjectKey": "process:reverse-osmosis",
+        "subjectKey": "device:moving-walkway",
         "clue": {
-          "en": "Which membrane process applies pressure to force water away from dissolved salts?",
-          "et": "Milline membraanprotsess sunnib rõhuga vee lahustunud sooladest eemale?"
+          "en": "At Chicago's 1893 fair, visitors rode a looping passenger conveyor along a pier, choosing a standing section or seats. What airport fixture did it pioneer?",
+          "et": "1893. aasta Chicago maailmanäitusel sõitsid külastajad mööda kaid kulgeval reisijakonveieril, valides seisuala või istmed. Millise lennujaamadest tuttava rajatise eelkäija see oli?"
         },
         "response": {
-          "en": "reverse osmosis",
-          "et": "pöördosmoos"
+          "en": "moving walkway",
+          "et": "liikuv kõnnitee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["moving sidewalk", "travelator"],
+          "et": ["liikurkõnnitee", "liikuv jalgtee"]
         },
         "explanation": {
-          "en": "Reverse osmosis exceeds osmotic pressure and produces purified permeate plus concentrate.",
-          "et": "Pöördosmoos ületab osmootse rõhu ning annab puhastatud permeaadi ja kontsentraadi."
+          "en": "The 1893 fair's looped passenger conveyor is described as the first moving walkway and included standing and seated platforms.",
+          "et": "1893. aasta näituse ringikujulist reisijakonveierit peetakse esimeseks liikuvaks kõnniteeks ning sellel olid seisu- ja istmeplatvormid."
         },
         "source": {
-          "sourceId": "wikipedia:reverse_osmosis",
-          "title": "Reverse osmosis",
-          "url": "https://en.wikipedia.org/wiki/Reverse_osmosis",
+          "sourceId": "wikipedia:moving-walkway",
+          "title": "Moving walkway",
+          "url": "https://en.wikipedia.org/wiki/Moving_walkway",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-094:question:3",
-        "factKey": "built-in-technology-inventions:round1-overlap:structure:boat-lift",
+        "factKey": "built-in-technology-inventions:checkpoint8:worlds-fair:mustang-1964-fair-launch",
         "tier": 3,
-        "subjectKey": "structure:boat-lift",
+        "subjectKey": "car:ford-mustang",
         "clue": {
-          "en": "Which canal structure raises an entire water-filled caisson carrying boats between levels?",
-          "et": "Milline kanaliehitis tõstab veega täidetud kambri koos laevadega ühelt tasandilt teisele?"
+          "en": "Ford introduced this horse-named pony car at the 1964 New York World's Fair; months later a white convertible appeared in Goldfinger. Name the model.",
+          "et": "Ford esitles seda hobusenimega pony car'i 1964. aasta New Yorgi maailmanäitusel; mõni kuu hiljem ilmus valge kabriolett filmis Goldfinger. Mis mudel see oli?"
         },
         "response": {
-          "en": "boat lift",
-          "et": "laevatõstuk"
+          "en": "Ford Mustang",
+          "et": "Ford Mustang"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Mustang car", "first Ford Mustang", "Mustang"],
+          "et": ["Mustangi auto", "esimene Ford Mustang", "Mustang"]
         },
         "explanation": {
-          "en": "A boat lift replaces a flight of locks by moving vessels vertically or along an inclined plane.",
-          "et": "Laevatõstuk asendab lüüsirea, liigutades aluseid vertikaalselt või kaldpinnal."
+          "en": "The Mustang made its public debut at Ford's pavilion at the 1964 fair before becoming the model that defined the pony-car class.",
+          "et": "Mustang tegi avaliku debüüdi Fordi paviljonis 1964. aasta maailmanäitusel ja kujunes pony car'i autoklassi määranud mudeliks."
         },
         "source": {
-          "sourceId": "wikipedia:boat_lift",
-          "title": "Boat lift",
-          "url": "https://en.wikipedia.org/wiki/Boat_lift",
+          "sourceId": "wikipedia:ford-mustang",
+          "title": "Ford Mustang",
+          "url": "https://en.wikipedia.org/wiki/Ford_Mustang",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-094:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:structure:spillway",
+        "factKey": "built-in-technology-inventions:checkpoint8:worlds-fair:picturephone-worlds-fair",
         "tier": 4,
-        "subjectKey": "structure:spillway",
+        "subjectKey": "device:bell-picturephone",
         "clue": {
-          "en": "Which dam passage safely releases excess reservoir water?",
-          "et": "Milline paisu läbipääs juhib liigse vee veehoidlast ohutult välja?"
+          "en": "At the 1964 New York World's Fair, Bell let visitors see the person at the other end of a call. Name Bell's branded product, not the generic device class.",
+          "et": "1964. aasta New Yorgi maailmanäitusel võimaldas Bell külastajatel kõne teises otsas olevat inimest näha. Nimeta Belli kaubamärgiga toode, mitte seadmete üldliik."
         },
         "response": {
-          "en": "spillway",
-          "et": "ülevool"
+          "en": "Picturephone",
+          "et": "Picturephone"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Bell Picturephone", "AT&T Picturephone"],
+          "et": ["Belli Picturephone", "AT&T Picturephone"]
         },
         "explanation": {
-          "en": "Spillways protect dams from overtopping and dissipate destructive flow energy.",
-          "et": "Ülevool kaitseb paisu üleujutuse eest ning hajutab voolu purustavat energiat."
+          "en": "Picturephone was the Bell System and later AT&T brand for its videophone products and demonstrations.",
+          "et": "Picturephone oli Bell Systemi ja hiljem AT&T kaubamärk nende videotelefonitoodetele ja esitlustele."
         },
         "source": {
-          "sourceId": "wikipedia:spillway",
-          "title": "Spillway",
-          "url": "https://en.wikipedia.org/wiki/Spillway",
+          "sourceId": "wikipedia:picturephone",
+          "title": "Picturephone",
+          "url": "https://en.wikipedia.org/wiki/Picturephone",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-094:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:siphon",
+        "factKey": "built-in-technology-inventions:checkpoint8:worlds-fair:unisphere-1964-fair",
         "tier": 5,
-        "subjectKey": "device:siphon",
+        "subjectKey": "landmark:unisphere",
         "clue": {
-          "en": "Which filled tube carries liquid over a crest to a lower outlet without a pump?",
-          "et": "Milline täidetud toru viib vedeliku üle kõrgema harja madalamasse väljalasku pumbata?"
+          "en": "The symbol of the 1964 New York fair is a giant stainless-steel globe in Queens, encircled by three stylised satellite orbits. Name the landmark.",
+          "et": "1964. aasta New Yorgi maailmanäituse sümbol on Queensis asuv hiiglaslik roostevabast terasest maakera, mida ümbritseb kolm stiliseeritud satelliidiorbiiti. Mis maamärk see on?"
         },
         "response": {
-          "en": "siphon",
-          "et": "sifoon"
+          "en": "Unisphere",
+          "et": "Unisphere"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["New York Unisphere", "Queens Unisphere"],
+          "et": ["New Yorgi Unisphere", "Queensi Unisphere"]
         },
         "explanation": {
-          "en": "A siphon works through pressure differences and gravity as long as the liquid column remains continuous.",
-          "et": "Sifoon töötab rõhuerinevuse ja raskusjõuga, kuni vedelikusammas püsib katkematu."
+          "en": "The Unisphere was built as the fair's theme symbol and remains in Flushing Meadows–Corona Park.",
+          "et": "Unisphere ehitati näituse teemasümboliks ja seisab siiani Flushing Meadows–Corona Parkis."
         },
         "source": {
-          "sourceId": "wikipedia:siphon",
-          "title": "Siphon",
-          "url": "https://en.wikipedia.org/wiki/Siphon",
+          "sourceId": "wikipedia:unisphere",
+          "title": "Unisphere",
+          "url": "https://en.wikipedia.org/wiki/Unisphere",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18023,161 +18019,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-095",
     "name": {
-      "en": "Communication before the Internet",
-      "et": "Side enne internetti"
+      "en": "Nature's Notes in the Engineer's Sketchbook",
+      "et": "Loodus inseneri visandiplokis"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-095:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:system:semaphore",
+        "factKey": "built-in-technology-inventions:checkpoint8:biomimicry:cats-eye-reflector",
         "tier": 1,
-        "subjectKey": "system:semaphore",
+        "subjectKey": "device:cats-eye-road-stud",
         "clue": {
-          "en": "Which chain of visible signalling stations relayed messages before electrical telegraphy?",
-          "et": "Milline nähtavate signaaljaamade ahel edastas sõnumeid enne elektritelegraafi?"
+          "en": "Percy Shaw's road marker returns headlights toward the driver, echoing the bright eyes of a feline at night. Name the device.",
+          "et": "Percy Shaw' teemärgis peegeldab esituled tagasi juhi poole, meenutades öösel helendavaid kassi silmi. Mis seade see on?"
         },
         "response": {
-          "en": "semaphore line",
-          "et": "semaforiliin"
+          "en": "cat's eye road stud",
+          "et": "kassisilm-teehelkur"
         },
         "acceptedVariants": {
-          "en": [
-            "optical telegraph"
-          ],
-          "et": [
-            "optiline telegraaf"
-          ]
+          "en": ["cat's eye road reflector", "cat's eye stud"],
+          "et": ["kassisilm", "teekattehelkur"]
         },
         "explanation": {
-          "en": "Optical semaphore towers encoded symbols with movable arms or shutters.",
-          "et": "Optilise semafori tornid kodeerisid sümboleid liikuvate varraste või luukidega."
+          "en": "Shaw's reflector sends light back toward its source, helping drivers follow road markings in darkness.",
+          "et": "Shaw' helkur suunab valguse tagasi selle allika poole ja aitab pimedas teemärgistust jälgida."
         },
         "source": {
-          "sourceId": "wikipedia:optical_telegraph",
-          "title": "Optical telegraph",
-          "url": "https://en.wikipedia.org/wiki/Optical_telegraph",
+          "sourceId": "wikipedia:cats-eye-road",
+          "title": "Cat's eye (road)",
+          "url": "https://en.wikipedia.org/wiki/Cat%27s_eye_(road)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-095:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:system:telex",
+        "factKey": "built-in-technology-inventions:checkpoint8:biomimicry:fastskin-shark-ridges",
         "tier": 2,
-        "subjectKey": "system:telex",
+        "subjectKey": "material:sharkskin-swimsuit",
         "clue": {
-          "en": "Which switched network let teleprinters dial and exchange typed messages?",
-          "et": "Milline kommutatsioonivõrk laskis teleprinteritel numbrit valida ja tekstsõnumeid vahetada?"
+          "en": "For the 2000 Sydney Olympics, Speedo designer Fiona Fairhurst copied drag-reducing ridges from shark skin. What competition garment resulted?",
+          "et": "2000. aasta Sydney olümpiaks jäljendas Speedo disainer Fiona Fairhurst hai naha takistust vähendavaid ribisid. Milline võistlusrõivas sellest sündis?"
         },
         "response": {
-          "en": "telex",
-          "et": "teleks"
+          "en": "sharkskin swimsuit",
+          "et": "hainahka jäljendav ujumiskostüüm"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Speedo Fastskin", "Fastskin swimsuit", "shark-inspired swimsuit", "Fastskin"],
+          "et": ["Speedo Fastskin", "Fastskini ujumiskostüüm", "hai nahka jäljendav trikoo", "Fastskin"]
         },
         "explanation": {
-          "en": "Telex provided addressable international text communication before email.",
-          "et": "Teleks pakkus enne e-posti adresseeritavat rahvusvahelist tekstsidet."
+          "en": "Fairhurst led the design of Speedo's Fastskin suit, whose surface drew on the ridged texture of shark skin.",
+          "et": "Fairhurst juhtis Speedo Fastskini kostüümi loomist, mille pind lähtus hainaha ribilisest tekstuurist."
         },
         "source": {
-          "sourceId": "wikipedia:telex",
-          "title": "Telex",
-          "url": "https://en.wikipedia.org/wiki/Telex",
+          "sourceId": "wikipedia:fiona-fairhurst",
+          "title": "Fiona Fairhurst",
+          "url": "https://en.wikipedia.org/wiki/Fiona_Fairhurst",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-095:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:fax",
+        "factKey": "built-in-technology-inventions:checkpoint8:biomimicry:lotus-effect-self-cleaning",
         "tier": 3,
-        "subjectKey": "device:fax",
+        "subjectKey": "material:lotus-effect-coating",
         "clue": {
-          "en": "Which device scans a document and reconstructs it over a telephone connection?",
-          "et": "Milline seade skaneerib dokumendi ning taastab selle telefoniühenduse kaudu?"
+          "en": "Microscopic texture makes water bead on a lotus leaf and roll away with dirt. What self-cleaning coating or paint imitates this trick?",
+          "et": "Mikroskoopiline tekstuur paneb vee lootoselehel tilkadeks kogunema ja koos mustusega minema veerema. Milline isepuhastuv pinnakate või värv seda võtet jäljendab?"
         },
         "response": {
-          "en": "fax machine",
-          "et": "faksiaparaat"
+          "en": "lotus-effect coating",
+          "et": "lootoseefektiga pinnakate"
         },
         "acceptedVariants": {
-          "en": [
-            "facsimile"
-          ],
-          "et": [
-            "faks"
-          ]
+          "en": ["lotus-effect paint", "self-cleaning lotus coating", "lotus effect"],
+          "et": ["lootoseefektiga värv", "isepuhastuv lootosepinnakate", "lootoseefekt"]
         },
         "explanation": {
-          "en": "Fax systems encode page brightness line by line for transmission.",
-          "et": "Faks kodeerib lehe heleduse edastamiseks rida-realt."
+          "en": "The lotus effect combines a water-repellent surface with microscopic roughness so droplets collect contaminants as they roll off.",
+          "et": "Lootoseefekt ühendab vetthülgava pinna mikroskoopilise karedusega, nii et veerevad tilgad koguvad mustuse kaasa."
         },
         "source": {
-          "sourceId": "wikipedia:fax",
-          "title": "Fax",
-          "url": "https://en.wikipedia.org/wiki/Fax",
+          "sourceId": "wikipedia:lotus-effect",
+          "title": "Lotus effect",
+          "url": "https://en.wikipedia.org/wiki/Lotus_effect",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-095:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:link:microwave-relay",
+        "factKey": "built-in-technology-inventions:checkpoint8:biomimicry:synthetic-setae-adhesion",
         "tier": 4,
-        "subjectKey": "link:microwave-relay",
+        "subjectKey": "material:gecko-inspired-adhesive",
         "clue": {
-          "en": "Which line-of-sight radio link carries signals between towers at gigahertz frequencies?",
-          "et": "Milline otsenähtavusega raadiosidelink kannab signaale tornide vahel gigahertsisagedustel?"
+          "en": "Synthetic microscopic hairs called setae imitate a gecko's foot pads. Name the resulting dry sticking technology or tape, not the tiny hairs themselves.",
+          "et": "Sünteetilised mikroskoopilised karvakesed ehk setae jäljendavad geko jalapadjandeid. Nimeta nende abil loodud kuivalt nakkav tehnoloogia või teip, mitte karvakesed ise."
         },
         "response": {
-          "en": "microwave relay",
-          "et": "mikrolainerelee"
+          "en": "gecko-inspired adhesive",
+          "et": "gekost inspireeritud liim"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["gecko tape", "synthetic gecko adhesive"],
+          "et": ["gekoteip", "gekoliim"]
         },
         "explanation": {
-          "en": "Microwave relays formed long terrestrial chains for telephone and television traffic.",
-          "et": "Mikrolainereleed moodustasid telefoni- ja televisiooniside jaoks pikki maapealseid ahelaid."
+          "en": "Artificial setae reproduce the attachment principle of gecko toes and can be arranged into reusable dry adhesive surfaces.",
+          "et": "Tehissetae jäljendavad geko varvaste kinnitumispõhimõtet ja neist saab valmistada korduvkasutatavaid kuivi nakkepindu."
         },
         "source": {
-          "sourceId": "wikipedia:microwave_transmission",
-          "title": "Microwave transmission",
-          "url": "https://en.wikipedia.org/wiki/Microwave_transmission",
+          "sourceId": "wikipedia:synthetic-setae",
+          "title": "Synthetic setae",
+          "url": "https://en.wikipedia.org/wiki/Synthetic_setae",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-095:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:device:transponder",
+        "factKey": "built-in-technology-inventions:checkpoint8:biomimicry:bionic-boxfish",
         "tier": 5,
-        "subjectKey": "device:transponder",
+        "subjectKey": "car:mercedes-benz-bionic",
         "clue": {
-          "en": "Which device receives a coded interrogation or channel and sends a corresponding reply?",
-          "et": "Milline seade võtab vastu kodeeritud päringu või kanali ning saadab vastava vastuse?"
+          "en": "This compact Mercedes concept copied the shape of a yellow boxfish while exploring low drag and a strong lightweight body. Name the car.",
+          "et": "See kompaktne Mercedese ideeauto jäljendas kollase kohverkala kuju, otsides väikest õhutakistust ning tugevat ja kerget keret. Mis auto see oli?"
         },
         "response": {
-          "en": "transponder",
-          "et": "transponder"
+          "en": "Mercedes-Benz Bionic",
+          "et": "Mercedes-Benz Bionic"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Mercedes Bionic concept", "Bionic concept car"],
+          "et": ["Mercedes Bionicu ideeauto", "Bionic-ideeauto"]
         },
         "explanation": {
-          "en": "Transponders serve radar identification, satellites, and radio-frequency tracking.",
-          "et": "Transpondereid kasutatakse radarituvastuses, satelliitides ja raadiosageduslikus jälgimises."
+          "en": "Mercedes-Benz used the boxfish as the biological model for the Bionic concept's aerodynamics and lightweight construction.",
+          "et": "Mercedes-Benz võttis Bionicu ideeauto aerodünaamika ja kergkonstruktsiooni bioloogiliseks eeskujuks kohverkala."
         },
         "source": {
-          "sourceId": "wikipedia:transponder",
-          "title": "Transponder",
-          "url": "https://en.wikipedia.org/wiki/Transponder",
+          "sourceId": "wikipedia:mercedes-benz-bionic",
+          "title": "Mercedes-Benz Bionic",
+          "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_Bionic",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18185,157 +18173,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-096",
     "name": {
-      "en": "The Next Wave of Household Machines",
-      "et": "Kodumasinate järgmine laine"
+      "en": "The Early Web Was Weird",
+      "et": "Varajane veeb oli veider"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-096:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:appliance:induction-cooking",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:first-website-cern",
         "tier": 1,
-        "subjectKey": "appliance:induction-cooking",
+        "subjectKey": "website:first-website",
         "clue": {
-          "en": "Which hob heats a compatible pan with a changing magnetic field?",
-          "et": "Milline pliidiplaat kuumutab sobivat panni muutuva magnetväljaga?"
+          "en": "Tim Berners-Lee created this pioneering web artifact at CERN and hosted it at info.cern.ch. What milestone page was it?",
+          "et": "Tim Berners-Lee lõi selle teedrajava veebilehe CERN-is ja majutas selle aadressil info.cern.ch. Milline verstapost see leht oli?"
         },
         "response": {
-          "en": "induction cooktop",
-          "et": "induktsioonpliit"
+          "en": "first website",
+          "et": "esimene veebisait"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["CERN's first website", "info.cern.ch website"],
+          "et": ["CERN-i esimene veebisait", "info.cern.ch veebisait"]
         },
         "explanation": {
-          "en": "Induction cooking generates currents in the cookware rather than heating an exposed element first.",
-          "et": "Induktsioonpliit tekitab voolu keedunõus, mitte ei kuumuta esmalt paljast küttekeha."
+          "en": "The CERN page described the World Wide Web project and explained how people could use the new system.",
+          "et": "CERN-i leht kirjeldas World Wide Webi projekti ja selgitas, kuidas uut süsteemi kasutada."
         },
         "source": {
-          "sourceId": "wikipedia:induction_cooking",
-          "title": "Induction cooking",
-          "url": "https://en.wikipedia.org/wiki/Induction_cooking",
+          "sourceId": "wikipedia:first-website",
+          "title": "First website",
+          "url": "https://en.wikipedia.org/wiki/First_website",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-096:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:appliance:tumble-dryer",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:million-dollar-pixels",
         "tier": 2,
-        "subjectKey": "appliance:tumble-dryer",
+        "subjectKey": "website:million-dollar-homepage",
         "clue": {
-          "en": "Which appliance rotates wet clothes through heated or dehumidified air?",
-          "et": "Milline seade pöörab märgi rõivaid kuumutatud või kuivatatud õhus?"
+          "en": "A student divided one webpage into one million pixels and sold them as tiny adverts for one dollar each. Name the project.",
+          "et": "Üliõpilane jagas ühe veebilehe miljoniks piksliks ja müüs need tillukeste reklaamidena hinnaga üks dollar tükk. Mis projekt see oli?"
         },
         "response": {
-          "en": "tumble dryer",
-          "et": "trummelkuivati"
+          "en": "Million Dollar Homepage",
+          "et": "Million Dollar Homepage"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["The Million Dollar Homepage"],
+          "et": ["Million Dollar Homepage'i veebisait"]
         },
         "explanation": {
-          "en": "Modern heat-pump dryers recycle heat and use less energy than vented models.",
-          "et": "Tänapäevane soojuspumbaga trummelkuivati taaskasutab soojust ja säästab energiat."
+          "en": "Alex Tew launched the page to raise money for university, selling its million-pixel advertising grid in small blocks.",
+          "et": "Alex Tew käivitas lehe ülikooliraha kogumiseks ja müüs miljonist pikslist koosnevat reklaamiruudustikku väikeste plokkidena."
         },
         "source": {
-          "sourceId": "wikipedia:clothes_dryer",
-          "title": "Clothes dryer",
-          "url": "https://en.wikipedia.org/wiki/Clothes_dryer",
+          "sourceId": "wikipedia:million-dollar-homepage",
+          "title": "The Million Dollar Homepage",
+          "url": "https://en.wikipedia.org/wiki/The_Million_Dollar_Homepage",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-096:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:appliance:robotic-vacuum",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:ebay-broken-laser-pointer",
         "tier": 3,
-        "subjectKey": "appliance:robotic-vacuum",
+        "subjectKey": "sale:first-ebay-item",
         "clue": {
-          "en": "Which autonomous floor appliance maps or senses rooms while collecting dust?",
-          "et": "Milline autonoomne põrandaseade kaardistab või tajub ruume ning kogub tolmu?"
+          "en": "AuctionWeb founder Pierre Omidyar tested his site by selling a faulty handheld gadget that projects a bright dot. The buyer said he collected damaged examples. What item was sold?",
+          "et": "AuctionWebi asutaja Pierre Omidyar katsetas oma saiti, müües rikkis käsividina, mis näitab eredat valguspunkti. Ostja ütles, et kogubki katkisi eksemplare. Mis ese müüdi?"
         },
         "response": {
-          "en": "robotic vacuum cleaner",
-          "et": "robottolmuimeja"
+          "en": "broken laser pointer",
+          "et": "katkine laserpointer"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["first eBay laser pointer", "eBay laser pointer", "laser pointer"],
+          "et": ["eBay esimene laserpointer", "eBay laserpointer", "laserpointer"]
         },
         "explanation": {
-          "en": "Robotic vacuums combine drive motors, proximity sensing, and path-planning software.",
-          "et": "Robottolmuimeja ühendab veomootorid, lähedusandurid ja teekonna planeerimise tarkvara."
+          "en": "Omidyar contacted the buyer to confirm the sale was intentional and learned that he collected broken laser pointers.",
+          "et": "Omidyar võttis ostjaga ühendust, et tehingu tahtlikkust kinnitada, ning sai teada, et too kogub katkisi laserpointereid."
         },
         "source": {
-          "sourceId": "wikipedia:robotic_vacuum_cleaner",
-          "title": "Robotic vacuum cleaner",
-          "url": "https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner",
+          "sourceId": "wikipedia:pierre-omidyar",
+          "title": "Pierre Omidyar",
+          "url": "https://en.wikipedia.org/wiki/Pierre_Omidyar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-096:question:4",
-        "factKey": "built-in-technology-inventions:round1-overlap:device:overlock",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:first-banner-hotwired",
         "tier": 4,
-        "subjectKey": "device:overlock",
+        "subjectKey": "advertisement:first-web-banner-att",
         "clue": {
-          "en": "Which specialised sewing machine trims a fabric edge while enclosing it in thread loops?",
-          "et": "Milline spetsiaalne õmblusmasin lõikab kangaserva ning katab selle samal ajal niidisilmustega?"
+          "en": "HotWired carried a telecom advert asking whether readers had ever clicked right here. What web-advertising first was this AT&T artifact?",
+          "et": "HotWired avaldas telekomireklaami, mis küsis lugejalt, kas ta on kunagi just siia klõpsanud. Milline veebireklaami esmasündmus oli see AT&T reklaam?"
         },
         "response": {
-          "en": "overlock",
-          "et": "overlokmasin"
+          "en": "AT&T's first banner ad",
+          "et": "AT&T esimene bännerreklaam"
         },
         "acceptedVariants": {
-          "en": [
-            "serger"
-          ],
-          "et": [
-            "äärestusmasin"
-          ]
+          "en": ["first web banner", "AT&T banner ad"],
+          "et": ["esimene veebibänner", "AT&T bänner"]
         },
         "explanation": {
-          "en": "An overlock forms an extensible finished seam and commonly uses several threads at once.",
-          "et": "Overlokmasin teeb veniva viimistletud õmbluse ning kasutab tavaliselt korraga mitut niiti."
+          "en": "AT&T's clickable HotWired advertisement is widely described as the first web banner ad.",
+          "et": "AT&T klõpsatavat HotWiredi reklaami kirjeldatakse laialdaselt esimese veebibännerina."
         },
         "source": {
-          "sourceId": "wikipedia:overlock",
-          "title": "Overlock",
-          "url": "https://en.wikipedia.org/wiki/Overlock",
+          "sourceId": "wikipedia:web-banner",
+          "title": "Web banner",
+          "url": "https://en.wikipedia.org/wiki/Web_banner",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-096:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:appliance:food-processor",
+        "factKey": "built-in-technology-inventions:checkpoint8:early-web:cernettes-first-web-photo",
         "tier": 5,
-        "subjectKey": "appliance:food-processor",
+        "subjectKey": "band:les-horribles-cernettes",
         "clue": {
-          "en": "Which motor appliance chops, slices, grates, or purées with interchangeable tools?",
-          "et": "Milline mootoriga seade hakib, viilutab, riivib või püreestab vahetatavate tööriistadega?"
+          "en": "Tim Berners-Lee selected one of the web's earliest photographs—the first published band photo—showing a comedy group made up of women connected with CERN. Name the group.",
+          "et": "Tim Berners-Lee valis veebi ühe varaseima foto, esimese seal avaldatud bändifoto, millel poseeris CERN-iga seotud naistest koosnev naljarühm. Mis ansambel see oli?"
         },
         "response": {
-          "en": "food processor",
-          "et": "köögikombain"
+          "en": "Les Horribles Cernettes",
+          "et": "Les Horribles Cernettes"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Cernettes", "CERNettes"],
+          "et": ["Cernettes", "CERNettes"]
         },
         "explanation": {
-          "en": "A food processor uses a broad work bowl and attachments rather than a narrow blender jar.",
-          "et": "Köögikombain kasutab laia töökaussi ja tarvikuid, mitte kitsast blenderikannu."
+          "en": "The CERN parody band appeared in a backstage photograph that became the first band photo published on the World Wide Web.",
+          "et": "CERN-i paroodiabänd poseeris lavatagusel fotol, millest sai esimene World Wide Webis avaldatud bändifoto."
         },
         "source": {
-          "sourceId": "wikipedia:food_processor",
-          "title": "Food processor",
-          "url": "https://en.wikipedia.org/wiki/Food_processor",
+          "sourceId": "wikipedia:les-horribles-cernettes",
+          "title": "Les Horribles Cernettes",
+          "url": "https://en.wikipedia.org/wiki/Les_Horribles_Cernettes",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18343,153 +18327,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-097",
     "name": {
-      "en": "Mechanisms That Keep Time",
-      "et": "Aega hoidvad mehhanismid"
+      "en": "Hardware That Changed How We Played",
+      "et": "Riistvara, mis muutis mängimist"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-097:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:component:escapement",
+        "factKey": "built-in-technology-inventions:checkpoint8:game-hardware:game-boy-tetris",
         "tier": 1,
-        "subjectKey": "component:escapement",
+        "subjectKey": "device:nintendo-game-boy",
         "clue": {
-          "en": "Which clock mechanism releases the gear train in controlled increments?",
-          "et": "Milline kellamehhanism vabastab hammasratta käiku kontrollitud sammudena?"
+          "en": "Nintendo's grey handheld became a mass-market phenomenon, with Tetris bundled in many regions. Name the device.",
+          "et": "Nintendo hallist käsikonsoolist sai massituru fenomen ning paljudes piirkondades müüdi seda koos Tetrisega. Mis seade see oli?"
         },
         "response": {
-          "en": "escapement",
-          "et": "käigumehhanism"
+          "en": "Nintendo Game Boy",
+          "et": "Nintendo Game Boy"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Game Boy"],
+          "et": ["Game Boy"]
         },
         "explanation": {
-          "en": "An escapement both counts oscillations and supplies energy to the timekeeper.",
-          "et": "Käigumehhanism loendab võnkeid ning annab ajamõõtjale energiat."
+          "en": "The Game Boy paired durable portable hardware with interchangeable cartridges, and Tetris helped broaden its audience.",
+          "et": "Game Boy ühendas vastupidava kaasaskantava riistvara vahetatavate kassettidega ning Tetris aitas selle kasutajaskonda laiendada."
         },
         "source": {
-          "sourceId": "wikipedia:escapement",
-          "title": "Escapement",
-          "url": "https://en.wikipedia.org/wiki/Escapement",
+          "sourceId": "wikipedia:game-boy",
+          "title": "Game Boy",
+          "url": "https://en.wikipedia.org/wiki/Game_Boy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-097:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:oscillator:pendulum",
+        "factKey": "built-in-technology-inventions:checkpoint8:game-hardware:wii-remote-motion",
         "tier": 2,
-        "subjectKey": "oscillator:pendulum",
+        "subjectKey": "controller:wii-remote",
         "clue": {
-          "en": "Which gravity-driven oscillator greatly improved stationary clock accuracy?",
-          "et": "Milline raskusjõul töötav võnkur parandas tugevalt paiksete kellade täpsust?"
+          "en": "This motion-sensing Nintendo controller was held in one hand like a television clicker and turned swings, points and gestures into Wii input. Name it.",
+          "et": "Seda Nintendo liikumistundlikku kontrollerit hoiti ühes käes nagu teleripulti ning see muutis viiped, löögid ja osutamise Wii sisendiks. Mis pult see oli?"
         },
         "response": {
-          "en": "pendulum",
-          "et": "pendel"
+          "en": "Wii Remote",
+          "et": "Wii pult"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Wiimote", "Nintendo Wii Remote"],
+          "et": ["Wiimote", "Nintendo Wii pult"]
         },
         "explanation": {
-          "en": "A pendulum’s period depends mainly on its effective length and local gravity.",
-          "et": "Pendli periood sõltub peamiselt efektiivsest pikkusest ja kohalikust raskuskiirendusest."
+          "en": "The controller combined motion sensing with pointing functions and became the Wii console's defining interface.",
+          "et": "Kontroller ühendas liikumistuvastuse osutamisfunktsioonidega ja sellest sai Wii konsooli iseloomulik juhtimisviis."
         },
         "source": {
-          "sourceId": "wikipedia:pendulum_clock",
-          "title": "Pendulum clock",
-          "url": "https://en.wikipedia.org/wiki/Pendulum_clock",
+          "sourceId": "wikipedia:wii-remote",
+          "title": "Wii Remote",
+          "url": "https://en.wikipedia.org/wiki/Wii_Remote",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-097:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:component:balance-wheel",
+        "factKey": "built-in-technology-inventions:checkpoint8:game-hardware:kinect-body-tracking",
         "tier": 3,
-        "subjectKey": "component:balance-wheel",
+        "subjectKey": "device:microsoft-kinect",
         "clue": {
-          "en": "Which spring-coupled oscillator regulates a mechanical watch?",
-          "et": "Milline vedruga ühendatud võnkur reguleerib mehaanilist käekella?"
+          "en": "Microsoft's camera and depth-sensor system tracked a player's whole body, letting Xbox games work without a handheld controller. Name the device.",
+          "et": "Microsofti kaamera- ja sügavusandurite süsteem jälgis mängija kogu keha ning lubas Xboxi mänge juhtida ilma käes hoitava puldita. Mis seade see oli?"
         },
         "response": {
-          "en": "balance wheel",
-          "et": "bilanssratas"
+          "en": "Kinect",
+          "et": "Kinect"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Microsoft Kinect"],
+          "et": ["Microsofti Kinect"]
         },
         "explanation": {
-          "en": "A balance wheel reverses direction repeatedly and works with an escapement.",
-          "et": "Bilanssratas muudab korduvalt pöörlemissuunda ning töötab koos käigumehhanismiga."
+          "en": "Kinect used cameras, depth sensing and microphones to interpret body movement and voice for Xbox systems.",
+          "et": "Kinect kasutas Xboxi süsteemides kehaliikumise ja hääle tõlgendamiseks kaameraid, sügavustaju ning mikrofone."
         },
         "source": {
-          "sourceId": "wikipedia:balance_wheel",
-          "title": "Balance wheel",
-          "url": "https://en.wikipedia.org/wiki/Balance_wheel",
+          "sourceId": "wikipedia:kinect",
+          "title": "Kinect",
+          "url": "https://en.wikipedia.org/wiki/Kinect",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-097:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:instrument:chronometer",
+        "factKey": "built-in-technology-inventions:checkpoint8:game-hardware:oculus-rift-kickstarter",
         "tier": 4,
-        "subjectKey": "instrument:chronometer",
+        "subjectKey": "device:oculus-rift",
         "clue": {
-          "en": "What certified high-precision timepiece historically supported navigation?",
-          "et": "Milline sertifitseeritud ülitäpne ajanäitaja toetas ajalooliselt navigatsiooni?"
+          "en": "A Kickstarter-backed headset helped revive consumer virtual reality before Facebook bought its maker. Name the product.",
+          "et": "Kickstarterist toetust saanud peakomplekt aitas tarbijatele mõeldud virtuaalreaalsuse taaselustada, enne kui Facebook selle tootja ostis. Mis toode see oli?"
         },
         "response": {
-          "en": "chronometer",
-          "et": "kronomeeter"
+          "en": "Oculus Rift",
+          "et": "Oculus Rift"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Oculus Rift headset"],
+          "et": ["Oculus Rifti peakomplekt"]
         },
         "explanation": {
-          "en": "A chronometer must maintain rate under specified positional and temperature tests.",
-          "et": "Kronomeeter peab säilitama käigu kindlates asendi- ja temperatuurikatsetes."
+          "en": "The Rift began as a crowdfunded virtual-reality headset and became central to the renewed consumer-VR market.",
+          "et": "Rift alustas ühisrahastatud virtuaalreaalsuse peakomplektina ja sai tarbijatele mõeldud VR-i uue tõusu keskseks tooteks."
         },
         "source": {
-          "sourceId": "wikipedia:chronometer_watch",
-          "title": "Chronometer watch",
-          "url": "https://en.wikipedia.org/wiki/Chronometer_watch",
+          "sourceId": "wikipedia:oculus-rift",
+          "title": "Oculus Rift",
+          "url": "https://en.wikipedia.org/wiki/Oculus_Rift",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-097:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:clock:caesium-fountain",
+        "factKey": "built-in-technology-inventions:checkpoint8:game-hardware:virtual-boy-red-display",
         "tier": 5,
-        "subjectKey": "clock:caesium-fountain",
+        "subjectKey": "console:nintendo-virtual-boy",
         "clue": {
-          "en": "Which atomic clock tosses cooled atoms upward through a microwave cavity?",
-          "et": "Milline aatomkell paiskab jahutatud aatomid üles läbi mikrolaineõõnsuse?"
+          "en": "Nintendo's short-lived 1995 tabletop stereoscopic console displayed games in monochrome red graphics. Name this notorious hardware experiment.",
+          "et": "Nintendo lühikese elueaga 1995. aasta lauapealne stereoskoopiline konsool näitas mänge ühevärvilise punase graafikaga. Mis kurikuulus riistvarakatse see oli?"
         },
         "response": {
-          "en": "caesium fountain clock",
-          "et": "tseesiumi purskkaevkell"
+          "en": "Nintendo Virtual Boy",
+          "et": "Nintendo Virtual Boy"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Virtual Boy"],
+          "et": ["Virtual Boy"]
         },
         "explanation": {
-          "en": "The long interaction time of a caesium fountain permits extremely precise frequency measurement.",
-          "et": "Tseesiumi purskkaevkella pikk vastasmõjuaeg võimaldab erakordselt täpset sagedusmõõtmist."
+          "en": "The Virtual Boy used a red stereoscopic display but was discontinued after a brief and unsuccessful market life.",
+          "et": "Virtual Boy kasutas punast stereoskoopilist ekraani, kuid selle müük lõpetati pärast lühikest ja ebaedukat turuperioodi."
         },
         "source": {
-          "sourceId": "wikipedia:atomic_fountain",
-          "title": "Atomic fountain",
-          "url": "https://en.wikipedia.org/wiki/Atomic_fountain",
+          "sourceId": "wikipedia:virtual-boy",
+          "title": "Virtual Boy",
+          "url": "https://en.wikipedia.org/wiki/Virtual_Boy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18497,153 +18481,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-098",
     "name": {
-      "en": "Controls behind a Photograph",
-      "et": "Foto taga olevad juhtseaded"
+      "en": "Built in the Open",
+      "et": "Avalikult ehitatud digimaailm"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-098:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:aperture",
+        "factKey": "built-in-technology-inventions:checkpoint8:open:wikipedia-nupedia",
         "tier": 1,
-        "subjectKey": "concept:aperture",
+        "subjectKey": "website:wikipedia",
         "clue": {
-          "en": "Which adjustable lens opening controls light and depth of field?",
-          "et": "Milline reguleeritav objektiiviava juhib valgust ja teravussügavust?"
+          "en": "This collaboratively edited encyclopedia began in 2001 as a side project to the more formal Nupedia. Name it.",
+          "et": "See ühiselt toimetatav entsüklopeedia alustas 2001. aastal rangema Nupedia kõrvalprojektina. Mis entsüklopeedia see on?"
         },
         "response": {
-          "en": "aperture",
-          "et": "ava"
+          "en": "Wikipedia",
+          "et": "Vikipeedia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Wikipedia encyclopedia"],
+          "et": ["Wikipedia", "vaba entsüklopeedia Vikipeedia"]
         },
         "explanation": {
-          "en": "A lower f-number denotes a wider aperture for a given lens.",
-          "et": "Väiksem f-arv tähistab sama objektiivi korral laiemat ava."
+          "en": "Its wiki model let contributors edit articles directly, in contrast with Nupedia's slower expert-review process.",
+          "et": "Vikimudel lubas kaastöölistel artikleid otse muuta, erinevalt Nupedia aeglasemast eksperdihinnangu protsessist."
         },
         "source": {
-          "sourceId": "wikipedia:aperture",
-          "title": "Aperture",
-          "url": "https://en.wikipedia.org/wiki/Aperture",
+          "sourceId": "wikipedia:wikipedia",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-098:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:measurement:shutter-speed",
+        "factKey": "built-in-technology-inventions:checkpoint8:open:linux-hobby-announcement",
         "tier": 2,
-        "subjectKey": "measurement:shutter-speed",
+        "subjectKey": "software:linux-kernel",
         "clue": {
-          "en": "Which exposure setting determines how long the sensor receives light?",
-          "et": "Milline särituse seadistus määrab, kui kaua andur valgust saab?"
+          "en": "Linus Torvalds announced a free hobby kernel on a MINIX newsgroup; it grew into the core of a major operating-system family. Name it.",
+          "et": "Linus Torvalds teatas MINIX-i uudisgrupis tasuta hobikernelist, millest kasvas suure operatsioonisüsteemide perekonna tuum. Mis kernel see oli?"
         },
         "response": {
-          "en": "shutter speed",
-          "et": "säriaeg"
+          "en": "Linux",
+          "et": "Linux"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Linux kernel"],
+          "et": ["Linuxi kernel"]
         },
         "explanation": {
-          "en": "Short shutter times freeze motion while long ones can blur it.",
-          "et": "Lühike säriaeg külmutab liikumise, pikk võib selle hägustada."
+          "en": "Torvalds later switched the kernel from its original licence to the GNU GPL, and contributors around the world developed it further.",
+          "et": "Torvalds viis kerneli hiljem algselt litsentsilt GNU GPL-ile ning kaastöölised üle maailma arendasid seda edasi."
         },
         "source": {
-          "sourceId": "wikipedia:shutter_speed",
-          "title": "Shutter speed",
-          "url": "https://en.wikipedia.org/wiki/Shutter_speed",
+          "sourceId": "wikipedia:linux",
+          "title": "Linux",
+          "url": "https://en.wikipedia.org/wiki/Linux",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-098:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:standard:iso-speed",
+        "factKey": "built-in-technology-inventions:checkpoint8:open:raspberry-pi-education",
         "tier": 3,
-        "subjectKey": "standard:iso-speed",
+        "subjectKey": "computer:raspberry-pi",
         "clue": {
-          "en": "Which rating describes film or sensor sensitivity for exposure calculations?",
-          "et": "Milline näit kirjeldab filmi või anduri tundlikkust särituse arvutamisel?"
+          "en": "A British foundation created this inexpensive single-board computer to encourage computer-science education. Name the fruit-branded board.",
+          "et": "Briti sihtasutus lõi selle odava üheplaadiarvuti, et edendada informaatika õpetamist. Mis puuviljanimega plaat see on?"
         },
         "response": {
-          "en": "ISO speed",
-          "et": "ISO-tundlikkus"
+          "en": "Raspberry Pi",
+          "et": "Raspberry Pi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Raspberry Pi computer"],
+          "et": ["Raspberry Pi arvuti"]
         },
         "explanation": {
-          "en": "Raising digital ISO amplifies the signal and usually makes noise more visible.",
-          "et": "Digitaalse ISO tõstmine võimendab signaali ja muudab müra tavaliselt nähtavamaks."
+          "en": "The Raspberry Pi Foundation designed the small computer to make programming and computing more accessible in education.",
+          "et": "Raspberry Pi Foundation kavandas väikearvuti selleks, et programmeerimine ja arvutiõpe oleksid hariduses kättesaadavamad."
         },
         "source": {
-          "sourceId": "wikipedia:film_speed",
-          "title": "Film speed",
-          "url": "https://en.wikipedia.org/wiki/Film_speed",
+          "sourceId": "wikipedia:raspberry-pi",
+          "title": "Raspberry Pi",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-098:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:filter:bayer-filter",
+        "factKey": "built-in-technology-inventions:checkpoint8:open:arduino-ivrea",
         "tier": 4,
-        "subjectKey": "filter:bayer-filter",
+        "subjectKey": "platform:arduino",
         "clue": {
-          "en": "Which red-green-blue mosaic lets a mostly monochrome sensor record colour?",
-          "et": "Milline puna-rohe-sinine mosaiik laseb peamiselt ühevärvilisel anduril värvi salvestada?"
+          "en": "This open electronics platform was born in Ivrea, Italy, and took its name from a local bar. Name the maker favourite.",
+          "et": "See avatud elektroonikaplatvorm sündis Itaalias Ivreas ja sai nime kohaliku baari järgi. Mis tegijate lemmik see on?"
         },
         "response": {
-          "en": "Bayer filter",
-          "et": "Bayeri filter"
+          "en": "Arduino",
+          "et": "Arduino"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Arduino platform"],
+          "et": ["Arduino platvorm"]
         },
         "explanation": {
-          "en": "Bayer patterns contain twice as many green samples as red or blue.",
-          "et": "Bayeri muster sisaldab rohelisi proove kaks korda rohkem kui punaseid või siniseid."
+          "en": "Arduino combines openly documented microcontroller boards with software tools intended for accessible electronics projects.",
+          "et": "Arduino ühendab avalikult dokumenteeritud mikrokontrollerplaadid tarkvaratööriistadega, et elektroonikaprojekte oleks lihtsam luua."
         },
         "source": {
-          "sourceId": "wikipedia:bayer_filter",
-          "title": "Bayer filter",
-          "url": "https://en.wikipedia.org/wiki/Bayer_filter",
+          "sourceId": "wikipedia:arduino",
+          "title": "Arduino",
+          "url": "https://en.wikipedia.org/wiki/Arduino",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-098:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:artifact:rolling-shutter",
+        "factKey": "built-in-technology-inventions:checkpoint8:open:gnu-recursive-name",
         "tier": 5,
-        "subjectKey": "artifact:rolling-shutter",
+        "subjectKey": "project:gnu",
         "clue": {
-          "en": "Which capture method reads image rows at different moments and can skew fast motion?",
-          "et": "Milline võttemeetod loeb pildiread eri hetkedel ning võib kiire liikumise viltu muuta?"
+          "en": "Richard Stallman's free Unix-like system project gave itself a recursive acronym meaning that its own name is not Unix. Name the project.",
+          "et": "Richard Stallmani vaba Unixi-laadse süsteemi projekt andis endale rekursiivse akronüümi, mille mõte on, et selle enda nimi ei ole Unix. Mis projekt see on?"
         },
         "response": {
-          "en": "rolling shutter",
-          "et": "rullsulgur"
+          "en": "GNU Project",
+          "et": "GNU projekt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["GNU"],
+          "et": ["GNU", "GNU projekt"]
         },
         "explanation": {
-          "en": "Rolling-shutter artefacts arise because the whole frame is not exposed simultaneously.",
-          "et": "Rullsulguri moonutus tekib, sest kogu kaadrit ei säritata korraga."
+          "en": "GNU expands recursively to GNU's Not Unix and was launched to build a completely free Unix-compatible operating system.",
+          "et": "GNU laieneb rekursiivselt fraasiks GNU's Not Unix ja projekt käivitati täiesti vaba Unixiga ühilduva operatsioonisüsteemi loomiseks."
         },
         "source": {
-          "sourceId": "wikipedia:rolling_shutter",
-          "title": "Rolling shutter",
-          "url": "https://en.wikipedia.org/wiki/Rolling_shutter",
+          "sourceId": "wikipedia:gnu-project",
+          "title": "GNU Project",
+          "url": "https://en.wikipedia.org/wiki/GNU_Project",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18651,157 +18635,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-099",
     "name": {
-      "en": "Safety through Automatic Intervention",
-      "et": "Ohutus automaatse sekkumisega"
+      "en": "Prizes That Pushed Technology Forward",
+      "et": "Tehnoloogiat edendanud auhinnad"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-099:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:design:crumple-zone",
+        "factKey": "built-in-technology-inventions:checkpoint8:prizes:netflix-cinematch",
         "tier": 1,
-        "subjectKey": "design:crumple-zone",
+        "subjectKey": "prize:netflix-prize",
         "clue": {
-          "en": "Which vehicle structure deforms deliberately to lengthen crash deceleration?",
-          "et": "Milline sõidukikonstruktsioon deformeerub tahtlikult, et pikendada kokkupõrke aeglustust?"
+          "en": "A DVD-by-mail company offered one million dollars for a ten-percent improvement to its Cinematch recommendation system. Name the contest.",
+          "et": "DVD-sid postiga laenutanud ettevõte pakkus miljon dollarit, et parandada oma Cinematchi soovitussüsteemi kümme protsenti. Mis võistlus see oli?"
         },
         "response": {
-          "en": "crumple zone",
-          "et": "deformatsioonitsoon"
+          "en": "Netflix Prize",
+          "et": "Netflixi auhind"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Netflix contest"],
+          "et": ["Netflixi võistlus"]
         },
         "explanation": {
-          "en": "A crumple zone absorbs kinetic energy while a rigid cell protects occupants.",
-          "et": "Deformatsioonitsoon neelab kineetilist energiat, samal ajal kui jäik kabiin kaitseb sõitjaid."
+          "en": "The Netflix Prize challenged teams to predict user ratings more accurately than the company's existing Cinematch algorithm.",
+          "et": "Netflixi auhind kutsus võistkondi ennustama kasutajate hindeid ettevõtte olemasolevast Cinematchi algoritmist täpsemalt."
         },
         "source": {
-          "sourceId": "wikipedia:crumple_zone",
-          "title": "Crumple zone",
-          "url": "https://en.wikipedia.org/wiki/Crumple_zone",
+          "sourceId": "wikipedia:netflix-prize",
+          "title": "Netflix Prize",
+          "url": "https://en.wikipedia.org/wiki/Netflix_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-099:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:system:traction-control",
+        "factKey": "built-in-technology-inventions:checkpoint8:prizes:millennium-prize-berners-lee",
         "tier": 2,
-        "subjectKey": "system:traction-control",
+        "subjectKey": "prize:millennium-technology-prize",
         "clue": {
-          "en": "Which system reduces wheelspin by braking a wheel or cutting engine torque?",
-          "et": "Milline süsteem vähendab ratta läbilibisemist pidurdamise või mootorimomendi kärpimisega?"
+          "en": "Finland inaugurated this million-euro technology award in 2004 and gave its first prize to World Wide Web inventor Tim Berners-Lee. Name the award.",
+          "et": "Soome asutas selle miljoni euro suuruse tehnoloogiaauhinna 2004. aastal ja andis esimese preemia World Wide Webi leiutajale Tim Berners-Leele. Mis auhind see on?"
         },
         "response": {
-          "en": "traction control",
-          "et": "veojõukontroll"
+          "en": "Millennium Technology Prize",
+          "et": "Millenniumi tehnoloogiapreemia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Finnish Millennium Technology Prize", "Millennium Prize"],
+          "et": ["Soome Millenniumi tehnoloogiapreemia", "Millenniumi auhind"]
         },
         "explanation": {
-          "en": "Traction control uses wheel-speed sensors shared with anti-lock braking.",
-          "et": "Veojõukontroll kasutab ABS-iga ühiseid rattakiiruse andureid."
+          "en": "The Finnish award honours technological innovations that improve people's quality of life and promote sustainable development.",
+          "et": "Soome auhind tunnustab tehnoloogilisi uuendusi, mis parandavad inimeste elukvaliteeti ja edendavad kestlikku arengut."
         },
         "source": {
-          "sourceId": "wikipedia:traction_control_system",
-          "title": "Traction control system",
-          "url": "https://en.wikipedia.org/wiki/Traction_control_system",
+          "sourceId": "wikipedia:millennium-technology-prize",
+          "title": "Millennium Technology Prize",
+          "url": "https://en.wikipedia.org/wiki/Millennium_Technology_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-099:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:device:residual-current-device",
+        "factKey": "built-in-technology-inventions:checkpoint8:prizes:ansari-spaceshipone",
         "tier": 3,
-        "subjectKey": "device:residual-current-device",
+        "subjectKey": "prize:ansari-x-prize",
         "clue": {
-          "en": "Which electrical protector trips when outgoing and returning currents differ?",
-          "et": "Milline elektriline kaitseseade rakendub, kui väljuv ja tagastuv vool erinevad?"
+          "en": "SpaceShipOne claimed this private-spaceflight prize by reaching space twice within two weeks. Name the competition.",
+          "et": "SpaceShipOne võitis selle eraviisilise kosmoselennu auhinna, jõudes kahe nädala jooksul kaks korda kosmosesse. Mis võistlus see oli?"
         },
         "response": {
-          "en": "residual-current device",
-          "et": "rikkevoolukaitse"
+          "en": "Ansari X Prize",
+          "et": "Ansari X Prize"
         },
         "acceptedVariants": {
-          "en": [
-            "RCD"
-          ],
-          "et": [
-            "RCD"
-          ]
+          "en": ["Ansari X-Prize"],
+          "et": ["Ansari X-Prize"]
         },
         "explanation": {
-          "en": "An RCD detects leakage to earth and can disconnect supply rapidly.",
-          "et": "Rikkevoolukaitse tuvastab lekkevoolu maasse ning katkestab toite kiiresti."
+          "en": "The prize rewarded the first privately financed reusable crewed spacecraft to complete the required two flights.",
+          "et": "Auhind anti esimesele erarahastatud korduskasutatavale mehitatud kosmoselaevale, mis tegi nõutud kaks lendu."
         },
         "source": {
-          "sourceId": "wikipedia:residual-current_device",
-          "title": "Residual-current device",
-          "url": "https://en.wikipedia.org/wiki/Residual-current_device",
+          "sourceId": "wikipedia:ansari-x-prize",
+          "title": "Ansari X Prize",
+          "url": "https://en.wikipedia.org/wiki/Ansari_X_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-099:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:device:safety-interlock",
+        "factKey": "built-in-technology-inventions:checkpoint8:prizes:darpa-autonomous-desert",
         "tier": 4,
-        "subjectKey": "device:safety-interlock",
+        "subjectKey": "prize:darpa-grand-challenge",
         "clue": {
-          "en": "Which mechanism prevents a machine from operating unless a guard or condition is safe?",
-          "et": "Milline mehhanism takistab masina tööd, kui kaitse või tingimus pole ohutu?"
+          "en": "A US defence research agency staged desert contests that accelerated autonomous vehicles after no entrant finished the first event. Name the challenge.",
+          "et": "USA kaitseuuringute agentuur korraldas kõrbevõistlusi, mis kiirendasid autonoomsete sõidukite arengut pärast seda, kui esimesel korral ei jõudnud ükski osaleja finišisse. Mis võistlus see oli?"
         },
         "response": {
-          "en": "safety interlock",
-          "et": "turvablokeering"
+          "en": "DARPA Grand Challenge",
+          "et": "DARPA Grand Challenge"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["DARPA driverless-car challenge"],
+          "et": ["DARPA autonoomsete autode võistlus"]
         },
         "explanation": {
-          "en": "An interlock links machine permission directly to the state of protective equipment.",
-          "et": "Turvablokeering seob masina tööloa vahetult kaitsevahendi olekuga."
+          "en": "The first event ended without a finisher, while later challenges demonstrated rapid progress in driverless navigation.",
+          "et": "Esimene võistlus lõppes ilma lõpetajateta, kuid hilisemad katsed näitasid juhita navigeerimise kiiret arengut."
         },
         "source": {
-          "sourceId": "wikipedia:interlock_(engineering)",
-          "title": "Interlock (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Interlock_(engineering)",
+          "sourceId": "wikipedia:darpa-grand-challenge",
+          "title": "DARPA Grand Challenge",
+          "url": "https://en.wikipedia.org/wiki/DARPA_Grand_Challenge",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-099:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:principle:fail-safe",
+        "factKey": "built-in-technology-inventions:checkpoint8:prizes:orteig-lindbergh",
         "tier": 5,
-        "subjectKey": "principle:fail-safe",
+        "subjectKey": "prize:orteig-prize",
         "clue": {
-          "en": "Which design principle makes loss of power or a component failure lead toward a safe state?",
-          "et": "Milline disainipõhimõte suunab toite kao või komponendirikke ohutuma oleku poole?"
+          "en": "Charles Lindbergh claimed this New York-to-Paris aviation prize with his nonstop solo flight. Name the award offered by a New York hotelier.",
+          "et": "Charles Lindbergh võitis selle New Yorgi–Pariisi lennuauhinna oma vahemaandumiseta soololennuga. Mis nime kandis New Yorgi hotellipidaja välja pandud preemia?"
         },
         "response": {
-          "en": "fail-safe",
-          "et": "tõrkekindel lahendus"
+          "en": "Orteig Prize",
+          "et": "Orteigi auhind"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["New York–Paris Orteig Prize"],
+          "et": ["New Yorgi–Pariisi Orteigi auhind"]
         },
         "explanation": {
-          "en": "Fail-safe design does not prevent every failure; it limits dangerous consequences.",
-          "et": "Tõrkekindel lahendus ei väldi kõiki rikkeid, vaid piirab ohtlikke tagajärgi."
+          "en": "Hotel owner Raymond Orteig offered the prize for the first nonstop flight between New York and Paris.",
+          "et": "Hotelliomanik Raymond Orteig pani auhinna välja esimese vahemaandumiseta lennu eest New Yorgi ja Pariisi vahel."
         },
         "source": {
-          "sourceId": "wikipedia:fail-safe",
-          "title": "Fail-safe",
-          "url": "https://en.wikipedia.org/wiki/Fail-safe",
+          "sourceId": "wikipedia:orteig-prize",
+          "title": "Orteig Prize",
+          "url": "https://en.wikipedia.org/wiki/Orteig_Prize",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -18809,153 +18789,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-100",
     "name": {
-      "en": "Failure Modes in Mechanical Systems",
-      "et": "Mehaaniliste süsteemide rikkerežiimid"
+      "en": "Robots That Stepped Into History",
+      "et": "Robotid, mis astusid ajalukku"
     },
     "questions": [
       {
         "key": "built-in-technology-inventions-set-100:question:1",
-        "factKey": "built-in-technology-inventions:round1-hard:science:tribology",
+        "factKey": "built-in-technology-inventions:checkpoint8:robots:spot-public-quadruped",
         "tier": 1,
-        "subjectKey": "science:tribology",
+        "subjectKey": "robot:boston-dynamics-spot",
         "clue": {
-          "en": "Which field studies friction, wear, and lubrication between moving surfaces?",
-          "et": "Milline teadus uurib liikuvate pindade hõõrdumist, kulumist ja määrimist?"
+          "en": "Boston Dynamics sends this four-legged machine into inspection sites; videos show it recovering its balance on rough ground. Name the robot.",
+          "et": "Boston Dynamics saadab selle neljajalgse masina objekte inspekteerima ning videotes taastab see ebatasasel pinnal tasakaalu. Mis robot see on?"
         },
         "response": {
-          "en": "tribology",
-          "et": "triboloogia"
+          "en": "Spot robot",
+          "et": "robot Spot"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Boston Dynamics Spot"],
+          "et": ["Boston Dynamicsi Spot"]
         },
         "explanation": {
-          "en": "Tribology joins mechanics, materials science, chemistry, and surface engineering.",
-          "et": "Triboloogia ühendab mehaanika, materjaliteaduse, keemia ja pinnatehnika."
+          "en": "Spot is a mobile quadruped designed to cross terrain that was difficult for earlier robots; it has also performed inspection work at hazardous sites.",
+          "et": "Spot on liikuv neljajalgne robot, mis loodi varasematele robotitele raskel maastikul liikumiseks; seda on kasutatud ka ohtlike paikade inspekteerimiseks."
         },
         "source": {
-          "sourceId": "wikipedia:tribology",
-          "title": "Tribology",
-          "url": "https://en.wikipedia.org/wiki/Tribology",
+          "sourceId": "wikipedia:spot-robot",
+          "title": "Spot (robot)",
+          "url": "https://en.wikipedia.org/wiki/Spot_(robot)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-100:question:2",
-        "factKey": "built-in-technology-inventions:round1-hard:concept:backlash",
+        "factKey": "built-in-technology-inventions:checkpoint8:robots:asimo-walking",
         "tier": 2,
-        "subjectKey": "concept:backlash",
+        "subjectKey": "robot:asimo",
         "clue": {
-          "en": "What clearance between mating gear teeth causes lost motion on reversal?",
-          "et": "Milline hambuvate hammasrataste vahe põhjustab suuna muutmisel tühikäigu?"
+          "en": "Honda's compact white humanoid demonstrated walking, running and stair climbing before its development project ended. Name it.",
+          "et": "Honda kompaktne valge humanoid demonstreeris kõndimist, jooksmist ja trepist liikumist, enne kui arendusprojekt lõpetati. Mis robot see oli?"
         },
         "response": {
-          "en": "backlash",
-          "et": "lõtk"
+          "en": "ASIMO",
+          "et": "ASIMO"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Honda ASIMO"],
+          "et": ["Honda ASIMO"]
         },
         "explanation": {
-          "en": "Some backlash prevents jamming, but excess reduces positioning accuracy.",
-          "et": "Väike lõtk hoiab ära kinnikiilumise, liigne lõtk vähendab asendustäpsust."
+          "en": "Honda developed ASIMO as a research humanoid capable of increasingly natural bipedal movement and interaction.",
+          "et": "Honda arendas ASIMO-t uurimishumanoidina, mis suutis järjest loomulikumalt kahel jalal liikuda ja inimestega suhelda."
         },
         "source": {
-          "sourceId": "wikipedia:backlash_(engineering)",
-          "title": "Backlash (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Backlash_(engineering)",
+          "sourceId": "wikipedia:asimo",
+          "title": "ASIMO",
+          "url": "https://en.wikipedia.org/wiki/ASIMO",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-100:question:3",
-        "factKey": "built-in-technology-inventions:round1-hard:failure:fatigue",
+        "factKey": "built-in-technology-inventions:checkpoint8:robots:aibo-robot-dog",
         "tier": 3,
-        "subjectKey": "failure:fatigue",
+        "subjectKey": "robot:aibo",
         "clue": {
-          "en": "Which failure grows cracks under repeated loads below static breaking strength?",
-          "et": "Milline rike kasvatab korduva koormusega pragusid allpool staatilist purunemistugevust?"
+          "en": "Sony sold this robotic dog as an entertainment pet, discontinued it and later revived the line. Name the mechanical companion.",
+          "et": "Sony müüs seda robotkoera meelelahutusliku lemmikloomana, lõpetas tootmise ja tõi sarja hiljem tagasi. Mis nime kandis mehaaniline kaaslane?"
         },
         "response": {
-          "en": "metal fatigue",
-          "et": "metalliväsimus"
+          "en": "Aibo",
+          "et": "Aibo"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["AIBO", "Sony Aibo"],
+          "et": ["AIBO", "Sony Aibo"]
         },
         "explanation": {
-          "en": "Fatigue life depends on stress range, geometry, surface, and material defects.",
-          "et": "Metalliväsimuse eluiga sõltub pingevahemikust, kujust, pinnast ja materjalivigadest."
+          "en": "Aibo was designed as an autonomous entertainment robot with dog-like movement and behaviour rather than as a working machine.",
+          "et": "Aibo loodi iseseisva meelelahutusrobotina, mille liikumine ja käitumine meenutas koera, mitte töömasinat."
         },
         "source": {
-          "sourceId": "wikipedia:fatigue_(material)",
-          "title": "Fatigue (material)",
-          "url": "https://en.wikipedia.org/wiki/Fatigue_(material)",
+          "sourceId": "wikipedia:aibo",
+          "title": "AIBO",
+          "url": "https://en.wikipedia.org/wiki/AIBO",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-100:question:4",
-        "factKey": "built-in-technology-inventions:round1-hard:phenomenon:cavitation",
+        "factKey": "built-in-technology-inventions:checkpoint8:robots:unimate-gm-line",
         "tier": 4,
-        "subjectKey": "phenomenon:cavitation",
+        "subjectKey": "robot:unimate",
         "clue": {
-          "en": "Which phenomenon forms and collapses vapour bubbles in low-pressure liquid flow?",
-          "et": "Milline nähtus tekitab ja lõhub madala rõhuga vedelikuvoolus aurumulle?"
+          "en": "At a General Motors plant, this pioneering industrial arm removed red-hot metal from a die-casting machine, sparing workers a dangerous task. Name the robot.",
+          "et": "General Motorsi tehases eemaldas see teedrajav tööstuslik robotkäsi survevalumasinast tulikuuma metalli, säästes töötajaid ohtlikust ülesandest. Mis robot see oli?"
         },
         "response": {
-          "en": "cavitation",
-          "et": "kavitatsioon"
+          "en": "Unimate",
+          "et": "Unimate"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["Unimate robot"],
+          "et": ["robot Unimate"]
         },
         "explanation": {
-          "en": "Cavitation can erode pump impellers and produce vibration and noise.",
-          "et": "Kavitatsioon võib kulutada pumba tiivikut ning tekitada vibratsiooni ja müra."
+          "en": "Unimate became the first industrial robot installed on a production line, handling hot die-cast parts at General Motors.",
+          "et": "Unimate'ist sai esimene tootmisliinile paigaldatud tööstusrobot, mis käsitses General Motorsis kuumi survevaludetaile."
         },
         "source": {
-          "sourceId": "wikipedia:cavitation",
-          "title": "Cavitation",
-          "url": "https://en.wikipedia.org/wiki/Cavitation",
+          "sourceId": "wikipedia:unimate",
+          "title": "Unimate",
+          "url": "https://en.wikipedia.org/wiki/Unimate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-technology-inventions-set-100:question:5",
-        "factKey": "built-in-technology-inventions:round1-hard:feature:keyway",
+        "factKey": "built-in-technology-inventions:checkpoint8:robots:shakey-planning",
         "tier": 5,
-        "subjectKey": "feature:keyway",
+        "subjectKey": "robot:shakey",
         "clue": {
-          "en": "Which machined slot receives a key that prevents a shaft and hub rotating separately?",
-          "et": "Milline töödeldud soon võtab liistu, mis takistab võlli ja rummu eraldi pöörlemist?"
+          "en": "SRI's boxy mobile research machine combined perception, planning and action, becoming a landmark in artificial intelligence and robotics. Name it.",
+          "et": "SRI kandiline liikuv uurimismasin ühendas tajumise, planeerimise ja tegutsemise ning kujunes tehisintellekti ja robootika verstapostiks. Mis robot see oli?"
         },
         "response": {
-          "en": "keyway",
-          "et": "liistusoon"
+          "en": "Shakey the robot",
+          "et": "robot Shakey"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["SRI Shakey", "Shakey robot"],
+          "et": ["SRI Shakey", "Shakey robot"]
         },
         "explanation": {
-          "en": "A keyway transmits torque but also creates a local stress concentration.",
-          "et": "Liistusoon edastab pöördemomenti, kuid tekitab kohaliku pingekontsentratsiooni."
+          "en": "Shakey used cameras and sensors with planning software so it could reason about a sequence of actions in its environment.",
+          "et": "Shakey kasutas kaameraid ja andureid koos planeerimistarkvaraga, et oma keskkonnas tegevuste jada üle arutleda."
         },
         "source": {
-          "sourceId": "wikipedia:key_(engineering)",
-          "title": "Key (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Key_(engineering)",
+          "sourceId": "wikipedia:shakey-the-robot",
+          "title": "Shakey the robot",
+          "url": "https://en.wikipedia.org/wiki/Shakey_the_robot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
