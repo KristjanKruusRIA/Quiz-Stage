@@ -23099,153 +23099,192 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-056",
     "name": {
-      "en": "Numbers That Describe Populations",
-      "et": "Rahvastikku kirjeldavad näitajad"
+      "en": "Leaders and Their Signature Objects",
+      "et": "Juhid ja nende tunnusesemed"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-056:question:1",
-        "factKey": "built-in-politics-economics-society:demography:medium:concept:census",
+        "factKey": "society:bernie-mittens:biden-inauguration-photo-repurposed-sweaters",
         "tier": 1,
-        "subjectKey": "concept:census",
+        "subjectKey": "meme-object:bernie-sanders-inauguration-mittens",
         "clue": {
-          "en": "Find the demographic measure or exercise that attempts an official count of an entire population.",
-          "et": "Demograafiline näitaja või toiming püüab ametlikult loendada kogu rahvastiku. Leia sobiv vastus."
+          "en": "A photo from Joe Biden’s inauguration turned a seated Vermont senator in a winter coat and recycled-wool handwear into a viral meme. Name the handwear.",
+          "et": "Joe Bideni ametisseastumise foto muutis talvemantlis istuva Vermonti senaatori ja tema taaskasutatud villasest lõngast käekatted meemiks. Nimeta need käekatted."
         },
         "response": {
-          "en": "census",
-          "et": "rahvaloendus"
+          "en": "Bernie Sanders inauguration mittens",
+          "et": "Bernie Sandersi inauguratsioonikindad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bernie mittens",
+            "Bernie Sanders mittens",
+            "mittens"
+          ],
+          "et": [
+            "Bernie kindad",
+            "Bernie Sandersi kindad",
+            "kindad",
+            "labakindad"
+          ]
         },
         "explanation": {
-          "en": "Census provides a benchmark for smaller surveys and representation.",
-          "et": "Rahvaloendus annab võrdlusaluse väiksematele uuringutele ja esindusele."
+          "en": "Bernie Sanders’ inauguration mittens became a viral image after he wore them at the 2021 ceremony; a Vermont teacher made them from repurposed sweaters.",
+          "et": "Bernie Sandersi inauguratsioonikindad said 2021. aasta tseremoonia järel viraalseks; Vermonti õpetaja valmistas need vanadest kampsunitest."
         },
         "source": {
-          "sourceId": "wikipedia:census",
-          "title": "Census",
-          "url": "https://en.wikipedia.org/wiki/Census",
+          "sourceId": "wikipedia:bernie-sanders-mittens-meme",
+          "title": "Bernie Sanders mittens meme",
+          "url": "https://en.wikipedia.org/wiki/Bernie_Sanders_mittens_meme",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-056:question:2",
-        "factKey": "built-in-politics-economics-society:demography:medium:measure:birth-rate",
+        "factKey": "politics:gandhi-charkha:homespun-cloth-swadeshi-independence-symbol",
         "tier": 2,
-        "subjectKey": "measure:birth-rate",
+        "subjectKey": "symbol-object:gandhi-charkha",
         "clue": {
-          "en": "Identify the demographic measure or exercise: it compares live births during a period with population size.",
-          "et": "Mis demograafiline näitaja või toiming võrdleb perioodi elussünde rahvaarvuga?"
+          "en": "For India’s independence movement, one simple machine represented home-spun cloth, self-reliance, and resistance to imported textiles. Which machine became closely associated with Gandhi?",
+          "et": "India iseseisvusliikumises tähistas üks lihtne masin kodumaist kangast, iseseisvust ja vastuseisu imporditud tekstiilile. Milline masin seostus tihedalt Gandhiga?"
         },
         "response": {
-          "en": "birth rate",
-          "et": "sündimuskordaja"
+          "en": "Gandhi's charkha",
+          "et": "Gandhi charkha"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gandhi’s spinning wheel",
+            "Gandhi spinning wheel",
+            "charkha",
+            "spinning wheel"
+          ],
+          "et": [
+            "Gandhi vokk",
+            "Gandhi ketrusratas",
+            "charkha",
+            "vokk",
+            "ketrusratas"
+          ]
         },
         "explanation": {
-          "en": "Birth rate is usually a crude rate per thousand people, not births per woman.",
-          "et": "Sündimuskordaja on tavaliselt üldkordaja tuhande elaniku kohta, mitte sünde naise kohta."
+          "en": "Gandhi’s charkha, or spinning wheel, symbolised swadeshi self-reliance and appeared on an early version of India’s national flag.",
+          "et": "Gandhi charkha ehk ketrusratas sümboliseeris swadeshi-liikumise iseseisvust ning kujutati ka India lipu varasel versioonil."
         },
         "source": {
-          "sourceId": "wikipedia:birth_rate",
-          "title": "Birth rate",
-          "url": "https://en.wikipedia.org/wiki/Birth_rate",
+          "sourceId": "wikipedia:charkha-spinning-wheel",
+          "title": "Charkha (spinning wheel)",
+          "url": "https://en.wikipedia.org/wiki/Charkha_(spinning_wheel)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-056:question:3",
-        "factKey": "built-in-politics-economics-society:demography:medium:measure:life-expectancy",
+        "factKey": "politics:thatcher-handbag:accessory-inspired-handbagging-metaphor",
         "tier": 3,
-        "subjectKey": "measure:life-expectancy",
+        "subjectKey": "symbol-object:thatcher-handbag",
         "clue": {
-          "en": "Name the demographic measure or exercise that estimates years of life remaining under current mortality rates.",
-          "et": "Vihjes kirjeldatud demograafiline näitaja või toiming hindab praeguste suremusmäärade juures jäänud eluaastaid. Mis see on?"
+          "en": "A British prime minister’s forceful negotiating style inspired a verb for browbeating an opponent. Which personal accessory supplied the metaphor?",
+          "et": "Ühe Briti peaministri jõuline läbirääkimisstiil sünnitas inglise keeles tegusõna „to handbag”. Milline isiklik aksessuaar andis kujundi?"
         },
         "response": {
-          "en": "life expectancy",
-          "et": "oodatav eluiga"
+          "en": "Thatcher's handbag",
+          "et": "Margaret Thatcheri käekott"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Thatcher handbag",
+            "Margaret Thatcher handbag",
+            "handbag"
+          ],
+          "et": [
+            "Thatcheri käekott",
+            "käekott"
+          ]
         },
         "explanation": {
-          "en": "Life expectancy is a period life-table summary, not a prediction of one named person’s lifespan.",
-          "et": "Oodatav eluiga on perioodilise elutabeli kokkuvõte, mitte ühe inimese eluea ennustus."
+          "en": "Margaret Thatcher’s handbag became such a familiar symbol of her authority that “handbagging” came to mean subjecting someone to forceful treatment.",
+          "et": "Margaret Thatcheri käekotist sai nii tuntud tema võimu sümbol, et inglise „handbagging” hakkas tähendama kellegi jõulist kohtlemist."
         },
         "source": {
-          "sourceId": "wikipedia:life_expectancy",
-          "title": "Life expectancy",
-          "url": "https://en.wikipedia.org/wiki/Life_expectancy",
+          "sourceId": "wikipedia:handbag",
+          "title": "Handbag",
+          "url": "https://en.wikipedia.org/wiki/Handbag",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-056:question:4",
-        "factKey": "built-in-politics-economics-society:demography:medium:measure:population-density",
+        "factKey": "politics:mao-suit:zhongshan-tunic-associated-with-mao-leadership",
         "tier": 4,
-        "subjectKey": "measure:population-density",
+        "subjectKey": "symbol-garment:mao-suit",
         "clue": {
-          "en": "Recognise the demographic measure or exercise that divides residents by land area.",
-          "et": "Otsitav demograafiline näitaja või toiming jagab elanike arvu maismaa pindalaga. Mis see on?"
+          "en": "A high-collared, four-pocket Chinese tunic took an enduring Western nickname from the Communist leader who wore it in public. Name the suit.",
+          "et": "Kõrge krae ja nelja taskuga Hiina kuub sai läänes püsiva hüüdnime kommunistliku juhi järgi, kes seda avalikult kandis. Nimeta ülikond."
         },
         "response": {
-          "en": "population density",
-          "et": "rahvastikutihedus"
+          "en": "Mao suit",
+          "et": "Mao ülikond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mao jacket",
+            "Zhongshan suit"
+          ],
+          "et": [
+            "Mao jakk",
+            "Zhongshani ülikond"
+          ]
         },
         "explanation": {
-          "en": "Population density can hide strong clustering because it averages across the whole territory.",
-          "et": "Rahvastikutihedus võib tugevat koondumist varjata, sest keskmistab kogu territooriumi."
+          "en": "The Mao suit is the Western name for the Zhongshan suit, strongly associated with Mao Zedong and later Chinese leaders.",
+          "et": "Mao ülikond on läänelik nimetus Zhongshani ülikonnale, mida seostatakse tugevalt Mao Zedongi ja hilisemate Hiina juhtidega."
         },
         "source": {
-          "sourceId": "wikipedia:population_density",
-          "title": "Population density",
-          "url": "https://en.wikipedia.org/wiki/Population_density",
+          "sourceId": "wikipedia:mao-suit",
+          "title": "Mao suit",
+          "url": "https://en.wikipedia.org/wiki/Mao_suit",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-056:question:5",
-        "factKey": "built-in-politics-economics-society:demography:medium:measure:dependency-ratio",
+        "factKey": "politics:tito-blue-train:state-travel-hosted-foreign-dignitaries",
         "tier": 5,
-        "subjectKey": "measure:dependency-ratio",
+        "subjectKey": "state-vehicle:tito-blue-train",
         "clue": {
-          "en": "What demographic measure or exercise compares younger and older age groups with working-age population?",
-          "et": "Järgmine demograafiline näitaja või toiming võrdleb nooremaid ja vanemaid tööealise rahvastikuga. Milline see on?"
+          "en": "Yugoslavia’s president travelled and hosted foreign dignitaries aboard a luxurious royal-blue railway set that later became a museum attraction. Name the train.",
+          "et": "Jugoslaavia president reisis ja võõrustas välisriikide juhte luksuslikus kuninglikult sinises rongis, millest sai hiljem muuseumiatraktsioon. Nimeta rong."
         },
         "response": {
-          "en": "dependency ratio",
-          "et": "ülalpeetavate määr"
+          "en": "Tito's Blue Train",
+          "et": "Tito Sinine Rong"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tito Blue Train",
+            "Blue Train of Tito",
+            "Blue Train"
+          ],
+          "et": [
+            "Sinine Rong"
+          ]
         },
         "explanation": {
-          "en": "Dependency ratio is an age-structure proxy and does not count actual employment or care directly.",
-          "et": "Ülalpeetavate määr on vanusstruktuuri lähend ega loenda tegelikku töötamist või hooldust otse."
+          "en": "Tito’s Blue Train served Josip Broz Tito for state travel and transported many visiting leaders during Yugoslavia’s non-aligned era.",
+          "et": "Tito Sinine Rong teenis Josip Broz Titot riigivisiitidel ja vedas Jugoslaavia mitteühinemisajal paljusid välisjuhte."
         },
         "source": {
-          "sourceId": "wikipedia:dependency_ratio",
-          "title": "Dependency ratio",
-          "url": "https://en.wikipedia.org/wiki/Dependency_ratio",
+          "sourceId": "wikipedia:blue-train-yugoslavia",
+          "title": "Blue Train (Yugoslavia)",
+          "url": "https://en.wikipedia.org/wiki/Blue_Train_(Yugoslavia)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -23253,153 +23292,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-057",
     "name": {
-      "en": "How Cities Change",
-      "et": "Kuidas linnad muutuvad"
+      "en": "Political Parties with Unforgettable Names",
+      "et": "Unustamatute nimedega erakonnad"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-057:question:1",
-        "factKey": "built-in-politics-economics-society:urban-change:medium:concept:gentrification",
+        "factKey": "politics:pirate-party:sweden-origin-copyright-patent-digital-rights",
         "tier": 1,
-        "subjectKey": "concept:gentrification",
+        "subjectKey": "party-family:pirate-party",
         "clue": {
-          "en": "Find the urban-policy concept that brings wealthier residents and investment into a lower-income neighbourhood.",
-          "et": "Linnapoliitika mõiste toob väiksema sissetulekuga asumisse jõukamad elanikud ja investeeringud. Leia sobiv vastus."
+          "en": "A Swedish movement founded in the internet era turned a seafaring outlaw into its label while campaigning on copyright, patent, and digital-rights reform. Name the party family.",
+          "et": "Internetiajastul Rootsis alanud liikumine võttis nimeks mereröövli ning keskendus autoriõiguse, patentide ja digiõiguste reformile. Nimeta erakonnaliikumine."
         },
         "response": {
-          "en": "gentrification",
-          "et": "gentrifikatsioon"
+          "en": "Pirate Party",
+          "et": "Piraadipartei"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pirate Party movement",
+            "the Pirate Party"
+          ],
+          "et": [
+            "Piraadiparteide liikumine"
+          ]
         },
         "explanation": {
-          "en": "Gentrification can improve buildings while raising rents and displacing existing residents.",
-          "et": "Gentrifikatsioon võib hooneid parandada, kuid tõsta üüri ja tõrjuda seniseid elanikke."
+          "en": "The Pirate Party movement began in Sweden in 2006 and spread internationally with programmes centred on information policy and digital rights.",
+          "et": "Piraadiparteide liikumine sai alguse Rootsis 2006. aastal ning levis info- ja digiõiguste programmidega paljudesse riikidesse."
         },
         "source": {
-          "sourceId": "wikipedia:gentrification",
-          "title": "Gentrification",
-          "url": "https://en.wikipedia.org/wiki/Gentrification",
+          "sourceId": "wikipedia:pirate-party",
+          "title": "Pirate Party",
+          "url": "https://en.wikipedia.org/wiki/Pirate_Party",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-057:question:2",
-        "factKey": "built-in-politics-economics-society:urban-change:medium:concept:suburbanization",
+        "factKey": "politics:monster-raving-loony:screaming-lord-sutch-british-satirical-party",
         "tier": 2,
-        "subjectKey": "concept:suburbanization",
+        "subjectKey": "party:official-monster-raving-loony",
         "clue": {
-          "en": "What urban-policy concept shifts residents or jobs from the urban core to outer areas?",
-          "et": "Järgmine linnapoliitika mõiste viib elanikke või töökohti linnasüdamest äärealadele. Milline see on?"
+          "en": "Musician Screaming Lord Sutch founded a British satirical party whose four-word core name piles together a creature, wild excitement, and madness. Name it.",
+          "et": "Muusik Screaming Lord Sutch asutas Briti satiiripartei, mille nime põhiosa ühendab koletise, pöörase vaimustuse ja hullumeelsuse. Nimeta erakond."
         },
         "response": {
-          "en": "suburbanisation",
-          "et": "eeslinnastumine"
+          "en": "Official Monster Raving Loony Party",
+          "et": "Official Monster Raving Loony Party"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Monster Raving Loony Party",
+            "OMRLP"
+          ],
+          "et": [
+            "Monster Raving Loony Party",
+            "OMRLP"
+          ]
         },
         "explanation": {
-          "en": "Suburbanisation is encouraged by transport access, land prices, and housing preferences.",
-          "et": "Eeslinnastumine saab hoogu transpordiühendusest, maa hinnast ja eluasemeeelistustest."
+          "en": "The Official Monster Raving Loony Party is a British satirical party founded by Screaming Lord Sutch in 1982.",
+          "et": "Official Monster Raving Loony Party on Screaming Lord Sutchi 1982. aastal asutatud Briti satiiripartei."
         },
         "source": {
-          "sourceId": "wikipedia:suburbanization",
-          "title": "Suburbanization",
-          "url": "https://en.wikipedia.org/wiki/Suburbanization",
+          "sourceId": "wikipedia:official-monster-raving-loony-party",
+          "title": "Official Monster Raving Loony Party",
+          "url": "https://en.wikipedia.org/wiki/Official_Monster_Raving_Loony_Party",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-057:question:3",
-        "factKey": "built-in-politics-economics-society:urban-change:medium:concept:zoning",
+        "factKey": "politics:polish-beer-lovers:promoted-beer-won-1991-seats",
         "tier": 3,
-        "subjectKey": "concept:zoning",
+        "subjectKey": "party:polish-beer-lovers",
         "clue": {
-          "en": "An urban-policy concept regulates what land uses and building forms are allowed by area. What term fits?",
-          "et": "Siin kirjeldatud linnapoliitika mõiste määrab piirkonniti lubatud maakasutuse ja hoonevormid. Mis see on?"
+          "en": "After communism, a Polish novelty party argued that drinking a milder pub beverage instead of vodka would improve civilised discussion—and won parliamentary seats. Name it.",
+          "et": "Pärast kommunismi väitis üks Poola naljapartei, et viina asemel lahjema pubijoogi joomine parandaks viisakat arutelu, ning võitis parlamendikohad. Nimeta erakond."
         },
         "response": {
-          "en": "zoning",
-          "et": "tsoneerimine"
+          "en": "Polish Beer-Lovers' Party",
+          "et": "Poola Õllesõprade Partei"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Beer-Lovers’ Party"
+          ],
+          "et": [
+            "Õllesõprade Partei"
+          ]
         },
         "explanation": {
-          "en": "Zoning can separate incompatible uses but also constrain housing supply.",
-          "et": "Tsoneerimine võib lahutada sobimatud kasutused, kuid piirata eluasemepakkumist."
+          "en": "The Polish Beer-Lovers’ Party promoted beer-drinking culture and won sixteen seats in Poland’s 1991 parliamentary election.",
+          "et": "Poola Õllesõprade Partei propageeris õllekultuuri ja võitis 1991. aasta parlamendivalimistel 16 kohta."
         },
         "source": {
-          "sourceId": "wikipedia:zoning",
-          "title": "Zoning",
-          "url": "https://en.wikipedia.org/wiki/Zoning",
+          "sourceId": "wikipedia:polish-beer-lovers-party",
+          "title": "Polish Beer-Lovers' Party",
+          "url": "https://en.wikipedia.org/wiki/Polish_Beer-Lovers%27_Party",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-057:question:4",
-        "factKey": "built-in-politics-economics-society:urban-change:medium:concept:public-housing",
+        "factKey": "politics:best-party:jon-gnarr-won-reykjavik-2010",
         "tier": 4,
-        "subjectKey": "concept:public-housing",
+        "subjectKey": "party:best-party-iceland",
         "clue": {
-          "en": "Recognise the urban-policy concept that provides homes owned or supported by public authorities.",
-          "et": "Otsitav linnapoliitika mõiste pakub avaliku võimu omandis või toel eluasemeid. Mis see on?"
+          "en": "Comedian Jón Gnarr launched a jokingly superlative-named Icelandic party that unexpectedly won Reykjavík’s 2010 municipal election. Name it.",
+          "et": "Koomik Jón Gnarr asutas Islandil naljaka ülivõrdelise nimega erakonna, mis võitis ootamatult Reykjavíki 2010. aasta kohalikud valimised. Nimeta see."
         },
         "response": {
-          "en": "public housing",
-          "et": "munitsipaalelamu"
+          "en": "Best Party",
+          "et": "Islandi Parim Partei"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Iceland’s Best Party",
+            "the Best Party"
+          ],
+          "et": [
+            "Parim Partei",
+            "Best Party"
+          ]
         },
         "explanation": {
-          "en": "Public housing is commonly allocated by eligibility rather than market bidding alone.",
-          "et": "Munitsipaalelamu jaotatakse tavaliselt abikõlblikkuse, mitte üksnes turupakkumise järgi."
+          "en": "Iceland’s Best Party was founded by Jón Gnarr and became the largest party on Reykjavík City Council in 2010.",
+          "et": "Jón Gnarri asutatud Islandi Parim Partei sai 2010. aastal Reykjavíki linnavolikogu suurimaks erakonnaks."
         },
         "source": {
-          "sourceId": "wikipedia:public_housing",
-          "title": "Public housing",
-          "url": "https://en.wikipedia.org/wiki/Public_housing",
+          "sourceId": "wikipedia:best-party",
+          "title": "Best Party",
+          "url": "https://en.wikipedia.org/wiki/Best_Party",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-057:question:5",
-        "factKey": "built-in-politics-economics-society:urban-change:medium:concept:mixed-use-development",
+        "factKey": "politics:rhinoceros-party:cornelius-symbolic-leader-absurd-promises",
         "tier": 5,
-        "subjectKey": "concept:mixed-use-development",
+        "subjectKey": "party:rhinoceros-party-canada",
         "clue": {
-          "en": "Urban-policy concept combines homes, shops, offices, or services in one area. What is it called?",
-          "et": "Milline linnapoliitika mõiste ühendab ühes piirkonnas elamud, poed, kontorid või teenused?"
+          "en": "A Canadian satirical party claimed a horned, thick-skinned zoo animal named Cornelius as its leader and promised, if elected, not to keep any promises. Name the party.",
+          "et": "Kanada satiiripartei kuulutas oma juhiks sarvilise paksunahalise loomaaiaasuka Corneliuse ning lubas võimule saades mitte ühtegi lubadust pidada. Nimeta erakond."
         },
         "response": {
-          "en": "mixed-use development",
-          "et": "segakasutusega arendus"
+          "en": "Rhinoceros Party",
+          "et": "Kanada Ninasarvikupartei"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Canadian Rhinoceros Party",
+            "Rhino Party"
+          ],
+          "et": [
+            "Ninasarvikupartei",
+            "Rhino Party"
+          ]
         },
         "explanation": {
-          "en": "Mixed-use development can shorten trips by placing daily destinations near residents.",
-          "et": "Segakasutusega arendus võib lühendada sõite, paigutades igapäevased sihtkohad elanike lähedale."
+          "en": "Canada’s Rhinoceros Party made absurd campaign promises and treated Cornelius the rhinoceros as its symbolic leader.",
+          "et": "Kanada Ninasarvikupartei esitas absurdseid valimislubadusi ning pidas ninasarvik Corneliust oma sümboolseks juhiks."
         },
         "source": {
-          "sourceId": "wikipedia:mixed-use_development",
-          "title": "Mixed-use development",
-          "url": "https://en.wikipedia.org/wiki/Mixed-use_development",
+          "sourceId": "wikipedia:rhinoceros-party",
+          "title": "Rhinoceros Party",
+          "url": "https://en.wikipedia.org/wiki/Rhinoceros_Party",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -23407,153 +23473,177 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-058",
     "name": {
-      "en": "Institutions of Learning",
-      "et": "Õppimise institutsioonid"
+      "en": "When the Crowd Chose the Name",
+      "et": "Kui rahvas valis nime"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-058:question:1",
-        "factKey": "built-in-politics-economics-society:education-systems:medium:concept:compulsory-education",
+        "factKey": "society:boaty-mcboatface:ship-poll-name-given-to-submersible",
         "tier": 1,
-        "subjectKey": "concept:compulsory-education",
+        "subjectKey": "public-name:boaty-mcboatface",
         "clue": {
-          "en": "This education concept requires children to participate in schooling for defined years. What is it?",
-          "et": "See haridusmõiste nõuab lastelt kindlatel aastatel õppes osalemist. Mis see on?"
+          "en": "An online poll chose this jokey rhyming name for a British polar research ship; officials used it for a small autonomous submarine instead. What name won?",
+          "et": "Veebihääletus valis Briti polaaruurimislaevale selle riimuva naljanime, kuid ametnikud andsid selle hoopis väikesele autonoomsele allveerobotile. Mis nimi võitis?"
         },
         "response": {
-          "en": "compulsory education",
-          "et": "koolikohustus"
+          "en": "Boaty McBoatface",
+          "et": "Boaty McBoatface"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Boaty"
+          ],
+          "et": [
+            "Boaty"
+          ]
         },
         "explanation": {
-          "en": "Compulsory education sets a legal duty and does not necessarily require attendance at a state school.",
-          "et": "Koolikohustus seab seadusliku kohustuse ega nõua tingimata riigikoolis käimist."
+          "en": "Boaty McBoatface topped the public poll; the ship became RRS Sir David Attenborough while an onboard submersible received the winning name.",
+          "et": "Boaty McBoatface võitis rahvahääletuse; laev sai nimeks RRS Sir David Attenborough ja võidunimi anti allveerobotile."
         },
         "source": {
-          "sourceId": "wikipedia:compulsory_education",
-          "title": "Compulsory education",
-          "url": "https://en.wikipedia.org/wiki/Compulsory_education",
+          "sourceId": "wikipedia:boaty-mcboatface",
+          "title": "Boaty McBoatface",
+          "url": "https://en.wikipedia.org/wiki/Boaty_McBoatface",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-058:question:2",
-        "factKey": "built-in-politics-economics-society:education-systems:medium:concept:vocational-education",
+        "factKey": "society:moo-deng:pygmy-hippo-public-poll-bouncy-pork",
         "tier": 2,
-        "subjectKey": "concept:vocational-education",
+        "subjectKey": "public-name:moo-deng",
         "clue": {
-          "en": "Education concept prepares learners for a particular occupation or trade. What is it called?",
-          "et": "Milline haridusmõiste valmistab õppija kindlaks ametiks või kutseks?"
+          "en": "A baby pygmy hippo in Thailand went viral in 2024; more than 20,000 voters chose a two-word Thai name meaning “bouncy pork”. What name won?",
+          "et": "Tai kääbusjõehobu poeg sai 2024. aastal internetikuulsuseks; üle 20 000 hääletaja valis talle kahesõnalise tai nime, mis tähendab „hüplevat sealiha”. Mis nimi võitis?"
         },
         "response": {
-          "en": "vocational education",
-          "et": "kutseharidus"
+          "en": "Moo Deng",
+          "et": "Moo Deng"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Moo Deng the hippo",
+            "Moo Deng hippo"
+          ],
+          "et": [
+            "jõehobu Moo Deng",
+            "kääbusjõehobu Moo Deng"
+          ]
         },
         "explanation": {
-          "en": "Vocational education combines practical competence with relevant technical knowledge.",
-          "et": "Kutseharidus ühendab praktilise pädevuse asjakohaste tehniliste teadmistega."
+          "en": "Moo Deng is a pygmy hippo at Thailand’s Khao Kheow Open Zoo whose public-poll name translates as “bouncy pork” or “bouncy pig”.",
+          "et": "Moo Deng on Tai Khao Kheow’ avatud loomaaia kääbusjõehobu, kelle rahvahääletusel valitud nimi tähendab „hüplevat sealiha” või „hüplevat siga”."
         },
         "source": {
-          "sourceId": "wikipedia:vocational_education",
-          "title": "Vocational education",
-          "url": "https://en.wikipedia.org/wiki/Vocational_education",
+          "sourceId": "wikipedia:moo-deng",
+          "title": "Moo Deng",
+          "url": "https://en.wikipedia.org/wiki/Moo_Deng",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-058:question:3",
-        "factKey": "built-in-politics-economics-society:education-systems:medium:concept:university-autonomy",
+        "factKey": "society:trainy-mctrainface:swedish-train-public-poll-winner",
         "tier": 3,
-        "subjectKey": "concept:university-autonomy",
+        "subjectKey": "public-name:trainy-mctrainface",
         "clue": {
-          "en": "Name the education concept that protects institutional self-government in academic affairs.",
-          "et": "Vihjes kirjeldatud haridusmõiste kaitseb institutsiooni enesejuhtimist akadeemilistes küsimustes. Mis see on?"
+          "en": "A Swedish rail operator accepted the public’s McFace-style winner and put it on a Stockholm–Gothenburg train. What was the winning name?",
+          "et": "Rootsi rongifirma võttis rahvahääletuse McFace-stiilis võidunime päriselt kasutusele Stockholmi–Göteborgi rongil. Mis nimi võitis?"
         },
         "response": {
-          "en": "university autonomy",
-          "et": "ülikooli autonoomia"
+          "en": "Trainy McTrainface",
+          "et": "Trainy McTrainface"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Trainy"
+          ],
+          "et": [
+            "Trainy"
+          ]
         },
         "explanation": {
-          "en": "University autonomy can cover curricula, research, staffing, and internal governance.",
-          "et": "Ülikooli autonoomia võib hõlmata õppekavu, teadust, personali ja sisemist juhtimist."
+          "en": "Trainy McTrainface won MTR Express’s public poll and was assigned to one of its Swedish trains.",
+          "et": "Trainy McTrainface võitis MTR Expressi rahvahääletuse ja anti ühele ettevõtte Rootsi rongile."
         },
         "source": {
-          "sourceId": "wikipedia:academic_freedom",
-          "title": "Academic freedom",
-          "url": "https://en.wikipedia.org/wiki/Academic_freedom",
+          "sourceId": "wikipedia:list-of-mcface-spoofs",
+          "title": "List of Mcface spoofs",
+          "url": "https://en.wikipedia.org/wiki/List_of_Mcface_spoofs",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-058:question:4",
-        "factKey": "built-in-politics-economics-society:education-systems:medium:concept:student-loan",
+        "factKey": "society:splashy-pants:greenpeace-whale-poll-online-campaign",
         "tier": 4,
-        "subjectKey": "concept:student-loan",
+        "subjectKey": "public-name:mister-splashy-pants",
         "clue": {
-          "en": "Identify this education concept: it finances education with debt repaid later.",
-          "et": "Kirjeldatud haridusmõiste rahastab haridust hiljem tagasimakstava võlaga. Mis on selle nimi?"
+          "en": "Greenpeace let the internet name a tracked humpback whale; comedy-site voters rallied around a childish title involving wet trousers. What name won?",
+          "et": "Greenpeace lasi internetil valida jälgitavale küürvaalale nime; naljasaidi hääletajad koondusid lapsiku märgade pükste nime taha. Mis nimi võitis?"
         },
         "response": {
-          "en": "student loan",
-          "et": "õppelaen"
+          "en": "Mister Splashy Pants",
+          "et": "Mister Splashy Pants"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mr Splashy Pants",
+            "Splashy Pants"
+          ],
+          "et": [
+            "Mr Splashy Pants",
+            "Splashy Pants"
+          ]
         },
         "explanation": {
-          "en": "Student loan shifts some study cost across a graduate’s future income.",
-          "et": "Õppelaen nihutab osa õppekulust lõpetaja tulevasele sissetulekule."
+          "en": "Mister Splashy Pants won Greenpeace’s whale-naming poll after an online campaign greatly increased participation.",
+          "et": "Mister Splashy Pants võitis Greenpeace’i vaalanime küsitluse pärast seda, kui veebikampaania tõi hääletajaid juurde."
         },
         "source": {
-          "sourceId": "wikipedia:student_loan",
-          "title": "Student loan",
-          "url": "https://en.wikipedia.org/wiki/Student_loan",
+          "sourceId": "wikipedia:mister-splashy-pants",
+          "title": "Mister Splashy Pants",
+          "url": "https://en.wikipedia.org/wiki/Mister_Splashy_Pants",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-058:question:5",
-        "factKey": "built-in-politics-economics-society:education-systems:medium:measure:literacy",
+        "factKey": "society:rio-2016-mascots:public-vote-girl-from-ipanema-writers",
         "tier": 5,
-        "subjectKey": "measure:literacy",
+        "subjectKey": "public-name:rio-2016-mascots-vinicius-tom",
         "clue": {
-          "en": "What education concept means the ability to read and write at a functional level?",
-          "et": "Järgmine haridusmõiste tähendab funktsionaalsel tasemel lugemis- ja kirjutamisoskust. Milline see on?"
+          "en": "Online voters named Rio 2016’s animal-mix Olympic mascot and plant-themed Paralympic mascot after the two Brazilian co-writers of “The Girl from Ipanema”. What pair of names won?",
+          "et": "Veebihääletajad andsid Rio 2016 eri loomi ühendavale olümpiamaskotile ja taimeteemalisele paraolümpiamaskotile kahe „The Girl from Ipanema” Brasiilia kaasautori nimed. Milline nimepaar võitis?"
         },
         "response": {
-          "en": "literacy",
-          "et": "kirjaoskus"
+          "en": "Vinicius and Tom",
+          "et": "Vinicius ja Tom"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tom and Vinicius"
+          ],
+          "et": [
+            "Tom ja Vinicius"
+          ]
         },
         "explanation": {
-          "en": "Literacy is measured with differing thresholds, so rates require methodological context.",
-          "et": "Kirjaoskust mõõdetakse eri lävenditega, mistõttu määr vajab metoodilist tausta."
+          "en": "Vinicius and Tom won Rio 2016’s public mascot-name vote, honouring lyricist Vinicius de Moraes and composer Tom Jobim, who co-wrote “The Girl from Ipanema”.",
+          "et": "Vinicius ja Tom võitsid Rio 2016 maskotinimede rahvahääletuse ning austasid „The Girl from Ipanema” kaasautoreid Vinicius de Moraesi ja Tom Jobimi."
         },
         "source": {
-          "sourceId": "wikipedia:literacy",
-          "title": "Literacy",
-          "url": "https://en.wikipedia.org/wiki/Literacy",
+          "sourceId": "wikipedia:vinicius-and-tom",
+          "title": "Vinicius and Tom",
+          "url": "https://en.wikipedia.org/wiki/Vinicius_and_Tom",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -23561,153 +23651,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-059",
     "name": {
-      "en": "Protecting Health at Population Scale",
-      "et": "Rahvastiku tervise kaitse"
+      "en": "Campaign Moments That Became the Story",
+      "et": "Kampaaniahetked, millest sai põhilugu"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-059:question:1",
-        "factKey": "built-in-politics-economics-society:public-health:medium:concept:vaccination",
+        "factKey": "politics:pence-debate-fly:landed-on-hair-for-over-two-minutes",
         "tier": 1,
-        "subjectKey": "concept:vaccination",
+        "subjectKey": "campaign-moment:pence-debate-fly",
         "clue": {
-          "en": "Identify this public-health measure or principle: it trains immunity with a vaccine before disease exposure.",
-          "et": "Kirjeldatud rahvatervise meede või põhimõte treenib immuunsust vaktsiiniga enne haigusega kokkupuudet. Mis on selle nimi?"
+          "en": "During a 2020 vice-presidential debate, a tiny uninvited guest sat visibly on Mike Pence’s white hair for more than two minutes. Name the viral visitor.",
+          "et": "2020. aasta asepresidendide debatil istus pisike kutsumata külaline üle kahe minuti nähtavalt Mike Pence’i valgetel juustel. Nimeta viraalne külaline."
         },
         "response": {
-          "en": "vaccination",
-          "et": "vaktsineerimine"
+          "en": "2020 vice-presidential debate fly",
+          "et": "Pence’i debatilikärbes"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "fly on Mike Pence’s head",
+            "Pence debate fly",
+            "fly"
+          ],
+          "et": [
+            "kärbes Mike Pence’i peas",
+            "Pence’i kärbes",
+            "kärbes"
+          ]
         },
         "explanation": {
-          "en": "Vaccination creates immune memory without requiring the risks of the full infection.",
-          "et": "Vaktsineerimine loob immuunmälu ilma täieliku nakkuse riske nõudmata."
+          "en": "The fly on Mike Pence’s head became one of the most discussed images from the 2020 vice-presidential debate.",
+          "et": "Mike Pence’i peas istunud kärbsest sai 2020. aasta asepresidendide debati üks enim kõneainet pakkunud pilte."
         },
         "source": {
-          "sourceId": "wikipedia:vaccination",
-          "title": "Vaccination",
-          "url": "https://en.wikipedia.org/wiki/Vaccination",
+          "sourceId": "wikipedia:2020-united-states-vice-presidential-debate",
+          "title": "2020 United States vice presidential debate",
+          "url": "https://en.wikipedia.org/wiki/2020_United_States_vice_presidential_debate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-059:question:2",
-        "factKey": "built-in-politics-economics-society:public-health:medium:concept:herd-immunity",
+        "factKey": "politics:dean-scream:iowa-speech-yell-replayed-on-television",
         "tier": 2,
-        "subjectKey": "concept:herd-immunity",
+        "subjectKey": "campaign-moment:dean-scream",
         "clue": {
-          "en": "Which public-health measure or principle reduces spread when enough people are immune?",
-          "et": "Tuvasta järgmine rahvatervise meede või põhimõte: see vähendab levikut, kui piisavalt inimesi on immuunsed."
+          "en": "After placing third in the Iowa caucuses, a US candidate ended an excited roll-call of states with a yell that television replayed endlessly. Name the moment.",
+          "et": "USA kandidaat lõpetas pärast Iowa eelvalimistel kolmandaks jäämist osariikide vaimustunud loetelu karjatusega, mida televisioon lõputult kordas. Nimeta hetk."
         },
         "response": {
-          "en": "herd immunity",
-          "et": "karjaimmuunsus"
+          "en": "Dean scream",
+          "et": "Deani karjatus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Howard Dean scream"
+          ],
+          "et": [
+            "Howard Deani karjatus",
+            "Dean scream"
+          ]
         },
         "explanation": {
-          "en": "Herd immunity indirectly protects some susceptible people by interrupting transmission chains.",
-          "et": "Karjaimmuunsus kaitseb osa vastuvõtlikke kaudselt, katkestades levikuahelad."
+          "en": "The Dean scream was Howard Dean’s emphatic yell after the 2004 Iowa caucuses; repeated broadcasts made it a campaign-defining clip.",
+          "et": "Deani karjatus oli Howard Deani jõuline hõige pärast 2004. aasta Iowa eelvalimisi; telekordused muutsid selle kampaania tunnusklipiks."
         },
         "source": {
-          "sourceId": "wikipedia:herd_immunity",
-          "title": "Herd immunity",
-          "url": "https://en.wikipedia.org/wiki/Herd_immunity",
+          "sourceId": "wikipedia:dean-scream",
+          "title": "Dean scream",
+          "url": "https://en.wikipedia.org/wiki/Dean_scream",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-059:question:3",
-        "factKey": "built-in-politics-economics-society:public-health:medium:concept:quarantine",
+        "factKey": "politics:dukakis-tank-photo:abrams-ride-intended-strength-became-ridicule",
         "tier": 3,
-        "subjectKey": "concept:quarantine",
+        "subjectKey": "campaign-image:dukakis-tank-photo",
         "clue": {
-          "en": "A public-health measure or principle separates people exposed to disease while infection is uncertain. What term fits?",
-          "et": "Siin kirjeldatud rahvatervise meede või põhimõte eraldab haigusega kokku puutunud inimesed, kui nakatumine pole kindel. Mis see on?"
+          "en": "Trying to look strong on defence in 1988, a helmeted presidential candidate rode in an M1 Abrams; the awkward image instead fuelled ridicule. Name the photograph.",
+          "et": "1988. aastal soovis kiivriga presidendikandidaat M1 Abramsil sõites näida kaitseküsimustes tugev, kuid kohmakas pilt tekitas hoopis pilkeid. Nimeta foto."
         },
         "response": {
-          "en": "quarantine",
-          "et": "karantiin"
+          "en": "Dukakis tank photograph",
+          "et": "Dukakise tankifoto"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Dukakis tank photo",
+            "Michael Dukakis tank photograph"
+          ],
+          "et": [
+            "Dukakise tankipilt",
+            "Michael Dukakise tankifoto"
+          ]
         },
         "explanation": {
-          "en": "Quarantine differs from isolation, which separates known infected cases.",
-          "et": "Karantiin erineb isolatsioonist, mis eraldab teadaolevalt nakatunud juhud."
+          "en": "The Dukakis tank photograph came from a campaign stop intended to project military credibility but became a lasting symbol of the failed campaign.",
+          "et": "Dukakise tankifoto sündis kampaaniaüritusel, mis pidi näitama sõjalist usaldusväärsust, kuid muutus kaotatud kampaania püsisümboliks."
         },
         "source": {
-          "sourceId": "wikipedia:quarantine",
-          "title": "Quarantine",
-          "url": "https://en.wikipedia.org/wiki/Quarantine",
+          "sourceId": "wikipedia:michael-dukakis-1988-presidential-campaign",
+          "title": "Michael Dukakis",
+          "url": "https://en.wikipedia.org/wiki/Michael_Dukakis#1988_presidential_campaign",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-059:question:4",
-        "factKey": "built-in-politics-economics-society:public-health:medium:concept:medical-screening",
+        "factKey": "politics:four-seasons-landscaping:giuliani-post-election-press-conference-garage",
         "tier": 4,
-        "subjectKey": "concept:medical-screening",
+        "subjectKey": "campaign-event:four-seasons-total-landscaping",
         "clue": {
-          "en": "This public-health measure or principle tests apparently healthy people for early disease or risk. What is it?",
-          "et": "See rahvatervise meede või põhimõte uurib näiliselt terveid inimesi varase haiguse või riski leidmiseks. Mis see on?"
+          "en": "After the 2020 US election, Rudy Giuliani spoke beside a garage door at a Philadelphia landscaping company—not the luxury hotel with a similar name. Name the event.",
+          "et": "Pärast 2020. aasta USA valimisi kõneles Rudy Giuliani Philadelphia haljastusfirma garaažiukse kõrval, mitte samanimelise luksushotelli juures. Nimeta sündmus."
         },
         "response": {
-          "en": "screening",
-          "et": "sõeluuring"
+          "en": "Four Seasons Total Landscaping press conference",
+          "et": "Four Seasons Total Landscapingu pressikonverents"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Four Seasons Landscaping press conference"
+          ],
+          "et": [
+            "Four Seasonsi haljastusfirma pressikonverents"
+          ]
         },
         "explanation": {
-          "en": "Screening needs confirmatory diagnosis because false positives occur.",
-          "et": "Sõeluuring vajab kinnitavat diagnoosi, sest esineb valepositiivseid tulemusi."
+          "en": "The Four Seasons Total Landscaping press conference became famous for its unexpected industrial-estate setting beside the company’s garage door.",
+          "et": "Four Seasons Total Landscapingu pressikonverents sai kuulsaks ootamatu tööstusrajooni ja haljastusfirma garaažiukse tõttu."
         },
         "source": {
-          "sourceId": "wikipedia:screening_(medicine)",
-          "title": "Screening (medicine)",
-          "url": "https://en.wikipedia.org/wiki/Screening_(medicine)",
+          "sourceId": "wikipedia:four-seasons-total-landscaping-press-conference",
+          "title": "Four Seasons Total Landscaping press conference",
+          "url": "https://en.wikipedia.org/wiki/Four_Seasons_Total_Landscaping_press_conference",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-059:question:5",
-        "factKey": "built-in-politics-economics-society:public-health:medium:concept:universal-health-care",
+        "factKey": "politics:checkers-speech:nixon-fund-defence-family-kept-dog-gift",
         "tier": 5,
-        "subjectKey": "concept:universal-health-care",
+        "subjectKey": "campaign-speech:checkers",
         "clue": {
-          "en": "Public-health measure or principle aims for all residents to receive needed services without financial hardship. What is it called?",
-          "et": "Milline rahvatervise meede või põhimõte püüab anda kõigile elanikele vajalikud teenused ilma rahalise raskuseta?"
+          "en": "Defending himself over a campaign fund in 1952, Richard Nixon said his family would keep one gift: a black-and-white cocker spaniel. Name the televised address.",
+          "et": "Richard Nixon kaitses end 1952. aastal kampaaniafondi küsimuses ja ütles, et pere jätab alles ühe kingi: mustvalge kokkerspanjeli. Nimeta telepöördumine."
         },
         "response": {
-          "en": "universal health care",
-          "et": "universaalne tervishoid"
+          "en": "Checkers speech",
+          "et": "Checkersi kõne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nixon Checkers speech",
+            "Checkers address"
+          ],
+          "et": [
+            "Nixoni Checkersi kõne",
+            "Checkersi pöördumine"
+          ]
         },
         "explanation": {
-          "en": "Universal health care describes coverage goals rather than one required ownership or financing model.",
-          "et": "Universaalne tervishoid kirjeldab katvuse eesmärki, mitte üht kohustuslikku omandi- või rahastusmudelit."
+          "en": "The Checkers speech took its name from the Nixon family dog mentioned during the televised defence of Nixon’s finances.",
+          "et": "Checkersi kõne sai nime Nixoni pere koera järgi, keda ta oma rahaasju kaitsnud telepöördumises mainis."
         },
         "source": {
-          "sourceId": "wikipedia:universal_health_care",
-          "title": "Universal health care",
-          "url": "https://en.wikipedia.org/wiki/Universal_health_care",
+          "sourceId": "wikipedia:checkers-speech",
+          "title": "Checkers speech",
+          "url": "https://en.wikipedia.org/wiki/Checkers_speech",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -23715,153 +23834,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-060",
     "name": {
-      "en": "How Countries Trade",
-      "et": "Kuidas riigid kauplevad"
+      "en": "Economics Lessons from Fiction",
+      "et": "Majandustunnid väljamõeldud lugudest"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-060:question:1",
-        "factKey": "built-in-politics-economics-society:international-trade:medium:concept:tariff",
+        "factKey": "society:greed-is-good:gekko-line-adapted-from-boesky-remark",
         "tier": 1,
-        "subjectKey": "concept:tariff",
+        "subjectKey": "fictional-economics:greed-is-good-line",
         "clue": {
-          "en": "A trade concept is a tax charged on goods crossing a border. What term fits?",
-          "et": "Siin kirjeldatud kaubandusmõiste on üle piiri liikuvatele kaupadele kehtestatud maks. Mis see on?"
+          "en": "In Wall Street, Gordon Gekko turns a moral vice into a three-word defence of self-interest, adapting a real financier’s remark. Give the famous line.",
+          "et": "Filmis „Wall Street” muudab Gordon Gekko moraalse pahe kolmesõnaliseks omakasu kaitseks, kohandades ühe päris finantsisti mõtet. Ütle kuulus repliik."
         },
         "response": {
-          "en": "tariff",
-          "et": "tariif"
+          "en": "“Greed is good” line",
+          "et": "„Ahnus on hea” repliik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gordon Gekko greed quote",
+            "greed is good quote"
+          ],
+          "et": [
+            "Gordon Gekko „ahnus on hea” tsitaat",
+            "ahnuse repliik"
+          ]
         },
         "explanation": {
-          "en": "Tariff raises the domestic price wedge between imported and world-market goods.",
-          "et": "Tariif tekitab imporditud ja maailmaturu kauba hinna vahele kodumaise kiilu."
+          "en": "The “greed is good” line is Gordon Gekko’s signature claim in Wall Street and was adapted from a real remark by financier Ivan Boesky.",
+          "et": "„Ahnus on hea” repliik on Gordon Gekko tunnuslause filmis „Wall Street” ning see kohandati finantsist Ivan Boesky päris mõtteavaldusest."
         },
         "source": {
-          "sourceId": "wikipedia:tariff",
-          "title": "Tariff",
-          "url": "https://en.wikipedia.org/wiki/Tariff",
+          "sourceId": "wikipedia:greed-is-good",
+          "title": "Greed is good",
+          "url": "https://en.wikipedia.org/wiki/Greed_is_good",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-060:question:2",
-        "factKey": "built-in-politics-economics-society:international-trade:medium:concept:import-quota",
+        "factKey": "society:springfield-monorail:conman-sells-defective-project-after-windfall",
         "tier": 2,
-        "subjectKey": "concept:import-quota",
+        "subjectKey": "fictional-economics:springfield-monorail",
         "clue": {
-          "en": "Identify this trade concept: it limits the physical amount of a good that may enter.",
-          "et": "Kirjeldatud kaubandusmõiste piirab riiki siseneva kauba füüsilist kogust. Mis on selle nimi?"
+          "en": "In The Simpsons, a singing con man persuades Springfield to spend a sudden windfall on a shoddy single-rail transport project. Name the project.",
+          "et": "„Simpsonites” veenab laulev petis Springfieldi kulutama ootamatu rahasüsti kehvale ühe rööpaga transpordiprojektile. Nimeta projekt."
         },
         "response": {
-          "en": "import quota",
-          "et": "impordikvoot"
+          "en": "Springfield monorail",
+          "et": "Springfieldi monorelss"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Springfield monorail project",
+            "Marge vs. the Monorail"
+          ],
+          "et": [
+            "Springfieldi monorööbas",
+            "Springfieldi monorööpmeprojekt",
+            "„Marge vs. the Monorail”"
+          ]
         },
         "explanation": {
-          "en": "Import quota creates scarcity rents that accrue to whoever controls import licences.",
-          "et": "Impordikvoot loob nappusrendi, mis läheb impordilubade kontrollijale."
+          "en": "Springfield’s monorail is sold by Lyle Lanley after the town receives a large fine from Mr. Burns; the train proves dangerously defective on its first run.",
+          "et": "Lyle Lanley müüb Springfieldile monorelsi pärast seda, kui linn saab härra Burnsilt suure trahvi; rong osutub oma esimesel sõidul ohtlikult vigaseks."
         },
         "source": {
-          "sourceId": "wikipedia:import_quota",
-          "title": "Import quota",
-          "url": "https://en.wikipedia.org/wiki/Import_quota",
+          "sourceId": "wikipedia:marge-vs-the-monorail",
+          "title": "Marge vs. the Monorail",
+          "url": "https://en.wikipedia.org/wiki/Marge_vs._the_Monorail",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-060:question:3",
-        "factKey": "built-in-politics-economics-society:international-trade:medium:concept:free-trade",
+        "factKey": "society:mary-poppins-bank-run:child-demands-tuppence-customers-panic",
         "tier": 3,
-        "subjectKey": "concept:free-trade",
+        "subjectKey": "fictional-economics:fidelity-fiduciary-bank-run",
         "clue": {
-          "en": "Which trade concept reduces tariffs and quotas on cross-border exchange?",
-          "et": "Tuvasta järgmine kaubandusmõiste: see vähendab piiriülese vahetuse tariife ja kvoote."
+          "en": "In Mary Poppins, a child loudly demands his tuppence back, other customers panic, and a fictional London bank faces a run. Name the bank-run scene.",
+          "et": "Filmis „Mary Poppins” nõuab laps valjult oma kahepenilist tagasi, teised kliendid satuvad paanikasse ja väljamõeldud Londoni panka tabab pangajooks. Nimeta stseen."
         },
         "response": {
-          "en": "free trade",
-          "et": "vabakaubandus"
+          "en": "Fidelity Fiduciary Bank run",
+          "et": "Fidelity Fiduciary panga paanika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mary Poppins bank run"
+          ],
+          "et": [
+            "Fidelity Fiduciary pangajooks",
+            "Mary Poppinsi pangajooks"
+          ]
         },
         "explanation": {
-          "en": "Free trade still operates under product, tax, and competition rules rather than meaning no law.",
-          "et": "Vabakaubandus toimib ikkagi toote-, maksu- ja konkurentsireeglite all ega tähenda seadusetust."
+          "en": "The Fidelity Fiduciary Bank run begins when Michael Banks asks for his money and customers mistakenly fear that the bank cannot repay deposits.",
+          "et": "Fidelity Fiduciary panga paanika algab, kui Michael Banks küsib oma raha tagasi ja kliendid kardavad ekslikult, et pank ei suuda hoiuseid välja maksta."
         },
         "source": {
-          "sourceId": "wikipedia:free_trade",
-          "title": "Free trade",
-          "url": "https://en.wikipedia.org/wiki/Free_trade",
+          "sourceId": "wikipedia:fidelity-fiduciary-bank",
+          "title": "Fidelity Fiduciary Bank",
+          "url": "https://en.wikipedia.org/wiki/Fidelity_Fiduciary_Bank",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-060:question:4",
-        "factKey": "built-in-politics-economics-society:international-trade:medium:concept:comparative-advantage",
+        "factKey": "society:trading-places:fake-crop-report-orange-juice-futures-trade",
         "tier": 4,
-        "subjectKey": "concept:comparative-advantage",
+        "subjectKey": "fictional-economics:trading-places-orange-juice-futures",
         "clue": {
-          "en": "A trade concept favours specialisation in goods with the lowest opportunity cost. Name it.",
-          "et": "Üks kaubandusmõiste soosib spetsialiseerumist väikseima alternatiivkuluga kaupadele. Millist vastust otsime?"
+          "en": "The finale of Trading Places turns a fake crop report into a commodities-floor showdown over contracts for a frozen breakfast drink. Which contracts drive the plot?",
+          "et": "Filmi „Trading Places” finaalis viib võlts saagiaruanne kaubabörsil vastasseisuni ühe külmutatud hommikujoogi lepingute pärast. Millised lepingud juhivad süžeed?"
         },
         "response": {
-          "en": "comparative advantage",
-          "et": "suhteline eelis"
+          "en": "Trading Places orange-juice futures",
+          "et": "„Trading Places” apelsinimahla futuurid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "frozen orange juice futures"
+          ],
+          "et": [
+            "filmi „Trading Places” apelsinimahla futuurid",
+            "külmutatud apelsinimahla futuurid"
+          ]
         },
         "explanation": {
-          "en": "Comparative advantage can create gains from trade even when one side is absolutely better at everything.",
-          "et": "Suhteline eelis võib luua kaubanduskasu ka siis, kui üks pool on kõiges absoluutselt parem."
+          "en": "Trading Places ends with the heroes profiting from frozen concentrated orange-juice futures after exposing the villains’ stolen crop report.",
+          "et": "„Trading Places” lõpeb sellega, et kangelased teenivad külmutatud apelsinimahla futuuridega pärast kurikaelte varastatud saagiaruande paljastamist."
         },
         "source": {
-          "sourceId": "wikipedia:comparative_advantage",
-          "title": "Comparative advantage",
-          "url": "https://en.wikipedia.org/wiki/Comparative_advantage",
+          "sourceId": "wikipedia:trading-places",
+          "title": "Trading Places",
+          "url": "https://en.wikipedia.org/wiki/Trading_Places",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-060:question:5",
-        "factKey": "built-in-politics-economics-society:international-trade:medium:measure:balance-of-trade",
+        "factKey": "society:underpants-gnomes:collect-underpants-question-mark-profit",
         "tier": 5,
-        "subjectKey": "measure:balance-of-trade",
+        "subjectKey": "fictional-economics:underpants-gnomes-plan",
         "clue": {
-          "en": "Find the trade concept that compares the value of exports with imports of goods and services.",
-          "et": "Kaubandusmõiste võrdleb kaupade ja teenuste ekspordi ning impordi väärtust. Leia sobiv vastus."
+          "en": "South Park’s tiny thieves present a three-phase strategy: collect underwear, leave the middle step as a question mark, then make a profit. Name the plan.",
+          "et": "„South Parki” pisikesed vargad esitavad kolmeosalise strateegia: kogu aluspükse, jäta keskmine samm küsimärgiks ja teeni siis kasumit. Nimeta plaan."
         },
         "response": {
-          "en": "balance of trade",
-          "et": "kaubandusbilanss"
+          "en": "Underpants Gnomes business plan",
+          "et": "aluspüksikääbikute äriplaan"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Underpants Gnomes plan"
+          ],
+          "et": [
+            "aluspüksikääbuste äriplaan"
+          ]
         },
         "explanation": {
-          "en": "Balance of trade shows a surplus when exports exceed imports and a deficit in reverse.",
-          "et": "Kaubandusbilanss näitab ülejääki ekspordi ülekaalul ja puudujääki vastupidi."
+          "en": "The Underpants Gnomes business plan satirises schemes that jump from an activity to profit without explaining the crucial middle step.",
+          "et": "Aluspüksikääbikute äriplaan pilab skeeme, mis hüppavad tegevusest otse kasumini, selgitamata otsustavat vahepealset sammu."
         },
         "source": {
-          "sourceId": "wikipedia:balance_of_trade",
-          "title": "Balance of trade",
-          "url": "https://en.wikipedia.org/wiki/Balance_of_trade",
+          "sourceId": "wikipedia:gnomes-south-park",
+          "title": "Gnomes (South Park)",
+          "url": "https://en.wikipedia.org/wiki/Gnomes_(South_Park)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -23869,153 +24015,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-061",
     "name": {
-      "en": "Institutions behind Money",
-      "et": "Raha taga olevad institutsioonid"
+      "en": "Rules That Changed the Daily Routine",
+      "et": "Reeglid, mis muutsid argipäeva"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-061:question:1",
-        "factKey": "built-in-politics-economics-society:money-and-banking:medium:institution:central-bank",
+        "factKey": "society:daylight-saving:clocks-advanced-to-shift-evening-daylight",
         "tier": 1,
-        "subjectKey": "institution:central-bank",
+        "subjectKey": "daily-rule:daylight-saving-time",
         "clue": {
-          "en": "A monetary or banking concept issues base money and conducts monetary policy for a currency area. Name it.",
-          "et": "Üks raha- või pangandusmõiste emiteerib baasraha ning teeb valuutapiirkonna rahapoliitikat. Millist vastust otsime?"
+          "en": "Twice-yearly clock changes move an hour of usable light from morning to evening during warmer months. Name the time-setting policy.",
+          "et": "Kaks korda aastas tehtav kellakeeramine nihutab soojematel kuudel ühe valge tunni hommikust õhtusse. Nimeta ajakorraldus."
         },
         "response": {
-          "en": "central bank",
-          "et": "keskpank"
+          "en": "daylight saving time",
+          "et": "suveaeg"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "summer time",
+            "DST"
+          ],
+          "et": [
+            "päevavalguse säästmise aeg",
+            "suveajale üleminek"
+          ]
         },
         "explanation": {
-          "en": "Central bank often serves as lender of last resort and banker to government.",
-          "et": "Keskpank toimib sageli viimase astme laenuandja ja valitsuse pangana."
+          "en": "Daylight saving time advances clocks for part of the year so that evening daylight lasts later by the clock.",
+          "et": "Suveajal keeratakse kell osa aastast ette, nii et õhtune päevavalgus kestab kella järgi kauem."
         },
         "source": {
-          "sourceId": "wikipedia:central_bank",
-          "title": "Central bank",
-          "url": "https://en.wikipedia.org/wiki/Central_bank",
+          "sourceId": "wikipedia:daylight-saving-time",
+          "title": "Daylight saving time",
+          "url": "https://en.wikipedia.org/wiki/Daylight_saving_time",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-061:question:2",
-        "factKey": "built-in-politics-economics-society:money-and-banking:medium:institution:commercial-bank",
+        "factKey": "society:seat-belt-law:vehicle-occupants-required-to-use-restraints",
         "tier": 2,
-        "subjectKey": "institution:commercial-bank",
+        "subjectKey": "daily-rule:seat-belt-legislation",
         "clue": {
-          "en": "Find the monetary or banking concept that takes deposits and makes loans to households and firms.",
-          "et": "Raha- või pangandusmõiste võtab hoiuseid ning annab inimestele ja ettevõtetele laene. Leia sobiv vastus."
+          "en": "Road-safety rules turned a once-optional strap across the lap and chest into something drivers and passengers can be fined for ignoring. Name the rule family.",
+          "et": "Liiklusohutusreeglid muutsid kunagi vabatahtliku üle puusade ja rinna kulgeva rihma millekski, mille eiramise eest võib juhti või sõitjat trahvida. Nimeta reegel."
         },
         "response": {
-          "en": "commercial bank",
-          "et": "kommertspank"
+          "en": "seat-belt legislation",
+          "et": "turvavöö kasutamise kohustus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "seat-belt law",
+            "seat belt laws"
+          ],
+          "et": [
+            "turvavöö kohustus",
+            "turvavööseadus"
+          ]
         },
         "explanation": {
-          "en": "Commercial bank creates deposit money when lending, subject to capital, liquidity, and demand constraints.",
-          "et": "Kommertspank loob laenates hoiuseraha, mida piiravad kapital, likviidsus ja nõudlus."
+          "en": "Seat-belt legislation requires vehicle occupants to use installed restraints; adoption spread internationally during the late twentieth century.",
+          "et": "Turvavöö kasutamise kohustus nõuab sõidukis paigaldatud turvavahendi kinnitamist ning levis 20. sajandi lõpul paljudesse riikidesse."
         },
         "source": {
-          "sourceId": "wikipedia:bank",
-          "title": "Bank",
-          "url": "https://en.wikipedia.org/wiki/Bank",
+          "sourceId": "wikipedia:seat-belt-legislation",
+          "title": "Seat belt legislation",
+          "url": "https://en.wikipedia.org/wiki/Seat_belt_legislation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-061:question:3",
-        "factKey": "built-in-politics-economics-society:money-and-banking:medium:concept:deposit-insurance",
+        "factKey": "society:container-deposit:refundable-sum-returned-with-empty-package",
         "tier": 3,
-        "subjectKey": "concept:deposit-insurance",
+        "subjectKey": "daily-rule:container-deposit-system",
         "clue": {
-          "en": "Monetary or banking concept protects eligible bank deposits up to a defined limit. What is it called?",
-          "et": "Milline raha- või pangandusmõiste kaitseb nõuetele vastavaid pangahoiuseid kindla piirini?"
+          "en": "A shopper pays a small extra sum with a bottle or can and gets it back after returning the empty container. Name the system.",
+          "et": "Ostja maksab pudeli või purgiga koos väikese lisasumma ja saab selle tühja pakendi tagastamisel tagasi. Nimeta süsteem."
         },
         "response": {
-          "en": "deposit insurance",
-          "et": "hoiuste tagamine"
+          "en": "container-deposit system",
+          "et": "pandipakendisüsteem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "bottle-deposit system",
+            "deposit-return scheme"
+          ],
+          "et": [
+            "pandisüsteem",
+            "taarapandisüsteem",
+            "tagatisrahasüsteem"
+          ]
         },
         "explanation": {
-          "en": "Deposit insurance aims to reduce bank runs while charging or regulating participating banks.",
-          "et": "Hoiuste tagamine püüab vähendada pangajookse, võttes osalevatelt pankadelt tasu või neid reguleerides."
+          "en": "A container-deposit system attaches a refundable deposit to drink packaging to encourage collection and recycling.",
+          "et": "Pandipakendisüsteem lisab joogipakendile tagastatava tagatisraha, et soodustada kogumist ja ringlussevõttu."
         },
         "source": {
-          "sourceId": "wikipedia:deposit_insurance",
-          "title": "Deposit insurance",
-          "url": "https://en.wikipedia.org/wiki/Deposit_insurance",
+          "sourceId": "wikipedia:container-deposit-legislation",
+          "title": "Container-deposit legislation",
+          "url": "https://en.wikipedia.org/wiki/Container-deposit_legislation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-061:question:4",
-        "factKey": "built-in-politics-economics-society:money-and-banking:medium:measure:exchange-rate",
+        "factKey": "society:plastic-bag-charge:checkout-fee-reduces-single-use-consumption",
         "tier": 4,
-        "subjectKey": "measure:exchange-rate",
+        "subjectKey": "daily-rule:plastic-bag-charge",
         "clue": {
-          "en": "A monetary or banking concept states the price of one currency in another. Name it.",
-          "et": "Üks raha- või pangandusmõiste näitab ühe valuuta hinda teises. Millist vastust otsime?"
+          "en": "At many checkouts, a once-free disposable carrier adds a small amount to the receipt to discourage single use. Name this policy tool.",
+          "et": "Paljudes kassades lisab varem tasuta ühekordne kandekott nüüd arvele väikese summa, et vähendada ühekordset kasutust. Nimeta poliitikameede."
         },
         "response": {
-          "en": "exchange rate",
-          "et": "vahetuskurss"
+          "en": "plastic-bag charge",
+          "et": "kilekotitasu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "plastic-bag levy",
+            "plastic bag tax",
+            "bag charge"
+          ],
+          "et": [
+            "kilekotimaks",
+            "kilekoti tasu"
+          ]
         },
         "explanation": {
-          "en": "Exchange rate can float in markets or be managed and pegged by authorities.",
-          "et": "Vahetuskurss võib turul ujuda või olla võimu hallatud ja seotud."
+          "en": "A plastic-bag charge or levy makes shoppers pay for disposable bags and is used to reduce their consumption and litter.",
+          "et": "Kilekotitasu paneb ostja ühekordse koti eest maksma ning seda kasutatakse tarbimise ja prügistamise vähendamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:exchange_rate",
-          "title": "Exchange rate",
-          "url": "https://en.wikipedia.org/wiki/Exchange_rate",
+          "sourceId": "wikipedia:plastic-bag-ban",
+          "title": "Plastic bag ban",
+          "url": "https://en.wikipedia.org/wiki/Plastic_bag_ban",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-061:question:5",
-        "factKey": "built-in-politics-economics-society:money-and-banking:medium:instrument:bond-finance",
+        "factKey": "society:dagen-h:sweden-switched-to-right-hand-traffic-1967",
         "tier": 5,
-        "subjectKey": "instrument:bond-finance",
+        "subjectKey": "daily-rule-event:dagen-h",
         "clue": {
-          "en": "Recognise the monetary or banking concept that is a tradable promise to repay principal and interest.",
-          "et": "Otsitav raha- või pangandusmõiste on kaubeldav lubadus maksta tagasi põhiosa ja intress. Mis see on?"
+          "en": "On one morning in 1967, Swedish traffic paused and carefully crossed over so the whole country could begin driving on the right. What was the changeover day called?",
+          "et": "Ühel 1967. aasta hommikul peatus Rootsi liiklus ja liikus ettevaatlikult üle tee teisele poole, et kogu riik hakkaks sõitma paremal. Kuidas üleminekupäeva nimetati?"
         },
         "response": {
-          "en": "bond",
-          "et": "võlakiri"
+          "en": "Dagen H",
+          "et": "Dagen H"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "H day",
+            "Sweden’s H day"
+          ],
+          "et": [
+            "H-päev",
+            "Rootsi H-päev"
+          ]
         },
         "explanation": {
-          "en": "Bond usually falls in market price when comparable interest yields rise.",
-          "et": "Võlakiri langeb tavaliselt turuhinnas, kui võrreldavad intressitootlused tõusevad."
+          "en": "Dagen H, or H day, was 3 September 1967, when Sweden changed from left-hand to right-hand traffic.",
+          "et": "Dagen H ehk H-päev oli 3. september 1967, mil Rootsi läks vasakpoolselt liikluselt üle parempoolsele."
         },
         "source": {
-          "sourceId": "wikipedia:bond_(finance)",
-          "title": "Bond (finance)",
-          "url": "https://en.wikipedia.org/wiki/Bond_(finance)",
+          "sourceId": "wikipedia:dagen-h",
+          "title": "Dagen H",
+          "url": "https://en.wikipedia.org/wiki/Dagen_H",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -24023,153 +24201,202 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-062",
     "name": {
-      "en": "Predictably Irrational Choices",
-      "et": "Ettearvatavalt ebaratsionaalsed valikud"
+      "en": "Shortages People Still Remember",
+      "et": "Puudujäägid, mida siiani mäletatakse"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-062:question:1",
-        "factKey": "built-in-politics-economics-society:behavioural-economics:medium:concept:nudge",
+        "factKey": "society:2020-toilet-paper-shortage:pandemic-stockpiling-empty-shelves",
         "tier": 1,
-        "subjectKey": "concept:nudge",
+        "subjectKey": "shortage:2020-toilet-paper",
         "clue": {
-          "en": "One behavioural-economics concept changes choice architecture without banning options. Which one is described?",
-          "et": "Käitumisökonoomika mõiste muudab valikuarhitektuuri ühtki võimalust keelamata. Mis see on?"
+          "en": "Early in the COVID-19 pandemic, photographs of bare supermarket shelves focused on one bulky bathroom roll that shoppers were hoarding. Name the shortage.",
+          "et": "COVID-19 pandeemia alguses näitasid tühjade poeriiulite fotod eelkõige üht mahukat vannitoarulli, mida ostjad varusid. Nimeta puudujääk."
         },
         "response": {
-          "en": "nudge",
-          "et": "nügimine"
+          "en": "2020 toilet-paper shortage",
+          "et": "2020. aasta tualettpaberipuudus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "COVID toilet-paper shortage",
+            "pandemic toilet paper shortage",
+            "toilet paper panic buying",
+            "toilet paper shortage"
+          ],
+          "et": [
+            "koroonapandeemia tualettpaberipuudus",
+            "pandeemia tualettpaberipuudus",
+            "tualettpaberi paanikaostmine",
+            "tualettpaberipuudus"
+          ]
         },
         "explanation": {
-          "en": "Nudge preserves freedom while making one beneficial action easier or more salient.",
-          "et": "Nügimine säilitab vabaduse, muutes ühe kasuliku valiku lihtsamaks või nähtavamaks."
+          "en": "The 2020 toilet-paper shortage was driven largely by sudden stockpiling and a mismatch between household and commercial supply chains rather than a lack of raw material.",
+          "et": "2020. aasta tualettpaberipuuduse põhjustasid peamiselt järsk varumine ning kodu- ja ärikasutuse tarneahelate erinevus, mitte tooraine lõppemine."
         },
         "source": {
-          "sourceId": "wikipedia:nudge_theory",
-          "title": "Nudge theory",
-          "url": "https://en.wikipedia.org/wiki/Nudge_theory",
+          "sourceId": "wikipedia:shortages-related-to-the-covid-19-pandemic",
+          "title": "Shortages related to the COVID-19 pandemic",
+          "url": "https://en.wikipedia.org/wiki/Shortages_related_to_the_COVID-19_pandemic",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-062:question:2",
-        "factKey": "built-in-politics-economics-society:behavioural-economics:medium:concept:loss-aversion",
+        "factKey": "economics:playstation-5:2020-launch-chip-constraints-high-demand-shortage",
         "tier": 2,
-        "subjectKey": "concept:loss-aversion",
+        "subjectKey": "shortage:playstation-5",
         "clue": {
-          "en": "This behavioural-economics concept makes an equal loss feel stronger than an equal gain. What is it?",
-          "et": "See käitumisökonoomika mõiste paneb võrdse kaotuse tunduma sama suurest võidust tugevamana. Mis see on?"
+          "en": "Sony launched its fifth numbered home console in 2020, but chip constraints and huge demand left its white, wing-shaped machines difficult to buy for years. Name the shortage.",
+          "et": "Sony tõi 2020. aastal turule oma viienda nummerdatud kodukonsooli, kuid kiibipuudus ja suur nõudlus muutsid valge tiivulise masina aastateks raskesti ostetavaks. Nimeta puudus."
         },
         "response": {
-          "en": "loss aversion",
-          "et": "kaotusekartus"
+          "en": "PlayStation 5 shortage",
+          "et": "PlayStation 5 puudus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "PS5 shortage",
+            "PlayStation 5 supply shortage",
+            "PS5 supply crisis",
+            "PS5",
+            "PlayStation 5"
+          ],
+          "et": [
+            "PS5 puudus",
+            "PlayStation 5 tarnepuudus",
+            "PS5 tarnekriis",
+            "PS5",
+            "PlayStation 5"
+          ]
         },
         "explanation": {
-          "en": "Loss aversion is a key feature of prospect theory around a reference point.",
-          "et": "Kaotusekartus on prospektiteooria põhijoon võrdluspunkti ümber."
+          "en": "The PlayStation 5 shortage followed the console’s 2020 launch as semiconductor constraints and exceptionally high demand limited availability.",
+          "et": "PlayStation 5 puudus järgnes konsooli 2020. aasta turuletulekule, sest pooljuhtide nappus ja erakordselt suur nõudlus piirasid saadavust."
         },
         "source": {
-          "sourceId": "wikipedia:loss_aversion",
-          "title": "Loss aversion",
-          "url": "https://en.wikipedia.org/wiki/Loss_aversion",
+          "sourceId": "wikipedia:playstation-5",
+          "title": "PlayStation 5",
+          "url": "https://en.wikipedia.org/wiki/PlayStation_5",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-062:question:3",
-        "factKey": "built-in-politics-economics-society:behavioural-economics:medium:concept:sunk-cost-fallacy",
+        "factKey": "economics:1973-oil-crisis:oapec-embargo-price-rise-fuel-queues",
         "tier": 3,
-        "subjectKey": "concept:sunk-cost-fallacy",
+        "subjectKey": "shortage:1973-oil-crisis",
         "clue": {
-          "en": "Behavioural-economics concept keeps a bad project going because resources were already spent. What is it called?",
-          "et": "Milline käitumisökonoomika mõiste hoiab halba projekti käigus, sest ressursse on juba kulutatud?"
+          "en": "After the Yom Kippur War, Arab oil exporters embargoed countries that had supported Israel; fuel prices surged and queues formed at petrol stations. Name the crisis.",
+          "et": "Pärast Yom Kippuri sõda kehtestasid Araabia naftaeksportijad Iisraeli toetanud riikidele embargo; kütusehind tõusis ja tanklates tekkisid järjekorrad. Nimeta kriis."
         },
         "response": {
-          "en": "sunk-cost fallacy",
-          "et": "uppunud kulu eksitus"
+          "en": "1973 oil crisis",
+          "et": "1973. aasta naftakriis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "1973 oil shock",
+            "1973 oil embargo",
+            "OPEC oil crisis"
+          ],
+          "et": [
+            "1973. aasta naftašokk",
+            "1973. aasta naftaembargo",
+            "OPEC-i naftakriis"
+          ]
         },
         "explanation": {
-          "en": "Sunk-cost fallacy ignores that unrecoverable past costs should not change the best future choice.",
-          "et": "Uppunud kulu eksitus eirab, et tagasisaamatu minevikukulu ei peaks parimat tulevikuvalikut muutma."
+          "en": "The 1973 oil crisis followed an OAPEC embargo during the Yom Kippur War and caused sharp price rises and fuel shortages in importing countries.",
+          "et": "1973. aasta naftakriis järgnes OAPEC-i embargole Yom Kippuri sõja ajal ning tõi importivates riikides kaasa hinnahüppe ja kütusepuuduse."
         },
         "source": {
-          "sourceId": "wikipedia:sunk_cost",
-          "title": "Sunk cost",
-          "url": "https://en.wikipedia.org/wiki/Sunk_cost",
+          "sourceId": "wikipedia:1973-oil-crisis",
+          "title": "1973 oil crisis",
+          "url": "https://en.wikipedia.org/wiki/1973_oil_crisis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-062:question:4",
-        "factKey": "built-in-politics-economics-society:behavioural-economics:medium:concept:anchoring-effect",
+        "factKey": "society:tickle-me-elmo:1996-holiday-demand-shortage-resale",
         "tier": 4,
-        "subjectKey": "concept:anchoring-effect",
+        "subjectKey": "shortage:tickle-me-elmo-1996",
         "clue": {
-          "en": "Name the behavioural-economics concept that pulls an estimate toward an initially presented number.",
-          "et": "Vihjes kirjeldatud käitumisökonoomika mõiste tõmbab hinnangu algul esitatud arvu poole. Mis see on?"
+          "en": "The must-have toy of Christmas 1996 was a red Sesame Street character that shook and laughed when squeezed, sending resale prices soaring. Name the shortage craze.",
+          "et": "1996. aasta jõulude ihaldusmänguasi oli punane „Sesame Streeti” tegelane, kes pigistamisel värises ja naeris ning kelle järelturuhind tõusis lakke. Nimeta puudusehullus."
         },
         "response": {
-          "en": "anchoring effect",
-          "et": "ankurdamisefekt"
+          "en": "Tickle Me Elmo shortage",
+          "et": "Tickle Me Elmo puudus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Tickle Me Elmo craze",
+            "Elmo shortage",
+            "Tickle Me Elmo"
+          ],
+          "et": [
+            "Tickle Me Elmo hullus",
+            "Elmo puudus",
+            "Elmo mänguasjahullus",
+            "Tickle Me Elmo"
+          ]
         },
         "explanation": {
-          "en": "Anchoring effect persists even when the starting value is weakly relevant or arbitrary.",
-          "et": "Ankurdamisefekt püsib ka siis, kui algväärtus on vähe asjakohane või juhuslik."
+          "en": "Tickle Me Elmo became the 1996 holiday season’s hardest-to-find toy after unexpected demand overwhelmed available supplies.",
+          "et": "Tickle Me Elmost sai 1996. aasta jõuluhooaja kõige raskemini leitav mänguasi, kui ootamatu nõudlus ületas pakkumise."
         },
         "source": {
-          "sourceId": "wikipedia:anchoring_effect",
-          "title": "Anchoring effect",
-          "url": "https://en.wikipedia.org/wiki/Anchoring_effect",
+          "sourceId": "wikipedia:tickle-me-elmo",
+          "title": "Tickle Me Elmo",
+          "url": "https://en.wikipedia.org/wiki/Tickle_Me_Elmo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-062:question:5",
-        "factKey": "built-in-politics-economics-society:behavioural-economics:medium:concept:endowment-effect",
+        "factKey": "society:cabbage-patch-kids:1983-holiday-shortage-shopping-riots",
         "tier": 5,
-        "subjectKey": "concept:endowment-effect",
+        "subjectKey": "shortage:cabbage-patch-kids-1983",
         "clue": {
-          "en": "Find the behavioural-economics concept that makes people value an item more once they own it.",
-          "et": "Käitumisökonoomika mõiste paneb inimest eset kõrgemalt hindama pärast selle omandamist. Leia sobiv vastus."
+          "en": "At Christmas 1983, demand for soft-faced dolls sold with names and adoption papers led to pushing, fights, and near-riots in US shops. Name the toy frenzy.",
+          "et": "1983. aasta jõulude eel tekitasid nime ja lapsendamistunnistusega pehmenäolised nukud USA poodides rüselemist, kaklusi ja peaaegu mässe. Nimeta mänguasjahullus."
         },
         "response": {
-          "en": "endowment effect",
-          "et": "omandiefekt"
+          "en": "Cabbage Patch Kids shopping riots",
+          "et": "Cabbage Patch Kidsi ostumässud"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Cabbage Patch riots",
+            "Cabbage Patch Kids craze",
+            "Cabbage Patch doll riots",
+            "Cabbage Patch Kids"
+          ],
+          "et": [
+            "Cabbage Patchi mässud",
+            "Cabbage Patch Kidsi hullus",
+            "Cabbage Patchi nukumässud",
+            "Cabbage Patch Kids"
+          ]
         },
         "explanation": {
-          "en": "Endowment effect creates a gap between willingness to accept and willingness to pay.",
-          "et": "Omandiefekt loob lõhe müügiks nõutava ja ostuks pakutava summa vahel."
+          "en": "The Cabbage Patch Kids craze peaked during the 1983 holiday season, when limited supplies of the adoptable dolls prompted chaotic scenes among shoppers.",
+          "et": "Cabbage Patch Kidsi hullus saavutas haripunkti 1983. aasta jõuluhooajal, kui väike nukukogus tekitas ostjate seas kaootilisi stseene."
         },
         "source": {
-          "sourceId": "wikipedia:endowment_effect",
-          "title": "Endowment effect",
-          "url": "https://en.wikipedia.org/wiki/Endowment_effect",
+          "sourceId": "wikipedia:cabbage-patch-kids",
+          "title": "Cabbage Patch Kids",
+          "url": "https://en.wikipedia.org/wiki/Cabbage_Patch_Kids",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -24177,153 +24404,179 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-063",
     "name": {
-      "en": "Talking about Economic Inequality",
-      "et": "Majandusliku ebavõrdsuse keel"
+      "en": "The Circular Economy in Everyday Life",
+      "et": "Ringmajandus argielus"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-063:question:1",
-        "factKey": "built-in-politics-economics-society:inequality-measures:medium:measure:gini-coefficient",
+        "factKey": "economics:reverse-vending-machine:accepts-containers-returns-deposit-voucher",
         "tier": 1,
-        "subjectKey": "measure:gini-coefficient",
+        "subjectKey": "circular-economy:reverse-vending-machine",
         "clue": {
-          "en": "An inequality concept or policy summarises how unequal an income or wealth distribution is. Name it.",
-          "et": "Üks ebavõrdsuse mõiste või meede võtab kokku tulu või vara jaotuse ebavõrdsuse. Millist vastust otsime?"
+          "en": "Feed an empty bottle or can into this supermarket machine and it identifies the container, sorts it, and prints a deposit voucher. Name the machine.",
+          "et": "Sisesta tühi pudel või purk sellesse poe masinasse ning see tuvastab ja sorteerib pakendi ning prindib pandikviitungi. Nimeta masin."
         },
         "response": {
-          "en": "Gini coefficient",
-          "et": "Gini koefitsient"
+          "en": "reverse-vending machine",
+          "et": "taaraautomaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "bottle-return machine",
+            "deposit-return machine"
+          ],
+          "et": [
+            "pudeliautomaat",
+            "pandipakendiautomaat",
+            "pudelitagastusautomaat"
+          ]
         },
         "explanation": {
-          "en": "Gini coefficient ranges from perfect equality toward maximal concentration under its standard normalisation.",
-          "et": "Gini koefitsient ulatub tavapärases skaalas täielikust võrdsusest maksimaalse koondumiseni."
+          "en": "A reverse-vending machine accepts used drink containers and returns a deposit or reward after identifying and sorting them.",
+          "et": "Taaraautomaat võtab vastu kasutatud joogipakendid ning tagastab pärast nende tuvastamist ja sorteerimist pandiraha või muu tasu."
         },
         "source": {
-          "sourceId": "wikipedia:gini_coefficient",
-          "title": "Gini coefficient",
-          "url": "https://en.wikipedia.org/wiki/Gini_coefficient",
+          "sourceId": "wikipedia:reverse-vending-machine",
+          "title": "Reverse vending machine",
+          "url": "https://en.wikipedia.org/wiki/Reverse_vending_machine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-063:question:2",
-        "factKey": "built-in-politics-economics-society:inequality-measures:medium:measure:poverty-threshold",
+        "factKey": "society:repair-cafe:volunteers-help-visitors-fix-household-items",
         "tier": 2,
-        "subjectKey": "measure:poverty-threshold",
+        "subjectKey": "circular-economy:repair-cafe",
         "clue": {
-          "en": "This inequality concept or policy sets an income or consumption line used to count poverty. What is it?",
-          "et": "See ebavõrdsuse mõiste või meede seab tulu- või tarbimispiiri vaesuse loendamiseks. Mis see on?"
+          "en": "At this volunteer gathering, people bring broken lamps, toasters, clothes, or bicycles and learn to fix them over coffee instead of throwing them away. Name the idea.",
+          "et": "Sellele vabatahtlike kokkusaamisele tuuakse katkiseid lampe, röstereid, riideid või jalgrattaid ning õpitakse neid kohvi kõrval parandama, mitte ära viskama. Nimeta idee."
         },
         "response": {
-          "en": "poverty threshold",
-          "et": "vaesuspiir"
+          "en": "repair café",
+          "et": "remondikohvik"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Poverty threshold may be absolute for basic needs or relative to median living standards.",
-          "et": "Vaesuspiir võib olla absoluutne põhivajaduste või suhteline mediaanelatustaseme järgi."
+          "en": "A Repair Café is a free meeting place where visitors repair household items with tools and help from knowledgeable volunteers.",
+          "et": "Remondikohvik on tasuta kohtumispaik, kus külastajad parandavad tööriistade ja oskajate vabatahtlike abiga koduseid esemeid."
         },
         "source": {
-          "sourceId": "wikipedia:poverty_threshold",
-          "title": "Poverty threshold",
-          "url": "https://en.wikipedia.org/wiki/Poverty_threshold",
+          "sourceId": "wikipedia:repair-cafe",
+          "title": "Repair Café",
+          "url": "https://en.wikipedia.org/wiki/Repair_Caf%C3%A9",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-063:question:3",
-        "factKey": "built-in-politics-economics-society:inequality-measures:medium:concept:social-mobility",
+        "factKey": "economics:right-to-repair:access-to-parts-tools-information-software",
         "tier": 3,
-        "subjectKey": "concept:social-mobility",
+        "subjectKey": "circular-economy:right-to-repair",
         "clue": {
-          "en": "Identify the inequality concept or policy: it describes movement between social or economic positions.",
-          "et": "Mis ebavõrdsuse mõiste või meede kirjeldab liikumist ühiskondlike või majanduslike positsioonide vahel?"
+          "en": "Farmers, phone owners, and independent workshops invoke this campaign when manufacturers restrict manuals, spare parts, diagnostic tools, or software locks. Name the cause.",
+          "et": "Põllumehed, telefoniomanikud ja sõltumatud töökojad viitavad sellele liikumisele, kui tootjad piiravad juhendeid, varuosi, diagnostikatööriistu või tarkvaralukke. Nimeta eesmärk."
         },
         "response": {
-          "en": "social mobility",
-          "et": "sotsiaalne mobiilsus"
+          "en": "right to repair",
+          "et": "õigus parandada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "right-to-repair movement",
+            "repair rights"
+          ],
+          "et": [
+            "parandamisõigus",
+            "õigus remondile"
+          ]
         },
         "explanation": {
-          "en": "Social mobility can be measured within one lifetime or between parents and children.",
-          "et": "Sotsiaalne mobiilsus võib mõõta ühe elu jooksul või vanemate ja laste vahel."
+          "en": "The right to repair seeks to let consumers and independent technicians obtain the information, parts, and tools needed to fix products.",
+          "et": "Õigus parandada taotleb, et tarbijad ja sõltumatud tehnikud saaksid toodete parandamiseks vajaliku info, varuosad ja tööriistad."
         },
         "source": {
-          "sourceId": "wikipedia:social_mobility",
-          "title": "Social mobility",
-          "url": "https://en.wikipedia.org/wiki/Social_mobility",
+          "sourceId": "wikipedia:right-to-repair",
+          "title": "Right to repair",
+          "url": "https://en.wikipedia.org/wiki/Right_to_repair",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-063:question:4",
-        "factKey": "built-in-politics-economics-society:inequality-measures:medium:concept:wealth-tax",
+        "factKey": "economics:library-of-things:lends-occasional-use-household-objects",
         "tier": 4,
-        "subjectKey": "concept:wealth-tax",
+        "subjectKey": "circular-economy:library-of-things",
         "clue": {
-          "en": "One inequality concept or policy is levied on a stock of net assets rather than annual income. Which one is described?",
-          "et": "Ebavõrdsuse mõiste või meede maksustatakse netovara seisu, mitte aastast tulu. Mis see on?"
+          "en": "Instead of books, this lending service may put drills, sewing machines, tents, and cake tins on its shelves for neighbours to borrow. Name the model.",
+          "et": "Raamatute asemel võib see laenutus panna riiulitele trelle, õmblusmasinaid, telke ja koogivorme, mida naabrid saavad laenata. Nimeta mudel."
         },
         "response": {
-          "en": "wealth tax",
-          "et": "varamaks"
+          "en": "Library of Things",
+          "et": "asjade raamatukogu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tool library",
+            "thing library"
+          ],
+          "et": [
+            "tööriistaraamatukogu",
+            "esemelaenutus"
+          ]
         },
         "explanation": {
-          "en": "Wealth tax requires valuation of assets and subtraction of covered liabilities.",
-          "et": "Varamaks vajab vara hindamist ning hõlmatud kohustuste lahutamist."
+          "en": "A Library of Things lends useful objects that people need only occasionally, reducing the need for every household to buy its own.",
+          "et": "Asjade raamatukogu laenutab harva vajaminevaid kasulikke esemeid ning vähendab vajadust, et iga majapidamine need endale ostaks."
         },
         "source": {
-          "sourceId": "wikipedia:wealth_tax",
-          "title": "Wealth tax",
-          "url": "https://en.wikipedia.org/wiki/Wealth_tax",
+          "sourceId": "wikipedia:library-of-things",
+          "title": "Library of Things",
+          "url": "https://en.wikipedia.org/wiki/Library_of_Things",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-063:question:5",
-        "factKey": "built-in-politics-economics-society:inequality-measures:medium:concept:equal-pay-for-equal-work",
+        "factKey": "economics:pay-as-you-throw:waste-fee-linked-to-volume-or-weight",
         "tier": 5,
-        "subjectKey": "concept:equal-pay-for-equal-work",
+        "subjectKey": "circular-economy:pay-as-you-throw",
         "clue": {
-          "en": "Find the inequality concept or policy that requires comparable remuneration for the same or equivalent work.",
-          "et": "Ebavõrdsuse mõiste või meede nõuab sama või samaväärse töö eest võrreldavat tasu. Leia sobiv vastus."
+          "en": "Under this waste-pricing model, a household’s bill depends on the number, size, or weight of rubbish bags or bins it puts out. Name the principle.",
+          "et": "Selle jäätmehinnastamise mudeli puhul sõltub majapidamise arve välja pandud prügikottide või -kastide arvust, suurusest või kaalust. Nimeta põhimõte."
         },
         "response": {
-          "en": "equal pay for equal work",
-          "et": "võrdne palk võrdse töö eest"
+          "en": "pay as you throw",
+          "et": "maksa vastavalt prügikogusele"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "PAYT",
+            "unit-based waste pricing"
+          ],
+          "et": [
+            "kogusepõhine prügitasu",
+            "mahupõhine jäätmetasu",
+            "PAYT"
+          ]
         },
         "explanation": {
-          "en": "Equal pay for equal work addresses unjustified pay differences rather than requiring every occupation to pay alike.",
-          "et": "Võrdne palk võrdse töö eest käsitleb põhjendamata palgaerinevusi ega nõua kõigi ametite sama tasu."
+          "en": "Pay as you throw charges households according to the amount of non-recycled waste they present for collection.",
+          "et": "Kogusepõhine prügitasu seob majapidamise makse ringlusse võtmata jäätmete hulgaga, mis kogumiseks välja pannakse."
         },
         "source": {
-          "sourceId": "wikipedia:equal_pay_for_equal_work",
-          "title": "Equal pay for equal work",
-          "url": "https://en.wikipedia.org/wiki/Equal_pay_for_equal_work",
+          "sourceId": "wikipedia:pay-as-you-throw",
+          "title": "Pay as you throw",
+          "url": "https://en.wikipedia.org/wiki/Pay_as_you_throw",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -24331,153 +24584,201 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-064",
     "name": {
-      "en": "Guardrails of Democracy",
-      "et": "Demokraatia kaitsepiirded"
+      "en": "Toy-Aisle Booms and Bubbles",
+      "et": "Mänguasjaleti buumid ja mullid"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-064:question:1",
-        "factKey": "built-in-politics-economics-society:democratic-guardrails:medium:concept:freedom-of-press",
+        "factKey": "economics:pet-rock:1975-stone-cardboard-box-training-manual-fad",
         "tier": 1,
-        "subjectKey": "concept:freedom-of-press",
+        "subjectKey": "toy-craze:pet-rock",
         "clue": {
-          "en": "A democratic safeguard protects news gathering and publication from improper state control. Name it.",
-          "et": "Üks demokraatlik kaitsemehhanism kaitseb uudiste kogumist ja avaldamist kohatu riigikontrolli eest. Millist vastust otsime?"
+          "en": "A 1975 novelty craze sold an ordinary stone in a cardboard pet carrier complete with air holes and straw bedding. Name the product.",
+          "et": "1975. aasta naljabuum müüs tavalist kivi õhuaukude ja õlgedest asemega papist loomakanduris. Nimeta toode."
         },
         "response": {
-          "en": "freedom of the press",
-          "et": "ajakirjandusvabadus"
+          "en": "Pet Rock",
+          "et": "Pet Rock"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pet Rocks",
+            "the Pet Rock"
+          ],
+          "et": [
+            "lemmikkivi",
+            "Pet Rocki lemmikkivi"
+          ]
         },
         "explanation": {
-          "en": "Freedom of the press supports scrutiny but remains subject to general laws and professional duties.",
-          "et": "Ajakirjandusvabadus toetab järelevalvet, kuid allub üldseadustele ja kutsekohustustele."
+          "en": "Pet Rock creator Gary Dahl packaged stones as joke pets; the fad sold more than a million units in the mid-1970s.",
+          "et": "Pet Rocki looja Gary Dahl pakkis kivid naljalemmikuteks ning 1970. aastate keskel müüdi neid üle miljoni."
         },
         "source": {
-          "sourceId": "wikipedia:freedom_of_the_press",
-          "title": "Freedom of the press",
-          "url": "https://en.wikipedia.org/wiki/Freedom_of_the_press",
+          "sourceId": "wikipedia:pet-rock",
+          "title": "Pet Rock",
+          "url": "https://en.wikipedia.org/wiki/Pet_Rock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-064:question:2",
-        "factKey": "built-in-politics-economics-society:democratic-guardrails:medium:institution:political-opposition",
+        "factKey": "society:fidget-spinner:2017-bearing-centred-playground-fad",
         "tier": 2,
-        "subjectKey": "institution:political-opposition",
+        "subjectKey": "toy-craze:fidget-spinner-2017",
         "clue": {
-          "en": "Identify this democratic safeguard: it offers organised alternatives to the governing side.",
-          "et": "Kirjeldatud demokraatlik kaitsemehhanism pakub võimulolijatele organiseeritud alternatiive. Mis on selle nimi?"
+          "en": "In 2017, playgrounds filled with a pocket toy whose two or three lobes rotated around a central ball bearing between the fingers. Name the craze.",
+          "et": "2017. aastal täitusid koolihoovid taskumänguasjaga, mille kaks või kolm haru keerlesid sõrmede vahel keskse kuullaagri ümber. Nimeta hullus."
         },
         "response": {
-          "en": "political opposition",
-          "et": "poliitiline opositsioon"
+          "en": "fidget-spinner craze",
+          "et": "fidget spinner’i hullus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "fidget spinner fad",
+            "fidget-spinner boom",
+            "spinner craze",
+            "fidget spinner",
+            "fidget spinners"
+          ],
+          "et": [
+            "fidget spinner’i buum",
+            "spinner’i-hullus",
+            "spinnerimaania",
+            "fidget spinner"
+          ]
         },
         "explanation": {
-          "en": "Political opposition tests government through debate, questions, elections, and shadow proposals.",
-          "et": "Poliitiline opositsioon kontrollib valitsust debati, küsimuste, valimiste ja alternatiivsete ettepanekutega."
+          "en": "The fidget-spinner craze exploded in 2017; retailers reported high sales, while classroom disruption led some schools to ban the toys.",
+          "et": "Fidget spinner’i hullus plahvatas 2017. aastal; jaemüüjad teatasid suurest müügist, samal ajal kui tunnirahu häirimine tõi mõnes koolis kaasa mänguasja keelamise."
         },
         "source": {
-          "sourceId": "wikipedia:opposition_(politics)",
-          "title": "Opposition (politics)",
-          "url": "https://en.wikipedia.org/wiki/Opposition_(politics)",
+          "sourceId": "wikipedia:fidget-spinner",
+          "title": "Fidget spinner",
+          "url": "https://en.wikipedia.org/wiki/Fidget_spinner",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-064:question:3",
-        "factKey": "built-in-politics-economics-society:democratic-guardrails:medium:concept:term-limit",
+        "factKey": "economics:beanie-babies:collectible-plush-speculation-resale-collapse",
         "tier": 3,
-        "subjectKey": "concept:term-limit",
+        "subjectKey": "toy-bubble:beanie-babies",
         "clue": {
-          "en": "Which democratic safeguard caps how long or how often someone may hold an office?",
-          "et": "Tuvasta järgmine demokraatlik kaitsemehhanism: see piirab ametis olemise kestust või kordade arvu."
+          "en": "In the 1990s, collectors treated small pellet-filled plush animals with heart-shaped tags as investments, before resale prices collapsed. Name the bubble.",
+          "et": "1990. aastatel kohtlesid kollektsionäärid südamekujulise sildiga väikesi graanulitega täidetud pehmeid loomi investeeringuna, kuni järelturuhinnad kukkusid. Nimeta mull."
         },
         "response": {
-          "en": "term limit",
-          "et": "ametiaja piirang"
+          "en": "Beanie Babies bubble",
+          "et": "Beanie Babiesi mull"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Beanie Baby bubble",
+            "Beanie Babies craze",
+            "Beanie Babies speculation",
+            "Beanie Babies"
+          ],
+          "et": [
+            "Beanie Babiesi buum",
+            "Beanie Babiesi hullus",
+            "Beanie Babiesi spekulatsioon",
+            "Beanie Babies"
+          ]
         },
         "explanation": {
-          "en": "Term limit promotes rotation but can also remove experienced officeholders.",
-          "et": "Ametiaja piirang soodustab vahetumist, kuid võib kõrvaldada kogenud ametikandjad."
+          "en": "The Beanie Babies bubble grew from collecting and speculation in Ty plush toys, then burst around the end of the 1990s.",
+          "et": "Beanie Babiesi mull kasvas Ty pehmete mänguasjade kogumisest ja spekulatsioonist ning lõhkes 1990. aastate lõpus."
         },
         "source": {
-          "sourceId": "wikipedia:term_limit",
-          "title": "Term limit",
-          "url": "https://en.wikipedia.org/wiki/Term_limit",
+          "sourceId": "wikipedia:beanie-babies",
+          "title": "Beanie Babies",
+          "url": "https://en.wikipedia.org/wiki/Beanie_Babies",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-064:question:4",
-        "factKey": "built-in-politics-economics-society:democratic-guardrails:medium:institution:electoral-commission",
+        "factKey": "society:pogs:1990s-cardboard-disc-stack-slammer-game",
         "tier": 4,
-        "subjectKey": "institution:electoral-commission",
+        "subjectKey": "toy-craze:pogs-1990s",
         "clue": {
-          "en": "Name the democratic safeguard that administers elections separately from contestants’ direct control.",
-          "et": "Vihjes kirjeldatud demokraatlik kaitsemehhanism korraldab valimisi võistlejate otsesest kontrollist lahus. Mis see on?"
+          "en": "In the 1990s, players stacked printed cardboard discs and slammed a heavier piece onto them, keeping those that landed face-up. Name the collecting craze.",
+          "et": "1990. aastatel ladusid mängijad pildiga papist kettad virna ja lõid neile raskema kettaga, jättes endale pildipool üles maandunud tükid. Nimeta kogumishullus."
         },
         "response": {
-          "en": "independent electoral commission",
-          "et": "sõltumatu valimiskomisjon"
+          "en": "Pogs craze",
+          "et": "Pogide hullus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pog craze",
+            "milk-cap craze",
+            "Pogs"
+          ],
+          "et": [
+            "Pogide buum",
+            "Pog-maania",
+            "piimakorgimängu hullus",
+            "Pogid"
+          ]
         },
         "explanation": {
-          "en": "Independent electoral commission protects confidence through neutral registration, counting, and dispute procedures.",
-          "et": "Sõltumatu valimiskomisjon kaitseb usaldust erapooletu registreerimise, lugemise ja vaidlusmenetlusega."
+          "en": "The Pogs craze revived the milk-caps game: players used a slammer to flip stacks of collectible cardboard discs.",
+          "et": "Pogide hullus taaselustas piimakorgimängu, kus slammer’iga püüti kogutavate papiketaste virna ümber pöörata."
         },
         "source": {
-          "sourceId": "wikipedia:election_commission",
-          "title": "Election commission",
-          "url": "https://en.wikipedia.org/wiki/Election_commission",
+          "sourceId": "wikipedia:milk-caps-game",
+          "title": "Milk caps (game)",
+          "url": "https://en.wikipedia.org/wiki/Milk_caps_(game)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-064:question:5",
-        "factKey": "built-in-politics-economics-society:democratic-guardrails:medium:concept:government-transparency",
+        "factKey": "society:gogos-crazy-bones:collectible-plastic-knucklebone-game-pieces",
         "tier": 5,
-        "subjectKey": "concept:government-transparency",
+        "subjectKey": "toy-craze:gogos-crazy-bones",
         "clue": {
-          "en": "Recognise the democratic safeguard that makes official decisions, records, and reasons open to scrutiny.",
-          "et": "Otsitav demokraatlik kaitsemehhanism avab ametlikud otsused, dokumendid ja põhjendused kontrollile. Mis see on?"
+          "en": "Schoolchildren collected and traded colourful little plastic figures, then flicked or threw them in games descended from knucklebones. Name the craze.",
+          "et": "Koolilapsed kogusid ja vahetasid väikseid värvilisi plastkujukeid ning nipsutasid või viskasid neid sõrmeluumängust pärinevates mängudes. Nimeta hullus."
         },
         "response": {
-          "en": "government transparency",
-          "et": "valitsuse läbipaistvus"
+          "en": "Gogo's Crazy Bones craze",
+          "et": "Gogo’s Crazy Bonesi hullus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Crazy Bones craze",
+            "Gogo’s craze",
+            "Gogos craze",
+            "Gogo's Crazy Bones",
+            "Crazy Bones"
+          ],
+          "et": [
+            "Crazy Bonesi hullus",
+            "Gogo’de hullus",
+            "Gogose hullus",
+            "Gogo's Crazy Bones",
+            "Crazy Bones"
+          ]
         },
         "explanation": {
-          "en": "Government transparency reduces information asymmetry through disclosure and access-to-information rules.",
-          "et": "Valitsuse läbipaistvus vähendab teabe ebavõrdsust avalikustamise ja teabenõude reeglite kaudu."
+          "en": "Gogo’s Crazy Bones were collectible plastic playing pieces used in several playground games and traded in waves of popularity.",
+          "et": "Gogo’s Crazy Bones olid kogutavad plastist mängunupud, mida kasutati mitmes hoovimängus ja populaarsuslainetes vahetati."
         },
         "source": {
-          "sourceId": "wikipedia:transparency_(behavior)",
-          "title": "Transparency (behavior)",
-          "url": "https://en.wikipedia.org/wiki/Transparency_(behavior)",
+          "sourceId": "wikipedia:gogo-s-crazy-bones",
+          "title": "Gogo's Crazy Bones",
+          "url": "https://en.wikipedia.org/wiki/Gogo%27s_Crazy_Bones",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -24485,153 +24786,181 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-065",
     "name": {
-      "en": "Practical Tools against False Claims",
-      "et": "Praktilised tööriistad valeväidete vastu"
+      "en": "Addresses That Stand for Governments",
+      "et": "Aadressid, mis tähendavad valitsust"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-065:question:1",
-        "factKey": "built-in-politics-economics-society:verification-techniques:medium:technique:source-triangulation",
+        "factKey": "politics:white-house:us-president-residence-1600-pennsylvania-avenue",
         "tier": 1,
-        "subjectKey": "technique:source-triangulation",
+        "subjectKey": "government-address:white-house",
         "clue": {
-          "en": "A verification concept or technique checks a claim through multiple independent kinds of evidence. What term fits?",
-          "et": "Siin kirjeldatud kontrollimõiste või -võte kontrollib väidet mitme sõltumatu tõendiliigi kaudu. Mis see on?"
+          "en": "At 1600 Pennsylvania Avenue, this neoclassical residence lends its colour-based name to the US president’s administration. Name the building.",
+          "et": "Pennsylvania Avenue 1600 asuv neoklassitsistlik residents annab oma värvipõhise nime USA presidendi administratsioonile. Nimeta hoone."
         },
         "response": {
-          "en": "source triangulation",
-          "et": "allikate triangulatsioon"
+          "en": "White House",
+          "et": "Valge Maja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the White House"
+          ],
+          "et": [
+            "White House"
+          ]
         },
         "explanation": {
-          "en": "Source triangulation is stronger when sources do not merely copy one original report.",
-          "et": "Allikate triangulatsioon on tugevam, kui allikad ei kopeeri lihtsalt üht algset teadet."
+          "en": "The White House is the US president’s official residence and workplace at 1600 Pennsylvania Avenue in Washington, D.C.",
+          "et": "Valge Maja on USA presidendi ametlik residents ja töökoht aadressil Pennsylvania Avenue 1600 Washingtonis."
         },
         "source": {
-          "sourceId": "wikipedia:triangulation_(social_science)",
-          "title": "Triangulation (social science)",
-          "url": "https://en.wikipedia.org/wiki/Triangulation_(social_science)",
+          "sourceId": "wikipedia:white-house",
+          "title": "White House",
+          "url": "https://en.wikipedia.org/wiki/White_House",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-065:question:2",
-        "factKey": "built-in-politics-economics-society:verification-techniques:medium:technique:reverse-image-search",
+        "factKey": "politics:10-downing-street:uk-prime-minister-residence-office-black-door",
         "tier": 2,
-        "subjectKey": "technique:reverse-image-search",
+        "subjectKey": "government-address:10-downing-street",
         "clue": {
-          "en": "Recognise the verification concept or technique that finds earlier or related appearances of an uploaded image.",
-          "et": "Otsitav kontrollimõiste või -võte leiab üles laaditud pildi varasemaid või seotud esinemisi. Mis see on?"
+          "en": "The black front door bearing a white number is the official residence and office of the British prime minister. Give the London address.",
+          "et": "Valge numbriga must välisuks kuulub Briti peaministri ametlikule residentsile ja töökohale. Anna Londoni aadress."
         },
         "response": {
-          "en": "reverse image search",
-          "et": "pildi pöördotsing"
+          "en": "10 Downing Street",
+          "et": "Downing Street 10"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "10 Downing St",
+            "Number 10",
+            "No. 10 Downing Street"
+          ],
+          "et": [
+            "10 Downing Street",
+            "Number 10",
+            "Downing Streeti maja number 10"
+          ]
         },
         "explanation": {
-          "en": "Reverse image search can expose recycled photographs whose caption gives a false place or date.",
-          "et": "Pildi pöördotsing võib paljastada taaskasutatud foto, mille allkiri annab vale koha või aja."
+          "en": "10 Downing Street in Westminster is the official residence and executive office of the United Kingdom’s prime minister.",
+          "et": "Westminsteris asuv Downing Street 10 on Ühendkuningriigi peaministri ametlik residents ja töökoht."
         },
         "source": {
-          "sourceId": "wikipedia:reverse_image_search",
-          "title": "Reverse image search",
-          "url": "https://en.wikipedia.org/wiki/Reverse_image_search",
+          "sourceId": "wikipedia:10-downing-street",
+          "title": "10 Downing Street",
+          "url": "https://en.wikipedia.org/wiki/10_Downing_Street",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-065:question:3",
-        "factKey": "built-in-politics-economics-society:verification-techniques:medium:technology:deepfake",
+        "factKey": "politics:elysee-palace:french-president-official-residence-paris",
         "tier": 3,
-        "subjectKey": "technology:deepfake",
+        "subjectKey": "government-address:elysee-palace",
         "clue": {
-          "en": "Identify the verification concept or technique: it uses machine learning to create convincing synthetic media.",
-          "et": "Mis kontrollimõiste või -võte kasutab masinõpet veenva sünteetilise meedia loomiseks?"
+          "en": "France’s president works and lives in a Paris palace whose name recalls the blessed fields of Greek mythology. Name it.",
+          "et": "Prantsusmaa president töötab ja elab Pariisi palees, mille nimi meenutab Kreeka mütoloogia õndsate välju. Nimeta see."
         },
         "response": {
-          "en": "deepfake",
-          "et": "süvavõltsing"
+          "en": "Élysée Palace",
+          "et": "Élysée palee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Élysée",
+            "Elysee"
+          ],
+          "et": [
+            "Élysée"
+          ]
         },
         "explanation": {
-          "en": "Deepfake often maps or generates faces and voices rather than merely editing one pixel by hand.",
-          "et": "Süvavõltsing kaardistab või loob sageli nägusid ja hääli, mitte ei töötle üksikuid piksleid käsitsi."
+          "en": "The Élysée Palace is the official residence of the president of France and the site of the presidential office.",
+          "et": "Élysée palee on Prantsusmaa presidendi ametlik residents ja presidendikantselei asukoht."
         },
         "source": {
-          "sourceId": "wikipedia:deepfake",
-          "title": "Deepfake",
-          "url": "https://en.wikipedia.org/wiki/Deepfake",
+          "sourceId": "wikipedia:elysee-palace",
+          "title": "Élysée Palace",
+          "url": "https://en.wikipedia.org/wiki/%C3%89lys%C3%A9e_Palace",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-065:question:4",
-        "factKey": "built-in-politics-economics-society:verification-techniques:medium:concept:confirmation-bias",
+        "factKey": "politics:casa-rosada:argentine-president-workplace-buenos-aires-pink-house",
         "tier": 4,
-        "subjectKey": "concept:confirmation-bias",
+        "subjectKey": "government-address:casa-rosada",
         "clue": {
-          "en": "A verification concept or technique favours evidence that supports an existing belief. Name it.",
-          "et": "Üks kontrollimõiste või -võte eelistab tõendeid, mis toetavad olemasolevat uskumust. Millist vastust otsime?"
+          "en": "Argentina’s president works in a baby-pink Buenos Aires palace whose Spanish name literally means “the pink house”. Name it.",
+          "et": "Argentina president töötab Buenos Airese heleroosas palees, mille hispaaniakeelne nimi tähendab sõna-sõnalt „roosat maja”. Nimeta see."
         },
         "response": {
-          "en": "confirmation bias",
-          "et": "kinnituskallutatus"
+          "en": "Casa Rosada",
+          "et": "Casa Rosada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Casa Rosada"
+          ],
+          "et": [
+            "Casa Rosada palee"
+          ]
         },
         "explanation": {
-          "en": "Confirmation bias affects search, interpretation, and memory, not only deliberate source choice.",
-          "et": "Kinnituskallutatus mõjutab otsingut, tõlgendust ja mälu, mitte üksnes teadlikku allikavalikut."
+          "en": "The Casa Rosada is the Argentine president’s official workplace in Buenos Aires; its name means “the pink house” and its characteristic colour is baby pink.",
+          "et": "Casa Rosada on Argentina presidendi ametlik töökoht Buenos Aireses; selle nimi tähendab „roosat maja” ja hoone tunnusvärv on heleroosa."
         },
         "source": {
-          "sourceId": "wikipedia:confirmation_bias",
-          "title": "Confirmation bias",
-          "url": "https://en.wikipedia.org/wiki/Confirmation_bias",
+          "sourceId": "wikipedia:casa-rosada",
+          "title": "Casa Rosada",
+          "url": "https://en.wikipedia.org/wiki/Casa_Rosada",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-065:question:5",
-        "factKey": "built-in-politics-economics-society:verification-techniques:medium:concept:clickbait",
+        "factKey": "politics:moncloa-palace:spanish-prime-minister-residence-workplace-madrid",
         "tier": 5,
-        "subjectKey": "concept:clickbait",
+        "subjectKey": "government-address:moncloa-palace",
         "clue": {
-          "en": "Identify this verification concept or technique: it uses a sensational or incomplete headline to provoke a click.",
-          "et": "Kirjeldatud kontrollimõiste või -võte kasutab kliki saamiseks sensatsioonilist või poolikut pealkirja. Mis on selle nimi?"
+          "en": "News reports use the name of this Madrid palace as shorthand for Spain’s prime minister and government, much as London uses Downing Street. Name it.",
+          "et": "Uudistes kasutatakse selle Madridi palee nime Hispaania peaministri ja valitsuse lühendnimena, nagu Londonis Downing Streeti. Nimeta palee."
         },
         "response": {
-          "en": "clickbait",
-          "et": "klikipeibutus"
+          "en": "Palace of Moncloa",
+          "et": "Moncloa palee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "La Moncloa",
+            "Moncloa Palace"
+          ],
+          "et": [
+            "La Moncloa",
+            "Palacio de la Moncloa",
+            "Moncloa"
+          ]
         },
         "explanation": {
-          "en": "Clickbait exploits a curiosity gap while often withholding the key fact.",
-          "et": "Klikipeibutus kasutab uudishimulõhet ning jätab sageli põhilise fakti pealkirjast välja."
+          "en": "The Palace of Moncloa is the official residence and principal workplace of Spain’s prime minister.",
+          "et": "Moncloa palee on Hispaania peaministri ametlik residents ja peamine töökoht."
         },
         "source": {
-          "sourceId": "wikipedia:clickbait",
-          "title": "Clickbait",
-          "url": "https://en.wikipedia.org/wiki/Clickbait",
+          "sourceId": "wikipedia:palace-of-moncloa",
+          "title": "Palace of Moncloa",
+          "url": "https://en.wikipedia.org/wiki/Palace_of_Moncloa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
@@ -24639,157 +24968,188 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-politics-economics-society-set-066",
     "name": {
-      "en": "Cooperation around the Baltic and Nordic Region",
-      "et": "Läänemere ja Põhjala koostöö"
+      "en": "Diplomacy's Oddest Headlines",
+      "et": "Diplomaatia veidraimad pealkirjad"
     },
     "questions": [
       {
         "key": "built-in-politics-economics-society-set-066:question:1",
-        "factKey": "built-in-politics-economics-society:northern-european-cooperation:medium:organization:nordic-council",
+        "factKey": "politics:bush-vomiting:1992-japan-dinner-miyazawa-lap",
         "tier": 1,
-        "subjectKey": "organization:nordic-council",
+        "subjectKey": "diplomatic-moment:bush-vomiting-incident",
         "clue": {
-          "en": "Name the regional institution or system that brings together parliamentarians from the Nordic countries.",
-          "et": "Vihjes kirjeldatud piirkondlik institutsioon või süsteem ühendab Põhjamaade parlamendiliikmeid. Mis see on?"
+          "en": "At a 1992 state dinner in Japan, a US president became ill and vomited into Prime Minister Kiichi Miyazawa’s lap before fainting. Name the diplomatic mishap.",
+          "et": "1992. aasta riigiõhtusöögil Jaapanis hakkas USA presidendil halb ning ta oksendas peaminister Kiichi Miyazawa sülle ja minestas. Nimeta diplomaatiline äpardus."
         },
         "response": {
-          "en": "Nordic Council",
-          "et": "Põhjamaade Nõukogu"
+          "en": "George H. W. Bush vomiting incident",
+          "et": "George H. W. Bushi oksendamisjuhtum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bush vomiting incident",
+            "Bush Japan vomiting incident",
+            "Bush banquet incident"
+          ],
+          "et": [
+            "Bushi oksendamisjuhtum",
+            "Bushi Jaapani banketijuhtum",
+            "Bushi banketijuhtum"
+          ]
         },
         "explanation": {
-          "en": "Nordic Council works alongside a separate intergovernmental council of ministers.",
-          "et": "Põhjamaade Nõukogu tegutseb valitsustevahelise Põhjamaade Ministrite Nõukogu kõrval."
+          "en": "The George H. W. Bush vomiting incident occurred at a Tokyo banquet after the president became acutely ill during a tour of Asia.",
+          "et": "George H. W. Bushi oksendamisjuhtum leidis aset Tokyo banketil, kui presidendil hakkas Aasia-visiidi ajal ootamatult halb."
         },
         "source": {
-          "sourceId": "wikipedia:nordic_council",
-          "title": "Nordic Council",
-          "url": "https://en.wikipedia.org/wiki/Nordic_Council",
+          "sourceId": "wikipedia:george-h-w-bush-vomiting-incident",
+          "title": "George H. W. Bush vomiting incident",
+          "url": "https://en.wikipedia.org/wiki/George_H._W._Bush_vomiting_incident",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-066:question:2",
-        "factKey": "built-in-politics-economics-society:northern-european-cooperation:medium:organization:baltic-assembly",
+        "factKey": "politics:khrushchev-shoe:1960-un-outburst-disputed-desk-strike",
         "tier": 2,
-        "subjectKey": "organization:baltic-assembly",
+        "subjectKey": "diplomatic-moment:khrushchev-shoe-banging",
         "clue": {
-          "en": "Identify this regional institution or system: it joins parliamentarians from Estonia, Latvia, and Lithuania.",
-          "et": "Kirjeldatud piirkondlik institutsioon või süsteem ühendab Eesti, Läti ja Leedu parlamendiliikmeid. Mis on selle nimi?"
+          "en": "At the United Nations in 1960, Soviet leader Nikita Khrushchev was reported to have brandished or struck the desk with an item of footwear during an angry debate. Name the incident.",
+          "et": "1960. aastal ÜRO-s olevat Nõukogude juht Nikita Hruštšov vihase vaidluse ajal jalatsit viibutanud või sellega lauale tagunud. Nimeta juhtum."
         },
         "response": {
-          "en": "Baltic Assembly",
-          "et": "Balti Assamblee"
+          "en": "shoe-banging incident",
+          "et": "Hruštšovi kingaga tagumise juhtum"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Khrushchev shoe banging",
+            "Khrushchev’s shoe incident"
+          ],
+          "et": [
+            "Hruštšovi kingajuhtum",
+            "kingaga tagumine",
+            "kingajuhtum"
+          ]
         },
         "explanation": {
-          "en": "Baltic Assembly coordinates recommendations while national parliaments retain lawmaking power.",
-          "et": "Balti Assamblee koordineerib soovitusi, jättes seadusloome riikide parlamentidele."
+          "en": "The shoe-banging incident refers to Khrushchev’s outburst at the UN General Assembly; accounts and photographs leave the exact desk-banging claim disputed.",
+          "et": "Kingaga tagumise juhtum viitab Hruštšovi purskele ÜRO Peaassambleel; fotod ja mälestused ei kinnita üheselt, kas ta lõi kingaga lauale."
         },
         "source": {
-          "sourceId": "wikipedia:baltic_assembly",
-          "title": "Baltic Assembly",
-          "url": "https://en.wikipedia.org/wiki/Baltic_Assembly",
+          "sourceId": "wikipedia:shoe-banging-incident",
+          "title": "Shoe-banging incident",
+          "url": "https://en.wikipedia.org/wiki/Shoe-banging_incident",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-066:question:3",
-        "factKey": "built-in-politics-economics-society:northern-european-cooperation:medium:organization:schengen-area",
+        "factKey": "politics:russian-reset:clinton-lavrov-button-mistranslated-overcharge",
         "tier": 3,
-        "subjectKey": "organization:schengen-area",
+        "subjectKey": "diplomatic-prop:russian-reset-button",
         "clue": {
-          "en": "Which regional institution or system removes routine internal-border checks among participating European states?",
-          "et": "Tuvasta järgmine piirkondlik institutsioon või süsteem: see kaotab osalevate Euroopa riikide vahel tavapärase sisepiirikontrolli."
+          "en": "In 2009 Hillary Clinton handed Sergei Lavrov a red button meant to say “reset”, but its Russian label actually meant “overload.” Name the prop.",
+          "et": "2009. aastal ulatas Hillary Clinton Sergei Lavrovile punase nupu, mis pidi ütlema „taaskäivitus”, kuid venekeelne silt tähendas tegelikult „ülekoormust”. Nimeta rekvisiit."
         },
         "response": {
-          "en": "Schengen Area",
-          "et": "Schengeni ala"
+          "en": "Russian reset",
+          "et": "USA–Venemaa reset-nupp"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Russian reset button",
+            "US-Russia reset button",
+            "reset-button mistranslation"
+          ],
+          "et": [
+            "Vene reset-nupp",
+            "USA-Venemaa taaskäivitusnupp",
+            "reset-nupu tõlkeviga"
+          ]
         },
         "explanation": {
-          "en": "Schengen Area pairs free internal travel with common external-border and information arrangements.",
-          "et": "Schengeni ala ühendab vaba siseliikumise ühiste välispiiri- ja teabekorraldustega."
+          "en": "The US–Russia reset button symbolised an attempted fresh start, but the Russian word printed on it was mistranslated.",
+          "et": "USA–Venemaa reset-nupp pidi sümboliseerima uut algust, kuid sellele trükitud venekeelne sõna oli valesti tõlgitud."
         },
         "source": {
-          "sourceId": "wikipedia:schengen_area",
-          "title": "Schengen Area",
-          "url": "https://en.wikipedia.org/wiki/Schengen_Area",
+          "sourceId": "wikipedia:russian-reset",
+          "title": "Russian reset",
+          "url": "https://en.wikipedia.org/wiki/Russian_reset",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-066:question:4",
-        "factKey": "built-in-politics-economics-society:northern-european-cooperation:medium:organization:arctic-council",
+        "factKey": "politics:sofagate:ankara-two-chairs-von-der-leyen-sofa",
         "tier": 4,
-        "subjectKey": "organization:arctic-council",
+        "subjectKey": "diplomatic-moment:sofagate",
         "clue": {
-          "en": "Which forum brings together the eight Arctic states and gives Indigenous organisations permanent-participant status?",
-          "et": "Milline foorum ühendab kaheksat Arktika riiki ja annab põlisrahvaste organisatsioonidele alalise osaleja staatuse?"
+          "en": "At a 2021 EU visit to Ankara, two male leaders took the only two armchairs while Commission president Ursula von der Leyen was left to sit on a sofa. What nickname did the seating row receive?",
+          "et": "2021. aasta EL-i visiidil Ankarasse võtsid kaks meesjuhti ainsad kaks tugitooli ning komisjoni president Ursula von der Leyen pidi istuma diivanile. Millise hüüdnime sai istumisvaidlus?"
         },
         "response": {
-          "en": "Arctic Council",
-          "et": "Arktika Nõukogu"
+          "en": "Sofagate",
+          "et": "Sofagate"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "sofa gate",
+            "EU Sofagate incident"
+          ],
+          "et": [
+            "sofa gate",
+            "EL-i Sofagate’i juhtum"
+          ]
         },
         "explanation": {
-          "en": "The Arctic Council is an intergovernmental forum for cooperation on issues such as environmental protection and sustainable development.",
-          "et": "Arktika Nõukogu on valitsustevaheline foorum, kus tehakse koostööd muu hulgas keskkonnakaitse ja kestliku arengu alal."
+          "en": "Sofagate was the controversy over seating Ursula von der Leyen apart from Charles Michel and Recep Tayyip Erdoğan during an Ankara meeting.",
+          "et": "Sofagate oli vaidlus Ursula von der Leyeni paigutamise üle Ankaras Charles Michelist ja Recep Tayyip Erdoğanist eraldi diivanile."
         },
         "source": {
-          "sourceId": "wikipedia:arctic_council",
-          "title": "Arctic Council",
-          "url": "https://en.wikipedia.org/wiki/Arctic_Council",
+          "sourceId": "wikipedia:sofagate",
+          "title": "Sofagate",
+          "url": "https://en.wikipedia.org/wiki/Sofagate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       },
       {
         "key": "built-in-politics-economics-society-set-066:question:5",
-        "factKey": "built-in-politics-economics-society:northern-european-cooperation:medium:organization:barents-euro-arctic-council",
+        "factKey": "politics:shamrock-summit:1985-reagan-mulroney-irish-eyes-song",
         "tier": 5,
-        "subjectKey": "organization:barents-euro-arctic-council",
+        "subjectKey": "diplomatic-summit:shamrock-summit",
         "clue": {
-          "en": "Which intergovernmental body, founded in 1993, coordinates cooperation in the Barents Region?",
-          "et": "Milline 1993. aastal loodud valitsustevaheline organ koordineerib koostööd Barentsi piirkonnas?"
+          "en": "Ronald Reagan and Canada’s Brian Mulroney gave this 1985 Quebec meeting its Irish nickname, even singing “When Irish Eyes Are Smiling” together at the gala. Name the summit.",
+          "et": "Ronald Reagan ja Kanada peaminister Brian Mulroney andsid 1985. aasta Quebeci kohtumisele iiripärase hüüdnime ning laulsid galal koos „When Irish Eyes Are Smiling”. Nimeta tippkohtumine."
         },
         "response": {
-          "en": "Barents Euro-Arctic Council",
-          "et": "Barentsi Euro-Arktika Nõukogu"
+          "en": "Shamrock Summit",
+          "et": "Shamrock Summit"
         },
         "acceptedVariants": {
           "en": [
-            "BEAC"
+            "the Shamrock Summit",
+            "Shamrock summit meeting"
           ],
           "et": [
-            "BEAC"
+            "Shamrocki tippkohtumine",
+            "ristikheina tippkohtumine"
           ]
         },
         "explanation": {
-          "en": "The Barents Euro-Arctic Council promotes stability and sustainable development through cooperation among governments in the region.",
-          "et": "Barentsi Euro-Arktika Nõukogu edendab piirkonna valitsuste koostöö kaudu stabiilsust ja kestlikku arengut."
+          "en": "The Shamrock Summit was the 1985 Reagan–Mulroney meeting in Quebec City, remembered for the leaders’ conspicuous Irish-themed friendship.",
+          "et": "Shamrock Summit oli Reagani ja Mulroney 1985. aasta kohtumine Quebecis, mida meenutatakse juhtide silmatorkavalt iiripärase sõpruse poolest."
         },
         "source": {
-          "sourceId": "wikipedia:barents_euro-arctic_council",
-          "title": "Barents Euro-Arctic Council",
-          "url": "https://en.wikipedia.org/wiki/Barents_Euro-Arctic_Council",
+          "sourceId": "wikipedia:shamrock-summit",
+          "title": "Shamrock Summit",
+          "url": "https://en.wikipedia.org/wiki/Shamrock_Summit",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-01"
         }
       }
     ]
