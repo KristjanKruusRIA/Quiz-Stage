@@ -15411,8 +15411,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "printer:inkjet",
         "clue": {
-          "en": "What printing method gives a desktop photo printer smooth colour gradients by firing controlled microscopic drops of liquid ink, without the impact pins used for multipart invoices?",
-          "et": "Milline trükiviis annab lauaprinterile sujuvad värviüleminekud, paisates paberile juhitult mikroskoopilisi vedela tindi piisakesi, mitte kasutades mitmeosaliste arvete jaoks mõeldud lööknõelu?"
+          "en": "What printer family includes continuous systems that recycle unused charged droplets and drop-on-demand systems that expel ink only when needed?",
+          "et": "Millises printeriperes kasutatakse nii pideva tindijoaga süsteeme, kus kasutamata laetud piisad suunatakse korduskasutusse, kui ka vajaduspõhiseid süsteeme, mis väljutavad tinti ainult vajaduse korral?"
         },
         "response": {
           "en": "inkjet printer",
@@ -15423,8 +15423,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["tindipritsprinter"]
         },
         "explanation": {
-          "en": "Inkjet printers create an image from controlled droplets of ink, making compact colour printing practical at home.",
-          "et": "Tindiprinter loob pildi juhitavatest tindipiiskadest, mis tegi kompaktse värvitrüki kodus praktiliseks."
+          "en": "Inkjet printers propel fine droplets. Continuous systems form a stream and recycle unused drops, while drop-on-demand systems expel individual drops as needed.",
+          "et": "Tindiprinterid paiskavad pinnale peeneid tindipiisku. Pideva joaga süsteem moodustab tindivoo ja suunab kasutamata piisad korduskasutusse, vajaduspõhine süsteem väljutab üksikuid piisku tarviduse järgi."
         },
         "source": {
           "sourceId": "wikipedia:inkjet-printing",
@@ -15469,8 +15469,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "printer:thermal",
         "clue": {
-          "en": "What kind of receipt printer makes an image by selectively heating coated paper—a medium that may darken from incidental heat or friction and whose printed image can fade in light?",
-          "et": "Milline kviitungiprinter tekitab kujutise spetsiaalse kattega paberit valikuliselt kuumutades, kusjuures paber võib juhusliku kuumuse või hõõrdumise tõttu tumeneda ja trükipilt valguse käes pleekida?"
+          "en": "A hospital sonogram can turn completely black when laminated because its coated paper reacts to the laminator's heat. What kind of printer produced it?",
+          "et": "Haigla ultrahelipilt võib lamineerimisel üleni mustaks muutuda, sest selle kattega paber reageerib laminaatori kuumusele. Millise printeriga see trükiti?"
         },
         "response": {
           "en": "direct thermal printer",
@@ -15498,8 +15498,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "printer:dot-matrix",
         "clue": {
-          "en": "What noisy office printer became useful wherever carbon duplicates were required, because its matrix of pins struck an ink ribbon against the paper?",
-          "et": "Milline lärmakas kontoriprinter oli vajalik seal, kus nõuti kopeerpaberiga duplikaate, sest selle nõelmaatriks lõi tindilinti vastu paberit?"
+          "en": "What noisy impact printer remained useful for invoices because it could make several carbon copies in one pass?",
+          "et": "Milline lärmakas löökprinter jäi arvete trükkimisel kasulikuks, sest suutis ühe korraga teha mitu kopeerpaberiga eksemplari?"
         },
         "response": {
           "en": "dot-matrix printer",
@@ -15565,8 +15565,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:smoke-detector",
         "clue": {
-          "en": "What early-warning device can use either a photoelectric light path or an ionisation chamber to detect airborne smoke particles before flames become obvious?",
-          "et": "Milline varajase hoiatuse seade võib õhus hõljuvaid suitsuosakesi tuvastada kas fotoelektrilise valgusraja või ionisatsioonikambri abil enne, kui leegid muutuvad ilmseks?"
+          "en": "What early-warning device may detect combustion aerosols either by interrupting a photoelectric light path or by changing the current in an ionisation chamber?",
+          "et": "Milline varajase hoiatuse seade võib põlemisel tekkinud õhuosakesi tuvastada kas fotoelektrilise valgusraja katkemise või ionisatsioonikambri voolu muutumise järgi?"
         },
         "response": {
           "en": "smoke detector",
@@ -15594,8 +15594,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "system:fire-sprinkler",
         "clue": {
-          "en": "In a hotel fire, what system can send water only from heads heated near the blaze rather than drenching every room, because each sprinkler head operates independently?",
-          "et": "Milline süsteem võib hotellipõlengus lasta vett ainult tulekolde lähedal kuumenenud peadest, mitte uputada korraga kõiki ruume, sest iga sprinkleripea töötab iseseisvalt?"
+          "en": "In a hotel fire, what system can release water only from ceiling heads heated near the blaze because each head operates independently?",
+          "et": "Milline süsteem võib hotellipõlengus lasta vett ainult tulekolde lähedal kuumenenud laeotsikutest, sest iga otsik rakendub eraldi?"
         },
         "response": {
           "en": "fire sprinkler system",
@@ -16181,8 +16181,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "device:hearing-aid",
         "clue": {
-          "en": "What device is individually fitted and programmed for hearing loss, yet still works through the same chain of microphone, amplifier, and receiver worn in or behind the ear?",
-          "et": "Milline seade kohandatakse ja programmeeritakse inimese kuulmislanguse järgi, kuid töötab siiski kõrvas või kõrva taga mikrofoni, võimendi ja vastuvõtja ahelaga?"
+          "en": "What ear-worn device has its gain programmed from an audiogram and can be checked with a probe-tube real-ear measurement during fitting?",
+          "et": "Millise kõrvas kantava seadme võimendus programmeeritakse audiogrammi järgi ja mida saab kohandamisel kontrollida sonditoruga tehtava päriskõrva mõõtmisega?"
         },
         "response": {
           "en": "hearing aid",
@@ -16210,8 +16210,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "device:prosthetic-limb",
         "clue": {
-          "en": "What artificial arm or leg may be custom-built for a runner, a particular trade, or everyday walking, rather than serving only as a cosmetic replacement?",
-          "et": "Millist puuduva käe või jala kunstlikku asendust saab valmistada jooksjale, kindla ameti jaoks või igapäevaseks kõndimiseks, mitte ainult välimuse taastamiseks?"
+          "en": "What limb-replacement category ranges from passive cosmetic devices through body-powered hooks to myoelectric models, with designs tailored to a sport or occupation?",
+          "et": "Milline jäset asendav seadmeliik ulatub passiivsetest kosmeetilistest lahendustest kehajõul töötavate konksude ja müoelektriliste mudeliteni ning mida saab kohandada spordiala või ameti järgi?"
         },
         "response": {
           "en": "prosthetic limb",
