@@ -37503,161 +37503,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-067",
     "name": {
-      "en": "Before the Gods of Babylon",
-      "et": "Enne Babüloni jumalate võitu"
+      "en": "Mythical Beings and Beasts",
+      "et": "Müütilised olendid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-067:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:enuma-elish",
+        "factKey": "creature:unicorn:horse-like-single-horn",
         "tier": 1,
-        "subjectKey": "text:enuma-elish",
+        "subjectKey": "creature:unicorn",
         "clue": {
-          "en": "Which Babylonian creation epic opens with the words usually translated as “When on high”?",
-          "et": "Milline Babüloonia loomiseepos algab sõnadega, mida tõlgitakse tavaliselt „Kui kõrgel“?"
+          "en": "Which legendary horse-like creature is recognized by the single horn on its forehead?",
+          "et": "Millise legendaarse hobusesarnase olendi tunneb ära ühe sarve järgi laubal?"
         },
         "response": {
-          "en": "Enūma Eliš",
-          "et": "Enūma Eliš"
+          "en": "unicorn",
+          "et": "ükssarvik"
         },
         "acceptedVariants": {
           "en": [
-            "Enuma Elish"
+            "a unicorn"
           ],
           "et": [
-            "Enuma Eliš"
+            "unicorn"
           ]
         },
         "explanation": {
-          "en": "Enūma Eliš tells how Marduk defeats primordial chaos and orders the cosmos.",
-          "et": "Enūma Eliš jutustab, kuidas Marduk võidab ürgse kaose ja korrastab maailma."
+          "en": "A unicorn is a legendary horse-like creature defined by a single horn on its forehead.",
+          "et": "Ükssarvik on legendaarne hobusesarnane olend, kelle tunnuseks on üks sarv laubal."
         },
         "source": {
-          "sourceId": "wikipedia:en%c5%abma_eli%c5%a1",
-          "title": "Enūma Eliš",
-          "url": "https://en.wikipedia.org/wiki/En%C5%ABma_Eli%C5%A1",
+          "sourceId": "wikipedia:unicorn",
+          "title": "Unicorn",
+          "url": "https://en.wikipedia.org/wiki/Unicorn",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-067:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:deity:kingu",
+        "factKey": "creature:centaur:human-upper-horse-lower",
         "tier": 2,
-        "subjectKey": "deity:kingu",
+        "subjectKey": "creature:centaur",
         "clue": {
-          "en": "Who leads Tiamat’s forces and carries the Tablet of Destinies before Marduk defeats him?",
-          "et": "Kes juhib Tiamati väge ning kannab Saatuste tahvlit, kuni Marduk ta võidab?"
+          "en": "Which creature from Greek mythology has a human upper body joined to the lower body and legs of a horse?",
+          "et": "Millisel Kreeka mütoloogia olendil on inimese ülakeha ning hobuse alakeha ja jalad?"
         },
         "response": {
-          "en": "Kingu",
-          "et": "Kingu"
+          "en": "centaur",
+          "et": "kentaur"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a centaur"
+          ],
+          "et": [
+            "centaur"
+          ]
         },
         "explanation": {
-          "en": "Babylonian tradition makes humankind from Kingu’s blood after the divine battle.",
-          "et": "Babüloonia pärimuses luuakse pärast jumalate lahingut inimkond Kingu verest."
+          "en": "A centaur is a Greek mythological creature with a human upper body and a horse’s lower body and legs.",
+          "et": "Kentaur on Kreeka mütoloogia olend, kellel on inimese ülakeha ning hobuse alakeha ja jalad."
         },
         "source": {
-          "sourceId": "wikipedia:kingu",
-          "title": "Kingu",
-          "url": "https://en.wikipedia.org/wiki/Kingu",
+          "sourceId": "wikipedia:centaur",
+          "title": "Centaur",
+          "url": "https://en.wikipedia.org/wiki/Centaur",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-067:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:deity:lahmu",
+        "factKey": "creature:griffin:eagle-lion-hybrid",
         "tier": 3,
-        "subjectKey": "deity:lahmu",
+        "subjectKey": "creature:griffin",
         "clue": {
-          "en": "Which bearded primordial deity is born from Apsu and Tiamat before the younger gods?",
-          "et": "Milline habemik ürgjumal sünnib Apsust ja Tiamatist enne nooremaid jumalaid?"
+          "en": "Which legendary hybrid combines a lion’s body with an eagle’s head and wings?",
+          "et": "Milline legendaarne hübriid ühendab lõvi keha kotka pea ja tiibadega?"
         },
         "response": {
-          "en": "Lahmu",
-          "et": "Lahmu"
+          "en": "griffin",
+          "et": "greif"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a griffin",
+            "gryphon",
+            "a gryphon"
+          ],
+          "et": [
+            "grifoon"
+          ]
         },
         "explanation": {
-          "en": "Lahmu and Lahamu form an early divine pair in the genealogy of Enūma Eliš.",
-          "et": "Lahmu ja Lahamu moodustavad Enūma Eliši jumalikus sugupuus varase paari."
+          "en": "A griffin is a legendary lion-and-eagle hybrid; its name can also be spelled “gryphon”.",
+          "et": "Greif on legendaarne lõvi ja kotka hübriid; selle nime üks teine kirjapilt on „grifoon”."
         },
         "source": {
-          "sourceId": "wikipedia:lahmu",
-          "title": "Lahmu",
-          "url": "https://en.wikipedia.org/wiki/Lahmu",
+          "sourceId": "wikipedia:griffin",
+          "title": "Griffin",
+          "url": "https://en.wikipedia.org/wiki/Griffin",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-067:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:apsu",
+        "factKey": "creature:harpy:woman-bird-form",
         "tier": 4,
-        "subjectKey": "deity:apsu",
+        "subjectKey": "creature:harpy",
         "clue": {
-          "en": "What primordial freshwater deep is paired with Tiamat in Mesopotamian creation tradition?",
-          "et": "Milline ürgne mageveesügavik moodustab Mesopotaamia loomispärimuses paari Tiamatiga?"
+          "en": "Which half-human, half-bird creature of Greek and Roman myth was often regarded as a personification of storm winds?",
+          "et": "Millist Kreeka ja Rooma mütoloogia pooleldi inimese ja pooleldi linnu kujulist olendit peeti sageli tormituulte kehastuseks?"
         },
         "response": {
-          "en": "Apsu",
-          "et": "Apsu"
+          "en": "harpy",
+          "et": "harpüia"
         },
         "acceptedVariants": {
           "en": [
-            "Abzu"
+            "a harpy"
           ],
           "et": [
-            "Abzu"
+            "harpy"
           ]
         },
         "explanation": {
-          "en": "The Abzu or Apsu was also imagined as subterranean fresh water beneath the earth.",
-          "et": "Abzut ehk Apsut kujutleti ka maa all asuva mageveena."
+          "en": "A harpy is a half-human, half-bird creature of Greek and Roman mythology that was often regarded as a personification of storm winds.",
+          "et": "Harpüia on Kreeka ja Rooma mütoloogia pooleldi inimese ja pooleldi linnu kujuline olend, keda peeti sageli tormituulte kehastuseks."
         },
         "source": {
-          "sourceId": "wikipedia:abzu",
-          "title": "Abzu",
-          "url": "https://en.wikipedia.org/wiki/Abzu",
+          "sourceId": "wikipedia:harpy",
+          "title": "Harpy",
+          "url": "https://en.wikipedia.org/wiki/Harpy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-067:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:object:tablet-of-destinies",
+        "factKey": "creature:dryad:greek-tree-nymph",
         "tier": 5,
-        "subjectKey": "object:tablet-of-destinies",
+        "subjectKey": "creature:dryad",
         "clue": {
-          "en": "Possession of which inscribed object confers supreme authority in several Mesopotamian myths?",
-          "et": "Millise kirjadega eseme valdamine annab mitmes Mesopotaamia müüdis ülima võimu?"
+          "en": "Which Greek nature spirit is connected to a tree, originally especially an oak?",
+          "et": "Milline Kreeka loodusvaim on seotud puuga, algselt eriti tammega?"
         },
         "response": {
-          "en": "Tablet of Destinies",
-          "et": "Saatuste tahvel"
+          "en": "dryad",
+          "et": "drüaad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a dryad",
+            "tree nymph"
+          ],
+          "et": [
+            "puunümf"
+          ]
         },
         "explanation": {
-          "en": "The Tablet of Destinies embodies control over cosmic order and decrees.",
-          "et": "Saatuste tahvel kehastab võimu kosmilise korra ja otsuste üle."
+          "en": "A dryad is a tree nymph or spirit from Greek mythology; the term originally referred especially to oak-tree spirits.",
+          "et": "Drüaad on Kreeka mütoloogia puunümf või -vaim; algselt tähistas sõna eriti tammedega seotud vaime."
         },
         "source": {
-          "sourceId": "wikipedia:tablet_of_destinies",
-          "title": "Tablet of Destinies",
-          "url": "https://en.wikipedia.org/wiki/Tablet_of_Destinies",
+          "sourceId": "wikipedia:dryad",
+          "title": "Dryad",
+          "url": "https://en.wikipedia.org/wiki/Dryad",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -37665,157 +37680,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-068",
     "name": {
-      "en": "Passing through the Egyptian Afterlife",
-      "et": "Teekond Egiptuse teispoolsuses"
+      "en": "Bad-Luck Signs",
+      "et": "Halva õnne märgid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-068:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:realm:duat",
+        "factKey": "superstition:friday-the-13th:unlucky-date",
         "tier": 1,
-        "subjectKey": "realm:duat",
+        "subjectKey": "superstition:friday-the-13th",
         "clue": {
-          "en": "Through which Egyptian underworld does the sun god travel each night?",
-          "et": "Millise Egiptuse allilma läbib päikesejumal igal ööl?"
+          "en": "Which famously unlucky date occurs when the month’s traditionally unlucky number lands on the weekday immediately before Saturday?",
+          "et": "Milline kurikuulsalt õnnetuks peetav kuupäev tekib siis, kui ebaõnnenumbriga kuupäev langeb laupäevale eelnevale nädalapäevale?"
         },
         "response": {
-          "en": "Duat",
-          "et": "Duat"
+          "en": "Friday the 13th",
+          "et": "reede, 13."
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Friday 13th",
+            "Friday the thirteenth"
+          ],
+          "et": [
+            "Friday the 13th"
+          ]
         },
         "explanation": {
-          "en": "The Duat contains gates, deities, and hazards described in royal funerary texts.",
-          "et": "Duat sisaldab väravaid, jumalusi ja ohte, mida kirjeldavad kuninglikud hauatekstid."
+          "en": "Friday the 13th occurs when a month’s thirteenth day falls on a Friday and is considered unlucky in Western superstition.",
+          "et": "Reede, 13. tekib siis, kui kuu kolmeteistkümnes päev langeb reedele, ning lääne ebausus peetakse seda õnnetuks."
         },
         "source": {
-          "sourceId": "wikipedia:duat",
-          "title": "Duat",
-          "url": "https://en.wikipedia.org/wiki/Duat",
+          "sourceId": "wikipedia:friday-the-13th",
+          "title": "Friday the 13th",
+          "url": "https://en.wikipedia.org/wiki/Friday_the_13th",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-068:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:book-of-dead",
+        "factKey": "superstition:black-cat:luck-omen",
         "tier": 2,
-        "subjectKey": "text:book-of-dead",
+        "subjectKey": "superstition:black-cat",
         "clue": {
-          "en": "What modern title names the Egyptian collection of spells placed with the dead to guide them onward?",
-          "et": "Millise tänapäevase nimega tuntakse Egiptuse loitsukogu, mis pandi surnule kaasa tema teekonna juhtimiseks?"
+          "en": "Which dark-coated domestic animal is treated as a bad-luck omen in some traditions but a good-luck sign in others?",
+          "et": "Millist tumeda karvaga kodulooma peetakse mõnes pärimuses halva, teises aga hea õnne endeks?"
         },
         "response": {
-          "en": "Book of the Dead",
-          "et": "Surnute raamat"
+          "en": "black cat",
+          "et": "must kass"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a black cat"
+          ],
+          "et": [
+            "black cat"
+          ]
         },
         "explanation": {
-          "en": "Copies of the Book of the Dead varied because buyers selected and commissioned different spells.",
-          "et": "Surnute raamatu eksemplarid erinesid, sest tellijad valisid eri loitse."
+          "en": "A black cat is a domestic cat with black fur whose superstitious meaning varies between bad luck and good luck.",
+          "et": "Must kass on tumeda karvaga koduloom, keda peetakse mõnes ebausus halva, teises aga hea õnne endeks."
         },
         "source": {
-          "sourceId": "wikipedia:book_of_the_dead",
-          "title": "Book of the Dead",
-          "url": "https://en.wikipedia.org/wiki/Book_of_the_Dead",
+          "sourceId": "wikipedia:black-cat",
+          "title": "Black cat",
+          "url": "https://en.wikipedia.org/wiki/Black_cat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-068:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:ritual:weighing-heart",
+        "factKey": "superstition:broken-mirror:seven-years-bad-luck",
         "tier": 3,
-        "subjectKey": "ritual:weighing-heart",
+        "subjectKey": "superstition:broken-mirror",
         "clue": {
-          "en": "In which judgment scene is a dead person’s heart balanced against Ma’at’s feather?",
-          "et": "Millises kohtumõistmise stseenis kaalutakse surnu südant Ma’ati sule vastu?"
+          "en": "What mishap involving the household object used to view your reflection is said to bring seven years of bad luck?",
+          "et": "Millise enda kujutist näitava kodueseme kahjustamine toob uskumuse järgi seitse aastat halba õnne?"
         },
         "response": {
-          "en": "weighing of the heart",
-          "et": "südame kaalumine"
+          "en": "broken mirror",
+          "et": "katkine peegel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a broken mirror",
+            "breaking a mirror"
+          ],
+          "et": [
+            "purunenud peegel",
+            "peegli lõhkumine"
+          ]
         },
         "explanation": {
-          "en": "A heart no heavier than the feather signified a life in accord with cosmic order.",
-          "et": "Sulest mitte raskem süda tähistas kosmilise korraga kooskõlas elatud elu."
+          "en": "Breaking a mirror is a familiar superstition said to bring seven years of bad luck.",
+          "et": "Peegli lõhkumine on tuntud ebausk, mis pidavat tooma seitse aastat halba õnne."
         },
         "source": {
-          "sourceId": "wikipedia:weighing_of_souls",
-          "title": "Weighing of souls",
-          "url": "https://en.wikipedia.org/wiki/Weighing_of_souls",
+          "sourceId": "wikipedia:mirror-superstition",
+          "title": "Mirror",
+          "url": "https://en.wikipedia.org/wiki/Mirror#Superstitions",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-068:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:creature:ammit",
+        "factKey": "superstition:walking-under-ladder:bad-luck",
         "tier": 4,
-        "subjectKey": "creature:ammit",
+        "subjectKey": "superstition:walking-under-ladder",
         "clue": {
-          "en": "Which composite creature devours the heart of one who fails the Egyptian judgment of the dead?",
-          "et": "Milline liitolend neelab Egiptuse surnukohtus läbikukkunud inimese südame?"
+          "en": "Which traditional taboo involves entering the triangular space formed by a leaning piece of climbing equipment?",
+          "et": "Milline ebausukomme keelab minna toetuva ronimisvahendi moodustatud kolmnurksesse avasse?"
         },
         "response": {
-          "en": "Ammit",
-          "et": "Ammit"
+          "en": "walking under a ladder",
+          "et": "redeli alt läbi kõndimine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "walk under a ladder",
+            "walking beneath a ladder"
+          ],
+          "et": [
+            "redeli alt kõndimine",
+            "redeli alt läbiminek"
+          ]
         },
         "explanation": {
-          "en": "Ammit combines features of a crocodile, lion, and hippopotamus.",
-          "et": "Ammit ühendab krokodilli, lõvi ja jõehobu tunnuseid."
+          "en": "Walking under a ladder is traditionally associated with bad luck, sometimes explained through the triangle formed by a leaning ladder.",
+          "et": "Redeli alt läbi kõndimist seostatakse traditsiooniliselt halva õnnega; ühe seletuse järgi on põhjuseks toetuva redeli moodustatud kolmnurk."
         },
         "source": {
-          "sourceId": "wikipedia:ammit",
-          "title": "Ammit",
-          "url": "https://en.wikipedia.org/wiki/Ammit",
+          "sourceId": "wikipedia:ladder-superstition",
+          "title": "Ladder",
+          "url": "https://en.wikipedia.org/wiki/Ladder#Superstition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-068:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:realm:field-of-reeds",
+        "factKey": "superstition:umbrella-indoors:western-taboo",
         "tier": 5,
-        "subjectKey": "realm:field-of-reeds",
+        "subjectKey": "superstition:umbrella-indoors",
         "clue": {
-          "en": "What idealised Egyptian afterlife realm resembles a fertile version of life beside the Nile?",
-          "et": "Milline ideaalne Egiptuse teispoolsuse paik meenutab viljakat elu Niiluse ääres?"
+          "en": "Which Western superstition concerns unfolding portable rain protection after entering a building?",
+          "et": "Milline lääne ebausukomme keelab hoone sees lahti teha kokkupandavat ilmastikukaitset?"
         },
         "response": {
-          "en": "Field of Reeds",
-          "et": "Pillirooväli"
+          "en": "opening an umbrella indoors",
+          "et": "vihmavarju avamine siseruumis"
         },
         "acceptedVariants": {
           "en": [
-            "Aaru"
+            "open an umbrella indoors",
+            "opening an umbrella inside"
           ],
           "et": [
-            "Aaru"
+            "toas vihmavarju avamine",
+            "vihmavarju toas avamine"
           ]
         },
         "explanation": {
-          "en": "Aaru, the Field of Reeds, offered the justified dead farming, family, and abundance.",
-          "et": "Aaru ehk Pillirooväli pakkus õigeks mõistetud surnule põllutööd, peret ja küllust."
+          "en": "Opening an umbrella indoors is a common Western superstition; one proposed origin is the hazard of early metal-spoked umbrellas.",
+          "et": "Vihmavarju avamine siseruumis on levinud lääne ebausk; ühe seletuse järgi olid varased metallkodaratega varjud ohtlikud."
         },
         "source": {
-          "sourceId": "wikipedia:aaru",
-          "title": "Aaru",
-          "url": "https://en.wikipedia.org/wiki/Aaru",
+          "sourceId": "wikipedia:umbrella-indoors",
+          "title": "Superstition",
+          "url": "https://en.wikipedia.org/wiki/Superstition",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -37823,157 +37861,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-069",
     "name": {
-      "en": "Initiation and Prophecy in Ancient Greece",
-      "et": "Pühitsus ja ennustamine Vana-Kreekas"
+      "en": "What Faith Can Wear",
+      "et": "Usuline rõivastus"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-069:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:mystery:eleusinian",
+        "factKey": "garment:hijab:muslim-head-covering-modesty",
         "tier": 1,
-        "subjectKey": "mystery:eleusinian",
+        "subjectKey": "garment:hijab",
         "clue": {
-          "en": "Which secret rites at Eleusis centred on Demeter, Persephone, and hope beyond death?",
-          "et": "Millised Eleusises peetud salajased riitused keskendusid Demeterile, Persephonele ja lootusele pärast surma?"
+          "en": "Which Muslim head covering has an Arabic name that also carries a broader sense of modesty or separation?",
+          "et": "Millise moslemi peakatte araabiakeelne nimi kannab ka laiemat tagasihoidlikkuse või eraldatuse tähendust?"
         },
         "response": {
-          "en": "Eleusinian Mysteries",
-          "et": "Eleusise müsteeriumid"
+          "en": "hijab",
+          "et": "hidžaab"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a hijab"
+          ],
+          "et": [
+            "hijab"
+          ]
         },
         "explanation": {
-          "en": "Initiates swore not to disclose the central rites of the Eleusinian Mysteries.",
-          "et": "Eleusise müsteeriumidesse pühitsetud vandusid keskseid riitusi mitte avaldama."
+          "en": "A hijab commonly means a head covering worn by some Muslim women, while the Arabic term also has a broader sense of modesty or separation.",
+          "et": "Hidžaab tähendab tavakasutuses mõne mosleminaise peakatet, kuid araabia sõnal on ka laiem tagasihoidlikkuse või eraldatuse tähendus."
         },
         "source": {
-          "sourceId": "wikipedia:eleusinian_mysteries",
-          "title": "Eleusinian Mysteries",
-          "url": "https://en.wikipedia.org/wiki/Eleusinian_Mysteries",
+          "sourceId": "wikipedia:hijab",
+          "title": "Hijab",
+          "url": "https://en.wikipedia.org/wiki/Hijab",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-069:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:oracle:pythia",
+        "factKey": "garment:turban:sikh-wrapped-headwear",
         "tier": 2,
-        "subjectKey": "oracle:pythia",
+        "subjectKey": "garment:turban",
         "clue": {
-          "en": "What title belonged to Apollo’s priestess who delivered the Delphic oracle?",
-          "et": "Millist tiitlit kandis Apolloni preestrinna, kes edastas Delfi oraakli vastuseid?"
+          "en": "Which headwear is made by winding a long cloth around the head and is an important expression of faith for many Sikhs?",
+          "et": "Milline peakate saadakse pika riide ümber pea mähkimisel ning on paljudele sikhidele oluline usutunnus?"
         },
         "response": {
-          "en": "Pythia",
-          "et": "Püütia"
+          "en": "turban",
+          "et": "turban"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a turban"
+          ],
+          "et": [
+            "a turban"
+          ]
         },
         "explanation": {
-          "en": "The Pythia spoke during formal consultations interpreted and preserved by temple personnel.",
-          "et": "Püütia kõneles ametlikel konsultatsioonidel, mida templipersonal tõlgendas ja talletas."
+          "en": "A turban is formed by winding cloth around the head and has many regional and religious forms, including an important role in Sikh faith.",
+          "et": "Turban moodustatakse riide ümber pea mähkimisel ning sellel on palju piirkondlikke ja usulisi vorme, sealhulgas tähtis koht sikhi usus."
         },
         "source": {
-          "sourceId": "wikipedia:pythia",
-          "title": "Pythia",
-          "url": "https://en.wikipedia.org/wiki/Pythia",
+          "sourceId": "wikipedia:turban",
+          "title": "Turban",
+          "url": "https://en.wikipedia.org/wiki/Turban",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-069:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:object:omphalos",
+        "factKey": "garment:kippah:jewish-skullcap",
         "tier": 3,
-        "subjectKey": "object:omphalos",
+        "subjectKey": "garment:kippah",
         "clue": {
-          "en": "Which carved stone at Delphi represented the navel or centre of the world?",
-          "et": "Milline Delfis asunud nikerdatud kivi tähistas maailma naba ehk keskpunkti?"
+          "en": "Which small brimless cap is traditionally worn by Jewish men and boys?",
+          "et": "Milline väike nokata müts on juudi meeste ja poiste traditsiooniline peakate?"
         },
         "response": {
-          "en": "omphalos",
-          "et": "omphalos"
+          "en": "kippah",
+          "et": "kipa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a kippah",
+            "yarmulke",
+            "skullcap"
+          ],
+          "et": [
+            "jarmulka"
+          ]
         },
         "explanation": {
-          "en": "The Delphic omphalos was linked to the myth of Zeus releasing eagles from opposite ends of the world.",
-          "et": "Delfi omphalos seostus looga, kus Zeus laskis maailma vastasservadest lendu kaks kotkast."
+          "en": "A kippah is a brimless cap traditionally worn by Jewish men and boys and is also known as a yarmulke.",
+          "et": "Kipa on nokata müts, mida juudi mehed ja poisid traditsiooniliselt kannavad ning mida nimetatakse ka jarmulkaks."
         },
         "source": {
-          "sourceId": "wikipedia:omphalos_of_delphi",
-          "title": "Omphalos of Delphi",
-          "url": "https://en.wikipedia.org/wiki/Omphalos_of_Delphi",
+          "sourceId": "wikipedia:kippah",
+          "title": "Kippah",
+          "url": "https://en.wikipedia.org/wiki/Kippah",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-069:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:oracle:dodona",
+        "factKey": "garment:cassock:ankle-length-clergy-robe",
         "tier": 4,
-        "subjectKey": "oracle:dodona",
+        "subjectKey": "garment:cassock",
         "clue": {
-          "en": "At which sanctuary did priests interpret Zeus through the rustling of a sacred oak?",
-          "et": "Millises pühamus tõlgendasid preestrid Zeusi sõnumeid püha tamme sahina järgi?"
+          "en": "Which close-fitting, ankle-length robe is worn by Christian clergy?",
+          "et": "Kuidas nimetatakse keha ligi hoidvat pahkluuni ulatuvat rüüd, mida kannavad kristlikud vaimulikud?"
         },
         "response": {
-          "en": "oracle of Dodona",
-          "et": "Dodona oraakel"
+          "en": "cassock",
+          "et": "sutaan"
         },
         "acceptedVariants": {
           "en": [
-            "Dodona"
+            "a cassock",
+            "soutane"
           ],
           "et": [
-            "Dodona"
+            "cassock"
           ]
         },
         "explanation": {
-          "en": "Dodona in Epirus was among the oldest Greek oracular sanctuaries.",
-          "et": "Epeiroses asuv Dodona oli üks vanimaid Kreeka oraaklipühamuid."
+          "en": "A cassock is a close-fitting Christian clerical coat or robe that reaches the ankles.",
+          "et": "Sutaan on keha ligi hoidev kristliku vaimuliku kuub või rüü, mis ulatub pahkluudeni."
         },
         "source": {
-          "sourceId": "wikipedia:dodona",
-          "title": "Dodona",
-          "url": "https://en.wikipedia.org/wiki/Dodona",
+          "sourceId": "wikipedia:cassock",
+          "title": "Cassock",
+          "url": "https://en.wikipedia.org/wiki/Cassock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-069:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:tradition:orphism",
+        "factKey": "garment:mitre:pointed-bishop-headdress",
         "tier": 5,
-        "subjectKey": "tradition:orphism",
+        "subjectKey": "garment:mitre",
         "clue": {
-          "en": "Which religious tradition attributed poems to Orpheus and taught purification of the soul?",
-          "et": "Milline usuline traditsioon omistas luuletusi Orpheusele ning õpetas hinge puhastumist?"
+          "en": "Which tall, pointed ceremonial headdress is worn by senior Christian clergy?",
+          "et": "Millist kõrget teravatipulist pidulikku peakatet kannavad kõrged kristlikud vaimulikud?"
         },
         "response": {
-          "en": "Orphism",
-          "et": "orfism"
+          "en": "mitre",
+          "et": "mitra"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a mitre",
+            "miter",
+            "bishop's mitre",
+            "bishop's hat"
+          ],
+          "et": [
+            "piiskopimüts",
+            "piiskopi mitra"
+          ]
         },
         "explanation": {
-          "en": "Orphic texts describe divine origins, post-mortem judgment, and disciplined ways of life.",
-          "et": "Orfistlikud tekstid kirjeldavad jumalikku päritolu, surmajärgset kohtumõistmist ja distsiplineeritud elu."
+          "en": "A mitre is tall, pointed ceremonial headwear worn by bishops and certain abbots.",
+          "et": "Mitra on kõrge teravatipuline pidulik peakate, mida kannavad piiskopid ja mõned abtid."
         },
         "source": {
-          "sourceId": "wikipedia:orphism_(religion)",
-          "title": "Orphism (religion)",
-          "url": "https://en.wikipedia.org/wiki/Orphism_(religion)",
+          "sourceId": "wikipedia:mitre",
+          "title": "Mitre",
+          "url": "https://en.wikipedia.org/wiki/Mitre",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -37981,157 +38042,178 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-070",
     "name": {
-      "en": "Keepers of Roman Sacred Order",
-      "et": "Rooma püha korra hoidjad"
+      "en": "Icons of the Egyptian Afterlife",
+      "et": "Egiptuse teispoolsuse märgid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-070:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:office:pontifex-maximus",
+        "factKey": "object:sarcophagus:stone-coffin-burial",
         "tier": 1,
-        "subjectKey": "office:pontifex-maximus",
+        "subjectKey": "object:sarcophagus",
         "clue": {
-          "en": "Which chief priest supervised Rome’s pontifical college and calendar?",
-          "et": "Milline ülempreester juhtis Rooma pontifekside kolleegiumi ja kalendrit?"
+          "en": "Which coffin-like burial container is usually carved in stone and was used in its earliest stone form by Egyptian pharaohs?",
+          "et": "Milline kirstutaoline matusemahuti raiutakse tavaliselt kivist ning mille varaseimaid kivist näiteid kasutasid Egiptuse vaaraod?"
         },
         "response": {
-          "en": "Pontifex Maximus",
-          "et": "pontifex maximus"
+          "en": "sarcophagus",
+          "et": "sarkofaag"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a sarcophagus"
+          ],
+          "et": [
+            "sarcophagus"
+          ]
         },
         "explanation": {
-          "en": "The office later passed to emperors and its Latin title remained influential in Christian usage.",
-          "et": "Amet läks hiljem keisritele ning selle ladinakeelne tiitel jäi mõjukaks kristlikus kasutuses."
+          "en": "A sarcophagus is a coffin-like container usually carved in stone; the earliest stone examples were used by Egyptian pharaohs.",
+          "et": "Sarkofaag on tavaliselt kivist raiutud kirstutaoline mahuti; varaseimaid kivist näiteid kasutasid Egiptuse vaaraod."
         },
         "source": {
-          "sourceId": "wikipedia:pontifex_maximus",
-          "title": "Pontifex maximus",
-          "url": "https://en.wikipedia.org/wiki/Pontifex_maximus",
+          "sourceId": "wikipedia:sarcophagus",
+          "title": "Sarcophagus",
+          "url": "https://en.wikipedia.org/wiki/Sarcophagus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-070:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:priest:augur",
+        "factKey": "symbol:scarab:egyptian-amulet-rebirth",
         "tier": 2,
-        "subjectKey": "priest:augur",
+        "subjectKey": "symbol:scarab",
         "clue": {
-          "en": "Which Roman priest interpreted divine approval from signs such as the flight of birds?",
-          "et": "Milline Rooma preester tõlgendas jumalikku heakskiitu selliste märkide järgi nagu lindude lend?"
+          "en": "Which insect-shaped amulet of ancient Egypt was associated with the sun, regeneration and rebirth?",
+          "et": "Millist Vana-Egiptuse putukakujulist amuletti seostati päikese, uuenemise ja taassünniga?"
         },
         "response": {
-          "en": "augur",
-          "et": "augur"
+          "en": "scarab",
+          "et": "skarabeus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a scarab",
+            "scarab beetle"
+          ],
+          "et": [
+            "skarabeusmardikas"
+          ]
         },
         "explanation": {
-          "en": "An augur established whether public action had favourable auspices.",
-          "et": "Augur tegi kindlaks, kas avalikul ettevõtmisel olid soodsad ended."
+          "en": "A scarab was a popular ancient Egyptian amulet shaped after the beetle and linked with the sun, regeneration or rebirth.",
+          "et": "Skarabeus oli populaarne Vana-Egiptuse mardikakujuline amulett, mida seostati päikese, uuenemise või taassünniga."
         },
         "source": {
-          "sourceId": "wikipedia:augur",
-          "title": "Augur",
-          "url": "https://en.wikipedia.org/wiki/Augur",
+          "sourceId": "wikipedia:scarab-artifact",
+          "title": "Scarab (artifact)",
+          "url": "https://en.wikipedia.org/wiki/Scarab_(artifact)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-070:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:priest:haruspex",
+        "factKey": "symbol:ankh:egyptian-life-sign",
         "tier": 3,
-        "subjectKey": "priest:haruspex",
+        "subjectKey": "symbol:ankh",
         "clue": {
-          "en": "Who sought omens by examining the entrails, especially the liver, of a sacrificed animal?",
-          "et": "Kes otsis ohvrilooma sisikonda, eriti maksa uurides endeid?"
+          "en": "Which ancient Egyptian hieroglyph looks like a cross with a loop at the top and represents life?",
+          "et": "Milline Vana-Egiptuse hieroglüüf meenutab ülaosas aasaga risti ja tähendab elu?"
         },
         "response": {
-          "en": "haruspex",
-          "et": "haruspeks"
+          "en": "ankh",
+          "et": "aasrist"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "an ankh",
+            "key of life"
+          ],
+          "et": [
+            "ankh"
+          ]
         },
         "explanation": {
-          "en": "Roman haruspicy drew heavily on Etruscan religious expertise.",
-          "et": "Rooma haruspiitsia tugines tugevalt etruski usulistele teadmistele."
+          "en": "The ankh is an ancient Egyptian hieroglyph for life, shaped like a cross with a loop at the top.",
+          "et": "Aasrist on elu tähistav Vana-Egiptuse hieroglüüf, mille kuju meenutab ülaosas aasaga risti."
         },
         "source": {
-          "sourceId": "wikipedia:haruspex",
-          "title": "Haruspex",
-          "url": "https://en.wikipedia.org/wiki/Haruspex",
+          "sourceId": "wikipedia:ankh",
+          "title": "Ankh",
+          "url": "https://en.wikipedia.org/wiki/Ankh",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-070:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:priesthood:vestal-virgins",
+        "factKey": "symbol:eye-of-horus:protection-healing",
         "tier": 4,
-        "subjectKey": "priesthood:vestal-virgins",
+        "subjectKey": "symbol:eye-of-horus",
         "clue": {
-          "en": "Which priestesses maintained the sacred fire of Vesta in Rome?",
-          "et": "Millised preestrinnad hoidsid Roomas Vesta püha tuld?"
+          "en": "Which stylized ancient Egyptian eye symbol represents protection, health and restoration?",
+          "et": "Milline stiliseeritud Vana-Egiptuse silmamärk tähistab kaitset, tervist ja taastumist?"
         },
         "response": {
-          "en": "Vestal Virgins",
-          "et": "Vesta neitsid"
+          "en": "Eye of Horus",
+          "et": "Horose silm"
         },
         "acceptedVariants": {
           "en": [
-            "Vestals"
+            "the Eye of Horus",
+            "wedjat eye"
           ],
           "et": [
-            "vestaalid"
+            "udžat-silm",
+            "udjat-silm"
           ]
         },
         "explanation": {
-          "en": "The Vestals served long terms and enjoyed legal privileges unusual for Roman women.",
-          "et": "Vesta neitsid teenisid pikka aega ning nautisid Rooma naiste kohta ebatavalisi õiguslikke privileege."
+          "en": "The Eye of Horus is a stylized ancient Egyptian symbol associated with Horus and representing protection, health or restoration.",
+          "et": "Horose silm on Horosega seotud stiliseeritud Vana-Egiptuse sümbol, mis tähistab kaitset, tervist või taastumist."
         },
         "source": {
-          "sourceId": "wikipedia:vestal_virgin",
-          "title": "Vestal Virgin",
-          "url": "https://en.wikipedia.org/wiki/Vestal_Virgin",
+          "sourceId": "wikipedia:eye-of-horus",
+          "title": "Eye of Horus",
+          "url": "https://en.wikipedia.org/wiki/Eye_of_Horus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-070:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deities:lares",
+        "factKey": "ritual:weighing-heart-against-maat-feather",
         "tier": 5,
-        "subjectKey": "deities:lares",
+        "subjectKey": "ritual:weighing-of-heart",
         "clue": {
-          "en": "Which Roman guardian deities protected household, neighbourhood, and crossroads?",
-          "et": "Millised Rooma kaitsejumalused valvasid majapidamist, naabruskonda ja teeriste?"
+          "en": "What is the ancient Egyptian judgment scene called in which the deceased’s vital organ is balanced against Ma’at’s feather?",
+          "et": "Kuidas nimetatakse Vana-Egiptuse kohtumõistmise stseeni, kus surnu rinnus asuvat elundit võrreldakse Maati sulega?"
         },
         "response": {
-          "en": "Lares",
-          "et": "laarid"
+          "en": "weighing of the heart",
+          "et": "südame kaalumine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "weighing the heart",
+            "the weighing of the heart"
+          ],
+          "et": [
+            "weighing of the heart"
+          ]
         },
         "explanation": {
-          "en": "Household Lares received offerings at a domestic shrine called a lararium.",
-          "et": "Kodulaare austati annetustega larariumiks nimetatud kodualtari juures."
+          "en": "In the weighing of the heart, the deceased’s heart was weighed against Ma’at’s feather and the result determined the soul’s afterlife fate.",
+          "et": "Südame kaalumisel võrreldi surnu südant Maati sulega ning tulemus määras hinge saatuse teispoolsuses."
         },
         "source": {
-          "sourceId": "wikipedia:lares",
-          "title": "Lares",
-          "url": "https://en.wikipedia.org/wiki/Lares",
+          "sourceId": "wikipedia:weighing-of-heart",
+          "title": "Weighing of souls",
+          "url": "https://en.wikipedia.org/wiki/Weighing_of_souls#Ancient_Egyptian_religion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38139,165 +38221,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-071",
     "name": {
-      "en": "Structures of the Norse Cosmos",
-      "et": "Põhjala maailmakorra ehitus"
+      "en": "Bible Scenes You Can Picture",
+      "et": "Piiblilood, mida tunned pildi järgi"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-071:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:void:ginnungagap",
+        "factKey": "scene:jonah-swallowed-by-great-fish",
         "tier": 1,
-        "subjectKey": "void:ginnungagap",
+        "subjectKey": "scene:jonah-and-fish",
         "clue": {
-          "en": "What yawning primordial void lay between the realms of fire and ice in Norse cosmogony?",
-          "et": "Milline haigutav ürgtühjus asus Põhjala kosmogoonias tule- ja jäävalla vahel?"
+          "en": "Name both the prophet thrown overboard and the animal that swallows him in this familiar biblical pairing.",
+          "et": "Nimeta selles tuntud piiblipaaris nii üle parda heidetud prohvet kui ka loom, kes ta alla neelab."
         },
         "response": {
-          "en": "Ginnungagap",
-          "et": "Ginnungagap"
+          "en": "Jonah and the whale",
+          "et": "Joona ja vaal"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Jonah and the big fish",
+            "Jonah and the great fish"
+          ],
+          "et": [
+            "Joona ja suur kala"
+          ]
         },
         "explanation": {
-          "en": "Life begins in Ginnungagap where heat from Muspelheim meets rime from Niflheim.",
-          "et": "Elu algab Ginnungagapis, kus Muspelheimi kuumus kohtub Niflheimi härmatisega."
+          "en": "Jonah is a biblical prophet who is swallowed by a large fish after being thrown overboard; popular culture often calls it a whale.",
+          "et": "Joona on piibliprohvet, kelle neelab pärast üle parda heitmist alla suur kala; populaarkultuuris nimetatakse looma sageli vaalaks."
         },
         "source": {
-          "sourceId": "wikipedia:ginnungagap",
-          "title": "Ginnungagap",
-          "url": "https://en.wikipedia.org/wiki/Ginnungagap",
+          "sourceId": "wikipedia:jonah",
+          "title": "Jonah",
+          "url": "https://en.wikipedia.org/wiki/Jonah",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-071:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:bridge:bifrost",
+        "factKey": "scene:tower-of-babel:languages-confused",
         "tier": 2,
-        "subjectKey": "bridge:bifrost",
+        "subjectKey": "scene:tower-of-babel",
         "clue": {
-          "en": "Which burning rainbow bridge joins Midgard with the gods’ stronghold?",
-          "et": "Milline põlev vikerkaaresild ühendab Midgardi jumalate kindlusega?"
+          "en": "Which Genesis story explains the appearance of many languages through an ambitious city-building project?",
+          "et": "Milline 1. Moosese raamatu lugu seletab paljude keelte teket suurejoonelise linnaehitusega?"
         },
         "response": {
-          "en": "Bifröst",
-          "et": "Bifröst"
+          "en": "Tower of Babel",
+          "et": "Paabeli torn"
         },
         "acceptedVariants": {
           "en": [
-            "Bifrost"
+            "the Tower of Babel",
+            "Babel"
           ],
           "et": [
-            "Bifrost"
+            "Paabel"
           ]
         },
         "explanation": {
-          "en": "Heimdall guards Bifröst, which is foretold to break during Ragnarök.",
-          "et": "Heimdall valvab Bifrösti, mis ennustuse järgi Ragnaröki ajal puruneb."
+          "en": "In the Tower of Babel story, people build a city and tower before their one language is confused into many.",
+          "et": "Paabeli torni loos ehitavad inimesed linna ja torni, kuni nende üks keel segatakse paljudeks keelteks."
         },
         "source": {
-          "sourceId": "wikipedia:bifr%c3%b6st",
-          "title": "Bifröst",
-          "url": "https://en.wikipedia.org/wiki/Bifr%C3%B6st",
+          "sourceId": "wikipedia:tower-of-babel",
+          "title": "Tower of Babel",
+          "url": "https://en.wikipedia.org/wiki/Tower_of_Babel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-071:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:beings:norns",
+        "factKey": "scene:burning-bush:god-calls-moses",
         "tier": 3,
-        "subjectKey": "beings:norns",
+        "subjectKey": "scene:burning-bush",
         "clue": {
-          "en": "Which female beings shape destiny beside the well beneath the world tree?",
-          "et": "Millised naisolevused kujundavad saatust maailmapuu allika juures?"
+          "en": "Which Exodus sign is a plant in flames that is not consumed, from which God calls Moses?",
+          "et": "Milline 2. Moosese raamatu märk on leekides taim, mis ei hävi ja millest Jumal Moosest kutsub?"
         },
         "response": {
-          "en": "Norns",
-          "et": "nornid"
+          "en": "burning bush",
+          "et": "põlev põõsas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the burning bush"
+          ],
+          "et": [
+            "põlev kibuvitsapõõsas"
+          ]
         },
         "explanation": {
-          "en": "The three best-known Norns are Urðr, Verðandi, and Skuld.",
-          "et": "Tuntuimad kolm norni on Urðr, Verðandi ja Skuld."
+          "en": "The burning bush appears in Exodus, burns without being consumed and is the place from which God speaks to Moses.",
+          "et": "Põlev põõsas esineb 2. Moosese raamatus, põleb hävimata ning on paik, kust Jumal Moosesega räägib."
         },
         "source": {
-          "sourceId": "wikipedia:norns",
-          "title": "Norns",
-          "url": "https://en.wikipedia.org/wiki/Norns",
+          "sourceId": "wikipedia:burning-bush",
+          "title": "Burning bush",
+          "url": "https://en.wikipedia.org/wiki/Burning_bush",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-071:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:well:mimirs-well",
+        "factKey": "scene:golden-calf:idol-at-sinai",
         "tier": 4,
-        "subjectKey": "well:mimirs-well",
+        "subjectKey": "scene:golden-calf",
         "clue": {
-          "en": "At which well beneath a root of the world tree does Odin sacrifice an eye for wisdom?",
-          "et": "Millise maailmapuu juure all asuva kaevu juures ohverdab Odin tarkuse eest silma?"
+          "en": "Which idol do the Israelites make while Moses is on Mount Sinai?",
+          "et": "Millise ebajumalakuju valmistavad iisraellased ajal, kui Mooses viibib Siinai mäel?"
         },
         "response": {
-          "en": "Mímir’s Well",
-          "et": "Mímiri kaev"
+          "en": "golden calf",
+          "et": "kuldvasikas"
         },
         "acceptedVariants": {
           "en": [
-            "Mímisbrunnr"
+            "the golden calf"
           ],
           "et": [
-            "Mímisbrunnr"
+            "kuldne vasikas"
           ]
         },
         "explanation": {
-          "en": "Mímisbrunnr belongs to the wise figure Mímir and stores deep knowledge.",
-          "et": "Mímisbrunnr kuulub targale Mímirile ning talletab sügavat teadmist."
+          "en": "The golden calf is the idol made by the Israelites while Moses is on Mount Sinai, an episode associated with idolatry.",
+          "et": "Kuldvasikas on ebajumalakuju, mille iisraellased valmistavad Moosese Siinai mäel viibimise ajal; lugu seostub ebajumalakummardamisega."
         },
         "source": {
-          "sourceId": "wikipedia:m%c3%admisbrunnr",
-          "title": "Mímisbrunnr",
-          "url": "https://en.wikipedia.org/wiki/M%C3%ADmisbrunnr",
+          "sourceId": "wikipedia:golden-calf",
+          "title": "Golden calf",
+          "url": "https://en.wikipedia.org/wiki/Golden_calf",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-071:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:event:fimbulwinter",
+        "factKey": "scene:jacobs-ladder:dream-angels",
         "tier": 5,
-        "subjectKey": "event:fimbulwinter",
+        "subjectKey": "scene:jacobs-ladder",
         "clue": {
-          "en": "What sequence of three severe winters immediately precedes Ragnarök?",
-          "et": "Milline kolme karmi talve jada eelneb vahetult Ragnarökile?"
+          "en": "What is the name of the stairway in a Genesis night vision that joins earth and heaven while angels move up and down?",
+          "et": "Kuidas nimetatakse 1. Moosese raamatu öises nägemuses maad ja taevast ühendavat treppi, mida mööda inglid üles ja alla liiguvad?"
         },
         "response": {
-          "en": "Fimbulwinter",
-          "et": "Fimbulvetr"
+          "en": "Jacob's ladder",
+          "et": "Jaakobi redel"
         },
         "acceptedVariants": {
           "en": [
-            "Fimbulvetr"
+            "Jacobs ladder",
+            "the ladder in Jacobs dream"
           ],
           "et": [
-            "Fimbulwinter"
+            "Jacob's ladder"
           ]
         },
         "explanation": {
-          "en": "Fimbulwinter brings social collapse as well as relentless cold before the final battle.",
-          "et": "Fimbulvetr toob enne viimast lahingut peale lakkamatu külma ka ühiskondliku kokkuvarisemise."
+          "en": "Jacob’s ladder is the Genesis dream of a stairway between earth and heaven on which angels ascend and descend.",
+          "et": "Jaakobi redel on 1. Moosese raamatu unenägu maad ja taevast ühendavast trepist, mida mööda inglid üles ja alla liiguvad."
         },
         "source": {
-          "sourceId": "wikipedia:fimbulwinter",
-          "title": "Fimbulwinter",
-          "url": "https://en.wikipedia.org/wiki/Fimbulwinter",
+          "sourceId": "wikipedia:jacobs-ladder",
+          "title": "Jacob's Ladder",
+          "url": "https://en.wikipedia.org/wiki/Jacob%27s_Ladder",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38305,165 +38398,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-072",
     "name": {
-      "en": "The Heroic Cycles of Medieval Ireland",
-      "et": "Keskaegse Iirimaa kangelaspärimus"
+      "en": "Bad Arguments Heard at the Pub",
+      "et": "Arutlusvead pubilauas"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-072:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:epic:tain-bo-cuailnge",
+        "factKey": "fallacy:ad-hominem:attack-person-not-argument",
         "tier": 1,
-        "subjectKey": "epic:tain-bo-cuailnge",
+        "subjectKey": "fallacy:ad-hominem",
         "clue": {
-          "en": "Which Irish epic follows a war over the Brown Bull of Cooley?",
-          "et": "Milline Iiri eepos jutustab sõjast Cooley pruuni pulli pärast?"
+          "en": "Which fallacy targets the person making a claim instead of addressing the substance of the argument?",
+          "et": "Milline arutlusviga ründab väite sisu asemel selle esitajat?"
         },
         "response": {
-          "en": "Táin Bó Cúailnge",
-          "et": "Táin Bó Cúailnge"
+          "en": "ad hominem",
+          "et": "isikurünnak"
         },
         "acceptedVariants": {
           "en": [
-            "The Cattle Raid of Cooley"
+            "an ad hominem",
+            "ad hominem attack"
           ],
           "et": [
-            "Cooley karjaretk"
+            "ad hominem"
           ]
         },
         "explanation": {
-          "en": "Táin Bó Cúailnge is the central tale of the Ulster Cycle.",
-          "et": "Táin Bó Cúailnge on Ulsteri tsükli keskne lugu."
+          "en": "An ad hominem attacks the person making a claim and avoids addressing the argument itself.",
+          "et": "Isikurünnak ründab väite esitajat ning jätab väite enda sisu käsitlemata."
         },
         "source": {
-          "sourceId": "wikipedia:t%c3%a1in_b%c3%b3_c%c3%baailnge",
-          "title": "Táin Bó Cúailnge",
-          "url": "https://en.wikipedia.org/wiki/T%C3%A1in_B%C3%B3_C%C3%BAailnge",
+          "sourceId": "wikipedia:ad-hominem",
+          "title": "Ad hominem",
+          "url": "https://en.wikipedia.org/wiki/Ad_hominem",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-072:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:hero:cu-chulainn",
+        "factKey": "fallacy:straw-man:misrepresent-opponent",
         "tier": 2,
-        "subjectKey": "hero:cu-chulainn",
+        "subjectKey": "fallacy:straw-man",
         "clue": {
-          "en": "Which young Ulster hero defends the province almost single-handedly during the cattle raid?",
-          "et": "Milline noor Ulsteri kangelane kaitseb karjaretke ajal provintsi peaaegu üksinda?"
+          "en": "Which fallacy replaces an opponent’s position with a distorted version that is easier to attack?",
+          "et": "Milline arutlusviga asendab vastase seisukoha moonutatud versiooniga, mida on lihtsam rünnata?"
         },
         "response": {
-          "en": "Cú Chulainn",
-          "et": "Cú Chulainn"
+          "en": "straw man",
+          "et": "õlgmees"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a straw man",
+            "straw-man argument"
+          ],
+          "et": [
+            "õlgmehe argument"
+          ]
         },
         "explanation": {
-          "en": "Cú Chulainn’s battle frenzy, the ríastrad, transforms his body in combat.",
-          "et": "Cú Chulainni lahinguraev ríastrad muudab võitluses tema keha."
+          "en": "A straw man misrepresents an opponent’s argument so that the distorted version is easier to attack.",
+          "et": "Õlgmees moonutab vastase argumenti nii, et moonutatud versiooni oleks lihtsam rünnata."
         },
         "source": {
-          "sourceId": "wikipedia:c%c3%ba_chulainn",
-          "title": "Cú Chulainn",
-          "url": "https://en.wikipedia.org/wiki/C%C3%BA_Chulainn",
+          "sourceId": "wikipedia:straw-man",
+          "title": "Straw man",
+          "url": "https://en.wikipedia.org/wiki/Straw_man",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-072:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:morrigan",
+        "factKey": "fallacy:false-dilemma:only-two-options",
         "tier": 3,
-        "subjectKey": "deity:morrigan",
+        "subjectKey": "fallacy:false-dilemma",
         "clue": {
-          "en": "Which Irish figure of war and sovereignty often appears as a crow near battle?",
-          "et": "Milline Iiri sõja ja kuningavõimuga seotud kuju ilmub lahingu lähedal sageli varesena?"
+          "en": "Which fallacy presents a choice as if only two alternatives existed while ignoring other possibilities?",
+          "et": "Milline arutlusviga esitab valiku nii, nagu oleks ainult kaks võimalust, ning jätab teised kõrvale?"
         },
         "response": {
-          "en": "the Morrígan",
-          "et": "Morrígan"
+          "en": "false dilemma",
+          "et": "valedilemma"
         },
         "acceptedVariants": {
           "en": [
-            "Morrigan"
+            "a false dilemma",
+            "false dichotomy",
+            "either-or fallacy"
           ],
           "et": [
-            "Morrigan"
+            "väärdilemma",
+            "vale kahendvalik"
           ]
         },
         "explanation": {
-          "en": "The Morrígan prophesies outcomes and confronts Cú Chulainn in several tales.",
-          "et": "Morrígan ennustab tagajärgi ja astub mitmes loos Cú Chulainnile vastu."
+          "en": "A false dilemma presents only two alternatives and ignores other available possibilities.",
+          "et": "Valedilemma esitab vaid kaks alternatiivi ning eirab teisi olemasolevaid võimalusi."
         },
         "source": {
-          "sourceId": "wikipedia:the_morr%c3%adgan",
-          "title": "The Morrígan",
-          "url": "https://en.wikipedia.org/wiki/The_Morr%C3%ADgan",
+          "sourceId": "wikipedia:false-dilemma",
+          "title": "False dilemma",
+          "url": "https://en.wikipedia.org/wiki/False_dilemma",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-072:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:people:tuatha-de-danann",
+        "factKey": "fallacy:slippery-slope:small-step-extreme-chain",
         "tier": 4,
-        "subjectKey": "people:tuatha-de-danann",
+        "subjectKey": "fallacy:slippery-slope",
         "clue": {
-          "en": "What supernatural people arrive in Ireland and defeat the Fomorians at Mag Tuired?",
-          "et": "Milline üleloomulik rahvas saabub Iirimaale ning võidab Mag Tuiredi lahingus fomoore?"
+          "en": "Which argument claims without sufficient support that one small first step will trigger a chain ending in an extreme result?",
+          "et": "Milline argument väidab piisava põhjenduseta, et üks väike esimene samm käivitab äärmusliku tulemuseni viiva ahela?"
         },
         "response": {
-          "en": "Tuatha Dé Danann",
-          "et": "Tuatha Dé Danann"
+          "en": "slippery slope",
+          "et": "libeda nõlva argument"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a slippery slope",
+            "slippery-slope argument"
+          ],
+          "et": [
+            "libe nõlv",
+            "libeda nõlva eksitus"
+          ]
         },
         "explanation": {
-          "en": "Later tradition associates the Tuatha Dé Danann with Ireland’s otherworldly mound dwellers.",
-          "et": "Hilisem pärimus seostab Tuatha Dé Dananni Iirimaa teispoolsete kääpaasukatega."
+          "en": "A slippery-slope argument links a first step to an insufficiently justified chain whose endpoint is often extreme or undesirable.",
+          "et": "Libeda nõlva argument seob esimese sammu piisavalt põhjendamata sündmuste ahelaga, mille lõpptulemus on sageli äärmuslik või soovimatu."
         },
         "source": {
-          "sourceId": "wikipedia:tuatha_d%c3%a9_danann",
-          "title": "Tuatha Dé Danann",
-          "url": "https://en.wikipedia.org/wiki/Tuatha_D%C3%A9_Danann",
+          "sourceId": "wikipedia:slippery-slope",
+          "title": "Slippery slope",
+          "url": "https://en.wikipedia.org/wiki/Slippery_slope",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-072:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:taboo:geis",
+        "factKey": "fallacy:no-true-scotsman:exclude-counterexample",
         "tier": 5,
-        "subjectKey": "taboo:geis",
+        "subjectKey": "fallacy:no-true-scotsman",
         "clue": {
-          "en": "What binding personal taboo or obligation can grant power yet doom an Irish hero if broken?",
-          "et": "Milline siduv isiklik keeld või kohustus võib anda Iiri kangelasele jõu, kuid murdmise korral hukutada?"
+          "en": "Which named fallacy protects a generalization by declaring every counterexample not to be a genuine member of the group?",
+          "et": "Milline nimega arutlusviga päästab üldistuse, keeldudes vastunäidet rühma ehtsaks liikmeks tunnistamast?"
         },
         "response": {
-          "en": "geis",
-          "et": "geis"
+          "en": "No true Scotsman",
+          "et": "ükski tõeline šotlane"
         },
         "acceptedVariants": {
           "en": [
-            "geas"
+            "the No true Scotsman fallacy",
+            "no true Scotsman fallacy"
           ],
           "et": [
-            "geas"
+            "mitte ükski tõeline šotlane",
+            "ükski õige šotlane"
           ]
         },
         "explanation": {
-          "en": "A hero may carry several geasa whose demands eventually conflict.",
-          "et": "Kangelasel võib olla mitu geis’i, mille nõuded lähevad lõpuks vastuollu."
+          "en": "The No true Scotsman fallacy responds to a counterexample by redefining it as not truly belonging to the group.",
+          "et": "„Ükski tõeline šotlane” on arutlusviga, mis vastab vastunäitele selle rühmakuuluvuse ümbermääratlemisega."
         },
         "source": {
-          "sourceId": "wikipedia:geis",
-          "title": "Geis",
-          "url": "https://en.wikipedia.org/wiki/Geis",
+          "sourceId": "wikipedia:no-true-scotsman",
+          "title": "No true Scotsman",
+          "url": "https://en.wikipedia.org/wiki/No_true_Scotsman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38471,161 +38581,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-073",
     "name": {
-      "en": "Self and Liberation in Vedic Thought",
-      "et": "Mina ja vabanemine veeda mõtteloos"
+      "en": "Philosophy's Big Everyday Questions",
+      "et": "Filosoofia suured argiküsimused"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-073:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:texts:upanishads",
+        "factKey": "question:free-will:choice-versus-determinism",
         "tier": 1,
-        "subjectKey": "texts:upanishads",
+        "subjectKey": "question:free-will",
         "clue": {
-          "en": "Which Sanskrit texts explore self, ultimate reality, and liberation at the close of the Vedic corpus?",
-          "et": "Millised sanskritikeelsed tekstid käsitlevad veedakirjanduse lõpuosas mina, ülimat reaalsust ja vabanemist?"
+          "en": "Which philosophical concept is the capacity to choose actions rather than have them wholly determined?",
+          "et": "Milline filosoofiline mõiste tähistab võimet valida oma tegevusi, selle asemel et need oleksid täielikult ette määratud?"
         },
         "response": {
-          "en": "Upanishads",
-          "et": "upanišadid"
+          "en": "free will",
+          "et": "vaba tahe"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "freedom of the will"
+          ],
+          "et": [
+            "tahtevabadus"
+          ]
         },
         "explanation": {
-          "en": "The Upanishads shift attention from public sacrifice toward knowledge and interior reflection.",
-          "et": "Upanišadid nihutavad tähelepanu avalikult ohvrilt teadmisele ja sisevaatlusele."
+          "en": "Free will is the capacity to choose actions, debated in relation to determinism and moral responsibility.",
+          "et": "Vaba tahe on võime valida oma tegevusi ning seda arutatakse seoses determinismi ja moraalse vastutusega."
         },
         "source": {
-          "sourceId": "wikipedia:upanishads",
-          "title": "Upanishads",
-          "url": "https://en.wikipedia.org/wiki/Upanishads",
+          "sourceId": "wikipedia:free-will",
+          "title": "Free will",
+          "url": "https://en.wikipedia.org/wiki/Free_will",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-073:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:bhagavad-gita",
+        "factKey": "question:simulation-hypothesis:reality-computer-simulation",
         "tier": 2,
-        "subjectKey": "text:bhagavad-gita",
+        "subjectKey": "question:simulation-hypothesis",
         "clue": {
-          "en": "In which dialogue does Krishna counsel Arjuna on duty, action, knowledge, and devotion?",
-          "et": "Millises dialoogis õpetab Krišna Arjunale kohust, tegutsemist, teadmist ja pühendumust?"
+          "en": "Which proposal says that perceived reality may be an artificial world generated by a computer?",
+          "et": "Millise oletuse järgi võib tajutav tegelikkus olla arvuti loodud tehiskeskkond?"
         },
         "response": {
-          "en": "Bhagavad Gita",
-          "et": "Bhagavadgītā"
+          "en": "simulation hypothesis",
+          "et": "simulatsioonihüpotees"
         },
         "acceptedVariants": {
           "en": [
-            "Gita"
+            "the simulation hypothesis",
+            "simulation theory"
           ],
           "et": [
-            "Gītā"
+            "simulatsiooniteooria"
           ]
         },
         "explanation": {
-          "en": "The Bhagavad Gita forms part of the Mahabharata and presents several paths of yoga.",
-          "et": "Bhagavadgītā kuulub Mahābhāratasse ning esitab mitu jooga teed."
+          "en": "The simulation hypothesis proposes that perceived reality is a computer-generated simulation and is discussed as skepticism about reality.",
+          "et": "Simulatsioonihüpoteesi järgi on tajutav tegelikkus arvuti loodud simulatsioon; filosoofias käsitletakse seda tegelikkuse suhtes skeptilise ideena."
         },
         "source": {
-          "sourceId": "wikipedia:bhagavad_gita",
-          "title": "Bhagavad Gita",
-          "url": "https://en.wikipedia.org/wiki/Bhagavad_Gita",
+          "sourceId": "wikipedia:simulation-hypothesis",
+          "title": "Simulation hypothesis",
+          "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-073:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:brahman",
+        "factKey": "question:problem-of-evil:good-powerful-god-suffering",
         "tier": 3,
-        "subjectKey": "concept:brahman",
+        "subjectKey": "question:problem-of-evil",
         "clue": {
-          "en": "What term denotes ultimate, all-encompassing reality in much Hindu philosophy?",
-          "et": "Milline mõiste tähistab suures osas hindu filosoofiast ülimat kõikehõlmavat reaalsust?"
+          "en": "Which classic challenge asks how suffering can exist if God is both all-powerful and wholly good?",
+          "et": "Milline klassikaline küsimus uurib, kuidas saab eksisteerida kannatus, kui Jumal on kõikvõimas ja täielikult hea?"
         },
         "response": {
-          "en": "Brahman",
-          "et": "Brahman"
+          "en": "the problem of evil",
+          "et": "kurjuse probleem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "problem of evil"
+          ],
+          "et": [
+            "kurjuse paradoks"
+          ]
         },
         "explanation": {
-          "en": "Upanishadic schools differ in how Brahman relates to the world and individual self.",
-          "et": "Upanišadlikud koolkonnad erinevad selles, kuidas Brahman suhestub maailma ja üksikisiku minaga."
+          "en": "The problem of evil asks how evil or suffering can coexist with an omnipotent and wholly good God and is central to philosophy of religion.",
+          "et": "Kurjuse probleem küsib, kuidas saavad kurjus või kannatus eksisteerida koos kõikvõimsa ja täielikult hea Jumalaga, ning on usundifilosoofia keskne küsimus."
         },
         "source": {
-          "sourceId": "wikipedia:brahman",
-          "title": "Brahman",
-          "url": "https://en.wikipedia.org/wiki/Brahman",
+          "sourceId": "wikipedia:problem-of-evil",
+          "title": "Problem of evil",
+          "url": "https://en.wikipedia.org/wiki/Problem_of_evil",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-073:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:atman",
+        "factKey": "question:mind-body-problem:mental-physical-relation",
         "tier": 4,
-        "subjectKey": "concept:atman",
+        "subjectKey": "question:mind-body-problem",
         "clue": {
-          "en": "What Sanskrit term names the self whose relation to ultimate reality becomes a central philosophical question?",
-          "et": "Milline sanskriti mõiste nimetab mina, mille suhe ülima reaalsusega saab keskseks filosoofiliseks küsimuseks?"
+          "en": "Which foundational philosophical puzzle asks how thought and consciousness relate to the physical world?",
+          "et": "Milline filosoofia põhiküsimus uurib, kuidas mõtted ja teadvus seostuvad füüsilise maailmaga?"
         },
         "response": {
-          "en": "Ātman",
-          "et": "ātman"
+          "en": "the mind–body problem",
+          "et": "vaimu ja keha probleem"
         },
         "acceptedVariants": {
           "en": [
-            "Atman"
+            "mind-body problem"
           ],
           "et": [
-            "Atman"
+            "keha ja vaimu probleem",
+            "vaimu-keha probleem"
           ]
         },
         "explanation": {
-          "en": "Vedanta schools debate whether Ātman and Brahman are identical, distinct, or related in another way.",
-          "et": "Vedānta koolkonnad vaidlevad, kas ātman ja Brahman on samased, erinevad või teisiti seotud."
+          "en": "The mind–body problem concerns how mind, thought and consciousness relate to the body and physical world.",
+          "et": "Vaimu ja keha probleem uurib, kuidas vaim, mõtted ja teadvus seostuvad keha ning füüsilise maailmaga."
         },
         "source": {
-          "sourceId": "wikipedia:%c4%80tman_(hinduism)",
-          "title": "Ātman (Hinduism)",
-          "url": "https://en.wikipedia.org/wiki/%C4%80tman_(Hinduism)",
+          "sourceId": "wikipedia:mind-body-problem",
+          "title": "Mind–body problem",
+          "url": "https://en.wikipedia.org/wiki/Mind%E2%80%93body_problem",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-073:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:moksha",
+        "factKey": "question:personal-identity:same-person-over-time",
         "tier": 5,
-        "subjectKey": "concept:moksha",
+        "subjectKey": "question:personal-identity",
         "clue": {
-          "en": "What goal means release from rebirth and the cycle of saṃsāra?",
-          "et": "Milline eesmärk tähendab vabanemist taassünnist ja saṃsāra ringist?"
+          "en": "Which philosophical problem asks what makes an individual remain the same across time?",
+          "et": "Milline filosoofiline küsimus uurib, mis teeb inimesest läbi aja ühe ja sama indiviidi?"
         },
         "response": {
-          "en": "moksha",
-          "et": "mokša"
+          "en": "personal identity",
+          "et": "isikusamasus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the problem of personal identity"
+          ],
+          "et": [
+            "isikuidentiteet",
+            "personaalse identiteedi probleem"
+          ]
         },
         "explanation": {
-          "en": "Hindu traditions propose paths of knowledge, action, devotion, or disciplined practice toward moksha.",
-          "et": "Hindu traditsioonid pakuvad mokšani teadmise, teo, pühendumuse või distsiplineeritud praktika teid."
+          "en": "Personal identity asks what makes someone the same person over time, with answers often involving bodily or psychological continuity.",
+          "et": "Isikusamasus küsib, mis teeb inimesest läbi aja sama isiku; vastustes rõhutatakse sageli keha või psüühika järjepidevust."
         },
         "source": {
-          "sourceId": "wikipedia:moksha",
-          "title": "Moksha",
-          "url": "https://en.wikipedia.org/wiki/Moksha",
+          "sourceId": "wikipedia:personal-identity",
+          "title": "Personal identity",
+          "url": "https://en.wikipedia.org/wiki/Personal_identity",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38633,169 +38758,179 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-074",
     "name": {
-      "en": "Many Vehicles of Buddhist Practice",
-      "et": "Budismi eri sõidukid"
+      "en": "Sacred Symbols",
+      "et": "Pühad sümbolid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-074:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:tradition:theravada",
+        "factKey": "symbol:yin-yang:complementary-opposites",
         "tier": 1,
-        "subjectKey": "tradition:theravada",
+        "subjectKey": "symbol:yin-yang",
         "clue": {
-          "en": "Which Buddhist tradition preserves its canon in Pali and is dominant in Sri Lanka and mainland Southeast Asia?",
-          "et": "Milline budistlik traditsioon säilitab kaanoni paali keeles ning on valdav Sri Lankal ja Mandri-Kagu-Aasias?"
+          "en": "Which two opposite yet interconnected forces in Chinese philosophy are represented by a black-and-white circular swirl?",
+          "et": "Milliseid kaht vastandlikku, kuid omavahel seotud jõudu Hiina filosoofias kujutab mustvalge ringikujuline keeris?"
         },
         "response": {
-          "en": "Theravāda",
-          "et": "theravaada"
+          "en": "yin and yang",
+          "et": "yin ja yang"
         },
         "acceptedVariants": {
           "en": [
-            "Theravada"
+            "yin-yang"
           ],
           "et": [
-            "Theravāda"
+            "yin-yang"
           ]
         },
         "explanation": {
-          "en": "Theravāda traces its ordination lineage through the ancient elders’ tradition.",
-          "et": "Theravaada seob oma ordinatsiooniliini muistse vanemate traditsiooniga."
+          "en": "Yin and yang are opposite yet interconnected forces in Chinese philosophy, represented by a circle of contrasting swirling halves.",
+          "et": "Yin ja yang on Hiina filosoofia vastandlikud, kuid omavahel seotud jõud, mida kujutab kontrastseteks keerlevateks poolteks jagatud ring."
         },
         "source": {
-          "sourceId": "wikipedia:theravada",
-          "title": "Theravada",
-          "url": "https://en.wikipedia.org/wiki/Theravada",
+          "sourceId": "wikipedia:yin-yang",
+          "title": "Yin and yang",
+          "url": "https://en.wikipedia.org/wiki/Yin_and_yang",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-074:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:movement:mahayana",
+        "factKey": "symbol:star-crescent:modern-islam-association",
         "tier": 2,
-        "subjectKey": "movement:mahayana",
+        "subjectKey": "symbol:star-crescent",
         "clue": {
-          "en": "Which broad Buddhist movement makes the bodhisattva ideal central and accepts additional sutras?",
-          "et": "Milline lai budistlik suund seab keskmesse bodhisattva ideaali ning tunnustab lisasuutraid?"
+          "en": "Which icon combines a curved moon shape with a point of light and became widely associated with Islam in the modern era?",
+          "et": "Milline ikoon ühendab kaarja kuumärgi valguspunktiga ning hakkas hiljem laialt islamiga seostuma?"
         },
         "response": {
-          "en": "Mahāyāna",
-          "et": "mahajaana"
+          "en": "crescent and star",
+          "et": "poolkuu ja täht"
         },
         "acceptedVariants": {
           "en": [
-            "Mahayana"
+            "star and crescent"
           ],
           "et": [
-            "Mahāyāna"
+            "täht ja poolkuu"
           ]
         },
         "explanation": {
-          "en": "Mahāyāna means “Great Vehicle” and contains many philosophical and devotional schools.",
-          "et": "Mahajaana tähendab „suurt sõidukit“ ning hõlmab paljusid filosoofilisi ja pühendumuslikke koolkondi."
+          "en": "The star and crescent combines a crescent shape with a star and became widely associated with Islam in modern times.",
+          "et": "Tähe ja poolkuu sümbol ühendab kaarja kuju tähega ning hakkas hiljem laialt islamiga seostuma."
         },
         "source": {
-          "sourceId": "wikipedia:mahayana",
-          "title": "Mahayana",
-          "url": "https://en.wikipedia.org/wiki/Mahayana",
+          "sourceId": "wikipedia:star-crescent",
+          "title": "Star and crescent",
+          "url": "https://en.wikipedia.org/wiki/Star_and_crescent",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-074:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:tradition:vajrayana",
+        "factKey": "symbol:om:sacred-syllable",
         "tier": 3,
-        "subjectKey": "tradition:vajrayana",
+        "subjectKey": "symbol:om",
         "clue": {
-          "en": "Which esoteric Buddhist vehicle uses mantra, mandala, and deity yoga under a teacher?",
-          "et": "Milline esoteeriline budistlik sõiduk kasutab õpetaja juhendamisel mantraid, mandalaid ja jumaluse joogat?"
+          "en": "Which sacred sound and syllable has a familiar curling written form used as a symbol in Hinduism and other Indian religions?",
+          "et": "Milline püha heli ja silp on hinduismis ning teistes India usundites tuntud kaarduva kirjamärgiga sümbolina?"
         },
         "response": {
-          "en": "Vajrayāna",
-          "et": "vadžrajaana"
+          "en": "om",
+          "et": "om"
         },
         "acceptedVariants": {
           "en": [
-            "Vajrayana"
+            "aum"
           ],
           "et": [
-            "Vajrayāna"
+            "aum"
           ]
         },
         "explanation": {
-          "en": "Vajrayāna presents tantric techniques as a swift path when practised with proper initiation.",
-          "et": "Vadžrajaana esitab tantra võtteid kiire teena, kui neid kasutatakse nõuetekohase pühitsusega."
+          "en": "Om is a sacred sound and syllable important in Hinduism and other Indian religions, and its written form is widely used as a religious symbol.",
+          "et": "Om on hinduismis ja teistes India usundites tähtis püha heli ja silp, mille kirjalikku kuju kasutatakse laialt ususümbolina."
         },
         "source": {
-          "sourceId": "wikipedia:vajrayana",
-          "title": "Vajrayana",
-          "url": "https://en.wikipedia.org/wiki/Vajrayana",
+          "sourceId": "wikipedia:om",
+          "title": "Om",
+          "url": "https://en.wikipedia.org/wiki/Om",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-074:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:school:zen",
+        "factKey": "symbol:hamsa:hand-shaped-protection",
         "tier": 4,
-        "subjectKey": "school:zen",
+        "subjectKey": "symbol:hamsa",
         "clue": {
-          "en": "Which East Asian school emphasises meditation and direct insight, deriving its name from dhyāna?",
-          "et": "Milline Ida-Aasia koolkond rõhutab meditatsiooni ja vahetut taipamist ning saab nime sõnast dhyāna?"
+          "en": "Which palm-shaped protective amulet is used in North Africa and the Middle East?",
+          "et": "Millist peopesakujulist kaitseamuletti kasutatakse Põhja-Aafrikas ja Lähis-Idas?"
         },
         "response": {
-          "en": "Zen",
-          "et": "zen"
+          "en": "hamsa",
+          "et": "hamsa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a hamsa",
+            "Hand of Fatima",
+            "Fatima's hand"
+          ],
+          "et": [
+            "Fatima käsi",
+            "Hamsa käsi"
+          ]
         },
         "explanation": {
-          "en": "Zen developed from Chinese Chan and later took distinct forms in Korea, Japan, and Vietnam.",
-          "et": "Zen arenes Hiina chan’ist ning omandas Koreas, Jaapanis ja Vietnamis eri kujud."
+          "en": "The hamsa is a palm-shaped protective amulet used in North Africa and the Middle East and also called the Hand of Fatima.",
+          "et": "Hamsa on Põhja-Aafrikas ja Lähis-Idas kasutatav peopesakujuline kaitseamulett, mida nimetatakse ka Fatima käeks."
         },
         "source": {
-          "sourceId": "wikipedia:zen",
-          "title": "Zen",
-          "url": "https://en.wikipedia.org/wiki/Zen",
+          "sourceId": "wikipedia:hamsa",
+          "title": "Hamsa",
+          "url": "https://en.wikipedia.org/wiki/Hamsa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-074:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:school:pure-land",
+        "factKey": "symbol:dharma-wheel:eightfold-path",
         "tier": 5,
-        "subjectKey": "school:pure-land",
+        "subjectKey": "symbol:dharma-wheel",
         "clue": {
-          "en": "Which devotional tradition seeks rebirth in Amitābha’s realm through faith and recitation?",
-          "et": "Milline pühendumuslik traditsioon taotleb usu ja retsiteerimise kaudu taassündi Amitābha valduses?"
+          "en": "Which Buddhist teaching emblem is often drawn with eight spokes representing the Noble Eightfold Path?",
+          "et": "Millist budistlikku õpetuse sümbolit kujutatakse sageli kaheksa kodaraga, mis tähistavad õilsat kaheksaosalist teed?"
         },
         "response": {
-          "en": "Pure Land Buddhism",
-          "et": "Puhta Maa budism"
+          "en": "Dharma wheel",
+          "et": "seadmuseratas"
         },
         "acceptedVariants": {
           "en": [
-            "Pure Land"
+            "wheel of Dharma",
+            "dharmachakra"
           ],
           "et": [
-            "Puhta Maa koolkond"
+            "dharmaratas",
+            "dharmatšakra",
+            "Dharma wheel"
           ]
         },
         "explanation": {
-          "en": "Pure Land practices make liberation accessible beyond intensive monastic meditation.",
-          "et": "Puhta Maa praktikad teevad vabanemise kättesaadavaks ka väljaspool intensiivset kloostrimeditatsiooni."
+          "en": "The Dharma wheel, or dharmachakra, is a widespread Buddhist symbol whose eight spokes represent the Noble Eightfold Path.",
+          "et": "Seadmuseratas ehk dharmatšakra on levinud budistlik sümbol, mille kaheksa kodarat tähistavad õilsat kaheksaosalist teed."
         },
         "source": {
-          "sourceId": "wikipedia:pure_land_buddhism",
-          "title": "Pure Land Buddhism",
-          "url": "https://en.wikipedia.org/wiki/Pure_Land_Buddhism",
+          "sourceId": "wikipedia:dharmachakra",
+          "title": "Dharmachakra",
+          "url": "https://en.wikipedia.org/wiki/Dharmachakra",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38803,169 +38938,171 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-075",
     "name": {
-      "en": "Discipline and Community in Jainism and Sikhism",
-      "et": "Distsipliin ja kogukond džainismis ning sikhismis"
+      "en": "Places That Live in Legend and Rumour",
+      "et": "Paigad legendides ja kuulujuttudes"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-075:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:principle:ahimsa",
+        "factKey": "place:bermuda-triangle:disappearance-lore",
         "tier": 1,
-        "subjectKey": "principle:ahimsa",
+        "subjectKey": "place:bermuda-triangle",
         "clue": {
-          "en": "Which principle of non-harm receives especially rigorous application in Jain ethics?",
-          "et": "Millist vägivallatuse põhimõtet rakendatakse džainistlikus eetikas eriti rangelt?"
+          "en": "Which loosely defined North Atlantic region is blamed in popular stories for mysterious ship and aircraft disappearances?",
+          "et": "Millist ebamääraste piiridega Põhja-Atlandi piirkonda süüdistatakse rahvajuttudes laevade ja lennukite salapärastes kadumistes?"
         },
         "response": {
-          "en": "ahiṃsā",
-          "et": "ahimsa"
+          "en": "Bermuda Triangle",
+          "et": "Bermuda kolmnurk"
         },
         "acceptedVariants": {
           "en": [
-            "ahimsa"
+            "the Bermuda Triangle",
+            "Devil's Triangle"
           ],
           "et": [
-            "ahiṃsā"
+            "Kuradi kolmnurk"
           ]
         },
         "explanation": {
-          "en": "Jain ahiṃsā extends moral concern to even the smallest living beings.",
-          "et": "Džainistlik ahimsa laiendab moraalse hoole ka kõige väiksematele elusolenditele."
+          "en": "The Bermuda Triangle is a loosely defined North Atlantic region linked in popular stories to mysterious disappearances, although investigations find no unusual rate.",
+          "et": "Bermuda kolmnurk on ebamääraste piiridega Põhja-Atlandi piirkond, mida rahvajutud seostavad salapäraste kadumistega, kuigi uurimused ei näita ebatavalist kadumissagedust."
         },
         "source": {
-          "sourceId": "wikipedia:ahimsa",
-          "title": "Ahimsa",
-          "url": "https://en.wikipedia.org/wiki/Ahimsa",
+          "sourceId": "wikipedia:bermuda-triangle",
+          "title": "Bermuda Triangle",
+          "url": "https://en.wikipedia.org/wiki/Bermuda_Triangle",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-075:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:teacher:tirthankara",
+        "factKey": "place:fountain-of-youth:water-restores-youth",
         "tier": 2,
-        "subjectKey": "teacher:tirthankara",
+        "subjectKey": "place:fountain-of-youth",
         "clue": {
-          "en": "What title denotes a Jain teacher who re-establishes the path across rebirth’s flood?",
-          "et": "Milline tiitel tähistab džainistlikku õpetajat, kes taastab tee üle taassünni tulvavee?"
+          "en": "Which mythical spring has waters said to make a person young again?",
+          "et": "Milline müütiline veesilm pidavat oma veega inimese taas nooreks muutma?"
         },
         "response": {
-          "en": "tīrthaṅkara",
-          "et": "tirthankara"
+          "en": "Fountain of Youth",
+          "et": "nooruse allikas"
         },
         "acceptedVariants": {
           "en": [
-            "tirthankara"
+            "the Fountain of Youth"
           ],
           "et": [
-            "tīrthaṅkara"
+            "igavese nooruse allikas"
           ]
         },
         "explanation": {
-          "en": "Jain tradition recognises twenty-four tīrthaṅkaras in the present cosmic cycle.",
-          "et": "Džainistlik pärimus tunnustab praeguses kosmilises tsüklis 24 tirthankarat."
+          "en": "The Fountain of Youth is a mythical spring whose waters are said to restore youth, one example of life-restoring water stories found in several traditions.",
+          "et": "Nooruse allikas on müütiline läte, mille vesi pidavat nooruse taastama; elu taastava vee lugusid leidub mitmes pärimuses."
         },
         "source": {
-          "sourceId": "wikipedia:tirthankara",
-          "title": "Tirthankara",
-          "url": "https://en.wikipedia.org/wiki/Tirthankara",
+          "sourceId": "wikipedia:fountain-of-youth",
+          "title": "Fountain of Youth",
+          "url": "https://en.wikipedia.org/wiki/Fountain_of_Youth",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-075:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:doctrine:anekantavada",
+        "factKey": "place:area-51:nevada-ufo-rumours",
         "tier": 3,
-        "subjectKey": "doctrine:anekantavada",
+        "subjectKey": "place:area-51",
         "clue": {
-          "en": "Which Jain doctrine holds that reality has many aspects and no single finite statement captures all of it?",
-          "et": "Milline džainistlik õpetus väidab, et reaalsusel on palju tahke ning ükski piiratud väide ei ammenda seda?"
+          "en": "Which secretive United States Air Force facility in Nevada became a centre of UFO folklore and conspiracy theories?",
+          "et": "Millisest salajasest USA õhuväe objektist Nevadas sai UFO-pärimuse ja vandenõuteooriate keskpunkt?"
         },
         "response": {
-          "en": "anekāntavāda",
-          "et": "anekantavada"
+          "en": "Area 51",
+          "et": "Area 51"
         },
         "acceptedVariants": {
           "en": [
-            "anekantavada"
+            "Groom Lake"
           ],
           "et": [
-            "anekāntavāda"
+            "Ala 51",
+            "Groom Lake"
           ]
         },
         "explanation": {
-          "en": "Anekāntavāda supports qualified assertion and intellectual non-absolutism.",
-          "et": "Anekantavada toetab tingimuslikke väiteid ja intellektuaalset mitteabsolutismi."
+          "en": "Area 51 is a secretive United States Air Force facility in Nevada that became central to UFO folklore and conspiracy theories.",
+          "et": "Area 51 on salajane USA õhuväe objekt Nevadas, millest sai UFO-pärimuse ja vandenõuteooriate keskpunkt."
         },
         "source": {
-          "sourceId": "wikipedia:anekantavada",
-          "title": "Anekantavada",
-          "url": "https://en.wikipedia.org/wiki/Anekantavada",
+          "sourceId": "wikipedia:area-51",
+          "title": "Area 51",
+          "url": "https://en.wikipedia.org/wiki/Area_51",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-075:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:community:khalsa",
+        "factKey": "place:roswell:1947-ufo-incident",
         "tier": 4,
-        "subjectKey": "community:khalsa",
+        "subjectKey": "place:roswell",
         "clue": {
-          "en": "Which initiated Sikh community was founded by Guru Gobind Singh in 1699?",
-          "et": "Millise pühitsetud sikhi kogukonna asutas Guru Gobind Singh 1699. aastal?"
+          "en": "Which city gave its name to the 1947 incident later claimed to involve a crashed extraterrestrial spacecraft?",
+          "et": "Milline New Mexico linn andis nime 1947. aasta juhtumile, mida hiljem seostati väidetavalt alla kukkunud tulnukate kosmoselaevaga?"
         },
         "response": {
-          "en": "Khalsa",
-          "et": "Khalsa"
+          "en": "Roswell",
+          "et": "Roswell"
+        },
+        "acceptedVariants": {
+          "en": [
+            "Roswell, New Mexico"
+          ],
+          "et": [
+            "Roswell, New Mexico"
+          ]
+        },
+        "explanation": {
+          "en": "The Roswell incident began with debris recovered near Roswell in 1947 and later inspired claims of a crashed extraterrestrial spacecraft.",
+          "et": "Roswelli juhtum sai alguse 1947. aastal linna lähedalt leitud rusudest ning tekitas hiljem väiteid alla kukkunud tulnukate kosmoselaevast."
+        },
+        "source": {
+          "sourceId": "wikipedia:roswell-incident",
+          "title": "Roswell incident",
+          "url": "https://en.wikipedia.org/wiki/Roswell_incident",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-075:question:5",
+        "factKey": "place:shangri-la:lost-horizon-himalayan-utopia",
+        "tier": 5,
+        "subjectKey": "place:shangri-la",
+        "clue": {
+          "en": "Which fictional paradise in a remote Himalayan valley was introduced in James Hilton’s novel Lost Horizon?",
+          "et": "Milline James Hiltoni romaanis „Kadunud silmapiir” tutvustatud väljamõeldud paradiis asub kauges Himaalaja orus?"
+        },
+        "response": {
+          "en": "Shangri-La",
+          "et": "Shangri-La"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Members of the Khalsa accept a shared discipline and visible articles of faith.",
-          "et": "Khalsa liikmed järgivad ühist distsipliini ja nähtavaid usutunnuseid."
+          "en": "Shangri-La is the remote Himalayan valley in James Hilton’s Lost Horizon whose name became a byword for an earthly paradise.",
+          "et": "Shangri-La on James Hiltoni „Kadunud silmapiiri” kauge Himaalaja org, mille nimest sai maapealse paradiisi sünonüüm."
         },
         "source": {
-          "sourceId": "wikipedia:khalsa",
-          "title": "Khalsa",
-          "url": "https://en.wikipedia.org/wiki/Khalsa",
+          "sourceId": "wikipedia:shangri-la",
+          "title": "Shangri-La",
+          "url": "https://en.wikipedia.org/wiki/Shangri-La",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-075:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:scripture:guru-granth-sahib",
-        "tier": 5,
-        "subjectKey": "scripture:guru-granth-sahib",
-        "clue": {
-          "en": "Which scripture is revered by Sikhs as the enduring Guru after the line of human Gurus?",
-          "et": "Millist pühakirja austavad sikhid pärast inimlike gurude rida kestva Guruna?"
-        },
-        "response": {
-          "en": "Guru Granth Sahib",
-          "et": "Guru Granth Sahib"
-        },
-        "acceptedVariants": {
-          "en": [
-            "Adi Granth"
-          ],
-          "et": [
-            "Adi Granth"
-          ]
-        },
-        "explanation": {
-          "en": "The Guru Granth Sahib contains hymns by Sikh Gurus and other devotional poets.",
-          "et": "Guru Granth Sahib sisaldab sikhi gurude ja teiste pühendusluuletajate hümne."
-        },
-        "source": {
-          "sourceId": "wikipedia:guru_granth_sahib",
-          "title": "Guru Granth Sahib",
-          "url": "https://en.wikipedia.org/wiki/Guru_Granth_Sahib",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -38973,153 +39110,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-076",
     "name": {
-      "en": "How Rabbinic Tradition Reads Torah",
-      "et": "Kuidas rabiinlik traditsioon Toorat loeb"
+      "en": "Wedding Customs Around the World",
+      "et": "Pulmakombed üle maailma"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-076:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:mishnah",
+        "factKey": "custom:wedding-veil:bride-head-face-covering",
         "tier": 1,
-        "subjectKey": "text:mishnah",
+        "subjectKey": "custom:wedding-veil",
         "clue": {
-          "en": "Which early compilation of oral law is organised into six orders and forms the Talmud’s core?",
-          "et": "Milline varane suulise seaduse kogu jaguneb kuude jaotisse ning moodustab Talmudi tuuma?"
+          "en": "Which traditional fabric covering is worn over a bride’s head or face?",
+          "et": "Milline traditsiooniline kangast kate asetatakse abielluva naise pea või näo ette?"
         },
         "response": {
-          "en": "Mishnah",
-          "et": "Mišna"
+          "en": "wedding veil",
+          "et": "pruudiloor"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a wedding veil",
+            "bridal veil",
+            "the veil"
+          ],
+          "et": [
+            "pulmaloor",
+            "loor"
+          ]
         },
         "explanation": {
-          "en": "Judah ha-Nasi is traditionally credited with compiling the Mishnah around the early third century.",
-          "et": "Mišna koostamine kolmanda sajandi alguses omistatakse traditsiooniliselt Juuda ha-Nasile."
+          "en": "A wedding veil is worn by a bride over the head or face and belongs to wedding traditions in many cultures.",
+          "et": "Pruudiloori kannab abielluv naine pea või näo ees ning see kuulub paljude kultuuride pulmatraditsiooni."
         },
         "source": {
-          "sourceId": "wikipedia:mishnah",
-          "title": "Mishnah",
-          "url": "https://en.wikipedia.org/wiki/Mishnah",
+          "sourceId": "wikipedia:wedding-veil",
+          "title": "Veil",
+          "url": "https://en.wikipedia.org/wiki/Veil#Bridal_veils",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-076:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:talmud",
+        "factKey": "custom:throwing-rice:newlyweds-prosperity-fertility",
         "tier": 2,
-        "subjectKey": "text:talmud",
+        "subjectKey": "custom:throwing-rice",
         "clue": {
-          "en": "Which work combines the Mishnah with generations of rabbinic discussion called Gemara?",
-          "et": "Milline teos ühendab Mišna Gemaraks nimetatud rabiinlike arutelude põlvkondadega?"
+          "en": "Which wedding send-off custom showers the departing couple with grains symbolizing prosperity and fertility?",
+          "et": "Millise pulmade ärasaatmiskombe käigus puistatakse noorpaar teraviljateradega üle, et soovida jõukust ja viljakust?"
         },
         "response": {
-          "en": "Talmud",
-          "et": "Talmud"
+          "en": "throwing rice",
+          "et": "riisi viskamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "rice throwing",
+            "throwing rice at the newlyweds"
+          ],
+          "et": [
+            "riisiga ülepuistamine",
+            "riisi heitmine"
+          ]
         },
         "explanation": {
-          "en": "The Babylonian and Jerusalem Talmuds preserve different Gemaras around the same Mishnah.",
-          "et": "Babüloonia ja Jeruusalemma Talmud säilitavad sama Mišna ümber erineva Gemara."
+          "en": "Throwing rice at newlyweds is a wedding send-off custom symbolizing prosperity and fertility.",
+          "et": "Riisi viskamine noorpaari peale on pulmade ärasaatmiskomme, mis sümboliseerib jõukust ja viljakust."
         },
         "source": {
-          "sourceId": "wikipedia:talmud",
-          "title": "Talmud",
-          "url": "https://en.wikipedia.org/wiki/Talmud",
+          "sourceId": "wikipedia:throwing-rice",
+          "title": "Wedding",
+          "url": "https://en.wikipedia.org/wiki/Wedding#Wedding_ceremony_activities",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-076:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:method:midrash",
+        "factKey": "custom:something-four:old-new-borrowed-blue",
         "tier": 3,
-        "subjectKey": "method:midrash",
+        "subjectKey": "custom:something-four",
         "clue": {
-          "en": "What name covers rabbinic interpretation that closely explores scriptural wording and narrative?",
-          "et": "Milline nimetus hõlmab rabiinlikku tõlgendust, mis uurib tähelepanelikult pühakirja sõnastust ja lugusid?"
+          "en": "What is the complete four-item English bridal rhyme describing what the bride traditionally carries or wears?",
+          "et": "Kuidas kõlab eesti keeles täielik neljaosaline ingliskeelne pruudiriim esemete kohta, mida pruut traditsiooniliselt kannab?"
         },
         "response": {
-          "en": "midrash",
-          "et": "midraš"
+          "en": "something old, something new, something borrowed, something blue",
+          "et": "midagi vana, midagi uut, midagi laenatut, midagi sinist"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "midagi vana, midagi uut, midagi laenatut, midagi sinist"
+          ],
+          "et": [
+            "midagi vana, uut, laenatut ja sinist"
+          ]
         },
         "explanation": {
-          "en": "Midrash can develop legal teaching or expand narrative and ethical meaning.",
-          "et": "Midraš võib arendada õigusõpetust või laiendada jutustuse ja eetika tähendust."
+          "en": "The complete rhyme is “something old, something new, something borrowed, something blue”, and the named items are traditionally carried or worn by a bride.",
+          "et": "Täielik riim on „midagi vana, midagi uut, midagi laenatut, midagi sinist” ning neid esemeid kannab pruut traditsiooni järgi kaasas või seljas."
         },
         "source": {
-          "sourceId": "wikipedia:midrash",
-          "title": "Midrash",
-          "url": "https://en.wikipedia.org/wiki/Midrash",
+          "sourceId": "wikipedia:something-four",
+          "title": "Something old",
+          "url": "https://en.wikipedia.org/wiki/Something_old",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-076:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:object:mezuzah",
+        "factKey": "custom:breaking-glass:jewish-wedding-ending",
         "tier": 4,
-        "subjectKey": "object:mezuzah",
+        "subjectKey": "custom:breaking-glass",
         "clue": {
-          "en": "Which small case fixed to a Jewish doorway contains a parchment with passages from Deuteronomy?",
-          "et": "Milline juudi uksepiidale kinnitatud väike kapsel sisaldab pärgamendile kirjutatud katkendeid Viiendast Moosese raamatust?"
+          "en": "Which Jewish wedding ending has the groom crush a fragile drinking vessel underfoot before guests shout congratulations?",
+          "et": "Millise juudi pulma lõpetava kombe käigus astub peigmees jalaga haprale jooginõule, enne kui külalised õnnitlevad?"
         },
         "response": {
-          "en": "mezuzah",
-          "et": "mezuza"
+          "en": "breaking a glass",
+          "et": "klaasi purustamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "breaking the glass",
+            "glass breaking"
+          ],
+          "et": [
+            "klaasi katki löömine"
+          ]
         },
         "explanation": {
-          "en": "The mezuzah marks the home with the words of the Shema.",
-          "et": "Mezuza tähistab kodu Šema sõnadega."
+          "en": "Breaking a glass traditionally ends a Jewish wedding ceremony: the groom crushes it underfoot and the guests respond with congratulations.",
+          "et": "Klaasi purustamine lõpetab traditsiooniliselt juudi pulmatseremoonia: peigmees purustab selle jalaga ning külalised vastavad õnnesooviga."
         },
         "source": {
-          "sourceId": "wikipedia:mezuzah",
-          "title": "Mezuzah",
-          "url": "https://en.wikipedia.org/wiki/Mezuzah",
+          "sourceId": "wikipedia:jewish-wedding-glass",
+          "title": "Jewish wedding",
+          "url": "https://en.wikipedia.org/wiki/Jewish_wedding#Breaking_the_glass",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-076:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:quorum:minyan",
+        "factKey": "custom:jumping-broom:wedding-black-communities",
         "tier": 5,
-        "subjectKey": "quorum:minyan",
+        "subjectKey": "custom:jumping-broom",
         "clue": {
-          "en": "What prayer quorum traditionally consists of ten adult Jews in many communities?",
-          "et": "Milline palvekvoorum koosneb paljudes kogukondades traditsiooniliselt kümnest täiskasvanud juudist?"
+          "en": "Which wedding tradition associated especially with Black and African-diaspora communities has the couple cross over a household sweeping tool?",
+          "et": "Millise eriti mustanahaliste ja Aafrika diasporaa kogukondadega seotud pulmakombe puhul ületab paar koduse pühkimisvahendi?"
         },
         "response": {
-          "en": "minyan",
-          "et": "minjan"
+          "en": "jumping the broom",
+          "et": "üle luua hüppamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "jump the broom",
+            "broom jumping"
+          ],
+          "et": [
+            "luuast üle hüppamine"
+          ]
         },
         "explanation": {
-          "en": "A minyan is required for parts of communal worship such as public Torah reading.",
-          "et": "Minjanit vajatakse ühispalvuse osades, näiteks avalikul Toora lugemisel."
+          "en": "Jumping the broom is a wedding tradition in which the couple jumps over a broom, strongly associated with Black and African-diaspora communities.",
+          "et": "Üle luua hüppamine on pulmakomme, mille puhul paar hüppab üle luua ning mida seostatakse tugevalt mustanahaliste ja Aafrika diasporaa kogukondadega."
         },
         "source": {
-          "sourceId": "wikipedia:minyan",
-          "title": "Minyan",
-          "url": "https://en.wikipedia.org/wiki/Minyan",
+          "sourceId": "wikipedia:jumping-broom",
+          "title": "Jumping the broom",
+          "url": "https://en.wikipedia.org/wiki/Jumping_the_broom",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -39127,165 +39291,166 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-077",
     "name": {
-      "en": "Councils and Controversies of Early Christianity",
-      "et": "Varakristluse kirikukogud ja vaidlused"
+      "en": "Magic Words Everyone Has Heard",
+      "et": "Võlusõnad, mida kõik on kuulnud"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-077:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:council:nicaea",
+        "factKey": "phrase:abracadabra:magic-word",
         "tier": 1,
-        "subjectKey": "council:nicaea",
+        "subjectKey": "phrase:abracadabra",
         "clue": {
-          "en": "Which council in 325 rejected Arian teaching and issued an early form of the Nicene Creed?",
-          "et": "Milline 325. aasta kirikukogu lükkas tagasi ariaanluse ning sõnastas Nikaia usutunnistuse varase kuju?"
+          "en": "Which best-known single-word incantation has a long history in charms and is strongly associated with stage magic?",
+          "et": "Milline tuntuim ühesõnaline loits on pika ajalooga amulettides ja seostub tugevalt lavamaagiaga?"
         },
         "response": {
-          "en": "First Council of Nicaea",
-          "et": "Nikaia esimene kirikukogu"
+          "en": "abracadabra",
+          "et": "abrakadabra"
         },
         "acceptedVariants": {
           "en": [
-            "Council of Nicaea"
+            "abrakadabra"
           ],
           "et": [
-            "Nikaia kirikukogu"
+            "abracadabra"
           ]
         },
         "explanation": {
-          "en": "Nicaea affirmed that the Son is of the same substance as the Father.",
-          "et": "Nikaia kinnitas, et Poeg on Isaga sama olemust."
+          "en": "Abracadabra is a long-used incantation found in charms and amulets and strongly associated with stage magic.",
+          "et": "Abrakadabra on pika ajalooga loits, mida on kasutatud amulettides ning mis seostub tugevalt lavamaagiaga."
         },
         "source": {
-          "sourceId": "wikipedia:first_council_of_nicaea",
-          "title": "First Council of Nicaea",
-          "url": "https://en.wikipedia.org/wiki/First_Council_of_Nicaea",
+          "sourceId": "wikipedia:abracadabra",
+          "title": "Abracadabra",
+          "url": "https://en.wikipedia.org/wiki/Abracadabra",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-077:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:council:chalcedon",
+        "factKey": "phrase:sim-sala-bim:dante-trademark",
         "tier": 2,
-        "subjectKey": "council:chalcedon",
+        "subjectKey": "phrase:sim-sala-bim",
         "clue": {
-          "en": "Which 451 council described Christ as one person in two natures?",
-          "et": "Milline 451. aasta kirikukogu kirjeldas Kristust ühe isikuna kahes loomuses?"
+          "en": "Which three-part stage-magic formula consists of nonsense words whose first and last parts rhyme?",
+          "et": "Milline kolmeosaline lavamaagia vormel koosneb mõttetutest sõnadest, mille esimene ja kolmas osa riimuvad?"
         },
         "response": {
-          "en": "Council of Chalcedon",
-          "et": "Chalkedoni kirikukogu"
+          "en": "sim sala bim",
+          "et": "simsalabim"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "simsalabim",
+            "sim salabim"
+          ],
+          "et": [
+            "sim sala bim"
+          ]
         },
         "explanation": {
-          "en": "The Chalcedonian Definition became authoritative for many, but not all, Christian churches.",
-          "et": "Chalkedoni määratlus sai autoriteetseks paljudele, kuid mitte kõigile kristlikele kirikutele."
+          "en": "“Sim Sala Bim” was the three-word stage trademark of Dante the Magician, and its first and last words rhyme.",
+          "et": "„Sim sala bim” oli mustkunstnik Dante kolmesõnaline lavatunnus, mille esimene ja viimane sõna riimuvad."
         },
         "source": {
-          "sourceId": "wikipedia:council_of_chalcedon",
-          "title": "Council of Chalcedon",
-          "url": "https://en.wikipedia.org/wiki/Council_of_Chalcedon",
+          "sourceId": "wikipedia:harry-august-jansen",
+          "title": "Harry August Jansen",
+          "url": "https://en.wikipedia.org/wiki/Harry_August_Jansen",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-077:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:doctrine:trinity",
+        "factKey": "phrase:hocus-pocus:conjuring",
         "tier": 3,
-        "subjectKey": "doctrine:trinity",
+        "subjectKey": "phrase:hocus-pocus",
         "clue": {
-          "en": "Which doctrine speaks of one God in the persons of Father, Son, and Holy Spirit?",
-          "et": "Milline õpetus kõneleb ühest Jumalast Isa, Poja ja Püha Vaimu isikutes?"
+          "en": "Which rhyming phrase is used by magicians for a trick and can also mean misleading nonsense or deception?",
+          "et": "Milline riimuv väljend kuulub mustkunstniku triki juurde ning võib tähendada ka eksitavat mõttetust või pettust?"
         },
         "response": {
-          "en": "Trinity",
-          "et": "Kolmainsus"
+          "en": "hocus-pocus",
+          "et": "hookuspookus"
+        },
+        "acceptedVariants": {
+          "en": [
+            "hookuspookus"
+          ],
+          "et": [
+            "hocus-pocus"
+          ]
+        },
+        "explanation": {
+          "en": "Hocus-pocus is a magician’s trick phrase and can also mean misleading nonsense or deception.",
+          "et": "Hookuspookus on mustkunstitriki juurde kuuluv väljend, mis võib tähendada ka eksitavat mõttetust või pettust."
+        },
+        "source": {
+          "sourceId": "wikipedia:hocus-pocus",
+          "title": "Hocus-pocus",
+          "url": "https://en.wikipedia.org/wiki/Hocus-pocus",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-077:question:4",
+        "factKey": "phrase:open-sesame:ali-baba-cave-command",
+        "tier": 4,
+        "subjectKey": "phrase:open-sesame",
+        "clue": {
+          "en": "Which command in Ali Baba and the Forty Thieves opens the cave that conceals the thieves’ treasure?",
+          "et": "Milline käsk avab „Ali Baba ja neljakümne röövli” loos koopa, kuhu röövlid on peitnud oma varanduse?"
+        },
+        "response": {
+          "en": "open sesame",
+          "et": "„Seesam, avane!”"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Trinitarian theology distinguishes the divine persons without dividing the divine essence.",
-          "et": "Kolmainsusõpetus eristab jumalikke isikuid jumalikku olemust jagamata."
+          "en": "“Open Sesame” is the magical phrase that opens the treasure cave in Ali Baba and the Forty Thieves.",
+          "et": "„Seesam, avane!” on võluvormel, mis avab „Ali Baba ja neljakümne röövli” loos varandusekoopa."
         },
         "source": {
-          "sourceId": "wikipedia:trinity",
-          "title": "Trinity",
-          "url": "https://en.wikipedia.org/wiki/Trinity",
+          "sourceId": "wikipedia:open-sesame",
+          "title": "Open sesame",
+          "url": "https://en.wikipedia.org/wiki/Open_sesame",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-077:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:controversy:iconoclasm",
-        "tier": 4,
-        "subjectKey": "controversy:iconoclasm",
-        "clue": {
-          "en": "What controversy divided Byzantium over the making and veneration of sacred images?",
-          "et": "Milline vaidlus lõhestas Bütsantsi pühapiltide valmistamise ja austamise küsimuses?"
-        },
-        "response": {
-          "en": "Byzantine Iconoclasm",
-          "et": "Bütsantsi ikonoklasm"
-        },
-        "acceptedVariants": {
-          "en": [
-            "Iconoclasm"
-          ],
-          "et": [
-            "pildirüüste"
-          ]
-        },
-        "explanation": {
-          "en": "The iconoclast periods ended with the restoration of icons in 843.",
-          "et": "Ikonoklastlikud ajajärgud lõppesid ikoonide taastamisega 843. aastal."
-        },
-        "source": {
-          "sourceId": "wikipedia:byzantine_iconoclasm",
-          "title": "Byzantine Iconoclasm",
-          "url": "https://en.wikipedia.org/wiki/Byzantine_Iconoclasm",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-077:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:event:great-schism",
+        "factKey": "phrase:avada-kedavra:killing-curse",
         "tier": 5,
-        "subjectKey": "event:great-schism",
+        "subjectKey": "phrase:avada-kedavra",
         "clue": {
-          "en": "What enduring rupture separated the churches centred on Rome and Constantinople?",
-          "et": "Milline kestev lõhe eraldas Rooma ja Konstantinoopoli ümber koondunud kirikud?"
+          "en": "Which Harry Potter incantation names the instantly fatal Killing Curse, one of the three Unforgivable Curses?",
+          "et": "Milline Harry Potteri loits on silmapilkselt surmav tapmisneedus ja üks kolmest andestamatust needusest?"
         },
         "response": {
-          "en": "East–West Schism",
-          "et": "Ida ja Lääne kirikulõhe"
+          "en": "Avada Kedavra",
+          "et": "Avada Kedavra"
         },
         "acceptedVariants": {
-          "en": [
-            "Great Schism"
-          ],
-          "et": [
-            "suur kirikulõhe"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "The conventional date 1054 marks mutual excommunications, although estrangement developed over centuries.",
-          "et": "Tavapärane aasta 1054 tähistab vastastikuseid kirikuvandeid, kuigi võõrandumine kujunes sajandeid."
+          "en": "Avada Kedavra is the Killing Curse, one of the three Unforgivable Curses, and causes immediate death.",
+          "et": "Avada Kedavra on tapmisneedus, üks kolmest andestamatust needusest, ning põhjustab silmapilkse surma."
         },
         "source": {
-          "sourceId": "wikipedia:east%e2%80%93west_schism",
-          "title": "East–West Schism",
-          "url": "https://en.wikipedia.org/wiki/East%E2%80%93West_Schism",
+          "sourceId": "wikipedia:harry-potter-dark-arts",
+          "title": "Fictional universe of Harry Potter",
+          "url": "https://en.wikipedia.org/wiki/Fictional_universe_of_Harry_Potter#Dark_Arts",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
