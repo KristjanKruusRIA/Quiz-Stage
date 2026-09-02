@@ -35516,153 +35516,178 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-056",
     "name": {
-      "en": "Philosophers of Ancient Greece",
-      "et": "Vana-Kreeka filosoofid"
+      "en": "Legends That Put Places on the Map",
+      "et": "Legendid, mis panid paigad kaardile"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-056:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-greek-thinkers:medium:person:socrates",
+        "factKey": "william-tell:apple-crossbow-switzerland",
         "tier": 1,
-        "subjectKey": "person:socrates",
+        "subjectKey": "legend:william-tell",
         "clue": {
-          "en": "This ancient philosopher questioned Athenians and left no writings of his own. Who is it?",
-          "et": "See antiikfilosoof küsitles ateenlasi ega jätnud oma kirjutisi. Kes see on?"
+          "en": "Which Swiss legendary hero was ordered to use a crossbow to shoot an apple from his son’s head?",
+          "et": "Milline Šveitsi legendikangelane pidi käsu peale ammuga oma poja pea pealt õuna tabama?"
         },
         "response": {
-          "en": "Socrates",
-          "et": "Sokrates"
+          "en": "William Tell",
+          "et": "Wilhelm Tell"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Wilhelm Tell"
+          ],
+          "et": [
+            "William Tell"
+          ]
         },
         "explanation": {
-          "en": "Socrates was condemned for impiety and corrupting youth and drank hemlock.",
-          "et": "Sokrates mõisteti süüdi jumalakartmatuses ja noorsoo rikkumises ning jõi surmaputke."
+          "en": "William Tell’s famous ordeal combines his Swiss heroic status, his crossbow and the forced shot at the apple.",
+          "et": "Wilhelm Telli kuulus katsumus ühendab tema Šveitsi kangelaskuju, ammu ja sunnitud lasu õuna pihta."
         },
         "source": {
-          "sourceId": "wikipedia:socrates",
-          "title": "Socrates",
-          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "sourceId": "wikipedia:william_tell",
+          "title": "William Tell",
+          "url": "https://en.wikipedia.org/wiki/William_Tell",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-056:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-greek-thinkers:medium:person:plato",
+        "factKey": "pied-piper:rats-children-hamelin",
         "tier": 2,
-        "subjectKey": "person:plato",
+        "subjectKey": "legend:pied-piper-hamelin",
         "clue": {
-          "en": "Who founded the Academy and wrote dialogues featuring his teacher?",
-          "et": "Tuvasta järgmine antiikfilosoof: ta rajas Akadeemia ning kirjutas dialooge oma õpetajaga."
+          "en": "Which legendary figure first rid Hamelin of rats and later led away the town’s children?",
+          "et": "Milline legenditegelane vabastas Hamelini esmalt rottidest ja viis hiljem linna lapsed endaga kaasa?"
         },
         "response": {
-          "en": "Plato",
-          "et": "Platon"
+          "en": "Pied Piper of Hamelin",
+          "et": "Hamelini rotipüüdja"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Pied Piper of Hamelin",
+            "Pied Piper",
+            "the Pied Piper"
+          ],
+          "et": [
+            "Hamelini vilepillimängija",
+            "Pied Piper",
+            "Pied Piper of Hamelin"
+          ]
         },
         "explanation": {
-          "en": "Plato used the divided line and cave to distinguish intelligible Forms from appearances.",
-          "et": "Platon kasutas jaotatud joont ja koopa võrdpilti vormide eristamiseks näivusest."
+          "en": "The Pied Piper removes Hamelin’s rats, then returns to lead the children away.",
+          "et": "Hamelini rotipüüdja ajab rotid minema ning tuleb hiljem tagasi, et lapsed kaasa viia."
         },
         "source": {
-          "sourceId": "wikipedia:plato",
-          "title": "Plato",
-          "url": "https://en.wikipedia.org/wiki/Plato",
+          "sourceId": "wikipedia:pied_piper_of_hamelin",
+          "title": "Pied Piper of Hamelin",
+          "url": "https://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-056:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-greek-thinkers:medium:person:aristotle",
+        "factKey": "lady-godiva:coventry-ride-tax-legend",
         "tier": 3,
-        "subjectKey": "person:aristotle",
+        "subjectKey": "legend:lady-godiva",
         "clue": {
-          "en": "One ancient philosopher tutored Alexander and founded the Lyceum. Who is described?",
-          "et": "Antiikfilosoof õpetas Aleksandrit ning rajas Lykeioni. Kes see on?"
+          "en": "Which legendary woman rode naked through Coventry, covered only by her long hair, to obtain relief from oppressive taxation?",
+          "et": "Milline legendaarne naine ratsutas Coventrys alasti, vaid pikad juuksed keha katmas, et saada vabastust rõhuvatest maksudest?"
         },
         "response": {
-          "en": "Aristotle",
-          "et": "Aristoteles"
+          "en": "Lady Godiva",
+          "et": "leedi Godiva"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Godiva"
+          ],
+          "et": [
+            "Lady Godiva",
+            "Godiva"
+          ]
         },
         "explanation": {
-          "en": "Aristotle analysed change through material, formal, efficient, and final causes.",
-          "et": "Aristoteles analüüsis muutust materiaalse, vormilise, toimiva ja lõpp-põhjuse kaudu."
+          "en": "Lady Godiva’s Coventry ride was intended to secure the remission of oppressive taxes.",
+          "et": "Leedi Godiva legendaarne Coventry ratsutamine pidi tooma vabastuse rõhuvatest maksudest."
         },
         "source": {
-          "sourceId": "wikipedia:aristotle",
-          "title": "Aristotle",
-          "url": "https://en.wikipedia.org/wiki/Aristotle",
+          "sourceId": "wikipedia:lady_godiva",
+          "title": "Lady Godiva",
+          "url": "https://en.wikipedia.org/wiki/Lady_Godiva",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-056:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-greek-thinkers:medium:person:epicurus",
+        "factKey": "flying-dutchman:ghost-ship-endless-voyage",
         "tier": 4,
-        "subjectKey": "person:epicurus",
+        "subjectKey": "legend:flying-dutchman",
         "clue": {
-          "en": "Identify this ancient philosopher: they taught in a Garden that pleasure is the good life’s aim.",
-          "et": "Kirjeldatud antiikfilosoof õpetas Aias, et nauding on hea elu siht. Mis on tema nimi?"
+          "en": "Which legendary vessel is doomed never to reach port and is often placed near the Cape of Good Hope?",
+          "et": "Milline legendaarne alus on määratud igavesti sadamasse jõudmata seilama ning paigutatakse sageli Hea Lootuse neeme lähistele?"
         },
         "response": {
-          "en": "Epicurus",
-          "et": "Epikuros"
+          "en": "Flying Dutchman",
+          "et": "Lendav Hollandlane"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Flying Dutchman"
+          ],
+          "et": [
+            "Flying Dutchman"
+          ]
         },
         "explanation": {
-          "en": "Epicurus defined the best pleasure as freedom from bodily pain and mental disturbance.",
-          "et": "Epikuros määratles parima naudingu kehalise valu ja vaimse häirituse puudumisena."
+          "en": "The Flying Dutchman is a ghost ship condemned to an endless voyage without making harbour.",
+          "et": "Lendav Hollandlane on kummituslaev, mille lõputu meretee ei vii kunagi sadamasse."
         },
         "source": {
-          "sourceId": "wikipedia:epicurus",
-          "title": "Epicurus",
-          "url": "https://en.wikipedia.org/wiki/Epicurus",
+          "sourceId": "wikipedia:flying_dutchman",
+          "title": "Flying Dutchman",
+          "url": "https://en.wikipedia.org/wiki/Flying_Dutchman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-056:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-greek-thinkers:medium:person:diogenes",
+        "factKey": "lorelei:rhine-rock-lures-boatmen",
         "tier": 5,
-        "subjectKey": "person:diogenes",
+        "subjectKey": "legend:lorelei",
         "clue": {
-          "en": "Who lived with radical simplicity and challenged convention?",
-          "et": "Järgmine antiikfilosoof elas äärmise lihtsusega ning trotsis tavasid. Kes see on?"
+          "en": "What legendary name belongs both to a rock on the Rhine and to the woman whose song distracts or lures boatmen?",
+          "et": "Milline legendaarne nimi kuulub nii Reini jõe kaljule kui ka naiseks kehastatud kujule, kelle laul paadimehi peibutab või nende tähelepanu hajutab?"
         },
         "response": {
-          "en": "Diogenes",
-          "et": "Diogenes"
+          "en": "Lorelei",
+          "et": "Lorelei"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Loreley"
+          ],
+          "et": [
+            "Loreley"
+          ]
         },
         "explanation": {
-          "en": "Diogenes became the emblematic Cynic said to have lived in a large jar.",
-          "et": "Diogenes sai küünikute võrdkujuks, kes olevat elanud suures savinõus."
+          "en": "Lorelei is the Rhine rock personified in literature as a singing woman who distracts boatmen.",
+          "et": "Lorelei on Reini kalju, mida kirjanduses kehastatakse laulva naisena, kes paadimeeste tähelepanu hajutab."
         },
         "source": {
-          "sourceId": "wikipedia:diogenes",
-          "title": "Diogenes",
-          "url": "https://en.wikipedia.org/wiki/Diogenes",
+          "sourceId": "wikipedia:lorelei",
+          "title": "Lorelei",
+          "url": "https://en.wikipedia.org/wiki/Lorelei",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -35670,153 +35695,187 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-057",
     "name": {
-      "en": "Schools Founded in the Ancient World",
-      "et": "Antiikmaailmas sündinud koolkonnad"
+      "en": "Legendary Expressions with a Story",
+      "et": "Legendidest pärit väljendid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-057:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-schools:medium:school:platonism",
+        "factKey": "trojan-horse:hidden-greeks-deceptive-gift",
         "tier": 1,
-        "subjectKey": "school:platonism",
+        "subjectKey": "expression:trojan-horse",
         "clue": {
-          "en": "Recognise the ancient philosophical school that treats intelligible Forms as more fundamental than changing appearances.",
-          "et": "Otsitav antiikfilosoofia koolkond peab mõistuslikke vorme muutuvatest nähtustest põhilisemaks. Mis see on?"
+          "en": "Which expression or named object comes from a wooden construction that concealed Greek warriors and carried them into Troy?",
+          "et": "Milline väljend või nimega ese pärineb puitehitisest, mille sisse peitunud Kreeka sõdalased pääsesid Troojasse?"
         },
         "response": {
-          "en": "Platonism",
-          "et": "platonism"
+          "en": "Trojan horse",
+          "et": "Trooja hobune"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Trojan horse"
+          ],
+          "et": [
+            "Trooja puuhobune",
+            "Trojan horse"
+          ]
         },
         "explanation": {
-          "en": "Platonism developed through the Academy and later Middle and Neoplatonic traditions.",
-          "et": "Platonism arenes Akadeemia ning hilisema kesk- ja uusplatonismi kaudu."
+          "en": "The Trojan horse hid Greek warriors inside its wooden body so they could enter Troy during the war.",
+          "et": "Trooja hobune peitis Kreeka sõdalasi oma puust kere sees, et nad saaksid sõja ajal linna siseneda."
         },
         "source": {
-          "sourceId": "wikipedia:platonism",
-          "title": "Platonism",
-          "url": "https://en.wikipedia.org/wiki/Platonism",
+          "sourceId": "wikipedia:trojan_horse",
+          "title": "Trojan Horse",
+          "url": "https://en.wikipedia.org/wiki/Trojan_Horse",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-057:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-schools:medium:school:aristotelianism",
+        "factKey": "crocodile-tears:insincere-sorrow-feeding-legend",
         "tier": 2,
-        "subjectKey": "school:aristotelianism",
+        "subjectKey": "expression:crocodile-tears",
         "clue": {
-          "en": "What ancient philosophical school studies substances as composites of matter and form?",
-          "et": "Järgmine antiikfilosoofia koolkond uurib substantsi aine ja vormi ühendina. Milline see on?"
+          "en": "Which expression means insincere sorrow and comes from stories of crocodiles showing grief while they feed?",
+          "et": "Milline väljend tähendab ebasiirast kurbust ja pärineb lugudest krokodillide kohta, kes söömise ajal kurvastavad?"
         },
         "response": {
-          "en": "Aristotelianism",
-          "et": "aristotelism"
+          "en": "crocodile tears",
+          "et": "krokodillipisarad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "crocodile's tears"
+          ],
+          "et": [
+            "krokodilli pisarad",
+            "crocodile tears"
+          ]
         },
         "explanation": {
-          "en": "Aristotelianism links human flourishing with rational virtuous activity.",
-          "et": "Aristotelism seob inimese õitsengu mõistusliku voorusliku tegevusega."
+          "en": "Crocodile tears name a show of false emotion linked to legends about crocodiles crying as they eat.",
+          "et": "Krokodillipisarad tähistavad teeseldud kurbust ning seostuvad pärimusega söömise ajal nutvast krokodillist."
         },
         "source": {
-          "sourceId": "wikipedia:aristotelianism",
-          "title": "Aristotelianism",
-          "url": "https://en.wikipedia.org/wiki/Aristotelianism",
+          "sourceId": "wikipedia:crocodile_tears",
+          "title": "Crocodile tears",
+          "url": "https://en.wikipedia.org/wiki/Crocodile_tears",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-057:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-schools:medium:school:epicureanism",
+        "factKey": "damocles:sword-hair-danger-of-power",
         "tier": 3,
-        "subjectKey": "school:epicureanism",
+        "subjectKey": "expression:sword-of-damocles",
         "clue": {
-          "en": "An ancient philosophical school seeks tranquillity through modest pleasure and freedom from fear. Name it.",
-          "et": "Üks antiikfilosoofia koolkond otsib meelerahu mõõduka naudingu ja hirmust vabanemise kaudu. Millist vastust otsime?"
+          "en": "Which expression or named object comes from a story in which one figure trades places with Dionysius and sits beneath a blade suspended by one hair?",
+          "et": "Milline väljend või nimega ese pärineb loost, kus üks tegelane vahetab Dionysiosega kohad ja istub ühe juuksekarva otsas rippuva tera all?"
         },
         "response": {
-          "en": "Epicureanism",
-          "et": "epikuurlus"
+          "en": "Sword of Damocles",
+          "et": "Damoklese mõõk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Sword of Damocles",
+            "Damocles' sword",
+            "Damocles’s sword"
+          ],
+          "et": [
+            "Damoclese mõõk",
+            "Sword of Damocles"
+          ]
         },
         "explanation": {
-          "en": "Epicureanism uses atomism to argue that gods and death need not terrify us.",
-          "et": "Epikuurlus kasutab atomismi väitmaks, et jumalaid ja surma pole vaja karta."
+          "en": "The Sword of Damocles hung above the throne by a single hair while Damocles occupied Dionysius’s place.",
+          "et": "Damoklese mõõk rippus trooni kohal üheainsa juuksekarva otsas, kui Damokles oli Dionysiose koha võtnud."
         },
         "source": {
-          "sourceId": "wikipedia:epicureanism",
-          "title": "Epicureanism",
-          "url": "https://en.wikipedia.org/wiki/Epicureanism",
+          "sourceId": "wikipedia:damocles",
+          "title": "Sword of Damocles",
+          "url": "https://en.wikipedia.org/wiki/Damocles",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-057:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-schools:medium:school:cynicism",
+        "factKey": "gordian-knot:alexander-cuts-impossible-knot",
         "tier": 4,
-        "subjectKey": "school:cynicism",
+        "subjectKey": "expression:gordian-knot",
         "clue": {
-          "en": "Identify this ancient philosophical school: it rejects artificial convention in favour of virtue according to nature.",
-          "et": "Kirjeldatud antiikfilosoofia koolkond lükkab kunstlikud tavad tagasi loomuliku vooruse kasuks. Mis on selle nimi?"
+          "en": "Which named object or expression is associated with Alexander the Great making one decisive cut at Gordium?",
+          "et": "Milline nimega ese või väljend seostub Aleksander Suure ühe otsustava lõikega Gordiumis?"
         },
         "response": {
-          "en": "Cynicism",
-          "et": "küünikute koolkond"
+          "en": "Gordian knot",
+          "et": "Gordioni sõlm"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Gordian knot"
+          ],
+          "et": [
+            "Gordiose sõlm",
+            "Gordian knot"
+          ]
         },
         "explanation": {
-          "en": "Cynicism uses provocative plain living to expose dependence on status and possessions.",
-          "et": "Küünikute koolkond kasutab provokatiivset lihtsat elu staatuse- ja omandisõltuvuse paljastamiseks."
+          "en": "The Gordian knot was the challenge Alexander confronted at Gordium and famously cut apart.",
+          "et": "Gordioni sõlm oli Gordiumis Aleksandri ette seatud ülesanne, mille ta kuulsalt läbi lõikas."
         },
         "source": {
-          "sourceId": "wikipedia:cynicism_(philosophy)",
-          "title": "Cynicism (philosophy)",
-          "url": "https://en.wikipedia.org/wiki/Cynicism_(philosophy)",
+          "sourceId": "wikipedia:gordian_knot",
+          "title": "Gordian Knot",
+          "url": "https://en.wikipedia.org/wiki/Gordian_Knot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-057:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:ancient-schools:medium:school:pyrrhonism",
+        "factKey": "scylla-charybdis:two-sea-dangers-two-evils",
         "tier": 5,
-        "subjectKey": "school:pyrrhonism",
+        "subjectKey": "expression:scylla-charybdis",
         "clue": {
-          "en": "Which ancient philosophical school pursues tranquillity by suspending judgement on disputed claims?",
-          "et": "Tuvasta järgmine antiikfilosoofia koolkond: see otsib meelerahu vaieldavate väidete üle otsustamisest hoidudes."
+          "en": "Give both names of the sea dangers on opposite sides of a narrow passage whose pairing became an idiom for choosing between two evils.",
+          "et": "Nimeta mõlemad mereohud, mis asuvad kitsa läbipääsu vastaskülgedel ja mille paarist sai väljend kahe halva vahel valimise kohta."
         },
         "response": {
-          "en": "Pyrrhonism",
-          "et": "pürronism"
+          "en": "Scylla and Charybdis",
+          "et": "Skylla ja Charybdis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Charybdis and Scylla",
+            "between Scylla and Charybdis",
+            "between Charybdis and Scylla"
+          ],
+          "et": [
+            "Charybdis ja Skylla",
+            "Scylla ja Charybdis",
+            "Charybdis ja Scylla",
+            "Skylla ja Charybdise vahel",
+            "Charybdise ja Skylla vahel",
+            "Scylla ja Charybdise vahel",
+            "Charybdise ja Scylla vahel"
+          ]
         },
         "explanation": {
-          "en": "Pyrrhonism balances opposing appearances and arguments to reach epoché.",
-          "et": "Pürronism tasakaalustab vastandlikud näivused ja argumendid epoché saavutamiseks."
+          "en": "Scylla and Charybdis threaten opposite sides of the passage, so escaping one danger means approaching the other.",
+          "et": "Skylla ja Charybdis varitsevad läbipääsu vastaskülgedel, nii et ühest ohust pääsemine viib teisele lähemale."
         },
         "source": {
-          "sourceId": "wikipedia:pyrrhonism",
-          "title": "Pyrrhonism",
-          "url": "https://en.wikipedia.org/wiki/Pyrrhonism",
+          "sourceId": "wikipedia:between_scylla_and_charybdis",
+          "title": "Between Scylla and Charybdis",
+          "url": "https://en.wikipedia.org/wiki/Between_Scylla_and_Charybdis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -35824,153 +35883,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-058",
     "name": {
-      "en": "Thinkers of Early Modern Europe",
-      "et": "Varauusaja Euroopa mõtlejad"
+      "en": "Folklore We Meet as Children",
+      "et": "Lapsepõlves kohatud folkloor"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-058:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:early-modern-philosophers:medium:person:rene-descartes",
+        "factKey": "boogeyman:imaginary-childhood-threat",
         "tier": 1,
-        "subjectKey": "person:rene-descartes",
+        "subjectKey": "folklore:boogeyman",
         "clue": {
-          "en": "Find the early modern philosopher who made “I think, therefore I am” a foundation for certainty.",
-          "et": "Varauusaja filosoof tegi lausest „mõtlen, järelikult olen“ kindluse aluse. Leia sobiv vastus."
+          "en": "Which folklore character is invoked to frighten misbehaving children and takes different forms across cultures?",
+          "et": "Millise folklooritegelasega hirmutatakse halvasti käituvaid lapsi ja kelle kuju on eri kultuurides erinev?"
         },
         "response": {
-          "en": "René Descartes",
-          "et": "René Descartes"
+          "en": "boogeyman",
+          "et": "koll"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "bogeyman",
+            "boogieman",
+            "boogey man"
+          ],
+          "et": [
+            "boogeyman",
+            "bogeyman"
+          ]
         },
         "explanation": {
-          "en": "René Descartes used methodic doubt and separated thinking mind from extended matter.",
-          "et": "René Descartes kasutas metoodilist kahtlust ning eristas mõtleva vaimu ulatuvast ainest."
+          "en": "The boogeyman is used to frighten misbehaving children, and its description varies from one culture to another.",
+          "et": "Koll on kujuteldav lapsepõlvehirm, kelle kirjeldus muutub kultuuriti."
         },
         "source": {
-          "sourceId": "wikipedia:ren%c3%a9_descartes",
-          "title": "René Descartes",
-          "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes",
+          "sourceId": "wikipedia:bogeyman",
+          "title": "Bogeyman",
+          "url": "https://en.wikipedia.org/wiki/Bogeyman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-058:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:early-modern-philosophers:medium:person:john-locke",
+        "factKey": "sandman:sleep-dreams-sand-eyes",
         "tier": 2,
-        "subjectKey": "person:john-locke",
+        "subjectKey": "folklore:sandman",
         "clue": {
-          "en": "Identify the early modern philosopher: they argued that the mind begins without innate ideas.",
-          "et": "Kes väitis, et vaim alustab kaasasündinud ideedeta?"
+          "en": "Which bedtime folklore character brings sleep and dreams by placing something magical in the eyes?",
+          "et": "Milline une-eelne folklooritegelane toob une ja unenäod, pannes midagi maagilist silma?"
         },
         "response": {
-          "en": "John Locke",
-          "et": "John Locke"
+          "en": "Sandman",
+          "et": "Une-Mati"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Sandman"
+          ],
+          "et": [
+            "uneliivamees",
+            "Sandman"
+          ]
         },
         "explanation": {
-          "en": "John Locke distinguished primary qualities in objects from secondary qualities in perceivers.",
-          "et": "John Locke eristas esemete esmaseid omadusi tajujas tekkivatest teisestest omadustest."
+          "en": "The Sandman’s magical sand is placed in the eyes to bring sleep and dreams.",
+          "et": "Une-Mati võluliiv satub silma ning toob une ja unenäod."
         },
         "source": {
-          "sourceId": "wikipedia:john_locke",
-          "title": "John Locke",
-          "url": "https://en.wikipedia.org/wiki/John_Locke",
+          "sourceId": "wikipedia:sandman",
+          "title": "Sandman",
+          "url": "https://en.wikipedia.org/wiki/Sandman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-058:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:early-modern-philosophers:medium:person:david-hume",
+        "factKey": "easter-bunny:eggs-baskets-easter",
         "tier": 3,
-        "subjectKey": "person:david-hume",
+        "subjectKey": "folklore:easter-bunny",
         "clue": {
-          "en": "An early modern philosopher analysed knowledge through impressions and ideas. Who fits?",
-          "et": "Siin kirjeldatud varauusaja filosoof analüüsis teadmist muljete ja ideede kaudu. Kes see on?"
+          "en": "Which holiday folklore character is depicted as a rabbit or hare and brings decorated eggs?",
+          "et": "Millist pühadeaegset folklooritegelast kujutatakse jänesena ja kes toob kaunistatud mune?"
         },
         "response": {
-          "en": "David Hume",
-          "et": "David Hume"
+          "en": "Easter Bunny",
+          "et": "lihavõttejänes"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Easter Bunny",
+            "Easter Rabbit",
+            "Easter Hare"
+          ],
+          "et": [
+            "ülestõusmispühade jänes",
+            "Easter Bunny"
+          ]
         },
         "explanation": {
-          "en": "David Hume argued that causal necessity is inferred from habit, not directly perceived.",
-          "et": "David Hume väitis, et põhjuslik paratamatus tuletatakse harjumusest ega ole otse tajutud."
+          "en": "The Easter Bunny is a rabbit-like Easter visitor whose customary gift is eggs.",
+          "et": "Lihavõttejänes on jänesekujuline ülestõusmispühade külaline, kes toob mune."
         },
         "source": {
-          "sourceId": "wikipedia:david_hume",
-          "title": "David Hume",
-          "url": "https://en.wikipedia.org/wiki/David_Hume",
+          "sourceId": "wikipedia:easter_bunny",
+          "title": "Easter Bunny",
+          "url": "https://en.wikipedia.org/wiki/Easter_Bunny",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-058:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:early-modern-philosophers:medium:person:immanuel-kant",
+        "factKey": "tooth-fairy:pillow-money-lost-tooth",
         "tier": 4,
-        "subjectKey": "person:immanuel-kant",
+        "subjectKey": "folklore:tooth-fairy",
         "clue": {
-          "en": "This early modern philosopher asked how synthetic knowledge can be possible a priori. Who is it?",
-          "et": "See varauusaja filosoof küsis, kuidas sünteetiline teadmine saab olla võimalik a priori. Kes see on?"
+          "en": "Which folklore character exchanges a child’s lost tooth left under a pillow for money or a small gift?",
+          "et": "Milline folklooritegelane vahetab padja alla jäetud lapse piimahamba raha või väikese kingituse vastu?"
         },
         "response": {
-          "en": "Immanuel Kant",
-          "et": "Immanuel Kant"
+          "en": "Tooth Fairy",
+          "et": "hambahaldjas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Tooth Fairy"
+          ],
+          "et": [
+            "Tooth Fairy"
+          ]
         },
         "explanation": {
-          "en": "Immanuel Kant held that space, time, and categories structure possible experience.",
-          "et": "Immanuel Kant pidas ruumi, aega ja kategooriaid võimaliku kogemuse struktuuriks."
+          "en": "The Tooth Fairy custom exchanges a lost tooth beneath the pillow for money or a small present.",
+          "et": "Hambahaldja kombes saab padja alla jäetud hambast hommikuks münt või kingitus."
         },
         "source": {
-          "sourceId": "wikipedia:immanuel_kant",
-          "title": "Immanuel Kant",
-          "url": "https://en.wikipedia.org/wiki/Immanuel_Kant",
+          "sourceId": "wikipedia:tooth_fairy",
+          "title": "Tooth fairy",
+          "url": "https://en.wikipedia.org/wiki/Tooth_fairy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-058:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:early-modern-philosophers:medium:person:baruch-spinoza",
+        "factKey": "jack-frost:personifies-winter-cold-frost",
         "tier": 5,
-        "subjectKey": "person:baruch-spinoza",
+        "subjectKey": "folklore:jack-frost",
         "clue": {
-          "en": "Who identified God and Nature as one infinite substance?",
-          "et": "Tuvasta järgmine varauusaja filosoof: ta samastas Jumala ja Looduse ühe lõpmatu substantsina."
+          "en": "Which English-language folklore character personifies winter cold?",
+          "et": "Milline ingliskeelse folkloori tegelane kehastab talvist näpistavat külma?"
         },
         "response": {
-          "en": "Baruch Spinoza",
-          "et": "Baruch Spinoza"
+          "en": "Jack Frost",
+          "et": "Jack Frost"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Külmataat"
+          ],
+          "et": [
+            "Külmataat"
+          ]
         },
         "explanation": {
-          "en": "Baruch Spinoza treated mind and body as attributes or expressions of the same reality.",
-          "et": "Baruch Spinoza käsitles vaimu ja keha sama tegelikkuse atribuutide või väljendustena."
+          "en": "Jack Frost gives a human figure to frost, winter and cold weather.",
+          "et": "Jack Frost annab pakasele, talvele ja külmale ilmale inimkuju."
         },
         "source": {
-          "sourceId": "wikipedia:baruch_spinoza",
-          "title": "Baruch Spinoza",
-          "url": "https://en.wikipedia.org/wiki/Baruch_Spinoza",
+          "sourceId": "wikipedia:jack_frost",
+          "title": "Jack Frost",
+          "url": "https://en.wikipedia.org/wiki/Jack_Frost",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -35978,153 +36064,169 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-059",
     "name": {
-      "en": "Philosophers across Civilisations",
-      "et": "Eri tsivilisatsioonide filosoofid"
+      "en": "Monster Survival Guide",
+      "et": "Koletiste ellujäämisjuhend"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-059:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:philosophers-beyond-western-canon:medium:person:laozi",
+        "factKey": "kraken:scandinavian-sea-monster-ships",
         "tier": 1,
-        "subjectKey": "person:laozi",
+        "subjectKey": "monster:kraken",
         "clue": {
-          "en": "Recognise the philosopher or sage who is the traditional author linked with the Dao De Jing.",
-          "et": "Otsitav filosoof või tark on „Daodejingi“ traditsiooniline autor. Kes see on?"
+          "en": "Which legendary sea monster comes from Scandinavian tradition and is closely tied to tales of ships and sailors?",
+          "et": "Milline legendaarne merekoletis pärineb Skandinaavia pärimusest ning seostub lugudega laevadest ja meremeestest?"
         },
         "response": {
-          "en": "Laozi",
-          "et": "Laozi"
+          "en": "Kraken",
+          "et": "kraken"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Kraken"
+          ],
+          "et": [
+            "the Kraken"
+          ]
         },
         "explanation": {
-          "en": "Laozi presents non-forcing wu wei as action aligned with the Way.",
-          "et": "Laozi esitab sundimatu wu wei tegevusena, mis järgib daod."
+          "en": "The Kraken is a Scandinavian legendary sea monster repeatedly associated with ships and sailors.",
+          "et": "Kraken on Skandinaavia legendide merekoletis, kelle lood seavad laevad ja meremehed ohtu."
         },
         "source": {
-          "sourceId": "wikipedia:laozi",
-          "title": "Laozi",
-          "url": "https://en.wikipedia.org/wiki/Laozi",
+          "sourceId": "wikipedia:kraken",
+          "title": "Kraken",
+          "url": "https://en.wikipedia.org/wiki/Kraken",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-059:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:philosophers-beyond-western-canon:medium:person:zhuangzi",
+        "factKey": "basilisk:serpent-king-killing-gaze",
         "tier": 2,
-        "subjectKey": "person:zhuangzi",
+        "subjectKey": "monster:basilisk",
         "clue": {
-          "en": "Philosopher or sage used playful stories such as the dream of being a butterfly. Who is it?",
-          "et": "Kes kasutas mängulisi lugusid, näiteks liblikaks olemise unenägu?"
+          "en": "Which legendary monster is a serpent with a deadly gaze, opposed in some traditions by a mirror or a weasel?",
+          "et": "Milline legendaarne koletis on surmava pilguga madu, kelle vastu aitavad mõnes pärimuses peegel või nirk?"
         },
         "response": {
-          "en": "Zhuangzi",
-          "et": "Zhuangzi"
+          "en": "basilisk",
+          "et": "basilisk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the basilisk"
+          ],
+          "et": [
+            "the basilisk"
+          ]
         },
         "explanation": {
-          "en": "Zhuangzi questions fixed distinctions through transformations of perspective.",
-          "et": "Zhuangzi seab vaatenurga muutuste kaudu kahtluse alla jäigad eristused."
+          "en": "The basilisk kills by looking at its victim, while mirrors and weasels appear in traditions about defeating it.",
+          "et": "Basiliski pilk tapab, kuid tema võitmise lugudes esinevad peeglid ja nirgid."
         },
         "source": {
-          "sourceId": "wikipedia:zhuang_zhou",
-          "title": "Zhuang Zhou",
-          "url": "https://en.wikipedia.org/wiki/Zhuang_Zhou",
+          "sourceId": "wikipedia:basilisk",
+          "title": "Basilisk",
+          "url": "https://en.wikipedia.org/wiki/Basilisk",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-059:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:philosophers-beyond-western-canon:medium:person:nagarjuna",
+        "factKey": "baba-yaga:slavic-witch-chicken-leg-hut",
         "tier": 3,
-        "subjectKey": "person:nagarjuna",
+        "subjectKey": "monster:baba-yaga",
         "clue": {
-          "en": "One philosopher or sage developed the Madhyamaka analysis of emptiness. Who is described?",
-          "et": "Filosoof või tark arendas Madhyamaka tühjuseanalüüsi. Kes see on?"
+          "en": "Which Slavic folklore figure lives in a hut that stands on chicken legs?",
+          "et": "Milline slaavi folkloori tegelane elab kanajalgadel seisvas hütis?"
         },
         "response": {
-          "en": "Nāgārjuna",
-          "et": "Nāgārdžuna"
+          "en": "Baba Yaga",
+          "et": "Baba-Jagaa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Baba-Jagaa"
+          ],
+          "et": [
+            "Baba Yaga"
+          ]
         },
         "explanation": {
-          "en": "Nāgārjuna argued that things lack independent essence because they arise dependently.",
-          "et": "Nāgārdžuna väitis, et asjadel puudub sõltumatu olemus, sest need tekivad sõltuvalt."
+          "en": "Baba Yaga belongs to Slavic folklore and inhabits the unmistakable chicken-legged hut.",
+          "et": "Baba-Jagaa kuulub slaavi pärimusse ja elab äratuntavas kanajalgadel hütis."
         },
         "source": {
-          "sourceId": "wikipedia:nagarjuna",
-          "title": "Nagarjuna",
-          "url": "https://en.wikipedia.org/wiki/Nagarjuna",
+          "sourceId": "wikipedia:baba_yaga",
+          "title": "Baba Yaga",
+          "url": "https://en.wikipedia.org/wiki/Baba_Yaga",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-059:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:philosophers-beyond-western-canon:medium:person:avicenna",
+        "factKey": "headless-horseman:sleepy-hollow-night-rider",
         "tier": 4,
-        "subjectKey": "person:avicenna",
+        "subjectKey": "monster:headless-horseman",
         "clue": {
-          "en": "Which Persian philosopher and physician wrote the Canon of Medicine?",
-          "et": "Kirjeldatud filosoof või tark oli Pärsia filosoof ja arst, „Meditsiinikaanoni“ autor. Mis on tema nimi?"
+          "en": "Which threatening figure, best known from Sleepy Hollow, rides a horse despite missing a crucial part of the body?",
+          "et": "Milline ähvardav kuju, kelle tuntuim kirjanduslik versioon seostub Sleepy Hollow’ga, ratsutab ilma ühe olulise kehaosata?"
         },
         "response": {
-          "en": "Avicenna",
-          "et": "Ibn Sina"
+          "en": "Headless Horseman",
+          "et": "Peata Ratsanik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Headless Horseman"
+          ],
+          "et": [
+            "Headless Horseman"
+          ]
         },
         "explanation": {
-          "en": "Avicenna distinguished necessary existence from contingent beings and proposed the floating man.",
-          "et": "Ibn Sina eristas vajalikku olemasolu võimalikest olenditest ning esitas hõljuva inimese mõttekatse."
+          "en": "The Headless Horseman is the mounted, headless figure made especially famous by Sleepy Hollow.",
+          "et": "Peata Ratsanik on Sleepy Hollow’ga kuulsaks saanud ilma peata ratsamees."
         },
         "source": {
-          "sourceId": "wikipedia:avicenna",
-          "title": "Avicenna",
-          "url": "https://en.wikipedia.org/wiki/Avicenna",
+          "sourceId": "wikipedia:headless_horseman",
+          "title": "Headless Horseman",
+          "url": "https://en.wikipedia.org/wiki/Headless_Horseman",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-059:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:philosophers-beyond-western-canon:medium:person:maimonides",
+        "factKey": "krampus:alpine-christmas-punishes-children",
         "tier": 5,
-        "subjectKey": "person:maimonides",
+        "subjectKey": "monster:krampus",
         "clue": {
-          "en": "Who was a Jewish philosopher and legal scholar who wrote the Guide for the Perplexed?",
-          "et": "Tuvasta järgmine filosoof või tark: ta oli juudi filosoof ja õigusteadlane, kes kirjutas „Eksinute teejuhi“."
+          "en": "Which Alpine folklore figure appears during the Saint Nicholas or Christmas season to punish misbehaving children?",
+          "et": "Milline Alpide pärimuse tegelane ilmub püha Nikolause või jõuluajal, et halvasti käituvaid lapsi karistada?"
         },
         "response": {
-          "en": "Maimonides",
-          "et": "Maimonides"
+          "en": "Krampus",
+          "et": "Krampus"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Maimonides combined Aristotelian philosophy with negative theology about divine attributes.",
-          "et": "Maimonides ühendas aristotelliku filosoofia negatiivse teoloogiaga Jumala omadustest."
+          "en": "Krampus comes from Alpine tradition and serves as the season’s punisher of naughty children.",
+          "et": "Krampus pärineb Alpide traditsioonist ja karistab sel pühadeajal sõnakuulmatuid lapsi."
         },
         "source": {
-          "sourceId": "wikipedia:maimonides",
-          "title": "Maimonides",
-          "url": "https://en.wikipedia.org/wiki/Maimonides",
+          "sourceId": "wikipedia:krampus",
+          "title": "Krampus",
+          "url": "https://en.wikipedia.org/wiki/Krampus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36132,153 +36234,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-060",
     "name": {
-      "en": "The Building Blocks of Reasoning",
-      "et": "Arutluse ehituskivid"
+      "en": "Good-Luck Actions, Objects and Places",
+      "et": "Õnnetoovad teod, esemed ja paigad"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-060:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:logic-basics:medium:concept:deductive-reasoning",
+        "factKey": "four-leaf-clover:rare-lucky-variant",
         "tier": 1,
-        "subjectKey": "concept:deductive-reasoning",
+        "subjectKey": "luck:four-leaf-clover",
         "clue": {
-          "en": "A logic concept aims for a conclusion that must follow from the premises. Name it.",
-          "et": "Üks loogikamõiste taotleb järeldust, mis peab eeldustest tulenema. Millist vastust otsime?"
+          "en": "Which lucky object is a rare variant of the common three-leaf plant, distinguished by one extra leaflet?",
+          "et": "Milline õnneese on tavalise kolmelehelise taime haruldane teisend, millel on üks leheke rohkem?"
         },
         "response": {
-          "en": "deduction",
-          "et": "deduktsioon"
+          "en": "four-leaf clover",
+          "et": "neljaleheline ristik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a four-leaf clover"
+          ],
+          "et": [
+            "neljaleheline ristikhein",
+            "õnneristik"
+          ]
         },
         "explanation": {
-          "en": "Deduction preserves truth when the argument is valid and premises are true.",
-          "et": "Deduktsioon säilitab tõe, kui argument on kehtiv ja eeldused tõesed."
+          "en": "The four-leaf clover is a rare mutation with four leaflets and is widely treated as a good-luck symbol.",
+          "et": "Neljaleheline ristik on haruldane nelja lehekesega mutatsioon, mida peetakse laialt õnne sümboliks."
         },
         "source": {
-          "sourceId": "wikipedia:deductive_reasoning",
-          "title": "Deductive reasoning",
-          "url": "https://en.wikipedia.org/wiki/Deductive_reasoning",
+          "sourceId": "wikipedia:four-leaf_clover",
+          "title": "Four-leaf clover",
+          "url": "https://en.wikipedia.org/wiki/Four-leaf_clover",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-060:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:logic-basics:medium:concept:inductive-reasoning",
+        "factKey": "crossed-fingers:hand-gesture-good-luck",
         "tier": 2,
-        "subjectKey": "concept:inductive-reasoning",
+        "subjectKey": "luck:crossed-fingers",
         "clue": {
-          "en": "Identify this logic concept: it uses observations to support a probable general conclusion.",
-          "et": "Kirjeldatud loogikamõiste kasutab vaatlusi tõenäolise üldjärelduse toetamiseks. Mis on selle nimi?"
+          "en": "Which familiar two-finger hand gesture is used when hoping for good luck?",
+          "et": "Millist tuttavat kahe sõrmega tehtavat käemärki kasutatakse head õnne lootes?"
         },
         "response": {
-          "en": "induction",
-          "et": "induktsioon"
+          "en": "crossing one's fingers",
+          "et": "sõrmede ristamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "crossing your fingers",
+            "crossing fingers",
+            "crossed fingers",
+            "fingers crossed"
+          ],
+          "et": [
+            "ristatud sõrmed",
+            "sõrmed ristis",
+            "näpud ristis"
+          ]
         },
         "explanation": {
-          "en": "Induction can be strong without making its conclusion logically certain.",
-          "et": "Induktsioon võib olla tugev, muutmata järeldust loogiliselt kindlaks."
+          "en": "Crossing one’s fingers is a compact gesture used to wish for a favourable outcome.",
+          "et": "Sõrmede ristamine on lihtne žest, millega soovitakse soodsat tulemust."
         },
         "source": {
-          "sourceId": "wikipedia:inductive_reasoning",
-          "title": "Inductive reasoning",
-          "url": "https://en.wikipedia.org/wiki/Inductive_reasoning",
+          "sourceId": "wikipedia:crossed_fingers",
+          "title": "Crossed fingers",
+          "url": "https://en.wikipedia.org/wiki/Crossed_fingers",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-060:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:logic-basics:medium:concept:syllogism",
+        "factKey": "knocking-wood:avoids-jinx-misfortune",
         "tier": 3,
-        "subjectKey": "concept:syllogism",
+        "subjectKey": "luck:knocking-on-wood",
         "clue": {
-          "en": "Which logic concept derives a conclusion from two premises in a structured form?",
-          "et": "Tuvasta järgmine loogikamõiste: see tuletab struktureeritud kujul kahest eeldusest järelduse."
+          "en": "What customary action involving wood is performed to ward off misfortune or preserve luck?",
+          "et": "Millist puiduga seotud tava järgitakse ebaõnne tõrjumiseks või õnne hoidmiseks?"
         },
         "response": {
-          "en": "syllogism",
-          "et": "süllogism"
+          "en": "knocking on wood",
+          "et": "vastu puud koputamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "knock on wood",
+            "touching wood",
+            "touch wood"
+          ],
+          "et": [
+            "puule koputamine",
+            "vastu puitu koputamine"
+          ]
         },
         "explanation": {
-          "en": "Syllogism in categorical form links terms through a shared middle term.",
-          "et": "Süllogism seob kategoorilises vormis mõisted ühise keskmõiste kaudu."
+          "en": "Knocking on wood is a superstition intended to prevent misfortune or preserve luck.",
+          "et": "Vastu puud koputamine on ebausukomme, millega püütakse halba õnne vältida."
         },
         "source": {
-          "sourceId": "wikipedia:syllogism",
-          "title": "Syllogism",
-          "url": "https://en.wikipedia.org/wiki/Syllogism",
+          "sourceId": "wikipedia:knocking_on_wood",
+          "title": "Knocking on wood",
+          "url": "https://en.wikipedia.org/wiki/Knocking_on_wood",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-060:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:logic-basics:medium:concept:logical-validity",
+        "factKey": "maneki-neko:japanese-raised-paw-good-luck",
         "tier": 4,
-        "subjectKey": "concept:logical-validity",
+        "subjectKey": "luck:maneki-neko",
         "clue": {
-          "en": "A logic concept means no possible case has true premises and a false conclusion. Name it.",
-          "et": "Üks loogikamõiste tähendab, et pole võimalikku juhtu tõeste eelduste ja väära järeldusega. Millist vastust otsime?"
+          "en": "Which Japanese good-luck figurine is recognized by its upright paw?",
+          "et": "Millise Jaapanist pärit õnnekuju tunneb ära üles tõstetud käpa järgi?"
         },
         "response": {
-          "en": "validity",
-          "et": "kehtivus"
+          "en": "maneki-neko",
+          "et": "maneki-neko"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "beckoning cat",
+            "lucky cat"
+          ],
+          "et": [
+            "õnnekass"
+          ]
         },
         "explanation": {
-          "en": "Validity concerns argument form and does not guarantee that actual premises are true.",
-          "et": "Kehtivus puudutab argumendi vormi ega taga tegelike eelduste tõesust."
+          "en": "Maneki-neko is a Japanese cat figurine whose raised paw is believed to beckon good fortune.",
+          "et": "Maneki-neko on Jaapani kassikuju, mille üles tõstetud käppa peetakse õnne kutsuvaks."
         },
         "source": {
-          "sourceId": "wikipedia:validity_(logic)",
-          "title": "Validity (logic)",
-          "url": "https://en.wikipedia.org/wiki/Validity_(logic)",
+          "sourceId": "wikipedia:maneki-neko",
+          "title": "Maneki-neko",
+          "url": "https://en.wikipedia.org/wiki/Maneki-neko",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-060:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:logic-basics:medium:concept:logical-fallacy",
+        "factKey": "rabbits-foot:carried-amulet-good-luck",
         "tier": 5,
-        "subjectKey": "concept:logical-fallacy",
+        "subjectKey": "luck:rabbits-foot",
         "clue": {
-          "en": "Find the logic concept that is a pattern of reasoning that fails to justify its conclusion.",
-          "et": "Loogikamõiste on arutlusmuster, mis ei põhjenda järeldust. Leia sobiv vastus."
+          "en": "Which lucky object is an animal’s foot carried as an amulet and believed to bring good fortune in many parts of the world?",
+          "et": "Milline õnneese on looma käpp, mida kantakse amuletina ja peetakse paljudes paikades hea õnne toojaks?"
         },
         "response": {
-          "en": "fallacy",
-          "et": "loogikaviga"
+          "en": "rabbit's foot",
+          "et": "jänesekäpp"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a rabbit's foot",
+            "lucky rabbit's foot"
+          ],
+          "et": [
+            "jänese käpp",
+            "rabbit's foot"
+          ]
         },
         "explanation": {
-          "en": "Fallacy may be formal in structure or informal in language and relevance.",
-          "et": "Loogikaviga võib olla vormiline struktuuris või mittevormiline keeles ja asjakohasuses."
+          "en": "A rabbit’s foot is carried as a charm because it is believed in many places to bring luck.",
+          "et": "Jänesekäppa kantakse amuletina, sest seda usutakse maailma eri paigus õnne toovat."
         },
         "source": {
-          "sourceId": "wikipedia:fallacy",
-          "title": "Fallacy",
-          "url": "https://en.wikipedia.org/wiki/Fallacy",
+          "sourceId": "wikipedia:rabbit%27s_foot",
+          "title": "Rabbit's foot",
+          "url": "https://en.wikipedia.org/wiki/Rabbit%27s_foot",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36286,153 +36420,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-061",
     "name": {
-      "en": "Arguments That Sound Better Than They Are",
-      "et": "Argumendid, mis kõlavad paremini kui toimivad"
+      "en": "Faith Landmarks by One Detail",
+      "et": "Pühapaigad ühe detaili järgi"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-061:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:informal-fallacies:medium:fallacy:ad-hominem",
+        "factKey": "westminster-abbey:london-coronation-church",
         "tier": 1,
-        "subjectKey": "fallacy:ad-hominem",
+        "subjectKey": "landmark:westminster-abbey",
         "clue": {
-          "en": "Name the informal fallacy that attacks the person instead of addressing the argument.",
-          "et": "Vihjes kirjeldatud mittevormiline loogikaviga ründab argumendi asemel inimest. Mis see on?"
+          "en": "Which landmark is a church in London’s Westminster that has hosted British coronations?",
+          "et": "Milline pühapaik on Londoni Westminsteris asuv kirik, kus on peetud Briti kroonimisi?"
         },
         "response": {
-          "en": "ad hominem",
-          "et": "isiku ründamine"
+          "en": "Westminster Abbey",
+          "et": "Westminster Abbey"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Abbey at Westminster"
+          ],
+          "et": [
+            "Westminsteri kloostrikirik",
+            "Westminsteri klooster"
+          ]
         },
         "explanation": {
-          "en": "Ad hominem is fallacious when the personal feature is irrelevant to the claim’s truth.",
-          "et": "Isiku ründamine on vigane, kui isikuomadus pole väite tõesuse jaoks oluline."
+          "en": "Westminster Abbey is the Westminster church traditionally used for British coronations.",
+          "et": "Westminster Abbey on Westminsteri kirik, mida on traditsiooniliselt kasutatud Briti kroonimisteks."
         },
         "source": {
-          "sourceId": "wikipedia:ad_hominem",
-          "title": "Ad hominem",
-          "url": "https://en.wikipedia.org/wiki/Ad_hominem",
+          "sourceId": "wikipedia:westminster_abbey",
+          "title": "Westminster Abbey",
+          "url": "https://en.wikipedia.org/wiki/Westminster_Abbey",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-061:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:informal-fallacies:medium:fallacy:straw-man",
+        "factKey": "dome-rock:jerusalem-gold-foundation-stone",
         "tier": 2,
-        "subjectKey": "fallacy:straw-man",
+        "subjectKey": "landmark:dome-of-rock",
         "clue": {
-          "en": "Recognise the informal fallacy that distorts an opponent’s position into an easier target.",
-          "et": "Otsitav mittevormiline loogikaviga moonutab vastase seisukoha lihtsamaks sihtmärgiks. Mis see on?"
+          "en": "Which Jerusalem landmark is built over the Foundation Stone and is topped in gold?",
+          "et": "Milline Jeruusalemma pühapaik on ehitatud Aluskivi kohale ja paistab silma kuldse ülaosaga?"
         },
         "response": {
-          "en": "straw man",
-          "et": "õlgmehe argument"
+          "en": "Dome of the Rock",
+          "et": "Kaljumošee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Dome of the Rock"
+          ],
+          "et": [
+            "Kaljukuppel",
+            "Dome of the Rock"
+          ]
         },
         "explanation": {
-          "en": "Straw man refutes the substitute rather than the strongest actual claim.",
-          "et": "Õlgmehe argument lükkab ümber asenduse, mitte tegeliku tugevaima väite."
+          "en": "The Dome of the Rock stands in Jerusalem over the Foundation Stone and is marked by its gold-coloured dome.",
+          "et": "Kaljumošee seisab Jeruusalemmas Aluskivi kohal ning paistab silma kuldse kupliga."
         },
         "source": {
-          "sourceId": "wikipedia:straw_man",
-          "title": "Straw man",
-          "url": "https://en.wikipedia.org/wiki/Straw_man",
+          "sourceId": "wikipedia:dome_of_the_rock",
+          "title": "Dome of the Rock",
+          "url": "https://en.wikipedia.org/wiki/Dome_of_the_Rock",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-061:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:informal-fallacies:medium:fallacy:false-dilemma",
+        "factKey": "mont-saint-michel:normandy-tidal-island-abbey",
         "tier": 3,
-        "subjectKey": "fallacy:false-dilemma",
+        "subjectKey": "landmark:mont-saint-michel",
         "clue": {
-          "en": "Which informal fallacy presents only two options when more exist?",
-          "et": "Tuvasta järgmine mittevormiline loogikaviga: see esitab vaid kaks võimalust, kuigi neid on rohkem."
+          "en": "Which Normandy landmark is a tidal island occupied by an abbey?",
+          "et": "Milline Normandia pühapaik ühendab loodetesaare ja sellel asuva kloostri?"
         },
         "response": {
-          "en": "false dilemma",
-          "et": "valedilemma"
+          "en": "Mont-Saint-Michel",
+          "et": "Mont-Saint-Michel"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "False dilemma forces a binary choice by hiding alternatives.",
-          "et": "Valedilemma sunnib kahendvaliku, varjates muid võimalusi."
+          "en": "Mont-Saint-Michel joins a Normandy tidal island with the abbey built on it.",
+          "et": "Mont-Saint-Michel on Normandia loodetesaar, millel asub klooster."
         },
         "source": {
-          "sourceId": "wikipedia:false_dilemma",
-          "title": "False dilemma",
-          "url": "https://en.wikipedia.org/wiki/False_dilemma",
+          "sourceId": "wikipedia:mont-saint-michel",
+          "title": "Mont-Saint-Michel",
+          "url": "https://en.wikipedia.org/wiki/Mont-Saint-Michel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-061:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:informal-fallacies:medium:fallacy:slippery-slope",
+        "factKey": "temple-heaven:beijing-emperors-round-blue-hall",
         "tier": 4,
-        "subjectKey": "fallacy:slippery-slope",
+        "subjectKey": "landmark:temple-of-heaven",
         "clue": {
-          "en": "An informal fallacy claims one step will trigger an extreme chain without enough support. What term fits?",
-          "et": "Siin kirjeldatud mittevormiline loogikaviga väidab piisava toeta, et üks samm vallandab äärmusliku ahela. Mis see on?"
+          "en": "Which Beijing landmark complex, used by Chinese emperors for ceremonies, includes a circular Hall of Prayer?",
+          "et": "Milline Pekingi ehituskompleks oli Hiina keisrite tseremooniapaik ning hõlmab ümmargust palvesaali?"
         },
         "response": {
-          "en": "slippery slope",
-          "et": "libeda tee argument"
+          "en": "Temple of Heaven",
+          "et": "Taevatempel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Temple of Heaven"
+          ],
+          "et": [
+            "Taeva tempel",
+            "Temple of Heaven"
+          ]
         },
         "explanation": {
-          "en": "Slippery slope needs evidence for each causal link rather than mere possibility.",
-          "et": "Libeda tee argument vajab iga põhjuslüli kohta tõendit, mitte pelka võimalikkust."
+          "en": "The Temple of Heaven is the Beijing ceremonial complex whose Hall of Prayer has a circular form.",
+          "et": "Taevatempel on Pekingi tseremooniakompleks, mille palvesaal on ümmargune."
         },
         "source": {
-          "sourceId": "wikipedia:slippery_slope",
-          "title": "Slippery slope",
-          "url": "https://en.wikipedia.org/wiki/Slippery_slope",
+          "sourceId": "wikipedia:temple_of_heaven",
+          "title": "Temple of Heaven",
+          "url": "https://en.wikipedia.org/wiki/Temple_of_Heaven",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-061:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:informal-fallacies:medium:fallacy:circular-reasoning",
+        "factKey": "kinkakuji:kyoto-zen-gold-pavilion",
         "tier": 5,
-        "subjectKey": "fallacy:circular-reasoning",
+        "subjectKey": "landmark:kinkakuji",
         "clue": {
-          "en": "Recognise the informal fallacy that uses its conclusion as support for itself.",
-          "et": "Otsitav mittevormiline loogikaviga kasutab järeldust iseenda toetusena. Mis see on?"
+          "en": "Which Kyoto landmark is a Zen Buddhist temple whose upper floors are covered in gold leaf?",
+          "et": "Milline Kyoto pühapaik on zen-budistlik tempel, mille ülemised korrused on kaetud lehtkullaga?"
         },
         "response": {
-          "en": "circular reasoning",
-          "et": "ringargument"
+          "en": "Golden Pavilion",
+          "et": "Kuldpaviljon"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Golden Pavilion",
+            "Kinkaku-ji",
+            "Kinkakuji"
+          ],
+          "et": [
+            "Kinkaku-ji",
+            "Kinkakuji",
+            "Golden Pavilion"
+          ]
         },
         "explanation": {
-          "en": "Circular reasoning may hide the repeated assumption behind rewording.",
-          "et": "Ringargument võib peita korratud eelduse ümber sõnastamise taha."
+          "en": "The Golden Pavilion belongs to a Kyoto Zen temple and has upper storeys covered with gold leaf.",
+          "et": "Kuldpaviljon kuulub Kyoto zen-budistlikule templile ning selle ülemisi korruseid katab lehtkuld."
         },
         "source": {
-          "sourceId": "wikipedia:circular_reasoning",
-          "title": "Circular reasoning",
-          "url": "https://en.wikipedia.org/wiki/Circular_reasoning",
+          "sourceId": "wikipedia:kinkaku-ji",
+          "title": "Kinkaku-ji",
+          "url": "https://en.wikipedia.org/wiki/Kinkaku-ji",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36440,153 +36597,169 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-062",
     "name": {
-      "en": "Ideas Used to Discuss Art",
-      "et": "Kunstist kõnelemise mõisted"
+      "en": "Faith on Stage and Screen",
+      "et": "Usk laval ja ekraanil"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-062:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:aesthetic-ideas:medium:concept:sublime",
+        "factKey": "jesus-christ-superstar:webber-rice-rock-opera",
         "tier": 1,
-        "subjectKey": "concept:sublime",
+        "subjectKey": "work:jesus-christ-superstar",
         "clue": {
-          "en": "An aesthetic concept names awe mixed with fear before overwhelming greatness. Name it.",
-          "et": "Üks esteetikamõiste nimetab aukartust, mis seguneb hirmuga millegi mõõtmatu ees. Millist vastust otsime?"
+          "en": "Which work is the rock opera with music by Andrew Lloyd Webber and lyrics by Tim Rice?",
+          "et": "Milline teos on rokk-ooper, mille muusika kirjutas Andrew Lloyd Webber ja sõnad Tim Rice?"
         },
         "response": {
-          "en": "sublime",
-          "et": "ülev"
+          "en": "Jesus Christ Superstar",
+          "et": "Jesus Christ Superstar"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sublime was contrasted with ordinary beauty by Burke and Kant.",
-          "et": "Ülev vastandati Burke’i ja Kanti juures tavalisele ilule."
+          "en": "Jesus Christ Superstar is the Webber-and-Rice collaboration written as a rock opera.",
+          "et": "Jesus Christ Superstar on Webberi ja Rice’i koostöös sündinud rokk-ooper."
         },
         "source": {
-          "sourceId": "wikipedia:sublime_(philosophy)",
-          "title": "Sublime (philosophy)",
-          "url": "https://en.wikipedia.org/wiki/Sublime_(philosophy)",
+          "sourceId": "wikipedia:jesus_christ_superstar",
+          "title": "Jesus Christ Superstar",
+          "url": "https://en.wikipedia.org/wiki/Jesus_Christ_Superstar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-062:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:aesthetic-ideas:medium:concept:mimesis",
+        "factKey": "prince-egypt:animated-moses-exodus",
         "tier": 2,
-        "subjectKey": "concept:mimesis",
+        "subjectKey": "work:prince-of-egypt",
         "clue": {
-          "en": "Identify this aesthetic concept: it means artistic imitation or representation of reality.",
-          "et": "Kirjeldatud esteetikamõiste tähendab tegelikkuse kunstilist jäljendamist või kujutamist. Mis on selle nimi?"
+          "en": "Which work is an animated film centred on Moses and adapted from the Book of Exodus?",
+          "et": "Milline teos on animafilm, mille keskmes on Mooses ja mille lugu põhineb Teisel Moosese raamatul?"
         },
         "response": {
-          "en": "mimesis",
-          "et": "mimees"
+          "en": "The Prince of Egypt",
+          "et": "Egiptuse prints"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Prince of Egypt"
+          ],
+          "et": [
+            "The Prince of Egypt"
+          ]
         },
         "explanation": {
-          "en": "Mimesis is debated by Plato as deceptive and Aristotle as natural and instructive.",
-          "et": "Mimees on Platonil petlik, Aristotelesel loomulik ja õpetlik."
+          "en": "The Prince of Egypt tells the Exodus story in animation with Moses as its central figure.",
+          "et": "Egiptuse prints jutustab animafilmina loo, mille keskmes on Mooses ja mille aluseks on Teine Moosese raamat."
         },
         "source": {
-          "sourceId": "wikipedia:mimesis",
-          "title": "Mimesis",
-          "url": "https://en.wikipedia.org/wiki/Mimesis",
+          "sourceId": "wikipedia:the_prince_of_egypt",
+          "title": "The Prince of Egypt",
+          "url": "https://en.wikipedia.org/wiki/The_Prince_of_Egypt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-062:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:aesthetic-ideas:medium:concept:catharsis",
+        "factKey": "sister-act:singer-convent-choir-comedy",
         "tier": 3,
-        "subjectKey": "concept:catharsis",
+        "subjectKey": "work:sister-act",
         "clue": {
-          "en": "Which aesthetic concept names the purgation or clarification linked with tragic emotion?",
-          "et": "Tuvasta järgmine esteetikamõiste: see nimetab traagilise tundega seotud puhastust või selginemist."
+          "en": "Which work stars Whoopi Goldberg as a character who hides in a convent and becomes involved with its choir?",
+          "et": "Millises teoses mängib Whoopi Goldberg kloostris varjuvat tegelast ning lugu keskendub laulmisele ja sealsele koorile?"
         },
         "response": {
-          "en": "catharsis",
-          "et": "katarsis"
+          "en": "Sister Act",
+          "et": "Nunnad hoos"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nunnad hoos"
+          ],
+          "et": [
+            "Sister Act"
+          ]
         },
         "explanation": {
-          "en": "Catharsis appears in Aristotle’s account of pity and fear in tragedy.",
-          "et": "Katarsis esineb Aristotelese käsitluses kaastundest ja hirmust tragöödias."
+          "en": "Sister Act puts Goldberg’s character in a convent and centres its story on singing with the choir.",
+          "et": "Nunnad hoos viib Goldbergi tegelase kloostrisse ning seab loo keskmesse laulmise ja koori."
         },
         "source": {
-          "sourceId": "wikipedia:catharsis",
-          "title": "Catharsis",
-          "url": "https://en.wikipedia.org/wiki/Catharsis",
+          "sourceId": "wikipedia:sister_act",
+          "title": "Sister Act",
+          "url": "https://en.wikipedia.org/wiki/Sister_Act",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-062:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:aesthetic-ideas:medium:concept:kitsch",
+        "factKey": "passion-christ:gibson-jesus-aramaic-latin-film",
         "tier": 4,
-        "subjectKey": "concept:kitsch",
+        "subjectKey": "work:passion-of-the-christ",
         "clue": {
-          "en": "An aesthetic concept describes art judged sentimental, formulaic, or in bad taste. What term fits?",
-          "et": "Siin kirjeldatud esteetikamõiste kirjeldab sentimentaalseks, vormellikuks või maitsetuks peetud kunsti. Mis see on?"
+          "en": "Which Mel Gibson film about Jesus's final hours makes prominent use of Aramaic and Latin?",
+          "et": "Milline Mel Gibsoni film Jeesuse viimastest tundidest kasutab silmatorkavalt aramea ja ladina keelt?"
         },
         "response": {
-          "en": "kitsch",
-          "et": "kitš"
+          "en": "The Passion of the Christ",
+          "et": "Kristuse kannatused"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Passion of the Christ"
+          ],
+          "et": [
+            "The Passion of the Christ"
+          ]
         },
         "explanation": {
-          "en": "Kitsch became a modern criticism of mass-produced emotional effects.",
-          "et": "Kitš muutus nüüdisaegseks kriitikaks masstoodetud emotsionaalse mõju kohta."
+          "en": "The Passion of the Christ presents Jesus’s Passion in Gibson’s film with extensive Aramaic and Latin dialogue.",
+          "et": "Gibsoni film „Kristuse kannatused“ kujutab Jeesuse passiooni ning kasutab ulatuslikult aramea- ja ladinakeelset dialoogi."
         },
         "source": {
-          "sourceId": "wikipedia:kitsch",
-          "title": "Kitsch",
-          "url": "https://en.wikipedia.org/wiki/Kitsch",
+          "sourceId": "wikipedia:the_passion_of_the_christ",
+          "title": "The Passion of the Christ",
+          "url": "https://en.wikipedia.org/wiki/The_Passion_of_the_Christ",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-062:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:aesthetic-ideas:medium:concept:avant-garde",
+        "factKey": "ten-commandments:demille-moses-red-sea-film",
         "tier": 5,
-        "subjectKey": "concept:avant-garde",
+        "subjectKey": "work:ten-commandments-1956",
         "clue": {
-          "en": "Find the aesthetic concept that names artists working at the experimental leading edge.",
-          "et": "Esteetikamõiste nimetab eksperimentaalses eesliinis tegutsevaid kunstnikke. Leia sobiv vastus."
+          "en": "Which film directed by Cecil B. DeMille centres on Moses and depicts the Red Sea crossing?",
+          "et": "Milline film, mille lavastas Cecil B. DeMille, keskendub Moosesele ja kujutab Punase mere ületamist?"
         },
         "response": {
-          "en": "avant-garde",
-          "et": "avangard"
+          "en": "The Ten Commandments",
+          "et": "Kümme käsku"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Ten Commandments"
+          ],
+          "et": [
+            "The Ten Commandments"
+          ]
         },
         "explanation": {
-          "en": "Avant-garde borrows a military term for troops advancing ahead of the main force.",
-          "et": "Avangard laenab sõjandustermini põhijõu ees liikuvate vägede kohta."
+          "en": "The Ten Commandments is DeMille’s Moses film and includes the crossing of the Red Sea.",
+          "et": "Kümme käsku on Cecil B. DeMille’i film Moosesest, milles kujutatakse Punase mere ületamist."
         },
         "source": {
-          "sourceId": "wikipedia:avant-garde",
-          "title": "Avant-garde",
-          "url": "https://en.wikipedia.org/wiki/Avant-garde",
+          "sourceId": "wikipedia:the_ten_commandments_(1956_film)",
+          "title": "The Ten Commandments (1956 film)",
+          "url": "https://en.wikipedia.org/wiki/The_Ten_Commandments_(1956_film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36594,153 +36767,178 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-063",
     "name": {
-      "en": "Questions about Mind and Self",
-      "et": "Küsimused vaimust ja minast"
+      "en": "When Big Ideas Become People",
+      "et": "Kui suured mõtted saavad inimeseks"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-mind:medium:concept:consciousness",
+        "factKey": "grim-reaper:death-skeleton-scythe",
         "tier": 1,
-        "subjectKey": "concept:consciousness",
+        "subjectKey": "personification:grim-reaper",
         "clue": {
-          "en": "A philosophy-of-mind concept is subjective awareness of experience and surroundings. What term fits?",
-          "et": "Siin kirjeldatud vaimufilosoofia mõiste on subjektiivne teadlikkus kogemusest ja ümbrusest. Mis see on?"
+          "en": "Which personification is commonly hooded or skeletal and carries a scythe?",
+          "et": "Millist kehastust kujutatakse tavaliselt kapuutsis või luukerena ning vikatiga?"
         },
         "response": {
-          "en": "consciousness",
-          "et": "teadvus"
+          "en": "Grim Reaper",
+          "et": "Vikatimees"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Grim Reaper",
+            "Death"
+          ],
+          "et": [
+            "Surm",
+            "Grim Reaper"
+          ]
         },
         "explanation": {
-          "en": "Consciousness creates a hard problem about why physical processing feels like anything.",
-          "et": "Teadvus loob raske probleemi, miks füüsiline töötlus üldse millegi moodi tundub."
+          "en": "The Grim Reaper gives death a hooded, skeletal form armed with a scythe.",
+          "et": "Vikatimees annab surmale kapuutsiga luukere kuju, kelle käes on vikat."
         },
         "source": {
-          "sourceId": "wikipedia:consciousness",
-          "title": "Consciousness",
-          "url": "https://en.wikipedia.org/wiki/Consciousness",
+          "sourceId": "wikipedia:death_(personification)",
+          "title": "Personifications of death",
+          "url": "https://en.wikipedia.org/wiki/Death_(personification)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-mind:medium:concept:qualia",
+        "factKey": "mother-nature:nature-as-mother",
         "tier": 2,
-        "subjectKey": "concept:qualia",
+        "subjectKey": "personification:mother-nature",
         "clue": {
-          "en": "Find the philosophy-of-mind concept that are the felt qualities of experiences such as redness or pain.",
-          "et": "Vaimufilosoofia mõiste on kogemuste, näiteks punasuse või valu tuntavad omadused. Leia sobiv vastus."
+          "en": "Which familiar female figure personifies the natural world?",
+          "et": "Milline tuttav naisekuju annab loodusele inimliku kehastuse?"
         },
         "response": {
-          "en": "qualia",
-          "et": "kvaalid"
+          "en": "Mother Nature",
+          "et": "emake loodus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mother Earth",
+            "Earth Mother",
+            "the Earth Mother"
+          ],
+          "et": [
+            "emake Maa",
+            "Maaema",
+            "Mother Nature"
+          ]
         },
         "explanation": {
-          "en": "Qualia feature in debates over whether complete physical knowledge captures experience.",
-          "et": "Kvaalid esinevad vaidluses, kas täielik füüsiline teadmine haarab kogemuse."
+          "en": "Mother Nature presents nature in maternal form and is also known as Mother Earth or the Earth Mother.",
+          "et": "Emake loodus esitab loodust emalikul kujul ning teda tuntakse ka nimega emake Maa või Maaema."
         },
         "source": {
-          "sourceId": "wikipedia:qualia",
-          "title": "Qualia",
-          "url": "https://en.wikipedia.org/wiki/Qualia",
+          "sourceId": "wikipedia:mother_nature",
+          "title": "Mother Nature",
+          "url": "https://en.wikipedia.org/wiki/Mother_Nature",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-mind:medium:concept:personal-identity",
+        "factKey": "lady-justice:scales-sword-blindfold",
         "tier": 3,
-        "subjectKey": "concept:personal-identity",
+        "subjectKey": "personification:lady-justice",
         "clue": {
-          "en": "Which philosophy-of-mind concept asks what makes someone the same person over time?",
-          "et": "Tuvasta järgmine vaimufilosoofia mõiste: see küsib, mis teeb inimese ajas samaks isikuks."
+          "en": "Which personification carries scales and commonly also a sword and a blindfold?",
+          "et": "Milline kehastus kannab kaale ning sageli ka mõõka ja silmasidet?"
         },
         "response": {
-          "en": "personal identity",
-          "et": "isikusamasus"
+          "en": "Lady Justice",
+          "et": "õigluse jumalanna"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Justitia",
+            "Iustitia"
+          ],
+          "et": [
+            "Justitia",
+            "Lady Justice"
+          ]
         },
         "explanation": {
-          "en": "Personal identity compares bodily, psychological-continuity, and narrative accounts.",
-          "et": "Isikusamasus võrdleb kehalisi, psühholoogilise järjepidevuse ja narratiivseid käsitlusi."
+          "en": "Lady Justice represents justice through the scales, sword and blindfold associated with her.",
+          "et": "Õigluse jumalanna kehastab õiglust temaga seotud kaalude, mõõga ja silmasideme kaudu."
         },
         "source": {
-          "sourceId": "wikipedia:personal_identity",
-          "title": "Personal identity",
-          "url": "https://en.wikipedia.org/wiki/Personal_identity",
+          "sourceId": "wikipedia:lady_justice",
+          "title": "Lady Justice",
+          "url": "https://en.wikipedia.org/wiki/Lady_Justice",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-mind:medium:concept:intentionality",
+        "factKey": "lady-luck:fortuna-wheel-fickle-fortune",
         "tier": 4,
-        "subjectKey": "concept:intentionality",
+        "subjectKey": "personification:lady-luck",
         "clue": {
-          "en": "A philosophy-of-mind concept is the mind’s capacity to be about or directed at something. What term fits?",
-          "et": "Siin kirjeldatud vaimufilosoofia mõiste on vaimu võime olla millegi kohta või millelegi suunatud. Mis see on?"
+          "en": "Which personification of fickle good fortune is associated with a wheel that turns as circumstances change?",
+          "et": "Milline muutliku hea õnne kehastus seostub rattaga, mis pöördub koos olude muutumisega?"
         },
         "response": {
-          "en": "intentionality",
-          "et": "intentsionaalsus"
+          "en": "Lady Luck",
+          "et": "õnnejumalanna"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Fortuna"
+          ],
+          "et": [
+            "Fortuna",
+            "Lady Luck"
+          ]
         },
         "explanation": {
-          "en": "Intentionality does not simply mean having an everyday conscious intention.",
-          "et": "Intentsionaalsus ei tähenda lihtsalt igapäevast teadlikku kavatsust."
+          "en": "Lady Luck draws on the Roman goddess Fortuna, whose wheel represents unstable fortune.",
+          "et": "Õnnejumalanna seostub Rooma Fortuna ja tema rattaga, mis sümboliseerib õnne muutlikkust."
         },
         "source": {
-          "sourceId": "wikipedia:intentionality",
-          "title": "Intentionality",
-          "url": "https://en.wikipedia.org/wiki/Intentionality",
+          "sourceId": "wikipedia:fortuna",
+          "title": "Fortuna",
+          "url": "https://en.wikipedia.org/wiki/Fortuna",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-mind:medium:concept:mind-body-problem",
+        "factKey": "nemesis:greek-retribution-hubris-give-due",
         "tier": 5,
-        "subjectKey": "concept:mind-body-problem",
+        "subjectKey": "personification:nemesis",
         "clue": {
-          "en": "This philosophy-of-mind concept asks how mental states relate to physical bodies and brains. What is it?",
-          "et": "See vaimufilosoofia mõiste küsib, kuidas vaimuseisundid seostuvad füüsilise keha ja ajuga. Mis see on?"
+          "en": "Which ancient Greek goddess personifies retribution aimed at hubris, with a name derived from a verb meaning ‘to give what is due’?",
+          "et": "Milline Vana-Kreeka jumalanna kehastab kättemaksu hybrise ehk jumalate ees ülbitsemise eest ning on saanud nime tegusõnast „andma seda, mis kellelegi kuulub”?"
         },
         "response": {
-          "en": "mind–body problem",
-          "et": "vaimu ja keha probleem"
+          "en": "Nemesis",
+          "et": "Nemesis"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Mind–body problem drives rival dualist, physicalist, functionalist, and emergentist answers.",
-          "et": "Vaimu ja keha probleem tekitab dualistlikke, füüsikalistlikke, funktsionalistlikke ja emergentistlikke vastuseid."
+          "en": "Nemesis directs divine retribution at arrogance before the gods, and her name expresses giving what is due.",
+          "et": "Nemesis kehastab jumalikku kättemaksu hybrise eest ning tema nimi seostub igaühele kuuluva osa andmisega."
         },
         "source": {
-          "sourceId": "wikipedia:mind%e2%80%93body_problem",
-          "title": "Mind–body problem",
-          "url": "https://en.wikipedia.org/wiki/Mind%E2%80%93body_problem",
+          "sourceId": "wikipedia:nemesis",
+          "title": "Nemesis",
+          "url": "https://en.wikipedia.org/wiki/Nemesis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36748,153 +36946,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-064",
     "name": {
-      "en": "Famous Philosophical Thought Experiments",
-      "et": "Kuulsad filosoofilised mõttekatsed"
+      "en": "Magical and Mythic Objects You Know on Sight",
+      "et": "Võlu- ja müütilised esemed, mille tunned kohe ära"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-064:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:thought-experiments:medium:thought-experiment:trolley-problem",
+        "factKey": "magic-wand:spellcasting-magicians-fairies",
         "tier": 1,
-        "subjectKey": "thought-experiment:trolley-problem",
+        "subjectKey": "object:magic-wand",
         "clue": {
-          "en": "Name the thought experiment that asks whether to divert a runaway vehicle to kill one instead of five.",
-          "et": "Vihjes kirjeldatud mõttekatse küsib, kas suunata kontrollimatu sõiduk viie asemel ühe inimese poole. Mis see on?"
+          "en": "Which familiar object is a thin handheld stick used by magicians, fairies or wizards?",
+          "et": "Milline tuttav ese on peenike käes hoitav pulk, mida kujutatakse võlurite, haldjate ja maagide kasutuses?"
         },
         "response": {
-          "en": "trolley problem",
-          "et": "trolliprobleem"
+          "en": "magic wand",
+          "et": "võlukepp"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "wand",
+            "a magic wand"
+          ],
+          "et": [
+            "võluvits",
+            "magic wand"
+          ]
         },
         "explanation": {
-          "en": "Trolley problem tests contrasts between action, omission, intention, and consequences.",
-          "et": "Trolliprobleem uurib tegevuse, tegevusetuse, kavatsuse ja tagajärgede erinevusi."
+          "en": "A magic wand is the slender stick associated with performing magic in depictions of those figures.",
+          "et": "Võlukepp on peenike pulk, mida seostatakse nende tegelaste võlukunstiga."
         },
         "source": {
-          "sourceId": "wikipedia:trolley_problem",
-          "title": "Trolley problem",
-          "url": "https://en.wikipedia.org/wiki/Trolley_problem",
+          "sourceId": "wikipedia:wand",
+          "title": "Wand",
+          "url": "https://en.wikipedia.org/wiki/Wand",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-064:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:thought-experiments:medium:thought-experiment:ship-of-theseus",
+        "factKey": "crystal-ball:sphere-scrying-visions",
         "tier": 2,
-        "subjectKey": "thought-experiment:ship-of-theseus",
+        "subjectKey": "object:crystal-ball",
         "clue": {
-          "en": "Find the thought experiment that replaces every plank and asks whether the vessel remains the same.",
-          "et": "Mõttekatse asendab iga plangu ning küsib, kas laev jääb samaks. Leia sobiv vastus."
+          "en": "Which magical object is a sphere used by fortune-tellers for scrying or seeking visions?",
+          "et": "Milline võluese on kerakujuline ning seda kasutatakse ennustamisel nägemuste otsimiseks?"
         },
         "response": {
-          "en": "Ship of Theseus",
-          "et": "Theseuse laev"
+          "en": "crystal ball",
+          "et": "kristallkuul"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a crystal ball"
+          ],
+          "et": [
+            "crystal ball"
+          ]
         },
         "explanation": {
-          "en": "Ship of Theseus becomes sharper if the original planks are reassembled into a second ship.",
-          "et": "Theseuse laev muutub teravamaks, kui algsed plangud pannakse kokku teiseks laevaks."
+          "en": "A crystal ball is the spherical tool associated with fortune-telling and visionary scrying.",
+          "et": "Kristallkuul on ennustamise ja nägemuste otsimisega seotud kerakujuline vahend."
         },
         "source": {
-          "sourceId": "wikipedia:ship_of_theseus",
-          "title": "Ship of Theseus",
-          "url": "https://en.wikipedia.org/wiki/Ship_of_Theseus",
+          "sourceId": "wikipedia:crystal_ball",
+          "title": "Crystal ball",
+          "url": "https://en.wikipedia.org/wiki/Crystal_ball",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-064:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:thought-experiments:medium:thought-experiment:brain-in-a-vat",
+        "factKey": "magic-mirror:snow-white-fairest-question",
         "tier": 3,
-        "subjectKey": "thought-experiment:brain-in-a-vat",
+        "subjectKey": "object:magic-mirror-snow-white",
         "clue": {
-          "en": "Which thought experiment imagines experiences fed to a disembodied brain by a computer?",
-          "et": "Tuvasta järgmine mõttekatse: see kujutleb arvuti söödetud kogemusi kehast eraldatud ajule."
+          "en": "Which magical object in Snow White speaks when the queen asks who is fairest?",
+          "et": "Milline võluese kõneleb Lumivalgekese loos, kui kuninganna küsib, kes on kõige kaunim?"
         },
         "response": {
-          "en": "brain in a vat",
-          "et": "aju anumas"
+          "en": "magic mirror",
+          "et": "võlupeegel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Magic Mirror",
+            "talking mirror"
+          ],
+          "et": [
+            "rääkiv peegel",
+            "magic mirror"
+          ]
         },
         "explanation": {
-          "en": "Brain in a vat modernises radical scepticism about whether the external world is real.",
-          "et": "Aju anumas ajakohastab radikaalse skeptitsismi välismaailma reaalsuse kohta."
+          "en": "The magic mirror belongs to Snow White’s story and answers the queen’s question about who is fairest.",
+          "et": "Võlupeegel kuulub Lumivalgekese loosse ja vastab kuninganna küsimusele kõige kaunima kohta."
         },
         "source": {
-          "sourceId": "wikipedia:brain_in_a_vat",
-          "title": "Brain in a vat",
-          "url": "https://en.wikipedia.org/wiki/Brain_in_a_vat",
+          "sourceId": "wikipedia:magic_mirror_(snow_white)",
+          "title": "Magic Mirror (Snow White)",
+          "url": "https://en.wikipedia.org/wiki/Magic_Mirror_(Snow_White)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-064:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:thought-experiments:medium:thought-experiment:chinese-room",
+        "factKey": "seven-league-boots:huge-distance-each-step",
         "tier": 4,
-        "subjectKey": "thought-experiment:chinese-room",
+        "subjectKey": "object:seven-league-boots",
         "clue": {
-          "en": "Name the thought experiment that imagines rule-following symbol manipulation without understanding Chinese.",
-          "et": "Vihjes kirjeldatud mõttekatse kujutleb reeglipärast sümbolitöötlust ilma hiina keelt mõistmata. Mis see on?"
+          "en": "Which magical object lets its wearer cover seven leagues in a single stride?",
+          "et": "Milline võluese laseb kandjal ühe sammuga läbida seitse penikoormat?"
         },
         "response": {
-          "en": "Chinese room",
-          "et": "hiina toa argument"
+          "en": "seven-league boots",
+          "et": "seitsmepenikoormasaapad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "seitsmepenikoormasaapad"
+          ],
+          "et": [
+            "seitsme penikoorma saapad",
+            "seven-league boots"
+          ]
         },
         "explanation": {
-          "en": "Chinese room was Searle’s challenge to the claim that running a program is sufficient for understanding.",
-          "et": "Hiina toa argument oli Searle’i vastuväide väitele, et programmi täitmine on mõistmiseks piisav."
+          "en": "Seven-league boots cross their namesake distance with every step.",
+          "et": "Seitsmepenikoormasaapad läbivad iga sammuga oma nimes mainitud vahemaa."
         },
         "source": {
-          "sourceId": "wikipedia:chinese_room",
-          "title": "Chinese room",
-          "url": "https://en.wikipedia.org/wiki/Chinese_room",
+          "sourceId": "wikipedia:seven-league_boots",
+          "title": "Seven-league boots",
+          "url": "https://en.wikipedia.org/wiki/Seven-league_boots",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-064:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:thought-experiments:medium:thought-experiment:experience-machine",
+        "factKey": "cornucopia:horn-overflowing-abundance",
         "tier": 5,
-        "subjectKey": "thought-experiment:experience-machine",
+        "subjectKey": "object:cornucopia",
         "clue": {
-          "en": "This thought experiment asks whether one would plug into a simulation of perfect pleasure. What is it?",
-          "et": "See mõttekatse küsib, kas inimene ühendaks end täiusliku naudingu simulatsiooni. Mis see on?"
+          "en": "Which mythic object symbolises abundance and is commonly shown overflowing with fruit or other produce?",
+          "et": "Milline müütiline ese sümboliseerib küllust ja on tavaliselt kujutatud puuviljadest või muust saagist tulvil?"
         },
         "response": {
-          "en": "experience machine",
-          "et": "kogemusmasin"
+          "en": "cornucopia",
+          "et": "küllusesarv"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "horn of plenty",
+            "the horn of plenty"
+          ],
+          "et": [
+            "rikkusesarv",
+            "cornucopia"
+          ]
         },
         "explanation": {
-          "en": "Experience machine was Nozick’s argument that people value reality and agency beyond felt experience.",
-          "et": "Kogemusmasin oli Nozicki argument, et inimesed hindavad lisaks tundele tegelikkust ja tegutsemist."
+          "en": "The cornucopia is a horn-shaped emblem of abundance, traditionally filled with food and fruit.",
+          "et": "Küllusesarv on sarvekujuline küllusemärk, mida kujutatakse toidu ja viljadega täidetuna."
         },
         "source": {
-          "sourceId": "wikipedia:experience_machine",
-          "title": "Experience machine",
-          "url": "https://en.wikipedia.org/wiki/Experience_machine",
+          "sourceId": "wikipedia:cornucopia",
+          "title": "Cornucopia",
+          "url": "https://en.wikipedia.org/wiki/Cornucopia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -36902,153 +37127,192 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-065",
     "name": {
-      "en": "How Science Tests Itself",
-      "et": "Kuidas teadus end kontrollib"
+      "en": "Faith Leaders Known Far Beyond the Pulpit",
+      "et": "Usujuhid, keda tuntakse kaugel väljaspool kantslit"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-065:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-science:medium:concept:falsifiability",
+        "factKey": "mother-teresa:missionaries-charity-kolkata",
         "tier": 1,
-        "subjectKey": "concept:falsifiability",
+        "subjectKey": "figure:mother-teresa",
         "clue": {
-          "en": "Name the philosophy-of-science concept that requires a scientific claim to risk possible refutation.",
-          "et": "Vihjes kirjeldatud teadusfilosoofia mõiste nõuab teadusväitelt võimaliku ümberlükkamise riski. Mis see on?"
+          "en": "Which public figure founded the Missionaries of Charity in Kolkata, whose habit became a white sari with blue borders?",
+          "et": "Milline avaliku elu tegelane asutas heategevuskoguduse Missionaries of Charity, mille tunnusrüüks sai sinise äärega valge sari, ning tegutses Calcuttas ehk Kolkatas?"
         },
         "response": {
-          "en": "falsifiability",
-          "et": "falsifitseeritavus"
+          "en": "Mother Teresa",
+          "et": "ema Teresa"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mother Teresa of Calcutta",
+            "Saint Mother Teresa",
+            "Saint Mother Teresa of Calcutta",
+            "Saint Teresa of Calcutta",
+            "Teresa of Calcutta"
+          ],
+          "et": [
+            "ema Teresa Calcuttast",
+            "püha ema Teresa",
+            "püha ema Teresa Calcuttast",
+            "püha Teresa Calcuttast",
+            "Teresa Calcuttast",
+            "Mother Teresa"
+          ]
         },
         "explanation": {
-          "en": "Falsifiability was Popper’s proposed demarcation from claims protected against every observation.",
-          "et": "Falsifitseeritavus oli Popperi piir teaduse ja iga vaatluse eest kaitstud väidete vahel."
+          "en": "Mother Teresa’s congregation and its blue-bordered white sari are closely identified with her work in Calcutta or Kolkata.",
+          "et": "Ema Teresa asutas koguduse Missionaries of Charity; tema Kolkata tööga seostub koguduse sinise äärega valge sari."
         },
         "source": {
-          "sourceId": "wikipedia:falsifiability",
-          "title": "Falsifiability",
-          "url": "https://en.wikipedia.org/wiki/Falsifiability",
+          "sourceId": "wikipedia:mother_teresa",
+          "title": "Mother Teresa",
+          "url": "https://en.wikipedia.org/wiki/Mother_Teresa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-065:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-science:medium:concept:paradigm-shift",
+        "factKey": "pope-francis:argentine-jesuit-name-francis",
         "tier": 2,
-        "subjectKey": "concept:paradigm-shift",
+        "subjectKey": "figure:pope-francis",
         "clue": {
-          "en": "Find the philosophy-of-science concept that is Kuhn’s change from one scientific framework to another.",
-          "et": "Teadusfilosoofia mõiste on Kuhni üleminek ühest teadusraamistikust teise. Leia sobiv vastus."
+          "en": "Which public figure, an Argentine Jesuit born in Buenos Aires, became the first pope from the Americas?",
+          "et": "Milline avaliku elu tegelane, Buenos Aireses sündinud Argentina jesuiit, sai esimeseks Ameerikast pärit paavstiks?"
         },
         "response": {
-          "en": "paradigm shift",
-          "et": "paradigmamuutus"
+          "en": "Pope Francis",
+          "et": "paavst Franciscus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Francis",
+            "Jorge Mario Bergoglio",
+            "Jorge Bergoglio"
+          ],
+          "et": [
+            "Franciscus",
+            "Jorge Mario Bergoglio",
+            "Jorge Bergoglio",
+            "Pope Francis"
+          ]
         },
         "explanation": {
-          "en": "Paradigm shift reorganises standards, exemplars, and problems rather than adding one isolated fact.",
-          "et": "Paradigmamuutus korraldab ümber standardid, eeskujud ja probleemid, mitte ei lisa üht fakti."
+          "en": "Pope Francis is the Argentine Jesuit who chose the papal name Francis and was the first pontiff from the Americas.",
+          "et": "Paavst Franciscus on Argentina jesuiit, kes valis paavstinime Franciscus ja oli esimene Ameerikast pärit paavst."
         },
         "source": {
-          "sourceId": "wikipedia:paradigm_shift",
-          "title": "Paradigm shift",
-          "url": "https://en.wikipedia.org/wiki/Paradigm_shift",
+          "sourceId": "wikipedia:pope_francis",
+          "title": "Pope Francis",
+          "url": "https://en.wikipedia.org/wiki/Pope_Francis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-065:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-science:medium:principle:occams-razor",
+        "factKey": "john-paul-ii:polish-travel-communist-era",
         "tier": 3,
-        "subjectKey": "principle:occams-razor",
+        "subjectKey": "figure:john-paul-ii",
         "clue": {
-          "en": "Identify the philosophy-of-science concept: it prefers the explanation with fewer unnecessary assumptions.",
-          "et": "Mis teadusfilosoofia mõiste eelistab seletust, millel on vähem tarbetuid eeldusi?"
+          "en": "Which Polish public figure served as pope, travelled extensively around the world and opposed communism?",
+          "et": "Milline Poola avaliku elu tegelane oli paavst, reisis ulatuslikult mööda maailma ja seisis vastu kommunismile?"
         },
         "response": {
-          "en": "Occam’s razor",
-          "et": "Ockhami habemenuga"
+          "en": "Pope John Paul II",
+          "et": "paavst Johannes Paulus II"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "John Paul II",
+            "Karol Wojtyła",
+            "Karol Wojtyla"
+          ],
+          "et": [
+            "Johannes Paulus II",
+            "Karol Wojtyła",
+            "Karol Wojtyla",
+            "Pope John Paul II"
+          ]
         },
         "explanation": {
-          "en": "Occam’s razor is a principle of parsimony, not a guarantee that the simplest claim is true.",
-          "et": "Ockhami habemenuga on säästlikkuse põhimõte, mitte lihtsaima väite tõesuse garantii."
+          "en": "Pope John Paul II joined a Polish background with a widely travelling papacy and opposition to communism.",
+          "et": "Paavst Johannes Paulus II ühendas Poola päritolu, rohked välisreisid ja vastuseisu kommunismile."
         },
         "source": {
-          "sourceId": "wikipedia:occam%27s_razor",
-          "title": "Occam's razor",
-          "url": "https://en.wikipedia.org/wiki/Occam%27s_razor",
+          "sourceId": "wikipedia:pope_john_paul_ii",
+          "title": "Pope John Paul II",
+          "url": "https://en.wikipedia.org/wiki/Pope_John_Paul_II",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-065:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-science:medium:practice:peer-review",
+        "factKey": "desmond-tutu:anglican-apartheid-reconciliation",
         "tier": 4,
-        "subjectKey": "practice:peer-review",
+        "subjectKey": "figure:desmond-tutu",
         "clue": {
-          "en": "A philosophy-of-science concept has specialists evaluate research before publication or funding. Name it.",
-          "et": "Üks teadusfilosoofia mõiste laseb asjatundjatel uurimust enne avaldamist või rahastust hinnata. Millist vastust otsime?"
+          "en": "Which public figure was an Anglican cleric who opposed apartheid and chaired the Truth and Reconciliation Commission?",
+          "et": "Milline avaliku elu tegelane oli anglikaani vaimulik, astus vastu apartheidile ja juhtis Tõe ja Leppimise Komisjoni?"
         },
         "response": {
-          "en": "peer review",
-          "et": "eelretsenseerimine"
+          "en": "Desmond Tutu",
+          "et": "Desmond Tutu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Archbishop Desmond Tutu"
+          ],
+          "et": [
+            "peapiiskop Desmond Tutu"
+          ]
         },
         "explanation": {
-          "en": "Peer review screens methods and reasoning but does not certify permanent truth.",
-          "et": "Eelretsenseerimine kontrollib meetodeid ja arutlust, kuid ei kinnita igavest tõde."
+          "en": "Desmond Tutu linked Anglican ministry and opposition to apartheid with leadership of the Truth and Reconciliation Commission.",
+          "et": "Desmond Tutu ühendas anglikaani vaimulikutöö, vastuseisu apartheidile ning Tõe ja Leppimise Komisjoni juhtimise."
         },
         "source": {
-          "sourceId": "wikipedia:peer_review",
-          "title": "Peer review",
-          "url": "https://en.wikipedia.org/wiki/Peer_review",
+          "sourceId": "wikipedia:desmond_tutu",
+          "title": "Desmond Tutu",
+          "url": "https://en.wikipedia.org/wiki/Desmond_Tutu",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-065:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:philosophy-of-science:medium:principle:reproducibility",
+        "factKey": "nick-vujicic:limbless-evangelist-motivational-speaker",
         "tier": 5,
-        "subjectKey": "principle:reproducibility",
+        "subjectKey": "figure:nick-vujicic",
         "clue": {
-          "en": "This philosophy-of-science concept asks whether reported results can be obtained again from methods or data. What is it?",
-          "et": "See teadusfilosoofia mõiste küsib, kas kirjeldatud meetodite või andmetega saab tulemuse uuesti. Mis see on?"
+          "en": "Which public figure is an Australian-American evangelist and motivational speaker who was born without arms or legs?",
+          "et": "Milline Austraalia ja Ameerika taustaga evangelist ning motivatsioonikõneleja sündis käte ja jalgadeta?"
         },
         "response": {
-          "en": "reproducibility",
-          "et": "reprodutseeritavus"
+          "en": "Nick Vujicic",
+          "et": "Nick Vujicic"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Nicholas James Vujicic"
+          ],
+          "et": [
+            "Nicholas James Vujicic"
+          ]
         },
         "explanation": {
-          "en": "Reproducibility supports error detection and cumulative trust through independent checking.",
-          "et": "Reprodutseeritavus toetab vigade leidmist ja kogunevat usaldust sõltumatu kontrolliga."
+          "en": "Nick Vujicic is an evangelist and motivational speaker born without arms or legs; his ministry is called Life Without Limbs.",
+          "et": "Nick Vujicic on käte ja jalgadeta sündinud evangelist ja motivatsioonikõneleja; tema misjonitöö kannab nime Life Without Limbs."
         },
         "source": {
-          "sourceId": "wikipedia:reproducibility",
-          "title": "Reproducibility",
-          "url": "https://en.wikipedia.org/wiki/Reproducibility",
+          "sourceId": "wikipedia:nick_vujicic",
+          "title": "Nick Vujicic",
+          "url": "https://en.wikipedia.org/wiki/Nick_Vujicic",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -37056,153 +37320,182 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-066",
     "name": {
-      "en": "Festivals Marking Sacred Time",
-      "et": "Püha aega tähistavad festivalid"
+      "en": "Your Future, Five Different Ways",
+      "et": "Sinu tulevik viiel eri moel"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-066:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:global-ritual-calendar:medium:event:diwali",
+        "factKey": "horoscope:zodiac-astrological-forecast",
         "tier": 1,
-        "subjectKey": "event:diwali",
+        "subjectKey": "divination:horoscope",
         "clue": {
-          "en": "One festival or observance is the South Asian festival of lights celebrated in several religions. Which one is described?",
-          "et": "Festival või tähtpäev on mitmes usundis tähistatav Lõuna-Aasia valguspüha. Mis see on?"
+          "en": "Which familiar forecast belongs to astrology and uses the zodiac?",
+          "et": "Milline tuttav ennustus kuulub astroloogiasse ja kasutab sodiaaki?"
         },
         "response": {
-          "en": "Diwali",
-          "et": "Diwali"
+          "en": "horoscope",
+          "et": "horoskoop"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a horoscope"
+          ],
+          "et": [
+            "horoscope"
+          ]
         },
         "explanation": {
-          "en": "Diwali has regional narratives including Rama’s return and Lakshmi worship.",
-          "et": "Diwali sisaldab piirkonniti Rama tagasituleku ja Lakšmi austamise lugusid."
+          "en": "A horoscope applies the zodiac within astrology to offer a prediction or forecast.",
+          "et": "Horoskoop kasutab astroloogias sodiaaki, et pakkuda ennustust."
         },
         "source": {
-          "sourceId": "wikipedia:diwali",
-          "title": "Diwali",
-          "url": "https://en.wikipedia.org/wiki/Diwali",
+          "sourceId": "wikipedia:horoscope",
+          "title": "Horoscope",
+          "url": "https://en.wikipedia.org/wiki/Horoscope",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-066:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:global-ritual-calendar:medium:event:vesak",
+        "factKey": "fortune-cookie:paper-message-prediction",
         "tier": 2,
-        "subjectKey": "event:vesak",
+        "subjectKey": "divination:fortune-cookie",
         "clue": {
-          "en": "Identify this festival or observance: it commemorates the Buddha’s birth, awakening, and passing in many traditions.",
-          "et": "Kirjeldatud festival või tähtpäev meenutab paljudes traditsioonides Buddha sündi, virgumist ja lahkumist. Mis on selle nimi?"
+          "en": "Which familiar object is a crisp folded biscuit containing a paper message?",
+          "et": "Milline tuttav ese on krõbe volditud küpsis, mille sees on pabersedel?"
         },
         "response": {
-          "en": "Vesak",
-          "et": "Vesak"
+          "en": "fortune cookie",
+          "et": "õnneküpsis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "a fortune cookie"
+          ],
+          "et": [
+            "fortune cookie"
+          ]
         },
         "explanation": {
-          "en": "Vesak is observed near a full moon and varies by national lunar calendar.",
-          "et": "Vesak toimub täiskuu paiku ning erineb riikide kuukalendri järgi."
+          "en": "A fortune cookie encloses a paper message whose text can take the form of a prophecy or prediction.",
+          "et": "Õnneküpsise sees on väike pabersõnum, mis võib olla sõnastatud ettekuulutusena."
         },
         "source": {
-          "sourceId": "wikipedia:vesak",
-          "title": "Vesak",
-          "url": "https://en.wikipedia.org/wiki/Vesak",
+          "sourceId": "wikipedia:fortune_cookie",
+          "title": "Fortune cookie",
+          "url": "https://en.wikipedia.org/wiki/Fortune_cookie",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-066:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:global-ritual-calendar:medium:event:lunar-new-year",
+        "factKey": "palmistry:hand-lines-character-future",
         "tier": 3,
-        "subjectKey": "event:lunar-new-year",
+        "subjectKey": "divination:palmistry",
         "clue": {
-          "en": "Festival or observance begins a new year in several East and Southeast Asian lunisolar calendars. What is it called?",
-          "et": "Milline festival või tähtpäev alustab uut aastat mitmes Ida- ja Kagu-Aasia lunisolaarkalendris?"
+          "en": "Which method uses lines on a person’s hand to claim information about character or the future?",
+          "et": "Milline meetod kasutab inimese käejooni, et teha väiteid tema iseloomu või tuleviku kohta?"
         },
         "response": {
-          "en": "Lunar New Year",
-          "et": "kuukalendri uusaasta"
+          "en": "palm reading",
+          "et": "käejoonte lugemine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "palmistry",
+            "reading palms"
+          ],
+          "et": [
+            "käelt ennustamine",
+            "hiromantia"
+          ]
         },
         "explanation": {
-          "en": "Lunar New Year is not one identical holiday because Chinese, Korean, Vietnamese, and other customs differ.",
-          "et": "Kuukalendri uusaasta pole üks ühesugune püha, sest Hiina, Korea, Vietnami ja muud tavad erinevad."
+          "en": "Palm reading examines the hand’s lines and treats them as signs of personality or what lies ahead.",
+          "et": "Käejoonte lugemine uurib käe jooni ning käsitab neid iseloomu ja tuleviku märkidena."
         },
         "source": {
-          "sourceId": "wikipedia:lunar_new_year",
-          "title": "Lunar New Year",
-          "url": "https://en.wikipedia.org/wiki/Lunar_New_Year",
+          "sourceId": "wikipedia:palmistry",
+          "title": "Palmistry",
+          "url": "https://en.wikipedia.org/wiki/Palmistry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-066:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:global-ritual-calendar:medium:event:nowruz",
+        "factKey": "dream-interpretation:symbols-meaning-future",
         "tier": 4,
-        "subjectKey": "event:nowruz",
+        "subjectKey": "divination:dream-interpretation",
         "clue": {
-          "en": "A festival or observance marks Persian New Year at the spring equinox. Name it.",
-          "et": "Üks festival või tähtpäev tähistab Pärsia uut aastat kevadisel pööripäeval. Millist vastust otsime?"
+          "en": "Which method treats dream images as symbols and sometimes uses them for divination or prediction?",
+          "et": "Milline meetod käsitab unenägude kujundeid sümbolitena ja kasutab neid vahel ennustamiseks?"
         },
         "response": {
-          "en": "Nowruz",
-          "et": "Nouruz"
+          "en": "dream interpretation",
+          "et": "unenägude tõlgendamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "interpreting dreams",
+            "dream analysis"
+          ],
+          "et": [
+            "unenägude seletamine",
+            "unenäoseletus"
+          ]
         },
         "explanation": {
-          "en": "Nowruz includes the haft-sin table of seven symbolic items beginning with the Persian letter sin.",
-          "et": "Nouruz sisaldab haft-sin lauda seitsme pärsia s-tähega algava sümboolse esemega."
+          "en": "Dream interpretation reads symbolic meaning into dreams, which traditions have also used to predict events.",
+          "et": "Unenägude tõlgendamine otsib unenägudest sümboolset tähendust ning pärimustes on neid kasutatud ka ennustamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:nowruz",
-          "title": "Nowruz",
-          "url": "https://en.wikipedia.org/wiki/Nowruz",
+          "sourceId": "wikipedia:dream_interpretation",
+          "title": "Dream interpretation",
+          "url": "https://en.wikipedia.org/wiki/Dream_interpretation",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-066:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:global-ritual-calendar:medium:event:midsummer",
+        "factKey": "tea-leaf-reading:cup-residue-interpretation",
         "tier": 5,
-        "subjectKey": "event:midsummer",
+        "subjectKey": "divination:tea-leaf-reading",
         "clue": {
-          "en": "Find the festival or observance that marks the season around the summer solstice with fires and gatherings.",
-          "et": "Festival või tähtpäev tähistab suvise pööripäeva aega lõkete ja kogunemistega. Leia sobiv vastus."
+          "en": "Which method uses shapes made by tea residue left in a cup?",
+          "et": "Milline meetod kasutab tassi jäänud teepaksu moodustatud kujundeid?"
         },
         "response": {
-          "en": "Midsummer",
-          "et": "jaanipäev"
+          "en": "tea-leaf reading",
+          "et": "teelehtedelt ennustamine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "reading tea leaves",
+            "tasseography",
+            "tasseomancy"
+          ],
+          "et": [
+            "teepaksult ennustamine",
+            "teepaksu pealt ennustamine",
+            "teepaksu pealt lugemine",
+            "tasseograafia"
+          ]
         },
         "explanation": {
-          "en": "Midsummer blends pre-Christian solar customs with Saint John observances in northern Europe.",
-          "et": "Jaanipäev ühendab Põhja-Euroopas eelkristlikud päikesetavad Ristija Johannese pühaga."
+          "en": "Tea-leaf reading examines the shapes formed by leaves or dregs remaining in the cup.",
+          "et": "Teelehtedelt ennustamisel vaadeldakse tassi jäänud lehtede või sademe kujundeid."
         },
         "source": {
-          "sourceId": "wikipedia:midsummer",
-          "title": "Midsummer",
-          "url": "https://en.wikipedia.org/wiki/Midsummer",
+          "sourceId": "wikipedia:tasseography",
+          "title": "Tasseography",
+          "url": "https://en.wikipedia.org/wiki/Tasseography",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
