@@ -39458,161 +39458,179 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-078",
     "name": {
-      "en": "How Islamic Law Is Interpreted",
-      "et": "Kuidas islami õigust tõlgendatakse"
+      "en": "Gods and Belief in Masterpieces",
+      "et": "Jumalad ja usk meistriteostes"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-078:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:isnad",
+        "factKey": "mythology-hard:78:1:The_Creation_of_Adam:relationship",
         "tier": 1,
-        "subjectKey": "concept:isnad",
+        "subjectKey": "artwork:creation-of-adam",
         "clue": {
-          "en": "What chain lists the transmitters through whom a hadith report was passed?",
-          "et": "Milline ahel loetleb edastajad, kelle kaudu hadith’i pärimus edasi anti?"
+          "en": "On the Sistine Chapel ceiling, which Michelangelo fresco shows God and the first man reaching towards each other?",
+          "et": "Milline Michelangelo fresko Sixtuse kabeli laes kujutab Jumalat ja esimest inimest teineteise poole sirutumas?"
         },
         "response": {
-          "en": "isnād",
-          "et": "isnad"
+          "en": "The Creation of Adam",
+          "et": "Aadama loomine"
         },
         "acceptedVariants": {
           "en": [
-            "isnad"
+            "Creation of Adam"
           ],
           "et": [
-            "isnād"
+            "Creation of Adam"
           ]
         },
         "explanation": {
-          "en": "Hadith criticism examines the continuity and reliability of the isnād alongside the report’s wording.",
-          "et": "Hadith’i kriitika uurib koos pärimuse sõnastusega isnad’i järjepidevust ja edastajate usaldusväärsust."
+          "en": "Michelangelo painted this Sistine Chapel fresco, where God and Adam's fingers nearly meet.",
+          "et": "Michelangelo maalis selle Sixtuse kabeli laefresko, millel Jumala ja Aadama sõrmed peaaegu kokku puutuvad."
         },
         "source": {
-          "sourceId": "wikipedia:isnad",
-          "title": "Isnad",
-          "url": "https://en.wikipedia.org/wiki/Isnad",
+          "sourceId": "wikipedia:The_Creation_of_Adam",
+          "title": "The Creation of Adam",
+          "url": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-078:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:discipline:fiqh",
+        "factKey": "mythology-hard:78:2:Saturn_Devouring_His_Son:relationship",
         "tier": 2,
-        "subjectKey": "discipline:fiqh",
+        "subjectKey": "artwork:saturn-devouring-his-son",
         "clue": {
-          "en": "What discipline develops practical Islamic rulings from scriptural and legal sources?",
-          "et": "Milline teadusharu tuletab pühakirjalistest ja õiguslikest allikatest islami praktilisi norme?"
+          "en": "Which of Goya’s Black Paintings shows a Roman god consuming one of his children?",
+          "et": "Milline Goya mustadest maalidest kujutab Rooma jumalat üht oma last söömas?"
         },
         "response": {
-          "en": "fiqh",
-          "et": "fiqh"
+          "en": "Saturn Devouring His Son",
+          "et": "Saturn oma poega õgimas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Saturn oma poega õgimas"
+          ],
+          "et": [
+            "Saturnus oma poega õgimas",
+            "Saturnus oma lapsi õgimas",
+            "Saturnus õgib oma poega"
+          ]
         },
         "explanation": {
-          "en": "Fiqh is human jurisprudential interpretation and is therefore distinguished from divine sharia.",
-          "et": "Fiqh on inimlik õiguslik tõlgendus ning seda eristatakse seetõttu jumalikust šariaadist."
+          "en": "Goya painted the work as part of his Black Paintings, depicting Saturn devouring a child.",
+          "et": "Goya maalis teose oma mustade maalide sarjas ning kujutas Saturni last õgimas."
         },
         "source": {
-          "sourceId": "wikipedia:fiqh",
-          "title": "Fiqh",
-          "url": "https://en.wikipedia.org/wiki/Fiqh",
+          "sourceId": "wikipedia:Saturn_Devouring_His_Son",
+          "title": "Saturn Devouring His Son",
+          "url": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-078:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:school:madhhab",
+        "factKey": "mythology-hard:78:3:Apollo_and_Daphne_(Bernini):relationship",
         "tier": 3,
-        "subjectKey": "school:madhhab",
+        "subjectKey": "artwork:apollo-and-daphne",
         "clue": {
-          "en": "What recognised school of jurisprudential interpretation guides legal reasoning in Sunni Islam?",
-          "et": "Milline tunnustatud õigustõlgenduse koolkond juhib sunniitlikus islamis juriidilist arutlust?"
+          "en": "Which Bernini sculpture captures a pursuing god just as the nymph he chases turns into a laurel tree?",
+          "et": "Milline Bernini skulptuur tabab hetke, mil jälitatav nümf muutub loorberipuuks?"
         },
         "response": {
-          "en": "madhhab",
-          "et": "madhhab"
+          "en": "Apollo and Daphne",
+          "et": "Apollo ja Daphne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Apollon ja Daphne"
+          ],
+          "et": [
+            "Apollon ja Daphne"
+          ]
         },
         "explanation": {
-          "en": "The major Sunni madhhabs share core sources but differ in legal method and rulings.",
-          "et": "Peamised sunniitlikud madhhab’id jagavad alusallikaid, kuid erinevad meetodi ja otsuste poolest."
+          "en": "Bernini’s sculpture depicts Apollo pursuing Daphne as she transforms into a laurel.",
+          "et": "Bernini skulptuur kujutab Apollot Daphnet jälitamas, kui naine muutub loorberipuuks."
         },
         "source": {
-          "sourceId": "wikipedia:madhhab",
-          "title": "Madhhab",
-          "url": "https://en.wikipedia.org/wiki/Madhhab",
+          "sourceId": "wikipedia:Apollo_and_Daphne_(Bernini)",
+          "title": "Apollo and Daphne (Bernini)",
+          "url": "https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Bernini)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-078:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:principle:ijma",
+        "factKey": "mythology-hard:78:4:Ecstasy_of_Saint_Teresa:relationship",
         "tier": 4,
-        "subjectKey": "principle:ijma",
+        "subjectKey": "artwork:ecstasy-of-saint-teresa",
         "clue": {
-          "en": "Which source of Islamic law means the consensus of qualified scholars or the community?",
-          "et": "Milline islami õiguse allikas tähendab pädevate õpetlaste või kogukonna konsensust?"
+          "en": "In which Bernini sculptural group at Santa Maria della Vittoria does an angel visit a saint?",
+          "et": "Millises Bernini skulptuurigrupis Santa Maria della Vittoria kirikus külastab ingel pühakut?"
         },
         "response": {
-          "en": "ijmāʿ",
-          "et": "idžma"
+          "en": "The Ecstasy of Saint Teresa",
+          "et": "Püha Teresa ekstaas"
         },
         "acceptedVariants": {
           "en": [
-            "ijma"
+            "Ecstasy of Saint Teresa",
+            "The Ecstasy of St Teresa",
+            "Ecstasy of St Teresa"
           ],
           "et": [
-            "ijma"
+            "Püha Theresa ekstaas"
           ]
         },
         "explanation": {
-          "en": "Legal schools disagree about whose consensus counts and how it can be established.",
-          "et": "Õiguskoolkonnad vaidlevad, kelle konsensus loeb ja kuidas seda tuvastada."
+          "en": "Bernini made the group for Santa Maria della Vittoria in Rome, showing an angel visiting Teresa.",
+          "et": "Bernini lõi grupi Rooma Santa Maria della Vittoria kirikusse ning kujutas inglit Teresat külastamas."
         },
         "source": {
-          "sourceId": "wikipedia:ijma",
-          "title": "Ijma",
-          "url": "https://en.wikipedia.org/wiki/Ijma",
+          "sourceId": "wikipedia:Ecstasy_of_Saint_Teresa",
+          "title": "Ecstasy of Saint Teresa",
+          "url": "https://en.wikipedia.org/wiki/Ecstasy_of_Saint_Teresa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-078:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:direction:qibla",
+        "factKey": "mythology-hard:78:5:The_Calling_of_St_Matthew_(Caravaggio):relationship",
         "tier": 5,
-        "subjectKey": "direction:qibla",
+        "subjectKey": "artwork:calling-of-saint-matthew",
         "clue": {
-          "en": "What sacred direction faces the Kaaba and orients formal Muslim prayer?",
-          "et": "Milline püha suund on Kaaba poole ning määrab moslemi rituaalse palve orientatsiooni?"
+          "en": "Which Caravaggio painting in the Contarelli Chapel shows Christ summoning a tax collector from his table?",
+          "et": "Milline Caravaggio maal Contarelli kabelis kujutab Kristust maksukogujat laua äärest kutsumas?"
         },
         "response": {
-          "en": "qibla",
-          "et": "kibla"
+          "en": "The Calling of Saint Matthew",
+          "et": "Püha Matteuse kutsumine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Calling of Saint Matthew",
+            "The Calling of St Matthew",
+            "Calling of St Matthew"
+          ],
+          "et": [
+            "Matteuse kutsumine"
+          ]
         },
         "explanation": {
-          "en": "Mosques indicate the qibla with a niche called a mihrab.",
-          "et": "Mošees näitab kiblat mihrabiks nimetatud palvenišš."
+          "en": "Caravaggio’s painting hangs in the Contarelli Chapel and shows Christ calling Matthew from a tax collector’s table.",
+          "et": "Caravaggio maal asub Contarelli kabelis ja kujutab Kristust Matteust maksukoguja laua äärest kutsumas."
         },
         "source": {
-          "sourceId": "wikipedia:qibla",
-          "title": "Qibla",
-          "url": "https://en.wikipedia.org/wiki/Qibla",
+          "sourceId": "wikipedia:The_Calling_of_Saint_Matthew",
+          "title": "The Calling of Saint Matthew",
+          "url": "https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -39620,165 +39638,162 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-079",
     "name": {
-      "en": "Order and Conduct in Classical China",
-      "et": "Kord ja käitumine klassikalises Hiinas"
+      "en": "Myth on Stage and Screen",
+      "et": "Müüdid laval ja ekraanil"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-079:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:doctrine:mandate-of-heaven",
+        "factKey": "mythology-hard:079:1:the-mummy-1999-hamunaptra-imhotep",
         "tier": 1,
-        "subjectKey": "doctrine:mandate-of-heaven",
+        "subjectKey": "film:the-mummy-1999",
         "clue": {
-          "en": "Which doctrine grants a ruler legitimacy while allowing it to be lost through injustice and disorder?",
-          "et": "Milline õpetus annab valitsejale legitiimsuse, kuid lubab selle ebaõigluse ja korratuse tõttu kaotada?"
+          "en": "Which 1999 Stephen Sommers adventure sends Brendan Fraser and Rachel Weisz to Hamunaptra, where Imhotep awakens?",
+          "et": "Milline 1999. aasta Stephen Sommersi seiklusfilm viib Brendan Fraseri ja Rachel Weiszi Hamunaptrasse, kus ärkab Imhotep?"
         },
         "response": {
-          "en": "Mandate of Heaven",
-          "et": "taevamandaat"
+          "en": "The Mummy",
+          "et": "Muumia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mummy"
+          ],
+          "et": [
+            "Mummy"
+          ]
         },
         "explanation": {
-          "en": "The Zhou used the Mandate of Heaven to explain dynastic succession without permanent divine right.",
-          "et": "Zhou dünastia kasutas taevamandaati dünastilise järgluse selgitamiseks ilma igavese jumaliku õiguseta."
+          "en": "Stephen Sommers directed the 1999 adventure starring Fraser and Weisz, whose characters awaken the cursed priest Imhotep at Hamunaptra.",
+          "et": "Stephen Sommers lavastas 1999. aasta seiklusfilmi Fraseri ja Weisziga, kelle tegelased äratavad Hamunaptras neetud preestri Imhotepi."
         },
         "source": {
-          "sourceId": "wikipedia:mandate_of_heaven",
-          "title": "Mandate of Heaven",
-          "url": "https://en.wikipedia.org/wiki/Mandate_of_Heaven",
+          "sourceId": "wikipedia:The_Mummy_(1999_film)",
+          "title": "The Mummy (1999 film)",
+          "url": "https://en.wikipedia.org/wiki/The_Mummy_(1999_film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-079:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:virtue:filial-piety",
+        "factKey": "mythology-hard:79:2:Troy_(film):relationship",
         "tier": 2,
-        "subjectKey": "virtue:filial-piety",
+        "subjectKey": "film:troy-2004",
         "clue": {
-          "en": "Which Confucian virtue governs respectful care and duty toward parents and ancestors?",
-          "et": "Milline konfutsianistlik voorus juhib austavat hoolt ja kohust vanemate ning esivanemate suhtes?"
+          "en": "Which Brad Pitt epic casts him as Achilles in a film loosely adapting Homer’s Iliad?",
+          "et": "Millises Homerose „Iliase“ ainetel valminud eepilises filmis mängib Brad Pitt Achilleust?"
         },
         "response": {
-          "en": "filial piety",
-          "et": "pojalik vagadus"
+          "en": "Troy",
+          "et": "Trooja"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Filial piety extends family relations into a model for social and political order.",
-          "et": "Pojalik vagadus laiendab peresuhted ühiskondliku ja poliitilise korra mudeliks."
+          "en": "Brad Pitt plays Achilles in this adaptation of the Iliad and its ancient war story.",
+          "et": "Brad Pitt mängib selles „Iliase“ ja selle antiikse sõjaloo ekraniseeringus Achilleust."
         },
         "source": {
-          "sourceId": "wikipedia:filial_piety",
-          "title": "Filial piety",
-          "url": "https://en.wikipedia.org/wiki/Filial_piety",
+          "sourceId": "wikipedia:Troy_(film)",
+          "title": "Troy (film)",
+          "url": "https://en.wikipedia.org/wiki/Troy_(film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-079:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:ziran",
+        "factKey": "mythology-hard:79:4:Clash_of_the_Titans_(1981_film):relationship",
         "tier": 3,
-        "subjectKey": "concept:ziran",
+        "subjectKey": "film:clash-of-the-titans-1981",
         "clue": {
-          "en": "Which Daoist term for naturalness literally suggests being “so of itself”?",
-          "et": "Milline taoistlik loomulikkuse mõiste tähendab sõna-sõnalt „iseenesest nii“ olemist?"
+          "en": "Which Greek-myth adventure sends Perseus against Medusa and then the Kraken?",
+          "et": "Milline Kreeka müütidel põhinev seiklusfilm saadab Perseuse võitlema Medusa ja seejärel Krakeniga?"
         },
         "response": {
-          "en": "zìrán",
-          "et": "ziran"
+          "en": "Clash of the Titans",
+          "et": "Titaanide kokkupõrge"
         },
         "acceptedVariants": {
-          "en": [
-            "ziran"
-          ],
-          "et": [
-            "zìrán"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Zìrán describes spontaneous self-so character rather than behaviour imposed from outside.",
-          "et": "Ziran kirjeldab spontaanset iseeneslikkust, mitte väljast peale surutud käitumist."
+          "en": "The film follows Perseus, son of Zeus, on a quest that pits him against Medusa and the Kraken.",
+          "et": "Film jälgib Zeusi poja Perseuse retke, kus ta astub vastu Medusale ja Krakenile."
         },
         "source": {
-          "sourceId": "wikipedia:ziran",
-          "title": "Ziran",
-          "url": "https://en.wikipedia.org/wiki/Ziran",
+          "sourceId": "wikipedia:Clash_of_the_Titans_(1981_film)",
+          "title": "Clash of the Titans (1981 film)",
+          "url": "https://en.wikipedia.org/wiki/Clash_of_the_Titans_(1981_film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-079:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:principle:wu-wei",
+        "factKey": "mythology-hard:79:3:Joseph_and_the_Amazing_Technicolor_Dreamcoat:relationship",
         "tier": 4,
-        "subjectKey": "principle:wu-wei",
+        "subjectKey": "musical:joseph-and-the-amazing-technicolor-dreamcoat",
         "clue": {
-          "en": "Which Daoist ideal counsels unforced action that accords with the natural course of things?",
-          "et": "Milline taoistlik ideaal soovitab sundimatut tegutsemist, mis järgib asjade loomulikku kulgu?"
+          "en": "Which sung-through musical pairs Andrew Lloyd Webber’s music with Tim Rice’s lyrics and the biblical story of Jacob’s favourite son?",
+          "et": "Millises läbilauldud muusikalis kohtuvad Andrew Lloyd Webberi muusika, Tim Rice’i sõnad ja Jaakobi lemmikpoja piiblilugu?"
         },
         "response": {
-          "en": "wúwéi",
-          "et": "wu wei"
+          "en": "Joseph and the Amazing Technicolor Dreamcoat",
+          "et": "Joseph and the Amazing Technicolor Dreamcoat"
         },
         "acceptedVariants": {
           "en": [
-            "wu wei"
+            "Joseph"
           ],
           "et": [
-            "wuwei"
+            "Joseph",
+            "Joosep"
           ]
         },
         "explanation": {
-          "en": "Wúwéi is not simple inactivity; it contrasts skilful ease with coercive striving.",
-          "et": "Wu wei ei ole lihtsalt tegevusetus, vaid vastandab oskusliku kerguse sundivale ponnistusele."
+          "en": "Andrew Lloyd Webber wrote the music and Tim Rice the lyrics for this musical based on the Genesis story.",
+          "et": "Andrew Lloyd Webber kirjutas muusika ja Tim Rice sõnad sellele Esimese Moosese raamatu loole tuginevale muusikalile."
         },
         "source": {
-          "sourceId": "wikipedia:wu_wei",
-          "title": "Wu wei",
-          "url": "https://en.wikipedia.org/wiki/Wu_wei",
+          "sourceId": "wikipedia:Joseph_and_the_Amazing_Technicolor_Dreamcoat",
+          "title": "Joseph and the Amazing Technicolor Dreamcoat",
+          "url": "https://en.wikipedia.org/wiki/Joseph_and_the_Amazing_Technicolor_Dreamcoat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-079:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:school:legalism-china",
+        "factKey": "mythology-hard:79:5:Elektra_(opera):relationship",
         "tier": 5,
-        "subjectKey": "school:legalism-china",
+        "subjectKey": "opera:elektra",
         "clue": {
-          "en": "Which school sought order through clear laws, administrative technique, and strong state authority?",
-          "et": "Milline koolkond otsis korda selgete seaduste, haldustehnika ja tugeva riigivõimu kaudu?"
+          "en": "Which one-act Strauss opera, with a German libretto by Hofmannsthal, focuses on Agamemnon’s vengeful daughter?",
+          "et": "Milline Straussi ühevaatuseline ooper Hofmannsthali saksakeelse libretoga keskendub Agamemnoni kättemaksuhimulisele tütrele?"
         },
         "response": {
-          "en": "Chinese Legalism",
-          "et": "Hiina legalism"
+          "en": "Elektra",
+          "et": "Elektra"
         },
         "acceptedVariants": {
-          "en": [
-            "Legalism"
-          ],
-          "et": [
-            "legalism"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Legalist thinkers distrusted rule based only on personal virtue and inherited custom.",
-          "et": "Hiina legalistid ei usaldanud üksnes isiklikul voorusel ja päritud taval põhinevat valitsemist."
+          "en": "Richard Strauss composed the one-act opera to Hofmannsthal’s libretto, drawing its heroine from Greek myth.",
+          "et": "Richard Strauss lõi ühevaatuselise ooperi Hofmannsthali libretole ning selle kangelanna pärineb Kreeka mütoloogiast."
         },
         "source": {
-          "sourceId": "wikipedia:legalism_(chinese_philosophy)",
-          "title": "Legalism (Chinese philosophy)",
-          "url": "https://en.wikipedia.org/wiki/Legalism_(Chinese_philosophy)",
+          "sourceId": "wikipedia:Elektra_(opera)",
+          "title": "Elektra (opera)",
+          "url": "https://en.wikipedia.org/wiki/Elektra_(opera)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -39786,157 +39801,157 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-080",
     "name": {
-      "en": "Sacred Presence in Japanese Tradition",
-      "et": "Püha kohalolu Jaapani traditsioonis"
+      "en": "Five Turning Points in Church History",
+      "et": "Viis pöördepunkti kirikuajaloos"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-080:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:object:shimenawa",
+        "factKey": "mythology-hard:80:1:Protestant_Reformation:relationship",
         "tier": 1,
-        "subjectKey": "object:shimenawa",
+        "subjectKey": "movement:protestant-reformation",
         "clue": {
-          "en": "Which sacred straw or hemp rope marks a purified place or an object associated with kami?",
-          "et": "Milline püha õlgedest või kanepist köis tähistab puhastatud paika või kami’ga seotud eset?"
+          "en": "Which Western Christian movement, strongly associated with Martin Luther, broke many churches away from papal authority?",
+          "et": "Milline Martin Lutheriga tugevalt seotud läänekristlik liikumine viis paljud kirikud paavsti võimu alt eemale?"
         },
         "response": {
-          "en": "shimenawa",
-          "et": "shimenawa"
+          "en": "Protestant Reformation",
+          "et": "protestantlik reformatsioon"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Shimenawa often carries zigzag paper streamers called shide.",
-          "et": "Shimenawa küljes ripuvad sageli shide’ks nimetatud sikilised paberiribad."
+          "en": "The Protestant Reformation began as a Western Christian movement and separated many Christians from Rome’s papal authority.",
+          "et": "Protestantlik reformatsioon algas läänekristliku liikumisena ning eraldas paljud kristlased Rooma paavsti võimust."
         },
         "source": {
-          "sourceId": "wikipedia:shimenawa",
-          "title": "Shimenawa",
-          "url": "https://en.wikipedia.org/wiki/Shimenawa",
+          "sourceId": "wikipedia:Protestantism",
+          "title": "Protestantism",
+          "url": "https://en.wikipedia.org/wiki/Protestantism",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-080:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:place:temizuya",
+        "factKey": "mythology-hard:80:2:East%E2%80%93West_Schism:relationship",
         "tier": 2,
-        "subjectKey": "place:temizuya",
+        "subjectKey": "event:east-west-schism",
         "clue": {
-          "en": "At what shrine pavilion do visitors rinse hands and mouth before approaching the sanctuary?",
-          "et": "Millise pühamupaviljoni juures loputavad külastajad enne pühamu poole minekut käsi ja suud?"
+          "en": "What rupture, conventionally dated to 1054, broke communion between the churches centred on Rome and Constantinople?",
+          "et": "Milline tavapäraselt 1054. aastaga dateeritud lõhe katkestas osaduse Rooma ja Konstantinoopoli ümber koondunud kirikute vahel?"
         },
         "response": {
-          "en": "temizuya",
-          "et": "temizuya"
+          "en": "East–West Schism",
+          "et": "ida-lääne kirikulõhe"
         },
         "acceptedVariants": {
-          "en": [
-            "chōzuya"
-          ],
-          "et": [
-            "chōzuya"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "A temizuya or chōzuya provides water and ladles for ritual purification.",
-          "et": "Temizuya ehk chōzuya pakub rituaalseks puhastuseks vett ja kulpe."
+          "en": "The East–West Schism broke communion between the Catholic and Eastern Orthodox churches amid recurring Rome–Constantinople tensions.",
+          "et": "Ida-lääne kirikulõhe katkestas osaduse katoliku ja õigeusu kiriku vahel, taustaks korduvad Rooma ja Konstantinoopoli pinged."
         },
         "source": {
-          "sourceId": "wikipedia:ch%c5%8dzuya",
-          "title": "Chōzuya",
-          "url": "https://en.wikipedia.org/wiki/Ch%C5%8Dzuya",
+          "sourceId": "wikipedia:East%E2%80%93West_Schism",
+          "title": "East–West Schism",
+          "url": "https://en.wikipedia.org/wiki/East%E2%80%93West_Schism",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-080:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:religion:shinto",
+        "factKey": "mythology-hard:80:3:Avignon_Papacy:relationship",
         "tier": 3,
-        "subjectKey": "religion:shinto",
+        "subjectKey": "period:avignon-papacy",
         "clue": {
-          "en": "Which Japanese tradition centres on kami, shrines, purity, and seasonal rites?",
-          "et": "Milline Jaapani traditsioon keskendub kami’dele, pühamutele, puhtusele ja hooajalistele riitustele?"
+          "en": "What fourteenth-century period saw popes reside in a French city before the Western Schism?",
+          "et": "Millisel 14. sajandi perioodil elasid paavstid ühes Prantsuse linnas enne läänekiriku skismat?"
         },
         "response": {
-          "en": "Shinto",
-          "et": "šinto"
+          "en": "Avignon Papacy",
+          "et": "Avignoni paavstlus"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Shinto has no single founder or universally binding scripture.",
-          "et": "Šintol pole üht rajajat ega kõigile siduvat pühakirja."
+          "en": "During the Avignon Papacy, popes resided in Avignon in the fourteenth century before the Western Schism.",
+          "et": "Avignoni paavstluse ajal elasid paavstid 14. sajandil Avignonis, enne läänekiriku skismat."
         },
         "source": {
-          "sourceId": "wikipedia:shinto",
-          "title": "Shinto",
-          "url": "https://en.wikipedia.org/wiki/Shinto",
+          "sourceId": "wikipedia:Avignon_Papacy",
+          "title": "Avignon Papacy",
+          "url": "https://en.wikipedia.org/wiki/Avignon_Papacy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-080:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:ritual:misogi",
+        "factKey": "mythology-hard:80:5:St._Bartholomew%27s_Day_massacre:relationship",
         "tier": 4,
-        "subjectKey": "ritual:misogi",
+        "subjectKey": "event:st-bartholomews-day-massacre",
         "clue": {
-          "en": "What Shinto purification practice uses washing or standing beneath flowing water?",
-          "et": "Milline šinto puhastuspraktika kasutab pesemist või voolava vee all seismist?"
+          "en": "Which 1572 Paris massacre targeted French Huguenots soon after Margaret of Valois married Henry of Navarre?",
+          "et": "Milline 1572. aasta Pariisi veresaun tabas Prantsuse hugenotte peagi pärast Marguerite de Valois’ ja Navarra Heinrichi pulmi?"
         },
         "response": {
-          "en": "misogi",
-          "et": "misogi"
+          "en": "St Bartholomew's Day massacre",
+          "et": "Pärtliöö veresaun"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Misogi removes ritual pollution and may precede worship or ascetic training.",
-          "et": "Misogi eemaldab rituaalse ebapuhtuse ning võib eelneda jumalateenistusele või askeesile."
+          "en": "The St Bartholomew’s Day massacre began in Paris in 1572, targeting Huguenots after the royal wedding.",
+          "et": "Pärtliöö veresaun algas 1572. aastal Pariisis ning tabas hugenotte pärast kuninglikke pulmi."
         },
         "source": {
-          "sourceId": "wikipedia:misogi",
-          "title": "Misogi",
-          "url": "https://en.wikipedia.org/wiki/Misogi",
+          "sourceId": "wikipedia:St._Bartholomew%27s_Day_massacre",
+          "title": "St. Bartholomew's Day massacre",
+          "url": "https://en.wikipedia.org/wiki/St._Bartholomew%27s_Day_massacre",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-080:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:matsuri",
+        "factKey": "mythology-hard:80:4:Walk_to_Canossa:relationship",
         "tier": 5,
-        "subjectKey": "festival:matsuri",
+        "subjectKey": "event:walk-to-canossa",
         "clue": {
-          "en": "What general Japanese term denotes a festival, often attached to a local shrine and its kami?",
-          "et": "Milline üldine jaapanikeelne sõna tähistab sageli kohaliku pühamu ja kami’ga seotud pidustust?"
+          "en": "What wintry 1077 journey did excommunicated emperor Henry IV make while seeking absolution from Gregory VII?",
+          "et": "Millise talvise teekonna võttis kirikuvande alla pandud keiser Heinrich IV 1077. aastal ette, et Gregorius VII-lt andestust paluda?"
         },
         "response": {
-          "en": "matsuri",
-          "et": "matsuri"
+          "en": "Walk to Canossa",
+          "et": "Canossa teekond"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Road to Canossa"
+          ],
+          "et": [
+            "Canossas käik"
+          ]
         },
         "explanation": {
-          "en": "A matsuri may include processions, offerings, music, dance, and a portable shrine.",
-          "et": "Matsuri võib hõlmata rongkäiku, annetusi, muusikat, tantsu ja kantavat pühamut."
+          "en": "Henry IV travelled to Canossa in 1077 after Gregory VII excommunicated him, seeking absolution in winter.",
+          "et": "Heinrich IV läks 1077. aasta talvel pärast Gregorius VII kirikuvannet Canossasse andestust paluma."
         },
         "source": {
-          "sourceId": "wikipedia:japanese_festivals",
-          "title": "Japanese festivals",
-          "url": "https://en.wikipedia.org/wiki/Japanese_festivals",
+          "sourceId": "wikipedia:Road_to_Canossa",
+          "title": "Road to Canossa",
+          "url": "https://en.wikipedia.org/wiki/Road_to_Canossa",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -39944,157 +39959,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-081",
     "name": {
-      "en": "Creation and Trial in the Maya World",
-      "et": "Loomine ja katsumused maiade maailmas"
+      "en": "Clergy Who Changed Science",
+      "et": "Vaimulikud, kes muutsid teadust"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-081:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:popol-vuh",
+        "factKey": "mythology-hard:81:1:Gregor_Mendel:relationship",
         "tier": 1,
-        "subjectKey": "text:popol-vuh",
+        "subjectKey": "person:gregor-mendel",
         "clue": {
-          "en": "Which Kʼicheʼ Maya narrative records creation, divine genealogies, and the Hero Twins?",
-          "et": "Milline kitšee maiade jutustus talletab loomise, jumalikud sugupuud ja kangelaskaksikute loo?"
+          "en": "Which Augustinian friar’s pea-plant experiments made him a founder of modern genetics?",
+          "et": "Millise augustiinlasest munga hernetaimekatsed tegid temast moodsa geneetika rajaja?"
         },
         "response": {
-          "en": "Popol Vuh",
-          "et": "Popol Vuh"
+          "en": "Gregor Mendel",
+          "et": "Gregor Mendel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mendel"
+          ],
+          "et": [
+            "Mendel"
+          ]
         },
         "explanation": {
-          "en": "The surviving Popol Vuh was written in Kʼicheʼ with Latin script during the colonial period.",
-          "et": "Säilinud Popol Vuh kirjutati koloniaalajal kitšee keeles ladina kirjas."
+          "en": "Gregor Mendel was an Augustinian friar whose pea experiments founded modern genetics.",
+          "et": "Gregor Mendel oli augustiinlasest munk, kelle hernekatsed panid aluse moodsale geneetikale."
         },
         "source": {
-          "sourceId": "wikipedia:popol_vuh",
-          "title": "Popol Vuh",
-          "url": "https://en.wikipedia.org/wiki/Popol_Vuh",
+          "sourceId": "wikipedia:Gregor_Mendel",
+          "title": "Gregor Mendel",
+          "url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-081:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:quetzalcoatl",
+        "factKey": "mythology-hard:81:2:Georges_Lema%C3%AEtre:relationship",
         "tier": 2,
-        "subjectKey": "deity:quetzalcoatl",
+        "subjectKey": "person:georges-lemaitre",
         "clue": {
-          "en": "Which Feathered Serpent deity was important across several Mesoamerican cultures?",
-          "et": "Milline Sulismao jumalus oli tähtis mitmes Mesoameerika kultuuris?"
+          "en": "Which Belgian Catholic priest and physicist proposed an expanding-universe theory?",
+          "et": "Milline Belgia katoliku preester ja füüsik pakkus välja paisuva universumi teooria?"
         },
         "response": {
-          "en": "Quetzalcoatl",
-          "et": "Quetzalcoatl"
+          "en": "Georges Lemaître",
+          "et": "Georges Lemaître"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Lemaître"
+          ],
+          "et": [
+            "Lemaître"
+          ]
         },
         "explanation": {
-          "en": "Quetzalcoatl was linked with wind, learning, priesthood, and culture in central Mexican traditions.",
-          "et": "Quetzalcoatl seostus Kesk-Mehhiko pärimustes tuule, teadmise, preesterkonna ja kultuuriga."
+          "en": "Georges Lemaître combined the Catholic priesthood with physics and proposed an expanding universe.",
+          "et": "Georges Lemaître ühendas katoliku preestriameti füüsikaga ja pakkus välja paisuva universumi."
         },
         "source": {
-          "sourceId": "wikipedia:quetzalcoatl",
-          "title": "Quetzalcoatl",
-          "url": "https://en.wikipedia.org/wiki/Quetzalcoatl",
+          "sourceId": "wikipedia:Georges_Lema%C3%AEtre",
+          "title": "Georges Lemaître",
+          "url": "https://en.wikipedia.org/wiki/Georges_Lema%C3%AEtre",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-081:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:realm:xibalba",
+        "factKey": "mythology-hard:81:3:Joseph_Priestley:relationship",
         "tier": 3,
-        "subjectKey": "realm:xibalba",
+        "subjectKey": "person:joseph-priestley",
         "clue": {
-          "en": "What dangerous underworld do the Maya Hero Twins enter and outwit in the Popol Vuh?",
-          "et": "Millisesse ohtlikku allilma sisenevad maiade kangelaskaksikud Popol Vuh’s ja kavaldavad selle isandad üle?"
+          "en": "Which English theologian independently isolated oxygen in 1774 and also experimented with electricity?",
+          "et": "Milline Inglise teoloog eraldas 1774. aastal iseseisvalt hapniku ning uuris ka elektrit?"
         },
         "response": {
-          "en": "Xibalba",
-          "et": "Xibalba"
+          "en": "Joseph Priestley",
+          "et": "Joseph Priestley"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Priestley"
+          ],
+          "et": [
+            "Priestley"
+          ]
         },
         "explanation": {
-          "en": "Xibalba contains houses of ordeals designed to defeat visitors.",
-          "et": "Xibalba sisaldab katsumuste maju, mis on mõeldud külaliste alistamiseks."
+          "en": "Joseph Priestley was an English theologian who independently isolated oxygen in 1774 and investigated electricity.",
+          "et": "Joseph Priestley oli Inglise teoloog, kes eraldas 1774. aastal iseseisvalt hapniku ja uuris elektrit."
         },
         "source": {
-          "sourceId": "wikipedia:xibalba",
-          "title": "Xibalba",
-          "url": "https://en.wikipedia.org/wiki/Xibalba",
+          "sourceId": "wikipedia:Joseph_Priestley",
+          "title": "Joseph Priestley",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Priestley",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-081:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:heroes:hero-twins",
+        "factKey": "mythology-hard:81:4:Roger_Bacon:relationship",
         "tier": 4,
-        "subjectKey": "heroes:hero-twins",
+        "subjectKey": "person:roger-bacon",
         "clue": {
-          "en": "Which brothers defeat the lords of Xibalba through skill, sacrifice, and resurrection?",
-          "et": "Millised vennad võidavad osavuse, ohverduse ja ülestõusmise abil Xibalba isandad?"
+          "en": "Which Franciscan friar wrote about optics and championed learning through observation and experiment?",
+          "et": "Milline frantsiskaani munk kirjutas optikast ning rõhutas teadmiste hankimisel vaatlust ja katset?"
         },
         "response": {
-          "en": "Hunahpu and Xbalanque",
-          "et": "Hunahpu ja Xbalanque"
+          "en": "Roger Bacon",
+          "et": "Roger Bacon"
         },
         "acceptedVariants": {
           "en": [
-            "Maya Hero Twins"
+            "Bacon"
           ],
           "et": [
-            "maiade kangelaskaksikud"
+            "Bacon"
           ]
         },
         "explanation": {
-          "en": "The Maya Hero Twins avenge their father and uncle before rising into the sky.",
-          "et": "Maiade kangelaskaksikud maksavad kätte oma isa ja onu eest ning tõusevad seejärel taevasse."
+          "en": "Roger Bacon was a Franciscan friar who wrote on optics and stressed observation and experiment.",
+          "et": "Roger Bacon oli frantsiskaani munk, kes kirjutas optikast ning rõhutas vaatlust ja katset."
         },
         "source": {
-          "sourceId": "wikipedia:maya_hero_twins",
-          "title": "Maya Hero Twins",
-          "url": "https://en.wikipedia.org/wiki/Maya_Hero_Twins",
+          "sourceId": "wikipedia:Roger_Bacon",
+          "title": "Roger Bacon",
+          "url": "https://en.wikipedia.org/wiki/Roger_Bacon",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-081:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:site:cenote",
+        "factKey": "mythology-hard:81:5:Thomas_Bayes:relationship",
         "tier": 5,
-        "subjectKey": "site:cenote",
+        "subjectKey": "person:thomas-bayes",
         "clue": {
-          "en": "Which water-filled limestone sinkhole could serve Maya communities as both water source and sacred offering place?",
-          "et": "Milline veega täitunud lubjakivilehter võis maiadele olla nii veeallikas kui püha ohvriandide paik?"
+          "en": "Which Presbyterian minister and mathematician gave his name to a theorem about conditional probability?",
+          "et": "Milline presbüterlik vaimulik ja matemaatik andis nime tingliku tõenäosuse teoreemile?"
         },
         "response": {
-          "en": "cenote",
-          "et": "cenote"
+          "en": "Thomas Bayes",
+          "et": "Thomas Bayes"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bayes"
+          ],
+          "et": [
+            "Bayes"
+          ]
         },
         "explanation": {
-          "en": "Some cenotes, especially at Chichén Itzá, preserve archaeological evidence of ritual offerings.",
-          "et": "Mõnes cenote’s, eriti Chichén Itzás, on säilinud arheoloogilisi tõendeid rituaalsetest andidest."
+          "en": "Thomas Bayes was a Presbyterian minister and mathematician; Bayes’ theorem bears his name.",
+          "et": "Thomas Bayes oli presbüterlik vaimulik ja matemaatik ning Bayesi teoreem kannab tema nime."
         },
         "source": {
-          "sourceId": "wikipedia:cenote",
-          "title": "Cenote",
-          "url": "https://en.wikipedia.org/wiki/Cenote",
+          "sourceId": "wikipedia:Thomas_Bayes",
+          "title": "Thomas Bayes",
+          "url": "https://en.wikipedia.org/wiki/Thomas_Bayes",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40102,157 +40133,157 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-082",
     "name": {
-      "en": "Sacred Powers of the Andes",
-      "et": "Andide pühad jõud"
+      "en": "Famous Frauds and Media Myths",
+      "et": "Kuulsad pettused ja meediamüüdid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-082:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:inti",
+        "factKey": "mythology-hard:82:1:Alien_Autopsy_(film):relationship",
         "tier": 1,
-        "subjectKey": "deity:inti",
+        "subjectKey": "hoax:alien-autopsy-footage",
         "clue": {
-          "en": "Which Inca sun deity stood at the centre of the imperial state cult?",
-          "et": "Milline inkade päikesejumal asus keiserliku riigikultuse keskmes?"
+          "en": "What did Ray Santilli claim his notorious 1995 footage showed, before it was debunked and shown to have been filmed on an inexpensive set?",
+          "et": "Mida väitis Ray Santilli oma kurikuulsatel 1995. aasta kaadritel näidatavat, enne kui need paljastati odaval võtteplatsil lavastatuna?"
         },
         "response": {
-          "en": "Inti",
-          "et": "Inti"
+          "en": "alien autopsy",
+          "et": "tulnuka lahkamine"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Inca rulers claimed descent from Inti and supported his temples and priesthood.",
-          "et": "Inkade valitsejad pidasid end Inti järeltulijateks ning toetasid tema templeid ja preesterkonda."
+          "en": "Ray Santilli released purported alien-autopsy footage that aired on Fox in 1995 and was later thoroughly debunked.",
+          "et": "Ray Santilli avaldas väidetavad tulnuka lahkamise kaadrid, mis jõudsid 1995. aastal Foxi eetrisse ja hiljem põhjalikult ümber lükati."
         },
         "source": {
-          "sourceId": "wikipedia:inti",
-          "title": "Inti",
-          "url": "https://en.wikipedia.org/wiki/Inti",
+          "sourceId": "wikipedia:Alien_Autopsy_(1995_film)",
+          "title": "Alien Autopsy (1995 film)",
+          "url": "https://en.wikipedia.org/wiki/Alien_Autopsy_(1995_film)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-082:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:viracocha",
+        "factKey": "mythology-hard:082:2:blair-witch-pseudodocumentary-marketing",
         "tier": 2,
-        "subjectKey": "deity:viracocha",
+        "subjectKey": "film:blair-witch-project",
         "clue": {
-          "en": "Which Andean creator deity is said to bring forth the sun, moon, and peoples?",
-          "et": "Milline Andide loojajumalus olevat loonud päikese, kuu ja rahvad?"
+          "en": "Which 1999 found-footage horror film follows three student filmmakers and marketed its actors as missing or dead?",
+          "et": "Milline 1999. aasta leitud kaadrite laadis õudusfilm jälgib kolme filmitudengit ning reklaamis näitlejaid kadunute või surnutena?"
         },
         "response": {
-          "en": "Viracocha",
-          "et": "Viracocha"
+          "en": "The Blair Witch Project",
+          "et": "The Blair Witch Project"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Blair Witch Project"
+          ],
+          "et": [
+            "Blairi nõia projekt"
+          ]
         },
         "explanation": {
-          "en": "Viracocha appears in Inca accounts as a remote creator who travels and teaches.",
-          "et": "Viracocha esineb inkade pärimuses kauge loojana, kes rändab ja õpetab."
+          "en": "The Blair Witch Project follows three students making a documentary, while its Sundance marketing listed the actors as missing or deceased.",
+          "et": "„The Blair Witch Project“ jälgib kolme dokumentaalfilmi tegevat tudengit ning Sundance’i turunduses märgiti näitlejad kadunuks või surnuks."
         },
         "source": {
-          "sourceId": "wikipedia:viracocha",
-          "title": "Viracocha",
-          "url": "https://en.wikipedia.org/wiki/Viracocha",
+          "sourceId": "wikipedia:The_Blair_Witch_Project",
+          "title": "The Blair Witch Project",
+          "url": "https://en.wikipedia.org/wiki/The_Blair_Witch_Project",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-082:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:pachamama",
+        "factKey": "mythology-hard:82:3:Piltdown_Man:relationship",
         "tier": 3,
-        "subjectKey": "deity:pachamama",
+        "subjectKey": "hoax:piltdown-man",
         "clue": {
-          "en": "Which Andean earth and fertility figure receives offerings for crops, herds, and well-being?",
-          "et": "Milline Andide maa ja viljakuse kuju saab ande saagi, kariloomade ja heaolu nimel?"
+          "en": "Which supposed early human, assembled from remains found in England, was exposed as a fraud in 1953?",
+          "et": "Milline Inglismaalt leitud säilmetest kokku pandud väidetav varajane inimene paljastati 1953. aastal pettusena?"
         },
         "response": {
-          "en": "Pachamama",
-          "et": "Pachamama"
+          "en": "Piltdown Man",
+          "et": "Piltdowni inimene"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Pachamama remains important in living Andean ritual as well as precolonial tradition.",
-          "et": "Pachamama on tähtis nii elavas Andide rituaalis kui koloniaalieelses pärimuses."
+          "en": "Piltdown Man was presented as an early human from English remains until tests exposed the fraud in 1953.",
+          "et": "Piltdowni inimest esitleti Inglismaalt leitud varajase inimesena, kuni katsed paljastasid 1953. aastal pettuse."
         },
         "source": {
-          "sourceId": "wikipedia:pachamama",
-          "title": "Pachamama",
-          "url": "https://en.wikipedia.org/wiki/Pachamama",
+          "sourceId": "simple-wikipedia:Piltdown_Man",
+          "title": "Piltdown Man",
+          "url": "https://simple.wikipedia.org/wiki/Piltdown_Man",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-082:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:place:huaca",
+        "factKey": "mythology-hard:82:4:Cottingley_Fairies:relationship",
         "tier": 4,
-        "subjectKey": "place:huaca",
+        "subjectKey": "hoax:cottingley-fairies",
         "clue": {
-          "en": "What Quechua-derived term names a sacred place or object inhabited by extraordinary power?",
-          "et": "Milline ketšua päritolu mõiste nimetab erakordse väega püha paika või eset?"
+          "en": "Which five famous photographs by two Yorkshire girls were later admitted to use paper cut-out figures?",
+          "et": "Millised viis kuulsat fotot, mille tegid kaks Yorkshire’i tüdrukut, osutusid hiljem paberist väljalõigete abil lavastatuks?"
         },
         "response": {
-          "en": "huaca",
-          "et": "huaca"
-        },
-        "acceptedVariants": {
-          "en": [
-            "wakʼa"
-          ],
-          "et": [
-            "waka"
-          ]
-        },
-        "explanation": {
-          "en": "A huaca might be a spring, rock, mountain, building, mummy, or other revered focus.",
-          "et": "Huaca võis olla allikas, kivi, mägi, hoone, muumia või muu austatud kese."
-        },
-        "source": {
-          "sourceId": "wikipedia:huaca",
-          "title": "Huaca",
-          "url": "https://en.wikipedia.org/wiki/Huaca",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-082:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:inti-raymi",
-        "tier": 5,
-        "subjectKey": "festival:inti-raymi",
-        "clue": {
-          "en": "Which Inca festival of the winter solstice honours the sun and is celebrated in modern Cusco?",
-          "et": "Milline inkade talvise pööripäeva püha austab päikest ning seda peetakse tänapäeva Cuscos?"
-        },
-        "response": {
-          "en": "Inti Raymi",
-          "et": "Inti Raymi"
+          "en": "Cottingley Fairies",
+          "et": "Cottingley haldjad"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Modern Inti Raymi is a twentieth-century revival drawing on colonial descriptions of the Inca ceremony.",
-          "et": "Tänapäeva Inti Raymi on 20. sajandi taaselustus, mis tugineb inkade tseremoonia koloniaalsetele kirjeldustele."
+          "en": "The Cottingley Fairies appeared in five photographs made by two girls, who later admitted using cut-outs.",
+          "et": "Cottingley haldjad ilmusid kahe tüdruku tehtud viiel fotol; hiljem tunnistasid nad väljalõigete kasutamist."
         },
         "source": {
-          "sourceId": "wikipedia:inti_raymi",
-          "title": "Inti Raymi",
-          "url": "https://en.wikipedia.org/wiki/Inti_Raymi",
+          "sourceId": "wikipedia:Cottingley_Fairies",
+          "title": "Cottingley Fairies",
+          "url": "https://en.wikipedia.org/wiki/Cottingley_Fairies",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-082:question:5",
+        "factKey": "mythology-hard:82:5:Donation_of_Constantine:relationship",
+        "tier": 5,
+        "subjectKey": "document:donation-of-constantine",
+        "clue": {
+          "en": "Which forged imperial decree claimed to grant sweeping authority to the pope until Lorenzo Valla dismantled it linguistically?",
+          "et": "Milline võltsitud keisri määrus väitis, et annab paavstile ulatusliku võimu, kuni Lorenzo Valla selle keeleliselt ümber lükkas?"
+        },
+        "response": {
+          "en": "Donation of Constantine",
+          "et": "Constantinuse kingitus"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "The Donation of Constantine purported to grant papal authority, but Lorenzo Valla demonstrated that it was a forgery.",
+          "et": "Constantinuse kingitus väitis, et annab paavstile võimu, kuid Lorenzo Valla tõestas selle võltsinguks."
+        },
+        "source": {
+          "sourceId": "wikipedia:Donation_of_Constantine",
+          "title": "Donation of Constantine",
+          "url": "https://en.wikipedia.org/wiki/Donation_of_Constantine",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40260,161 +40291,183 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-083",
     "name": {
-      "en": "Kinship and Sacred Force across Polynesia",
-      "et": "Sugulus ja püha vägi Polüneesias"
+      "en": "Thinkers in Pairs",
+      "et": "Mõtlejad paaridena"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-083:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:force:mana",
+        "factKey": "mythology-hard:083:1:freud-jung-correspondence-libido-break",
         "tier": 1,
-        "subjectKey": "force:mana",
+        "subjectKey": "thinker-pair:freud-jung",
         "clue": {
-          "en": "What term denotes efficacious spiritual power or authority in many Polynesian cultures?",
-          "et": "Milline mõiste tähistab paljudes Polüneesia kultuurides tõhusat vaimset väge või autoriteeti?"
+          "en": "Which two early psychoanalysts exchanged 360 letters from 1906 to 1914 before breaking over ideas including libido theory?",
+          "et": "Millised kaks varast psühhoanalüütikut vahetasid aastatel 1906–1914 360 kirja, enne kui nende teed muu hulgas libiidoteooria tõttu lahku läksid?"
         },
         "response": {
-          "en": "mana",
-          "et": "mana"
+          "en": "Sigmund Freud and Carl Jung",
+          "et": "Sigmund Freud ja Carl Jung"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Freud and Jung",
+            "Jung and Freud"
+          ],
+          "et": [
+            "Freud ja Jung",
+            "Jung ja Freud"
+          ]
         },
         "explanation": {
-          "en": "Mana may attach to persons, offices, objects, or places and is shaped by social relationships.",
-          "et": "Mana võib kuuluda inimesele, ametile, esemele või paigale ning seda kujundavad sotsiaalsed suhted."
+          "en": "Freud and Jung exchanged 360 letters documenting early psychoanalysis before their relationship ended amid theoretical differences.",
+          "et": "Freud ja Jung vahetasid 360 varast psühhoanalüüsi dokumenteerivat kirja, enne kui teoreetilised erimeelsused nende suhte lõpetasid."
         },
         "source": {
-          "sourceId": "wikipedia:mana_(oceanian_cultures)",
-          "title": "Mana (Oceanian cultures)",
-          "url": "https://en.wikipedia.org/wiki/Mana_(Oceanian_cultures)",
+          "sourceId": "wikipedia:the_freud_jung_letters",
+          "title": "The Freud/Jung Letters",
+          "url": "https://en.wikipedia.org/wiki/The_Freud/Jung_Letters",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-083:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:restriction:tapu",
+        "factKey": "mythology-hard:083:2:newton-leibniz-calculus-priority",
         "tier": 2,
-        "subjectKey": "restriction:tapu",
+        "subjectKey": "thinker-pair:newton-leibniz",
         "clue": {
-          "en": "Which Polynesian concept marks a person, place, or object as sacred and restricted?",
-          "et": "Milline Polüneesia mõiste märgib inimese, paiga või eseme pühaks ja piiratud kasutusega?"
+          "en": "Which two mathematicians independently developed calculus, then fought a priority dispute judged by a Royal Society report written by one of them?",
+          "et": "Millised kaks matemaatikut lõid teineteisest sõltumatult diferentsiaal- ja integraalarvutuse ning sattusid siis prioriteedivaidlusse, mida hindas ühe vaidlusosalise kirjutatud Kuningliku Seltsi raport?"
         },
         "response": {
-          "en": "tapu",
-          "et": "tapu"
+          "en": "Isaac Newton and Gottfried Wilhelm Leibniz",
+          "et": "Isaac Newton ja Gottfried Wilhelm Leibniz"
         },
         "acceptedVariants": {
           "en": [
-            "kapu"
+            "Newton and Leibniz",
+            "Leibniz and Newton"
           ],
           "et": [
-            "kapu"
+            "Newton ja Leibniz",
+            "Leibniz ja Newton"
           ]
         },
         "explanation": {
-          "en": "The English word taboo derives from forms of the Polynesian term tapu.",
-          "et": "Inglise sõna taboo pärineb Polüneesia mõiste tapu vormidest."
+          "en": "Newton and Leibniz developed calculus independently; Newton, then Royal Society president, wrote the committee report favouring his own claim.",
+          "et": "Newton ja Leibniz arendasid arvutuse välja sõltumatult; Kuningliku Seltsi presidendina kirjutas Newton tema enda nõuet soosiva komisjoniraporti."
         },
         "source": {
-          "sourceId": "wikipedia:tapu_(polynesian_culture)",
-          "title": "Tapu (Polynesian culture)",
-          "url": "https://en.wikipedia.org/wiki/Tapu_(Polynesian_culture)",
+          "sourceId": "wikipedia:leibniz-newton-calculus-controversy",
+          "title": "Leibniz–Newton calculus controversy",
+          "url": "https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-083:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:place:marae",
+        "factKey": "mythology-hard:083:3:einstein-bohr-quantum-debates",
         "tier": 3,
-        "subjectKey": "place:marae",
+        "subjectKey": "thinker-pair:einstein-bohr",
         "clue": {
-          "en": "What communal ceremonial ground anchors meetings, welcomes, and ritual in many Polynesian societies?",
-          "et": "Milline kogukondlik tseremooniapaik on paljudes Polüneesia ühiskondades koosolekute, tervituste ja rituaali kese?"
+          "en": "Which two physicists argued at the 1927 Solvay Conference over quantum mechanics, the Copenhagen interpretation and complementarity?",
+          "et": "Millised kaks füüsikut vaidlesid 1927. aasta Solvay konverentsil kvantmehaanika, Kopenhaageni interpretatsiooni ja komplementaarsuse üle?"
         },
         "response": {
-          "en": "marae",
-          "et": "marae"
+          "en": "Albert Einstein and Niels Bohr",
+          "et": "Albert Einstein ja Niels Bohr"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Einstein and Bohr",
+            "Bohr and Einstein"
+          ],
+          "et": [
+            "Einstein ja Bohr",
+            "Bohr ja Einstein"
+          ]
         },
         "explanation": {
-          "en": "A marae links a living community with genealogy, ancestors, and land.",
-          "et": "Marae seob elava kogukonna sugupuu, esivanemate ja maaga."
+          "en": "Einstein and Bohr publicly debated whether the Copenhagen interpretation and complementarity adequately explained nature.",
+          "et": "Einstein ja Bohr vaidlesid avalikult selle üle, kas Kopenhaageni interpretatsioon ja komplementaarsus selgitavad loodust piisavalt."
         },
         "source": {
-          "sourceId": "wikipedia:marae",
-          "title": "Marae",
-          "url": "https://en.wikipedia.org/wiki/Marae",
+          "sourceId": "wikipedia:bohr-einstein-debates",
+          "title": "Bohr–Einstein debates",
+          "url": "https://en.wikipedia.org/wiki/Bohr%E2%80%93Einstein_debates",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-083:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:hero:maui",
+        "factKey": "mythology-hard:083:4:chomsky-foucault-human-nature-debate",
         "tier": 4,
-        "subjectKey": "hero:maui",
+        "subjectKey": "thinker-pair:chomsky-foucault",
         "clue": {
-          "en": "Which culture hero fishes up islands and slows the sun in several Polynesian traditions?",
-          "et": "Milline kultuurikangelane õngitseb mitmes Polüneesia pärimuses saari merest ning aeglustab päikest?"
+          "en": "Which linguist and French philosopher opposed each other in a 1971 Eindhoven debate on innate human nature and social structures?",
+          "et": "Millised keeleteadlane ja Prantsuse filosoof vastandusid 1971. aasta Eindhoveni väitluses kaasasündinud inimloomuse ja sotsiaalsete struktuuride küsimuses?"
         },
         "response": {
-          "en": "Māui",
-          "et": "Māui"
+          "en": "Noam Chomsky and Michel Foucault",
+          "et": "Noam Chomsky ja Michel Foucault"
         },
         "acceptedVariants": {
           "en": [
-            "Maui"
+            "Chomsky and Foucault",
+            "Foucault and Chomsky"
           ],
           "et": [
-            "Maui"
+            "Chomsky ja Foucault",
+            "Foucault ja Chomsky"
           ]
         },
         "explanation": {
-          "en": "Stories of Māui differ by island group while retaining a clever, boundary-crossing hero.",
-          "et": "Māui lood erinevad saarestikuti, kuid säilitavad nutika piire ületava kangelase."
+          "en": "Chomsky argued from innate structures and universal grammar, while Foucault stressed external and social structures.",
+          "et": "Chomsky lähtus kaasasündinud struktuuridest ja universaalgrammatikast, Foucault aga rõhutas väliseid ja ühiskondlikke struktuure."
         },
         "source": {
-          "sourceId": "wikipedia:m%c4%81ui_(mythology)",
-          "title": "Māui (mythology)",
-          "url": "https://en.wikipedia.org/wiki/M%C4%81ui_(mythology)",
+          "sourceId": "wikipedia:chomsky-foucault-debate",
+          "title": "Chomsky–Foucault debate",
+          "url": "https://en.wikipedia.org/wiki/Chomsky%E2%80%93Foucault_debate",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-083:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:homeland:hawaiki",
+        "factKey": "mythology-hard:083:5:sartre-russell-vietnam-tribunal",
         "tier": 5,
-        "subjectKey": "homeland:hawaiki",
+        "subjectKey": "thinker-pair:sartre-russell",
         "clue": {
-          "en": "What ancestral homeland do Māori traditions name as the origin and returning place of the people?",
-          "et": "Millist esivanemate kodumaad nimetavad maoori pärimused rahva lähte- ja tagasipöördumispaigaks?"
+          "en": "Which French existentialist and British Nobel laureate led a private 1966 tribunal on American intervention in Vietnam?",
+          "et": "Millised Prantsuse eksistentsialist ja Briti Nobeli kirjanduspreemia laureaat juhtisid 1966. aastal sõltumatut tribunali Ameerika sekkumise üle Vietnamis?"
         },
         "response": {
-          "en": "Hawaiki",
-          "et": "Hawaiki"
+          "en": "Jean-Paul Sartre and Bertrand Russell",
+          "et": "Jean-Paul Sartre ja Bertrand Russell"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Sartre and Russell",
+            "Russell and Sartre"
+          ],
+          "et": [
+            "Sartre ja Russell",
+            "Russell ja Sartre"
+          ]
         },
         "explanation": {
-          "en": "Hawaiki is a mythic and genealogical homeland rather than one securely identified modern island.",
-          "et": "Hawaiki on müütiline ja sugupuuline kodumaa, mitte kindlalt tuvastatud tänapäeva saar."
+          "en": "Bertrand Russell organised and Jean-Paul Sartre hosted the 1966 people’s tribunal on American policy and military intervention in Vietnam.",
+          "et": "Bertrand Russell korraldas ja Jean-Paul Sartre juhtis 1966. aasta rahvatribunali, mis käsitles Ameerika poliitikat ja sõjalist sekkumist Vietnamis."
         },
         "source": {
-          "sourceId": "wikipedia:hawaiki",
-          "title": "Hawaiki",
-          "url": "https://en.wikipedia.org/wiki/Hawaiki",
+          "sourceId": "wikipedia:russell-tribunal",
+          "title": "Russell Tribunal",
+          "url": "https://en.wikipedia.org/wiki/Russell_Tribunal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40422,169 +40475,165 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-084",
     "name": {
-      "en": "Divination and Divine Agency among the Yoruba",
-      "et": "Ennustamine ja jumalik vägi joruba pärimuses"
+      "en": "Myth in Games and Screen Stories",
+      "et": "Müüdid mängudes ja ekraanilugudes"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-084:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:beings:orisha",
+        "factKey": "mythology-hard:084:1:god-of-war-kratos-two-mythologies",
         "tier": 1,
-        "subjectKey": "beings:orisha",
+        "subjectKey": "screen-work:god-of-war",
         "clue": {
-          "en": "What class of divine powers mediates between humanity and the supreme being in Yoruba religion?",
-          "et": "Milline jumalike jõudude rühm vahendab joruba usundis inimkonda ja ülimat olendit?"
+          "en": "Which Santa Monica Studio game franchise follows Kratos and shifts its mythology from Greek to Norse?",
+          "et": "Milline Santa Monica Studio mängusari jälgib Kratost ning liigub Kreeka mütoloogiast Põhjala mütoloogiasse?"
         },
         "response": {
-          "en": "orisha",
-          "et": "oriša"
-        },
-        "acceptedVariants": {
-          "en": [
-            "orisa"
-          ],
-          "et": [
-            "orisha"
-          ]
-        },
-        "explanation": {
-          "en": "Orishas have distinct domains, praise names, shrines, and bodies of myth.",
-          "et": "Orišadel on oma valdkonnad, ülistusnimed, pühamud ja müüdikogumid."
-        },
-        "source": {
-          "sourceId": "wikipedia:orisha",
-          "title": "Orisha",
-          "url": "https://en.wikipedia.org/wiki/Orisha",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-084:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:system:ifa",
-        "tier": 2,
-        "subjectKey": "system:ifa",
-        "clue": {
-          "en": "Which Yoruba divination system interprets patterned signs through a large corpus of verses?",
-          "et": "Milline joruba ennustussüsteem tõlgendab mustrilisi märke suure värsikorpuse abil?"
-        },
-        "response": {
-          "en": "Ifá",
-          "et": "Ifá"
-        },
-        "acceptedVariants": {
-          "en": [
-            "Ifa"
-          ],
-          "et": [
-            "Ifa"
-          ]
-        },
-        "explanation": {
-          "en": "An initiated diviner called a babalawo relates an Ifá configuration to appropriate verses and counsel.",
-          "et": "Babalawo’ks nimetatud pühitsetud ennustaja seob Ifá märgi sobivate värsside ja nõuannetega."
-        },
-        "source": {
-          "sourceId": "wikipedia:if%c3%a1",
-          "title": "Ifá",
-          "url": "https://en.wikipedia.org/wiki/If%C3%A1",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-084:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:ogun",
-        "tier": 3,
-        "subjectKey": "deity:ogun",
-        "clue": {
-          "en": "Which orisha governs iron, metalworking, and paths opened through the wilderness?",
-          "et": "Milline oriša valitseb rauda, metallitööd ja läbi metsiku maa rajatud teid?"
-        },
-        "response": {
-          "en": "Ogun",
-          "et": "Ogun"
+          "en": "God of War",
+          "et": "God of War"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Ogun’s iron tools enable both cultivation and warfare, giving the deity an ambivalent power.",
-          "et": "Oguni raudriistad võimaldavad nii maaharimist kui sõda, andes jumalusele kahetise väe."
+          "en": "God of War is Santa Monica Studio’s action-adventure franchise about Kratos, shifting from Greek to Norse mythology.",
+          "et": "„God of War“ on Santa Monica Studio seiklusmärulisari Kratosest, mis liigub Kreeka mütoloogiast Põhjala mütoloogiasse."
         },
         "source": {
-          "sourceId": "wikipedia:ogun",
-          "title": "Ogun",
-          "url": "https://en.wikipedia.org/wiki/Ogun",
+          "sourceId": "wikipedia:god_of_war_franchise",
+          "title": "God of War (franchise)",
+          "url": "https://en.wikipedia.org/wiki/God_of_War_(franchise)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-084:question:2",
+        "factKey": "mythology-hard:084:2:percy-jackson-poseidon-tv",
+        "tier": 2,
+        "subjectKey": "screen-work:percy-jackson-olympians",
+        "clue": {
+          "en": "Which Rick Riordan television adaptation follows Poseidon’s demigod son into a world of Greek gods and Camp Half-Blood?",
+          "et": "Milline Rick Riordani teleekraniseering jälgib Poseidoni pooljumalast poega Kreeka jumalate ja Camp Half-Bloodi maailma?"
+        },
+        "response": {
+          "en": "Percy Jackson and the Olympians",
+          "et": "Percy Jackson ja olümplased"
+        },
+        "acceptedVariants": {
+          "en": [
+            "Percy Jackson & the Olympians"
+          ],
+          "et": [
+            "Percy Jackson & the Olympians"
+          ]
+        },
+        "explanation": {
+          "en": "The series adapts Rick Riordan’s novels about Percy, a demigod son of Poseidon who reaches Camp Half-Blood.",
+          "et": "Sari ekraniseerib Rick Riordani romaane Percyst, Poseidoni pooljumalast pojast, kes jõuab Camp Half-Bloodi."
+        },
+        "source": {
+          "sourceId": "wikipedia:percy_jackson_and_the_olympians_tv",
+          "title": "Percy Jackson and the Olympians (TV series)",
+          "url": "https://en.wikipedia.org/wiki/Percy_Jackson_and_the_Olympians_(TV_series)",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-084:question:3",
+        "factKey": "mythology-hard:084:3:age-of-mythology-three-pantheons",
+        "tier": 3,
+        "subjectKey": "game:age-of-mythology",
+        "clue": {
+          "en": "Which Ensemble Studios strategy game spun off from Age of Empires to use Greek, Egyptian and Norse legends?",
+          "et": "Milline Ensemble Studiosi strateegiamäng kasvas välja sarjast „Age of Empires“ ning kasutab Kreeka, Egiptuse ja Põhjala legende?"
+        },
+        "response": {
+          "en": "Age of Mythology",
+          "et": "Age of Mythology"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Age of Mythology is an Ensemble Studios real-time strategy spin-off inspired by Greek, Egyptian and Norse mythology.",
+          "et": "„Age of Mythology“ on Ensemble Studiosi reaalajastrateegia kõrvalharu, mis ammutab ainest Kreeka, Egiptuse ja Põhjala mütoloogiast."
+        },
+        "source": {
+          "sourceId": "wikipedia:age_of_mythology",
+          "title": "Age of Mythology",
+          "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-084:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:shango",
+        "factKey": "mythology-hard:084:4:odyssey-peloponnesian-kassandra-alexios",
         "tier": 4,
-        "subjectKey": "deity:shango",
+        "subjectKey": "game:assassins-creed-odyssey",
         "clue": {
-          "en": "Which deified Yoruba king commands thunder and lightning?",
-          "et": "Milline jumalikustatud joruba kuningas valitseb kõue ja välku?"
+          "en": "Which 2018 Ubisoft RPG lets you choose Kassandra or Alexios during a mythologised Peloponnesian War?",
+          "et": "Milline Ubisofti 2018. aasta rollimäng laseb mütologiseeritud Peloponnesose sõjas valida Kassandra või Alexiose?"
         },
         "response": {
-          "en": "Shango",
-          "et": "Šango"
+          "en": "Assassin's Creed Odyssey",
+          "et": "Assassin's Creed Odyssey"
         },
         "acceptedVariants": {
           "en": [
-            "Ṣàngó"
+            "Assassin’s Creed Odyssey"
           ],
           "et": [
-            "Shango"
+            "Assassin’s Creed Odyssey"
           ]
         },
         "explanation": {
-          "en": "Shango is associated with the double-headed axe and royal justice.",
-          "et": "Šangot seostatakse kahe teraga kirve ja kuningliku õiglusega."
+          "en": "The game casts Kassandra or Alexios as a Greek mercenary descended from the Spartan king Leonidas.",
+          "et": "Mängu peategelane on Kassandra või Alexios, Kreeka palgasõdur ja Sparta kuninga Leonidase järeltulija."
         },
         "source": {
-          "sourceId": "wikipedia:shango",
-          "title": "Shango",
-          "url": "https://en.wikipedia.org/wiki/Shango",
+          "sourceId": "wikipedia:assassins_creed_odyssey",
+          "title": "Assassin's Creed Odyssey",
+          "url": "https://en.wikipedia.org/wiki/Assassin%27s_Creed_Odyssey",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-084:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:deity:oshun",
+        "factKey": "mythology-hard:084:5:black-myth-journey-wukong",
         "tier": 5,
-        "subjectKey": "deity:oshun",
+        "subjectKey": "game:black-myth-wukong",
         "clue": {
-          "en": "Which river orisha presides over fresh water, fertility, diplomacy, and beauty?",
-          "et": "Milline jõeoriša valitseb magevee, viljakuse, diplomaatia ja ilu üle?"
+          "en": "Which Game Science action RPG, inspired by Journey to the West, stars the monkey-like Destined One?",
+          "et": "Milline Game Science’i märulirollimäng on inspireeritud romaanist „Teekond läände“ ja seab kangelaseks ahvitaolise Destined One’i?"
         },
         "response": {
-          "en": "Oshun",
-          "et": "Ošun"
+          "en": "Black Myth: Wukong",
+          "et": "Black Myth: Wukong"
         },
         "acceptedVariants": {
           "en": [
-            "Ọ̀ṣun"
+            "Black Myth Wukong"
           ],
           "et": [
-            "Oshun"
+            "Black Myth Wukong"
           ]
         },
         "explanation": {
-          "en": "Oshun’s principal sacred river flows by Osogbo, where an important festival is held.",
-          "et": "Ošuni peamine püha jõgi voolab Osogbo juures, kus peetakse tähtsat festivali."
+          "en": "Game Science developed the action RPG, which is inspired by Journey to the West and stars the monkey-like Destined One.",
+          "et": "Game Science arendas märulirollimängu, mis on inspireeritud „Teekonnast läände“ ja mille kangelane on ahvitaoline Destined One."
         },
         "source": {
-          "sourceId": "wikipedia:oshun",
-          "title": "Oshun",
-          "url": "https://en.wikipedia.org/wiki/Oshun",
+          "sourceId": "wikipedia:black_myth_wukong",
+          "title": "Black Myth: Wukong",
+          "url": "https://en.wikipedia.org/wiki/Black_Myth:_Wukong",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40592,157 +40641,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-085",
     "name": {
-      "en": "Arguments That Reshaped Western Christianity",
-      "et": "Läänekristlust ümber kujundanud vaidlused"
+      "en": "Folklore on the Periodic Table",
+      "et": "Folkloor perioodilisustabelis"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-085:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:practice:indulgence",
+        "factKey": "mythology-hard:085:1:thorium-thor-etymology",
         "tier": 1,
-        "subjectKey": "practice:indulgence",
+        "subjectKey": "element:thorium",
         "clue": {
-          "en": "What church remission of temporal punishment became a flashpoint when linked to fundraising before the Reformation?",
-          "et": "Milline ajaliku karistuse kiriklik kustutus muutus reformatsiooni eel rahakogumisega seotuna teravaks vaidlusküsimuseks?"
+          "en": "Which radioactive element, atomic number 90, was named for the Norse thunder god and has been proposed as nuclear fuel?",
+          "et": "Milline radioaktiivne element järjekorranumbriga 90 sai nime Põhjala äikesejumala järgi ning seda on pakutud tuumakütuseks?"
         },
         "response": {
-          "en": "indulgence",
-          "et": "indulgents"
+          "en": "thorium",
+          "et": "toorium"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "An indulgence concerns punishment after guilt is forgiven; it is not permission to commit a future sin.",
-          "et": "Indulgents puudutab karistust pärast süü andestamist ega ole luba tulevikus pattu teha."
+          "en": "Thorium is element 90, named for Thor, and has been suggested as a uranium-replacement nuclear fuel.",
+          "et": "Toorium on element 90, mis sai nime Thori järgi ning mida on pakutud uraani asendavaks tuumakütuseks."
         },
         "source": {
-          "sourceId": "wikipedia:indulgence",
-          "title": "Indulgence",
-          "url": "https://en.wikipedia.org/wiki/Indulgence",
+          "sourceId": "wikipedia:thorium",
+          "title": "Thorium",
+          "url": "https://en.wikipedia.org/wiki/Thorium",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-085:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:text:ninety-five-theses",
+        "factKey": "mythology-hard:085:2:cobalt-kobold-etymology",
         "tier": 2,
-        "subjectKey": "text:ninety-five-theses",
+        "subjectKey": "element:cobalt",
         "clue": {
-          "en": "Which 1517 propositions attributed to Martin Luther challenged the preaching of indulgences?",
-          "et": "Millised Martin Lutherile omistatud 1517. aasta väited vaidlustasid indulgentside kuulutamise?"
+          "en": "Which element, atomic number 27, took its name from miners’ “goblin ore”, gives compounds a deep blue colour and is used in alloys and batteries?",
+          "et": "Milline element järjekorranumbriga 27 sai nime kaevurite „koboldimaagist“, annab ühenditele sügavsinise värvi ning on tähtis sulamites ja akudes?"
         },
         "response": {
-          "en": "Ninety-five Theses",
-          "et": "95 teesi"
+          "en": "cobalt",
+          "et": "koobalt"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The Ninety-five Theses began as propositions for academic disputation and quickly circulated in print.",
-          "et": "95 teesi algasid akadeemilise väitluse väidetena ning levisid kiiresti trükis."
+          "en": "Cobalt is element 27; miners linked its ore name to a goblin, while the metal is used in blue compounds, alloys and batteries.",
+          "et": "Koobalt on element 27; kaevurid seostasid selle maagi nime koboldiga ning metalli kasutatakse sinistes ühendites, sulamites ja akudes."
         },
         "source": {
-          "sourceId": "wikipedia:ninety-five_theses",
-          "title": "Ninety-five Theses",
-          "url": "https://en.wikipedia.org/wiki/Ninety-five_Theses",
+          "sourceId": "wikipedia:cobalt",
+          "title": "Cobalt",
+          "url": "https://en.wikipedia.org/wiki/Cobalt",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-085:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:principle:sola-scriptura",
+        "factKey": "mythology-hard:085:4:nickel-kupfernickel-etymology",
         "tier": 3,
-        "subjectKey": "principle:sola-scriptura",
+        "subjectKey": "element:nickel",
         "clue": {
-          "en": "Which Reformation principle treats scripture as the only infallible rule of Christian faith?",
-          "et": "Milline reformatsiooni põhimõte peab pühakirja ainsaks eksimatuks kristliku usu reegliks?"
+          "en": "Which element, atomic number 28, emerged from a deceptive German goblin-ore name and is widely used in corrosion-resistant alloys?",
+          "et": "Milline element järjekorranumbriga 28 sai nime petliku Saksa koboldimaagi järgi ning on levinud korrosioonikindlates sulamites?"
         },
         "response": {
-          "en": "sola scriptura",
-          "et": "sola scriptura"
+          "en": "nickel",
+          "et": "nikkel"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sola scriptura does not necessarily reject all tradition, but subjects tradition to scriptural authority.",
-          "et": "Sola scriptura ei lükka tingimata tagasi kogu traditsiooni, vaid allutab selle pühakirja autoriteedile."
+          "en": "Nickel is element 28; its name recalls an ore that yielded no copper, and the metal is used chiefly in alloys and protective plating.",
+          "et": "Nikkel on element 28; selle nimi meenutab vaske mitte andnud maaki ning metalli kasutatakse peamiselt sulamites ja kaitsvates pinnetes."
         },
         "source": {
-          "sourceId": "wikipedia:sola_scriptura",
-          "title": "Sola scriptura",
-          "url": "https://en.wikipedia.org/wiki/Sola_scriptura",
+          "sourceId": "wikipedia:nickel",
+          "title": "Nickel",
+          "url": "https://en.wikipedia.org/wiki/Nickel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-085:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:confession:augsburg",
+        "factKey": "mythology-hard:085:3:selenium-selene-etymology",
         "tier": 4,
-        "subjectKey": "confession:augsburg",
+        "subjectKey": "element:selenium",
         "clue": {
-          "en": "Which 1530 statement presented Lutheran belief to Emperor Charles V?",
-          "et": "Milline 1530. aasta dokument esitas keiser Karl V-le luterliku usu põhijooned?"
+          "en": "Which element, atomic number 34, was named for the moon goddess Selene and serves as a human trace nutrient?",
+          "et": "Milline element järjekorranumbriga 34 sai nime kuujumalanna Selene järgi ning on inimesele vajalik mikrotoitaine?"
         },
         "response": {
-          "en": "Augsburg Confession",
-          "et": "Augsburgi usutunnistus"
+          "en": "selenium",
+          "et": "seleen"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Philip Melanchthon composed the Augsburg Confession as a conciliatory account of reform teaching.",
-          "et": "Philipp Melanchthon koostas Augsburgi usutunnistuse lepitava reformiõpetuse ülevaatena."
+          "en": "Selenium is element 34, named for Selene, and acts in humans as a trace nutrient and antioxidant-enzyme cofactor.",
+          "et": "Seleen on element 34, mis sai nime Selene järgi ning toimib inimesel mikrotoitaine ja antioksüdantsete ensüümide kofaktorina."
         },
         "source": {
-          "sourceId": "wikipedia:augsburg_confession",
-          "title": "Augsburg Confession",
-          "url": "https://en.wikipedia.org/wiki/Augsburg_Confession",
+          "sourceId": "wikipedia:selenium",
+          "title": "Selenium",
+          "url": "https://en.wikipedia.org/wiki/Selenium",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-085:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:movement:counter-reformation",
+        "factKey": "mythology-hard:085:5:vanadium-vanadis-etymology",
         "tier": 5,
-        "subjectKey": "movement:counter-reformation",
+        "subjectKey": "element:vanadium",
         "clue": {
-          "en": "What movement renewed Catholic institutions and doctrine in response to internal needs and Protestant reform?",
-          "et": "Milline liikumine uuendas katoliku institutsioone ja õpetust vastusena sisevajadustele ning protestantlikule reformile?"
+          "en": "Which element, atomic number 23, was named from Freyja’s name Vanadis and strengthens steel in small additions?",
+          "et": "Milline element järjekorranumbriga 23 sai nime Freyja nime Vanadis järgi ning tugevdab väikestes kogustes terast?"
         },
         "response": {
-          "en": "Catholic Reformation",
-          "et": "katoliku reformatsioon"
+          "en": "vanadium",
+          "et": "vanaadium"
         },
         "acceptedVariants": {
-          "en": [
-            "Counter-Reformation"
-          ],
-          "et": [
-            "vastureformatsioon"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "The Council of Trent, new religious orders, and seminary reform were central to the Catholic Reformation.",
-          "et": "Trento kirikukogu, uued ordud ja seminarireform olid katoliku reformatsiooni keskmes."
+          "en": "Vanadium is element 23; Sefström named it for Vanadis, a name of Freyja, and small additions strengthen steel alloys.",
+          "et": "Vanaadium on element 23; Sefström nimetas selle Freyja nime Vanadis järgi ning väikesed lisandid tugevdavad terasesulameid."
         },
         "source": {
-          "sourceId": "wikipedia:counter-reformation",
-          "title": "Counter-Reformation",
-          "url": "https://en.wikipedia.org/wiki/Counter-Reformation",
+          "sourceId": "wikipedia:vanadium",
+          "title": "Vanadium",
+          "url": "https://en.wikipedia.org/wiki/Vanadium",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40750,153 +40795,164 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-086",
     "name": {
-      "en": "Turning Points of the Jewish Year",
-      "et": "Juudi aasta pöördepunktid"
+      "en": "Mythic Names in Space",
+      "et": "Müütilised nimed kosmoses"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-086:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:prayer:selichot",
+        "factKey": "mythology-hard:086:1:artemis-one-moon-namesake",
         "tier": 1,
-        "subjectKey": "prayer:selichot",
+        "subjectKey": "space-mission:artemis-1",
         "clue": {
-          "en": "What penitential prayers are recited before and during the Jewish High Holy Day season?",
-          "et": "Milliseid patukahetsuspalveid loetakse enne juudi suuri pühi ja nende ajal?"
+          "en": "Which uncrewed SLS–Orion mission flew around the Moon in 2022 under the name of Apollo’s mythic twin sister?",
+          "et": "Milline meeskonnata SLS-i ja Orioni missioon lendas 2022. aastal ümber Kuu ning kannab Apolloni müütilise kaksikõe nime?"
         },
         "response": {
-          "en": "Selichot",
-          "et": "selihhot"
+          "en": "Artemis I",
+          "et": "Artemis I"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Artemis 1"
+          ],
+          "et": [
+            "Artemis 1"
+          ]
         },
         "explanation": {
-          "en": "Selichot ask forgiveness through biblical verses, divine attributes, and communal confession.",
-          "et": "Selihhot palub andestust piiblisalmide, Jumala omaduste ja ühise patutunnistuse kaudu."
+          "en": "Artemis I was the uncrewed 2022 lunar flight; NASA named the programme for the Greek Moon goddess and Apollo’s twin.",
+          "et": "Artemis I oli 2022. aasta meeskonnata Kuu-lend; NASA nimetas programmi Kreeka kuujumalanna ja Apolloni kaksikõe järgi."
         },
         "source": {
-          "sourceId": "wikipedia:selichot",
-          "title": "Selichot",
-          "url": "https://en.wikipedia.org/wiki/Selichot",
+          "sourceId": "wikipedia:artemis-program",
+          "title": "Artemis program",
+          "url": "https://en.wikipedia.org/wiki/Artemis_program",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-086:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:prayer:kol-nidre",
+        "factKey": "mythology-hard:086:2:juno-jupiter-cloud-namesake",
         "tier": 2,
-        "subjectKey": "prayer:kol-nidre",
+        "subjectKey": "space-mission:juno",
         "clue": {
-          "en": "Which declaration concerning vows opens the evening service of Yom Kippur?",
-          "et": "Milline tõotusi puudutav deklaratsioon avab jom kippuri õhtuse jumalateenistuse?"
+          "en": "Which NASA spacecraft entered polar orbit around Jupiter in 2016, named for the Roman goddess who saw through his concealing clouds?",
+          "et": "Milline NASA kosmosesond jõudis 2016. aastal Jupiteri polaarorbiidile ja sai nime Rooma jumalanna järgi, kes nägi läbi tema varjavatest pilvedest?"
         },
         "response": {
-          "en": "Kol Nidre",
-          "et": "Kol Nidre"
+          "en": "Juno",
+          "et": "Juno"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Kol Nidre is chanted before sunset and has a distinctive place in Ashkenazi liturgy.",
-          "et": "Kol Nidre lauldakse enne päikeseloojangut ning sellel on aškenazi liturgias eriline koht."
+          "en": "Juno entered Jupiter’s polar orbit in 2016, and its name recalls the goddess seeing through Jupiter’s clouds.",
+          "et": "Juno jõudis 2016. aastal Jupiteri polaarorbiidile ning nimi meenutab jumalannat, kes nägi läbi Jupiteri pilvedest."
         },
         "source": {
-          "sourceId": "wikipedia:kol_nidre",
-          "title": "Kol Nidre",
-          "url": "https://en.wikipedia.org/wiki/Kol_Nidre",
+          "sourceId": "wikipedia:juno_spacecraft",
+          "title": "Juno (spacecraft)",
+          "url": "https://en.wikipedia.org/wiki/Juno_(spacecraft)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-086:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:day:hoshana-rabbah",
+        "factKey": "mythology-hard:086:3:change-four-farside-goddess",
         "tier": 3,
-        "subjectKey": "day:hoshana-rabbah",
+        "subjectKey": "space-mission:change-4",
         "clue": {
-          "en": "Which seventh day of Sukkot features repeated processions and willow branches?",
-          "et": "Millisel sukkoti seitsmendal päeval toimuvad korduvad protsessioonid ning kasutatakse pajuoksi?"
+          "en": "Which Chinese mission paired a lander with the Yutu-2 rover for the first soft landing on the Moon’s far side?",
+          "et": "Milline Hiina missioon ühendas maanduri kulguriga Yutu-2 ning tegi esimese pehme maandumise Kuu tagaküljel?"
         },
         "response": {
-          "en": "Hoshana Rabbah",
-          "et": "Hošana Rabba"
+          "en": "Chang'e 4",
+          "et": "Chang'e 4"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Hoshana Rabbah brings the festival’s supplicatory prayers to a climax.",
-          "et": "Hošana Rabba viib püha anumispalved haripunkti."
+          "en": "Chang’e 4 and Yutu-2 made the first far-side lunar soft landing in 2019; the mission is named for a Chinese Moon goddess.",
+          "et": "Chang’e 4 ja Yutu-2 tegid 2019. aastal esimese pehme maandumise Kuu tagaküljel; missioon sai nime Hiina kuujumalanna järgi."
         },
         "source": {
-          "sourceId": "wikipedia:hoshana_rabbah",
-          "title": "Hoshana Rabbah",
-          "url": "https://en.wikipedia.org/wiki/Hoshana_Rabbah",
+          "sourceId": "wikipedia:change_4",
+          "title": "Chang'e 4",
+          "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-086:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:food:afikoman",
+        "factKey": "mythology-hard:086:5:phoenix-mars-reused-namesake",
         "tier": 4,
-        "subjectKey": "food:afikoman",
+        "subjectKey": "space-mission:phoenix-mars-lander",
         "clue": {
-          "en": "What piece of matzah is hidden or set aside and eaten at the end of the Passover seder?",
-          "et": "Milline matsatükk peidetakse või pannakse kõrvale ning süüakse seederõhtusöögi lõpus?"
+          "en": "Which NASA lander confirmed water ice near Mars’s north pole and was named for a reborn bird because it reused cancelled-mission hardware?",
+          "et": "Milline NASA maandur kinnitas Marsi põhjapolaaralal veejää olemasolu ning sai taaskasutatud riistvara tõttu nime taassündiva linnu järgi?"
         },
         "response": {
-          "en": "afikoman",
-          "et": "afikoman"
+          "en": "Phoenix Mars Lander",
+          "et": "marsimaandur Phoenix"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Phoenix lander",
+            "Phoenix"
+          ],
+          "et": [
+            "Marsi-maandur Phoenix",
+            "maandur Phoenix",
+            "Phoenix"
+          ]
         },
         "explanation": {
-          "en": "The afikoman serves as the seder’s final food and helps keep children engaged in the ritual.",
-          "et": "Afikoman on seederõhtu viimane toit ning aitab lapsi rituaalis kaasa hoida."
+          "en": "Phoenix landed in Mars’s northern polar region, confirmed water ice and reused hardware from a cancelled lander project.",
+          "et": "Phoenix maandus Marsi põhjapolaaralal, kinnitas veejää olemasolu ja kasutas tühistatud maanduriprojekti riistvara."
         },
         "source": {
-          "sourceId": "wikipedia:afikoman",
-          "title": "Afikoman",
-          "url": "https://en.wikipedia.org/wiki/Afikoman",
+          "sourceId": "wikipedia:phoenix_spacecraft",
+          "title": "Phoenix (spacecraft)",
+          "url": "https://en.wikipedia.org/wiki/Phoenix_(spacecraft)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-086:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:shavuot",
+        "factKey": "mythology-hard:086:4:hera-didymos-dart-namesake",
         "tier": 5,
-        "subjectKey": "festival:shavuot",
+        "subjectKey": "space-mission:hera",
         "clue": {
-          "en": "Which Feast of Weeks comes seven weeks after Passover and commemorates the giving of Torah?",
-          "et": "Milline nädalatepüha saabub seitse nädalat pärast paasapüha ning meenutab Toora andmist?"
+          "en": "Which ESA planetary-defence spacecraft follows up DART’s impact on Dimorphos in the Didymos system?",
+          "et": "Milline ESA planeedikaitse kosmosesond uurib DARTi kokkupõrke mõju Dimorphosele Didymose süsteemis?"
         },
         "response": {
-          "en": "Shavuot",
-          "et": "šavuot"
+          "en": "Hera",
+          "et": "Hera"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Shavuot also has agricultural roots as a festival of first fruits and grain harvest.",
-          "et": "Šavuotil on ka põllumajanduslik taust uudsevilja ja teraviljalõikuse pühana."
+          "en": "Hera is ESA’s first planetary-defence spacecraft, sent to examine DART’s impact on Dimorphos and named for the Greek goddess.",
+          "et": "Hera on ESA esimene planeedikaitse kosmosesond, mis uurib DARTi mõju Dimorphosele ja sai nime Kreeka jumalanna järgi."
         },
         "source": {
-          "sourceId": "wikipedia:shavuot",
-          "title": "Shavuot",
-          "url": "https://en.wikipedia.org/wiki/Shavuot",
+          "sourceId": "wikipedia:hera_space_mission",
+          "title": "Hera (space mission)",
+          "url": "https://en.wikipedia.org/wiki/Hera_(space_mission)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -40904,153 +40960,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-087",
     "name": {
-      "en": "From Waiting to Celebration in the Church Year",
-      "et": "Ootusest pühitsemiseni kirikuaastas"
+      "en": "People and Ideas Shaped in Confinement",
+      "et": "Vangistuses kujunenud inimesed ja ideed"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-087:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:day:gaudete-sunday",
+        "factKey": "mythology-hard:087:2:gandhi-prison-satyagraha",
         "tier": 1,
-        "subjectKey": "day:gaudete-sunday",
+        "subjectKey": "person:mahatma-gandhi-confinement",
         "clue": {
-          "en": "Which third Sunday of Advent lightens penitential observance and may use rose-coloured vestments?",
-          "et": "Milline advendiaja kolmas pühapäev leevendab patukahetsuslikku tooni ning võib kasutada roosat liturgilist värvi?"
+          "en": "Which Indian independence leader was imprisoned in South Africa and India and first adopted satyagraha as nonviolent protest in Johannesburg?",
+          "et": "Milline India iseseisvusliider oli vangis Lõuna-Aafrikas ja Indias ning võttis Johannesburgis esimest korda kasutusele satyagraha kui vägivallatu protesti?"
         },
         "response": {
-          "en": "Gaudete Sunday",
-          "et": "Gaudete pühapäev"
+          "en": "Mahatma Gandhi",
+          "et": "Mahatma Gandhi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gandhi"
+          ],
+          "et": [
+            "Gandhi"
+          ]
         },
         "explanation": {
-          "en": "Gaudete Sunday takes its name from the Latin opening “Rejoice” of the traditional introit.",
-          "et": "Gaudete pühapäev saab nime traditsioonilise alguslaulu ladinakeelsest sõnast „Rõõmustage“."
+          "en": "Mahatma Gandhi was imprisoned in South Africa and India, adopted satyagraha in Johannesburg and led India’s independence campaign.",
+          "et": "Mahatma Gandhi oli vangis Lõuna-Aafrikas ja Indias, võttis Johannesburgis omaks satyagraha ning juhtis India iseseisvuskampaaniat."
         },
         "source": {
-          "sourceId": "wikipedia:gaudete_sunday",
-          "title": "Gaudete Sunday",
-          "url": "https://en.wikipedia.org/wiki/Gaudete_Sunday",
+          "sourceId": "wikipedia:mahatma_gandhi",
+          "title": "Mahatma Gandhi",
+          "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-087:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:festival:candlemas",
+        "factKey": "mythology-hard:087:3:wilde-reading-gaol-works",
         "tier": 2,
-        "subjectKey": "festival:candlemas",
+        "subjectKey": "person:oscar-wilde-confinement",
         "clue": {
-          "en": "Which February feast commemorates Jesus’s presentation in the Temple and traditionally blesses candles?",
-          "et": "Milline veebruaripüha meenutab Jeesuse templisse toomist ning hõlmab traditsiooniliselt küünalde õnnistamist?"
+          "en": "Which Irish playwright wrote De Profundis in prison and later The Ballad of Reading Gaol after a two-year sentence?",
+          "et": "Milline Iiri näitekirjanik kirjutas vanglas „De Profundise“ ning pärast kaheaastast karistust „Readingi vangla ballaadi“?"
         },
         "response": {
-          "en": "Candlemas",
-          "et": "küünlapäev"
+          "en": "Oscar Wilde",
+          "et": "Oscar Wilde"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Wilde"
+          ],
+          "et": [
+            "Wilde"
+          ]
         },
         "explanation": {
-          "en": "Candlemas falls forty days after Christmas and closes the Christmas cycle in some traditions.",
-          "et": "Küünlapäev on nelikümmend päeva pärast jõule ning lõpetab mõnes traditsioonis jõuluaja."
+          "en": "Oscar Wilde served two years after his gross-indecency conviction, wrote De Profundis in prison and later The Ballad of Reading Gaol.",
+          "et": "Oscar Wilde kandis pärast süüdimõistmist kaheaastase karistuse, kirjutas vanglas „De Profundise“ ja hiljem „Readingi vangla ballaadi“."
         },
         "source": {
-          "sourceId": "wikipedia:candlemas",
-          "title": "Candlemas",
-          "url": "https://en.wikipedia.org/wiki/Candlemas",
+          "sourceId": "wikipedia:oscar_wilde",
+          "title": "Oscar Wilde",
+          "url": "https://en.wikipedia.org/wiki/Oscar_Wilde",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-087:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:day:ash-wednesday",
+        "factKey": "mythology-hard:087:1:dostoevsky-siberian-camp-house-dead",
         "tier": 3,
-        "subjectKey": "day:ash-wednesday",
+        "subjectKey": "person:fyodor-dostoevsky-confinement",
         "clue": {
-          "en": "Which day begins Western Lent with a sign of ashes placed on worshippers?",
-          "et": "Milline päev alustab läänekristlikku paastuaega tuhamärgiga uskliku otsaees?"
+          "en": "Which Russian novelist drew on imprisonment in Omsk for the Siberian prison-camp novel The House of the Dead?",
+          "et": "Milline Vene kirjanik kasutas Omski vangistuse kogemusi Siberi vangilaagrist rääkivas romaanis „Märkmeid surnud majast“?"
         },
         "response": {
-          "en": "Ash Wednesday",
-          "et": "tuhkapäev"
+          "en": "Fyodor Dostoevsky",
+          "et": "Fjodor Dostojevski"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Fyodor Dostoyevsky",
+            "Dostoevsky",
+            "Dostoyevsky"
+          ],
+          "et": [
+            "Dostojevski"
+          ]
         },
         "explanation": {
-          "en": "Ash Wednesday ashes traditionally come from burned palms from the previous year’s Palm Sunday.",
-          "et": "Tuhkapäeva tuhk saadakse traditsiooniliselt eelmise palmipuudepüha põletatud okstest."
+          "en": "Fyodor Dostoevsky based the semi-autobiographical House of the Dead on convicts’ lives and his imprisonment in Omsk.",
+          "et": "Fjodor Dostojevski tugines poolautobiograafilises „Märkmetes surnud majast“ vangide elule ja oma Omski vangistusele."
         },
         "source": {
-          "sourceId": "wikipedia:ash_wednesday",
-          "title": "Ash Wednesday",
-          "url": "https://en.wikipedia.org/wiki/Ash_Wednesday",
+          "sourceId": "wikipedia:house-of-the-dead-novel",
+          "title": "The House of the Dead (novel)",
+          "url": "https://en.wikipedia.org/wiki/The_House_of_the_Dead_(novel)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-087:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:festival:ascension",
+        "factKey": "mythology-hard:087:4:solzhenitsyn-gulag-writing",
         "tier": 4,
-        "subjectKey": "festival:ascension",
+        "subjectKey": "person:aleksandr-solzhenitsyn-confinement",
         "clue": {
-          "en": "Which feast forty days after Easter commemorates Christ’s ascent into heaven?",
-          "et": "Milline püha nelikümmend päeva pärast ülestõusmispühi meenutab Kristuse taevasse minekut?"
+          "en": "Which Russian writer survived an eight-year Gulag sentence, wrote The Gulag Archipelago and won the 1970 Nobel Prize in Literature?",
+          "et": "Milline Vene kirjanik elas üle kaheksa-aastase Gulagi karistuse, kirjutas „Gulagi arhipelaagi“ ja pälvis 1970. aasta Nobeli kirjandusauhinna?"
         },
         "response": {
-          "en": "Feast of the Ascension",
-          "et": "taevaminemispüha"
+          "en": "Aleksandr Solzhenitsyn",
+          "et": "Aleksandr Solženitsõn"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Solzhenitsyn"
+          ],
+          "et": [
+            "Solženitsõn"
+          ]
         },
         "explanation": {
-          "en": "Ascension precedes Pentecost and completes the Gospel narrative of the risen Christ’s earthly appearances.",
-          "et": "Taevaminemispüha eelneb nelipühale ning lõpetab evangeeliumide loo ülestõusnud Kristuse maistest ilmumistest."
+          "en": "Aleksandr Solzhenitsyn’s Gulag sentence and exile informed work that exposed Soviet repression; he won the 1970 literature Nobel.",
+          "et": "Aleksandr Solženitsõni Gulagi karistus ja asumine kujundasid Nõukogude repressioone paljastanud loomingut; 1970. aastal sai ta Nobeli kirjandusauhinna."
         },
         "source": {
-          "sourceId": "wikipedia:feast_of_the_ascension",
-          "title": "Feast of the Ascension",
-          "url": "https://en.wikipedia.org/wiki/Feast_of_the_Ascension",
+          "sourceId": "wikipedia:aleksandr_solzhenitsyn",
+          "title": "Aleksandr Solzhenitsyn",
+          "url": "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-087:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:corpus-christi",
+        "factKey": "mythology-hard:087:5:frankl-logotherapy-concentration-camps-mans-search-for-meaning",
         "tier": 5,
-        "subjectKey": "festival:corpus-christi",
+        "subjectKey": "person:viktor-frankl-confinement",
         "clue": {
-          "en": "Which Western feast honours the Eucharist and often includes a public procession with the sacrament?",
-          "et": "Milline läänekristlik püha austab armulauda ning hõlmab sageli avalikku protsessiooni sakramendiga?"
+          "en": "Which Austrian psychiatrist, founder of logotherapy, survived four concentration camps and wrote Man’s Search for Meaning from those experiences?",
+          "et": "Milline Austria psühhiaater, logoteraapia rajaja, elas üle neli koonduslaagrit ja kirjutas nende kogemuste põhjal menuka autobiograafilise laagriteose?"
         },
         "response": {
-          "en": "Corpus Christi",
-          "et": "Kristuse ihu püha"
+          "en": "Viktor Frankl",
+          "et": "Viktor Frankl"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Frankl"
+          ],
+          "et": [
+            "Frankl"
+          ]
         },
         "explanation": {
-          "en": "Corpus Christi arose in the Middle Ages as a celebration focused specifically on Christ’s presence in the Eucharist.",
-          "et": "Kristuse ihu püha kujunes keskajal eraldi armulauas kohal oleva Kristuse austamiseks."
+          "en": "Viktor Frankl founded logotherapy, survived Theresienstadt, Auschwitz and other camps, and based Man’s Search for Meaning on those experiences.",
+          "et": "Viktor Frankl rajas logoteraapia, elas üle Theresienstadti, Auschwitzi ja teised laagrid ning tugines neile kogemustele oma menuraamatus."
         },
         "source": {
-          "sourceId": "wikipedia:feast_of_corpus_christi",
-          "title": "Feast of Corpus Christi",
-          "url": "https://en.wikipedia.org/wiki/Feast_of_Corpus_Christi",
+          "sourceId": "wikipedia:viktor_frankl",
+          "title": "Viktor Frankl",
+          "url": "https://en.wikipedia.org/wiki/Viktor_Frankl",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -41058,157 +41136,168 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-088",
     "name": {
-      "en": "Moonlight and Memory in the Islamic Year",
-      "et": "Kuuvalgus ja mälu islami aastas"
+      "en": "Monasteries in Culture and Place",
+      "et": "Kloostrid kultuuris ja paikades"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-088:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:calendar:hijri",
+        "factKey": "mythology-hard:088:2:dom-perignon-monk-brand-myth",
         "tier": 1,
-        "subjectKey": "calendar:hijri",
+        "subjectKey": "wine:dom-perignon",
         "clue": {
-          "en": "Which lunar calendar counts years from Muhammad’s migration from Mecca to Medina?",
-          "et": "Milline kuukalender loendab aastaid Muhammadi rändest Mekast Mediinasse?"
+          "en": "Which Moët & Chandon prestige cuvée is named for a Hautvillers monk whom legend wrongly credits with inventing sparkling Champagne?",
+          "et": "Milline Moët & Chandoni prestiižikuvee on nimetatud Hautvillers’ munga järgi, kellele legend omistab ekslikult vahušampanja leiutamise?"
         },
         "response": {
-          "en": "Hijri calendar",
-          "et": "hidžra kalender"
+          "en": "Dom Pérignon",
+          "et": "Dom Pérignon"
         },
         "acceptedVariants": {
           "en": [
-            "Islamic calendar"
+            "Dom Perignon"
           ],
           "et": [
-            "islami kalender"
+            "Dom Perignon"
           ]
         },
         "explanation": {
-          "en": "A Hijri year is about eleven days shorter than a solar year, so festivals move through the seasons.",
-          "et": "Hidžra aasta on päikeseaastast umbes üksteist päeva lühem, mistõttu pühad liiguvad läbi aastaaegade."
+          "en": "Dom Pérignon is Moët & Chandon’s prestige cuvée, named for a Benedictine monk who improved wine but did not invent sparkling Champagne.",
+          "et": "Dom Pérignon on Moët & Chandoni prestiižikuvee, mis sai nime veini täiustanud, kuid vahušampanjat mitte leiutanud benediktiini munga järgi."
         },
         "source": {
-          "sourceId": "wikipedia:islamic_calendar",
-          "title": "Islamic calendar",
-          "url": "https://en.wikipedia.org/wiki/Islamic_calendar",
+          "sourceId": "wikipedia:dom-perignon-monk",
+          "title": "Dom Pérignon (monk)",
+          "url": "https://en.wikipedia.org/wiki/Dom_P%C3%A9rignon_(monk)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-088:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:month:ramadan",
+        "factKey": "mythology-hard:088:1:illuminated-manuscript-monastic-scriptoria",
         "tier": 2,
-        "subjectKey": "month:ramadan",
+        "subjectKey": "object:illuminated-manuscript",
         "clue": {
-          "en": "During which Islamic month do observant adults fast from dawn to sunset?",
-          "et": "Millisel islami kuul paastuvad usklikud täiskasvanud koidust päikeseloojanguni?"
+          "en": "What kind of decorated handwritten book combines borders and miniature illustrations with gold leaf or shell gold?",
+          "et": "Mis liiki kaunistatud käsikirjalises raamatus ühendatakse äärised ja miniatuurid lehtkulla või pulberkullaga?"
         },
         "response": {
-          "en": "Ramadan",
-          "et": "ramadaan"
+          "en": "illuminated manuscript",
+          "et": "illumineeritud käsikiri"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Ramadan fasting is joined by night prayer, charity, and Qur’an recitation.",
-          "et": "Ramadaani paastuga kaasnevad ööpalved, heategevus ja Koraani lugemine."
+          "en": "An illuminated manuscript decorates text with borders and miniatures; strict illumination uses gold, and production moved from monasteries to urban workshops.",
+          "et": "Illumineeritud käsikiri kaunistab teksti ääriste ja miniatuuridega; rangelt võttes kasutatakse kulda ning tootmine liikus kloostritest linnatöökodadesse."
         },
         "source": {
-          "sourceId": "wikipedia:ramadan",
-          "title": "Ramadan",
-          "url": "https://en.wikipedia.org/wiki/Ramadan",
+          "sourceId": "wikipedia:illuminated_manuscript",
+          "title": "Illuminated manuscript",
+          "url": "https://en.wikipedia.org/wiki/Illuminated_manuscript",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-088:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:night:laylat-al-qadr",
+        "factKey": "mythology-hard:088:3:trappist-beer-monastery-label",
         "tier": 3,
-        "subjectKey": "night:laylat-al-qadr",
+        "subjectKey": "beer:trappist",
         "clue": {
-          "en": "Which revered night commemorates the Qur’an’s first revelation during Ramadan?",
-          "et": "Milline austatud öö meenutab Koraani esimese ilmutuse saamist ramadaani ajal?"
+          "en": "What beer is brewed under monastic supervision, may carry an international authenticity label, and has its surplus income directed to charity?",
+          "et": "Millist õlut pruulitakse kloostri järelevalve all, sellele võib anda rahvusvahelise autentsusmärgise ning selle ülejääv tulu suunatakse heategevusse?"
         },
         "response": {
-          "en": "Laylat al-Qadr",
-          "et": "Saatuse öö"
+          "en": "Trappist beer",
+          "et": "Trappist-õlu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Trappist-õlu"
+          ],
+          "et": [
+            "Trappist õlu",
+            "Trappisti õlu",
+            "trapisti õlu"
+          ]
         },
         "explanation": {
-          "en": "Worship on Laylat al-Qadr is described in the Qur’an as better than a thousand months.",
-          "et": "Koraan kirjeldab Saatuse ööl palvetamist paremaks kui tuhat kuud."
+          "en": "Trappist beer is brewed in or under a monastery’s supervision; its authenticity label and non-profit rules support the monastery and charity.",
+          "et": "Trappist-õlut pruulitakse kloostris või selle järelevalve all; autentsusmärgis ja mittetulunduslikud reeglid toetavad kloostrit ning heategevust."
         },
         "source": {
-          "sourceId": "wikipedia:qadr_night",
-          "title": "Qadr Night",
-          "url": "https://en.wikipedia.org/wiki/Qadr_Night",
+          "sourceId": "wikipedia:trappist_beer",
+          "title": "Trappist beer",
+          "url": "https://en.wikipedia.org/wiki/Trappist_beer",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-088:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:eid-al-fitr",
+        "factKey": "mythology-hard:088:4:meteora-pillars-six-monasteries",
         "tier": 4,
-        "subjectKey": "festival:eid-al-fitr",
+        "subjectKey": "monastic-place:meteora",
         "clue": {
-          "en": "Which festival begins when Ramadan fasting ends?",
-          "et": "Milline püha algab ramadaanipaastu lõppedes?"
+          "en": "Which Greek rock formation held twenty-four monasteries on natural pillars, with six extant monasteries in its UNESCO-listed complex?",
+          "et": "Milline Kreeka kaljumoodustis kandis looduslikel sammastel kunagi 24 kloostrit ning selle kuus säilinud kloostrit kuuluvad UNESCO nimekirja?"
         },
         "response": {
-          "en": "Eid al-Fitr",
-          "et": "paastumurdmispüha"
+          "en": "Meteora",
+          "et": "Meteora"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Eid al-Fitr includes communal prayer, charitable giving, visits, and festive food.",
-          "et": "Paastumurdmispüha hõlmab ühispalvet, heategevust, külaskäike ja piduroogi."
+          "en": "Meteora’s pillars hosted twenty-four monasteries, mainly founded from the later fourteenth century; six remain in the UNESCO-listed complex.",
+          "et": "Meteora sammastel oli 24 peamiselt 14. sajandi teisest poolest rajatud kloostrit; UNESCO kompleksis on neid säilinud kuus."
         },
         "source": {
-          "sourceId": "wikipedia:eid_al-fitr",
-          "title": "Eid al-Fitr",
-          "url": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
+          "sourceId": "wikipedia:meteora",
+          "title": "Meteora",
+          "url": "https://en.wikipedia.org/wiki/Meteora",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-088:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:day:ashura",
+        "factKey": "mythology-hard:088:5:mount-athos-autonomous-orthodox-ninth-century-byzantine-traditions",
         "tier": 5,
-        "subjectKey": "day:ashura",
+        "subjectKey": "monastic-place:mount-athos",
         "clue": {
-          "en": "Which tenth day of Muharram has special mourning significance for Shia Muslims?",
-          "et": "Milline muharrami kuu kümnes päev on šiiitidele erilise leina tähendusega?"
+          "en": "Which mountain on a northeastern Greek peninsula is governed by an autonomous Orthodox monastic community with Byzantine-era roots?",
+          "et": "Millist Kirde-Kreeka poolsaare mäge valitseb autonoomne õigeusu mungakogukond, mille juured ulatuvad Bütsantsi aega?"
         },
         "response": {
-          "en": "Ashura",
-          "et": "ašura"
+          "en": "Mount Athos",
+          "et": "Athose mägi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Athos"
+          ],
+          "et": [
+            "Áthos",
+            "Athos"
+          ]
         },
         "explanation": {
-          "en": "Shia observance remembers Husayn ibn Ali’s death at the Battle of Karbala.",
-          "et": "Šiiitide ašura meenutab Husayn ibn Ali hukkumist Karbala lahingus."
+          "en": "Mount Athos is a northeastern Greek mountain and autonomous Orthodox monastic region whose traditions reach at least the ninth century.",
+          "et": "Athose mägi on Kirde-Kreeka mägi ja autonoomne õigeusu mungapiirkond, mille traditsioonid ulatuvad vähemalt 9. sajandisse."
         },
         "source": {
-          "sourceId": "wikipedia:ashura",
-          "title": "Ashura",
-          "url": "https://en.wikipedia.org/wiki/Ashura",
+          "sourceId": "wikipedia:mount_athos",
+          "title": "Mount Athos",
+          "url": "https://en.wikipedia.org/wiki/Mount_Athos",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
