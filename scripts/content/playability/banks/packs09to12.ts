@@ -33418,153 +33418,166 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-045",
     "name": {
-      "en": "Festivals of the Jewish Year",
-      "et": "Juudi kalendri pühad"
+      "en": "Clever Women in Legend and Scripture",
+      "et": "Nutikad naised legendides ja pühakirjas"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-045:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:jewish-calendar:medium:event:passover",
+        "factKey": "delilah:samson-hair-philistines",
         "tier": 1,
-        "subjectKey": "event:passover",
+        "subjectKey": "scripture:delilah",
         "clue": {
-          "en": "Jewish festival commemorates the Exodus from slavery in Egypt. What is it called?",
-          "et": "Milline juudi püha meenutab Egiptuse orjusest väljarändamist?"
+          "en": "Which woman learned that Samson’s strength depended on his uncut hair, then disclosed his secret to the Philistine rulers?",
+          "et": "Milline naine sai teada, et Simsoni jõud sõltus tema lõikamata juustest, ja avaldas siis tema saladuse vilistite valitsejatele?"
         },
         "response": {
-          "en": "Passover",
-          "et": "paasapüha"
+          "en": "Delilah",
+          "et": "Deliila"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Deliila"
+          ],
+          "et": [
+            "Delila",
+            "Delilah"
+          ]
         },
         "explanation": {
-          "en": "Passover centres on the seder meal and the retelling in the Haggadah.",
-          "et": "Paasapüha keskendub seederiõhtusöögile ja Haggada jutustusele."
+          "en": "Delilah betrayed Samson after discovering that cutting his hair would leave him powerless.",
+          "et": "Deliila reetis Simsoni pärast seda, kui oli teada saanud, et juuste lõikamine jätaks mehe jõuetuks."
         },
         "source": {
-          "sourceId": "wikipedia:passover",
-          "title": "Passover",
-          "url": "https://en.wikipedia.org/wiki/Passover",
+          "sourceId": "wikipedia:delilah",
+          "title": "Delilah",
+          "url": "https://en.wikipedia.org/wiki/Delilah",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-045:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:jewish-calendar:medium:event:rosh-hashanah",
+        "factKey": "penelope:weaves-to-delay-suitors",
         "tier": 2,
-        "subjectKey": "event:rosh-hashanah",
+        "subjectKey": "myth:penelope",
         "clue": {
-          "en": "One Jewish festival marks the Jewish New Year with the sound of the shofar. Which one is described?",
-          "et": "Juudi püha tähistab juudi uusaastat šofari heliga. Mis see on?"
+          "en": "Odysseus’s wife promised to choose a new husband after finishing a burial shroud, but secretly undid each night what she had woven by day. Name her.",
+          "et": "Odysseuse naine lubas valida uue abikaasa pärast surilina valmimist, kuid harutas igal ööl lahti selle, mille oli päeval kudunud. Nimeta ta."
         },
         "response": {
-          "en": "Rosh Hashanah",
-          "et": "roš hašana"
+          "en": "Penelope",
+          "et": "Penelope"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Rosh Hashanah begins the Days of Awe leading to Yom Kippur.",
-          "et": "Roš hašana alustab aukartuse päevi, mis viivad jom kipurini."
+          "en": "Penelope used the endlessly delayed weaving to keep her suitors waiting for Odysseus’s return.",
+          "et": "Penelope venitas kudumist lõputult, et kosilasi Odysseuse tagasitulekut oodates eemal hoida."
         },
         "source": {
-          "sourceId": "wikipedia:rosh_hashanah",
-          "title": "Rosh Hashanah",
-          "url": "https://en.wikipedia.org/wiki/Rosh_Hashanah",
+          "sourceId": "wikipedia:penelope",
+          "title": "Penelope",
+          "url": "https://en.wikipedia.org/wiki/Penelope",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-045:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:jewish-calendar:medium:event:yom-kippur",
+        "factKey": "queen-sheba:tests-solomon-with-riddles",
         "tier": 3,
-        "subjectKey": "event:yom-kippur",
+        "subjectKey": "legend:queen-of-sheba",
         "clue": {
-          "en": "Recognise the Jewish festival that is the solemn Day of Atonement marked by fasting.",
-          "et": "Otsitav juudi püha on pühalik lepituspäev, mida tähistab paast. Mis see on?"
+          "en": "Which visiting queen tested Solomon’s celebrated wisdom with difficult questions or riddles?",
+          "et": "Milline külla saabunud kuninganna pani Saalomoni kuulsa tarkuse raskete küsimuste või mõistatustega proovile?"
         },
         "response": {
-          "en": "Yom Kippur",
-          "et": "jom kipur"
+          "en": "Queen of Sheba",
+          "et": "Seeba kuninganna"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Queen of Sheba"
+          ],
+          "et": [
+            "Queen of Sheba"
+          ]
         },
         "explanation": {
-          "en": "Yom Kippur concludes the penitential period with prayer and confession.",
-          "et": "Jom kipur lõpetab patukahetsusaja palve ja tunnistamisega."
+          "en": "The Queen of Sheba is remembered for visiting Solomon and testing him with hard questions.",
+          "et": "Seeba kuningannat mäletatakse Saalomoni külastamise ja raskete küsimustega proovilepaneku järgi."
         },
         "source": {
-          "sourceId": "wikipedia:yom_kippur",
-          "title": "Yom Kippur",
-          "url": "https://en.wikipedia.org/wiki/Yom_Kippur",
+          "sourceId": "wikipedia:queen_of_sheba",
+          "title": "Queen of Sheba",
+          "url": "https://en.wikipedia.org/wiki/Queen_of_Sheba",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-045:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:jewish-calendar:medium:event:hanukkah",
+        "factKey": "esther:haman-rescue-purim",
         "tier": 4,
-        "subjectKey": "event:hanukkah",
+        "subjectKey": "scripture:esther",
         "clue": {
-          "en": "What Jewish festival is the eight-day festival of lights?",
-          "et": "Järgmine juudi püha on kaheksapäevane valguspüha. Milline see on?"
+          "en": "Purim recalls a Jewish queen who risked approaching the Persian king uninvited and exposed Haman’s plan against her people. Name her.",
+          "et": "Purim meenutab juudi kuningannat, kes riskis kutsumata Pärsia kuninga ette minemisega ja paljastas Haamani plaani oma rahva vastu. Nimeta ta."
         },
         "response": {
-          "en": "Hanukkah",
-          "et": "hanuka"
+          "en": "Esther",
+          "et": "Ester"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Queen Esther"
+          ],
+          "et": [
+            "kuninganna Ester"
+          ]
         },
         "explanation": {
-          "en": "Hanukkah recalls the rededication of the Jerusalem Temple after the Maccabean revolt.",
-          "et": "Hanuka meenutab Jeruusalemma templi taaspühitsemist pärast Makkabite ülestõusu."
+          "en": "Esther used her position as queen to thwart Haman’s plot, a rescue commemorated at Purim.",
+          "et": "Ester kasutas kuninganna positsiooni Haamani vandenõu nurjamiseks; seda pääsemist meenutatakse purimil."
         },
         "source": {
-          "sourceId": "wikipedia:hanukkah",
-          "title": "Hanukkah",
-          "url": "https://en.wikipedia.org/wiki/Hanukkah",
+          "sourceId": "wikipedia:esther",
+          "title": "Esther",
+          "url": "https://en.wikipedia.org/wiki/Esther",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-045:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:jewish-calendar:medium:event:sukkot",
+        "factKey": "judith:beheads-holofernes",
         "tier": 5,
-        "subjectKey": "event:sukkot",
+        "subjectKey": "scripture:judith",
         "clue": {
-          "en": "One Jewish festival is the harvest festival observed in temporary booths. Which one is described?",
-          "et": "Juudi püha on ajutistes lehtmajades tähistatav lõikuspüha. Mis see on?"
+          "en": "In a biblical deuterocanonical story, which widow entered the enemy camp, got the general Holofernes drunk and returned with his head?",
+          "et": "Milline lesk läks piibli deuterokanoonilises loos vaenlase laagrisse, jootis väejuht Holofernese purju ja naasis tema peaga?"
         },
         "response": {
-          "en": "Sukkot",
-          "et": "sukkot"
+          "en": "Judith",
+          "et": "Juudit"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Sukkot recalls wilderness dwelling and uses the four species in ritual.",
-          "et": "Sukkot meenutab kõrberännakut ning kasutab rituaalis nelja taimeliiki."
+          "en": "Judith saved her city by beheading Holofernes after gaining access to his tent.",
+          "et": "Juudit päästis oma linna, raiudes Holofernesel pea maha pärast tema telki pääsemist."
         },
         "source": {
-          "sourceId": "wikipedia:sukkot",
-          "title": "Sukkot",
-          "url": "https://en.wikipedia.org/wiki/Sukkot",
+          "sourceId": "wikipedia:book_of_judith",
+          "title": "Book of Judith",
+          "url": "https://en.wikipedia.org/wiki/Book_of_Judith",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -33572,153 +33585,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-046",
     "name": {
-      "en": "The Five Pillars of Islam",
-      "et": "Islami viis sammast"
+      "en": "Sacred Manuscripts with a Story",
+      "et": "Pühad käsikirjad ja nende lood"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-046:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:five-pillars:medium:concept:shahada",
+        "factKey": "book-kells:illuminated-four-gospels",
         "tier": 1,
-        "subjectKey": "concept:shahada",
+        "subjectKey": "manuscript:book-of-kells",
         "clue": {
-          "en": "Which Islamic pillar is the profession that there is one God and Muhammad is his messenger?",
-          "et": "Tuvasta järgmine islami sammas: see on usutunnistus, et on üks Jumal ja Muhamed on tema saadik."
+          "en": "Name the richly illuminated manuscript of the four Gospels that became an Irish cultural treasure and is kept at Trinity College Dublin.",
+          "et": "Nimeta nelja evangeeliumi rikkalikult illumineeritud käsikiri, millest sai Iiri kultuuriaare ja mida hoitakse Dublini Trinity College’is."
         },
         "response": {
-          "en": "shahada",
-          "et": "šahada"
+          "en": "Book of Kells",
+          "et": "Kellsi raamat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Book of Kells"
+          ],
+          "et": [
+            "Book of Kells"
+          ]
         },
         "explanation": {
-          "en": "Shahada is recited as the foundational declaration of Muslim faith.",
-          "et": "Šahada lausutakse islami usu põhilise tunnistusena."
+          "en": "The Book of Kells is an elaborately illustrated Gospel manuscript associated with Ireland and preserved at Trinity College Dublin.",
+          "et": "Kellsi raamat on uhkelt illustreeritud evangeeliumikäsikiri, mida seostatakse Iirimaaga ja säilitatakse Dublini Trinity College’is."
         },
         "source": {
-          "sourceId": "wikipedia:shahada",
-          "title": "Shahada",
-          "url": "https://en.wikipedia.org/wiki/Shahada",
+          "sourceId": "wikipedia:book_of_kells",
+          "title": "Book of Kells",
+          "url": "https://en.wikipedia.org/wiki/Book_of_Kells",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-046:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:five-pillars:medium:concept:salah",
+        "factKey": "gospel-judas:coptic-gnostic-text",
         "tier": 2,
-        "subjectKey": "concept:salah",
+        "subjectKey": "manuscript:gospel-of-judas",
         "clue": {
-          "en": "Name the Islamic pillar that is the prescribed prayer performed five times daily.",
-          "et": "Vihjes kirjeldatud islami sammas on viis korda päevas peetav kohustuslik palvus. Mis see on?"
+          "en": "Which Coptic Gnostic text presents the disciple famous for betraying Jesus very differently from the canonical Gospels?",
+          "et": "Milline kopti gnostiline tekst kujutab Jeesuse reetmise poolest kuulsat jüngrit kanoonilistest evangeeliumidest väga erinevalt?"
         },
         "response": {
-          "en": "salah",
-          "et": "salaat"
+          "en": "Gospel of Judas",
+          "et": "Juuda evangeelium"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Gospel of Judas"
+          ],
+          "et": [
+            "Gospel of Judas"
+          ]
         },
         "explanation": {
-          "en": "Salah includes cycles of standing, bowing, and prostration facing Mecca.",
-          "et": "Salaat sisaldab Meka poole seistes, kummardudes ja maha heites palvetsükleid."
+          "en": "The Gospel of Judas is a Coptic Gnostic work that presents Judas very differently from the canonical Gospels.",
+          "et": "Juuda evangeelium on kopti gnostiline teos, mis kujutab Juudast kanoonilistest evangeeliumidest väga erinevalt."
         },
         "source": {
-          "sourceId": "wikipedia:salah",
-          "title": "Salah",
-          "url": "https://en.wikipedia.org/wiki/Salah",
+          "sourceId": "wikipedia:gospel_of_judas",
+          "title": "Gospel of Judas",
+          "url": "https://en.wikipedia.org/wiki/Gospel_of_Judas",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-046:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:five-pillars:medium:concept:zakat",
+        "factKey": "codex-gigas:giant-devil-bible",
         "tier": 3,
-        "subjectKey": "concept:zakat",
+        "subjectKey": "manuscript:codex-gigas",
         "clue": {
-          "en": "Find the Islamic pillar that is obligatory almsgiving from qualifying wealth.",
-          "et": "Islami sammas on nõuetele vastavast varast antav kohustuslik almus. Leia sobiv vastus."
+          "en": "Give the Latin title of an exceptionally large medieval manuscript whose unusual full-page portrait inspired a sensational nickname.",
+          "et": "Anna ladinakeelne pealkiri erakordselt suurele keskaegsele käsikirjale, mille ebatavaline täisleheküljeline portree inspireeris kõmulist hüüdnime."
         },
         "response": {
-          "en": "zakat",
-          "et": "zakaat"
+          "en": "Codex Gigas",
+          "et": "Codex Gigas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Devil's Bible",
+            "the Devil’s Bible"
+          ],
+          "et": [
+            "Kuradipiibel",
+            "Kuradi piibel"
+          ]
         },
         "explanation": {
-          "en": "Zakat purifies wealth through a defined contribution to eligible recipients.",
-          "et": "Zakaat puhastab vara kindla panusega abikõlblikele saajatele."
+          "en": "Codex Gigas is exceptionally large and contains a striking full-page image of the devil, which inspired its nickname.",
+          "et": "Codex Gigas on erakordselt suur ja sisaldab silmatorkavat täisleheküljelist kuradipilti, millest tuli selle hüüdnimi."
         },
         "source": {
-          "sourceId": "wikipedia:zakat",
-          "title": "Zakat",
-          "url": "https://en.wikipedia.org/wiki/Zakat",
+          "sourceId": "wikipedia:codex_gigas",
+          "title": "Codex Gigas",
+          "url": "https://en.wikipedia.org/wiki/Codex_Gigas",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-046:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:five-pillars:medium:concept:sawm",
+        "factKey": "diamond-sutra:dated-print-mogao-cave",
         "tier": 4,
-        "subjectKey": "concept:sawm",
+        "subjectKey": "manuscript:diamond-sutra",
         "clue": {
-          "en": "Which Islamic pillar is fasting from dawn to sunset during Ramadan?",
-          "et": "Tuvasta järgmine islami sammas: see on ramadaani ajal koidust päikeseloojanguni paastumine."
+          "en": "Name the Buddhist sutra whose copy dated 868 is celebrated as an early dated woodblock-printed book and was found in the Mogao cave library.",
+          "et": "Nimeta budistlik suutra, mille 868. aastaga dateeritud eksemplari tuntakse varase dateeritud puulõiketrükise raamatuna ja mis leiti Mogao koobastiku raamatukogust."
         },
         "response": {
-          "en": "sawm",
-          "et": "saum"
+          "en": "Diamond Sutra",
+          "et": "Teemantsuutra"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Diamond Sutra"
+          ],
+          "et": [
+            "Diamond Sutra"
+          ]
         },
         "explanation": {
-          "en": "Sawm includes abstention from food and drink with exemptions for hardship.",
-          "et": "Saum hõlmab toidust ja joogist hoidumist koos eranditega raskuse korral."
+          "en": "The Diamond Sutra survives in a famous 868 printed copy discovered among the Dunhuang manuscripts in the Mogao Caves.",
+          "et": "Teemantsuutra kuulus 868. aasta trükieksemplar avastati Mogao koobastest Dunhuangi käsikirjade hulgast."
         },
         "source": {
-          "sourceId": "wikipedia:fasting_in_islam",
-          "title": "Fasting in Islam",
-          "url": "https://en.wikipedia.org/wiki/Fasting_in_Islam",
+          "sourceId": "wikipedia:diamond_sutra",
+          "title": "Diamond Sutra",
+          "url": "https://en.wikipedia.org/wiki/Diamond_Sutra",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-046:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:five-pillars:medium:concept:hajj",
+        "factKey": "codex-sinaiticus:fourth-century-bible",
         "tier": 5,
-        "subjectKey": "concept:hajj",
+        "subjectKey": "manuscript:codex-sinaiticus",
         "clue": {
-          "en": "One Islamic pillar is the pilgrimage to Mecca required once when able. Which one is described?",
-          "et": "Islami sammas on võimaluse korral kord elus nõutav palverännak Mekasse. Mis see on?"
+          "en": "Which fourth-century Bible manuscript takes its name from the Sinai region closely associated with its discovery history?",
+          "et": "Milline neljanda sajandi piiblikäsikiri on saanud nime Siinai piirkonna järgi, millega selle leidmislugu on tihedalt seotud?"
         },
         "response": {
-          "en": "hajj",
-          "et": "hadž"
+          "en": "Codex Sinaiticus",
+          "et": "Codex Sinaiticus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Siinai koodeks"
+          ],
+          "et": [
+            "Siinai koodeks"
+          ]
         },
         "explanation": {
-          "en": "Hajj includes circumambulating the Kaaba and standing at Arafat.",
-          "et": "Hadž sisaldab Kaaba ümber käimist ja Arafatil seismist."
+          "en": "Codex Sinaiticus is a fourth-century biblical manuscript closely associated with Saint Catherine’s Monastery in Sinai.",
+          "et": "Codex Sinaiticus on neljanda sajandi piiblikäsikiri, mida seostatakse tihedalt Siinail asuva Püha Katariina kloostriga."
         },
         "source": {
-          "sourceId": "wikipedia:hajj",
-          "title": "Hajj",
-          "url": "https://en.wikipedia.org/wiki/Hajj",
+          "sourceId": "wikipedia:codex_sinaiticus",
+          "title": "Codex Sinaiticus",
+          "url": "https://en.wikipedia.org/wiki/Codex_Sinaiticus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -33726,153 +33761,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-047",
     "name": {
-      "en": "Traditions Born from Christian Reform",
-      "et": "Kristlikust reformist sündinud traditsioonid"
+      "en": "Mythology in the Clinic",
+      "et": "Mütoloogia ravikabinetis"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-047:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:christian-reformations:medium:tradition:lutheranism",
+        "factKey": "panic:name-from-pan",
         "tier": 1,
-        "subjectKey": "tradition:lutheranism",
+        "subjectKey": "etymology:pan-panic",
         "clue": {
-          "en": "What Christian movement grew from Martin Luther’s reform in German-speaking Europe?",
-          "et": "Järgmine kristlik liikumine kasvas välja Martin Lutheri reformist saksakeelses Euroopas. Milline see on?"
+          "en": "Name both the goat-footed Greek god whose sudden appearance could terrify travellers and the modern word for such overwhelming fear.",
+          "et": "Nimeta nii kitsejalgne Kreeka jumal, kelle äkiline ilmumine võis rändureid kohutada, kui ka tänapäevane sõna sellise valdava hirmu kohta."
         },
         "response": {
-          "en": "Lutheranism",
-          "et": "luterlus"
+          "en": "Pan and panic",
+          "et": "Paan ja paanika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "panic and Pan"
+          ],
+          "et": [
+            "paanika ja Paan"
+          ]
         },
         "explanation": {
-          "en": "Lutheranism stresses justification by faith and retains a sacramental liturgy.",
-          "et": "Luterlus rõhutab õigeksmõistmist usu kaudu ning säilitab sakramentaalse liturgia."
+          "en": "Pan was believed to cause sudden, irrational terror, giving English the word panic.",
+          "et": "Paani peeti äkilise põhjuseta hirmu tekitajaks ning tema nimest tuli sõna paanika."
         },
         "source": {
-          "sourceId": "wikipedia:lutheranism",
-          "title": "Lutheranism",
-          "url": "https://en.wikipedia.org/wiki/Lutheranism",
+          "sourceId": "wikipedia:panic",
+          "title": "Panic",
+          "url": "https://en.wikipedia.org/wiki/Panic",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-047:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:christian-reformations:medium:tradition:calvinism",
+        "factKey": "atlas-vertebra:named-for-sky-bearing-atlas",
         "tier": 2,
-        "subjectKey": "tradition:calvinism",
+        "subjectKey": "anatomy:atlas-myth-vertebra",
         "clue": {
-          "en": "One Christian movement is the Reformed tradition strongly linked with John Calvin in Geneva. Which one is described?",
-          "et": "Kristlik liikumine on Genfis tegutsenud Jean Calviniga tihedalt seotud reformeeritud traditsioon. Mis see on?"
+          "en": "Name both the Titan who bears the heavens and the first neck vertebra, C1, which bears the skull and was named after him.",
+          "et": "Nimeta nii taevavõlvi kandev titaan kui ka tema järgi nimetatud esimene kaelalüli C1, mis kannab koljut."
         },
         "response": {
-          "en": "Calvinism",
-          "et": "kalvinism"
+          "en": "Atlas and the atlas vertebra",
+          "et": "Atlas ja atlaselüli"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the atlas vertebra and Atlas",
+            "Atlas and C1",
+            "C1 and Atlas"
+          ],
+          "et": [
+            "atlaselüli ja Atlas",
+            "Atlas ja C1",
+            "C1 ja Atlas",
+            "Atlas ja kandelüli",
+            "kandelüli ja Atlas"
+          ]
         },
         "explanation": {
-          "en": "Calvinism emphasises God’s sovereignty and developed presbyterian church governance.",
-          "et": "Kalvinism rõhutab Jumala suveräänsust ning arendas presbüterlikku kirikukorda."
+          "en": "The atlas vertebra supports the skull just as the mythic Atlas was imagined supporting the heavens.",
+          "et": "Kandelüli ehk atlaselüli toetab koljut nii, nagu müütiline Atlas kandis taevavõlvi."
         },
         "source": {
-          "sourceId": "wikipedia:calvinism",
-          "title": "Calvinism",
-          "url": "https://en.wikipedia.org/wiki/Calvinism",
+          "sourceId": "wikipedia:atlas_(anatomy)",
+          "title": "Atlas (anatomy)",
+          "url": "https://en.wikipedia.org/wiki/Atlas_(anatomy)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-047:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:christian-reformations:medium:tradition:anglicanism",
+        "factKey": "morphine:name-from-morpheus",
         "tier": 3,
-        "subjectKey": "tradition:anglicanism",
+        "subjectKey": "etymology:morpheus-morphine",
         "clue": {
-          "en": "Find the Christian movement that developed from the English Reformation and the Church of England.",
-          "et": "Kristlik liikumine arenes Inglise reformatsioonist ja Inglismaa kirikust. Leia sobiv vastus."
+          "en": "Name both the Greek god of dreams and the powerful opioid painkiller named after him.",
+          "et": "Nimeta nii Kreeka unenägude jumal kui ka tema järgi nimetatud tugev opioidne valuvaigisti."
         },
         "response": {
-          "en": "Anglicanism",
-          "et": "anglikanism"
+          "en": "Morpheus and morphine",
+          "et": "Morpheus ja morfiin"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "morphine and Morpheus"
+          ],
+          "et": [
+            "morfiin ja Morpheus"
+          ]
         },
         "explanation": {
-          "en": "Anglicanism is shaped by the Book of Common Prayer and an episcopal structure.",
-          "et": "Anglikanism on kujundatud „Book of Common Prayeri“ ja piiskopliku struktuuri poolt."
+          "en": "Morphine was named for Morpheus, the Greek divine figure associated with dreams.",
+          "et": "Morfiin sai nime Kreeka unenägudega seotud jumala Morpheuse järgi."
         },
         "source": {
-          "sourceId": "wikipedia:anglicanism",
-          "title": "Anglicanism",
-          "url": "https://en.wikipedia.org/wiki/Anglicanism",
+          "sourceId": "wikipedia:morphine",
+          "title": "Morphine",
+          "url": "https://en.wikipedia.org/wiki/Morphine",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-047:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:christian-reformations:medium:tradition:methodism",
+        "factKey": "asclepius-rod:single-serpent-medicine",
         "tier": 4,
-        "subjectKey": "tradition:methodism",
+        "subjectKey": "symbol:rod-of-asclepius",
         "clue": {
-          "en": "Christian movement grew from the eighteenth-century revival led by John Wesley. What is it called?",
-          "et": "Milline kristlik liikumine kasvas välja John Wesley juhitud kaheksateistkümnenda sajandi äratusest?"
+          "en": "Which medical emblem shows one serpent winding around a staff and should not be confused with the two-snake caduceus?",
+          "et": "Milline meditsiinisümbol kujutab keppi, mille ümber keerdub üks madu, ning mida ei tohiks segi ajada kahe maoga caduceus’ega?"
         },
         "response": {
-          "en": "Methodism",
-          "et": "metodism"
+          "en": "Rod of Asclepius",
+          "et": "Asklepiose sau"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Rod of Asclepius"
+          ],
+          "et": [
+            "eskulaabikepp",
+            "Aesculapiuse sau"
+          ]
         },
         "explanation": {
-          "en": "Methodism organised believers in disciplined societies, classes, and itinerant preaching.",
-          "et": "Metodism korraldas usklikud distsiplineeritud seltsideks, klassideks ja rändjutlusteks."
+          "en": "The Rod of Asclepius, a staff with a single serpent, is a traditional symbol of medicine.",
+          "et": "Asklepiose sau, mille ümber keerdub üks madu, on traditsiooniline meditsiini sümbol."
         },
         "source": {
-          "sourceId": "wikipedia:methodism",
-          "title": "Methodism",
-          "url": "https://en.wikipedia.org/wiki/Methodism",
+          "sourceId": "wikipedia:rod_of_asclepius",
+          "title": "Rod of Asclepius",
+          "url": "https://en.wikipedia.org/wiki/Rod_of_Asclepius",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-047:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:christian-reformations:medium:tradition:anabaptism",
+        "factKey": "hygiene:name-from-hygieia",
         "tier": 5,
-        "subjectKey": "tradition:anabaptism",
+        "subjectKey": "etymology:hygieia-hygiene",
         "clue": {
-          "en": "One Christian movement rejected infant baptism during the Radical Reformation. Which one is described?",
-          "et": "Kristlik liikumine lükkas radikaalse reformatsiooni ajal tagasi imikute ristimise. Mis see on?"
+          "en": "Name both the Greek goddess of health and the modern cleanliness concept whose name is related to hers.",
+          "et": "Nimeta nii Kreeka tervisejumalanna kui ka tänapäevane puhtuse mõiste, mille nimi on temaga seotud."
         },
         "response": {
-          "en": "Anabaptism",
-          "et": "anabaptism"
+          "en": "Hygieia and hygiene",
+          "et": "Hygieia ja hügieen"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "hygiene and Hygieia"
+          ],
+          "et": [
+            "hügieen ja Hygieia"
+          ]
         },
         "explanation": {
-          "en": "Anabaptism favoured voluntary believers’ baptism and often separation from state churches.",
-          "et": "Anabaptism eelistas vabatahtlikku usklike ristimist ning sageli lahusolekut riigikirikust."
+          "en": "Hygieia was a goddess of health, and hygiene preserves her name in a modern health-related word.",
+          "et": "Hygieia oli tervisejumalanna ning tema nimi elab edasi tänapäevases sõnas hügieen."
         },
         "source": {
-          "sourceId": "wikipedia:anabaptism",
-          "title": "Anabaptism",
-          "url": "https://en.wikipedia.org/wiki/Anabaptism",
+          "sourceId": "wikipedia:hygieia",
+          "title": "Hygieia",
+          "url": "https://en.wikipedia.org/wiki/Hygieia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -33880,153 +33942,191 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-048",
     "name": {
-      "en": "Buildings for Worship",
-      "et": "Jumalateenistuse hooned"
+      "en": "Pilgrimage Passport",
+      "et": "Palveränduri pass"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-048:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:sacred-buildings:medium:structure:synagogue",
+        "factKey": "lourdes:bernadette-grotto-pilgrimage",
         "tier": 1,
-        "subjectKey": "structure:synagogue",
+        "subjectKey": "pilgrimage:lourdes",
         "clue": {
-          "en": "Which sacred building is a Jewish house of prayer and communal study?",
-          "et": "Tuvasta järgmine püha hoone: see on juudi palve- ja kogukondliku õppe maja."
+          "en": "Bernadette Soubirous, reported Marian apparitions and a grotto identify which French pilgrimage destination?",
+          "et": "Millise Prantsusmaa palverännusihtkoha juhatavad kätte Bernadette Soubirous, väidetavad Maarja ilmutused ja grott?"
         },
         "response": {
-          "en": "synagogue",
-          "et": "sünagoog"
+          "en": "Lourdes pilgrimage",
+          "et": "Lourdes’i palverännak"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "pilgrimage to Lourdes",
+            "Lourdes"
+          ],
+          "et": [
+            "palverännak Lourdes’i",
+            "Lourdes"
+          ]
         },
         "explanation": {
-          "en": "Synagogue orients worship around a Torah ark and a reading platform.",
-          "et": "Sünagoog keskendab jumalateenistuse Toora laeka ja lugemispuldi ümber."
+          "en": "Lourdes became a major pilgrimage centre after Bernadette reported visions at the grotto of Massabielle.",
+          "et": "Lourdes’ist sai tähtis palverännukeskus pärast seda, kui Bernadette teatas nägemustest Massabielle’i grotis."
         },
         "source": {
-          "sourceId": "wikipedia:synagogue",
-          "title": "Synagogue",
-          "url": "https://en.wikipedia.org/wiki/Synagogue",
+          "sourceId": "wikipedia:sanctuary_of_our_lady_of_lourdes",
+          "title": "Sanctuary of Our Lady of Lourdes",
+          "url": "https://en.wikipedia.org/wiki/Sanctuary_of_Our_Lady_of_Lourdes",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-048:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:sacred-buildings:medium:structure:mosque",
+        "factKey": "fatima:shepherd-children-pilgrimage",
         "tier": 2,
-        "subjectKey": "structure:mosque",
+        "subjectKey": "pilgrimage:fatima",
         "clue": {
-          "en": "A sacred building is a Muslim place for communal prayer. What term fits?",
-          "et": "Siin kirjeldatud püha hoone on moslemite ühise palve paik. Mis see on?"
+          "en": "Three shepherd children reported Marian visions near which Portuguese town that became a major pilgrimage destination?",
+          "et": "Millise Portugali linna lähedal teatasid kolm karjuslast Maarja nägemustest, muutes paiga tähtsaks palverännusihtkohaks?"
         },
         "response": {
-          "en": "mosque",
-          "et": "mošee"
+          "en": "Fátima pilgrimage",
+          "et": "Fátima palverännak"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Fatima pilgrimage",
+            "pilgrimage to Fátima",
+            "pilgrimage to Fatima",
+            "Fátima",
+            "Fatima"
+          ],
+          "et": [
+            "Fatima palverännak",
+            "Fátima",
+            "Fatima"
+          ]
         },
         "explanation": {
-          "en": "Mosque uses a mihrab to indicate the direction of Mecca.",
-          "et": "Mošee kasutab Meka suuna näitamiseks mihrabi."
+          "en": "Fátima’s sanctuary grew from reports that three shepherd children saw apparitions of the Virgin Mary.",
+          "et": "Fátima pühamu kujunes pärast kolme karjuslapse teateid Neitsi Maarja ilmutustest."
         },
         "source": {
-          "sourceId": "wikipedia:mosque",
-          "title": "Mosque",
-          "url": "https://en.wikipedia.org/wiki/Mosque",
+          "sourceId": "wikipedia:sanctuary_of_f%c3%a1tima",
+          "title": "Sanctuary of Fátima",
+          "url": "https://en.wikipedia.org/wiki/Sanctuary_of_F%C3%A1tima",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-048:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:sacred-buildings:medium:structure:church-building",
+        "factKey": "kumbh-mela:hindu-river-gathering",
         "tier": 3,
-        "subjectKey": "structure:church-building",
+        "subjectKey": "pilgrimage:kumbh-mela",
         "clue": {
-          "en": "Find the sacred building that is a Christian building centred on worship and sacraments.",
-          "et": "Püha hoone on kristlik hoone jumalateenistuseks ja sakramentideks. Leia sobiv vastus."
+          "en": "Name the enormous Hindu pilgrimage gathering held in a cycle at sacred river locations, where ritual bathing draws vast crowds.",
+          "et": "Nimeta tohutu hindu palverännukogunemine, mis toimub kindla tsükliga pühades jõeäärsetes paikades ja toob rituaalseks suplemiseks kokku hiigelrahvahulki."
         },
         "response": {
-          "en": "church",
-          "et": "kirik"
+          "en": "Kumbh Mela",
+          "et": "Kumbh Mela"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kumbha Mela"
+          ],
+          "et": [
+            "Kumbha Mela"
+          ]
         },
         "explanation": {
-          "en": "Church often organises nave, chancel, and altar according to liturgical use.",
-          "et": "Kirik korraldab sageli löövi, koori ja altari liturgilise kasutuse järgi."
+          "en": "Kumbh Mela is a major Hindu pilgrimage festival centred on bathing at sacred rivers and confluences.",
+          "et": "Kumbh Mela on suur hindu palverännupüha, mille keskmes on suplemine pühades jõgedes ja nende ühinemiskohtades."
         },
         "source": {
-          "sourceId": "wikipedia:church_(building)",
-          "title": "Church (building)",
-          "url": "https://en.wikipedia.org/wiki/Church_(building)",
+          "sourceId": "wikipedia:kumbh_mela",
+          "title": "Kumbh Mela",
+          "url": "https://en.wikipedia.org/wiki/Kumbh_Mela",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-048:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:sacred-buildings:medium:structure:hindu-temple",
+        "factKey": "st-olav-way:nidaros-route",
         "tier": 4,
-        "subjectKey": "structure:hindu-temple",
+        "subjectKey": "pilgrimage:st-olav-way",
         "clue": {
-          "en": "What sacred building houses a deity’s sacred image for worship?",
-          "et": "Järgmine püha hoone hoiab jumaluse püha kujutist kummardamiseks. Milline see on?"
+          "en": "Which Nordic pilgrimage route leads to the shrine of a canonised king at Nidaros Cathedral in Trondheim?",
+          "et": "Milline Põhjamaade palverännutee viib pühakuks kuulutatud kuninga pühamuni Trondheimi Nidarose katedraalis?"
         },
         "response": {
-          "en": "Hindu temple",
-          "et": "hindu tempel"
+          "en": "St Olav's Way",
+          "et": "Püha Olavi tee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Saint Olav's Way",
+            "St Olav Ways",
+            "Pilgrim's Route",
+            "the Pilgrim's Route",
+            "Pilegrimsleden",
+            "Old Kings' Road",
+            "the Old Kings' Road"
+          ],
+          "et": [
+            "Olavitee",
+            "Püha Olavi teed",
+            "St Olav's Way",
+            "Pilegrimsleden",
+            "Old Kings' Road"
+          ]
         },
         "explanation": {
-          "en": "Hindu temple centres on the garbhagriha inner sanctuary rather than a large congregation hall alone.",
-          "et": "Hindu tempel keskendub sisemisele garbhagriha pühamule, mitte üksnes suurele kogunemissaalile."
+          "en": "St Olav’s Way is a network of pilgrim routes ending at Nidaros Cathedral, the traditional burial place of Saint Olav.",
+          "et": "Püha Olavi tee on palverännuteede võrgustik, mis lõpeb Nidarose katedraalis, püha Olavi traditsioonilises matmispaigas."
         },
         "source": {
-          "sourceId": "wikipedia:hindu_temple",
-          "title": "Hindu temple",
-          "url": "https://en.wikipedia.org/wiki/Hindu_temple",
+          "sourceId": "wikipedia:pilgrim%27s_route",
+          "title": "Pilgrim's Route",
+          "url": "https://en.wikipedia.org/wiki/Pilgrim%27s_Route",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-048:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:sacred-buildings:medium:structure:stupa",
+        "factKey": "bodh-gaya:buddha-enlightenment-pilgrimage",
         "tier": 5,
-        "subjectKey": "structure:stupa",
+        "subjectKey": "pilgrimage:bodh-gaya",
         "clue": {
-          "en": "A sacred building is a Buddhist monument often containing relics. Name it.",
-          "et": "Üks püha hoone on budistlik mälestis, mis sisaldab sageli reliikviaid. Millist vastust otsime?"
+          "en": "The Mahabodhi Temple and the tree beneath which Siddhartha attained enlightenment identify which pilgrimage city in Bihar?",
+          "et": "Millise Bihari palverännulinna juhatavad kätte Mahabodhi tempel ja puu, mille all Siddhartha jõudis virgumiseni?"
         },
         "response": {
-          "en": "stupa",
-          "et": "stuupa"
+          "en": "Bodh Gaya",
+          "et": "Bodh Gaya"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Bodhgaya"
+          ],
+          "et": [
+            "Bodhgaya"
+          ]
         },
         "explanation": {
-          "en": "Stupa is circumambulated clockwise as a focus of devotion.",
-          "et": "Stuupa selle ümber käiakse hardumuses päripäeva."
+          "en": "Bodh Gaya is revered as the place where the Buddha attained enlightenment beneath the Bodhi Tree.",
+          "et": "Bodh Gayat austatakse paigana, kus Buddha jõudis bodhipuu all virgumiseni."
         },
         "source": {
-          "sourceId": "wikipedia:stupa",
-          "title": "Stupa",
-          "url": "https://en.wikipedia.org/wiki/Stupa",
+          "sourceId": "wikipedia:bodh_gaya",
+          "title": "Bodh Gaya",
+          "url": "https://en.wikipedia.org/wiki/Bodh_Gaya",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34034,153 +34134,189 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-049",
     "name": {
-      "en": "Sacred Journeys",
-      "et": "Pühad rännakud"
+      "en": "Faith and Famous Names",
+      "et": "Usk ja kuulsad nimed"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-049:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:pilgrimage-routes:medium:route:camino-de-santiago",
+        "factKey": "muhammad-ali:islam-name-change",
         "tier": 1,
-        "subjectKey": "route:camino-de-santiago",
+        "subjectKey": "name-change:clay-ali",
         "clue": {
-          "en": "Identify the pilgrimage or destination: it leads pilgrims to the shrine of Saint James in Compostela.",
-          "et": "Mis palverännak või sihtkoht viib palverändurid püha Jaakobuse pühamusse Compostelas?"
+          "en": "Name both the birth name and the later Muslim name of one of boxing’s most famous heavyweight champions.",
+          "et": "Nimeta ühe poksiajaloo kuulsaima raskekaalumeistri sünninimi ja hilisem mosleminimi."
         },
         "response": {
-          "en": "Camino de Santiago",
-          "et": "Santiago palverännakutee"
+          "en": "Cassius Clay and Muhammad Ali",
+          "et": "Cassius Clay ja Muhammad Ali"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Muhammad Ali and Cassius Clay",
+            "Cassius Clay and Ali",
+            "Ali and Cassius Clay"
+          ],
+          "et": [
+            "Muhammad Ali ja Cassius Clay",
+            "Cassius Clay ja Ali",
+            "Ali ja Cassius Clay"
+          ]
         },
         "explanation": {
-          "en": "Camino de Santiago uses the scallop shell as its best-known route symbol.",
-          "et": "Santiago palverännakutee kasutab tuntuima teetähisena kammkarpi."
+          "en": "Muhammad Ali was born Cassius Clay and adopted his new name after joining Islam.",
+          "et": "Muhammad Ali sündis Cassius Clay nime all ja võttis pärast islami omaksvõtmist uue nime."
         },
         "source": {
-          "sourceId": "wikipedia:camino_de_santiago",
-          "title": "Camino de Santiago",
-          "url": "https://en.wikipedia.org/wiki/Camino_de_Santiago",
+          "sourceId": "wikipedia:muhammad_ali",
+          "title": "Muhammad Ali",
+          "url": "https://en.wikipedia.org/wiki/Muhammad_Ali",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-049:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:pilgrimage-routes:medium:place:mecca",
+        "factKey": "paul:saul-paulus-dual-names-not-conversion-rename",
         "tier": 2,
-        "subjectKey": "place:mecca",
+        "subjectKey": "name-pair:saul-paul",
         "clue": {
-          "en": "One pilgrimage or destination is the Saudi city toward which Muslims pray. Which one is described?",
-          "et": "Palverännak või sihtkoht on Saudi Araabia linn, mille poole moslemid palvetavad. Mis see on?"
+          "en": "Name both the Jewish and Latin or Roman names of the road-to-Damascus apostle. They were parallel names, not a rename created at conversion.",
+          "et": "Nimeta nii Damaskuse teel pöördunud apostli juudi kui ka ladina ehk rooma nimi. Need olid paralleelsed nimed, mitte pöördumisel tekkinud nimevahetus."
         },
         "response": {
-          "en": "Mecca",
-          "et": "Meka"
+          "en": "Saul of Tarsus and Paul the Apostle",
+          "et": "Tarsose Saulus ja apostel Paulus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Paul the Apostle and Saul of Tarsus",
+            "Saul and Paul",
+            "Paul and Saul"
+          ],
+          "et": [
+            "apostel Paulus ja Tarsose Saulus",
+            "Saulus ja Paulus",
+            "Paulus ja Saulus"
+          ]
         },
         "explanation": {
-          "en": "Mecca contains the Kaaba and receives the annual hajj pilgrimage.",
-          "et": "Meka sisaldab Kaabat ning võtab vastu iga-aastase hadži."
+          "en": "The apostle was known as Saul and Paul; the sources use both names rather than describing a conversion-time renaming.",
+          "et": "Apostlit tunti Sauluse ja Pauluse nime all; allikad kasutavad mõlemat nime ega kirjelda pöördumise ajal toimunud ümbernimetamist."
         },
         "source": {
-          "sourceId": "wikipedia:mecca",
-          "title": "Mecca",
-          "url": "https://en.wikipedia.org/wiki/Mecca",
+          "sourceId": "wikipedia:paul_the_apostle",
+          "title": "Paul the Apostle",
+          "url": "https://en.wikipedia.org/wiki/Paul_the_Apostle#Names",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-049:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:pilgrimage-routes:medium:event:kumbh-mela",
+        "factKey": "cat-stevens:islam-name-change",
         "tier": 3,
-        "subjectKey": "event:kumbh-mela",
+        "subjectKey": "name-change:stevens-yusuf-islam",
         "clue": {
-          "en": "Recognise the pilgrimage or destination that is the vast Hindu pilgrimage rotating among four river sites.",
-          "et": "Otsitav palverännak või sihtkoht on tohutu hindu palverännak, mis vaheldub nelja jõekoha vahel. Mis see on?"
+          "en": "Name both the stage name used by the singer of “Wild World” and “Father and Son” and the Muslim name he later adopted.",
+          "et": "Nimeta nii laulude „Wild World” ja „Father and Son” esitaja lavanimi kui ka hiljem võetud mosleminimi."
         },
         "response": {
-          "en": "Kumbh Mela",
-          "et": "Kumbh Mela"
+          "en": "Cat Stevens and Yusuf Islam",
+          "et": "Cat Stevens ja Yusuf Islam"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Yusuf Islam and Cat Stevens",
+            "Cat Stevens and Yusuf",
+            "Yusuf and Cat Stevens"
+          ],
+          "et": [
+            "Yusuf Islam ja Cat Stevens",
+            "Cat Stevens ja Yusuf",
+            "Yusuf ja Cat Stevens"
+          ]
         },
         "explanation": {
-          "en": "Kumbh Mela centres on ritual bathing at astrologically chosen times.",
-          "et": "Kumbh Mela keskendub astroloogiliselt valitud ajal rituaalsele suplemisele."
+          "en": "Cat Stevens adopted the name Yusuf Islam after his conversion to Islam.",
+          "et": "Cat Stevens võttis pärast islamiusku pöördumist nime Yusuf Islam."
         },
         "source": {
-          "sourceId": "wikipedia:kumbh_mela",
-          "title": "Kumbh Mela",
-          "url": "https://en.wikipedia.org/wiki/Kumbh_Mela",
+          "sourceId": "wikipedia:cat_stevens",
+          "title": "Cat Stevens",
+          "url": "https://en.wikipedia.org/wiki/Cat_Stevens",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-049:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:pilgrimage-routes:medium:place:bodh-gaya",
+        "factKey": "malcolm-x:little-name-change",
         "tier": 4,
-        "subjectKey": "place:bodh-gaya",
+        "subjectKey": "name-change:little-malcolm-x",
         "clue": {
-          "en": "Pilgrimage or destination is the Buddhist site where Gautama attained awakening. What is it called?",
-          "et": "Milline palverännak või sihtkoht on budistlik paik, kus Gautama saavutas virgumise?"
+          "en": "Name both the birth name and famous public name of the civil-rights speaker who rejected a surname he called a slave name and replaced it with a single letter.",
+          "et": "Nimeta kodanikuõiguste eestkõneleja sünninimi ja kuulus avalik nimi; ta hülgas orjanimeks peetud perekonnanime ja asendas selle ühe tähega."
         },
         "response": {
-          "en": "Bodh Gaya",
-          "et": "Bodh Gaya"
+          "en": "Malcolm Little and Malcolm X",
+          "et": "Malcolm Little ja Malcolm X"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Malcolm X and Malcolm Little"
+          ],
+          "et": [
+            "Malcolm X ja Malcolm Little"
+          ]
         },
         "explanation": {
-          "en": "Bodh Gaya is marked by the Mahabodhi Temple and a descendant of the Bodhi tree.",
-          "et": "Bodh Gaya on tähistatud Mahabodhi templi ja bodhipuu järglasega."
+          "en": "Malcolm X was born Malcolm Little and used X to mark the African family name lost through slavery.",
+          "et": "Malcolm X sündis Malcolm Little’i nime all ja kasutas X-i orjuse tõttu kaduma läinud Aafrika perekonnanime tähistamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:bodh_gaya",
-          "title": "Bodh Gaya",
-          "url": "https://en.wikipedia.org/wiki/Bodh_Gaya",
+          "sourceId": "wikipedia:malcolm_x",
+          "title": "Malcolm X",
+          "url": "https://en.wikipedia.org/wiki/Malcolm_X",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-049:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:pilgrimage-routes:medium:route:shikoku-pilgrimage",
+        "factKey": "abdul-jabbar:islam-name-change",
         "tier": 5,
-        "subjectKey": "route:shikoku-pilgrimage",
+        "subjectKey": "name-change:alcindor-abdul-jabbar",
         "clue": {
-          "en": "One pilgrimage or destination circuits eighty-eight Buddhist temples on a Japanese island. Which one is described?",
-          "et": "Palverännak või sihtkoht teeb ringi läbi kaheksakümne kaheksa budistliku templi Jaapani saarel. Mis see on?"
+          "en": "Name both the birth name and later Muslim name of the record-setting American basketball centre.",
+          "et": "Nimeta rekordeid püstitanud Ameerika korvpallikeskmängija sünninimi ja hilisem mosleminimi."
         },
         "response": {
-          "en": "Shikoku Pilgrimage",
-          "et": "Shikoku palverännak"
+          "en": "Lew Alcindor and Kareem Abdul-Jabbar",
+          "et": "Lew Alcindor ja Kareem Abdul-Jabbar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Kareem Abdul-Jabbar and Lew Alcindor",
+            "Lew Alcindor and Kareem",
+            "Kareem and Lew Alcindor"
+          ],
+          "et": [
+            "Kareem Abdul-Jabbar ja Lew Alcindor",
+            "Lew Alcindor ja Kareem",
+            "Kareem ja Lew Alcindor"
+          ]
         },
         "explanation": {
-          "en": "Shikoku Pilgrimage honours the monk Kūkai and can be completed on foot.",
-          "et": "Shikoku palverännak austab munk Kūkaid ning seda saab läbida jalgsi."
+          "en": "Kareem Abdul-Jabbar was born Lew Alcindor and adopted his Muslim name after converting to Islam.",
+          "et": "Kareem Abdul-Jabbar sündis Lew Alcindori nime all ja võttis pärast islamiusku pöördumist mosleminime."
         },
         "source": {
-          "sourceId": "wikipedia:shikoku_pilgrimage",
-          "title": "Shikoku Pilgrimage",
-          "url": "https://en.wikipedia.org/wiki/Shikoku_Pilgrimage",
+          "sourceId": "wikipedia:kareem_abdul-jabbar",
+          "title": "Kareem Abdul-Jabbar",
+          "url": "https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34188,153 +34324,235 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-050",
     "name": {
-      "en": "Rituals of Belonging and Practice",
-      "et": "Kuulumise ja praktika rituaalid"
+      "en": "Saints Behind Familiar Symbols",
+      "et": "Pühakud tuttavate sümbolite taga"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-050:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:religious-rituals:medium:ritual:baptism",
+        "factKey": "saint-nicholas:santa-tradition",
         "tier": 1,
-        "subjectKey": "ritual:baptism",
+        "subjectKey": "saint:nicholas-santa",
         "clue": {
-          "en": "Identify this religious ritual or practice: it uses water as a Christian rite of initiation.",
-          "et": "Kirjeldatud usuline rituaal või praktika kasutab vett kristliku initsiatsiooniriitusena. Mis on selle nimi?"
+          "en": "Name both the gift-giving bishop of Myra and the modern Christmas visitor whose tradition grew from his legend.",
+          "et": "Nimeta nii kingitusi jaganud Myra piiskop kui ka tänapäevane jõulukülaline, kelle traditsioon tema legendist arenes."
         },
         "response": {
-          "en": "baptism",
-          "et": "ristimine"
+          "en": "Saint Nicholas and Santa Claus",
+          "et": "püha Nikolaus ja jõuluvana"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Santa Claus and Saint Nicholas",
+            "St Nicholas and Santa Claus",
+            "Santa Claus and St Nicholas",
+            "Saint Nicholas and Santa",
+            "Santa and Saint Nicholas",
+            "St Nicholas and Santa",
+            "Santa and St Nicholas"
+          ],
+          "et": [
+            "jõuluvana ja püha Nikolaus"
+          ]
         },
         "explanation": {
-          "en": "Baptism is performed by immersion, pouring, or sprinkling across traditions.",
-          "et": "Ristimine toimub traditsiooniti kastmise, valamise või piserdamisega."
+          "en": "Saint Nicholas was a bishop famed for secret gifts, and his tradition developed into Santa Claus.",
+          "et": "Püha Nikolaus oli salajaste kingituste poolest tuntud piiskop ning tema pärimusest arenes jõuluvana kuju."
         },
         "source": {
-          "sourceId": "wikipedia:baptism",
-          "title": "Baptism",
-          "url": "https://en.wikipedia.org/wiki/Baptism",
+          "sourceId": "wikipedia:saint_nicholas",
+          "title": "Saint Nicholas",
+          "url": "https://en.wikipedia.org/wiki/Saint_Nicholas",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-050:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:religious-rituals:medium:ritual:eucharist",
+        "factKey": "saint-patrick:shamrock-trinity",
         "tier": 2,
-        "subjectKey": "ritual:eucharist",
+        "subjectKey": "saint:patrick-shamrock",
         "clue": {
-          "en": "Which religious ritual or practice shares consecrated bread and wine in memory of Jesus’s last supper?",
-          "et": "Tuvasta järgmine usuline rituaal või praktika: see jagab Jeesuse viimse õhtusöömaaja mälestuseks pühitsetud leiba ja veini."
+          "en": "Name both Ireland’s patron saint and the three-leaf plant he is traditionally said to have used to explain the Trinity.",
+          "et": "Nimeta nii Iirimaa kaitsepühak kui ka kolmeleheline taim, millega ta pärimuse järgi Kolmainsust selgitas."
         },
         "response": {
-          "en": "Eucharist",
-          "et": "armulaud"
+          "en": "Saint Patrick and the shamrock",
+          "et": "püha Patrick ja ristikuleht"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the shamrock and Saint Patrick",
+            "St Patrick and the shamrock",
+            "the shamrock and St Patrick",
+            "Saint Patrick and shamrock",
+            "shamrock and Saint Patrick",
+            "St Patrick and shamrock",
+            "shamrock and St Patrick"
+          ],
+          "et": [
+            "ristikuleht ja püha Patrick"
+          ]
         },
         "explanation": {
-          "en": "Eucharist is interpreted as sacrament, real presence, or memorial in different churches.",
-          "et": "Armulauda tõlgendatakse eri kirikutes sakramendi, reaalse kohalolu või mälestusena."
+          "en": "Saint Patrick is traditionally associated with the shamrock as an illustration of the Christian Trinity.",
+          "et": "Püha Patrickut seostatakse traditsiooniliselt ristikulehega, mida kasutati kristliku Kolmainsuse näitena."
         },
         "source": {
-          "sourceId": "wikipedia:eucharist",
-          "title": "Eucharist",
-          "url": "https://en.wikipedia.org/wiki/Eucharist",
+          "sourceId": "wikipedia:saint_patrick",
+          "title": "Saint Patrick",
+          "url": "https://en.wikipedia.org/wiki/Saint_Patrick",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-050:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:religious-rituals:medium:ritual:bar-mitzvah",
+        "factKey": "saint-christopher:patron-travellers",
         "tier": 3,
-        "subjectKey": "ritual:bar-mitzvah",
+        "subjectKey": "saint:christopher-travellers",
         "clue": {
-          "en": "Name the religious ritual or practice that marks a Jewish boy becoming responsible for commandments.",
-          "et": "Vihjes kirjeldatud usuline rituaal või praktika tähistab juudi poisi vastutust käskude täitmise eest. Mis see on?"
+          "en": "Medals showing a giant carrying the Christ Child are worn for safe journeys. Name both this saint and the people whose patron he is.",
+          "et": "Hiiglast Kristuslapsega kujutavaid medaleid kantakse turvalise teekonna lootuses. Nimeta nii see pühak kui ka inimesed, kelle kaitsepühak ta on."
         },
         "response": {
-          "en": "bar mitzvah",
-          "et": "bar-mitsva"
+          "en": "Saint Christopher and travellers",
+          "et": "püha Kristoforus ja reisijad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "travellers and Saint Christopher",
+            "St Christopher and travellers",
+            "travellers and St Christopher",
+            "Saint Christopher and travelers",
+            "travelers and Saint Christopher",
+            "St Christopher and travelers",
+            "travelers and St Christopher",
+            "Saint Christopher and traveller",
+            "traveller and Saint Christopher",
+            "Saint Christopher and traveler",
+            "traveler and Saint Christopher"
+          ],
+          "et": [
+            "reisijad ja püha Kristoforus",
+            "püha Kristoforus ja rändurid",
+            "rändurid ja püha Kristoforus",
+            "püha Christophorus ja reisijad",
+            "reisijad ja püha Christophorus",
+            "püha Christophorus ja rändurid",
+            "rändurid ja püha Christophorus"
+          ]
         },
         "explanation": {
-          "en": "Bar mitzvah names the legal-religious status, while the celebration developed around it.",
-          "et": "Bar-mitsva nimetab õiguslik-usulist staatust, mille ümber kujunes pidu."
+          "en": "Saint Christopher is traditionally regarded as the patron saint of travellers.",
+          "et": "Püha Kristoforust peetakse traditsiooniliselt reisijate kaitsepühakuks."
         },
         "source": {
-          "sourceId": "wikipedia:bar_and_bat_mitzvah",
-          "title": "Bar and bat mitzvah",
-          "url": "https://en.wikipedia.org/wiki/Bar_and_bat_mitzvah",
+          "sourceId": "wikipedia:saint_christopher",
+          "title": "Saint Christopher",
+          "url": "https://en.wikipedia.org/wiki/Saint_Christopher",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-050:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:religious-rituals:medium:ritual:puja",
+        "factKey": "saint-cecilia:patron-musicians",
         "tier": 4,
-        "subjectKey": "ritual:puja",
+        "subjectKey": "saint:cecilia-music",
         "clue": {
-          "en": "Identify this religious ritual or practice: it offers light, incense, food, or flowers to a deity.",
-          "et": "Kirjeldatud usuline rituaal või praktika pakub jumalusele valgust, viirukit, toitu või lilli. Mis on selle nimi?"
+          "en": "Paintings often show a Roman martyr with an organ, reflecting her patronage. Name both the saint and the art or profession she protects.",
+          "et": "Maalidel kujutatakse üht Rooma märtrit sageli oreliga, mis viitab tema eestkostele. Nimeta nii pühak kui ka kunstiala või elukutse, mida ta kaitseb."
         },
         "response": {
-          "en": "puja",
-          "et": "puja"
+          "en": "Saint Cecilia and music",
+          "et": "püha Cecilia ja muusika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "music and Saint Cecilia",
+            "St Cecilia and music",
+            "music and St Cecilia",
+            "Saint Cecilia and musicians",
+            "musicians and Saint Cecilia",
+            "St Cecilia and musicians",
+            "musicians and St Cecilia",
+            "Saint Cecilia and musician",
+            "musician and Saint Cecilia"
+          ],
+          "et": [
+            "muusika ja püha Cecilia",
+            "püha Cecilia ja muusikud",
+            "muusikud ja püha Cecilia",
+            "püha Cecilia ja muusik",
+            "muusik ja püha Cecilia"
+          ]
         },
         "explanation": {
-          "en": "Puja treats the sacred presence with gestures resembling honoured hospitality.",
-          "et": "Puja kohtleb püha kohalolu austatud külalise vastuvõttu meenutavate žestidega."
+          "en": "Saint Cecilia is the patron saint of music and musicians and is often depicted with an organ.",
+          "et": "Püha Cecilia on muusika ja muusikute kaitsepühak ning teda kujutatakse sageli oreliga."
         },
         "source": {
-          "sourceId": "wikipedia:puja_(hinduism)",
-          "title": "Puja (Hinduism)",
-          "url": "https://en.wikipedia.org/wiki/Puja_(Hinduism)",
+          "sourceId": "wikipedia:saint_cecilia",
+          "title": "Saint Cecilia",
+          "url": "https://en.wikipedia.org/wiki/Saint_Cecilia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-050:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:religious-rituals:medium:practice:meditation",
+        "factKey": "anthony-padua:patron-lost-items",
         "tier": 5,
-        "subjectKey": "practice:meditation",
+        "subjectKey": "saint:anthony-lost-things",
         "clue": {
-          "en": "What religious ritual or practice trains attention or awareness through sustained practice?",
-          "et": "Järgmine usuline rituaal või praktika treenib tähelepanu või teadlikkust järjepideva harjutusega. Milline see on?"
+          "en": "People traditionally invoke a Portuguese Franciscan when something has gone missing. Name both the saint and the class of objects associated with him.",
+          "et": "Kui miski on kaduma läinud, kutsutakse traditsiooniliselt appi üht Portugali frantsiskaani. Nimeta nii pühak kui ka temaga seostatud esemete liik."
         },
         "response": {
-          "en": "meditation",
-          "et": "meditatsioon"
+          "en": "Saint Anthony of Padua and lost things",
+          "et": "püha Antonius Padovast ja kadunud asjad"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "lost things and Saint Anthony of Padua",
+            "Saint Anthony of Padua and lost items",
+            "lost items and Saint Anthony of Padua",
+            "Saint Anthony of Padua and a lost item",
+            "a lost item and Saint Anthony of Padua",
+            "Anthony of Padua and lost things",
+            "lost things and Anthony of Padua",
+            "Anthony of Padua and lost items",
+            "lost items and Anthony of Padua",
+            "St Anthony and lost things",
+            "lost things and St Anthony",
+            "St Anthony and lost items",
+            "lost items and St Anthony",
+            "Saint Anthony and lost things",
+            "lost things and Saint Anthony",
+            "Saint Anthony and lost items",
+            "lost items and Saint Anthony"
+          ],
+          "et": [
+            "kadunud asjad ja püha Antonius Padovast",
+            "püha Antonius Padovast ja kadunud esemed",
+            "kadunud esemed ja püha Antonius Padovast",
+            "püha Antonius ja kadunud asjad",
+            "kadunud asjad ja püha Antonius",
+            "püha Antonius ja kadunud esemed",
+            "kadunud esemed ja püha Antonius"
+          ]
         },
         "explanation": {
-          "en": "Meditation includes focused-attention and open-monitoring methods across traditions.",
-          "et": "Meditatsioon hõlmab eri traditsioonides keskendatud tähelepanu ja avatud vaatlemise meetodeid."
+          "en": "Saint Anthony of Padua is traditionally invoked when lost things need to be found.",
+          "et": "Püha Antonius Padovast kutsutakse pärimuse järgi appi kadunud asjade leidmisel."
         },
         "source": {
-          "sourceId": "wikipedia:meditation",
-          "title": "Meditation",
-          "url": "https://en.wikipedia.org/wiki/Meditation",
+          "sourceId": "wikipedia:anthony_of_padua",
+          "title": "Anthony of Padua",
+          "url": "https://en.wikipedia.org/wiki/Anthony_of_Padua",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34342,157 +34560,193 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-051",
     "name": {
-      "en": "How Philosophers Think We Know",
-      "et": "Kuidas filosoofid teadmist mõistavad"
+      "en": "Animals in Sacred Stories",
+      "et": "Loomad pühades lugudes"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-051:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:epistemology:medium:school:empiricism",
+        "factKey": "noah-ark:dove-olive",
         "tier": 1,
-        "subjectKey": "school:empiricism",
+        "subjectKey": "story:noah-dove",
         "clue": {
-          "en": "Find the epistemological position that gives sensory experience a central role in knowledge.",
-          "et": "Tunnetusteoreetiline seisukoht annab meelekogemusele teadmises keskse koha. Leia sobiv vastus."
+          "en": "After the flood, a patriarch releases a bird that returns carrying an olive leaf. Name both the patriarch and the bird.",
+          "et": "Pärast veeuputust laseb patriarh lendu linnu, kes naaseb oliivilehega. Nimeta nii patriarh kui ka lind."
         },
         "response": {
-          "en": "empiricism",
-          "et": "empirism"
+          "en": "Noah and the dove",
+          "et": "Noa ja tuvi"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the dove and Noah"
+          ],
+          "et": [
+            "tuvi ja Noa"
+          ]
         },
         "explanation": {
-          "en": "Empiricism is associated in early modern philosophy with Locke, Berkeley, and Hume.",
-          "et": "Empirism seostub varauusajal Locke’i, Berkeley ja Hume’iga."
+          "en": "Noah sends out a dove, whose return with an olive leaf signals that the waters are receding.",
+          "et": "Noa saadab välja tuvi, kelle naasmine oliivilehega näitab, et vesi alaneb."
         },
         "source": {
-          "sourceId": "wikipedia:empiricism",
-          "title": "Empiricism",
-          "url": "https://en.wikipedia.org/wiki/Empiricism",
+          "sourceId": "wikipedia:noah%27s_ark",
+          "title": "Noah's Ark",
+          "url": "https://en.wikipedia.org/wiki/Noah%27s_Ark",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-051:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:epistemology:medium:school:rationalism",
+        "factKey": "rome-founders:nursed-by-she-wolf",
         "tier": 2,
-        "subjectKey": "school:rationalism",
+        "subjectKey": "story:romulus-remus-wolf",
         "clue": {
-          "en": "What epistemological position stresses reason and a priori insight beyond sense experience?",
-          "et": "Järgmine tunnetusteoreetiline seisukoht rõhutab mõistust ja kogemuseelset taipamist üle meelekogemuse. Milline see on?"
+          "en": "Name both Rome’s legendary twin founders and the animal that nurses them in the famous Capitoline statue.",
+          "et": "Nimeta nii Rooma legendaarsed kaksikrajajad kui ka loom, kes neid kuulsal Kapitooliumi kujul imetab."
         },
         "response": {
-          "en": "rationalism",
-          "et": "ratsionalism"
+          "en": "Romulus, Remus and the she-wolf",
+          "et": "Romulus, Remus ja emahunt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the she-wolf, Romulus and Remus",
+            "Romulus and Remus with the she-wolf",
+            "the she-wolf with Romulus and Remus"
+          ],
+          "et": [
+            "emahunt, Romulus ja Remus",
+            "Romulus ja Remus koos emahundiga",
+            "emahunt koos Romuluse ja Remusega"
+          ]
         },
         "explanation": {
-          "en": "Rationalism has Descartes, Spinoza, and Leibniz as canonical proponents.",
-          "et": "Ratsionalism peab Descartes’i, Spinozat ja Leibnizit kanoonilisteks esindajateks."
+          "en": "Romulus and Remus are shown being suckled by a she-wolf in the Capitoline Wolf image.",
+          "et": "Kapitooliumi emahundi kujutisel imetab emahunt Romulust ja Remust."
         },
         "source": {
-          "sourceId": "wikipedia:rationalism",
-          "title": "Rationalism",
-          "url": "https://en.wikipedia.org/wiki/Rationalism",
+          "sourceId": "wikipedia:capitoline_wolf",
+          "title": "Capitoline Wolf",
+          "url": "https://en.wikipedia.org/wiki/Capitoline_Wolf",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-051:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:epistemology:medium:school:philosophical-skepticism",
+        "factKey": "ganesha:mouse-vahana",
         "tier": 3,
-        "subjectKey": "school:philosophical-skepticism",
+        "subjectKey": "story:ganesha-mouse",
         "clue": {
-          "en": "An epistemological position questions whether claimed knowledge is adequately justified. Name it.",
-          "et": "Üks tunnetusteoreetiline seisukoht küsib, kas väidetav teadmine on piisavalt põhjendatud. Millist vastust otsime?"
+          "en": "Name both the elephant-headed Hindu god and the tiny animal that serves as his vahana or mount.",
+          "et": "Nimeta nii elevandipeaga hindu jumal kui ka tilluke loom, kes on tema vahana ehk sõiduloom."
         },
         "response": {
-          "en": "philosophical scepticism",
-          "et": "filosoofiline skeptitsism"
+          "en": "Ganesha and the mouse",
+          "et": "Ganeša ja hiir"
         },
         "acceptedVariants": {
           "en": [
-            "philosophical skepticism"
+            "the mouse and Ganesha"
           ],
           "et": [
-            "skeptitsism"
+            "hiir ja Ganeša"
           ]
         },
         "explanation": {
-          "en": "Philosophical scepticism can be local about one domain or global about nearly all knowledge.",
-          "et": "Filosoofiline skeptitsism võib olla kohalik ühe valdkonna või globaalne peaaegu kogu teadmise suhtes."
+          "en": "Ganesha is commonly depicted with a mouse or rat as his vehicle.",
+          "et": "Ganešat kujutatakse tavaliselt hiire või rotiga, kes on tema sõiduloom."
         },
         "source": {
-          "sourceId": "wikipedia:philosophical_skepticism",
-          "title": "Philosophical skepticism",
-          "url": "https://en.wikipedia.org/wiki/Philosophical_skepticism",
+          "sourceId": "wikipedia:ganesha",
+          "title": "Ganesha",
+          "url": "https://en.wikipedia.org/wiki/Ganesha",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-051:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:epistemology:medium:school:foundationalism",
+        "factKey": "francis:peace-with-gubbio-wolf",
         "tier": 4,
-        "subjectKey": "school:foundationalism",
+        "subjectKey": "story:francis-wolf-gubbio",
         "clue": {
-          "en": "Find the epistemological position that grounds justified beliefs in basic beliefs not inferred from others.",
-          "et": "Tunnetusteoreetiline seisukoht rajab põhjendatud uskumused alususkumustele, mida ei tuletata teistest. Leia sobiv vastus."
+          "en": "An Italian saint reportedly tamed a beast that terrorised a town and negotiated peace with its residents. Name both the saint and the named animal.",
+          "et": "Üks Itaalia pühak taltsutas pärimuse järgi linna hirmutanud looma ja sõlmis selle elanikega rahu. Nimeta nii pühak kui ka nime saanud loom."
         },
         "response": {
-          "en": "foundationalism",
-          "et": "fundatsionalism"
+          "en": "Saint Francis and the Wolf of Gubbio",
+          "et": "püha Franciscus ja Gubbio hunt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Wolf of Gubbio and Saint Francis",
+            "St Francis and the Wolf of Gubbio",
+            "the Wolf of Gubbio and St Francis",
+            "Saint Francis and the wolf",
+            "the wolf and Saint Francis",
+            "St Francis and the wolf",
+            "the wolf and St Francis",
+            "Francis of Assisi and the wolf",
+            "the wolf and Francis of Assisi"
+          ],
+          "et": [
+            "Gubbio hunt ja püha Franciscus",
+            "püha Franciscus ja hunt",
+            "hunt ja püha Franciscus",
+            "Assisi Franciscus ja hunt",
+            "hunt ja Assisi Franciscus"
+          ]
         },
         "explanation": {
-          "en": "Foundationalism uses a structure like a building rather than an endless chain of reasons.",
-          "et": "Fundatsionalism kasutab ehitise sarnast struktuuri, mitte lõputut põhjenduste ahelat."
+          "en": "Saint Francis is said to have made peace between the people of Gubbio and the Wolf of Gubbio.",
+          "et": "Püha Franciscus olevat sõlminud rahu Gubbio elanike ja Gubbio hundi vahel."
         },
         "source": {
-          "sourceId": "wikipedia:foundationalism",
-          "title": "Foundationalism",
-          "url": "https://en.wikipedia.org/wiki/Foundationalism",
+          "sourceId": "wikipedia:wolf_of_gubbio",
+          "title": "Wolf of Gubbio",
+          "url": "https://en.wikipedia.org/wiki/Wolf_of_Gubbio",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-051:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:epistemology:medium:school:coherentism",
+        "factKey": "balaam:donkey-speaks-at-angel",
         "tier": 5,
-        "subjectKey": "school:coherentism",
+        "subjectKey": "story:balaam-donkey",
         "clue": {
-          "en": "Identify the epistemological position: it justifies a belief by its fit within an interconnected system.",
-          "et": "Mis tunnetusteoreetiline seisukoht põhjendab uskumust selle sobivusega seotud süsteemi?"
+          "en": "In a biblical episode, an animal sees an angel blocking the road before its rider does and is then given speech. Name both rider and animal.",
+          "et": "Ühes piibliloos näeb loom teed tõkestavat inglit enne oma ratsanikku ning saab seejärel kõnevõime. Nimeta nii ratsanik kui ka loom."
         },
         "response": {
-          "en": "coherentism",
-          "et": "koherentism"
+          "en": "Balaam and Balaam's donkey",
+          "et": "Bileam ja Bileami eesel"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Balaam's donkey and Balaam",
+            "Balaam and the donkey",
+            "the donkey and Balaam"
+          ],
+          "et": [
+            "Bileami eesel ja Bileam",
+            "Bileam ja eesel",
+            "eesel ja Bileam"
+          ]
         },
         "explanation": {
-          "en": "Coherentism replaces privileged foundations with mutual support across a web of beliefs.",
-          "et": "Koherentism asendab eelistatud alused uskumuste võrgu vastastikuse toetusega."
+          "en": "Balaam’s donkey sees the angel first and speaks after Balaam strikes it.",
+          "et": "Bileami eesel näeb inglit esimesena ja hakkab kõnelema pärast seda, kui Bileam teda lööb."
         },
         "source": {
-          "sourceId": "wikipedia:coherentism",
-          "title": "Coherentism",
-          "url": "https://en.wikipedia.org/wiki/Coherentism",
+          "sourceId": "wikipedia:balaam",
+          "title": "Balaam",
+          "url": "https://en.wikipedia.org/wiki/Balaam",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34500,153 +34754,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-052",
     "name": {
-      "en": "What Makes a Statement True",
-      "et": "Mis teeb väite tõeseks"
+      "en": "Famous Tests and Temptations",
+      "et": "Kuulsad katsumused ja kiusatused"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-052:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:theories-of-truth:medium:theory:correspondence-theory-of-truth",
+        "factKey": "odysseus:sirens-mast-wax",
         "tier": 1,
-        "subjectKey": "theory:correspondence-theory-of-truth",
+        "subjectKey": "test:odysseus-sirens",
         "clue": {
-          "en": "Find the theory of truth that makes truth depend on matching facts or reality.",
-          "et": "Tõeteooria seob tõe vastavusega faktidele või tegelikkusele. Leia sobiv vastus."
+          "en": "Sailors block their ears with wax while their leader has himself tied to the mast so he can hear a deadly song safely. Name both the leader and the singers.",
+          "et": "Meremehed topivad kõrvad vahaga, samal ajal kui nende juht laseb end masti külge siduda, et surmavat laulu ohutult kuulata. Nimeta nii juht kui ka lauljad."
         },
         "response": {
-          "en": "correspondence theory",
-          "et": "tõe vastavusteooria"
+          "en": "Odysseus and the Sirens",
+          "et": "Odysseus ja sireenid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Sirens and Odysseus",
+            "Ulysses and the Sirens",
+            "the Sirens and Ulysses"
+          ],
+          "et": [
+            "sireenid ja Odysseus",
+            "Ulysses ja sireenid",
+            "sireenid ja Ulysses"
+          ]
         },
         "explanation": {
-          "en": "Correspondence theory treats “snow is white” as true if snow is in fact white.",
-          "et": "Tõe vastavusteooria peab väidet „lumi on valge“ tõeseks, kui lumi ongi valge."
+          "en": "Odysseus, also called Ulysses, survives the Sirens’ song by being bound to the mast while his crew use wax.",
+          "et": "Odysseus ehk Ulysses elab sireenide laulu üle, sest ta seotakse masti külge ja meeskond kasutab vaha."
         },
         "source": {
-          "sourceId": "wikipedia:correspondence_theory_of_truth",
-          "title": "Correspondence theory of truth",
-          "url": "https://en.wikipedia.org/wiki/Correspondence_theory_of_truth",
+          "sourceId": "wikipedia:siren_(mythology)",
+          "title": "Siren (mythology)",
+          "url": "https://en.wikipedia.org/wiki/Siren_(mythology)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-052:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:theories-of-truth:medium:theory:coherence-theory-of-truth",
+        "factKey": "job:suffering-faith-test",
         "tier": 2,
-        "subjectKey": "theory:coherence-theory-of-truth",
+        "subjectKey": "test:job",
         "clue": {
-          "en": "Which theory of truth makes truth depend on fit within a consistent system of beliefs?",
-          "et": "Tuvasta järgmine tõeteooria: see seob tõe sobivusega kooskõlalisse uskumuste süsteemi."
+          "en": "Which prosperous biblical man loses his children, wealth and health while his faith is severely tested?",
+          "et": "Milline jõukas piiblitegelane kaotab ränga usu proovilepaneku ajal lapsed, vara ja tervise?"
         },
         "response": {
-          "en": "coherence theory",
-          "et": "tõe koherentsiteooria"
+          "en": "Job",
+          "et": "Iiob"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "biblical Job"
+          ],
+          "et": [
+            "piibli Iiob"
+          ]
         },
         "explanation": {
-          "en": "Coherence theory judges propositions holistically rather than by isolated fact matching.",
-          "et": "Tõe koherentsiteooria hindab väiteid terviklikult, mitte eraldiseisva faktivastavuse järgi."
+          "en": "Job endures devastating losses and illness in a biblical exploration of suffering and faith.",
+          "et": "Iiob talub piibellikus kannatuse ja usu käsitluses ränki kaotusi ning haigust."
         },
         "source": {
-          "sourceId": "wikipedia:coherence_theory_of_truth",
-          "title": "Coherence theory of truth",
-          "url": "https://en.wikipedia.org/wiki/Coherence_theory_of_truth",
+          "sourceId": "wikipedia:book_of_job",
+          "title": "Book of Job",
+          "url": "https://en.wikipedia.org/wiki/Book_of_Job",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-052:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:theories-of-truth:medium:theory:pragmatic-theory-of-truth",
+        "factKey": "lots-wife:looks-back-salt",
         "tier": 3,
-        "subjectKey": "theory:pragmatic-theory-of-truth",
+        "subjectKey": "test:lots-wife",
         "clue": {
-          "en": "One theory of truth links truth with successful inquiry and practical consequences. Which one is described?",
-          "et": "Tõeteooria seob tõe eduka uurimise ja praktiliste tagajärgedega. Mis see on?"
+          "en": "Which woman flees Sodom but disobeys the instruction not to look back and is turned into a pillar of salt?",
+          "et": "Milline naine põgeneb Soodomast, kuid rikub käsku mitte tagasi vaadata ja muutub soolasambaks?"
         },
         "response": {
-          "en": "pragmatic theory",
-          "et": "tõe pragmaatiline teooria"
+          "en": "Lot's wife",
+          "et": "Loti naine"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the wife of Lot"
+          ],
+          "et": [
+            "Lot's wife"
+          ]
         },
         "explanation": {
-          "en": "Pragmatic theory was developed in differing forms by Peirce, James, and Dewey.",
-          "et": "Tõe pragmaatiline teooria arenes Peirce’i, Jamesi ja Dewey käsitlustes eri kujul."
+          "en": "Lot’s wife looks back at Sodom during the escape and becomes a pillar of salt.",
+          "et": "Loti naine vaatab põgenemise ajal Soodoma poole tagasi ja muutub soolasambaks."
         },
         "source": {
-          "sourceId": "wikipedia:pragmatic_theory_of_truth",
-          "title": "Pragmatic theory of truth",
-          "url": "https://en.wikipedia.org/wiki/Pragmatic_theory_of_truth",
+          "sourceId": "wikipedia:lot%27s_wife",
+          "title": "Lot's wife",
+          "url": "https://en.wikipedia.org/wiki/Lot%27s_wife",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-052:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:theories-of-truth:medium:theory:deflationary-theory-of-truth",
+        "factKey": "paris:golden-apple-choice",
         "tier": 4,
-        "subjectKey": "theory:deflationary-theory-of-truth",
+        "subjectKey": "test:judgement-paris",
         "clue": {
-          "en": "Identify this theory of truth: it denies that truth names a deep additional property.",
-          "et": "Kirjeldatud tõeteooria eitab, et tõde nimetab sügavat lisanduvat omadust. Mis on selle nimi?"
+          "en": "What named mythological judgement has a Trojan prince award a golden apple to one of three goddesses, helping trigger the Trojan War?",
+          "et": "Millises nimega mütoloogilises otsuses annab Trooja prints kuldõuna ühele kolmest jumalannast ja aitab sellega Trooja sõja vallandada?"
         },
         "response": {
-          "en": "deflationary theory",
-          "et": "tõe deflatsiooniteooria"
+          "en": "Judgement of Paris",
+          "et": "Parise otsus"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Judgment of Paris"
+          ],
+          "et": [
+            "Judgement of Paris"
+          ]
         },
         "explanation": {
-          "en": "Deflationary theory treats saying “it is true that snow is white” as little more than asserting it.",
-          "et": "Tõe deflatsiooniteooria käsitleb lauset „on tõsi, et lumi on valge“ peaaegu sama väitena."
+          "en": "In the Judgement of Paris, Paris gives the golden apple to Aphrodite, a choice linked to the Trojan War.",
+          "et": "Parise otsuses annab Paris kuldõuna Aphroditele ning seda valikut seostatakse Trooja sõja puhkemisega."
         },
         "source": {
-          "sourceId": "wikipedia:deflationary_theory_of_truth",
-          "title": "Deflationary theory of truth",
-          "url": "https://en.wikipedia.org/wiki/Deflationary_theory_of_truth",
+          "sourceId": "wikipedia:judgement_of_paris",
+          "title": "Judgement of Paris",
+          "url": "https://en.wikipedia.org/wiki/Judgement_of_Paris",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-052:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:theories-of-truth:medium:theory:consensus-theory-of-truth",
+        "factKey": "buddha:mara-temptation-before-awakening",
         "tier": 5,
-        "subjectKey": "theory:consensus-theory-of-truth",
+        "subjectKey": "test:buddha-mara",
         "clue": {
-          "en": "Theory of truth links validity with agreement under ideal conditions of inquiry or discourse. What is it called?",
-          "et": "Milline tõeteooria seob kehtivuse kokkuleppega ideaalsetes uurimis- või arutelutingimustes?"
+          "en": "As a meditating prince approaches awakening beneath a tree, a tempter attacks him with fear and desire. Name both the future enlightened teacher and the tempter.",
+          "et": "Kui mediteeriv prints läheneb puu all virgumisele, ründab kiusaja teda hirmu ja ihaga. Nimeta nii tulevane virgunud õpetaja kui ka kiusaja."
         },
         "response": {
-          "en": "consensus theory",
-          "et": "tõe konsensusteooria"
+          "en": "Buddha and Mara",
+          "et": "Buddha ja Mara"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Mara and Buddha",
+            "Siddhartha and Mara",
+            "Mara and Siddhartha",
+            "Siddhartha Gautama and Mara",
+            "Mara and Siddhartha Gautama"
+          ],
+          "et": [
+            "Mara ja Buddha",
+            "Siddhartha ja Mara",
+            "Mara ja Siddhartha",
+            "Siddhartha Gautama ja Mara",
+            "Mara ja Siddhartha Gautama"
+          ]
         },
         "explanation": {
-          "en": "Consensus theory requires unconstrained rational agreement rather than a simple opinion poll.",
-          "et": "Tõe konsensusteooria nõuab piiranguteta ratsionaalset kokkulepet, mitte lihtsat arvamusküsitlust."
+          "en": "Buddha resists Mara’s temptations before attaining enlightenment.",
+          "et": "Buddha peab enne virgumist vastu Mara kiusatustele."
         },
         "source": {
-          "sourceId": "wikipedia:consensus_theory_of_truth",
-          "title": "Consensus theory of truth",
-          "url": "https://en.wikipedia.org/wiki/Consensus_theory_of_truth",
+          "sourceId": "wikipedia:mara_(demon)",
+          "title": "Mara (demon)",
+          "url": "https://en.wikipedia.org/wiki/Mara_(demon)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34654,153 +34940,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-053",
     "name": {
-      "en": "What Reality Is Made Of",
-      "et": "Millest tegelikkus koosneb"
+      "en": "Sacred Sounds",
+      "et": "Pühad helid"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-053:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:metaphysical-positions:medium:theory:mind-body-dualism",
+        "factKey": "gospel:christian-black-church-music",
         "tier": 1,
-        "subjectKey": "theory:mind-body-dualism",
+        "subjectKey": "sound:gospel-music",
         "clue": {
-          "en": "Recognise the metaphysical position that holds that mind and matter are fundamentally distinct.",
-          "et": "Otsitav metafüüsiline seisukoht peab vaimu ja ainet põhimõtteliselt erinevaks. Mis see on?"
+          "en": "Which Christian music genre grew from African-American church traditions and is known for powerful lead singing and choirs?",
+          "et": "Milline kristliku muusika žanr kasvas välja afroameerika kirikutraditsioonidest ning on tuntud jõulise soololaulu ja kooride poolest?"
         },
         "response": {
-          "en": "dualism",
-          "et": "dualism"
+          "en": "gospel music",
+          "et": "gospelmuusika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "gospel"
+          ],
+          "et": [
+            "gospel"
+          ]
         },
         "explanation": {
-          "en": "Dualism faces the interaction problem of how unlike substances causally affect each other.",
-          "et": "Dualism seisab vastamisi probleemiga, kuidas erinevad substantsid põhjuslikult mõjutavad."
+          "en": "Gospel music developed strongly in African-American Christian worship and church life.",
+          "et": "Gospelmuusika arenes eriti afroameerika kristlikus jumalateenistuses ja kirikuelus."
         },
         "source": {
-          "sourceId": "wikipedia:mind%e2%80%93body_dualism",
-          "title": "Mind–body dualism",
-          "url": "https://en.wikipedia.org/wiki/Mind%E2%80%93body_dualism",
+          "sourceId": "wikipedia:gospel_music",
+          "title": "Gospel music",
+          "url": "https://en.wikipedia.org/wiki/Gospel_music",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-053:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:metaphysical-positions:medium:theory:materialism",
+        "factKey": "adhan:muezzin-minaret-five-prayers",
         "tier": 2,
-        "subjectKey": "theory:materialism",
+        "subjectKey": "sound:islamic-call-to-prayer",
         "clue": {
-          "en": "What metaphysical position holds that reality is fundamentally material or physical?",
-          "et": "Järgmine metafüüsiline seisukoht peab tegelikkust põhiliselt materiaalseks või füüsiliseks. Milline see on?"
+          "en": "A muezzin traditionally voices which summons from a mosque or minaret before the five daily Islamic prayers?",
+          "et": "Millise kutse lausub muezzin traditsiooniliselt mošeest või minaretist enne islami viit igapäevast palvust?"
         },
         "response": {
-          "en": "materialism",
-          "et": "materialism"
+          "en": "the Islamic call to prayer",
+          "et": "islami palvekutse"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Islamic call to prayer",
+            "call to prayer",
+            "adhan",
+            "azan",
+            "athan"
+          ],
+          "et": [
+            "palvekutse",
+            "adhan",
+            "azan",
+            "ataan"
+          ]
         },
         "explanation": {
-          "en": "Materialism treats mental states as dependent on or identical with physical processes.",
-          "et": "Materialism käsitleb vaimuseisundeid füüsilistest protsessidest sõltuvate või nendega samastena."
+          "en": "The adhan is the Islamic call that announces the prescribed daily prayers.",
+          "et": "Adhan ehk islami palvekutse kuulutab ette ettenähtud igapäevased palvused."
         },
         "source": {
-          "sourceId": "wikipedia:materialism",
-          "title": "Materialism",
-          "url": "https://en.wikipedia.org/wiki/Materialism",
+          "sourceId": "wikipedia:adhan",
+          "title": "Adhan",
+          "url": "https://en.wikipedia.org/wiki/Adhan",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-053:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:metaphysical-positions:medium:theory:idealism",
+        "factKey": "gregorian:monophonic-catholic-chant",
         "tier": 3,
-        "subjectKey": "theory:idealism",
+        "subjectKey": "sound:gregorian-chant",
         "clue": {
-          "en": "A metaphysical position gives mind or ideas a fundamental role in reality. Name it.",
-          "et": "Üks metafüüsiline seisukoht annab vaimule või ideedele tegelikkuses põhirolli. Millist vastust otsime?"
+          "en": "Name the Western church tradition in which monks sing unaccompanied Latin melodies in a single melodic line rather than harmony.",
+          "et": "Nimeta läänekiriku traditsioon, milles mungad laulavad saateta ladinakeelseid meloodiaid ühe meloodialiinina, mitte mitmehäälselt."
         },
         "response": {
-          "en": "idealism",
-          "et": "idealism"
+          "en": "Gregorian chant",
+          "et": "gregooriuse laul"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gregorian chanting"
+          ],
+          "et": [
+            "gregooriuse koraal"
+          ]
         },
         "explanation": {
-          "en": "Idealism ranges from Berkeley’s immaterialism to transcendental forms that structure experience.",
-          "et": "Idealism ulatub Berkeley immaterialismist kogemust struktureerivate transtsendentaalsete vormideni."
+          "en": "Gregorian chant is the monophonic liturgical chant associated with the Roman Catholic tradition.",
+          "et": "Gregooriuse laul on roomakatoliku traditsiooniga seotud ühehäälne liturgiline laul."
         },
         "source": {
-          "sourceId": "wikipedia:idealism",
-          "title": "Idealism",
-          "url": "https://en.wikipedia.org/wiki/Idealism",
+          "sourceId": "wikipedia:gregorian_chant",
+          "title": "Gregorian chant",
+          "url": "https://en.wikipedia.org/wiki/Gregorian_chant",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-053:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:metaphysical-positions:medium:theory:determinism",
+        "factKey": "hare-krishna:chant-harrison-global-fame",
         "tier": 4,
-        "subjectKey": "theory:determinism",
+        "subjectKey": "sound:hare-krishna-mantra",
         "clue": {
-          "en": "Find the metaphysical position that holds that prior conditions and laws fix what follows.",
-          "et": "Metafüüsiline seisukoht peab järgneva varasemate tingimuste ja seadustega määratuks. Leia sobiv vastus."
+          "en": "Which sixteen-word Vaishnava chant repeats the names of Krishna and Rama, became associated with ISKCON, and reached the charts through a George Harrison production?",
+          "et": "Milline 16-sõnaline vaišnava loits kordab Krishna ja Rama nimesid, seostus ISKCON-iga ning jõudis George Harrisoni produtseeritud salvestisena edetabelisse?"
         },
         "response": {
-          "en": "determinism",
-          "et": "determinism"
+          "en": "Hare Krishna mantra",
+          "et": "Hare Krishna mantra"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Hare Krishna mantra",
+            "Hare Krishna",
+            "maha-mantra",
+            "the maha-mantra"
+          ],
+          "et": [
+            "Hare Krishna",
+            "mahamantra",
+            "maha-mantra"
+          ]
         },
         "explanation": {
-          "en": "Determinism does not by itself imply predictability because systems may be chaotic or unknown.",
-          "et": "Determinism ei tähenda iseenesest ennustatavust, sest süsteem võib olla kaootiline või tundmatu."
+          "en": "The Hare Krishna mantra gained wide public recognition through ISKCON and a recording produced by George Harrison for Apple Records.",
+          "et": "Hare Krishna mantra sai laialt tuntuks ISKCON-i ja George Harrisoni Apple Recordsile produtseeritud salvestise kaudu."
         },
         "source": {
-          "sourceId": "wikipedia:determinism",
-          "title": "Determinism",
-          "url": "https://en.wikipedia.org/wiki/Determinism",
+          "sourceId": "wikipedia:hare_krishna_(mantra)",
+          "title": "Hare Krishna (mantra)",
+          "url": "https://en.wikipedia.org/wiki/Hare_Krishna_(mantra)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-053:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:metaphysical-positions:medium:concept:free-will",
+        "factKey": "shofar:ram-horn-holy-days",
         "tier": 5,
-        "subjectKey": "concept:free-will",
+        "subjectKey": "sound:shofar",
         "clue": {
-          "en": "Which metaphysical position names the capacity to choose in a way relevant to responsibility?",
-          "et": "Tuvasta järgmine metafüüsiline seisukoht: see nimetab vastutuse jaoks olulist valikuvõimet."
+          "en": "What ram’s-horn instrument is sounded in Jewish worship, especially around Rosh Hashanah and Yom Kippur?",
+          "et": "Millist jäära sarvest pilli puhutakse juudi jumalateenistustel, eriti roš hašana ja jom kipuri ajal?"
         },
         "response": {
-          "en": "free will",
-          "et": "vaba tahe"
+          "en": "shofar",
+          "et": "šofar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "šofar"
+          ],
+          "et": [
+            "shofar"
+          ]
         },
         "explanation": {
-          "en": "Free will is defended as compatible or incompatible with determinism by rival theories.",
-          "et": "Vaba tahe on eri teooriates determinismiga ühitatav või ühitamatu."
+          "en": "The shofar is a horn, traditionally made from a ram’s horn, used on major Jewish holy days.",
+          "et": "Šofar on tavaliselt jäära sarvest valmistatud pill, mida kasutatakse tähtsatel juudi pühadel."
         },
         "source": {
-          "sourceId": "wikipedia:free_will",
-          "title": "Free will",
-          "url": "https://en.wikipedia.org/wiki/Free_will",
+          "sourceId": "wikipedia:shofar",
+          "title": "Shofar",
+          "url": "https://en.wikipedia.org/wiki/Shofar",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34808,153 +35126,203 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-054",
     "name": {
-      "en": "Five Ways to Judge an Action",
-      "et": "Viis viisi teo hindamiseks"
+      "en": "Big Ideas on the Bookshelf",
+      "et": "Suured ideed raamaturiiulis"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-054:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:ethical-frameworks:medium:school:virtue-ethics",
+        "factKey": "meditations:stoic-private-notes",
         "tier": 1,
-        "subjectKey": "school:virtue-ethics",
+        "subjectKey": "book:meditations-aurelius",
         "clue": {
-          "en": "Recognise the ethical framework that asks what a good person with excellent character would do.",
-          "et": "Otsitav eetikakäsitlus küsib, mida teeks hea ja suurepärase iseloomuga inimene. Mis see on?"
+          "en": "Name both the Roman emperor and the collection of private Stoic reflections that was not originally intended as a public book.",
+          "et": "Nimeta nii Rooma keiser kui ka tema eraviisiliste stoiliste mõtiskluste kogu, mida ei kavandatud algselt avalikuks raamatuks."
         },
         "response": {
-          "en": "virtue ethics",
-          "et": "vooruseetika"
+          "en": "Marcus Aurelius and Meditations",
+          "et": "Marcus Aurelius ja Iseendale"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Meditations and Marcus Aurelius",
+            "Aurelius and Meditations",
+            "Meditations and Aurelius"
+          ],
+          "et": [
+            "Iseendale ja Marcus Aurelius",
+            "Aurelius ja Iseendale",
+            "Iseendale ja Aurelius",
+            "Marcus Aurelius ja Meditations",
+            "Meditations ja Marcus Aurelius",
+            "Aurelius ja Meditations",
+            "Meditations ja Aurelius"
+          ]
         },
         "explanation": {
-          "en": "Virtue ethics focuses on cultivated dispositions and flourishing rather than isolated rules.",
-          "et": "Vooruseetika keskendub kasvatatud kalduvustele ja õitsengule, mitte üksikreeglitele."
+          "en": "Marcus Aurelius’s Meditations gathers personal Stoic notes that were not originally written as a public book.",
+          "et": "Marcus Aureliuse „Iseendale” koondab isiklikke stoilisi märkmeid, mida ei kirjutatud algselt avaliku raamatuna."
         },
         "source": {
-          "sourceId": "wikipedia:virtue_ethics",
-          "title": "Virtue ethics",
-          "url": "https://en.wikipedia.org/wiki/Virtue_ethics",
+          "sourceId": "wikipedia:meditations",
+          "title": "Meditations",
+          "url": "https://en.wikipedia.org/wiki/Meditations",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-054:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:ethical-frameworks:medium:school:deontological-ethics",
+        "factKey": "frankl:camp-logotherapy-book",
         "tier": 2,
-        "subjectKey": "school:deontological-ethics",
+        "subjectKey": "book:frankl-search-meaning",
         "clue": {
-          "en": "Ethical framework judges actions by duties or rules, not consequences alone. What is it called?",
-          "et": "Milline eetikakäsitlus hindab tegusid kohustuste või reeglite, mitte ainult tagajärgede järgi?"
+          "en": "Name both the psychiatrist who survived Nazi concentration camps and his book connecting that experience with the human search for meaning.",
+          "et": "Nimeta nii natside koonduslaagrid üle elanud psühhiaater kui ka tema raamat, mis seob selle kogemuse inimese tähenduseotsinguga."
         },
         "response": {
-          "en": "deontology",
-          "et": "deontoloogia"
+          "en": "Viktor Frankl and Man's Search for Meaning",
+          "et": "Viktor Frankl ja … ja siiski tahta elada"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Man's Search for Meaning and Viktor Frankl",
+            "Frankl and Man's Search for Meaning",
+            "Man's Search for Meaning and Frankl"
+          ],
+          "et": [
+            "… ja siiski tahta elada ja Viktor Frankl",
+            "Frankl ja … ja siiski tahta elada",
+            "… ja siiski tahta elada ja Frankl",
+            "Viktor Frankl ja Ja siiski tahta elada",
+            "Ja siiski tahta elada ja Viktor Frankl",
+            "Viktor Frankl ja Man's Search for Meaning",
+            "Man's Search for Meaning ja Viktor Frankl",
+            "Frankl ja Man's Search for Meaning",
+            "Man's Search for Meaning ja Frankl"
+          ]
         },
         "explanation": {
-          "en": "Deontology includes Kant’s demand to act on universally acceptable maxims.",
-          "et": "Deontoloogia hõlmab Kanti nõuet tegutseda üldistatavate maksiimide järgi."
+          "en": "Viktor Frankl’s Man’s Search for Meaning combines his camp experiences with his ideas about finding meaning.",
+          "et": "Viktor Frankli „… ja siiski tahta elada” ühendab tema laagrikogemused mõtetega elu tähenduse leidmisest."
         },
         "source": {
-          "sourceId": "wikipedia:deontology",
-          "title": "Deontology",
-          "url": "https://en.wikipedia.org/wiki/Deontology",
+          "sourceId": "wikipedia:man%27s_search_for_meaning",
+          "title": "Man's Search for Meaning",
+          "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-054:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:ethical-frameworks:medium:school:utilitarianism",
+        "factKey": "on-liberty:mill-harm-freedom",
         "tier": 3,
-        "subjectKey": "school:utilitarianism",
+        "subjectKey": "book:mill-on-liberty",
         "clue": {
-          "en": "An ethical framework seeks the greatest overall well-being from available actions. What term fits?",
-          "et": "Siin kirjeldatud eetikakäsitlus otsib võimalikest tegudest suurimat üldist heaolu. Mis see on?"
+          "en": "Name both the British philosopher and his essay defending individual freedom through the principle that coercion is justified chiefly to prevent harm to others.",
+          "et": "Nimeta nii Briti filosoof kui ka tema essee, mis kaitseb isikuvabadust põhimõttega, et sund on õigustatud eelkõige teiste kahjustamise vältimiseks."
         },
         "response": {
-          "en": "utilitarianism",
-          "et": "utilitarism"
+          "en": "John Stuart Mill and On Liberty",
+          "et": "John Stuart Mill ja Vabadusest"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "On Liberty and John Stuart Mill",
+            "Mill and On Liberty",
+            "On Liberty and Mill"
+          ],
+          "et": [
+            "Vabadusest ja John Stuart Mill",
+            "Mill ja Vabadusest",
+            "Vabadusest ja Mill"
+          ]
         },
         "explanation": {
-          "en": "Utilitarianism is consequentialist and counts each affected person’s welfare impartially.",
-          "et": "Utilitarism on tagajärje-eetika ning arvestab erapooletult iga mõjutatud inimese heaolu."
+          "en": "John Stuart Mill presents his influential defence of liberty and the harm principle in On Liberty.",
+          "et": "John Stuart Mill esitab teoses „Vabadusest” mõjuka vabaduse ja kahjuprintsiibi kaitse."
         },
         "source": {
-          "sourceId": "wikipedia:utilitarianism",
-          "title": "Utilitarianism",
-          "url": "https://en.wikipedia.org/wiki/Utilitarianism",
+          "sourceId": "wikipedia:on_liberty",
+          "title": "On Liberty",
+          "url": "https://en.wikipedia.org/wiki/On_Liberty",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-054:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:ethical-frameworks:medium:school:ethics-of-care",
+        "factKey": "second-sex:foundational-feminist-book",
         "tier": 4,
-        "subjectKey": "school:ethics-of-care",
+        "subjectKey": "book:beauvoir-second-sex",
         "clue": {
-          "en": "Recognise the ethical framework that emphasises relationships, dependence, and responsive care.",
-          "et": "Otsitav eetikakäsitlus rõhutab suhteid, sõltuvust ja vastutulelikku hoolt. Mis see on?"
+          "en": "Name both the French philosopher and the landmark feminist book containing the idea that one is not born, but rather becomes, a woman.",
+          "et": "Nimeta nii Prantsuse filosoof kui ka murranguline feministlik raamat, milles öeldakse, et naiseks ei sünnita, vaid saadakse."
         },
         "response": {
-          "en": "ethics of care",
-          "et": "hoole-eetika"
+          "en": "Simone de Beauvoir and The Second Sex",
+          "et": "Simone de Beauvoir ja Teine sugupool"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "The Second Sex and Simone de Beauvoir",
+            "Beauvoir and The Second Sex",
+            "The Second Sex and Beauvoir"
+          ],
+          "et": [
+            "Teine sugupool ja Simone de Beauvoir",
+            "Beauvoir ja Teine sugupool",
+            "Teine sugupool ja Beauvoir"
+          ]
         },
         "explanation": {
-          "en": "Ethics of care criticises purely abstract moral agents detached from social bonds.",
-          "et": "Hoole-eetika kritiseerib sotsiaalsetest sidemetest lahutatud puhtalt abstraktset moraalisubjekti."
+          "en": "Simone de Beauvoir developed this influential analysis of women’s social condition in The Second Sex.",
+          "et": "Simone de Beauvoir käsitles naiste ühiskondlikku olukorda mõjukalt teoses „Teine sugupool”."
         },
         "source": {
-          "sourceId": "wikipedia:ethics_of_care",
-          "title": "Ethics of care",
-          "url": "https://en.wikipedia.org/wiki/Ethics_of_care",
+          "sourceId": "wikipedia:the_second_sex",
+          "title": "The Second Sex",
+          "url": "https://en.wikipedia.org/wiki/The_Second_Sex",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-054:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:ethical-frameworks:medium:school:stoicism",
+        "factKey": "arendt:banality-evil-trial-report",
         "tier": 5,
-        "subjectKey": "school:stoicism",
+        "subjectKey": "book:arendt-eichmann-jerusalem",
         "clue": {
-          "en": "What ethical framework teaches virtue and disciplined judgement about what lies in our control?",
-          "et": "Järgmine eetikakäsitlus õpetab voorust ja distsiplineeritud hinnangut sellele, mis on meie kontrollis. Milline see on?"
+          "en": "Name both the political thinker and her report on a Nazi official’s trial that introduced the disputed phrase “the banality of evil.”",
+          "et": "Nimeta nii poliitikamõtleja kui ka tema reportaaž natsiametniku kohtuprotsessist, mis tõi käibele vaieldud väljendi „kurjuse banaalsus”."
         },
         "response": {
-          "en": "Stoicism",
-          "et": "stoitsism"
+          "en": "Hannah Arendt and Eichmann in Jerusalem",
+          "et": "Hannah Arendt ja Eichmann Jeruusalemmas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Eichmann in Jerusalem and Hannah Arendt",
+            "Arendt and Eichmann in Jerusalem",
+            "Eichmann in Jerusalem and Arendt"
+          ],
+          "et": [
+            "Eichmann Jeruusalemmas ja Hannah Arendt",
+            "Arendt ja Eichmann Jeruusalemmas",
+            "Eichmann Jeruusalemmas ja Arendt"
+          ]
         },
         "explanation": {
-          "en": "Stoicism distinguishes external events from the assent we give to impressions.",
-          "et": "Stoitsism eristab väliseid sündmusi nõusolekust, mille anname muljetele."
+          "en": "Hannah Arendt’s Eichmann in Jerusalem grew from her reporting on Adolf Eichmann’s trial and used the subtitle about the banality of evil.",
+          "et": "Hannah Arendti „Eichmann Jeruusalemmas” kasvas välja Adolf Eichmanni kohtuprotsessi kajastusest ja kasutas kurjuse banaalsusele viitavat alapealkirja."
         },
         "source": {
-          "sourceId": "wikipedia:stoicism",
-          "title": "Stoicism",
-          "url": "https://en.wikipedia.org/wiki/Stoicism",
+          "sourceId": "wikipedia:eichmann_in_jerusalem",
+          "title": "Eichmann in Jerusalem",
+          "url": "https://en.wikipedia.org/wiki/Eichmann_in_Jerusalem",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
@@ -34962,153 +35330,185 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-055",
     "name": {
-      "en": "Ideas behind Political Authority",
-      "et": "Poliitilise võimu taga olevad ideed"
+      "en": "Thinkers in Everyday Adjectives",
+      "et": "Mõtlejad igapäevastes omadussõnades"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-055:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:political-philosophy:medium:concept:social-contract",
+        "factKey": "platonic-love:name-from-plato",
         "tier": 1,
-        "subjectKey": "concept:social-contract",
+        "subjectKey": "word:plato-platonic",
         "clue": {
-          "en": "This political-philosophy concept explains political authority through actual or hypothetical agreement. What is it?",
-          "et": "See poliitikafilosoofia mõiste seletab poliitilist võimu tegeliku või hüpoteetilise kokkuleppega. Mis see on?"
+          "en": "Name both the Greek thinker and the adjective used for a close relationship that is affectionate but explicitly non-romantic.",
+          "et": "Nimeta nii Kreeka mõtleja kui ka omadussõna lähedase suhte kohta, mis on hell, kuid selgelt mitteromantiline."
         },
         "response": {
-          "en": "social contract",
-          "et": "ühiskondlik leping"
+          "en": "Plato and platonic",
+          "et": "Platon ja platooniline"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "platonic and Plato"
+          ],
+          "et": [
+            "platooniline ja Platon"
+          ]
         },
         "explanation": {
-          "en": "Social contract is developed differently by Hobbes, Locke, Rousseau, and later thinkers.",
-          "et": "Ühiskondlik leping on Hobbesil, Locke’il, Rousseau’l ja hilisematel mõtlejatel eri kujul."
+          "en": "Platonic love and friendship take their adjective from Plato, although the modern usage has developed beyond his own texts.",
+          "et": "Platooniline armastus ja sõprus on saanud omadussõna Platoni nimest, kuigi tänapäevane kasutus on tema tekstidest edasi arenenud."
         },
         "source": {
-          "sourceId": "wikipedia:social_contract",
-          "title": "Social contract",
-          "url": "https://en.wikipedia.org/wiki/Social_contract",
+          "sourceId": "wikipedia:platonic_love",
+          "title": "Platonic love",
+          "url": "https://en.wikipedia.org/wiki/Platonic_love",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-055:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:political-philosophy:medium:concept:natural-rights",
+        "factKey": "freudian-slip:name-from-freud",
         "tier": 2,
-        "subjectKey": "concept:natural-rights",
+        "subjectKey": "word:freud-freudian",
         "clue": {
-          "en": "What political-philosophy concept belong to persons independently of a particular government’s grant?",
-          "et": "Järgmine poliitikafilosoofia mõiste kuuluvad inimesele sõltumata konkreetse valitsuse antud loast. Milline see on?"
+          "en": "A revealing slip of the tongue is commonly described with an adjective derived from which thinker associated with psychoanalysis? Name both thinker and adjective.",
+          "et": "Kõneviga, mis justkui paljastab varjatud mõtte, kirjeldatakse sageli psühhoanalüüsiga seotud mõtleja nimest tuletatud omadussõnaga. Nimeta nii mõtleja kui ka omadussõna."
         },
         "response": {
-          "en": "natural rights",
-          "et": "loomulikud õigused"
+          "en": "Freud and Freudian",
+          "et": "Freud ja freudistlik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Freudian and Freud",
+            "Sigmund Freud and Freudian",
+            "Freudian and Sigmund Freud"
+          ],
+          "et": [
+            "freudistlik ja Freud",
+            "Freud ja freudilik",
+            "freudilik ja Freud",
+            "Sigmund Freud ja freudistlik",
+            "freudistlik ja Sigmund Freud"
+          ]
         },
         "explanation": {
-          "en": "Natural rights contrast with legal rights created by enacted institutions.",
-          "et": "Loomulikud õigused erinevad kehtestatud institutsioonide loodud juriidilistest õigustest."
+          "en": "A Freudian slip is named for Sigmund Freud and is interpreted in psychoanalytic theory as revealing unconscious material.",
+          "et": "Freudistlik ehk freudilik keelevääratus on saanud nime Sigmund Freudilt ning seda tõlgendatakse psühhoanalüüsis alateadvuse ilminguna."
         },
         "source": {
-          "sourceId": "wikipedia:natural_rights_and_legal_rights",
-          "title": "Natural rights and legal rights",
-          "url": "https://en.wikipedia.org/wiki/Natural_rights_and_legal_rights",
+          "sourceId": "wikipedia:freudian_slip",
+          "title": "Freudian slip",
+          "url": "https://en.wikipedia.org/wiki/Freudian_slip",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-055:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:political-philosophy:medium:concept:general-will",
+        "factKey": "machiavellian:scheming-adjective",
         "tier": 3,
-        "subjectKey": "concept:general-will",
+        "subjectKey": "word:machiavelli-machiavellian",
         "clue": {
-          "en": "One political-philosophy concept is Rousseau’s idea of citizens willing the common good. Which one is described?",
-          "et": "Poliitikafilosoofia mõiste on Rousseau idee kodanikest, kes tahavad ühist hüve. Mis see on?"
+          "en": "A ruthless political schemer may be described with an adjective derived from which Florentine thinker? Name both the person and adjective.",
+          "et": "Halastamatut poliitilist intriganti võib kirjeldada ühe Firenze mõtleja nimest tuletatud omadussõnaga. Nimeta nii inimene kui ka omadussõna."
         },
         "response": {
-          "en": "general will",
-          "et": "üldtahe"
+          "en": "Machiavelli and Machiavellian",
+          "et": "Machiavelli ja makjavellistlik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Machiavellian and Machiavelli"
+          ],
+          "et": [
+            "makjavellistlik ja Machiavelli",
+            "Machiavelli ja machiavellilik",
+            "machiavellilik ja Machiavelli"
+          ]
         },
         "explanation": {
-          "en": "General will is not merely the sum of private preferences he called the will of all.",
-          "et": "Üldtahe ei ole pelgalt erahuvidest koosnev kõigi tahe."
+          "en": "Machiavellian describes manipulative, calculating conduct and derives from Niccolò Machiavelli’s name.",
+          "et": "Makjavellistlik ehk machiavellilik kirjeldab manipuleerivat ja kalkuleerivat käitumist ning tuleneb Niccolò Machiavelli nimest."
         },
         "source": {
-          "sourceId": "wikipedia:general_will",
-          "title": "General will",
-          "url": "https://en.wikipedia.org/wiki/General_will",
+          "sourceId": "wikipedia:machiavellianism_(psychology)",
+          "title": "Machiavellianism (psychology)",
+          "url": "https://en.wikipedia.org/wiki/Machiavellianism_(psychology)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-055:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:political-philosophy:medium:concept:original-position",
+        "factKey": "epicurean:pleasure-adjective",
         "tier": 4,
-        "subjectKey": "concept:original-position",
+        "subjectKey": "word:epicurus-epicurean",
         "clue": {
-          "en": "Recognise the political-philosophy concept that asks people behind a veil of ignorance to choose principles of justice.",
-          "et": "Otsitav poliitikafilosoofia mõiste palub teadmatuse loori taga valida õigluse põhimõtted. Mis see on?"
+          "en": "A modern lover of refined food and pleasure is called by an adjective derived from which ancient Greek thinker? Name both thinker and adjective.",
+          "et": "Nüüdisaegset hea toidu ja naudingute hindajat nimetatakse ühe Vana-Kreeka mõtleja nimest tuleneva omadussõnaga. Nimeta nii mõtleja kui ka omadussõna."
         },
         "response": {
-          "en": "original position",
-          "et": "algpositsioon"
+          "en": "Epicurus and epicurean",
+          "et": "Epikuros ja epikuurlik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "epicurean and Epicurus"
+          ],
+          "et": [
+            "epikuurlik ja Epikuros"
+          ]
         },
         "explanation": {
-          "en": "Original position is Rawls’s device for excluding knowledge of one’s social advantages.",
-          "et": "Algpositsioon on Rawlsi vahend teadmise välistamiseks enda ühiskondlikest eelistest."
+          "en": "Epicurean derives from Epicurus, although his philosophy valued modest, durable pleasure rather than luxury alone.",
+          "et": "Epikuurlik tuleneb Epikurose nimest, kuigi tema filosoofia väärtustas pigem mõõdukat ja kestvat naudingut kui pelgalt luksust."
         },
         "source": {
-          "sourceId": "wikipedia:original_position",
-          "title": "Original position",
-          "url": "https://en.wikipedia.org/wiki/Original_position",
+          "sourceId": "wikipedia:epicureanism",
+          "title": "Epicureanism",
+          "url": "https://en.wikipedia.org/wiki/Epicureanism",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-055:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:political-philosophy:medium:school:anarchism",
+        "factKey": "cartesian:coordinates-named-for-descartes",
         "tier": 5,
-        "subjectKey": "school:anarchism",
+        "subjectKey": "word:descartes-cartesian",
         "clue": {
-          "en": "Political-philosophy concept questions coercive hierarchy and the necessity of the state. What is it called?",
-          "et": "Milline poliitikafilosoofia mõiste seab kahtluse alla sunniva hierarhia ja riigi vajalikkuse?"
+          "en": "The familiar x–y coordinate system uses an adjective referring to which French philosopher and mathematician? Name both person and adjective.",
+          "et": "Millisele Prantsuse filosoofile ja matemaatikule viitab tuttava x–y-koordinaatide süsteemi omadussõna? Nimeta nii inimene kui ka omadussõna."
         },
         "response": {
-          "en": "anarchism",
-          "et": "anarhism"
+          "en": "Descartes and Cartesian",
+          "et": "Descartes ja kartesiaanlik"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Cartesian and Descartes",
+            "René Descartes and Cartesian",
+            "Cartesian and René Descartes"
+          ],
+          "et": [
+            "kartesiaanlik ja Descartes",
+            "René Descartes ja kartesiaanlik",
+            "kartesiaanlik ja René Descartes"
+          ]
         },
         "explanation": {
-          "en": "Anarchism includes mutualist, collectivist, communist, and individualist traditions.",
-          "et": "Anarhism hõlmab mutualistlikke, kollektivistlikke, kommunistlikke ja individualistlikke traditsioone."
+          "en": "The Cartesian coordinate system is named for René Descartes, whose work linked algebra with geometry.",
+          "et": "Kartesiaanlik koordinaatsüsteem on saanud nime René Descartes’i järgi, kelle töö sidus algebra geomeetriaga."
         },
         "source": {
-          "sourceId": "wikipedia:anarchism",
-          "title": "Anarchism",
-          "url": "https://en.wikipedia.org/wiki/Anarchism",
+          "sourceId": "wikipedia:cartesian_coordinate_system",
+          "title": "Cartesian coordinate system",
+          "url": "https://en.wikipedia.org/wiki/Cartesian_coordinate_system",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-02"
         }
       }
     ]
