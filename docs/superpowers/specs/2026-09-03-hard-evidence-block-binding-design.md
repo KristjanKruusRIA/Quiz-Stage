@@ -105,7 +105,7 @@ Hard 095–100 additionally requires:
 5. Obtain an independent full review of the complete 089–094 artifact. Any Critical or Important finding rejects it.
 6. Build 095–100 with the same approved architecture and content-specific replacements.
 7. Obtain an independent full review of the complete 095–100 artifact.
-8. Build one combined 089–100 preflight with exactly 12 sets, 60 rows, 180 propositions, 180 block bindings, and complete cross-slate collision axes.
+8. Build one combined 089–100 preflight with exactly 12 sets, 60 rows, 180 propositions, 180 proposition-binding records, at least 180 block digests, and complete cross-slate collision axes.
 9. Obtain both full and bilingual/target-audience approval of the exact combined candidate.
 10. Only then render the production bank, run production reviews and Windows-only branch-wide verification, and make the authorized local bank commit. Do not push without a new explicit instruction.
 
@@ -113,7 +113,7 @@ Hard 095–100 additionally requires:
 
 The evidence architecture is accepted only when fresh evidence proves:
 
-- exact 12/60/180/180 inventory and all six mutation taxonomies;
+- exact 12 sets / 60 rows / 180 propositions / 180 proposition-binding records, at least 180 block digests, and all six mutation taxonomies;
 - every source route, final/canonical identity, provider, article kind, publisher, and license/copyright classification;
 - exact whole-block SHA-256 presence and order for all 180 propositions;
 - zero hidden, navigation, gallery, caption, reference, other-language, parser/debug, or CSS-hidden leakage;
