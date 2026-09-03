@@ -41305,157 +41305,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-089",
     "name": {
-      "en": "Rhythms and Objects of Buddhist Devotion",
-      "et": "Budistliku pühendumuse rütmid ja esemed"
+      "en": "Ancient Rome on the Modern Calendar",
+      "et": "Vana-Rooma tänapäeva kalendris"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-089:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:festival:magha-puja",
+        "factKey": "mythology-hard:089:1:march-name-from-roman-martius-mars",
         "tier": 1,
-        "subjectKey": "festival:magha-puja",
+        "subjectKey": "month-name:march",
         "clue": {
-          "en": "Which Theravāda festival recalls an unplanned gathering of 1,250 enlightened disciples before the Buddha?",
-          "et": "Milline theravaada püha meenutab 1250 virgunud jüngri etteteatamata kogunemist Buddha juurde?"
+          "en": "Which English month name comes from Roman Martius, named for Mars, the Roman god of war?",
+          "et": "Millise kuu ingliskeelne nimi pärineb Rooma nimetusest Martius, mis sai nime sõjajumal Marsi järgi?"
         },
         "response": {
-          "en": "Māgha Pūjā",
-          "et": "Māgha Pūjā"
+          "en": "March",
+          "et": "märts"
         },
         "acceptedVariants": {
-          "en": [
-            "Magha Puja"
-          ],
-          "et": [
-            "Magha Puja"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Māgha Pūjā highlights the Buddha’s summary of discipline: avoid evil, cultivate good, and purify the mind.",
-          "et": "Māgha Pūjā rõhutab Buddha distsipliinikokkuvõtet: väldi kurja, arenda head ja puhasta meel."
+          "en": "March comes from Martius, which was named for Mars, the Roman god of war.",
+          "et": "Märtsi ingliskeelne nimi March pärineb Martiusest, mis sai nime Rooma sõjajumala Marsi järgi."
         },
         "source": {
-          "sourceId": "wikipedia:m%c4%81gha_p%c5%abj%c4%81",
-          "title": "Māgha Pūjā",
-          "url": "https://en.wikipedia.org/wiki/M%C4%81gha_P%C5%ABj%C4%81",
+          "sourceId": "wikipedia-en:March",
+          "title": "March",
+          "url": "https://en.wikipedia.org/wiki/March",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-089:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:festival:kathina",
+        "factKey": "mythology-hard:089:2:january-name-from-janus-beginnings",
         "tier": 2,
-        "subjectKey": "festival:kathina",
+        "subjectKey": "month-name:january",
         "clue": {
-          "en": "At which Theravāda ceremony do lay communities offer cloth and robes after the rains retreat?",
-          "et": "Millisel theravaada tseremoonial annavad ilmikud pärast vihmaperioodi eraldumist riiet ja rüüsid?"
+          "en": "Which month is named for Janus, the Roman god of beginnings and transitions?",
+          "et": "Milline kuu on nimetatud Rooma alguste ja üleminekute jumala Januse järgi?"
         },
         "response": {
-          "en": "Kathina",
-          "et": "kathina"
+          "en": "January",
+          "et": "jaanuar"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Kathina strengthens reciprocal ties between a monastery and its supporters.",
-          "et": "Kathina tugevdab kloostri ja selle toetajate vastastikuseid sidemeid."
+          "en": "January takes its name from Janus, whose domains included beginnings and transitions.",
+          "et": "Jaanuari ingliskeelne nimi January pärineb Januselt, kelle valdkonda kuulusid algused ja üleminekud."
         },
         "source": {
-          "sourceId": "wikipedia:kathina",
-          "title": "Kathina",
-          "url": "https://en.wikipedia.org/wiki/Kathina",
+          "sourceId": "wikipedia-en:January",
+          "title": "January",
+          "url": "https://en.wikipedia.org/wiki/January",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-089:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:observance:uposatha",
+        "factKey": "mythology-hard:089:3:september-septem-old-seventh-modern-ninth",
         "tier": 3,
-        "subjectKey": "observance:uposatha",
+        "subjectKey": "month-name:september",
         "clue": {
-          "en": "What recurring Buddhist observance day is devoted to intensified practice and monastic rule recitation?",
-          "et": "Milline korduv budistlik pühitsuspäev on pühendatud süvendatud praktikale ja kloostrireegli ettelugemisele?"
+          "en": "Which month keeps a name from Latin septem, “seven,” inherited from the oldest Roman calendar?",
+          "et": "Millise kuu nimi pärineb vanimast Rooma kalendrist ning ladina sõnast septem „seitse“?"
         },
         "response": {
-          "en": "Uposatha",
-          "et": "uposatha"
+          "en": "September",
+          "et": "september"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Uposatha follows lunar phases and may involve extra precepts for lay practitioners.",
-          "et": "Uposatha järgib kuufaase ning võib ilmikutele tuua lisatõotusi."
+          "en": "September kept the name of its old seventh-place position even after it became the ninth month.",
+          "et": "September säilitas vana seitsmenda koha nime ka pärast seda, kui sellest sai üheksas kuu."
         },
         "source": {
-          "sourceId": "wikipedia:uposatha",
-          "title": "Uposatha",
-          "url": "https://en.wikipedia.org/wiki/Uposatha",
+          "sourceId": "wikipedia-en:September",
+          "title": "September",
+          "url": "https://en.wikipedia.org/wiki/September",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-089:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:object:prayer-wheel",
+        "factKey": "mythology-hard:089:4:may-qualified-maia-association",
         "tier": 4,
-        "subjectKey": "object:prayer-wheel",
+        "subjectKey": "month-name:may",
         "clue": {
-          "en": "Which rotating cylinder contains or displays mantras in Tibetan Buddhist practice?",
-          "et": "Milline pöörlev silinder sisaldab või kannab mantraid Tiibeti budistlikus praktikas?"
+          "en": "Which month was named for a Greek goddess later identified with the Roman-era fertility goddess Bona Dea?",
+          "et": "Milline kuu nimetati kreeka jumalanna järgi, keda hiljem samastati Rooma ajastu viljakusjumalanna Bona Deaga?"
         },
         "response": {
-          "en": "prayer wheel",
-          "et": "palveratas"
+          "en": "May",
+          "et": "mai"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Turning a prayer wheel is treated as a meritorious way of circulating sacred formulae.",
-          "et": "Palveratta pööramist peetakse teenekaks viisiks pühade vormelite ringlusse saatmisel."
+          "en": "May is traditionally linked to Maia, identified with the fertility goddess Bona Dea.",
+          "et": "Mai on pärimuses seotud Maiaga, keda samastati viljakusjumalanna Bona Deaga."
         },
         "source": {
-          "sourceId": "wikipedia:prayer_wheel",
-          "title": "Prayer wheel",
-          "url": "https://en.wikipedia.org/wiki/Prayer_wheel",
+          "sourceId": "wikipedia-en:May",
+          "title": "May",
+          "url": "https://en.wikipedia.org/wiki/May",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-089:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:diagram:mandala",
+        "factKey": "mythology-hard:089:5:february-name-from-februa-purification",
         "tier": 5,
-        "subjectKey": "diagram:mandala",
+        "subjectKey": "month-name:february",
         "clue": {
-          "en": "What geometric sacred diagram represents a cosmos or enlightened realm in tantric ritual?",
-          "et": "Milline geomeetriline pühadiagramm kujutab tantristlikus rituaalis kosmost või virgunud valda?"
+          "en": "Which month’s English name descends through its Roman name from a Latin purification term linked to a purification rite?",
+          "et": "Millise kuu ingliskeelne nimi pärineb roomaaegsest nimest ning ladina puhastamist tähistavast sõnast, mis seostub puhastusrituaaliga?"
         },
         "response": {
-          "en": "mandala",
-          "et": "mandala"
+          "en": "February",
+          "et": "veebruar"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "A sand mandala may be deliberately dismantled to demonstrate impermanence.",
-          "et": "Liivamandala võidakse kaduvuse näitamiseks teadlikult laiali pühkida."
+          "en": "February derives from Februarius and the purification rite called Februa.",
+          "et": "Veebruari nimi pärineb nimetusest Februarius ja puhastusrituaalist Februa."
         },
         "source": {
-          "sourceId": "wikipedia:mandala",
-          "title": "Mandala",
-          "url": "https://en.wikipedia.org/wiki/Mandala",
+          "sourceId": "wikipedia-en:February",
+          "title": "February",
+          "url": "https://en.wikipedia.org/wiki/February",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -41463,153 +41459,172 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-090",
     "name": {
-      "en": "What Can Count as Knowledge?",
-      "et": "Mida saab pidada teadmiseks?"
+      "en": "Nature That Looks Like Magic",
+      "et": "Loodus, mis paistab maagiana"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-090:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:gettier",
+        "factKey": "mythology-hard:090:1:ball-lightning-unexplained-luminous-sphere",
         "tier": 1,
-        "subjectKey": "problem:gettier",
+        "subjectKey": "atmospheric-phenomenon:ball-lightning",
         "clue": {
-          "en": "Which problem uses lucky true beliefs to challenge the idea that knowledge is justified true belief?",
-          "et": "Milline probleem kasutab õnneliku juhuse tõttu tõeseid uskumusi, et vaidlustada teadmise määratlus õigustatud tõese uskumusena?"
+          "en": "What rare, unexplained phenomenon is reported as a luminous sphere near thunderstorms that lasts longer than a lightning flash?",
+          "et": "Millist haruldast seletamata nähtust kirjeldatakse äikese ajal helendava kerana, mis kestab välgusähvatusest kauem?"
         },
         "response": {
-          "en": "Gettier problem",
-          "et": "Gettieri probleem"
+          "en": "ball lightning",
+          "et": "keravälk"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Gettier cases suggest that justification, truth, and belief may all be present without knowledge.",
-          "et": "Gettieri juhtumid näitavad, et õigustus, tõesus ja uskumus võivad esineda ilma teadmiseta."
+          "en": "Ball lightning reports describe long-lived luminous spheres associated with thunderstorms.",
+          "et": "Keravälgu kirjeldustes esinevad äikesega seotud, tavavälgust kauem püsivad helendavad kerad."
         },
         "source": {
-          "sourceId": "wikipedia:gettier_problem",
-          "title": "Gettier problem",
-          "url": "https://en.wikipedia.org/wiki/Gettier_problem",
+          "sourceId": "wikipedia-en:Ball_lightning",
+          "title": "Ball lightning",
+          "url": "https://en.wikipedia.org/wiki/Ball_lightning",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-090:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:position:skepticism",
+        "factKey": "mythology-hard:090:2:moonbow-moonlight-water-droplets",
         "tier": 2,
-        "subjectKey": "position:skepticism",
+        "subjectKey": "atmospheric-phenomenon:moonbow",
         "clue": {
-          "en": "Which position doubts whether some or all claims to knowledge can be adequately justified?",
-          "et": "Milline seisukoht kahtleb, kas mõnda või kõiki teadmispüüdlusi saab piisavalt õigustada?"
+          "en": "What rainbow made by moonlight is most visible under a dark sky and can form in waterfall spray?",
+          "et": "Milline kuuvalgusest tekkiv vikerkaar paistab kõige paremini tumeda taeva all ja võib moodustuda joapritsmetes?"
         },
         "response": {
-          "en": "philosophical skepticism",
-          "et": "filosoofiline skeptitsism"
+          "en": "moonbow",
+          "et": "kuuvikerkaar"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "lunar rainbow"
+          ],
+          "et": [
+            "lunar rainbow"
+          ]
         },
         "explanation": {
-          "en": "Skeptical arguments test ordinary assumptions about perception, memory, and inference.",
-          "et": "Skeptilised argumendid panevad proovile tavalised eeldused taju, mälu ja järeldamise kohta."
+          "en": "A moonbow is a lunar-light rainbow; waterfall mist can supply the droplets that form it.",
+          "et": "Kuuvikerkaar tekib kuuvalgusest ning joaudu võib anda selle moodustamiseks vajalikud veepiisad."
         },
         "source": {
-          "sourceId": "wikipedia:philosophical_skepticism",
-          "title": "Philosophical skepticism",
-          "url": "https://en.wikipedia.org/wiki/Philosophical_skepticism",
+          "sourceId": "wikipedia-en:Moonbow",
+          "title": "Moonbow",
+          "url": "https://en.wikipedia.org/wiki/Moonbow",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-090:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:theory:infinitism",
+        "factKey": "mythology-hard:090:3:earthquake-lights-reported-seismic-glow",
         "tier": 3,
-        "subjectKey": "theory:infinitism",
+        "subjectKey": "atmospheric-phenomenon:earthquake-light",
         "clue": {
-          "en": "Which epistemological view allows justification to proceed through an endless non-repeating chain of reasons?",
-          "et": "Milline epistemoloogiline vaade lubab õigustusel jätkuda lõputus mittekorduvas põhjenduste ahelas?"
+          "en": "What reported luminous phenomenon has been seen before, during or after earthquakes, although its causes remain debated?",
+          "et": "Millist kirjeldatud valgusnähtust on nähtud enne maavärinat, selle ajal või järel, kuigi selle põhjused on endiselt vaieldavad?"
         },
         "response": {
-          "en": "infinitism",
-          "et": "infinitism"
+          "en": "earthquake lights",
+          "et": "maavärinatuled"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "earthquake light"
+          ],
+          "et": [
+            "maavärinatuli"
+          ]
         },
         "explanation": {
-          "en": "Infinitism rejects both an unjustified foundation and a circular stopping point.",
-          "et": "Infinitism lükkab tagasi nii õigustamata aluse kui ringse lõpp-punkti."
+          "en": "Earthquake lights are reported around seismic activity, but their mechanism remains disputed.",
+          "et": "Maavärinatulesid on kirjeldatud seismilise tegevuse ümber, kuid nende tekkemehhanism on endiselt vaieldav."
         },
         "source": {
-          "sourceId": "wikipedia:infinitism",
-          "title": "Infinitism",
-          "url": "https://en.wikipedia.org/wiki/Infinitism",
+          "sourceId": "wikipedia-en:Earthquake_light",
+          "title": "Earthquake light",
+          "url": "https://en.wikipedia.org/wiki/Earthquake_light",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-090:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:theory:internalism",
+        "factKey": "mythology-hard:090:4:will-o-wisp-bog-light-folklore-hypotheses",
         "tier": 4,
-        "subjectKey": "theory:internalism",
+        "subjectKey": "folklore-phenomenon:will-o-the-wisp",
         "clue": {
-          "en": "Which view requires factors that justify a belief to be accessible from the believer’s own perspective?",
-          "et": "Milline vaade nõuab, et uskumust õigustavad tegurid oleksid uskujale tema enda vaatepunktist ligipääsetavad?"
+          "en": "What folklore ghost light is said to mislead night travellers over bogs, swamps and marshes?",
+          "et": "Milline pärimuslik kummitusvalgus eksitab väidetavalt öiseid rändureid soode ja rabade kohal?"
         },
         "response": {
-          "en": "epistemic internalism",
-          "et": "episteemiline internalism"
+          "en": "will-o'-the-wisp",
+          "et": "virvatuli"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "will-o-the-wisp",
+            "will o' the wisp"
+          ],
+          "et": [
+            "will-o-the-wisp",
+            "will o' the wisp"
+          ]
         },
         "explanation": {
-          "en": "Epistemic internalism contrasts with externalist accounts such as many forms of reliabilism.",
-          "et": "Episteemiline internalism vastandub eksternalistlikele käsitlustele, näiteks paljudele reliabilismi vormidele."
+          "en": "The will-o’-the-wisp belongs to bog-light folklore; proposed natural explanations include biological and chemical light.",
+          "et": "Virvatuli kuulub sootuledes räägitava pärimuse hulka; looduslike seletuste seas on bio- ja kemoluminestsents."
         },
         "source": {
-          "sourceId": "wikipedia:internalism_and_externalism",
-          "title": "Internalism and externalism",
-          "url": "https://en.wikipedia.org/wiki/Internalism_and_externalism",
+          "sourceId": "wikipedia-en:Will-o'-the-wisp",
+          "title": "Will-o'-the-wisp",
+          "url": "https://en.wikipedia.org/wiki/Will-o'-the-wisp",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-090:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:theory:reliabilism",
+        "factKey": "mythology-hard:090:5:st-elmos-fire-masts-corona-sailors",
         "tier": 5,
-        "subjectKey": "theory:reliabilism",
+        "subjectKey": "atmospheric-phenomenon:st-elmos-fire",
         "clue": {
-          "en": "Which theory treats a belief as justified when produced by a generally truth-conducive process?",
-          "et": "Milline teooria peab uskumust õigustatuks, kui selle tekitab üldiselt tõeni viiv protsess?"
+          "en": "What corona-discharge glow, noticeable especially during thunderstorms, bears the name of sailors’ patron St. Erasmus?",
+          "et": "Milline eeskätt äikese ajal märgatav koroonalahendusena tekkiv kuma kannab meremeeste kaitsepühaku Erasmuse nime?"
         },
         "response": {
-          "en": "reliabilism",
-          "et": "reliabilism"
+          "en": "St. Elmo's fire",
+          "et": "Püha Elmo tuli"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "St Elmo's fire",
+            "Saint Elmo's fire"
+          ],
+          "et": [
+            "püha Elmo tuli"
+          ]
         },
         "explanation": {
-          "en": "Reliabilism shifts attention from reasons accessible to the believer toward the performance of belief-forming methods.",
-          "et": "Reliabilism nihutab tähelepanu uskujale kättesaadavatelt põhjendustelt uskumusi loovate meetodite töökindlusele."
+          "en": "St. Elmo’s fire is luminous plasma from a corona discharge and was treated by sailors as an omen.",
+          "et": "Püha Elmo tuli on koroonalahendusest tekkiv helendav plasma, mida meremehed pidasid endemärgiks."
         },
         "source": {
-          "sourceId": "wikipedia:reliabilism",
-          "title": "Reliabilism",
-          "url": "https://en.wikipedia.org/wiki/Reliabilism",
+          "sourceId": "wikipedia-en:St._Elmo's_fire",
+          "title": "St. Elmo's fire",
+          "url": "https://en.wikipedia.org/wiki/St._Elmo's_fire",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -41617,153 +41632,167 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-091",
     "name": {
-      "en": "The Furniture of Reality",
-      "et": "Reaalsuse põhivarustus"
+      "en": "Believers and Thinkers in Math Class",
+      "et": "Uskujad ja mõtlejad matemaatikatunnis"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-091:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:universals",
+        "factKey": "mythology-hard:091:1:john-wallis-introduced-infinity-symbol-1655",
         "tier": 1,
-        "subjectKey": "problem:universals",
+        "subjectKey": "mathematical-symbol:infinity",
         "clue": {
-          "en": "Which debate asks whether shared properties such as redness exist beyond particular red things?",
-          "et": "Milline vaidlus küsib, kas ühised omadused nagu punasus eksisteerivad peale üksikute punaste asjade?"
+          "en": "John Wallis is credited with introducing what mathematical sign, which he popularised in a treatise published in 1655?",
+          "et": "Millise matemaatilise märgi kasutuselevõtt omistatakse John Wallisele ja mida ta populariseeris 1655. aastal avaldatud traktaadis?"
         },
         "response": {
-          "en": "problem of universals",
-          "et": "universaalide probleem"
+          "en": "infinity symbol",
+          "et": "lõpmatuse sümbol"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "infinity sign"
+          ],
+          "et": [
+            "lõpmatuse märk"
+          ]
         },
         "explanation": {
-          "en": "Realism, nominalism, and conceptualism give different accounts of universals.",
-          "et": "Realism, nominalism ja kontseptualism seletavad universaale erinevalt."
+          "en": "Wallis is credited with introducing the infinity symbol; he popularised it in a treatise published in 1655.",
+          "et": "Wallisele omistatakse lõpmatuse sümboli kasutuselevõtt; ta populariseeris seda 1655. aastal avaldatud traktaadis."
         },
         "source": {
-          "sourceId": "wikipedia:problem_of_universals",
-          "title": "Problem of universals",
-          "url": "https://en.wikipedia.org/wiki/Problem_of_universals",
+          "sourceId": "wikipedia-en:John_Wallis",
+          "title": "John Wallis",
+          "url": "https://en.wikipedia.org/wiki/John_Wallis",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-091:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:substance",
+        "factKey": "mythology-hard:091:2:pythagorean-theorem-namesake-religious-school",
         "tier": 2,
-        "subjectKey": "concept:substance",
+        "subjectKey": "mathematical-theorem:pythagorean",
         "clue": {
-          "en": "What metaphysical category denotes a thing that bears properties while persisting through change?",
-          "et": "Milline metafüüsiline kategooria tähistab omaduste kandjat, mis püsib muutuste läbi?"
+          "en": "Which right-triangle theorem bears the name of an ancient Greek philosopher whose political and religious teachings were well known in Magna Graecia?",
+          "et": "Milline täisnurkse kolmnurga teoreem kannab vana-Kreeka filosoofi nime, kelle poliitilised ja usulised õpetused olid Magna Graecias hästi tuntud?"
         },
         "response": {
-          "en": "substance",
-          "et": "substants"
+          "en": "Pythagorean theorem",
+          "et": "Pythagorase teoreem"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pythagoras' theorem",
+            "Pythagoras theorem"
+          ],
+          "et": [
+            "Pythagoras' theorem",
+            "Pythagoras theorem"
+          ]
         },
         "explanation": {
-          "en": "Substance theories contrast independently existing subjects with dependent properties or modes.",
-          "et": "Substantsiteooriad vastandavad iseseisvalt eksisteeriva kandja sõltuvate omaduste või viisidega."
+          "en": "The Pythagorean theorem relates the squares on a right triangle’s sides and carries Pythagoras’s name.",
+          "et": "Pythagorase teoreem seob täisnurkse kolmnurga külgedele ehitatud ruutude pindalad."
         },
         "source": {
-          "sourceId": "wikipedia:substance_theory",
-          "title": "Substance theory",
-          "url": "https://en.wikipedia.org/wiki/Substance_theory",
+          "sourceId": "wikipedia-en:Pythagoras",
+          "title": "Pythagoras",
+          "url": "https://en.wikipedia.org/wiki/Pythagoras",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-091:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:causation",
+        "factKey": "mythology-hard:091:3:venn-diagram-1880-pedagogical-tool-priest",
         "tier": 3,
-        "subjectKey": "problem:causation",
+        "subjectKey": "diagram:venn",
         "clue": {
-          "en": "Which relation is debated through regularity, counterfactual, process, and power theories?",
-          "et": "Millist seost käsitlevad seaduspärasuse, kontrafaktuaalsed, protsessi- ja väeteooriad?"
+          "en": "What overlapping-circle teaching diagram was introduced in 1880 by an English logician who was also an Anglican priest?",
+          "et": "Millise kattuvate ringidega õppevahendi tutvustas 1880. aastal inglise loogik, kes oli ka anglikaani vaimulik?"
         },
         "response": {
-          "en": "causation",
-          "et": "põhjuslikkus"
+          "en": "Venn diagram",
+          "et": "Venni diagramm"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Philosophers ask whether causes necessitate effects or merely change their probability.",
-          "et": "Filosoofid küsivad, kas põhjused teevad tagajärje paratamatuks või muudavad ainult selle tõenäosust."
+          "en": "John Venn introduced the diagram that bears his name as a pedagogical tool.",
+          "et": "John Venn tutvustas oma nime kandvat diagrammi õppevahendina."
         },
         "source": {
-          "sourceId": "wikipedia:causality",
-          "title": "Causality",
-          "url": "https://en.wikipedia.org/wiki/Causality",
+          "sourceId": "wikipedia-en:John_Venn",
+          "title": "John Venn",
+          "url": "https://en.wikipedia.org/wiki/John_Venn",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-091:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:framework:possible-worlds",
+        "factKey": "mythology-hard:091:4:pascals-triangle-pensees-wager",
         "tier": 4,
-        "subjectKey": "framework:possible-worlds",
+        "subjectKey": "mathematical-array:pascals-triangle",
         "clue": {
-          "en": "What framework evaluates necessity as truth in every alternative way reality could be?",
-          "et": "Milline raamistik käsitleb paratamatust tõesusena kõigis alternatiivsetes viisides, kuidas reaalsus võiks olla?"
+          "en": "What triangular table of binomial coefficients bears the name of the French author of Pensées and its famous wager?",
+          "et": "Milline binoomkordajate kolmnurkne tabel kannab prantsuse „Mõtete“ ja kuulsa kihlveo autori nime?"
         },
         "response": {
-          "en": "possible worlds",
-          "et": "võimalikud maailmad"
+          "en": "Pascal's triangle",
+          "et": "Pascali kolmnurk"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Pascal triangle"
+          ],
+          "et": [
+            "Pascal triangle"
+          ]
         },
         "explanation": {
-          "en": "Possible-world semantics also defines possibility as truth in at least one such world.",
-          "et": "Võimalike maailmade semantika määratleb võimalikkuse tõesusena vähemalt ühes sellises maailmas."
+          "en": "Pascal’s triangle arranges binomial coefficients and is named for Blaise Pascal.",
+          "et": "Pascali kolmnurk paigutab binoomkordajad tabelisse ning kannab Blaise Pascali nime."
         },
         "source": {
-          "sourceId": "wikipedia:possible_world",
-          "title": "Possible world",
-          "url": "https://en.wikipedia.org/wiki/Possible_world",
+          "sourceId": "wikipedia-en:Blaise_Pascal",
+          "title": "Blaise Pascal",
+          "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-091:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:problem:fission",
+        "factKey": "mythology-hard:091:5:boolean-algebra-boole-laws-thought-computing",
         "tier": 5,
-        "subjectKey": "problem:fission",
+        "subjectKey": "mathematical-system:boolean-algebra",
         "clue": {
-          "en": "Which identity problem imagines one person’s psychology continuing equally into two future people?",
-          "et": "Milline samasuse probleem kujutab ühe inimese psühholoogia võrdset jätkumist kahes tulevases inimeses?"
+          "en": "What true-and-false algebra, set out by the author of The Laws of Thought, became fundamental to digital electronics?",
+          "et": "Milline tõe ja vääruse algebra, mille looja esitas raamatus „Mõtteseadused“, sai digielektroonika aluseks?"
         },
         "response": {
-          "en": "fission problem",
-          "et": "hargnemisprobleem"
+          "en": "Boolean algebra",
+          "et": "Boole'i algebra"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Parfit uses fission to argue that psychological continuity may matter even when strict identity cannot branch.",
-          "et": "Parfit kasutab hargnemist väitmaks, et psühholoogiline järjepidevus võib olla tähtis ka siis, kui range samasus ei saa jaguneda."
+          "en": "George Boole developed Boolean algebra, whose two-valued logic underpins digital systems.",
+          "et": "George Boole arendas Boole’i algebra, mille kaheväärtuslik loogika on digisüsteemide alus."
         },
         "source": {
-          "sourceId": "wikipedia:derek_parfit",
-          "title": "Derek Parfit",
-          "url": "https://en.wikipedia.org/wiki/Derek_Parfit",
+          "sourceId": "wikipedia-en:Boolean_algebra",
+          "title": "Boolean algebra",
+          "url": "https://en.wikipedia.org/wiki/Boolean_algebra",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -41771,153 +41800,177 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-092",
     "name": {
-      "en": "Rival Maps of Moral Reasoning",
-      "et": "Moraaliarutluse võistlevad kaardid"
+      "en": "Sacred Histories of Everyday Greetings",
+      "et": "Igapäevaste tervituste püha ajalugu"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-092:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:theory:moral-particularism",
+        "factKey": "mythology-hard:092:1:goodbye-contraction-god-be-with-ye",
         "tier": 1,
-        "subjectKey": "theory:moral-particularism",
+        "subjectKey": "word-history:goodbye",
         "clue": {
-          "en": "Which view denies that sound moral judgment must always apply a fixed stock of universal principles?",
-          "et": "Milline vaade eitab, et hea moraaliotsustus peab alati rakendama kindlat universaalsete põhimõtete kogumit?"
+          "en": "Which English farewell contracted from the historical blessing “God be by ye”?",
+          "et": "Milline ingliskeelne hüvastijätt lühenes ajaloolisest õnnistusest „God be by ye“?"
         },
         "response": {
-          "en": "moral particularism",
-          "et": "moraalipartikularism"
+          "en": "goodbye",
+          "et": "goodbye"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "good-bye",
+            "good bye"
+          ],
+          "et": [
+            "good-bye",
+            "good bye"
+          ]
         },
         "explanation": {
-          "en": "Moral particularists hold that a feature can count for or against an action depending on context.",
-          "et": "Moraalipartikularistid leiavad, et sama tunnus võib olenevalt olukorrast kõnelda teo poolt või vastu."
+          "en": "Goodbye developed as a contraction of a blessing meaning “God be with you.”",
+          "et": "Goodbye kujunes õnnistusvormeli „Jumal olgu sinuga“ lühenemisel."
         },
         "source": {
-          "sourceId": "wikipedia:moral_particularism",
-          "title": "Moral particularism",
-          "url": "https://en.wikipedia.org/wiki/Moral_particularism",
+          "sourceId": "wikipedia-en:Valediction",
+          "title": "Valediction",
+          "url": "https://en.wikipedia.org/wiki/Valediction",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-092:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:prima-facie-duty",
+        "factKey": "mythology-hard:092:2:adios-from-a-dios-to-god",
         "tier": 2,
-        "subjectKey": "concept:prima-facie-duty",
+        "subjectKey": "word-history:adios",
         "clue": {
-          "en": "What Rossian term names a genuine moral reason that may be outweighed by a stronger duty in a conflict?",
-          "et": "Milline Rossi mõiste nimetab tõelist moraalset põhjust, mille tugevam kohustus võib konfliktis üles kaaluda?"
+          "en": "Which Spanish farewell comes from a Dios, literally “to God”?",
+          "et": "Milline hispaania hüvastijätt pärineb väljendist a Dios, sõna-sõnalt „Jumala juurde“?"
         },
         "response": {
-          "en": "prima facie duty",
-          "et": "prima facie kohustus"
+          "en": "adiós",
+          "et": "adiós"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "adios"
+          ],
+          "et": [
+            "adios"
+          ]
         },
         "explanation": {
-          "en": "A prima facie duty is binding other things equal, unlike one absolute rule without exceptions.",
-          "et": "Prima facie kohustus seob muude tingimuste võrdsuse korral, erinevalt eranditeta absoluutsest reeglist."
+          "en": "Adiós joins a with Dios and is used for goodbye or farewell.",
+          "et": "Adiós ühendab sõnad a ja Dios ning tähendab hüvastijättu."
         },
         "source": {
-          "sourceId": "wikipedia:the_right_and_the_good",
-          "title": "The Right and the Good",
-          "url": "https://en.wikipedia.org/wiki/The_Right_and_the_Good",
+          "sourceId": "wiktionary-en:adiós",
+          "title": "adiós",
+          "url": "https://en.wiktionary.org/wiki/adi%C3%B3s",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-092:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:theory:consequentialism",
+        "factKey": "mythology-hard:092:3:shalom-peace-wholeness-greeting-farewell",
         "tier": 3,
-        "subjectKey": "theory:consequentialism",
+        "subjectKey": "word-history:shalom",
         "clue": {
-          "en": "Which ethical approach makes the value of outcomes decisive for whether an act is right?",
-          "et": "Milline eetiline lähenemine teeb teo õigsuse otsustavaks aluseks tagajärgede väärtuse?"
+          "en": "Which Hebrew word for peace and well-being can mean both hello and goodbye?",
+          "et": "Milline heebrea sõna rahu ja heaolu kohta võib tähendada nii tervitust kui hüvastijättu?"
         },
         "response": {
-          "en": "consequentialism",
-          "et": "konsekventsialism"
+          "en": "shalom",
+          "et": "shalom"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "šalom"
+          ],
+          "et": [
+            "šalom"
+          ]
         },
         "explanation": {
-          "en": "Utilitarianism is an influential consequentialism, but not every consequentialist maximises total welfare.",
-          "et": "Utilitarism on mõjukas konsekventsialismi liik, kuid mitte iga konsekventsialist ei maksimeeri koguhüve."
+          "en": "Shalom covers peace, welfare and safety and is used at both meeting and parting.",
+          "et": "Shalom tähendab rahu, heaolu ja turvalisust ning seda kasutatakse nii kohtumisel kui lahkumisel."
         },
         "source": {
-          "sourceId": "wikipedia:consequentialism",
-          "title": "Consequentialism",
-          "url": "https://en.wikipedia.org/wiki/Consequentialism",
+          "sourceId": "wikipedia-en:Shalom",
+          "title": "Shalom",
+          "url": "https://en.wikipedia.org/wiki/Shalom",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-092:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:theory:feminist-ethics",
+        "factKey": "mythology-hard:092:4:salaam-arabic-shortened-greeting",
         "tier": 4,
-        "subjectKey": "theory:feminist-ethics",
+        "subjectKey": "word-history:salaam",
         "clue": {
-          "en": "Which field studies how gendered power and excluded experience shape moral theory?",
-          "et": "Milline valdkond uurib, kuidas soolistatud võim ja kõrvale jäetud kogemus kujundavad moraaliteooriat?"
+          "en": "Which colloquial short form comes from as-salamu alaykum, an Arabic-origin Muslim salutation whose use predates Islam?",
+          "et": "Milline kõnekeelne lühivorm pärineb araabia päritolu moslemite tervitusest as-salamu alaykum, mille kasutus eelneb islamile?"
         },
         "response": {
-          "en": "feminist ethics",
-          "et": "feministlik eetika"
+          "en": "salaam",
+          "et": "salaam"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "salam"
+          ],
+          "et": [
+            "salam"
+          ]
         },
         "explanation": {
-          "en": "Feminist ethics critiques supposed neutrality and develops accounts of autonomy, care, embodiment, and injustice.",
-          "et": "Feministlik eetika kritiseerib näilist neutraalsust ning arendab autonoomia, hoole, kehastumise ja ebaõigluse käsitlusi."
+          "en": "Salaam is the colloquial short form related to as-salamu alaykum.",
+          "et": "Salaam on tervituse as-salamu alaykum kõnekeelne lühivorm."
         },
         "source": {
-          "sourceId": "wikipedia:feminist_ethics",
-          "title": "Feminist ethics",
-          "url": "https://en.wikipedia.org/wiki/Feminist_ethics",
+          "sourceId": "wikipedia-en:As-salamu_alaykum",
+          "title": "As-salamu alaykum",
+          "url": "https://en.wikipedia.org/wiki/As-salamu_alaykum",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-092:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:theory:contractualism",
+        "factKey": "mythology-hard:092:5:gruss-gott-regional-blessing-greeting",
         "tier": 5,
-        "subjectKey": "theory:contractualism",
+        "subjectKey": "word-history:gruss-gott",
         "clue": {
-          "en": "Which approach tests principles by whether free and equal persons could reasonably reject them?",
-          "et": "Milline lähenemine kontrollib põhimõtteid selle järgi, kas vabad ja võrdsed inimesed võiksid need mõistlikult tagasi lükata?"
+          "en": "Which God-invoking greeting is especially common in Austria and southern Germany?",
+          "et": "Milline Jumalat nimetav tervitus on eriti levinud Austrias ja Lõuna-Saksamaal?"
         },
         "response": {
-          "en": "contractualism",
-          "et": "kontraktualism"
+          "en": "Grüß Gott",
+          "et": "Grüß Gott"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Gruss Gott",
+            "Gruess Gott"
+          ],
+          "et": [
+            "Gruss Gott",
+            "Gruess Gott"
+          ]
         },
         "explanation": {
-          "en": "Contractualism explains wrongness through justifiability to each affected person.",
-          "et": "Kontraktualism seletab väärust sellega, kas tegu saab õigustada igale mõjutatud inimesele."
+          "en": "Grüß Gott comes from a blessing wish in the Upper German-speaking region.",
+          "et": "Grüß Gott pärineb ülemsaksa keeleala õnnistussoovist."
         },
         "source": {
-          "sourceId": "wikipedia:contractualism",
-          "title": "Contractualism",
-          "url": "https://en.wikipedia.org/wiki/Contractualism",
+          "sourceId": "wikipedia-de:Grüß_Gott",
+          "title": "Grüß Gott",
+          "url": "https://de.wikipedia.org/wiki/Gr%C3%BC%C3%9F_Gott",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -41925,153 +41978,153 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-093",
     "name": {
-      "en": "Ways Philosophers Judge Art",
-      "et": "Kuidas filosoofid kunsti hindavad"
+      "en": "Belief on the Pop Charts",
+      "et": "Usk popiedetabelites"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-093:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:picturesque",
+        "factKey": "mythology-hard:093:1:like-a-prayer-madonna-gospel-video",
         "tier": 1,
-        "subjectKey": "concept:picturesque",
+        "subjectKey": "song:like-a-prayer",
         "clue": {
-          "en": "Which aesthetic category prizes irregular, varied scenery suited to being composed like a picture?",
-          "et": "Milline esteetiline kategooria hindab ebakorrapärast vaheldusrikast maastikku, mis sobib pildina komponeerimiseks?"
+          "en": "Which 1989 Madonna single combines a gospel choir with a video showing a church and Catholic imagery?",
+          "et": "Milline Madonna 1989. aasta singel ühendab gospelkoori ning kirikut ja katoliiklikku kujundikeelt näitava video?"
         },
         "response": {
-          "en": "picturesque",
-          "et": "maaliline"
+          "en": "Like a Prayer",
+          "et": "Like a Prayer"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The picturesque occupied an eighteenth-century middle ground between beauty and sublimity.",
-          "et": "Maaliline paiknes 18. sajandi esteetikas kauni ja üleva vahepeal."
+          "en": "“Like a Prayer” uses gospel voices, while its video includes a church and imagery such as stigmata.",
+          "et": "„Like a Prayer“ kasutab gospelhääli ning selle videos on kirik ja stigmade-sarnane katoliiklik kujundikeel."
         },
         "source": {
-          "sourceId": "wikipedia:picturesque",
-          "title": "Picturesque",
-          "url": "https://en.wikipedia.org/wiki/Picturesque",
+          "sourceId": "wikipedia-en:Like_a_Prayer_(song)",
+          "title": "Like a Prayer (song)",
+          "url": "https://en.wikipedia.org/wiki/Like_a_Prayer_(song)",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-093:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:theory:expression-art",
+        "factKey": "mythology-hard:093:2:losing-my-religion-rem-mandolin-idiom",
         "tier": 2,
-        "subjectKey": "theory:expression-art",
+        "subjectKey": "song:losing-my-religion",
         "clue": {
-          "en": "Which aesthetic theory treats an artwork chiefly as the articulation of emotion rather than imitation?",
-          "et": "Milline esteetikateooria käsitleb kunstiteost eeskätt emotsiooni väljendusena, mitte jäljendusena?"
+          "en": "Which 1991 R.E.M. song grew from Peter Buck’s mandolin riff and uses a Southern expression for losing one’s temper?",
+          "et": "Milline R.E.M.-i 1991. aasta laul kasvas Peter Bucki mandoliinirifist ja kasutab USA lõunaosariikide väljendit enesevalitsuse kaotamise kohta?"
         },
         "response": {
-          "en": "expression theory of art",
-          "et": "kunsti väljendusteooria"
+          "en": "Losing My Religion",
+          "et": "Losing My Religion"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Expression theories distinguish the emotion embodied in a work from a spectator’s passing feeling.",
-          "et": "Kunsti väljendusteooria eristab teoses kehastatud emotsiooni vaataja mööduvast tundest."
+          "en": "The title “Losing My Religion” is a Southern idiom, not a literal declaration about faith.",
+          "et": "Pealkiri „Losing My Religion“ on lõunaosariikide kõnekäänd, mitte sõnasõnaline usuavaldus."
         },
         "source": {
-          "sourceId": "wikipedia:expressionism",
-          "title": "Expressionism",
-          "url": "https://en.wikipedia.org/wiki/Expressionism",
+          "sourceId": "wikipedia-en:Losing_My_Religion",
+          "title": "Losing My Religion",
+          "url": "https://en.wikipedia.org/wiki/Losing_My_Religion",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-093:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:theory:formalism-art",
+        "factKey": "mythology-hard:093:3:take-me-to-church-hozier-metaphor-video",
         "tier": 3,
-        "subjectKey": "theory:formalism-art",
+        "subjectKey": "song:take-me-to-church",
         "clue": {
-          "en": "Which aesthetic theory emphasises arrangement of line, colour, shape, or sound over subject matter?",
-          "et": "Milline esteetikateooria rõhutab kujutatava teema asemel joone, värvi, kuju või heli korraldust?"
+          "en": "Which 2013 debut single by Hozier uses religious language for a relationship and has a black-and-white video about a homophobic attack?",
+          "et": "Milline Hozieri 2013. aasta debüütsingel kasutab armusuhte kirjeldamiseks religioosset sõnavara ning kujutab mustvalges videos homofoobset rünnakut?"
         },
         "response": {
-          "en": "formalism",
-          "et": "formalism"
+          "en": "Take Me to Church",
+          "et": "Take Me to Church"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Formalism locates artistic value chiefly in perceptible relations within the work.",
-          "et": "Formalism paigutab kunstilise väärtuse peamiselt teose tajutavatesse sisevahekordadesse."
+          "en": "“Take Me to Church” pairs religious terminology with a story of a same-sex relationship facing violence.",
+          "et": "„Take Me to Church“ seob religioosse sõnavara samasoolise suhte ja vägivalla looga."
         },
         "source": {
-          "sourceId": "wikipedia:formalism_(art)",
-          "title": "Formalism (art)",
-          "url": "https://en.wikipedia.org/wiki/Formalism_(art)",
+          "sourceId": "wikipedia-en:Take_Me_to_Church",
+          "title": "Take Me to Church",
+          "url": "https://en.wikipedia.org/wiki/Take_Me_to_Church",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-093:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:movement:aestheticism",
+        "factKey": "mythology-hard:093:4:personal-jesus-depeche-mode-elvis-memoir",
         "tier": 4,
-        "subjectKey": "movement:aestheticism",
+        "subjectKey": "song:personal-jesus",
         "clue": {
-          "en": "Which movement champions art’s autonomy and the slogan “art for art’s sake”?",
-          "et": "Milline suund kaitseb kunsti autonoomiat ja loosungit „kunst kunsti pärast“?"
+          "en": "Which 1989 Depeche Mode song drew on Elvis and Me and Martin Gore’s idea of being a saviour for someone else?",
+          "et": "Milline Depeche Mode’i 1989. aasta laul sai ainest raamatust „Elvis and Me“ ja Martin Gore’i mõttest olla kellegi teise päästja?"
         },
         "response": {
-          "en": "aestheticism",
-          "et": "estetism"
+          "en": "Personal Jesus",
+          "et": "Personal Jesus"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Aestheticism resisted demands that art chiefly teach morality or serve practical reform.",
-          "et": "Estetism vastustas nõuet, et kunst peab eeskätt moraali õpetama või praktilist reformi teenima."
+          "en": "Martin Gore connected “Personal Jesus” with Priscilla Presley’s memoir and personal devotion.",
+          "et": "Martin Gore seostas „Personal Jesuse“ Priscilla Presley mälestusteraamatuga Elvisest ja isikliku pühendumisega."
         },
         "source": {
-          "sourceId": "wikipedia:aestheticism",
-          "title": "Aestheticism",
-          "url": "https://en.wikipedia.org/wiki/Aestheticism",
+          "sourceId": "wikipedia-en:Personal_Jesus",
+          "title": "Personal Jesus",
+          "url": "https://en.wikipedia.org/wiki/Personal_Jesus",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-093:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:aura",
+        "factKey": "mythology-hard:093:5:jesus-he-knows-me-genesis-televangelist-satire",
         "tier": 5,
-        "subjectKey": "concept:aura",
+        "subjectKey": "song:jesus-he-knows-me",
         "clue": {
-          "en": "What term did Walter Benjamin use for an artwork’s unique presence in time and space?",
-          "et": "Millise mõistega nimetas Walter Benjamin kunstiteose ainukordset kohalolu ajas ja ruumis?"
+          "en": "Which Genesis song from the 1991 album We Can’t Dance satirizes televangelism?",
+          "et": "Milline Genesise laul 1991. aasta albumilt „We Can’t Dance“ pilab telejutlustamist?"
         },
         "response": {
-          "en": "aura",
-          "et": "aura"
+          "en": "Jesus He Knows Me",
+          "et": "Jesus He Knows Me"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Benjamin argued that mechanical reproduction weakens aura while opening new political possibilities.",
-          "et": "Benjamin väitis, et mehaaniline paljundamine nõrgendab aurat, avades samal ajal uusi poliitilisi võimalusi."
+          "en": "“Jesus He Knows Me” is a Genesis song from We Can’t Dance (1991) and a satire of televangelism.",
+          "et": "„Jesus He Knows Me“ on Genesise laul 1991. aasta albumilt „We Can’t Dance“ ning satiir teleevangelismi kohta."
         },
         "source": {
-          "sourceId": "wikipedia:the_work_of_art_in_the_age_of_mechanical_reproduction",
-          "title": "The Work of Art in the Age of Mechanical Reproduction",
-          "url": "https://en.wikipedia.org/wiki/The_Work_of_Art_in_the_Age_of_Mechanical_Reproduction",
+          "sourceId": "wikipedia-en:Jesus_He_Knows_Me",
+          "title": "Jesus He Knows Me",
+          "url": "https://en.wikipedia.org/wiki/Jesus_He_Knows_Me",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42079,157 +42132,164 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-094",
     "name": {
-      "en": "Schools of Life after Classical Athens",
-      "et": "Elukoolkonnad pärast klassikalist Ateenat"
+      "en": "Ritual and Legend in Motion",
+      "et": "Rituaal ja legend liikumises"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-094:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:apatheia",
+        "factKey": "mythology-hard:094:1:yoga-indian-spiritual-modern-exercise",
         "tier": 1,
-        "subjectKey": "concept:apatheia",
+        "subjectKey": "practice:yoga",
         "clue": {
-          "en": "What Stoic condition frees the mind from destructive passions through corrected judgment?",
-          "et": "Milline stoikute seisund vabastab meele ekslikust hinnangust sündivatest hävitavatest kirgedest?"
+          "en": "Which group of physical, mental and spiritual practices originated in ancient India and includes an exercise form based on asanas, sometimes with breathing exercises?",
+          "et": "Milline kehaliste, vaimsete ja spirituaalsete praktikate rühm pärineb muistsest Indiast ning hõlmab asenditest ja vahel ka hingamisharjutustest koosnevat treeninguvormi?"
         },
         "response": {
-          "en": "apatheia",
-          "et": "apatheia"
+          "en": "yoga",
+          "et": "jooga"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Apatheia does not mean numbness; Stoics still recognise rational and benevolent feelings.",
-          "et": "Apatheia ei tähenda tundetust, sest stoikud tunnustavad mõistlikke ja heatahtlikke tundeid."
+          "en": "Yoga developed through diverse Indian traditions; exercise-focused forms centre on asanas and may include breathing.",
+          "et": "Jooga arenes eri India traditsioonides; treeningule suunatud vormides on kesksel kohal asendid ja vahel ka hingamine."
         },
         "source": {
-          "sourceId": "wikipedia:apatheia",
-          "title": "Apatheia",
-          "url": "https://en.wikipedia.org/wiki/Apatheia",
+          "sourceId": "wikipedia-en:Yoga",
+          "title": "Yoga",
+          "url": "https://en.wikipedia.org/wiki/Yoga",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-094:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:ataraxia",
+        "factKey": "mythology-hard:094:2:sumo-shinto-salt-purification",
         "tier": 2,
-        "subjectKey": "concept:ataraxia",
+        "subjectKey": "sport:sumo",
         "clue": {
-          "en": "What calm freedom from mental disturbance did Epicureans and skeptics prize?",
-          "et": "Millist vaimse häirimatuse rahulikku seisundit hindasid epikuurlased ja skeptikud?"
+          "en": "Which Japanese full-contact wrestling form includes Shinto-linked rituals such as tossing salt into the ring?",
+          "et": "Milline Jaapani täiskontaktmaadlus sisaldab šintoga seotud rituaale, näiteks soola heitmist ringi?"
         },
         "response": {
-          "en": "ataraxia",
-          "et": "ataraksia"
+          "en": "sumo",
+          "et": "sumo"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "For Epicurus, ataraxia accompanies freedom from bodily pain and needless fear.",
-          "et": "Epikurose järgi kaasneb ataraksiaga vabadus kehalisest valust ja tarbetust hirmust."
+          "en": "Sumo wrestlers toss salt into the ring as symbolic cleansing, a ritual element linked to Shinto.",
+          "et": "Sumomaadlejad heidavad ringi soola sümboolseks puhastamiseks; see rituaalielement on seotud šintoga."
         },
         "source": {
-          "sourceId": "wikipedia:ataraxia",
-          "title": "Ataraxia",
-          "url": "https://en.wikipedia.org/wiki/Ataraxia",
+          "sourceId": "wikipedia-en:Sumo",
+          "title": "Sumo",
+          "url": "https://en.wikipedia.org/wiki/Sumo",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-094:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:parrhesia",
+        "factKey": "mythology-hard:094:3:tai-chi-slow-forms-yin-yang",
         "tier": 3,
-        "subjectKey": "concept:parrhesia",
+        "subjectKey": "martial-art:tai-chi",
         "clue": {
-          "en": "What ancient ideal of fearless frank speech was practised provocatively by Cynic philosophers?",
-          "et": "Millist kartmatu otsekõne antiikset ideaali praktiseerisid provokatiivselt küünikud?"
+          "en": "Which Chinese martial art uses gentle flowing forms and shares its name with the yin–yang cosmological relationship?",
+          "et": "Milline Hiina võitluskunst kasutab sujuvaid vorme ja jagab nime yin’i ning yang’i kosmoloogilise suhtega?"
         },
         "response": {
-          "en": "parrhesia",
-          "et": "parrhesia"
+          "en": "tai chi",
+          "et": "taiji"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "taiji",
+            "tai chi chuan"
+          ],
+          "et": [
+            "tai chi"
+          ]
         },
         "explanation": {
-          "en": "Parrhesia joins the freedom to speak with personal risk and an asserted duty to tell truth.",
-          "et": "Parrhesia ühendab kõnevabaduse isikliku riski ja väidetava kohustusega tõtt öelda."
+          "en": "Tai chi, or taiji, is practised in set sequences with gentle flowing motions; taiji also names the cosmological relationship of yin and yang.",
+          "et": "Taiji’d ehk tai chi’d harjutatakse sujuvate liigutustega kindlates vormides; taiji nimetab ka yin’i ja yang’i kosmoloogilist suhet."
         },
         "source": {
-          "sourceId": "wikipedia:parrhesia",
-          "title": "Parrhesia",
-          "url": "https://en.wikipedia.org/wiki/Parrhesia",
+          "sourceId": "wikipedia-en:Tai_chi",
+          "title": "Tai chi",
+          "url": "https://en.wikipedia.org/wiki/Tai_chi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-094:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:epoche",
+        "factKey": "mythology-hard:094:4:capoeira-music-roda-bantu-angola-roots",
         "tier": 4,
-        "subjectKey": "concept:epoche",
+        "subjectKey": "martial-art:capoeira",
         "clue": {
-          "en": "What suspension of judgment do Pyrrhonian skeptics practise when evidence is evenly balanced?",
-          "et": "Millist otsustusest hoidumist praktiseerivad pürronistid, kui tõendid on tasakaalus?"
+          "en": "Which Afro-Brazilian martial art and game combines dance, music and play inside a ceremonial roda?",
+          "et": "Milline afrobrasiilia võitluskunst ja mäng ühendab tantsu, muusika ja mängu tseremoniaalses roda-ringis?"
         },
         "response": {
-          "en": "epoché",
-          "et": "epoché"
-        },
-        "acceptedVariants": {
-          "en": [
-            "epoche"
-          ],
-          "et": [
-            "epoche"
-          ]
-        },
-        "explanation": {
-          "en": "Epoché is expected to be followed by tranquillity rather than a dogmatic conclusion.",
-          "et": "Epoché’le peaks järgnema hingerahu, mitte dogmaatiline järeldus."
-        },
-        "source": {
-          "sourceId": "wikipedia:epoch%c3%a9",
-          "title": "Epoché",
-          "url": "https://en.wikipedia.org/wiki/Epoch%C3%A9",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-094:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:school:neoplatonism",
-        "tier": 5,
-        "subjectKey": "school:neoplatonism",
-        "clue": {
-          "en": "Which late antique school describes reality as emanating from the One through Intellect and Soul?",
-          "et": "Milline hilisantiigi koolkond kirjeldab reaalsust Ühest Intellekti ja Hinge kaudu lähtuvana?"
-        },
-        "response": {
-          "en": "Neoplatonism",
-          "et": "neoplatonism"
+          "en": "capoeira",
+          "et": "capoeira"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Plotinus is the central early system-builder of Neoplatonism.",
-          "et": "Plotinos on neoplatonismi keskne varane süsteemilooja."
+          "en": "Capoeira has centuries of Black Brazilian practice and roots linked to Angolan engolo.",
+          "et": "Capoeiral on sajanditepikkune mustanahaliste brasiillaste traditsioon ning seda seostatakse Angola engolo’ga."
         },
         "source": {
-          "sourceId": "wikipedia:neoplatonism",
-          "title": "Neoplatonism",
-          "url": "https://en.wikipedia.org/wiki/Neoplatonism",
+          "sourceId": "wikipedia-en:Capoeira",
+          "title": "Capoeira",
+          "url": "https://en.wikipedia.org/wiki/Capoeira",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "retrievedAt": "2026-09-03"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-094:question:5",
+        "factKey": "mythology-hard:094:5:dragon-boat-duanwu-qu-yuan-tradition",
+        "tier": 5,
+        "subjectKey": "sport:dragon-boat-racing",
+        "clue": {
+          "en": "Which races are held to celebrate the traditional Chinese holiday Duanwu, whose best-known story in modern China commemorates Qu Yuan’s death?",
+          "et": "Milliseid võistlusi korraldatakse Hiina traditsioonilise Duanwu püha tähistamiseks, mille tuntuim lugu tänapäeva Hiinas mälestab Qu Yuani surma?"
+        },
+        "response": {
+          "en": "dragon boat racing",
+          "et": "draakonipaadisõit"
+        },
+        "acceptedVariants": {
+          "en": [
+            "dragon boating",
+            "dragon boat races"
+          ],
+          "et": [
+            "draakonipaatide võidusõit",
+            "draakonipaadi võidusõit"
+          ]
+        },
+        "explanation": {
+          "en": "Duanwu is celebrated with dragon boat races; the best-known story in modern China says the festival commemorates Qu Yuan’s death.",
+          "et": "Duanwu’d tähistatakse draakonipaadivõistlustega; tänapäeva Hiina tuntuima loo järgi mälestab püha Qu Yuani surma."
+        },
+        "source": {
+          "sourceId": "wikipedia-en:Dragon_Boat_Festival",
+          "title": "Dragon Boat Festival",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Boat_Festival",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42237,153 +42297,176 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-095",
     "name": {
-      "en": "Foundations of Modern European Thought",
-      "et": "Uusaegse Euroopa mõtte alused"
+      "en": "Faith on Campus",
+      "et": "Usk ülikoolilinnakus"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-095:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:innate-ideas",
+        "factKey": "mythology-hard:095:1:robert-de-sorbon-theology-college",
         "tier": 1,
-        "subjectKey": "concept:innate-ideas",
+        "subjectKey": "university:sorbonne",
         "clue": {
-          "en": "What ideas are claimed to belong to the mind independently of learning from sense experience?",
-          "et": "Millised ideed kuuluvad väidetavalt vaimule sõltumata meelekogemusest õppimisest?"
+          "en": "Which Paris institution takes its name from a college founded in 1253 by Robert de Sorbon?",
+          "et": "Milline Pariisi õppeasutus kannab Robert de Sorboni 1253. aastal rajatud kolleegiumi nime?"
         },
         "response": {
-          "en": "innate ideas",
-          "et": "kaasasündinud ideed"
+          "en": "Sorbonne",
+          "et": "Sorbonne"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Sorbonne"
+          ],
+          "et": [
+            "Sorbonne'i ülikool"
+          ]
         },
         "explanation": {
-          "en": "Early modern rationalists use innate structures or concepts to explain knowledge experience alone seems unable to supply.",
-          "et": "Uusaja ratsionalistid kasutavad kaasasündinud struktuure või mõisteid teadmise seletamiseks, mida kogemus üksi ei näi andvat."
+          "en": "The institution takes its name from the Collège de Sorbon, created by Robert de Sorbon in 1253.",
+          "et": "Õppeasutus on saanud nime Collège de Sorbonilt, mille Robert de Sorbon rajas 1253. aastal."
         },
         "source": {
-          "sourceId": "wikipedia:innatism",
-          "title": "Innatism",
-          "url": "https://en.wikipedia.org/wiki/Innatism",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "sorbonne:middle-ages-robert-de-sorbon",
+          "title": "The Sorbonne in the Middle Ages - La Chancellerie des Universités de Paris",
+          "url": "https://www.sorbonne.fr/en/the-sorbonne/history-of-the-sorbonne/la-fondation-de-la-sorbonne-au-moyen-age-par-le-theologien-robert-de-sorbon/",
+          "license": "Official institutional page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-095:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:tabula-rasa",
+        "factKey": "mythology-hard:095:2:uppsala-1477-archbishop-papal-permission",
         "tier": 2,
-        "subjectKey": "concept:tabula-rasa",
+        "subjectKey": "university:uppsala",
         "clue": {
-          "en": "Which “blank slate” image says the mind begins without built-in ideas and acquires content through experience?",
-          "et": "Milline „puhta tahvli“ kujund väidab, et vaim alustab sisseehitatud ideedeta ning saab sisu kogemusest?"
+          "en": "Which Swedish university opened after Pope Sixtus IV authorised Archbishop Jakob Ulvsson’s 1477 initiative?",
+          "et": "Milline Rootsi ülikool loodi pärast seda, kui paavst Sixtus IV kiitis 1477. aastal heaks peapiiskop Jakob Ulvssoni algatuse?"
         },
         "response": {
-          "en": "tabula rasa",
-          "et": "tabula rasa"
+          "en": "Uppsala University",
+          "et": "Uppsala ülikool"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "University of Uppsala",
+            "Uppsala"
+          ],
+          "et": [
+            "Uppsala University",
+            "Uppsala"
+          ]
         },
         "explanation": {
-          "en": "Locke’s use of tabula rasa rejects innate principles while retaining mental powers of reflection.",
-          "et": "Locke’i tabula rasa hülgab kaasasündinud põhimõtted, säilitades vaimu refleksioonivõimed."
+          "en": "Its foundation let Swedish clerics study at home, and theology belonged to its early teaching.",
+          "et": "Selle rajamine võimaldas Rootsi vaimulikel õppida kodumaal ning varases õppes oli ka teoloogia."
         },
         "source": {
-          "sourceId": "wikipedia:tabula_rasa",
-          "title": "Tabula rasa",
-          "url": "https://en.wikipedia.org/wiki/Tabula_rasa",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "uppsala:history-summary",
+          "title": "The history of Uppsala University – a brief summary – Uppsala University",
+          "url": "https://www.uu.se/en/about-uu/history/summary",
+          "license": "citation-only/no-open-license",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-095:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:state-of-nature",
+        "factKey": "mythology-hard:095:3:lds-flagship-institution",
         "tier": 3,
-        "subjectKey": "concept:state-of-nature",
+        "subjectKey": "university:brigham-young",
         "clue": {
-          "en": "What hypothetical pre-political condition lets contract theorists ask why government is justified?",
-          "et": "Milline hüpoteetiline poliitikaeelne seisund lubab lepinguteoreetikutel küsida, miks valitsus on õigustatud?"
+          "en": "Which Latter-day Saints flagship university makes developing students’ divine potential central to teaching and scholarship?",
+          "et": "Milline Viimse Aja Pühade lipulaevülikool peab üliõpilaste jumaliku potentsiaali arendamist õpetamise ja teadustöö keskseks osaks?"
         },
         "response": {
-          "en": "state of nature",
-          "et": "loomuseisund"
+          "en": "Brigham Young University",
+          "et": "Brigham Youngi ülikool"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "BYU"
+          ],
+          "et": [
+            "BYU",
+            "Brigham Young University"
+          ]
         },
         "explanation": {
-          "en": "Hobbes, Locke, and Rousseau describe the state of nature in sharply different ways.",
-          "et": "Hobbes, Locke ja Rousseau kirjeldavad loomuseisundit väga erinevalt."
+          "en": "Brigham Young University describes itself as the Church’s flagship higher-education institution.",
+          "et": "Brigham Youngi ülikool kirjeldab end kiriku kõrghariduse lipulaevana."
         },
         "source": {
-          "sourceId": "wikipedia:state_of_nature",
-          "title": "State of nature",
-          "url": "https://en.wikipedia.org/wiki/State_of_nature",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "byu:official-about",
+          "title": "About - BYU",
+          "url": "https://www.byu.edu/about",
+          "license": "Official institutional page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-095:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:monad",
+        "factKey": "mythology-hard:095:4:1789-oldest-catholic-jesuit",
         "tier": 4,
-        "subjectKey": "concept:monad",
+        "subjectKey": "university:georgetown",
         "clue": {
-          "en": "What simple, non-extended substance forms Leibniz’s basic unit of reality?",
-          "et": "Milline lihtne ja ruumilise ulatuseta substants on Leibnizi reaalsuse põhiühik?"
+          "en": "Which institution established in 1789 calls itself the oldest Catholic and Jesuit university in the United States?",
+          "et": "Milline 1789. aastal rajatud õppeasutus nimetab end Ameerika Ühendriikide vanimaks katoliiklikuks ja jesuiitlikuks ülikooliks?"
         },
         "response": {
-          "en": "monad",
-          "et": "monaad"
+          "en": "Georgetown University",
+          "et": "Georgetowni ülikool"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Georgetown"
+          ],
+          "et": [
+            "Georgetown"
+          ]
         },
         "explanation": {
-          "en": "Leibnizian monads do not causally interact but unfold their states in pre-established harmony.",
-          "et": "Leibnizi monaadid ei mõju põhjuslikult üksteisele, vaid avavad oma seisundeid ettemääratud harmoonias."
+          "en": "Georgetown connects its learning tradition to the legacy of Jesuit education.",
+          "et": "Georgetown seob oma õppetraditsiooni jesuiitliku hariduse pärandiga."
         },
         "source": {
-          "sourceId": "wikipedia:monadology",
-          "title": "Monadology",
-          "url": "https://en.wikipedia.org/wiki/Monadology",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "georgetown:official-about",
+          "title": "About - Georgetown University",
+          "url": "https://www.georgetown.edu/about/",
+          "license": "Official institutional page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-095:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:principle:categorical-imperative",
+        "factKey": "mythology-hard:095:5:cairo-fatimid-970-972-islamic-learning",
         "tier": 5,
-        "subjectKey": "principle:categorical-imperative",
+        "subjectKey": "university:al-azhar",
         "clue": {
-          "en": "Which Kantian command binds rational agents regardless of their particular desires?",
-          "et": "Milline Kanti käsk seob mõistuslikke toimijaid sõltumata nende konkreetsetest soovidest?"
+          "en": "Which Cairo public university was founded by the Fatimid Caliphate in 970 or 972 as a centre of Islamic learning?",
+          "et": "Millise Kairo avalik-õigusliku ülikooli rajas Fatimiidide kalifaat 970. või 972. aastal islami õpetuse keskuseks?"
         },
         "response": {
-          "en": "categorical imperative",
-          "et": "kategooriline imperatiiv"
+          "en": "Al-Azhar University",
+          "et": "Al-Azhari ülikool"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Al-Azhar"
+          ],
+          "et": [
+            "Al-Azhar"
+          ]
         },
         "explanation": {
-          "en": "One formulation requires acting only on maxims one could will as universal law.",
-          "et": "Üks sõnastus nõuab tegutsemist ainult maksiimi järgi, mida võiks tahta üldiseks seaduseks."
+          "en": "Al-Azhar is a public university in Cairo, founded by the Fatimid Caliphate in 970 or 972 as a centre of Islamic learning.",
+          "et": "Al-Azhar on Kairo avalik-õiguslik ülikool, mille Fatimiidide kalifaat rajas 970. või 972. aastal islami õpetuse keskuseks."
         },
         "source": {
-          "sourceId": "wikipedia:categorical_imperative",
-          "title": "Categorical imperative",
-          "url": "https://en.wikipedia.org/wiki/Categorical_imperative",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:al-azhar-university",
+          "title": "Al-Azhar University - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Al-Azhar_University",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42391,153 +42474,180 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-096",
     "name": {
-      "en": "Reading Experience and Meaning on the Continent",
-      "et": "Kogemuse ja tähenduse lugemine mandrifilosoofias"
+      "en": "Belief on Trial and in Controversy",
+      "et": "Usk kohtu all ja poleemikas"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-096:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:movement:phenomenology",
+        "factKey": "mythology-hard:096:1:massachusetts-1692-prosecutions",
         "tier": 1,
-        "subjectKey": "movement:phenomenology",
+        "subjectKey": "historical-event:salem-witch-trials",
         "clue": {
-          "en": "Which movement describes structures of experience as they appear to consciousness?",
-          "et": "Milline suund kirjeldab kogemuse struktuure nii, nagu need teadvusele ilmnevad?"
+          "en": "Which 1692–1693 Massachusetts proceedings accused more than 200 people of witchcraft and hanged nineteen?",
+          "et": "Millistes 1692.–1693. aasta Massachusettsi menetlustes süüdistati nõiduses üle 200 inimese ja poodi üheksateist?"
         },
         "response": {
-          "en": "phenomenology",
-          "et": "fenomenoloogia"
+          "en": "Salem witch trials",
+          "et": "Salemi nõiaprotsessid"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Salem witchcraft trials",
+            "Salem trials"
+          ],
+          "et": [
+            "Salemi nõiaprotsess"
+          ]
         },
         "explanation": {
-          "en": "Husserlian phenomenology suspends ordinary assumptions to examine how objects are given.",
-          "et": "Husserli fenomenoloogia peatab tavapärased eeldused, et uurida, kuidas objektid meile antakse."
+          "en": "The Salem witch trials combined hearings and prosecutions across colonial Massachusetts.",
+          "et": "Salemi nõiaprotsessid hõlmasid ülekuulamisi ja kohtuasju koloniaal-Massachusettsis."
         },
         "source": {
-          "sourceId": "wikipedia:phenomenology_(philosophy)",
-          "title": "Phenomenology (philosophy)",
-          "url": "https://en.wikipedia.org/wiki/Phenomenology_(philosophy)",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:salem-witch-trials",
+          "title": "Salem witch trials - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Salem_witch_trials",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-096:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:movement:existentialism",
+        "factKey": "mythology-hard:096:2:inquisition-heliocentrism-house-arrest",
         "tier": 2,
-        "subjectKey": "movement:existentialism",
+        "subjectKey": "historical-event:galileo-affair",
         "clue": {
-          "en": "Which movement explores freedom, responsibility, anxiety, and the task of making meaning?",
-          "et": "Milline suund uurib vabadust, vastutust, ängi ja tähenduse loomise ülesannet?"
+          "en": "Name the controversy in which the Roman Inquisition condemned heliocentrism and a later trial put a famous astronomer under house arrest.",
+          "et": "Nimeta vaidlus, milles Rooma inkvisitsioon mõistis hukka heliotsentrismi ning hilisem protsess saatis kuulsa astronoomi koduaresti."
         },
         "response": {
-          "en": "existentialism",
-          "et": "eksistentsialism"
+          "en": "Galileo affair",
+          "et": "Galilei protsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Galileo trial",
+            "trial of Galileo"
+          ],
+          "et": [
+            "Galilei afäär",
+            "Galileo protsess",
+            "Galileo afäär"
+          ]
         },
         "explanation": {
-          "en": "Existentialists differ widely but resist reducing concrete human existence to an abstract essence.",
-          "et": "Eksistentsialistid erinevad suuresti, kuid ei taanda konkreetset inimolemist abstraktsele olemusele."
+          "en": "The Galileo affair concerns the Inquisition’s actions against Galileo’s defence of heliocentrism.",
+          "et": "Galilei protsess käsitleb inkvisitsiooni tegevust Galilei heliotsentrismi kaitsmise vastu."
         },
         "source": {
-          "sourceId": "wikipedia:existentialism",
-          "title": "Existentialism",
-          "url": "https://en.wikipedia.org/wiki/Existentialism",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:galileo-affair",
+          "title": "Galileo affair - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Galileo_affair",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-096:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:discipline:hermeneutics",
+        "factKey": "mythology-hard:096:3:rouen-1431-nullified-1456",
         "tier": 3,
-        "subjectKey": "discipline:hermeneutics",
+        "subjectKey": "historical-event:trial-of-joan-of-arc",
         "clue": {
-          "en": "What discipline studies interpretation, especially how texts and traditions become meaningful?",
-          "et": "Milline teadusharu uurib tõlgendamist, eriti seda, kuidas tekstid ja traditsioonid tähenduse saavad?"
+          "en": "Which 1431 Rouen proceeding convicted a French heroine of heresy before a 1456 court nullified the verdict?",
+          "et": "Milline 1431. aasta Roueni menetlus mõistis Prantsuse kangelanna ketserluses süüdi, enne kui 1456. aasta kohus otsuse tühistas?"
         },
         "response": {
-          "en": "hermeneutics",
-          "et": "hermeneutika"
+          "en": "trial of Joan of Arc",
+          "et": "Jeanne d'Arci kohtuprotsess"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Joan of Arc trial"
+          ],
+          "et": [
+            "Jeanne d'Arci protsess"
+          ]
         },
         "explanation": {
-          "en": "Philosophical hermeneutics treats the interpreter’s historical situation as part of understanding.",
-          "et": "Filosoofiline hermeneutika käsitleb tõlgendaja ajaloolist olukorda mõistmise osana."
+          "en": "The trial of Joan of Arc ended in execution; the later rehabilitation trial overturned its judgment.",
+          "et": "Jeanne d’Arci kohtuprotsess lõppes hukkamisega; hilisem rehabilitatsiooniprotsess tühistas otsuse."
         },
         "source": {
-          "sourceId": "wikipedia:hermeneutics",
-          "title": "Hermeneutics",
-          "url": "https://en.wikipedia.org/wiki/Hermeneutics",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:trial-of-joan-of-arc",
+          "title": "Trial of Joan of Arc - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Trial_of_Joan_of_Arc",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-096:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:movement:structuralism",
+        "factKey": "mythology-hard:096:4:rushdie-1988-khomeini-fatwa",
         "tier": 4,
-        "subjectKey": "movement:structuralism",
+        "subjectKey": "historical-event:satanic-verses-controversy",
         "clue": {
-          "en": "Which movement explains cultural phenomena through underlying systems of relations and differences?",
-          "et": "Milline suund seletab kultuurinähtusi nende aluseks olevate suhete ja erinevuste süsteemide kaudu?"
+          "en": "Which dispute grew from Salman Rushdie’s 1988 novel into debates over censorship and violence and prompted Khomeini’s 1989 fatwa?",
+          "et": "Milline vaidlus kasvas Salman Rushdie 1988. aasta romaanist tsensuuri ja vägivalla teemaliseks poleemikaks ning tõi 1989. aastal Khomeini fatwa?"
         },
         "response": {
-          "en": "structuralism",
-          "et": "strukturalism"
+          "en": "Satanic Verses controversy",
+          "et": "„Saatanlike värsside“ poleemika"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Rushdie affair",
+            "Satanic Verses affair"
+          ],
+          "et": [
+            "Rushdie afäär",
+            "„Saatanlike värsside“ afäär"
+          ]
         },
         "explanation": {
-          "en": "Structuralism drew methods from linguistics into anthropology, criticism, and social theory.",
-          "et": "Strukturalism kandis keeleteaduse meetodeid antropoloogiasse, kriitikasse ja ühiskonnateooriasse."
+          "en": "The Satanic Verses controversy joined a literary dispute to censorship, religious violence and a death order.",
+          "et": "„Saatanlike värsside“ poleemika sidus kirjandusvaidluse tsensuuri, usuvägivalla ja tapmiskorraldusega."
         },
         "source": {
-          "sourceId": "wikipedia:structuralism",
-          "title": "Structuralism",
-          "url": "https://en.wikipedia.org/wiki/Structuralism",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:satanic-verses-controversy",
+          "title": "Satanic Verses controversy - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Satanic_Verses_controversy",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-096:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:method:deconstruction",
+        "factKey": "mythology-hard:096:5:wrongful-treason-devils-island-jaccuse",
         "tier": 5,
-        "subjectKey": "method:deconstruction",
+        "subjectKey": "historical-event:dreyfus-affair",
         "clue": {
-          "en": "Which approach associated with Derrida reads texts for unstable oppositions and meanings they cannot fully control?",
-          "et": "Milline Derridaga seotud lähenemine loeb tekstidest ebapüsivaid vastandusi ja tähendusi, mida tekst ei suuda täielikult juhtida?"
+          "en": "Which French scandal centred on a Jewish artillery officer wrongly convicted of treason, sent to Devil’s Island and supported by Zola’s J’Accuse...!?",
+          "et": "Millise Prantsuse skandaali keskmes oli juudi päritolu suurtükiväeohvitser, kes mõisteti alusetult süüdi, saadeti Kuradisaarele ja keda toetas Zola „J’accuse...!“?"
         },
         "response": {
-          "en": "deconstruction",
-          "et": "dekonstruktsioon"
+          "en": "Dreyfus affair",
+          "et": "Dreyfusi afäär"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Dreyfus case"
+          ],
+          "et": [
+            "Dreyfusi protsess",
+            "Dreyfusi juhtum"
+          ]
         },
         "explanation": {
-          "en": "Deconstruction is a practice of close reading rather than a simple claim that words mean nothing.",
-          "et": "Dekonstruktsioon on lähilugemise praktika, mitte lihtne väide, et sõnad ei tähenda midagi."
+          "en": "Zola’s open letter increased political support for Dreyfus and pressure to reopen the case.",
+          "et": "Zola avalik kiri suurendas poliitilist toetust Dreyfusile ja survet kohtuasja taasavamiseks."
         },
         "source": {
-          "sourceId": "wikipedia:deconstruction",
-          "title": "Deconstruction",
-          "url": "https://en.wikipedia.org/wiki/Deconstruction",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:dreyfus-affair",
+          "title": "Dreyfus affair - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dreyfus_affair",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42545,153 +42655,166 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-097",
     "name": {
-      "en": "How Science Draws and Revises Its Boundaries",
-      "et": "Kuidas teadus piire tõmbab ja muudab"
+      "en": "Sacred Ancestors of Given Names",
+      "et": "Eesnimede pühad esivanemad"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-097:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:corroboration",
+        "factKey": "mythology-hard:097:1:roman-hunt-moon-goddess-name",
         "tier": 1,
-        "subjectKey": "concept:corroboration",
+        "subjectKey": "given-name:diana",
         "clue": {
-          "en": "What term does Popper prefer for a theory that has survived demanding attempts to refute it?",
-          "et": "Millist mõistet eelistab Popper teooriale, mis on vastu pidanud rangetele ümberlükkamiskatsetele?"
+          "en": "Which feminine name comes from the Roman goddess of the hunt and moon and has been used since at least the Renaissance?",
+          "et": "Milline naisenimi pärineb Rooma jahi- ja kuujumalannalt ning on kasutusel olnud vähemalt renessansist saadik?"
         },
         "response": {
-          "en": "corroboration",
-          "et": "kinnitusaste"
+          "en": "Diana",
+          "et": "Diana"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Corroboration records successful testing without claiming that induction has finally verified the theory.",
-          "et": "Kinnitusaste märgib edukat katsetamist, väitmata, et induktsioon on teooria lõplikult tõestanud."
+          "en": "Diana is both the goddess’s name and a feminine given name with centuries of use.",
+          "et": "Diana on nii jumalanna nimi kui ka sajandeid kasutusel olnud naisenimi."
         },
         "source": {
-          "sourceId": "wikipedia:falsifiability",
-          "title": "Falsifiability",
-          "url": "https://en.wikipedia.org/wiki/Falsifiability",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:diana-given-name",
+          "title": "Diana (given name) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diana_(given_name)",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-097:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:concept:normal-science",
+        "factKey": "mythology-hard:097:2:hebrew-who-like-god-archangel",
         "tier": 2,
-        "subjectKey": "concept:normal-science",
+        "subjectKey": "given-name:michael",
         "clue": {
-          "en": "What Kuhnian phase solves puzzles within an accepted paradigm instead of challenging its foundations?",
-          "et": "Milline Kuhni kirjeldatud järk lahendab tunnustatud paradigma sees mõistatusi selle aluseid vaidlustamata?"
+          "en": "Which masculine name comes from a Hebrew question meaning “Who is like God?” and is borne by an archangel?",
+          "et": "Milline mehenimi pärineb heebrea küsimusest „Kes on nagu Jumal?“ ning kuulub ka peainglile?"
         },
         "response": {
-          "en": "normal science",
-          "et": "normaalteadus"
+          "en": "Michael",
+          "et": "Michael"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Miikael"
+          ],
+          "et": [
+            "Miikael"
+          ]
         },
         "explanation": {
-          "en": "Normal science extends and articulates a paradigm until persistent anomalies produce crisis.",
-          "et": "Normaalteadus laiendab ja täpsustab paradigmat, kuni püsivad anomaaliad tekitavad kriisi."
+          "en": "Michael derives from a Hebrew rhetorical question and appears as an archangel’s name in Daniel.",
+          "et": "Michael pärineb heebrea retoorilisest küsimusest ning esineb Taanieli raamatus peaingli nimena."
         },
         "source": {
-          "sourceId": "wikipedia:normal_science",
-          "title": "Normal science",
-          "url": "https://en.wikipedia.org/wiki/Normal_science",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:michael-given-name",
+          "title": "Michael (given name) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Michael_(given_name)",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-097:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:demarcation",
+        "factKey": "mythology-hard:097:3:greek-theos-doron-gift-god",
         "tier": 3,
-        "subjectKey": "problem:demarcation",
+        "subjectKey": "given-name:theodore",
         "clue": {
-          "en": "Which philosophical problem asks how science differs from non-science or pseudoscience?",
-          "et": "Milline filosoofiline probleem küsib, kuidas eristada teadust mitteteadusest või pseudoteadusest?"
+          "en": "Which masculine name joins the Greek words theos, “God,” and doron, “gift”?",
+          "et": "Milline mehenimi ühendab kreeka sõnad theos „Jumal“ ja doron „kingitus“?"
         },
         "response": {
-          "en": "demarcation problem",
-          "et": "demarkatsiooniprobleem"
+          "en": "Theodore",
+          "et": "Theodor"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Theodor"
+          ],
+          "et": [
+            "Theodore",
+            "Teodor"
+          ]
         },
         "explanation": {
-          "en": "No single demarcation criterion has won universal agreement.",
-          "et": "Ükski demarkatsioonikriteerium pole saavutanud üldist üksmeelt."
+          "en": "Theodore comes from Theódoros and literally carries the sense “gift of God.”",
+          "et": "Theodor pärineb nimest Theódoros ja tähendab sõna-sõnalt „Jumala kingitus“."
         },
         "source": {
-          "sourceId": "wikipedia:demarcation_problem",
-          "title": "Demarcation problem",
-          "url": "https://en.wikipedia.org/wiki/Demarcation_problem",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:theodore-given-name",
+          "title": "Theodore (given name) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Theodore_(given_name)",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-097:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:induction",
+        "factKey": "mythology-hard:097:4:latin-natale-domini",
         "tier": 4,
-        "subjectKey": "problem:induction",
+        "subjectKey": "given-name:natalie",
         "clue": {
-          "en": "Which Humean problem challenges the justification for projecting observed regularities into the future?",
-          "et": "Milline Hume’i probleem vaidlustab õigustuse, millega kanname vaadeldud seaduspärasused tulevikku?"
+          "en": "Which feminine name, spelled without an h after the t and ending in -ie, derives from the Latin natale domini, “birth of the Lord”?",
+          "et": "Milline naisenimi, mille kirjapildis pole t järel h-tähte ja mille lõpp on -ie, pärineb ladina väljendist natale domini „Issanda sünd“?"
         },
         "response": {
-          "en": "problem of induction",
-          "et": "induktsiooniprobleem"
+          "en": "Natalie",
+          "et": "Natalie"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Using past success to justify induction appears itself to rely on inductive reasoning.",
-          "et": "Induktsiooni õigustamine varasema eduga näib ise tuginevat induktiivsele arutlusele."
+          "en": "Natalie derives from natale domini; unlike Nathalie, the intended spelling has no h after the t and ends in -ie.",
+          "et": "Natalie pärineb väljendist natale domini; erinevalt kujust Nathalie pole soovitud kirjapildis t järel h-tähte ja nimi lõpeb tähtedega -ie."
         },
         "source": {
-          "sourceId": "wikipedia:problem_of_induction",
-          "title": "Problem of induction",
-          "url": "https://en.wikipedia.org/wiki/Problem_of_induction",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:natalie-given-name",
+          "title": "Natalie (given name) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Natalie_(given_name)",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-097:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:problem:underdetermination",
+        "factKey": "mythology-hard:097:5:dionysius-dionysus-name",
         "tier": 5,
-        "subjectKey": "problem:underdetermination",
+        "subjectKey": "given-name:dennis",
         "clue": {
-          "en": "What problem arises when the available evidence fits more than one competing theory?",
-          "et": "Milline probleem tekib, kui olemasolevad tõendid sobivad rohkem kui ühe võistleva teooriaga?"
+          "en": "Which given name came through Dionysius from Dionysus, the Greek god of wine and ecstatic states?",
+          "et": "Milline eesnimi pärineb Dionysiuse kaudu Kreeka veini- ja ekstaasijumal Dionysoselt?"
         },
         "response": {
-          "en": "underdetermination",
-          "et": "alamääratus"
+          "en": "Dennis",
+          "et": "Dennis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Denis"
+          ],
+          "et": [
+            "Denis"
+          ]
         },
         "explanation": {
-          "en": "Underdetermination raises questions about auxiliary assumptions and non-empirical theory choice.",
-          "et": "Alamääratus tõstatab küsimusi abieelduste ja mitteempiirilise teooriavaliku kohta."
+          "en": "Dennis and Denis derive from Dionysius, a name ultimately connected with Dionysus.",
+          "et": "Dennis ja Denis pärinevad Dionysiusest, kelle nimi seostub lõpuks Dionysosega."
         },
         "source": {
-          "sourceId": "wikipedia:underdetermination",
-          "title": "Underdetermination",
-          "url": "https://en.wikipedia.org/wiki/Underdetermination",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:dennis-name",
+          "title": "Dennis - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dennis",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42699,157 +42822,169 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-098",
     "name": {
-      "en": "Machines and Duplicates in the Philosophy of Mind",
-      "et": "Masinad ja teisendid vaimufilosoofias"
+      "en": "Sacred Vocabulary in Secular Life",
+      "et": "Püha sõnavara ilmalikus elus"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-098:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:experiment:inverted-spectrum",
+        "factKey": "mythology-hard:098:1:sanskrit-spiritual-guide-expert",
         "tier": 1,
-        "subjectKey": "experiment:inverted-spectrum",
+        "subjectKey": "term:guru",
         "clue": {
-          "en": "Which thought experiment imagines two people behaving alike while their colour experiences are systematically exchanged?",
-          "et": "Milline mõtteeksperiment kujutab kaht ühtmoodi käituvat inimest, kelle värvikogemused on süstemaatiliselt vahetatud?"
+          "en": "Which Sanskrit-derived word can mean mentor, master, spiritual guide or expert?",
+          "et": "Milline sanskriti päritolu sõna võib tähendada mentorit, meistrit, vaimset õpetajat või eksperti?"
         },
         "response": {
-          "en": "inverted spectrum",
-          "et": "pööratud spekter"
+          "en": "guru",
+          "et": "guru"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "The inverted spectrum tests whether qualitative experience can differ without functional or verbal difference.",
-          "et": "Pööratud spekter uurib, kas kvalitatiivne kogemus võib erineda ilma funktsionaalse või sõnalise erinevuseta."
+          "en": "Guru has a deep teaching role in Indian traditions and also a broader expert sense.",
+          "et": "Gurul on India traditsioonides sügav õpetajaroll ning sõnal on ka laiem eksperdi tähendus."
         },
         "source": {
-          "sourceId": "wikipedia:inverted_spectrum",
-          "title": "Inverted spectrum",
-          "url": "https://en.wikipedia.org/wiki/Inverted_spectrum",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:guru",
+          "title": "Guru - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Guru",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-098:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:fallacy:homunculus",
+        "factKey": "mythology-hard:098:2:polynesian-tapu-prohibition",
         "tier": 2,
-        "subjectKey": "fallacy:homunculus",
+        "subjectKey": "term:taboo",
         "clue": {
-          "en": "Which explanatory mistake places a little interpreter inside the mind and thereby repeats the original problem?",
-          "et": "Milline seletusviga asetab vaimu sisse väikese tõlgendaja ning kordab seega algset probleemi?"
+          "en": "Which English loanword for a socially enforced prohibition comes from Polynesian tapu, recorded by James Cook in Tonga?",
+          "et": "Milline ühiskondlikult jõustatud keeldu tähistav laensõna pärineb polüneesia sõnast tapu, mille James Cook Tongal üles märkis?"
         },
         "response": {
-          "en": "homunculus fallacy",
-          "et": "homunkuluse eksijäreldus"
+          "en": "taboo",
+          "et": "tabu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tabu"
+          ],
+          "et": [
+            "taboo"
+          ]
         },
         "explanation": {
-          "en": "The homunculus fallacy starts a regress because the inner observer would need another observer to explain it.",
-          "et": "Homunkuluse eksijäreldus käivitab regressi, sest sisemise vaatleja seletamiseks oleks vaja uut vaatlejat."
+          "en": "Taboo can mark what a community treats as forbidden or set apart.",
+          "et": "Tabu tähistab seda, mida kogukond peab keelatuks või puutumatuks."
         },
         "source": {
-          "sourceId": "wikipedia:homunculus_argument",
-          "title": "Homunculus argument",
-          "url": "https://en.wikipedia.org/wiki/Homunculus_argument",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:taboo",
+          "title": "Taboo - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Taboo",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-098:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:experiment:marys-room",
+        "factKey": "mythology-hard:098:3:broadway-backer-early-stage-capital",
         "tier": 3,
-        "subjectKey": "experiment:marys-room",
+        "subjectKey": "finance-term:angel-investor",
         "clue": {
-          "en": "Which thought experiment asks whether a colour scientist raised in black and white learns something on seeing red?",
-          "et": "Milline mõtteeksperiment küsib, kas mustvalges keskkonnas kasvanud värviteadlane õpib punast nähes midagi uut?"
+          "en": "Which startup financier takes a name first used for wealthy Broadway theatre backers?",
+          "et": "Milline idufirma rahastaja kannab nimetust, mida kasutati algselt jõukate Broadway teatritoetajate kohta?"
         },
         "response": {
-          "en": "Mary’s room",
-          "et": "Mary tuba"
+          "en": "angel investor",
+          "et": "ingelinvestor"
         },
         "acceptedVariants": {
           "en": [
-            "knowledge argument"
+            "business angel"
           ],
           "et": [
-            "teadmise argument"
+            "äriingel"
           ]
         },
         "explanation": {
-          "en": "The knowledge argument uses Mary to challenge a wholly physical account of conscious experience.",
-          "et": "Teadmise argument kasutab Maryt, et vaidlustada teadvuskogemuse täielikult füüsikaline seletus."
+          "en": "An angel investor provides early capital, commonly for convertible debt or equity.",
+          "et": "Ingelinvestor annab varast kapitali, tavaliselt vahetusvõlakirja või osaluse vastu."
         },
         "source": {
-          "sourceId": "wikipedia:knowledge_argument",
-          "title": "Knowledge argument",
-          "url": "https://en.wikipedia.org/wiki/Knowledge_argument",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:angel-investor",
+          "title": "Angel investor - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Angel_investor",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-098:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:experiment:teletransportation",
+        "factKey": "mythology-hard:098:4:promoter-faith-canonization-contrarian",
         "tier": 4,
-        "subjectKey": "experiment:teletransportation",
+        "subjectKey": "rhetorical-role:devils-advocate",
         "clue": {
-          "en": "Which puzzle asks whether a person destroyed and perfectly reconstructed elsewhere has survived?",
-          "et": "Milline mõistatus küsib, kas hävitatud ja mujal täiuslikult taastatud inimene jäi ellu?"
+          "en": "Which expression for arguing a position one may not hold descends from the former Catholic Promoter of the Faith?",
+          "et": "Milline väljend seisukoha kaitsmise kohta, mida kõneleja ei pruugi jagada, pärineb katoliku kiriku endiselt usu edendajalt?"
         },
         "response": {
-          "en": "teletransportation paradox",
-          "et": "teletransportatsiooni paradoks"
+          "en": "devil's advocate",
+          "et": "kuradi advokaat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "saatana advokaat"
+          ],
+          "et": [
+            "saatana advokaat"
+          ]
         },
         "explanation": {
-          "en": "Teletransportation cases test whether identity follows body, psychology, continuity, or something else.",
-          "et": "Teletransportatsiooni juhtumid uurivad, kas isikusamasus järgib keha, psühholoogiat, järjepidevust või midagi muud."
+          "en": "The historical official challenged canonizations; the modern devil’s advocate tests an opposing case.",
+          "et": "Ajalooline ametnik vaidlustas kanoniseerimisi; tänapäeva kuradi advokaat proovib vastaspoole argumenti."
         },
         "source": {
-          "sourceId": "wikipedia:teletransportation_paradox",
-          "title": "Teletransportation paradox",
-          "url": "https://en.wikipedia.org/wiki/Teletransportation_paradox",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:devils-advocate",
+          "title": "Devil's advocate - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Devil%27s_advocate",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-098:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:being:philosophical-zombie",
+        "factKey": "mythology-hard:098:5:thorndike-positive-impression-cross-domain",
         "tier": 5,
-        "subjectKey": "being:philosophical-zombie",
+        "subjectKey": "cognitive-bias:halo-effect",
         "clue": {
-          "en": "What hypothetical duplicate behaves exactly like a conscious person while lacking inner experience?",
-          "et": "Milline hüpoteetiline teisend käitub täpselt nagu teadvusega inimene, kuid tal puudub sisemine kogemus?"
+          "en": "What cognitive bias, named by Edward Thorndike, lets a positive impression in one area shape judgments in another?",
+          "et": "Milline Edward Thorndike’i nimetatud kognitiivne kallutatus laseb ühe valdkonna heal muljel mõjutada hinnangut teises?"
         },
         "response": {
-          "en": "philosophical zombie",
-          "et": "filosoofiline zombi"
+          "en": "halo effect",
+          "et": "haloefekt"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "halo bias"
+          ],
+          "et": [
+            "halo efekt"
+          ]
         },
         "explanation": {
-          "en": "The conceivability of philosophical zombies is used to argue about whether consciousness is wholly physical.",
-          "et": "Filosoofilise zombi kujutletavust kasutatakse vaidluses, kas teadvus on täielikult füüsikaline."
+          "en": "The halo effect spreads one favourable impression across otherwise separate judgments.",
+          "et": "Haloefekt kannab ühe soodsa mulje üle teistele, eraldiseisvatele hinnangutele."
         },
         "source": {
-          "sourceId": "wikipedia:philosophical_zombie",
-          "title": "Philosophical zombie",
-          "url": "https://en.wikipedia.org/wiki/Philosophical_zombie",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:halo-effect",
+          "title": "Halo effect - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Halo_effect",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -42857,153 +42992,173 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-099",
     "name": {
-      "en": "Moral Choices behind a Veil of Imagination",
-      "et": "Moraalivalikud kujutluse loori taga"
+      "en": "Religion and Symbols in Humanitarian Work",
+      "et": "Religioon ja sümbolid humanitaartöös"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-099:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:principle:double-effect",
+        "factKey": "mythology-hard:099:1:ottoman-russo-turkish-protected-emblem",
         "tier": 1,
-        "subjectKey": "principle:double-effect",
+        "subjectKey": "humanitarian-emblem:red-crescent",
         "clue": {
-          "en": "Which doctrine distinguishes harm intended as a means from harm foreseen only as a side effect?",
-          "et": "Milline doktriin eristab vahendina kavatsetud kahju üksnes ette nähtud kõrvalmõjust?"
+          "en": "Which protected humanitarian emblem did the Ottoman Empire adopt as its protective sign during the Russo-Turkish War?",
+          "et": "Millise kaitstud humanitaarembleemi võttis Osmanite riik Vene-Türgi sõja ajal kasutusele oma kaitsemärgina?"
         },
         "response": {
-          "en": "doctrine of double effect",
-          "et": "kahekordse toime doktriin"
+          "en": "Red Crescent",
+          "et": "Punane Poolkuu"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "red crescent emblem"
+          ],
+          "et": [
+            "punase poolkuu embleem"
+          ]
         },
         "explanation": {
-          "en": "The doctrine of double effect can judge outwardly similar choices differently according to intention and proportionality.",
-          "et": "Kahekordse toime doktriin võib väliselt sarnaseid valikuid kavatsuse ja proportsionaalsuse järgi erinevalt hinnata."
+          "en": "The Red Crescent became a formally recognised protective emblem in 1929.",
+          "et": "Punane Poolkuu sai 1929. aastal ametlikult tunnustatud kaitseembleemiks."
         },
         "source": {
-          "sourceId": "wikipedia:principle_of_double_effect",
-          "title": "Principle of double effect",
-          "url": "https://en.wikipedia.org/wiki/Principle_of_double_effect",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "icrc:our-emblems",
+          "title": "Our emblems | ICRC",
+          "url": "https://www.icrc.org/en/our-emblems",
+          "license": "Official humanitarian page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-099:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:experiment:veil-of-ignorance",
+        "factKey": "mythology-hard:099:2:booths-london-1878-military-style",
         "tier": 2,
-        "subjectKey": "experiment:veil-of-ignorance",
+        "subjectKey": "humanitarian-organization:salvation-army",
         "clue": {
-          "en": "Behind which Rawlsian device do people choose principles without knowing their future social position?",
-          "et": "Millise Rawlsi mõttevahendi taga valivad inimesed põhimõtteid teadmata oma tulevast ühiskondlikku positsiooni?"
+          "en": "Which Christian movement begun by William and Catherine Booth took its present military-style name in 1878?",
+          "et": "Milline William ja Catherine Boothi algatatud kristlik liikumine sai oma praeguse sõjaväelise kõlaga nime 1878. aastal?"
         },
         "response": {
-          "en": "veil of ignorance",
-          "et": "teadmatuse loor"
+          "en": "Salvation Army",
+          "et": "Päästearmee"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "the Salvation Army"
+          ],
+          "et": [
+            "the Salvation Army"
+          ]
         },
         "explanation": {
-          "en": "The veil of ignorance removes self-serving information from the original position.",
-          "et": "Teadmatuse loor eemaldab algpositsioonist omakasu teeniva teabe."
+          "en": "The Salvation Army developed ranks, titles and uniforms after the Christian Mission was renamed.",
+          "et": "Päästearmee kujundas auastmed, ametinimetused ja vormiriietuse pärast Christian Missioni ümbernimetamist."
         },
         "source": {
-          "sourceId": "wikipedia:original_position",
-          "title": "Original position",
-          "url": "https://en.wikipedia.org/wiki/Original_position",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "salvation-army:international-history",
+          "title": "History | Salvation Army International Headquarters",
+          "url": "https://www.salvationarmy.org/history",
+          "license": "Official humanitarian page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-099:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:experiment:utility-monster",
+        "factKey": "mythology-hard:099:3:christian-affordable-home-building",
         "tier": 3,
-        "subjectKey": "experiment:utility-monster",
+        "subjectKey": "humanitarian-organization:habitat-for-humanity",
         "clue": {
-          "en": "Which Nozick thought experiment imagines a being that gains vastly more pleasure from resources than everyone else?",
-          "et": "Milline Nozicki mõtteeksperiment kujutab olendit, kes saab ressurssidest kõigist teistest palju rohkem naudingut?"
+          "en": "Which Christian-founded movement brings people together to build, repair and finance decent affordable homes?",
+          "et": "Milline kristliku organisatsioonina rajatud liikumine toob inimesed kokku korralikke taskukohaseid kodusid ehitama, parandama ja rahastama?"
         },
         "response": {
-          "en": "utility monster",
-          "et": "kasulikkuskoletis"
+          "en": "Habitat for Humanity",
+          "et": "Habitat for Humanity"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Habitat"
+          ],
+          "et": [
+            "Habitat"
+          ]
         },
         "explanation": {
-          "en": "The utility monster challenges simple total utilitarianism because maximisation would direct nearly everything to one being.",
-          "et": "Kasulikkuskoletis vaidlustab lihtsa kogukasulikkuse utilitarismi, sest maksimeerimine suunaks peaaegu kõik ühele olendile."
+          "en": "Habitat for Humanity was founded in 1976 and works alongside people seeking safe, affordable housing.",
+          "et": "Habitat for Humanity rajati 1976. aastal ning see töötab koos inimestega turvalise ja taskukohase eluaseme nimel."
         },
         "source": {
-          "sourceId": "wikipedia:utility_monster",
-          "title": "Utility monster",
-          "url": "https://en.wikipedia.org/wiki/Utility_monster",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "habitat:mission-vision-principles",
+          "title": "Our mission, vision and principles | Habitat for Humanity",
+          "url": "https://www.habitat.org/about/mission-and-vision",
+          "license": "Official humanitarian page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-099:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:argument:drowning-child",
+        "factKey": "mythology-hard:099:4:christian-child-relief-development-advocacy",
         "tier": 4,
-        "subjectKey": "argument:drowning-child",
+        "subjectKey": "humanitarian-organization:world-vision",
         "clue": {
-          "en": "Which Peter Singer analogy compares distant aid with rescuing a nearby child from a shallow pond?",
-          "et": "Milline Peter Singeri analoogia võrdleb kauget abistamist lähedal madalas tiigis oleva lapse päästmisega?"
+          "en": "Which Christian relief, development and advocacy organization works with children, families and communities?",
+          "et": "Milline kristlik abi-, arengu- ja huvikaitseorganisatsioon töötab laste, perede ja kogukondadega?"
         },
         "response": {
-          "en": "drowning child argument",
-          "et": "uppuva lapse argument"
+          "en": "World Vision",
+          "et": "World Vision"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "World Vision International"
+          ],
+          "et": [
+            "World Vision International"
+          ]
         },
         "explanation": {
-          "en": "The drowning-child argument claims distance does not erase a duty to prevent grave harm at modest cost.",
-          "et": "Uppuva lapse argument väidab, et kaugus ei kaota kohust vältida väikese kuluga suurt kahju."
+          "en": "World Vision combines emergency relief, long-term community development and public advocacy.",
+          "et": "World Vision ühendab hädaabi, pikaajalise kogukonnaarengu ja avaliku huvikaitse."
         },
         "source": {
-          "sourceId": "wikipedia:famine,_affluence,_and_morality",
-          "title": "Famine, Affluence, and Morality",
-          "url": "https://en.wikipedia.org/wiki/Famine,_Affluence,_and_Morality",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "world-vision:international-faqs",
+          "title": "FAQs | World Vision International",
+          "url": "https://www.wvi.org/faqs",
+          "license": "Official humanitarian page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-099:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:experiment:lifeboat-ethics",
+        "factKey": "mythology-hard:099:5:162-member-catholic-confederation",
         "tier": 5,
-        "subjectKey": "experiment:lifeboat-ethics",
+        "subjectKey": "humanitarian-organization:caritas",
         "clue": {
-          "en": "Which metaphor treats wealthy societies as a limited-capacity boat deciding whether to admit more people?",
-          "et": "Milline metafoor käsitleb jõukaid ühiskondi piiratud mahuga paadina, mis otsustab, kas võtta veel inimesi pardale?"
+          "en": "Which Catholic-Social-Teaching-guided global network works with people facing poverty, exclusion, conflict and climate effects?",
+          "et": "Milline katoliku sotsiaalõpetusest juhinduv üleilmne võrgustik töötab vaesuse, tõrjutuse, konfliktide ja kliimamõjudega silmitsi seisvate inimestega?"
         },
         "response": {
-          "en": "lifeboat ethics",
-          "et": "päästepaadi eetika"
+          "en": "Caritas",
+          "et": "Caritas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "Caritas Internationalis"
+          ],
+          "et": [
+            "Caritas Internationalis"
+          ]
         },
         "explanation": {
-          "en": "Garrett Hardin used lifeboat ethics to argue against unrestricted sharing, drawing extensive criticism.",
-          "et": "Garrett Hardin kasutas päästepaadi eetikat piiramatu jagamise vastu ning pälvis ulatuslikku kriitikat."
+          "en": "Guided by Catholic Social Teaching, Caritas works with people facing poverty, exclusion, conflict and the effects of climate change.",
+          "et": "Katoliku sotsiaalõpetusest juhinduv Caritas töötab vaesuse, tõrjutuse, konfliktide ja kliimamuutuste mõjudega silmitsi seisvate inimestega."
         },
         "source": {
-          "sourceId": "wikipedia:lifeboat_ethics",
-          "title": "Lifeboat ethics",
-          "url": "https://en.wikipedia.org/wiki/Lifeboat_ethics",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "caritas:who-we-are",
+          "title": "Who we are - Caritas",
+          "url": "https://www.caritas.org/who-we-are/",
+          "license": "Official humanitarian page; citation-only use, all rights reserved",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
@@ -43011,157 +43166,175 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-100",
     "name": {
-      "en": "Moves and Puzzles in Logic and Language",
-      "et": "Loogika ja keele käigud ning mõistatused"
+      "en": "Who Coined the Concept?",
+      "et": "Kes mõiste vermis?"
     },
     "questions": [
       {
         "key": "built-in-mythology-religion-philosophy-set-100:question:1",
-        "factKey": "built-in-mythology-religion-philosophy:round1-overlap:form:enthymeme",
+        "factKey": "mythology-hard:100:1:dawkins-1976-cultural-transmission-unit",
         "tier": 1,
-        "subjectKey": "form:enthymeme",
+        "subjectKey": "concept:meme",
         "clue": {
-          "en": "What rhetorical argument leaves a premise or conclusion unstated because the audience is expected to supply it?",
-          "et": "Milline retooriline argument jätab eelduse või järelduse välja ütlemata, sest kuulaja peaks selle ise lisama?"
+          "en": "Which word did Richard Dawkins coin in his 1976 book The Selfish Gene for a unit of cultural transmission or imitation?",
+          "et": "Millise sõna lõi Richard Dawkins 1976. aasta raamatus „Isekas geen“ kultuurilise ülekande või jäljendamise ühiku kohta?"
         },
         "response": {
-          "en": "enthymeme",
-          "et": "entümeem"
+          "en": "meme",
+          "et": "meem"
         },
         "acceptedVariants": {
           "en": [],
           "et": []
         },
         "explanation": {
-          "en": "Aristotle treats the enthymeme as rhetoric’s counterpart to the syllogism.",
-          "et": "Aristoteles käsitleb entümeemi retoorika vastena süllogismile."
+          "en": "Dawkins introduced “meme” as a cultural counterpart to a unit that replicates through imitation.",
+          "et": "Dawkins võttis „meemi“ kasutusele kultuuriühiku kohta, mis levib jäljendamise kaudu."
         },
         "source": {
-          "sourceId": "wikipedia:enthymeme",
-          "title": "Enthymeme",
-          "url": "https://en.wikipedia.org/wiki/Enthymeme",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:meme",
+          "title": "Meme - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Meme",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-100:question:2",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:rule:modus-tollens",
+        "factKey": "mythology-hard:100:2:huxley-1869-metaphysical-society",
         "tier": 2,
-        "subjectKey": "rule:modus-tollens",
+        "subjectKey": "concept:agnosticism",
         "clue": {
-          "en": "Which valid inference argues: if P then Q; not Q; therefore not P?",
-          "et": "Milline kehtiv järelduskuju ütleb: kui P, siis Q; mitte Q; järelikult mitte P?"
+          "en": "Which position did T. H. Huxley name at the Metaphysical Society in 1869 for lacking definitive knowledge about whether God exists?",
+          "et": "Millise seisukoha nimetas T. H. Huxley 1869. aastal Metaphysical Society koosolekul, tähistamaks kindla teadmise puudumist Jumala olemasolu kohta?"
         },
         "response": {
-          "en": "modus tollens",
-          "et": "modus tollens"
+          "en": "agnosticism",
+          "et": "agnostitsism"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "agnostic philosophy"
+          ],
+          "et": [
+            "agnostitsistlik maailmavaade"
+          ]
         },
         "explanation": {
-          "en": "Modus tollens denies the consequent to reject the antecedent without committing the fallacy of affirming the consequent.",
-          "et": "Modus tollens eitab tagajärge, et lükata tagasi eeldus, tegemata tagajärje jaatamise eksiviga."
+          "en": "Huxley coined “agnosticism” for the view that humans lack capacity for definitive knowledge about God and related matters.",
+          "et": "Huxley lõi mõiste „agnostitsism“ seisukohale, et inimesel puudub võime saada kindlaid teadmisi Jumala ja sellega seotud küsimuste kohta."
         },
         "source": {
-          "sourceId": "wikipedia:modus_tollens",
-          "title": "Modus tollens",
-          "url": "https://en.wikipedia.org/wiki/Modus_tollens",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:agnosticism",
+          "title": "Agnosticism - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Agnosticism",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-100:question:3",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:paradox:liar",
+        "factKey": "mythology-hard:100:3:erikson-adolescence-role-confusion",
         "tier": 3,
-        "subjectKey": "paradox:liar",
+        "subjectKey": "concept:identity-crisis",
         "clue": {
-          "en": "Which paradox arises from a sentence that declares itself false?",
-          "et": "Milline paradoks tekib lausest, mis kuulutab iseenda vääraks?"
+          "en": "Which Erik Erikson concept describes adolescents’ deep reflection on self and the tension between identity and role confusion?",
+          "et": "Milline Erik Eriksoni mõiste kirjeldab noorukite sügavat eneseanalüüsi ning identiteedi ja rollisegaduse vastasseisu?"
         },
         "response": {
-          "en": "liar paradox",
-          "et": "valetaja paradoks"
+          "en": "identity crisis",
+          "et": "identiteedikriis"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "identity versus role confusion"
+          ],
+          "et": [
+            "identiteedi kriis",
+            "identiteet versus rollisegadus"
+          ]
         },
         "explanation": {
-          "en": "If the liar sentence is true it is false, and if false it appears true.",
-          "et": "Kui valetaja lause on tõene, on see väär, ja kui väär, näib see tõene."
+          "en": "Identity crisis belongs to Erikson’s account of adolescence; identity versus role confusion names the same response boundary here.",
+          "et": "Identiteedikriis kuulub Eriksoni noorukieakäsitlusse; siin loetakse samaväärseks ka „identiteet versus rollisegadus“."
         },
         "source": {
-          "sourceId": "wikipedia:liar_paradox",
-          "title": "Liar paradox",
-          "url": "https://en.wikipedia.org/wiki/Liar_paradox",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:identity-crisis",
+          "title": "Identity crisis - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Identity_crisis",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-100:question:4",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:speech-act",
+        "factKey": "mythology-hard:100:4:holyoake-1851-naturalistic-life",
         "tier": 4,
-        "subjectKey": "concept:speech-act",
+        "subjectKey": "concept:secularism",
         "clue": {
-          "en": "What kind of utterance performs an action such as promising, naming, or apologising?",
-          "et": "Milline lausung sooritab sellise teo nagu lubamine, nimetamine või vabandamine?"
+          "en": "What modern term means conducting life on naturalistic considerations without necessarily rejecting religion?",
+          "et": "Milline tänapäevane mõiste tähendab elu korraldamist naturalistlikel kaalutlustel, ilma religiooni tingimata eitamata?"
         },
         "response": {
-          "en": "speech act",
-          "et": "kõneakt"
+          "en": "secularism",
+          "et": "sekularism"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "ilmalikkus"
+          ],
+          "et": [
+            "ilmalikkus"
+          ]
         },
         "explanation": {
-          "en": "Speech-act theory distinguishes the words said, the act performed, and effects on an audience.",
-          "et": "Kõneaktiteooria eristab öeldud sõnu, sooritatud tegu ja mõju kuulajale."
+          "en": "Holyoake used secularism for conducting life on naturalistic considerations without necessarily rejecting religion.",
+          "et": "Holyoake kasutas sekularismi elu korraldamiseks naturalistlikel kaalutlustel, ilma religiooni tingimata eitamata."
         },
         "source": {
-          "sourceId": "wikipedia:speech_act",
-          "title": "Speech act",
-          "url": "https://en.wikipedia.org/wiki/Speech_act",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:secularism",
+          "title": "Secularism - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Secularism",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-100:question:5",
-        "factKey": "built-in-mythology-religion-philosophy:round1-hard:concept:family-resemblance",
+        "factKey": "mythology-hard:100:5:festinger-conflicting-cognitions-1957",
         "tier": 5,
-        "subjectKey": "concept:family-resemblance",
+        "subjectKey": "concept:cognitive-dissonance",
         "clue": {
-          "en": "Which Wittgensteinian idea says a concept may unite cases through overlapping similarities without one shared essence?",
-          "et": "Milline Wittgensteini idee väidab, et mõiste võib ühendada juhtumeid kattuvate sarnasuste kaudu ilma ühe ühise olemuseta?"
+          "en": "Which psychological concept links Leon Festinger to both his 1956 work When Prophecy Fails and a 1957 book devoted to that theory?",
+          "et": "Milline psühholoogiline mõiste seob Leon Festingeri tema 1956. aasta teosega „Kui ettekuulutus nurjub“ ja 1957. aasta raamatuga, mis käsitleb seda teooriat?"
         },
         "response": {
-          "en": "family resemblance",
-          "et": "perekondlik sarnasus"
+          "en": "cognitive dissonance",
+          "et": "kognitiivne dissonants"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "tunnetuslik ebakõla"
+          ],
+          "et": [
+            "tunnetuslik ebakõla"
+          ]
         },
         "explanation": {
-          "en": "Games are Wittgenstein’s famous example of a family-resemblance concept.",
-          "et": "Mängud on Wittgensteini kuulus perekondliku sarnasuse mõiste näide."
+          "en": "Festinger proposed cognitive-dissonance theory and published A Theory of Cognitive Dissonance in 1957.",
+          "et": "Festinger esitas kognitiivse dissonantsi teooria ning avaldas 1957. aastal raamatu „Kognitiivse dissonantsi teooria“."
         },
         "source": {
-          "sourceId": "wikipedia:family_resemblance",
-          "title": "Family resemblance",
-          "url": "https://en.wikipedia.org/wiki/Family_resemblance",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-28"
+          "sourceId": "wikipedia:cognitive-dissonance",
+          "title": "Cognitive dissonance - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cognitive_dissonance",
+          "license": "CC BY-SA 4.0",
+          "retrievedAt": "2026-09-03"
         }
       }
     ]
-  }
+  },
+
 ];
 
 const assignedTargets = PLAYABLE_TARGETS.filter(({ batchId }) => ASSIGNED_BATCH_IDS.has(batchId));
