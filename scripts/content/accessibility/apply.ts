@@ -18,24 +18,24 @@ const INVENTORY_COLUMNS = [
 
 const AUTHORING = {
   author: 'Codex Accessible Corpus Author',
-  authoredAt: '2026-08-28T08:00:00.000Z',
+  authoredAt: '2026-08-30T08:00:00.000Z',
 } as const;
 
 const FACTUAL_REVIEW = {
   reviewer: 'Codex Accessible Corpus Factual Reviewer',
-  reviewedAt: '2026-08-28T09:00:00.000Z',
+  reviewedAt: '2026-08-30T09:00:00.000Z',
   decision: 'approved',
 } as const;
 
 const EDITORIAL_REVIEW = {
   reviewer: 'Codex Accessible Corpus Editorial Reviewer',
-  reviewedAt: '2026-08-28T10:00:00.000Z',
+  reviewedAt: '2026-08-30T10:00:00.000Z',
   decision: 'approved',
 } as const;
 
 const TRANSLATION_REVIEW = {
   reviewer: 'Codex Accessible Corpus Translation Reviewer',
-  reviewedAt: '2026-08-28T11:00:00.000Z',
+  reviewedAt: '2026-08-30T11:00:00.000Z',
   decision: 'approved',
 } as const;
 
