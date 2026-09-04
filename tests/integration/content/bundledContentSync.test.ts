@@ -30,7 +30,7 @@ describe('bundled content synchronization', () => {
     `).run();
     database.prepare(`
       UPDATE clues SET prompt_json = '{"en":"Old specific clue","et":"Vana vihje"}'
-      WHERE id = 'built-in-history-accessible-easy-001'
+      WHERE id = 'built-in-history-accessible-corpus-131'
     `).run();
     database.prepare("UPDATE content_packs SET enabled = 0 WHERE id = 'built-in-history'").run();
     database.prepare(`
@@ -98,10 +98,10 @@ describe('bundled content synchronization', () => {
     `).pluck().get()).toBe(1_024);
     expect(database.prepare(`
       SELECT json_extract(name_json, '$.en') FROM category_sets WHERE id = 'built-in-history-set-000'
-    `).pluck().get()).toBe('History: Landmark Years in Modern History');
+    `).pluck().get()).toBe("History's Greatest Plot Twists");
     expect(database.prepare(`
-      SELECT json_extract(prompt_json, '$.en') FROM clues WHERE id = 'built-in-history-accessible-easy-001'
-    `).pluck().get()).toBe('Which year matches this event: the Berlin Wall opened?');
+      SELECT json_extract(prompt_json, '$.en') FROM clues WHERE id = 'built-in-history-accessible-corpus-131'
+    `).pluck().get()).toBe('What disaster began near Pudding Lane and burned through much of old London?');
     expect(database.prepare(`
       SELECT enabled FROM category_sets WHERE id = 'built-in-history-obsolete-set'
     `).pluck().get()).toBe(0);
