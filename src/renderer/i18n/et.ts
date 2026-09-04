@@ -110,6 +110,7 @@ export const et = {
   'game.activeClue': 'Aktiivne vihje',
   'game.timeRemaining': 'Aega jäänud',
   'game.waitingWager': 'Ootan panust',
+  'game.dailyDouble': 'Daily Double',
   'game.matchIncomplete': 'Mäng jäi pooleli',
   'game.wins': '{team} võidab',
   'game.suddenDeath': 'Otsustav lisavihje',

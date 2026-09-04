@@ -69,9 +69,11 @@ describe('game view projections', () => {
   });
 
   it('redacts an unrevealed response, Daily Double identity, and future tiebreaker content', () => {
-    const serialized = JSON.stringify(toPublicGameView(hiddenAnswerState()));
+    const publicView = toPublicGameView(hiddenAnswerState());
+    const serialized = JSON.stringify(publicView);
 
-    expect(serialized).not.toContain('daily-double');
+    expect(publicView.phase).toBe('daily-double-wager');
+    expect(publicView.activeClue).toBeNull();
     expect(serialized).not.toContain(hiddenResponse);
     expect(serialized).not.toContain('uncertainty principle');
     expect(serialized).not.toContain(hiddenDailyDoubleId);
@@ -85,9 +87,27 @@ describe('game view projections', () => {
     state.activeClue = { ...state.activeClue!, responseRevealed: true };
 
     const serialized = JSON.stringify(toPublicGameView(state));
-    expect(serialized).not.toContain('daily-double');
     expect(serialized).toContain(hiddenResponse);
     expect(serialized).not.toContain(futureTiebreakerResponse);
+  });
+
+  it('identifies the Daily Double clue phase while exposing only its public prompt', () => {
+    const state = hiddenAnswerState();
+    state.phase = 'daily-double-clue';
+    state.dailyDoubleWager = unrevealedFinalWager;
+
+    const publicView = toPublicGameView(state);
+    const serialized = JSON.stringify(publicView);
+
+    expect(publicView.phase).toBe('daily-double-clue');
+    expect(publicView.activeClue).toEqual({
+      id: 'active-clue',
+      prompt: 'This physicist formulated an uncertainty principle',
+      responseRevealed: false,
+    });
+    expect(serialized).not.toContain(hiddenDailyDoubleId);
+    expect(serialized).not.toContain(hiddenResponse);
+    expect(serialized).not.toContain(String(unrevealedFinalWager));
   });
 
   it('projects only safe independent public gameplay facts', () => {

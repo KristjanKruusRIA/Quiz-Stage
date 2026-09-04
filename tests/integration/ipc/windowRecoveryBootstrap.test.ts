@@ -114,6 +114,29 @@ function desktopHarness(coordinator: GameCoordinator) {
 }
 
 describe('recovered window state bootstrap', () => {
+  it('does not replay an untouched opening presentation in a replacement public window', async () => {
+    const { config, coordinator } = coordinatorHarness();
+    const desktop = desktopHarness(coordinator);
+    await coordinator.startMatch(config);
+    const firstPresentations: Array<string | null> = [];
+    createQuizStageApi('public', desktop.records[1].rendererIpc).subscribeToState((_view, presentation) => {
+      firstPresentations.push(presentation);
+    });
+
+    desktop.records[1].close();
+    await Promise.resolve();
+    const replacementPublic = desktop.records[2];
+    const replacementPresentations: Array<string | null> = [];
+    createQuizStageApi('public', replacementPublic.rendererIpc).subscribeToState((_view, presentation) => {
+      replacementPresentations.push(presentation);
+    });
+
+    expect(firstPresentations).toEqual(['round-intro']);
+    expect(replacementPresentations).toEqual([null]);
+    desktop.disposeIpc();
+    desktop.manager.dispose();
+  });
+
   it('delivers each replacement its current surface projection without another host command', async () => {
     const { config, coordinator, futureTiebreaker } = coordinatorHarness();
     const desktop = desktopHarness(coordinator);
@@ -149,7 +172,8 @@ describe('recovered window state bootstrap', () => {
     expect.soft(publicStates).toEqual([coordinator.getPublicView()]);
     expect.soft(JSON.stringify(hostStates)).toContain(hiddenClue.response.en);
     const publicJson = JSON.stringify(publicStates);
-    expect.soft(publicJson).not.toContain('daily-double');
+    expect.soft(publicStates[0]?.phase).toBe('daily-double-wager');
+    expect.soft(publicJson).not.toContain(dailyDoubleId);
     expect.soft(publicJson).not.toContain(hiddenClue.prompt.en);
     expect.soft(publicJson).not.toContain(hiddenClue.response.en);
     expect.soft(publicJson).not.toContain(hiddenClue.explanation.en);

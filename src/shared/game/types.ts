@@ -200,7 +200,7 @@ export type PublicActiveClue =
       source: string;
     };
 
-export type PublicGamePhase = Exclude<GamePhase, 'daily-double-wager' | 'daily-double-clue'>;
+export type PublicGamePhase = GamePhase;
 
 export interface PublicGameView {
   appVersion: typeof APP_VERSION;

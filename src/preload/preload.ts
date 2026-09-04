@@ -1,7 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron';
 import { IPC_CHANNELS } from '../main/ipc/channels';
 import type { GameCommand } from '../shared/game/commands';
-import type { HostGameView, PublicGameView } from '../shared/game/types';
 import {
   contentAvailabilitySchema,
   audioSettingsSchema,
@@ -53,20 +52,29 @@ export interface PreloadIpcPort {
 export function createQuizStageApi(surface: 'host', ipc: PreloadIpcPort): HostQuizStageApi;
 export function createQuizStageApi(surface: 'public', ipc: PreloadIpcPort): PublicQuizStageApi;
 export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPort): QuizStageApi {
-  const stateChannel = surface === 'host' ? IPC_CHANNELS.hostState : IPC_CHANNELS.publicState;
-  const readyChannel = surface === 'host' ? IPC_CHANNELS.hostReady : IPC_CHANNELS.publicReady;
-  const stateUpdateSchema = surface === 'host' ? hostStateUpdateSchema : publicStateUpdateSchema;
-  const subscribeToState = (listener: (view: HostGameView | PublicGameView) => void) => {
+  const subscribeToHostState: HostQuizStageApi['subscribeToState'] = (listener) => {
     let latestRevision = -1;
     const wrapped = (_event: unknown, value: unknown) => {
-      const update = stateUpdateSchema.parse(value);
+      const update = hostStateUpdateSchema.parse(value);
       if (update.revision <= latestRevision) return;
       latestRevision = update.revision;
       listener(update.view);
     };
-    ipc.on(stateChannel, wrapped);
-    ipc.send(readyChannel);
-    return () => ipc.removeListener(stateChannel, wrapped);
+    ipc.on(IPC_CHANNELS.hostState, wrapped);
+    ipc.send(IPC_CHANNELS.hostReady);
+    return () => ipc.removeListener(IPC_CHANNELS.hostState, wrapped);
+  };
+  const subscribeToPublicState: PublicQuizStageApi['subscribeToState'] = (listener) => {
+    let latestRevision = -1;
+    const wrapped = (_event: unknown, value: unknown) => {
+      const update = publicStateUpdateSchema.parse(value);
+      if (update.revision <= latestRevision) return;
+      latestRevision = update.revision;
+      listener(update.view, update.presentation);
+    };
+    ipc.on(IPC_CHANNELS.publicState, wrapped);
+    ipc.send(IPC_CHANNELS.publicReady);
+    return () => ipc.removeListener(IPC_CHANNELS.publicState, wrapped);
   };
   const subscribeToAppearance = (listener: (settings: import('../shared/settings/appearance').AppearanceSettings) => void, onError?: () => void) => {
     let latestRevision = -1;
@@ -84,7 +92,7 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     });
     return () => { active = false; ipc.removeListener(IPC_CHANNELS.appearanceSettingsChanged, wrapped); };
   };
-  if (surface === 'public') return { subscribeToState, subscribeToAppearance };
+  if (surface === 'public') return { subscribeToState: subscribeToPublicState, subscribeToAppearance };
   const resolvedSchema = z.strictObject({ resolved: z.boolean() });
   const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
@@ -186,7 +194,7 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
     exportContentPack: async (input) => contentExportResultSchema.parse(
       await ipc.invoke(IPC_CHANNELS.contentExport, contentExportRequestSchema.parse(input)),
     ),
-    subscribeToState,
+    subscribeToState: subscribeToHostState,
   };
 }
 

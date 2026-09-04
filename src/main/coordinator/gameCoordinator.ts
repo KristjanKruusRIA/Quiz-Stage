@@ -357,7 +357,7 @@ export class GameCoordinator {
 
   getPublicStateUpdate(): PublicStateUpdate | null {
     const view = this.getPublicView();
-    return view === null ? null : { revision: this.revision, view };
+    return view === null ? null : { revision: this.revision, view, presentation: null };
   }
 
   dispose(): void {

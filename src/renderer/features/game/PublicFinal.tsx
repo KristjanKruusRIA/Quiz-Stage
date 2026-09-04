@@ -1,10 +1,38 @@
+import { useEffect, useState } from 'react';
 import type { PublicGameView } from '../../../shared/game/types';
 import { PublicClue } from './PublicClue';
 import { createTranslator, formatNumber } from '../../i18n';
+import { useLatchedReducedMotion } from './useLatchedReducedMotion';
 
-interface PublicFinalProps { view: PublicGameView; now?: () => number }
+interface PublicFinalProps {
+  view: PublicGameView;
+  now?: () => number;
+  showIntro?: boolean;
+  reducedMotion?: boolean;
+}
 
-export function PublicFinal({ view, now }: PublicFinalProps) {
+const FINAL_INTRO_MS = 2_500;
+
+function FinalCategory({ view, showIntro, reducedMotion }: Required<Pick<PublicFinalProps, 'showIntro' | 'reducedMotion'>> & { view: PublicGameView }) {
+  const t = createTranslator(view.language);
+  const presentationReducedMotion = useLatchedReducedMotion(reducedMotion);
+  const [introPending, setIntroPending] = useState(showIntro && !presentationReducedMotion);
+  const introVisible = introPending && !presentationReducedMotion;
+  useEffect(() => {
+    if (!introVisible) return;
+    const timeout = window.setTimeout(() => setIntroPending(false), FINAL_INTRO_MS);
+    return () => window.clearTimeout(timeout);
+  }, [introVisible]);
+  if (introVisible) return <section className="final-intro-screen" aria-labelledby="final-intro-title">
+    <p className="special-round-brand">{t('common.productName')}</p>
+    <h1 id="final-intro-title">{t('game.final')}</h1>
+  </section>;
+  return <section className="public-final final-category-screen">
+    <h1>{t('game.finalCategory')}</h1><p>{view.final?.category}</p><Scores view={view} />
+  </section>;
+}
+
+export function PublicFinal({ view, now, showIntro = false, reducedMotion = false }: PublicFinalProps) {
   const t = createTranslator(view.language);
   if (view.phase === 'complete') {
     const winner = view.teams.find((team) => team.id === view.winnerTeamId);
@@ -18,7 +46,7 @@ export function PublicFinal({ view, now }: PublicFinalProps) {
     return <section className="final-waiting" role="status">{t('game.waitingFinalWagers')}</section>;
   }
   if (view.phase === 'final-category' || view.phase === 'final-wagers') {
-    return <section className="public-final"><h1>{t('game.finalCategory')}</h1><p>{view.final.category}</p><Scores view={view} /></section>;
+    return <FinalCategory view={view} showIntro={showIntro} reducedMotion={reducedMotion} />;
   }
   return <section className="public-final">
     <h1>{t('game.final')}</h1>

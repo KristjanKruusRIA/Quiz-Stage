@@ -7,6 +7,7 @@ import type {
   SetupOptions,
   HostQuizStageApi,
   MatchConfigurationPreview,
+  PublicPresentation,
   RerollConfiguredTopicRequest,
 } from '../../shared/ipc/contracts';
 import type {
@@ -52,7 +53,7 @@ export type HostDesktopApi = {
 
 export type PublicDesktopApi = {
   surface: 'public';
-  subscribeToState(listener: (view: PublicGameView) => void): () => void;
+  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation) => void): () => void;
   subscribeToAppearance(listener: (settings: AppearanceSettings) => void, onError?: () => void): () => void;
 };
 
@@ -61,8 +62,8 @@ export type DesktopApi = PublicDesktopApi | HostDesktopApi;
 export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
   if (!('dispatch' in bridge)) return {
     surface: 'public',
-    subscribeToState: (listener) => bridge.subscribeToState((view) => {
-      if (!('state' in view)) listener(view);
+    subscribeToState: (listener) => bridge.subscribeToState((view, presentation) => {
+      if (!('state' in view)) listener(view, presentation);
     }),
     subscribeToAppearance: (listener, onError) => bridge.subscribeToAppearance(listener, onError),
   };

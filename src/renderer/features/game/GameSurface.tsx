@@ -4,24 +4,42 @@ import { toPublicGameView } from '../../../shared/game/views';
 import { HostConsole } from './HostConsole';
 import { PublicBoard } from './PublicBoard';
 import { PublicClue } from './PublicClue';
+import { PublicDailyDouble } from './PublicDailyDouble';
 import { PublicFinal } from './PublicFinal';
-import { useState } from 'react';
+import { PublicRoundIntro } from './PublicRoundIntro';
+import { useEffect, useState } from 'react';
 import { createTranslator, formatNumber } from '../../i18n';
 import type { AudioAssetKey, AudioSettings } from '../../../shared/media/contracts';
+import type { PublicPresentation } from '../../../shared/ipc/contracts';
 import { useGameAudio } from './useGameAudio';
+import { useLatchedReducedMotion } from './useLatchedReducedMotion';
 
 type GameSurfaceProps =
-  | { surface: 'public'; view: PublicGameView; now?: () => number }
+  | { surface: 'public'; view: PublicGameView; now?: () => number; reducedMotion?: boolean; presentation?: PublicPresentation }
   | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; now?: () => number; onMute?: () => void; onAudioWarning?: (key: AudioAssetKey) => void; onHome?: () => void; onSaveAndQuit?: () => Promise<void> };
 
-function presentation(view: PublicGameView, now?: () => number, onSelect?: (tileId: string) => void) {
-  if (view.phase === 'round-one-board' || view.phase === 'round-two-board') return <PublicBoard view={view} onSelect={onSelect} />;
-  if (view.phase === 'ordinary-clue' || view.phase === 'clue-reveal') return <PublicClue view={view} now={now} />;
-  return <PublicFinal view={view} now={now} />;
+function presentation(
+  view: PublicGameView,
+  surface: GameSurfaceProps['surface'],
+  now?: () => number,
+  onSelect?: (tileId: string) => void,
+  reducedMotion = false,
+  revealedCategoryCount?: number,
+  publicPresentation: PublicPresentation = null,
+) {
+  if (view.phase === 'round-one-board' || view.phase === 'round-two-board') {
+    return <PublicBoard view={view} onSelect={onSelect} revealedCategoryCount={revealedCategoryCount} />;
+  }
+  if (view.phase === 'daily-double-wager' && surface === 'public') return <PublicDailyDouble view={view} />;
+  if (view.phase === 'ordinary-clue' || view.phase === 'daily-double-wager'
+    || view.phase === 'daily-double-clue' || view.phase === 'clue-reveal') return <PublicClue view={view} now={now} />;
+  return <PublicFinal view={view} now={now}
+    showIntro={surface === 'public' && publicPresentation === 'final-intro'} reducedMotion={reducedMotion} />;
 }
 
-function scores(view: PublicGameView) {
+function scores(view: PublicGameView, surface: GameSurfaceProps['surface']) {
   const t = createTranslator(view.language);
+  if (surface === 'public' && view.phase === 'daily-double-wager') return null;
   if (view.phase === 'final-wagers' && view.displayMode === 'single') return null;
   if (['final-category', 'final-wagers', 'complete'].includes(view.phase)) return null;
   return <ul className="scoreboard" aria-label={t('game.teamScores')}>{view.teams.map((team, index) => <li key={team.id}>
@@ -30,8 +48,47 @@ function scores(view: PublicGameView) {
 }
 
 export function GameSurface(props: GameSurfaceProps) {
-  if (props.surface === 'public') return <main className="game-surface public-surface">{scores(props.view)}{presentation(props.view, props.now)}</main>;
+  if (props.surface === 'public') return <PublicGameSurface key={props.view.board?.id ?? 'non-board'} {...props} />;
   return <HostGameSurface {...props} />;
+}
+
+const ROUND_INTRO_MS = 3_000;
+const CATEGORY_REVEAL_MS = 350;
+
+function PublicGameSurface(props: Extract<GameSurfaceProps, { surface: 'public' }>) {
+  const categoryCount = props.view.board?.categories.length ?? 0;
+  const presentationReducedMotion = useLatchedReducedMotion(Boolean(props.reducedMotion));
+  const [stageBoard] = useState(
+    props.presentation === 'round-intro' && props.view.board !== null && !presentationReducedMotion,
+  );
+  const [introPending, setIntroPending] = useState(stageBoard);
+  const [revealedCategoryCount, setRevealedCategoryCount] = useState(stageBoard ? 0 : categoryCount);
+  const showIntro = introPending && !presentationReducedMotion;
+
+  useEffect(() => {
+    if (!showIntro) return;
+    const timeout = window.setTimeout(() => {
+      setIntroPending(false);
+      setRevealedCategoryCount(Math.min(1, categoryCount));
+    }, ROUND_INTRO_MS);
+    return () => window.clearTimeout(timeout);
+  }, [categoryCount, showIntro]);
+
+  useEffect(() => {
+    if (showIntro || presentationReducedMotion || revealedCategoryCount >= categoryCount) return;
+    const timeout = window.setTimeout(() => {
+      setRevealedCategoryCount((count) => Math.min(count + 1, categoryCount));
+    }, CATEGORY_REVEAL_MS);
+    return () => window.clearTimeout(timeout);
+  }, [categoryCount, presentationReducedMotion, revealedCategoryCount, showIntro]);
+
+  if (showIntro) return <main className="game-surface public-surface"><PublicRoundIntro view={props.view} /></main>;
+  const visibleCategories = presentationReducedMotion ? categoryCount : revealedCategoryCount;
+  return <main className="game-surface public-surface">
+    {scores(props.view, props.surface)}
+    {presentation(props.view, props.surface, props.now, undefined, props.reducedMotion,
+      stageBoard ? visibleCategories : undefined, props.presentation)}
+  </main>;
 }
 
 function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) {
@@ -75,7 +132,7 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
       onWarning={props.onAudioWarning} />}
     <section className="public-presentation">
       {selectionError ? <p role="alert">{createTranslator(publicView.language)('game.selectionError')}</p> : null}
-      {scores(publicView)}{presentation(publicView, props.now, selectionPending ? undefined : onSelect)}
+      {scores(publicView, props.surface)}{presentation(publicView, props.surface, props.now, selectionPending ? undefined : onSelect)}
     </section>
     <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} onSaveAndQuit={props.onSaveAndQuit} />
     {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>{createTranslator(publicView.language)('common.backHome')}</button>}
