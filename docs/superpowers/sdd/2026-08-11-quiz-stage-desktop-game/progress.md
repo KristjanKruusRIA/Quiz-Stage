@@ -103,3 +103,8 @@ Task 41: complete (commit `bc7946d`; exact installer and deterministic true-port
 Task 42: complete (commit `086ca43`; Windows CI/release/checksum automation and real packaged migration verified, focused 23/23; complete-match smoke remains fail-closed on deferred Task 36 content)
 Task 36: complete (commit `c021338`; deterministic production seed verified with 6,000 board clues, 1,200 category sets, 150 Finals, 1,464/1,464 sources, and zero blocking errors)
 Task 43: complete (baseline `cc4fe45`; clean release gate, installer and portable offline full matches, upgrade, hardening, and Windows 11 plus Windows 10 Pro 22H2 x64 visual/manual evidence pass)
+
+Task 12 (playable corpus): in-progress checkpoint handoff for `feat/playable-medium-hard-corpus`
+- Branch head is currently `34809fd` (`feat(content): extend science playability checkpoint`), adding `scripts/content/playability/banks/packs01to04.ts` updates.
+- Reviewed upstream checkpoint commit on science lane is `302a181` in `playable-science-nature` and was previously used as the source checkpoint.
+- Next for continuation: finish easy-mode validation on this branch, then integrate adult/Estonia changes into this branch, cherry-pick/merge the reviewed science checkpoint state, and continue packs 01–04 review pass before Task 8/Task 10 pipeline.

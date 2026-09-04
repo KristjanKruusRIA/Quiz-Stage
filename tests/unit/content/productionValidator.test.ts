@@ -11,7 +11,7 @@ import {
   validateProductionContent,
   type ProductionValidationInput,
 } from '../../../scripts/content/validate';
-import { serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
+import { contentEvidenceSchema, serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
 import {
   FINAL_BATCH,
   PRODUCTION_BATCHES,
@@ -95,28 +95,22 @@ function boardRow(setIndex: number, tier: number, overrides: Partial<Row> = {}):
   };
 }
 
-function finalRow(index: number): Row {
-  return boardRow(20_000 + index, 0, {
-    clue_id: `final-${index}`,
-    category_set_id: `final-set-${index}`,
-    content_kind: 'final',
-    round: 'final',
-    tier: '0',
-    difficulty: (['easy', 'medium', 'hard'] as const)[index % 3],
-    macro_topic: `final-topic-${index % 12}`,
-    category_name_en: `Final Category ${index}`,
-    category_name_et: `Finaalkategooria ${index}`,
-  });
-}
-
 const approvedReview = {
   reviewer: 'Independent Reviewer',
   reviewedAt: '2026-08-12T11:00:00Z',
   decision: 'approved' as const,
 };
 
+const approvedAdultPolicyReview = {
+  policy: 'adult-mature-non-graphic-v1' as const,
+  reviewer: 'Independent Adult Policy Reviewer',
+  reviewedAt: '2026-08-27T13:00:00.000Z',
+  decision: 'approved' as const,
+  notes: 'Reviewed against the approved mature, factual, non-graphic boundary.',
+};
+
 type EvidenceRow = Pick<Row,
-  'clue_id' | 'response_en' | 'explanation_en' | 'source_title' | 'source_url'
+  'clue_id' | 'pack_id' | 'response_en' | 'explanation_en' | 'source_title' | 'source_url'
   | 'source_license' | 'source_retrieved_at'>;
 
 function evidenceFor(
@@ -147,6 +141,7 @@ function evidenceFor(
     factualReview: approvedReview,
     editorialReview: approvedReview,
     translationReview: approvedReview,
+    adultPolicyReview: row.pack_id === 'built-in-adult' ? approvedAdultPolicyReview : null,
     ...overrides,
   };
 }
@@ -168,7 +163,7 @@ function boardBatchRows(batch: ProductionBatchDefinition, batchIndex = 0): Row[]
         for (let tier = 1; tier <= 5; tier += 1) {
           rows.push(boardRow(globalSetIndex, tier, {
             pack_id: batch.packId,
-            pack_name: batch.topicFamily,
+            pack_name: batch.packName,
             category_set_id: categoryId,
             round,
             difficulty,
@@ -185,13 +180,28 @@ function boardBatchRows(batch: ProductionBatchDefinition, batchIndex = 0): Row[]
 }
 
 function finalBatchRows(): Row[] {
-  return Array.from({ length: 150 }, (_, index) => finalRow(index)).map((row, index) => ({
-    ...row,
-    pack_id: FINAL_BATCH.packId,
-    pack_name: FINAL_BATCH.topicFamily,
-    macro_topic: FINAL_BATCH.subthemes[index % FINAL_BATCH.subthemes.length],
-    difficulty: (['easy', 'medium', 'hard'] as const)[index % 3],
-  }));
+  const rows: Row[] = [];
+  for (const [macroTopic, allocation] of Object.entries(FINAL_BATCH.finalTopicAllocations!)) {
+    for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+      for (let index = 0; index < allocation[difficulty]; index += 1) {
+        const number = rows.length + 1;
+        rows.push(boardRow(20_000 + number, 0, {
+          clue_id: `final-clue-${number}`,
+          category_set_id: `final-set-${number}`,
+          pack_id: allocation.packId,
+          pack_name: allocation.packName,
+          content_kind: 'final',
+          round: 'final',
+          tier: '0',
+          difficulty,
+          macro_topic: macroTopic,
+          category_name_en: `Final Category ${number}`,
+          category_name_et: `Finaalkategooria ${number}`,
+        }));
+      }
+    }
+  }
+  return rows;
 }
 
 function releaseCorpus(): {
@@ -208,7 +218,15 @@ function releaseCorpus(): {
     })));
   }
   const finals = finalBatchRows();
-  batches.push({ file: `${FINAL_BATCH.id}.csv`, rows: finals });
+  const finalsByPack = new Map<string, Row[]>();
+  for (const row of finals) {
+    const rows = finalsByPack.get(row.pack_id) ?? [];
+    rows.push(row);
+    finalsByPack.set(row.pack_id, rows);
+  }
+  for (const [packId, rows] of finalsByPack) {
+    batches.push({ file: `${FINAL_BATCH.id}-${packId}.csv`, rows });
+  }
   records.push(...finals.map((row) => evidenceFor(row, FINAL_BATCH.id)));
   return { batches, evidence: evidenceMap(records) };
 }
@@ -233,6 +251,57 @@ function twelveValidSets(): Row[] {
 }
 
 describe('production content validation', () => {
+  it('defaults older non-Adult evidence to no Adult policy review', () => {
+    const row = boardRow(0, 1);
+    const olderEvidence: Partial<ContentEvidence> = { ...evidenceFor(row, '01-history') };
+    delete olderEvidence.adultPolicyReview;
+
+    expect(contentEvidenceSchema.parse(olderEvidence).adultPolicyReview).toBeNull();
+  });
+
+  it('requires approved Adult policy review for Adult board rows', () => {
+    const batch = getProductionBatch('14-adult');
+    const row = boardBatchRows(batch)[0];
+    const result = validateProductionContent([input('adult.csv', [row])], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap([evidenceFor(row, batch.id, { adultPolicyReview: null })]),
+    });
+
+    expect(result.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'ADULT_POLICY_REVIEW_MISSING', severity: 'error' }),
+    ]));
+  });
+
+  it('rejects Adult policy review by the evidence author', () => {
+    const row = boardBatchRows(getProductionBatch('14-adult'))[0];
+
+    expect(() => contentEvidenceSchema.parse({
+      ...evidenceFor(row, '14-adult'),
+      adultPolicyReview: { ...approvedAdultPolicyReview, reviewer: 'Content Author' },
+    })).toThrow(/author/i);
+  });
+
+  it('accepts Adult Final evidence with approved Adult policy review', () => {
+    const row = finalBatchRows().find((candidate) => candidate.macro_topic === 'adult')!;
+    const result = validateProductionContent([input('adult-final.csv', [row])], {
+      mode: 'release',
+      evidenceByClueId: evidenceMap([{
+        ...evidenceFor(row, '13-finals'), adultPolicyReview: approvedAdultPolicyReview,
+      }]),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('ADULT_POLICY_REVIEW_MISSING');
+  });
+
+  it('does not require Adult policy review for non-Adult clues', () => {
+    const batch = getProductionBatch('01-history');
+    const row = boardBatchRows(batch)[0];
+    const result = validateProductionContent([input('history.csv', [row])], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap([evidenceFor(row, batch.id)]),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('ADULT_POLICY_REVIEW_MISSING');
+  });
+
   it.each([
     ['missing-tier.csv', 'MISSING_TIER'],
     ['duplicate-id.csv', 'DUPLICATE_ID'],
@@ -269,6 +338,50 @@ describe('production content validation', () => {
     });
 
     expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
+  it('treats subject diversity as explicitly non-waivable', () => {
+    expect(NON_WAIVABLE_CODES.has('CATEGORY_SUBJECT_DIVERSITY')).toBe(true);
+  });
+
+  it('rejects a five-row board category with missing subject keys', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row) => evidenceFor(row, batch.id, { subjectKey: undefined }));
+
+    const result = validateProductionContent([input('missing-subject-keys.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
+  it('rejects a five-row board category with a repeated subject key', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      subjectKey: index === 4 ? 'subject:history-1' : `subject:history-${index}`,
+    }));
+
+    const result = validateProductionContent([input('repeated-subject-key.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).toContain('CATEGORY_SUBJECT_DIVERSITY');
+  });
+
+  it('accepts a five-row board category with five distinct subject keys', () => {
+    const batch = getProductionBatch('01-history');
+    const rows = boardBatchRows(batch).slice(0, 5);
+    const records = rows.map((row, index) => evidenceFor(row, batch.id, {
+      subjectKey: `subject:history-${index}`,
+    }));
+
+    const result = validateProductionContent([input('distinct-subject-keys.csv', rows)], {
+      mode: 'batch', batch, evidenceByClueId: evidenceMap(records),
+    });
+
+    expect(result.issues.map((issue) => issue.code)).not.toContain('CATEGORY_SUBJECT_DIVERSITY');
   });
 
   it('recognizes reader-visible month-year dates for changing facts', () => {
@@ -782,16 +895,29 @@ describe('production content validation', () => {
         mode: 'batch', batch: FINAL_BATCH, evidenceByClueId: evidenceMap(records),
       });
 
-    const validCodes = validate(rows).issues.map((issue) => issue.code);
+    const validResult = validate(rows);
+    const validCodes = validResult.issues.map((issue) => issue.code);
+    expect(validResult.blocking).toBe(false);
+    expect(validCodes).not.toEqual(expect.arrayContaining([
+      'CSV_MULTIPLE_PACK_ID', 'CSV_INCONSISTENT_PACK_NAME',
+    ]));
     expect(validCodes).not.toEqual(expect.arrayContaining(['BATCH_ALLOCATION', 'OPENTDB_COMPOSITION']));
     expect(validCodes).not.toContain('MATCH_CATEGORY_NAMES_SHORTAGE');
 
     const invalidFamilies = rows.map((row) => ({ ...row }));
-    invalidFamilies[1] = { ...invalidFamilies[1], macro_topic: FINAL_BATCH.subthemes[0] };
+    const otherTopic = rows.findIndex((row) => row.macro_topic !== FINAL_BATCH.subthemes[0]);
+    invalidFamilies[otherTopic] = { ...invalidFamilies[otherTopic], macro_topic: FINAL_BATCH.subthemes[0] };
     expect(validate(invalidFamilies).issues.map((issue) => issue.code)).toContain('BATCH_ALLOCATION');
 
+    const adultFinal = rows.findIndex((row) => row.macro_topic === 'adult');
+    const invalidAdultPack = rows.map((row) => ({ ...row }));
+    invalidAdultPack[adultFinal] = { ...invalidAdultPack[adultFinal], pack_id: 'built-in-finals', pack_name: 'Finals Pack' };
+    expect(validate(invalidAdultPack).issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      'CSV_MULTIPLE_PACK_ID', 'CSV_INCONSISTENT_PACK_NAME', 'BATCH_ALLOCATION',
+    ]));
+
     const invalidDifficulty = rows.map((row) => ({ ...row }));
-    invalidDifficulty[0] = { ...invalidDifficulty[0], difficulty: 'hard' };
+    invalidDifficulty[adultFinal] = { ...invalidDifficulty[adultFinal], difficulty: 'hard' };
     expect(validate(invalidDifficulty).issues.map((issue) => issue.code)).toContain('BATCH_ALLOCATION');
 
     const records = rows.map((row, index) => evidenceFor(row, FINAL_BATCH.id, {
@@ -800,11 +926,38 @@ describe('production content validation', () => {
     expect(validate(rows, records).issues.map((issue) => issue.code)).toContain('OPENTDB_COMPOSITION');
   });
 
+  it('resolves Final evidence through the Final batch even when its pack belongs to Adult', () => {
+    const adultFinal = finalBatchRows().filter((row) => row.macro_topic === 'adult');
+    const wrongBatch = validateProductionContent([input('adult-finals.csv', adultFinal)], {
+      mode: 'release', evidenceByClueId: evidenceMap(adultFinal.map((row) => evidenceFor(row, '14-adult'))),
+    });
+    const finalBatch = validateProductionContent([input('adult-finals.csv', adultFinal)], {
+      mode: 'release', evidenceByClueId: evidenceMap(adultFinal.map((row) => evidenceFor(row, '13-finals'))),
+    });
+
+    expect(wrongBatch.issues.map((issue) => issue.code)).toContain('SOURCE_MISMATCH');
+    expect(finalBatch.issues.map((issue) => issue.code)).not.toContain('SOURCE_MISMATCH');
+  });
+
+  it('requires a stable pack name for every pack ID', () => {
+    const batch = getProductionBatch('14-adult');
+    const rows = boardBatchRows(batch);
+    const mismatched = rows.map((row) => ({ ...row }));
+    mismatched[0] = { ...mismatched[0], pack_name: 'Different Adult Pack' };
+
+    const result = validateProductionContent([input('adult.csv', mismatched)], { mode: 'batch', batch });
+
+    expect(result.issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      'CSV_INCONSISTENT_PACK_NAME', 'PACK_IDENTITY_MISMATCH',
+    ]));
+  });
+
   it('exports every factual, source, duplicate, allocation, and filler code as non-waivable', () => {
     expect([...NON_WAIVABLE_CODES]).toEqual(expect.arrayContaining([
       'MISSING_EVIDENCE', 'SOURCE_MISMATCH', 'GENERIC_SOURCE', 'DUPLICATE_FACT',
       'NEAR_DUPLICATE_CLUE', 'BOARD_FINAL_FACT_REUSE', 'SUBTHEME_LIMIT',
-      'BATCH_ALLOCATION', 'OPENTDB_COMPOSITION', 'PLACEHOLDER_CONTENT',
+      'BATCH_ALLOCATION', 'PACK_IDENTITY_MISMATCH', 'OPENTDB_COMPOSITION', 'PLACEHOLDER_CONTENT',
+      'ADULT_POLICY_REVIEW_MISSING',
     ]));
   });
 
@@ -819,10 +972,48 @@ describe('production content validation', () => {
       'RELEASE_EASY_SETS_SHORTAGE',
       'RELEASE_MEDIUM_SETS_SHORTAGE',
       'RELEASE_HARD_SETS_SHORTAGE',
+      'RELEASE_BUILT_IN_PACKS_SHORTAGE',
     ]));
   });
 
-  it('summarizes an exact valid 6000/1200/150 inventory efficiently', () => {
+  it('emits excess inventory codes for a unique extra board category set', () => {
+    const corpus = releaseCorpus();
+    const batch = getProductionBatch('01-history');
+    const extra = boardBatchRows(batch, 200).slice(0, 5).map((row) => ({
+      ...row,
+      clue_id: `extra-${row.clue_id}`,
+      category_set_id: 'extra-category-set',
+      category_name_en: 'Extra category',
+      category_name_et: 'Lisakategooria',
+    }));
+    corpus.batches[0].rows.push(...extra);
+    const evidence = [...corpus.evidence.values(), ...extra.map((row) => evidenceFor(row, batch.id))];
+
+    const result = validateProductionContent(releaseInputs(corpus), { mode: 'release', evidenceByClueId: evidenceMap(evidence) });
+
+    expect(result.issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      'RELEASE_BOARD_CLUES_EXCESS', 'RELEASE_CATEGORY_SETS_EXCESS',
+    ]));
+  });
+
+  it('emits each difficulty and round set shortage independently', () => {
+    for (const difficulty of ['easy', 'medium', 'hard'] as const) {
+      for (const round of ['round-one', 'round-two'] as const) {
+        const corpus = releaseCorpus();
+        const batch = corpus.batches.find((candidate) => candidate.rows.some((row) => row.difficulty === difficulty && row.round === round))!;
+        const index = batch.rows.findIndex((row) => row.difficulty === difficulty && row.round === round);
+        batch.rows.splice(index, 1);
+
+        const result = validateProductionContent(releaseInputs(corpus), { mode: 'release', evidenceByClueId: corpus.evidence });
+
+        expect(result.issues.map((issue) => issue.code)).toContain(
+          `RELEASE_${difficulty.toUpperCase()}_${round === 'round-one' ? 'ROUND_ONE' : 'ROUND_TWO'}_SETS_SHORTAGE`,
+        );
+      }
+    }
+  }, 60_000);
+
+  it('summarizes an exact valid 7000/1400/174 inventory efficiently', () => {
     const corpus = releaseCorpus();
 
     const result = validateProductionContent(releaseInputs(corpus), {
@@ -830,9 +1021,25 @@ describe('production content validation', () => {
     });
 
     expect(result.summary).toEqual({
-      boardClues: 6000, categorySets: 1200, distinctCategoryNames: 1200,
-      finalClues: 150, easySets: 400, mediumSets: 400, hardSets: 400,
+      boardClues: 7_000, categorySets: 1_400, distinctCategoryNames: 1_400,
+      finalClues: 174, easySets: 467, mediumSets: 467, hardSets: 466, builtInPacks: 15,
     });
+    expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
+      corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board' && row.difficulty === difficulty).length,
+    ]))).toEqual({ easy: 2_335, medium: 2_335, hard: 2_330 });
+    expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
+      Object.fromEntries(['round-one', 'round-two'].map((round) => [round,
+        corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board'
+          && row.difficulty === difficulty && row.round === round).length / 5,
+      ])),
+    ]))).toEqual({
+      easy: { 'round-one': 234, 'round-two': 233 },
+      medium: { 'round-one': 233, 'round-two': 234 },
+      hard: { 'round-one': 233, 'round-two': 233 },
+    });
+    expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
+      corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'final' && row.difficulty === difficulty).length,
+    ]))).toEqual({ easy: 58, medium: 58, hard: 58 });
     expect(result.blocking, JSON.stringify(result.issues.filter((issue) => issue.severity === 'error').slice(0, 20))).toBe(false);
   }, 15_000);
 
@@ -886,7 +1093,7 @@ describe('validator CLI boundaries and report publication', () => {
     expect(result.status).toBe(2);
     expect(result.stderr).toMatch(/batch mode/i);
     expect(() => readFileSync(report)).toThrow();
-  });
+  }, 20_000);
 
   it('accepts an exact valid synthetic release corpus through the documented CLI', () => {
     const directory = temporaryDirectory();
@@ -900,8 +1107,8 @@ describe('validator CLI boundaries and report publication', () => {
     ], { cwd: resolve('.'), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
     expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
     expect(JSON.parse(readFileSync(report, 'utf8')).validation.summary).toEqual({
-      boardClues: 6000, categorySets: 1200, distinctCategoryNames: 1200,
-      finalClues: 150, easySets: 400, mediumSets: 400, hardSets: 400,
+      boardClues: 7_000, categorySets: 1_400, distinctCategoryNames: 1_400,
+      finalClues: 174, easySets: 467, mediumSets: 467, hardSets: 466, builtInPacks: 15,
     });
   }, 60_000);
 

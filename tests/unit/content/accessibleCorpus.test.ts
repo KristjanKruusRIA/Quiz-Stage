@@ -33,6 +33,7 @@ import { ART_MYTHOLOGY_CATEGORIES } from '../../../scripts/content/accessibility
 import { GEOGRAPHY_SCIENCE_FOOD_CATEGORIES } from '../../../scripts/content/accessibility/banks/geographyScienceFood';
 import { HISTORY_LITERATURE_SCREEN_CATEGORIES } from '../../../scripts/content/accessibility/banks/historyLiteratureScreen';
 import { SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES } from '../../../scripts/content/accessibility/banks/societyTechnologyCulture';
+import { REAUTHORED_RETAINED_EASY_CATEGORIES } from '../../../scripts/content/accessibility/banks/retainedEasy';
 import { ACCESSIBLE_CATEGORY_TITLES } from '../../../scripts/content/accessibility/categoryNames';
 import {
   ACCESSIBLE_EASY_SET_IDS,
@@ -71,7 +72,92 @@ const ACCEPTED_BATCHES = [
   '12-mythology-religion-philosophy',
 ] as const;
 
-const EXPECTED_TARGETS_BY_BATCH = [26, 26, 26, 26, 33, 25, 25, 25, 25, 25, 25, 33] as const;
+const EXPECTED_TARGETS_BY_BATCH = [34, 34, 34, 34, 33, 33, 33, 33, 33, 33, 33, 33] as const;
+
+const REVIEW_REJECTED_SPECIALIST_KEY_SUFFIXES = [
+  'fairy-tales-snow-white-seven-dwarfs',
+  'industrial-revolution-spinning-jenny',
+  'writing-history-linear-a-undeciphered',
+  'peace-treaties-westphalia',
+  'baltic-independence-lithuania-march-1990',
+  'independence-movements-algerian-fln',
+  'royal-houses-orange-nassau-netherlands',
+  'famous-first-lines-tale-two-cities-contrasts',
+  'book-settings-ulysses-dublin',
+  'language-families-basque-isolate',
+  'classic-love-stories-doctor-zhivago',
+  'action-films-mad-max-fury-road',
+  '1990s-sf-fifth-element',
+  'films-2000s-devil-wears-prada',
+  'crime-dramas-the-wire-baltimore',
+  'fantasy-tv-good-omens-angel-demon',
+  'film-music-flash-gordon-queen',
+  'european-cinema-cinema-paradiso',
+  'filming-locations-star-wars-tunisia',
+  'c418-composed-minecraft-volume-alpha',
+  'martin-odonnell-halo-music',
+  'nobuo-uematsu-final-fantasy',
+  'first-oboe-sounds-concert-a',
+  'resonator-guitar-metal-cone',
+  'adam-composed-giselle',
+  'domestique-supports-team-leader',
+  'echelon-diagonal-crosswind-formation',
+  'telemark-turn-knee-bent',
+  'en-passant-special-pawn-capture',
+  'baccarat-hand-closest-to-nine',
+  'lamarr-co-invented-frequency-hopping',
+  'actuator-produces-motion',
+  'actuary-models-financial-risk',
+  'great-seal-authenticates-state-documents',
+  'baltic-council-ministers-government-cooperation',
+  'tallink-name-tallinn-finland',
+  'minecraft-enderman-teleports',
+  'halo-master-chief-spartan',
+  'final-fantasy-chocobo-riding-bird',
+  'okavango-inland-delta',
+  'chichen-itza-maya-pyramid',
+  'mount-rushmore-presidents',
+  'halley-comet-returns',
+  'ganymede-largest-moon',
+  'asteroid-belt-mars-jupiter',
+  'kanelbulle-swedish-bun',
+  'smorrebrod-open-sandwich',
+  'brunost-brown-whey-cheese',
+  'djenne-mud-brick-mosque',
+  'kuroshio-japan',
+  'blue-sky-scattering',
+  'xylem-carries-water',
+  'soap-surfactant',
+  'jollof-tomato-rice',
+  'art-van-gogh-brother-theo',
+  'art-van-gogh-post-impressionism',
+  'art-van-gogh-sunflowers-series',
+  'art-van-gogh-bedroom-arles',
+  'art-picasso-blue-period',
+  'art-picasso-demoiselles',
+  'art-picasso-cubism',
+  'art-picasso-collage',
+  'art-monet-giverny',
+  'art-monet-rouen-cathedral-series',
+  'art-monet-haystacks-series',
+  'art-monet-japanese-bridge',
+  'art-leonardo-sfumato',
+  'art-leonardo-mirror-writing',
+  'art-leonardo-last-supper',
+  'art-leonardo-vitruvian-man',
+  'art-nature-okeeffe-flowers',
+  'art-nature-rousseau-jungles',
+  'art-nature-ansel-adams-yosemite',
+  'art-nature-audubon-birds-america',
+] as const;
+
+const REVIEW_REJECTED_NARROW_CATEGORY_TITLES = [
+  'Art & Architecture: The Art of Vincent van Gogh',
+  'Art & Architecture: The Art of Pablo Picasso',
+  'Art & Architecture: The Art of Claude Monet',
+  'Art & Architecture: Leonardo da Vinci',
+  'Art & Architecture: Nature in Famous Art',
+] as const;
 
 type AcceptedRow = Readonly<{
   clue_id: string;
@@ -336,6 +422,7 @@ function applyEvidence(
       reviewedAt: '2026-08-01T10:00:00.000Z',
       decision: 'approved',
     },
+    adultPolicyReview: null,
     translationReview: {
       reviewer: 'Original Translation Reviewer',
       reviewedAt: '2026-08-01T11:00:00.000Z',
@@ -489,7 +576,7 @@ function acceptedArtifactBytes(root: string): Map<string, string> {
 }
 
 describe('accessible corpus ledgers', () => {
-  it('partitions the 400 accepted easy sets into the stable 80 retained and 320 target IDs', () => {
+  it('routes all 400 accepted easy sets through the reviewed accessible corpus', () => {
     const accepted = acceptedEasySets();
     const acceptedIds = [...accepted.keys()];
     const retainedIds = acceptedIds.filter((id) =>
@@ -497,10 +584,10 @@ describe('accessible corpus ledgers', () => {
     const targetIds = acceptedIds.filter((id) => !retainedIds.includes(id));
 
     expect(acceptedIds).toHaveLength(400);
-    expect(ACCESSIBLE_EASY_SET_IDS).toEqual(retainedIds);
-    expect(ACCESSIBLE_EASY_SET_IDS).toHaveLength(80);
-    expect(LEGACY_EASY_TARGET_IDS).toEqual(targetIds);
-    expect(LEGACY_EASY_TARGET_IDS).toHaveLength(320);
+    expect(retainedIds).toEqual([]);
+    expect(ACCESSIBLE_EASY_SET_IDS).toEqual([]);
+    expect(new Set(LEGACY_EASY_TARGET_IDS)).toEqual(new Set(targetIds));
+    expect(LEGACY_EASY_TARGET_IDS).toHaveLength(400);
     expect(new Set([...ACCESSIBLE_EASY_SET_IDS, ...LEGACY_EASY_TARGET_IDS])).toEqual(
       new Set(acceptedIds),
     );
@@ -539,67 +626,16 @@ describe('accessible corpus ledgers', () => {
     expect(variants).toEqual([]);
   });
 
-  it('uses truthful umbrellas for retained five-clue sets', () => {
-    const titleById = new Map(ACCESSIBLE_CATEGORY_TITLES.map((title) => [title.categorySetId, title]));
-    const retainedTitleIds = ACCESSIBLE_CATEGORY_TITLES
-      .filter(({ categorySetId }) => ACCESSIBLE_EASY_SET_IDS.includes(
-        categorySetId as (typeof ACCESSIBLE_EASY_SET_IDS)[number],
-      ))
-      .map(({ categorySetId }) => categorySetId);
-
-    expect(retainedTitleIds).toHaveLength(80);
-    expect(titleById.get('built-in-history-set-019')?.name).toEqual({
-      en: 'History: Places That Witnessed History',
-      et: 'Ajalugu: Ajaloo tunnistajaks olnud paigad',
-    });
-    expect(titleById.get('built-in-literature-language-set-003')?.name).toEqual({
-      en: 'Literature & Language: Classic Books and Their Connections',
-      et: 'Kirjandus ja keel: Klassikalised raamatud ja nende seosed',
-    });
-    expect(titleById.get('built-in-geography-set-013')?.name).toEqual({
-      en: 'Geography: Seas, Oceans, and Great Rivers',
-      et: 'Geograafia: Mered, ookeanid ja suured jõed',
-    });
-    expect(titleById.get('built-in-science-nature-set-010')?.name).toEqual({
-      en: 'Science & Nature: Remarkable Animals from Ocean to Ice',
-      et: 'Teadus ja loodus: Tähelepanuväärsed loomad ookeanist jääväljadeni',
-    });
-    expect(titleById.get('built-in-sports-games-set-008')?.name).toEqual({
-      en: 'Sports & Games: Games from Cards to Consoles',
-      et: 'Sport ja mängud: Mängud kaartidest konsoolideni',
-    });
-    expect(titleById.get('built-in-history-set-013')?.name).toEqual({
-      en: 'History: Reformers, Monarchs, and Wartime Leaders',
-      et: 'Ajalugu: Uuendajad, monarhid ja sõjaaegsed juhid',
-    });
-    expect(titleById.get('built-in-sports-games-set-003')?.name).toEqual({
-      en: 'Sports & Games: Global Sports Stars Across Stadiums, Courts, and Tracks',
-      et: 'Sport ja mängud: Maailma sporditähed staadionidel, väljakutel ja radadel',
-    });
-    expect(titleById.get('built-in-technology-inventions-set-001')?.name).toEqual({
-      en: 'Technology & Inventions: Companies Behind Phones, Software, Games, and E-Readers',
-      et: 'Tehnoloogia ja leiutised: Telefonide, tarkvara, mängude ja e-lugerite ettevõtted',
-    });
-    expect(titleById.get('built-in-technology-inventions-set-002')?.name).toEqual({
-      en: 'Technology & Inventions: Makers Behind Mobiles, Consoles, and Mini Computers',
-      et: 'Tehnoloogia ja leiutised: Mobiilide, konsoolide ja miniarvutite loojad',
-    });
-  });
-
-  it('keeps every retained bilingual response out of its category title', () => {
-    const accepted = acceptedEasySets();
-    const retainedIds = new Set<string>(ACCESSIBLE_EASY_SET_IDS);
-
-    for (const title of ACCESSIBLE_CATEGORY_TITLES) {
-      if (!retainedIds.has(title.categorySetId)) continue;
-      for (const response of accepted.get(title.categorySetId)!.responses) {
+  it('keeps every reviewed bilingual response out of its category title', () => {
+    for (const category of buildAccessibleCorpus()) {
+      for (const question of category.questions) {
         expect(
-          containsNormalizedPhrase(title.name.en, response.en),
-          `${title.categorySetId} English: ${response.en}`,
+          containsNormalizedPhrase(category.name.en, question.response.en),
+          `${category.categorySetId} English: ${question.response.en}`,
         ).toBe(false);
         expect(
-          containsNormalizedPhrase(title.name.et, response.et),
-          `${title.categorySetId} Estonian: ${response.et}`,
+          containsNormalizedPhrase(category.name.et, question.response.et),
+          `${category.categorySetId} Estonian: ${question.response.et}`,
         ).toBe(false);
       }
     }
@@ -610,8 +646,8 @@ describe('buildAccessibleCorpus', () => {
   it('assembles every replacement category in target-ledger order', () => {
     const categories = buildAccessibleCorpus();
 
-    expect(categories).toHaveLength(320);
-    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(1_600);
+    expect(categories).toHaveLength(400);
+    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(2_000);
     expect(categories.map(({ categorySetId }) => categorySetId)).toEqual(
       LEGACY_EASY_TARGET_IDS,
     );
@@ -623,12 +659,13 @@ describe('buildAccessibleCorpus', () => {
       SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
       GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
       HISTORY_LITERATURE_SCREEN_CATEGORIES,
+      REAUTHORED_RETAINED_EASY_CATEGORIES,
     ] as const;
     const categories = buildAccessibleCorpus();
 
-    expect(lanes.map((lane) => lane.length)).toEqual([66, 100, 77, 77]);
+    expect(lanes.map((lane) => lane.length)).toEqual([66, 100, 77, 77, 80]);
     expect(lanes.map((lane) => lane.flatMap(({ questions }) => questions).length)).toEqual(
-      [330, 500, 385, 385],
+      [330, 500, 385, 385, 400],
     );
     expect(ACCEPTED_BATCHES.map((batchId) =>
       categories.filter((category) => category.batchId === batchId).length)).toEqual(
@@ -642,12 +679,30 @@ describe('buildAccessibleCorpus', () => {
       SOCIETY_TECHNOLOGY_CULTURE_CATEGORIES,
       GEOGRAPHY_SCIENCE_FOOD_CATEGORIES,
       HISTORY_LITERATURE_SCREEN_CATEGORIES,
+      REAUTHORED_RETAINED_EASY_CATEGORIES,
     ]) {
       const laneIds = new Set(lane.map(({ categorySetId }) => categorySetId));
       const targets = LEGACY_EASY_TARGETS.filter(({ categorySetId }) =>
         laneIds.has(categorySetId));
       expect(validateAccessibleCorpus(lane, targets)).toEqual(lane);
     }
+  });
+
+  it('omits specialist questions and single-creator themes rejected by easy-play review', () => {
+    const categories = buildAccessibleCorpus();
+    const rejectedQuestions = categories
+      .flatMap(({ questions }) => questions)
+      .map(({ key }) => key)
+      .filter((key) => REVIEW_REJECTED_SPECIALIST_KEY_SUFFIXES.some((suffix) =>
+        key.endsWith(suffix)));
+    const rejectedTitles = categories
+      .map(({ name }) => name.en)
+      .filter((title) => REVIEW_REJECTED_NARROW_CATEGORY_TITLES.includes(
+        title as (typeof REVIEW_REJECTED_NARROW_CATEGORY_TITLES)[number],
+      ));
+
+    expect(rejectedQuestions).toEqual([]);
+    expect(rejectedTitles).toEqual([]);
   });
 
   it('has globally unique authored identities and consistent subject keys', () => {
@@ -673,8 +728,8 @@ describe('buildAccessibleCorpus', () => {
       subjectsByResponse.set(factIdentity, subjects);
     }
 
-    expect(new Set(questionKeys).size).toBe(1_600);
-    expect(new Set(clueAnswerPairs).size).toBe(1_600);
+    expect(new Set(questionKeys).size).toBe(2_000);
+    expect(new Set(clueAnswerPairs).size).toBe(2_000);
     const conflictingIdentities = [...subjectsByResponse]
       .filter(([, subjects]) => subjects.size > 1);
     const kalevipoegAmbiguity = conflictingIdentities.filter(([identity]) =>
@@ -731,6 +786,25 @@ describe('buildAccessibleCorpus', () => {
     );
     expect(findQuestion('medieval-castles-portcullis').response.et).toBe('Langevõre');
     expect(findQuestion('idioms-under-the-weather').response.et).toBe('Haige');
+    expect(findQuestion('concertmaster-leads-orchestra-strings').clue.en).toContain(
+      'sits nearest the conductor',
+    );
+    expect(findQuestion('bolero-ravel-repeating-rhythm').clue.en).toContain(
+      'a pair of melodies',
+    );
+    expect(findQuestion('snowplough-turn-controls-speed').clue.en).toContain('ski turn');
+    expect(findQuestion('light-scattering-blue-sky').acceptedVariants.en).toContain(
+      'Rayleigh scattering',
+    );
+    expect(responses('built-in-art-architecture-set-009')).toEqual(
+      ['landscape', 'water lilies', 'sunflowers', 'still life', 'photograph'],
+    );
+    expect(responses('built-in-music-set-033')).toEqual(
+      ['Super Mario Bros.', 'Tetris', 'The Legend of Zelda', 'Minecraft', 'Guitar Hero'],
+    );
+    expect(findQuestion('tallink-ferry-tallinn-helsinki').clue.en).toContain(
+      'between Tallinn and Helsinki',
+    );
     expect(responses('built-in-geography-set-065')).toEqual(
       ['Iceland', 'Norway', 'Finland', 'Sweden', 'Denmark'],
     );
@@ -738,7 +812,7 @@ describe('buildAccessibleCorpus', () => {
       ['Suffragettes', 'New Zealand', 'Finland', 'Emmeline Pankhurst', 'The Nineteenth Amendment'],
     );
     expect(responses('built-in-history-set-053')).toEqual(
-      ['Egyptian hieroglyphs', 'The Rosetta Stone', 'Cuneiform', 'The Phoenician alphabet', 'Linear A'],
+      ['Egyptian hieroglyphs', 'The Rosetta Stone', 'Cuneiform', 'The Phoenician alphabet', 'Morse code'],
     );
     expect(responses('built-in-science-nature-set-029')).toEqual(
       ['Hedgehog', 'Dolphin', 'Koala', 'Bats', 'Platypus'],
@@ -776,7 +850,7 @@ describe('buildAccessibleCorpus', () => {
     expect(listResponses.map(({ key }) => key)).toEqual([
       'accessible-corpus:built-in-geography-set-015:united-states-capital-washington',
     ]);
-    expect(dateOrNumberPrompts).toHaveLength(74);
+    expect(dateOrNumberPrompts).toHaveLength(71);
     expect(numericResponses.map(({ key }) => key)).toEqual([
       'famous-first-lines-nineteen-eighty-four-thirteen',
     ]);
@@ -794,8 +868,8 @@ describe('buildAccessibleCorpus', () => {
       .flatMap(([, category]) => category.responses.filter((_, index) => index === 0 || index === 4));
 
     expect(ACCESSIBLE_CATEGORY_TITLES).toHaveLength(400);
-    expect(authoredEdges).toHaveLength(640);
-    expect(retainedEdges).toHaveLength(160);
+    expect(authoredEdges).toHaveLength(800);
+    expect(retainedEdges).toHaveLength(0);
   });
 });
 
@@ -807,7 +881,7 @@ describe('proposed complete easy corpus', () => {
     expect(() => proposedEasyCorpus()).not.toThrow();
   });
 
-  it('applies all 400 titles and 1,600 replacements in memory without changing inventory', () => {
+  it('applies all 400 titles and 2,000 replacements in memory without changing inventory', () => {
     const proposed = proposedEasyCorpus();
     const sets = new Map<string, Record<string, string>[]>();
     for (const row of proposed.rows) {
@@ -823,10 +897,10 @@ describe('proposed complete easy corpus', () => {
     expect(proposed.rows).toHaveLength(2_000);
     expect(sets.size).toBe(400);
     expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-corpus-'))).toHaveLength(
-      1_600,
+      2_000,
     );
     expect(proposed.rows.filter(({ clue_id }) => clue_id.includes('-accessible-easy-'))).toHaveLength(
-      400,
+      0,
     );
     for (const [categorySetId, categoryRows] of sets) {
       const title = titleById.get(categorySetId)!;
@@ -838,6 +912,20 @@ describe('proposed complete easy corpus', () => {
         new Set([title.name.et]),
       );
     }
+  });
+
+  it('keeps accepted easy rows and evidence exactly in sync with the current source bank', () => {
+    const proposed = proposedEasyCorpus();
+    const acceptedRowsForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
+      acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`))
+        .filter((row) => row.content_kind === 'board' && row.difficulty === 'easy'));
+    const acceptedEasyClueIds = new Set(acceptedRowsForEasy.map((row) => row.clue_id));
+    const acceptedEvidenceForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
+      acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`))
+        .filter((record) => acceptedEasyClueIds.has(record.clueId)));
+
+    expect(acceptedRowsForEasy).toEqual(proposed.rows);
+    expect(acceptedEvidenceForEasy).toEqual(proposed.evidence);
   });
 
   it('has no duplicate facts, clue-answer pairs, title/answer leaks, or repeated set subjects', () => {
@@ -1462,7 +1550,7 @@ describe('applyAccessibleCorpus', () => {
       origin: 'openTdbInspired',
       authoring: {
         author: 'Codex Accessible Corpus Author',
-        authoredAt: '2026-08-28T08:00:00.000Z',
+        authoredAt: '2026-08-30T08:00:00.000Z',
       },
       supportingSource: {
         sourceId: 'target-a-source-2',
@@ -1478,17 +1566,18 @@ describe('applyAccessibleCorpus', () => {
       },
       factualReview: {
         reviewer: 'Codex Accessible Corpus Factual Reviewer',
-        reviewedAt: '2026-08-28T09:00:00.000Z',
+        reviewedAt: '2026-08-30T09:00:00.000Z',
         decision: 'approved',
       },
       editorialReview: {
         reviewer: 'Codex Accessible Corpus Editorial Reviewer',
-        reviewedAt: '2026-08-28T10:00:00.000Z',
+        reviewedAt: '2026-08-30T10:00:00.000Z',
         decision: 'approved',
       },
+      adultPolicyReview: null,
       translationReview: {
         reviewer: 'Codex Accessible Corpus Translation Reviewer',
-        reviewedAt: '2026-08-28T11:00:00.000Z',
+        reviewedAt: '2026-08-30T11:00:00.000Z',
         decision: 'approved',
       },
     });

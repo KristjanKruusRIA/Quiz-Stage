@@ -1,6 +1,6 @@
 export type LegacyEasyTarget = Readonly<{ categorySetId: string; batchId: string }>;
 
-export const ACCESSIBLE_EASY_SET_IDS = [
+export const REAUTHORED_RETAINED_EASY_SET_IDS = [
   'built-in-history-set-000',
   'built-in-history-set-003',
   'built-in-history-set-011',
@@ -83,7 +83,33 @@ export const ACCESSIBLE_EASY_SET_IDS = [
   'built-in-politics-economics-society-set-008',
 ] as const;
 
-export const LEGACY_EASY_TARGETS = [
+export const ACCESSIBLE_EASY_SET_IDS = [] as const;
+
+const RETAINED_BATCH_BY_PREFIX = {
+  'built-in-history-': '01-history',
+  'built-in-geography-': '02-geography',
+  'built-in-science-nature-': '03-science-nature',
+  'built-in-literature-language-': '04-literature-language',
+  'built-in-music-': '06-music',
+  'built-in-film-television-': '07-film-television',
+  'built-in-sports-games-': '08-sports-games',
+  'built-in-food-drink-': '09-food-drink',
+  'built-in-technology-inventions-': '10-technology-inventions',
+  'built-in-politics-economics-society-': '11-politics-economics-society',
+} as const;
+
+function retainedBatchId(categorySetId: string): string {
+  const match = Object.entries(RETAINED_BATCH_BY_PREFIX)
+    .find(([prefix]) => categorySetId.startsWith(prefix));
+  if (match === undefined) throw new Error(`Missing retained Easy batch: ${categorySetId}`);
+  return match[1];
+}
+
+const REAUTHORED_RETAINED_EASY_TARGETS = REAUTHORED_RETAINED_EASY_SET_IDS.map(
+  (categorySetId) => ({ categorySetId, batchId: retainedBatchId(categorySetId) }),
+);
+
+const BASE_LEGACY_EASY_TARGETS = [
   { categorySetId: 'built-in-history-set-030', batchId: '01-history' },
   { categorySetId: 'built-in-history-set-033', batchId: '01-history' },
   { categorySetId: 'built-in-history-set-035', batchId: '01-history' },
@@ -406,6 +432,28 @@ export const LEGACY_EASY_TARGETS = [
   { categorySetId: 'built-in-mythology-religion-philosophy-set-033', batchId: '12-mythology-religion-philosophy' },
 ] as const satisfies readonly LegacyEasyTarget[];
 
+const EASY_BATCH_ORDER = [
+  '01-history',
+  '02-geography',
+  '03-science-nature',
+  '04-literature-language',
+  '05-art-architecture',
+  '06-music',
+  '07-film-television',
+  '08-sports-games',
+  '09-food-drink',
+  '10-technology-inventions',
+  '11-politics-economics-society',
+  '12-mythology-religion-philosophy',
+] as const;
+
+export const LEGACY_EASY_TARGETS: readonly LegacyEasyTarget[] = EASY_BATCH_ORDER.flatMap(
+  (batchId) => [
+    ...REAUTHORED_RETAINED_EASY_TARGETS.filter((target) => target.batchId === batchId),
+    ...BASE_LEGACY_EASY_TARGETS.filter((target) => target.batchId === batchId),
+  ],
+);
+
 export const LEGACY_EASY_TARGET_IDS = [
   'built-in-history-set-030',
   'built-in-history-set-033',
@@ -727,4 +775,5 @@ export const LEGACY_EASY_TARGET_IDS = [
   'built-in-mythology-religion-philosophy-set-031',
   'built-in-mythology-religion-philosophy-set-032',
   'built-in-mythology-religion-philosophy-set-033',
+  ...REAUTHORED_RETAINED_EASY_SET_IDS,
 ] as const;

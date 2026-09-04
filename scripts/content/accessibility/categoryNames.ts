@@ -1,6 +1,7 @@
 import type { CategoryTitle } from './types';
+import { REAUTHORED_RETAINED_EASY_CATEGORIES } from './banks/retainedEasy';
 
-export const ACCESSIBLE_CATEGORY_TITLES = [
+const BASE_ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-history-set-000", batchId: "01-history", name: { en: "History: Landmark Years in Modern History", et: "Ajalugu: Uusaja ajaloo pöördelised aastad" } },
   { categorySetId: "built-in-history-set-001", batchId: "01-history", name: { en: "History: Daily Life in Ancient Egypt", et: "Ajalugu: Igapäevaelu Vana-Egiptuses" } },
   { categorySetId: "built-in-history-set-003", batchId: "01-history", name: { en: "History: Dates That Changed the World", et: "Ajalugu: Maailma muutnud kuupäevad" } },
@@ -143,10 +144,10 @@ export const ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-art-architecture-set-004", batchId: "05-art-architecture", name: { en: "Art & Architecture: Great Art Museums", et: "Kunst ja arhitektuur: Suured kunstimuuseumid" } },
   { categorySetId: "built-in-art-architecture-set-005", batchId: "05-art-architecture", name: { en: "Art & Architecture: Masters of the Renaissance", et: "Kunst ja arhitektuur: Renessansimeistrid" } },
   { categorySetId: "built-in-art-architecture-set-006", batchId: "05-art-architecture", name: { en: "Art & Architecture: Impressionist Painting", et: "Kunst ja arhitektuur: Impressionistlik maalikunst" } },
-  { categorySetId: "built-in-art-architecture-set-007", batchId: "05-art-architecture", name: { en: "Art & Architecture: The Art of Vincent van Gogh", et: "Kunst ja arhitektuur: Vincent van Goghi kunst" } },
-  { categorySetId: "built-in-art-architecture-set-008", batchId: "05-art-architecture", name: { en: "Art & Architecture: The Art of Pablo Picasso", et: "Kunst ja arhitektuur: Pablo Picasso kunst" } },
-  { categorySetId: "built-in-art-architecture-set-009", batchId: "05-art-architecture", name: { en: "Art & Architecture: The Art of Claude Monet", et: "Kunst ja arhitektuur: Claude Monet' kunst" } },
-  { categorySetId: "built-in-art-architecture-set-010", batchId: "05-art-architecture", name: { en: "Art & Architecture: Leonardo da Vinci", et: "Kunst ja arhitektuur: Leonardo da Vinci" } },
+  { categorySetId: "built-in-art-architecture-set-007", batchId: "05-art-architecture", name: { en: "Art & Architecture: Famous Paintings at a Glance", et: "Kunst ja arhitektuur: Kuulsad maalid ühe pilguga" } },
+  { categorySetId: "built-in-art-architecture-set-008", batchId: "05-art-architecture", name: { en: "Art & Architecture: Modern Artists and Their Signature Looks", et: "Kunst ja arhitektuur: Moodsa kunsti meistrite tunnusstiilid" } },
+  { categorySetId: "built-in-art-architecture-set-009", batchId: "05-art-architecture", name: { en: "Art & Architecture: Nature in Art", et: "Kunst ja arhitektuur: Loodus kunstis" } },
+  { categorySetId: "built-in-art-architecture-set-010", batchId: "05-art-architecture", name: { en: "Art & Architecture: Art across the Ages", et: "Kunst ja arhitektuur: Kunst läbi aegade" } },
   { categorySetId: "built-in-art-architecture-set-011", batchId: "05-art-architecture", name: { en: "Art & Architecture: Famous Portraits", et: "Kunst ja arhitektuur: Kuulsad portreed" } },
   { categorySetId: "built-in-art-architecture-set-012", batchId: "05-art-architecture", name: { en: "Art & Architecture: Landscape Painting", et: "Kunst ja arhitektuur: Maastikumaal" } },
   { categorySetId: "built-in-art-architecture-set-013", batchId: "05-art-architecture", name: { en: "Art & Architecture: Street Art", et: "Kunst ja arhitektuur: Tänavakunst" } },
@@ -366,7 +367,7 @@ export const ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-politics-economics-society-set-029", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: National Symbols", et: "Poliitika, majandus ja ühiskond: Riiklikud sümbolid" } },
   { categorySetId: "built-in-politics-economics-society-set-030", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: National Holidays", et: "Poliitika, majandus ja ühiskond: Riigipühad" } },
   { categorySetId: "built-in-politics-economics-society-set-031", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: Nordic Welfare", et: "Poliitika, majandus ja ühiskond: Põhjamaade heaoluühiskond" } },
-  { categorySetId: "built-in-politics-economics-society-set-032", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: Baltic Cooperation", et: "Poliitika, majandus ja ühiskond: Balti riikide koostöö" } },
+  { categorySetId: "built-in-politics-economics-society-set-032", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: Baltic Connections", et: "Poliitika, majandus ja ühiskond: Balti riikide ühendused" } },
   { categorySetId: "built-in-politics-economics-society-set-033", batchId: "11-politics-economics-society", name: { en: "Politics, Economics & Society: Digital Society", et: "Poliitika, majandus ja ühiskond: Digiühiskond" } },
   { categorySetId: "built-in-mythology-religion-philosophy-set-001", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: The Olympian Gods", et: "Mütoloogia, religioon ja filosoofia: Olümpose jumalad" } },
   { categorySetId: "built-in-mythology-religion-philosophy-set-002", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: Heroes of Greek Myth", et: "Mütoloogia, religioon ja filosoofia: Kreeka müütide kangelased" } },
@@ -402,3 +403,13 @@ export const ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-mythology-religion-philosophy-set-032", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: Ideas in Ethics", et: "Mütoloogia, religioon ja filosoofia: Eetika mõisted" } },
   { categorySetId: "built-in-mythology-religion-philosophy-set-033", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: Logic and Reasoning", et: "Mütoloogia, religioon ja filosoofia: Loogika ja arutlemine" } },
 ] as const satisfies readonly CategoryTitle[];
+
+const reauthoredTitleById = new Map(
+  REAUTHORED_RETAINED_EASY_CATEGORIES.map(({ categorySetId, batchId, name }) => [
+    categorySetId,
+    { categorySetId, batchId, name },
+  ] as const),
+);
+
+export const ACCESSIBLE_CATEGORY_TITLES: readonly CategoryTitle[] =
+  BASE_ACCESSIBLE_CATEGORY_TITLES.map((title) => reauthoredTitleById.get(title.categorySetId) ?? title);

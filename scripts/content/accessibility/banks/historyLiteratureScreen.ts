@@ -1,6 +1,6 @@
 import { validateAccessibleCorpus } from '../validateBank';
 import { ACCESSIBLE_CATEGORY_TITLES as CATEGORY_TITLES } from '../categoryNames';
-import { LEGACY_EASY_TARGETS } from '../targets';
+import { LEGACY_EASY_TARGETS, REAUTHORED_RETAINED_EASY_SET_IDS } from '../targets';
 import type { AccessibleCategory, AccessibleQuestion } from '../types';
 
 type TextPair = readonly [en: string, et: string];
@@ -21,8 +21,9 @@ const ASSIGNED_BATCHES = new Set([
   '07-film-television',
 ]);
 
-const assignedTargets = LEGACY_EASY_TARGETS.filter(({ batchId }) =>
-  ASSIGNED_BATCHES.has(batchId));
+const reauthoredRetainedIds = new Set<string>(REAUTHORED_RETAINED_EASY_SET_IDS);
+const assignedTargets = LEGACY_EASY_TARGETS.filter(({ categorySetId, batchId }) =>
+  ASSIGNED_BATCHES.has(batchId) && !reauthoredRetainedIds.has(categorySetId));
 const titleById = new Map<string, (typeof CATEGORY_TITLES)[number]>(
   CATEGORY_TITLES.map((title) => [title.categorySetId, title]),
 );
@@ -82,11 +83,11 @@ const rawCategories = [
       'Steam_engine', [['Steam', 'Steam engine'], ['Aur', 'Aurumasin']],
     ],
     [
-      'industrial-revolution-spinning-jenny', 'object:spinning-jenny',
-      ['Identify the multi-spindle machine that made one worker able to spin several threads at once.', 'Milline mitme värtnaga masin võimaldas ühel töölisel korraga mitut lõnga kedrata?'],
-      ['Spinning Jenny', 'Spinning Jenny'],
-      ['James Hargreaves\'s machine greatly increased yarn production during the mechanisation of textiles.', 'James Hargreavesi masin suurendas tekstiilitootmise mehhaniseerimisel tunduvalt lõnga valmistamise kiirust.'],
-      'Spinning_jenny', [[], []],
+      'industrial-revolution-telegraph-messages', 'object:electrical-telegraph',
+      ['What invention sent coded messages over long distances through wires?', 'Milline leiutis saatis kodeeritud sõnumeid juhtmete kaudu pikkade vahemaade taha?'],
+      ['The telegraph', 'Telegraaf'],
+      ['The electric telegraph made rapid long-distance communication possible before telephones.', 'Elektritelegraaf võimaldas kiiret kaugsidet enne telefonide kasutuselevõttu.'],
+      'Electrical_telegraph', [['Telegraph'], ['Elektritelegraaf']],
     ],
     [
       'industrial-revolution-coal-fuel', 'object:coal',
@@ -288,11 +289,11 @@ const rawCategories = [
       'Phoenician_alphabet', [['Phoenician script'], ['Foiniikia kiri']],
     ],
     [
-      'writing-history-linear-a-undeciphered', 'concept:linear-a',
-      ['What name is given to the still-undeciphered Minoan script found on Crete and distinguished from Linear B?', 'Millist nime kannab Kreetalt leitud seni dešifreerimata minoiline kiri, mida eristatakse lineaarkirjast B?'],
-      ['Linear A', 'Lineaarkiri A'],
-      ['The Bronze Age script remains unread, unlike Linear B, which records an early form of Greek.', 'Pronksiaegne kiri on endiselt dešifreerimata, erinevalt lineaarkirjast B, mis talletab kreeka keele varast kuju.'],
-      'Linear_A', [['Linear A script'], ['Lineaar-A']],
+      'writing-history-morse-code-dots-dashes', 'concept:morse-code',
+      ['What code uses dots and dashes to represent letters?', 'Milline kood kasutab tähtede tähistamiseks punkte ja kriipse?'],
+      ['Morse code', 'Morse kood'],
+      ['Morse code represents letters and numbers with short and long signals.', 'Morse kood tähistab tähti ja numbreid lühikeste ning pikkade signaalidega.'],
+      'Morse_code', [['Morse'], ['Morse']],
     ],
   ]),
   category('built-in-history-set-060', [
@@ -318,11 +319,11 @@ const rawCategories = [
       'Good_Friday_Agreement', [['Belfast Agreement'], ['Belfasti kokkulepe']],
     ],
     [
-      'peace-treaties-westphalia', 'event:peace-of-westphalia',
-      ['What collective name is given to the 1648 settlements that ended the Thirty Years\' War?', 'Millise koondnime all tuntakse 1648. aasta lepinguid, mis lõpetasid Kolmekümneaastase sõja?'],
-      ['The Peace of Westphalia', 'Vestfaali rahu'],
-      ['The settlements were negotiated mainly in Münster and Osnabrück.', 'Lepingud peeti peamiselt Münsteris ja Osnabrückis.'],
-      'Peace_of_Westphalia', [['Westphalian Peace'], ['Vestfaali rahulepingud']],
+      'peace-treaties-camp-david-accords', 'event:camp-david-accords',
+      ['What peace agreement between Egypt and Israel was named for a United States presidential retreat?', 'Milline Egiptuse ja Iisraeli rahukokkulepe sai nime USA presidendi puhkepaiga järgi?'],
+      ['The Camp David Accords', 'Camp Davidi kokkulepped'],
+      ['The Camp David Accords created a framework for peace between Egypt and Israel.', 'Camp Davidi kokkulepped lõid raamistiku Egiptuse ja Iisraeli rahuks.'],
+      'Camp_David_Accords', [['Camp David'], ['Camp David']],
     ],
     [
       'peace-treaties-paris-american-independence', 'event:treaty-of-paris-1783',
@@ -392,11 +393,11 @@ const rawCategories = [
       'Estonian_Restoration_of_Independence', [['Republic of Estonia'], ['Eesti Vabariik']],
     ],
     [
-      'baltic-independence-lithuania-march-1990', 'event:restoration-of-lithuanian-independence',
-      ['Identify the Baltic state that declared the restoration of independence on 11 March 1990.', 'Milline Balti riik kuulutas iseseisvuse taastamise välja 11. märtsil 1990?'],
-      ['Lithuania', 'Leedu'],
-      ['It was the first Soviet republic to declare the re-establishment of an independent state.', 'See oli esimene liiduvabariik, mis kuulutas välja iseseisva riigi taastamise.'],
-      'Act_of_the_Re-Establishment_of_the_State_of_Lithuania', [['Republic of Lithuania'], ['Leedu Vabariik']],
+      'baltic-independence-national-song', 'work:mu-isamaa-on-minu-arm',
+      ['What song, traditionally sung at the Estonian Song Festival, became an important symbol of Estonian national identity?', 'Milline laul, mida traditsiooniliselt lauldakse Eesti laulupeol, sai Eesti rahvusliku identiteedi oluliseks sümboliks?'],
+      ['Mu isamaa on minu arm', 'Mu isamaa on minu arm'],
+      ['Gustav Ernesaks\'s setting of the poem became closely associated with Estonian national feeling.', 'Gustav Ernesaksa viisistatud laul seostus tihedalt Eesti rahvustundega.'],
+      'Mu_isamaa_on_minu_arm', [[], []],
     ],
     [
       'baltic-independence-latvia-may-1990', 'event:restoration-of-latvian-independence',
@@ -880,11 +881,11 @@ const rawCategories = [
       'House_of_Romanov', [['Romanovs'], ['Romanovid']],
     ],
     [
-      'royal-houses-orange-nassau-netherlands', 'organization:house-of-orange-nassau',
-      ['Name the royal house associated with the modern monarchy of the Netherlands.', 'Nimeta Madalmaade tänapäevase monarhiaga seotud kuningakoda.'],
-      ['The House of Orange-Nassau', 'Oranje-Nassau dünastia'],
-      ['The dynasty has supplied the kings and queens of the Netherlands since the 19th century.', 'Dünastia on andnud Madalmaade kuningad ja kuningannad alates 19. sajandist.'],
-      'House_of_Orange-Nassau', [['Orange-Nassau'], ['Oranje-Nassau']],
+      'royal-houses-elizabeth-ii-reign', 'person:elizabeth-ii',
+      ['Which British queen was the longest-reigning monarch in British history?', 'Milline Briti kuninganna oli Briti ajaloo kõige kauem valitsenud monarh?'],
+      ['Elizabeth II', 'Elizabeth II'],
+      ['Elizabeth II was the longest-reigning monarch in British history.', 'Elizabeth II oli Briti ajaloo kõige kauem valitsenud monarh.'],
+      'Elizabeth_II', [['Queen Elizabeth II'], ['Kuninganna Elizabeth II']],
     ],
   ]),
   category('built-in-history-set-052', [
@@ -903,11 +904,11 @@ const rawCategories = [
       'Easter_Rising', [['Easter Rebellion'], ['Lihavõttemäss']],
     ],
     [
-      'independence-movements-algerian-fln', 'organization:national-liberation-front-algeria',
-      ['What organisation led the armed struggle for Algerian independence from France?', 'Milline organisatsioon juhtis relvastatud võitlust Alžeeria iseseisvuse eest Prantsusmaast?'],
-      ['The National Liberation Front', 'Rahvuslik Vabastusrinne'],
-      ['The FLN became the principal nationalist force during the Algerian War.', 'FLN-ist sai Alžeeria sõja ajal peamine rahvuslik jõud.'],
-      'National_Liberation_Front_(Algeria)', [['FLN'], ['FLN']],
+      'independence-movements-simon-bolivar', 'person:simon-bolivar',
+      ['Which South American leader helped several countries gain independence from Spain?', 'Milline Lõuna-Ameerika juht aitas mitmel riigil Hispaaniast iseseisvuda?'],
+      ['Simón Bolívar', 'Simón Bolívar'],
+      ['Bolívar led independence campaigns in Venezuela, Colombia, Ecuador, Peru, and Bolivia.', 'Bolívar juhtis iseseisvuskampaaniaid Venezuelas, Colombias, Ecuadoris, Peruus ja Boliivias.'],
+      'Sim%C3%B3n_Bol%C3%ADvar', [['Simon Bolivar', 'Bolívar'], ['Simon Bolivar', 'Bolívar']],
     ],
     [
       'independence-movements-san-martin', 'person:jose-de-san-martin',
@@ -1088,11 +1089,11 @@ const rawCategories = [
       'Pride_and_Prejudice', [[], []],
     ],
     [
-      'famous-first-lines-tale-two-cities-contrasts', 'work:a-tale-of-two-cities',
-      ['Identify the Dickens novel that opens with a long series of contrasts, including the best and worst of times.', 'Milline Dickensi romaan algab pika vastanduste reaga, sealhulgas parimate ja halvimate aegadega?'],
-      ['A Tale of Two Cities', '„Jutustus kahest linnast”'],
-      ['The paired opposites introduce a story set in London and revolutionary Paris.', 'Vastandipaarid juhatavad sisse Londonis ja revolutsiooniaegses Pariisis toimuva loo.'],
-      'A_Tale_of_Two_Cities', [['Tale of Two Cities'], ['Jutustus kahest linnast']],
+      'famous-first-lines-hunger-games-reaping', 'work:the-hunger-games-novel',
+      ['Which novel opens on the morning Katniss Everdeen\'s sister is chosen for the Reaping?', 'Milline romaan algab hommikul, mil Katniss Everdeeni õde valitakse lõikusele?'],
+      ['The Hunger Games', '„Näljamängud”'],
+      ['Katniss volunteers to take her sister\'s place in the annual televised contest.', 'Katniss astub vabatahtlikult oma õe asemele iga-aastasele telemängule.'],
+      'The_Hunger_Games_(novel)', [['Hunger Games'], ['Näljamängud']],
     ],
     [
       'famous-first-lines-nineteen-eighty-four-thirteen', 'work:nineteen-eighty-four',
@@ -1155,11 +1156,11 @@ const rawCategories = [
       'Les_Mis%C3%A9rables', [[], []],
     ],
     [
-      'book-settings-ulysses-dublin', 'place:dublin',
-      ['Through which Irish capital do Leopold Bloom and Stephen Dedalus travel in Ulysses?', 'Millises Iirimaa pealinnas liiguvad „Ulyssese” tegelased Leopold Bloom ja Stephen Dedalus?'],
-      ['Dublin', 'Dublin'],
-      ['James Joyce maps the novel\'s single day across recognisable streets and neighbourhoods.', 'James Joyce kaardistab romaani ühe päeva tuttavate tänavate ja linnaosade kaudu.'],
-      'Ulysses_(novel)', [[], []],
+      'book-settings-hunger-games-panem', 'place:panem',
+      ['What fictional nation is divided into districts in The Hunger Games?', 'Milline väljamõeldud riik on „Näljamängudes” jagatud ringkondadeks?'],
+      ['Panem', 'Panem'],
+      ['The Hunger Games takes place in the future nation of Panem and its districts.', '„Näljamängude” tegevus toimub tulevikuriigis Panemis ja selle ringkondades.'],
+      'The_Hunger_Games', [[], []],
     ],
     [
       'book-settings-crime-punishment-petersburg', 'place:saint-petersburg',
@@ -1347,11 +1348,11 @@ const rawCategories = [
       'Germanic_languages', [['Germanic'], ['Germaani keelerühm']],
     ],
     [
-      'language-families-basque-isolate', 'language:basque',
-      ['What language spoken on both sides of the western Pyrenees is an isolate with no known living relatives?', 'Millist läänepoolsete Püreneede mõlemal küljel kõneldavat keelt peetakse isoleeritud keeleks, millel pole teadaolevaid elavaid sugulaskeeli?'],
-      ['Basque', 'Baski keel'],
-      ['Unlike the surrounding Romance languages, Basque has no demonstrated family relationship to another surviving language.', 'Erinevalt ümbritsevatest romaani keeltest pole baski keele sugulust ühegi teise elava keelega tõendatud.'],
-      'Basque_language', [['Euskara'], ['Baski', 'Euskara']],
+      'language-families-semitic-arabic-hebrew', 'language:semitic-languages',
+      ['What language family includes Arabic and Hebrew?', 'Millisesse keelkonda kuuluvad araabia ja heebrea keel?'],
+      ['The Semitic languages', 'Semiidi keeled'],
+      ['Arabic and Hebrew are both Semitic languages.', 'Araabia ja heebrea keel on mõlemad semiidi keeled.'],
+      'Semitic_languages', [['Semitic'], ['Semiidi keelkond']],
     ],
     [
       'language-families-russian-slavic', 'concept:slavic-languages',
@@ -1391,11 +1392,11 @@ const rawCategories = [
       'Hansel_and_Gretel', [['Hansel & Gretel'], ['Hansuke ja Greteke']],
     ],
     [
-      'fairy-tales-snow-white-seven-dwarfs', 'person:snow-white',
-      ['Identify the princess who finds shelter with seven miners after fleeing a jealous queen.', 'Milline printsess leiab pärast armukadeda kuninganna eest põgenemist varju seitsme kaevuri juures?'],
-      ['Snow White', 'Lumivalgeke'],
-      ['The queen later uses a poisoned apple in another attempt to defeat her.', 'Kuninganna kasutab hiljem järjekordseks rünnakuks mürgitatud õuna.'],
-      'Snow_White', [['Snow White and the Seven Dwarfs'], ['Lumivalgeke ja seitse pöialpoissi']],
+      'fairy-tales-rapunzel-tower', 'person:rapunzel',
+      ['Which fairy-tale heroine is imprisoned in a tower and lets down her long hair?', 'Milline muinasjutukangelanna on torni vangistatud ja laseb oma pikad juuksed alla?'],
+      ['Rapunzel', 'Rapuntsel'],
+      ['Rapunzel uses her long hair to let a visitor climb to her tower room.', 'Rapuntsel laseb külastajal oma pikkade juuste abil torni tuppa ronida.'],
+      'Rapunzel', [['Rapunzel'], ['Rapunzel']],
     ],
     [
       'fairy-tales-puss-in-boots', 'person:puss-in-boots',
@@ -1784,11 +1785,11 @@ const rawCategories = [
       'Jane_Eyre', [[], []],
     ],
     [
-      'classic-love-stories-doctor-zhivago', 'work:doctor-zhivago',
-      ['In which Pasternak novel are Yuri and Lara separated by revolution and civil war?', 'Millises Pasternaki romaanis lahutavad Juri ja Lara revolutsioon ning kodusõda?'],
-      ['Doctor Zhivago', '„Doktor Živago”'],
-      ['Their relationship unfolds amid Russia\'s upheavals in the early 20th century.', 'Nende suhe areneb 20. sajandi alguse Venemaa vapustuste keskel.'],
-      'Doctor_Zhivago_(novel)', [['Dr Zhivago'], ['Doktor Zhivago']],
+      'classic-love-stories-fault-in-our-stars', 'work:the-fault-in-our-stars',
+      ['Which love story follows Hazel and Augustus after they meet at a cancer support group?', 'Milline armastuslugu jälgib Hazelit ja Augustust pärast nende kohtumist vähi tugirühmas?'],
+      ['The Fault in Our Stars', '„Süü on tähtedel”'],
+      ['John Green\'s novel follows the relationship between Hazel Grace Lancaster and Augustus Waters.', 'John Greeni romaan jälgib Hazel Grace Lancasteri ja Augustus Watersi suhet.'],
+      'The_Fault_in_Our_Stars', [[], []],
     ],
     [
       'classic-love-stories-great-gatsby', 'work:the-great-gatsby',
@@ -1873,7 +1874,7 @@ const rawCategories = [
     ],
     [
       'borrowed-words-kindergarten-garden', 'concept:kindergarten-word',
-      ['The German compound “kindergarten” literally describes a children\'s what?', 'Mida tähendab saksa liitsõna „kindergarten” sõna-sõnalt laste jaoks?'],
+      ['The German compound “kindergarten” literally describes a children\'s what?', 'Mida tähendab saksakeelne sõna „Kindergarten” sõna-sõnalt?'],
       ['Garden', 'Aed'],
       ['The compound literally joins the words for children and garden.', 'Liitsõna ühendab sõna-sõnalt lapsi ja aeda tähistavad sõnad.'],
       'Kindergarten', [[], []],
@@ -2242,11 +2243,11 @@ const rawCategories = [
       'Ethan_Hunt', [['Hunt'], ['Hunt']],
     ],
     [
-      'action-films-mad-max-fury-road', 'person:imperator-furiosa',
-      ['What warrior drives a war rig while helping women escape Immortan Joe?', 'Milline sõdalane juhib sõjamasinat ja aitab naistel Immortan Joe eest põgeneda?'],
-      ['Imperator Furiosa', 'Imperaator Furiosa'],
-      ['Her desert flight forms the driving force of Mad Max: Fury Road.', 'Tema kõrbepõgenemine on „Mad Max: Raevu tee” edasiviiv jõud.'],
-      'Imperator_Furiosa', [['Furiosa'], ['Furiosa']],
+      'action-films-john-wick-dog', 'work:john-wick',
+      ['Which action film follows a retired hitman seeking revenge after criminals kill his dog?', 'Milline märulifilm jälgib pensionile jäänud palgamõrvarit, kes otsib kättemaksu pärast seda, kui kurjategijad tapavad tema koera?'],
+      ['John Wick', '„John Wick”'],
+      ['The first John Wick film follows the former assassin after a home invasion takes away his dog.', 'Esimene „John Wicki” film jälgib endist palgamõrvarit pärast seda, kui kodune rünnak jätab ta ilma koerast.'],
+      'John_Wick', [[], []],
     ],
     [
       'action-films-raiders-lost-ark-boulder', 'work:raiders-of-the-lost-ark',
@@ -2390,11 +2391,11 @@ const rawCategories = [
       'Men_in_Black_(1997_film)', [['MIB'], ['MIB']],
     ],
     [
-      '1990s-sf-fifth-element', 'person:leeloo',
-      ['Which orange-haired supreme being joins a taxi driver to stop cosmic destruction?', 'Milline oranžipäine ülim olend ühineb taksojuhiga, et peatada kosmiline häving?'],
-      ['Leeloo', 'Leeloo'],
-      ['In The Fifth Element, she completes a set of ancient forces capable of defeating evil.', '„Viiendas elemendis” täiendab ta muistsete jõudude komplekti, mis suudab kurjuse võita.'],
-      'Leeloo', [['Leeloominaï Lekatariba Lamina-Tchaï Ekbat De Sebat'], ['Leeloo']],
+      '1990s-sf-truman-show-reality', 'work:the-truman-show',
+      ['Which film follows a man who does not know that his whole life is a television show?', 'Milline film jälgib meest, kes ei tea, et kogu tema elu on telesaade?'],
+      ['The Truman Show', '„Trumani show”'],
+      ['Truman Burbank gradually discovers that the town and people around him are part of a television production.', 'Truman Burbank avastab tasapisi, et teda ümbritsev linn ja inimesed on osa telesaatest.'],
+      'The_Truman_Show', [[], []],
     ],
     [
       '1990s-sf-stargate-portal', 'object:stargate-device',
@@ -2434,11 +2435,11 @@ const rawCategories = [
       'Casino_Royale_(2006_film)', [[], []],
     ],
     [
-      'films-2000s-devil-wears-prada', 'person:miranda-priestly',
-      ['Identify the formidable fashion editor who hires aspiring journalist Andy Sachs in The Devil Wears Prada.', 'Nimeta hirmuäratav moeajakirja peatoimetaja, kes palkab filmis „Saatan kannab Pradat” ajakirjanikuks pürgiva Andy Sachsi.'],
-      ['Miranda Priestly', 'Miranda Priestly'],
-      ['Andy must test her values against the demands of Priestly\'s glamorous workplace.', 'Andy peab panema oma väärtused proovile Priestly glamuurse töökoha nõudmiste vastu.'],
-      'Miranda_Priestly', [['Miranda'], ['Miranda']],
+      'films-2000s-slumdog-millionaire-quiz', 'work:slumdog-millionaire',
+      ['Which film follows Jamal, a young man from Mumbai, as he competes on Who Wants to Be a Millionaire?', 'Milline film jälgib Mumbaist pärit noort Jamali, kes võistleb saates „Kes tahab saada miljonäriks?”?'],
+      ['Slumdog Millionaire', '„Rentslimiljonär”'],
+      ['Jamal surprises the audience with his knowledge on the television quiz show.', 'Jamal üllatab telemälumängu publikut oma teadmistega.'],
+      'Slumdog_Millionaire', [[], []],
     ],
   ]),
   category('built-in-film-television-set-054', [
@@ -2545,11 +2546,11 @@ const rawCategories = [
       'Broadchurch', [[], []],
     ],
     [
-      'crime-dramas-the-wire-baltimore', 'work:the-wire',
-      ['Identify the Baltimore series that examines policing, the drug trade, schools, politics, and the media.', 'Nimeta Baltimore\'i sari, mis uurib politseid, uimastikaubandust, koole, poliitikat ja meediat.'],
-      ['The Wire', '„The Wire”'],
-      ['Each season shifts institutions while showing how the city\'s systems affect one another.', 'Iga hooaeg nihutab tähelepanu asutuste vahel, näidates linna süsteemide vastastikust mõju.'],
-      'The_Wire', [['The Wire series'], ['Keelatud võrk']],
+      'crime-dramas-peaky-blinders-tommy-shelby', 'work:peaky-blinders',
+      ['Which crime drama follows Birmingham gang leader Tommy Shelby?', 'Milline krimisari jälgib Birminghami jõugu juhti Tommy Shelbyt?'],
+      ['Peaky Blinders', '„Peaky Blinders”'],
+      ['The series follows the Shelby crime family in post-First World War Birmingham.', 'Sari jälgib Shelby kuritegelikku perekonda Esimese maailmasõja järgses Birminghamis.'],
+      'Peaky_Blinders_(TV_series)', [[], []],
     ],
   ]),
   category('built-in-film-television-set-065', [
@@ -2582,11 +2583,11 @@ const rawCategories = [
       'Buffy_the_Vampire_Slayer', [['Buffy'], ['Buffy']],
     ],
     [
-      'fantasy-tv-good-omens-angel-demon', 'work:good-omens-tv',
-      ['Name the fantasy comedy that teams the angel Aziraphale with the demon Crowley to avert Armageddon.', 'Nimeta fantaasiakomöödia, milles ingel Aziraphale ja deemon Crowley püüavad maailmalõppu ära hoida.'],
-      ['Good Omens', '„Head ended”'],
-      ['The unlikely friends have grown fond of life on Earth and work together against the apocalypse.', 'Ebatõenäolised sõbrad on Maa elusse kiindunud ja tegutsevad koos apokalüpsise vastu.'],
-      'Good_Omens_(TV_series)', [[], []],
+      'fantasy-tv-wednesday-nevermore', 'work:wednesday-tv-series',
+      ['Which fantasy mystery series follows an Addams Family daughter at Nevermore Academy?', 'Milline fantaasiamüsteerium jälgib Addamsite perekonna tütart Nevermore\'i akadeemias?'],
+      ['Wednesday', '„Wednesday”'],
+      ['Wednesday Addams investigates strange events while attending Nevermore Academy.', 'Wednesday Addams uurib Nevermore\'i akadeemias õppides kummalisi sündmusi.'],
+      'Wednesday_(TV_series)', [[], []],
     ],
   ]),
   category('built-in-film-television-set-067', [
@@ -2730,11 +2731,11 @@ const rawCategories = [
       'Dr._No_(film)', [['Doctor No', 'Dr No'], ['Dr No']],
     ],
     [
-      'film-music-flash-gordon-queen', 'work:flash-gordon-film',
-      ['Which space adventure film has a rock soundtrack written and performed by Queen?', 'Millise kosmoseseiklusfilmi rokkmuusika kirjutas ja esitas Queen?'],
-      ['Flash Gordon', '„Flash Gordon”'],
-      ['Queen supplied the songs and much of the score, while Howard Blake contributed orchestral music.', 'Queen lõi laulud ja suure osa filmimuusikast, Howard Blake lisas orkestrimuusikat.'],
-      'Flash_Gordon_(film)', [[], []],
+      'film-music-greatest-showman-this-is-me', 'work:the-greatest-showman',
+      ['Which musical film includes the song “This Is Me”?', 'Millises muusikalis kõlab laul „This Is Me”?'],
+      ['The Greatest Showman', '„Suurim showmees”'],
+      ['The song is performed by the cast of The Greatest Showman as a statement of self-acceptance.', 'Laulu esitavad „Suurima showmehe” tegelased enese aktsepteerimise väljendusena.'],
+      'The_Greatest_Showman', [[], []],
     ],
   ]),
   category('built-in-film-television-set-076', [
@@ -2804,11 +2805,11 @@ const rawCategories = [
       'Run_Lola_Run', [['Lola rennt'], ['Jookse, Lola!']],
     ],
     [
-      'european-cinema-cinema-paradiso', 'work:cinema-paradiso',
-      ['What Italian film recalls a director\'s childhood friendship with village projectionist Alfredo?', 'Milline Itaalia film meenutab režissööri lapsepõlvesõprust küla kinomehaaniku Alfredoga?'],
-      ['Cinema Paradiso', '„Cinema Paradiso”'],
-      ['The memories connect a love of film with growing up and leaving Sicily.', 'Mälestused seovad filmiarmastuse suureks kasvamise ja Sitsiiliast lahkumisega.'],
-      'Cinema_Paradiso', [['Nuovo Cinema Paradiso'], ['Nuovo Cinema Paradiso']],
+      'european-cinema-amelie-paris', 'work:amelie',
+      ['Which French film follows a Paris waitress who quietly helps the people around her?', 'Milline Prantsuse film jälgib Pariisi ettekandjat, kes aitab vaikselt enda ümber olevaid inimesi?'],
+      ['Amélie', '„Amélie”'],
+      ['Amélie is a French romantic comedy about a shy waitress in Montmartre.', '„Amélie” on Prantsuse romantiline komöödia tagasihoidlikust ettekandjast Montmartre\'is.'],
+      'Am%C3%A9lie', [['Le Fabuleux Destin d\'Amélie Poulain'], ['Le Fabuleux Destin d\'Amélie Poulain']],
     ],
   ]),
   category('built-in-film-television-set-078', [
@@ -2894,11 +2895,11 @@ const rawCategories = [
       'The_Lord_of_the_Rings_(film_series)', [[], []],
     ],
     [
-      'filming-locations-star-wars-tunisia', 'place:tunisia',
-      ['What North African country supplied desert locations for Tatooine?', 'Milline Põhja-Aafrika riik pakkus Tatooine\'i kõrbekaadreid?'],
-      ['Tunisia', 'Tuneesia'],
-      ['Its desert, cave dwellings, and place names helped shape Luke Skywalker\'s home world.', 'Selle kõrb, koobaselamud ja kohanimed aitasid kujundada Luke Skywalkeri kodumaailma.'],
-      'Tatooine', [[], []],
+      'filming-locations-harry-potter-kings-cross', 'place:kings-cross-station',
+      ['Which London railway station is associated with Harry Potter\'s secret train platform?', 'Milline Londoni raudteejaam seostub „Harry Potteri” salajase rongiplatvormiga?'],
+      ['King\'s Cross station', 'King\'s Crossi jaam'],
+      ['King\'s Cross is used as the entrance to the fictional Platform 9¾ in the Harry Potter films.', 'King\'s Crossi kasutatakse „Harry Potteri” filmides väljamõeldud platvormi 9¾ sissepääsuna.'],
+      'King%27s_Cross_railway_station', [['King\'s Cross'], ['King\'s Cross']],
     ],
     [
       'filming-locations-game-thrones-dubrovnik', 'place:dubrovnik',
