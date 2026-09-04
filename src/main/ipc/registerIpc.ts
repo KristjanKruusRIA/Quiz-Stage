@@ -15,6 +15,7 @@ import {
   setupOptionsSchema,
   startConfiguredMatchRequestSchema,
   type HostStateUpdate,
+  type PublicPresentation,
   type PublicStateUpdate,
   type ValidatedGameCommand,
 } from '../../shared/ipc/contracts';
@@ -367,6 +368,89 @@ export function registerIpc({
 
   let readyHostWebContentsId: number | null = null;
   let readyPublicWebContentsId: number | null = null;
+  let presentationMatchId: string | null = null;
+  const presentedRounds = new Set<'round-one' | 'round-two'>();
+  let finalPresented = false;
+  let pendingPresentation: {
+    revision: number;
+    presentation: Exclude<PublicPresentation, null>;
+    boardId: string | null;
+  } | null = null;
+  const finalPhases = ['final-category', 'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete'];
+
+  const seedReachedPresentations = (host: HostGameView) => {
+    const roundTwo = host.state.boards.find((board) => board.round === 'round-two');
+    presentedRounds.add('round-one');
+    const roundTwoClueIds = new Set(roundTwo?.categories.flatMap((category) => category.clues.map((clue) => clue.id)) ?? []);
+    const roundTwoStarted = host.state.phase === 'round-two-board'
+      || finalPhases.includes(host.state.phase)
+      || host.state.usedClueIds.some((id) => roundTwoClueIds.has(id))
+      || (host.state.activeClue !== null && roundTwoClueIds.has(host.state.activeClue.clueId));
+    if (roundTwoStarted) presentedRounds.add('round-two');
+    if (finalPhases.includes(host.state.phase)) finalPresented = true;
+  };
+
+  const syncPresentationMatch = (seedCurrent: boolean) => {
+    const host = coordinator.getHostStateUpdate()?.view ?? null;
+    if (host === null || host.state.id === presentationMatchId) return;
+    presentationMatchId = host.state.id;
+    presentedRounds.clear();
+    finalPresented = false;
+    pendingPresentation = null;
+    if (seedCurrent || host.recovery !== null) seedReachedPresentations(host);
+  };
+
+  const presentationMatchesView = (
+    pending: NonNullable<typeof pendingPresentation>,
+    view: PublicGameView,
+  ) => pending.presentation === 'round-intro'
+    ? view.board?.id === pending.boardId
+    : view.phase === 'final-category' || view.phase === 'final-wagers';
+
+  const observePublicPresentation = (view: PublicGameView, revision: number): PublicPresentation => {
+    syncPresentationMatch(false);
+    if (pendingPresentation !== null) {
+      pendingPresentation = presentationMatchesView(pendingPresentation, view)
+        ? { ...pendingPresentation, revision }
+        : null;
+    }
+    if (view.board !== null) {
+      const firstVisit = !presentedRounds.has(view.board.round);
+      presentedRounds.add(view.board.round);
+      const untouched = view.board.categories.every((category) => category.clues.every((clue) => !clue.selected));
+      if (firstVisit && untouched) {
+        pendingPresentation = { revision, presentation: 'round-intro', boardId: view.board.id };
+      }
+    }
+    const finalHasStarted = finalPhases.includes(view.phase);
+    if (finalHasStarted && !finalPresented) {
+      finalPresented = true;
+      if (view.phase === 'final-category') {
+        pendingPresentation = { revision, presentation: 'final-intro', boardId: null };
+      }
+    }
+    return pendingPresentation?.presentation ?? null;
+  };
+
+  const getPendingPresentation = (update: PublicStateUpdate): PublicPresentation => {
+    const pending = pendingPresentation;
+    if (pending === null || pending.revision !== update.revision || !presentationMatchesView(pending, update.view)) return null;
+    return pending.presentation;
+  };
+
+  const markPresentationDelivered = (update: PublicStateUpdate, presentation: PublicPresentation) => {
+    const pending = pendingPresentation;
+    if (
+      presentation === null
+      || pending === null
+      || pending.revision !== update.revision
+      || pending.presentation !== presentation
+      || !presentationMatchesView(pending, update.view)
+    ) return;
+    pendingPresentation = null;
+  };
+
+  syncPresentationMatch(true);
   const unsubscribeHost = coordinator.subscribe('host', (view, revision) => {
     const hostWindow = getWindows().hostWindow;
     if (
@@ -378,13 +462,16 @@ export function registerIpc({
     }
   });
   const unsubscribePublic = coordinator.subscribe('public', (view, revision) => {
+    const presentation = observePublicPresentation(view, revision);
     const publicWindow = getWindows().publicWindow;
     if (
       publicWindow !== null
       && !publicWindow.webContents.isDestroyed()
       && publicWindow.webContents.id === readyPublicWebContentsId
     ) {
-      publicWindow.webContents.send(IPC_CHANNELS.publicState, { revision, view });
+      const update = { revision, view, presentation };
+      publicWindow.webContents.send(IPC_CHANNELS.publicState, update);
+      markPresentationDelivered(update, presentation);
     }
   });
 
@@ -412,7 +499,11 @@ export function registerIpc({
     ) return;
     readyPublicWebContentsId = publicWindow.webContents.id;
     const update = coordinator.getPublicStateUpdate();
-    if (update !== null) publicWindow.webContents.send(IPC_CHANNELS.publicState, update);
+    if (update !== null) {
+      const presentation = getPendingPresentation(update);
+      publicWindow.webContents.send(IPC_CHANNELS.publicState, { ...update, presentation });
+      markPresentationDelivered(update, presentation);
+    }
   };
   ipcMain.on(IPC_CHANNELS.hostReady, bootstrapHost);
   ipcMain.on(IPC_CHANNELS.publicReady, bootstrapPublic);

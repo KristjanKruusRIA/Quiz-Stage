@@ -88,25 +88,26 @@ describe('main IPC registration', () => {
     const dispose = registerIpc({ ipcMain, coordinator, getWindows: () => ({ hostWindow, publicWindow }) });
 
     subscriptions.get('host')?.({ private: true }, 1);
-    subscriptions.get('public')?.({ public: true }, 1);
+    const publicProjection = { public: true, phase: 'ordinary-clue', board: null };
+    subscriptions.get('public')?.(publicProjection, 1);
     expect(hostWindow.webContents.send).not.toHaveBeenCalled();
     expect(publicWindow.webContents.send).not.toHaveBeenCalled();
 
     readyListeners.get(IPC_CHANNELS.hostReady)?.({ sender: hostWindow.webContents });
     readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: publicWindow.webContents });
     subscriptions.get('host')?.({ private: true }, 2);
-    subscriptions.get('public')?.({ public: true }, 2);
+    subscriptions.get('public')?.(publicProjection, 2);
     expect(hostWindow.webContents.send).toHaveBeenCalledWith(
       IPC_CHANNELS.hostState,
       { revision: 2, view: { private: true } },
     );
     expect(publicWindow.webContents.send).toHaveBeenCalledWith(
       IPC_CHANNELS.publicState,
-      { revision: 2, view: { public: true } },
+      { revision: 2, view: publicProjection, presentation: null },
     );
 
     publicDestroyed = true;
-    expect(() => subscriptions.get('public')?.({ public: 'newer' }, 3)).not.toThrow();
+    expect(() => subscriptions.get('public')?.({ public: 'newer', phase: 'ordinary-clue', board: null }, 3)).not.toThrow();
     expect(publicWindow.webContents.send).toHaveBeenCalledTimes(1);
 
     dispose();
@@ -126,7 +127,11 @@ describe('main IPC registration', () => {
       },
       removeListener: vi.fn(),
     };
-    const hostView = { private: true };
+    const hostView = {
+      private: true,
+      state: { id: 'match-1', boards: [], phase: 'round-one-board', usedClueIds: [], activeClue: null },
+      recovery: null,
+    };
     const publicView = { public: true };
     const coordinator = {
       dispatch: vi.fn(),
@@ -150,7 +155,7 @@ describe('main IPC registration', () => {
     );
     expect(publicWindow.webContents.send).toHaveBeenCalledWith(
       IPC_CHANNELS.publicState,
-      { revision: 7, view: publicView },
+      { revision: 7, view: publicView, presentation: null },
     );
     expect(publicWindow.webContents.send).not.toHaveBeenCalledWith(IPC_CHANNELS.hostState, expect.anything());
 
@@ -162,6 +167,157 @@ describe('main IPC registration', () => {
     expect(replacementHost.webContents.send).toHaveBeenCalledWith(
       IPC_CHANNELS.hostState,
       { revision: 7, view: hostView },
+    );
+  });
+
+  it('retains an intro for a replacement public window when delivery fails', () => {
+    const subscriptions = new Map<string, (view: never, revision: number) => void>();
+    const readyListeners = new Map<string, (event: { sender: { id: number } }) => void>();
+    const ipcMain: IpcMainPort = {
+      handle: vi.fn(), removeHandler: vi.fn(), removeListener: vi.fn(),
+      on: (channel, listener) => readyListeners.set(channel, listener),
+    };
+    const hostWindow = { webContents: { id: 1, send: vi.fn(), isDestroyed: () => false } };
+    const failingSend = vi.fn();
+    failingSend.mockImplementationOnce(() => { throw new Error('window closed during send'); });
+    let publicWindow = {
+      webContents: {
+        id: 2,
+        send: failingSend,
+        isDestroyed: () => false,
+      },
+    };
+    let hostUpdate: unknown = null;
+    let publicUpdate: unknown = null;
+    const coordinator = {
+      dispatch: vi.fn(),
+      subscribe: vi.fn((surface: string, listener: (view: never, revision: number) => void) => {
+        subscriptions.set(surface, listener);
+        return vi.fn();
+      }),
+      getHostStateUpdate: vi.fn(() => hostUpdate),
+      getPublicStateUpdate: vi.fn(() => publicUpdate),
+    };
+    registerIpc({
+      ipcMain,
+      coordinator: coordinator as never,
+      getWindows: () => ({ hostWindow, publicWindow }),
+    });
+
+    readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: publicWindow.webContents });
+    const roundOne = {
+      phase: 'round-one-board',
+      board: {
+        id: 'board-one',
+        round: 'round-one',
+        categories: [{ clues: [{ selected: false }] }],
+      },
+    };
+    hostUpdate = { revision: 1, view: { state: { id: 'match-1' }, recovery: null } };
+    publicUpdate = { revision: 1, view: roundOne };
+    expect(() => subscriptions.get('public')?.(roundOne as never, 1)).toThrow('window closed during send');
+
+    const replacementWindow = { webContents: { id: 3, send: vi.fn(), isDestroyed: () => false } };
+    publicWindow = replacementWindow;
+    readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: replacementWindow.webContents });
+    expect(replacementWindow.webContents.send).toHaveBeenCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 1, view: roundOne, presentation: 'round-intro' },
+    );
+  });
+
+  it('sends each round and Final presentation once without replaying it for undo or window recovery', () => {
+    const subscriptions = new Map<string, (view: never, revision: number) => void>();
+    const readyListeners = new Map<string, (event: { sender: { id: number } }) => void>();
+    const ipcMain: IpcMainPort = {
+      handle: vi.fn(), removeHandler: vi.fn(), removeListener: vi.fn(),
+      on: (channel, listener) => readyListeners.set(channel, listener),
+    };
+    const hostWindow = { webContents: { id: 1, send: vi.fn(), isDestroyed: () => false } };
+    let publicWindow = { webContents: { id: 2, send: vi.fn(), isDestroyed: () => false } };
+    let hostUpdate: unknown = null;
+    let publicUpdate: unknown = null;
+    const coordinator = {
+      dispatch: vi.fn(),
+      subscribe: vi.fn((surface: string, listener: (view: never, revision: number) => void) => {
+        subscriptions.set(surface, listener);
+        return vi.fn();
+      }),
+      getHostStateUpdate: vi.fn(() => hostUpdate),
+      getPublicStateUpdate: vi.fn(() => publicUpdate),
+    };
+    registerIpc({
+      ipcMain,
+      coordinator: coordinator as never,
+      getWindows: () => ({ hostWindow, publicWindow }),
+    });
+    const board = (id: string, round: 'round-one' | 'round-two') => ({
+      phase: round === 'round-one' ? 'round-one-board' : 'round-two-board',
+      board: { id, round, categories: [{ clues: [{ selected: false }] }] },
+    });
+    let matchId = 'match-1';
+    const publish = (view: unknown, revision: number) => {
+      hostUpdate = { revision, view: { state: { id: matchId }, recovery: null } };
+      publicUpdate = { revision, view };
+      subscriptions.get('public')?.(view as never, revision);
+    };
+
+    const roundOne = board('board-one', 'round-one');
+    publish(roundOne, 1);
+    readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: publicWindow.webContents });
+    expect(publicWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 1, view: roundOne, presentation: 'round-intro' },
+    );
+
+    publish({ phase: 'ordinary-clue', board: null }, 2);
+    publish(roundOne, 3);
+    expect(publicWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 3, view: roundOne, presentation: null },
+    );
+
+    const recoveredWindow = { webContents: { id: 3, send: vi.fn(), isDestroyed: () => false } };
+    publicWindow = recoveredWindow;
+    readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: recoveredWindow.webContents });
+    expect(recoveredWindow.webContents.send).toHaveBeenCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 3, view: roundOne, presentation: null },
+    );
+
+    const roundTwo = board('board-two', 'round-two');
+    publish(roundTwo, 4);
+    expect(recoveredWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 4, view: roundTwo, presentation: 'round-intro' },
+    );
+
+    const finalCategory = { phase: 'final-category', board: null };
+    const finalWindow = { webContents: { id: 4, send: vi.fn(), isDestroyed: () => false } };
+    publicWindow = finalWindow;
+    publish(finalCategory, 5);
+    const finalWagers = { phase: 'final-wagers', board: null };
+    publish(finalWagers, 6);
+    expect(finalWindow.webContents.send).not.toHaveBeenCalled();
+    readyListeners.get(IPC_CHANNELS.publicReady)?.({ sender: finalWindow.webContents });
+    expect(finalWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 6, view: finalWagers, presentation: 'final-intro' },
+    );
+
+    publish(roundTwo, 7);
+    publish(finalCategory, 8);
+    expect(finalWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 8, view: finalCategory, presentation: null },
+    );
+
+    matchId = 'match-2';
+    const nextOpening = board('next-board-one', 'round-one');
+    publish(nextOpening, 9);
+    expect(finalWindow.webContents.send).toHaveBeenLastCalledWith(
+      IPC_CHANNELS.publicState,
+      { revision: 9, view: nextOpening, presentation: 'round-intro' },
     );
   });
 });

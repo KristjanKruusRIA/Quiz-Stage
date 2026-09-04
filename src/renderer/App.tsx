@@ -12,6 +12,7 @@ import type { Language } from '../shared/game/types';
 import { SettingsScreen, SettingsStatusScreen } from './features/settings/SettingsScreen';
 import { brandingAssetUrl, type AudioAssetKey, type AudioSettings, type MediaWarning } from '../shared/media/contracts';
 import type { AppearanceSettings } from '../shared/settings/appearance';
+import type { PublicPresentation } from '../shared/ipc/contracts';
 
 const audioAssetLabelKeys = {
   opening: 'settings.asset.opening',
@@ -33,7 +34,10 @@ export default function App({ api }: AppProps) {
   const desktopApi = useMemo(() => api ?? getDesktopApi(), [api]);
   const [route, setRoute] = useState<'home' | 'setup' | 'match' | 'history' | 'content' | 'settings'>('home');
   const [hostView, setHostView] = useState<HostGameView | null>(null);
-  const [publicView, setPublicView] = useState<PublicGameView | null>(null);
+  const [publicState, setPublicState] = useState<{
+    view: PublicGameView;
+    presentation: PublicPresentation;
+  } | null>(null);
   const [locale, setLocale] = useState<Language>('en');
   const [resumableAvailability, setResumableAvailability] = useState<{
     api: DesktopApi;
@@ -52,12 +56,17 @@ export default function App({ api }: AppProps) {
     | { status: 'ready'; settings: AppearanceSettings }
   >({ status: 'loading' });
   const [mediaWarnings, setMediaWarnings] = useState<Map<AudioAssetKey, MediaWarning>>(new Map());
+  const [systemReducedMotion, setSystemReducedMotion] = useState(() => typeof window.matchMedia === 'function'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const navigationGeneration = useRef(0);
   const audioLoadSequence = useRef(0);
   const audioSaveSequence = useRef(0);
   const appearanceLoadSequence = useRef(0);
   const appearanceSaveSequence = useRef(0);
   const appearance = appearanceState.status === 'ready' ? appearanceState.settings : { version: 1 as const, reducedMotion: false, revision: 0 };
+  const effectiveReducedMotion = appearanceState.status !== 'ready'
+    || appearance.reducedMotion
+    || systemReducedMotion;
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
   const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content' | 'settings') => {
@@ -73,10 +82,24 @@ export default function App({ api }: AppProps) {
   }, []);
 
   useEffect(() => {
-    if (desktopApi.surface === 'public') return desktopApi.subscribeToState(setPublicView);
+    if (desktopApi.surface !== 'host') return;
     if (desktopApi.subscribeToState === undefined) return;
     return desktopApi.subscribeToState((view) => { setHostView(view); navigate('match'); });
   }, [desktopApi, navigate]);
+
+  useEffect(() => {
+    if (desktopApi.surface !== 'public' || appearanceState.status === 'loading') return;
+    return desktopApi.subscribeToState((view, presentation) => setPublicState({ view, presentation }));
+  }, [appearanceState.status, desktopApi]);
+
+  useEffect(() => {
+    if (typeof window.matchMedia !== 'function') return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setSystemReducedMotion(preference.matches);
+    update();
+    preference.addEventListener('change', update);
+    return () => preference.removeEventListener('change', update);
+  }, []);
 
   useEffect(() => {
     if (desktopApi.surface !== 'host' || route !== 'home') return;
@@ -117,9 +140,9 @@ export default function App({ api }: AppProps) {
   }, [applyAppearanceSettings, desktopApi]);
 
   useEffect(() => {
-    document.documentElement.dataset.reducedMotion = String(appearance.reducedMotion);
+    document.documentElement.dataset.reducedMotion = String(effectiveReducedMotion);
     return () => { delete document.documentElement.dataset.reducedMotion; };
-  }, [appearance.reducedMotion]);
+  }, [effectiveReducedMotion]);
 
   const loadAppearanceSettings = useCallback(() => {
     if (desktopApi.surface !== 'host' || desktopApi.getAppearanceSettings === undefined) return;
@@ -173,10 +196,11 @@ export default function App({ api }: AppProps) {
   }, [desktopApi, loadAudioSettings]);
 
   if (desktopApi.surface === 'public') {
-    const publicLocale = publicView?.language ?? 'en';
-    return <I18nProvider locale={publicLocale}><div data-reduced-motion={appearance.reducedMotion}>{publicView === null
+    const publicLocale = publicState?.view.language ?? 'en';
+    return <I18nProvider locale={publicLocale}><div data-reduced-motion={effectiveReducedMotion}>{publicState === null
       ? <main className="waiting-screen" role="status">{translate(publicLocale, 'app.waitingHost')}</main>
-      : <GameSurface surface="public" view={publicView} />}</div></I18nProvider>;
+      : <GameSurface surface="public" view={publicState.view} presentation={publicState.presentation}
+        reducedMotion={effectiveReducedMotion} />}</div></I18nProvider>;
   }
   let content: React.ReactNode;
   if (route === 'setup') {
@@ -245,7 +269,7 @@ export default function App({ api }: AppProps) {
     />;
   }
   const activeLocale = hostView !== null && route === 'match' ? hostView.state.config.language : locale;
-  return <I18nProvider locale={activeLocale}><div className={route === 'match' ? 'app-shell app-shell--match' : 'app-shell'} data-reduced-motion={appearance.reducedMotion}>
+  return <I18nProvider locale={activeLocale}><div className={route === 'match' ? 'app-shell app-shell--match' : 'app-shell'} data-reduced-motion={effectiveReducedMotion}>
     <div className="media-warnings">{[...mediaWarnings.values()].map((warning) => {
       const asset = translate(activeLocale, audioAssetLabelKeys[warning.assetKey]);
       return <p role="alert" key={warning.assetKey} aria-label={asset}>{translate(activeLocale, 'settings.mediaWarning', { asset })}</p>;

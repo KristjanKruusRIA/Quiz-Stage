@@ -276,8 +276,9 @@ export const publicGameViewSchema = z.strictObject({
   appVersion: z.literal(APP_VERSION),
   language: z.enum(['en', 'et']),
   phase: z.enum([
-    'round-one-board', 'ordinary-clue', 'round-two-board', 'clue-reveal', 'final-category',
-    'final-wagers', 'final-clue', 'final-reveal', 'tiebreaker', 'complete',
+    'round-one-board', 'ordinary-clue', 'round-two-board', 'daily-double-wager',
+    'daily-double-clue', 'clue-reveal', 'final-category', 'final-wagers', 'final-clue',
+    'final-reveal', 'tiebreaker', 'complete',
   ]),
   displayMode: z.enum(['single', 'dual']),
   teams: z.array(z.strictObject({
@@ -325,9 +326,13 @@ export const publicGameViewSchema = z.strictObject({
   }
   if (view.board !== null) add('Board is only public during a board phase');
 
-  if (view.phase === 'ordinary-clue') {
+  if (view.phase === 'ordinary-clue' || view.phase === 'daily-double-clue') {
     if (view.activeClue?.responseRevealed === true || view.final !== null || view.winnerTeamId !== null
-      || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid ordinary clue projection');
+      || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null
+      || (view.phase === 'daily-double-clue' && view.activeClue === null)) add('Invalid ordinary clue projection');
+  } else if (view.phase === 'daily-double-wager') {
+    if (view.activeClue !== null || view.final !== null || view.winnerTeamId !== null
+      || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid Daily Double wager projection');
   } else if (view.phase === 'clue-reveal') {
     if (view.activeClue === null || !view.activeClue.responseRevealed || view.final !== null
       || view.winnerTeamId !== null || view.tiebreakerTeamIds.length !== 0 || view.controllingTeamId === null) add('Invalid clue reveal projection');
@@ -356,9 +361,12 @@ export const hostStateUpdateSchema = z.strictObject({
   view: hostGameViewSchema,
 });
 
+export const publicPresentationSchema = z.enum(['round-intro', 'final-intro']).nullable();
+
 export const publicStateUpdateSchema = z.strictObject({
   revision: z.number().int().nonnegative(),
   view: publicGameViewSchema,
+  presentation: publicPresentationSchema,
 });
 
 export const contentAvailabilitySchema = z.discriminatedUnion('ok', [
@@ -452,6 +460,7 @@ export const matchHistorySchema = z.array(matchHistoryEntrySchema);
 
 export type HostStateUpdate = z.infer<typeof hostStateUpdateSchema>;
 export type PublicStateUpdate = z.infer<typeof publicStateUpdateSchema>;
+export type PublicPresentation = z.infer<typeof publicPresentationSchema>;
 export type ContentAvailabilityResponse = z.infer<typeof contentAvailabilitySchema>;
 export type SetupOptions = z.infer<typeof setupOptionsSchema> & { automaticDisplayMode: DisplayMode };
 export type MatchTopicTarget = z.infer<typeof matchTopicTargetSchema>;
@@ -464,12 +473,12 @@ export type ValidatedGameCommand = z.infer<typeof gameCommandSchema> & GameComma
 export type ValidatedGameState = z.infer<typeof gameStateSchema> & GameState;
 export type ValidatedGameEvent = z.infer<typeof gameEventSchema> & GameEvent;
 
-interface StateSubscriptionApi {
-  subscribeToState(listener: (view: HostGameView | PublicGameView) => void): () => void;
+interface AppearanceSubscriptionApi {
   subscribeToAppearance(listener: (settings: AppearanceSettings) => void, onError?: () => void): () => void;
 }
 
-export interface HostQuizStageApi extends StateSubscriptionApi {
+export interface HostQuizStageApi extends AppearanceSubscriptionApi {
+  subscribeToState(listener: (view: HostGameView) => void): () => void;
   dispatch(command: GameCommand): Promise<HostGameView>;
   startMatch(config: GameConfig): Promise<HostGameView>;
   configureMatch(config: GameConfig): Promise<MatchConfigurationPreview>;
@@ -499,7 +508,9 @@ export interface HostQuizStageApi extends StateSubscriptionApi {
   subscribeToMediaWarnings(listener: (event: MediaStatusEvent) => void): () => void;
 }
 
-export type PublicQuizStageApi = StateSubscriptionApi;
+export interface PublicQuizStageApi extends AppearanceSubscriptionApi {
+  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation) => void): () => void;
+}
 export type QuizStageApi = HostQuizStageApi | PublicQuizStageApi;
 
 declare global {

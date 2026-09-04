@@ -128,10 +128,10 @@ describe('preload quizStage surface', () => {
     const listener = vi.fn();
     const api = createQuizStageApi('public', ipc);
     const unsubscribe = api.subscribeToState(listener);
-    wrapped?.({}, { revision: 1, view: publicView });
+    wrapped?.({}, { revision: 1, view: publicView, presentation: 'round-intro' });
     unsubscribe();
 
-    expect(listener).toHaveBeenCalledWith(publicView);
+    expect(listener).toHaveBeenCalledWith(publicView, 'round-intro');
     expect(ipc.removeListener).toHaveBeenCalledWith(IPC_CHANNELS.publicState, wrapped);
   });
 
@@ -228,7 +228,9 @@ describe('preload quizStage surface', () => {
     const listener = vi.fn();
     createQuizStageApi('public', ipc).subscribeToState(listener);
 
-    expect(() => wrapped?.({}, { revision: 1, view: hostView })).toThrow();
+    expect(() => wrapped?.({}, { revision: 1, view: publicView })).toThrow();
+    expect(() => wrapped?.({}, { revision: 1, view: publicView, presentation: 'unknown-intro' })).toThrow();
+    expect(() => wrapped?.({}, { revision: 1, view: hostView, presentation: null })).toThrow();
     expect(listener).not.toHaveBeenCalled();
   });
 
@@ -249,7 +251,7 @@ describe('preload quizStage surface', () => {
       final: { category: 'Future Final', eligibleTeamIds: ['a'], revealed: [{ teamId: 'a', wager: 500, correct: true }] },
     };
 
-    expect(() => wrapped?.({}, { revision: 1, view: probe })).toThrow();
+    expect(() => wrapped?.({}, { revision: 1, view: probe, presentation: null })).toThrow();
     expect(listener).not.toHaveBeenCalled();
   });
 

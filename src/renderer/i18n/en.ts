@@ -108,6 +108,7 @@ export const en = {
   'game.activeClue': 'Active clue',
   'game.timeRemaining': 'Time remaining',
   'game.waitingWager': 'Waiting for wager',
+  'game.dailyDouble': 'Daily Double',
   'game.matchIncomplete': 'Match incomplete',
   'game.wins': '{team} wins',
   'game.suddenDeath': 'Sudden death',

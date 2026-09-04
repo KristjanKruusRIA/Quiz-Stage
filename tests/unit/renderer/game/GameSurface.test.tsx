@@ -2,7 +2,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../../src/renderer/api/desktopApi';
 import { GameSurface } from '../../../../src/renderer/features/game/GameSurface';
-import { hostView, publicView } from './fixtures';
+import { gameState, hostView, publicView } from './fixtures';
 
 function deferred<T>() {
   let reject!: (reason?: unknown) => void;
@@ -20,6 +20,205 @@ function api(dispatch: HostDesktopApi['dispatch']): HostDesktopApi {
 }
 
 describe('GameSurface board selection', () => {
+  it('shows the player opening logo for three seconds, then reveals categories one at a time', () => {
+    vi.useFakeTimers();
+    try {
+      render(<GameSurface surface="public" view={publicView()} reducedMotion={false} presentation="round-intro" />);
+
+      expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+      expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(2_999); });
+      expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(1); });
+      expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
+      expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'Category 2 for 200' })).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(349); });
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(1); });
+      expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
+
+      for (let index = 0; index < 4; index += 1) {
+        act(() => { vi.advanceTimersByTime(350); });
+      }
+      expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('shows a three-second Double Round title before revealing its categories', () => {
+    vi.useFakeTimers();
+    try {
+      const roundOneClues = gameState().boards[0].categories.flatMap((category) => category.clues.map((clue) => clue.id));
+      const { rerender } = render(<GameSurface surface="public" view={publicView({
+        usedClueIds: ['round-one-clue-1-1'],
+      })} reducedMotion={false} />);
+
+      rerender(<GameSurface surface="public" view={publicView({
+        phase: 'round-two-board', usedClueIds: roundOneClues,
+      })} reducedMotion={false} presentation="round-intro" />);
+
+      expect(screen.getByRole('heading', { level: 1, name: 'Double Round' })).toBeInTheDocument();
+      expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(2_999); });
+      expect(screen.getByRole('heading', { level: 1, name: 'Double Round' })).toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(1); });
+      expect(screen.getByRole('grid', { name: 'Double Round board' })).toBeInTheDocument();
+      expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+
+      for (let index = 0; index < 5; index += 1) {
+        act(() => { vi.advanceTimersByTime(350); });
+      }
+      expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('shows every category immediately for the host, recovery, and reduced motion', () => {
+    const host = render(<GameSurface surface="host" view={hostView()} api={api(vi.fn())} />);
+    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    host.rerender(<GameSurface surface="host" view={hostView({ phase: 'round-two-board' })} api={api(vi.fn())} />);
+    expect(screen.getByRole('grid', { name: 'Double Round board' })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    host.unmount();
+
+    const recovery = render(<GameSurface surface="public" view={publicView({
+      usedClueIds: ['round-one-clue-1-1'],
+    })} reducedMotion={false} />);
+    expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    recovery.unmount();
+
+    render(<GameSurface surface="public" view={publicView()} reducedMotion presentation="round-intro" />);
+    expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+  });
+
+  it('abandons an unfinished board presentation for a clue and does not replay it after undo', () => {
+    vi.useFakeTimers();
+    try {
+      const activeClue = {
+        clueId: 'round-one-clue-1-1', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+      };
+      const { rerender } = render(<GameSurface surface="public" view={publicView()} reducedMotion={false} presentation="round-intro" />);
+      act(() => { vi.advanceTimersByTime(1_000); });
+
+      rerender(<GameSurface surface="public" view={publicView({
+        phase: 'ordinary-clue', activeClue,
+      })} reducedMotion={false} />);
+      expect(screen.getByText('Prompt 1-1')).toBeInTheDocument();
+
+      rerender(<GameSurface surface="public" view={publicView({
+        activeClue: null,
+      })} reducedMotion={false} />);
+      expect(screen.queryByRole('img', { name: 'Quiz Stage' })).not.toBeInTheDocument();
+      expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
+      expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('does not replay the Double Round presentation after undoing its first clue', () => {
+    vi.useFakeTimers();
+    try {
+      const roundOneClues = gameState().boards[0].categories.flatMap((category) => category.clues.map((clue) => clue.id));
+      const roundTwoBoard = publicView({ phase: 'round-two-board', usedClueIds: roundOneClues });
+      const { rerender } = render(<GameSurface surface="public" view={roundTwoBoard}
+        reducedMotion={false} presentation="round-intro" />);
+      act(() => { vi.advanceTimersByTime(1_000); });
+
+      rerender(<GameSurface surface="public" view={publicView({
+        phase: 'ordinary-clue', usedClueIds: roundOneClues,
+        activeClue: {
+          clueId: 'round-two-clue-1-1', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+        },
+      })} reducedMotion={false} presentation={null} />);
+
+      rerender(<GameSurface surface="public" view={roundTwoBoard} reducedMotion={false} presentation={null} />);
+      expect(screen.queryByRole('heading', { level: 1, name: 'Double Round' })).not.toBeInTheDocument();
+      expect(screen.getByRole('grid', { name: 'Double Round board' })).toBeInTheDocument();
+      expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('shows a Daily Double title only on the public surface while the host enters the wager', () => {
+    const state = {
+      phase: 'daily-double-wager' as const,
+      activeClue: {
+        clueId: 'round-one-clue-1-1', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+      },
+    };
+    const { rerender } = render(<GameSurface surface="public" view={publicView(state)} />);
+
+    expect(screen.getByRole('heading', { name: 'Daily Double' })).toBeInTheDocument();
+    expect(screen.queryByText('Waiting for wager')).not.toBeInTheDocument();
+
+    rerender(<GameSurface surface="host" view={hostView(state)} api={api(vi.fn())} />);
+
+    expect(screen.queryByRole('heading', { name: 'Daily Double' })).not.toBeInTheDocument();
+    expect(screen.getByRole('spinbutton', { name: 'Daily Double wager' })).toBeInTheDocument();
+  });
+
+  it('automatically advances the public Final title to its category without delaying the host', () => {
+    vi.useFakeTimers();
+    try {
+      const state = { phase: 'final-category' as const, finalEligibleTeamIds: ['team-1', 'team-2'] };
+      const { rerender } = render(<GameSurface surface="public" view={publicView(state)}
+        reducedMotion={false} presentation="final-intro" />);
+
+      expect(screen.getByRole('heading', { level: 1, name: 'Final' })).toBeInTheDocument();
+      expect(screen.queryByText('World History')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(2_499); });
+      expect(screen.getByRole('heading', { level: 1, name: 'Final' })).toBeInTheDocument();
+      expect(screen.queryByText('World History')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(1); });
+      expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
+      expect(screen.getByText('World History')).toBeInTheDocument();
+
+      rerender(<GameSurface surface="host" view={hostView(state)} api={api(vi.fn())} />);
+      expect(screen.queryByRole('heading', { level: 1, name: 'Final' })).not.toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('skips the timed Final title when the player display uses reduced motion', () => {
+    render(<GameSurface surface="public" view={publicView({
+      phase: 'final-category', finalEligibleTeamIds: ['team-1', 'team-2'],
+    })} reducedMotion presentation="final-intro" />);
+
+    expect(screen.queryByRole('heading', { level: 1, name: 'Final' })).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
+    expect(screen.getByText('World History')).toBeInTheDocument();
+  });
+
+  it('does not replay the Final title when a player display recovers during wagers', () => {
+    render(<GameSurface surface="public" view={publicView({
+      phase: 'final-wagers', finalEligibleTeamIds: ['team-1', 'team-2'],
+      config: { ...gameState().config, displayMode: 'dual' },
+    })} reducedMotion={false} presentation={null} />);
+
+    expect(screen.queryByRole('heading', { level: 1, name: 'Final' })).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
+    expect(screen.getByText('World History')).toBeInTheDocument();
+  });
+
   it('renders a legacy long Unicode team name exactly on host and public scoreboards', () => {
     const legacyName = 'Pärandvõistkond 🧠 — väga pikk nimi 1234567890';
     const view = hostView();
@@ -27,7 +226,7 @@ describe('GameSurface board selection', () => {
     const { rerender } = render(<GameSurface surface="host" view={view} api={api(vi.fn())} />);
     expect(screen.getByText(new RegExp(legacyName), { selector: '.scoreboard li' })).toBeInTheDocument();
 
-    rerender(<GameSurface surface="public" view={publicView({ config: view.state.config })} />);
+    rerender(<GameSurface surface="public" view={publicView({ config: view.state.config })} reducedMotion />);
     expect(screen.getByText(new RegExp(legacyName), { selector: '.scoreboard li' })).toBeInTheDocument();
   });
 
