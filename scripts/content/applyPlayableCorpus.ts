@@ -23,9 +23,6 @@ import { parseEvidenceJsonl, serializeEvidence, type ContentEvidence } from './e
 import { PRODUCTION_BATCHES } from './productionBatches';
 
 const DEFAULT_OUTPUT_ROOT = 'content/work/playable-corpus-overhaul/staged';
-const PLAYABLE_BATCH_IDS = Object.freeze([
-  ...new Set(PLAYABLE_TARGETS.map(({ batchId }) => batchId)),
-]);
 const INVENTORY_COLUMNS = [
   'clue_id', 'pack_id', 'pack_name', 'category_set_id', 'content_kind',
   'round', 'tier', 'difficulty', 'macro_topic', 'enabled',
@@ -53,8 +50,15 @@ type StagedArtifact = Readonly<{
   destinationPath: string;
 }>;
 
+const PLAYABLE_BATCH_IDS = Object.freeze([...new Set(PLAYABLE_TARGETS.map(({ batchId }) => batchId))]);
+const PLAYABLE_BATCHES = Object.freeze(PLAYABLE_BATCH_IDS.map((batchId) => {
+  const batch = PRODUCTION_BATCHES.find(({ id }) => id === batchId);
+  if (batch === undefined) throw new Error(`Playable target has an unknown batch: ${batchId}`);
+  return batch;
+}));
+
 function artifactDefinitions(acceptedRoot: string, outputRoot: string): readonly StagedArtifact[] {
-  return PLAYABLE_BATCH_IDS.flatMap((batchId) => [
+  return PLAYABLE_BATCHES.flatMap(({ id: batchId }) => [
     {
       batchId,
       kind: 'authored' as const,
@@ -197,7 +201,7 @@ function buildExpectedStage(options: StageOptions): Readonly<{
   validateGlobalInputs(options);
   const staged = new Map<string, string>();
   const replacedClueIds: string[] = [];
-  for (const batchId of PLAYABLE_BATCH_IDS) {
+  for (const { id: batchId } of PLAYABLE_BATCHES) {
     const authoredPath = resolve(options.acceptedRoot, `content/authored/${batchId}.csv`);
     const generatedPath = resolve(options.acceptedRoot, `content/generated/${batchId}.en-et.csv`);
     const evidencePath = resolve(options.acceptedRoot, `content/evidence/${batchId}.jsonl`);
@@ -280,7 +284,7 @@ export function publishPlayableCorpusStage(options: StageOptions & Readonly<{
   const artifacts = artifactDefinitions(options.acceptedRoot, options.outputRoot);
   const bytes = new Map<string, Buffer>();
   for (const artifact of artifacts) bytes.set(artifact.stagedPath, readStagedArtifact(artifact.stagedPath));
-  for (const batchId of PLAYABLE_BATCH_IDS) {
+  for (const { id: batchId } of PLAYABLE_BATCHES) {
     const batchArtifacts = artifacts.filter((artifact) => artifact.batchId === batchId);
     validateStagedBatch(
       batchId,
@@ -416,7 +420,7 @@ function runCli(argv = process.argv.slice(2)): void {
   const result = stagePlayableCorpus(pipeline);
   if (args.publish) publishPlayableCorpusStage(pipeline);
   process.stdout.write(
-    `Staged ${result.replacedClueIds.length} playable corpus clues across ${PLAYABLE_BATCH_IDS.length} batches${args.publish ? ` and published ${PLAYABLE_BATCH_IDS.length * 3} artifacts` : ''}.\n`,
+    `Staged ${result.replacedClueIds.length} playable corpus clues across ${PLAYABLE_BATCHES.length} batches${args.publish ? ` and published ${result.artifactPaths.length} artifacts` : ''}.\n`,
   );
 }
 

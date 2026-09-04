@@ -1,6 +1,6 @@
 import { validateAccessibleCorpus } from '../validateBank';
 import { ACCESSIBLE_CATEGORY_TITLES as CATEGORY_TITLES } from '../categoryNames';
-import { LEGACY_EASY_TARGETS } from '../targets';
+import { LEGACY_EASY_TARGETS, REAUTHORED_RETAINED_EASY_SET_IDS } from '../targets';
 import type { AccessibleCategory, AccessibleQuestion } from '../types';
 
 type TextPair = readonly [en: string, et: string];
@@ -21,8 +21,9 @@ const ASSIGNED_BATCHES = new Set([
   '07-film-television',
 ]);
 
-const assignedTargets = LEGACY_EASY_TARGETS.filter(({ batchId }) =>
-  ASSIGNED_BATCHES.has(batchId));
+const reauthoredRetainedIds = new Set<string>(REAUTHORED_RETAINED_EASY_SET_IDS);
+const assignedTargets = LEGACY_EASY_TARGETS.filter(({ categorySetId, batchId }) =>
+  ASSIGNED_BATCHES.has(batchId) && !reauthoredRetainedIds.has(categorySetId));
 const titleById = new Map<string, (typeof CATEGORY_TITLES)[number]>(
   CATEGORY_TITLES.map((title) => [title.categorySetId, title]),
 );

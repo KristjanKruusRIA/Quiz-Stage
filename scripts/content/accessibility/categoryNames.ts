@@ -1,6 +1,7 @@
 import type { CategoryTitle } from './types';
+import { REAUTHORED_RETAINED_EASY_CATEGORIES } from './banks/retainedEasy';
 
-export const ACCESSIBLE_CATEGORY_TITLES = [
+const BASE_ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-history-set-000", batchId: "01-history", name: { en: "History: Landmark Years in Modern History", et: "Ajalugu: Uusaja ajaloo pöördelised aastad" } },
   { categorySetId: "built-in-history-set-001", batchId: "01-history", name: { en: "History: Daily Life in Ancient Egypt", et: "Ajalugu: Igapäevaelu Vana-Egiptuses" } },
   { categorySetId: "built-in-history-set-003", batchId: "01-history", name: { en: "History: Dates That Changed the World", et: "Ajalugu: Maailma muutnud kuupäevad" } },
@@ -402,3 +403,13 @@ export const ACCESSIBLE_CATEGORY_TITLES = [
   { categorySetId: "built-in-mythology-religion-philosophy-set-032", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: Ideas in Ethics", et: "Mütoloogia, religioon ja filosoofia: Eetika mõisted" } },
   { categorySetId: "built-in-mythology-religion-philosophy-set-033", batchId: "12-mythology-religion-philosophy", name: { en: "Mythology, Religion & Philosophy: Logic and Reasoning", et: "Mütoloogia, religioon ja filosoofia: Loogika ja arutlemine" } },
 ] as const satisfies readonly CategoryTitle[];
+
+const reauthoredTitleById = new Map(
+  REAUTHORED_RETAINED_EASY_CATEGORIES.map(({ categorySetId, batchId, name }) => [
+    categorySetId,
+    { categorySetId, batchId, name },
+  ] as const),
+);
+
+export const ACCESSIBLE_CATEGORY_TITLES: readonly CategoryTitle[] =
+  BASE_ACCESSIBLE_CATEGORY_TITLES.map((title) => reauthoredTitleById.get(title.categorySetId) ?? title);
