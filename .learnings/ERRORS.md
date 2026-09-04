@@ -32,6 +32,207 @@ Use the canonical command documented in the production content plan, including g
 
 ---
 
+## [ERR-20260901-PSRANGE] PowerShell Git range interpolation
+
+**Logged**: 2026-09-01T09:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+PowerShell parsed `$base..$head` as one variable/property expression instead of passing a two-commit Git range.
+
+### Error
+```
+usage: git diff [<options>] [<commit>] [--] [<path>...]
+```
+
+### Context
+- A final read-only review gate declared `$base` and `$head`, then called `git diff --name-only $base..$head` and `git diff --check $base..$head`.
+- The same interpolation pitfall also corrupted a double-quoted `rg` pattern containing `$head`.
+- Earlier explicit-hash audits were already green; no tracked content was touched.
+
+### Suggested Fix
+Construct the range first (`$range = $base + '..' + $head`) and pass `$range`, or use literal full hashes. Put search patterns containing dollar signs in single-quoted PowerShell strings.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-politics-checkpoint-1-review.md
+
+### Resolution
+- **Resolved**: 2026-09-01T09:00:00+03:00
+- **Notes**: Re-ran the range gates with an explicitly constructed range string.
+
+---
+
+## [ERR-20260901-C8O] checkpoint-8-review-overlay
+
+**Logged**: 2026-09-01T06:02:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Zero-padded checkpoint set IDs did not match numeric set keys in the review overlay.
+
+### Error
+```
+The RED audit reported only 4 review mismatches for set 100 instead of all intended checkpoint-8 corrections.
+```
+
+### Context
+- The overlay used keys such as `095:3`, while the audit interpolated `Number(...)` as `95:3`.
+- The audit itself ran successfully, so mismatch cardinality was the signal that exposed the defect.
+
+### Suggested Fix
+Pad the numeric set value back to three digits before all review-overlay lookups, then rerun the RED audit and confirm every authorized correction is represented.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-technology-checkpoint-8-audit.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T06:04:00+03:00
+- **Notes**: The lookup now uses a three-digit `setId`; the repeated RED audit covered all seven blocker groups.
+
+---
+
+## [ERR-20260901-C8V] playable-corpus-validator
+
+**Logged**: 2026-09-01T06:06:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A historical clue's adjective `now-famous` was normalized into the unstable-time cue `now`.
+
+### Error
+```
+Error: Question built-in-technology-inventions-set-096:question:4 asks about an unstable fact without an explicit date
+```
+
+### Context
+- The clue began `In October 1994` but the explicit-date helper checks `in YYYY`, not `in Month YYYY`, after detecting a current cue.
+- The hyphen in `now-famous` normalized to a space, causing the standalone `now` detector to fire.
+
+### Suggested Fix
+Use the timeless adjective `famous`; it preserves the reviewed historical meaning without implying a current changing state.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts, scripts/content/playability/validateBank.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T06:08:00+03:00
+- **Notes**: The clue and review overlay now use `famous`; the same audit command is the regression check.
+
+---
+
+## [ERR-20260901-T84MARK] PowerShell category-marker newline mismatch
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A read-only PowerShell category extractor looked for literal backslash newline text instead of an actual CRLF boundary.
+
+### Error
+```
+markers missing
+```
+
+### Context
+- The extractor was preparing an `apply_patch` hunk for Technology Hard set 084.
+- Its JavaScript string deliberately contained `\\r\\n`, which PowerShell received literally, so `String.IndexOf` could not find the category marker.
+- The failure occurred before `apply_patch`; the bank remained unchanged.
+
+### Suggested Fix
+Avoid newline-sensitive whole-category markers. Patch the unique category title and each bounded question object separately, using the stable question key as context.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+- See Also: ERR-20260831-T56CAP
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Switched to bounded stable-key patches; no content was affected by the failed attempt.
+
+---
+
+## [ERR-20260901-R84FIX1SRC] Inline tsx source-status probe parsed annotations as JavaScript
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+A disposable read-only `tsx` stdin probe rejected an inline `any[]` annotation before making any HTTP requests.
+
+### Error
+```
+Expression expected
+SyntaxError: Missing initializer in const declaration
+```
+
+### Context
+- The probe was intended to check all 85 direct source URLs in the ignored Technology Hard 084-100 fix1 roster.
+- The failure occurred during compilation and did not read or change repository content.
+
+### Suggested Fix
+Use annotation-free JavaScript syntax for short `tsx -` stdin probes when no imported TypeScript module requires transpilation.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-technology-084-100-integrated-roster-fix1.md
+
+### Follow-up
+- The annotation-free rerun exposed a second compile-only issue: its async map callback was missing its final closing brace before `));`.
+- Use a named worker function or multiline `try`/`catch` blocks to make brace balance obvious, then resolve this entry only after a successful rerun.
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: A named multiline worker completed successfully; all 85 direct URLs returned HTTP 200.
+
+---
+
+## [ERR-20260831-BANKPATH] absent-playable-bank-path
+
+**Logged**: 2026-08-31T18:42:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+An optional full-bank inspection assumed a playability entrypoint that is not present in the current worktree.
+
+### Error
+```
+Cannot find path 'scripts/content/playability/bank.ts' because it does not exist.
+```
+
+### Context
+- Command attempted: `Get-Content scripts/content/playability/bank.ts`.
+- Focused validation imports the assigned `packs09to12.ts` module directly and was unaffected.
+- No repository content changed as a result of the failed command.
+
+### Suggested Fix
+Check `rg --files scripts/content/playability` before assuming an optional aggregate-module path; use the focused bank module when the aggregate is absent.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-08-31T18:42:00+03:00
+- **Notes**: Continued with the existing focused module import and playable-corpus unit suite.
+
+---
+
 ## [ERR-20260830-001] art-accessibility-bank-parse
 
 **Logged**: 2026-08-30T13:25:30+03:00
@@ -1471,5 +1672,687 @@ Wrap dynamic imports in an async IIFE when using `tsx -e` in this workspace.
 ### Resolution
 - **Resolved**: 2026-08-31T00:00:00+03:00
 - **Notes**: Continue with `(async () => { ... })()` around the inline probe.
+
+---
+## 2026-08-31 — Worktree creation cannot start inside its destination
+
+- Error: `exec_command` rejected the process with `The directory name is invalid` before `git worktree add` ran.
+- Cause: the command's `workdir` was set to the new worktree path, which does not exist until Git creates it.
+- Prevention: run `git worktree add` from an existing repository worktree, then use the new path only in subsequent commands.
+
+---
+
+## [ERR-20260831-PS-EVAL] PowerShell mangled an inline `tsx -e` arrow-function probe
+
+**Logged**: 2026-08-31
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+An inline TypeScript inspection probe embedded inside a PowerShell double-quoted command lost parts of its arrow-function expressions and failed during esbuild parsing.
+
+### Error
+```
+Transform failed with 1 error:
+/eval.ts:1:143: ERROR: Unexpected ","
+```
+
+### Context
+- The command attempted to dynamically import an authored Easy content bank and print category titles and responses.
+- The audit was read-only; no source or generated content changed.
+- A follow-up lookup also confirmed that `.learnings` exists only in the primary checkout, not in the isolated Easy worktree.
+- PowerShell interpreted one `>` from the mangled arrow function as redirection and created an empty stray file named `q.responseEn)}))))` in the Easy worktree.
+
+### Suggested Fix
+Use a single-quoted PowerShell argument for `tsx -e`, or inspect the source directly, instead of nesting TypeScript arrow functions inside a double-quoted PowerShell command string.
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: A second inline attempt showed PowerShell also stripped the quoted dynamic-import path. Abandoned inline `tsx -e`, inspected the known source directly, and removed the empty redirection artifact with `apply_patch`.
+
+---
+
+## [ERR-20260831-PS-FOREACH-PIPE] PowerShell rejected a pipe directly after a `foreach` statement
+
+**Logged**: 2026-08-31
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A read-only staged-CSV audit attempted to pipe the output of a statement-form `foreach` directly into `Format-Table`, producing an empty-pipe parser error.
+
+### Error
+```
+ParserError: An empty pipe element is not allowed.
+```
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Collect `foreach` output in a task-specific array first, then pipe that array to formatting.
+
+---
+
+## [ERR-20260831-RG-WIN-GLOB] Windows rejected a wildcard embedded in an `rg` path argument
+
+**Logged**: 2026-08-31
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+Passing `scripts\...\retainedEasy*.ts` as a path caused Windows error 123 because the wildcard was interpreted as part of the path.
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Pass the containing directory as the path and use `rg -g 'retainedEasy*.ts'` for the filename filter.
+
+## [ERR-20260831-009] oversized-retained-easy-patch-context-mismatch
+
+**Logged**: 2026-08-31
+**Severity**: low
+**Status**: resolved
+
+### Summary
+An oversized `apply_patch` for `retainedEasy09To12.ts` matched several category blocks at once and failed atomically when one fruit tuple differed from the assumed context.
+
+### Error
+```
+apply_patch verification failed: Failed to find expected lines in retainedEasy09To12.ts
+```
+
+### Context
+- No production change was applied.
+- The attempted patch combined unrelated category hunks, making one stale tuple invalidate the whole operation.
+
+### Suggested Fix
+Read the exact current category block and apply one category-bounded patch at a time.
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Switched to exact, category-bounded patches.
+
+## [ERR-20260831-010] accessibility-validator-path-assumption
+
+**Logged**: 2026-08-31
+**Severity**: low
+**Status**: resolved
+
+### Summary
+The validation lookup correctly found `validateAccessibleCorpus` in `validateBank.ts`, but the same command then tried to read a guessed `validation.ts` path that does not exist.
+
+### Error
+```
+Get-Content: Cannot find path 'scripts/content/accessibility/validation.ts' because it does not exist.
+```
+
+### Context
+- Read-only discovery error; content was unaffected.
+- `rg` in the same command returned the correct module path.
+
+### Suggested Fix
+Read the path returned by `rg` instead of assuming the validator filename.
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Continued with `scripts/content/accessibility/validateBank.ts`.
+
+## [ERR-20260831-011] retained-easy-typewriter-response-leak
+
+**Logged**: 2026-08-31
+**Severity**: low
+**Status**: resolved
+
+### Summary
+The final accessibility validator caught the Estonian canonical response `kirjutusmasin` verbatim inside its clue.
+
+### Error
+```
+Question retained-easy-09-12:built-in-technology-inventions-set-007:typewriter-prints-keystrokes leaks its Estonian response in the clue
+```
+
+### Context
+- The issue was introduced while replacing a late semantic collision.
+- The validator stopped before making any additional changes.
+
+### Suggested Fix
+Describe the keyed device without repeating its answer.
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Rephrased the Estonian clue as `Milline klahvidega seade ...`.
+
+---
+
+## [ERR-20260831-RE05VAR] full-corpus-validation-blocked-by-sibling-bank
+
+**Logged**: 2026-08-31T00:00:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Full accessible-corpus validation was blocked by an unrelated bilingual-variant mismatch in a concurrently edited retained Easy bank.
+
+### Error
+```
+Question retained-easy-05-08:animated-toothless must provide bilingual accepted variants
+```
+
+### Context
+- Command attempted: import and execute `buildAccessibleCorpus()` with Node and `tsx`.
+- The assigned History, Geography, and Science modules had already imported successfully at 24 categories and 120 clues.
+- The failing file is outside the assigned edit scope and was left untouched.
+
+### Suggested Fix
+Give `retained-easy-05-08:animated-toothless` either non-empty English and Estonian variant arrays or two empty arrays, then rerun full-corpus validation.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/accessibility/banks/retainedEasy05To08.ts
+
+### Resolution
+- **Resolved**: 2026-08-31
+- **Notes**: Replaced the overbroad species alias with the character-specific English variant `Toothless the dragon`; the focused module import can now re-enter validation.
+
+---
+
+## [ERR-20260831-WINSCAN] windows-rg-glob-and-esm-path-syntax
+
+**Logged**: 2026-08-31T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Two read-only collision-scan probes used path forms that Windows rejected.
+
+### Error
+```
+rg: scripts/content/accessibility/banks/*.ts: The filename, directory name, or volume label syntax is incorrect.
+Error [ERR_UNSUPPORTED_ESM_URL_SCHEME]: ... Received protocol 'e:'
+```
+
+### Context
+- `rg` received wildcard path arguments instead of directory arguments with a `-g` filter.
+- A Node ESM import used `E:/...` rather than a `file:///E:/...` URL.
+- Neither failure changed repository content.
+
+### Suggested Fix
+Pass directories to `rg` on Windows, and use `file:///` URLs for absolute Windows ESM imports.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/accessibility/banks
+
+### Resolution
+- **Resolved**: 2026-08-31T00:00:00+03:00
+- **Notes**: Re-ran with directory arguments and `file:///E:/...` imports; the scan completed.
+
+---
+
+## [ERR-20260831-T46PATCH] multiline-array-context-mismatch
+
+**Logged**: 2026-08-31T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: config
+
+### Summary
+An exact-field `apply_patch` for playability set 046 failed atomically because its context assumed compact accepted-variant arrays while the source file used multiline arrays.
+
+### Error
+```
+apply_patch verification failed: Failed to find expected lines in scripts/content/playability/banks/packs09to12.ts
+```
+
+### Context
+- The attempted patch covered only `built-in-technology-inventions-set-046`.
+- A JSON projection had hidden the source formatting, so the patch context did not reproduce the actual multiline array layout.
+- No part of the failed patch was applied.
+
+### Suggested Fix
+Inspect the raw category block before constructing a large exact-context patch, or split it into smaller field-level hunks that do not depend on array formatting.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+- See Also: ERR-20260831-009
+
+### Resolution
+- **Resolved**: 2026-08-31T00:00:00+03:00
+- **Notes**: Confirmed the category was unchanged and regenerated smaller hunks against the raw source layout.
+
+---
+
+## [ERR-20260831-TSCAN] selected-question-adapter-mismatch
+
+**Logged**: 2026-08-31T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+An inline playability collision scan adapted comparison questions to a `variants` field but passed selected questions with their original `acceptedVariants` field.
+
+### Error
+```
+TypeError: Cannot read properties of undefined (reading 'en')
+```
+
+### Context
+- The scan combined medium/hard, Easy, Adult, and Estonia clues.
+- Corpus imports were successful; only the one-off read-only scan adapter failed.
+
+### Suggested Fix
+Normalize selected and comparison questions through the same adapter before collecting answer aliases.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-08-31T00:00:00+03:00
+- **Notes**: Wrapped selected questions with `variants: question.acceptedVariants` before rerunning the scan.
+
+---
+
+## [ERR-20260831-T56CAP] oversized-category-extraction-truncated-before-patch
+
+**Logged**: 2026-08-31T21:12:21+03:00
+**Priority**: high
+**Status**: in_progress
+**Area**: config
+
+### Summary
+Repeated attempts to replace Technology set 056 failed because whole-category extraction exceeded the tool output cap or mismatched CRLF context before `apply_patch` ran.
+
+### Error
+```
+The extracted category hunk exceeded the 10k tool-output cap and was truncated before apply_patch; an earlier whole-slice patch also failed to match CRLF context.
+```
+
+### Context
+- The operation targeted `scripts/content/playability/banks/packs09to12.ts` in the Medium Technology 056-066 fix round.
+- Both failures were atomic and left the tracked worktree unchanged.
+- The same large-context patch pattern had already failed elsewhere in this bank.
+
+### Suggested Fix
+Never extract or patch an entire large category. Locate each unique question key, read a bounded raw-source window of at most about 60 lines, replace one question object per `apply_patch`, and patch the category title separately. Validate the bank after each category.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+- See Also: ERR-20260831-009, ERR-20260831-T46PATCH
+
+---
+
+## [ERR-20260901-R84SRC] inline-source-audit-missing-function-brace
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A read-only inline `tsx` source-support probe ended at EOF because its worker function was missing one closing brace.
+
+### Error
+```
+Expected '}', got '<eof>'
+SyntaxError: Unexpected end of input
+```
+
+### Context
+- The probe parsed the ignored Technology Hard 084-100 roster and fetched its source URLs.
+- The failure occurred during compilation, before any repository data was read or changed.
+
+### Suggested Fix
+Keep nested worker/loop/try blocks visually separated in inline probes and run the corrected read-only command.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-technology-084-100-integrated-roster.md
+- See Also: ERR-20260830-A2S
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Added the missing function brace; no project content was affected.
+
+---
+
+## [ERR-20260901-T85TITLE] stale category-title patch context
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A surgical title patch assumed the rejected set 085 title instead of reading its exact current text.
+
+### Error
+```
+apply_patch verification failed: Failed to find expected lines
+```
+
+### Context
+- The failed hunk targeted only the bilingual set 085 title.
+- `apply_patch` failed atomically; no tracked content changed.
+
+### Suggested Fix
+Read each current title immediately before its small patch rather than reconstructing rejected copy from the audit summary.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+- See Also: ERR-20260831-T46PATCH
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Read the exact current title and used it as bounded patch context.
+
+---
+
+## [ERR-20260901-T88QUOTE] quoted source title lost escaping
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The generated TypeScript object for the `Hello, World!` source title contained unescaped inner double quotes.
+
+### Error
+```
+Expected "}" but found "Hello"
+```
+
+### Context
+- The focused test had run before this later set was authored; the first complete-slice audit import caught the syntax error.
+- No commit or publish occurred.
+
+### Suggested Fix
+When inserting JSON-shaped TypeScript through a JavaScript template literal, double-escape quotes that must remain escaped in the target source and rerun the complete import gate.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+- See Also: ERR-20260831-T46PATCH
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Restored the escaped title and reran the complete-slice audit.
+
+---
+
+## [ERR-20260901-T84CURRENT] Estonian positional word triggered current-fact validator
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The Estonian word `viimane` meant the last ball in a row but matched the validator's “latest/current” cue.
+
+### Error
+```
+Question built-in-technology-inventions-set-084:question:1 asks about an unstable fact without an explicit date
+```
+
+### Context
+- The content fact is stable; this was a lexical false positive in authored clue copy.
+- The first full-slice import caught it before commit.
+
+### Suggested Fix
+In Estonian spatial descriptions, use an unambiguous phrase such as `teises otsas olev` when `viimane` would be read as positional but is reserved by the current-fact detector.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts, scripts/content/playability/validateBank.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Rephrased the positional cue without changing the fact or response.
+
+---
+
+## [ERR-20260901-T85LEAK] accepted Zune alias leaked in clue
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The initial Zune freeze clue included the accepted alias `Z2K`, making an allowed response visible in the prompt.
+
+### Error
+```
+Question built-in-technology-inventions-set-085:question:5 contains an accepted response in the clue
+```
+
+### Context
+- The complete-slice audit compared every canonical and accepted response against both clue languages.
+- The roster response boundary remained unchanged.
+
+### Suggested Fix
+Check clues against the complete bilingual accepted-variant set, including short nicknames, before running the corpus gate.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Replaced the nickname with a neutral request for the device-wide incident.
+
+---
+
+## [ERR-20260901-T92CURRENT] undated Long Now construction status
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The Clock of the Long Now explanation described an active construction status without an explicit as-of date.
+
+### Error
+```
+Question built-in-technology-inventions-set-092:question:5 asks about an unstable fact without an explicit date
+```
+
+### Context
+- The underlying construction-status claim can change even though the clock's design and location are stable.
+- The complete-slice validator caught the omission before commit.
+
+### Suggested Fix
+Date any ongoing project status in both languages, while leaving stable design facts undated.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts, scripts/content/playability/validateBank.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Added an explicit 2026 as-of date to both explanation languages.
+
+---
+
+## [ERR-20260901-T94CURRENT] current cue in dated moving-walkway clue
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: medium
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The Estonian moving-walkway clue used the word `tänapäeval`, which the unstable-fact validator correctly treats as a current-time cue despite the clue's historical context.
+
+### Error
+```
+Question built-in-technology-inventions-set-094:question:2 asks about an unstable fact without an explicit date
+```
+
+### Context
+- The clue dated the World's Columbian Exposition, but `tänapäeval` appeared in the later answer-request sentence.
+- The complete-slice validator checks the current cue's own clause for an explicit date.
+
+### Suggested Fix
+Avoid unnecessary present-time adverbs in historical clues; describe the stable association directly.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts, scripts/content/playability/validateBank.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Removed `tänapäeval` from the Estonian clue and kept the airport association unchanged; the explanation also carries the 1893 context.
+
+---
+
+## [ERR-20260901-T08EXPORT] wrong checkpoint inventory export name
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+An ad-hoc checkpoint inventory command imported a nonexistent `PACKS_09_TO_12` export instead of the bank's actual `PACKS_09_TO_12_CATEGORIES` export.
+
+### Error
+```
+TypeError: Cannot read properties of undefined (reading 'flatMap')
+```
+
+### Context
+- The bank exports a flat validated category array, not a pack array.
+- The command was read-only and did not affect authored content.
+
+### Suggested Fix
+Check the module's exported symbol before composing one-off inspection commands.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Re-ran the inventory using `PACKS_09_TO_12_CATEGORIES` and filtered the flat category array directly.
+
+---
+
+## [ERR-20260901-POLAUTH] stale packs01to04 bank import names
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+An ignored Politics authority-query helper initially reconstructed historical module, root-path, and parsed-row contracts instead of copying the passing checkpoint audit pattern.
+
+### Error
+```
+Error: Cannot find module '../../../../playable-medium-hard-corpus/scripts/content/playability/banks/packs01to04/culture'
+Error: ENOENT: no such file or directory, scandir 'E:\git\jeopardy\.worktrees\content\evidence'
+TypeError: Cannot read properties of undefined (reading 'response')
+Error: Expected 3,174 generated questions, got 7174
+Error: Malformed authority entries: generated Finals evidence has no subjectKey
+Query output matched hundreds of unrelated rows because every string contains the empty legacy subject value
+```
+
+### Context
+- The accepted packs01to04 authoring worktree exposes `history`, `geography`, `scienceNature`, and `literatureLanguage` modules.
+- The helper's location is three parents below its worktree root, not four; using the current working directory avoids that brittle count.
+- `parsePackCsv` returns flat snake-case fields such as `response_en`, while authored banks use `category.name` and `question.response`; neither uses synthetic localized `en`/`et` objects.
+- The accepted generated authority is the passing audit's Easy plus filenames 13/14/15 filter, not every historical CSV row; all raw generated files contain 7,174 questions.
+- Generated Finals evidence intentionally omits `subjectKey`; authority tooling must preserve its fact key while treating the absent optional subject as non-indexable.
+- Related-value scans must exclude empty optional fields before applying substring comparisons.
+- Both failures occurred before any authority inventory was produced and did not touch tracked content.
+
+### Suggested Fix
+Copy the whole current authority-construction block from a passing checkpoint audit, explicitly model optional legacy evidence fields, and filter absent fields out of fuzzy diagnostic scans.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-politics-034-044-authority-query.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Replaced the stale imports, root resolution, extraction shapes, and accepted-generated filter with the passing checkpoint audit's complete contract; the stricter query helper maps absent legacy Finals subjects to an unindexed empty value and excludes it from comparisons.
+
+---
+
+## [ERR-20260901-POLROSTER-AWAIT] task-local audit used top-level await under CommonJS
+
+**Logged**: 2026-09-01T00:00:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+The first Politics roster-audit run used top-level `await`, but this repository's `tsx` path transpiles the ignored script to CommonJS.
+
+### Error
+```
+ERROR: Top-level await is currently not supported with the "cjs" output format
+```
+
+### Context
+- The failure occurred while starting the 55-source reachability pass.
+- Roster parsing and tracked content were unaffected.
+
+### Suggested Fix
+Wrap asynchronous audit work in an explicit `async main()` entry point for repository-local TypeScript scripts.
+
+### Metadata
+- Reproducible: yes
+- Related Files: .superpowers/sdd/2026-08-28-playable-medium-hard-corpus-overhaul/task-6-politics-034-044-roster-audit.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T00:00:00+03:00
+- **Notes**: Moved the source batch and final assertions into `main()` and added a failing catch handler.
+
+---
+
+## [ERR-20260901-POLFIX1-SELECTORS] Windows glob and non-unique category selector
+
+**Logged**: 2026-09-01T09:15:00+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+A literal wildcard path failed under Windows `rg`, and an overly broad `set-042` suffix selected the Food category instead of Politics.
+
+### Error
+```
+rg: ...task-6-politics-checkpoint-1*: The filename, directory name, or volume label syntax is incorrect. (os error 123)
+```
+
+The first category query then returned Food `set-042` variants because multiple packs share the same numeric set suffix.
+
+### Context
+- PowerShell did not expand the wildcard embedded in the quoted `rg` path.
+- Category set numbers are lane-local; `endsWith('set-042')` is not globally unique.
+- Both failures affected only read-only review probes and touched no tracked content.
+
+### Suggested Fix
+Enumerate matching files with `Get-ChildItem` or search the containing directory with an `rg` file glob. Select authored categories by their complete `categorySetId`, including the lane prefix.
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/content/playability/banks/packs09to12.ts
+
+### Resolution
+- **Resolved**: 2026-09-01T09:15:00+03:00
+- **Notes**: Re-ran the query with exact ID `built-in-politics-economics-society-set-042` and obtained the expected eight arrays.
 
 ---
