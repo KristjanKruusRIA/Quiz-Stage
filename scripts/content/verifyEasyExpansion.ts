@@ -62,12 +62,27 @@ export function buildProvisionalEasyExpansionBatch(batchId: string): ProductionB
   return buildProvisionalEasyExpansionBatchFromCanonical(getProductionBatch(batchId));
 }
 
-export type VerifyEasyExpansionOptions = Omit<VerifyBatchOptions, 'batchDefinition'>;
+export type VerifyEasyExpansionOptions = Omit<
+  VerifyBatchOptions,
+  'batchDefinition' | 'translationDiagnosticClueIds'
+>;
+
+export function buildEasyExpansionTranslationClueIds(
+  packId: string,
+): ReadonlySet<string> {
+  return new Set(Array.from(
+    { length: 100 },
+    (_, index) => `${packId}-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+  ));
+}
 
 export function verifyEasyExpansion(options: VerifyEasyExpansionOptions): Promise<BatchVerificationReport> {
+  const batchDefinition = buildProvisionalEasyExpansionBatch(options.batchId);
+  const translationDiagnosticClueIds = buildEasyExpansionTranslationClueIds(batchDefinition.packId);
   return verifyBatch({
     ...options,
-    batchDefinition: buildProvisionalEasyExpansionBatch(options.batchId),
+    batchDefinition,
+    translationDiagnosticClueIds,
   });
 }
 

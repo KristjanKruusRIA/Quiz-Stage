@@ -27,6 +27,7 @@ export interface VerifyBatchOptions {
   sourceDependencies?: SourceCheckDependencies;
   sourceCheckOptions?: Omit<SourceCheckOptions, 'cache'>;
   reportDependencies?: BatchReportDependencies;
+  translationDiagnosticClueIds?: ReadonlySet<string>;
 }
 
 export interface BatchReportDependencies {
@@ -328,6 +329,10 @@ export function parseBatchVerificationReport(value: unknown): BatchVerificationR
 
 export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVerificationReport> {
   const canonicalBatch = getProductionBatch(options.batchId);
+  if (options.translationDiagnosticClueIds !== undefined
+    && options.batchDefinition === undefined) {
+    throw new Error('Translation diagnostic scope is only allowed for provisional verification');
+  }
   if (options.batchDefinition !== undefined && options.batchDefinition.id !== canonicalBatch.id) {
     throw new Error(`Trusted batch definition must match canonical batch ${canonicalBatch.id}`);
   }
@@ -383,7 +388,32 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   const generated = stableValidation(validateProductionContent([{ file: 'generated.en-et.csv', pack: generatedPack }], {
     mode: 'batch', evidenceByClueId: evidence, batch,
   }));
-  const translationDiagnostics = diagnoseTranslations([{ file: 'generated.en-et.csv', pack: generatedPack }]);
+  const translationDiagnosticClueIds = options.translationDiagnosticClueIds;
+  const translationPack = translationDiagnosticClueIds === undefined
+    ? generatedPack
+    : {
+        rows: generatedPack.rows.filter(({ clue_id }) => (
+          translationDiagnosticClueIds.has(clue_id)
+        )),
+      };
+  const generatedClueIdCounts = new Map<string, number>();
+  for (const { clue_id: clueId } of generatedPack.rows) {
+    generatedClueIdCounts.set(clueId, (generatedClueIdCounts.get(clueId) ?? 0) + 1);
+  }
+  const missingTranslationDiagnosticClueIds = translationDiagnosticClueIds === undefined
+    ? []
+    : [...translationDiagnosticClueIds]
+        .filter((clueId) => !generatedClueIdCounts.has(clueId))
+        .sort(compareCodeUnits);
+  const duplicateTranslationDiagnosticClueIds = translationDiagnosticClueIds === undefined
+    ? []
+    : [...translationDiagnosticClueIds]
+        .filter((clueId) => (generatedClueIdCounts.get(clueId) ?? 0) > 1)
+        .sort(compareCodeUnits);
+  const translationDiagnostics = diagnoseTranslations([{
+    file: 'generated.en-et.csv',
+    pack: translationPack,
+  }]);
   translationDiagnostics.issues.sort((left, right) => issueOrder(
     { scope: 'translation', code: left.code, clueId: left.clueId, message: `${left.file}:${left.row}:${left.field}:${left.message}` },
     { scope: 'translation', code: right.code, clueId: right.clueId, message: `${right.file}:${right.row}:${right.field}:${right.message}` },
@@ -404,6 +434,18 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   for (const issue of authored.issues) unresolvedIssues.push({ scope: 'authored', code: issue.code, clueId: null, message: `${issue.file}:${issue.row}: ${issue.message}` });
   for (const issue of generated.issues) unresolvedIssues.push({ scope: 'generated', code: issue.code, clueId: null, message: `${issue.file}:${issue.row}: ${issue.message}` });
   for (const issue of translationDiagnostics.issues) unresolvedIssues.push({ scope: 'translation', code: issue.code, clueId: issue.clueId, message: `${issue.file}:${issue.row}:${issue.field}: ${issue.message}` });
+  for (const clueId of missingTranslationDiagnosticClueIds) unresolvedIssues.push({
+    scope: 'translation',
+    code: 'MISSING_TRANSLATION_DIAGNOSTIC_CLUE',
+    clueId,
+    message: `Expected translation-diagnostic clue is missing from generated.en-et.csv: ${clueId}`,
+  });
+  for (const clueId of duplicateTranslationDiagnosticClueIds) unresolvedIssues.push({
+    scope: 'translation',
+    code: 'DUPLICATE_TRANSLATION_DIAGNOSTIC_CLUE',
+    clueId,
+    message: `Expected translation-diagnostic clue appears more than once in generated.en-et.csv: ${clueId}`,
+  });
 
   const urls = [...new Set([...evidence.values()].filter((item) => item.batchId === batch.id)
     .map((item) => item.supportingSource.url))].sort(compareCodeUnits);
@@ -424,6 +466,8 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
     version: 1, batchId: batch.id, kind: 'verification',
     verificationProfile,
     blocking: authored.blocking || generated.blocking || translationDiagnostics.blocking
+      || missingTranslationDiagnosticClueIds.length > 0
+      || duplicateTranslationDiagnosticClueIds.length > 0
       || sources.some((source) => !source.ok) || unresolvedIssues.some((issue) => issue.scope === 'evidence' || issue.scope === 'samples'),
     artifactHashes: { authored: hash(bytes.authored!), generated: hash(bytes.generated!), evidence: hash(bytes.evidence!) },
     validations: { authored, generated }, translationDiagnostics, sources, samples: sampled.samples, unresolvedIssues,

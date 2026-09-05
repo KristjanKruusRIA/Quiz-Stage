@@ -5,10 +5,12 @@ import {
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
+import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { afterEach, describe, expect, test } from 'vitest';
 import { publishBatch } from '../../../scripts/content/publishBatch';
 import {
+  buildEasyExpansionTranslationClueIds,
   buildProvisionalEasyExpansionBatch,
   buildProvisionalEasyExpansionBatchFromCanonical,
   verifyEasyExpansion,
@@ -68,22 +70,35 @@ function createPassingWork(
   mkdirSync(directory, { recursive: true });
   const cells = (['easy', 'medium', 'hard'] as const).flatMap((difficulty) =>
     (['round-one', 'round-two'] as const).map((round) => ({ difficulty, round })));
-  const sets: Array<{ difficulty: 'easy' | 'medium' | 'hard'; round: 'round-one' | 'round-two' }> = [];
+  const canonical = getProductionBatch(batch.id);
+  if (canonical.distribution === null) throw new Error('Expected a canonical board batch');
+  const sets: Array<{
+    difficulty: 'easy' | 'medium' | 'hard';
+    round: 'round-one' | 'round-two';
+    isExpansion: boolean;
+  }> = [];
   for (const cell of cells) {
     const roundKey = cell.round === 'round-one' ? 'roundOne' : 'roundTwo';
-    for (let index = 0; index < batch.distribution[cell.difficulty][roundKey]; index += 1) sets.push(cell);
+    const baselineCount = canonical.distribution[cell.difficulty][roundKey];
+    for (let index = 0; index < batch.distribution[cell.difficulty][roundKey]; index += 1) {
+      sets.push({ ...cell, isExpansion: index >= baselineCount });
+    }
   }
 
   const authoredRows: string[][] = [];
   const generatedRows: string[][] = [];
   const evidence: ContentEvidence[] = [];
   const sourceUrl = 'https://example.test/specific/history';
+  let expansionOrdinal = 0;
   for (const [setIndex, cell] of sets.entries()) {
     const setWord = word(setIndex);
     const categoryId = `history-category-${setWord}`;
     for (let tier = 1; tier <= 5; tier += 1) {
       const clueWord = `${setWord}${word(tier + 500)}`;
-      const clueId = `history-clue-${clueWord}`;
+      if (cell.isExpansion) expansionOrdinal += 1;
+      const clueId = cell.isExpansion
+        ? `${batch.packId}-easy-expansion-${expansionOrdinal.toString().padStart(3, '0')}`
+        : `history-clue-${clueWord}`;
       const response = `response${clueWord}`;
       const sourceTitle = `source ${clueWord}`;
       const explanation = `${response} follows from the documented ${clueWord} evidence`;
@@ -139,6 +154,80 @@ function createPassingWork(
       sleep: async () => {},
     },
   };
+}
+
+function omitTranslatedVariant(
+  workRoot: string,
+  batchId: string,
+  predicate: (clueId: string) => boolean,
+): string {
+  const path = join(workRoot, batchId, 'generated.en-et.csv');
+  const rows = parse(readFileSync(path, 'utf8'), {
+    columns: true,
+    skip_empty_lines: true,
+  }) as Array<Record<string, string>>;
+  const row = rows.find((candidate) => predicate(candidate.clue_id ?? ''));
+  if (row === undefined) throw new Error('Expected a generated fixture row');
+  row.accepted_variants_en = `${row.accepted_variants_en};missingtranslation`;
+  writeFileSync(path, stringify([
+    CSV_COLUMNS,
+    ...rows.map((candidate) => CSV_COLUMNS.map((column) => candidate[column] ?? '')),
+  ]));
+  return row.clue_id!;
+}
+
+function replaceProjectedClueId(
+  workRoot: string,
+  batchId: string,
+  expectedClueId: string,
+  replacementClueId: string,
+): void {
+  const directory = join(workRoot, batchId);
+  for (const name of ['authored.csv', 'generated.en-et.csv']) {
+    const path = join(directory, name);
+    const rows = parse(readFileSync(path, 'utf8'), {
+      columns: true,
+      skip_empty_lines: true,
+    }) as Array<Record<string, string>>;
+    const row = rows.find((candidate) => candidate.clue_id === expectedClueId);
+    if (row === undefined) throw new Error(`Expected ${name} fixture row ${expectedClueId}`);
+    row.clue_id = replacementClueId;
+    writeFileSync(path, stringify([
+      CSV_COLUMNS,
+      ...rows.map((candidate) => CSV_COLUMNS.map((column) => candidate[column] ?? '')),
+    ]));
+  }
+
+  const evidencePath = join(directory, 'evidence.jsonl');
+  const evidence = readFileSync(evidencePath, 'utf8').trim().split('\n').map(
+    (line) => JSON.parse(line) as ContentEvidence,
+  );
+  const index = evidence.findIndex(({ clueId }) => clueId === expectedClueId);
+  if (index < 0) throw new Error(`Expected evidence fixture row ${expectedClueId}`);
+  evidence[index] = { ...evidence[index]!, clueId: replacementClueId };
+  writeFileSync(evidencePath, evidence
+    .sort((left, right) => left.clueId < right.clueId ? -1 : 1)
+    .map((item) => `${JSON.stringify(item)}\n`).join(''));
+}
+
+function replaceGeneratedClueId(
+  workRoot: string,
+  batchId: string,
+  expectedClueId: string,
+  replacementClueId: string,
+): void {
+  const path = join(workRoot, batchId, 'generated.en-et.csv');
+  const rows = parse(readFileSync(path, 'utf8'), {
+    columns: true,
+    skip_empty_lines: true,
+  }) as Array<Record<string, string>>;
+  const row = rows.find((candidate) => candidate.clue_id === expectedClueId);
+  if (row === undefined) throw new Error(`Expected generated fixture row ${expectedClueId}`);
+  row.clue_id = replacementClueId;
+  writeFileSync(path, stringify([
+    CSV_COLUMNS,
+    ...rows.map((candidate) => CSV_COLUMNS.map((column) => candidate[column] ?? '')),
+  ]));
 }
 
 describe('Easy expansion provisional verification', () => {
@@ -207,6 +296,23 @@ describe('Easy expansion provisional verification', () => {
     expect(() => buildProvisionalEasyExpansionBatch('99-unknown')).toThrow(/unknown production batch/i);
   });
 
+  test('builds exactly one hundred stable translation-scope clue IDs', () => {
+    const ids = buildEasyExpansionTranslationClueIds('built-in-history');
+    expect(ids.size).toBe(100);
+    expect([...ids]).toEqual(Array.from(
+      { length: 100 },
+      (_, index) => `built-in-history-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+    ));
+  });
+
+  test('rejects translation scoping on canonical verification', async () => {
+    await expect(verifyBatch({
+      batchId: '01-history',
+      workRoot: 'unused',
+      translationDiagnosticClueIds: new Set<string>(),
+    })).rejects.toThrow(/translation diagnostic scope.*provisional/iu);
+  });
+
   test('still resolves the canonical catalog before accepting a trusted override', async () => {
     const canonical = getProductionBatch('01-history');
     const unknownOverride = Object.freeze({ ...canonical, id: '99-unknown' });
@@ -263,6 +369,134 @@ describe('Easy expansion provisional verification', () => {
     await expect(publishBatch({ batchId: provisional.id, workRoot: fixture.workRoot, acceptedRoot }))
       .rejects.toThrow(/canonical verification report/i);
     expect(existsSync(join(acceptedRoot, 'content/authored/01-history.csv'))).toBe(false);
+  }, 30_000);
+
+  test('keeps inherited translation diagnostics nonblocking without hiding new clue errors', async () => {
+    const provisional = buildProvisionalEasyExpansionBatch('01-history');
+    const inheritedFixture = createPassingWork(
+      temporaryDirectory('quiz-stage-easy-expansion-inherited-'),
+      provisional,
+    );
+    const inheritedClueId = omitTranslatedVariant(
+      inheritedFixture.workRoot,
+      provisional.id,
+      (clueId) => !clueId.includes('-easy-expansion-'),
+    );
+
+    const inheritedReport = await verifyEasyExpansion({
+      batchId: provisional.id,
+      workRoot: inheritedFixture.workRoot,
+      sourceDependencies: inheritedFixture.sourceDependencies,
+    });
+    expect(inheritedReport.kind).toBe('verification');
+    if (inheritedReport.kind !== 'verification') throw new Error('Expected full verification report');
+    expect(inheritedReport.blocking, JSON.stringify({
+      authored: inheritedReport.validations.authored.blocking,
+      generated: inheritedReport.validations.generated.blocking,
+      translation: inheritedReport.translationDiagnostics.blocking,
+      translationErrors: inheritedReport.translationDiagnostics.issues.filter(
+        ({ severity }) => severity === 'error',
+      ),
+      sourceFailures: inheritedReport.sources.filter(({ ok }) => !ok),
+      hardUnresolved: inheritedReport.unresolvedIssues.filter(
+        ({ scope }) => scope === 'evidence' || scope === 'samples',
+      ),
+    })).toBe(false);
+    expect(inheritedReport.translationDiagnostics.checkedRows).toBe(100);
+    expect(inheritedReport.translationDiagnostics.issues.some(
+      ({ clueId }) => clueId === inheritedClueId,
+    )).toBe(false);
+
+    const expansionFixture = createPassingWork(
+      temporaryDirectory('quiz-stage-easy-expansion-new-clue-'),
+      provisional,
+    );
+    const expansionClueId = omitTranslatedVariant(
+      expansionFixture.workRoot,
+      provisional.id,
+      (clueId) => clueId.includes('-easy-expansion-'),
+    );
+    const expansionReport = await verifyEasyExpansion({
+      batchId: provisional.id,
+      workRoot: expansionFixture.workRoot,
+      sourceDependencies: expansionFixture.sourceDependencies,
+    });
+    expect(expansionReport.kind).toBe('verification');
+    if (expansionReport.kind !== 'verification') throw new Error('Expected full verification report');
+    expect(expansionReport.blocking).toBe(true);
+    expect(expansionReport.translationDiagnostics.checkedRows).toBe(100);
+    expect(expansionReport.translationDiagnostics.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        clueId: expansionClueId,
+        code: 'BLANK_TRANSLATION',
+        severity: 'error',
+      }),
+    ]));
+  }, 30_000);
+
+  test('blocks when a registered expansion clue is missing from the projected translation scope', async () => {
+    const provisional = buildProvisionalEasyExpansionBatch('01-history');
+    const fixture = createPassingWork(
+      temporaryDirectory('quiz-stage-easy-expansion-missing-scope-'),
+      provisional,
+    );
+    const expectedClueId = 'built-in-history-easy-expansion-001';
+    replaceProjectedClueId(
+      fixture.workRoot,
+      provisional.id,
+      expectedClueId,
+      'built-in-history-easy-expansion-tampered',
+    );
+
+    const report = await verifyEasyExpansion({
+      batchId: provisional.id,
+      workRoot: fixture.workRoot,
+      sourceDependencies: fixture.sourceDependencies,
+    });
+    expect(report.kind).toBe('verification');
+    if (report.kind !== 'verification') throw new Error('Expected full verification report');
+    expect(report.blocking).toBe(true);
+    expect(report.translationDiagnostics.checkedRows).toBe(99);
+    expect(report.unresolvedIssues).toContainEqual(expect.objectContaining({
+      scope: 'translation',
+      code: 'MISSING_TRANSLATION_DIAGNOSTIC_CLUE',
+      clueId: expectedClueId,
+    }));
+  }, 30_000);
+
+  test('blocks duplicate registered expansion clues in the projected translation scope', async () => {
+    const provisional = buildProvisionalEasyExpansionBatch('01-history');
+    const fixture = createPassingWork(
+      temporaryDirectory('quiz-stage-easy-expansion-duplicate-scope-'),
+      provisional,
+    );
+    const duplicatedClueId = 'built-in-history-easy-expansion-001';
+    const missingClueId = 'built-in-history-easy-expansion-002';
+    replaceGeneratedClueId(
+      fixture.workRoot,
+      provisional.id,
+      missingClueId,
+      duplicatedClueId,
+    );
+
+    const report = await verifyEasyExpansion({
+      batchId: provisional.id,
+      workRoot: fixture.workRoot,
+      sourceDependencies: fixture.sourceDependencies,
+    });
+    expect(report.kind).toBe('verification');
+    if (report.kind !== 'verification') throw new Error('Expected full verification report');
+    expect(report.blocking).toBe(true);
+    expect(report.unresolvedIssues).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        code: 'DUPLICATE_TRANSLATION_DIAGNOSTIC_CLUE',
+        clueId: duplicatedClueId,
+      }),
+      expect.objectContaining({
+        code: 'MISSING_TRANSLATION_DIAGNOSTIC_CLUE',
+        clueId: missingClueId,
+      }),
+    ]));
   }, 30_000);
 
   test('CLI requires --batch and defaults to the Easy-expansion work root', () => {
