@@ -15,7 +15,11 @@ import { join, resolve } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { afterEach, describe, expect, it } from 'vitest';
+import { buildAccessibleCorpus } from '../../../scripts/content/accessibility/bank';
 import { applyPlayableCorpus } from '../../../scripts/content/playability/apply';
+import { auditPlayability } from '../../../scripts/content/playability/audit';
+import { buildPlayableCorpus } from '../../../scripts/content/playability/bank';
+import { normalizeCrossTierText } from '../../../scripts/content/playability/crossTierAudit';
 import {
   loadPlayableCorpus,
   parsePlayableCorpusArgs,
@@ -76,6 +80,25 @@ const EXPECTED_ALLOCATION = {
   '12-mythology-religion-philosophy:hard': 34,
   '12-mythology-religion-philosophy:medium': 33,
 } as const;
+
+function playableAuditRows(
+  categories: readonly PlayableCategory[],
+): readonly Readonly<Record<string, string>>[] {
+  return categories.flatMap((category) => category.questions.map((item) => ({
+    clue_id: item.key,
+    category_set_id: category.categorySetId,
+    category_name_en: category.name.en,
+    category_name_et: category.name.et,
+    clue_en: item.clue.en,
+    clue_et: item.clue.et,
+    response_en: item.response.en,
+    response_et: item.response.et,
+    accepted_variants_en: item.acceptedVariants.en.join(';'),
+    accepted_variants_et: item.acceptedVariants.et.join(';'),
+    subject_key: item.subjectKey,
+    source_title: item.source.title,
+  })));
+}
 
 function target(
   categorySetId: string,
@@ -1434,6 +1457,44 @@ describe('validatePlayableCorpus', () => {
   });
 });
 
+describe('buildPlayableCorpus', () => {
+  it('assembles all reviewed lanes and passes the global playability audit', () => {
+    const categories = buildPlayableCorpus();
+    const questions = categories.flatMap(({ questions: items }) => items);
+
+    expect(categories).toHaveLength(800);
+    expect(questions).toHaveLength(4_000);
+    expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(4_000);
+    expect(categories.map(({ categorySetId }) => categorySetId)).toEqual(PLAYABLE_TARGET_IDS);
+    expect(auditPlayability(playableAuditRows(categories)).diagnostics).toEqual([]);
+  });
+
+  it('does not repeat accepted Easy titles or exact clue-answer pairs', () => {
+    const easyCategories = buildAccessibleCorpus();
+    const playableCategories = buildPlayableCorpus();
+    const easyQuestions = easyCategories.flatMap(({ questions }) => questions);
+    const playableQuestions = playableCategories.flatMap(({ questions }) => questions);
+
+    for (const language of ['en', 'et'] as const) {
+      const easyTitles = new Set(easyCategories.map(({ name }) => (
+        normalizeCrossTierText(name[language])
+      )));
+      const easyClueAnswerPairs = new Set(easyQuestions.map(({ clue, response }) => [
+        normalizeCrossTierText(clue[language]),
+        normalizeCrossTierText(response[language]),
+      ].join('\0')));
+
+      expect(playableCategories.filter(({ name }) => (
+        easyTitles.has(normalizeCrossTierText(name[language]))
+      ))).toEqual([]);
+      expect(playableQuestions.filter(({ clue, response }) => easyClueAnswerPairs.has([
+        normalizeCrossTierText(clue[language]),
+        normalizeCrossTierText(response[language]),
+      ].join('\0')))).toEqual([]);
+    }
+  });
+});
+
 describe('applyPlayableCorpus', () => {
   it('preserves target slots while replacing bilingual content and inspiration deterministically', () => {
     const fixture = applyFixture();
@@ -1844,7 +1905,20 @@ describe('playable corpus staging and publishing', () => {
     );
   });
 
-  it('fails clearly until the complete playable bank module is supplied', () => {
+  it('loads the complete reviewed bank in canonical target order', () => {
+    const categories = buildPlayableCorpus();
+    const allocation = Object.fromEntries(Object.keys(EXPECTED_ALLOCATION).map((key) => {
+      const [batchId, difficulty] = key.split(':');
+      return [key, categories.filter((category) => (
+        category.batchId === batchId && category.difficulty === difficulty
+      )).length];
+    }));
+
+    expect(categories).toHaveLength(800);
+    expect(categories.flatMap(({ questions }) => questions)).toHaveLength(4_000);
+    expect(categories.map(({ categorySetId }) => categorySetId)).toEqual(PLAYABLE_TARGET_IDS);
+    expect(allocation).toEqual(EXPECTED_ALLOCATION);
+    expect(loadPlayableCorpus()).toEqual(categories);
     expect(() => loadPlayableCorpus(() => ({}))).toThrowError(
       'playability/bank.ts must export a callable buildPlayableCorpus',
     );

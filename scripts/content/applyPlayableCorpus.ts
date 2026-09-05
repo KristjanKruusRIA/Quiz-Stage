@@ -9,13 +9,13 @@ import {
   unlinkSync,
   writeFileSync,
 } from 'node:fs';
-import { createRequire } from 'node:module';
 import { basename, dirname, isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stringify } from 'csv-stringify/sync';
 import { parsePackCsv } from '../../src/main/content/csvPacks';
 import { CSV_COLUMNS } from '../../src/shared/content/csvColumns';
 import { applyPlayableCorpus } from './playability/apply';
+import { buildPlayableCorpus } from './playability/bank';
 import { PLAYABLE_TARGETS, type PlayableTarget } from './playability/targets';
 import type { PlayableCategory } from './playability/types';
 import { validatePlayableCorpus } from './playability/validateBank';
@@ -396,7 +396,7 @@ export function parsePlayableCorpusArgs(argv: readonly string[]): Readonly<{
 }
 
 export function loadPlayableCorpus(
-  requireModule: RequireModule = createRequire(import.meta.url),
+  requireModule: RequireModule = () => ({ buildPlayableCorpus }),
 ): readonly PlayableCategory[] {
   const bankPath = resolve(import.meta.dirname, 'playability/bank.ts');
   const bank = requireModule(bankPath) as { buildPlayableCorpus?: unknown };
