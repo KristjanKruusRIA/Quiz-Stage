@@ -228,8 +228,8 @@ describe('History playable pack', () => {
           et: 'Euroopa Inimõiguste Kohus',
         },
         acceptedVariants: {
-          en: ['ECHR', 'Strasbourg Court'],
-          et: ['EIK', 'Strasbourgi kohus'],
+          en: ['ECtHR'],
+          et: ['EIK'],
         },
         explanation: {
           en: 'The court was established under the convention within the Council of Europe system and issued its first judgment in 1960.',
