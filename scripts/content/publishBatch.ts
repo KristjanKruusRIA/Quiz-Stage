@@ -192,6 +192,9 @@ export async function publishBatch(options: PublishBatchOptions): Promise<void> 
   if (report.kind !== 'verification' || report.batchId !== batch.id) {
     throw new Error('Publication requires a passing verification report for this batch');
   }
+  if (report.verificationProfile !== 'canonical') {
+    throw new Error('Publication requires a canonical verification report');
+  }
   options.dependencies?.afterReportRead?.();
   const bytes = {
     authored: safeRead(sources.authored), generated: safeRead(sources.generated),

@@ -6,7 +6,7 @@ import { TextDecoder } from 'node:util';
 import { z } from 'zod';
 import { parsePackCsv, type ParsedPack } from '../../src/main/content/csvPacks';
 import { parseEvidenceJsonl, type ContentEvidence } from './evidence';
-import { getProductionBatch } from './productionBatches';
+import { getProductionBatch, type ProductionBatchDefinition } from './productionBatches';
 import {
   checkSourceUrls, openFileSourceCache, type SourceCache, type SourceCheckDependencies, type SourceCheckOptions,
   type SourceCheckResult,
@@ -22,6 +22,7 @@ import {
 export interface VerifyBatchOptions {
   batchId: string;
   workRoot: string;
+  batchDefinition?: ProductionBatchDefinition;
   sourceCache?: SourceCache;
   sourceDependencies?: SourceCheckDependencies;
   sourceCheckOptions?: Omit<SourceCheckOptions, 'cache'>;
@@ -40,6 +41,8 @@ export interface BatchArtifactHashes {
   evidence: string;
 }
 
+export type VerificationProfile = 'canonical' | 'easy-expansion-provisional' | 'legacy-unmarked';
+
 export interface BatchUnresolvedIssue {
   scope: 'authored' | 'generated' | 'translation' | 'source' | 'evidence' | 'samples';
   code: string;
@@ -51,6 +54,7 @@ export interface FullBatchVerificationReport {
   version: 1;
   batchId: string;
   kind: 'verification';
+  verificationProfile: VerificationProfile;
   blocking: boolean;
   artifactHashes: BatchArtifactHashes;
   validations: {
@@ -73,6 +77,7 @@ export interface BatchPreflightFailureReport {
   version: 1;
   batchId: string;
   kind: 'preflight-failure';
+  verificationProfile: VerificationProfile;
   blocking: true;
   fatalIssues: BatchPreflightIssue[];
 }
@@ -116,6 +121,9 @@ const unresolvedSchema = z.object({
 
 const fullBatchVerificationReportSchema = z.object({
   version: z.literal(1), batchId: z.string().trim().min(1), kind: z.literal('verification'), blocking: z.boolean(),
+  verificationProfile: z.enum([
+    'canonical', 'easy-expansion-provisional', 'legacy-unmarked',
+  ]).default('legacy-unmarked'),
   artifactHashes: z.object({
     authored: z.string().regex(/^[a-f0-9]{64}$/), generated: z.string().regex(/^[a-f0-9]{64}$/),
     evidence: z.string().regex(/^[a-f0-9]{64}$/),
@@ -128,6 +136,9 @@ const fullBatchVerificationReportSchema = z.object({
 
 const preflightFailureReportSchema = z.object({
   version: z.literal(1), batchId: z.string().trim().min(1), kind: z.literal('preflight-failure'),
+  verificationProfile: z.enum([
+    'canonical', 'easy-expansion-provisional', 'legacy-unmarked',
+  ]).default('legacy-unmarked'),
   blocking: z.literal(true),
   fatalIssues: z.array(z.object({
     artifact: z.enum(['authored', 'generated', 'evidence']),
@@ -316,7 +327,14 @@ export function parseBatchVerificationReport(value: unknown): BatchVerificationR
 }
 
 export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVerificationReport> {
-  const batch = getProductionBatch(options.batchId);
+  const canonicalBatch = getProductionBatch(options.batchId);
+  if (options.batchDefinition !== undefined && options.batchDefinition.id !== canonicalBatch.id) {
+    throw new Error(`Trusted batch definition must match canonical batch ${canonicalBatch.id}`);
+  }
+  const batch = options.batchDefinition ?? canonicalBatch;
+  const verificationProfile: VerificationProfile = options.batchDefinition === undefined
+    ? 'canonical'
+    : 'easy-expansion-provisional';
   const { directory, report: reportPath } = prepareReportPath(options.workRoot, batch.id);
   const assertSafeReportPath = (): void => assertReportPathRemainsSafe(options.workRoot, directory, reportPath);
   const paths = {
@@ -349,6 +367,7 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   if (fatalIssues.length > 0 || authoredPack === undefined || generatedPack === undefined || evidence === undefined) {
     const failure: BatchPreflightFailureReport = {
       version: 1, batchId: batch.id, kind: 'preflight-failure', blocking: true,
+      verificationProfile,
       fatalIssues: fatalIssues.sort((left, right) => compareCodeUnits(
         `${left.artifact}\0${left.code}\0${left.message}`,
         `${right.artifact}\0${right.code}\0${right.message}`,
@@ -403,6 +422,7 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
 
   const report: FullBatchVerificationReport = {
     version: 1, batchId: batch.id, kind: 'verification',
+    verificationProfile,
     blocking: authored.blocking || generated.blocking || translationDiagnostics.blocking
       || sources.some((source) => !source.ok) || unresolvedIssues.some((issue) => issue.scope === 'evidence' || issue.scope === 'samples'),
     artifactHashes: { authored: hash(bytes.authored!), generated: hash(bytes.generated!), evidence: hash(bytes.evidence!) },
