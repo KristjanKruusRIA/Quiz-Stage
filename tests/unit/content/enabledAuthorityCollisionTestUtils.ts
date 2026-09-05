@@ -602,7 +602,7 @@ function findIndexedAuthorityCollisions(
   return [...findings].sort();
 }
 
-function findIndexedBidirectionalAliasLeaks(
+function findIndexedOneWayAliasLeaks(
   candidate: PreparedAuthorityRow,
   index: PreparedAuthorityIndex,
 ): readonly string[] {
@@ -623,30 +623,6 @@ function findIndexedBidirectionalAliasLeaks(
         index.aliasesInExplanations[language].get(alias),
       );
     }
-    for (const alias of aliasesInText(
-      candidateLanguage.clue,
-      index.aliasVocabulary[language],
-      index.aliasTokenLengths[language],
-    )) {
-      addOwnerFindings(
-        findings,
-        `other-response-in-candidate-clue:${language}`,
-        candidate,
-        index.responseAliases[language].get(alias),
-      );
-    }
-    for (const alias of aliasesInText(
-      candidateLanguage.explanation,
-      index.aliasVocabulary[language],
-      index.aliasTokenLengths[language],
-    )) {
-      addOwnerFindings(
-        findings,
-        `other-response-in-candidate-explanation:${language}`,
-        candidate,
-        index.responseAliases[language].get(alias),
-      );
-    }
   }
   return [...findings].sort();
 }
@@ -664,7 +640,7 @@ export function findCumulativeAuthorityDefects(
     return [
       ...findIndexedAuthorityCollisions(candidate, index)
         .map((diagnostic) => `collision:${owner}:${diagnostic}`),
-      ...findIndexedBidirectionalAliasLeaks(candidate, index)
+      ...findIndexedOneWayAliasLeaks(candidate, index)
         .map((diagnostic) => `alias:${owner}:${diagnostic}`),
     ];
   }).sort();

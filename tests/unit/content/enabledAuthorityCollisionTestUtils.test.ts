@@ -181,7 +181,7 @@ describe('cumulative enabled authority collisions', () => {
     ]);
   });
 
-  it('retains collision and alias semantics in the prepared cumulative checker', () => {
+  it('retains collision and one-way alias semantics in the prepared cumulative checker', () => {
     const candidate = fixture({
       authority: 'easy-expansion',
       categorySetId: 'fixture:set-a',
@@ -200,19 +200,43 @@ describe('cumulative enabled authority collisions', () => {
         en: 'Which city is associated with zaatar?',
         et: 'Milline Eesti linn on tuntud ülikooli poolest?',
       },
+      explanation: {
+        en: 'Zaatar appears here as a deliberate fixture leak.',
+        et: 'Vastus on mujal.',
+      },
       acceptedVariants: { en: ['zaatar'], et: [] },
     });
 
-    expect(findCumulativeAuthorityDefects([candidate], [candidate, other])).toEqual(
+    const defects = findCumulativeAuthorityDefects([candidate], [candidate, other]);
+
+    expect(defects).toEqual(
       expect.arrayContaining([
         'collision:easy-expansion:fixture:zaatar:fact:medium-hard:fixture:distinct',
         'collision:easy-expansion:fixture:zaatar:subject:medium-hard:fixture:distinct',
         'collision:easy-expansion:fixture:zaatar:category-title:en:medium-hard:fixture:set-b',
         'collision:easy-expansion:fixture:zaatar:response-variant:en:medium-hard:fixture:distinct',
-        'alias:easy-expansion:fixture:zaatar:candidate-response-in-other-clue:en:medium-hard:fixture:distinct',
-        'alias:easy-expansion:fixture:zaatar:other-response-in-candidate-explanation:et:medium-hard:fixture:distinct',
       ]),
     );
+    expect(defects.filter((diagnostic) => diagnostic.startsWith('alias:'))).toEqual([
+      'alias:easy-expansion:fixture:zaatar:candidate-response-in-other-clue:en:medium-hard:fixture:distinct',
+      'alias:easy-expansion:fixture:zaatar:candidate-response-in-other-explanation:en:medium-hard:fixture:distinct',
+    ]);
+  });
+
+  it('keeps reverse-only candidate clue mentions diagnostic rather than blocking', () => {
+    const candidate = fixture({
+      authority: 'easy-expansion',
+      clue: {
+        en: 'Which seasoning was served in Tartu?',
+        et: 'Millist maitseainet Tartus serveeriti?',
+      },
+    });
+    const other = distinctFixture();
+
+    expect(findAuthorityBidirectionalAliasLeaks(candidate, [candidate, other])).toContain(
+      'other-response-in-candidate-clue:en:medium-hard:fixture:distinct',
+    );
+    expect(findCumulativeAuthorityDefects([candidate], [candidate, other])).toEqual([]);
   });
 
   it('does not index a category title without its category-set identity', () => {
