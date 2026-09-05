@@ -34,6 +34,12 @@ describe('playability audit', () => {
         source_title: 'Ada Lovelace — Wikipedia',
       }),
       row({
+        clue_id: 'source-heading-dash',
+        clue_en: 'Ada Lovelace — Her notes described an algorithm for which proposed machine?',
+        response_en: 'The Analytical Engine',
+        source_title: 'Ada Lovelace — Wikipedia',
+      }),
+      row({
         clue_id: 'raw-field',
         clue_en: 'Country of citizenship: France. Name this scientist.',
         response_en: 'Marie Curie',
@@ -102,6 +108,7 @@ describe('playability audit', () => {
     ]);
 
     expect(reasonsFor(audit, 'source-heading')).toEqual(['source-heading-prefix']);
+    expect(reasonsFor(audit, 'source-heading-dash')).toEqual(['source-heading-prefix']);
     expect(reasonsFor(audit, 'raw-field')).toEqual(['raw-field-prompt']);
     expect(reasonsFor(audit, 'associated-with')).toEqual(['associated-with-prompt']);
     expect(reasonsFor(audit, 'associated-with-plural')).toEqual(['associated-with-prompt']);
@@ -287,6 +294,24 @@ describe('playability audit', () => {
         clue_en: 'The element polonium was named for which country by Marie Curie?',
         response_en: 'Poland',
         source_title: 'Marie Curie — Wikipedia',
+      }),
+      row({
+        clue_id: 'fair-source-subject-verb',
+        clue_en: 'John Wallis introduced which mathematical symbol in a 1655 treatise?',
+        response_en: 'The infinity symbol',
+        source_title: 'John Wallis',
+      }),
+      row({
+        clue_id: 'fair-source-subject-comma',
+        clue_en: 'Brian Eno, working on a Mac, composed which Windows startup sound?',
+        response_en: 'Windows 95 startup sound',
+        source_title: 'Brian Eno',
+      }),
+      row({
+        clue_id: 'fair-source-subject-possessive',
+        clue_en: 'Sri Lanka’s colonial-era name still appears on which tea labels?',
+        response_en: 'Ceylon',
+        source_title: 'Sri Lanka',
       }),
       row({
         clue_id: 'fair-occupation',

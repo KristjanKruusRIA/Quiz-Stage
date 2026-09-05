@@ -964,31 +964,36 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-039:question:4",
-        "factKey": "built-in-food-drink:checkpoint1:harissa-tunisian-chilli-paste",
+        "factKey": "built-in-food-drink:food-refresh:muhammara-red-pepper-walnut-dip",
         "tier": 4,
-        "subjectKey": "condiment:harissa",
+        "subjectKey": "dish:muhammara",
         "clue": {
-          "en": "Which North African red paste, especially associated with Tunisia, blends chillies with garlic and spices such as caraway or coriander?",
-          "et": "Milline eriti Tuneesiaga seotud Põhja-Aafrika punane maitsepasta ühendab tšilli küüslaugu ning näiteks köömne või koriandri seemnetega?"
+          "en": "Which Levantine dip from Aleppo blends red peppers and walnuts with breadcrumbs and pomegranate molasses?",
+          "et": "Milline Aleppost pärit Levandi dip ühendab punase paprika ja Kreeka pähklid riivsaia ning granaatõunamelassiga?"
         },
         "response": {
-          "en": "harissa",
-          "et": "harissa"
+          "en": "muhammara",
+          "et": "muhammara"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "mhammara"
+          ],
+          "et": [
+            "muhamara",
+            "mhammara"
+          ]
         },
         "explanation": {
-          "en": "Harissa is used as both a condiment and a cooking ingredient, with heat and seasoning varying between recipes.",
-          "et": "Harissat kasutatakse nii lauamaitseaine kui ka toiduvalmistamise koostisosana ning selle teravus ja maitsestus retseptiti erinevad."
+          "en": "Muhammara is an Aleppo-born dip whose sweet-tart pomegranate molasses balances red pepper and walnuts.",
+          "et": "Muhammara on Aleppost pärit dip, milles magushapu granaatõunamelass tasakaalustab punast paprikat ja Kreeka pähkleid."
         },
         "source": {
-          "sourceId": "wikipedia:harissa",
-          "title": "Harissa",
-          "url": "https://en.wikipedia.org/wiki/Harissa",
+          "sourceId": "wikipedia:muhammara",
+          "title": "Muhammara",
+          "url": "https://en.wikipedia.org/wiki/Muhammara",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -1248,31 +1253,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-041:question:2",
-        "factKey": "built-in-food-drink:checkpoint1:strawberry-achenes-accessory-fruit",
+        "factKey": "built-in-food-drink:food-refresh:kohlrabi-swollen-stem-not-root",
         "tier": 2,
-        "subjectKey": "plant:strawberry",
+        "subjectKey": "plant:kohlrabi",
         "clue": {
-          "en": "The red flesh of which familiar berry is botanically an enlarged flower base, while the apparent seeds on its surface are separate dry fruits?",
-          "et": "Millise tuttava marja punane viljaliha on botaaniliselt paisunud õiepõhi, pinnal näivad seemned aga eraldi kuivviljad?"
+          "en": "Which familiar cabbage relative has a turnip-like round edible part that is an enlarged stem rather than a root?",
+          "et": "Millise tuttava kapsalise naeritaoline ümar söödav osa on paksenenud vars, mitte juur?"
         },
         "response": {
-          "en": "strawberry",
-          "et": "maasikas"
+          "en": "kohlrabi",
+          "et": "nuikapsas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "German turnip"
+          ],
+          "et": [
+            "koolrabi"
+          ]
         },
         "explanation": {
-          "en": "A strawberry is an aggregate accessory fruit: each surface achene developed from one ovary and contains a seed.",
-          "et": "Maasikas on ühtaegu koguvili ja ebavili: iga pinnal olev pähklike arenes ühest sigimikust ja sisaldab seemet."
+          "en": "Kohlrabi belongs to the cabbage family, but its turnip-like edible part is an enlarged stem.",
+          "et": "Nuikapsas kuulub kapsaste hulka, kuid selle naeritaoline söödav osa on paksenenud vars."
         },
         "source": {
-          "sourceId": "wikipedia:strawberry",
-          "title": "Strawberry",
-          "url": "https://en.wikipedia.org/wiki/Strawberry",
+          "sourceId": "wikipedia:kohlrabi",
+          "title": "Kohlrabi",
+          "url": "https://en.wikipedia.org/wiki/Kohlrabi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -1343,35 +1352,31 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-041:question:5",
-        "factKey": "built-in-food-drink:checkpoint1:fig-inward-facing-flowers-syconium",
+        "factKey": "built-in-food-drink:food-refresh:mace-aril-around-nutmeg-seed",
         "tier": 5,
-        "subjectKey": "plant:fig",
+        "subjectKey": "spice:mace",
         "clue": {
-          "en": "Which fruit-like structure hides hundreds of tiny flowers on its inner surface, where they develop into the crunchy little units inside?",
-          "et": "Milline viljataoline moodustis peidab sisepinnal sadu tillukesi õisi, millest arenevad sees krõmpsuvad osakesed?"
+          "en": "Which spice is made from the lacy red covering around the seed that becomes nutmeg?",
+          "et": "Milline vürts saadakse pitsilisest punasest seemnerüüst, mis ümbritseb muskaatpähkliks saavat seemet?"
         },
         "response": {
-          "en": "fig",
-          "et": "viigimari"
+          "en": "mace",
+          "et": "muskaatõis"
         },
         "acceptedVariants": {
-          "en": [
-            "common fig"
-          ],
-          "et": [
-            "harilik viigimari"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "A fig is a syconium: an enclosed inflorescence whose many inward-facing flowers mature within the fleshy wall.",
-          "et": "Viigimari on sükoonium ehk suletud õisik, mille paljud sissepoole pööratud õied valmivad lihaka seina sees."
+          "en": "One nutmeg fruit yields two spices: nutmeg from the seed and mace from the dried aril around it.",
+          "et": "Ühest muskaatpähklipuu viljast saadakse kaks vürtsi: seemnest muskaatpähkel ja seda ümbritsevast kuivatatud seemnerüüst muskaatõis."
         },
         "source": {
-          "sourceId": "wikipedia:fig",
-          "title": "Fig",
-          "url": "https://en.wikipedia.org/wiki/Fig",
+          "sourceId": "wikipedia:nutmeg",
+          "title": "Nutmeg",
+          "url": "https://en.wikipedia.org/wiki/Nutmeg",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       }
     ]
@@ -1385,31 +1390,36 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-042:question:1",
-        "factKey": "built-in-food-drink:checkpoint1:panna-cotta-set-cream-dessert",
+        "factKey": "built-in-food-drink:food-refresh:focaccia-olive-oil-dimpled-ligurian-flatbread",
         "tier": 1,
-        "subjectKey": "dessert:panna-cotta",
+        "subjectKey": "bread:focaccia",
         "clue": {
-          "en": "Which Piedmontese dessert sets sweetened cream with gelatine and unmoulds it with a trembling texture?",
-          "et": "Milline Piemonte magustoit valmistatakse magustatud koorest, tarretatakse želatiiniga ning vabastatakse vormist võbeleva tekstuuriga?"
+          "en": "Which Italian flatbread—especially in its Genoese form—is brushed with olive oil and marked by finger-sized dimples?",
+          "et": "Milline Itaalia lameleib, eriti selle Genova variant, kaetakse oliiviõliga ja sellesse vajutatakse sõrmesuurused lohud?"
         },
         "response": {
-          "en": "panna cotta",
-          "et": "panna cotta"
+          "en": "focaccia",
+          "et": "focaccia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "focaccia bread"
+          ],
+          "et": [
+            "focaccia-sai",
+            "focaccia sai"
+          ]
         },
         "explanation": {
-          "en": "Panna cotta means cooked cream, although the mixture is only heated enough to dissolve sugar and gelatine before chilling.",
-          "et": "Panna cotta tähendab keedetud koort, kuigi segu kuumutatakse vaid suhkru ja želatiini lahustamiseks ning jahutatakse siis."
+          "en": "Focaccia genovese is brushed with olive oil and marked with finger-sized dimples before baking.",
+          "et": "Focaccia Genova variant kaetakse oliiviõliga ning sellesse vajutatakse enne küpsetamist sõrmesuurused lohud."
         },
         "source": {
-          "sourceId": "wikipedia:panna_cotta",
-          "title": "Panna cotta",
-          "url": "https://en.wikipedia.org/wiki/Panna_cotta",
+          "sourceId": "wikipedia:focaccia",
+          "title": "Focaccia",
+          "url": "https://en.wikipedia.org/wiki/Focaccia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -2766,11 +2776,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         source: { sourceId: 'wikipedia:banana_split', title: 'Banana split', url: 'https://en.wikipedia.org/wiki/Banana_split', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'built-in-food-drink-set-066:question:2', factKey: 'built-in-food-drink:checkpoint3:churros-ridged-fried-dough-sugar', tier: 2, subjectKey: 'dessert:churros',
-        clue: { en: 'Ridged lengths of dough are piped into hot oil and served with sugar or thick chocolate in Spain and Latin America. Name the treat.', et: 'Soonelised tainaribad pressitakse kuuma õlisse ning serveeritakse Hispaanias ja Ladina-Ameerikas suhkru või paksu šokolaadiga. Nimeta maius.' },
-        response: { en: 'churros', et: 'churros' }, acceptedVariants: { en: ['churro'], et: ['churro'] },
-        explanation: { en: 'Churros get their fluted shape from a star nozzle and are eaten freshly fried, often at breakfast or from street stalls.', et: 'Sooneline kuju tuleb tähtotsikust ning maiust süüakse värskelt praetuna, sageli hommikusöögiks või tänavaletist.' },
-        source: { sourceId: 'wikipedia:churro', title: 'Churro', url: 'https://en.wikipedia.org/wiki/Churro', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'built-in-food-drink-set-066:question:2', factKey: 'built-in-food-drink:food-refresh:cannoli-sicilian-fried-shell-ricotta', tier: 2, subjectKey: 'dessert:cannoli',
+        clue: { en: 'Which Sicilian sweet fills crisp fried pastry tubes with sweetened ricotta?', et: 'Millise Sitsiilia maiuse krõbedad praetud tainatorud täidetakse magusa ricotta-kreemiga?' },
+        response: { en: 'cannoli', et: 'cannoli' }, acceptedVariants: { en: ['cannolo'], et: ['cannolo'] },
+        explanation: { en: 'Cannoli are Sicilian fried pastry shells filled with a sweet ricotta-based cream.', et: 'Cannoli on Sitsiilia praetud tainatorud, mis täidetakse magusa ricotta-põhise kreemiga.' },
+        source: { sourceId: 'wikipedia:cannoli', title: 'Cannoli', url: 'https://en.wikipedia.org/wiki/Cannoli', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'built-in-food-drink-set-066:question:3', factKey: 'built-in-food-drink:checkpoint3:flan-baked-custard-caramel', tier: 3, subjectKey: 'dessert:flan',
@@ -5613,64 +5623,71 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-084:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:shakshuka-eggs-tomato",
+        "factKey": "built-in-food-drink:food-refresh:bagel-boiled-before-baking",
         "tier": 2,
-        "subjectKey": "dish:shakshuka",
+        "subjectKey": "bread:bagel",
         "clue": {
-          "en": "Which Maghrebi dish poaches eggs in a sauce of tomatoes, peppers, onion and garlic?",
-          "et": "Millises Magribi roas pošeeritakse mune tomati, paprika, sibula ja küüslaugu kastmes?"
+          "en": "Which dense ring-shaped bread is briefly boiled before baking and is often served with cream cheese and salmon?",
+          "et": "Milline tihke rõngakujuline sai keedetakse enne küpsetamist korraks vees ning seda süüakse sageli toorjuustu ja lõhega?"
         },
         "response": {
-          "en": "shakshuka",
-          "et": "shakshuka"
+          "en": "bagel",
+          "et": "bagel"
         },
         "acceptedVariants": {
           "en": [
-            "shakshouka"
+            "bagel bread"
           ],
           "et": [
-            "šakšuka"
+            "rõngassai",
+            "vesikringel"
           ]
         },
         "explanation": {
-          "en": "Shakshuka is popular across North Africa and the Middle East and is commonly spiced with cumin, paprika and cayenne.",
-          "et": "Shakshuka on populaarne Põhja-Aafrikas ja Lähis-Idas ning seda maitsestatakse sageli vürtsköömne, paprika ja Cayenne'i pipraga."
+          "en": "Bagels are shaped into rings, briefly boiled and then baked, producing their glossy crust and chewy crumb.",
+          "et": "Bagel vormitakse rõngaks, keedetakse korraks ja seejärel küpsetatakse, mis annab läikiva kooriku ning sitke sisu."
         },
         "source": {
-          "sourceId": "wikipedia:shakshouka",
-          "title": "Shakshouka",
-          "url": "https://en.wikipedia.org/wiki/Shakshouka",
+          "sourceId": "wikipedia:bagel",
+          "title": "Bagel",
+          "url": "https://en.wikipedia.org/wiki/Bagel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
         "key": "built-in-food-drink-set-084:question:3",
-        "factKey": "built-in-food-drink:checkpoint5:congee-rice-porridge",
+        "factKey": "built-in-food-drink:food-refresh:pain-au-chocolat-laminated-dough-chocolate",
         "tier": 3,
-        "subjectKey": "dish:congee",
+        "subjectKey": "pastry:pain-au-chocolat",
         "clue": {
-          "en": "Which savoury porridge is made by boiling rice in abundant water until the grains soften?",
-          "et": "Milline soolane puder valmib riisi rohkes vees keetmisel, kuni terad pehmenevad?"
+          "en": "Which rectangular French pastry wraps one or two bars of chocolate in flaky laminated yeast dough?",
+          "et": "Millise ristkülikukujulise Prantsuse küpsetise kihilise pärmitaina sisse on keeratud üks või kaks šokolaadipulka?"
         },
         "response": {
-          "en": "congee",
-          "et": "congee"
+          "en": "pain au chocolat",
+          "et": "pain au chocolat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "chocolate croissant",
+            "chocolatine"
+          ],
+          "et": [
+            "šokolaadisai",
+            "šokolaadi-croissant"
+          ]
         },
         "explanation": {
-          "en": "Congee may be breakfast or a late supper and can be topped with meat, fish or pickled vegetables.",
-          "et": "Congee'd süüakse hommikusöögiks või hiliseks õhtueineks ning sellele võib lisada liha, kala või marineeritud köögivilju."
+          "en": "Pain au chocolat uses the same laminated yeast dough as a croissant, wrapped around chocolate and baked as a rectangle.",
+          "et": "Pain au chocolat tehakse sarvesaiaga samast kihilisest pärmitainast, mis keeratakse šokolaadi ümber ja küpsetatakse ristkülikuna."
         },
         "source": {
-          "sourceId": "wikipedia:congee",
-          "title": "Congee",
-          "url": "https://en.wikipedia.org/wiki/Congee",
+          "sourceId": "wikipedia:pain-au-chocolat",
+          "title": "Pain au chocolat",
+          "url": "https://en.wikipedia.org/wiki/Pain_au_chocolat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -7448,35 +7465,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-095:question:1",
-        "factKey": "built-in-food-drink:checkpoint6:meringue",
+        "factKey": "built-in-food-drink:food-refresh:shortcrust-fat-flour-crumbly-pie-base",
         "tier": 1,
-        "subjectKey": "food:meringue",
+        "subjectKey": "pastry:shortcrust-pastry",
         "clue": {
-          "en": "Which light, airy sweet confection is made by whipping egg whites with sugar?",
-          "et": "Milline kerge, õhuline magus maius valmib munavalgete vahustamisel suhkruga?"
+          "en": "Which crumbly pastry, commonly used for pie and tart bases, is made by mixing fat into flour before adding liquid?",
+          "et": "Milline piruka- ja koogipõhjades levinud tainas valmib rasva segamisel jahusse enne vedeliku lisamist ning jääb küpsedes muredaks?"
         },
         "response": {
-          "en": "meringue",
-          "et": "besee"
+          "en": "shortcrust pastry",
+          "et": "muretainas"
         },
         "acceptedVariants": {
           "en": [
-            "meringue mixture"
+            "short pastry"
           ],
           "et": [
-            "mereng"
+            "muretaigen"
           ]
         },
         "explanation": {
-          "en": "Meringue may be baked until crisp or used as a topping for pies and desserts.",
-          "et": "Beseed võib küpsetada krõbedaks või kasutada pirukate ja magustoitude kattena."
+          "en": "Coating flour with fat limits gluten formation, giving shortcrust pastry its tender, crumbly texture.",
+          "et": "Jahu segamine rasvaga piirab gluteeni teket ja annab muretainale õrna, mureneva tekstuuri."
         },
         "source": {
-          "sourceId": "wikipedia:meringue",
-          "title": "Meringue",
-          "url": "https://en.wikipedia.org/wiki/Meringue",
+          "sourceId": "wikipedia:shortcrust-pastry",
+          "title": "Shortcrust pastry",
+          "url": "https://en.wikipedia.org/wiki/Shortcrust_pastry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -8307,35 +8324,31 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-100:question:1",
-        "factKey": "built-in-food-drink:checkpoint6:couscous",
+        "factKey": "built-in-food-drink:food-refresh:bunny-chow-curry-hollowed-loaf",
         "tier": 1,
-        "subjectKey": "food:couscous",
+        "subjectKey": "dish:bunny-chow",
         "clue": {
-          "en": "Which North African staple consists of tiny steamed granules of rolled semolina?",
-          "et": "Milline Põhja-Aafrika põhitoit koosneb väikestest aurutatud ja veeretatud mannaterakestest?"
+          "en": "Which South African street food serves curry inside a hollowed-out loaf of bread?",
+          "et": "Millises Lõuna-Aafrika tänavatoidus serveeritakse karrit seest õõnestatud saiapätsi sees?"
         },
         "response": {
-          "en": "couscous",
-          "et": "kuskuss"
+          "en": "bunny chow",
+          "et": "bunny chow"
         },
         "acceptedVariants": {
-          "en": [
-            "cuscus"
-          ],
-          "et": [
-            "couscous"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Traditional couscous is steamed above a stew in a vessel called a couscoussier.",
-          "et": "Traditsioonilist kuskussi aurutatakse hautise kohal nõus nimega couscoussier."
+          "en": "Bunny chow originated in Durban and turns a hollowed loaf into an edible container for curry.",
+          "et": "Bunny chow pärineb Durbanist ning selles saab õõnestatud saiapätsist karri söödav anum."
         },
         "source": {
-          "sourceId": "wikipedia:couscous",
-          "title": "Couscous",
-          "url": "https://en.wikipedia.org/wiki/Couscous",
+          "sourceId": "wikipedia:bunny-chow",
+          "title": "Bunny chow",
+          "url": "https://en.wikipedia.org/wiki/Bunny_chow",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -32362,8 +32375,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "relic:ark-covenant",
         "clue": {
-          "en": "Which gold-covered biblical chest is associated with the tablets of the Ten Commandments and became the prize pursued in Raiders of the Lost Ark?",
-          "et": "Millist kullatud piibellikku laegast seostatakse kümne käsu kivitahvlitega ning jahitakse filmis „Kadunud laeka jälil”?"
+          "en": "Which gold-covered biblical chest, said to have held the tablets of the Ten Commandments, is sought in Raiders of the Lost Ark?",
+          "et": "Millist kullatud piibellikku laegast, kus hoiti kümne käsu kivitahvleid, jahitakse filmis „Kadunud laeka jälil”?"
         },
         "response": {
           "en": "Ark of the Covenant",
@@ -32529,8 +32542,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-040",
     "name": {
-      "en": "Faith and Myth on National Flags",
-      "et": "Usk ja müüt riigilippudel"
+      "en": "Faith and Symbols on National Flags",
+      "et": "Usk ja sümbolid riigilippudel"
     },
     "questions": [
       {
@@ -32732,7 +32745,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "holiday:holi",
         "clue": {
           "en": "At which Hindu spring festival do crowds famously throw brightly colored powders and water at one another?",
-          "et": "Millise hindu kevadpüha ajal loobivad rahvahulgad kuulsalt üksteist erksavärvilise pulbri ja veega?"
+          "et": "Millise hindu kevadpüha ajal loobivad rahvahulgad kuulsalt üksteise pihta erksavärvilist pulbrit ja vett?"
         },
         "response": {
           "en": "Holi",
@@ -33697,7 +33710,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "manuscript:diamond-sutra",
         "clue": {
           "en": "Name the Buddhist sutra whose copy dated 868 is celebrated as an early dated woodblock-printed book and was found in the Mogao cave library.",
-          "et": "Nimeta budistlik suutra, mille 868. aastaga dateeritud eksemplari tuntakse varase dateeritud puulõiketrükise raamatuna ja mis leiti Mogao koobastiku raamatukogust."
+          "et": "Nimeta budistlik suutra, mille 868. aasta eksemplar on üks varasemaid dateeritud puulõiketehnikas trükitud raamatuid ning mis leiti Mogao koobastiku raamatukogust."
         },
         "response": {
           "en": "Diamond Sutra",
@@ -34324,8 +34337,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-050",
     "name": {
-      "en": "Saints Behind Familiar Symbols",
-      "et": "Pühakud tuttavate sümbolite taga"
+      "en": "Saints, Symbols and Patronage",
+      "et": "Pühakud, sümbolid ja eestkoste"
     },
     "questions": [
       {
@@ -34868,7 +34881,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "test:judgement-paris",
         "clue": {
           "en": "What named mythological judgement has a Trojan prince award a golden apple to one of three goddesses, helping trigger the Trojan War?",
-          "et": "Millises nimega mütoloogilises otsuses annab Trooja prints kuldõuna ühele kolmest jumalannast ja aitab sellega Trooja sõja vallandada?"
+          "et": "Kuidas nimetatakse mütoloogilist otsust, milles Trooja prints annab kuldõuna ühele kolmest jumalannast ja aitab sellega Trooja sõja vallandada?"
         },
         "response": {
           "en": "Judgement of Paris",
@@ -35809,8 +35822,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "expression:gordian-knot",
         "clue": {
-          "en": "Which named object or expression is associated with Alexander the Great making one decisive cut at Gordium?",
-          "et": "Milline nimega ese või väljend seostub Aleksander Suure ühe otsustava lõikega Gordiumis?"
+          "en": "Which legendary knot did Alexander the Great supposedly sever with one stroke of his sword?",
+          "et": "Millise legendaarse sõlme raius Aleksander Suur pärimuse järgi ühe mõõgalöögiga läbi?"
         },
         "response": {
           "en": "Gordian knot",
@@ -36499,7 +36512,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "landmark:mont-saint-michel",
         "clue": {
           "en": "Which Normandy landmark is a tidal island occupied by an abbey?",
-          "et": "Milline Normandia pühapaik ühendab loodetesaare ja sellel asuva kloostri?"
+          "et": "Milline Normandia pühapaik on loodetesaar, millel asub klooster?"
         },
         "response": {
           "en": "Mont-Saint-Michel",
@@ -36778,7 +36791,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "personification:grim-reaper",
         "clue": {
           "en": "Which personification is commonly hooded or skeletal and carries a scythe?",
-          "et": "Millist kehastust kujutatakse tavaliselt kapuutsis või luukerena ning vikatiga?"
+          "et": "Millist kehastust kujutatakse tavaliselt kapuutsiga luukerena, kes kannab vikatit?"
         },
         "response": {
           "en": "Grim Reaper",
@@ -36880,29 +36893,24 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:4",
-        "factKey": "lady-luck:fortuna-wheel-fickle-fortune",
+        "factKey": "fortuna:roman-goddess-wheel-changing-fortune",
         "tier": 4,
-        "subjectKey": "personification:lady-luck",
+        "subjectKey": "deity:fortuna",
         "clue": {
-          "en": "Which personification of fickle good fortune is associated with a wheel that turns as circumstances change?",
-          "et": "Milline muutliku hea õnne kehastus seostub rattaga, mis pöördub koos olude muutumisega?"
+          "en": "Which Roman goddess of fortune is commonly shown with a wheel symbolizing life's changing fortunes?",
+          "et": "Millist Rooma õnne- ja saatusejumalannat kujutatakse sageli rattaga, mis sümboliseerib elu muutlikku õnne?"
         },
         "response": {
-          "en": "Lady Luck",
-          "et": "õnnejumalanna"
+          "en": "Fortuna",
+          "et": "Fortuna"
         },
         "acceptedVariants": {
-          "en": [
-            "Fortuna"
-          ],
-          "et": [
-            "Fortuna",
-            "Lady Luck"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Lady Luck draws on the Roman goddess Fortuna, whose wheel represents unstable fortune.",
-          "et": "Õnnejumalanna seostub Rooma Fortuna ja tema rattaga, mis sümboliseerib õnne muutlikkust."
+          "en": "Fortuna is the Roman goddess of luck and fortune; her wheel symbolizes life's changing fortunes.",
+          "et": "Fortuna on Rooma õnne- ja saatusejumalanna; tema ratas sümboliseerib elu muutlikku õnne."
         },
         "source": {
           "sourceId": "wikipedia:fortuna",
@@ -36957,7 +36965,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "object:magic-wand",
         "clue": {
           "en": "Which familiar object is a thin handheld stick used by magicians, fairies or wizards?",
-          "et": "Milline tuttav ese on peenike käes hoitav pulk, mida kujutatakse võlurite, haldjate ja maagide kasutuses?"
+          "et": "Milline tuttav ese on peenike käes hoitav pulk, mida lugudes kasutavad võlurid, haldjad ja maagid?"
         },
         "response": {
           "en": "magic wand",
@@ -37137,7 +37145,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "figure:mother-teresa",
         "clue": {
-          "en": "Which public figure founded the Missionaries of Charity in Kolkata, whose habit became a white sari with blue borders?",
+          "en": "Which public figure founded the Missionaries of Charity in Kolkata, a congregation whose members became known for white saris with blue borders?",
           "et": "Milline avaliku elu tegelane asutas heategevuskoguduse Missionaries of Charity, mille tunnusrüüks sai sinise äärega valge sari, ning tegutses Calcuttas ehk Kolkatas?"
         },
         "response": {
@@ -37238,7 +37246,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Pope John Paul II joined a Polish background with a widely travelling papacy and opposition to communism.",
+          "en": "Pope John Paul II was Polish, travelled widely as pope and opposed communism.",
           "et": "Paavst Johannes Paulus II ühendas Poola päritolu, rohked välisreisid ja vastuseisu kommunismile."
         },
         "source": {
@@ -37289,7 +37297,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "figure:nick-vujicic",
         "clue": {
           "en": "Which public figure is an Australian-American evangelist and motivational speaker who was born without arms or legs?",
-          "et": "Milline Austraalia ja Ameerika taustaga evangelist ning motivatsioonikõneleja sündis käte ja jalgadeta?"
+          "et": "Milline Austraaliast pärit evangelist ja motivatsioonikõneleja sündis ilma käte ja jalgadeta?"
         },
         "response": {
           "en": "Nick Vujicic",
@@ -37415,7 +37423,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Palm reading examines the hand’s lines and treats them as signs of personality or what lies ahead.",
-          "et": "Käejoonte lugemine uurib käe jooni ning käsitab neid iseloomu ja tuleviku märkidena."
+          "et": "Käejoonte lugemine uurib käejooni ning käsitab neid iseloomu ja tuleviku märkidena."
         },
         "source": {
           "sourceId": "wikipedia:palmistry",
@@ -37467,7 +37475,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "divination:tea-leaf-reading",
         "clue": {
           "en": "Which method uses shapes made by tea residue left in a cup?",
-          "et": "Milline meetod kasutab tassi jäänud teepaksu moodustatud kujundeid?"
+          "et": "Milline meetod kasutab tassi jäänud teepaksust moodustunud kujundeid?"
         },
         "response": {
           "en": "tea-leaf reading",
@@ -37647,8 +37655,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "creature:dryad",
         "clue": {
-          "en": "Which Greek nature spirit is connected to a tree, originally especially an oak?",
-          "et": "Milline Kreeka loodusvaim on seotud puuga, algselt eriti tammega?"
+          "en": "What is the name of a Greek nymph of trees, originally especially oaks?",
+          "et": "Kuidas nimetatakse Kreeka mütoloogias puude, algselt eriti tammede nümfi?"
         },
         "response": {
           "en": "dryad",
@@ -38085,8 +38093,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "symbol:scarab",
         "clue": {
-          "en": "Which insect-shaped amulet of ancient Egypt was associated with the sun, regeneration and rebirth?",
-          "et": "Millist Vana-Egiptuse putukakujulist amuletti seostati päikese, uuenemise ja taassünniga?"
+          "en": "Which insect-shaped amulet of ancient Egypt symbolized the sun, regeneration and rebirth?",
+          "et": "Milline Vana-Egiptuse putukakujuline amulett sümboliseeris päikest, uuenemist ja taassündi?"
         },
         "response": {
           "en": "scarab",
@@ -40543,37 +40551,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-084:question:3",
-        "factKey": "mythology-hard:084:3:age-of-mythology-three-pantheons",
-        "tier": 3,
-        "subjectKey": "game:age-of-mythology",
-        "clue": {
-          "en": "Which Ensemble Studios strategy game spun off from Age of Empires to use Greek, Egyptian and Norse legends?",
-          "et": "Milline Ensemble Studiosi strateegiamäng kasvas välja sarjast „Age of Empires“ ning kasutab Kreeka, Egiptuse ja Põhjala legende?"
-        },
-        "response": {
-          "en": "Age of Mythology",
-          "et": "Age of Mythology"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Age of Mythology is an Ensemble Studios real-time strategy spin-off inspired by Greek, Egyptian and Norse mythology.",
-          "et": "„Age of Mythology“ on Ensemble Studiosi reaalajastrateegia kõrvalharu, mis ammutab ainest Kreeka, Egiptuse ja Põhjala mütoloogiast."
-        },
-        "source": {
-          "sourceId": "wikipedia:age_of_mythology",
-          "title": "Age of Mythology",
-          "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-02"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-084:question:4",
         "factKey": "mythology-hard:084:4:odyssey-peloponnesian-kassandra-alexios",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "game:assassins-creed-odyssey",
         "clue": {
           "en": "Which 2018 Ubisoft RPG lets you choose Kassandra or Alexios during a mythologised Peloponnesian War?",
@@ -40599,6 +40578,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:assassins_creed_odyssey",
           "title": "Assassin's Creed Odyssey",
           "url": "https://en.wikipedia.org/wiki/Assassin%27s_Creed_Odyssey",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-084:question:4",
+        "factKey": "mythology-hard:084:3:age-of-mythology-three-pantheons",
+        "tier": 4,
+        "subjectKey": "game:age-of-mythology",
+        "clue": {
+          "en": "Which Ensemble Studios strategy game spun off from Age of Empires to use Greek, Egyptian and Norse legends?",
+          "et": "Milline Ensemble Studiosi strateegiamäng kasvas välja sarjast „Age of Empires“ ning kasutab Kreeka, Egiptuse ja Põhjala legende?"
+        },
+        "response": {
+          "en": "Age of Mythology",
+          "et": "Age of Mythology"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Age of Mythology is an Ensemble Studios real-time strategy spin-off inspired by Greek, Egyptian and Norse mythology.",
+          "et": "„Age of Mythology“ on Ensemble Studiosi reaalajastrateegia kõrvalharu, mis ammutab ainest Kreeka, Egiptuse ja Põhjala mütoloogiast."
+        },
+        "source": {
+          "sourceId": "wikipedia:age_of_mythology",
+          "title": "Age of Mythology",
+          "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-02"
         }
@@ -41989,7 +41997,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "song:like-a-prayer",
         "clue": {
           "en": "Which 1989 Madonna single combines a gospel choir with a video showing a church and Catholic imagery?",
-          "et": "Milline Madonna 1989. aasta singel ühendab gospelkoori ning kirikut ja katoliiklikku kujundikeelt näitava video?"
+          "et": "Milline Madonna 1989. aasta singel kasutab gospelkoori ning mille videos näeb kirikut ja katoliiklikku sümboolikat?"
         },
         "response": {
           "en": "Like a Prayer",
@@ -42000,8 +42008,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "“Like a Prayer” uses gospel voices, while its video includes a church and imagery such as stigmata.",
-          "et": "„Like a Prayer“ kasutab gospelhääli ning selle videos on kirik ja stigmade-sarnane katoliiklik kujundikeel."
+          "en": "“Like a Prayer” features gospel vocals; its video includes a church and shows Madonna with stigmata-like wounds.",
+          "et": "„Like a Prayeris“ kõlab gospelkoor; videos näeb kirikut ja Madonnal stigmasid meenutavaid haavu."
         },
         "source": {
           "sourceId": "wikipedia-en:Like_a_Prayer_(song)",
@@ -42234,8 +42242,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "martial-art:capoeira",
         "clue": {
-          "en": "Which Afro-Brazilian martial art and game combines dance, music and play inside a ceremonial roda?",
-          "et": "Milline afrobrasiilia võitluskunst ja mäng ühendab tantsu, muusika ja mängu tseremoniaalses roda-ringis?"
+          "en": "Which Afro-Brazilian martial art and game combines dance and music inside a ceremonial roda?",
+          "et": "Milline afrobrasiilia võitluskunst ja mäng ühendab tantsu ning muusika tseremoniaalses rodas?"
         },
         "response": {
           "en": "capoeira",
@@ -42518,8 +42526,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "historical-event:galileo-affair",
         "clue": {
-          "en": "Name the controversy in which the Roman Inquisition condemned heliocentrism and a later trial put a famous astronomer under house arrest.",
-          "et": "Nimeta vaidlus, milles Rooma inkvisitsioon mõistis hukka heliotsentrismi ning hilisem protsess saatis kuulsa astronoomi koduaresti."
+          "en": "What name is given to the series of events in which the Roman Inquisition condemned heliocentrism and later put a famous astronomer under house arrest?",
+          "et": "Kuidas nimetatakse sündmuste jada, milles Rooma inkvisitsioon mõistis hukka heliotsentrismi ning kuulus astronoom pandi hiljem koduaresti?"
         },
         "response": {
           "en": "Galileo affair",
@@ -42538,7 +42546,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The Galileo affair concerns the Inquisition’s actions against Galileo’s defence of heliocentrism.",
-          "et": "Galilei protsess käsitleb inkvisitsiooni tegevust Galilei heliotsentrismi kaitsmise vastu."
+          "et": "Galilei protsess hõlmab inkvisitsiooni tegevust Galilei vastu, kuna ta kaitses heliotsentrismi."
         },
         "source": {
           "sourceId": "wikipedia:galileo-affair",
@@ -42588,7 +42596,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "historical-event:satanic-verses-controversy",
         "clue": {
           "en": "Which dispute grew from Salman Rushdie’s 1988 novel into debates over censorship and violence and prompted Khomeini’s 1989 fatwa?",
-          "et": "Milline vaidlus kasvas Salman Rushdie 1988. aasta romaanist tsensuuri ja vägivalla teemaliseks poleemikaks ning tõi 1989. aastal Khomeini fatwa?"
+          "et": "Milline vaidlus kasvas Salman Rushdie 1988. aasta romaanist tsensuuri ja vägivalla teemaliseks poleemikaks ning tõi 1989. aastal kaasa Khomeini fatvaa?"
         },
         "response": {
           "en": "Satanic Verses controversy",
@@ -42699,19 +42707,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "Michael",
-          "et": "Michael"
+          "et": "Miikael"
         },
         "acceptedVariants": {
           "en": [
             "Miikael"
           ],
           "et": [
-            "Miikael"
+            "Michael"
           ]
         },
         "explanation": {
           "en": "Michael derives from a Hebrew rhetorical question and appears as an archangel’s name in Daniel.",
-          "et": "Michael pärineb heebrea retoorilisest küsimusest ning esineb Taanieli raamatus peaingli nimena."
+          "et": "Miikael pärineb heebrea retoorilisest küsimusest ning esineb Taanieli raamatus peaingli nimena."
         },
         "source": {
           "sourceId": "wikipedia:michael-given-name",
@@ -42844,8 +42852,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Guru has a deep teaching role in Indian traditions and also a broader expert sense.",
-          "et": "Gurul on India traditsioonides sügav õpetajaroll ning sõnal on ka laiem eksperdi tähendus."
+          "en": "In Indian traditions, a guru is a teacher or spiritual guide; in wider use, the word also means an expert.",
+          "et": "India traditsioonides on guru õpetaja või vaimne teejuht; laiemas kasutuses tähendab sõna ka eksperti."
         },
         "source": {
           "sourceId": "wikipedia:guru",
@@ -42862,7 +42870,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "term:taboo",
         "clue": {
           "en": "Which English loanword for a socially enforced prohibition comes from Polynesian tapu, recorded by James Cook in Tonga?",
-          "et": "Milline ühiskondlikult jõustatud keeldu tähistav laensõna pärineb polüneesia sõnast tapu, mille James Cook Tongal üles märkis?"
+          "et": "Milline laensõna tähistab ühiskondlikul taval põhinevat keeldu ning pärineb polüneesia sõnast tapu, mille James Cook Tongal üles märkis?"
         },
         "response": {
           "en": "taboo",
@@ -42894,8 +42902,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "finance-term:angel-investor",
         "clue": {
-          "en": "Which startup financier takes a name first used for wealthy Broadway theatre backers?",
-          "et": "Milline idufirma rahastaja kannab nimetust, mida kasutati algselt jõukate Broadway teatritoetajate kohta?"
+          "en": "What term for someone who provides early capital to startups was first used for wealthy Broadway theatre backers?",
+          "et": "Milline termin tähistab idufirma varajast rahastajat ja oli algselt kasutusel jõukate Broadway teatritoetajate kohta?"
         },
         "response": {
           "en": "angel investor",
@@ -43188,7 +43196,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Dawkins introduced “meme” as a cultural counterpart to a unit that replicates through imitation.",
+          "en": "Dawkins introduced “meme” for a unit of cultural transmission that spreads through imitation.",
           "et": "Dawkins võttis „meemi“ kasutusele kultuuriühiku kohta, mis levib jäljendamise kaudu."
         },
         "source": {

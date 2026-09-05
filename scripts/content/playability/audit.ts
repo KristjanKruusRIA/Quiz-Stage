@@ -73,8 +73,9 @@ const searchable = (value: string | undefined): string => normalize(value)
 const canonicalAnswer = (value: string | undefined): string => searchable(value)
   .replace(/^(?:a|an|the)\s+/u, '');
 
-const sourceHeading = (value: string | undefined): string => searchable(value)
-  .replace(/\s+(?:wikipedia|encyclopaedia britannica|britannica)$/u, '');
+const sourceHeading = (value: string | undefined): string => normalize(value)
+  .replace(/\s+(?:[–—-]\s*)?(?:wikipedia|encyclopaedia britannica|britannica)$/iu, '')
+  .trim();
 
 const values = (
   row: Readonly<Record<string, string>>,
@@ -85,9 +86,12 @@ const values = (
 const startsWithSourceHeading = (clues: readonly string[], title: string | undefined): boolean => {
   const heading = sourceHeading(title);
   if (heading.length < 4) return false;
+  const headingPattern = heading.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+  const prefixedHeading = new RegExp(`^${headingPattern}\\s*(?::|[–—-])(?:\\s|$)`, 'iu');
   return clues.some((clue) => {
-    const normalizedClue = searchable(clue);
-    return normalizedClue === heading || normalizedClue.startsWith(`${heading} `);
+    const normalizedClue = normalize(clue);
+    return normalizedClue.toLocaleLowerCase('en') === heading.toLocaleLowerCase('en')
+      || prefixedHeading.test(normalizedClue);
   });
 };
 
