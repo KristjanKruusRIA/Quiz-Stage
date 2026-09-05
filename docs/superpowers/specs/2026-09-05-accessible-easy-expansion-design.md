@@ -125,7 +125,7 @@ The range is collision-free in all twelve packs. Packs `01` through `03` intenti
 
 New clues use a dedicated pack-scoped namespace, `built-in-<topic-family>-easy-expansion-001` through `-100`, ordered by category and tier. `<topic-family>` is the pack ID without the leading `built-in-`; for example, History uses `built-in-history-easy-expansion-001` and Science & Nature uses `built-in-science-nature-easy-expansion-001`. This avoids coupling new IDs to the historical accessible-corpus numbering differences between packs.
 
-Each authored/generated row uses the existing 25-column CSV contract. Every new evidence record uses the integrated version 1 evidence schema. New rows use `origin: "compatibleOpen"` and `inspiration: null` unless a clue is genuinely derived from OpenTDB. Existing OpenTDB inspiration records remain unchanged.
+Each authored/generated row uses the existing 25-column CSV contract. Every new evidence record uses the integrated version 1 evidence schema. All Phase B rows use `origin: "compatibleOpen"` and `inspiration: null`; the existing 100 OpenTDB-inspired records in each original pack remain unchanged, so projected pack quotas stay exactly 100.
 
 ## 7. Implementation architecture
 

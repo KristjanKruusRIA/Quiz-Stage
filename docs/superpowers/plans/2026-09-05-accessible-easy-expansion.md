@@ -50,8 +50,8 @@
 - [ ] Observe the intended missing-module or missing-behavior failure.
 - [ ] Implement the smallest immutable types and pure validation needed to pass.
 - [ ] Reuse existing accessibility reason codes and cross-tier normalization where contracts match.
-- [ ] Generate a sorted manifest for all 7,174 baseline stable IDs using canonical logical-record SHA-256 hashes, plus accepted-artifact hashes and source commit `5323a546f4d03460dae7c934703dbcfd8468031f`.
-- [ ] Lock the current canonical hashes: release inventory `c1eb0c3d7dbf404c6c30740360c60cbddf04021f83141608ca3793a351f2a7b5`, source cache `6ae35fe70f2f9f8dcfafe5e3bc590a41ff33d5d8088cdf4a61790f04a899213d`, and seed `0a94337640f8a4f1a063193717947b584ef29ed57304da1e94294babafd9daa3`.
+- [ ] Generate a sorted manifest for all 7,174 baseline stable IDs using canonical logical-record SHA-256 hashes, plus the exact 63 accepted/canonical artifact hashes and source commit `5323a546f4d03460dae7c934703dbcfd8468031f`. Hash artifact bytes from Git blobs at that commit so checkout line-ending conversion cannot change the result.
+- [ ] Lock the source-commit blob hashes: release inventory `96cff31db0d7ce9eeb6ae3f77f695901429524c9e871d90d62de5c9d0df301de`, source cache `49980400bb018c38fa9ecc506545c434070e9f2836a43cb36e68180186b1209a`, and seed `0a94337640f8a4f1a063193717947b584ef29ed57304da1e94294babafd9daa3`.
 - [ ] Run the focused test, typecheck, scoped lint, and `git diff --check`.
 - [ ] Commit the shared contract and push it to `develop` after review so all pack lanes start from one base.
 
