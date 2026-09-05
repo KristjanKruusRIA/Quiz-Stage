@@ -23,6 +23,7 @@
     "content:validate": "tsx scripts/content/validate.ts",
     "content:source-check": "tsx scripts/content/sourceCheck.ts",
     "verify:content": "npm run content:verify-seed -- --input content/generated/*.en-et.csv --evidence content/evidence/*.jsonl --report content/reports/release-inventory.json --source-cache content/reports/source-check-cache.json",
+    "verify:content:cached": "npm run content:verify-seed -- --input content/generated/*.en-et.csv --evidence content/evidence/*.jsonl --report content/reports/release-inventory.json --source-cache content/reports/source-check-cache.json --source-cache-only",
     "content:fetch-wikidata": "tsx scripts/content/fetchWikidata.ts",
     "content:build-worklist": "tsx scripts/content/buildAuthoringWorklist.ts",
     "content:verify-batch": "tsx scripts/content/verifyBatch.ts",

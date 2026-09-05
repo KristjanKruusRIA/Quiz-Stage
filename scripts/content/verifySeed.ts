@@ -22,6 +22,7 @@ interface VerifySeedOptions {
   report: string;
   seed: string;
   sourceCache: string;
+  sourceCacheOnly: boolean;
 }
 
 interface ReleaseInventoryReport {
@@ -47,10 +48,11 @@ function parseCli(argv: readonly string[]): VerifySeedOptions {
   let report = defaultReportPath;
   let seed = defaultSeedPath;
   let sourceCache = defaultSourceCachePath;
+  let sourceCacheOnly = false;
 
   if (argv.length > 0 && !argv.some((argument) => argument.startsWith('--'))) {
     inputs.push(...argv);
-    return { inputs, evidence, report, seed, sourceCache };
+    return { inputs, evidence, report, seed, sourceCache, sourceCacheOnly };
   }
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -80,13 +82,15 @@ function parseCli(argv: readonly string[]): VerifySeedOptions {
       if (next === undefined || next === '') throw new Error('--source-cache is required');
       sourceCache = resolve(next);
       index += 1;
+    } else if (argument === '--source-cache-only') {
+      sourceCacheOnly = true;
     } else {
       throw new Error(`Unknown argument: ${argument}`);
     }
   }
 
   if (inputs.length === 0) inputs.push(defaultInputGlob);
-  return { inputs, evidence, report, seed, sourceCache };
+  return { inputs, evidence, report, seed, sourceCache, sourceCacheOnly };
 }
 
 export function readReleaseInventoryReport(path: string): ReleaseInventoryReport {
@@ -267,6 +271,7 @@ export async function runVerifySeed(
     const sourceChecks = await (dependencies.runSourceCheck ?? runSourceCheckCli)([
       ...options.inputs.flatMap((input) => ['--input', input]),
       '--cache', options.sourceCache,
+      ...(options.sourceCacheOnly ? ['--cache-only'] : []),
     ]);
     if (sourceChecks !== 0) return sourceChecks;
 

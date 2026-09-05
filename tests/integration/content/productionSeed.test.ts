@@ -576,10 +576,11 @@ describe('evidence-bound production seed infrastructure', () => {
     const reportData = JSON.parse(readFileSync(report, 'utf8'));
     reportData.sentinel = 'preserve until every gate passes';
     const writeReport = (value = reportData) => writeFileSync(report, `${JSON.stringify(value, null, 2)}\n`);
-    const verify = (runSourceCheck: () => Promise<number>) => runVerifySeed([
+    const verify = (runSourceCheck: () => Promise<number>, sourceCacheOnly = false) => runVerifySeed([
       ...fixture.inputs.flatMap((input) => ['--input', input]),
       ...fixture.evidence.flatMap((evidence) => ['--evidence', evidence]),
       '--report', report, '--seed', seed, '--source-cache', join(directory, 'source-cache.json'),
+      ...(sourceCacheOnly ? ['--source-cache-only'] : []),
     ], { runSourceCheck });
     const expectPreserved = async (run: () => Promise<unknown>, expectedBytes: Buffer) => {
       await expect(run()).rejects.toThrow();
@@ -590,7 +591,12 @@ describe('evidence-bound production seed infrastructure', () => {
     copyFileSync(baseSeed, seed);
     writeReport();
     const sourceFailureBytes = readFileSync(report);
-    await expect(verify(async () => 1)).resolves.toBe(1);
+    let sourceCheckArguments: string[] | undefined;
+    await expect(verify(async (argv: string[] = []) => {
+      sourceCheckArguments = argv;
+      return 1;
+    }, true)).resolves.toBe(1);
+    expect(sourceCheckArguments).toContain('--cache-only');
     expect(readFileSync(report)).toEqual(sourceFailureBytes);
     expect(readdirSync(directory).filter((name) => name.includes('.verify.tmp'))).toEqual([]);
 

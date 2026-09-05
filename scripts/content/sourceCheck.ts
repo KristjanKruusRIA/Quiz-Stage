@@ -14,6 +14,7 @@ const USER_AGENT = 'Quiz Stage content source checker/0.1 (+offline desktop cont
 const OFFICIAL_ARCHIVE_HOSTS = new Set(['j-archive.com', 'www.j-archive.com', 'jeopardyarchive.com', 'www.jeopardyarchive.com']);
 const CACHE_VERSION = 1;
 const DEFAULT_EXPIRY_MS = 7 * 24 * 60 * 60_000;
+const CACHE_ONLY_MAX_AGE_MS = 30 * 24 * 60 * 60_000;
 
 function compareCodeUnits(left: string, right: string): number {
   if (left < right) return -1;
@@ -57,6 +58,7 @@ export interface SourceCheckOptions {
   maxRedirects?: number;
   cache?: SourceCache;
   cacheExpiryMs?: number;
+  cacheOnly?: boolean;
 }
 
 export function createMemorySourceCache(entries: Record<string, SourceCacheEntry> = {}): SourceCache {
@@ -169,18 +171,79 @@ function retryAfterDelayMs(value: string | null, now: Date, fallbackMs: number):
   return Number.isFinite(timestamp) ? Math.min(Math.max(0, timestamp - now.getTime()), 60_000) : fallbackMs;
 }
 
-async function validateTarget(raw: string, dependencies: SourceCheckDependencies): Promise<{ url?: URL; error?: SourceCheckResult }> {
+function normalizeHostname(value: string): string | undefined {
+  const lower = value.toLowerCase();
+  const hostname = lower.endsWith('.') ? lower.slice(0, -1) : lower;
+  if (hostname === '' || hostname.endsWith('.')) return undefined;
+  return hostname;
+}
+
+function inspectSourceUrl(raw: string): { url?: URL; hostname?: string; error?: SourceCheckResult } {
   let url: URL;
   try { url = new URL(raw); } catch { return { error: rejected(raw, 'SOURCE_URL_INVALID') }; }
   if (url.protocol !== 'https:') return { error: rejected(raw, 'SOURCE_URL_NOT_HTTPS') };
   if (url.username !== '' || url.password !== '') return { error: rejected(raw, 'SOURCE_URL_CREDENTIALS') };
-  if ([...OFFICIAL_ARCHIVE_HOSTS].some((host) => url.hostname.toLowerCase() === host || url.hostname.toLowerCase().endsWith(`.${host}`))) return { error: rejected(raw, 'OFFICIAL_ARCHIVE_HOST') };
-  if (url.hostname.toLowerCase() === 'localhost' || url.hostname.toLowerCase().endsWith('.localhost')) return { error: rejected(raw, 'SOURCE_PRIVATE_ADDRESS') };
-  if (isPrivateAddress(url.hostname)) return { error: rejected(raw, 'SOURCE_PRIVATE_ADDRESS') };
+  const hostname = normalizeHostname(url.hostname);
+  if (hostname === undefined) return { error: rejected(raw, 'SOURCE_URL_INVALID') };
+  if ([...OFFICIAL_ARCHIVE_HOSTS].some((host) => hostname === host || hostname.endsWith(`.${host}`))) {
+    return { error: rejected(raw, 'OFFICIAL_ARCHIVE_HOST') };
+  }
+  if (hostname === 'localhost' || hostname.endsWith('.localhost') || isPrivateAddress(hostname)) {
+    return { error: rejected(raw, 'SOURCE_PRIVATE_ADDRESS') };
+  }
+  return { url, hostname };
+}
+
+function isSafeCachedUrl(value: string): boolean {
+  return inspectSourceUrl(value).url !== undefined;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function parseCanonicalTimestamp(value: unknown): number | undefined {
+  if (typeof value !== 'string') return undefined;
+  const parsed = Date.parse(value);
+  if (!Number.isFinite(parsed) || new Date(parsed).toISOString() !== value) return undefined;
+  return parsed;
+}
+
+function cacheOnlyResult(raw: string, cached: SourceCacheEntry | undefined, now: number): SourceCheckResult {
+  if (cached === undefined) return rejected(raw, 'SOURCE_CACHE_MISS');
+  const entry: unknown = cached;
+  if (!isRecord(entry) || !isRecord(entry.result)) return rejected(raw, 'SOURCE_CACHE_INVALID');
+  const result = entry.result;
+  const retrievedAt = parseCanonicalTimestamp(result.retrievedAt);
+  const expiresAt = parseCanonicalTimestamp(entry.expiresAt);
+  if (entry.version !== CACHE_VERSION || result.url !== raw || result.ok !== true
+    || typeof result.status !== 'number' || !Number.isInteger(result.status)
+    || result.status < 200 || result.status >= 300
+    || result.code !== null || typeof result.finalUrl !== 'string'
+    || typeof result.retrievedAt !== 'string'
+    || retrievedAt === undefined || retrievedAt > now
+    || expiresAt === undefined || expiresAt <= retrievedAt
+    || !isSafeCachedUrl(raw) || !isSafeCachedUrl(result.finalUrl)) {
+    return rejected(raw, 'SOURCE_CACHE_INVALID');
+  }
+  if (now - retrievedAt > CACHE_ONLY_MAX_AGE_MS) return rejected(raw, 'SOURCE_CACHE_STALE');
+  return {
+    url: raw, ok: true, status: result.status, retrievedAt: result.retrievedAt,
+    code: null, finalUrl: result.finalUrl,
+  };
+}
+
+async function validateTarget(
+  raw: string,
+  dependencies: SourceCheckDependencies,
+): Promise<{ url?: URL; hostname?: string; error?: SourceCheckResult }> {
+  const inspected = inspectSourceUrl(raw);
+  if (inspected.error !== undefined) return inspected;
+  const url = inspected.url!;
   let addresses: string[];
-  try { addresses = await dependencies.resolveHostname(url.hostname); } catch { return { error: rejected(raw, 'SOURCE_DNS_FAILURE') }; }
+  try { addresses = await dependencies.resolveHostname(inspected.hostname!); } catch { return { error: rejected(raw, 'SOURCE_DNS_FAILURE') }; }
   if (addresses.length === 0 || addresses.some(isPrivateAddress)) return { error: rejected(raw, 'SOURCE_PRIVATE_ADDRESS') };
-  return { url };
+  return { url, hostname: inspected.hostname };
 }
 
 async function checkOne(
@@ -190,12 +253,13 @@ async function checkOne(
   serializeTargetHost: TargetHostSerializer,
 ): Promise<SourceCheckResult> {
   const cached = options.cache?.get(raw);
+  if (options.cacheOnly) return cacheOnlyResult(raw, cached, dependencies.now().getTime());
   if (cached?.version === CACHE_VERSION && Date.parse(cached.expiresAt) > dependencies.now().getTime() && cached.result.ok) return cached.result;
   let target = raw;
   for (let redirects = 0; redirects <= options.maxRedirects; redirects += 1) {
     const checked = await validateTarget(target, dependencies);
     if (checked.error !== undefined) return { ...checked.error, url: raw };
-    const outcome = await serializeTargetHost(checked.url!.hostname.toLowerCase(), async () => {
+    const outcome = await serializeTargetHost(checked.hostname!, async () => {
       let lastStatus: number | null = null;
       for (let attempt = 1; attempt <= options.maxAttempts; attempt += 1) {
         let response: SourceFetchResponse;
@@ -261,13 +325,13 @@ export async function checkSourceUrls(
     initialBackoffMs: Math.max(0, Math.min(inputOptions.initialBackoffMs ?? 250, 60_000)),
     maxRedirects: Math.max(0, Math.min(inputOptions.maxRedirects ?? 5, 10)),
     cacheExpiryMs: Math.max(1, inputOptions.cacheExpiryMs ?? DEFAULT_EXPIRY_MS),
+    cacheOnly: inputOptions.cacheOnly ?? false,
     ...(inputOptions.cache === undefined ? {} : { cache: inputOptions.cache }),
   };
   const unique = [...new Set(urls)].sort(compareCodeUnits);
   const groupsByHost = new Map<string, string[]>();
   for (const url of unique) {
-    let host = url;
-    try { host = new URL(url).hostname.toLowerCase(); } catch { /* validation reports the invalid URL */ }
+    const host = inspectSourceUrl(url).hostname ?? url;
     const group = groupsByHost.get(host) ?? [];
     group.push(url);
     groupsByHost.set(host, group);
@@ -428,10 +492,11 @@ function assertReportCanBePublished(path: string): void {
 }
 
 export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<number> {
-  argv = restoreNpmRunArgs(argv, ['--input', '--report', '--source-cache']);
+  argv = restoreNpmRunArgs(argv, ['--input', '--report', '--source-cache'], ['--cache-only']);
   const inputs: string[] = [];
   let cachePath = resolve('content/reports/source-check-cache.json');
   let reportPath: string | undefined;
+  let cacheOnly = false;
   if (argv.length > 0 && !argv.some((argument) => argument.startsWith('--'))) {
     inputs.push(...argv);
   } else {
@@ -439,6 +504,7 @@ export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<n
     if (argv[index] === '--input') inputs.push(argv[++index] ?? '');
     else if (argv[index] === '--cache' || argv[index] === '--source-cache') cachePath = resolve(argv[++index] ?? '');
     else if (argv[index] === '--report') reportPath = resolve(argv[++index] ?? '');
+    else if (argv[index] === '--cache-only') cacheOnly = true;
     else throw new Error(`Unknown argument: ${argv[index]}`);
   }
   }
@@ -450,8 +516,8 @@ export async function runSourceCheckCli(argv = process.argv.slice(2)): Promise<n
   if (validationIssues.length > 0) throw new Error(`Source input failed CSV validation: ${JSON.stringify(validationIssues)}`);
   const urls = parsed.flatMap(({ pack }) => pack.rows.map((row) => row.source_url));
   const cache = openFileSourceCache(cachePath);
-  const results = await checkSourceUrls(urls, DEFAULT_DEPENDENCIES, { cache });
-  cache.publish();
+  const results = await checkSourceUrls(urls, DEFAULT_DEPENDENCIES, { cache, cacheOnly });
+  if (!cacheOnly) cache.publish();
   if (reportPath !== undefined) publishValidationReport(reportPath, { sources: results }, { placement: 'top-level' });
   process.stdout.write(`${JSON.stringify({ sources: results }, null, 2)}\n`);
   return results.some((result) => !result.ok) ? 1 : 0;

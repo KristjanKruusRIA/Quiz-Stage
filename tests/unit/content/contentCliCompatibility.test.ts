@@ -129,6 +129,41 @@ describe('npm 11 content CLI compatibility', () => {
     expect(JSON.parse(readFileSync(cache, 'utf8'))).toEqual({ version: 1, entries: {} });
   });
 
+  test('source checker cache-only CLI accepts recent success evidence without rewriting the cache', () => {
+    const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-source-cache-only-'));
+    const input = join(directory, 'input.csv');
+    const cache = join(directory, 'source-cache.json');
+    const sourceUrl = 'https://example.test/source';
+    writePrivateSourceInput(input);
+    writeFileSync(input, readFileSync(input, 'utf8').replaceAll('https://127.0.0.1/source', sourceUrl));
+    const now = Date.now();
+    const cacheBytes = `${JSON.stringify({
+      version: 1,
+      entries: {
+        [sourceUrl]: {
+          version: 1,
+          expiresAt: new Date(now - (22 * 24 * 60 * 60_000)).toISOString(),
+          result: {
+            url: sourceUrl,
+            ok: true,
+            status: 200,
+            retrievedAt: new Date(now - (29 * 24 * 60 * 60_000)).toISOString(),
+            code: null,
+            finalUrl: sourceUrl,
+          },
+        },
+      },
+    }, null, 2)}\n`;
+    writeFileSync(cache, cacheBytes);
+
+    const result = runNpm('content:source-check', [
+      '--input', input, '--source-cache', cache, '--cache-only',
+    ]);
+
+    expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
+    expect(readFileSync(cache, 'utf8')).toBe(cacheBytes);
+  }, 20_000);
+
   test('source checker accepts the catalogued multi-pack Finals artifact', async () => {
     const directory = mkdtempSync(join(tmpdir(), 'quiz-stage-source-finals-'));
     const input = join(directory, '13-finals.en-et.csv');

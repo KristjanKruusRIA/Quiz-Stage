@@ -21,6 +21,7 @@ describe('release workflow', () => {
   it('keeps ordinary CI and release quality gates focused', () => {
     const ci = readFileSync('.github/workflows/ci.yml', 'utf8');
     const release = readFileSync('.github/workflows/release.yml', 'utf8');
+    const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
 
     for (const workflow of [ci, release]) {
       expect(workflow).toContain('quality:');
@@ -31,7 +32,6 @@ describe('release workflow', () => {
         'npm run lint',
         'npm run typecheck',
         'npm run test:run',
-        'npm run verify:content',
       ]) {
         expect(workflow).toContain(`- run: ${command}`);
       }
@@ -39,6 +39,11 @@ describe('release workflow', () => {
       expect(workflow).toContain('if: failure()');
       expect(workflow).toContain('actions/upload-artifact@v4');
     }
+
+    expect(ci).toMatch(/- run: npm run verify:content:cached\r?$/m);
+    expect(release).toMatch(/- run: npm run verify:content\r?$/m);
+    expect(scripts['verify:content:cached']).toContain('--source-cache-only');
+    expect(scripts['verify:content']).not.toContain('--source-cache-only');
 
     expect(ci).not.toContain('make:platform');
     expect(ci).not.toContain('strategy:');

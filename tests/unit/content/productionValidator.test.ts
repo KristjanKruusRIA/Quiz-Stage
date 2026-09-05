@@ -1616,7 +1616,7 @@ describe('source checker', () => {
   });
 
   it('serializes same-host checks while allowing cross-host concurrency and preserving output order', async () => {
-    const firstAUrl = 'https://a.example/one';
+    const firstAUrl = 'https://a.example./one';
     const secondAUrl = 'https://a.example/two';
     const bUrl = 'https://b.example/one';
     let releaseFirstA!: () => void;
@@ -1630,7 +1630,7 @@ describe('source checker', () => {
     const started: string[] = [];
     let crossHostOverlap = false;
     const deps = dependencies(async (url) => {
-      const host = new URL(url).hostname;
+      const host = new URL(url).hostname.replace(/\.$/, '');
       const active = (activeByHost.get(host) ?? 0) + 1;
       activeByHost.set(host, active);
       maximumByHost.set(host, Math.max(maximumByHost.get(host) ?? 0, active));
@@ -1727,6 +1727,136 @@ describe('source checker', () => {
     expect(sharedAndUnrelatedOverlap).toBe(true);
     expect(validationCounts.get('shared.example')).toBe(2);
     expect(results.map((result) => result.url)).toEqual([firstOrigin, secondOrigin, unrelatedUrl]);
+  });
+
+  it('uses a successful cache record exactly 30 days old without DNS or network access in cache-only mode', async () => {
+    const url = 'https://example.com/cached';
+    const cachedResult = {
+      url, ok: true, status: 204, retrievedAt: '2026-07-13T12:00:00.000Z',
+      code: null, finalUrl: url,
+    };
+    const cache = createMemorySourceCache({
+      [url]: {
+        version: 1,
+        expiresAt: '2026-07-20T12:00:00.000Z',
+        result: cachedResult,
+      },
+    });
+    let resolutions = 0;
+    const deps = dependencies(async () => { throw new Error('network should not run'); });
+    deps.resolveHostname = async () => {
+      resolutions += 1;
+      throw new Error('DNS should not run');
+    };
+
+    await expect(checkSourceUrls([url], deps, { cache, cacheOnly: true })).resolves.toEqual([cachedResult]);
+    expect(resolutions).toBe(0);
+  });
+
+  it('fails cache-only checks for missing, stale, incompatible, unsuccessful, or unsafe records without network access', async () => {
+    let requests = 0;
+    const urls = {
+      missing: 'https://example.com/missing',
+      stale: 'https://example.com/stale',
+      future: 'https://example.com/future',
+      incompatible: 'https://example.com/incompatible',
+      unsuccessful: 'https://example.com/unsuccessful',
+      unsafe: 'https://127.0.0.1/source',
+      trailingDotLocalhost: 'https://localhost./source',
+      trailingDotArchive: 'https://j-archive.com./source',
+      emptyRootHostname: 'https://./source',
+      repeatedRootHostname: 'https://../source',
+      repeatedRootSuffix: 'https://example.com../source',
+    };
+    const successfulEntry = (
+      url: string,
+      retrievedAt = '2026-08-10T12:00:00.000Z',
+      expiresAt = '2026-08-19T12:00:00.000Z',
+    ) => ({
+      version: 1,
+      expiresAt,
+      result: { url, ok: true, status: 200, retrievedAt, code: null, finalUrl: url },
+    });
+    const unsafeUrls = [
+      urls.unsafe,
+      urls.trailingDotLocalhost,
+      urls.trailingDotArchive,
+      urls.emptyRootHostname,
+      urls.repeatedRootHostname,
+      urls.repeatedRootSuffix,
+    ];
+    const cache = createMemorySourceCache({
+      [urls.stale]: successfulEntry(
+        urls.stale, '2026-07-13T11:59:59.000Z', '2026-07-20T11:59:59.000Z',
+      ),
+      [urls.future]: successfulEntry(
+        urls.future, '2026-08-13T12:00:00.000Z', '2026-08-20T12:00:00.000Z',
+      ),
+      [urls.incompatible]: { ...successfulEntry(urls.incompatible), version: 2 },
+      [urls.unsuccessful]: {
+        version: 1,
+        expiresAt: '2026-08-19T12:00:00.000Z',
+        result: {
+          url: urls.unsuccessful, ok: false, status: 404, retrievedAt: null,
+          code: 'SOURCE_HTTP_STATUS', finalUrl: urls.unsuccessful,
+        },
+      },
+      ...Object.fromEntries(unsafeUrls.map((url) => [url, successfulEntry(url)])),
+    });
+    const deps = dependencies(async () => {
+      requests += 1;
+      return { status: 204, headers: new Headers() };
+    });
+
+    const results = await checkSourceUrls(Object.values(urls), deps, { cache, cacheOnly: true });
+
+    expect(Object.fromEntries(results.map((result) => [result.url, result.code]))).toEqual({
+      [urls.future]: 'SOURCE_CACHE_INVALID',
+      [urls.incompatible]: 'SOURCE_CACHE_INVALID',
+      [urls.missing]: 'SOURCE_CACHE_MISS',
+      [urls.stale]: 'SOURCE_CACHE_STALE',
+      [urls.unsuccessful]: 'SOURCE_CACHE_INVALID',
+      [urls.unsafe]: 'SOURCE_CACHE_INVALID',
+      [urls.trailingDotLocalhost]: 'SOURCE_CACHE_INVALID',
+      [urls.trailingDotArchive]: 'SOURCE_CACHE_INVALID',
+      [urls.emptyRootHostname]: 'SOURCE_CACHE_INVALID',
+      [urls.repeatedRootHostname]: 'SOURCE_CACHE_INVALID',
+      [urls.repeatedRootSuffix]: 'SOURCE_CACHE_INVALID',
+    });
+    expect(requests).toBe(0);
+  });
+
+  it('rejects cache timestamps that Date.parse normalizes from an impossible calendar date', async () => {
+    const url = 'https://example.com/impossible-date';
+    const cache = createMemorySourceCache({
+      [url]: {
+        version: 1,
+        expiresAt: '2026-03-11T12:00:00.000Z',
+        result: {
+          url, ok: true, status: 200, retrievedAt: '2026-02-31T12:00:00.000Z',
+          code: null, finalUrl: url,
+        },
+      },
+    });
+    const deps = dependencies(async () => { throw new Error('network should not run'); });
+    deps.now = () => new Date('2026-03-10T12:00:00.000Z');
+
+    await expect(checkSourceUrls([url], deps, { cache, cacheOnly: true })).resolves.toEqual([
+      { url, ok: false, status: null, retrievedAt: null, code: 'SOURCE_CACHE_INVALID', finalUrl: null },
+    ]);
+  });
+
+  it('returns an invalid result instead of throwing for a malformed cache entry', async () => {
+    const url = 'https://example.com/malformed';
+    const cache = {
+      get: () => ({ version: 1, expiresAt: '2026-08-19T12:00:00.000Z', result: null }) as never,
+      set: () => undefined,
+    };
+    const deps = dependencies(async () => { throw new Error('network should not run'); });
+
+    await expect(checkSourceUrls([url], deps, { cache, cacheOnly: true })).resolves.toEqual([
+      { url, ok: false, status: null, retrievedAt: null, code: 'SOURCE_CACHE_INVALID', finalUrl: null },
+    ]);
   });
 
   it('does not cache failures and ignores expired or incompatible successful entries', async () => {
