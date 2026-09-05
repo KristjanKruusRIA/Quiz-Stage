@@ -100,7 +100,7 @@ describe('Music playable pack', () => {
 
     expect(unchangedRows).toHaveLength(325);
     expect(createHash('sha256').update(JSON.stringify(unchangedRows)).digest('hex'))
-      .toBe('946c8d1b548d2d0f98c953f919d77e1df5411edde264dd305609bbca4b24fdd7');
+      .toBe('ae961fc48df5749d2039d8c23a3d14c9c00de67499e2b8a4fb449ee5ab9fe107');
   });
 
   it('locks the exact ten replacement payloads', () => {
@@ -207,11 +207,11 @@ describe('Music playable pack', () => {
           et: 'Michigan Stadiumil sai refrääni ühislaulmisest kolmanda veerandaja lõpu tava.',
         },
         source: {
-          sourceId: 'ap:college-football-songs-2025',
-          title: 'How Garth Brooks, The Killers and Tom Petty became stars of college football Saturdays',
-          url: 'https://apnews.com/article/806aa9a18d18b5d69566a21c46f8bdbf',
-          license: 'All rights reserved',
-          retrievedAt: '2026-08-28',
+          sourceId: 'wikipedia:mr-brightside',
+          title: 'Mr. Brightside — Wikipedia',
+          url: 'https://en.wikipedia.org/wiki/Mr._Brightside',
+          license: 'CC BY-SA 4.0',
+          retrievedAt: '2026-09-05',
         },
       },
       {

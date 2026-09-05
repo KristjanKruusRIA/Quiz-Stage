@@ -11,7 +11,7 @@ import { ContentRepository } from '../../../src/main/content/contentRepository';
 import { ContentService } from '../../../src/main/content/contentService';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 import { parseStoredSource } from '../../../src/shared/content/sourceCitation';
-import { buildProductionSeed } from '../../../scripts/content/buildSeed';
+import { buildProductionSeed, reportArtifactPath } from '../../../scripts/content/buildSeed';
 import { serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
 import {
   FINAL_BATCH, PRODUCTION_BATCHES, type ProductionBatchDefinition,
@@ -296,6 +296,13 @@ function loadInventoryReport(): InventoryReport {
 }
 
 describe('evidence-bound production seed infrastructure', () => {
+  it('records repository artifacts with checkout-independent report paths', () => {
+    expect(reportArtifactPath(resolve('content/generated/01-history.en-et.csv')))
+      .toBe('content/generated/01-history.en-et.csv');
+    const external = join(tmpdir(), 'quiz-stage-external.csv');
+    expect(reportArtifactPath(external)).toBe(resolve(external));
+  });
+
   it('requires evidence before reading CSV or changing an existing seed or report', async () => {
     const directory = temporaryDirectory();
     const output = join(directory, 'seed.sqlite');

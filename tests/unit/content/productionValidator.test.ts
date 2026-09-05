@@ -400,16 +400,16 @@ describe('production content validation', () => {
 
   it('rejects malformed and calendar-invalid explicit dates for changing facts', () => {
     const rows = twelveValidSets();
-    rows[0] = { ...rows[0], clue_en: 'On August 99, 2026, which city was the largest?' };
-    rows[1] = { ...rows[1], clue_en: 'As of August 2026-13, which city was the largest?' };
-    rows[2] = { ...rows[2], clue_en: 'As of Auguust 2026, which city was the largest?' };
-    rows[3] = { ...rows[3], clue_en: 'As of 08 2026, which city was the largest?' };
-    rows[4] = { ...rows[4], clue_en: 'As of August 2026/13, which city was the largest?' };
-    rows[5] = { ...rows[5], clue_en: 'As of August 2026.13, which city was the largest?' };
-    rows[6] = { ...rows[6], clue_en: 'As of August 2026- 13, which city was the largest?' };
-    rows[7] = { ...rows[7], clue_en: 'On February 31, 2026, which city was the largest?' };
-    rows[8] = { ...rows[8], clue_en: 'As of 2026-02-31, which city was the largest?' };
-    rows[9] = { ...rows[9], clue_en: 'On February 29, 2025, which city was the largest?' };
+    rows[0] = { ...rows[0], clue_en: 'On August 99, 2026, which country currently has the largest population?' };
+    rows[1] = { ...rows[1], clue_en: 'As of August 2026-13, which country currently has the largest population?' };
+    rows[2] = { ...rows[2], clue_en: 'As of Auguust 2026, which country currently has the largest population?' };
+    rows[3] = { ...rows[3], clue_en: 'As of 08 2026, which country currently has the largest population?' };
+    rows[4] = { ...rows[4], clue_en: 'As of August 2026/13, which country currently has the largest population?' };
+    rows[5] = { ...rows[5], clue_en: 'As of August 2026.13, which country currently has the largest population?' };
+    rows[6] = { ...rows[6], clue_en: 'As of August 2026- 13, which country currently has the largest population?' };
+    rows[7] = { ...rows[7], clue_en: 'On February 31, 2026, which country currently has the largest population?' };
+    rows[8] = { ...rows[8], clue_en: 'As of 2026-02-31, which country currently has the largest population?' };
+    rows[9] = { ...rows[9], clue_en: 'On February 29, 2025, which country currently has the largest population?' };
 
     const result = validateProductionContent([input('malformed-lexical-dates.csv', rows)], { mode: 'batch' });
 
@@ -434,6 +434,101 @@ describe('production content validation', () => {
     const result = validateProductionContent([input('explicit-date-formats.csv', rows)], { mode: 'batch' });
 
     expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT').map((issue) => issue.row)).toEqual([2, 3]);
+  });
+
+  it('limits changing-fact dates to genuinely current officeholder and population questions', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'Who became the first prime minister of an independent Congo?' };
+    rows[1] = { ...rows[1], clue_en: 'What device opens a circuit when too much current flows?' };
+    rows[2] = { ...rows[2], clue_en: 'Monks Mound is the largest earthwork at which city?' };
+    rows[3] = { ...rows[3], response_en: 'Now You See Me' };
+    rows[4] = { ...rows[4], clue_en: 'Who is the current president of Exampleland?' };
+    rows[5] = { ...rows[5], clue_en: 'Who is the president of Exampleland?' };
+    rows[6] = { ...rows[6], clue_en: 'Which country currently has the largest population?' };
+    rows[7] = { ...rows[7], clue_en: 'As of 2026, who is the current president of Exampleland?' };
+    rows[8] = { ...rows[8], clue_en: 'Who now leads the company?' };
+    rows[9] = { ...rows[9], clue_en: 'Which city now has the largest population?' };
+    rows[10] = { ...rows[10], clue_en: 'What nation holds the record today?' };
+    rows[11] = { ...rows[11], clue_en: 'Which statue shows a sitting figure?' };
+    rows[12] = { ...rows[12], clue_en: 'Who is the actor who plays the president in this film?' };
+    rows[13] = { ...rows[13], clue_en: 'Which film is titled Now You See Me?' };
+    rows[14] = { ...rows[14], clue_en: 'As of 2026, who now leads the company?' };
+    rows[15] = { ...rows[15], clue_en: 'Which country has the largest population?' };
+    rows[16] = { ...rows[16], clue_en: 'Which city has the largest population?' };
+    rows[17] = { ...rows[17], clue_en: 'Who leads Example Corp now?' };
+    rows[18] = { ...rows[18], clue_en: 'What nation holds the record now?' };
+    rows[19] = { ...rows[19], clue_en: 'Which newspaper is named USA Today?' };
+    rows[20] = { ...rows[20], clue_en: 'What is known today as Zimbabwe?' };
+    rows[21] = { ...rows[21], clue_en: 'Which film titled Now is based on a true story?' };
+    rows[22] = { ...rows[22], clue_en: 'Which country is the most populous?' };
+    rows[23] = { ...rows[23], clue_en: 'What is the most populous country?' };
+    rows[24] = { ...rows[24], clue_en: 'Which building is the tallest in the world?' };
+    rows[25] = { ...rows[25], clue_en: 'Who holds the world record in the men’s 100 metres?' };
+    rows[26] = { ...rows[26], clue_en: 'Who is the world champion?' };
+    rows[27] = { ...rows[27], clue_en: 'Which band has a song called Today?' };
+    rows[28] = { ...rows[28], clue_en: 'Which artist has an album titled Now?' };
+    rows[29] = { ...rows[29], clue_en: 'Which building was once the tallest in the world?' };
+    rows[30] = { ...rows[30], clue_en: 'Which architect designed the tallest building in Middle-earth?' };
+    rows[31] = { ...rows[31], clue_en: 'Who is the president in the series The West Wing?' };
+    rows[32] = { ...rows[32], clue_en: 'Who is the prime minister in this film?' };
+    rows[33] = { ...rows[33], clue_en: 'Who is the president in The United States?' };
+
+    const result = validateProductionContent([input('changing-fact-semantics.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT').map((issue) => issue.row)).toEqual([
+      6, 7, 8, 10, 11, 12, 17, 18, 19, 20, 24, 25, 26, 27, 28, 35,
+    ]);
+  });
+
+  it('requires dates to qualify the changing relation rather than an unrelated historical fact', () => {
+    const rows = twelveValidSets();
+    rows[0] = {
+      ...rows[0],
+      clue_en: 'Who is the current president of Exampleland?',
+      explanation_en: 'The office was created in 1900.',
+    };
+    rows[1] = {
+      ...rows[1],
+      clue_en: 'Who is the current president of Exampleland?',
+      explanation_en: 'As of 2026, Jane Citizen is the current president.',
+    };
+    rows[2] = {
+      ...rows[2],
+      clue_en: 'Founded in 1900, who is currently CEO of Example Corp?',
+    };
+    rows[3] = {
+      ...rows[3],
+      clue_en: 'As of 2026, according to the official register, who is the current president?',
+    };
+    rows[4] = {
+      ...rows[4],
+      clue_en: 'Who is the president of Exampleland?',
+      explanation_en: 'In 2024, Jane Citizen served as president.',
+    };
+    rows[5] = {
+      ...rows[5],
+      clue_en: 'Who is the president of Exampleland?',
+      explanation_en: 'The presidential palace was built in 1900.',
+    };
+    rows[6] = {
+      ...rows[6],
+      clue_en: 'Who is the current president of Exampleland?',
+      explanation_en: 'The president works from this office. The palace was built in 1900.',
+    };
+    rows[7] = {
+      ...rows[7],
+      clue_en: 'As of August 99, 2026, who is the president of Exampleland?',
+    };
+    rows[8] = {
+      ...rows[8],
+      clue_en: 'According to the official register, who is the president of Exampleland?',
+    };
+
+    const result = validateProductionContent([input('changing-fact-date-scope.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'UNDATED_CHANGING_FACT').map((issue) => issue.row)).toEqual([
+      2, 4, 7, 8, 9, 10,
+    ]);
   });
 
   it('finds duplicate identities and normalized content across files in stable byte order', () => {
@@ -478,6 +573,128 @@ describe('production content validation', () => {
     const result = validateProductionContent([input('numbers.csv', rows)], { mode: 'batch' });
 
     expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([3]);
+  });
+
+  it('normalizes bounded English and Estonian number words without hiding real drift', () => {
+    const rows = twelveValidSets();
+    rows[0] = { ...rows[0], clue_en: 'It lasted from the eighth to the fifteenth century.', clue_et: 'See kestis 8.–15. sajandini.' };
+    rows[1] = { ...rows[1], clue_en: 'The poem has nineteen lines.', clue_et: 'Luuletusel on 19 rida.' };
+    rows[2] = { ...rows[2], response_en: 'The Thirty-Nine Steps', response_et: '39 astet' };
+    rows[3] = { ...rows[3], clue_en: 'Who won seven Formula One titles?', clue_et: 'Kes võitis seitse vormel 1 tiitlit?' };
+    rows[4] = { ...rows[4], clue_en: 'Examples include type 1 diabetes.', clue_et: 'Näidete hulka kuulub I tüüpi diabeet.' };
+    rows[5] = { ...rows[5], clue_en: 'The poem has nineteen lines.', clue_et: 'Luuletusel on 18 rida.' };
+    rows[6] = { ...rows[6], clue_en: 'It is a fifth-century work.', clue_et: 'See on 6. sajandi teos.' };
+    rows[7] = { ...rows[7], clue_en: 'The mission launched in 1969.', clue_et: 'Missioon käivitati.' };
+    rows[8] = {
+      ...rows[8],
+      response_en: 'Civil Rights Act of 1964',
+      response_et: '1964. aasta kodanikuõiguste seadus',
+      accepted_variants_en: 'Civil Rights Act;Civil Rights Act of 1964',
+      accepted_variants_et: 'kodanikuõiguste seadus',
+    };
+    rows[9] = { ...rows[9], clue_en: 'The odds were 5,000-to-1.', clue_et: 'Koefitsient oli 5000 : 1.' };
+    rows[10] = { ...rows[10], clue_en: 'It became a Top 10 hit.', clue_et: 'Sellest sai esikümnehitt.' };
+    rows[11] = { ...rows[11], clue_en: 'The story appears in Exodus.', clue_et: 'Lugu esineb 2. Moosese raamatus.' };
+    rows[12] = { ...rows[12], clue_en: 'The route covers more than 100 km.', clue_et: 'Marsruut katab üle saja kilomeetri.' };
+    rows[13] = { ...rows[13], clue_en: 'The 2015–16 season was historic.', clue_et: '2015.–2016. aasta hooaeg oli ajalooline.' };
+    rows[14] = { ...rows[14], clue_en: 'The score was 2-2.', clue_et: 'Seis oli 2.' };
+    rows[15] = { ...rows[15], clue_en: 'This is version 1.', clue_et: 'See on ühendus.' };
+    rows[16] = { ...rows[16], clue_en: 'The value is 5.', clue_et: 'See on viisakus.' };
+    rows[17] = { ...rows[17], clue_en: 'The value is 6.', clue_et: 'See on kuusk.' };
+    rows[18] = { ...rows[18], clue_en: 'The 1999–00 season.', clue_et: '1999.–2000. aasta hooaeg.' };
+    rows[19] = { ...rows[19], clue_en: 'The 1999–00 season.', clue_et: '1999.–1900. aasta hooaeg.' };
+    rows[20] = { ...rows[20], clue_en: 'This device numbers pages.', clue_et: 'See viitab 4. Moosese raamatule.' };
+    rows[21] = { ...rows[21], clue_en: 'One million people attended.', clue_et: 'Kohal oli 1 inimene.' };
+    rows[22] = { ...rows[22], clue_en: 'One hundred thousand people attended.', clue_et: 'Kohal oli 100 inimest.' };
+    rows[23] = { ...rows[23], clue_en: '100 people attended.', clue_et: 'Kohal oli sada tuhat inimest.' };
+    rows[24] = { ...rows[24], clue_en: 'The route is one hundred kilometres long.', clue_et: 'Marsruut on 100 km pikk.' };
+    rows[25] = { ...rows[25], clue_en: 'Version 2026-02 was released.', clue_et: 'Versioon 2026-2102 ilmus.' };
+    rows[26] = { ...rows[26], clue_en: 'The route is one hundred metres long.', clue_et: 'Marsruut on 100 m pikk.' };
+    rows[27] = { ...rows[27], clue_en: 'The route is 100 m long.', clue_et: 'Marsruut on sada meetrit pikk.' };
+    rows[28] = { ...rows[28], clue_en: 'The distance is 8 m.', clue_et: 'Kogus on kaheksa liitrit.' };
+    rows[29] = { ...rows[29], clue_en: 'The distance is 8 km.', clue_et: 'Vahemaa on kaheksa meetrit.' };
+    rows[30] = { ...rows[30], clue_en: 'The result was 100 percent.', clue_et: 'Tulemus oli 100%.' };
+    rows[31] = { ...rows[31], clue_en: 'The route is 100 kilometres long.', clue_et: 'Marsruut on 100 km pikk.' };
+    rows[32] = { ...rows[32], clue_en: 'The samples were 100 m and 5 g.', clue_et: 'Proovid olid sada grammi ja viis meetrit.' };
+    rows[33] = { ...rows[33], clue_en: 'The totals were 100 km and 5 l.', clue_et: 'Kogused olid sada liitrit ja viis kilomeetrit.' };
+    rows[34] = { ...rows[34], clue_en: 'The answer was one. Metres are the unit.', clue_et: 'Vastus oli 1. Ühik on meeter.' };
+    rows[35] = { ...rows[35], clue_en: 'He won the 400-metre race.', clue_et: 'Ta võitis 400 meetri jooksu.' };
+    rows[36] = { ...rows[36], clue_en: 'The dance is in lively 2/4 metre.', clue_et: 'Tants on elavas 2/4-taktis.' };
+    rows[37] = { ...rows[37], clue_en: 'The result was 52 to 48 percent.', clue_et: 'Tulemus oli 52 protsendiga 48 vastu.' };
+    rows[38] = { ...rows[38], clue_en: 'The result was 50.58 percent to 49.42 percent.', clue_et: 'Tulemus oli 50,58 protsenti 49,42 vastu.' };
+    rows[39] = { ...rows[39], clue_en: 'The result was 52 to 48 percent.', clue_et: 'Tulemus oli 52 protsendiga 47 vastu.' };
+    rows[40] = { ...rows[40], clue_en: 'The margin was one percentage point.', clue_et: 'Vahe oli ühe protsendipunktine.' };
+    rows[41] = { ...rows[41], clue_en: 'The margin was one percentage point.', clue_et: 'Vahe oli üks protsent.' };
+    rows[42] = { ...rows[42], clue_en: 'The margin was one percent.', clue_et: 'Vahe oli üks protsendipunkt.' };
+    rows[43] = { ...rows[43], clue_en: 'It was a one-percentage-point lead.', clue_et: 'See oli ühe protsendipunktine edu.' };
+    rows[44] = { ...rows[44], clue_en: 'It was a 1-percentage-point lead.', clue_et: 'See oli 1 protsendipunktine edu.' };
+
+    const result = validateProductionContent([input('localized-number-words.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([
+      7, 8, 9, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27, 30, 31, 34, 35, 41, 43, 44,
+    ]);
+  });
+
+  it('compares numeric facts across canonical responses and accepted-variant families', () => {
+    const rows = twelveValidSets();
+    rows[0] = {
+      ...rows[0],
+      response_en: 'Apollo 11',
+      response_et: 'Apollo 11',
+      accepted_variants_en: 'Moon mission',
+      accepted_variants_et: 'Apollo 12',
+    };
+    rows[1] = {
+      ...rows[1],
+      response_en: 'Civil Rights Act of 1964',
+      response_et: '1964. aasta kodanikuõiguste seadus',
+      accepted_variants_en: 'Civil Rights Act;Civil Rights Act of 1964',
+      accepted_variants_et: 'kodanikuõiguste seadus',
+    };
+    rows[2] = {
+      ...rows[2], response_en: 'length', response_et: 'pikkus',
+      accepted_variants_en: '8 m', accepted_variants_et: '8 l',
+    };
+    rows[3] = {
+      ...rows[3], response_en: 'offset', response_et: 'nihe',
+      accepted_variants_en: '-5', accepted_variants_et: '5',
+    };
+    rows[4] = {
+      ...rows[4], response_en: 'mission', response_et: 'missioon',
+      accepted_variants_en: 'mission launched in 1969', accepted_variants_et: 'kuumissioon',
+    };
+    rows[5] = {
+      ...rows[5], response_en: 'draw', response_et: 'viik',
+      accepted_variants_en: '2-2 draw', accepted_variants_et: '2 viik',
+    };
+    rows[6] = {
+      ...rows[6], response_en: 'mission', response_et: 'missioon',
+      accepted_variants_en: 'Apollo 11 (1969)', accepted_variants_et: 'Apollo 11',
+    };
+    rows[7] = {
+      ...rows[7], response_en: 'Apollo 11', response_et: 'Apollo',
+      accepted_variants_en: 'Apollo', accepted_variants_et: 'Apollo 11;Apollo 11',
+    };
+    rows[8] = {
+      ...rows[8], response_en: 'one hundred metres', response_et: 'sada meetrit',
+    };
+    rows[9] = {
+      ...rows[9], response_en: 'one percent', response_et: 'üks protsendipunkt',
+    };
+    rows[10] = {
+      ...rows[10], response_en: 'one hundred metres', response_et: 'sada liitrit',
+    };
+    rows[11] = {
+      ...rows[11], response_en: 'fourteen grammatical cases', response_et: 'neliteist käänet',
+      accepted_variants_en: 'fourteen cases;14 cases', accepted_variants_et: 'neliteist;14',
+    };
+
+    const result = validateProductionContent([input('accepted-variant-numbers.csv', rows)], { mode: 'batch' });
+
+    expect(result.issues.filter((issue) => issue.code === 'NUMBER_DRIFT').map((issue) => issue.row)).toEqual([
+      2, 4, 5, 6, 7, 8, 11, 12,
+    ]);
   });
 
   it('treats numeric units as complete tokens across localized dates and era notation', () => {
@@ -1222,13 +1439,14 @@ describe('source checker', () => {
     };
   }
 
-  it('rejects non-HTTPS, credentials, official archives, localhost, private DNS, and redirect escapes', async () => {
+  it('rejects malformed, non-HTTPS, credentialed, archive, localhost, private DNS, and redirect targets', async () => {
     const neverFetch = async () => { throw new Error('fetch should not run'); };
     const direct = await checkSourceUrls([
-      'http://example.com', 'https://u:p@example.com', 'https://j-archive.com/showgame.php?game_id=1',
+      'not a URL', 'http://example.com', 'https://u:p@example.com', 'https://j-archive.com/showgame.php?game_id=1',
       'https://localhost/source',
     ], dependencies(neverFetch));
     expect(Object.fromEntries(direct.map((result) => [result.url, result.code]))).toEqual({
+      'not a URL': 'SOURCE_URL_INVALID',
       'http://example.com': 'SOURCE_URL_NOT_HTTPS',
       'https://u:p@example.com': 'SOURCE_URL_CREDENTIALS',
       'https://j-archive.com/showgame.php?game_id=1': 'OFFICIAL_ARCHIVE_HOST',
@@ -1241,6 +1459,18 @@ describe('source checker', () => {
 
     const redirect = dependencies(async () => ({ status: 302, headers: new Headers({ location: 'https://127.0.0.1/private' }) }));
     expect((await checkSourceUrls(['https://example.com'], redirect))[0].code).toBe('SOURCE_PRIVATE_ADDRESS');
+  });
+
+  it('allows public IPv4 neighbours while rejecting the exact reserved documentation ranges', async () => {
+    const reachable = dependencies(async () => ({ status: 204, headers: new Headers() }));
+    reachable.resolveHostname = async () => ['192.0.66.16'];
+    expect((await checkSourceUrls(['https://public.example/source'], reachable))[0]).toMatchObject({ ok: true, status: 204 });
+
+    for (const address of ['192.0.0.1', '192.0.2.1', '198.51.100.1', '203.0.113.1']) {
+      const reserved = dependencies(async () => { throw new Error('fetch should not run'); });
+      reserved.resolveHostname = async () => [address];
+      expect((await checkSourceUrls(['https://reserved.example/source'], reserved))[0].code).toBe('SOURCE_PRIVATE_ADDRESS');
+    }
   });
 
   it('uses bounded retries/backoff, timeout signal, UA, concurrency, and caches successful metadata only', async () => {
@@ -1268,6 +1498,235 @@ describe('source checker', () => {
     const before = attempts;
     await checkSourceUrls(['https://example.com/a', 'https://example.com/b'], deps, { cache });
     expect(attempts).toBe(before);
+  });
+
+  it.each([
+    ['absent', new Headers()],
+    ['blank', new Headers({ 'retry-after': '' })],
+  ])('uses exponential fallback when Retry-After is %s', async (_label, headers) => {
+    let attempts = 0;
+    const sleeps: number[] = [];
+    const deps = dependencies(async () => {
+      attempts += 1;
+      return { status: attempts < 3 ? 429 : 204, headers };
+    });
+    deps.sleep = async (milliseconds) => { sleeps.push(milliseconds); };
+
+    const [result] = await checkSourceUrls(['https://example.com/source'], deps, {
+      concurrency: 1, maxAttempts: 3, initialBackoffMs: 250,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(sleeps).toEqual([250, 500]);
+  });
+
+  it('honors numeric and IMF-date Retry-After values', async () => {
+    let attempts = 0;
+    const sleeps: number[] = [];
+    const deps = dependencies(async () => {
+      attempts += 1;
+      const retryAfter = attempts === 1 ? '1' : 'Wed, 12 Aug 2026 12:00:03 GMT';
+      return { status: attempts < 3 ? 429 : 204, headers: new Headers({ 'retry-after': retryAfter }) };
+    });
+    deps.sleep = async (milliseconds) => { sleeps.push(milliseconds); };
+
+    const [result] = await checkSourceUrls(['https://example.com/source'], deps, {
+      concurrency: 1, maxAttempts: 3, initialBackoffMs: 250,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(sleeps).toEqual([1_000, 3_000]);
+  });
+
+  it('holds a host through terminal 429 cooldown without sleeping after terminal 5xx', async () => {
+    const firstUrl = 'https://rate.example/first';
+    const secondUrl = 'https://rate.example/second';
+    const serverErrorUrl = 'https://server.example/failure';
+    const events: string[] = [];
+    let markCooldownStarted!: () => void;
+    let releaseCooldown!: () => void;
+    const cooldownStarted = new Promise<void>((resolvePromise) => { markCooldownStarted = resolvePromise; });
+    const holdCooldown = new Promise<void>((resolvePromise) => { releaseCooldown = resolvePromise; });
+    const deps = dependencies(async (url) => {
+      events.push(`fetch:${url}`);
+      if (url === firstUrl) return { status: 429, headers: new Headers({ 'retry-after': '1' }) };
+      if (url === serverErrorUrl) return { status: 503, headers: new Headers() };
+      return { status: 204, headers: new Headers() };
+    });
+    deps.sleep = async (milliseconds) => {
+      events.push(`sleep:${milliseconds}`);
+      markCooldownStarted();
+      await holdCooldown;
+    };
+
+    const checking = checkSourceUrls([secondUrl, firstUrl], deps, {
+      concurrency: 2, maxAttempts: 1, initialBackoffMs: 250,
+    });
+    const boundary = await Promise.race([
+      cooldownStarted.then(() => 'cooldown' as const),
+      checking.then(() => 'completed' as const),
+    ]);
+    releaseCooldown();
+    const results = await checking;
+    const [serverError] = await checkSourceUrls([serverErrorUrl], deps, { maxAttempts: 1 });
+
+    expect(boundary).toBe('cooldown');
+    expect(events).toEqual([
+      `fetch:${firstUrl}`,
+      'sleep:1000',
+      `fetch:${secondUrl}`,
+      `fetch:${serverErrorUrl}`,
+    ]);
+    expect([...results, serverError].map(({ url, status }) => ({ url, status }))).toEqual([
+      { url: firstUrl, status: 429 },
+      { url: secondUrl, status: 204 },
+      { url: serverErrorUrl, status: 503 },
+    ]);
+  });
+
+  it('contains malformed redirect locations as sorted per-URL request failures', async () => {
+    const goodUrl = 'https://a.example/source';
+    const malformedRedirectUrl = 'https://b.example/source';
+    let malformedAttempts = 0;
+    const sleeps: number[] = [];
+    const deps = dependencies(async (url) => {
+      if (url === malformedRedirectUrl) {
+        malformedAttempts += 1;
+        return { status: 302, headers: new Headers({ location: 'https://[::1' }) };
+      }
+      return { status: 204, headers: new Headers() };
+    });
+    deps.sleep = async (milliseconds) => { sleeps.push(milliseconds); };
+
+    const results = await checkSourceUrls([malformedRedirectUrl, goodUrl], deps, {
+      concurrency: 2, maxAttempts: 2, initialBackoffMs: 250,
+    });
+
+    expect(malformedAttempts).toBe(2);
+    expect(sleeps).toEqual([250]);
+    expect(results.map((result) => result.url)).toEqual([goodUrl, malformedRedirectUrl]);
+    expect(results[1]).toEqual({
+      url: malformedRedirectUrl,
+      ok: false,
+      status: 302,
+      retrievedAt: null,
+      code: 'SOURCE_REQUEST_FAILED',
+      finalUrl: malformedRedirectUrl,
+    });
+  });
+
+  it('serializes same-host checks while allowing cross-host concurrency and preserving output order', async () => {
+    const firstAUrl = 'https://a.example/one';
+    const secondAUrl = 'https://a.example/two';
+    const bUrl = 'https://b.example/one';
+    let releaseFirstA!: () => void;
+    let markFirstAStarted!: () => void;
+    let markBStarted!: () => void;
+    const holdFirstA = new Promise<void>((resolvePromise) => { releaseFirstA = resolvePromise; });
+    const firstAStarted = new Promise<void>((resolvePromise) => { markFirstAStarted = resolvePromise; });
+    const bStarted = new Promise<void>((resolvePromise) => { markBStarted = resolvePromise; });
+    const activeByHost = new Map<string, number>();
+    const maximumByHost = new Map<string, number>();
+    const started: string[] = [];
+    let crossHostOverlap = false;
+    const deps = dependencies(async (url) => {
+      const host = new URL(url).hostname;
+      const active = (activeByHost.get(host) ?? 0) + 1;
+      activeByHost.set(host, active);
+      maximumByHost.set(host, Math.max(maximumByHost.get(host) ?? 0, active));
+      crossHostOverlap ||= [...activeByHost.values()].filter((count) => count > 0).length > 1;
+      started.push(url);
+      try {
+        if (url === firstAUrl) {
+          markFirstAStarted();
+          await holdFirstA;
+        } else if (url === bUrl) {
+          markBStarted();
+        }
+        return { status: 204, headers: new Headers() };
+      } finally {
+        activeByHost.set(host, active - 1);
+      }
+    });
+
+    const checking = checkSourceUrls([bUrl, secondAUrl, firstAUrl], deps, {
+      concurrency: 3, maxAttempts: 1,
+    });
+    await Promise.all([firstAStarted, bStarted]);
+    const secondAStartedBeforeRelease = started.includes(secondAUrl);
+    releaseFirstA();
+    const results = await checking;
+
+    expect(secondAStartedBeforeRelease).toBe(false);
+    expect(maximumByHost.get('a.example')).toBe(1);
+    expect(crossHostOverlap).toBe(true);
+    expect(results.map((result) => result.url)).toEqual([firstAUrl, secondAUrl, bUrl]);
+  });
+
+  it('serializes redirect targets shared by different origins while an unrelated host overlaps', async () => {
+    const firstOrigin = 'https://a.example/start';
+    const secondOrigin = 'https://b.example/start';
+    const unrelatedUrl = 'https://z.example/source';
+    const firstTarget = 'https://shared.example/first';
+    const secondTarget = 'https://shared.example/second';
+    let markFirstTargetStarted!: () => void;
+    let markUnrelatedStarted!: () => void;
+    let releaseFirstTarget!: () => void;
+    const firstTargetStarted = new Promise<void>((resolvePromise) => { markFirstTargetStarted = resolvePromise; });
+    const unrelatedStarted = new Promise<void>((resolvePromise) => { markUnrelatedStarted = resolvePromise; });
+    const holdFirstTarget = new Promise<void>((resolvePromise) => { releaseFirstTarget = resolvePromise; });
+    const validationCounts = new Map<string, number>();
+    let unrelatedActive = false;
+    let activeShared = 0;
+    let maximumShared = 0;
+    let sharedAndUnrelatedOverlap = false;
+    let secondTargetEntered = false;
+    const deps = dependencies(async (url) => {
+      if (url === firstOrigin) return { status: 302, headers: new Headers({ location: firstTarget }) };
+      if (url === secondOrigin) {
+        await firstTargetStarted;
+        return { status: 302, headers: new Headers({ location: secondTarget }) };
+      }
+      if (url === unrelatedUrl) {
+        unrelatedActive = true;
+        markUnrelatedStarted();
+        await firstTargetStarted;
+        sharedAndUnrelatedOverlap ||= activeShared > 0;
+        unrelatedActive = false;
+        return { status: 204, headers: new Headers() };
+      }
+      activeShared += 1;
+      maximumShared = Math.max(maximumShared, activeShared);
+      sharedAndUnrelatedOverlap ||= unrelatedActive;
+      try {
+        if (url === firstTarget) {
+          markFirstTargetStarted();
+          await holdFirstTarget;
+        } else secondTargetEntered = true;
+        return { status: 204, headers: new Headers() };
+      } finally {
+        activeShared -= 1;
+      }
+    });
+    deps.resolveHostname = async (hostname) => {
+      validationCounts.set(hostname, (validationCounts.get(hostname) ?? 0) + 1);
+      return ['93.184.216.34'];
+    };
+
+    const checking = checkSourceUrls([unrelatedUrl, secondOrigin, firstOrigin], deps, {
+      concurrency: 3, maxAttempts: 1,
+    });
+    await Promise.all([firstTargetStarted, unrelatedStarted]);
+    await new Promise<void>((resolvePromise) => { setImmediate(resolvePromise); });
+    const secondTargetStartedBeforeRelease = secondTargetEntered;
+    releaseFirstTarget();
+    const results = await checking;
+
+    expect(secondTargetStartedBeforeRelease).toBe(false);
+    expect(maximumShared).toBe(1);
+    expect(sharedAndUnrelatedOverlap).toBe(true);
+    expect(validationCounts.get('shared.example')).toBe(2);
+    expect(results.map((result) => result.url)).toEqual([firstOrigin, secondOrigin, unrelatedUrl]);
   });
 
   it('does not cache failures and ignores expired or incompatible successful entries', async () => {

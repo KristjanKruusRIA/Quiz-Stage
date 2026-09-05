@@ -94,7 +94,7 @@ describe('Science & Nature playable pack', () => {
 
     expect(unchangedRows).toHaveLength(317);
     expect(createHash('sha256').update(JSON.stringify(unchangedRows)).digest('hex'))
-      .toBe('4f8ab7287fe1fcff46cf041cd259b13eda60fc66684f85a4f5bf56ad5f30858b');
+      .toBe('79381650c9f27a8dc39af3674d47d770dd2b001166a5fb192a5cdb1b1e8269a7');
   });
 
   it('locks the exact thirteen replacement payloads', () => {

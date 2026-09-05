@@ -8,7 +8,7 @@ import {
 } from 'node:fs';
 import { readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { parse, resolve } from 'node:path';
+import { isAbsolute, parse, relative, resolve, sep } from 'node:path';
 import { TextDecoder } from 'node:util';
 import { glob } from 'glob';
 import type { DatabaseConnection } from '../../src/main/persistence/database';
@@ -63,6 +63,13 @@ const defaultOutputPath = resolve(repositoryRoot, 'resources/content/seed.sqlite
 const defaultReportPath = resolve(repositoryRoot, 'content/reports/release-inventory.json');
 const migrationAppliedAt = 0;
 
+export function reportArtifactPath(path: string): string {
+  const absolute = resolve(path);
+  const local = relative(repositoryRoot, absolute);
+  if (local === '' || local === '..' || local.startsWith(`..${sep}`) || isAbsolute(local)) return absolute;
+  return local.split(sep).join('/');
+}
+
 export async function buildProductionSeed(
   args: SeedBuildArgs = {
     inputs: [defaultInputGlob], evidence: [], output: defaultOutputPath, report: defaultReportPath,
@@ -109,12 +116,14 @@ export async function buildProductionSeed(
       mode: 'release',
       validation,
       input: {
-        files: inputs.map((input) => ({ file: input.file, rowCount: input.pack.rows.length, sha256: input.sha256 })),
+        files: inputs.map((input) => ({
+          file: reportArtifactPath(input.file), rowCount: input.pack.rows.length, sha256: input.sha256,
+        })),
         evidence: evidenceManifest,
         sha256: inputHash,
       },
       output: {
-        path: explicitOutputPath,
+        path: reportArtifactPath(explicitOutputPath),
         sha256: seedSha256,
       },
       inventory,

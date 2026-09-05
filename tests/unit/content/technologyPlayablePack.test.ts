@@ -248,7 +248,7 @@ describe('Technology & Inventions playable pack', () => {
 
     expect(changedRows).toHaveLength(66);
     expect(hash(changedRows))
-      .toBe('d2564cf8a10726b42f536d5122035a1deace6b5a1118ea1ad743dbe9d04e4faf');
+      .toBe('2ae78c430fef57201c4cd40483eb64acb344e04aafa30e32087f5a76423bb8d2');
   });
 
   it('keeps the other 269 question payloads byte-for-byte unchanged', () => {
@@ -258,7 +258,7 @@ describe('Technology & Inventions playable pack', () => {
 
     expect(unchangedRows).toHaveLength(269);
     expect(hash(unchangedRows))
-      .toBe('1be91e530ff2a449249448082f1f4a3db2a2870fa7aca268e8552c250b0e7aea');
+      .toBe('4da44a2ad9a8abddd63141ebc0a0bda587c8237b831fac7d445c70abaa163dce');
   });
 
   it('locks the three reviewed category-title corrections', () => {

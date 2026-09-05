@@ -88,7 +88,7 @@ describe('Food & Drink playable pack', () => {
 
     expect(unchangedRows).toHaveLength(326);
     expect(createHash('sha256').update(JSON.stringify(unchangedRows)).digest('hex'))
-      .toBe('27d8aefc55e5d3af7f216d0c13d631d93df99df7190f30530e6899cb354d4387');
+      .toBe('9dea602967243b891794b46f30bcc4e8e6b7e1054cceb7f1c980c71114e3dd9d');
   });
 
   it('locks the exact nine replacement payloads', () => {

@@ -1,4 +1,5 @@
 import { type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
+import { differsNumerically } from './numericTranslation';
 import { publishValidationReport } from './validate';
 import { readCsvInputs } from './readCsv';
 
@@ -99,43 +100,6 @@ function compareCodeUnits(left: string, right: string): number {
   if (left < right) return -1;
   if (left > right) return 1;
   return 0;
-}
-
-function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
-  return matches.map((raw) => {
-    const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
-    let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
-    const comma = number.lastIndexOf(',');
-    const dot = number.lastIndexOf('.');
-    if (comma >= 0 && dot >= 0) {
-      const decimal = comma > dot ? ',' : '.';
-      number = number.replace(decimal === ',' ? /\./g : /,/g, '').replace(decimal, '.');
-    } else if (comma >= 0) {
-      const decimals = number.length - comma - 1;
-      number = decimals === 3 ? number.replace(/,/g, '') : number.replace(',', '.');
-    } else if (dot >= 0 && number.length - dot - 1 === 3) {
-      number = number.replace(/\./g, '');
-    }
-    return `${number}${unit}`;
-  }).sort();
-}
-
-function differsNumerically(left: string, right: string): boolean {
-  const leftNumbers = canonicalNumbers(left);
-  const rightNumbers = canonicalNumbers(right);
-  const leftNormalized = normalizeText(left);
-  const rightNormalized = normalizeText(right);
-  if (/\bgenesis\b/u.test(leftNormalized)
-    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(rightNormalized)) {
-    const ordinal = rightNumbers.indexOf('1');
-    if (ordinal >= 0) rightNumbers.splice(ordinal, 1);
-  } else if (/\bgenesis\b/u.test(rightNormalized)
-    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(leftNormalized)) {
-    const ordinal = leftNumbers.indexOf('1');
-    if (ordinal >= 0) leftNumbers.splice(ordinal, 1);
-  }
-  return leftNumbers.join('|') !== rightNumbers.join('|');
 }
 
 function splitEscapedItems(value: string): string[] {

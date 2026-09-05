@@ -12,6 +12,7 @@ import { validatePack, type ParsedCsvRow, type ParsedPack } from '../../src/main
 import { readCsvInputs } from './readCsv';
 import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
 import { findNearDuplicatePairs } from './nearDuplicate';
+import { answerFamiliesDifferNumerically, differsNumerically } from './numericTranslation';
 import {
   FINAL_BATCH, PRODUCTION_BATCHES, getProductionBatch, type ProductionBatchDefinition,
 } from './productionBatches';
@@ -97,7 +98,15 @@ const OFFICIAL_ARCHIVE_HOSTS = new Set([
   'j-archive.com', 'www.j-archive.com', 'jeopardyarchive.com', 'www.jeopardyarchive.com',
 ]);
 
-const CHANGING_FACT = /\b(current(?:ly)?|latest|today|now|incumbent|president|prime minister|population|rank(?:ed|ing)?|record holder|largest|highest|most populous)\b/i;
+const CURRENT_FACT_CUE = /\b(?:currently|presently|at present|most recent|latest|incumbent)\b|\bcurrent\s+(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?|champion|record holder|population|ranking)\b/iu;
+const CHANGING_ROLE_QUESTION = /^(?:who|which person)\s+(?:now\s+)?(?:is|serves as)\s+(?:the\s+)?(?:current\s+)?(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b/iu;
+const CHANGING_POPULATION_QUESTION = /^(?:(?:which|what)\s+(?:country|nation|city)\b[^?]{0,60}\b(?:has\s+(?:the\s+)?(?:world(?:'s|’s)\s+)?(?:largest|highest|greatest)\s+population|is\s+(?:the\s+)?most populous)\b|(?:which|what)\s+is\s+(?:the\s+)?(?:world(?:'s|’s)\s+)?most populous\s+(?:country|nation|city)\b)/iu;
+const CHANGING_BUILDING_QUESTION = /^(?:(?:which|what)\s+(?:building|skyscraper)\s+is\b[^?]{0,60}\b(?:tallest|highest)\b|(?:which|what)\s+is\b[^?]{0,60}\b(?:tallest|highest)\s+(?:building|skyscraper)\b)/iu;
+const CHANGING_RECORD_QUESTION = /^(?:who|(?:which|what)\s+(?:person|athlete|team|nation|country))\s+(?:now\s+)?holds\b[^?]{0,100}\b(?:world\s+|national\s+)?record\b/iu;
+const CHANGING_CHAMPION_QUESTION = /^(?:who|which (?:person|athlete|driver|team)|what team)\s+(?:now\s+)?is\s+(?:the\s+)?(?:current\s+)?(?:(?:formula one|f1|world|national|european|olympic|reigning)\s+){0,3}champion\b/iu;
+const RELATIVE_CURRENT_QUESTION = /^(?:who|which|what)\b[^?]{0,60}\bnow\s+(?:holds|leads|serves|runs|governs)\b|^(?:who|which|what)\b[^?]{0,60}\b(?:holds|leads|serves|runs|governs)\b[^?]{0,40}\b(?:now|today)\b/iu;
+const CHANGING_ROLE_NOUN = /\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b/iu;
+const EXPLICIT_FICTIONAL_ROLE_SCOPE = /\b(?:president|prime minister|chief executive(?: officer)?|ceo|mayor|governor|leader|chair(?:person|man|woman)?)\b[^?]{0,30}\bin\s+(?:(?:the|this|that|a|an)\s+)?(?:work|story|film|movie|show|series|novel|book|game)\b/iu;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] as const;
 const EXPLICIT_DATE = /\b(?:as of|in|on|during|for)\s+(?:the\s+)?(?:(?<isoYear>\d{4})-(?<isoMonth>\d{2})-(?<isoDay>\d{2})|(?<month>January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:(?<monthDay>0?[1-9]|[12]\d|3[01]),\s+)?(?<monthYear>\d{4})|(?<year>\d{4}))(?!\s*[-/.]\s*\d)\b/gi;
 const PLACEHOLDER_CLUE = /\b(?:topic\s+\d+\s+tier\s+\d+\s+asks\s+for|final clue\s+\d+\s+for\s+(?:easy|medium|hard)\s+difficulty)\b/iu;
@@ -126,6 +135,91 @@ function hasExplicitDate(value: string): boolean {
   return false;
 }
 
+type ChangingFactKind = 'role' | 'population' | 'building' | 'record' | 'champion' | 'relative' | 'generic';
+
+interface ChangingFactScope {
+  kind: ChangingFactKind;
+  clause: string;
+  precedingClause?: string;
+}
+
+function changingFactKindInClause(clue: string): ChangingFactKind | undefined {
+  const fictionalRole = EXPLICIT_FICTIONAL_ROLE_SCOPE.test(clue);
+  if (!fictionalRole && (CHANGING_ROLE_QUESTION.test(clue)
+    || (CURRENT_FACT_CUE.test(clue) && CHANGING_ROLE_NOUN.test(clue)))) return 'role';
+  if (CHANGING_POPULATION_QUESTION.test(clue)
+    || (CURRENT_FACT_CUE.test(clue) && /\b(?:population|populous)\b/iu.test(clue))) return 'population';
+  if (CHANGING_BUILDING_QUESTION.test(clue)) return 'building';
+  if (CHANGING_RECORD_QUESTION.test(clue)
+    || (CURRENT_FACT_CUE.test(clue) && /\brecord(?: holder)?\b/iu.test(clue))) return 'record';
+  if (CHANGING_CHAMPION_QUESTION.test(clue)
+    || (CURRENT_FACT_CUE.test(clue) && /\bchampion\b/iu.test(clue))) return 'champion';
+  if (RELATIVE_CURRENT_QUESTION.test(clue)) return 'relative';
+  if (CURRENT_FACT_CUE.test(clue)) return 'generic';
+  return undefined;
+}
+
+function splitRelationClauses(value: string): string[] {
+  return value.split(/(?:[!?]+|[;:](?=\s)|\s+[–—]\s+|,|\.(?=\s+\p{Lu}))/u)
+    .map((clause) => clause.trim())
+    .filter((clause) => clause !== '');
+}
+
+function changingFactScope(clue: string): ChangingFactScope | undefined {
+  const clauses = splitRelationClauses(clue);
+  for (let index = clauses.length - 1; index >= 0; index -= 1) {
+    const kind = changingFactKindInClause(clauses[index]);
+    if (kind === undefined) continue;
+    return {
+      kind,
+      clause: clauses[index],
+      ...(index > 0 ? { precedingClause: clauses[index - 1] } : {}),
+    };
+  }
+  const kind = changingFactKindInClause(clue);
+  return kind === undefined ? undefined : { kind, clause: clue };
+}
+
+function hasScopedChangingDate(clue: string, scope: ChangingFactScope): boolean {
+  if (/^\s*(?:as of|on)\b/iu.test(clue) && hasExplicitDate(clue)) return true;
+  if (hasExplicitDate(scope.clause)) return true;
+  return scope.precedingClause !== undefined
+    && /^\s*(?:as of|on)\b/iu.test(scope.precedingClause)
+    && hasExplicitDate(scope.precedingClause);
+}
+
+function hasChangingRelationStatement(kind: ChangingFactKind, value: string): boolean {
+  if (kind === 'role') return CHANGING_ROLE_NOUN.test(value);
+  if (kind === 'population') {
+    return /\b(?:largest|highest|greatest|most populous)\b[^.?!]{0,50}\bpopulation\b|\bpopulation\b[^.?!]{0,50}\b(?:largest|highest|greatest)\b/iu
+      .test(value)
+      || /\bmost populous\b/iu.test(value);
+  }
+  if (kind === 'building') {
+    return /\b(?:building|skyscraper)\b[^.?!]{0,80}\b(?:tallest|highest)\b|\b(?:tallest|highest)\b[^.?!]{0,80}\b(?:building|skyscraper)\b/iu
+      .test(value);
+  }
+  if (kind === 'record') return /\brecord(?: holder)?\b/iu.test(value);
+  if (kind === 'champion') return /\bchampion\b/iu.test(value);
+  if (kind === 'relative') return /\b(?:holds?|held|leads?|led|serves?|served|runs?|ran|governs?|governed)\b/iu.test(value);
+  return CURRENT_FACT_CUE.test(value);
+}
+
+function hasDatedChangingExplanation(kind: ChangingFactKind, explanation: string): boolean {
+  const clauses = explanation.split(/(?:[!?]+|[;:](?=\s)|\.(?=\s+\p{Lu}))/u)
+    .map((clause) => clause.trim())
+    .filter((clause) => clause !== '');
+  for (let index = 0; index < clauses.length; index += 1) {
+    const clause = clauses[index];
+    if (hasExplicitDate(clause) && hasChangingRelationStatement(kind, clause)) return true;
+    if (index > 0
+      && /^\s*(?:as of|on)\b/iu.test(clauses[index - 1])
+      && hasExplicitDate(clauses[index - 1])
+      && hasChangingRelationStatement(kind, clause)) return true;
+  }
+  return false;
+}
+
 export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'MISSING_EVIDENCE',
   'SOURCE_MISMATCH',
@@ -144,41 +238,6 @@ export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
 
 function normalizeText(value: string): string {
   return value.normalize('NFKC').trim().toLocaleLowerCase('en').replace(/\s+/g, ' ');
-}
-
-function canonicalNumbers(value: string): string[] {
-  const matches = value.match(/(?<![\p{L}\p{N}])[-+]?(?:\d{1,3}(?:[ ,.\u00A0]\d{3})+|\d+)(?:[.,]\d+)?(?:\s?(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)(?![\p{L}\p{N}]|\.\p{L}))?/giu) ?? [];
-  return matches.map((raw) => {
-    const unit = raw.match(/(?:%|°[CF]?|km\/h|km|cm|mm|kg|mg|mph|m|g|l|ml)$/iu)?.[0]?.toLowerCase() ?? '';
-    let number = raw.slice(0, raw.length - unit.length).trim().replace(/\s+/g, '');
-    const comma = number.lastIndexOf(',');
-    const dot = number.lastIndexOf('.');
-    if (comma >= 0 && dot >= 0) {
-      const decimal = comma > dot ? ',' : '.';
-      number = number.replace(decimal === ',' ? /\./g : /,/g, '').replace(decimal, '.');
-    } else if (comma >= 0) {
-      const digits = number.length - comma - 1;
-      number = digits === 3 ? number.replace(/,/g, '') : number.replace(',', '.');
-    } else if (dot >= 0 && number.length - dot - 1 === 3) number = number.replace(/\./g, '');
-    return `${number}${unit}`;
-  }).sort();
-}
-
-function differsNumerically(en: string, et: string): boolean {
-  const enNumbers = canonicalNumbers(en);
-  const etNumbers = canonicalNumbers(et);
-  const enNormalized = normalizeText(en);
-  const etNormalized = normalizeText(et);
-  if (/\bgenesis\b/u.test(enNormalized)
-    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(etNormalized)) {
-    const ordinal = etNumbers.indexOf('1');
-    if (ordinal >= 0) etNumbers.splice(ordinal, 1);
-  } else if (/\bgenesis\b/u.test(etNormalized)
-    && /(?:^|[^\p{L}\p{N}])1\.\s*moosese\b/u.test(enNormalized)) {
-    const ordinal = enNumbers.indexOf('1');
-    if (ordinal >= 0) enNumbers.splice(ordinal, 1);
-  }
-  return enNumbers.join('|') !== etNumbers.join('|');
 }
 
 function stableIssueSort(left: ProductionValidationIssue, right: ProductionValidationIssue): number {
@@ -334,8 +393,10 @@ export function validateProductionContent(
     if (OFFICIAL_ARCHIVE_HOSTS.has(sourceHost(row.source_url) ?? '')) {
       add({ file, row: row.rowNumber, code: 'OFFICIAL_ARCHIVE_HOST', severity: 'error', message: 'Official-show clue archive sources are forbidden' });
     }
-    if (CHANGING_FACT.test(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)
-      && !hasExplicitDate(`${row.clue_en} ${row.response_en} ${row.explanation_en}`)) {
+    const currentFactScope = changingFactScope(row.clue_en);
+    if (currentFactScope !== undefined
+      && !hasScopedChangingDate(row.clue_en, currentFactScope)
+      && !hasDatedChangingExplanation(currentFactScope.kind, row.explanation_en)) {
       add({ file, row: row.rowNumber, code: 'UNDATED_CHANGING_FACT', severity: 'error', message: 'Time-sensitive wording requires an explicit date or as-of period' });
     }
     if (PLACEHOLDER_CLUE.test(row.clue_en)
@@ -361,7 +422,16 @@ export function validateProductionContent(
         const exceptionId = `translation:UNCHANGED_TRANSLATION:${row.clue_id}`;
         add({ file, row: row.rowNumber, code: 'UNCHANGED_TRANSLATION', severity: options.mode === 'release' && !reviewed.has(exceptionId) ? 'error' : 'warning', message: 'Multiword Estonian text is unchanged from English', exceptionId });
       }
-      if (translatedPairs.some(([en, et]) => differsNumerically(en, et))) {
+      const numericallyStablePairs = [
+        [row.category_name_en, row.category_name_et],
+        [row.clue_en, row.clue_et],
+        [row.explanation_en, row.explanation_et],
+      ];
+      if (numericallyStablePairs.some(([en, et]) => differsNumerically(en, et))
+        || answerFamiliesDifferNumerically(
+          [row.response_en, ...row.acceptedVariantsEn],
+          [row.response_et, ...row.acceptedVariantsEt],
+        )) {
         add({ file, row: row.rowNumber, code: 'NUMBER_DRIFT', severity: 'error', message: 'English and Estonian numeric facts differ' });
       }
       const acronyms = `${row.clue_en} ${row.response_en}`.match(/\b[A-Z]{2,}\b/g) ?? [];

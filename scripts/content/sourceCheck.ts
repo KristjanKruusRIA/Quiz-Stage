@@ -67,12 +67,13 @@ export function createMemorySourceCache(entries: Record<string, SourceCacheEntry
 function isPrivateIpv4(value: string): boolean {
   const parts = value.split('.').map(Number);
   if (parts.length !== 4 || parts.some((part) => !Number.isInteger(part) || part < 0 || part > 255)) return false;
-  const [a, b] = parts;
+  const [a, b, c] = parts;
   return a === 0 || a === 10 || a === 127 || a >= 224
     || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31)
     || (a === 192 && b === 168) || (a === 100 && b >= 64 && b <= 127)
-    || (a === 192 && (b === 0 || b === 2)) || (a === 198 && (b === 18 || b === 19 || b === 51))
-    || (a === 203 && b === 0) || a >= 240;
+    || (a === 192 && b === 0 && (c === 0 || c === 2))
+    || (a === 198 && (b === 18 || b === 19 || (b === 51 && c === 100)))
+    || (a === 203 && b === 0 && c === 113) || a >= 240;
 }
 
 function isPrivateAddress(value: string): boolean {
@@ -141,6 +142,33 @@ function rejected(url: string, code: string): SourceCheckResult {
   return { url, ok: false, status: null, retrievedAt: null, code, finalUrl: null };
 }
 
+type TargetHostSerializer = <Value>(hostname: string, operation: () => Promise<Value>) => Promise<Value>;
+
+function createTargetHostSerializer(): TargetHostSerializer {
+  const tails = new Map<string, Promise<void>>();
+  return async <Value>(hostname: string, operation: () => Promise<Value>): Promise<Value> => {
+    const previous = tails.get(hostname) ?? Promise.resolve();
+    let release!: () => void;
+    const gate = new Promise<void>((resolvePromise) => { release = resolvePromise; });
+    const tail = previous.then(() => gate);
+    tails.set(hostname, tail);
+    await previous;
+    try { return await operation(); } finally {
+      release();
+      if (tails.get(hostname) === tail) tails.delete(hostname);
+    }
+  };
+}
+
+function retryAfterDelayMs(value: string | null, now: Date, fallbackMs: number): number {
+  const normalized = value?.trim();
+  if (!normalized) return fallbackMs;
+  const seconds = Number(normalized);
+  if (Number.isFinite(seconds)) return seconds >= 0 ? Math.min(seconds * 1_000, 60_000) : fallbackMs;
+  const timestamp = Date.parse(normalized);
+  return Number.isFinite(timestamp) ? Math.min(Math.max(0, timestamp - now.getTime()), 60_000) : fallbackMs;
+}
+
 async function validateTarget(raw: string, dependencies: SourceCheckDependencies): Promise<{ url?: URL; error?: SourceCheckResult }> {
   let url: URL;
   try { url = new URL(raw); } catch { return { error: rejected(raw, 'SOURCE_URL_INVALID') }; }
@@ -155,45 +183,67 @@ async function validateTarget(raw: string, dependencies: SourceCheckDependencies
   return { url };
 }
 
-async function checkOne(raw: string, dependencies: SourceCheckDependencies, options: Required<Omit<SourceCheckOptions, 'cache'>> & { cache?: SourceCache }): Promise<SourceCheckResult> {
+async function checkOne(
+  raw: string,
+  dependencies: SourceCheckDependencies,
+  options: Required<Omit<SourceCheckOptions, 'cache'>> & { cache?: SourceCache },
+  serializeTargetHost: TargetHostSerializer,
+): Promise<SourceCheckResult> {
   const cached = options.cache?.get(raw);
   if (cached?.version === CACHE_VERSION && Date.parse(cached.expiresAt) > dependencies.now().getTime() && cached.result.ok) return cached.result;
   let target = raw;
   for (let redirects = 0; redirects <= options.maxRedirects; redirects += 1) {
     const checked = await validateTarget(target, dependencies);
     if (checked.error !== undefined) return { ...checked.error, url: raw };
-    let lastStatus: number | null = null;
-    for (let attempt = 1; attempt <= options.maxAttempts; attempt += 1) {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), options.timeoutMs);
-      try {
-        const response = await dependencies.fetch(checked.url!.href, {
-          method: 'GET', redirect: 'manual', signal: controller.signal,
-          headers: { accept: 'text/html,application/json;q=0.9,*/*;q=0.1', 'user-agent': USER_AGENT },
-        });
+    const outcome = await serializeTargetHost(checked.url!.hostname.toLowerCase(), async () => {
+      let lastStatus: number | null = null;
+      for (let attempt = 1; attempt <= options.maxAttempts; attempt += 1) {
+        let response: SourceFetchResponse;
+        try {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), options.timeoutMs);
+          try {
+            response = await dependencies.fetch(checked.url!.href, {
+              method: 'GET', redirect: 'manual', signal: controller.signal,
+              headers: { accept: 'text/html,application/json;q=0.9,*/*;q=0.1', 'user-agent': USER_AGENT },
+            });
+          } finally { clearTimeout(timer); }
+        } catch {
+          if (attempt < options.maxAttempts) {
+            await dependencies.sleep(Math.min(options.initialBackoffMs * (2 ** (attempt - 1)), 60_000));
+            continue;
+          }
+          return { url: raw, ok: false, status: lastStatus, retrievedAt: null, code: 'SOURCE_REQUEST_FAILED', finalUrl: checked.url!.href } satisfies SourceCheckResult;
+        }
         lastStatus = response.status;
         if (response.status >= 300 && response.status < 400) {
           const location = response.headers.get('location');
           if (location === null) return { url: raw, ok: false, status: response.status, retrievedAt: null, code: 'SOURCE_REDIRECT_MISSING_LOCATION', finalUrl: checked.url!.href };
-          target = new URL(location, checked.url).href;
-          break;
+          try { return { redirect: new URL(location, checked.url).href }; } catch {
+            if (attempt < options.maxAttempts) {
+              await dependencies.sleep(Math.min(options.initialBackoffMs * (2 ** (attempt - 1)), 60_000));
+              continue;
+            }
+            return { url: raw, ok: false, status: lastStatus, retrievedAt: null, code: 'SOURCE_REQUEST_FAILED', finalUrl: checked.url!.href } satisfies SourceCheckResult;
+          }
         }
         if (response.status >= 200 && response.status < 400) {
           const result: SourceCheckResult = { url: raw, ok: true, status: response.status, retrievedAt: dependencies.now().toISOString(), code: null, finalUrl: checked.url!.href };
           options.cache?.set(raw, { version: CACHE_VERSION, expiresAt: new Date(dependencies.now().getTime() + options.cacheExpiryMs).toISOString(), result });
           return result;
         }
-        if ((response.status === 429 || response.status >= 500) && attempt < options.maxAttempts) {
-          const retryAfter = Number(response.headers.get('retry-after'));
-          const backoff = Number.isFinite(retryAfter) && retryAfter >= 0 ? Math.min(retryAfter * 1000, 60_000) : Math.min(options.initialBackoffMs * (2 ** (attempt - 1)), 60_000);
-          await dependencies.sleep(backoff); continue;
+        if (response.status === 429 || response.status >= 500) {
+          const fallback = Math.min(options.initialBackoffMs * (2 ** (attempt - 1)), 60_000);
+          const backoff = retryAfterDelayMs(response.headers.get('retry-after'), dependencies.now(), fallback);
+          if (attempt < options.maxAttempts) { await dependencies.sleep(backoff); continue; }
+          if (response.status === 429) await dependencies.sleep(backoff);
         }
         return { url: raw, ok: false, status: response.status, retrievedAt: null, code: 'SOURCE_HTTP_STATUS', finalUrl: checked.url!.href };
-      } catch {
-        if (attempt < options.maxAttempts) { await dependencies.sleep(Math.min(options.initialBackoffMs * (2 ** (attempt - 1)), 60_000)); continue; }
-        return { url: raw, ok: false, status: lastStatus, retrievedAt: null, code: 'SOURCE_REQUEST_FAILED', finalUrl: checked.url!.href };
-      } finally { clearTimeout(timer); }
-    }
+      }
+      return rejected(raw, 'SOURCE_REQUEST_FAILED');
+    });
+    if (!('redirect' in outcome)) return outcome;
+    target = outcome.redirect;
     if (redirects === options.maxRedirects) return { url: raw, ok: false, status: null, retrievedAt: null, code: 'SOURCE_TOO_MANY_REDIRECTS', finalUrl: target };
   }
   return rejected(raw, 'SOURCE_REQUEST_FAILED');
@@ -214,13 +264,23 @@ export async function checkSourceUrls(
     ...(inputOptions.cache === undefined ? {} : { cache: inputOptions.cache }),
   };
   const unique = [...new Set(urls)].sort(compareCodeUnits);
+  const groupsByHost = new Map<string, string[]>();
+  for (const url of unique) {
+    let host = url;
+    try { host = new URL(url).hostname.toLowerCase(); } catch { /* validation reports the invalid URL */ }
+    const group = groupsByHost.get(host) ?? [];
+    group.push(url);
+    groupsByHost.set(host, group);
+  }
+  const hostGroups = [...groupsByHost.values()];
+  const serializeTargetHost = createTargetHostSerializer();
   const results = new Map<string, SourceCheckResult>();
   let next = 0;
-  await Promise.all(Array.from({ length: Math.min(options.concurrency, unique.length) }, async () => {
+  await Promise.all(Array.from({ length: Math.min(options.concurrency, hostGroups.length) }, async () => {
     while (true) {
       const index = next; next += 1;
-      if (index >= unique.length) return;
-      results.set(unique[index], await checkOne(unique[index], dependencies, options));
+      if (index >= hostGroups.length) return;
+      for (const url of hostGroups[index]) results.set(url, await checkOne(url, dependencies, options, serializeTargetHost));
     }
   }));
   return unique.map((url) => results.get(url)!);

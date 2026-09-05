@@ -329,6 +329,85 @@ describe('translation diagnostics', () => {
     expect(codesFor('reordered-date')).not.toContain('NUMBER_DRIFT');
   });
 
+  it('normalizes bounded bilingual number words while preserving true numeric drift', () => {
+    const report = diagnosticsFor([
+      row({
+        clue_id: 'word-centuries',
+        clue_en: 'It lasted from the eighth to the fifteenth century.',
+        clue_et: 'See kestis 8.–15. sajandini.',
+      }),
+      row({ clue_id: 'word-count', clue_en: 'The poem has nineteen lines.', clue_et: 'Luuletusel on 19 rida.' }),
+      row({ clue_id: 'numbered-title', response_en: 'The Thirty-Nine Steps', response_et: '39 astet' }),
+      row({ clue_id: 'formula-one', clue_en: 'Who won seven Formula One titles?', clue_et: 'Kes võitis seitse vormel 1 tiitlit?' }),
+      row({ clue_id: 'roman-type', clue_en: 'Examples include type 1 diabetes.', clue_et: 'Näidete hulka kuulub I tüüpi diabeet.' }),
+      row({ clue_id: 'top-ten', clue_en: 'It became a Top 10 hit.', clue_et: 'Sellest sai esikümnehitt.' }),
+      row({ clue_id: 'exodus-name', clue_en: 'The story appears in Exodus.', clue_et: 'Lugu esineb 2. Moosese raamatus.' }),
+      row({ clue_id: 'word-unit', clue_en: 'The route covers more than 100 km.', clue_et: 'Marsruut katab üle saja kilomeetri.' }),
+      row({ clue_id: 'word-unit-reverse', clue_en: 'The route is one hundred kilometres long.', clue_et: 'Marsruut on 100 km pikk.' }),
+      row({ clue_id: 'word-metre-unit', clue_en: 'The route is one hundred metres long.', clue_et: 'Marsruut on 100 m pikk.' }),
+      row({ clue_id: 'word-metre-unit-reverse', clue_en: 'The route is 100 m long.', clue_et: 'Marsruut on sada meetrit pikk.' }),
+      row({ clue_id: 'digit-percent-word-unit', clue_en: 'The result was 100 percent.', clue_et: 'Tulemus oli 100%.' }),
+      row({ clue_id: 'digit-kilometre-word-unit', clue_en: 'The route is 100 kilometres long.', clue_et: 'Marsruut on 100 km pikk.' }),
+      row({ clue_id: 'unit-across-sentence', clue_en: 'The answer was one. Metres are the unit.', clue_et: 'Vastus oli 1. Ühik on meeter.' }),
+      row({ clue_id: 'hyphenated-word-unit', clue_en: 'He won the 400-metre race.', clue_et: 'Ta võitis 400 meetri jooksu.' }),
+      row({ clue_id: 'musical-metre', clue_en: 'The dance is in lively 2/4 metre.', clue_et: 'Tants on elavas 2/4-taktis.' }),
+      row({ clue_id: 'coordinated-percent', clue_en: 'The result was 52 to 48 percent.', clue_et: 'Tulemus oli 52 protsendiga 48 vastu.' }),
+      row({ clue_id: 'coordinated-decimal-percent', clue_en: 'The result was 50.58 percent to 49.42 percent.', clue_et: 'Tulemus oli 50,58 protsenti 49,42 vastu.' }),
+      row({ clue_id: 'percentage-point', clue_en: 'The margin was one percentage point.', clue_et: 'Vahe oli ühe protsendipunktine.' }),
+      row({ clue_id: 'hyphenated-percentage-point-word', clue_en: 'It was a one-percentage-point lead.', clue_et: 'See oli ühe protsendipunktine edu.' }),
+      row({ clue_id: 'hyphenated-percentage-point-digit', clue_en: 'It was a 1-percentage-point lead.', clue_et: 'See oli 1 protsendipunktine edu.' }),
+      row({ clue_id: 'grammatical-not-gram-unit', response_en: 'fourteen grammatical cases', response_et: 'neliteist käänet' }),
+      row({ clue_id: 'short-year-rollover', clue_en: 'The 1999–00 season.', clue_et: '1999.–2000. aasta hooaeg.' }),
+      row({ clue_id: 'wrong-word-count', clue_en: 'The poem has nineteen lines.', clue_et: 'Luuletusel on 18 rida.' }),
+      row({ clue_id: 'wrong-word-century', clue_en: 'It is a fifth-century work.', clue_et: 'See on 6. sajandi teos.' }),
+      row({ clue_id: 'omitted-year', clue_en: 'The mission launched in 1969.', clue_et: 'Missioon käivitati.' }),
+      row({ clue_id: 'repeated-score-loss', clue_en: 'The score was 2-2.', clue_et: 'Seis oli 2.' }),
+      row({ clue_id: 'unrelated-one-prefix', clue_en: 'This is version 1.', clue_et: 'See on ühendus.' }),
+      row({ clue_id: 'unrelated-five-prefix', clue_en: 'The value is 5.', clue_et: 'See on viisakus.' }),
+      row({ clue_id: 'unrelated-six-prefix', clue_en: 'The value is 6.', clue_et: 'See on kuusk.' }),
+      row({ clue_id: 'wrong-short-year-rollover', clue_en: 'The 1999–00 season.', clue_et: '1999.–1900. aasta hooaeg.' }),
+      row({ clue_id: 'ordinary-numbers-word', clue_en: 'This device numbers pages.', clue_et: 'See viitab 4. Moosese raamatule.' }),
+      row({ clue_id: 'unsupported-million', clue_en: 'One million people attended.', clue_et: 'Kohal oli 1 inimene.' }),
+      row({ clue_id: 'unsupported-hundred-thousand', clue_en: 'One hundred thousand people attended.', clue_et: 'Kohal oli 100 inimest.' }),
+      row({ clue_id: 'unsupported-et-magnitude', clue_en: '100 people attended.', clue_et: 'Kohal oli sada tuhat inimest.' }),
+      row({ clue_id: 'ascii-year-month', clue_en: 'Version 2026-02 was released.', clue_et: 'Versioon 2026-2102 ilmus.' }),
+      row({ clue_id: 'wrong-word-unit', clue_en: 'The distance is 8 m.', clue_et: 'Kogus on kaheksa liitrit.' }),
+      row({ clue_id: 'wrong-word-unit-reverse', clue_en: 'The distance is 8 km.', clue_et: 'Vahemaa on kaheksa meetrit.' }),
+      row({ clue_id: 'swapped-word-units', clue_en: 'The samples were 100 m and 5 g.', clue_et: 'Proovid olid sada grammi ja viis meetrit.' }),
+      row({ clue_id: 'swapped-word-units-reverse', clue_en: 'The totals were 100 km and 5 l.', clue_et: 'Kogused olid sada liitrit ja viis kilomeetrit.' }),
+      row({ clue_id: 'wrong-coordinated-percent', clue_en: 'The result was 52 to 48 percent.', clue_et: 'Tulemus oli 52 protsendiga 47 vastu.' }),
+      row({ clue_id: 'wrong-percentage-point-unit', clue_en: 'The margin was one percentage point.', clue_et: 'Vahe oli üks protsent.' }),
+      row({ clue_id: 'wrong-percent-unit', clue_en: 'The margin was one percent.', clue_et: 'Vahe oli üks protsendipunkt.' }),
+    ]);
+    const codesFor = (clueId: string) => report.issues
+      .filter((issue) => issue.clueId === clueId)
+      .map((issue) => issue.code);
+
+    for (const clueId of [
+      'word-centuries', 'word-count', 'numbered-title', 'formula-one', 'roman-type',
+      'top-ten', 'exodus-name', 'word-unit', 'word-unit-reverse', 'word-metre-unit',
+      'word-metre-unit-reverse', 'short-year-rollover',
+      'digit-percent-word-unit', 'digit-kilometre-word-unit',
+      'unit-across-sentence',
+      'hyphenated-word-unit', 'musical-metre', 'coordinated-percent', 'coordinated-decimal-percent',
+      'percentage-point', 'hyphenated-percentage-point-word', 'hyphenated-percentage-point-digit',
+      'grammatical-not-gram-unit',
+    ]) {
+      expect(codesFor(clueId)).not.toEqual(expect.arrayContaining(['NUMBER_DRIFT', 'ANSWER_DRIFT']));
+    }
+    for (const clueId of [
+      'wrong-word-count', 'wrong-word-century', 'omitted-year', 'repeated-score-loss',
+      'unrelated-one-prefix', 'unrelated-five-prefix', 'unrelated-six-prefix',
+      'wrong-short-year-rollover', 'ordinary-numbers-word', 'unsupported-million',
+      'unsupported-hundred-thousand', 'unsupported-et-magnitude', 'ascii-year-month',
+      'wrong-word-unit', 'wrong-word-unit-reverse',
+      'swapped-word-units', 'swapped-word-units-reverse',
+      'wrong-coordinated-percent', 'wrong-percentage-point-unit', 'wrong-percent-unit',
+    ]) {
+      expect(codesFor(clueId)).toContain('NUMBER_DRIFT');
+    }
+  });
+
   it('recognizes localized Genesis numbering and hyphenated alternatives without hiding signed-number drift', () => {
     const report = diagnosticsFor([
       row({

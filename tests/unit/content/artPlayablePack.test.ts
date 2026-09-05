@@ -76,11 +76,11 @@ describe('Art & Architecture playable pack', () => {
         et: '„Drowning Girl“ kasutab lihtsustatud koomiksilaadi ja käsitsi maalitud täppe, mis matkivad kommertstrükki.',
       },
       source: {
-        sourceId: 'moma:drowning-girl-1963',
-        title: 'Roy Lichtenstein. Drowning Girl. 1963 — MoMA Audio',
-        url: 'https://www.moma.org/audio/playlist/3/176',
-        license: 'All rights reserved',
-        retrievedAt: '2026-08-28',
+        sourceId: 'wikipedia:drowning-girl',
+        title: 'Drowning Girl — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Drowning_Girl',
+        license: 'CC BY-SA 4.0',
+        retrievedAt: '2026-09-05',
       },
     });
     expect(replacement.subjectKey).not.toBe(frozenEasy.subjectKey);

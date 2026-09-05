@@ -7255,7 +7255,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "food:cioppino",
         "clue": {
-          "en": "Which tomato-based seafood stew was developed in late-1800s San Francisco by Italian immigrants and Spanish and Portuguese fishers?",
+          "en": "Which tomato-based seafood stew was developed in late nineteenth-century San Francisco by Italian immigrants and Spanish and Portuguese fishers?",
           "et": "Milline tomatine mereannihautis kujunes 19. sajandi lõpu San Franciscos Itaalia sisserändajate ning Hispaania ja Portugali kalurite seas?"
         },
         "response": {
@@ -9025,7 +9025,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "medium:8-track-cartridge",
         "clue": {
           "en": "This single-spool cartridge played an endless loop of analogue sound in many 1970s cars and could not rewind. Name it.",
-          "et": "Selle kasseti sees liikus analoogheli esitav lint lõputus silmuses ning seda ei saanud tagasi kerida. Mis see oli?"
+          "et": "Paljudes 1970. aastate autodes liikus selle kasseti sees analoogheli esitav lint lõputus silmuses ning seda ei saanud tagasi kerida. Mis see oli?"
         },
         "response": {
           "en": "8-track cartridge",
@@ -14259,7 +14259,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "software:visicalc",
         "clue": {
           "en": "What 1979 spreadsheet is often credited with turning the Apple II into a serious business machine?",
-          "et": "Millist varajast tabelarvutusprogrammi peetakse sageli tooteks, mis muutis Apple II koduarvutist tõsiseltvõetavaks äriarvutiks?"
+          "et": "Millist 1979. aasta tabelarvutusprogrammi peetakse sageli tooteks, mis muutis Apple II koduarvutist tõsiseltvõetavaks äriarvutiks?"
         },
         "response": {
           "en": "VisiCalc",
@@ -15782,7 +15782,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The Montgolfiers demonstrated that heated air could lift a large balloon, and the first free human flight followed later in 1783.",
-          "et": "Vennad Montgolfier'd näitasid, et kuum õhk võib suure õhupalli üles tõsta, ning esimene vaba inimlend järgnes samal aastal."
+          "et": "Vennad Montgolfier'd näitasid, et kuum õhk võib suure õhupalli üles tõsta, ning esimene vaba inimlend järgnes hiljem 1783. aastal."
         },
         "source": {
           "sourceId": "wikipedia:montgolfier-brothers",
@@ -23687,7 +23687,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "2020 vice-presidential debate fly",
-          "et": "Pence’i debatilikärbes"
+          "et": "2020. aasta Pence’i debatikärbes"
         },
         "acceptedVariants": {
           "en": [
@@ -25532,7 +25532,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Nehru’s Tryst with Destiny speech marked India’s independence and was delivered to the Constituent Assembly on the eve of 15 August 1947.",
-          "et": "Nehru Tryst with Destiny kõne tähistas India iseseisvumist ning see peeti Asutavas Kogus 15. augusti eelõhtul."
+          "et": "Nehru kõne „Tryst with Destiny“ tähistas India iseseisvumist ning see peeti Asutavas Kogus 1947. aasta 15. augusti eelõhtul."
         },
         "source": {
           "sourceId": "wikipedia:tryst-with-destiny",
@@ -30699,7 +30699,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "strange-tax:hat",
         "clue": {
-          "en": "Georgian Britain required headwear sellers to buy licences and paste a revenue stamp inside each item sold. Name the levy.",
+          "en": "In late eighteenth-century Georgian Britain, headwear sellers had to buy licences and paste a revenue stamp inside each item sold. Name the levy.",
           "et": "18. sajandi lõpu Suurbritannias pidid peakattemüüjad ostma litsentsi ja kleepima iga müüdud eseme sisse maksumärgi. Nimeta maks."
         },
         "response": {

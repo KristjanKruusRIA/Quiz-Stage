@@ -94,7 +94,7 @@ describe('History playable pack', () => {
 
     expect(unchangedRows).toHaveLength(315);
     expect(createHash('sha256').update(JSON.stringify(unchangedRows)).digest('hex'))
-      .toBe('015838f8ff9d2f8f74d0e6933a516d5634be0fb483981a5453933db36f2cf460');
+      .toBe('52302ae53bf4e03d4e90af8dbb42630737494afc4823f17cfbe444bbb7f9e582');
   });
 
   it('locks the exact fifteen replacement payloads', () => {
