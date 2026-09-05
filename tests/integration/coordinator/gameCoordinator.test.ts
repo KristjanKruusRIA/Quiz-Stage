@@ -218,6 +218,54 @@ describe('GameCoordinator', () => {
     expect(callbacks).toHaveLength(0);
   });
 
+  it('schedules an English narrated clue only after its durable narration-start command', async () => {
+    const { coordinator, repository, callbacks } = timerDependencies();
+    const config = { ...selectionInput().config, speechEnabled: true };
+    await coordinator.startMatch(config);
+    vi.mocked(repository.persistTransition).mockClear();
+    const clueId = coordinator.getHostView()!.state.boards[0].categories[0].clues[0].id;
+
+    const pending = await coordinator.dispatch({ type: 'SelectClue', clueId });
+    expect(pending.state.timer).toMatchObject({ status: 'idle', startedAt: null });
+    expect(callbacks).toHaveLength(0);
+    const narrationSequence = pending.state.timer.narrationSequence!;
+
+    const started = await coordinator.dispatch({ type: 'StartNarratedClueTimer', clueId, narrationSequence });
+    expect(started.state.timer).toMatchObject({ status: 'running', startedAt: 1_000 });
+    expect(callbacks).toHaveLength(1);
+    expect(vi.mocked(repository.persistTransition).mock.calls.map((call) => call[1][0])).toMatchObject([
+      { type: 'CommandApplied', command: { type: 'SelectClue', clueId } },
+      { type: 'CommandApplied', command: { type: 'StartNarratedClueTimer', clueId, narrationSequence } },
+    ]);
+  });
+
+  it('replays a durable narration-start command without adding an Undo frame', async () => {
+    const { coordinator, selected, setResumable } = dependencies();
+    const config = { ...selectionInput().config, speechEnabled: true };
+    const snapshot = createGame(config, selected, 0);
+    const clueId = snapshot.boards[0].categories[0].clues[0].id;
+    const selectedClue = applyGameCommand(snapshot, { type: 'SelectClue', clueId }, 1_000);
+    const started = applyGameCommand(selectedClue.state, {
+      type: 'StartNarratedClueTimer',
+      clueId,
+      narrationSequence: selectedClue.state.timer.narrationSequence!,
+    }, 2_000);
+    setResumable({
+      matchId: snapshot.id,
+      snapshotSequence: 0,
+      eventSequence: 0,
+      state: snapshot,
+      events: [...selectedClue.events, ...started.events],
+      replayIssue: null,
+    });
+
+    const recovered = await coordinator.resume();
+
+    expect(recovered?.state.timer).toMatchObject({ status: 'running', startedAt: 2_000 });
+    expect(recovered?.state.undoStack).toHaveLength(1);
+    coordinator.dispose();
+  });
+
   it('does not publish or adopt an expiry when persistence fails', async () => {
     const { coordinator, repository, callbacks, setNow, runNext } = timerDependencies();
     await coordinator.startMatch(selectionInput().config);

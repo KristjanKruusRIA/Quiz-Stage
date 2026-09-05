@@ -36,6 +36,7 @@ export const en = {
   'settings.effects': 'Effects volume',
   'settings.crowd': 'Crowd volume',
   'settings.mute': 'Mute all audio',
+  'settings.speechEnabled': 'Read English topics and clues aloud',
   'settings.saveError': 'Settings could not be saved.',
   'settings.loading': 'Loading audio settings…',
   'settings.loadError': 'Settings could not be loaded.',

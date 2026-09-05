@@ -165,7 +165,9 @@ function commandEventId(state: GameState, command: GameCommand, at: number): str
 }
 
 function isReversibleCommand(command: GameCommand): boolean {
-  return command.type !== 'UndoLast' && command.type !== 'EndIncompleteMatch';
+  return command.type !== 'UndoLast'
+    && command.type !== 'EndIncompleteMatch'
+    && command.type !== 'StartNarratedClueTimer';
 }
 
 function captureMutableState(state: GameState): UndoMutableState {

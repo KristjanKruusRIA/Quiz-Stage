@@ -1,6 +1,7 @@
 export type GameCommand =
   | { type: 'SelectClue'; clueId: string }
   | { type: 'LockTeam'; teamId: string; at: number }
+  | { type: 'StartNarratedClueTimer'; clueId: string; narrationSequence: number }
   | { type: 'JudgeResponse'; correct: boolean; at: number }
   | { type: 'SubmitDailyDoubleWager'; wager: number }
   | { type: 'SubmitFinalWager'; teamId: string; wager: number }

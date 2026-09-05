@@ -19,6 +19,7 @@ interface SetupScreenProps {
   onStarted?: () => void;
   initialLanguage?: Language;
   onLanguageChange?: (language: Language) => void;
+  speechEnabled?: boolean;
 }
 
 type DisplayChoice = DisplayMode | 'automatic';
@@ -77,7 +78,7 @@ function shortageMessage(shortage: Exclude<ContentAvailabilityResponse, { ok: tr
   return `${translate(language, roundOneKey, { count: shortage.roundOneMissing })} ${translate(language, roundTwoKey, { count: shortage.roundTwoMissing })} ${translate(language, shortage.finalMissing === 1 ? 'setup.finalUnavailable' : 'setup.finalAvailable')}`;
 }
 
-export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguageChange }: SetupScreenProps) {
+export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguageChange, speechEnabled = false }: SetupScreenProps) {
   const { locale } = useI18n();
   const initialLocale = initialLanguage ?? locale;
   const [teams, setTeams] = useState<Team[]>(() => initialTeams(initialLocale));
@@ -133,7 +134,8 @@ export function SetupScreen({ api, onBack, onStarted, initialLanguage, onLanguag
     teams,
     packIds,
     displayMode,
-  }), [clueSeconds, difficulty, displayMode, language, packIds, teams]);
+    speechEnabled: speechEnabled && language === 'en',
+  }), [clueSeconds, difficulty, displayMode, language, packIds, speechEnabled, teams]);
   const localMessage = options === null ? null : localValidationMessage(teams, packIds, language);
   const parsed = useMemo(() => gameConfigSchema.safeParse(candidate), [candidate]);
   const configKey = JSON.stringify(candidate);

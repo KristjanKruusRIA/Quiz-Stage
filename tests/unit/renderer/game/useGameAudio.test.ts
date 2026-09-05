@@ -118,7 +118,7 @@ describe('game audio mapping', () => {
 
   it('recomputes every active channel immediately while preserving music ducking across mute and sliders', () => {
     const audios: Array<{ volume: number; loop: boolean; currentTime: number; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }> = [];
-    let restoreMusic: (() => void) | undefined;
+    const restoreMusic: Array<() => void> = [];
     const controller = new AudioController({
       createAudio: () => {
         const audio = { volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() };
@@ -126,7 +126,7 @@ describe('game audio mapping', () => {
         return audio;
       },
       settings: { ...defaultAudioSettings, master: 0.5, music: 0.8, effects: 0.6, crowd: 0.4 },
-      setTimeout: (callback) => { restoreMusic = callback; return 1; },
+      setTimeout: (callback) => { restoreMusic.push(callback); return restoreMusic.length; },
       clearTimeout: vi.fn(),
     });
     controller.startMusic('final-tension');
@@ -138,8 +138,80 @@ describe('game audio mapping', () => {
     expect(audios.map((audio) => audio.volume)).toEqual([0, 0, 0]);
     controller.setSettings({ ...defaultAudioSettings, master: 1, music: 0.6, effects: 0.5, crowd: 0.25, muted: false });
     expect(audios.map((audio) => audio.volume)).toEqual([0.15, 0.5, 0.25]);
-    restoreMusic?.();
+    for (const restore of restoreMusic) restore();
     expect(audios[0].volume).toBe(0.6);
+    controller.dispose();
+  });
+
+  it('exposes duration-aware music ducking for narrated speech', () => {
+    const timers: Array<{ callback: () => void; delay: number }> = [];
+    const clearTimeout = vi.fn();
+    const audios: Array<{ volume: number; loop: boolean; currentTime: number; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }> = [];
+    const controller = new AudioController({
+      createAudio: () => {
+        const audio = { volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() };
+        audios.push(audio);
+        return audio;
+      },
+      settings: defaultAudioSettings,
+      setTimeout: (callback, delay) => { timers.push({ callback, delay }); return timers.length; },
+      clearTimeout,
+    });
+
+    controller.startMusic('opening');
+    const releaseDuck = controller.duckMusicFor(3_200);
+
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music * 0.25);
+    expect(timers.at(-1)?.delay).toBe(3_200);
+    releaseDuck?.();
+    expect(clearTimeout).toHaveBeenCalledWith(1);
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music);
+    timers.at(-1)?.callback();
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music);
+    controller.dispose();
+  });
+
+  it('keeps music ducked until every overlapping lease is released', () => {
+    const audios: Array<{ volume: number; loop: boolean; currentTime: number; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }> = [];
+    const controller = new AudioController({
+      createAudio: () => {
+        const audio = { volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() };
+        audios.push(audio);
+        return audio;
+      },
+      settings: defaultAudioSettings,
+      setTimeout: vi.fn((_callback, delay) => delay),
+      clearTimeout: vi.fn(),
+    });
+
+    controller.startMusic('opening');
+    const speechRelease = controller.duckMusicFor(5_000);
+    const effectRelease = controller.duckMusicFor(1_200);
+    effectRelease?.();
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music * 0.25);
+    speechRelease?.();
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music);
+    controller.dispose();
+  });
+
+  it('ducks music that starts after an active narration lease', () => {
+    const audios: Array<{ volume: number; loop: boolean; currentTime: number; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }> = [];
+    const controller = new AudioController({
+      createAudio: () => {
+        const audio = { volume: 1, loop: false, currentTime: 0, play: vi.fn(async () => undefined), pause: vi.fn() };
+        audios.push(audio);
+        return audio;
+      },
+      settings: defaultAudioSettings,
+      setTimeout: vi.fn((_callback, delay) => delay),
+      clearTimeout: vi.fn(),
+    });
+
+    const releaseNarration = controller.duckMusicFor(5_000);
+    controller.startMusic('final-tension');
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music * 0.25);
+    releaseNarration?.();
+    expect(audios[0]!.volume).toBe(defaultAudioSettings.master * defaultAudioSettings.music);
     controller.dispose();
   });
 

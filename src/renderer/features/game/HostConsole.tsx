@@ -69,8 +69,11 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
   };
   const canJudge = state.activeClue?.lockedTeamId !== null && state.activeClue?.lockedTeamId !== undefined;
   const timed = ['ordinary-clue', 'daily-double-clue', 'final-clue', 'tiebreaker'].includes(state.phase);
+  const pendingNarration = state.config.language === 'en' && state.config.speechEnabled === true
+    && state.timer.status === 'idle';
   const revealable = state.activeClue !== null && state.activeClue.lockedTeamId === null
-    && (state.phase === 'ordinary-clue' || state.phase === 'tiebreaker' || (state.phase === 'daily-double-clue' && state.timer.status === 'expired'));
+    && (((state.phase === 'ordinary-clue' || state.phase === 'tiebreaker') && !pendingNarration)
+      || (state.phase === 'daily-double-clue' && state.timer.status === 'expired'));
   const clueRevealed = state.phase === 'clue-reveal' && state.activeClue?.responseRevealed === true;
   const reportable = clue !== null
     && ['ordinary-clue', 'daily-double-wager', 'daily-double-clue', 'clue-reveal', 'tiebreaker'].includes(state.phase);
@@ -165,7 +168,7 @@ export function HostConsole({ view, api, now = systemNow, onMute, onSaveAndQuit 
       <button type="button" disabled={pending || !timed || !['running', 'paused'].includes(state.timer.status)} onClick={() => dispatch({
         type: state.timer.status === 'running' ? 'PauseTimer' : 'ResumeTimer', at: now(),
       })}>{t(state.timer.status === 'running' ? 'host.pauseTimer' : 'host.resumeTimer')}</button>
-      <button type="button" disabled={pending || !timed} onClick={() => dispatch({ type: 'ResetTimer', at: now() })}>{t('host.resetTimer')}</button>
+      <button type="button" disabled={pending || !timed || pendingNarration} onClick={() => dispatch({ type: 'ResetTimer', at: now() })}>{t('host.resetTimer')}</button>
     </section>
     {nextFinalTeam === undefined || !['final-clue', 'final-reveal'].includes(state.phase) ? null : <section aria-label={t('host.finalReveal')}>
       <p>{t('host.revealTeam', { team: nextFinalTeam.name })}</p>

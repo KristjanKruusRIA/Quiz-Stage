@@ -38,6 +38,7 @@ export const et = {
   'settings.effects': 'Efektide helitugevus',
   'settings.crowd': 'Publiku helitugevus',
   'settings.mute': 'Vaigista kõik helid',
+  'settings.speechEnabled': 'Loe ingliskeelsed teemad ja vihjed ette',
   'settings.saveError': 'Seadeid ei saanud salvestada.',
   'settings.loading': 'Laadin heliseadeid…',
   'settings.loadError': 'Seadeid ei saanud laadida.',

@@ -23,6 +23,36 @@ function reportPackagedSmokeProgress(phase: string, detail?: number): void {
   console.log(`PACKAGED_SMOKE_PROGRESS:${phase}${detail === undefined ? '' : `:${detail}`}`);
 }
 
+type PackagedSpeechProbeWindow = Window & { quizStagePackagedSpeechTexts?: string[] };
+
+function installPackagedSpeechProbe() {
+  const probeWindow = window as PackagedSpeechProbeWindow;
+  const texts: string[] = [];
+  class ProbeUtterance {
+    lang = '';
+    voice: unknown = null;
+    volume = 1;
+    onend: (() => void) | null = null;
+    onerror: (() => void) | null = null;
+    constructor(readonly text: string) {}
+  }
+  Object.defineProperty(window, 'SpeechSynthesisUtterance', { configurable: true, value: ProbeUtterance });
+  Object.defineProperty(window, 'speechSynthesis', {
+    configurable: true,
+    value: {
+      speak: (utterance: ProbeUtterance) => {
+        texts.push(utterance.text);
+        window.setTimeout(() => utterance.onend?.(), 0);
+      },
+      cancel: () => undefined,
+      getVoices: () => [{ name: 'Packaged English', lang: 'en-US', localService: true }],
+      addEventListener: () => undefined,
+      removeEventListener: () => undefined,
+    },
+  });
+  probeWindow.quizStagePackagedSpeechTexts = texts;
+}
+
 async function activateInitialControl(control: Locator): Promise<void> {
   await expect(control).toBeVisible({ timeout: 30_000 });
   await expect(control).toBeEnabled({ timeout: 30_000 });
@@ -153,6 +183,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
         externalRequests.push(url.href);
       }
     });
+    await page.evaluate(installPackagedSpeechProbe);
+    await activateInitialControl(page.getByRole('button', { name: 'Settings' }));
+    await page.getByRole('checkbox', { name: 'Read English topics and clues aloud' }).check();
+    await activateControl(page.getByRole('button', { name: 'Back' }));
 
     reportPackagedSmokeProgress('match-setup');
     await activateInitialControl(page.getByRole('button', { name: 'New Match' }));
@@ -178,6 +212,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }).not.toBeNull();
     const firstState = newestPackagedSnapshot(userData);
     expect(firstState).not.toBeNull();
+    expect(firstState!.config.speechEnabled).toBe(true);
     expect(firstState!.config.packIds).toContain('built-in-estonia');
     expect(firstState!.config.packIds).not.toContain('built-in-adult');
     const firstSelectedIds = [
@@ -209,6 +244,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     await expect.poll(() => newestPackagedSnapshot(userData)?.config.packIds.includes('built-in-adult') ?? false, {
       message: 'The second packaged match must persist Adult selection', timeout: 30_000,
     }).toBe(true);
+    await expect.poll(() => page.evaluate(() =>
+      (window as PackagedSpeechProbeWindow).quizStagePackagedSpeechTexts?.length ?? 0), {
+      message: 'The packaged host must narrate the English board categories', timeout: 30_000,
+    }).toBeGreaterThan(0);
 
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
@@ -227,6 +266,9 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
       await activateControl(page.getByRole('button', { name: /Reveal .* correct/ }).first());
     }
+
+    expect(await page.evaluate(() =>
+      (window as PackagedSpeechProbeWindow).quizStagePackagedSpeechTexts?.length ?? 0)).toBeGreaterThan(60);
 
     await expect(page.getByRole('heading', { name: /wins/ })).toBeVisible();
     await activateControl(page.getByRole('button', { name: 'Back to Home' }));

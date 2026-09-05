@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import App from '../../../src/renderer/App';
@@ -41,6 +41,93 @@ function hostApi(): HostDesktopApi {
 }
 
 describe('HomeScreen', () => {
+  it('carries the saved speech opt-in from App into a new English match', async () => {
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => ({ ...defaultAudioSettings, speechEnabled: true }));
+    api.updateAudioSettings = vi.fn(async (settings) => settings);
+    render(<App api={api} />);
+
+    await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
+    const start = await screen.findByRole('button', { name: 'Start match' });
+    await userEvent.click(start);
+
+    expect(api.startMatch).toHaveBeenCalledWith(expect.objectContaining({
+      language: 'en',
+      speechEnabled: true,
+    }));
+  });
+
+  it('waits for the saved speech preference before offering match setup', async () => {
+    const pending = deferred<typeof defaultAudioSettings>();
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(() => pending.promise);
+    render(<App api={api} />);
+
+    await userEvent.click(screen.getByRole('button', { name: 'New Match' }));
+    expect(screen.getByRole('status')).toHaveTextContent('Loading audio settings');
+    expect(screen.queryByRole('button', { name: 'Start match' })).not.toBeInTheDocument();
+
+    await act(async () => pending.resolve({ ...defaultAudioSettings, speechEnabled: true }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Start match' }));
+    expect(api.startMatch).toHaveBeenCalledWith(expect.objectContaining({ speechEnabled: true }));
+  });
+
+  it('fails open a recovered narrated clue when audio settings cannot be loaded', async () => {
+    const api = hostApi();
+    api.getAudioSettings = vi.fn(async () => { throw new Error('database unavailable'); });
+    api.subscribeToState = vi.fn((listener) => {
+      listener(hostView({
+        config: { ...hostView().state.config, speechEnabled: true },
+        phase: 'ordinary-clue',
+        activeClue: {
+          clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+        },
+        timer: {
+          durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle', narrationSequence: 7,
+        },
+      }));
+      return vi.fn();
+    });
+
+    render(<App api={api} />);
+
+    await waitFor(() => expect(api.dispatch).toHaveBeenCalledWith({
+      type: 'StartNarratedClueTimer', clueId: 'round-one-clue-1-2', narrationSequence: 7,
+    }));
+  });
+
+  it('fails open a recovered narrated clue when audio settings never settle', async () => {
+    vi.useFakeTimers();
+    try {
+      const api = hostApi();
+      api.getAudioSettings = vi.fn(() => new Promise<typeof defaultAudioSettings>(() => undefined));
+      api.subscribeToState = vi.fn((listener) => {
+        listener(hostView({
+          config: { ...hostView().state.config, speechEnabled: true },
+          phase: 'ordinary-clue',
+          activeClue: {
+            clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+          },
+          timer: {
+            durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle', narrationSequence: 7,
+          },
+        }));
+        return vi.fn();
+      });
+
+      render(<App api={api} />);
+      expect(screen.getByRole('status')).toHaveTextContent('Starting match');
+      await act(async () => vi.advanceTimersByTime(3_000));
+      await act(async () => Promise.resolve());
+
+      expect(api.dispatch).toHaveBeenCalledWith({
+        type: 'StartNarratedClueTimer', clueId: 'round-one-clue-1-2', narrationSequence: 7,
+      });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it('offers current Home actions including Settings', async () => {
     const onNewMatch = vi.fn();
     const onHistory = vi.fn();
@@ -80,7 +167,7 @@ describe('HomeScreen', () => {
 
   it('routes Home to live Settings when the host bridge owns audio settings', async () => {
     const api = hostApi();
-    api.getAudioSettings = vi.fn(async () => ({ master: 0.8, music: 0.7, effects: 0.8, crowd: 0.8, muted: false }));
+    api.getAudioSettings = vi.fn(async () => defaultAudioSettings);
     api.updateAudioSettings = vi.fn(async (settings) => settings);
     render(<App api={api} />);
     await userEvent.click(await screen.findByRole('button', { name: 'Settings' }));

@@ -15,6 +15,7 @@ export interface Team {
 
 export interface GameConfig {
   language: Language;
+  speechEnabled?: boolean;
   difficulty: Difficulty;
   clueSeconds: number;
   teams: Team[];
@@ -80,6 +81,7 @@ export interface GameTimer {
   remainingMs: number;
   startedAt: number | null;
   status: 'idle' | 'running' | 'paused' | 'expired';
+  narrationSequence?: number;
 }
 
 export interface UndoMutableState {
