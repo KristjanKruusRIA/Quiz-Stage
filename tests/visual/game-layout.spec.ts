@@ -13,6 +13,7 @@ test('setup and settings controls fit and retain native control sizing at 1920x1
   await page.setViewportSize({ width: 1920, height: 1000 });
 
   await page.getByRole('button', { name: 'New Match' }).click();
+  await expect(page.locator('.setup-screen input[type="checkbox"]').first()).toBeVisible();
   const setup = await page.evaluate(() => ({
     overflowY: document.documentElement.scrollHeight > innerHeight,
     startVisible: document.querySelector<HTMLButtonElement>('.setup-screen .primary-action')!.getBoundingClientRect().bottom <= innerHeight,
