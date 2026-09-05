@@ -22,6 +22,7 @@ export type AuthorityRow = Readonly<{
   clue: Readonly<Record<Language, string>>;
   response: Readonly<Record<Language, string>>;
   acceptedVariants: Readonly<Record<Language, readonly string[]>>;
+  explanation: Readonly<Record<Language, string>>;
   source: Readonly<{ title: string; url: string }>;
 }>;
 
@@ -33,6 +34,7 @@ type BankCategory = Readonly<{
     clue: Readonly<Record<Language, string>>;
     response: Readonly<Record<Language, string>>;
     acceptedVariants: Readonly<Record<Language, readonly string[]>>;
+    explanation: Readonly<Record<Language, string>>;
     source: Readonly<{ title: string; url: string }>;
   }>[];
 }>;
@@ -70,6 +72,7 @@ function bankAuthorityRows(
     clue: question.clue,
     response: question.response,
     acceptedVariants: question.acceptedVariants,
+    explanation: question.explanation,
     source: question.source,
   })));
 }
@@ -110,6 +113,7 @@ function generatedAuthorityRows(
       clue: { en: row.clue_en, et: row.clue_et },
       response: { en: row.response_en, et: row.response_et },
       acceptedVariants: { en: row.acceptedVariantsEn, et: row.acceptedVariantsEt },
+      explanation: { en: row.explanation_en, et: row.explanation_et },
       source: { title: row.source_title, url: row.source_url },
     };
   });
@@ -136,6 +140,32 @@ function responseAliases(row: AuthorityRow, language: Language): ReadonlySet<str
   return new Set([row.response[language], ...row.acceptedVariants[language]]
     .map((value) => canonicalResponse(value, language))
     .filter((value) => value.length >= 3));
+}
+
+export function findAuthorityOneWayAliasLeaks(
+  candidate: AuthorityRow,
+  corpus: readonly AuthorityRow[],
+): readonly string[] {
+  const aliasesByLanguage = Object.fromEntries(LANGUAGES.map((language) =>
+    [language, responseAliases(candidate, language)])) as Readonly<Record<
+      Language,
+      ReadonlySet<string>
+    >>;
+  return corpus.filter(({ id }) => id !== candidate.id).flatMap((other) => {
+    const owner = `${other.authority}:${other.id}`;
+    return LANGUAGES.flatMap((language) => {
+      const aliases = aliasesByLanguage[language];
+      const leaks: string[] = [];
+      if ([...aliases].some((alias) => containsNormalizedPhrase(other.clue[language], alias))) {
+        leaks.push(`response-in-clue:${language}:${owner}`);
+      }
+      if ([...aliases].some((alias) =>
+        containsNormalizedPhrase(other.explanation[language], alias))) {
+        leaks.push(`response-in-explanation:${language}:${owner}`);
+      }
+      return leaks;
+    });
+  }).sort();
 }
 
 export function findAuthorityCollisions(

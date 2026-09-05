@@ -964,31 +964,36 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-039:question:4",
-        "factKey": "built-in-food-drink:checkpoint1:harissa-tunisian-chilli-paste",
+        "factKey": "built-in-food-drink:food-refresh:muhammara-red-pepper-walnut-dip",
         "tier": 4,
-        "subjectKey": "condiment:harissa",
+        "subjectKey": "dish:muhammara",
         "clue": {
-          "en": "Which North African red paste, especially associated with Tunisia, blends chillies with garlic and spices such as caraway or coriander?",
-          "et": "Milline eriti Tuneesiaga seotud Põhja-Aafrika punane maitsepasta ühendab tšilli küüslaugu ning näiteks köömne või koriandri seemnetega?"
+          "en": "Which Levantine dip from Aleppo blends red peppers and walnuts with breadcrumbs and pomegranate molasses?",
+          "et": "Milline Aleppost pärit Levandi dip ühendab punase paprika ja Kreeka pähklid riivsaia ning granaatõunamelassiga?"
         },
         "response": {
-          "en": "harissa",
-          "et": "harissa"
+          "en": "muhammara",
+          "et": "muhammara"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "mhammara"
+          ],
+          "et": [
+            "muhamara",
+            "mhammara"
+          ]
         },
         "explanation": {
-          "en": "Harissa is used as both a condiment and a cooking ingredient, with heat and seasoning varying between recipes.",
-          "et": "Harissat kasutatakse nii lauamaitseaine kui ka toiduvalmistamise koostisosana ning selle teravus ja maitsestus retseptiti erinevad."
+          "en": "Muhammara is an Aleppo-born dip whose sweet-tart pomegranate molasses balances red pepper and walnuts.",
+          "et": "Muhammara on Aleppost pärit dip, milles magushapu granaatõunamelass tasakaalustab punast paprikat ja Kreeka pähkleid."
         },
         "source": {
-          "sourceId": "wikipedia:harissa",
-          "title": "Harissa",
-          "url": "https://en.wikipedia.org/wiki/Harissa",
+          "sourceId": "wikipedia:muhammara",
+          "title": "Muhammara",
+          "url": "https://en.wikipedia.org/wiki/Muhammara",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -1248,31 +1253,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-041:question:2",
-        "factKey": "built-in-food-drink:checkpoint1:strawberry-achenes-accessory-fruit",
+        "factKey": "built-in-food-drink:food-refresh:kohlrabi-swollen-stem-not-root",
         "tier": 2,
-        "subjectKey": "plant:strawberry",
+        "subjectKey": "plant:kohlrabi",
         "clue": {
-          "en": "The red flesh of which familiar berry is botanically an enlarged flower base, while the apparent seeds on its surface are separate dry fruits?",
-          "et": "Millise tuttava marja punane viljaliha on botaaniliselt paisunud õiepõhi, pinnal näivad seemned aga eraldi kuivviljad?"
+          "en": "Which familiar cabbage relative has a turnip-like round edible part that is an enlarged stem rather than a root?",
+          "et": "Millise tuttava kapsalise naeritaoline ümar söödav osa on paksenenud vars, mitte juur?"
         },
         "response": {
-          "en": "strawberry",
-          "et": "maasikas"
+          "en": "kohlrabi",
+          "et": "nuikapsas"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "German turnip"
+          ],
+          "et": [
+            "koolrabi"
+          ]
         },
         "explanation": {
-          "en": "A strawberry is an aggregate accessory fruit: each surface achene developed from one ovary and contains a seed.",
-          "et": "Maasikas on ühtaegu koguvili ja ebavili: iga pinnal olev pähklike arenes ühest sigimikust ja sisaldab seemet."
+          "en": "Kohlrabi belongs to the cabbage family, but its turnip-like edible part is an enlarged stem.",
+          "et": "Nuikapsas kuulub kapsaste hulka, kuid selle naeritaoline söödav osa on paksenenud vars."
         },
         "source": {
-          "sourceId": "wikipedia:strawberry",
-          "title": "Strawberry",
-          "url": "https://en.wikipedia.org/wiki/Strawberry",
+          "sourceId": "wikipedia:kohlrabi",
+          "title": "Kohlrabi",
+          "url": "https://en.wikipedia.org/wiki/Kohlrabi",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -1343,35 +1352,31 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-041:question:5",
-        "factKey": "built-in-food-drink:checkpoint1:fig-inward-facing-flowers-syconium",
+        "factKey": "built-in-food-drink:food-refresh:mace-aril-around-nutmeg-seed",
         "tier": 5,
-        "subjectKey": "plant:fig",
+        "subjectKey": "spice:mace",
         "clue": {
-          "en": "Which fruit-like structure hides hundreds of tiny flowers on its inner surface, where they develop into the crunchy little units inside?",
-          "et": "Milline viljataoline moodustis peidab sisepinnal sadu tillukesi õisi, millest arenevad sees krõmpsuvad osakesed?"
+          "en": "Which spice is made from the lacy red covering around the seed that becomes nutmeg?",
+          "et": "Milline vürts saadakse pitsilisest punasest seemnerüüst, mis ümbritseb muskaatpähkliks saavat seemet?"
         },
         "response": {
-          "en": "fig",
-          "et": "viigimari"
+          "en": "mace",
+          "et": "muskaatõis"
         },
         "acceptedVariants": {
-          "en": [
-            "common fig"
-          ],
-          "et": [
-            "harilik viigimari"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "A fig is a syconium: an enclosed inflorescence whose many inward-facing flowers mature within the fleshy wall.",
-          "et": "Viigimari on sükoonium ehk suletud õisik, mille paljud sissepoole pööratud õied valmivad lihaka seina sees."
+          "en": "One nutmeg fruit yields two spices: nutmeg from the seed and mace from the dried aril around it.",
+          "et": "Ühest muskaatpähklipuu viljast saadakse kaks vürtsi: seemnest muskaatpähkel ja seda ümbritsevast kuivatatud seemnerüüst muskaatõis."
         },
         "source": {
-          "sourceId": "wikipedia:fig",
-          "title": "Fig",
-          "url": "https://en.wikipedia.org/wiki/Fig",
+          "sourceId": "wikipedia:nutmeg",
+          "title": "Nutmeg",
+          "url": "https://en.wikipedia.org/wiki/Nutmeg",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       }
     ]
@@ -1385,31 +1390,36 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-042:question:1",
-        "factKey": "built-in-food-drink:checkpoint1:panna-cotta-set-cream-dessert",
+        "factKey": "built-in-food-drink:food-refresh:focaccia-olive-oil-dimpled-ligurian-flatbread",
         "tier": 1,
-        "subjectKey": "dessert:panna-cotta",
+        "subjectKey": "bread:focaccia",
         "clue": {
-          "en": "Which Piedmontese dessert sets sweetened cream with gelatine and unmoulds it with a trembling texture?",
-          "et": "Milline Piemonte magustoit valmistatakse magustatud koorest, tarretatakse želatiiniga ning vabastatakse vormist võbeleva tekstuuriga?"
+          "en": "Which Italian flatbread—especially in its Genoese form—is brushed with olive oil and marked by finger-sized dimples?",
+          "et": "Milline Itaalia lameleib, eriti selle Genova variant, kaetakse oliiviõliga ja sellesse vajutatakse sõrmesuurused lohud?"
         },
         "response": {
-          "en": "panna cotta",
-          "et": "panna cotta"
+          "en": "focaccia",
+          "et": "focaccia"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "focaccia bread"
+          ],
+          "et": [
+            "focaccia-sai",
+            "focaccia sai"
+          ]
         },
         "explanation": {
-          "en": "Panna cotta means cooked cream, although the mixture is only heated enough to dissolve sugar and gelatine before chilling.",
-          "et": "Panna cotta tähendab keedetud koort, kuigi segu kuumutatakse vaid suhkru ja želatiini lahustamiseks ning jahutatakse siis."
+          "en": "Focaccia genovese is brushed with olive oil and marked with finger-sized dimples before baking.",
+          "et": "Focaccia Genova variant kaetakse oliiviõliga ning sellesse vajutatakse enne küpsetamist sõrmesuurused lohud."
         },
         "source": {
-          "sourceId": "wikipedia:panna_cotta",
-          "title": "Panna cotta",
-          "url": "https://en.wikipedia.org/wiki/Panna_cotta",
+          "sourceId": "wikipedia:focaccia",
+          "title": "Focaccia",
+          "url": "https://en.wikipedia.org/wiki/Focaccia",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-30"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -2766,11 +2776,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         source: { sourceId: 'wikipedia:banana_split', title: 'Banana split', url: 'https://en.wikipedia.org/wiki/Banana_split', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'built-in-food-drink-set-066:question:2', factKey: 'built-in-food-drink:checkpoint3:churros-ridged-fried-dough-sugar', tier: 2, subjectKey: 'dessert:churros',
-        clue: { en: 'Ridged lengths of dough are piped into hot oil and served with sugar or thick chocolate in Spain and Latin America. Name the treat.', et: 'Soonelised tainaribad pressitakse kuuma õlisse ning serveeritakse Hispaanias ja Ladina-Ameerikas suhkru või paksu šokolaadiga. Nimeta maius.' },
-        response: { en: 'churros', et: 'churros' }, acceptedVariants: { en: ['churro'], et: ['churro'] },
-        explanation: { en: 'Churros get their fluted shape from a star nozzle and are eaten freshly fried, often at breakfast or from street stalls.', et: 'Sooneline kuju tuleb tähtotsikust ning maiust süüakse värskelt praetuna, sageli hommikusöögiks või tänavaletist.' },
-        source: { sourceId: 'wikipedia:churro', title: 'Churro', url: 'https://en.wikipedia.org/wiki/Churro', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'built-in-food-drink-set-066:question:2', factKey: 'built-in-food-drink:food-refresh:cannoli-sicilian-fried-shell-ricotta', tier: 2, subjectKey: 'dessert:cannoli',
+        clue: { en: 'Which Sicilian sweet fills crisp fried pastry tubes with sweetened ricotta?', et: 'Millise Sitsiilia maiuse krõbedad praetud tainatorud täidetakse magusa ricotta-kreemiga?' },
+        response: { en: 'cannoli', et: 'cannoli' }, acceptedVariants: { en: ['cannolo'], et: ['cannolo'] },
+        explanation: { en: 'Cannoli are Sicilian fried pastry shells filled with a sweet ricotta-based cream.', et: 'Cannoli on Sitsiilia praetud tainatorud, mis täidetakse magusa ricotta-põhise kreemiga.' },
+        source: { sourceId: 'wikipedia:cannoli', title: 'Cannoli', url: 'https://en.wikipedia.org/wiki/Cannoli', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'built-in-food-drink-set-066:question:3', factKey: 'built-in-food-drink:checkpoint3:flan-baked-custard-caramel', tier: 3, subjectKey: 'dessert:flan',
@@ -5613,64 +5623,71 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-food-drink-set-084:question:2",
-        "factKey": "built-in-food-drink:checkpoint5:shakshuka-eggs-tomato",
+        "factKey": "built-in-food-drink:food-refresh:bagel-boiled-before-baking",
         "tier": 2,
-        "subjectKey": "dish:shakshuka",
+        "subjectKey": "bread:bagel",
         "clue": {
-          "en": "Which Maghrebi dish poaches eggs in a sauce of tomatoes, peppers, onion and garlic?",
-          "et": "Millises Magribi roas pošeeritakse mune tomati, paprika, sibula ja küüslaugu kastmes?"
+          "en": "Which dense ring-shaped bread is briefly boiled before baking and is often served with cream cheese and salmon?",
+          "et": "Milline tihke rõngakujuline sai keedetakse enne küpsetamist korraks vees ning seda süüakse sageli toorjuustu ja lõhega?"
         },
         "response": {
-          "en": "shakshuka",
-          "et": "shakshuka"
+          "en": "bagel",
+          "et": "bagel"
         },
         "acceptedVariants": {
           "en": [
-            "shakshouka"
+            "bagel bread"
           ],
           "et": [
-            "šakšuka"
+            "rõngassai",
+            "vesikringel"
           ]
         },
         "explanation": {
-          "en": "Shakshuka is popular across North Africa and the Middle East and is commonly spiced with cumin, paprika and cayenne.",
-          "et": "Shakshuka on populaarne Põhja-Aafrikas ja Lähis-Idas ning seda maitsestatakse sageli vürtsköömne, paprika ja Cayenne'i pipraga."
+          "en": "Bagels are shaped into rings, briefly boiled and then baked, producing their glossy crust and chewy crumb.",
+          "et": "Bagel vormitakse rõngaks, keedetakse korraks ja seejärel küpsetatakse, mis annab läikiva kooriku ning sitke sisu."
         },
         "source": {
-          "sourceId": "wikipedia:shakshouka",
-          "title": "Shakshouka",
-          "url": "https://en.wikipedia.org/wiki/Shakshouka",
+          "sourceId": "wikipedia:bagel",
+          "title": "Bagel",
+          "url": "https://en.wikipedia.org/wiki/Bagel",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
         "key": "built-in-food-drink-set-084:question:3",
-        "factKey": "built-in-food-drink:checkpoint5:congee-rice-porridge",
+        "factKey": "built-in-food-drink:food-refresh:pain-au-chocolat-laminated-dough-chocolate",
         "tier": 3,
-        "subjectKey": "dish:congee",
+        "subjectKey": "pastry:pain-au-chocolat",
         "clue": {
-          "en": "Which savoury porridge is made by boiling rice in abundant water until the grains soften?",
-          "et": "Milline soolane puder valmib riisi rohkes vees keetmisel, kuni terad pehmenevad?"
+          "en": "Which rectangular French pastry wraps one or two bars of chocolate in flaky laminated yeast dough?",
+          "et": "Millise ristkülikukujulise Prantsuse küpsetise kihilise pärmitaina sisse on keeratud üks või kaks šokolaadipulka?"
         },
         "response": {
-          "en": "congee",
-          "et": "congee"
+          "en": "pain au chocolat",
+          "et": "pain au chocolat"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "chocolate croissant",
+            "chocolatine"
+          ],
+          "et": [
+            "šokolaadisai",
+            "šokolaadi-croissant"
+          ]
         },
         "explanation": {
-          "en": "Congee may be breakfast or a late supper and can be topped with meat, fish or pickled vegetables.",
-          "et": "Congee'd süüakse hommikusöögiks või hiliseks õhtueineks ning sellele võib lisada liha, kala või marineeritud köögivilju."
+          "en": "Pain au chocolat uses the same laminated yeast dough as a croissant, wrapped around chocolate and baked as a rectangle.",
+          "et": "Pain au chocolat tehakse sarvesaiaga samast kihilisest pärmitainast, mis keeratakse šokolaadi ümber ja küpsetatakse ristkülikuna."
         },
         "source": {
-          "sourceId": "wikipedia:congee",
-          "title": "Congee",
-          "url": "https://en.wikipedia.org/wiki/Congee",
+          "sourceId": "wikipedia:pain-au-chocolat",
+          "title": "Pain au chocolat",
+          "url": "https://en.wikipedia.org/wiki/Pain_au_chocolat",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -7448,35 +7465,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-095:question:1",
-        "factKey": "built-in-food-drink:checkpoint6:meringue",
+        "factKey": "built-in-food-drink:food-refresh:shortcrust-fat-flour-crumbly-pie-base",
         "tier": 1,
-        "subjectKey": "food:meringue",
+        "subjectKey": "pastry:shortcrust-pastry",
         "clue": {
-          "en": "Which light, airy sweet confection is made by whipping egg whites with sugar?",
-          "et": "Milline kerge, õhuline magus maius valmib munavalgete vahustamisel suhkruga?"
+          "en": "Which crumbly pastry, commonly used for pie and tart bases, is made by mixing fat into flour before adding liquid?",
+          "et": "Milline piruka- ja koogipõhjades levinud tainas valmib rasva segamisel jahusse enne vedeliku lisamist ning jääb küpsedes muredaks?"
         },
         "response": {
-          "en": "meringue",
-          "et": "besee"
+          "en": "shortcrust pastry",
+          "et": "muretainas"
         },
         "acceptedVariants": {
           "en": [
-            "meringue mixture"
+            "short pastry"
           ],
           "et": [
-            "mereng"
+            "muretaigen"
           ]
         },
         "explanation": {
-          "en": "Meringue may be baked until crisp or used as a topping for pies and desserts.",
-          "et": "Beseed võib küpsetada krõbedaks või kasutada pirukate ja magustoitude kattena."
+          "en": "Coating flour with fat limits gluten formation, giving shortcrust pastry its tender, crumbly texture.",
+          "et": "Jahu segamine rasvaga piirab gluteeni teket ja annab muretainale õrna, mureneva tekstuuri."
         },
         "source": {
-          "sourceId": "wikipedia:meringue",
-          "title": "Meringue",
-          "url": "https://en.wikipedia.org/wiki/Meringue",
+          "sourceId": "wikipedia:shortcrust-pastry",
+          "title": "Shortcrust pastry",
+          "url": "https://en.wikipedia.org/wiki/Shortcrust_pastry",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -8307,35 +8324,31 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "questions": [
       {
         "key": "built-in-food-drink-set-100:question:1",
-        "factKey": "built-in-food-drink:checkpoint6:couscous",
+        "factKey": "built-in-food-drink:food-refresh:bunny-chow-curry-hollowed-loaf",
         "tier": 1,
-        "subjectKey": "food:couscous",
+        "subjectKey": "dish:bunny-chow",
         "clue": {
-          "en": "Which North African staple consists of tiny steamed granules of rolled semolina?",
-          "et": "Milline Põhja-Aafrika põhitoit koosneb väikestest aurutatud ja veeretatud mannaterakestest?"
+          "en": "Which South African street food serves curry inside a hollowed-out loaf of bread?",
+          "et": "Millises Lõuna-Aafrika tänavatoidus serveeritakse karrit seest õõnestatud saiapätsi sees?"
         },
         "response": {
-          "en": "couscous",
-          "et": "kuskuss"
+          "en": "bunny chow",
+          "et": "bunny chow"
         },
         "acceptedVariants": {
-          "en": [
-            "cuscus"
-          ],
-          "et": [
-            "couscous"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Traditional couscous is steamed above a stew in a vessel called a couscoussier.",
-          "et": "Traditsioonilist kuskussi aurutatakse hautise kohal nõus nimega couscoussier."
+          "en": "Bunny chow originated in Durban and turns a hollowed loaf into an edible container for curry.",
+          "et": "Bunny chow pärineb Durbanist ning selles saab õõnestatud saiapätsist karri söödav anum."
         },
         "source": {
-          "sourceId": "wikipedia:couscous",
-          "title": "Couscous",
-          "url": "https://en.wikipedia.org/wiki/Couscous",
+          "sourceId": "wikipedia:bunny-chow",
+          "title": "Bunny chow",
+          "url": "https://en.wikipedia.org/wiki/Bunny_chow",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {

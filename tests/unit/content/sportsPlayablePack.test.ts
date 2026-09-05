@@ -72,6 +72,7 @@ describe('Sports & Games playable pack', () => {
       clue: psgQuestion.clue,
       response: psgQuestion.response,
       acceptedVariants: psgQuestion.acceptedVariants,
+      explanation: psgQuestion.explanation,
       source: psgQuestion.source,
     };
     const punctuationOnly: AuthorityRow = {
