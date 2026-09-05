@@ -129,6 +129,7 @@ describe('package contents', () => {
     const packageJson = readFileSync('package.json', 'utf8');
 
     expect(forgeConfig).toContain('electronZipDir');
+    expect(forgeConfig).toContain('derefSymlinks: true');
     expect(packageJson).toContain('scripts/prepare-electron-zip.ts');
     expect(JSON.parse(packageJson).scripts.build).toContain('prepare-electron-zip.ts');
     expect(packageJson).toContain('"productName": "Quiz Stage"');

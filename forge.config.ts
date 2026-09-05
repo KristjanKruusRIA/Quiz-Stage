@@ -72,6 +72,7 @@ const makers = makerNamesFor(releaseTarget, packageProfile)
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    derefSymlinks: true,
     executableName: releaseTarget.applicationExecutableName,
     electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
     ...(packagerIconPath === undefined ? {} : { icon: packagerIconPath }),
