@@ -8936,8 +8936,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "jõutagasiside"
         },
         "acceptedVariants": {
-          "en": ["force-feedback"],
-          "et": ["jõu tagasiside"]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "Force feedback uses motors to resist or move a control, such as a racing wheel simulating cornering forces.",
@@ -9920,7 +9920,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:fingerprint-scanner",
         "clue": {
           "en": "A phone can unlock after comparing the arches, loops, and whorls in the ridges of a fingertip with a stored template. What sensor performs this check?",
-          "et": "Telefon võib avaneda, kui sõrmeotsa harjade kaared, silmused ja keerised vastavad salvestatud mallile. Milline andur seda kontrollib?"
+          "et": "Telefon võib avaneda, kui sõrmejälje joonte kaared, silmused ja keerised vastavad salvestatud mallile. Milline andur seda kontrollib?"
         },
         "response": {
           "en": "fingerprint scanner",
@@ -9932,7 +9932,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "A fingerprint scanner captures distinctive ridge features and compares them with an enrolled digital template.",
-          "et": "Sõrmejäljelugeja salvestab harjamustri iseloomulikud tunnused ja võrdleb neid registreeritud digitaalse malliga."
+          "et": "Sõrmejäljelugeja salvestab sõrmejäljemustri iseloomulikud tunnused ja võrdleb neid registreeritud digitaalse malliga."
         },
         "source": {
           "sourceId": "wikipedia:fingerprint-scanner",
@@ -10147,11 +10147,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Bénédictus arendas lamineeritud turvaklaasi pärast seda, kui nägi, et plastkattega kolb hoidis purunenud tükid koos."
         },
         "source": {
-          "sourceId": "wikipedia:edouard-benedictus",
-          "title": "Édouard Bénédictus",
-          "url": "https://en.wikipedia.org/wiki/%C3%89douard_B%C3%A9n%C3%A9dictus",
+          "sourceId": "wikipedia:laminated-glass",
+          "title": "Laminated glass",
+          "url": "https://en.wikipedia.org/wiki/Laminated_glass",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -10293,8 +10293,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "ümbritseva valguse andur"
         },
         "acceptedVariants": {
-          "en": ["light sensor", "ambient-light sensor"],
-          "et": ["valgusandur", "ambient light sensor"]
+          "en": ["light sensor"],
+          "et": ["valgusandur"]
         },
         "explanation": {
           "en": "An ambient light sensor measures surrounding illumination so a device can adjust its screen for the room or outdoors.",
@@ -10572,8 +10572,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "CD-ROM"
         },
         "acceptedVariants": {
-          "en": ["compact disc read-only memory", "CD ROM"],
-          "et": ["CD-ROM-plaat", "CD ROM"]
+          "en": ["compact disc read-only memory"],
+          "et": ["CD-ROM-plaat"]
         },
         "explanation": {
           "en": "A CD-ROM stores computer data on an optical compact disc that is read-only for ordinary users.",
@@ -10755,7 +10755,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "liitiumioonaku"
         },
         "acceptedVariants": {
-          "en": ["Li-ion battery", "lithium ion battery", "Li-ion"],
+          "en": ["Li-ion battery", "Li-ion"],
           "et": ["Li-ioonaku", "liitium-ioonaku", "Li-ion"]
         },
         "explanation": {
@@ -11005,7 +11005,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["baggage belt", "baggage reclaim belt"],
-          "et": ["pagasikonveier", "pagasilint"]
+          "et": ["pagasikonveier", "pagasikarussell"]
         },
         "explanation": {
           "en": "A baggage carousel is a conveyor system that delivers checked luggage to passengers in an arrivals area.",
@@ -11063,7 +11063,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["airport control tower"],
-          "et": ["lennujuhtimistorn", "juhtimistorn"]
+          "et": ["juhtimistorn"]
         },
         "explanation": {
           "en": "A control tower houses airport controllers who manage aircraft on runways and nearby airspace.",
@@ -11166,7 +11166,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "forklift"
           ],
           "et": [
-            "kahveltõstuk"
+            "tõstuk"
           ]
         },
         "explanation": {
@@ -11220,8 +11220,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "delivery:parcel-locker",
         "clue": {
-          "en": "A courier can leave a package in one of many locked compartments for the recipient to collect later. What is this service called?",
-          "et": "Kuller saab jätta paki ühte paljudest lukustatud kappidesse, kust saaja selle hiljem välja võtab. Mis teenus see on?"
+          "en": "A courier can leave a package in one of many locked compartments for the recipient to collect later. What is this device called?",
+          "et": "Kuller saab jätta paki ühte paljudest lukustatud kappidesse, kust saaja selle hiljem välja võtab. Mis seade see on?"
         },
         "response": {
           "en": "parcel locker",
@@ -11469,7 +11469,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "spam filter"
+            "junk mail filter"
           ],
           "et": [
             "spämmifilter"
@@ -11480,11 +11480,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Rämpspostifilter tuvastab soovimatud e-kirjad ja eraldab need tavapostist."
         },
         "source": {
-          "sourceId": "wikipedia:email_spam",
-          "title": "Email spam",
-          "url": "https://en.wikipedia.org/wiki/email_spam",
+          "sourceId": "wikipedia:email-filtering",
+          "title": "Email filtering",
+          "url": "https://en.wikipedia.org/wiki/Email_filtering",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -11609,7 +11609,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "automatic speech recognition"
           ],
           "et": [
-            "kõnetuvastus"
+            "automaatne kõnetuvastus"
           ]
         },
         "explanation": {
@@ -11639,11 +11639,13 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": [
-            "TTS"
+            "TTS",
+            "speech synthesis"
           ],
           "et": [
             "TTS",
-            "tekst kõneks"
+            "tekst kõneks",
+            "kõnesüntees"
           ]
         },
         "explanation": {
@@ -11676,7 +11678,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "screen-reading software"
           ],
           "et": [
-            "ekraanilugeja"
+            "ekraanilugemistarkvara"
           ]
         },
         "explanation": {
@@ -11773,7 +11775,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
             "dozer"
           ],
           "et": [
-            "buldooser"
+            "roomikbuldooser"
           ]
         },
         "explanation": {
@@ -11902,7 +11904,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "service:email",
         "clue": {
           "en": "An address written as name@domain is used to send this kind of electronic message across computer networks. What is it?",
-          "et": "Nimekujulist aadressi name@domain kasutatakse seda liiki elektroonilise sõnumi saatmiseks arvutivõrkudes. Mis see on?"
+          "et": "Kujul name@domain aadressi kasutatakse seda liiki elektroonilise sõnumi saatmiseks arvutivõrgus. Mis see on?"
         },
         "response": {
           "en": "email",
@@ -12070,7 +12072,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:windsock",
         "clue": {
           "en": "Before a small aircraft takes off, pilots can check this fabric cone at the airfield: its narrow end streams downwind and its extension suggests wind strength. What is it?",
-          "et": "Lennuväljal näitab see riidest koonus tuule suunda ja annab pilootidele ligikaudse ettekujutuse tuule tugevusest. Mis see on?"
+          "et": "Enne väikelennuki õhkutõusu saavad piloodid kontrollida lennuväljal seda riidest koonust: selle kitsas ots ulatub allatuult ja sirutus näitab ligikaudselt tuule tugevust. Mis see on?"
         },
         "response": {
           "en": "windsock",
@@ -12771,31 +12773,37 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-061:question:2",
-        "factKey": "built-in-technology-inventions:technology-nordic-roots:medium:bluetooth",
+        "factKey": "built-in-technology-inventions:everyday-digital-connections:medium:airplane-mode",
         "tier": 2,
-        "subjectKey": "technology:bluetooth",
+        "subjectKey": "technology:airplane-mode",
         "clue": {
-          "en": "Named after a Danish king, this short-range wireless standard uses a rune-like logo made from his initials. What is it?",
-          "et": "Taani kuninga järgi nimetatud lähiside standard kasutab tema initsiaalidest moodustatud ruunikujulist logo. Mis standard see on?"
+          "en": "Which phone setting switches off cellular transmission for a flight and is usually shown with an aircraft icon?",
+          "et": "Milline telefoni seade lülitab lennu ajaks mobiilside välja ja on tavaliselt tähistatud lennukiikooniga?"
         },
         "response": {
-          "en": "Bluetooth",
-          "et": "Bluetooth"
+          "en": "airplane mode",
+          "et": "lennurežiim"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": [
+            "flight mode",
+            "aeroplane mode"
+          ],
+          "et": [
+            "lennukirežiim",
+            "Airplane Mode"
+          ]
         },
         "explanation": {
-          "en": "Bluetooth is a short-range wireless technology for exchanging data between nearby devices. Its name and logo refer to the Danish king Harald Bluetooth.",
-          "et": "Bluetooth on lähimaa juhtmevaba tehnoloogia lähedal asuvate seadmete andmevahetuseks. Selle nimi ja logo viitavad Taani kuningale Harald Bluetoothile."
+          "en": "Airplane mode disables a device’s cellular radio transmission for air travel. Wi-Fi or Bluetooth can often be switched back on separately when the airline allows it.",
+          "et": "Lennurežiim lülitab lennureisi ajaks seadme mobiilside raadiosaatja välja. Kui lennufirma seda lubab, saab Wi‑Fi või Bluetoothi sageli eraldi uuesti sisse lülitada."
         },
         "source": {
-          "sourceId": "wikipedia:Bluetooth",
-          "title": "Bluetooth",
-          "url": "https://en.wikipedia.org/wiki/Bluetooth",
+          "sourceId": "wikipedia:Airplane_mode",
+          "title": "Airplane mode",
+          "url": "https://en.wikipedia.org/wiki/Airplane_mode",
           "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-08-31"
+          "retrievedAt": "2026-09-05"
         }
       },
       {
@@ -13338,7 +13346,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:zoetrope",
         "clue": {
           "en": "When spun, this Victorian drum with a strip of drawings makes them appear to move through slits in its side. What is it?",
-          "et": "Pöörlemisel paneb see viktoriaanlik joonistusribaga trummel külgedel olevate pilude kaudu pildid näiliselt liikuma. Mis seade see on?"
+          "et": "Kui seda viktoriaanlikku joonistusribaga trumlit pöörata, näivad pildid külgedel olevate pilude kaudu liikuvat. Mis seade see on?"
         },
         "response": {
           "en": "zoetrope",
@@ -13434,7 +13442,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "energy:hydroelectricity",
         "clue": {
           "en": "At a dam, falling or flowing water turns turbines to generate this form of electricity. What is it called?",
-          "et": "Tammis paneb langev või voolav vesi turbiinid pöörlema, et toota seda liiki elektrit. Mis see on?"
+          "et": "Hüdroelektrijaamas paneb langev või voolav vesi turbiinid pöörlema ja toodab elektrit. Mis energialiik see on?"
         },
         "response": {
           "en": "hydroelectricity",
@@ -13496,7 +13504,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "energy:geothermal-energy",
         "clue": {
           "en": "Iceland taps this energy source by using heat from beneath Earth’s surface for heating and electricity. What is it?",
-          "et": "Island kasutab seda energiaallikat Maa pinna alt tuleva soojuse abil kütteks ja elektri tootmiseks. Mis energiaallikas see on?"
+          "et": "Island kasutab Maa sisemusest pärinevat soojust kütteks ja elektri tootmiseks. Mis energiaallikas see on?"
         },
         "response": {
           "en": "geothermal energy",
@@ -13885,7 +13893,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "explosive:dynamite",
         "clue": {
           "en": "What explosive did Alfred Nobel patent in 1867 after making volatile nitroglycerin easier to handle by absorbing it into kieselguhr?",
-          "et": "Millise lõhkeaine patenteeris Alfred Nobel 1867. aastal pärast seda, kui muutis ebastabiilse nitroglütseriini käsitsemise lihtsamaks, immutades selle kobediatomiiti?"
+          "et": "Millise lõhkeaine patenteeris Alfred Nobel 1867. aastal pärast seda, kui muutis ebastabiilse nitroglütseriini käsitsemise lihtsamaks, segades selle kobediatomiidiga?"
         },
         "response": {
           "en": "dynamite",
@@ -14155,7 +14163,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "computer:ibm-system-360",
         "clue": {
           "en": "Which IBM computer family was designed so programs could run across machines of different sizes, helping establish a common architecture for business computing?",
-          "et": "Milline IBMi arvutiperekond kavandati nii, et programmid saaksid töötada eri suurusega masinatel, aidates kujundada ärarvutuse ühise arhitektuuri?"
+          "et": "Milline IBMi arvutiperekond kavandati nii, et programmid saaksid töötada eri suurusega masinatel, aidates kujundada äriarvutuse ühise arhitektuuri?"
         },
         "response": {
           "en": "IBM System/360",
@@ -14251,7 +14259,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "software:visicalc",
         "clue": {
           "en": "What 1979 spreadsheet is often credited with turning the Apple II into a serious business machine?",
-          "et": "Millist 1979. aasta tabelarvutusprogrammi peetakse sageli Apple II muutmisel tõsiseks ärimasinaks?"
+          "et": "Millist varajast tabelarvutusprogrammi peetakse sageli tooteks, mis muutis Apple II koduarvutist tõsiseltvõetavaks äriarvutiks?"
         },
         "response": {
           "en": "VisiCalc",
@@ -14501,7 +14509,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "camera:leica-i",
         "clue": {
           "en": "Which 1920s German camera helped establish 35 mm film as a serious format for compact still photography?",
-          "et": "Milline 1920. aastate Saksa kaamera aitas muuta 35 mm filmi kompaktse fotokaamera tõsiseks standardiks?"
+          "et": "Milline 1920. aastate Saksa kaamera aitas kinnistada 35 mm filmi tõsiseltvõetava formaadina kompaktses fotokaameras?"
         },
         "response": {
           "en": "Leica I",
@@ -15187,7 +15195,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The Amiga 500 made the Amiga platform broadly popular in a compact home-computer case, with dedicated chips for graphics and sound.",
-          "et": "Amiga 500 tegi Amiga platvormi kompaktses koduarvutikorpuses laialt populaarseks ning kasutas graafika ja heli erikiibe."
+          "et": "Amiga 500 tegi Amiga platvormi kompaktses koduarvutikorpuses laialt populaarseks ning kasutas graafika ja heli erikiipe."
         },
         "source": {
           "sourceId": "wikipedia:amiga-500",
@@ -15204,7 +15212,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "computer:altair-8800",
         "clue": {
           "en": "Which mail-order microcomputer kit appeared on the cover of the January 1975 issue of Popular Electronics, with rows of switches and lights on its front panel?",
-          "et": "Milline postimüügist saadav mikroarvutikomplekt ilmus ajakirja Popular Electronics 1975. aasta jaanuarinumbrite kaanele ning mille esipaneelil olid lülitite ja tulede read?"
+          "et": "Milline postimüügist saadav mikroarvutikomplekt ilmus ajakirja Popular Electronics 1975. aasta jaanuarinumbri kaanele ning mille esipaneelil olid lülitite ja tulede read?"
         },
         "response": {
           "en": "Altair 8800",
@@ -15261,7 +15269,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-technology-inventions-set-077",
     "name": {
       "en": "Satellites That Changed the View",
-      "et": "Satelliidid, mis muutsid vaadet"
+      "et": "Satelliidid, mis muutsid meie maailmapilti"
     },
     "questions": [
       {
@@ -15307,8 +15315,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Landsat 1"
         },
         "acceptedVariants": {
-          "en": ["ERTS-1"],
-          "et": ["ERTS-1"]
+          "en": ["ERTS-1", "Landsat I"],
+          "et": ["ERTS-1", "Landsat I"]
         },
         "explanation": {
           "en": "Landsat 1, first called ERTS-1, supplied multispectral images of Earth and established the Landsat remote-sensing programme.",
@@ -15329,7 +15337,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "satellite:telstar-1",
         "clue": {
           "en": "Which 1962 communications satellite relayed the first live television pictures across the Atlantic, though it could transmit only while in view of ground stations?",
-          "et": "Milline 1962. aasta sidesatelliit vahendas esimesed otseülekande telepildid üle Atlandi, kuid sai edastada vaid siis, kui maajaamad seda nägid?"
+          "et": "Milline 1962. aasta sidesatelliit vahendas esimese televisiooni otseülekande üle Atlandi, kuid sai edastada vaid siis, kui oli maajaamade vaateväljas?"
         },
         "response": {
           "en": "Telstar 1",
@@ -15341,7 +15349,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Telstar 1 was an active communications satellite in a low orbit, so its transatlantic relay windows were brief but historic.",
-          "et": "Telstar 1 oli madalal orbiidil töötav sidesatelliit, mistõttu olid selle Atlandi-ülesed edastusaknad lühikesed, kuid ajaloolised."
+          "et": "Telstar 1 oli esimene aktiivne sidesatelliit ja töötas madalal orbiidil, mistõttu olid selle Atlandi-ülesed edastusaknad lühikesed, kuid ajaloolised."
         },
         "source": {
           "sourceId": "wikipedia:telstar-1",
@@ -15365,8 +15373,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "TIROS-1"
         },
         "acceptedVariants": {
-          "en": [],
-          "et": []
+          "en": ["TIROS I"],
+          "et": ["TIROS I"]
         },
         "explanation": {
           "en": "TIROS-1 was the first successful low-Earth-orbit weather satellite and returned images that revealed cloud systems on a large scale.",
@@ -15399,7 +15407,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Syncom 3 stayed over one point on the equator, a practical breakthrough for continuous communications and Olympic television coverage.",
-          "et": "Syncom 3 püsis ekvaatori kohal ühe punkti kohal, mis oli pideva side ja olümpiatelevisiooni jaoks praktiline läbimurre."
+          "et": "Syncom 3 püsis ekvaatoril asuva ühe punkti kohal, mis oli pideva side ja olümpiatelevisiooni jaoks praktiline läbimurre."
         },
         "source": {
           "sourceId": "wikipedia:syncom-3",
@@ -15465,8 +15473,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "A laser printer adapts xerographic copying: toner follows an electrically charged image and is fused by heat.",
-          "et": "Laserprinter kohandab kserograafiat: tooner järgib elektrilaenguga kujutist ja kinnitatakse kuumusega."
+          "en": "A laser printer uses a focused beam swept by a rotating mirror to write an electrostatic image on a drum; toner follows that image and is fused to paper with heat.",
+          "et": "Laserprinter kasutab pöörleva peegliga suunatud kiiret, et kirjutada trumlile elektrostaatiline kujutis; tooner kinnitub kujutisele ja sulatatakse kuumusega paberile."
         },
         "source": {
           "sourceId": "wikipedia:laser-printing",
@@ -15494,8 +15502,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["termoprinter"]
         },
         "explanation": {
-          "en": "Direct thermal printing darkens a heat-sensitive coating. Incidental heat or friction can darken the paper, while light can fade the printed image.",
-          "et": "Otsetermotrükk tumendab kuumatundlikku katet. Juhuslik kuumus või hõõrdumine võib paberit tumendada, valgus aga trükipilti pleegitada."
+          "en": "Direct thermal printing darkens a heat-sensitive coating; laminator heat can therefore turn an entire sonogram black, while light can later fade the image.",
+          "et": "Otsetermotrükk tumendab kuumatundlikku katet; laminaatori kuumus võib seetõttu muuta kogu ultrahelipildi mustaks, valgus aga pilti hiljem pleegitada."
         },
         "source": {
           "sourceId": "wikipedia:thermal-printing",
@@ -15636,7 +15644,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "test:crash-test-dummy",
         "clue": {
-          "en": "What crash-laboratory surrogate lets engineers compare two restraint designs because instruments inside it record the loads a human body would experience?",
+          "en": "What human-shaped crash-laboratory surrogate lets engineers compare two restraint designs because instruments inside it record the loads a human body would experience?",
           "et": "Milline avariilabori inimesekujuline asendaja võimaldab inseneridel võrrelda kahte turvasüsteemi, sest selle sees olevad andurid salvestavad inimkehale mõjuvaid koormusi?"
         },
         "response": {
@@ -15820,7 +15828,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "aircraft:bell-x-1",
         "clue": {
           "en": "Which rocket-powered orange research aircraft carried Chuck Yeager past the sound barrier in level flight in 1947?",
-          "et": "Milline rakettmootoriga oranž uurimislennuk, millega Chuck Yeager ületas 1947. aastal horisontaallennul helikiiruse?"
+          "et": "Millise rakettmootoriga oranži uurimislennukiga ületas Chuck Yeager 1947. aastal esimesena helibarjääri?"
         },
         "response": {
           "en": "Bell X-1",
@@ -16031,7 +16039,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
     "categorySetId": "built-in-technology-inventions-set-082",
     "name": {
       "en": "Calculators Before Electronics",
-      "et": "Arvutusmasinad enne elektroonikat"
+      "et": "Arvutusvahendid enne elektroonikat"
     },
     "questions": [
       {
@@ -16099,7 +16107,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "calculator:arithmometer",
         "clue": {
           "en": "What nineteenth-century mechanical calculator popularised a reliable way to add, subtract, multiply, and divide with a turning crank?",
-          "et": "Milline 19. sajandi mehaaniline kalkulaator populariseeris töökindla viisi liita, lahutada, korrutada ja jagada väntaga?"
+          "et": "Milline 19. sajandi mehaaniline kalkulaator populariseeris töökindla viisi liita, lahutada, korrutada ja jagada vända abil?"
         },
         "response": {
           "en": "arithmometer",
@@ -16195,7 +16203,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:hearing-aid",
         "clue": {
           "en": "What ear-worn device has its gain programmed from an audiogram and can be checked with a probe-tube real-ear measurement during fitting?",
-          "et": "Millise kõrvas kantava seadme võimendus programmeeritakse audiogrammi järgi ja mida saab kohandamisel kontrollida sonditoruga tehtava päriskõrva mõõtmisega?"
+          "et": "Millise kõrvas või kõrva taga kantava seadme võimendus programmeeritakse audiogrammi järgi ja mida saab kohandamisel kontrollida sonditoruga tehtava päriskõrva mõõtmisega?"
         },
         "response": {
           "en": "hearing aid",
@@ -16206,8 +16214,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "A hearing aid captures sound with a microphone, processes or amplifies it, and sends the result to a receiver near the ear.",
-          "et": "Kuuldeaparaat püüab heli mikrofoniga, töötleb või võimendab seda ja saadab tulemuse kõrva lähedal asuvasse vastuvõtjasse."
+          "en": "A hearing aid's gain is programmed from an audiogram, and probe-tube real-ear measurement can verify the sound delivered during fitting.",
+          "et": "Kuuldeaparaadi võimendus programmeeritakse audiogrammi järgi ning sonditoruga tehtava päriskõrva mõõtmisega saab kohandamisel kontrollida edastatavat heli."
         },
         "source": {
           "sourceId": "wikipedia:hearing-aid",
@@ -16224,7 +16232,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:prosthetic-limb",
         "clue": {
           "en": "What limb-replacement category ranges from passive cosmetic devices through body-powered hooks to myoelectric models, with designs tailored to a sport or occupation?",
-          "et": "Milline jäset asendav seadmeliik ulatub passiivsetest kosmeetilistest lahendustest kehajõul töötavate konksude ja müoelektriliste mudeliteni ning mida saab kohandada spordiala või ameti järgi?"
+          "et": "Milline jäset asendav seadmeliik ulatub passiivsetest kosmeetilistest lahendustest keha jõul töötavate konksproteeside ja müoelektriliste mudeliteni ning mille lahendusi saab kohandada spordiala või ameti järgi?"
         },
         "response": {
           "en": "prosthetic limb",
@@ -16235,8 +16243,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["käe- või jalaprotees", "tehisjäse", "käeprotees", "ülajäsemeprotees"]
         },
         "explanation": {
-          "en": "A prosthetic limb replaces a missing body part; modern designs can be tailored for everyday mobility or a particular activity.",
-          "et": "Jäsemeprotees asendab puuduvat kehaosa; nüüdisaegseid lahendusi saab kohandada igapäevaseks liikumiseks või kindlaks tegevuseks."
+          "en": "Prosthetic limbs may be passive, body-powered or myoelectric, and designs can be tailored to everyday use, sport or a particular occupation.",
+          "et": "Jäsemeproteesid võivad olla passiivsed, keha jõul töötavad või müoelektrilised ning nende lahendusi saab kohandada igapäevaseks kasutuseks, spordialaks või kindlaks ametiks."
         },
         "source": {
           "sourceId": "wikipedia:prosthesis",
@@ -16294,7 +16302,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "A cochlear implant combines an external sound processor with an internal electrode array that stimulates the auditory nerve.",
-          "et": "Sisekõrvaimplantaat ühendab välise heliprotsessori sisemise elektroodirea süsteemiga, mis stimuleerib kuulmisnärvi."
+          "et": "Sisekõrvaimplantaat ühendab välise heliprotsessori sisemise elektroodireaga, mis stimuleerib kuulmisnärvi."
         },
         "source": {
           "sourceId": "wikipedia:cochlear-implant",
@@ -16311,7 +16319,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:artificial-heart",
         "clue": {
           "en": "What implanted device replaces the heart itself, rather than merely assisting a ventricle, and is usually used as a bridge while a patient awaits a transplant?",
-          "et": "Milline siiratav seade asendab südame enda, mitte ei abista üksnes vatsakest, ning seda kasutatakse tavaliselt siirdamissüdame ootamise ajal?"
+          "et": "Milline siiratav seade asendab südame enda, mitte ei abista üksnes vatsakest, ning seda kasutatakse tavaliselt südamesiirdamist oodates?"
         },
         "response": {
           "en": "artificial heart",
@@ -16536,7 +16544,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "ILOVEYOU worm",
-          "et": "ILOVEYOU uss"
+          "et": "ILOVEYOU-uss"
         },
         "acceptedVariants": {
           "en": ["ILOVEYOU", "Love Bug"],
@@ -16631,7 +16639,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The Zune 30's internal clock driver mishandled the final day of the 2008 leap year, and the players recovered automatically after 24 hours.",
-          "et": "Zune 30 sisemine kelladraiver käsitles 2008. liigaasta viimast päeva valesti ning mängijad taastusid 24 tunni pärast automaatselt."
+          "et": "Zune 30 sisemine kelladraiver käsitles 2008. liigaasta viimast päeva valesti ning seadmed taastusid 24 tunni pärast automaatselt."
         },
         "source": {
           "sourceId": "wikipedia:zune",
@@ -16751,8 +16759,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "HD DVD"
         },
         "acceptedVariants": {
-          "en": ["HD-DVD", "Toshiba HD DVD"],
-          "et": ["HD-DVD", "Toshiba HD DVD"]
+          "en": ["Toshiba HD DVD"],
+          "et": ["Toshiba HD DVD"]
         },
         "explanation": {
           "en": "HD DVD and Blu-ray competed to replace DVD for high-definition video; Toshiba ended the HD DVD business after studios and retailers shifted toward Blu-ray.",
@@ -16927,15 +16935,15 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "software:td-gammon",
         "clue": {
           "en": "Gerald Tesauro's backgammon program learned from self-play using temporal-difference methods and reached near top-human strength. Name the program.",
-          "et": "Gerald Tesauro triktrakkiprogramm õppis iseendaga mängides ja kasutas ajavahe meetodit, jõudes peaaegu parimate inimeste tasemele. Mis programm see oli?"
+          "et": "Gerald Tesauro triktrakkiprogramm õppis iseendaga mängides ja kasutas temporaalsete erinevuste meetodit, jõudes peaaegu parimate inimeste tasemele. Mis programm see oli?"
         },
         "response": {
           "en": "TD-Gammon",
           "et": "TD-Gammon"
         },
         "acceptedVariants": {
-          "en": ["TD Gammon"],
-          "et": ["TD Gammon"]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "TD-Gammon became an influential reinforcement-learning example because it discovered strong backgammon play largely through experience rather than an expert-written strategy book.",
@@ -16969,11 +16977,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "404 Not Found",
-          "et": "viga 404"
+          "et": "404-viga"
         },
         "acceptedVariants": {
           "en": ["404 error", "HTTP 404", "404"],
-          "et": ["404 viga", "HTTP 404", "404"]
+          "et": ["HTTP 404", "404"]
         },
         "explanation": {
           "en": "HTTP status 404 means the server was reached but could not find the requested resource; it does not necessarily mean the whole website is offline.",
@@ -17030,8 +17038,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Ctrl-Alt-Delete"
         },
         "acceptedVariants": {
-          "en": ["Control-Alt-Delete", "Ctrl+Alt+Del", "Ctrl+Alt+Delete", "Ctrl-Alt-Del", "three-finger salute"],
-          "et": ["Control-Alt-Delete", "Ctrl+Alt+Del", "Ctrl+Alt+Delete", "Ctrl-Alt-Del", "kolme sõrme tervitus"]
+          "en": ["Control-Alt-Delete", "Ctrl+Alt+Del", "three-finger salute"],
+          "et": ["Control-Alt-Delete", "Ctrl+Alt+Del", "kolme sõrme tervitus"]
         },
         "explanation": {
           "en": "Ctrl-Alt-Delete began as a quick way for IBM PC developers to reboot without cycling the power and later gained a separate Windows security role.",
@@ -17088,8 +17096,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "„Hello, World!” programm"
         },
         "acceptedVariants": {
-          "en": ["Hello, World!", "Hello World program"],
-          "et": ["Hello, World!", "Hello World programm"]
+          "en": ["Hello, World!"],
+          "et": ["Hello, World!"]
         },
         "explanation": {
           "en": "The Hello, World! example became a standard way to show the basic syntax needed to produce output in a new programming language.",
@@ -17130,8 +17138,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": ["Volkswagen Beetle", "VW Põrnikas"]
         },
         "explanation": {
-          "en": "The Volkswagen Beetle paired its unmistakable rounded body with an air-cooled rear engine and became one of history's most-produced car designs.",
-          "et": "Volkswagen Põrnikas ühendas iseloomuliku ümara kere õhkjahutusega tagamootoriga ning sellest sai üks ajaloo enim toodetud automudeleid."
+          "en": "The Volkswagen Beetle paired its rounded body with an air-cooled rear engine and became one of history's most-produced car designs.",
+          "et": "Volkswagen Põrnikas ühendas ümara kere õhkjahutusega tagamootoriga ning sellest sai üks ajaloo enim toodetud automudeleid."
         },
         "source": {
           "sourceId": "wikipedia:volkswagen-beetle",
@@ -17152,11 +17160,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "original Mini",
-          "et": "algupärane Mini"
+          "et": "klassikaline Mini"
         },
         "acceptedVariants": {
           "en": ["classic Mini", "BMC Mini"],
-          "et": ["klassikaline Mini", "BMC Mini"]
+          "et": ["algupärane Mini", "BMC Mini"]
         },
         "explanation": {
           "en": "The original Mini's transverse engine and front-wheel-drive layout saved so much space that the design influenced generations of compact cars.",
@@ -17309,7 +17317,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "lasermäng"
         },
         "acceptedVariants": {
-          "en": ["laser-tag", "lasertag"],
+          "en": ["lasertag"],
           "et": ["lasersõda", "laser tag"]
         },
         "explanation": {
@@ -17331,7 +17339,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "toy:nintendo-game-and-watch",
         "clue": {
           "en": "Gunpei Yokoi's calculator-sized handhelds paired one game with a digital clock on a segmented LCD and became Nintendo's first worldwide electronic-game success. Name the series.",
-          "et": "Gunpei Yokoi kalkulaatorisuurused pihuseadmed ühendasid ühe mängu digitaalkellaga segmendiekraanil ning neist sai Nintendo esimene ülemaailmne elektroonilise mängu edu. Mis seeria see oli?"
+          "et": "Gunpei Yokoi kalkulaatorisuurused pihuseadmed ühendasid ühe mängu digitaalkellaga segmendiekraanil ning tõid Nintendole esimese ülemaailmse edu elektrooniliste mängude vallas. Mis seeria see oli?"
         },
         "response": {
           "en": "Nintendo Game & Watch",
@@ -17434,8 +17442,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Windows 95 käivitusheli"
         },
         "acceptedVariants": {
-          "en": ["The Microsoft Sound", "Microsoft Sound"],
-          "et": ["The Microsoft Sound", "Microsofti heli"]
+          "en": ["The Microsoft Sound"],
+          "et": ["The Microsoft Sound"]
         },
         "explanation": {
           "en": "Microsoft commissioned Brian Eno to create the Windows 95 startup piece, officially titled The Microsoft Sound.",
@@ -17456,7 +17464,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "sound:intel-bong",
         "clue": {
           "en": "Walter Werzowa wrote this five-note sonic logo, heard at the end of countless adverts for processors carrying an “Inside” badge. Name the sound.",
-          "et": "Walter Werzowa kirjutas selle viienoodilise helilogo, mida kõlas lugematute „Inside” märgiga protsessorite reklaamide lõpus. Mis heli see on?"
+          "et": "Walter Werzowa kirjutas selle viienoodilise helilogo, mis kõlas lugematute „Inside” märgiga protsessorite reklaamide lõpus. Mis heli see on?"
         },
         "response": {
           "en": "Intel bong",
@@ -17610,7 +17618,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "clock:doomsday",
         "clue": {
           "en": "The Bulletin of the Atomic Scientists moves this symbolic clock toward or away from midnight to warn how close humanity is to catastrophe. Name it.",
-          "et": "Bulletin of the Atomic Scientists liigutab seda sümboolset kella keskööle lähemale või sellest eemale, et hoiatada inimkonna läheduse eest katastroofile. Mis kell see on?"
+          "et": "Bulletin of the Atomic Scientists liigutab seda sümboolset kella keskööle lähemale või sellest eemale, et näidata, kui lähedal on inimkond katastroofile. Mis kell see on?"
         },
         "response": {
           "en": "Doomsday Clock",
@@ -17743,7 +17751,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["rickroll", "Rick Roll", "Rickroll prank"],
-          "et": ["rickrollimine", "Rick Roll", "rick roll", "Rickrolli-vemp"]
+          "et": ["rickrollimine", "Rick Roll", "Rickrolli-vemp"]
         },
         "explanation": {
           "en": "The bait-and-switch joke disguises the destination of a link, then redirects the victim to Astley's music video.",
@@ -17788,37 +17796,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-technology-inventions-set-093:question:3",
-        "factKey": "built-in-technology-inventions:checkpoint8:viral:hampster-dance-webpage",
-        "tier": 3,
-        "subjectKey": "meme:hampster-dance",
-        "clue": {
-          "en": "Rows of animated hamsters bounced across an early webpage to a sped-up tune based on Disney's Whistle-Stop. Name this web craze, whose title deliberately misspelled the animal.",
-          "et": "Varajasel veebilehel hüplesid animeeritud hamstriread Disney loo Whistle-Stop kiirendatud töötluse saatel. Mis nime kandis see veebihullus, mille pealkirjas kirjutati looma nimi meelega valesti?"
-        },
-        "response": {
-          "en": "Hampster Dance",
-          "et": "Hampster Dance"
-        },
-        "acceptedVariants": {
-          "en": ["Hamster Dance", "Hampsterdance"],
-          "et": ["Hamster Dance", "Hampsterdance"]
-        },
-        "explanation": {
-          "en": "The historical Hampster spelling came from the page's name; its looping GIFs and squeaky music made it an early internet phenomenon.",
-          "et": "Ajalooline kirjapilt Hampster tuli lehe nimest; korduvad GIF-id ja piiksuv muusika tegid sellest varajase internetifenomeni."
-        },
-        "source": {
-          "sourceId": "wikipedia:hampster-dance",
-          "title": "Hampster Dance",
-          "url": "https://en.wikipedia.org/wiki/Hampster_Dance",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-01"
-        }
-      },
-      {
-        "key": "built-in-technology-inventions-set-093:question:4",
         "factKey": "built-in-technology-inventions:checkpoint8:viral:dancing-baby-animation",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "meme:dancing-baby",
         "clue": {
           "en": "A looping 3D infant animation spread online in 1996 and later appeared doing its moves on Ally McBeal. Name the viral character.",
@@ -17840,6 +17819,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:dancing-baby",
           "title": "Dancing baby",
           "url": "https://en.wikipedia.org/wiki/Dancing_baby",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-01"
+        }
+      },
+      {
+        "key": "built-in-technology-inventions-set-093:question:4",
+        "factKey": "built-in-technology-inventions:checkpoint8:viral:hampster-dance-webpage",
+        "tier": 4,
+        "subjectKey": "meme:hampster-dance",
+        "clue": {
+          "en": "Rows of animated hamsters bounced across an early webpage to a sped-up tune based on Disney's Whistle-Stop. Name this web craze, whose title deliberately misspelled the animal.",
+          "et": "Varajasel veebilehel hüplesid animeeritud hamstriread Disney loo Whistle-Stop kiirendatud töötluse saatel. Mis nime kandis see veebihullus, mille pealkirjas kirjutati looma nimi meelega valesti?"
+        },
+        "response": {
+          "en": "Hampster Dance",
+          "et": "Hampster Dance"
+        },
+        "acceptedVariants": {
+          "en": ["Hamster Dance", "Hampsterdance"],
+          "et": ["Hamster Dance", "Hampsterdance"]
+        },
+        "explanation": {
+          "en": "The historical Hampster spelling came from the page's name; its looping GIFs and squeaky music made it an early internet phenomenon.",
+          "et": "Ajalooline kirjapilt Hampster tuli lehe nimest; korduvad GIF-id ja piiksuv muusika tegid sellest varajase internetifenomeni."
+        },
+        "source": {
+          "sourceId": "wikipedia:hampster-dance",
+          "title": "Hampster Dance",
+          "url": "https://en.wikipedia.org/wiki/Hampster_Dance",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-01"
         }
@@ -17901,7 +17909,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Engineer George Washington Gale Ferris Jr designed the wheel for the World's Columbian Exposition in Chicago.",
-          "et": "Insener George Washington Gale Ferris noorem kavandas ratta Chicagos toimunud World's Columbian Expositioni jaoks."
+          "et": "Insener George Washington Gale Ferris noorem kavandas ratta Chicago maailmanäituse jaoks."
         },
         "source": {
           "sourceId": "wikipedia:ferris-wheel-1893",
@@ -17947,7 +17955,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "car:ford-mustang",
         "clue": {
           "en": "Ford introduced this horse-named pony car at the 1964 New York World's Fair; months later a white convertible appeared in Goldfinger. Name the model.",
-          "et": "Ford esitles seda hobusenimega pony car'i 1964. aasta New Yorgi maailmanäitusel; mõni kuu hiljem ilmus valge kabriolett filmis Goldfinger. Mis mudel see oli?"
+          "et": "Ford esitles seda hobusenimega sportlikku automudelit 1964. aasta New Yorgi maailmanäitusel; mõni kuu hiljem ilmus valge kabriolett filmis Goldfinger. Mis mudel see oli?"
         },
         "response": {
           "en": "Ford Mustang",
@@ -17955,11 +17963,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["Mustang car", "first Ford Mustang", "Mustang"],
-          "et": ["Mustangi auto", "esimene Ford Mustang", "Mustang"]
+          "et": ["esimene Ford Mustang", "Mustang"]
         },
         "explanation": {
           "en": "The Mustang made its public debut at Ford's pavilion at the 1964 fair before becoming the model that defined the pony-car class.",
-          "et": "Mustang tegi avaliku debüüdi Fordi paviljonis 1964. aasta maailmanäitusel ja kujunes pony car'i autoklassi määranud mudeliks."
+          "et": "Mustang tegi avaliku debüüdi Fordi paviljonis 1964. aasta maailmanäitusel ning kujunes sportlike kompaktmudelite klassi määranud autoks."
         },
         "source": {
           "sourceId": "wikipedia:ford-mustang",
@@ -18043,11 +18051,11 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "device:cats-eye-road-stud",
         "clue": {
           "en": "Percy Shaw's road marker returns headlights toward the driver, echoing the bright eyes of a feline at night. Name the device.",
-          "et": "Percy Shaw' teemärgis peegeldab esituled tagasi juhi poole, meenutades öösel helendavaid kassi silmi. Mis seade see on?"
+          "et": "Percy Shaw' teemärgis peegeldab esitulede valguse tagasi juhi poole, meenutades öösel helendavaid kassi silmi. Mis seade see on?"
         },
         "response": {
           "en": "cat's eye road stud",
-          "et": "kassisilm-teehelkur"
+          "et": "kassisilmhelkur"
         },
         "acceptedVariants": {
           "en": ["cat's eye road reflector", "cat's eye stud"],
@@ -18233,8 +18241,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Million Dollar Homepage"
         },
         "acceptedVariants": {
-          "en": ["The Million Dollar Homepage"],
-          "et": ["Million Dollar Homepage'i veebisait"]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "Alex Tew launched the page to raise money for university, selling its million-pixel advertising grid in small blocks.",
@@ -18320,8 +18328,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Les Horribles Cernettes"
         },
         "acceptedVariants": {
-          "en": ["Cernettes", "CERNettes"],
-          "et": ["Cernettes", "CERNettes"]
+          "en": ["Cernettes"],
+          "et": ["Cernettes"]
         },
         "explanation": {
           "en": "The CERN parody band appeared in a backstage photograph that became the first band photo published on the World Wide Web.",
@@ -18340,8 +18348,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-technology-inventions-set-097",
     "name": {
-      "en": "Hardware That Changed How We Played",
-      "et": "Riistvara, mis muutis mängimist"
+      "en": "Gaming Hardware Hits and Experiments",
+      "et": "Mänguriistvara hitid ja eksperimendid"
     },
     "questions": [
       {
@@ -18629,7 +18637,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "acceptedVariants": {
           "en": ["GNU"],
-          "et": ["GNU", "GNU projekt"]
+          "et": ["GNU"]
         },
         "explanation": {
           "en": "GNU expands recursively to GNU's Not Unix and was launched to build a completely free Unix-compatible operating system.",
@@ -18724,8 +18732,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Ansari X Prize"
         },
         "acceptedVariants": {
-          "en": ["Ansari X-Prize"],
-          "et": ["Ansari X-Prize"]
+          "en": [],
+          "et": []
         },
         "explanation": {
           "en": "The prize rewarded the first privately financed reusable crewed spacecraft to complete the required two flights.",
@@ -18878,8 +18886,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": "Aibo"
         },
         "acceptedVariants": {
-          "en": ["AIBO", "Sony Aibo"],
-          "et": ["AIBO", "Sony Aibo"]
+          "en": ["Sony Aibo"],
+          "et": ["Sony Aibo"]
         },
         "explanation": {
           "en": "Aibo was designed as an autonomous entertainment robot with dog-like movement and behaviour rather than as a working machine.",
@@ -18941,7 +18949,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Shakey used cameras and sensors with planning software so it could reason about a sequence of actions in its environment.",
-          "et": "Shakey kasutas kaameraid ja andureid koos planeerimistarkvaraga, et oma keskkonnas tegevuste jada üle arutleda."
+          "et": "Shakey kasutas kaameraid ja andureid koos planeerimistarkvaraga, et oma keskkonnas tegevuste jada kavandada."
         },
         "source": {
           "sourceId": "wikipedia:shakey-the-robot",
