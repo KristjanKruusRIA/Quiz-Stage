@@ -1,10 +1,27 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
+import { buildEasyExpansionCorpus } from '../../../scripts/content/easyExpansion/bank';
+import {
+  hashEasyExpansionBaselineRecord,
+  parseEasyExpansionBaselineManifest,
+  type EasyExpansionBaselineManifest,
+  type EasyExpansionBaselineRecordInput,
+} from '../../../scripts/content/easyExpansion/createBaselineManifest';
 import type {
   EasyExpansionBatchContract,
   EasyExpansionCategory,
 } from '../../../scripts/content/easyExpansion/types';
 import { validateEasyExpansionBank } from '../../../scripts/content/easyExpansion/validateBank';
+import { parseEvidenceJsonl, type ContentEvidence } from '../../../scripts/content/evidence';
+import {
+  acceptedBatchPaths,
+  FINAL_BATCH,
+  PRODUCTION_BATCHES,
+} from '../../../scripts/content/productionBatches';
+import { parsePackCsv, type ParsedCsvRow } from '../../../src/main/content/csvPacks';
+import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 
 const SUBJECTS = ['atlas', 'beacon', 'comet', 'delta', 'ember'] as const;
 
@@ -76,6 +93,164 @@ function replaceCategory(
   replacement: EasyExpansionCategory,
 ): readonly EasyExpansionCategory[] {
   return categories.map((item, itemIndex) => itemIndex === index ? replacement : item);
+}
+
+type BaselineManifestRecord = EasyExpansionBaselineManifest['records'][number];
+
+function assertAcceptedBaselinePreserved(
+  expected: readonly BaselineManifestRecord[],
+  current: readonly EasyExpansionBaselineRecordInput[],
+  registeredPhaseBClueIds: ReadonlySet<string>,
+): void {
+  const expectedByClueId = new Map(expected.map((record) => [record.clueId, record]));
+  const currentClueIds = new Set<string>();
+
+  for (const record of current) {
+    if (registeredPhaseBClueIds.has(record.clueId)) {
+      throw new Error(
+        `Registered Phase B clue ${record.clueId} is present in accepted artifacts before cutover`,
+      );
+    }
+    if (currentClueIds.has(record.clueId)) {
+      throw new Error(`Duplicate accepted record: ${record.clueId}`);
+    }
+    currentClueIds.add(record.clueId);
+
+    const baseline = expectedByClueId.get(record.clueId);
+    if (baseline === undefined) {
+      throw new Error(`Unexpected accepted record: ${record.clueId}`);
+    }
+    if (record.batchId !== baseline.batchId
+      || hashEasyExpansionBaselineRecord(record) !== baseline.sha256) {
+      throw new Error(`Accepted baseline record hash mismatch: ${record.clueId}`);
+    }
+  }
+
+  for (const record of expected) {
+    if (!currentClueIds.has(record.clueId)) {
+      throw new Error(`Missing accepted baseline record: ${record.clueId}`);
+    }
+  }
+}
+
+function baselineFixtureInput(clueId = 'fixture-baseline-clue'): EasyExpansionBaselineRecordInput {
+  const evidence: ContentEvidence = {
+    version: 1,
+    clueId,
+    batchId: HISTORY_CONTRACT.batchId,
+    factKey: `fixture:${clueId}`,
+    subjectKey: `fixture:${clueId}`,
+    assertion: 'A stable fixture assertion.',
+    origin: 'compatibleOpen',
+    authoring: {
+      author: 'Fixture Author',
+      authoredAt: '2026-09-06T08:00:00.000Z',
+    },
+    supportingSource: {
+      sourceId: `fixture-source:${clueId}`,
+      title: 'Fixture source',
+      url: 'https://example.com/fixture-source',
+      license: 'CC-BY-4.0',
+      retrievedAt: '2026-09-06',
+    },
+    inspiration: null,
+    factualReview: {
+      reviewer: 'Fixture Fact Reviewer',
+      reviewedAt: '2026-09-06T09:00:00.000Z',
+      decision: 'approved',
+    },
+    editorialReview: {
+      reviewer: 'Fixture Editor',
+      reviewedAt: '2026-09-06T10:00:00.000Z',
+      decision: 'approved',
+    },
+    translationReview: {
+      reviewer: 'Fixture Translator',
+      reviewedAt: '2026-09-06T11:00:00.000Z',
+      decision: 'approved',
+    },
+    adultPolicyReview: null,
+  };
+
+  return {
+    batchId: HISTORY_CONTRACT.batchId,
+    clueId,
+    authoredFields: CSV_COLUMNS.map((column) => `authored:${column}:${clueId}`),
+    generatedFields: CSV_COLUMNS.map((column) => `generated:${column}:${clueId}`),
+    evidence,
+  };
+}
+
+function fixtureManifestRecord(input: EasyExpansionBaselineRecordInput): BaselineManifestRecord {
+  return {
+    batchId: input.batchId,
+    clueId: input.clueId,
+    sha256: hashEasyExpansionBaselineRecord(input),
+  };
+}
+
+function indexAcceptedRows(
+  batchId: string,
+  kind: 'authored' | 'generated',
+  rows: readonly ParsedCsvRow[],
+): ReadonlyMap<string, ParsedCsvRow> {
+  const indexed = new Map<string, ParsedCsvRow>();
+  for (const row of rows) {
+    if (indexed.has(row.clue_id)) {
+      throw new Error(`Duplicate accepted ${kind} clue in ${batchId}: ${row.clue_id}`);
+    }
+    indexed.set(row.clue_id, row);
+  }
+  return indexed;
+}
+
+function loadCurrentAcceptedBaselineRecords(): readonly EasyExpansionBaselineRecordInput[] {
+  const records: EasyExpansionBaselineRecordInput[] = [];
+
+  for (const batch of [...PRODUCTION_BATCHES, FINAL_BATCH]) {
+    const paths = acceptedBatchPaths(batch.id);
+    const authored = indexAcceptedRows(
+      batch.id,
+      'authored',
+      parsePackCsv(readFileSync(resolve(paths.authored), 'utf8')).rows,
+    );
+    const generated = indexAcceptedRows(
+      batch.id,
+      'generated',
+      parsePackCsv(readFileSync(resolve(paths.generated), 'utf8')).rows,
+    );
+    const evidence = parseEvidenceJsonl(
+      readFileSync(resolve(paths.evidence), 'utf8'),
+      paths.evidence,
+    );
+    const clueIds = new Set([
+      ...authored.keys(),
+      ...generated.keys(),
+      ...evidence.keys(),
+    ]);
+
+    for (const clueId of [...clueIds].sort()) {
+      const authoredRow = authored.get(clueId);
+      const generatedRow = generated.get(clueId);
+      const evidenceRecord = evidence.get(clueId);
+      if (authoredRow === undefined || generatedRow === undefined || evidenceRecord === undefined) {
+        throw new Error(`Accepted artifact inventories do not match for ${batch.id}:${clueId}`);
+      }
+      if (evidenceRecord.batchId !== batch.id || evidenceRecord.clueId !== clueId) {
+        throw new Error(`Accepted evidence identity does not match for ${batch.id}:${clueId}`);
+      }
+
+      records.push({
+        batchId: batch.id,
+        clueId,
+        authoredFields: CSV_COLUMNS.map((column) => authoredRow[column]),
+        generatedFields: CSV_COLUMNS.map((column) => generatedRow[column]),
+        evidence: evidenceRecord,
+      });
+    }
+  }
+
+  return records;
 }
 
 describe('validateEasyExpansionBank', () => {
@@ -444,5 +619,82 @@ describe('validateEasyExpansionBank', () => {
           }
         : question),
     }), HISTORY_CONTRACT)).toThrowError(/duplicate clue\/answer pair.*English/iu);
+  });
+});
+
+describe('accepted Easy expansion baseline preservation', () => {
+  it('accepts an unchanged logical baseline record', () => {
+    const current = baselineFixtureInput();
+
+    expect(() => assertAcceptedBaselinePreserved(
+      [fixtureManifestRecord(current)],
+      [current],
+      new Set(),
+    )).not.toThrow();
+  });
+
+  it('rejects an altered logical baseline record', () => {
+    const current = baselineFixtureInput();
+    const altered = {
+      ...current,
+      authoredFields: current.authoredFields.map((value, index) => (
+        index === 11 ? `${value}:altered` : value
+      )),
+    };
+
+    expect(() => assertAcceptedBaselinePreserved(
+      [fixtureManifestRecord(current)],
+      [altered],
+      new Set(),
+    )).toThrowError(/baseline record hash mismatch.*fixture-baseline-clue/iu);
+  });
+
+  it('rejects a missing logical baseline record', () => {
+    const current = baselineFixtureInput();
+
+    expect(() => assertAcceptedBaselinePreserved(
+      [fixtureManifestRecord(current)],
+      [],
+      new Set(),
+    )).toThrowError(/missing accepted baseline record.*fixture-baseline-clue/iu);
+  });
+
+  it('rejects an extra logical record in accepted artifacts', () => {
+    const current = baselineFixtureInput();
+    const extra = baselineFixtureInput('fixture-extra-clue');
+
+    expect(() => assertAcceptedBaselinePreserved(
+      [fixtureManifestRecord(current)],
+      [current, extra],
+      new Set(),
+    )).toThrowError(/unexpected accepted record.*fixture-extra-clue/iu);
+  });
+
+  it('rejects a registered Phase B clue in accepted artifacts before cutover', () => {
+    const current = baselineFixtureInput();
+    const phaseB = baselineFixtureInput('built-in-history-easy-expansion-001');
+
+    expect(() => assertAcceptedBaselinePreserved(
+      [fixtureManifestRecord(current)],
+      [current, phaseB],
+      new Set([phaseB.clueId]),
+    )).toThrowError(/registered Phase B clue.*accepted artifacts.*before cutover/iu);
+  });
+
+  it('keeps the current accepted corpus on the exact committed baseline before cutover', () => {
+    const manifest = parseEasyExpansionBaselineManifest(readFileSync(resolve(
+      'content/reports/easy-expansion-baseline-record-hashes.json',
+    ), 'utf8'));
+    const current = loadCurrentAcceptedBaselineRecords();
+    const registeredPhaseBClueIds = new Set(buildEasyExpansionCorpus().flatMap(
+      ({ questions }) => questions.map(({ clueId }) => clueId),
+    ));
+
+    expect(() => assertAcceptedBaselinePreserved(
+      manifest.records,
+      current,
+      registeredPhaseBClueIds,
+    )).not.toThrow();
+    expect(current).toHaveLength(7_174);
   });
 });
