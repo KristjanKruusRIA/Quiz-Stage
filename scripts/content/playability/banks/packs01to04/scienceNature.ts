@@ -10,10 +10,10 @@ const rawCategories = [
     name: { en: 'Forces You Can Feel', et: 'Jõud, mida saab tunda' },
     questions: [
       {
-        key: 'playable-science-nature:built-in-science-nature-set-005:drag-falling-parachute', factKey: 'science-nature:drag-falling-parachute', tier: 1, subjectKey: 'concept:drag',
-        clue: { en: 'A parachute slows a skydiver by meeting resistance from the air. What force is this?', et: 'Langevari aeglustab langevarjurit, sest kohtab õhu vastupanu. Mis jõud see on?' }, response: { en: 'drag', et: 'takistusjõud' }, acceptedVariants: { en: ['air resistance', 'fluid resistance'], et: ['õhutakistus', 'vedelikutakistus'] },
-        explanation: { en: 'Drag is the force that opposes motion through a fluid such as air or water.', et: 'Takistusjõud on jõud, mis vastandub liikumisele vedelikus või gaasis, näiteks õhus või vees.' },
-        source: { sourceId: 'wikipedia:drag-physics', title: 'Drag (physics)', url: 'https://en.wikipedia.org/wiki/Drag_(physics)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-005:balanced-forces-tug-of-war', factKey: 'science-nature:balanced-forces-tug-of-war', tier: 1, subjectKey: 'concept:balanced-forces',
+        clue: { en: 'Two equally matched teams pull opposite ends of a tug-of-war rope, yet the centre marker stays still. In school physics, what two-word label describes the forces on the stationary rope?', et: 'Kaks võrdset võistkonda tõmbavad köieveonööri vastassuundades, kuid keskmärk püsib paigal. Millise kahesõnalise nimetusega kirjeldatakse koolifüüsikas paigal seisvale köiele mõjuvaid jõude?' }, response: { en: 'balanced forces', et: 'tasakaalus jõud' }, acceptedVariants: { en: ['forces in balance'], et: ['tasakaalustatud jõud'] },
+        explanation: { en: 'Equal, opposite pulls give a net force of zero, so the rope’s motion does not change.', et: 'Võrdsed vastassuunalised tõmbejõud annavad resultantjõuks nulli, mistõttu nööri liikumine ei muutu.' },
+        source: { sourceId: 'wikipedia:mechanical-equilibrium', title: 'Mechanical equilibrium', url: 'https://en.wikipedia.org/wiki/Mechanical_equilibrium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-005:friction-braking-bicycle', factKey: 'science-nature:friction-braking-bicycle', tier: 2, subjectKey: 'concept:friction',
@@ -22,10 +22,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:friction', title: 'Friction', url: 'https://en.wikipedia.org/wiki/Friction', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-005:inertia-seatbelt', factKey: 'science-nature:inertia-seatbelt', tier: 3, subjectKey: 'concept:inertia',
-        clue: { en: 'A seat belt stops your body continuing forward when a car stops suddenly. What property is at work?', et: 'Turvavöö takistab su kehal auto järsul peatumisel edasi liikumast. Milline omadus on siin mängus?' }, response: { en: 'inertia', et: 'inerts' }, acceptedVariants: { en: ['inertial motion'], et: ['inertsus'] },
-        explanation: { en: 'Inertia is the tendency of an object to resist a change in its motion.', et: 'Inerts on keha kalduvus oma liikumisoleku muutmisele vastu panna.' },
-        source: { sourceId: 'wikipedia:inertia', title: 'Inertia', url: 'https://en.wikipedia.org/wiki/Inertia', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-005:torque-door-handle', factKey: 'science-nature:torque-door-handle', tier: 3, subjectKey: 'quantity:torque',
+        clue: { en: 'A door opens more easily when you push its handle than when you push near the hinges, because the same force has more turning effect. What quantity describes that effect?', et: 'Uks avaneb käepidemest lükates kergemini kui hinge lähedalt lükates, sest sama jõu pöörav toime on suurem. Milline füüsikaline suurus seda kirjeldab?' }, response: { en: 'torque', et: 'pöördemoment' }, acceptedVariants: { en: ['turning moment', 'moment of force'], et: ['jõumoment'] },
+        explanation: { en: 'Torque measures a force’s turning effect; it grows with force and perpendicular distance from the pivot.', et: 'Pöördemoment mõõdab jõu pööravat toimet ning suureneb jõu ja pöörlemisteljest mõõdetud ristsuunalise kaugusega.' },
+        source: { sourceId: 'wikipedia:torque-door-handle', title: 'Torque', url: 'https://en.wikipedia.org/wiki/Torque', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-005:buoyancy-floating-boat', factKey: 'science-nature:buoyancy-floating-boat', tier: 4, subjectKey: 'concept:buoyancy',
@@ -34,10 +34,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:buoyancy', title: 'Buoyancy', url: 'https://en.wikipedia.org/wiki/Buoyancy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-005:centripetal-turning-car', factKey: 'science-nature:centripetal-turning-car', tier: 5, subjectKey: 'concept:centripetal-force',
-        clue: { en: 'What name is given to the inward net force required to keep a car following a curved path?', et: 'Kuidas nimetatakse sissepoole suunatud resultantjõudu, mida on vaja auto hoidmiseks kõveral trajektooril?' }, response: { en: 'centripetal force', et: 'kesktõmbejõud' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Centripetal force is the inward net force that produces centripetal acceleration; it is not itself an extra fundamental force.', et: 'Kesktõmbejõud on sissepoole suunatud resultantjõud, mis tekitab kesktõmbekiirenduse; see ei ole eraldi fundamentaaljõud.' },
-        source: { sourceId: 'wikipedia:centripetal-force', title: 'Centripetal force', url: 'https://en.wikipedia.org/wiki/Centripetal_force', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-005:magnus-effect-curving-football', factKey: 'science-nature:magnus-effect-curving-football', tier: 5, subjectKey: 'effect:magnus',
+        clue: { en: 'A spinning football can curve sideways through the air because its spin creates a pressure difference around the ball. Which named effect explains the bend?', et: 'Keerlev jalgpall võib õhus kõrvale kaarduda, sest pöörlemine tekitab palli ümber rõhuerinevuse. Milline efekt seda kõrvalekallet seletab?' }, response: { en: 'Magnus effect', et: 'Magnuse efekt' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'The Magnus effect produces a sideways force on a spinning object moving through a fluid such as air.', et: 'Magnuse efekt tekitab õhus liikuvale pöörlevale kehale külgsuunalise jõu.' },
+        source: { sourceId: 'wikipedia:magnus-effect-football', title: 'Magnus effect', url: 'https://en.wikipedia.org/wiki/Magnus_effect', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
     ],
   },
@@ -58,7 +58,7 @@ const rawCategories = [
     questions: [
       { key: 'playable-science-nature:built-in-science-nature-set-012:polarization-sunglasses', factKey: 'science-nature:polarization-sunglasses', tier: 1, subjectKey: 'phenomenon:polarization', clue: { en: 'Some sunglasses cut glare by allowing mainly one orientation of light waves through. Name this optical property.', et: 'Mõned päikeseprillid vähendavad helki, lastes läbi peamiselt ühe võnkesuunaga valguslaineid. Nimeta see optiline omadus.' }, response: { en: 'polarization', et: 'polarisatsioon' }, acceptedVariants: { en: ['polarisation'], et: ['valguse polarisatsioon'] }, explanation: { en: 'Polarization describes the orientation of a transverse wave; polarizing filters select particular orientations.', et: 'Polarisatsioon kirjeldab ristlaine võnkesuunda; polariseerivad filtrid lasevad läbi valitud suunaga valgust.' }, source: { sourceId: 'wikipedia:polarization-waves', title: 'Polarization (waves)', url: 'https://en.wikipedia.org/wiki/Polarization_(waves)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' } },
       { key: 'playable-science-nature:built-in-science-nature-set-012:total-internal-reflection-fibre', factKey: 'science-nature:total-internal-reflection-fibre', tier: 2, subjectKey: 'phenomenon:total-internal-reflection', clue: { en: 'Above a critical angle, light in a fibre-optic core bounces back instead of escaping into the cladding. Name this phenomenon.', et: 'Kriitilisest nurgast suurema nurga korral peegeldub valgus optilise kiu südamikku tagasi ega pääse kattekihti. Nimeta see nähtus.' }, response: { en: 'total internal reflection', et: 'täielik sisepeegeldus' }, acceptedVariants: { en: ['TIR'], et: ['täissisepeegeldus'] }, explanation: { en: 'Total internal reflection occurs when light travelling in the optically denser material meets the boundary above the critical angle.', et: 'Täielik sisepeegeldus tekib siis, kui optiliselt tihedamas aines leviv valgus jõuab piirpinnale kriitilisest nurgast suurema nurga all.' }, source: { sourceId: 'wikipedia:total-internal-reflection', title: 'Total internal reflection', url: 'https://en.wikipedia.org/wiki/Total_internal_reflection', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' } },
-      { key: 'playable-science-nature:built-in-science-nature-set-012:dispersion-prism', factKey: 'science-nature:dispersion-prism', tier: 3, subjectKey: 'phenomenon:dispersion', clue: { en: 'A prism separates white light into colours by which optical effect also seen in a rainbow?', et: 'Prisma jagab valge valguse värvideks millise optilise nähtuse abil, mida näeb ka vikerkaares?' }, response: { en: 'dispersion', et: 'dispersioon' }, acceptedVariants: { en: ['chromatic dispersion'], et: ['valguse dispersioon'] }, explanation: { en: 'Dispersion separates colours because wavelengths refract by different amounts.', et: 'Dispersioon eraldab värvid, sest eri lainepikkused murduvad erinevalt.' }, source: { sourceId: 'wikipedia:dispersion-optics', title: 'Dispersion (optics)', url: 'https://en.wikipedia.org/wiki/Dispersion_(optics)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' } },
+      { key: 'playable-science-nature:built-in-science-nature-set-012:negative-afterimage', factKey: 'science-nature:negative-afterimage-complementary-colour', tier: 3, subjectKey: 'effect:afterimage', clue: { en: 'Stare at a bright red shape, then look at a white wall: a ghostly shape may appear in a complementary colour. What visual effect is this?', et: 'Vaata mõnda aega eredat punast kujundit ja seejärel valget seina: kummituslik kujund võib ilmuda vastandvärvis. Kuidas seda nägemisnähtust nimetatakse?' }, response: { en: 'an afterimage', et: 'järelkujutis' }, acceptedVariants: { en: ['afterimage', 'a negative afterimage'], et: ['negatiivne järelkujutis'] }, explanation: { en: 'A negative afterimage appears while the visual system adapts; opponent-colour processing makes the complementary hue stand out.', et: 'Negatiivne järelkujutis tekib nägemissüsteemi kohanemisel; vastandvärvide töötlus toob esile algse värvi vastandtooni.' }, source: { sourceId: 'wikipedia:afterimage-complementary-colour', title: 'Afterimage', url: 'https://en.wikipedia.org/wiki/Afterimage', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' } },
       { key: 'playable-science-nature:built-in-science-nature-set-012:absorption-black-shirt', factKey: 'science-nature:absorption-black-shirt', tier: 4, subjectKey: 'phenomenon:absorption', clue: { en: 'A black shirt grows warmer in sunshine because it takes in much incoming light. What is this called?', et: 'Must särk läheb päikese käes soojemaks, sest neelab suure osa sellele langevast valgusest. Kuidas seda nimetatakse?' }, response: { en: 'absorption', et: 'neeldumine' }, acceptedVariants: { en: ['light absorption'], et: ['valguse neeldumine'] }, explanation: { en: 'Absorption transfers light energy into a material rather than reflecting it.', et: 'Neeldumisel kandub valguse energia materjali, mitte ei peegeldu sellelt.' }, source: { sourceId: 'wikipedia:absorption-electromagnetic-radiation', title: 'Absorption (electromagnetic radiation)', url: 'https://en.wikipedia.org/wiki/Absorption_(electromagnetic_radiation)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' } },
       { key: 'playable-science-nature:built-in-science-nature-set-012:fluorescence-marker', factKey: 'science-nature:fluorescence-marker', tier: 5, subjectKey: 'phenomenon:fluorescence', clue: { en: 'Highlighter ink can glow under ultraviolet light after absorbing it and emitting visible light. Name the effect.', et: 'Tekstimarkeri tint võib ultraviolettvalguses helendada pärast selle neelamist ja nähtava valguse kiirgamist. Nimeta nähtus.' }, response: { en: 'fluorescence', et: 'fluorestsents' }, acceptedVariants: { en: ['fluorescent emission'], et: ['fluorestseerumine'] }, explanation: { en: 'Fluorescence is prompt visible emission after a substance absorbs higher-energy light.', et: 'Fluorestsents on nähtava valguse kiire kiirgumine pärast suurema energiaga valguse neeldumist.' }, source: { sourceId: 'wikipedia:fluorescence', title: 'Fluorescence', url: 'https://en.wikipedia.org/wiki/Fluorescence', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' } },
     ],
@@ -218,10 +218,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:earth-mantle-layer', title: 'Earth’s mantle', url: 'https://en.wikipedia.org/wiki/Earth%27s_mantle', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-041:subduction-sinking-plate', factKey: 'science-nature:subduction-sinking-plate', tier: 2, subjectKey: 'process:subduction',
-        clue: { en: 'What process occurs where one tectonic plate bends and sinks beneath another into the mantle?', et: 'Milline protsess toimub kohas, kus üks laam paindub ja vajub teise alla vahevöösse?' }, response: { en: 'subduction', et: 'subduktsioon' }, acceptedVariants: { en: ['plate subduction'], et: ['laama sukeldumine'] },
-        explanation: { en: 'Subduction recycles lithosphere into the mantle at a convergent plate boundary.', et: 'Subduktsioon viib koonduval laamapiiril litosfääri tagasi vahevöösse.' },
-        source: { sourceId: 'wikipedia:subduction-process', title: 'Subduction', url: 'https://en.wikipedia.org/wiki/Subduction', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-041:lava-tube-drained-flow', factKey: 'science-nature:lava-tube-drained-flow', tier: 2, subjectKey: 'landform:lava-tube',
+        clue: { en: 'The surface of a lava flow can harden while molten lava keeps moving underneath; when it drains away, what tunnel-like feature remains?', et: 'Laavavoolu pind võib tahkuda, samal ajal kui sulalaava selle all edasi liigub. Milline tunnelilaadne pinnavorm jääb alles, kui laava välja voolab?' }, response: { en: 'a lava tube', et: 'laavatunnel' }, acceptedVariants: { en: ['lava tube', 'lava tunnel'], et: ['laavatoru'] },
+        explanation: { en: 'A lava tube forms when the crust of a lava flow stays in place after the still-molten interior drains away.', et: 'Laavatunnel tekib, kui laavavoolu tahkunud koorik jääb paigale pärast selle all voolanud sulalaava äravoolamist.' },
+        source: { sourceId: 'wikipedia:lava-tube-drained-flow', title: 'Lava tube', url: 'https://en.wikipedia.org/wiki/Lava_tube', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-041:mid-ocean-ridge-divergent', factKey: 'science-nature:mid-ocean-ridge-divergent', tier: 3, subjectKey: 'landform:mid-ocean-ridge',
@@ -272,10 +272,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:coriolis-effect-earth', title: 'Coriolis force', url: 'https://en.wikipedia.org/wiki/Coriolis_force', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-042:jet-stream-fast-winds', factKey: 'science-nature:jet-stream-fast-winds', tier: 5, subjectKey: 'current:jet-stream',
-        clue: { en: 'What narrow band of very fast winds high in the troposphere helps steer weather systems from west to east?', et: 'Milline kitsas väga kiirete tuulte vöönd troposfääri ülaosas aitab suunata ilmasüsteeme läänest itta?' }, response: { en: 'the jet stream', et: 'jugavool' }, acceptedVariants: { en: ['jet stream'], et: ['atmosfääri jugavool'] },
-        explanation: { en: 'Jet streams form near strong temperature contrasts and influence the paths of weather systems.', et: 'Jugavoolud kujunevad tugevate temperatuurierinevuste lähedal ja mõjutavad ilmasüsteemide liikumisteid.' },
-        source: { sourceId: 'wikipedia:jet-stream-troposphere', title: 'Jet stream', url: 'https://en.wikipedia.org/wiki/Jet_stream', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-042:polar-vortex-cold-air', factKey: 'science-nature:polar-vortex-cold-air', tier: 5, subjectKey: 'weather:polar-vortex',
+        clue: { en: 'A huge area of low pressure and cold air normally circles a pole; when it expands, severe cold can spill farther south. What is it called?', et: 'Poolust ümbritseb tavaliselt ulatuslik madalrõhuala ja külma õhu ringlus; selle laienemisel võib karm külm kanduda kaugemale lõunasse. Kuidas seda nimetatakse?' }, response: { en: 'the polar vortex', et: 'polaarpööris' }, acceptedVariants: { en: ['polar vortex'], et: ['polaarne pööris'] },
+        explanation: { en: 'The polar vortex is a broad circulation of low pressure and cold air around a pole, strongest in winter.', et: 'Polaarpööris on pooluse ümber paiknev ulatuslik madalrõhu ja külma õhu ringlus, mis on tugevaim talvel.' },
+        source: { sourceId: 'nws:polar-vortex', title: 'What is the Polar Vortex?', url: 'https://www.weather.gov/safety/cold-polar-vortex', license: 'Public Domain', retrievedAt: '2026-09-05' },
       },
     ],
   },
@@ -362,10 +362,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:seed-dormancy-conditions', title: 'Seed dormancy', url: 'https://en.wikipedia.org/wiki/Seed_dormancy', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-045:stomata-leaf-pores', factKey: 'science-nature:stomata-leaf-pores', tier: 2, subjectKey: 'structure:stomata',
-        clue: { en: 'What tiny adjustable pores in leaves let carbon dioxide enter while water vapour and oxygen leave?', et: 'Millised väikesed reguleeritavad poorid lehtedes lasevad süsinikdioksiidil siseneda ning veeaurul ja hapnikul väljuda?' }, response: { en: 'stomata', et: 'õhulõhed' }, acceptedVariants: { en: ['leaf stomata'], et: ['lehe õhulõhed'] },
-        explanation: { en: 'Pairs of guard cells open and close each stoma to regulate gas exchange.', et: 'Iga õhulõhe avanemist ja sulgumist juhib paar sulgrakke, mis reguleerib gaasivahetust.' },
-        source: { sourceId: 'wikipedia:stoma-gas-exchange', title: 'Stoma', url: 'https://en.wikipedia.org/wiki/Stoma', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-045:wilting-water-loss', factKey: 'science-nature:wilting-water-loss', tier: 2, subjectKey: 'response:wilting',
+        clue: { en: 'A thirsty houseplant’s leaves and stems droop as its cells lose water pressure. What visible response is this?', et: 'Januse toataime lehed ja varred vajuvad longu, kui selle rakud kaotavad veesurve. Kuidas seda nähtavat reaktsiooni nimetatakse?' }, response: { en: 'wilting', et: 'närbumine' }, acceptedVariants: { en: [], et: [] },
+        explanation: { en: 'Water loss reduces turgor pressure in plant cells, leaving leaves and stems limp.', et: 'Veekadu vähendab taimerakkude turgorrõhku ning lehed ja varred vajuvad longu.' },
+        source: { sourceId: 'wikipedia:wilting-water-loss', title: 'Wilting', url: 'https://en.wikipedia.org/wiki/Wilting', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-045:transpiration-water-loss', factKey: 'science-nature:transpiration-water-loss', tier: 3, subjectKey: 'process:transpiration',
@@ -464,10 +464,10 @@ const rawCategories = [
     name: { en: 'Optical Surprises in the Sky', et: 'Optilised üllatused taevas' },
     questions: [
       {
-        key: 'playable-science-nature:built-in-science-nature-set-048:mirage-hot-road', factKey: 'science-nature:mirage-hot-road', tier: 1, subjectKey: 'phenomenon:mirage',
-        clue: { en: 'A hot road can seem to have a pool of water ahead because layers of air bend light differently. What illusion is this?', et: 'Kuumal teel võib ees paista veelomp, sest eri temperatuuriga õhukihid murravad valgust erinevalt. Mis nähtus see on?' }, response: { en: 'a mirage', et: 'miraaž' }, acceptedVariants: { en: ['mirage'], et: ['õhumiraaž'] },
-        explanation: { en: 'A steep temperature gradient changes the path of light and can create a displaced image of the sky.', et: 'Järsk temperatuurigradient muudab valguse teed ja võib tekitada taeva nihkunud kujutise.' },
-        source: { sourceId: 'wikipedia:mirage-hot-road', title: 'Mirage', url: 'https://en.wikipedia.org/wiki/Mirage', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-048:moon-illusion-horizon-size', factKey: 'science-nature:moon-illusion-horizon-size', tier: 1, subjectKey: 'phenomenon:moon-illusion',
+        clue: { en: 'Near the horizon, the Moon often looks much larger than it does high in the sky, even though photographs show nearly the same width. What visual effect is this?', et: 'Horisondi lähedal paistab Kuu sageli palju suurem kui kõrgel taevas, kuigi fotodel on selle laius peaaegu sama. Mis nägemisnähtus see on?' }, response: { en: 'the Moon illusion', et: 'kuuillusioon' }, acceptedVariants: { en: ['Moon illusion'], et: ['Kuu illusioon'] },
+        explanation: { en: 'The apparent enlargement is a perception effect rather than atmospheric magnification; its exact psychological cause remains unsettled.', et: 'Näiline suurenemine on tajuefekt, mitte atmosfääri suurendus; selle täpse psühholoogilise põhjuse üle vaieldakse endiselt.' },
+        source: { sourceId: 'nasa:moon-illusion-horizon-size', title: 'The Moon Illusion: Why Does the Moon Look So Big Sometimes? — NASA Science', url: 'https://science.nasa.gov/solar-system/moon/the-moon-illusion-why-does-the-moon-look-so-big-sometimes/', license: 'Public Domain', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-048:halo-ice-crystal-ring', factKey: 'science-nature:halo-ice-crystal-ring', tier: 2, subjectKey: 'phenomenon:halo',
@@ -476,10 +476,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:22-degree-halo-ice-crystals', title: '22° halo', url: 'https://en.wikipedia.org/wiki/22%C2%B0_halo', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-048:sundog-bright-spot', factKey: 'science-nature:sundog-bright-spot', tier: 3, subjectKey: 'phenomenon:sundog',
-        clue: { en: 'What is the bright, sometimes rainbow-tinted patch that can appear to either side of the Sun when light passes through ice crystals?', et: 'Kuidas nimetatakse heledat, vahel vikerkaarevärvilist laiku, mis võib jääkristalle läbinud valguse tõttu ilmuda Päikese kummalegi küljele?' }, response: { en: 'a sundog', et: 'ebapäike' }, acceptedVariants: { en: ['sun dog', 'parhelion'], et: ['kõrvalpäike', 'parheelion'] },
-        explanation: { en: 'Plate-shaped crystals commonly place these bright patches at the same height as the Sun.', et: 'Plaadikujulised kristallid tekitavad need heledad laigud tavaliselt Päikesega samale kõrgusele.' },
-        source: { sourceId: 'wikipedia:sundog-ice-crystals', title: 'Sun dog', url: 'https://en.wikipedia.org/wiki/Sun_dog', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-048:fogbow-white-arc', factKey: 'science-nature:fogbow-white-arc', tier: 3, subjectKey: 'phenomenon:fogbow',
+        clue: { en: 'Sunlight behind you and fog ahead can produce a broad, almost colourless cousin of a rainbow. What is it called?', et: 'Kui Päike on vaatleja selja taga ja ees on udu, võib tekkida lai peaaegu värvitu vikerkaare sugulane. Kuidas seda nimetatakse?' }, response: { en: 'a fogbow', et: 'udukaar' }, acceptedVariants: { en: ['fogbow', 'fog bow', 'white rainbow'], et: ['uduvikerkaar', 'valge vikerkaar'] },
+        explanation: { en: 'Fog droplets are much smaller than raindrops, so diffraction smears the colours and leaves a pale or nearly white arc.', et: 'Udupiisad on vihmapiiskadest palju väiksemad, mistõttu difraktsioon hajutab värvid ja jätab kaare kahvatuks või peaaegu valgeks.' },
+        source: { sourceId: 'metoffice:fogbow-optical-wonders', title: 'Rainbows: optical wonders — Met Office', url: 'https://weather.metoffice.gov.uk/learn-about/weather/optical-effects/rainbows', license: 'All rights reserved', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-048:light-pillar-vertical-column', factKey: 'science-nature:light-pillar-vertical-column', tier: 4, subjectKey: 'phenomenon:light-pillar',
@@ -536,10 +536,10 @@ const rawCategories = [
     name: { en: 'Seasonal Survival Strategies', et: 'Hooajalised ellujäämisvõtted' },
     questions: [
       {
-        key: 'playable-science-nature:built-in-science-nature-set-050:hibernation-winter-slowdown', factKey: 'science-nature:hibernation-winter-slowdown', tier: 1, subjectKey: 'strategy:hibernation',
-        clue: { en: 'Bats and hedgehogs can spend winter in a prolonged state of greatly reduced metabolism. What seasonal strategy is this?', et: 'Nahkhiired ja siilid võivad veeta talve pikaajalises tugevalt aeglustunud ainevahetusega seisundis. Milline hooajaline strateegia see on?' }, response: { en: 'hibernation', et: 'talveuni' }, acceptedVariants: { en: ['winter hibernation'], et: ['hibernatsioon'] },
-        explanation: { en: 'Hibernation conserves energy when cold weather and scarce food make normal activity costly.', et: 'Talveuni säästab energiat ajal, mil külm ilm ja toidunappus muudavad tavapärase aktiivsuse kulukaks.' },
-        source: { sourceId: 'wikipedia:hibernation-winter-metabolism', title: 'Hibernation', url: 'https://en.wikipedia.org/wiki/Hibernation', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-050:emperor-penguin-huddle-warmth', factKey: 'science-nature:emperor-penguin-huddle-warmth', tier: 1, subjectKey: 'behaviour:emperor-penguin-huddling',
+        clue: { en: 'Emperor penguins survive Antarctic winter winds by packing tightly and taking turns in the warmer centre. What group strategy are they using?', et: 'Keiserpingviinid peavad Antarktika talvetuultele vastu tihedalt kokku kogunedes ja kordamööda soojemas keskosas viibides. Kuidas seda rühmakäitumist nimetatakse?' }, response: { en: 'huddling', et: 'kobarasse kogunemine' }, acceptedVariants: { en: ['group huddling', 'forming a huddle'], et: ['kobaras püsimine'] },
+        explanation: { en: 'The moving huddle sharply reduces heat loss while continually cycling birds between its exposed edge and warmer centre.', et: 'Liikuv kobar vähendab tugevalt soojakadu ning viib linde pidevalt paljastatud servast soojemasse keskossa ja tagasi.' },
+        source: { sourceId: 'australian-antarctic-program:emperor-penguin-huddling', title: 'Emperor penguin — Australian Antarctic Program', url: 'https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/', license: 'All rights reserved', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-050:estivation-hot-dry', factKey: 'science-nature:estivation-hot-dry', tier: 2, subjectKey: 'strategy:estivation',
@@ -908,10 +908,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:amygdala-fear-learning', title: 'Amygdala', url: 'https://en.wikipedia.org/wiki/Amygdala', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-075:cerebellum-balance-coordination', factKey: 'science-nature:cerebellum-balance-coordination', tier: 3, subjectKey: 'region:cerebellum',
-        clue: { en: 'Damage to which structure at the back of the brain commonly disrupts balance, posture, and the fine coordination of movement?', et: 'Millise aju tagaosas paikneva struktuuri kahjustus häirib sageli tasakaalu, kehahoiakut ja liigutuste täpset koordineerimist?' }, response: { en: 'cerebellum', et: 'väikeaju' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'This region compares intended actions with sensory feedback and helps refine their timing and accuracy.', et: 'See ajupiirkond võrdleb kavandatud liigutusi meeleelunditest saadud tagasisidega ning aitab täpsustada nende ajastust ja täpsust.' },
-        source: { sourceId: 'wikipedia:cerebellum-balance-coordination', title: 'Cerebellum', url: 'https://en.wikipedia.org/wiki/Cerebellum', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-28' },
+        key: 'playable-science-nature:built-in-science-nature-set-075:corpus-callosum-hemispheres', factKey: 'science-nature:corpus-callosum-hemispheres', tier: 3, subjectKey: 'tract:corpus-callosum',
+        clue: { en: 'Which broad band of nerve fibres carries information between the brain’s left and right hemispheres?', et: 'Milline lai närvikiudude kimp vahendab infot aju vasaku ja parema poolkera vahel?' }, response: { en: 'the corpus callosum', et: 'mõhnkeha' }, acceptedVariants: { en: ['corpus callosum'], et: ['corpus callosum'] },
+        explanation: { en: 'This white-matter bridge lets the hemispheres share sensory, motor, and cognitive information.', et: 'See valgeaineühendus võimaldab ajupoolkeradel vahetada meelelist, motoorset ja mõtlemisega seotud infot.' },
+        source: { sourceId: 'wikipedia:corpus-callosum-hemispheres', title: 'Corpus callosum', url: 'https://en.wikipedia.org/wiki/Corpus_callosum', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-075:hippocampus-new-memories', factKey: 'science-nature:hippocampus-new-memories', tier: 4, subjectKey: 'region:hippocampus',
@@ -1958,10 +1958,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:starfish-regeneration', title: 'Starfish', url: 'https://en.wikipedia.org/wiki/Starfish', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-055:axolotl-limb-regeneration', factKey: 'science-nature:axolotl-limb-regeneration', tier: 4, subjectKey: 'animal:axolotl',
-        clue: { en: 'Which Mexican salamander, famous for keeping its feathery external gills as an adult, can regenerate limbs and parts of several organs?', et: 'Milline Mehhiko salamander, kes säilitab täiskasvanuna sulgjad välislõpused, suudab taastada jäsemeid ja mitme elundi osi?' }, response: { en: 'the axolotl', et: 'aksolotl' }, acceptedVariants: { en: ['an axolotl', 'axolotl'], et: ['Mehhiko aksolotl'] },
-        explanation: { en: 'Its unusual healing can rebuild complex tissues without the heavy scarring typical of mammalian wounds.', et: 'Tema ebatavaline paranemine suudab taastada keerukaid kudesid ilma imetajate haavadele omase tugeva armistumiseta.' },
-        source: { sourceId: 'wikipedia:axolotl-regeneration', title: 'Axolotl', url: 'https://en.wikipedia.org/wiki/Axolotl', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-science-nature:built-in-science-nature-set-055:zebrafish-heart-regeneration', factKey: 'science-nature:zebrafish-heart-regeneration', tier: 4, subjectKey: 'animal:zebrafish',
+        clue: { en: 'Which small striped aquarium fish, widely used in laboratories, can repair a damaged heart without leaving a permanent scar?', et: 'Milline väike triibuline akvaariumikala, keda kasutatakse palju laborites, suudab kahjustatud südame taastada püsivat armi jätmata?' }, response: { en: 'the zebrafish', et: 'sebrakala' }, acceptedVariants: { en: ['zebra fish', 'Danio rerio'], et: ['vöödiline pisidaanio', 'Danio rerio'] },
+        explanation: { en: 'This fish can regenerate cardiac muscle after injury, one reason scientists study it as a model for tissue repair.', et: 'See kala suudab pärast vigastust südamelihast taastada, mistõttu uuritakse teda kudede paranemise mudelina.' },
+        source: { sourceId: 'wikipedia:zebrafish-heart-regeneration', title: 'Zebrafish', url: 'https://en.wikipedia.org/wiki/Zebrafish', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-055:planarian-whole-body-regeneration', factKey: 'science-nature:planarian-whole-body-regeneration', tier: 5, subjectKey: 'animal:planarian',
@@ -2240,10 +2240,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:coconut-water-dispersal', title: 'Coconut', url: 'https://en.wikipedia.org/wiki/Coconut', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-science-nature:built-in-science-nature-set-063:burdock-hooked-burs', factKey: 'science-nature:burdock-hooked-burs', tier: 3, subjectKey: 'plant:burdock',
-        clue: { en: 'Which plant disperses hooked burs by fastening them to animal fur and famously inspired the hook-and-loop fastener?', et: 'Milline taim levitab konksulisi vilikondi loomakarvade külge kinnitudes ning inspireeris takjakinnise leiutamist?' }, response: { en: 'burdock', et: 'takjas' }, acceptedVariants: { en: ['a burdock'], et: ['takjad'] },
-        explanation: { en: 'Tiny hooks on the dry flower heads hitch a ride on animals or clothing before dropping elsewhere.', et: 'Kuivanud õisikute tillukesed konksud haakuvad looma või riiete külge ja kukuvad hiljem uues paigas maha.' },
-        source: { sourceId: 'wikipedia:burdock-hooked-burs', title: 'Arctium', url: 'https://en.wikipedia.org/wiki/Arctium', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-science-nature:built-in-science-nature-set-063:tumbleweed-rolling-seeds', factKey: 'science-nature:tumbleweed-rolling-seeds', tier: 3, subjectKey: 'plant-form:tumbleweed',
+        clue: { en: 'In old Westerns, what dry ball of plant material rolls across empty ground while the wind shakes out its seeds?', et: 'Milline kuiv taimepall veereb vanades vesternides üle tühja maastiku, puistates tuule käes seemneid?' }, response: { en: 'a tumbleweed', et: 'kõrbepall' }, acceptedVariants: { en: ['tumbleweed'], et: ['tumbleweed', 'ogamalt', 'ogamalts', 'veerev kõrbepall'] },
+        explanation: { en: 'A mature above-ground plant part breaks free, and tumbling gradually releases seeds along its route.', et: 'Küps maapealne taimeosa murdub lahti ning veeremine puistab teekonnal järk-järgult seemneid.' },
+        source: { sourceId: 'wikipedia:tumbleweed-rolling-seeds', title: 'Tumbleweed', url: 'https://en.wikipedia.org/wiki/Tumbleweed', license: 'CC-BY-SA-4.0', retrievedAt: '2026-09-05' },
       },
       {
         key: 'playable-science-nature:built-in-science-nature-set-063:mistletoe-sticky-seeds-birds', factKey: 'science-nature:mistletoe-sticky-seeds-birds', tier: 4, subjectKey: 'plant:mistletoe',
