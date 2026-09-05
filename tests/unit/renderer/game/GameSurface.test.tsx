@@ -1,8 +1,10 @@
-import { act, fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { HostDesktopApi } from '../../../../src/renderer/api/desktopApi';
 import { GameSurface } from '../../../../src/renderer/features/game/GameSurface';
 import { gameState, hostView, publicView } from './fixtures';
+
+afterEach(() => vi.unstubAllGlobals());
 
 function deferred<T>() {
   let reject!: (reason?: unknown) => void;
@@ -20,6 +22,48 @@ function api(dispatch: HostDesktopApi['dispatch']): HostDesktopApi {
 }
 
 describe('GameSurface board selection', () => {
+  it('owns English clue narration on the host and starts the fair timer when speech ends', async () => {
+    const utterances: Array<{ text: string; lang: string; voice: unknown; onend?: () => void }> = [];
+    vi.stubGlobal('speechSynthesis', {
+      speak: vi.fn((utterance) => utterances.push(utterance)),
+      cancel: vi.fn(),
+      getVoices: vi.fn(() => [{ name: 'Local English', lang: 'en-US', localService: true }]),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    });
+    vi.stubGlobal('SpeechSynthesisUtterance', class {
+      lang = '';
+      voice = null;
+      onend: (() => void) | null = null;
+      onerror: (() => void) | null = null;
+      constructor(readonly text: string) {}
+    });
+    const dispatch = vi.fn(async () => hostView());
+    const state = {
+      config: { ...gameState().config, speechEnabled: true },
+      phase: 'ordinary-clue' as const,
+      activeClue: {
+        clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false,
+      },
+      timer: {
+        durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle' as const, narrationSequence: 7,
+      },
+    };
+
+    render(<GameSurface surface="host" view={hostView(state)} api={api(dispatch)} audioSettings={{
+      master: 1, music: 1, effects: 1, crowd: 1, muted: false, speechEnabled: true,
+    }} />);
+
+    await waitFor(() => expect(utterances).toHaveLength(1));
+    expect(utterances[0]?.text).toBe('Prompt 1-2');
+    expect(utterances[0]?.text).not.toContain('Response 1-2');
+    expect(dispatch).not.toHaveBeenCalled();
+    utterances[0]?.onend?.();
+    await waitFor(() => expect(dispatch).toHaveBeenCalledWith({
+      type: 'StartNarratedClueTimer', clueId: 'round-one-clue-1-2', narrationSequence: 7,
+    }));
+  });
+
   it('shows the player opening logo for three seconds, then reveals categories one at a time', () => {
     vi.useFakeTimers();
     try {

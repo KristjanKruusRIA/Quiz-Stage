@@ -13,7 +13,7 @@ describe('AudioSettingsRepository', () => {
   it('persists strict clamped settings across repository restarts', () => {
     const db = database();
     new AudioSettingsRepository(db).save({ master: 2, music: -1, effects: 0.6, crowd: 0.7, muted: true });
-    expect(new AudioSettingsRepository(db).read()).toEqual({ master: 1, music: 0, effects: 0.6, crowd: 0.7, muted: true });
+    expect(new AudioSettingsRepository(db).read()).toEqual({ master: 1, music: 0, effects: 0.6, crowd: 0.7, muted: true, speechEnabled: false });
   });
 
   it('rejects NaN and extra fields without replacing the prior value', () => {
@@ -32,5 +32,16 @@ describe('AudioSettingsRepository', () => {
     repository.save({ ...defaultAudioSettings, master: 0.2 });
     repository.save({ ...defaultAudioSettings, music: 0.3 });
     expect(repository.read()).toEqual({ ...defaultAudioSettings, music: 0.3 });
+  });
+
+  it('hydrates speech as disabled from legacy persisted settings', () => {
+    const db = database();
+    db.prepare('INSERT INTO settings VALUES (?, ?, ?)').run('audio', JSON.stringify({
+      master: 0.4, music: 0.3, effects: 0.2, crowd: 0.1, muted: true,
+    }), 0);
+
+    expect(new AudioSettingsRepository(db).read()).toEqual({
+      master: 0.4, music: 0.3, effects: 0.2, crowd: 0.1, muted: true, speechEnabled: false,
+    });
   });
 });

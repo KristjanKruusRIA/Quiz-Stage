@@ -103,6 +103,20 @@ describe('HostConsole', () => {
     expect(screen.getByRole('button', { name: 'Lock Beta' })).toBeEnabled();
   });
 
+  it('keeps gameplay controls disabled while an English clue waits for narration', () => {
+    render(<HostConsole view={hostView({
+      config: { ...hostView().state.config, speechEnabled: true },
+      phase: 'ordinary-clue',
+      activeClue: { clueId: 'round-one-clue-1-2', lockedOutTeamIds: [], lockedTeamId: null, responseRevealed: false },
+      timer: { durationMs: 15_000, remainingMs: 15_000, startedAt: null, status: 'idle' },
+    })} api={api()} />);
+
+    expect(screen.getByRole('button', { name: 'Lock Alpha' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Reveal response' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Resume timer' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Reset timer' })).toBeDisabled();
+  });
+
   it('prevalidates the authoritative Daily Double wager range', async () => {
     const desktopApi = api();
     const user = userEvent.setup();

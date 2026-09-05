@@ -12,6 +12,7 @@ import { createTranslator, formatNumber } from '../../i18n';
 import type { AudioAssetKey, AudioSettings } from '../../../shared/media/contracts';
 import type { PublicPresentation } from '../../../shared/ipc/contracts';
 import { useGameAudio } from './useGameAudio';
+import { useGameSpeech } from './useGameSpeech';
 import { useLatchedReducedMotion } from './useLatchedReducedMotion';
 
 type GameSurfaceProps =
@@ -128,8 +129,10 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
     });
   };
   return <main className="game-surface host-surface">
-    {props.audioSettings === undefined ? null : <GameAudioLifecycle view={props.view} settings={props.audioSettings}
-      onWarning={props.onAudioWarning} />}
+    {props.audioSettings === undefined
+      ? <GameSpeechLifecycle view={props.view} api={props.api} />
+      : <GameMediaLifecycle view={props.view} api={props.api} settings={props.audioSettings}
+        onWarning={props.onAudioWarning} />}
     <section className="public-presentation">
       {selectionError ? <p role="alert">{createTranslator(publicView.language)('game.selectionError')}</p> : null}
       {scores(publicView, props.surface)}{presentation(publicView, props.surface, props.now, selectionPending ? undefined : onSelect)}
@@ -139,11 +142,20 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
   </main>;
 }
 
-function GameAudioLifecycle({ view, settings, onWarning }: {
+function GameMediaLifecycle({ view, api, settings, onWarning }: {
   view: HostGameView;
+  api: HostDesktopApi;
   settings: AudioSettings;
   onWarning?: (key: AudioAssetKey) => void;
 }) {
-  useGameAudio(view, settings, onWarning);
+  const { duckMusicFor } = useGameAudio(view, settings, onWarning);
+  useGameSpeech(view, settings, api.dispatch, duckMusicFor);
+  return null;
+}
+
+const unavailableSpeechSettings = { speechEnabled: false, muted: true } as const;
+
+function GameSpeechLifecycle({ view, api }: { view: HostGameView; api: HostDesktopApi }) {
+  useGameSpeech(view, unavailableSpeechSettings, api.dispatch);
   return null;
 }

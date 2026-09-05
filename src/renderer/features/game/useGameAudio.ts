@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import type { HostGameView } from '../../../shared/game/types';
 import {
   audioChannelForAsset,
@@ -86,7 +86,8 @@ export class AudioController {
   private music: AudioLike | null = null;
   private active = new Map<AudioLike, { key: AudioAssetKey; channel: ReturnType<typeof audioChannelForAsset>; ducked: boolean }>();
   private endedListeners = new Map<AudioLike, () => void>();
-  private duckTimer: unknown = null;
+  private duckLeaseSequence = 0;
+  private duckLeases = new Map<number, unknown>();
   private countdownTimer: unknown = null;
   private readonly createAudio: (url: string) => AudioLike;
   private readonly schedule: (callback: () => void, delay: number) => unknown;
@@ -113,7 +114,7 @@ export class AudioController {
     const audio = this.createAudio(mediaAssetUrl(key));
     this.track(audio, key);
     void audio.play().catch(() => { this.release(audio); this.options.onPlaybackWarning?.(key); });
-    if (this.music !== null && key !== 'final-tension') this.duckMusic();
+    if (this.music !== null && key !== 'final-tension') this.duckMusicFor(1_200);
   }
 
   startMusic(key: Extract<AudioAssetKey, 'opening' | 'round-transition' | 'final-tension'>): void {
@@ -137,6 +138,11 @@ export class AudioController {
     this.music = null;
   }
 
+  duckMusicFor(durationMs: number): (() => void) | undefined {
+    if (!Number.isFinite(durationMs) || durationMs < 0) return undefined;
+    return this.duckMusic(durationMs);
+  }
+
   apply(action: GameAudioAction): void {
     if (action.type === 'play') this.play(action.key);
     else if (action.type === 'music') this.startMusic(action.key);
@@ -153,8 +159,8 @@ export class AudioController {
   }
 
   dispose(): void {
-    if (this.duckTimer !== null) this.cancel(this.duckTimer);
-    this.duckTimer = null;
+    for (const handle of this.duckLeases.values()) this.cancel(handle);
+    this.duckLeases.clear();
     this.setCountdownRunning(false);
     for (const audio of [...this.active.keys()]) { audio.pause(); this.release(audio); }
     this.music = null;
@@ -162,7 +168,11 @@ export class AudioController {
 
   private track(audio: AudioLike, key: AudioAssetKey, onEnded?: () => void): void {
     const ended = () => { this.release(audio); onEnded?.(); };
-    const playback = { key, channel: audioChannelForAsset(key), ducked: false };
+    const playback = {
+      key,
+      channel: audioChannelForAsset(key),
+      ducked: audio === this.music && this.duckLeases.size > 0,
+    };
     this.active.set(audio, playback);
     this.applyVolume(audio, playback);
     this.endedListeners.set(audio, ended);
@@ -176,21 +186,29 @@ export class AudioController {
     this.active.delete(audio);
   }
 
-  private duckMusic(): void {
-    if (this.music === null) return;
-    if (this.duckTimer !== null) this.cancel(this.duckTimer);
-    const playback = this.active.get(this.music);
-    if (playback === undefined) return;
-    playback.ducked = true;
-    this.applyVolume(this.music, playback);
-    this.duckTimer = this.schedule(() => {
-      this.duckTimer = null;
+  private duckMusic(durationMs: number): () => void {
+    const lease = ++this.duckLeaseSequence;
+    if (this.music !== null) {
+      const playback = this.active.get(this.music);
+      if (playback !== undefined) {
+        playback.ducked = true;
+        this.applyVolume(this.music, playback);
+      }
+    }
+    const release = () => {
+      if (!this.duckLeases.has(lease)) return;
+      const handle = this.duckLeases.get(lease);
+      this.cancel(handle);
+      this.duckLeases.delete(lease);
+      if (this.duckLeases.size > 0) return;
       if (this.music === null) return;
       const current = this.active.get(this.music);
       if (current === undefined) return;
       current.ducked = false;
       this.applyVolume(this.music, current);
-    }, 1_200);
+    };
+    this.duckLeases.set(lease, this.schedule(release, durationMs));
+    return release;
   }
 
   private applyVolume(audio: AudioLike, playback: { channel: ReturnType<typeof audioChannelForAsset>; ducked: boolean }): void {
@@ -202,7 +220,7 @@ export function useGameAudio(
   view: HostGameView,
   settings: AudioSettings,
   onPlaybackWarning?: (key: AudioAssetKey) => void,
-): void {
+): { duckMusicFor: (durationMs: number) => (() => void) | undefined } {
   const controller = useRef<AudioController | null>(null);
   const previous = useRef<HostGameView | null>(null);
   const playbackWarning = useRef(onPlaybackWarning);
@@ -217,4 +235,6 @@ export function useGameAudio(
     previous.current = view;
   }, [view]);
   useEffect(() => () => controller.current?.dispose(), []);
+  const duckMusicFor = useCallback((durationMs: number) => controller.current?.duckMusicFor(durationMs), []);
+  return { duckMusicFor };
 }

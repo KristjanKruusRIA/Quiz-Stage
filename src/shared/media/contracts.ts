@@ -45,6 +45,7 @@ export const audioSettingsInputSchema = z.strictObject({
   effects: z.number().finite(),
   crowd: z.number().finite(),
   muted: z.boolean(),
+  speechEnabled: z.boolean().default(false),
 });
 
 export const audioSettingsSchema = audioSettingsInputSchema.extend({
@@ -62,6 +63,7 @@ export const defaultAudioSettings: AudioSettings = Object.freeze({
   effects: 0.8,
   crowd: 0.8,
   muted: false,
+  speechEnabled: false,
 });
 
 const MEDIA_LICENSE_URLS = {
@@ -161,6 +163,7 @@ export function normalizeAudioSettings(input: unknown): AudioSettings {
     effects: clampVolume(parsed.effects),
     crowd: clampVolume(parsed.crowd),
     muted: parsed.muted,
+    speechEnabled: parsed.speechEnabled,
   };
 }
 

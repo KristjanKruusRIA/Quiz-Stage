@@ -51,6 +51,37 @@ function deferred<T>() {
 }
 
 describe('SetupScreen', () => {
+  it('snapshots the enabled speech preference into an English match', async () => {
+    const desktopApi = api();
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} speechEnabled onBack={vi.fn()} />);
+
+    const start = await screen.findByRole('button', { name: 'Start match' });
+    await waitFor(() => expect(start).toBeEnabled());
+    await user.click(start);
+
+    await waitFor(() => expect(desktopApi.startMatch).toHaveBeenCalledWith(expect.objectContaining({
+      language: 'en',
+      speechEnabled: true,
+    })));
+  });
+
+  it('keeps speech disabled for an Estonian match', async () => {
+    const desktopApi = api();
+    const user = userEvent.setup();
+    render(<SetupScreen api={desktopApi} speechEnabled onBack={vi.fn()} />);
+
+    await user.click(await screen.findByRole('radio', { name: 'Estonian' }));
+    const start = screen.getByRole('button', { name: 'Alusta mängu' });
+    await waitFor(() => expect(start).toBeEnabled());
+    await user.click(start);
+
+    await waitFor(() => expect(desktopApi.startMatch).toHaveBeenCalledWith(expect.objectContaining({
+      language: 'et',
+      speechEnabled: false,
+    })));
+  });
+
   it('leaves Adult opt-in while retaining other available packs by default', async () => {
     const checkContentAvailability = vi.fn(async () => ({ ok: true as const }));
     const desktopApi = api({

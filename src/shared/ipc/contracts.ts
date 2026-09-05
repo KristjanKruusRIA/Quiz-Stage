@@ -27,6 +27,7 @@ const authoredTeamSchema = teamSchema.extend({ name: z.string().trim().min(1).ma
 
 const gameConfigShape = {
   language: z.enum(['en', 'et']),
+  speechEnabled: z.boolean().optional(),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   clueSeconds: z.number().int().min(5).max(60).multipleOf(5),
   packIds: z.array(identifierSchema).min(1),
@@ -63,6 +64,11 @@ const persistedGameConfigSchema = z.strictObject({
 export const gameCommandSchema = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('SelectClue'), clueId: identifierSchema }),
   z.strictObject({ type: z.literal('LockTeam'), teamId: identifierSchema, at: timestampSchema }),
+  z.strictObject({
+    type: z.literal('StartNarratedClueTimer'),
+    clueId: identifierSchema,
+    narrationSequence: z.number().int().nonnegative(),
+  }),
   z.strictObject({ type: z.literal('JudgeResponse'), correct: z.boolean(), at: timestampSchema }),
   z.strictObject({ type: z.literal('SubmitDailyDoubleWager'), wager: z.number().int() }),
   z.strictObject({ type: z.literal('SubmitFinalWager'), teamId: identifierSchema, wager: z.number().int() }),
@@ -117,6 +123,7 @@ const gameTimerSchema = z.strictObject({
   remainingMs: z.number().int().nonnegative(),
   startedAt: timestampSchema.nullable(),
   status: z.enum(['idle', 'running', 'paused', 'expired']),
+  narrationSequence: z.number().int().nonnegative().optional(),
 }).refine((timer) => timer.remainingMs <= timer.durationMs, {
   message: 'Timer remaining time cannot exceed its duration',
   path: ['remainingMs'],

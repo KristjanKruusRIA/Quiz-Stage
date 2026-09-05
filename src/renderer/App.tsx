@@ -26,6 +26,21 @@ const audioAssetLabelKeys = {
   winner: 'settings.asset.winner',
 } as const;
 
+const AUDIO_SETTINGS_LOAD_TIMEOUT_MS = 3_000;
+
+function loadAudioSettingsWithTimeout(request: Promise<AudioSettings>): Promise<AudioSettings> {
+  return new Promise((resolve, reject) => {
+    const timeout = globalThis.setTimeout(
+      () => reject(new Error('AUDIO_SETTINGS_LOAD_TIMEOUT')),
+      AUDIO_SETTINGS_LOAD_TIMEOUT_MS,
+    );
+    void request.then(
+      (settings) => { globalThis.clearTimeout(timeout); resolve(settings); },
+      (error: unknown) => { globalThis.clearTimeout(timeout); reject(error); },
+    );
+  });
+}
+
 interface AppProps {
   api?: DesktopApi;
 }
@@ -116,7 +131,7 @@ export default function App({ api }: AppProps) {
     if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
     const sequence = ++audioLoadSequence.current;
     setAudioState({ status: 'loading' });
-    void desktopApi.getAudioSettings().then(
+    void loadAudioSettingsWithTimeout(desktopApi.getAudioSettings()).then(
       (settings) => { if (sequence === audioLoadSequence.current) setAudioState((state) => ({ status: 'ready', settings, revision: state.status === 'ready' ? state.revision + 1 : 1 })); },
       () => { if (sequence === audioLoadSequence.current) setAudioState({ status: 'error' }); },
     );
@@ -165,8 +180,12 @@ export default function App({ api }: AppProps) {
     if (desktopApi.surface !== 'host' || desktopApi.getAudioSettings === undefined) return;
     const sequence = ++audioLoadSequence.current;
     let active = true;
-    void desktopApi.getAudioSettings().then(
-      (settings) => { if (active && sequence === audioLoadSequence.current) setAudioState({ status: 'ready', settings, revision: 1 }); },
+    void loadAudioSettingsWithTimeout(desktopApi.getAudioSettings()).then(
+      (settings) => {
+        if (active && sequence === audioLoadSequence.current) {
+          setAudioState({ status: 'ready', settings, revision: 1 });
+        }
+      },
       () => { if (active && sequence === audioLoadSequence.current) setAudioState({ status: 'error' }); },
     );
     return () => { active = false; };
@@ -204,8 +223,11 @@ export default function App({ api }: AppProps) {
   }
   let content: React.ReactNode;
   if (route === 'setup') {
-    content = <SetupScreen api={desktopApi} initialLanguage={locale} onLanguageChange={setLocale}
-      onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
+    content = audioState.status === 'loading' && desktopApi.getAudioSettings !== undefined
+      ? <SettingsStatusScreen status="loading" onRetry={loadAudioSettings} onBack={() => navigate('home')} />
+      : <SetupScreen api={desktopApi} initialLanguage={locale} onLanguageChange={setLocale}
+        speechEnabled={audioState.status === 'ready' && audioState.settings.speechEnabled}
+        onBack={() => navigate('home')} onStarted={() => navigate('match')} />;
   } else if (route === 'history') {
     content = <HistoryRoute api={desktopApi} onBack={() => navigate('home')} />;
   } else if (route === 'content') {
@@ -220,7 +242,10 @@ export default function App({ api }: AppProps) {
       : <SettingsStatusScreen status={audioState.status === 'error' || appearanceState.status === 'error' ? 'error' : 'loading'} onRetry={() => { loadAudioSettings(); loadAppearanceSettings(); }} onBack={() => navigate('home')} />;
   } else if (route === 'match') {
     const matchLocale = hostView?.state.config.language ?? locale;
-    content = hostView === null
+    const waitingForSpeechSettings = hostView?.state.config.speechEnabled === true
+      && audioState.status === 'loading'
+      && desktopApi.getAudioSettings !== undefined;
+    content = hostView === null || waitingForSpeechSettings
       ? <main className="waiting-screen" role="status">{translate(matchLocale, 'app.startingMatch')}</main>
       : <GameSurface
         surface="host"

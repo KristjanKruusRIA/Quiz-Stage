@@ -55,6 +55,8 @@ export function SettingsScreen({ settings, appearance = { version: 1, reducedMot
       </div>)}
       <label><input type="checkbox" checked={current.muted}
         onChange={(event) => save({ ...current, muted: event.target.checked })} />{t('settings.mute')}</label>
+      <label><input type="checkbox" checked={current.speechEnabled}
+        onChange={(event) => save({ ...current, speechEnabled: event.target.checked })} />{t('settings.speechEnabled')}</label>
     </section>
     <section aria-label={t('settings.appearance')}>
       <h2>{t('settings.appearance')}</h2>

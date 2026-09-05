@@ -29,6 +29,8 @@ export function reduceGameState(state: GameState, command: GameCommand): GameSta
       return selectClue(state, command.clueId);
     case 'LockTeam':
       return lockTeam(state, command.teamId, command.at);
+    case 'StartNarratedClueTimer':
+      return startNarratedClueTimer(state, command.clueId, command.narrationSequence);
     case 'JudgeResponse':
       return judgeResponse(state, command.correct, command.at);
     case 'SubmitDailyDoubleWager':
@@ -99,7 +101,7 @@ function selectClue(state: GameState, clueId: string): GameState {
     lastClosedClueId: null,
     lastClosedPhase: null,
     lastClosedControllingTeamId: null,
-    timer: { durationMs, remainingMs: durationMs, startedAt: null, status: 'running' },
+    timer: timedClueTimer(state, durationMs),
   };
 }
 
@@ -123,6 +125,23 @@ function lockTeam(state: GameState, teamId: string, at: number): GameState {
   }
 
   return { ...state, activeClue: { ...activeClue, lockedTeamId: teamId }, timer: pauseTimer(state.timer, at) };
+}
+
+function startNarratedClueTimer(state: GameState, clueId: string, narrationSequence: number): GameState {
+  requireTimedPhase(state);
+  if (state.config.language !== 'en' || state.config.speechEnabled !== true) {
+    throw new GameRuleError('NARRATION_DISABLED', 'Narration is not enabled for this match');
+  }
+  if (state.activeClue?.clueId !== clueId) {
+    throw new GameRuleError('INVALID_CLUE', 'Narration can only start the active clue timer');
+  }
+  if (state.timer.narrationSequence !== narrationSequence) {
+    throw new GameRuleError('STALE_NARRATION', 'Narration does not belong to the active clue instance');
+  }
+  if (state.timer.status !== 'idle' || state.timer.remainingMs === 0) {
+    throw new GameRuleError('NARRATION_NOT_PENDING', 'Narration is not waiting to start this clue timer');
+  }
+  return { ...state, timer: { ...state.timer, status: 'running' } };
 }
 
 function judgeResponse(state: GameState, correct: boolean, at: number): GameState {
@@ -179,7 +198,7 @@ function submitDailyDoubleWager(state: GameState, wager: number): GameState {
     ...state,
     phase: 'daily-double-clue',
     dailyDoubleWager: wager,
-    timer: { durationMs, remainingMs: durationMs, startedAt: null, status: 'running' },
+    timer: timedClueTimer(state, durationMs),
   };
 }
 
@@ -236,7 +255,7 @@ function submitFinalWager(state: GameState, teamId: string, wager: number): Game
       responseRevealed: false,
     } : null,
     timer: allCommitted
-      ? { durationMs: 30_000, remainingMs: 30_000, startedAt: null, status: 'running' }
+      ? timedClueTimer(state, 30_000)
       : state.timer,
   };
 }
@@ -310,6 +329,9 @@ function judgeTiebreaker(state: GameState, correct: boolean, at: number): GameSt
 }
 
 function revealResponse(state: GameState): GameState {
+  if (state.timer.status === 'idle') {
+    throw new GameRuleError('NARRATION_PENDING', 'Narration must finish before the response can be revealed');
+  }
   if (state.phase === 'daily-double-clue') {
     if (state.timer.status !== 'expired' || state.activeClue === null) {
       throw new GameRuleError('INVALID_PHASE', 'A Daily Double may be revealed without judgment only after time expires');
@@ -433,7 +455,7 @@ function startTiebreaker(state: GameState, teamIds: string[], clueNumber: number
       lockedTeamId: null,
       responseRevealed: false,
     },
-    timer: { durationMs, remainingMs: durationMs, startedAt: null, status: 'running' },
+    timer: timedClueTimer(state, durationMs),
   };
 }
 
@@ -455,6 +477,9 @@ function resumeActiveTimer(state: GameState, at: number): GameState {
 
 function resetActiveTimer(state: GameState, at: number): GameState {
   requireTimedPhase(state);
+  if (state.timer.status === 'idle') {
+    throw new GameRuleError('NARRATION_PENDING', 'Narration must finish before the clue timer can be reset');
+  }
   if (state.timer.startedAt !== null && at < state.timer.startedAt) {
     throw new GameRuleError('INVALID_TIMESTAMP', 'Timer commands must move forward in time');
   }
@@ -629,6 +654,12 @@ function resumeRemainingTimer(timer: GameTimer, at: number): GameTimer {
 
 function idleTimer(durationMs: number): GameTimer {
   return { durationMs, remainingMs: durationMs, startedAt: null, status: 'idle' };
+}
+
+function timedClueTimer(state: GameState, durationMs: number): GameTimer {
+  return state.config.language === 'en' && state.config.speechEnabled === true
+    ? { ...idleTimer(durationMs), narrationSequence: state.eventSequence + 1 }
+    : { durationMs, remainingMs: durationMs, startedAt: null, status: 'running' };
 }
 
 function sortByScore(state: GameState, teamIds: string[]): string[] {
