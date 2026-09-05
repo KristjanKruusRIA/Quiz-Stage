@@ -32362,8 +32362,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "relic:ark-covenant",
         "clue": {
-          "en": "Which gold-covered biblical chest is associated with the tablets of the Ten Commandments and became the prize pursued in Raiders of the Lost Ark?",
-          "et": "Millist kullatud piibellikku laegast seostatakse kümne käsu kivitahvlitega ning jahitakse filmis „Kadunud laeka jälil”?"
+          "en": "Which gold-covered biblical chest, said to have held the tablets of the Ten Commandments, is sought in Raiders of the Lost Ark?",
+          "et": "Millist kullatud piibellikku laegast, kus hoiti kümne käsu kivitahvleid, jahitakse filmis „Kadunud laeka jälil”?"
         },
         "response": {
           "en": "Ark of the Covenant",
@@ -32529,8 +32529,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-040",
     "name": {
-      "en": "Faith and Myth on National Flags",
-      "et": "Usk ja müüt riigilippudel"
+      "en": "Faith and Symbols on National Flags",
+      "et": "Usk ja sümbolid riigilippudel"
     },
     "questions": [
       {
@@ -32732,7 +32732,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "holiday:holi",
         "clue": {
           "en": "At which Hindu spring festival do crowds famously throw brightly colored powders and water at one another?",
-          "et": "Millise hindu kevadpüha ajal loobivad rahvahulgad kuulsalt üksteist erksavärvilise pulbri ja veega?"
+          "et": "Millise hindu kevadpüha ajal loobivad rahvahulgad kuulsalt üksteise pihta erksavärvilist pulbrit ja vett?"
         },
         "response": {
           "en": "Holi",
@@ -33697,7 +33697,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "manuscript:diamond-sutra",
         "clue": {
           "en": "Name the Buddhist sutra whose copy dated 868 is celebrated as an early dated woodblock-printed book and was found in the Mogao cave library.",
-          "et": "Nimeta budistlik suutra, mille 868. aastaga dateeritud eksemplari tuntakse varase dateeritud puulõiketrükise raamatuna ja mis leiti Mogao koobastiku raamatukogust."
+          "et": "Nimeta budistlik suutra, mille 868. aasta eksemplar on üks varasemaid dateeritud puulõiketehnikas trükitud raamatuid ning mis leiti Mogao koobastiku raamatukogust."
         },
         "response": {
           "en": "Diamond Sutra",
@@ -34324,8 +34324,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
   {
     "categorySetId": "built-in-mythology-religion-philosophy-set-050",
     "name": {
-      "en": "Saints Behind Familiar Symbols",
-      "et": "Pühakud tuttavate sümbolite taga"
+      "en": "Saints, Symbols and Patronage",
+      "et": "Pühakud, sümbolid ja eestkoste"
     },
     "questions": [
       {
@@ -34868,7 +34868,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "test:judgement-paris",
         "clue": {
           "en": "What named mythological judgement has a Trojan prince award a golden apple to one of three goddesses, helping trigger the Trojan War?",
-          "et": "Millises nimega mütoloogilises otsuses annab Trooja prints kuldõuna ühele kolmest jumalannast ja aitab sellega Trooja sõja vallandada?"
+          "et": "Kuidas nimetatakse mütoloogilist otsust, milles Trooja prints annab kuldõuna ühele kolmest jumalannast ja aitab sellega Trooja sõja vallandada?"
         },
         "response": {
           "en": "Judgement of Paris",
@@ -35809,8 +35809,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "expression:gordian-knot",
         "clue": {
-          "en": "Which named object or expression is associated with Alexander the Great making one decisive cut at Gordium?",
-          "et": "Milline nimega ese või väljend seostub Aleksander Suure ühe otsustava lõikega Gordiumis?"
+          "en": "Which legendary knot did Alexander the Great supposedly sever with one stroke of his sword?",
+          "et": "Millise legendaarse sõlme raius Aleksander Suur pärimuse järgi ühe mõõgalöögiga läbi?"
         },
         "response": {
           "en": "Gordian knot",
@@ -36499,7 +36499,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "landmark:mont-saint-michel",
         "clue": {
           "en": "Which Normandy landmark is a tidal island occupied by an abbey?",
-          "et": "Milline Normandia pühapaik ühendab loodetesaare ja sellel asuva kloostri?"
+          "et": "Milline Normandia pühapaik on loodetesaar, millel asub klooster?"
         },
         "response": {
           "en": "Mont-Saint-Michel",
@@ -36778,7 +36778,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "personification:grim-reaper",
         "clue": {
           "en": "Which personification is commonly hooded or skeletal and carries a scythe?",
-          "et": "Millist kehastust kujutatakse tavaliselt kapuutsis või luukerena ning vikatiga?"
+          "et": "Millist kehastust kujutatakse tavaliselt kapuutsiga luukerena, kes kannab vikatit?"
         },
         "response": {
           "en": "Grim Reaper",
@@ -36880,29 +36880,24 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-063:question:4",
-        "factKey": "lady-luck:fortuna-wheel-fickle-fortune",
+        "factKey": "fortuna:roman-goddess-wheel-changing-fortune",
         "tier": 4,
-        "subjectKey": "personification:lady-luck",
+        "subjectKey": "deity:fortuna",
         "clue": {
-          "en": "Which personification of fickle good fortune is associated with a wheel that turns as circumstances change?",
-          "et": "Milline muutliku hea õnne kehastus seostub rattaga, mis pöördub koos olude muutumisega?"
+          "en": "Which Roman goddess of fortune is commonly shown with a wheel symbolizing life's changing fortunes?",
+          "et": "Millist Rooma õnne- ja saatusejumalannat kujutatakse sageli rattaga, mis sümboliseerib elu muutlikku õnne?"
         },
         "response": {
-          "en": "Lady Luck",
-          "et": "õnnejumalanna"
+          "en": "Fortuna",
+          "et": "Fortuna"
         },
         "acceptedVariants": {
-          "en": [
-            "Fortuna"
-          ],
-          "et": [
-            "Fortuna",
-            "Lady Luck"
-          ]
+          "en": [],
+          "et": []
         },
         "explanation": {
-          "en": "Lady Luck draws on the Roman goddess Fortuna, whose wheel represents unstable fortune.",
-          "et": "Õnnejumalanna seostub Rooma Fortuna ja tema rattaga, mis sümboliseerib õnne muutlikkust."
+          "en": "Fortuna is the Roman goddess of luck and fortune; her wheel symbolizes life's changing fortunes.",
+          "et": "Fortuna on Rooma õnne- ja saatusejumalanna; tema ratas sümboliseerib elu muutlikku õnne."
         },
         "source": {
           "sourceId": "wikipedia:fortuna",
@@ -36957,7 +36952,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "object:magic-wand",
         "clue": {
           "en": "Which familiar object is a thin handheld stick used by magicians, fairies or wizards?",
-          "et": "Milline tuttav ese on peenike käes hoitav pulk, mida kujutatakse võlurite, haldjate ja maagide kasutuses?"
+          "et": "Milline tuttav ese on peenike käes hoitav pulk, mida lugudes kasutavad võlurid, haldjad ja maagid?"
         },
         "response": {
           "en": "magic wand",
@@ -37137,7 +37132,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 1,
         "subjectKey": "figure:mother-teresa",
         "clue": {
-          "en": "Which public figure founded the Missionaries of Charity in Kolkata, whose habit became a white sari with blue borders?",
+          "en": "Which public figure founded the Missionaries of Charity in Kolkata, a congregation whose members became known for white saris with blue borders?",
           "et": "Milline avaliku elu tegelane asutas heategevuskoguduse Missionaries of Charity, mille tunnusrüüks sai sinise äärega valge sari, ning tegutses Calcuttas ehk Kolkatas?"
         },
         "response": {
@@ -37238,7 +37233,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           ]
         },
         "explanation": {
-          "en": "Pope John Paul II joined a Polish background with a widely travelling papacy and opposition to communism.",
+          "en": "Pope John Paul II was Polish, travelled widely as pope and opposed communism.",
           "et": "Paavst Johannes Paulus II ühendas Poola päritolu, rohked välisreisid ja vastuseisu kommunismile."
         },
         "source": {
@@ -37289,7 +37284,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "figure:nick-vujicic",
         "clue": {
           "en": "Which public figure is an Australian-American evangelist and motivational speaker who was born without arms or legs?",
-          "et": "Milline Austraalia ja Ameerika taustaga evangelist ning motivatsioonikõneleja sündis käte ja jalgadeta?"
+          "et": "Milline Austraaliast pärit evangelist ja motivatsioonikõneleja sündis ilma käte ja jalgadeta?"
         },
         "response": {
           "en": "Nick Vujicic",
@@ -37415,7 +37410,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "Palm reading examines the hand’s lines and treats them as signs of personality or what lies ahead.",
-          "et": "Käejoonte lugemine uurib käe jooni ning käsitab neid iseloomu ja tuleviku märkidena."
+          "et": "Käejoonte lugemine uurib käejooni ning käsitab neid iseloomu ja tuleviku märkidena."
         },
         "source": {
           "sourceId": "wikipedia:palmistry",
@@ -37467,7 +37462,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "divination:tea-leaf-reading",
         "clue": {
           "en": "Which method uses shapes made by tea residue left in a cup?",
-          "et": "Milline meetod kasutab tassi jäänud teepaksu moodustatud kujundeid?"
+          "et": "Milline meetod kasutab tassi jäänud teepaksust moodustunud kujundeid?"
         },
         "response": {
           "en": "tea-leaf reading",
@@ -37647,8 +37642,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 5,
         "subjectKey": "creature:dryad",
         "clue": {
-          "en": "Which Greek nature spirit is connected to a tree, originally especially an oak?",
-          "et": "Milline Kreeka loodusvaim on seotud puuga, algselt eriti tammega?"
+          "en": "What is the name of a Greek nymph of trees, originally especially oaks?",
+          "et": "Kuidas nimetatakse Kreeka mütoloogias puude, algselt eriti tammede nümfi?"
         },
         "response": {
           "en": "dryad",
@@ -38085,8 +38080,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "symbol:scarab",
         "clue": {
-          "en": "Which insect-shaped amulet of ancient Egypt was associated with the sun, regeneration and rebirth?",
-          "et": "Millist Vana-Egiptuse putukakujulist amuletti seostati päikese, uuenemise ja taassünniga?"
+          "en": "Which insect-shaped amulet of ancient Egypt symbolized the sun, regeneration and rebirth?",
+          "et": "Milline Vana-Egiptuse putukakujuline amulett sümboliseeris päikest, uuenemist ja taassündi?"
         },
         "response": {
           "en": "scarab",
@@ -40543,37 +40538,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
       },
       {
         "key": "built-in-mythology-religion-philosophy-set-084:question:3",
-        "factKey": "mythology-hard:084:3:age-of-mythology-three-pantheons",
-        "tier": 3,
-        "subjectKey": "game:age-of-mythology",
-        "clue": {
-          "en": "Which Ensemble Studios strategy game spun off from Age of Empires to use Greek, Egyptian and Norse legends?",
-          "et": "Milline Ensemble Studiosi strateegiamäng kasvas välja sarjast „Age of Empires“ ning kasutab Kreeka, Egiptuse ja Põhjala legende?"
-        },
-        "response": {
-          "en": "Age of Mythology",
-          "et": "Age of Mythology"
-        },
-        "acceptedVariants": {
-          "en": [],
-          "et": []
-        },
-        "explanation": {
-          "en": "Age of Mythology is an Ensemble Studios real-time strategy spin-off inspired by Greek, Egyptian and Norse mythology.",
-          "et": "„Age of Mythology“ on Ensemble Studiosi reaalajastrateegia kõrvalharu, mis ammutab ainest Kreeka, Egiptuse ja Põhjala mütoloogiast."
-        },
-        "source": {
-          "sourceId": "wikipedia:age_of_mythology",
-          "title": "Age of Mythology",
-          "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
-          "license": "CC-BY-SA-4.0",
-          "retrievedAt": "2026-09-02"
-        }
-      },
-      {
-        "key": "built-in-mythology-religion-philosophy-set-084:question:4",
         "factKey": "mythology-hard:084:4:odyssey-peloponnesian-kassandra-alexios",
-        "tier": 4,
+        "tier": 3,
         "subjectKey": "game:assassins-creed-odyssey",
         "clue": {
           "en": "Which 2018 Ubisoft RPG lets you choose Kassandra or Alexios during a mythologised Peloponnesian War?",
@@ -40599,6 +40565,35 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "sourceId": "wikipedia:assassins_creed_odyssey",
           "title": "Assassin's Creed Odyssey",
           "url": "https://en.wikipedia.org/wiki/Assassin%27s_Creed_Odyssey",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-09-02"
+        }
+      },
+      {
+        "key": "built-in-mythology-religion-philosophy-set-084:question:4",
+        "factKey": "mythology-hard:084:3:age-of-mythology-three-pantheons",
+        "tier": 4,
+        "subjectKey": "game:age-of-mythology",
+        "clue": {
+          "en": "Which Ensemble Studios strategy game spun off from Age of Empires to use Greek, Egyptian and Norse legends?",
+          "et": "Milline Ensemble Studiosi strateegiamäng kasvas välja sarjast „Age of Empires“ ning kasutab Kreeka, Egiptuse ja Põhjala legende?"
+        },
+        "response": {
+          "en": "Age of Mythology",
+          "et": "Age of Mythology"
+        },
+        "acceptedVariants": {
+          "en": [],
+          "et": []
+        },
+        "explanation": {
+          "en": "Age of Mythology is an Ensemble Studios real-time strategy spin-off inspired by Greek, Egyptian and Norse mythology.",
+          "et": "„Age of Mythology“ on Ensemble Studiosi reaalajastrateegia kõrvalharu, mis ammutab ainest Kreeka, Egiptuse ja Põhjala mütoloogiast."
+        },
+        "source": {
+          "sourceId": "wikipedia:age_of_mythology",
+          "title": "Age of Mythology",
+          "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
           "license": "CC-BY-SA-4.0",
           "retrievedAt": "2026-09-02"
         }
@@ -41989,7 +41984,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "song:like-a-prayer",
         "clue": {
           "en": "Which 1989 Madonna single combines a gospel choir with a video showing a church and Catholic imagery?",
-          "et": "Milline Madonna 1989. aasta singel ühendab gospelkoori ning kirikut ja katoliiklikku kujundikeelt näitava video?"
+          "et": "Milline Madonna 1989. aasta singel kasutab gospelkoori ning mille videos näeb kirikut ja katoliiklikku sümboolikat?"
         },
         "response": {
           "en": "Like a Prayer",
@@ -42000,8 +41995,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "“Like a Prayer” uses gospel voices, while its video includes a church and imagery such as stigmata.",
-          "et": "„Like a Prayer“ kasutab gospelhääli ning selle videos on kirik ja stigmade-sarnane katoliiklik kujundikeel."
+          "en": "“Like a Prayer” features gospel vocals; its video includes a church and shows Madonna with stigmata-like wounds.",
+          "et": "„Like a Prayeris“ kõlab gospelkoor; videos näeb kirikut ja Madonnal stigmasid meenutavaid haavu."
         },
         "source": {
           "sourceId": "wikipedia-en:Like_a_Prayer_(song)",
@@ -42234,8 +42229,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 4,
         "subjectKey": "martial-art:capoeira",
         "clue": {
-          "en": "Which Afro-Brazilian martial art and game combines dance, music and play inside a ceremonial roda?",
-          "et": "Milline afrobrasiilia võitluskunst ja mäng ühendab tantsu, muusika ja mängu tseremoniaalses roda-ringis?"
+          "en": "Which Afro-Brazilian martial art and game combines dance and music inside a ceremonial roda?",
+          "et": "Milline afrobrasiilia võitluskunst ja mäng ühendab tantsu ning muusika tseremoniaalses rodas?"
         },
         "response": {
           "en": "capoeira",
@@ -42518,8 +42513,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 2,
         "subjectKey": "historical-event:galileo-affair",
         "clue": {
-          "en": "Name the controversy in which the Roman Inquisition condemned heliocentrism and a later trial put a famous astronomer under house arrest.",
-          "et": "Nimeta vaidlus, milles Rooma inkvisitsioon mõistis hukka heliotsentrismi ning hilisem protsess saatis kuulsa astronoomi koduaresti."
+          "en": "What name is given to the series of events in which the Roman Inquisition condemned heliocentrism and later put a famous astronomer under house arrest?",
+          "et": "Kuidas nimetatakse sündmuste jada, milles Rooma inkvisitsioon mõistis hukka heliotsentrismi ning kuulus astronoom pandi hiljem koduaresti?"
         },
         "response": {
           "en": "Galileo affair",
@@ -42538,7 +42533,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "explanation": {
           "en": "The Galileo affair concerns the Inquisition’s actions against Galileo’s defence of heliocentrism.",
-          "et": "Galilei protsess käsitleb inkvisitsiooni tegevust Galilei heliotsentrismi kaitsmise vastu."
+          "et": "Galilei protsess hõlmab inkvisitsiooni tegevust Galilei vastu, kuna ta kaitses heliotsentrismi."
         },
         "source": {
           "sourceId": "wikipedia:galileo-affair",
@@ -42588,7 +42583,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "historical-event:satanic-verses-controversy",
         "clue": {
           "en": "Which dispute grew from Salman Rushdie’s 1988 novel into debates over censorship and violence and prompted Khomeini’s 1989 fatwa?",
-          "et": "Milline vaidlus kasvas Salman Rushdie 1988. aasta romaanist tsensuuri ja vägivalla teemaliseks poleemikaks ning tõi 1989. aastal Khomeini fatwa?"
+          "et": "Milline vaidlus kasvas Salman Rushdie 1988. aasta romaanist tsensuuri ja vägivalla teemaliseks poleemikaks ning tõi 1989. aastal kaasa Khomeini fatvaa?"
         },
         "response": {
           "en": "Satanic Verses controversy",
@@ -42699,19 +42694,19 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         },
         "response": {
           "en": "Michael",
-          "et": "Michael"
+          "et": "Miikael"
         },
         "acceptedVariants": {
           "en": [
             "Miikael"
           ],
           "et": [
-            "Miikael"
+            "Michael"
           ]
         },
         "explanation": {
           "en": "Michael derives from a Hebrew rhetorical question and appears as an archangel’s name in Daniel.",
-          "et": "Michael pärineb heebrea retoorilisest küsimusest ning esineb Taanieli raamatus peaingli nimena."
+          "et": "Miikael pärineb heebrea retoorilisest küsimusest ning esineb Taanieli raamatus peaingli nimena."
         },
         "source": {
           "sourceId": "wikipedia:michael-given-name",
@@ -42844,8 +42839,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Guru has a deep teaching role in Indian traditions and also a broader expert sense.",
-          "et": "Gurul on India traditsioonides sügav õpetajaroll ning sõnal on ka laiem eksperdi tähendus."
+          "en": "In Indian traditions, a guru is a teacher or spiritual guide; in wider use, the word also means an expert.",
+          "et": "India traditsioonides on guru õpetaja või vaimne teejuht; laiemas kasutuses tähendab sõna ka eksperti."
         },
         "source": {
           "sourceId": "wikipedia:guru",
@@ -42862,7 +42857,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "subjectKey": "term:taboo",
         "clue": {
           "en": "Which English loanword for a socially enforced prohibition comes from Polynesian tapu, recorded by James Cook in Tonga?",
-          "et": "Milline ühiskondlikult jõustatud keeldu tähistav laensõna pärineb polüneesia sõnast tapu, mille James Cook Tongal üles märkis?"
+          "et": "Milline laensõna tähistab ühiskondlikul taval põhinevat keeldu ning pärineb polüneesia sõnast tapu, mille James Cook Tongal üles märkis?"
         },
         "response": {
           "en": "taboo",
@@ -42894,8 +42889,8 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
         "tier": 3,
         "subjectKey": "finance-term:angel-investor",
         "clue": {
-          "en": "Which startup financier takes a name first used for wealthy Broadway theatre backers?",
-          "et": "Milline idufirma rahastaja kannab nimetust, mida kasutati algselt jõukate Broadway teatritoetajate kohta?"
+          "en": "What term for someone who provides early capital to startups was first used for wealthy Broadway theatre backers?",
+          "et": "Milline termin tähistab idufirma varajast rahastajat ja oli algselt kasutusel jõukate Broadway teatritoetajate kohta?"
         },
         "response": {
           "en": "angel investor",
@@ -43188,7 +43183,7 @@ const CATEGORY_SEEDS: readonly CategorySeed[] = [
           "et": []
         },
         "explanation": {
-          "en": "Dawkins introduced “meme” as a cultural counterpart to a unit that replicates through imitation.",
+          "en": "Dawkins introduced “meme” for a unit of cultural transmission that spreads through imitation.",
           "et": "Dawkins võttis „meemi“ kasutusele kultuuriühiku kohta, mis levib jäljendamise kaudu."
         },
         "source": {
