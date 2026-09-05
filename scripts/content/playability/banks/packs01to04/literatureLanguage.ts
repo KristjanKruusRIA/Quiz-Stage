@@ -550,10 +550,10 @@ const rawCategories = [
     name: { en: 'Words That Escaped Their Books', et: 'Raamatutest ellu läinud sõnad' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-083:catch-22-no-win-rule', factKey: 'literature-language:catch-22-heller-contradictory-airman-rule', tier: 1, subjectKey: 'phrase:catch-22',
-        clue: { en: 'What term for a no-win situation comes from Joseph Heller’s rule that an airman asking to avoid dangerous missions proves he is sane enough to keep flying?', et: 'Milline väljapääsmatut olukorda tähistav väljend pärineb Joseph Helleri reeglist, mille järgi tõestab ohtlikest lendudest vabastamist paluv lendur, et on lendamiseks piisavalt terve mõistusega?' }, response: { en: 'a catch-22', et: 'nokk kinni, saba lahti olukord' }, acceptedVariants: { en: ['catch-22', 'Catch-22', 'nokk kinni, saba lahti olukord'], et: ['catch-22', 'Catch-22'] },
-        explanation: { en: 'The fictional regulation traps Heller’s airmen in circular logic, and its name became shorthand for any self-contradictory bind.', et: 'Väljamõeldud määrus sulgeb Helleri lendurid ringloogikasse ning selle nimest sai iseenesega vastuolus oleva ummiku üldnimetus.' },
-        source: { sourceId: 'wikipedia:catch-22-no-win-rule', title: 'Catch-22 (logic)', url: 'https://en.wikipedia.org/wiki/Catch-22_(logic)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-083:quixotic-don-quixote', factKey: 'literature-language:quixotic-impractical-idealism-from-don-quixote', tier: 1, subjectKey: 'word:quixotic',
+        clue: { en: 'Which adjective for impractically idealistic behaviour comes from the hero of Cervantes’s Don Quixote?', et: 'Milline ebapraktiliselt idealistlikku käitumist tähistav omadussõna pärineb Cervantese Don Quijote nimest?' }, response: { en: 'quixotic', et: 'donkihhotlik' }, acceptedVariants: { en: ['quixotical', 'donkihhotlik'], et: ['quixotic'] },
+        explanation: { en: 'The adjective derives from Don Quixote and describes noble but impractical idealism.', et: 'Omadussõna pärineb Don Quijote nimest ning kirjeldab õilsat, kuid ebapraktilist idealismi.' },
+        source: { sourceId: 'wikipedia:quixotism-adjective', title: 'Quixotism', url: 'https://en.wikipedia.org/wiki/Quixotism', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-083:utopia-more-no-place', factKey: 'literature-language:utopia-more-coined-island-name', tier: 2, subjectKey: 'word:utopia',
@@ -1162,10 +1162,10 @@ const rawCategories = [
     name: { en: 'People Hidden Inside Everyday Words', et: 'Igapäevasõnades peituvad inimesed' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-050:boycott-charles-irish-land', factKey: 'literature-language:boycott-charles-boycott-social-isolation', tier: 1, subjectKey: 'word:boycott',
-        clue: { en: 'Which verb meaning organized refusal comes from Irish tenants and neighbours socially isolating a County Mayo land agent?', et: 'Milline organiseeritud keeldumist tähendav sõna pärineb sellest, et Iiri rentnikud ja naabrid tõrjusid ühe Mayo krahvkonna maahalduri kogukonnast välja?' }, response: { en: 'boycott', et: 'boikott' }, acceptedVariants: { en: ['to boycott'], et: ['boikoteerima'] },
-        explanation: { en: 'The widely reported campaign against Boycott turned his surname into an international word for collective non-cooperation.', et: 'Laialt kajastatud kampaania Boycotti vastu muutis tema perekonnanime rahvusvaheliseks sõnaks, mis tähistab ühist koostööst keeldumist.' },
-        source: { sourceId: 'wikipedia:boycott-charles-irish-land', title: 'Boycott', url: 'https://en.wikipedia.org/wiki/Boycott', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-050:nicotine-jean-nicot', factKey: 'literature-language:nicotine-named-through-tobacco-for-jean-nicot', tier: 1, subjectKey: 'word:nicotine',
+        clue: { en: 'Which tobacco alkaloid ultimately takes its name from Jean Nicot, the French diplomat who sent tobacco and seeds to Paris?', et: 'Millise tubaka alkaloidi nimi pärineb tubakataime nimetuse kaudu Prantsuse diplomaadilt Jean Nicot, kes saatis tubakat ja seemneid Pariisi?' }, response: { en: 'nicotine', et: 'nikotiin' }, acceptedVariants: { en: ['nicotin', 'nikotiin'], et: ['nicotine'] },
+        explanation: { en: 'Nicotine is named through the tobacco plant Nicotiana, which honours Jean Nicot after he sent tobacco and seeds to Paris in 1560.', et: 'Nikotiin sai nime tubakataime Nicotiana kaudu; taim nimetati Jean Nicot’ auks pärast seda, kui ta saatis 1560. aastal Pariisi tubakat ja seemneid.' },
+        source: { sourceId: 'wikipedia:nicotine-jean-nicot', title: 'Nicotine', url: 'https://en.wikipedia.org/wiki/Nicotine', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-050:silhouette-etienne-profile', factKey: 'literature-language:silhouette-etienne-cheap-profile-portrait', tier: 2, subjectKey: 'word:silhouette',
@@ -1186,10 +1186,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:maverick-unbranded-cattle', title: 'Maverick (animal)', url: 'https://en.wikipedia.org/wiki/Maverick_(animal)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-050:cardigan-earl-crimea', factKey: 'literature-language:cardigan-earl-knitted-jacket', tier: 5, subjectKey: 'word:cardigan',
-        clue: { en: 'Which knitted jacket takes its name from James Brudenell, the Earl who led the Charge of the Light Brigade in the Crimean War?', et: 'Milline kootud jakk on saanud nime James Brudenellilt, krahvilt, kes juhtis Krimmi sõjas kergeratsaväebrigaadi rünnakut?' }, response: { en: 'cardigan', et: 'kardigan' }, acceptedVariants: { en: ['a cardigan', 'cardigan sweater'], et: ['kardigan-jakk'] },
-        explanation: { en: 'The garment was named after the Earl of Cardigan, though later fashion shaped the familiar open-front sweater.', et: 'Rõivaese sai nime Cardigani krahvi järgi, kuigi tuttava eest lahtise kampsuni kuju kujundas hilisem mood.' },
-        source: { sourceId: 'wikipedia:cardigan-earl-crimea', title: 'Cardigan (sweater)', url: 'https://en.wikipedia.org/wiki/Cardigan_(sweater)', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-050:shrapnel-henry-artillery', factKey: 'literature-language:shrapnel-word-named-for-henry-artillery-shell', tier: 5, subjectKey: 'word:shrapnel',
+        clue: { en: 'Which word for fragments scattered by an exploding shell comes from a British artillery officer named Henry, who developed bursting ammunition?', et: 'Milline plahvatustes laiali paiskuvaid kilde tähistav sõna pärineb Briti suurtükiväeohvitserilt Henrylt, kes arendas kuule laiali paiskavat lõhkemürsku?' }, response: { en: 'shrapnel', et: 'šrapnellikillud' }, acceptedVariants: { en: ['shrapnel fragments', 'shrapnel shell fragments'], et: ['šrapnellikild', 'šrapnelli killud', 'shrapnel', 'shrapnel fragments'] },
+        explanation: { en: 'Henry Shrapnel developed a bursting shell that released shot; his surname later became the English word for fragments scattered by explosions.', et: 'Henry Shrapnel arendas kuule laiali paiskava lõhkemürsu; tema perekonnanimest kujunes hiljem ingliskeelne plahvatuskildude nimetus shrapnel.' },
+        source: { sourceId: 'wikipedia:henry-shrapnel-eponym', title: 'Henry Shrapnel', url: 'https://en.wikipedia.org/wiki/Henry_Shrapnel', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
     ],
   },
@@ -1882,10 +1882,10 @@ const rawCategories = [
     name: { en: 'Cast Away on the Page', et: 'Kirjanduslikud merehädalised' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-033:life-pi-tiger-boat', factKey: 'literature-language:life-pi-patel-richard-parker-lifeboat', tier: 1, subjectKey: 'work:life-of-pi',
-        clue: { en: 'Which Yann Martel novel strands Pi Patel in a lifeboat with a Bengal tiger named Richard Parker after a cargo ship sinks?', et: 'Millises Yann Marteli romaanis jääb Pi Patel pärast kaubalaeva uppumist päästepaati koos Bengali tiigri Richard Parkeriga?' }, response: { en: 'Life of Pi', et: '„Pii elu“' }, acceptedVariants: { en: [], et: [] },
-        explanation: { en: 'Pi uses knowledge from his family’s zoo and a carefully defended territory to survive the Pacific crossing.', et: 'Pi kasutab Vaikse ookeani ületamisel ellujäämiseks pere loomaaiast saadud teadmisi ja hoolikalt kaitstud territooriumi.' },
-        source: { sourceId: 'wikipedia:life-pi-tiger-boat', title: 'Life of Pi', url: 'https://en.wikipedia.org/wiki/Life_of_Pi', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-033:tempest-prospero-island', factKey: 'literature-language:tempest-prospero-shipwrecked-nobles-island', tier: 1, subjectKey: 'work:the-tempest',
+        clue: { en: 'Which Shakespeare play strands shipwrecked nobles on the island where the exiled magician Prospero lives with Miranda and Ariel?', et: 'Millises Shakespeare’i näidendis satuvad merehädalised aadlikud saarele, kus pagendatud võlur Prospero elab koos Miranda ja Arieliga?' }, response: { en: 'The Tempest', et: '„Torm“' }, acceptedVariants: { en: ['Tempest', 'Torm'], et: ['The Tempest', 'Tempest'] },
+        explanation: { en: 'Prospero uses the storm and the island’s magic to confront the nobles who exiled him and arrange Miranda’s future.', et: 'Prospero kasutab tormi ja saare maagiat, et astuda vastu teda pagendanud aadlikele ning korraldada Miranda tulevikku.' },
+        source: { sourceId: 'wikipedia:tempest-prospero-island', title: 'The Tempest', url: 'https://en.wikipedia.org/wiki/The_Tempest', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-033:swiss-family-island', factKey: 'literature-language:swiss-family-robinson-shipwreck-island-home', tier: 2, subjectKey: 'work:swiss-family-robinson',
@@ -2044,10 +2044,10 @@ const rawCategories = [
         source: { sourceId: 'wikipedia:pemberley-darcy-estate', title: 'Pemberley', url: 'https://en.wikipedia.org/wiki/Pemberley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-058:moominvalley-jansson-home', factKey: 'literature-language:moominvalley-jansson-family-home', tier: 4, subjectKey: 'place:moominvalley',
-        clue: { en: 'What peaceful fictional valley is where the Moomins live in the book series that began in 1945?', et: 'Millises rahulikus väljamõeldud orus elavad 1945. aastal alanud raamatusarja muumid?' }, response: { en: 'Moominvalley', et: 'Muumiorg' }, acceptedVariants: { en: ['Moomin Valley', 'Muumiorg'], et: ['Moominvalley', 'Moomin Valley'] },
-        explanation: { en: 'The valley provides a welcoming home base even as floods, comets, winter, and visitors repeatedly disrupt ordinary life.', et: 'Org on turvaline kodupaik, kuigi üleujutused, komeedid, talv ja külalised argielu korduvalt segavad.' },
-        source: { sourceId: 'wikipedia:moominvalley-jansson-home', title: 'Moominvalley', url: 'https://en.wikipedia.org/wiki/Moominvalley', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-058:fortress-solitude-superman', factKey: 'literature-language:fortress-of-solitude-superman-arctic-retreat', tier: 4, subjectKey: 'place:fortress-of-solitude',
+        clue: { en: 'What Arctic stronghold serves as Superman’s private headquarters and place of retreat?', et: 'Milline arktiline tugipunkt on Supermani erapeakorter ja pelgupaik?' }, response: { en: 'the Fortress of Solitude', et: 'Üksinduse kindlus' }, acceptedVariants: { en: ['Fortress of Solitude', 'Üksinduse kindlus'], et: ['Fortress of Solitude', 'the Fortress of Solitude'] },
+        explanation: { en: 'The Fortress of Solitude is Superman’s secluded headquarters, traditionally located in the Arctic.', et: 'Üksinduse kindlus on Supermani eraldatud peakorter, mis asub traditsiooniliselt Arktikas.' },
+        source: { sourceId: 'wikipedia:fortress-of-solitude-superman', title: 'Fortress of Solitude', url: 'https://en.wikipedia.org/wiki/Fortress_of_Solitude', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-058:blandings-castle-emsworth', factKey: 'literature-language:blandings-castle-lord-emsworth-empress', tier: 5, subjectKey: 'place:blandings-castle',
@@ -2134,16 +2134,16 @@ const rawCategories = [
     name: { en: 'Name the Wordplay', et: 'Nimeta sõnamäng' },
     questions: [
       {
-        key: 'playable-literature-language:built-in-literature-language-set-061:anagram-rearranged-letters', factKey: 'literature-language:anagram-rearranges-all-letters', tier: 1, subjectKey: 'device:anagram',
-        clue: { en: 'What kind of wordplay rearranges all the letters of one word or phrase to make another, as “listen” becomes “silent”?', et: 'Milline sõnamäng paigutab sõna või fraasi kõik tähed ümber, nii et inglise listen muutub sõnaks silent?' }, response: { en: 'an anagram', et: 'anagramm' }, acceptedVariants: { en: ['anagram', 'anagramm'], et: ['anagram'] },
-        explanation: { en: 'A true example uses the same letters with the same frequencies, changing only their order and spacing.', et: 'Ehtsas anagrammis kasutatakse samu tähti sama arv kordi ning muudetakse ainult nende järjekorda ja sõnavahet.' },
-        source: { sourceId: 'wikipedia:anagram-rearranged-letters', title: 'Anagram', url: 'https://en.wikipedia.org/wiki/Anagram', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-061:onomatopoeia-sound-imitation', factKey: 'literature-language:onomatopoeia-word-imitates-sound', tier: 1, subjectKey: 'device:onomatopoeia',
+        clue: { en: 'Which language device uses words such as ‘buzz’ or ‘hiss’ to imitate the sounds they describe?', et: 'Milline keeleline võte kasutab sõnu nagu „mjäu“ või „plärts“, et jäljendada helisid, mida need kirjeldavad?' }, response: { en: 'onomatopoeia', et: 'onomatopöa' }, acceptedVariants: { en: ['onomatopoeic word', 'onomatopöa'], et: ['helijäljendus', 'onomatopoeia'] },
+        explanation: { en: 'Onomatopoeia imitates or suggests a sound through the form of a word, as “buzz” evokes an insect’s hum.', et: 'Onomatopöa jäljendab või meenutab sõna kuju kaudu heli, näiteks mjäu kassi häälitsust.' },
+        source: { sourceId: 'wikipedia:onomatopoeia-sound-imitation', title: 'Onomatopoeia', url: 'https://en.wikipedia.org/wiki/Onomatopoeia', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
-        key: 'playable-literature-language:built-in-literature-language-set-061:homophone-to-too-two', factKey: 'literature-language:homophone-same-sound-different-meaning', tier: 2, subjectKey: 'device:homophone',
-        clue: { en: 'What term describes words such as “to”, “too”, and “two” that sound alike but differ in spelling or meaning?', et: 'Kuidas nimetatakse sõnu, mis kõlavad ühtemoodi, kuid erinevad kirjapildi või tähenduse poolest, nagu inglise to, too ja two?' }, response: { en: 'homophones', et: 'homofoonid' }, acceptedVariants: { en: ['a homophone', 'homophone'], et: ['homofoon'] },
-        explanation: { en: 'The name combines Greek roots for “same” and “sound”; such pairs often power puns and spelling jokes.', et: 'Nimetus ühendab kreeka tüved „sama“ ja „heli“ ning sellised paarid annavad sageli ainest kalambuuridele ja õigekirjanaljadele.' },
-        source: { sourceId: 'wikipedia:homophone-to-too-two', title: 'Homophone', url: 'https://en.wikipedia.org/wiki/Homophone', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
+        key: 'playable-literature-language:built-in-literature-language-set-061:pangram-every-letter', factKey: 'literature-language:pangram-uses-every-alphabet-letter', tier: 2, subjectKey: 'device:pangram',
+        clue: { en: 'What term names a sentence that uses every letter of an alphabet, like “The quick brown fox jumps over the lazy dog”?', et: 'Kuidas nimetatakse lauset, milles kasutatakse tähestiku iga tähte, näiteks inglise „The quick brown fox jumps over the lazy dog“?' }, response: { en: 'a pangram', et: 'pangramm' }, acceptedVariants: { en: ['pangram', 'pangram sentence'], et: ['pangram'] },
+        explanation: { en: 'A pangram contains every letter in its alphabet at least once; the fox-and-dog sentence is a famous English example.', et: 'Pangramm sisaldab tähestiku iga tähte vähemalt korra; rebase ja koera lause on kuulus ingliskeelne näide.' },
+        source: { sourceId: 'wikipedia:pangram-every-letter', title: 'Pangram', url: 'https://en.wikipedia.org/wiki/Pangram', license: 'CC-BY-SA-4.0', retrievedAt: '2026-08-30' },
       },
       {
         key: 'playable-literature-language:built-in-literature-language-set-061:acrostic-first-letters', factKey: 'literature-language:acrostic-line-initials-spell-message', tier: 3, subjectKey: 'device:acrostic',
