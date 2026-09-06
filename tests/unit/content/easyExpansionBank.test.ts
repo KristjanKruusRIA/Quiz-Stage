@@ -77,12 +77,12 @@ function replaceCategory(
 }
 
 describe('Easy expansion bank registry', () => {
-  it('registers the complete History, Geography, Science & Nature, and Literature & Language banks as a stable frozen corpus', () => {
+  it('registers the complete History through Art & Architecture banks as a stable frozen corpus', () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(80);
-    expect(questions).toHaveLength(400);
+    expect(corpus).toHaveLength(100);
+    expect(questions).toHaveLength(500);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from({ length: 20 }, (_, index) => `built-in-history-set-${101 + index}`),
       ...Array.from({ length: 20 }, (_, index) => `built-in-geography-set-${101 + index}`),
@@ -93,6 +93,10 @@ describe('Easy expansion bank registry', () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-literature-language-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-art-architecture-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -112,17 +116,22 @@ describe('Easy expansion bank registry', () => {
         { length: 100 },
         (_, index) => `built-in-literature-language-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) => `built-in-art-architecture-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+      ),
     ]);
-    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(40);
-    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(40);
+    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(50);
+    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(50);
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
     expect(getEasyExpansionBank('01-history')).toEqual(corpus.slice(0, 20));
     expect(getEasyExpansionBank('02-geography')).toEqual(corpus.slice(20, 40));
     expect(getEasyExpansionBank('03-science-nature')).toEqual(corpus.slice(40, 60));
-    expect(getEasyExpansionBank('04-literature-language')).toEqual(corpus.slice(60));
-    expect(() => getEasyExpansionBank('05-art-architecture')).toThrowError(
-      'No Easy expansion bank registered for batch "05-art-architecture".',
+    expect(getEasyExpansionBank('04-literature-language')).toEqual(corpus.slice(60, 80));
+    expect(getEasyExpansionBank('05-art-architecture')).toEqual(corpus.slice(80));
+    expect(() => getEasyExpansionBank('06-music')).toThrowError(
+      'No Easy expansion bank registered for batch "06-music".',
     );
   });
 
@@ -131,6 +140,7 @@ describe('Easy expansion bank registry', () => {
     ['Geography', '02-geography'],
     ['Science & Nature', '03-science-nature'],
     ['Literature & Language', '04-literature-language'],
+    ['Art & Architecture', '05-art-architecture'],
   ])('binds the completed %s review manifest to the current bank', (_name, batchId) => {
     const manifestPath = resolve(
       `docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/${batchId}.json`,
@@ -171,6 +181,97 @@ describe('Easy expansion bank registry', () => {
     expect(manifest.sourceDisposition).toEqual({ checked: 100, passed: 100, failed: 0 });
     expect(Array.isArray(manifest.collisionDispositions)).toBe(true);
     expect(manifest.finalSeverityCounts).toEqual({ critical: 0, important: 0, minor: 0 });
+  });
+
+  it('keeps the Art & Architecture bank varied and accepts ordinary player answers', () => {
+    const art = getEasyExpansionBank('05-art-architecture');
+    const byId = new Map(
+      art.flatMap(({ questions }) => questions).map((candidate) => [candidate.clueId, candidate]),
+    );
+    const requiredAnswers: Readonly<
+      Record<string, Readonly<{ en: readonly string[]; et: readonly string[] }>>
+    > = {
+      '004': { en: ['paint by numbers'], et: ['numbrite järgi maalimine'] },
+      '006': {
+        en: ['fuchsia', 'fuchsia pink'],
+        et: ['fuksiaroosa', 'fuksia'],
+      },
+      '008': {
+        en: ['scarlet', 'scarlet red'],
+        et: ['sarlakpunane', 'scarlet'],
+      },
+      '012': {
+        en: ['woodturning', 'wood turning'],
+        et: ['puidutreimine', 'puutreimine'],
+      },
+      '013': {
+        en: ['topiary', 'topiary art'],
+        et: ['topiaarkunst', 'vormpügamine'],
+      },
+      '018': {
+        en: ['Lego minifigure', 'minifigure', 'Lego figure', 'Lego man'],
+        et: ['LEGO minifiguur', 'minifiguur', 'LEGO figuur', 'legomehike'],
+      },
+      '026': {
+        en: ['photo album', 'photograph album'],
+        et: ['fotoalbum', 'pildialbum'],
+      },
+      '027': {
+        en: ['contact print', 'contact sheet'],
+        et: ['kontaktkoopia', 'kontaktleht'],
+      },
+      '028': {
+        en: ['photographic enlarger', 'enlarger'],
+        et: ['fotosuurendi', 'suurendi'],
+      },
+      '036': { en: ['diorama'], et: ['dioraam'] },
+      '040': { en: ['permanent collection'], et: ['püsikogu'] },
+      '047': {
+        en: ['paper plane', 'paper airplane'],
+        et: ['paberlennuk', 'paberist lennuk'],
+      },
+      '081': { en: ['colored pencil'], et: ['värvipliiats'] },
+      '083': { en: ['gel pen'], et: ['geelpliiats', 'geelpastakas'] },
+      '086': {
+        en: ['cross-stitch', 'cross stitch'],
+        et: ['ristpiste', 'ristpistes tikkimine'],
+      },
+      '091': { en: ['plywood'], et: ['vineer'] },
+      '093': { en: ['flat glass', 'plate glass'], et: ['tahvelklaas'] },
+    };
+    const normalizeAnswer = (value: string): string =>
+      value
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/gu, '')
+        .toLocaleLowerCase('en')
+        .replace(/^(?:a|an|the)\s+/u, '')
+        .replace(/[^\p{L}\p{N}]+/gu, ' ')
+        .trim();
+
+    for (const [suffix, answers] of Object.entries(requiredAnswers)) {
+      const clueId = `built-in-art-architecture-easy-expansion-${suffix}`;
+      const candidate = byId.get(clueId);
+      expect(candidate, clueId).toBeDefined();
+      for (const language of ['en', 'et'] as const) {
+        const accepted = new Set(
+          [candidate!.response[language], ...candidate!.acceptedVariants[language]].map(
+            normalizeAnswer,
+          ),
+        );
+        for (const answer of answers[language]) {
+          expect(accepted, `${clueId}:${language}:${answer}`).toContain(normalizeAnswer(answer));
+        }
+      }
+    }
+
+    const startsAsDefinition = (value: string): boolean => /^(?:what|which)\b/iu.test(value);
+    const questions = art.flatMap(({ questions: candidates }) => candidates);
+    expect(questions.filter(({ clue }) => startsAsDefinition(clue.en)).length).toBeLessThanOrEqual(
+      50,
+    );
+    for (const category of art) {
+      expect(category.questions.some(({ clue }) => !startsAsDefinition(clue.en))).toBe(true);
+    }
   });
 
   it('combines banks deterministically by batch and category set without mutating inputs', () => {

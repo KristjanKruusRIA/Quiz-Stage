@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "05-art-architecture",
+  "baseCommit": "86884771ca8cf21ce9e456ac751fa0e72e157f1f",
+  "bankSha256": "949ba0ce1a069dfaff99f8654916bcc7e258171a8823cf71f5cf5c8159933516",
+  "projectedArtifactHashes": {
+    "authored": "6ffce5e3acadc2fa57fdc5ea722694f254581729cf05bc03a9fdf4f82ae68991",
+    "generated": "52c975208dbc7d81da3f9caddc5d8fe89e7bf77c257a268810da9173026b4798",
+    "evidence": "3f189079ea3517178c6fd3a2c944bdbd2c86a89193f905ba88446cbbdd33e9e1"
+  },
+  "reviewers": {
+    "factual": "/root/literature_review_first_half",
+    "playability": "/root/literature_review_first_half",
+    "estonian": "/root/art_final_estonian",
+    "release": "/root/literature_review_first_half + /root/art_final_estonian"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 228,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}
