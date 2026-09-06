@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "03-science-nature",
+  "baseCommit": "2578b44f06aa3617f06759b733e2f5112105024f",
+  "bankSha256": "6e36b1697497582ce3a3e05c3c22191e89aea187133a2689be426df78c657d89",
+  "projectedArtifactHashes": {
+    "authored": "c203bc797e3c05f6025aeab6fd781d4a29a1cbb08fd2731405be6cebac883323",
+    "generated": "381af5e3bf59bc38dadd26fa96205fd692d9ae92a8babce6fb77cbbf6cec6d54",
+    "evidence": "f546a800e23d152f3b0e9be5a8d4e88db0dea9a980b8ff2067c4cfcd4bb730c5"
+  },
+  "reviewers": {
+    "factual": "/root/science_final_first_half + /root/science_final_second_half",
+    "playability": "/root/science_final_first_half + /root/science_final_second_half",
+    "estonian": "/root/science_final_first_half + /root/science_final_second_half",
+    "release": "/root/science_final_first_half + /root/science_final_second_half"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 231,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}
