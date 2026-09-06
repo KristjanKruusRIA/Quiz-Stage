@@ -77,36 +77,45 @@ function replaceCategory(
 }
 
 describe('Easy expansion bank registry', () => {
-  it('registers the complete History bank as a stable frozen corpus', () => {
+  it('registers the complete History and Geography banks as a stable frozen corpus', () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(20);
-    expect(questions).toHaveLength(100);
-    expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual(
-      Array.from({ length: 20 }, (_, index) => `built-in-history-set-${101 + index}`),
-    );
-    expect(questions.map(({ clueId }) => clueId)).toEqual(
-      Array.from(
+    expect(corpus).toHaveLength(40);
+    expect(questions).toHaveLength(200);
+    expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
+      ...Array.from({ length: 20 }, (_, index) => `built-in-history-set-${101 + index}`),
+      ...Array.from({ length: 20 }, (_, index) => `built-in-geography-set-${101 + index}`),
+    ]);
+    expect(questions.map(({ clueId }) => clueId)).toEqual([
+      ...Array.from(
         { length: 100 },
         (_, index) => `built-in-history-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
       ),
-    );
-    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(10);
-    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(10);
+      ...Array.from(
+        { length: 100 },
+        (_, index) => `built-in-geography-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+      ),
+    ]);
+    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(20);
+    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(20);
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
-    expect(getEasyExpansionBank('01-history')).toEqual(corpus);
-    expect(() => getEasyExpansionBank('02-geography')).toThrowError(
-      'No Easy expansion bank registered for batch "02-geography".',
+    expect(getEasyExpansionBank('01-history')).toEqual(corpus.slice(0, 20));
+    expect(getEasyExpansionBank('02-geography')).toEqual(corpus.slice(20));
+    expect(() => getEasyExpansionBank('03-science-nature')).toThrowError(
+      'No Easy expansion bank registered for batch "03-science-nature".',
     );
   });
 
-  it('binds the completed History review manifest to the current bank', () => {
+  it.each([
+    ['History', '01-history'],
+    ['Geography', '02-geography'],
+  ])('binds the completed %s review manifest to the current bank', (_name, batchId) => {
     const manifestPath = resolve(
-      'docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/01-history.json',
+      `docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/${batchId}.json`,
     );
-    const bankPath = resolve('scripts/content/easyExpansion/banks/01-history.ts');
+    const bankPath = resolve(`scripts/content/easyExpansion/banks/${batchId}.ts`);
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {
       version: number;
       batchId: string;
@@ -123,7 +132,7 @@ describe('Easy expansion bank registry', () => {
     const bankSha256 = createHash('sha256').update(bankBytes, 'utf8').digest('hex');
 
     expect(manifest.version).toBe(1);
-    expect(manifest.batchId).toBe('01-history');
+    expect(manifest.batchId).toBe(batchId);
     expect(manifest.baseCommit).toMatch(/^[0-9a-f]{40}$/u);
     expect(manifest.bankSha256).toBe(bankSha256);
     expect(manifest.projectedArtifactHashes).toEqual({

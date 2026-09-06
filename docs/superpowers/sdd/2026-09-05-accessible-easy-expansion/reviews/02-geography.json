@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "02-geography",
+  "baseCommit": "81ebebb5560f1fe433dbb60e6fbd367a56eaca39",
+  "bankSha256": "57133ab8465f521d14a580492b586d41aa1dce5e69321d593131a1ed54e10fc2",
+  "projectedArtifactHashes": {
+    "authored": "6e66c5d512de9175b22b918638fc6789c3df9ceae585a6e4b25b542428070988",
+    "generated": "7bf29ad5e30072af9ee275054716d6e92800b49225ba17e2f1c3e3989907f528",
+    "evidence": "0ed8972aa76d74eb3521603010d11d3c23e8db70bc98099eba9ebd2561247bde"
+  },
+  "reviewers": {
+    "factual": "/root/history_final_playability_v2",
+    "playability": "/root/history_final_playability_v2",
+    "estonian": "/root/history_final_estonian_v3",
+    "release": "/root/history_final_playability_v2"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 362,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

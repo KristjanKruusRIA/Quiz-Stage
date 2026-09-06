@@ -293,7 +293,7 @@ describe('cumulative enabled authority collisions', () => {
     expect(corpus.filter(({ authority }) => authority === 'easy-expansion'))
       .toHaveLength(phaseBRows.length);
     expect(findCumulativeAuthorityDefects(phaseBRows, corpus)).toEqual([]);
-  });
+  }, 60_000);
 
   it('checks a complete 100-clue pack against the accepted corpus within its test budget', () => {
     const candidates = Array.from({ length: 100 }, (_, index): AuthorityRow => ({

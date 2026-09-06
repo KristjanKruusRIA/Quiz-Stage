@@ -1,4 +1,5 @@
 import { HISTORY_EASY_EXPANSION_CATEGORIES } from './banks/01-history';
+import { GEOGRAPHY_EASY_EXPANSION_CATEGORIES } from './banks/02-geography';
 import type { EasyExpansionCategory } from './types';
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -15,6 +16,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
   {
     batchId: '01-history',
     categories: HISTORY_EASY_EXPANSION_CATEGORIES,
+  },
+  {
+    batchId: '02-geography',
+    categories: GEOGRAPHY_EASY_EXPANSION_CATEGORIES,
   },
 ]);
 
