@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "06-music",
+  "baseCommit": "7a2b9bb32bc25147eeef04c7ab1a44efb05bed36",
+  "bankSha256": "51ad1a70a29043855f6248b310cb4b5743bd48dcc78ecfce7593737bd08944f1",
+  "projectedArtifactHashes": {
+    "authored": "16958735833741dc46ac3d583dd3c986fe8aae92288f53a745f9111a51ee0a9f",
+    "generated": "5f6ad1bbf0faeb3aed878544ba6a8b7e52ddc4e331b145212b9fb30091564225",
+    "evidence": "76a660d459967c52c5a0bbaee34e5dc775d396d128f24192d0164051b026889e"
+  },
+  "reviewers": {
+    "factual": "/root/music_final_factual_first + /root/music_final_factual_second + /root/music_final_estonian",
+    "playability": "/root/music_final_factual_first + /root/music_final_factual_second + /root/music_final_estonian",
+    "estonian": "/root/music_final_estonian",
+    "release": "/root/music_final_factual_first + /root/music_final_estonian"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 357,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}
