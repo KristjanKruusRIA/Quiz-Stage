@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "batchId": "04-literature-language",
+  "baseCommit": "9cbbb40e94f395ae4b3b5a72e4f425beec3f7f7c",
+  "bankSha256": "94280bacff2ec8e95837a5b91b3c9ff83640442b41defc6d03130a533b8a5884",
+  "projectedArtifactHashes": {
+    "authored": "e587133ce9ec7c8b8e47772846fece8034db5f907d7b760d210fb1e175f0568d",
+    "generated": "081e2d8d00962e979f7235e69112e89b098e90f280201b5051510d055b5b2639",
+    "evidence": "1eec7d4f4e70c03cb33bc15b94e5da3a2a3634145767bd9415a126b7966a8bec"
+  },
+  "reviewers": {
+    "factual": "/root/literature_review_first_half + /root/literature_review_second_half",
+    "playability": "/root/literature_review_first_half + /root/literature_review_second_half",
+    "estonian": "/root/literature_review_first_half + /root/literature_review_second_half",
+    "release": "/root/literature_review_first_half + /root/literature_review_second_half"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 170,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    },
+    {
+      "kind": "reviewed-distinct-cross-tier-pairs",
+      "count": 1,
+      "disposition": "Biography definition and Nixon Checkers clue are distinct; proposition-locked review recorded"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

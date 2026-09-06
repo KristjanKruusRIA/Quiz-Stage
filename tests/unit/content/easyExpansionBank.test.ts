@@ -77,18 +77,22 @@ function replaceCategory(
 }
 
 describe('Easy expansion bank registry', () => {
-  it('registers the complete History, Geography, and Science & Nature banks as a stable frozen corpus', () => {
+  it('registers the complete History, Geography, Science & Nature, and Literature & Language banks as a stable frozen corpus', () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(60);
-    expect(questions).toHaveLength(300);
+    expect(corpus).toHaveLength(80);
+    expect(questions).toHaveLength(400);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from({ length: 20 }, (_, index) => `built-in-history-set-${101 + index}`),
       ...Array.from({ length: 20 }, (_, index) => `built-in-geography-set-${101 + index}`),
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-science-nature-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-literature-language-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -104,16 +108,21 @@ describe('Easy expansion bank registry', () => {
         { length: 100 },
         (_, index) => `built-in-science-nature-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) => `built-in-literature-language-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+      ),
     ]);
-    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(30);
-    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(30);
+    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(40);
+    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(40);
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
     expect(getEasyExpansionBank('01-history')).toEqual(corpus.slice(0, 20));
     expect(getEasyExpansionBank('02-geography')).toEqual(corpus.slice(20, 40));
-    expect(getEasyExpansionBank('03-science-nature')).toEqual(corpus.slice(40));
-    expect(() => getEasyExpansionBank('04-literature-language')).toThrowError(
-      'No Easy expansion bank registered for batch "04-literature-language".',
+    expect(getEasyExpansionBank('03-science-nature')).toEqual(corpus.slice(40, 60));
+    expect(getEasyExpansionBank('04-literature-language')).toEqual(corpus.slice(60));
+    expect(() => getEasyExpansionBank('05-art-architecture')).toThrowError(
+      'No Easy expansion bank registered for batch "05-art-architecture".',
     );
   });
 
@@ -121,6 +130,7 @@ describe('Easy expansion bank registry', () => {
     ['History', '01-history'],
     ['Geography', '02-geography'],
     ['Science & Nature', '03-science-nature'],
+    ['Literature & Language', '04-literature-language'],
   ])('binds the completed %s review manifest to the current bank', (_name, batchId) => {
     const manifestPath = resolve(
       `docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/${batchId}.json`,

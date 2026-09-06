@@ -86,6 +86,7 @@ export const REVIEWED_DISTINCT_CROSS_TIER_PAIRS = [
   "built-in-literature-language-set-054:2>built-in-literature-language-set-051:5@dac0c590c734",
   "built-in-literature-language-set-072:1>built-in-music-set-095:2@e9e60314979b",
   "built-in-literature-language-set-081:4>built-in-music-set-095:2@644e65eebe0d",
+  "built-in-literature-language-set-116:1>built-in-politics-economics-society-set-095:5@414f71c5fe39",
   "built-in-music-set-002:2>built-in-music-set-044:3@a8862c548c66",
   "built-in-music-set-002:3>built-in-geography-set-092:3@b90a686c7453",
   "built-in-music-set-004:4>built-in-music-set-038:2@ef89112b5b17",

@@ -1,6 +1,7 @@
 import { HISTORY_EASY_EXPANSION_CATEGORIES } from './banks/01-history';
 import { GEOGRAPHY_EASY_EXPANSION_CATEGORIES } from './banks/02-geography';
 import { SCIENCE_NATURE_EASY_EXPANSION_CATEGORIES } from './banks/03-science-nature';
+import { LITERATURE_LANGUAGE_EASY_EXPANSION_CATEGORIES } from './banks/04-literature-language';
 import type { EasyExpansionCategory } from './types';
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -25,6 +26,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
   {
     batchId: '03-science-nature',
     categories: SCIENCE_NATURE_EASY_EXPANSION_CATEGORIES,
+  },
+  {
+    batchId: '04-literature-language',
+    categories: LITERATURE_LANGUAGE_EASY_EXPANSION_CATEGORIES,
   },
 ]);
 
