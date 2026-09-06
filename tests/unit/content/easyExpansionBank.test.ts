@@ -1,3 +1,6 @@
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import {
@@ -74,15 +77,71 @@ function replaceCategory(
 }
 
 describe('Easy expansion bank registry', () => {
-  it('starts empty and exposes a stable frozen corpus before Pack 01 is registered', () => {
+  it('registers the complete History bank as a stable frozen corpus', () => {
     const corpus = buildEasyExpansionCorpus();
+    const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toEqual([]);
+    expect(corpus).toHaveLength(20);
+    expect(questions).toHaveLength(100);
+    expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual(
+      Array.from({ length: 20 }, (_, index) => `built-in-history-set-${101 + index}`),
+    );
+    expect(questions.map(({ clueId }) => clueId)).toEqual(
+      Array.from(
+        { length: 100 },
+        (_, index) => `built-in-history-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+      ),
+    );
+    expect(corpus.filter(({ round }) => round === 'round-one')).toHaveLength(10);
+    expect(corpus.filter(({ round }) => round === 'round-two')).toHaveLength(10);
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
-    expect(() => getEasyExpansionBank('01-history')).toThrowError(
-      'No Easy expansion bank registered for batch "01-history".',
+    expect(getEasyExpansionBank('01-history')).toEqual(corpus);
+    expect(() => getEasyExpansionBank('02-geography')).toThrowError(
+      'No Easy expansion bank registered for batch "02-geography".',
     );
+  });
+
+  it('binds the completed History review manifest to the current bank', () => {
+    const manifestPath = resolve(
+      'docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/01-history.json',
+    );
+    const bankPath = resolve('scripts/content/easyExpansion/banks/01-history.ts');
+    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {
+      version: number;
+      batchId: string;
+      baseCommit: string;
+      bankSha256: string;
+      projectedArtifactHashes: Record<'authored' | 'generated' | 'evidence', string>;
+      reviewers: Record<'factual' | 'playability' | 'estonian' | 'release', string>;
+      reviewedCounts: { clues: number; categories: number; sources: number };
+      sourceDisposition: { checked: number; passed: number; failed: number };
+      collisionDispositions: unknown[];
+      finalSeverityCounts: { critical: number; important: number; minor: number };
+    };
+    const bankBytes = readFileSync(bankPath, 'utf8').replace(/\r\n?/gu, '\n');
+    const bankSha256 = createHash('sha256').update(bankBytes, 'utf8').digest('hex');
+
+    expect(manifest.version).toBe(1);
+    expect(manifest.batchId).toBe('01-history');
+    expect(manifest.baseCommit).toMatch(/^[0-9a-f]{40}$/u);
+    expect(manifest.bankSha256).toBe(bankSha256);
+    expect(manifest.projectedArtifactHashes).toEqual({
+      authored: expect.stringMatching(/^[0-9a-f]{64}$/u),
+      generated: expect.stringMatching(/^[0-9a-f]{64}$/u),
+      evidence: expect.stringMatching(/^[0-9a-f]{64}$/u),
+    });
+    expect(Object.keys(manifest.reviewers).sort()).toEqual([
+      'estonian',
+      'factual',
+      'playability',
+      'release',
+    ]);
+    expect(Object.values(manifest.reviewers).every((reviewer) => reviewer.trim() !== '')).toBe(true);
+    expect(manifest.reviewedCounts).toEqual({ clues: 100, categories: 20, sources: 100 });
+    expect(manifest.sourceDisposition).toEqual({ checked: 100, passed: 100, failed: 0 });
+    expect(Array.isArray(manifest.collisionDispositions)).toBe(true);
+    expect(manifest.finalSeverityCounts).toEqual({ critical: 0, important: 0, minor: 0 });
   });
 
   it('combines banks deterministically by batch and category set without mutating inputs', () => {

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "01-history",
+  "baseCommit": "e1695060c46490e2c94c7e1ae7c9c1511517dedd",
+  "bankSha256": "39c84771f0fae59c4fc7ffe9d1fc3c889043cff41ab60dc882f89af00d09ae6d",
+  "projectedArtifactHashes": {
+    "authored": "a8b5c9f6377ce62e88a59826d5459b389bc116dbba277f36a2a8bf043c8c9d22",
+    "generated": "cd39977ac5f153c1f46e29d8599d73fefacda9748a2e313b5663fdc4ccc2246f",
+    "evidence": "05b315f107a174621ccc854925cb31e695b047689264a96a7cb1bf5c0b10027b"
+  },
+  "reviewers": {
+    "factual": "/root/history_final_playability_v2",
+    "playability": "/root/history_final_playability_v2",
+    "estonian": "/root/history_final_estonian_v3",
+    "release": "/root/history_final_playability_v2"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 169,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

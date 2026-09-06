@@ -1,3 +1,4 @@
+import { HISTORY_EASY_EXPANSION_CATEGORIES } from './banks/01-history';
 import type { EasyExpansionCategory } from './types';
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -11,7 +12,10 @@ type PreparedBankRegistration = Readonly<{
 }>;
 
 const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] = Object.freeze([
-  // Add each completed pack here with one explicit import and registration.
+  {
+    batchId: '01-history',
+    categories: HISTORY_EASY_EXPANSION_CATEGORIES,
+  },
 ]);
 
 function compareIds(left: string, right: string): number {
