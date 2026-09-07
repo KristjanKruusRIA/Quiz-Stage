@@ -184,7 +184,27 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
       }
     });
     await page.evaluate(installPackagedSpeechProbe);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await expect(page.locator('html')).toHaveAttribute('data-reduced-motion', 'false');
+    await expect.poll(() => page.locator('.home-screen > header').evaluate((element) =>
+      getComputedStyle(element).animationDuration)).toBe('0.42s');
+
     await activateInitialControl(page.getByRole('button', { name: 'Settings' }));
+    const reducedMotion = page.getByRole('checkbox', { name: 'Reduce motion' });
+    await expect(reducedMotion).not.toBeChecked();
+    await reducedMotion.check();
+    await expect(page.locator('html')).toHaveAttribute('data-reduced-motion', 'true');
+    await expect.poll(() => page.getByRole('button', { name: 'Back' }).evaluate((element) => {
+      const value = getComputedStyle(element).transitionDuration.split(',')[0]!;
+      return value.endsWith('ms') ? Number.parseFloat(value) / 1_000 : Number.parseFloat(value);
+    })).toBeLessThanOrEqual(0.000_001);
+    await reducedMotion.uncheck();
+    await expect(page.locator('html')).toHaveAttribute('data-reduced-motion', 'false');
+    await expect.poll(() => page.getByRole('button', { name: 'Back' }).evaluate((element) => {
+      const value = getComputedStyle(element).transitionDuration.split(',')[0]!;
+      return value.endsWith('ms') ? Number.parseFloat(value) / 1_000 : Number.parseFloat(value);
+    })).toBeCloseTo(0.14, 2);
+
     await page.getByRole('checkbox', { name: 'Read English topics and clues aloud' }).check();
     await activateControl(page.getByRole('button', { name: 'Back' }));
 

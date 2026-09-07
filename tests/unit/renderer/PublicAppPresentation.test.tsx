@@ -44,7 +44,7 @@ describe('public App presentation accessibility', () => {
     expect(screen.queryByRole('grid')).not.toBeInTheDocument();
   });
 
-  it('keeps the required presentation sequence when the operating system reduces motion', () => {
+  it('ignores operating-system reduced motion when the app setting is disabled', () => {
     vi.stubGlobal('matchMedia', vi.fn(() => mediaQuery(true)));
     const api: PublicDesktopApi = {
       surface: 'public',
@@ -63,18 +63,12 @@ describe('public App presentation accessibility', () => {
     expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
     expect(screen.queryByRole('grid')).not.toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
-      .toHaveAttribute('data-reduced-motion', 'true');
+      .toHaveAttribute('data-reduced-motion', 'false');
   });
 
-  it('does not abandon a running intro when the operating-system preference changes', () => {
-    let matches = false;
-    let changeListener: (() => void) | undefined;
-    const preference = mediaQuery(false);
-    Object.defineProperty(preference, 'matches', { get: () => matches });
-    vi.mocked(preference.addEventListener).mockImplementation((_type, listener) => {
-      changeListener = listener as () => void;
-    });
-    vi.stubGlobal('matchMedia', vi.fn(() => preference));
+  it('enables reduced motion when the persisted app setting requests it', () => {
+    vi.useFakeTimers();
+    vi.stubGlobal('matchMedia', vi.fn(() => mediaQuery(false)));
     const api: PublicDesktopApi = {
       surface: 'public',
       subscribeToState: (listener) => {
@@ -82,27 +76,30 @@ describe('public App presentation accessibility', () => {
         return vi.fn();
       },
       subscribeToAppearance: (listener) => {
-        listener(defaultAppearanceSettings);
+        listener({ ...defaultAppearanceSettings, reducedMotion: true });
         return vi.fn();
       },
     };
-    const { unmount } = render(<App api={api} />);
-    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+    try {
+      render(<App api={api} />);
 
-    matches = true;
-    act(() => changeListener?.());
-    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
-    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+      expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+      expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+      expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
+        .toHaveAttribute('data-reduced-motion', 'true');
 
-    matches = false;
-    act(() => changeListener?.());
-    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
-    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
-    unmount();
-    expect(preference.removeEventListener).toHaveBeenCalledWith('change', expect.any(Function));
+      act(() => { vi.advanceTimersByTime(3_000); });
+      expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(350); });
+      expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
-  it('fails closed when persisted appearance settings cannot be loaded', () => {
+  it('defaults to motion when persisted appearance settings cannot be loaded', () => {
     let stateListener: Parameters<PublicDesktopApi['subscribeToState']>[0] | undefined;
     let appearanceError: (() => void) | undefined;
     const api: PublicDesktopApi = {
@@ -119,6 +116,6 @@ describe('public App presentation accessibility', () => {
     expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
     expect(screen.queryByRole('grid')).not.toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
-      .toHaveAttribute('data-reduced-motion', 'true');
+      .toHaveAttribute('data-reduced-motion', 'false');
   });
 });

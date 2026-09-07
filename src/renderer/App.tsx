@@ -71,17 +71,13 @@ export default function App({ api }: AppProps) {
     | { status: 'ready'; settings: AppearanceSettings }
   >({ status: 'loading' });
   const [mediaWarnings, setMediaWarnings] = useState<Map<AudioAssetKey, MediaWarning>>(new Map());
-  const [systemReducedMotion, setSystemReducedMotion] = useState(() => typeof window.matchMedia === 'function'
-    && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const navigationGeneration = useRef(0);
   const audioLoadSequence = useRef(0);
   const audioSaveSequence = useRef(0);
   const appearanceLoadSequence = useRef(0);
   const appearanceSaveSequence = useRef(0);
   const appearance = appearanceState.status === 'ready' ? appearanceState.settings : { version: 1 as const, reducedMotion: false, revision: 0 };
-  const effectiveReducedMotion = appearanceState.status !== 'ready'
-    || appearance.reducedMotion
-    || systemReducedMotion;
+  const effectiveReducedMotion = appearanceState.status === 'ready' && appearance.reducedMotion;
   const hasResumableMatch = resumableAvailability?.api === desktopApi
     && resumableAvailability.available;
   const navigate = useCallback((next: 'home' | 'setup' | 'match' | 'history' | 'content' | 'settings') => {
@@ -106,15 +102,6 @@ export default function App({ api }: AppProps) {
     if (desktopApi.surface !== 'public' || appearanceState.status === 'loading') return;
     return desktopApi.subscribeToState((view, presentation) => setPublicState({ view, presentation }));
   }, [appearanceState.status, desktopApi]);
-
-  useEffect(() => {
-    if (typeof window.matchMedia !== 'function') return;
-    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setSystemReducedMotion(preference.matches);
-    update();
-    preference.addEventListener('change', update);
-    return () => preference.removeEventListener('change', update);
-  }, []);
 
   useEffect(() => {
     if (desktopApi.surface !== 'host' || route !== 'home') return;
@@ -218,8 +205,7 @@ export default function App({ api }: AppProps) {
     const publicLocale = publicState?.view.language ?? 'en';
     return <I18nProvider locale={publicLocale}><div data-reduced-motion={effectiveReducedMotion}>{publicState === null
       ? <main className="waiting-screen" role="status">{translate(publicLocale, 'app.waitingHost')}</main>
-      : <GameSurface surface="public" view={publicState.view} presentation={publicState.presentation}
-        reducedMotion={effectiveReducedMotion} />}</div></I18nProvider>;
+      : <GameSurface surface="public" view={publicState.view} presentation={publicState.presentation} />}</div></I18nProvider>;
   }
   let content: React.ReactNode;
   if (route === 'setup') {

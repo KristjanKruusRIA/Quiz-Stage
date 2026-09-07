@@ -178,12 +178,11 @@ async function expectCategoryRevealSequence(page: Page): Promise<void> {
     (window as CategoryProbeWindow).quizStageCategoryRevealCounts ?? [])).toEqual([1, 2, 3, 4, 5, 6]);
 }
 
-async function expectArrivalMotionPolicy(page: Page, selector: string): Promise<void> {
-  const reducedMotion = await page.evaluate(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+async function expectAppMotionEnabled(page: Page, selector: string): Promise<void> {
   expect(await page.locator(selector).evaluate((element) => {
     const style = getComputedStyle(element);
     return { name: style.animationName, duration: style.animationDuration };
-  })).toEqual({ name: 'special-round-arrival', duration: reducedMotion ? '0.001ms' : '0.72s' });
+  })).toEqual({ name: 'special-round-arrival', duration: '0.72s' });
 }
 
 async function expectFullPlayerCard(page: Page, selector: string): Promise<void> {
@@ -265,7 +264,9 @@ test('gives the player automatic opening, round, Daily Double, and Final present
     const publicWindow = pages(match).find((window) => window !== match.host);
     expect(publicWindow).toBeDefined();
     await publicWindow!.setViewportSize({ width: 1920, height: 1080 });
+    await publicWindow!.emulateMedia({ reducedMotion: 'reduce' });
 
+    await expect(publicWindow!.locator('html')).toHaveAttribute('data-reduced-motion', 'false');
     await expect(publicWindow!.getByRole('img', { name: 'Quiz Stage' })).toBeVisible();
     await expect(publicWindow!.getByRole('grid')).toHaveCount(0);
     await expect(publicWindow!.locator('.scoreboard')).toHaveCount(0);
@@ -288,7 +289,7 @@ test('gives the player automatic opening, round, Daily Double, and Final present
     await expect(match.host.getByRole('heading', { name: 'Daily Double' })).toHaveCount(0);
     await expect(match.host.getByRole('spinbutton', { name: 'Daily Double wager' })).toBeVisible();
     await expect(publicWindow!.locator('.scoreboard')).toHaveCount(0);
-    await expectArrivalMotionPolicy(publicWindow!, '.daily-double-screen');
+    await expectAppMotionEnabled(publicWindow!, '.daily-double-screen');
     await expectAudioCue(match.host, 'daily-double', false, 'daily-double-wager');
     await expectFullPlayerCard(publicWindow!, '.daily-double-screen');
     await publicWindow!.screenshot({ path: testInfo.outputPath('daily-double.png') });
@@ -316,7 +317,7 @@ test('gives the player automatic opening, round, Daily Double, and Final present
     await expect(publicWindow!.getByRole('heading', { level: 1, name: 'Final', exact: true })).toBeVisible();
     await expect(match.host.getByRole('heading', { level: 1, name: 'Final', exact: true })).toHaveCount(0);
     await expect(match.host.getByRole('heading', { name: 'Final category' })).toBeVisible();
-    await expectArrivalMotionPolicy(publicWindow!, '.final-intro-screen');
+    await expectAppMotionEnabled(publicWindow!, '.final-intro-screen');
     await expectAudioCue(match.host, 'round-transition', false, 'final-category');
     await expectFullPlayerCard(publicWindow!, '.final-intro-screen');
     await publicWindow!.screenshot({ path: testInfo.outputPath('final-intro.png') });

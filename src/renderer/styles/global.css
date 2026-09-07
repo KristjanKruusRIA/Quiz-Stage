@@ -138,10 +138,6 @@ input[type='range'] {
   .home-screen > .muted { font-size: 1.2rem; text-align: center; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.001ms !important; }
-}
-
 [data-reduced-motion='true'] *,
 [data-reduced-motion='true'] *::before,
 [data-reduced-motion='true'] *::after {

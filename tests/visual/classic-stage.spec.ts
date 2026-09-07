@@ -166,12 +166,14 @@ test('Classic Stage branding remains readable from 720p through 4K', async ({}, 
 
     await page.emulateMedia({ reducedMotion: 'reduce' });
     const motion = await page.locator('.winner-screen').evaluate((element) => {
-      const style = getComputedStyle(element);
       const seconds = (value: string) => value.endsWith('ms') ? Number.parseFloat(value) / 1_000 : Number.parseFloat(value);
-      return { animationDuration: seconds(style.animationDuration), transitionDuration: seconds(style.transitionDuration) };
+      return {
+        animationDuration: seconds(getComputedStyle(element).animationDuration),
+        transitionDuration: seconds(getComputedStyle(document.querySelector('button')!).transitionDuration.split(',')[0]!),
+      };
     });
-    expect(motion.animationDuration).toBeLessThanOrEqual(0.000_001);
-    expect(motion.transitionDuration).toBeLessThanOrEqual(0.000_001);
+    expect(motion.animationDuration).toBeCloseTo(0.42, 2);
+    expect(motion.transitionDuration).toBeCloseTo(0.14, 2);
   } finally {
     await app.close().catch(() => undefined);
     rmSync(userData, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 });

@@ -15,7 +15,7 @@ import { useGameAudio } from './useGameAudio';
 import { useGameSpeech } from './useGameSpeech';
 
 type GameSurfaceProps =
-  | { surface: 'public'; view: PublicGameView; now?: () => number; reducedMotion?: boolean; presentation?: PublicPresentation }
+  | { surface: 'public'; view: PublicGameView; now?: () => number; presentation?: PublicPresentation }
   | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; now?: () => number; onMute?: () => void; onAudioWarning?: (key: AudioAssetKey) => void; onHome?: () => void; onSaveAndQuit?: () => Promise<void> };
 
 function presentation(
