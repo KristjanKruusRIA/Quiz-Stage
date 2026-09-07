@@ -44,7 +44,7 @@ describe('public App presentation accessibility', () => {
     expect(screen.queryByRole('grid')).not.toBeInTheDocument();
   });
 
-  it('uses the operating-system reduced-motion preference for JavaScript presentation timing', () => {
+  it('keeps the required presentation sequence when the operating system reduces motion', () => {
     vi.stubGlobal('matchMedia', vi.fn(() => mediaQuery(true)));
     const api: PublicDesktopApi = {
       surface: 'public',
@@ -60,12 +60,13 @@ describe('public App presentation accessibility', () => {
 
     render(<App api={api} />);
 
-    expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
-    expect(screen.queryByRole('img', { name: 'Quiz Stage' })).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
+      .toHaveAttribute('data-reduced-motion', 'true');
   });
 
-  it('abandons a running intro when the operating-system preference changes', () => {
+  it('does not abandon a running intro when the operating-system preference changes', () => {
     let matches = false;
     let changeListener: (() => void) | undefined;
     const preference = mediaQuery(false);
@@ -90,13 +91,13 @@ describe('public App presentation accessibility', () => {
 
     matches = true;
     act(() => changeListener?.());
-    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
-    expect(screen.queryByRole('img', { name: 'Quiz Stage' })).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
 
     matches = false;
     act(() => changeListener?.());
-    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
-    expect(screen.queryByRole('img', { name: 'Quiz Stage' })).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
     unmount();
     expect(preference.removeEventListener).toHaveBeenCalledWith('change', expect.any(Function));
   });
@@ -115,9 +116,9 @@ describe('public App presentation accessibility', () => {
     act(() => appearanceError?.());
     act(() => stateListener?.(publicView(), 'round-intro'));
 
-    expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
-    expect(screen.queryByRole('img', { name: 'Quiz Stage' })).not.toBeInTheDocument();
-    expect(screen.getByRole('grid').parentElement?.parentElement).toHaveAttribute('data-reduced-motion', 'true');
+    expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+    expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
+      .toHaveAttribute('data-reduced-motion', 'true');
   });
 });

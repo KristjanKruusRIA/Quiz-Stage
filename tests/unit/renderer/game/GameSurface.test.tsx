@@ -128,7 +128,7 @@ describe('GameSurface board selection', () => {
     }
   });
 
-  it('shows every category immediately for the host, recovery, and reduced motion', () => {
+  it('shows every category immediately for the host and recovery', () => {
     const host = render(<GameSurface surface="host" view={hostView()} api={api(vi.fn())} />);
     expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
     host.rerender(<GameSurface surface="host" view={hostView({ phase: 'round-two-board' })} api={api(vi.fn())} />);
@@ -142,10 +142,25 @@ describe('GameSurface board selection', () => {
     expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
     recovery.unmount();
+  });
 
-    render(<GameSurface surface="public" view={publicView()} reducedMotion presentation="round-intro" />);
-    expect(screen.getByRole('grid', { name: 'Round One board' })).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
+  it('preserves the player intro and staggered topics with reduced motion', () => {
+    vi.useFakeTimers();
+    try {
+      render(<GameSurface surface="public" view={publicView()} reducedMotion presentation="round-intro" />);
+
+      expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
+      expect(screen.queryByRole('grid')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(3_000); });
+      expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(350); });
+      expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('abandons an unfinished board presentation for a clue and does not replay it after undo', () => {
@@ -242,14 +257,22 @@ describe('GameSurface board selection', () => {
     }
   });
 
-  it('skips the timed Final title when the player display uses reduced motion', () => {
-    render(<GameSurface surface="public" view={publicView({
-      phase: 'final-category', finalEligibleTeamIds: ['team-1', 'team-2'],
-    })} reducedMotion presentation="final-intro" />);
+  it('preserves the timed Final title when the player display uses reduced motion', () => {
+    vi.useFakeTimers();
+    try {
+      render(<GameSurface surface="public" view={publicView({
+        phase: 'final-category', finalEligibleTeamIds: ['team-1', 'team-2'],
+      })} reducedMotion presentation="final-intro" />);
 
-    expect(screen.queryByRole('heading', { level: 1, name: 'Final' })).not.toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
-    expect(screen.getByText('World History')).toBeInTheDocument();
+      expect(screen.getByRole('heading', { level: 1, name: 'Final' })).toBeInTheDocument();
+      expect(screen.queryByText('World History')).not.toBeInTheDocument();
+
+      act(() => { vi.advanceTimersByTime(2_500); });
+      expect(screen.getByRole('heading', { name: 'Final category' })).toBeInTheDocument();
+      expect(screen.getByText('World History')).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('does not replay the Final title when a player display recovers during wagers', () => {

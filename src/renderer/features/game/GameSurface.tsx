@@ -13,7 +13,6 @@ import type { AudioAssetKey, AudioSettings } from '../../../shared/media/contrac
 import type { PublicPresentation } from '../../../shared/ipc/contracts';
 import { useGameAudio } from './useGameAudio';
 import { useGameSpeech } from './useGameSpeech';
-import { useLatchedReducedMotion } from './useLatchedReducedMotion';
 
 type GameSurfaceProps =
   | { surface: 'public'; view: PublicGameView; now?: () => number; reducedMotion?: boolean; presentation?: PublicPresentation }
@@ -24,7 +23,6 @@ function presentation(
   surface: GameSurfaceProps['surface'],
   now?: () => number,
   onSelect?: (tileId: string) => void,
-  reducedMotion = false,
   revealedCategoryCount?: number,
   publicPresentation: PublicPresentation = null,
 ) {
@@ -35,7 +33,7 @@ function presentation(
   if (view.phase === 'ordinary-clue' || view.phase === 'daily-double-wager'
     || view.phase === 'daily-double-clue' || view.phase === 'clue-reveal') return <PublicClue view={view} now={now} />;
   return <PublicFinal view={view} now={now}
-    showIntro={surface === 'public' && publicPresentation === 'final-intro'} reducedMotion={reducedMotion} />;
+    showIntro={surface === 'public' && publicPresentation === 'final-intro'} />;
 }
 
 function scores(view: PublicGameView, surface: GameSurfaceProps['surface']) {
@@ -58,13 +56,12 @@ const CATEGORY_REVEAL_MS = 350;
 
 function PublicGameSurface(props: Extract<GameSurfaceProps, { surface: 'public' }>) {
   const categoryCount = props.view.board?.categories.length ?? 0;
-  const presentationReducedMotion = useLatchedReducedMotion(Boolean(props.reducedMotion));
   const [stageBoard] = useState(
-    props.presentation === 'round-intro' && props.view.board !== null && !presentationReducedMotion,
+    props.presentation === 'round-intro' && props.view.board !== null,
   );
   const [introPending, setIntroPending] = useState(stageBoard);
   const [revealedCategoryCount, setRevealedCategoryCount] = useState(stageBoard ? 0 : categoryCount);
-  const showIntro = introPending && !presentationReducedMotion;
+  const showIntro = introPending;
 
   useEffect(() => {
     if (!showIntro) return;
@@ -76,19 +73,18 @@ function PublicGameSurface(props: Extract<GameSurfaceProps, { surface: 'public' 
   }, [categoryCount, showIntro]);
 
   useEffect(() => {
-    if (showIntro || presentationReducedMotion || revealedCategoryCount >= categoryCount) return;
+    if (showIntro || revealedCategoryCount >= categoryCount) return;
     const timeout = window.setTimeout(() => {
       setRevealedCategoryCount((count) => Math.min(count + 1, categoryCount));
     }, CATEGORY_REVEAL_MS);
     return () => window.clearTimeout(timeout);
-  }, [categoryCount, presentationReducedMotion, revealedCategoryCount, showIntro]);
+  }, [categoryCount, revealedCategoryCount, showIntro]);
 
   if (showIntro) return <main className="game-surface public-surface"><PublicRoundIntro view={props.view} /></main>;
-  const visibleCategories = presentationReducedMotion ? categoryCount : revealedCategoryCount;
   return <main className="game-surface public-surface">
     {scores(props.view, props.surface)}
-    {presentation(props.view, props.surface, props.now, undefined, props.reducedMotion,
-      stageBoard ? visibleCategories : undefined, props.presentation)}
+    {presentation(props.view, props.surface, props.now, undefined,
+      stageBoard ? revealedCategoryCount : undefined, props.presentation)}
   </main>;
 }
 
