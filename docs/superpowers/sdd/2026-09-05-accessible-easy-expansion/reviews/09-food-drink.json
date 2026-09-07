@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "09-food-drink",
+  "baseCommit": "c9c7d964995127dc3a83975e549cc86ef7f22297",
+  "bankSha256": "5a10b7e47c71c3ca599a32cc0558908116586fd50e3bf0baa7b9b7a14d75a563",
+  "projectedArtifactHashes": {
+    "authored": "3f5866c020345f63997276ec0fa765f5701158313e5c0ffdaa3e026bbbe5c185",
+    "generated": "d396711224ae53e017ea251052a7e32f1c0ebe8cde9af31b87f3add87b993b8d",
+    "evidence": "ec0f456857aef840110d07aeb1f709e19f0eefa8ab26f420c9451153e48027b9"
+  },
+  "reviewers": {
+    "factual": "/root/pack10_preflight + /root",
+    "playability": "/root/pack08_risk_clues",
+    "estonian": "/root/pack08_second_author",
+    "release": "/root/pack08_second_author + /root"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 218,
+      "disposition": "diagnostic-only; independent review found 0 material disclosures"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

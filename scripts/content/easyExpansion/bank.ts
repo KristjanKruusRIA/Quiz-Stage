@@ -6,6 +6,7 @@ import { ART_ARCHITECTURE_EASY_EXPANSION_CATEGORIES } from "./banks/05-art-archi
 import { MUSIC_EASY_EXPANSION_CATEGORIES } from "./banks/06-music";
 import { FILM_TELEVISION_EASY_EXPANSION_CATEGORIES } from "./banks/07-film-television";
 import { SPORTS_GAMES_EASY_EXPANSION_CATEGORIES } from "./banks/08-sports-games";
+import { FOOD_DRINK_EASY_EXPANSION_CATEGORIES } from "./banks/09-food-drink";
 import type { EasyExpansionCategory } from "./types";
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -51,6 +52,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
     {
       batchId: "08-sports-games",
       categories: SPORTS_GAMES_EASY_EXPANSION_CATEGORIES,
+    },
+    {
+      batchId: "09-food-drink",
+      categories: FOOD_DRINK_EASY_EXPANSION_CATEGORIES,
     },
   ]);
 

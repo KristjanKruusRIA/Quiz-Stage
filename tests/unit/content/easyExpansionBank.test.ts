@@ -79,12 +79,12 @@ function replaceCategory(
 }
 
 describe("Easy expansion bank registry", () => {
-  it("registers the complete History through Sports & Games banks as a stable frozen corpus", () => {
+  it("registers the complete History through Food & Drink banks as a stable frozen corpus", () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(160);
-    expect(questions).toHaveLength(800);
+    expect(corpus).toHaveLength(180);
+    expect(questions).toHaveLength(900);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from(
         { length: 20 },
@@ -117,6 +117,10 @@ describe("Easy expansion bank registry", () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-sports-games-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-food-drink-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -160,12 +164,17 @@ describe("Easy expansion bank registry", () => {
         (_, index) =>
           `built-in-sports-games-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) =>
+          `built-in-food-drink-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
+      ),
     ]);
     expect(corpus.filter(({ round }) => round === "round-one")).toHaveLength(
-      80,
+      90,
     );
     expect(corpus.filter(({ round }) => round === "round-two")).toHaveLength(
-      80,
+      90,
     );
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
@@ -184,9 +193,12 @@ describe("Easy expansion bank registry", () => {
     expect(getEasyExpansionBank("07-film-television")).toEqual(
       corpus.slice(120, 140),
     );
-    expect(getEasyExpansionBank("08-sports-games")).toEqual(corpus.slice(140));
-    expect(() => getEasyExpansionBank("09-food-drink")).toThrowError(
-      'No Easy expansion bank registered for batch "09-food-drink".',
+    expect(getEasyExpansionBank("08-sports-games")).toEqual(
+      corpus.slice(140, 160),
+    );
+    expect(getEasyExpansionBank("09-food-drink")).toEqual(corpus.slice(160));
+    expect(() => getEasyExpansionBank("10-technology-inventions")).toThrowError(
+      'No Easy expansion bank registered for batch "10-technology-inventions".',
     );
   });
 
@@ -199,6 +211,7 @@ describe("Easy expansion bank registry", () => {
     ["Music", "06-music"],
     ["Film & Television", "07-film-television"],
     ["Sports & Games", "08-sports-games"],
+    ["Food & Drink", "09-food-drink"],
   ])(
     "binds the completed %s review manifest to the current bank",
     (_name, batchId) => {
@@ -902,6 +915,253 @@ describe("Easy expansion bank registry", () => {
       100,
     );
     expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(100);
+  });
+
+  it("keeps the Food & Drink bank broad, accessible, and on its reviewed routes", () => {
+    const food = getEasyExpansionBank("09-food-drink");
+    const questions = food.flatMap(({ questions: candidates }) => candidates);
+    const byId = new Map(
+      questions.map((candidate) => [candidate.clueId, candidate]),
+    );
+    const normalizeAnswer = (value: string): string =>
+      value
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/gu, "")
+        .toLocaleLowerCase("en")
+        .replace(/^(?:a|an|the)\s+/u, "")
+        .replace(/[^\p{L}\p{N}]+/gu, " ")
+        .trim();
+
+    expect(food).toHaveLength(20);
+    expect(questions).toHaveLength(100);
+    expect(
+      Object.fromEntries(
+        [...new Set(food.map(({ macroTopic }) => macroTopic))].map(
+          (macroTopic) => [
+            macroTopic,
+            food.filter((category) => category.macroTopic === macroTopic)
+              .length,
+          ],
+        ),
+      ),
+    ).toEqual({
+      baking: 3,
+      "cooking-techniques": 2,
+      dishes: 3,
+      ingredients: 4,
+      "non-alcoholic-drinks": 3,
+      "world-cuisines": 5,
+    });
+
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-048")?.acceptedVariants,
+    ).toEqual({
+      en: ["full-fat milk"],
+      et: ["täisrasvane piim"],
+    });
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-063")?.acceptedVariants,
+    ).toEqual({
+      en: ["zipper bag", "ziplock bag", "resealable bag"],
+      et: ["sulgurkott", "grip-kott", "Minigrip-kott"],
+    });
+    expect(byId.get("built-in-food-drink-easy-expansion-024")?.clue).toEqual({
+      en: "This compact packaged snack bar takes its first word from the quantity that food labels measure in calories or kilojoules. Name it.",
+      et: "Selle väikese pakendatud batooni nime esimene pool viitab näitajale, mida toidupakendil väljendatakse kalorites või kilodžaulides. Nimeta batoon.",
+    });
+    expect(byId.get("built-in-food-drink-easy-expansion-026")?.clue).toEqual({
+      en: "Leaves from the vegetable also used for sauerkraut are cooked and wrapped around a savoury meat-and-grain filling. Name these parcels.",
+      et: "Hapukapsa valmistamiseks kasutatava köögivilja lehed keedetakse ning keeratakse soolase liha- ja teraviljatäidise ümber. Nimeta need pakikesed.",
+    });
+    expect(byId.get("built-in-food-drink-easy-expansion-042")).toMatchObject({
+      clue: {
+        et: "Need väikesed vormitud šokolaadipalad segatakse enne küpsetamist tainasse. Nimeta need.",
+      },
+      acceptedVariants: {
+        en: ["chocolate chip", "chocolate morsels"],
+        et: ["šokolaaditükk", "šokolaaditilgad"],
+      },
+    });
+    expect(byId.get("built-in-food-drink-easy-expansion-051")?.clue.et).toBe(
+      "See igapäevane joogivesi tuleb kodus otse siseruumis asuvast segistist. Nimeta see.",
+    );
+    expect(byId.get("built-in-food-drink-easy-expansion-059")?.clue.et).toBe(
+      "Steigi tampimine enne küpsetamist, et see muutuks vähem sitkeks, on see ettevalmistusvõte. Nimeta see.",
+    );
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-062")?.acceptedVariants,
+    ).toEqual({
+      en: ["plastic wrap"],
+      et: ["värskuskile"],
+    });
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-070")?.acceptedVariants,
+    ).toEqual({
+      en: ["best-before label"],
+      et: ["parim enne"],
+    });
+    expect(byId.get("built-in-food-drink-easy-expansion-074")?.clue.et).toBe(
+      "Heledat tainast ja šokolaaditainast segatakse kergelt, nii et selle küpsetise igas viilus on kirju muster. Nimeta see.",
+    );
+    expect(byId.get("built-in-food-drink-easy-expansion-078")?.clue.et).toBe(
+      "Need värvilised õied võivad kooki kaunistada ja külalised võivad neid ohutult süüa. Nimeta need.",
+    );
+    expect(byId.get("built-in-food-drink-easy-expansion-084")?.clue.et).toBe(
+      "Aseta retsepti koostisosad sellele tööpinnal seisvale seadmele, et saada teada nende mass grammides. Nimeta seade.",
+    );
+    expect(byId.get("built-in-food-drink-easy-expansion-085")?.clue.et).toBe(
+      "Millise väikese harjastega köögiriistaga määritakse tainale enne küpsetamist munamääret?",
+    );
+    expect(byId.get("built-in-food-drink-easy-expansion-088")).toMatchObject({
+      clue: {
+        en: "This clear lemon-lime soft-drink brand has a six-letter name beginning with S and ending in “ite”. Name it.",
+        et: "Selle läbipaistva sidruni-laimi karastusjoogibrändi kuuest tähest koosnev nimi algab S-iga ja lõpeb tähtedega „ite“. Nimeta see.",
+      },
+      explanation: {
+        en: "Sprite is a clear lemon-lime soft drink with a six-letter brand name beginning with S and ending in “ite”.",
+        et: "Sprite on läbipaistev sidruni-laimi karastusjook, mille kuuest tähest koosnev brändinimi algab S-iga ja lõpeb tähtedega „ite“.",
+      },
+    });
+    expect(
+      food.find(({ categorySetId }) => categorySetId.endsWith("-set-119")),
+    ).toMatchObject({
+      name: {
+        en: "Everyday Sweeteners",
+        et: "Igapäevased magustajad",
+      },
+    });
+    expect(
+      ["093", "094", "095"].map((id) =>
+        byId.get(`built-in-food-drink-easy-expansion-${id}`),
+      ),
+    ).toMatchObject([
+      {
+        clue: {
+          en: "This pressed white sweetener has six square faces and is often dropped into tea or coffee. Name it.",
+          et: "Sellel pressitud valgel magustajal on kuus ruudukujulist tahku ning seda pannakse sageli tee või kohvi sisse. Nimeta see.",
+        },
+        response: { en: "sugar cube", et: "suhkrutükk" },
+        acceptedVariants: {
+          en: ["sugar lump"],
+          et: ["tükksuhkur"],
+        },
+        explanation: {
+          en: "A sugar cube is made by pressing white sugar granules into a small cube, commonly used to sweeten tea or coffee.",
+          et: "Suhkrutükk valmistatakse valge suhkru terade pressimisel väikeseks kuubikuks ning seda kasutatakse sageli tee või kohvi magustamiseks.",
+        },
+        source: {
+          title: "Sugar cube — Wikipedia",
+          url: "https://en.wikipedia.org/wiki/Sugar_cube",
+        },
+      },
+      {
+        clue: {
+          en: "White granules are infused with aromatic pods or mixed with their extract to make this European baking ingredient. Name it.",
+          et: "Valgeid terakesi maitsestatakse aromaatsete kaunadega või segatakse nende ekstraktiga, et saada see Euroopas levinud küpsetusaine. Nimeta see.",
+        },
+        response: { en: "vanilla sugar", et: "vanillisuhkur" },
+        acceptedVariants: { en: [], et: [] },
+        explanation: {
+          en: "Vanilla sugar is made by infusing sugar with vanilla beans or by mixing the grains with liquid flavouring from the same plant, and it is common in European desserts.",
+          et: "Vanillisuhkrut valmistatakse suhkru maitsestamisel vanillikaunadega või segades terad sama taime vedela maitseainega ning see on Euroopa magustoitudes levinud.",
+        },
+        source: {
+          title: "Vanilla sugar — Wikipedia",
+          url: "https://en.wikipedia.org/wiki/Vanilla_sugar",
+        },
+      },
+      {
+        clue: {
+          en: "This special dry ingredient already contains a gelling agent, helping homemade fruit preserves set. Name it.",
+          et: "See eriline kuivaine sisaldab juba tarretavat ainet, mis aitab kodusel puuviljahoidisel tarretuda. Nimeta see.",
+        },
+        response: { en: "jam sugar", et: "moosisuhkur" },
+        acceptedVariants: { en: [], et: [] },
+        explanation: {
+          en: "Jam sugar combines sugar with a gelling agent for making preserves, helping cooked fruit mixtures reach the desired consistency.",
+          et: "Moosisuhkrus on suhkur ühendatud tarretava ainega, mis aitab keedetud puuviljahoidisel saavutada soovitud paksuse.",
+        },
+        source: {
+          title: "Gelling sugar — Wikipedia",
+          url: "https://en.wikipedia.org/wiki/Gelling_sugar",
+        },
+      },
+    ]);
+
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-005")?.source,
+    ).toMatchObject({
+      sourceId: "source:food-drink:govuk-restaurant-service-charges",
+      title: "GOV.UK: Restaurant service charges",
+      url: "https://www.gov.uk/hmrc-internal-manuals/national-insurance-manual/nim02915",
+      license: "OGL-3.0",
+    });
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-066")?.source,
+    ).toMatchObject({
+      sourceId:
+        "source:food-drink:european-commission-mandatory-food-information",
+      title: "European Commission: Mandatory food information",
+      license: "CC-BY-4.0",
+    });
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-087")?.source,
+    ).toMatchObject({
+      sourceId: "source:food-drink:coca-cola-company-fanta",
+      title: "The Coca-Cola Company: Fanta",
+      url: "https://www.coca-colacompany.com/brands/sparkling-soft-drinks/fanta",
+      license: "All rights reserved",
+    });
+    expect(
+      byId.get("built-in-food-drink-easy-expansion-100")?.source,
+    ).toMatchObject({
+      sourceId: "source:food-drink:wiktionary-fruit-punch",
+      title: "Wiktionary: fruit punch",
+      url: "https://en.wiktionary.org/wiki/fruit_punch",
+      license: "CC-BY-SA-4.0",
+    });
+
+    const fanta = byId.get("built-in-food-drink-easy-expansion-087");
+    expect(fanta?.clue.en).toMatch(/five-letter.*starts with F.*orange/iu);
+    expect(fanta?.clue.en).not.toMatch(/Coca-Cola|popular|flavou?r count/iu);
+
+    expect(
+      questions.filter(
+        ({ source }) =>
+          !source.url.startsWith("https://en.wikipedia.org/wiki/"),
+      ),
+    ).toHaveLength(14);
+    expect(new Set(food.map(({ name }) => name.en)).size).toBe(20);
+    expect(new Set(food.map(({ name }) => name.et)).size).toBe(20);
+    expect(
+      new Set(questions.map(({ response }) => normalizeAnswer(response.en)))
+        .size,
+    ).toBe(100);
+    expect(
+      new Set(questions.map(({ response }) => normalizeAnswer(response.et)))
+        .size,
+    ).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.url)).size).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.title)).size).toBe(100);
+    expect(new Set(questions.map(({ subjectKey }) => subjectKey)).size).toBe(
+      100,
+    );
+    expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(100);
+    for (const candidate of questions) {
+      expect(candidate.clue.en).not.toMatch(/^(?:what|which)\b/iu);
+      expect(
+        candidate.acceptedVariants.en.length,
+        `${candidate.clueId}: bilingual variant count`,
+      ).toBe(candidate.acceptedVariants.et.length);
+      for (const language of ["en", "et"] as const) {
+        const normalized =
+          candidate.acceptedVariants[language].map(normalizeAnswer);
+        expect(
+          new Set(normalized).size,
+          `${candidate.clueId}:${language}:${normalized.join("|")}`,
+        ).toBe(normalized.length);
+      }
+    }
   });
 
   it("combines banks deterministically by batch and category set without mutating inputs", () => {
