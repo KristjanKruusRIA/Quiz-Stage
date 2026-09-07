@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "08-sports-games",
+  "baseCommit": "6dd743b3a0ffe9fe8fcd05a9893a65212d072471",
+  "bankSha256": "f146d5a34715183424dd710a4aaee3c4c8b243f117865a802c2b3979d416e848",
+  "projectedArtifactHashes": {
+    "authored": "43053c454a54fc1faede9a3223f02426722fabd169a714e0d710a5ab5bcc6485",
+    "generated": "d3579065cd97a39e7dfc098d3a95b32cd2c82b14ec17143b189fe61793531e05",
+    "evidence": "fa4e24c1a82c6e24c81cc0842a6700cef4236bcb04e8c7c96c2cfe41fc7901be"
+  },
+  "reviewers": {
+    "factual": "/root/pack08_source_precheck",
+    "playability": "/root/pack08_risk_clues",
+    "estonian": "/root/pack08_risk_clues + /root/pack08_source_precheck",
+    "release": "/root/pack08_second_author"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 362,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

@@ -79,12 +79,12 @@ function replaceCategory(
 }
 
 describe("Easy expansion bank registry", () => {
-  it("registers the complete History through Film & Television banks as a stable frozen corpus", () => {
+  it("registers the complete History through Sports & Games banks as a stable frozen corpus", () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(140);
-    expect(questions).toHaveLength(700);
+    expect(corpus).toHaveLength(160);
+    expect(questions).toHaveLength(800);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from(
         { length: 20 },
@@ -113,6 +113,10 @@ describe("Easy expansion bank registry", () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-film-television-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-sports-games-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -151,12 +155,17 @@ describe("Easy expansion bank registry", () => {
         (_, index) =>
           `built-in-film-television-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) =>
+          `built-in-sports-games-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
+      ),
     ]);
     expect(corpus.filter(({ round }) => round === "round-one")).toHaveLength(
-      70,
+      80,
     );
     expect(corpus.filter(({ round }) => round === "round-two")).toHaveLength(
-      70,
+      80,
     );
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
@@ -173,10 +182,11 @@ describe("Easy expansion bank registry", () => {
     );
     expect(getEasyExpansionBank("06-music")).toEqual(corpus.slice(100, 120));
     expect(getEasyExpansionBank("07-film-television")).toEqual(
-      corpus.slice(120),
+      corpus.slice(120, 140),
     );
-    expect(() => getEasyExpansionBank("08-sports-games")).toThrowError(
-      'No Easy expansion bank registered for batch "08-sports-games".',
+    expect(getEasyExpansionBank("08-sports-games")).toEqual(corpus.slice(140));
+    expect(() => getEasyExpansionBank("09-food-drink")).toThrowError(
+      'No Easy expansion bank registered for batch "09-food-drink".',
     );
   });
 
@@ -188,6 +198,7 @@ describe("Easy expansion bank registry", () => {
     ["Art & Architecture", "05-art-architecture"],
     ["Music", "06-music"],
     ["Film & Television", "07-film-television"],
+    ["Sports & Games", "08-sports-games"],
   ])(
     "binds the completed %s review manifest to the current bank",
     (_name, batchId) => {
@@ -742,6 +753,155 @@ describe("Easy expansion bank registry", () => {
         }
       }
     }
+  });
+
+  it("keeps the Sports & Games bank broad, accessible, and on its reviewed routes", () => {
+    const sports = getEasyExpansionBank("08-sports-games");
+    const questions = sports.flatMap(({ questions: candidates }) => candidates);
+    const byId = new Map(
+      questions.map((candidate) => [candidate.clueId, candidate]),
+    );
+    const bySet = new Map(
+      sports.map((category) => [category.categorySetId, category]),
+    );
+    const withoutLeadingArticle = (value: string): string =>
+      value
+        .trim()
+        .toLocaleLowerCase("en")
+        .replace(/^(?:a|an|the)\s+/u, "");
+
+    expect(
+      questions
+        .filter(
+          ({ acceptedVariants }) =>
+            acceptedVariants.en.length !== acceptedVariants.et.length,
+        )
+        .map(({ clueId }) => clueId),
+    ).toEqual([]);
+
+    expect(
+      questions.flatMap((candidate) =>
+        candidate.acceptedVariants.en
+          .filter(
+            (variant) =>
+              withoutLeadingArticle(variant) ===
+              withoutLeadingArticle(candidate.response.en),
+          )
+          .map(() => candidate.clueId),
+      ),
+    ).toEqual([]);
+
+    expect(
+      byId.get("built-in-sports-games-easy-expansion-071")?.acceptedVariants,
+    ).toEqual({
+      en: ["volley shot"],
+      et: ["lendpalli löök"],
+    });
+    expect(
+      byId.get("built-in-sports-games-easy-expansion-077")?.acceptedVariants,
+    ).toEqual({
+      en: ["squash rackets"],
+      et: ["seinatennis"],
+    });
+
+    expect(byId.get("built-in-sports-games-easy-expansion-025")).toMatchObject({
+      response: { en: "3x3 basketball", et: "3x3 korvpall" },
+      acceptedVariants: {
+        en: ["3-on-3 basketball", "three-on-three basketball"],
+        et: ["3 × 3 korvpall", "kolm kolme vastu korvpall"],
+      },
+    });
+
+    expect(
+      new Map(
+        [...new Set(sports.map(({ macroTopic }) => macroTopic))].map(
+          (macroTopic) => [
+            macroTopic,
+            sports.filter((category) => category.macroTopic === macroTopic)
+              .length,
+          ],
+        ),
+      ),
+    ).toEqual(
+      new Map([
+        ["athletics", 4],
+        ["basketball", 4],
+        ["olympics", 4],
+        ["racket-sports", 4],
+        ["winter-sports", 4],
+      ]),
+    );
+
+    expect(
+      bySet
+        .get("built-in-sports-games-set-104")
+        ?.questions.map(({ response }) => response.en),
+    ).toEqual([
+      "New York City Marathon",
+      "Berlin Marathon",
+      "Chicago Marathon",
+      "Tokyo Marathon",
+      "Paris Marathon",
+    ]);
+
+    expect(byId.get("built-in-sports-games-easy-expansion-023")).toMatchObject({
+      response: { en: "Dream Team", et: "Dream Team" },
+      acceptedVariants: {
+        en: ["U.S. Dream Team", "1992 U.S. Olympic basketball team"],
+        et: [
+          "USA unistuste meeskond",
+          "1992. aasta USA olümpiakorvpallikoondis",
+        ],
+      },
+    });
+    expect(byId.get("built-in-sports-games-easy-expansion-026")).toMatchObject({
+      response: { en: "layup", et: "sammudelt vise" },
+      acceptedVariants: {
+        en: ["lay-up"],
+        et: ["sammudelt vise korvile"],
+      },
+    });
+    expect(
+      byId.get("built-in-sports-games-easy-expansion-027")?.source,
+    ).toMatchObject({
+      sourceId: "source:sports-games:jr-nba-bounce-pass",
+      title: "Bounce Pass - NBA.com: Jr. NBA",
+      url: "https://jr.nba.com/bounce-pass/",
+      license: "All rights reserved",
+    });
+    expect(
+      byId.get("built-in-sports-games-easy-expansion-057")?.acceptedVariants.en,
+    ).not.toContain("2008 Beijing Olympics");
+    expect(
+      bySet
+        .get("built-in-sports-games-set-116")
+        ?.questions.map(({ response }) => response.en),
+    ).toContain("beach tennis");
+    expect(
+      bySet
+        .get("built-in-sports-games-set-117")
+        ?.questions.map(({ response }) => response.en),
+    ).toContain("Mario Lemieux");
+
+    const iceResurfacer = byId.get("built-in-sports-games-easy-expansion-098");
+    expect(iceResurfacer?.response).toEqual({
+      en: "ice resurfacer",
+      et: "jääpuhastusmasin",
+    });
+    expect(iceResurfacer?.acceptedVariants).toEqual({
+      en: ["Zamboni"],
+      et: ["Zamboni"],
+    });
+    const bodyCheck = byId.get("built-in-sports-games-easy-expansion-100");
+    expect(bodyCheck?.clue.en).not.toMatch(/\blegal\b/iu);
+    expect(bodyCheck?.clue.et).not.toMatch(/\blubatud\b/iu);
+
+    expect(new Set(questions.map(({ source }) => source.url)).size).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.title)).size).toBe(100);
+    expect(new Set(questions.map(({ subjectKey }) => subjectKey)).size).toBe(
+      100,
+    );
+    expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(100);
   });
 
   it("combines banks deterministically by batch and category set without mutating inputs", () => {
