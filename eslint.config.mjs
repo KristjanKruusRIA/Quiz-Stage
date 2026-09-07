@@ -3,7 +3,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['.vite/**', 'content/work/**', 'node_modules/**', 'out/**'],
+    ignores: ['.vite/**', '.worktrees/**', 'content/work/**', 'node_modules/**', 'out/**'],
   },
   ...tseslint.configs.recommended,
   {
