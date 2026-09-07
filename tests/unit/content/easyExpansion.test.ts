@@ -502,6 +502,11 @@ describe('validateEasyExpansionBank', () => {
     })],
     ['multi-item-answer', (question: EasyExpansionCategory['questions'][number]) => ({
       ...question,
+      clue: {
+        ...question.clue,
+        en: 'Name both colors on this flag.',
+        et: 'Nimeta mõlemad selle lipu värvid.',
+      },
       response: { en: 'Alpha, Beta', et: 'Alfa, beeta' },
     })],
     ['binary-question', (question: EasyExpansionCategory['questions'][number]) => ({

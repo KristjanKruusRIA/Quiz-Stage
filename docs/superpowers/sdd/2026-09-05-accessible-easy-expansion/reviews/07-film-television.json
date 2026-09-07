@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "07-film-television",
+  "baseCommit": "ef75f1a7cf7eb388090251b82e18f11bd5e28169",
+  "bankSha256": "af0b40a836c451843ddbeff251e1e515023c51bc249ad0e303a47cf29f6dbf1f",
+  "projectedArtifactHashes": {
+    "authored": "219c4848e7ef9e8e3c96ab98000540246d94d1b073ca825b589243d72a84079a",
+    "generated": "6937783f8da89b712730c7452f48e5a1ef2aee3d391246d235cd2feed0c6623a",
+    "evidence": "f8615b809148d3e08d36fc2d8271ccc63566f0f3ee1a35fcf7ceafba1fd530ab"
+  },
+  "reviewers": {
+    "factual": "/root/film_factual_final",
+    "playability": "/root/film_playability_final",
+    "estonian": "/root/film_estonian_final",
+    "release": "/root/film_estonian_final + /root/film_task_review"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 290,
+      "disposition": "diagnostic-only under policy commit 9e21fa8389340f90ddf4b837479205db304c6c8f"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

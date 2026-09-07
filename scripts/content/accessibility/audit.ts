@@ -55,7 +55,82 @@ const hasNumericAnswer = (responses: readonly string[]): boolean => responses.so
 
 const hasLongAnswer = (responses: readonly string[]): boolean => responses.some((response) => response.length >= 40);
 
-const hasMultiItemAnswer = (responses: readonly string[]): boolean => responses.some((response) => /[,;]/.test(response));
+const DIRECT_ANSWER_REQUEST = /^(?:what|which|name|list|give|identify|supply|state|complete|mis|millised?|nimeta|loetle|ütle|kuidas)\b/iu;
+const DIRECT_MULTI_ITEM_REQUEST = /^(?:(?:name|list|give|identify|supply|state)\s+(?:both|all)\b|(?:which|what|name|list|give|identify|supply|state)\s+(?:the\s+)?(?:two|three|four|five|six|seven|eight|nine|ten)\b|(?:what|which|name|supply|state|give|complete)\b[^.!?]*\bcomplete\s+(?:two|three|four|five|six|seven|eight|nine|ten)[-\s]+(?:items?|parts?)\b|(?:nimeta|loetle|ütle)\s+(?:mõlemad|kõik)\b|(?:millised?|mis|nimeta|loetle|ütle)\s+(?:need\s+)?(?:kaks|kolm|neli|viis|kuus|seitse|kaheksa|üheksa|kümme)\b|(?:nimeta|loetle|ütle)\s+nii\b[^.!?]{0,120}\bkui\s+ka|(?:mis|milline|kuidas|nimeta|ütle)\b[^.!?]*\btäielik\w*\b[^.!?]{0,40}\b(?:kahe|kolme|nelja|viie|kuue|seitsme|kaheksa|üheksa|kümne)(?:[-\s]?osaline|[-\s]+osa))\b/iu;
+
+const requestWords = (request: string): string[] => request.match(/[\p{L}\p{N}'’.-]+/gu) ?? [];
+
+type RequestNumber = 'ambiguous' | 'multi' | 'single';
+
+const englishRequestNumber = (request: string): RequestNumber | undefined => {
+  const [command, ...rawWords] = requestWords(request);
+  if (command === undefined || !/^(?:complete|give|identify|list|name|state|supply|what|which)$/iu.test(command)) return undefined;
+  if (/^(?:what|which)$/iu.test(command) && /^(?:are|were)$/iu.test(rawWords[0] ?? '')) return 'multi';
+  if (/^(?:what|which)$/iu.test(command) && /^(?:is|was)$/iu.test(rawWords[0] ?? '')) return 'single';
+  if (/^(?:a|an|it|one|that|this)$/iu.test(rawWords[0] ?? '')) return 'single';
+  const words = [...rawWords];
+  while (/^(?:all|the|these|those)$/iu.test(words[0] ?? '')) words.shift();
+  for (let skipped = 0; skipped < 3 && words.length > 1; skipped += 1) {
+    if (!/^\p{Lu}/u.test(words[0]!) && !/^(?:animated|famous|major|popular|primary)$/iu.test(words[0]!)) break;
+    words.shift();
+  }
+  const target = words[0];
+  if (target === undefined) return 'ambiguous';
+  if (/^\p{Lu}/u.test(target)) return 'ambiguous';
+  const lower = target.toLowerCase();
+  if (/^(?:deer|fish|series|sheep|species)$/u.test(lower)) {
+    const agreement = words[1]?.toLowerCase() ?? '';
+    if (/^(?:are|do|have|were)$/u.test(agreement)) return 'multi';
+    if (/^(?:does|has|is|was)$/u.test(agreement) || /(?:s|es)$/u.test(agreement)) return 'single';
+    return 'ambiguous';
+  }
+  if (/^(?:children|feet|geese|men|mice|people|teeth|women)$/u.test(lower)) return 'multi';
+  if (/^(?:alias|atlas|bias|canvas|chaos|cosmos|gas|lens|news|status)$/u.test(lower)) return 'single';
+  if (/(?:ies|ves|s)$/u.test(lower) && !/(?:is|ous|ss|us)$/u.test(lower)) return 'multi';
+  return 'single';
+};
+
+const estonianRequestNumber = (request: string): RequestNumber | undefined => {
+  const [command, ...rawWords] = requestWords(request);
+  if (command === undefined || !/^(?:kuidas|loetle|millised?|mis|nimeta|ütle)$/iu.test(command)) return undefined;
+  if (/^millised$/iu.test(command)) return 'multi';
+  if (/^millise$/iu.test(command)) return 'single';
+  if (/^(?:see|seda|üks)$/iu.test(rawWords[0] ?? '')) return 'single';
+  const words = [...rawWords];
+  while (/^(?:kõik|need)$/iu.test(words[0] ?? '')) words.shift();
+  if (/^(?:nende|oma|selle)$/iu.test(words[0] ?? '')) words.splice(0, 2);
+  for (let skipped = 0; skipped < 3 && words.length > 1; skipped += 1) {
+    if (!/^\p{Lu}/u.test(words[0]!) && !/^tuntud$/iu.test(words[0]!)) break;
+    words.shift();
+  }
+  const target = words[0];
+  if (target === undefined) return 'ambiguous';
+  if (/^\p{Lu}/u.test(target)) return 'ambiguous';
+  const lower = target.toLowerCase();
+  if (/(?:nud|tud)$/u.test(lower)) return 'ambiguous';
+  return lower.endsWith('d') ? 'multi' : 'single';
+};
+
+const hasGenericPluralRequest = (request: string): boolean => (
+  englishRequestNumber(request) ?? estonianRequestNumber(request) ?? 'ambiguous'
+) !== 'single';
+
+const directAnswerRequests = (clues: readonly string[]): readonly string[] => clues
+  .flatMap((clue) => clue.split(/[.!?;:]+/u))
+  .map((clause) => clause.trim())
+  .filter((clause) => DIRECT_ANSWER_REQUEST.test(clause));
+
+const hasMultiItemAnswer = (
+  responses: readonly string[],
+  clues: readonly string[],
+): boolean => responses.some((response) => /;/u.test(response))
+  || (
+    responses.some((response) => /,/u.test(response))
+    && directAnswerRequests(clues).some((request) => (
+      DIRECT_MULTI_ITEM_REQUEST.test(request)
+      || hasGenericPluralRequest(request)
+    ))
+  );
 
 const hasBinaryQuestion = (clues: readonly string[]): boolean => clues.some((clue) => (
   /^(?:is|are|was|were|do|does|did|can|could|will|would|has|have|had|kas|oli|olid|kasutas|saab|võib)\b/i.test(clue)
@@ -86,7 +161,7 @@ export const auditAccessibility = (rows: readonly Record<string, string>[]): Acc
       ['exact-date-or-number', hasExactDatePrompt(clues)],
       ['numeric-answer', hasNumericAnswer(responses)],
       ['long-answer', hasLongAnswer(responses)],
-      ['multi-item-answer', hasMultiItemAnswer(responses)],
+      ['multi-item-answer', hasMultiItemAnswer(responses, clues)],
       ['binary-question', hasBinaryQuestion(clues)],
     ];
 

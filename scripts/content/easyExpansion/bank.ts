@@ -4,6 +4,7 @@ import { SCIENCE_NATURE_EASY_EXPANSION_CATEGORIES } from "./banks/03-science-nat
 import { LITERATURE_LANGUAGE_EASY_EXPANSION_CATEGORIES } from "./banks/04-literature-language";
 import { ART_ARCHITECTURE_EASY_EXPANSION_CATEGORIES } from "./banks/05-art-architecture";
 import { MUSIC_EASY_EXPANSION_CATEGORIES } from "./banks/06-music";
+import { FILM_TELEVISION_EASY_EXPANSION_CATEGORIES } from "./banks/07-film-television";
 import type { EasyExpansionCategory } from "./types";
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -41,6 +42,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
     {
       batchId: "06-music",
       categories: MUSIC_EASY_EXPANSION_CATEGORIES,
+    },
+    {
+      batchId: "07-film-television",
+      categories: FILM_TELEVISION_EASY_EXPANSION_CATEGORIES,
     },
   ]);
 

@@ -79,12 +79,12 @@ function replaceCategory(
 }
 
 describe("Easy expansion bank registry", () => {
-  it("registers the complete History through Music banks as a stable frozen corpus", () => {
+  it("registers the complete History through Film & Television banks as a stable frozen corpus", () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(120);
-    expect(questions).toHaveLength(600);
+    expect(corpus).toHaveLength(140);
+    expect(questions).toHaveLength(700);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from(
         { length: 20 },
@@ -109,6 +109,10 @@ describe("Easy expansion bank registry", () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-music-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-film-television-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -142,12 +146,17 @@ describe("Easy expansion bank registry", () => {
         (_, index) =>
           `built-in-music-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) =>
+          `built-in-film-television-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
+      ),
     ]);
     expect(corpus.filter(({ round }) => round === "round-one")).toHaveLength(
-      60,
+      70,
     );
     expect(corpus.filter(({ round }) => round === "round-two")).toHaveLength(
-      60,
+      70,
     );
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
@@ -162,9 +171,12 @@ describe("Easy expansion bank registry", () => {
     expect(getEasyExpansionBank("05-art-architecture")).toEqual(
       corpus.slice(80, 100),
     );
-    expect(getEasyExpansionBank("06-music")).toEqual(corpus.slice(100));
-    expect(() => getEasyExpansionBank("07-film-television")).toThrowError(
-      'No Easy expansion bank registered for batch "07-film-television".',
+    expect(getEasyExpansionBank("06-music")).toEqual(corpus.slice(100, 120));
+    expect(getEasyExpansionBank("07-film-television")).toEqual(
+      corpus.slice(120),
+    );
+    expect(() => getEasyExpansionBank("08-sports-games")).toThrowError(
+      'No Easy expansion bank registered for batch "08-sports-games".',
     );
   });
 
@@ -175,6 +187,7 @@ describe("Easy expansion bank registry", () => {
     ["Literature & Language", "04-literature-language"],
     ["Art & Architecture", "05-art-architecture"],
     ["Music", "06-music"],
+    ["Film & Television", "07-film-television"],
   ])(
     "binds the completed %s review manifest to the current bank",
     (_name, batchId) => {
@@ -505,6 +518,229 @@ describe("Easy expansion bank registry", () => {
           ),
         ).size,
       ).toBe(5);
+    }
+  });
+
+  it("keeps the Film & Television bank varied, playable, and on its reviewed routes", () => {
+    const film = getEasyExpansionBank("07-film-television");
+    const questions = film.flatMap(({ questions: candidates }) => candidates);
+    const byId = new Map(
+      questions.map((candidate) => [candidate.clueId, candidate]),
+    );
+    const bySet = new Map(
+      film.map((category) => [category.categorySetId, category]),
+    );
+    const normalizeAnswer = (value: string): string =>
+      value
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/gu, "")
+        .toLocaleLowerCase("en")
+        .replace(/^(?:a|an|the)\s+/u, "")
+        .replace(/[^\p{L}\p{N}]+/gu, " ")
+        .trim();
+
+    expect(film).toHaveLength(20);
+    expect(questions).toHaveLength(100);
+    expect(
+      new Map(
+        [...new Set(film.map(({ macroTopic }) => macroTopic))].map(
+          (macroTopic) => [
+            macroTopic,
+            film.filter((category) => category.macroTopic === macroTopic)
+              .length,
+          ],
+        ),
+      ),
+    ).toEqual(
+      new Map([
+        ["actors", 2],
+        ["animation", 2],
+        ["awards", 1],
+        ["directors", 2],
+        ["genres", 3],
+        ["production-craft", 2],
+        ["screen-adaptations", 2],
+        ["series", 2],
+        ["television-history", 2],
+        ["world-cinema", 2],
+      ]),
+    );
+
+    const muppets = byId.get("built-in-film-television-easy-expansion-038");
+    expect(muppets?.response).toEqual({ en: "The Muppets", et: "Muppetid" });
+    expect(muppets?.acceptedVariants).toEqual({ en: [], et: [] });
+    expect(muppets?.factKey).toBe(
+      "film-television-easy-expansion:the-muppets-2011-film:17fm7co",
+    );
+    expect(muppets?.subjectKey).toBe("film-television:the-muppets-2011-film");
+    expect(muppets?.source).toMatchObject({
+      title: "The Muppets (2011 film) — Wikipedia",
+      url: "https://en.wikipedia.org/wiki/The_Muppets_(2011_film)",
+    });
+
+    const fiveNightsAtFreddys = byId.get(
+      "built-in-film-television-easy-expansion-065",
+    );
+    expect(fiveNightsAtFreddys?.response).toEqual({
+      en: "Five Nights at Freddy's",
+      et: "Viis ööd Freddy baaris",
+    });
+    expect(fiveNightsAtFreddys?.acceptedVariants.et).toEqual([
+      "Five Nights at Freddy's",
+    ]);
+
+    const expectedResponses: Readonly<Record<string, readonly string[]>> = {
+      "105": [
+        "Oppenheimer",
+        "The Incredibles",
+        "Zootopia",
+        "12 Years a Slave",
+        "Encanto",
+      ],
+      "106": [
+        "Captain Marvel",
+        "What Women Want",
+        "Sleepless in Seattle",
+        "Point Break",
+        "A League of Their Own",
+      ],
+      "107": [
+        "Clint Eastwood",
+        "Angelina Jolie",
+        "Ben Affleck",
+        "George Clooney",
+        "Robert Redford",
+      ],
+      "119": [
+        "Top Gun",
+        "Beverly Hills Cop",
+        "Rain Man",
+        "Who Framed Roger Rabbit",
+        "Scarface",
+      ],
+    };
+    for (const [suffix, responses] of Object.entries(expectedResponses)) {
+      expect(
+        bySet
+          .get(`built-in-film-television-set-${suffix}`)
+          ?.questions.map(({ response }) => response.en),
+      ).toEqual(responses);
+    }
+
+    const oscarQuestions = bySet.get(
+      "built-in-film-television-set-105",
+    )!.questions;
+    for (const candidate of oscarQuestions) {
+      expect(candidate.clue.en).toMatch(/Oscar/iu);
+      expect(candidate.clue.et).toMatch(/Oscar/iu);
+      expect(candidate.explanation.en).toMatch(/Oscar/iu);
+      expect(candidate.explanation.et).toMatch(/Oscar/iu);
+    }
+
+    const womenDirectors = [
+      "Anna Boden",
+      "Nancy Meyers",
+      "Nora Ephron",
+      "Kathryn Bigelow",
+      "Penny Marshall",
+    ];
+    for (const [index, candidate] of bySet
+      .get("built-in-film-television-set-106")!
+      .questions.entries()) {
+      expect(candidate.clue.en).toMatch(/(?:co-)?directed/iu);
+      expect(candidate.clue.et).toMatch(/lavasta/iu);
+      expect(`${candidate.clue.en} ${candidate.explanation.en}`).toContain(
+        womenDirectors[index],
+      );
+    }
+
+    for (const candidate of bySet.get("built-in-film-television-set-107")!
+      .questions) {
+      expect(`${candidate.clue.en} ${candidate.explanation.en}`).toMatch(
+        /(?:star|actress|actor|played)/iu,
+      );
+      expect(`${candidate.clue.en} ${candidate.explanation.en}`).toMatch(
+        /direct/iu,
+      );
+      expect(`${candidate.clue.et} ${candidate.explanation.et}`).toMatch(
+        /(?:staar|näitle|kehast|peaosa)/iu,
+      );
+      expect(`${candidate.clue.et} ${candidate.explanation.et}`).toMatch(
+        /lavasta/iu,
+      );
+    }
+
+    const quietPlace = byId.get("built-in-film-television-easy-expansion-050");
+    expect(quietPlace?.response).toEqual({
+      en: "A Quiet Place",
+      et: "Kena vaikne kohake",
+    });
+    expect(quietPlace?.tier).toBe(5);
+    expect(quietPlace?.clue.en).toMatch(/family.*silence.*sound/iu);
+    expect(quietPlace?.source.url).toBe(
+      "https://en.wikipedia.org/wiki/A_Quiet_Place",
+    );
+
+    const rogerRabbit = byId.get("built-in-film-television-easy-expansion-094");
+    expect(rogerRabbit?.tier).toBe(4);
+    expect(rogerRabbit?.clue.en).toMatch(
+      /Eddie Valiant.*murder.*Roger Rabbit/iu,
+    );
+    expect(rogerRabbit?.clue.et).toMatch(
+      /Eddie Valiant.*mõrva.*Roger Rabbit/iu,
+    );
+    expect(rogerRabbit?.source.url).toBe(
+      "https://en.wikipedia.org/wiki/Who_Framed_Roger_Rabbit",
+    );
+
+    const canonicalSources: Readonly<Record<string, string>> = {
+      "013": "Paw_Patrol",
+      "015": "Bluey_(TV_series)",
+      "039": "Footloose",
+      "052": "Credits",
+      "053": "Freeze-frame_shot",
+      "055": "Split_screen_effect",
+      "087": "Dallas_(TV_series)",
+    };
+    for (const [suffix, page] of Object.entries(canonicalSources)) {
+      expect(
+        byId.get(`built-in-film-television-easy-expansion-${suffix}`)?.source
+          .url,
+      ).toBe(`https://en.wikipedia.org/wiki/${page}`);
+    }
+
+    expect(
+      new Set(questions.map(({ response }) => normalizeAnswer(response.en)))
+        .size,
+    ).toBe(100);
+    expect(
+      new Set(questions.map(({ response }) => normalizeAnswer(response.et)))
+        .size,
+    ).toBe(100);
+    expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(100);
+    expect(new Set(questions.map(({ subjectKey }) => subjectKey)).size).toBe(
+      100,
+    );
+    expect(new Set(questions.map(({ source }) => source.url)).size).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.title)).size).toBe(100);
+    for (const candidate of questions) {
+      expect(candidate.clue.en).not.toMatch(/^(?:what|which)\b/iu);
+      for (const language of ["en", "et"] as const) {
+        expect(candidate.clue[language].trim()).not.toBe("");
+        expect(candidate.response[language].trim()).not.toBe("");
+        expect(candidate.explanation[language].trim()).not.toBe("");
+        const normalizedClue = normalizeAnswer(candidate.clue[language]);
+        const acceptedAnswers = [
+          candidate.response[language],
+          ...candidate.acceptedVariants[language],
+        ].map(normalizeAnswer);
+        for (const acceptedAnswer of acceptedAnswers) {
+          expect(
+            ` ${normalizedClue} `,
+            `${candidate.clueId}:${language}:${acceptedAnswer}`,
+          ).not.toContain(` ${acceptedAnswer} `);
+        }
+      }
     }
   });
 
