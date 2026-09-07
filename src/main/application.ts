@@ -53,7 +53,7 @@ export function createApplication(database: DatabaseConnection, options: Applica
     listHistory: () => repository.listHistory(),
     checkContentAvailability: (config: GameConfig) => contentService.checkAvailability(config),
     getSetupOptions: (automaticDisplayMode: DisplayMode) => ({
-      packs: contentRepository.loadLibrary().packs
+      packs: contentRepository.loadPacks()
         .filter((pack) => pack.enabled)
         .map(({ id, name, enabled }) => ({ id, name, enabled, selectedByDefault: id !== ADULT_PACK_ID })),
       automaticDisplayMode,

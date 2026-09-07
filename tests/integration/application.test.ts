@@ -62,6 +62,32 @@ describe('main application composition', () => {
     application.close();
   });
 
+  it('loads setup pack metadata without requiring playable content tables', () => {
+    directory = mkdtempSync(join(tmpdir(), 'quiz-stage-application-'));
+    const database = openDatabase({ filePath: join(directory, 'quiz.sqlite') });
+    database.exec(`
+      CREATE TABLE content_packs (
+        id TEXT PRIMARY KEY,
+        name TEXT NOT NULL,
+        version TEXT NOT NULL,
+        source TEXT NOT NULL,
+        enabled INTEGER NOT NULL
+      );
+      INSERT INTO content_packs (id, name, version, source, enabled)
+      VALUES ('pack-only', 'Pack Only', '1', 'test', 1);
+    `);
+    const application = createApplication(database);
+
+    try {
+      expect(application.getSetupOptions('single')).toEqual({
+        packs: [{ id: 'pack-only', name: 'Pack Only', enabled: true, selectedByDefault: true }],
+        automaticDisplayMode: 'single',
+      });
+    } finally {
+      application.close();
+    }
+  });
+
   it('cancels an authoritative timer before closing persistence', async () => {
     directory = mkdtempSync(join(tmpdir(), 'quiz-stage-application-'));
     const databasePath = join(directory, 'quiz.sqlite');

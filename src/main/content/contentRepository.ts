@@ -244,7 +244,7 @@ export class ContentRepository {
     return this.database.transaction(action).immediate();
   }
 
-  private loadPacks(): ContentPackRecord[] {
+  loadPacks(): ContentPackRecord[] {
     const rows = this.database.prepare(`
       SELECT id, name, version, source, enabled
       FROM content_packs
@@ -261,6 +261,17 @@ export class ContentRepository {
 
   private loadCategorySets(applyUserState = true): ContentCategorySetRecord[] {
     const rows = this.database.prepare(`
+      WITH category_history AS (
+        SELECT seen_category_clues.category_set_id, MAX(seen_clues.seen_at) AS last_seen_at
+        FROM seen_clues
+        JOIN clues AS seen_category_clues ON seen_category_clues.id = seen_clues.clue_id
+        GROUP BY seen_category_clues.category_set_id
+      ), unresolved_reports AS (
+        SELECT clue_id
+        FROM content_reports
+        WHERE resolved_at IS NULL
+        GROUP BY clue_id
+      )
       SELECT
         category_sets.id AS category_id,
         category_sets.pack_id,
@@ -270,12 +281,7 @@ export class ContentRepository {
         category_sets.macro_topic,
         category_sets.enabled AS category_enabled,
         category_set_overrides.override_json AS category_override_json,
-        (
-          SELECT MAX(seen_clues.seen_at)
-          FROM seen_clues
-          JOIN clues AS seen_category_clues ON seen_category_clues.id = seen_clues.clue_id
-          WHERE seen_category_clues.category_set_id = category_sets.id
-        ) AS category_last_seen_at,
+        category_history.last_seen_at AS category_last_seen_at,
         clues.id AS clue_id,
         clues.round AS clue_round,
         clues.tier,
@@ -287,16 +293,14 @@ export class ContentRepository {
         clues.source,
         clues.enabled AS clue_enabled,
         content_overrides.override_json,
-        EXISTS (
-          SELECT 1 FROM content_reports
-          WHERE content_reports.clue_id = clues.id
-            AND content_reports.resolved_at IS NULL
-        ) AS has_unresolved_report
+        unresolved_reports.clue_id IS NOT NULL AS has_unresolved_report
       FROM category_sets
       JOIN content_packs ON content_packs.id = category_sets.pack_id
       JOIN clues ON clues.category_set_id = category_sets.id
       LEFT JOIN content_overrides ON content_overrides.clue_id = clues.id
       LEFT JOIN category_set_overrides ON category_set_overrides.category_set_id = category_sets.id
+      LEFT JOIN category_history ON category_history.category_set_id = category_sets.id
+      LEFT JOIN unresolved_reports ON unresolved_reports.clue_id = clues.id
       WHERE content_packs.enabled = 1
         AND category_sets.round IN ('round-one', 'round-two')
       ORDER BY category_sets.id, clues.tier, clues.id
