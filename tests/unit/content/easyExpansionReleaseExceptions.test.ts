@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import {
   copyFileSync,
   mkdirSync,
@@ -93,6 +94,33 @@ afterEach(() => {
 });
 
 describe("Easy expansion release translation exceptions", () => {
+  it("pins checkout line endings for every manifest-bound artifact", () => {
+    const expectedAttributes = EASY_EXPANSION_BATCH_IDS.flatMap((batchId) => {
+      const { authored, generated, evidence } = acceptedBatchPaths(batchId);
+      return [
+        `${authored}: eol: crlf`,
+        `${generated}: eol: crlf`,
+        `${evidence}: eol: lf`,
+      ];
+    });
+    const paths = expectedAttributes.map((line) =>
+      line.slice(0, line.indexOf(":")),
+    );
+
+    const output = execFileSync(
+      "git",
+      ["check-attr", "eol", "--", ...paths],
+      {
+        cwd: resolve("."),
+        encoding: "utf8",
+      },
+    )
+      .trim()
+      .split(/\r?\n/u);
+
+    expect(output).toEqual(expectedAttributes);
+  });
+
   it("records only the 438 manifest-bound exceptions and is byte-stable on rerun", async () => {
     const before = JSON.parse(legacyReportText) as {
       translation: { exceptions: unknown[]; testSentinel: string };

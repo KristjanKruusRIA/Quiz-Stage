@@ -1,1 +1,4 @@
+content/authored/*.csv text eol=crlf
+content/generated/*.en-et.csv text eol=crlf
+content/evidence/*.jsonl text eol=lf
 content/reports/easy-expansion-baseline-record-hashes.json text eol=lf
