@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "10-technology-inventions",
+  "baseCommit": "55b66eaf437692e0299e94da0df08882740f24bd",
+  "bankSha256": "4ba21bb1ca805ee516a1f43c8c7eee62715304363a12e61546a43acc1518cff3",
+  "projectedArtifactHashes": {
+    "authored": "8322c39a77e47b628b2458eae02005e7dfbb470a6c0bb860383ce0c37f7f7975",
+    "generated": "d5e99b8a7928c6cbce74a6f7dd70f106fb10bd8f0c065f64eddb9b78a49a4660",
+    "evidence": "3e2a480aa7c2cb14aeaa515b211c2a4f809c9823dd328189ac3d841fe160945c"
+  },
+  "reviewers": {
+    "factual": "/root/pack10_final_exact_source",
+    "playability": "/root/pack10_final_exact_playability",
+    "estonian": "/root/pack10_final_exact_playability",
+    "release": "/root/pack10_release_review + /root"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 89,
+      "disposition": "diagnostic-only; independent review found 0 material disclosures"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

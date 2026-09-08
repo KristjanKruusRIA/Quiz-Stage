@@ -7,6 +7,7 @@ import { MUSIC_EASY_EXPANSION_CATEGORIES } from "./banks/06-music";
 import { FILM_TELEVISION_EASY_EXPANSION_CATEGORIES } from "./banks/07-film-television";
 import { SPORTS_GAMES_EASY_EXPANSION_CATEGORIES } from "./banks/08-sports-games";
 import { FOOD_DRINK_EASY_EXPANSION_CATEGORIES } from "./banks/09-food-drink";
+import { TECHNOLOGY_INVENTIONS_EASY_EXPANSION_CATEGORIES } from "./banks/10-technology-inventions";
 import type { EasyExpansionCategory } from "./types";
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -56,6 +57,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
     {
       batchId: "09-food-drink",
       categories: FOOD_DRINK_EASY_EXPANSION_CATEGORIES,
+    },
+    {
+      batchId: "10-technology-inventions",
+      categories: TECHNOLOGY_INVENTIONS_EASY_EXPANSION_CATEGORIES,
     },
   ]);
 

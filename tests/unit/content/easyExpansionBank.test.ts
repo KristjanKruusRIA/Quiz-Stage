@@ -79,12 +79,12 @@ function replaceCategory(
 }
 
 describe("Easy expansion bank registry", () => {
-  it("registers the complete History through Food & Drink banks as a stable frozen corpus", () => {
+  it("registers the complete History through Technology & Inventions banks as a stable frozen corpus", () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(180);
-    expect(questions).toHaveLength(900);
+    expect(corpus).toHaveLength(200);
+    expect(questions).toHaveLength(1_000);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from(
         { length: 20 },
@@ -121,6 +121,10 @@ describe("Easy expansion bank registry", () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-food-drink-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-technology-inventions-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -169,12 +173,17 @@ describe("Easy expansion bank registry", () => {
         (_, index) =>
           `built-in-food-drink-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) =>
+          `built-in-technology-inventions-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
+      ),
     ]);
     expect(corpus.filter(({ round }) => round === "round-one")).toHaveLength(
-      90,
+      100,
     );
     expect(corpus.filter(({ round }) => round === "round-two")).toHaveLength(
-      90,
+      100,
     );
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
@@ -196,9 +205,16 @@ describe("Easy expansion bank registry", () => {
     expect(getEasyExpansionBank("08-sports-games")).toEqual(
       corpus.slice(140, 160),
     );
-    expect(getEasyExpansionBank("09-food-drink")).toEqual(corpus.slice(160));
-    expect(() => getEasyExpansionBank("10-technology-inventions")).toThrowError(
-      'No Easy expansion bank registered for batch "10-technology-inventions".',
+    expect(getEasyExpansionBank("09-food-drink")).toEqual(
+      corpus.slice(160, 180),
+    );
+    expect(getEasyExpansionBank("10-technology-inventions")).toEqual(
+      corpus.slice(180),
+    );
+    expect(() =>
+      getEasyExpansionBank("11-politics-economics-society"),
+    ).toThrowError(
+      'No Easy expansion bank registered for batch "11-politics-economics-society".',
     );
   });
 
@@ -212,6 +228,7 @@ describe("Easy expansion bank registry", () => {
     ["Film & Television", "07-film-television"],
     ["Sports & Games", "08-sports-games"],
     ["Food & Drink", "09-food-drink"],
+    ["Technology & Inventions", "10-technology-inventions"],
   ])(
     "binds the completed %s review manifest to the current bank",
     (_name, batchId) => {
@@ -1161,6 +1178,309 @@ describe("Easy expansion bank registry", () => {
           `${candidate.clueId}:${language}:${normalized.join("|")}`,
         ).toBe(normalized.length);
       }
+    }
+  });
+
+  it("keeps the Technology & Inventions bank on its reviewed answer and source surface", () => {
+    const technology = getEasyExpansionBank("10-technology-inventions");
+    const questions = technology.flatMap(
+      ({ questions: candidates }) => candidates,
+    );
+    const byId = new Map(
+      questions.map((candidate) => [candidate.clueId.slice(-3), candidate]),
+    );
+    const normalizeAnswer = (value: string): string =>
+      value
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/gu, "")
+        .toLocaleLowerCase("en")
+        .replace(/^(?:a|an|the)\s+/u, "")
+        .replace(/[^\p{L}\p{N}]+/gu, " ")
+        .trim();
+
+    expect(technology).toHaveLength(20);
+    expect(questions).toHaveLength(100);
+    expect(
+      Object.fromEntries(
+        [...new Set(technology.map(({ macroTopic }) => macroTopic))].map(
+          (macroTopic) => [
+            macroTopic,
+            technology.filter((category) => category.macroTopic === macroTopic)
+              .length,
+          ],
+        ),
+      ),
+    ).toEqual({
+      communications: 3,
+      "computing-history": 2,
+      energy: 2,
+      engineering: 2,
+      "everyday-devices": 5,
+      materials: 1,
+      "space-technology": 1,
+      "standards-units": 1,
+      transportation: 3,
+    });
+    expect(
+      technology.some(({ macroTopic }) => macroTopic === "inventors"),
+    ).toBe(false);
+
+    const reviewedAnswerSurface = {
+      "002": {
+        response: { en: "function key", et: "F-klahv" },
+        acceptedVariants: { en: ["F-key"], et: ["funktsiooniklahv"] },
+      },
+      "011": {
+        response: { en: "missed call", et: "vastamata kõne" },
+        acceptedVariants: {
+          en: ["unanswered call"],
+          et: ["vastamata telefonikõne"],
+        },
+      },
+      "014": {
+        response: { en: "call history", et: "kõnelogi" },
+        acceptedVariants: { en: ["call log"], et: ["kõneajalugu"] },
+      },
+      "022": {
+        response: { en: "sun visor", et: "päikesesirm" },
+        acceptedVariants: { en: ["sunshade"], et: ["autopäikesesirm"] },
+      },
+      "027": {
+        response: { en: "bicycle bell", et: "rattakell" },
+        acceptedVariants: { en: ["bike bell"], et: ["jalgrattakell"] },
+      },
+      "028": {
+        response: { en: "bicycle pump", et: "rattapump" },
+        acceptedVariants: { en: ["bike pump"], et: ["jalgrattapump"] },
+      },
+      "033": {
+        response: { en: "spirit level", et: "vesilood" },
+        acceptedVariants: { en: [], et: [] },
+      },
+      "034": {
+        response: { en: "tool belt", et: "tööriistavöö" },
+        acceptedVariants: { en: [], et: [] },
+      },
+      "036": {
+        response: { en: "carabiner", et: "karabiin" },
+        acceptedVariants: { en: ["karabiner"], et: ["karabiinhaak"] },
+      },
+      "040": {
+        response: { en: "snap fastener", et: "trukk" },
+        acceptedVariants: { en: ["press stud"], et: ["trukknööp"] },
+      },
+      "045": {
+        response: { en: "carbon fibre", et: "süsinikkiud" },
+        acceptedVariants: { en: ["carbon fiber"], et: ["süsinikfiiber"] },
+      },
+      "046": {
+        response: { en: "extension cord", et: "pikendusjuhe" },
+        acceptedVariants: { en: ["extension lead"], et: ["pikenduskaabel"] },
+      },
+      "047": {
+        response: { en: "AA battery", et: "AA-patarei" },
+        acceptedVariants: { en: ["AA cell"], et: ["AA-element"] },
+      },
+      "048": {
+        response: { en: "battery charger", et: "akulaadija" },
+        acceptedVariants: {
+          en: ["rechargeable-battery charger"],
+          et: ["patareilaadija"],
+        },
+      },
+      "049": {
+        response: { en: "surge protector", et: "liigpingekaitse" },
+        acceptedVariants: {
+          en: ["surge suppressor"],
+          et: ["ülepingekaitse"],
+        },
+      },
+      "052": {
+        response: { en: "direct message", et: "otsesõnum" },
+        acceptedVariants: {
+          en: ["DM", "private message"],
+          et: ["privaatsõnum", "erasõnum"],
+        },
+      },
+      "061": {
+        response: { en: "petrol pump", et: "tankur" },
+        acceptedVariants: {
+          en: ["fuel dispenser", "gasoline pump", "gas pump"],
+          et: ["kütusetankur", "bensiinipump", "tankimispump"],
+        },
+      },
+      "062": {
+        response: { en: "unleaded petrol", et: "pliivaba bensiin" },
+        acceptedVariants: {
+          en: ["unleaded gasoline", "unleaded"],
+          et: ["pliivaba mootoribensiin", "pliivaba"],
+        },
+      },
+      "063": {
+        response: {
+          en: "EV charging station",
+          et: "elektriauto laadimisjaam",
+        },
+        acceptedVariants: {
+          en: [
+            "electric vehicle charging station",
+            "charging station",
+            "charge point",
+            "EV charger",
+          ],
+          et: [
+            "elektrisõiduki laadimisjaam",
+            "laadimisjaam",
+            "laadimispunkt",
+            "elektriauto laadija",
+          ],
+        },
+      },
+      "064": {
+        response: { en: "octane rating", et: "oktaaniarv" },
+        acceptedVariants: {
+          en: ["octane number", "octane"],
+          et: ["oktaanarv", "oktaan"],
+        },
+      },
+      "065": {
+        response: { en: "AdBlue", et: "AdBlue" },
+        acceptedVariants: { en: [], et: [] },
+      },
+      "066": {
+        response: { en: "launch pad", et: "stardiplatvorm" },
+        acceptedVariants: {
+          en: ["rocket launch pad"],
+          et: ["raketi stardiplats"],
+        },
+      },
+      "086": {
+        response: { en: "washing machine", et: "pesumasin" },
+        acceptedVariants: { en: [], et: [] },
+      },
+      "095": {
+        response: { en: "dehumidifier", et: "õhukuivati" },
+        acceptedVariants: {
+          en: ["air dehumidifier"],
+          et: ["niiskuseemaldi"],
+        },
+      },
+      "099": {
+        response: { en: "label printer", et: "etiketiprinter" },
+        acceptedVariants: { en: [], et: [] },
+      },
+    } as const;
+
+    for (const [id, expected] of Object.entries(reviewedAnswerSurface)) {
+      expect(byId.get(id), id).toMatchObject(expected);
+    }
+
+    const reviewedDirectSources = {
+      "011": {
+        sourceId:
+          "source:technology-inventions:google-phone-manage-call-history",
+        title: "Google Phone Help: Manage call history",
+        url: "https://support.google.com/phoneapp/answer/2811854?hl=en",
+        license: "All rights reserved",
+      },
+      "014": {
+        sourceId: "source:technology-inventions:apple-iphone-call-history",
+        title: "Apple Support: View and delete your call history on iPhone",
+        url: "https://support.apple.com/en-gb/guide/iphone/iph21d1e1f56/ios",
+        license: "All rights reserved",
+      },
+      "016": {
+        sourceId: "source:technology-inventions:microsoft-windows-connect-wifi",
+        title: "Microsoft Support: Connect to a Wi-Fi network in Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/connect-to-a-wi-fi-network-in-windows",
+        license: "All rights reserved",
+      },
+      "039": {
+        sourceId: "source:technology-inventions:getty-aat-screw-clamps",
+        title: "Getty Art & Architecture Thesaurus — screw clamps",
+        url: "https://www.getty.edu/vow/AATFullDisplay?find=&logic=&note=&subjectid=300024135",
+        license: "All rights reserved",
+      },
+      "055": {
+        sourceId:
+          "source:technology-inventions:cambridge-dictionary-voice-note",
+        title: "Cambridge Dictionary: voice note",
+        url: "https://dictionary.cambridge.org/us/dictionary/english/voice-note",
+        license: "All rights reserved",
+      },
+      "073": {
+        sourceId:
+          "source:technology-inventions:ring-install-contact-sensor-gen2",
+        title: "Ring Support: Tips for Installing Contact Sensor (2nd Gen)",
+        url: "https://ring.com/support/articles/y44jn/Installing-Your-Contact-Sensor-Gen2",
+        license: "All rights reserved",
+      },
+      "084": {
+        sourceId: "source:technology-inventions:wiktionary-curling-iron",
+        title: "Wiktionary: curling iron",
+        url: "https://en.wiktionary.org/wiki/curling_iron",
+        license: "CC-BY-SA-4.0",
+      },
+    } as const;
+
+    for (const [id, expected] of Object.entries(reviewedDirectSources)) {
+      expect(byId.get(id)?.source, id).toMatchObject(expected);
+    }
+
+    expect(
+      questions.filter(
+        ({ source }) =>
+          !source.url.startsWith("https://en.wikipedia.org/wiki/"),
+      ),
+    ).toHaveLength(7);
+    expect(new Set(technology.map(({ name }) => name.en)).size).toBe(20);
+    expect(new Set(technology.map(({ name }) => name.et)).size).toBe(20);
+    expect(new Set(questions.map(({ source }) => source.sourceId)).size).toBe(
+      100,
+    );
+    expect(new Set(questions.map(({ source }) => source.title)).size).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.url)).size).toBe(100);
+    expect(new Set(questions.map(({ subjectKey }) => subjectKey)).size).toBe(
+      100,
+    );
+    expect(new Set(questions.map(({ factKey }) => factKey)).size).toBe(100);
+    expect(new Set(questions.map(({ source }) => source.retrievedAt))).toEqual(
+      new Set(["2026-09-08"]),
+    );
+    expect(
+      questions.reduce(
+        (total, candidate) => total + candidate.acceptedVariants.en.length,
+        0,
+      ),
+    ).toBe(112);
+    expect(
+      questions.reduce(
+        (total, candidate) => total + candidate.acceptedVariants.et.length,
+        0,
+      ),
+    ).toBe(112);
+
+    for (const language of ["en", "et"] as const) {
+      const primary = questions.map(({ response }) =>
+        normalizeAnswer(response[language]),
+      );
+      expect(new Set(primary).size, `${language} primary responses`).toBe(100);
+
+      const allForms = questions.flatMap(({ response, acceptedVariants }) =>
+        [response[language], ...acceptedVariants[language]].map(
+          normalizeAnswer,
+        ),
+      );
+      expect(new Set(allForms).size, `${language} response/variant forms`).toBe(
+        allForms.length,
+      );
+    }
+
+    for (const candidate of questions) {
+      expect(
+        candidate.acceptedVariants.en.length,
+        `${candidate.clueId}: bilingual variant count`,
+      ).toBe(candidate.acceptedVariants.et.length);
     }
   });
 
