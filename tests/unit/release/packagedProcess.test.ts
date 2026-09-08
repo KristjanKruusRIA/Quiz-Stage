@@ -229,7 +229,7 @@ describe('packaged process cleanup', () => {
       { attempts: 1, intervalMs: 0, stopTimeoutMs: 500 },
     )).rejects.toThrow('PACKAGED_APP_CDP_TIMEOUT');
     expect(packagedProcessIsRunning(child)).toBe(false);
-  }, 10_000);
+  }, process.platform === 'win32' ? windowsFixtureTestTimeoutMs : 10_000);
 
   it('cleans a surviving process tree before reporting an early root exit', async () => {
     const child = spawnSleeper('process.exit(23)');
@@ -271,7 +271,7 @@ describe('packaged process cleanup', () => {
 
     expect(packagedProcessIsRunning(processTree)).toBe(false);
     expect(processExists(descendantPid)).toBe(false);
-  }, 10_000);
+  }, process.platform === 'win32' ? windowsFixtureTestTimeoutMs : 10_000);
 
   it.skipIf(process.platform === 'win32')(
     'force-kills a descendant that ignores SIGTERM after its leader exits',

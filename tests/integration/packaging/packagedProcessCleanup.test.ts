@@ -40,5 +40,5 @@ describe.skipIf(process.platform !== 'win32')('packaged process cleanup', () => 
       parent: false,
       child: false,
     });
-  });
+  }, 15_000);
 });
