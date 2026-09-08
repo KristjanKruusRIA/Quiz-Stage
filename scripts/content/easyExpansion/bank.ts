@@ -9,6 +9,7 @@ import { SPORTS_GAMES_EASY_EXPANSION_CATEGORIES } from "./banks/08-sports-games"
 import { FOOD_DRINK_EASY_EXPANSION_CATEGORIES } from "./banks/09-food-drink";
 import { TECHNOLOGY_INVENTIONS_EASY_EXPANSION_CATEGORIES } from "./banks/10-technology-inventions";
 import { POLITICS_ECONOMICS_SOCIETY_EASY_EXPANSION_CATEGORIES } from "./banks/11-politics-economics-society";
+import { MYTHOLOGY_RELIGION_PHILOSOPHY_EASY_EXPANSION_CATEGORIES } from "./banks/12-mythology-religion-philosophy";
 import type { EasyExpansionCategory } from "./types";
 
 export type EasyExpansionBankRegistration = Readonly<{
@@ -66,6 +67,10 @@ const REGISTERED_EASY_EXPANSION_BANKS: readonly EasyExpansionBankRegistration[] 
     {
       batchId: "11-politics-economics-society",
       categories: POLITICS_ECONOMICS_SOCIETY_EASY_EXPANSION_CATEGORIES,
+    },
+    {
+      batchId: "12-mythology-religion-philosophy",
+      categories: MYTHOLOGY_RELIGION_PHILOSOPHY_EASY_EXPANSION_CATEGORIES,
     },
   ]);
 

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "batchId": "12-mythology-religion-philosophy",
+  "baseCommit": "a86cbc74c22529ce22201cddc417cee5dd859751",
+  "bankSha256": "cc5f65b7f33ea45597bdb694b6e951f08edf6dbef3cedb50e3a3048e566e5923",
+  "projectedArtifactHashes": {
+    "authored": "86a961e1181da40ede447d42837df240ea5dd6d1a65ce37ca40a8677020d4960",
+    "generated": "a828e4661c6c894d7b8f2e8be9c9ca9c39d2042824e5c13b851f10cbb7e452db",
+    "evidence": "399b5a997c742c7d57a96ef3fbf2abc2551f42ba4269a01c111167f58e7f397f"
+  },
+  "reviewers": {
+    "factual": "/root/pack12_red_registry + /root/pack12_variant_gate",
+    "playability": "/root/pack12_final_preflight",
+    "estonian": "/root/pack12_final_preflight",
+    "release": "/root/pack11_release_review + /root"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "translation-diagnostic-errors",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 174,
+      "disposition": "diagnostic-only; independent review found 0 material disclosures"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

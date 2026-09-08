@@ -434,7 +434,7 @@ describe('accessibility audit', () => {
     ]);
   });
 
-  it('classifies all 43 current comma-bearing authority rows at TP4 FP0 FN0 TN39', () => {
+  it('classifies all 44 current comma-bearing authority rows at TP4 FP0 FN0 TN40', () => {
     const commaRows = completeCumulativeAuthorityCorpus().filter(({ response }) => (
       /,/u.test(response.en) || /,/u.test(response.et)
     ));
@@ -475,11 +475,11 @@ describe('accessibility audit', () => {
       trueNegatives:
         commaRows.length - truePositives - falsePositives - falseNegatives,
     }).toEqual({
-      rows: 43,
+      rows: 44,
       truePositives: 4,
       falsePositives: 0,
       falseNegatives: 0,
-      trueNegatives: 39,
+      trueNegatives: 40,
     });
   });
 });
