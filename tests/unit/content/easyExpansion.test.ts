@@ -686,20 +686,24 @@ describe('accepted Easy expansion baseline preservation', () => {
     )).toThrowError(/registered Phase B clue.*accepted artifacts.*before cutover/iu);
   });
 
-  it('keeps the current accepted corpus on the exact committed baseline before cutover', () => {
+  it('keeps every original accepted record on the exact committed baseline after cutover', () => {
     const manifest = parseEasyExpansionBaselineManifest(readFileSync(resolve(
       'content/reports/easy-expansion-baseline-record-hashes.json',
     ), 'utf8'));
-    const current = loadCurrentAcceptedBaselineRecords();
+    const accepted = loadCurrentAcceptedBaselineRecords();
     const registeredPhaseBClueIds = new Set(buildEasyExpansionCorpus().flatMap(
       ({ questions }) => questions.map(({ clueId }) => clueId),
     ));
+    const current = accepted.filter(({ clueId }) => !registeredPhaseBClueIds.has(clueId));
 
     expect(() => assertAcceptedBaselinePreserved(
       manifest.records,
       current,
-      registeredPhaseBClueIds,
+      new Set(),
     )).not.toThrow();
     expect(current).toHaveLength(7_174);
+    expect(accepted).toHaveLength(8_374);
+    expect(accepted.filter(({ clueId }) => registeredPhaseBClueIds.has(clueId)))
+      .toHaveLength(1_200);
   });
 });

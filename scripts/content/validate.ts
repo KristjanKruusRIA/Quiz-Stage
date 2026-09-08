@@ -10,6 +10,7 @@ import {
 import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { validatePack, type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { readCsvInputs } from './readCsv';
+import { assertEasyExpansionReviewBindings } from './easyExpansion/reviewBinding';
 import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
 import { findNearDuplicatePairs } from './nearDuplicate';
 import { answerFamiliesDifferNumerically, differsNumerically } from './numericTranslation';
@@ -872,7 +873,10 @@ function parseCli(argv: readonly string[]): CliOptions {
   return { inputs, evidence, mode, allowMissingEt, report, ...(batchId === undefined ? {} : { batchId }) };
 }
 
-export function reviewedIdsFromReport(path: string): string[] {
+export function reviewedIdsFromReport(
+  path: string,
+  options: { repositoryRoot?: string } = {},
+): string[] {
   const stat = lstatSync(resolve(path), { throwIfNoEntry: false });
   if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()) return [];
   const report: unknown = JSON.parse(readFileSync(path, 'utf8'));
@@ -881,12 +885,16 @@ export function reviewedIdsFromReport(path: string): string[] {
   if (translation === null || typeof translation !== 'object') return [];
   const values = (translation as { exceptions?: unknown }).exceptions;
   if (!Array.isArray(values)) return [];
-  return values.filter((item): item is { id: string; status: string; reviewerReason: string } =>
+  const reviewed = values.filter((item): item is {
+    id: string; status: string; reviewerReason: string; reviewBinding?: unknown;
+  } =>
     item !== null && typeof item === 'object'
     && typeof (item as { id?: unknown }).id === 'string'
     && (item as { status?: unknown }).status === 'reviewed'
     && typeof (item as { reviewerReason?: unknown }).reviewerReason === 'string'
-    && (item as { reviewerReason: string }).reviewerReason.trim() !== '').map((item) => item.id);
+    && (item as { reviewerReason: string }).reviewerReason.trim() !== '');
+  assertEasyExpansionReviewBindings(reviewed, options.repositoryRoot ?? '.');
+  return reviewed.map(({ id }) => id);
 }
 
 export async function runValidationCli(
@@ -904,7 +912,7 @@ export async function runValidationCli(
     : await readEvidenceInputs(options.evidence));
   const result = validateProductionContent(inputs, {
     mode: options.mode, allowMissingEt: options.allowMissingEt,
-    reviewedExceptionIds: reviewedIdsFromReport(options.report),
+    reviewedExceptionIds: reviewedIdsFromReport(options.report, { repositoryRoot: process.cwd() }),
     ...(evidenceByClueId === undefined ? {} : { evidenceByClueId }),
     ...(options.batchId === undefined ? {} : { batch: getProductionBatch(options.batchId) }),
   });

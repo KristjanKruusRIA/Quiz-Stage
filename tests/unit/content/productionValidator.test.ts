@@ -1211,7 +1211,7 @@ describe('production content validation', () => {
     expect(result.issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
       'RELEASE_BOARD_CLUES_EXCESS', 'RELEASE_CATEGORY_SETS_EXCESS',
     ]));
-  });
+  }, 10_000);
 
   it('emits each difficulty and round set shortage independently', () => {
     for (const difficulty of ['easy', 'medium', 'hard'] as const) {

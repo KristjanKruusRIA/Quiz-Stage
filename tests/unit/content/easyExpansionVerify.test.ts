@@ -595,7 +595,7 @@ describe('Easy expansion provisional verification', () => {
     ]));
   }, 30_000);
 
-  test('CLI requires --batch and defaults to the Easy-expansion work root', () => {
+  test('CLI requires --batch, defaults its work root, and accepts a sealed baseline root', () => {
     const root = temporaryDirectory('quiz-stage-easy-expansion-cli-');
     const provisional = buildProvisionalEasyExpansionBatch('01-history');
     const fixture = createPassingWork(join(root, 'fixture'), provisional);
@@ -604,7 +604,8 @@ describe('Easy expansion provisional verification', () => {
     for (const name of ['authored.csv', 'generated.en-et.csv', 'evidence.jsonl']) {
       writeFileSync(join(expectedDirectory, name), readFileSync(join(fixture.workRoot, '01-history', name)));
     }
-    seedAcceptedBaseline(root, fixture.workRoot, provisional.id);
+    const baselineRoot = join(root, 'sealed-baseline');
+    seedAcceptedBaseline(baselineRoot, fixture.workRoot, provisional.id);
     const cachePath = join(root, 'source-cache.json');
     const cacheDocument = {
       version: 1,
@@ -628,7 +629,8 @@ describe('Easy expansion provisional verification', () => {
     expect(missingBatch.stderr).toMatch(/--batch is required/i);
 
     const result = spawnSync(process.execPath, [
-      tsxCli, script, '--batch', '01-history', '--source-cache', cachePath,
+      tsxCli, script, '--batch', '01-history', '--baseline-root', baselineRoot,
+      '--source-cache', cachePath,
     ], { cwd: root, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
     expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
     expect(JSON.parse(result.stdout)).toMatchObject({ batchId: '01-history', blocking: false });

@@ -39,10 +39,42 @@ const TRANSLATION_REVIEW = {
   decision: 'approved',
 } as const;
 
+const REVIEWED_EASY_EXPANSION_PACK_IDS = new Set([
+  'built-in-history',
+  'built-in-geography',
+  'built-in-science-nature',
+  'built-in-literature-language',
+  'built-in-art-architecture',
+  'built-in-music',
+  'built-in-film-television',
+  'built-in-sports-games',
+  'built-in-food-drink',
+  'built-in-technology-inventions',
+  'built-in-politics-economics-society',
+  'built-in-mythology-religion-philosophy',
+]);
+
+const REVIEWED_EASY_EXPANSION_SUFFIX = /^(?:00[1-9]|0[1-9]\d|100)$/u;
+
 function compareCodeUnits(left: string, right: string): number {
   if (left < right) return -1;
   if (left > right) return 1;
   return 0;
+}
+
+function isReviewedEasyExpansionRow(row: Readonly<Record<string, string>>): boolean {
+  const marker = '-easy-expansion-';
+  const markerIndex = row.clue_id.lastIndexOf(marker);
+  if (markerIndex === -1) return false;
+  const packId = row.clue_id.slice(0, markerIndex);
+  const suffix = row.clue_id.slice(markerIndex + marker.length);
+  if (
+    !REVIEWED_EASY_EXPANSION_PACK_IDS.has(packId)
+    || row.pack_id !== packId
+    || !REVIEWED_EASY_EXPANSION_SUFFIX.test(suffix)
+  ) return false;
+  const expectedSetNumber = 100 + Math.ceil(Number.parseInt(suffix, 10) / 5);
+  return row.category_set_id === `${packId}-set-${expectedSetNumber}`;
 }
 
 function serializeAcceptedVariants(variants: readonly string[]): string {
@@ -317,7 +349,10 @@ export function applyAccessibleCorpus(input: Readonly<{
     }
     if (row.content_kind !== 'board' || row.difficulty !== 'easy') return row;
     const title = titlesByCategorySetId.get(row.category_set_id);
-    if (title === undefined) throw new Error(`Missing category title: ${row.category_set_id}`);
+    if (title === undefined) {
+      if (isReviewedEasyExpansionRow(row)) return row;
+      throw new Error(`Missing category title: ${row.category_set_id}`);
+    }
     return {
       ...applyRetainedEasyClueCorrection(row, retainedClueIds),
       category_name_en: title.name.en,

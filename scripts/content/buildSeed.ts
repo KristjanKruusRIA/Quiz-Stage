@@ -79,7 +79,10 @@ export async function buildProductionSeed(
   const inputs = await readProductionInputs(args.inputs);
   const validation = validateProductionContent(
     inputs.map((input) => ({ file: input.file, pack: input.pack })),
-    { mode: 'release', evidenceByClueId, reviewedExceptionIds: reviewedIdsFromReport(args.report) },
+    {
+      mode: 'release', evidenceByClueId,
+      reviewedExceptionIds: reviewedIdsFromReport(args.report, { repositoryRoot }),
+    },
   );
   if (validation.blocking) {
     throw new Error('Production validation failed');

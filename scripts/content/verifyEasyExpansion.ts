@@ -94,7 +94,9 @@ export function verifyEasyExpansion(options: VerifyEasyExpansionOptions): Promis
 }
 
 async function runCli(argv = process.argv.slice(2)): Promise<number> {
-  argv = restoreNpmRunArgs(argv, ['--batch', '--work-root', '--source-cache']);
+  argv = restoreNpmRunArgs(argv, [
+    '--batch', '--work-root', '--baseline-root', '--source-cache',
+  ]);
   const value = (name: string): string | undefined => {
     const index = argv.indexOf(name);
     return index < 0 ? undefined : argv[index + 1];
@@ -102,11 +104,13 @@ async function runCli(argv = process.argv.slice(2)): Promise<number> {
   const batchId = value('--batch');
   if (batchId === undefined) throw new Error('--batch is required');
   const workRoot = value('--work-root') ?? resolve('content/work/easy-expansion');
+  const baselineRoot = value('--baseline-root');
   const sourceCachePath = value('--source-cache');
   const sourceCache = sourceCachePath === undefined ? undefined : openFileSourceCache(sourceCachePath);
   const report = await verifyEasyExpansion({
     batchId,
     workRoot,
+    ...(baselineRoot === undefined ? {} : { baselineRoot }),
     ...(sourceCache === undefined ? {} : {
       sourceCache,
       reportDependencies: { beforeRename: () => sourceCache.publish() },

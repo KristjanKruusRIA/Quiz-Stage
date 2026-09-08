@@ -271,6 +271,7 @@ export async function runVerifySeed(
     const sourceChecks = await (dependencies.runSourceCheck ?? runSourceCheckCli)([
       ...options.inputs.flatMap((input) => ['--input', input]),
       '--cache', options.sourceCache,
+      '--report', temporaryReport,
       ...(options.sourceCacheOnly ? ['--cache-only'] : []),
     ]);
     if (sourceChecks !== 0) return sourceChecks;

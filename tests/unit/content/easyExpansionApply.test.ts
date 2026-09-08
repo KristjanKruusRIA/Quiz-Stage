@@ -246,17 +246,24 @@ describe('applyEasyExpansion', () => {
   beforeAll(() => {
     const historyPaths = acceptedBatchPaths(HISTORY.id);
     const batches = [...PRODUCTION_BATCHES, FINAL_BATCH];
+    const baseline = parseEasyExpansionBaselineManifest(readFileSync(
+      resolve('content/reports/easy-expansion-baseline-record-hashes.json'),
+      'utf8',
+    ));
+    const baselineClueIds = new Set(baseline.records.map(({ clueId }) => clueId));
     fixture = {
-      authoredRows: readRows(historyPaths.authored),
-      generatedRows: readRows(historyPaths.generated),
-      evidence: readEvidence(historyPaths.evidence),
-      baseline: parseEasyExpansionBaselineManifest(readFileSync(
-        resolve('content/reports/easy-expansion-baseline-record-hashes.json'),
-        'utf8',
-      )),
+      authoredRows: readRows(historyPaths.authored)
+        .filter(({ clue_id }) => baselineClueIds.has(clue_id)),
+      generatedRows: readRows(historyPaths.generated)
+        .filter(({ clue_id }) => baselineClueIds.has(clue_id)),
+      evidence: readEvidence(historyPaths.evidence)
+        .filter(({ clueId }) => baselineClueIds.has(clueId)),
+      baseline,
       collisionCorpus: {
-        rows: batches.flatMap(({ id }) => readRows(acceptedBatchPaths(id).generated)),
-        evidence: batches.flatMap(({ id }) => readEvidence(acceptedBatchPaths(id).evidence)),
+        rows: batches.flatMap(({ id }) => readRows(acceptedBatchPaths(id).generated))
+          .filter(({ clue_id }) => baselineClueIds.has(clue_id)),
+        evidence: batches.flatMap(({ id }) => readEvidence(acceptedBatchPaths(id).evidence))
+          .filter(({ clueId }) => baselineClueIds.has(clueId)),
         phaseB: [],
       },
     };

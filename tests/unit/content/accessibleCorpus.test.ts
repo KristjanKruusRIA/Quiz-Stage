@@ -168,6 +168,11 @@ type AcceptedRow = Readonly<{
   response_et: string;
 }>;
 
+function isLegacyAccessibleEasySetId(categorySetId: string): boolean {
+  const match = /-set-(\d{3})$/u.exec(categorySetId);
+  return match !== null && Number.parseInt(match[1]!, 10) <= 100;
+}
+
 function acceptedEasySets(): Map<string, Readonly<{
   batchId: string;
   clueIds: readonly string[];
@@ -186,6 +191,7 @@ function acceptedEasySets(): Map<string, Readonly<{
     }) as AcceptedRow[];
     for (const row of rows) {
       if (row.content_kind !== 'board' || row.difficulty !== 'easy') continue;
+      if (!isLegacyAccessibleEasySetId(row.category_set_id)) continue;
       const existing = sets.get(row.category_set_id) ?? { batchId, clueIds: [], responses: [] };
       existing.clueIds.push(row.clue_id);
       existing.responses.push({ en: row.response_en, et: row.response_et });
@@ -234,7 +240,9 @@ function proposedEasyCorpus(): ProposedEasyCorpus {
       categories: categories.filter((category) => category.batchId === batchId),
     });
     const easyRows = result.generatedRows.filter((row) =>
-      row.content_kind === 'board' && row.difficulty === 'easy');
+      row.content_kind === 'board'
+      && row.difficulty === 'easy'
+      && isLegacyAccessibleEasySetId(row.category_set_id));
     const easyClueIds = new Set(easyRows.map((row) => row.clue_id));
     rows.push(...easyRows);
     evidence.push(...result.evidence.filter((record) => easyClueIds.has(record.clueId)));
@@ -576,7 +584,7 @@ function acceptedArtifactBytes(root: string): Map<string, string> {
 }
 
 describe('accessible corpus ledgers', () => {
-  it('routes all 400 accepted easy sets through the reviewed accessible corpus', () => {
+  it('routes all 400 legacy accepted easy sets through the reviewed accessible corpus', () => {
     const accepted = acceptedEasySets();
     const acceptedIds = [...accepted.keys()];
     const retainedIds = acceptedIds.filter((id) =>
@@ -598,7 +606,7 @@ describe('accessible corpus ledgers', () => {
     );
   });
 
-  it('gives every accepted easy set one concrete, unique bilingual title in its accepted batch', () => {
+  it('gives every legacy accepted easy set one concrete, unique bilingual title in its accepted batch', () => {
     const accepted = acceptedEasySets();
     const titleIds = ACCESSIBLE_CATEGORY_TITLES.map(({ categorySetId }) => categorySetId);
     const normalizedEnglish = ACCESSIBLE_CATEGORY_TITLES.map(({ name }) => normalized(name.en));
@@ -914,11 +922,14 @@ describe('proposed complete easy corpus', () => {
     }
   });
 
-  it('keeps accepted easy rows and evidence exactly in sync with the current source bank', () => {
+  it('keeps legacy accepted easy rows and evidence exactly in sync with the current source bank', () => {
     const proposed = proposedEasyCorpus();
     const acceptedRowsForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
       acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`))
-        .filter((row) => row.content_kind === 'board' && row.difficulty === 'easy'));
+        .filter((row) =>
+          row.content_kind === 'board'
+          && row.difficulty === 'easy'
+          && isLegacyAccessibleEasySetId(row.category_set_id)));
     const acceptedEasyClueIds = new Set(acceptedRowsForEasy.map((row) => row.clue_id));
     const acceptedEvidenceForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
       acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`))
@@ -1625,6 +1636,18 @@ describe('applyAccessibleCorpus', () => {
       authoredRows: fixture.authoredRows.filter(keep),
       generatedRows: fixture.generatedRows.filter(keep),
     })).toThrowError('Missing target rows: target-b');
+  });
+
+  it('rejects an unrelated Easy row without a category title', () => {
+    const fixture = applyFixture();
+    const makeEasy = (row: Readonly<Record<string, string>>) =>
+      row.clue_id === 'old-untouched-hard-1' ? { ...row, difficulty: 'easy' } : row;
+
+    expect(() => applyAccessibleCorpus({
+      ...fixture,
+      authoredRows: fixture.authoredRows.map(makeEasy),
+      generatedRows: fixture.generatedRows.map(makeEasy),
+    })).toThrowError('Missing category title: untouched-hard');
   });
 
   it('rejects a target slot without exactly tiers 1 through 5', () => {

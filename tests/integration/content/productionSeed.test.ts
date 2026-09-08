@@ -576,6 +576,18 @@ describe('evidence-bound production seed infrastructure', () => {
     const reportData = JSON.parse(readFileSync(report, 'utf8'));
     reportData.sentinel = 'preserve until every gate passes';
     const writeReport = (value = reportData) => writeFileSync(report, `${JSON.stringify(value, null, 2)}\n`);
+    const sourceResults = [{ url: 'https://example.test/source', ok: true, status: 200 }];
+    const writeSourceResults = (argv: string[]) => {
+      expect(argv.filter((argument) => argument === '--report')).toHaveLength(1);
+      const reportArgumentIndex = argv.indexOf('--report');
+      const sourceReport = argv[reportArgumentIndex + 1];
+      expect(sourceReport).not.toBe(report);
+      expect(sourceReport?.startsWith(`${report}.`)).toBe(true);
+      expect(sourceReport?.endsWith('.verify.tmp')).toBe(true);
+      if (sourceReport === undefined) throw new Error('Source checker did not receive its temporary report path');
+      const candidate = JSON.parse(readFileSync(sourceReport, 'utf8'));
+      writeFileSync(sourceReport, `${JSON.stringify({ ...candidate, sources: sourceResults }, null, 2)}\n`);
+    };
     const verify = (runSourceCheck: () => Promise<number>, sourceCacheOnly = false) => runVerifySeed([
       ...fixture.inputs.flatMap((input) => ['--input', input]),
       ...fixture.evidence.flatMap((evidence) => ['--evidence', evidence]),
@@ -594,6 +606,7 @@ describe('evidence-bound production seed infrastructure', () => {
     let sourceCheckArguments: string[] | undefined;
     await expect(verify(async (argv: string[] = []) => {
       sourceCheckArguments = argv;
+      writeSourceResults(argv);
       return 1;
     }, true)).resolves.toBe(1);
     expect(sourceCheckArguments).toContain('--cache-only');
@@ -655,12 +668,16 @@ describe('evidence-bound production seed infrastructure', () => {
 
     copyFileSync(baseSeed, seed);
     writeReport();
-    await expect(verify(async () => 0)).resolves.toBe(0);
+    await expect(verify(async (argv: string[] = []) => {
+      writeSourceResults(argv);
+      return 0;
+    })).resolves.toBe(0);
     const published = JSON.parse(readFileSync(report, 'utf8'));
     expect(published.validation).toMatchObject({ mode: 'release', blocking: false });
     expect(published.validation).not.toHaveProperty('validation');
     expect(published.output.sha256).toBe(sha256(seed));
     expect(published.sentinel).toBe('preserve until every gate passes');
+    expect(published.sources).toEqual(sourceResults);
   }, 180_000);
 });
 
