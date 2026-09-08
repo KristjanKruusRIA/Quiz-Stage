@@ -15,7 +15,7 @@ The release is accepted on both tested Windows 11 x64 and Windows 10 x64 environ
 
 | Requirement | Result | Evidence |
 |---|---:|---|
-| Offline after installation/extraction | Pass | `npm run verify:release`; installer and portable `scripts/smoke-package.ps1 -Mode Both`; production package inspection |
+| Offline after installation/extraction | Pass | `npm run verify:release`; installer and portable `scripts/smoke-package.ps1 -Mode Both -ExpectedClueId built-in-history-clue-0001`; production package inspection |
 | 2–8 named, color-coded teams | Pass | strict product E2E 44/44; visual suite at 2 and 8 teams |
 | Full Round One, Double Round, Daily Doubles, Final, and sudden-death rules | Pass | unit/integration suite 705 passed; strict product E2E; packaged full-match smoke |
 | Easy, Medium, and Hard whole-match difficulty | Pass | content inventory 400 category sets per difficulty and complete product coverage |

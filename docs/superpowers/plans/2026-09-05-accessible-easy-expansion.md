@@ -8,6 +8,16 @@
 
 **Spec:** `docs/superpowers/specs/2026-09-05-accessible-easy-expansion-design.md`
 
+## Current status (2026-09-09)
+
+- All twelve Easy expansion banks are authored, independently reviewed at 0/0/0, and present on `origin/develop`.
+- The cutover candidate contains 8,200 board clues: 3,535 Easy, 2,335 Medium, and 2,330 Hard. Medium and Hard require no further review or edits.
+- The rebuilt Windows artifacts have passed content verification, deterministic seed comparison, SQLite integrity checks, typecheck, lint, the full Vitest suite, Windows package inspection, installer and portable smoke tests, upgrade verification, and all 46 product E2E scenarios.
+- The current installer and portable smoke command is `pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both -ExpectedClueId built-in-history-easy-expansion-001`.
+- After cutover, the task-local verifier must receive its sealed 500-row historical corpus with `--baseline-root`; the accepted 600-row production corpus is not a valid historical baseline.
+- Publication is complete only when the regenerated release artifacts are committed and both `origin/develop` and `origin/main` resolve to the same verified cutover commit.
+- The detailed task checkboxes below are the original execution checklist; this status block is the durable handoff point for continuation.
+
 ## Global constraints
 
 - Add exactly 20 Easy sets / 100 clues per original pack, with 10 sets in each round.
