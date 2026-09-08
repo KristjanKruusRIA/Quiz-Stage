@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "batchId": "11-politics-economics-society",
+  "baseCommit": "ee2d4979943e83fe10af0813db7edcc73c4fc041",
+  "bankSha256": "2aca742c248a07ac9026c768b052b6b5c43ccabbc130a3eeed2833bef66e48d0",
+  "projectedArtifactHashes": {
+    "authored": "11165c857c9e16e5f52302ceec34a8404b72a3f40c39d2e13dff86489c94c24c",
+    "generated": "0764424d964cb5aef24d0a3bc38db51b3a5b280e33521aa2b9d30be1bec3cdce",
+    "evidence": "5461ba02464f44944eda6ec3a0246f36fd3cf7fb8eb05533452e7a3e763a56e3"
+  },
+  "reviewers": {
+    "factual": "/root/pack11_rebind_implement",
+    "playability": "/root/pack11_playability_rereview",
+    "estonian": "/root/pack11_playability_rereview",
+    "release": "/root/pack11_release_review + /root"
+  },
+  "reviewedCounts": {
+    "clues": 100,
+    "categories": 20,
+    "sources": 100
+  },
+  "sourceDisposition": {
+    "checked": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "collisionDispositions": [
+    {
+      "kind": "cumulative-authority-defects",
+      "count": 0,
+      "disposition": "none"
+    },
+    {
+      "kind": "reverse-only-answer-mentions",
+      "count": 183,
+      "disposition": "diagnostic-only; independent review found 0 material disclosures"
+    }
+  ],
+  "finalSeverityCounts": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  }
+}

@@ -79,12 +79,12 @@ function replaceCategory(
 }
 
 describe("Easy expansion bank registry", () => {
-  it("registers the complete History through Technology & Inventions banks as a stable frozen corpus", () => {
+  it("registers the complete History through Politics, Economics & Society banks as a stable frozen corpus", () => {
     const corpus = buildEasyExpansionCorpus();
     const questions = corpus.flatMap(({ questions }) => questions);
 
-    expect(corpus).toHaveLength(200);
-    expect(questions).toHaveLength(1_000);
+    expect(corpus).toHaveLength(220);
+    expect(questions).toHaveLength(1_100);
     expect(corpus.map(({ categorySetId }) => categorySetId)).toEqual([
       ...Array.from(
         { length: 20 },
@@ -125,6 +125,10 @@ describe("Easy expansion bank registry", () => {
       ...Array.from(
         { length: 20 },
         (_, index) => `built-in-technology-inventions-set-${101 + index}`,
+      ),
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `built-in-politics-economics-society-set-${101 + index}`,
       ),
     ]);
     expect(questions.map(({ clueId }) => clueId)).toEqual([
@@ -178,12 +182,17 @@ describe("Easy expansion bank registry", () => {
         (_, index) =>
           `built-in-technology-inventions-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
       ),
+      ...Array.from(
+        { length: 100 },
+        (_, index) =>
+          `built-in-politics-economics-society-easy-expansion-${(index + 1).toString().padStart(3, "0")}`,
+      ),
     ]);
     expect(corpus.filter(({ round }) => round === "round-one")).toHaveLength(
-      100,
+      110,
     );
     expect(corpus.filter(({ round }) => round === "round-two")).toHaveLength(
-      100,
+      110,
     );
     expect(Object.isFrozen(corpus)).toBe(true);
     expect(buildEasyExpansionCorpus()).toBe(corpus);
@@ -209,12 +218,15 @@ describe("Easy expansion bank registry", () => {
       corpus.slice(160, 180),
     );
     expect(getEasyExpansionBank("10-technology-inventions")).toEqual(
-      corpus.slice(180),
+      corpus.slice(180, 200),
+    );
+    expect(getEasyExpansionBank("11-politics-economics-society")).toEqual(
+      corpus.slice(200),
     );
     expect(() =>
-      getEasyExpansionBank("11-politics-economics-society"),
+      getEasyExpansionBank("12-mythology-religion-philosophy"),
     ).toThrowError(
-      'No Easy expansion bank registered for batch "11-politics-economics-society".',
+      'No Easy expansion bank registered for batch "12-mythology-religion-philosophy".',
     );
   });
 
@@ -229,6 +241,7 @@ describe("Easy expansion bank registry", () => {
     ["Sports & Games", "08-sports-games"],
     ["Food & Drink", "09-food-drink"],
     ["Technology & Inventions", "10-technology-inventions"],
+    ["Politics, Economics & Society", "11-politics-economics-society"],
   ])(
     "binds the completed %s review manifest to the current bank",
     (_name, batchId) => {
