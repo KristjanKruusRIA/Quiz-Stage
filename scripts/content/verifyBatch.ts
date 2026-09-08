@@ -5,8 +5,11 @@ import { fileURLToPath } from 'node:url';
 import { TextDecoder } from 'node:util';
 import { z } from 'zod';
 import { parsePackCsv, type ParsedPack } from '../../src/main/content/csvPacks';
-import { parseEvidenceJsonl, type ContentEvidence } from './evidence';
-import { getProductionBatch, type ProductionBatchDefinition } from './productionBatches';
+import { CSV_COLUMNS } from '../../src/shared/content/csvColumns';
+import { parseEvidenceJsonl, serializeEvidence, type ContentEvidence } from './evidence';
+import {
+  acceptedBatchPaths, getProductionBatch, type ProductionBatchDefinition,
+} from './productionBatches';
 import {
   checkSourceUrls, openFileSourceCache, type SourceCache, type SourceCheckDependencies, type SourceCheckOptions,
   type SourceCheckResult,
@@ -28,6 +31,7 @@ export interface VerifyBatchOptions {
   sourceCheckOptions?: Omit<SourceCheckOptions, 'cache'>;
   reportDependencies?: BatchReportDependencies;
   translationDiagnosticClueIds?: ReadonlySet<string>;
+  baselineRoot?: string;
 }
 
 export interface BatchReportDependencies {
@@ -45,7 +49,7 @@ export interface BatchArtifactHashes {
 export type VerificationProfile = 'canonical' | 'easy-expansion-provisional' | 'legacy-unmarked';
 
 export interface BatchUnresolvedIssue {
-  scope: 'authored' | 'generated' | 'translation' | 'source' | 'evidence' | 'samples';
+  scope: 'authored' | 'generated' | 'translation' | 'source' | 'evidence' | 'samples' | 'baseline';
   code: string;
   clueId: string | null;
   message: string;
@@ -56,6 +60,8 @@ export interface FullBatchVerificationReport {
   batchId: string;
   kind: 'verification';
   verificationProfile: VerificationProfile;
+  translationDiagnosticClueIds: string[] | null;
+  acceptedBaselineHashes: BatchArtifactHashes | null;
   blocking: boolean;
   artifactHashes: BatchArtifactHashes;
   validations: {
@@ -116,7 +122,7 @@ const sourceSchema = z.object({
   code: z.string().nullable(), finalUrl: z.string().nullable(),
 }).strict();
 const unresolvedSchema = z.object({
-  scope: z.enum(['authored', 'generated', 'translation', 'source', 'evidence', 'samples']),
+  scope: z.enum(['authored', 'generated', 'translation', 'source', 'evidence', 'samples', 'baseline']),
   code: z.string(), clueId: z.string().nullable(), message: z.string(),
 }).strict();
 
@@ -125,6 +131,13 @@ const fullBatchVerificationReportSchema = z.object({
   verificationProfile: z.enum([
     'canonical', 'easy-expansion-provisional', 'legacy-unmarked',
   ]).default('legacy-unmarked'),
+  translationDiagnosticClueIds: z.array(z.string().trim().min(1))
+    .refine((ids) => new Set(ids).size === ids.length, 'Translation diagnostic clue IDs must be unique')
+    .nullable().default(null),
+  acceptedBaselineHashes: z.object({
+    authored: z.string().regex(/^[a-f0-9]{64}$/), generated: z.string().regex(/^[a-f0-9]{64}$/),
+    evidence: z.string().regex(/^[a-f0-9]{64}$/),
+  }).strict().nullable().default(null),
   artifactHashes: z.object({
     authored: z.string().regex(/^[a-f0-9]{64}$/), generated: z.string().regex(/^[a-f0-9]{64}$/),
     evidence: z.string().regex(/^[a-f0-9]{64}$/),
@@ -172,6 +185,122 @@ function safeRead(path: string): Buffer {
     throw new Error(`Batch artifact changed while reading: ${path}`);
   }
   return bytes;
+}
+
+export function expectedEasyExpansionTranslationClueIds(
+  batch: ProductionBatchDefinition,
+): string[] {
+  if (!/^(?:0[1-9]|1[0-2])-/u.test(batch.id) || batch.boardClues !== 600) {
+    throw new Error(`Scoped translation verification is not available for ${batch.id}`);
+  }
+  return Array.from(
+    { length: 100 },
+    (_, index) => `${batch.packId}-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
+  );
+}
+
+function rowIndex(pack: ParsedPack, label: string): ReadonlyMap<string, ParsedPack['rows'][number]> {
+  const rows = new Map<string, ParsedPack['rows'][number]>();
+  for (const row of pack.rows) {
+    if (rows.has(row.clue_id)) throw new Error(`Accepted baseline ${label} contains duplicate clue ${row.clue_id}`);
+    rows.set(row.clue_id, row);
+  }
+  return rows;
+}
+
+function rowFingerprint(row: ParsedPack['rows'][number]): string {
+  return JSON.stringify(CSV_COLUMNS.map((column) => row[column]));
+}
+
+export function compareAcceptedTranslationBaseline(options: {
+  batch: ProductionBatchDefinition;
+  acceptedRoot: string;
+  authoredPack: ParsedPack;
+  generatedPack: ParsedPack;
+  evidence: ReadonlyMap<string, ContentEvidence>;
+  translationDiagnosticClueIds: readonly string[];
+}): BatchArtifactHashes {
+  const expectedScope = expectedEasyExpansionTranslationClueIds(options.batch);
+  const actualScope = [...options.translationDiagnosticClueIds];
+  if (JSON.stringify(actualScope) !== JSON.stringify(expectedScope)) {
+    throw new Error('Accepted baseline comparison requires the exact 100 Easy-expansion clue IDs');
+  }
+  const scope = new Set(actualScope);
+  const acceptedRoot = resolve(options.acceptedRoot);
+  const relativePaths = acceptedBatchPaths(options.batch.id);
+  const paths = {
+    authored: resolve(acceptedRoot, relativePaths.authored),
+    generated: resolve(acceptedRoot, relativePaths.generated),
+    evidence: resolve(acceptedRoot, relativePaths.evidence),
+  };
+  assertNoSymlinkAncestors(acceptedRoot);
+  for (const path of Object.values(paths)) {
+    if (!within(acceptedRoot, path)) throw new Error('Accepted baseline path escapes its root');
+    assertNoSymlinkAncestors(dirname(path));
+  }
+  const bytes = {
+    authored: safeRead(paths.authored),
+    generated: safeRead(paths.generated),
+    evidence: safeRead(paths.evidence),
+  };
+  let acceptedAuthored: ParsedPack;
+  let acceptedGenerated: ParsedPack;
+  let acceptedEvidence: ReadonlyMap<string, ContentEvidence>;
+  try {
+    acceptedAuthored = parsePackCsv(decodeUtf8(bytes.authored));
+    acceptedGenerated = parsePackCsv(decodeUtf8(bytes.generated));
+    acceptedEvidence = parseEvidenceJsonl(decodeUtf8(bytes.evidence), 'accepted-baseline-evidence.jsonl');
+  } catch {
+    throw new Error('Accepted baseline artifacts are not parseable');
+  }
+  const candidateAuthored = rowIndex(options.authoredPack, 'candidate authored');
+  const candidateGenerated = rowIndex(options.generatedPack, 'candidate generated');
+  const baselineAuthored = rowIndex(acceptedAuthored, 'authored');
+  const baselineGenerated = rowIndex(acceptedGenerated, 'generated');
+  const sortedIds = (values: Iterable<string>): string[] => [...values].sort(compareCodeUnits);
+  const candidateAllIds = sortedIds(candidateGenerated.keys());
+  if (candidateAllIds.length !== 600
+    || JSON.stringify(candidateAllIds) !== JSON.stringify(sortedIds(candidateAuthored.keys()))
+    || JSON.stringify(candidateAllIds) !== JSON.stringify(sortedIds(options.evidence.keys()))) {
+    throw new Error('Accepted baseline comparison requires matching 600-row candidate inventories');
+  }
+  const baselineAllIds = sortedIds(baselineGenerated.keys());
+  if (baselineAllIds.length !== 500
+    || baselineAllIds.some((clueId) => scope.has(clueId))
+    || JSON.stringify(baselineAllIds) !== JSON.stringify(sortedIds(baselineAuthored.keys()))
+    || JSON.stringify(baselineAllIds) !== JSON.stringify(sortedIds(acceptedEvidence.keys()))) {
+    throw new Error('Accepted baseline comparison requires matching 500-row pre-expansion inventories');
+  }
+  for (const clueId of expectedScope) {
+    if (!candidateAuthored.has(clueId) || !candidateGenerated.has(clueId) || !options.evidence.has(clueId)) {
+      throw new Error(`Accepted baseline comparison is missing scoped clue ${clueId}`);
+    }
+  }
+  const candidateIds = candidateAllIds.filter((clueId) => !scope.has(clueId));
+  const baselineIds = baselineAllIds;
+  if (JSON.stringify(candidateIds) !== JSON.stringify(baselineIds)) {
+    throw new Error('Accepted baseline clue inventory differs outside the scoped Easy expansion');
+  }
+  for (const clueId of candidateIds) {
+    const candidateAuthoredRow = candidateAuthored.get(clueId);
+    const candidateGeneratedRow = candidateGenerated.get(clueId);
+    const candidateEvidence = options.evidence.get(clueId);
+    const baselineAuthoredRow = baselineAuthored.get(clueId);
+    const baselineGeneratedRow = baselineGenerated.get(clueId);
+    const baselineEvidence = acceptedEvidence.get(clueId);
+    if (candidateAuthoredRow === undefined || candidateGeneratedRow === undefined || candidateEvidence === undefined
+      || baselineAuthoredRow === undefined || baselineGeneratedRow === undefined || baselineEvidence === undefined
+      || rowFingerprint(candidateAuthoredRow) !== rowFingerprint(baselineAuthoredRow)
+      || rowFingerprint(candidateGeneratedRow) !== rowFingerprint(baselineGeneratedRow)
+      || serializeEvidence([candidateEvidence]) !== serializeEvidence([baselineEvidence])) {
+      throw new Error(`Accepted baseline record differs outside the scoped Easy expansion: ${clueId}`);
+    }
+  }
+  return {
+    authored: hash(bytes.authored),
+    generated: hash(bytes.generated),
+    evidence: hash(bytes.evidence),
+  };
 }
 
 function within(root: string, path: string): boolean {
@@ -329,14 +458,22 @@ export function parseBatchVerificationReport(value: unknown): BatchVerificationR
 
 export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVerificationReport> {
   const canonicalBatch = getProductionBatch(options.batchId);
-  if (options.translationDiagnosticClueIds !== undefined
-    && options.batchDefinition === undefined) {
-    throw new Error('Translation diagnostic scope is only allowed for provisional verification');
-  }
   if (options.batchDefinition !== undefined && options.batchDefinition.id !== canonicalBatch.id) {
     throw new Error(`Trusted batch definition must match canonical batch ${canonicalBatch.id}`);
   }
   const batch = options.batchDefinition ?? canonicalBatch;
+  const translationDiagnosticClueIds = options.translationDiagnosticClueIds === undefined
+    ? undefined
+    : [...options.translationDiagnosticClueIds].sort(compareCodeUnits);
+  if (translationDiagnosticClueIds !== undefined) {
+    const expected = expectedEasyExpansionTranslationClueIds(batch);
+    if (JSON.stringify(translationDiagnosticClueIds) !== JSON.stringify(expected)) {
+      throw new Error('Translation diagnostic scope must contain the exact 100 Easy-expansion clue IDs');
+    }
+    if (options.batchDefinition === undefined && options.baselineRoot === undefined) {
+      throw new Error('Canonical translation diagnostic scope requires an accepted baseline root');
+    }
+  }
   const verificationProfile: VerificationProfile = options.batchDefinition === undefined
     ? 'canonical'
     : 'easy-expansion-provisional';
@@ -388,12 +525,11 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   const generated = stableValidation(validateProductionContent([{ file: 'generated.en-et.csv', pack: generatedPack }], {
     mode: 'batch', evidenceByClueId: evidence, batch,
   }));
-  const translationDiagnosticClueIds = options.translationDiagnosticClueIds;
   const translationPack = translationDiagnosticClueIds === undefined
     ? generatedPack
     : {
         rows: generatedPack.rows.filter(({ clue_id }) => (
-          translationDiagnosticClueIds.has(clue_id)
+          translationDiagnosticClueIds.includes(clue_id)
         )),
       };
   const generatedClueIdCounts = new Map<string, number>();
@@ -402,14 +538,30 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   }
   const missingTranslationDiagnosticClueIds = translationDiagnosticClueIds === undefined
     ? []
-    : [...translationDiagnosticClueIds]
+    : translationDiagnosticClueIds
         .filter((clueId) => !generatedClueIdCounts.has(clueId))
         .sort(compareCodeUnits);
   const duplicateTranslationDiagnosticClueIds = translationDiagnosticClueIds === undefined
     ? []
-    : [...translationDiagnosticClueIds]
+    : translationDiagnosticClueIds
         .filter((clueId) => (generatedClueIdCounts.get(clueId) ?? 0) > 1)
         .sort(compareCodeUnits);
+  let acceptedBaselineHashes: BatchArtifactHashes | null = null;
+  let acceptedBaselineFailure: string | null = null;
+  if (translationDiagnosticClueIds !== undefined && verificationProfile === 'canonical') {
+    try {
+      acceptedBaselineHashes = compareAcceptedTranslationBaseline({
+        batch,
+        acceptedRoot: options.baselineRoot!,
+        authoredPack,
+        generatedPack,
+        evidence,
+        translationDiagnosticClueIds,
+      });
+    } catch (error) {
+      acceptedBaselineFailure = error instanceof Error ? error.message : String(error);
+    }
+  }
   const translationDiagnostics = diagnoseTranslations([{
     file: 'generated.en-et.csv',
     pack: translationPack,
@@ -421,6 +573,10 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   translationDiagnostics.exceptions.sort((left, right) => compareCodeUnits(left.id, right.id));
 
   const unresolvedIssues: BatchUnresolvedIssue[] = [];
+  if (acceptedBaselineFailure !== null) unresolvedIssues.push({
+    scope: 'baseline', code: 'ACCEPTED_BASELINE_MISMATCH', clueId: null,
+    message: acceptedBaselineFailure,
+  });
   for (const [clueId, record] of evidence) {
     if (record.batchId !== batch.id) unresolvedIssues.push({
       scope: 'evidence', code: 'EVIDENCE_BATCH_MISMATCH', clueId,
@@ -465,9 +621,12 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
   const report: FullBatchVerificationReport = {
     version: 1, batchId: batch.id, kind: 'verification',
     verificationProfile,
+    translationDiagnosticClueIds: translationDiagnosticClueIds ?? null,
+    acceptedBaselineHashes,
     blocking: authored.blocking || generated.blocking || translationDiagnostics.blocking
       || missingTranslationDiagnosticClueIds.length > 0
       || duplicateTranslationDiagnosticClueIds.length > 0
+      || acceptedBaselineFailure !== null
       || sources.some((source) => !source.ok) || unresolvedIssues.some((issue) => issue.scope === 'evidence' || issue.scope === 'samples'),
     artifactHashes: { authored: hash(bytes.authored!), generated: hash(bytes.generated!), evidence: hash(bytes.evidence!) },
     validations: { authored, generated }, translationDiagnostics, sources, samples: sampled.samples, unresolvedIssues,

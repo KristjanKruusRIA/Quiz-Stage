@@ -23,6 +23,8 @@ describe('bundled content synchronization', () => {
 
     const database = openDatabase({ filePath: databasePath });
     connections.push(database);
+    database.prepare("DELETE FROM clues WHERE id = 'built-in-history-easy-expansion-001'").run();
+    database.prepare("DELETE FROM category_sets WHERE id = 'built-in-history-set-101'").run();
     database.prepare("DELETE FROM content_packs WHERE id IN ('built-in-adult', 'built-in-estonia')").run();
     database.prepare(`
       UPDATE category_sets SET name_json = '{"en":"A Pendulum Tracks a Turning Earth","et":"Vana pealkiri"}'
@@ -109,6 +111,12 @@ describe('bundled content synchronization', () => {
       SELECT enabled FROM clues WHERE id = 'built-in-history-obsolete-clue'
     `).pluck().get()).toBe(0);
     expect(database.prepare("SELECT enabled FROM content_packs WHERE id = 'built-in-history'").pluck().get()).toBe(0);
+    expect(database.prepare(
+      "SELECT COUNT(*) FROM category_sets WHERE id = 'built-in-history-set-101'",
+    ).pluck().get()).toBe(1);
+    expect(database.prepare(
+      "SELECT COUNT(*) FROM clues WHERE id = 'built-in-history-easy-expansion-001'",
+    ).pluck().get()).toBe(1);
     expect(database.prepare("SELECT enabled FROM content_packs WHERE id = 'built-in-retired'").pluck().get()).toBe(0);
     expect(database.prepare("SELECT enabled FROM category_sets WHERE id = 'built-in-retired-set'").pluck().get()).toBe(0);
     expect(database.prepare("SELECT enabled FROM clues WHERE id = 'built-in-retired-clue'").pluck().get()).toBe(0);

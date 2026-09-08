@@ -328,6 +328,13 @@ describe('batch publication boundary', () => {
     if (first.kind !== 'verification' || second.kind !== 'verification') throw new Error('Expected full reports');
     expect(first.blocking).toBe(false);
     expect(second.blocking).toBe(false);
+    expect(first.validations.generated.summary).toMatchObject({
+      boardClues: 600,
+      categorySets: 120,
+      easySets: 54,
+      mediumSets: 33,
+      hardSets: 33,
+    });
     expect(first.samples['easy/round-one']).toHaveLength(5);
     expect(firstBytes).toBe(secondBytes);
     expect(fetches).toBe(2);

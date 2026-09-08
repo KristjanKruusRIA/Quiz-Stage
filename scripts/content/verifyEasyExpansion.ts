@@ -1,10 +1,11 @@
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  getProductionBatch, type BatchDistribution, type ProductionBatchDefinition,
+  getProductionBatch, PRODUCTION_BATCHES, type BatchDistribution, type ProductionBatchDefinition,
 } from './productionBatches';
 import {
-  verifyBatch, type BatchVerificationReport, type VerifyBatchOptions,
+  expectedEasyExpansionTranslationClueIds, verifyBatch,
+  type BatchVerificationReport, type VerifyBatchOptions,
 } from './verifyBatch';
 import { restoreNpmRunArgs } from './npmCliCompatibility';
 import { openFileSourceCache } from './sourceCheck';
@@ -70,18 +71,24 @@ export type VerifyEasyExpansionOptions = Omit<
 export function buildEasyExpansionTranslationClueIds(
   packId: string,
 ): ReadonlySet<string> {
-  return new Set(Array.from(
-    { length: 100 },
-    (_, index) => `${packId}-easy-expansion-${(index + 1).toString().padStart(3, '0')}`,
-  ));
+  const batch = getProductionBatchByPackId(packId);
+  return new Set(expectedEasyExpansionTranslationClueIds(batch));
+}
+
+function getProductionBatchByPackId(packId: string): ProductionBatchDefinition {
+  const batch = PRODUCTION_BATCHES.find((candidate) => candidate.packId === packId);
+  if (batch === undefined) throw new Error(`Unknown Easy-expansion pack: ${packId}`);
+  return batch;
 }
 
 export function verifyEasyExpansion(options: VerifyEasyExpansionOptions): Promise<BatchVerificationReport> {
-  const batchDefinition = buildProvisionalEasyExpansionBatch(options.batchId);
+  const canonicalBatch = getProductionBatch(options.batchId);
+  const batchDefinition = buildProvisionalEasyExpansionBatchFromCanonical(canonicalBatch);
   const translationDiagnosticClueIds = buildEasyExpansionTranslationClueIds(batchDefinition.packId);
   return verifyBatch({
     ...options,
-    batchDefinition,
+    baselineRoot: options.baselineRoot ?? process.cwd(),
+    ...(canonicalBatch.boardClues === TARGET_BOARD_CLUES ? {} : { batchDefinition }),
     translationDiagnosticClueIds,
   });
 }

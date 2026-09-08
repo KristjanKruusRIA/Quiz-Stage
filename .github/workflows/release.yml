@@ -91,7 +91,7 @@ jobs:
 
       - name: Smoke Windows installer and portable packages
         if: matrix.target == 'windows-x64'
-        run: pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both
+        run: pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both -ExpectedClueId built-in-history-easy-expansion-001
       - name: Smoke macOS arm64 portable package
         if: matrix.target == 'macos-arm64'
         run: npx tsx scripts/smoke-portable.ts --target macos-arm64 --archive out/make/portable/QuizStage-darwin-arm64.zip

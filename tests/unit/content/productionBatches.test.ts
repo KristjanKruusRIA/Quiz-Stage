@@ -7,18 +7,18 @@ import {
 } from '../../../scripts/content/productionBatches';
 
 const expectedBatches = [
-  ['01-history', 'built-in-history', 'history', ['ancient', 'medieval', 'early-modern', 'modern', 'political', 'social', 'military', 'economic', 'archaeological', 'cultural'], [[17, 17], [17, 16], [16, 17]]],
-  ['02-geography', 'built-in-geography', 'geography', ['countries-capitals', 'cities', 'physical-geography', 'rivers-lakes', 'mountains', 'islands', 'borders', 'maps-coordinates', 'human-geography', 'landmarks'], [[17, 17], [16, 17], [17, 16]]],
-  ['03-science-nature', 'built-in-science-nature', 'science-nature', ['physics', 'chemistry', 'astronomy', 'biology', 'medicine-history', 'earth-science', 'weather-climate', 'ecology', 'animals', 'plants'], [[17, 17], [17, 16], [16, 17]]],
-  ['04-literature-language', 'built-in-literature-language', 'literature-language', ['world-literature', 'authors', 'novels', 'poetry', 'drama', 'literary-movements', 'fictional-characters', 'linguistics', 'etymology', 'writing-systems'], [[17, 17], [16, 17], [17, 16]]],
-  ['05-art-architecture', 'built-in-art-architecture', 'art-architecture', ['painting', 'sculpture', 'photography-history', 'design', 'artists', 'museums', 'architecture', 'buildings', 'movements', 'materials-techniques'], [[17, 16], [17, 17], [16, 17]]],
-  ['06-music', 'built-in-music', 'music', ['classical', 'jazz', 'rock', 'pop', 'folk-world', 'composers', 'performers', 'albums', 'instruments', 'music-theory-history'], [[16, 17], [17, 17], [17, 16]]],
-  ['07-film-television', 'built-in-film-television', 'film-television', ['world-cinema', 'directors', 'actors', 'awards', 'genres', 'animation', 'television-history', 'series', 'production-craft', 'screen-adaptations'], [[17, 16], [17, 17], [16, 17]]],
-  ['08-sports-games', 'built-in-sports-games', 'sports-games', ['association-football', 'basketball', 'athletics', 'winter-sports', 'racket-sports', 'motorsport', 'olympics', 'traditional-sports', 'board-card-games', 'video-game-history'], [[16, 17], [17, 17], [17, 16]]],
-  ['09-food-drink', 'built-in-food-drink', 'food-drink', ['world-cuisines', 'ingredients', 'dishes', 'cooking-techniques', 'baking', 'non-alcoholic-drinks', 'alcohol-history', 'food-geography', 'culinary-figures', 'food-science'], [[17, 16], [16, 17], [17, 17]]],
-  ['10-technology-inventions', 'built-in-technology-inventions', 'technology-inventions', ['computing-history', 'communications', 'transportation', 'engineering', 'materials', 'energy', 'space-technology', 'inventors', 'standards-units', 'everyday-devices'], [[16, 17], [17, 16], [17, 17]]],
-  ['11-politics-economics-society', 'built-in-politics-economics-society', 'politics-economics-society', ['political-systems', 'constitutions', 'historical-leaders', 'international-institutions', 'economics', 'currencies', 'law-courts', 'sociology', 'education', 'demographics'], [[17, 16], [16, 17], [17, 17]]],
-  ['12-mythology-religion-philosophy', 'built-in-mythology-religion-philosophy', 'mythology-religion-philosophy', ['greek-roman', 'norse', 'egyptian', 'baltic-finnic', 'asian', 'african', 'american', 'world-religions', 'ancient-philosophy', 'early-modern-philosophy', 'modern-philosophy'], [[16, 17], [17, 16], [17, 17]]],
+  ['01-history', 'built-in-history', 'history', ['ancient', 'medieval', 'early-modern', 'modern', 'political', 'social', 'military', 'economic', 'archaeological', 'cultural'], [[27, 27], [17, 16], [16, 17]]],
+  ['02-geography', 'built-in-geography', 'geography', ['countries-capitals', 'cities', 'physical-geography', 'rivers-lakes', 'mountains', 'islands', 'borders', 'maps-coordinates', 'human-geography', 'landmarks'], [[27, 27], [16, 17], [17, 16]]],
+  ['03-science-nature', 'built-in-science-nature', 'science-nature', ['physics', 'chemistry', 'astronomy', 'biology', 'medicine-history', 'earth-science', 'weather-climate', 'ecology', 'animals', 'plants'], [[27, 27], [17, 16], [16, 17]]],
+  ['04-literature-language', 'built-in-literature-language', 'literature-language', ['world-literature', 'authors', 'novels', 'poetry', 'drama', 'literary-movements', 'fictional-characters', 'linguistics', 'etymology', 'writing-systems'], [[27, 27], [16, 17], [17, 16]]],
+  ['05-art-architecture', 'built-in-art-architecture', 'art-architecture', ['painting', 'sculpture', 'photography-history', 'design', 'artists', 'museums', 'architecture', 'buildings', 'movements', 'materials-techniques'], [[27, 26], [17, 17], [16, 17]]],
+  ['06-music', 'built-in-music', 'music', ['classical', 'jazz', 'rock', 'pop', 'folk-world', 'composers', 'performers', 'albums', 'instruments', 'music-theory-history'], [[26, 27], [17, 17], [17, 16]]],
+  ['07-film-television', 'built-in-film-television', 'film-television', ['world-cinema', 'directors', 'actors', 'awards', 'genres', 'animation', 'television-history', 'series', 'production-craft', 'screen-adaptations'], [[27, 26], [17, 17], [16, 17]]],
+  ['08-sports-games', 'built-in-sports-games', 'sports-games', ['association-football', 'basketball', 'athletics', 'winter-sports', 'racket-sports', 'motorsport', 'olympics', 'traditional-sports', 'board-card-games', 'video-game-history'], [[26, 27], [17, 17], [17, 16]]],
+  ['09-food-drink', 'built-in-food-drink', 'food-drink', ['world-cuisines', 'ingredients', 'dishes', 'cooking-techniques', 'baking', 'non-alcoholic-drinks', 'alcohol-history', 'food-geography', 'culinary-figures', 'food-science'], [[27, 26], [16, 17], [17, 17]]],
+  ['10-technology-inventions', 'built-in-technology-inventions', 'technology-inventions', ['computing-history', 'communications', 'transportation', 'engineering', 'materials', 'energy', 'space-technology', 'inventors', 'standards-units', 'everyday-devices'], [[26, 27], [17, 16], [17, 17]]],
+  ['11-politics-economics-society', 'built-in-politics-economics-society', 'politics-economics-society', ['political-systems', 'constitutions', 'historical-leaders', 'international-institutions', 'economics', 'currencies', 'law-courts', 'sociology', 'education', 'demographics'], [[27, 26], [16, 17], [17, 17]]],
+  ['12-mythology-religion-philosophy', 'built-in-mythology-religion-philosophy', 'mythology-religion-philosophy', ['greek-roman', 'norse', 'egyptian', 'baltic-finnic', 'asian', 'african', 'american', 'world-religions', 'ancient-philosophy', 'early-modern-philosophy', 'modern-philosophy'], [[26, 27], [17, 16], [17, 17]]],
 ] as const;
 
 const expectedPaths = [
@@ -100,10 +100,11 @@ describe('production batch catalog', () => {
     for (const expected of expectedNewTopics) expect(getProductionBatch(expected.id)).toMatchObject(expected);
     expect(PRODUCTION_BATCHES.slice(0, 12).every((batch) => batch.requiredOpenTdbClues === 100)).toBe(true);
     expect(PRODUCTION_BATCHES.slice(12).every((batch) => batch.requiredOpenTdbClues === 0)).toBe(true);
-    expect(PRODUCTION_BATCHES.every((batch) => batch.boardClues === 500)).toBe(true);
-    expect(PRODUCTION_BATCHES.reduce((sum, batch) => sum + batch.boardClues, 0)).toBe(7_000);
+    expect(PRODUCTION_BATCHES.slice(0, 12).every((batch) => batch.boardClues === 600)).toBe(true);
+    expect(PRODUCTION_BATCHES.slice(12).every((batch) => batch.boardClues === 500)).toBe(true);
+    expect(PRODUCTION_BATCHES.reduce((sum, batch) => sum + batch.boardClues, 0)).toBe(8_200);
     expect(sumByDifficultyAndRound(PRODUCTION_BATCHES)).toEqual({
-      easy: { roundOne: 234, roundTwo: 233 },
+      easy: { roundOne: 354, roundTwo: 353 },
       medium: { roundOne: 233, roundTwo: 234 },
       hard: { roundOne: 233, roundTwo: 233 },
     });
@@ -127,7 +128,7 @@ describe('production batch catalog', () => {
           hard: { roundOne: distribution[2][0], roundTwo: distribution[2][1] },
         },
         finalTopicAllocations: null,
-        boardClues: 500,
+        boardClues: 600,
         finalClues: 0,
       });
     }

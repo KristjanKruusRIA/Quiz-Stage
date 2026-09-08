@@ -2356,3 +2356,37 @@ Enumerate matching files with `Get-ChildItem` or search the containing directory
 - **Notes**: Re-ran the query with exact ID `built-in-politics-economics-society-set-042` and obtained the expected eight arrays.
 
 ---
+## [ERR-20260908-001] vitest-nested-stderr-source-map
+
+**Logged**: 2026-09-08T21:46:03+03:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+Passing a failed `tsx` child process's multiline stderr as Vitest's assertion message caused Vitest's source-map parser to mask the real assertion failure.
+
+### Error
+```
+SyntaxError: Unexpected token '�', "�" is not valid JSON
+at new Converter (node_modules/convert-source-map/index.js:83:15)
+```
+
+### Context
+- Operation attempted: assert that the production seed satisfies the upgrade verifier after repeatable bundled-content synchronization.
+- The custom assertion message was `result.stderr || result.stdout`, which included the nested `tsx` stack trace.
+- The same test exposed the intended `expected 1 to be 0` exit-code failure when the assertion used only `result.status`.
+
+### Suggested Fix
+Assert the child exit code without embedding a nested stack trace in Vitest's custom assertion message; inspect stdout and stderr with separate assertions when their content is part of the contract.
+
+### Metadata
+- Reproducible: yes
+- Related Files: tests/integration/packaging/upgradeWorkflow.test.ts, scripts/verify-upgrade-data.ts
+- See Also: ERR-20260830-008
+
+### Resolution
+- **Resolved**: 2026-09-08T21:46:03+03:00
+- **Notes**: Removed the nested stderr assertion message; the real missing-seed failure is now reported normally.
+
+---

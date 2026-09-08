@@ -10,7 +10,9 @@ import { parseEvidenceJsonl, type ContentEvidence } from './evidence';
 import {
   acceptedBatchPaths, getProductionBatch, type ProductionBatchDefinition,
 } from './productionBatches';
-import { parseBatchVerificationReport } from './verifyBatch';
+import {
+  compareAcceptedTranslationBaseline, parseBatchVerificationReport,
+} from './verifyBatch';
 import type { FullBatchVerificationReport } from './verifyBatch';
 import { diagnoseTranslations } from './translationDiagnostics';
 import { validateProductionContent } from './validate';
@@ -130,7 +132,13 @@ function isPassingReport(
   const generatedValidation = validateProductionContent([{ file: 'generated.en-et.csv', pack: generatedPack }], {
     mode: 'batch', evidenceByClueId: evidence, batch,
   });
-  const translationDiagnostics = diagnoseTranslations([{ file: 'generated.en-et.csv', pack: generatedPack }]);
+  const translationScope = report.translationDiagnosticClueIds === null
+    ? null
+    : new Set(report.translationDiagnosticClueIds);
+  const translationPack = translationScope === null
+    ? generatedPack
+    : { rows: generatedPack.rows.filter(({ clue_id: clueId }) => translationScope.has(clueId)) };
+  const translationDiagnostics = diagnoseTranslations([{ file: 'generated.en-et.csv', pack: translationPack }]);
   const rowsAreBound = evidence.size === generatedPack.rows.length && generatedPack.rows.every((row) => {
     const record = evidence.get(row.clue_id);
     return record !== undefined && record.batchId === batch.id && record.translationReview !== null
@@ -150,7 +158,7 @@ function isPassingReport(
     && report.validations.authored.issues.every((issue) => issue.severity !== 'error')
     && report.validations.generated.issues.every((issue) => issue.severity !== 'error')
     && report.translationDiagnostics.issues.every((issue) => issue.severity !== 'error')
-    && report.translationDiagnostics.checkedRows === generatedPack.rows.length
+    && report.translationDiagnostics.checkedRows === translationPack.rows.length
     && rowsAreBound
     && expectedSummary.boardClues === batch.boardClues
     && expectedSummary.finalClues === batch.finalClues
@@ -162,7 +170,7 @@ function isPassingReport(
     && JSON.stringify(report.samples) === JSON.stringify(samples)
     && Object.values(report.samples).every((ids) => ids.length === sampleSize)
     && new Set(sampleIds).size === sampleIds.length
-    && report.unresolvedIssues.every((issue) => !['evidence', 'samples', 'source'].includes(issue.scope));
+    && report.unresolvedIssues.every((issue) => !['baseline', 'evidence', 'samples', 'source'].includes(issue.scope));
 }
 
 export async function publishBatch(options: PublishBatchOptions): Promise<void> {
@@ -211,6 +219,28 @@ export async function publishBatch(options: PublishBatchOptions): Promise<void> 
     generatedPack = parsePackCsv(decodeUtf8(bytes.generated));
     evidence = parseEvidenceJsonl(decodeUtf8(bytes.evidence), 'evidence.jsonl');
   } catch { throw new Error('Publication requires a passing verification report with parseable artifacts'); }
+  if (report.translationDiagnosticClueIds === null) {
+    if (report.acceptedBaselineHashes !== null) {
+      throw new Error('Publication requires a passing verification report for this batch');
+    }
+  } else {
+    let currentBaselineHashes;
+    try {
+      currentBaselineHashes = compareAcceptedTranslationBaseline({
+        batch,
+        acceptedRoot,
+        authoredPack,
+        generatedPack,
+        evidence,
+        translationDiagnosticClueIds: report.translationDiagnosticClueIds,
+      });
+    } catch (error) {
+      throw new Error(`Accepted baseline check failed: ${error instanceof Error ? error.message : String(error)}`);
+    }
+    if (JSON.stringify(currentBaselineHashes) !== JSON.stringify(report.acceptedBaselineHashes)) {
+      throw new Error('Accepted baseline changed after verification');
+    }
+  }
   if (!isPassingReport(report, batch, authoredPack, generatedPack, evidence)) {
     throw new Error('Publication requires a passing verification report for this batch');
   }

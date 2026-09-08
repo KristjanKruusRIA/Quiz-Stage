@@ -70,6 +70,7 @@ describe('installer executable resolution', () => {
       '-File', smokeScript,
       '-PackageRoot', packageRoot,
       '-Mode', 'Installer',
+      '-ExpectedClueId', 'built-in-history-easy-expansion-001',
     ], { encoding: 'utf8' });
 
     expect(result.status).not.toBe(0);

@@ -125,7 +125,7 @@ function boardRows(batch: ProductionBatchDefinition, batchIndex: number): CsvRow
     for (const round of ['round-one', 'round-two'] as const) {
       const count = batch.distribution![difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
       for (let offset = 0; offset < count; offset += 1) {
-        const globalSetIndex = batchIndex * 100 + localSetIndex;
+        const globalSetIndex = batchIndex * 120 + localSetIndex;
         for (let tier = 1; tier <= 5; tier += 1) {
           const unique = alphabeticId(globalSetIndex * 5 + tier);
           rows.push({
@@ -436,17 +436,17 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(second.seedSha256).toBe(first.seedSha256);
     expect(readFileSync(secondOutput)).toEqual(readFileSync(firstOutput));
     expect(first.input.sha256).toBe(second.input.sha256);
-    expect(first.input.evidence).toMatchObject({ records: 7174, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
+    expect(first.input.evidence).toMatchObject({ records: 8374, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
     const firstReportData = JSON.parse(readFileSync(firstReport, 'utf8'));
     expect(firstReportData.validation).toMatchObject({
       mode: 'release', blocking: false,
     });
     expect(firstReportData.validation.summary).toEqual({
-      boardClues: 7_000,
-      categorySets: 1_400,
-      distinctCategoryNames: 1_400,
+      boardClues: 8_200,
+      categorySets: 1_640,
+      distinctCategoryNames: 1_640,
       finalClues: 174,
-      easySets: 467,
+      easySets: 707,
       mediumSets: 467,
       hardSets: 466,
       builtInPacks: 15,
@@ -454,10 +454,10 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(firstReportData.validation).not.toHaveProperty('validation');
     expect(readReleaseInventoryReport(firstReport).validation.summary).toEqual(firstReportData.validation.summary);
     const aboveThreshold = structuredClone(firstReportData);
-    aboveThreshold.validation.summary.boardClues = 7_001;
+    aboveThreshold.validation.summary.boardClues = 8_201;
     writeFileSync(firstReport, `${JSON.stringify(aboveThreshold, null, 2)}\n`);
     expect(() => readReleaseInventoryReport(firstReport)).toThrow(
-      'Release inventory report does not match exact inventory for boardClues: 7001 != 7000',
+      'Release inventory report does not match exact inventory for boardClues: 8201 != 8200',
     );
     writeFileSync(firstReport, `${JSON.stringify(firstReportData, null, 2)}\n`);
 
@@ -476,7 +476,7 @@ describe('evidence-bound production seed infrastructure', () => {
     });
     expect(database.prepare(
       "SELECT COUNT(*) FROM clues WHERE json_extract(source, '$.format') = 'quiz-stage-csv-v2'",
-    ).pluck().get()).toBe(7174);
+    ).pluck().get()).toBe(8374);
     expect(database.prepare(
       "SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'",
     ).pluck().get()).toBe(15);
@@ -492,11 +492,11 @@ describe('evidence-bound production seed infrastructure', () => {
     database.close();
     connections.splice(connections.indexOf(database), 1);
     expect(inspectSeed(firstOutput, fixture.evidenceByClueId).inventory).toEqual({
-      boardClues: 7_000,
-      categorySets: 1_400,
-      distinctCategoryNames: 1_400,
+      boardClues: 8_200,
+      categorySets: 1_640,
+      distinctCategoryNames: 1_640,
       finalClues: 174,
-      easySets: 467,
+      easySets: 707,
       mediumSets: 467,
       hardSets: 466,
       builtInPacks: 15,
@@ -562,7 +562,7 @@ describe('evidence-bound production seed infrastructure', () => {
 
     await expect(buildProductionSeed({
       inputs: fixture.inputs, evidence: fixture.evidence, output, report,
-    })).resolves.toMatchObject({ boardClues: 7_000, categorySets: 1_400, finalClues: 174 });
+    })).resolves.toMatchObject({ boardClues: 8_200, categorySets: 1_640, finalClues: 174 });
     expect(JSON.parse(readFileSync(report, 'utf8')).translation.exceptions).toHaveLength(1);
   }, 120_000);
 
@@ -717,5 +717,7 @@ describe('production seed', () => {
       mediumSets: summary.mediumSets,
       hardSets: summary.hardSets,
     }));
+    expect(database.prepare('SELECT COUNT(*) FROM clues WHERE id = ?').pluck()
+      .get('built-in-history-easy-expansion-001')).toBe(1);
   });
 });

@@ -20,7 +20,7 @@ describe('content loading performance', () => {
     const elapsedMs = performance.now() - startedAt;
 
     expect(library.packs).toHaveLength(15);
-    expect(library.categorySets).toHaveLength(1_400);
+    expect(library.categorySets).toHaveLength(1_640);
     expect(library.finalClues).toHaveLength(174);
     expect(elapsedMs).toBeLessThan(2_000);
   }, 15_000);

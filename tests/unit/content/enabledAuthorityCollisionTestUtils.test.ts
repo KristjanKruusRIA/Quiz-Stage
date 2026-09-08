@@ -105,8 +105,8 @@ describe('enabled authority one-way alias leakage', () => {
 });
 
 describe('cumulative enabled authority collisions', () => {
-  it('keeps the released board authority fixed at 7,000 rows', () => {
-    expect(completeEnabledAuthorityCorpus()).toHaveLength(7_000);
+  it('keeps the released board authority fixed at 8,200 rows', () => {
+    expect(completeEnabledAuthorityCorpus()).toHaveLength(8_200);
   });
 
   it('maps injected Phase B questions by stable clue ID with category context', () => {

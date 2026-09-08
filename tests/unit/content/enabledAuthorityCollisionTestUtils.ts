@@ -133,7 +133,7 @@ function generatedAuthorityRows(
   });
 }
 
-export function completeEnabledAuthorityCorpus(): readonly AuthorityRow[] {
+function baselineEnabledAuthorityCorpus(): readonly AuthorityRow[] {
   const mediumHardCategories = [
     ...HISTORY_CATEGORIES,
     ...GEOGRAPHY_CATEGORIES,
@@ -161,11 +161,21 @@ export function registeredEasyExpansionAuthorityRows(
   });
 }
 
+export function completeEnabledAuthorityCorpus(): readonly AuthorityRow[] {
+  return [
+    ...baselineEnabledAuthorityCorpus(),
+    ...registeredEasyExpansionAuthorityRows().map((row) => ({
+      ...row,
+      authority: 'easy' as const,
+    })),
+  ];
+}
+
 export function completeCumulativeAuthorityCorpus(
   categories: readonly EasyExpansionCategory[] = buildEasyExpansionCorpus(),
 ): readonly AuthorityRow[] {
   return [
-    ...completeEnabledAuthorityCorpus(),
+    ...baselineEnabledAuthorityCorpus(),
     ...generatedAuthorityRows('13-finals', 'final'),
     ...registeredEasyExpansionAuthorityRows(categories),
   ];

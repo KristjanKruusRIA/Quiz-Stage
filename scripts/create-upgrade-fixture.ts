@@ -17,6 +17,7 @@ const ROUND_ONE_CATEGORY_SET_ID = 'previous-version-round-one-category';
 const ROUND_ONE_CLUE_ID = 'previous-version-round-one-clue-100';
 const COMPLETED_MATCH_ID = 'previous-version-match-complete';
 const AUTOSAVE_MATCH_ID = 'previous-version-match-autosave';
+const EXPANSION_CLUE_ID = 'built-in-history-easy-expansion-001';
 
 interface MatchState {
   stateJson: string;
@@ -274,6 +275,14 @@ function main(): void {
     reducedMotion: true,
     revision: 0,
   }), BASE_TIMESTAMP + 4);
+
+  const expansionClueCount = Number(
+    database.prepare('SELECT COUNT(*) FROM clues WHERE id = ?').pluck().get(EXPANSION_CLUE_ID),
+  );
+  if (expansionClueCount !== 0) {
+    database.close();
+    throw new Error(`Previous-version fixture contains new clue: ${EXPANSION_CLUE_ID}`);
+  }
 
   writeLogoFixture();
   database.close();

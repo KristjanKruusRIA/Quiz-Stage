@@ -79,7 +79,9 @@ function createPassingWork(
   }> = [];
   for (const cell of cells) {
     const roundKey = cell.round === 'round-one' ? 'roundOne' : 'roundTwo';
-    const baselineCount = canonical.distribution[cell.difficulty][roundKey];
+    const baselineCount = cell.difficulty === 'easy'
+      ? canonical.distribution.easy[roundKey] - 10
+      : canonical.distribution[cell.difficulty][roundKey];
     for (let index = 0; index < batch.distribution[cell.difficulty][roundKey]; index += 1) {
       sets.push({ ...cell, isExpansion: index >= baselineCount });
     }
@@ -154,6 +156,40 @@ function createPassingWork(
       sleep: async () => {},
     },
   };
+}
+
+function seedAcceptedBaseline(
+  acceptedRoot: string,
+  workRoot: string,
+  batchId: string,
+): void {
+  const sourceDirectory = join(workRoot, batchId);
+  const destinations = {
+    authored: join(acceptedRoot, 'content', 'authored', `${batchId}.csv`),
+    generated: join(acceptedRoot, 'content', 'generated', `${batchId}.en-et.csv`),
+    evidence: join(acceptedRoot, 'content', 'evidence', `${batchId}.jsonl`),
+  };
+  for (const destination of Object.values(destinations)) {
+    mkdirSync(resolve(destination, '..'), { recursive: true });
+  }
+  for (const [kind, name] of [
+    ['authored', 'authored.csv'],
+    ['generated', 'generated.en-et.csv'],
+  ] as const) {
+    const rows = parse(readFileSync(join(sourceDirectory, name), 'utf8'), {
+      columns: true,
+      skip_empty_lines: true,
+    }) as Array<Record<string, string>>;
+    writeFileSync(destinations[kind], stringify([
+      CSV_COLUMNS,
+      ...rows.filter(({ clue_id: clueId }) => !clueId.includes('-easy-expansion-'))
+        .map((row) => CSV_COLUMNS.map((column) => row[column] ?? '')),
+    ]));
+  }
+  const evidence = readFileSync(join(sourceDirectory, 'evidence.jsonl'), 'utf8').trim().split('\n')
+    .map((line) => JSON.parse(line) as ContentEvidence)
+    .filter(({ clueId }) => !clueId.includes('-easy-expansion-'));
+  writeFileSync(destinations.evidence, evidence.map((item) => `${JSON.stringify(item)}\n`).join(''));
 }
 
 function omitTranslatedVariant(
@@ -236,18 +272,7 @@ describe('Easy expansion provisional verification', () => {
     const provisional = buildProvisionalEasyExpansionBatch(batchId);
     if (canonical.distribution === null || provisional.distribution === null) throw new Error('Expected board batches');
 
-    expect(provisional).toEqual({
-      ...canonical,
-      boardClues: 600,
-      distribution: {
-        easy: {
-          roundOne: canonical.distribution.easy.roundOne + 10,
-          roundTwo: canonical.distribution.easy.roundTwo + 10,
-        },
-        medium: canonical.distribution.medium,
-        hard: canonical.distribution.hard,
-      },
-    });
+    expect(provisional).toEqual(canonical);
     expect(Object.isFrozen(provisional)).toBe(true);
     expect(Object.isFrozen(provisional.subthemes)).toBe(true);
     expect(Object.isFrozen(provisional.distribution)).toBe(true);
@@ -259,31 +284,31 @@ describe('Easy expansion provisional verification', () => {
     expect(provisional.requiredOpenTdbClues).toBe(canonical.requiredOpenTdbClues);
   });
 
-  test('keeps an already-expanded canonical definition at the 600-row target', () => {
+  test('expands a legacy 500-row canonical definition to the 600-row target', () => {
     const canonical = getProductionBatch('01-history');
     if (canonical.distribution === null) throw new Error('Expected a board batch');
-    const expanded = Object.freeze({
+    const legacy = Object.freeze({
       ...canonical,
-      boardClues: 600,
+      boardClues: 500,
       distribution: Object.freeze({
         easy: Object.freeze({
-          roundOne: canonical.distribution.easy.roundOne + 10,
-          roundTwo: canonical.distribution.easy.roundTwo + 10,
+          roundOne: canonical.distribution.easy.roundOne - 10,
+          roundTwo: canonical.distribution.easy.roundTwo - 10,
         }),
         medium: canonical.distribution.medium,
         hard: canonical.distribution.hard,
       }),
     });
 
-    const provisional = buildProvisionalEasyExpansionBatchFromCanonical(expanded);
+    const provisional = buildProvisionalEasyExpansionBatchFromCanonical(legacy);
 
     expect(provisional.boardClues).toBe(600);
-    expect(provisional.distribution).toEqual(expanded.distribution);
+    expect(provisional.distribution).toEqual(canonical.distribution);
     expect(Object.values(provisional.distribution!).flatMap((rounds) => [
       rounds.roundOne, rounds.roundTwo,
     ]).reduce((total, count) => total + count, 0)).toBe(120);
     expect(() => buildProvisionalEasyExpansionBatchFromCanonical({
-      ...expanded,
+      ...legacy,
       boardClues: 550,
     })).toThrow(/500-row baseline or 600-row target/i);
   });
@@ -305,13 +330,31 @@ describe('Easy expansion provisional verification', () => {
     ));
   });
 
-  test('rejects translation scoping on canonical verification', async () => {
-    await expect(verifyBatch({
+  test('allows canonical translation scoping only against an unchanged accepted baseline', async () => {
+    const root = temporaryDirectory('quiz-stage-easy-expansion-canonical-scope-');
+    const fixture = createPassingWork(root, getProductionBatch('01-history'));
+    const baselineRoot = join(root, 'accepted');
+    seedAcceptedBaseline(baselineRoot, fixture.workRoot, '01-history');
+
+    const report = await verifyBatch({
       batchId: '01-history',
-      workRoot: 'unused',
-      translationDiagnosticClueIds: new Set<string>(),
-    })).rejects.toThrow(/translation diagnostic scope.*provisional/iu);
-  });
+      workRoot: fixture.workRoot,
+      baselineRoot,
+      translationDiagnosticClueIds: buildEasyExpansionTranslationClueIds('built-in-history'),
+      sourceDependencies: fixture.sourceDependencies,
+    });
+
+    expect(report).toMatchObject({
+      kind: 'verification',
+      verificationProfile: 'canonical',
+      blocking: false,
+      translationDiagnosticClueIds: expect.arrayContaining([
+        'built-in-history-easy-expansion-001',
+        'built-in-history-easy-expansion-100',
+      ]),
+      translationDiagnostics: { checkedRows: 100 },
+    });
+  }, 30_000);
 
   test('still resolves the canonical catalog before accepting a trusted override', async () => {
     const canonical = getProductionBatch('01-history');
@@ -325,7 +368,7 @@ describe('Easy expansion provisional verification', () => {
     })).rejects.toThrow(/batch definition.*01-history/i);
   });
 
-  test('marks provisional preflight failures with the same non-publishable profile', async () => {
+  test('marks cutover preflight failures with the canonical profile', async () => {
     const report = await verifyEasyExpansion({
       batchId: '01-history',
       workRoot: temporaryDirectory('quiz-stage-easy-expansion-preflight-'),
@@ -333,31 +376,33 @@ describe('Easy expansion provisional verification', () => {
 
     expect(report).toMatchObject({
       kind: 'preflight-failure',
-      verificationProfile: 'easy-expansion-provisional',
+      verificationProfile: 'canonical',
       blocking: true,
     });
   });
 
-  test('verifies a 600-row projection but its report cannot authorize canonical publication', async () => {
+  test('publishes a canonical 600-row projection only over its unchanged accepted baseline', async () => {
     const root = temporaryDirectory('quiz-stage-easy-expansion-');
     const provisional = buildProvisionalEasyExpansionBatch('01-history');
     const fixture = createPassingWork(root, provisional);
+    const acceptedRoot = join(root, 'accepted');
+    seedAcceptedBaseline(acceptedRoot, fixture.workRoot, provisional.id);
     const report = await verifyEasyExpansion({
       batchId: provisional.id,
       workRoot: fixture.workRoot,
+      baselineRoot: acceptedRoot,
       sourceDependencies: fixture.sourceDependencies,
     });
 
     expect(report.kind).toBe('verification');
     if (report.kind !== 'verification') throw new Error('Expected full verification report');
-    expect(report.verificationProfile).toBe('easy-expansion-provisional');
+    expect(report.verificationProfile).toBe('canonical');
     expect(report.blocking).toBe(false);
+    expect(report.translationDiagnosticClueIds).toHaveLength(100);
     expect(report.validations.generated.summary).toMatchObject({ boardClues: 600, categorySets: 120, easySets: 54 });
 
-    const acceptedRoot = join(root, 'accepted');
-    await expect(publishBatch({ batchId: provisional.id, workRoot: fixture.workRoot, acceptedRoot }))
-      .rejects.toThrow(/canonical verification report/i);
-    expect(existsSync(join(acceptedRoot, 'content/authored/01-history.csv'))).toBe(false);
+    await publishBatch({ batchId: provisional.id, workRoot: fixture.workRoot, acceptedRoot });
+    expect(existsSync(join(acceptedRoot, 'content/authored/01-history.csv'))).toBe(true);
 
     const reportPath = join(fixture.workRoot, provisional.id, 'report.json');
     const unmarked = JSON.parse(readFileSync(reportPath, 'utf8')) as Record<string, unknown>;
@@ -368,7 +413,28 @@ describe('Easy expansion provisional verification', () => {
     });
     await expect(publishBatch({ batchId: provisional.id, workRoot: fixture.workRoot, acceptedRoot }))
       .rejects.toThrow(/canonical verification report/i);
-    expect(existsSync(join(acceptedRoot, 'content/authored/01-history.csv'))).toBe(false);
+    expect(existsSync(join(acceptedRoot, 'content/authored/01-history.csv'))).toBe(true);
+  }, 30_000);
+
+  test('publisher independently rejects an accepted baseline changed after scoped verification', async () => {
+    const root = temporaryDirectory('quiz-stage-easy-expansion-race-');
+    const batch = buildProvisionalEasyExpansionBatch('01-history');
+    const fixture = createPassingWork(root, batch);
+    const acceptedRoot = join(root, 'accepted');
+    seedAcceptedBaseline(acceptedRoot, fixture.workRoot, batch.id);
+    await verifyEasyExpansion({
+      batchId: batch.id,
+      workRoot: fixture.workRoot,
+      baselineRoot: acceptedRoot,
+      sourceDependencies: fixture.sourceDependencies,
+    });
+    const acceptedGenerated = join(acceptedRoot, 'content', 'generated', '01-history.en-et.csv');
+    const concurrentBytes = `${readFileSync(acceptedGenerated, 'utf8')}\n`;
+    writeFileSync(acceptedGenerated, concurrentBytes);
+
+    await expect(publishBatch({ batchId: batch.id, workRoot: fixture.workRoot, acceptedRoot }))
+      .rejects.toThrow(/accepted baseline/i);
+    expect(readFileSync(acceptedGenerated, 'utf8')).toBe(concurrentBytes);
   }, 30_000);
 
   test('keeps inherited translation diagnostics nonblocking without hiding new clue errors', async () => {
@@ -382,10 +448,31 @@ describe('Easy expansion provisional verification', () => {
       provisional.id,
       (clueId) => !clueId.includes('-easy-expansion-'),
     );
+    const inheritedBaselineRoot = temporaryDirectory('quiz-stage-easy-expansion-inherited-baseline-');
+    seedAcceptedBaseline(inheritedBaselineRoot, inheritedFixture.workRoot, provisional.id);
+
+    const unscopedReport = await verifyBatch({
+      batchId: provisional.id,
+      workRoot: inheritedFixture.workRoot,
+      sourceDependencies: inheritedFixture.sourceDependencies,
+    });
+    expect(unscopedReport.kind).toBe('verification');
+    if (unscopedReport.kind !== 'verification') throw new Error('Expected full verification report');
+    expect(unscopedReport).toMatchObject({
+      verificationProfile: 'canonical',
+      translationDiagnosticClueIds: null,
+      acceptedBaselineHashes: null,
+      blocking: true,
+      translationDiagnostics: { checkedRows: 600 },
+    });
+    expect(unscopedReport.translationDiagnostics.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ clueId: inheritedClueId, code: 'BLANK_TRANSLATION', severity: 'error' }),
+    ]));
 
     const inheritedReport = await verifyEasyExpansion({
       batchId: provisional.id,
       workRoot: inheritedFixture.workRoot,
+      baselineRoot: inheritedBaselineRoot,
       sourceDependencies: inheritedFixture.sourceDependencies,
     });
     expect(inheritedReport.kind).toBe('verification');
@@ -416,9 +503,12 @@ describe('Easy expansion provisional verification', () => {
       provisional.id,
       (clueId) => clueId.includes('-easy-expansion-'),
     );
+    const expansionBaselineRoot = temporaryDirectory('quiz-stage-easy-expansion-new-clue-baseline-');
+    seedAcceptedBaseline(expansionBaselineRoot, expansionFixture.workRoot, provisional.id);
     const expansionReport = await verifyEasyExpansion({
       batchId: provisional.id,
       workRoot: expansionFixture.workRoot,
+      baselineRoot: expansionBaselineRoot,
       sourceDependencies: expansionFixture.sourceDependencies,
     });
     expect(expansionReport.kind).toBe('verification');
@@ -447,10 +537,13 @@ describe('Easy expansion provisional verification', () => {
       expectedClueId,
       'built-in-history-easy-expansion-tampered',
     );
+    const baselineRoot = temporaryDirectory('quiz-stage-easy-expansion-missing-scope-baseline-');
+    seedAcceptedBaseline(baselineRoot, fixture.workRoot, provisional.id);
 
     const report = await verifyEasyExpansion({
       batchId: provisional.id,
       workRoot: fixture.workRoot,
+      baselineRoot,
       sourceDependencies: fixture.sourceDependencies,
     });
     expect(report.kind).toBe('verification');
@@ -478,10 +571,13 @@ describe('Easy expansion provisional verification', () => {
       missingClueId,
       duplicatedClueId,
     );
+    const baselineRoot = temporaryDirectory('quiz-stage-easy-expansion-duplicate-scope-baseline-');
+    seedAcceptedBaseline(baselineRoot, fixture.workRoot, provisional.id);
 
     const report = await verifyEasyExpansion({
       batchId: provisional.id,
       workRoot: fixture.workRoot,
+      baselineRoot,
       sourceDependencies: fixture.sourceDependencies,
     });
     expect(report.kind).toBe('verification');
@@ -508,6 +604,7 @@ describe('Easy expansion provisional verification', () => {
     for (const name of ['authored.csv', 'generated.en-et.csv', 'evidence.jsonl']) {
       writeFileSync(join(expectedDirectory, name), readFileSync(join(fixture.workRoot, '01-history', name)));
     }
+    seedAcceptedBaseline(root, fixture.workRoot, provisional.id);
     const cachePath = join(root, 'source-cache.json');
     const cacheDocument = {
       version: 1,

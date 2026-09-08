@@ -157,7 +157,7 @@ function boardBatchRows(batch: ProductionBatchDefinition, batchIndex = 0): Row[]
     for (const round of ['round-one', 'round-two'] as const) {
       const count = batch.distribution![difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
       for (let offset = 0; offset < count; offset += 1) {
-        const globalSetIndex = batchIndex * 100 + localSetIndex;
+        const globalSetIndex = batchIndex * 120 + localSetIndex;
         const categoryId = `${batch.id}-set-${localSetIndex}`;
         const subtheme = batch.subthemes[localSetIndex % batch.subthemes.length];
         for (let tier = 1; tier <= 5; tier += 1) {
@@ -1230,7 +1230,7 @@ describe('production content validation', () => {
     }
   }, 60_000);
 
-  it('summarizes an exact valid 7000/1400/174 inventory efficiently', () => {
+  it('summarizes an exact valid 8200/1640/174 inventory efficiently', () => {
     const corpus = releaseCorpus();
 
     const result = validateProductionContent(releaseInputs(corpus), {
@@ -1238,19 +1238,19 @@ describe('production content validation', () => {
     });
 
     expect(result.summary).toEqual({
-      boardClues: 7_000, categorySets: 1_400, distinctCategoryNames: 1_400,
-      finalClues: 174, easySets: 467, mediumSets: 467, hardSets: 466, builtInPacks: 15,
+      boardClues: 8_200, categorySets: 1_640, distinctCategoryNames: 1_640,
+      finalClues: 174, easySets: 707, mediumSets: 467, hardSets: 466, builtInPacks: 15,
     });
     expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
       corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board' && row.difficulty === difficulty).length,
-    ]))).toEqual({ easy: 2_335, medium: 2_335, hard: 2_330 });
+    ]))).toEqual({ easy: 3_535, medium: 2_335, hard: 2_330 });
     expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
       Object.fromEntries(['round-one', 'round-two'].map((round) => [round,
         corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board'
           && row.difficulty === difficulty && row.round === round).length / 5,
       ])),
     ]))).toEqual({
-      easy: { 'round-one': 234, 'round-two': 233 },
+      easy: { 'round-one': 354, 'round-two': 353 },
       medium: { 'round-one': 233, 'round-two': 234 },
       hard: { 'round-one': 233, 'round-two': 233 },
     });
@@ -1324,8 +1324,8 @@ describe('validator CLI boundaries and report publication', () => {
     ], { cwd: resolve('.'), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
     expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
     expect(JSON.parse(readFileSync(report, 'utf8')).validation.summary).toEqual({
-      boardClues: 7_000, categorySets: 1_400, distinctCategoryNames: 1_400,
-      finalClues: 174, easySets: 467, mediumSets: 467, hardSets: 466, builtInPacks: 15,
+      boardClues: 8_200, categorySets: 1_640, distinctCategoryNames: 1_640,
+      finalClues: 174, easySets: 707, mediumSets: 467, hardSets: 466, builtInPacks: 15,
     });
   }, 60_000);
 

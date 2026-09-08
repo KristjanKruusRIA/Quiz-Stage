@@ -2,6 +2,8 @@ import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import Database from 'better-sqlite3';
 
+const EXPANSION_CLUE_ID = 'built-in-history-easy-expansion-001';
+
 const [databasePath, backupPath, fixtureRoot] = process.argv.slice(2);
 if (databasePath === undefined || backupPath === undefined || fixtureRoot === undefined) {
   throw new Error('Usage: verify-upgrade-data.ts <database> <backup> <fixture-user-data>');
@@ -41,6 +43,9 @@ try {
     throw new Error('Packaged application did not migrate the database to schema version 2');
   }
   assertPreserved(database);
+  if (count(database, 'SELECT COUNT(*) FROM clues WHERE id = ?', [EXPANSION_CLUE_ID]) !== 1) {
+    throw new Error(`Expansion clue missing after migration: ${EXPANSION_CLUE_ID}`);
+  }
   database.prepare('SELECT category_set_id FROM category_set_overrides LIMIT 1').all();
 } finally {
   database.close();
@@ -52,6 +57,9 @@ try {
     throw new Error('Migration backup does not preserve schema version 1');
   }
   assertPreserved(backup);
+  if (count(backup, 'SELECT COUNT(*) FROM clues WHERE id = ?', [EXPANSION_CLUE_ID]) !== 0) {
+    throw new Error(`Migration backup unexpectedly contains new clue: ${EXPANSION_CLUE_ID}`);
+  }
 } finally {
   backup.close();
 }

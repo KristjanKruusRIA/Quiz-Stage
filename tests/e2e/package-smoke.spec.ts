@@ -91,6 +91,19 @@ function packagedUserData(executable: string): string {
   return process.env.QUIZ_STAGE_PACKAGED_USER_DATA?.trim() || mkdtempSync(path.join(tmpdir(), 'quiz-stage-package-smoke-'));
 }
 
+function assertExpectedPackagedClue(userData: string): void {
+  const expectedClueId = process.env.QUIZ_STAGE_PACKAGED_EXPECTED_CLUE_ID?.trim();
+  if (expectedClueId === undefined || expectedClueId === '') return;
+
+  const database = openDatabase({ filePath: path.join(userData, 'quiz-stage.sqlite'), readonly: true });
+  try {
+    const clueCount = database.prepare('SELECT COUNT(*) FROM clues WHERE id = ?').pluck().get(expectedClueId);
+    expect(clueCount).toBe(1);
+  } finally {
+    database.close();
+  }
+}
+
 async function availablePort(): Promise<number> {
   return new Promise((resolve, reject) => {
     const server = createServer();
@@ -177,6 +190,7 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     const page = launched.page;
     page.setDefaultTimeout(30_000);
     reportPackagedSmokeProgress('connected');
+    assertExpectedPackagedClue(userData);
     page.on('request', (request) => {
       const url = new URL(request.url());
       if (url.protocol === 'http:' || url.protocol === 'https:') {

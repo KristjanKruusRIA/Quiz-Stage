@@ -19,8 +19,12 @@ import {
   verifyUpgrade,
   type VerifyUpgradeOptions,
 } from '../../../scripts/verify-upgrade';
+import { syncBundledContent } from '../../../src/main/content/bundledContentSync';
+import { openDatabase } from '../../../src/main/persistence/database';
+import { migrateDatabase } from '../../../src/main/persistence/migrations';
 
 const temporaryDirectories: string[] = [];
+const expectedExpansionClueId = 'built-in-history-easy-expansion-001';
 
 function temporaryDirectory(prefix: string): string {
   const directory = mkdtempSync(path.join(tmpdir(), prefix));
@@ -34,6 +38,40 @@ function copiedFixture(): string {
     recursive: true,
   });
   return fixtureRoot;
+}
+
+function migratedFixture(fixtureRoot: string, syncProductionContent: boolean): {
+  backupPath: string;
+  databasePath: string;
+} {
+  const databasePath = path.join(fixtureRoot, 'quiz-stage.sqlite');
+  const backupDirectory = path.join(fixtureRoot, 'backups');
+  const migrationTime = new Date('2026-09-08T12:00:00.000Z');
+  const database = openDatabase({ filePath: databasePath });
+  try {
+    migrateDatabase(database, backupDirectory, { now: () => migrationTime });
+    if (syncProductionContent) {
+      const seedPath = path.resolve('resources', 'content', 'seed.sqlite');
+      syncBundledContent(database, seedPath);
+      syncBundledContent(database, seedPath);
+    }
+  } finally {
+    database.close();
+  }
+  return {
+    backupPath: path.join(backupDirectory, 'quiz-stage.sqlite.20260908T120000000Z.bak'),
+    databasePath,
+  };
+}
+
+function runUpgradeDataCheck(databasePath: string, backupPath: string, fixtureRoot: string) {
+  return spawnSync(process.execPath, [
+    path.resolve('node_modules', 'tsx', 'dist', 'cli.mjs'),
+    path.resolve('scripts', 'verify-upgrade-data.ts'),
+    databasePath,
+    backupPath,
+    fixtureRoot,
+  ], { cwd: process.cwd(), encoding: 'utf8' });
 }
 
 function archiveFile(): string {
@@ -239,6 +277,25 @@ describe('package upgrade verification', () => {
     expect(checked).toBe(true);
     expect(readFileSync(path.join(fixtureRoot, 'quiz-stage.sqlite'))).toEqual(fixtureDatabaseBefore);
     expect(readFileSync(path.join(fixtureRoot, 'media', 'logo.png'))).toEqual(fixtureMediaBefore);
+  });
+
+  it('rejects a migrated database that never synchronized the easy expansion', () => {
+    const fixtureRoot = copiedFixture();
+    const { databasePath, backupPath } = migratedFixture(fixtureRoot, false);
+
+    const result = runUpgradeDataCheck(databasePath, backupPath, fixtureRoot);
+
+    expect(result.status).not.toBe(0);
+    expect(`${result.stdout}${result.stderr}`).toContain(`Expansion clue missing after migration: ${expectedExpansionClueId}`);
+  });
+
+  it('accepts the easy expansion after repeatable bundled-content synchronization', () => {
+    const fixtureRoot = copiedFixture();
+    const { databasePath, backupPath } = migratedFixture(fixtureRoot, true);
+
+    const result = runUpgradeDataCheck(databasePath, backupPath, fixtureRoot);
+
+    expect(result.status).toBe(0);
   });
 
   it('rejects when no migration backup appears within ten seconds', async () => {

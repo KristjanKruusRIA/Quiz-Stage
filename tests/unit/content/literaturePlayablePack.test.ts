@@ -472,8 +472,8 @@ describe('Literature & Language playable pack', () => {
       return row;
     });
 
-    expect(counts).toEqual({ easy: 2_000, 'medium-hard': 4_000, adult: 500, estonia: 500 });
-    expect(corpus).toHaveLength(7_000);
+    expect(counts).toEqual({ easy: 3_200, 'medium-hard': 4_000, adult: 500, estonia: 500 });
+    expect(corpus).toHaveLength(8_200);
     expect(replacements.flatMap((candidate) =>
       findAuthorityCollisions(candidate, corpus).map((collision) =>
         `${candidate.id}:${collision}`))).toEqual([]);

@@ -4,6 +4,8 @@ import path from 'node:path';
 import Database from 'better-sqlite3';
 import { describe, expect, it } from 'vitest';
 
+const expectedExpansionClueId = 'built-in-history-easy-expansion-001';
+
 describe('release workflow', () => {
   it('runs the complete local release gate', () => {
     const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
@@ -14,7 +16,9 @@ describe('release workflow', () => {
     expect(release).toContain('make:installer');
     expect(release).toContain('make:portable');
     expect(release).toContain('release:checksums');
-    expect(release).toContain('smoke-package.ps1 -PackageRoot out/make -Mode Both');
+    expect(release).toContain(
+      `smoke-package.ps1 -PackageRoot out/make -Mode Both -ExpectedClueId ${expectedExpansionClueId}`,
+    );
     expect(release).toContain('verify-upgrade.ps1 -PackageRoot out/make');
   });
 
@@ -71,7 +75,9 @@ describe('release workflow', () => {
     expect(release).toContain('npm run make:platform');
     expect(release).toContain('npm run security:inspect-package');
     expect(release).toContain('scripts/smoke-portable.ts');
-    expect(release).toContain('scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both');
+    expect(release).toContain(
+      `scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both -ExpectedClueId ${expectedExpansionClueId}`,
+    );
     expect(release).toContain('npm run verify-upgrade');
     expect(release).toContain('scripts/write-release-checksums.ts');
     expect(release).toContain('actions/upload-artifact@v4');
@@ -114,6 +120,7 @@ describe('release workflow', () => {
     const smoke = readFileSync('scripts/smoke-package.ps1', 'utf8');
     const upgrade = readFileSync('scripts/verify-upgrade.ps1', 'utf8');
     const upgradeData = readFileSync('scripts/verify-upgrade-data.ts', 'utf8');
+    const fixtureBuilder = readFileSync('scripts/create-upgrade-fixture.ts', 'utf8');
     const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
 
     expect(smoke).toContain("installer\\QuizStageSetup.exe");
@@ -122,6 +129,9 @@ describe('release workflow', () => {
     expect(upgrade).not.toContain('Start-Process');
     expect(scripts['verify-upgrade']).toBe('tsx scripts/verify-upgrade.ts');
     expect(upgradeData).toContain("media', 'logo.png");
+    expect(upgradeData).toContain(expectedExpansionClueId);
+    expect(fixtureBuilder).toContain(expectedExpansionClueId);
+    expect(smoke).toContain('QUIZ_STAGE_PACKAGED_EXPECTED_CLUE_ID');
   });
 
   it('runs packaged smoke only from the post-package smoke gate', () => {
@@ -132,6 +142,7 @@ describe('release workflow', () => {
     expect(packagedSmoke).not.toContain('test.skip(');
     expect(packagedSmoke).not.toContain("process.platform === 'win32'");
     expect(packagedSmoke).toContain("process.env.QUIZ_STAGE_PACKAGED_EXECUTABLE !== undefined");
+    expect(packagedSmoke).toContain('process.env.QUIZ_STAGE_PACKAGED_EXPECTED_CLUE_ID');
     expect(packagedSmoke).toContain('test.setTimeout(300_000);');
     expect(packagedSmoke).not.toContain('600_000');
     expect(packagedSmoke).toContain("const useDomPointerActivation = process.platform === 'darwin' && process.arch === 'x64';");
@@ -251,6 +262,7 @@ try {
       expect(database.prepare('SELECT COUNT(*) FROM settings').pluck().get()).toBe(2);
       expect(database.prepare('SELECT COUNT(*) FROM matches WHERE completed_at IS NOT NULL').pluck().get()).toBe(1);
       expect(database.prepare('SELECT COUNT(*) FROM matches WHERE completed_at IS NULL').pluck().get()).toBe(1);
+      expect(database.prepare('SELECT COUNT(*) FROM clues WHERE id = ?').pluck().get(expectedExpansionClueId)).toBe(0);
     } finally {
       database.close();
     }

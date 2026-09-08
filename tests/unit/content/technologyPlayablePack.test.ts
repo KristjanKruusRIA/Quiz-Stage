@@ -299,14 +299,14 @@ describe('Technology & Inventions playable pack', () => {
       .toBe('993226171982dc26d3139e2b3f1dfcc969f7a15455c346723a314ac89c6d908c');
   });
 
-  it('keeps the protected replacements collision-free across all 7,000 authority rows', () => {
+  it('keeps the protected replacements collision-free across all 8,200 authority rows', () => {
     const { corpus, replacements } = protectedReplacements();
     const counts = Object.fromEntries(['easy', 'medium-hard', 'adult', 'estonia'].map(
       (authority) => [authority, corpus.filter((row) => row.authority === authority).length],
     ));
 
-    expect(counts).toEqual({ easy: 2_000, 'medium-hard': 4_000, adult: 500, estonia: 500 });
-    expect(corpus).toHaveLength(7_000);
+    expect(counts).toEqual({ easy: 3_200, 'medium-hard': 4_000, adult: 500, estonia: 500 });
+    expect(corpus).toHaveLength(8_200);
     expect(replacements).toHaveLength(4);
     expect(replacements.flatMap((replacement) =>
       findAuthorityCollisions(replacement, corpus).map((collision) =>

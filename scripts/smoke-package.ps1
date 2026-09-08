@@ -1,11 +1,15 @@
 Param(
   [string]$PackageRoot = 'out/make',
   [ValidateSet('Portable', 'Installer', 'Both')]
-  [string]$Mode = 'Both'
+  [string]$Mode = 'Both',
+  [Parameter(Mandatory = $true)]
+  [ValidateNotNullOrEmpty()]
+  [string]$ExpectedClueId
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+$env:QUIZ_STAGE_PACKAGED_EXPECTED_CLUE_ID = $ExpectedClueId
 
 function Remove-TemporaryDirectory {
   param(
