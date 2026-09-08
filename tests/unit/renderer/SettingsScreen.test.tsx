@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { I18nProvider } from '../../../src/renderer/i18n';
@@ -25,16 +25,60 @@ describe('SettingsScreen', () => {
   });
 
   it('shows a localized error when appearance settings cannot be saved', async () => {
+    let rejectSave!: (error: Error) => void;
     render(<I18nProvider locale="en"><SettingsScreen
       settings={defaultAudioSettings}
       appearance={{ version: 1, reducedMotion: false, revision: 0 }}
       onSave={vi.fn(async () => undefined)}
-      onSaveAppearance={vi.fn(async () => { throw new Error('write failed'); })}
+      onSaveAppearance={vi.fn(() => new Promise<void>((_resolve, reject) => { rejectSave = reject; }))}
       onBack={vi.fn()}
     /></I18nProvider>);
 
-    await userEvent.click(screen.getByRole('checkbox', { name: 'Reduce motion' }));
+    const reducedMotion = screen.getByRole('checkbox', { name: 'Reduce motion' });
+    await userEvent.click(reducedMotion);
+    expect(reducedMotion).toBeChecked();
+    expect(reducedMotion).toBeDisabled();
+    await act(async () => rejectSave(new Error('write failed')));
     expect(await screen.findByRole('alert')).toHaveTextContent('Settings could not be saved');
+    expect(reducedMotion).not.toBeChecked();
+    expect(reducedMotion).toBeEnabled();
+  });
+
+  it.each(['save-first', 'revision-first'] as const)('updates reduced motion immediately and serializes a %s acknowledgement', async (order) => {
+    let finishFirstSave!: () => void;
+    const saveAppearance = vi.fn()
+      .mockImplementationOnce(() => new Promise<void>((resolve) => { finishFirstSave = resolve; }))
+      .mockResolvedValue(undefined);
+    const renderScreen = (appearance: { version: 1; reducedMotion: boolean; revision: number }) =>
+      <I18nProvider locale="en"><SettingsScreen
+        settings={defaultAudioSettings}
+        appearance={appearance}
+        onSave={vi.fn(async () => undefined)}
+        onSaveAppearance={saveAppearance}
+        onBack={vi.fn()}
+      /></I18nProvider>;
+    const { rerender } = render(renderScreen({ version: 1, reducedMotion: false, revision: 0 }));
+    const reducedMotion = screen.getByRole('checkbox', { name: 'Reduce motion' });
+
+    await userEvent.click(reducedMotion);
+    expect(reducedMotion).toBeChecked();
+    expect(reducedMotion).toBeDisabled();
+    expect(saveAppearance).toHaveBeenLastCalledWith({ version: 1, reducedMotion: true, revision: 0 });
+
+    if (order === 'save-first') {
+      await act(async () => finishFirstSave());
+      expect(reducedMotion).toBeDisabled();
+      rerender(renderScreen({ version: 1, reducedMotion: true, revision: 1 }));
+    } else {
+      rerender(renderScreen({ version: 1, reducedMotion: true, revision: 1 }));
+      expect(reducedMotion).toBeDisabled();
+      await act(async () => finishFirstSave());
+    }
+    await waitFor(() => expect(reducedMotion).toBeEnabled());
+    await userEvent.click(reducedMotion);
+
+    expect(reducedMotion).not.toBeChecked();
+    expect(saveAppearance).toHaveBeenLastCalledWith({ version: 1, reducedMotion: false, revision: 1 });
   });
 
   it('refreshes an untouched draft for a newer authoritative revision but preserves an in-progress edit', async () => {

@@ -22,12 +22,29 @@ const volumeFields = [
 export function SettingsScreen({ settings, appearance = { version: 1, reducedMotion: false, revision: 0 }, settingsRevision = 0, onSave, onSaveAppearance, onBack }: SettingsScreenProps) {
   const { t } = useI18n();
   const [draft, setDraft] = useState({ current: settings, revision: settingsRevision, dirty: false, pending: null as AudioSettings | null });
+  const [appearanceDraft, setAppearanceDraft] = useState({
+    current: appearance,
+    revision: appearance.revision,
+    pendingRevision: null as number | null,
+    saveSettled: false,
+  });
   const [error, setError] = useState(false);
   const saveSequence = useRef(0);
   if (draft.revision !== settingsRevision) {
     setDraft(draft.dirty
       ? { ...draft, revision: settingsRevision, pending: settings }
       : { current: settings, revision: settingsRevision, dirty: false, pending: null });
+  }
+  if (appearanceDraft.revision !== appearance.revision) {
+    const saveConfirmed = appearanceDraft.pendingRevision !== null
+      && appearanceDraft.saveSettled
+      && appearance.revision > appearanceDraft.pendingRevision;
+    setAppearanceDraft({
+      current: appearance,
+      revision: appearance.revision,
+      pendingRevision: saveConfirmed ? null : appearanceDraft.pendingRevision,
+      saveSettled: saveConfirmed ? false : appearanceDraft.saveSettled,
+    });
   }
   const current = draft.current;
   const save = (next: AudioSettings) => {
@@ -40,6 +57,19 @@ export function SettingsScreen({ settings, appearance = { version: 1, reducedMot
     }, () => {
       if (sequence !== saveSequence.current) return;
       setDraft((value) => ({ ...value, current: value.pending ?? value.current, dirty: false, pending: null }));
+      setError(true);
+    });
+  };
+  const saveAppearance = (next: AppearanceSettings) => {
+    if (onSaveAppearance === undefined || appearanceDraft.pendingRevision !== null) return;
+    setAppearanceDraft((value) => ({ ...value, current: next, pendingRevision: next.revision, saveSettled: false }));
+    setError(false);
+    void onSaveAppearance(next).then(() => {
+      setAppearanceDraft((value) => value.pendingRevision !== null && value.revision > value.pendingRevision
+        ? { ...value, pendingRevision: null, saveSettled: false }
+        : { ...value, saveSettled: true });
+    }, () => {
+      setAppearanceDraft({ current: appearance, revision: appearance.revision, pendingRevision: null, saveSettled: false });
       setError(true);
     });
   };
@@ -60,11 +90,9 @@ export function SettingsScreen({ settings, appearance = { version: 1, reducedMot
     </section>
     <section aria-label={t('settings.appearance')}>
       <h2>{t('settings.appearance')}</h2>
-      <label><input type="checkbox" checked={appearance.reducedMotion}
-        onChange={(event) => {
-          setError(false);
-          void onSaveAppearance?.({ ...appearance, reducedMotion: event.target.checked }).catch(() => setError(true));
-        }} />{t('settings.reducedMotion')}</label>
+      <label><input type="checkbox" checked={appearanceDraft.current.reducedMotion}
+        disabled={appearanceDraft.pendingRevision !== null || onSaveAppearance === undefined}
+        onChange={(event) => saveAppearance({ ...appearanceDraft.current, reducedMotion: event.target.checked })} />{t('settings.reducedMotion')}</label>
     </section>
     {error ? <p role="alert">{t('settings.saveError')}</p> : null}
     <button type="button" onClick={onBack}>{t('common.back')}</button>
