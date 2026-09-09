@@ -30,8 +30,6 @@ Use the canonical command documented in the production content plan, including g
 - **Resolved**: 2026-08-28T11:40:41.2736620+03:00
 - **Notes**: Located the canonical full command in the repository plans before retrying.
 
----
-
 ## [ERR-20260901-PSRANGE] PowerShell Git range interpolation
 
 **Logged**: 2026-09-01T09:00:00+03:00
@@ -2354,6 +2352,38 @@ Enumerate matching files with `Get-ChildItem` or search the containing directory
 ### Resolution
 - **Resolved**: 2026-09-01T09:15:00+03:00
 - **Notes**: Re-ran the query with exact ID `built-in-politics-economics-society-set-042` and obtained the expected eight arrays.
+
+---
+
+## [ERR-20260908-PACK11-SPAWN-PROMPTFILTER] Pack 11 implementation spawn rejected before execution
+
+**Logged**: 2026-09-08T00:00:00+03:00  
+**Priority**: low  
+**Status**: resolved  
+**Area**: orchestration
+
+### Summary
+The first `pack11_rebind_implement` spawn was rejected by the model prompt filter before execution.
+
+### Resolution
+- **Resolved**: 2026-09-08T00:00:00+03:00
+- **Notes**: Authoritative Git status confirmed no task edit resulted; a shorter file-pointer-only follow-up prompt resumed the task successfully.
+
+---
+
+## [ERR-20260908-REPLTYPO] Malformed orchestration input rejected before execution
+
+**Logged**: 2026-09-08T00:00:00+03:00  
+**Priority**: low  
+**Status**: resolved  
+**Area**: orchestration
+
+### Summary
+A `collaboration.list_agents` call included an invalid placeholder field and was rejected during schema parsing before execution.
+
+### Resolution
+- **Resolved**: 2026-09-08T00:00:00+03:00
+- **Notes**: No repository or agent state changed.
 
 ---
 ## [ERR-20260908-001] vitest-nested-stderr-source-map
