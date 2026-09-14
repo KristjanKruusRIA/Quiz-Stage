@@ -7,28 +7,138 @@ permissions:
   contents: read
 
 jobs:
-  quality:
-    runs-on: windows-2022
+  package:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            target: windows-x64
+            artifactName: quiz-stage-windows-x64
+          - runner: macos-15
+            target: macos-arm64
+            artifactName: quiz-stage-macos-arm64
+          - runner: ubuntu-24.04
+            target: ubuntu-x64
+            artifactName: quiz-stage-ubuntu-x64
+    runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           ref: d15c354f033720e7fb65ca4feace85eef40e447c
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
           cache: npm
       - run: npm ci
-      - run: npx playwright install chromium
-      - run: npm run verify:content:cached
-      - run: npm run test:e2e
-      - name: Upload test artifacts on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-artifacts
-          path: |
-            test-results/
-            tests/**/artifacts/
-          if-no-files-found: ignore
 
+      - name: Install Ubuntu packaging dependencies
+        if: matrix.target == 'ubuntu-x64'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fakeroot dpkg zip unzip
+      - name: Install Playwright browser
+        if: matrix.target != 'ubuntu-x64'
+        run: npx playwright install chromium
+      - name: Install Playwright browser and Ubuntu dependencies
+        if: matrix.target == 'ubuntu-x64'
+        run: npx playwright install --with-deps chromium
+
+      - name: Build native packages
+        if: matrix.target != 'ubuntu-x64'
+        run: npm run make:platform -- --target ${{ matrix.target }}
+      - name: Build Ubuntu packages under Xvfb
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npm run make:platform -- --target ${{ matrix.target }}
+      - name: Load synchronized smoke test after packaging
+        shell: pwsh
+        run: |
+          git fetch origin $env:GITHUB_SHA
+          if ($LASTEXITCODE -ne 0) { throw 'Could not fetch smoke test revision' }
+          git restore --source FETCH_HEAD -- tests/e2e/package-smoke.spec.ts
+          if ($LASTEXITCODE -ne 0) { throw 'Could not load smoke test revision' }
+      - name: Inspect native package
+        run: npm run security:inspect-package -- --target ${{ matrix.target }}
+
+      - name: Verify macOS arm64 executable architecture
+        if: matrix.target == 'macos-arm64'
+        run: file "out/Quiz Stage-darwin-arm64/Quiz Stage.app/Contents/MacOS/Quiz Stage" | grep -F arm64
+      - name: Verify macOS x64 executable architecture
+        if: matrix.target == 'macos-x64'
+        run: file "out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/MacOS/Quiz Stage" | grep -F x86_64
+
+      - name: Smoke Windows installer and portable packages
+        if: matrix.target == 'windows-x64'
+        run: pwsh -NoProfile -File scripts/smoke-package.ps1 -PackageRoot out/make -Mode Both -ExpectedClueId built-in-history-easy-expansion-001
+      - name: Smoke macOS arm64 portable package
+        if: matrix.target == 'macos-arm64'
+        run: npx tsx scripts/smoke-portable.ts --target macos-arm64 --archive out/make/portable/QuizStage-darwin-arm64.zip
+      - name: Smoke macOS x64 portable package
+        if: matrix.target == 'macos-x64'
+        run: npx tsx scripts/smoke-portable.ts --target macos-x64 --archive out/make/portable/QuizStage-darwin-x64.zip
+      - name: Smoke Ubuntu portable package
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npx tsx scripts/smoke-portable.ts --target ubuntu-x64 --archive out/make/portable/QuizStage-linux-x64.zip
+      - name: Install, smoke, and remove Ubuntu DEB
+        if: matrix.target == 'ubuntu-x64'
+        shell: bash
+        run: |
+          set -euo pipefail
+          deb_path=out/make/installer/quiz-stage_0.1.0_amd64.deb
+          package_name="$(dpkg-deb -f "$deb_path" Package)"
+          user_data="$(mktemp -d "${RUNNER_TEMP}/quiz-stage-package-smoke-XXXXXX")"
+          cleanup() {
+            sudo dpkg --remove "$package_name" >/dev/null 2>&1 || true
+            rm -rf -- "$user_data"
+          }
+          trap cleanup EXIT
+          sudo apt-get install -y "./$deb_path"
+          test -x /usr/bin/quiz-stage
+          QUIZ_STAGE_PACKAGED_EXECUTABLE=/usr/bin/quiz-stage \
+            QUIZ_STAGE_PACKAGED_USER_DATA="$user_data" \
+            xvfb-run -a npx playwright test tests/e2e/package-smoke.spec.ts
+          sudo dpkg --remove "$package_name"
+          test ! -e /usr/bin/quiz-stage
+          rm -rf -- "$user_data"
+          trap - EXIT
+
+      - name: Verify Windows package upgrade
+        if: matrix.target == 'windows-x64'
+        run: npm run verify-upgrade -- -- --target windows-x64 --archive out/make/portable/QuizStage-win32-x64.zip
+      - name: Verify macOS arm64 package upgrade
+        if: matrix.target == 'macos-arm64'
+        run: npm run verify-upgrade -- -- --target macos-arm64 --archive out/make/portable/QuizStage-darwin-arm64.zip
+      - name: Verify macOS x64 package upgrade
+        if: matrix.target == 'macos-x64'
+        run: npm run verify-upgrade -- -- --target macos-x64 --archive out/make/portable/QuizStage-darwin-x64.zip
+      - name: Verify Ubuntu package upgrade
+        if: matrix.target == 'ubuntu-x64'
+        run: xvfb-run -a npm run verify-upgrade -- -- --target ubuntu-x64 --archive out/make/portable/QuizStage-linux-x64.zip
+
+      - name: Generate target checksums
+        run: npx tsx scripts/write-release-checksums.ts --target ${{ matrix.target }} --package-root out/make
+
+      - name: Upload verified packages to draft release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TARGET: ${{ matrix.target }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $release = gh release view v0.1.0 --json isDraft,targetCommitish | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0 -or -not $release.isDraft -or $release.targetCommitish -ne 'd15c354f033720e7fb65ca4feace85eef40e447c') {
+            throw 'Expected a draft release targeting the verified source commit'
+          }
+          $checksumPath = "out/make/release-checksums-$env:RELEASE_TARGET.txt"
+          $assets = @($checksumPath)
+          foreach ($line in Get-Content -LiteralPath $checksumPath) {
+            if ($line -notmatch '^([a-fA-F0-9]{64})\s+(.+)$') { throw "Invalid checksum line: $line" }
+            $expectedHash = $Matches[1]
+            $assetPath = Join-Path out/make $Matches[2]
+            if ((Get-FileHash -LiteralPath $assetPath -Algorithm SHA256).Hash -ne $expectedHash) { throw "Checksum mismatch: $assetPath" }
+            $assets += $assetPath
+          }
+          gh release upload v0.1.0 @assets
+          if ($LASTEXITCODE -ne 0) { throw 'Release asset upload failed' }

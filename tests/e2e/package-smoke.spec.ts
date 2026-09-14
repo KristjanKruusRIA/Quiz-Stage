@@ -300,7 +300,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
     await expect(page.getByRole('timer')).toHaveText('0', { timeout: 35_000 });
     while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
-      await activateControl(page.getByRole('button', { name: /Reveal .* correct/ }).first());
+      const reveal = page.getByRole('button', { name: /Reveal .* correct/ }).first();
+      const revealName = await reveal.innerText();
+      await activateControl(reveal);
+      await expect(page.getByRole('button', { name: revealName, exact: true })).toHaveCount(0);
     }
 
     expect(await page.evaluate(() =>
