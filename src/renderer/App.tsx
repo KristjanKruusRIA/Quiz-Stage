@@ -52,6 +52,7 @@ export default function App({ api }: AppProps) {
   const [publicState, setPublicState] = useState<{
     view: PublicGameView;
     presentation: PublicPresentation;
+    topicReveal?: import('../shared/ipc/contracts').TopicReveal;
   } | null>(null);
   const [locale, setLocale] = useState<Language>('en');
   const [resumableAvailability, setResumableAvailability] = useState<{
@@ -100,7 +101,7 @@ export default function App({ api }: AppProps) {
 
   useEffect(() => {
     if (desktopApi.surface !== 'public' || appearanceState.status === 'loading') return;
-    return desktopApi.subscribeToState((view, presentation) => setPublicState({ view, presentation }));
+    return desktopApi.subscribeToState((view, presentation, topicReveal) => setPublicState({ view, presentation, topicReveal }));
   }, [appearanceState.status, desktopApi]);
 
   useEffect(() => {
@@ -205,7 +206,7 @@ export default function App({ api }: AppProps) {
     const publicLocale = publicState?.view.language ?? 'en';
     return <I18nProvider locale={publicLocale}><div data-reduced-motion={effectiveReducedMotion}>{publicState === null
       ? <main className="waiting-screen" role="status">{translate(publicLocale, 'app.waitingHost')}</main>
-      : <GameSurface surface="public" view={publicState.view} presentation={publicState.presentation} />}</div></I18nProvider>;
+      : <GameSurface surface="public" view={publicState.view} presentation={publicState.presentation} topicReveal={publicState.topicReveal} />}</div></I18nProvider>;
   }
   let content: React.ReactNode;
   if (route === 'setup') {

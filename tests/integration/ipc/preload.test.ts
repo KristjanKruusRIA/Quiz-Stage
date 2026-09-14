@@ -131,7 +131,7 @@ describe('preload quizStage surface', () => {
     wrapped?.({}, { revision: 1, view: publicView, presentation: 'round-intro' });
     unsubscribe();
 
-    expect(listener).toHaveBeenCalledWith(publicView, 'round-intro');
+    expect(listener).toHaveBeenCalledWith(publicView, 'round-intro', undefined);
     expect(ipc.removeListener).toHaveBeenCalledWith(IPC_CHANNELS.publicState, wrapped);
   });
 

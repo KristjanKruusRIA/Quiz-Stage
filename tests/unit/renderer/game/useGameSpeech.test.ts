@@ -47,7 +47,7 @@ function fakeSpeech() {
 function controller(
   speech: SpeechSynthesisLike | null,
   dispatch = vi.fn(async () => undefined),
-  options: { voiceWaitMs?: number; duckMusicFor?: (durationMs: number) => (() => void) | undefined } = {},
+  options: { onTopicReveal?: (reveal: import('../../../../src/shared/ipc/contracts').TopicReveal) => void; voiceWaitMs?: number; duckMusicFor?: (durationMs: number) => (() => void) | undefined } = {},
 ) {
   const created: SpeechUtteranceLike[] = [];
   const result = new SpeechController({
@@ -58,6 +58,7 @@ function controller(
       created.push(utterance);
       return utterance;
     },
+    onTopicReveal: options.onTopicReveal,
     voiceWaitMs: options.voiceWaitMs,
     duckMusicFor: options.duckMusicFor,
   });
@@ -65,20 +66,77 @@ function controller(
 }
 
 describe('SpeechController', () => {
-  it('speaks English board categories once for each fresh board', () => {
-    const fake = fakeSpeech();
-    const { result, created } = controller(fake.speech);
-    const first = view({ phase: 'round-one-board' });
+  it('reveals each topic only after the preceding narration ends', () => {
+    vi.useFakeTimers();
+    try {
+      const fake = fakeSpeech();
+      const { result, created } = controller(fake.speech);
+      const first = view();
+      result.update(first, { speechEnabled: true });
+      expect(created).toHaveLength(0);
+      vi.advanceTimersByTime(5_999);
+      expect(created).toHaveLength(0);
+      vi.advanceTimersByTime(1);
+      expect(created.map((item) => item.text)).toEqual(['Category 1']);
+      vi.advanceTimersByTime(5_000);
+      expect(created).toHaveLength(1);
+      created[0]!.onend?.();
+      expect(created.map((item) => item.text)).toEqual(['Category 1', 'Category 2']);
+      created[0]!.onend?.();
+      expect(created).toHaveLength(2);
+      result.update({ ...first, state: { ...first.state, eventSequence: 1 } }, { speechEnabled: true });
+      expect(created).toHaveLength(2);
+      result.dispose();
+    } finally { vi.useRealTimers(); }
+  });
 
-    result.update(first, { speechEnabled: true });
-    result.update({ ...first, state: { ...first.state, eventSequence: 1 } }, { speechEnabled: true });
-    result.update(view({ phase: 'round-two-board' }), { speechEnabled: true });
+  it.each(['disabled', 'missing voice', 'speech error', 'muted'] as const)('uses a reading delay when narration is %s', (mode) => {
+    vi.useFakeTimers();
+    try {
+      const fake = fakeSpeech();
+      const counts: number[] = [];
+      const { result, created } = controller(mode === 'missing voice' ? null : fake.speech, undefined, {
+        onTopicReveal: (reveal) => counts.push(reveal.count),
+      });
+      result.update(view(), { speechEnabled: mode !== 'disabled', muted: mode === 'muted' });
+      expect(counts).toEqual([0]);
+      vi.advanceTimersByTime(6_000);
+      expect(counts).toEqual([0, 1]);
+      if (mode === 'speech error') created[0]!.onerror?.();
+      vi.advanceTimersByTime(2_999);
+      expect(counts).toEqual([0, 1]);
+      vi.advanceTimersByTime(1);
+      expect(counts).toEqual([0, 1, 2]);
+      result.dispose();
+      vi.advanceTimersByTime(30_000);
+      expect(counts).toEqual([0, 1, 2]);
+    } finally { vi.useRealTimers(); }
+  });
 
-    expect(fake.speech.speak).toHaveBeenCalledTimes(2);
-    expect(created.map((item) => item.text)).toEqual([
-      'Category 1. Category 2. Category 3. Category 4. Category 5. Category 6.',
-      'Category 1. Category 2. Category 3. Category 4. Category 5. Category 6.',
-    ]);
+  it('gives a long topic extra reading time and cancels stale speech on leaving the board', () => {
+    vi.useFakeTimers();
+    try {
+      const fake = fakeSpeech();
+      const counts: number[] = [];
+      const { result, created } = controller(fake.speech, undefined, { onTopicReveal: (reveal) => counts.push(reveal.count) });
+      const current = view();
+      current.state.boards[0].categories[0].name.en = 'One two three four five six seven eight nine ten';
+      result.update(current, { speechEnabled: false });
+      vi.advanceTimersByTime(6_000);
+      vi.advanceTimersByTime(5_999);
+      expect(counts).toEqual([0, 1]);
+      vi.advanceTimersByTime(1);
+      expect(counts).toEqual([0, 1, 2]);
+      result.update(current, { speechEnabled: true });
+      vi.advanceTimersByTime(3_000);
+      const oldSpeech = created[0];
+      result.update(view({ phase: 'complete' }), { speechEnabled: true });
+      const countAfterLeaving = counts.length;
+      oldSpeech?.onend?.();
+      vi.advanceTimersByTime(30_000);
+      expect(counts).toHaveLength(countAfterLeaving);
+      result.dispose();
+    } finally { vi.useRealTimers(); }
   });
 
   it('speaks only the public-safe English prompt when the authoritative timer is idle', async () => {
@@ -305,7 +363,6 @@ describe('SpeechController', () => {
     });
 
     result.update(board, { speechEnabled: true });
-    created[0]?.onend?.();
     result.update(first, { speechEnabled: true });
     const cancelCount = vi.mocked(fake.speech.cancel).mock.calls.length;
     result.update(board, { speechEnabled: true });
@@ -313,10 +370,10 @@ describe('SpeechController', () => {
     expect(dispatch).not.toHaveBeenCalled();
 
     result.update(second, { speechEnabled: true });
-    expect(created).toHaveLength(3);
-    created[1]?.onend?.();
+    expect(created).toHaveLength(2);
+    created[0]?.onend?.();
     expect(dispatch).not.toHaveBeenCalled();
-    created[2]?.onend?.();
+    created[1]?.onend?.();
     expect(dispatch).toHaveBeenCalledWith({
       type: 'StartNarratedClueTimer', clueId: 'round-one-clue-1-2', narrationSequence: 3,
     });

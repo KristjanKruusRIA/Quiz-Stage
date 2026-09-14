@@ -111,7 +111,7 @@ describe('main IPC registration', () => {
     expect(publicWindow.webContents.send).toHaveBeenCalledTimes(1);
 
     dispose();
-    expect(removed).toEqual([IPC_CHANNELS.dispatch]);
+    expect(removed).toEqual([IPC_CHANNELS.dispatch, IPC_CHANNELS.topicReveal]);
     expect(removedReady).toEqual([IPC_CHANNELS.hostReady, IPC_CHANNELS.publicReady]);
     expect(unsubscribers[0]).toHaveBeenCalledOnce();
     expect(unsubscribers[1]).toHaveBeenCalledOnce();

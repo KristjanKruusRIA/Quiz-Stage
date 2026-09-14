@@ -370,10 +370,18 @@ export const hostStateUpdateSchema = z.strictObject({
 
 export const publicPresentationSchema = z.enum(['round-intro', 'final-intro']).nullable();
 
+export const topicRevealSchema = z.strictObject({
+  matchId: z.string().min(1),
+  boardId: z.string().min(1),
+  count: z.number().int().min(0).max(6),
+});
+export type TopicReveal = z.infer<typeof topicRevealSchema>;
+
 export const publicStateUpdateSchema = z.strictObject({
   revision: z.number().int().nonnegative(),
   view: publicGameViewSchema,
   presentation: publicPresentationSchema,
+  topicReveal: topicRevealSchema.optional(),
 });
 
 export const contentAvailabilitySchema = z.discriminatedUnion('ok', [
@@ -486,6 +494,7 @@ interface AppearanceSubscriptionApi {
 
 export interface HostQuizStageApi extends AppearanceSubscriptionApi {
   subscribeToState(listener: (view: HostGameView) => void): () => void;
+  publishTopicReveal?(reveal: TopicReveal): Promise<void>;
   dispatch(command: GameCommand): Promise<HostGameView>;
   startMatch(config: GameConfig): Promise<HostGameView>;
   configureMatch(config: GameConfig): Promise<MatchConfigurationPreview>;
@@ -516,7 +525,7 @@ export interface HostQuizStageApi extends AppearanceSubscriptionApi {
 }
 
 export interface PublicQuizStageApi extends AppearanceSubscriptionApi {
-  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation) => void): () => void;
+  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation, topicReveal?: TopicReveal) => void): () => void;
 }
 export type QuizStageApi = HostQuizStageApi | PublicQuizStageApi;
 

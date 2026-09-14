@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import type { TopicReveal } from '../../../shared/ipc/contracts';
 import type { HostGameView } from '../../../shared/game/types';
 import { toPublicGameView } from '../../../shared/game/views';
 
@@ -44,6 +45,7 @@ export type SpeechGameView = HostGameView;
 
 interface SpeechControllerOptions {
   dispatch: NarratedClueTimerDispatch;
+  onTopicReveal?: (reveal: TopicReveal) => void;
   speechSynthesis?: SpeechSynthesisLike | null;
   createUtterance?: (text: string) => SpeechUtteranceLike;
   setTimeout?: (callback: () => void, delay: number) => unknown;
@@ -94,6 +96,10 @@ function isLocalEnglish(voice: SpeechVoiceLike): boolean {
   return voice.localService === true && /^en(?:[-_]|$)/i.test(voice.lang);
 }
 
+export function topicReadingMs(text: string): number {
+  return Math.max(3_000, text.trim().split(/\s+/).length * 500 + 1_000);
+}
+
 function estimateDurationMs(text: string): number {
   return Math.max(1_000, Math.ceil(text.trim().length / 8 * 1_000));
 }
@@ -122,11 +128,6 @@ function publicNarration(view: SpeechGameView): Narration | null {
   const state = view.state;
   const publicView = toPublicGameView(state);
   const matchKey = state.id;
-
-  if (BOARD_PHASES.has(state.phase) && publicView.board !== null) {
-    const text = publicView.board.categories.map((category) => category.name.trim()).filter(Boolean).join('. ');
-    if (text !== '') return { kind: 'board', key: `${matchKey}:${publicView.board.id}`, text: `${text}.` };
-  }
 
   const finalCategory = publicView.final?.category;
   if (state.phase === 'final-category' && finalCategory !== undefined && finalCategory.trim() !== '') {
@@ -164,6 +165,8 @@ export class SpeechController {
   private timerStartRetry: { key: string; handle: unknown } | null = null;
   private currentIdleClueKey: string | null = null;
   private volume = 1;
+  private onTopicReveal?: (reveal: TopicReveal) => void;
+  private boardSequence: { key: string; matchId: string; boardId: string; names: string[]; count: number; enabled: boolean; timer: unknown } | null = null;
   private generation = 0;
   private readonly announced = new Set<string>();
 
@@ -175,10 +178,62 @@ export class SpeechController {
     this.voiceWaitMs = options.voiceWaitMs ?? DEFAULT_VOICE_WAIT_MS;
     this.dispatch = options.dispatch;
     this.duckMusicFor = options.duckMusicFor;
+    this.onTopicReveal = options.onTopicReveal;
   }
 
   setDuckMusicFor(callback?: (durationMs: number) => (() => void) | undefined): void {
     this.duckMusicFor = callback;
+  }
+
+  setOnTopicReveal(callback?: (reveal: TopicReveal) => void): void {
+    this.onTopicReveal = callback;
+  }
+
+  private updateBoard(view: SpeechGameView, enabled: boolean): boolean {
+    const board = BOARD_PHASES.has(view.state.phase) ? toPublicGameView(view.state).board : null;
+    const key = board === null ? null : `${view.state.id}:${board.id}`;
+    if (this.boardSequence !== null && this.boardSequence.key !== key) {
+      this.clearSchedule(this.boardSequence.timer);
+      this.boardSequence.count = this.boardSequence.names.length;
+      this.publishBoard();
+      this.boardSequence = null;
+      this.cancelActive(false);
+    }
+    if (board === null || !BOARD_PHASES.has(view.state.phase)) return false;
+    if (this.boardSequence !== null) {
+      const sequence = this.boardSequence;
+      sequence.enabled = enabled;
+      if (!enabled && this.pending?.narration.kind === 'board') {
+        this.cancelActive(false);
+        sequence.timer = this.schedule(() => this.advanceBoard(), topicReadingMs(sequence.names[sequence.count - 1]));
+      }
+      return true;
+    }
+    if (this.pending?.narration.kind !== 'board') this.cancelActive(false);
+    if (this.announced.has(key!)) return true;
+    this.announced.add(key!);
+    if (view.recovery !== null || board.categories.some((category) => category.clues.some((clue) => clue.selected))) return true;
+    this.cancelActive(false);
+    this.boardSequence = { key: key!, matchId: view.state.id, boardId: board.id,
+      names: board.categories.map((category) => category.name), count: 0, enabled, timer: null };
+    this.publishBoard();
+    this.boardSequence.timer = this.schedule(() => this.advanceBoard(), 6_000);
+    return true;
+  }
+
+  private publishBoard(): void {
+    const sequence = this.boardSequence;
+    if (sequence !== null) this.onTopicReveal?.({ matchId: sequence.matchId, boardId: sequence.boardId, count: sequence.count });
+  }
+
+  private advanceBoard(): void {
+    const sequence = this.boardSequence;
+    if (sequence === null || sequence.count >= sequence.names.length) return;
+    sequence.count += 1;
+    this.publishBoard();
+    const text = sequence.names[sequence.count - 1];
+    if (sequence.enabled) this.begin({ kind: 'board', key: `${sequence.key}:${sequence.count}`, text });
+    else sequence.timer = this.schedule(() => this.advanceBoard(), topicReadingMs(text));
   }
 
   update(view: SpeechGameView, settings: SpeechSettings): void {
@@ -191,6 +246,7 @@ export class SpeechController {
       this.clearSchedule(this.timerStartRetry.handle);
       this.timerStartRetry = null;
     }
+    if (this.updateBoard(view, enabled)) return;
     if (!enabled) {
       const cancellingCurrentClue = this.pending?.narration.kind === 'clue'
         && this.pending.narration.key === idleClue?.key;
@@ -212,6 +268,8 @@ export class SpeechController {
   }
 
   dispose(): void {
+    if (this.boardSequence !== null) this.clearSchedule(this.boardSequence.timer);
+    this.boardSequence = null;
     this.generation += 1;
     this.currentIdleClueKey = null;
     if (this.timerStartRetry !== null) this.clearSchedule(this.timerStartRetry.handle);
@@ -272,7 +330,7 @@ export class SpeechController {
       utterance.lang = voice.lang;
       utterance.voice = voice;
       utterance.volume = this.volume;
-      utterance.onend = () => this.finish(pending, pending.narration.kind === 'clue');
+      utterance.onend = () => this.finish(pending, pending.narration.kind === 'clue', true);
       utterance.onerror = () => this.finish(pending, pending.narration.kind === 'clue');
       pending.releaseDuck = this.duckMusicFor?.(estimateDurationMs(pending.narration.text)) ?? null;
       speech.speak(utterance);
@@ -290,11 +348,15 @@ export class SpeechController {
     }
   }
 
-  private finish(pending: PendingNarration, startTimer: boolean): void {
+  private finish(pending: PendingNarration, startTimer: boolean, spoken = false): void {
     if (this.pending !== pending || pending.completed || pending.generation !== this.generation) return;
     pending.completed = true;
     this.pending = null;
     this.clearPending(pending);
+    if (pending.narration.kind === 'board' && this.boardSequence !== null) {
+      if (spoken) this.advanceBoard();
+      else this.boardSequence.timer = this.schedule(() => this.advanceBoard(), topicReadingMs(pending.narration.text));
+    }
     if (startTimer && pending.narration.kind === 'clue') {
       this.startClueTimer(pending.narration);
     }
@@ -381,6 +443,7 @@ export function useGameSpeech(
   settings: SpeechSettings,
   dispatch: NarratedClueTimerDispatch,
   duckMusicFor?: (durationMs: number) => (() => void) | undefined,
+  onTopicReveal?: (reveal: TopicReveal) => void,
 ): void {
   const controller = useRef<SpeechController | null>(null);
   const dispatchRef = useRef(dispatch);
@@ -388,6 +451,7 @@ export function useGameSpeech(
   controller.current ??= new SpeechController({ dispatch: (command) => dispatchRef.current(command), duckMusicFor });
   const instance = controller.current!;
   instance.setDuckMusicFor(duckMusicFor);
+  instance.setOnTopicReveal(onTopicReveal);
   useEffect(() => {
     instance.update(view, settings);
   }, [settings, view]);

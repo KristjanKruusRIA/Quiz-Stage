@@ -33,7 +33,7 @@ export function PublicBoard({ view, onSelect, revealedCategoryCount }: PublicBoa
           return <div role="gridcell" key={clue.id}>
             <button
               type="button"
-              disabled={clue.selected || onSelect === undefined}
+              disabled={clue.selected || onSelect === undefined || (revealedCategoryCount !== undefined && revealedCategoryCount < board.categories.length)}
               aria-label={categoryRevealed
                 ? t('game.tileLabel', { category: category.name, value: formatNumber(view.language, clue.value) })
                 : formatNumber(view.language, clue.value)}

@@ -1,4 +1,5 @@
 export const IPC_CHANNELS = {
+  topicReveal: 'quiz-stage:topic-reveal',
   dispatch: 'quiz-stage:dispatch',
   startMatch: 'quiz-stage:start-match',
   configureMatch: 'quiz-stage:configure-match',

@@ -10,12 +10,12 @@ import { PublicRoundIntro } from './PublicRoundIntro';
 import { useEffect, useState } from 'react';
 import { createTranslator, formatNumber } from '../../i18n';
 import type { AudioAssetKey, AudioSettings } from '../../../shared/media/contracts';
-import type { PublicPresentation } from '../../../shared/ipc/contracts';
+import type { PublicPresentation, TopicReveal } from '../../../shared/ipc/contracts';
 import { useGameAudio } from './useGameAudio';
-import { useGameSpeech } from './useGameSpeech';
+import { topicReadingMs, useGameSpeech } from './useGameSpeech';
 
 type GameSurfaceProps =
-  | { surface: 'public'; view: PublicGameView; now?: () => number; presentation?: PublicPresentation }
+  | { surface: 'public'; view: PublicGameView; now?: () => number; presentation?: PublicPresentation; topicReveal?: TopicReveal }
   | { surface: 'host'; view: HostGameView; api: HostDesktopApi; audioSettings?: AudioSettings; now?: () => number; onMute?: () => void; onAudioWarning?: (key: AudioAssetKey) => void; onHome?: () => void; onSaveAndQuit?: () => Promise<void> };
 
 function presentation(
@@ -51,8 +51,7 @@ export function GameSurface(props: GameSurfaceProps) {
   return <HostGameSurface {...props} />;
 }
 
-const ROUND_INTRO_MS = 3_000;
-const CATEGORY_REVEAL_MS = 350;
+const ROUND_INTRO_MS = 6_000;
 
 function PublicGameSurface(props: Extract<GameSurfaceProps, { surface: 'public' }>) {
   const categoryCount = props.view.board?.categories.length ?? 0;
@@ -61,30 +60,31 @@ function PublicGameSurface(props: Extract<GameSurfaceProps, { surface: 'public' 
   );
   const [introPending, setIntroPending] = useState(stageBoard);
   const [revealedCategoryCount, setRevealedCategoryCount] = useState(stageBoard ? 0 : categoryCount);
-  const showIntro = introPending;
+  const syncedCount = props.topicReveal?.boardId === props.view.board?.id ? props.topicReveal?.count : undefined;
+  const showIntro = syncedCount === undefined ? introPending : syncedCount === 0;
 
   useEffect(() => {
-    if (!showIntro) return;
+    if (!showIntro || syncedCount !== undefined) return;
     const timeout = window.setTimeout(() => {
       setIntroPending(false);
       setRevealedCategoryCount(Math.min(1, categoryCount));
     }, ROUND_INTRO_MS);
     return () => window.clearTimeout(timeout);
-  }, [categoryCount, showIntro]);
+  }, [categoryCount, showIntro, syncedCount]);
 
   useEffect(() => {
-    if (showIntro || revealedCategoryCount >= categoryCount) return;
+    if (syncedCount !== undefined || showIntro || revealedCategoryCount >= categoryCount) return;
     const timeout = window.setTimeout(() => {
       setRevealedCategoryCount((count) => Math.min(count + 1, categoryCount));
-    }, CATEGORY_REVEAL_MS);
+    }, topicReadingMs(props.view.board?.categories[revealedCategoryCount - 1]?.name ?? ''));
     return () => window.clearTimeout(timeout);
-  }, [categoryCount, revealedCategoryCount, showIntro]);
+  }, [categoryCount, revealedCategoryCount, showIntro, syncedCount, props.view.board]);
 
   if (showIntro) return <main className="game-surface public-surface"><PublicRoundIntro view={props.view} /></main>;
   return <main className="game-surface public-surface">
     {scores(props.view, props.surface)}
     {presentation(props.view, props.surface, props.now, undefined,
-      stageBoard ? revealedCategoryCount : undefined, props.presentation)}
+      syncedCount ?? (stageBoard ? revealedCategoryCount : undefined), props.presentation)}
   </main>;
 }
 
@@ -99,6 +99,13 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
   let selectingThisRender = selectionPending;
 
   const publicView = toPublicGameView(props.view.state);
+  const [topicReveal, setTopicReveal] = useState<TopicReveal>();
+  const revealedCount = topicReveal?.matchId === props.view.state.id && topicReveal?.boardId === publicView.board?.id
+    ? topicReveal?.count : undefined;
+  const onTopicReveal = (reveal: TopicReveal) => {
+    setTopicReveal(reveal);
+    void props.api.publishTopicReveal?.(reveal).catch(() => { /* a reconnected display gets the next reveal */ });
+  };
   const tileMap = new Map<string, string>();
   const board = props.view.state.boards.find((candidate) => candidate.round === publicView.board?.round);
   if (publicView.board !== null && board !== undefined) publicView.board.categories.forEach((category, categoryIndex) => {
@@ -126,32 +133,33 @@ function HostGameSurface(props: Extract<GameSurfaceProps, { surface: 'host' }>) 
   };
   return <main className="game-surface host-surface">
     {props.audioSettings === undefined
-      ? <GameSpeechLifecycle view={props.view} api={props.api} />
+      ? <GameSpeechLifecycle view={props.view} api={props.api} onTopicReveal={onTopicReveal} />
       : <GameMediaLifecycle view={props.view} api={props.api} settings={props.audioSettings}
-        onWarning={props.onAudioWarning} />}
+        onWarning={props.onAudioWarning} onTopicReveal={onTopicReveal} />}
     <section className="public-presentation">
       {selectionError ? <p role="alert">{createTranslator(publicView.language)('game.selectionError')}</p> : null}
-      {scores(publicView, props.surface)}{presentation(publicView, props.surface, props.now, selectionPending ? undefined : onSelect)}
+      {scores(publicView, props.surface)}{presentation(publicView, props.surface, props.now, selectionPending ? undefined : onSelect, revealedCount)}
     </section>
     <HostConsole view={props.view} api={props.api} now={props.now} onMute={props.onMute} onSaveAndQuit={props.onSaveAndQuit} />
     {props.onHome === undefined ? null : <button type="button" onClick={props.onHome}>{createTranslator(publicView.language)('common.backHome')}</button>}
   </main>;
 }
 
-function GameMediaLifecycle({ view, api, settings, onWarning }: {
+function GameMediaLifecycle({ view, api, settings, onWarning, onTopicReveal }: {
   view: HostGameView;
   api: HostDesktopApi;
   settings: AudioSettings;
   onWarning?: (key: AudioAssetKey) => void;
+  onTopicReveal: (reveal: TopicReveal) => void;
 }) {
   const { duckMusicFor } = useGameAudio(view, settings, onWarning);
-  useGameSpeech(view, settings, api.dispatch, duckMusicFor);
+  useGameSpeech(view, settings, api.dispatch, duckMusicFor, onTopicReveal);
   return null;
 }
 
 const unavailableSpeechSettings = { speechEnabled: false, muted: true } as const;
 
-function GameSpeechLifecycle({ view, api }: { view: HostGameView; api: HostDesktopApi }) {
-  useGameSpeech(view, unavailableSpeechSettings, api.dispatch);
+function GameSpeechLifecycle({ view, api, onTopicReveal }: { view: HostGameView; api: HostDesktopApi; onTopicReveal: (reveal: TopicReveal) => void }) {
+  useGameSpeech(view, unavailableSpeechSettings, api.dispatch, undefined, onTopicReveal);
   return null;
 }

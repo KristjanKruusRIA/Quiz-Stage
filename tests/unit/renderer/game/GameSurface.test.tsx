@@ -64,7 +64,21 @@ describe('GameSurface board selection', () => {
     }));
   });
 
-  it('shows the player opening logo for three seconds, then reveals categories one at a time', () => {
+  it('stages topics on the single-screen host with time to read each one', () => {
+    vi.useFakeTimers();
+    try {
+      render(<GameSurface surface="host" view={hostView()} api={api(vi.fn())} />);
+      act(() => { vi.advanceTimersByTime(6_000); });
+      expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+      act(() => { vi.advanceTimersByTime(2_999); });
+      expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
+      act(() => { vi.advanceTimersByTime(1); });
+      expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
+    } finally { vi.useRealTimers(); }
+  });
+
+  it('shows the player opening logo for six seconds, then reveals categories one at a time', () => {
     vi.useFakeTimers();
     try {
       render(<GameSurface surface="public" view={publicView()} presentation="round-intro" />);
@@ -72,7 +86,7 @@ describe('GameSurface board selection', () => {
       expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
       expect(screen.queryByRole('grid')).not.toBeInTheDocument();
 
-      act(() => { vi.advanceTimersByTime(2_999); });
+      act(() => { vi.advanceTimersByTime(5_999); });
       expect(screen.getByRole('img', { name: 'Quiz Stage' })).toBeInTheDocument();
 
       act(() => { vi.advanceTimersByTime(1); });
@@ -81,14 +95,14 @@ describe('GameSurface board selection', () => {
       expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
       expect(screen.queryByRole('button', { name: 'Category 2 for 200' })).not.toBeInTheDocument();
 
-      act(() => { vi.advanceTimersByTime(349); });
+      act(() => { vi.advanceTimersByTime(2_999); });
       expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
 
       act(() => { vi.advanceTimersByTime(1); });
       expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
 
       for (let index = 0; index < 4; index += 1) {
-        act(() => { vi.advanceTimersByTime(350); });
+        act(() => { vi.advanceTimersByTime(3_000); });
       }
       expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
     } finally {
@@ -96,7 +110,7 @@ describe('GameSurface board selection', () => {
     }
   });
 
-  it('shows a three-second Double Round title before revealing its categories', () => {
+  it('shows a six-second Double Round title before revealing its categories', () => {
     vi.useFakeTimers();
     try {
       const roundOneClues = gameState().boards[0].categories.flatMap((category) => category.clues.map((clue) => clue.id));
@@ -111,7 +125,7 @@ describe('GameSurface board selection', () => {
       expect(screen.getByRole('heading', { level: 1, name: 'Double Round' })).toBeInTheDocument();
       expect(screen.queryByRole('grid')).not.toBeInTheDocument();
 
-      act(() => { vi.advanceTimersByTime(2_999); });
+      act(() => { vi.advanceTimersByTime(5_999); });
       expect(screen.getByRole('heading', { level: 1, name: 'Double Round' })).toBeInTheDocument();
 
       act(() => { vi.advanceTimersByTime(1); });
@@ -120,7 +134,7 @@ describe('GameSurface board selection', () => {
       expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
 
       for (let index = 0; index < 5; index += 1) {
-        act(() => { vi.advanceTimersByTime(350); });
+        act(() => { vi.advanceTimersByTime(3_000); });
       }
       expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
     } finally {
@@ -128,10 +142,10 @@ describe('GameSurface board selection', () => {
     }
   });
 
-  it('shows every category immediately for the host and recovery', () => {
-    const host = render(<GameSurface surface="host" view={hostView()} api={api(vi.fn())} />);
+  it('shows every category immediately when recovering a started board', () => {
+    const host = render(<GameSurface surface="host" view={hostView({ usedClueIds: ['round-one-clue-2-1'] })} api={api(vi.fn())} />);
     expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
-    host.rerender(<GameSurface surface="host" view={hostView({ phase: 'round-two-board' })} api={api(vi.fn())} />);
+    host.rerender(<GameSurface surface="host" view={hostView({ phase: 'round-two-board', usedClueIds: ['round-two-clue-2-1'] })} api={api(vi.fn())} />);
     expect(screen.getByRole('grid', { name: 'Double Round board' })).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'Category 6' })).toBeInTheDocument();
     host.unmount();
@@ -222,7 +236,7 @@ describe('GameSurface board selection', () => {
       expect(screen.getByRole('heading', { level: 1, name: 'Final' })).toBeInTheDocument();
       expect(screen.queryByText('World History')).not.toBeInTheDocument();
 
-      act(() => { vi.advanceTimersByTime(2_499); });
+      act(() => { vi.advanceTimersByTime(4_999); });
       expect(screen.getByRole('heading', { level: 1, name: 'Final' })).toBeInTheDocument();
       expect(screen.queryByText('World History')).not.toBeInTheDocument();
 
@@ -263,7 +277,7 @@ describe('GameSurface board selection', () => {
   it('synchronously prevents duplicate selection while the authoritative dispatch is pending', () => {
     const pending = deferred<Awaited<ReturnType<HostDesktopApi['dispatch']>>>();
     const dispatch = vi.fn(() => pending.promise);
-    render(<GameSurface surface="host" view={hostView()} api={api(dispatch)} />);
+    render(<GameSurface surface="host" view={hostView({ usedClueIds: ['round-one-clue-2-1'] })} api={api(dispatch)} />);
     const tile = screen.getByRole('button', { name: 'Category 1 for 200' });
 
     fireEvent.click(tile);
@@ -276,7 +290,7 @@ describe('GameSurface board selection', () => {
   it('handles a rejected selection, reports it accessibly, and re-enables the board', async () => {
     const pending = deferred<Awaited<ReturnType<HostDesktopApi['dispatch']>>>();
     const dispatch = vi.fn(() => pending.promise);
-    render(<GameSurface surface="host" view={hostView()} api={api(dispatch)} />);
+    render(<GameSurface surface="host" view={hostView({ usedClueIds: ['round-one-clue-2-1'] })} api={api(dispatch)} />);
     const tile = screen.getByRole('button', { name: 'Category 1 for 200' });
     fireEvent.click(tile);
 
@@ -289,10 +303,10 @@ describe('GameSurface board selection', () => {
   it('ignores a stale rejection after a newer authoritative view arrives', async () => {
     const pending = deferred<Awaited<ReturnType<HostDesktopApi['dispatch']>>>();
     const dispatch = vi.fn(() => pending.promise);
-    const { rerender } = render(<GameSurface surface="host" view={hostView()} api={api(dispatch)} />);
+    const { rerender } = render(<GameSurface surface="host" view={hostView({ usedClueIds: ['round-one-clue-2-1'] })} api={api(dispatch)} />);
     fireEvent.click(screen.getByRole('button', { name: 'Category 1 for 200' }));
 
-    rerender(<GameSurface surface="host" view={hostView({ eventSequence: 1 })} api={api(dispatch)} />);
+    rerender(<GameSurface surface="host" view={hostView({ eventSequence: 1, usedClueIds: ['round-one-clue-2-1'] })} api={api(dispatch)} />);
     await act(async () => { pending.reject(new Error('old request rejected')); });
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();

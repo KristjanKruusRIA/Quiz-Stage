@@ -114,6 +114,33 @@ function desktopHarness(coordinator: GameCoordinator) {
 }
 
 describe('recovered window state bootstrap', () => {
+  it('delivers host topic progress at the same game revision and restores it on player reconnect', async () => {
+    const { config, coordinator } = coordinatorHarness();
+    const desktop = desktopHarness(coordinator);
+    const host = createQuizStageApi('host', desktop.records[0].rendererIpc);
+    await coordinator.startMatch(config);
+    const state = coordinator.getHostStateUpdate()!.view.state;
+    const boardId = coordinator.getPublicStateUpdate()!.view.board!.id;
+    const counts: Array<number | undefined> = [];
+    createQuizStageApi('public', desktop.records[1].rendererIpc).subscribeToState((_view, _presentation, reveal) => counts.push(reveal?.count));
+    await host.publishTopicReveal!({ matchId: state.id, boardId, count: 0 });
+    await host.publishTopicReveal!({ matchId: state.id, boardId, count: 1 });
+    await host.publishTopicReveal!({ matchId: state.id, boardId, count: 2 });
+    await host.publishTopicReveal!({ matchId: state.id, boardId, count: 1 });
+    await host.publishTopicReveal!({ matchId: 'old-match', boardId, count: 3 });
+    expect(counts).toEqual([undefined, 0, 1, 2]);
+    const unauthorized = createQuizStageApi('host', desktop.records[1].rendererIpc);
+    await expect(unauthorized.publishTopicReveal!({ matchId: state.id, boardId, count: 3 })).rejects.toThrow();
+    desktop.records[1].close();
+    await Promise.resolve();
+    const restored: number[] = [];
+    createQuizStageApi('public', desktop.records[2].rendererIpc).subscribeToState((_view, _presentation, reveal) => { if (reveal) restored.push(reveal.count); });
+    expect(restored).toEqual([2]);
+    await host.publishTopicReveal!({ matchId: state.id, boardId, count: 3 });
+    expect(restored).toEqual([2, 3]);
+    desktop.disposeIpc();
+  });
+
   it('does not replay an untouched opening presentation in a replacement public window', async () => {
     const { config, coordinator } = coordinatorHarness();
     const desktop = desktopHarness(coordinator);
