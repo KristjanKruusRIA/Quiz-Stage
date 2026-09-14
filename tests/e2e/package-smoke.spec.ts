@@ -149,11 +149,13 @@ async function playTileCorrect(page: Page): Promise<void> {
   const tile = page.locator('.public-board button:not([disabled])').first();
   await activateControl(tile);
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
+  const teamControl = page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first();
+  await expect(wager.or(teamControl).first()).toBeVisible({ timeout: 30_000 });
   if (await wager.isVisible()) {
     await wager.fill('5');
     await activateControl(page.getByRole('button', { name: 'Commit wager' }));
   }
-  await activateControl(page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first());
+  await activateControl(teamControl);
   await activateControl(page.getByRole('button', { name: 'Correct', exact: true }));
   await activateControl(page.getByRole('button', { name: 'Continue' }));
 }
@@ -298,7 +300,10 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
     await expect(page.getByRole('timer')).toHaveText('0', { timeout: 35_000 });
     while (await page.getByRole('button', { name: /Reveal .* correct/ }).count()) {
-      await activateControl(page.getByRole('button', { name: /Reveal .* correct/ }).first());
+      const reveal = page.getByRole('button', { name: /Reveal .* correct/ }).first();
+      const revealName = await reveal.innerText();
+      await activateControl(reveal);
+      await expect(page.getByRole('button', { name: revealName, exact: true })).toHaveCount(0);
     }
 
     expect(await page.evaluate(() =>

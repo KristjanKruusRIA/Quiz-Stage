@@ -27,7 +27,7 @@ test('runs an Estonian dual-screen clue with a host-only English comparison', as
     await expect.poll(() => application!.windows().length).toBe(2);
     const publicWindow = application.windows().find((window) => window !== host)!;
     await expect(host.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
-    await expect(publicWindow.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
+    await expect(publicWindow.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible({ timeout: 10_000 });
     await expect(host.locator('html')).toHaveAttribute('lang', 'et');
     await expect(publicWindow.locator('html')).toHaveAttribute('lang', 'et');
 

@@ -34,6 +34,7 @@ test('plays a complete match with keyboard input and visible focus only', async 
   let nativeButtonFlowCovered = false;
   let timerSurfaceFlowCovered = false;
   for (let clue = 1; clue <= 60; clue += 1) {
+    await expect(page.locator('.public-board button:not([disabled])').first()).toBeEnabled({ timeout: 60_000 });
     await tabTo(page, 'button', / for /); await page.keyboard.press(clue % 2 === 0 ? 'Space' : 'Enter');
     const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
     const lockableTeam = page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first();

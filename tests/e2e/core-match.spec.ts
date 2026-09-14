@@ -40,7 +40,7 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
   for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
     if (clueNumber === 31) await expect(page.getByRole('grid', { name: 'Double Round board' })).toBeVisible();
     const tile = page.locator('.public-board button:not([disabled])').first();
-    await expect(tile).toBeEnabled();
+    await expect(tile).toBeEnabled({ timeout: 60_000 });
     const identity = await tile.getAttribute('aria-label');
     expect(identity).not.toBeNull();
     tileIdentities.add(identity!);

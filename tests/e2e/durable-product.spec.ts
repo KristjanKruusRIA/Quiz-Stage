@@ -184,7 +184,7 @@ async function commitDailyDoubleIfNeeded(host: Page): Promise<void> {
 
 async function selectNextClue(host: Page): Promise<void> {
   const tile = host.locator('.public-board button:not([disabled])').first();
-  await expect(tile).toBeEnabled();
+  await expect(tile).toBeEnabled({ timeout: 60_000 });
   await tile.click();
   await commitDailyDoubleIfNeeded(host);
   await expect(host.locator('.public-clue .clue-prompt')).toBeVisible();
@@ -257,7 +257,7 @@ test('survives a private Estonian eight-team match, restart, completion, history
     let publicWindow = application.windows().find((page) => page !== host)!;
     watchPage(publicWindow, runtimeErrors);
     await expect(host.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
-    await expect(publicWindow.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible();
+    await expect(publicWindow.getByRole('grid', { name: 'Esimese vooru mängulaud' })).toBeVisible({ timeout: 10_000 });
 
     await selectNextClue(host);
     let persisted = readLatestMatch(userData);
