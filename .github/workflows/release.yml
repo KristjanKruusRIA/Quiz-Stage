@@ -2,9 +2,9 @@ name: release
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+
+permissions:
+  contents: read
 
 jobs:
   quality:
@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: d15c354f033720e7fb65ca4feace85eef40e447c
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
@@ -35,6 +36,8 @@ jobs:
           if-no-files-found: ignore
 
   package:
+    permissions:
+      contents: write
     needs: quality
     strategy:
       fail-fast: false
@@ -55,6 +58,8 @@ jobs:
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: d15c354f033720e7fb65ca4feace85eef40e447c
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
@@ -140,41 +145,25 @@ jobs:
       - name: Generate target checksums
         run: npx tsx scripts/write-release-checksums.ts --target ${{ matrix.target }} --package-root out/make
 
-      - name: Upload Windows artifacts
-        if: matrix.target == 'windows-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/installer/QuizStageSetup.exe
-            out/make/portable/QuizStage-win32-x64.zip
-            out/make/release-checksums-windows-x64.txt
-          if-no-files-found: error
-      - name: Upload macOS arm64 artifacts
-        if: matrix.target == 'macos-arm64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/portable/QuizStage-darwin-arm64.zip
-            out/make/release-checksums-macos-arm64.txt
-          if-no-files-found: error
-      - name: Upload macOS x64 artifacts
-        if: matrix.target == 'macos-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/portable/QuizStage-darwin-x64.zip
-            out/make/release-checksums-macos-x64.txt
-          if-no-files-found: error
-      - name: Upload Ubuntu artifacts
-        if: matrix.target == 'ubuntu-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/installer/quiz-stage_0.1.0_amd64.deb
-            out/make/portable/QuizStage-linux-x64.zip
-            out/make/release-checksums-ubuntu-x64.txt
-          if-no-files-found: error
+      - name: Upload verified packages to draft release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TARGET: ${{ matrix.target }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $release = gh release view v0.1.0 --json isDraft,targetCommitish | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0 -or -not $release.isDraft -or $release.targetCommitish -ne 'd15c354f033720e7fb65ca4feace85eef40e447c') {
+            throw 'Expected a draft release targeting the verified source commit'
+          }
+          $checksumPath = "out/make/release-checksums-$env:RELEASE_TARGET.txt"
+          $assets = @($checksumPath)
+          foreach ($line in Get-Content -LiteralPath $checksumPath) {
+            if ($line -notmatch '^([a-fA-F0-9]{64})\s+(.+)$') { throw "Invalid checksum line: $line" }
+            $expectedHash = $Matches[1]
+            $assetPath = Join-Path out/make $Matches[2]
+            if ((Get-FileHash -LiteralPath $assetPath -Algorithm SHA256).Hash -ne $expectedHash) { throw "Checksum mismatch: $assetPath" }
+            $assets += $assetPath
+          }
+          gh release upload v0.1.0 @assets
+          if ($LASTEXITCODE -ne 0) { throw 'Release asset upload failed' }
