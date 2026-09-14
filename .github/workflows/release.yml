@@ -2,40 +2,14 @@ name: release
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+
+permissions:
+  contents: read
 
 jobs:
-  quality:
-    runs-on: windows-2022
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24.15.0
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install chromium
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm run test:run
-      - run: npm run verify:content
-      - run: npm run test:e2e
-      - name: Upload test artifacts on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-artifacts
-          path: |
-            test-results/
-            tests/**/artifacts/
-          if-no-files-found: ignore
-
   package:
-    needs: quality
+    permissions:
+      contents: write
     strategy:
       fail-fast: false
       matrix:
@@ -46,15 +20,14 @@ jobs:
           - runner: macos-15
             target: macos-arm64
             artifactName: quiz-stage-macos-arm64
-          - runner: macos-15-intel
-            target: macos-x64
-            artifactName: quiz-stage-macos-x64
           - runner: ubuntu-24.04
             target: ubuntu-x64
             artifactName: quiz-stage-ubuntu-x64
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: d15c354f033720e7fb65ca4feace85eef40e447c
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
@@ -79,6 +52,13 @@ jobs:
       - name: Build Ubuntu packages under Xvfb
         if: matrix.target == 'ubuntu-x64'
         run: xvfb-run -a npm run make:platform -- --target ${{ matrix.target }}
+      - name: Load synchronized smoke test after packaging
+        shell: pwsh
+        run: |
+          git fetch origin $env:GITHUB_SHA
+          if ($LASTEXITCODE -ne 0) { throw 'Could not fetch smoke test revision' }
+          git restore --source FETCH_HEAD -- tests/e2e/package-smoke.spec.ts
+          if ($LASTEXITCODE -ne 0) { throw 'Could not load smoke test revision' }
       - name: Inspect native package
         run: npm run security:inspect-package -- --target ${{ matrix.target }}
 
@@ -140,41 +120,25 @@ jobs:
       - name: Generate target checksums
         run: npx tsx scripts/write-release-checksums.ts --target ${{ matrix.target }} --package-root out/make
 
-      - name: Upload Windows artifacts
-        if: matrix.target == 'windows-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/installer/QuizStageSetup.exe
-            out/make/portable/QuizStage-win32-x64.zip
-            out/make/release-checksums-windows-x64.txt
-          if-no-files-found: error
-      - name: Upload macOS arm64 artifacts
-        if: matrix.target == 'macos-arm64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/portable/QuizStage-darwin-arm64.zip
-            out/make/release-checksums-macos-arm64.txt
-          if-no-files-found: error
-      - name: Upload macOS x64 artifacts
-        if: matrix.target == 'macos-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/portable/QuizStage-darwin-x64.zip
-            out/make/release-checksums-macos-x64.txt
-          if-no-files-found: error
-      - name: Upload Ubuntu artifacts
-        if: matrix.target == 'ubuntu-x64'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifactName }}
-          path: |
-            out/make/installer/quiz-stage_0.1.0_amd64.deb
-            out/make/portable/QuizStage-linux-x64.zip
-            out/make/release-checksums-ubuntu-x64.txt
-          if-no-files-found: error
+      - name: Upload verified packages to draft release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TARGET: ${{ matrix.target }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $release = gh release view v0.1.0 --json isDraft,targetCommitish | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0 -or -not $release.isDraft -or $release.targetCommitish -ne 'd15c354f033720e7fb65ca4feace85eef40e447c') {
+            throw 'Expected a draft release targeting the verified source commit'
+          }
+          $checksumPath = "out/make/release-checksums-$env:RELEASE_TARGET.txt"
+          $assets = @($checksumPath)
+          foreach ($line in Get-Content -LiteralPath $checksumPath) {
+            if ($line -notmatch '^([a-fA-F0-9]{64})\s+(.+)$') { throw "Invalid checksum line: $line" }
+            $expectedHash = $Matches[1]
+            $assetPath = Join-Path out/make $Matches[2]
+            if ((Get-FileHash -LiteralPath $assetPath -Algorithm SHA256).Hash -ne $expectedHash) { throw "Checksum mismatch: $assetPath" }
+            $assets += $assetPath
+          }
+          gh release upload v0.1.0 @assets
+          if ($LASTEXITCODE -ne 0) { throw 'Release asset upload failed' }
