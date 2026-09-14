@@ -14,15 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: windows-2022
-            target: windows-x64
-            artifactName: quiz-stage-windows-x64
           - runner: macos-15
             target: macos-arm64
             artifactName: quiz-stage-macos-arm64
-          - runner: macos-15-intel
-            target: macos-x64
-            artifactName: quiz-stage-macos-x64
           - runner: ubuntu-24.04
             target: ubuntu-x64
             artifactName: quiz-stage-ubuntu-x64
@@ -55,6 +49,13 @@ jobs:
       - name: Build Ubuntu packages under Xvfb
         if: matrix.target == 'ubuntu-x64'
         run: xvfb-run -a npm run make:platform -- --target ${{ matrix.target }}
+      - name: Load synchronized smoke test after packaging
+        shell: pwsh
+        run: |
+          git fetch origin $env:GITHUB_SHA
+          if ($LASTEXITCODE -ne 0) { throw 'Could not fetch smoke test revision' }
+          git restore --source FETCH_HEAD -- tests/e2e/package-smoke.spec.ts
+          if ($LASTEXITCODE -ne 0) { throw 'Could not load smoke test revision' }
       - name: Inspect native package
         run: npm run security:inspect-package -- --target ${{ matrix.target }}
 

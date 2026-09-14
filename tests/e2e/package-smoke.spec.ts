@@ -149,11 +149,13 @@ async function playTileCorrect(page: Page): Promise<void> {
   const tile = page.locator('.public-board button:not([disabled])').first();
   await activateControl(tile);
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
+  const teamControl = page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first();
+  await expect(wager.or(teamControl).first()).toBeVisible({ timeout: 30_000 });
   if (await wager.isVisible()) {
     await wager.fill('5');
     await activateControl(page.getByRole('button', { name: 'Commit wager' }));
   }
-  await activateControl(page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first());
+  await activateControl(teamControl);
   await activateControl(page.getByRole('button', { name: 'Correct', exact: true }));
   await activateControl(page.getByRole('button', { name: 'Continue' }));
 }
