@@ -2,6 +2,7 @@ import { join } from 'node:path';
 import { FuseVersion, FuseV1Options } from '@electron/fuses';
 import type { ForgeConfig } from '@electron-forge/shared-types';
 import { installLinuxLauncher } from './scripts/release/linuxLauncher';
+import { resignMacosApplication } from './scripts/release/macosSignature';
 import { makerNamesFor, releaseTargetFor, type MakerName, type PackageProfile } from './scripts/release/targets';
 
 process.env.VITE_CONFIG_NATIVE_IGNORE_WARNING = 'true';
@@ -89,6 +90,7 @@ const config: ForgeConfig = {
   hooks: {
     postPackage: async (_forgeConfig, packageResult) => {
       installLinuxLauncher(packageResult, releaseTarget);
+      resignMacosApplication(packageResult, releaseTarget);
     },
   },
   makers,
