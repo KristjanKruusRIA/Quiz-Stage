@@ -68,6 +68,18 @@ jobs:
       - name: Verify macOS x64 executable architecture
         if: matrix.target == 'macos-x64'
         run: file "out/Quiz Stage-darwin-x64/Quiz Stage.app/Contents/MacOS/Quiz Stage" | grep -F x86_64
+      - name: Verify macOS code signature
+        if: startsWith(matrix.target, 'macos-')
+        env:
+          RELEASE_TARGET: ${{ matrix.target }}
+        run: |
+          set -euo pipefail
+          arch="${RELEASE_TARGET#macos-}"
+          codesign --verify --deep --strict --verbose=2 "out/Quiz Stage-darwin-${arch}/Quiz Stage.app"
+          extracted="$(mktemp -d "${RUNNER_TEMP}/quiz-stage-signature-XXXXXX")"
+          ditto -x -k "out/make/portable/QuizStage-darwin-${arch}.zip" "$extracted"
+          codesign --verify --deep --strict --verbose=2 "$extracted/Quiz Stage.app"
+          rm -rf "$extracted"
 
       - name: Smoke Windows installer and portable packages
         if: matrix.target == 'windows-x64'
