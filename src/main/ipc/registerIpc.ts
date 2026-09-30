@@ -2,6 +2,8 @@ import type { HostGameView, PublicGameView } from '../../shared/game/types';
 import type { DisplayMode, GameConfig } from '../../shared/game/types';
 import {
   audioSettingsSchema,
+  topicRevealSchema,
+  type TopicReveal,
   contentAvailabilitySchema,
   configuredMatchStartSchema,
   gameCommandSchema,
@@ -450,6 +452,31 @@ export function registerIpc({
     pendingPresentation = null;
   };
 
+  let topicReveal: TopicReveal | undefined;
+  const currentTopicReveal = () => {
+    const host = coordinator.getHostStateUpdate()?.view;
+    const board = coordinator.getPublicStateUpdate()?.view.board;
+    return topicReveal?.matchId === host?.state.id && topicReveal?.boardId === board?.id ? topicReveal : undefined;
+  };
+  handle(IPC_CHANNELS.topicReveal, (event, input) => {
+    requireHost(event.sender.id);
+    const reveal = topicRevealSchema.parse(input);
+    const host = coordinator.getHostStateUpdate()?.view;
+    const update = coordinator.getPublicStateUpdate();
+    if (host?.state.id !== reveal.matchId || update?.view.board?.id !== reveal.boardId
+      || reveal.count > update.view.board.categories.length) return;
+    const previous = currentTopicReveal();
+    if (previous !== undefined && reveal.count <= previous.count) return;
+    topicReveal = reveal;
+    const publicWindow = getWindows().publicWindow;
+    if (publicWindow !== null && !publicWindow.webContents.isDestroyed()
+      && publicWindow.webContents.id === readyPublicWebContentsId) {
+      publicWindow.webContents.send(IPC_CHANNELS.publicState, {
+        ...update, presentation: null, topicReveal,
+      });
+    }
+  });
+
   syncPresentationMatch(true);
   const unsubscribeHost = coordinator.subscribe('host', (view, revision) => {
     const hostWindow = getWindows().hostWindow;
@@ -462,6 +489,7 @@ export function registerIpc({
     }
   });
   const unsubscribePublic = coordinator.subscribe('public', (view, revision) => {
+    if (view.board?.id !== topicReveal?.boardId) topicReveal = undefined;
     const presentation = observePublicPresentation(view, revision);
     const publicWindow = getWindows().publicWindow;
     if (
@@ -469,7 +497,7 @@ export function registerIpc({
       && !publicWindow.webContents.isDestroyed()
       && publicWindow.webContents.id === readyPublicWebContentsId
     ) {
-      const update = { revision, view, presentation };
+      const update = { revision, view, presentation, topicReveal: currentTopicReveal() };
       publicWindow.webContents.send(IPC_CHANNELS.publicState, update);
       markPresentationDelivered(update, presentation);
     }
@@ -501,7 +529,7 @@ export function registerIpc({
     const update = coordinator.getPublicStateUpdate();
     if (update !== null) {
       const presentation = getPendingPresentation(update);
-      publicWindow.webContents.send(IPC_CHANNELS.publicState, { ...update, presentation });
+      publicWindow.webContents.send(IPC_CHANNELS.publicState, { ...update, presentation, topicReveal: currentTopicReveal() });
       markPresentationDelivered(update, presentation);
     }
   };
@@ -510,6 +538,7 @@ export function registerIpc({
 
   return () => {
     ipcMain.removeHandler(IPC_CHANNELS.dispatch);
+    ipcMain.removeHandler(IPC_CHANNELS.topicReveal);
     for (const channel of applicationChannels) ipcMain.removeHandler(channel);
     for (const channel of audioChannels) ipcMain.removeHandler(channel);
     for (const channel of setupChannels) ipcMain.removeHandler(channel);

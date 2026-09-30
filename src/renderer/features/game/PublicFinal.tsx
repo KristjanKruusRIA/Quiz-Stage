@@ -9,7 +9,7 @@ interface PublicFinalProps {
   showIntro?: boolean;
 }
 
-const FINAL_INTRO_MS = 2_500;
+const FINAL_INTRO_MS = 5_000;
 
 function FinalCategory({ view, showIntro }: Required<Pick<PublicFinalProps, 'showIntro'>> & { view: PublicGameView }) {
   const t = createTranslator(view.language);

@@ -88,11 +88,11 @@ describe('public App presentation accessibility', () => {
       expect(screen.getByRole('img', { name: 'Quiz Stage' }).closest('[data-reduced-motion]'))
         .toHaveAttribute('data-reduced-motion', 'true');
 
-      act(() => { vi.advanceTimersByTime(3_000); });
+      act(() => { vi.advanceTimersByTime(6_000); });
       expect(screen.getByRole('columnheader', { name: 'Category 1' })).toBeInTheDocument();
       expect(screen.queryByRole('columnheader', { name: 'Category 2' })).not.toBeInTheDocument();
 
-      act(() => { vi.advanceTimersByTime(350); });
+      act(() => { vi.advanceTimersByTime(3_000); });
       expect(screen.getByRole('columnheader', { name: 'Category 2' })).toBeInTheDocument();
     } finally {
       vi.useRealTimers();

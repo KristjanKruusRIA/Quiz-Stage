@@ -8,6 +8,7 @@ import type {
   HostQuizStageApi,
   MatchConfigurationPreview,
   PublicPresentation,
+  TopicReveal,
   RerollConfiguredTopicRequest,
 } from '../../shared/ipc/contracts';
 import type {
@@ -20,6 +21,7 @@ import type { AppearanceSettings } from '../../shared/settings/appearance';
 
 export type HostDesktopApi = {
       surface: 'host';
+      publishTopicReveal?: (reveal: TopicReveal) => Promise<void>;
       getSetupOptions(): Promise<SetupOptions>;
       checkContentAvailability(config: GameConfig): Promise<ContentAvailabilityResponse>;
       startMatch(config: GameConfig): Promise<void>;
@@ -53,7 +55,7 @@ export type HostDesktopApi = {
 
 export type PublicDesktopApi = {
   surface: 'public';
-  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation) => void): () => void;
+  subscribeToState(listener: (view: PublicGameView, presentation: PublicPresentation, topicReveal?: TopicReveal) => void): () => void;
   subscribeToAppearance(listener: (settings: AppearanceSettings) => void, onError?: () => void): () => void;
 };
 
@@ -62,8 +64,8 @@ export type DesktopApi = PublicDesktopApi | HostDesktopApi;
 export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
   if (!('dispatch' in bridge)) return {
     surface: 'public',
-    subscribeToState: (listener) => bridge.subscribeToState((view, presentation) => {
-      if (!('state' in view)) listener(view, presentation);
+    subscribeToState: (listener) => bridge.subscribeToState((view, presentation, topicReveal) => {
+      if (!('state' in view)) listener(view, presentation, topicReveal);
     }),
     subscribeToAppearance: (listener, onError) => bridge.subscribeToAppearance(listener, onError),
   };
@@ -90,6 +92,7 @@ export function createDesktopApi(bridge: QuizStageApi): DesktopApi {
 
   return {
     surface: 'host',
+    publishTopicReveal: (reveal) => hostBridge.publishTopicReveal?.(reveal) ?? Promise.resolve(),
     getSetupOptions: () => getSetupOptions(),
     checkContentAvailability: (config) => checkContentAvailability(config),
     configureMatch: (config) => configureMatch(config),

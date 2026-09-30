@@ -136,18 +136,27 @@ test('persists audio settings and serves bundled fallback through the pathless p
     await page.getByRole('button', { name: 'Start match' }).click();
     await expect(page.getByRole('grid', { name: 'Round One board' })).toBeVisible();
 
-    const categoryNarration = `${(await page.locator('.board-header-row h2').allTextContents()).join('. ')}.`;
-    await expect.poll(() => page.evaluate(() =>
-      (window as SpeechProbeWindow).quizStageSpeechProbe?.texts[0])).toBe(categoryNarration);
     await expect.poll(() => application.windows().length).toBe(2);
     const publicPage = application.windows().find((candidate) => candidate !== page)!;
     await publicPage.waitForLoadState('domcontentloaded');
-    await expect.poll(() => publicPage.evaluate(() =>
-      (window as SpeechProbeWindow).quizStageSpeechProbe?.texts ?? [])).toEqual([]);
-    await page.evaluate(() => (window as SpeechProbeWindow).quizStageSpeechProbe?.finish());
-
     const boardView = await currentHostView(page);
     const board = boardView.state.boards.find((candidate) => candidate.round === 'round-one')!;
+    for (let index = 0; index < board.categories.length; index += 1) {
+      const name = board.categories[index].name.en!;
+      await expect(page.getByRole('columnheader', { name, exact: true })).toBeVisible({ timeout: 10_000 });
+      await expect(publicPage.getByRole('columnheader', { name, exact: true })).toBeVisible();
+      await expect.poll(() => page.evaluate(() =>
+        (window as SpeechProbeWindow).quizStageSpeechProbe?.texts.at(-1))).toBe(name);
+      if (index + 1 < board.categories.length) {
+        await page.waitForTimeout(500);
+        await expect(page.getByRole('columnheader', { name: board.categories[index + 1].name.en!, exact: true })).toHaveCount(0);
+        await expect(publicPage.getByRole('columnheader', { name: board.categories[index + 1].name.en!, exact: true })).toHaveCount(0);
+      }
+      await page.evaluate(() => (window as SpeechProbeWindow).quizStageSpeechProbe?.finish());
+    }
+    expect(await publicPage.evaluate(() =>
+      (window as SpeechProbeWindow).quizStageSpeechProbe?.texts ?? [])).toEqual([]);
+
     let tileIndex = -1;
     for (let clueIndex = 0; clueIndex < 5 && tileIndex === -1; clueIndex += 1) {
       for (let categoryIndex = 0; categoryIndex < board.categories.length; categoryIndex += 1) {

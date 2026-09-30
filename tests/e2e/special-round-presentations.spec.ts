@@ -175,7 +175,7 @@ async function installCategoryRevealProbe(page: Page): Promise<void> {
 
 async function expectCategoryRevealSequence(page: Page): Promise<void> {
   await expect.poll(() => page.evaluate(() =>
-    (window as CategoryProbeWindow).quizStageCategoryRevealCounts ?? [])).toEqual([1, 2, 3, 4, 5, 6]);
+    (window as CategoryProbeWindow).quizStageCategoryRevealCounts ?? []), { timeout: 30_000 }).toEqual([1, 2, 3, 4, 5, 6]);
 }
 
 async function expectAppMotionEnabled(page: Page, selector: string): Promise<void> {
@@ -259,7 +259,7 @@ test('gives the player automatic opening, round, Daily Double, and Final present
     await match.host.getByRole('button', { name: 'Start match' }).click();
     const hostRoundOne = match.host.getByRole('grid', { name: 'Round One board' });
     await expect(hostRoundOne).toBeVisible({ timeout: 30_000 });
-    await expect(hostRoundOne.getByRole('button').first()).toBeEnabled();
+    await expect(hostRoundOne.getByRole('button').first()).toBeDisabled();
     await expect.poll(() => pages(match).length).toBe(2);
     const publicWindow = pages(match).find((window) => window !== match.host);
     expect(publicWindow).toBeDefined();

@@ -51,6 +51,7 @@ async function launch(teamCount: 2 | 8, longEstonianNames = false): Promise<{ ap
   }
   await page.getByRole('button', { name: longEstonianNames ? 'Alusta mängu' : 'Start match' }).click();
   await expect(page.getByRole('grid')).toBeVisible();
+  await expect(page.locator('.public-board button:not([disabled])').first()).toBeEnabled({ timeout: 60_000 });
   return { app, page };
 }
 

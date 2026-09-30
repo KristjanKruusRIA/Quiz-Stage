@@ -22,7 +22,7 @@ test('creates only the host window in single-screen mode and a public window in 
     const recoveredPublicWindow = dual.application.windows().find((window) => window !== dual.host);
     expect(recoveredPublicWindow).toBeDefined();
     expect(recoveredPublicWindow).not.toBe(publicWindow);
-    await expect(recoveredPublicWindow!.getByRole('grid')).toBeVisible();
+    await expect(recoveredPublicWindow!.getByRole('grid')).toBeVisible({ timeout: 10_000 });
   } finally {
     await closeFastMatch(dual);
   }

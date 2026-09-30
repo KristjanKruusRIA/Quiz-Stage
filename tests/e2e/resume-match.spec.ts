@@ -26,7 +26,7 @@ function watchExternalRequests(application: ElectronApplication, requests: strin
 
 async function playCurrentTileCorrect(page: Page) {
   const tile = page.locator('.public-board button:not([disabled])').first();
-  await expect(tile).toBeEnabled();
+  await expect(tile).toBeEnabled({ timeout: 60_000 });
   await tile.click();
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
   if (await wager.isVisible()) {

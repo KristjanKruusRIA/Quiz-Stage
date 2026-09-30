@@ -114,7 +114,7 @@ test('Classic Stage branding remains readable from 720p through 4K', async ({}, 
     let capturedDailyDouble = false;
     for (let clueNumber = 1; clueNumber <= 60; clueNumber += 1) {
       const tile = page.locator('.public-board button:not([disabled])').first();
-      await expect(tile).toBeEnabled();
+      await expect(tile).toBeEnabled({ timeout: 60_000 });
       await tile.click();
       const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
       if (await wager.isVisible()) {

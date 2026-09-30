@@ -12,6 +12,7 @@ import {
   hostStateUpdateSchema,
   matchHistorySchema,
   publicStateUpdateSchema,
+  topicRevealSchema,
   rerollConfiguredTopicRequestSchema,
   setupOptionsSchema,
   startConfiguredMatchRequestSchema,
@@ -66,11 +67,14 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
   };
   const subscribeToPublicState: PublicQuizStageApi['subscribeToState'] = (listener) => {
     let latestRevision = -1;
+    let latestTopicCount = -1;
     const wrapped = (_event: unknown, value: unknown) => {
       const update = publicStateUpdateSchema.parse(value);
-      if (update.revision <= latestRevision) return;
+      const count = update.topicReveal?.count ?? -1;
+      if (update.revision < latestRevision || (update.revision === latestRevision && count <= latestTopicCount)) return;
       latestRevision = update.revision;
-      listener(update.view, update.presentation);
+      latestTopicCount = count;
+      listener(update.view, update.presentation, update.topicReveal);
     };
     ipc.on(IPC_CHANNELS.publicState, wrapped);
     ipc.send(IPC_CHANNELS.publicReady);
@@ -96,6 +100,7 @@ export function createQuizStageApi(surface: 'host' | 'public', ipc: PreloadIpcPo
   const resolvedSchema = z.strictObject({ resolved: z.boolean() });
   const deletedSchema = z.strictObject({ packId: z.string().min(1) });
   return {
+    publishTopicReveal: async (reveal) => { await ipc.invoke(IPC_CHANNELS.topicReveal, topicRevealSchema.parse(reveal)); },
     subscribeToAppearance,
     subscribeToMediaWarnings: (listener) => {
       const liveKeys = new Set<string>();
