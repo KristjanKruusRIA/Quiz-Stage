@@ -16,7 +16,7 @@ function deferred<T>() {
 }
 
 const publicView = {
-  appVersion: '0.1.0' as const,
+  appVersion: '0.1.1' as const,
   language: 'en' as const,
   phase: 'ordinary-clue' as const,
   displayMode: 'single' as const,
@@ -31,9 +31,9 @@ const publicView = {
 };
 
 const hostView = {
-  appVersion: '0.1.0' as const,
+  appVersion: '0.1.1' as const,
   state: {
-    appVersion: '0.1.0' as const,
+    appVersion: '0.1.1' as const,
     id: 'match-1',
     config: {
       language: 'en' as const, difficulty: 'easy' as const, clueSeconds: 15, displayMode: 'single' as const,
@@ -257,7 +257,7 @@ describe('preload quizStage surface', () => {
 
   it('rejects an invalid host dispatch result instead of returning cast data', async () => {
     const ipc: PreloadIpcPort = {
-      invoke: vi.fn(async () => ({ appVersion: '0.1.0', state: { id: 'incomplete' }, replayIssue: null })),
+      invoke: vi.fn(async () => ({ appVersion: '0.1.1', state: { id: 'incomplete' }, replayIssue: null })),
       on: vi.fn(),
       removeListener: vi.fn(),
       send: vi.fn(),

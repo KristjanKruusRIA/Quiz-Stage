@@ -46,7 +46,7 @@ const targets = [
     { kind: 'portable', relativePath: 'portable/QuizStage-darwin-x64.zip' },
   ]),
   target('ubuntu-x64', 'linux', 'x64', 'quiz-stage', 'quiz-stage-bin', [
-    { kind: 'installer', relativePath: 'installer/quiz-stage_0.1.0_amd64.deb' },
+    { kind: 'installer', relativePath: 'installer/quiz-stage_0.1.1_amd64.deb' },
     { kind: 'portable', relativePath: 'portable/QuizStage-linux-x64.zip' },
   ]),
 ] as const;

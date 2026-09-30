@@ -12,7 +12,7 @@ describe('release documentation', () => {
       'QuizStage-win32-x64.zip',
       'QuizStage-darwin-arm64.zip',
       'QuizStage-darwin-x64.zip',
-      'quiz-stage_0.1.0_amd64.deb',
+      'quiz-stage_0.1.1_amd64.deb',
       'QuizStage-linux-x64.zip',
     ]) {
       expect(readme).toContain(artifact);
@@ -26,7 +26,7 @@ describe('release documentation', () => {
     );
     expect(readme).toContain('https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac');
     expect(readme).toContain('`~/Library/Application Support/Quiz Stage`');
-    expect(readme).toContain('sudo apt install ./quiz-stage_0.1.0_amd64.deb');
+    expect(readme).toContain('sudo apt install ./quiz-stage_0.1.1_amd64.deb');
     expect(readme).toContain('Prefer the Ubuntu DEB for full Chromium sandboxing.');
     expect(readme).toContain('automatically falls back to `no-sandbox` only when neither user namespaces nor a usable setuid sandbox helper is available');
     expect(readme).toContain('sudo apt remove quiz-stage');

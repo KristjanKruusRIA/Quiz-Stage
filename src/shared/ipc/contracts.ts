@@ -173,7 +173,7 @@ const undoFrameSchema = z.strictObject({
 });
 
 export const gameStateSchema = z.strictObject({
-  appVersion: z.literal(APP_VERSION),
+  appVersion: z.union([z.literal('0.1.0'), z.literal(APP_VERSION)]).transform((): typeof APP_VERSION => APP_VERSION),
   id: identifierSchema,
   config: persistedGameConfigSchema,
   seed: z.string(),

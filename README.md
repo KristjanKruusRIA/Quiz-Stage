@@ -36,14 +36,14 @@ macOS stores Quiz Stage data in the standard per-user `~/Library/Application Sup
 
 ## Ubuntu packages
 
-Ubuntu x64 downloads are available as `quiz-stage_0.1.0_amd64.deb` and `QuizStage-linux-x64.zip`.
+Ubuntu x64 downloads are available as `quiz-stage_0.1.1_amd64.deb` and `QuizStage-linux-x64.zip`.
 
 Prefer the Ubuntu DEB for full Chromium sandboxing. The ZIP uses Chromium's user-namespace sandbox when available and automatically falls back to `no-sandbox` only when neither user namespaces nor a usable setuid sandbox helper is available.
 
 Install or remove the Debian package with:
 
 ```bash
-sudo apt install ./quiz-stage_0.1.0_amd64.deb
+sudo apt install ./quiz-stage_0.1.1_amd64.deb
 sudo apt remove quiz-stage
 ```
 

@@ -41,7 +41,7 @@ describe('IPC contracts', () => {
 
     const parsed = gameStateSchema.parse({
       ...gameStateSchema.parse({
-        appVersion: '0.1.0', id: 'legacy-long-name', config: { ...config, teams: [{ ...config.teams[0], name: 'Alpha' }, config.teams[1]] },
+        appVersion: '0.1.1', id: 'legacy-long-name', config: { ...config, teams: [{ ...config.teams[0], name: 'Alpha' }, config.teams[1]] },
         phase: 'round-one-board', boards: [], finalClue: null, scores: { t1: 0, t2: 0 }, controllingTeamId: 't1',
         activeClue: null, usedClueIds: [], finalWagers: {}, seed: 'fixed-seed', dailyDoubleClueIds: [],
       }),
@@ -56,7 +56,7 @@ describe('IPC contracts', () => {
 
   it('persists the random seed and hidden Daily Double positions', () => {
     const result = gameStateSchema.safeParse({
-      appVersion: '0.1.0',
+      appVersion: '0.1.1',
       id: 'match-1',
       config: {
         language: 'en', difficulty: 'easy', clueSeconds: 15,
@@ -102,6 +102,7 @@ describe('IPC contracts', () => {
 
     expect(result.success).toBe(true);
     if (result.success) {
+      expect(result.data.appVersion).toBe('0.1.1');
       expect(result.data.timer).toEqual({ durationMs: 15000, remainingMs: 15000, startedAt: null, status: 'idle' });
       expect(result.data.activeClue?.lockedTeamId).toBeNull();
     }
@@ -109,7 +110,7 @@ describe('IPC contracts', () => {
 
   it('rejects persisted timer state with more remaining time than its duration', () => {
     const result = gameStateSchema.safeParse({
-      appVersion: '0.1.0',
+      appVersion: '0.1.1',
       id: 'match-invalid-timer',
       config: {
         language: 'en', difficulty: 'easy', clueSeconds: 15,

@@ -64,13 +64,13 @@ describe('release artifact normalization', () => {
     createFile(path.join(root, 'out', 'make', 'zip', 'linux', 'x64', 'Quiz Stage-linux-x64-0.1.0.zip'), 'portable');
 
     expect(normalizeArtifacts(root, target)).toEqual([
-      path.join(root, 'out', 'make', 'installer', 'quiz-stage_0.1.0_amd64.deb'),
+      path.join(root, 'out', 'make', 'installer', 'quiz-stage_0.1.1_amd64.deb'),
       path.join(root, 'out', 'make', 'portable', 'QuizStage-linux-x64.zip'),
     ]);
     expect(normalizedArtifactPath(root, target, target.artifacts[0]!)).toMatch(
-      /out[\\/]make[\\/]installer[\\/]quiz-stage_0\.1\.0_amd64\.deb$/,
+      /out[\\/]make[\\/]installer[\\/]quiz-stage_0\.1\.1_amd64\.deb$/,
     );
-    expect(readFileSync(path.join(root, 'out', 'make', 'installer', 'quiz-stage_0.1.0_amd64.deb'), 'utf8')).toBe('installer');
+    expect(readFileSync(path.join(root, 'out', 'make', 'installer', 'quiz-stage_0.1.1_amd64.deb'), 'utf8')).toBe('installer');
     expect(readFileSync(path.join(root, 'out', 'make', 'portable', 'QuizStage-linux-x64.zip'), 'utf8')).toBe('portable');
   });
 
