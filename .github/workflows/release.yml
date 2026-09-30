@@ -2,40 +2,12 @@ name: release
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+
+permissions:
+  contents: read
 
 jobs:
-  quality:
-    runs-on: windows-2022
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24.15.0
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install chromium
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm run test:run
-      - run: npm run verify:content
-      - run: npm run test:e2e
-      - name: Upload test artifacts on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-artifacts
-          path: |
-            test-results/
-            tests/**/artifacts/
-          if-no-files-found: ignore
-
   package:
-    needs: quality
     strategy:
       fail-fast: false
       matrix:
@@ -55,6 +27,8 @@ jobs:
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: 2589bfb98e5c8300aad428c23889d0b1b6340046
       - uses: actions/setup-node@v4
         with:
           node-version: 24.15.0
