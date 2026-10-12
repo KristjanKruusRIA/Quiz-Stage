@@ -1,0 +1,1103 @@
+{
+  "version": 1,
+  "status": "proposed-only",
+  "scope": "metadata-only",
+  "createdAt": "2026-10-11T21:57:19.270Z",
+  "retrievedAtLocalDate": "2026-10-12",
+  "timeZone": "Europe/Tallinn",
+  "author": "release_targets_audit",
+  "purpose": "Repair two verified citation metadata issues while preserving every clue, answer, alias, bilingual explanation, grouping, tier, difficulty, enabled state and historical approval.",
+  "affectedClueIds": [
+    "built-in-estonia-clue-0451",
+    "built-in-adult-clue-0353"
+  ],
+  "affectedArtifactCount": 6,
+  "sourceAudit": {
+    "initialWebIndexCaveat": "The first web open of floorball.sport/estonia returned old indexed content. Fresh web open and native GET/HEAD returned HTTP404 with a Page Not Found title; indexed availability is not current URL availability.",
+    "method": "Read-only primary web browsing plus sequential Node HTTPS GET requests with the exact existing source checker's Accept and User-Agent headers; no cache publication.",
+    "headers": {
+      "accept": "text/html,application/json;q=0.9,*/*;q=0.1",
+      "user-agent": "Quiz Stage content source checker/0.1 (+offline desktop content validation)"
+    },
+    "directResults": [
+      {
+        "url": "https://floorball.sport/estonia/",
+        "status": 404,
+        "redirectLocation": null,
+        "title": "Page not found - IFF",
+        "heading": "Page Not Found"
+      },
+      {
+        "url": "https://archive.floorball.sport/estonia/",
+        "status": 200,
+        "redirectLocation": null,
+        "title": "Estonia - IFF Main Site",
+        "heading": "Estonia"
+      },
+      {
+        "url": "https://support.apple.com/en-gb/guide/iphone/iph21d1e1f56/ios",
+        "status": 200,
+        "redirectLocation": null,
+        "title": "View and delete your call history on iPhone – Apple Support (UK)",
+        "heading": "View and delete your call history on iPhone",
+        "botDiagnostic": "Apple X-Debug reports cookieAbsent/shield bot fail but the actual response is 200 and contains the intended article."
+      },
+      {
+        "url": "https://support.apple.com/en-us/118239",
+        "status": 200,
+        "redirectLocation": null,
+        "title": "Download and stream shows, movies, sports, and events from your Apple TV subscription and Apple TV channels - Apple Support"
+      },
+      {
+        "url": "https://support.apple.com/en-us/119602",
+        "status": 200,
+        "redirectLocation": null,
+        "title": "Redownload TV shows and movies that you purchased - Apple Support"
+      },
+      {
+        "url": "https://support.apple.com/en-us/121877",
+        "status": 200,
+        "redirectLocation": null,
+        "title": "About purchasing movies, TV shows, music, books, and ringtones from Apple - Apple Support"
+      }
+    ],
+    "noChange": [
+      {
+        "clueId": "built-in-technology-inventions-easy-expansion-014",
+        "url": "https://support.apple.com/en-gb/guide/iphone/iph21d1e1f56/ios",
+        "reason": "Fresh web read and exact-checker-header local GET both returned HTTP200 and the intended call-history article. Earlier 404 is not reproducible; cause not established. No replacement justified."
+      }
+    ]
+  },
+  "baselineArtifacts": [
+    {
+      "file": "docs/content-review/2026-10-11/accepted-repairs.json",
+      "sha256": "925713e9815db838a9c995ff89a090f195274be16401e7cbef9839cb645793c6"
+    },
+    {
+      "file": "docs/content-review/2026-10-11/repair-deltas.json",
+      "sha256": "36f473e298cac4289a8286dc61d43e3799d9c06bd0b52b3f6f7994893be20d00"
+    },
+    {
+      "file": "resources/content/seed.sqlite",
+      "sha256": "54eebcb372b926fcdd9551ff8e69aa4932c81797469a31d8300551f6c09b6d24"
+    },
+    {
+      "file": "content/reports/release-inventory.json",
+      "sha256": "26cb18cf264145110c500a6d69da600e66af0f0b02477f2e35ececbd579096f7"
+    },
+    {
+      "file": "content/reports/source-check-cache.json",
+      "sha256": "5f40221e81987e285c768ecad427b4a7b220754e901f2773699997a93228cdb4"
+    }
+  ],
+  "entries": [
+    {
+      "clueId": "built-in-estonia-clue-0451",
+      "batchId": "15-estonia",
+      "categorySetId": "built-in-estonia-set-091",
+      "repairKind": "official-source-url-migration",
+      "gameplayUnchanged": true,
+      "sourceChangeFields": [
+        "source_url",
+        "source_retrieved_at"
+      ],
+      "operations": [
+        {
+          "file": "content/authored/15-estonia.csv",
+          "fileBeforeSha256": "865fe095882d7520861a490cd10d5514da0ef23e996b51e6931743db358707ee",
+          "selector": {
+            "clue_id": "built-in-estonia-clue-0451"
+          },
+          "sourceFieldPath": "row source fields",
+          "before": {
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28"
+          },
+          "after": {
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://archive.floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-10-12"
+          },
+          "recordBefore": {
+            "clue_id": "built-in-estonia-clue-0451",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "",
+            "clue_en": "Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?",
+            "clue_et": "",
+            "response_en": "Floorball",
+            "response_et": "",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "explanation_et": "",
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "untranslated",
+            "enabled": "true"
+          },
+          "recordAfter": {
+            "clue_id": "built-in-estonia-clue-0451",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "",
+            "clue_en": "Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?",
+            "clue_et": "",
+            "response_en": "Floorball",
+            "response_et": "",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "explanation_et": "",
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://archive.floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-10-12",
+            "translation_status": "untranslated",
+            "enabled": "true"
+          },
+          "rawRecordBefore": "built-in-estonia-clue-0451,built-in-estonia,Estonia / Eesti,built-in-estonia-set-091,board,round-two,1,hard,sports,Games Estonia Plays,,\"Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?\",,Floorball,,,,Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.,,Estonia — International Floorball Federation,https://floorball.sport/estonia/,all-rights-reserved,2026-08-28,untranslated,true\r\n",
+          "rawRecordAfter": "built-in-estonia-clue-0451,built-in-estonia,Estonia / Eesti,built-in-estonia-set-091,board,round-two,1,hard,sports,Games Estonia Plays,,\"Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?\",,Floorball,,,,Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.,,Estonia — International Floorball Federation,https://archive.floorball.sport/estonia/,all-rights-reserved,2026-10-12,untranslated,true\r\n",
+          "fileAfterSha256": "e9620b95a0c0054d2b1fee9fb404e181781e8ec1c8f19234ac98a02b48e789ed"
+        },
+        {
+          "file": "content/generated/15-estonia.en-et.csv",
+          "fileBeforeSha256": "bef562412cb3d9efad4a7c52d4b71390ee6ecd4f21bf86044b7c858ef0dac769",
+          "selector": {
+            "clue_id": "built-in-estonia-clue-0451"
+          },
+          "sourceFieldPath": "row source fields",
+          "before": {
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28"
+          },
+          "after": {
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://archive.floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-10-12"
+          },
+          "recordBefore": {
+            "clue_id": "built-in-estonia-clue-0451",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?",
+            "clue_et": "Millist saalivõistkonnaala mängitakse Eestis kergete keppide, poordide ja aukudega plastpalliga?",
+            "response_en": "Floorball",
+            "response_et": "Saalihoki",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "explanation_et": "Saalihoki õõnes plastpall ja kerged kepid võimaldavad kiiret saalimängu ilma jäähoki jää ja uiskudeta.",
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          "recordAfter": {
+            "clue_id": "built-in-estonia-clue-0451",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?",
+            "clue_et": "Millist saalivõistkonnaala mängitakse Eestis kergete keppide, poordide ja aukudega plastpalliga?",
+            "response_en": "Floorball",
+            "response_et": "Saalihoki",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "explanation_et": "Saalihoki õõnes plastpall ja kerged kepid võimaldavad kiiret saalimängu ilma jäähoki jää ja uiskudeta.",
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://archive.floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-10-12",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          "rawRecordBefore": "built-in-estonia-clue-0451,built-in-estonia,Estonia / Eesti,built-in-estonia-set-091,board,round-two,1,hard,sports,Games Estonia Plays,\"Mängud, mida Eesti mängib\",\"Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?\",\"Millist saalivõistkonnaala mängitakse Eestis kergete keppide, poordide ja aukudega plastpalliga?\",Floorball,Saalihoki,,,Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.,Saalihoki õõnes plastpall ja kerged kepid võimaldavad kiiret saalimängu ilma jäähoki jää ja uiskudeta.,Estonia — International Floorball Federation,https://floorball.sport/estonia/,all-rights-reserved,2026-08-28,reviewed,true\r\n",
+          "rawRecordAfter": "built-in-estonia-clue-0451,built-in-estonia,Estonia / Eesti,built-in-estonia-set-091,board,round-two,1,hard,sports,Games Estonia Plays,\"Mängud, mida Eesti mängib\",\"Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?\",\"Millist saalivõistkonnaala mängitakse Eestis kergete keppide, poordide ja aukudega plastpalliga?\",Floorball,Saalihoki,,,Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.,Saalihoki õõnes plastpall ja kerged kepid võimaldavad kiiret saalimängu ilma jäähoki jää ja uiskudeta.,Estonia — International Floorball Federation,https://archive.floorball.sport/estonia/,all-rights-reserved,2026-10-12,reviewed,true\r\n",
+          "fileAfterSha256": "1503577b75e98b1478f535476683078ec8a4ec6d20c8559361a747f39be03b8d"
+        },
+        {
+          "file": "content/evidence/15-estonia.jsonl",
+          "fileBeforeSha256": "d013081ddf7390b0c68089aef32e7731e0eedf961992fc8de2a24b6a68d6c302",
+          "selector": {
+            "clueId": "built-in-estonia-clue-0451"
+          },
+          "sourceFieldPath": "supportingSource",
+          "before": {
+            "sourceId": "official:iff:estonia",
+            "title": "Estonia — International Floorball Federation",
+            "url": "https://floorball.sport/estonia/",
+            "license": "all-rights-reserved",
+            "retrievedAt": "2026-08-28"
+          },
+          "after": {
+            "sourceId": "official:iff:estonia",
+            "title": "Estonia — International Floorball Federation",
+            "url": "https://archive.floorball.sport/estonia/",
+            "license": "all-rights-reserved",
+            "retrievedAt": "2026-10-12"
+          },
+          "recordBefore": {
+            "version": 1,
+            "clueId": "built-in-estonia-clue-0451",
+            "batchId": "15-estonia",
+            "factKey": "estonia:sport:floorball-estonia:built-in-estonia-clue-0451:manual-fact",
+            "subjectKey": "sport:floorball-estonia",
+            "assertion": "Floorball — Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "origin": "compatibleOpen",
+            "authoring": {
+              "author": "Codex Estonia Lane B Author",
+              "authoredAt": "2026-08-28T01:00:00.000Z"
+            },
+            "supportingSource": {
+              "sourceId": "official:iff:estonia",
+              "title": "Estonia — International Floorball Federation",
+              "url": "https://floorball.sport/estonia/",
+              "license": "all-rights-reserved",
+              "retrievedAt": "2026-08-28"
+            },
+            "inspiration": null,
+            "factualReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Factual approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "editorialReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Editorial approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "translationReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Translation approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "adultPolicyReview": null
+          },
+          "recordAfter": {
+            "version": 1,
+            "clueId": "built-in-estonia-clue-0451",
+            "batchId": "15-estonia",
+            "factKey": "estonia:sport:floorball-estonia:built-in-estonia-clue-0451:manual-fact",
+            "subjectKey": "sport:floorball-estonia",
+            "assertion": "Floorball — Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "origin": "compatibleOpen",
+            "authoring": {
+              "author": "Codex Estonia Lane B Author",
+              "authoredAt": "2026-08-28T01:00:00.000Z"
+            },
+            "supportingSource": {
+              "sourceId": "official:iff:estonia",
+              "title": "Estonia — International Floorball Federation",
+              "url": "https://archive.floorball.sport/estonia/",
+              "license": "all-rights-reserved",
+              "retrievedAt": "2026-10-12"
+            },
+            "inspiration": null,
+            "factualReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Factual approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "editorialReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Editorial approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "translationReview": {
+              "reviewer": "Codex independent reviewer /root/estonia_review_b",
+              "reviewedAt": "2026-08-28T04:12:39.757Z",
+              "decision": "approved",
+              "notes": "Translation approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9."
+            },
+            "adultPolicyReview": null
+          },
+          "rawRecordBefore": "{\"version\":1,\"clueId\":\"built-in-estonia-clue-0451\",\"batchId\":\"15-estonia\",\"factKey\":\"estonia:sport:floorball-estonia:built-in-estonia-clue-0451:manual-fact\",\"subjectKey\":\"sport:floorball-estonia\",\"assertion\":\"Floorball — Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.\",\"origin\":\"compatibleOpen\",\"authoring\":{\"author\":\"Codex Estonia Lane B Author\",\"authoredAt\":\"2026-08-28T01:00:00.000Z\"},\"supportingSource\":{\"sourceId\":\"official:iff:estonia\",\"title\":\"Estonia — International Floorball Federation\",\"url\":\"https://floorball.sport/estonia/\",\"license\":\"all-rights-reserved\",\"retrievedAt\":\"2026-08-28\"},\"inspiration\":null,\"factualReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Factual approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"editorialReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Editorial approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"translationReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Translation approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"adultPolicyReview\":null}\n",
+          "rawRecordAfter": "{\"version\":1,\"clueId\":\"built-in-estonia-clue-0451\",\"batchId\":\"15-estonia\",\"factKey\":\"estonia:sport:floorball-estonia:built-in-estonia-clue-0451:manual-fact\",\"subjectKey\":\"sport:floorball-estonia\",\"assertion\":\"Floorball — Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.\",\"origin\":\"compatibleOpen\",\"authoring\":{\"author\":\"Codex Estonia Lane B Author\",\"authoredAt\":\"2026-08-28T01:00:00.000Z\"},\"supportingSource\":{\"sourceId\":\"official:iff:estonia\",\"title\":\"Estonia — International Floorball Federation\",\"url\":\"https://archive.floorball.sport/estonia/\",\"license\":\"all-rights-reserved\",\"retrievedAt\":\"2026-10-12\"},\"inspiration\":null,\"factualReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Factual approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"editorialReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Editorial approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"translationReview\":{\"reviewer\":\"Codex independent reviewer /root/estonia_review_b\",\"reviewedAt\":\"2026-08-28T04:12:39.757Z\",\"decision\":\"approved\",\"notes\":\"Translation approval bound to independent PASS report SHA-256 80D1F0A141F4E21749E91117CA3E0EFFD6C72FBF0D563D4FA9A7EFA56D3D6AF9.\"},\"adultPolicyReview\":null}\n",
+          "fileAfterSha256": "aa6af325faae9a60bde9119f9c19ca8ac99644c14cc298e2597cda0d34e4d0ba"
+        }
+      ],
+      "siblingContext": {
+        "languageCoverage": [
+          "en",
+          "et"
+        ],
+        "categorySetId": "built-in-estonia-set-091",
+        "count": 5,
+        "rows": [
+          {
+            "clue_id": "built-in-estonia-clue-0451",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which indoor team sport, played with light sticks, boards and a perforated plastic ball, is organised in Estonia through national leagues?",
+            "clue_et": "Millist saalivõistkonnaala mängitakse Eestis kergete keppide, poordide ja aukudega plastpalliga?",
+            "response_en": "Floorball",
+            "response_et": "Saalihoki",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Floorball’s hollow plastic ball and lightweight sticks allow fast indoor play without the ice or skates used in hockey.",
+            "explanation_et": "Saalihoki õõnes plastpall ja kerged kepid võimaldavad kiiret saalimängu ilma jäähoki jää ja uiskudeta.",
+            "source_title": "Estonia — International Floorball Federation",
+            "source_url": "https://floorball.sport/estonia/",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-estonia-clue-0452",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "2",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which Estonian chess grandmaster was nicknamed the “Crown Prince of Chess”?",
+            "clue_et": "Millist Eesti male suurmeistrit hüüti „male kroonprintsiks“?",
+            "response_en": "Paul Keres",
+            "response_et": "Paul Keres",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Keres represented Estonia at chess Olympiads and is commemorated on Estonia’s two-euro coin issued for his centenary.",
+            "explanation_et": "Keres esindas Eestit maleolümpiatel ning tema sajandat sünniaastapäeva tähistati Eesti kaheeurose mälestusmündiga.",
+            "source_title": "Paul Keres — Wikipedia (revision 1370326561)",
+            "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370326561",
+            "source_license": "CC-BY-SA-4.0",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-estonia-clue-0453",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Players slide small discs toward corner pockets in which Baltic tabletop game also played in Estonia?",
+            "clue_et": "Millises ka Eestis mängitavas Balti lauamängus lükatakse väikesi kettaid nurgataskutesse?",
+            "response_en": "Novuss",
+            "response_et": "Novus",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Players propel small discs with cues toward four corner pockets while trying to clear their own colour first.",
+            "explanation_et": "Mängijad löövad kiidega väikseid kettaid nelja nurgatasku poole ning püüavad oma värvi kettad esimesena laualt eemaldada.",
+            "source_title": "Novuss — Wikipedia (revision 1361453038)",
+            "source_url": "https://en.wikipedia.org/w/index.php?oldid=1361453038",
+            "source_license": "CC-BY-SA-4.0",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-estonia-clue-0454",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "4",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which traditional Estonian throwing game asks players to topple wooden targets arranged inside two marked boxes?",
+            "clue_et": "Millises traditsioonilises Eesti viskemängus püütakse kahte märgitud kasti paigutatud puidust sihtmärke ümber lüüa?",
+            "response_en": "Kurn",
+            "response_et": "Kurnimäng",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Descriptions preserved in the Estonian Folklore Archives show that layouts and local rules varied between communities.",
+            "explanation_et": "Eesti Rahvaluule Arhiivis talletatud kirjeldused näitavad, et sihtmärkide paigutus ja kohalikud reeglid erinesid paiguti.",
+            "source_title": "Kurnimäng — Estonian Folklore Archives",
+            "source_url": "https://www.folklore.ee/ukauka/arhiiv/items/show/1544",
+            "source_license": "all-rights-reserved",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-estonia-clue-0455",
+            "pack_id": "built-in-estonia",
+            "pack_name": "Estonia / Eesti",
+            "category_set_id": "built-in-estonia-set-091",
+            "content_kind": "board",
+            "round": "round-two",
+            "tier": "5",
+            "difficulty": "hard",
+            "macro_topic": "sports",
+            "category_name_en": "Games Estonia Plays",
+            "category_name_et": "Mängud, mida Eesti mängib",
+            "clue_en": "Which traditional Estonian card game for four players uses a 36-card pack and gives the game to the side that takes five tricks?",
+            "clue_et": "Millises traditsioonilises Eesti nelja mängija kaardimängus kasutatakse 36 kaarti ning võidab pool, kes saab viis tihi?",
+            "response_en": "Brus",
+            "response_et": "Brus",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Partners sit opposite one another, and the compact 36-card pack removes ranks below six.",
+            "explanation_et": "Partnerid istuvad vastamisi ning 36-kaardilisest pakist puuduvad kuuet madalamad kaardid.",
+            "source_title": "Brus card game — Wikipedia (revision 1242696299)",
+            "source_url": "https://en.wikipedia.org/w/index.php?oldid=1242696299",
+            "source_license": "CC-BY-SA-4.0",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          }
+        ]
+      },
+      "primarySupport": [
+        {
+          "url": "https://archive.floorball.sport/estonia/",
+          "role": "proposed citation; same official Estonia member page preserved by IFF",
+          "observedTitle": "Estonia - IFF Main Site",
+          "observation": "Names the Estonian Floorball Union/Eesti Saalihoki Liit and links IFF stories about Estonian national champions and the Latvian-Estonian Men's League."
+        },
+        {
+          "url": "https://archive.floorball.sport/2023/05/05/estonian-and-italian-league-champions-crowned/",
+          "role": "national-league primary support linked from the proposed page",
+          "observation": "Fresh direct web read of this IFF story reports Sparta as 2023 Estonian champions in both the womens and mens categories. The mens team beat Jogeva SK Tahe/Olivia in the fifth final match. It directly supports organised national floorball competitions in Estonia."
+        },
+        {
+          "url": "https://archive.floorball.sport/this-is-floorball/floorball-in-a-nutshell/",
+          "role": "equipment and play supplementary primary support",
+          "observation": "Explains teams, sticks and shoes, lighter carbon-fiber stick shafts, and a rink made from connected boards; the clue does not require skates or ice."
+        },
+        {
+          "url": "https://archive.floorball.sport/cloudfront/2018/08/learn-start-play.pdf",
+          "role": "ball supplementary primary support",
+          "observation": "IFF's learning material describes a hollow plastic ball with 26 holes."
+        }
+      ],
+      "licensing": {
+        "retainedLabel": "all-rights-reserved",
+        "observedRightsHolder": "International Floorball Federation (IFF)",
+        "primaryTermsUrl": "https://inside.floorball.sport/privacy-policy/",
+        "copyrightObservation": "IFF's current site pages display copyright 2026 International Floorball Federation (IFF). The official archive page and linked privacy policy do not display an open-content reuse licence.",
+        "permissionConclusion": "No Creative Commons, public-domain or other adaptation grant was located. Keep the restrictive existing label; use the URL as factual citation only. The privacy policy covers data processing and is not a content licence.",
+        "limitations": "The phrase all-rights-reserved is a conservative existing bank label, not a newly discovered explicit licence text. No page text or media is proposed for copying."
+      },
+      "preservedEvidenceFields": [
+        "sourceId",
+        "factKey",
+        "subjectKey",
+        "assertion",
+        "origin",
+        "authoring",
+        "inspiration",
+        "factualReview",
+        "editorialReview",
+        "translationReview",
+        "adultPolicyReview"
+      ],
+      "reviewRequirement": "Do not apply on author authority. Independent reviewer must read the full five-row EN/ET context and approve the exact proposal hash. Existing historical approvals are retained as historical, not asserted as fresh approval of these changed source fields."
+    },
+    {
+      "clueId": "built-in-adult-clue-0353",
+      "batchId": "14-adult",
+      "categorySetId": "built-in-adult-set-071",
+      "repairKind": "source-subject-correction",
+      "gameplayUnchanged": true,
+      "sourceChangeFields": [
+        "source_title",
+        "source_url",
+        "source_retrieved_at"
+      ],
+      "operations": [
+        {
+          "file": "content/authored/14-adult.csv",
+          "fileBeforeSha256": "4466945aa7f89f19627e36fab77b6ad83c642ef2c0829e65c2b82d26a8141c3a",
+          "selector": {
+            "clue_id": "built-in-adult-clue-0353"
+          },
+          "sourceFieldPath": "row source fields",
+          "before": {
+            "source_title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "source_url": "https://support.apple.com/en-us/118239",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-08-28"
+          },
+          "after": {
+            "source_title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+            "source_url": "https://support.apple.com/en-us/121877",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-10-12"
+          },
+          "recordBefore": {
+            "clue_id": "built-in-adult-clue-0353",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "",
+            "clue_en": "This purchase saves a complete film or episode file to a device for later offline playback.",
+            "clue_et": "",
+            "response_en": "Digital download",
+            "response_et": "",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "explanation_et": "",
+            "source_title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "source_url": "https://support.apple.com/en-us/118239",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "untranslated",
+            "enabled": "true"
+          },
+          "recordAfter": {
+            "clue_id": "built-in-adult-clue-0353",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "",
+            "clue_en": "This purchase saves a complete film or episode file to a device for later offline playback.",
+            "clue_et": "",
+            "response_en": "Digital download",
+            "response_et": "",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "explanation_et": "",
+            "source_title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+            "source_url": "https://support.apple.com/en-us/121877",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-10-12",
+            "translation_status": "untranslated",
+            "enabled": "true"
+          },
+          "rawRecordBefore": "built-in-adult-clue-0353,built-in-adult,Adult (Mature) / Täiskasvanutele,built-in-adult-set-071,board,round-one,3,hard,adult-entertainment-history,From Cinema to Streaming,,This purchase saves a complete film or episode file to a device for later offline playback.,,Digital download,,,,A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.,,Redownload TV shows and movies that you purchased — Apple Support,https://support.apple.com/en-us/118239,Proprietary; citation-only,2026-08-28,untranslated,true\r\n",
+          "rawRecordAfter": "built-in-adult-clue-0353,built-in-adult,Adult (Mature) / Täiskasvanutele,built-in-adult-set-071,board,round-one,3,hard,adult-entertainment-history,From Cinema to Streaming,,This purchase saves a complete film or episode file to a device for later offline playback.,,Digital download,,,,A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.,,\"About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support\",https://support.apple.com/en-us/121877,Proprietary; citation-only,2026-10-12,untranslated,true\r\n",
+          "fileAfterSha256": "acfc6c27197f7cfa1858fd93fcf770d2468344bcf08703da3547c8b2143c2ade"
+        },
+        {
+          "file": "content/generated/14-adult.en-et.csv",
+          "fileBeforeSha256": "1a598fd0677e99af7b2b901331b1a57e474ab98f783be50cbc95654960a2343b",
+          "selector": {
+            "clue_id": "built-in-adult-clue-0353"
+          },
+          "sourceFieldPath": "row source fields",
+          "before": {
+            "source_title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "source_url": "https://support.apple.com/en-us/118239",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-08-28"
+          },
+          "after": {
+            "source_title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+            "source_url": "https://support.apple.com/en-us/121877",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-10-12"
+          },
+          "recordBefore": {
+            "clue_id": "built-in-adult-clue-0353",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "This purchase saves a complete film or episode file to a device for later offline playback.",
+            "clue_et": "Selle ostuga salvestatakse terve filmi või osa fail seadmesse, et seda hiljem võrguühenduseta vaadata.",
+            "response_en": "Digital download",
+            "response_et": "Digitaalne allalaadimine",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "explanation_et": "Digitaalselt ostetud filmi saab laadida tervikliku failina seadmesse, et vaadata seda hiljem võrguühenduseta, mitte üksnes ühenduse ajal voogedastada.",
+            "source_title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "source_url": "https://support.apple.com/en-us/118239",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          "recordAfter": {
+            "clue_id": "built-in-adult-clue-0353",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "This purchase saves a complete film or episode file to a device for later offline playback.",
+            "clue_et": "Selle ostuga salvestatakse terve filmi või osa fail seadmesse, et seda hiljem võrguühenduseta vaadata.",
+            "response_en": "Digital download",
+            "response_et": "Digitaalne allalaadimine",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "explanation_et": "Digitaalselt ostetud filmi saab laadida tervikliku failina seadmesse, et vaadata seda hiljem võrguühenduseta, mitte üksnes ühenduse ajal voogedastada.",
+            "source_title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+            "source_url": "https://support.apple.com/en-us/121877",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-10-12",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          "rawRecordBefore": "built-in-adult-clue-0353,built-in-adult,Adult (Mature) / Täiskasvanutele,built-in-adult-set-071,board,round-one,3,hard,adult-entertainment-history,From Cinema to Streaming,Kinost voogedastuseni,This purchase saves a complete film or episode file to a device for later offline playback.,\"Selle ostuga salvestatakse terve filmi või osa fail seadmesse, et seda hiljem võrguühenduseta vaadata.\",Digital download,Digitaalne allalaadimine,,,A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.,\"Digitaalselt ostetud filmi saab laadida tervikliku failina seadmesse, et vaadata seda hiljem võrguühenduseta, mitte üksnes ühenduse ajal voogedastada.\",Redownload TV shows and movies that you purchased — Apple Support,https://support.apple.com/en-us/118239,Proprietary; citation-only,2026-08-28,reviewed,true\r\n",
+          "rawRecordAfter": "built-in-adult-clue-0353,built-in-adult,Adult (Mature) / Täiskasvanutele,built-in-adult-set-071,board,round-one,3,hard,adult-entertainment-history,From Cinema to Streaming,Kinost voogedastuseni,This purchase saves a complete film or episode file to a device for later offline playback.,\"Selle ostuga salvestatakse terve filmi või osa fail seadmesse, et seda hiljem võrguühenduseta vaadata.\",Digital download,Digitaalne allalaadimine,,,A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.,\"Digitaalselt ostetud filmi saab laadida tervikliku failina seadmesse, et vaadata seda hiljem võrguühenduseta, mitte üksnes ühenduse ajal voogedastada.\",\"About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support\",https://support.apple.com/en-us/121877,Proprietary; citation-only,2026-10-12,reviewed,true\r\n",
+          "fileAfterSha256": "321b326843195f011fa1e94d85fc0b27f915fb3125b8d03c663cf2822a04ad46"
+        },
+        {
+          "file": "content/evidence/14-adult.jsonl",
+          "fileBeforeSha256": "a0309b2156d979df7dab2883fca15ffd1c74d219f59fb5c4237774dc8fc8eda8",
+          "selector": {
+            "clueId": "built-in-adult-clue-0353"
+          },
+          "sourceFieldPath": "supportingSource",
+          "before": {
+            "sourceId": "adult-source:built-in-adult-clue-0353:7894070f3425d5a6",
+            "title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "url": "https://support.apple.com/en-us/118239",
+            "license": "Proprietary; citation-only",
+            "retrievedAt": "2026-08-28"
+          },
+          "after": {
+            "sourceId": "adult-source:built-in-adult-clue-0353:7894070f3425d5a6",
+            "title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+            "url": "https://support.apple.com/en-us/121877",
+            "license": "Proprietary; citation-only",
+            "retrievedAt": "2026-10-12"
+          },
+          "recordBefore": {
+            "version": 1,
+            "clueId": "built-in-adult-clue-0353",
+            "batchId": "14-adult",
+            "factKey": "adult:built-in-adult-clue-0353:19d3f9706e8f5253fbaea4a6",
+            "subjectKey": "digital-download",
+            "assertion": "Digital download — A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "origin": "compatibleOpen",
+            "authoring": {
+              "author": "Codex Adult Seventh Repair Author",
+              "authoredAt": "2026-08-28T03:16:18.100Z"
+            },
+            "supportingSource": {
+              "sourceId": "adult-source:built-in-adult-clue-0353:7894070f3425d5a6",
+              "title": "Redownload TV shows and movies that you purchased — Apple Support",
+              "url": "https://support.apple.com/en-us/118239",
+              "license": "Proprietary; citation-only",
+              "retrievedAt": "2026-08-28"
+            },
+            "inspiration": null,
+            "factualReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Factual approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "editorialReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Editorial approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "translationReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Translation approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "adultPolicyReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Adult policy approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.",
+              "policy": "adult-mature-non-graphic-v1"
+            }
+          },
+          "recordAfter": {
+            "version": 1,
+            "clueId": "built-in-adult-clue-0353",
+            "batchId": "14-adult",
+            "factKey": "adult:built-in-adult-clue-0353:19d3f9706e8f5253fbaea4a6",
+            "subjectKey": "digital-download",
+            "assertion": "Digital download — A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "origin": "compatibleOpen",
+            "authoring": {
+              "author": "Codex Adult Seventh Repair Author",
+              "authoredAt": "2026-08-28T03:16:18.100Z"
+            },
+            "supportingSource": {
+              "sourceId": "adult-source:built-in-adult-clue-0353:7894070f3425d5a6",
+              "title": "About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support",
+              "url": "https://support.apple.com/en-us/121877",
+              "license": "Proprietary; citation-only",
+              "retrievedAt": "2026-10-12"
+            },
+            "inspiration": null,
+            "factualReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Factual approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "editorialReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Editorial approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "translationReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Translation approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes."
+            },
+            "adultPolicyReview": {
+              "reviewer": "Codex Adult Final Reviewer 051-100 / adult_rereview_b",
+              "reviewedAt": "2026-08-28T06:21:20.9116108+03:00",
+              "decision": "approved",
+              "notes": "Adult policy approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.",
+              "policy": "adult-mature-non-graphic-v1"
+            }
+          },
+          "rawRecordBefore": "{\"version\":1,\"clueId\":\"built-in-adult-clue-0353\",\"batchId\":\"14-adult\",\"factKey\":\"adult:built-in-adult-clue-0353:19d3f9706e8f5253fbaea4a6\",\"subjectKey\":\"digital-download\",\"assertion\":\"Digital download — A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.\",\"origin\":\"compatibleOpen\",\"authoring\":{\"author\":\"Codex Adult Seventh Repair Author\",\"authoredAt\":\"2026-08-28T03:16:18.100Z\"},\"supportingSource\":{\"sourceId\":\"adult-source:built-in-adult-clue-0353:7894070f3425d5a6\",\"title\":\"Redownload TV shows and movies that you purchased — Apple Support\",\"url\":\"https://support.apple.com/en-us/118239\",\"license\":\"Proprietary; citation-only\",\"retrievedAt\":\"2026-08-28\"},\"inspiration\":null,\"factualReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Factual approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"editorialReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Editorial approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"translationReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Translation approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"adultPolicyReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Adult policy approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\",\"policy\":\"adult-mature-non-graphic-v1\"}}\n",
+          "rawRecordAfter": "{\"version\":1,\"clueId\":\"built-in-adult-clue-0353\",\"batchId\":\"14-adult\",\"factKey\":\"adult:built-in-adult-clue-0353:19d3f9706e8f5253fbaea4a6\",\"subjectKey\":\"digital-download\",\"assertion\":\"Digital download — A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.\",\"origin\":\"compatibleOpen\",\"authoring\":{\"author\":\"Codex Adult Seventh Repair Author\",\"authoredAt\":\"2026-08-28T03:16:18.100Z\"},\"supportingSource\":{\"sourceId\":\"adult-source:built-in-adult-clue-0353:7894070f3425d5a6\",\"title\":\"About purchasing movies, TV shows, music, books, and ringtones from Apple — Apple Support\",\"url\":\"https://support.apple.com/en-us/121877\",\"license\":\"Proprietary; citation-only\",\"retrievedAt\":\"2026-10-12\"},\"inspiration\":null,\"factualReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Factual approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"editorialReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Editorial approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"translationReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Translation approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\"},\"adultPolicyReview\":{\"reviewer\":\"Codex Adult Final Reviewer 051-100 / adult_rereview_b\",\"reviewedAt\":\"2026-08-28T06:21:20.9116108+03:00\",\"decision\":\"approved\",\"notes\":\"Adult policy approval from task-7-adult-seventh-manual-editorial-rereview-051-100.md, bound to the attested manifest and CSV hashes.\",\"policy\":\"adult-mature-non-graphic-v1\"}}\n",
+          "fileAfterSha256": "68b8a1854c32a1c03f28bd787a511fb1966c5efad0fc04996204c36f7ca0a9e1"
+        }
+      ],
+      "siblingContext": {
+        "languageCoverage": [
+          "en",
+          "et"
+        ],
+        "categorySetId": "built-in-adult-set-071",
+        "count": 5,
+        "rows": [
+          {
+            "clue_id": "built-in-adult-clue-0351",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "1",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "Many auditoriums showing different films share one building in this cinema type.",
+            "clue_et": "Selles kinotüübis jagavad üht hoonet paljud saalid, mis näitavad erinevaid filme.",
+            "response_en": "Multiplex",
+            "response_et": "Multiplekskino",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A multiplex is a movie theater complex with multiple screens or auditoriums within a single complex. They are usually housed in a specially designed building.",
+            "explanation_et": "Multipleks on mitme ekraani või auditooriumiga kinokompleks ühes kompleksis. Tavaliselt asuvad nad spetsiaalselt projekteeritud hoones.",
+            "source_title": "Multiplex — Wikipedia",
+            "source_url": "https://en.wikipedia.org/wiki/Multiplex_(movie_theater)",
+            "source_license": "CC-BY-SA-4.0",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-adult-clue-0352",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "2",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "This theater or cinema performance takes place in the afternoon rather than the evening.",
+            "clue_et": "See teatri- või kinoseanss toimub õhtuse aja asemel pärastlõunal.",
+            "response_en": "Matinee",
+            "response_et": "Päevane etendus",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A matinee is a theatrical performance or film screening held during the daytime, especially in the afternoon.",
+            "explanation_et": "Päevane etendus ehk matinee on teatrietendus või kinoseanss, mis toimub päeval, eriti pärastlõunal.",
+            "source_title": "Matinee — Wikipedia",
+            "source_url": "https://en.wikipedia.org/wiki/Matinee",
+            "source_license": "CC-BY-SA-4.0",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-adult-clue-0353",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "3",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "This purchase saves a complete film or episode file to a device for later offline playback.",
+            "clue_et": "Selle ostuga salvestatakse terve filmi või osa fail seadmesse, et seda hiljem võrguühenduseta vaadata.",
+            "response_en": "Digital download",
+            "response_et": "Digitaalne allalaadimine",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "A digital movie purchase can be downloaded as a complete file to a device for later offline viewing rather than streamed only while connected.",
+            "explanation_et": "Digitaalselt ostetud filmi saab laadida tervikliku failina seadmesse, et vaadata seda hiljem võrguühenduseta, mitte üksnes ühenduse ajal voogedastada.",
+            "source_title": "Redownload TV shows and movies that you purchased — Apple Support",
+            "source_url": "https://support.apple.com/en-us/118239",
+            "source_license": "Proprietary; citation-only",
+            "source_retrieved_at": "2026-08-28",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-adult-clue-0354",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "4",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "Which Austrian-born filmmaker directed the 1927 silent science-fiction epic Metropolis?",
+            "clue_et": "Milline Austrias sündinud filmitegija lavastas 1927. aasta tumm-ulmefilmi „Metropolis“?",
+            "response_en": "Fritz Lang",
+            "response_et": "Fritz Lang",
+            "accepted_variants_en": "",
+            "accepted_variants_et": "",
+            "explanation_en": "Fritz Lang directed Metropolis, released in 1927.",
+            "explanation_et": "Fritz Lang lavastas 1927. aastal linastunud filmi „Metropolis“.",
+            "source_title": "Metropolis — British Film Institute",
+            "source_url": "https://www.bfi.org.uk/lists/10-great-robot-films",
+            "source_license": "All rights reserved",
+            "source_retrieved_at": "2026-10-11",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          },
+          {
+            "clue_id": "built-in-adult-clue-0355",
+            "pack_id": "built-in-adult",
+            "pack_name": "Adult (Mature) / Täiskasvanutele",
+            "category_set_id": "built-in-adult-set-071",
+            "content_kind": "board",
+            "round": "round-one",
+            "tier": "5",
+            "difficulty": "hard",
+            "macro_topic": "adult-entertainment-history",
+            "category_name_en": "From Cinema to Streaming",
+            "category_name_et": "Kinost voogedastuseni",
+            "clue_en": "Which French director made the 1967 crime film Le samouraï, starring Alain Delon as Jef Costello?",
+            "clue_et": "Milline Prantsuse režissöör lavastas 1967. aasta krimifilmi „Le samouraï“, milles Alain Delon mängib Jef Costellot?",
+            "response_en": "Jean-Pierre Melville",
+            "response_et": "Jean-Pierre Melville",
+            "accepted_variants_en": "Melville",
+            "accepted_variants_et": "Melville",
+            "explanation_en": "Jean-Pierre Melville directed Le samouraï.",
+            "explanation_et": "Jean-Pierre Melville lavastas filmi „Le samouraï“.",
+            "source_title": "Le samouraï — The Criterion Collection",
+            "source_url": "https://www.criterion.com/films/184-le-samoura",
+            "source_license": "All rights reserved",
+            "source_retrieved_at": "2026-10-11",
+            "translation_status": "reviewed",
+            "enabled": "true"
+          }
+        ]
+      },
+      "primarySupport": [
+        {
+          "url": "https://support.apple.com/en-us/121877",
+          "role": "proposed citation; directly supports unchanged purchase and offline explanation",
+          "observedTitle": "About purchasing movies, TV shows, music, books, and ringtones from Apple - Apple Support",
+          "observation": "Apple says purchased digital media can be permanently downloaded to a compatible iPhone, iPad, Mac or Windows PC, and accessed without an internet connection once downloaded. The page links instructions for purchased TV shows and movies."
+        },
+        {
+          "url": "https://support.apple.com/en-us/119602",
+          "role": "supplementary primary support; title-matching alternative not selected",
+          "observedTitle": "Redownload TV shows and movies that you purchased - Apple Support",
+          "observation": "Provides download steps for movies and TV shows that were purchased. This matches the old stored title, but 121877 more directly supports offline access."
+        },
+        {
+          "url": "https://support.apple.com/en-us/118239",
+          "role": "old citation; not selected",
+          "observedTitle": "Download and stream shows, movies, sports, and events from your Apple TV subscription and Apple TV channels - Apple Support",
+          "observation": "HTTP 200; focuses on subscription/channel downloads and their expiry limits. It does not establish the purchased-media premise as directly as 121877."
+        }
+      ],
+      "licensing": {
+        "retainedLabel": "Proprietary; citation-only",
+        "primaryTermsUrl": "https://www.apple.com/legal/internet-services/terms/site.html",
+        "observation": "Apple's Website Terms of Use Content section identifies site content as Apple-owned/controlled/licensed and copyright-protected, restricts republication/distribution without express prior written consent, and permits certain downloaded product information only for personal non-commercial informational use subject to conditions.",
+        "permissionConclusion": "This is not an open-content or adaptation licence. Preserve the proprietary citation-only label; independently authored clue wording and factual citation grant no rights to reproduce Apple page text or media."
+      },
+      "preservedEvidenceFields": [
+        "sourceId",
+        "factKey",
+        "subjectKey",
+        "assertion",
+        "origin",
+        "authoring",
+        "inspiration",
+        "factualReview",
+        "editorialReview",
+        "translationReview",
+        "adultPolicyReview"
+      ],
+      "reviewRequirement": "Do not apply on author authority. Independent reviewer must read the full five-row EN/ET context and approve the exact proposal hash. Existing historical approvals are retained as historical, not asserted as fresh approval of these changed source fields."
+    }
+  ],
+  "metadataDependencies": [
+    {
+      "file": "tests/unit/content/productionValidator.test.ts",
+      "line": 832,
+      "assumption": "CSV and evidence source title, URL, licence and retrieved date must agree exactly; changing only a CSV creates SOURCE_MISMATCH.",
+      "requiredTreatment": "Apply an approved source change to authored/generated CSV and supportingSource in evidence together; keep assertion and gameplay unchanged."
+    },
+    {
+      "file": "tests/unit/content/contentRepairReview.test.ts",
+      "line": 31,
+      "assumption": "Any later byte change makes accepted source-artifact review stale, including metadata-only changes.",
+      "requiredTreatment": "A separately approved follow-on review must cover the new artifact/evidence hashes. Do not present October 11 after hashes as approval of modified bytes."
+    },
+    {
+      "file": "scripts/content/contentRepairReview.ts",
+      "line": 7,
+      "assumption": "The active review path is fixed to docs/content-review/2026-10-11/accepted-repairs.json; assertContentRepairReview hashes the entire authored/generated/evidence bank and assertReviewedInputHashes binds retained inputs/evidence.",
+      "requiredTreatment": "Agree and independently review the follow-on approval mechanism before application; this proposal does not overwrite the existing approval or modify the guard."
+    },
+    {
+      "file": "tests/unit/content/preRepairContent.ts",
+      "line": 12,
+      "assumption": "Historical fixture reconstruction requires current file SHA256 to match the approved after hash and exact repair-delta lines to restore before hash.",
+      "requiredTreatment": "The separately approved follow-on repair must preserve reconstruction to the original historical bytes; merely refreshing after hashes without exact source-line deltas would fail."
+    },
+    {
+      "file": "tests/unit/content/allDifficultyExpansion.test.ts",
+      "line": 40,
+      "assumption": "Historical authored/generated/evidence records must preserve all original fields, including citation metadata.",
+      "requiredTreatment": "Keep frozen expansion baselines unchanged and use reviewed reconstruction."
+    },
+    {
+      "file": "tests/unit/content/easyExpansion.test.ts",
+      "line": 690,
+      "assumption": "Original 7,174 records are hashed field-for-field after reconstructing pre-repair content.",
+      "requiredTreatment": "Retain original baseline manifest and reconstruct both changed source records to their original metadata."
+    },
+    {
+      "file": "tests/unit/content/easyExpansionReleaseExceptions.test.ts",
+      "line": 134,
+      "assumption": "Its accepted original 8,374-row source/evidence fixture is reconstructed through readPreRepairContent.",
+      "requiredTreatment": "Maintain historical byte reconstruction; do not rewrite historical release exception approvals."
+    },
+    {
+      "file": "resources/content/seed.sqlite",
+      "assumption": "Stored per-question citation must match the approved generated CSV/evidence, including licence and retrieval date.",
+      "requiredTreatment": "After separate approval and application, rebuild and verify seed/release inventory and packaged seed parity; do not reuse the current seed hash as evidence of new metadata."
+    }
+  ],
+  "applicationConstraints": [
+    "Only the six authored/generated/evidence operations listed here are proposed.",
+    "No gameplay, origin classification, sourceId, fact/subject identity, review object, translation status, topic membership or sibling record changes are proposed.",
+    "The existing source licence labels stay restrictive; no new permission or compatibility classification is inferred.",
+    "Accepted repairs, historical baseline manifests, source cache, reports and production seed are not modified by creation of this proposal.",
+    "The full five-question groups are provided for factual, translation, independence, difficulty and attribution review.",
+    "An approved implementation would need a separately reviewed current-byte bridge, exact historical reconstruction, regenerated seed/inventory, and fresh source/packaged checks."
+  ],
+  "verification": {
+    "proposedClueCount": 2,
+    "siblingContextCounts": [
+      {
+        "categorySetId": "built-in-estonia-set-091",
+        "count": 5
+      },
+      {
+        "categorySetId": "built-in-adult-set-071",
+        "count": 5
+      }
+    ],
+    "testsRun": false,
+    "applicationPerformed": false,
+    "candidateBytesValidatedInMemory": true,
+    "bankAndEvidenceHashesMatchedAtProposalReadback": true,
+    "candidateMutationFieldChecks": "Only CSV source_title/source_url/source_retrieved_at and matching evidence.supportingSource properties differ. source_license/sourceId and all other row/evidence fields are retained."
+  }
+}

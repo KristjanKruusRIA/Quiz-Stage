@@ -105,7 +105,7 @@ describe('enabled authority one-way alias leakage', () => {
 });
 
 describe('cumulative enabled authority collisions', () => {
-  it('keeps the released board authority fixed at 8,200 rows', () => {
+  it('keeps the pre-expansion board authority fixed at 8,200 rows', () => {
     expect(completeEnabledAuthorityCorpus()).toHaveLength(8_200);
   });
 

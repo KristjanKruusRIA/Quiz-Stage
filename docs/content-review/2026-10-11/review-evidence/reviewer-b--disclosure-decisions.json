@@ -1,0 +1,86 @@
+[
+  {
+    "signature": "built-in-art-architecture-set-041|built-in-art-architecture-playable-corpus-036|built-in-art-architecture-playable-corpus-040|en|response",
+    "status": "legitimate-context",
+    "reason": "The shared generic museum-type phrase does not identify New York’s institution: Louisiana Museum of Modern Art is a different named Danish museum. Manhattan and the two holdings are still required to identify MoMA.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-art-architecture-set-041",
+    "exposedClueId": "built-in-art-architecture-playable-corpus-036",
+    "revealingClueId": "built-in-art-architecture-playable-corpus-040",
+    "language": "en",
+    "field": "response",
+    "answer": "the Museum of Modern Art"
+  },
+  {
+    "signature": "built-in-art-architecture-set-137|built-in-art-architecture-all-level-expansion-0083|built-in-art-architecture-all-level-expansion-0082|et|prompt",
+    "status": "legitimate-context",
+    "reason": "Naine in the Cradle question means a woman, while the other question asks a marital relationship. The woman is Morisot’s sister, so this word does not identify Cézanne’s wife.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-art-architecture-set-137",
+    "exposedClueId": "built-in-art-architecture-all-level-expansion-0083",
+    "revealingClueId": "built-in-art-architecture-all-level-expansion-0082",
+    "language": "et",
+    "field": "prompt",
+    "answer": "naine"
+  },
+  {
+    "signature": "built-in-art-architecture-set-166|built-in-art-architecture-all-level-expansion-0226|built-in-art-architecture-all-level-expansion-0227|en|prompt",
+    "status": "legitimate-context",
+    "reason": "French describes Bartholdi’s nationality here. It does not identify Daniel Chester French, whose surname is independently required by the Lincoln-statue question.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-art-architecture-set-166",
+    "exposedClueId": "built-in-art-architecture-all-level-expansion-0226",
+    "revealingClueId": "built-in-art-architecture-all-level-expansion-0227",
+    "language": "en",
+    "field": "prompt",
+    "answer": "French"
+  },
+  {
+    "signature": "built-in-film-television-set-055|built-in-film-television-accessible-corpus-066|built-in-film-television-accessible-corpus-070|en|explanation",
+    "status": "legitimate-context",
+    "reason": "Friends is an ordinary relationship noun in the How I Met Your Mother explanation. It does not identify the six characters or Central Perk in the separate series-identification question.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-film-television-set-055",
+    "exposedClueId": "built-in-film-television-accessible-corpus-066",
+    "revealingClueId": "built-in-film-television-accessible-corpus-070",
+    "language": "en",
+    "field": "explanation",
+    "answer": "Friends"
+  },
+  {
+    "signature": "built-in-sports-games-set-001|built-in-sports-games-accessible-corpus-126|built-in-sports-games-accessible-corpus-130|en|prompt",
+    "status": "legitimate-context",
+    "reason": "In-goal names the rugby scoring area; the other question asks the name of a football score. The compound area name describes a different sport and does not state that football’s score is called a goal.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-sports-games-set-001",
+    "exposedClueId": "built-in-sports-games-accessible-corpus-126",
+    "revealingClueId": "built-in-sports-games-accessible-corpus-130",
+    "language": "en",
+    "field": "prompt",
+    "answer": "a goal"
+  },
+  {
+    "signature": "built-in-sports-games-set-001|built-in-sports-games-accessible-corpus-126|built-in-sports-games-accessible-corpus-130|en|explanation",
+    "status": "legitimate-context",
+    "reason": "In-goal names the rugby scoring area; the other question asks the name of a football score. The compound area name describes a different sport and does not state that football’s score is called a goal.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-sports-games-set-001",
+    "exposedClueId": "built-in-sports-games-accessible-corpus-126",
+    "revealingClueId": "built-in-sports-games-accessible-corpus-130",
+    "language": "en",
+    "field": "explanation",
+    "answer": "a goal"
+  },
+  {
+    "signature": "built-in-sports-games-set-015|built-in-sports-games-accessible-corpus-031|built-in-sports-games-accessible-corpus-034|en|explanation",
+    "status": "legitimate-context",
+    "reason": "Skates is a verb describing the penalized team playing with fewer players. It neither names footwear nor describes its use for gliding and turning; the equipment question remains independent.",
+    "reviewedAt": "2026-10-11",
+    "categoryId": "built-in-sports-games-set-015",
+    "exposedClueId": "built-in-sports-games-accessible-corpus-031",
+    "revealingClueId": "built-in-sports-games-accessible-corpus-034",
+    "language": "en",
+    "field": "explanation",
+    "answer": "skates"
+  }
+]

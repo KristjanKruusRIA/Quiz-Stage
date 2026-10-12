@@ -1,0 +1,9 @@
+
+ RUN  v4.1.10 C:/Projects/QuizStage
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  19:58:25
+   Duration  72.65s (transform 342ms, setup 0ms, import 870ms, tests 71.49s, environment 0ms)
+

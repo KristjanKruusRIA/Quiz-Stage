@@ -1,0 +1,264 @@
+{
+  "createdAt": "2026-10-09T15:27:19.556Z",
+  "questions": 11374,
+  "categories": 2414,
+  "counts": [
+    {
+      "batchId": "01-history",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "02-geography",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "03-science-nature",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "04-literature-language",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "05-art-architecture",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "06-music",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "07-film-television",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "08-sports-games",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "09-food-drink",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "10-technology-inventions",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "11-politics-economics-society",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "12-mythology-religion-philosophy",
+      "questions": 850,
+      "categories": 170
+    },
+    {
+      "batchId": "13-finals",
+      "questions": 174,
+      "categories": 174
+    },
+    {
+      "batchId": "14-adult",
+      "questions": 500,
+      "categories": 100
+    },
+    {
+      "batchId": "15-estonia",
+      "questions": 500,
+      "categories": 100
+    }
+  ],
+  "files": [
+    {
+      "batchId": "01-history",
+      "generated": {
+        "path": "content\\generated\\01-history.en-et.csv",
+        "sha256": "e41a5e26f2cb34b2126c46e731c26d5eeedeccb677ce761d941a57d92db41d3e"
+      },
+      "evidence": {
+        "path": "content/evidence/01-history.jsonl",
+        "sha256": "31a12eadccaea794c0028486a01d8e543af7c64615a6a2fb2a8a4993d2dc7ee2"
+      },
+      "reviewSnapshotSha256": "82b82ec8bbc7a21a7e849437eb64ed0c5384e32f128964b3ae27c285739a4ffc"
+    },
+    {
+      "batchId": "02-geography",
+      "generated": {
+        "path": "content\\generated\\02-geography.en-et.csv",
+        "sha256": "d7aa86bbbc162eafe26c91dbae4874dcf24e10c12cf2d1f104103c5ce490c7d3"
+      },
+      "evidence": {
+        "path": "content/evidence/02-geography.jsonl",
+        "sha256": "7454f56ae71051e3184e52751c445ddba73b4d144c36f753af0289c9a555d043"
+      },
+      "reviewSnapshotSha256": "4f6758d4d149300c4cdff7e752fa26dddd436f3b4f5b68060806bf6904989315"
+    },
+    {
+      "batchId": "03-science-nature",
+      "generated": {
+        "path": "content\\generated\\03-science-nature.en-et.csv",
+        "sha256": "3a75164404f5c2a3fd3fc44acfaf8c340cb8ff81320c6188d619d87cea7b85cd"
+      },
+      "evidence": {
+        "path": "content/evidence/03-science-nature.jsonl",
+        "sha256": "9aa8d727d01d84c8739a228db5f29af8982d02e41ab48ee491a343e0e84c37d9"
+      },
+      "reviewSnapshotSha256": "2e7943d11d65395415a741874cd6f22c32a6563a3dbaafad9e3b8e03cdea4eda"
+    },
+    {
+      "batchId": "04-literature-language",
+      "generated": {
+        "path": "content\\generated\\04-literature-language.en-et.csv",
+        "sha256": "84974089fee2c96bf0abee7e5de158ee4050500be4918f8b8500dff02e428473"
+      },
+      "evidence": {
+        "path": "content/evidence/04-literature-language.jsonl",
+        "sha256": "62af2febce824b5de7a28eb43252dddb51a5da39f7353a9c89f8928b1a460fc8"
+      },
+      "reviewSnapshotSha256": "f17c7d5f6826b40a8df0e8ea26d12e47b1a85157209dfbff4bf6ab361c6591c4"
+    },
+    {
+      "batchId": "05-art-architecture",
+      "generated": {
+        "path": "content\\generated\\05-art-architecture.en-et.csv",
+        "sha256": "9c32b40bdd21582bb83f1215ddb12e3e28d113c54b03d4fea27984713b4b24d1"
+      },
+      "evidence": {
+        "path": "content/evidence/05-art-architecture.jsonl",
+        "sha256": "8af3f149cf8f81a55c80fc42ef9d9abf0e86a11ed00f5acd6dcc13a47cbd438a"
+      },
+      "reviewSnapshotSha256": "438d0fdb31bc7981bc723be3f5e22fd3210e7131df6fd331cb4158982de9c4b2"
+    },
+    {
+      "batchId": "06-music",
+      "generated": {
+        "path": "content\\generated\\06-music.en-et.csv",
+        "sha256": "f27fef6c03bfbeb2c5357742bdb16d8f3d382481a8a3a917e5c7f49ea574d617"
+      },
+      "evidence": {
+        "path": "content/evidence/06-music.jsonl",
+        "sha256": "9e36c36c65a1ecf634905ae213ea7a3811de7371d9e8c507f1bc9c57cc067dee"
+      },
+      "reviewSnapshotSha256": "878fb300d914c5f90fec17b7f108ab57beb30a53b3183062a8cfaad404dfe97f"
+    },
+    {
+      "batchId": "07-film-television",
+      "generated": {
+        "path": "content\\generated\\07-film-television.en-et.csv",
+        "sha256": "7216b5d7853aba605e25291ecf9821bed834b2fc16020bd69c3330e6cb5c9c10"
+      },
+      "evidence": {
+        "path": "content/evidence/07-film-television.jsonl",
+        "sha256": "9ac8f7c5b65d6157333482945b2942550ff4aaa42cd56bfcc6ebe9a09eeffcfd"
+      },
+      "reviewSnapshotSha256": "0d383dbdf13047a0248cf9f2d83ce1008bd1a7ba1f2a01c33efbd0ded94a6dc4"
+    },
+    {
+      "batchId": "08-sports-games",
+      "generated": {
+        "path": "content\\generated\\08-sports-games.en-et.csv",
+        "sha256": "aaa6793db68d0149e958e2fd2d5b670fe5f20a46b05e6048f4ea3a2421cdc577"
+      },
+      "evidence": {
+        "path": "content/evidence/08-sports-games.jsonl",
+        "sha256": "6b721a59952595ee03d14fb0d654373ee6431d7c6ae2fbb54020e05e3bfde58d"
+      },
+      "reviewSnapshotSha256": "c9b301d81df3cc394b0929648e4acbcd53bfdc57d34e85795ddd3eb65fda4dd2"
+    },
+    {
+      "batchId": "09-food-drink",
+      "generated": {
+        "path": "content\\generated\\09-food-drink.en-et.csv",
+        "sha256": "6f8eaa3fd570aba990b55c9a669a867dd5142914fb2338170282e27472f41d5c"
+      },
+      "evidence": {
+        "path": "content/evidence/09-food-drink.jsonl",
+        "sha256": "96aad37055ca862ce40c1b048c254eace0601a7178c985f9d88bc8e467706c09"
+      },
+      "reviewSnapshotSha256": "b19bf82923beac65c48723c9430e7948226e4ecd1a67f857f22e04369ccc2395"
+    },
+    {
+      "batchId": "10-technology-inventions",
+      "generated": {
+        "path": "content\\generated\\10-technology-inventions.en-et.csv",
+        "sha256": "146578a41cf9b6a9be692766dc8ad857a21fc66bebf240e79ae0c313f1cf77e6"
+      },
+      "evidence": {
+        "path": "content/evidence/10-technology-inventions.jsonl",
+        "sha256": "5f1aaa8748030e8cd3452decd011bfa8b8446c6fe08ff9481f1a5b9d1a026580"
+      },
+      "reviewSnapshotSha256": "664b6718de1cf53471a17ba7a369751e4434dbc1cccaf1b8c91a72ca37ee639d"
+    },
+    {
+      "batchId": "11-politics-economics-society",
+      "generated": {
+        "path": "content\\generated\\11-politics-economics-society.en-et.csv",
+        "sha256": "ddfa46cd7255a44a7e2cb6836535b2d198941496d4821d43ed62e9f528cb6b3a"
+      },
+      "evidence": {
+        "path": "content/evidence/11-politics-economics-society.jsonl",
+        "sha256": "f7719e55949a31a25b5ab52993f511284528067834f25c1e2d81dc0dfed32d11"
+      },
+      "reviewSnapshotSha256": "324e810e57ecf7cf3bf9007431398493ab5375fac43fdc22fa9f0af1895dd8a2"
+    },
+    {
+      "batchId": "12-mythology-religion-philosophy",
+      "generated": {
+        "path": "content\\generated\\12-mythology-religion-philosophy.en-et.csv",
+        "sha256": "f012b0691cdb9706f372628985718e4b014dbdfe9a4f25d0b311a3d55e91b188"
+      },
+      "evidence": {
+        "path": "content/evidence/12-mythology-religion-philosophy.jsonl",
+        "sha256": "01c44aa49cf65fc8f0fb99259a97720b72f095cf9873c4ab534dea808939a426"
+      },
+      "reviewSnapshotSha256": "ef2967f6589a877aacf1ab9ce34c37373de43ae0c316d120d496bdd4f00a6b1b"
+    },
+    {
+      "batchId": "13-finals",
+      "generated": {
+        "path": "content\\generated\\13-finals.en-et.csv",
+        "sha256": "6cc7a375cc02da653ed9eaeebf129ce9594ca3c1171e4f11907e56cea438e3f6"
+      },
+      "evidence": {
+        "path": "content/evidence/13-finals.jsonl",
+        "sha256": "f5dd93473b5044e6b0ca80cc231b4be9fa3818125a418ad27fc53740669e6197"
+      },
+      "reviewSnapshotSha256": "849249e01268ca14f415afdd4d0f9077273497e3aa49f43b45ba1f0f185b75ba"
+    },
+    {
+      "batchId": "14-adult",
+      "generated": {
+        "path": "content\\generated\\14-adult.en-et.csv",
+        "sha256": "663097a82107d1965e8715a44e2e87068c2c5a0f13d2d364d5461616536213cf"
+      },
+      "evidence": {
+        "path": "content/evidence/14-adult.jsonl",
+        "sha256": "37ddc4ae0ec348286697e09e84bea4de9df75317d2fa8e72faa8e8f205f195db"
+      },
+      "reviewSnapshotSha256": "25454d9d1971da9b94cf37004b95bb7529cc52b60ef91d1b89f97050cacbe13c"
+    },
+    {
+      "batchId": "15-estonia",
+      "generated": {
+        "path": "content\\generated\\15-estonia.en-et.csv",
+        "sha256": "c457d3ffe857463c837c8580499df2fe0236f0fc02577f7d34a1aa3121250873"
+      },
+      "evidence": {
+        "path": "content/evidence/15-estonia.jsonl",
+        "sha256": "e1d4ac3fe6737b637ec0dffd84be5953d379c5a620947c3bc786e8bd2197f6a5"
+      },
+      "reviewSnapshotSha256": "e48178b72c547bc68d6bc9073d4e43c31fae174d3c50e78c85ee49272c726960"
+    }
+  ]
+}

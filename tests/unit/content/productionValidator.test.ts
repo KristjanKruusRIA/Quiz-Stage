@@ -11,7 +11,7 @@ import {
   validateProductionContent,
   type ProductionValidationInput,
 } from '../../../scripts/content/validate';
-import { contentEvidenceSchema, serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
+import { contentEvidenceSchema, parseEvidenceJsonl, serializeEvidence, type ContentEvidence } from '../../../scripts/content/evidence';
 import {
   FINAL_BATCH,
   PRODUCTION_BATCHES,
@@ -27,6 +27,47 @@ import {
 } from '../../../scripts/content/sourceCheck';
 
 type Row = Record<(typeof CSV_COLUMNS)[number], string>;
+
+it('blocks a public sibling-answer giveaway despite a generic report waiver', () => {
+  const rows = Array.from({ length: 5 }, (_, index) => boardRow(0, index + 1));
+  rows[0] = { ...rows[0], response_en: 'Neil Armstrong', accepted_variants_en: 'Armstrong' };
+  rows[1] = { ...rows[1], explanation_en: 'Apollo 11 carried Neil Armstrong to the Moon.' };
+  const input = [{ file: 'test.csv', pack: parsePackCsv(csv(rows)) }];
+  const result = validateProductionContent(input, { mode: 'batch', checkAnswerDisclosures: true,
+    reviewedExceptionIds: ['ANSWER_DISCLOSURE_REVIEW_REQUIRED'] });
+  expect(result.issues).toEqual(expect.arrayContaining([expect.objectContaining({ code: 'ANSWER_DISCLOSURE_REVIEW_REQUIRED', severity: 'error' })]));
+});
+
+it('requires actual source terms instead of a placeholder source-licence label', () => {
+  const input = [{ file: 'test.csv', pack: parsePackCsv(csv([boardRow(0, 1, { source_license: 'source' })])) }];
+  expect(validateProductionContent(input, { mode: 'batch' }).issues).toEqual(expect.arrayContaining([
+    expect.objectContaining({ code: 'INVALID_SOURCE_LICENSE', severity: 'error' }),
+  ]));
+});
+
+it('validates original factual wording while retaining a restricted reference licence', () => {
+  const row = boardRow(0, 1, {
+    pack_id: 'built-in-estonia', macro_topic: 'history',
+    clue_en: 'Which Estonian city links its Town Hall Square Christmas-tree tradition to the Brotherhood of the Blackheads in 1441?',
+    clue_et: 'Milline Eesti linn seostab oma Raekoja platsi jõulupuutraditsiooni Mustpeade vennaskonna ja 1441. aastaga?',
+    response_en: 'Tallinn', response_et: 'Tallinn',
+    explanation_en: "The city's tourism service traces the square's Christmas-tree tradition to 1441 and the Brotherhood of the Blackheads.",
+    explanation_et: 'Linna turismiteenistus seostab väljaku jõulupuutraditsiooni 1441. aasta ja Mustpeade vennaskonnaga.',
+    source_title: 'Tallinn Town Hall Square — Visit Tallinn',
+    source_url: 'https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square',
+    source_license: 'All rights reserved', source_retrieved_at: '2026-10-11',
+  });
+  const record = { ...evidenceFor(row, '15-estonia'), origin: 'original', inspiration: null };
+  const evidence = parseEvidenceJsonl(`${JSON.stringify(record)}\n`);
+  expect(evidence.get(row.clue_id)).toEqual(expect.objectContaining({
+    origin: 'original', inspiration: null,
+    supportingSource: expect.objectContaining({ license: 'All rights reserved' }),
+  }));
+  const result = validateProductionContent([input('original.csv', [row])], {
+    mode: 'batch', evidenceByClueId: evidence,
+  });
+  expect(result.issues.filter(({ code }) => ['MISSING_EVIDENCE', 'SOURCE_MISMATCH', 'GENERIC_SOURCE', 'INVALID_SOURCE_LICENSE'].includes(code))).toEqual([]);
+});
 
 const temporaryDirectories: string[] = [];
 
@@ -157,7 +198,7 @@ function boardBatchRows(batch: ProductionBatchDefinition, batchIndex = 0): Row[]
     for (const round of ['round-one', 'round-two'] as const) {
       const count = batch.distribution![difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
       for (let offset = 0; offset < count; offset += 1) {
-        const globalSetIndex = batchIndex * 120 + localSetIndex;
+          const globalSetIndex = batchIndex * 170 + localSetIndex;
         const categoryId = `${batch.id}-set-${localSetIndex}`;
         const subtheme = batch.subthemes[localSetIndex % batch.subthemes.length];
         for (let tier = 1; tier <= 5; tier += 1) {
@@ -1230,7 +1271,7 @@ describe('production content validation', () => {
     }
   }, 60_000);
 
-  it('summarizes an exact valid 8200/1640/174 inventory efficiently', () => {
+  it('summarizes an exact valid 11200/2240/174 inventory efficiently', () => {
     const corpus = releaseCorpus();
 
     const result = validateProductionContent(releaseInputs(corpus), {
@@ -1238,21 +1279,21 @@ describe('production content validation', () => {
     });
 
     expect(result.summary).toEqual({
-      boardClues: 8_200, categorySets: 1_640, distinctCategoryNames: 1_640,
-      finalClues: 174, easySets: 707, mediumSets: 467, hardSets: 466, builtInPacks: 15,
+      boardClues: 11_200, categorySets: 2_240, distinctCategoryNames: 2_240,
+      finalClues: 174, easySets: 907, mediumSets: 667, hardSets: 666, builtInPacks: 15,
     });
     expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
       corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board' && row.difficulty === difficulty).length,
-    ]))).toEqual({ easy: 3_535, medium: 2_335, hard: 2_330 });
+    ]))).toEqual({ easy: 4_535, medium: 3_335, hard: 3_330 });
     expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
       Object.fromEntries(['round-one', 'round-two'].map((round) => [round,
         corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'board'
           && row.difficulty === difficulty && row.round === round).length / 5,
       ])),
     ]))).toEqual({
-      easy: { 'round-one': 354, 'round-two': 353 },
-      medium: { 'round-one': 233, 'round-two': 234 },
-      hard: { 'round-one': 233, 'round-two': 233 },
+      easy: { 'round-one': 454, 'round-two': 453 },
+      medium: { 'round-one': 333, 'round-two': 334 },
+      hard: { 'round-one': 333, 'round-two': 333 },
     });
     expect(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty) => [difficulty,
       corpus.batches.flatMap((batch) => batch.rows).filter((row) => row.content_kind === 'final' && row.difficulty === difficulty).length,
@@ -1324,8 +1365,8 @@ describe('validator CLI boundaries and report publication', () => {
     ], { cwd: resolve('.'), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
     expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
     expect(JSON.parse(readFileSync(report, 'utf8')).validation.summary).toEqual({
-      boardClues: 8_200, categorySets: 1_640, distinctCategoryNames: 1_640,
-      finalClues: 174, easySets: 707, mediumSets: 467, hardSets: 466, builtInPacks: 15,
+      boardClues: 11_200, categorySets: 2_240, distinctCategoryNames: 2_240,
+      finalClues: 174, easySets: 907, mediumSets: 667, hardSets: 666, builtInPacks: 15,
     });
   }, 60_000);
 

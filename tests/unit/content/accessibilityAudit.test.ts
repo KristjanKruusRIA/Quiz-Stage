@@ -434,7 +434,7 @@ describe('accessibility audit', () => {
     ]);
   });
 
-  it('classifies all 44 current comma-bearing authority rows at TP4 FP0 FN0 TN40', () => {
+  it('classifies all 44 pre-repair comma-bearing authority rows at TP4 FP0 FN0 TN40', () => {
     const commaRows = completeCumulativeAuthorityCorpus().filter(({ response }) => (
       /,/u.test(response.en) || /,/u.test(response.et)
     ));

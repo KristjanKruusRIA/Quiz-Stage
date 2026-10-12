@@ -13,6 +13,7 @@ import { join, resolve } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
 import { afterEach, describe, expect, it } from 'vitest';
+import { readPreRepairContent } from './preRepairContent';
 import {
   REVIEWED_DATE_OR_NUMBER_PROMPT_OWNERS,
   REVIEWED_NUMERIC_RESPONSE_OWNERS,
@@ -207,14 +208,14 @@ type ProposedEasyCorpus = Readonly<{
 }>;
 
 function acceptedRows(path: string): readonly Record<string, string>[] {
-  return parse(readFileSync(path, 'utf8'), {
+  return parse(readPreRepairContent(path), {
     columns: true,
     skip_empty_lines: true,
   }) as Array<Record<string, string>>;
 }
 
 function acceptedEvidence(path: string): readonly ContentEvidence[] {
-  return readFileSync(path, 'utf8')
+  return readPreRepairContent(path)
     .split(/\r?\n/u)
     .filter((line) => line.trim() !== '')
     .map((line) => JSON.parse(line) as ContentEvidence);
@@ -231,10 +232,14 @@ function proposedEasyCorpus(): ProposedEasyCorpus {
         .filter((target) => target.batchId === batchId)
         .map(({ categorySetId }) => categorySetId),
     );
+    // This completed authoring phase uses the corpus before the all-level expansion.
     const result = applyAccessibleCorpus({
-      authoredRows: acceptedRows(resolve('content', 'authored', `${batchId}.csv`)),
-      generatedRows: acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`)),
-      evidence: acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`)),
+      authoredRows: acceptedRows(resolve('content', 'authored', `${batchId}.csv`))
+        .filter((row) => !row.clue_id.includes('-all-level-expansion-')),
+      generatedRows: acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`))
+        .filter((row) => !row.clue_id.includes('-all-level-expansion-')),
+      evidence: acceptedEvidence(resolve('content', 'evidence', `${batchId}.jsonl`))
+        .filter((record) => !record.clueId.includes('-all-level-expansion-')),
       targetCategorySetIds,
       titles: ACCESSIBLE_CATEGORY_TITLES.filter((title) => title.batchId === batchId),
       categories: categories.filter((category) => category.batchId === batchId),
@@ -922,7 +927,7 @@ describe('proposed complete easy corpus', () => {
     }
   });
 
-  it('keeps legacy accepted easy rows and evidence exactly in sync with the current source bank', () => {
+  it('keeps legacy accepted easy rows and evidence in sync before the separately approved content repairs', () => {
     const proposed = proposedEasyCorpus();
     const acceptedRowsForEasy = ACCEPTED_BATCHES.flatMap((batchId) =>
       acceptedRows(resolve('content', 'generated', `${batchId}.en-et.csv`))

@@ -1,0 +1,1088 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-061",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which anonymous British artist is famous for witty images that appear unexpectedly on city walls?",
+        "clue_et": "Milline anonüümne Briti kunstnik on kuulus vaimukate piltide poolest, mis ilmuvad ootamatult linnaseintele?",
+        "explanation_en": "Banksy’s identity remains unconfirmed, while his satirical wall images have become internationally recognisable.",
+        "explanation_et": "Banksy isik pole kinnitatud, kuid tema satiirilised seinapildid on saanud rahvusvaheliselt tuntuks."
+      },
+      "reviewNotes": "Removes the sibling stencil answer from both prompt and public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-065",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_et": "Milline Berliini vabaõhugalerii katab maalidega säilinud lõigu kunagisest linna kaheks jaganud müürist?",
+        "explanation_en": "Artists painted the surviving Berlin Wall section in 1990, after the border opened in 1989 and before German reunification.",
+        "explanation_et": "Kunstnikud maalisid säilinud Berliini müüri lõigu 1990. aastal, pärast piiri avamist 1989. aastal ja enne Saksamaa taasühinemist.",
+        "source_title": "Berlin Wall Foundation: The longest open-air gallery",
+        "source_url": "https://www.stiftung-berliner-mauer.de/de/east-side-gallery/historischer-ort/laengste-open-air-galerie",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Corrects the creation chronology and avoids calling the modern dividing wall an old city wall. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.stiftung-berliner-mauer.de/de/east-side-gallery/historischer-ort/laengste-open-air-galerie",
+          "observation": "Project began in March 1990 and opened 28 September 1990, before German reunification."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-071",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "The Pantheon’s concrete dome covers its circular main hall and has a central opening called an oculus.",
+        "explanation_et": "Pantheoni betoonkuppel katab selle ringikujulist peasaali ning selle keskel on avaus, mida nimetatakse okuluseks."
+      },
+      "reviewNotes": "Removes rotunda from the public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-074",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "What architectural term means a building or hall with a circular ground plan?",
+        "clue_et": "Milline arhitektuuritermin tähistab ringikujulise põhiplaaniga hoonet või saali?",
+        "explanation_en": "A rotunda is a building or interior space defined by its circular ground plan.",
+        "explanation_et": "Rotund on hoone või siseruum, mida iseloomustab ringikujuline põhiplaan."
+      },
+      "reviewNotes": "Removes the sibling dome answer and shared Pantheon example.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-075",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "A straight round tower can be modelled by which solid with two equal parallel circular ends and a curved side?",
+        "clue_et": "Millise ruumilise kujundina saab kujutada sirget ümartorni, millel on kaks võrdset paralleelset ringikujulist otspinda ja kumer külgpind?",
+        "response_en": "a cylinder",
+        "response_et": "silinder",
+        "accepted_variants_en": "cylinder;right circular cylinder",
+        "accepted_variants_et": "ringsilinder",
+        "explanation_en": "A circular cylinder has equal parallel circular ends joined by a curved surface.",
+        "explanation_et": "Ringsilindril on võrdsed paralleelsed ringikujulised otspinnad, mida ühendab kumer külgpind.",
+        "source_title": "Wolfram MathWorld: Cylinder",
+        "source_url": "https://mathworld.wolfram.com/Cylinder.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the compound dome response and triangle teaching with an independent familiar geometric solid. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://mathworld.wolfram.com/Cylinder.html",
+          "observation": "Defines a right circular cylinder with circular cross sections and parallel end planes."
+        }
+      ],
+      "subjectKey": "concept:cylinder",
+      "factFamily": "architectural-circular-solid"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-078",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Doric architecture is recognisable by its plain, sturdy-looking capitals.",
+        "explanation_et": "Dooria arhitektuuri tunneb ära lihtsate ja jõuliste kapiteelide järgi."
+      },
+      "reviewNotes": "Removes the closed three-order framing.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-079",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "What kind of Roman water-carrying structure crosses a river on stacked arches at the Pont du Gard?",
+        "clue_et": "Milline Rooma veetranspordirajatis ületab Pont du Gardis jõe üksteise kohal paiknevatel kaartel?",
+        "response_en": "an aqueduct",
+        "response_et": "akvedukt",
+        "accepted_variants_en": "aqueduct;aqueduct bridge",
+        "accepted_variants_et": "veesild",
+        "explanation_en": "The Pont du Gard carried the water channel of the aqueduct supplying the Roman city of Nîmes.",
+        "explanation_et": "Pont du Gard kandis Rooma Nîmes’i linna varustanud akvedukti veekanalit.",
+        "source_title": "Pont du Gard: The monument",
+        "source_url": "https://pontdugard.fr/en/discover/monument",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a second Greek-order identification with an independent Roman water structure. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://pontdugard.fr/en/discover/monument",
+          "observation": "Official site identifies the Pont du Gard as part of the Roman aqueduct supplying Nîmes."
+        }
+      ],
+      "subjectKey": "structure:aqueduct",
+      "factFamily": "roman-water-transport"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-080",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which medieval architectural style is especially associated with pointed arches and tall lancet windows?",
+        "clue_et": "Milline keskaegne arhitektuuristiil seostub eriti teravkaarte ja kõrgete lantsettakendega?",
+        "response_en": "Gothic",
+        "response_et": "gooti stiil",
+        "accepted_variants_en": "Gothic architecture",
+        "accepted_variants_et": "gootika;gooti arhitektuur",
+        "explanation_en": "Pointed arches and tall narrow windows are characteristic features of Gothic architecture.",
+        "explanation_et": "Teravkaared ja kõrged kitsad aknad on gooti arhitektuuri iseloomulikud tunnused.",
+        "source_title": "English Heritage: Medieval architecture",
+        "source_url": "https://www.english-heritage.org.uk/learn/story-of-england/medieval/architecture/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the final member of a closed Greek-order pool with a familiar independent architectural style. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.english-heritage.org.uk/learn/story-of-england/medieval/architecture/",
+          "observation": "Describes the rise of Gothic architecture with pointed arches and narrow lancet windows."
+        }
+      ],
+      "subjectKey": "style:gothic",
+      "factFamily": "medieval-pointed-arch-style"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-088",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "In which Italian city is the Gothic Duomo whose white-marble roof is crowded with spires and statues?",
+        "clue_et": "Millises Itaalia linnas asub gooti stiilis Duomo, mille valgest marmorist katusel kõrgub hulk fiaale ja kujusid?",
+        "response_en": "Milan",
+        "response_et": "Milano",
+        "accepted_variants_en": "Milano",
+        "accepted_variants_et": "Milan",
+        "source_title": "Veneranda Fabbrica del Duomo: The Cathedral",
+        "source_url": "https://www.duomomilano.it/en/art-and-culture/the-cathedral/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent reviewer C identified the given Milan plus Duomo as a supplied translated answer. Ask the familiar city from the independently recognizable marble Gothic cathedral instead; no sibling targets this city. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.duomomilano.it/en/art-and-culture/the-cathedral/",
+          "observation": "Independently rechecked the official cathedral history and indexed primary terrace description on 2026-10-11: the cathedral is in Milan, adopted Gothic construction with Candoglia marble, and its roof has numerous spires and statues. The city-identification question does not print the city's name."
+        }
+      ],
+      "subjectKey": "place:milan",
+      "factFamily": "milan:duomo-city"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-132",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Riga’s Alberta Street has early-1900s buildings with flowing lines, floral motifs and sculpted faces. Which decorative architectural style is this?",
+        "clue_et": "Riia Alberta tänava 1900. aastate alguse hooneid kaunistavad voolavad jooned, taimemotiivid ja skulptuursed näod. Milline dekoratiivne arhitektuuristiil see on?",
+        "response_en": "Art Nouveau",
+        "response_et": "juugend",
+        "accepted_variants_en": "Jugendstil",
+        "accepted_variants_et": "juugendstiil;Art Nouveau",
+        "explanation_en": "Alberta Street is a celebrated concentration of richly ornamented Art Nouveau buildings.",
+        "explanation_et": "Alberta tänav on tuntud rikkalikult kaunistatud juugendhoonete koondumiskoht.",
+        "source_title": "LiveRiga: Art Nouveau",
+        "source_url": "https://www.liveriga.com/en/7971-art-nouveau/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Changes response type from a second Baltic capital to a recognizable decorative style. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.liveriga.com/en/7971-art-nouveau/",
+          "observation": "Municipal tourism site describes Alberta Street buildings with flowing lines, floral motifs and early-1900s ornate facades."
+        }
+      ],
+      "subjectKey": "style:art-nouveau",
+      "factFamily": "riga-organic-facades"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-133",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Vilnius’s Saint Anne’s Church uses 33 different types of which reddish clay building material?",
+        "clue_et": "Vilniuse Püha Anna kiriku ehituses kasutati 33 eri sorti millist punakat savist ehitusmaterjali?",
+        "response_en": "brick",
+        "response_et": "tellis",
+        "accepted_variants_en": "bricks;clay brick",
+        "accepted_variants_et": "tellised;savitellis",
+        "explanation_en": "The church’s intricate façade was built from differently shaped clay bricks.",
+        "explanation_et": "Kiriku keerukas fassaad on ehitatud eri kujuga savitellistest.",
+        "source_title": "Go Vilnius: A UNESCO World Heritage City",
+        "source_url": "https://www.govilnius.lt/api/files/5e7aa8d7aff50997346e466a",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the third Baltic-capital identification with a material question. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.govilnius.lt/api/files/5e7aa8d7aff50997346e466a",
+          "observation": "Official city guide says Saint Anne’s Church was built using 33 kinds of clay bricks."
+        }
+      ],
+      "subjectKey": "material:brick",
+      "factFamily": "st-anne-construction-material"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-137",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which Marcel Breuer chair combines a bent tubular-steel frame with stretched seat, back and arm straps, inspired by a bicycle frame?",
+        "clue_et": "Milline Marcel Breueri tool ühendab jalgrattaraamist inspireeritud painutatud terastorud pingutatud istme-, selja- ja käetugedega?",
+        "source_title": "Knoll: Wassily Chair original design",
+        "source_url": "https://www.knoll.com/design-plan/product/wassily-chair?section=design",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the namesake and retains the chair’s design recognition. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.knoll.com/design-plan/product/wassily-chair?section=design",
+          "observation": "Manufacturer describes Breuer’s bent tubular-steel design and bicycle-frame inspiration."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-148",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "response_et": "tepitud tekk",
+        "accepted_variants_et": "tepptekk;lapitekk;tepitud lapitekk"
+      },
+      "reviewNotes": "Aligns the Estonian answer scope with quilting rather than requiring patchwork; variants support host judgement.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-071",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Eila Hiltunen arranged over 600 steel tubes to evoke Sibelius’s music and added the composer’s portrait after debate over the abstract design.",
+        "explanation_et": "Eila Hiltunen paigutas Sibeliuse muusika esilekutsumiseks üle 600 terastoru ning lisas abstraktse kavandi üle peetud vaidluse järel helilooja portree.",
+        "source_title": "HAM: The Sibelius Monument",
+        "source_url": "https://www.hamhelsinki.fi/en/sculptures/sibelius-monumentti-sibelius-monument/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the wrong exact pipe count with the curator’s documented count. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hamhelsinki.fi/en/sculptures/sibelius-monumentti-sibelius-monument/",
+          "observation": "HAM states over 600 steel tubes and explains the addition of the composer’s bust."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-083",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which ruined brick church stands on Toomemägi, with the university museum occupying its former choir?",
+        "clue_et": "Milline varemetes telliskirik seisab Toomemäel ning selle endises kooriruumis tegutseb ülikooli muuseum?",
+        "explanation_en": "The former choir of Tartu Cathedral was converted for the university library, which moved there in 1806; it later became home to the university museum.",
+        "explanation_et": "Tartu toomkiriku endine kooriruum ehitati ümber ülikooli raamatukogule, mis kolis sinna 1806. aastal; hiljem asus sinna ülikooli muuseum.",
+        "source_title": "University of Tartu Library: History",
+        "source_url": "https://utlib.ut.ee/en/content/history-university-tartu-library",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Corrects both the prompt and explanation: the choir was converted for the library, not originally for the museum. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://utlib.ut.ee/en/content/history-university-tartu-library",
+          "observation": "Library moved into the cathedral’s remodeled chancel in 1806; museum page confirms later museum occupation."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-138",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which early-eighteenth-century blue pigment also forms the image in cyanotype prints?",
+        "clue_et": "Milline 18. sajandi algusest pärit sinine pigment moodustab ka tsüanotüübi kujutise?",
+        "explanation_en": "In cyanotype printing, light acts on photosensitive iron salts to form an insoluble Prussian blue image; the pigment is the result of the process.",
+        "explanation_et": "Tsüanotüübis toimib valgus valgustundlikele rauasooladele, mille tulemusel tekib lahustumatu Preisi sinine kujutis; pigment on protsessi tulemus.",
+        "source_title": "V&A: A blueprint for the future: Cyanotypes by Anna Atkins",
+        "source_url": "https://www.vam.ac.uk/blog/caring-for-our-collections/a-blueprint-for-the-future-cyanotypes-by-anna-atkins",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Distinguishes the photosensitive iron salts from the resulting image pigment. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.vam.ac.uk/blog/caring-for-our-collections/a-blueprint-for-the-future-cyanotypes-by-anna-atkins",
+          "observation": "Describes iron-salt paper exposed to daylight to produce an insoluble Prussian blue image."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-169",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "What new title was given to Banksy’s Girl with Balloon after it partly shredded itself at Sotheby’s in 2018?",
+        "clue_et": "Milline uus pealkiri anti Banksy teosele „Girl with Balloon“, kui see 2018. aastal Sotheby’s oksjonil end osaliselt ribadeks purustas?",
+        "source_title": "Sotheby’s: Love is in the Bin created live at auction",
+        "source_url": "https://www.sothebys.com/en/articles/latest-banksy-artwork-love-is-in-the-bin-created-live-at-auction",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Explicitly asks for the post-shredding title to match the canonical answer. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.sothebys.com/en/articles/latest-banksy-artwork-love-is-in-the-bin-created-live-at-auction",
+          "observation": "Girl with Balloon partly shredded at the auction; transformed work was retitled Love is in the Bin."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-243",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Kusama’s first Infinity Mirror Room appeared in 1965; mirrors extend the apparent space and repeat the objects or lights within it.",
+        "explanation_et": "Kusama esimene lõpmatuse peegelruum ilmus 1965. aastal; peeglid avardavad näilist ruumi ja kordavad selles olevaid esemeid või tulesid.",
+        "source_title": "Hirshhorn: Infinity Mirror Rooms",
+        "source_url": "https://hirshhorn.si.edu/kusama/infinity-rooms/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Corrects the first mirrored-room date. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://hirshhorn.si.edu/kusama/infinity-rooms/",
+          "observation": "Dates first appearance of Phalli’s Field to Floor Show in New York in 1965."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-242",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "The installation lined Central Park paths with 7,500 saffron-coloured vinyl frames and hanging fabric panels.",
+        "explanation_et": "Installatsioon ääristas Central Parki teid 7500 safrankollase vinüülraami ja rippuvate kangapaneelidega.",
+        "source_title": "The Metropolitan Museum of Art: The Gates from the Roof",
+        "source_url": "https://www.metmuseum.org/exhibitions/listings/2005/the-gates",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the wrong frame material and retains a verified identifying fact. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.metmuseum.org/exhibitions/listings/2005/the-gates",
+          "observation": "Contemporary account describes 7,500 saffron-coloured vinyl gates hung with saffron fabric."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-292",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which 65-metre main chamber of Trinity College Dublin’s Old Library was built between 1712 and 1732 and traditionally housed 200,000 of its oldest books?",
+        "clue_et": "Milline Trinity College Dublini vana raamatukogu 65-meetrine peasaal ehitati aastatel 1712–1732 ja seal hoiti traditsiooniliselt 200 000 kogu vanimat raamatut?",
+        "source_title": "Trinity College Dublin: Old Library Redevelopment Project",
+        "source_url": "https://www.visittrinity.ie/book-of-kells/old-library-redevelopment-project/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Uses a stable historical holding rather than claiming books remain physically present during conservation. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.visittrinity.ie/book-of-kells/old-library-redevelopment-project/",
+          "observation": "States 200,000 books have been removed from the Long Room library chamber for conservation."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-easy-expansion-010",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which deep-blue painter’s pigment was once made from lapis lazuli and could cost more than gold?",
+        "clue_et": "Millist sügavsinist maalikunstipigmenti valmistati kunagi lasuriidist ja see võis maksta kullast rohkem?",
+        "response_en": "ultramarine",
+        "response_et": "ultramariin",
+        "accepted_variants_en": "ultramarine blue",
+        "accepted_variants_et": "ultramariinsinine",
+        "explanation_en": "Natural ultramarine came from the blue stone lapis lazuli; its rarity made it an expensive artists’ pigment.",
+        "explanation_et": "Looduslik ultramariin saadi sinisest lasuriidist; haruldus tegi sellest kalli kunstnikupigmendi.",
+        "source_title": "National Gallery: Colour Stories Blue",
+        "source_url": "https://www.nationalgallery.org.uk/podcast/colour-stories-blue",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces repeated raw/burnt earth naming with a separate natural-blue pigment fact; familiar colour terminology remains suitable for Easy tier 5. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nationalgallery.org.uk/podcast/colour-stories-blue",
+          "observation": "Explains that natural ultramarine was extracted from lapis lazuli and was once more precious than gold."
+        }
+      ],
+      "subjectKey": "pigment:ultramarine",
+      "factFamily": "lapis-lazuli-blue"
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0195",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Fallingwater’s terraces project beyond their supports over the waterfall. What structural term describes a beam or slab fixed at one end and free at the other?",
+        "clue_et": "Fallingwateri terrassid ulatuvad üle tugede kose kohale. Milline ehitustermin tähistab ühest otsast kinnitatud ja teisest otsast vaba tala või plaati?",
+        "response_en": "a cantilever",
+        "response_et": "konsool",
+        "accepted_variants_en": "cantilever;cantilever structure",
+        "accepted_variants_et": "konsooltala;konsoolne konstruktsioon",
+        "explanation_en": "Wright’s cantilevered terraces are anchored to the house’s central structure while their outer ends project freely.",
+        "explanation_et": "Wrighti konsoolterrassid on kinnitatud maja keskse konstruktsiooni külge, kuid nende välisotsad ulatuvad vabalt välja.",
+        "source_title": "Fallingwater: Designing Fallingwater",
+        "source_url": "https://fallingwater.org/history/the-kaufmanns-fallingwater/designing-fallingwater/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces incidental client biography with an independent structural concept at a famous building. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://fallingwater.org/history/the-kaufmanns-fallingwater/designing-fallingwater/",
+          "observation": "Official house history describes cantilevered concrete trays anchored to a central stone chimney mass."
+        }
+      ],
+      "subjectKey": "structure:cantilever",
+      "factFamily": "fallingwater-projecting-terraces"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-001",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Blue is a primary colour in the traditional painters’ RYB model.",
+        "explanation_et": "Sinine on maalikunstnike traditsioonilises RYB-mudelis põhivärv."
+      },
+      "reviewNotes": "The one retained RYB primary-identification item no longer lists any other response in its reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-002",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which neutral colour is made by mixing black and white paint?",
+        "clue_et": "Milline neutraalne värv saadakse musta ja valge värvi segamisel?",
+        "response_en": "grey",
+        "response_et": "hall",
+        "accepted_variants_en": "gray",
+        "accepted_variants_et": "hall värv",
+        "explanation_en": "Mixing black and white paint produces grey shades.",
+        "explanation_et": "Musta ja valge värvi segamisel saadakse hallid toonid.",
+        "source_title": "Royal Talens: Colour mixing theory",
+        "source_url": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a mixture that prints the sibling blue answer with an independent familiar neutral colour. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory",
+          "observation": "Manufacturer explains making grey shades by mixing black and white paint."
+        }
+      ],
+      "subjectKey": "colour:grey",
+      "factFamily": "black-white-paint-mixture"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-003",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "What term describes pairs of colours directly opposite one another on a colour wheel?",
+        "clue_et": "Millise terminiga nimetatakse värviringis teineteise vastas asuvate värvide paare?",
+        "response_en": "complementary colours",
+        "response_et": "komplementaarvärvid",
+        "accepted_variants_en": "complementary colors;complements",
+        "accepted_variants_et": "täiendvärvid;vastandvärvid",
+        "explanation_en": "Complementary colours lie opposite one another on a colour wheel and create strong contrast.",
+        "explanation_et": "Komplementaarvärvid asuvad värviringis teineteise vastas ja loovad tugeva kontrasti.",
+        "source_title": "Royal Talens: Colour mixing theory",
+        "source_url": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the blue/opposite-colour question with a separate colour-wheel relationship. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory",
+          "observation": "Manufacturer calls colours opposite one another on the colour circle complementary."
+        }
+      ],
+      "subjectKey": "concept:complementary-colours",
+      "factFamily": "opposite-wheel-colours"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-004",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which colour property describes how vivid or muted a colour is, and is often adjusted with a slider in photo editors?",
+        "clue_et": "Milline värviomadus kirjeldab, kui erksad või tuhmid on värvid, ning seda muudetakse fototöötluses sageli liuguriga?",
+        "response_en": "saturation",
+        "response_et": "küllastus",
+        "accepted_variants_en": "colour saturation;color saturation",
+        "accepted_variants_et": "värviküllastus",
+        "explanation_en": "Saturation describes colour intensity: more saturation makes colours more vivid, while less makes them more muted.",
+        "explanation_et": "Küllastus kirjeldab värvide intensiivsust: suurem küllastus muudab need erksamaks ja väiksem tuhmimaks.",
+        "source_title": "Adobe Learn: Make colors pop with saturation adjustments",
+        "source_url": "https://www.adobe.com/learn/lightroom-cc/web/make-colors-pop",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a second primary-colour elimination question with a familiar image-adjustment property. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.adobe.com/learn/lightroom-cc/web/make-colors-pop",
+          "observation": "Adobe identifies Saturation as the adjustment controlling overall colour intensity."
+        }
+      ],
+      "subjectKey": "property:saturation",
+      "factFamily": "colour-intensity"
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-005",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which printing primary is represented by C in CMYK, alongside magenta, yellow and black?",
+        "clue_et": "Millist trükivärvi tähistab CMYK-mudelis C magenta, kollase ja musta kõrval?"
+      },
+      "reviewNotes": "Removes the blue-green description, retaining the printing-model identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-009",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "response_en": "painting knife",
+        "accepted_variants_en": "artist’s knife;artists knife",
+        "explanation_en": "A painting knife can mix paint or apply it directly in thick strokes.",
+        "explanation_et": "Maalimisnoaga saab värvi segada või kanda seda otse pinnale paksude tõmmetena."
+      },
+      "reviewNotes": "Uses the equally correct painting-knife name to avoid supplying the independent paint-mixing surface answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-030",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which harbour painting, depicting an orange sun through mist, inspired the name of the Impressionist movement?",
+        "clue_et": "Milline udus oranži päikest kujutav sadamavaatega maal andis nime impressionistide liikumisele?"
+      },
+      "reviewNotes": "Removes the painter named by the sibling water-lily question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-033",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_en": "Persistence of Memory",
+        "accepted_variants_et": "Mälu püsivus"
+      },
+      "reviewNotes": "Replaces an informal descriptive alias already printed in the prompt with title variants. Hosts can still judge descriptions.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-043",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Van Gogh painted several famous pictures of sunflowers arranged in vases.",
+        "explanation_et": "Van Gogh maalis mitu kuulsat pilti vaasidesse paigutatud päevalilledest."
+      },
+      "reviewNotes": "Removes the sibling still-life genre term from the flower reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-051",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_en": "Mona Lisa",
+        "accepted_variants_et": "Mona Lisa"
+      },
+      "reviewNotes": "The Italian title is the clue’s translation anchor, so accepted variants must name the requested other title. Independent reviewer C identified Džokonda as the supplied Italian name in Estonian form; retain Mona Lisa, so restating that anchor does not substitute for recalling the requested title.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-067",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "What adjustable opening controls how much light enters a camera?",
+        "clue_et": "Milline kaamera reguleeritav avaus määrab, kui palju valgust sisse pääseb?"
+      },
+      "reviewNotes": "Removes lens/objektiiv from the opening identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-091",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_en": "Willis Tower",
+        "accepted_variants_et": "Willise torn"
+      },
+      "reviewNotes": "Names the former tower only as a historical clue, retaining response variants for its requested current name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-109",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_en": "Al Khazneh;Al-Khazna;Khazneh",
+        "accepted_variants_et": "Khazneh"
+      },
+      "reviewNotes": "The English nickname is a translation anchor, so variants use the requested Nabataean monument name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-118",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which Barcelona architect filled buildings such as Casa Batlló with flowing curves and inventive colourful tilework?",
+        "clue_et": "Milline Barcelona arhitekt täitis sellised hooned nagu Casa Batlló voolavate kõverate ja leidlike värviliste plaadimustritega?"
+      },
+      "reviewNotes": "Removes the abstract sibling nature answer without changing the concrete Casa Batlló anchor.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-142",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_en": "porcelain ceramic"
+      },
+      "reviewNotes": "Removes the country/material homonym already supplied in the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-145",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which high-temperature chamber fires shaped clay to turn it into finished pottery?",
+        "clue_et": "Milline kõrge temperatuuriga kamber põletab vormitud savi, muutes selle valmis keraamikaks?",
+        "explanation_en": "A kiln provides controlled high temperatures to harden and finish ceramic objects.",
+        "explanation_et": "Põletusahi tagab keraamiliste esemete kõvastamiseks ja viimistlemiseks kontrollitud kõrge temperatuuri."
+      },
+      "reviewNotes": "Removes the sibling glaze name from the heat-chamber prompt and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-146",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "accepted_variants_et": "piltvaip"
+      },
+      "reviewNotes": "Removes broad wall-hanging variants already supplied as the clue description.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-155",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which method pushes ink through the open areas of a mesh stencil?",
+        "clue_et": "Milline meetod surub tindi läbi võrkšablooni avatud alade?"
+      },
+      "reviewNotes": "Removes the technique alias printed as an alternate name in the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-026",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which 1960s movement stripped art to simple forms and hard edges, rejecting expressive gestures and personal emotion?",
+        "clue_et": "Milline 1960. aastatel esile kerkinud kunstivool taandas teosed lihtsatele vormidele ja selgetele servadele, loobudes väljendusrikastest žestidest ja isiklikest tunnetest?"
+      },
+      "reviewNotes": "Removes the sibling Expressionism word from the movement comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0001",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which US president is honoured by the seated marble figure inside a memorial on the US capital’s National Mall?",
+        "clue_et": "Millist USA presidenti austab istuv marmorkuju USA pealinna National Malli memoriaalis?"
+      },
+      "reviewNotes": "Uses the US capital instead of Washington’s surname, which is another response in the category.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0011",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Van Gogh painted in France, but in which country was he born in the town of Zundert?",
+        "clue_et": "Van Gogh maalis Prantsusmaal, ent millises riigis sündis ta Zunderti linnas?"
+      },
+      "reviewNotes": "Removes nationality/language wording that gives the country before recall.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0090",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which winged ancient sculpture in the Louvre helped inspire the pose of The Motherland Calls?",
+        "clue_et": "Milline Louvre’is asuv tiivuline antiikskulptuur aitas inspireerida „Kodumaa kutsub“ poosi?"
+      },
+      "reviewNotes": "Removes ancient Greece, requested by another monument clue.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0091",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_en": "Manet’s Olympia replaces the small dog in Titian’s earlier model with a black cat.",
+        "explanation_et": "Manet „Olympia“ asendab Tiziani varasema eeskuju väikese koera musta kassiga."
+      },
+      "reviewNotes": "Removes the title containing the sibling goddess name from the reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0096",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "The original Discobolus is lost; which civilisation made its surviving full-size marble copies?",
+        "clue_et": "Diskobolose originaal on kadunud; milline tsivilisatsioon tegi selle säilinud elusuurused marmorkoopiad?",
+        "explanation_en": "The lost Greek Discobolus is known through Roman copies, including full-size marble versions.",
+        "explanation_et": "Kadunud Kreeka Diskobolost tuntakse Rooma koopiate, sealhulgas elusuuruste marmorversioonide kaudu."
+      },
+      "reviewNotes": "Removes the sibling bronze material from prompt and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0097",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Cellini’s Perseus stands in the Loggia dei Lanzi, beside the Palazzo Vecchio. Which Italian city is home to it?",
+        "clue_et": "Cellini Perseus seisab Loggia dei Lanzis Palazzo Vecchio kõrval. Milline Itaalia linn on selle kodu?"
+      },
+      "reviewNotes": "Removes the sibling bronze material from the city identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0098",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which ancient writer praised the Laocoön group in his Natural History?",
+        "clue_et": "Milline antiikaja kirjanik kiitis Laokooni rühma oma „Loodusloos“?"
+      },
+      "reviewNotes": "Removes the civilization response from the writer identification.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0099",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which metal alloy was used for the body of the Capitoline Wolf, shown with two infants beneath it?",
+        "clue_et": "Millisest metallisulamist on Kapitooliumi hundi keha, mille all on kujutatud kaks imikut?"
+      },
+      "reviewNotes": "Removes Rome from the material identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0222",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_et": "Millise läbipaistva veepõhise maalivahendiga ühendab Düreri täpne jänes katva värvi?",
+        "explanation_et": "„Noor jänes“ on maalitud akvarelli ja katva värviga."
+      },
+      "reviewNotes": "Distinguishes transparent watercolour from opaque bodycolour without printing the accepted vesivärv answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-accessible-corpus-139",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which wavy Finnish glass vessel, made by Iittala, was first displayed at the 1937 Paris World Exposition?",
+        "clue_et": "Millist Iittala valmistatud lainelise servaga Soome klaasanumat esitleti esimest korda 1937. aasta Pariisi maailmanäitusel?"
+      },
+      "reviewNotes": "Independent reviewer C found that the designer name in the old question supplied the vessel name. Replace that name with its verified exhibition debut and manufacturer, keeping the familiar wavy form. Original factual wording, primary citation-only corroboration; existing Wikipedia source and licence preserved.",
+      "sourceVerification": [
+        {
+          "url": "https://www.alvaraalto.fi/en/work/aalto-vase/",
+          "observation": "Independently read the Alvar Aalto Foundation primary catalog on 2026-10-11: Karhula-Iittala made the first glassware series for the Finnish section of the Paris World Exhibition in 1937; the Savoy naming and manufacturer history corroborate the unchanged explanation."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-easy-expansion-007",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "The classic blue of denim comes from a deep-blue dye historically extracted from plants. Name it.",
+        "clue_et": "Teksariide klassikaline sinine toon tuleb sügavsinisest värvainest, mida saadi ajalooliselt taimedest. Nimeta see."
+      },
+      "reviewNotes": "Independent reviewer C identified the printed Indigofera/indigopõõsas stem as the supplied dye answer. Retain familiar denim and colour facts; the explanation may name the genus after the question has been answered.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0193",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Pompidou's blue pipes identify which building service?",
+        "clue_et": "Millist hoonetehnosüsteemi tähistavad Pompidou keskuse sinised torud?"
+      },
+      "reviewNotes": "Independent reviewer C identified the supplied air-moving definition as semantic deduction at Hard tier3. Require recall of the actual landmark colour code instead. Existing citation and licence preserved.",
+      "sourceVerification": [
+        {
+          "url": "https://www.centrepompidou.fr/en/centre-pompidou-is-transforming-itself/an-iconic-architecture",
+          "observation": "Independently read primary museum colour-code description on 2026-10-11: blue identifies air flows/air-conditioning. No source text or media reused."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-art-architecture-all-level-expansion-0194",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "clue_en": "Which highly porous volcanic rock, sometimes light enough to float on water, is used as an aggregate in lightweight concrete?",
+        "clue_et": "Millist väga poorset vulkaanilist kivimit, mis võib olla piisavalt kerge veepinnal püsimiseks, kasutatakse kergbetooni täitematerjalina?",
+        "response_en": "Pumice",
+        "response_et": "Pimsskivi",
+        "accepted_variants_en": "Pumice stone",
+        "accepted_variants_et": "Pimss",
+        "explanation_en": "Pumice contains numerous gas cavities and has low density, making it useful for lightweight building products and concrete.",
+        "explanation_et": "Pimsskivis on arvukalt gaasitühimikke ja selle tihedus on väike, mistõttu sobib see kergetesse ehitustoodetesse ning betooni.",
+        "source_title": "Pumice and pumicite 2019 — US Geological Survey Minerals Yearbook",
+        "source_url": "https://pubs.usgs.gov/myb/vol1/2019/myb1-2019-pumice.pdf",
+        "source_license": "Public domain",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent reviewer C found that lighter material -> reduces weight was deduction at Hard tier4. Replace it with identification of a familiar construction material. Avoid assigning an exact upper-Pantheon aggregate where descriptions vary between pumice and scoria; retain independently primary-supported building-material facts. Original bilingual wording; USGS-authored information is in the U.S. public domain, with citation retained.",
+      "sourceVerification": [
+        {
+          "url": "https://pubs.usgs.gov/myb/vol1/2019/myb1-2019-pumice.pdf",
+          "observation": "Independently read indexed USGS Minerals Yearbook passage on 2026-10-11: gas cavities produce highly porous low-density pumice, some floats on water, and lightweight construction products and concrete aggregate are uses."
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/are-usgs-reportspublications-copyrighted",
+          "observation": "Independently read current USGS policy: USGS-authored information is in the U.S. public domain; third-party material may have separate copyright. No third-party illustrations or photographs reused."
+        }
+      ],
+      "subjectKey": "material:pumice",
+      "factFamily": "pumice:lightweight-concrete-aggregate"
+    },
+    {
+      "clueId": "built-in-art-architecture-playable-corpus-139",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "explanation_et": "Väikese koguse valmistamiseks kulus palju meritigusid ning valguse käes kujunes värvaine kuulsalt vastupidav purpurpunane toon."
+      },
+      "reviewNotes": "Independent reviewer C identified a localization error in the title-touched complete set: karbid implies bivalves, whereas the dye comes from sea snails. Replace only the Estonian noun with meritigusid, consistent with the existing prompt and gastropod factual source. No new factual claim or source metadata change.",
+      "sourceVerification": []
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-art-architecture-set-008",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Art & Architecture: Modern Art and Artists",
+        "category_name_et": "Kunst ja arhitektuur: Moodne kunst ja kunstnikud"
+      },
+      "reviewNotes": "Includes the painting title as well as artists without changing the accessible question."
+    },
+    {
+      "categoryId": "built-in-art-architecture-set-124",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Figures and objects in civic sculpture",
+        "category_name_et": "Figuurid ja esemed linnaskulptuuris"
+      },
+      "reviewNotes": "Includes animals and Neptune’s trident without replacing a playable question."
+    },
+    {
+      "categoryId": "built-in-art-architecture-set-160",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Public monuments and remembrance",
+        "category_name_et": "Avalikud monumendid ja mälestamine"
+      },
+      "reviewNotes": "Covers location, movement and the Last Post; also accommodates the Diana clue, which does not describe a relocation."
+    },
+    {
+      "categoryId": "built-in-art-architecture-set-001",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Art & Architecture: Colour Basics",
+        "category_name_et": "Kunst ja arhitektuur: Värvide alused"
+      },
+      "reviewNotes": "Varies colour knowledge instead of a closed group of named primary/secondary colours."
+    },
+    {
+      "categoryId": "built-in-art-architecture-set-016",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Art & Architecture: Structural Forms and Styles",
+        "category_name_et": "Kunst ja arhitektuur: Ehitiste vormid ja stiilid"
+      },
+      "reviewNotes": "Neutral title avoids giving column and fits the independently varied repaired set."
+    },
+    {
+      "categoryId": "built-in-art-architecture-set-159",
+      "batchId": "05-art-architecture",
+      "changes": {
+        "category_name_en": "Ideas and People Behind Architecture",
+        "category_name_et": "Arhitektuuri ideed ja inimesed"
+      },
+      "reviewNotes": "The whole set asks about structural forms, a mechanical system, construction material and a building patron; the original geometry-only title excluded several questions. Broaden the title to match all five independent topics."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "B-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-036"
+      ],
+      "reason": "Both titles now include works and artists."
+    },
+    {
+      "findingId": "B-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-061",
+        "built-in-art-architecture-accessible-corpus-063"
+      ],
+      "reason": "Stencil terminology removed from the Banksy clue and reveal in both languages."
+    },
+    {
+      "findingId": "B-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-065"
+      ],
+      "reason": "Explanation now places the painting in 1990 before reunification, supported by the Foundation."
+    },
+    {
+      "findingId": "B-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-071",
+        "built-in-art-architecture-accessible-corpus-074"
+      ],
+      "reason": "Removed rotunda from the dome reveal, dome from the rotunda prompt, and replaced the geodesic-dome item that otherwise repeated both dome and triangle."
+    },
+    {
+      "findingId": "B-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-078",
+        "built-in-art-architecture-accessible-corpus-079",
+        "built-in-art-architecture-accessible-corpus-080"
+      ],
+      "reason": "Only Doric remains; aqueduct and Gothic architecture require separate facts and do not exhaust a three-answer pool."
+    },
+    {
+      "findingId": "B-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-088"
+      ],
+      "reason": "Milan now explicitly distinguishes the target cathedral."
+    },
+    {
+      "findingId": "B-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-131",
+        "built-in-art-architecture-accessible-corpus-132",
+        "built-in-art-architecture-accessible-corpus-133"
+      ],
+      "reason": "Tallinn remains; the other two clues ask a style and a building material, removing capital elimination."
+    },
+    {
+      "findingId": "B-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-137"
+      ],
+      "reason": "Namesake omitted; recognition comes from the tubular frame and strap surfaces."
+    },
+    {
+      "findingId": "B-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-accessible-corpus-148"
+      ],
+      "reason": "Estonian response and variants now include a quilt without a patchwork top."
+    },
+    {
+      "findingId": "B-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-071"
+      ],
+      "reason": "Both explanations now use HAM’s over-600 count."
+    },
+    {
+      "findingId": "B-012",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-083"
+      ],
+      "reason": "Prompt and explanation separate library conversion in 1806 from the later museum use; avoid an unsupported museum opening date."
+    },
+    {
+      "findingId": "B-013",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-138"
+      ],
+      "reason": "Both prompts and explanations now describe Prussian blue as the image product, not the sensitizer."
+    },
+    {
+      "findingId": "B-014",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-169"
+      ],
+      "reason": "Prompt explicitly requests the transformed work’s new name, resolving original-title ambiguity."
+    },
+    {
+      "findingId": "B-015",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-243"
+      ],
+      "reason": "Date changed to the primary-confirmed 1965."
+    },
+    {
+      "findingId": "B-016",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-242"
+      ],
+      "reason": "Frames correctly described as vinyl in both languages."
+    },
+    {
+      "findingId": "B-017",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-playable-corpus-292"
+      ],
+      "reason": "Present physical-holdings claim changed to a historical qualifier."
+    },
+    {
+      "findingId": "B-018",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-easy-expansion-009",
+        "built-in-art-architecture-easy-expansion-010"
+      ],
+      "reason": "Only the umber raw/burnt story remains; ultramarine requires an independent fact."
+    },
+    {
+      "findingId": "B-019",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-all-level-expansion-0020"
+      ],
+      "reason": "Both titles now include the non-animal object."
+    },
+    {
+      "findingId": "B-020",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-all-level-expansion-0195"
+      ],
+      "reason": "Physician biography replaced with cantilever geometry and structure."
+    },
+    {
+      "findingId": "B-021",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-art-architecture-all-level-expansion-0198"
+      ],
+      "reason": "Broader title fits all five questions, including both the remembrance ritual and newly installed Diana statue."
+    }
+  ]
+}

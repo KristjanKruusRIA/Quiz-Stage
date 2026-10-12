@@ -1,0 +1,2011 @@
+{
+  "author": "root",
+  "reviewer": "C",
+  "reviewedAt": "2026-10-11",
+  "status": "approved",
+  "proposalFiles": [
+    {
+      "path": "root/14-adult-basic.proposal.json",
+      "sha256": "9e35edf4f2f7c322a60163affb99b425481671501646e3772fd8662f38022e9e"
+    },
+    {
+      "path": "root/14-adult-hard.proposal.json",
+      "sha256": "1ba3c473dbf9f7947d9fe1a5d9b59cc0f6d6c7d1f9a64932c983565343afc28a"
+    }
+  ],
+  "scope": {
+    "uniqueQuestionPatches": 65,
+    "categoriesRead": 40,
+    "siblingQuestionsRead": 200
+  },
+  "checks": {
+    "factual": "Replacement claims independently checked against primary/specialist sources listed below. Retained-fact surgical edits checked in their full category context.",
+    "translation": "Every modified EN/ET pair and host alternatives compared for same identity, dates, qualifiers and expected answer. Localized proper titles and normal Estonian inflections accepted where meaning is equivalent.",
+    "independence": "Read all five siblings for each touched set, including prompt, public explanation, host response/alternatives and category title; direct disclosure and closed answer-pool dependence addressed by author corrections.",
+    "difficulty": "Easy remains recognizable; revised higher tiers require specific historical/cultural/scientific identification. Some topics remain accessible at upper tiers by design; broad trivia scope preserved.",
+    "attribution": "Source owners and licence fields distinguished from original bilingual factual wording. Existing Wikipedia fields remain CC-BY-SA-4.0; reserved sources do not imply open text reuse; Smithsonian CC0 applies to metadata with restricted images excluded.",
+    "structure": "Programmatically compared IDs, enabled state, tiers, category IDs, membership, counts and difficulty with snapshots; preserved."
+  },
+  "resolvedReviewFindings": [
+    {
+      "id": "C-ADULT-REVIEW-001",
+      "status": "fixed",
+      "categoryId": "built-in-adult-set-004",
+      "reason": "Broader Living Things and Life Cycles title now covers physical Platypus identification as well as reproduction siblings."
+    },
+    {
+      "id": "C-ADULT-REVIEW-002",
+      "status": "fixed",
+      "categoryId": "built-in-adult-set-069",
+      "reason": "Markets Around the World now fits the general/daytime market history replacements and the existing night-market questions."
+    },
+    {
+      "id": "C-ADULT-REVIEW-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-adult-clue-0017"
+      ],
+      "reason": "Primary Australian Museum identification source replaces the unavailable hatching video and supports every retained physical hint; no Egg disclosure remains."
+    },
+    {
+      "id": "C-ADULT-REVIEW-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-adult-clue-0374"
+      ],
+      "reason": "Removed supplied expanded LP name in both locales; historical producer/date/speed facts identify the format independently."
+    },
+    {
+      "id": "C-ADULT-REVIEW-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-adult-clue-0400"
+      ],
+      "reason": "Prompt now explicitly asks for HEVC acronym instead of ambiguously requesting the H.265 standard already named."
+    }
+  ],
+  "openIssues": [],
+  "sourceVerification": [
+    {
+      "clueIds": [
+        "built-in-adult-clue-0017"
+      ],
+      "url": "https://australian.museum/learn/animals/mammals/platypus/",
+      "observation": "Read primary museum Identification section: duck-like bill, webbed feet and broad flat tail. Current wording removes reproduction facts, leaving physical identification independent of the Egg sibling. Image-specific credits do not confer an open licence on all page text; the original factual wording uses no image."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0111"
+      ],
+      "url": "https://www.nps.gov/ston/learn/historyculture.htm",
+      "observation": "Read NPS account: police raid and uprising began at Stonewall Inn in June 1969. Current venue response and parallel prompts are supported; does not name sibling Pride target."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0127"
+      ],
+      "url": "https://time.com/4728994/ellen-degeneres-1997-coming-out-cover/",
+      "observation": "Read TIME retrospective and April 1997 cover account; distinguishes the real person from the sitcom character. Supports the cover-identification fact. Reserved copyright retained."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0235"
+      ],
+      "url": "https://www.filmratings.com/resources-faq/",
+      "observation": "Read MPA FAQ: red-band trailers may play before R and NC-17 films. Both locales describe the same trailer restriction. No sibling restricted-rating answer printed."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0409"
+      ],
+      "url": "https://www.fdjunited.com/history/",
+      "observation": "Read operator chronology: EuroMillions first draw 13 February 2004; launched in France, Spain and UK. Current bilingual field set uses this primary history, replacing the earlier weak citation."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0343"
+      ],
+      "url": "https://parisjetaime.com/eng/shopping/marche-biron-p4073",
+      "observation": "Read official Paris tourism Biron entry: located in the Saint-Ouen flea market, rue des Rosiers. Identifies market rather than only its enclosing city."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0344"
+      ],
+      "url": "https://dev.goturkiye.com/branding/press-releases/istanbuls-grand-bazaar-hosts-almost-40-million-visitors-in-2022",
+      "observation": "Direct fetch returned an internal error; indexed primary tourism-board result supplied the relevant paragraph: foundations laid in 1461 by Fatih Sultan Mehmet, supporting Mehmed II and accepted aliases. Do not treat the direct fetch as successful."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0345"
+      ],
+      "url": "https://www.tourismthailand.org/Attraction/damnoen-saduak-floating-market",
+      "observation": "Direct retrieval initially returned a shell; indexed primary official attraction text says Ratchaburi, canal ordered by Rama IV and completed under Rama V. Current wording correctly limits the claim to initiation, rather than completion by Rama IV."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0348",
+        "built-in-adult-clue-0350"
+      ],
+      "url": "https://webapps.ilo.org/public/english/download/glance.pdf",
+      "observation": "Read primary ILO overview: founded in 1919, Declaration of Philadelphia in 1944 states labour is not a commodity, awarded Nobel Peace Prize in 1969. This independently supports both targets even where the news URL fetch was incomplete."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0349"
+      ],
+      "url": "https://www.nps.gov/places/haymarket-martyr-s-monument.htm",
+      "observation": "Read NPS historical entry: May 1886 Haymarket meeting, bombing and eight-hour-workday movement. Current prompts preserve historical scope without printing sibling May Day."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0354"
+      ],
+      "url": "https://www.bfi.org.uk/lists/10-great-robot-films",
+      "observation": "Read BFI Metropolis entry and director credit: Fritz Lang, 1927. Both language prompts require director knowledge rather than inferring a displayed generic film term."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0355"
+      ],
+      "url": "https://www.criterion.com/films/184-le-samoura",
+      "observation": "Read publisher film page: 1967, director Jean-Pierre Melville and Alain Delon as Jef Costello. These are the same identifying facts in both languages."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0359"
+      ],
+      "url": "https://professional.dolby.com/siteassets/content-creation/dolby-atmos/why-dolby-atmos-white-paper.pdf",
+      "observation": "Read Dolby paper: first used theatrically with Pixar Brave in 2012. Specific sound format, not a supplied generic surround-sound description."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0360"
+      ],
+      "url": "https://www.ti.com/product-category/dlp-products/display-projection-dmds/overview.html?locale=en-US",
+      "observation": "Primary indexed Texas Instruments page describes digital micromirror device with millions of tilting microscopic mirrors at the heart of DLP. A direct find earlier failed to surface that text; indexed full primary paragraph corroborates the physical technology."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0364"
+      ],
+      "url": "https://zenith.com/heritage/remote-background/",
+      "observation": "Read manufacturer primary history: Space Command ultrasonic remote entered production in 1956; describes mechanically struck rods. Cited IEEE PDF was scanned/no searchable text, so independent confirmation uses this manufacturer page, not claimed PDF OCR."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0365"
+      ],
+      "url": "https://americanhistory.si.edu/collections/object/nmah_1288388",
+      "observation": "Primary indexed catalogue description: Farnsworth designed/made the image dissector tube in 1927. Direct si.edu wrapper fetch failed; exact museum collection record was verified in indexed text. Metadata CC0 assertion applies to catalogue text, excluding restricted object imagery."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0374"
+      ],
+      "url": "https://blogs.loc.gov/now-see-hear/2019/04/inside-the-archival-box-the-first-long-playing-disc/",
+      "observation": "Read indexed LOC archival description: Columbia introduced LP in June 1948 at 33 1/3 rpm. Revised prompt no longer prints Long-playing/kauamängiv host alternatives and explicitly requests the two-letter name."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0375"
+      ],
+      "url": "https://www.philips.com/a-w/about/news/archive/standard/news/articles/2021/20210310-lou-ottens-loved-technology-when-he-talked-about-it-his-eyes-would-twinkle.html",
+      "observation": "Read manufacturer obituary: Lou Ottens headed product development in early 1960s and led Compact Cassette work. Museum held its 50th-anniversary exhibition in 2013, independently yielding the stated 1963 date; source explicitly emphasizes teamwork."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0379"
+      ],
+      "url": "https://www.bfi.org.uk/features/alien-40-ridley-scott-sigourney-weaver",
+      "observation": "Read BFI article introducing the 1979 Alien tagline. Current EN alternative Alien (1979) pairs with ET Alien; localized Kaheksas reisija is the established film title, not a translation error."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0380"
+      ],
+      "url": "https://player.bfi.org.uk/rentals/film/watch-the-blair-witch-project-1999-online",
+      "observation": "Read BFI distributor page: found-footage film and marketing led some viewers to believe depicted events were true. Current prompt asks the film rather than merely paraphrasing the found-footage genre."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0389"
+      ],
+      "url": "https://www.bafta.org/awards/full-list-of-bafta-fellows/",
+      "observation": "Read primary BAFTA Fellows list beginning with Alfred Hitchcock in 1971, supporting the inaugural Fellowship clue."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0390"
+      ],
+      "url": "https://www.festival-cannes.com/en/2020/palme-d-or-the-1990s/",
+      "observation": "Read primary festival retrospective: Chen Kaige’s Farewell My Concubine shared 1993 Palme d’Or with The Piano. Named-film identification is independent of sibling award terms."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0392"
+      ],
+      "url": "https://www.netflix.com/us-en/browse/genre/2638104",
+      "observation": "Primary distributor K-Dramas catalogue lists Crash Landing on You. Separate primary K-Dramas locale catalogue /fm/browse/genre/2638104 includes Descendants of the Sun. The umbrella television label K-drama is conventionally used as a catalogue genre label, not asserted to be a single narrative genre."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0394"
+      ],
+      "url": "https://www.sbs.com.au/whats-on/article/is-the-bridge-the-best-nordic-noir-show-ever/gjahiatru",
+      "observation": "Primary broadcaster indexed article describes The Bridge as Nordic Noir and explicitly compares The Killing, corroborating the two series used for classification. Both prompts specify original Scandinavian productions, avoiding English-language remakes."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0395"
+      ],
+      "url": "https://files.eric.ed.gov/fulltext/ED030328.pdf",
+      "observation": "Read archival NHK publication, history section: resumed experimental telecasts in Tokyo in 1950 and inaugurated full service 1 February 1953. Distinguishes regular service from earlier experiments."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0399"
+      ],
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4407-etuv3.pdf",
+      "observation": "Read NASA historical volume relevant Telstar passages: launched July 10 1962, relayed live television between US and England/France. Federal text distinguished from specifically credited third-party photos."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0400"
+      ],
+      "url": "https://www.itu.int/rec/T-REC-H.265",
+      "observation": "Read primary ITU catalogue heading H.265: High efficiency video coding. Revised prompt explicitly requests four-letter acronym HEVC, so H.265 is a clue rather than an already-given required answer. No paid standard text claimed read."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0414"
+      ],
+      "url": "https://www.cribbage.org/NewSite/tips/glossary.asp",
+      "observation": "Read American Cribbage Congress 29 Hand entry: highest possible hand totals 29. Requires scoring knowledge, not a supplied numerical answer or arbitrary small finite pool."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0415"
+      ],
+      "url": "https://patents.google.com/patent/US115357A/en",
+      "observation": "Read original Redgrave patent published May 30 1871: improved parlor bagatelle, inclined board and spring piston propelling ball. Direct Smithsonian exhibition fetch failed; primary patent independently supports the technical/date facts. Pinball lineage is stated generically, not a claim that Redgrave invented all later pinball features."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0459"
+      ],
+      "url": "https://plato.stanford.edu/entries/plato-friendship/index.html",
+      "observation": "Read specialist philosophical reference: Plato discusses eros/love and philia/friendship, with broader affection nuances. Genuine Greek word required; category title does not disclose it."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0460"
+      ],
+      "url": "https://fromm-online.org/en/life/important-dates/",
+      "observation": "Read author-institute chronology: The Art of Loving published 1956. Existing opening premise of the authored primary work treats love as an art requiring knowledge and effort; this is accurate supporting context, not a quoted passage copied into the explanation."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0464"
+      ],
+      "url": "https://news.gallup.com/opinion/polling-matters/169682/years-ago-first-gallup-poll.aspx",
+      "observation": "Read primary pollster retrospective: Literary Digest predicted Landon over Roosevelt in 1936, using mailed ballots; Gallup predicted Roosevelt with more systematic sampling. Does not attribute the entire error to a single unsupported cause."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0465"
+      ],
+      "url": "https://magazine.amstat.org/blog/2026/01/01/statistics-january/",
+      "observation": "Read American Statistical Association article: Gosset worked at Guinness, 1908 paper under Student pseudonym and t-test/t-distribution. Correct specific statistical-history identification."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0479"
+      ],
+      "url": "https://catalogues.royalsociety.org/CalmView/Record.aspx?id=EL%2FL1%2F69&src=CalmView.Catalog",
+      "observation": "Primary archive indexed EL/L1/69 record dated 17 September 1683 describes Leeuwenhoek bacteria in tooth tartar. Science in the Making direct fetch failed; primary catalogue record confirms identity and date. Did not claim to read/transcribe Dutch manuscript images."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0480"
+      ],
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK550972/",
+      "observation": "Read indexed Endotext chapter authored by specialist clinicians: pineal gland conveys light-dark cycle by melatonin production/secretion. Direct open triggered captcha; primary full indexed abstract and physiology section support the accurate, limited physiological fact. No treatment/dose claim added."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0494"
+      ],
+      "url": "https://dictionary.apa.org/eriksons-eight-stages-of-psychosocial-development",
+      "observation": "Direct APA retrieval was a one-line shell; primary indexed definition gives Erik Erikson and eight stages spanning lifespan. Correct theory attribution; not a claim these are universal proven biological stages."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0495"
+      ],
+      "url": "https://www.guinnessworldrecords.com/news/icons/jeanne-calment-the-oldest-person-ever",
+      "observation": "Read record authority page: verified lifespan 122 years and 164 days. Prompt requests complete years so response 122 is exact, with no time-sensitive current-oldest-living claim."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0499"
+      ],
+      "url": "https://www.apa.org/gradpsych/2011/03/attachment",
+      "observation": "Primary APA indexed article attributes original attachment theory to John Bowlby. Supplemented dictionary shell with authoritative association text rather than asserting a direct dictionary read."
+    },
+    {
+      "clueIds": [
+        "built-in-adult-clue-0500"
+      ],
+      "url": "https://www.apa.org/about/governance/president/carl-r-rogers",
+      "observation": "Primary APA indexed biography explicitly attributes person/client-centered therapy and unconditional positive regard to Carl Rogers. Original attribution limited to his approach, without erasing later researchers."
+    }
+  ],
+  "sourceLimitations": "Indexed primary text used where direct fetch returned an error, shell or captcha, as identified per entry. This review does not claim every citation page fetched successfully or every historic manuscript/image was read.",
+  "categoryReviews": [
+    {
+      "categoryId": "built-in-adult-set-002",
+      "name": {
+        "en": "The Body's Calendar",
+        "et": "Keha kalender"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0006",
+        "built-in-adult-clue-0007",
+        "built-in-adult-clue-0008",
+        "built-in-adult-clue-0009",
+        "built-in-adult-clue-0010"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0007",
+        "built-in-adult-clue-0010"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Puberty",
+          "et": "Puberteet"
+        },
+        {
+          "en": "Menstruation",
+          "et": "Menstruatsioon"
+        },
+        {
+          "en": "Ovulation",
+          "et": "Ovulatsioon"
+        },
+        {
+          "en": "Pregnancy",
+          "et": "Rasedus"
+        },
+        {
+          "en": "Menopause",
+          "et": "Menopaus"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-004",
+      "name": {
+        "en": "Living Things and Life Cycles",
+        "et": "Elusolendid ja elutsüklid"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0016",
+        "built-in-adult-clue-0017",
+        "built-in-adult-clue-0018",
+        "built-in-adult-clue-0019",
+        "built-in-adult-clue-0020"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0016",
+        "built-in-adult-clue-0017"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Egg",
+          "et": "Munarakk"
+        },
+        {
+          "en": "Platypus",
+          "et": "Nokkloom"
+        },
+        {
+          "en": "Pollination",
+          "et": "Tolmeldamine"
+        },
+        {
+          "en": "Seahorse",
+          "et": "Merihobu"
+        },
+        {
+          "en": "Clownfish",
+          "et": "Klounkala"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-015",
+      "name": {
+        "en": "Love Words Across Cultures",
+        "et": "Armastussõnad eri kultuurides"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0071",
+        "built-in-adult-clue-0072",
+        "built-in-adult-clue-0073",
+        "built-in-adult-clue-0074",
+        "built-in-adult-clue-0075"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0075"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Amore",
+          "et": "Amore"
+        },
+        {
+          "en": "Mon amour",
+          "et": "Mon amour"
+        },
+        {
+          "en": "Fiancé",
+          "et": "Kihlatu"
+        },
+        {
+          "en": "Aloha",
+          "et": "Aloha"
+        },
+        {
+          "en": "Darling",
+          "et": "Darling"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-016",
+      "name": {
+        "en": "Breaking Up in Culture and Law",
+        "et": "Lahkuminek kultuuris ja õiguses"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0076",
+        "built-in-adult-clue-0077",
+        "built-in-adult-clue-0078",
+        "built-in-adult-clue-0079",
+        "built-in-adult-clue-0080"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0077",
+        "built-in-adult-clue-0078"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Divorce",
+          "et": "Lahutus"
+        },
+        {
+          "en": "Marriage Story",
+          "et": "Marriage Story"
+        },
+        {
+          "en": "Kramer vs. Kramer",
+          "et": "Kramer Krameri vastu"
+        },
+        {
+          "en": "Alimony",
+          "et": "Elatis endisele abikaasale"
+        },
+        {
+          "en": "Prenuptial agreement",
+          "et": "Abieluvaraleping"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-019",
+      "name": {
+        "en": "Matches, Messages, and Breakups",
+        "et": "Sobitamised, sõnumid ja lahkuminekud"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0091",
+        "built-in-adult-clue-0092",
+        "built-in-adult-clue-0093",
+        "built-in-adult-clue-0094",
+        "built-in-adult-clue-0095"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0095"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Valentine's Day",
+          "et": "Sõbrapäev"
+        },
+        {
+          "en": "Marriage market",
+          "et": "Abieluturg"
+        },
+        {
+          "en": "Match percentage",
+          "et": "Sobivusprotsent"
+        },
+        {
+          "en": "The Five Love Languages",
+          "et": "Armastuse viis keelt"
+        },
+        {
+          "en": "Dear John letter",
+          "et": "Dear Johni kiri"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-023",
+      "name": {
+        "en": "Pride Events and Milestones",
+        "et": "Pride’i üritused ja verstapostid"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0111",
+        "built-in-adult-clue-0112",
+        "built-in-adult-clue-0113",
+        "built-in-adult-clue-0114",
+        "built-in-adult-clue-0115"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0111"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Stonewall Inn",
+          "et": "Stonewall Inn"
+        },
+        {
+          "en": "Madrid Pride",
+          "et": "Madridi Pride"
+        },
+        {
+          "en": "Amsterdam Pride",
+          "et": "Amsterdam Pride"
+        },
+        {
+          "en": "São Paulo Pride",
+          "et": "São Paulo Pride"
+        },
+        {
+          "en": "Pride Toronto",
+          "et": "Pride Toronto"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-025",
+      "name": {
+        "en": "Words That Became Movements",
+        "et": "Sõnadest said liikumised"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0121",
+        "built-in-adult-clue-0122",
+        "built-in-adult-clue-0123",
+        "built-in-adult-clue-0124",
+        "built-in-adult-clue-0125"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0122"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Rainbow flag",
+          "et": "Vikerkaarelipp"
+        },
+        {
+          "en": "Pride parade",
+          "et": "Pride'i paraad"
+        },
+        {
+          "en": "Rainbow crossing",
+          "et": "Vikerkaareülekäik"
+        },
+        {
+          "en": "Taiwan",
+          "et": "Taiwan"
+        },
+        {
+          "en": "ACT UP",
+          "et": "ACT UP"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-026",
+      "name": {
+        "en": "Voices That Changed the Conversation",
+        "et": "Vestlust muutnud hääled"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0126",
+        "built-in-adult-clue-0127",
+        "built-in-adult-clue-0128",
+        "built-in-adult-clue-0129",
+        "built-in-adult-clue-0130"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0127"
+      ],
+      "responseIdentities": [
+        {
+          "en": "RuPaul",
+          "et": "RuPaul"
+        },
+        {
+          "en": "Ellen DeGeneres",
+          "et": "Ellen DeGeneres"
+        },
+        {
+          "en": "Laverne Cox",
+          "et": "Laverne Cox"
+        },
+        {
+          "en": "Marsha P. Johnson",
+          "et": "Marsha P. Johnson"
+        },
+        {
+          "en": "Bayard Rustin",
+          "et": "Bayard Rustin"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-028",
+      "name": {
+        "en": "Identity in Everyday Language",
+        "et": "Identiteet argikeeles"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0136",
+        "built-in-adult-clue-0137",
+        "built-in-adult-clue-0138",
+        "built-in-adult-clue-0139",
+        "built-in-adult-clue-0140"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0136"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Pride",
+          "et": "Uhkus"
+        },
+        {
+          "en": "Asexual",
+          "et": "Aseksuaalne"
+        },
+        {
+          "en": "Non-binary",
+          "et": "Mittebinaarne"
+        },
+        {
+          "en": "Queer",
+          "et": "Queer"
+        },
+        {
+          "en": "Intersectionality",
+          "et": "Intersektsionaalsus"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-029",
+      "name": {
+        "en": "Rights Around the World",
+        "et": "Õigused üle maailma"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0141",
+        "built-in-adult-clue-0142",
+        "built-in-adult-clue-0143",
+        "built-in-adult-clue-0144",
+        "built-in-adult-clue-0145"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0141"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Marriage equality",
+          "et": "Abieluvõrdsus"
+        },
+        {
+          "en": "Don't Ask, Don't Tell",
+          "et": "Don't Ask, Don't Tell"
+        },
+        {
+          "en": "Obergefell v. Hodges",
+          "et": "Obergefell vs. Hodges"
+        },
+        {
+          "en": "Irish marriage referendum",
+          "et": "Iirimaa abielureferendum"
+        },
+        {
+          "en": "Conversion therapy ban",
+          "et": "Konversiooniteraapia keeld"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-031",
+      "name": {
+        "en": "Performers and Nightclub Stages",
+        "et": "Esinejad ja ööklubide lavad"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0151",
+        "built-in-adult-clue-0152",
+        "built-in-adult-clue-0153",
+        "built-in-adult-clue-0154",
+        "built-in-adult-clue-0155"
+      ],
+      "touchedClueIds": [],
+      "responseIdentities": [
+        {
+          "en": "Comedy club",
+          "et": "Komöödiaklubi"
+        },
+        {
+          "en": "Cabaret",
+          "et": "Kabaree"
+        },
+        {
+          "en": "The Comedy Store",
+          "et": "The Comedy Store"
+        },
+        {
+          "en": "The Second City",
+          "et": "The Second City"
+        },
+        {
+          "en": "CBGB",
+          "et": "CBGB"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-040",
+      "name": {
+        "en": "When the Party Runs Late",
+        "et": "Kui pidu venib pikaks"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0196",
+        "built-in-adult-clue-0197",
+        "built-in-adult-clue-0198",
+        "built-in-adult-clue-0199",
+        "built-in-adult-clue-0200"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0198"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Hangover",
+          "et": "Pohmell"
+        },
+        {
+          "en": "Last call",
+          "et": "Viimane tellimus"
+        },
+        {
+          "en": "After-party",
+          "et": "Järelpidu"
+        },
+        {
+          "en": "Night bus",
+          "et": "Ööbuss"
+        },
+        {
+          "en": "Circadian rhythm",
+          "et": "Ööpäevarütm"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-042",
+      "name": {
+        "en": "Movie Ratings Around the World",
+        "et": "Filmide vanusepiirangud maailmas"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0206",
+        "built-in-adult-clue-0207",
+        "built-in-adult-clue-0208",
+        "built-in-adult-clue-0209",
+        "built-in-adult-clue-0210"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0209"
+      ],
+      "responseIdentities": [
+        {
+          "en": "PG",
+          "et": "PG"
+        },
+        {
+          "en": "R",
+          "et": "R"
+        },
+        {
+          "en": "R18",
+          "et": "R18"
+        },
+        {
+          "en": "BBFC",
+          "et": "BBFC"
+        },
+        {
+          "en": "FSK",
+          "et": "FSK"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-047",
+      "name": {
+        "en": "From Mailboxes to Movie Screens",
+        "et": "Postkastidest kinoekraanideni"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0231",
+        "built-in-adult-clue-0232",
+        "built-in-adult-clue-0233",
+        "built-in-adult-clue-0234",
+        "built-in-adult-clue-0235"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0235"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Spam",
+          "et": "Spam"
+        },
+        {
+          "en": "Parental controls",
+          "et": "Vanemlik järelevalve"
+        },
+        {
+          "en": "Postal censorship",
+          "et": "Postitsensuur"
+        },
+        {
+          "en": "Geoblocking",
+          "et": "Asukohapõhine blokeerimine"
+        },
+        {
+          "en": "Red band trailer",
+          "et": "Punase märgiga treiler"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-051",
+      "name": {
+        "en": "Famous Figures in Art",
+        "et": "Kuulsad figuurid kunstis"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0251",
+        "built-in-adult-clue-0252",
+        "built-in-adult-clue-0253",
+        "built-in-adult-clue-0254",
+        "built-in-adult-clue-0255"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0252"
+      ],
+      "responseIdentities": [
+        {
+          "en": "The Birth of Venus",
+          "et": "Veenuse sünd"
+        },
+        {
+          "en": "Venus de Milo",
+          "et": "Milose Venus"
+        },
+        {
+          "en": "Balloon Dog",
+          "et": "Õhupallikoer"
+        },
+        {
+          "en": "Vitruvian Man",
+          "et": "Vitruviuse mees"
+        },
+        {
+          "en": "Discobolus",
+          "et": "Kettaheitja"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-053",
+      "name": {
+        "en": "Myths of Love and Desire",
+        "et": "Armastuse ja iha müüdid"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0261",
+        "built-in-adult-clue-0262",
+        "built-in-adult-clue-0263",
+        "built-in-adult-clue-0264",
+        "built-in-adult-clue-0265"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0265"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Cupid",
+          "et": "Cupido"
+        },
+        {
+          "en": "Aphrodite",
+          "et": "Aphrodite"
+        },
+        {
+          "en": "Helen of Troy",
+          "et": "Trooja Helena"
+        },
+        {
+          "en": "Narcissus",
+          "et": "Narkissos"
+        },
+        {
+          "en": "Adonis",
+          "et": "Adonis"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-055",
+      "name": {
+        "en": "Art Movements with Feeling",
+        "et": "Tundelised kunstivoolud"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0271",
+        "built-in-adult-clue-0272",
+        "built-in-adult-clue-0273",
+        "built-in-adult-clue-0274",
+        "built-in-adult-clue-0275"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0274"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Impressionism",
+          "et": "Impressionism"
+        },
+        {
+          "en": "Romanticism",
+          "et": "Romantism"
+        },
+        {
+          "en": "Art Nouveau",
+          "et": "Juugend"
+        },
+        {
+          "en": "Fauvism",
+          "et": "Fovism"
+        },
+        {
+          "en": "Pre-Raphaelite Brotherhood",
+          "et": "Prerafaeliitide vennaskond"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-069",
+      "name": {
+        "en": "Markets Around the World",
+        "et": "Turud üle maailma"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0341",
+        "built-in-adult-clue-0342",
+        "built-in-adult-clue-0343",
+        "built-in-adult-clue-0344",
+        "built-in-adult-clue-0345"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0343",
+        "built-in-adult-clue-0344",
+        "built-in-adult-clue-0345"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Night market",
+          "et": "Ööturg"
+        },
+        {
+          "en": "Food hall",
+          "et": "Toiduhall"
+        },
+        {
+          "en": "Saint-Ouen flea market",
+          "et": "Saint-Oueni kirbuturg"
+        },
+        {
+          "en": "Mehmed II",
+          "et": "Mehmed II"
+        },
+        {
+          "en": "Damnoen Saduak",
+          "et": "Damnoen Saduak"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-070",
+      "name": {
+        "en": "Rights at Work",
+        "et": "Õigused tööl"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0346",
+        "built-in-adult-clue-0347",
+        "built-in-adult-clue-0348",
+        "built-in-adult-clue-0349",
+        "built-in-adult-clue-0350"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0348",
+        "built-in-adult-clue-0349",
+        "built-in-adult-clue-0350"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Minimum wage",
+          "et": "Miinimumpalk"
+        },
+        {
+          "en": "Sick leave",
+          "et": "Haiguspuhkus"
+        },
+        {
+          "en": "International Labour Organization",
+          "et": "Rahvusvaheline Tööorganisatsioon"
+        },
+        {
+          "en": "Haymarket affair",
+          "et": "Haymarketi afäär"
+        },
+        {
+          "en": "Philadelphia",
+          "et": "Philadelphia"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-071",
+      "name": {
+        "en": "From Cinema to Streaming",
+        "et": "Kinost voogedastuseni"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0351",
+        "built-in-adult-clue-0352",
+        "built-in-adult-clue-0353",
+        "built-in-adult-clue-0354",
+        "built-in-adult-clue-0355"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0354",
+        "built-in-adult-clue-0355"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Multiplex",
+          "et": "Multiplekskino"
+        },
+        {
+          "en": "Matinee",
+          "et": "Päevane etendus"
+        },
+        {
+          "en": "Digital download",
+          "et": "Digitaalne allalaadimine"
+        },
+        {
+          "en": "Fritz Lang",
+          "et": "Fritz Lang"
+        },
+        {
+          "en": "Jean-Pierre Melville",
+          "et": "Jean-Pierre Melville"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-072",
+      "name": {
+        "en": "Movie Night Technology",
+        "et": "Filmiõhtu tehnika"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0356",
+        "built-in-adult-clue-0357",
+        "built-in-adult-clue-0358",
+        "built-in-adult-clue-0359",
+        "built-in-adult-clue-0360"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0359",
+        "built-in-adult-clue-0360"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Projector",
+          "et": "Projektor"
+        },
+        {
+          "en": "Smart TV",
+          "et": "Nutiteler"
+        },
+        {
+          "en": "Popcorn machine",
+          "et": "Popkornimasin"
+        },
+        {
+          "en": "Dolby Atmos",
+          "et": "Dolby Atmos"
+        },
+        {
+          "en": "DLP",
+          "et": "DLP"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-073",
+      "name": {
+        "en": "How We Watched at Home",
+        "et": "Kuidas me kodus vaatasime"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0361",
+        "built-in-adult-clue-0362",
+        "built-in-adult-clue-0363",
+        "built-in-adult-clue-0364",
+        "built-in-adult-clue-0365"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0364",
+        "built-in-adult-clue-0365"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Remote control",
+          "et": "Kaugjuhtimispult"
+        },
+        {
+          "en": "YouTube",
+          "et": "YouTube"
+        },
+        {
+          "en": "Cable television",
+          "et": "Kaabeltelevisioon"
+        },
+        {
+          "en": "Space Command",
+          "et": "Space Command"
+        },
+        {
+          "en": "Philo Farnsworth",
+          "et": "Philo Farnsworth"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-074",
+      "name": {
+        "en": "Pictures Bigger and Brighter",
+        "et": "Suuremad ja eredamad pildid"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0366",
+        "built-in-adult-clue-0367",
+        "built-in-adult-clue-0368",
+        "built-in-adult-clue-0369",
+        "built-in-adult-clue-0370"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0370"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Film colorization",
+          "et": "Filmi koloreerimine"
+        },
+        {
+          "en": "Widescreen",
+          "et": "Laiekraan"
+        },
+        {
+          "en": "3D film",
+          "et": "3D-film"
+        },
+        {
+          "en": "IMAX",
+          "et": "IMAX"
+        },
+        {
+          "en": "Cinerama",
+          "et": "Cinerama"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-075",
+      "name": {
+        "en": "Home Media Formats",
+        "et": "Kodused meediaformaadid"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0371",
+        "built-in-adult-clue-0372",
+        "built-in-adult-clue-0373",
+        "built-in-adult-clue-0374",
+        "built-in-adult-clue-0375"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0373",
+        "built-in-adult-clue-0374",
+        "built-in-adult-clue-0375"
+      ],
+      "responseIdentities": [
+        {
+          "en": "DVD",
+          "et": "DVD"
+        },
+        {
+          "en": "VHS",
+          "et": "VHS"
+        },
+        {
+          "en": "Blu-ray",
+          "et": "Blu-ray"
+        },
+        {
+          "en": "LP",
+          "et": "LP"
+        },
+        {
+          "en": "Lou Ottens",
+          "et": "Lou Ottens"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-076",
+      "name": {
+        "en": "Selling a Movie",
+        "et": "Filmi müümine"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0376",
+        "built-in-adult-clue-0377",
+        "built-in-adult-clue-0378",
+        "built-in-adult-clue-0379",
+        "built-in-adult-clue-0380"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0379",
+        "built-in-adult-clue-0380"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Trailer",
+          "et": "Treiler"
+        },
+        {
+          "en": "Poster",
+          "et": "Plakat"
+        },
+        {
+          "en": "Premiere",
+          "et": "Esilinastus"
+        },
+        {
+          "en": "Alien",
+          "et": "Tulnukas"
+        },
+        {
+          "en": "The Blair Witch Project",
+          "et": "Blairi nõia projekt"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-077",
+      "name": {
+        "en": "Behind the Screen",
+        "et": "Ekraani taga"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0381",
+        "built-in-adult-clue-0382",
+        "built-in-adult-clue-0383",
+        "built-in-adult-clue-0384",
+        "built-in-adult-clue-0385"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0381"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Director",
+          "et": "Režissöör"
+        },
+        {
+          "en": "Producer",
+          "et": "Produtsent"
+        },
+        {
+          "en": "Stunt performer",
+          "et": "Kaskadöör"
+        },
+        {
+          "en": "Film editor",
+          "et": "Filmimonteerija"
+        },
+        {
+          "en": "Intimacy coordinator",
+          "et": "Intiimsuskoordinaator"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-078",
+      "name": {
+        "en": "Awards Night",
+        "et": "Auhinnaõhtu"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0386",
+        "built-in-adult-clue-0387",
+        "built-in-adult-clue-0388",
+        "built-in-adult-clue-0389",
+        "built-in-adult-clue-0390"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0389",
+        "built-in-adult-clue-0390"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Oscar",
+          "et": "Oscar"
+        },
+        {
+          "en": "Emmy",
+          "et": "Emmy"
+        },
+        {
+          "en": "Golden Globe",
+          "et": "Kuldgloobus"
+        },
+        {
+          "en": "Alfred Hitchcock",
+          "et": "Alfred Hitchcock"
+        },
+        {
+          "en": "Farewell My Concubine",
+          "et": "Hüvasti, mu konkubiin"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-079",
+      "name": {
+        "en": "Television Around the World",
+        "et": "Televisioon maailmas"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0391",
+        "built-in-adult-clue-0392",
+        "built-in-adult-clue-0393",
+        "built-in-adult-clue-0394",
+        "built-in-adult-clue-0395"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0392",
+        "built-in-adult-clue-0394",
+        "built-in-adult-clue-0395"
+      ],
+      "responseIdentities": [
+        {
+          "en": "BBC",
+          "et": "BBC"
+        },
+        {
+          "en": "K-drama",
+          "et": "K-draama"
+        },
+        {
+          "en": "Telenovela",
+          "et": "Telenovela"
+        },
+        {
+          "en": "Nordic noir",
+          "et": "Põhjamaade noir"
+        },
+        {
+          "en": "NHK",
+          "et": "NHK"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-080",
+      "name": {
+        "en": "Signals and Subscriptions",
+        "et": "Signaalid ja tellimused"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0396",
+        "built-in-adult-clue-0397",
+        "built-in-adult-clue-0398",
+        "built-in-adult-clue-0399",
+        "built-in-adult-clue-0400"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0397",
+        "built-in-adult-clue-0399",
+        "built-in-adult-clue-0400"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Antenna",
+          "et": "Antenn"
+        },
+        {
+          "en": "Satellite dish",
+          "et": "Satelliiditaldrik"
+        },
+        {
+          "en": "Set-top box",
+          "et": "Digiboks"
+        },
+        {
+          "en": "Telstar 1",
+          "et": "Telstar 1"
+        },
+        {
+          "en": "HEVC",
+          "et": "HEVC"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-081",
+      "name": {
+        "en": "Games at the Casino",
+        "et": "Kasiinomängud"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0401",
+        "built-in-adult-clue-0402",
+        "built-in-adult-clue-0403",
+        "built-in-adult-clue-0404",
+        "built-in-adult-clue-0405"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0401"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Slot machine",
+          "et": "Mänguautomaat"
+        },
+        {
+          "en": "Blackjack",
+          "et": "Blackjack"
+        },
+        {
+          "en": "Poker",
+          "et": "Pokker"
+        },
+        {
+          "en": "Roulette",
+          "et": "Rulett"
+        },
+        {
+          "en": "Baccarat",
+          "et": "Baccarat"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-082",
+      "name": {
+        "en": "Lotteries Around the World",
+        "et": "Loteriid maailmas"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0406",
+        "built-in-adult-clue-0407",
+        "built-in-adult-clue-0408",
+        "built-in-adult-clue-0409",
+        "built-in-adult-clue-0410"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0409"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Scratch card",
+          "et": "Kraapekaart"
+        },
+        {
+          "en": "Raffle",
+          "et": "Auhinnaloos"
+        },
+        {
+          "en": "Powerball",
+          "et": "Powerball"
+        },
+        {
+          "en": "EuroMillions",
+          "et": "EuroMillions"
+        },
+        {
+          "en": "Lottery syndicate",
+          "et": "Loteriisündikaat"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-083",
+      "name": {
+        "en": "Games at the Pub",
+        "et": "Pubimängud"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0411",
+        "built-in-adult-clue-0412",
+        "built-in-adult-clue-0413",
+        "built-in-adult-clue-0414",
+        "built-in-adult-clue-0415"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0414",
+        "built-in-adult-clue-0415"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Darts",
+          "et": "Noolemäng"
+        },
+        {
+          "en": "Pool",
+          "et": "Piljard"
+        },
+        {
+          "en": "Table football",
+          "et": "Lauajalgpall"
+        },
+        {
+          "en": "29",
+          "et": "29"
+        },
+        {
+          "en": "Bagatelle",
+          "et": "Bagatell"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-084",
+      "name": {
+        "en": "Cards on the Table",
+        "et": "Kaardid laual"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0416",
+        "built-in-adult-clue-0417",
+        "built-in-adult-clue-0418",
+        "built-in-adult-clue-0419",
+        "built-in-adult-clue-0420"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0418"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Ace",
+          "et": "Äss"
+        },
+        {
+          "en": "Joker",
+          "et": "Jokker"
+        },
+        {
+          "en": "Royal flush",
+          "et": "Kuninglik mastirida"
+        },
+        {
+          "en": "Tarot",
+          "et": "Tarot"
+        },
+        {
+          "en": "Bridge",
+          "et": "Bridž"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-087",
+      "name": {
+        "en": "When Nightlife Closes",
+        "et": "Kui ööelu sulgub"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0431",
+        "built-in-adult-clue-0432",
+        "built-in-adult-clue-0433",
+        "built-in-adult-clue-0434",
+        "built-in-adult-clue-0435"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0434"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Closing time",
+          "et": "Sulgemisaeg"
+        },
+        {
+          "en": "Designated driver",
+          "et": "Kaine autojuht"
+        },
+        {
+          "en": "Curfew",
+          "et": "Liikumiskeeld"
+        },
+        {
+          "en": "After-hours club",
+          "et": "Hilisööklubi"
+        },
+        {
+          "en": "Lockout law",
+          "et": "Hilise sisenemise keeld"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-090",
+      "name": {
+        "en": "Prohibition in Pop Culture",
+        "et": "Keeluaeg popkultuuris"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0446",
+        "built-in-adult-clue-0447",
+        "built-in-adult-clue-0448",
+        "built-in-adult-clue-0449",
+        "built-in-adult-clue-0450"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0447"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Speakeasy",
+          "et": "Salabaar"
+        },
+        {
+          "en": "Moonshine",
+          "et": "Puskar"
+        },
+        {
+          "en": "The Untouchables",
+          "et": "The Untouchables"
+        },
+        {
+          "en": "Boardwalk Empire",
+          "et": "Boardwalk Empire"
+        },
+        {
+          "en": "Bugsy Malone",
+          "et": "Bugsy Malone"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-092",
+      "name": {
+        "en": "The Language of Romance",
+        "et": "Romantika keel"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0456",
+        "built-in-adult-clue-0457",
+        "built-in-adult-clue-0458",
+        "built-in-adult-clue-0459",
+        "built-in-adult-clue-0460"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0459",
+        "built-in-adult-clue-0460"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Crush",
+          "et": "Armumine"
+        },
+        {
+          "en": "Heartbreak",
+          "et": "Südamevalu"
+        },
+        {
+          "en": "Chemistry",
+          "et": "Keemia"
+        },
+        {
+          "en": "Philia",
+          "et": "Philia"
+        },
+        {
+          "en": "The Art of Loving",
+          "et": "Armastuse kunst"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-093",
+      "name": {
+        "en": "Survey Basics",
+        "et": "Küsitluse põhitõed"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0461",
+        "built-in-adult-clue-0462",
+        "built-in-adult-clue-0463",
+        "built-in-adult-clue-0464",
+        "built-in-adult-clue-0465"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0464",
+        "built-in-adult-clue-0465"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Census",
+          "et": "Rahvaloendus"
+        },
+        {
+          "en": "Questionnaire",
+          "et": "Küsimustik"
+        },
+        {
+          "en": "Sample",
+          "et": "Valim"
+        },
+        {
+          "en": "The Literary Digest",
+          "et": "The Literary Digest"
+        },
+        {
+          "en": "William Sealy Gosset",
+          "et": "William Sealy Gosset"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-096",
+      "name": {
+        "en": "The Body Through Life",
+        "et": "Keha elu jooksul"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0476",
+        "built-in-adult-clue-0477",
+        "built-in-adult-clue-0478",
+        "built-in-adult-clue-0479",
+        "built-in-adult-clue-0480"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0479",
+        "built-in-adult-clue-0480"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Acne",
+          "et": "Akne"
+        },
+        {
+          "en": "Growth spurt",
+          "et": "Kasvuspurt"
+        },
+        {
+          "en": "Voice change",
+          "et": "Häälemurre"
+        },
+        {
+          "en": "Antonie van Leeuwenhoek",
+          "et": "Antonie van Leeuwenhoek"
+        },
+        {
+          "en": "Melatonin",
+          "et": "Melatoniin"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-099",
+      "name": {
+        "en": "Milestones and Life Transitions",
+        "et": "Eluetapid ja üleminekud"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0491",
+        "built-in-adult-clue-0492",
+        "built-in-adult-clue-0493",
+        "built-in-adult-clue-0494",
+        "built-in-adult-clue-0495"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0491",
+        "built-in-adult-clue-0492",
+        "built-in-adult-clue-0494",
+        "built-in-adult-clue-0495"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Young adulthood",
+          "et": "Noor täiskasvanuiga"
+        },
+        {
+          "en": "Middle age",
+          "et": "Keskealisus"
+        },
+        {
+          "en": "Retirement",
+          "et": "Pensionile jäämine"
+        },
+        {
+          "en": "Erik Erikson",
+          "et": "Erik Erikson"
+        },
+        {
+          "en": "122",
+          "et": "122"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    },
+    {
+      "categoryId": "built-in-adult-set-100",
+      "name": {
+        "en": "Healthy Relationships",
+        "et": "Terved suhted"
+      },
+      "status": "approved",
+      "clueIds": [
+        "built-in-adult-clue-0496",
+        "built-in-adult-clue-0497",
+        "built-in-adult-clue-0498",
+        "built-in-adult-clue-0499",
+        "built-in-adult-clue-0500"
+      ],
+      "touchedClueIds": [
+        "built-in-adult-clue-0499",
+        "built-in-adult-clue-0500"
+      ],
+      "responseIdentities": [
+        {
+          "en": "Respect",
+          "et": "Austus"
+        },
+        {
+          "en": "Honesty",
+          "et": "Ausus"
+        },
+        {
+          "en": "Support",
+          "et": "Toetus"
+        },
+        {
+          "en": "John Bowlby",
+          "et": "John Bowlby"
+        },
+        {
+          "en": "Carl Rogers",
+          "et": "Carl Rogers"
+        }
+      ],
+      "observations": "Five bilingual siblings read together; title covers these identities, the modified prompts identify their own target and modified public explanations do not disclose another target. Physical, historical, genre, institutional or scientific distinctions remain independent."
+    }
+  ]
+}

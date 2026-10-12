@@ -9,9 +9,21 @@ The bundled audio notice ships beside the media manifest at `resources/media/THI
 - Source: https://opentdb.com/
 - License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 - Local license text: `content/LICENSE-CC-BY-SA-4.0.txt`
-- Attribution requirement: OpenTDB data is retained in `content/imports/opentdb-candidates.jsonl`
-  as draft inspiration only and requires separate factual sourcing before content is authored.
-- Attribution/ingest update placeholder: none yet.
+- Quiz Stage contributors have rewritten questions, added independently sourced explanations,
+  and translated questions and explanations into Estonian. OpenTDB-inspired questions and
+  their adaptations are distributed under CC BY-SA 4.0.
+- Each bundled inspired clue retains its OpenTDB candidate ID and licence separately from
+  its factual citation. These credits are available in Settings → Content credits.
+
+## Wikipedia contributors
+
+- Source: the individual Wikipedia article URLs shown in Settings → Content credits.
+- License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0),
+  https://creativecommons.org/licenses/by-sa/4.0/.
+- Article authors and revision histories are available through each cited article.
+- Quiz Stage contributors have edited and adapted source material and translated it into
+  Estonian. Adaptations of Wikipedia text are distributed under CC BY-SA 4.0.
+- Other cited factual sources retain their recorded licences; citation does not grant reuse rights.
 
 ## Wikidata (CC0 facts)
 

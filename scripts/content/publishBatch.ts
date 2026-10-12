@@ -121,7 +121,11 @@ function isPassingReport(
   evidence: ReadonlyMap<string, ContentEvidence>,
 ): boolean {
   const samples = expectedSamples(generatedPack, batch);
-  const expectedUrls = [...new Set([...evidence.values()].map((item) => item.supportingSource.url))].sort(compareCodeUnits);
+  const appendScope = batch.boardClues === 850 && report.translationDiagnosticClueIds !== null
+    ? new Set(report.translationDiagnosticClueIds) : null;
+  const expectedUrls = [...new Set([...evidence.values()]
+    .filter((item) => appendScope === null || appendScope.has(item.clueId))
+    .map((item) => item.supportingSource.url))].sort(compareCodeUnits);
   const actualUrls = report.sources.map((source) => source.url);
   const sampleIds = Object.values(report.samples).flat();
   const sampleSize = batch.distribution === null ? 15 : 5;

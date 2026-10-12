@@ -1,0 +1,1386 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-estonia-clue-0001",
+      "batchId": "15-estonia",
+      "changes": {
+        "explanation_en": "The blue cornflower has been Estonia’s national flower since 1968 and was long familiar in cultivated fields.",
+        "explanation_et": "Sinine rukkilill on olnud Eesti rahvuslill alates 1968. aastast ning kasvas vanasti sageli viljapõldudel."
+      },
+      "reviewNotes": "ROOT-ESTONIA-001: remove the named sibling grain from the public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0010",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What is the title of Estonia’s first narrative film, a 1914 silent political satire filmed by Johannes Pääsuke?",
+        "clue_et": "Mis pealkirja kannab Eesti esimene mängufilm, Johannes Pääsukese filmitud 1914. aasta tumm poliitiline satiir?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-002: ask for the film title explicitly; the stored title now answers the requested scope. Independent review correction: omit both literal and translated title components. EFIS credits Pääsuke as cinematographer, so say filmed by rather than assigning him the director credit.",
+      "sourceVerification": [
+        {
+          "url": "https://www.efis.ee/film/630",
+          "observation": "National film database identifies 1914 first Estonian narrative film, a political satire, and Johannes Pääsuke as cinematographer; current search and page verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0011",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "According to Visit Estonia’s sailing guide checked in 2026, approximately how many islands does Estonia have, rounded to the nearest thousand?",
+        "clue_et": "Umbes mitu saart on Eestis 2026. aastal kontrollitud Visit Estonia purjetamisjuhendi järgi, ümardatuna lähima tuhandeni?",
+        "response_en": "Approximately 2,000 islands",
+        "response_et": "Umbes 2000 saart",
+        "accepted_variants_en": "2,000;Two thousand;2,317;2,317 islands",
+        "accepted_variants_et": "2000;Kaks tuhat;2317;2317 saart",
+        "explanation_en": "The guide lists 2,317 islands, which rounds to approximately 2,000.",
+        "explanation_et": "Juhend loendab 2317 saart, mis ümardub ligikaudu 2000-ni.",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-003: the quantity must be recalled; no count or threshold options appear in the prompt. Accept the exact cited count as well.",
+      "sourceVerification": [
+        {
+          "url": "https://visitestonia.com/en/where-to-go/sailing-to-estonia-and-exploring-the-countrys-small-harbors",
+          "observation": "The official guide’s fast-facts table lists 2,317 islands. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0012",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "How many noun cases does standard Estonian grammar traditionally distinguish?",
+        "clue_et": "Mitu nimisõnakäänet eristatakse traditsiooniliselt eesti kirjakeele grammatikas?",
+        "explanation_en": "Standard descriptions of Estonian grammar distinguish 14 noun cases.",
+        "explanation_et": "Eesti kirjakeele tavakirjeldustes eristatakse 14 nimisõnakäänet."
+      },
+      "reviewNotes": "ROOT-ESTONIA-003: remove twelve-plus-two arithmetic from the prompt and explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0013",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What is Estonia’s international telephone country code, written with a plus sign?",
+        "clue_et": "Milline on Eesti rahvusvaheline telefoni suunakood, kirjutatuna plussmärgiga?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-003: ask the actual country code without printing the equivalent code.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0014",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "In which year was Tallinn’s historic Old Town inscribed on the UNESCO World Heritage List?",
+        "clue_et": "Mis aastal kanti Tallinna ajalooline vanalinn UNESCO maailmapärandi nimekirja?",
+        "response_en": "1997",
+        "response_et": "1997",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "The historic centre of Tallinn was inscribed in 1997 for its well-preserved medieval town structure and buildings.",
+        "explanation_et": "Tallinna ajalooline keskus kanti nimekirja 1997. aastal hästi säilinud keskaegse linnastruktuuri ja hoonete tõttu.",
+        "source_title": "Tallinn — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Tallinn",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-003: replace the subtraction task with an independent, recognizable Estonian heritage date. Original factual wording; sources cited only.",
+      "sourceVerification": [
+        {
+          "url": "https://whc.unesco.org/en/list/822/",
+          "observation": "UNESCO’s site record identifies Historic Centre (Old Town) of Tallinn and inscription year 1997. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0056",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which interactive science centre in Tartu has a spherical planetarium and science theatre?",
+        "clue_et": "Millises Tartu interaktiivses teaduskeskuses on sfääriline planetaarium ja teadusteater?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-004: remove the discovery-exclamation spelling hint.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ahhaa.ee/about-us/about-ahhaa",
+          "observation": "The centre’s official description lists interactive exhibits, its spherical planetarium and science theatre. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0060",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which investigative weekly newspaper did Hans H. Luik found in 1989?",
+        "clue_et": "Millise uuriva ajakirjandusega tuntud nädalalehe asutas Hans H. Luik 1989. aastal?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-004: use founding and newspaper facts instead of translating all parts of its title.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0109",
+      "batchId": "15-estonia",
+      "changes": {
+        "accepted_variants_en": "Sauna whisk;Whisk",
+        "accepted_variants_et": "Viht;Saunaviht"
+      },
+      "reviewNotes": "ROOT-ESTONIA-005: accept the unspecified material actually described, while retaining birch as a valid specific example.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0006",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian city links its Town Hall Square Christmas-tree tradition to the Brotherhood of the Blackheads in 1441?",
+        "clue_et": "Milline Eesti linn seostab oma Raekoja platsi jõulupuutraditsiooni Mustpeade vennaskonna ja 1441. aastaga?",
+        "response_en": "Tallinn",
+        "response_et": "Tallinn",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "The city's tourism service traces the square's Christmas-tree tradition to 1441 and the Brotherhood of the Blackheads.",
+        "explanation_et": "Linna turismiteenistus seostab väljaku jõulupuutraditsiooni 1441. aasta ja Mustpeade vennaskonnaga.",
+        "source_title": "Tallinn Town Hall Square — Visit Tallinn",
+        "source_url": "https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-006: ask the historical decade without supplying 1441. Independent review correction: Easy tier1 now identifies a familiar city instead of requiring an obscure decade; qualifying the city's tradition avoids disputed priority claims. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square",
+          "observation": "City tourism primary page names Tallinn Town Hall Square and dates its Blackheads tree tradition to 1441; current page verified 2026-10-11. No open reuse licence displayed; restricted copyright terms apply."
+        }
+      ],
+      "subjectKey": "city:tallinn",
+      "factFamily": "estonia:tallinn-tree-tradition"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0033",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian sport, developed by Ado Kosk, challenges competitors to swing a full rotation on the longest possible rigid shafts?",
+        "clue_et": "Milline Ado Kose arendatud Eesti spordiala nõuab võistlejalt täisringi tegemist võimalikult pikkade jäikade aistega kiigel?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-006: replace word assembly with the sport’s distinctive rules and inventor.",
+      "sourceVerification": [
+        {
+          "url": "https://www.kiiking.ee/kiiking-history/more-of-history-of-kiiking/",
+          "observation": "The federation records Ado Kosk’s development of the sport and full rotations with adjustable shafts. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0124",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn indie-folk band fronted by Ewert Sundja released the album Good Man Down in 2011?",
+        "clue_et": "Milline Ewert Sundja juhitud Tallinna indie-folk-ansambel avaldas 2011. aastal albumi „Good Man Down“?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-006: use the frontman and a well-known album; both languages require the same band knowledge.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0150",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn contemporary-performance venue at Pikk 20 is operated by the association Teine Tants?",
+        "clue_et": "Millist Pika tänava 20 majas tegutsevat Tallinna nüüdisetenduspaika peab MTÜ Teine Tants?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-006: use the location and operator instead of assembling its full name.",
+      "sourceVerification": [
+        {
+          "url": "https://saal.ee/en/",
+          "observation": "The venue’s official page lists Pikk 20, Tallinn and MTÜ Teine Tants. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0138",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which small folk instrument is played by holding its metal frame against the teeth and plucking a flexible tongue that vibrates freely?",
+        "clue_et": "Millist väikest rahvapilli mängitakse, hoides metallraami hammaste vastas ja tõmmates sõrmega vabalt võnkuvat painduvat keelt?",
+        "explanation_en": "The frame rests against the teeth while the tongue moves freely between them; the mouth cavity shapes and amplifies the tone.",
+        "explanation_et": "Raam toetub hammastele, keel aga liigub nende vahel vabalt; suuõõs kujundab ja võimendab heli."
+      },
+      "reviewNotes": "ROOT-ESTONIA-007: distinguish the frame from the freely moving tongue, and remove the printed Estonian answer from EN.",
+      "sourceVerification": [
+        {
+          "url": "https://pilliportaal.kultuur.ut.ee/parimuspillid/parmupill/",
+          "observation": "The university guide describes frame arms resting on upper/lower teeth and a tongue moving freely when plucked. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0151",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What travel hub has runways and a terminal where passengers board commercial planes?",
+        "clue_et": "Millises reisikeskuses on lennurada ja terminal, kus reisijad liinilennukile lähevad?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: use an object definition rather than supplied compound components.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0152",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "At which public institution can you borrow novels and consult reference books?",
+        "clue_et": "Millisest avalikust asutusest saab romaane laenutada ja kus saab teatmeteoseid uurida?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: define the institution without printing the parts of its name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0153",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What term describes the city that normally houses a country’s parliament and central government?",
+        "clue_et": "Mis nimetust kannab linn, kus tavaliselt asuvad riigi parlament ja keskvalitsus?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: ask the concept without the head-plus-city formula.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0154",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What kind of powerful ship clears a route through frozen seas for other vessels?",
+        "clue_et": "Milline võimas laev avab külmunud merel teistele alustele läbipääsu?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: ask from function rather than the ice-plus-breaker components.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0155",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What tall crop grown for oil-rich seeds has large flower heads with yellow petals and dark centres?",
+        "clue_et": "Milline õlirikka seemne saamiseks kasvatatav kõrge taim kannab suuri kollaste kroonlehtede ja tumeda keskosaga õisikuid?",
+        "explanation_en": "The crop is cultivated for edible seeds and oil; its large heads contain many small flowers.",
+        "explanation_et": "Taime kasvatatakse söödavate seemnete ja õli saamiseks; tema suured õisikud koosnevad paljudest väikestest õitest."
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: identify the familiar crop without the day-plus-flower assembly; avoid implying that mature heads track sunlight.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0163",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which geometric motif in Estonian folk art has eight radiating points and is traditionally associated with protection?",
+        "clue_et": "Millisel Eesti rahvakunsti geomeetrilisel kaitsemotiivil on kaheksa kiirt?",
+        "explanation_en": "The eight-pointed star, or kaheksakand, is a traditional geometric motif associated with protection.",
+        "explanation_et": "Kaheksakand on traditsiooniline geomeetriline motiiv, mida pärimuses seostatakse kaitsega."
+      },
+      "reviewNotes": "ROOT-ESTONIA-009: omit the named sibling object from both prompt and public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0216",
+      "batchId": "15-estonia",
+      "changes": {
+        "accepted_variants_en": "Lennart Meri;Meri",
+        "accepted_variants_et": "Lennart Meri;Meri"
+      },
+      "reviewNotes": "ROOT-ESTONIA-011: the prompt seeks the person’s name, so explicitly accept Lennart Meri without requiring the whole airport name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0255",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian composer and former rock musician wrote Symphony No. 4, Magma, for percussion and orchestra?",
+        "clue_et": "Milline Eesti helilooja ja endine rokkmuusik kirjutas löökpillidele ja orkestrile neljanda sümfoonia „Magma“?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-012: identify Magma as Symphony No.4, not an orchestral cycle.",
+      "sourceVerification": [
+        {
+          "url": "https://www.erkkisven.com/recordings/24/magma",
+          "observation": "The composer’s catalog identifies Symphony No.4 Magma for percussion and orchestra. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0292",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What is the title of Ülo Õun’s Tartu sculpture in which a nude adult and a child hold hands while standing at the same height?",
+        "clue_et": "Mis pealkirja kannab Ülo Õuna Tartu skulptuur, kus alasti täiskasvanu ja laps hoiavad käest kinni ning on sama pikad?",
+        "explanation_en": "Õun modeled himself and his young son at the same height. The work was created in 1977 and unveiled in central Tartu in 2004.",
+        "explanation_et": "Õun kujutas ennast ja oma väikest poega sama pikana. Teos valmis 1977. aastal ning avati Tartu kesklinnas 2004. aastal.",
+        "source_title": "Ülo Õun — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/%C3%9Clo_%C3%95un",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-013: replace the Seattle/Louise Bourgeois source with the actual artist and correct the enlarged child’s height. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://visittartu.com/et/objekt/skulptuur-isa-ja-poeg/",
+          "observation": "The municipal tourism record identifies Õun and his 18-month-old son, the 1977 work and unveiling on 1 June 2004. Verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/%C3%9Clo_%C3%95un",
+          "observation": "The correct artist’s article explicitly describes the nude figures holding hands and standing at the same height. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0281",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn university, founded in 1914, teaches art, design, architecture and conservation?",
+        "clue_et": "Milline 1914. aastal asutatud Tallinna ülikool õpetab kunsti, disaini, arhitektuuri ja muinsuskaitset?",
+        "explanation_en": "Founded in 1914, the academy opened its present Kalamaja campus in 2018, adapting and extending the historic Rauaniit factory building.",
+        "explanation_et": "1914. aastal asutatud akadeemia avas 2018. aastal praeguse Kalamaja õppehoone, milleks kohandati ja laiendati ajaloolist Rauaniidi vabrikuhoonet."
+      },
+      "reviewNotes": "ROOT-ESTONIA-014: use the founding and disciplines instead of printing the accepted EKA acronym. Independent review correction: the 2018 campus adapted an existing factory rather than being entirely purpose-built. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.artun.ee/en/construction-of-new-building-begins/",
+          "observation": "Academy's construction announcement specifies renovation and construction at the protected Rauaniidi factory, retaining the historic building and adding sections; verified 2026-10-11."
+        },
+        {
+          "url": "https://erasmus.artun.ee/incoming-student/about-eka",
+          "observation": "Academy's own present overview confirms EKA has occupied the Kalamaja building since 2018; verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0303",
+      "batchId": "15-estonia",
+      "changes": {
+        "accepted_variants_en": "Stuudium",
+        "accepted_variants_et": "Stuudium",
+        "explanation_en": "Both eKool and Stuudium connect teachers, pupils and parents around assignments, grades and school communication.",
+        "explanation_et": "Nii eKool kui Stuudium ühendavad õpetajaid, õpilasi ja vanemaid ülesannete, hinnete ning koolisuhtluse kaudu."
+      },
+      "reviewNotes": "ROOT-ESTONIA-015: accept both platforms matching the generic description.",
+      "sourceVerification": [
+        {
+          "url": "https://stuudium.com/",
+          "observation": "The official platform lists grades, homework and school-family communication. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0315",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which autonomous-delivery company founded in Viljandi completed its first North American delivery in Fort Worth in 2022?",
+        "clue_et": "Milline Viljandis asutatud isejuhtiva kaubaveo ettevõte tegi 2022. aastal Fort Worthis oma esimese Põhja-Ameerika tarnesõidu?",
+        "source_title": "Clevon Completes First North American Autonomous Delivery in Fort Worth — Hillwood",
+        "source_url": "https://www.hillwood.com/newsroom/press-releases/clevon-completes-first-north-american-autonomous-delivery-in-fort-worth/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-016: use a dated delivery milestone instead of naming Cleveron; historical wording remains valid after later corporate changes. Source reachability correction: use the operating-site partner's primary press release instead of the now unavailable Clevon domain URL.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hillwood.com/newsroom/press-releases/clevon-completes-first-north-american-autonomous-delivery-in-fort-worth/",
+          "observation": "Operating-site partner's own December9,2022 press release identifies Clevon as Estonian-founded and its first U.S. delivery in Fort Worth at AllianceTexas Mobility Innovation Zone; verified 2026-10-11. Primary restricted copyright notice; no open reuse licence."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0321",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian student satellite launched in 2023 carried a planned plasma-brake experiment but failed to separate from its launch vehicle?",
+        "clue_et": "Milline 2023. aastal välja saadetud Eesti tudengisatelliit kandis kavandatud plasmapiduri katset, kuid ei eraldunud kanderaketist?",
+        "explanation_en": "ESTCube-2 was intended to test a plasma brake for removing small spacecraft from orbit. It failed to separate from its launch vehicle and burned up on atmospheric re-entry, so the orbital experiment was not performed.",
+        "explanation_et": "ESTCube-2 pidi katsetama plasmapidurit väikeste kosmoseaparaatide orbiidilt eemaldamiseks. See ei eraldunud kanderaketist ja hävis atmosfääri taassisenemisel, mistõttu orbiidikatset ei tehtud.",
+        "source_title": "UT Tartu Observatory to develop ESTCube-3 satellite with support from European Space Agency",
+        "source_url": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-017: retain the intended experiment and qualify launch outcome; do not imply successful orbital deployment or testing.",
+      "sourceVerification": [
+        {
+          "url": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency",
+          "observation": "University of Tartu’s 2025 account confirms the 2023 launch, failed separation and destruction on re-entry. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0327",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which pair of famous sandstone outcrops beside the Ahja River near Põlva attracts hikers to forest paths?",
+        "clue_et": "Milline kuulus liivakivipaljandite paar Ahja jõe ääres Põlva lähedal meelitab matkajaid metsaradadele?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-018: retain river, location and rock facts without naming or translating the answer stem.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0335",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What track gauge, in millimetres, is specified for Rail Baltica’s planned European-standard railway?",
+        "clue_et": "Milline rööpmelaius millimeetrites on kavandatud Rail Balticu Euroopa standardile vastaval raudteel?",
+        "accepted_variants_en": "1,435;1435;Standard gauge",
+        "accepted_variants_et": "1435;Standardrööpmelaius"
+      },
+      "reviewNotes": "ROOT-ESTONIA-019: ask the engineering fact rather than subtracting two printed numbers.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0348",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What is the minimum voting age for Estonia’s local council elections?",
+        "clue_et": "Milline on Eesti kohaliku volikogu valimistel hääletamise vanuse alampiir?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-019: ask the actual age without giving subtraction.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0342",
+      "batchId": "15-estonia",
+      "changes": {
+        "explanation_en": "The collective body exercises executive authority, and its members take office by oath.",
+        "explanation_et": "See kollektiivne organ teostab täidesaatvat riigivõimu ning selle liikmed astuvad ametisse vandega."
+      },
+      "reviewNotes": "ROOT-ESTONIA-020: omit the named 1992 Constitution from the explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0345",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which independent Estonian official checks the legality of legislation and also serves as the national ombudsman?",
+        "clue_et": "Milline sõltumatu Eesti ametikandja kontrollib õigusaktide õiguspärasust ja täidab ka riikliku ombudsmani ülesandeid?",
+        "explanation_en": "This official can propose that parliament correct an unlawful act and seek judicial invalidation if the problem is not remedied.",
+        "explanation_et": "See ametikandja võib teha parlamendile ettepaneku õigusvastast akti parandada ning taotleda kohtulikku tühistamist, kui puudust ei kõrvaldata."
+      },
+      "reviewNotes": "ROOT-ESTONIA-020 whole-set audit: omit both the named court from the explanation and the named sibling basic law from the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0349",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_et": "Millist nimetust kasutab Eesti ametlik valimisveeb kuuel päeval enne valimispäeva hääletamise kohta?",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-021: six days before election day, not six election days.",
+      "sourceVerification": [
+        {
+          "url": "https://www.valimised.ee/en/estonian-elections-nutshell/advance-voting/advance-voting",
+          "observation": "The official election site says election week has six advance-voting days and election day on Sunday. Verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0356",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What national outline appears on the standard national-side designs of Estonia’s ordinary euro coins, excluding commemorative issues?",
+        "clue_et": "Milline riigi kontuur on Eesti tavaliste euromüntide rahvusliku külje põhikujundusel, välja arvatud pühendusmündid?",
+        "explanation_en": "Lembit Lõhmus designed the standard national side with Estonia’s outline, name and twelve EU stars; commemorative two-euro coins can carry different designs.",
+        "explanation_et": "Lembit Lõhmus kujundas tavapärase rahvusliku külje Eesti kontuuri, nime ja kaheteistkümne ELi tähega; kaheeurosed pühendusmündid võivad kanda teistsugust kujundust."
+      },
+      "reviewNotes": "ROOT-ESTONIA-022: qualify standard circulation designs and exclude commemorative designs.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0383",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which western Estonian island gives its name to the national park that grew from the Vaika bird sanctuary established in 1910?",
+        "clue_et": "Milline Eesti läänesaar annab nime rahvuspargile, mis kasvas välja 1910. aastal loodud Vaika linnukaitsealast?",
+        "explanation_en": "The Vaika bird sanctuary was established in 1910. Its enlarged successor became Vilsandi National Park in 1993.",
+        "explanation_et": "Vaika linnukaitseala loodi 1910. aastal. Selle laiendatud järglasest sai 1993. aastal Vilsandi rahvuspark."
+      },
+      "reviewNotes": "ROOT-ESTONIA-023: distinguish reserve ancestry from national-park designation; preserve the island subject.",
+      "sourceVerification": [
+        {
+          "url": "https://kaitsealad.ee/en/protected-areas/vilsandi-national-park/about-national-park",
+          "observation": "Official Environmental Board page explicitly gives Vaika sanctuary1910 and national-park designation1993. Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0427",
+      "batchId": "15-estonia",
+      "changes": {
+        "explanation_en": "Alongside his 15 km classical gold medals in 2002 and 2006, Veerpalu won silver in the 50 km classical race at Salt Lake City in 2002, for three Olympic medals in total.",
+        "explanation_et": "Lisaks 2002. ja 2006. aasta 15 km klassikadistantsi kuldmedalitele võitis Veerpalu 2002. aastal Salt Lake Citys 50 km klassikadistantsi hõbeda, kogudes kokku kolm olümpiamedalit."
+      },
+      "reviewNotes": "ROOT-ESTONIA-024: correct the event and medal colour.",
+      "sourceVerification": [
+        {
+          "url": "https://medias2.fis-ski.com/pdf/2002/CC/2855/2855RL.pdf",
+          "observation": "Official FIS/Salt Lake Organizing Committee results headed Men's50km Classical list Andrus Veerpalu rank2. Verified2026-10-11; medias3 mirror returned an error, medias2 successfully opened."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0435",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian rally driver achieved his best World Rally Championship finish with fourth place at the 2008 Acropolis Rally?",
+        "clue_et": "Milline Eesti rallisõitja saavutas oma parima autoralli MM-sarja tulemuse 2008. aasta Akropolise rallil neljanda kohaga?",
+        "explanation_en": "Urmo Aava finished fourth at the 2008 Acropolis Rally, his best WRC result.",
+        "explanation_et": "Urmo Aava lõpetas 2008. aasta Akropolise ralli neljandana, mis jäi tema parimaks MM-sarja tulemuseks.",
+        "source_title": "Urmo Aava — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Urmo_Aava",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-025: replace the invented Jordan podium with a documented career-best result; remove the first-name hint. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.racecar.com/News/22289/motorsport/hirvonen-takes-podium-for-ford",
+          "observation": "Contemporary BP-Ford team report dated2008-06-02 says Aava finished a career-best fourth at the Acropolis Rally. Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Urmo_Aava",
+          "observation": "Current career summary independently states best result fourth at2008 Acropolis. Footer licenses text CC-BY-SA-4.0; verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0443",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn football club, founded on 10 March 1990, plays in green and white and has won numerous Estonian league titles?",
+        "clue_et": "Milline 10. märtsil 1990 asutatud Tallinna jalgpalliklubi mängib rohevalges ja on võitnud arvukalt Eesti meistritiitleid?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-026: the exact founding date distinguishes Flora from Levadia.",
+      "sourceVerification": [
+        {
+          "url": "https://fcflora.ee/klubi-ajalugu/",
+          "observation": "Official Flora history gives founding date10March1990. Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0444",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn venue opened in 2001 as Estonia’s national football stadium?",
+        "clue_et": "Milline Tallinna spordirajatis avati 2001. aastal Eesti jalgpalli rahvusstaadionina?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-027: identify the stadium through opening/function facts without printing its accepted sponsor alias.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0445",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian basketball club reached the national top-division final for the first time in 2017, earning its first silver medal?",
+        "clue_et": "Milline Eesti korvpalliklubi jõudis 2017. aastal esimest korda riigi kõrgliiga finaali ja võitis oma esimese hõbemedali?",
+        "explanation_en": "Rapla reached the 2017 final and finished second after losing the series to Kalev/Cramo.",
+        "explanation_et": "Rapla jõudis 2017. aastal finaali ja lõpetas teisena pärast finaalseeria kaotust Kalev/Cramole.",
+        "source_title": "Rapla KK — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Rapla_KK",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-028: use a dated historical result; remove current-season participation and the city-name hint. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.raplakk.ee/rapla-korvpallikool-ei-osale-eesti-lati-korvpalliliigas-ja-eesti-meistriliigas-hooajal-2025-2026/",
+          "observation": "Official club announcement states withdrawal for2025/26 and records one historical silver medal. Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Rapla_KK",
+          "observation": "History and season table identify2017 as first KML final and second place after defeat by Kalev/Cramo; footer CC-BY-SA-4.0. Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0457",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian footballer joined Liverpool from FC Augsburg in 2016?",
+        "clue_et": "Milline Eesti jalgpallur liitus 2016. aastal FC Augsburgist Liverpooliga?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-029: ask the verified signing fact; remove the false first-Premier-League-player premise and first-name hint.",
+      "sourceVerification": [
+        {
+          "url": "https://www.liverpoolfc.com/news/first-team/228244-liverpool-complete-deal-to-sign-ragnar-klavan",
+          "observation": "Liverpool's20July2016 signing announcement identifies Ragnar Klavan and Augsburg. Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0461",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which spiral yeast bun rolled with butter, sugar and cinnamon is a familiar item in Estonian café displays?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-030: describe the pastry without giving its full accepted answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0470",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which caraway-flavoured fresh cheese is a traditional food of southeastern Estonia?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-031: translate köömned as caraway, not cumin.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0471",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which hot spiced wine is served at Hiiumaa’s one-day December event where temporary winter cafés welcome visitors?",
+        "clue_et": "Millist kuuma vürtsitatud veini pakutakse Hiiumaa ühepäevasel detsembriüritusel, kus külastajaid ootavad ajutised talvekohvikud?",
+        "explanation_en": "Participating Hiiumaa cafés serve the warming drink during this one-day winter event.",
+        "explanation_et": "Osalevad Hiiumaa kohvikud pakuvad seda soojendavat jooki ühepäevasel talveüritusel."
+      },
+      "reviewNotes": "ROOT-ESTONIA-032: remove the accepted Glögi alias from the event name in both prompt and public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0477",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which five-letter Estonian word can express “thank you” as a complete sentence?",
+        "clue_et": "Milline viie tähega eesti sõna väljendab tervikliku lausena tänulikkust?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-033: Tänan contains five letters.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0483",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_et": "Millist Saaremaal kasutatavat lõhnavat puitu nikerdatakse sageli võinugadeks, kuumaalusteks ja väikesteks meeneteks?"
+      },
+      "reviewNotes": "ROOT-ESTONIA-034: replace ash-wood mistranslation saarepuit with idiomatic wording about wood used on Saaremaa.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0488",
+      "batchId": "15-estonia",
+      "changes": {
+        "accepted_variants_en": "Singing a song;Telling a riddle;Reciting a riddle",
+        "accepted_variants_et": "Laulu laulmine;Mõistatuse esitamine;Mõistatuse ütlemine"
+      },
+      "reviewNotes": "ROOT-ESTONIA-035: human host may accept the song/riddle alternatives that the broad prompt and explanation already permit.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0417",
+      "batchId": "15-estonia",
+      "changes": {
+        "accepted_variants_en": "Cranes;Swans",
+        "accepted_variants_et": "Kured;Sookured;Luiged",
+        "explanation_en": "Geese, cranes and swans can all migrate in V-shaped formations. Estonia is an important stopover for migrating birds in spring and autumn.",
+        "explanation_et": "Haned, kured ja luiged võivad kõik rännata V-kujulistes parvedes. Eesti on lindudele oluline kevadine ja sügisene rändepeatuspaik."
+      },
+      "reviewNotes": "ROOT-ESTONIA-036: accept other correctly described groups instead of treating the V formation as goose-specific.",
+      "sourceVerification": [
+        {
+          "url": "https://www.eoy.ee/img/Lindude_r2nne.pdf",
+          "observation": "Estonian Ornithological Society migration guide lists geese, cranes and swans as V-flying birds. Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0409",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which amber-coloured berry that grows in Estonian wetlands is depicted with its flowers on Finland’s ordinary two-euro coin?",
+        "clue_et": "Milline Eesti märgaladel kasvav merevaigukarva mari on koos oma õitega kujutatud Soome tavalisel kaheeurosel mündil?",
+        "explanation_en": "The cloudberry is depicted with its flowers in Raimo Heino’s design for Finland’s ordinary two-euro coin. Male and female flowers usually grow on separate plants.",
+        "explanation_et": "Murakas on koos õitega kujutatud Raimo Heino loodud Soome tavalise kaheeuromündi kujunduses. Isas- ja emasõied kasvavad tavaliselt eri taimedel.",
+        "source_title": "Rubus chamaemorus — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Cloudberry",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace a visual berry definition with a specific recognizable cross-border coin fact. Avoid naming the sibling habitat response. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ecb.europa.eu/euro/coins/html/fi.en.html",
+          "observation": "ECB Finland coin page states that the2euro design depicts cloudberries and cloudberry flowers by Raimo Heino Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Cloudberry",
+          "observation": "Article supports northern wetland habitat and dioecious flowers; text footer CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0410",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What are Estonia’s species-rich grasslands on very thin limestone soils called, especially those on the western islands traditionally kept open by grazing?",
+        "clue_et": "Kuidas nimetatakse Eesti liigirikkaid rohumaid väga õhukesel paemullal, eriti läänesaarte kooslusi, mida on traditsiooniliselt avatuna hoidnud karjatamine?",
+        "response_en": "Alvars",
+        "response_et": "Loopealsed",
+        "accepted_variants_en": "Alvar;Limestone grasslands",
+        "accepted_variants_et": "Loopealne;Alvarid;Looniidud",
+        "explanation_en": "Alvars are semi-natural grasslands on thin, lime-rich soil. Traditional grazing limits the growth of woody vegetation and maintains their species-rich open habitat.",
+        "explanation_et": "Loopealsed on õhukesel lubjarikkal mullal kujunenud poollooduslikud rohumaad. Traditsiooniline karjatamine piirab puittaimestiku kasvu ja säilitab liigirikka avatud elupaiga.",
+        "source_title": "Alvar — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Alvar",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace the obvious aromatic shrub identification with the regional habitat name. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://keskkonnaamet.ee/uudised/tanasest-naeb-hiiu-ja-saaremaa-parvlaevadel-loopealsete-taastamist-tutvustavaid-klippe",
+          "observation": "Environmental Board explains thin lime-rich soils, grasslands and grazing in its LifeToAlvars announcement Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Alvar",
+          "observation": "Article confirms limestone basis and Estonian distribution; text licensed CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "habitat:alvar",
+      "factFamily": "estonia:alvar:limestone-grassland"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0419",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which bird-ringing station on the Pärnu County coast was established in 1969 to study and monitor migration?",
+        "clue_et": "Milline Pärnumaa rannikul asuv lindude rõngastusjaam rajati 1969. aastal rände uurimiseks ja seireks?",
+        "response_en": "Kabli Bird Station",
+        "response_et": "Kabli linnujaam",
+        "accepted_variants_en": "Kabli;Kabli bird-ringing station",
+        "accepted_variants_et": "Kabli;Kabli rõngastusjaam",
+        "explanation_en": "Kabli Bird Station, in Häädemeeste parish, has monitored migration since 1969. Ringed birds can later be identified when they are recovered elsewhere.",
+        "explanation_et": "Häädemeeste vallas asuv Kabli linnujaam seirab rännet alates 1969. aastast. Rõngastatud linde saab hiljem mujal taasleidmisel kindlaks teha.",
+        "source_title": "Bird ringing information and bird observations — Estonian Environment Agency",
+        "source_url": "https://www.keskkonnaagentuur.ee/en/goals-activities/bird-ringing-information-and-bird-observations",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace the specialist Latin-name animal classification with a known local migration landmark. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.keskkonnaagentuur.ee/en/goals-activities/bird-ringing-information-and-bird-observations",
+          "observation": "Official agency page identifies Kabli station in Häädemeeste parish, its1969 establishment and migration-monitoring purpose Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "landmark:kabli-bird-station",
+      "factFamily": "estonia:kabli-station:established1969"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0420",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "On which November date is Estonia’s traditional kadripäev celebrated?",
+        "clue_et": "Millisel novembrikuu kuupäeval tähistatakse Eestis traditsiooniliselt kadripäeva?",
+        "response_en": "25 November",
+        "response_et": "25. november",
+        "accepted_variants_en": "November 25;25th November;25",
+        "accepted_variants_et": "25. novembril;25",
+        "explanation_en": "Kadripäev falls on 25 November. Its customs include visiting homes in disguises and wishing the household good fortune, especially for livestock.",
+        "explanation_et": "Kadripäev on 25. novembril. Selle kombestikku kuuluvad maskeeritult perede külastamine ja pererahvale hea õnne, eriti karjaõnne soovimine.",
+        "source_title": "Kadripäev — BERTA Estonian folk-calendar database",
+        "source_url": "https://www.folklore.ee/Berta/tahtpaev-kadripaev.php",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace transparent winter-sport identification with recall of a dated seasonal folk tradition. Original factual wording; citations only. Numeric locale alignment: retain date words and remove the optional 25.11 notation, which introduced an unmatched extra numeric token in ET.",
+      "sourceVerification": [
+        {
+          "url": "https://www.folklore.ee/Berta/tahtpaev-kadripaev.php",
+          "observation": "Estonian Literary Museum folklore database heading gives25November and describes disguise visits and livestock good fortune Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "tradition:kadripaev",
+      "factFamily": "estonia:kadripaev:calendar-date"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0479",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian noun case has the ending -ga, as in sõbraga, and expresses accompaniment?",
+        "clue_et": "Millise eesti nimisõnakäände lõpp on -ga, näiteks sõnas „sõbraga“, ja see väljendab koosolekut?",
+        "response_en": "Comitative case",
+        "response_et": "Kaasaütlev kääne",
+        "accepted_variants_en": "Comitative;Kaasaütlev;Komitatiiv",
+        "accepted_variants_et": "Kaasaütlev;Komitatiiv;Comitative",
+        "explanation_en": "The comitative ending -ga expresses accompaniment, as sõbraga means “with a friend.”",
+        "explanation_et": "Kaasaütleva käände lõpp -ga väljendab koosolekut: „sõbraga“ tähendab sõbra seltsis.",
+        "source_title": "Estonian grammar — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Estonian_grammar",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace a transparent basic-word definition with a case-form recall question; retain recognizable examples. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://teatmik.eki.ee/teatmik/luhendite-ja-tahiste-kaanamine/",
+          "observation": "EKI's declension tables give comitative/kaasaütlev forms ending-ga and-iga Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Estonian_grammar",
+          "observation": "Noun-case table identifies comitative with-ga; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "grammar:estonian-comitative",
+      "factFamily": "estonia:case:comitative-ga"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0480",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian noun case has the ending -ta, as in rahata, and expresses the absence of something?",
+        "clue_et": "Millise eesti nimisõnakäände lõpp on -ta, näiteks sõnas „rahata“, ja see väljendab millegi puudumist?",
+        "response_en": "Abessive case",
+        "response_et": "Ilmaütlev kääne",
+        "accepted_variants_en": "Abessive;Ilmaütlev;Abessiiv",
+        "accepted_variants_et": "Ilmaütlev;Abessiiv;Abessive",
+        "explanation_en": "The abessive ending -ta expresses absence: rahata means “without money.”",
+        "explanation_et": "Ilmaütleva käände lõpp -ta väljendab puudumist: „rahata“ tähendab raha puudumist.",
+        "source_title": "Estonian grammar — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Estonian_grammar",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace a transparent basic-word definition with an independently recalled case name. Avoid the full response in the question. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://teatmik.eki.ee/teatmik/luhendite-ja-tahiste-kaanamine/",
+          "observation": "EKI's declension tables give abessive/ilmaütlev forms ending-ta and-ita Verified2026-10-11."
+        },
+        {
+          "url": "https://arhiiv.eki.ee/dict/ekss/index.cgi?F=A&Q=ilma",
+          "observation": "EKSS defines ilmaütlev as the-ta case expressing absence Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Estonian_grammar",
+          "observation": "Noun-case table identifies abessive with-ta; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "grammar:estonian-abessive",
+      "factFamily": "estonia:case:abessive-ta"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0464",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "What unyeasted dough, used for flaky pastries in Estonian bakeries, is repeatedly folded around butter so that steam separates its many layers during baking?",
+        "clue_et": "Millist pärmita tainast, mida Eesti pagarikodades kasutatakse kihiliste küpsetiste jaoks, volditakse korduvalt võiga, nii et aur eraldab küpsetamisel selle arvukaid kihte?",
+        "response_en": "Puff pastry",
+        "response_et": "Lehttainas",
+        "accepted_variants_en": "Pâte feuilletée;Lehttainas",
+        "accepted_variants_et": "Lehttaigen;Puff pastry",
+        "explanation_en": "Repeated rolling and folding creates alternating layers of dough and butter. Water turns to steam in the oven and lifts the layers apart.",
+        "explanation_et": "Korduv rullimine ja voltimine loob vahelduvad taina- ja võikihid. Ahjus muutub vesi auruks ja kergitab kihid üksteisest lahku.",
+        "source_title": "Puff pastry — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Puff_pastry",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace the season-to-compound bun identification with a baking-technique fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.kingarthurbaking.com/recipes/classic-puff-pastry-pate-feuilletee-recipe",
+          "observation": "Baker-authored recipe demonstrates butter packet and repeated folds creating laminated dough Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Puff_pastry",
+          "observation": "Article identifies unyeasted laminated dough and steam expansion; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "food:puff-pastry",
+      "factFamily": "baking:puff-pastry:lamination"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0465",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Tallinn café, dating from 1864 and associated with confectioner Georg Stude, is Estonia’s oldest still in operation?",
+        "clue_et": "Milline 1864. aastast pärinev Tallinna kohvik, mida seostatakse kondiiter Georg Studega, on Eesti vanim praegugi tegutsev kohvik?",
+        "response_en": "Maiasmokk",
+        "response_et": "Maiasmokk",
+        "accepted_variants_en": "Café Maiasmokk;Maiasmokk café",
+        "accepted_variants_et": "Maiasmoka kohvik;Kohvik Maiasmokk",
+        "explanation_en": "Georg Stude acquired the business in 1864. The café continues its confectionery tradition, including handmade marzipan figures.",
+        "explanation_et": "Georg Stude omandas äri 1864. aastal. Kohvik jätkab kondiitritraditsiooni, sealhulgas käsitsi valmistatud martsipanikujude tegemist.",
+        "source_title": "Maiasmokk — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Maiasmokk",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace ingredient-to-compound answer assembly with a famous historical café; the bakery theme remains coherent. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://kohvikmaiasmokk.ee/en/",
+          "observation": "Official café page is titled Estonia's oldest café since1864; its indexed history gives GeorgStude1864 and continuing marzipan figures. A later fetch timed out Verified2026-10-11."
+        },
+        {
+          "url": "https://maiasmokk.oetest.ee/en/",
+          "observation": "Café's older official page retains the1864 Stude history and marzipan tradition Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Maiasmokk",
+          "observation": "Article confirms oldest operational café and1864 date; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "venue:maiasmokk",
+      "factFamily": "estonia:maiasmokk:oldest-cafe"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0499",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Baroque manor in Lahemaa National Park, once owned by the von der Pahlen family, became Estonia’s first fully restored manor complex and now houses an open-air museum?",
+        "clue_et": "Milline Lahemaa rahvuspargi barokkmõis, mis kuulus kunagi von der Pahlenite perekonnale, sai Eesti esimeseks täielikult restaureeritud mõisakompleksiks ja tegutseb nüüd vabaõhumuuseumina?",
+        "response_en": "Palmse Manor",
+        "response_et": "Palmse mõis",
+        "accepted_variants_en": "Palmse",
+        "accepted_variants_et": "Palmse",
+        "explanation_en": "Palmse’s restored complex presents manor architecture and life through its main house, outbuildings, gardens and park.",
+        "explanation_et": "Palmse restaureeritud kompleks tutvustab mõisaarhitektuuri ja -elu peahoone, kõrvalhoonete, aedade ning pargi kaudu.",
+        "source_title": "Palmse — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Palmse",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace event-name assembly with independently knowable cultural-tourism history. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://visitestonia.com/en/palmse-manor-and-open-air-museum",
+          "observation": "Official tourism entry identifies the Baroque manor in Lahemaa and Estonia's first fully restored manor complex Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Palmse",
+          "observation": "Manor history records von der Pahlen ownership and complex restoration; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "landmark:palmse-manor",
+      "factFamily": "estonia:palmse:first-restored-manor"
+    },
+    {
+      "clueId": "built-in-estonia-clue-0500",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which Estonian festival first held in Paide in 2013 was inspired by Sweden’s Almedalen event?",
+        "clue_et": "Milline 2013. aastal esimest korda Paides toimunud Eesti festival sai inspiratsiooni Rootsi Almedaleni üritusest?",
+        "explanation_en": "The Opinion Festival began in 2013, bringing people together to discuss public issues. Its founders drew inspiration from northern European democracy festivals, including Almedalen.",
+        "explanation_et": "Arvamusfestival sai alguse 2013. aastal, tuues inimesi kokku ühiskondlikel teemadel arutlema. Selle algatajaid inspireerisid Põhja-Euroopa demokraatiafestivalid, sealhulgas Almedalen.",
+        "source_title": "Mis on Arvamusfestival? — Arvamusfestival",
+        "source_url": "https://arvamusfestival.ee/mis-on-arvamusfestival/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: replace a transparent event-format definition with first-edition and inspiration facts. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://arvamusfestival.ee/mis-on-arvamusfestival/",
+          "observation": "Organizer's current introduction states held in Paide since2013 Verified2026-10-11."
+        },
+        {
+          "url": "https://arvamusfestival.ee/wp-content/uploads/2023/11/Sonarock_2017.pdf",
+          "observation": "Organizer's2017 magazine indexed text states Kristi initiated the first event in2013 with hopes it would become a gathering like Almedalen; direct PDF fetch later returned an error Verified2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-estonia-clue-0354",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "The Estonian town of Valga forms a cross-border twin with which town on the other side of the boundary?",
+        "clue_et": "Millise teisel pool piiri asuva linnaga moodustab Eesti Valga piiriülese kaksiklinna?"
+      },
+      "reviewNotes": "Extra lexical review: omit the neighbouring country's name to preserve the sibling Latvia/Läti answer. The twin-town relationship remains intact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0355",
+      "batchId": "15-estonia",
+      "changes": {
+        "clue_en": "Which South Estonian language, written with the letter õ, has its cultural centre in Võru?",
+        "clue_et": "Millise Lõuna-Eesti, õ-tähte kasutava keele kultuurikeskus on Võrus?"
+      },
+      "reviewNotes": "Extra lexical review: omit the neighbouring country's name so this language clue does not disclose the sibling Latvia/Läti answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-estonia-clue-0009",
+      "batchId": "15-estonia",
+      "changes": {
+        "explanation_en": "“Everybody” won Eurovision 2001 for Estonia and brought the following year’s contest to the winning country.",
+        "explanation_et": "„Everybody“ võitis Eestile 2001. aasta Eurovisiooni ning tõi järgmise aasta võistluse võitjariiki."
+      },
+      "reviewNotes": "Independent whole-set review: after the Easy Christmas-tree clue is replaced with Tallinn, remove that city from the sibling Eurovision explanation to preserve independence.",
+      "sourceVerification": []
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-estonia-set-012",
+      "batchId": "15-estonia",
+      "changes": {
+        "category_name_en": "Familiar Estonian Names",
+        "category_name_et": "Tuntud Eesti nimed"
+      },
+      "reviewNotes": "ROOT-ESTONIA-004: use a broad title covering the centre, national fish, model, game and newspaper without exposing their names."
+    },
+    {
+      "categoryId": "built-in-estonia-set-031",
+      "batchId": "15-estonia",
+      "changes": {
+        "category_name_en": "Everyday Words and Objects",
+        "category_name_et": "Igapäevased sõnad ja esemed"
+      },
+      "reviewNotes": "ROOT-ESTONIA-008: each locale asks the familiar object’s name in its own language; the title no longer contradicts English responses."
+    },
+    {
+      "categoryId": "built-in-estonia-set-038",
+      "batchId": "15-estonia",
+      "changes": {
+        "category_name_en": "Distinctive Estonian Spelling",
+        "category_name_et": "Eesti õigekirja eripärad"
+      },
+      "reviewNotes": "ROOT-ESTONIA-010: a language-neutral title no longer exposes tilde."
+    },
+    {
+      "categoryId": "built-in-estonia-set-082",
+      "batchId": "15-estonia",
+      "changes": {
+        "category_name_en": "Estonia’s Wild Landscapes",
+        "category_name_et": "Eesti loodusmaastikud"
+      },
+      "reviewNotes": "Additional lexical disclosure: the previous Bogs title supplied the English response to0408. Preserve the broad woodland/wetland/meadow theme."
+    },
+    {
+      "categoryId": "built-in-estonia-set-096",
+      "batchId": "15-estonia",
+      "changes": {
+        "category_name_en": "Estonian Words and Grammar",
+        "category_name_et": "Eesti sõnad ja grammatika"
+      },
+      "reviewNotes": "ROOT-ESTONIA-037: retain three accessible vocabulary questions and use higher-tier grammar facts; update the title accordingly."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "ROOT-ESTONIA-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0001",
+        "built-in-estonia-clue-0002"
+      ],
+      "reason": "The cornflower explanation no longer states rye/rukis."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0010"
+      ],
+      "reason": "Both prompts explicitly seek a title, matching Bear Hunt in Pärnumaa/Karujaht Pärnumaal."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0011",
+        "built-in-estonia-clue-0012",
+        "built-in-estonia-clue-0013",
+        "built-in-estonia-clue-0014"
+      ],
+      "reason": "All four now require facts not supplied in the question. The impossible-to-calibrate tower subtraction is replaced by a heritage year; thresholds are no longer ambiguous."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0056",
+        "built-in-estonia-clue-0060"
+      ],
+      "reason": "The visible category name and prompts no longer supply AHHAA or Ekspress."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0109"
+      ],
+      "reason": "Generic sauna whisk/viht is now accepted; the current leafy-twig wording need not falsely require birch."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0006",
+        "built-in-estonia-clue-0033",
+        "built-in-estonia-clue-0124",
+        "built-in-estonia-clue-0150"
+      ],
+      "reason": "Replace the supplied-date arithmetic with a familiar Easy city identification, preserving the Christmas-tree tradition theme while avoiding obscure decade recall and an undisputed world-first claim."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0138"
+      ],
+      "reason": "Both prompt and explanation now describe the instrument’s mechanics accurately."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0151",
+        "built-in-estonia-clue-0152",
+        "built-in-estonia-clue-0153",
+        "built-in-estonia-clue-0154",
+        "built-in-estonia-clue-0155"
+      ],
+      "reason": "All five use independent definitions in both languages, with a title matching the localized task."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0162",
+        "built-in-estonia-clue-0163"
+      ],
+      "reason": "The star clue no longer prints or defines knitted mittens/kootud kindad."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0186"
+      ],
+      "reason": "The answer word tilde is absent from both visible category titles."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0216"
+      ],
+      "reason": "The person-only response requested by the prompt is explicitly accepted."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-012",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0255"
+      ],
+      "reason": "The work type and instrumentation now match the composer’s own catalogue."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-013",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0292"
+      ],
+      "reason": "The correct entity source supports the Tartu work; prompt and explanation describe equal-height figures and correct dates."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-014",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0281"
+      ],
+      "reason": "EKA remains a legitimate alias but is absent from the prompt."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-015",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0303"
+      ],
+      "reason": "Stuudium is now accepted alongside eKool for the shared features."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-016",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0313",
+        "built-in-estonia-clue-0315"
+      ],
+      "reason": "The Clevon prompt no longer supplies the adjacent Cleveron answer."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-017",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0321"
+      ],
+      "reason": "Prompt and explanation distinguish the planned plasma-brake test from the failed launch and explicitly state no orbital test occurred."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-018",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0327"
+      ],
+      "reason": "Neither prompt contains taevakoda or a direct translation of the place name."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-019",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0335",
+        "built-in-estonia-clue-0348"
+      ],
+      "reason": "Neither question supplies an arithmetic route to its answer."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-020",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0341",
+        "built-in-estonia-clue-0342",
+        "built-in-estonia-clue-0343",
+        "built-in-estonia-clue-0345"
+      ],
+      "reason": "The Government explanation no longer identifies the Constitution; the Chancellor prompt/explanation no longer states the sibling Constitution or Supreme Court."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-021",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0349"
+      ],
+      "reason": "ET now matches the officially verified six-day advance-voting period."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-022",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0356"
+      ],
+      "reason": "The map claim is explicitly limited to standard national-side designs."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-023",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0383"
+      ],
+      "reason": "Remove the false oldest-national-park premise and give both designation dates."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-024",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0427"
+      ],
+      "reason": "Correct the invented30km victory to50km classical silver."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-025",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0435"
+      ],
+      "reason": "Replace false podium claim with fourth at2008 Acropolis, verified by the contemporary team report."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-026",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0443"
+      ],
+      "reason": "Add Flora's exact founding date to disambiguate the green-and-white Tallinn clubs."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-027",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0444"
+      ],
+      "reason": "Remove the supplied A.LeCoqArena alias; retain it as a genuine alternate stadium name."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-028",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0445"
+      ],
+      "reason": "Replace the false2025–26 participation premise with the documented2017 final."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-029",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0457"
+      ],
+      "reason": "Ask Klavan's Liverpool signing; Poom's earlierPremierLeague debut no longer conflicts."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-030",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0461"
+      ],
+      "reason": "Remove literal cinnamonroll from the English prompt."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-031",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0470"
+      ],
+      "reason": "Align English spice with Estonian and the public explanation."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-032",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0471"
+      ],
+      "reason": "Describe the event without spelling its accepted drink alias."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-033",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0477"
+      ],
+      "reason": "Correct the letter count in both locales."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-034",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0483"
+      ],
+      "reason": "Remove the ash species introduced by incorrect translation."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-035",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0488"
+      ],
+      "reason": "Accept the existing acknowledged alternatives without inventing a narrower tradition."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-036",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-estonia-clue-0417"
+      ],
+      "reason": "Accept cranes and swans and explain the non-exclusive formation."
+    },
+    {
+      "findingId": "ROOT-ESTONIA-037",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-estonia-clue-0409",
+        "built-in-estonia-clue-0410",
+        "built-in-estonia-clue-0419",
+        "built-in-estonia-clue-0420",
+        "built-in-estonia-clue-0479",
+        "built-in-estonia-clue-0480",
+        "built-in-estonia-clue-0464",
+        "built-in-estonia-clue-0465",
+        "built-in-estonia-clue-0499",
+        "built-in-estonia-clue-0500"
+      ],
+      "reason": "Retain accessible tier1–3 questions and quotas; replace/rewrite ten tier4–5 questions across all five listed sets with independently knowable facts. The editorial repair is concrete, but representative EN/ET player calibration has not been performed and is not claimed."
+    }
+  ]
+}

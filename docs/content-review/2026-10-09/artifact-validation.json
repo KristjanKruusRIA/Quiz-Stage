@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-09T16:39:59.738Z",
+  "expectedCategories": 2414,
+  "actualCategories": 2414,
+  "expectedQuestions": 11374,
+  "actualQuestions": 11374,
+  "findingIdsUnique": true,
+  "allFindingReferencesValid": true,
+  "allReviewedClueIdsMatchFrozenCategories": true,
+  "missingCategories": 0,
+  "missingQuestions": 0,
+  "overlappingCategoryAssignments": 0,
+  "changedFrozenInputs": 0,
+  "seedSha256": "84b547f39a9f8392541cdc0d9591fd7bdedc3d70ef02b30786043223d5a4a70e",
+  "artifactHashes": {
+    "review.md": "739d6d0dbf04899eac46cbb0e6950a22264d8dff76d6699810aae8f69d64b965",
+    "findings.md": "b332beaecbe09bbd0e7cf518f72b17e4079d826c89abff19663f59202b662e83",
+    "findings.json": "66cefd07512a271139043ef044055dfb5f5bd88125ab5337b296753944b4c411",
+    "coverage.json": "3ca7f94b293ce0d3e10a063f85e90ab13d09c6bd7f08c3503c0ea903f53cff55",
+    "snapshot-manifest.json": "954acfc21970174da577c5a3d12c3af7eac197d34c35dfae84cd67c7010c54f0",
+    "metadata-audit.json": "e47f282ecf0fb5b907f0361f13dc332fac03d3dfe8201d555435260a2390b8b2"
+  }
+}

@@ -225,7 +225,7 @@ export default function App({ api }: AppProps) {
         appearance={appearance} onSaveAppearance={async (value) => {
           await saveAppearanceSettings(value);
         }}
-        onBack={() => navigate('home')} onSave={saveAudioSettings} />
+        onBack={() => navigate('home')} onSave={saveAudioSettings} loadContent={desktopApi.listContent} />
       : <SettingsStatusScreen status={audioState.status === 'error' || appearanceState.status === 'error' ? 'error' : 'loading'} onRetry={() => { loadAudioSettings(); loadAppearanceSettings(); }} onBack={() => navigate('home')} />;
   } else if (route === 'match') {
     const matchLocale = hostView?.state.config.language ?? locale;

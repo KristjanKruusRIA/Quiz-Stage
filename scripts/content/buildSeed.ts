@@ -18,6 +18,7 @@ import { parsePackCsv, type ParsedPack, type ParsedCsvRow } from '../../src/main
 import { readEvidenceInputs, type ContentEvidence } from './evidence';
 import { publishValidationReport, reviewedIdsFromReport, validateProductionContent } from './validate';
 import { restoreNpmRunArgs } from './npmCliCompatibility';
+import { assertReviewedInputHashes, loadContentRepairReview, reviewedEvidenceHash } from './contentRepairReview';
 
 export interface SeedBuildArgs {
   inputs: string[];
@@ -77,11 +78,18 @@ export async function buildProductionSeed(
 ): Promise<BuildSeedResult> {
   const evidenceByClueId = await readEvidenceInputs(args.evidence);
   const inputs = await readProductionInputs(args.inputs);
+  const productionContent = inputs.some(input => /^content\/(?:authored|generated)\//u.test(reportArtifactPath(input.file)));
+  if (productionContent) {
+    assertReviewedInputHashes(inputs.map(input => ({ file: reportArtifactPath(input.file), sha256: input.sha256 })), reviewedEvidenceHash(evidenceByClueId), repositoryRoot);
+  }
+  const repairReview = productionContent ? loadContentRepairReview(repositoryRoot) : undefined;
   const validation = validateProductionContent(
     inputs.map((input) => ({ file: input.file, pack: input.pack })),
     {
       mode: 'release', evidenceByClueId,
       reviewedExceptionIds: reviewedIdsFromReport(args.report, { repositoryRoot }),
+      checkAnswerDisclosures: productionContent,
+      approvedAnswerDisclosures: new Map(repairReview?.answerDisclosureExceptions.map(item => [item.id, item.reason])),
     },
   );
   if (validation.blocking) {
@@ -326,6 +334,7 @@ function importProductionRows(
           translationStatus: translationStatus(row.translation_status),
           sourceId: evidence.supportingSource.sourceId,
           factualVerifiedAt: evidence.factualReview.reviewedAt,
+          ...(evidence.inspiration === null ? {} : { inspiration: evidence.inspiration }),
         }),
         Number(row.enabled === 'true'),
       );

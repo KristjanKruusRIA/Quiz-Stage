@@ -1,0 +1,86 @@
+{
+  "reviewer": "final_review_audit",
+  "reviewedAt": "2026-10-09T16:41:26.354Z",
+  "scope": "Independent spot-check of ROOT-MYTHOLOGY-006 through 011 and the subsequently split 012; independent ledger/count/hash validation. This is not a second semantic reading of all questions.",
+  "reviewedArtifactHashes": {
+    "findings.json": "66cefd07512a271139043ef044055dfb5f5bd88125ab5337b296753944b4c411",
+    "coverage.json": "3ca7f94b293ce0d3e10a063f85e90ab13d09c6bd7f08c3503c0ea903f53cff55",
+    "review.md": "739d6d0dbf04899eac46cbb0e6950a22264d8dff76d6699810aae8f69d64b965",
+    "findings.md": "b332beaecbe09bbd0e7cf518f72b17e4079d826c89abff19663f59202b662e83",
+    "snapshot-manifest.json": "954acfc21970174da577c5a3d12c3af7eac197d34c35dfae84cd67c7010c54f0",
+    "artifact-validation.json": "07c25f6348d8a1910bb97b1a5b3a6d9e1c7afa4d273e6659cd3bed4778718ef2"
+  },
+  "findings": 304,
+  "affectedCategories": 311,
+  "frozenCategories": 2414,
+  "frozenQuestions": 11374,
+  "groupCounts": {
+    "Question independence and giveaways": 128,
+    "Facts, ambiguity and localization": 138,
+    "Category coherence": 30,
+    "Attribution and provenance": 4,
+    "Difficulty calibration": 4
+  },
+  "pendingPrimaryVerificationFindingIds": [
+    "B-049",
+    "B-051",
+    "B-052",
+    "B-053",
+    "B-054",
+    "B-080"
+  ],
+  "frozenInputsUnchanged": true,
+  "changedInputs": [],
+  "staleArtifactHashes": [],
+  "checksPassed": true,
+  "issues": [],
+  "semanticSpotcheck": [
+    {
+      "id": "ROOT-MYTHOLOGY-006",
+      "verdict": "supported",
+      "observation": "Both frozen prompts generalize the cut-out technique to five images. Independently opened the National Science and Media Museum account and museum research: Frances defended the fifth photograph; the journal distinguishes its double exposure from the first four cut-outs. No supernatural validation is asserted."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-007",
+      "verdict": "supported guidance mismatch",
+      "observation": "Both ET prompts explicitly ask for an English month name; recorded ET responses are marts/veebruar without March/February aliases. Human host judgment remains available; this is answer guidance rather than an automatic rejection bug."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-008",
+      "verdict": "supported",
+      "observation": "Both prompts print a Dios; removing the space yields the explicit accepted adios spelling. The Hard label further supports repair. This does not imply all etymology clues are defective."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-009",
+      "verdict": "supported after narrowing",
+      "observation": "Vesta and mezuzah descriptive aliases repeat supplied identifying properties, halal accepts non-Arabic permitted food despite asking for an Arabic word, and ET tabula rasa prints its accepted puhas leht variant. These are distinct from recognizing an established translated phrase."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-010",
+      "verdict": "supported ambiguity",
+      "observation": "Independently opened Theoi hosted Pausanias 10.28.1ff: Acheron and Charon appear together. Styx remains a legitimate tradition; the finding should not call that recorded answer false."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-011",
+      "verdict": "supported as editorial",
+      "observation": "Frozen prompt gives broad Christian relief/development/advocacy mission with no distinguishing history or programme. Independently opened Compassion child-development model and World Vision founding history. Compassion about-us page failed in this tool, so no independent full-reading claim is made for that page or all three alternative activities. Generic wording concern remains editorial."
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-012",
+      "verdict": "policy judgment",
+      "observation": "Translated Latin aliases such as seize the day and in good faith are real established translations. Their acceptance can intentionally improve Easy accessibility. The prompt requests Latin, so language boundary merits a policy note, not a confirmed factual error or intrinsic giveaway."
+    }
+  ],
+  "correctionsRequestedAndResolved": [
+    "Move prompt/title disclosure codes into Question independence and giveaways",
+    "Move missing translated-title variants into Facts, ambiguity and localization",
+    "Split actual descriptive alias restatements from editorial translated-phrase scoring policy"
+  ],
+  "externallyConsulted": [
+    "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/",
+    "https://journal.sciencemuseum.ac.uk/article/power-at-play-in-paranormal-history/",
+    "https://www.theoi.com/Khthonios/Kharon.html",
+    "https://www.compassion.com/child-development-model.htm/",
+    "https://www.worldvision.org/charitable-giving-news-stories/what-is-world-vision"
+  ]
+}

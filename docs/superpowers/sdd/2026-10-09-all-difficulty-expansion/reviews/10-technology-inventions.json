@@ -1,0 +1,1334 @@
+{
+  "batchId": "10-technology-inventions",
+  "bankSha256": "a5da7f6f00e549391513a399e1191492736bfcb532e6fafdb67bf80edbba3c34",
+  "reviewedClueIds": [
+    "built-in-technology-inventions-all-level-expansion-0001",
+    "built-in-technology-inventions-all-level-expansion-0002",
+    "built-in-technology-inventions-all-level-expansion-0003",
+    "built-in-technology-inventions-all-level-expansion-0004",
+    "built-in-technology-inventions-all-level-expansion-0005",
+    "built-in-technology-inventions-all-level-expansion-0006",
+    "built-in-technology-inventions-all-level-expansion-0007",
+    "built-in-technology-inventions-all-level-expansion-0008",
+    "built-in-technology-inventions-all-level-expansion-0009",
+    "built-in-technology-inventions-all-level-expansion-0010",
+    "built-in-technology-inventions-all-level-expansion-0011",
+    "built-in-technology-inventions-all-level-expansion-0012",
+    "built-in-technology-inventions-all-level-expansion-0013",
+    "built-in-technology-inventions-all-level-expansion-0014",
+    "built-in-technology-inventions-all-level-expansion-0015",
+    "built-in-technology-inventions-all-level-expansion-0016",
+    "built-in-technology-inventions-all-level-expansion-0017",
+    "built-in-technology-inventions-all-level-expansion-0018",
+    "built-in-technology-inventions-all-level-expansion-0019",
+    "built-in-technology-inventions-all-level-expansion-0020",
+    "built-in-technology-inventions-all-level-expansion-0021",
+    "built-in-technology-inventions-all-level-expansion-0022",
+    "built-in-technology-inventions-all-level-expansion-0023",
+    "built-in-technology-inventions-all-level-expansion-0024",
+    "built-in-technology-inventions-all-level-expansion-0025",
+    "built-in-technology-inventions-all-level-expansion-0026",
+    "built-in-technology-inventions-all-level-expansion-0027",
+    "built-in-technology-inventions-all-level-expansion-0028",
+    "built-in-technology-inventions-all-level-expansion-0029",
+    "built-in-technology-inventions-all-level-expansion-0030",
+    "built-in-technology-inventions-all-level-expansion-0031",
+    "built-in-technology-inventions-all-level-expansion-0032",
+    "built-in-technology-inventions-all-level-expansion-0033",
+    "built-in-technology-inventions-all-level-expansion-0034",
+    "built-in-technology-inventions-all-level-expansion-0035",
+    "built-in-technology-inventions-all-level-expansion-0036",
+    "built-in-technology-inventions-all-level-expansion-0037",
+    "built-in-technology-inventions-all-level-expansion-0038",
+    "built-in-technology-inventions-all-level-expansion-0039",
+    "built-in-technology-inventions-all-level-expansion-0040",
+    "built-in-technology-inventions-all-level-expansion-0041",
+    "built-in-technology-inventions-all-level-expansion-0042",
+    "built-in-technology-inventions-all-level-expansion-0043",
+    "built-in-technology-inventions-all-level-expansion-0044",
+    "built-in-technology-inventions-all-level-expansion-0045",
+    "built-in-technology-inventions-all-level-expansion-0046",
+    "built-in-technology-inventions-all-level-expansion-0047",
+    "built-in-technology-inventions-all-level-expansion-0048",
+    "built-in-technology-inventions-all-level-expansion-0049",
+    "built-in-technology-inventions-all-level-expansion-0050",
+    "built-in-technology-inventions-all-level-expansion-0051",
+    "built-in-technology-inventions-all-level-expansion-0052",
+    "built-in-technology-inventions-all-level-expansion-0053",
+    "built-in-technology-inventions-all-level-expansion-0054",
+    "built-in-technology-inventions-all-level-expansion-0055",
+    "built-in-technology-inventions-all-level-expansion-0056",
+    "built-in-technology-inventions-all-level-expansion-0057",
+    "built-in-technology-inventions-all-level-expansion-0058",
+    "built-in-technology-inventions-all-level-expansion-0059",
+    "built-in-technology-inventions-all-level-expansion-0060",
+    "built-in-technology-inventions-all-level-expansion-0061",
+    "built-in-technology-inventions-all-level-expansion-0062",
+    "built-in-technology-inventions-all-level-expansion-0063",
+    "built-in-technology-inventions-all-level-expansion-0064",
+    "built-in-technology-inventions-all-level-expansion-0065",
+    "built-in-technology-inventions-all-level-expansion-0066",
+    "built-in-technology-inventions-all-level-expansion-0067",
+    "built-in-technology-inventions-all-level-expansion-0068",
+    "built-in-technology-inventions-all-level-expansion-0069",
+    "built-in-technology-inventions-all-level-expansion-0070",
+    "built-in-technology-inventions-all-level-expansion-0071",
+    "built-in-technology-inventions-all-level-expansion-0072",
+    "built-in-technology-inventions-all-level-expansion-0073",
+    "built-in-technology-inventions-all-level-expansion-0074",
+    "built-in-technology-inventions-all-level-expansion-0075",
+    "built-in-technology-inventions-all-level-expansion-0076",
+    "built-in-technology-inventions-all-level-expansion-0077",
+    "built-in-technology-inventions-all-level-expansion-0078",
+    "built-in-technology-inventions-all-level-expansion-0079",
+    "built-in-technology-inventions-all-level-expansion-0080",
+    "built-in-technology-inventions-all-level-expansion-0081",
+    "built-in-technology-inventions-all-level-expansion-0082",
+    "built-in-technology-inventions-all-level-expansion-0083",
+    "built-in-technology-inventions-all-level-expansion-0084",
+    "built-in-technology-inventions-all-level-expansion-0085",
+    "built-in-technology-inventions-all-level-expansion-0086",
+    "built-in-technology-inventions-all-level-expansion-0087",
+    "built-in-technology-inventions-all-level-expansion-0088",
+    "built-in-technology-inventions-all-level-expansion-0089",
+    "built-in-technology-inventions-all-level-expansion-0090",
+    "built-in-technology-inventions-all-level-expansion-0091",
+    "built-in-technology-inventions-all-level-expansion-0092",
+    "built-in-technology-inventions-all-level-expansion-0093",
+    "built-in-technology-inventions-all-level-expansion-0094",
+    "built-in-technology-inventions-all-level-expansion-0095",
+    "built-in-technology-inventions-all-level-expansion-0096",
+    "built-in-technology-inventions-all-level-expansion-0097",
+    "built-in-technology-inventions-all-level-expansion-0098",
+    "built-in-technology-inventions-all-level-expansion-0099",
+    "built-in-technology-inventions-all-level-expansion-0100",
+    "built-in-technology-inventions-all-level-expansion-0101",
+    "built-in-technology-inventions-all-level-expansion-0102",
+    "built-in-technology-inventions-all-level-expansion-0103",
+    "built-in-technology-inventions-all-level-expansion-0104",
+    "built-in-technology-inventions-all-level-expansion-0105",
+    "built-in-technology-inventions-all-level-expansion-0106",
+    "built-in-technology-inventions-all-level-expansion-0107",
+    "built-in-technology-inventions-all-level-expansion-0108",
+    "built-in-technology-inventions-all-level-expansion-0109",
+    "built-in-technology-inventions-all-level-expansion-0110",
+    "built-in-technology-inventions-all-level-expansion-0111",
+    "built-in-technology-inventions-all-level-expansion-0112",
+    "built-in-technology-inventions-all-level-expansion-0113",
+    "built-in-technology-inventions-all-level-expansion-0114",
+    "built-in-technology-inventions-all-level-expansion-0115",
+    "built-in-technology-inventions-all-level-expansion-0116",
+    "built-in-technology-inventions-all-level-expansion-0117",
+    "built-in-technology-inventions-all-level-expansion-0118",
+    "built-in-technology-inventions-all-level-expansion-0119",
+    "built-in-technology-inventions-all-level-expansion-0120",
+    "built-in-technology-inventions-all-level-expansion-0121",
+    "built-in-technology-inventions-all-level-expansion-0122",
+    "built-in-technology-inventions-all-level-expansion-0123",
+    "built-in-technology-inventions-all-level-expansion-0124",
+    "built-in-technology-inventions-all-level-expansion-0125",
+    "built-in-technology-inventions-all-level-expansion-0126",
+    "built-in-technology-inventions-all-level-expansion-0127",
+    "built-in-technology-inventions-all-level-expansion-0128",
+    "built-in-technology-inventions-all-level-expansion-0129",
+    "built-in-technology-inventions-all-level-expansion-0130",
+    "built-in-technology-inventions-all-level-expansion-0131",
+    "built-in-technology-inventions-all-level-expansion-0132",
+    "built-in-technology-inventions-all-level-expansion-0133",
+    "built-in-technology-inventions-all-level-expansion-0134",
+    "built-in-technology-inventions-all-level-expansion-0135",
+    "built-in-technology-inventions-all-level-expansion-0136",
+    "built-in-technology-inventions-all-level-expansion-0137",
+    "built-in-technology-inventions-all-level-expansion-0138",
+    "built-in-technology-inventions-all-level-expansion-0139",
+    "built-in-technology-inventions-all-level-expansion-0140",
+    "built-in-technology-inventions-all-level-expansion-0141",
+    "built-in-technology-inventions-all-level-expansion-0142",
+    "built-in-technology-inventions-all-level-expansion-0143",
+    "built-in-technology-inventions-all-level-expansion-0144",
+    "built-in-technology-inventions-all-level-expansion-0145",
+    "built-in-technology-inventions-all-level-expansion-0146",
+    "built-in-technology-inventions-all-level-expansion-0147",
+    "built-in-technology-inventions-all-level-expansion-0148",
+    "built-in-technology-inventions-all-level-expansion-0149",
+    "built-in-technology-inventions-all-level-expansion-0150",
+    "built-in-technology-inventions-all-level-expansion-0151",
+    "built-in-technology-inventions-all-level-expansion-0152",
+    "built-in-technology-inventions-all-level-expansion-0153",
+    "built-in-technology-inventions-all-level-expansion-0154",
+    "built-in-technology-inventions-all-level-expansion-0155",
+    "built-in-technology-inventions-all-level-expansion-0156",
+    "built-in-technology-inventions-all-level-expansion-0157",
+    "built-in-technology-inventions-all-level-expansion-0158",
+    "built-in-technology-inventions-all-level-expansion-0159",
+    "built-in-technology-inventions-all-level-expansion-0160",
+    "built-in-technology-inventions-all-level-expansion-0161",
+    "built-in-technology-inventions-all-level-expansion-0162",
+    "built-in-technology-inventions-all-level-expansion-0163",
+    "built-in-technology-inventions-all-level-expansion-0164",
+    "built-in-technology-inventions-all-level-expansion-0165",
+    "built-in-technology-inventions-all-level-expansion-0166",
+    "built-in-technology-inventions-all-level-expansion-0167",
+    "built-in-technology-inventions-all-level-expansion-0168",
+    "built-in-technology-inventions-all-level-expansion-0169",
+    "built-in-technology-inventions-all-level-expansion-0170",
+    "built-in-technology-inventions-all-level-expansion-0171",
+    "built-in-technology-inventions-all-level-expansion-0172",
+    "built-in-technology-inventions-all-level-expansion-0173",
+    "built-in-technology-inventions-all-level-expansion-0174",
+    "built-in-technology-inventions-all-level-expansion-0175",
+    "built-in-technology-inventions-all-level-expansion-0176",
+    "built-in-technology-inventions-all-level-expansion-0177",
+    "built-in-technology-inventions-all-level-expansion-0178",
+    "built-in-technology-inventions-all-level-expansion-0179",
+    "built-in-technology-inventions-all-level-expansion-0180",
+    "built-in-technology-inventions-all-level-expansion-0181",
+    "built-in-technology-inventions-all-level-expansion-0182",
+    "built-in-technology-inventions-all-level-expansion-0183",
+    "built-in-technology-inventions-all-level-expansion-0184",
+    "built-in-technology-inventions-all-level-expansion-0185",
+    "built-in-technology-inventions-all-level-expansion-0186",
+    "built-in-technology-inventions-all-level-expansion-0187",
+    "built-in-technology-inventions-all-level-expansion-0188",
+    "built-in-technology-inventions-all-level-expansion-0189",
+    "built-in-technology-inventions-all-level-expansion-0190",
+    "built-in-technology-inventions-all-level-expansion-0191",
+    "built-in-technology-inventions-all-level-expansion-0192",
+    "built-in-technology-inventions-all-level-expansion-0193",
+    "built-in-technology-inventions-all-level-expansion-0194",
+    "built-in-technology-inventions-all-level-expansion-0195",
+    "built-in-technology-inventions-all-level-expansion-0196",
+    "built-in-technology-inventions-all-level-expansion-0197",
+    "built-in-technology-inventions-all-level-expansion-0198",
+    "built-in-technology-inventions-all-level-expansion-0199",
+    "built-in-technology-inventions-all-level-expansion-0200",
+    "built-in-technology-inventions-all-level-expansion-0201",
+    "built-in-technology-inventions-all-level-expansion-0202",
+    "built-in-technology-inventions-all-level-expansion-0203",
+    "built-in-technology-inventions-all-level-expansion-0204",
+    "built-in-technology-inventions-all-level-expansion-0205",
+    "built-in-technology-inventions-all-level-expansion-0206",
+    "built-in-technology-inventions-all-level-expansion-0207",
+    "built-in-technology-inventions-all-level-expansion-0208",
+    "built-in-technology-inventions-all-level-expansion-0209",
+    "built-in-technology-inventions-all-level-expansion-0210",
+    "built-in-technology-inventions-all-level-expansion-0211",
+    "built-in-technology-inventions-all-level-expansion-0212",
+    "built-in-technology-inventions-all-level-expansion-0213",
+    "built-in-technology-inventions-all-level-expansion-0214",
+    "built-in-technology-inventions-all-level-expansion-0215",
+    "built-in-technology-inventions-all-level-expansion-0216",
+    "built-in-technology-inventions-all-level-expansion-0217",
+    "built-in-technology-inventions-all-level-expansion-0218",
+    "built-in-technology-inventions-all-level-expansion-0219",
+    "built-in-technology-inventions-all-level-expansion-0220",
+    "built-in-technology-inventions-all-level-expansion-0221",
+    "built-in-technology-inventions-all-level-expansion-0222",
+    "built-in-technology-inventions-all-level-expansion-0223",
+    "built-in-technology-inventions-all-level-expansion-0224",
+    "built-in-technology-inventions-all-level-expansion-0225",
+    "built-in-technology-inventions-all-level-expansion-0226",
+    "built-in-technology-inventions-all-level-expansion-0227",
+    "built-in-technology-inventions-all-level-expansion-0228",
+    "built-in-technology-inventions-all-level-expansion-0229",
+    "built-in-technology-inventions-all-level-expansion-0230",
+    "built-in-technology-inventions-all-level-expansion-0231",
+    "built-in-technology-inventions-all-level-expansion-0232",
+    "built-in-technology-inventions-all-level-expansion-0233",
+    "built-in-technology-inventions-all-level-expansion-0234",
+    "built-in-technology-inventions-all-level-expansion-0235",
+    "built-in-technology-inventions-all-level-expansion-0236",
+    "built-in-technology-inventions-all-level-expansion-0237",
+    "built-in-technology-inventions-all-level-expansion-0238",
+    "built-in-technology-inventions-all-level-expansion-0239",
+    "built-in-technology-inventions-all-level-expansion-0240",
+    "built-in-technology-inventions-all-level-expansion-0241",
+    "built-in-technology-inventions-all-level-expansion-0242",
+    "built-in-technology-inventions-all-level-expansion-0243",
+    "built-in-technology-inventions-all-level-expansion-0244",
+    "built-in-technology-inventions-all-level-expansion-0245",
+    "built-in-technology-inventions-all-level-expansion-0246",
+    "built-in-technology-inventions-all-level-expansion-0247",
+    "built-in-technology-inventions-all-level-expansion-0248",
+    "built-in-technology-inventions-all-level-expansion-0249",
+    "built-in-technology-inventions-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Root, independent Technology and Inventions reviewer",
+    "reviewedAt": "2026-10-09T12:57:54.613Z",
+    "decision": "approved",
+    "notes": "Independently read all250 claims against actual cached source passages, including targeted full extracts when relevance selection missed the claim. Read actual W3C images guidance, Bethesda Doom name history, NASA Stardust and gravity-assist pages, Arup Eastgate design page, BASF/Lufthansa AeroSHARK primary pages, NIST katal/digital-signature/binary-prefix material, official Debian naming history and official Japanese YKK initials history. Resolved percent-encoded source snapshot gaps for Prince Rupert/Fitts/Hick/Amdahl/C++/De Morgan. Rechecked new citations and final repairs."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Root, independent Technology and Inventions reviewer",
+    "reviewedAt": "2026-10-09T12:57:54.613Z",
+    "decision": "approved",
+    "notes": "Independently read all250 records,50 category titles and all final old/new collision pairs against the full8374-record baseline including Finals. Replaced repeated or reverse-identical queried facts with genuinely different questions. Removed answer-giving alias stems, checked five distinct primary subjects per category, preserved allocation/rounds and matched title scope to all five questions. Final bank audit has zero structural issues and zero answer-leak candidates."
+  },
+  "translationReview": {
+    "reviewer": "Codex Root, independent Technology and Inventions reviewer",
+    "reviewedAt": "2026-10-09T12:57:54.613Z",
+    "decision": "approved",
+    "notes": "Read all English/Estonian clues, responses, explanations, variants and actual diagnostics. Repaired case/plural endings, translated technical terms, explicit English word-origin context and paired accepted aliases. Corrected indentation from taandrida to taandus, dead reckoning and eventual consistency meaning, pump-storage wording and number spacing. Final translation diagnostics have zero blocking errors; approved field-specific exceptions cover valid names, inflections and translated descriptive titles."
+  },
+  "resolvedFindings": [
+    "Replaced repeated PDF/PNG names with Adobe creator and CSV; Post-it identification with original yellow colour; Liquid Paper inventor with1979 Gillette acquisition.",
+    "Replaced refrigerator cooling and Dyson creator with magnetic door seal and Singapore headquarters move; clarified Wi-Fi naming and first commercial UPC scan scope.",
+    "Replaced generic hyperlink/DNS/megapixel/caption definitions with URL fragment marker, DNS A-record IPv4, PPI and W3C alt text.",
+    "Replaced YouTube first-video identification with founders’ previous PayPal employer; Hubble repair with Edwin Hubble’s profession; heat-pump efficiency with district heating.",
+    "Replaced spam Monty Python name origin with Doom pool-cue-case title origin; carrier-pigeon repeated ability with signal lamp; aerogel fabrication with Stardust comet-dust collection.",
+    "Replaced termite ventilation and shark denticle drag repeats with particular Eastgate Centre building and AeroSHARK film, using exact primary sources.",
+    "Replaced repeated lumen and digital-signature definitions with katal and non-repudiation; repeated dome identification with skylight; haptic feedback definition with Greek word origin.",
+    "Removed walkie-talkie and PPI accepted-alias leakage; changed magnetron clue to Randall/Boot Birmingham1940 attribution rather than repeated appliance mapping.",
+    "Narrowed Shinkansen/kingfisher to sourced nose-shape inspiration and gecko question to reusable self-cleaning adhesive application; avoided unsupported performance claims and disputed exclusive adhesion mechanism.",
+    "Repaired Babbage title/date, technical SI dimension wording, cavity-magnetron development scope and category scope; kept Nobel will legacy distinct from dynamite invention."
+  ],
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0001:category_name_en",
+      "reason": "Independently reviewed category title “File Formats and Their Stories” → “Failivormingud ja nende lood”. Flagged title-cased wording (File Formats, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0002:category_name_en",
+      "reason": "Independently reviewed category title “File Formats and Their Stories” → “Failivormingud ja nende lood”. Flagged title-cased wording (File Formats, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0003:category_name_en",
+      "reason": "Independently reviewed category title “File Formats and Their Stories” → “Failivormingud ja nende lood”. Flagged title-cased wording (File Formats, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0004:category_name_en",
+      "reason": "Independently reviewed category title “File Formats and Their Stories” → “Failivormingud ja nende lood”. Flagged title-cased wording (File Formats, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0005:category_name_en",
+      "reason": "Independently reviewed category title “File Formats and Their Stories” → “Failivormingud ja nende lood”. Flagged title-cased wording (File Formats, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0006:category_name_en",
+      "reason": "Independently reviewed category title “Small Inventions in the Drawer” → “Väikesed leiutised sahtlis”. Flagged title-cased wording (Small Inventions) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0007:category_name_en",
+      "reason": "Independently reviewed category title “Small Inventions in the Drawer” → “Väikesed leiutised sahtlis”. Flagged title-cased wording (Small Inventions) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0008:category_name_en",
+      "reason": "Independently reviewed category title “Small Inventions in the Drawer” → “Väikesed leiutised sahtlis”. Flagged title-cased wording (Small Inventions) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0008:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Scotch Tape” is correctly used as “Scotch Tape” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0009:category_name_en",
+      "reason": "Independently reviewed category title “Small Inventions in the Drawer” → “Väikesed leiutised sahtlis”. Flagged title-cased wording (Small Inventions) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0009:clue_en",
+      "reason": "Independent bilingual field review: “Identify the office fastener that became a Norwegian symbol of resistance during the Second World War.” → “Nimeta kontorikinnitus, mis sai Teise maailmasõja ajal Norra vastupanu sümboliks.”. Flagged forms (Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0009:explanation_en",
+      "reason": "Independent bilingual field review: “Paper clip became a Norwegian symbol of resistance during the Second World War.” → “Kirjaklamber sai Teise maailmasõja ajal Norra vastupanu sümboliks.”. Flagged forms (Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0010:category_name_en",
+      "reason": "Independently reviewed category title “Small Inventions in the Drawer” → “Väikesed leiutised sahtlis”. Flagged title-cased wording (Small Inventions) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0014:accepted_variants_en",
+      "reason": "Independent bilingual field review: “Microsoft Solitaire; Windows Solitaire” → “Pasjanss; Windowsi Solitaire”. Flagged forms (Microsoft Solitaire, Windows Solitaire) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0014:clue_en",
+      "reason": "Independent bilingual field review: “Which Windows game helped new users practise using a mouse through dragging cards?” → “Milline Windowsi mäng aitas uutel kasutajatel kaartide lohistamise kaudu hiirt harjutada?”. Flagged forms (Which Windows) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0019:explanation_en",
+      "reason": "Independent bilingual field review: “Do Not Disturb prevents a telephone extension from ringing; calls may still be forwarded elsewhere.” → “Mitte segada takistab sisetelefonil helisemist; kõned võidakse siiski mujale suunata.”. Flagged forms (Do Not Disturb) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0019:response_en",
+      "reason": "Independent bilingual field review: “Do Not Disturb” → “mitte segada”. Flagged forms (Do Not Disturb) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0021:category_name_en",
+      "reason": "Independently reviewed category title “Home Machines and Their Stories” → “Kodumasinad ja nende lood”. Flagged title-cased wording (Home Machines, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0022:category_name_en",
+      "reason": "Independently reviewed category title “Home Machines and Their Stories” → “Kodumasinad ja nende lood”. Flagged title-cased wording (Home Machines, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0023:category_name_en",
+      "reason": "Independently reviewed category title “Home Machines and Their Stories” → “Kodumasinad ja nende lood”. Flagged title-cased wording (Home Machines, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0024:category_name_en",
+      "reason": "Independently reviewed category title “Home Machines and Their Stories” → “Kodumasinad ja nende lood”. Flagged title-cased wording (Home Machines, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0024:explanation_en",
+      "reason": "Independent bilingual field review: “Dyson moved its headquarters from the United Kingdom to Singapore in 2019.” → “Dyson viis oma peakontori 2019. aastal Ühendkuningriigist Singapuri.”. Flagged forms (United Kingdom) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0025:category_name_en",
+      "reason": "Independently reviewed category title “Home Machines and Their Stories” → “Kodumasinad ja nende lood”. Flagged title-cased wording (Home Machines, Their Stories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0031:category_name_en",
+      "reason": "Independently reviewed category title “Keeping Your Place Online” → “Oma koha hoidmine veebis”. Flagged title-cased wording (Keeping Your Place Online) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0032:category_name_en",
+      "reason": "Independently reviewed category title “Keeping Your Place Online” → “Oma koha hoidmine veebis”. Flagged title-cased wording (Keeping Your Place Online) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0033:category_name_en",
+      "reason": "Independently reviewed category title “Keeping Your Place Online” → “Oma koha hoidmine veebis”. Flagged title-cased wording (Keeping Your Place Online) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0034:category_name_en",
+      "reason": "Independently reviewed category title “Keeping Your Place Online” → “Oma koha hoidmine veebis”. Flagged title-cased wording (Keeping Your Place Online) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0035:category_name_en",
+      "reason": "Independently reviewed category title “Keeping Your Place Online” → “Oma koha hoidmine veebis”. Flagged title-cased wording (Keeping Your Place Online) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0036:category_name_en",
+      "reason": "Independently reviewed category title “Machines You Meet in Town” → “Linnas kohatud masinad”. Flagged title-cased wording (Machines You Meet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0037:category_name_en",
+      "reason": "Independently reviewed category title “Machines You Meet in Town” → “Linnas kohatud masinad”. Flagged title-cased wording (Machines You Meet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0037:explanation_en",
+      "reason": "Independent bilingual field review: “Early De La Rue and Chubb ATMs accepted single-use vouchers that the machine retained; later designs used reusable cards.” → “Varased De La Rue ja Chubbi pangaautomaadid võtsid vastu ühekordseid vautšereid, mille masin endale jättis; hilisemad lahendused kasutasid korduskasutatavaid kaarte.”. Flagged forms (Early De La Rue, Chubb ATMs) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0037:response_en",
+      "reason": "Independent bilingual field review: “ATM” → “pangaautomaat”. Flagged forms (ATM) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0038:category_name_en",
+      "reason": "Independently reviewed category title “Machines You Meet in Town” → “Linnas kohatud masinad”. Flagged title-cased wording (Machines You Meet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0039:category_name_en",
+      "reason": "Independently reviewed category title “Machines You Meet in Town” → “Linnas kohatud masinad”. Flagged title-cased wording (Machines You Meet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0040:category_name_en",
+      "reason": "Independently reviewed category title “Machines You Meet in Town” → “Linnas kohatud masinad”. Flagged title-cased wording (Machines You Meet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0041:category_name_en",
+      "reason": "Independently reviewed category title “Getting Around Mechanically” → “Mehaaniline liikumine”. Flagged title-cased wording (Getting Around Mechanically) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0042:category_name_en",
+      "reason": "Independently reviewed category title “Getting Around Mechanically” → “Mehaaniline liikumine”. Flagged title-cased wording (Getting Around Mechanically) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0043:category_name_en",
+      "reason": "Independently reviewed category title “Getting Around Mechanically” → “Mehaaniline liikumine”. Flagged title-cased wording (Getting Around Mechanically) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0044:category_name_en",
+      "reason": "Independently reviewed category title “Getting Around Mechanically” → “Mehaaniline liikumine”. Flagged title-cased wording (Getting Around Mechanically) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0045:category_name_en",
+      "reason": "Independently reviewed category title “Getting Around Mechanically” → “Mehaaniline liikumine”. Flagged title-cased wording (Getting Around Mechanically) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0049:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Caps Lock” is correctly used as “Caps Lock” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0051:category_name_en",
+      "reason": "Independently reviewed category title “Inventions That Changed Clothes” → “Rõivaid muutnud leiutised”. Flagged title-cased wording (Inventions That Changed Clothes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0052:category_name_en",
+      "reason": "Independently reviewed category title “Inventions That Changed Clothes” → “Rõivaid muutnud leiutised”. Flagged title-cased wording (Inventions That Changed Clothes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0053:category_name_en",
+      "reason": "Independently reviewed category title “Inventions That Changed Clothes” → “Rõivaid muutnud leiutised”. Flagged title-cased wording (Inventions That Changed Clothes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0054:category_name_en",
+      "reason": "Independently reviewed category title “Inventions That Changed Clothes” → “Rõivaid muutnud leiutised”. Flagged title-cased wording (Inventions That Changed Clothes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0055:category_name_en",
+      "reason": "Independently reviewed category title “Inventions That Changed Clothes” → “Rõivaid muutnud leiutised”. Flagged title-cased wording (Inventions That Changed Clothes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0056:category_name_en",
+      "reason": "Independently reviewed category title “Structures That Carry the Load” → “Koormat kandvad ehitised”. Flagged title-cased wording (Structures That Carry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0057:category_name_en",
+      "reason": "Independently reviewed category title “Structures That Carry the Load” → “Koormat kandvad ehitised”. Flagged title-cased wording (Structures That Carry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0058:category_name_en",
+      "reason": "Independently reviewed category title “Structures That Carry the Load” → “Koormat kandvad ehitised”. Flagged title-cased wording (Structures That Carry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0059:category_name_en",
+      "reason": "Independently reviewed category title “Structures That Carry the Load” → “Koormat kandvad ehitised”. Flagged title-cased wording (Structures That Carry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0060:category_name_en",
+      "reason": "Independently reviewed category title “Structures That Carry the Load” → “Koormat kandvad ehitised”. Flagged title-cased wording (Structures That Carry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0061:category_name_en",
+      "reason": "Independently reviewed category title “Everyday Digital Names” → “Igapäevased diginimed”. Flagged title-cased wording (Everyday Digital Names) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0062:category_name_en",
+      "reason": "Independently reviewed category title “Everyday Digital Names” → “Igapäevased diginimed”. Flagged title-cased wording (Everyday Digital Names) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0063:category_name_en",
+      "reason": "Independently reviewed category title “Everyday Digital Names” → “Igapäevased diginimed”. Flagged title-cased wording (Everyday Digital Names) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0064:category_name_en",
+      "reason": "Independently reviewed category title “Everyday Digital Names” → “Igapäevased diginimed”. Flagged title-cased wording (Everyday Digital Names) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0065:category_name_en",
+      "reason": "Independently reviewed category title “Everyday Digital Names” → “Igapäevased diginimed”. Flagged title-cased wording (Everyday Digital Names) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0066:category_name_en",
+      "reason": "Independently reviewed category title “A New Way to Hear and See” → “Uus viis kuulda ja näha”. Flagged title-cased wording (New Way) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0067:category_name_en",
+      "reason": "Independently reviewed category title “A New Way to Hear and See” → “Uus viis kuulda ja näha”. Flagged title-cased wording (New Way) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0068:category_name_en",
+      "reason": "Independently reviewed category title “A New Way to Hear and See” → “Uus viis kuulda ja näha”. Flagged title-cased wording (New Way) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0069:category_name_en",
+      "reason": "Independently reviewed category title “A New Way to Hear and See” → “Uus viis kuulda ja näha”. Flagged title-cased wording (New Way) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0070:category_name_en",
+      "reason": "Independently reviewed category title “A New Way to Hear and See” → “Uus viis kuulda ja näha”. Flagged title-cased wording (New Way) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0071:category_name_en",
+      "reason": "Independently reviewed category title “Materials with Familiar Brands” → “Materjalid tuntud kaubamärkidega”. Flagged title-cased wording (Familiar Brands) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0072:category_name_en",
+      "reason": "Independently reviewed category title “Materials with Familiar Brands” → “Materjalid tuntud kaubamärkidega”. Flagged title-cased wording (Familiar Brands) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0073:category_name_en",
+      "reason": "Independently reviewed category title “Materials with Familiar Brands” → “Materjalid tuntud kaubamärkidega”. Flagged title-cased wording (Familiar Brands) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0074:category_name_en",
+      "reason": "Independently reviewed category title “Materials with Familiar Brands” → “Materjalid tuntud kaubamärkidega”. Flagged title-cased wording (Familiar Brands) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0075:category_name_en",
+      "reason": "Independently reviewed category title “Materials with Familiar Brands” → “Materjalid tuntud kaubamärkidega”. Flagged title-cased wording (Familiar Brands) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0081:category_name_en",
+      "reason": "Independently reviewed category title “Space Hardware Close Up” → “Kosmosetehnika lähivaates”. Flagged title-cased wording (Space Hardware Close Up) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0081:explanation_en",
+      "reason": "Independent bilingual field review: “International Space Station was assembled from modules launched by multiple countries.” → “Rahvusvaheline kosmosejaam koostati eri riikide üles saadetud moodulitest.”. Flagged forms (International Space Station) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0081:response_en",
+      "reason": "Independent bilingual field review: “International Space Station” → “rahvusvaheline kosmosejaam”. Flagged forms (International Space Station) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0082:category_name_en",
+      "reason": "Independently reviewed category title “Space Hardware Close Up” → “Kosmosetehnika lähivaates”. Flagged title-cased wording (Space Hardware Close Up) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0082:clue_en",
+      "reason": "Independent bilingual field review: “The Hubble Space Telescope honours Edwin Hubble, who worked in which scientific profession?” → “Hubble’i kosmoseteleskoop on nimetatud Edwin Hubble’i auks. Mis teadusala esindaja ta oli?”. Flagged forms (The Hubble Space Telescope) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0082:explanation_en",
+      "reason": "Independent bilingual field review: “The Hubble Space Telescope is named after astronomer Edwin Hubble.” → “Hubble’i kosmoseteleskoop on nimetatud astronoom Edwin Hubble’i järgi.”. Flagged forms (The Hubble Space Telescope) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0083:category_name_en",
+      "reason": "Independently reviewed category title “Space Hardware Close Up” → “Kosmosetehnika lähivaates”. Flagged title-cased wording (Space Hardware Close Up) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0083:explanation_en",
+      "reason": "Independent bilingual field review: “Space Shuttle used orbiters that returned to Earth by landing on a runway.” → “Kosmosesüstik kasutas orbiidilaevu, mis naasid Maale maandumisrajal maandudes.”. Flagged forms (Space Shuttle) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0083:response_en",
+      "reason": "Independent bilingual field review: “Space Shuttle” → “kosmosesüstik”. Flagged forms (Space Shuttle) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0084:category_name_en",
+      "reason": "Independently reviewed category title “Space Hardware Close Up” → “Kosmosetehnika lähivaates”. Flagged title-cased wording (Space Hardware Close Up) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0085:accepted_variants_en",
+      "reason": "Independent bilingual field review: “Voyager Golden Record” → “Voyageri kuldplaat”. Flagged forms (Voyager Golden Record) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0085:category_name_en",
+      "reason": "Independently reviewed category title “Space Hardware Close Up” → “Kosmosetehnika lähivaates”. Flagged title-cased wording (Space Hardware Close Up) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0085:explanation_en",
+      "reason": "Independent bilingual field review: “Golden Record carries Earth sounds and images aboard the Voyager probes.” → “Kuldne heliplaat kannab Maa helisid ja pilte Voyageri sondide pardal.”. Flagged forms (Golden Record) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0085:response_en",
+      "reason": "Independent bilingual field review: “Golden Record” → “kuldne heliplaat”. Flagged forms (Golden Record) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0086:category_name_en",
+      "reason": "Independently reviewed category title “When Networks Misbehave” → “Kui võrk tõrgub”. Flagged title-cased wording (When Networks Misbehave) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0087:category_name_en",
+      "reason": "Independently reviewed category title “When Networks Misbehave” → “Kui võrk tõrgub”. Flagged title-cased wording (When Networks Misbehave) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0088:category_name_en",
+      "reason": "Independently reviewed category title “When Networks Misbehave” → “Kui võrk tõrgub”. Flagged title-cased wording (When Networks Misbehave) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0089:accepted_variants_en",
+      "reason": "Independent bilingual field review: “Internet Protocol version 4” → “Internetiprotokolli versioon 4”. Flagged forms (Internet Protocol) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0089:category_name_en",
+      "reason": "Independently reviewed category title “When Networks Misbehave” → “Kui võrk tõrgub”. Flagged title-cased wording (When Networks Misbehave) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0089:clue_en",
+      "reason": "Independent bilingual field review: “Which Internet Protocol version is the address in a DNS A record for?” → “Millise internetiprotokolli versiooni aadressi sisaldab DNS-i A-kirje?”. Flagged forms (Which Internet Protocol) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0090:category_name_en",
+      "reason": "Independently reviewed category title “When Networks Misbehave” → “Kui võrk tõrgub”. Flagged title-cased wording (When Networks Misbehave) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0091:category_name_en",
+      "reason": "Independently reviewed category title “Materials Found New Jobs” → “Materjalide uued tööd”. Flagged title-cased wording (Materials Found New Jobs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0091:clue_en",
+      "reason": "Independent bilingual field review: “What synthetic fibre was used in parachutes during the Second World War after becoming known for stockings?” → “Millist sünteetilist kiudu kasutati pärast sukkadega tuntuks saamist Teise maailmasõja ajal langevarjudes?”. Flagged forms (Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0091:explanation_en",
+      "reason": "Independent bilingual field review: “Nylon was used in parachutes during the Second World War after becoming known for stockings.” → “Nailonit kasutati pärast sukkadega tuntuks saamist Teise maailmasõja ajal langevarjudes.”. Flagged forms (Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0092:category_name_en",
+      "reason": "Independently reviewed category title “Materials Found New Jobs” → “Materjalide uued tööd”. Flagged title-cased wording (Materials Found New Jobs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0093:category_name_en",
+      "reason": "Independently reviewed category title “Materials Found New Jobs” → “Materjalide uued tööd”. Flagged title-cased wording (Materials Found New Jobs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0094:category_name_en",
+      "reason": "Independently reviewed category title “Materials Found New Jobs” → “Materjalide uued tööd”. Flagged title-cased wording (Materials Found New Jobs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0095:category_name_en",
+      "reason": "Independently reviewed category title “Materials Found New Jobs” → “Materjalide uued tööd”. Flagged title-cased wording (Materials Found New Jobs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0096:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Wider Lives” → “Leiutajate laiem elukäik”. Flagged title-cased wording (Their Wider Lives) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0096:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Bertha Benz” is correctly used as “Bertha Benz” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0097:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Wider Lives” → “Leiutajate laiem elukäik”. Flagged title-cased wording (Their Wider Lives) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0097:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Hedy Lamarr” is correctly used as “Hedy Lamarr” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0098:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Wider Lives” → “Leiutajate laiem elukäik”. Flagged title-cased wording (Their Wider Lives) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0098:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Nikola Tesla” is correctly used as “Nikola Tesla” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0099:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Wider Lives” → “Leiutajate laiem elukäik”. Flagged title-cased wording (Their Wider Lives) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0099:clue_en",
+      "reason": "Independent bilingual field review: “Which American inventor established a research laboratory at Menlo Park in New Jersey?” → “Milline Ameerika leiutaja rajas New Jersey osariiki Menlo Parki uurimislabori?”. Flagged forms (Which American) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0099:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Thomas Edison” is correctly used as “Thomas Edison” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0100:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Wider Lives” → “Leiutajate laiem elukäik”. Flagged title-cased wording (Their Wider Lives) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0100:clue_en",
+      "reason": "Independent bilingual field review: “What Scottish-born inventor helped develop hydrofoil boats as well as working on the telephone?” → “Milline Šotimaal sündinud leiutaja aitas arendada tiiburlaevu lisaks telefoniga töötamisele?”. Flagged forms (What Scottish-born) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0100:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Alexander Graham Bell” is correctly used as “Alexander Graham Bell” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0101:category_name_en",
+      "reason": "Independently reviewed category title “Information Inside a File” → “Andmed faili sees”. Flagged title-cased wording (Information Inside) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0102:category_name_en",
+      "reason": "Independently reviewed category title “Information Inside a File” → “Andmed faili sees”. Flagged title-cased wording (Information Inside) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0103:category_name_en",
+      "reason": "Independently reviewed category title “Information Inside a File” → “Andmed faili sees”. Flagged title-cased wording (Information Inside) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0104:category_name_en",
+      "reason": "Independently reviewed category title “Information Inside a File” → “Andmed faili sees”. Flagged title-cased wording (Information Inside) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0105:category_name_en",
+      "reason": "Independently reviewed category title “Information Inside a File” → “Andmed faili sees”. Flagged title-cased wording (Information Inside) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0106:category_name_en",
+      "reason": "Independently reviewed category title “Technology Includes Everyone” → “Tehnoloogia kaasab kõiki”. Flagged title-cased wording (Technology Includes Everyone) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0107:category_name_en",
+      "reason": "Independently reviewed category title “Technology Includes Everyone” → “Tehnoloogia kaasab kõiki”. Flagged title-cased wording (Technology Includes Everyone) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0108:category_name_en",
+      "reason": "Independently reviewed category title “Technology Includes Everyone” → “Tehnoloogia kaasab kõiki”. Flagged title-cased wording (Technology Includes Everyone) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0108:explanation_en",
+      "reason": "Independent bilingual field review: “Refreshable Braille display raises and lowers pins to show changing lines of text.” → “Värskendatav punktkirjakuvar tõstab ja langetab tihvte, et esitada tekstiridu punktkirjana.”. Flagged forms (Refreshable Braille) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0108:response_en",
+      "reason": "Independent bilingual field review: “Refreshable Braille display” → “Värskendatav punktkirjakuvar”. Flagged forms (Refreshable Braille) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0109:category_name_en",
+      "reason": "Independently reviewed category title “Technology Includes Everyone” → “Tehnoloogia kaasab kõiki”. Flagged title-cased wording (Technology Includes Everyone) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0110:category_name_en",
+      "reason": "Independently reviewed category title “Technology Includes Everyone” → “Tehnoloogia kaasab kõiki”. Flagged title-cased wording (Technology Includes Everyone) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0111:category_name_en",
+      "reason": "Independently reviewed category title “Measures on a Specification Sheet” → “Tehniliste andmete mõõdud”. Flagged title-cased wording (Specification Sheet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0112:category_name_en",
+      "reason": "Independently reviewed category title “Measures on a Specification Sheet” → “Tehniliste andmete mõõdud”. Flagged title-cased wording (Specification Sheet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0113:category_name_en",
+      "reason": "Independently reviewed category title “Measures on a Specification Sheet” → “Tehniliste andmete mõõdud”. Flagged title-cased wording (Specification Sheet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0114:category_name_en",
+      "reason": "Independently reviewed category title “Measures on a Specification Sheet” → “Tehniliste andmete mõõdud”. Flagged title-cased wording (Specification Sheet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0115:category_name_en",
+      "reason": "Independently reviewed category title “Measures on a Specification Sheet” → “Tehniliste andmete mõõdud”. Flagged title-cased wording (Specification Sheet) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0116:category_name_en",
+      "reason": "Independently reviewed category title “Digital Defences Explained” → “Digikaitse selgitused”. Flagged title-cased wording (Digital Defences Explained) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0117:category_name_en",
+      "reason": "Independently reviewed category title “Digital Defences Explained” → “Digikaitse selgitused”. Flagged title-cased wording (Digital Defences Explained) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0118:category_name_en",
+      "reason": "Independently reviewed category title “Digital Defences Explained” → “Digikaitse selgitused”. Flagged title-cased wording (Digital Defences Explained) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0119:category_name_en",
+      "reason": "Independently reviewed category title “Digital Defences Explained” → “Digikaitse selgitused”. Flagged title-cased wording (Digital Defences Explained) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0120:category_name_en",
+      "reason": "Independently reviewed category title “Digital Defences Explained” → “Digikaitse selgitused”. Flagged title-cased wording (Digital Defences Explained) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0121:category_name_en",
+      "reason": "Independently reviewed category title “Mechanical Ingenuity” → “Mehaaniline leidlikkus”. Flagged title-cased wording (Mechanical Ingenuity) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0122:category_name_en",
+      "reason": "Independently reviewed category title “Mechanical Ingenuity” → “Mehaaniline leidlikkus”. Flagged title-cased wording (Mechanical Ingenuity) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0123:category_name_en",
+      "reason": "Independently reviewed category title “Mechanical Ingenuity” → “Mehaaniline leidlikkus”. Flagged title-cased wording (Mechanical Ingenuity) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0124:category_name_en",
+      "reason": "Independently reviewed category title “Mechanical Ingenuity” → “Mehaaniline leidlikkus”. Flagged title-cased wording (Mechanical Ingenuity) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0124:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Gustave Eiffel” is correctly used as “Gustave Eiffel” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0125:category_name_en",
+      "reason": "Independently reviewed category title “Mechanical Ingenuity” → “Mehaaniline leidlikkus”. Flagged title-cased wording (Mechanical Ingenuity) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0127:clue_en",
+      "reason": "Independent bilingual field review: “Name the British engineer that led the design of Colossus while working from his Post Office engineering experience.” → “Nimeta Briti insener, kes juhtis Colossuse kavandamist, kasutades oma postiameti inseneritöö kogemust.”. Flagged forms (Post Office) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0127:explanation_en",
+      "reason": "Independent bilingual field review: “Tommy Flowers led the design of Colossus while working from his Post Office engineering experience.” → “Tommy Flowers juhtis Colossuse kavandamist, kasutades oma postiameti inseneritöö kogemust.”. Flagged forms (Post Office) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0127:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Tommy Flowers” is correctly used as “Tommy Flowers” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0131:category_name_en",
+      "reason": "Independently reviewed category title “Software Borrowed the Words” → “Tarkvara laenatud sõnad”. Flagged title-cased wording (Software Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0132:category_name_en",
+      "reason": "Independently reviewed category title “Software Borrowed the Words” → “Tarkvara laenatud sõnad”. Flagged title-cased wording (Software Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0133:category_name_en",
+      "reason": "Independently reviewed category title “Software Borrowed the Words” → “Tarkvara laenatud sõnad”. Flagged title-cased wording (Software Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0134:category_name_en",
+      "reason": "Independently reviewed category title “Software Borrowed the Words” → “Tarkvara laenatud sõnad”. Flagged title-cased wording (Software Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0135:category_name_en",
+      "reason": "Independently reviewed category title “Software Borrowed the Words” → “Tarkvara laenatud sõnad”. Flagged title-cased wording (Software Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0135:clue_en",
+      "reason": "Independent bilingual field review: “Which id Software game took its title from Tom Cruise’s description of his pool-cue case in The Color of Money?” → “Milline id Software’i mäng sai pealkirja Tom Cruise’i tegelase piljardikepi kohvri kirjeldusest filmis The Color of Money?”. Flagged forms (Tom Cruise’s) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0136:category_name_en",
+      "reason": "Independently reviewed category title “Ideas that Reduce Waste” → “Raiskamist vähendavad ideed”. Flagged title-cased wording (Reduce Waste) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0137:category_name_en",
+      "reason": "Independently reviewed category title “Ideas that Reduce Waste” → “Raiskamist vähendavad ideed”. Flagged title-cased wording (Reduce Waste) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0138:category_name_en",
+      "reason": "Independently reviewed category title “Ideas that Reduce Waste” → “Raiskamist vähendavad ideed”. Flagged title-cased wording (Reduce Waste) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0139:category_name_en",
+      "reason": "Independently reviewed category title “Ideas that Reduce Waste” → “Raiskamist vähendavad ideed”. Flagged title-cased wording (Reduce Waste) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0140:category_name_en",
+      "reason": "Independently reviewed category title “Ideas that Reduce Waste” → “Raiskamist vähendavad ideed”. Flagged title-cased wording (Reduce Waste) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0141:category_name_en",
+      "reason": "Independently reviewed category title “Sending a Message Farther” → “Sõnum kaugemale”. Flagged title-cased wording (Message Farther) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0142:category_name_en",
+      "reason": "Independently reviewed category title “Sending a Message Farther” → “Sõnum kaugemale”. Flagged title-cased wording (Message Farther) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0143:category_name_en",
+      "reason": "Independently reviewed category title “Sending a Message Farther” → “Sõnum kaugemale”. Flagged title-cased wording (Message Farther) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0144:category_name_en",
+      "reason": "Independently reviewed category title “Sending a Message Farther” → “Sõnum kaugemale”. Flagged title-cased wording (Message Farther) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0145:category_name_en",
+      "reason": "Independently reviewed category title “Sending a Message Farther” → “Sõnum kaugemale”. Flagged title-cased wording (Message Farther) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0146:category_name_en",
+      "reason": "Independently reviewed category title “How the Interface Responds” → “Kasutajaliidese reageerimine”. Flagged title-cased wording (Interface Responds) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0147:category_name_en",
+      "reason": "Independently reviewed category title “How the Interface Responds” → “Kasutajaliidese reageerimine”. Flagged title-cased wording (Interface Responds) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0148:category_name_en",
+      "reason": "Independently reviewed category title “How the Interface Responds” → “Kasutajaliidese reageerimine”. Flagged title-cased wording (Interface Responds) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0149:category_name_en",
+      "reason": "Independently reviewed category title “How the Interface Responds” → “Kasutajaliidese reageerimine”. Flagged title-cased wording (Interface Responds) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0150:category_name_en",
+      "reason": "Independently reviewed category title “How the Interface Responds” → “Kasutajaliidese reageerimine”. Flagged title-cased wording (Interface Responds) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0158:clue_en",
+      "reason": "Independent bilingual field review: “Which British inventor demonstrated the hovercraft principle with experiments using two tin cans and a vacuum cleaner?” → “Milline Briti leiutaja demonstreeris hõljuki põhimõtet kahe plekkpurgi ja tolmuimejaga tehtud katsetega?”. Flagged forms (Which British) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0158:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Christopher Cockerell” is correctly used as “Christopher Cockerell” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0161:category_name_en",
+      "reason": "Independently reviewed category title “Materials Remember Their Structure” → “Materjalide struktuur”. Flagged title-cased wording (Materials Remember Their Structure) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0161:explanation_en",
+      "reason": "Independent bilingual field review: “Prince Rupert's drop has a head that withstands hammer blows but shatters if its thin tail is broken.” → “Prints Ruperti tilk sisaldab vasaralööke taluvat pead, kuid puruneb, kui selle peen saba ära murda.”. Flagged forms (Prince Rupert's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0161:response_en",
+      "reason": "Independent bilingual field review: “Prince Rupert's drop” → “prints Ruperti tilk”. Flagged forms (Prince Rupert's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0162:category_name_en",
+      "reason": "Independently reviewed category title “Materials Remember Their Structure” → “Materjalide struktuur”. Flagged title-cased wording (Materials Remember Their Structure) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0163:category_name_en",
+      "reason": "Independently reviewed category title “Materials Remember Their Structure” → “Materjalide struktuur”. Flagged title-cased wording (Materials Remember Their Structure) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0164:category_name_en",
+      "reason": "Independently reviewed category title “Materials Remember Their Structure” → “Materjalide struktuur”. Flagged title-cased wording (Materials Remember Their Structure) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0165:category_name_en",
+      "reason": "Independently reviewed category title “Materials Remember Their Structure” → “Materjalide struktuur”. Flagged title-cased wording (Materials Remember Their Structure) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0165:clue_en",
+      "reason": "Independent bilingual field review: “Which NASA probe used aerogel to collect dust from comet Wild 2 and returned the samples to Earth in 2006?” → “Milline NASA sond kogus aerogeeliga komeedi Wild 2 tolmu ja tõi proovid 2006. aastal Maale?”. Flagged forms (Which NASA) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0166:category_name_en",
+      "reason": "Independently reviewed category title “Materials Change the Rules” → “Materjalid muudavad reegleid”. Flagged title-cased wording (Materials Change) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0167:category_name_en",
+      "reason": "Independently reviewed category title “Materials Change the Rules” → “Materjalid muudavad reegleid”. Flagged title-cased wording (Materials Change) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0168:category_name_en",
+      "reason": "Independently reviewed category title “Materials Change the Rules” → “Materjalid muudavad reegleid”. Flagged title-cased wording (Materials Change) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0169:category_name_en",
+      "reason": "Independently reviewed category title “Materials Change the Rules” → “Materjalid muudavad reegleid”. Flagged title-cased wording (Materials Change) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0170:category_name_en",
+      "reason": "Independently reviewed category title “Materials Change the Rules” → “Materjalid muudavad reegleid”. Flagged title-cased wording (Materials Change) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0171:category_name_en",
+      "reason": "Independently reviewed category title “How the Internet Stays Connected” → “Kuidas internet ühendust hoiab”. Flagged title-cased wording (Internet Stays Connected) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0172:category_name_en",
+      "reason": "Independently reviewed category title “How the Internet Stays Connected” → “Kuidas internet ühendust hoiab”. Flagged title-cased wording (Internet Stays Connected) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0173:category_name_en",
+      "reason": "Independently reviewed category title “How the Internet Stays Connected” → “Kuidas internet ühendust hoiab”. Flagged title-cased wording (Internet Stays Connected) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0174:category_name_en",
+      "reason": "Independently reviewed category title “How the Internet Stays Connected” → “Kuidas internet ühendust hoiab”. Flagged title-cased wording (Internet Stays Connected) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0175:category_name_en",
+      "reason": "Independently reviewed category title “How the Internet Stays Connected” → “Kuidas internet ühendust hoiab”. Flagged title-cased wording (Internet Stays Connected) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0176:category_name_en",
+      "reason": "Independently reviewed category title “Recovering What Technology Wastes” → “Tehnoloogia kadude tagasivõitmine”. Flagged title-cased wording (Recovering What Technology Wastes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0177:category_name_en",
+      "reason": "Independently reviewed category title “Recovering What Technology Wastes” → “Tehnoloogia kadude tagasivõitmine”. Flagged title-cased wording (Recovering What Technology Wastes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0178:category_name_en",
+      "reason": "Independently reviewed category title “Recovering What Technology Wastes” → “Tehnoloogia kadude tagasivõitmine”. Flagged title-cased wording (Recovering What Technology Wastes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0179:category_name_en",
+      "reason": "Independently reviewed category title “Recovering What Technology Wastes” → “Tehnoloogia kadude tagasivõitmine”. Flagged title-cased wording (Recovering What Technology Wastes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0180:category_name_en",
+      "reason": "Independently reviewed category title “Recovering What Technology Wastes” → “Tehnoloogia kadude tagasivõitmine”. Flagged title-cased wording (Recovering What Technology Wastes) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0181:category_name_en",
+      "reason": "Independently reviewed category title “Energy in Unexpected Forms” → “Energia ootamatutes vormides”. Flagged title-cased wording (Unexpected Forms) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0181:clue_en",
+      "reason": "Independent bilingual field review: “Name the battery family that earned Whittingham, Goodenough and Yoshino the 2019 Nobel Prize in Chemistry for its development.” → “Nimeta akuperekond, mis tõi oma arendamise eest Whittinghamile, Goodenough'le ja Yoshinole 2019. aasta Nobeli keemiaauhinna.”. Flagged forms (Nobel Prize) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0181:explanation_en",
+      "reason": "Independent bilingual field review: “Lithium-ion battery earned Whittingham, Goodenough and Yoshino the 2019 Nobel Prize in Chemistry for its development.” → “Liitiumioonaku tõi oma arendamise eest Whittinghamile, Goodenough'le ja Yoshinole 2019. aasta Nobeli keemiaauhinna.”. Flagged forms (Nobel Prize) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0182:category_name_en",
+      "reason": "Independently reviewed category title “Energy in Unexpected Forms” → “Energia ootamatutes vormides”. Flagged title-cased wording (Unexpected Forms) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0183:category_name_en",
+      "reason": "Independently reviewed category title “Energy in Unexpected Forms” → “Energia ootamatutes vormides”. Flagged title-cased wording (Unexpected Forms) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0184:category_name_en",
+      "reason": "Independently reviewed category title “Energy in Unexpected Forms” → “Energia ootamatutes vormides”. Flagged title-cased wording (Unexpected Forms) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0185:category_name_en",
+      "reason": "Independently reviewed category title “Energy in Unexpected Forms” → “Energia ootamatutes vormides”. Flagged title-cased wording (Unexpected Forms) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0186:category_name_en",
+      "reason": "Independently reviewed category title “Designing around Human Limits” → “Inimese võimetega arvestav disain”. Flagged title-cased wording (Human Limits) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0187:category_name_en",
+      "reason": "Independently reviewed category title “Designing around Human Limits” → “Inimese võimetega arvestav disain”. Flagged title-cased wording (Human Limits) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0188:category_name_en",
+      "reason": "Independently reviewed category title “Designing around Human Limits” → “Inimese võimetega arvestav disain”. Flagged title-cased wording (Human Limits) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0189:category_name_en",
+      "reason": "Independently reviewed category title “Designing around Human Limits” → “Inimese võimetega arvestav disain”. Flagged title-cased wording (Human Limits) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0190:category_name_en",
+      "reason": "Independently reviewed category title “Designing around Human Limits” → “Inimese võimetega arvestav disain”. Flagged title-cased wording (Human Limits) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0191:category_name_en",
+      "reason": "Independently reviewed category title “Machines Find Their Bearings” → “Masinad leiavad suuna”. Flagged title-cased wording (Machines Find Their Bearings) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0192:category_name_en",
+      "reason": "Independently reviewed category title “Machines Find Their Bearings” → “Masinad leiavad suuna”. Flagged title-cased wording (Machines Find Their Bearings) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0193:category_name_en",
+      "reason": "Independently reviewed category title “Machines Find Their Bearings” → “Masinad leiavad suuna”. Flagged title-cased wording (Machines Find Their Bearings) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0194:category_name_en",
+      "reason": "Independently reviewed category title “Machines Find Their Bearings” → “Masinad leiavad suuna”. Flagged title-cased wording (Machines Find Their Bearings) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0195:category_name_en",
+      "reason": "Independently reviewed category title “Machines Find Their Bearings” → “Masinad leiavad suuna”. Flagged title-cased wording (Machines Find Their Bearings) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0196:category_name_en",
+      "reason": "Independently reviewed category title “Tools beyond Earth's Atmosphere” → “Tööriistad väljaspool Maa atmosfääri”. Flagged title-cased wording (Earth's Atmosphere) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0197:category_name_en",
+      "reason": "Independently reviewed category title “Tools beyond Earth's Atmosphere” → “Tööriistad väljaspool Maa atmosfääri”. Flagged title-cased wording (Earth's Atmosphere) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0198:category_name_en",
+      "reason": "Independently reviewed category title “Tools beyond Earth's Atmosphere” → “Tööriistad väljaspool Maa atmosfääri”. Flagged title-cased wording (Earth's Atmosphere) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0199:category_name_en",
+      "reason": "Independently reviewed category title “Tools beyond Earth's Atmosphere” → “Tööriistad väljaspool Maa atmosfääri”. Flagged title-cased wording (Earth's Atmosphere) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0200:category_name_en",
+      "reason": "Independently reviewed category title “Tools beyond Earth's Atmosphere” → “Tööriistad väljaspool Maa atmosfääri”. Flagged title-cased wording (Earth's Atmosphere) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0201:category_name_en",
+      "reason": "Independently reviewed category title “The Computer's Trade-offs” → “Arvuti kompromissid”. Flagged title-cased wording (The Computer's Trade-offs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0202:category_name_en",
+      "reason": "Independently reviewed category title “The Computer's Trade-offs” → “Arvuti kompromissid”. Flagged title-cased wording (The Computer's Trade-offs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0203:category_name_en",
+      "reason": "Independently reviewed category title “The Computer's Trade-offs” → “Arvuti kompromissid”. Flagged title-cased wording (The Computer's Trade-offs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0204:category_name_en",
+      "reason": "Independently reviewed category title “The Computer's Trade-offs” → “Arvuti kompromissid”. Flagged title-cased wording (The Computer's Trade-offs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0205:category_name_en",
+      "reason": "Independently reviewed category title “The Computer's Trade-offs” → “Arvuti kompromissid”. Flagged title-cased wording (The Computer's Trade-offs) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0206:category_name_en",
+      "reason": "Independently reviewed category title “Designs Borrowed from Nature” → “Looduselt laenatud lahendused”. Flagged title-cased wording (Designs Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0207:category_name_en",
+      "reason": "Independently reviewed category title “Designs Borrowed from Nature” → “Looduselt laenatud lahendused”. Flagged title-cased wording (Designs Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0207:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Eastgate Centre” is correctly used as “Eastgate Centre” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0208:category_name_en",
+      "reason": "Independently reviewed category title “Designs Borrowed from Nature” → “Looduselt laenatud lahendused”. Flagged title-cased wording (Designs Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0209:category_name_en",
+      "reason": "Independently reviewed category title “Designs Borrowed from Nature” → “Looduselt laenatud lahendused”. Flagged title-cased wording (Designs Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0210:category_name_en",
+      "reason": "Independently reviewed category title “Designs Borrowed from Nature” → “Looduselt laenatud lahendused”. Flagged title-cased wording (Designs Borrowed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0211:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Other Legacies” → “Leiutajad ja nende teised pärandid”. Flagged title-cased wording (Their Other Legacies) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0211:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Alfred Nobel” is correctly used as “Alfred Nobel” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0212:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Other Legacies” → “Leiutajad ja nende teised pärandid”. Flagged title-cased wording (Their Other Legacies) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0212:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Samuel Morse” is correctly used as “Samuel Morse” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0213:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Other Legacies” → “Leiutajad ja nende teised pärandid”. Flagged title-cased wording (Their Other Legacies) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0213:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Louis Braille” is correctly used as “Louis Braille” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0214:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Other Legacies” → “Leiutajad ja nende teised pärandid”. Flagged title-cased wording (Their Other Legacies) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0214:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “George Westinghouse” is correctly used as “George Westinghouse” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0215:category_name_en",
+      "reason": "Independently reviewed category title “Inventors and Their Other Legacies” → “Leiutajad ja nende teised pärandid”. Flagged title-cased wording (Their Other Legacies) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0215:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Charles Babbage” is correctly used as “Charles Babbage” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0216:category_name_en",
+      "reason": "Independently reviewed category title “Reasons behind Software Choices” → “Tarkvaravalikute põhjused”. Flagged title-cased wording (Software Choices) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0217:category_name_en",
+      "reason": "Independently reviewed category title “Reasons behind Software Choices” → “Tarkvaravalikute põhjused”. Flagged title-cased wording (Software Choices) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0218:category_name_en",
+      "reason": "Independently reviewed category title “Reasons behind Software Choices” → “Tarkvaravalikute põhjused”. Flagged title-cased wording (Software Choices) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0219:category_name_en",
+      "reason": "Independently reviewed category title “Reasons behind Software Choices” → “Tarkvaravalikute põhjused”. Flagged title-cased wording (Software Choices) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0219:clue_en",
+      "reason": "Independent bilingual field review: “Name the Linux distribution that forms the base of Ubuntu and combines Debra's name with founder Ian Murdock's in its own name.” → “Nimeta Linuxi distributsioon, mis on Ubuntu aluseks ning ühendab oma nimes Debra nime asutaja Ian Murdocki nimega.”. Flagged forms (Ian Murdock's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0219:explanation_en",
+      "reason": "Independent bilingual field review: “Debian forms the base of Ubuntu and combines Debra's name with founder Ian Murdock's in its own name.” → “Debian on Ubuntu aluseks ning ühendab oma nimes Debra nime asutaja Ian Murdocki nimega.”. Flagged forms (Ian Murdock's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0220:category_name_en",
+      "reason": "Independently reviewed category title “Reasons behind Software Choices” → “Tarkvaravalikute põhjused”. Flagged title-cased wording (Software Choices) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0221:category_name_en",
+      "reason": "Independently reviewed category title “Making Sound into Technology” → “Heli muutmine tehnoloogiaks”. Flagged title-cased wording (Making Sound) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0222:category_name_en",
+      "reason": "Independently reviewed category title “Making Sound into Technology” → “Heli muutmine tehnoloogiaks”. Flagged title-cased wording (Making Sound) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0223:category_name_en",
+      "reason": "Independently reviewed category title “Making Sound into Technology” → “Heli muutmine tehnoloogiaks”. Flagged title-cased wording (Making Sound) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-technology-inventions-all-level-expansion-0223:response_en",
+      "reason": "Independent bilingual record review: the established technical term or proper name “Talk box” is correctly used as “talk box” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0224:category_name_en",
+      "reason": "Independently reviewed category title “Making Sound into Technology” → “Heli muutmine tehnoloogiaks”. Flagged title-cased wording (Making Sound) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0225:category_name_en",
+      "reason": "Independently reviewed category title “Making Sound into Technology” → “Heli muutmine tehnoloogiaks”. Flagged title-cased wording (Making Sound) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0229:clue_en",
+      "reason": "Independent bilingual field review: “Which SI unit of catalytic activity is equal to one mole per second?” → “Milline katalüütilise aktiivsuse SI-ühik võrdub ühe mooliga sekundis?”. Flagged forms (Which SI) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0231:category_name_en",
+      "reason": "Independently reviewed category title “Digital Trust” → “Digitaalne usaldus”. Flagged title-cased wording (Digital Trust) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0232:category_name_en",
+      "reason": "Independently reviewed category title “Digital Trust” → “Digitaalne usaldus”. Flagged title-cased wording (Digital Trust) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0233:category_name_en",
+      "reason": "Independently reviewed category title “Digital Trust” → “Digitaalne usaldus”. Flagged title-cased wording (Digital Trust) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0234:category_name_en",
+      "reason": "Independently reviewed category title “Digital Trust” → “Digitaalne usaldus”. Flagged title-cased wording (Digital Trust) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0235:category_name_en",
+      "reason": "Independently reviewed category title “Digital Trust” → “Digitaalne usaldus”. Flagged title-cased wording (Digital Trust) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0237:clue_en",
+      "reason": "Independent bilingual field review: “What detection technology was central to Britain's Chain Home warning network during the Second World War?” → “Milline tuvastustehnoloogia oli Teise maailmasõja ajal Suurbritannia Chain Home'i hoiatusvõrgu keskmes?”. Flagged forms (Britain's Chain Home, Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0237:explanation_en",
+      "reason": "Independent bilingual field review: “Radar was central to Britain's Chain Home warning network during the Second World War.” → “Radar oli Teise maailmasõja ajal Suurbritannia Chain Home'i hoiatusvõrgu keskmes.”. Flagged forms (Britain's Chain Home, Second World War) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0241:category_name_en",
+      "reason": "Independently reviewed category title “The Ideas That Made Computers Possible” → “Arvuteid võimaldanud ideed”. Flagged title-cased wording (The Ideas That Made Computers Possible) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0242:category_name_en",
+      "reason": "Independently reviewed category title “The Ideas That Made Computers Possible” → “Arvuteid võimaldanud ideed”. Flagged title-cased wording (The Ideas That Made Computers Possible) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0242:clue_en",
+      "reason": "Independent bilingual field review: “Identify the logical rules that show how negation interchanges AND and OR when applied to combined propositions.” → “Nimeta loogikareeglid, mis näitavad, kuidas eitus vahetab liitväidetele rakendamisel JA ja VÕI omavahel.”. Flagged forms (AND, OR) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0242:explanation_en",
+      "reason": "Independent bilingual field review: “De Morgan's laws show how negation interchanges AND and OR when applied to combined propositions.” → “De Morgani seadused näitavad, kuidas eitus vahetab liitväidetele rakendamisel JA ja VÕI omavahel.”. Flagged forms (AND, De Morgan's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0242:response_en",
+      "reason": "Independent bilingual field review: “De Morgan's laws” → “De Morgani seadused”. Flagged forms (De Morgan's) use reviewed Estonian terminology, name inflection or sentence capitalization; the question and answer preserve the same fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0243:category_name_en",
+      "reason": "Independently reviewed category title “The Ideas That Made Computers Possible” → “Arvuteid võimaldanud ideed”. Flagged title-cased wording (The Ideas That Made Computers Possible) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0244:category_name_en",
+      "reason": "Independently reviewed category title “The Ideas That Made Computers Possible” → “Arvuteid võimaldanud ideed”. Flagged title-cased wording (The Ideas That Made Computers Possible) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0245:category_name_en",
+      "reason": "Independently reviewed category title “The Ideas That Made Computers Possible” → “Arvuteid võimaldanud ideed”. Flagged title-cased wording (The Ideas That Made Computers Possible) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0246:category_name_en",
+      "reason": "Independently reviewed category title “Structures Resist the Forces” → “Konstruktsioonid peavad jõududele vastu”. Flagged title-cased wording (Structures Resist) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0247:category_name_en",
+      "reason": "Independently reviewed category title “Structures Resist the Forces” → “Konstruktsioonid peavad jõududele vastu”. Flagged title-cased wording (Structures Resist) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0248:category_name_en",
+      "reason": "Independently reviewed category title “Structures Resist the Forces” → “Konstruktsioonid peavad jõududele vastu”. Flagged title-cased wording (Structures Resist) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0249:category_name_en",
+      "reason": "Independently reviewed category title “Structures Resist the Forces” → “Konstruktsioonid peavad jõududele vastu”. Flagged title-cased wording (Structures Resist) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0250:category_name_en",
+      "reason": "Independently reviewed category title “Structures Resist the Forces” → “Konstruktsioonid peavad jõududele vastu”. Flagged title-cased wording (Structures Resist) is translated descriptive wording."
+    }
+  ],
+  "artifactHashes": {
+    "authored": "8c4ee89dc4b17d8a9d47e087fb68f56a27f9eb67df7bd7e35aeefbbdeac0711e",
+    "generated": "146578a41cf9b6a9be692766dc8ad857a21fc66bebf240e79ae0c313f1cf77e6",
+    "evidence": "5f1aaa8748030e8cd3452decd011bfa8b8446c6fe08ff9481f1a5b9d1a026580"
+  }
+}

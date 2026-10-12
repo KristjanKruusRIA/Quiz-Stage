@@ -256,7 +256,7 @@ export async function reviewEasyExpansionTranslationExceptions(
     reviewedExceptionIds: legacyReviewedIds,
   });
   const errors = validation.issues.filter(
-    ({ severity }) => severity === "error",
+    ({ severity, code }) => severity === "error" && REVIEWABLE_TRANSLATION_CODES.has(code),
   );
   const reviewedExceptionIds = assertReviewableExpansionErrors(
     errors,

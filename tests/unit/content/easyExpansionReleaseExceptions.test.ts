@@ -9,17 +9,72 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
-import { afterEach, beforeAll, describe, expect, it } from "vitest";
+import { parse } from "csv-parse/sync";
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 
 import {
   EASY_EXPANSION_BATCH_IDS,
   type EasyExpansionReviewBinding,
 } from "../../../scripts/content/easyExpansion/reviewBinding";
 import { reviewEasyExpansionTranslationExceptions } from "../../../scripts/content/easyExpansion/reviewTranslationExceptions";
+import { readEvidenceInputs } from "../../../scripts/content/evidence";
 import { acceptedBatchPaths } from "../../../scripts/content/productionBatches";
-import { reviewedIdsFromReport } from "../../../scripts/content/validate";
+import { readCsvInputs } from "../../../scripts/content/readCsv";
+import {
+  NON_WAIVABLE_CODES,
+  reviewedIdsFromReport,
+  validateProductionContent,
+} from "../../../scripts/content/validate";
+import { readPreRepairContent } from "./preRepairContent";
+
+// This completed phase retains the catalog recorded by the 8,374-row baseline.
+vi.mock("../../../scripts/content/productionBatches", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("../../../scripts/content/productionBatches")>();
+  const { readFileSync } = await import("node:fs");
+  const { parsePackCsv } = await import("../../../src/main/content/csvPacks");
+  const baseline = JSON.parse(readFileSync("content/reports/all-difficulty-expansion-baseline-record-hashes.json", "utf8")) as {
+    batches: Record<string, { generated: Record<string, string> }>;
+  };
+  const batches = Object.freeze(actual.PRODUCTION_BATCHES.map((batch) => {
+    const rows = parsePackCsv(readFileSync(actual.acceptedBatchPaths(batch.id).generated, "utf8")).rows
+      .filter(({ clue_id }) => Object.hasOwn(baseline.batches[batch.id].generated, clue_id));
+    const sets = (difficulty: string, round: string) => new Set(rows
+      .filter((row) => row.difficulty === difficulty && row.round === round)
+      .map(({ category_set_id }) => category_set_id)).size;
+    return Object.freeze({
+      ...batch,
+      boardClues: rows.length,
+      subthemes: Object.freeze(batch.subthemes.filter((subtheme) => rows.some((row) => row.macro_topic === subtheme))),
+      distribution: Object.freeze(Object.fromEntries(["easy", "medium", "hard"].map((difficulty) => [difficulty, Object.freeze({
+        roundOne: sets(difficulty, "round-one"), roundTwo: sets(difficulty, "round-two"),
+      })]))) as typeof batch.distribution,
+    });
+  }));
+  return {
+    ...actual,
+    PRODUCTION_BATCHES: batches,
+    getProductionBatch: (id: string) => batches.find((batch) => batch.id === id) ?? actual.getProductionBatch(id),
+  };
+});
+
+vi.mock("../../../scripts/content/releaseThresholds", () => ({
+  RELEASE_THRESHOLDS: {
+    boardClues: 8_200, categorySets: 1_640, distinctCategoryNames: 1_640,
+    finalClues: 174, easySets: 707, mediumSets: 467, hardSets: 466, builtInPacks: 15,
+  },
+  RELEASE_COMPOSITION_THRESHOLDS: {
+    boardClues: { easy: 3_535, medium: 2_335, hard: 2_330 },
+    categorySets: {
+      easy: { roundOne: 354, roundTwo: 353 },
+      medium: { roundOne: 233, roundTwo: 234 },
+      hard: { roundOne: 233, roundTwo: 233 },
+    },
+    finalClues: { easy: 58, medium: 58, hard: 58 },
+  },
+}));
 
 const temporaryDirectories: string[] = [];
+const historicalRepositoryRoot = mkdtempSync(join(tmpdir(), "quiz-stage-easy-historical-"));
 let legacyReportText = "";
 let reviewedReportText = "";
 let expectedReviewedIds: string[] = [];
@@ -45,7 +100,7 @@ function legacyReport(): string {
   ) as Record<string, unknown>;
   const translation = report.translation as Record<string, unknown>;
   const exceptions = (translation.exceptions as Array<{ id: string }>).filter(
-    ({ id }) => !id.includes("easy-expansion"),
+    ({ id }) => !id.includes("easy-expansion") && !id.includes("all-level-expansion"),
   );
   return `${JSON.stringify(
     {
@@ -70,22 +125,59 @@ function copyBindingFixture(): string {
     for (const relativePath of [review, authored, generated, evidence]) {
       const destination = join(repositoryRoot, relativePath);
       mkdirSync(dirname(destination), { recursive: true });
-      copyFileSync(resolve(relativePath), destination);
+      copyFileSync(join(historicalRepositoryRoot, relativePath), destination);
     }
   }
   return repositoryRoot;
 }
 
 beforeAll(async () => {
+  const baseline = JSON.parse(readFileSync("content/reports/all-difficulty-expansion-baseline-record-hashes.json", "utf8")) as {
+    recordCount: number;
+    batches: Record<string, Record<"authored" | "generated" | "evidence", Record<string, string>>>;
+  };
+  expect(baseline.recordCount).toBe(8_374);
+  for (const [batchId, records] of Object.entries(baseline.batches)) {
+    const paths = acceptedBatchPaths(batchId);
+    for (const artifact of ["authored", "generated", "evidence"] as const) {
+      const bytes = Buffer.from(readPreRepairContent(paths[artifact]));
+      const parts: Buffer[] = [];
+      if (artifact === "evidence") {
+        for (const line of bytes.toString("utf8").match(/[^\n]*\n|[^\n]+$/gu) ?? []) {
+          if (Object.hasOwn(records.evidence, JSON.parse(line).clueId)) parts.push(Buffer.from(line));
+        }
+      } else {
+        let start = 0;
+        for (const row of parse(bytes, { info: true }) as unknown as Array<{ record: string[]; info: { bytes: number } }>) {
+          if (row.record[0] === "clue_id" || Object.hasOwn(records[artifact], row.record[0])) {
+            parts.push(bytes.subarray(start, row.info.bytes));
+          }
+          start = row.info.bytes;
+        }
+        parts.push(bytes.subarray(start));
+      }
+      const destination = join(historicalRepositoryRoot, paths[artifact]);
+      mkdirSync(dirname(destination), { recursive: true });
+      writeFileSync(destination, Buffer.concat(parts));
+    }
+  }
+  for (const batchId of EASY_EXPANSION_BATCH_IDS) {
+    const relativePath = `docs/superpowers/sdd/2026-09-05-accessible-easy-expansion/reviews/${batchId}.json`;
+    const destination = join(historicalRepositoryRoot, relativePath);
+    mkdirSync(dirname(destination), { recursive: true });
+    copyFileSync(relativePath, destination);
+  }
   legacyReportText = legacyReport();
   const reportPath = writeTemporaryReport(legacyReportText);
   const result = await reviewEasyExpansionTranslationExceptions({
-    repositoryRoot: resolve("."),
+    repositoryRoot: historicalRepositoryRoot,
     reportPath,
   });
   reviewedReportText = readFileSync(reportPath, "utf8");
   expectedReviewedIds = result.reviewedExceptionIds;
 }, 120_000);
+
+afterAll(() => rmSync(historicalRepositoryRoot, { recursive: true, force: true }));
 
 afterEach(() => {
   for (const directory of temporaryDirectories.splice(0)) {
@@ -179,7 +271,7 @@ describe("Easy expansion release translation exceptions", () => {
 
     const rerunPath = writeTemporaryReport(reviewedReportText);
     const rerun = await reviewEasyExpansionTranslationExceptions({
-      repositoryRoot: resolve("."),
+      repositoryRoot: historicalRepositoryRoot,
       reportPath: rerunPath,
     });
     expect(rerun.reviewedExceptionIds).toEqual(expectedReviewedIds);
@@ -205,15 +297,59 @@ describe("Easy expansion release translation exceptions", () => {
     );
 
     expect(() =>
-      reviewedIdsFromReport(reportPath, { repositoryRoot: resolve(".") }),
+      reviewedIdsFromReport(reportPath, { repositoryRoot: historicalRepositoryRoot }),
     ).toThrow(/review binding/i);
   });
+
+  it("keeps historical licence errors blocking after reviewing translation exceptions", async () => {
+    const reportPath = writeTemporaryReport(reviewedReportText);
+    const reviewedExceptionIds = reviewedIdsFromReport(reportPath, {
+      repositoryRoot: historicalRepositoryRoot,
+    });
+    const [inputs, evidenceByClueId] = await Promise.all([
+      readCsvInputs([join(historicalRepositoryRoot, "content/generated/*.en-et.csv")]),
+      readEvidenceInputs([join(historicalRepositoryRoot, "content/evidence/*.jsonl")]),
+    ]);
+    const validation = validateProductionContent(inputs, {
+      mode: "release",
+      evidenceByClueId,
+      reviewedExceptionIds: [
+        ...reviewedExceptionIds,
+        "INVALID_SOURCE_LICENSE",
+        ...inputs.flatMap(({ pack }) => pack.rows.map(({ clue_id }) =>
+          `translation:INVALID_SOURCE_LICENSE:${clue_id}`)),
+      ],
+    });
+    const errors = validation.issues.filter(({ severity }) => severity === "error");
+
+    expect(validation.blocking).toBe(true);
+    expect(errors).toHaveLength(5);
+    expect(errors.every(({ code, exceptionId }) =>
+      code === "INVALID_SOURCE_LICENSE" && exceptionId === undefined)).toBe(true);
+    expect(NON_WAIVABLE_CODES.has("INVALID_SOURCE_LICENSE")).toBe(true);
+    expect(validation.exceptions.some(({ code }) => code === "INVALID_SOURCE_LICENSE")).toBe(false);
+    expect(expectedReviewedIds).toHaveLength(438);
+    expect(expectedReviewedIds.some((id) => id.includes("INVALID_SOURCE_LICENSE"))).toBe(false);
+
+    const historicalReport = JSON.parse(readFileSync(reportPath, "utf8")) as Record<string, unknown>;
+    historicalReport.validation = validation;
+    writeFileSync(reportPath, `${JSON.stringify(historicalReport, null, 2)}\n`);
+    await reviewEasyExpansionTranslationExceptions({
+      repositoryRoot: historicalRepositoryRoot,
+      reportPath,
+    });
+    const published = JSON.parse(readFileSync(reportPath, "utf8")) as { validation: typeof validation };
+    expect(published.validation).toEqual(validation);
+    expect(published.validation.blocking).toBe(true);
+    expect(published.validation.issues.filter(({ severity, code }) =>
+      severity === "error" && code === "INVALID_SOURCE_LICENSE")).toHaveLength(5);
+  }, 120_000);
 
   it("does not overwrite a release report changed during validation", async () => {
     const reportPath = writeTemporaryReport(legacyReportText);
     await expect(
       reviewEasyExpansionTranslationExceptions(
-        { repositoryRoot: resolve("."), reportPath },
+        { repositoryRoot: historicalRepositoryRoot, reportPath },
         {
           beforePublish: () => {
             const current = JSON.parse(readFileSync(reportPath, "utf8")) as {
@@ -238,10 +374,9 @@ describe("Easy expansion release translation exceptions", () => {
       repositoryRoot,
       acceptedBatchPaths("01-history").generated,
     );
-    writeFileSync(
-      generatedPath,
-      Buffer.concat([readFileSync(generatedPath), Buffer.from("\n")]),
-    );
+    const generatedBytes = readFileSync(generatedPath);
+    generatedBytes[0] = generatedBytes[0]! ^ 1;
+    writeFileSync(generatedPath, generatedBytes);
     const reportPath = writeTemporaryReport(reviewedReportText);
 
     expect(() => reviewedIdsFromReport(reportPath, { repositoryRoot })).toThrow(

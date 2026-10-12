@@ -25,6 +25,7 @@ import {
 } from '../../../scripts/content/productionBatches';
 import { parsePackCsv } from '../../../src/main/content/csvPacks';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
+import { readPreRepairContent } from './preRepairContent';
 
 const HISTORY = getProductionBatch('01-history');
 const SUBJECTS = ['atlas', 'beacon', 'comet', 'delta', 'ember'] as const;
@@ -49,13 +50,13 @@ type Fixture = Readonly<{
 }>;
 
 function readRows(path: string): readonly EasyExpansionCsvRow[] {
-  return parsePackCsv(readFileSync(resolve(path), 'utf8')).rows.map((row) => Object.freeze(
+  return parsePackCsv(readPreRepairContent(resolve(path))).rows.map((row) => Object.freeze(
     Object.fromEntries(CSV_COLUMNS.map((column) => [column, row[column]])),
   ) as EasyExpansionCsvRow);
 }
 
 function readEvidence(path: string): readonly ContentEvidence[] {
-  return [...parseEvidenceJsonl(readFileSync(resolve(path), 'utf8'), path).values()];
+  return [...parseEvidenceJsonl(readPreRepairContent(resolve(path)), path).values()];
 }
 
 function category(index: number): EasyExpansionCategory {

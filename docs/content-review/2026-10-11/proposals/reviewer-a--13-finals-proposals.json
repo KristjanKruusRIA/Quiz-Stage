@@ -1,0 +1,38 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-finals-final-0001",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "Buried by Mount Vesuvius in AD 79, this Roman city is famed for plaster casts of eruption victims and the frescoes at its Villa of the Mysteries.",
+        "clue_et": "See Vesuuvi purskes 79. aastal mattunud Rooma linn on tuntud purskeohvrite kipsjäljendite ning oma Müsteeriumide villa seinamaalide poolest.",
+        "source_title": "Pompeii — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Pompeii",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "ROOT-FINALS-001: add the Pompeii-specific Villa of the Mysteries and familiar victim casts to distinguish Herculaneum while retaining the broad Easy identification. Original factual wording; sources cited, not quoted.",
+      "sourceVerification": [
+        {
+          "url": "https://pompeiisites.org/wp-content/uploads/ANTIQUARIUM_PRESS_kit_ENGLISH.pdf",
+          "observation": "The archaeological park’s historical timeline identifies Fiorelli’s casts and the Villa of the Mysteries with its Dionysiac fresco at Pompeii; checked 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Pompeii",
+          "observation": "Stored replacement source opened 2026-10-11; article covers the AD79 eruption and named archaeological features."
+        }
+      ]
+    }
+  ],
+  "categories": [],
+  "resolutions": [
+    {
+      "findingId": "ROOT-FINALS-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0001"
+      ],
+      "reason": "The named Villa of the Mysteries identifies Pompeii specifically, so Vesuvius/AD79 no longer leave Herculaneum equally valid."
+    }
+  ]
+}

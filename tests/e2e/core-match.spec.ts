@@ -46,12 +46,14 @@ test('plays all 60 fixture board clues, three Daily Doubles, Final, and a winner
     tileIdentities.add(identity!);
     await tile.click();
     const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
+    const teamButton = page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first();
+    await wager.or(teamButton).first().waitFor({ state: 'visible' });
     if (await wager.isVisible()) {
       dailyDoubles += 1;
       await wager.fill('5');
       await page.getByRole('button', { name: 'Commit wager' }).click();
     }
-    await page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first().click();
+    await teamButton.click();
     await page.getByRole('button', { name: 'Correct', exact: true }).click();
     await expect(page.locator('.public-response p')).toHaveCount(3);
     if (clueNumber === 30 || clueNumber === 60) {

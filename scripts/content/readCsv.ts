@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { lstatSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { TextDecoder } from 'node:util';
@@ -8,6 +9,7 @@ import { parsePackCsv, type ParsedPack } from '../../src/main/content/csvPacks';
 export interface CsvInputFile {
   file: string;
   pack: ParsedPack;
+  sha256: string;
 }
 
 export async function resolveCsvInputFiles(patterns: readonly string[]): Promise<string[]> {
@@ -51,6 +53,6 @@ export async function readCsvInputs(patterns: readonly string[]): Promise<CsvInp
     } catch {
       throw new CsvValidationError('invalid-utf8');
     }
-    return { file, pack: parsePackCsv(text) };
+    return { file, pack: parsePackCsv(text), sha256: createHash('sha256').update(bytes).digest('hex') };
   });
 }

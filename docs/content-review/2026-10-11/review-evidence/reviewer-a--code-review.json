@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "reviewer": "Reviewer A",
+  "reviewedAt": "2026-10-11T16:35:57Z",
+  "decision": "approved",
+  "scope": "Independent review of root-authored answer-disclosure scanning, immutable repair-review bindings and validation/seed integration. The separately authorized original-origin schema change was authored by Reviewer A and is reported as implementation work, not independently approved here.",
+  "artifacts": [
+    {
+      "path": "scripts/content/answerDisclosures.ts",
+      "sha256": "6280f03abaab2f051ca96cdf1a47165ca002e1ae127f6df80dc7c0b1fdd61d5e"
+    },
+    {
+      "path": "scripts/content/contentRepairReview.ts",
+      "sha256": "7c7a2d2d9e4af73b18858ac5b7f4b8696196276968b790c6596bca3a60b9637b"
+    },
+    {
+      "path": "scripts/content/readCsv.ts",
+      "sha256": "d05b53690ea95082c3a61ae620e98524044f7738d03ae6dd82ba6974ebe8d228"
+    },
+    {
+      "path": "scripts/content/validate.ts",
+      "sha256": "4146a80b41708b26957a6d0548ec3c380507daccdc0a8b862c8c8f3f564159e8"
+    },
+    {
+      "path": "scripts/content/buildSeed.ts",
+      "sha256": "5632f85b6b516eec6c2c7313dc5449e90ad7bd02413f72bfc86c628e9f65f919"
+    }
+  ],
+  "checks": [
+    "Both languages, aliases, visible titles, own prompts and all ordered sibling prompt/response/explanation comparisons are scanned.",
+    "Lexical matching is explicitly a heuristic; semantic independence is established by the full-set editorial review and exact reason-based flag decisions.",
+    "The strict manifest covers the complete authored, generated and evidence inventory; regular-file and current byte-hash checks reject missing, duplicate or stale artifacts.",
+    "Fresh translation decisions are loaded even for a new report path; old exceptions for changed clues are discarded.",
+    "Both release validation and seed building verify the actual retained CSV hashes and canonical evidence snapshot, covering canonical authored and generated input paths.",
+    "Generic report waivers cannot waive answer-disclosure findings; exact reasons are required by the bound manifest."
+  ],
+  "findings": [
+    {
+      "id": "REPAIR-CODE-A-001",
+      "priority": "P2",
+      "status": "fixed",
+      "file": "scripts/content/validate.ts",
+      "reason": "Early returns from reviewedIdsFromReport bypassed fresh manifest translation exceptions when no output report existed. All four branches now use finish(), which invokes the repair-review bridge.",
+      "verification": "Root added a failing reproduction before the fix; the new missing-report test passes in Reviewer A's final run."
+    },
+    {
+      "id": "REPAIR-CODE-A-002",
+      "priority": "P2",
+      "status": "fixed",
+      "file": "scripts/content/contentRepairReview.ts",
+      "reason": "Hashing files only after reading inputs could authorize current disk bytes while retaining older unreviewed input/evidence snapshots. assertReviewedInputHashes now compares actual retained CSV SHA256s and a canonical retained evidence digest with the reviewed manifest.",
+      "verification": "Final targeted tests accept matching retained snapshots and reject retained CSV/evidence mismatches despite currently approved disk files."
+    },
+    {
+      "id": "REPAIR-CODE-A-003",
+      "priority": "P2",
+      "status": "fixed",
+      "file": "scripts/content/buildSeed.ts",
+      "reason": "Production-input detection previously covered only generated CSVs; canonical authored inputs could skip the new retained-input and disclosure gates. The seed builder now detects both authored and generated paths, matching the release validator.",
+      "verification": "Fresh source review confirms the shared authored|generated detection before assertReviewedInputHashes and disclosure validation."
+    }
+  ],
+  "tests": [
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/answerDisclosures.test.ts tests/unit/content/contentRepairReview.test.ts",
+      "result": "10/10 passed on final reviewed gate bytes."
+    },
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/productionValidator.test.ts -t 'validates original factual wording'",
+      "result": "The new JSONL parsing/validation integration test failed on the original enum, then passed after adding original. The restricted source licence remains All rights reserved."
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "Passed after the original-origin change; root also verified typecheck after the retained-snapshot integration."
+    },
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/evidence.test.ts tests/unit/content/productionValidator.test.ts tests/unit/content/answerDisclosures.test.ts tests/unit/content/contentRepairReview.test.ts",
+      "result": "Earlier related run: 111 passed, 2 existing tests failed at Windows symlink creation with EPERM (evidence symlink-input test and report publication symlink-destination test), before reaching their assertions. Final targeted gate tests were subsequently rerun and passed."
+    }
+  ],
+  "discovery": "Graph search was attempted and returned Transport closed; scoped source reads were used as the documented fallback.",
+  "outstandingFindings": []
+}

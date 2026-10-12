@@ -1,0 +1,3119 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-003",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which round citrus fruit has a thick orange-coloured peel and divides into juicy segments?",
+        "clue_et": "Millisel ümaral tsitrusviljal on paks oranž koor ja mahlased sektorid?"
+      },
+      "reviewNotes": "Uses the same physical discriminator in both languages; removes the false Estonian name/colour pun. Existing orange source retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-011",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which leafy herb is the traditional green ingredient in pesto, blended with garlic, pine nuts and olive oil?",
+        "clue_et": "Milline lehtedega maitsetaim on pesto tavapärane roheline koostisosa, mida segatakse küüslaugu, piiniapähklite ja oliiviõliga?",
+        "response_en": "Basil",
+        "response_et": "basiilik",
+        "accepted_variants_en": "sweet basil;Genovese basil",
+        "accepted_variants_et": "harilik basiilik;Genova basiilik",
+        "explanation_en": "Traditional basil pesto blends the fresh leaves with nuts, garlic, oil and cheese.",
+        "explanation_et": "Traditsioonilises basiilikupestos segatakse värsked lehed pähklite, küüslaugu, õli ja juustuga.",
+        "source_title": "N.C. Cooperative Extension: Basil and Pesto",
+        "source_url": "https://brunswick.ces.ncsu.edu/news/basil-and-pesto/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the song fragment with a familiar culinary fact; no sibling herb is printed.",
+      "sourceVerification": [
+        {
+          "url": "https://brunswick.ces.ncsu.edu/news/basil-and-pesto/",
+          "observation": "Read the Extension account and ingredient list: basil leaves are the traditional herb in the documented pesto recipe. Original clue wording, no copied recipe."
+        }
+      ],
+      "subjectKey": "herb:basil",
+      "factFamily": "basil-traditional-pesto"
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-029",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which soft French cheese with a white rind has protected varieties named after Meaux and Melun near Paris?",
+        "clue_et": "Millisel valge koorikuga pehmel Prantsuse juustul on kaitstud sordid, mis kannavad Pariisi lähedal asuvate Meaux’ ja Meluni nime?",
+        "accepted_variants_en": "Brie cheese;Brie de Meaux;Brie de Melun",
+        "accepted_variants_et": "brie-juust;Brie de Meaux;Brie de Melun",
+        "explanation_en": "Brie de Meaux and Brie de Melun are protected varieties of the soft cheese associated with the Paris region.",
+        "explanation_et": "Brie de Meaux ja Brie de Melun on Pariisi piirkonnaga seotud pehme juustu kaitstud sordid.",
+        "source_title": "French Ministry of Agriculture: Brie de Meaux and Brie de Melun",
+        "source_url": "https://agriculture.gouv.fr/le-brie-de-meaux-et-le-brie-de-melun-les-deux-fromages-aop-de-la-region-parisienne",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds verified regional names that exclude the similarly described Camembert.",
+      "sourceVerification": [
+        {
+          "url": "https://agriculture.gouv.fr/le-brie-de-meaux-et-le-brie-de-melun-les-deux-fromages-aop-de-la-region-parisienne",
+          "observation": "Read the ministry description of the two protected cheeses from the Paris region, Brie de Meaux and Brie de Melun. The place names distinguish the requested family from Camembert."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-030",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which Swiss cheese, named for the Emme valley, is famous for large round holes formed as it matures?",
+        "clue_et": "Milline Emme oru järgi nime saanud Šveitsi juust on tuntud suurte ümarate aukude poolest, mis tekivad laagerdumisel?",
+        "response_en": "Emmental",
+        "response_et": "emmental",
+        "accepted_variants_en": "Emmentaler;Emmenthal;Emmentaler cheese",
+        "accepted_variants_et": "Emmentaler;emmentali juust;emmental-juust",
+        "explanation_en": "Fermentation gas trapped during maturing forms the characteristic holes in Emmentaler.",
+        "explanation_et": "Laagerdumisel juustu sisse kogunev käärimisgaas tekitab emmentali iseloomulikud augud.",
+        "source_title": "Cheeses from Switzerland: Emmentaler AOP",
+        "source_url": "https://www.cheesesfromswitzerland.com/en/cheeses-from-switzerland/emmentaler-aop",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the nonunique Dutch-city naming prompt with a recognizable Swiss cheese and its independent physical feature.",
+      "sourceVerification": [
+        {
+          "url": "https://www.cheesesfromswitzerland.com/en/cheeses-from-switzerland/emmentaler-aop",
+          "observation": "Read the cheese association’s page: name derives from the Emme valley in Bern, and the characteristic large holes develop during maturing. Also read the producer organization’s explanation of fermentation gas forming the holes."
+        },
+        {
+          "url": "https://www.emmentaler.ch/en/how-do-the-holes-get-into-the-cheese",
+          "observation": "Read the producer organization’s account of fermentation gas collecting to form the holes during maturation."
+        }
+      ],
+      "subjectKey": "cheese:emmental",
+      "factFamily": "emmental-characteristic-holes"
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-062",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "What chocolate tray-baked dessert is cut into squares and can have a dense, fudgy centre?",
+        "clue_et": "Millist šokolaadist plaadiküpsetist lõigatakse ruutudeks ning sellel võib olla tihe ja pehme sisu?",
+        "response_en": "Brownie",
+        "response_et": "brownie",
+        "accepted_variants_en": "brownies;chocolate brownie",
+        "accepted_variants_et": "brownie-kook;brownie’d;šokolaadibrownie",
+        "explanation_en": "Brownies are chocolate baked treats commonly made in a tray and cut into squares.",
+        "explanation_et": "Brownie’d on šokolaadiküpsetised, mida tehakse tavaliselt plaadil ja lõigatakse ruutudeks.",
+        "source_title": "Ghirardelli: Classic Chocolate Brownies",
+        "source_url": "https://www.ghirardelli.com/recipes/ghirardelli-recipes/classic-chocolate-brownies-rec1048",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces cocoa butter because that ingredient is needed to explain the other chocolate varieties accurately; remaining clues may retain its name without giving this answer.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ghirardelli.com/recipes/ghirardelli-recipes/classic-chocolate-brownies-rec1048",
+          "observation": "Read the manufacturer’s recipe: a chocolate batter is baked in a square pan, cooled and cut into squares. No recipe quantities or instructions reproduced."
+        }
+      ],
+      "subjectKey": "dessert:brownie",
+      "factFamily": "brownie-tray-baked-squares"
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-079",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which traditional Chinese tea style uses controlled partial oxidation of its leaves?",
+        "clue_et": "Millise traditsioonilise Hiina teesordi lehti lastakse kontrollitult osaliselt oksüdeeruda?"
+      },
+      "reviewNotes": "Names neither sibling style. Existing explanation already independently describes partial oxidation and retained source supports it.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-099",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "What final resting stage lets shaped bread dough expand before it goes into the oven?",
+        "clue_et": "Milline viimane puhke-etapp laseb vormitud leivatainal enne ahju panemist kerkida?"
+      },
+      "reviewNotes": "Removes the sibling organism from the prompt; existing fermentation explanation names no organism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-106",
+      "batchId": "09-food-drink",
+      "changes": {
+        "explanation_en": "A taco uses a small tortilla to hold seasoned meat, vegetables or other savoury fillings.",
+        "explanation_et": "Takos hoiab väike tortilja maitsestatud liha, köögivilju või muud soolast täidist."
+      },
+      "reviewNotes": "Removes the named sibling sauce without changing the taco fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-158",
+      "batchId": "09-food-drink",
+      "changes": {
+        "source_title": "Health Canada: How to blanch vegetables",
+        "source_url": "https://www.canada.ca/en/health-canada/services/food-guide/eating-support/kitchen/cooking-skills/how-blanch-vegetables.html",
+        "source_license": "Crown copyright",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Correct culinary supporting source; production evidence must replace its supportingSource along with the display citation. Original question/explanation retained.",
+      "sourceVerification": [
+        {
+          "url": "https://www.canada.ca/en/health-canada/services/food-guide/eating-support/kitchen/cooking-skills/how-blanch-vegetables.html",
+          "observation": "Read the culinary instructions: cooked vegetables are transferred to ice water to stop cooking. Replaces the unrelated sports immersion article."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-food-drink-playable-corpus-322",
+      "batchId": "09-food-drink",
+      "changes": {
+        "explanation_en": "Monosodium glutamate is a flavour enhancer made from the sodium salt of glutamic acid.",
+        "explanation_et": "Naatriumglutamaat on glutamiinhappe naatriumisoolast maitsetugevdaja."
+      },
+      "reviewNotes": "Removes the named sibling taste and retains the independently identifying chemistry.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-playable-corpus-280",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which common Japanese green tea uses young leaves usually grown in full sunlight, then steamed and rolled, rather than shade-grown leaves or later coarse leaves?",
+        "clue_et": "Millise levinud Jaapani rohelise tee jaoks kasutatakse noori, tavaliselt päikese käes kasvatatud, seejärel aurutatud ja rullitud lehti, mitte varjus kasvanud või hilisemaid jämedaid lehti?",
+        "explanation_en": "Sencha is commonly made from young sun-grown leaves that are steamed, rolled and dried.",
+        "explanation_et": "Sencha’t tehakse tavaliselt noortest päikese käes kasvatatud lehtedest, mida aurutatakse, rullitakse ja kuivatatakse.",
+        "source_title": "Japan MAFF: Washoku — Japanese green tea",
+        "source_url": "https://www.maff.go.jp/j/shokusan/gaisyoku/pamphlet/pdf/washoku_english.pdf",
+        "source_license": "Copyright Ministry of Agriculture, Forestry and Fisheries",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds cultivation and harvest distinctions; no single whole-leaf property is treated as unique.",
+      "sourceVerification": [
+        {
+          "url": "https://www.maff.go.jp/j/shokusan/gaisyoku/pamphlet/pdf/washoku_english.pdf",
+          "observation": "Read the Japanese-green-tea section, printed page 47: sencha uses new leaves grown in full sunlight; bancha uses leaves and stems grown after the first harvest; gyokuro is shaded. Also read the MAFF beverage page’s steaming/rolling process."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-food-drink-playable-corpus-334",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which spongy Ethiopian flatbread is traditionally made from fermented teff flour?",
+        "clue_et": "Milline käsnjas Etioopia lameleib valmistatakse traditsiooniliselt kääritatud tefijahust?",
+        "response_en": "injera",
+        "response_et": "injera",
+        "accepted_variants_en": "injerra;enjera",
+        "accepted_variants_et": "indžeera;injera-leib",
+        "explanation_en": "Injera is a fermented flatbread traditionally made with teff; fermentation and cooking give it a spongy texture.",
+        "explanation_et": "Injera on traditsiooniliselt tefijahust kääritatud lameleib, millele käärimine ja küpsetamine annavad käsnja tekstuuri.",
+        "source_title": "FAO: The future is an ancient lake — tef",
+        "source_url": "https://www.fao.org/4/y5118e/y5118e04a.pdf",
+        "source_license": "Copyright FAO",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces one of two equivalent stiff-porridge facts with a recognizable independent African staple; no sadza naming or preparation relationship is exposed.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fao.org/4/y5118e/y5118e04a.pdf",
+          "observation": "Read the tef passage on printed page 115: Ethiopian tef flour is fermented and cooked into injera, a spongy, moist and elastic flat pancake. Original summary only."
+        }
+      ],
+      "subjectKey": "bread:injera",
+      "factFamily": "injera-fermented-teff-flatbread"
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0027",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which smooth Middle Eastern paste is made by grinding sesame seeds?",
+        "clue_et": "Milline sile Lähis-Ida pasta valmistatakse seesamiseemneid jahvatades?",
+        "explanation_en": "Tahini is a paste made from ground sesame seeds.",
+        "explanation_et": "Tahiini on jahvatatud seesamiseemnetest pasta."
+      },
+      "reviewNotes": "Uses the ingredient identity independently and removes both references to the sibling dip.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0062",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which warm winter drink combines cocoa with milk and is often topped with marshmallows?",
+        "clue_et": "Millises soojas talvejoogis ühendatakse kakao piimaga ning peale pannakse sageli vahukomme?",
+        "response_en": "Hot chocolate",
+        "response_et": "kuum šokolaad",
+        "accepted_variants_en": "hot cocoa",
+        "accepted_variants_et": "kuum kakao;kakaojook",
+        "explanation_en": "Hot chocolate or hot cocoa is a warmed chocolate drink; marshmallows are a familiar topping.",
+        "explanation_et": "Kuum šokolaad ehk kuum kakao on soe šokolaadijook, millele lisatakse sageli vahukomme.",
+        "source_title": "Hersheyland: Hot Cocoa Recipe Hacks",
+        "source_url": "https://www.hersheyland.com/stories/our-best-hot-cocoa-recipe-hacks.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the reversed serving fact, leaving glögg as an independent tradition. All remaining questions fit festive drink traditions.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hersheyland.com/stories/our-best-hot-cocoa-recipe-hacks.html",
+          "observation": "Read the manufacturer’s winter-drink account and classic recipe using cocoa, milk and sugar, with marshmallow topping. Original identifying summary, no recipe copied."
+        }
+      ],
+      "subjectKey": "drink:hot-chocolate",
+      "factFamily": "hot-chocolate-winter-marshmallows"
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-014",
+      "batchId": "09-food-drink",
+      "changes": {
+        "accepted_variants_en": "Chinese parsley"
+      },
+      "reviewNotes": "Residual self-disclosure: asks for the coriander name from its North American leaf name; that printed name is no longer a host answer alternative. Other genuine unprinted name remains.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-021",
+      "batchId": "09-food-drink",
+      "changes": {
+        "accepted_variants_en": "French stick",
+        "accepted_variants_et": "baguette-sai"
+      },
+      "reviewNotes": "Residual self-disclosure: removes generic description alternatives that repeat the long French loaf description; named bread and genuine local name retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0060",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which French puff-pastry biscuit is rolled into a shape resembling a palm leaf?",
+        "clue_et": "Milline Prantsuse lehttainaküpsis rullitakse palmilehte meenutavasse kujusse?"
+      },
+      "reviewNotes": "Residual given-alias repair: palm-leaf shape identifies palmier without printing the accepted elephant-ear alternative.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0071",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "What cooled, brewed drink is poured over ice and commonly sweetened?",
+        "clue_et": "Millist jahutatud tõmmisjooki valatakse jää peale ja sageli magustatakse?",
+        "explanation_en": "Iced tea is brewed, cooled and served over ice, often with added sugar.",
+        "explanation_et": "Jäätee tõmmisel lastakse jahtuda ning seda serveeritakse jää peal, sageli lisatud suhkruga."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: omits the fruit garnish that is another question’s answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0074",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "Which citrus fruit flavours a traditional British drink made by boiling pearl grains in water?",
+        "clue_et": "Milline tsitrusvili maitsestab traditsioonilist Briti jooki, mida tehakse lihvitud terasid vees keetes?",
+        "explanation_en": "This traditional British grain infusion is often flavoured with lemon juice.",
+        "explanation_et": "Seda traditsioonilist Briti teraviljajooki maitsestatakse sageli sidrunimahlaga."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: no longer names the cereal whose malted form is another target. Own fruit answer is explained only after its reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-all-level-expansion-0169",
+      "batchId": "09-food-drink",
+      "changes": {
+        "explanation_en": "Port is fortified during fermentation, so some natural grape sugar remains in the wine.",
+        "explanation_et": "Portveini kangendatakse käärimise ajal, nii et osa viinamarjade looduslikust suhkrust jääb veini."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes the named comparison wine from both explanations.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-food-drink-accessible-corpus-076",
+      "batchId": "09-food-drink",
+      "changes": {
+        "clue_en": "What small pouch holds a single portion of leaves while they steep in a cup of hot water?",
+        "clue_et": "Milline väike kotike hoiab ühe portsjoni lehti kuuma veega tassis tõmbamise ajal?",
+        "response_en": "Tea bag",
+        "response_et": "teekott",
+        "accepted_variants_en": "teabag",
+        "accepted_variants_et": "teekotike",
+        "explanation_en": "A tea bag holds leaves together while water passes through it to make a drink.",
+        "explanation_et": "Teekott hoiab lehti koos, samal ajal kui neist läbi liikuv vesi valmistab joogi.",
+        "source_title": "Twinings: How to Make the Perfect Cup of Tea",
+        "source_url": "https://twinings.co.uk/blogs/news/how-to-make-a-cup-of-tea-perfectly",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent review identified a closed three-label oxidation pool. Replaces the fully oxidised style with a familiar brewing accessory, so remaining styles require identifying knowledge and the category still covers all five. Original bilingual factual wording; no source prose copied.",
+      "sourceVerification": [
+        {
+          "url": "https://twinings.co.uk/blogs/news/how-to-make-a-cup-of-tea-perfectly",
+          "observation": "Read producer guidance: one bag per person, place it in cup/pot and pour water over it, then leave it to brew. This supports the ordinary brewing function rather than a historical invention claim."
+        },
+        {
+          "url": "https://twinings.co.nz/pages/frequently-asked-questions",
+          "observation": "Read producer FAQ describing a folded/crimped bag filled with tea and closed with a cotton stitch, corroborating its role as a leaf-holding pouch."
+        },
+        {
+          "url": "https://twinings.co.uk/pages/terms-and-conditions",
+          "observation": "Read site terms 3 and 6: content copying/adaptation requires prior permission except personal non-commercial use, and copyright/trademark ownership does not confer an implied licence. Recorded reserved rights, separately from original factual authoring."
+        }
+      ],
+      "subjectKey": "object:tea-bag",
+      "factFamily": "tea-bag-holds-leaves-during-infusion"
+    },
+    {
+      "clueId": "built-in-food-drink-playable-corpus-332",
+      "batchId": "09-food-drink",
+      "changes": {
+        "explanation_en": "Fufu is made by pounding cooked starchy ingredients such as cassava, plantain or cocoyam into a smooth paste.",
+        "explanation_et": "Fufu valmistamiseks tambitakse keedetud tärkliserikkad koostisosad, näiteks maniokk, jahubanaan või taro, ühtlaseks massiks."
+      },
+      "reviewNotes": "Independent factual review removes the unsupported originally-made timeline. Describes current preparation only; the existing prompt and host alternatives remain accurate.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fao.org/4/x5045e/x5045e06.htm",
+          "observation": "Read FAO chapter: cassava, cocoyams, yams and plantains are pounded into pastes called fufu; cassava can be boiled/steamed and pounded. It separately says cassava was introduced from South America, so no ancient African cassava chronology is retained."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-148",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which mesh screen in a vocal-recording setup softens bursts from sounds such as P and B?",
+        "clue_et": "Milline võrkketas pehmendab laulmise salvestamisel P- ja B-häälikute õhupahvakuid?",
+        "explanation_en": "A pop filter disperses fast-moving breath to reduce plosive noise in a vocal recording.",
+        "explanation_et": "Popfilter hajutab kiire õhuvoolu ja vähendab sulghäälikute tekitatud müra laulusalvestuses."
+      },
+      "reviewNotes": "Removes the sibling microphone name from prompt and explanation; screen and plosive function still identify the device.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-150",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which recording method captures sound at the two ear positions of a dummy head to create a three-dimensional effect over headphones?",
+        "clue_et": "Milline salvestusviis jäädvustab heli kunstpea kahe kõrva asukohas, et luua kõrvaklappides ruumiline efekt?"
+      },
+      "reviewNotes": "Uses the existing accepted dummy-head concept; no sibling capture-device name printed. Existing source and explanation retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-014",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What is the general name for an internal SATA or NVMe storage drive that uses flash memory and has no moving mechanical parts?",
+        "clue_et": "Mis on välkmälu kasutava, ilma liikuvate mehaaniliste osadeta sisemise SATA- või NVMe-salvestusseadme üldnimetus?"
+      },
+      "reviewNotes": "Internal drive and its interfaces distinguish the requested storage category from a USB stick. Existing supporting source retained; manufacturer cached search excerpt confirms interfaces and flash memory.",
+      "sourceVerification": [
+        {
+          "url": "https://test.crucial.com/articles/about-ssd/why-upgrade-to-nvme-ssd",
+          "observation": "Search-index excerpt from Crucial describes SSD flash memory and SATA/NVMe interfaces. Direct live fetch of the corresponding www.crucial.com page was rejected; do not claim a full page read."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-018",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which familiar compressed-audio format is the common short name for MPEG Audio Layer III?",
+        "clue_et": "Milline tuntud tihendatud helivorming on MPEG Audio Layer III tavapärane lühinimetus?",
+        "source_title": "Fraunhofer IIS: MP3 and AAC Explained",
+        "source_url": "https://www.iis.fraunhofer.de/content/dam/iis/de/doc/ame/conference/AES-17-Conference_mp3-and-AAC-explained_AES17.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Requires recalling the standard short name; it is not printed as an accepted response in the prompt.",
+      "sourceVerification": [
+        {
+          "url": "https://www.iis.fraunhofer.de/content/dam/iis/de/doc/ame/conference/AES-17-Conference_mp3-and-AAC-explained_AES17.pdf",
+          "observation": "Read the paper’s MPEG audio coding description: Layer-3 is the coding system called MP3. Uses technical identity to disambiguate other compressed audio formats."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-019",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which familiar archive format, originally developed by Phil Katz of PKWARE, bundles files into one compressed package?",
+        "clue_et": "Milline tuntud arhiivivorming, mille arendas algselt Phil Katz ettevõttest PKWARE, koondab failid üheks tihendatud paketiks?",
+        "source_title": "Library of Congress: ZIP File Format (PKWARE)",
+        "source_url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000354.shtml",
+        "source_license": "Public domain",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Founder and company distinguish the format without printing its name or inventing a Windows command label.",
+      "sourceVerification": [
+        {
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000354.shtml",
+          "observation": "Read the format description: original format developed by Phil Katz of PKWARE, and packages one or more files for storage and exchange. Uses founder and company, avoiding a misleading shortened operating-system command."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-020",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which lossless image format was designed as a patent-free alternative to GIF and supports an alpha channel for transparency?",
+        "clue_et": "Milline kadudeta pildivorming loodi patendivaba alternatiivina GIF-ile ning toetab läbipaistvuse jaoks alfakanalit?",
+        "source_title": "W3C: Portable Network Graphics Specification, Third Edition",
+        "source_url": "https://www.w3.org/TR/png/",
+        "source_license": "W3C Permissive Document License",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the specific GIF-replacement design history; response expansion remains absent from prompt.",
+      "sourceVerification": [
+        {
+          "url": "https://www.w3.org/TR/png/",
+          "observation": "Read abstract and copyright line: the format is a patent-free replacement for GIF with lossless compression and an optional alpha channel; W3C permissive document license applies."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-024",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "A web server receives browser requests and returns pages, images or other site resources.",
+        "explanation_et": "Veebiserver võtab vastu brauseri päringuid ning tagastab lehti, pilte või muid veebisaidi ressursse."
+      },
+      "reviewNotes": "Removes the named protocol from the server explanation; its hosting role remains clear.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-034",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What is an unfinished email saved for editing and sending later called?",
+        "clue_et": "Kuidas nimetatakse pooleliolevat e-kirja, mis on salvestatud hilisemaks muutmiseks ja saatmiseks?",
+        "response_en": "Draft",
+        "response_et": "mustand",
+        "accepted_variants_en": "email draft;draft message",
+        "accepted_variants_et": "kirja mustand;mustandkiri",
+        "explanation_en": "A draft stores an unsent message so the writer can return to it later.",
+        "explanation_et": "Mustand hoiab saatmata kirja alles, et kirjutaja saaks seda hiljem jätkata.",
+        "source_title": "Microsoft Support: Save an Outlook message as a draft",
+        "source_url": "https://support.microsoft.com/en-us/outlook/mail/save-an-outlook-message-as-a-eml-file-a-pdf-file-or-as-a-draft",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the visible/hidden-copy pair with an independent familiar messaging concept.",
+      "sourceVerification": [
+        {
+          "url": "https://support.microsoft.com/en-us/outlook/mail/save-an-outlook-message-as-a-eml-file-a-pdf-file-or-as-a-draft",
+          "observation": "Read the official description: a message being composed can be saved as a draft and finished later; saved drafts are reopened from Drafts."
+        }
+      ],
+      "subjectKey": "email:draft",
+      "factFamily": "draft-unsent-message"
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-052",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which camera setting specifies how long the shutter stays open, often as a fraction of a second?",
+        "clue_et": "Milline kaameraseadistus määrab, kui kaua katik on avatud, sageli sekundi murdosana?",
+        "response_en": "Shutter speed",
+        "response_et": "säriaeg",
+        "accepted_variants_en": "exposure time;shutter time",
+        "accepted_variants_et": "säritusaeg;katiku avatud oleku aeg",
+        "explanation_en": "Shutter speed is the exposure duration; a shorter time can freeze movement.",
+        "explanation_et": "Säriaeg on särituse kestus; lühem aeg võib liikumise pildil peatada.",
+        "source_title": "Nikon: Understanding Shutter Speed",
+        "source_url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-shutter-speed",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces megapixel, which contained and defined the separate pixel target, with an independent camera setting.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-shutter-speed",
+          "observation": "Read the manufacturer’s definition: shutter speed is the duration the shutter remains open when taking a photograph. Original question wording."
+        }
+      ],
+      "subjectKey": "photography:shutter-speed",
+      "factFamily": "shutter-speed-exposure-duration"
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-055",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which kind of zoom changes the lens’s focal length instead of merely enlarging an existing image?",
+        "clue_et": "Milline suum muudab objektiivi fookuskaugust, selle asemel et lihtsalt olemasolevat pilti suurendada?",
+        "explanation_en": "Optical zoom changes the lens’s focal length to enlarge the scene optically before the photograph is recorded.",
+        "explanation_et": "Optiline suum muudab objektiivi fookuskaugust, et suurendada stseeni optiliselt enne foto jäädvustamist."
+      },
+      "reviewNotes": "Removes both sibling component names, pixel and sensor, while preserving the optical-versus-digital distinction.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-056",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which paired listening devices are worn on or over the ears for personal listening?",
+        "clue_et": "Milliseid paaris kuulamisseadmeid kantakse isiklikuks kuulamiseks kõrvadel või nende ümber?",
+        "explanation_en": "Headphones deliver separate sound close to each ear for personal listening.",
+        "explanation_et": "Kõrvaklapid annavad isiklikuks kuulamiseks heli kummagi kõrva lähedale."
+      },
+      "reviewNotes": "Removes the loudspeaker response and its accepted synonym from sibling text.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-059",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which component increases the power of a weak electrical audio signal?",
+        "clue_et": "Milline komponent suurendab nõrga elektrilise helisignaali võimsust?",
+        "explanation_en": "An audio power amplifier raises the power of an electrical audio signal.",
+        "explanation_et": "Helivõimsusvõimendi suurendab elektrilise helisignaali võimsust."
+      },
+      "reviewNotes": "Removes references to both sibling listening-device targets.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-060",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which audio feature creates an opposing signal to reduce steady background sound?",
+        "clue_et": "Milline helifunktsioon loob püsiva taustamüra vähendamiseks vastandsignaali?"
+      },
+      "reviewNotes": "Removes headphone naming; the cancellation mechanism still uniquely identifies the feature.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-010",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which Motorola mobile-phone model launched in 1996 with a compact clamshell that folded above its display?",
+        "clue_et": "Milline Motorola mobiiltelefonimudel tuli 1996. aastal turule kompaktse klapptelefonina, mis murdus ekraani kohalt?"
+      },
+      "reviewNotes": "Uses the existing date and physical form instead of the pager comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-070",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which thick, square removable disk did Iomega launch in 1995 with 100 megabytes of space?",
+        "clue_et": "Millise paksu kandilise eemaldatava ketta tõi Iomega 1995. aastal turule 100-megabaidise mahuga?",
+        "explanation_en": "Iomega’s Zip system launched with 100 MB removable disks in 1995.",
+        "explanation_et": "Iomega Zip-süsteem tuli 1995. aastal turule 100 MB eemaldatavate ketastega."
+      },
+      "reviewNotes": "Date, maker, format and capacity identify the product without giving the separate floppy answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-077",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "A pedestrian crossing is a designated place for people on foot to cross a road, often marked with painted stripes.",
+        "explanation_et": "Ülekäigurada on jalakäijatele määratud teeületuskoht, mida tähistatakse sageli värvitud triipudega."
+      },
+      "reviewNotes": "Whole-category check found the traffic-light synonym foor also in this explanation; removes it alongside the reported roundabout leak.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-078",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Drivers travel around a central island and leave at their chosen exit. What kind of road junction is this?",
+        "clue_et": "Juhid sõidavad ümber kesksaare ja lahkuvad valitud väljasõidust. Mis tüüpi teeristmik see on?"
+      },
+      "reviewNotes": "Removes the named traffic-light comparison; existing independent circular-junction explanation retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-087",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "A forklift truck lifts and moves heavy loads with forked arms.",
+        "explanation_et": "Kahveltõstuk tõstab ja liigutab raskeid koormaid kahvlitega."
+      },
+      "reviewNotes": "Does not name the separate transport platform.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-088",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What flat wooden or plastic transport platform supports a stack of goods as a single load?",
+        "clue_et": "Milline lame puidust või plastist veoplatvorm toetab kaubavirna ühe koormana?"
+      },
+      "reviewNotes": "Defines the platform independently without naming the lifting vehicle.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-113",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which service is designed for short written messages delivered in near real time and rapid back-and-forth conversation?",
+        "clue_et": "Milline teenus on mõeldud lühisõnumite peaaegu reaalajas edastamiseks ja kiireks kirjalikuks vestluseks?"
+      },
+      "reviewNotes": "Removes the sibling email answer from the comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-121",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "A power station converts an energy source into electrical power for a grid.",
+        "explanation_et": "Elektrijaam muundab energiaallika elektrivõrgu jaoks elektrienergiaks."
+      },
+      "reviewNotes": "Keeps the facility fact without naming the separate generator target.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-144",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "An aerial tramway suspends passenger cabins from cables stretched between stations; the cabins travel above the ground.",
+        "explanation_et": "Köisripptee riputab reisikabiinid jaamade vahel pingutatud kaablite külge; kabiinid liiguvad maapinna kohal."
+      },
+      "reviewNotes": "Removes the named funicular and its rail distinction from the sibling explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-163",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What kind of machine tool follows programmed numerical coordinates to cut or shape parts with high precision?",
+        "clue_et": "Milline tööpink järgib programmeeritud arvkoordinaate, et lõigata või vormida detaile suure täpsusega?"
+      },
+      "reviewNotes": "Removes both printed acronym and accepted full expansion while preserving the defining numerical-control fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-218",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_et": "Telstar 1 oli madalal orbiidil töötav aktiivne sidesatelliit, mistõttu olid selle Atlandi-ülesed edastusaknad lühikesed, kuid ajaloolised.",
+        "source_title": "NASA: Telstar Opened Era of Global Satellite Television",
+        "source_url": "https://www.nasa.gov/history/telstar-opened-era-of-global-satellite-television/",
+        "source_license": "Public domain",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Aligns Estonian with English and removes the overbroad disputed first claim.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nasa.gov/history/telstar-opened-era-of-global-satellite-television/",
+          "observation": "Read NASA’s detailed Telstar history: Telstar 1 launched on 10 July 1962 and relayed live transatlantic television. Retains the specific achievement; does not adopt the broader first-active-satellite wording found in some shorter timelines."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-248",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What machine sends blood through an external dialyser to remove wastes and excess fluid when kidneys can no longer do so?",
+        "clue_et": "Milline masin juhib vere läbi kehavälise dialüsaatori, et eemaldada jääkaineid ja liigset vedelikku, kui neerud seda enam teha ei suuda?",
+        "explanation_en": "During hemodialysis, diffusion removes many dissolved waste products, while ultrafiltration removes excess fluid.",
+        "explanation_et": "Hemodialüüsis eemaldab difusioon paljusid lahustunud jääkaineid, ultrafiltratsioon aga liigset vedelikku.",
+        "source_title": "National Kidney Foundation: Hemodialysis",
+        "source_url": "https://www.kidney.org/kidney-topics/hemodialysis",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the incorrect attribution of fluid removal to diffusion and clarifies the two processes.",
+      "sourceVerification": [
+        {
+          "url": "https://www.kidney.org/kidney-topics/hemodialysis",
+          "observation": "Read the reviewed patient-education page: blood passes through a dialyzer; diffusion removes many small waste products and ultrafiltration removes extra fluid. New wording separates those mechanisms."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-all-level-expansion-0126",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which electronic computer was built at the University of Pennsylvania for the US Army’s artillery calculations and formally dedicated in 1946?",
+        "clue_et": "Milline elektronarvuti ehitati Pennsylvania ülikoolis USA armee suurtükiväearvutuste jaoks ning avati ametlikult 1946. aastal?",
+        "explanation_en": "ENIAC was built at Penn for Army calculations and formally dedicated in February 1946. Its early programming used cables and switches.",
+        "explanation_et": "ENIAC ehitati Pennsylvania ülikoolis armee arvutuste jaoks ja avati ametlikult 1946. aasta veebruaris. Esialgu programmeeriti seda kaablite ja lülititega.",
+        "source_title": "University of Pennsylvania: ENIAC’s 50th Anniversary",
+        "source_url": "https://almanac.upenn.edu/archive/v42/n18/eniac.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Date, institution and military purpose distinguish ENIAC from Colossus without relying on generic plug-and-switch programming.",
+      "sourceVerification": [
+        {
+          "url": "https://almanac.upenn.edu/archive/v42/n18/eniac.html",
+          "observation": "Read Penn’s historical account: ENIAC was commissioned for Army artillery firing-table calculations and formally dedicated in February 1946; it was originally programmed with cables and switches."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-all-level-expansion-0134",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What Unix background-process term was inspired by the imaginary sorting agent in James Clerk Maxwell’s thought experiment?",
+        "clue_et": "Milline Unixi taustaprotsessi nimetus sai inspiratsiooni James Clerk Maxwelli mõttekatse kujuteldavast osakesi sorteerivast tegelasest?"
+      },
+      "reviewNotes": "Both languages describe the historical referent without printing demon/deemon. Existing source and explanatory etymology retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-all-level-expansion-0139",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which bottle-and-jar material, made mainly from sand with soda ash and lime, can be remelted repeatedly for recycling?",
+        "clue_et": "Millist pudelite ja purkide materjali, mis valmistatakse peamiselt liivast koos sooda ja lubjaga, saab ringlussevõtul korduvalt ümber sulatada?",
+        "explanation_en": "Container glass is made from sand, soda ash and lime and can be remelted into new glass containers.",
+        "explanation_et": "Pakendiklaasi valmistatakse liivast, soodast ja lubjast ning seda saab ümber sulatada uuteks klaaspakenditeks.",
+        "source_title": "US EPA: Recycle City — Materials Recovery Center",
+        "source_url": "https://www3.epa.gov/recyclecity/recovery.htm",
+        "source_license": "Public domain",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds a material-specific composition discriminator instead of treating recyclability as unique.",
+      "sourceVerification": [
+        {
+          "url": "https://www3.epa.gov/recyclecity/recovery.htm",
+          "observation": "Read the glass section: bottles and jars can be recycled repeatedly; glass is made from soda ash, sand and lime. Composition distinguishes it from aluminium."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-all-level-expansion-0238",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which high-power microwave component was developed by John Randall and Harry Boot in Birmingham in 1940?",
+        "clue_et": "Millise suure võimsusega mikrolainekomponendi arendasid John Randall ja Harry Boot Birminghamis 1940. aastal?",
+        "explanation_en": "The cavity magnetron generates high-power microwaves and was later used in household microwave ovens.",
+        "explanation_et": "Õõnesmagnetron tekitab suure võimsusega mikrolaineid ning võeti hiljem kasutusele kodustes mikrolaineahjudes."
+      },
+      "reviewNotes": "Removes the sibling radar name; named inventors, place and date still identify the component.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-311",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "At CERN, Tim Berners-Lee hosted a page about his World Wide Web project on his NeXT computer. What world-first online publication was it?",
+        "clue_et": "Tim Berners-Lee majutas CERN-is oma NeXT-arvutis lehte World Wide Webi projekti kohta. Milline maailma esimene veebiväljaanne see oli?",
+        "explanation_en": "The world’s first website at info.cern.ch described the World Wide Web project itself and was hosted on Berners-Lee’s NeXT computer.",
+        "explanation_et": "Maailma esimene veebisait info.cern.ch kirjeldas World Wide Webi projekti ennast ning seda majutati Berners-Lee NeXT-arvutis.",
+        "source_title": "CERN: The birth of the Web",
+        "source_url": "https://home.cern/science/computing/the-birth-of-the-web/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the inaccurate month/year claim; first-site identity and project remain verified.",
+      "sourceVerification": [
+        {
+          "url": "https://home.cern/science/computing/the-birth-of-the-web/",
+          "observation": "Read CERN’s account: the first website, hosted on Berners-Lee’s NeXT computer, described the World Wide Web project. The recreated browser dates to 1990. Removes the unsupported August-1991 creation date rather than conflating creation with public announcement."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-143",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_et": "Millisel kinnitusvahendil läheb nõela terav ots kaitsva kinnise sisse?"
+      },
+      "reviewNotes": "Residual generic-variant disclosure: avoids the lock word accepted for the sibling zipper; safety-pin construction still identifies the object.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-003",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which main circuit board connects a computer’s major components, including memory and expansion cards?",
+        "clue_et": "Milline põhiline trükkplaat ühendab arvuti põhiosi, sealhulgas mälu ja laienduskaarte?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: no longer prints the processor target in either language.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-004",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which specialised chip handles graphics calculations and helps render images on a computer screen?",
+        "clue_et": "Milline erikiip teeb graafikaarvutusi ja aitab arvutiekraanile pilte renderdada?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: uses chip rather than a printed CPU alternative; GPU still requires its own identifying name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-017",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which familiar photographic image format, standardised in 1992, commonly uses lossy compression to shrink files?",
+        "clue_et": "Milline tuntud fotofailide vorming, mis standarditi 1992. aastal, kasutab failide vähendamiseks tavaliselt kadudega tihendust?",
+        "source_title": "Library of Congress: JPEG Image Encoding Family",
+        "source_url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000017.shtml",
+        "source_license": "Public domain (U.S. federal government work)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual given-alias repair: removes the .jpg extension from the prompt while retaining it as a genuine accepted name. Original factual wording, no third-party quotations from the LOC references copied.",
+      "sourceVerification": [
+        {
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000017.shtml",
+          "observation": "Read the LOC format description: JPEG modes include lossy compression, and the specifications list the 1992 ITU-T T.81 recommendation alongside ISO/IEC 10918-1:1994. Staff-authored federal format description, not its third-party linked specifications."
+        },
+        {
+          "url": "https://www.itu.int/rec/T-REC-T.81-199209-I/en",
+          "observation": "Read primary standards catalogue: T.81 was approved on 1992-09-18. Did not claim to read the paid standard itself."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-061",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_et": "Teleripult edastab telerile tavaliselt infrapunasignaali, kuigi mõned mudelid kasutavad raadioühendust."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: avoids the broad receiver alternative for the sibling set-top box.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-114",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "A robot vacuum cleans floor dust with little direct human control.",
+        "explanation_et": "Robottolmuimeja puhastab põrandalt tolmu vähese vahetu inimese juhtimisega."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: omits the sensor name while retaining autonomous cleaning as the relevant fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-120",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "Which vehicle launches a spacecraft or other payload into space using a high-speed exhaust jet?",
+        "clue_et": "Milline sõiduk viib kosmoselaeva või muu lasti kosmosesse suure kiirusega väljuva gaasijoa abil?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes satellite from both prompts, preserving rocket propulsion and launch purpose.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-002",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "College students once tossed pie-company tins; Wham-O later popularised a plastic flying-disc brand inspired by the game. Name that brand.",
+        "clue_et": "Üliõpilased loopisid kunagi pirukafirma plekkvorme; Wham-O muutis hiljem sellest mängust inspireeritud plastist lendketta kaubamärgi populaarseks. Nimeta see kaubamärk."
+      },
+      "reviewNotes": "Residual cognate/given-alias repair: omits the Frisbie company name, which supplies the Frisbee/frisbi answer. Existing source supports the retained origin and manufacturer facts.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-025",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_et": "Milline bränd tõi 1999. aastal välja koduse telesaadete salvestamise seadme ning oli tuntud jalgade, antennide ja naeratusega logo poolest?",
+        "explanation_et": "TiVo kodune salvestusteenus alustas 1999. aastal; selle varane logo oli antennide ja jalgadega mänguline tegelane.",
+        "clue_en": "Which brand launched a home TV-recording device in 1999 and was known for a logo with legs, antennae and a smile?",
+        "explanation_en": "TiVo launched its home recording service in 1999; its early logo was a playful character with antennae and legs.",
+        "source_title": "TiVo: 25 Years of TiVotainment; official Brand Guidelines v3.3",
+        "source_url": "https://blog.tivo.com/tivo-for-consumer/celebrating-25-years-of-tivotainment/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: avoids the broad video-recorder alternative for the sibling VCR; brand and hard-disk features stay independent. Independent ambiguity review: launch date plus distinctive historical logo identifies TiVo rather than any recorder with a hard disk and electronic guide. Removes the generic recorder alternative accepted for the sibling VCR and aligns both languages. Original factual wording; no logo image reproduced.",
+      "sourceVerification": [
+        {
+          "url": "https://blog.tivo.com/tivo-for-consumer/celebrating-25-years-of-tivotainment/",
+          "observation": "Read company anniversary article published March 2024 marking 25 years since DVR launch and a user account explicitly dating its beginning to 1999. Footer states ©2026 Xperi, all rights reserved."
+        },
+        {
+          "url": "https://assets.tivo.com/assets/resources/TiVo_Brand_Guidelines_v3.3a.pdf",
+          "observation": "Read official October 2015 guide: page 3 traces the early playful character; pages 9–10 describe legs, antennae and the smile. Uses its historical appearance as a factual hint without reproducing protected artwork."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-084",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "An airport control tower gives controllers a clear view of the airfield so they can coordinate aircraft movements.",
+        "explanation_et": "Lennujuhtimistorn annab lennujuhtidele lennuväljast selge vaate, et nad saaksid lennukite liikumist koordineerida."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes the named runway answer in both explanations.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-094",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_et": "Milline seade töötleb poes makset, kui puudutad selle vastu pangakaarti või sisestad kaardi ja PIN-koodi?",
+        "explanation_et": "Makseterminal ühendab kaardimakse autoriseerimise müügisüsteemiga."
+      },
+      "reviewNotes": "Residual generic-variant disclosure: removes kassa wording from the card-terminal description without changing the payment mechanism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-137",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "Airplane mode disables mobile-network transmission; some other wireless connections can be re-enabled when permitted.",
+        "explanation_et": "Lennurežiim lülitab mobiilside edastamise välja; mõne muu traadita ühenduse saab lubatud olukorras uuesti sisse lülitada."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: omits the Wi-Fi target, retaining the qualified behaviour of airplane mode.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-322",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "explanation_en": "Torvalds later released the kernel under a free-software licence, allowing contributors worldwide to develop it further.",
+        "explanation_et": "Torvalds avaldas kerneli hiljem vaba tarkvara litsentsi all, võimaldades kaastöölistel üle maailma seda edasi arendada."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: describes licensing without naming the GNU project target.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-115",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What general term describes robots that sense their surroundings and perform tasks without continuous human control?",
+        "clue_et": "Milline üldnimetus tähistab roboteid, mis tajuvad ümbrust ja täidavad ülesandeid ilma inimese pideva juhtimiseta?"
+      },
+      "reviewNotes": "Independent ambiguity review: explicitly requests the general class name, rather than an equally valid specific machine such as the sibling floor-cleaning device.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-accessible-corpus-116",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "What general term describes human-made objects placed in orbit to relay signals, observe Earth or make measurements?",
+        "clue_et": "Milline üldnimetus tähistab inimese loodud objekte, mis viiakse orbiidile signaalide vahendamiseks, Maa vaatlemiseks või mõõtmisteks?"
+      },
+      "reviewNotes": "Independent ambiguity review: asks for the general orbiting-object term rather than a specific orbital facility, which is also technically in this class.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-technology-inventions-playable-corpus-008",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "clue_en": "This handheld organiser used a stylus and the Graffiti shorthand system for entering contacts, appointments and notes. Name the product family whose first Pilot models arrived in 1996.",
+        "clue_et": "See pihuarvuti kasutas kontaktide, kalendrikannete ja märkmete sisestamiseks puutepliiatsit ning Graffiti lühikirjasüsteemi. Nimeta tooteperekond, mille esimesed Piloti mudelid ilmusid 1996. aastal."
+      },
+      "reviewNotes": "Independent ambiguity review: adds the distinctive Graffiti input system and first Pilot release year to distinguish the product family from the earlier Apple Newton. Both languages now carry the same identifying facts.",
+      "sourceVerification": [
+        {
+          "url": "https://americanhistory.si.edu/collections/object/nmah_1191267",
+          "observation": "Primary museum collection entry is indexed with the full description: Palm produced Pilot 5000 in 1996, stylus touchscreen and Graffiti shorthand distinguished it from Apple Newton. Direct open returned an internal fetch error; verified the primary page text through its indexed result rather than claiming successful direct retrieval."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-001",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "response_en": "Voting",
+        "response_et": "hääletamine",
+        "accepted_variants_en": "casting a vote;vote",
+        "accepted_variants_et": "hääle andmine;valimistel hääletamine"
+      },
+      "reviewNotes": "Both responses now name the action the prompts request; Estonian no longer supplies only the resulting vote.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-012",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What name is given to the politically impartial government staff who support ministers and administer public services?",
+        "clue_et": "Kuidas nimetatakse poliitiliselt erapooletut riigiteenistust, mille ametnikud toetavad ministreid ja korraldavad avalikke teenuseid?",
+        "response_en": "Civil service",
+        "response_et": "avalik teenistus",
+        "accepted_variants_en": "government civil service",
+        "accepted_variants_et": "riigiteenistus;riigi avalik teenistus",
+        "explanation_en": "The civil service supplies professional staff who support successive governments and deliver public services.",
+        "explanation_et": "Avaliku teenistuse kutselised ametnikud toetavad järjestikuseid valitsusi ja korraldavad avalikke teenuseid.",
+        "source_title": "UK Civil Service: About us",
+        "source_url": "https://www.gov.uk/government/organisations/civil-service/about",
+        "source_license": "OGL-3.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces executive-branch identity with a distinct staffing institution; no complete three-branch pool remains.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gov.uk/government/organisations/civil-service/about",
+          "observation": "Read the service’s own account: politically impartial staff in central government departments support policy development and implementation. Ministers are excluded."
+        }
+      ],
+      "subjectKey": "government:civil-service",
+      "factFamily": "civil-service-professional-staff"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-013",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What is the council of senior government ministers, usually chaired by the prime minister, commonly called?",
+        "clue_et": "Kuidas nimetatakse tavaliselt valitsuse juhtivate ministrite kogu, mille tööd juhib peaminister?",
+        "response_en": "Cabinet",
+        "response_et": "valitsuskabinet",
+        "accepted_variants_en": "government cabinet;cabinet of ministers",
+        "accepted_variants_et": "kabinet;ministrite kabinet",
+        "explanation_en": "A cabinet brings together senior ministers to coordinate government policy.",
+        "explanation_et": "Valitsuskabinet koondab juhtivaid ministreid valitsuse poliitika koordineerimiseks.",
+        "source_title": "UK Parliament: Cabinet",
+        "source_url": "https://www.parliament.uk/site-information/glossary/cabinet/",
+        "source_license": "Open Parliament Licence",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces judiciary-branch identity with another familiar government institution; courts remain a separate judicial-review fact.",
+      "sourceVerification": [
+        {
+          "url": "https://www.parliament.uk/site-information/glossary/cabinet/",
+          "observation": "Read official glossary: the Cabinet is the government’s most senior ministers selected by the prime minister to lead policy areas."
+        }
+      ],
+      "subjectKey": "government:cabinet",
+      "factFamily": "cabinet-senior-ministers"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-037",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "explanation_en": "The alliance’s Article 5 commits members to assist an ally that suffers an armed attack.",
+        "explanation_et": "Alliansi artikkel 5 kohustab liikmeid abistama relvastatud rünnaku alla sattunud liitlast."
+      },
+      "reviewNotes": "Removes the sibling founding-treaty title from the public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-047",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Which consumption tax is collected at successive stages of production and sale, with businesses deducting tax already paid on their inputs?",
+        "clue_et": "Millist tarbimismaksu kogutakse tootmise ja müügi eri etappides nii, et ettevõtted arvavad maha sisenditelt juba tasutud maksu?"
+      },
+      "reviewNotes": "Removes displayed accepted VAT/KM acronyms; retains the characteristic input-tax deduction mechanism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-053",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Which payment card normally takes the purchase amount directly from money in your bank account?",
+        "clue_et": "Milline maksekaart võtab ostusumma tavaliselt otse sinu pangakontol olevast rahast?",
+        "response_en": "Debit card",
+        "response_et": "deebetkaart",
+        "accepted_variants_en": "bank debit card",
+        "accepted_variants_et": "deebetpangakaart",
+        "explanation_en": "A debit card normally pays by drawing funds from its linked bank account.",
+        "explanation_et": "Deebetkaardiga makstes võetakse raha tavaliselt sellega seotud pangakontolt.",
+        "source_title": "FDIC: Debit, Credit and Prepaid Cards — There Are Differences",
+        "source_url": "https://www.fdic.gov/consumer-resource-center/2012-debit-credit-and-prepaid-cards-there-are-differences",
+        "source_license": "Public domain",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the general interest target: savings, loans and compounding can then be explained accurately without disclosing a sibling answer.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fdic.gov/consumer-resource-center/2012-debit-credit-and-prepaid-cards-there-are-differences",
+          "observation": "Read search-index excerpt of FDIC’s comparison: a debit card is issued by a bank and linked to a checking or savings account, spending account funds. Live page returned 403; the PDF attempt also failed. Do not claim full-page verification. Stable definition independently matches ordinary bank-card operation."
+        }
+      ],
+      "subjectKey": "banking:debit-card",
+      "factFamily": "debit-card-account-funds"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-062",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What rate tells a trader how much of one currency can be obtained for a unit of another?",
+        "clue_et": "Milline kurss näitab kauplejale, kui palju ühte valuutat saab teise valuuta ühiku eest?",
+        "response_en": "Exchange rate",
+        "response_et": "vahetuskurss",
+        "accepted_variants_en": "currency exchange rate;foreign exchange rate",
+        "accepted_variants_et": "valuutakurss;valuuta vahetuskurss",
+        "explanation_en": "An exchange rate expresses one currency’s value in units of another.",
+        "explanation_et": "Vahetuskurss väljendab ühe valuuta väärtust teise valuuta ühikutes.",
+        "source_title": "European Central Bank: What is the role of exchange rates?",
+        "source_url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.en.html",
+        "source_license": "ECB website copyright terms",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces one member of the complementary inward/outward trade-flow pair with a separate familiar trade concept.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.en.html",
+          "observation": "Read the central bank’s explanatory definition: an exchange rate is the rate at which one currency can be exchanged for another. Uses stable definition, no current rate or advice."
+        },
+        {
+          "url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+          "observation": "Read ECB copyright policy: ECB owns website content; free use subject to accuracy, source attribution and specified distribution/link conditions. Do not label All rights reserved or a Creative Commons licence. Clue is independently written factual text."
+        }
+      ],
+      "subjectKey": "trade:exchange-rate",
+      "factFamily": "exchange-rate-currency-ratio"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-064",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What policy seeks to reduce barriers to cross-border buying and selling?",
+        "clue_et": "Milline poliitika püüab vähendada piiriülese ostmise ja müümise tõkkeid?"
+      },
+      "reviewNotes": "Whole-category read found tariff, an accepted sibling customs-duty answer, in this prompt; removes it while keeping the policy identity.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-065",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Which Geneva-based international organization deals with global trade rules between nations and is commonly known by three initials?",
+        "clue_et": "Milline Genfis asuv rahvusvaheline organisatsioon tegeleb riikidevaheliste ülemaailmsete kaubandusreeglitega ning on tuntud kolme ingliskeelse algustähe järgi?",
+        "response_en": "World Trade Organization",
+        "response_et": "Maailma Kaubandusorganisatsioon",
+        "accepted_variants_en": "WTO;World Trade Organisation",
+        "accepted_variants_et": "WTO;Maailma Kaubandusorganisatsioon",
+        "explanation_en": "The WTO is the international organization dealing with negotiated global rules of trade between nations.",
+        "explanation_et": "WTO on rahvusvaheline organisatsioon, mis tegeleb riikide vahel kokku lepitud ülemaailmsete kaubandusreeglitega.",
+        "source_title": "World Trade Organization: The WTO in brief",
+        "source_url": "https://www.wto.org/english/theWTO_e/whatis_e/inbrief_e/inbr00_e.htm",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces balance-of-trade wording that printed both directional target names; no export target appears in the other remaining questions.",
+      "sourceVerification": [
+        {
+          "url": "https://www.wto.org/english/theWTO_e/whatis_e/inbrief_e/inbr00_e.htm",
+          "observation": "Read the official overview: WTO deals with global trade rules between nations through negotiated agreements. Original summary only."
+        }
+      ],
+      "subjectKey": "organization:wto",
+      "factFamily": "wto-global-trade-rules"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-playable-corpus-205",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "A Canadian lumberjack personification first appeared in 1869 political cartoons, then returned as a Second World War action hero. A Vancouver NHL club later put a hockey-playing version on its logo. Name him.",
+        "clue_et": "Kanada metsaraiujast personifikatsioon ilmus esimest korda 1869. aasta poliitilistes karikatuurides ning naasis Teise maailmasõja ajal seikluskangelasena. Hiljem pani Vancouveri NHL-i klubi tema hokit mängiva kuju oma logole. Nimeta ta."
+      },
+      "reviewNotes": "Retains three existing independent identifiers and removes the sibling John Bull name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-playable-corpus-243",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Stephen Colbert played a self-important conservative television pundit in this Comedy Central programme from 2005 to 2014, pronouncing the title’s final word with a silent T. Name it.",
+        "clue_et": "Stephen Colbert mängis selles Comedy Centrali saates aastatel 2005–2014 enesekeskset konservatiivset telekommentaatorit ning hääldas pealkirja viimast sõna vaikiva t-ga. Nimeta saade."
+      },
+      "reviewNotes": "Uses existing host/persona/run-period identifiers without naming The Daily Show.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-all-level-expansion-0156",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Which country, whose Parliament meets at Westminster in London, has a constitution spread across statutes and conventions rather than one codified document?",
+        "clue_et": "Millise riigi parlament koguneb Londonis Westminsteris ning selle põhiseadus koosneb seadustest ja tavadest, mitte ühest kodifitseeritud dokumendist?",
+        "source_title": "UK Parliament: Constitution",
+        "source_url": "https://www.parliament.uk/site-information/glossary/constitution/",
+        "source_license": "Open Parliament Licence",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Westminster/London narrows the uncodified arrangement to the United Kingdom; New Zealand no longer satisfies the full clue.",
+      "sourceVerification": [
+        {
+          "url": "https://www.parliament.uk/site-information/glossary/constitution/",
+          "observation": "Read the Parliament glossary: the UK constitution is uncodified and spread across laws, conventions and judgments. Adds the uniquely British Westminster identifier."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-politics-economics-society-all-level-expansion-0250",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What demographic effect can keep a population growing after births per woman have fallen, because a large young generation is entering childbearing ages?",
+        "clue_et": "Milline demograafiline mõju võib hoida rahvastikku kasvamas ka pärast laste arvu vähenemist naise kohta, sest suur noor põlvkond jõuab laste saamise ikka?",
+        "explanation_en": "Population momentum is continued growth caused by a young age structure, even as fertility falls.",
+        "explanation_et": "Rahvastikukasvu inerts on noorest vanuskoosseisust tingitud jätkuv kasv ka siis, kui sündimus langeb."
+      },
+      "reviewNotes": "Uses age-structure mechanism without naming the separate replacement-fertility threshold.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-easy-expansion-086",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "A learner opens a series of lessons on a website and submits activities over the internet. What kind of course are they taking?",
+        "clue_et": "Õppija avab veebilehel järjestikuseid õppetunde ja esitab ülesandeid interneti kaudu. Mis liiki kursust ta läbib?",
+        "explanation_en": "An online course provides its lessons and learning activities through the internet.",
+        "explanation_et": "Veebikursuse õppetunnid ja õppetegevused toimuvad interneti kaudu.",
+        "source_title": "CDC: Training and Education",
+        "source_url": "https://www.cdc.gov/fellowships/php/training-education/index.html",
+        "source_license": "Public domain (CDC agency materials terms)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional assigned GLOBAL-ATTRIBUTION source repair: replaces EPALE NC-derived wording/citation with independently authored factual bilingual text and primary CDC example. Root owns the global finding resolution and provenance. No CDC content or logo reused, no endorsement implied.",
+      "sourceVerification": [
+        {
+          "url": "https://www.cdc.gov/fellowships/php/training-education/index.html",
+          "observation": "Read CDC’s first-party description of its online learning system, course search and training transcript. Supports courses delivered through an internet learning system; definition is independently written, not copied from EPALE."
+        },
+        {
+          "url": "https://www.cdc.gov/other/agencymaterials.html",
+          "observation": "Read agency materials policy: CDC federal text is generally public domain, with exceptions marked; attribution, non-endorsement and free-availability conditions are stated. Linked training text identifies CDC workforce divisions as creators and marks no external copyright."
+        }
+      ],
+      "subjectKey": "education:online-course",
+      "factFamily": "online-course-internet-delivery"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-165",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What organisation gathers reports and supplies them to many media outlets for publication or broadcast?",
+        "clue_et": "Milline organisatsioon kogub uudiseid ning edastab neid paljudele meediaväljaannetele avaldamiseks või eetrisse andmiseks?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: omits the newspaper target without changing the news-agency service.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-006",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What container receives voters’ completed paper choices for later counting?",
+        "clue_et": "Millisesse mahutisse pannakse valijate täidetud paberid, et neid saaks hiljem kokku lugeda?",
+        "response_en": "Ballot box",
+        "response_et": "valimiskast",
+        "accepted_variants_en": "voting box",
+        "accepted_variants_et": "hääletuskast",
+        "explanation_en": "A ballot box holds completed voting papers until they are taken for counting.",
+        "explanation_et": "Valimiskast hoiab täidetud hääletamissedeleid kuni nende lugemisele viimiseni.",
+        "source_title": "Electoral Commission: Voting in person",
+        "source_url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/voting-person",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual answer-component dependency: replaces ballot with ballot box because the formal sibling answer secret ballot necessarily contains ballot. The familiar container is independently identifiable at Easy tier 1. Original bilingual factual description; no copied instructions or claimed open licence. Avoids the sibling accepted polling-place name as well as ballot; the container remains directly identifiable.",
+      "sourceVerification": [
+        {
+          "url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/voting-person",
+          "observation": "Read primary election-administration instructions, step six: completed folded voting paper goes in the ballot box. No open reuse grant identified on the inspected voting page; retains conservative ordinary copyright terms. API open-data terms are not assumed to cover this webpage."
+        },
+        {
+          "url": "https://www.electoralcommission.org.uk/resources/resources-young-people/your-vote/ways-vote/voting-person",
+          "observation": "Read youth guidance: completed papers go in the clearly labelled box, which is taken away at the end of the day for counting."
+        }
+      ],
+      "subjectKey": "election:ballot-box",
+      "factFamily": "ballot-box-holds-voting-papers"
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-060",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What word means the face value of money, such as 5, 10 or 20?",
+        "clue_et": "Milline termin nimetab rahale märgitud väärtust, näiteks 5, 10 või 20?",
+        "explanation_en": "Denomination identifies the monetary face value printed on currency.",
+        "explanation_et": "Nominaal tähistab rahale märgitud nimiväärtust."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes banknote/pangatäht naming from the denomination prompt and explanation. Independent Estonian morphology review: removes the canonical answer nimiväärtus in its inflected form nimiväärtust from the prompt. Face-value concept remains parallel to English. Final independent review removes the inflected banknote sibling answer as well as the inflected denomination answer from the Estonian prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-095",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "explanation_en": "A demographer studies population size, birth and death rates, and age structure.",
+        "explanation_et": "Demograaf uurib rahvastiku suurust, sündimust, suremust ja vanusstruktuuri."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: uses other studied variables without naming migration/ränne.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-108",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "accepted_variants_et": "Jaanipäev;Ristija Johannese päev"
+      },
+      "reviewNotes": "Residual descriptive restatement: removes suvepüha, which is supplied by the prompt; specific established observance names retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-110",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "Which July 14 holiday recalls the 1789 storming of a prison fortress in Paris?",
+        "clue_et": "Milline 14. juuli püha meenutab 1789. aastal Pariisis toimunud vanglakindluse vallutamist?"
+      },
+      "reviewNotes": "Residual given-descriptive-alias repair: asks through the historic event without printing French National Day / Prantsusmaa rahvuspüha. Existing source and genuine alternative names retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-119",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What cooperation forum brings together parliamentarians from the three Baltic states?",
+        "clue_et": "Milline koostööfoorum ühendab kolme Balti riigi parlamendiliikmeid?"
+      },
+      "reviewNotes": "Residual finite-list disclosure: removes the printed Estonia answer while retaining the institution’s regional parliamentary identity.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-120",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "As of October 2026, which ferry company operates MyStar and Megastar between Tallinn and Helsinki?",
+        "clue_et": "Milline laevafirma käitab 2026. aasta oktoobri seisuga Tallinna ja Helsingi vahel MyStari ja Megastari?",
+        "source_title": "Tallink Silja Line: Helsinki–Tallinn ferry",
+        "source_url": "https://www.tallink.com/ee-en/travelling/one-way/helsinki-tallinn-ferry",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: replaces the national adjective with verified vessel names that identify the company independently. Original bilingual factual wording. Current fleet operation explicitly dated October 2026 in both prompts, supported by the live operator route and ship pages checked on 2026-10-11.",
+      "sourceVerification": [
+        {
+          "url": "https://www.tallink.com/ee-en/travelling/one-way/helsinki-tallinn-ferry",
+          "observation": "Read the operator’s route page: MyStar and Megastar are listed for Helsinki–Tallinn and promoted together as its fast ferries."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-politics-economics-society-accessible-corpus-002",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "What term means more than half of the members of a group?",
+        "clue_et": "Milline termin tähendab rohkem kui poolt rühma liikmetest?"
+      },
+      "reviewNotes": "Residual ordinary-term match removed: majority can be defined through members without printing the accepted one-word vote alternative for Voting.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-politics-economics-society-easy-expansion-097",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "clue_en": "As of October 2026, which shipping company operates MyStar and Megastar between Tallinn and Helsinki?",
+        "clue_et": "Milline laevafirma käitab 2026. aasta oktoobri seisuga Tallinna ja Helsingi vahel MyStari ja Megastari?"
+      },
+      "reviewNotes": "Independent temporal review: date-bounds the fleet/route assertion to the present checked October 2026 operator information, without assuming future operation.",
+      "sourceVerification": [
+        {
+          "url": "https://www.tallink.com/ee-en/travelling/one-way/helsinki-tallinn-ferry",
+          "observation": "Re-read live operator route page on 2026-10-11: names both MyStar and Megastar on the Tallinn–Helsinki route and advertises two-hour crossings. This check supports an October 2026 snapshot, not future service."
+        },
+        {
+          "url": "https://www.tallink.com/fi/laivalla/laivat/mystar",
+          "observation": "Read operator MyStar ship page: Tallink Silja Line Shuttle vessel connects Helsinki and Tallinn, with route Helsinki–Tallinn–Helsinki."
+        },
+        {
+          "url": "https://www.tallink.com/de/an-bord/schiffe/megastar",
+          "observation": "Read operator Megastar ship page: shuttle ship is advertised for travel between Helsinki and Tallinn."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-012",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which divine winged horse carried the Greek hero Bellerophon?",
+        "clue_et": "Milline jumalik tiivuline hobune kandis Kreeka kangelast Bellerophontest?"
+      },
+      "reviewNotes": "Removes Medusa; the existing explanation names no remaining sibling target. Bellerophon independently identifies the famous horse.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-022",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "The blind god Höðr throws the mistletoe weapon that kills Baldr.",
+        "explanation_et": "Pime jumal Höðr heidab puuvõõrikust relva, mis tapab Baldri."
+      },
+      "reviewNotes": "Removes the sibling trickster’s name; retains the existing weapon and death fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-034",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which ancient Egyptian goddess is celebrated as a skilled magician who restores her murdered husband and protects their child?",
+        "clue_et": "Millist Vana-Egiptuse jumalannat austatakse osava võlurina, kes taastab oma tapetud abikaasa ja kaitseb nende last?"
+      },
+      "reviewNotes": "Removes both Osiris and Horus from the whole-category prompt; no names supplied in retained explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-037",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What is the name of the legendary British sword given by the Lady of the Lake?",
+        "clue_et": "Mis on Järvedaami antud legendaarse Briti mõõga nimi?",
+        "explanation_en": "In a familiar version of the legend, the Lady of the Lake gives Excalibur to the king.",
+        "explanation_et": "Legendi tuntud versioonis annab Järvedaam Excaliburi kuningale.",
+        "source_title": "Thomas Malory: Le Morte d’Arthur, Volume I",
+        "source_url": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes Arthur from prompt and public explanation; the named giver is not another category target.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm",
+          "observation": "Read Book I chapter XXV: the Lady of the Lake supplies the sword called Excalibur. Original factual wording; no primary text reproduced."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-038",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which famous wizard and prophet of British legend is trapped by the enchantress Nimue?",
+        "clue_et": "Millise Briti legendide kuulsa võluri ja ennustaja vangistab nõid Nimue?",
+        "explanation_en": "In Malory’s account, Nimue traps Merlin beneath a stone using enchantment.",
+        "explanation_et": "Malory jutustuses vangistab Nimue Merlini nõiduse abil kivi alla.",
+        "source_title": "Thomas Malory: Le Morte d’Arthur, Volume I",
+        "source_url": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent episode replaces the named adviser/king relation; no other category target appears.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm",
+          "observation": "Read Book IV chapter I: Nimue uses enchantment to leave Merlin trapped beneath a stone. Original factual summary."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-051",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which mighty hero of Greek myth completed twelve labours, including slaying the Nemean lion?",
+        "clue_et": "Milline vägev Kreeka müütide kangelane täitis kaksteist vägitegu, sealhulgas tappis Nemea lõvi?",
+        "response_en": "Hercules",
+        "response_et": "Herakles",
+        "accepted_variants_en": "Heracles;Herakles",
+        "accepted_variants_et": "Hercules;Herkules",
+        "explanation_en": "Heracles, also known by the Roman name Hercules, is famous for his twelve labours.",
+        "explanation_et": "Herakles, keda tuntakse ka Rooma nime Hercules järgi, on kuulus kaheteistkümne vägiteo poolest.",
+        "source_title": "The Metropolitan Museum of Art: The Labors of Hercules",
+        "source_url": "https://www.metmuseum.org/art/collection/search/436730",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Familiar independent hero replaces a context-dependent Kalevala clue at the same Easy tier.",
+      "sourceVerification": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/436730",
+          "observation": "Read the museum’s own object interpretation: Hercules performs twelve labors, including slaying the Nemean lion. The modern text is All rights reserved; the public-domain image label is not treated as its text licence."
+        }
+      ],
+      "subjectKey": "legend:hercules",
+      "factFamily": "hercules-twelve-labours"
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-052",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "In the Finnish epic Kalevala, what magical object produces flour, salt and wealth?",
+        "clue_et": "Milline võluese toodab Soome eeposes „Kalevala” jahu, soola ja rikkust?",
+        "explanation_en": "The Sampo is the prosperity-producing magical object in Kalevala.",
+        "explanation_et": "Sampo on „Kalevala” jõukust tootev võluese.",
+        "source_title": "Kalevala, translated by John Martin Crawford: Rune X",
+        "source_url": "https://www.gutenberg.org/files/5186/5186-h/5186-h.htm",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Retains one Finnish subject; now self-contained with its work named and no sibling smith target.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/files/5186/5186-h/5186-h.htm",
+          "observation": "Read Rune X at the completed Sampo: it grinds flour, makes salt and forges money. Original factual wording, not a reproduction of translated verse."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-053",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which legendary king wished that everything he touched would turn to gold?",
+        "clue_et": "Milline legendaarne kuningas soovis, et kõik, mida ta puudutab, muutuks kullaks?",
+        "response_en": "King Midas",
+        "response_et": "kuningas Midas",
+        "accepted_variants_en": "Midas",
+        "accepted_variants_et": "Midas",
+        "explanation_en": "Midas receives the golden touch, but the gift becomes disastrous when even food changes to gold.",
+        "explanation_et": "Midas saab kuldse puudutuse, kuid kingitus muutub hukatuslikuks, kui isegi toit muutub kullaks.",
+        "source_title": "Alpha Banta Benson: The Golden Touch",
+        "source_url": "https://www.gutenberg.org/files/66372/66372-h/66372-h.htm",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces another same-work target with a familiar separate myth.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/files/66372/66372-h/66372-h.htm",
+          "observation": "Read the story’s opening and wish: King Midas wishes everything he touches would turn to gold. Primary literary retelling, original clue phrasing."
+        }
+      ],
+      "subjectKey": "legend:midas",
+      "factFamily": "midas-golden-touch"
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-054",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which young hero retrieves a magic lamp from a cave and summons a genie by rubbing it?",
+        "clue_et": "Milline noor kangelane toob koopast võlulambi ning kutsub seda hõõrudes välja džinni?",
+        "response_en": "Aladdin",
+        "response_et": "Aladdin",
+        "accepted_variants_en": "Aladin",
+        "accepted_variants_et": "Aladin",
+        "explanation_en": "Aladdin’s lamp contains a powerful genie who responds when the lamp is rubbed.",
+        "explanation_et": "Aladdini lambis on võimas džinn, kes ilmub lambi hõõrumisel.",
+        "source_title": "Aladdin and the Magic Lamp",
+        "source_url": "https://www.gutenberg.org/files/57/57-h/57-h.htm",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the smith/Sampo reciprocal relation with a recognizable unrelated story.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/files/57/57-h/57-h.htm",
+          "observation": "Read the primary tale: Aladdin retrieves a lamp from an underground cave, and rubbing it summons its genie. Original summary only."
+        }
+      ],
+      "subjectKey": "legend:aladdin",
+      "factFamily": "aladdin-magic-lamp-genie"
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-055",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which legendary English outlaw archer leads the Merry Men in Sherwood Forest?",
+        "clue_et": "Milline legendaarne Inglise lindprii vibukütt juhib Sherwoodi metsas oma rõõmsaid kaaslasi ehk Merry Meni?",
+        "response_en": "Robin Hood",
+        "response_et": "Robin Hood",
+        "accepted_variants_en": "Robin of Locksley",
+        "accepted_variants_et": "Robin Locksleyst",
+        "explanation_en": "Robin Hood is the famous outlaw archer associated with Sherwood Forest and the Merry Men.",
+        "explanation_et": "Robin Hood on kuulus lindprii vibukütt, keda seostatakse Sherwoodi metsa ja tema kaaslastega.",
+        "source_title": "Howard Pyle: The Merry Adventures of Robin Hood",
+        "source_url": "https://www.gutenberg.org/cache/epub/10148/pg10148-images.html",
+        "source_license": "Public domain text; Project Gutenberg License for the ebook",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the fifth Kalevala target with a broad independent legend.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/cache/epub/10148/pg10148-images.html",
+          "observation": "Read the prologue: Robin Hood is the outlaw archer of Sherwood Forest near Nottingham and leads the Merry Men. Original clue wording."
+        }
+      ],
+      "subjectKey": "legend:robin-hood",
+      "factFamily": "robin-hood-sherwood-archer"
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-062",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "In Genesis, what colourful sign in the clouds marks God’s covenant with the earth after the flood?",
+        "clue_et": "Milline värviline märk pilvedes tähistab Esimeses Moosese raamatus Jumala lepingut maaga pärast veeuputust?"
+      },
+      "reviewNotes": "Names the source book, not the sibling patriarch; retained explanation does not disclose him.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-078",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What is the name of Thor’s hammer, said to return after it is thrown?"
+      },
+      "reviewNotes": "Corrects the false etymology claim to ownership. Estonian already asks ownership. Existing source and explanation retained.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-107",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "The cross recalls the crucifixion and the salvation associated with it in Christian belief.",
+        "explanation_et": "Rist meenutab ristilöömist ja kristlikus usus sellega seotud päästet."
+      },
+      "reviewNotes": "Removes Jesus and Christ accepted sibling names from the explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-109",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "Christian traditions celebrate the Eucharist in different ways, recalling the meal shared with the disciples before the crucifixion.",
+        "explanation_et": "Kristlikud traditsioonid pühitsevad armulauda eri viisidel, meenutades jüngritega jagatud söömaaega enne ristilöömist."
+      },
+      "reviewNotes": "Removes the sibling founder’s name without changing the rite.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-118",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Saudi Arabian city contains the Kaaba, toward which Muslims face during ritual prayer?",
+        "clue_et": "Millises Saudi Araabia linnas asub Kaaba, mille poole moslemid rituaalses palves pöörduvad?"
+      },
+      "reviewNotes": "Uses prayer direction instead of printing hajj; no sibling month or scripture named.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-119",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What is the Islamic pilgrimage obligation that Muslims must fulfil once in their lifetime if physically and financially able?",
+        "clue_et": "Mis on islami palverännukohustuse nimi, mida moslem peab täitma kord elus, kui tervis ja rahalised võimalused seda lubavad?"
+      },
+      "reviewNotes": "Uses obligation and conditions, without naming Mecca or another sibling; existing Kaaba/Arafat explanation does not name the city.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-124",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What Sanskrit term names the continuing cycle of death and rebirth in Indian religions?",
+        "clue_et": "Milline sanskriti termin tähistab India usundites jätkuvat surma ja taassünni ringkäiku?"
+      },
+      "reviewNotes": "Removes the printed answer in both languages; keeps the distinct cycle identity.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-125",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "Moksha is spiritual liberation from repeated birth and death, a major aim of life in Hindu traditions.",
+        "explanation_et": "Mokša on vaimne vabanemine korduvast sünnist ja surmast ning hindu traditsioonides üks elu tähtsamaid eesmärke."
+      },
+      "reviewNotes": "Whole-category check removes the sibling cycle term from this public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-130",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "The Noble Eightfold Path presents ethical conduct, mental training and wisdom as a route toward the end of suffering.",
+        "explanation_et": "Õilis kaheksaosaline tee ühendab eetilise käitumise, meele treenimise ja tarkuse teeks kannatuse lõppemise poole."
+      },
+      "reviewNotes": "Removes the four-truth framework name and its ordinal reference; no other category target printed.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-133",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "The Five Ks are articles of faith worn by initiated Sikhs as signs of commitment and identity.",
+        "explanation_et": "Viis K-d on pühitsetud sikhide usuartiklid, mis väljendavad pühendumist ja identiteeti."
+      },
+      "reviewNotes": "Removes the sibling community’s name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-151",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "explanation_en": "Knowledge of Socrates comes mainly through the writings of others, since he left no philosophical books of his own.",
+        "explanation_et": "Teadmised Sokratesest pärinevad peamiselt teiste kirjutistest, sest ta ei jätnud endast filosoofilisi raamatuid."
+      },
+      "reviewNotes": "Removes the sibling pupil’s name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-152",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which philosopher founded the Academy in Athens?",
+        "clue_et": "Milline filosoof rajas Ateenas Akadeemia?"
+      },
+      "reviewNotes": "Existing independent institution identifier retained; removes Socrates.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-153",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Greek philosopher taught Alexander the Great and founded the Lyceum?",
+        "clue_et": "Milline Kreeka filosoof õpetas Aleksander Suurt ja rajas Lykeioni?"
+      },
+      "reviewNotes": "Existing pupil and institution remain independently identifying; removes Plato.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-012",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name both the hammer-wielding Norse thunder god and the English weekday whose name preserves his Germanic counterpart.",
+        "clue_et": "Nimeta nii vasarat kandev Põhjala kõuejumal kui ka ingliskeelne nädalapäev, mille nimi säilitab tema germaani vaste."
+      },
+      "reviewNotes": "Whole-category check removes Friday, a sibling response component, and the ordinary day-position shortcut; requires mythological and weekday knowledge.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-013",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name both the one-eyed Norse ruler of the gods and the English weekday named for his Old English counterpart.",
+        "clue_et": "Nimeta nii ühesilmne Põhjala jumalate valitseja kui ka ingliskeelne nädalapäev, mis on nimetatud tema vanainglise vaste järgi."
+      },
+      "reviewNotes": "Removes Woden, an accepted alias, and midweek position; response requires both identities.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-014",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name both the two-faced Roman god of doors and beginnings and the English month named after him.",
+        "clue_et": "Nimeta nii kahe näoga Rooma uste ja alguste jumal kui ka tema järgi nimetatud ingliskeelne kuu.",
+        "response_en": "Janus and January",
+        "response_et": "Janus ja January",
+        "accepted_variants_en": "January and Janus",
+        "accepted_variants_et": "January ja Janus;Janus ja jaanuar;jaanuar ja Janus",
+        "explanation_en": "January comes from Latin Januarius, the month of Janus, who was associated with doors and beginnings and depicted with two faces.",
+        "explanation_et": "January pärineb ladina sõnast Januarius ehk Januse kuu; Janus oli seotud uste ja algustega ning teda kujutati kahe näoga.",
+        "source_title": "Oxford Advanced Learner’s Dictionary: January; Janus depiction verified with NASA/JPL",
+        "source_url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/january",
+        "source_license": "Copyright Oxford University Press",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent review breaks the complete five weekday/deity enumeration by replacing Frigg/Friday with a month/deity etymology pair. Both identities must be supplied; broad calendar-name title covers all five. ROOT-MYTHOLOGY-012 qualifies intentional Latin-meaning host alternatives only and is not a waiver for finite weekday pools. Original bilingual factual wording; modern dictionary copyright retained.",
+      "sourceVerification": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/january",
+          "observation": "Read primary dictionary Word Origin: Latin Januarius (mensis), month of Janus, Roman god presiding over doors and beginnings. Footer ©2026 Oxford University Press; no open licence grant inferred."
+        },
+        {
+          "url": "https://www.jpl.nasa.gov/images/pia07580-the-two-faces-of-janus/",
+          "observation": "Read primary agency caption’s mythology explanation: Roman Janus usually depicted with two faces, one forward and one behind. No image copied and no unrelated astronomical names included in public explanation."
+        }
+      ],
+      "subjectKey": "calendar:janus-january",
+      "factFamily": "january-latin-janus-month"
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-015",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name both the one-handed Norse god and the English weekday whose name preserves his Old English counterpart.",
+        "clue_et": "Nimeta nii ühekäeline Põhjala jumal kui ka ingliskeelne nädalapäev, mille nimi säilitab tema vanainglise vaste."
+      },
+      "reviewNotes": "Removes the printed accepted Tiw alias and after-Monday shortcut; both deity and weekday must be identified.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-031",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_et": "Nimeta nii riik kui ka sinine kuueharuline täht, mis asub selle riigilipul kahe horisontaalse sinise triibu vahel."
+      },
+      "reviewNotes": "Corrects hexagram to six-pointed star; not a hexagonal polygon.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-035",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name both the island country and the four sacred-tree leaves placed in the corners around the lion on its flag.",
+        "clue_et": "Nimeta nii saareriik kui ka neli püha puu lehte, mis asuvad selle lipul lõvi ümber nurkades."
+      },
+      "reviewNotes": "Both languages now describe leaves, not whole trees; retains requirement to identify their species/sacred name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-088",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "the mouse and Ganesha;Ganesha and the rat;the rat and Ganesha;Ganesh and the mouse;the mouse and Ganesh;Ganesh and the rat;the rat and Ganesh",
+        "accepted_variants_et": "hiir ja Ganeša;Ganeša ja rott;rott ja Ganeša;Ganesha ja hiir;hiir ja Ganesha;Ganesha ja rott;rott ja Ganesha"
+      },
+      "reviewNotes": "Adds rat in both orders and familiar spellings, consistent with the existing source-supported explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-all-level-expansion-0110",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What is a judge’s withdrawal from a case because of a personal connection or financial stake called?",
+        "clue_et": "Kuidas nimetatakse kohtuniku loobumist asja arutamisest isikliku seose või rahalise huvi tõttu?",
+        "explanation_en": "Recusal is withdrawal from deciding a case because of a conflict of interest or similar disqualifying connection.",
+        "explanation_et": "Taandumine on loobumine asja lahendamisest huvide konflikti või muu sarnase takistava seose tõttu."
+      },
+      "reviewNotes": "Uses concrete conflict-of-interest grounds instead of the sibling impartiality term.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-all-level-expansion-0156",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name the Norse god associated with poetry and eloquence.",
+        "clue_et": "Nimeta luule ja kõneosavusega seotud Põhjala jumal.",
+        "explanation_en": "Bragi is the Norse god associated with poetry and eloquence.",
+        "explanation_et": "Bragi on luule ja kõneosavusega seotud Põhjala jumal."
+      },
+      "reviewNotes": "Removes Idunn from prompt and public explanation; domains retain an independent identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-all-level-expansion-0189",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What Italian-derived art-history term names an almond-shaped aureola surrounding the whole body of a sacred figure?",
+        "clue_et": "Milline itaalia sõnast pärinev kunstiajalootermin tähistab mandlikujulist aupaistet, mis ümbritseb püha tegelase kogu keha?"
+      },
+      "reviewNotes": "Removes Mary; shape and whole-body scope still distinguish mandorla from a head halo.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-all-level-expansion-0100",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Name either fifth-century BC Greek atomist associated with indivisible particles moving in empty space.",
+        "clue_et": "Nimeta üks 5. sajandil eKr elanud Kreeka atomistidest, keda seostatakse tühjas ruumis liikuvate jagamatute osakestega.",
+        "response_en": "Democritus or Leucippus",
+        "response_et": "Demokritos või Leukippos",
+        "accepted_variants_en": "Democritus;Leucippus",
+        "accepted_variants_et": "Demokritos;Leukippos;Leucippus",
+        "explanation_en": "Democritus and Leucippus are both associated with the early atomist account of atoms and void.",
+        "explanation_et": "Nii Demokritost kui ka Leukippost seostatakse varajase atomistliku käsitlusega aatomitest ja tühjusest.",
+        "source_title": "Stanford Encyclopedia of Philosophy: Leucippus",
+        "source_url": "https://plato.stanford.edu/entries/leucippus/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Acknowledges the real historical ambiguity explicitly in prompt, response and variants. Fifth-century qualifier excludes the later sibling Epicurus; the other philosophers remain separate.",
+      "sourceVerification": [
+        {
+          "url": "https://plato.stanford.edu/entries/leucippus/",
+          "observation": "Read the historical discussion: Aristotle repeatedly pairs Leucippus and Democritus in reports of atoms and void. This generic clue is genuinely shared; accepts both instead of adding an obscure discriminator."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-244",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which famous series of fairy photographs by Yorkshire cousins Elsie Wright and Frances Griffiths began in 1917 and became a notorious photographic hoax?",
+        "clue_et": "Milline kuulus Yorkshire’i nõbude Elsie Wrighti ja Frances Griffithsi haldjafotode sari sai alguse 1917. aastal ning kujunes kurikuulsaks fotopettuseks?",
+        "explanation_en": "Both creators admitted that the first four Cottingley photographs used cut-outs. Elsie said all five were fake; Frances maintained the fifth was genuine. Museum research identifies double exposure in the fifth image.",
+        "explanation_et": "Mõlemad autorid tunnistasid, et esimesel neljal Cottingley fotol kasutati väljalõikeid. Elsie sõnul olid kõik viis võltsitud, kuid Frances pidas viiendat ehtsaks. Muuseumi uurimus tuvastab viiendas pildis topeltsärituse.",
+        "source_title": "National Science and Media Museum: The Cottingley Fairies",
+        "source_url": "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Series identity retained without falsely attributing the same admission or technique to all five pictures.",
+      "sourceVerification": [
+        {
+          "url": "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/",
+          "observation": "Read museum account and preserved Elsie letter: Elsie described all five as fake, while Frances insisted the fifth was genuine. The account does not support a blanket joint admission for all five."
+        },
+        {
+          "url": "https://journal.sciencemuseum.ac.uk/article/power-at-play-in-paranormal-history/",
+          "observation": "Read museum research at the photographic-technique discussion: double exposure featured in the fifth image; the first four used hand-drawn cut-outs mounted on pins."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-276",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which month’s name descends from Roman Martius, named for Mars, the Roman god of war?",
+        "clue_et": "Millise kuu nimi pärineb Rooma nimetusest Martius, mis sai nime sõjajumal Marsi järgi?",
+        "accepted_variants_et": "March",
+        "accepted_variants_en": "the month of March"
+      },
+      "reviewNotes": "Asks the month generally in both languages and accepts the English spelling during Estonian play as well. Paired host-alternative structure: English month abbreviation and noun phrase correspond to the accepted English month name in Estonian; prompt still permits either locale’s month name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-280",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which month’s name descends through its Roman name from a Latin purification term linked to a ritual?",
+        "clue_et": "Millise kuu nimi pärineb roomaaegsest nimest ning ladina puhastamist tähistavast sõnast, mis seostub rituaaliga?",
+        "accepted_variants_et": "February",
+        "accepted_variants_en": "Feb.;the month of February"
+      },
+      "reviewNotes": "Month rather than required English-name response; accepts English spelling during Estonian play. Paired host-alternative structure: English month abbreviation and noun phrase correspond to the accepted English month name in Estonian; prompt still permits either locale’s month name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-292",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Spanish farewell literally commends the departing person “to God”?",
+        "clue_et": "Milline hispaaniakeelne hüvastijätt suunab lahkuja sõna-sõnalt „Jumala juurde”?",
+        "explanation_en": "Adiós joins the Spanish words a and Dios and is used as a farewell."
+      },
+      "reviewNotes": "Removes a Dios; player must recall the Spanish word. Public explanation may explain the answer after it is resolved. Residual sibling-disclosure repair: explains the Spanish term without printing the English farewell target.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-005",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "",
+        "accepted_variants_et": ""
+      },
+      "reviewNotes": "Named-goddess question requires Vesta; removes supplied hearth-goddess restatements.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-050",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "mezuza;mezuzza",
+        "accepted_variants_et": "mezuzah"
+      },
+      "reviewNotes": "Keeps genuine spellings instead of accepting the supplied doorpost-parchment description.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-056",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "halaal",
+        "accepted_variants_et": "halaal"
+      },
+      "reviewNotes": "Arabic-word request accepts the word and spelling only, not the supplied permitted-food condition.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-091",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which expression urges you to make full use of the present moment instead of waiting for tomorrow? Give the Latin expression or its established English meaning.",
+        "clue_et": "Milline ladina päritolu väljend soovitab tänast võimalust kohe kasutada, mitte homset ootama jääda? Ütle ladinakeelne väljend või selle tuntud eestikeelne tähendus."
+      },
+      "reviewNotes": "Intentionally retains the established translated alias. Host boundary now explicit; no expected translated alias is supplied verbatim. Tabula-rasa Estonian removes puhas leht from the question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-092",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which expression describes a fresh start with no previous marks or assumptions, as if a writing surface had been wiped clean? Give the Latin expression or its established English meaning.",
+        "clue_et": "Milline väljend kirjeldab uut algust ilma varasemate jälgede või eeldusteta, justkui oleks kirjutustahvel tühjaks pühitud? Ütle ladinakeelne väljend või selle tuntud eestikeelne tähendus."
+      },
+      "reviewNotes": "Intentionally retains the established translated alias. Host boundary now explicit; no expected translated alias is supplied verbatim. Tabula-rasa Estonian removes puhas leht from the question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-093",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which expression with Latin origins means that conditions remain unchanged? Give the Latin expression or its established English meaning.",
+        "clue_et": "Milline ladina päritolu väljend tähendab, et olukord jääb samaks? Ütle ladinakeelne väljend või selle tuntud eestikeelne tähendus."
+      },
+      "reviewNotes": "Intentionally retains the established translated alias. Host boundary now explicit; no expected translated alias is supplied verbatim. Tabula-rasa Estonian removes puhas leht from the question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-095",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which expression with Latin origins can label something authentic or an action done honestly rather than deceptively? Give the Latin expression or its established English meaning.",
+        "clue_et": "Milline ladina päritolu väljend võib tähistada ehtsat asja või ausalt tehtud tegu? Ütle ladinakeelne väljend või selle tuntud eestikeelne tähendus."
+      },
+      "reviewNotes": "Intentionally retains the established translated alias. Host boundary now explicit; no expected translated alias is supplied verbatim. Tabula-rasa Estonian removes puhas leht from the question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-094",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which two-word Latin phrase is shortened to a familiar three-letter abbreviation when a list continues in the same way? Give the phrase or its abbreviation.",
+        "clue_et": "Milline kahesõnaline ladinakeelne väljend lühendatakse kolme tähega, kui loetelu jätkub samal viisil? Ütle väljend või selle lühend."
+      },
+      "reviewNotes": "Whole-category policy also explicitly accepts the already-listed common abbreviation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-easy-expansion-066",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "By the waters of which Greek underworld river did the gods swear their most binding oaths?",
+        "clue_et": "Millise Kreeka allilma jõe vee nimel andsid jumalad oma kõige siduvamad vanded?",
+        "explanation_en": "In Hesiod’s account, the gods swear by the waters of Styx and face severe punishment for breaking such an oath.",
+        "explanation_et": "Hesiodose järgi vannuvad jumalad Styxi vee nimel ning sellise vande murdmisele järgneb ränk karistus.",
+        "source_title": "Hesiod: Theogony, lines 775–806",
+        "source_url": "https://www.theoi.com/Text/HesiodTheogony.html",
+        "source_license": "Public domain translation; website copyright retained",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the distinguishing oath tradition; does not incorrectly exclude Acheron from generic ferry traditions.",
+      "sourceVerification": [
+        {
+          "url": "https://www.theoi.com/Text/HesiodTheogony.html",
+          "observation": "Read hosted primary text: Iris brings Styx water as the great oath of the gods, and oath-breaking gods receive punishment. Uses this specific identifying tradition; not the nonunique Charon crossing."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-329",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Christian relief, development and child-focused organization was founded by Bob Pierce in 1950?",
+        "clue_et": "Millise kristliku abi-, arengu- ja lastele keskenduva organisatsiooni rajas Bob Pierce 1950. aastal?",
+        "source_title": "World Vision: What is World Vision?",
+        "source_url": "https://www.worldvision.org/charitable-giving-news-stories/what-is-world-vision",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the verified founder/year discriminator while preserving the original humanitarian identity.",
+      "sourceVerification": [
+        {
+          "url": "https://www.worldvision.org/charitable-giving-news-stories/what-is-world-vision",
+          "observation": "Read the organization’s history by founder’s daughter: incorporation documents filed in Los Angeles on 22 September 1950, with Bob Pierce as president. Adds name and year rather than a shared mission alone."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-002",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which trident-carrying Greek god rules the sea?",
+        "clue_et": "Milline kolmharki kandev Kreeka jumal valitseb merd?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes the named brother Zeus, preserving the distinctive symbol and domain.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-003",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Greek goddess of wisdom and military strategy was born from her father’s head?",
+        "clue_et": "Milline Kreeka tarkuse ja sõjastrateegia jumalanna sündis oma isa peast?",
+        "source_title": "Hesiod: Theogony, birth of Athena",
+        "source_url": "https://www.theoi.com/Text/HesiodTheogony.html",
+        "source_license": "Public domain translation; website copyright Theoi Project",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual city/name alias disclosure: independent birth myth replaces the Athens cognate, with genuine spelling alternatives retained. Original factual wording of the ancient myth; no modern website prose copied.",
+      "sourceVerification": [
+        {
+          "url": "https://www.theoi.com/Text/HesiodTheogony.html",
+          "observation": "Read Theogony lines 924 onward in Evelyn-White’s historical translation: the goddess is born from her father’s head. The translated primary ancient text is distinguished from Theoi website copyright."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-045",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which sea goddess in a Lithuanian legend falls in love with the fisherman Kastytis?",
+        "clue_et": "Milline merejumalanna armub Leedu muistendis kalur Kastytisesse?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: removes the palace material that is the category’s first answer, retaining the independently identifying named lover.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-088",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "jotnar;jötunn",
+        "accepted_variants_et": "jötunnid"
+      },
+      "reviewNotes": "Residual title/prompt disclosure: the question explicitly asks for the Norse collective name, so generic giants/hiiglased is no longer an accepted restatement. Genuine Old Norse name/spelling variants retained; giant category remains accurate for every question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-139",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_en": "Chanukah;Hanukah"
+      },
+      "reviewNotes": "Residual shared descriptive alias: Festival of Lights names several traditions and is printed in the Diwali prompt. Requires the specific Jewish festival name here, preserving genuine alternate transliterations.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-141",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "accepted_variants_et": "Püha Piibel"
+      },
+      "reviewNotes": "Residual generic restatement: pühakiri applies to all texts in the category and is supplied by its title and siblings; specific Bible name remains the answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-148",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What Jewish house of prayer, study and assembly hosts communal Torah reading?",
+        "clue_et": "Millises juudi palve-, õppe- ja kogunemiskojas loetakse ühiselt Toorat?"
+      },
+      "reviewNotes": "Residual given-alias repair: removes printed shul while retaining this genuine accepted name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-accessible-corpus-149",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Sanskrit-derived word names a Hindu house of worship?",
+        "clue_et": "Milline sanskriti päritolu sõna nimetab hindu pühakoda?",
+        "accepted_variants_en": "mandira",
+        "accepted_variants_et": "mandira"
+      },
+      "reviewNotes": "Residual self/sibling disclosure: does not print the synagogue alternative temple; requires the specific Sanskrit-derived name rather than the supplied generic religion/building description.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-293",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Hebrew word for peace and well-being is used both when greeting someone and when parting?"
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: replaces the literal English farewell answer with meeting/parting functions.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-294",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "Which Arabic-origin greeting takes its name from a word literally meaning peace?",
+        "clue_et": "Milline araabia päritolu tervitus on saanud nime sõnast, mis tähendab sõna-sõnalt rahu?",
+        "explanation_en": "Salaam is a greeting derived from the Arabic word for peace.",
+        "explanation_et": "Salaam on tervitus, mis pärineb araabiakeelsest rahu tähistavast sõnast.",
+        "source_title": "Merriam-Webster: salaam",
+        "source_url": "https://www.merriam-webster.com/dictionary/salaam",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Residual given-alias repair: does not print the phrase containing salam; removes the unsupported chronology assertion. Both language versions now use the same dictionary-supported etymology.",
+      "sourceVerification": [
+        {
+          "url": "https://www.merriam-webster.com/dictionary/salaam",
+          "observation": "Read the primary dictionary entry: greeting sense and Arabic salām, literally peace, in Word History. No claim about pre-Islamic dating is carried forward."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-playable-corpus-307",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "source_license": "Copyright Uppsala University",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Licence semantics clarification requested by root: source remains the official university history, with its actual copyright owner recorded. No open reuse grant inferred. Original independently worded bilingual historical fact; citation-only is a use description, not a licence.",
+      "sourceVerification": [
+        {
+          "url": "https://www.uu.se/en/about-uu/history/summary",
+          "observation": "Read the founding account and timeline: Jakob Ulvsson initiative, Sixtus IV authorisation in February 1477 and teaching commencing October 1477. Footer identifies © Uppsala University."
+        },
+        {
+          "url": "https://www.uu.se/en/about-website",
+          "observation": "Followed the source footer’s About this website link and read its content. It repeats © Uppsala University and provides no blanket open licence or reuse grant. Rights reserved is treated conservatively; no reuse permissions invented."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-mythology-religion-philosophy-all-level-expansion-0007",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "clue_en": "What positive feeling expresses appreciation for help or benefits received from someone else?",
+        "clue_et": "Milline positiivne tunne väljendab heameelt kelleltki teiselt saadud abi või hüvede üle?",
+        "explanation_en": "Gratitude expresses appreciation for help or benefits received from others.",
+        "explanation_et": "Tänulikkus väljendab heameelt teistelt saadud abi või hüvede üle."
+      },
+      "reviewNotes": "Residual sibling-disclosure repair: describes received help without naming kindness/lahkus.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-finals-final-0126",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "Which earlier steam-engine design did James Watt improve by condensing steam in a separate chamber, keeping the main cylinder hot?",
+        "clue_et": "Millist varasemat aurumasina konstruktsiooni täiustas James Watt, kondenseerides auru eraldi kambris ja hoides põhisilindri kuumana?",
+        "response_en": "The Newcomen steam engine",
+        "response_et": "Newcomeni aurumasin",
+        "accepted_variants_en": "Newcomen engine;Newcomen atmospheric engine;Thomas Newcomen’s engine",
+        "accepted_variants_et": "Newcomeni masin;Newcomeni atmosfääriline aurumasin;Thomas Newcomeni aurumasin",
+        "explanation_en": "Watt improved the Newcomen design by adding a separate condenser so the working cylinder did not need to be repeatedly cooled and reheated.",
+        "explanation_et": "Watt täiustas Newcomeni konstruktsiooni eraldi kondensaatoriga, nii et töösilindrit ei pidanud korduvalt jahutama ja uuesti kuumutama.",
+        "source_title": "Science Museum Group: Watt’s second separate condenser, 1765",
+        "source_url": "https://collection.sciencemuseumgroup.org.uk/objects/co50928",
+        "source_license": "CC-BY-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Question now explicitly asks the earlier design; host accepts Newcomen, rather than the improved engine named partly in the prompt.",
+      "sourceVerification": [
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co50928",
+          "observation": "Read the museum’s own interpretation: Newcomen engines waste fuel by repeated heating and cooling; Watt’s separate chamber keeps the cylinder hot. Rights line explicitly licenses description text under CC BY 4.0 (metadata fields CC0)."
+        }
+      ],
+      "subjectKey": "engine:newcomen",
+      "factFamily": "watt-improved-newcomen-condenser"
+    },
+    {
+      "clueId": "built-in-finals-final-0129",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "Introduced for accounting in 1999 and as banknotes and coins in 2002, which common currency replaced national currencies in participating European Union countries?",
+        "clue_et": "Milline Euroopa Liidu osalevate riikide ühine valuuta võeti arveldustes kasutusele 1999. aastal ning pangatähtede ja müntidena 2002. aastal?",
+        "source_title": "European Central Bank: Our money",
+        "source_url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+        "source_license": "ECB website copyright terms",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes eurozone/euroala, which printed the answer stem. The two historical stages remain the identifying facts.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+          "observation": "Read the official currency history and country table: founding adoption in 1999, cash since 2002. No current member count used."
+        },
+        {
+          "url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+          "observation": "Read copyright terms: ECB ownership, free use subject to accuracy, attribution and stated distribution/link conditions. Original factual clue wording; no source passage copied."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-finals-final-0142",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "In New Kingdom Egypt, illustrated papyrus rolls held selections from a collection of spells whose ancient title referred to “coming forth by day”. What is its familiar modern name?",
+        "clue_et": "Uue riigi aegses Egiptuses sisaldasid piltidega papüüruserullid valikut loitsudest, mille kogu muistne nimi viitas „päeval välja tulemisele”. Mis on selle kogu tuntud tänapäevane nimi?",
+        "explanation_en": "The Book of the Dead is the modern name for a selection-based Egyptian funerary collection commonly written on papyrus, with spells and illustrations intended to aid the deceased.",
+        "explanation_et": "Surnuteraamat on Egiptuse matmistekstide kogu tänapäevane nimi. Valitud loitsud ja pildid kanti sageli papüürusele, et aidata surnut teispoolsuses.",
+        "source_title": "UCL Petrie Museum: Book of the Dead",
+        "source_url": "https://www.ucl.ac.uk/museums-static/digitalegypt/literature/religious/bdfront.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Papyrus rolls, New Kingdom context and ancient title distinguish the familiar modern collection from generic Pyramid or Coffin Texts.",
+      "sourceVerification": [
+        {
+          "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/literature/religious/bdfront.html",
+          "observation": "Read the museum’s overview: ancient title refers to chapters for coming forth by day; papyrus rolls used in elite burials from Hatshepsut’s reign; chapters later standardized with vignettes. Footer explicitly All rights reserved."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-technology-inventions-set-027",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "category_name_en": "Pioneers of Technology",
+        "category_name_et": "Tehnoloogia teerajajad"
+      },
+      "reviewNotes": "Broadens title to fit aviation, household invention, telegraphy, computing and entrepreneurship."
+    },
+    {
+      "categoryId": "built-in-technology-inventions-set-132",
+      "batchId": "10-technology-inventions",
+      "changes": {
+        "category_name_en": "Bridges and Building Features",
+        "category_name_et": "Sillad ja ehitiste osad"
+      },
+      "reviewNotes": "All five clues fit the broader title, including the daylight opening; membership and targets unchanged."
+    },
+    {
+      "categoryId": "built-in-politics-economics-society-set-011",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "category_name_en": "Government in Action",
+        "category_name_et": "Riigivõim tegevuses"
+      },
+      "reviewNotes": "Broad label fits lawmaking, civil service, cabinet, constitutional review and institutional checks; removes complete three-branch framing."
+    },
+    {
+      "categoryId": "built-in-politics-economics-society-set-052",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "category_name_en": "Ideas That Backfired",
+        "category_name_et": "Ideed, mis läksid valesti"
+      },
+      "reviewNotes": "Includes the private-home censorship episode as well as the four corporate missteps without changing any target."
+    },
+    {
+      "categoryId": "built-in-politics-economics-society-set-149",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "category_name_en": "Government Offices and Traditions",
+        "category_name_et": "Riigivalitsemise ametid ja tavad"
+      },
+      "reviewNotes": "All five fit office titles or a governing tradition; no office requirement is falsely imposed on the country clue."
+    },
+    {
+      "categoryId": "built-in-politics-economics-society-set-027",
+      "batchId": "11-politics-economics-society",
+      "changes": {
+        "category_name_en": "Population Facts",
+        "category_name_et": "Rahvastikuandmed"
+      },
+      "reviewNotes": "Residual title disclosure: wider label covers all five population topics without printing the census answer."
+    },
+    {
+      "categoryId": "built-in-mythology-religion-philosophy-set-011",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "category_name_en": "Mythology, Religion & Philosophy: Heroes and Objects of Legend",
+        "category_name_et": "Mütoloogia, religioon ja filosoofia: Legendide kangelased ja esemed"
+      },
+      "reviewNotes": "Four replacement subjects broaden the former single-work category; the retained Sampo clue explicitly identifies its epic. All five fit legendary characters or objects."
+    },
+    {
+      "categoryId": "built-in-mythology-religion-philosophy-set-166",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "category_name_en": "Philosophical Images and Techniques",
+        "category_name_et": "Filosoofilised kujundid ja võtted"
+      },
+      "reviewNotes": "Removes ancient-only restriction and covers the Socratic-irony technique too. Buridan’s-ass example has ancient antecedents, is absent from his writings, and was likely a later parody; no secure invention date claimed.",
+      "sourceVerification": [
+        {
+          "url": "https://plato.stanford.edu/entries/buridan/",
+          "observation": "Read the free-choice discussion: donkey example is absent in Buridan’s writings, has antecedents at least as old as Aristotle, and likely arose as a later parody. Existing donkey question does not assert authorship or a date and needs no text changes."
+        }
+      ]
+    },
+    {
+      "categoryId": "built-in-mythology-religion-philosophy-set-119",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "category_name_en": "Everyday Latin: Expressions and Meanings",
+        "category_name_et": "Igapäevane ladina keel: väljendid ja tähendused"
+      },
+      "reviewNotes": "Easy accessibility policy: Latin expressions and their established translated meanings are valid, plus the familiar abbreviation where requested. Host must use listed answers/aliases rather than arbitrary prompt restatements."
+    },
+    {
+      "categoryId": "built-in-mythology-religion-philosophy-set-036",
+      "batchId": "12-mythology-religion-philosophy",
+      "changes": {
+        "category_name_en": "Gods in Calendar Names",
+        "category_name_et": "Jumalad kalendrinimedes"
+      },
+      "reviewNotes": "Calendar etymology now includes four weekday/deity pairs and an independent month/deity pair, avoiding a complete five-god English-week enumeration while covering every question."
+    },
+    {
+      "categoryId": "built-in-finals-final-set-0056",
+      "batchId": "13-finals",
+      "changes": {
+        "category_name_et": "Mõtisklus väravatel"
+      },
+      "reviewNotes": "Residual Finals title disclosure: uses the abstract activity, matching English Thinking at the Gates, rather than the artwork’s accepted Estonian title Mõtleja."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "C-FOOD-009-ET-ORANGE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-003"
+      ],
+      "reason": "Parallel physical descriptions replace the untranslated English wordplay."
+    },
+    {
+      "findingId": "C-FOOD-011-ROSEMARY-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-011",
+        "built-in-food-drink-accessible-corpus-015"
+      ],
+      "reason": "Independent basil/pesto clue replaces the lyric that named rosemary."
+    },
+    {
+      "findingId": "C-FOOD-014-NONUNIQUE-CHEESES",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-029",
+        "built-in-food-drink-accessible-corpus-030"
+      ],
+      "reason": "Brie gains protected regional identifiers; the nonunique Dutch city clue becomes independently identifiable Emmental."
+    },
+    {
+      "findingId": "C-FOOD-021-COCOA-BUTTER-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-062",
+        "built-in-food-drink-accessible-corpus-063",
+        "built-in-food-drink-accessible-corpus-064",
+        "built-in-food-drink-accessible-corpus-065"
+      ],
+      "reason": "Cocoa-butter target replaced with brownie; ingredient naming in sibling explanations no longer reveals any category answer."
+    },
+    {
+      "findingId": "C-FOOD-024-TEA-STYLES-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-076",
+        "built-in-food-drink-accessible-corpus-077",
+        "built-in-food-drink-accessible-corpus-079"
+      ],
+      "reason": "Oolong prompt no longer prints black or green tea."
+    },
+    {
+      "findingId": "C-FOOD-028-YEAST-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-096",
+        "built-in-food-drink-accessible-corpus-099"
+      ],
+      "reason": "Proofing prompt removes yeast; explanation already names only fermentation."
+    },
+    {
+      "findingId": "C-FOOD-030-SALSA-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-106",
+        "built-in-food-drink-accessible-corpus-108"
+      ],
+      "reason": "Taco explanation no longer lists salsa."
+    },
+    {
+      "findingId": "C-FOOD-007-ICE-BATH-SOURCE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-accessible-corpus-158"
+      ],
+      "reason": "Verified culinary Health Canada page replaces sports recovery source, with explicit evidence-update note."
+    },
+    {
+      "findingId": "C-FOOD-098-UMAMI-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-playable-corpus-321",
+        "built-in-food-drink-playable-corpus-322"
+      ],
+      "reason": "MSG explanation uses its chemistry without naming umami."
+    },
+    {
+      "findingId": "C-FOOD-089-NONUNIQUE-JAPANESE-TEA",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-playable-corpus-280"
+      ],
+      "reason": "Sun-grown young-leaf and steamed/rolled details distinguish typical sencha from shaded or later coarse-leaf teas."
+    },
+    {
+      "findingId": "C-FOOD-100-MAIZE-PORRIDGE-OVERLAP",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-playable-corpus-334",
+        "built-in-food-drink-playable-corpus-335"
+      ],
+      "reason": "Injera replaces ugali so the final two targets have separate grain and preparation facts."
+    },
+    {
+      "findingId": "C-FOOD-126-HUMMUS-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-all-level-expansion-0026",
+        "built-in-food-drink-all-level-expansion-0027"
+      ],
+      "reason": "Tahini prompt and explanation identify sesame paste without naming hummus."
+    },
+    {
+      "findingId": "C-FOOD-133-GLOGG-ALMONDS-RECIPROCAL",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-food-drink-all-level-expansion-0062",
+        "built-in-food-drink-all-level-expansion-0064"
+      ],
+      "reason": "Hot chocolate replaces almonds, removing the same serving fact asked in reverse."
+    },
+    {
+      "findingId": "C-TECH-005-MICROPHONE-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-146",
+        "built-in-technology-inventions-accessible-corpus-148",
+        "built-in-technology-inventions-accessible-corpus-150"
+      ],
+      "reason": "Pop-filter text and binaural prompt no longer name the microphone target."
+    },
+    {
+      "findingId": "C-TECH-011-USB-SSD-OVERLAP",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-012",
+        "built-in-technology-inventions-accessible-corpus-014"
+      ],
+      "reason": "Internal SATA/NVMe qualifier distinguishes the SSD from the USB flash stick."
+    },
+    {
+      "findingId": "C-TECH-012-NONUNIQUE-FORMATS",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-018",
+        "built-in-technology-inventions-accessible-corpus-019",
+        "built-in-technology-inventions-accessible-corpus-020"
+      ],
+      "reason": "Adds MPEG Layer III, Phil Katz/PKWARE origin, and patent-free GIF replacement as independent identifying details."
+    },
+    {
+      "findingId": "C-TECH-013-HTTP-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-023",
+        "built-in-technology-inventions-accessible-corpus-024"
+      ],
+      "reason": "Web-server explanation no longer names HTTP."
+    },
+    {
+      "findingId": "C-TECH-015-CC-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-034",
+        "built-in-technology-inventions-accessible-corpus-035"
+      ],
+      "reason": "Draft replaces CC, removing a linked visible/hidden copy pair."
+    },
+    {
+      "findingId": "C-TECH-019-PIXEL-SENSOR-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-051",
+        "built-in-technology-inventions-accessible-corpus-052",
+        "built-in-technology-inventions-accessible-corpus-054",
+        "built-in-technology-inventions-accessible-corpus-055"
+      ],
+      "reason": "Shutter speed replaces megapixel; optical zoom names neither pixel nor sensor."
+    },
+    {
+      "findingId": "C-TECH-020-HEADPHONE-SPEAKER-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-056",
+        "built-in-technology-inventions-accessible-corpus-057",
+        "built-in-technology-inventions-accessible-corpus-059",
+        "built-in-technology-inventions-accessible-corpus-060"
+      ],
+      "reason": "Headphones, amplifier and cancellation wording no longer print other category answers."
+    },
+    {
+      "findingId": "C-TECH-027-TITLE-SCOPE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-accessible-corpus-091",
+        "built-in-technology-inventions-accessible-corpus-093"
+      ],
+      "reason": "Pioneers of Technology covers all five inventors and entrepreneurs."
+    },
+    {
+      "findingId": "C-TECH-035-PAGER-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-006",
+        "built-in-technology-inventions-playable-corpus-010"
+      ],
+      "reason": "StarTAC identification uses maker, launch year and form, with no pager comparison."
+    },
+    {
+      "findingId": "C-TECH-047-FLOPPY-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-066",
+        "built-in-technology-inventions-playable-corpus-070"
+      ],
+      "reason": "Zip text uses maker/date/capacity and removes floppy naming."
+    },
+    {
+      "findingId": "C-TECH-049-TRAFFIC-LIGHT-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-076",
+        "built-in-technology-inventions-playable-corpus-078"
+      ],
+      "reason": "Roundabout prompt and crossing explanation remove traffic-light names."
+    },
+    {
+      "findingId": "C-TECH-051-FORKLIFT-PALLET-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-087",
+        "built-in-technology-inventions-playable-corpus-088"
+      ],
+      "reason": "Vehicle and platform independently defined without naming each other."
+    },
+    {
+      "findingId": "C-TECH-056-EMAIL-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-111",
+        "built-in-technology-inventions-playable-corpus-113"
+      ],
+      "reason": "Instant-messaging prompt removes the email comparison."
+    },
+    {
+      "findingId": "C-TECH-058-GENERATOR-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-121",
+        "built-in-technology-inventions-playable-corpus-124"
+      ],
+      "reason": "Power-station explanation no longer names generators."
+    },
+    {
+      "findingId": "C-TECH-062-FUNICULAR-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-144",
+        "built-in-technology-inventions-playable-corpus-145"
+      ],
+      "reason": "Aerial-tramway explanation removes funicular comparison."
+    },
+    {
+      "findingId": "C-TECH-066-CNC-SELF-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-163"
+      ],
+      "reason": "Prompt asks the numerical-control identity without printing CNC or its full accepted expansion."
+    },
+    {
+      "findingId": "C-TECH-077-ET-TELSTAR-FIRST",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-218"
+      ],
+      "reason": "Estonian drops disputed first-active claim and matches the English active-satellite statement."
+    },
+    {
+      "findingId": "C-TECH-083-DIALYSIS-FLUID-MECHANISM",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-248"
+      ],
+      "reason": "Prompt uses external filtration; explanation separates solute diffusion and fluid ultrafiltration."
+    },
+    {
+      "findingId": "C-TECH-132-TITLE-SKYLIGHT",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-all-level-expansion-0059"
+      ],
+      "reason": "Broader bridges/building-features label covers all five existing subjects."
+    },
+    {
+      "findingId": "C-TECH-146-NONUNIQUE-EARLY-COMPUTER",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-all-level-expansion-0126"
+      ],
+      "reason": "Penn, Army purpose and 1946 dedication distinguish ENIAC."
+    },
+    {
+      "findingId": "C-TECH-147-ET-DAEMON-SELF-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-all-level-expansion-0134"
+      ],
+      "reason": "Maxwell’s agent described without printing deemon/demon in either prompt."
+    },
+    {
+      "findingId": "C-TECH-148-NONUNIQUE-RECYCLABLE-MATERIAL",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-all-level-expansion-0139"
+      ],
+      "reason": "Sand, soda ash and lime identify glass rather than generic recyclable packaging."
+    },
+    {
+      "findingId": "C-TECH-168-RADAR-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-all-level-expansion-0237",
+        "built-in-technology-inventions-all-level-expansion-0238"
+      ],
+      "reason": "Magnetron prompt and explanation no longer print radar."
+    },
+    {
+      "findingId": "C-TECH-096-FIRST-WEBSITE-DATE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-technology-inventions-playable-corpus-311"
+      ],
+      "reason": "Removes conflation of site creation and August 1991 public announcement; retains sourced first-site identity."
+    },
+    {
+      "findingId": "C-POL-009-ET-VOTING-ANSWER",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-001"
+      ],
+      "reason": "Both languages now explicitly accept the voting action."
+    },
+    {
+      "findingId": "C-POL-011-THREE-BRANCH-ELIMINATION",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-011",
+        "built-in-politics-economics-society-accessible-corpus-012",
+        "built-in-politics-economics-society-accessible-corpus-013"
+      ],
+      "reason": "Civil service and cabinet replace two branch labels, and title broadens; the finite three-branch pool no longer exists."
+    },
+    {
+      "findingId": "C-POL-016-TREATY-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-037",
+        "built-in-politics-economics-society-accessible-corpus-040"
+      ],
+      "reason": "Article 5 explanation no longer gives the founding-treaty name."
+    },
+    {
+      "findingId": "C-POL-018-VAT-SELF-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-047"
+      ],
+      "reason": "Prompt identifies the tax through input-tax credit rather than printed accepted acronyms."
+    },
+    {
+      "findingId": "C-POL-019-INTEREST-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-052",
+        "built-in-politics-economics-society-accessible-corpus-053",
+        "built-in-politics-economics-society-accessible-corpus-054",
+        "built-in-politics-economics-society-accessible-corpus-055"
+      ],
+      "reason": "Debit card replaces interest, leaving savings, loan and compounding independently answerable."
+    },
+    {
+      "findingId": "C-POL-021-TRADE-FLOW-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-accessible-corpus-061",
+        "built-in-politics-economics-society-accessible-corpus-062",
+        "built-in-politics-economics-society-accessible-corpus-063",
+        "built-in-politics-economics-society-accessible-corpus-065"
+      ],
+      "reason": "Exchange rate replaces import, WTO replaces balance, and free-trade prompt removes the sibling tariff name."
+    },
+    {
+      "findingId": "C-POL-052-CORPORATE-TITLE-SCOPE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-playable-corpus-092"
+      ],
+      "reason": "Broadens title to Ideas That Backfired, which covers all five cases."
+    },
+    {
+      "findingId": "C-POL-074-JOHN-BULL-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-playable-corpus-204",
+        "built-in-politics-economics-society-playable-corpus-205"
+      ],
+      "reason": "Johnny Canuck prompt removes the John Bull comparison."
+    },
+    {
+      "findingId": "C-POL-082-DAILY-SHOW-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-playable-corpus-242",
+        "built-in-politics-economics-society-playable-corpus-243"
+      ],
+      "reason": "Colbert identification uses persona and dates without its parent programme name."
+    },
+    {
+      "findingId": "C-POL-149-TITLE-SCOPE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-all-level-expansion-0145"
+      ],
+      "reason": "Government Offices and Traditions covers both titles and the Swiss assembly practice."
+    },
+    {
+      "findingId": "C-POL-152-NONUNIQUE-UNCODIFIED-CONSTITUTION",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-all-level-expansion-0156"
+      ],
+      "reason": "Adds the Westminster/London identifier to distinguish the UK from other uncodified systems."
+    },
+    {
+      "findingId": "C-POL-170-REPLACEMENT-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-politics-economics-society-all-level-expansion-0247",
+        "built-in-politics-economics-society-all-level-expansion-0250"
+      ],
+      "reason": "Momentum prompt and explanation no longer print replacement-fertility terminology."
+    },
+    {
+      "findingId": "C-MYTH-003-MEDUSA-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-011",
+        "built-in-mythology-religion-philosophy-accessible-corpus-012"
+      ],
+      "reason": "Pegasus prompt no longer prints Medusa."
+    },
+    {
+      "findingId": "C-MYTH-005-LOKI-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-022",
+        "built-in-mythology-religion-philosophy-accessible-corpus-023"
+      ],
+      "reason": "Baldr explanation removes Loki."
+    },
+    {
+      "findingId": "C-MYTH-007-OSIRIS-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-033",
+        "built-in-mythology-religion-philosophy-accessible-corpus-034"
+      ],
+      "reason": "Isis prompt removes both Osiris and Horus after reading all five clues."
+    },
+    {
+      "findingId": "C-MYTH-008-ARTHUR-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-036",
+        "built-in-mythology-religion-philosophy-accessible-corpus-037",
+        "built-in-mythology-religion-philosophy-accessible-corpus-038"
+      ],
+      "reason": "Excalibur and Merlin use independent legendary episodes with no Arthur names in prompt or explanation."
+    },
+    {
+      "findingId": "C-MYTH-011-SINGLE-WORK",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-051",
+        "built-in-mythology-religion-philosophy-accessible-corpus-052",
+        "built-in-mythology-religion-philosophy-accessible-corpus-053",
+        "built-in-mythology-religion-philosophy-accessible-corpus-054",
+        "built-in-mythology-religion-philosophy-accessible-corpus-055"
+      ],
+      "reason": "Four varied recognizable replacements broaden the former single-work category; retained Sampo clue names Kalevala."
+    },
+    {
+      "findingId": "C-MYTH-011-SAMPO-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-052",
+        "built-in-mythology-religion-philosophy-accessible-corpus-054"
+      ],
+      "reason": "Aladdin replaces Ilmarinen, eliminating the repeated smith/object fact."
+    },
+    {
+      "findingId": "C-MYTH-013-NOAH-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-061",
+        "built-in-mythology-religion-philosophy-accessible-corpus-062"
+      ],
+      "reason": "Rainbow prompt names Genesis without Noah."
+    },
+    {
+      "findingId": "C-MYTH-016-MJOLNIR-ETYMOLOGY",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-078"
+      ],
+      "reason": "English asks ownership rather than asserting a false literal meaning."
+    },
+    {
+      "findingId": "C-MYTH-022-JESUS-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-106",
+        "built-in-mythology-religion-philosophy-accessible-corpus-107",
+        "built-in-mythology-religion-philosophy-accessible-corpus-109"
+      ],
+      "reason": "Cross and Eucharist explanations remove Jesus/Christ naming."
+    },
+    {
+      "findingId": "C-MYTH-024-MECCA-HAJJ-RECIPROCAL",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-118",
+        "built-in-mythology-religion-philosophy-accessible-corpus-119"
+      ],
+      "reason": "Mecca uses prayer direction; hajj uses lifetime obligation, and neither names the other target."
+    },
+    {
+      "findingId": "C-MYTH-025-SAMSARA-SELF-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-124",
+        "built-in-mythology-religion-philosophy-accessible-corpus-125"
+      ],
+      "reason": "Removes the printed cycle term and its naming in moksha’s explanation."
+    },
+    {
+      "findingId": "C-MYTH-026-NOBLE-TRUTHS-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-127",
+        "built-in-mythology-religion-philosophy-accessible-corpus-130"
+      ],
+      "reason": "Eightfold-path explanation removes the Four Noble Truths framework."
+    },
+    {
+      "findingId": "C-MYTH-027-KHALSA-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-133",
+        "built-in-mythology-religion-philosophy-accessible-corpus-134"
+      ],
+      "reason": "Five-Ks explanation removes Khalsa."
+    },
+    {
+      "findingId": "C-MYTH-031-PUPIL-TEACHER-DISCLOSURE",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-accessible-corpus-151",
+        "built-in-mythology-religion-philosophy-accessible-corpus-152",
+        "built-in-mythology-religion-philosophy-accessible-corpus-153"
+      ],
+      "reason": "Three philosophers identified through books/institutions and separate pupils without sibling name disclosures."
+    },
+    {
+      "findingId": "C-MYTH-036-PRINTED-DEITY-VARIANTS",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-011",
+        "built-in-mythology-religion-philosophy-playable-corpus-012",
+        "built-in-mythology-religion-philosophy-playable-corpus-013",
+        "built-in-mythology-religion-philosophy-playable-corpus-014",
+        "built-in-mythology-religion-philosophy-playable-corpus-015"
+      ],
+      "reason": "Unprinted aliases and two-part deity/calendar identities remove given-answer restatements; replacing Frigg/Friday with Janus/January breaks the complete five named-deity weekday pool. ROOT-MYTHOLOGY-012 is only a Latin-meaning policy qualification, not an exemption for this pool."
+    },
+    {
+      "findingId": "C-MYTH-040-ET-FLAG-SYMBOLS",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-031",
+        "built-in-mythology-religion-philosophy-playable-corpus-035"
+      ],
+      "reason": "Six-pointed star and sacred-tree leaves replace incorrect shapes in Estonian; English leaves clarified too."
+    },
+    {
+      "findingId": "C-MYTH-051-MISSING-RAT-VARIANTS",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-088"
+      ],
+      "reason": "Rat accepted in both answer orders and both languages, consistent with the source-supported explanation."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0109",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0110"
+      ],
+      "reason": "Recusal uses concrete personal/financial conflict without naming impartiality."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0156",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0157"
+      ],
+      "reason": "Bragi prompt and explanation no longer name Idunn."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0188",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0189"
+      ],
+      "reason": "Mandorla asks a sacred figure generally without naming Mary."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0100"
+      ],
+      "reason": "Prompt and host guidance explicitly accept either Democritus or Leucippus for shared early atomism."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0229"
+      ],
+      "reason": "Philosophical Images and Techniques covers all five without asserting an ancient-only or securely medieval origin."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-244"
+      ],
+      "reason": "Series prompt and precise explanation separate first-four cut-outs, the creators’ fifth-image disagreement and double exposure."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-276",
+        "built-in-mythology-religion-philosophy-playable-corpus-280"
+      ],
+      "reason": "Both calendar questions ask which month generally, with English forms also accepted in Estonian."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-292"
+      ],
+      "reason": "Spanish farewell required without printing its component words."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-easy-expansion-005",
+        "built-in-mythology-religion-philosophy-easy-expansion-050",
+        "built-in-mythology-religion-philosophy-easy-expansion-056",
+        "built-in-mythology-religion-philosophy-easy-expansion-092"
+      ],
+      "reason": "Vesta/mezuzah/halal remove supplied descriptive variants; tabula-rasa prompt no longer supplies its translated alias."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-easy-expansion-066"
+      ],
+      "reason": "Gods’ binding Styx oaths distinguish the river; no generic ferry exclusion of Acheron."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-playable-corpus-329"
+      ],
+      "reason": "World Vision gains the official Bob Pierce/1950 discriminator."
+    },
+    {
+      "findingId": "ROOT-MYTHOLOGY-012",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-mythology-religion-philosophy-easy-expansion-091",
+        "built-in-mythology-religion-philosophy-easy-expansion-093",
+        "built-in-mythology-religion-philosophy-easy-expansion-095"
+      ],
+      "reason": "Established translated Latin meanings intentionally retained with explicit category/prompt/host acceptance boundary."
+    },
+    {
+      "findingId": "B-FINAL-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0126"
+      ],
+      "reason": "Earlier-design question and Newcomen response now agree, backed by the museum’s own condenser record."
+    },
+    {
+      "findingId": "B-FINAL-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0129"
+      ],
+      "reason": "Participating EU countries replaces the region whose name contained the answer; historical dates remain."
+    },
+    {
+      "findingId": "B-FINAL-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0142"
+      ],
+      "reason": "Adds papyrus/New Kingdom context and native-title meaning to distinguish the Book of the Dead."
+    }
+  ]
+}

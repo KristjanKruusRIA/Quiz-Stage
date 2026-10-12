@@ -1,0 +1,1598 @@
+{
+  "batchId": "05-art-architecture",
+  "bankSha256": "3b893ba62a3b6c61f1769633e3a617dbdf805dd7da74ba0fcead03b37993fd41",
+  "reviewedClueIds": [
+    "built-in-art-architecture-all-level-expansion-0001",
+    "built-in-art-architecture-all-level-expansion-0002",
+    "built-in-art-architecture-all-level-expansion-0003",
+    "built-in-art-architecture-all-level-expansion-0004",
+    "built-in-art-architecture-all-level-expansion-0005",
+    "built-in-art-architecture-all-level-expansion-0006",
+    "built-in-art-architecture-all-level-expansion-0007",
+    "built-in-art-architecture-all-level-expansion-0008",
+    "built-in-art-architecture-all-level-expansion-0009",
+    "built-in-art-architecture-all-level-expansion-0010",
+    "built-in-art-architecture-all-level-expansion-0011",
+    "built-in-art-architecture-all-level-expansion-0012",
+    "built-in-art-architecture-all-level-expansion-0013",
+    "built-in-art-architecture-all-level-expansion-0014",
+    "built-in-art-architecture-all-level-expansion-0015",
+    "built-in-art-architecture-all-level-expansion-0016",
+    "built-in-art-architecture-all-level-expansion-0017",
+    "built-in-art-architecture-all-level-expansion-0018",
+    "built-in-art-architecture-all-level-expansion-0019",
+    "built-in-art-architecture-all-level-expansion-0020",
+    "built-in-art-architecture-all-level-expansion-0021",
+    "built-in-art-architecture-all-level-expansion-0022",
+    "built-in-art-architecture-all-level-expansion-0023",
+    "built-in-art-architecture-all-level-expansion-0024",
+    "built-in-art-architecture-all-level-expansion-0025",
+    "built-in-art-architecture-all-level-expansion-0026",
+    "built-in-art-architecture-all-level-expansion-0027",
+    "built-in-art-architecture-all-level-expansion-0028",
+    "built-in-art-architecture-all-level-expansion-0029",
+    "built-in-art-architecture-all-level-expansion-0030",
+    "built-in-art-architecture-all-level-expansion-0031",
+    "built-in-art-architecture-all-level-expansion-0032",
+    "built-in-art-architecture-all-level-expansion-0033",
+    "built-in-art-architecture-all-level-expansion-0034",
+    "built-in-art-architecture-all-level-expansion-0035",
+    "built-in-art-architecture-all-level-expansion-0036",
+    "built-in-art-architecture-all-level-expansion-0037",
+    "built-in-art-architecture-all-level-expansion-0038",
+    "built-in-art-architecture-all-level-expansion-0039",
+    "built-in-art-architecture-all-level-expansion-0040",
+    "built-in-art-architecture-all-level-expansion-0041",
+    "built-in-art-architecture-all-level-expansion-0042",
+    "built-in-art-architecture-all-level-expansion-0043",
+    "built-in-art-architecture-all-level-expansion-0044",
+    "built-in-art-architecture-all-level-expansion-0045",
+    "built-in-art-architecture-all-level-expansion-0046",
+    "built-in-art-architecture-all-level-expansion-0047",
+    "built-in-art-architecture-all-level-expansion-0048",
+    "built-in-art-architecture-all-level-expansion-0049",
+    "built-in-art-architecture-all-level-expansion-0050",
+    "built-in-art-architecture-all-level-expansion-0051",
+    "built-in-art-architecture-all-level-expansion-0052",
+    "built-in-art-architecture-all-level-expansion-0053",
+    "built-in-art-architecture-all-level-expansion-0054",
+    "built-in-art-architecture-all-level-expansion-0055",
+    "built-in-art-architecture-all-level-expansion-0056",
+    "built-in-art-architecture-all-level-expansion-0057",
+    "built-in-art-architecture-all-level-expansion-0058",
+    "built-in-art-architecture-all-level-expansion-0059",
+    "built-in-art-architecture-all-level-expansion-0060",
+    "built-in-art-architecture-all-level-expansion-0061",
+    "built-in-art-architecture-all-level-expansion-0062",
+    "built-in-art-architecture-all-level-expansion-0063",
+    "built-in-art-architecture-all-level-expansion-0064",
+    "built-in-art-architecture-all-level-expansion-0065",
+    "built-in-art-architecture-all-level-expansion-0066",
+    "built-in-art-architecture-all-level-expansion-0067",
+    "built-in-art-architecture-all-level-expansion-0068",
+    "built-in-art-architecture-all-level-expansion-0069",
+    "built-in-art-architecture-all-level-expansion-0070",
+    "built-in-art-architecture-all-level-expansion-0071",
+    "built-in-art-architecture-all-level-expansion-0072",
+    "built-in-art-architecture-all-level-expansion-0073",
+    "built-in-art-architecture-all-level-expansion-0074",
+    "built-in-art-architecture-all-level-expansion-0075",
+    "built-in-art-architecture-all-level-expansion-0076",
+    "built-in-art-architecture-all-level-expansion-0077",
+    "built-in-art-architecture-all-level-expansion-0078",
+    "built-in-art-architecture-all-level-expansion-0079",
+    "built-in-art-architecture-all-level-expansion-0080",
+    "built-in-art-architecture-all-level-expansion-0081",
+    "built-in-art-architecture-all-level-expansion-0082",
+    "built-in-art-architecture-all-level-expansion-0083",
+    "built-in-art-architecture-all-level-expansion-0084",
+    "built-in-art-architecture-all-level-expansion-0085",
+    "built-in-art-architecture-all-level-expansion-0086",
+    "built-in-art-architecture-all-level-expansion-0087",
+    "built-in-art-architecture-all-level-expansion-0088",
+    "built-in-art-architecture-all-level-expansion-0089",
+    "built-in-art-architecture-all-level-expansion-0090",
+    "built-in-art-architecture-all-level-expansion-0091",
+    "built-in-art-architecture-all-level-expansion-0092",
+    "built-in-art-architecture-all-level-expansion-0093",
+    "built-in-art-architecture-all-level-expansion-0094",
+    "built-in-art-architecture-all-level-expansion-0095",
+    "built-in-art-architecture-all-level-expansion-0096",
+    "built-in-art-architecture-all-level-expansion-0097",
+    "built-in-art-architecture-all-level-expansion-0098",
+    "built-in-art-architecture-all-level-expansion-0099",
+    "built-in-art-architecture-all-level-expansion-0100",
+    "built-in-art-architecture-all-level-expansion-0101",
+    "built-in-art-architecture-all-level-expansion-0102",
+    "built-in-art-architecture-all-level-expansion-0103",
+    "built-in-art-architecture-all-level-expansion-0104",
+    "built-in-art-architecture-all-level-expansion-0105",
+    "built-in-art-architecture-all-level-expansion-0106",
+    "built-in-art-architecture-all-level-expansion-0107",
+    "built-in-art-architecture-all-level-expansion-0108",
+    "built-in-art-architecture-all-level-expansion-0109",
+    "built-in-art-architecture-all-level-expansion-0110",
+    "built-in-art-architecture-all-level-expansion-0111",
+    "built-in-art-architecture-all-level-expansion-0112",
+    "built-in-art-architecture-all-level-expansion-0113",
+    "built-in-art-architecture-all-level-expansion-0114",
+    "built-in-art-architecture-all-level-expansion-0115",
+    "built-in-art-architecture-all-level-expansion-0116",
+    "built-in-art-architecture-all-level-expansion-0117",
+    "built-in-art-architecture-all-level-expansion-0118",
+    "built-in-art-architecture-all-level-expansion-0119",
+    "built-in-art-architecture-all-level-expansion-0120",
+    "built-in-art-architecture-all-level-expansion-0121",
+    "built-in-art-architecture-all-level-expansion-0122",
+    "built-in-art-architecture-all-level-expansion-0123",
+    "built-in-art-architecture-all-level-expansion-0124",
+    "built-in-art-architecture-all-level-expansion-0125",
+    "built-in-art-architecture-all-level-expansion-0126",
+    "built-in-art-architecture-all-level-expansion-0127",
+    "built-in-art-architecture-all-level-expansion-0128",
+    "built-in-art-architecture-all-level-expansion-0129",
+    "built-in-art-architecture-all-level-expansion-0130",
+    "built-in-art-architecture-all-level-expansion-0131",
+    "built-in-art-architecture-all-level-expansion-0132",
+    "built-in-art-architecture-all-level-expansion-0133",
+    "built-in-art-architecture-all-level-expansion-0134",
+    "built-in-art-architecture-all-level-expansion-0135",
+    "built-in-art-architecture-all-level-expansion-0136",
+    "built-in-art-architecture-all-level-expansion-0137",
+    "built-in-art-architecture-all-level-expansion-0138",
+    "built-in-art-architecture-all-level-expansion-0139",
+    "built-in-art-architecture-all-level-expansion-0140",
+    "built-in-art-architecture-all-level-expansion-0141",
+    "built-in-art-architecture-all-level-expansion-0142",
+    "built-in-art-architecture-all-level-expansion-0143",
+    "built-in-art-architecture-all-level-expansion-0144",
+    "built-in-art-architecture-all-level-expansion-0145",
+    "built-in-art-architecture-all-level-expansion-0146",
+    "built-in-art-architecture-all-level-expansion-0147",
+    "built-in-art-architecture-all-level-expansion-0148",
+    "built-in-art-architecture-all-level-expansion-0149",
+    "built-in-art-architecture-all-level-expansion-0150",
+    "built-in-art-architecture-all-level-expansion-0151",
+    "built-in-art-architecture-all-level-expansion-0152",
+    "built-in-art-architecture-all-level-expansion-0153",
+    "built-in-art-architecture-all-level-expansion-0154",
+    "built-in-art-architecture-all-level-expansion-0155",
+    "built-in-art-architecture-all-level-expansion-0156",
+    "built-in-art-architecture-all-level-expansion-0157",
+    "built-in-art-architecture-all-level-expansion-0158",
+    "built-in-art-architecture-all-level-expansion-0159",
+    "built-in-art-architecture-all-level-expansion-0160",
+    "built-in-art-architecture-all-level-expansion-0161",
+    "built-in-art-architecture-all-level-expansion-0162",
+    "built-in-art-architecture-all-level-expansion-0163",
+    "built-in-art-architecture-all-level-expansion-0164",
+    "built-in-art-architecture-all-level-expansion-0165",
+    "built-in-art-architecture-all-level-expansion-0166",
+    "built-in-art-architecture-all-level-expansion-0167",
+    "built-in-art-architecture-all-level-expansion-0168",
+    "built-in-art-architecture-all-level-expansion-0169",
+    "built-in-art-architecture-all-level-expansion-0170",
+    "built-in-art-architecture-all-level-expansion-0171",
+    "built-in-art-architecture-all-level-expansion-0172",
+    "built-in-art-architecture-all-level-expansion-0173",
+    "built-in-art-architecture-all-level-expansion-0174",
+    "built-in-art-architecture-all-level-expansion-0175",
+    "built-in-art-architecture-all-level-expansion-0176",
+    "built-in-art-architecture-all-level-expansion-0177",
+    "built-in-art-architecture-all-level-expansion-0178",
+    "built-in-art-architecture-all-level-expansion-0179",
+    "built-in-art-architecture-all-level-expansion-0180",
+    "built-in-art-architecture-all-level-expansion-0181",
+    "built-in-art-architecture-all-level-expansion-0182",
+    "built-in-art-architecture-all-level-expansion-0183",
+    "built-in-art-architecture-all-level-expansion-0184",
+    "built-in-art-architecture-all-level-expansion-0185",
+    "built-in-art-architecture-all-level-expansion-0186",
+    "built-in-art-architecture-all-level-expansion-0187",
+    "built-in-art-architecture-all-level-expansion-0188",
+    "built-in-art-architecture-all-level-expansion-0189",
+    "built-in-art-architecture-all-level-expansion-0190",
+    "built-in-art-architecture-all-level-expansion-0191",
+    "built-in-art-architecture-all-level-expansion-0192",
+    "built-in-art-architecture-all-level-expansion-0193",
+    "built-in-art-architecture-all-level-expansion-0194",
+    "built-in-art-architecture-all-level-expansion-0195",
+    "built-in-art-architecture-all-level-expansion-0196",
+    "built-in-art-architecture-all-level-expansion-0197",
+    "built-in-art-architecture-all-level-expansion-0198",
+    "built-in-art-architecture-all-level-expansion-0199",
+    "built-in-art-architecture-all-level-expansion-0200",
+    "built-in-art-architecture-all-level-expansion-0201",
+    "built-in-art-architecture-all-level-expansion-0202",
+    "built-in-art-architecture-all-level-expansion-0203",
+    "built-in-art-architecture-all-level-expansion-0204",
+    "built-in-art-architecture-all-level-expansion-0205",
+    "built-in-art-architecture-all-level-expansion-0206",
+    "built-in-art-architecture-all-level-expansion-0207",
+    "built-in-art-architecture-all-level-expansion-0208",
+    "built-in-art-architecture-all-level-expansion-0209",
+    "built-in-art-architecture-all-level-expansion-0210",
+    "built-in-art-architecture-all-level-expansion-0211",
+    "built-in-art-architecture-all-level-expansion-0212",
+    "built-in-art-architecture-all-level-expansion-0213",
+    "built-in-art-architecture-all-level-expansion-0214",
+    "built-in-art-architecture-all-level-expansion-0215",
+    "built-in-art-architecture-all-level-expansion-0216",
+    "built-in-art-architecture-all-level-expansion-0217",
+    "built-in-art-architecture-all-level-expansion-0218",
+    "built-in-art-architecture-all-level-expansion-0219",
+    "built-in-art-architecture-all-level-expansion-0220",
+    "built-in-art-architecture-all-level-expansion-0221",
+    "built-in-art-architecture-all-level-expansion-0222",
+    "built-in-art-architecture-all-level-expansion-0223",
+    "built-in-art-architecture-all-level-expansion-0224",
+    "built-in-art-architecture-all-level-expansion-0225",
+    "built-in-art-architecture-all-level-expansion-0226",
+    "built-in-art-architecture-all-level-expansion-0227",
+    "built-in-art-architecture-all-level-expansion-0228",
+    "built-in-art-architecture-all-level-expansion-0229",
+    "built-in-art-architecture-all-level-expansion-0230",
+    "built-in-art-architecture-all-level-expansion-0231",
+    "built-in-art-architecture-all-level-expansion-0232",
+    "built-in-art-architecture-all-level-expansion-0233",
+    "built-in-art-architecture-all-level-expansion-0234",
+    "built-in-art-architecture-all-level-expansion-0235",
+    "built-in-art-architecture-all-level-expansion-0236",
+    "built-in-art-architecture-all-level-expansion-0237",
+    "built-in-art-architecture-all-level-expansion-0238",
+    "built-in-art-architecture-all-level-expansion-0239",
+    "built-in-art-architecture-all-level-expansion-0240",
+    "built-in-art-architecture-all-level-expansion-0241",
+    "built-in-art-architecture-all-level-expansion-0242",
+    "built-in-art-architecture-all-level-expansion-0243",
+    "built-in-art-architecture-all-level-expansion-0244",
+    "built-in-art-architecture-all-level-expansion-0245",
+    "built-in-art-architecture-all-level-expansion-0246",
+    "built-in-art-architecture-all-level-expansion-0247",
+    "built-in-art-architecture-all-level-expansion-0248",
+    "built-in-art-architecture-all-level-expansion-0249",
+    "built-in-art-architecture-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Expansion Reviewer A",
+    "reviewedAt": "2026-10-09T11:48:39Z",
+    "decision": "approved",
+    "notes": "Independently read all 250 English/Estonian assertions and actual supporting passages in the cached full articles, followed up every insufficient passage, and read additional official museum, monument, library and tourism sources. Exact supporting passages are bound in each question and research-a/art-final-source-read-log.json. Wrong disambiguation/irrelevant citations were replaced; corrected coffee warehouse support comes from the German Kaispeicher A article."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Expansion Reviewer A",
+    "reviewedAt": "2026-10-09T11:48:39Z",
+    "decision": "approved",
+    "notes": "All 250 questions and 50 category themes read for recognizable subjects, broad coherence, fixed difficulty/tier order, five distinct queried subjects, answer ambiguity and leaks. All existing/new collision candidates were assessed, with final changed-fact candidates reread. Replaced duplicated underlying facts and repaired ambiguous artwork references and inappropriate clue giveaways."
+  },
+  "translationReview": {
+    "reviewer": "Codex Expansion Reviewer A",
+    "reviewedAt": "2026-10-09T11:48:39Z",
+    "decision": "approved",
+    "notes": "Read all 250 English and Estonian clues, responses, aliases and explanations and all 50 bilingual category titles. Corrected title grammar, feet versus legs, unsupported garden terminology and bishop source. Read each final diagnostic group; zero blocking diagnostics, and specific valid localized-name/inflection/international-name exceptions are recorded individually."
+  },
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0001:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which US, Washington's National Mall”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist USA presidenti austab istuv marmorkuju Washingtoni National Malli memoriaalis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0001:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Lincoln Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Lincolni memoriaalis asub istuv Abraham Lincolni kuju.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0001:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Abraham Lincoln” correctly remain “Abraham Lincoln” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0002:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Washingtoni monument austab George Washingtonit.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0002:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “George Washington” correctly remain “George Washington” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0003:accepted_variants_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Nelson; Admiral Nelson” correctly remain “Nelson; admiral Nelson” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0003:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which British, London's Trafalgar Square”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Briti mereväejuht seisab Londoni Trafalgari väljaku samba tipus?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0003:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Nelsoni sammas mälestab Trafalgari lahingus hukkunud admiral Horatio Nelsonit.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0003:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Horatio Nelson” correctly remain “Horatio Nelson” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0004:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Statue”: its correctly localized or inflected Estonian form is present in the reviewed field “Indias Gujaratis asuv Ühtsuse kuju kujutab Vallabhbhai Patelit.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0005:clue_en",
+      "reason": "Independent bilingual review of detected wording “Queen Victoria's”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline prints oli kuninganna Victoria abikaasa, keda mälestab varikatusega monument Kensington Gardensis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0005:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Queen Victoria, Albert Memorial, Prince Albert”: its correctly localized or inflected Estonian form is present in the reviewed field “Kuninganna Victoria tellis Alberti memoriaali oma abikaasa prints Alberti mälestuseks.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0005:response_en",
+      "reason": "Independent bilingual review of detected wording “Prince Albert”: its correctly localized or inflected Estonian form is present in the reviewed field “prints Albert”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0010:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Indian”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline India kaunistuskunst loob põrandale mustreid värvilisest pulbrist, riisist või õielehtedest?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0013:clue_en",
+      "reason": "Independent bilingual review of detected wording “Frida Kahlo's Blue House”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises riigis asus Frida Kahlo Sinine maja Coyoacánis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0013:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Blue House, Mexico City”: its correctly localized or inflected Estonian form is present in the reviewed field “Frida Kahlo elas Mexico linna Coyoacáni Sinises majas.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0016:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Catania's Fontana”: its correctly localized or inflected Estonian form is present in the reviewed field “Catania Fontana dell'Elefante keskmes on mustast laavakivist elevant.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0018:clue_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column, Trafalgar Square”: its correctly localized or inflected Estonian form is present in the reviewed field “Millised suured kaslased ümbritsevad Trafalgari väljakul Nelsoni samba alust?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0018:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Nelsoni samba jalamil seisab neli Edwin Landseeri loodud pronkslõvi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0019:clue_en",
+      "reason": "Independent bilingual review of detected wording “Florence's Il Porcellino”: its correctly localized or inflected Estonian form is present in the reviewed field “Külastajad hõõruvad Firenzes Il Porcellino purskkaevukuju läikivat kärssa. Millist metsikut siga see kujutab?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0020:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Bologna”: its correctly localized or inflected Estonian form is present in the reviewed field “Bologna purskkaevu keskne jumal hoiab kolmeharulist relva. Kuidas seda relva nimetatakse?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0020:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Fountain”: its correctly localized or inflected Estonian form is present in the reviewed field “Bologna Neptuni purskkaev kujutab Neptunit kolmhargiga.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0021:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Man, Golden Helmet”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kuldkiivriga mees“ kujutab eakat meest särava kiivriga.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0022:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Renoir's”: its correctly localized or inflected Estonian form is present in the reviewed field “Milliseid esemeid hoiavad inimesed Renoir' rahvarohkel Pariisi tänavastseenil vihma tõrjumiseks pea kohal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0022:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Renoir's The Umbrellas”: its correctly localized or inflected Estonian form is present in the reviewed field “Renoir' „Vihmavarjud“ kujutab vihmavarjudega inimesi Pariisi tänaval.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0023:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Fragonard's”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline jalats lendab Fragonard'i kiigel oleva naise maalil tema jalast?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0023:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Fragonard's The Swing”: its correctly localized or inflected Estonian form is present in the reviewed field “Fragonard'i „Kiigel“ lööb noor naine kinga õhku.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0024:clue_en",
+      "reason": "Independent bilingual review of detected wording “In David's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist tseremoniaalset peaehet tõstab keiser David' Napoleonit kroonimas kujutaval maalil Joséphine'i kohale?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0025:clue_en",
+      "reason": "Independent bilingual review of detected wording “Adele Bloch-Bauer's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist ehet kannab Adele Bloch-Bauer Klimti portreel kaelas, nagu kannab ka tema Judith?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0025:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Klimt's Judith”: its correctly localized or inflected Estonian form is present in the reviewed field “Adele kannab kaela ümber kalliskividega kaelakeed, sama ehet nagu Klimti Judith.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0026:clue_en",
+      "reason": "Independent bilingual review of detected wording “Julius II's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist piibellikku seaduseandjat kujutab Michelangelo sarvedega kuju Julius II hauale?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0026:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Michelangelo's Moses”: its correctly localized or inflected Estonian form is present in the reviewed field “Michelangelo „Mooses“ kujutab piibli prohvet Moosest sarvedega.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0027:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Rome”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Rooma muuseumikompleks hoiab kuulsat Laokooni skulptuurirühma paavsti kodu kõrval?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0027:explanation_en",
+      "reason": "Independent bilingual review of detected wording “His Sons, Vatican Museums”: its correctly localized or inflected Estonian form is present in the reviewed field “„Laokoon ja tema pojad“ on eksponeeritud Vatikani muuseumides.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0027:response_en",
+      "reason": "Independent bilingual review of detected wording “Vatican Museums”: its correctly localized or inflected Estonian form is present in the reviewed field “Vatikani muuseumid”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0028:clue_en",
+      "reason": "Independent bilingual review of detected wording “Capitoline Wolf”: its correctly localized or inflected Estonian form is present in the reviewed field “Kapitooliumi hundi all olevad kaks imikufiguuri lisati 15. sajandi lõpus. Milline kunstiajastu see oli?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0029:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Statue”: its correctly localized or inflected Estonian form is present in the reviewed field “Olümpia Zeusi kuju kujutas Zeusi istumas kaunistatud troonil.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0031:clue_en",
+      "reason": "Independent bilingual review of detected wording “Jean Tinguely's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises riigis saavad Baseli külastajad näha Jean Tinguely masinatega purskkaevu?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0032:clue_en",
+      "reason": "Independent bilingual review of detected wording “Buckingham Fountain, Lake Michigan”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises Michigani järve äärses USA linnas asub Grant Parki Buckinghami purskkaev?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0032:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Buckingham Fountain, Chicago's Grant Park”: its correctly localized or inflected Estonian form is present in the reviewed field “Buckinghami purskkaev asub Chicago Grant Parkis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0033:clue_en",
+      "reason": "Independent bilingual review of detected wording “King Fahd's Fountain, Red Sea”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises riigis kasutab Jeddah's asuv kuningas Fahdi purskkaev Punasest merest võetud vett?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0033:explanation_en",
+      "reason": "Independent bilingual review of detected wording “King Fahd's Fountain, Saudi Arabia, Red Sea”: its correctly localized or inflected Estonian form is present in the reviewed field “Kuningas Fahdi purskkaev asub Saudi Araabias Jeddah's ja kasutab Punase mere soolast vett.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0033:response_en",
+      "reason": "Independent bilingual review of detected wording “Saudi Arabia”: its correctly localized or inflected Estonian form is present in the reviewed field “Saudi Araabia”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0034:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Fountains”: its correctly localized or inflected Estonian form is present in the reviewed field “Bellagio purskkaevud asuvad Las Vegases Bellagio kuurordi ees.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0034:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Las Vegas” correctly remain “Las Vegas” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0035:clue_en",
+      "reason": "Independent bilingual review of detected wording “Rome's Spanish Steps”: its correctly localized or inflected Estonian form is present in the reviewed field “Rooma Hispaania treppide jalamil olev purskkaev meenutab poolenisti uppunud alust. Millist sõiduvahendit see jäljendab?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0035:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Fontana”: its correctly localized or inflected Estonian form is present in the reviewed field “Fontana della Barcaccia on paadikujuline purskkaev.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0036:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Cézanne's”: its correctly localized or inflected Estonian form is present in the reviewed field “Mida hoiavad Cézanne'i Provence'i istuvate meeste sarja tegelased oma mängu ajal käes?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0036:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Cézanne's Card Players”: its correctly localized or inflected Estonian form is present in the reviewed field “Cézanne'i „Kaardimängijad“ kujutab kaardimängule keskendunud mehi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0037:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Gleaners”: its correctly localized or inflected Estonian form is present in the reviewed field “„Viljakorjajad“ kujutab naisi, kes korjavad pärast saagikoristust maha jäänud nisukõrsi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0038:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Mary Cassatt's The Child's Bath”: its correctly localized or inflected Estonian form is present in the reviewed field “Milliseid lapse kehaosi pestakse Mary Cassatti maalil „Lapse vann“ kausis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0038:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Child's Bath”: its correctly localized or inflected Estonian form is present in the reviewed field “„Lapse vann“ kujutab naist lapse jalgu pesemas.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0039:clue_en",
+      "reason": "Independent bilingual review of detected wording “Gustave Caillebotte's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist pinda kraabivad kolm põlvitavat töömeest Gustave Caillebotte'i korteriremonti kujutaval maalil?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0040:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Eakins's The Chess Players”: its correctly localized or inflected Estonian form is present in the reviewed field “Eakinsi „Malemängijad“ kujutab kaht maletavat meest ja kolmandat pealtvaatajat.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0041:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Stockholm”: its correctly localized or inflected Estonian form is present in the reviewed field “Stockholmi Vasa muuseumi keskmes on merest välja toodud seilamiseks mõeldud objekt. Mis see on?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0041:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Vasa Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Vasa muuseum eksponeerib 17. sajandi sõjalaeva Vasat.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0043:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Japanese”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Jaapani animatsioonistuudio muuseum asub Tokyo keskusest läänes Mitakas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0043:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Ghibli Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Ghibli muuseum tutvustab Studio Ghibli loomingut.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0043:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Studio Ghibli” correctly remain “Studio Ghibli” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0045:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Croatian”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises Horvaatia linnas asub lõppenud armusuhetest jäänud esemetele pühendatud muuseum?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0045:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Museum, Broken Relationships”: its correctly localized or inflected Estonian form is present in the reviewed field “Purunenud suhete muuseum asub Horvaatias Zagrebis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0046:explanation_en",
+      "reason": "Independent bilingual review of detected wording “South African”: its correctly localized or inflected Estonian form is present in the reviewed field “Union Buildingsi juures olev kuju kujutab Lõuna-Aafrika endist presidenti Nelson Mandelat.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0046:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Nelson Mandela” correctly remain “Nelson Mandela” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0047:clue_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline lahing annab nime Londoni väljakule, kus seisab Nelsoni sammas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0047:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column, Trafalgar Square”: its correctly localized or inflected Estonian form is present in the reviewed field “Nelsoni sammas seisab Trafalgari lahingu järgi nimetatud Trafalgari väljakul.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0048:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Parliament Square”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist India vägivallatu vastupanu pooldajat austab 2015. aastal Londoni Parlamendiväljakul avatud kuju?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0048:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Parliament Square”: its correctly localized or inflected Estonian form is present in the reviewed field “2015. aastal Parlamendiväljakul avatud skulptuur kujutab Mahatma Gandhit.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0048:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Mahatma Gandhi” correctly remain “Mahatma Gandhi” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0049:accepted_variants_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Gautama Buddha” correctly remain “Gautama Buddha” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0049:clue_en",
+      "reason": "Independent bilingual review of detected wording “Hong Kong's Lantau Island”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist usuõpetajat kujutab Hongkongi Lantau saare Ngong Pingi hiiglaslik istuv pronkskuju?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0049:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Tian Tan Buddha, Lantau Island”: its correctly localized or inflected Estonian form is present in the reviewed field “Tian Tan Buddha on Lantau saarel asuv suur pronksist Buddha kuju.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0050:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Indigenous Lakota, Mount Rushmore”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist lakotade põlisrahva juhti kujutab Rushmore'i mäe lähedal kaljusse raiutav memoriaal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0050:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Crazy Horse Memorial, Crazy Horse”: its correctly localized or inflected Estonian form is present in the reviewed field “Hullu Hobuse memoriaal kujutab lakotade juhti Hullu Hobust.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0050:response_en",
+      "reason": "Independent bilingual review of detected wording “Crazy Horse”: its correctly localized or inflected Estonian form is present in the reviewed field “Hull Hobune”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0061:clue_en",
+      "reason": "Independent bilingual review of detected wording “Mount Rushmore”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest kõvast täpilisest kivimist on raiutud Rushmore'i mäe presidendinäod?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0061:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Mount Rushmore”: its correctly localized or inflected Estonian form is present in the reviewed field “Rushmore'i mäe skulptuur on raiutud graniiti.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0062:clue_en",
+      "reason": "Independent bilingual review of detected wording “Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist Vana-Egiptuse monumendivormi, kõrget ahenevat sammast püramiidse tipuga, kasutati Washingtoni monumendis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0062:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Washingtoni monument on kivist obelisk.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0063:clue_en",
+      "reason": "Independent bilingual review of detected wording “St Louis's Gateway Arch”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline metallisulam annab St. Louisi Gateway Archile korrosioonikindla väliskesta?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0063:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Gateway Arch”: its correctly localized or inflected Estonian form is present in the reviewed field “Gateway Archi välispind on roostevabast terasest.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0064:clue_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest vasepõhisest metallisulamist tehti Nelsoni samba lõvikujud?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0064:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Nelsoni samba jalami neli lõvi on pronkskujud.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0065:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Greek, Lincoln Memorial's”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline lihtsate kapiteelidega Kreeka sambastiil valiti Lincolni memoriaali välisküljele?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0065:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Lincoln Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Lincolni memoriaali välisküljel on dooria sambad.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0072:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Dutch, The Style”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Mondriani ja Theo van Doesburgiga seotud Hollandi kunstivoolu nimi tähendab „Stiil“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0072:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Style”: its correctly localized or inflected Estonian form is present in the reviewed field “De Stijl oli Hollandi kunstivool, mille nimi tähendab „Stiil“.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0072:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “De Stijl” correctly remain “De Stijl” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0074:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which German”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Saksa kunsti- ja disainikooli õpetajate hulka kuulusid nii Paul Klee kui ka Wassily Kandinsky?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0074:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Both Paul Klee”: its correctly localized or inflected Estonian form is present in the reviewed field “Nii Paul Klee kui ka Wassily Kandinsky õpetasid Bauhausis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0075:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Vienna Secession”: its correctly localized or inflected Estonian form is present in the reviewed field “Gustav Klimt oli Viini Secessioni asutajaliige.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0082:clue_en",
+      "reason": "Independent bilingual review of detected wording “Berthe Morisot's The Cradle”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline sugulane oli Berthe Morisot' „Hällil“ imikut jälgiv naine?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0082:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Cradle”: its correctly localized or inflected Estonian form is present in the reviewed field “„Häll“ kujutab Morisot' õde Edma Pontilloni ja tema tütart Blanche'i.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0083:clue_en",
+      "reason": "Independent bilingual review of detected wording “Cézanne's Madame Cézanne, Red Armchair”: its correctly localized or inflected Estonian form is present in the reviewed field “Kelleks sai hiljem Cézanne'ile Hortense Fiquet, keda kujutab tema maal „Madame Cézanne punases tugitoolis“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0086:clue_en",
+      "reason": "Independent bilingual review of detected wording “Jefferson Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Vana-Rooma kupliga tempel aitas inspireerida Jeffersoni memoriaali kavandit?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0086:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Jefferson Memorial's”: its correctly localized or inflected Estonian form is present in the reviewed field “Jeffersoni memoriaali kavand lähtub Rooma Pantheonist.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0087:clue_en",
+      "reason": "Independent bilingual review of detected wording “Lincoln Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise muistse tsivilisatsiooni templile tugines Henry Bacon Lincolni memoriaali kavandades?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0087:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Lincoln Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Bacon kavandas Lincolni memoriaali Vana-Kreeka templi kujulisena.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0088:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Washingtoni monumendi kivimüüritises on nähtav värvipiir. Miks kasutati kaht erinevat kivivarustust?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0089:clue_en",
+      "reason": "Independent bilingual review of detected wording “Nelson's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist tüüpi vallutatud Prantsuse sõjalisi esemeid kasutati osaliselt Nelsoni samba aluse pronksreljeefide valamiseks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0090:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Motherland Calls”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Louvre'is asuv tiivuline Vana-Kreeka skulptuur aitas inspireerida „Kodumaa kutsub“ poosi?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0090:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Motherland Calls, Winged Victory”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kodumaa kutsub“ sai inspiratsiooni Samothrake Nikest.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0090:response_en",
+      "reason": "Independent bilingual review of detected wording “Winged Victory”: its correctly localized or inflected Estonian form is present in the reviewed field “Samothrake Nike”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0091:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Titian's Venus”: its correctly localized or inflected Estonian form is present in the reviewed field “Manet asendas Tiziani „Urbino Venuse“ koera „Olympial“ musta kassiga.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0092:clue_en",
+      "reason": "Independent bilingual review of detected wording “Holbein's The Ambassadors”: its correctly localized or inflected Estonian form is present in the reviewed field “Holbeini „Saadikute“ alumisel riiulil oleval muusikariistal on katkenud keel. Mis pill see on?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0092:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Ambassadors”: its correctly localized or inflected Estonian form is present in the reviewed field “„Saadikutel“ on katkenud keelega lauto, mida tõlgendatakse sageli lahkheli märgina.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0093:clue_en",
+      "reason": "Independent bilingual review of detected wording “Arnolfini Portrait”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise abieluomadusega seostatakse tavapäraselt Arnolfini portree paari kõrval olevat väikest koera?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0093:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Arnolfini Portrait”: its correctly localized or inflected Estonian form is present in the reviewed field “Arnolfini portree koera tõlgendatakse sageli truuduse sümbolina.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0094:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Spanish, Goya's The Third”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Hispaania linna vastupanu Napoleonile inspireeris Goya maali „Kolmas mai 1808“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0095:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Roman, Botticelli's Primavera”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Rooma jumalanna seisab Botticelli „Kevade“ keskosa lähedal ja valitseb aiastseeni üle?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0095:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Botticelli's Primavera”: its correctly localized or inflected Estonian form is present in the reviewed field “Venus seisab Botticelli „Kevade“ keskosa lähedal.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0096:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Greek”: its correctly localized or inflected Estonian form is present in the reviewed field “Kreeka pronksist Diskobolost tuntakse Rooma koopiate, sealhulgas elusuuruste marmorversioonide kaudu.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0097:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Italian”: its correctly localized or inflected Estonian form is present in the reviewed field “Cellini pronksist Perseus seisab Loggia dei Lanzis Palazzo Vecchio kõrval. Milline Itaalia linn on selle kodu?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0097:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Cellini's Perseus, Florence's Loggia”: its correctly localized or inflected Estonian form is present in the reviewed field “Cellini Perseus on eksponeeritud Firenze Loggia dei Lanzis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0098:clue_en",
+      "reason": "Independent bilingual review of detected wording “Natural History”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Vana-Rooma kirjanik kiitis Laokooni rühma oma „Loodusloos“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0098:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Natural History”: its correctly localized or inflected Estonian form is present in the reviewed field “Plinius Vanem kirjeldas Laokooni skulptuurirühma oma „Loodusloos“.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0099:clue_en",
+      "reason": "Independent bilingual review of detected wording “Capitoline Wolf”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest metallisulamist on Kapitooliumi hundi keha, Rooma skulptuur, mille all on kaks imikut?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0099:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Capitoline Wolf”: its correctly localized or inflected Estonian form is present in the reviewed field “Kapitooliumi hunt on pronksskulptuur; imikufiguurid lisati hiljem.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0100:clue_en",
+      "reason": "Independent bilingual review of detected wording “National Archaeological Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Lõuna-Itaalia linna riiklikus arheoloogiamuuseumis asub Farnese Atlas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0100:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Farnese Atlas, National Archaeological Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Farnese Atlas asub Napoli riiklikus arheoloogiamuuseumis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0101:clue_en",
+      "reason": "Independent bilingual review of detected wording “Trevi Fountain”: its correctly localized or inflected Estonian form is present in the reviewed field “Trevi purskkaevu keskfiguuri peetakse sageli Neptuniks. Milline maailma ümbritseva ookeani kehastus see tegelikult on?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0101:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Trevi Fountain's”: its correctly localized or inflected Estonian form is present in the reviewed field “Trevi purskkaevu keskfiguur on Okeanos, mitte Neptun.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0102:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Vittorio Emanuele II”: its correctly localized or inflected Estonian form is present in the reviewed field “Victor Emmanuel II”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0102:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Vittoriano, Victor Emmanuel II”: its correctly localized or inflected Estonian form is present in the reviewed field “Vittoriano rajati ühendatud Itaalia esimese kuninga Vittorio Emanuele II auks.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0102:response_en",
+      "reason": "Independent bilingual review of detected wording “Victor Emmanuel II”: its correctly localized or inflected Estonian form is present in the reviewed field “Vittorio Emanuele II”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0103:clue_en",
+      "reason": "Independent bilingual review of detected wording “Trajan's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise tänapäeval suuresti Rumeenias asuva piirkonna muistse rahva vastu peetud sõjakäike kujutab Traianuse sammas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0103:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Trajan's Column, Dacian Wars”: its correctly localized or inflected Estonian form is present in the reviewed field “Traianuse samba reljeefid meenutavad tema Daakia sõdu.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0104:clue_en",
+      "reason": "Independent bilingual review of detected wording “Berlin's Victory Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise 19. sajandi Saksa kuningriigi võite Taani, Austria ja Prantsusmaa üle mälestab Berliini võidusammas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0104:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Berlin's Victory Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Berliini võidusammas meenutab Preisimaa sõjalisi võite.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0105:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Pope Pius IV”: its correctly localized or inflected Estonian form is present in the reviewed field “paavst Pius IV; Pius IV”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0105:accepted_variants_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Pope Pius IV; Pius IV” correctly remain “paavst Pius IV; Pius IV” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0105:clue_en",
+      "reason": "Independent bilingual review of detected wording “Bologna's Neptune Fountain”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise usulise ametikandja valimist tähistati Bologna Neptuni purskkaevu tellimisega?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0105:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Pope Pius IV”: its correctly localized or inflected Estonian form is present in the reviewed field “Purskkaev tähistas paavst Pius IV valimist.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0106:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which North African”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Põhja-Aafrika riik inspireeris Matisse'i kuldkalamotiivi pärast Tangeri külastamist?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0107:clue_en",
+      "reason": "Independent bilingual review of detected wording “Dürer's Young Hare”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline arhitektuurielement peegeldub Düreri noore jänese silmas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0107:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Dürer's Young Hare”: its correctly localized or inflected Estonian form is present in the reviewed field “Düreri noore jänese silmas on näha aknaraami peegeldus.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0108:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which London, Fragonard's The Swing”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisele Londoni kollektsioonile kuulub Fragonard'i „Kiik“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0108:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Swing, Wallace Collection”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kiik“ asub Londoni Wallace'i kollektsioonis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0108:response_en",
+      "reason": "Independent bilingual review of detected wording “Wallace Collection”: its correctly localized or inflected Estonian form is present in the reviewed field “Wallace'i kollektsioon”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0109:clue_en",
+      "reason": "Independent bilingual review of detected wording “Bruegel's Tower”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Vana-Rooma amfiteater inspireeris Bruegeli Paabeli torni kaari?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0109:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Rome's Colosseum”: its correctly localized or inflected Estonian form is present in the reviewed field “Bruegeli maalitud torn meenutab teadlikult Rooma Colosseumi arhitektuuri.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0110:clue_en",
+      "reason": "Independent bilingual review of detected wording “Millet's The Gleaners”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisele ühiskonnarühmale antud monumentaalne tähtsus häiris jõukaid vaatajaid Millet' maalil „Viljakorjajad“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0110:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Gleaners”: its correctly localized or inflected Estonian form is present in the reviewed field “„Viljakorjajad“ annab tähtsa koha vaestele maatöölistele, mis häiris kõrgema klassi vaatajaid.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0111:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Young Hare”: its correctly localized or inflected Estonian form is present in the reviewed field “„Noor jänes“ asub Viini Albertinas.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0112:clue_en",
+      "reason": "Independent bilingual review of detected wording “Pushkin Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Venemaa linna Puškini muuseumile kuulub Matisse'i 1912. aasta „Kuldkalad“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0112:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Pushkin Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kuldkalad“ asub Moskva Puškini muuseumis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0113:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Gleaners”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises Euroopa pealinnas saavad külastajad näha Millet' maali „Viljakorjajad“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0113:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Gleaners”: its correctly localized or inflected Estonian form is present in the reviewed field “„Viljakorjajad“ kuulub Pariisi Musée d'Orsay kogusse.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0114:clue_en",
+      "reason": "Independent bilingual review of detected wording “Cézanne's Card Players”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises USA linnas asuv Barnes Foundation hoiab Cézanne'i „Kaardimängijate“ suurimat versiooni?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0114:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Card Players”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kaardimängijate“ suurim maal asub Philadelphia Barnes Foundationis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0115:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Chess Players, New York's Metropolitan Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “„Malemängijad“ asub New Yorgi Metropolitan Museum of Artis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0115:response_en",
+      "reason": "Independent bilingual review of detected wording “New York City”: its correctly localized or inflected Estonian form is present in the reviewed field “New York”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0116:clue_en",
+      "reason": "Independent bilingual review of detected wording “Mount Rushmore's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise lõhkeainega eemaldati suuri kivikoguseid enne Rushmore'i nägude peent väljaraiumist?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0116:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Mount Rushmore”: its correctly localized or inflected Estonian form is present in the reviewed field “Rushmore'i mäe raiumisel kasutati kivi eemaldamiseks dünamiiti.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0117:accepted_variants_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Antony Gormley” correctly remain “Antony Gormley” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0118:clue_en",
+      "reason": "Independent bilingual review of detected wording “Vera Mukhina's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist kommunistlike embleemide paari tõstavad Vera Muhhina skulptuuri tööline ja kolhoositar?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0118:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Kolkhoz Woman”: its correctly localized or inflected Estonian form is present in the reviewed field “„Tööline ja kolhoositar“ ühendab kahe figuuri käes oleva vasara ja sirbi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0119:clue_en",
+      "reason": "Independent bilingual review of detected wording “Helsinki's Havis Amanda”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise töölistega seotud kevadpüha eelõhtul panevad üliõpilased Helsingi Havis Amandale mütsi pähe?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0119:explanation_en",
+      "reason": "Independent bilingual review of detected wording “May Day”: its correctly localized or inflected Estonian form is present in the reviewed field “Üliõpilased panevad Havis Amandale mütsi pähe maipüha eelõhtul Vappu pidustuste ajal.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0119:response_en",
+      "reason": "Independent bilingual review of detected wording “May Day”: its correctly localized or inflected Estonian form is present in the reviewed field “maipüha”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0120:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Mount Etna”: its correctly localized or inflected Estonian form is present in the reviewed field “Catania ja selle laavakivist elevant on seotud lähedase Etnaga.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0120:response_en",
+      "reason": "Independent bilingual review of detected wording “Mount Etna”: its correctly localized or inflected Estonian form is present in the reviewed field “Etna”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0121:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Angelus”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise usulise tegevuse jaoks peatuvad Millet' talupojad oma põllul maalil „Angelus“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0121:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Angelus”: its correctly localized or inflected Estonian form is present in the reviewed field “„Angelus“ kujutab talupoegi tööd katkestamas Angeluse palveks.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0122:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which US, Andrew Wyeth's Christina's World”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline USA osariik on Andrew Wyethi „Christina maailma“ maaelu taustaks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0122:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Olson House, Christina's World”: its correctly localized or inflected Estonian form is present in the reviewed field “„Christina maailmas“ kujutatud Olsoni maja asub Maine'i osariigis Cushingis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0123:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The River Stour, The Hay Wain”: its correctly localized or inflected Estonian form is present in the reviewed field “„Heinavankri“ Stouri jõgi eraldab Suffolki ja Essexi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0124:clue_en",
+      "reason": "Independent bilingual review of detected wording “Seurat's Parisians”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise jõe ääres veedavad Seurat' pariislased oma pühapäeva pärastlõuna?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0125:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Hopper's Nighthawks”: its correctly localized or inflected Estonian form is present in the reviewed field “Hopperi „Öiste hulkurite“ söögikohal pole nähtavat sissepääsuust.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0126:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which British”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Briti arhitekt kavandas 1990. aastatel Reichstagile lisatud klaaskupli?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0126:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Norman Foster” correctly remain “Norman Foster” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0127:clue_en",
+      "reason": "Independent bilingual review of detected wording “Hamburg's Elbphilharmonie”: its correctly localized or inflected Estonian form is present in the reviewed field “Hamburgi Elbphilharmonie seisab endisel laohoonel, kus hoiti kakaod ja millise tuttava joogi ube?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0127:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Kaispeicher”: its correctly localized or inflected Estonian form is present in the reviewed field “Elbphilharmonie all asuv Kaispeicher A ladu hoidis muu hulgas kakaod ja kohvi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0128:clue_en",
+      "reason": "Independent bilingual review of detected wording “Moshe Safdie's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest Montreali ülikoolist pärines Moshe Safdie arhitektuurialane lõputöö, millest kasvas välja Habitat 67?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0128:explanation_en",
+      "reason": "Independent bilingual review of detected wording “McGill University”: its correctly localized or inflected Estonian form is present in the reviewed field “Habitat 67 sai alguse Safdie arhitektuurialasest lõputööst McGilli ülikoolis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0128:response_en",
+      "reason": "Independent bilingual review of detected wording “McGill University”: its correctly localized or inflected Estonian form is present in the reviewed field “McGilli ülikool”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0129:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which European, New York's High Line”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Euroopa linna Promenade Plantée oli New Yorgi High Line'i kõrgel kulgeva pargi eeskujuks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0129:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The High Line's, Paris's Promenade Plantée”: its correctly localized or inflected Estonian form is present in the reviewed field “High Line'i toetajad pakkusid eeskujuks Pariisi kõrgel kulgevat Promenade Plantée parki.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0130:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Louvre”: its correctly localized or inflected Estonian form is present in the reviewed field “Louvre sai alguse keskaegsest kindlusest.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0131:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Colossus”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist päikesega seotud Kreeka jumalat kujutas Rhodose koloss?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0131:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Colossus”: its correctly localized or inflected Estonian form is present in the reviewed field “Rhodose koloss kujutas päikesejumal Heliost.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0133:clue_en",
+      "reason": "Independent bilingual review of detected wording “Kamakura's Great Buddha”: its correctly localized or inflected Estonian form is present in the reviewed field “Miks on Kamakura Suur Buddha nüüd õues: milline merekatastroof hävitas seda ümbritsenud saali 1498. aastal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0133:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Kamakura's Great Buddha”: its correctly localized or inflected Estonian form is present in the reviewed field “1498. aasta tsunami hävitas Kamakura Suurt Buddhat ümbritsenud saali.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0134:clue_en",
+      "reason": "Independent bilingual review of detected wording “Easter Island”: its correctly localized or inflected Estonian form is present in the reviewed field “Kuidas nimetatakse punasest skooriast peakatteid, mis asetati mõnele Lihavõttesaare moaile?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0135:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Statue”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise loomset päritolu valge materjaliga ühendati kuld Olümpia Zeusi kujul?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0136:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Walt Disney” correctly remain “Walt Disney” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0138:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Warhol”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Warholi film koosneb pikkadest kaadritest John Giornoga, kes lamab öö läbi suletud silmadega voodis?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0141:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Bauhaus”: its correctly localized or inflected Estonian form is present in the reviewed field “Bauhaus suleti 1933. aastal natsirežiimi surve all.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0142:clue_en",
+      "reason": "Independent bilingual review of detected wording “II, The Expressionist, World War II”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises hiljem Teises maailmasõjas laastatud Saksimaa linnas asutati ekspressionistlik rühmitus Die Brücke?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0144:clue_en",
+      "reason": "Independent bilingual review of detected wording “Augusta Savage's Lift Every Voice”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise muusikariista keelteks muutis Augusta Savage lauljate rühma skulptuuris „Lift Every Voice and Sing“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0145:clue_en",
+      "reason": "Independent bilingual review of detected wording “The French”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Pariisist lõunas asuva ja ka kuningapalee poolest tuntud metsa lähedal töötasid Barbizoni koolkonna Prantsuse maastikumaalijad?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0145:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Barbizon”: its correctly localized or inflected Estonian form is present in the reviewed field “Barbizoni koolkond sai nime Fontainebleau metsa lähedal asuva küla järgi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0146:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Mount Rushmore”: its correctly localized or inflected Estonian form is present in the reviewed field “Rushmore'i mäe figuurid kavandati algselt peast vöökohani.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0147:clue_en",
+      "reason": "Independent bilingual review of detected wording “Peter Eisenman's Berlin”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest moodsast ehitusmaterjalist steeliridu kasutab Peter Eisenmani Berliini memoriaal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0148:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Spanish”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Hispaania diktaatori säilmed eemaldati Langenute orust 2019. aastal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0148:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Francisco Franco's”: its correctly localized or inflected Estonian form is present in the reviewed field “Francisco Franco säilmed kaevati Langenute orus 2019. aastal välja.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0148:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Francisco Franco” correctly remain “Francisco Franco” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0149:clue_en",
+      "reason": "Independent bilingual review of detected wording “Vietnam Veterans Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline arhitekt võitis Vietnami sõja veteranide memoriaali kavandikonkursi veel Yale'i üliõpilasena?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0149:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Maya Lin” correctly remain “Maya Lin” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0150:clue_en",
+      "reason": "Independent bilingual review of detected wording “What German”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Saksa kunstnik alustas Stolpersteine projekti, mis paigutab üksikute ohvrite nimed kõnniteedesse?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0150:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Gunter Demnig” correctly remain “Gunter Demnig” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0151:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Felipe IV”: its correctly localized or inflected Estonian form is present in the reviewed field “Philip IV”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0151:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Spanish”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Hispaania kuningas ja kuninganna on „Las Meninase“ väikeses tagumises peeglis? Nimeta kuningas.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0151:explanation_en",
+      "reason": "Independent bilingual review of detected wording “King Philip IV, Queen Mariana”: its correctly localized or inflected Estonian form is present in the reviewed field “Peegel peegeldab kuningas Felipe IV-t ja kuninganna Austria Marianat.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0151:response_en",
+      "reason": "Independent bilingual review of detected wording “Philip IV”: its correctly localized or inflected Estonian form is present in the reviewed field “Felipe IV”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0152:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Birth”: its correctly localized or inflected Estonian form is present in the reviewed field “Zephyros on „Venuse sünni“ vasakul küljel.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0153:clue_en",
+      "reason": "Independent bilingual review of detected wording “The School, Which Renaissance”: its correctly localized or inflected Estonian form is present in the reviewed field “Musta baretiga noormees vaatab „Ateena kooli“ paremalt servalt vaatajale otsa. Milline renessansimeister kujutas selles rollis iseennast?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0153:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The School”: its correctly localized or inflected Estonian form is present in the reviewed field “Raffael lisas „Ateena kooli“ paremale servale autoportree.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0154:clue_en",
+      "reason": "Independent bilingual review of detected wording “Of Holbein's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist usulist ametit pidas Holbeini kahest saadikust Georges de Selve?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0155:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Impressionist, Manet's Olympia”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline impressionist korraldas korjanduse, mis aitas Prantsuse riigil Manet' „Olympia“ omandada?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0155:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Claude Monet” correctly remain “Claude Monet” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0161:clue_en",
+      "reason": "Independent bilingual review of detected wording “Van Gogh's”: its correctly localized or inflected Estonian form is present in the reviewed field “Mis eesnimi oli Van Goghi nooremal vennal, kunstikaupmehel, kes teda rahaliselt toetas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0164:clue_en",
+      "reason": "Independent bilingual review of detected wording “Artemisia Gentileschi's”: its correctly localized or inflected Estonian form is present in the reviewed field “Mis eesnimi oli Artemisia Gentileschi isal, kunstnikul, kes teda õpetas?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0166:clue_en",
+      "reason": "Independent bilingual review of detected wording “Trajan's Column”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist matustega seotud ülesannet täitis Traianuse sammas lisaks sõjaliste võitude mälestamisele, kui tema tuhk paigutati samba alusesse?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0167:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Chicago, Which Great Lake”: its correctly localized or inflected Estonian form is present in the reviewed field “Chicago purskkaevu merihobused sümboliseerivad nelja piirnevat osariiki. Millist Suurt järve kujutab purskkaev tervikuna?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0167:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Buckingham Fountain, Lake Michigan”: its correctly localized or inflected Estonian form is present in the reviewed field “Buckinghami purskkaev kujutab allegooriliselt Michigani järve.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0167:response_en",
+      "reason": "Independent bilingual review of detected wording “Lake Michigan”: its correctly localized or inflected Estonian form is present in the reviewed field “Michigani järv”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0169:clue_en",
+      "reason": "Independent bilingual review of detected wording “Iron Man”: its correctly localized or inflected Estonian form is present in the reviewed field “Pateli hüüdnime „India raudmees“ kajastas monumendi kogumiskampaania. Milliseid kasutatud põllumajandusesemeid paluti talunikel annetada?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0170:clue_en",
+      "reason": "Independent bilingual review of detected wording “American West”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline skulptor eelistas Mount Rushmore'il riigi presidente, kui Doane Robinson oli pakkunud Ameerika lääneosa kangelasi?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0170:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Gutzon Borglum” correctly remain “Gutzon Borglum” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0171:clue_en",
+      "reason": "Independent bilingual review of detected wording “American Gothic”: its correctly localized or inflected Estonian form is present in the reviewed field “Grant Wood kasutas „Ameerika gootika“ ühe modellina oma õde. Mis ametit pidas meesmodell?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0171:explanation_en",
+      "reason": "Independent bilingual review of detected wording “American Gothic”: its correctly localized or inflected Estonian form is present in the reviewed field “„Ameerika gootika“ meesmodell oli Woodi hambaarst Byron McKeeby.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0172:clue_en",
+      "reason": "Independent bilingual review of detected wording “Paris Salon”: its correctly localized or inflected Estonian form is present in the reviewed field “„Olympia“ modell Victorine Meurent esines ka ise Pariisi salongis. Millise loova ameti esindajana?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0173:clue_en",
+      "reason": "Independent bilingual review of detected wording “Wyeth's Christina's World”: its correctly localized or inflected Estonian form is present in the reviewed field “Wyethi inspireerinud Christina Olson ei suutnud kõndida ja keeldus ratastoolist. Kuidas liikus ta maapinnal, nagu maali poos meenutab?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0174:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Saint James”: its correctly localized or inflected Estonian form is present in the reviewed field “Püha Jaakobuse ordu”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0175:clue_en",
+      "reason": "Independent bilingual review of detected wording “Fragonard's Swing”: its correctly localized or inflected Estonian form is present in the reviewed field “Fragonard'i „Kiik“ konfiskeeriti pärast selle maksukogujast omaniku giljotineerimist. Milline suur poliitiline murrang põhjustas selle omanikuvahetuse?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0175:explanation_en",
+      "reason": "Independent bilingual review of detected wording “French Revolution”: its correctly localized or inflected Estonian form is present in the reviewed field “Maal võeti ära pärast omaniku giljotineerimist Prantsuse revolutsiooni ajal.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0175:response_en",
+      "reason": "Independent bilingual review of detected wording “French Revolution”: its correctly localized or inflected Estonian form is present in the reviewed field “Prantsuse revolutsioon”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0176:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Townley”: its correctly localized or inflected Estonian form is present in the reviewed field “Townley koopial on valesti taastatud, allapoole vaatav pea. Millise eseme poole peaks originaali sportlase nägu pöörduma?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0176:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Townley Discobolus”: its correctly localized or inflected Estonian form is present in the reviewed field “Townley Diskobolosel on valesti taastatud pea; originaal pöördub ketta poole.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0179:clue_en",
+      "reason": "Independent bilingual review of detected wording “Saint Teresa”: its correctly localized or inflected Estonian form is present in the reviewed field “Bernini „Püha Teresa ekstaasi“ kuldsed kiired näivad taevast valgust saavat. Milline peidetud arhitektuuriline ava laseb tegeliku päevavalguse sisse?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0179:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Saint Teresa”: its correctly localized or inflected Estonian form is present in the reviewed field “Peidetud aken annab „Püha Teresa ekstaasi“ kohale valgust.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0180:clue_en",
+      "reason": "Independent bilingual review of detected wording “Michelangelo's Moses”: its correctly localized or inflected Estonian form is present in the reviewed field “Michelangelo Moosesel on sarved, sest Vulgata tõlkis nii lõigu millisest piibliraamatust, mis jutustab Egiptusest lahkumisest?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0181:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Motherland Calls”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline põhimaterjal moodustab Volgogradi kuju „Kodumaa kutsub“, mille stabiilsust aitavad tagada terasest pingutustrossid?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0181:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Motherland Calls”: its correctly localized or inflected Estonian form is present in the reviewed field “„Kodumaa kutsub“ ehitati raudbetoonist, mille stabiilsust aitavad tagada terasest pingutustrossid.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0182:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which French”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Prantsuse inseneri projekt andis Vabaduse kuju vaskpinna alla sisemise raudkarkassi?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0182:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Gustave Eiffel” correctly remain “Gustave Eiffel” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0183:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Gateway Arch's”: its correctly localized or inflected Estonian form is present in the reviewed field “Gateway Archi kaks jalga kaarduvad rippuva ketiga seotud kaalutud kõvera ümberpööratud kujuna. Mis on selle kõvera nimi?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0183:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Gateway Arch”: its correctly localized or inflected Estonian form is present in the reviewed field “Gateway Arch on ümberpööratud kaalutud aheljoone kujuline.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0184:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Angel's”: its correctly localized or inflected Estonian form is present in the reviewed field “Ingli tiivad on veidi ettepoole suunatud. Millist tervitavat inimlikku tegevust need Gormley sõnul meenutavad?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0185:clue_en",
+      "reason": "Independent bilingual review of detected wording “Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline kerge metall, mis oli Washingtoni monumendi valmides kallis, moodustab väikese katte selle päris tipus?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0185:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Washington Monument”: its correctly localized or inflected Estonian form is present in the reviewed field “Washingtoni monumendi tipus on alumiiniumist tippdetail.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0186:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Ambassadors, Westminster Abbey's Cosmati”: its correctly localized or inflected Estonian form is present in the reviewed field “„Saadikute“ põrandamuster pärineb Westminster Abbey Cosmati põrandast.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0186:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Westminster Abbey” correctly remain “Westminster Abbey” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0187:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Goldfish”: its correctly localized or inflected Estonian form is present in the reviewed field “Maalil „Kuldkalad“ kujutab Matisse akvaariumi sisu eest ja samal ajal millisest teisest suunast?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0188:clue_en",
+      "reason": "Independent bilingual review of detected wording “East Asian”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Ida-Aasia kunstitraditsiooni graafikast sai Cassatt inspiratsiooni oma järsu ülaltvaate jaoks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0188:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Child's Bath's”: its correctly localized or inflected Estonian form is present in the reviewed field “Jaapani puulõiked aitasid inspireerida „Lapse vanni“ ülaltvaadet.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0189:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Night Watch”: its correctly localized or inflected Estonian form is present in the reviewed field “„Öine vahtkond“ kujutab tegelikult päevast stseeni; tume lakk aitas kaasa hilisemale nimele.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0191:clue_en",
+      "reason": "Independent bilingual review of detected wording “Sydney Opera House”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisest lihtsast ruumilisest kujundist lõikas Utzon Sydney ooperimaja jaoks välja kõik katusekoored oma lõpplahenduses?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0191:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Sydney Opera House's”: its correctly localized or inflected Estonian form is present in the reviewed field “Sydney ooperimaja katusekoored kavandati ühe sfääri lõikudena.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0193:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Pompidou's”: its correctly localized or inflected Estonian form is present in the reviewed field “Pompidou keskuse sinised elemendid tähistavad kliimasüsteeme.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0196:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Diana, Kensington Palace”: its correctly localized or inflected Estonian form is present in the reviewed field “Diana kuju seisab Kensingtoni palee Sunken Gardeni aias.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0196:response_en",
+      "reason": "Independent bilingual review of detected wording “Kensington Palace”: its correctly localized or inflected Estonian form is present in the reviewed field “Kensingtoni palee”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0197:clue_en",
+      "reason": "Independent bilingual review of detected wording “London's Anteros, World War II”: its correctly localized or inflected Estonian form is present in the reviewed field “Millisele tiheda liiklusega ristmikule toodi pärast sõda tagasi Londoni Anterose kuju, mis oli Teise maailmasõja ajaks varjule viidud?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0197:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Anteros, World War II”: its correctly localized or inflected Estonian form is present in the reviewed field “Anterose kuju viidi Teise maailmasõja ajaks ohutusse kohta ja toodi 1947. aastal Piccadilly Circusele tagasi.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0197:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Piccadilly Circus” correctly remain “Piccadilly Circus” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0198:clue_en",
+      "reason": "Independent bilingual review of detected wording “Ypres's Menin Gate”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist sõjaväelist signaali esitavad signaaltrompetimängijad Ypres'i Meneni väravas regulaarselt langenute mälestuseks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0198:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Last Post, Menin Gate”: its correctly localized or inflected Estonian form is present in the reviewed field “Meneni väravas esitatakse sõjas langenute mälestuseks signaali „Last Post“.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0199:clue_en",
+      "reason": "Independent bilingual review of detected wording “London Bridge”: its correctly localized or inflected Estonian form is present in the reviewed field “Millises USA osariigis asuvas Lake Havasu Citys pandi 19. sajandi Londoni sild uuesti kokku?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0199:explanation_en",
+      "reason": "Independent bilingual review of detected wording “London Bridge”: its correctly localized or inflected Estonian form is present in the reviewed field “Vana Londoni sild viidi Arizonas asuvasse Lake Havasu Citysse.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0200:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Brussels City Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Brüsseli linnamuuseum”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0200:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Brussels City Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Manneken Pisi originaali hoitakse Brüsseli linnamuuseumis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0201:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Arnold Schoenberg”: its correctly localized or inflected Estonian form is present in the reviewed field “Kandinsky sõbrunes Arnold Schönbergiga ja pidas temaga kirjavahetust.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0201:response_en",
+      "reason": "Independent bilingual review of detected wording “Arnold Schoenberg”: its correctly localized or inflected Estonian form is present in the reviewed field “Arnold Schönberg”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0203:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Paris”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise kunstiliigi kuulsa Palais Garnier' saali kohale maalis Chagall Pariisis laemaali?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0206:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Dante Gabriel Rossetti's”: its correctly localized or inflected Estonian form is present in the reviewed field “Christina Rossetti oli Dante Gabriel Rossetti õde.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0206:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Christina Rossetti” correctly remain “Christina Rossetti” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0207:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Franz Marc” correctly remain “Franz Marc” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0208:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Dutch, De Stijl's, Blue Chair, Schröder House”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Hollandi arhitekt rakendas De Stijli põhimõtteid nii punase-sinise tooli kui ka Schröderi maja juures?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0208:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Blue Chair, Rietveld Schröder House”: its correctly localized or inflected Estonian form is present in the reviewed field “Gerrit Rietveld kavandas punase-sinise tooli ja Rietveld Schröderi maja.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0208:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Gerrit Rietveld” correctly remain “Gerrit Rietveld” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0209:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which French”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Prantsuse luuletaja kirjutas 1924. aasta manifesti, mis määratles sürrealismi psüühilise automatismi kaudu?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0209:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Surrealist Manifesto”: its correctly localized or inflected Estonian form is present in the reviewed field “André Breton kirjutas esimese sürrealistliku manifesti.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0209:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “André Breton” correctly remain “André Breton” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0210:clue_en",
+      "reason": "Independent bilingual review of detected wording “Marinetti's Futurist”: its correctly localized or inflected Estonian form is present in the reviewed field “Marinetti futuristlik manifest ülistas kiirust ja moodsaid masinaid. Millises Pariisi ajalehes see rahvusvaheliselt avaldati?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0210:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Marinetti's Futurist”: its correctly localized or inflected Estonian form is present in the reviewed field “Marinetti futuristlik manifest ilmus 1909. aastal ajalehes Le Figaro.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0210:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Le Figaro” correctly remain “Le Figaro” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0211:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Lincoln Memorial's”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise poliitilise ühenduse liikmeid Lincolni surma ajal sümboliseerivad Lincolni memoriaali välissambad?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0213:clue_en",
+      "reason": "Independent bilingual review of detected wording “Berlin's Memorial, Murdered Jews, Jerusalem Holocaust”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Jeruusalemma holokausti mälestusasutuse kogutud nimesid sisaldab Berliini Euroopa mõrvatud juutide memoriaali maa-alune teabekeskus?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0213:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Yad Vashem” correctly remain “Yad Vashem” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0214:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Kamakura”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise budistliku paradiisi või maailmaga seostatakse Amitābhat, keda Kamakura kuju kujutab?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0214:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Kamakura Great Buddha, Pure Land”: its correctly localized or inflected Estonian form is present in the reviewed field “Kamakura Suur Buddha kujutab Amitābhat, Puhta Maa Buddhat.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0214:response_en",
+      "reason": "Independent bilingual review of detected wording “Pure Land”: its correctly localized or inflected Estonian form is present in the reviewed field “Puhas Maa”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0215:clue_en",
+      "reason": "Independent bilingual review of detected wording “In Vigeland's Oslo”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Monoliidi taga asuv skulptuur Vigelandi Oslo pargis sümboliseerib igavikku üksteisest kinni hoidvate täiskasvanute ja laste kaudu?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0215:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Vigeland Museum”: its correctly localized or inflected Estonian form is present in the reviewed field “Vigelandi muuseum kirjeldab „Eluringi“ igaviku sümbolina.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0216:clue_en",
+      "reason": "Independent bilingual review of detected wording “Vermeer's Girl, Pearl Earring”: its correctly localized or inflected Estonian form is present in the reviewed field “Uuring leidis Vermeeri „Pärlkõrvarõngaga tüdruku“ taustalt diagonaalseid volte. Millist kodusisustuse osa see tume taust algselt võis kujutada?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0217:clue_en",
+      "reason": "Independent bilingual review of detected wording “Rembrandt's The Night Watch”: its correctly localized or inflected Estonian form is present in the reviewed field “Rembrandti „Öine vahtkond“ lõigati uude asukohta mahtumiseks väiksemaks. Milline linnahoone võttis selle vastu 1715. aastal?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0217:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Night Watch, Amsterdam Town Hall”: its correctly localized or inflected Estonian form is present in the reviewed field “„Öist vahtkonda“ kärbiti Amsterdami raekotta viimise ajal.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0217:response_en",
+      "reason": "Independent bilingual review of detected wording “Amsterdam Town Hall”: its correctly localized or inflected Estonian form is present in the reviewed field “Amsterdami raekoda”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0218:clue_en",
+      "reason": "Independent bilingual review of detected wording “Leonardo's Last Supper”: its correctly localized or inflected Estonian form is present in the reviewed field “Millised Kristuse kehaosad hävitas läbi Leonardo „Püha õhtusöömaaja“ lõigatud ukseava?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0219:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which French, The Execution, Emperor Maximilian”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Prantsuse maalikunstnik järgis Goya mahalaskmiskompositsiooni oma sarjas „Keiser Maximiliani hukkamine“?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0219:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Manet's Execution, Emperor Maximilian, Goya's The Third”: its correctly localized or inflected Estonian form is present in the reviewed field “Manet' „Keiser Maximiliani hukkamist“ inspireeris Goya „Kolmas mai 1808“.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0219:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Édouard Manet” correctly remain “Édouard Manet” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0220:clue_en",
+      "reason": "Independent bilingual review of detected wording “Holbein's The Ambassadors, German Reformation”: its correctly localized or inflected Estonian form is present in the reviewed field “Millise Saksa reformatsioonijuhi hümnid sisalduvad Holbeini „Saadikute“ katkenud keelega lauto kõrval olevas lauluraamatus?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0220:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Ambassadors”: its correctly localized or inflected Estonian form is present in the reviewed field “„Saadikute“ lauluraamat sisaldab Martin Lutheri hümne.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0220:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Martin Luther” correctly remain “Martin Luther” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0222:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Young Hare”: its correctly localized or inflected Estonian form is present in the reviewed field “„Noor jänes“ on maalitud akvarelli ja katva vesivärviga.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0224:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Last Supper”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist puittahvlitel levinud värviliiki kandis Leonardo seinale „Püha õhtusöömaaja“ jaoks?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0224:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Last Supper”: its correctly localized or inflected Estonian form is present in the reviewed field “Leonardo maalis „Püha õhtusöömaaja“ temperaga, mida kasutati tavaliselt tahvelmaalidel.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0226:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which American”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline USA skulptor kavandas istuva Lincolni, samal ajal kui Henry Bacon kavandas ümbritseva hoone?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0226:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Daniel Chester French” correctly remain “Daniel Chester French” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0227:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which French”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Prantsuse skulptor kavandas Vabaduse kuju välise figuuri, töötades selle tugede juures Eiffeliga?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0227:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Frédéric Auguste Bartholdi” correctly remain “Frédéric Auguste Bartholdi” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0228:accepted_variants_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Lincoln Borglum” correctly remain “Lincoln Borglum” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0228:clue_en",
+      "reason": "Independent bilingual review of detected wording “After Gutzon Borglum's, Mount Rushmore's”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline Gutzon Borglumi pereliige võttis pärast tema surma üle Rushmore'i raiumise juhtimise?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0228:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Gutzon Borglum's”: its correctly localized or inflected Estonian form is present in the reviewed field “Gutzon Borglumi poeg Lincoln võttis projekti pärast isa surma üle.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0229:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Three Soldiers, Maya Lin's Vietnam Veterans Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Milline skulptor lõi „Kolm sõdurit“ figuratiivse täiendusena Maya Lini Vietnami veteranide memoriaali müüri kõrvale?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0229:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Three Soldiers, Vietnam Veterans Memorial”: its correctly localized or inflected Estonian form is present in the reviewed field “Frederick Hart lõi Vietnami veteranide memoriaali figuratiivse skulptuuri „Kolm sõdurit“.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0229:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Frederick Hart” correctly remain “Frederick Hart” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0230:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Kelpies”: its correctly localized or inflected Estonian form is present in the reviewed field “Kelpiesi modellideks olid kaks Clydesdale'i hobust, Duke ja Baron.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0233:clue_en",
+      "reason": "Independent bilingual review of detected wording “Picasso's Bull's Head”: its correctly localized or inflected Estonian form is present in the reviewed field “Picasso „Härjapea“ ühendab jalgratta sadula millise teise jalgrattaosaga, mis moodustab sarved?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0233:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Bull's Head”: its correctly localized or inflected Estonian form is present in the reviewed field “„Härjapea“ on kokku pandud jalgratta sadulast ja juhtrauast.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0235:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Pierre-Auguste Renoir” correctly remain “Pierre-Auguste Renoir” in Estonian. This is the valid name or accepted name variant in this specific question."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0237:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Piet”: its correctly localized or inflected Estonian form is present in the reviewed field “Pietà on ainus teos, mille Michelangelo allkirjastas.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0239:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Italian”: its correctly localized or inflected Estonian form is present in the reviewed field “Boccioni sammuvat figuuri näivad vormivat kiirus ja ümbritsev õhk. Millist Itaalia kunstivoolu see kehastab?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0239:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Unique Forms”: its correctly localized or inflected Estonian form is present in the reviewed field “„Ruumi pidevuse ainulaadsed vormid“ on futuristlik skulptuur.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0240:accepted_variants_en",
+      "reason": "Independent bilingual review of detected wording “Accademia Gallery”: its correctly localized or inflected Estonian form is present in the reviewed field “Galleria dell'Accademia”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0240:clue_en",
+      "reason": "Independent bilingual review of detected wording “Which Florence”: its correctly localized or inflected Estonian form is present in the reviewed field “Originaalne „Taavet“ viidi 1873. aastal siseruumidesse ja vanal väljakul seisab koopia. Milline Firenze galerii hoiab nüüd originaali?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0240:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Florence's Galleria”: its correctly localized or inflected Estonian form is present in the reviewed field “Michelangelo algne „Taavet“ asub Firenze Accademia galeriis.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0242:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Barcelona Pavilion”: its correctly localized or inflected Estonian form is present in the reviewed field “Millist riiki esindas Barcelona paviljon 1929. aasta maailmanäitusel hoolimata oma Hispaania asukohast?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0242:explanation_en",
+      "reason": "Independent bilingual review of detected wording “The Barcelona Pavilion, German Pavilion”: its correctly localized or inflected Estonian form is present in the reviewed field “Barcelona paviljon oli 1929. aasta näituse Saksa paviljon.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0243:clue_en",
+      "reason": "Independent bilingual review of detected wording “Villa Savoye's”: its correctly localized or inflected Estonian form is present in the reviewed field “Villa Savoye kõver esimese korruse sein järgis pöörderaadiust. Milline liikuv objekt määras selle kõvera?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0245:clue_en",
+      "reason": "Independent bilingual review of detected wording “Gaudí's Sagrada Família”: its correctly localized or inflected Estonian form is present in the reviewed field “Gaudí Sagrada Famílial on Sünni ja Kannatuse fassaad. Mis nimi on kolmandal põhifassaadil, mis kujutab teed Jumala juurde?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0246:explanation_en",
+      "reason": "Independent bilingual review of detected wording “World War”: its correctly localized or inflected Estonian form is present in the reviewed field “Dada tekkis Esimese maailmasõja ajal vastuseisuna sõjale ja väljakujunenud väärtustele.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0246:response_en",
+      "reason": "Independent bilingual review of detected wording “World War”: its correctly localized or inflected Estonian form is present in the reviewed field “Esimene maailmasõda”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0249:clue_en",
+      "reason": "Independent bilingual review of detected wording “The Nazi, Which American”: its correctly localized or inflected Estonian form is present in the reviewed field “Natsivõimud sundisid Bauhausi sulgema. Millises USA linnas asus Moholy-Nagy juhitud New Bauhaus?”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0250:explanation_en",
+      "reason": "Independent bilingual review of detected wording “Sigmund Freud's”: its correctly localized or inflected Estonian form is present in the reviewed field “Sürrealismi mõjutasid Sigmund Freudi teooriad unenägudest ja alateadvusest.”. The English/Estonian pair refers to the same names, places or work titles; any question words/articles included by the detector are ordinary translated wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0250:response_en",
+      "reason": "Independent bilingual review: the internationally established person, artwork or institution name(s) “Sigmund Freud” correctly remain “Sigmund Freud” in Estonian. This is the valid name or accepted name variant in this specific question."
+    }
+  ],
+  "resolvedFindings": [
+    "Replaced repeated Motherland sword/Stalingrad, Laughing Cavalier moustache, Adele gold, Capitoline twins identity, Discobolus discus, Jet d’Eau location/function, Dubai/Burj adjacency, flip-book definition, pre-Raphael looking back, Bauhaus founding, Goya lantern/crucifixion, Habitat Montreal, High Line railway, Harlem New York, Fearless Girl relocation and Burghers Edward III facts with independently sourced novel predicates.",
+    "Separated Lincoln commemoration from Greek architectural influence and Washington commemoration from obelisk shape; refocused Fauvism on name etymology and Mount Rushmore on Borglum’s national-subject decision.",
+    "Removed Gormley and floor-title answer leaks, clarified named paintings/sculptures, corrected Hortense’s later marriage and Christina Olson’s role as inspiration rather than the torso model.",
+    "Corrected Holbein bishop citation from Pounce to The Ambassadors; corrected Umbrellas and Bull’s Head disambiguation citations and bound exact sources for Matisse Jazz, Dürer’s Rhinoceros, Can Lis, Gaudí compression and Kandinsky correspondence.",
+    "Clarified De Stijl’s complete achromatic palette; replaced speculative generic-cycle symbolism with the museum-supported Wheel of Life/eternity relationship; used the proper Sunken Garden name and idiomatic Estonian signaaltrompetimängijad.",
+    "Curated exact missing-source passages; Elbphilharmonie cocoa/coffee claim independently supported by German Kaispeicher A article, and Nighthawks entrance omission corroborated by Art Institute collection entry."
+  ],
+  "artifactHashes": {
+    "authored": "8a65a2495943b0e99c6cc2eeca7a26bf8a602e937fba25e95b2df60dace1d615",
+    "generated": "9c32b40bdd21582bb83f1215ddb12e3e28d113c54b03d4fea27984713b4b24d1",
+    "evidence": "8af3f149cf8f81a55c80fc42ef9d9abf0e86a11ed00f5acd6dcc13a47cbd438a"
+  }
+}

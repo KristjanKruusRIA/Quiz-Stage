@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "decision": "approved",
+  "reviewer": "repair_content_b",
+  "reviewedAt": "2026-10-11T22:01:02.642368+00:00",
+  "proposalPath": "C:/Projects/QuizStage/content/work/2026-10-12-local-release/source-repair-proposal.json",
+  "proposalSha256": "b38d329ff3b845c782f51b34a1d1ec989378a287c2ee59b1b16835ccbc153e77",
+  "proposalMtime": "2026-10-11T21:58:44.193570+00:00",
+  "scope": "Metadata-only source migration and replacement for two previously reviewed questions; six authored/generated/evidence records. All10 current bilingual siblings read.",
+  "checks": [
+    "factual",
+    "translation",
+    "independence",
+    "difficulty",
+    "attribution",
+    "exact bytes and scope"
+  ],
+  "affectedClueIds": [
+    "built-in-estonia-clue-0451",
+    "built-in-adult-clue-0353"
+  ],
+  "operations": [
+    {
+      "file": "content/authored/15-estonia.csv",
+      "beforeSha256": "865fe095882d7520861a490cd10d5514da0ef23e996b51e6931743db358707ee",
+      "proposedAfterSha256": "e9620b95a0c0054d2b1fee9fb404e181781e8ec1c8f19234ac98a02b48e789ed",
+      "changedFields": [
+        "source_retrieved_at",
+        "source_url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    },
+    {
+      "file": "content/generated/15-estonia.en-et.csv",
+      "beforeSha256": "bef562412cb3d9efad4a7c52d4b71390ee6ecd4f21bf86044b7c858ef0dac769",
+      "proposedAfterSha256": "1503577b75e98b1478f535476683078ec8a4ec6d20c8559361a747f39be03b8d",
+      "changedFields": [
+        "source_retrieved_at",
+        "source_url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    },
+    {
+      "file": "content/evidence/15-estonia.jsonl",
+      "beforeSha256": "d013081ddf7390b0c68089aef32e7731e0eedf961992fc8de2a24b6a68d6c302",
+      "proposedAfterSha256": "aa6af325faae9a60bde9119f9c19ca8ac99644c14cc298e2597cda0d34e4d0ba",
+      "changedFields": [
+        "retrievedAt",
+        "url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    },
+    {
+      "file": "content/authored/14-adult.csv",
+      "beforeSha256": "4466945aa7f89f19627e36fab77b6ad83c642ef2c0829e65c2b82d26a8141c3a",
+      "proposedAfterSha256": "acfc6c27197f7cfa1858fd93fcf770d2468344bcf08703da3547c8b2143c2ade",
+      "changedFields": [
+        "source_retrieved_at",
+        "source_title",
+        "source_url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    },
+    {
+      "file": "content/generated/14-adult.en-et.csv",
+      "beforeSha256": "1a598fd0677e99af7b2b901331b1a57e474ab98f783be50cbc95654960a2343b",
+      "proposedAfterSha256": "321b326843195f011fa1e94d85fc0b27f915fb3125b8d03c663cf2822a04ad46",
+      "changedFields": [
+        "source_retrieved_at",
+        "source_title",
+        "source_url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    },
+    {
+      "file": "content/evidence/14-adult.jsonl",
+      "beforeSha256": "a0309b2156d979df7dab2883fca15ffd1c74d219f59fb5c4237774dc8fc8eda8",
+      "proposedAfterSha256": "68b8a1854c32a1c03f28bd787a511fb1966c5efad0fc04996204c36f7ca0a9e1",
+      "changedFields": [
+        "retrievedAt",
+        "title",
+        "url"
+      ],
+      "currentRecordAndRawBytesMatch": true
+    }
+  ],
+  "completeCategoryContexts": [
+    {
+      "categorySetId": "built-in-estonia-set-091",
+      "clueIds": [
+        "built-in-estonia-clue-0451",
+        "built-in-estonia-clue-0452",
+        "built-in-estonia-clue-0453",
+        "built-in-estonia-clue-0454",
+        "built-in-estonia-clue-0455"
+      ],
+      "count": 5,
+      "languagesManuallyRead": [
+        "en",
+        "et"
+      ],
+      "currentContextExact": true,
+      "contextSha256": "2c6e4dbeacac9f21d97dd1f5ea63ba4bfd7adfeb88b452aaea206851de046a47"
+    },
+    {
+      "categorySetId": "built-in-adult-set-071",
+      "clueIds": [
+        "built-in-adult-clue-0351",
+        "built-in-adult-clue-0352",
+        "built-in-adult-clue-0353",
+        "built-in-adult-clue-0354",
+        "built-in-adult-clue-0355"
+      ],
+      "count": 5,
+      "languagesManuallyRead": [
+        "en",
+        "et"
+      ],
+      "currentContextExact": true,
+      "contextSha256": "51c4ea1b27cb177472743f98c136df7e6df395742655cb0ab6ed221f3a6cf785"
+    }
+  ],
+  "findings": [],
+  "reviewObservations": [
+    "The corrected IFF archive URL identifies Estonia’s floorball association. Its linked official championship story establishes organized Estonian competitions; the independently read article says Sparta won both2023 categories and defeated Jõgeva in the men’s fifth final. The earlier inaccurate proposal note was corrected before the approved SHA was frozen.",
+    "IFF’s official overview describes team play, shoes, lightweight sticks and a board-enclosed rink; its official learning PDF describes the hollow perforated plastic ball. These primary descriptions support the unchanged Floorball/Saalihoki identification and explanation.",
+    "Apple121877 explicitly establishes that bought digital media may be downloaded to compatible devices and accessed offline. This supports the unchanged Digital download/Digitaalne allalaadimine question and explanation. Apple118239 currently covers subscription/channel media rather than directly establishing the purchased-media premise.",
+    "The two complete categories retain distinct targets: floorball, Paul Keres, Novuss, Kurn and Brus; multiplex, matinee, digital download, Fritz Lang and Jean-Pierre Melville. The revised citations add no public wording, answer hint or sibling dependency. All IDs, membership, tiers, difficulty, enabled state and bilingual prose remain unchanged.",
+    "The Floorball/Saalihoki prompts preserve the same physical identifying clues. The English prompt additionally mentions national leagues, while Estonian already asks about the sport played in Estonia; this unchanged secondary context does not change the answer or introduce a new translation regression.",
+    "IFF’s current footer credits its copyright to IFF. No open reuse licence was found on the inspected archive/current pages; the retained all-rights-reserved label is conservative existing metadata, not a new express grant inferred from its privacy policy.",
+    "Apple’s own website terms establish copyright control and restrictions on republication/distribution. The retained Proprietary; citation-only label records proprietary status and existing citation practice; citation-only is a use description and is not a licence grant. No new permission to reproduce Apple text/media is claimed.",
+    "Exact in-memory raw-record replacement reproduces allsix proposed fileAfterSha256 values. Record comparison confirms only citation title/URL/retrieval metadata change; source licences, sourceIds, provenance and historical review objects remain intact."
+  ],
+  "primarySourceVerification": [
+    {
+      "url": "https://archive.floorball.sport/estonia/",
+      "observation": "Independently opened official archive member page; read Estonian Floorball Union/Eesti Saalihoki Liit and the links to Estonian national championship reports."
+    },
+    {
+      "url": "https://archive.floorball.sport/2023/05/05/estonian-and-italian-league-champions-crowned/",
+      "observation": "Independently read the primary championship report confirming Estonian men’s and women’s competitions and Sparta winning both categories."
+    },
+    {
+      "url": "https://archive.floorball.sport/this-is-floorball/floorball-in-a-nutshell/",
+      "observation": "Independently read team play, shoes/sticks, much lighter carbon-fibre shafts and connected rink boards."
+    },
+    {
+      "url": "https://archive.floorball.sport/cloudfront/2018/08/learn-start-play.pdf",
+      "observation": "Independently read the official PDF: plastic hollow ball with holes on PDFpage3 and26holes in equipment description on PDFpage17; no illustration or source prose reused."
+    },
+    {
+      "url": "https://floorball.sport/",
+      "observation": "Independently read current footer copyright2026 International Floorball Federation(IFF)."
+    },
+    {
+      "url": "https://inside.floorball.sport/privacy-policy/",
+      "observation": "Inspected official privacy page; it concerns personal-data processing and supplies no open-content adaptation licence."
+    },
+    {
+      "url": "https://support.apple.com/en-us/121877",
+      "observation": "Independently read Apple’s March25,2025 primary article: bought digital media can be permanently downloaded to compatible devices; downloaded content remains accessible without an internet connection."
+    },
+    {
+      "url": "https://support.apple.com/en-us/118239",
+      "observation": "Independently read current old citation; it describes Apple TV subscriptions/channels and expiring downloads."
+    },
+    {
+      "url": "https://www.apple.com/legal/internet-services/terms/site.html",
+      "observation": "Independently read Content section: Apple/licensors control copyright-protected content, republication/distribution is restricted, and limited personal non-commercial product-information use has explicit conditions."
+    }
+  ],
+  "translationReview": {
+    "releaseInventoryPath": "content/reports/release-inventory.json",
+    "releaseInventorySha256": "26cb18cf264145110c500a6d69da600e66af0f0b02477f2e35ececbd579096f7",
+    "matchingCurrentTranslationExceptions": [],
+    "reason": "Neither affected clue currently has a translation exception in release-inventory.translation.exceptions. No existing exception needs to be renewed. Current complete bilingual text was manually reviewed.",
+    "conditionalReasonsIfFreshDiagnosticsRequestCategoryFlags": [
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0451",
+        "reason": "Games Estonia Plays is translated Mängud, mida Eesti mängib, the same broad category of games played in Estonia. Floorball is correctly Saalihoki; both prompts describe sticks, boards and a perforated plastic ball. The category phrase is translated topic wording, not a lost or changed proper name."
+      },
+      {
+        "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0353",
+        "reason": "From Cinema to Streaming is translated Kinost voogedastuseni, preserving the category’s progression. Digital download is correctly Digitaalne allalaadimine; both prompts and explanations preserve a purchased film/episode saved to a device and later viewed offline. These are translated category and technical terms, not altered proper names."
+      }
+    ],
+    "conditionalReasonBoundary": "Use a conditional reason only if fresh validation actually emits that exact diagnostic ID. No unobserved diagnostic waiver is added by this approval."
+  },
+  "limitations": [
+    "This approves the exact unapplied metadata proposal; application, manifest bridge/historical reconstruction, fresh seed and packaged readback remain root-owned verification steps.",
+    "IFF’s archive member page alone does not spell out every equipment attribute; support is completed by the directly linked official overview/learning material and the primary league article, all independently read.",
+    "The review preserves existing restrictive licence labels and grants no permission to reuse either organisation’s copyrighted text or media.",
+    "Previously reviewed unaffected sibling facts were read for category and bilingual context; this narrow citation review does not claim a new external factual audit of every unchanged sibling."
+  ],
+  "testsRun": [
+    {
+      "command": "python -X utf8 content/work/2026-10-12-local-release/review-source-proposal-b.py",
+      "result": "passed",
+      "coverage": "Proposal hash; six current before hashes/raw-record identities; exact in-memory after hashes; metadata-only diffs; preserved evidence fields; ten current context rows; timestamp after proposalmtime."
+    }
+  ],
+  "productionMutationPerformedByReviewer": false
+}

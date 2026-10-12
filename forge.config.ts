@@ -77,7 +77,8 @@ const config: ForgeConfig = {
     executableName: releaseTarget.applicationExecutableName,
     electronZipDir: join(process.cwd(), '.cache', 'electron-zips'),
     ...(packagerIconPath === undefined ? {} : { icon: packagerIconPath }),
-    extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media'],
+    extraResource: ['resources/content/seed.sqlite', 'resources/content/dev-seed.sqlite', 'resources/media',
+      'content/THIRD_PARTY_NOTICES.md', 'content/LICENSE-CC-BY-SA-4.0.txt'],
     ignore: (file) => {
       if (!file) return false;
       return !(

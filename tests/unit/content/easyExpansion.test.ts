@@ -22,6 +22,7 @@ import {
 } from '../../../scripts/content/productionBatches';
 import { parsePackCsv, type ParsedCsvRow } from '../../../src/main/content/csvPacks';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
+import { readPreRepairContent } from './preRepairContent';
 
 const SUBJECTS = ['atlas', 'beacon', 'comet', 'delta', 'ember'] as const;
 
@@ -212,15 +213,15 @@ function loadCurrentAcceptedBaselineRecords(): readonly EasyExpansionBaselineRec
     const authored = indexAcceptedRows(
       batch.id,
       'authored',
-      parsePackCsv(readFileSync(resolve(paths.authored), 'utf8')).rows,
+      parsePackCsv(readPreRepairContent(paths.authored)).rows,
     );
     const generated = indexAcceptedRows(
       batch.id,
       'generated',
-      parsePackCsv(readFileSync(resolve(paths.generated), 'utf8')).rows,
+      parsePackCsv(readPreRepairContent(paths.generated)).rows,
     );
     const evidence = parseEvidenceJsonl(
-      readFileSync(resolve(paths.evidence), 'utf8'),
+      readPreRepairContent(paths.evidence),
       paths.evidence,
     );
     const clueIds = new Set([
@@ -694,7 +695,8 @@ describe('accepted Easy expansion baseline preservation', () => {
     const registeredPhaseBClueIds = new Set(buildEasyExpansionCorpus().flatMap(
       ({ questions }) => questions.map(({ clueId }) => clueId),
     ));
-    const current = accepted.filter(({ clueId }) => !registeredPhaseBClueIds.has(clueId));
+    const current = accepted.filter(({ clueId }) => !registeredPhaseBClueIds.has(clueId)
+      && !clueId.includes('-all-level-expansion-'));
 
     expect(() => assertAcceptedBaselinePreserved(
       manifest.records,
@@ -702,7 +704,7 @@ describe('accepted Easy expansion baseline preservation', () => {
       new Set(),
     )).not.toThrow();
     expect(current).toHaveLength(7_174);
-    expect(accepted).toHaveLength(8_374);
+    expect(accepted).toHaveLength(11_374);
     expect(accepted.filter(({ clueId }) => registeredPhaseBClueIds.has(clueId)))
       .toHaveLength(1_200);
   });

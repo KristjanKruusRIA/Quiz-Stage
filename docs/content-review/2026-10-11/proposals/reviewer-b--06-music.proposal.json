@@ -1,0 +1,896 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-music-accessible-corpus-006",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What is the highest of the usual four choral parts?",
+        "clue_et": "Kuidas nimetatakse tavapärase neljahäälse koori kõrgeimat partiid?",
+        "explanation_en": "Soprano is the highest part in the usual four-part choir.",
+        "explanation_et": "Sopran on tavapärase neljahäälse koori kõrgeim partii."
+      },
+      "reviewNotes": "Removes comparison terminology and avoids claiming no higher female category without qualification.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-007",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What musical term means a piece or performance for two singers?",
+        "clue_et": "Milline muusikatermin tähistab kahele lauljale mõeldud pala või esitust?",
+        "response_en": "a duet",
+        "response_et": "duett",
+        "accepted_variants_en": "duet",
+        "explanation_en": "A duet is performed by two singers.",
+        "explanation_et": "Duetti esitavad kaks lauljat.",
+        "source_title": "English National Opera: Opera Glossary",
+        "source_url": "https://www.eno.org/discover-opera/opera-glossary/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11",
+        "accepted_variants_et": "lauluduett"
+      },
+      "reviewNotes": "Replaces another adjacent voice range with an independently recognizable performance format. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.eno.org/discover-opera/opera-glossary/",
+          "observation": "Defines duet as a performance by two singers."
+        }
+      ],
+      "subjectKey": "format:duet",
+      "factFamily": "two-singer-performance"
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-008",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What is the higher male part in the usual four-part choir?",
+        "clue_et": "Kuidas nimetatakse tavapärase neljahäälse koori kõrgemat meeshäälepartiid?",
+        "explanation_en": "Tenor is the higher male part in the usual four-part choir.",
+        "explanation_et": "Tenor on tavapärase neljahäälse koori kõrgem meeshäälepartii."
+      },
+      "reviewNotes": "Removes baritone and qualifies the common four-part choral convention rather than excluding countertenors.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-009",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Italian term describes singing without instrumental accompaniment?",
+        "clue_et": "Milline itaaliakeelne termin tähistab laulmist ilma pillisaateta?",
+        "response_en": "a cappella",
+        "response_et": "a cappella",
+        "accepted_variants_en": "a capella;acappella",
+        "accepted_variants_et": "a capella;acappella",
+        "explanation_en": "A cappella music is sung without instrumental accompaniment.",
+        "explanation_et": "A cappella muusikat lauldakse ilma pillisaateta.",
+        "source_title": "English National Opera: Opera Glossary",
+        "source_url": "https://www.eno.org/discover-opera/opera-glossary/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces bass to prevent the complete four-part choir pool from being exhausted. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.eno.org/discover-opera/opera-glossary/",
+          "observation": "Defines a capella as unaccompanied vocal music."
+        }
+      ],
+      "subjectKey": "technique:a-cappella",
+      "factFamily": "unaccompanied-vocal-performance"
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-010",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What singing technique adds a small, regular wavering of pitch to a sustained note?",
+        "clue_et": "Milline lauluvõte lisab pikale noodile väikese korrapärase helikõrguse võnkumise?",
+        "response_en": "vibrato",
+        "response_et": "vibraato",
+        "accepted_variants_en": "vibrato technique",
+        "accepted_variants_et": "vibrato",
+        "explanation_en": "Vibrato is a slight repeated variation of pitch around a sustained note.",
+        "explanation_et": "Vibraato on helikõrguse väike korduv võnkumine pika noodi ümber.",
+        "source_title": "English National Opera: Opera Glossary",
+        "source_url": "https://www.eno.org/discover-opera/opera-glossary/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the third male-range item and its explicit tenor/bass comparison with a separate singing technique. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.eno.org/discover-opera/opera-glossary/",
+          "observation": "Defines vibrato as rapid slight pitch variation in singing or instrumental playing."
+        }
+      ],
+      "subjectKey": "technique:vibrato",
+      "factFamily": "singing-pitch-oscillation"
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-015",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What title belongs to the lead player of the first violins, who normally sits at the front of that section?",
+        "clue_et": "Millist ametinimetust kannab esimese viiulirühma juht, kes istub tavaliselt selle rühma ees?",
+        "accepted_variants_et": "orkestri kontsertmeister;esiviiuldaja"
+      },
+      "reviewNotes": "Removes strings and conductor sibling responses and avoids accepting the esiviiuldaja term already in the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-017",
+      "batchId": "06-music",
+      "changes": {
+        "accepted_variants_en": "marimba",
+        "accepted_variants_et": "marimba",
+        "explanation_en": "Both a xylophone and a marimba have tuned wooden bars arranged like a keyboard and struck with mallets.",
+        "explanation_et": "Nii ksülofonil kui ka marimbal on klaviatuuri moodi paigutatud häälestatud puitplaadid, mida lüüakse nuiadega.",
+        "source_title": "Philharmonia: Percussion",
+        "source_url": "https://philharmonia.co.uk/resources/instruments/percussion/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Keeps the familiar general wooden-bar clue and makes its answer scope honestly include both instruments for host judgement. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://philharmonia.co.uk/resources/instruments/percussion/",
+          "observation": "States the marimba and xylophone have the same keyboard layout of wooden bars and resonators."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-021",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which four-stringed bowed instrument normally plays the highest part of an orchestral bowed-instrument section?",
+        "clue_et": "Milline neljakeelne poogenpill mängib tavaliselt orkestri poogenpillirühma kõrgeimat partiid?",
+        "explanation_en": "The violin is the highest-pitched standard member of the orchestral bowed-instrument section.",
+        "explanation_et": "Viiul on orkestri tavapärase poogenpillirühma kõige kõrgema helikõrgusega liige."
+      },
+      "reviewNotes": "Removes named sibling instruments from both prompt and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-023",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which very large orchestral bowed instrument is normally played standing up and supplies the lowest register?",
+        "clue_et": "Millist väga suurt orkestri poogenpilli mängitakse tavaliselt püsti seistes ja see annab kõige madalama registri?"
+      },
+      "reviewNotes": "Removes violin and viola answer names from the large-instrument comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-025",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which small plucked lute commonly has eight strings arranged as four closely spaced pairs?",
+        "clue_et": "Millisel väikesel näpitaval lauto-tüüpi pillil on tavaliselt kaheksa keelt nelja lähestikku paikneva paarina?",
+        "response_en": "mandolin",
+        "response_et": "mandoliin",
+        "accepted_variants_en": "a mandolin",
+        "explanation_en": "A common mandolin has four pairs of strings, plucked with a pick.",
+        "explanation_et": "Tavalisel mandoliinil on neli keelepaari, mida näpitakse plektriga.",
+        "source_title": "The Metropolitan Museum of Art: Orville Gibson Mandolin",
+        "source_url": "https://www.metmuseum.org/art/collection/search/700485",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11",
+        "accepted_variants_et": "mandoliin"
+      },
+      "reviewNotes": "Replaces a third instrument-ranking question with a distinct plucked lute, avoiding violin in the public reveal. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/700485",
+          "observation": "Collection record describes a mandolin with eight strings in four double courses."
+        }
+      ],
+      "subjectKey": "instrument:mandolin",
+      "factFamily": "paired-string-lute"
+    },
+    {
+      "clueId": "built-in-music-playable-corpus-048",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Sibelius tone poem grew from music for Finnish press celebrations under Russian censorship, with an existing hymn-like section that later became a national symbol?",
+        "clue_et": "Milline Sibeliuse sümfooniline poeem kasvas välja Vene tsensuuri ajal Soome ajakirjanduse pidustusteks kirjutatud muusikast ning selle juba olemas olnud hümnilaadsest osast sai hiljem rahvussümbol?",
+        "explanation_en": "Finlandia grew from Sibelius’s 1899 press-celebration music. Its hymn-like section later received Finnish lyrics and gained a separate patriotic life.",
+        "explanation_et": "„Finlandia“ kasvas välja Sibeliuse 1899. aasta ajakirjanduspidustuste muusikast. Selle hümnilaadne osa sai hiljem soomekeelsed sõnad ja iseseisva isamaalise tähenduse.",
+        "source_title": "thisisFINLAND: Finlandia by Jean Sibelius",
+        "source_url": "https://finland.fi/arts-culture/finlandia-by-jean-sibelius/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Corrects the bilingual chronology: hymn-like music existed before its later lyrics and patriotic use. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://finland.fi/arts-culture/finlandia-by-jean-sibelius/",
+          "observation": "Describes the existing penultimate hymn-like section, later Finnish words in 1937 and 1939, and mixed-choir arrangement in 1948."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-056",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which ornate musical era, roughly 1600–1750, is associated with Bach and Handel?",
+        "clue_et": "Milline kaunistusterohke muusikaajastu, ligikaudu 1600–1750, seostub Bachi ja Händeliga?",
+        "explanation_en": "Bach and Handel are major composers of the Baroque era, roughly 1600–1750.",
+        "explanation_et": "Bach ja Händel on barokiajastu, ligikaudu 1600–1750, tähtsad heliloojad."
+      },
+      "reviewNotes": "Removes Classical-period wording from prompt and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-059",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which fifteenth- and sixteenth-century musical era is associated with Palestrina and rich vocal polyphony?",
+        "clue_et": "Milline 15. ja 16. sajandi muusikaajastu seostub Palestrina ja rikkaliku vokaalpolüfooniaga?"
+      },
+      "reviewNotes": "Removes the Baroque sibling answer from the earlier-era comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-071",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which American city is widely recognized as the birthplace of jazz?",
+        "clue_et": "Millist USA linna peetakse laialdaselt džässi sünnipaigaks?"
+      },
+      "reviewNotes": "Removes the improvisation sibling concept from the city question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-073",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which jazz trumpeter and singer was nicknamed Satchmo?",
+        "clue_et": "Milline džässtrompetist ja laulja kandis hüüdnime Satchmo?",
+        "accepted_variants_en": "Armstrong",
+        "accepted_variants_et": "Armstrong"
+      },
+      "reviewNotes": "Uses legitimate musician names rather than an alias already printed in the prompt. Also removes New Orleans to avoid teaching tier 1.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-075",
+      "batchId": "06-music",
+      "changes": {
+        "accepted_variants_en": "Fitzgerald",
+        "accepted_variants_et": "Fitzgerald"
+      },
+      "reviewNotes": "Uses musician-name variants rather than the honorific already in the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-125",
+      "batchId": "06-music",
+      "changes": {
+        "accepted_variants_en": "Rock Band",
+        "accepted_variants_et": "Rock Band",
+        "explanation_en": "Guitar Hero and Rock Band both let players perform rock songs with guitar-shaped controllers.",
+        "explanation_et": "Nii „Guitar Hero“ kui ka „Rock Band“ võimaldavad mängida kitarrikujulise puldiga rokilugudele kaasa.",
+        "source_title": "Harmonix: Past Games",
+        "source_url": "https://www.harmonixmusic.com/past-games",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Preserves a familiar Easy controller clue and admits the equally valid competing series rather than adding obscure developer trivia. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.harmonixmusic.com/past-games",
+          "observation": "Developer identifies its Guitar Hero and Rock Band rhythm-game franchises."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-playable-corpus-138",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Europe hit opens with Joey Tempest’s famous synthesizer fanfare and imagines a departure from Earth?",
+        "clue_et": "Milline Europe’i hitt algab Joey Tempesti kuulsa süntesaatorifanfaariga ja kujutab lahkumist Maalt?",
+        "explanation_en": "Joey Tempest wrote the famous keyboard riff that opens The Final Countdown.",
+        "explanation_et": "Joey Tempest kirjutas „The Final Countdowni“ avava kuulsa klahvpillirifi."
+      },
+      "reviewNotes": "Removes the sibling Space Oddity title and keeps the synthesizer-riff identification.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-playable-corpus-140",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Beatles song did NASA choose for a 2008 broadcast toward Polaris, the North Star, to mark the song’s fortieth anniversary?",
+        "clue_et": "Millise Beatlesi laulu valis NASA 2008. aastal Põhjanaela poole saatmiseks, et tähistada laulu neljakümnendat aastapäeva?",
+        "response_en": "Across the Universe",
+        "response_et": "Across the Universe",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "NASA selected the Beatles’ Across the Universe for a Deep Space Network transmission directed toward Polaris in February 2008.",
+        "explanation_et": "NASA valis Beatlesi „Across the Universe’i“ 2008. aasta veebruaris süvakosmosevõrgu kaudu Põhjanaela poole suunatud ülekandeks.",
+        "source_title": "NASA JPL: Beatles song beamed into deep space",
+        "source_url": "https://www.jpl.nasa.gov/news/nasa-and-the-beatles-celebrate-anniversaries-by-beaming-song-across-the-universe-into-deep-space/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the repeated Major Tom chain with an unrelated band and a real space-transmission connection. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.jpl.nasa.gov/news/nasa-and-the-beatles-celebrate-anniversaries-by-beaming-song-across-the-universe-into-deep-space/",
+          "observation": "31 January 2008 announcement identifies Across the Universe for a 4 February transmission toward Polaris."
+        }
+      ],
+      "subjectKey": "song:across-the-universe",
+      "factFamily": "beatles-polaris-transmission"
+    },
+    {
+      "clueId": "built-in-music-playable-corpus-208",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Guns N’ Roses hit from Appetite for Destruction opens with Slash’s high, ringing guitar riff?",
+        "clue_et": "Milline Guns N’ Rosesi hitt albumilt „Appetite for Destruction“ algab Slashi kõrge heliseva kitarririfiga?",
+        "explanation_en": "Sweet Child o’ Mine is built around Slash’s distinctive opening guitar riff.",
+        "explanation_et": "„Sweet Child o’ Mine“ tugineb Slashi äratuntavale kitarririfile.",
+        "source_title": "Guitar World: How Slash’s riff became Sweet Child o’ Mine",
+        "source_url": "https://www.guitarworld.com/artists/guitarists/the-story-of-guns-n-roses-sweet-child-o-mine",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the disputed warm-up origin. Independent reviewer C confirmed that the cited direct Slash account supports the composed riff but not the retained girlfriend detail, so that unnecessary lyric-inspiration detail is also removed from prompt and explanation. The album and distinctive riff identify a recognizable hit. Original bilingual wording; source is a citation-only factual reference.",
+      "sourceVerification": [
+        {
+          "url": "https://www.guitarworld.com/artists/guitarists/the-story-of-guns-n-roses-sweet-child-o-mine",
+          "observation": "Direct Slash quotes report the earlier exercise account and his 2022 correction that it was a composed riff, and identify the song on Appetite for Destruction. Independently reread by reviewer C on 2026-10-11; the unsupported girlfriend detail has been removed."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-playable-corpus-333",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "In Ravel’s orchestration of which Mussorgsky suite does a recurring Promenade link musical pictures based on Viktor Hartmann’s artworks?",
+        "clue_et": "Millise Mussorgski süidi Raveli orkestriseades seob korduv „Promenaad“ Viktor Hartmanni kunstiteostel põhinevaid muusikalisi pilte?",
+        "explanation_en": "Mussorgsky wrote Pictures at an Exhibition for solo piano; Ravel’s 1922 orchestration carries its gallery journey into the orchestra.",
+        "explanation_et": "Mussorgski kirjutas „Pildid näituselt“ sooloklaverile; Raveli 1922. aasta orkestriseade toob selle galeriiretke orkestrisse.",
+        "source_title": "LA Phil: Pictures at an Exhibition",
+        "source_url": "https://www.laphil.com/works/pictures-at-an-exhibition-modest-mussorgsky-zs2phpn9",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Explicitly identifies the orchestral arrangement promised by the category. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.laphil.com/works/pictures-at-an-exhibition-modest-mussorgsky-zs2phpn9",
+          "observation": "Program notes identify Mussorgsky’s piano suite and Ravel’s orchestration in 1922."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-easy-expansion-012",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Afro-Cuban percussion, song and dance tradition includes guaguancó, yambú and columbia, and shares a name with a ballroom dance?",
+        "clue_et": "Milline Afro-Kuuba löökpilli-, laulu- ja tantsutraditsioon hõlmab guaguancó’d, yambú’d ja columbia’t ning kannab ühe võistlustantsuga sama nime?",
+        "explanation_en": "Guaguancó, yambú and columbia are forms of Cuban rumba, a tradition combining percussion, song and dance.",
+        "explanation_et": "Guaguancó, yambú ja columbia on Kuuba rumba vormid; see traditsioon ühendab löökpillimuusika, laulu ja tantsu.",
+        "source_title": "Smithsonian Folkways: Folk Music of Cuba liner notes",
+        "source_url": "https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds a concrete rumba-family identifier while retaining familiar Cuban music and dance context. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf",
+          "observation": "Primary recording notes list yambú, guaguancó and columbia as major subcategories of rumba."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-easy-expansion-015",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which lively Dominican partner-dance music is traditionally played with accordion, a two-headed tambora drum and a metal güira scraper?",
+        "clue_et": "Millist hoogsat Dominikaani paaristantsumuusikat mängitakse traditsiooniliselt akordioni, kahe membraaniga tambora-trummi ja metallist güira-kraabitsaga?",
+        "explanation_en": "Traditional merengue combines accordion with tambora and güira percussion and is closely associated with the Dominican Republic.",
+        "explanation_et": "Traditsiooniline merengue ühendab akordioni tambora- ja güira-löökpillidega ning seostub tihedalt Dominikaani Vabariigiga.",
+        "source_title": "Pontificia Universidad Católica Madre y Maestra: Güira, tambora y acordeón",
+        "source_url": "https://humanidades.pucmm.edu.do/comunicacion/Documents/publicaciones/revista/CASABE%20ENTREGA.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the traditional accordion-and-percussion ensemble to distinguish merengue from guitar-led bachata. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://humanidades.pucmm.edu.do/comunicacion/Documents/publicaciones/revista/CASABE%20ENTREGA.pdf",
+          "observation": "Independently rechecked the indexed primary PUCMM publication on 2026-10-11: the article titled Güira, tambora y acordeón describes Dominican merengue with tambora, güira and European accordion or saxophone. Direct PDF retrieval can fail; the university-hosted indexed excerpt retains the passage. Smithsonian Folkways performer credits provide an independently reachable primary corroboration."
+        },
+        {
+          "url": "https://folkways.si.edu/la-india-canela/merengue-tipico-from-the-dominican-republic/caribbean-latin-world/music/album/smithsonian",
+          "observation": "Independently read Smithsonian Folkways' own release description and credits on 2026-10-11: merengue típico is rooted in the Dominican Cibao region and its instrumentation lists accordion, güira and tambora. This corroborates the university passage; no lyrics, recordings, images or source wording are reused."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0070",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "The song Danger Zone is heard during fighter-aircraft sequences in which 1986 film?",
+        "clue_et": "Millise 1986. aasta filmi hävituslennukite stseenides kõlab laul „Danger Zone“?"
+      },
+      "reviewNotes": "Removes the sibling Kenny Loggins answer from the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0235",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which filmmaker directed the 1984 rock mockumentary This Is Spinal Tap and also appeared as its fictional documentarian Marty DiBergi?",
+        "clue_et": "Milline filmitegija lavastas 1984. aasta roki-pseudodokumentaali „This Is Spinal Tap“ ja mängis selles väljamõeldud dokumentalisti Marty DiBergit?",
+        "response_en": "Rob Reiner",
+        "response_et": "Rob Reiner",
+        "accepted_variants_en": "Reiner",
+        "accepted_variants_et": "Reiner",
+        "explanation_en": "Rob Reiner directed This Is Spinal Tap and played the filmmaker accompanying its fictional rock band.",
+        "explanation_et": "Rob Reiner lavastas „This Is Spinal Tapi“ ja mängis selle väljamõeldud rokkbändi saatvat filmitegijat.",
+        "source_title": "The Criterion Collection: This Is Spinal Tap",
+        "source_url": "https://www.criterion.com/films/317-this-is-spinal-tap",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a Beatles-target parody clue taught by two siblings with an unrelated music-film director fact. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.criterion.com/films/317-this-is-spinal-tap",
+          "observation": "Film distributor identifies the 1984 film and director Rob Reiner, who plays filmmaker Marty DiBergi."
+        }
+      ],
+      "subjectKey": "person:rob-reiner",
+      "factFamily": "spinal-tap-director"
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0237",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which trumpet accessory associated with Miles Davis has a projecting stem whose opening can be covered to vary the tone?",
+        "clue_et": "Millisel Miles Davisega seostuval trompetitarvikul on väljaulatuv toru, mille ava saab tämbri muutmiseks katta?",
+        "explanation_en": "The Harmon mute changes trumpet timbre; covering and uncovering its stem opening changes the sound further.",
+        "explanation_et": "Harmoni sordiin muudab trompeti tämbrit; selle toru ava katmine ja avamine muudab heli veelgi."
+      },
+      "reviewNotes": "Removes the wah-wah sibling response from prompt and explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-002",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which clef curls around the staff line assigned to G and is normally used for higher notes?",
+        "clue_et": "Milline võti keerdub ümber G-noodi joone ja on tavaliselt kasutusel kõrgemate nootide jaoks?",
+        "accepted_variants_en": "",
+        "accepted_variants_et": ""
+      },
+      "reviewNotes": "Independent reviewer C found that the G-plus-clef structural clue could be restated as G clef/G-võti from the supplied words. Retain the legitimate notation-identification prompt but remove the supplied-name aliases; canonical treble clef/viiulivõti remains the requested response. Human host judges spoken responses.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-005",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which notation sign cancels an earlier pitch alteration and restores the unaltered pitch?",
+        "clue_et": "Milline noodimärk tühistab varasema helikõrguse muutmise ja taastab muutmata helikõrguse?",
+        "explanation_en": "A natural sign restores a note to its unaltered pitch.",
+        "explanation_et": "Bekarr taastab noodiga märgitud heli muutmata kõrguse."
+      },
+      "reviewNotes": "Removes sharp/diees from the natural-sign definition and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-031",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which bright-sounding, usually three-valved orchestral brass instrument commonly has the highest register?",
+        "clue_et": "Millisel ereda kõlaga ja tavaliselt kolme ventiiliga orkestri vaskpuhkpillil on üldjuhul kõige kõrgem register?"
+      },
+      "reviewNotes": "Removes all three sibling instruments from the pitch comparison.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-035",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "What cup-shaped part of a brass instrument does the player press to the lips and buzz into to start the sound?",
+        "clue_et": "Millise tassikujulise vaskpuhkpilli osa surub mängija vastu huuli, et huulte põrinaga heli tekitada?",
+        "response_en": "a mouthpiece",
+        "response_et": "huulik",
+        "accepted_variants_en": "mouthpiece;brass mouthpiece",
+        "accepted_variants_et": "puhkpilli huulik",
+        "explanation_en": "The player’s vibrating lips start the sound through the mouthpiece.",
+        "explanation_et": "Mängija vibreerivad huuled käivitavad heli huuliku kaudu.",
+        "source_title": "Yamaha: How does the trumpet generate sound?",
+        "source_url": "https://www.yamaha.com/en/musical_instrument_guide/trumpet/mechanism/mechanism002.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a trumpet comparison with the common sound-producing interface, avoiding a five-instrument pool. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.yamaha.com/en/musical_instrument_guide/trumpet/mechanism/mechanism002.html",
+          "observation": "Manufacturer describes buzzing lips into a cup-shaped mouthpiece, whose depth influences tone."
+        }
+      ],
+      "subjectKey": "part:brass-mouthpiece",
+      "factFamily": "brass-lip-contact-interface"
+    },
+    {
+      "clueId": "built-in-music-easy-expansion-049",
+      "batchId": "06-music",
+      "changes": {
+        "clue_et": "Kaks täppi kahekordse püstkriipsu kõrval käsivad esitajal tagasi minna ja osa uuesti mängida. Nimeta märk.",
+        "explanation_et": "Kordusmärk tähistab uuesti esitatavat muusikalõiku ja koosneb tavaliselt kahekordse püstkriipsu kõrval olevatest täppidest."
+      },
+      "reviewNotes": "Removes the sibling bar-line name from the repeat-symbol prompt and reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0017",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Scott McKenzie advises listeners visiting which West Coast US city to wear flowers in their hair?",
+        "clue_et": "Millist USA lääneranniku linna külastavatel kuulajatel soovitab Scott McKenzie juustesse lilli panna?"
+      },
+      "reviewNotes": "Removes the sibling California state answer from the city question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0142",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which Mozart opera features the Queen of the Night and her famously demanding coloratura arias?",
+        "clue_et": "Millises Mozarti ooperis esineb Öökuninganna oma kuulsalt nõudlike koloratuuriaariatega?"
+      },
+      "reviewNotes": "Removes the generic performing-art answer requested by another opera clue.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-all-level-expansion-0249",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which percussionist composed Afro Blue, later a celebrated Coltrane standard?",
+        "clue_et": "Milline löökpillimängija kirjutas „Afro Blue“, millest sai hiljem kuulus Coltrane’i standard?"
+      },
+      "reviewNotes": "Removes the sibling Cuba answer from the composer identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-music-accessible-corpus-020",
+      "batchId": "06-music",
+      "changes": {
+        "clue_en": "Which orchestral drums can be tuned to specific pitches, often with a pedal?",
+        "clue_et": "Milliseid orkestritrumme saab häälestada kindlatele helikõrgustele, sageli pedaaliga?"
+      },
+      "reviewNotes": "Independent reviewer C found that kettle drums/kateltrummid printed accepted aliases. Remove those names while preserving the familiar pitch-tuning and pedal identifying facts.",
+      "sourceVerification": []
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-music-set-011",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Music: Singing Voices and Techniques",
+        "category_name_et": "Muusika: Lauluhääled ja lauluvõtted"
+      },
+      "reviewNotes": "Accommodates an independent technique instead of exhausting adjacent male voice ranges."
+    },
+    {
+      "categoryId": "built-in-music-set-025",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Music: Classic Rock Bands",
+        "category_name_et": "Muusika: Klassikalise roki ansamblid"
+      },
+      "reviewNotes": "Fits the 1960s–1980s recordings in all five questions."
+    },
+    {
+      "categoryId": "built-in-music-set-028",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Music: Pop of the 2000s and 2010s",
+        "category_name_et": "Muusika: 2000. ja 2010. aastate popmuusika"
+      },
+      "reviewNotes": "Includes Firework’s 2010 release without changing a recognizable hit."
+    },
+    {
+      "categoryId": "built-in-music-set-031",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Music: European Pop",
+        "category_name_et": "Muusika: Euroopa popmuusika"
+      },
+      "reviewNotes": "Includes Boney M’s West German formation alongside the Nordic performers."
+    },
+    {
+      "categoryId": "built-in-music-set-036",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Recognizable album covers",
+        "category_name_et": "Äratuntavad albumikaaned"
+      },
+      "reviewNotes": "Covers title-bearing and title-free sleeves accurately."
+    },
+    {
+      "categoryId": "built-in-music-set-082",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Recordings that put the human voice first",
+        "category_name_et": "Salvestised, kus inimhääl on esiplaanil"
+      },
+      "reviewNotes": "Includes the instrument-accompanied wordless lead on The Great Gig in the Sky."
+    },
+    {
+      "categoryId": "built-in-music-set-137",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Jazz stars and signature works",
+        "category_name_et": "Džässistaarid ja nende tunnuslooming"
+      },
+      "reviewNotes": "Matches all five solo-artist identifications."
+    },
+    {
+      "categoryId": "built-in-music-set-146",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Instruments and the people who played them",
+        "category_name_et": "Pillid ja nende mängijad"
+      },
+      "reviewNotes": "Includes Harrison’s sitar studies alongside instrument descriptions."
+    },
+    {
+      "categoryId": "built-in-music-set-152",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Jazz works and their creators",
+        "category_name_et": "Džässiteosed ja nende loojad"
+      },
+      "reviewNotes": "Includes albums, suites and standalone compositions."
+    },
+    {
+      "categoryId": "built-in-music-set-159",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Classical works and their connections",
+        "category_name_et": "Klassikateosed ja nende seosed"
+      },
+      "reviewNotes": "Broadens the category to fit instruments, opera origins and the concerto commissioner’s family connection; avoids introducing piano as an answer after tier 1 names pianos."
+    },
+    {
+      "categoryId": "built-in-music-set-169",
+      "batchId": "06-music",
+      "changes": {
+        "category_name_en": "Orchestral works with stories",
+        "category_name_et": "Orkestriteosed, millel on oma lugu"
+      },
+      "reviewNotes": "Includes Elgar’s theme-and-variations work alongside the symphonies."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "B-022",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-008",
+        "built-in-music-accessible-corpus-010"
+      ],
+      "reason": "Only soprano and tenor remain from voice ranges; duet, a cappella and vibrato supply independent recognizable facts. Explicit sibling range names and the exhaustive four-part answer pool are removed."
+    },
+    {
+      "findingId": "B-023",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-012",
+        "built-in-music-accessible-corpus-015"
+      ],
+      "reason": "Concertmaster prompt no longer displays strings or conductor, and asks an unsupplied title."
+    },
+    {
+      "findingId": "B-024",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-017"
+      ],
+      "reason": "Marimba added as a valid response to the retained broad description; explanation makes scope explicit."
+    },
+    {
+      "findingId": "B-025",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-021",
+        "built-in-music-accessible-corpus-023",
+        "built-in-music-accessible-corpus-025"
+      ],
+      "reason": "Named comparisons removed and viola item replaced with an independent paired-string instrument."
+    },
+    {
+      "findingId": "B-026",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-048"
+      ],
+      "reason": "Existing hymn section and later text/use are correctly separated in both languages."
+    },
+    {
+      "findingId": "B-027",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-056",
+        "built-in-music-accessible-corpus-057"
+      ],
+      "reason": "Period anchors stand alone without naming any sibling response."
+    },
+    {
+      "findingId": "B-028",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-073",
+        "built-in-music-accessible-corpus-075"
+      ],
+      "reason": "Clue-fragment aliases removed from the accepted variants; Armstrong prompt also stops revealing another category answer."
+    },
+    {
+      "findingId": "B-029",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-082"
+      ],
+      "reason": "Decade restriction removed from both titles."
+    },
+    {
+      "findingId": "B-030",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-098"
+      ],
+      "reason": "Both titles now include 2010."
+    },
+    {
+      "findingId": "B-031",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-111"
+      ],
+      "reason": "European scope accommodates Boney M and every other performer."
+    },
+    {
+      "findingId": "B-032",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-accessible-corpus-125"
+      ],
+      "reason": "Rock Band is now explicitly supported as a valid host-judged answer to the broad prompt."
+    },
+    {
+      "findingId": "B-033",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-092",
+        "built-in-music-playable-corpus-093"
+      ],
+      "reason": "Title-free promise removed; each retained artwork description remains independently playable."
+    },
+    {
+      "findingId": "B-034",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-136",
+        "built-in-music-playable-corpus-138",
+        "built-in-music-playable-corpus-140"
+      ],
+      "reason": "Space Oddity removed from sibling clue/reveal, and Major Tom replaced with an independent Beatles/NASA fact."
+    },
+    {
+      "findingId": "B-035",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-208"
+      ],
+      "reason": "Disputed warm-up story removed from prompt and explanation; stable identifying facts retained."
+    },
+    {
+      "findingId": "B-036",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-323"
+      ],
+      "reason": "Title accurately promises a foreground vocal, not mostly vocal-only instrumentation."
+    },
+    {
+      "findingId": "B-037",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-playable-corpus-333"
+      ],
+      "reason": "Prompt and explanation now specify Ravel’s orchestral version."
+    },
+    {
+      "findingId": "B-038",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-easy-expansion-012",
+        "built-in-music-easy-expansion-015"
+      ],
+      "reason": "Rumba subforms and merengue’s traditional ensemble now supply distinguishing anchors."
+    },
+    {
+      "findingId": "B-039",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0068",
+        "built-in-music-all-level-expansion-0070"
+      ],
+      "reason": "Danger Zone question no longer names the answer to the Footloose singer clue."
+    },
+    {
+      "findingId": "B-040",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0081",
+        "built-in-music-all-level-expansion-0082",
+        "built-in-music-all-level-expansion-0083",
+        "built-in-music-all-level-expansion-0084",
+        "built-in-music-all-level-expansion-0085"
+      ],
+      "reason": "Partner promise removed from both titles."
+    },
+    {
+      "findingId": "B-041",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0130"
+      ],
+      "reason": "Both titles now prepare players for the musician biography item."
+    },
+    {
+      "findingId": "B-042",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0157",
+        "built-in-music-all-level-expansion-0159",
+        "built-in-music-all-level-expansion-0160"
+      ],
+      "reason": "Album-only restriction removed in both languages."
+    },
+    {
+      "findingId": "B-043",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0195"
+      ],
+      "reason": "Broad category title covers every retained response type, including the opera title at tier 4 and biography at tier 5."
+    },
+    {
+      "findingId": "B-044",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0233",
+        "built-in-music-all-level-expansion-0234",
+        "built-in-music-all-level-expansion-0235"
+      ],
+      "reason": "Repeated Beatles target replaced with independent Rob Reiner identification; no sibling names that response."
+    },
+    {
+      "findingId": "B-045",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0237",
+        "built-in-music-all-level-expansion-0238"
+      ],
+      "reason": "Effect name removed from the mute prompt and reveal in both languages."
+    },
+    {
+      "findingId": "B-046",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-music-all-level-expansion-0243"
+      ],
+      "reason": "Both titles now accurately include all five orchestral works."
+    }
+  ]
+}

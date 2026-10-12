@@ -1,0 +1,366 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-geography-playable-corpus-006",
+      "batchId": "02-geography",
+      "changes": {
+        "accepted_variants_en": "Vatican City State",
+        "accepted_variants_et": "Vatikani Linnriik"
+      },
+      "reviewNotes": "A-GEO-001: remove Holy See/Püha Tool, a distinct legal entity.",
+      "sourceVerification": [
+        {
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations.html",
+          "observation": "The Vatican State explicitly states its international personality is separate from the Holy See."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-014",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Visitors seek lions, elephants and rhinos in which major South African national park bordering Mozambique?",
+        "clue_et": "Millises Mosambiigiga piirnevas suures Lõuna-Aafrika rahvuspargis vaadeldakse lõvisid, elevante ja ninasarvikuid?"
+      },
+      "reviewNotes": "A-GEO-002: add Kruger's distinguishing Mozambique-border location.",
+      "sourceVerification": [
+        {
+          "url": "https://www.sanparks.org/parks/kruger/travel/giriyondo-access-point",
+          "observation": "SANParks describes the border access linking Kruger with Mozambique's Limpopo park."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-097",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "What are the long, narrow, steep-sided sea inlets carved by glaciers, especially familiar on Norway's coast?",
+        "clue_et": "Kuidas nimetatakse liustike uuristatud pikki, kitsaid ja järskude kallastega merelahti, mille poolest on eriti tuntud Norra rannik?",
+        "response_en": "Fjords",
+        "response_et": "Fjordid",
+        "accepted_variants_en": "Fjord;fiord;fiords",
+        "accepted_variants_et": "Fjord",
+        "explanation_en": "Glaciers carved valleys that were later flooded by the sea.",
+        "explanation_et": "Liustikud uuristasid orge, mille meri hiljem üle ujutas.",
+        "source_title": "Fjord — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Fjord",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-003: replace country identity with a recognisable Nordic landform. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.visitnorway.com/things-to-do/nature-attractions/fjords/facts-about-the-fjords/",
+          "observation": "Official Norwegian tourism defines fjords as long, narrow sea inlets with steep surrounding relief and glacial origins."
+        }
+      ],
+      "subjectKey": "landform:fjord",
+      "factFamily": "geography:glacial-sea-inlet"
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-098",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which city is the capital of Finland?",
+        "clue_et": "Milline linn on Soome pealinn?",
+        "response_en": "Helsinki",
+        "response_et": "Helsingi",
+        "accepted_variants_en": "Helsingfors",
+        "accepted_variants_et": "Helsinki;Helsingfors",
+        "explanation_en": "The city became Finland's capital in 1812 and remains the seat of its national government.",
+        "explanation_et": "Linn sai Soome pealinnaks 1812. aastal ning on riigi valitsuse asukoht.",
+        "source_title": "Helsinki — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Helsinki",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-003: replace a country identity with a city; do not mention the sibling sea answer in explanation. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hel.fi/en/decision-making/welcome-to-helsinki-tips-for-newcomers",
+          "observation": "The City of Helsinki identifies Helsinki as Finland's capital."
+        },
+        {
+          "url": "https://www.hel.fi/static/kanslia/Julkaisut/2019/City_of_Helsinki_AnnualReport2018_NETTI.pdf",
+          "observation": "The city's report dates its designation as capital to 1812."
+        }
+      ],
+      "subjectKey": "place:helsinki",
+      "factFamily": "geography:finland-capital"
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-099",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which sea washes Stockholm's vast archipelago on Sweden's east coast?",
+        "clue_et": "Milline meri ümbritseb Stockholmi ulatuslikku saarestikku Rootsi idarannikul?",
+        "response_en": "The Baltic Sea",
+        "response_et": "Läänemeri",
+        "accepted_variants_en": "Baltic",
+        "accepted_variants_et": "Balti meri",
+        "explanation_en": "The archipelago's many islands and skerries extend eastwards from the city.",
+        "explanation_et": "Saarestiku arvukad saared ja skäärid ulatuvad linnast ida poole.",
+        "source_title": "Baltic Sea — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-003: replace country identity with a sea; no exhaustive five-country answer pool remains. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.visitstockholm.com/see-do/excursions/discover-stockholm-archipelago/",
+          "observation": "Stockholm's official guide locates its archipelago in Baltic waters."
+        }
+      ],
+      "subjectKey": "water:baltic-sea",
+      "factFamily": "geography:stockholm-archipelago-sea"
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-100",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which peninsula forms Denmark's mainland and continues south into Germany?",
+        "clue_et": "Milline poolsaar moodustab Taani mandriosa ja ulatub lõunas Saksamaale?",
+        "response_en": "Jutland",
+        "response_et": "Jüüti poolsaar",
+        "accepted_variants_en": "Jutland Peninsula;Jylland",
+        "accepted_variants_et": "Jüütimaa;Jutland;Jylland",
+        "explanation_en": "The peninsula includes mainland Denmark and part of northern Germany.",
+        "explanation_et": "Poolsaar hõlmab Taani mandriosa ja osa Põhja-Saksamaast.",
+        "source_title": "Jutland — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Jutland",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-003: ask for a peninsula rather than the final unused Nordic country. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://denmark.dk/people-and-culture/nature",
+          "observation": "Denmark's official site identifies the mainland of Jutland."
+        },
+        {
+          "url": "https://denmark.dk/innovation-and-design/infrastructure",
+          "observation": "The official Danish site identifies Jutland as a peninsula."
+        }
+      ],
+      "subjectKey": "landform:jutland",
+      "factFamily": "geography:jutland-peninsula"
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-172",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which gulf south of Saaremaa lies between Estonia and Latvia and contains the island of Ruhnu?",
+        "clue_et": "Milline Saaremaast lõunas Eesti ja Läti vahel asuv laht hõlmab Ruhnu saart?",
+        "response_en": "The Gulf of Riga",
+        "response_et": "Liivi laht",
+        "accepted_variants_en": "Riga Gulf",
+        "accepted_variants_et": "Riia laht",
+        "explanation_en": "The gulf is bordered by Estonia and Latvia, with Saaremaa sheltering it from the open sea.",
+        "explanation_et": "Laht piirneb Eesti ja Lätiga ning Saaremaa varjab seda avamere eest.",
+        "source_title": "Gulf of Riga — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Riga",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-004: replace the connected Peipsi identity with independent coastal geography. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://visitestonia.com/en/where-to-go/top-islands-to-visit-in-estonia",
+          "observation": "Estonia's official tourism source places Ruhnu in the Gulf of Riga."
+        }
+      ],
+      "subjectKey": "water:gulf-of-riga",
+      "factFamily": "geography:ruhnu-gulf"
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-173",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which near-circular lake on Saaremaa occupies the largest crater of a meteorite impact site?",
+        "clue_et": "Milline peaaegu ümmargune järv Saaremaal paikneb meteoriidikraatrivälja suurimas kraatris?",
+        "response_en": "Lake Kaali",
+        "response_et": "Kaali järv",
+        "accepted_variants_en": "Kaali;Kaali crater lake",
+        "accepted_variants_et": "Kaali kraatrijärv;Kaali",
+        "explanation_en": "A meteorite fragment formed the main crater, which is now occupied by a small lake.",
+        "explanation_et": "Meteoriiditükk tekitas peakraatri, milles asub praegu väike järv.",
+        "source_title": "Kaali crater — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Kaali_crater",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-004: replace Võrtsjärv identity with an independent impact-crater lake. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://visitestonia.com/en/kaali-field-of-meteorite-craters",
+          "observation": "The official tourism source identifies the main Kaali meteorite crater and Lake Kaali on Saaremaa."
+        }
+      ],
+      "subjectKey": "water:lake-kaali",
+      "factFamily": "geography:kaali-impact-lake"
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-174",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which lake beside Tallinn Airport is the city's main source of drinking water?",
+        "clue_et": "Milline Tallinna lennujaama kõrval asuv järv on linna peamine joogiveeallikas?",
+        "response_en": "Lake Ülemiste",
+        "response_et": "Ülemiste järv",
+        "accepted_variants_en": "Ülemiste;Lake Ulemiste",
+        "accepted_variants_et": "Ülemiste",
+        "explanation_en": "Water from the lake is treated before it reaches most of the water company's consumers in Tallinn.",
+        "explanation_et": "Järve vett puhastatakse enne, kui see jõuab enamiku Tallinna veefirma tarbijateni.",
+        "source_title": "Lake Ülemiste — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Lake_%C3%9Clemiste",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-004: retain only the Emajõgi clue from the linked Emajõgi–Võrtsjärv–Peipsi–Narva system. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.tallinnavesi.ee/en/environment/the-journey-of-water-at-tallinna-vesi",
+          "observation": "The water supplier says nearly 90% of its service-area consumers receive drinking water from Lake Ülemiste."
+        }
+      ],
+      "subjectKey": "water:lake-ulemiste",
+      "factFamily": "geography:tallinn-water-supply"
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-177",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "The national park that grew from the Vaika bird reserve established in 1910 is named after which island west of Saaremaa?",
+        "clue_et": "1910. aastal loodud Vaika linnukaitsealast välja kasvanud rahvuspark on saanud nime millise Saaremaast läänes asuva saare järgi?",
+        "explanation_en": "The protected area originated with the Vaika bird reserve in 1910 and became a national park in 1993.",
+        "explanation_et": "Kaitseala sai alguse Vaika linnukaitsealast 1910. aastal ning nimetati rahvuspargiks 1993. aastal.",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-GEO-005: distinguish the reserve's 1910 origin from national-park designation in 1993.",
+      "sourceVerification": [
+        {
+          "url": "https://kaitsealad.ee/en/protected-areas/vilsandi-national-park",
+          "observation": "The official protected-areas site separates the 1910 Vaika sanctuary, later reserve names and 1993 national park."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-217",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which Spanish delta projects into the Mediterranean with rice fields, lagoons and bird-rich wetlands?",
+        "clue_et": "Milline Hispaania delta ulatub Vahemerre riisipõldude, laguunide ja linnurikaste märgaladega?"
+      },
+      "reviewNotes": "A-GEO-006: ask for the delta that the response and variants name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-219",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which vast Siberian delta spreads into a maze of tundra channels beside the Laptev Sea?",
+        "clue_et": "Milline tohutu Siberi delta hargneb Laptevite mere ääres tundrakanalite labürindiks?"
+      },
+      "reviewNotes": "A-GEO-006: align the requested delta with the canonical response.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-220",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "What inland delta in Mali forms seasonal lakes and floodplains far from the sea?",
+        "clue_et": "Milline sisemaa delta Malis moodustab merest kaugel hooajalisi järvi ja lamme?"
+      },
+      "reviewNotes": "A-GEO-006: request the inland delta rather than its river.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-005",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which capital of Mali spreads along both banks of the Niger River?",
+        "clue_et": "Milline Mali pealinn laiub Nigeri jõe mõlemal kaldal?"
+      },
+      "reviewNotes": "A-GEO-007: identify Mali so that Niamey no longer satisfies the clue.",
+      "sourceVerification": []
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-geography-set-065",
+      "batchId": "02-geography",
+      "changes": {
+        "category_name_en": "Nordic Landscapes and Places",
+        "category_name_et": "Põhjamaade maastikud ja paigad"
+      },
+      "reviewNotes": "A-GEO-003: broaden the title to match the country, landform, city, sea and peninsula answer types."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "A-GEO-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-playable-corpus-006"
+      ],
+      "reason": "Removed the distinct Holy See entity from territorial-state variants."
+    },
+    {
+      "findingId": "A-GEO-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-accessible-corpus-014"
+      ],
+      "reason": "Added Mozambique border as Kruger discriminator."
+    },
+    {
+      "findingId": "A-GEO-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-accessible-corpus-096",
+        "built-in-geography-accessible-corpus-097",
+        "built-in-geography-accessible-corpus-098",
+        "built-in-geography-accessible-corpus-099",
+        "built-in-geography-accessible-corpus-100"
+      ],
+      "reason": "Mixed landform, city, sea and peninsula answers; broadened category title and removed exhaustive five-country pool."
+    },
+    {
+      "findingId": "A-GEO-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-playable-corpus-171",
+        "built-in-geography-playable-corpus-172",
+        "built-in-geography-playable-corpus-173"
+      ],
+      "reason": "Retained only Emajõgi from the connected water system and introduced three unrelated identifiable waters."
+    },
+    {
+      "findingId": "A-GEO-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-playable-corpus-177"
+      ],
+      "reason": "Separated the 1910 bird reserve from 1993 national park designation."
+    },
+    {
+      "findingId": "A-GEO-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-playable-corpus-217",
+        "built-in-geography-playable-corpus-219",
+        "built-in-geography-playable-corpus-220"
+      ],
+      "reason": "Made all three prompts explicitly request deltas matching host responses."
+    },
+    {
+      "findingId": "A-GEO-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-geography-playable-corpus-005"
+      ],
+      "reason": "Named Mali to distinguish Bamako from Niamey."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "author": "root",
+  "reviewer": "C",
+  "reviewedAt": "2026-10-11",
+  "status": "approved",
+  "files": [
+    {
+      "path": "root/manualtranslation-decisions.json",
+      "sha256": "f174c29bb7dccad7ab4d097231da646d31b9085b160340eb6eceb1229a5a6583"
+    },
+    {
+      "path": "root/14-adult-basic.proposal.json",
+      "sha256": "9e35edf4f2f7c322a60163affb99b425481671501646e3772fd8662f38022e9e"
+    },
+    {
+      "path": "root/14-adult-hard.proposal.json",
+      "sha256": "1ba3c473dbf9f7947d9fe1a5d9b59cc0f6d6c7d1f9a64932c983565343afc28a"
+    }
+  ],
+  "checks": {
+    "translation": "All 57 literal exception reasons read; conventional localized film/book titles, technical or venue identifiers, personal names and grammatical case endings preserve identity and EN/ET factual scope.",
+    "adultPolicy": "All changed Adult public prompts, responses, host alternatives and explanations previously read in 40 whole sets (200 siblings); current revisions are non-graphic factual trivia about biology, culture, law, relationships, media and public history. No explicit sexual description, depiction or instruction was introduced.",
+    "commonTerm": "Adult set052 inspected in both languages: ordinary Rodin0260 explanation phrase a pair of lovers does not identify exposed0259 Magritte painting The Lovers, whose independent clue identifies covered faces. It is a common-word match; target is a painting, not Tarot."
+  }
+}

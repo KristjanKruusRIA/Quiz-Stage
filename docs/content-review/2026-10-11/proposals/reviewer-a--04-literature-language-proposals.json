@@ -1,0 +1,589 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-167",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which adventure novel follows Athos, Porthos, Aramis, and their young companion d’Artagnan?",
+        "clue_et": "Milline seiklusromaan jälgib Athost, Porthost, Aramist ja nende noort kaaslast d’Artagnani?"
+      },
+      "reviewNotes": "A-LIT-001: remove the printed accepted original title; retain independent character recognition.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-168",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which poem by Dante follows a journey through Hell, Purgatory, and Paradise?",
+        "clue_et": "Milline Dante poeem jälgib teekonda läbi põrgu, puhastustule ja paradiisi?"
+      },
+      "reviewNotes": "A-LIT-001: remove the printed accepted Italian title; the author and journey identify the work.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-169",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which medieval monastery mystery features the Franciscan investigator William of Baskerville?",
+        "clue_et": "Milline keskaegses kloostris toimuv mõistatuslugu kujutab frantsiskaanlasest uurijat William Baskerville’i?"
+      },
+      "reviewNotes": "A-LIT-001: remove the printed accepted original title; retain the independent protagonist and setting.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-170",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which novel follows several generations of the Buendía family in the town of Macondo?",
+        "clue_et": "Milline romaan jälgib Buendía perekonna mitme põlvkonna elu Macondo linnas?"
+      },
+      "reviewNotes": "A-LIT-001: remove the printed accepted Spanish title; retain the family and setting.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-035",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "What Swedish boy travels across his country on the back of a goose?",
+        "clue_et": "Milline Rootsi poiss rändab läbi oma maa hane seljas?"
+      },
+      "reviewNotes": "A-LIT-002: omit the false wild-goose qualifier; a tame gander joins the wild flock.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gutenberg.org/cache/epub/10935/pg10935-images.html",
+          "observation": "The primary novel identifies Mårten/Morten as a tame gander, distinct from the wild geese; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-020",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which Julio Cortázar novel offers one reading that stops after chapter 56 and another that sends the reader among its 155 chapters according to a table?",
+        "clue_et": "Milline Julio Cortázari romaan pakub ühe lugemisviisi, mis lõpeb 56. peatüki järel, ning teise, mis suunab lugeja tabeli järgi rändama romaani 155 peatüki vahel?"
+      },
+      "reviewNotes": "A-LIT-003: distinguish the number of chapters in the book from the chapters traversed by the alternate route; do not claim all are included.",
+      "sourceVerification": [
+        {
+          "url": "https://pure.manchester.ac.uk/ws/portalfiles/portal/54573252/FULL_TEXT.PDF",
+          "observation": "Original dissertation analyzes the author’s alternate reading route and the omitted chapter 55; checked 2026-10-11."
+        },
+        {
+          "url": "https://penguinrandomhousehighereducation.com/book/?isbn=9780375712661",
+          "observation": "Publisher describes the book’s 155 short chapters and the advised non-linear reading; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-051",
+      "batchId": "04-literature-language",
+      "changes": {
+        "response_et": "„Bard Beedle’i lood“",
+        "accepted_variants_et": "Bard Beedle'i lood;The Tales of Beedle the Bard"
+      },
+      "reviewNotes": "A-LIT-004: use the published Estonian title; retain English and straight-apostrophe spelling rather than invented translations.",
+      "sourceVerification": [
+        {
+          "url": "https://elk.ee/wp-content/uploads/2019/02/Lastekirjandus-2017.pdf",
+          "observation": "Estonian Children’s Literature Centre bibliography records Bard Beedle’i lood, Krista Kaer, Varrak 2017; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-110",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which darkly comic Estonian novel mixes kratts, village life, and supernatural folklore?",
+        "clue_et": "Milline tumeda huumoriga Eesti romaan ühendab kratid, külaelu ja üleloomuliku rahvapärimuse?"
+      },
+      "reviewNotes": "A-LIT-005: remove the author identity needed by tier4; retain independent plot and genre hooks.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-114",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_et": "Mida tähendab saksa liitsõna „Kindergarten“ teine osa „Garten“?"
+      },
+      "reviewNotes": "A-LIT-006: align ET scope with EN by asking only the garden component, matching Aed.",
+      "sourceVerification": [
+        {
+          "url": "https://www.froebel.org.uk/news/froebel-the-united-states-kindergarten",
+          "observation": "Froebel Trust explains the compound as garden of children; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-117",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which Michael Cunningham novel interweaves one day in the lives of Virginia Woolf, Laura Brown, and Clarissa Vaughan across different decades?",
+        "clue_et": "Milline Michael Cunninghami romaan põimib eri kümnenditel ühe päeva Virginia Woolfi, Laura Browni ja Clarissa Vaughani elust?",
+        "explanation_en": "The three narratives echo one another across different decades through recurring themes of creativity, relationships, and mortality.",
+        "explanation_et": "Kolm eri kümnenditel kulgevat lugu kajavad üksteises vastu loovuse, suhete ja surelikkuse teemade kaudu."
+      },
+      "reviewNotes": "A-LIT-007: remove the sibling title and its definition from both prompt and public explanation while keeping the three-life structure.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-127",
+      "batchId": "04-literature-language",
+      "changes": {
+        "response_et": "„Kummituslik Hilli maja“",
+        "accepted_variants_en": "Haunting of Hill House;Kummituslik Hilli maja",
+        "accepted_variants_et": "The Haunting of Hill House;Kummituslik Hilli maja"
+      },
+      "reviewNotes": "A-LIT-008: published ET title replaces the improvised translation in canonical response and cross-language host aliases.",
+      "sourceVerification": [
+        {
+          "url": "https://raamatukoi.ee/raamat/kummituslik-hilli-maja",
+          "observation": "First-party edition sale record displays Kummituslik Hilli maja, Fantaasia 2025, Liis Pallon and ISBN 9789916739471 with matching characters; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-173",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which long poem by Wallace Stevens has a musician debate how art transforms reality?",
+        "clue_et": "Milline Wallace Stevensi pikk luuletus laseb muusikul arutleda selle üle, kuidas kunst tegelikkust muudab?"
+      },
+      "reviewNotes": "A-LIT-009: retain the undisputed musician/art theme and remove the disputed painting-inspiration premise.",
+      "sourceVerification": [
+        {
+          "url": "https://www.artic.edu/artworks/111936/title-page-from-the-blue-guitar",
+          "observation": "Art Institute catalog explains the poem’s imaginative-transformation theme and records Stevens’s insistence that no one picture inspired it; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-210",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which international auxiliary language did German priest Johann Martin Schleyer create in 1879?",
+        "clue_et": "Millise rahvusvahelise abikeele lõi saksa preester Johann Martin Schleyer 1879. aastal?"
+      },
+      "reviewNotes": "A-LIT-010: remove the explicit Esperanto comparison; creator, date and purpose are independent identifiers.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-201",
+      "batchId": "04-literature-language",
+      "changes": {
+        "response_et": "„Salajane ajalugu“",
+        "accepted_variants_et": "The Secret History;Salajane ajalugu",
+        "accepted_variants_en": "Salajane ajalugu"
+      },
+      "reviewNotes": "A-LIT-011: published ET title is canonical; real English title remains an accepted answer. The genuine Estonian published title is accepted in English too, matching the bilingual alias requirement.",
+      "sourceVerification": [
+        {
+          "url": "https://www.digar.ee/arhiiv/et/nlib-digar%3A610276",
+          "observation": "National Library deposited edition record names Donna Tartt, Salajane ajalugu, Liina Viires, Rahva Raamat 2021; verified in current search response 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-202",
+      "batchId": "04-literature-language",
+      "changes": {
+        "response_et": "„Õnneseen Jim“",
+        "accepted_variants_et": "Lucky Jim;Õnneseen Jim",
+        "accepted_variants_en": "Õnneseen Jim"
+      },
+      "reviewNotes": "A-LIT-011: published ET title is canonical with English acceptance. The genuine Estonian published title is accepted in English too, matching the bilingual alias requirement.",
+      "sourceVerification": [
+        {
+          "url": "https://www.sirp.ee/isa-ja-poeg-ehk-amis-versus-amis/",
+          "observation": "Original Estonian literary essay explicitly pairs Õnneseen Jim with Lucky Jim and its 1997 Estonian edition; checked 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-205",
+      "batchId": "04-literature-language",
+      "changes": {
+        "response_et": "„Häbi“",
+        "accepted_variants_et": "Disgrace;Häbi",
+        "accepted_variants_en": "Häbi"
+      },
+      "reviewNotes": "A-LIT-011: published ET title is canonical with English acceptance. The genuine Estonian published title is accepted in English too, matching the bilingual alias requirement.",
+      "sourceVerification": [
+        {
+          "url": "https://www.digar.ee/arhiiv/et/download/194321",
+          "observation": "National Library’s 2004 bibliography records Häbi by J. M. Coetzee, Atlantis 2003, Vladimir Indrikson, original title Disgrace; verified in current search response 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-all-level-expansion-0183",
+      "batchId": "04-literature-language",
+      "changes": {
+        "explanation_en": "Thompson’s reference work catalogues individual recurring narrative motifs and gives them identifiers for comparison across stories.",
+        "explanation_et": "Thompsoni teatmeteos liigitab üksikuid korduvaid jutustusmotiive ja annab neile tähised, et neid eri lugudes võrrelda."
+      },
+      "reviewNotes": "A-LIT-013: keep the public explanation on the motif catalog itself; omit the adjacent index’s name and function.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-157",
+      "batchId": "04-literature-language",
+      "changes": {
+        "accepted_variants_en": "Dracula",
+        "accepted_variants_et": "Dracula"
+      },
+      "reviewNotes": "Extra lexical review: generic count/krahv supplied by the prompt does not uniquely identify the character; retain Dracula as the genuine shorter name.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-158",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which unnamed being is assembled and brought to life by the scientist Victor Frankenstein?"
+      },
+      "reviewNotes": "Extra lexical review: avoid printing the accepted alternative the Creature in the English prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-165",
+      "batchId": "04-literature-language",
+      "changes": {
+        "accepted_variants_en": "catch twenty-two",
+        "accepted_variants_et": "nokk-kinni-saba-lahti-olukord;surnud ring"
+      },
+      "reviewNotes": "Extra lexical review: remove generic no-win/väljapääsmatu paraphrases printed by the prompt; retain actual alternative expression spellings.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-042",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "English belongs to the same linguistic branch as German, Swedish and Dutch. Name that branch.",
+        "clue_et": "Inglise keel kuulub saksa, rootsi ja hollandi keelega samasse keelerühma. Nimeta see rühm."
+      },
+      "reviewNotes": "Extra lexical review: remove the sibling answer Indo-European from both prompts.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-043",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Arabic and Hebrew belong to which linguistic branch of the Afroasiatic family?",
+        "clue_et": "Millisesse afroaasia keelkonna harusse kuuluvad araabia ja heebrea keel?",
+        "accepted_variants_et": "Semiidi keelerühm"
+      },
+      "reviewNotes": "Extra factual review: Semitic is a branch of Afroasiatic; avoid presenting the branch as the full family. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.cambridge.org/core/books/abs/ancient-languages-of-syriapalestine-and-arabia/hebrew/512F0FC4796BF3DB1137C1A9BA228DB1",
+          "observation": "Author's chapter summary places Hebrew and Arabic within the Semitic branch of the larger Afro-Asiatic family; verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-087",
+      "batchId": "04-literature-language",
+      "changes": {
+        "accepted_variants_en": "Strophe"
+      },
+      "reviewNotes": "Extra lexical review: verse is ambiguous between a line and a stanza and leaks through the sibling answer Free verse. Retain the real stanza-related term strophe and Estonian salm.",
+      "sourceVerification": [
+        {
+          "url": "https://www.poetryfoundation.org/education/glossary/strophe",
+          "observation": "Foundation glossary states strophe became synonymous with stanzas in an ode and also describes verse paragraphs; current search excerpt verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-088",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which humorous poetic form normally has five lines whose ending sounds follow an AABBA pattern?",
+        "clue_et": "Milline humoorikas luulevorm koosneb tavaliselt viiest reast, mille lõpuhäälikud järgivad mustrit AABBA?",
+        "explanation_en": "The first, second and fifth lines have matching ending sounds; the two shorter middle lines form a second matching pair.",
+        "explanation_et": "Esimese, teise ja viienda rea lõpuhäälikud sobivad kokku; kaks lühemat keskmist rida moodustavad teise samasuguste lõpuhäälikutega paari."
+      },
+      "reviewNotes": "Extra lexical review: describe the sound arrangement without printing sibling answer Rhyme/riim.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-accessible-corpus-090",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "What kind of poetry avoids a regular metre and a fixed pattern of matching line endings?",
+        "clue_et": "Milline luuleliik väldib korrapärast värsimõõtu ja kindlat sarnaste realõppude mustrit?"
+      },
+      "reviewNotes": "Extra lexical review: avoid printing sibling answer Rhyme/riim in the definition.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-086",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which published journal was written by a Jewish teenager hiding with her family in Amsterdam during the Nazi occupation and later prepared for publication by her father Otto?",
+        "clue_et": "Millise avaldatud päeviku kirjutas juudi teismeline, kes varjas end koos perega natside okupatsiooni ajal Amsterdamis ning kelle isa Otto valmistas selle hiljem avaldamiseks ette?"
+      },
+      "reviewNotes": "Extra lexical review: avoid printing the full Estonian title and its accepted translation in the prompt.",
+      "sourceVerification": [
+        {
+          "url": "https://www.annefrank.org/en/anne-frank/diary/",
+          "observation": "Anne Frank House describes her diary during hiding and its postwar publication through father Otto; verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-111",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which Nita Prose novel follows Molly Gray, a hotel cleaner who finds a wealthy guest dead in his room at the luxury hotel where she works?",
+        "clue_et": "Milline Nita Prose’i romaan jälgib hotellikoristajat Molly Grayd, kes leiab oma luksusliku töökoha toas surnud jõuka külalise?"
+      },
+      "reviewNotes": "Extra lexical review: remove Regency Grand Hotel because it prints the sibling title Grand Hotel.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-easy-expansion-042",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which SI unit of electrical potential difference has the symbol V?",
+        "clue_et": "Millise elektrilise potentsiaalide vahe SI-ühiku tähis on V?"
+      },
+      "reviewNotes": "Extra lexical review: ask the electrical quantity and symbol instead of giving the near-identical name Volta in the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-all-level-expansion-0016",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "In Perrault’s Puss in Boots, which big cat does the ogre become to demonstrate his powers?",
+        "clue_et": "Milliseks suureks kaslaseks muutub inimsööja Perrault’ „Saabastega kassis“, et näidata oma võimeid?",
+        "explanation_en": "The ogre demonstrates his power by becoming a lion; the cat later tricks him into taking a much smaller form.",
+        "explanation_et": "Inimsööja näitab oma võimet lõviks muutudes; hiljem meelitab kass ta võtma palju väiksemat kuju."
+      },
+      "reviewNotes": "Extra lexical review: the later transformation into a mouse disclosed the sibling answer; retain the first transformation while describing the later trick generically.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-literature-language-all-level-expansion-0141",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "What short story form typically uses animal characters to communicate a moral lesson?",
+        "clue_et": "Milline lühijutu vorm kasutab tavaliselt loomtegelasi, et anda edasi moraalset õpetust?",
+        "response_en": "A fable",
+        "response_et": "Valm",
+        "accepted_variants_en": "Fable",
+        "accepted_variants_et": "Valm",
+        "explanation_en": "The animals' choices illustrate human behaviour, and the story often ends with an explicit lesson.",
+        "explanation_et": "Loomade valikud kujutavad inimeste käitumist ning lugu lõpeb sageli otsesõnu esitatud õpetusega.",
+        "source_title": "Fable — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Fable",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Extra lexical review: replace the umbrella answer Legend, printed in the sibling response Urban legend, with a familiar independent story form. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://read.gov/aesop/001.html",
+          "observation": "Library of Congress collection provides animal fables with explicit morals; verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Fable",
+          "observation": "Current page describes short animal narratives illustrating a moral; CC BY-SA 4.0 text notice verified 2026-10-11."
+        }
+      ],
+      "subjectKey": "literary-form:fable",
+      "factFamily": "literature:fable-animal-moral"
+    },
+    {
+      "clueId": "built-in-literature-language-all-level-expansion-0188",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which Russian-born novelist published his autobiography in the United States as Conclusive Evidence in 1951, before revising it as Speak, Memory?",
+        "clue_et": "Milline Venemaal sündinud romaanikirjanik avaldas 1951. aastal Ameerika Ühendriikides autobiograafia „Conclusive Evidence“, mille ta hiljem töötas ümber raamatuks „Speak, Memory“?",
+        "response_en": "Vladimir Nabokov",
+        "response_et": "Vladimir Nabokov",
+        "accepted_variants_en": "Nabokov",
+        "accepted_variants_et": "Nabokov",
+        "explanation_en": "His memoir recalls childhood in Russia, emigration and family life; its first British edition already used the title Speak, Memory.",
+        "explanation_et": "Tema mälestusteraamat meenutab lapsepõlve Venemaal, väljarännet ja pereelu; juba esimene Briti väljaanne kandis pealkirja „Speak, Memory“.",
+        "source_title": "Speak, Memory — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Speak,_Memory",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Extra lexical and calibration review: replace the very obvious higher-tier language answer English, also printed by siblings, with the bilingual novelist's recognizable autobiography history. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://nabokovsociety.org/life/chronology",
+          "observation": "1951 entry records Conclusive Evidence published February 14 by Harper and Brothers, and in England in November as Speak, Memory; verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Speak,_Memory",
+          "observation": "Current article supports Russian childhood memoir and publication titles; CC BY-SA 4.0 text notice verified 2026-10-11."
+        }
+      ],
+      "subjectKey": "author:vladimir-nabokov",
+      "factFamily": "literature:nabokov-memoir-publication"
+    },
+    {
+      "clueId": "built-in-literature-language-playable-corpus-106",
+      "batchId": "04-literature-language",
+      "changes": {
+        "clue_en": "Which Elizabeth Gilbert memoir follows her journey through Italy, India and Indonesia after the end of her marriage?",
+        "clue_et": "Milline Elizabeth Gilberti mälestusteraamat kirjeldab tema teekonda läbi Itaalia, India ja Indoneesia pärast abielu lõppu?",
+        "response_en": "Eat, Pray, Love",
+        "response_et": "„Söö, palveta, armasta“",
+        "accepted_variants_en": "Eat Pray Love;Söö, palveta, armasta",
+        "accepted_variants_et": "Eat, Pray, Love;Eat Pray Love",
+        "explanation_en": "Gilbert explores personal renewal through three contrasting cultures; the Indonesian part takes place on Bali.",
+        "explanation_et": "Gilbert otsib kolme erineva kultuuri kaudu võimalusi elus uut algust teha; Indoneesia osa toimub Balil.",
+        "source_title": "Eat Pray Love (book) — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Eat_Pray_Love_(book)",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "book:eat-pray-love",
+      "factFamily": "literature:gilbert-three-country-memoir",
+      "reviewNotes": "Extra lexical review: Into the Wild necessarily contains the sibling answer Wild, so replace it with another familiar travel memoir in this broad category. Preserve legitimate original and published Estonian title acceptance. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.elizabethgilbert.com/books/eat-pray-love/",
+          "observation": "Author's official book description places the personal journey in Italy, India and Bali in Indonesia; verified 2026-10-11."
+        },
+        {
+          "url": "https://varrak.ee/wp-content/uploads/2020/03/SERK_aprill_2020_v.pdf",
+          "observation": "Publisher's own catalogue page6 (PDF index5) explicitly names Gilbert as author of Söö, palveta, armasta; verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Eat_Pray_Love_(book)",
+          "observation": "Current memoir page corroborates post-divorce journey and title; CC BY-SA 4.0 text notice verified 2026-10-11."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-literature-language-set-152",
+      "batchId": "04-literature-language",
+      "changes": {
+        "category_name_en": "Nineteenth-Century Fiction and Its Secrets",
+        "category_name_et": "19. sajandi romaanid ja nende saladused"
+      },
+      "reviewNotes": "A-LIT-012: broaden the period to the nineteenth century, accurately including Austen’s pre-Victorian Northanger Abbey alongside the four later novels. Jane Austen’s House dates its publication to December 1817 (https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/), checked 2026-10-11."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "A-LIT-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-accessible-corpus-167",
+        "built-in-literature-language-accessible-corpus-168",
+        "built-in-literature-language-accessible-corpus-169",
+        "built-in-literature-language-accessible-corpus-170"
+      ],
+      "reason": "All four prompts now require recognition from characters, setting or journey. The real original titles remain legitimate aliases but are absent from prompts."
+    },
+    {
+      "findingId": "A-LIT-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-accessible-corpus-035"
+      ],
+      "reason": "Both prompts say goose and no longer misclassify the domestic gander as wild."
+    },
+    {
+      "findingId": "A-LIT-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-020"
+      ],
+      "reason": "The alternate path is among the book’s 155 chapters; the false all-155 claim is removed."
+    },
+    {
+      "findingId": "A-LIT-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-051"
+      ],
+      "reason": "The canonical ET response is the published title and the host list accepts its normal spelling and the English title."
+    },
+    {
+      "findingId": "A-LIT-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-accessible-corpus-109",
+        "built-in-literature-language-accessible-corpus-110"
+      ],
+      "reason": "Tier5 no longer names Kivirähk. None of the other sibling prompts/explanations states his identity."
+    },
+    {
+      "findingId": "A-LIT-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-accessible-corpus-114"
+      ],
+      "reason": "Both language prompts seek the garden component, so the existing Aed response answers the ET question."
+    },
+    {
+      "findingId": "A-LIT-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-116",
+        "built-in-literature-language-playable-corpus-117"
+      ],
+      "reason": "The Hours keeps its author and three protagonists; its prompt and explanation no longer identify the sibling Mrs Dalloway."
+    },
+    {
+      "findingId": "A-LIT-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-127"
+      ],
+      "reason": "The published ET title is canonical and accepted in both lists; English acceptance is retained."
+    },
+    {
+      "findingId": "A-LIT-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-173"
+      ],
+      "reason": "The prompt no longer states the disputed Picasso attribution as a fact."
+    },
+    {
+      "findingId": "A-LIT-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-206",
+        "built-in-literature-language-playable-corpus-210"
+      ],
+      "reason": "The tier5 prompt no longer prints tier1’s answer Esperanto; the other four sibling texts are independent."
+    },
+    {
+      "findingId": "A-LIT-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-playable-corpus-201",
+        "built-in-literature-language-playable-corpus-202",
+        "built-in-literature-language-playable-corpus-205"
+      ],
+      "reason": "All three published Estonian titles are canonical and explicit accepted variants; the English titles remain acceptable."
+    },
+    {
+      "findingId": "A-LIT-012",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-all-level-expansion-0158"
+      ],
+      "reason": "The category’s century scope now accurately contains all five works; no question replacement is needed."
+    },
+    {
+      "findingId": "A-LIT-013",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-literature-language-all-level-expansion-0181",
+        "built-in-literature-language-all-level-expansion-0183"
+      ],
+      "reason": "The tier3 explanation no longer names or defines the sibling ATU Index."
+    }
+  ]
+}

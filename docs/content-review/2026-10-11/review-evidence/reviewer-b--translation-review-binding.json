@@ -1,0 +1,40 @@
+{
+  "reviewer": "repair_content_b",
+  "reviewedAt": "2026-10-11T16:37:43.650293+00:00",
+  "decision": "approved",
+  "method": "Manually read all current English/Estonian diagnostic field contexts, all complete original/repaired affected sets earlier, and independently rechecked six assigned Finals diagnostic contexts. Each diagnostic exception has its own specific identifier and reason.",
+  "exceptionCount": 185,
+  "diagnosticInputSha256": "668ce023c3ef8808636b8ccc5516cd0f37ac18d5eba0cb263907a2a5e7539f2c",
+  "decisionsSha256": "e9cb16f4e38b99f5d07aeb3e3937e9a5da5cbee9cfa5c38ff7b1b2e7a4499fcd",
+  "proposalBindings": [
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/05-art-architecture.proposal.json",
+      "sha256": "fb7576560c1e1da8c44450ec88b95c038504d3b26b0dbc56c3de97d27656779b"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/06-music.proposal.json",
+      "sha256": "d364bb97f22eb721c0a3bfd752d243261bbbd41dd4b269b2679ca19093ccd586"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/07-film-television.proposal.json",
+      "sha256": "d0a9c32dea13d532db66d9e033011ee457cc0ccc08989b6d31efb062a31a47af"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/08-sports-games.proposal.json",
+      "sha256": "e29123d75a043cde2bc1c9f31a14497a5b27050ca339b560522b94fd84b6acb3"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/13-finals.proposal.json",
+      "sha256": "114b7e809c936cf6a49eab3c67700807263c9f09d15b291ddb20fe76f3f15225"
+    }
+  ],
+  "finalDelta": {
+    "diagnosticReportPath": "content/work/2026-10-content-repairs/fresh-translation-review.json",
+    "diagnosticReportSha256": "976298b2eabd3fbde256a58704f1992d623f69753c0a94ca902fdb4f9fb0c0fe",
+    "exceptionIds": [
+      "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-139",
+      "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0191"
+    ],
+    "method": "Read both complete current bilingual rows directly from the final projected sets, including localized category titles, responses, aliases and explanations. Proposal bytes remain unchanged."
+  }
+}

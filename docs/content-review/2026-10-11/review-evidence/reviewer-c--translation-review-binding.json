@@ -1,0 +1,11 @@
+{
+  "author": "C",
+  "reviewer": "C",
+  "reviewedAt": "2026-10-11",
+  "status": "manual-translation-review",
+  "proposalSha256": "bb0fa9b93909eae5537a5052531ba6d4ce89e3436d644748a03d8cc9293c6fde",
+  "validationSha256": "976298b2eabd3fbde256a58704f1992d623f69753c0a94ca902fdb4f9fb0c0fe",
+  "decisions": 78,
+  "scope": "All current severity=error translation IDs in packs09–12 plus C-owned Finals0056,0126,0129,0142. Every literal pair reviewed; this is translation adjudication only, not self-approval of the content repairs.",
+  "diagnosticRefreshNote": "Compared all current 78 owned error IDs with the manually reviewed decisions after the final Art diagnostic delta: exact same owned set, no missing or extra IDs; C proposal remains unchanged."
+}

@@ -1,0 +1,1276 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-159",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which CATAN terrain has no production number and produces no resource?",
+        "clue_et": "Millisel Catani maastikul pole tootmisnumbrit ja see ei anna ühtegi ressurssi?",
+        "source_title": "CATAN: Official rules and almanac",
+        "source_url": "https://www.catan.com/sites/default/files/2021-07/catan-25th-rules_eng-200313.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Eliminates the internally false rollable-number premise. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.catan.com/sites/default/files/2021-07/catan-25th-rules_eng-200313.pdf",
+          "observation": "Variable setup explicitly states that the desert never gets a number token and is skipped."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-011",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "Argentina won the Lusail final on penalties after a 3–3 draw, earning its third men’s World Cup title.",
+        "explanation_et": "Argentina võitis Lusaili finaali pärast 3 : 3 viiki penaltitega ja teenis oma kolmanda meeste maailmameistritiitli."
+      },
+      "reviewNotes": "Removes the sibling country France from the public reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-013",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "Götze’s extra-time goal in Rio de Janeiro settled the 2014 final.",
+        "explanation_et": "Götze lisaajavärav Rio de Janeiros otsustas 2014. aasta finaali."
+      },
+      "reviewNotes": "Whole-set review also removes Argentina from Germany’s public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-015",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "Uruguay won the inaugural tournament’s final at Montevideo’s Estadio Centenario.",
+        "explanation_et": "Uruguay võitis esimese turniiri finaali Montevideo Estadio Centenariol."
+      },
+      "reviewNotes": "Whole-set review also removes Argentina from Uruguay’s public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-030",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "A calendar Grand Slam means winning all four major singles titles in one calendar year.",
+        "explanation_et": "Kalendriaasta suur slämm tähendab kõigi nelja suure üksikmängutiitli võitmist ühe kalendriaasta jooksul."
+      },
+      "reviewNotes": "Removes tournament enumeration from both public explanations.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-011",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "A jump ball begins the game. The jumpers may tap the tossed ball after it has started its downward flight.",
+        "explanation_et": "Hüppepall alustab mängu. Hüppajad võivad üles visatud palli suunata pärast seda, kui see on hakanud allapoole liikuma.",
+        "source_title": "FIBA Official Basketball Rules 2024",
+        "source_url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Uses FIBA’s legal contact timing in both explanations. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+          "observation": "Article 12.2.4 permits a jump-ball tap after downward flight begins; Article 29.1.1 requires release before the signal and subsequent rim contact or a basket."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-018",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "Cathy Freeman carried the Australian and Aboriginal flags after winning one of the host nation’s defining gold medals.",
+        "explanation_et": "Cathy Freeman kandis pärast võitu Austraalia ja aborigeenide lippe ning tema kullast sai koduolümpia üks sümbolhetki.",
+        "source_title": "Australian Olympic Committee: Cathy Freeman",
+        "source_url": "https://www.olympics.com.au/olympians/cathy-freeman/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Corrects the two flags identified by the Australian Olympic Committee. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.olympics.com.au/olympians/cathy-freeman/",
+          "observation": "Sydney victory-lap account explicitly identifies Australian and Aboriginal flags."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-041",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which word-explanation game from Finnish publisher Tactic must you help teammates guess a card’s word without saying that word itself?",
+        "clue_et": "Millises Soome kirjastaja Tacticu sõnaseletusmängus tuleb aidata kaaslastel kaardil olev sõna ära arvata ilma seda sõna ennast ütlemata?",
+        "source_title": "Tactic Games: Alias Original",
+        "source_url": "https://games.tactic.net/en/tuote/original-alias/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds its Finnish publisher as a unique anchor while retaining the familiar play mechanic. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://games.tactic.net/en/tuote/original-alias/",
+          "observation": "Publisher’s product page identifies the team word-explanation game; Tactic’s 30th-anniversary press release gives its Pori, Finland address."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-059",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Under FIBA basketball rules, what violation occurs when the attacking team’s allotted shooting time expires without a shot released before the signal that then hits the rim or enters the basket?",
+        "clue_et": "Milline rikkumine toimub FIBA korvpallireeglite järgi, kui võistkonna pealeviskeks antud aeg lõpeb ilma enne märguannet käest lastud visketa, mis seejärel puudutab rõngast või läbib korvi?",
+        "explanation_en": "The ball must leave the shooter’s hands before the shot-clock signal and subsequently touch the rim or enter the basket; rim contact may occur after the signal.",
+        "explanation_et": "Pall peab lahkuma viskaja kätest enne rünnakuaja märguannet ning seejärel puudutama rõngast või läbima korvi; rõngakontakt võib toimuda pärast märguannet.",
+        "source_title": "FIBA Official Basketball Rules 2024",
+        "source_url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Makes FIBA scope and release deadline explicit; does not require rim contact before the signal. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+          "observation": "Article 12.2.4 permits a jump-ball tap after downward flight begins; Article 29.1.1 requires release before the signal and subsequent rim contact or a basket."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-064",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which Dutch driver won his first world championship with a final-lap pass in the controversial 2021 Abu Dhabi finale?",
+        "clue_et": "Milline Hollandi sõitja võitis oma esimese MM-tiitli 2021. aasta vastuolulises Abu Dhabi finaalis viimase ringi möödasõiduga?",
+        "explanation_en": "Max Verstappen’s final-lap pass made him the first Dutch Formula One world champion.",
+        "explanation_et": "Max Verstappeni viimase ringi möödasõit tegi temast esimese Hollandi vormel 1 maailmameistri."
+      },
+      "reviewNotes": "Removes Hamilton from both prompt and public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-126",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which fantasy tabletop role-playing game, first published in 1974 by Gary Gygax and Dave Arneson, has a game master guide adventurers and often settles uncertain actions with a twenty-sided die?",
+        "clue_et": "Millises fantaasiateemalises lauarollimängus, mille Gary Gygax ja Dave Arneson avaldasid esimest korda 1974. aastal, juhib mängujuht seiklejaid ja ebakindlaid tegevusi lahendatakse sageli kahekümnetahulise täringuga?",
+        "source_title": "Hasbro: Royal Mail celebrates 50 years of Dungeons & Dragons",
+        "source_url": "https://newsroom.hasbro.com/node/35026/pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the 1974 debut and creators to distinguish D&D from other d20 fantasy RPGs. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://newsroom.hasbro.com/node/35026/pdf",
+          "observation": "Publisher’s release says D&D was first published in 1974 and designed by Gary Gygax and Dave Arneson."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-142",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which Microsoft console launched in 2005 and later gained Kinect, a motion system that required no handheld controller?",
+        "clue_et": "Milline Microsofti konsool ilmus 2005. aastal ja sai hiljem Kinecti liikumisjuhtimissüsteemi, mis ei vajanud käeshoitavat pulti?",
+        "source_title": "Xbox Wire: Achievement Unlocked: 10 Years – Thank You, Xbox 360",
+        "source_url": "https://news.xbox.com/en-us/2016/04/20/xbox-360-celebrating-10-years/",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the 2005 generation anchor rather than relying on Kinect alone. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://news.xbox.com/en-us/2016/04/20/xbox-360-celebrating-10-years/",
+          "observation": "2016 official retrospective says the console launched a little over ten years earlier and identifies Kinect as its innovation; Microsoft’s 2005 launch release confirms the year."
+        },
+        {
+          "url": "https://news.microsoft.com/source/2005/10/04/xbox-360-launch-lineup-announced/",
+          "observation": "Microsoft’s 4 October 2005 announcement gives Xbox 360 launch dates in November/December 2005."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-147",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which 1991 Capcom fighting-game sequel do Ryu and Ken throw Hadouken fireballs?",
+        "clue_et": "Millises Capcomi 1991. aasta võitlusmängu järjes heidavad Ryu ja Ken Hadoukeni tulekerasid?",
+        "source_title": "Capcom Town: Street Fighter II: The World Warrior",
+        "source_url": "https://captown.capcom.com/en/classic_games/23",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the original sequel’s primary-confirmed arcade release year. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://captown.capcom.com/en/classic_games/23",
+          "observation": "Developer’s classic-game page says the game first hit arcades in 1991."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-049",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which field event must an athlete take off from one foot and clear a horizontal bar without using a pole or dislodging it?",
+        "clue_et": "Millises kergejõustikualas peab sportlane ühelt jalalt ära tõugates ületama horisontaalse lati ilma teiba abita ja latti maha ajamata?",
+        "source_title": "World Athletics: High Jump",
+        "source_url": "https://worldathletics.org/disciplines/jumps/high-jump",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Moves the distinguishing unaided one-foot take-off into the prompt. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://worldathletics.org/disciplines/jumps/high-jump",
+          "observation": "Official discipline description specifies an unaided leap from one foot over the horizontal bar."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-052",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What swimming equipment has two lenses that seal around the eyes and a strap around the head?",
+        "clue_et": "Millisel ujumisvarustuse esemel on kaks silmade ümber tihenduvat läätse ja ümber pea käiv rihm?",
+        "response_en": "swimming goggles",
+        "response_et": "ujumisprillid",
+        "accepted_variants_en": "goggles",
+        "explanation_en": "Swimming goggles seal around the eyes and help swimmers see underwater.",
+        "explanation_et": "Ujumisprillid tihenduvad silmade ümber ja aitavad vee all näha.",
+        "source_title": "Swim England: Choosing the right swimming goggles",
+        "source_url": "https://www.swimming.org/masters/choosing-the-right-swimming-goggles/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11",
+        "accepted_variants_et": "ujuja prillid"
+      },
+      "reviewNotes": "Replaces a second stroke definition with recognizable equipment. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.swimming.org/masters/choosing-the-right-swimming-goggles/",
+          "observation": "Explains goggles sealing around the eyes, being held by straps, and lens choices for visibility."
+        }
+      ],
+      "subjectKey": "equipment:swimming-goggles",
+      "factFamily": "swimming-eye-equipment"
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-053",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What race format has four swimmers on one team take turns completing their own leg?",
+        "clue_et": "Millises võistlusformaadis läbivad ühe võistkonna neli ujujat kordamööda igaüks oma etapi?",
+        "response_en": "a relay",
+        "response_et": "teateujumine",
+        "accepted_variants_en": "relay;relay race;swimming relay",
+        "accepted_variants_et": "teatevõistlus;teateujumisvõistlus",
+        "explanation_en": "In a swimming relay, each team member completes one leg before the next teammate starts.",
+        "explanation_et": "Teateujumises läbib iga võistkonnaliige ühe etapi, enne kui järgmine kaaslane stardib.",
+        "source_title": "Swim England: Competitive pool swimming",
+        "source_url": "https://www.swimming.org/sport/competitive-pool-swimming/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces a third stroke definition with a team-race format. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.swimming.org/sport/competitive-pool-swimming/",
+          "observation": "Explains swimming relays with teams of four and each swimmer completing a leg."
+        }
+      ],
+      "subjectKey": "event:swimming-relay",
+      "factFamily": "four-swimmer-team-race"
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-054",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "How long is one length of a standard long-course competition swimming pool?",
+        "clue_et": "Kui pikk on üks rajapikkus tavapärases pikas võistlusujumisbasseinis?",
+        "response_en": "50 metres",
+        "response_et": "50 meetrit",
+        "accepted_variants_en": "fifty metres;50 meters;50 m;fifty meters",
+        "accepted_variants_et": "viiskümmend meetrit;50 m",
+        "explanation_en": "A long-course competition pool is 50 metres long.",
+        "explanation_et": "Pikk võistlusujumisbassein on 50 meetri pikkune.",
+        "source_title": "Swim England: Competitive pool swimming",
+        "source_url": "https://www.swimming.org/sport/competitive-pool-swimming/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the fourth stroke definition and breaststroke disclosure with familiar pool-length knowledge. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.swimming.org/sport/competitive-pool-swimming/",
+          "observation": "Identifies long-course pools as 50 metres and short-course pools as 25 metres."
+        }
+      ],
+      "subjectKey": "facility:long-course-pool",
+      "factFamily": "long-course-pool-length"
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-055",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What swimming event requires one swimmer to change between four different strokes during a single race?",
+        "clue_et": "Millises ujumisvõistluses vahetab üks ujuja ühe võistluse jooksul nelja eri ujumisviisi vahel?",
+        "explanation_en": "An individual medley combines different strokes, performed by one swimmer in a prescribed order.",
+        "explanation_et": "Kompleksujumine ühendab eri ujumisviise, mida üks ujuja kasutab ettenähtud järjekorras."
+      },
+      "reviewNotes": "Avoids enumerating the exhaustive four-stroke answer pool.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-057",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_et": "Milline prantsuskeelne termin tähistab võistlusel koos liikuvat suurt ratturite rühma?",
+        "response_et": "peloton",
+        "accepted_variants_et": "peagrupp;peloton"
+      },
+      "reviewNotes": "Makes the requested French term the canonical Estonian answer rather than its ordinary Estonian translation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-059",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_et": "Kuidas nimetatakse olukorda, kus üks rattur või väike rühm pääseb maanteesõidus ülejäänud suure ratturiterühma ette?",
+        "explanation_en": "A breakaway is one rider or a small group that has separated ahead of the main pack.",
+        "explanation_et": "Äraminekus on üks rattur või väike rühm pääsenud ülejäänud suure ratturiterühma ette."
+      },
+      "reviewNotes": "Removes the sibling peloton/peagrupp answer from prompt and reveal in both languages.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-082",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which golf club is designed mainly for controlled rolling strokes near the hole?",
+        "clue_et": "Milline golfikepp on mõeldud peamiselt augu lähedal kontrollitud veeretavate löökide tegemiseks?"
+      },
+      "reviewNotes": "Removes the sibling green/griin term from the club question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-097",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "The queen may move any number of unobstructed squares horizontally, vertically or diagonally.",
+        "explanation_et": "Lipp võib liikuda takistuseta suvalise arvu ruute rõht-, püst- või diagonaalsuunas."
+      },
+      "reviewNotes": "Explains directions without naming sibling chess pieces.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-098",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What chess position makes the game a draw when the player to move has no legal move but their king is not under attack?",
+        "clue_et": "Milline maleseis lõpeb viigiga, kui käigul oleval mängijal pole ühtegi lubatud käiku, kuid tema kuningas pole rünnaku all?",
+        "response_en": "stalemate",
+        "response_et": "patt",
+        "accepted_variants_en": "a stalemate",
+        "accepted_variants_et": "patiseis",
+        "explanation_en": "Stalemate occurs when a player has no legal move and their king is not under attack; the game is drawn.",
+        "explanation_et": "Patt tekib siis, kui mängijal pole lubatud käiku ja tema kuningas pole rünnaku all; mäng lõpeb viigiga.",
+        "source_title": "FIDE Laws of Chess, effective 1 January 2023",
+        "source_url": "https://handbook.fide.com/chapter/e012023",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces one piece-definition clue with an independently recognized drawn position. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://handbook.fide.com/chapter/e012023",
+          "observation": "Article 5.2.1 defines stalemate as no legal move with the king not in check, ending the game as a draw."
+        }
+      ],
+      "subjectKey": "position:stalemate",
+      "factFamily": "no-legal-move-not-in-check"
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-100",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What is the chess term for replacing a pawn with another piece when it reaches the farthest rank?",
+        "clue_et": "Kuidas nimetatakse males etturi asendamist teise malendiga, kui ettur jõuab kõige kaugemale reale?",
+        "response_en": "promotion",
+        "response_et": "etturi muundamine",
+        "accepted_variants_en": "pawn promotion",
+        "accepted_variants_et": "muundamine;etturi muundumine;muundumine",
+        "explanation_en": "A pawn reaching the farthest rank must be replaced by another eligible piece of the same colour; this is promotion.",
+        "explanation_et": "Kõige kaugemale reale jõudnud ettur tuleb asendada sama värvi lubatud malendiga; seda nimetatakse etturi muundamiseks.",
+        "source_title": "FIDE Laws of Chess, effective 1 January 2023",
+        "source_url": "https://handbook.fide.com/chapter/e012023",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces another piece-definition clue with the familiar pawn transformation, without listing sibling piece options. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://handbook.fide.com/chapter/e012023",
+          "observation": "Article 3.7.3.5 calls the exchange of a pawn reaching the furthest rank for another piece promotion."
+        }
+      ],
+      "subjectKey": "rule:pawn-promotion",
+      "factFamily": "last-rank-pawn-transformation"
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-104",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which four-player partnership card game does an auction set a contract, after which the declarer also plays their partner’s face-up dummy hand?",
+        "clue_et": "Millises nelja mängija paarismängus määrab pakkumine lepingu ning seejärel mängib väljamängija ka oma partneri lahtist lauda?",
+        "source_title": "American Contract Bridge League: Learn to Play Bridge",
+        "source_url": "https://www.acbl.org/learn/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Moves both distinctive bridge mechanics into the prompt. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.acbl.org/learn/",
+          "observation": "Explains bidding to a contract and the declarer playing both their own hand and their partner’s face-up dummy hand."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-109",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which world-conquest board game uses armies on a territory map, dice to resolve battles, and sets of three territory cards traded for extra troops?",
+        "clue_et": "Millises maailma vallutamise lauamängus kasutatakse territooriumide kaardil armeesid, lahingute lahendamiseks täringuid ning kolme territooriumikaardi komplekte vahetatakse lisavägede vastu?",
+        "source_title": "Hasbro: RISK official instructions",
+        "source_url": "https://www.hasbro.com/common/documents/DAD2886D1C4311DDBD0B0800200C9A66/F56A63AE8FA145D9B82A5FA3919CA3A5.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds familiar attack dice and territory-card reinforcements to the world-conquest identifier. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hasbro.com/common/documents/DAD2886D1C4311DDBD0B0800200C9A66/F56A63AE8FA145D9B82A5FA3919CA3A5.pdf",
+          "observation": "Classic rules describe army conquest of a 42-territory world map, dice battles and trading sets of three territory cards for additional troops."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-112",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which 1985 Nintendo platform game does Mario travel through the Mushroom Kingdom to rescue Princess Toadstool?",
+        "clue_et": "Millises Nintendo 1985. aasta platvormimängus rändab Mario läbi Seenekuningriigi, et päästa printsess Toadstool?",
+        "source_title": "Nintendo: Super Mario Bros. history",
+        "source_url": "https://www.nintendo.com/jp/character/mario/en/history/smb/index.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Moves the original game’s release date into the question. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nintendo.com/jp/character/mario/en/history/smb/index.html",
+          "observation": "Nintendo gives the original release as 13 September 1985 and reproduces the original Princess Toadstool rescue story."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-116",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which 1997 real-time strategy game has players develop a Stone Age tribe into a civilization through later ancient ages?",
+        "clue_et": "Millises 1997. aasta reaalajastrateegiamängus arendab mängija kiviaegse hõimu hilisemate muistsete ajastute kaudu tsivilisatsiooniks?",
+        "source_title": "Microsoft: Age of Empires launch announcement",
+        "source_url": "https://news.microsoft.com/source/1997/10/23/microsoft-age-of-empires-close-combat-a-bridge-too-far-and-sidewinder-precision-pro-hit-street/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds date and real-time gameplay without relying on obscure age-list recall. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://news.microsoft.com/source/1997/10/23/microsoft-age-of-empires-close-combat-a-bridge-too-far-and-sidewinder-precision-pro-hit-street/",
+          "observation": "1997 launch announcement describes Age of Empires as real-time strategy guiding a Stone Age tribe into a civilization."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-118",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which 1993 id Software shooter begins with a marine battling demons in bases on Phobos, one of Mars’s moons?",
+        "clue_et": "Milline id Software’i 1993. aasta tulistamismäng algab merejalaväelase võitlusega deemonite vastu Marsi kuu Phobose baasides?",
+        "explanation_en": "The original Doom begins on Phobos, a moon of Mars, rather than on the planet’s surface.",
+        "explanation_et": "Algne „Doom“ algab Marsi kuul Phobosel, mitte planeedi pinnal.",
+        "source_title": "Bethesda Gear: Classic DOOM Helmet Collector’s Bundle",
+        "source_url": "https://gear.bethesda.net/products/classic-doom-helmet-collector-s-bundle",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Primary publisher merchandise history confirms Phobos; avoids unnecessary assertions about the exact later episode itinerary. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://gear.bethesda.net/products/classic-doom-helmet-collector-s-bundle",
+          "observation": "Official publisher shop explicitly describes the original 1993 game’s demon-filled corridors of Phobos, a Martian moon."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-121",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which battle-royale game do players begin by dropping from the Battle Bus onto an island and compete to be the last player or team remaining?",
+        "clue_et": "Millises battle royale’i mängus hüppavad mängijad alguses Battle Busist saarele ning võistlevad, et jääda viimaseks ellu jäänud mängijaks või võistkonnaks?",
+        "source_title": "Epic Games: Fortnite Creative v22.30 Update",
+        "source_url": "https://www.fortnite.com/news/fortnite-creative-v22-30-update",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the Battle Bus as a recognizable franchise identifier. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fortnite.com/news/fortnite-creative-v22-30-update",
+          "observation": "Developer explains Battle Royale island deployment from the Battle Bus."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-196",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which adapted court sport calls travelling when a player holding the ball makes more than two consecutive pushes on the chair’s wheels without dribbling, passing or shooting?",
+        "clue_et": "Millises kohandatud pallialas loetakse jooksuveaks seda, kui palli hoidev mängija teeb ratastooli ratastel rohkem kui kaks järjestikust tõuget ilma põrgatamata, söötmata või viskamata?",
+        "explanation_en": "Travelling occurs after more than two consecutive pushes while holding the ball without a dribble, pass or shot. Merely touching or braking the wheels is not automatically a push.",
+        "explanation_et": "Jooksuviga tekib rohkem kui kahe järjestikuse tõuke järel, kui mängija hoiab palli ega põrgata, sööda või viska. Rataste pelk puudutamine või pidurdamine ei ole automaatselt tõuge.",
+        "source_title": "IWBF: Official Wheelchair Basketball Rules Interpretations 2024",
+        "source_url": "https://www.iwbf-europe.org/wp-content/uploads/2024/09/IWBF_2024_OWBRI_ver_1_def.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Counts actual consecutive pushes rather than wheel touches, consistent with the governing rule and its braking interpretation. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.iwbf-europe.org/wp-content/uploads/2024/09/IWBF_2024_OWBRI_ver_1_def.pdf",
+          "observation": "Article 25 permits two pushes while holding the ball; a third requires dribbling, passing or shooting. Braking without hand movement is expressly not a push."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-309",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which mobile game by Zakeh has players feed, clean and dress an alien pet whose name is also the game’s title?",
+        "clue_et": "Millises Zakehi mobiilimängus toidab, puhastab ja riietab mängija tulnukast lemmiklooma, kelle nimi on ka mängu pealkiri?",
+        "source_title": "Zakeh: Pou on Google Play",
+        "source_url": "https://play.google.com/store/apps/details?gl=gb&hl=en-gb&id=me.pou.app",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Uses the developer and alien identity rather than adding an unverified visual description. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://play.google.com/store/apps/details?gl=gb&hl=en-gb&id=me.pou.app",
+          "observation": "Developer listing names Zakeh and describes caring for an alien pet, feeding and cleaning it, and choosing outfits."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-327",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which Harmonix rhythm-game series began in 2007 and lets a living-room band perform using guitar, bass, drums and a microphone?",
+        "clue_et": "Milline Harmonixi rütmimängusari sai alguse 2007. aastal ja laseb elutoabändil esineda kitarri, basskitarri, trummide ja mikrofoniga?",
+        "source_title": "Harmonix: Rock Band",
+        "source_url": "https://www.harmonixmusic.com/games/rock-band",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds original developer and launch year to distinguish competing band-game series. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.harmonixmusic.com/games/rock-band",
+          "observation": "Developer says Rock Band began in 2007 and brought four-player guitar, bass, drums and microphone performances to the living room."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-easy-expansion-028",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What basketball shot uses the usual shooting position near the forehead, a straight upward jump, and a release near the top of that jump?",
+        "clue_et": "Millise korvpalliviske puhul hoitakse palli tavapärases viskeasendis lauba lähedal, hüpatakse otse üles ja lastakse pall käest hüppe kõrgeima punkti lähedal?",
+        "source_title": "Jr. NBA: How to Shoot a Jump Shot",
+        "source_url": "https://jr.nba.com/how-to-shoot-a-jump-shot/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Describes recognizable conventional shooting form instead of merely being airborne. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://jr.nba.com/how-to-shoot-a-jump-shot/",
+          "observation": "Coaching steps put the ball in front of the forehead, jump straight up and release at the top of the jump with arm extension and wrist action."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-easy-expansion-063",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What mesh barrier stretches across the middle of a tennis court and separates the two sides?",
+        "clue_et": "Milline võrgust tõke ulatub üle tenniseväljaku keskosa ja eraldab väljaku kahte poolt?",
+        "explanation_en": "The net divides the tennis court. Returns normally go over it, but a legal return can also travel around a net post.",
+        "explanation_et": "Võrk jagab tenniseväljaku kaheks. Pall saadetakse tavaliselt üle selle, kuid lubatud tagasilöök võib minna ka võrguposti kõrvalt.",
+        "source_title": "ITF: Rules of Tennis 2026",
+        "source_url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the universal over-the-net requirement while retaining the familiar barrier identifier. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "observation": "Rule 25(c) allows a return outside the net posts above or below the top of the net if it lands in the correct court."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-easy-expansion-077",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In which racket sport do players hit a rubber ball against an enclosed court’s front wall, above a low boundary called the tin?",
+        "clue_et": "Millises reketispordis lüüakse kummipalli kinnise väljaku esiseina vastu, üle madala piiriala nimega tin?",
+        "source_title": "World Squash Officiating: Rules of Squash",
+        "source_url": "https://worldsquashofficiating.com/rules-of-squash/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the distinctive front-wall tin boundary without turning an Easy clue into obscure equipment trivia. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://worldsquashofficiating.com/rules-of-squash/",
+          "observation": "Rules require a good return to reach the front wall above the tin and below the out-line; glossary defines the tin as the low front-wall area."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-easy-expansion-083",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which Russian Washington Capitals goal scorer is nicknamed the Great Eight?",
+        "clue_et": "Milline Washington Capitalsi Venemaa väravakütt kannab hüüdnime Great Eight ehk Suur Kaheksa?",
+        "source_title": "NHL: 2018–19 Regular Season Recap, Chapter 2",
+        "source_url": "https://media.nhl.com/site/vasset/public/attachments/2019/04/13098/Regular%20Season%20Recap%20-%20Chapter%202.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds a stable nickname, avoiding a changing career-record claim and another sibling player’s name. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://media.nhl.com/site/vasset/public/attachments/2019/04/13098/Regular%20Season%20Recap%20-%20Chapter%202.pdf",
+          "observation": "NHL season report identifies Washington Capitals forward Alex Ovechkin as The Great 8."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0103",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which biennial golf competition pits women’s teams from Europe and the United States against each other?",
+        "clue_et": "Millises iga kahe aasta järel toimuvas golfivõistluses kohtuvad Euroopa ja Ameerika Ühendriikide naiskonnad?"
+      },
+      "reviewNotes": "Removes the men’s competition answer from the women’s competition identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0107",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What poker tactic uses confident betting to represent a weak hand as stronger than it really is?",
+        "clue_et": "Milline pokkeritaktika esitab julgete panuste abil nõrga käe tugevamana, kui see tegelikult on?"
+      },
+      "reviewNotes": "Describes deception directly without the sibling folding term.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0173",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which Uwe Rosenberg farming board game begins with two family members in a two-room wooden hut and asks players to expand their farm while feeding the household?",
+        "clue_et": "Milline Uwe Rosenbergi talupidamise lauamäng algab kahe pereliikmega kahetoalises puithütis ning laseb talu laiendada ja samal ajal pere ära toita?",
+        "source_title": "Lookout Games: Agricola official rules",
+        "source_url": "https://www.lookout-spiele.de/upload/de_agricola.html_Rules_Agricola_EN.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the familiar initial wooden house and household to distinguish Agricola from Caverna. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.lookout-spiele.de/upload/de_agricola.html_Rules_Agricola_EN.pdf",
+          "observation": "Rules introduce a farming couple living in a two-room wooden hut and feeding the family through harvests."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0229",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which traditional Afghan horse sport has riders compete to carry a goat or calf carcass into a designated scoring area?",
+        "clue_et": "Millises Afganistani traditsioonilises ratsaspordis võistlevad ratsanikud kitse või vasika korjuse määratud punktialasse toimetamises?",
+        "source_title": "Afghanistan General Directorate of Physical Education and Sports: History of Buzkashi",
+        "source_url": "https://www.gdpes.gov.af/index.php/en/node/1185",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the Afghan national context rather than treating all related Central Asian names as interchangeable. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.gdpes.gov.af/index.php/en/node/1185",
+          "observation": "Government sports authority describes buzkashi as a traditional Afghan national sport; its contemporary competition reports describe riders carrying the ulak to a scoring circle."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0234",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "In backgammon, what double-value win occurs when the loser has borne off no checkers and has none on the bar or in the winner’s home board?",
+        "clue_et": "Kuidas nimetatakse backgammonis topeltväärtusega võitu, kui kaotaja pole ühtegi nuppu laualt välja viinud ning tal pole nuppe löödud nuppude vaheribal ega võitja koduväljas?",
+        "explanation_en": "A gammon is worth double: the loser has borne off no checkers and has none on the bar or in the winner’s home board. If either of those locations still holds a losing checker, it is a backgammon worth triple.",
+        "explanation_et": "Gammon annab topeltväärtuse: kaotaja pole ühtegi nuppu välja viinud ning tal pole nuppe vaheribal ega võitja koduväljas. Kui kaotaja nupp on kummaski neist kohtadest, on tulemuseks kolmekordse väärtusega backgammon.",
+        "source_title": "US Backgammon Federation: Backgammon Basics",
+        "source_url": "https://usbgf.org/backgammon-basics-how-to-play/",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Completes the double-value condition without supplying unrelated category answers. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+          "observation": "Defines gammon as no opposing checkers borne off; a checker remaining on the bar or in the winner’s home board instead makes the loss a triple-value backgammon."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-024",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "A rebound is credited when a player gains the ball after an unsuccessful shot."
+      },
+      "reviewNotes": "Removes the sibling free-throw answer from the rebound reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-027",
+      "batchId": "08-sports-games",
+      "changes": {
+        "accepted_variants_en": "the French Open",
+        "accepted_variants_et": "Prantsusmaa lahtised meistrivõistlused"
+      },
+      "reviewNotes": "The venue name in the prompt must not itself be an accepted tournament-name alias.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-031",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What footwear lets hockey players glide and turn on the ice rather than run in ordinary shoes?",
+        "clue_et": "Millised jalatsid lasevad hokimängijatel jääl libiseda ja pöörata, selle asemel et tavaliste kingadega joosta?",
+        "response_en": "ice skates",
+        "response_et": "uisud",
+        "accepted_variants_en": "skates;hockey skates",
+        "accepted_variants_et": "hokiuisud",
+        "explanation_en": "Hockey players wear skates to glide and turn on the ice.",
+        "explanation_et": "Hokimängijad kannavad jääl libisemiseks ja pööramiseks uiske.",
+        "source_title": "USA Hockey: Learn to Skate Program",
+        "source_url": "https://portal.usahockey.com/forms/learn-to-skate-program.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces the object named throughout the hockey set with independently recognizable footwear. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://portal.usahockey.com/forms/learn-to-skate-program.pdf",
+          "observation": "Governing-body curriculum identifies skates as essential hockey gear and teaches skating, gliding and using their edges."
+        }
+      ],
+      "subjectKey": "equipment:ice-skates",
+      "factFamily": "hockey-footwear"
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-113",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_et": "Milline võrkpalluri roll puudutab palli tavaliselt meeskonna teisena ja tõstab selle lööki sooritavale kaaslasele ette?",
+        "explanation_et": "Sidemängija on võrkpalli mängukorraldaja, kes suunab meeskonna teise puutega palli lööki sooritavale kaaslasele."
+      },
+      "reviewNotes": "Removes the Estonian football-striker answer from the volleyball role description.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-accessible-corpus-050",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which combined competition includes short runs, jumps, throws, hurdles and a distance race across ten events?",
+        "clue_et": "Milline mitmevõistlus ühendab kümnel alal lühijooksud, hüpped, heited, tõkkejooksu ja pikema jooksu?"
+      },
+      "reviewNotes": "Removes the sibling sprint name from the combined-event list.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0048",
+      "batchId": "08-sports-games",
+      "changes": {
+        "explanation_en": "The mountains-classification leader’s jersey is decorated with red polka dots.",
+        "explanation_et": "Mägedearvestuse liidri särki kaunistavad punased täpid."
+      },
+      "reviewNotes": "Removes the white-clothing response from another sporting tradition’s reveal.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0068",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_et": "Milline maletulemus tekib, kui käigul olijal pole seaduslikku käiku, kuid ta pole tules?"
+      },
+      "reviewNotes": "Removes king/kuningas from the drawn-position prompt, without changing the rule.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0096",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which skiing or snowboarding event sends competitors down a course of jumps, rails and other obstacles?"
+      },
+      "reviewNotes": "Removes the sibling cross-country technique name from the freestyle-event description.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0121",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "What do North American Scrabble players call the bonus-scoring feat of using every tile from a full rack in a single play?",
+        "clue_et": "Kuidas nimetavad Põhja-Ameerika Scrabble’i mängijad lisapunkte andvat saavutust, kus kasutatakse ühe käiguga ära kõik täis alusel olevad täheklotsid?",
+        "explanation_en": "A Scrabble bingo uses every tile from a full rack in one play.",
+        "explanation_et": "Scrabble’i bingo kasutab ühe käiguga kõiki täis alusel olevaid täheklotse."
+      },
+      "reviewNotes": "Avoids teaching the Catan dice total while retaining the Scrabble whole-rack bonus identifier.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-all-level-expansion-0240",
+      "batchId": "08-sports-games",
+      "changes": {
+        "clue_en": "Which barefoot runner collided with Mary Decker during the women’s Olympic 3,000-metre final in 1984?",
+        "clue_et": "Milline paljajalu jooksja põrkas Mary Deckeriga kokku 1984. aasta naiste 3000 meetri olümpiafinaalis?"
+      },
+      "reviewNotes": "Removes the sibling Los Angeles city answer while retaining the dated Mary Decker collision.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-036",
+      "batchId": "08-sports-games",
+      "changes": {
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces Official product page, a source-type description, with actual proprietary terms. Hasbro reserves rights in its text and gives only limited personal noncommercial access; no source text or media reuse is asserted by these original factual clues.",
+      "sourceVerification": [
+        {
+          "url": "https://docs.hasbro.com/en-us/legal/terms",
+          "observation": "Sections 2.1–2.2 grant limited personal noncommercial access and reserve rights; section 4 identifies text and other content as Company IP."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-sports-games-playable-corpus-040",
+      "batchId": "08-sports-games",
+      "changes": {
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replaces Official product page, a source-type description, with actual proprietary terms. Hasbro reserves rights in its text and gives only limited personal noncommercial access; no source text or media reuse is asserted by these original factual clues.",
+      "sourceVerification": [
+        {
+          "url": "https://docs.hasbro.com/en-us/legal/terms",
+          "observation": "Sections 2.1–2.2 grant limited personal noncommercial access and reserve rights; section 4 identifies text and other content as Company IP."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-sports-games-set-125",
+      "batchId": "08-sports-games",
+      "changes": {
+        "category_name_en": "Game Characters Beyond the Hero",
+        "category_name_et": "Mängutegelased peategelase kõrval"
+      },
+      "reviewNotes": "Includes companions and a hostile Minecraft creature."
+    },
+    {
+      "categoryId": "built-in-sports-games-set-126",
+      "batchId": "08-sports-games",
+      "changes": {
+        "category_name_en": "Athletics Around the Track and Field",
+        "category_name_et": "Kergejõustik rajal ja väljakul"
+      },
+      "reviewNotes": "Includes sprinting as well as the other athletics disciplines."
+    },
+    {
+      "categoryId": "built-in-sports-games-set-135",
+      "batchId": "08-sports-games",
+      "changes": {
+        "category_name_en": "Olympic Host Cities and Their Ceremonies",
+        "category_name_et": "Olümpialinnad ja nende tseremooniad"
+      },
+      "reviewNotes": "Includes host milestones and ceremony details without promising a first achievement in every clue."
+    },
+    {
+      "categoryId": "built-in-sports-games-set-143",
+      "batchId": "08-sports-games",
+      "changes": {
+        "category_name_en": "Tennis Cups and Court Rules",
+        "category_name_et": "Tennisekarikad ja väljakureeglid"
+      },
+      "reviewNotes": "Includes team competitions and individual-match rules."
+    },
+    {
+      "categoryId": "built-in-sports-games-set-162",
+      "batchId": "08-sports-games",
+      "changes": {
+        "category_name_en": "Track and Field Have Their Stories",
+        "category_name_et": "Kergejõustikualadel on oma lood"
+      },
+      "reviewNotes": "Includes the heptathlon’s final track race alongside field and combined-event facts."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "B-059",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-159"
+      ],
+      "reason": "Prompt now asks the no-number terrain rather than imagining its production number being rolled."
+    },
+    {
+      "findingId": "B-060",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-011",
+        "built-in-sports-games-accessible-corpus-012"
+      ],
+      "reason": "France removed from Argentina’s reveal; Argentina also removed from the Germany and Uruguay reveals so arbitrary order stays independent."
+    },
+    {
+      "findingId": "B-061",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-027",
+        "built-in-sports-games-accessible-corpus-028",
+        "built-in-sports-games-accessible-corpus-029",
+        "built-in-sports-games-accessible-corpus-030"
+      ],
+      "reason": "Reveal now describes the achievement without supplying any sibling tournament’s name."
+    },
+    {
+      "findingId": "B-062",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-011"
+      ],
+      "reason": "Rising-ball phrasing replaced with downward flight, matching FIBA Article 12.2.4."
+    },
+    {
+      "findingId": "B-063",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-018"
+      ],
+      "reason": "Olympic flag replaced with Australian flag in both explanations."
+    },
+    {
+      "findingId": "B-064",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-041"
+      ],
+      "reason": "Tactic publisher anchor distinguishes Alias from Taboo and Articulate."
+    },
+    {
+      "findingId": "B-065",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-059"
+      ],
+      "reason": "Deadline is on release, with subsequent rim/basket requirement stated separately under FIBA Article 29."
+    },
+    {
+      "findingId": "B-066",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-063",
+        "built-in-sports-games-playable-corpus-064"
+      ],
+      "reason": "Hamilton no longer appears in the Verstappen prompt or reveal."
+    },
+    {
+      "findingId": "B-068",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-126"
+      ],
+      "reason": "1974 and both creators distinguish D&D from Pathfinder and related games."
+    },
+    {
+      "findingId": "B-069",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-142"
+      ],
+      "reason": "2005 launch distinguishes Xbox 360 from Xbox One’s later Kinect support."
+    },
+    {
+      "findingId": "B-070",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-147"
+      ],
+      "reason": "1991 sequel identifies Street Fighter II rather than the series generally."
+    },
+    {
+      "findingId": "B-071",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-049"
+      ],
+      "reason": "One-foot and no-pole anchors distinguish high jump from pole vault."
+    },
+    {
+      "findingId": "B-072",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-051",
+        "built-in-sports-games-accessible-corpus-052",
+        "built-in-sports-games-accessible-corpus-053",
+        "built-in-sports-games-accessible-corpus-054",
+        "built-in-sports-games-accessible-corpus-055"
+      ],
+      "reason": "Only front crawl remains as a stroke-identification response. Goggles, relay and pool length require independent facts; medley clue and reveal no longer list sibling stroke names."
+    },
+    {
+      "findingId": "B-073",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-057",
+        "built-in-sports-games-accessible-corpus-059"
+      ],
+      "reason": "Breakaway no longer supplies peloton or peagrupp. Estonian prompt and canonical response now consistently ask and answer the French term."
+    },
+    {
+      "findingId": "B-074",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-082",
+        "built-in-sports-games-accessible-corpus-083"
+      ],
+      "reason": "Putter prompt uses near the hole, with no green/griin answer disclosure; its existing reveal already avoids that term."
+    },
+    {
+      "findingId": "B-075",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-097",
+        "built-in-sports-games-accessible-corpus-098",
+        "built-in-sports-games-accessible-corpus-100"
+      ],
+      "reason": "Queen reveal no longer names rook or bishop; both of those items replaced by stalemate and promotion, reducing the piece-definition pool to two and varying the facts."
+    },
+    {
+      "findingId": "B-076",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-104"
+      ],
+      "reason": "Contract auction and exposed dummy distinguish bridge from other partnership trick-taking games."
+    },
+    {
+      "findingId": "B-077",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-109"
+      ],
+      "reason": "Attack dice and sets of three territory cards make the Risk identification specific."
+    },
+    {
+      "findingId": "B-078",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-112"
+      ],
+      "reason": "1985 distinguishes the original Super Mario Bros. from its later sequels."
+    },
+    {
+      "findingId": "B-079",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-116"
+      ],
+      "reason": "1997 and real-time strategy distinguish Age of Empires from Civilization and Empire Earth."
+    },
+    {
+      "findingId": "B-080",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-118"
+      ],
+      "reason": "Bethesda’s primary description confirms Phobos. Prompt and explanation now identify a Martian moon and avoid disputed surface wording."
+    },
+    {
+      "findingId": "B-081",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-accessible-corpus-121"
+      ],
+      "reason": "Battle Bus identifies Fortnite rather than battle royale generally."
+    },
+    {
+      "findingId": "B-082",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-196"
+      ],
+      "reason": "Both languages now count pushes and explicitly distinguish mere touching/braking."
+    },
+    {
+      "findingId": "B-083",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-309"
+      ],
+      "reason": "Zakeh and alien pet distinguish Pou from the Talking Tom/Angela games."
+    },
+    {
+      "findingId": "B-084",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-playable-corpus-327"
+      ],
+      "reason": "Harmonix and 2007 distinguish Rock Band from Guitar Hero’s later full-band games."
+    },
+    {
+      "findingId": "B-085",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-easy-expansion-028"
+      ],
+      "reason": "Conventional forehead position and vertical-jump release distinguish a jump shot from other airborne finishes."
+    },
+    {
+      "findingId": "B-086",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-easy-expansion-063"
+      ],
+      "reason": "No prompt requires every return to pass over the net; the explanation includes the legal around-post exception."
+    },
+    {
+      "findingId": "B-087",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-easy-expansion-077"
+      ],
+      "reason": "Front-wall tin identifies squash rather than racquetball."
+    },
+    {
+      "findingId": "B-088",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-easy-expansion-083"
+      ],
+      "reason": "Great Eight uniquely anchors Ovechkin among Russian Capitals stars."
+    },
+    {
+      "findingId": "B-089",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0025"
+      ],
+      "reason": "Both titles cover supporting characters and enemies."
+    },
+    {
+      "findingId": "B-090",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0027"
+      ],
+      "reason": "Broader bilingual scope includes Bolt’s sprint nationality."
+    },
+    {
+      "findingId": "B-091",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0073",
+        "built-in-sports-games-all-level-expansion-0074",
+        "built-in-sports-games-all-level-expansion-0075"
+      ],
+      "reason": "New titles fit all five city and ceremony questions."
+    },
+    {
+      "findingId": "B-092",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0102",
+        "built-in-sports-games-all-level-expansion-0103"
+      ],
+      "reason": "Solheim Cup prompt no longer prints Ryder Cup."
+    },
+    {
+      "findingId": "B-093",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0106",
+        "built-in-sports-games-all-level-expansion-0107"
+      ],
+      "reason": "Bluff question no longer supplies fold or loobuma."
+    },
+    {
+      "findingId": "B-094",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0114",
+        "built-in-sports-games-all-level-expansion-0115"
+      ],
+      "reason": "Both titles accurately include all five response types."
+    },
+    {
+      "findingId": "B-095",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0173"
+      ],
+      "reason": "Two-room wooden hut and two family members distinguish Agricola’s starting situation."
+    },
+    {
+      "findingId": "B-096",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0210"
+      ],
+      "reason": "Both titles cover track as well as field events."
+    },
+    {
+      "findingId": "B-097",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0229"
+      ],
+      "reason": "Afghanistan anchors buzkashi rather than the Kyrgyz kok-boru tradition."
+    },
+    {
+      "findingId": "B-098",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-sports-games-all-level-expansion-0234"
+      ],
+      "reason": "Prompt and explanation now include the home-board/bar condition and explain the triple-value exception."
+    }
+  ]
+}

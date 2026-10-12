@@ -29,11 +29,13 @@ async function playCurrentTileCorrect(page: Page) {
   await expect(tile).toBeEnabled({ timeout: 60_000 });
   await tile.click();
   const wager = page.getByRole('spinbutton', { name: 'Daily Double wager' });
+  const teamButton = page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first();
+  await wager.or(teamButton).first().waitFor({ state: 'visible' });
   if (await wager.isVisible()) {
     await wager.fill('5');
     await page.getByRole('button', { name: 'Commit wager' }).click();
   }
-  await page.getByRole('region', { name: 'Team controls' }).locator('button:not([disabled])').first().click();
+  await teamButton.click();
   await page.getByRole('button', { name: 'Correct', exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
 }

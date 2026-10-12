@@ -1,0 +1,17 @@
+[
+  {
+    "flagId": "built-in-science-nature-set-013|built-in-science-nature-accessible-corpus-001|built-in-science-nature-accessible-corpus-005|et|response",
+    "decision": "accepted",
+    "reason": "Maa appears only inside the standard Estonian technical category name Maa-tüüpi planeedid. This describes a planetary class; it does not supply which planet has extensive oceans. Retain the valid term rather than remove a scientifically correct translation."
+  },
+  {
+    "flagId": "built-in-science-nature-set-071|built-in-science-nature-playable-corpus-197|built-in-science-nature-playable-corpus-199|en|prompt",
+    "decision": "accepted",
+    "reason": "The apparent S wave is the possessive ending of instrument’s followed by wave amplitude. It does not name an S-wave or reveal the transverse-wave response."
+  },
+  {
+    "flagId": "built-in-literature-language-set-015|built-in-literature-language-playable-corpus-094|built-in-literature-language-playable-corpus-091|et|prompt",
+    "decision": "accepted",
+    "reason": "Kui is the ordinary Estonian comparative conjunction meaning as in presidendi kui kapteni (the president as captain). That grammar does not name, cite or otherwise disclose Kipling's poem Kui…; preserving the translation is necessary."
+  }
+]

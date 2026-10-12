@@ -1,0 +1,122 @@
+[
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-041|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Baltic Way's1989 chain lists the three Baltic participants, including Estonia; it does not map the target state's distinct20August1991 or4May1990 independence declaration date to a country. Only two date questions remain, and Lithuania remains a listed participant, so the country list does not form an exhaustive one-per-clue answer pool."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-042|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Iceland recognition question/explanation names the recognised state and gives22August1991 recognition, a different event and date from target043 restoration20August1991. It neither states the restoration date nor assigns the target factual predicate; both questions need distinct knowledge."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-042|en|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Iceland recognition question/explanation names the recognised state and gives22August1991 recognition, a different event and date from target043 restoration20August1991. It neither states the restoration date nor assigns the target factual predicate; both questions need distinct knowledge."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-045|built-in-history-accessible-corpus-041|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Baltic Way's1989 chain lists the three Baltic participants, including Latvia; it does not map the target state's distinct20August1991 or4May1990 independence declaration date to a country. Only two date questions remain, and Lithuania remains a listed participant, so the country list does not form an exhaustive one-per-clue answer pool."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-042|et|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Iceland recognition question/explanation names the recognised state and gives22August1991 recognition, a different event and date from target043 restoration20August1991. It neither states the restoration date nor assigns the target factual predicate; both questions need distinct knowledge."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-042|et|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The Iceland recognition question/explanation names the recognised state and gives22August1991 recognition, a different event and date from target043 restoration20August1991. It neither states the restoration date nor assigns the target factual predicate; both questions need distinct knowledge."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-044|et|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The song question/explanation uses Eesti as ordinary national context for an Ernesaks/Koidula work; it does not state20August1991 or map that restoration decision to a state. The two questions test separate historical and musical facts."
+  },
+  {
+    "flagId": "built-in-history-set-074|built-in-history-accessible-corpus-043|built-in-history-accessible-corpus-044|et|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "The song question/explanation uses Eesti as ordinary national context for an Ernesaks/Koidula work; it does not state20August1991 or map that restoration decision to a state. The two questions test separate historical and musical facts."
+  },
+  {
+    "flagId": "built-in-history-set-028|built-in-history-playable-corpus-112|built-in-history-playable-corpus-113|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Serbia is named only as a member in the1912 BalkanLeague enumeration identifying missing Montenegro. Target112 concerns opposition to AustriaHungary annexation of Bosnia in1908. The enumeration does not identify the annexation opponent or teach that earlier crisis fact; this is an ordinary recurring geopolitical participant, not a repeated answer fact or exhaustive target pool."
+  },
+  {
+    "flagId": "built-in-history-set-028|built-in-history-playable-corpus-112|built-in-history-playable-corpus-113|et|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Serbia is named only as a member in the1912 BalkanLeague enumeration identifying missing Montenegro. Target112 concerns opposition to AustriaHungary annexation of Bosnia in1908. The enumeration does not identify the annexation opponent or teach that earlier crisis fact; this is an ordinary recurring geopolitical participant, not a repeated answer fact or exhaustive target pool."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|en|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|en|response",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|et|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|et|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-064|built-in-geography-accessible-corpus-025|built-in-geography-accessible-corpus-022|et|response",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Finland/Soome in Gulf of Finland/Soome laht (or its bounding-country description) names a different geographic feature. It does not state which country has sovereignty over the Swedish-speaking Åland/Ahvenamaa islands, target025. Knowing the gulf location does not establish the islands’ autonomous political status, and no closed list of political answers is supplied."
+  },
+  {
+    "flagId": "built-in-geography-set-083|built-in-geography-playable-corpus-153|built-in-geography-playable-corpus-151|en|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Germany/Saksamaa is a west-neighbour anchor for identifying Poland in target151; it does not state the Denmark-north/Alps-south/nine-land-neighbours combination identifying target153. The neighbour fact neither states nor repeats that target predicate, and other named countries do not form an exhaustive target answer pool."
+  },
+  {
+    "flagId": "built-in-geography-set-083|built-in-geography-playable-corpus-153|built-in-geography-playable-corpus-151|en|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Germany/Saksamaa is a west-neighbour anchor for identifying Poland in target151; it does not state the Denmark-north/Alps-south/nine-land-neighbours combination identifying target153. The neighbour fact neither states nor repeats that target predicate, and other named countries do not form an exhaustive target answer pool."
+  },
+  {
+    "flagId": "built-in-geography-set-083|built-in-geography-playable-corpus-153|built-in-geography-playable-corpus-151|et|prompt",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Germany/Saksamaa is a west-neighbour anchor for identifying Poland in target151; it does not state the Denmark-north/Alps-south/nine-land-neighbours combination identifying target153. The neighbour fact neither states nor repeats that target predicate, and other named countries do not form an exhaustive target answer pool."
+  },
+  {
+    "flagId": "built-in-geography-set-083|built-in-geography-playable-corpus-153|built-in-geography-playable-corpus-151|et|explanation",
+    "decision": "accepted",
+    "reviewer": "repair_content_b",
+    "reason": "Germany/Saksamaa is a west-neighbour anchor for identifying Poland in target151; it does not state the Denmark-north/Alps-south/nine-land-neighbours combination identifying target153. The neighbour fact neither states nor repeats that target predicate, and other named countries do not form an exhaustive target answer pool."
+  }
+]

@@ -1,0 +1,1701 @@
+{
+  "batchId": "12-mythology-religion-philosophy",
+  "bankSha256": "7fa2d5c040e17684eb05cd2a0c1fc2745ba0ef68a251ca545a98769331c02c8c",
+  "reviewedClueIds": [
+    "built-in-mythology-religion-philosophy-all-level-expansion-0001",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0002",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0003",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0004",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0005",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0006",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0007",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0008",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0009",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0010",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0011",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0012",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0013",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0014",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0015",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0016",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0017",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0018",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0019",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0020",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0021",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0022",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0023",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0024",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0025",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0026",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0027",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0028",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0029",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0030",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0031",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0032",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0033",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0034",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0035",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0036",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0037",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0038",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0039",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0040",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0041",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0042",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0043",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0044",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0045",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0046",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0047",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0048",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0049",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0050",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0051",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0052",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0053",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0054",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0055",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0056",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0057",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0058",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0059",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0060",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0061",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0062",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0063",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0064",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0065",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0066",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0067",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0068",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0069",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0070",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0071",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0072",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0073",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0074",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0075",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0076",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0077",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0078",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0079",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0080",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0081",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0082",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0083",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0084",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0085",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0086",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0087",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0088",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0089",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0090",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0091",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0092",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0093",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0094",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0095",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0096",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0097",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0098",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0099",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0100",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0101",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0102",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0103",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0104",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0105",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0106",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0107",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0108",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0109",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0110",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0111",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0112",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0113",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0114",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0115",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0116",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0117",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0118",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0119",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0120",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0121",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0122",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0123",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0124",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0125",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0126",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0127",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0128",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0129",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0130",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0131",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0132",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0133",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0134",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0135",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0136",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0137",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0138",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0139",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0140",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0141",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0142",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0143",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0144",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0145",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0146",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0147",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0148",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0149",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0150",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0151",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0152",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0153",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0154",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0155",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0156",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0157",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0158",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0159",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0160",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0161",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0162",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0163",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0164",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0165",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0166",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0167",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0168",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0169",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0170",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0171",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0172",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0173",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0174",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0175",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0176",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0177",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0178",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0179",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0180",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0181",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0182",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0183",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0184",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0185",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0186",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0187",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0188",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0189",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0190",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0191",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0192",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0193",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0194",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0195",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0196",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0197",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0198",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0199",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0200",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0201",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0202",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0203",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0204",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0205",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0206",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0207",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0208",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0209",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0210",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0211",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0212",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0213",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0214",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0215",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0216",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0217",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0218",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0219",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0220",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0221",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0222",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0223",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0224",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0225",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0226",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0227",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0228",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0229",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0230",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0231",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0232",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0233",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0234",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0235",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0236",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0237",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0238",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0239",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0240",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0241",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0242",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0243",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0244",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0245",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0246",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0247",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0248",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0249",
+    "built-in-mythology-religion-philosophy-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:49:00.292396Z",
+    "decision": "approved",
+    "notes": "Independently read all 250 English/Estonian questions and exact supporting article passages from preserved author-C and reviewer-B source snapshots. Read targeted primary institutional and lexicographical material for Egyptian emblems and Estonian philosophy terms. Assessed every global collision candidate, including Finals and the other new banks, and replaced true repeated predicates rather than reversing question direction. Corrected four insufficient or redirected support citations and bound source provenance to actual saved retrieval metadata."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:49:00.292396Z",
+    "decision": "approved",
+    "notes": "Read all 250 clues, answers, variants and explanations and all 50 bilingual category pairs. Checked subject variety, category scope, answer leakage, quiz-ready specific facts and fair difficulty/tier progression. Replaced repeated facts and overly simple Hard claims with distinct supported connections, qualified legendary accounts and removed direct answer cues. Final structural audit is clear and the final answer-leak report is empty."
+  },
+  "translationReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:49:00.292396Z",
+    "decision": "approved",
+    "notes": "Read every English/Estonian clue, response, accepted variant, explanation and category title. Corrected natural Estonian grammar, philosophical terms, deity names and ritual wording; checked specialized terms against primary Estonian material where needed. Assessed all 399 final warnings in their bilingual context and recorded each unique diagnostic exception with a specific Estonian rationale. Final diagnostics have zero blocking errors."
+  },
+  "resolvedFindings": [
+    "115: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "131: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "164: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "221: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "226: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "227: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, acceptedVariantsEn, acceptedVariantsEt, subjectKey, factKey",
+    "14: responseEt, explanationEt",
+    "45: clueEn, clueEt",
+    "57: clueEn, clueEt, explanationEn, explanationEt",
+    "72: clueEt, explanationEt",
+    "81: clueEn",
+    "82: clueEn, clueEt",
+    "87: clueEn, clueEt, explanationEn, explanationEt",
+    "110: clueEn, clueEt, explanationEn, explanationEt",
+    "116: acceptedVariantsEn, acceptedVariantsEt",
+    "166: clueEt, explanationEt",
+    "176: responseEt, explanationEt",
+    "189: clueEn, clueEt, responseEt, explanationEn, explanationEt",
+    "194: responseEt, explanationEt",
+    "196: clueEn, clueEt, explanationEn, explanationEt, factKey",
+    "203: clueEn, clueEt, explanationEn, explanationEt, factKey",
+    "210: clueEt, explanationEt",
+    "211: clueEt, explanationEt",
+    "215: clueEn, clueEt, responseEn, responseEt, explanationEn, explanationEt, subjectKey, factKey",
+    "220: clueEt, explanationEt",
+    "228: clueEt, explanationEt",
+    "Replaced q0073 Chang’e Moon residence with her rabbit companion Yutu, verified in the preserved Chang’e introduction; removed the repeated celestial-home association.",
+    "Replaced q0115 Mary Wollstonecraft/Mary Shelley parentage repeated in new Literature with Jeremy Bentham’s UCL auto-icon; read Bentham’s preserved biography and will-related account.",
+    "Replaced q0131 Daphne/laurel transformation repeated in the old Bernini clue with Persephone’s pomegranate seeds and seasonal underworld return; read the actual Persephone account and avoided disputed fixed fractions of the year.",
+    "Replaced q0164 shabti afterlife labour repeated in new History with Osiris’s paired crook and flail emblems. Read the preserved crook/flail account and British Museum Egyptian gods description, including the rod with hanging beaded strands; checked Estonian koot against Tartu course vocabulary and EURALEX lexicographical material.",
+    "Replaced q0189 the repeated French royal fleur-de-lis association with the mandorla surrounding a whole sacred figure; read the actual mandorla article and explicitly ask for its Italian-derived art-history term. Broadened the category to Religious Images and Symbols.",
+    "Replaced q0196 Anansi winning Nyame’s stories, repeated in new Literature, with the distinct wisdom-pot tale and Ntikuma’s climbing advice; read the complete supporting Anansi paragraph.",
+    "Replaced q0203 the Orpheus/lyre link repeated within the bank with Lyra containing Vega and Ring Nebula M57; read both the constellation introduction and nebula paragraph.",
+    "Replaced q0215 the overly simple Hawaii answer with Pele’s relation to Hiʻiaka and hula; read the actual Pele introduction and hula subsection. Renamed the category to include the Americas and Pacific accurately.",
+    "Replaced q0221 categorical imperative repeated in Final0149 with hypothetical imperative, verified in its full preserved article and a primary Tartu Kant discussion using hüpoteetiline imperatiiv.",
+    "Replaced q0226 Plato’s cave repeated in Final0141 with the Phaedrus chariot and two winged horses; read the actual Phaedrus/chariot-allegory passage.",
+    "Replaced q0227 Ship of Theseus repeated in Final0150 with Diogenes’s daylight lamp anecdote; read the actual account and use looking for a man without adding an unsupported honest-man qualifier.",
+    "Corrected support for q0026 Odin’s pledged eye and drink from Mimir’s well using the exact Mímisbrunnr passage; corrected q0111 Leviathan and q0113 Spinoza’s Ethics to actual book pages; verified q0147 largest Twelver branch against the actual Twelver Shi’ism introduction.",
+    "Removed answer cues from q0057 solar goddess/Sun and q0081 earthly manifestation/Earth in both languages; corrected Eho, Urashima Tarō and Kalevala grammar, recusal scope, saffron-colour aliases and Sikh pühitsustalitus.",
+    "Verified Estonian topelttagajärje doktriin in Eesti Arst, oleva ja olema pidava probleem and kvaalid in Tartu primary material; preserved matching useful variants and natural translated philosophical terms.",
+    "Rechecked every final replacement against the global baseline and all new banks, including Finals. Same-answer candidates about Odin, Rabbit, Earth, Pomegranate, Anansi and Lamp concern different underlying predicates; the final answer-leak report is empty."
+  ],
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0001:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Objects in a Sacred Space” vastab eestikeelsele pealkirjale „Esemed pühas ruumis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0002:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Objects in a Sacred Space” vastab eestikeelsele pealkirjale „Esemed pühas ruumis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0003:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Objects in a Sacred Space” vastab eestikeelsele pealkirjale „Esemed pühas ruumis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0004:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Objects in a Sacred Space” vastab eestikeelsele pealkirjale „Esemed pühas ruumis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0005:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Objects in a Sacred Space” vastab eestikeelsele pealkirjale „Esemed pühas ruumis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0006:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Good Qualities in Everyday Life” vastab eestikeelsele pealkirjale „Head omadused igapäevaelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0007:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Good Qualities in Everyday Life” vastab eestikeelsele pealkirjale „Head omadused igapäevaelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0008:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Good Qualities in Everyday Life” vastab eestikeelsele pealkirjale „Head omadused igapäevaelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0009:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Good Qualities in Everyday Life” vastab eestikeelsele pealkirjale „Head omadused igapäevaelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0010:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Good Qualities in Everyday Life” vastab eestikeelsele pealkirjale „Head omadused igapäevaelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0011:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Encounters in Greek Myth” vastab eestikeelsele pealkirjale „Kohtumised Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0012:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Encounters in Greek Myth” vastab eestikeelsele pealkirjale „Kohtumised Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0013:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Encounters in Greek Myth” vastab eestikeelsele pealkirjale „Kohtumised Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0014:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Encounters in Greek Myth” vastab eestikeelsele pealkirjale „Kohtumised Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0015:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Encounters in Greek Myth” vastab eestikeelsele pealkirjale „Kohtumised Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0016:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Biblical Stories” vastab eestikeelsele pealkirjale „Loomad piiblilugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0017:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Biblical Stories” vastab eestikeelsele pealkirjale „Loomad piiblilugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0018:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Biblical Stories” vastab eestikeelsele pealkirjale „Loomad piiblilugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0019:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Biblical Stories” vastab eestikeelsele pealkirjale „Loomad piiblilugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0020:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Biblical Stories” vastab eestikeelsele pealkirjale „Loomad piiblilugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0020:clue_en",
+      "reason": "„Holy Spirit” eestikeelne nimekuju või sisuline nimetus on „Püha Vaim”. Kontrollitud eestikeelne väli „See lind kujutab Jeesuse ristimisel laskuvat Püha Vaimu. Mis on selle nimi?” säilitab ingliskeelse välja „This bird is used to depict the Holy Spirit descending at the baptism of Jesus. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0020:explanation_en",
+      "reason": "„Holy Spirit” eestikeelne nimekuju või sisuline nimetus on „Püha Vaim”. Kontrollitud eestikeelne väli „Tuvi kujutab Jeesuse ristimisel laskuvat Püha Vaimu.” säilitab ingliskeelse välja „Dove is used to depict the Holy Spirit descending at the baptism of Jesus.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0021:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How We Treat Other People” vastab eestikeelsele pealkirjale „Kuidas teisi kohelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0022:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How We Treat Other People” vastab eestikeelsele pealkirjale „Kuidas teisi kohelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0023:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How We Treat Other People” vastab eestikeelsele pealkirjale „Kuidas teisi kohelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0024:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How We Treat Other People” vastab eestikeelsele pealkirjale „Kuidas teisi kohelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0025:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How We Treat Other People” vastab eestikeelsele pealkirjale „Kuidas teisi kohelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0026:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Unexpected Norse Adventures” vastab eestikeelsele pealkirjale „Ootamatud Põhjala seiklused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0026:clue_en",
+      "reason": "„Which Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Põhjala jumal loovutas silma, et saada juua Mimiri tarkusekaevust?” säilitab ingliskeelse välja „Which Norse god gave up an eye in exchange for a drink from Mimir's well of wisdom?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0027:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Unexpected Norse Adventures” vastab eestikeelsele pealkirjale „Ootamatud Põhjala seiklused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0028:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Unexpected Norse Adventures” vastab eestikeelsele pealkirjale „Ootamatud Põhjala seiklused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0028:clue_en",
+      "reason": "„This Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Põhjala jumalanna omab hinnalist Brisingameni kaelakeed, mida mainitakse mitmes temast jutustavas loos. Mis on tema nimi?” säilitab ingliskeelse välja „This Norse goddess owns the precious necklace Brisingamen, which figures in several stories about her. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0029:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Unexpected Norse Adventures” vastab eestikeelsele pealkirjale „Ootamatud Põhjala seiklused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0029:clue_en",
+      "reason": "„What Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Põhjala mütoloogiline tegelane võttis jumalate eest varjudes lõhe kuju, enne kui ta kinni püüti?” säilitab ingliskeelse välja „What Norse mythological figure took the form of a salmon while hiding from the gods before his capture?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0030:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Unexpected Norse Adventures” vastab eestikeelsele pealkirjale „Ootamatud Põhjala seiklused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0031:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Details of Famous Fairy Tales” vastab eestikeelsele pealkirjale „Tuntud muinasjuttude üksikasjad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0031:explanation_en",
+      "reason": "„Little Red Riding Hood” eestikeelne nimekuju või sisuline nimetus on „Punamütsike”. Kontrollitud eestikeelne väli „Punamütsike märkab oma vanaema voodis oleva tegelase ebatavaliselt suuri silmi, kõrvu ja hambaid.” säilitab ingliskeelse välja „Little Red Riding Hood notices the unusually large eyes, ears and teeth of the figure in her grandmother's bed.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0031:response_en",
+      "reason": "„Little Red Riding Hood” eestikeelne nimekuju või sisuline nimetus on „Punamütsike”. Kontrollitud eestikeelne väli „Punamütsike” säilitab ingliskeelse välja „Little Red Riding Hood” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0032:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Details of Famous Fairy Tales” vastab eestikeelsele pealkirjale „Tuntud muinasjuttude üksikasjad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0033:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Details of Famous Fairy Tales” vastab eestikeelsele pealkirjale „Tuntud muinasjuttude üksikasjad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0034:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Details of Famous Fairy Tales” vastab eestikeelsele pealkirjale „Tuntud muinasjuttude üksikasjad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0034:explanation_en",
+      "reason": "„The Snow Queen” eestikeelne nimekuju või sisuline nimetus on „Lumekuninganna”. Kontrollitud eestikeelne väli „Lumekuninganna viib Kai endaga kaasa pärast seda, kui võlupeegli killud satuvad poisi silma ja südamesse.” säilitab ingliskeelse välja „The Snow Queen takes Kay away after fragments of a magic mirror enter his eye and heart.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0034:response_en",
+      "reason": "„The Snow Queen” eestikeelne nimekuju või sisuline nimetus on „Lumekuninganna”. Kontrollitud eestikeelne väli „Lumekuninganna” säilitab ingliskeelse välja „The Snow Queen” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0035:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Details of Famous Fairy Tales” vastab eestikeelsele pealkirjale „Tuntud muinasjuttude üksikasjad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0036:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words for Harmful Behaviour” vastab eestikeelsele pealkirjale „Kahjuliku käitumise sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0037:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words for Harmful Behaviour” vastab eestikeelsele pealkirjale „Kahjuliku käitumise sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0038:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words for Harmful Behaviour” vastab eestikeelsele pealkirjale „Kahjuliku käitumise sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0039:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words for Harmful Behaviour” vastab eestikeelsele pealkirjale „Kahjuliku käitumise sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0040:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words for Harmful Behaviour” vastab eestikeelsele pealkirjale „Kahjuliku käitumise sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0041:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Egyptian Belief” vastab eestikeelsele pealkirjale „Loomad Egiptuse uskumustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0042:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Egyptian Belief” vastab eestikeelsele pealkirjale „Loomad Egiptuse uskumustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0043:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Egyptian Belief” vastab eestikeelsele pealkirjale „Loomad Egiptuse uskumustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0044:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Egyptian Belief” vastab eestikeelsele pealkirjale „Loomad Egiptuse uskumustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0045:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Animals in Egyptian Belief” vastab eestikeelsele pealkirjale „Loomad Egiptuse uskumustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0046:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Shape of a Celebration” vastab eestikeelsele pealkirjale „Pidustuse kuju”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0047:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Shape of a Celebration” vastab eestikeelsele pealkirjale „Pidustuse kuju”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0048:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Shape of a Celebration” vastab eestikeelsele pealkirjale „Pidustuse kuju”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0049:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Shape of a Celebration” vastab eestikeelsele pealkirjale „Pidustuse kuju”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0049:clue_en",
+      "reason": "„Queen Victoria” eestikeelne nimekuju või sisuline nimetus on „kuninganna Victoria”; „Prince Albert's” eestikeelne nimekuju või sisuline nimetus on „prints Alberti”. Kontrollitud eestikeelne väli „See pidulik ese sai Suurbritannias populaarseks kuninganna Victoria ja prints Alberti kaunistatud puust avaldatud piltide kaudu. Mis on selle nimi?” säilitab ingliskeelse välja „This festive object was popularised in Britain through images of Queen Victoria and Prince Albert's decorated example. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0049:explanation_en",
+      "reason": "„Queen Victoria” eestikeelne nimekuju või sisuline nimetus on „kuninganna Victoria”; „Prince Albert's” eestikeelne nimekuju või sisuline nimetus on „prints Alberti”. Kontrollitud eestikeelne väli „Jõulupuu sai Suurbritannias populaarseks kuninganna Victoria ja prints Alberti kaunistatud puust avaldatud piltide kaudu.” säilitab ingliskeelse välja „Christmas tree was popularised in Britain through images of Queen Victoria and Prince Albert's decorated example.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0050:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Shape of a Celebration” vastab eestikeelsele pealkirjale „Pidustuse kuju”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0051:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Decisions We Make about Ourselves” vastab eestikeelsele pealkirjale „Otsused enda kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0052:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Decisions We Make about Ourselves” vastab eestikeelsele pealkirjale „Otsused enda kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0053:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Decisions We Make about Ourselves” vastab eestikeelsele pealkirjale „Otsused enda kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0054:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Decisions We Make about Ourselves” vastab eestikeelsele pealkirjale „Otsused enda kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0055:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Decisions We Make about Ourselves” vastab eestikeelsele pealkirjale „Otsused enda kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0056:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Nature in Finnic and Baltic Tales” vastab eestikeelsele pealkirjale „Loodus läänemeresoome ja balti lugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0057:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Nature in Finnic and Baltic Tales” vastab eestikeelsele pealkirjale „Loodus läänemeresoome ja balti lugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0058:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Nature in Finnic and Baltic Tales” vastab eestikeelsele pealkirjale „Loodus läänemeresoome ja balti lugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0059:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Nature in Finnic and Baltic Tales” vastab eestikeelsele pealkirjale „Loodus läänemeresoome ja balti lugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0060:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Nature in Finnic and Baltic Tales” vastab eestikeelsele pealkirjale „Loodus läänemeresoome ja balti lugudes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0061:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ceremonies in Religious Life” vastab eestikeelsele pealkirjale „Talitused usuelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0061:clue_en",
+      "reason": "„This Christian” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See kristlik žest joonistab kehale püha kujundi, puudutades tavaliselt otsaesist ja rinda. Mis on selle nimi?” säilitab ingliskeelse välja „This Christian gesture traces a sacred shape over the body, usually touching the forehead and chest. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0062:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ceremonies in Religious Life” vastab eestikeelsele pealkirjale „Talitused usuelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0063:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ceremonies in Religious Life” vastab eestikeelsele pealkirjale „Talitused usuelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0064:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ceremonies in Religious Life” vastab eestikeelsele pealkirjale „Talitused usuelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0065:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ceremonies in Religious Life” vastab eestikeelsele pealkirjale „Talitused usuelus”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0066:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Working and Learning Together” vastab eestikeelsele pealkirjale „Koos töötamine ja õppimine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0067:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Working and Learning Together” vastab eestikeelsele pealkirjale „Koos töötamine ja õppimine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0068:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Working and Learning Together” vastab eestikeelsele pealkirjale „Koos töötamine ja õppimine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0069:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Working and Learning Together” vastab eestikeelsele pealkirjale „Koos töötamine ja õppimine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0070:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Working and Learning Together” vastab eestikeelsele pealkirjale „Koos töötamine ja õppimine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0074:clue_en",
+      "reason": "„This Hindu” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See hindu jumalus on kujutatud Nataradžana, kes tantsib leegiringi sees. Mis on selle nimi?” säilitab ingliskeelse välja „This Hindu deity is shown as Nataraja, dancing within a ring of flames. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0076:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Africa's Sacred Places and Creatures” vastab eestikeelsele pealkirjale „Aafrika pühad paigad ja olendid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0076:clue_en",
+      "reason": "„Osun-Osogbo Sacred Grove” eestikeelne nimekuju või sisuline nimetus on „Osun-Osogbo püha hiis”. Kontrollitud eestikeelne väli „Millises riigis asub Osun-Osogbo püha hiis, jorubade pühapaik Osogbo linna lähedal?” säilitab ingliskeelse välja „Which country contains the Osun-Osogbo Sacred Grove, a Yoruba sanctuary outside the city of Osogbo?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0076:explanation_en",
+      "reason": "„Osun-Osogbo Sacred Grove” eestikeelne nimekuju või sisuline nimetus on „Osun-Osogbo püha hiis”. Kontrollitud eestikeelne väli „Osun-Osogbo püha hiis asub Nigeerias Osogbo linna lähedal.” säilitab ingliskeelse välja „Nigeria contains the Osun-Osogbo Sacred Grove, a Yoruba sanctuary outside the city of Osogbo.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0077:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Africa's Sacred Places and Creatures” vastab eestikeelsele pealkirjale „Aafrika pühad paigad ja olendid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0078:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Africa's Sacred Places and Creatures” vastab eestikeelsele pealkirjale „Aafrika pühad paigad ja olendid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0079:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Africa's Sacred Places and Creatures” vastab eestikeelsele pealkirjale „Aafrika pühad paigad ja olendid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0080:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Africa's Sacred Places and Creatures” vastab eestikeelsele pealkirjale „Aafrika pühad paigad ja olendid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0085:clue_en",
+      "reason": "„Native American” eestikeelne nimekuju või sisuline nimetus on „USA edelaosa põlisrahvad”. Kontrollitud eestikeelne väli „Milline muusikariist on pill, mida mängib USA edelaosa põlisrahvaste traditsioonide küürselgne viljakustegelane Kokopelli?” säilitab ingliskeelse välja „Which musical instrument is played by Kokopelli, the humpbacked fertility figure in southwestern Native American traditions?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0085:explanation_en",
+      "reason": "„Native American” eestikeelne nimekuju või sisuline nimetus on „USA edelaosa põlisrahvad”. Kontrollitud eestikeelne väli „Flööt on pill, mida mängib USA edelaosa põlisrahvaste traditsioonide küürselgne viljakustegelane Kokopelli.” säilitab ingliskeelse välja „Flute is played by Kokopelli, the humpbacked fertility figure in southwestern Native American traditions.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0086:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „A Saint's Distinctive Companion” vastab eestikeelsele pealkirjale „Pühaku eriline kaaslane”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0086:clue_en",
+      "reason": "„Saint Mark” eestikeelne nimekuju või sisuline nimetus on „püha Markus”. Kontrollitud eestikeelne väli „See loomasümbol kujutab püha Markust ning esineb tiibadega Veneetsia sümboolikas. Mis on selle nimi?” säilitab ingliskeelse välja „This animal symbol represents Saint Mark and appears with wings in the symbols of Venice. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0086:explanation_en",
+      "reason": "„Saint Mark” eestikeelne nimekuju või sisuline nimetus on „püha Markus”. Kontrollitud eestikeelne väli „Lõvi kujutab püha Markust ning esineb tiibadega Veneetsia sümboolikas.” säilitab ingliskeelse välja „Lion represents Saint Mark and appears with wings in the symbols of Venice.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0087:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „A Saint's Distinctive Companion” vastab eestikeelsele pealkirjale „Pühaku eriline kaaslane”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0087:clue_en",
+      "reason": "„Saint Catherine” eestikeelne nimekuju või sisuline nimetus on „püha Katariina”. Kontrollitud eestikeelne väli „Milline ese sai Aleksandria püha Katariina legendis tema sümboliks pärast seda, kui tema hukkamiseks mõeldud seade purunes?” säilitab ingliskeelse välja „According to Saint Catherine of Alexandria’s legend, what object became her emblem after the device intended for her execution broke?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0087:explanation_en",
+      "reason": "„In Saint Catherine’s” eestikeelne nimekuju või sisuline nimetus on „püha Katariina”. Kontrollitud eestikeelne väli „Püha Katariina legendis purunes tema hukkamiseks mõeldud ratas ning sellest sai pühaku sümbol.” säilitab ingliskeelse välja „In Saint Catherine’s legend, the execution wheel broke and became her emblem.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0088:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „A Saint's Distinctive Companion” vastab eestikeelsele pealkirjale „Pühaku eriline kaaslane”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0088:clue_en",
+      "reason": "„Saint Peter's” eestikeelne nimekuju või sisuline nimetus on „püha Peetruse”. Kontrollitud eestikeelne väli „Nimeta sümboolsed esemed, mis tähistavad püha Peetruse võimu ning esinevad ristamisi paavsti vapil.” säilitab ingliskeelse välja „Identify the symbolic objects that represent Saint Peter's authority and appear crossed in the papal coat of arms.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0088:explanation_en",
+      "reason": "„Saint Peter's” eestikeelne nimekuju või sisuline nimetus on „püha Peetruse”. Kontrollitud eestikeelne väli „Võtmed tähistavad püha Peetruse võimu ning esinevad ristamisi paavsti vapil.” säilitab ingliskeelse välja „Keys represent Saint Peter's authority and appear crossed in the papal coat of arms.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0089:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „A Saint's Distinctive Companion” vastab eestikeelsele pealkirjale „Pühaku eriline kaaslane”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0089:clue_en",
+      "reason": "„Saint Laurence's” eestikeelne nimekuju või sisuline nimetus on „püha Laurentius”. Kontrollitud eestikeelne väli „Milline ese on püha Laurentiuse traditsiooniline tunnus, sest seda seostatakse tema märtrisurmaga?” säilitab ingliskeelse välja „Which object is Saint Laurence's traditional emblem because it is associated with his martyrdom?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0089:explanation_en",
+      "reason": "„Saint Laurence's” eestikeelne nimekuju või sisuline nimetus on „püha Laurentius”. Kontrollitud eestikeelne väli „Grillrest on püha Laurentiuse traditsiooniline tunnus, sest seda seostatakse tema märtrisurmaga.” säilitab ingliskeelse välja „Gridiron is Saint Laurence's traditional emblem because it is associated with his martyrdom.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0090:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „A Saint's Distinctive Companion” vastab eestikeelsele pealkirjale „Pühaku eriline kaaslane”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0090:clue_en",
+      "reason": "„Saint Barbara” eestikeelne nimekuju või sisuline nimetus on „püha Barbara”. Kontrollitud eestikeelne väli „Nimeta hoone, mis esineb kunstis püha Barbara kõrval ning viitab vangistusele, mille määras talle isa.” säilitab ingliskeelse välja „Name the building that appears beside Saint Barbara in art and refers to the imprisonment imposed by her father.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0090:explanation_en",
+      "reason": "„Saint Barbara” eestikeelne nimekuju või sisuline nimetus on „püha Barbara”. Kontrollitud eestikeelne väli „Torn esineb kunstis püha Barbara kõrval ning viitab vangistusele, mille määras talle isa.” säilitab ingliskeelse välja „Tower appears beside Saint Barbara in art and refers to the imprisonment imposed by her father.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0091:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How an Argument Goes Wrong” vastab eestikeelsele pealkirjale „Kuidas arutlus eksiteele satub”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0092:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How an Argument Goes Wrong” vastab eestikeelsele pealkirjale „Kuidas arutlus eksiteele satub”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0093:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How an Argument Goes Wrong” vastab eestikeelsele pealkirjale „Kuidas arutlus eksiteele satub”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0094:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How an Argument Goes Wrong” vastab eestikeelsele pealkirjale „Kuidas arutlus eksiteele satub”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0094:response_en",
+      "reason": "Vastus „Tu quoque” on ladinakeelne argumendinimetus, mille tavapärane kirjapilt on ka eesti keeles „tu quoque”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0095:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „How an Argument Goes Wrong” vastab eestikeelsele pealkirjale „Kuidas arutlus eksiteele satub”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0096:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Thinkers and Their Ideas” vastab eestikeelsele pealkirjale „Antiikmõtlejad ja nende ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0097:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Thinkers and Their Ideas” vastab eestikeelsele pealkirjale „Antiikmõtlejad ja nende ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0097:clue_en",
+      "reason": "„Which Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kreeka filosoof kasutas Achilleuse võidujooksu kilpkonnaga, et seada kahtluse alla liikumise mõistetavus?” säilitab ingliskeelse välja „Which Greek philosopher used Achilles racing a tortoise to question how motion can be understood?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0098:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Thinkers and Their Ideas” vastab eestikeelsele pealkirjale „Antiikmõtlejad ja nende ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0099:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Thinkers and Their Ideas” vastab eestikeelsele pealkirjale „Antiikmõtlejad ja nende ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0099:clue_en",
+      "reason": "„This Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Kreeka mõtleja rajas Krotonis ühiselt elavate järgijate kooli ning õpetas, et surematud hinged lähevad pärast surma uutesse kehadesse. Mis on tema nimi?” säilitab ingliskeelse välja „This Greek thinker founded a communal school at Croton and taught that immortal souls enter new bodies after death. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0100:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Thinkers and Their Ideas” vastab eestikeelsele pealkirjale „Antiikmõtlejad ja nende ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0100:clue_en",
+      "reason": "„What Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kreeka filosoof selgitas ainet tühjas ruumis liikuvate jagamatute osakeste kaudu?” säilitab ingliskeelse välja „What Greek philosopher explained matter in terms of indivisible particles moving in empty space?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0101:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words with a Sacred Past” vastab eestikeelsele pealkirjale „Püha minevikuga sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0102:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words with a Sacred Past” vastab eestikeelsele pealkirjale „Püha minevikuga sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0102:clue_en",
+      "reason": "„Which English” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline ingliskeelne pelgupaika tähistav sõna märgib ka püha kohta, kus inimesed otsisid ajalooliselt kaitset vahistamise eest?” säilitab ingliskeelse välja „Which English word for refuge also names a sacred place where people historically sought protection from arrest?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0103:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words with a Sacred Past” vastab eestikeelsele pealkirjale „Püha minevikuga sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0104:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words with a Sacred Past” vastab eestikeelsele pealkirjale „Püha minevikuga sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0105:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Words with a Sacred Past” vastab eestikeelsele pealkirjale „Püha minevikuga sõnad”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0106:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Principles of Fair Treatment” vastab eestikeelsele pealkirjale „Õiglase kohtlemise põhimõtted”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0107:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Principles of Fair Treatment” vastab eestikeelsele pealkirjale „Õiglase kohtlemise põhimõtted”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0108:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Principles of Fair Treatment” vastab eestikeelsele pealkirjale „Õiglase kohtlemise põhimõtted”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0109:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Principles of Fair Treatment” vastab eestikeelsele pealkirjale „Õiglase kohtlemise põhimõtted”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0110:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Principles of Fair Treatment” vastab eestikeelsele pealkirjale „Õiglase kohtlemise põhimõtted”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0111:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Lives and Ideas” vastab eestikeelsele pealkirjale „Varauusaegsed elud ja ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0111:clue_en",
+      "reason": "„This English” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Inglise filosoof andis oma poliitilisele teosele piibelliku merekoletise järgi nime Leviathan. Mis on tema nimi?” säilitab ingliskeelse välja „This English philosopher named his political book Leviathan after a biblical sea monster. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0111:response_en",
+      "reason": "Vastus „Thomas Hobbes” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Thomas Hobbes”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0112:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Lives and Ideas” vastab eestikeelsele pealkirjale „Varauusaegsed elud ja ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0112:clue_en",
+      "reason": "„What English” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi; „Letter Concerning Toleration” eestikeelne nimekuju või sisuline nimetus on „Kiri sallivusest”. Kontrollitud eestikeelne väli „Milline Inglise filosoof kaitses teoses Kiri sallivusest riigivõimu ülesannete eristamist usuküsimustest?” säilitab ingliskeelse välja „What English philosopher argued for distinguishing the business of civil government from the concerns of religion in A Letter Concerning Toleration?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0112:explanation_en",
+      "reason": "„Letter Concerning Toleration” eestikeelne nimekuju või sisuline nimetus on „Kiri sallivusest”. Kontrollitud eestikeelne väli „John Locke kaitses teoses Kiri sallivusest riigivõimu ülesannete eristamist usuküsimustest.” säilitab ingliskeelse välja „John Locke argued for distinguishing the business of civil government from the concerns of religion in A Letter Concerning Toleration.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0112:response_en",
+      "reason": "Vastus „John Locke” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „John Locke”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0113:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Lives and Ideas” vastab eestikeelsele pealkirjale „Varauusaegsed elud ja ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0113:response_en",
+      "reason": "Vastus „Baruch Spinoza” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Baruch Spinoza”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0114:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Lives and Ideas” vastab eestikeelsele pealkirjale „Varauusaegsed elud ja ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0114:clue_en",
+      "reason": "„Which Scottish” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Šoti filosoof väitis, et minevikukogemus ei saa mõistuspäraselt tagada looduse edasise käitumise ühtlasust?” säilitab ingliskeelse välja „Which Scottish philosopher argued that past experience cannot rationally guarantee that nature will continue to behave uniformly in the future?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0114:response_en",
+      "reason": "Vastus „David Hume” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „David Hume”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0115:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Lives and Ideas” vastab eestikeelsele pealkirjale „Varauusaegsed elud ja ideed”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0115:clue_en",
+      "reason": "„Which English” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi; „University College London” eestikeelne nimekuju või sisuline nimetus on „Londoni Ülikooli Kolledž”. Kontrollitud eestikeelne väli „Milline Inglise filosoof soovis, et tema keha säilitataks Londoni Ülikooli Kolledžis eksponeeritava „autoikoonina”?” säilitab ingliskeelse välja „Which English philosopher requested that his body be preserved as an “auto-icon”, displayed at University College London?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0115:explanation_en",
+      "reason": "„UCL” eestikeelne nimekuju või sisuline nimetus on „Londoni Ülikooli Kolledž”. Kontrollitud eestikeelne väli „Jeremy Bentham jättis juhised oma keha säilitamiseks autoikoonina, mida eksponeeritakse Londoni Ülikooli Kolledžis.” säilitab ingliskeelse välja „Jeremy Bentham left instructions for preserving his body as an auto-icon, now displayed at UCL.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0115:response_en",
+      "reason": "Vastus „Jeremy Bentham” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Jeremy Bentham”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0116:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Clothes with a Religious Meaning” vastab eestikeelsele pealkirjale „Usulise tähendusega riided”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0117:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Clothes with a Religious Meaning” vastab eestikeelsele pealkirjale „Usulise tähendusega riided”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0118:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Clothes with a Religious Meaning” vastab eestikeelsele pealkirjale „Usulise tähendusega riided”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0118:clue_en",
+      "reason": "„Which Jewish” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi; „Yom Kippur” eestikeelne nimekuju või sisuline nimetus on „jomkipur”. Kontrollitud eestikeelne väli „Milline juudi rõivas on valge rüü, mida kantakse jom kipuril ning traditsiooniliselt ka mehe pulmas?” säilitab ingliskeelse välja „Which Jewish garment is a white robe worn on Yom Kippur and traditionally also at a man's wedding?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0118:explanation_en",
+      "reason": "„Yom Kippur” eestikeelne nimekuju või sisuline nimetus on „jomkipur”. Kontrollitud eestikeelne väli „Kitel on valge rüü, mida kantakse jom kipuril ning traditsiooniliselt ka mehe pulmas.” säilitab ingliskeelse välja „Kittel is a white robe worn on Yom Kippur and traditionally also at a man's wedding.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0119:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Clothes with a Religious Meaning” vastab eestikeelsele pealkirjale „Usulise tähendusega riided”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0120:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Clothes with a Religious Meaning” vastab eestikeelsele pealkirjale „Usulise tähendusega riided”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0121:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ideas about How We Know” vastab eestikeelsele pealkirjale „Ideed teadmise kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0122:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ideas about How We Know” vastab eestikeelsele pealkirjale „Ideed teadmise kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0123:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ideas about How We Know” vastab eestikeelsele pealkirjale „Ideed teadmise kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0124:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ideas about How We Know” vastab eestikeelsele pealkirjale „Ideed teadmise kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0125:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ideas about How We Know” vastab eestikeelsele pealkirjale „Ideed teadmise kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0126:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Thinkers and Their Images” vastab eestikeelsele pealkirjale „Uuemad mõtlejad ja nende kujundid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0126:clue_en",
+      "reason": "„Which German” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Saksa filosoof võrdles oma filosoofilise vaatenurga muutust Koperniku algatatud pöördega?” säilitab ingliskeelse välja „Which German philosopher compared his change of philosophical perspective with the revolution introduced by Copernicus?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0126:response_en",
+      "reason": "Vastus „Immanuel Kant” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Immanuel Kant”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0127:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Thinkers and Their Images” vastab eestikeelsele pealkirjale „Uuemad mõtlejad ja nende kujundid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0127:response_en",
+      "reason": "Vastus „Friedrich Nietzsche” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Friedrich Nietzsche”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0128:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Thinkers and Their Images” vastab eestikeelsele pealkirjale „Uuemad mõtlejad ja nende kujundid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0128:clue_en",
+      "reason": "„This Austrian-born” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Austrias sündinud filosoof tõi sisse keelemängude mõiste, et näidata sõnade tähenduse kujunemist nende kasutuses. Mis on tema nimi?” säilitab ingliskeelse välja „This Austrian-born philosopher introduced language games to show how words gain meaning through their use. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0128:response_en",
+      "reason": "Vastus „Ludwig Wittgenstein” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Ludwig Wittgenstein”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0129:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Thinkers and Their Images” vastab eestikeelsele pealkirjale „Uuemad mõtlejad ja nende kujundid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0129:clue_en",
+      "reason": "„What French” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Prantsuse kirjanik ja mõtleja kujutles Sisyphost õnnelikuna, uurides inimelu absurdsust?” säilitab ingliskeelse välja „What French writer and thinker imagined Sisyphus happy while examining the absurdity of human life?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0129:response_en",
+      "reason": "Vastus „Albert Camus” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Albert Camus”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0130:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Thinkers and Their Images” vastab eestikeelsele pealkirjale „Uuemad mõtlejad ja nende kujundid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0130:clue_en",
+      "reason": "„Nobel Prize” eestikeelne nimekuju või sisuline nimetus on „Nobeli kirjandusauhind”; „Western Philosophy” eestikeelne nimekuju või sisuline nimetus on „Lääne filosoofia ajalugu”. Kontrollitud eestikeelne väli „Nimeta Briti filosoof, kes sai Nobeli kirjandusauhinna ning kirjutas Lääne filosoofia ajaloo.” säilitab ingliskeelse välja „Identify the British philosopher that received the Nobel Prize in Literature and wrote A History of Western Philosophy.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0130:explanation_en",
+      "reason": "„Nobel Prize” eestikeelne nimekuju või sisuline nimetus on „Nobeli kirjandusauhind”; „Western Philosophy” eestikeelne nimekuju või sisuline nimetus on „Lääne filosoofia ajalugu”. Kontrollitud eestikeelne väli „Bertrand Russell sai Nobeli kirjandusauhinna ning kirjutas Lääne filosoofia ajaloo.” säilitab ingliskeelse välja „Bertrand Russell received the Nobel Prize in Literature and wrote A History of Western Philosophy.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0130:response_en",
+      "reason": "Vastus „Bertrand Russell” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Bertrand Russell”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0131:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Stories Told by Flowers and Plants” vastab eestikeelsele pealkirjale „Taimede kaudu jutustatud lood”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0132:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Stories Told by Flowers and Plants” vastab eestikeelsele pealkirjale „Taimede kaudu jutustatud lood”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0132:clue_en",
+      "reason": "„This Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Kreeka mütoloogiline noormees hukkus ketta tabamuse tõttu ning Apollon lõi tema verest mälestuseks lille. Mis on tema nimi?” säilitab ingliskeelse välja „This Greek mythological youth was killed by a discus and Apollo commemorated him by creating a flower from his blood. Who is he?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0133:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Stories Told by Flowers and Plants” vastab eestikeelsele pealkirjale „Taimede kaudu jutustatud lood”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0133:clue_en",
+      "reason": "„What Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kreeka mütoloogiline tegelane hukkus metssea rünnakus ning tema valatud verd seostati ülastega?” säilitab ingliskeelse välja „What Greek mythological figure was killed by a wild boar and had his spilled blood associated with anemones?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0134:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Stories Told by Flowers and Plants” vastab eestikeelsele pealkirjale „Taimede kaudu jutustatud lood”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0135:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Stories Told by Flowers and Plants” vastab eestikeelsele pealkirjale „Taimede kaudu jutustatud lood”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0136:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Different Ways to Pursue a Good Life” vastab eestikeelsele pealkirjale „Eri viisid hea elu poole püüelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0136:clue_en",
+      "reason": "„This Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Kreeka eetikamõiste kirjeldab õitsengut ehk head elu, eriti Aristotelese käsitluses inimese hüvest. Mis on selle nimi?” säilitab ingliskeelse välja „This Greek ethical concept describes flourishing or living well, especially in Aristotle's account of the human good. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0137:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Different Ways to Pursue a Good Life” vastab eestikeelsele pealkirjale „Eri viisid hea elu poole püüelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0138:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Different Ways to Pursue a Good Life” vastab eestikeelsele pealkirjale „Eri viisid hea elu poole püüelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0139:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Different Ways to Pursue a Good Life” vastab eestikeelsele pealkirjale „Eri viisid hea elu poole püüelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0140:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Different Ways to Pursue a Good Life” vastab eestikeelsele pealkirjale „Eri viisid hea elu poole püüelda”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0141:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Families in Greek Myth” vastab eestikeelsele pealkirjale „Perekonnad Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0141:clue_en",
+      "reason": "„Which Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kreeka jumalanna on Kronose ja Rhea tütar ning tema nimi tähendab kollet?” säilitab ingliskeelse välja „Which Greek goddess is a child of Cronus and Rhea and has a name meaning hearth?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0142:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Families in Greek Myth” vastab eestikeelsele pealkirjale „Perekonnad Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0143:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Families in Greek Myth” vastab eestikeelsele pealkirjale „Perekonnad Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0143:clue_en",
+      "reason": "„Which Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kreeka jumal varastas imikuna Apolloni karja ning andis tüli lahendamiseks hiljem vastu lüüra?” säilitab ingliskeelse välja „Which Greek god stole Apollo's cattle as an infant and later exchanged a lyre to settle the dispute?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0144:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Families in Greek Myth” vastab eestikeelsele pealkirjale „Perekonnad Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0145:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Families in Greek Myth” vastab eestikeelsele pealkirjale „Perekonnad Kreeka müütides”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0145:clue_en",
+      "reason": "„This Greek” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Kreeka jumal õmmeldi Zeusi reide pärast seda, kui tema ema Semele suri. Mis on tema nimi?” säilitab ingliskeelse välja „This Greek god was sewn into Zeus's thigh after his mother Semele died. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0146:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Numbers with a Sacred Meaning” vastab eestikeelsele pealkirjale „Püha tähendusega arvud”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0147:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Numbers with a Sacred Meaning” vastab eestikeelsele pealkirjale „Püha tähendusega arvud”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0147:clue_en",
+      "reason": "„Shia Islam” eestikeelne nimekuju või sisuline nimetus on „šiiitlik islam”. Kontrollitud eestikeelne väli „Mitut imaami tunnustab šiiitliku islami suurim haru, mis saab nende arvust oma nime?” säilitab ingliskeelse välja „How many Imams are recognised by the largest branch of Shia Islam, which takes its name from their number?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0147:explanation_en",
+      "reason": "„Twelver Shia Islam” eestikeelne nimekuju või sisuline nimetus on „kaheteistkümneimaamlus”. Kontrollitud eestikeelne väli „Šiiitliku islami suurim haru ehk kaheteistkümneimaamlus tunnustab kaheteistkümnest imaamist koosnevat liini.” säilitab ingliskeelse välja „Twelver Shia Islam, the largest Shia branch, recognises a line of twelve Imams.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0148:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Numbers with a Sacred Meaning” vastab eestikeelsele pealkirjale „Püha tähendusega arvud”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0149:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Numbers with a Sacred Meaning” vastab eestikeelsele pealkirjale „Püha tähendusega arvud”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0149:clue_en",
+      "reason": "„Western Advent” eestikeelne nimekuju või sisuline nimetus on „läänekristlik advendipärg”. Kontrollitud eestikeelne väli „Mitu välimist küünalt on traditsioonilisel läänekristlikul advendipärjal peale võimaliku keskmise Kristuse küünla?” säilitab ingliskeelse välja „How many outer candles does a traditional Western Advent wreath have, apart from an optional central Christ candle?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0149:explanation_en",
+      "reason": "„Western Advent” eestikeelne nimekuju või sisuline nimetus on „läänekristlik advendipärg”. Kontrollitud eestikeelne väli „Traditsioonilisel läänekristlikul advendipärjal on neli välimist küünalt; mõnes variandis lisandub keskele Kristuse küünal.” säilitab ingliskeelse välja „A traditional Western Advent wreath has four outer candles; some versions add a central Christ candle.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0150:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Numbers with a Sacred Meaning” vastab eestikeelsele pealkirjale „Püha tähendusega arvud”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0151:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Keeping Ethical Questions Distinct” vastab eestikeelsele pealkirjale „Eetikaküsimuste eristamine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0152:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Keeping Ethical Questions Distinct” vastab eestikeelsele pealkirjale „Eetikaküsimuste eristamine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0153:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Keeping Ethical Questions Distinct” vastab eestikeelsele pealkirjale „Eetikaküsimuste eristamine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0154:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Keeping Ethical Questions Distinct” vastab eestikeelsele pealkirjale „Eetikaküsimuste eristamine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0155:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Keeping Ethical Questions Distinct” vastab eestikeelsele pealkirjale „Eetikaküsimuste eristamine”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0156:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Norse Gods outside the Battlefield” vastab eestikeelsele pealkirjale „Põhjala jumalad väljaspool lahinguvälja”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0157:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Norse Gods outside the Battlefield” vastab eestikeelsele pealkirjale „Põhjala jumalad väljaspool lahinguvälja”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0157:clue_en",
+      "reason": "„This Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Põhjala jumalanna hoiab õunu, mida jumalad söövad nooruse säilitamiseks. Mis on tema nimi?” säilitab ingliskeelse välja „This Norse goddess keeps the apples that the gods eat to retain their youth. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0158:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Norse Gods outside the Battlefield” vastab eestikeelsele pealkirjale „Põhjala jumalad väljaspool lahinguvälja”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0158:clue_en",
+      "reason": "„What Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Põhjala jumal elab Noatunis ning on seotud meresõidu, rikkuse ja tuulega?” säilitab ingliskeelse välja „What Norse god lives in Noatun and is associated with seafaring, wealth and the wind?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0159:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Norse Gods outside the Battlefield” vastab eestikeelsele pealkirjale „Põhjala jumalad väljaspool lahinguvälja”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0160:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Norse Gods outside the Battlefield” vastab eestikeelsele pealkirjale „Põhjala jumalad väljaspool lahinguvälja”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0160:clue_en",
+      "reason": "„Which Norse” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Põhjala jumal puhub Gjallarhorni, et kuulutada Ragnaröki algust?” säilitab ingliskeelse välja „Which Norse god will sound the Gjallarhorn to announce the onset of Ragnarok?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0161:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Symbols in Egyptian Ritual” vastab eestikeelsele pealkirjale „Sümbolid Egiptuse talitustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0162:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Symbols in Egyptian Ritual” vastab eestikeelsele pealkirjale „Sümbolid Egiptuse talitustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0163:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Symbols in Egyptian Ritual” vastab eestikeelsele pealkirjale „Sümbolid Egiptuse talitustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0164:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Symbols in Egyptian Ritual” vastab eestikeelsele pealkirjale „Sümbolid Egiptuse talitustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0165:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Symbols in Egyptian Ritual” vastab eestikeelsele pealkirjale „Sümbolid Egiptuse talitustes”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0166:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Characters in Baltic and Finnic Stories” vastab eestikeelsele pealkirjale „Balti ja läänemeresoome lugude tegelased”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0166:clue_en",
+      "reason": "„What Kalevala” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Millise Kalevala kangelase äratab ema ellu pärast seda, kui ta on poja keha Tuonela jõest kokku kogunud?” säilitab ingliskeelse välja „What Kalevala hero was restored to life by his mother after she gathered his body from the river of Tuonela?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0167:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Characters in Baltic and Finnic Stories” vastab eestikeelsele pealkirjale „Balti ja läänemeresoome lugude tegelased”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0168:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Characters in Baltic and Finnic Stories” vastab eestikeelsele pealkirjale „Balti ja läänemeresoome lugude tegelased”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0168:clue_en",
+      "reason": "„Which Kalevala” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kalevala tegelane lauldi Väinämöisega võisteldes sohu?” säilitab ingliskeelse välja „Which Kalevala character was sung into a swamp during a contest with Väinämöinen?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0169:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Characters in Baltic and Finnic Stories” vastab eestikeelsele pealkirjale „Balti ja läänemeresoome lugude tegelased”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0170:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Characters in Baltic and Finnic Stories” vastab eestikeelsele pealkirjale „Balti ja läänemeresoome lugude tegelased”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0170:clue_en",
+      "reason": "„This Finnic” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See läänemeresoome jumalus on seotud vilja ja viljakusega ning teda austatakse setode traditsioonides. Mis on selle nimi?” säilitab ingliskeelse välja „This Finnic deity is associated with crops and fertility and is honoured in Seto traditions. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0171:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „What a Religious Building Conceals” vastab eestikeelsele pealkirjale „Mida usuhoone peidab”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0172:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „What a Religious Building Conceals” vastab eestikeelsele pealkirjale „Mida usuhoone peidab”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0173:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „What a Religious Building Conceals” vastab eestikeelsele pealkirjale „Mida usuhoone peidab”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0174:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „What a Religious Building Conceals” vastab eestikeelsele pealkirjale „Mida usuhoone peidab”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0175:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „What a Religious Building Conceals” vastab eestikeelsele pealkirjale „Mida usuhoone peidab”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0176:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Hard Choices in Ethical Theory” vastab eestikeelsele pealkirjale „Rasked valikud eetikateoorias”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0177:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Hard Choices in Ethical Theory” vastab eestikeelsele pealkirjale „Rasked valikud eetikateoorias”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0178:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Hard Choices in Ethical Theory” vastab eestikeelsele pealkirjale „Rasked valikud eetikateoorias”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0179:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Hard Choices in Ethical Theory” vastab eestikeelsele pealkirjale „Rasked valikud eetikateoorias”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0180:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Hard Choices in Ethical Theory” vastab eestikeelsele pealkirjale „Rasked valikud eetikateoorias”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0181:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Divine Answers to Difficult Problems” vastab eestikeelsele pealkirjale „Jumalikud vastused rasketele probleemidele”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0182:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Divine Answers to Difficult Problems” vastab eestikeelsele pealkirjale „Jumalikud vastused rasketele probleemidele”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0182:clue_en",
+      "reason": "„This Hindu” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See hindu jumalus püüdis laskuva Gangese oma juustesse, et pehmendada jõe kokkupõrget maaga. Mis on selle nimi?” säilitab ingliskeelse välja „This Hindu deity caught the descending Ganges in his hair to soften the river's impact on the earth. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0183:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Divine Answers to Difficult Problems” vastab eestikeelsele pealkirjale „Jumalikud vastused rasketele probleemidele”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0183:clue_en",
+      "reason": "„What Ramayana” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Ramajana tegelane kasutas oma süüdatud saba tuld Lanka osade põletamiseks, otsides Sitat?” säilitab ingliskeelse välja „What Ramayana character used the fire set to his tail to burn parts of Lanka while searching for Sita?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0184:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Divine Answers to Difficult Problems” vastab eestikeelsele pealkirjale „Jumalikud vastused rasketele probleemidele”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0185:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Divine Answers to Difficult Problems” vastab eestikeelsele pealkirjale „Jumalikud vastused rasketele probleemidele”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0186:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Religious Images and Symbols” vastab eestikeelsele pealkirjale „Usulised kujutised ja sümbolid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0187:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Religious Images and Symbols” vastab eestikeelsele pealkirjale „Usulised kujutised ja sümbolid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0187:clue_en",
+      "reason": "„Jesus Christ” eestikeelne nimekuju või sisuline nimetus on „Jeesus Kristus”. Kontrollitud eestikeelne väli „Milline loomasümbol moodustab kristliku märgi, mille kreekakeelne nimi andis lühendi sõnadele Jeesus Kristus, Jumala Poeg, Päästja?” säilitab ingliskeelse välja „What animal symbol forms a Christian sign whose Greek name provided an acronym for Jesus Christ, Son of God, Saviour?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0187:explanation_en",
+      "reason": "„Jesus Christ” eestikeelne nimekuju või sisuline nimetus on „Jeesus Kristus”. Kontrollitud eestikeelne väli „Kala moodustab kristliku märgi, mille kreekakeelne nimi andis lühendi sõnadele Jeesus Kristus, Jumala Poeg, Päästja.” säilitab ingliskeelse välja „Fish forms a Christian sign whose Greek name provided an acronym for Jesus Christ, Son of God, Saviour.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0188:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Religious Images and Symbols” vastab eestikeelsele pealkirjale „Usulised kujutised ja sümbolid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0188:clue_en",
+      "reason": "„Levantine Christian” eestikeelne nimekuju või sisuline nimetus on „Levandi kristlased”. Kontrollitud eestikeelne väli „Nimeta kristlik tegelane, kes annab oma nime Levandi kristlaste nimetusele kaitseamuleti kohta, mis on lahtise käe kujuline.” säilitab ingliskeelse välja „Identify the Christian figure that is named in the Levantine Christian label for a protective amulet shaped like an open hand.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0188:explanation_en",
+      "reason": "„Levantine Christian” eestikeelne nimekuju või sisuline nimetus on „Levandi kristlased”. Kontrollitud eestikeelne väli „Maarja annab oma nime Levandi kristlaste nimetusele kaitseamuleti kohta, mis on lahtise käe kujuline.” säilitab ingliskeelse välja „Mary is named in the Levantine Christian label for a protective amulet shaped like an open hand.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0189:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Religious Images and Symbols” vastab eestikeelsele pealkirjale „Usulised kujutised ja sümbolid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0189:clue_en",
+      "reason": "„What Italian-derived” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi; „Virgin Mary” eestikeelne nimekuju või sisuline nimetus on „neitsi Maarja”. Kontrollitud eestikeelne väli „Milline itaalia sõnast pärinev kunstiajalootermin tähistab mandlikujulist aupaistet, mis ümbritseb kogu Kristuse või neitsi Maarja keha?” säilitab ingliskeelse välja „What Italian-derived art-history term names the almond-shaped aureola surrounding the whole body of Christ or the Virgin Mary?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0190:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Religious Images and Symbols” vastab eestikeelsele pealkirjale „Usulised kujutised ja sümbolid”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0191:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Limits to What We Can Prove” vastab eestikeelsele pealkirjale „Piirid sellele, mida saab tõestada”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0192:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Limits to What We Can Prove” vastab eestikeelsele pealkirjale „Piirid sellele, mida saab tõestada”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0193:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Limits to What We Can Prove” vastab eestikeelsele pealkirjale „Piirid sellele, mida saab tõestada”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0194:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Limits to What We Can Prove” vastab eestikeelsele pealkirjale „Piirid sellele, mida saab tõestada”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0195:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Limits to What We Can Prove” vastab eestikeelsele pealkirjale „Piirid sellele, mida saab tõestada”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0196:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Lessons from African Myth” vastab eestikeelsele pealkirjale „Õppetunnid Aafrika müütidest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0196:clue_en",
+      "reason": "„Which West African” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Lääne-Aafrika trikster püüdis kogu tarkuse potti peita, kuid lõhkus selle pärast seda, kui poeg Ntikuma näitas talle paremat puu otsa ronimise viisi?” säilitab ingliskeelse välja „Which West African trickster tried to hide all wisdom in a pot, but broke it after his son Ntikuma showed him a better way to climb a tree?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0197:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Lessons from African Myth” vastab eestikeelsele pealkirjale „Õppetunnid Aafrika müütidest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0198:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Lessons from African Myth” vastab eestikeelsele pealkirjale „Õppetunnid Aafrika müütidest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0199:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Lessons from African Myth” vastab eestikeelsele pealkirjale „Õppetunnid Aafrika müütidest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0199:clue_en",
+      "reason": "„New Kingdom” eestikeelne nimekuju või sisuline nimetus on „Uusriik”. Kontrollitud eestikeelne väli „See kahlav lind oli Bennu kuju Uue riigi kunstis, seostades selle pika nokaga Egiptuse jumaluse päikese ja loomisega. Mis on selle nimi?” säilitab ingliskeelse välja „This wading bird was the form of Bennu in New Kingdom art, connecting this long-beaked Egyptian deity with the sun and creation. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0199:explanation_en",
+      "reason": "„New Kingdom” eestikeelne nimekuju või sisuline nimetus on „Uusriik”. Kontrollitud eestikeelne väli „Haigur oli Bennu kuju Uue riigi kunstis, seostades selle pika nokaga Egiptuse jumaluse päikese ja loomisega.” säilitab ingliskeelse välja „Heron was the form of Bennu in New Kingdom art, connecting this long-beaked Egyptian deity with the sun and creation.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0200:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Lessons from African Myth” vastab eestikeelsele pealkirjale „Õppetunnid Aafrika müütidest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0201:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Mythological Signs on the Sky Map” vastab eestikeelsele pealkirjale „Mütoloogilised märgid taevakaardil”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0202:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Mythological Signs on the Sky Map” vastab eestikeelsele pealkirjale „Mütoloogilised märgid taevakaardil”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0203:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Mythological Signs on the Sky Map” vastab eestikeelsele pealkirjale „Mütoloogilised märgid taevakaardil”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0203:clue_en",
+      "reason": "„Ring Nebula” eestikeelne nimekuju või sisuline nimetus on „rõngasudu M57”. Kontrollitud eestikeelne väli „Millises muusikariista järgi nimetatud tähtkujus asuvad nii Veega kui ka rõngasudu M57?” säilitab ingliskeelse välja „Which constellation, named for a musical instrument, contains both Vega and the Ring Nebula M57?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0203:explanation_en",
+      "reason": "„Ring Nebula” eestikeelne nimekuju või sisuline nimetus on „rõngasudu M57”. Kontrollitud eestikeelne väli „Lüüra tähtkujus asuvad Veega ja rõngasudu M57.” säilitab ingliskeelse välja „Lyra contains Vega and the Ring Nebula M57.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0204:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Mythological Signs on the Sky Map” vastab eestikeelsele pealkirjale „Mütoloogilised märgid taevakaardil”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0205:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Mythological Signs on the Sky Map” vastab eestikeelsele pealkirjale „Mütoloogilised märgid taevakaardil”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0206:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ways of Asking What Matters” vastab eestikeelsele pealkirjale „Viisid küsida, mis on tähtis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0207:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ways of Asking What Matters” vastab eestikeelsele pealkirjale „Viisid küsida, mis on tähtis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0208:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ways of Asking What Matters” vastab eestikeelsele pealkirjale „Viisid küsida, mis on tähtis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0209:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ways of Asking What Matters” vastab eestikeelsele pealkirjale „Viisid küsida, mis on tähtis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0210:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ways of Asking What Matters” vastab eestikeelsele pealkirjale „Viisid küsida, mis on tähtis”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0211:clue_en",
+      "reason": "„White Buffalo Calf Woman” eestikeelne nimekuju või sisuline nimetus on „Valge Pühvlivasika Naine”. Kontrollitud eestikeelne väli „Millise rituaalse eseme tõi Valge Pühvlivasika Naine lakotadele pühade talituste aluseks?” säilitab ingliskeelse välja „This ritual object was brought by White Buffalo Calf Woman to the Lakota as the basis of sacred ceremonies. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0211:explanation_en",
+      "reason": "„White Buffalo Calf Woman” eestikeelne nimekuju või sisuline nimetus on „Valge Pühvlivasika Naine”. Kontrollitud eestikeelne väli „Valge Pühvlivasika Naine tõi lakotadele pühade talituste aluseks piibu.” säilitab ingliskeelse välja „Pipe was brought by White Buffalo Calf Woman to the Lakota as the basis of sacred ceremonies.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0215:clue_en",
+      "reason": "„Which Hawaiian” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Millisel Kilaueal elaval Hawaii vulkaanijumalannal on õde Hiʻiaka, keda seostatakse hula päritoluga?” säilitab ingliskeelse välja „Which Hawaiian volcano goddess, whose home is at Kilauea, has a sister Hiʻiaka associated with the origins of hula?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0216:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Route of a Pilgrim” vastab eestikeelsele pealkirjale „Palveränduri teekond”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0216:clue_en",
+      "reason": "„Compostela Cathedral” eestikeelne nimekuju või sisuline nimetus on „Compostela katedraal”. Kontrollitud eestikeelne väli „Milline talitusese on hiiglaslik viirukipann, mida kiigutatakse Santiago de Compostela katedraalis köite abil?” säilitab ingliskeelse välja „What ceremonial object is the enormous incense burner swung through Santiago de Compostela Cathedral on ropes?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0216:explanation_en",
+      "reason": "„Compostela Cathedral” eestikeelne nimekuju või sisuline nimetus on „Compostela katedraal”. Kontrollitud eestikeelne väli „Botafumeiro on hiiglaslik viirukipann, mida kiigutatakse Santiago de Compostela katedraalis köite abil.” säilitab ingliskeelse välja „Botafumeiro is the enormous incense burner swung through Santiago de Compostela Cathedral on ropes.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0217:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Route of a Pilgrim” vastab eestikeelsele pealkirjale „Palveränduri teekond”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0217:clue_en",
+      "reason": "„Jerusalem's Temple Mount” eestikeelne nimekuju või sisuline nimetus on „Jeruusalemma Templimägi”; „Western Wall” eestikeelne nimekuju või sisuline nimetus on „Nutumüür”. Kontrollitud eestikeelne väli „Nimeta antiikne valitseja, kes laiendas Jeruusalemma Templimäge, luues tugimüüride kompleksi, millesse kuulub Nutumüür.” säilitab ingliskeelse välja „Identify the ancient ruler that expanded Jerusalem's Temple Mount, creating the retaining-wall complex that includes the Western Wall.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0217:explanation_en",
+      "reason": "„Jerusalem's Temple Mount” eestikeelne nimekuju või sisuline nimetus on „Jeruusalemma Templimägi”; „Western Wall” eestikeelne nimekuju või sisuline nimetus on „Nutumüür”. Kontrollitud eestikeelne väli „Herodes laiendas Jeruusalemma Templimäge, luues tugimüüride kompleksi, millesse kuulub Nutumüür.” säilitab ingliskeelse välja „Herod expanded Jerusalem's Temple Mount, creating the retaining-wall complex that includes the Western Wall.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0218:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Route of a Pilgrim” vastab eestikeelsele pealkirjale „Palveränduri teekond”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0219:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Route of a Pilgrim” vastab eestikeelsele pealkirjale „Palveränduri teekond”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0219:clue_en",
+      "reason": "„Mount Athos” eestikeelne nimekuju või sisuline nimetus on „Athose mägi”. Kontrollitud eestikeelne väli „Millise inimrühma liikmetel on avatonina tuntud traditsioonilise reegli järgi keelatud Athose mäele siseneda?” säilitab ingliskeelse välja „Which group of people is barred from entering Mount Athos under the traditional rule known as avaton?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0219:explanation_en",
+      "reason": "„Mount Athos” eestikeelne nimekuju või sisuline nimetus on „Athose mägi”. Kontrollitud eestikeelne väli „Naistel on traditsioonilise avatonireegli järgi keelatud Athose mäele siseneda.” säilitab ingliskeelse välja „Women are barred from entering Mount Athos under the traditional avaton rule.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0220:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „The Route of a Pilgrim” vastab eestikeelsele pealkirjale „Palveränduri teekond”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0221:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ethical Rules and Their Foundations” vastab eestikeelsele pealkirjale „Eetikareeglid ja nende alused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0221:clue_en",
+      "reason": "„What Kantian” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Kanti käsutüüp kehtib tingimuslikult kindla eesmärgi taotlemisel, näiteks kraadi saamiseks õppimisel?” säilitab ingliskeelse välja „What Kantian type of command applies conditionally when someone wants a particular goal, such as studying in order to gain a degree?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0222:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ethical Rules and Their Foundations” vastab eestikeelsele pealkirjale „Eetikareeglid ja nende alused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0223:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ethical Rules and Their Foundations” vastab eestikeelsele pealkirjale „Eetikareeglid ja nende alused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0224:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ethical Rules and Their Foundations” vastab eestikeelsele pealkirjale „Eetikareeglid ja nende alused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0225:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ethical Rules and Their Foundations” vastab eestikeelsele pealkirjale „Eetikareeglid ja nende alused”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0226:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Images of the Human Condition” vastab eestikeelsele pealkirjale „Antiiksed kujundid inimese olukorrast”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0226:clue_en",
+      "reason": "„In Plato’s Phaedrus” eestikeelne nimekuju või sisuline nimetus on „Platoni Phaidros”. Kontrollitud eestikeelne väli „Milline sõiduk kujutab Platoni Phaidroses hinge, mille juht ohjab kahte tiivulist hobust?” säilitab ingliskeelse välja „In Plato’s Phaedrus, which vehicle provides an image of the soul, with a driver controlling two winged horses?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0226:explanation_en",
+      "reason": "„Plato’s Phaedrus” eestikeelne nimekuju või sisuline nimetus on „Platoni Phaidros”. Kontrollitud eestikeelne väli „Platoni Phaidros võrdleb hinge kaarikujuhiga, kes ohjab kahte tiivulist hobust.” säilitab ingliskeelse välja „Plato’s Phaedrus compares the soul to a charioteer and a pair of winged horses.” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0227:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Images of the Human Condition” vastab eestikeelsele pealkirjale „Antiiksed kujundid inimese olukorrast”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0228:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Images of the Human Condition” vastab eestikeelsele pealkirjale „Antiiksed kujundid inimese olukorrast”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0228:clue_en",
+      "reason": "„Plato's Republic” eestikeelne nimekuju või sisuline nimetus on „Platoni Riik”. Kontrollitud eestikeelne väli „Milline ese muudab Gygese Platoni Riigis nähtamatuks ja on mõtteeksperimendi keskmes, mis uurib õiglast käitumist avastamise ohu puudumisel?” säilitab ingliskeelse välja „This object in Plato's Republic makes Gyges invisible and raises the question of whether people would act justly if they could escape detection. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0229:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Images of the Human Condition” vastab eestikeelsele pealkirjale „Antiiksed kujundid inimese olukorrast”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0230:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Ancient Images of the Human Condition” vastab eestikeelsele pealkirjale „Antiiksed kujundid inimese olukorrast”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0231:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Christian Teachings about Salvation” vastab eestikeelsele pealkirjale „Kristlikud õpetused pääsemisest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0232:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Christian Teachings about Salvation” vastab eestikeelsele pealkirjale „Kristlikud õpetused pääsemisest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0232:clue_en",
+      "reason": "„This Catholic” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See katoliiklik mõiste kirjeldab surmajärgset puhastumist hingedele, kelle lõplik siht on taevas. Mis on selle nimi?” säilitab ingliskeelse välja „This Catholic concept describes purification after death for souls ultimately destined for heaven. What is its name?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0233:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Christian Teachings about Salvation” vastab eestikeelsele pealkirjale „Kristlikud õpetused pääsemisest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0233:clue_en",
+      "reason": "„What Catholic” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline katoliiklik tava vabastab ajalikust karistusest pattude eest, mille süü on juba andeks antud?” säilitab ingliskeelse välja „What Catholic practice remits temporal punishment for sins whose guilt has already been forgiven?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0234:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Christian Teachings about Salvation” vastab eestikeelsele pealkirjale „Kristlikud õpetused pääsemisest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0235:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Christian Teachings about Salvation” vastab eestikeelsele pealkirjale „Kristlikud õpetused pääsemisest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0235:clue_en",
+      "reason": "„Which Catholic” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline katoliiklik õpetus leiab, et armulaualeib ja -vein muutuvad Kristuse ihuks ja vereks, säilitades oma välimuse?” säilitab ingliskeelse välja „Which Catholic doctrine holds that Eucharistic bread and wine become Christ's body and blood while their appearances remain?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0236:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Experiments about Moral Responsibility” vastab eestikeelsele pealkirjale „Katsed moraalse vastutuse kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0237:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Experiments about Moral Responsibility” vastab eestikeelsele pealkirjale „Katsed moraalse vastutuse kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0238:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Experiments about Moral Responsibility” vastab eestikeelsele pealkirjale „Katsed moraalse vastutuse kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0238:response_en",
+      "reason": "Vastus „Peter Singer” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Peter Singer”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0239:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Experiments about Moral Responsibility” vastab eestikeelsele pealkirjale „Katsed moraalse vastutuse kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0240:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Experiments about Moral Responsibility” vastab eestikeelsele pealkirjale „Katsed moraalse vastutuse kohta”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0241:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Questions about Reality” vastab eestikeelsele pealkirjale „Varauusaegsed küsimused tegelikkusest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0241:clue_en",
+      "reason": "„What Irish” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Iiri filosoof võttis oma immaterialismi kokku mõttega, et olemas olla tähendab olla tajutud?” säilitab ingliskeelse välja „What Irish philosopher summed up his immaterialism with the idea that to be is to be perceived?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0241:response_en",
+      "reason": "Vastus „George Berkeley” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „George Berkeley”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0242:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Questions about Reality” vastab eestikeelsele pealkirjale „Varauusaegsed küsimused tegelikkusest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0242:response_en",
+      "reason": "Vastus „Gottfried Wilhelm Leibniz” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Gottfried Wilhelm Leibniz”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0243:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Questions about Reality” vastab eestikeelsele pealkirjale „Varauusaegsed küsimused tegelikkusest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0243:clue_en",
+      "reason": "„Which French” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Prantsuse filosoof kasutas kurja petise võimalust, et uurida, millised uskumused võiksid püsida radikaalse kahtluse all?” säilitab ingliskeelse välja „Which French philosopher used the possibility of an evil deceiver to test which beliefs could survive radical doubt?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0243:response_en",
+      "reason": "Vastus „René Descartes” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „René Descartes”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0244:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Questions about Reality” vastab eestikeelsele pealkirjale „Varauusaegsed küsimused tegelikkusest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0244:response_en",
+      "reason": "Vastus „Blaise Pascal” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Blaise Pascal”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0245:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Early Modern Questions about Reality” vastab eestikeelsele pealkirjale „Varauusaegsed küsimused tegelikkusest”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0245:clue_en",
+      "reason": "„This English” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „See Inglise filosoof liigitas selget mõtlemist takistavad eelarvamused hõimu, koopa, turuplatsi ja teatri iidoliteks. Mis on tema nimi?” säilitab ingliskeelse välja „This English philosopher classified obstacles to clear thinking as idols of the tribe, cave, marketplace and theatre. Who is it?” isikud, kohad, teosed ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-all-level-expansion-0245:response_en",
+      "reason": "Vastus „Francis Bacon” on filosoofi pärisnimi, mille tavapärane kirjapilt on ka eesti keeles „Francis Bacon”. Lugesin mõlema keele küsimuse ja selgituse ning kontrollisin sama isiku või argumendi tähendust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0246:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Debates about Mind and Meaning” vastab eestikeelsele pealkirjale „Uuemad vaidlused vaimu ja tähenduse üle”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0247:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Debates about Mind and Meaning” vastab eestikeelsele pealkirjale „Uuemad vaidlused vaimu ja tähenduse üle”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0248:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Debates about Mind and Meaning” vastab eestikeelsele pealkirjale „Uuemad vaidlused vaimu ja tähenduse üle”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0249:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Debates about Mind and Meaning” vastab eestikeelsele pealkirjale „Uuemad vaidlused vaimu ja tähenduse üle”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0250:category_name_en",
+      "reason": "Kategooria ingliskeelne pealkiri „Modern Debates about Mind and Meaning” vastab eestikeelsele pealkirjale „Uuemad vaidlused vaimu ja tähenduse üle”. Inglise pealkirja suurtähtedega üldsõnu märgiti ekslikult pärisnimedeks; lugesin kõik viis küsimust ja mõlema pealkirja teema on sama."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0250:clue_en",
+      "reason": "„What Wittgensteinian” on küsimuse alguse küsisõna koos rahvuse, usundi või valdkonna üldnimetusega; see ei ole omaette pärisnimi. Kontrollitud eestikeelne väli „Milline Wittgensteini idee selgitab mõisteid, näiteks mänge, kattuvate sarnasuste kaudu ühe kõigile näidetele ühise tunnuse asemel?” säilitab ingliskeelse välja „What Wittgensteinian idea explains concepts such as games through overlapping similarities rather than one feature shared by every example?” isikud, kohad, teosed ja küsitud seose."
+    }
+  ],
+  "artifactHashes": {
+    "authored": "aa6735be9af7bed32270b1b809266318bff8b23bd92d8608a14d131359612d56",
+    "generated": "f012b0691cdb9706f372628985718e4b014dbdfe9a4f25d0b311a3d55e91b188",
+    "evidence": "01c44aa49cf65fc8f0fb99259a97720b72f095cf9873c4ab534dea808939a426"
+  }
+}
